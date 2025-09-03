@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Search, 
-  Filter, 
-  Calendar, 
-  User, 
+  Search,
+  Filter,
+  Calendar,
+  User,
   ArrowRight,
   Clock,
   Tag,
@@ -30,13 +30,14 @@ import {
   Share2,
   MessageCircle,
   ExternalLink
-} from 'lucide-react';
+} from "lucide-react";
 import React from "react"
 import { motion } from "framer - motion",,"});,"})
-}
+
+
 export default function Blog() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="Blog - Zion Tech Group" description="Professional Blog services by Zion Tech Group"  />"
+      <SEO title="Blog - Zion Tech Group" description="Professional Blog services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
         <h1 className="text-4xl font-bold text-white mb-8">Blog</h1>"
         <p className="text-gray-300 text-lg">
@@ -53,7 +54,6 @@ export default function Blog() {}
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp,
   Brain, Atom, Rocket, Shield, Globe, Code} from "lucide-react
 export default function Blog() {;
-
   const blogPosts = [],"
       image: "/api/placeholder/600/400",
 featured: true},
@@ -117,15 +117,17 @@ featured: false}
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+    const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
       ]
 
   const categories = []
 
   const featuredPosts = blogPosts.filter(post => post.featured)
-}
+
+
   const regularPosts = blogPosts.filter(post => !post.featured)
-}
+
+
   return (
     
     <>"
@@ -133,7 +135,7 @@ featured: false}
         title="Blog - Zion Tech Group | Technology Insights & Industry News";"
         description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group"s expert team.";"
         keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news">
-     />
+    />
       ;"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* comment */}"
@@ -254,15 +256,17 @@ export default function Blog() {
   ]
   const categories = []
   const featuredPosts = blogPosts.filter(post => post.featured)
-}
+
+
   const regularPosts = blogPosts.filter()
-}
+
+
   return (
     <>"
       <SEO title="&quot;Blog" - Zion Tech Group | Technology Insights & Industry News&quot;"
         description="&quot;Stay" updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team.&quot;"
         keywords="&quot;technology" blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news&quot>
-     />&quot;"
+    />&quot;"
         title = "Blog - Zion Tech Group | Technology Insights & Industry News""
         description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group&apos;s expert team.""
         keywords = "technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news""
@@ -316,7 +320,7 @@ transition="{{" duration: 0.8 }}"
               {featuredPosts.length > 0 && (;"
                 <section className="mb-16">;"
                   <h2 className="text-3xl font-bold text-white mb-8 flex items-center">;"
-                    <TrendingUp className="w-8 h-8 mr-3 text-blue-400"  />
+                    <TrendingUp className="w-8 h-8 mr-3 text-blue-400"   />
                     Featured Articles
                   </h2>;"
                   <div className = "grid grid-cols-1 md: grid-cols-2 gap-8">,
@@ -335,7 +339,7 @@ transition="{{" duration: 0.8 }}"
               {featuredPosts.length > 0 && (&quot}"
                 <section className="&quot;mb-16&quot;">&quot;""
                   <h2 className="&quot;text-3xl" font-bold text-white mb-8 flex items-center&quot;>&quot;""
-                    <TrendingUp className="&quot;w-8" h-8 mr-3 text-blue-400&quot;       />
+                    <TrendingUp className="&quot;w-8" h-8 mr-3 text-blue-400&quot;          />
                     Featured Articles&quot
                   </h2>"
                   <div className="&quot;grid" grid-cols-1 md: grid-cols-2 gap-8&quot,>
@@ -372,18 +376,18 @@ key = "{post.id}""
                           <div className="flex items-center justify-between text-sm text-gray-400">;"
                             <div className="flex items-center gap-4">;"
                               <span className="flex items-center">;"
-                                <User className="w-4 h-4 mr-1"  />
+                                <User className="w-4 h-4 mr-1"   />
                                 {post.author}
 
                               </span>;"
                               <span className="flex items-center">;"
-                                <Calendar className="w-4 h-4 mr-1"  />
+                                <Calendar className="w-4 h-4 mr-1"   />
                                 {new Date(post.date).toLocaleDateString()}
 
                               </span>
                             </div>;"
                             <span className="flex items-center">;"
-                              <Clock className="w-4 h-4 mr-1"  />
+                              <Clock className="w-4 h-4 mr-1"   />
                               {post.readTime}
 
                             </span>
@@ -414,16 +418,16 @@ key = "{post.id}""
                           <div className="&quot;flex" items-center justify-between text-sm text-gray-400&quot;>&quot;""
                             <div className="&quot;flex" items-center gap-4&quot;>&quot;""
                               <span className="&quot;flex" items-center&quot;>&quot;""
-                                <User className="&quot;w-4" h-4 mr-1&quot;       />
+                                <User className="&quot;w-4" h-4 mr-1&quot;          />
                                 {post.author}&quot
                               </span>"
                               <span className="&quot;flex" items-center&quot;>&quot;""
-                                <Calendar className="&quot;w-4" h-4 mr-1&quot;       />
+                                <Calendar className="&quot;w-4" h-4 mr-1&quot;          />
                                 {new Date(post.date).toLocaleDateString()}&quot
                               </span>
                             </div>"
                             <span className="&quot;flex" items-center&quot;>&quot;""
-                              <Clock className="&quot;w-4" h-4 mr-1&quot;       />
+                              <Clock className="&quot;w-4" h-4 mr-1&quot;          />
                               {post.readTime}&quot
                             </span>
                           </div>
@@ -479,17 +483,17 @@ key = "{post.id}""
                           <div className="flex items-center justify-between">;"
                             <div className="flex items-center gap-4 text-sm text-gray-400">;"
                               <span className="flex items-center">;"
-                                <User className="w-4 h-4 mr-1"  />
+                                <User className="w-4 h-4 mr-1"   />
                                 {post.author}
 
                               </span>;"
                               <span className="flex items-center">;"
-                                <Calendar className="w-4 h-4 mr-1"  />
+                                <Calendar className="w-4 h-4 mr-1"   />
                                 {new Date(post.date).toLocaleDateString()}
 
                               </span>;"
                               <span className="flex items-center">;"
-                                <Clock className="{"w-4" h-4 mr-1"  />
+                                <Clock className="{"w-4" h-4 mr-1"   />
                                 {post.readTime}
 
                               </span>
@@ -499,7 +503,7 @@ key = "{post.id}""
                               className=""flex" items-center text-blue-400 hover:text-blue-300 transition-colors"}>
                             >
                               Read More;"
-                              <ArrowRight className="w-4 h-4 ml-1"  />
+                              <ArrowRight className="w-4 h-4 ml-1"   />
                             </Link>
                           </div>
                     </motion.article>;"
@@ -530,15 +534,15 @@ key = "{post.id}""
                           <div className="&quot;flex" items-center justify-between&quot;>&quot;""
                             <div className="&quot;flex" items-center gap-4 text-sm text-gray-400&quot;>&quot;""
                               <span className="&quot;flex" items-center&quot;>&quot;""
-                                <User className="&quot;w-4" h-4 mr-1&quot;       />
+                                <User className="&quot;w-4" h-4 mr-1&quot;          />
                                 {post.author}&quot
                               </span>"
                               <span className="&quot;flex" items-center&quot;>&quot;""
-                                <Calendar className="&quot;w-4" h-4 mr-1&quot;       />
+                                <Calendar className="&quot;w-4" h-4 mr-1&quot;          />
                                 {new Date(post.date).toLocaleDateString()}&quot
                               </span>"
                               <span className="&quot;flex" items-center&quot;>&quot;""
-                                <Clock className="&quot;w-4" h-4 mr-1&quot;       />
+                                <Clock className="&quot;w-4" h-4 mr-1&quot;          />
                                 {post.readTime}&quot
                               </span>
                             </div>"
@@ -547,7 +551,7 @@ key = "{post.id}""
                               className = ""flex" items-center text-blue-400 hover: text-blue-300 transition-colors"
                             >,
                               Read More&quot,",
-                              <ArrowRight className="&quot;w-4" h-4 ml-1&quot,       />&quot,
+                              <ArrowRight className="&quot;w-4" h-4 ml-1&quot,          />&quot,
                             </Link>
                           </div>
                     </motion.article>
@@ -615,7 +619,7 @@ key = "{post.id}""
                       type="email";"
                       placeholder="Enter your email";"
                       className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500">
-                   />;"
+                  />;"
                     <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
                       Subscribe
                     </button>
@@ -630,7 +634,7 @@ key = "{post.id}""
                     <input type="&quot;email&quot;""
                       placeholder="&quot;Enter" your email&quot;"
                       className="&quot;w-full" px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500&quot,>
-                   />&quot,"
+                  />&quot,"
                     <button className = "&quot,w-full" px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hove,r: to-purple-700 transition-all duration-200&quot,>
                       Subscribe&quot,"
                       type="email""

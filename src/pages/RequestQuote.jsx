@@ -1,46 +1,45 @@
-import React from 'react';'''
-import EnhancedSEO from '@/components/EnhancedSEO';'''
-import { Header } from '@/components/Header';'''
-import { Footer } from '@/components/Footer';'''
-import { QuoteRequestForm } from '@/components/QuoteRequestForm';
+import React from "react";"""
+import EnhancedSEO from "@/components/EnhancedSEO";"""
+import { Header } from "@/components/Header";"""
+import { Footer } from "@/components/Footer";"""
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 import {}
   Card,
-  CardContent,'
-  CardDescription,''
-  CardHeader,'''
-  CardTitle} from '@/components/ui/card';'''
-import { CheckCircle, Clock, Users, Zap } from 'lucide-react';
-
+  CardContent,"
+  CardDescription,""
+  CardHeader,"""
+  CardTitle} from "@/components/ui/card";"""
+import { CheckCircle, Clock, Users, Zap } from "lucide-react";
 export default function RequestQuote() {}
   return()
+
     <div className="min-h-screen bg-zion-blue">"""
       <EnhancedSEO""""
         title="Request a Quote | Zion Tech Group""""
         description="Get customized quotes for AI services, IT solutions, talent hiring, and equipment. Fast, reliable, and tailored to your needs.""""
         keywords="request quote, AI services, IT solutions, talent hiring, equipment quotes""""
-        canonical="https://ziontechgroup.com/request-quote"""
-      />
-      <Header />"""
+        canonical="https://ziontechgroup.com/request-quote""" />
+      <Header  />"""
 """"
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">""""
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">"""
-          {/* Hero Section */}""""
+          {/* comment */}""""
           <div className="text-center mb-16">""""
             <h1 className="text-5xl font-bold text-white mb-6">
               Get Your Custom Quote"""
             </h1>""""
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">'
-              Whether you need AI services, IT solutions, top talent, or''
-              specialized equipment, we'll provide you with a detailed,
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">"
+              Whether you need AI services, IT solutions, top talent, or""
+              specialized equipment, we"ll provide you with a detailed,
               competitive quote tailored to your specific requirements.
             </p>
           </div>
 """
-          {/* Benefits Section */}""""
+          {/* comment */}""""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">""""
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">""""
               <CardHeader className="text-center">""""
-                <Zap className="h-12 w-12 text-zion-cyan mx-auto mb-4" />""""
+                <Zap className="h-12 w-12 text-zion-cyan mx-auto mb-4"   />""""
                 <CardTitle className="text-lg">Fast Response</CardTitle>"""
               </CardHeader>""""
               <CardContent className="text-center">""""
@@ -52,7 +51,7 @@ export default function RequestQuote() {}
 """"
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">""""
               <CardHeader className="text-center">""""
-                <CheckCircle className="h-12 w-12 text-zion-cyan mx-auto mb-4" />""""
+                <CheckCircle className="h-12 w-12 text-zion-cyan mx-auto mb-4"   />""""
                 <CardTitle className="text-lg">Customized</CardTitle>"""
               </CardHeader>""""
               <CardContent className="text-center">""""
@@ -64,7 +63,7 @@ export default function RequestQuote() {}
 """"
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">""""
               <CardHeader className="text-center">""""
-                <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4" />""""
+                <Users className="h-12 w-12 text-zion-cyan mx-auto mb-4"   />""""
                 <CardTitle className="text-lg">Expert Team</CardTitle>"""
               </CardHeader>""""
               <CardContent className="text-center">""""
@@ -76,7 +75,7 @@ export default function RequestQuote() {}
 """"
             <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">""""
               <CardHeader className="text-center">""""
-                <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4" />""""
+                <Clock className="h-12 w-12 text-zion-cyan mx-auto mb-4"   />""""
                 <CardTitle className="text-lg">No Obligation</CardTitle>"""
               </CardHeader>""""
               <CardContent className="text-center">""""
@@ -87,7 +86,7 @@ export default function RequestQuote() {}
             </Card>
           </div>
 """
-          {/* Services Overview */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
               Our Services"""
@@ -171,21 +170,20 @@ export default function RequestQuote() {}
             </div>
           </div>
 """
-          {/* Quote Form Section */}""""
+          {/* comment */}""""
           <div className="max-w-4xl mx-auto">""""
             <div className="text-center mb-8">""""
               <h2 className="text-3xl font-bold text-white mb-4">
                 Request Your Quote"""
               </h2>""""
-              <p className="text-zion-slate-light text-lg">'
+              <p className="text-zion-slate-light text-lg">"
                 Fill out the form below and we'll get back to you with a;
                 detailed quote within 24 hours.</p>
             </div>
-
-            <QuoteRequestForm />
+            <QuoteRequestForm  />
           </div>
 """
-          {/* Additional Information */}""""
+          {/* comment */}""""
           <div className="mt-16 text-center">""""
             <h3 className="text-2xl font-bold text-white mb-6">
               Need Immediate Assistance?"""
@@ -211,19 +209,11 @@ export default function RequestQuote() {}
           </div>
         </div>
       </main>
-
-      <Footer />
+      <Footer  />
     </div>
   );
-}
-
-
 export { RequestQuote };
-
 export { RequestQuote };
-
 export { RequestQuote };
-
 export { RequestQuote };
-
 export { RequestQuote };

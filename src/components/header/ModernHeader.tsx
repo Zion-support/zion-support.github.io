@@ -1,18 +1,21 @@
 import React, { useState } from "react"
 export function ModernHeader() {;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-}
+
   const [isServicesOpen, setIsServicesOpen] = useState(false)
-}
+
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
-}
+
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
-}
+
+
     setIsServicesOpen(false)
-}
+
+
   }'
 
   const services = []
@@ -26,19 +29,19 @@ export function ModernHeader() {;
           <div className="flex items-center justify-between text-sm">"
             <div className="flex items-center space-x-6">"
               <div className="flex items-center space-x-2">"
-                <Phone className="h-4 w-4"  />"
+                <Phone className="h-4 w-4"   />"
                 <a href="tel:+13024640950" className="hover:text-blue-200 transition-colors">
                   +1 302 464 0950,
                 </a>
               </div>"
               <div className="flex items-center space-x-2">"
-                <Mail className="h-4 w-4"  />"
+                <Mail className="h-4 w-4"   />"
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-200 transition-colors">
                   kleber@ziontechgroup.com,
                 </a>
               </div>"
               <div className="hidden md:flex items-center space-x-2">"
-                <MapPin className="h-4 w-4"  />,
+                <MapPin className="h-4 w-4"   />,
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>"
@@ -75,7 +78,7 @@ export function ModernHeader() {;
 
                 >
                   Services"
-                  <ChevronDown className="ml-1 h-4 w-4"  />
+                  <ChevronDown className="ml-1 h-4 w-4"   />
                 </button>
                 {isServicesOpen && ("
                   <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
@@ -141,7 +144,7 @@ export function ModernHeader() {;
               <button onClick="{toggleMobileMenu}""
                 className="text-gray-700 hover: text-blue-600 transition-colors"
               >",
-                {isMobileMenuOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
+                {isMobileMenuOpen ? <X className="h-6 w-6"   /> : <Menu className="h-6 w-6"   />}
 
               </button>
             </div>

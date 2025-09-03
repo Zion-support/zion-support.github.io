@@ -1,5 +1,5 @@
-import React from 'react';'''
-import { motion } from 'framer-motion';
+import React from "react";"""
+import { motion } from "framer-motion";
 import {}
   ShoppingCart,
   Smartphone,
@@ -7,74 +7,75 @@ import {}
   Target,
   BarChart3,
   Zap,
-  Shield,'
-  ArrowRight,''
-  CheckCircle,'''
-  Store} from 'lucide-react';
+  Shield,"
+  ArrowRight,""
+  CheckCircle,"""
+  Store} from "lucide-react";
 export default function RetailSolutions() {}
   const features = []
     {}
-      icon: Brain,'
-      title: 'AI-Powered Customer Insights','
-      description:''
-        'Machine learning models to understand customer behavior and preferences'},
+      icon: Brain,"
+      title: "AI-Powered Customer Insights","
+      description:""
+        "Machine learning models to understand customer behavior and preferences"},
     {}
-      icon: BarChart3,'
-      title: 'Real-time Analytics','
-      description:''
-        'Live monitoring of sales, inventory, and customer engagement metrics'},
+      icon: BarChart3,"
+      title: "Real-time Analytics","
+      description:""
+        "Live monitoring of sales, inventory, and customer engagement metrics"},
     {}
-      icon: Target,'
-      title: 'Personalized Marketing','
-      description:''
-        'AI-driven targeted marketing campaigns and product recommendations'},
+      icon: Target,"
+      title: "Personalized Marketing","
+      description:""
+        "AI-driven targeted marketing campaigns and product recommendations"},
     {}
-      icon: Zap,'
-      title: 'Inventory Optimization','
-      description: 'Intelligent inventory management and demand forecasting'},
+      icon: Zap,"
+      title: "Inventory Optimization","
+      description: "Intelligent inventory management and demand forecasting"},
     {}
-      icon: Shield,'
-      title: 'E-commerce Security','
-      description: 'Advanced security for online retail and payment processing'},
+      icon: Shield,"
+      title: "E-commerce Security","
+      description: "Advanced security for online retail and payment processing"},
     {}
-      icon: Smartphone,'
-      title: 'Omnichannel Experience','
-      description:''
-        'Seamless integration across online and offline retail channels'}
-  ];'
-  const benefits = [''
-    'Increase sales by 25-40%',Improve customer retention by 30%',Reduce inventory costs by 20-35%',Enhance customer experience',Better marketing ROI',Streamlined operations'
+      icon: Smartphone,"
+      title: "Omnichannel Experience","
+      description:""
+        "Seamless integration across online and offline retail channels"}
+  ];"
+  const benefits = [""
+    "Increase sales by 25-40%",Improve customer retention by 30%",Reduce inventory costs by 20-35%",Enhance customer experience",Better marketing ROI",Streamlined operations"
   ];
   const solutions = []
     {}
-'
-''
-'''
-      title: 'E-commerce Platform','''
-      description: 'Modern online retail platform with AI-powered features'},
+"
+""
+"""
+      title: "E-commerce Platform","""
+      description: "Modern online retail platform with AI-powered features"},
     {}
-'
-''
-'''
-      title: 'Customer Analytics','''
-      description: 'Comprehensive customer behavior analysis and insights'},
+"
+""
+"""
+      title: "Customer Analytics","""
+      description: "Comprehensive customer behavior analysis and insights"},
     {}
-'
-''
-'''
-      title: 'Inventory Management','''
-      description: 'Smart inventory optimization and demand forecasting'},
+"
+""
+"""
+      title: "Inventory Management","""
+      description: "Smart inventory optimization and demand forecasting"},
     {}
-'
-      title: 'Marketing Automation','
-      description: 'AI-driven marketing campaigns and personalization'}
-  ];'
-  const retailTypes = [''
-    'Fashion & Apparel',Electronics',Home & Garden',Beauty & Health',Sports & Outdoor',Books & Media',Food & Beverage',Automotive'
+"
+      title: "Marketing Automation","
+      description: "AI-driven marketing campaigns and personalization"}
+  ];"
+  const retailTypes = [""
+    "Fashion & Apparel",Electronics",Home & Garden",Beauty & Health",Sports & Outdoor",Books & Media",Food & Beverage",Automotive"
   ];
   return()
+
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
@@ -84,7 +85,7 @@ export default function RetailSolutions() {}
           >""""
             <div className="flex justify-center mb-6">""""
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">""""
-                <ShoppingCart className="w-10 h-10 text-white" />
+                <ShoppingCart className="w-10 h-10 text-white"   />
               </div>"""
             </div>""""
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -107,7 +108,7 @@ export default function RetailSolutions() {}
         </div>
       </section>
 """
-      {/* Features Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -148,7 +149,7 @@ export default function RetailSolutions() {}
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -178,7 +179,7 @@ export default function RetailSolutions() {}
               <div className="space-y-4">"""
                 {benefits.map((benefit, index) => (""""
                   <div key={index} className="flex items-center space-x-3">""""
-                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />""""
+                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0"   />""""
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -212,7 +213,7 @@ export default function RetailSolutions() {}
         </div>
       </section>
 """
-      {/* Retail Types Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -241,7 +242,7 @@ export default function RetailSolutions() {}
                 viewport={{ once: true }}""""
                 className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300""""
               >""""
-                <Store className="w-8 h-8 text-cyan-500 mx-auto mb-3" />""""
+                <Store className="w-8 h-8 text-cyan-500 mx-auto mb-3"   />""""
                 <h3 className="font-semibold">{type}</h3>
               </motion.div>
             ))}
@@ -249,7 +250,7 @@ export default function RetailSolutions() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -268,7 +269,7 @@ export default function RetailSolutions() {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2">"""
                 <span>Get Started Today</span>""""
-                <ArrowRight className="w-5 h-5" />"""
+                <ArrowRight className="w-5 h-5"   />"""
               </button>""""
               <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Contact Sales;
@@ -278,15 +279,8 @@ export default function RetailSolutions() {}
         </div>
       </section>
     </div>);
-}
-
-
 export { RetailSolutions };
-
 export { RetailSolutions };
-
 export { RetailSolutions };
-
 export { RetailSolutions };
-
 export { RetailSolutions };

@@ -1,16 +1,13 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useEffect, useCallback } from "react"; // Added useCallback
+import { supabase } from "@/integrations/supabase/client";
 export default function Page() {
 )
-        .order('created_at', { ascending: false });
-      
+
+        .order("created_at", { ascending: false });
       if(resumeError) throw resumeError;
-      
       if(!resumeData || resumeData.length === 0) {
         setResumes([]);
         return [];
-      }
-      
       const transformedResumes: Resume[] = resumeData.map(resume => ({
         id: resume.id,
         user_id: resume.user_id,
@@ -26,11 +23,10 @@ export default function Page() {
         certifications: [],
         is_active: resume.is_active
       }));
-      
       setResumes(transformedResumes);
       return transformedResumes;
     } catch(e: any) {
-      console.error('Error fetching resumes:', e);
+      console.error("Error fetching resumes:", e);
       setError(e.message);
       setResumes([]); // Clear resumes on error
       return [];
@@ -57,4 +53,3 @@ export default function Page() {
     resumes,
     fetchResumes
   };
-}

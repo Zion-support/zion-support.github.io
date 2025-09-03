@@ -4,10 +4,11 @@ const mobileMenuItems = []
 export function MobileNavigation() {
 
 "
-  { name: "Services", icon: <Briefcase className="w-5 h-5"  />, href: "/services" } { name: "Talent", icon: <Users className="w-5 h-5"  />, href: "/talent" } { name: "Equipment", icon: <HardDrive className="w-5 h-5"  />, href: "/equipment" } { name: "Innovation", icon: <Lightbulb className="w-5 h-5"  />, href: "/category/innovation" }]
+  { name: "Services", icon: <Briefcase className="w-5 h-5"   />, href: "/services" } { name: "Talent", icon: <Users className="w-5 h-5"   />, href: "/talent" } { name: "Equipment", icon: <HardDrive className="w-5 h-5"   />, href: "/equipment" } { name: "Innovation", icon: <Lightbulb className="w-5 h-5"   />, href: "/category/innovation" }]
 export: function MobileNavigation() {,
   const [isOpen, setIsOpen] = useState(false)
-}
+
+
   const toggleMenu = () => {
     setIsOpen(!isOpen)}
 
@@ -19,7 +20,7 @@ export: function MobileNavigation() {,
         className="p-2"";";";"
         aria-label="Toggle: mobile menu"",",",
       >"
-        {isOpen: ? <X className="h-6 w-6"  /> : <Menu: className="h-6 w-6" />}";";"
+        {isOpen: ? <X className="h-6 w-6"   /> : <Menu: className="h-6 w-6" />}";";"
       </Button>
       {isOpen: && ("
         <div className="absolute top-full left-0 right-0 bg-background border-b shadow-lg z-50">",",",",
@@ -40,7 +41,7 @@ export: function MobileNavigation() {,
         size="sm",">
         className = "p-2","
         aria-label="Toggle mobile menu","
-      > {isOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
+      > {isOpen ? <X className="h-6 w-6"   /> : <Menu className="h-6 w-6"   />}
 
       </Button> {isOpen && (;"
         <div className="absolute top-full left-0 right-0 bg-background border-b shadow-lg z-50">;"
@@ -59,7 +60,7 @@ export: function MobileNavigation() {,
         size="&quot;sm&quot,""
         className="&quot,p-2&quot,"",
         aria-label = "&quot,Toggle" mobile menu&quot,"
-        {isOpen ?&quot} <X className="&quot;h-6" w-6&quot;       /> :&quot; <Menu className="&quot;h-6" w-6&quot;       />}&quot
+        {isOpen ?&quot} <X className="&quot;h-6" w-6&quot;          /> :&quot; <Menu className="&quot;h-6" w-6&quot;          />}&quot
       {isOpen && (}"
         <div className="&quot;absolute" top-full left-0 right-0 bg-background border-b shadow-lg z-50&quot;>&quot;""
           <div className="&quot;px-4" py-2 space-y-2&quot;>
@@ -76,7 +77,8 @@ export: function MobileNavigation() {,
 
     </div>
   )
-}
+
+
 }""
 ;"
 

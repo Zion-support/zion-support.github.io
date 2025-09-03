@@ -1,63 +1,63 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 ;
 const ComprehensiveServicesOverview2025 = () => {
     const [selectedService, setSelectedService] = useState(null);
-    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedCategory, setSelectedCategory] = useState("all");
     const categories = [
-        'all',
-        'AI & Business Intelligence',
-        'Cybersecurity & Quantum Computing',
-        'DevOps & Infrastructure',
-        'Blockchain & Supply Chain',
-        'Healthcare & AI',
-        'Quantum Computing & AI',
-        'FinTech & AI',
-        'IoT & Edge Computing',
-        'Legal Tech & AI',
-        'Marketing & AI',
-        'Energy & Sustainability',
-        'Logistics & Transportation'
+        "all",
+        "AI & Business Intelligence",
+        "Cybersecurity & Quantum Computing",
+        "DevOps & Infrastructure",
+        "Blockchain & Supply Chain",
+        "Healthcare & AI",
+        "Quantum Computing & AI",
+        "FinTech & AI",
+        "IoT & Edge Computing",
+        "Legal Tech & AI",
+        "Marketing & AI",
+        "Energy & Sustainability",
+        "Logistics & Transportation"
     ];
-    const filteredServices = allEnhancedServices.filter(service => selectedCategory === 'all' || service.category === selectedCategory);
+    const filteredServices = allEnhancedServices.filter(service => selectedCategory === "all" || service.category === selectedCategory);
     const getCategoryIcon = (category) => {
         const icons = {
-  'AI & Business Intelligence': '🧠',
-            'Cybersecurity & Quantum Computing': '🔒',
-            'DevOps & Infrastructure': '⚙️',
-            'Blockchain & Supply Chain': '⛓️',
-            'Healthcare & AI': '🏥',
-            'Quantum Computing & AI': '🔮',
-            'FinTech & AI': '💰',
-            'IoT & Edge Computing': '🌐',
-            'Legal Tech & AI': '⚖️',
-            'Marketing & AI': '📢',
-            'Energy & Sustainability': '⚡',
-  'Logistics & Transportation': '🚚'
+  "AI & Business Intelligence": "🧠",
+            "Cybersecurity & Quantum Computing": "🔒",
+            "DevOps & Infrastructure": "⚙️",
+            "Blockchain & Supply Chain": "⛓️",
+            "Healthcare & AI": "🏥",
+            "Quantum Computing & AI": "🔮",
+            "FinTech & AI": "💰",
+            "IoT & Edge Computing": "🌐",
+            "Legal Tech & AI": "⚖️",
+            "Marketing & AI": "📢",
+            "Energy & Sustainability": "⚡",
+  "Logistics & Transportation": "🚚"
         
 
 };
-        return icons[category] || '🚀'};
+        return icons[category] || "🚀"};
     const getCategoryColor = (category) => {
         const colors = {
-  'AI & Business Intelligence': 'from-blue-500 to-cyan-500',
-            'Cybersecurity & Quantum Computing': 'from-red-500 to-pink-500',
-            'DevOps & Infrastructure': 'from-green-500 to-emerald-500',
-            'Blockchain & Supply Chain': 'from-purple-500 to-indigo-500',
-            'Healthcare & AI': 'from-teal-500 to-cyan-500',
-            'Quantum Computing & AI': 'from-violet-500 to-purple-500',
-            'FinTech & AI': 'from-yellow-500 to-orange-500',
-            'IoT & Edge Computing': 'from-indigo-500 to-blue-500',
-            'Legal Tech & AI': 'from-gray-500 to-slate-500',
-            'Marketing & AI': 'from-pink-500 to-rose-500',
-            'Energy & Sustainability': 'from-green-500 to-teal-500',
-  'Logistics & Transportation': 'from-orange-500 to-red-500'
+  "AI & Business Intelligence": "from-blue-500 to-cyan-500",
+            "Cybersecurity & Quantum Computing": "from-red-500 to-pink-500",
+            "DevOps & Infrastructure": "from-green-500 to-emerald-500",
+            "Blockchain & Supply Chain": "from-purple-500 to-indigo-500",
+            "Healthcare & AI": "from-teal-500 to-cyan-500",
+            "Quantum Computing & AI": "from-violet-500 to-purple-500",
+            "FinTech & AI": "from-yellow-500 to-orange-500",
+            "IoT & Edge Computing": "from-indigo-500 to-blue-500",
+            "Legal Tech & AI": "from-gray-500 to-slate-500",
+            "Marketing & AI": "from-pink-500 to-rose-500",
+            "Energy & Sustainability": "from-green-500 to-teal-500",
+  "Logistics & Transportation": "from-orange-500 to-red-500"
         
 
 };
-        return colors[category] || 'from-gray-500 to-slate-500'};
+        return colors[category] || "from-gray-500 to-slate-500"};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -72,7 +72,7 @@ const ComprehensiveServicesOverview2025 = () => {
             transformation.
           </p>
 """
-          {/* Navigation */}""""
+          {/* comment */}""""
           <div className="flex flex-wrap justify-center gap-4 mb-8">"""
             <Link""""
               to="/comprehensive-services-2025""""
@@ -96,7 +96,7 @@ const ComprehensiveServicesOverview2025 = () => {
         </div>
       </section>
 """
-      {/* Category Filter */}""""
+      {/* comment */}""""
       <section className="px-4 sm:px-6 lg:px-8 mb-12">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">""""
@@ -108,18 +108,18 @@ const ComprehensiveServicesOverview2025 = () => {
                 <button;
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`p-3 rounded-lg border transition-all duration-300 text-center ${}
-'
-                    selectedCategory === category''
-                      ? 'bg-blue-500/20 border-blue-400 text-blue-400'''`
-                      : 'bg-white/10 border-white/20 hover:border-blue-400 hover:text-blue-400'``
-                  }`}"""
+                  className={"p-3 rounded-lg border transition-all duration-300 text-center ${}
+"
+                    selectedCategory === category""
+                      ? "bg-blue-500/20 border-blue-400 text-blue-400""""
+                      : "bg-white/10 border-white/20 hover:border-blue-400 hover:text-blue-400"""
+                  }"}"""
                 >""""
                   <div className="text-2xl mb-1">
                     {getCategoryIcon(category)}"""
                   </div>""""
-                  <div className="text-xs">'
-                    {category === 'all' ? 'All Categories' : category}
+                  <div className="text-xs">"
+                    {category === "all" ? "All Categories" : category}
                   </div>
                 </button>
               ))}
@@ -128,7 +128,7 @@ const ComprehensiveServicesOverview2025 = () => {
         </div>
       </section>
 """
-      {/* Services Overview */}""""
+      {/* comment */}""""
       <section className="px-4 sm:px-6 lg:px-8 mb-20">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -137,9 +137,9 @@ const ComprehensiveServicesOverview2025 = () => {
                 key={service.id}""""
                 className="bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 overflow-hidden hover:border-blue-400 transition-all duration-300 hover:scale-105"""
               >
-                {/* Service Header */}`
-                <div``
-                  className={`p-6 bg-gradient-to-r ${getCategoryColor(service.category)}`}"""
+                {/* comment */}"
+                <div""
+                  className={"p-6 bg-gradient-to-r ${getCategoryColor(service.category)}"}"""
                 >""""
                   <div className="flex items-center justify-between mb-4">""""
                     <span className="text-3xl">
@@ -155,13 +155,13 @@ const ComprehensiveServicesOverview2025 = () => {
                   <p className="text-white/90 text-sm">{service.tagline}</p>
                 </div>
 """
-                {/* Service Content */}""""
+                {/* comment */}""""
                 <div className="p-6">""""
                   <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                     {service.description}
                   </p>
 """
-                  {/* Key Metrics */}""""
+                  {/* comment */}""""
                   <div className="grid grid-cols-2 gap-4 mb-4">""""
                     <div className="text-center">""""
                       <div className="text-lg font-bold text-blue-400">
@@ -181,7 +181,7 @@ const ComprehensiveServicesOverview2025 = () => {
                     </div>
                   </div>
 """
-                  {/* Technology Stack */}""""
+                  {/* comment */}""""
                   <div className="mb-4">""""
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">
                       Technology Stack"""
@@ -198,28 +198,28 @@ const ComprehensiveServicesOverview2025 = () => {
                     </div>
                   </div>
 """
-                  {/* Market Info */}""""
-                  <div className="grid grid-cols-2 gap-4 text-xs text-gray-400 mb-4">'"""
-                    <div>'"'"""
-                      <span className="text-blue-400">Market:</span>{' '}
+                  {/* comment */}""""
+                  <div className="grid grid-cols-2 gap-4 text-xs text-gray-400 mb-4">""""
+                    <div>""""""
+                      <span className="text-blue-400">Market:</span>{" "}
                       {service.marketSize}
-                    </div>'"""
-                    <div>'"'"""
-                      <span className="text-blue-400">Customers:</span>{' '}
+                    </div>""""
+                    <div>""""""
+                      <span className="text-blue-400">Customers:</span>{" "}
                       {service.customers.toLocaleString()}
                     </div>
                   </div>
 """
-                  {/* CTA Buttons */}""""
+                  {/* comment */}""""
                   <div className="flex gap-2">
                     <button"""
                       onClick={() => setSelectedService(service.id)}""""
                       className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105"""
                     >
                       View Details;
-                    </button>`
-                    <a`"`
-                      href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}""""
+                    </button>"
+                    <a"""
+                      href={"mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}"}""""
                       className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105"""
                     >
                       Contact;
@@ -244,20 +244,21 @@ const ComprehensiveServicesOverview2025 = () => {
           )}
         </div>
       </section>
-
-      {/* Service Detail Modal */}"""
+      {/* comment */}"""
       {selectedService && (""""
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">""""
           <div className="bg-slate-800 rounded-xl max-w-5xl w-full max-h-[90vh] overflow-y-auto">""""
             <div className="p-6">
               {(() => {}
                 const service = allEnhancedServices.find()
+
                   s => s.id === selectedService;
                 );
                 if (!service) return null;
                 return()
+
                   <>"""
-                    {/* Modal Header */}""""
+                    {/* comment */}""""
                     <div className="flex items-center justify-between mb-6">""""
                       <div className="flex items-center space-x-3">""""
                         <span className="text-4xl">
@@ -278,9 +279,9 @@ const ComprehensiveServicesOverview2025 = () => {
                       </button>
                     </div>
 """
-                    {/* Service Details */}""""
+                    {/* comment */}""""
                     <div className="space-y-6">
-                      {/* Overview */}"""
+                      {/* comment */}"""
                       <div>""""
                         <h3 className="text-lg font-semibold text-blue-400 mb-2">
                           Overview"""
@@ -289,7 +290,7 @@ const ComprehensiveServicesOverview2025 = () => {
                         <p className="text-gray-300">{service.description}</p>
                       </div>
 """
-                      {/* Key Metrics Grid */}""""
+                      {/* comment */}""""
                       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">""""
                         <div className="bg-slate-700 rounded-lg p-4 text-center">""""
                           <h4 className="text-sm font-semibold text-blue-400 mb-2">
@@ -337,7 +338,7 @@ const ComprehensiveServicesOverview2025 = () => {
                         </div>
                       </div>
 """
-                      {/* Features and Use Cases */}""""
+                      {/* comment */}""""
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"""
                         <div>""""
                           <h3 className="text-lg font-semibold text-blue-400 mb-3">
@@ -369,7 +370,7 @@ const ComprehensiveServicesOverview2025 = () => {
                         </div>
                       </div>
 """
-                      {/* Technology and Integrations */}""""
+                      {/* comment */}""""
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"""
                         <div>""""
                           <h3 className="text-lg font-semibold text-blue-400 mb-3">
@@ -393,6 +394,7 @@ const ComprehensiveServicesOverview2025 = () => {
                           <div className="flex flex-wrap gap-2">
                             {service.integrations;
                               .slice(0, 8)
+
                               .map((integration, index) => (
                                 <span"""
                                   key={index}""""
@@ -405,7 +407,7 @@ const ComprehensiveServicesOverview2025 = () => {
                         </div>
                       </div>
 """
-                      {/* Technical Specifications */}""""
+                      {/* comment */}""""
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"""
                         <div>""""
                           <h3 className="text-lg font-semibold text-blue-400 mb-3">
@@ -413,23 +415,23 @@ const ComprehensiveServicesOverview2025 = () => {
                           </h3>""""
                           <div className="space-y-2 text-sm text-gray-300">"""
                             <div>""""
-                              <span className="text-blue-400">'
-                                API Endpoints:''
-                              </span>{' '}
+                              <span className="text-blue-400">"
+                                API Endpoints:""
+                              </span>{" "}
                               {service.apiEndpoints}
-                            </div>'"""
-                            <div>'"'"""
-                              <span className="text-blue-400">Uptime:</span>{' '}
+                            </div>""""
+                            <div>""""""
+                              <span className="text-blue-400">Uptime:</span>{" "}
                               {service.uptime}
-                            </div>'"""
-                            <div>'"'"""
-                              <span className="text-blue-400">Setup Time:</span>{' '}
+                            </div>""""
+                            <div>""""""
+                              <span className="text-blue-400">Setup Time:</span>{" "}
                               {service.setupTime}
                             </div>"""
                             <div>""""
-                              <span className="text-blue-400">'
-                                Trial Period:''
-                              </span>{' '}
+                              <span className="text-blue-400">"
+                                Trial Period:""
+                              </span>{" "}
                               {service.trialDays} days;
                             </div>
                           </div>
@@ -451,8 +453,7 @@ const ComprehensiveServicesOverview2025 = () => {
                           </div>
                         </div>
                       </div>
-
-                      {/* ROI and Benefits */}"""
+                      {/* comment */}"""
                       <div>""""
                         <h3 className="text-lg font-semibold text-blue-400 mb-3">
                           ROI & Benefits"""
@@ -479,8 +480,7 @@ const ComprehensiveServicesOverview2025 = () => {
                           </div>
                         </div>
                       </div>
-
-                      {/* Compliance and Certifications */}"""
+                      {/* comment */}"""
                       <div>""""
                         <h3 className="text-lg font-semibold text-blue-400 mb-3">
                           Compliance & Certifications"""
@@ -497,7 +497,7 @@ const ComprehensiveServicesOverview2025 = () => {
                         </div>
                       </div>
 """
-                      {/* Contact and Next Steps */}""""
+                      {/* comment */}""""
                       <div className="bg-slate-700 rounded-lg p-6">""""
                         <h3 className="text-lg font-semibold text-blue-400 mb-4">
                           Get Started"""
@@ -529,9 +529,9 @@ const ComprehensiveServicesOverview2025 = () => {
                                 className="block bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-300"""
                               >
                                 Visit Website;
-                              </a>`
-                              <a`"`
-                                href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`}""""
+                              </a>"
+                              <a"""
+                                href={"mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}"}""""
                                 className="block bg-green-600 hover:bg-green-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-300"""
                               >
                                 Request Demo;
@@ -549,7 +549,7 @@ const ComprehensiveServicesOverview2025 = () => {
         </div>
       )}
 """
-      {/* Footer CTA */}""""
+      {/* comment */}""""
       <section className="px-4 sm:px-6 lg:px-8 py-20">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -577,14 +577,8 @@ const ComprehensiveServicesOverview2025 = () => {
       </section>
     </div>)};
 export default ComprehensiveServicesOverview2025;
-
-
 export { ComprehensiveServicesOverview2025 };
-
 export { ComprehensiveServicesOverview2025 };
-
 export { ComprehensiveServicesOverview2025 };
-
 export { ComprehensiveServicesOverview2025 };
-
 export { ComprehensiveServicesOverview2025 };

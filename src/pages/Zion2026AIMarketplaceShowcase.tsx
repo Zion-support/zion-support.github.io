@@ -46,5 +46,4 @@ const Zion2026AIMarketplaceShowcase = () => {
             </div>
     </>
   );
-}
 export default Zion2026AIMarketplaceShowcase

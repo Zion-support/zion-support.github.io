@@ -1,3 +1,5 @@
+import Head from "next/head"
+import React from "react"
 
   children: ReactNode;
   title?: string;
@@ -20,7 +22,8 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
   showSEOAnalysis = false}) => {
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group"
   const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "")
-}
+
+
   return ("
     <PerformanceOptimizer enabled = "{true}" "
       showMetrics="{showPerformanceMetrics}""
@@ -37,10 +40,10 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
           <meta name="description" content="{description}"  />
           <meta name="keywords" content="{keywords}"  />"
           <meta name="viewport" content="width=device-width, initial-scale=1"  />"
-          <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}       />
+          <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}          />
           
           {/* comment */}"
-          {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
+          {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"   />}
 
           {/* comment */}"
           <meta property="og:title" content="{fullTitle}"  />"
@@ -99,17 +102,17 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
             href="/fonts/inter-var.woff2" "
             as="font" "
             type="font/woff2" "
-            crossOrigin="anonymous"  />"
+            crossOrigin="anonymous"   />"
           <link rel="preload" "
             href="/images/hero-bg.jpg" "
-            as="image"  />
+            as="image"   />
           
           {/* comment */}"
-          <link rel="icon" href="/favicon.ico"  />"
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />"
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />"
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />"
-          <link rel="manifest" href="/site.webmanifest"  />
+          <link rel="icon" href="/favicon.ico"   />"
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"   />"
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"   />"
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"   />"
+          <link rel="manifest" href="/site.webmanifest"   />
           
           {/* comment */}"
           <script type="application/ld+json""
@@ -160,7 +163,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
 })>
 }}
 
-         />
+        />
         </Head>
         {/* comment */}"
         <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -168,7 +171,10 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
         </main>
       </div>;
       ;
-      {/* Footer */};
+      {/* comment */};
       <FuturisticFooter  />;
     </div>;) };
 '"`
+
+
+export default Component

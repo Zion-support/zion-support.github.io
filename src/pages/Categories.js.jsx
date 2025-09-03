@@ -1,7 +1,8 @@
-import { CategoriesSection } from '@/components/CategoriesSection';'''
-import { GradientHeading } from '@/components/GradientHeading';
+import { CategoriesSection } from "@/components/CategoriesSection";"""
+import { GradientHeading } from "@/components/GradientHeading";
 export default function Categories() {}
   return()
+
     <>
       <div className="min-h-screen bg-zion-blue">""""
         <div className="container mx-auto px-4 py-12">""""
@@ -12,27 +13,21 @@ export default function Categories() {}
             >
               Browse Categories"""
             </GradientHeading>""""
-            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">'
-              Explore our extensive range of AI services and products organized''
+            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">"
+              Explore our extensive range of AI services and products organized""
               by category. Find exactly what you're looking for to enhance your;
               business or personal projects.
             </p>
           </div>
-
-          {/* Reuse the Categories Section component */}
-          <CategoriesSection showTitle={false} />
+          {/* comment */}
+          <CategoriesSection showTitle={false}    />
         </div>
       </div>
-      
     </>)}
 
 
 export { Categories };
-
 export { Categories };
-
 export { Categories };
-
 export { Categories };
-
 export { Categories };

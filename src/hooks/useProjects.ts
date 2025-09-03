@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useEffect, useCallback } from "react"; // Added useCallback
+import { supabase } from "@/integrations/supabase/client";
 export default function Page() {
  else if(user.userType === "employer" || user.userType === "buyer") {
         query = query.eq("client_id", user.id);
@@ -7,9 +7,7 @@ export default function Page() {
       // Consider if a case where userType is none of these should fetch all or none
       
       const { data, error: fetchError } = await query;
-      
       if(fetchError) throw fetchError;
-      
       const transformedData = data.map((project: any) => ({
         ...project,
         talent_profile: project.talent_profile ? {
@@ -18,7 +16,6 @@ export default function Page() {
         } : undefined,
         // client_profile is already in the correct shape from select
       }));
-      
       setProjects(transformedData as Project[]);
       setError(null);
     } catch(err: any) {
@@ -28,24 +25,25 @@ export default function Page() {
       setProjects([]); // Clear projects on error
     } finally {
       setIsLoading(false);
-    }
   }, [user]); // user is a dependency of fetchProjects
 
   const getProjectById = async(projectId: string): Promise<Project | null> => {
     try {
       const { data, error } = await supabase
         .from("projects")
-        .select(`
+
+        .select("
           *,
           job:jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
           client_profile:profiles!client_id(display_name, avatar_url)
-        `)
+
+        ")
+
         .eq("id", projectId)
+
         .single();
-      
       if(error) throw error;
-      
       const transformedProject = {
         ...data,
         talent_profile: data.talent_profile ? {
@@ -53,7 +51,6 @@ export default function Page() {
           full_name: data.talent_profile.display_name
         } : undefined
       };
-      
       return transformedProject as Project;
     } catch(err: any) {
       console.error("Error fetching project:", err);
@@ -61,21 +58,20 @@ export default function Page() {
       return null;
     }
   };
-
   const updateProjectStatus = async(projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("projects")
+
         .update({ status })
+
         .eq("id", projectId);
-      
       if(error) throw error;
-      
       setProjects(prev => 
         prev.map(project => project.id === projectId ? { ...project, status } : project)
+
       );
-      
-      toast.success(`Project status updated to ${status}`);
+      toast.success("Project status updated to ${status}");
       return true;
     } catch(err: any) {
       console.error("Error updating project status:", err);
@@ -83,7 +79,6 @@ export default function Page() {
       return false;
     }
   };
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
@@ -103,4 +98,3 @@ export default function Page() {
     getProjectById,
     updateProjectStatus
   };
-}

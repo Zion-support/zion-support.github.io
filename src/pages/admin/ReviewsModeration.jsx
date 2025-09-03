@@ -1,3 +1,4 @@
+import React from "react"
 import SEO from "@/components/SEO";""""
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable";""""
 import { ProtectedRoute } from "@/components/ProtectedRoute";""""
@@ -36,7 +37,7 @@ function ReviewsModerationContent() {}
     const handleRefresh = () => {}
         fetchReviews()};"""
     return (<>""""
-      <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"/>"""
+      <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace"   />"""
 """"
       <main className="container mx-auto px-4 py-8">""""
         <div className="flex justify-between items-center mb-8">"""
@@ -45,11 +46,10 @@ function ReviewsModerationContent() {}
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>
           </div>
         </div>
-
         <Card>"""
           <CardHeader>""""
             <CardTitle className="flex items-center gap-2">""""
-              <Star className="h-5 w-5"/>
+              <Star className="h-5 w-5"   />
               Review Management;
             </CardTitle>
             <CardDescription>
@@ -64,12 +64,12 @@ function ReviewsModerationContent() {}
               </TabsList>"""
 """"
               <TabsContent value="pending" className="mt-0">
-                <ReviewsModerationTable reviews={reviews} isLoading={isLoading} onRefresh={handleRefresh}/>
+                <ReviewsModerationTable reviews={reviews} isLoading={isLoading} onRefresh={handleRefresh}   />
               </TabsContent>"""
 """"
               <TabsContent value="reported" className="mt-0">""""
                 <div className="text-center py-12 border rounded-lg">""""
-                  <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2"/>""""
+                  <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2"   />""""
                   <h3 className="text-lg font-medium mb-2">Reported Reviews</h3>""""
                   <p className="text-muted-foreground">
                     This section will show reviews that have been reported by users.
@@ -80,21 +80,16 @@ function ReviewsModerationContent() {}
           </CardContent>
         </Card>
       </main>
-
     </>)};
 export { function };
 export default function ReviewsModeration() {}
     return (<ProtectedRoute>
-      <ReviewsModerationContent />
+      <ReviewsModerationContent  />
     </ProtectedRoute>)}
 
 
 export { ReviewsModerationContent, ReviewsModeration };
-
 export { ReviewsModerationContent, ReviewsModeration };
-
 export { ReviewsModerationContent, ReviewsModeration };
-
 export { ReviewsModerationContent, ReviewsModeration };
-
 export { ReviewsModerationContent, ReviewsModeration };

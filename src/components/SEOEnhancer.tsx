@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-
+import React, { useEffect } from "react";
+import Head from "next/head";
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -8,8 +7,6 @@ interface SEOEnhancerProps {
   canonical?: string;
   ogImage?: string;
   structuredData?: any;
-}
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = "Zion Tech Group - AI Services, IT Solutions & Micro SaaS",
   description = "Leading provider of AI services, IT solutions, and micro SaaS applications. Transform your business with cutting-edge technology and innovative solutions.",
@@ -21,30 +18,29 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   useEffect(() => {
     // Add structured data
     if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
     }
 
     // Optimize meta tags
-    const metaDescription = document.querySelector('meta[name="description"]');
+    const metaDescription = document.querySelector("meta[name="description"]");
     if (metaDescription) {
-      metaDescription.setAttribute('content', description);
+      metaDescription.setAttribute("content", description);
     }
 
     // Add canonical URL
     if (canonical) {
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      let canonicalLink = document.querySelector("link[rel="canonical"]");
       if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
+        canonicalLink = document.createElement("link");
+        canonicalLink.setAttribute("rel", "canonical");
         document.head.appendChild(canonicalLink);
       }
-      canonicalLink.setAttribute('href', canonical);
+      canonicalLink.setAttribute("href", canonical);
     }
   }, [description, canonical, structuredData]);
-
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -66,44 +62,42 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "https://twitter.com/ziontechgroup"
     ]
   };
-
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content={description}    />
+      <meta name="keywords" content={keywords.join(", ")}    />
+      <meta name="robots" content="index, follow"  />
+      <meta name="viewport" content="width=device-width, initial-scale=1"  />
       
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      {/* comment */}
+      <meta property="og:title" content={title}    />
+      <meta property="og:description" content={description}    />
+      <meta property="og:image" content={ogImage}    />
+      <meta property="og:url" content={canonical || "https://ziontechgroup.com"}    />
+      <meta property="og:type" content="website"  />
+      <meta property="og:site_name" content="Zion Tech Group"  />
       
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      {/* comment */}
+      <meta name="twitter:card" content="summary_large_image"  />
+      <meta name="twitter:title" content={title}    />
+      <meta name="twitter:description" content={description}    />
+      <meta name="twitter:image" content={ogImage}    />
       
-      {/* Additional SEO */}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="theme-color" content="#1976d2" />
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      {/* comment */}
+      <meta name="author" content="Zion Tech Group"  />
+      <meta name="theme-color" content="#1976d2"  />
+      <link rel="icon" href="/favicon.ico"   />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png"   />
       
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
+      {/* comment */}
+      <script type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData || defaultStructuredData)
+
         }}
-      />
+         />
     </Head>
   );
 };
-
 export default SEOEnhancer;

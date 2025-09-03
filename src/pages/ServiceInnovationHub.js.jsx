@@ -1,6 +1,6 @@
-import React from 'react';'''
-import { motion } from 'framer-motion';'''
-import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield } from 'lucide-react';
+import React from "react";"""
+import { motion } from "framer-motion";"""
+import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield } from "lucide-react";
 import AdvancedServiceInnovationHub from "../components/AdvancedServiceInnovationHub.jsx";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";import { Badge } from "../components/ui/badge";
@@ -9,96 +9,96 @@ const ServiceInnovationHub = () => {}
         {}
 """
 """"
-            icon: <Atom className="w-8 h-8 text-zion-cyan"/>,'
-            title: 'Quantum Technology','
-            description: 'Revolutionary quantum computing, cryptography, and quantum internet solutions','
-            trends['Quantum Supremacy',Quantum Internet',Quantum Materials'],;'
-            investment: '$150B+'
+            icon: <Atom className="w-8 h-8 text-zion-cyan"   />,"
+            title: "Quantum Technology","
+            description: "Revolutionary quantum computing, cryptography, and quantum internet solutions","
+            trends["Quantum Supremacy",Quantum Internet",Quantum Materials"],;"
+            investment: "$150B+"
         },
         {}
 """
 """"
-            icon: <Brain className="w-8 h-8 text-zion-purple"/>,'
-            title: 'Artificial Intelligence','
-            description: 'Advanced AI consciousness, governance, and neural network optimization','
-            trends['AI Consciousness',AI Governance',Neural Optimization'],;'
-            investment: '$300B+'
+            icon: <Brain className="w-8 h-8 text-zion-purple"   />,"
+            title: "Artificial Intelligence","
+            description: "Advanced AI consciousness, governance, and neural network optimization","
+            trends["AI Consciousness",AI Governance",Neural Optimization"],;"
+            investment: "$300B+"
         },
         {}
 """
 """"
-            icon: <Satellite className="w-8 h-8 text-zion-blue"/>,'
-            title: 'Space Technology','
-            description: 'Space mining, propulsion, habitats, and debris cleanup systems','
-            trends['Space Mining',Space Propulsion',Space Habitats'],;'
-            investment: '$200B+'
+            icon: <Satellite className="w-8 h-8 text-zion-blue"   />,"
+            title: "Space Technology","
+            description: "Space mining, propulsion, habitats, and debris cleanup systems","
+            trends["Space Mining",Space Propulsion",Space Habitats"],;"
+            investment: "$200B+"
         },
         {}
 """
 """"
-            icon: <Dna className="w-8 h-8 text-zion-green"/>,'
-            title: 'Biotech AI','
-            description: 'Synthetic biology, brain-computer interfaces, and AI-powered drug discovery','
-            trends['Synthetic Biology',Brain-Computer Interfaces',AI Drug Discovery'],;'
-            investment: '$100B+'
+            icon: <Dna className="w-8 h-8 text-zion-green"   />,"
+            title: "Biotech AI","
+            description: "Synthetic biology, brain-computer interfaces, and AI-powered drug discovery","
+            trends["Synthetic Biology",Brain-Computer Interfaces",AI Drug Discovery"],;"
+            investment: "$100B+"
         },
         {}
 """
 """"
-            icon: <Leaf className="w-8 h-8 text-zion-emerald"/>,'
-            title: 'Green Technology','
-            description: 'Fusion energy, climate engineering, and sustainable technology solutions','
-            trends['Fusion Energy',Climate Engineering',Sustainable Tech'],;'
-            investment: '$500B+'
+            icon: <Leaf className="w-8 h-8 text-zion-emerald"   />,"
+            title: "Green Technology","
+            description: "Fusion energy, climate engineering, and sustainable technology solutions","
+            trends["Fusion Energy",Climate Engineering",Sustainable Tech"],;"
+            investment: "$500B+"
         },
         {}
 """
 """"
-            icon: <Cpu className="w-8 h-8 text-zion-orange"/>,'
-            title: 'Advanced Computing','
-            description: 'Neuromorphic computing, edge AI, and model compression technologies','
-            trends['Neuromorphic Computing',Edge AI',Model Compression'],;'
-            investment: '$80B+'
+            icon: <Cpu className="w-8 h-8 text-zion-orange"   />,"
+            title: "Advanced Computing","
+            description: "Neuromorphic computing, edge AI, and model compression technologies","
+            trends["Neuromorphic Computing",Edge AI",Model Compression"],;"
+            investment: "$80B+"
         }
     ];
     const keyInsights = []
         {}
-'
-''
-'''
-            title: 'Quantum Revolution','''
-            description: 'Quantum computing will transform industries from finance to pharmaceuticals within the next decade','''
-            impact: 'High','''
-            timeline: '2025-2035'
+"
+""
+"""
+            title: "Quantum Revolution","""
+            description: "Quantum computing will transform industries from finance to pharmaceuticals within the next decade","""
+            impact: "High","""
+            timeline: "2025-2035"
         },
         {}
-'
-''
-'''
-            title: 'AI Consciousness','''
-            description: 'The development of self-aware AI systems will create new ethical and technological paradigms','''
-            impact: 'High','''
-            timeline: '2030-2040'
+"
+""
+"""
+            title: "AI Consciousness","""
+            description: "The development of self-aware AI systems will create new ethical and technological paradigms","""
+            impact: "High","""
+            timeline: "2030-2040"
         },
         {}
-'
-''
-'''
-            title: 'Space Economy','''
-            description: 'Space mining and colonization will create trillion-dollar economic opportunities','''
-            impact: 'High','''
-            timeline: '2030-2060'
+"
+""
+"""
+            title: "Space Economy","""
+            description: "Space mining and colonization will create trillion-dollar economic opportunities","""
+            impact: "High","""
+            timeline: "2030-2060"
         },
         {}
-'
-            title: 'Synthetic Biology','
-            description: 'Custom organisms and bio-manufacturing will revolutionize industrial processes','
-            impact: 'High','
-            timeline: '2025-2035'
+"
+            title: "Synthetic Biology","
+            description: "Custom organisms and bio-manufacturing will revolutionize industrial processes","
+            impact: "High","
+            timeline: "2025-2035"
         }"""
     ];""""
     return (<div className="min-h-screen bg-zion-blue-dark">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">""""
         <div className="absolute inset-0 overflow-hidden">""""
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>""""
@@ -121,17 +121,17 @@ const ServiceInnovationHub = () => {}
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               Discover cutting-edge innovation trends, future technology roadmaps, and strategic insights;
               that will shape the next generation of revolutionary services and solutions."""
-            </p>"'"""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">'"'"""
-              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick={() => document.getElementById('innovation-hub')?.scrollIntoView({ behavior: 'smooth' })}>"""
+            </p>"""""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""""""
+              <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick={() => document.getElementById("innovation-hub")?.scrollIntoView({ behavior: "smooth" })}>"""
                 Explore Innovation Hub""""
-                <ArrowRight className="w-5 h-5 ml-2"/>"""
+                <ArrowRight className="w-5 h-5 ml-2"   />"""
               </Button>""""
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {}
-'
-''
-'''
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',_blank')
+"
+""
+"""
+  () => window.open("mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation",_blank")
 
 }>
                 Get Innovation Strategy;
@@ -141,7 +141,7 @@ const ServiceInnovationHub = () => {}
         </div>
       </section>
 """
-      {/* Innovation Areas Overview */}""""
+      {/* comment */}""""
       <section className="py-16 px-6 bg-white">""""
         <div className="max-w-6xl mx-auto">
           <motion.div initial = {}
@@ -209,7 +209,7 @@ const ServiceInnovationHub = () => {}
         </div>
       </section>
 """
-      {/* Key Insights Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-6 bg-zion-blue-light/5">""""
         <div className="max-w-4xl mx-auto">
           <motion.div initial = {}
@@ -244,7 +244,7 @@ const ServiceInnovationHub = () => {}
                   <CardContent className="p-6">""""
                     <div className="flex items-start gap-4">""""
                       <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center text-white">""""
-                        <Lightbulb className="w-6 h-6"/>"""
+                        <Lightbulb className="w-6 h-6"   />"""
                       </div>""""
                       <div className="flex-1">""""
                         <div className="flex items-center gap-3 mb-2">""""
@@ -270,7 +270,7 @@ const ServiceInnovationHub = () => {}
         </div>
       </section>
 """
-      {/* Innovation Hub Section */}""""
+      {/* comment */}""""
       <section id="innovation-hub" className="py-16 px-6 bg-white">""""
         <div className="max-w-7xl mx-auto">
           <motion.div initial = {}
@@ -285,16 +285,16 @@ const ServiceInnovationHub = () => {}
               Interactive Innovation Hub"""
             </h2>""""
             <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              Explore our comprehensive innovation hub with real-time trends, future roadmaps, 
+              Explore our comprehensive innovation hub with real-time trends, future roadmaps,
               and strategic insights for informed decision making.
             </p>
           </motion.div>
 
-          <AdvancedServiceInnovationHub />
+          <AdvancedServiceInnovationHub  />
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan">""""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial = {}
@@ -314,19 +314,21 @@ const ServiceInnovationHub = () => {}
             </p>""""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
               <Button className="bg-white text-zion-purple hover:bg-zion-slate-light text-lg px-8 py-4" onClick = {}
-'
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation',_blank')
+"
+  () => window.open("mailto:kleber@ziontechgroup.com?subject=Innovation Leadership Consultation",_blank")
+
 """
 }>""""
-                <Rocket className="w-5 h-5 mr-2"/>
+                <Rocket className="w-5 h-5 mr-2"   />
                 Lead Innovation"""
               </Button>""""
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {}
-'
-  () => window.open('tel:+13024640950',_blank')
+"
+  () => window.open("tel:+13024640950",_blank')
+
 """
 }>""""
-                <Shield className="w-5 h-5 mr-2"/>
+                <Shield className="w-5 h-5 mr-2"   />
                 Speak with an Expert;
               </Button>
             </div>
@@ -335,14 +337,8 @@ const ServiceInnovationHub = () => {}
       </section>
     </div>)};
 export default ServiceInnovationHub;
-
-
 export { ServiceInnovationHub };
-
 export { ServiceInnovationHub };
-
 export { ServiceInnovationHub };
-
 export { ServiceInnovationHub };
-
 export { ServiceInnovationHub };

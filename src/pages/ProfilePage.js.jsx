@@ -1,19 +1,20 @@
-import { useState, useEffect } from 'react';'''
-import { useParams } from 'react-router-dom';'''
-import { supabase } from '@/integrations/supabase/client';'''
-import { toast } from '@/components/ui/use-toast';'''
-import { SEO } from '@/components/SEO';'''
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';'''
-import { Badge } from '@/components/ui/badge';'''
-import { HireNowCTA } from '@/components/profile/HireNowCTA';
+import React from "react"
+import { useState, useEffect } from "react";"""
+import { useParams } from "react-router-dom";"""
+import { supabase } from "@/integrations/supabase/client";"""
+import { toast } from "@/components/ui/use-toast";"""
+import { SEO } from "@/components/SEO";"""
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";"""
+import { Badge } from "@/components/ui/badge";"""
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
 import {}
   MapPin,
   Clock,
   Link as LinkIcon,
-  Github,'
-  Twitter,''
-  Linkedin,'''
-  CheckCircle2} from 'lucide-react';
+  Github,"
+  Twitter,""
+  Linkedin,"""
+  CheckCircle2} from "lucide-react";
 export default function ProfilePage() {}
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -26,13 +27,14 @@ export default function ProfilePage() {}
       setIsLoading(true);
       setIsError(false);
       try {}
-'
-''
-'''
-        const { data, error } = await supabase''''
-          .from('talent_profiles')'''
-          .select('*')'''
-          .eq('id', profileId)
+"
+""
+"""
+        const { data, error } = await supabase""""
+          .from("talent_profiles")"""
+          .select("*")"""
+          .eq("id", profileId)
+
           .single();
         if (error) {}
           throw error;
@@ -42,12 +44,12 @@ export default function ProfilePage() {}
         // console.error("Error fetching profile:", error);
         setIsError(true);
         toast({}
-'
-''
-'''
-          title: 'Error','''
-          description: 'Failed to load profile. Please try again later.','''
-          variant: 'destructive'});
+"
+""
+"""
+          title: "Error","""
+          description: "Failed to load profile. Please try again later.","""
+          variant: "destructive"});
       } finally {}
         setIsLoading(false);
       }
@@ -73,30 +75,31 @@ export default function ProfilePage() {}
     );
   }
   return()
+
     <>
       <SEO;
-        title={`${profileData.full_name} | Talent Profile`}
+        title={"${profileData.full_name} | Talent Profile"}
         description={}
-'
-          profileData.bio || 'View the profile of this talented individual.'
+"
+          profileData.bio || "View the profile of this talented individual."
         }
-      />"""
+     />"""
 """"
       <div className="container mx-auto px-4 py-8">""""
         <div className="grid grid-cols-12 gap-6">"""
-          {/* Main Content Area */}""""
+          {/* comment */}""""
           <div className="col-span-12 lg:col-span-8">"""
-            {/* Profile Header */}""""
+            {/* comment */}""""
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">""""
               <div className="flex items-start">"""
-                {/* Avatar */}""""
+                {/* comment */}""""
                 <div className="relative mr-4">""""
                   <Avatar className="w-24 h-24">
                     {profileData.profile_picture_url ? (
                       <AvatarImage;
                         src={profileData.profile_picture_url}
                         alt={profileData.full_name}
-                      />
+                     />
                     ) : (
                       <AvatarFallback>
                         {profileData.full_name?.charAt(0)}
@@ -105,12 +108,12 @@ export default function ProfilePage() {}
                   </Avatar>"""
                   {profileData.is_verified && (""""
                     <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">""""
-                      <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+                      <CheckCircle2 className="w-5 h-5 text-zion-cyan"   />
                     </div>
                   )}
                 </div>
 """
-                {/* Main Info */}""""
+                {/* comment */}""""
                 <div className="flex-1">""""
                   <div className="flex justify-between items-start">"""
                     <div>""""
@@ -121,28 +124,27 @@ export default function ProfilePage() {}
                         {profileData.professional_title}
                       </p>
                     </div>
-                    {/* Add Save / Unsave Button Here */}
+                    {/* comment */}
                   </div>
 """
-                  {/* Location & Availability */}""""
+                  {/* comment */}""""
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">"""
                     {profileData.location && (""""
                       <div className="flex items-center text-zion-slate-light">""""
-                        <MapPin className="h-4 w-4 mr-1" />
+                        <MapPin className="h-4 w-4 mr-1"   />
                         <span>{profileData.location}</span>
                       </div>
                     )}"""
                     {profileData.availability && (""""
                       <div className="flex items-center text-zion-slate-light">""""
-                        <Clock className="h-4 w-4 mr-1" />
+                        <Clock className="h-4 w-4 mr-1"   />
                         <span>{profileData.availability}</span>
                       </div>
                     )}
                   </div>
                 </div>
               </div>
-
-              {/* Skills */}"""
+              {/* comment */}"""
               {profileData.skills && profileData.skills.length > 0 && (""""
                 <div className="mt-4">""""
                   <h4 className="text-lg font-bold text-white mb-2">Skills</h4>""""
@@ -157,15 +159,15 @@ export default function ProfilePage() {}
               )}
             </div>
 """
-            {/* Bio Section */}""""
+            {/* comment */}""""
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">""""
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>""""
-              <p className="text-zion-slate-light">'
-                {profileData.bio || 'No bio provided.'}
+              <p className="text-zion-slate-light">"
+                {profileData.bio || "No bio provided."}
               </p>
             </div>
 """
-            {/* Portfolio Section */}""""
+            {/* comment */}""""
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">""""
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>""""
               <div className="space-y-3">
@@ -179,7 +181,7 @@ export default function ProfilePage() {}
                       rel="noopener noreferrer""""
                       className="flex items-center text-zion-cyan hover:text-white transition-colors""""
                     >""""
-                      <LinkIcon className="h-4 w-4 mr-2" />
+                      <LinkIcon className="h-4 w-4 mr-2"   />
                       {link}
                     </a>
                   ))"""
@@ -191,15 +193,15 @@ export default function ProfilePage() {}
               </div>
             </div>
 """
-            {/* Experience Section */}""""
+            {/* comment */}""""
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">""""
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>""""
-              <p className="text-zion-slate-light">'
-                {profileData.experience || 'No experience provided.'}
+              <p className="text-zion-slate-light">"
+                {profileData.experience || "No experience provided."}
               </p>
             </div>
 """
-            {/* Social Links */}""""
+            {/* comment */}""""
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">""""
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>""""
               <div className="flex space-x-4">
@@ -210,7 +212,7 @@ export default function ProfilePage() {}
                     rel="noopener noreferrer""""
                     className="text-zion-cyan hover:text-white transition-colors""""
                   >""""
-                    <Github className="h-6 w-6" />
+                    <Github className="h-6 w-6"   />
                   </a>
                 )}
                 {profileData.twitter_link && (
@@ -220,7 +222,7 @@ export default function ProfilePage() {}
                     rel="noopener noreferrer""""
                     className="text-zion-cyan hover:text-white transition-colors""""
                   >""""
-                    <Twitter className="h-6 w-6" />
+                    <Twitter className="h-6 w-6"   />
                   </a>
                 )}
                 {profileData.linkedin_link && (
@@ -230,39 +232,34 @@ export default function ProfilePage() {}
                     rel="noopener noreferrer""""
                     className="text-zion-cyan hover:text-white transition-colors""""
                   >""""
-                    <Linkedin className="h-6 w-6" />
+                    <Linkedin className="h-6 w-6"   />
                   </a>
                 )}
               </div>
             </div>
           </div>
 """
-          {/* Sidebar with HireNowCTA */}""""
+          {/* comment */}""""
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA;
               talentProfile={{}
-'
-''
-'''
-                id: profileData?.id || '','''
-                full_name: profileData?.full_name || '','''
-                professional_title: profileData?.professional_title || '',
+"
+""
+"""
+                id: profileData?.id || "","""
+                full_name: profileData?.full_name || "","""
+                professional_title: profileData?.professional_title || "",
                 hourly_rate: profileData?.hourly_rate || 0}}
-            />
-            {/* Placeholder for other sidebar elements */}
+           />
+            {/* comment */}
           </div>
         </div>
       </div>
-      
     </>)}
 
 
 export { ProfilePage };
-
 export { ProfilePage };
-
 export { ProfilePage };
-
 export { ProfilePage };
-
 export { ProfilePage };

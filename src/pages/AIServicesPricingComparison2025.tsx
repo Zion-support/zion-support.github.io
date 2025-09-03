@@ -4,9 +4,11 @@ import React, { useState } from "react"
 
 const AIServicesPricingComparison2025: React.FC = () => {",,
   const [activeCategory, setActiveCategory] = useState()
-}
+
+
   const [searchTerm, setSearchTerm] = useState("")
-}
+
+
   const categories = []
 
   const pricingComparison = [],
@@ -334,9 +336,11 @@ name: "IBM Quantum",
     const matchesCategory = activeCategory === "all" || service.category === activeCategory
     const matchesSearch = service.service.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase())
-}
+
+
     return matchesCategory && matchesSearch})
-}
+
+
   const containerVariants = {},
     visible: {,
 opacity: 1,
@@ -361,7 +365,7 @@ duration: 0.5,"        ease: "easeOut"}
     <>
       <Helmet>
         <title>AI Services Pricing Comparison 2025 | Zion Tech Group</title>"
-        <meta name = "description" content="Compare Zion Tech Group"s AI autonomous services pricing with competitors. See how our advanced AI solutions offer better value and ROI than traditional alternatives."  />"
+        <meta name = "description" content="Compare Zion Tech Group"s AI autonomous services pricing with competitors. See how our advanced AI solutions offer better value and ROI than traditional alternatives."   />"
         <meta name="keywords" content="AI services pricing, pricing comparison, ROI comparison, cost analysis, AI automation pricing"  />"
         <link rel="canonical" href="https: // comment
       </Helmet>
@@ -416,7 +420,7 @@ initial="{{" opacity: 0, y: 30 }}"
             <div className="mb-12">"
               <div className="flex flex-col md: flex-row gap-4 mb-8">"
                 <div className="flex-1 relative">"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />"
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"   />"
                   <input type="text""
                     placeholder="Search services..."">
                     value="{searchTerm}""
@@ -474,7 +478,7 @@ key="{service.id}""
                         <h5 className="font-semibold text-white mb-3">Features: </h5>,
                         {service.zionFeatures.map((feature, index) => ("
                           <div key="{index}" className="flex items-center gap-2">"
-                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />"
+                            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"   />"
                             <span className="text-gray-300 text-sm">{feature}</span>
                           </div>
                         ))}
@@ -510,7 +514,7 @@ key="{service.id}""
                           <h5 className="font-semibold text-white mb-3">Limited Features: </h5>,
                           {competitor.features.map((feature, index) => ("
                             <div key="{index}" className="flex items-center gap-2">"
-                              <CheckCircle className="w-4 h-4 text-gray-500 flex-shrink-0"  />"
+                              <CheckCircle className="w-4 h-4 text-gray-500 flex-shrink-0"   />"
                               <span className="text-gray-400 text-sm">{feature}</span>
                             </div>
                           ))}
@@ -521,7 +525,7 @@ key="{service.id}""
                           <h5 className="font-semibold text-red-400 mb-3">Missing: </h5>,
                           {competitor.missing.map((feature, index) => ("
                             <div key="{index}" className="flex items-center gap-2">"
-                              <XCircle className="w-4 h-4 text-red-400 flex-shrink-0"  />"
+                              <XCircle className="w-4 h-4 text-red-400 flex-shrink-0"   />"
                               <span className="text-gray-400 text-sm">{feature}</span>
                             </div>
                           ))}
@@ -536,15 +540,15 @@ key="{service.id}""
                       <h4 className="text-xl font-bold text-white mb-3">Why Choose Zion Tech Group?</h4>"
                       <div className="grid grid-cols-1 md: grid-cols-3 gap-4 text-sm">"
                         <div className="flex items-center gap-2 justify-center">"
-                          <TrendingUp className="w-4 h-4 text-green-400"  />",
+                          <TrendingUp className="w-4 h-4 text-green-400"   />",
                           <span className="text-gray-300">Better ROI: {service.roi}</span>
                         </div>"
                         <div className="flex items-center gap-2 justify-center">"
-                          <Zap className="w-4 h-4 text-blue-400"  />"
+                          <Zap className="w-4 h-4 text-blue-400"   />"
                           <span className="text-gray-300">Faster Setup: {service.setupTime}</span>
                         </div>"
                         <div className="flex items-center gap-2 justify-center">"
-                          <Shield className="w-4 h-4 text-purple-400"  />"
+                          <Shield className="w-4 h-4 text-purple-400"   />"
                           <span className="text-gray-300">Advanced AI Features</span>
                         </div>
                 </motion.div>

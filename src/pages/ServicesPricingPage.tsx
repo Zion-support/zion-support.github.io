@@ -46,5 +46,4 @@ const ServicesPricingPage = () => {
             </div>
     </>
   );
-}
 export default ServicesPricingPage

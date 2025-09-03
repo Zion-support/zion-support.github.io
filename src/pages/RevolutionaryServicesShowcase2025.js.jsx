@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 ;
 ;
 const RevolutionaryServicesShowcase2025 = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState("all");
+    const [searchTerm, setSearchTerm] = useState("");
     const allServices = [
-        ...REVOLUTIONARY_2025_ADVANCED_SERVICES.map(service => ({ ...service, source: 'revolutionary' })),
-        ...EMERGING_TECH_2025_SPECIALIZED_SERVICES.map(service => ({ ...service, source: 'emerging' }))
+        ...REVOLUTIONARY_2025_ADVANCED_SERVICES.map(service => ({ ...service, source: "revolutionary" })),
+        ...EMERGING_TECH_2025_SPECIALIZED_SERVICES.map(service => ({ ...service, source: "emerging" }))
+
     ];
     const categories = [
-        'all',
-        'Micro SAAS',
-        'IT Services',
-        'AI Solutions',
-        'Blockchain & Web3',
-        'IoT & Edge Computing',
-        'Sustainable Technology',
-        'Space Technology',
-        'Biotechnology',
-        'Quantum Technology'
+        "all",
+        "Micro SAAS",
+        "IT Services",
+        "AI Solutions",
+        "Blockchain & Web3",
+        "IoT & Edge Computing",
+        "Sustainable Technology",
+        "Space Technology",
+        "Biotechnology",
+        "Quantum Technology"
     ];
     const filteredServices = allServices.filter(service => {
         const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -26,7 +27,7 @@ const RevolutionaryServicesShowcase2025 = () => {
             service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
         return matchesCategory && matchesSearch});
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Header */}
+      {/* comment */}
       <div className="bg-black/20 backdrop-blur-sm border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -38,7 +39,7 @@ const RevolutionaryServicesShowcase2025 = () => {
               business in 2025 and beyond.
             </p>
 """
-            {/* Contact Information */}""""
+            {/* comment */}""""
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8">""""
               <h2 className="text-2xl font-semibold text-white mb-4">
                 Contact Zion Tech Group"""
@@ -60,14 +61,14 @@ const RevolutionaryServicesShowcase2025 = () => {
                   <p className="font-semibold text-white">Address</p>
                   <p>
                     364 E Main St STE 1008;
-                    <br />
+                    <br  />
                     Middletown DE 19709;
                   </p>
                 </div>
               </div>
             </div>
 """
-            {/* Market Overview */}""""
+            {/* comment */}""""
             <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 mb-8">""""
               <h2 className="text-2xl font-semibold text-white mb-4">
                 Market Overview"""
@@ -91,7 +92,7 @@ const RevolutionaryServicesShowcase2025 = () => {
         </div>
       </div>
 """
-      {/* Search and Filter */}""""
+      {/* comment */}""""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">""""
         <div className="flex flex-col md:flex-row gap-4 mb-8">""""
           <div className="flex-1">"""
@@ -100,8 +101,7 @@ const RevolutionaryServicesShowcase2025 = () => {
               placeholder="Search services..."""
               value={searchTerm}"""
               onChange={e => setSearchTerm(e.target.value)}""""
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"""
-            />"""
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""" />"""
           </div>""""
           <div className="flex-shrink-0">
             <select;
@@ -114,34 +114,34 @@ const RevolutionaryServicesShowcase2025 = () => {
                   key={category}"""
                   value={category}""""
                   className="bg-slate-800 text-white"""
-                >'
-                  {category === 'all' ? 'All Categories' : category}
+                >"
+                  {category === "all" ? "All Categories" : category}
                 </option>
               ))}
             </select>
           </div>
         </div>
 """
-        {/* Services Grid */}""""
+        {/* comment */}""""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map(service => (
             <div"""
               key={service.id}""""
               className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"""
             >"""
-              {/* Service Header */}""""
+              {/* comment */}""""
               <div className="mb-6">""""
                 <div className="flex items-center justify-between mb-4">
                   <span;
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${}
-'
-                      service.category === 'Micro SAAS'''
-                        ? 'bg-blue-500/20 text-blue-400'''
-                        : service.category === 'IT Services'''
-                          ? 'bg-green-500/20 text-green-400'''
-                          : service.category === 'AI Solutions'''
-                            ? 'bg-purple-500/20 text-purple-400'''`
-                            : 'bg-gray-500/20 text-gray-400'``
+                    className={"px-3 py-1 rounded-full text-xs font-medium ${}
+"
+                      service.category === "Micro SAAS"""
+                        ? "bg-blue-500/20 text-blue-400"""
+                        : service.category === "IT Services"""
+                          ? "bg-green-500/20 text-green-400"""
+                          : service.category === "AI Solutions"""
+                            ? "bg-purple-500/20 text-purple-400""""
+                            : "bg-gray-500/20 text-gray-400"""
                     }`}
                   >
                     {service.category}"""
@@ -162,12 +162,12 @@ const RevolutionaryServicesShowcase2025 = () => {
                 </div>
               </div>
 """
-              {/* Service Description */}""""
+              {/* comment */}""""
               <p className="text-gray-300 text-sm mb-6 line-clamp-3">
                 {service.description}
               </p>
 """
-              {/* Key Features */}""""
+              {/* comment */}""""
               <div className="mb-6">""""
                 <h4 className="text-white font-semibold mb-3">Key Features</h4>""""
                 <div className="space-y-2">
@@ -188,7 +188,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                 </div>
               </div>
 """
-              {/* Benefits */}""""
+              {/* comment */}""""
               <div className="mb-6">""""
                 <h4 className="text-white font-semibold mb-3">Key Benefits</h4>""""
                 <div className="space-y-2">
@@ -204,7 +204,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                 </div>
               </div>
 """
-              {/* Market Info */}""""
+              {/* comment */}""""
               <div className="mb-6 text-sm">""""
                 <div className="grid grid-cols-2 gap-4 text-gray-400">"""
                   <div>""""
@@ -218,7 +218,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                 </div>
               </div>
 """
-              {/* ROI and Setup */}""""
+              {/* comment */}""""
               <div className="mb-6 text-sm">""""
                 <div className="grid grid-cols-2 gap-4 text-gray-400">"""
                   <div>""""
@@ -232,7 +232,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                 </div>
               </div>
 """
-              {/* Trial Info */}""""
+              {/* comment */}""""
               <div className="mb-6 text-center">""""
                 <div className="bg-blue-500/20 rounded-lg p-3">""""
                   <p className="text-white font-semibold">
@@ -244,7 +244,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                 </div>
               </div>
 """
-              {/* Action Buttons */}""""
+              {/* comment */}""""
               <div className="space-y-3">
                 <a"""
                   href={service.websiteUrl}""""
@@ -266,7 +266,7 @@ const RevolutionaryServicesShowcase2025 = () => {
                 )}
               </div>
 """
-              {/* Contact Info */}""""
+              {/* comment */}""""
               <div className="mt-6 pt-6 border-t border-white/10 text-center">""""
                 <p className="text-sm text-gray-400 mb-2">
                   Need help? Contact us directly:"""
@@ -279,8 +279,7 @@ const RevolutionaryServicesShowcase2025 = () => {
             </div>
           ))}
         </div>
-
-        {/* No Results */}"""
+        {/* comment */}"""
         {filteredServices.length === 0 && (""""
           <div className="text-center py-12">""""
             <div className="text-6xl mb-4">🔍</div>""""
@@ -293,7 +292,7 @@ const RevolutionaryServicesShowcase2025 = () => {
           </div>
         )}
 """
-        {/* Call to Action */}""""
+        {/* comment */}""""
         <div className="mt-16 text-center">""""
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">""""
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -323,14 +322,8 @@ const RevolutionaryServicesShowcase2025 = () => {
       </div>
     </div>)};
 export default RevolutionaryServicesShowcase2025;
-
-
 export { RevolutionaryServicesShowcase2025 };
-
 export { RevolutionaryServicesShowcase2025 };
-
 export { RevolutionaryServicesShowcase2025 };
-
 export { RevolutionaryServicesShowcase2025 };
-
 export { RevolutionaryServicesShowcase2025 };

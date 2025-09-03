@@ -1,6 +1,5 @@
 import React from "react";
 interface StructuredDataProps {;
-
   data: any}
 
 export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
@@ -8,9 +7,9 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
     <script"
       type = "application/ld+json""
       dangerouslySetInnerHTML="{{" __html: JSON.stringify(data) }}>
-   />
+  />
   )
-}
+
 export const OrganizationSchema = () => {"
   const organizationData = {},"
     contactPoint: {"",
@@ -35,7 +34,7 @@ export const OrganizationSchema = () => {"
     industry: "Technology Services"}
 
 "
-  return <StructuredData data="{organizationData}"  />
+  return <StructuredData data="{organizationData}"   />
 
 
 export const WebSiteSchema = () => {"
@@ -61,7 +60,7 @@ export const WebSiteSchema = () => {"
       target: "https:// comment
 
 "
-  return <StructuredData data="{websiteData}"  />
+  return <StructuredData data="{websiteData}"   />
 
 
 export const ServiceSchema = () => {"
@@ -102,7 +101,7 @@ export const ServiceSchema = () => {"
   }
 
 "
-  return <StructuredData data="{serviceData}"  />
+  return <StructuredData data="{serviceData}"   />
 }"
         {""
           "@type": "Offer","
@@ -111,7 +110,7 @@ export const ServiceSchema = () => {"
             name: "Business Intelligence"}}]}}
 
 "
-  return <StructuredData data="{serviceData}"  />
+  return <StructuredData data="{serviceData}"   />
 
 
 """

@@ -1,3 +1,4 @@
+import React from "react"
 import { useState, useEffect } from "react";""""
 import { useNavigate, useLocation } from "react-router-dom";""""
 import { zodResolver } from "@hookform/resolvers/zod";""""
@@ -18,6 +19,7 @@ const updatePasswordSchema = z;
         .min(8, "Password must be at least 8 characters")""""
         .max(64, "Password must be less than 64 characters"),
     confirmPassword: z.string()})
+
     .refine((data) => data.password === data.confirmPassword, {}
 """
 """"
@@ -63,7 +65,7 @@ export default function UpdatePassword() {}
             // Set the session with the access token;
             await supabase.auth.setSession({}
                 access_token: accessToken,
-                refresh_token: ''});
+                refresh_token: ""});
             // Update the password;
             const { error } = await supabase.auth.updateUser({}
                 password: data.password});
@@ -123,16 +125,16 @@ export default function UpdatePassword() {}
             </div>"""
 """"
             <div className="bg-zion-blue-dark rounded-lg p-6">""""
-              {error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">"'"""
-                  <p className="text-sm">{error}</p>'"'"""
-                  <Button className="mt-3 text-xs" variant="outline" onClick={() => router('/forgot-password')}>
+              {error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">"""""
+                  <p className="text-sm">{error}</p>""""""
+                  <Button className="mt-3 text-xs" variant="outline" onClick={() => router("/forgot-password')}>
                     Request new reset link;
                   </Button>
                 </div>)}"""
 """"
               {success ? (<div className="text-center py-8">""""
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">""""
-                    <LockKeyhole className="h-6 w-6 text-zion-purple"/>"""
+                    <LockKeyhole className="h-6 w-6 text-zion-purple"   />"""
                   </div>""""
                   <h3 className="text-lg font-medium text-white">Password updated</h3>""""
                   <p className="mt-2 text-sm text-zion-slate-light">
@@ -150,17 +152,17 @@ export default function UpdatePassword() {}
                     <FormField control={form.control} name="password" render={({ field }) => (<FormItem>""""
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>"""
                           <FormControl>""""
-                            <Input type="password" placeholder="Enter password" aria-label="New password" aria-invalid={!!form.formState.errors.password} className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" disabled={isLoading} {...field}/>"""
+                            <Input type="password" placeholder="Enter password" aria-label="New password" aria-invalid={!!form.formState.errors.password} className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" disabled={isLoading} {...field}  />"""
                           </FormControl>""""
-                          <FormMessage className="text-red-400"/>
+                          <FormMessage className="text-red-400"   />
                         </FormItem>)}/>"""
 """"
                     <FormField control={form.control} name="confirmPassword" render={({ field }) => (<FormItem>""""
                           <FormLabel className="text-zion-slate-light">Confirm Password</FormLabel>"""
                           <FormControl>""""
-                            <Input type="password" placeholder="Enter password" aria-label="Confirm password" aria-invalid={!!form.formState.errors.confirmPassword} className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" disabled={isLoading} {...field}/>"""
+                            <Input type="password" placeholder="Enter password" aria-label="Confirm password" aria-invalid={!!form.formState.errors.confirmPassword} className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" disabled={isLoading} {...field}  />"""
                           </FormControl>""""
-                          <FormMessage className="text-red-400"/>
+                          <FormMessage className="text-red-400"   />
                         </FormItem>)}/>"""
 """"
                     <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading || !accessToken}>""""
@@ -190,16 +192,11 @@ export default function UpdatePassword() {}
           </div>
         </div>
       </div>
-      
     </>)}
 
 
 export { UpdatePassword };
-
 export { UpdatePassword };
-
 export { UpdatePassword };
-
 export { UpdatePassword };
-
 export { UpdatePassword };

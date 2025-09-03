@@ -1,20 +1,18 @@
-import React, { useEffect, useMemo, useCallback } from 'react';
-import { useLocation  } from 'react-router-dom';
-
+import React, { useEffect, useMemo, useCallback } from "react";
+import { useLocation  } from "react-router-dom";
 export default function Page() {
 "
-        // Add decoding="async" for better performance'
-        img.decoding = 'async';
+        // Add decoding="async" for better performance"
+        img.decoding = "async";
         // Add error handling
         img.onerror = () => {
 
-          img.style.display = 'none';
+          img.style.display = "none";
         };
       });
     };
-
-    // Use requestIdleCallback for non-critical optimization'
-    if('requestIdleCallback' in window) {
+    // Use requestIdleCallback for non-critical optimization"
+    if("requestIdleCallback" in window) {
 
       requestIdleCallback(optimizeImages);
     } else {
@@ -22,10 +20,8 @@ export default function Page() {
       setTimeout(optimizeImages, 100);
     }
   }, [location.pathname]);
-
   // Memoize expensive computations
   const optimizedChildren = useMemo(() => children, [children]);
-
   // Optimize scroll performance
   const handleScroll = useCallback(() => {
     // Throttle scroll events for better performance
@@ -37,61 +33,57 @@ export default function Page() {
       }, 16); // ~60fps
     }
   }, []);
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
-
   // Service Worker registration for caching
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
+    if("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
 
-    if('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker"
+        .register("/sw.js")
 
-      navigator.serviceWorker'
-        .register('/sw.js')
         .then(registration => {
 
-          // // console.log('SW registered: ', registration);
-
-          // Check for updates'
-          registration.addEventListener('updatefound', () => {
+          // // console.log("SW registered: ", registration);
+          // Check for updates"
+          registration.addEventListener("updatefound", () => {
             const newWorker = registration.installing;
             if(newWorker) {
 
-              newWorker.addEventListener('statechange', () => {
-                if('
-                  newWorker.state === 'installed' &&
+              newWorker.addEventListener("statechange", () => {
+                if("
+                  newWorker.state === "installed" &&
                   navigator.serviceWorker.controller
                 ) {
 
-                  // New service worker available'
-                  // // console.log('New service worker available');
+                  // New service worker available"
+                  // // console.log("New service worker available");
                 }
               });
             }
           });
         })
+
         .catch(registrationError => {
 
-          // // console.warn('SW registration failed: ', registrationError);
+          // // console.warn("SW registration failed: ", registrationError);
         });
     }
   }, []);
-
   // Intersection Observer for lazy loading
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
-
-    if('IntersectionObserver' in window) {
+    if("IntersectionObserver" in window) {
 
       const observer = new IntersectionObserver()
+
         entries => {
 
           entries.forEach(entry => {
@@ -102,7 +94,7 @@ export default function Page() {
               if(target.dataset.src) {
 
                 target.src = target.dataset.src;
-                target.removeAttribute('data-src');
+                target.removeAttribute("data-src");
                 observer.unobserve(target);
               }
             }
@@ -110,52 +102,51 @@ export default function Page() {
         },
         {
 
-          rootMargin: '50px',
+          rootMargin: "50px",
           threshold: 0.1}
       );
-
-      // Observe all images with data-src'
-      const lazyImages = document.querySelectorAll('img[data-src]');
+      // Observe all images with data-src"
+      const lazyImages = document.querySelectorAll("img[data-src]");
       lazyImages.forEach(img => observer.observe(img));
-
       return () => observer.disconnect();
     }
   }, [location.pathname]);
-
   return <>{optimizedChildren}</>
 };
+// Add global performance optimizations"
+if(typeof window !== "undefined") {
 
-// Add global performance optimizations'
-if(typeof window !== 'undefined') {
-
-  // Optimize long tasks'
-  if('scheduler' in window && 'postTask' in window.scheduler) {
+  // Optimize long tasks"
+  if("scheduler" in window && "postTask" in window.scheduler) {
 
     window.scheduler.postTask()
+
       () => {
         // Run non-critical tasks during idle time
       },
-      { priority: 'background' }
+      { priority: "background" }
     );
   }
 
-  // Optimize memory usage'
-  if('memory' in performance) {
+  // Optimize memory usage"
+  if("memory" in performance) {
 
     const memoryThreshold = 50 * 1024 * 1024; // 50MB
     if(performance.memory.usedJSHeapSize > memoryThreshold) {
 
-      // Trigger garbage collection if available'
-      if('gc' in window) {
+      // Trigger garbage collection if available"
+      if("gc' in window) {
 
         window.gc();
       }
     }
   }
-}
+
   })
-}
+
+
 ;"
   });,"})
-}
+
+
  export const PerformanceOptimizer = memo(({ children }) => { const location = useLocation () """

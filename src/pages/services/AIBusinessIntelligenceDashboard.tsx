@@ -1,12 +1,12 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { BarChart3, 
-  TrendingUp, 
-  Brain, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Users, 
+import React from "react.ts";
+import { motion  } from "framer-motion.ts";
+import { BarChart3,
+  TrendingUp,
+  Brain,
+  Zap,
+  Shield,
+  Globe,
+  Users,
   Database,
   PieChart,
   LineChart,
@@ -24,9 +24,8 @@ import { BarChart3,
   Phone,
   Mail,
   MapPin
- } from 'lucide-react.ts';
-import { SEO  } from '../../components/SEO';
-
+ } from "lucide-react.ts";
+import { SEO  } from "../../components/SEO";
 const AIBusinessIntelligenceDashboard = () => {
   const features = [
     {
@@ -60,7 +59,6 @@ const AIBusinessIntelligenceDashboard = () => {
       description: "Access your dashboards from anywhere - web, mobile apps, and integrate with existing business tools"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -112,7 +110,6 @@ const AIBusinessIntelligenceDashboard = () => {
       popular: false
     }
   ];
-
   const useCases = [
     {
       title: "Sales Performance Analytics",
@@ -135,13 +132,12 @@ const AIBusinessIntelligenceDashboard = () => {
       icon: Activity
     }
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson",
       role: "VP of Operations",
       company: "TechFlow Solutions",
-      content: "The AI insights have transformed how we make decisions. We've increased efficiency by 40% and reduced costs significantly.",
+      content: "The AI insights have transformed how we make decisions. We"ve increased efficiency by 40% and reduced costs significantly.",
       rating: 5
     },
     {
@@ -159,15 +155,12 @@ const AIBusinessIntelligenceDashboard = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
-        title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
-        description="Transform your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month."
-      />
+      <SEO title="AI-Powered Business Intelligence Dashboard - Zion Tech Group"
+        description="Transform your business with AI-powered BI dashboards. Real-time analytics, predictive insights, and automated reporting. Start from $299/month."   />
       
-      {/* Hero Section */}
+      {/* comment */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -177,50 +170,45 @@ const AIBusinessIntelligenceDashboard = () => {
             className="text-center relative z-10"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
-              <Brain className="w-4 h-4 mr-2 text-cyan-400" />
+              <Brain className="w-4 h-4 mr-2 text-cyan-400"   />
               AI-Powered Business Intelligence
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 AI Business Intelligence
               </span>
-              <br />
+              <br  />
               <span className="text-white">Dashboard</span>
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Transform your business data into actionable insights with our AI-powered business intelligence platform. 
               Get real-time analytics, predictive insights, and automated reporting that drives growth.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
               >
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"   />
               </a>
               <a
                 href="#demo"
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
               >
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"   />
                 Watch Demo
               </a>
             </div>
           </motion.div>
         </div>
-        
-        {/* Background Elements */}
+        {/* comment */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -266,8 +254,7 @@ const AIBusinessIntelligenceDashboard = () => {
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -313,8 +300,7 @@ const AIBusinessIntelligenceDashboard = () => {
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -342,7 +328,7 @@ const AIBusinessIntelligenceDashboard = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative ${plan.popular ? 'lg:-mt-8' : ''}`}
+                className={"relative ${plan.popular ? "lg:-mt-8" : ""}"}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -352,11 +338,11 @@ const AIBusinessIntelligenceDashboard = () => {
                   </div>
                 )}
                 
-                <div className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${
+                <div className={"glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${
                   plan.popular 
-                    ? 'border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10' 
-                    : 'border-white/20 hover:border-cyan-400/40'
-                }`}>
+                    ? "border-cyan-400/40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10" 
+                    : "border-white/20 hover:border-cyan-400/40"
+                }"}>
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center">
@@ -365,23 +351,21 @@ const AIBusinessIntelligenceDashboard = () => {
                     </div>
                     <p className="text-gray-300 mt-2">{plan.description}</p>
                   </div>
-                  
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"   />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  
                   <a
                     href="https://ziontechgroup.com/contact"
-                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
+                    className={"w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400'
-                        : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
-                    }`}
+                        ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400"
+                        : "border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
+                    }"}
                   >
                     Start Free Trial
                   </a>
@@ -391,8 +375,7 @@ const AIBusinessIntelligenceDashboard = () => {
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -422,7 +405,7 @@ const AIBusinessIntelligenceDashboard = () => {
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current text-yellow-400" />
+                      <Star key={i} className="w-5 h-5 fill-current text-yellow-400"   />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
@@ -437,8 +420,7 @@ const AIBusinessIntelligenceDashboard = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -459,44 +441,43 @@ const AIBusinessIntelligenceDashboard = () => {
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group"
               >
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"   />
               </a>
               <a
                 href="tel:+13024640950"
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"   />
                 Call +1 302 464 0950
               </a>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Contact Information */}
+      {/* comment */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-cyan-400 mb-4" />
+              <Phone className="w-8 h-8 text-cyan-400 mb-4"   />
               <div className="text-white font-semibold">Phone</div>
               <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 +1 302 464 0950
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-cyan-400 mb-4" />
+              <Mail className="w-8 h-8 text-cyan-400 mb-4"   />
               <div className="text-white font-semibold">Email</div>
               <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 kleber@ziontechgroup.com
               </a>
             </div>
             <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
+              <MapPin className="w-8 h-8 text-cyan-400 mb-4"   />
               <div className="text-white font-semibold">Address</div>
               <div className="text-gray-300 text-sm">
-                364 E Main St STE 1008<br />
+                364 E Main St STE 1008<br  />
                 Middletown DE 19709
               </div>
             </div>
@@ -506,15 +487,9 @@ const AIBusinessIntelligenceDashboard = () => {
     </div>
   );
 };
-
 export default AIBusinessIntelligenceDashboard;
-
 export { AIBusinessIntelligenceDashboard };
-
 export { AIBusinessIntelligenceDashboard };
-
 export { AIBusinessIntelligenceDashboard };
-
 export { AIBusinessIntelligenceDashboard };
-
 export { AIBusinessIntelligenceDashboard };

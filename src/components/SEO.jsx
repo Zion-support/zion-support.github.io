@@ -12,10 +12,11 @@ import React from "react"
       <title>{title}</title>"
       <meta name="&apos;description&apos;" content="{description}"  />&apos;"
       <meta name="&apos;keywords&apos;" content="{keywords}"  />&apos;"
-      <link rel="&apos;canonical&apos;" href="{canonical}"  />&apos
+      <link rel="&apos;canonical&apos;" href="{canonical}"   />&apos
     </Helmet>
   )
-}
+
+
 );
 export default SEO
   keywords = "AI, cybersecurity, cloud, devops, consulting, Zion Tech Group"}) {

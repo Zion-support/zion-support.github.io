@@ -1,74 +1,73 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { Helmet } from 'react-helmet-async';
+import React from "react";"""
+import { Link } from "react-router-dom";"""
+import { Helmet } from "react-helmet-async";
 ;
 const ITInfrastructure = () => {}
   const features = []
     {}
-'
-      title: 'Network Management','
-      description:''
-        'Comprehensive network infrastructure design, implementation, and maintenance','
-      features: [''
-        'Network Design',Performance Optimization',Security Implementation',24/7 Monitoring'
-      ],'
-      icon: '🌐'},
+"
+      title: "Network Management","
+      description:""
+        "Comprehensive network infrastructure design, implementation, and maintenance","
+      features: [""
+        "Network Design",Performance Optimization",Security Implementation",24/7 Monitoring"
+      ],"
+      icon: "🌐"},
     {}
-'
-      title: 'System Administration','
-      description:''
-        'Expert management of servers, operating systems, and enterprise applications','
-      features: [''
-        'Server Management',OS Administration',Application Support',Performance Tuning'
-      ],'
-      icon: '🖥️'},
+"
+      title: "System Administration","
+      description:""
+        "Expert management of servers, operating systems, and enterprise applications","
+      features: [""
+        "Server Management",OS Administration",Application Support",Performance Tuning"
+      ],"
+      icon: "🖥️"},
     {}
-'
-      title: 'Data Center Operations','
-      description:''
-        'Professional data center management and optimization services','
-      features: [''
-        'Facility Management',Power & Cooling',Hardware Maintenance',Capacity Planning'
-      ],'
-      icon: '🏢'},
+"
+      title: "Data Center Operations","
+      description:""
+        "Professional data center management and optimization services","
+      features: [""
+        "Facility Management",Power & Cooling",Hardware Maintenance",Capacity Planning"
+      ],"
+      icon: "🏢"},
     {}
-'
-      title: 'Performance Optimization','
-      description: 'System and network performance analysis and improvement','
-      features: [''
-        'Performance Monitoring',Bottleneck Analysis',Optimization Strategies',Capacity Planning'
-      ],'
-      icon: '⚡'}
+"
+      title: "Performance Optimization","
+      description: "System and network performance analysis and improvement","
+      features: [""
+        "Performance Monitoring",Bottleneck Analysis",Optimization Strategies",Capacity Planning"
+      ],"
+      icon: "⚡"}
   ];
-
   const infrastructureAreas = []
     {}
-'
-      area: 'Hardware Infrastructure','
-      solutions: [''
-        'Servers',Storage systems',Network equipment',Workstations'
+"
+      area: "Hardware Infrastructure","
+      solutions: [""
+        "Servers",Storage systems",Network equipment",Workstations"
       ]},
     {}
-'
-      area: 'Software Infrastructure','
-      solutions: [''
-        'Operating systems',Virtualization platforms',Database systems',Management tools'
+"
+      area: "Software Infrastructure","
+      solutions: [""
+        "Operating systems",Virtualization platforms",Database systems",Management tools"
       ]},
     {}
-'
-      area: 'Network Infrastructure','
-      solutions: [''
-        'LAN/WAN setup',Wireless networks',VPN solutions',Network security'
+"
+      area: "Network Infrastructure","
+      solutions: [""
+        "LAN/WAN setup",Wireless networks",VPN solutions",Network security"
       ]},
     {}
-'
-      area: 'Storage Infrastructure','
-      solutions: [''
-        'Storage arrays',Backup systems',Cloud storage',Data protection'
+"
+      area: "Storage Infrastructure","
+      solutions: [""
+        "Storage arrays",Backup systems",Cloud storage",Data protection"
       ]}
   ];
-
   return()
+
     <>
       <Helmet>
         <title>
@@ -76,34 +75,29 @@ const ITInfrastructure = () => {}
         </title>
         <meta;
           name="description""""
-          content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."""
-        />"""
+          content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services.""" />"""
         <meta""""
           property="og:title""""
-          content="IT Infrastructure — Zion Tech Group"""
-        />"""
+          content="IT Infrastructure — Zion Tech Group""" />"""
         <meta""""
           property="og:description""""
-          content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure."""
-        />"""
+          content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure.""" />"""
         <meta""""
           property="og:url""""
-          content="https://ziontechgroup.com/services/it-infrastructure"""
-        />"""
+          content="https://ziontechgroup.com/services/it-infrastructure""" />"""
         <link""""
           rel="canonical""""
-          href="https://ziontechgroup.com/services/it-infrastructure"""
-        />
+          href="https://ziontechgroup.com/services/it-infrastructure""" />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">"""
-        {/* Hero Section */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto text-center">""""
             <h1 className="text-4xl md:text-6xl font-bold mb-6">"""
               IT""""
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
-                {' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">"
+                {" "}
                 Infrastructure;
               </span>"""
             </h1>""""
@@ -129,7 +123,7 @@ const ITInfrastructure = () => {}
           </div>
         </section>
 """
-        {/* Features Grid */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto">""""
             <div className="text-center mb-16">""""
@@ -166,7 +160,7 @@ const ITInfrastructure = () => {}
           </div>
         </section>
 """
-        {/* Infrastructure Areas */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto">""""
             <div className="text-center mb-16">""""
@@ -201,7 +195,7 @@ const ITInfrastructure = () => {}
           </div>
         </section>
 """
-        {/* Benefits */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""""
           <div className="max-w-7xl mx-auto">""""
             <div className="text-center mb-16">""""
@@ -227,8 +221,7 @@ const ITInfrastructure = () => {}
                       strokeLinecap="round""""
                       strokeLinejoin="round""""
                       strokeWidth={2}""""
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"""
-                    />
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z""" />
                   </svg>"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -251,8 +244,7 @@ const ITInfrastructure = () => {}
                       strokeLinecap="round""""
                       strokeLinejoin="round""""
                       strokeWidth={2}""""
-                      d="M7 11l5-5m0 0l5 5m-5-5v12"""
-                    />
+                      d="M7 11l5-5m0 0l5 5m-5-5v12""" />
                   </svg>"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -275,8 +267,7 @@ const ITInfrastructure = () => {}
                       strokeLinecap="round""""
                       strokeLinejoin="round""""
                       strokeWidth={2}""""
-                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"""
-                    />
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z""" />
                   </svg>"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -290,13 +281,13 @@ const ITInfrastructure = () => {}
           </div>
         </section>
 """
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""""
           <div className="max-w-4xl mx-auto text-center">""""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Build Your Infrastructure?"""
             </h2>""""
-            <p className="text-xl text-gray-300 mb-8">'
+            <p className="text-xl text-gray-300 mb-8">"
               Let's discuss how our infrastructure services can support your;
               business growth;
             </p>"""
@@ -312,16 +303,9 @@ const ITInfrastructure = () => {}
     </>
   );
 };
-
 export default ITInfrastructure;
-
-
 export { ITInfrastructure };
-
 export { ITInfrastructure };
-
 export { ITInfrastructure };
-
 export { ITInfrastructure };
-
 export { ITInfrastructure };

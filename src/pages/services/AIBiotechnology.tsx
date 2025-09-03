@@ -1,16 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Dna, 
-  Microscope, 
-  Beaker, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
+  Dna,
+  Microscope,
+  Beaker,
+  Brain,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Mail,
+  Phone,
   MapPin,
   TestTube,
   Syringe,
@@ -23,9 +23,8 @@ import {
   Clock,
   Award,
   Pill
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 export default function AIBiotechnology() {
   const features = [
     "AI-powered drug discovery and design",
@@ -37,7 +36,6 @@ export default function AIBiotechnology() {
     "Drug repurposing AI",
     "Clinical trial optimization"
   ];
-
   const benefits = [
     "Accelerated drug development timeline",
     "Improved drug efficacy and safety",
@@ -48,7 +46,6 @@ export default function AIBiotechnology() {
     "Innovative therapeutic approaches",
     "Precision medicine capabilities"
   ];
-
   const pricingTiers = [
     {
       name: "Bio Starter",
@@ -96,7 +93,6 @@ export default function AIBiotechnology() {
       ]
     }
   ];
-
   const useCases = [
     {
       title: "Pharmaceutical Development",
@@ -119,7 +115,6 @@ export default function AIBiotechnology() {
       icon: Microscope
     }
   ];
-
   const technologies = [
     {
       name: "Machine Learning",
@@ -142,7 +137,6 @@ export default function AIBiotechnology() {
       icon: Target
     }
   ];
-
   const industries = [
     {
       name: "Pharmaceutical",
@@ -165,19 +159,16 @@ export default function AIBiotechnology() {
       icon: Microscope
     }
   ];
-
   return (
     <>
-      <SEO 
-        title="AI Biotechnology Services - Zion Tech Group"
+      <SEO title="AI Biotechnology Services - Zion Tech Group"
         description="Revolutionary AI-powered biotechnology solutions. From drug discovery to personalized medicine, discover the future of biotechnology."
-        canonical="/services/ai-biotechnology"
-      />
+        canonical="/services/ai-biotechnology"   />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-        {/* Hero Section */}
+        {/* comment */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/bio-pattern.svg')] bg-center opacity-10"></div>
+          <div className="absolute inset-0 bg-[url("/images/bio-pattern.svg")] bg-center opacity-10"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -186,14 +177,14 @@ export default function AIBiotechnology() {
               className="text-center"
             >
               <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium mb-6">
-                <Dna className="w-4 h-4 mr-2" />
+                <Dna className="w-4 h-4 mr-2"   />
                 Biotechnology
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-400 bg-clip-text text-transparent">
                 AI Biotechnology
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Revolutionize healthcare and life sciences with our AI-powered biotechnology solutions. From drug discovery to personalized medicine, we're transforming the future of biology.
+                Revolutionize healthcare and life sciences with our AI-powered biotechnology solutions. From drug discovery to personalized medicine, we"re transforming the future of biology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -212,8 +203,7 @@ export default function AIBiotechnology() {
             </motion.div>
           </div>
         </section>
-
-        {/* Features Section */}
+        {/* comment */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -240,7 +230,7 @@ export default function AIBiotechnology() {
                   className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 border border-green-500/30 rounded-xl p-6 hover:border-green-400/60 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
-                    <Dna className="w-6 h-6 text-white" />
+                    <Dna className="w-6 h-6 text-white"   />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
                 </motion.div>
@@ -248,8 +238,7 @@ export default function AIBiotechnology() {
             </div>
           </div>
         </section>
-
-        {/* Benefits Section */}
+        {/* comment */}
         <section className="py-20 bg-black/20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -276,7 +265,7 @@ export default function AIBiotechnology() {
                   className="flex items-start space-x-4"
                 >
                   <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-5 h-5 text-white" />
+                    <CheckCircle className="w-5 h-5 text-white"   />
                   </div>
                   <p className="text-lg text-gray-300">{benefit}</p>
                 </motion.div>
@@ -284,8 +273,7 @@ export default function AIBiotechnology() {
             </div>
           </div>
         </section>
-
-        {/* Technologies Section */}
+        {/* comment */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -323,8 +311,7 @@ export default function AIBiotechnology() {
             </div>
           </div>
         </section>
-
-        {/* Industries Section */}
+        {/* comment */}
         <section className="py-20 bg-black/20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -362,8 +349,7 @@ export default function AIBiotechnology() {
             </div>
           </div>
         </section>
-
-        {/* Use Cases Section */}
+        {/* comment */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -401,8 +387,7 @@ export default function AIBiotechnology() {
             </div>
           </div>
         </section>
-
-        {/* Pricing Section */}
+        {/* comment */}
         <section id="pricing" className="py-20 bg-black/20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -426,11 +411,11 @@ export default function AIBiotechnology() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`relative bg-gradient-to-br from-green-900/50 to-emerald-900/50 border rounded-xl p-8 ${
+                  className={"relative bg-gradient-to-br from-green-900/50 to-emerald-900/50 border rounded-xl p-8 ${
                     tier.popular 
-                      ? 'border-green-400 scale-105' 
-                      : 'border-green-500/30'
-                  }`}
+                      ? "border-green-400 scale-105" 
+                      : "border-green-500/30"
+                  }"}
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -448,23 +433,21 @@ export default function AIBiotechnology() {
                       <span className="text-lg text-gray-400">/{tier.period}</span>
                     </div>
                   </div>
-
                   <ul className="space-y-4 mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
-
                   <Link 
                     to="/contact" 
-                    className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className={"w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       tier.popular
-                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white'
-                        : 'border border-green-500 text-green-400 hover:bg-green-500 hover:text-white'
-                    }`}
+                        ? "bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white"
+                        : "border border-green-500 text-green-400 hover:bg-green-500 hover:text-white'
+                    }"}
                   >
                     Start Research
                   </Link>
@@ -473,8 +456,7 @@ export default function AIBiotechnology() {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
+        {/* comment */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <motion.div
@@ -505,8 +487,7 @@ export default function AIBiotechnology() {
             </motion.div>
           </div>
         </section>
-
-        {/* Contact Information */}
+        {/* comment */}
         <section className="py-20 bg-black/20">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <motion.div
@@ -517,19 +498,19 @@ export default function AIBiotechnology() {
               <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center">
-                  <Phone className="w-8 h-8 text-green-400 mb-4" />
+                  <Phone className="w-8 h-8 text-green-400 mb-4"   />
                   <p className="text-white font-semibold">Phone</p>
                   <p className="text-gray-300">+1 302 464 0950</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Mail className="w-8 h-8 text-green-400 mb-4" />
+                  <Mail className="w-8 h-8 text-green-400 mb-4"   />
                   <p className="text-white font-semibold">Email</p>
                   <p className="text-gray-300">kleber@ziontechgroup.com</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <MapPin className="w-8 h-8 text-green-400 mb-4" />
+                  <MapPin className="w-8 h-8 text-green-400 mb-4"   />
                   <p className="text-white font-semibold">Address</p>
-                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-gray-300">364 E Main St STE 1008<br  />Middletown DE 19709</p>
                 </div>
               </div>
             </motion.div>
@@ -538,4 +519,3 @@ export default function AIBiotechnology() {
       </div>
     </>
   );
-}

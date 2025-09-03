@@ -46,5 +46,4 @@ const ZionTechGroup2025ComprehensiveShowcase = () => {
             </div>
     </>
   );
-}
 export default ZionTechGroup2025ComprehensiveShowcase

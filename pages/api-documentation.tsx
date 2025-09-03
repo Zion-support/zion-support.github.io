@@ -1,16 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
 const APIDocumentation: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Head>
         <title>API Documentation - Zion App</title>
-        <meta name="description" content="Comprehensive API documentation for Zion App services and integrations" />
-        <meta name="keywords" content="API, documentation, Zion App, integration, services" />
+        <meta name="description" content="Comprehensive API documentation for Zion App services and integrations"  />
+        <meta name="keywords" content="API, documentation, Zion App, integration, services"  />
       </Head>
-
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -21,7 +19,6 @@ const APIDocumentation: React.FC = () => {
               Comprehensive guide to integrating with Zion App services
             </p>
           </div>
-
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Getting Started</h2>
             <div className="space-y-4">
@@ -34,7 +31,6 @@ const APIDocumentation: React.FC = () => {
                   Authorization: Bearer YOUR_API_KEY
                 </code>
               </div>
-
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="font-medium text-gray-800 mb-2">Base URL</h3>
                 <p className="text-gray-600 mb-3">
@@ -44,7 +40,6 @@ const APIDocumentation: React.FC = () => {
                   https://api.zion.app/v1
                 </code>
               </div>
-
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="font-medium text-gray-800 mb-2">Rate Limiting</h3>
                 <p className="text-gray-600 mb-3">
@@ -53,7 +48,6 @@ const APIDocumentation: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Core Endpoints</h2>
             <div className="space-y-6">
@@ -62,21 +56,19 @@ const APIDocumentation: React.FC = () => {
                 <div className="space-y-2 text-sm">
                   <div><code className="bg-gray-100 px-2 py-1 rounded">GET /content</code> - Retrieve content</div>
                   <div><code className="bg-gray-100 px-2 py-1 rounded">POST /content</code> - Create content</div>
-                  <div><code className="bg-gray-100 px-2 py-1 rounded">PUT /content/{'{id}'}</code> - Update content</div>
-                  <div><code className="bg-gray-100 px-2 py-1 rounded">DELETE /content/{'{id}'}</code> - Delete content</div>
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">PUT /content/{"{id}"}</code> - Update content</div>
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">DELETE /content/{"{id}"}</code> - Delete content</div>
                 </div>
               </div>
-
               <div className="border-l-4 border-green-500 pl-4">
                 <h3 className="text-lg font-medium text-gray-800 mb-2">User Management</h3>
                 <div className="space-y-2 text-sm">
                   <div><code className="bg-gray-100 px-2 py-1 rounded">GET /users</code> - List users</div>
                   <div><code className="bg-gray-100 px-2 py-1 rounded">POST /users</code> - Create user</div>
-                  <div><code className="bg-gray-100 px-2 py-1 rounded">GET /users/{'{id}'}</code> - Get user details</div>
-                  <div><code className="bg-gray-100 px-2 py-1 rounded">PUT /users/{'{id}'}</code> - Update user</div>
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">GET /users/{"{id}"}</code> - Get user details</div>
+                  <div><code className="bg-gray-100 px-2 py-1 rounded">PUT /users/{"{id}"}</code> - Update user</div>
                 </div>
               </div>
-
               <div className="border-l-4 border-purple-500 pl-4">
                 <h3 className="text-lg font-medium text-gray-800 mb-2">Analytics</h3>
                 <div className="space-y-2 text-sm">
@@ -87,59 +79,55 @@ const APIDocumentation: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Code Examples</h2>
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-medium text-gray-800 mb-3">JavaScript/Node.js</h3>
                 <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
-{`const axios = require('axios');
-
+{"const axios = require("axios");
 const api = axios.create({
-  baseURL: 'https://api.zion.app/v1',
+  baseURL: "https://api.zion.app/v1",
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Content-Type": "application/json"
   }
 });
-
 // Get content
 const getContent = async () => {
   try {
-    const response = await api.get('/content');
+    const response = await api.get("/content");
     console.log(response.data);
   } catch (error) {
-    console.error('Error:', error.response.data);
+    console.error("Error:", error.response.data);
   }
-};`}
+};"}
                 </pre>
               </div>
-
               <div>
                 <h3 className="text-lg font-medium text-gray-800 mb-3">Python</h3>
                 <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
-{`import requests
+{"import requests
 
-api_key = 'YOUR_API_KEY'
-base_url = 'https://api.zion.app/v1'
+api_key = "YOUR_API_KEY"
+base_url = "https://api.zion.app/v1"
 
 headers = {
-    'Authorization': f'Bearer {api_key}',
-    'Content-Type': 'application/json'
-}
+    "Authorization": f"Bearer {api_key}",
+    "Content-Type": "application/json"
 
 # Get content
-response = requests.get(f'{base_url}/content', headers=headers)
+response = requests.get(f"{base_url}/content", headers=headers)
+
 if response.status_code == 200:
     print(response.json())
+
 else:
-    print(f'Error: {response.status_code}')`}
+    print(f"Error: {response.status_code}")"}
                 </pre>
               </div>
             </div>
           </div>
-
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-semibold text-gray-800 mb-6">Error Codes</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -164,7 +152,6 @@ else:
               </div>
             </div>
           </div>
-
           <div className="bg-blue-50 rounded-lg p-6 text-center">
             <h3 className="text-lg font-medium text-blue-800 mb-2">Need Help?</h3>
             <p className="text-blue-600 mb-4">
@@ -179,5 +166,4 @@ else:
     </div>
   );
 };
-
 export default APIDocumentation;

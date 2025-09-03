@@ -14,9 +14,9 @@ class PerformanceMonitor {
       buildTime: 0,
       pageLoadTime: 0,
       memoryUsage: 0,
-}
-    this.optimizations = [],
-}
+    }
+    this.optimizations = []
+  }
 
   log(message, type = "info") {
     const timestamp = new Date().toISOString()

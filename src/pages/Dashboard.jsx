@@ -1,17 +1,16 @@
-import React from 'react';'''
-import { SEO } from '@/components/SEO';
-
+import React from "react";"""
+import { SEO } from "@/components/SEO';
 export default function Dashboard() {}
   return()
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
       <SEO""""
         title="Dashboard - Zion Tech Group""""
         description="Access your Zion Tech Group dashboard to manage your services, view analytics, and control your account.""""
         keywords="dashboard, account management, services, analytics""""
-        canonical="https://ziontechgroup.com/dashboard"""
-      />
+        canonical="https://ziontechgroup.com/dashboard""" />
 """
-      {/* Header */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-12">""""
@@ -25,7 +24,7 @@ export default function Dashboard() {}
           </div>"""
 """"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Service Status */}"""
+            {/* comment */}"""
             <div>""""
               <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6">""""
                 <h3 className="text-xl font-bold text-white mb-4">
@@ -53,8 +52,7 @@ export default function Dashboard() {}
                 </div>
               </div>
             </div>
-
-            {/* Quick Actions */}"""
+            {/* comment */}"""
             <div>""""
               <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6">""""
                 <h3 className="text-xl font-bold text-white mb-4">
@@ -84,7 +82,7 @@ export default function Dashboard() {}
             </div>
           </div>
 """
-          {/* Recent Activity */}""""
+          {/* comment */}""""
           <div className="mt-8">""""
             <div className="bg-slate-800/50 border border-white/10 rounded-xl p-8">""""
               <h2 className="text-2xl font-bold text-white mb-6">
@@ -124,7 +122,7 @@ export default function Dashboard() {}
         </div>
       </section>
 """
-      {/* Contact CTA */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -152,15 +150,8 @@ export default function Dashboard() {}
       </section>
     </div>
   );
-}
-
-
 export { Dashboard };
-
 export { Dashboard };
-
 export { Dashboard };
-
 export { Dashboard };
-
 export { Dashboard };

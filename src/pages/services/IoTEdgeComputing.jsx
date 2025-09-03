@@ -1,66 +1,66 @@
-import React from 'react';
+import React from "react";
 import { SEO } from "@/components/SEO";
-import Link from 'next/link';
-import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from 'lucide-react';
+import Link from "next/link";
+import { Check, Wifi, Cpu, Database, Shield, Zap, Globe, Target } from "lucide-react";
 export default function IoTEdgeComputingServices() {
     const industries = [
-        'Smart Cities & Municipalities',
-        'Manufacturing & Industry 4.0',
-        'Healthcare & Medical Devices',
-        'Agriculture & Precision Farming',
-        'Energy & Utilities',
-        'Transportation & Logistics',
-        'Retail & Smart Stores',
-        'Building Management & Smart Homes'
+        "Smart Cities & Municipalities",
+        "Manufacturing & Industry 4.0",
+        "Healthcare & Medical Devices",
+        "Agriculture & Precision Farming",
+        "Energy & Utilities",
+        "Transportation & Logistics",
+        "Retail & Smart Stores",
+        "Building Management & Smart Homes"
     ];
     const technologies = [
-        'LoRaWAN & NB-IoT',
-        '5G & Edge Computing',
-        'MQTT & CoAP Protocols',
-        'Kubernetes & Docker',
-        'Apache Kafka & Spark',
-        'TensorFlow Lite & ONNX',
-        'AWS IoT & Azure IoT',
-        'Google Cloud IoT & IBM Watson'
+        "LoRaWAN & NB-IoT",
+        "5G & Edge Computing",
+        "MQTT & CoAP Protocols",
+        "Kubernetes & Docker",
+        "Apache Kafka & Spark",
+        "TensorFlow Lite & ONNX",
+        "AWS IoT & Azure IoT",
+        "Google Cloud IoT & IBM Watson"
     ];
     const benefits = [
-        'Real-time data processing and insights',
-        'Reduced latency and improved performance',
-        'Lower bandwidth and cloud costs',
-        'Enhanced security and privacy',
-        'Scalable IoT deployments',
-        'Predictive maintenance and optimization'
+        "Real-time data processing and insights",
+        "Reduced latency and improved performance",
+        "Lower bandwidth and cloud costs",
+        "Enhanced security and privacy",
+        "Scalable IoT deployments",
+        "Predictive maintenance and optimization"
     ];
     const useCases = [
         {
-            title: 'Smart Manufacturing',
-            description: 'Real-time monitoring of production lines, predictive maintenance, and quality control automation.',
-            roi: '25-40% cost reduction',
-            implementation: '8-12 weeks'
+            title: "Smart Manufacturing",
+            description: "Real-time monitoring of production lines, predictive maintenance, and quality control automation.",
+            roi: "25-40% cost reduction",
+            implementation: "8-12 weeks"
         },
         {
-            title: 'Smart Cities',
-            description: 'Traffic management, environmental monitoring, public safety, and utility optimization.',
-            roi: '30-50% efficiency improvement',
-            implementation: '12-20 weeks'
+            title: "Smart Cities",
+            description: "Traffic management, environmental monitoring, public safety, and utility optimization.",
+            roi: "30-50% efficiency improvement",
+            implementation: "12-20 weeks"
         },
         {
-            title: 'Healthcare IoT',
-            description: 'Patient monitoring, medical device management, and healthcare facility optimization.',
-            roi: '20-35% operational improvement',
-            implementation: '10-16 weeks'
+            title: "Healthcare IoT",
+            description: "Patient monitoring, medical device management, and healthcare facility optimization.",
+            roi: "20-35% operational improvement",
+            implementation: "10-16 weeks"
         },
         {
-            title: 'Agricultural IoT',
-            description: 'Precision farming, crop monitoring, irrigation control, and livestock management.',
-            roi: '15-30% yield improvement',
-            implementation: '6-10 weeks'
+            title: "Agricultural IoT",
+            description: "Precision farming, crop monitoring, irrigation control, and livestock management.",
+            roi: "15-30% yield improvement",
+            implementation: "6-10 weeks"
         }
     ];
     return (<div className="min-h-screen bg-background">
-      <SEO title="IoT & Edge Computing Services - Zion Tech Group" description="Comprehensive IoT solutions, edge computing infrastructure, and smart device management platforms for connected ecosystems." keywords="IoT services, edge computing, smart devices, IoT platform, device management, IoT analytics, smart cities" canonical="https://ziontechgroup.com/services/iot-edge-computing"/>
+      <SEO title="IoT & Edge Computing Services - Zion Tech Group" description="Comprehensive IoT solutions, edge computing infrastructure, and smart device management platforms for connected ecosystems." keywords="IoT services, edge computing, smart devices, IoT platform, device management, IoT analytics, smart cities" canonical="https://ziontechgroup.com/services/iot-edge-computing"   />
 
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
@@ -73,8 +73,7 @@ export default function IoTEdgeComputingServices() {
           </p>
         </div>
       </section>
-
-      {/* Services Overview */}
+      {/* comment */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -84,11 +83,10 @@ export default function IoTEdgeComputingServices() {
               with real-time insights and intelligent automation.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {iotServices.map((service, index) => (<div key={service.title} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
                 <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-green-600"/>
+                  <service.icon className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
@@ -98,7 +96,7 @@ export default function IoTEdgeComputingServices() {
                 </div>
                 <ul className="space-y-2 mb-4">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
+                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"   />
                       {feature}
                     </li>))}
                 </ul>
@@ -111,8 +109,7 @@ export default function IoTEdgeComputingServices() {
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* comment */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -121,7 +118,6 @@ export default function IoTEdgeComputingServices() {
               Proven IoT solutions that deliver measurable business value across diverse industries.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {useCases.map((useCase, index) => (<div key={useCase.title} className="bg-white rounded-xl p-8 shadow-lg border border-gray-200">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{useCase.title}</h3>
@@ -140,8 +136,7 @@ export default function IoTEdgeComputingServices() {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -153,15 +148,13 @@ export default function IoTEdgeComputingServices() {
                 Our IoT expertise combined with cutting-edge edge computing technologies enables us to deliver 
                 solutions that provide real business value and competitive advantage.
               </p>
-              
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (<div key={index} className="flex items-start">
-                    <Check className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0"/>
+                    <Check className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0"   />
                     <span className="text-gray-700">{benefit}</span>
                   </div>))}
               </div>
             </div>
-
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Free IoT Assessment</h3>
               <p className="text-gray-600 mb-6">
@@ -185,8 +178,7 @@ export default function IoTEdgeComputingServices() {
           </div>
         </div>
       </section>
-
-      {/* Industries Section */}
+      {/* comment */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -196,29 +188,26 @@ export default function IoTEdgeComputingServices() {
               across diverse industry sectors.
             </p>
           </div>
-
           <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {industries.map((industry, index) => (<div key={industry} className="bg-white rounded-xl p-6 text-center hover:bg-green-50 transition-colors border border-gray-200">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-green-600"/>
+                  <Target className="w-8 h-8 text-green-600"   />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
               </div>))}
           </div>
         </div>
       </section>
-
-      {/* Technologies Section */}
+      {/* comment */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">IoT Technologies We Use</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We leverage cutting-edge IoT and edge computing technologies to build robust, scalable, 
+              We leverage cutting-edge IoT and edge computing technologies to build robust, scalable,
               and innovative solutions for our clients.
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {technologies.map((tech, index) => (<div key={tech} className="bg-gray-50 rounded-lg p-4 text-center hover:bg-green-50 transition-colors border border-gray-200">
                 <span className="text-gray-700 font-medium text-sm">{tech}</span>
@@ -226,8 +215,7 @@ export default function IoTEdgeComputingServices() {
           </div>
         </div>
       </section>
-
-      {/* Process Section */}
+      {/* comment */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -236,7 +224,6 @@ export default function IoTEdgeComputingServices() {
               A proven methodology for delivering successful IoT solutions that drive business value.
             </p>
           </div>
-
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-6 gap-8">
               <div className="text-center">
@@ -248,7 +235,6 @@ export default function IoTEdgeComputingServices() {
                   Understand business needs and IoT opportunities
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">2</span>
@@ -258,7 +244,6 @@ export default function IoTEdgeComputingServices() {
                   Design IoT architecture and edge strategy
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">3</span>
@@ -268,7 +253,6 @@ export default function IoTEdgeComputingServices() {
                   Build IoT platform and edge infrastructure
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">4</span>
@@ -278,7 +262,6 @@ export default function IoTEdgeComputingServices() {
                   Validate IoT solution and edge performance
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">5</span>
@@ -288,7 +271,6 @@ export default function IoTEdgeComputingServices() {
                   Launch IoT solution and edge nodes
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">6</span>
@@ -302,13 +284,12 @@ export default function IoTEdgeComputingServices() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Connect Your World?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let our IoT experts help you build connected ecosystems that drive efficiency, 
+            Let our IoT experts help you build connected ecosystems that drive efficiency,
             innovation, and competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -322,15 +303,8 @@ export default function IoTEdgeComputingServices() {
         </div>
       </section>
     </div>);
-}
-
-
 export { IoTEdgeComputingServices };
-
 export { IoTEdgeComputingServices };
-
 export { IoTEdgeComputingServices };
-
 export { IoTEdgeComputingServices };
-
 export { IoTEdgeComputingServices };

@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const ITInfrastructure = () => {
   const features = [
     {
@@ -29,27 +28,24 @@ const ITInfrastructure = () => {
       icon: "⚡"
     }
   ];
-
   const infrastructureAreas = [
     { area: "Hardware Infrastructure", solutions: ["Servers", "Storage systems", "Network equipment", "Workstations"] },
     { area: "Software Infrastructure", solutions: ["Operating systems", "Virtualization platforms", "Database systems", "Management tools"] },
     { area: "Network Infrastructure", solutions: ["LAN/WAN setup", "Wireless networks", "VPN solutions", "Network security"] },
     { area: "Storage Infrastructure", solutions: ["Storage arrays", "Backup systems", "Cloud storage", "Data protection"] }
   ];
-
   return (
     <>
       <Helmet>
         <title>IT Infrastructure — Zion Tech Group | Network & System Management</title>
-        <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."/>
-        <meta property="og:title" content="IT Infrastructure — Zion Tech Group"/>
-        <meta property="og:description" content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure."/>
-        <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure"/>
-        <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure"/>
+        <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."  />
+        <meta property="og:title" content="IT Infrastructure — Zion Tech Group"  />
+        <meta property="og:description" content="Leading IT infrastructure services including network design, server management, storage solutions, and security infrastructure."  />
+        <meta property="og:url" content="https://ziontechgroup.com/services/it-infrastructure"  />
+        <link rel="canonical" href="https://ziontechgroup.com/services/it-infrastructure"   />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-        {/* Hero Section */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -72,8 +68,7 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
-
-        {/* Features Grid */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -84,7 +79,6 @@ const ITInfrastructure = () => {
                 Comprehensive IT infrastructure services for modern businesses
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -104,8 +98,7 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
-
-        {/* Infrastructure Areas */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -116,7 +109,6 @@ const ITInfrastructure = () => {
                 Multi-layered approach to building robust IT infrastructure
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {infrastructureAreas.map((area, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -134,8 +126,7 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
-
-        {/* Benefits */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -146,32 +137,29 @@ const ITInfrastructure = () => {
                 Proven expertise and cutting-edge technology for reliable infrastructure
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"   />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Reliability</h3>
                 <p className="text-gray-300">99.9% uptime guarantee with redundant systems</p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11l5-5m0 0l5 5m-5-5v12"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11l5-5m0 0l5 5m-5-5v12"   />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Scalability</h3>
                 <p className="text-gray-300">Grow your infrastructure as your business expands</p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"   />
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Security</h3>
@@ -180,8 +168,7 @@ const ITInfrastructure = () => {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
+        {/* comment */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -199,15 +186,9 @@ const ITInfrastructure = () => {
     </>
   );
 };
-
 export default ITInfrastructure;
-
 export { ITInfrastructure };
-
 export { ITInfrastructure };
-
 export { ITInfrastructure };
-
 export { ITInfrastructure };
-
 export { ITInfrastructure };

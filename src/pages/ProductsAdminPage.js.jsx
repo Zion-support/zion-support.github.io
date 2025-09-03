@@ -1,40 +1,43 @@
-import React, { useState } from 'react';'''
-import AdminLayout from '@/components/admin/AdminLayout';
+import React, { useState } from "react";"""
+import AdminLayout from "@/components/admin/AdminLayout";
 import {}
   Table,
   TableHead,
   TableHeader,
   TableRow,
-  TableBody,'
-  TableCell} from '@/components/ui/table';'
-import { Input } from '@/components/ui/input';'
-import { Switch } from '@/components/ui/switch';'
-const initialProducts = [''
-  { id: 1, name: 'Alpha', category: 'Software', status: 'pending' },'
-  { id: 2, name: 'Beta', category: 'Hardware', status: 'approved' },'
-  { id: 3, name: 'Gamma', category: 'Service', status: 'rejected' }
+  TableBody,"
+  TableCell} from "@/components/ui/table";"
+import { Input } from "@/components/ui/input";"
+import { Switch } from "@/components/ui/switch";"
+const initialProducts = [""
+  { id: 1, name: "Alpha", category: "Software", status: "pending" },"
+  { id: 2, name: "Beta", category: "Hardware", status: "approved" },"
+  { id: 3, name: "Gamma", category: "Service", status: "rejected" }
 ];
 export default function ProductsAdminPage() {}
-'
-''
-'''
-  const [search, setSearch] = useState('');
+"
+""
+"""
+  const [search, setSearch] = useState("");
   const [products, setProducts] = useState(initialProducts);
   const filtered = products.filter(p =>
     p.name.toLowerCase().includes(search.toLowerCase())
+
   );
   const toggleApproval = id => {}
     setProducts(prev =>
       prev.map(p =>
         p.id === id;
           ? {}
-              ...p,'
-              status: p.status === 'approved' ? 'rejected' : 'approved'}
+              ...p,"
+              status: p.status === "approved" ? "rejected" : "approved"}
           : p;
       )
+
     );
   };
   return()
+
     <AdminLayout>
       <div className="space-y-4">""""
         <div className="flex items-center justify-between">""""
@@ -43,8 +46,7 @@ export default function ProductsAdminPage() {}
             placeholder="Search products..."""
             value={search}"""
             onChange={e => setSearch(e.target.value)}""""
-            className="max-w-xs"""
-          />"""
+            className="max-w-xs""" />"""
         </div>""""
         <div className="rounded-md border">
           <Table>
@@ -64,11 +66,11 @@ export default function ProductsAdminPage() {}
                   <TableCell>{p.name}</TableCell>
                   <TableCell>{p.category}</TableCell>"""
                   <TableCell>{p.status}</TableCell>""""
-                  <TableCell className="text-center">'
-                    <Switch''
-                      checked={p.status === 'approved'}
+                  <TableCell className="text-center">"
+                    <Switch""
+                      checked={p.status === "approved'}
                       onCheckedChange={() => toggleApproval(p.id)}
-                    />
+                   />
                   </TableCell>
                 </TableRow>
               ))}
@@ -80,11 +82,7 @@ export default function ProductsAdminPage() {}
 
 
 export { ProductsAdminPage };
-
 export { ProductsAdminPage };
-
 export { ProductsAdminPage };
-
 export { ProductsAdminPage };
-
 export { ProductsAdminPage };

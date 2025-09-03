@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { format } from 'date-fns';
-
+import React, { useState, useEffect, useRef } from "react";
+import { format } from "date-fns";
 export default function Page() {
 , [activeConversation, loadMessages]); // Changed activeConversation?.id to activeConversation
   
@@ -9,35 +8,27 @@ export default function Page() {
 }, []);
     scrollToBottom();
   }, [activeMessages]);
-
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-  
   const handleSendMessage = async(e: React.FormEvent) => {
     e.preventDefault();
     if(!messageText.trim() || !activeConversation) return;
-    
     await sendMessage(activeConversation.id, messageText);
-    setMessageText('');
+    setMessageText("");
   };
-  
   if(!activeConversation) {
     return (<div className="flex-1 flex flex-col items-center justify-center p-8">
-        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4" />
+        <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4"   />
         <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>
         <p className="text-zion-slate text-center max-w-md">
           Select a conversation from the list to view and send messages.</p>
       </div>
     );
-  }
-  
   const groupedMessages: { date: string; messages: any[] }[] = [];
-  
   activeMessages.forEach(message => {
-    const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
+    const messageDate = format(new Date(message.created_at), "yyyy-MM-dd");
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
-    
     if(existingGroup) {
       existingGroup.messages.push(message);
     } else {
@@ -47,19 +38,16 @@ export default function Page() {
       });
     }
   });
-  
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description);
-
   return (<div className="flex-1 flex flex-col h-full">
-      {/* Header */}
+      {/* comment */}
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
-            <AvatarImage 
-              src={activeConversation.other_user.avatar_url} 
+            <AvatarImage src={activeConversation.other_user.avatar_url} 
               alt={activeConversation.other_user.name} 
-            />
+               />
             <AvatarFallback className="bg-zion-blue-dark text-white">
               {activeConversation.other_user.name.charAt(0).toUpperCase()}
             </AvatarFallback>
@@ -69,33 +57,30 @@ export default function Page() {
               {activeConversation.other_user.name}
             </div>
             <div className="text-xs text-zion-slate">
-              {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
-               activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
-               activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
+              {activeConversation.other_user.user_type === "talent" ? "Talent" : 
+               activeConversation.other_user.user_type === "employer" ? "Employer" : 
+               activeConversation.other_user.user_type === "admin" ? "Admin" : "User"}
             </div>
           </div>
         </div>
       </div>
-      
       {hasContextData && (
         <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/10">
           <div className="text-sm text-zion-slate flex items-start gap-3">
             {activeConversation.context_data.image_url && (
               <div className="w-16 h-16 flex-shrink-0">
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
-                  <img
-                    src={activeConversation.context_data.image_url}
+                  <img src={activeConversation.context_data.image_url}
                     alt={activeConversation.context_data.title || "Context"}
-                    className="object-cover"
-                  />
+                    className="object-cover"   />
                 </AspectRatio>
               </div>
             )}
             <div>
               <div className="font-medium text-white mb-1">
-                {activeConversation.context_type === 'job' ? 'Regarding Job:' :
-                 activeConversation.context_type === 'talent' ? 'Regarding Talent:' :
-                 'Regarding:'}
+                {activeConversation.context_type === "job" ? "Regarding Job:" :
+                 activeConversation.context_type === "talent" ? "Regarding Talent:" :
+                 "Regarding:"}
               </div>
               <div className="text-zion-cyan font-medium">
                 {activeConversation.context_data.title}
@@ -118,30 +103,28 @@ export default function Page() {
         ) : (
           groupedMessages.map((group, groupIndex) => (
             <div key={group.date}>
-              <DateDivider date={new Date(group.date)} />
+              <DateDivider date={new Date(group.date)}    />
               <div className="space-y-3">
                 {group.messages.map((message) => (
-                  <MessageBubble
-                    key={message.id}
+                  <MessageBubble key={message.id}
                     message={message}
                     isUserMessage={message.sender_id === user?.id}
-                  />
+                     />
                 ))}
               </div>
             </div>
           ))
+
         )}
-        <div ref={messagesEndRef} />
+        <div ref={messagesEndRef}    />
       </div>
-      
       <div className="p-3 border-t border-zion-purple/20">
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
           <textarea
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}
             placeholder="Type a message..."
-            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-          />
+            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan" />
           <Button 
             type="submit"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -152,4 +135,3 @@ export default function Page() {
       </div>
     </div>
   );
-}

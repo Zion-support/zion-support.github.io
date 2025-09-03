@@ -1,34 +1,31 @@
-import React, { useState } from 'react';
-import { Phone, Mail, MessageCircle, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-
+import React, { useState } from "react";
+import { Phone, Mail, MessageCircle, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 const FloatingContactWidget: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const contactOptions = [
     {
-      icon: <Phone className="w-5 h-5" />,
-      label: 'Call Now',
-      action: 'tel:+13024640950',
-      description: '+1 302 464 0950'
+      icon: <Phone className="w-5 h-5"   />,
+      label: "Call Now",
+      action: "tel:+13024640950",
+      description: "+1 302 464 0950"
     },
     {
-      icon: <Mail className="w-5 h-5" />,
-      label: 'Email Us',
-      action: 'mailto:kleber@ziontechgroup.com',
-      description: 'kleber@ziontechgroup.com'
+      icon: <Mail className="w-5 h-5"   />,
+      label: "Email Us",
+      action: "mailto:kleber@ziontechgroup.com",
+      description: "kleber@ziontechgroup.com"
     },
     {
-      icon: <MessageCircle className="w-5 h-5" />,
-      label: 'Get Quote',
-      action: '/contact',
-      description: 'Free consultation'
+      icon: <MessageCircle className="w-5 h-5"   />,
+      label: "Get Quote",
+      action: "/contact",
+      description: "Free consultation"
     }
   ];
-
   return (
     <>
-      {/* Floating Contact Button */}
+      {/* comment */}
       <motion.button
         className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50"
         onClick={() => setIsOpen(!isOpen)}
@@ -47,7 +44,7 @@ const FloatingContactWidget: React.FC = () => {
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6"   />
             </motion.div>
           ) : (
             <motion.div
@@ -57,13 +54,13 @@ const FloatingContactWidget: React.FC = () => {
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <MessageCircle className="w-6 h-6" />
+              <MessageCircle className="w-6 h-6"   />
             </motion.div>
           )}
         </AnimatePresence>
       </motion.button>
 
-      {/* Contact Options Panel */}
+      {/* comment */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -77,7 +74,6 @@ const FloatingContactWidget: React.FC = () => {
               <h3 className="text-lg font-bold text-gray-900">Get In Touch</h3>
               <p className="text-sm text-gray-600">We're here to help!</p>
             </div>
-            
             <div className="space-y-3">
               {contactOptions.map((option, index) => (
                 <motion.a
@@ -98,7 +94,6 @@ const FloatingContactWidget: React.FC = () => {
                 </motion.a>
               ))}
             </div>
-
             <div className="mt-4 pt-4 border-t border-gray-200">
               <div className="text-xs text-gray-500 text-center">
                 <div className="font-medium">Business Hours:</div>
@@ -109,8 +104,7 @@ const FloatingContactWidget: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Backdrop */}
+      {/* comment */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -119,11 +113,10 @@ const FloatingContactWidget: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
-          />
+         />
         )}
       </AnimatePresence>
     </>
   );
 };
-
 export default FloatingContactWidget;

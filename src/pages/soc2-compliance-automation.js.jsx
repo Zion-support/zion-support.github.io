@@ -1,6 +1,5 @@
-import React from 'react';
+import React from "react";
 export default Soc2ComplianceAutomation;
-
 const Soc2ComplianceAutomation = () => {}
     const features = []
         {}
@@ -138,7 +137,7 @@ const Soc2ComplianceAutomation = () => {}
             </p>
           </div>
 """
-          {/* Key Features */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Automated Compliance Features</h2>""""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">""""
@@ -150,7 +149,7 @@ const Soc2ComplianceAutomation = () => {}
             </div>
           </div>
 """
-          {/* SOC 2 Criteria */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">SOC 2 Trust Service Criteria</h2>""""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">""""
@@ -169,7 +168,7 @@ const Soc2ComplianceAutomation = () => {}
             </div>
           </div>
 """
-          {/* Automation Benefits */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Benefits of Automation</h2>""""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">""""
@@ -181,7 +180,7 @@ const Soc2ComplianceAutomation = () => {}
             </div>
           </div>
 """
-          {/* Compliance Tools */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Compliance Tools</h2>""""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">""""
@@ -197,7 +196,7 @@ const Soc2ComplianceAutomation = () => {}
             </div>
           </div>
 """
-          {/* Implementation Process */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Implementation Process</h2>""""
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">""""
@@ -235,7 +234,7 @@ const Soc2ComplianceAutomation = () => {}
             </div>
           </div>
 """
-          {/* Dashboard Preview */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">""""
               <h2 className="text-3xl font-bold text-center mb-8">Compliance Dashboard</h2>""""
@@ -267,7 +266,7 @@ const Soc2ComplianceAutomation = () => {}
             </div>
           </div>
 """
-          {/* Use Cases */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Perfect For</h2>""""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">""""
@@ -297,7 +296,7 @@ const Soc2ComplianceAutomation = () => {}
             </div>
           </div>
 """
-          {/* CTA Section */}""""
+          {/* comment */}""""
           <div className="text-center">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">""""
               <h3 className="text-2xl font-bold mb-4">Ready to Automate Your SOC 2 Compliance?</h3>""""
@@ -323,11 +322,7 @@ export default Soc2ComplianceAutomation;
 }}}}
 
 export { Soc2ComplianceAutomation };
-
 export { Soc2ComplianceAutomation };
-
 export { Soc2ComplianceAutomation };
-
 export { Soc2ComplianceAutomation };
-
 export { Soc2ComplianceAutomation };

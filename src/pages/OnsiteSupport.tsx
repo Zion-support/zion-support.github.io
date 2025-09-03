@@ -46,5 +46,4 @@ const OnsiteSupport = () => {
             </div>
     </>
   );
-}
 export default OnsiteSupport

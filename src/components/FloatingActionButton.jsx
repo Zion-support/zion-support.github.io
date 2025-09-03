@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 export default FloatingActionButton;
-import { motion, AnimatePresence  } from 'framer-motion';
-
+import { motion, AnimatePresence  } from "framer-motion";
       icon: ChatBubbleLeftRightIcon,"
       label: &apos,Live Chat&apos,"
       action: () => window.open(&aposhttp,s: // comment
@@ -18,7 +17,8 @@ import { motion, AnimatePresence  } from 'framer-motion';
 const FloatingActionButton = ({ className = " }) => {}
 
   const [isOpen, setIsOpen] = useState()
-}
+
+
       label: "Live Chat","
       action: () => window.open("https:// comment
       color: "bg - green-500 hover:bg-green-600"}, {}"
@@ -42,7 +42,8 @@ const FloatingActionButton = ({ className = " }) => {}
 
   ]
   return()
-}
+
+
   ]
   return ();"
     <div className="{"fixed" bottom-6 right-6 z-50 ${className}"}>
@@ -117,12 +118,12 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
               animate="{{" rotate: 0, opacity: 1 }}"
               exit="{{" rotate: 90, opacity: 0 }}">
               transition="{{" duration: 0.2 }}"">"";"
-              <XMarkIcon className = "w - 6 h-6"  />,
+              <XMarkIcon className = "w - 6 h-6"   />,
           ) : ("",
               key="open"";"
               initial = "{{" rotate: 90, opacity: 0 }}"
               exit="{{" rotate: -90, opacity: 0 }}"
-              <PlusIcon className="w-6 h-6"  />
+              <PlusIcon className="w-6 h-6"   />
       </AnimatePresence>
       <motion.button&apos;&apos>
         onClick={toggleMenu}&apos;&apos,";"
@@ -134,9 +135,9 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
             <motion.div&apos;&apos,";"
               key="&apos;close&apos;&apos;""
               transition="{{" duration: 0.2 }}&apos;&apos,>&apos;&apos,&apos;&apos,"
-              <XMarkIcon className="&apos;w-6" h-6&apos;       />&apos) : (&apos;&apos,&apos;&apos;"
+              <XMarkIcon className="&apos;w-6" h-6&apos;          />&apos) : (&apos;&apos,&apos;&apos;"
               key="&apos;open&apos;&apos;""
-              <PlusIcon className="&apos;w-6" h-6&apos;       />&apos,
+              <PlusIcon className="&apos;w-6" h-6&apos;          />&apos,
       <motion.button""";""
         onClick={toggleMenu}"""";"
         className = "bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110"",">
@@ -147,21 +148,15 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
             <motion.div""""
               key="close""";"
               transition = "{{" duration: 0.2 }}""">"""""
-              <XMarkIcon className="w-6 h-6"  />"
+              <XMarkIcon className="w-6 h-6"   />"
           ) : (""""
               key="open""";"
-              <PlusIcon className = "w-6 h-6"  />
+              <PlusIcon className = "w-6 h-6"   />
     </div>)}
 
 export default FloatingActionButton;
-
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };

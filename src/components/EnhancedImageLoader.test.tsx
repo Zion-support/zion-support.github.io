@@ -5,12 +5,15 @@ import EnhancedImageLoader from &apos;./EnhancedImageLoader
 describe(&apos;EnhancedImageLoader&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
-}
+
+
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
-}
+
+
   it(&apos;displays expected content&apos, () => {
     render()
-}
+
+
     // comment
     render(<EnhancedImageLoader / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""

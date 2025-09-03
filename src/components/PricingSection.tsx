@@ -66,7 +66,7 @@ className="{"w-6" h-6 bg-zion-cyan rounded-full shadow-lg ${
                   billingCycle === "annual" ? "ml-8" : "ml-0>
 }"}
 
-             />
+            />
             </button>"
             <span className = "{"text-sm" ${billingCycle === "annual" ? "text-white" : "text-zion-slate-light"}"}>
               Annual,
@@ -78,7 +78,7 @@ initial="{{" opacity: 0, scale: 0.8 }}"
                 className=""inline-flex" items-center gap-1 px-3 py-1 bg-green-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium"}
 
               >"
-                <Check className="w-4 h-4"  />
+                <Check className="w-4 h-4"   />
                 Save {savings}%
               </motion.span>
             )}
@@ -106,25 +106,24 @@ key = "{plan.name}""
                 {plan.popular && ("
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2 z-10"}>"
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">"
-                      <Star className="{"w-4" h-4 fill-current"  />
+                      <Star className="{"w-4" h-4 fill-current"   />
                       Most Popular,
                     </div>
                   </div>                )}
 ;
-                {/*   */}";
-                <div className="{`relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
-                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}`}>;
-                  {/*   */}";
-                  <div className="{`w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>";
-                    <IconComponent className="`w-8" h-8`} />;
+                {/* comment */}";
+                <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">;
+                  plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>;
+                  {/* comment */}";
+                  <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300"}>";
+                    <IconComponent className=""w-8" h-8"}    />;
                   </div>;
-
                 {/* comment */}"
                 <div className="{"relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${">
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}"}>
                   {/* comment */}"
                   <div className="{"w-16" h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300"}>"
-                    <IconComponent className=""w-8" h-8"}       />
+                    <IconComponent className=""w-8" h-8"}          />
                   </div>
                   {/* comment */}"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
@@ -152,7 +151,7 @@ key = "{plan.name}""
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => ("
                       <li key="{featureIndex}" className="flex items-center gap-3">"
-                        <Check className="w-5 h-5 text-zion-cyan flex-shrink-0"  />"
+                        <Check className="w-5 h-5 text-zion-cyan flex-shrink-0"   />"
                         <span className="text-zion-slate-light">{feature}</span>
                       </li>
                     ))}
@@ -172,7 +171,7 @@ whileHover="{{" scale: 1.02 }}"
 
                     >
                       {plan.cta}"
-                      <ArrowRight className=""w-4" h-4"}       />
+                      <ArrowRight className=""w-4" h-4"}          />
                     </motion.button>
                   </Link>
                 </div>
@@ -221,12 +220,12 @@ whileHover="{{" scale: 1.05 }}"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover: shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
                 >
                   Contact Sales"
-                  <ArrowRight className="w-5 h-5"  />
+                  <ArrowRight className="w-5 h-5"   />
                 </motion.button>
               </Link>"
               <Link to="/request-quote">"
                 <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">"
-                  <Zap className="w-5 h-5"  />
+                  <Zap className="w-5 h-5"   />
                   Get Free Quote,
                 </button>
               </Link>
@@ -236,7 +235,7 @@ whileHover="{{" scale: 1.05 }}"
     </section>";,
 export default function PricingSection() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="PricingSection - Zion Tech Group" description="Professional PricingSection services by Zion Tech Group"  />"
+      <SEO title="PricingSection - Zion Tech Group" description="Professional PricingSection services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
         <h1 className="text-4xl font-bold text-white mb-8">PricingSection</h1>"
         <p className="text-gray-300 text-lg">

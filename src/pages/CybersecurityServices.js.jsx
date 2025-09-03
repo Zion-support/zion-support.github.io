@@ -1,6 +1,6 @@
 import { Link } from "react - router - dom";"""
 import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide - react";
-import React from 'react';"""
+import React from "react";"""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""""
 import { Button } from "@/components/ui/button";""""
 import { Badge } from "@/components/ui/badge";""""
@@ -14,42 +14,42 @@ export default function CybersecurityServices() {}
 """"
             title: "Network Security",""""
             description: "Firewall configuration, intrusion detection, and network monitoring",""""
-            icon: <Network className="h-8 w-8 text-zion-cyan"/>
+            icon: <Network className="h-8 w-8 text-zion-cyan"   />
         },
         {}
 """
 """"
             title: "Endpoint Protection",""""
             description: "Advanced antivirus, malware protection, and device security",""""
-            icon: <Smartphone className="h-8 w-8 text-zion-purple"/>
+            icon: <Smartphone className="h-8 w-8 text-zion-purple"   />
         },
         {}
 """
 """"
             title: "Cloud Security",""""
             description: "AWS, Azure, and Google Cloud security assessment and hardening",""""
-            icon: <Cloud className="h-8 w-8 text-zion-blue"/>
+            icon: <Cloud className="h-8 w-8 text-zion-blue"   />
         },
         {}
 """
 """"
             title: "Data Protection",""""
             description: "Encryption, backup security, and data loss prevention",""""
-            icon: <Database className="h-8 w-8 text-zion-cyan"/>
+            icon: <Database className="h-8 w-8 text-zion-cyan"   />
         },
         {}
 """
 """"
             title: "Server Security",""""
             description: "Server hardening, access control, and monitoring",""""
-            icon: <Server className="h-8 w-8 text-zion-purple"/>
+            icon: <Server className="h-8 w-8 text-zion-purple"   />
         },
         {}
 """
 """"
             title: "Compliance",""""
             description: "GDPR, HIPAA, SOC 2, and industry-specific compliance",""""
-            icon: <Shield className="h-8 w-8 text-zion-blue"/>
+            icon: <Shield className="h-8 w-8 text-zion-blue"   />
         }
     ];
     const pricingPlans = []
@@ -109,31 +109,31 @@ export default function CybersecurityServices() {}
 """
 """"
             name: "Michael Chen",""""
-            role: "CISO, FinTech Solutions","'"""
-            content: "Zion's cybersecurity team helped us achieve SOC 2 compliance in record time. Their expertise is unmatched.",
+            role: "CISO, FinTech Solutions","""""
+            content: "Zion"s cybersecurity team helped us achieve SOC 2 compliance in record time. Their expertise is unmatched.",
             rating: 5;
         },
         {}
 """
 """"
             name: "Dr. Sarah Williams",""""
-            role: "IT Director, HealthCare Plus","'"""
-            content: "The penetration testing revealed critical vulnerabilities we didn't know existed. Their thorough approach saved us.",
+            role: "IT Director, HealthCare Plus","""""
+            content: "The penetration testing revealed critical vulnerabilities we didn"t know existed. Their thorough approach saved us.",
             rating: 5;
         },
         {}
 """
 """"
             name: "Robert Johnson",""""
-            role: "CEO, E-commerce Pro","'"""
-            content: "24/7 incident response gives us peace of mind. Zion's team responds faster than  other provider we've used.",
+            role: "CEO, E-commerce Pro","""""
+            content: "24/7 incident response gives us peace of mind. Zion"s team responds faster than  other provider we"ve used.",
             rating: 5;
         }"""
     ];""""
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark">""""
-      <SEO title="Cybersecurity Services - Zion Tech Group" description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response." keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group" canonical="https://ziontechgroup.com/cybersecurity-services"/>
+      <SEO title="Cybersecurity Services - Zion Tech Group" description="Protect your business with comprehensive cybersecurity services including penetration testing, security audits, and incident response." keywords="cybersecurity, penetration testing, security audit, incident response, Zion Tech Group" canonical="https://ziontechgroup.com/cybersecurity-services"   />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative overflow-hidden py-20 px-4">""""
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>""""
         <div className="container mx-auto relative z-10 text-center">""""
@@ -143,15 +143,15 @@ export default function CybersecurityServices() {}
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
             Cybersecurity Services"""
           </h1>""""
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">'
-            Protect your business from evolving cyber threats with our comprehensive security services. ''
-            From penetration testing to incident response, we've got you covered 24/7."""
+          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">"
+            Protect your business from evolving cyber threats with our comprehensive security services. ""
+            From penetration testing to incident response, we"ve got you covered 24/7."""
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">""""
               <Link to="/contact">"""
                 Get Security Assessment""""
-                <ArrowRight className="ml-2 h-5 w-5"/>
+                <ArrowRight className="ml-2 h-5 w-5"   />
               </Link>"""
             </Button>""""
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">""""
@@ -163,7 +163,7 @@ export default function CybersecurityServices() {}
         </div>
       </section>
 """
-      {/* Services Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-16">""""
@@ -196,7 +196,7 @@ export default function CybersecurityServices() {}
         </div>
       </section>
 """
-      {/* Security Solutions Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 bg-zion-slate-dark/30">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-16">""""
@@ -226,7 +226,7 @@ export default function CybersecurityServices() {}
         </div>
       </section>
 """
-      {/* Pricing Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-16">""""
@@ -238,8 +238,8 @@ export default function CybersecurityServices() {}
             </p>
           </div>"""
           """"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'"""
-            {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-zion-purple scale-105' : 'border-zion-slate-light'} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl`}>""""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">""""
+            {pricingPlans.map((plan, index) => (<Card key={index} className={"relative ${plan.popular ? "border-zion-purple scale-105" : "border-zion-slate-light"} bg-zion-slate-dark/50 transition-all duration-300 hover:shadow-2xl"}>""""
                 {plan.popular && (<Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
                     Most Popular"""
                   </Badge>)}""""
@@ -256,7 +256,7 @@ export default function CybersecurityServices() {}
                 <CardContent>""""
                   <ul className="space-y-3 mb-6">""""
                     {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">""""
-                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
+                        <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"   />
                         {feature}
                       </li>))}"""
                   </ul>""""
@@ -271,7 +271,7 @@ export default function CybersecurityServices() {}
         </div>
       </section>
 """
-      {/* Testimonials Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 bg-zion-slate-dark/30">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-16">""""
@@ -287,7 +287,7 @@ export default function CybersecurityServices() {}
             {testimonials.map((testimonial, index) => (<Card key={index} className="bg-zion-slate-dark/50 border-zion-purple/20 hover:border-zion-purple/40 transition-all duration-300">""""
                 <CardContent className="pt-6">""""
                   <div className="flex mb-4">""""
-                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current"/>))}"""
+                    {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="h-5 w-5 text-yellow-400 fill-current"   />))}"""
                   </div>""""
                   <p className="text-zion-slate-light mb-4 italic">"{testimonial.content}"</p>"""
                   <div>""""
@@ -300,20 +300,20 @@ export default function CybersecurityServices() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20">""""
         <div className="container mx-auto text-center">""""
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Secure Your Business?"""
           </h2>""""
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">'
-            Don't wait until it's too late. Get expert cybersecurity protection today and sleep soundly knowing your business is secure."""
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">"
+            Don"t wait until it's too late. Get expert cybersecurity protection today and sleep soundly knowing your business is secure."""
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
             <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg">""""
               <Link to="/contact">"""
                 Get Security Assessment""""
-                <ArrowRight className="ml-2 h-5 w-5"/>
+                <ArrowRight className="ml-2 h-5 w-5"   />
               </Link>"""
             </Button>""""
             <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-4 text-lg">""""
@@ -328,11 +328,7 @@ export default function CybersecurityServices() {}
 
 
 export { CybersecurityServices };
-
 export { CybersecurityServices };
-
 export { CybersecurityServices };
-
 export { CybersecurityServices };
-
 export { CybersecurityServices };

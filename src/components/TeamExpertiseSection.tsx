@@ -1,10 +1,9 @@
-import {  import { motion  } from 'framer-motion';
-
+import React from "react"
+import {  import { motion  } from "framer-motion";
  params - Function parameters
  * @returns {*} Function return value
  */
 function TeamExpertiseSection () {];
-
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div className="max - w-7xl mx - auto px-6">
         <motion.div
@@ -52,12 +51,11 @@ function TeamExpertiseSection () {];
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >;
           {stats.map ( (stat, index) => {;
-            
             return ("
               <div key = {stat.label} className="text-center">"
                 <div className="flex justify-center mb-4">"
                   <div className="p-3 bg-blue-100 rounded-full">"
-                    <IconComponent className="h-8 w-8 text-blue-600"  />                  </div>
+                    <IconComponent className="h-8 w-8 text-blue-600"   />                  </div>
                 </div>"
                 <div className="text-3xl font-bold text-gray-900 mb-2">
                   {stat.value}
@@ -76,20 +74,16 @@ function TeamExpertiseSection () {];
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">"
                 <span className="text-3xl">{expertise.icon}</span>
               </div>
-
               <div className="text-4xl font - bold text-blue - 400 mb-3 group - hover:text-blue - 300 transition - colors duration -200">
                 {expertise.count}
               </div>
-
               <h3 className="text-xl font - bold text-white mb-3 group - hover:text-blue - 400 transition - colors duration -200">
                 {expertise.title}
               </h3>
-
               <p className="text-gray - 400 text-sm leading -relaxed">                {expertise.description}
               </p>
             </motion.div>) ) }
         </div>
-
         <motion.div
           className="text-center mb-12"          initial = {
 
@@ -121,17 +115,16 @@ function TeamExpertiseSection () {];
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Schedule Consultation"
-                <Rocket className="ml-2 h-5 w-5"  />
+                <Rocket className="ml-2 h-5 w-5"   />
               </button>"
               <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 View Team Profiles"
-                <Users className="ml-2 h-5 w-5"  />              </button>
+                <Users className="ml-2 h-5 w-5"   />              </button>
             </div>
           </div>
         </motion.div>
       </div>;
     </section>;) };
-
 export default TeamExpertiseSection;"
             <span className="text-2xl">→</span>;
           </div>;

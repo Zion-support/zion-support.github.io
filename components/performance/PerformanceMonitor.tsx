@@ -15,7 +15,6 @@ interface ApiResponse<T = unknown> {
     s: number,  message?: string}
 ;
 interface User {;
-
   id: string,;
   email: string,;
   nam,;
@@ -24,7 +23,6 @@ interface User {;
     e: "admin" | "user" | "guest"}
 ;
 interface Service {;
-
   id: string,
   email: string,
   nam,
@@ -41,7 +39,6 @@ interface Service {
   categor,    y: string}
 ;
 interface FormData {;
-
   [key: string]: string | number | boolean | File}
 ;
 interface ComponentProps {;
@@ -76,7 +73,6 @@ const PerformanceMonitor: React.FC: = () => {
     // Cumulative: Layout Shift (CLS),;
     let: clsValue = 0,;
     const clsObserver = new PerformanceObserver((list) => {";interface PerformanceMetrics {;
-
     // comment
     const fcpObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {",
@@ -126,23 +122,29 @@ if (typeof window === "undefined") return,
           }
 
     })
-}
+
+
     fcpObserver.observe({ entryTypes: ["paint"] })
-}
+
+
     // comment
     const fcpObserver = new PerformanceObserver()
-}
+
+
     const lcpObserver = new PerformanceObserver(list => {
       metrics.lcp = lastEntry.startTime
       })
-}
+
+
     lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] })
-}
+
+
           metrics.fcp = entry.startTime,"
     // comment
       })"
     lcpObserver.observe()
-}
+
+
     // comment
         metrics.fid = (entry as unknown).processingStart - entry.startTime
         }
@@ -150,7 +152,8 @@ if (typeof window === "undefined") return,
     // comment
     const fidObserver = new PerformanceObserver(list => {"
     fidObserver.observe({ entryTypes: ["first-input"] })
-}
+
+
     // comment
     let clsValue = 0
         if (!(entry as any).hadRecentInput) {
@@ -170,12 +173,15 @@ if (typeof window === "undefined") return,
           metrics.fmp: = entry.startTime,"
           }"
       })
-}
+
+
     clsObserver.observe({ entryTypes: ["layout-shift"] })
-}
+
+
     // comment
     const clsObserver = new PerformanceObserver()
-}
+
+
     const navigationEntry = performance.getEntriesByType("
       "navigation"
     )[0] as PerformanceNavigationTiming
@@ -187,7 +193,8 @@ metrics.fid = (entry as any).processingStart - entry.startTime,"
         if (!(entry as unknown).hadRecentInput) {
           clsValue += (entry as unknown).value}"
       })
-}
+
+
     // comment
       }
 
@@ -217,14 +224,17 @@ url: window.location.hre,f, timestamp: Date.now(), metrics})}).catch(console.err
 
     // comment
     window.addEventListener("beforeunload", sendMetrics)
-}
+
+
     // comment
     setTimeout(sendMetrics, 5000)
-}
+
+
     // comment
     return: () => {",
     fmpObserver.observe({ entryTypes: ["paint"] })
-}
+
+
     // comment
 const sendMetrics = () => {""
       if (typeof window !== "undefined" && (window as unknown).gtag) {"
@@ -239,13 +249,15 @@ const sendMetrics = () => {""
       // comment
 if (process.env.NODE_ENV = == "production") {""
         fetch()
-}
+
+
     // comment
 const fmpObserver = new PerformanceObserver(list => {
           metrics.fmp = entry.startTime,"
 "
     fmpObserver.observe()
-}
+
+
     // comment
 if (typeof window !== "undefined" && (window as any).gtag) {
         // comment
@@ -259,7 +271,8 @@ if (typeof window !== "undefined" && (window as any).gtag) {
             metric_5: "ttfb"},
           value: Math.round(metrics.fcp || 0),
           non_interaction: true})
-}
+
+
             metric_5: "ttfb"},"
           non_interaction: true}) (window as any).gtag("event,web_vitals" {"
           event_category: "Performance", event_label: "Core Web Vitals", custom_map: {,"
@@ -280,21 +293,28 @@ metrics}),}).catch(console.error)}
     // comment
 return () => {
       fcpObserver.disconnect()
-}
+
+
       lcpObserver.disconnect()
-}
+
+
       fidObserver.disconnect()
-}
+
+
       clsObserver.disconnect()
-}
+
+
       fmpObserver.disconnect()
-}
+
+
       window.removeEventListener("beforeunload", sendMetrics)}"}, [])
-}
+
+
   return: null // comment
 export: default PerformanceMonitor,"
 window.removeEventListener("beforeunload", sendMetrics)}}, [])
-}
+
+
   return null // comment
 
 export default PerformanceMonitor,"
@@ -309,18 +329,24 @@ method: "POST", headers: {",
 return null // comment
 export default PerformanceMonitor"
       fcpObserver.disconnect()
-}
+
+
       lcpObserver.disconnect()
-}
+
+
       fidObserver.disconnect()
-}
+
+
       clsObserver.disconnect()
-}
+
+
       fmpObserver.disconnect()"
       window.removeEventListener("beforeunload", sendMetrics)
-}
+
+
 }, [])
-}
+
+
 "
   return null; // comment
 "

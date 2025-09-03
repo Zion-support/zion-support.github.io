@@ -1,11 +1,11 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Atom, 
-  Brain, 
-  Zap, 
-  Target, 
-  BarChart3, 
-  Cpu, 
+import React from "react.ts";
+import { Link  } from "react-router-dom.ts";
+import { Atom,
+  Brain,
+  Zap,
+  Target,
+  BarChart3,
+  Cpu,
   CheckCircle,
   Star,
   Clock,
@@ -20,9 +20,8 @@ import { Atom,
   TrendingUp,
   Users,
   Shield
- } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-
+ } from "lucide-react";
+import { SEO  } from "@/components/SEO";
 const QuantumAIPlatform = () => {
   const features = [
     {
@@ -35,7 +34,6 @@ const QuantumAIPlatform = () => {
       ];
     };
   ];
-
   const pricingPlans = [
     {
       name: "Quantum Starter",
@@ -78,7 +76,6 @@ const QuantumAIPlatform = () => {
       popular: false;
     };
   ];
-
   const useCases = [
     {
       name: "Financial Services",
@@ -108,7 +105,6 @@ const QuantumAIPlatform = () => {
       ];
     };
   ];
-
   const quantumAdvantages = [
     {
       title: "Exponential Speedup",
@@ -135,15 +131,12 @@ const QuantumAIPlatform = () => {
       metric: "100%";
     };
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Quantum AI Platform - Zion Tech Group"
-        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."
-      />
+      <SEO title="Quantum AI Platform - Zion Tech Group"
+        description="Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning."   />
 
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative overflow-hidden py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -171,7 +164,7 @@ const QuantumAIPlatform = () => {
             className="text-center"
 
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
-              <Atom className="w-4 h-4 mr-2" />
+              <Atom className="w-4 h-4 mr-2"   />
               Next-Generation Quantum Technology
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -179,7 +172,7 @@ const QuantumAIPlatform = () => {
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Revolution</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Access the future of computing with our revolutionary quantum AI platform. Solve previously intractable problems, 
+              Access the future of computing with our revolutionary quantum AI platform. Solve previously intractable problems,
               accelerate research, and gain quantum advantage in optimization and machine learning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -198,13 +191,11 @@ const QuantumAIPlatform = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* Floating Elements */}
+        {/* comment */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-blue-600/20 rounded-full blur-xl"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-600/20 rounded-full blur-xl"></div>
       </section>
-
-      {/* Quantum Advantages Section */}
+      {/* comment */}
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -279,7 +270,6 @@ const QuantumAIPlatform = () => {
                 <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-4 w-fit">
                   <advantage.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <div className="text-4xl font-bold text-blue-400 mb-2">{advantage.metric}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{advantage.title}</h3>
                 <p className="text-gray-300 text-sm">{advantage.description}</p>
@@ -288,8 +278,7 @@ const QuantumAIPlatform = () => {
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -372,7 +361,7 @@ const QuantumAIPlatform = () => {
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />
                       {benefit}
                     </li>
                   ))}
@@ -382,8 +371,7 @@ const QuantumAIPlatform = () => {
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* comment */}
       <section className="py-20">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -453,11 +441,11 @@ const QuantumAIPlatform = () => {
 
 
 }}
-                className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                className={"relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular
-                    ? 'border-blue-500 ring-2 ring-blue-500/20'
-                    : 'border-slate-700'
-                }`}
+                    ? "border-blue-500 ring-2 ring-blue-500/20"
+                    : "border-slate-700"
+                }"}
 
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -477,18 +465,18 @@ const QuantumAIPlatform = () => {
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, idx) => (
                     <li key={idx} className="text-gray-300 flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <a 
                   href="tel:+13024640950" 
-                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
+                  className={"w-full text-center py-3 px-6 rounded-lg font-semibold transition-all ${
                     tier.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105'
-                      : 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900'
-                  }`}
+                      ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105"
+                      : "bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900"
+                  }"}
                 >
                   Get Started
                 </a>
@@ -497,8 +485,7 @@ const QuantumAIPlatform = () => {
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -574,7 +561,7 @@ const QuantumAIPlatform = () => {
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => (
                     <li key={appIndex} className="text-gray-300 text-sm flex items-center">
-                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0"   />
                       {application}
                     </li>
                   ))}
@@ -589,8 +576,7 @@ const QuantumAIPlatform = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -623,7 +609,6 @@ const QuantumAIPlatform = () => {
               Join the quantum computing revolution and unlock computational capabilities
               that will transform your industry and accelerate innovation.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -646,16 +631,9 @@ const QuantumAIPlatform = () => {
     </div>;
   );
 };
-
 export default QuantumAIPlatform;
-
-
 export { QuantumAIPlatform };
-
 export { QuantumAIPlatform };
-
 export { QuantumAIPlatform };
-
 export { QuantumAIPlatform };
-
 export { QuantumAIPlatform };

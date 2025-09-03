@@ -13,11 +13,10 @@ seller: {
     name: string;
     rating: number;
     reviews: number;
-
 };
   location: string;  createdAt: string;
   updatedAt: string;
-  status: 'active' | 'inactive' | 'sold' | 'pending';
+  status: "active" | "inactive" | "sold" | "pending";
   views: number;
   likes: number;
   shares: number}
@@ -25,7 +24,7 @@ export interface ProductListing extends Listing {
 
   brand?: string;
   model?: string;
-  condition: 'new' | 'used' | 'refurbished';
+  condition: "new" | "used" | "refurbished";
   warranty?: string;
   shipping: {
 
@@ -34,7 +33,7 @@ export interface ProductListing extends Listing {
     estimatedDays: number}}
 
 export interface ServiceListing extends Listing {
-  serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
+  serviceType: "consulting" | "development" | "maintenance" | "training" | "support";
   duration?: string;
   availability: string[];
   experience: number;
@@ -56,11 +55,11 @@ export interface CartItem {
   title: string;
   price: number;
   quantity: number;
-  type: 'product' | 'service' | 'talent';
+  type: "product" | "service" | "talent";
   image?: string}
 export interface WishlistItem {
   id: string;
   userId: string;
   listingId: string;
-  type: 'product' | 'service' | 'talent';
+  type: "product" | "service" | "talent";
   addedAt: string}

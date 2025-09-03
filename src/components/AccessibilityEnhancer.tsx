@@ -1,19 +1,14 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Settings } from 'lucide-react';
-
+import React, { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Settings } from "lucide-react";
 interface AccessibilitySettings {
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
   keyboardNavigation: boolean;
-}
-
 interface AccessibilityEnhancerProps {
   enabled?: boolean;
   showSettings?: boolean;
-}
-
 export function AccessibilityEnhancer({ enabled = true, showSettings = true }: AccessibilityEnhancerProps) {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 16,
@@ -21,45 +16,37 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
     reducedMotion: false,
     keyboardNavigation: true
   });
-
   const [isVisible, setIsVisible] = useState(false);
-
   // Apply accessibility styles
   const applyAccessibilityStyles = useCallback((highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
     const root = document.documentElement;
-    
     if (highContrast) {
-      root.style.setProperty('--bg-primary', '#000000');
-      root.style.setProperty('--text-primary', '#ffffff');
+      root.style.setProperty("--bg-primary", "#000000");
+      root.style.setProperty("--text-primary", "#ffffff");
     } else {
-      root.style.removeProperty('--bg-primary');
-      root.style.removeProperty('--text-primary');
+      root.style.removeProperty("--bg-primary");
+      root.style.removeProperty("--text-primary");
     }
     
-    root.style.setProperty('--font-size-base', fontSize);
-    
+    root.style.setProperty("--font-size-base", fontSize);
     if (reducedMotion) {
-      root.style.setProperty('--animation-duration', '0s');
+      root.style.setProperty("--animation-duration", "0s");
     } else {
-      root.style.removeProperty('--animation-duration');
+      root.style.removeProperty("--animation-duration");
     }
   }, []);
-
   // Apply settings when they change
   useEffect(() => {
     applyAccessibilityStyles(
       settings.highContrast,
-      `${settings.fontSize}px`,
+      "${settings.fontSize}px",
       settings.reducedMotion
     );
   }, [settings, applyAccessibilityStyles]);
-
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
     setSettings(prev => ({ ...prev, [key]: value }));
   };
-
   if (!enabled) return null;
-
   return (
     <div className="accessibility-enhancer">
       <AnimatePresence>
@@ -82,7 +69,6 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
                 ×
               </button>
             </div>
-
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -93,32 +79,27 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
                   min="12"
                   max="24"
                   value={settings.fontSize}
-                  onChange={(e) => updateSetting('fontSize', parseInt(e.target.value))}
-                  className="w-full"
-                />
+                  onChange={(e) => updateSetting("fontSize", parseInt(e.target.value))}
+                  className="w-full" />
               </div>
-
               <div className="flex items-center space-x-2">
                 <input
                   type="checkbox"
                   id="highContrast"
                   checked={settings.highContrast}
-                  onChange={(e) => updateSetting('highContrast', e.target.checked)}
-                  className="rounded"
-                />
+                  onChange={(e) => updateSetting("highContrast", e.target.checked)}
+                  className="rounded" />
                 <label htmlFor="highContrast" className="text-sm text-gray-700 dark:text-gray-300">
                   High Contrast
                 </label>
               </div>
-
               <div className="flex items-center space-x-2">
                 <input
                   type="checkbox"
                   id="reducedMotion"
                   checked={settings.reducedMotion}
-                  onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
-                  className="rounded"
-                />
+                  onChange={(e) => updateSetting("reducedMotion", e.target.checked)}
+                  className="rounded" />
                 <label htmlFor="reducedMotion" className="text-sm text-gray-700 dark:text-gray-300">
                   Reduce Motion
                 </label>
@@ -127,18 +108,15 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
           </motion.div>
         )}
       </AnimatePresence>
-
       {showSettings && (
         <button
           onClick={() => setIsVisible(!isVisible)}
           className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors z-40"
           aria-label="Open accessibility settings"
         >
-          <Settings size={20} />
+          <Settings size={20}    />
         </button>
       )}
     </div>
   );
-}
-
 export default AccessibilityEnhancer;

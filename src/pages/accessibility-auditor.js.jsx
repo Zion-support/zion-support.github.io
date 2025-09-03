@@ -1,5 +1,5 @@
-import React from 'react';'''
-import Link from 'next/link';
+import React from "react";"""
+import Link from "next/link';
 const AccessibilityAuditor = () => {}
     const features = []
         {}
@@ -73,7 +73,7 @@ const AccessibilityAuditor = () => {}
             </p>
           </div>
           """
-          {/* Key Features */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>""""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">""""
@@ -85,7 +85,7 @@ const AccessibilityAuditor = () => {}
             </div>
           </div>
           """
-          {/* Compliance Standards */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">""""
               <h2 className="text-3xl font-bold text-center mb-8">Compliance Standards We Test</h2>""""
@@ -97,7 +97,7 @@ const AccessibilityAuditor = () => {}
             </div>
           </div>
           """
-          {/* Testing Areas */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>""""
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">""""
@@ -113,7 +113,7 @@ const AccessibilityAuditor = () => {}
             </div>
           </div>
           """
-          {/* Process */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Our Audit Process</h2>""""
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">""""
@@ -151,7 +151,7 @@ const AccessibilityAuditor = () => {}
             </div>
           </div>
           """
-          {/* Benefits */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Accessibility Auditor?</h2>""""
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""""
@@ -201,7 +201,7 @@ const AccessibilityAuditor = () => {}
             </div>
           </div>
           """
-          {/* CTA Section */}""""
+          {/* comment */}""""
           <div className="text-center">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">""""
               <h3 className="text-2xl font-bold mb-4">Ready to Make Your Digital Products Accessible?</h3>""""
@@ -223,14 +223,8 @@ const AccessibilityAuditor = () => {}
       </section>
     </div>)};
 export default AccessibilityAuditor;
-
-
 export { AccessibilityAuditor };
-
 export { AccessibilityAuditor };
-
 export { AccessibilityAuditor };
-
 export { AccessibilityAuditor };
-
 export { AccessibilityAuditor };

@@ -46,5 +46,4 @@ const PricingComparison = () => {
             </div>
     </>
   );
-}
 export default PricingComparison

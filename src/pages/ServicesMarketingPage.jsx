@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 ;
 ;
 const ServicesMarketingPage = () => {
@@ -8,25 +8,19 @@ const ServicesMarketingPage = () => {
         ...EMERGING_TECH_2025_SPECIALIZED_SERVICES
     ];
     const serviceCategories = {
-  'Micro SAAS': allServices.filter(s => s.category === 'Micro SAAS'),
-        'IT Services': allServices.filter(s => s.category === 'IT Services'),
-        'AI Solutions': allServices.filter(s => s.category === 'AI Solutions'),
-        'Blockchain & Web3': allServices.filter(s => s.category === 'Blockchain & Web3'),
-        'IoT & Edge Computing': allServices.filter(s => s.category === 'IoT & Edge Computing'),
-        'Sustainable Technology': allServices.filter(s => s.category === 'Sustainable Technology'),
-        'Space Technology': allServices.filter(s => s.category === 'Space Technology'),
-        'Biotechnology': allServices.filter(s => s.category === 'Biotechnology'),
-  'Quantum Technology': allServices.filter(s => s.category === 'Quantum Technology')
-    
-
-
-
-
-
+  "Micro SAAS": allServices.filter(s => s.category === "Micro SAAS"),
+        "IT Services": allServices.filter(s => s.category === "IT Services"),
+        "AI Solutions": allServices.filter(s => s.category === "AI Solutions"),
+        "Blockchain & Web3": allServices.filter(s => s.category === "Blockchain & Web3"),
+        "IoT & Edge Computing": allServices.filter(s => s.category === "IoT & Edge Computing"),
+        "Sustainable Technology": allServices.filter(s => s.category === "Sustainable Technology"),
+        "Space Technology": allServices.filter(s => s.category === "Space Technology"),
+        "Biotechnology": allServices.filter(s => s.category === "Biotechnology"),
+  "Quantum Technology": allServices.filter(s => s.category === "Quantum Technology")
 
 };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative overflow-hidden py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -40,7 +34,7 @@ const ServicesMarketingPage = () => {
             business a competitive edge in 2025 and beyond.
           </p>
 """
-          {/* Key Statistics */}""""
+          {/* comment */}""""
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">""""
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">""""
               <div className="text-3xl font-bold text-blue-400 mb-2">
@@ -64,7 +58,7 @@ const ServicesMarketingPage = () => {
             </div>
           </div>
 """
-          {/* Call to Action */}""""
+          {/* comment */}""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
             <Link""""
               to="/revolutionary-services-2025""""
@@ -82,15 +76,15 @@ const ServicesMarketingPage = () => {
         </div>
       </section>
 """
-      {/* Why Choose Zion Tech Group */}""""
+      {/* comment */}""""
       <section className="py-20 bg-slate-800/50">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?"""
             </h2>""""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
-              We're not just another technology company. We're pioneers in;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+              We"re not just another technology company. We're pioneers in;
               revolutionary solutions that combine cutting-edge AI, quantum;
               computing, and autonomous systems.
             </p>
@@ -154,7 +148,7 @@ const ServicesMarketingPage = () => {
         </div>
       </section>
 """
-      {/* Service Categories Overview */}""""
+      {/* comment */}""""
       <section className="py-20">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -198,7 +192,7 @@ const ServicesMarketingPage = () => {
                       <div className="text-green-400">{service.roi}</div>
                     </div>
                     <Link"""
-                      to={`/revolutionary-services-2025#${service.id}`}""""
+                      to={"/revolutionary-services-2025#${service.id}"}""""
                       className="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300"""
                     >
                       Learn More →
@@ -209,7 +203,7 @@ const ServicesMarketingPage = () => {
         </div>
       </section>
 """
-      {/* Competitive Advantages */}""""
+      {/* comment */}""""
       <section className="py-20 bg-slate-800/50">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -308,7 +302,7 @@ const ServicesMarketingPage = () => {
         </div>
       </section>
 """
-      {/* ROI Calculator */}""""
+      {/* comment */}""""
       <section className="py-20">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">""""
@@ -360,7 +354,7 @@ const ServicesMarketingPage = () => {
         </div>
       </section>
 """
-      {/* Contact Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-slate-800/50">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -423,14 +417,8 @@ const ServicesMarketingPage = () => {
       </section>
     </div>)};
 export default ServicesMarketingPage;
-
-
 export { ServicesMarketingPage };
-
 export { ServicesMarketingPage };
-
 export { ServicesMarketingPage };
-
 export { ServicesMarketingPage };
-
 export { ServicesMarketingPage };

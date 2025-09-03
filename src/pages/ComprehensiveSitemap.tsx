@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import { Link } from "react-router-dom";
 export default function ComprehensiveSitemap() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -13,7 +12,6 @@ export default function ComprehensiveSitemap() {
             Welcome to our comprehensivesitemap page
           </p>
         </div>
-        
         <div className="text-center">
           <Link 
             to="/contact" 
@@ -24,4 +22,3 @@ export default function ComprehensiveSitemap() {
       </div>
     </div>
   );
-}

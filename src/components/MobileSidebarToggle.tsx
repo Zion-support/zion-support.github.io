@@ -1,8 +1,8 @@
+import React from "react"
 
       newExpanded.delete(section) } else {
       newExpanded.add(section) }
     setExpandedSections(newExpanded) };
-
   const navigationSections = [{
 
       title: "Main",
@@ -48,27 +48,26 @@
         { name: "Support Center", href: "/support", icon: HelpCircle };
       ]};
   ];
-
   const quickActions = [;"
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;"
     { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;"    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
-
   return ()
+
     <>
-      {/* Mobile Menu Button */}
+      {/* comment */}
       <motion.button
         whileHover = {{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}"
         className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-        {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}      </motion.button>
+        {isOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}      </motion.button>
 
-      {/* Mobile Sidebar Overlay */}
+      {/* comment */}
       <AnimatePresence>
         {isOpen && (<>
-            {/* Backdrop */}
+            {/* comment */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -76,23 +75,23 @@
               transition={{ duration: 0.3 }}"
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
               onClick={() => setIsOpen(false)}
-            />
+           />
 
-            {/* Mobile Sidebar */}
-            <motion.div'
-              initial={{ x: '-100%' }}
+            {/* comment */}
+            <motion.div"
+              initial={{ x: "-100%" }}
               animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
+              exit={{ x: "-100%" }}
               transition = {
 
   { duration: 0.3,
-  ease: 'easeOut'
+  ease: "easeOut"
 
 }}"
               className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 z-50 lg:hidden overflow-y-auto"
 "
               <div className="p-6">
-                {/* Header */}"
+                {/* comment */}"
                 <div className="flex items-center justify-between mb-8">"
                   <div className="flex items-center space-x-3">"
                     <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center">"
@@ -109,10 +108,9 @@
                     onClick={() => setIsOpen(false)}"
                     className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
 "
-                    <X className="w-5 h-5"  />                  </button>
+                    <X className="w-5 h-5"   />                  </button>
                 </div>
-
-                {/* Quick Actions */}"
+                {/* comment */}"
                 <div className="mb-8">"
                   <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>"
                   <div className="space-y-2">
@@ -141,10 +139,10 @@
                         <Link
                           to={action.href}
                           onClick={() => setIsOpen(false)}
-                          className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${action.variant === 'primary''
-                              ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25''
-                              : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'`
-                          }`}
+                          className={"flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${action.variant === "primary""
+                              ? "bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25""
+                              : "bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40""
+                          }"}
 "
                           <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />"
                           <span className="font-medium">{action.name}</span>
@@ -152,8 +150,7 @@
                       </motion.div>;) ) }
                   </div>
                 </div>
-
-                {/* Navigation Sections */}"
+                {/* comment */}"
                 <div className="space-y-6">;
                   {navigationSections.map((section, sectionIndex) => (;
                     <motion.div
@@ -186,11 +183,10 @@
                           <span className="font-medium">{section.title}</span>
                         </div>
                         {expandedSections.has(section.title) ? ("
-                          <ChevronDown className="w-4 h-4 transition-transform duration-300"  />
+                          <ChevronDown className="w-4 h-4 transition-transform duration-300"   />
                         ) : ("
-                          <ChevronRight className="w-4 h-4 transition-transform duration-300"  />                        )}
+                          <ChevronRight className="w-4 h-4 transition-transform duration-300"   />                        )}
                       </button>
-
                       <AnimatePresence>
                         {expandedSections.has(section.title) && (<motion.div
                             initial = {
@@ -202,7 +198,7 @@
                             animate = {
 
   { opacity: 1,
-  height: 'auto'
+  height: "auto"
 
 }}
                             exit = {
@@ -238,11 +234,12 @@
                               >
                                 <Link
                                   to={item.href}
-                                  onClick={() => setIsOpen(false)}`
-                                  className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${isActive(item.href)
-                                      ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30''
-                                      : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'`
-                                  }`}
+                                  onClick={() => setIsOpen(false)}"
+                                  className={"flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${isActive(item.href)
+
+                                      ? "text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30""
+                                      : "text-zion-slate-light hover:text-white hover:bg-zion-cyan/5""
+                                  }"}
 "
                                   <item.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" />"
                                   <span className="text-sm">{item.name}</span>
@@ -252,8 +249,7 @@
                       </AnimatePresence>
                     </motion.div>) ) }
                 </div>
-
-                {/* Contact Info */}"
+                {/* comment */}"
                 <div className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg">;"
                   <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>"
                   <div className="space-y-2 text-xs text-zion-slate-light">"
@@ -275,4 +271,7 @@
       </AnimatePresence>;
     </>
   )};
-'"`
+'""
+
+
+export default Component

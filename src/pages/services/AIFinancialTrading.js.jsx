@@ -1,6 +1,6 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor } from 'lucide-react';
+import React from "react";"""
+import { Link } from "react-router-dom";"""
+import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor } from "lucide-react";
 export { function };
 export default function AIFinancialTrading() {}
     const features = []
@@ -177,11 +177,11 @@ export default function AIFinancialTrading() {}
         }"""
     ];""""
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">""""
         <div className="text-center mb-16">""""
           <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">""""
-            <TrendingUp className="w-4 h-4 mr-2"/>
+            <TrendingUp className="w-4 h-4 mr-2"   />
             AI-Powered Financial Technology;
           </div>"""
           """"
@@ -203,7 +203,7 @@ export default function AIFinancialTrading() {}
           </div>
         </div>
 """
-        {/* Key Stats */}""""
+        {/* comment */}""""
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">""""
           <div className="text-center">""""
             <div className="text-3xl font-bold text-purple-400 mb-2">25%</div>""""
@@ -223,7 +223,7 @@ export default function AIFinancialTrading() {}
           </div>
         </div>
 """
-        {/* Features Grid */}""""
+        {/* comment */}""""
         <div className="mb-16">""""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Advanced Trading Features;
@@ -232,7 +232,7 @@ export default function AIFinancialTrading() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""""
             {features.map((feature, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">""""
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""""
-                  <feature.icon className="w-6 h-6 text-white"/>"""
+                  <feature.icon className="w-6 h-6 text-white" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""""
                 <p className="text-gray-400">{feature.description}</p>
@@ -240,7 +240,7 @@ export default function AIFinancialTrading() {}
           </div>
         </div>
 """
-        {/* Trading Instruments Section */}""""
+        {/* comment */}""""
         <div className="mb-16">""""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Trading Instruments & Markets;
@@ -249,7 +249,7 @@ export default function AIFinancialTrading() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""""
             {tradingInstruments.map((instrument, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">""""
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""""
-                  <instrument.icon className="w-6 h-6 text-white"/>"""
+                  <instrument.icon className="w-6 h-6 text-white" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-2">{instrument.title}</h3>""""
                 <p className="text-gray-400">{instrument.description}</p>
@@ -257,16 +257,16 @@ export default function AIFinancialTrading() {}
           </div>
         </div>
 """
-        {/* Pricing Section */}""""
+        {/* comment */}""""
         <div className="mb-16">""""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Transparent Pricing Plans;
           </h2>"""
           """"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">'
-            {pricingPlans.map((plan, idx) => (<div key={idx} className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${plan.popular''`
-                ? 'border-purple-500 bg-purple-500/5''`'"`
-                : 'border-gray-700'}`}>""""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+            {pricingPlans.map((plan, idx) => (<div key={idx} className={"relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${plan.popular"""
+                ? "border-purple-500 bg-purple-500/5""""""
+                : "border-gray-700'}`}>""""
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""""
                     <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
@@ -284,7 +284,7 @@ export default function AIFinancialTrading() {}
                 """"
                 <ul className="space-y-3 mb-8">""""
                   {plan.features.map((feature, featureIdx) => (<li key={featureIdx} className="flex items-center space-x-3">""""
-                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"/>""""
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"   />""""
                       <span className="text-gray-300">{feature}</span>
                     </li>))}
                 </ul>"""
@@ -300,7 +300,7 @@ export default function AIFinancialTrading() {}
           </div>
         </div>
 """
-        {/* Benefits Section */}""""
+        {/* comment */}""""
         <div className="mb-16">""""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose AI Financial Trading?
@@ -309,7 +309,7 @@ export default function AIFinancialTrading() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""""
             {benefits.map((benefit, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">""""
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""""
-                  <benefit.icon className="w-6 h-6 text-white"/>"""
+                  <benefit.icon className="w-6 h-6 text-white" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>""""
                 <p className="text-gray-400">{benefit.description}</p>
@@ -317,7 +317,7 @@ export default function AIFinancialTrading() {}
           </div>
         </div>
 """
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <div className="text-center">""""
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8">""""
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -341,11 +341,7 @@ export default function AIFinancialTrading() {}
 
 
 export { AIFinancialTrading };
-
 export { AIFinancialTrading };
-
 export { AIFinancialTrading };
-
 export { AIFinancialTrading };
-
 export { AIFinancialTrading };

@@ -1,14 +1,14 @@
-import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
+import React from "react";"""
+import { Helmet } from "react-helmet-async";
 const Resources = () => {}
   return()
+
     <>
       <Helmet>
         <title>Resources - Zion Tech Group</title>
         <meta;
           name="description""""
-          content="Access valuable resources, tools, and insights from Zion Tech Group. Download whitepapers, guides, and more."""
-        />
+          content="Access valuable resources, tools, and insights from Zion Tech Group. Download whitepapers, guides, and more.""" />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -22,7 +22,7 @@ const Resources = () => {}
           </div>"""
 """"
           <div className="bg-white rounded-lg shadow-lg p-8">""""
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">"
               Resources section coming soon. We're building a comprehensive;
               library of valuable content.
             </p>
@@ -31,14 +31,8 @@ const Resources = () => {}
       </div>
     </>)};
 export default Resources;
-
-
 export { Resources };
-
 export { Resources };
-
 export { Resources };
-
 export { Resources };
-
 export { Resources };

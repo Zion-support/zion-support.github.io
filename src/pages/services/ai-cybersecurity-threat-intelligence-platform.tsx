@@ -1,28 +1,27 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Shield, 
-  Eye, 
-  AlertTriangle, 
-  Zap, 
-  Lock, 
-  Users, 
-  Globe, 
-  Clock, 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Play, 
-  BookOpen, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Brain, 
-  BarChart3, 
+  Shield,
+  Eye,
+  AlertTriangle,
+  Zap,
+  Lock,
+  Users,
+  Globe,
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Play,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  BarChart3,
   Target 
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function AICybersecurityThreatIntelligencePlatform() {
   const features = [
     {
@@ -56,7 +55,6 @@ export default function AICybersecurityThreatIntelligencePlatform() {
       description: "Dedicated team of cybersecurity experts monitoring your systems"
     }
   ];
-
   const pricingPlans = [
     {
       name: "Essential",
@@ -106,7 +104,6 @@ export default function AICybersecurityThreatIntelligencePlatform() {
       popular: false
     }
   ];
-
   const benefits = [
     {
       title: "Threat Prevention",
@@ -129,7 +126,6 @@ export default function AICybersecurityThreatIntelligencePlatform() {
       metric: "100% compliance ready"
     }
   ];
-
   const securityMetrics = [
     {
       metric: "10M+",
@@ -148,7 +144,6 @@ export default function AICybersecurityThreatIntelligencePlatform() {
       label: "Response Time"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
@@ -159,7 +154,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
+              <Shield className="w-4 h-4 mr-2"   />
               AI-Powered Cybersecurity
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -174,18 +169,17 @@ export default function AICybersecurityThreatIntelligencePlatform() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"   />
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border border-gray-600 text-gray-300 rounded-lg font-semibold hover:border-red-500 hover:text-red-400 transition-all duration-200 flex items-center justify-center">
-                <BookOpen className="w-5 h-5 mr-2" />
+                <BookOpen className="w-5 h-5 mr-2"   />
                 Security Assessment
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-red-500/10">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -205,7 +199,6 @@ export default function AICybersecurityThreatIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -242,7 +235,6 @@ export default function AICybersecurityThreatIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -277,7 +269,6 @@ export default function AICybersecurityThreatIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -302,11 +293,11 @@ export default function AICybersecurityThreatIntelligencePlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                className={"relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular
-                    ? 'border-red-500/50 ring-2 ring-red-500/20'
-                    : 'border-gray-700'
-                }`}
+                    ? "border-red-500/50 ring-2 ring-red-500/20"
+                    : "border-gray-700"
+                }"}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -326,16 +317,16 @@ export default function AICybersecurityThreatIntelligencePlatform() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0"   />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                <button className={"w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600'
-                    : 'bg-gray-700 text-white hover:bg-gray-600'
-                }`}>
+                    ? "bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600"
+                    : "bg-gray-700 text-white hover:bg-gray-600"
+                }"}>
                   Get Protected
                 </button>
               </motion.div>
@@ -343,7 +334,6 @@ export default function AICybersecurityThreatIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500/10 to-orange-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -356,23 +346,22 @@ export default function AICybersecurityThreatIntelligencePlatform() {
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Don't wait until it's too late. Join thousands of businesses that trust
+              Don"t wait until it"s too late. Join thousands of businesses that trust
               our AI-powered cybersecurity platform to protect their digital assets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-200 flex items-center justify-center">
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"   />
               </button>
               <button className="px-8 py-4 border border-gray-600 text-gray-300 rounded-lg font-semibold hover:border-red-500 hover:text-red-400 transition-all duration-200 flex items-center justify-center">
                 Security Assessment
-                <Target className="w-5 h-5 ml-2" />
+                <Target className="w-5 h-5 ml-2"   />
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -390,19 +379,19 @@ export default function AICybersecurityThreatIntelligencePlatform() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-red-400 mb-4" />
+                <Phone className="w-8 h-8 text-red-400 mb-4"   />
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-gray-400">+1 302 464 0950</p>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-red-400 mb-4" />
+                <Mail className="w-8 h-8 text-red-400 mb-4"   />
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-gray-400">kleber@ziontechgroup.com</p>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-red-400 mb-4" />
+                <MapPin className="w-8 h-8 text-red-400 mb-4"   />
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-                <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-gray-400">364 E Main St STE 1008<br  />Middletown DE 19709</p>
               </div>
             </div>
           </motion.div>
@@ -410,4 +399,3 @@ export default function AICybersecurityThreatIntelligencePlatform() {
       </section>
     </div>
   );
-}

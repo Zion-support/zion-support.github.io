@@ -1,13 +1,12 @@
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react"
 
 interface SecurityIssue {
   id: string
-  severity: 'low' | 'medium' | 'high' | 'critical'
+  severity: "low" | "medium" | "high" | "critical"
   title: string
   description: string
-  status: 'open' | 'resolved'
-}
+  status: "open" | "resolved"
 
 export default function SecurityAudit() {
   const [issues, setIssues] = useState<SecurityIssue[]>([])
@@ -15,18 +14,18 @@ export default function SecurityAudit() {
   useEffect(() => {
     const auditIssues: SecurityIssue[] = [
       {
-        id: '1',
-        severity: 'high',
-        title: 'Missing Content Security Policy',
-        description: 'No CSP headers detected',
-        status: 'open'
+        id: "1",
+        severity: "high",
+        title: "Missing Content Security Policy",
+        description: "No CSP headers detected",
+        status: "open"
       },
       {
-        id: '2',
-        severity: 'medium',
-        title: 'Weak Password Policy',
-        description: 'Password requirements are not enforced',
-        status: 'open'
+        id: "2",
+        severity: "medium",
+        title: "Weak Password Policy",
+        description: "Password requirements are not enforced",
+        status: "open"
       }
     ]
     setIssues(auditIssues)
@@ -46,4 +45,4 @@ export default function SecurityAudit() {
       </div>
     </div>
   )
-}
+

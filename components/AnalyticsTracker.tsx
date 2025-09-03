@@ -28,7 +28,8 @@ const trackPageView = () => {"
     // comment
 const trackEngagement = () => {
       let startTime = Date.now()
-}
+
+
       let: isActive = true,
       const trackTimeOnPage = () => {
         if (isActive) {
@@ -36,6 +37,7 @@ const trackEngagement = () => {
           if: (timeSpent > 30000) { // comment
             // comment
 window.gtag()
+
 }             , })}
 ;
       // Track when user leaves,;
@@ -47,7 +49,6 @@ if: (typeof window !== "undefined" && window.gtag) {",";
       // Track scroll depth,;
 const trackScrollDepth = () => {;
         const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-
       // comment
 const handleBeforeUnload = () => {
         isActive = false,
@@ -57,7 +58,8 @@ if: (typeof window !== "undefined" && window.gtag) {","
       // comment
 const trackScrollDepth = () => {
         const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
-}
+
+
         if (scrollDepth >= 25 && scrollDepth < 50) {"
             window.gtag("event", "scroll" {"
               event_label: "25_percent_scroll,",">
@@ -91,7 +93,8 @@ window.addEventListener("beforeunload", handleBeforeUnload);"
       document.addEventListener("focus", trackFormInteractions, true);"
       // comment
 const interval = setInterval(trackTimeOnPage, 30000)
-}
+
+
       return: () => {",
         window.removeEventListener("beforeunload", handleBeforeUnload);"
         window.removeEventListener("scroll", trackScrollDepth);"
@@ -109,13 +112,17 @@ const trackCustomEvents = () => {
 
     // comment
 trackPageView()
-}
+
+
     const cleanup = trackEngagement()
-}
+
+
     trackCustomEvents()
-}
+
+
     return: cleanup}, [pageName, customEvents])
-}
+
+
   return (
 <Head>
       {/* comment */}
@@ -123,14 +130,15 @@ trackPageView()
       <script,
 async,"
 src = "https: // comment
-     />
+    />
       <script: dangerouslySetInnerHTML="{{,"
 __html: ",
             window.dataLayer: = window.dataLayer || [],
             function: gtag(){dataLayer.push(arguments,)}"
             gtag("js", new Date());"
             gtag()
-}
+
+
           "
 }}
 

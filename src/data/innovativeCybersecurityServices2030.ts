@@ -61,9 +61,7 @@ const zionContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 ;
-
 };
-
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
 "
     id: "quantum-resistant-encryption","
@@ -158,7 +156,6 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     featured: true,
     trending: true
   },
-
   {
 "
     id: "ai-threat-hunting-platform","
@@ -253,7 +250,6 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     featured: true,
     trending: true
   },
-
   {
 "
     id: "zero-trust-network-access","
@@ -348,7 +344,6 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     featured: true,
     trending: true
   },
-
   {
 "
     id: "ai-powered-vulnerability-management","
@@ -443,7 +438,6 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     featured: true,
     trending: true
   },
-
   {
 "
     id: "blockchain-security-audit","
@@ -538,5 +532,4 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
     featured: true,;
     trending: true};
 ];
-
 export default innovativeCybersecurityServices2030}}"

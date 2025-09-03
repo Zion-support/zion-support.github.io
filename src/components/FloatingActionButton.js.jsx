@@ -80,7 +80,7 @@ const FloatingActionButton = ({ className = "" }) => {}"});,"})"
               exit="{{" rotate: 90, opacity: 0 }}"});,"})"
               transition="{{" duration: 0.2 }}""";,"});,"})"
             >"""";,"});,"})"
-              <XMarkIcon className="w-6 h-6"  />;,"});,"})"
+              <XMarkIcon className="w-6 h-6"   />;,"});,"})"
             </motion.div>;,"});,"})"
           ) : (""";,"});,"})"
             <motion.div"""";,"});,"})"
@@ -90,7 +90,7 @@ const FloatingActionButton = ({ className = "" }) => {}"});,"})"
               exit="{{" rotate: -90, opacity: 0 }}"});,"})"
               transition="{{" duration: 0.2 }}""";,"});,"})"
             >"""";,"});,"})"
-              <PlusIcon className="w-6 h-6"  />;,"});,"})"
+              <PlusIcon className="w-6 h-6"   />;,"});,"})"
             </motion.div>;,"});,"})"
           )}"});,"})"
         </AnimatePresence>;,"});,"})"
@@ -108,9 +108,11 @@ export { FloatingActionButton };,"});,"})"
 ;,"});,"})"
 export { FloatingActionButton };,"});,"})"
   const [isOpen, setIsOpen] = useState()
-}
+
+
   const toggleMenu = () => setIsOpen()
-}
+
+
   const actionItems = []"
     {}""
       icon: ChatBubbleLeftRightIcon, """
@@ -126,9 +128,11 @@ export { FloatingActionButton };,"});,"})"
       action: () => window.open("mailto: info@ziontechgroup.com", _self"), ";const FloatingActionButton = ({ className = "" }) => {}
 
   const [isOpen, setIsOpen] = useState()
-}
+
+
   const toggleMenu = () => setIsOpen()
-}
+
+
   const actionItems = []"
     {}"
       icon: ChatBubbleLeftRightIcon,""
@@ -222,14 +226,8 @@ key="{item.label}""
       </motion.button>
     </div>)};
 export default FloatingActionButton;
-
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };
-
 export { FloatingActionButton };

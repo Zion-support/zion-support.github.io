@@ -1,18 +1,18 @@
 import React, { useState } from "react";"
-import { Button } from '@/components/ui/button';"
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';"
-import { Input } from '@/components/ui/input';"
-import { Textarea } from '@/components/ui/textarea';"
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';"
-import { Calendar } from '@/components/ui/calendar';"
-import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';"
-import { cn } from '@/lib/utils';"
-import { zodResolver } from '@hookform/resolvers/zod';"
-import { useForm } from 'react-hook-form';"
-import { z } from 'zod';"
-import { format, addDays } from 'date-fns';"
-import { CalendarIcon import { toast } from '@/components/ui/use-toast';"
-import { useInterviews } from '@/hooks/useInterviews';
+import { Button } from "@/components/ui/button";"
+import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form";"
+import { Input } from "@/components/ui/input";"
+import { Textarea } from "@/components/ui/textarea";"
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";"
+import { Calendar } from "@/components/ui/calendar";"
+import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover";"
+import { cn } from "@/lib/utils";"
+import { zodResolver } from "@hookform/resolvers/zod";"
+import { useForm } from "react-hook-form";"
+import { z } from "zod";"
+import { format, addDays } from "date-fns";"
+import { CalendarIcon import { toast } from "@/components/ui/use-toast";"
+import { useInterviews } from "@/hooks/useInterviews";
 ).refine(date => date > new Date(), {
 "
         message: "Interview date must be in the future"
@@ -32,7 +32,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         resolver: zodResolver(formSchema),
         defaultValues: {
 
-            title: `Interview with ${talent.full_name}`,"
+            title: "Interview with ${talent.full_name}","
             duration: "30","
             platform: "zoom","
             notes: "","
@@ -49,8 +49,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             return}
         setIsSubmitting(true);
         try {
-            // Combine date and time`
-            const dateTimeString = `${format(values.date,yyyy-MM-dd')}T${values.time}:00`;
+            // Combine date and time"
+            const dateTimeString = "${format(values.date,yyyy-MM-dd")}T${values.time}:00";
             const scheduledDate = new Date(dateTimeString);
             // Calculate end time based on duration
             const durationMinutes = parseInt(values.duration);
@@ -68,8 +68,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
             });
             toast({
 "
-                title: "Interview requested",`
-                description: `Your interview request with ${talent.full_name} has been sent.`});
+                title: "Interview requested","
+                description: "Your interview request with ${talent.full_name} has been sent."});
             onClose()}
         catch(error) {
 "
@@ -93,7 +93,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">"
         <div className="flex items-center mb-6">"
           <div className="flex-shrink-0 h-12 w-12 rounded-full overflow-hidden mr-4">"
-            <img loading="lazy" src={talent.profile_picture_url || "/placeholder.svg"} alt={talent.full_name} className="h-full w-full object-cover"/>
+            <img loading="lazy" src={talent.profile_picture_url || "/placeholder.svg"} alt={talent.full_name} className="h-full w-full object-cover"   />
           </div>
           <div>"
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>"
@@ -104,9 +104,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         <FormField control={form.control} name="title" render={({ field }) => (<FormItem>
               <FormLabel>Interview Title</FormLabel>
               <FormControl>"
-                <Input placeholder="Brief title for the interview" {...field}/>
+                <Input placeholder="Brief title for the interview" {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>)}/>
 "
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"
@@ -121,7 +121,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
   !field.value && "text-muted-foreground")
 
 }>
-                        {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50"/>
+                        {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50"   />
                       </Button>
                     </FormControl>
                   </PopoverTrigger>"
@@ -131,12 +131,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
   (date) => date < new Date() || date > addDays(new Date(),
   90)
 
-
 "
-} initialFocus className="p-3 pointer-events-auto"/>
+} initialFocus className="p-3 pointer-events-auto" />
                   </PopoverContent>
                 </Popover>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>)}/>
 "
           <FormField control={form.control} name="time" render={({ field }) => (<FormItem>
@@ -144,7 +143,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>"
-                      <SelectValue placeholder="Select time"/>
+                      <SelectValue placeholder="Select time"   />
                     </SelectTrigger>
                   </FormControl>"
                   <SelectContent className="max-h-[300px]">
@@ -153,7 +152,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                       </SelectItem>))}
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>)}/>
         </div>
 "
@@ -163,7 +162,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>"
-                      <SelectValue placeholder="Select duration"/>
+                      <SelectValue placeholder="Select duration"   />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>"
@@ -173,7 +172,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                     <SelectItem value="60">60 minutes</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>)}/>
 "
           <FormField control={form.control} name="platform" render={({ field }) => (<FormItem>
@@ -181,7 +180,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <FormControl>
                     <SelectTrigger>"
-                      <SelectValue placeholder="Select platform"/>
+                      <SelectValue placeholder="Select platform"   />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>"
@@ -191,24 +190,24 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                     <SelectItem value="other">Other</SelectItem>
                   </SelectContent>
                 </Select>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>)}/>
         </div>
-'"
-        {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>
+""
+        {form.watch("platform") !== "in-app" && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>
                 <FormLabel>Meeting Link(Optional)</FormLabel>
-                <FormControl>'`
-                  <Input placeholder={`Add your ${form.watch('platform')} link here`} {...field}/>
+                <FormControl>""
+                  <Input placeholder={"Add your ${form.watch("platform")} link here"} {...field}  />
                 </FormControl>
-                <FormMessage />
+                <FormMessage  />
               </FormItem>)}/>)}
 "
         <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>
               <FormLabel>Notes(Optional)</FormLabel>
-              <FormControl>'"
-                <Textarea placeholder="Share what you'd like to discuss in this interview" className="h-20" {...field}/>
+              <FormControl>""
+                <Textarea placeholder="Share what you"d like to discuss in this interview" className="h-20" {...field}  />
               </FormControl>
-              <FormMessage />
+              <FormMessage  />
             </FormItem>)}/>
 "
         <div className="flex justify-end gap-4 pt-4">"
@@ -221,4 +220,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
         </div>
       </form>
     </Form>)}
-'"`
+"""
+
+
+export default Component

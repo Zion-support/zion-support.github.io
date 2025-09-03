@@ -1,16 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-
+import React from "react";
+import Head from "next/head";
 export default function Security() {
   return (
     <>
       <Head>
         <title>Security — Zion Tech Group</title>
-        <meta name="description" content="Comprehensive security information and practices for Zion Tech Group's autonomous systems and services." />
-        <meta property="og:title" content="Security — Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive security information and practices for Zion Tech Group's autonomous systems and services." />
+        <meta name="description" content="Comprehensive security information and practices for Zion Tech Group"s autonomous systems and services."   />
+        <meta property="og:title" content="Security — Zion Tech Group"  />
+        <meta property="og:description" content="Comprehensive security information and practices for Zion Tech Group"s autonomous systems and services."   />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <section className="text-center mb-16">
@@ -21,9 +19,8 @@ export default function Security() {
               Protecting your data and systems with enterprise-grade security measures and autonomous threat detection.
             </p>
           </section>
-
           <div className="max-w-6xl mx-auto">
-            {/* Security Overview */}
+            {/* comment */}
             <section className="mb-16 p-8 bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl border border-green-500/20">
               <h2 className="text-3xl font-bold mb-6 text-green-400">Security Overview</h2>
               <p className="text-white/80 mb-6">
@@ -49,13 +46,11 @@ export default function Security() {
                 </div>
               </div>
             </section>
-
-            {/* Security Features */}
+            {/* comment */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-cyan-400">Security Features</h2>
-              
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Authentication & Access Control */}
+                {/* comment */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
                   <h3 className="text-xl font-semibold mb-4 text-white">Authentication & Access Control</h3>
                   <ul className="space-y-3 text-white/80">
@@ -66,6 +61,7 @@ export default function Security() {
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
                       Role-based access control (RBAC)
+
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
@@ -81,8 +77,7 @@ export default function Security() {
                     </li>
                   </ul>
                 </div>
-
-                {/* Data Protection */}
+                {/* comment */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
                   <h3 className="text-xl font-semibold mb-4 text-white">Data Protection</h3>
                   <ul className="space-y-3 text-white/80">
@@ -108,8 +103,7 @@ export default function Security() {
                     </li>
                   </ul>
                 </div>
-
-                {/* Network Security */}
+                {/* comment */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
                   <h3 className="text-xl font-semibold mb-4 text-white">Network Security</h3>
                   <ul className="space-y-3 text-white/80">
@@ -120,6 +114,7 @@ export default function Security() {
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
                       Web application firewall (WAF)
+
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-400 mr-2">✓</span>
@@ -135,8 +130,7 @@ export default function Security() {
                     </li>
                   </ul>
                 </div>
-
-                {/* Monitoring & Incident Response */}
+                {/* comment */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
                   <h3 className="text-xl font-semibold mb-4 text-white">Monitoring & Incident Response</h3>
                   <ul className="space-y-3 text-white/80">
@@ -164,15 +158,13 @@ export default function Security() {
                 </div>
               </div>
             </section>
-
-            {/* Compliance & Certifications */}
+            {/* comment */}
             <section className="mb-16 p-8 bg-white/5 rounded-2xl border border-white/10">
               <h2 className="text-3xl font-bold mb-6 text-fuchsia-400">Compliance & Certifications</h2>
               <p className="text-white/80 mb-6">
                 Our security practices align with industry standards and regulatory requirements to ensure your data 
                 protection needs are met across various compliance frameworks.
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div className="bg-slate-900 p-6 rounded-lg text-center">
                   <div className="text-3xl mb-3">🔐</div>
@@ -206,13 +198,11 @@ export default function Security() {
                 </div>
               </div>
             </section>
-
-            {/* Security Practices */}
+            {/* comment */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-yellow-400">Security Practices</h2>
-              
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Development Security */}
+                {/* comment */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
                   <h3 className="text-xl font-semibold mb-4 text-white">Secure Development</h3>
                   <p className="text-white/80 mb-4">
@@ -226,8 +216,7 @@ export default function Security() {
                     <li>• Automated security testing in CI/CD</li>
                   </ul>
                 </div>
-
-                {/* Employee Security */}
+                {/* comment */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
                   <h3 className="text-xl font-semibold mb-4 text-white">Employee Security</h3>
                   <p className="text-white/80 mb-4">
@@ -241,8 +230,7 @@ export default function Security() {
                     <li>• Security incident reporting procedures</li>
                   </ul>
                 </div>
-
-                {/* Third-Party Security */}
+                {/* comment */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
                   <h3 className="text-xl font-semibold mb-4 text-white">Third-Party Security</h3>
                   <p className="text-white/80 mb-4">
@@ -256,8 +244,7 @@ export default function Security() {
                     <li>• Data processing agreements</li>
                   </ul>
                 </div>
-
-                {/* Business Continuity */}
+                {/* comment */}
                 <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
                   <h3 className="text-xl font-semibold mb-4 text-white">Business Continuity</h3>
                   <p className="text-white/80 mb-4">
@@ -273,14 +260,12 @@ export default function Security() {
                 </div>
               </div>
             </section>
-
-            {/* Security Dashboard */}
+            {/* comment */}
             <section className="mb-16 p-8 bg-slate-900 rounded-2xl border border-white/10">
               <h2 className="text-3xl font-bold mb-6 text-blue-400">Live Security Status</h2>
               <p className="text-white/80 mb-6">
                 Real-time security metrics and system health indicators from our autonomous monitoring systems.
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center p-4 bg-green-500/20 rounded-lg border border-green-500/30">
                   <div className="text-2xl font-bold text-green-400">99.9%</div>
@@ -299,21 +284,18 @@ export default function Security() {
                   <div className="text-white/80 text-sm">Encrypted</div>
                 </div>
               </div>
-              
               <div className="mt-6 text-center">
                 <a href="/reports/performance-metrics" className="text-cyan-400 hover:text-cyan-300 text-sm">
                   View detailed security metrics →
                 </a>
               </div>
             </section>
-
-            {/* Security Resources */}
+            {/* comment */}
             <section className="mb-16 p-8 bg-white/5 rounded-2xl border border-white/10">
               <h2 className="text-3xl font-bold mb-6 text-indigo-400">Security Resources</h2>
               <p className="text-white/80 mb-6">
                 Access our security documentation, best practices, and incident response procedures.
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-slate-900 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold text-white mb-3">Security Documentation</h3>
@@ -323,7 +305,6 @@ export default function Security() {
                     <li><a href="/automation" className="text-cyan-400 hover:text-cyan-300">Automation Security</a></li>
                   </ul>
                 </div>
-                
                 <div className="bg-slate-900 p-6 rounded-lg">
                   <h3 className="text-lg font-semibold text-white mb-3">Incident Response</h3>
                   <ul className="space-y-2 text-white/80">
@@ -334,15 +315,13 @@ export default function Security() {
                 </div>
               </div>
             </section>
-
-            {/* Contact Security Team */}
+            {/* comment */}
             <section className="p-8 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl border border-red-500/20">
               <h2 className="text-3xl font-bold mb-6 text-red-400">Report Security Issues</h2>
               <p className="text-white/80 mb-6">
                 If you've discovered a security vulnerability or have security concerns, please report them immediately. 
                 Our security team is available 24/7 to respond to security incidents.
               </p>
-              
               <div className="flex flex-wrap gap-4">
                 <a href="/contact" className="px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors">
                   Report Security Issue
@@ -354,7 +333,6 @@ export default function Security() {
                   View Security Status
                 </a>
               </div>
-              
               <div className="mt-6 p-4 bg-slate-900 rounded-lg">
                 <h3 className="text-lg font-semibold text-white mb-2">Emergency Contact</h3>
                 <p className="text-white/80 text-sm">
@@ -368,4 +346,3 @@ export default function Security() {
       </div>
     </>
   );
-}

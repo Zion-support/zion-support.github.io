@@ -46,5 +46,4 @@ const ServicesShowcasePage = () => {
             </div>
     </>
   );
-}
 export default ServicesShowcasePage

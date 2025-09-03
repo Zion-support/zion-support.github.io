@@ -1,5 +1,5 @@
-import { Link  } from 'react-router-dom';
-
+import React from "react"
+import { Link  } from "react-router-dom";
 export default function ComprehensivePricingGuide2027(...args: unknown[]): unknown {
   const serviceCategories = [
     {
@@ -116,7 +116,6 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
       ]
     }
   };
-
   const enterprisePackages = [
     {
       name: "Starter Enterprise",
@@ -167,7 +166,6 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
       popular: false
     }
   ];
-
   const marketComparison = [
     {
       feature: "AI Workflow Automation",
@@ -198,16 +196,15 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
       savings: "50-63%"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
-      {/* Futuristic Animated Background */}
+      {/* comment */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 via-transparent to-zion-purple/5"></div>
       </div>"""
 """"
       <div className="relative z-10">"""
-        {/* Hero Section */}""""
+        {/* comment */}""""
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
@@ -216,7 +213,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
               transition={{ duration: 0.8 }}"""
             >""""
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">""""
-                <DollarSign className="w-4 h-4 mr-2"  />                Comprehensive Pricing Guide 2027;
+                <DollarSign className="w-4 h-4 mr-2"   />                Comprehensive Pricing Guide 2027;
               </div>"""
               """"
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
@@ -234,21 +231,21 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                   whileTap={{ scale: 0.95 }}""""
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center""""
                 >""""
-                  <Play className="w-5 h-5 mr-2"  />                  Start Free Trial;
+                  <Play className="w-5 h-5 mr-2"   />                  Start Free Trial;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 }}"""
                   whileTap={{ scale: 0.95 }}""""
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center""""
                 >""""
-                  <MessageCircle className="w-5 h-5 mr-2"  />                  Contact Sales;
+                  <MessageCircle className="w-5 h-5 mr-2"   />                  Contact Sales;
                 </motion.button>
               </div>
             </motion.div>
           </div>
         </section>
 """
-        {/* Service Categories Pricing */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -262,7 +259,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                 Service Category Pricing"""
               </h2>""""
               <p className="text-xl text-zion-slate-300 max-w-3xl mx-auto">
-                Explore our comprehensive pricing across all service categories with transparent, 
+                Explore our comprehensive pricing across all service categories with transparent,
                 competitive rates designed for businesses of all sizes.
               </p>
             </motion.div>
@@ -276,7 +273,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                 className="mb-16""""
               >""""
                 <div className="text-center mb-12">"""
-                  <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-6`}>""""
+                  <div className={"w-20 h-20 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-6"}>""""
                     <category.icon className="w-10 h-10 text-white" />"""
                   </div>""""
                   <h3 className="text-3xl font-bold text-white mb-4">{category.name}</h3>""""
@@ -289,12 +286,12 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                       key={serviceIndex}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}`
-                      viewport={{ once: true }}``
-                      className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${}
-`
-                        service.popular ? 'border-zion-cyan/50 bg-zion-cyan/5' : 'border-zion-slate-600/50'``
-                      }`}
+                      transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}"
+                      viewport={{ once: true }}""
+                      className={"relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${}
+"
+                        service.popular ? "border-zion-cyan/50 bg-zion-cyan/5" : "border-zion-slate-600/50"""
+                      }"}
                     >"""
                       {service.popular && (""""
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""""
@@ -314,22 +311,21 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                       <ul className="space-y-3 mb-6">"""
                         {service.features.map((feature, idx) => (""""
                           <li key={idx} className="flex items-center text-zion-slate-300">""""
-                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"  />                            {feature}
+                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0"   />                            {feature}
                           </li>) ) }
                       </ul>
-
                       <Link to={service.link}>
                         <motion.button;
-                          whileHover={{ scale: 1.02 }}`
-                          whileTap={{ scale: 0.98 }}``
-                          className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
-'
-''
-'''`
-                            service.popular'''`'`
-                              ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'''`'`'`
-                              : 'bg-zion-slate-700 text-white hover:bg-zion-slate-600'````
-                          }`}
+                          whileHover={{ scale: 1.02 }}"
+                          whileTap={{ scale: 0.98 }}""
+                          className={"w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+"
+""
+""""
+                            service.popular""""""
+                              ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25""""""""
+                              : "bg-zion-slate-700 text-white hover:bg-zion-slate-600"""""
+                          }"}
                         >
                           Learn More;
                         </motion.button>
@@ -340,7 +336,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           </div>
         </section>
 """
-        {/* Enterprise Packages */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/30">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -364,14 +360,14 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}`
-                  viewport={{ once: true }}``
-                  className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${}
-'
-                    pkg.popular ''
-                      ? 'border-zion-cyan/50 bg-zion-cyan/5' ''`
-                      : 'border-zion-slate-600/50'``
-                  }`}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}"
+                  viewport={{ once: true }}""
+                  className={"relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${}
+"
+                    pkg.popular ""
+                      ? "border-zion-cyan/50 bg-zion-cyan/5" """
+                      : "border-zion-slate-600/50"""
+                  }"}
                 >"""
                   {pkg.popular && (""""
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""""
@@ -400,21 +396,20 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                   <ul className="space-y-4 mb-8">"""
                     {pkg.features.map((feature, idx) => (""""
                       <li key={idx} className="flex items-center text-zion-slate-300">""""
-                        <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"  />                        {feature}
+                        <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0"   />                        {feature}
                       </li>) ) }
                   </ul>
-
                   <motion.button;
-                    whileHover={{ scale: 1.02 }}`
-                    whileTap={{ scale: 0.98 }}``
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
-'
-''
-'''`
-                      pkg.popular'''`'`
-                        ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'''`'`'`
-                        : 'bg-zion-slate-700 text-white hover:bg-zion-slate-600'````
-                    }`}
+                    whileHover={{ scale: 1.02 }}"
+                    whileTap={{ scale: 0.98 }}""
+                    className={"w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+"
+""
+""""
+                      pkg.popular""""""
+                        ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25""""""""
+                        : "bg-zion-slate-700 text-white hover:bg-zion-slate-600"""""
+                    }"}
                   >
                     Get Started;
                   </motion.button>
@@ -423,7 +418,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           </div>
         </section>
 """
-        {/* Market Comparison */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -470,7 +465,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
           </div>
         </section>
 """
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10">""""
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
@@ -493,29 +488,28 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                   whileTap={{ scale: 0.95 }}""""
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center""""
                 >""""
-                  <Rocket className="w-5 h-5 mr-2"  />                  Start Free Trial;
+                  <Rocket className="w-5 h-5 mr-2"   />                  Start Free Trial;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 }}"""
                   whileTap={{ scale: 0.95 }}""""
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center""""
                 >""""
-                  <MessageCircle className="w-5 h-5 mr-2"  />                  Schedule Consultation;
+                  <MessageCircle className="w-5 h-5 mr-2"   />                  Schedule Consultation;
                 </motion.button>
               </motion.div>
             )})}
         </div>
-
-        {/* No Results */}
+        {/* comment */}
         {filteredServices.length === 0 && ("""
           <div className="text-center py-16">"""
             <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
             <button;
               onClick={() => {}
-'
-                setSearchTerm('');'
-                setSelectedCategory('all');'
-                setSelectedPriceRange('all')}}"""
+"
+                setSearchTerm("");"
+                setSelectedCategory("all");"
+                setSelectedPriceRange("all")}}"""
               className="text-cyan-400 hover:text-cyan-300 transition-colors"""
             >
               Clear all filters;
@@ -524,21 +518,21 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
         </div>
       </section>
 """
-        {/* Contact Information */}""""
+        {/* comment */}""""
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/50">""""
           <div className="max-w-4xl mx-auto text-center">""""
             <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>""""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""""
               <div className="flex flex-col items-center">""""
-                <Phone className="w-8 h-8 text-zion-cyan mb-4"  />""""
+                <Phone className="w-8 h-8 text-zion-cyan mb-4"   />""""
                 <p className="text-zion-slate-300">+1 302 464 0950</p>"""
               </div>""""
               <div className="flex flex-col items-center">""""
-                <Mail className="w-8 h-8 text-zion-cyan mb-4"  />""""
+                <Mail className="w-8 h-8 text-zion-cyan mb-4"   />""""
                 <p className="text-zion-slate-300">kleber@ziontechgroup.com</p>"""
               </div>""""
               <div className="flex flex-col items-center">""""
-                <MapPin className="w-8 h-8 text-zion-cyan mb-4"  />"                <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <MapPin className="w-8 h-8 text-zion-cyan mb-4"   />"                <p className="text-zion-slate-300">364 E Main St STE 1008<br  />Middletown DE 19709</p>
               </div>
             </div>
           </div>
@@ -547,16 +541,9 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
     </div>
   );
 };
-
 export default ComprehensivePricingGuide2027;
-
-
 export { ComprehensivePricingGuide2027 };
-
 export { ComprehensivePricingGuide2027 };
-
 export { ComprehensivePricingGuide2027 };
-
 export { ComprehensivePricingGuide2027 };
-
 export { ComprehensivePricingGuide2027 };

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import SEO from "@/components/SEO";
-import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
+import { Brain, Shield, Database, TrendingUp } from "lucide-react";
 const AIServices = () => {}
     const aiServices = []
         {}
@@ -8,7 +8,7 @@ const AIServices = () => {}
             id: "ai-strategy",""""
             title: "AI Strategy & Consulting",""""
             description: "Comprehensive AI strategy development and implementation for digital transformation.",""""
-            icon: <Brain className="h-8 w-8 text-pink-500"/>,
+            icon: <Brain className="h-8 w-8 text-pink-500"   />,
             price: 150,""""
             currency: "$",
             features: [""""
@@ -38,7 +38,7 @@ const AIServices = () => {}
             id: "machine-learning",""""
             title: "Machine Learning Solutions",""""
             description: "Custom ML models and algorithms for business automation and predictive analytics.",""""
-            icon: <Cpu className="h-8 w-8 text-blue-500"/>,
+            icon: <Cpu className="h-8 w-8 text-blue-500"   />,
             price: 5000,""""
             currency: "$",
             features: [""""
@@ -68,7 +68,7 @@ const AIServices = () => {}
             id: "natural-language-processing",""""
             title: "NLP & Text Analytics",""""
             description: "Advanced natural language processing for document analysis, chatbots, and content generation.",""""
-            icon: <MessageSquare className="h-8 w-8 text-green-500"/>,
+            icon: <MessageSquare className="h-8 w-8 text-green-500"   />,
             price: 8000,""""
             currency: "$",
             features: [""""
@@ -98,7 +98,7 @@ const AIServices = () => {}
             id: "computer-vision",""""
             title: "Computer Vision & Image AI",""""
             description: "Visual AI solutions for image recognition, object detection, and video analysis.",""""
-            icon: <Eye className="h-8 w-8 text-purple-500"/>,
+            icon: <Eye className="h-8 w-8 text-purple-500"   />,
             price: 12000,""""
             currency: "$",
             features: [""""
@@ -128,7 +128,7 @@ const AIServices = () => {}
             id: "predictive-analytics",""""
             title: "Predictive Analytics & Forecasting",""""
             description: "AI-powered predictive models for business forecasting and trend analysis.",""""
-            icon: <TrendingUp className="h-8 w-8 text-orange-500"/>,
+            icon: <TrendingUp className="h-8 w-8 text-orange-500"   />,
             price: 6000,""""
             currency: "$",
             features: [""""
@@ -158,7 +158,7 @@ const AIServices = () => {}
             id: "ai-automation",""""
             title: "AI Process Automation",""""
             description: "Intelligent automation solutions for business process optimization and workflow management.",""""
-            icon: <Zap className="h-8 w-8 text-yellow-500"/>,
+            icon: <Zap className="h-8 w-8 text-yellow-500"   />,
             price: 4000,""""
             currency: "$",
             features: [""""
@@ -188,7 +188,7 @@ const AIServices = () => {}
             id: "ai-ethics",""""
             title: "AI Ethics & Governance",""""
             description: "Responsible AI development and governance frameworks for ethical AI deployment.",""""
-            icon: <Shield className="h-8 w-8 text-red-500"/>,
+            icon: <Shield className="h-8 w-8 text-red-500"   />,
             price: 200,""""
             currency: "$",
             features: [""""
@@ -218,7 +218,7 @@ const AIServices = () => {}
             id: "ai-infrastructure",""""
             title: "AI Infrastructure & MLOps",""""
             description: "Scalable AI infrastructure and machine learning operations for enterprise AI deployment.",""""
-            icon: <Server className="h-8 w-8 text-indigo-500"/>,
+            icon: <Server className="h-8 w-8 text-indigo-500"   />,
             price: 15000,""""
             currency: "$",
             features: [""""
@@ -248,7 +248,7 @@ const AIServices = () => {}
             id: "ai-integration",""""
             title: "AI Integration Services",""""
             description: "Seamless integration of AI solutions with existing business systems and workflows.",""""
-            icon: <Code className="h-8 w-8 text-cyan-500"/>,
+            icon: <Code className="h-8 w-8 text-cyan-500"   />,
             price: 3000,""""
             currency: "$",
             features: [""""
@@ -278,7 +278,7 @@ const AIServices = () => {}
             id: "ai-training",""""
             title: "AI Training & Workshops",""""
             description: "Comprehensive training programs for AI adoption and team skill development.",""""
-            icon: <Users className="h-8 w-8 text-teal-500"/>,
+            icon: <Users className="h-8 w-8 text-teal-500"   />,
             price: 500,""""
             currency: "$",
             features: [""""
@@ -306,17 +306,15 @@ const AIServices = () => {}
     ];
 """"
     const categories = ["All Services", "Strategy", "ML", "NLP", "Vision", "Analytics", "Automation", "Ethics", "Infrastructure", "Integration", "Training"];
-
     return (""""
         <div className="min-h-screen bg-background">
             <SEO """"
                 title="AI Services - Zion Tech Group""""
                 description="Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy.""""
                 keywords="AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics""""
-                canonical="https://ziontechgroup.com/services/ai-services""""
-            />
+                canonical="https://ziontechgroup.com/services/ai-services""""   />
 
-            {/* Hero Section */}""""
+            {/* comment */}""""
             <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">""""
                 <div className="absolute inset-0 bg-black/20"></div>""""
                 <div className="relative container mx-auto px-4 text-center">""""
@@ -327,7 +325,7 @@ const AIServices = () => {}
                         </span>
                     </h1>""""
                     <p className="text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8">
-                        Harness the power of artificial intelligence to transform your business operations, 
+                        Harness the power of artificial intelligence to transform your business operations,
                         enhance customer experiences, and drive innovation across all departments.
                     </p>""""
                     <div className="flex flex-wrap justify-center gap-4">""""
@@ -340,28 +338,26 @@ const AIServices = () => {}
                     </div>
                 </div>
             </section>
-
-            {/* Contact Info Banner */}""""
+            {/* comment */}""""
             <div className="bg-gradient-to-r from-gray-900 to-gray-800 border-b border-pink-400/30">""""
                 <div className="container mx-auto px-4 py-6">""""
                     <div className="flex flex-wrap items-center justify-center gap-8 text-center">""""
                         <div className="flex items-center gap-3">""""
-                            <Phone className="h-5 w-5 text-pink-400"/>""""
+                            <Phone className="h-5 w-5 text-pink-400"   />""""
                             <span className="text-white">+1 302 464 0950</span>
                         </div>""""
                         <div className="flex items-center gap-3">""""
-                            <Mail className="h-5 w-5 text-pink-400"/>""""
+                            <Mail className="h-5 w-5 text-pink-400"   />""""
                             <span className="text-white">kleber@ziontechgroup.com</span>
                         </div>""""
                         <div className="flex items-center gap-3">""""
-                            <MapPin className="h-5 w-5 text-pink-400"/>""""
+                            <MapPin className="h-5 w-5 text-pink-400"   />""""
                             <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            {/* Services Grid */}""""
+            {/* comment */}""""
             <section className="py-20 bg-white">""""
                 <div className="container mx-auto px-4">""""
                     <div className="text-center mb-16">""""
@@ -397,7 +393,7 @@ const AIServices = () => {}
                                         <div className="grid grid-cols-2 gap-2 mb-4">
                                             {service.features.slice(0, 4).map((feature, index) => (""""
                                                 <div key={index} className="flex items-center text-xs text-pink-600">""""
-                                                    <CheckCircle className="w-3 h-3 mr-2"/>
+                                                    <CheckCircle className="w-3 h-3 mr-2"   />
                                                     {feature}
                                                 </div>
                                             ))}
@@ -421,25 +417,25 @@ const AIServices = () => {}
                                         </div>
                                         """"
                                         <div className="flex items-center justify-center gap-1 mb-4">
-                                            {[...Array(5)].map((_, i) => ('
-                                                <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}/>
+                                            {[...Array(5)].map((_, i) => ("
+                                                <Star key={i} className={"w-4 h-4 ${i < Math.floor(service.rating) ? "text-yellow-400 fill-current" : "text-gray-300"}"}   />
                                             ))}""""
                                             <span className="text-sm text-gray-500 ml-2">({service.reviewCount})</span>
                                         </div>
                                     </div>
                                     """"
                                     <div className="text-center mb-4">""""
-                                        <span className="text-3xl font-bold text-pink-600">'`
-                                            {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
+                                        <span className="text-3xl font-bold text-pink-600">""
+                                            {service.price === 0 ? "Free" : "${service.currency}${service.price}`}
                                         </span>""""
                                         <span className="text-gray-500">
-                                            {service.price === 0 ? '' : service.price < 1000 ? '/hour' : '/project'}
+                                            {service.price === 0 ? "" : service.price < 1000 ? "/hour" : "/project"}
                                         </span>
                                     </div>
                                     """"
                                     <button className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">""""
                                         <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">""""
-                                            <ExternalLink className="h-4 w-4 mr-2"/>
+                                            <ExternalLink className="h-4 w-4 mr-2"   />
                                             Get Started;
                                         </a>
                                     </button>
@@ -449,24 +445,23 @@ const AIServices = () => {}
                     </div>
                 </div>
             </section>
-
-            {/* CTA Section */}""""
+            {/* comment */}""""
             <section className="py-20 bg-gradient-to-r from-pink-50 to-rose-50">""""
                 <div className="container mx-auto px-4 text-center">""""
                     <h2 className="text-4xl font-bold mb-6 text-gray-900">
                         Ready to Transform Your Business with AI?
                     </h2>""""
                     <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                        Start with a consultation and see how our AI services can streamline your operations, 
+                        Start with a consultation and see how our AI services can streamline your operations,
                         improve productivity, and drive growth. No long-term contracts, cancel anytime.
                     </p>""""
                     <div className="flex flex-wrap justify-center gap-4">""""
                         <button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300">""""
-                            <Rocket className="h-5 w-5 mr-2 inline"/>
+                            <Rocket className="h-5 w-5 mr-2 inline"   />
                             Start AI Consultation;
                         </button>""""
                         <button className="border-2 border-pink-600 text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-600 hover:text-white transition-all duration-300">""""
-                            <Phone className="h-5 w-5 mr-2 inline"/>
+                            <Phone className="h-5 w-5 mr-2 inline"   />
                             Call +1 302 464 0950;
                         </button>
                     </div>
@@ -481,11 +476,7 @@ export default AIServices;
 }}
 
 export { AIServices };
-
 export { AIServices };
-
 export { AIServices };
-
 export { AIServices };
-
 export { AIServices };

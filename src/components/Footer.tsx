@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import {
   Twitter,
   Linkedin,
@@ -57,31 +57,28 @@ import {
   Settings,
   Palette,
   ChevronDown
-} from 'lucide-react';
-
+} from "lucide-react";
 export function Footer() {
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
-
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(["company"]));
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     const handleScroll = () => {
-      const scrollToTopButton = document.getElementById('scroll-to-top');
+      const scrollToTopButton = document.getElementById("scroll-to-top");
       if (scrollToTopButton) {
         if (window.pageYOffset > 300) {
-          scrollToTopButton.classList.remove('hidden');
+          scrollToTopButton.classList.remove("hidden");
         } else {
-          scrollToTopButton.classList.add('hidden');
+          scrollToTopButton.classList.add("hidden");
         }
       }
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   // Toggle section expansion (for mobile)
+
   const toggleSection = (title: string) => {
     setExpandedSections(prev => {
       const newSet = new Set(prev);
@@ -93,73 +90,71 @@ export function Footer() {
       return newSet;
     });
   };
-
   // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth"
     });
   };
-
 export default function Footer() {
   const footerSections = [
     {
-      title: 'Company',
+      title: "Company",
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Mission', href: '/about#mission' },
-        { name: 'Leadership Team', href: '/about#team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Press & News', href: '/press' },
-        { name: 'Partners', href: '/partners' }
+        { name: "About Us", href: "/about" },
+        { name: "Our Mission", href: "/about#mission" },
+        { name: "Leadership Team", href: "/about#team" },
+        { name: "Careers", href: "/careers" },
+        { name: "Press & News", href: "/press" },
+        { name: "Partners", href: "/partners" }
       ]
     },
     {
-      title: 'Services',
+      title: "Services",
       links: [
-        { name: 'AI Solutions', href: '/services/ai' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Cloud Services', href: '/services/cloud' },
-        { name: 'Digital Transformation', href: '/services/digital' },
-        { name: 'IT Consulting', href: '/services/consulting' },
-        { name: 'Micro SAAS', href: '/services/micro-saas' }
+        { name: "AI Solutions", href: "/services/ai" },
+        { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "Cloud Services", href: "/services/cloud" },
+        { name: "Digital Transformation", href: "/services/digital" },
+        { name: "IT Consulting", href: "/services/consulting" },
+        { name: "Micro SAAS", href: "/services/micro-saas" }
       ]
     },
     {
-      title: 'Solutions',
+      title: "Solutions",
       links: [
-        { name: 'Enterprise', href: '/solutions/enterprise' },
-        { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Financial Services', href: '/solutions/financial' },
-        { name: 'Government', href: '/solutions/government' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Retail', href: '/solutions/retail' }
+        { name: "Enterprise", href: "/solutions/enterprise" },
+        { name: "Healthcare", href: "/solutions/healthcare" },
+        { name: "Financial Services", href: "/solutions/financial" },
+        { name: "Government", href: "/solutions/government" },
+        { name: "Manufacturing", href: "/solutions/manufacturing" },
+        { name: "Retail", href: "/solutions/retail" }
       ]
     },
     {
-      title: 'Resources',
+      title: "Resources",
       links: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' }
+        { name: "Blog", href: "/blog" },
+        { name: "Case Studies", href: "/case-studies" },
+        { name: "White Papers", href: "/white-papers" },
+        { name: "Webinars", href: "/webinars" },
+        { name: "Documentation", href: "/docs" },
+        { name: "API Reference", href: "/api" }
       ]
     },
     {
-      title: 'Support',
+      title: "Support",
       links: [
-        { name: 'Help Center', href: '/help' },
-        { name: 'Contact Support', href: '/contact' },
-        { name: 'Training', href: '/training' },
-        { name: 'Community', href: '/community' },
-        { name: 'System Status', href: '/status' },
-        { name: 'Request Quote', href: '/request-quote' }
+        { name: "Help Center", href: "/help" },
+        { name: "Contact Support", href: "/contact" },
+        { name: "Training", href: "/training" },
+        { name: "Community", href: "/community" },
+        { name: "System Status", href: "/status" },
+        { name: "Request Quote", href: "/request-quote" }
       ]
     }
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
+import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from "lucide-react";
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
   Linkedin,
   Instagram,
@@ -252,24 +247,22 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
     { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
     { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
   ];
-
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
   return (
     <footer className="bg-slate-900 text-white">
-      {/* Main Footer Content */}
+      {/* comment */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
+          {/* comment */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+                <Zap className="w-6 h-6 text-white"   />
               </div>
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
@@ -279,21 +272,20 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5"   />
               </a>
               <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Twitter className="w-5 h-5" />
+                <Twitter className="w-5 h-5"   />
               </a>
               <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-5 h-5"   />
               </a>
               <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-blue-400 transition-colors">
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5"   />
               </a>
             </div>
           </div>
-
-          {/* Footer Sections */}
+          {/* comment */}
           {footerSections.map((section) => (
             <div key={section.title} className="space-y-4">
               <h3 className="text-white font-semibold text-sm uppercase tracking-wider">
@@ -326,8 +318,7 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
                 </div>
               ))}
             </div>
-
-            {/* Social Links */}
+            {/* comment */}
             <div className="mt-6">
               <h4 className="text-white font-semibold mb-3">Follow Us</h4>
               <div className="flex space-x-3">
@@ -337,15 +328,14 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-lg transition-all duration-200 ${social.color} hover:scale-110`}
+                    className={"w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-lg transition-all duration-200 ${social.color} hover:scale-110"}
                   >
                     {social.icon}
                   </a>
                 ))}
               </div>
             </div>          </div>
-
-          {/* Footer Sections */}
+          {/* comment */}
           {footerSections.map((section, index) => (
             <div key={index}>
               <h4 className="text-white font-semibold mb-4">{section.title}</h4>
@@ -364,26 +354,25 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
             </div>
           ))}
         </div>
-
-        {/* Contact Information */}
+        {/* comment */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-blue-400" />
+              <Phone className="w-5 h-5 text-blue-400"   />
               <div>
                 <p className="text-white font-medium">Phone</p>
                 <p className="text-gray-400 text-sm">+1 (555) 123-4567</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-blue-400" />
+              <Mail className="w-5 h-5 text-blue-400"   />
               <div>
                 <p className="text-white font-medium">Email</p>
                 <p className="text-gray-400 text-sm">contact@ziontechgroup.com</p>
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-blue-400" />
+              <MapPin className="w-5 h-5 text-blue-400"   />
               <div>
                 <p className="text-white font-medium">Location</p>
                 <p className="text-gray-400 text-sm">San Francisco, CA</p>
@@ -391,8 +380,7 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
             </div>
           </div>
         </div>
-
-        {/* Newsletter Signup */}
+        {/* comment */}
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="max-w-md">
             <h3 className="text-white font-semibold mb-3">Stay Updated</h3>
@@ -400,19 +388,16 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
               Get the latest insights on AI, technology trends, and business innovation.
             </p>
             <div className="flex space-x-2">
-              <input
-                type="email"
+              <input type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"   />
               <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
-
-        {/* Bottom Bar */}
+        {/* comment */}
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
@@ -434,4 +419,3 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
       </div>
     </footer>
   );
-}

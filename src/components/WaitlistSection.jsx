@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
 export default function Page() {
 ;
   return ()
+
     <section className="py-16 bg-gradient-to-r from-zion-purple to-zion-cyan">"
       <div className="container mx-auto px-4 text-center">"
         <h2 className="text-3xl font-bold text-white mb-4">
@@ -19,7 +20,7 @@ export default function Page() {
             placeholder="Enter your email"
             className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white"
             required
-          />
+         />
           <Button"
             type="submit"
             className="bg-white text-zion-purple hover:bg-gray-100"
@@ -30,5 +31,4 @@ export default function Page() {
       </div>
     </section>
   );
-}
 '"

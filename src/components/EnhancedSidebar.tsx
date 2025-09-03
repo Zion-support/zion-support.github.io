@@ -1,8 +1,7 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
-
+import React from "react"
+import {  import { motion, AnimatePresence  } from "framer-motion";
 export default function Page() {
     setExpandedSections(newExpanded)};
-
   const navigationSections = [{
 
       title: "Main Navigation",
@@ -18,7 +17,6 @@ export default function Page() {
         { name: "Contact", href: "/contact", icon: MessageCircle },"
         { name: "Careers", href: "/careers", icon: Briefcase },"
         { name: "Partners", href: "/partners", icon: Handshake }              </button>
-
               <AnimatePresence>
                 {expandedSections.has(section.title) && (<motion.div
                     initial = {
@@ -30,7 +28,7 @@ export default function Page() {
                     animate = {
 
   { opacity: 1,
-  height: 'auto'
+  height: "auto"
 
 }}
                     exit = {
@@ -75,8 +73,7 @@ export default function Page() {
               </AnimatePresence>
             </div>) ) }
         </nav>
-
-        {/* Contact Info */}
+        {/* comment */}
         <motion.div"
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
           initial = {
@@ -101,15 +98,15 @@ export default function Page() {
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>"
           <div className="space-y-2 text-xs text-zion-slate-light">"
             <div className="flex items-center space-x-2">"
-              <Phone className="w-3 h-3"  />
+              <Phone className="w-3 h-3"   />
               <span>+1 302 464 0950</span>
             </div>"
             <div className="flex items-center space-x-3 text-sm text-slate-400">"
-              <Mail className="w-4 h-4"  />
+              <Mail className="w-4 h-4"   />
               <span>kleber@ziontechgroup.com</span>
             </div>"
             <div className="flex items-center space-x-2">"
-              <MapPin className="w-3 h-3"  />;              <span>Middletown, DE</span>;
+              <MapPin className="w-3 h-3"   />;              <span>Middletown, DE</span>;
             </div>;
           </div>;
         </motion.div>;

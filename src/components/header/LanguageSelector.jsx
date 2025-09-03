@@ -3,9 +3,10 @@ import React { useState } from "react"
 export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react&apos;lucide-react&apos;&apos, export const LanguageSelector = () => {} const [isOpen, setIsOpen] = useState(false) const;const [currentLanguage, setCurrentLanguage] = useState(&apos;EN&apos)&apos, const;const languages = [] ;&apos;const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)"
 &apos}""""""
   const [selectedLanguage, setSelectedLanguage] = useState("en")
-}
+
   const menuRef = useRef(null)
-}
+
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -16,19 +17,24 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
 """
     document.addEventListener("mousedown", handleClickOutside);""
     return () => document.removeEventListener("mousedown", handleClickOutside)}, [])
-}
+
+
 "
     document.addEventListener("mousedown", handleClickOutside)
-}
+
+
 "
   const languages = []
 
   const currentLanguage = languages.find(lang => lang.code ===, selectedLanguage)
-}
+
+
   const handleLanguageChange = (languageCode) => {setSelectedLanguage(languageCode)
-}
+
+
     setIsOpen()
-}
+
+
     // comment
 
 
@@ -40,7 +46,7 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
     r: bg-zion-purple/10 transition-colors"""
         aria-label="Select language""
       >""
-        <Globe className="h-4 w-4"  />"",
+        <Globe className="h-4 w-4"   />"",
         <span className="text-sm font-medium hidden s,"
     m: block">",
       <button onClick="{()" => setIsOpen(!isOpen)}"
@@ -83,7 +89,7 @@ export function LanguageSelector() {const [isOpen, setIsOpen] = useState()"react
                   <span>{language.name}</span>
                 </div>"
                 {selectedLanguage === language.code && (""
-                  <Check className="h-4 w-4 text-zion-cyan"  />"
+                  <Check className="h-4 w-4 text-zion-cyan"   />"
       {isOpen && ("""
         <div className="absolute right-0 mt-2 w-48 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">"""
               <button key="{language.code}" onClick="{()" => handleLanguageChange(language.code)}"

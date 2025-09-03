@@ -46,5 +46,4 @@ const ServicesOverview = () => {
             </div>
     </>
   );
-}
 export default ServicesOverview

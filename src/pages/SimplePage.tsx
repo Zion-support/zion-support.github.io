@@ -46,5 +46,4 @@ const SimplePage = () => {
             </div>
     </>
   );
-}
 export default SimplePage

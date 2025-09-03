@@ -46,5 +46,4 @@ const ServicesCatalog = () => {
             </div>
     </>
   );
-}
 export default ServicesCatalog

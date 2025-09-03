@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-import { useState } from 'react';
-
+import React, { useState } from "react";
+import { useState } from "react";
 export default function Page() {
             alt={project.title}"
-            className="w-full h-full object-cover"
-          />
+            className="w-full h-full object-cover" />
         ) : ("
           <div className="w-full h-full flex items-center justify-center bg-muted">"
-            <FileText className="h-12 w-12 text-muted-foreground/50" />
+            <FileText className="h-12 w-12 text-muted-foreground/50"   />
           </div>
         )}
       </div>
@@ -15,7 +13,6 @@ export default function Page() {
       <CardContent className="flex-grow pt-6">"
         <div className="space-y-2">"
           <h3 className="font-semibold text-lg">{project.title}</h3>
-
           {project.description && ("
             <p className="text-sm text-muted-foreground line-clamp-3">
               {project.description}
@@ -45,7 +42,7 @@ export default function Page() {
               title="GitHub"
             >"
               <Button variant="ghost" size="icon" >"
-                <Github className="h-4 w-4" />
+                <Github className="h-4 w-4"   />
               </Button>
             </a>
           )}
@@ -59,7 +56,7 @@ export default function Page() {
               title="Live demo"
             >"
               <Button variant="ghost" size="icon" >"
-                <Link className="h-4 w-4" />
+                <Link className="h-4 w-4"   />
               </Button>
             </a>
           )}
@@ -72,7 +69,7 @@ export default function Page() {
             onClick={() => onEdit(project)}"
             
           >"
-            <Edit className="h-4 w-4" />
+            <Edit className="h-4 w-4"   />
           </Button>
           <Button"
             variant="ghost"
@@ -80,11 +77,10 @@ export default function Page() {
             onClick={() => setDeleteDialogOpen(true)}"
             
           >"
-            <Trash2 className="h-4 w-4" />
+            <Trash2 className="h-4 w-4"   />
           </Button>
         </div>
       </CardFooter>
-
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -106,5 +102,4 @@ export default function Page() {
       </AlertDialog>
     </Card>
   );
-}
 '"

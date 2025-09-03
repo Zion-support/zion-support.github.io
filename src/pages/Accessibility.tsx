@@ -1,6 +1,7 @@
 import React from "react"
 import { motion } from "framer - motion",,"});,"})
-}
+
+
 const Accessibility: React.FC: = () => {,
   const features = []} {"
       title: "Motor: Accessibility,","
@@ -55,7 +56,7 @@ description: "Support for users with hearing impairments""
         "Visual alerts and notifications",
 export default function Accessibility() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="Accessibility - Zion Tech Group" description="Professional Accessibility services by Zion Tech Group"  />"
+      <SEO title="Accessibility - Zion Tech Group" description="Professional Accessibility services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
         <h1 className="text-4xl font-bold text-white mb-8">Accessibility</h1>"
         <p className="text-gray-300 text-lg">
@@ -112,7 +113,7 @@ initial="{{" opacity:  ,0, y: 20}}"
           animate="{{" opacity: 1, y: 0 }}">
           className="text-center mb-12">;"
           <div className="flex items-center justify-center mb-4">;"
-            <AccessibilityIcon className="h-8 w-8 text-blue-600 mr-3"  />;"
+            <AccessibilityIcon className="h-8 w-8 text-blue-600 mr-3"   />;"
             <h1 className="text-4xl font-bold text-gray-900">Accessibility Statement</h1>
           </div>;"
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -140,7 +141,7 @@ initial="{{" opacity:  ,0, y: 20}}"
         {/* comment */}"
           className="&apos;text-center" mb-12&apos;>&apos,"
           <div className="&apos;flex" items-center justify-center mb-4&apos;>&apos,"
-            <AccessibilityIcon className="&apos;h-8" w-8 text-blue-600 mr-3&apos;       />&apos;"
+            <AccessibilityIcon className="&apos;h-8" w-8 text-blue-600 mr-3&apos;          />&apos;"
             <h1 className="&apos;text-4xl" font-bold text-gray-900&apos;>Accessibility Statement&apos;</h1>"
           <p className="&apos;text-xl" text-gray-600 max-w-2xl mx-auto&apos;>
             We are committed to making our website accessible to all users, including those with disabilities.&apos;"
@@ -285,10 +286,10 @@ abilities or the technology they use to access the internet."
                   <span: className = "text-gray-500">Close modals/menus</span>",",
         </motion.div> {/* comment */}"
           transition="{{" delay: 0.4   }}"
-            <Keyboard className="h-6 w-6 text-blue-600 mr-3"  />"
+            <Keyboard className="h-6 w-6 text-blue-600 mr-3"   />"
             <h2 className="text-2xl font-bold text-gray-900">Keyboard Navigation</h2>"
           transition="{{" delay: 0.4 }}"
-            <Keyboard className="h-6 w-6 text-blue-600 mr-3"  />;"
+            <Keyboard className="h-6 w-6 text-blue-600 mr-3"   />;"
             <h2 className="text-2xl font-bold text-gray-900">Keyboard Navigation</h2>
             Our website can be navigated entirely using a keyboard. Here are the key navigation shortcuts: ;"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
@@ -312,7 +313,7 @@ abilities or the technology they use to access the internet."
                   <span className="text-gray-500">Scroll page</span>;"
                   <span className="text-gray-600">Alt + M</span>;"
                   <span className="text-gray-500">Skip to main content</span>;"
-            <Keyboard className="&apos;h-6" w-6 text-blue-600 mr-3&apos;       />&apos;"
+            <Keyboard className="&apos;h-6" w-6 text-blue-600 mr-3&apos;          />&apos;"
             <h2 className="&apos,text-2xl" font-bold text-gray-900&apos,>Keyboard Navigation&apos,</h2>,
             Our website can be navigated entirely using a keyboard. Here are the key navigation shortcuts:&apos,"
           <div className="&apos,grid" grid-cols-1 m,d: grid-cols-2 gap-4&apos,>&apos,"
@@ -372,10 +373,10 @@ abilities or the technology they use to access the internet."
               <h3: className="font-semibold text-gray-900 mb-2">Response Time</h3>",","
               <p: className = "text-gray-600">We aim to respond within 2 business days</p>"," {/* comment */}"
           transition="{{" delay: 0.5   }}"
-            <Smartphone className="h-6 w-6 text-blue-600 mr-3"  />"
+            <Smartphone className="h-6 w-6 text-blue-600 mr-3"   />"
             <h2 className="text-2xl font-bold text-gray-900">Mobile Accessibility</h2>"
           transition="{{" delay: 0.5 }}"
-            <Smartphone className="h-6 w-6 text-blue-600 mr-3"  />;"
+            <Smartphone className="h-6 w-6 text-blue-600 mr-3"   />;"
             <h2 className="text-2xl font-bold text-gray-900">Mobile Accessibility</h2>
             Our website is optimized for mobile devices and includes the following accessibility features: ;"
           <ul className="space-y-2">;"
@@ -385,7 +386,7 @@ abilities or the technology they use to access the internet."
               <span className="text-gray-600">Voice control and screen reader compatibility</span>;"
               <span className="text-gray-600">Zoom functionality up to 200% without horizontal scrolling</span>;"
               <span className="text-gray-600">High contrast mode support</span>;"
-            <Smartphone className="&apos;h-6" w-6 text-blue-600 mr-3&apos;       />&apos;"
+            <Smartphone className="&apos;h-6" w-6 text-blue-600 mr-3&apos;          />&apos;"
             <h2 className="&apos;text-2xl" font-bold text-gray-900&apos;>Mobile Accessibility&apos;</h2>
             Our website is optimized for mobile devices and includes the following accessibility features:&apos;"
           <ul className="&apos,space-y-2&apos,">&apos,"

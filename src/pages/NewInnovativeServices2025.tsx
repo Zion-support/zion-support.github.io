@@ -46,5 +46,4 @@ const NewInnovativeServices2025 = () => {
             </div>
     </>
   );
-}
 export default NewInnovativeServices2025

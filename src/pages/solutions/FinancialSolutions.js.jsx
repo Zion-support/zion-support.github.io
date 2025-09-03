@@ -1,5 +1,5 @@
-import React from 'react';'''
-import { motion } from 'framer-motion';
+import React from "react";"""
+import { motion } from "framer-motion";
 import {}
   DollarSign,
   TrendingUp,
@@ -7,73 +7,74 @@ import {}
   Brain,
   BarChart3,
   Zap,
-  Lock,'
-  ArrowRight,''
-  CheckCircle,'''
-  CreditCard} from 'lucide-react';
+  Lock,"
+  ArrowRight,""
+  CheckCircle,"""
+  CreditCard} from "lucide-react";
 export default function FinancialSolutions() {}
   const features = []
     {}
-      icon: Brain,'
-      title: 'AI-Powered Risk Assessment','
-      description:''
-        'Advanced machine learning models for credit risk and fraud detection'},
+      icon: Brain,"
+      title: "AI-Powered Risk Assessment","
+      description:""
+        "Advanced machine learning models for credit risk and fraud detection"},
     {}
-      icon: BarChart3,'
-      title: 'Predictive Analytics','
-      description:''
-        'Forecast market trends and customer behavior with high accuracy'},
+      icon: BarChart3,"
+      title: "Predictive Analytics","
+      description:""
+        "Forecast market trends and customer behavior with high accuracy"},
     {}
-      icon: Shield,'
-      title: 'Regulatory Compliance','
-      description: 'Automated compliance monitoring for financial regulations'},
+      icon: Shield,"
+      title: "Regulatory Compliance","
+      description: "Automated compliance monitoring for financial regulations"},
     {}
-      icon: Zap,'
-      title: 'Real-time Processing','
-      description: 'High-speed transaction processing and settlement systems'},
+      icon: Zap,"
+      title: "Real-time Processing","
+      description: "High-speed transaction processing and settlement systems"},
     {}
-      icon: Lock,'
-      title: 'Enterprise Security','
-      description:''
-        'Bank-grade security with multi-layer encryption and authentication'},
+      icon: Lock,"
+      title: "Enterprise Security","
+      description:""
+        "Bank-grade security with multi-layer encryption and authentication"},
     {}
-      icon: TrendingUp,'
-      title: 'Portfolio Optimization','
-      description: 'AI-driven investment strategies and portfolio management'}
-  ];'
-  const benefits = [''
-    'Reduce fraud losses by 60-80%',Improve risk assessment accuracy by 40%',Lower operational costs by 30-50%',Enhance customer experience',Faster transaction processing',Better regulatory compliance'
+      icon: TrendingUp,"
+      title: "Portfolio Optimization","
+      description: "AI-driven investment strategies and portfolio management"}
+  ];"
+  const benefits = [""
+    "Reduce fraud losses by 60-80%",Improve risk assessment accuracy by 40%",Lower operational costs by 30-50%",Enhance customer experience",Faster transaction processing",Better regulatory compliance"
   ];
   const solutions = []
     {}
-'
-''
-'''
-      title: 'Digital Banking','''
-      description: 'Modern digital banking platforms with AI-powered features'},
+"
+""
+"""
+      title: "Digital Banking","""
+      description: "Modern digital banking platforms with AI-powered features"},
     {}
-'
-''
-'''
-      title: 'Payment Processing','''
-      description: 'Secure and efficient payment processing solutions'},
+"
+""
+"""
+      title: "Payment Processing","""
+      description: "Secure and efficient payment processing solutions"},
     {}
-'
-''
-'''
-      title: 'Risk Management','''
-      description: 'Comprehensive risk assessment and mitigation tools'},
+"
+""
+"""
+      title: "Risk Management","""
+      description: "Comprehensive risk assessment and mitigation tools"},
     {}
-'
-      title: 'Compliance Automation','
-      description: 'Automated regulatory compliance and reporting'}
-  ];'
-  const industries = [''
-    'Retail Banking',Investment Banking',Insurance',Fintech',Credit Unions',Wealth Management',Payment Processors',Regulatory Bodies'
+"
+      title: "Compliance Automation","
+      description: "Automated regulatory compliance and reporting"}
+  ];"
+  const industries = [""
+    "Retail Banking",Investment Banking",Insurance",Fintech",Credit Unions",Wealth Management",Payment Processors",Regulatory Bodies"
   ];
   return()
+
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
@@ -83,7 +84,7 @@ export default function FinancialSolutions() {}
           >""""
             <div className="flex justify-center mb-6">""""
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">""""
-                <DollarSign className="w-10 h-10 text-white" />
+                <DollarSign className="w-10 h-10 text-white"   />
               </div>"""
             </div>""""
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
@@ -106,7 +107,7 @@ export default function FinancialSolutions() {}
         </div>
       </section>
 """
-      {/* Features Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -147,7 +148,7 @@ export default function FinancialSolutions() {}
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -177,7 +178,7 @@ export default function FinancialSolutions() {}
               <div className="space-y-4">"""
                 {benefits.map((benefit, index) => (""""
                   <div key={index} className="flex items-center space-x-3">""""
-                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />""""
+                    <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0"   />""""
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
@@ -211,7 +212,7 @@ export default function FinancialSolutions() {}
         </div>
       </section>
 """
-      {/* Industries Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -240,7 +241,7 @@ export default function FinancialSolutions() {}
                 viewport={{ once: true }}""""
                 className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300""""
               >""""
-                <CreditCard className="w-8 h-8 text-cyan-500 mx-auto mb-3" />""""
+                <CreditCard className="w-8 h-8 text-cyan-500 mx-auto mb-3"   />""""
                 <h3 className="font-semibold">{industry}</h3>
               </motion.div>
             ))}
@@ -248,7 +249,7 @@ export default function FinancialSolutions() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -267,7 +268,7 @@ export default function FinancialSolutions() {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2">"""
                 <span>Get Started Today</span>""""
-                <ArrowRight className="w-5 h-5" />"""
+                <ArrowRight className="w-5 h-5"   />"""
               </button>""""
               <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Contact Sales;
@@ -277,15 +278,8 @@ export default function FinancialSolutions() {}
         </div>
       </section>
     </div>);
-}
-
-
 export { FinancialSolutions };
-
 export { FinancialSolutions };
-
 export { FinancialSolutions };
-
 export { FinancialSolutions };
-
 export { FinancialSolutions };

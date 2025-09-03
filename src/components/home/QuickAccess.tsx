@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from "react";
+import { motion  } from "framer-motion";
 export default function Page() {
 ,"
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },"
@@ -8,7 +8,6 @@ export default function Page() {
       transition: {
         duration: 0.5,;"
         ease: "easeOut"}}};
-
   const hoverVariants = {
   hover: {
       y: -8,      scale: 1.02,
@@ -17,13 +16,11 @@ export default function Page() {
         duration: 0.3,;"  ease: "easeOut";
       ;
 }}};
-
 };
     };
   };
-
   return (    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
-      {/* Background Elements */}"
+      {/* comment */}"
       <div className="absolute inset-0 opacity-30">"
         <div className="absolute top-20 left-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl"></div>"
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-zion-purple/10 rounded-full blur-3xl"></div>"
@@ -31,7 +28,7 @@ export default function Page() {
       </div>
 "
       <div className="container-responsive relative z-10">
-        {/* Header */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -87,8 +84,7 @@ export default function Page() {
             Find the perfect solution for your business needs with our organized service categories
           </motion.p>
         </div>
-
-        {/* Quick Links Grid */}"
+        {/* comment */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {quickLinks.map((link, index <motion.div
               key={link.title}
@@ -97,12 +93,12 @@ export default function Page() {
               onHoverStart={(: unknown setHoveredCategory(link.title)}
               onHoverEnd={: unknown setHoveredCategory(null)}
               onClick={: unknown setSelectedCategory(selectedCategory === link.title ? null : link.title)}
-              className={`group cursor-pointer ${link.bgColor} ${link.borderColor} border rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25`}
+              className={"group cursor-pointer ${link.bgColor} ${link.borderColor} border rounded-2xl p-6 backdrop-blur-sm transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25"}
             >
-              {/* Icon and Header */}"
+              {/* comment */}"
               <div className="flex items-start justify-between mb-4">
-                <motion.div`
-                  className={`p-3 rounded-xl bg-gradient-to-r ${link.color} bg-opacity-20`}
+                <motion.div"
+                  className={"p-3 rounded-xl bg-gradient-to-r ${link.color} bg-opacity-20"}
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >"
@@ -113,10 +109,9 @@ export default function Page() {
                   animate={{ rotate: hoveredCategory === link.title ? 90 : 0 }}
                   transition={{ duration: 0.3 }}
                 >"
-                  <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-zion-cyan transition-colors"  />                </motion.div>
+                  <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-zion-cyan transition-colors"   />                </motion.div>
               </div>
-
-              {/* Content */}"
+              {/* comment */}"
               <div className="mb-4">"
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                   {link.title}
@@ -125,8 +120,7 @@ export default function Page() {
                   {link.description}
                 </p>
               </div>
-
-              {/* Features Preview */}"
+              {/* comment */}"
               <div className="mb-4">"
                 <div className="grid grid-cols-2 gap-2">
                   {link.features.slice(0, 2).map(feature: unknown, idx: unknown (
@@ -159,8 +153,7 @@ export default function Page() {
                   ))}
                 </div>
               </div>
-
-              {/* Stats */}"
+              {/* comment */}"
               <div className="mb-4">"
                 <div className="flex items-center justify-between text-sm">
                   {Object.entries(link.stats).slice(0, 2).map([key: unknown, value]: unknown, idx: unknown (
@@ -193,25 +186,23 @@ export default function Page() {
                   ))}
                 </div>
               </div>
-
-              {/* CTA */}
+              {/* comment */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}"
                 className="mt-auto"
               >
                 <Link
-                  to={link.path}`
-                  className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}
+                  to={link.path}"
+                  className={"inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"}
                 >
                   Explore {link.title}"
-                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"  />                </Link>
+                  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"   />                </Link>
               </motion.div>
             </motion.div>
           ))}
         </div>
-
-        {/* Service Categories Overview */}
+        {/* comment */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -231,8 +222,8 @@ export default function Page() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}"
                 className="text-center group cursor-pointer"
-`
-                <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>"
+"
+                <div className={"w-16 h-16 bg-gradient-to-br ${category.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300"}>"
                   <span className="text-white font-bold text-lg">{category.count}</span>
                 </div>"
                 <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
@@ -242,16 +233,15 @@ export default function Page() {
             ))}
           </div>
         </motion.div>;
-
-        {/* CTA Section */}
+        {/* comment */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}"
           className="text-center mt-12"
 "
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;'"
-            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>"
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">;""
+            <h3 className="text-2xl font-bold text-white mb-4">Can"t Find What You"re Looking For?</h3>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
@@ -272,29 +262,26 @@ export default function Page() {
           </div>
         </motion.div>
 
-        {/* Enhanced CTA Section */}
+        {/* comment */}
         <motion.div
           initial = {
 
   { opacity: 0,
   y: 30 ;
-
 }}          whileInView = {
 
   { opacity: 1,
   y: 0 ;
-
 }}          transition = {
 
   { duration: 0.8,
   delay: 0.4 ;
-
 }}
           viewport={{ once: true }}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
-            <h3 className="text-2xl font-bold text-white mb-4">Can't Find What You're Looking For?</h3>            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4">Can"t Find What You"re Looking For?</h3>            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Our team of experts is ready to help you find the perfect solution or create a custom one for your specific needs
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -316,4 +303,4 @@ export default function Page() {
     </section>;
   )};
 ;export { QuickAccess };
-'"`
+"""

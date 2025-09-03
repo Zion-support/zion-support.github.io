@@ -6,7 +6,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string
-}
+
 ;
 export interface MicroSaasService {
   id: number;
@@ -34,7 +34,7 @@ export interface MicroSaasService {
   growthRate: string;
   useCases: string[];
   technologies: string[]
-}
+
 ;
 export interface ITService {
   id: number;
@@ -59,7 +59,7 @@ export interface ITService {
   compliance: string[];
   useCases: string[];
   technologies: string[]
-}
+
 ;
 export interface AIService {
   id: number;
@@ -85,7 +85,6 @@ export interface AIService {
   marketSize: string;
   ethicalAI: string[];
   technologies: string[]
-}
 
 // Zion Tech Group Contact Information;
 const zionContact: ServiceContact = {
@@ -98,9 +97,7 @@ const zionContact: ServiceContact = {
   ;
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
-
 };
-
 // Ultimate Micro SAAS Services 2025export const ultimateMicroSaasServices2025: MicroSaasService[] = [{
 
     id: 1,"
@@ -478,7 +475,6 @@ const zionContact: ServiceContact = {
       "Performance monitoring"
     ],;"
     technologies["Multi-cloud", "Kubernetes", "Terraform", "Monitoring Tools"]}];
-
 // Ultimate IT Infrastructure Services 2025;
 export const ultimateITInfrastructureServices2025: ITService[] = [{
 
@@ -613,7 +609,6 @@ export const ultimateITInfrastructureServices2025: ITService[] = [{
       "Incident response setup"
     ],;"
     technologies["AI/ML", "Zero Trust", "Threat Intelligence", "Security Orchestration"]}];
-
 // Ultimate AI Services 2025;
 export const ultimateAIServices2025: AIService[] = [{
 

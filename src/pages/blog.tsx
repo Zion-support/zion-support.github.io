@@ -46,5 +46,4 @@ const blog = () => {
             </div>
     </>
   );
-}
 export default blog

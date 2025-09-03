@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "@/components/SEO";
 import { 
-  Brain, 
-  Cpu, 
-  Settings, 
-  Zap, 
-  CheckCircle, 
+  Brain,
+  Cpu,
+  Settings,
+  Zap,
+  CheckCircle,
   ArrowRight,
   Phone,
   Mail,
@@ -25,8 +25,7 @@ import {
   Target,
   Cog,
   Monitor
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
   const features = [
     {
@@ -54,7 +53,6 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
       benefits: ["Real-time inventory tracking", "Automated reorder management", "Supplier performance analytics"]
     }
   ];
-
   const pricingPlans = [
     {
       name: "Small Factory",
@@ -98,7 +96,6 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
       popular: false
     }
   ];
-
   const useCases = [
     {
       title: "Automotive Manufacturing",
@@ -121,7 +118,6 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
       icon: Pill
     }
   ];
-
   const benefits = [
     {
       metric: "25%",
@@ -144,7 +140,6 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
       detail: "Average reduction in manufacturing costs"
     }
   ];
-
   const manufacturingProcesses = [
     "Production Planning",
     "Quality Control",
@@ -155,7 +150,6 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
     "Predictive Analytics",
     "Process Optimization"
   ];
-
   const industryStandards = [
     "ISO 9001",
     "ISO 14001",
@@ -166,17 +160,14 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
     "Smart Factory",
     "Digital Twin"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
-      <SEO 
-        title="AI Autonomous Manufacturing Optimization Platform - Zion Tech Group"
+      <SEO title="AI Autonomous Manufacturing Optimization Platform - Zion Tech Group"
         description="Revolutionary AI-powered manufacturing platform that autonomously optimizes production processes, quality control, and predictive maintenance for maximum efficiency."
         keywords="AI manufacturing, production optimization, quality control, predictive maintenance, smart factory, Industry 4.0"
-        canonical="https://ziontechgroup.com/services/ai-autonomous-manufacturing-optimization-platform"
-      />
+        canonical="https://ziontechgroup.com/services/ai-autonomous-manufacturing-optimization-platform"   />
 
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -186,42 +177,38 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
           >
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mr-4">
-                <Brain className="w-8 h-8 text-white" />
+                <Brain className="w-8 h-8 text-white"   />
               </div>
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center">
-                <Factory className="w-8 h-8 text-white" />
+                <Factory className="w-8 h-8 text-white"   />
               </div>
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous Manufacturing Optimization Platform
             </h1>
-            
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your manufacturing operations with the world's most advanced AI platform for autonomous production optimization, quality control, and predictive maintenance.
+              Transform your manufacturing operations with the world"s most advanced AI platform for autonomous production optimization, quality control, and predictive maintenance.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </a>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-slate-700 text-white font-semibold rounded-xl hover:bg-slate-600 transition-all duration-300"
               >
-                <Phone className="mr-2 w-5 h-5" />
+                <Phone className="mr-2 w-5 h-5"   />
                 +1 302 464 0950
               </a>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -257,8 +244,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -289,14 +275,12 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-slate-300 mb-6 leading-relaxed">{feature.description}</p>
-                
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0"   />
                       {benefit}
                     </li>
                   ))}
@@ -306,8 +290,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Manufacturing Processes Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -341,8 +324,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Industry Standards Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -376,8 +358,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -391,7 +372,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose the plan that fits your manufacturing facility's needs
+              Choose the plan that fits your manufacturing facility"s needs
             </p>
           </motion.div>
 
@@ -403,11 +384,11 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border-2 ${
+                className={"relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border-2 ${
                   plan.popular 
-                    ? 'border-orange-500 shadow-lg shadow-orange-500/25' 
-                    : 'border-slate-700/50'
-                }`}
+                    ? "border-orange-500 shadow-lg shadow-orange-500/25" 
+                    : "border-slate-700/50"
+                }"}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -420,29 +401,26 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-slate-400 mb-6">{plan.description}</p>
-                  
                   <div className="flex items-baseline justify-center">
                     <span className="text-5xl font-bold text-white">{plan.price}</span>
                     <span className="text-slate-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0"   />
                       {feature}
                     </li>
                   ))}
                 </ul>
-
                 <a
                   href="https://ziontechgroup.com/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                  className={"w-full block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
-                  }`}
+                      ? "bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700"
+                      : "bg-slate-700 text-white hover:bg-slate-600"
+                  }"}
                 >
                   Get Started
                 </a>
@@ -451,8 +429,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -483,7 +460,6 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
-                
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-slate-300 leading-relaxed">{useCase.description}</p>
               </motion.div>
@@ -491,8 +467,7 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-900/20 to-red-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -504,19 +479,17 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Manufacturing?
             </h2>
-            
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
               Join the future of manufacturing with our AI Autonomous Optimization Platform. 
               Get in touch today to schedule a personalized demo and see how we can improve your production efficiency.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
@@ -525,7 +498,6 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
                 Contact Sales
               </a>
             </div>
-            
             <div className="mt-8 text-slate-400">
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-orange-400 hover:text-orange-300">+1 302 464 0950</a></p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -536,5 +508,4 @@ const AIAutonomousManufacturingOptimizationPlatform: React.FC = () => {
     </div>
   );
 };
-
 export default AIAutonomousManufacturingOptimizationPlatform;

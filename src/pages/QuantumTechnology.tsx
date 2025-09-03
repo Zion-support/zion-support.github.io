@@ -46,5 +46,4 @@ const QuantumTechnology = () => {
             </div>
     </>
   );
-}
 export default QuantumTechnology

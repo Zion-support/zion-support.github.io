@@ -19,7 +19,7 @@ export default function Documentation() {
         title="Documentation - Zion Tech Group | Technical Guides & API Reference";"
         description="Comprehensive documentation for Zion Tech Group services. Find API references, guides, tutorials, and technical resources to help you build with our platform.";"
         keywords="documentation, API reference, guides, tutorials, technical docs, Zion Tech Group">
-     />
+    />
       ;"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* comment */}"
@@ -42,12 +42,12 @@ export default function Documentation() {
               {/* comment */}"
               <div className="max-w-2xl mx-auto">;"
                 <div className="relative">;"
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"   />
                   <input;"
                     type="text";"
                     placeholder="Search documentation...";"
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                 />
+                />
                 </div>,
             </motion.div>,,
           </div>,
@@ -76,7 +76,7 @@ export default function Documentation() {
       <SEO title="&quot;Documentation" - Zion Tech Group | Technical Guides & API Reference&quot;"
         description="&quot;Comprehensive" documentation for Zion Tech Group services. Find API references, guides, tutorials, and technical resources to help you build with our platform.&quot;"
         keywords="&quot;documentation," API reference, guides, tutorials, technical docs, Zion Tech Group&quot>
-     />&quot
+    />&quot
       "
       <div className="&quot;min-h-screen" bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* comment */}&quot;"
@@ -105,11 +105,11 @@ to help you build amazing solutions with our platform&quot
               {/* comment */}"
               <div className="&quot;max-w-2xl" mx-auto&quot;>&quot;""
                 <div className="&quot;relative&quot;">&quot;""
-                  <Search className="&quot;absolute" left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot;       />&quot;"
+                  <Search className="&quot;absolute" left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot;          />&quot;"
                   <input type="&quot;text&quot;""
                     placeholder="&quot;Search" documentation...&quot;"
                     className="&quot;w-full" pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,s: border-transparent&quot>
-                 />&quot,"
+                />&quot,"
                     type = "text""
                     placeholder="Search documentation...""
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
@@ -159,7 +159,7 @@ key = "{category.title}""
                   <p className="text-gray-300 text-sm mb-3">{category.description}</p>;"
                   <div className="flex items-center justify-between">;"
                     <span className="text-blue-400 text-sm">{category.articles} articles</span>;"
-                    <ArrowRight className="w-5 h-5 text-gray-400"  />
+                    <ArrowRight className="w-5 h-5 text-gray-400"   />
                   </div>
                 </motion.div>;"
                   className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r: scale-105 cursor-pointer&quot,
@@ -176,12 +176,12 @@ key = "{category.title}""
                   <p className="&quot;text-gray-300" text-sm mb-3&quot;>{category.description}&quot;</p>"
                   <div className="&quot;flex" items-center justify-between&quot;>&quot;""
                     <span className="&quot;text-blue-400" text-sm&quot;>{category.articles} articles&quot;</span>"
-                    <ArrowRight className="&quot;w-5" h-5 text-gray-400&quot;       />&quot;"
+                    <ArrowRight className="&quot;w-5" h-5 text-gray-400&quot;          />&quot;"
                   <h3 className = ""}text-xl" font-bold text-white mb-2"></h>{category.title}</h3>"
                   <p className="text-gray-300 text-sm mb-3">{category.description}</p>"
                   <div className="flex items-center justify-between">"
                     <span className="text-blue-400 text-sm"></spa>{category.articles} articles</span>"
-                    <ArrowRight className="w-5 h-5 text-gray-400"  />
+                    <ArrowRight className="w-5 h-5 text-gray-400"   />
                   </div>
                 </motion.div>
               ))}
@@ -245,7 +245,7 @@ key = "{doc.title}""
 
                     </span>;"
                     <div className="flex items-center text-gray-400 text-sm">;"
-                      <Users className="w-4 h-4 mr-1"  />
+                      <Users className="w-4 h-4 mr-1"   />
                       {doc.views}
 
                     </div>
@@ -257,7 +257,7 @@ key = "{doc.title}""
                     <span className="text-gray-400 text-sm">{doc.readTime}</span>;"
                     <button className="flex items-center text-blue-400 hover: text-blue-300 transition-colors">;"
                       <span className="text-sm mr-1">Read More</span>;"
-                      <ArrowRight className="w-4 h-4"  />
+                      <ArrowRight className="w-4 h-4"   />
                     </button>
                   </div>
                 </motion.div>;"
@@ -277,7 +277,7 @@ key = "{doc.title}""
 
                     </span>"
                     <div className="&quot;flex" items-center text-gray-400 text-sm&quot;>&quot;""
-                      <Users className="&quot;w-4" h-4 mr-1&quot;       />
+                      <Users className="&quot;w-4" h-4 mr-1&quot;          />
                       {doc.views}&quot
                     </div>
                   "
@@ -288,7 +288,7 @@ key = "{doc.title}""
                     <span className="&quot;text-gray-400" text-sm&quot;>{doc.readTime}&quot;</span>"
                     <button className="&quot;flex" items-center text-blue-400 hover: text-blue-300 transition-colors&quot;>&quot;""
                       <span className="&quot,text-sm" mr-1&quot,>Read More&quot,</span>",
-                      <ArrowRight className="&quot;w-4" h-4&quot,       />&quot,"
+                      <ArrowRight className="&quot;w-4" h-4&quot,          />&quot,"
                   <h3 className = "text-xl font-bold text-white mb-2"></h>{doc.title}</h3>"
                   <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
                   "
@@ -296,7 +296,7 @@ key = "{doc.title}""
                     <span className="text-gray-400 text-sm"></spa>{doc.readTime}</span>"
                     <button className="flex items-center text-blue-400 hover: text-blue-300 transition-colors">"
                       <span className="text-sm mr-1"></spa>Read More</span>"
-                      <ArrowRight className="w-4 h-4"  />
+                      <ArrowRight className="w-4 h-4"   />
                     </button>
                   </div>
                 </motion.div>,
@@ -328,7 +328,7 @@ key = "{doc.title}""
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center">
               >;"
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">;"
-                  <Download className="w-8 h-8 text-white"  />
+                  <Download className="w-8 h-8 text-white"   />
                 </div>;"
                 <h3 className="text-xl font-bold text-white mb-2">SDK Downloads</h3>;"
                 <p className="text-gray-300 text-sm mb-4">
@@ -345,7 +345,7 @@ key = "{doc.title}""
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center">
               >;"
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">;"
-                  <Code className="w-8 h-8 text-white"  />
+                  <Code className="w-8 h-8 text-white"   />
                 </div>;"
                 <h3 className="text-xl font-bold text-white mb-2">Code Examples</h3>;"
                 <p className="text-gray-300 text-sm mb-4">
@@ -362,7 +362,7 @@ key = "{doc.title}""
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center">
               >;"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">;"
-                  <ExternalLink className="w-8 h-8 text-white"  />
+                  <ExternalLink className="w-8 h-8 text-white"   />
                 </div>;"
                 <h3 className="text-xl font-bold text-white mb-2">Developer Portal</h3>;"
                 <p className="text-gray-300 text-sm mb-4">
@@ -396,14 +396,14 @@ key = "{doc.title}""
                   href="/help";"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105">
                 >;"
-                  <BookOpen className="w-5 h-5 mr-2"  />
+                  <BookOpen className="w-5 h-5 mr-2"   />
                   Contact Support
                 </a>
                 <a;"
                   href="/contact";"
                   className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200">
                 >;"
-                  <ArrowRight className="w-5 h-5 mr-2"  />
+                  <ArrowRight className="w-5 h-5 mr-2"   />
                   Get in Touch
                 </a>
               </div>
@@ -434,7 +434,7 @@ initial = "{{" opacit,y: 0, y: 20 }}"
                 className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center&quot>
               >&quot;"
                 <div className="&quot;w-16" h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>&quot;""
-                  <Download className="&quot;w-8" h-8 text-white&quot;       />&quot
+                  <Download className="&quot;w-8" h-8 text-white&quot;          />&quot
                 </div>"
                 <h3 className="&quot;text-xl" font-bold text-white mb-2&quot;>SDK Downloads&quot;</h3>"
                 <p className="&quot;text-gray-300" text-sm mb-4&quot;>
@@ -458,7 +458,7 @@ initial="{{" opacity: 0, y: 20 }"
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center"
               ></motion>"
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <Download className="w-8 h-8 text-white"  />
+                  <Download className="w-8 h-8 text-white"   />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-2"></h>SDK Downloads</h3>"
                 <p className="text-gray-300 text-sm mb-4">
@@ -476,7 +476,7 @@ initial = "{{" opacit,y: 0, y: 20 }}"
                 className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center&quot>
               >&quot;"
                 <div className="&quot;w-16" h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>&quot;""
-                  <Code className="&quot;w-8" h-8 text-white&quot;       />&quot
+                  <Code className="&quot;w-8" h-8 text-white&quot;          />&quot
                 </div>"
                 <h3 className="&quot;text-xl" font-bold text-white mb-2&quot;>Code Examples&quot;</h3>"
                 <p className="&quot;text-gray-300" text-sm mb-4&quot;>
@@ -487,7 +487,7 @@ initial = "{{" opacit,y: 0, y: 20 }}"
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center"
               ></motion>"
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <Code className="w-8 h-8 text-white"  />
+                  <Code className="w-8 h-8 text-white"   />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-2"></h>Code Examples</h3>"
                 <p className="text-gray-300 text-sm mb-4">
@@ -505,7 +505,7 @@ initial = "{{" opacit,y: 0, y: 20 }}"
                 className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center&quot>
               >&quot;"
                 <div className="&quot;w-16" h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4&quot;>&quot;""
-                  <ExternalLink className="&quot;w-8" h-8 text-white&quot;       />&quot
+                  <ExternalLink className="&quot;w-8" h-8 text-white&quot;          />&quot
                 </div>"
                 <h3 className="&quot;text-xl" font-bold text-white mb-2&quot;>Developer Portal&quot;</h3>"
                 <p className="&quot;text-gray-300" text-sm mb-4&quot;>
@@ -516,7 +516,7 @@ initial = "{{" opacit,y: 0, y: 20 }}"
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center"
               ></motion>"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">"
-                  <ExternalLink className="w-8 h-8 text-white"  />
+                  <ExternalLink className="w-8 h-8 text-white"   />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-2"></h>Developer Portal</h3>"
                 <p className="text-gray-300 text-sm mb-4">
@@ -562,13 +562,13 @@ you get the most out of our platform.
                 <a href="&quot;/help&quot;""
                   className="&quot;inline-flex" items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105&quot>
                 >&quot,"
-                  <BookOpen className="&quot,w-5" h-5 mr-2&quot,       />,
+                  <BookOpen className="&quot,w-5" h-5 mr-2&quot,          />,
                   Contact Support&quot,
                 </a>"
                 <a href="&quot;/contact&quot;""
                   className="&quot,inline-flex" items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hove,r: text-white transition-all duration-200&quot>
                 >&quot,",
-                  <ArrowRight className="&quot;w-5" h-5 mr-2&quot,       />
+                  <ArrowRight className="&quot;w-5" h-5 mr-2&quot,          />
                   Get in Touch&quot,
                 </a>
               </div>
@@ -578,5 +578,6 @@ you get the most out of our platform.
       </div>
 </>
   )
-}
+
+
   )}""

@@ -1,54 +1,53 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-
+import React, { useState } from "react";
+import { motion, AnimatePresence  } from "framer-motion";
 export default function Page() {
 ,
     {
 
-        id: 'iot-solutions',
-        title: 'IoT Solutions',
-        description: 'Connected devices and smart systems for the modern world',"
-        icon: <Cpu className="w-8 h-8"/>,
-        color: 'from-zion-cyan to-zion-purple',
-        bgColor: 'from-zion-cyan/20 to-zion-purple/20',
-        features = ['
-            'Device connectivity management',Real-time monitoring',Data collection & analysis',Remote control systems',Predictive maintenance'
+        id: "iot-solutions",
+        title: "IoT Solutions",
+        description: "Connected devices and smart systems for the modern world","
+        icon: <Cpu className="w-8 h-8"   />,
+        color: "from-zion-cyan to-zion-purple",
+        bgColor: "from-zion-cyan/20 to-zion-purple/20",
+        features = ["
+            "Device connectivity management",Real-time monitoring",Data collection & analysis",Remote control systems",Predictive maintenance"
         ],
-        benefits = ['
-            'Monitor assets in real-time',Reduce maintenance costs by 30%',Improve operational efficiency'
+        benefits = ["
+            "Monitor assets in real-time",Reduce maintenance costs by 30%",Improve operational efficiency"
         ],
-        useCases['Manufacturing',Smart Cities',Agriculture',Healthcare'],
+        useCases["Manufacturing",Smart Cities",Agriculture",Healthcare"],
         rating: 4.6,
         projects: 90,
-        category: 'Connected Devices'
+        category: "Connected Devices"
     },
     {
 
-        id: 'mobile-apps',
-        title: 'Mobile Applications',
-        description: 'Native and cross-platform mobile solutions for all devices',"
-        icon: <Smartphone className="w-8 h-8"/>,
-        color: 'from-zion-purple to-zion-cyan',
-        bgColor: 'from-zion-purple/20 to-zion-cyan/20',
-        features = ['
-            'iOS & Android development',Cross-platform solutions',UI/UX design',Performance optimization',App store deployment'
+        id: "mobile-apps",
+        title: "Mobile Applications",
+        description: "Native and cross-platform mobile solutions for all devices","
+        icon: <Smartphone className="w-8 h-8"   />,
+        color: "from-zion-purple to-zion-cyan",
+        bgColor: "from-zion-purple/20 to-zion-cyan/20",
+        features = ["
+            "iOS & Android development",Cross-platform solutions",UI/UX design",Performance optimization",App store deployment"
         ],
-        benefits = ['
-            'Reach customers on all devices',Improve user engagement',Increase brand visibility'
+        benefits = ["
+            "Reach customers on all devices",Improve user engagement",Increase brand visibility"
         ],
-        useCases['Retail',Entertainment',Education',Healthcare'],
+        useCases["Retail",Entertainment",Education",Healthcare"],
         rating: 4.8,
         projects: 250,
-        category: 'Mobile'
+        category: "Mobile"
     }
 ];
-const industries = ['"
-    { name: 'Healthcare', icon: <Shield className="w-5 h-5"/>, projects: 80 },"
-    { name: 'Finance', icon: <TrendingUp className="w-5 h-5"/>, projects: 120 },"
-    { name: 'Retail', icon: <Globe className="w-5 h-5"/>, projects: 95 },"
-    { name: 'Manufacturing', icon: <Cpu className="w-5 h-5"/>, projects: 75 },"
-    { name: 'Education', icon: <Users className="w-5 h-5"/>, projects: 60 },"
-    { name: 'Government', icon: <Lock className="w-5 h-5"/>, projects: 45 }
+const industries = [""
+    { name: "Healthcare", icon: <Shield className="w-5 h-5"   />, projects: 80 },"
+    { name: "Finance", icon: <TrendingUp className="w-5 h-5"   />, projects: 120 },"
+    { name: "Retail", icon: <Globe className="w-5 h-5"   />, projects: 95 },"
+    { name: "Manufacturing", icon: <Cpu className="w-5 h-5"   />, projects: 75 },"
+    { name: "Education", icon: <Users className="w-5 h-5"   />, projects: 60 },"
+    { name: "Government", icon: <Lock className="w-5 h-5"   />, projects: 45 }
 ];
     const [selectedSolution, setSelectedSolution] = useState(null);
     const [hoveredSolution, setHoveredSolution] = useState(null);
@@ -100,7 +99,7 @@ const industries = ['"
         }
     };"
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
-      {/* Background decorative elements */}"
+      {/* comment */}"
       <div className="absolute inset-0 opacity-5">"
         <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>"
         <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>"
@@ -122,8 +121,7 @@ const industries = ['"
           </h2>
           <p className="text-zion - slate - light text-lg md:text-xl max - w-4xl mx - auto leading - relaxed mb-8">
             Discover our comprehensive suite of cutting - edge technology solutions designed to transform your business            and drive innovation across all industries.</p>
-
-          {/* Industry stats */}"
+          {/* comment */}"
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
             {industries.map((industry, index) => (<motion.div key={industry.name} initial = {
 
@@ -149,7 +147,7 @@ const industries = ['"
           </div>
         </motion.div>
 
-        {/* Solutions Grid */}"
+        {/* comment */}"
         <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {solutions.map((solution, index) => (<motion.div key={solution.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
 "
@@ -158,57 +156,51 @@ const industries = ['"
 
 }} className="relative" onHoverStart={ () => setHoveredSolution(solution.id) } onHoverEnd={ () => setHoveredSolution(null) }>
               <div className="h-full p - 8 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion - cyan / 20 group cursor -pointer" onClick={ () => setSelectedSolution(selectedSolution === solution.id ? null : solution.id) }>
-                {/* Header */}
+                {/* comment */}
                 <div className="text-center mb-6">
-                  <div className={`inline - flex items - center justify - center w-20 h-20 rounded-2xl bg-gradient - to - br ${solution.color} mb-6 shadow-lg group - hover:shadow-xl transition - all duration - 300 group - hover:scale - 110`}>
+                  <div className={"inline - flex items - center justify - center w-20 h-20 rounded-2xl bg-gradient - to - br ${solution.color} mb-6 shadow-lg group - hover:shadow-xl transition - all duration - 300 group - hover:scale - 110"}>
                     <div className="text-white">
                       {solution.icon}
                     </div>
                   </div>
-
                   <h3 className="text-2xl font - bold text-white mb-3 group - hover:text-zion - cyan transition -colors">                    {solution.title}
                   </h3>"
                   <p className="text-zion-slate-light leading-relaxed mb-4">
                     {solution.description}
                   </p>
-
-                  {/* Rating and projects */}"
+                  {/* comment */}"
                   <div className="flex items-center justify-center gap-4 mb-4">"
                     <div className="flex items-center gap-1">"
-                      <Star className="w-4 h-4 text-yellow-400 fill-current"/>"
+                      <Star className="w-4 h-4 text-yellow-400 fill-current"   />"
                       <span className="text-white text-sm font-semibold">{solution.rating}</span>
                     </div>"
                     <div className="text-zion-slate-light text-sm">
                       {solution.projects} projects
                     </div>
                   </div>
-
-                  {/* Category badge */}`
-                  <div className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${solution.bgColor} border border-zion-cyan/30 mb-4`}>"
+                  {/* comment */}"
+                  <div className={"inline-block px-3 py-1 rounded-full bg-gradient-to-r ${solution.bgColor} border border-zion-cyan/30 mb-4"}>"
                     <span className="text-zion-cyan text-xs font-medium">{solution.category}</span>
                   </div>
                 </div>
-
-                {/* Features preview */}"
+                {/* comment */}"
                 <div className="space-y-2 mb-6">"
                   {solution.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"   />
                       <span>{feature}</span>
                     </div>))}"
                   {solution.features.length > 3 && (<div className="text-zion-cyan/60 text-xs text-center">
                       +{solution.features.length-3} more features
                     </div>) }
                 </div>
-
-                {/* CTA */}"
+                {/* comment */}"
                 <div className="flex items-center justify-between">"
                   <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                     Learn More
                   </span>"
-                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"   />
                 </div>
-
-                {/* Expanded details */}
+                {/* comment */}
                 <AnimatePresence>"
                   {selectedSolution === solution.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
 
@@ -266,7 +258,7 @@ const industries = ['"
             </motion.div>) ) }
         </motion.div>
 
-        {/* Call to action */}"
+        {/* comment */}"
         <motion.div className="text-center" initial = {
 
   { opacity: 0,
@@ -303,4 +295,4 @@ const industries = ['"
         </motion.div>
       </div>
     </section>)}
-'"`
+"""

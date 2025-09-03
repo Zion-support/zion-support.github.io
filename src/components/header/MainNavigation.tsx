@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { 
-  ChevronDown, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Users, 
-  HardDrive, 
-  TrendingUp, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
+  ChevronDown,
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  HardDrive,
+  TrendingUp,
+  Building2,
+  FileText,
+  HelpCircle,
   BarChart3,
   Rocket,
   Server,
@@ -29,39 +29,33 @@ import {
   Code,
   Activity,
   Target
-} from 'lucide-react';
-
+} from "lucide-react";
 interface MainNavigationProps {
   className?: string;
-}
-
-export function MainNavigation({ className = '' }: MainNavigationProps) {
+export function MainNavigation({ className = "" }: MainNavigationProps) {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-
   return (
-    <nav className={`flex items-center space-x-8 ${className}`}>
-      {/* Home */}
+    <nav className={"flex items-center space-x-8 ${className}"}>
+      {/* comment */}
       <Link 
         to="/" 
         className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
       >
         Home
       </Link>
-
-      {/* Services Dropdown */}
+      {/* comment */}
       <div className="relative group">
         <button
           onMouseEnter={() => setIsServicesOpen(true)}
           onMouseLeave={() => setIsServicesOpen(false)}
           className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
         >
-          <Zap className="w-4 h-4" />
+          <Zap className="w-4 h-4"   />
           <span>Services</span>
-          <ChevronDown className="w-3 h-3" />
+          <ChevronDown className="w-3 h-3"   />
         </button>
-        
         {isServicesOpen && (
           <div 
             onMouseEnter={() => setIsServicesOpen(true)} 
@@ -72,7 +66,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {
               <div className="grid grid-cols-3 gap-4">
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <Rocket className="w-4 h-4 mr-2" />
+                    <Rocket className="w-4 h-4 mr-2"   />
                     Micro SAAS
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -108,10 +102,9 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {
                     </li>
                   </ul>
                 </div>
-                
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <Shield className="w-4 h-4 mr-2" />
+                    <Shield className="w-4 h-4 mr-2"   />
                     IT Services
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -143,7 +136,7 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {
                     <li>
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <Brain className="w-4 h-4 mr-2" />
+                    <Brain className="w-4 h-4 mr-2"   />
                     AI Solutions
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -180,33 +173,30 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {
                   </ul>
                 </div>
               </div>
-              
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
                 <Link 
                   to="/services" 
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
                   View All Services
-                  <TrendingUp className="w-4 h-4 ml-2" />
+                  <TrendingUp className="w-4 h-4 ml-2"   />
                 </Link>
               </div>
             </div>
           </div>
         )}
       </div>
-
-      {/* Solutions Dropdown */}
+      {/* comment */}
       <div className="relative group">
         <button
           onMouseEnter={() => setIsSolutionsOpen(true)}
           onMouseLeave={() => setIsSolutionsOpen(false)}
           className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
         >
-          <Brain className="w-4 h-4" />
+          <Brain className="w-4 h-4"   />
           <span>Solutions</span>
-          <ChevronDown className="w-3 h-3" />
+          <ChevronDown className="w-3 h-3"   />
         </button>
-        
         {isSolutionsOpen && (
           <div 
             onMouseEnter={() => setIsSolutionsOpen(true)} 
@@ -215,10 +205,10 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {
           >
             <div className="p-4">
               <div className="grid grid-cols-2 gap-4">
-                {/* Talent */}
+                {/* comment */}
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <Users className="w-4 h-4 mr-2" />
+                    <Users className="w-4 h-4 mr-2"   />
                     Talent
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -244,10 +234,9 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {
                     </li>
                   </ul>
                 </div>
-                
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                    <HardDrive className="w-4 h-4 mr-2" />
+                    <HardDrive className="w-4 h-4 mr-2"   />
                     Resources
                   </h4>
                   <ul className="space-y-2 text-sm">
@@ -274,33 +263,30 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {
                   </ul>
                 </div>
               </div>
-              
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
                 <Link 
                   to="/request-quote" 
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
                   Get Custom Quote
-                  <TrendingUp className="w-4 h-4 ml-2" />
+                  <TrendingUp className="w-4 h-4 ml-2"   />
                 </Link>
               </div>
             </div>
           </div>
         )}
       </div>
-
-      {/* Company Dropdown */}
+      {/* comment */}
       <div className="relative group">
         <button
           onMouseEnter={() => setIsCompanyOpen(true)}
           onMouseLeave={() => setIsCompanyOpen(false)}
           className="flex items-center space-x-1 text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
         >
-          <Building2 className="w-4 h-4" />
+          <Building2 className="w-4 h-4"   />
           <span>Company</span>
-          <ChevronDown className="w-3 h-3" />
+          <ChevronDown className="w-3 h-3"   />
         </button>
-        
         {isCompanyOpen && (
           <div 
             onMouseEnter={() => setIsCompanyOpen(true)} 
@@ -349,24 +335,21 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {
           </div>
         )}
       </div>
-
-      {/* Resources */}
+      {/* comment */}
       <Link 
         to="/resources" 
         className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
       >
         Resources
       </Link>
-
-      {/* Blog */}
+      {/* comment */}
       <Link 
         to="/blog" 
         className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
       >
         Blog
       </Link>
-
-      {/* Contact */}
+      {/* comment */}
       <Link 
         to="/contact" 
         className="text-sm font-medium text-zion-slate-light hover:text-zion-cyan transition-colors"
@@ -375,4 +358,4 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {
       </Link>
     </nav>
   );
-} 
+export default Component

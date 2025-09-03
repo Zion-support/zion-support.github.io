@@ -46,5 +46,4 @@ const MicroSAASServices2028 = () => {
             </div>
     </>
   );
-}
 export default MicroSAASServices2028

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Users,
   Globe,
@@ -16,8 +16,7 @@ import {
   Target,
   Award,
   Cloud
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function Home() {
   const stats = [
     {
@@ -45,30 +44,22 @@ export default function Home() {
       description: "Reliable infrastructure"
     }
   ];
-
-      <HeroSection />
-      <QuickAccess />
-      <FeatureCTAs />
-      <FeatureHighlights />
-      <CategoriesSection />
-      <BenefitsSection />
-      <HowItWorksSection />
-      <FeaturedListingsSection />
-      <ServicesShowcase />
-      <NewsletterSection />
-      <ITServiceRequestHero />
-      <FloatingCTA />
+      <HeroSection  />
+      <QuickAccess  />
+      <FeatureCTAs  />
+      <FeatureHighlights  />
+      <CategoriesSection  />
+      <BenefitsSection  />
+      <HowItWorksSection  />
+      <FeaturedListingsSection  />
+      <ServicesShowcase  />
+      <NewsletterSection  />
+      <ITServiceRequestHero  />
+      <FloatingCTA  />
     </>
   );
-}
-
-
 export { Home };
-
 export { Home };
-
 export { Home };
-
 export { Home };
-
 export { Home };

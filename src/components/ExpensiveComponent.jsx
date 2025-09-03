@@ -12,8 +12,10 @@ import React from "react"; export default function ExpensiveComponent() { const 
     // Simulate expensive computation
     const timer = setTimeout(() => {
       const expensiveData = Array.from()
+
         { length: 10000 },
         (_, i) => Math.sqrt(i) * Math.PI * Math.random()
+
       );
       setData(expensiveData);
       setLoading(false);
@@ -23,6 +25,7 @@ import React from "react"; export default function ExpensiveComponent() { const 
   if(loading) {
 
     return ()
+
       <div className="text-center p-8">"
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>"
         <p className="text-zion-slate-light">Computing expensive data...</p>
@@ -31,116 +34,142 @@ import React from "react"; export default function ExpensiveComponent() { const 
 
 
 export { ExpensiveComponent };
-
 export { ExpensiveComponent };
-
 export { ExpensiveComponent };
-
 export { ExpensiveComponent };
-
 export { ExpensiveComponent };
-}
   })"
  export default function ExpensiveComponent () { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {"";"
   });,"})"
 ;,"})
-}
+
+
   })
-}
+
+
  export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;"
   });,"});"
 }"})
-}
+
+
   })""
   });,"})"
 export default function ExpensiveComponent() {}"})
-}
+
+
   })
-}
+
+
   const [data, setData] = useState([]);"
   });,"})"
   const [loading, setLoading] = useState(true);,"})
-}
+
+
   })"
   useEffect(() => {}});,"})"
     // comment
   })"
     const timer = setTimeout(() => {}});,"})"
       const expensiveData = Array.from();,"})
-}
+
+
   })
-}
+
+
         { length: 10000 },"
   });,"})"
         (_, i) => Math.sqrt(i) * Math.PI * Math.random();,"})
-}
+
+
   })
-}
+
+
       );"
   });,"})"
       setData(expensiveData);,"})
-}
+
+
   })
-}
+
+
       setLoading(false);"
   });,"});"
 }, 2000);,"})
-}
+
+
   })
-}
+
+
     return () => clearTimeout(timer);"
   });,"});"
 }, []);,"})
-}
+
+
   })"
   if(loading) {}});,"})"
     return();,"})
-}
+
+
   })"
       <div className="text-center" p-8">"";,"})
-}
+
+
   })"
         <div className="animate-spin" rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>"";,"})
-}
+
+
   })"
         <p className=text-zion-slate-light">Computing expensive data...</p>;,"})
-}
+
+
   })
-}
+
+
       </div>;"
   });,"})"
     </div>)}"})
-}
+
+
   })
-}
+
+
 ;"
   });,"})"
 export { ExpensiveComponent };,"})
-}
+
+
   })
-}
+
+
 ;"
   });,"})"
 export { ExpensiveComponent };,"})
-}
+
+
   })
-}
+
+
 ;"
   });,"})"
 export { ExpensiveComponent };,"})
-}
+
+
   })
-}
+
+
 ;"
   });,"})"
 export { ExpensiveComponent };,"})
-}
+
+
   })
-}
+
+
 ;"
   });,"})"
 export { ExpensiveComponent };,"})
-}
+
+
   })"
  export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {";import React, { useState, useEffect } from "react"
 export default function ExpensiveComponent() {}"
@@ -149,9 +178,11 @@ export default function ExpensiveComponent() {}"
 export default function ExpensiveComponent() ;{}"
  export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {"";import React, { useState, useEffect } from "react
   const [data, setData] = useState([])
-}
+
+
   const [loading, setLoading] = useState(true)
-}
+
+
   useEffect(() => {}
 
     // comment
@@ -159,14 +190,18 @@ export default function ExpensiveComponent() ;{}"
 
       const expensiveData = Array.from(){ length: 10000 },
         (_, i) => Math.sqrt(i) * Math.PI * Math.random())
-}
+
+
       const expensiveData = Array.from(){ length: 10000 }, (_, i) => Math.sqrt(i) * Math.PI * Math.random())
-}
+
+
       setData(expensiveData)
-}
+
+
       setLoading(false)}, 2000)"
     return () => clearTimeout(timer)}, [])
-}
+
+
   if(loading) {}
 
     return()"
@@ -180,7 +215,7 @@ const ExpensiveComponent = () => {
       <SEO title="ExpensiveComponent" - Zion Tech Group,"
 description="Professional" ExpensiveComponent services by Zion Tech Group,"
 keywords="expensivecomponent," technology, services>
-     />"
+    />"
       <div className="container" mx-auto px-4 py-20>"
         <div className="text-center">"
           <h1 className="text-4xl" font-bold text-white mb-6>ExpensiveComponent</h1>"

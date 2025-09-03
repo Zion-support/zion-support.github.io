@@ -2,11 +2,12 @@ import React from "react"
 """;,"});,"})"
 """;,"});,"})","});,"})","});,"})","});,"})","});,"})"
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"});,"})
-}
+
+
     return ("
     <div className="text-center py-16">"""";,"});,"})"
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">"""";,"});,"})"
-        <MessageSquare className="h-10 w-10 text-zion-purple"  />""";,"});,"})"
+        <MessageSquare className="h-10 w-10 text-zion-purple"   />""";,"});,"})"
       </div>"""";,"});,"})"
       <h2 className="text-xl font-medium mb-2">{title}</h2>"""";,"});,"})"
       <p className="text-muted-foreground mb-6">{subtitle}</p>;,"});,"})"
@@ -33,7 +34,8 @@ export { EmptyState };,"});,"})"
 export { EmptyState };,"});,"})"
 ;,"});,"})"
 export { EmptyState };,"});,"})
-}
+
+
 const EmptyState = ({title, subtitle, cta, href, hasSession }) => {}"
   return()"
 const EmptyState = memo(({ title, subtitle, cta, href, hasSession }) => {}"
@@ -52,7 +54,7 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"
   return();"
     <div className="text-center py-16">"";"
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">"";"
-        <MessageSquare className="h - 10 w-10 text-zion-purple"  />"",
+        <MessageSquare className="h - 10 w-10 text-zion-purple"   />"",
       </div>"";"
       <h2 className="text-xl font-medium mb-2">{title}</h2>"";"
       <p className="text-muted-foreground mb-6">{subtitle}</p>
@@ -77,13 +79,13 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"
   return()"
     <;<div className="&apos;text-center" py-16&apos;>"&apos;&apos,&apos;&apos;"
       <div className="&apos;bg-zion-blue/30" p-6 rounded-full mb-6 inline-flex&apos;>"&apos;&apos,&apos;&apos;"
-        <MessageSquare className="&apos;h-10" w-10 text-zion-purple&apos;       />&apos;&apos,&apos;&apos,
+        <MessageSquare className="&apos;h-10" w-10 text-zion-purple&apos;          />&apos;&apos,&apos;&apos,
       </div>&apos;&apos,&apos;&apos,"
       <h2 className="&apos;text-xl" font-medium mb-2&apos;>{title}&apos;</h2>&apos;&apos,&apos;&apos,"
       <p className="&apos;text-muted-foreground" mb-6&quot;>{subtitle}&quot;</p>"
     <div className = "text-center py-16">""""
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">""""
-        <MessageSquare className="h-10 w-10 text-zion-purple"  />"""""
+        <MessageSquare className="h-10 w-10 text-zion-purple"   />"""""
       </div>""""
       <h2 className="text-xl font-medium mb-2">{title}</h2>""""
       <p className="text-muted-foreground mb-6">{subtitle}</p>""
@@ -106,14 +108,8 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}"
       </TooltipProvider>
     </div>)};
 export default EmptyState;
-}
-
 export { EmptyState };
-
 export { EmptyState };
-
 export { EmptyState };
-
 export { EmptyState };
-
 export { EmptyState };

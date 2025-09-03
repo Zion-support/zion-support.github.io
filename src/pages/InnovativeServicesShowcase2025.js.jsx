@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import EnhancedComprehensiveServicesShowcase from "../components/EnhancedComprehensiveServicesShowcase.jsx";
 const InnovativeServicesShowcase2025 = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -17,7 +17,7 @@ const InnovativeServicesShowcase2025 = () => {
             digital age;
           </p>
 """
-          {/* Key Statistics */}""""
+          {/* comment */}""""
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">""""
               <div className="text-3xl font-bold text-blue-400 mb-2">15+</div>""""
@@ -39,7 +39,7 @@ const InnovativeServicesShowcase2025 = () => {
             </div>
           </div>
 """
-          {/* CTA Buttons */}""""
+          {/* comment */}""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
             <a""""
               href="#services""""
@@ -63,7 +63,7 @@ const InnovativeServicesShowcase2025 = () => {
         </div>
       </section>
 """
-      {/* Why Choose Zion Tech Group */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -146,7 +146,7 @@ const InnovativeServicesShowcase2025 = () => {
         </div>
       </section>
 """
-      {/* Service Categories Overview */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -219,7 +219,7 @@ const InnovativeServicesShowcase2025 = () => {
         </div>
       </section>
 """
-      {/* Market Position & Competitive Advantage */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -296,19 +296,19 @@ const InnovativeServicesShowcase2025 = () => {
         </div>
       </section>
 """
-      {/* Services Showcase */}""""
+      {/* comment */}""""
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
-        <EnhancedComprehensiveServicesShowcase />
+        <EnhancedComprehensiveServicesShowcase  />
       </section>
 """
-      {/* Contact & Get Started */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?"""
           </h2>""""
-          <p className="text-xl text-gray-300 mb-8">'
-            Let's discuss how our innovative services can help drive your;
+          <p className="text-xl text-gray-300 mb-8">"
+            Let"s discuss how our innovative services can help drive your;
             digital transformation and competitive advantage;
           </p>"""
 """"
@@ -353,7 +353,7 @@ const InnovativeServicesShowcase2025 = () => {
               </p>""""
               <p className="text-blue-400 text-sm">
                 364 E Main St STE 1008;
-                <br />
+                <br  />
                 Middletown DE 19709;
               </p>
             </div>
@@ -377,14 +377,8 @@ const InnovativeServicesShowcase2025 = () => {
       </section>
     </div>)};
 export default InnovativeServicesShowcase2025;
-
-
 export { InnovativeServicesShowcase2025 };
-
 export { InnovativeServicesShowcase2025 };
-
 export { InnovativeServicesShowcase2025 };
-
 export { InnovativeServicesShowcase2025 };
-
 export { InnovativeServicesShowcase2025 };

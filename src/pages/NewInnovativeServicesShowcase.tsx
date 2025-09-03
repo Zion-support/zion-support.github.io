@@ -46,5 +46,4 @@ const NewInnovativeServicesShowcase = () => {
             </div>
     </>
   );
-}
 export default NewInnovativeServicesShowcase

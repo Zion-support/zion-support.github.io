@@ -25,7 +25,8 @@ class: ErrorBoundary extends Component<Props, State> {
       }"
     // comment
     this.props.onError?.(error, errorInfo)
-}
+
+
     // comment
     if: (process.env.NODE_ENV = == "production") {",
       this.logErrorToService(error, errorInfo)}
@@ -118,17 +119,16 @@ class ErrorBoundary extends Component<Props, State> {    this.state = { hasError
 if (process.env.NODE_ENV = == "development") {";
     // Log error to console in development"";
     if (process.env.NODE_ENV === "development") {"";,
-}
 ;
     // Call custom error handler if provided,;
     // Send error to monitoring service in production";
     // Send error to monitoring service in production"";
     if (process.env.NODE_ENV === "production") {;
-
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {,,
       error,
       errorInfo})
-}
+
+
     // comment
 if (process.env.NODE_ENV = == "development") {"
     // comment
@@ -163,7 +163,8 @@ componentStac,
 url: window.location.href,
         timestamp: Date.now(),
         userAgent: navigator.userAgent})
-}
+
+
 }).catch(console.error)}
 
   private handleRetry = () => {
@@ -199,7 +200,7 @@ return (""
                 stroke="currentColor""
                 viewBox="0 0 24 24""
                 <path strokeLinecap="round""
-                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"  />"
+                  d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"   />"
                 className="w-6 h-6 text-red-600""
                 fill="none""
                 stroke="currentColor""

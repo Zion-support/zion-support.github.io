@@ -1,20 +1,19 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { TrendingDown, 
-  Brain, 
-  BarChart3, 
-  Shield, 
-  Zap, 
-  Users, 
-  Target, 
+import React from "react.ts";
+import { SEO  } from "@/components/SEO";
+import { motion  } from "framer-motion.ts";
+import { TrendingDown,
+  Brain,
+  BarChart3,
+  Shield,
+  Zap,
+  Users,
+  Target,
   CheckCircle,
   ArrowRight,
   Star,
   Clock,
   DollarSign
- } from 'lucide-react';
-
+ } from "lucide-react";
 const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -38,7 +37,6 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
       description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies.";
     };
   ];
-
   const benefits = [;
     "Reduce customer churn by 40-60%",;
     "Increase customer lifetime value by 35%",;
@@ -46,7 +44,6 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
     "Improve customer satisfaction scores by 25%",;
     "Automate 80% of retention workflows";
   ];
-
   const integrations = [;
     "Salesforce, HubSpot, Pipedrive",;
     "Stripe, PayPal, Square",;
@@ -54,7 +51,6 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
     "Google Analytics, Mixpanel, Amplitude",;
     "Slack, Microsoft Teams, Email";
   ];
-
   const pricing = [
     {
       plan: "Starter",
@@ -79,17 +75,14 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
       popular: false;
     };
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO 
-        title="AI Customer Churn Prediction Platform - Zion Tech Group"
+      <SEO title="AI Customer Churn Prediction Platform - Zion Tech Group"
         description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform."
         keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success"
-        canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"
-      />
+        canonical="https://ziontechgroup.com/services/ai-customer-churn-prediction"   />
 
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-slate-800 to-blue-900/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -118,7 +111,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
             className="mb-8"
 
             <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">
-              <TrendingDown className="w-4 h-4 mr-2" />
+              <TrendingDown className="w-4 h-4 mr-2"   />
               Churn Prevention Platform
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
@@ -129,23 +122,22 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="flex items-center text-cyan-400 font-semibold">
-                <Star className="w-5 h-5 mr-2 fill-current" />
+                <Star className="w-5 h-5 mr-2 fill-current"   />
                 4.9/5 Rating
               </div>
               <div className="flex items-center text-green-400 font-semibold">
-                <CheckCircle className="w-5 h-5 mr-2" />
+                <CheckCircle className="w-5 h-5 mr-2"   />
                 95%+ Accuracy
               </div>
               <div className="flex items-center text-blue-400 font-semibold">
-                <Clock className="w-5 h-5 mr-2" />
+                <Clock className="w-5 h-5 mr-2"   />
                 Real-time Updates
               </div>
             </div>
           </motion.div>
         </div>
       </section>;
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <motion.div
@@ -228,8 +220,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-900">;
         <div className="container mx-auto px-4">
           <motion.div
@@ -303,7 +294,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center"
 
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-6 h-6 text-white" />
+                  <CheckCircle className="w-6 h-6 text-white"   />
                 </div>
                 <p className="text-slate-300 font-medium">{benefit}</p>
               </motion.div>;
@@ -311,8 +302,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
-      {/* Integrations Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-800/50">;
         <div className="container mx-auto px-4">
           <motion.div
@@ -391,8 +381,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-900">;
         <div className="container mx-auto px-4">
           <motion.div
@@ -463,11 +452,11 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
 
 }}
-                className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
+                className={"relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
                   plan.popular
-                    ? 'border-red-500 shadow-lg shadow-red-500/20'
-                    : 'border-slate-700'
-                }`}
+                    ? "border-red-500 shadow-lg shadow-red-500/20"
+                    : "border-slate-700"
+                }"}
 
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -484,20 +473,18 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
                     <span className="text-slate-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />
                       {feature}
                     </li>
                   ))}
                 </ul>
-
                 <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600'
-                    : 'bg-slate-700 text-white hover:bg-slate-600'
+                    ? "bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600"
+                    : "bg-slate-700 text-white hover:bg-slate-600"
                 }">
                   Get Started
                 </button>
@@ -506,8 +493,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -541,12 +527,11 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
               Join 500+ companies that have reduced churn and increased customer lifetime value with our AI platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <a href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
 
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"   />
               </a>
               <a
                 href="/contact"
@@ -558,25 +543,24 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
-
-      {/* Contact Info */}
+      {/* comment */}
       <section className="py-16 bg-slate-900">;
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
             <div className="grid md:grid-cols-3 gap-6 text-slate-300">
               <div>
-                <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
+                <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2"   />
                 <p className="font-semibold">Starting at $299/month</p>
                 <p className="text-sm">No setup fees, cancel time</p>
               </div>
               <div>
-                <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />
+                <Clock className="w-6 h-6 text-green-400 mx-auto mb-2"   />
                 <p className="font-semibold">Setup in 24 hours</p>
                 <p className="text-sm">Quick integration with your tools</p>
               </div>
               <div>
-                <Shield className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+                <Shield className="w-6 h-6 text-blue-400 mx-auto mb-2"   />
                 <p className="font-semibold">Enterprise Security</p>
                 <p className="text-sm">SOC 2, GDPR, HIPAA compliant</p>
               </div>
@@ -595,15 +579,10 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
     </div>;
   );
 };
-
 export default AICustomerChurnPrediction;}}}
 
 export { AICustomerChurnPrediction };
-
 export { AICustomerChurnPrediction };
-
 export { AICustomerChurnPrediction };
-
 export { AICustomerChurnPrediction };
-
 export { AICustomerChurnPrediction };

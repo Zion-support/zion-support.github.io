@@ -1,3 +1,4 @@
+import React from "react"
 import { useState } from "react";
 import { useLocalStorage } from "@/hooks";
 import { Input } from "@/components/ui/input";
@@ -15,24 +16,24 @@ export function ApiPlayground({ method, path, params = [] }) {
 """
 """"
         const baseUrl = process.env.NEXT_PUBLIC_API_URL || "";
-        let url = `${baseUrl}${path}`;"""
+        let url = "${baseUrl}${path}";"""
         const searchParams = new URLSearchParams();""""
         if (method === "GET" || method === "DELETE") {}
             params.forEach((p) => {}
                 const val = paramValues[p.name];
-                if(val)`
-                    searchParams.append(p.name, val)});``
-            const query = searchParams.toString();```
-            if (query)````
-                url += `?${query}`}
+                if(val)"
+                    searchParams.append(p.name, val)});""
+            const query = searchParams.toString();"""
+            if (query)""""
+                url += "?${query}"}
         const options = {}
   method,
   headers: {}
-`
-``
-                Authorization: `Bearer ${apiKey`
-`"`
-}`,""""
+"
+""
+                Authorization: "Bearer ${apiKey"
+"""
+}",""""
                 "Content-Type": "application/json"}};""""
         if (method !== "GET" && method !== "DELETE") {}
             try {}
@@ -52,18 +53,19 @@ export function ApiPlayground({ method, path, params = [] }) {
             setLoading(false)}"""
     };""""
     return (<div className="space-y-4">""""
-      <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>""""
+      <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key" />""""
       {params.map((p) => (<Input key={p.name} value={paramValues[p.name] || ""} onChange = {}
   (e) => handleParamChange(p.name,
   e.target.value)
+
 """
 } placeholder={p.name}/>))}""""
-      {method !== "GET" && method !== "DELETE" && (<Textarea value={body} onChange={(e) => setBody(e.target.value)} className="font-mono"/>)}"""
+      {method !== "GET" && method !== "DELETE" && (<Textarea value={body} onChange={(e) => setBody(e.target.value)} className="font-mono" />)}"""
       <Button onClick={sendRequest} disabled={loading}>""""
         {loading ? "Sending..." : "Send Request"}"""
       </Button>""""
-      {response && <CodeBlock code={response} language="json"/>}
+      {response && <CodeBlock code={response} language="json"   />}
     </div>)};
 export { ApiPlayground };
-export default ApiPlayground;"`
-export default ApiPlayground;"`"`
+export default ApiPlayground;""
+export default ApiPlayground;"""`

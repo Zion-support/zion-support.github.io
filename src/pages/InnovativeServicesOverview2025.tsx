@@ -1,56 +1,53 @@
-import React from 'react';'
-export default InnovativeServicesOverview2025;''
-import { motion  } from 'framer-motion';
-
+import React from "react";"
+export default InnovativeServicesOverview2025;""
+import { motion  } from "framer-motion";
 export default function Page(...args: any[]): any {): unknown {): unknown {}
 ,
     {}
-      id: 'ai - healthcare - analytics',
-      title: 'AI Healthcare Analytics Platform',
+      id: "ai - healthcare - analytics",
+      title: "AI Healthcare Analytics Platform",
       icon: Heart,
-      color: 'from - pink - 500 to - red - 600',
-      description: 'Transform healthcare with AI - powered patient analytics',
-      price: 'From $2,800 / month',
-      features: ['Patient analytics',
-        'Clinical decision support',
-        'HIPAA compliance'
+      color: "from - pink - 500 to - red - 600",
+      description: "Transform healthcare with AI - powered patient analytics",
+      price: "From $2,800 / month",
+      features: ["Patient analytics",
+        "Clinical decision support",
+        "HIPAA compliance"
       ],
-      path: '/services / ai - healthcare - analytics - platform',
-      benefits: ['Improve outcomes by 35%',
-        'Reduce readmissions by 40%',
-        'Lower costs by 30%'
+      path: "/services / ai - healthcare - analytics - platform",
+      benefits: ["Improve outcomes by 35%",
+        "Reduce readmissions by 40%",
+        "Lower costs by 30%"
       ]
     }
   ];
-
   const additionalServices: unknown = [{}
-      name: 'AI - Powered SEO Platform',
-      description: 'Advanced SEO optimization with machine learning',
-      price: '$1,500 / month',
-      path: '/services / ai - powered - seo'
+      name: "AI - Powered SEO Platform",
+      description: "Advanced SEO optimization with machine learning",
+      price: "$1,500 / month",
+      path: "/services / ai - powered - seo"
     },
     {}
-      name: 'AI Interview Assessment',
-      description: 'Intelligent candidate evaluation and screening',
-      price: '$800 / month',
-      path: '/services / interview-assessment - ai'
+      name: "AI Interview Assessment",
+      description: "Intelligent candidate evaluation and screening",
+      price: "$800 / month",
+      path: "/services / interview-assessment - ai"
     },
     {}
-      name: 'Zero Trust Network Access',
-      description: 'Enterprise - grade security with zero trust principles',
-      price: '$2,000 / month',
-      path: '/services / zero - trust - network - access'
+      name: "Zero Trust Network Access",
+      description: "Enterprise - grade security with zero trust principles",
+      price: "$2,000 / month",
+      path: "/services / zero - trust - network - access"
     },
     {}
-      name: 'AI Workflow Orchestrator',
-      description: 'Intelligent business process automation',
-      price: '$1,800 / month',
-      path: '/services / ai - workflow-orchestrator'
+      name: "AI Workflow Orchestrator",
+      description: "Intelligent business process automation",
+      price: "$1,800 / month",
+      path: "/services / ai - workflow-orchestrator"
     }
   ];
-
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -60,12 +57,12 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
             className="text-center""""
           >""""
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">""""
-              <Sparkles className="w-4 h-4 mr-2"  />              Innovative Services 2025"""
+              <Sparkles className="w-4 h-4 mr-2"   />              Innovative Services 2025"""
             </div>""""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"""
               Cutting-Edge AI Solutions for""""
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">'
-                {' '}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"
+                {" "}
                 Modern Businesses;
               </span>"""
             </h1>""""
@@ -80,21 +77,21 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
                 whileTap={{ scale: 0.95 }}""""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200""""
               >""""
-                <ArrowRight className="w-5 h-5 mr-2"  />                Explore Services;
+                <ArrowRight className="w-5 h-5 mr-2"   />                Explore Services;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 }}"""
                 whileTap={{ scale: 0.95 }}""""
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200""""
               >""""
-                <Phone className="w-5 h-5 mr-2"  />                Contact Sales;
+                <Phone className="w-5 h-5 mr-2"   />                Contact Sales;
               </motion.button>
             </div>
           </motion.div>
         </div>
       </section>
 """
-      {/* Featured Services */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -120,7 +117,7 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-8 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300"""
               >
                 <div;
-                  className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6`}"""
+                  className={"w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6"}"""
                 >""""
                   <service.icon className="w-8 h-8 text-white" />"""
                 </div>""""
@@ -148,7 +145,7 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
                         key={featureIndex}""""
                         className="flex items-center space-x-2""""
                       >""""
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"  />"                        <span className="text-zion-slate-light">{feature}</span>
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0"   />"                        <span className="text-zion-slate-light">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -164,24 +161,23 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
                         key={benefitIndex}""""
                         className="flex items-center space-x-2""""
                       >""""
-                        <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0"  />"                        <span className="text-zion-slate-light">{benefit}</span>
+                        <TrendingUp className="w-4 h-4 text-blue-400 flex-shrink-0"   />"                        <span className="text-zion-slate-light">{benefit}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-
                 <a"""
                   href={service.path}""""
                   className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200""""
                 >""""
-                  <ArrowRight className="w-5 h-5 mr-2"  />                  Learn More;
+                  <ArrowRight className="w-5 h-5 mr-2"   />                  Learn More;
                 </a>
               </motion.div>) ) }
           </div>
         </div>
       </section>
 """
-      {/* Additional Services */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -226,7 +222,7 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
         </div>
       </section>
 """
-      {/* Contact Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -237,24 +233,24 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?"""
             </h2>""""
-            <p className="text-xl text-zion-slate-light mb-8">'
-              Let's discuss how our AI services can drive your business forward"""
+            <p className="text-xl text-zion-slate-light mb-8">"
+              Let"s discuss how our AI services can drive your business forward"""
             </p>""""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">""""
               <div className="flex items-center justify-center space-x-3">""""
-                <Phone className="w-6 h-6 text-blue-400"  />"                <span className="text-zion-slate-light">+1 302 464 0950</span>"""
+                <Phone className="w-6 h-6 text-blue-400"   />"                <span className="text-zion-slate-light">+1 302 464 0950</span>"""
               </div>""""
               <div className="flex items-center justify-center space-x-3">""""
-                <Mail className="w-6 h-6 text-blue-400"  />""""
+                <Mail className="w-6 h-6 text-blue-400"   />""""
                 <span className="text-zion-slate-light">
                   kleber@ziontechgroup.com;
                 </span>"""
               </div>""""
               <div className="flex items-center justify-center space-x-3">""""
-                <MapPin className="w-6 h-6 text-blue-400"  />""""
+                <MapPin className="w-6 h-6 text-blue-400"   />""""
                 <span className="text-zion-slate-light">
                   364 E Main St STE 1008;
-                  <br />
+                  <br  />
                   Middletown DE 19709;
                 </span>
               </div>"""
@@ -263,13 +259,13 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
                 href="https://ziontechgroup.com/contact""""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200""""
               >""""
-                <ArrowRight className="w-5 h-5 mr-2"  />                Contact Us;
+                <ArrowRight className="w-5 h-5 mr-2"   />                Contact Us;
               </a>"""
               <a""""
                 href="https://ziontechgroup.com""""
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200""""
               >""""
-                <Globe className="w-5 h-5 mr-2"  />                Visit Website;
+                <Globe className="w-5 h-5 mr-2"   />                Visit Website;
               </a>
             </div>
           </motion.div>
@@ -278,15 +274,9 @@ export default function Page(...args: any[]): any {): unknown {): unknown {}
     </div>
   );
 };
-
 export default InnovativeServicesOverview2025;
-
 export { InnovativeServicesOverview2025 };
-
 export { InnovativeServicesOverview2025 };
-
 export { InnovativeServicesOverview2025 };
-
 export { InnovativeServicesOverview2025 };
-
 export { Page };

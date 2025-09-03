@@ -1,26 +1,22 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, ChevronDown } from 'lucide-react';
-
+import React, { useState } from "react";
+import Link from "next/link";
+import { Menu, X, ChevronDown } from "lucide-react";
 const ModernHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
   return (
     <header className="bg-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
+          {/* comment */}
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold text-gray-900">
               Zion Tech Group
             </Link>
           </div>
-
-          {/* Desktop Navigation */}
+          {/* comment */}
           <nav className="hidden md:flex space-x-8">
             <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">
               Home
@@ -38,8 +34,7 @@ const ModernHeader: React.FC = () => {
               Contact
             </Link>
           </nav>
-
-          {/* CTA Button */}
+          {/* comment */}
           <div className="hidden md:flex">
             <Link 
               href="/contact" 
@@ -48,19 +43,17 @@ const ModernHeader: React.FC = () => {
               Get Started
             </Link>
           </div>
-
-          {/* Mobile menu button */}
+          {/* comment */}
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 focus:outline-none"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}
             </button>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
+        {/* comment */}
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
@@ -113,5 +106,4 @@ const ModernHeader: React.FC = () => {
     </header>
   );
 };
-
 export default ModernHeader;

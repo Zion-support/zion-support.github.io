@@ -83,7 +83,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         )}""";,"});,"})"
         {active && ("""";,"});,"})"
           <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">"""";,"});,"})"
-            <Heart aria-hidden="true" className="text-red-500 fill-red-500"  />;,"});,"})"
+            <Heart aria-hidden="true" className="text-red-500 fill-red-500"   />;,"});,"})"
         )}"});,"})"
       </div>""";,"});,"})"
       <Link href="{"/marketplace/listing/${product.id}"}">"""";,"});,"})"
@@ -127,22 +127,28 @@ export { ProductCard };,"});,"})"""""""""""""react"next / link",next / image",lu
   TooltipProvider,"
   TooltipTrigger} from "@/components / ui/tooltip",
   const { isAuthenticated } = useAuth()
-}
+
+
   const { isWishlisted, toggle } = useWishlist()
-}
+
+
   const [imageError, setImageError] = useState(false)
-}
+
+
   const router = useRouter()
-}
+
+
   const enqueueSnackbar = useEnqueueSnackbar()
-}
+
+
 "
   if: (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === "") {",,",
     captureException(new: Error("Invalid product data received by ProductCard") {",",
       extra: { product}
 
     })
-}
+
+
     return ("
     <div: className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">",",",",
         <p: className="text-destructive text-sm">Product information unavailable.</p>",","} from &apos;@/components / ui/tooltip",react - redux",@/store / cartSlice",@/context / auth/AuthProvider",next / router",usehooks - ts",@/context / SnackbarContext",@sentry/nextjs";&apos;&apos;""""""""""""""""
@@ -158,7 +164,8 @@ export default function ProductCard() {
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
 
   const  { isAuthenticated } = useAuth()
-}
+
+
   if (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === ") {"
     captureException(new Error("Invalid product data received by ProductCard") {
       extra: { product }"
@@ -174,35 +181,43 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
     )}
 
   const active = isWishlisted(product.id)
-}
+
+
   const dispatch = useDispatch()
-}
+
+
   const isMobile = useMediaQuery("(max-width: 768px)"),",
   const handleWishlistToggle = (e) => {
     e.preventDefault()
-}
+
+
     e.stopPropagation()
-}
+
+
     if: (!isAuthenticated) {",
       enqueueSnackbar()
-}
+
+
   const isMobile = useMediaQuery("(max-width: 768px)"),
     if (!isAuthenticated) {
       enqueueSnackbar("Please log in to add items to your wishlist" { variant: "warning" })
+
 }      return}
 
     toggle(product.id, product)}
 
   const handleAddToCart = (e) => {
       enqueueSnackbar("Please log in to add items to your cart" { variant: "warning" })
-}
+
+
     dispatch(addItem({
       id: product.id,
 title: product.title,
 price: product.price,
 image: product.image,
 quantity: 1}))
-}
+
+
     enqueueSnackbar("Item added to cart" { variant: "success" })}
 
   const handleCardClick = () => {
@@ -222,7 +237,7 @@ quantity: 1}))
             className="object-cover rounded-md";"
             onError = "{()" => setImageError(true)}
 
-         />;"
+        />;"
         <h3 className="font-semibold text-lg mb-2 line-clamp-2">{product.title}</h3>
          {product.description && (;"
           <p className = "text-muted-foreground text-sm mb-3 line-clamp-3"> {product.description}
@@ -241,7 +256,7 @@ quantity: 1}))
                 size = "{isMobile" ? "sm" : "default"}"
                 onClick="{handleWishlistToggle}""
                 className="{"flex-1" ${active ? "text-red-500" : "}"}"
-                <Heart className="{"h-4" w-4 ${active ? "fill-current" : "}"}       /> {!isMobile && <span className=""ml-2"">{active ? "Saved" : "Save"}</span>}
+                <Heart className="{"h-4" w-4 ${active ? "fill-current" : "}"}          /> {!isMobile && <span className=""ml-2"">{active ? "Saved" : "Save"}</span>}
 
               </Button>
             </TooltipTrigger>
@@ -253,17 +268,20 @@ quantity: 1}))
   const isMobile = useMediaQuery(&apos (max-width: 768px)&apos),&apos,
 ,
       enqueueSnackbar(&apos,Please log in to add items to your wishlist&apos { variant: &apos,warning&apos})
-}
+
+
     toggle(product.id, product)};&apos
 "
       enqueueSnackbar("Please log in to add items to your cart" { variant: "warning"})
-}
+
+
       id: product.i,d,
       title: product.titl,e,
       price: product.pric,e,
       image: product.imag,e,
       quantity:  ,1}))
-}
+
+
     enqueueSnackbar()}
 
     router.push("/products/${product.id}");"}
@@ -277,11 +295,13 @@ quantity: 1}))
           <Image: src="{imageError" ? "/placeholder-product.jpg" : product.image: || "/placeholder-product.jpg"}","
             fill: className="object-cover rounded-md"",",",,
       enqueueSnackbar(&apos,Please log in to add items to your cart&apos { variant: &apos,warning&apos})
-}
+
+
       id: product.id, title: product.title,
       price: product.price, image: product.image>
       quantity: 1}))
-}
+
+
     enqueueSnackbar(&apos;Item added to cart&apos { variant: &apos,success&apos})};&apos
     router.push("/products/${product.id}")}
 
@@ -291,11 +311,13 @@ quantity: 1}))
   // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title;
   const addToCart = () => {}
     dispatch()
+
       addItem({}
         id: product.id,
         title: productTitle,
         price: product.price ?? 0,
         image: imageUrl || null})
+
     );
   };
   const imageAltText = productTitle;
@@ -306,8 +328,8 @@ quantity: 1}))
         product: product.id,
         imageUrl});
     }
-  };'
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+  };"
+  const imageSizes = isMobile ? "100vw" : isTablet ? "50vw" : "33vw";
   return()"""
     <div""""
       className="relative border rounded-lg bg-card p-4""""
@@ -315,24 +337,24 @@ quantity: 1}))
     >"""
       <button""""
         className="absolute top-2 right-2 p-1 rounded-full bg-background/70"""
-        onClick={() => toggle(product.id)}'
-        aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
+        onClick={() => toggle(product.id)}"
+        aria-label={active ? "Remove from favorites" : "Add to favorites"}
       >"""
-        <Heart"'"""
-          aria-hidden="true"''
-          className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}
-        />
+        <Heart"""""
+          aria-hidden="true"""
+          className={active ? "text-red-500 fill-red-500" : "text-gray-500"}
+       />
       </button>"""
 """"
       <div className="w-full h-40 relative mb-2">
         {imageUrl && !imageError ? (
           <img;
             src={imageUrl}
-            alt={imageAltText}'
-            fill''
-            style={{ objectFit: 'cover' }}
+            alt={imageAltText}"
+            fill""
+            style={{ objectFit: "cover" }}
             onError={e => handleImageError(e)}
-          />"""
+         />"""
         ) : (""""
           <div className="w-full h-full bg-gray-200 flex items-center justify-center">""""
             <span className="text-gray-500">No Image</span>
@@ -340,11 +362,11 @@ quantity: 1}))
         )}"""
         {active && (""""
           <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">""""
-            <Heart aria-hidden="true" className="text-red-500 fill-red-500" />
+            <Heart aria-hidden="true" className="text-red-500 fill-red-500"   />
           </div>
         )}
       </div>"""
-      <Link href={`/marketplace/listing/${product.id}`}>""""
+      <Link href={"/marketplace/listing/${product.id}"}>""""
         <h3 className="font-semibold mb-1">{productTitle}</h3>
       </Link>"""
       {product.price != null && (""""
@@ -386,11 +408,7 @@ quantity: 1}))
 
 
 export { ProductCard };
-
 export { ProductCard };
-
 export { ProductCard };
-
 export { ProductCard };
-
 export { ProductCard };

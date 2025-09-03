@@ -8,17 +8,21 @@ export function Sidebar({ isOpen = false, onClose }) {""
   X,
   Code} from "lucide-react
 export function Sidebar({isOpen = false, onClose }) {const location = useLocation()
-}
+
+
 export function Sidebar({ isOpen = false, onClose }) {
   const router = useRouter()"
   const [expandedSections, setExpandedSections] = useState(["services", "solutions"])
-}
+
+
   const toggleSection = (sectionName) => {
     setExpandedSections(prev => 
       prev.includes(sectionName)
-}
+
+
         ? prev.filter(s => s !== sectionName)
-}
+
+
         : [...prev, sectionName]
     )}
 
@@ -72,7 +76,7 @@ export function Sidebar({ isOpen = false, onClose }) {
     return location.pathname.startsWith(href)}
 
     )
-}
+
 
   const navigationSections = []
 },"
@@ -211,12 +215,12 @@ export function Sidebar({ isOpen = false, onClose }) {
     }
 
     return router.pathname.startsWith(href)
-}
+
 
   return (
     <>
       {/* comment */}, {isOpen && ("
-        <div className = "{"fixed" inset-0 bg-black/50 z-40 lg: hidden" onClick="{onClose}"  />
+        <div className = "{"fixed" inset-0 bg-black/50 z-40 lg: hidden" onClick="{onClose}"   />
       )}, {/* comment */}"
       <div className="{"" fixed top-0 left-0 h-full w-64 bg-zion-blue-dark border-r border-zion-purple/20 transform transition-transform duration-300 ease-in-out z-50 ${isOpen ? "translate-x-0" : "-translate-x-full lg: translate-x-0"} lg: relative lg:inset-0 "}>
       {/* comment */}
@@ -296,7 +300,7 @@ transform transition-transform duration-300 ease-in-out z-50"
           <button onClick="{onClose}" className="lg: hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded" >",
           <button onClick="{onClose}""
             className="lg: hidden p-1 text-gray-400 hover:text-white hover:bg-gray-800 rounded">"
-            <X className="h-5 w-5"  />
+            <X className="h-5 w-5"   />
           </button>
         </div>
 ",
@@ -393,9 +397,9 @@ transform transition-transform duration-300 ease-in-out z-50"
                           <span>{item.name}</span>
                         </div>"
                         {expandedSections.includes(item.name.toLowerCase()) ? (""
-                          <ChevronDown className="h-4 w-4"  />"
+                          <ChevronDown className="h-4 w-4"   />"
                         ) : (""
-                          <ChevronRight className="h-4 w-4"  />
+                          <ChevronRight className="h-4 w-4"   />
                         )}
 
                       </button>
@@ -441,7 +445,7 @@ transform transition-transform duration-300 ease-in-out z-50"
             <Link href="/contact""
               className="inline-flex items-center text-xs text-blue-400 hover: text-white transition-colors"">
               onClick="{onClose}">"
-              <MessageCircle className="h-3 w-3 mr-1"  />
+              <MessageCircle className="h-3 w-3 mr-1"   />
               Get Support,
             </Link>
           </div>

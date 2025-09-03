@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -9,7 +8,7 @@ const HomePage: React.FC = () => {
             Welcome to Zion Tech Group
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Leading technology solutions provider specializing in AI, cybersecurity, 
+            Leading technology solutions provider specializing in AI, cybersecurity,
             cloud infrastructure, and digital transformation services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -31,5 +30,4 @@ const HomePage: React.FC = () => {
     </div>
   );
 };
-
 export default HomePage;

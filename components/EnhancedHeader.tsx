@@ -5,26 +5,34 @@ import React, { useState, useEffect } from "react"
 export default function EnhancedHeader() {
 
   const router = useRouter()
-}
+
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-}
+
+
   const [searchQuery, setSearchQuery] = useState("")
-}
+
+
   const [scrolled, setScrolled] = useState(false)
-}
+
+
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-}
+
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
-}
+
 
     window.addEventListener("scroll", handleScroll)
-}
+
+
     return () => window.removeEventListener("scroll", handleScroll)
-}
+
+
   }, [])
-}
+
+
   const handleSearch = async (e: React.FormEvent) => {,
     e.preventDefault(),
     if (searchQuery.trim()) {
@@ -94,7 +102,7 @@ export default function EnhancedHeader() {
 
                     >
                       {item.name}"
-                      <ChevronDown className=""ml-1" h-4 w-4"}       />
+                      <ChevronDown className=""ml-1" h-4 w-4"}          />
                     </button>
                     {activeDropdown === item.name && ("
                       <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg py-2 z-50 border">
@@ -139,19 +147,19 @@ export default function EnhancedHeader() {
                 value="{searchQuery}""
                 onChange="{e" => setSearchQuery(e.target.value)}"
                 className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />"
-              <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"  />
+              <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"   />
             </form>"
             <div className="flex items-center space-x-3 text-sm text-gray-600">"
               <a href="tel:+13024640950""
                 className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
               >"
-                <Phone className="h-4 w-4"  />"
+                <Phone className="h-4 w-4"   />"
                 <span className="hidden lg:inline">+1 (302) 464-0950</span>
               </a>"
               <a href="mailto: kleber@ziontechgroup.com""
                 className="flex items-center space-x-1 hover:text-blue-600 transition-colors"
               >"
-                <Mail className="h-4 w-4"  />"
+                <Mail className="h-4 w-4"   />"
                 <span className="hidden lg:inline">Contact</span>
               </a>
             </div>
@@ -161,9 +169,9 @@ export default function EnhancedHeader() {
             className="lg: hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
           >
             {mobileMenuOpen ? ("
-              <X className="h-6 w-6"  />
+              <X className="h-6 w-6"   />
             ) : ("
-              <Menu className="h-6 w-6"  />,
+              <Menu className="h-6 w-6"   />,
             )}
 
           </button>
@@ -186,7 +194,7 @@ export default function EnhancedHeader() {
 
                       >
                         {item.name}"
-                        <ChevronDown className=""h-4" w-4"}       />
+                        <ChevronDown className=""h-4" w-4"}          />
                       </button>
                       {activeDropdown === item.name && ("
                         <div className="pl-4 space-y-1">
@@ -233,7 +241,7 @@ export default function EnhancedHeader() {
                     value="{searchQuery}""
                     onChange="{e" => setSearchQuery(e.target.value)}"
                     className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />"
-                  <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"  />
+                  <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"   />
                 </form>
               </div>
 ,
@@ -242,13 +250,13 @@ export default function EnhancedHeader() {
                 <a href="tel: +13024640950""
                   className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600"
                 >"
-                  <Phone className="h-4 w-4"  />
+                  <Phone className="h-4 w-4"   />
                   <span>+1 (302) 464-0950</span>
                 </a>"
                 <a href="mailto: kleber@ziontechgroup.com""
                   className="flex items-center space-x-2 text-sm text-gray-600 hover:text-blue-600"
                 >"
-                  <Mail className="h-4 w-4"  />
+                  <Mail className="h-4 w-4"   />
                   <span>kleber@ziontechgroup.com</span>
                 </a>
               </div>
@@ -258,5 +266,6 @@ export default function EnhancedHeader() {
       </div>
     </header>
   )
-}
+
+
 }""

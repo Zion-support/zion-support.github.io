@@ -1,40 +1,41 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';
+import React from "react";"""
+import { Link } from "react-router-dom";
 import { Button } from "../ui/button";""""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";""""
-import { Badge } from "../ui/badge";'
-import { Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from 'lucide-react';
+import { Badge } from "../ui/badge";"
+import { Brain, Shield, Cloud, Database, Zap, Eye, Leaf, DollarSign, ArrowRight, Star, Clock, Globe } from "lucide-react";
 // Mock data for enhanced services;
 const EnhancedServicesOverview = () => {}
     // Get featured services (first 6)
+
     const featuredServices = ENHANCED_SERVICES.slice(0, 6);
     const getCategoryIcon = (category) => {}
         switch (category) {}
-'"""
-'"'"""
-            case 'AI & Machine Learning': return <Brain className="w-6 h-6"/>;'"'"""
-            case 'Cybersecurity': return <Shield className="w-6 h-6"/>;'"'"""
-            case 'Cloud & DevOps': return <Cloud className="w-6 h-6"/>;'"'"""
-            case 'Data & Analytics': return <Database className="w-6 h-6"/>;'"'"""
-            case 'Blockchain & Web3': return <Zap className="w-6 h-6"/>;'"'"""
-            case 'IoT & Edge Computing': return <Eye className="w-6 h-6"/>;'"'"""
-            case 'Quantum Computing': return <Brain className="w-6 h-6"/>;'"'"""
-            case 'AR/VR & Metaverse': return <Eye className="w-6 h-6"/>;'"'"""
-            case 'Green Tech & Sustainability': return <Leaf className="w-6 h-6"/>;'"'"""
-            case 'FinTech & Digital Banking': return <DollarSign className="w-6 h-6"/>;""""
-            default: return <Zap className="w-6 h-6"/>}
+""""
+""""""
+            case "AI & Machine Learning": return <Brain className="w-6 h-6"   />;""""""
+            case "Cybersecurity": return <Shield className="w-6 h-6"   />;""""""
+            case "Cloud & DevOps": return <Cloud className="w-6 h-6"   />;""""""
+            case "Data & Analytics": return <Database className="w-6 h-6"   />;""""""
+            case "Blockchain & Web3": return <Zap className="w-6 h-6"   />;""""""
+            case "IoT & Edge Computing": return <Eye className="w-6 h-6"   />;""""""
+            case "Quantum Computing": return <Brain className="w-6 h-6"   />;""""""
+            case "AR/VR & Metaverse": return <Eye className="w-6 h-6"   />;""""""
+            case "Green Tech & Sustainability": return <Leaf className="w-6 h-6"   />;""""""
+            case "FinTech & Digital Banking": return <DollarSign className="w-6 h-6"   />;""""
+            default: return <Zap className="w-6 h-6"   />}
     };
     const getAvailabilityColor = (availability) => {}
         switch (availability) {}
-'
-            case 'immediate': return 'text-green-400';'
-            case 'within-week': return 'text-yellow-400';'
-            case 'within-month': return 'text-orange-400';'
-            default: return 'text-gray-400'}"""
+"
+            case "immediate": return "text-green-400";"
+            case "within-week": return "text-yellow-400";"
+            case "within-month": return "text-orange-400";"
+            default: return "text-gray-400"}"""
     };""""
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">""""
       <div className="container mx-auto px-4">"""
-        {/* Header */}""""
+        {/* comment */}""""
         <div className="text-center mb-16">""""
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"""
             Cutting-Edge""""
@@ -51,7 +52,7 @@ const EnhancedServicesOverview = () => {}
                           <Link to="/enhanced-services">""""
               <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">"""
                 Explore All Services""""
-                <ArrowRight className="ml-2 w-4 h-4"/>
+                <ArrowRight className="ml-2 w-4 h-4"   />
               </Button>"""
             </Link>""""
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
@@ -60,7 +61,7 @@ const EnhancedServicesOverview = () => {}
           </div>
         </div>
 """
-        {/* Featured Services Grid */}""""
+        {/* comment */}""""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">""""
           {featuredServices.map((service) => (<Card key={service.id} className="bg-zion-blue-dark/50 border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:-translate-y-2">""""
               <CardHeader className="pb-4">""""
@@ -84,21 +85,21 @@ const EnhancedServicesOverview = () => {}
               </CardHeader>"""
 """"
               <CardContent className="space-y-4">"""
-                {/* Price and Rating */}""""
+                {/* comment */}""""
                 <div className="flex items-center justify-between">""""
                   <div className="text-xl font-bold text-zion-cyan">"""
                     ${service.price.toLocaleString()}""""
-                    <span className="text-sm text-zion-slate-light font-normal">'
-                      /{service.pricingModel === 'subscription' ? 'month' : 'project'}
+                    <span className="text-sm text-zion-slate-light font-normal">"
+                      /{service.pricingModel === "subscription" ? "month" : "project"}
                     </span>"""
                   </div>""""
                   <div className="flex items-center gap-1">""""
-                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400"/>""""
+                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400"   />""""
                     <span className="text-white font-medium">{service.rating}</span>
                   </div>
                 </div>
 """
-                {/* Key Benefits */}""""
+                {/* comment */}""""
                 <div className="space-y-2">""""
                   {service.benefits.slice(0, 2).map((benefit, index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">""""
                       <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
@@ -106,30 +107,30 @@ const EnhancedServicesOverview = () => {}
                     </div>))}
                 </div>
 """
-                {/* Tags */}""""
+                {/* comment */}""""
                 <div className="flex flex-wrap gap-2">""""
                   {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs border-zion-purple/30 text-zion-cyan">
                       {tag}
                     </Badge>))}
                 </div>
 """
-                {/* Availability and Location */}""""
+                {/* comment */}""""
                 <div className="flex items-center justify-between text-sm">"""
-                  <div className={`flex items-center gap-2 ${getAvailabilityColor(service.availability)}`}>""""
-                    <Clock className="w-4 h-4"/>""""
-                    <span className="font-medium">'
-                      {service.availability === 'immediate' ? 'Available Now' :''
-                service.availability === 'within-week' ? 'Within 1 Week' :''
-                    service.availability === 'within-month' ? 'Within 1 Month' : 'Contact Us'}
+                  <div className={"flex items-center gap-2 ${getAvailabilityColor(service.availability)}"}>""""
+                    <Clock className="w-4 h-4"   />""""
+                    <span className="font-medium">"
+                      {service.availability === "immediate" ? "Available Now" :""
+                service.availability === "within-week" ? "Within 1 Week" :""
+                    service.availability === "within-month" ? "Within 1 Month" : "Contact Us'}
                     </span>"""
                   </div>""""
                   <div className="flex items-center gap-1 text-zion-slate-light">""""
-                    <Globe className="w-4 h-4"/>
+                    <Globe className="w-4 h-4"   />
                     {service.location}
                   </div>
                 </div>
 """
-                {/* Action Button */}""""
+                {/* comment */}""""
                 <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                   Get Started;
                 </Button>
@@ -137,7 +138,7 @@ const EnhancedServicesOverview = () => {}
             </Card>))}
         </div>
 """
-        {/* Service Categories Overview */}""""
+        {/* comment */}""""
         <div className="bg-zion-blue/20 rounded-2xl p-8 border border-zion-blue-light">""""
           <div className="text-center mb-8">""""
             <h3 className="text-2xl font-bold text-white mb-4">Service Categories</h3>""""
@@ -164,7 +165,7 @@ const EnhancedServicesOverview = () => {}
           </div>
         </div>
 """
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <div className="text-center mt-16">""""
           <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-2xl p-8 border border-zion-purple/30">""""
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -185,15 +186,15 @@ const EnhancedServicesOverview = () => {}
             <div className="mt-6 text-zion-slate-light text-sm">""""
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">""""
                 <div className="flex items-center gap-2">""""
-                  <Globe className="w-4 h-4 text-zion-cyan"/>
+                  <Globe className="w-4 h-4 text-zion-cyan"   />
                   <span>+1 302 464 0950</span>"""
                 </div>""""
                 <div className="flex items-center gap-2">""""
-                  <Globe className="w-4 h-4 text-zion-cyan"/>
+                  <Globe className="w-4 h-4 text-zion-cyan"   />
                   <span>kleber@ziontechgroup.com</span>"""
                 </div>""""
                 <div className="flex items-center gap-2">""""
-                  <Globe className="w-4 h-4 text-zion-cyan"/>
+                  <Globe className="w-4 h-4 text-zion-cyan"   />
                   <span>https://ziontechgroup.com</span>
                 </div>
               </div>
@@ -206,11 +207,7 @@ export default EnhancedServicesOverview;
 }}}}}
 
 export { EnhancedServicesOverview };
-
 export { EnhancedServicesOverview };
-
 export { EnhancedServicesOverview };
-
 export { EnhancedServicesOverview };
-
 export { EnhancedServicesOverview };

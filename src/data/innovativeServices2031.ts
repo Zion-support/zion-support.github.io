@@ -6,7 +6,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string
-}
+
 ;
 export interface MicroSaasService {
   id: number;
@@ -32,7 +32,7 @@ export interface MicroSaasService {
   innovationLevel: string;
   marketSize: string;
   growthRate: string
-}
+
 ;
 export interface ITService {
   id: number;
@@ -55,7 +55,7 @@ export interface ITService {
   innovationLevel: string;
   marketSize: string;
   compliance: string[]
-}
+
 ;
 export interface AIService {
   id: number;
@@ -79,7 +79,6 @@ export interface AIService {
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[]
-}
 
 // Zion Tech Group Contact Information;
 const zionContact: ServiceContact = {
@@ -92,9 +91,7 @@ const zionContact: ServiceContact = {
   ;
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
-
 };
-
 // Innovative Micro SAAS Services 2031export const innovativeMicroSaasServices2031: MicroSaasService[] = [{
 
     id: 1,"
@@ -331,7 +328,6 @@ const zionContact: ServiceContact = {
     growthRate: "23% annually"
 
 ];
-
 // Innovative IT Infrastructure Services 2031;
 export const innovativeITInfrastructureServices2031: ITService[] = [{
 
@@ -544,7 +540,6 @@ export const innovativeITInfrastructureServices2031: ITService[] = [{
     innovationLevel: "Advanced","
     marketSize: "$128.9B by 2028","
     compliance["GDPR", "HIPAA", "SOX", "Industry-specific standards"]}];
-
 // Innovative AI Services 2031;
 export const innovativeAIServices2031: AIService[] = [{
 
@@ -793,7 +788,6 @@ export const innovativeAIServices2031: AIService[] = [{
     marketSize: "$15.8B by 2026","
     ethicalAI["Transparency", "Fairness", "Sustainability", "Data privacy", "Ethical sourcing"]}
 ];
-
 // Export all services;
 export const allInnovativeServices2031: unknown = {}
   microSaas: innovativeMicroSaasServices2031,
@@ -804,5 +798,4 @@ export const allInnovativeServices2031: unknown = {}
   ;
   ai: innovativeAIServices2031;
 ;
-
 };

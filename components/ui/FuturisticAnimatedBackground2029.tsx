@@ -4,32 +4,32 @@ import React from "react"
         // comment
 draw() {
         if (ctx) {;
-
           const alpha = this.life / this.maxLife
           ctx.save()
-}
+
+
           ctx.globalAlpha = alpha
           ctx.fillStyle = this.color
           ctx.beginPath()
-}
+
+
           ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
-}
+
+
           ctx.fill()
-}
+
+
           // comment
 ctx.shadowColor = this.color          ctx.restore()}
 
       }
 ;
       isDead() {;
-
 ;
     // Grid system,;
 class Grid {;
-
       spacing: number,;
       offset: number,;
-
     // comment
 class Grid {
 
@@ -40,13 +40,14 @@ class Grid {
           // comment
 for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {
             ctx.moveTo(x, 0)
-}
+
+
             ctx.lineTo(x, canvas.height)
+
 }            ctx.stroke()}
 ;
     // Wave system,;
 class Wave {;
-
     // comment
 class Wave {
 
@@ -65,7 +66,8 @@ for (let i = 0; i < 3; i++) {"
 particles[index] = new Particle()}
 
       })
-}
+
+
       // comment
 const time = Date.now() * 0.001
         const angle = (i * Math.PI * 2) / 3 + time * 0.5
@@ -77,11 +79,7 @@ const time = Date.now() * 0.001
 return () => {
         
 ;
-
 ;
-
-
-
 '
 
 

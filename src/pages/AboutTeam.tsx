@@ -1,140 +1,135 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  Linkedin, 
-  Twitter, 
-  Mail, 
-  Users, 
-  Award, 
-  Heart, 
-  Lightbulb, 
+  Linkedin,
+  Twitter,
+  Mail,
+  Users,
+  Award,
+  Heart,
+  Lightbulb,
   Target,
   Globe,
   Shield,
   Zap,
   Star
-} from 'lucide-react';
-
+} from "lucide-react";
 const AboutTeam = () => {
   const leadershipTeam = [
     {
-      name: 'Dr. Sarah Chen',
-      position: 'Chief Executive Officer',
-      bio: 'Former AI researcher at Stanford with 15+ years in enterprise technology. Led three successful tech startups to acquisition.',
-      image: '/images/team/sarah-chen.jpg',
-      linkedin: 'https://linkedin.com/in/sarah-chen',
-      twitter: 'https://twitter.com/sarahchen',
-      email: 'sarah.chen@ziontechgroup.com',
-      expertise: ['AI Strategy', 'Enterprise Technology', 'Strategic Leadership'],
-      achievements: ['Forbes 30 Under 30', 'MIT Technology Review Innovator', '500+ Team Members Led']
+      name: "Dr. Sarah Chen",
+      position: "Chief Executive Officer",
+      bio: "Former AI researcher at Stanford with 15+ years in enterprise technology. Led three successful tech startups to acquisition.",
+      image: "/images/team/sarah-chen.jpg",
+      linkedin: "https://linkedin.com/in/sarah-chen",
+      twitter: "https://twitter.com/sarahchen",
+      email: "sarah.chen@ziontechgroup.com",
+      expertise: ["AI Strategy", "Enterprise Technology", "Strategic Leadership"],
+      achievements: ["Forbes 30 Under 30", "MIT Technology Review Innovator", "500+ Team Members Led"]
     },
     {
-      name: 'Marcus Rodriguez',
-      position: 'Chief Technology Officer',
-      bio: 'Ex-Google engineer specializing in scalable cloud infrastructure and AI systems. Built systems serving 100M+ users.',
-      image: '/images/team/marcus-rodriguez.jpg',
-      linkedin: 'https://linkedin.com/in/marcus-rodriguez',
-      twitter: 'https://twitter.com/marcusrodriguez',
-      email: 'marcus.rodriguez@ziontechgroup.com',
-      expertise: ['Cloud Architecture', 'AI Systems', 'Scalable Infrastructure'],
-      achievements: ['Google Cloud MVP', '15+ Patents', 'Led 50+ Engineering Teams']
+      name: "Marcus Rodriguez",
+      position: "Chief Technology Officer",
+      bio: "Ex-Google engineer specializing in scalable cloud infrastructure and AI systems. Built systems serving 100M+ users.",
+      image: "/images/team/marcus-rodriguez.jpg",
+      linkedin: "https://linkedin.com/in/marcus-rodriguez",
+      twitter: "https://twitter.com/marcusrodriguez",
+      email: "marcus.rodriguez@ziontechgroup.com",
+      expertise: ["Cloud Architecture", "AI Systems", "Scalable Infrastructure"],
+      achievements: ["Google Cloud MVP", "15+ Patents", "Led 50+ Engineering Teams"]
     },
     {
-      name: 'Dr. Emily Watson',
-      position: 'Chief AI Officer',
-      bio: 'Leading researcher in machine learning and natural language processing. Published 50+ papers in top AI conferences.',
-      image: '/images/team/emily-watson.jpg',
-      linkedin: 'https://linkedin.com/in/emily-watson',
-      twitter: 'https://twitter.com/emilywatson',
-      email: 'emily.watson@ziontechgroup.com',
-      expertise: ['Machine Learning', 'NLP', 'AI Ethics'],
-      achievements: ['NeurIPS Best Paper', 'MIT CSAIL Alumni', 'AI Ethics Committee Chair']
+      name: "Dr. Emily Watson",
+      position: "Chief AI Officer",
+      bio: "Leading researcher in machine learning and natural language processing. Published 50+ papers in top AI conferences.",
+      image: "/images/team/emily-watson.jpg",
+      linkedin: "https://linkedin.com/in/emily-watson",
+      twitter: "https://twitter.com/emilywatson",
+      email: "emily.watson@ziontechgroup.com",
+      expertise: ["Machine Learning", "NLP", "AI Ethics"],
+      achievements: ["NeurIPS Best Paper", "MIT CSAIL Alumni", "AI Ethics Committee Chair"]
     },
     {
-      name: 'David Kim',
-      position: 'Chief Financial Officer',
-      bio: 'Former investment banker with deep expertise in tech financing and strategic partnerships. Raised $500M+ in funding.',
-      image: '/images/team/david-kim.jpg',
-      linkedin: 'https://linkedin.com/in/david-kim',
-      twitter: 'https://twitter.com/davidkim',
-      email: 'david.kim@ziontechgroup.com',
-      expertise: ['Financial Strategy', 'Strategic Partnerships', 'Growth Financing'],
-      achievements: ['Goldman Sachs Alumni', '500M+ Funding Raised', '15+ Strategic Partnerships']
+      name: "David Kim",
+      position: "Chief Financial Officer",
+      bio: "Former investment banker with deep expertise in tech financing and strategic partnerships. Raised $500M+ in funding.",
+      image: "/images/team/david-kim.jpg",
+      linkedin: "https://linkedin.com/in/david-kim",
+      twitter: "https://twitter.com/davidkim",
+      email: "david.kim@ziontechgroup.com",
+      expertise: ["Financial Strategy", "Strategic Partnerships", "Growth Financing"],
+      achievements: ["Goldman Sachs Alumni", "500M+ Funding Raised", "15+ Strategic Partnerships"]
     }
   ];
-
   const companyValues = [
     {
       icon: Heart,
-      title: 'Human-Centered AI',
-      description: 'We believe AI should augment human capabilities, not replace them. Every solution we build puts people first.',
-      color: 'from-red-500 to-pink-500'
+      title: "Human-Centered AI",
+      description: "We believe AI should augment human capabilities, not replace them. Every solution we build puts people first.",
+      color: "from-red-500 to-pink-500"
     },
     {
       icon: Shield,
-      title: 'Trust & Security',
-      description: 'Security and privacy are foundational to everything we do. We build with enterprise-grade security standards.',
-      color: 'from-blue-500 to-cyan-500'
+      title: "Trust & Security",
+      description: "Security and privacy are foundational to everything we do. We build with enterprise-grade security standards.",
+      color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Lightbulb,
-      title: 'Innovation First',
-      description: 'We constantly push the boundaries of what\'s possible, exploring cutting-edge technologies to solve real problems.',
-      color: 'from-yellow-500 to-orange-500'
+      title: "Innovation First",
+      description: "We constantly push the boundaries of what"s possible, exploring cutting-edge technologies to solve real problems.",
+      color: "from-yellow-500 to-orange-500"
     },
     {
       icon: Target,
-      title: 'Results-Driven',
-      description: 'We measure success by the tangible impact we create for our clients, not just the technology we build.',
-      color: 'from-green-500 to-emerald-500'
+      title: "Results-Driven",
+      description: "We measure success by the tangible impact we create for our clients, not just the technology we build.",
+      color: "from-green-500 to-emerald-500"
     },
     {
       icon: Globe,
-      title: 'Global Impact',
-      description: 'Our solutions serve clients worldwide, and we\'re committed to making technology accessible across all regions.',
-      color: 'from-purple-500 to-indigo-500'
+      title: "Global Impact",
+      description: "Our solutions serve clients worldwide, and we"re committed to making technology accessible across all regions.",
+      color: "from-purple-500 to-indigo-500"
     },
     {
       icon: Zap,
-      title: 'Speed & Agility',
-      description: 'We move fast, adapt quickly, and deliver solutions that keep pace with our clients\' evolving needs.',
-      color: 'from-amber-500 to-yellow-500'
+      title: "Speed & Agility",
+      description: "We move fast, adapt quickly, and deliver solutions that keep pace with our clients" evolving needs.",
+      color: "from-amber-500 to-yellow-500"
     }
   ];
-
   const teamStats = [
-    { number: '500+', label: 'Team Members', icon: Users },
-    { number: '50+', label: 'Countries Served', icon: Globe },
-    { number: '1000+', label: 'Projects Delivered', icon: Award },
-    { number: '99.9%', label: 'Uptime SLA', icon: Star }
+    { number: "500+", label: "Team Members", icon: Users },
+    { number: "50+", label: "Countries Served", icon: Globe },
+    { number: "1000+", label: "Projects Delivered", icon: Award },
+    { number: "99.9%", label: "Uptime SLA", icon: Star }
   ];
-
   const cultureHighlights = [
     {
-      title: 'Remote-First Culture',
-      description: 'Our team spans 25+ countries, working together seamlessly through cutting-edge collaboration tools.',
+      title: "Remote-First Culture",
+      description: "Our team spans 25+ countries, working together seamlessly through cutting-edge collaboration tools.",
       icon: Globe
     },
     {
-      title: 'Continuous Learning',
-      description: 'We invest heavily in our team\'s growth with unlimited learning budgets and dedicated development time.',
+      title: "Continuous Learning",
+      description: "We invest heavily in our team"s growth with unlimited learning budgets and dedicated development time.",
       icon: Lightbulb
     },
     {
-      title: 'Diversity & Inclusion',
-      description: 'We celebrate diverse perspectives and create an inclusive environment where everyone can thrive.',
+      title: "Diversity & Inclusion",
+      description: "We celebrate diverse perspectives and create an inclusive environment where everyone can thrive.",
       icon: Users
     },
     {
-      title: 'Work-Life Balance',
-      description: 'We believe in sustainable productivity and support our team\'s well-being with flexible schedules.',
+      title: "Work-Life Balance",
+      description: "We believe in sustainable productivity and support our team"s well-being with flexible schedules.",
       icon: Heart
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto text-center">
           <motion.div
@@ -166,8 +161,7 @@ const AboutTeam = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* Leadership Team */}
+      {/* comment */}
       <section className="py-20 px-6">
         <div className="container mx-auto">
           <motion.div
@@ -179,7 +173,7 @@ const AboutTeam = () => {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Executive Leadership</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Meet the visionary leaders driving Zion Tech Group's mission to democratize AI and transform industries.
+              Meet the visionary leaders driving Zion Tech Group"s mission to democratize AI and transform industries.
             </p>
           </motion.div>
 
@@ -196,7 +190,7 @@ const AboutTeam = () => {
                 <div className="p-8">
                   <div className="flex items-start gap-6 mb-6">
                     <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                      {member.name.split(' ').map(n => n[0]).join('')}
+                      {member.name.split(" ").map(n => n[0]).join("")}
                     </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
@@ -204,7 +198,6 @@ const AboutTeam = () => {
                       <p className="text-gray-300 text-sm leading-relaxed">{member.bio}</p>
                     </div>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-3">Areas of Expertise</h4>
                     <div className="flex flex-wrap gap-2">
@@ -215,19 +208,17 @@ const AboutTeam = () => {
                       ))}
                     </div>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-3">Key Achievements</h4>
                     <div className="space-y-2">
                       {member.achievements.map((achievement, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
-                          <Star className="w-4 h-4 text-yellow-400" />
+                          <Star className="w-4 h-4 text-yellow-400"   />
                           {achievement}
                         </div>
                       ))}
                     </div>
                   </div>
-
                   <div className="flex items-center gap-4">
                     <a
                       href={member.linkedin}
@@ -235,7 +226,7 @@ const AboutTeam = () => {
                       rel="noopener noreferrer"
                       className="p-2 bg-slate-700/50 text-gray-300 hover:text-blue-400 hover:bg-slate-700 rounded-lg transition-all duration-300"
                     >
-                      <Linkedin className="w-5 h-5" />
+                      <Linkedin className="w-5 h-5"   />
                     </a>
                     <a
                       href={member.twitter}
@@ -243,13 +234,13 @@ const AboutTeam = () => {
                       rel="noopener noreferrer"
                       className="p-2 bg-slate-700/50 text-gray-300 hover:text-blue-400 hover:bg-slate-700 rounded-lg transition-all duration-300"
                     >
-                      <Twitter className="w-5 h-5" />
+                      <Twitter className="w-5 h-5"   />
                     </a>
                     <a
-                      href={`mailto:${member.email}`}
+                      href={"mailto:${member.email}"}
                       className="p-2 bg-slate-700/50 text-gray-300 hover:text-cyan-400 hover:bg-slate-700 rounded-lg transition-all duration-300"
                     >
-                      <Mail className="w-5 h-5" />
+                      <Mail className="w-5 h-5"   />
                     </a>
                   </div>
                 </div>
@@ -258,8 +249,7 @@ const AboutTeam = () => {
           </div>
         </div>
       </section>
-
-      {/* Company Values */}
+      {/* comment */}
       <section className="py-20 px-6 bg-slate-800/20">
         <div className="container mx-auto">
           <motion.div
@@ -285,7 +275,7 @@ const AboutTeam = () => {
                 viewport={{ once: true }}
                 className="text-center group"
               >
-                <div className={`w-20 h-20 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={"w-20 h-20 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"}>
                   <value.icon className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
@@ -295,8 +285,7 @@ const AboutTeam = () => {
           </div>
         </div>
       </section>
-
-      {/* Team Stats */}
+      {/* comment */}
       <section className="py-20 px-6">
         <div className="container mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -319,8 +308,7 @@ const AboutTeam = () => {
           </div>
         </div>
       </section>
-
-      {/* Culture Highlights */}
+      {/* comment */}
       <section className="py-20 px-6 bg-slate-800/20">
         <div className="container mx-auto">
           <motion.div
@@ -332,7 +320,7 @@ const AboutTeam = () => {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Culture</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We're building more than a company - we're building a community of innovators, 
+              We"re building more than a company - we"re building a community of innovators,
               problem-solvers, and lifelong learners.
             </p>
           </motion.div>
@@ -359,8 +347,7 @@ const AboutTeam = () => {
           </div>
         </div>
       </section>
-
-      {/* Join Our Team CTA */}
+      {/* comment */}
       <section className="py-20 px-6">
         <div className="container mx-auto text-center">
           <motion.div
@@ -374,7 +361,7 @@ const AboutTeam = () => {
               Join Our Growing Team
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Ready to shape the future of technology? We're always looking for passionate, 
+              Ready to shape the future of technology? We're always looking for passionate,
               innovative minds to join our mission.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -397,5 +384,4 @@ const AboutTeam = () => {
     </div>
   );
 };
-
 export default AboutTeam;

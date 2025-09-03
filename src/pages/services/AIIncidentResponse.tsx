@@ -1,35 +1,31 @@
-import React from 'react';
-import { Shield, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Activity, BarChart3 } from 'lucide-react';
-
+import React from "react";
+import { Shield, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Activity, BarChart3 } from "lucide-react";
 export default function AIIncidentResponse() {
   const features = [
-    'Automated incident detection and response',
-    'Real-time threat analysis and mitigation',
-    'Intelligent incident classification',
-    'Automated response orchestration',
-    'Advanced forensics and investigation',
-    'Compliance reporting and documentation'
+    "Automated incident detection and response",
+    "Real-time threat analysis and mitigation",
+    "Intelligent incident classification",
+    "Automated response orchestration",
+    "Advanced forensics and investigation",
+    "Compliance reporting and documentation"
   ];
-
   const tiers = [
-    { name: 'Starter', price: '$299/mo', details: ['Basic incident response', 'Email support', 'Up to 50 incidents/month'] },
-    { name: 'Professional', price: '$799/mo', details: ['Advanced response', 'Priority support', 'Up to 500 incidents/month'] },
-    { name: 'Enterprise', price: '$2,499/mo', details: ['Full response suite', '24/7 support', 'Unlimited incidents', 'Custom integration'] }
+    { name: "Starter", price: "$299/mo", details: ["Basic incident response", "Email support", "Up to 50 incidents/month"] },
+    { name: "Professional", price: "$799/mo", details: ["Advanced response", "Priority support", "Up to 500 incidents/month"] },
+    { name: "Enterprise", price: "$2,499/mo", details: ["Full response suite", "24/7 support", "Unlimited incidents", "Custom integration"] }
   ];
-
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-red-600 via-orange-600 to-yellow-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Shield className="w-4 h-4 mr-2" />
+            <Shield className="w-4 h-4 mr-2"   />
             AI-Powered Incident Response Intelligence
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Incident Response Platform</h1>
           <p className="text-red-100 text-xl">Transform your security operations with AI-powered incident response that detects, analyzes, and mitigates threats in real-time.</p>
         </div>
       </section>
-
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-10">
           <div>
@@ -37,7 +33,7 @@ export default function AIIncidentResponse() {
             <ul className="space-y-3">
               {features.map((f) => (
                 <li key={f} className="flex items-start">
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"   />
                   <span className="text-gray-700">{f}</span>
                 </li>
               ))}
@@ -63,10 +59,10 @@ export default function AIIncidentResponse() {
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
               <a href="/pricing" className="px-5 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors inline-flex items-center">
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
+                View Full Pricing <ArrowRight className="w-4 h-4 ml-2"   />
               </a>
               <a href="https://calendly.com/zion-tech-group" className="px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors inline-flex items-center">
-                Schedule Demo <Phone className="w-4 h-4 ml-2" />
+                Schedule Demo <Phone className="w-4 h-4 ml-2"   />
               </a>
             </div>
           </div>
@@ -74,4 +70,3 @@ export default function AIIncidentResponse() {
       </section>
     </div>
   );
-}

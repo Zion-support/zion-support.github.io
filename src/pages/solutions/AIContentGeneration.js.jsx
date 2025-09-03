@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {}
   Target,
   TrendingUp,
@@ -7,121 +7,122 @@ import {}
   Cpu,
   Lightbulb,
   FileText,
-  PenTool,'
-  Image,''
-  Video,'''
-  Music} from 'lucide-react';
+  PenTool,"
+  Image,""
+  Video,"""
+  Music} from "lucide-react";
 const AIContentGeneration = () => {}
   const contentTypes = []
     {}
-'
-      title: 'Marketing Content','
-      description: 'Engaging marketing materials and campaigns',
-      icon: Target,'
-      capabilities: [''
-        'Social media posts',Email campaigns',Ad copy',Brand messaging'
+"
+      title: "Marketing Content","
+      description: "Engaging marketing materials and campaigns",
+      icon: Target,"
+      capabilities: [""
+        "Social media posts",Email campaigns",Ad copy",Brand messaging"
       ]},
     {}
-'
-      title: 'Educational Content','
-      description: 'Learning materials and educational resources',
-      icon: Users,'
-      capabilities: [''
-        'Course materials',Tutorials',Documentation',Learning guides'
+"
+      title: "Educational Content","
+      description: "Learning materials and educational resources",
+      icon: Users,"
+      capabilities: [""
+        "Course materials",Tutorials",Documentation",Learning guides"
       ]},
     {}
-'
-      title: 'Creative Writing','
-      description: 'Fiction, poetry, and creative content',
-      icon: PenTool,'
-      capabilities: [''
-        'Story generation',Poetry creation',Character development',Plot generation'
+"
+      title: "Creative Writing","
+      description: "Fiction, poetry, and creative content",
+      icon: PenTool,"
+      capabilities: [""
+        "Story generation",Poetry creation",Character development",Plot generation"
       ]},
     {}
-'
-      title: 'Technical Content','
-      description: 'Technical documentation and specifications',
-      icon: Cpu,'
-      capabilities: [''
-        'API documentation',User manuals',Technical guides',Specifications'
+"
+      title: "Technical Content","
+      description: "Technical documentation and specifications",
+      icon: Cpu,"
+      capabilities: [""
+        "API documentation",User manuals",Technical guides",Specifications"
       ]},
     {}
-'
-''
-'''
-      title: 'Business Content','''
-      description: 'Professional business communications',''
-      icon: TrendingUp,'''
-      capabilities: ['Reports',Presentations',Proposals',Business plans']},
+"
+""
+"""
+      title: "Business Content","""
+      description: "Professional business communications",""
+      icon: TrendingUp,"""
+      capabilities: ["Reports",Presentations",Proposals",Business plans"]},
     {}
-'
-      title: 'Multimedia Content','
-      description: 'Combined text, image, and video content',
-      icon: Globe,'
-      capabilities: [''
-        'Interactive content',Rich media',Cross-platform content',Engagement materials'
+"
+      title: "Multimedia Content","
+      description: "Combined text, image, and video content",
+      icon: Globe,"
+      capabilities: [""
+        "Interactive content",Rich media",Cross-platform content",Engagement materials"
       ]}
-  ];'
-  const benefits = [''
-    'Significantly faster content creation',Consistent quality and brand voice',Scalable content production',Cost-effective content generation',Multilingual content capabilities',24/7 content creation availability'
+  ];"
+  const benefits = [""
+    "Significantly faster content creation",Consistent quality and brand voice",Scalable content production",Cost-effective content generation",Multilingual content capabilities",24/7 content creation availability"
   ];
   const implementation = []
     {}
-'
-''
-'''
-      phase: 'Content Strategy','''
-      description: 'Define content goals and requirements','''
-      duration: '1-2 weeks'},
+"
+""
+"""
+      phase: "Content Strategy","""
+      description: "Define content goals and requirements","""
+      duration: "1-2 weeks"},
     {}
-'
-''
-'''
-      phase: 'AI Training','''
-      description: 'Train AI models on your brand and content style','''
-      duration: '2-4 weeks'},
+"
+""
+"""
+      phase: "AI Training","""
+      description: "Train AI models on your brand and content style","""
+      duration: "2-4 weeks"},
     {}
-'
-''
-'''
-      phase: 'Content Templates','''
-      description:''''
-        'Create templates and guidelines for different content types','''
-      duration: '2-3 weeks'},
+"
+""
+"""
+      phase: "Content Templates","""
+      description:""""
+        "Create templates and guidelines for different content types","""
+      duration: "2-3 weeks"},
     {}
-'
-''
-'''
-      phase: 'Integration','''
-      description: 'Integrate AI content generation into your workflow','''
-      duration: '3-5 weeks'},
+"
+""
+"""
+      phase: "Integration","""
+      description: "Integrate AI content generation into your workflow","""
+      duration: "3-5 weeks"},
     {}
-'
-''
-'''
-      phase: 'Testing & Refinement','''
-      description: 'Test content quality and refine AI parameters','''
-      duration: '2-4 weeks'},
+"
+""
+"""
+      phase: "Testing & Refinement","""
+      description: "Test content quality and refine AI parameters","""
+      duration: "2-4 weeks"},
     {}
-'
-      phase: 'Deployment','
-      description: 'Full deployment and team training','
-      duration: '1-2 weeks'}
+"
+      phase: "Deployment","
+      description: "Full deployment and team training","
+      duration: "1-2 weeks"}
   ];
   return()
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <div className="mb-8">""""
             <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-medium mb-6">""""
-              <FileText className="w-4 h-4 mr-2" />
+              <FileText className="w-4 h-4 mr-2"   />
               AI Content Solution"""
             </div>""""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"""
               AI""""
-              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">'
-                {' '}
+              <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">"
+                {" '}
                 Content Generation;
               </span>"""
             </h1>""""
@@ -147,7 +148,7 @@ const AIContentGeneration = () => {}
         </div>
       </section>
 """
-      {/* Content Features */}""""
+      {/* comment */}""""
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -190,7 +191,7 @@ const AIContentGeneration = () => {}
         </div>
       </section>
 """
-      {/* Content Types */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -233,7 +234,7 @@ const AIContentGeneration = () => {}
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"""
@@ -256,7 +257,7 @@ const AIContentGeneration = () => {}
             </div>""""
             <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl p-8 border border-emerald-500/30">""""
               <div className="text-center">""""
-                <Lightbulb className="w-24 h-24 text-emerald-400 mx-auto mb-4" />""""
+                <Lightbulb className="w-24 h-24 text-emerald-400 mx-auto mb-4"   />""""
                 <h3 className="text-2xl font-bold text-white mb-2">
                   Content Innovation"""
                 </h3>""""
@@ -275,7 +276,7 @@ const AIContentGeneration = () => {}
         </div>
       </section>
 """
-      {/* Implementation Process */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -303,7 +304,7 @@ const AIContentGeneration = () => {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -333,14 +334,8 @@ const AIContentGeneration = () => {}
   );
 };
 export default AIContentGeneration;
-
-
 export { AIContentGeneration };
-
 export { AIContentGeneration };
-
 export { AIContentGeneration };
-
 export { AIContentGeneration };
-
 export { AIContentGeneration };

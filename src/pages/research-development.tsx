@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   FlaskConical,
   Brain,
@@ -38,26 +38,23 @@ import {
   TestTube,
   Satellite,
   Telescope
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function ResearchDevelopment() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedArea, setSelectedArea] = useState('all');
-
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedArea, setSelectedArea] = useState("all");
   const researchAreas = [
-    'all',
-    'AI & Machine Learning',
-    'Quantum Computing',
-    'Cybersecurity',
-    'Cloud Computing',
-    'IoT & Edge Computing',
-    'Blockchain',
-    'AR/VR',
-    'Robotics',
-    'Data Science',
-    'Biotechnology'
+    "all",
+    "AI & Machine Learning",
+    "Quantum Computing",
+    "Cybersecurity",
+    "Cloud Computing",
+    "IoT & Edge Computing",
+    "Blockchain",
+    "AR/VR",
+    "Robotics",
+    "Data Science",
+    "Biotechnology"
   ];
-
   const projects = [
     {
       id: 1,
@@ -204,24 +201,21 @@ export default function ResearchDevelopment() {
       ]
     }
   ];
-
   const filteredProjects = projects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesArea = selectedArea === 'all' || project.area === selectedArea;
+    const matchesArea = selectedArea === "all" || project.area === selectedArea;
     return matchesSearch && matchesArea;
   });
-
   const stats = [
     { number: "25+", label: "Active Projects", icon: FlaskConical },
     { number: "$15M+", label: "Research Funding", icon: DollarSign },
     { number: "50+", label: "Research Team", icon: Users },
     { number: "100+", label: "Publications", icon: BookOpen }
   ];
-
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
+      {/* comment */}
       <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
@@ -234,8 +228,7 @@ export default function ResearchDevelopment() {
           </div>
         </div>
       </div>
-
-      {/* Stats Section */}
+      {/* comment */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -258,26 +251,23 @@ export default function ResearchDevelopment() {
           </div>
         </div>
       </section>
-
-      {/* Filters */}
+      {/* comment */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Search */}
+            {/* comment */}
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5"   />
               <input
                 type="text"
                 placeholder="Search research projects..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
             </div>
-
-            {/* Area Filter */}
+            {/* comment */}
             <div className="flex items-center gap-2">
-              <Filter className="h-5 w-5 text-gray-400" />
+              <Filter className="h-5 w-5 text-gray-400"   />
               <select
                 value={selectedArea}
                 onChange={(e) => setSelectedArea(e.target.value)}
@@ -285,15 +275,14 @@ export default function ResearchDevelopment() {
               >
                 {researchAreas.map(area => (
                   <option key={area} value={area}>
-                    {area === 'all' ? 'All Research Areas' : area}
+                    {area === "all" ? "All Research Areas" : area}
                   </option>
                 ))}
               </select>
             </div>
           </div>
         </div>
-
-        {/* Projects Grid */}
+        {/* comment */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <motion.div
@@ -304,32 +293,28 @@ export default function ResearchDevelopment() {
               viewport={{ once: true }}
               className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition-shadow duration-300"
             >
-              <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
+              <div className={"h-48 bg-gradient-to-br ${project.color} flex items-center justify-center"}>
                 <project.icon className="w-16 h-16 text-white" />
               </div>
-              
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">
                     {project.area}
                   </span>
-                  <span className={`px-2 py-1 text-xs font-medium rounded ${
-                    project.status === 'Completed' ? 'bg-green-100 text-green-800' :
-                    project.status === 'In Progress' ? 'bg-yellow-100 text-yellow-800' :
-                    'bg-gray-100 text-gray-800'
-                  }`}>
+                  <span className={"px-2 py-1 text-xs font-medium rounded ${
+                    project.status === "Completed" ? "bg-green-100 text-green-800" :
+                    project.status === "In Progress" ? "bg-yellow-100 text-yellow-800" :
+                    "bg-gray-100 text-gray-800"
+                  }"}>
                     {project.status}
                   </span>
                 </div>
-                
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">
                   {project.title}
                 </h2>
-                
                 <p className="text-gray-600 mb-6">
                   {project.description}
                 </p>
-                
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center">
                     <div className="text-lg font-bold text-gray-900">{project.funding}</div>
@@ -340,56 +325,51 @@ export default function ResearchDevelopment() {
                     <div className="text-sm text-gray-500">Duration</div>
                   </div>
                 </div>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Key Features</h4>
                     <ul className="space-y-1">
                       {project.features.map((feature, index) => (
                         <li key={index} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2"   />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Expected Outcomes</h4>
                     <ul className="space-y-1">
                       {project.outcomes.map((outcome, index) => (
                         <li key={index} className="flex items-center text-sm text-gray-600">
-                          <Star className="h-4 w-4 text-yellow-500 mr-2" />
+                          <Star className="h-4 w-4 text-yellow-500 mr-2"   />
                           {outcome}
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-sm text-gray-500">
-                    <Users className="h-4 w-4 mr-1" />
+                    <Users className="h-4 w-4 mr-1"   />
                     {project.team} team members
                   </div>
-                  
                   <button className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
                     Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4"   />
                   </button>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
             <div className="text-gray-500 text-lg">No research projects found matching your criteria.</div>
             <button
               onClick={() => {
-                setSearchTerm('');
-                setSelectedArea('all');
+                setSearchTerm("");
+                setSelectedArea("all");
               }}
               className="mt-4 text-blue-600 hover:text-blue-700 font-medium"
             >
@@ -400,4 +380,3 @@ export default function ResearchDevelopment() {
       </div>
     </div>
   );
-}

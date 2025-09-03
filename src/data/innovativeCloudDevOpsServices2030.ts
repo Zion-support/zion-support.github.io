@@ -60,9 +60,7 @@ const zionContact: unknown = {}
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 ;
-
 };
-
 export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{
 "
     id: "multi-cloud-orchestration-platform","
@@ -157,7 +155,6 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{
     featured: true,
     trending: true
   },
-
   {
 "
     id: "ai-powered-devops-automation","
@@ -252,7 +249,6 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{
     featured: true,
     trending: true
   },
-
   {
 "
     id: "edge-computing-orchestrator","
@@ -347,7 +343,6 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{
     featured: true,
     trending: true
   },
-
   {
 "
     id: "serverless-architecture-platform","
@@ -442,7 +437,6 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{
     featured: true,
     trending: true
   },
-
   {
 "
     id: "gitops-workflow-automation","
@@ -537,5 +531,4 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [{
     featured: true,;
     trending: true};
 ];
-
 export default innovativeCloudDevOpsServices2030}}"

@@ -1,16 +1,15 @@
-import {  import { innovativeServices2025 } from '../data/innovativeServices2025';
-import { motion, AnimatePresence  } from 'framer-motion';
-
+import React from "react"
+import {  import { innovativeServices2025 } from "../data/innovativeServices2025";
+import { motion, AnimatePresence  } from "framer-motion";
  params - Function parameters
  * @returns {*} Function return value
  */
 function EnhancedHeader () {export function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
-  
   useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -18,12 +17,9 @@ function EnhancedHeader () {export function EnhancedHeader() {
     // Cleanup function
   };
 }, []);, []);
-    
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
-
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll)}, []);
   const handleSearch = async(e: React.FormEvent) => {
 
     e.preventDefault();    if(searchQuery.trim()) {
@@ -31,11 +27,10 @@ function EnhancedHeader () {export function EnhancedHeader() {
       setIsSearching(true);
       try {
         await new Promise(resolve => setTimeout (resolve, 1000) ) ;
-        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim () ) }`} finally {
+        window.location.href = "/search?q=${encodeURIComponent(searchQuery.trim () ) }"} finally {
 
         setIsSearching(false)}    }
   };
-
   // Enhanced navigation with better organization
   
   // Enhanced services by category with better organization
@@ -43,21 +38,21 @@ function EnhancedHeader () {export function EnhancedHeader() {
   // Service categories for mega menu
   
   return ()    <>
-      {/* Matrix Rain Background */}
+      {/* comment */}
       <div  className="matrix -rain"></div>
-      {/* Enhanced Header */}
-      <motion.header`
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled'
-            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl''
-            : 'bg-transparent'`
-        }`}
+      {/* comment */}
+      <motion.header"
+        className={"fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled"
+            ? "bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl""
+            : "bg-transparent""
+        }"}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >"
         <div className="container mx-auto px-4">"
           <div className="flex items-center justify-between h-20">
-            {/* Enhanced Logo */}"
+            {/* comment */}"
             <Link to="/" className="flex items-center space-x-3 group">
               <motion.div"
                 className="relative"
@@ -65,8 +60,8 @@ function EnhancedHeader () {export function EnhancedHeader() {
                 whileTap={{ scale: 0.95 }}
               >"
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">"
-                  <Zap className="w-7 h-7 text-white"  />
-                </div>"                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg" />
+                  <Zap className="w-7 h-7 text-white"   />
+                </div>"                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-lg"   />
               </motion.div>"
               <div className="flex flex-col">"
                 <span className="text-3xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -77,22 +72,21 @@ function EnhancedHeader () {export function EnhancedHeader() {
                 </span>
               </div>
             </Link>
-
-            {/* Desktop Navigation */}"
+            {/* comment */}"
             <nav className="hidden xl:flex items-center space-x-8">
               {navigation.slice(0, 6).map(item => (
                 <Link
                   key={item.name}
-                  to={item.href}`
-                  className={`nav-link font-medium transition-all duration-300 ${item.current'
-                      ? 'text-cyan-400 border-b-2 border-cyan-400''
-                      : 'text-gray-300 hover:text-cyan-400'`
-                  }`}
+                  to={item.href}"
+                  className={"nav-link font-medium transition-all duration-300 ${item.current"
+                      ? "text-cyan-400 border-b-2 border-cyan-400""
+                      : "text-gray-300 hover:text-cyan-400""
+                  }"}
                 >
                   {item.name}
                 </Link>) ) }
 
-              {/* Enhanced Services Mega Menu */}"
+              {/* comment */}"
               <div className="relative group">
                 <button"
                   className="nav-link flex items-center space-x-2 font-medium text-gray-300 hover:text-cyan-400 transition-all duration-300"
@@ -100,8 +94,7 @@ function EnhancedHeader () {export function EnhancedHeader() {
                   onMouseLeave={() => setServicesDropdownOpen(false)}
                 >
                   <span>Services</span>"
-                  <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 duration-300"  />                </button>
-
+                  <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 duration-300"   />                </button>
                 <AnimatePresence>
                   {servicesDropdownOpen && (
                     <motion.div"
@@ -113,7 +106,7 @@ function EnhancedHeader () {export function EnhancedHeader() {
                       onMouseEnter={ () => setServicesDropdownOpen(true) }
                       onMouseLeave={ () => setServicesDropdownOpen(false) }
                     >
-                      {/* Featured Services */}"
+                      {/* comment */}"
                       <div className="mb-8">"
                         <h3 className="text-xl font-semibold text-cyan-400 mb-6 font-orbitron">
                           Featured Services
@@ -121,6 +114,7 @@ function EnhancedHeader () {export function EnhancedHeader() {
                         <div className="grid grid-cols-3 gap-6">
                           {services
                             .filter(s => s.featured)
+
                             .map(service => (
                               <Link
                                 key={service.name}
@@ -137,15 +131,15 @@ function EnhancedHeader () {export function EnhancedHeader() {
                                   {service.description}
                                 </p>
                                 {service.badge && (
-                                  <span`
-                                    className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === 'New''
-                                        ? 'bg-green-500/20 text-green-400''
-                                        : service.badge === 'Popular''
-                                          ? 'bg-blue-500/20 text-blue-400''
-                                          : service.badge === 'Featured''
-                                            ? 'bg-purple-500/20 text-purple-400''
-                                            : 'bg-cyan-500/20 text-cyan-400'`
-                                    }`}
+                                  <span"
+                                    className={"inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === "New""
+                                        ? "bg-green-500/20 text-green-400""
+                                        : service.badge === "Popular""
+                                          ? "bg-blue-500/20 text-blue-400""
+                                          : service.badge === "Featured""
+                                            ? "bg-purple-500/20 text-purple-400""
+                                            : "bg-cyan-500/20 text-cyan-400""
+                                    }"}
                                   >
                                     {service.badge}
                                   </span>
@@ -154,14 +148,13 @@ function EnhancedHeader () {export function EnhancedHeader() {
                             ))}
                         </div>
                       </div>
-
-                      {/* Service Categories Grid */}"
+                      {/* comment */}"
                       <div className="grid grid-cols-2 gap-8">
                         {serviceCategories.map(category => (
                           <div key={category.name}>"
                             <div className="flex items-center space-x-3 mb-4">
-                              <div`
-                                className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}
+                              <div"
+                                className={"w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center"}
                               >"
                                 <category.icon className="w-5 h-5 text-white" />
                               </div>"
@@ -181,13 +174,13 @@ function EnhancedHeader () {export function EnhancedHeader() {
                                     {service.name}
                                   </span>
                                   {service.badge && (
-                                    <span`
-                                      className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === 'New''
-                                          ? 'bg-green-500/20 text-green-400''
-                                          : service.badge === 'Popular''
-                                            ? 'bg-blue-500/20 text-blue-400''
-                                            : 'bg-cyan-500/20 text-cyan-400'`
-                                      }`}
+                                    <span"
+                                      className={"ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === "New""
+                                          ? "bg-green-500/20 text-green-400""
+                                          : service.badge === "Popular""
+                                            ? "bg-blue-500/20 text-blue-400""
+                                            : "bg-cyan-500/20 text-cyan-400""
+                                      }"}
                                     >
                                       {service.badge}
                                     </span>
@@ -200,13 +193,12 @@ function EnhancedHeader () {export function EnhancedHeader() {
                                   className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group"
                                 >
                                   View All {category.name}"
-                                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"  />                                </Link>
+                                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"   />                                </Link>
                               )}
                             </div>
                           </div>) ) }
                       </div>
-
-                      {/* View All Services Link */}"
+                      {/* comment */}"
                       <div className="mt-8 pt-6 border-t border-gray-700">"
                         <div className="flex items-center justify-between">
                           <Link"
@@ -214,7 +206,7 @@ function EnhancedHeader () {export function EnhancedHeader() {
                             className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium group text-lg"
                           >
                             View All Innovative Services 2025"
-                            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />
+                            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"   />
                           </Link>"                          <div className="flex items-center space-x-4 text-sm text-gray-400">
                             <span>50+ Services Available</span>
                             <span>•</span>
@@ -227,33 +219,30 @@ function EnhancedHeader () {export function EnhancedHeader() {
                     </motion.div>) }
                 </AnimatePresence>
               </div>
-
-              {/* Additional Navigation Items */}
+              {/* comment */}
               {navigation.slice(6, 10).map(item => (
                 <Link
                   key={item.name}
-                  to={item.href}`
-                  className={`nav-link font-medium transition-all duration-300 ${item.current'
-                      ? 'text-cyan-400 border-b-2 border-cyan-400''
-                      : 'text-gray-300 hover:text-cyan-400'`
+                  to={item.href}"
+                  className={"nav-link font-medium transition-all duration-300 ${item.current"
+                      ? "text-cyan-400 border-b-2 border-cyan-400""
+                      : "text-gray-300 hover:text-cyan-400""
                   }`}
                 >
                   {item.name}
                 </Link>) ) }
             </nav>
-
-            {/* Right Side Actions */}"
+            {/* comment */}"
             <div className="hidden xl:flex items-center space-x-6">
-              {/* Enhanced Search */}"
+              {/* comment */}"
               <form onSubmit={handleSearch} className="relative">"
                 <div className="relative">"
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"   />
                   <input"
                     type="text"
                     placeholder="Search services..."                    value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}"
-                    className="w-64 pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
-                  />
+                    className="w-64 pl-10 pr-4 py-2 bg-black/30 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" />
                   {isSearching && ("
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2">"
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-cyan-400"></div>
@@ -276,7 +265,7 @@ function EnhancedHeader () {export function EnhancedHeader() {
                   {link.label}
                   {link.submenu && (
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"   />
                     </svg>
                   )}
                 </a>
@@ -357,17 +346,21 @@ export function EnhancedHeader() {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState()"
   const [searchQuery, setSearchQuery] = useState(")
-}
+
+
   const [scrolled, setScrolled] = useState(false)
-}
+
+
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-}
+
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)}
 
     window.addEventListener()
-}
+
+
     return () => window.removeEventListener("scroll", handleScroll)}, []);react"react - router-dom",framer-motion
   Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
   Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
@@ -377,12 +370,15 @@ export function EnhancedHeader() {
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react"
 export: function EnhancedHeader() {",
   const [searchQuery, setSearchQuery] = useState("")
-}
+
+
       setScrolled(window.scrollY: > 50)},
     window.addEventListener()
-}
+
+
     return: () => window.removeEventListener("scroll", handleScroll)}, [])
-}
+
+
     // comment
   PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from &apos;lucide-react";&apos;&apos
 export function EnhancedHeader() {}"""""""
@@ -390,21 +386,27 @@ export function EnhancedHeader() {}"""""""
 ""
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,
   const router = useRouter()
-}
+
+
   const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos
   const [activeDropdown, setActiveDropdown] = useState<;<;<string | null>(null)
-}
+
+
   useEffect(() => {}
 
     window.addEventListener(&apos;scroll&apos, handleScroll)
-}
+
+
     return () => window.removeEventListener(&apos;scroll&apos, handleScroll)}, [])
-}
+
+
     // comment
     setIsMenuOpen(false)
-}
+
+
     setActiveDropdown(null)}, [location.pathname])
-}
+
+
   const handleSearch = async (e: React.FormEvent) =>  {,
     e.preventDefault(),
     if: (searchQuery.trim()) {",,
@@ -461,7 +463,8 @@ export function EnhancedHeader() {}"""""""
 
 export: const EnhancedHeader: React.FC: = () => {,
   const [mobileOpen, setMobileOpen] = useState()
-}
+
+
   const navLinks = []
   // comment
       title: "AI & Machine Learning",
@@ -547,7 +550,8 @@ icon: Sparkles,"
 color: "from-yellow-500 to-orange-500",
     setActiveDropdown(null)}, [location.pathname]);&apos
     setMobileMenuOpen(false)
-}
+
+
     setActiveDropdown(null)}, []);"
       router.push("/search?q = "${encodeURIComponent(searchQuery.trim())}")}"
   const navigation = []
@@ -658,7 +662,8 @@ solutions: [ { name: "AI Solutions", href: "/ai-solutions", description: "Artifi
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
 
   const [servicesOpen, setServicesOpen] = useState(false)
-}
+
+
   const navLinks = []"
 } { label: "Solutions", href: "/solutions" } { label: "Enterprise", href: "/enterprise" } { label: "About", href: "/about" } { label: "Case Studies", href: "/case-studies" } { label: "Careers", href: "/careers" },"
   const navLinks = []} { title: "Technology Solutions","
@@ -668,11 +673,13 @@ solutions: [ { name: "AI Solutions", href: "/ai-solutions", description: "Artifi
     { name: "Blog", href: "/blog", description: "Latest insights and updates" } { name: "News", href: "/news", description: "Company announcements" } { name: "Press", href: "/press", description: "Media resources" } { name: "Webinars", href: "/webinars", description: "Educational sessions" } { name: "White Papers", href: "/white - papers", description: "In-depth research" } { name: "Documentation", href: "/documentation", description: "Technical guides" }],
     { name: "Help Center", href: "/help", description: "Find answers and solutions" } { name: "FAQ", href: "/faq", description: "Frequently asked questions" } { name: "Support", href: "/support", description: "Technical assistance" } { name: "Training", href: "/training", description: "Skill development programs" } { name: "Contact Support", href: "/contact", description: "Get in touch with our team" } { name: "Status Page", href: "/status", description: "Service availability" }]
   const [mobileOpen, setMobileOpen] = useState()
-}
+
+
 export const EnhancedHeader: React.FC = () => {}
 
   const;const;const [mobileOpen, setMobileOpen] = useState(false)
-}
+
+
     { label: &apos,Home&apos, href: &apos,/&apos} { label: &apos,Services&apos, href: &apos,/services&apos} { label: &apos,Solutions&apos, href: &apos,/solutions&apos} { label: &apos,Enterprise&apos, href: &apos,/enterprise&apos} { label: &apos,Request Quote&apos, href: &apos,/request-quote&apos} { label: &apos,Case Studies&apos, href: &apos,/case-studies&apos} { label: &apos,Careers&apos, href: &apos,/careers&apos} { label: &apos,Contact&apos, href: &apos,/contact&apos}
 
   return(&apos;&apos;"
@@ -705,7 +712,7 @@ export const EnhancedHeader: React.FC = () => {}
             <a href="/services/ai" className="hidden lg: inline-flex bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">Explore AI</a>",
           <button aria-label="Toggle navigation" onClick="{()" => setMobileOpen((v) => !v)} className="md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">"
             <svg xmlns="http:// comment
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16"  />"
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16"   />"
             aria-label="Toggle: navigation",","
             className="md: hidden: inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900: hover:bg-gray-100",
           >""
@@ -718,15 +725,14 @@ aria-label = "Toggle navigation>
             className="&apos;md: " hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100&apos,>
           >&apos;&apos,"
             <svg xmlns="&apos,htt,p: " // comment
-              <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos,round&apos," strokeWidth="{2}" d="&apos;M4" 6h16M4 12h16M4 18h16&apos;       />&apos;"
+              <path strokeLinecap="&apos;round&apos;" strokeLinejoin="&apos,round&apos," strokeWidth="{2}" d="&apos;M4" 6h16M4 12h16M4 18h16&apos;          />&apos;"
             className = "md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100""
             <svg xmlns="http:// comment
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16"  />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="{2}" d="M4 6h16M4 12h16M4 18h16"   />
             </svg>
           </button>
         </div>
       </div>
-
       {mobileOpen && (
         <div className="md:hidden border-t border-gray-200 bg-white">
           <div className="px-4 py-3 space-y-2">

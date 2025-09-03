@@ -62,19 +62,18 @@
     "Edge Computing & IoT Integration",;""""
     "Blockchain & Distributed Systems",;"    "Quantum Computing Solutions";
   ];
-
   return()
+
     <>"""
       <SEO """"
         title = "Comprehensive AI Services Showcase 2025 - Zion Tech Group""""
         description="Discover our comprehensive portfolio of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions.""""
         canonical="/comprehensive-ai-services-showcase-2025""""
-        url="https://ziontechgroup.com/comprehensive-ai-services-showcase-2025"""
-       />"""
+        url="https://ziontechgroup.com/comprehensive-ai-services-showcase-2025"""   />"""
 "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">"""
-        {/* Hero Section */}""""
-        <section className="relative py-20 px-6 overflow-hidden">'"'"""
-          <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>""""
+        {/* comment */}""""
+        <section className="relative py-20 px-6 overflow-hidden">""""""
+          <div className="absolute inset-0 bg-[url("/images/grid-pattern.svg")] bg-center opacity-10"></div>""""
           <div className="relative z-10 max-w-7xl mx-auto text-center">
             <motion.div;
               initial = {}
@@ -112,7 +111,7 @@
           </div>
         </section>
 """
-        {/* AI Services Grid */}""""
+        {/* comment */}""""
         <section className="py-20 px-6">;""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -178,11 +177,10 @@
                     <div className="grid grid-cols-2 gap-2">"""
                       {service.features.map((feature, featureIndex) => (""""
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">""""
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                          {feature}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"   />                          {feature}
                         </div>) ) }
                     </div>
                   </div>
-
                   <Link"""
                     to={service.link}""""
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-center block"""
@@ -193,7 +191,7 @@
           </div>
         </section>
 """
-        {/* Industry Solutions */}""""
+        {/* comment */}""""
         <section className="py-20 px-6 bg-black/30">;""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -249,7 +247,7 @@
           </div>
         </section>
 """
-        {/* Advanced Technologies */}""""
+        {/* comment */}""""
         <section className="py-20 px-6">;""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -294,14 +292,14 @@
 }}""""
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center""""
 """"
-                  <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3"  />"                  <p className="text-white font-medium text-sm">{tech}</p>
+                  <Brain className="w-8 h-8 text-cyan-400 mx-auto mb-3"   />"                  <p className="text-white font-medium text-sm">{tech}</p>
                 </motion.div>;
               ))}
             </div>
           </div>
         </section>
 """
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <section className="py-20 px-6 bg-gradient-to-r from-cyan-600 to-blue-700">;""""
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2;
@@ -366,7 +364,7 @@
           </div>
         </section>
 """
-        {/* Contact Information */}""""
+        {/* comment */}""""
         <section className="py-20 px-6">;""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -403,7 +401,7 @@
                 transition={{ duration: 0.6 }}""""
                 className="text-center""""
 """"
-                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />""""
+                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4"   />""""
                 <h3 className="text-xl font-semibold mb-2 text-white">Phone</h3>"                <p className="text-gray-300">+1 302 464 0950</p>
               </motion.div>
 
@@ -423,7 +421,7 @@
 }}""""
                 className="text-center""""
 """"
-                <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />""""
+                <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4"   />""""
                 <h3 className="text-xl font-semibold mb-2 text-white">Email</h3>"                <p className="text-gray-300">kleber@ziontechgroup.com</p>
               </motion.div>
 
@@ -443,11 +441,10 @@
 }}""""
                 className="text-center""""
 """"
-                <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4"  />""""
+                <Globe className="w-12 h-12 text-cyan-400 mx-auto mb-4"   />""""
                 <h3 className="text-xl font-semibold mb-2 text-white">Website</h3>"                <p className="text-gray-300">https://ziontechgroup.com</p>
               </motion.div>
             </div>
-
             <motion.div;
               initial = {}
   { opacity: 0,
@@ -466,7 +463,7 @@
 """"
               <h3 className="text-2xl font-semibold mb-4 text-white">Address</h3>""""
               <p className="text-gray-300">
-                364 E Main St STE 1008<br />
+                364 E Main St STE 1008<br  />
                 Middletown DE 19709;
               </p>
             </motion.div>;
@@ -475,13 +472,7 @@
       </div>;
     </>;
   );
-}
-
-
 export { ComprehensiveAIServicesShowcase2025 };
-
 export { ComprehensiveAIServicesShowcase2025 };
-
 export { ComprehensiveAIServicesShowcase2025 };
-
 export { ComprehensiveAIServicesShowcase2025 };

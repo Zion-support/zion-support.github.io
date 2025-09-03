@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 ;
 ;
 ;import { Building, Users, BarChart3, MessageSquare, Calendar, FileText, CreditCard, Globe, TrendingUp, CheckCircle, Star, Phone, Mail, MapPin, ExternalLink, BarChart, Shield, Zap } from "lucide-react";
@@ -10,7 +10,7 @@ export default function MicroSAASServicesPage() {}
             id: "crm-saas",""""
             title: "ZionCRM Pro",""""
             description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.",""""
-            icon: <Users className="h-8 w-8 text-blue-500"/>,"""
+            icon: <Users className="h-8 w-8 text-blue-500"   />,"""
             price: 29,""""
             currency: "$","""
             features: [""""
@@ -42,7 +42,7 @@ export default function MicroSAASServicesPage() {}
             id: "project-management",""""
             title: "ZionProject Hub",""""
             description: "Project management platform with task tracking, team collaboration, and resource management.",""""
-            icon: <Calendar className="h-8 w-8 text-green-500"/>,"""
+            icon: <Calendar className="h-8 w-8 text-green-500"   />,"""
             price: 19,""""
             currency: "$","""
             features: [""""
@@ -74,7 +74,7 @@ export default function MicroSAASServicesPage() {}
             id: "analytics-platform",""""
             title: "ZionAnalytics",""""
             description: "Business intelligence platform with real-time dashboards, reporting, and data visualization.",""""
-            icon: <BarChart3 className="h-8 w-8 text-purple-500"/>,"""
+            icon: <BarChart3 className="h-8 w-8 text-purple-500"   />,"""
             price: 39,""""
             currency: "$","""
             features: [""""
@@ -104,7 +104,7 @@ export default function MicroSAASServicesPage() {}
             id: "communication - tool",
             title: "ZionChat",
             description: "Team communication platform with chat, video calls, and file sharing capabilities.",
-            icon: <MessageSquare className="h-8 w-8 text-orange -500"/>,
+            icon: <MessageSquare className="h-8 w-8 text-orange -500"   />,
             price: 15,
             currency: "$",
             features: ["Team Chat",
@@ -131,7 +131,7 @@ export default function MicroSAASServicesPage() {}
             id: "document - management",
             title: "ZionDocs",
             description: "Document management system with version control, collaboration, and secure storage.",
-            icon: <FileText className="h-8 w-8 text-cyan -500"/>,
+            icon: <FileText className="h-8 w-8 text-cyan -500"   />,
             price: 25,
             currency: "$",
             features: ["Document Storage",
@@ -158,7 +158,7 @@ export default function MicroSAASServicesPage() {}
             id: "payment - processor",
             title: "ZionPay",
             description: "Payment processing solution with multiple payment methods, invoicing, and subscription management.",
-            icon: <CreditCard className="h-8 w-8 text-emerald -500"/>,
+            icon: <CreditCard className="h-8 w-8 text-emerald -500"   />,
             price: 0,
             currency: "$",
             features: ["Multiple Payment Methods",
@@ -185,7 +185,7 @@ export default function MicroSAASServicesPage() {}
             id: "marketing - automation",
             title: "ZionMarketing",
             description: "Marketing automation platform with email campaigns, lead nurturing, and conversion tracking.",
-            icon: <BarChart className="h-8 w-8 text-pink -500"/>,
+            icon: <BarChart className="h-8 w-8 text-pink -500"   />,
             price: 49,
             currency: "$",
             features: ["Email Campaigns",
@@ -212,7 +212,7 @@ export default function MicroSAASServicesPage() {}
             id: "inventory - management",
             title: "ZionInventory",
             description: "Inventory management system with stock tracking, order management, and supplier management.",
-            icon: <Building className="h-8 w-8 text-indigo -500"/>,
+            icon: <Building className="h-8 w-8 text-indigo -500"   />,
             price: 35,
             currency: "$",
             features: ["Stock Tracking",
@@ -239,7 +239,7 @@ export default function MicroSAASServicesPage() {}
             id: "hr - management",
             title: "ZionHR",
             description: "Human resources management platform with employee onboarding, time tracking, and performance management.",
-            icon: <Users className="h-8 w-8 text-teal -500"/>,
+            icon: <Users className="h-8 w-8 text-teal -500"   />,
             price: 45,
             currency: "$",
             features: ["Employee Onboarding",
@@ -266,7 +266,7 @@ export default function MicroSAASServicesPage() {}
             id: "accounting - software",
             title: "ZionBooks",
             description: "Cloud - based accounting software with invoicing, expense tracking, and financial reporting.",
-            icon: <BarChart3 className="h-8 w-8 text-amber -500"/>,
+            icon: <BarChart3 className="h-8 w-8 text-amber -500"   />,
             price: 30,
             currency: "$",
             features: ["Invoicing",
@@ -293,7 +293,7 @@ export default function MicroSAASServicesPage() {}
             id: "ecommerce - platform",
             title: "ZionShop",
             description: "E - commerce platform with online store creation, payment processing, and inventory management.",
-            icon: <Globe className="h-8 w-8 text-red -500"/>,
+            icon: <Globe className="h-8 w-8 text-red -500"   />,
             price: 40,
             currency: "$",
             features: ["Online Store Builder",
@@ -320,7 +320,7 @@ export default function MicroSAASServicesPage() {}
             id: "learning - platform",
             title: "ZionAcademy",
             description: "Online learning management system with course creation, student management, and progress tracking.",
-            icon: <FileText className="h-8 w-8 text-violet -500"/>,
+            icon: <FileText className="h-8 w-8 text-violet -500"   />,
             price: 55,
             currency: "$",
             features: ["Course Creation",
@@ -347,7 +347,7 @@ export default function MicroSAASServicesPage() {}
             id: "ai - content - generator",
             title: "ZionAI Writer",
             description: "AI - powered content generation platform for blogs, marketing copy, and creative writing.",
-            icon: <BarChart3 className="h-8 w-8 text-rose -500"/>,
+            icon: <BarChart3 className="h-8 w-8 text-rose -500"   />,
             price: 39,
             currency: "$",
             features: ["AI Content Generation",
@@ -374,7 +374,7 @@ export default function MicroSAASServicesPage() {}
             id: "blockchain - wallet",
             title: "ZionWallet",
             description: "Secure cryptocurrency wallet with DeFi integration, staking, and portfolio management.",
-            icon: <Globe className="h-8 w-8 text-emerald -500"/>,
+            icon: <Globe className="h-8 w-8 text-emerald -500"   />,
             price: 0,
             currency: "$",
             features: ["Multi - chain Support",
@@ -401,7 +401,7 @@ export default function MicroSAASServicesPage() {}
             id: "quantum - computing",
             title: "ZionQuantum",
             description: "Quantum computing platform for complex problem solving and optimization.",
-            icon: <BarChart3 className="h-8 w-8 text-indigo -500"/>,
+            icon: <BarChart3 className="h-8 w-8 text-indigo -500"   />,
             price: 299,
             currency: "$",
             features: ["Quantum Algorithms",
@@ -428,7 +428,7 @@ export default function MicroSAASServicesPage() {}
             id: "iot - platform",
             title: "ZionIoT Hub",
             description: "Internet of Things platform for device management, data collection, and automation.",
-            icon: <Building className="h-8 w-8 text-cyan -500"/>,
+            icon: <Building className="h-8 w-8 text-cyan -500"   />,
             price: 45,
             currency: "$",
             features: ["Device Management",
@@ -455,7 +455,7 @@ export default function MicroSAASServicesPage() {}
             id: "cybersecurity - suite",
             title: "ZionShield",
             description: "Comprehensive cybersecurity platform with threat detection, vulnerability scanning, and incident response.",
-            icon: <Shield className="h-8 w-8 text-red -500"/>,
+            icon: <Shield className="h-8 w-8 text-red -500"   />,
             price: 89,
             currency: "$",
             features: ["Threat Detection",
@@ -482,7 +482,7 @@ export default function MicroSAASServicesPage() {}
             id: "data - visualization",
             title: "ZionViz",
             description: "Advanced data visualization platform with interactive charts, dashboards, and reporting tools.",
-            icon: <BarChart3 className="h-8 w-8 text-purple -500"/>,
+            icon: <BarChart3 className="h-8 w-8 text-purple -500"   />,
             price: 49,
             currency: "$",
             features: ["Interactive Charts",
@@ -509,7 +509,7 @@ export default function MicroSAASServicesPage() {}
             id: "workflow-automation",
             title: "ZionFlow",
             description: "No - code workflow automation platform for business process optimization and task automation.",
-            icon: <Zap className="h-8 w-8 text-yellow-500"/>,
+            icon: <Zap className="h-8 w-8 text-yellow-500"   />,
             price: 35,
             currency: "$",
             features: ["Drag & Drop Builder",
@@ -536,7 +536,7 @@ export default function MicroSAASServicesPage() {}
             id: "supply - chain",
             title: "ZionSupply",
             description: "End - to - end supply chain management platform with real - time tracking and optimization.",
-            icon: <Building className="h-8 w-8 text-blue -500"/>,
+            icon: <Building className="h-8 w-8 text-blue -500"   />,
             price: 69,
             currency: "$",
             features: ["Inventory Tracking",
@@ -563,7 +563,7 @@ export default function MicroSAASServicesPage() {}
             id: "customer - support",
             title: "ZionSupport",
             description: "AI - powered customer support platform with chatbots, ticket management, and knowledge base.",
-            icon: <MessageSquare className="h-8 w-8 text-green -500"/>,
+            icon: <MessageSquare className="h-8 w-8 text-green -500"   />,
             price: 29,
             currency: "$",
             features: ["AI Chatbots",
@@ -633,13 +633,13 @@ export default function MicroSAASServicesPage() {}
         // Sort services
         filtered.sort((a, b) => {
             switch(sortBy) {
-                case 'rating':
+                case "rating":
                     return (b.rating || 0) - (a.rating || 0) ;
-                case 'price':
+                case "price":
                     return a.price - b.price;
-                case 'aiScore':
+                case "aiScore":
                     return b.aiScore - a.aiScore;
-                case 'newest':
+                case "newest":
                     return new Date(b.createdAt) .getTime () - new Date(a.createdAt) .getTime () ;
                 default:
                     return 0;
@@ -648,31 +648,31 @@ export default function MicroSAASServicesPage() {}
         setFilteredServices(filtered) ;
     }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
     const ServiceCard = ({ service }) => (<div className="group relative bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate - dark / 50 border border-zion - blue - light / 20 rounded-2xl p - 6 hover:border-zion - purple / 50 transition - all duration - 500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion -purple / 20">
-      {/* Featured Badge */}
+      {/* comment */}
       {service.featured && (<div className="absolute - top - 3 -right - 3 bg-gradient - to - r from - zion - purple to - zion - cyan text-white text-xs font - bold px-3 py-1 rounded-full">
           Featured
         </div>) }
 
-      {/* Service Image */}
+      {/* comment */}
       <div className="relative mb-6 overflow-hidden rounded-xl">
-        <img src={service.images[0]} alt={service.title} className="w-full h-48 object - cover group - hover:scale - 110 transition - transform duration -500"/>
-        <div className="absolute inset - 0 bg-gradient - to - t from - black / 60 to -transparent"/>
+        <img src={service.images[0]} alt={service.title} className="w-full h-48 object - cover group - hover:scale - 110 transition - transform duration -500"   />
+        <div className="absolute inset - 0 bg-gradient - to - t from - black / 60 to -transparent"   />
         <div className="absolute bottom - 3 left - 3 right -3">
           <div className="flex items - center justify -between">
             <Badge variant="secondary" className="bg-zion - purple / 80 text-white">
               {service.category}
             </Badge>
             <div className="flex items - center space - x-1 text-white">
-              <Star className="w-4 h-4 fill - yellow-400 text-yellow-400"/>
+              <Star className="w-4 h-4 fill - yellow-400 text-yellow-400"   />
               <span className="text-sm font -medium">{service.rating}</span>
               <span className="text-xs text-zion - slate -light"> ({service.reviewCount}) </span>
             </div>
           </div>
         </div>
-      </div > import React, {useState} from 'react';
+      </div > import React, {useState} from "react";
             SERVICE_CATEGORIES,
             type} MicroSaasService
-} from '@/data / microSaasServices';
+} from "@/data / microSaasServices";
             Clock,
             Users,
             Zap,
@@ -685,28 +685,23 @@ export default function MicroSAASServicesPage() {}
             FileText,
             MessageCircle,
             ArrowRight,
-            Sparkles} from 'lucide - react';
-
-  const [selectedCategory, setSelectedCategory] = useState < string> ('all') ;
-  const [searchQuery, setSearchQuery] = useState < string> ('') ;
-
+            Sparkles} from "lucide - react";
+  const [selectedCategory, setSelectedCategory] = useState < string> ("all") ;
+  const [searchQuery, setSearchQuery] = useState < string> ("") ;
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
     const matchesSearch = service.title.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
                          service.tags.some(tag => tag.toLowerCase () .includes(searchQuery.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch;
   }) ;
-
-  const formatPrice = (price: number, currency: string, model: string) => { /* empty */ }
-    if(model === 'monthly') return `${currency}${price}/month`;
-    if(model === 'yearly') return `${currency}${price}/year`;
-    if(model === 'one - time') return `${currency}${price}`;
-    return `${currency}${price}`;
+  const formatPrice = (price: number, currency: string, model: string) => { /* comment */ }
+    if(model === "monthly") return "${currency}${price}/month";
+    if(model === "yearly") return "${currency}${price}/year";
+    if(model === "one - time") return "${currency}${price}";
+    return "${currency}${price}";
   };
-
   const ServiceCard = ({service}: {service}: MicroSaasService }) => (<Card className="group relative overflow-hidden border-0 bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate / 50 backdrop - blur - sm hover:from - zion - blue - dark / 70 hover:to - zion - slate / 70 transition - all duration - 500 hover:scale - 105 hover:shadow-2xl hover:shadow-zion -purple / 20">
       <div className="absolute inset - 0 bg-gradient - to - r from - zion - purple / 5 to - zion - cyan / 5 opacity - 0 group - hover:opacity - 100 transition - opacity duration -500"></div>
-
       <CardHeader className="relative z -10">
         <div className="flex items - start justify - between mb-4">
           <div className="flex -1">
@@ -718,7 +713,6 @@ export default function MicroSAASServicesPage() {}
             </CardDescription>
           </div>
         </div>
-
         <div className="flex items - center gap-2 mb-3">
           <Badge variant="secondary" className="bg-zion - purple / 20 text-zion - cyan border-zion -purple / 30">
             {service.category}
@@ -728,9 +722,8 @@ export default function MicroSAASServicesPage() {}
           </Badge>
         </div>
       </CardHeader>
-
       <CardContent className="relative z - 10 space - y-4">
-        {/* Pricing */}
+        {/* comment */}
         <div className="flex items - center justify - between p - 3 bg-zion - blue / 20 rounded-lg border border-zion - blue -light / 20">
           <div>
             <div className="text-2xl font - bold text-white">
@@ -746,16 +739,15 @@ export default function MicroSAASServicesPage() {}
             </Badge>
           </div>
         </div>
-
-        {/* Features */}
+        {/* comment */}
         <div>
           <h4 className="text-sm font - semibold text-zion - cyan mb-2">Key Features</h4>
           <div className="grid grid - cols - 2 gap-1">
             {service.features.slice(0, 4) .map((feature, index) => (<div key={index} className="flex items - center gap-2 text-xs text-zion - slate -light">
-                <CheckCircle className="w-3 h-3 text-zion -cyan"/>
+                <CheckCircle className="w-3 h-3 text-zion -cyan"   />
                 <span className="truncate">{feature}</span>
               </div>) ) }
-      {/* Service Info */}
+      {/* comment */}
       <div className="space - y-4">
         <div>
           <h3 className="text-xl font - bold text-white mb-2 group - hover:text-zion - cyan transition -colors">
@@ -765,11 +757,10 @@ export default function MicroSAASServicesPage() {}
             {service.description}
           </p>
         </div>
-
-        {/* AI Score */}
+        {/* comment */}
         <div className="flex items - center justify -between">
           <div className="flex items - center space - x-2">
-            <Zap className="w-4 h-4 text-zion -cyan"/>
+            <Zap className="w-4 h-4 text-zion -cyan"   />
             <span className="text-sm text-zion - slate -light">AI Score:</span>
             <span className="text-zion - cyan font -bold">{service.aiScore}%</span>
           </div>
@@ -777,20 +768,18 @@ export default function MicroSAASServicesPage() {}
             {service.subcategory}
           </Badge>
         </div>
-
-        {/* Pricing */}
+        {/* comment */}
         <div className="flex items - center justify -between">
           <div>
             <span className="text-2xl font - bold text-white">{service.currency}{service.price}</span>
-            <span className="text-zion - slate - light text-sm ml-1">/{service.pricingModel === 'monthly' ? 'mo' : service.pricingModel === 'yearly' ? 'year' : 'incident'}</span>
+            <span className="text-zion - slate - light text-sm ml-1">/{service.pricingModel === "monthly" ? "mo" : service.pricingModel === "yearly" ? "year" : "incident"}</span>
           </div>
           <div className="text-right">
             <p className="text-xs text-zion - slate -light">Market Price:</p>
             <p className="text-sm text-zion - cyan font -medium">{service.marketPrice}</p>
           </div>
         </div>
-
-        {/* Features Preview */}
+        {/* comment */}
         <div className="space - y-2">
           <p className="text-sm font - medium text-white">Key Features:</p>
           <div className="flex flex - wrap gap-2">
@@ -802,19 +791,17 @@ export default function MicroSAASServicesPage() {}
               </Badge>) }
           </div>
         </div>
-
-        {/* Benefits */}
+        {/* comment */}
         <div className="space - y-2">
           <p className="text-sm font - medium text-white">Benefits:</p>
           <div className="space - y-1">
             {service.benefits.slice(0, 2) .map((benefit, index) => (<div key={index} className="flex items - start space - x-2">
-                <CheckCircle className="w-4 h-4 text-zion - cyan mt-0.5 flex - shrink -0"/>
+                <CheckCircle className="w-4 h-4 text-zion - cyan mt-0.5 flex - shrink -0"   />
                 <span className="text-xs text-zion - slate -light">{benefit}</span>
               </div>) ) }
           </div>
         </div>
-
-        {/* Target Audience */}
+        {/* comment */}
         <div>
           <p className="text-sm font - medium text-white mb-2">Perfect for:</p>
           <div className="flex flex - wrap gap-2">
@@ -823,29 +810,27 @@ export default function MicroSAASServicesPage() {}
               </Badge>) ) }
           </div>
         </div>
-
-        {/* Action Buttons */}
+        {/* comment */}
         <div className="flex space - x-3 pt -4">
           <Button asChild className="flex - 1 bg-gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white">
             <Link to={service.website} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="w-4 h-4 mr-2"/>
+              <ExternalLink className="w-4 h-4 mr-2"   />
               Learn More
             </Link>
           </Button>
           <Button asChild variant="outline" className="border-zion - cyan text-zion - cyan hover:bg-zion - cyan hover:text-white">
-            <a href={`mailto:${service.contactEmail}?subject = Inquiry about ${service.title}`}>
-              <Mail className="w-4 h-4 mr-2"/>
+            <a href={"mailto:${service.contactEmail}?subject = Inquiry about ${service.title}"}>
+              <Mail className="w-4 h-4 mr-2"   />
               Contact
             </a>
           </Button>
         </div>
       </div>
     </div>) ;
-
   return (<div className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - blue - dark to - zion - slate -dark">
-      <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation.Transform your business with cutting - edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / micro - saas - services"/>
+      <SEO title="Micro SAAS Services - Zion Tech Group" description="Discover innovative micro SAAS services and solutions in AI, IT, and business automation.Transform your business with cutting - edge technology." keywords="micro SAAS, AI services, IT solutions, business automation, Zion Tech Group" canonical="https://ziontechgroup.com / micro - saas - services"   />
 
-      {/* Hero Section */}
+      {/* comment */}
       <div className="relative overflow-hidden bg-gradient - to - r from - zion - purple / 20 to - zion - cyan / 20 py-20">
         <div className="absolute inset - 0 bg-gradient - to - r from - zion - purple / 10 to - zion - cyan / 10 opacity -20"></div>
         <div className="container mx - auto px-4 text-center relative z -10">
@@ -857,51 +842,48 @@ export default function MicroSAASServicesPage() {}
             our micro SAAS services help you grow without breaking the bank.</p>
           <div className="flex flex - wrap justify - center gap-4">
             <Button className="bg-gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
+              <TrendingUp className="h-5 w-5 mr-2"   />
               Explore SAAS Solutions
             </Button>
             <Button className="border-zion - cyan text-zion - cyan hover:bg-zion - cyan / 10 px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
+              <TrendingUp className="h-5 w-5 mr-2"   />
               Start Free Trial
             </Button>
           </div>
         </div>
       </div>
-
-      {/* Contact Info Banner */}
+      {/* comment */}
       <div className="bg-zion - blue - dark / 80 border-b border-zion - blue -light">
         <div className="container mx - auto px-4 py-6">
           <div className="flex flex - wrap items - center justify - center gap-8 text-center">
             <div className="flex items - center gap-3">
-              <Phone className="h-5 w-5 text-zion -cyan"/>
+              <Phone className="h-5 w-5 text-zion -cyan"   />
               <span className="text-white">+1 302 464 0950</span>
             </div>
             <div className="flex items - center gap-3">
-              <Mail className="h-5 w-5 text-zion -cyan"/>
+              <Mail className="h-5 w-5 text-zion -cyan"   />
               <span className="text-white">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items - center gap-3">
-              <MapPin className="h-5 w-5 text-zion -cyan"/>
+              <MapPin className="h-5 w-5 text-zion -cyan"   />
               <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Category Filter */}
+      {/* comment */}
       <div className="py-8 bg-zion - blue -dark / 50">
         <div className="container mx - auto px-4">
           <div className="flex flex - wrap justify - center gap-3">
-            {categories.map ( (category) => (<Button key={category} onClick={ () => setSelectedCategory(category) } className={`${selectedCategory === category
+            {categories.map ( (category) => (<Button key={category} onClick={ () => setSelectedCategory(category) } className={"${selectedCategory === category
                 ? "bg-zion - purple text-white"
-                : "border-zion - cyan text-zion - cyan hover:bg-zion - cyan / 10"}`}>
+                : "border-zion - cyan text-zion - cyan hover:bg-zion - cyan / 10"}"}>
                 {category}
               </Button>) ) }
           </div>
         </div>
       </div>
-
-      {/* Services Grid */}
+      {/* comment */}
       <div className="py-16">
         <div className="container mx - auto px-4">
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">
@@ -927,7 +909,7 @@ export default function MicroSAASServicesPage() {}
                     <p className="text-sm text-zion - slate - light mb-3">{service.details}</p>
                     <div className="grid grid - cols - 2 gap-2 mb-4">
                       {service.features.slice(0, 4) .map((feature, index) => (<div key={index} className="flex items - center text-xs text-zion -cyan">
-                          <CheckCircle className="w-3 h-3 mr-2"/>
+                          <CheckCircle className="w-3 h-3 mr-2"   />
                           {feature}
                         </div>) ) }
                     </div>
@@ -945,23 +927,23 @@ export default function MicroSAASServicesPage() {}
                       <span className="text-zion - cyan font -semibold">{service.freeTrial}</span>
                     </div>
                     <div className="flex items - center justify - center gap-1 mb-3">
-                      {[...Array(5) ].map((_, i) => (<Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill - current' : 'text-zion - slate - light'}`}/>) ) }
+                      {[...Array(5) ].map((_, i) => (<Star key={i} className={"w-4 h-4 ${i < Math.floor(service.rating) ? "text-yellow-400 fill - current" : "text-zion - slate - light"}"}   />) ) }
                       <span className="text-sm text-zion - slate - light ml-2"> ({service.reviewCount}) </span>
                     </div>
                   </div>
                   <div className="text-center mb-4">
                     <span className="text-3xl font - bold text-zion -cyan">
-                      {service.price === 0 ? 'Free' : `${service.currency}${service.price}`}
+                      {service.price === 0 ? "Free" : "${service.currency}${service.price}"}
                     </span>
                     <span className="text-zion - slate -light">
-                      {service.price === 0 ? '' : '/month'}
+                      {service.price === 0 ? "" : "/month"}
                     </span>
                   </div>
                 </CardContent>
                 <CardFooter className="pt -0">
                   <Button asChild className="w-full bg-gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white group - hover:shadow-lg group - hover:shadow-zion - purple / 25 transition -all">
                     <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2"/>
+                      <ExternalLink className="h-4 w-4 mr-2"   />
                       Start Free Trial
                     </a>
                   </Button>
@@ -970,8 +952,7 @@ export default function MicroSAASServicesPage() {}
           </div>
         </div>
       </div>
-
-      {/* CTA Section */}
+      {/* comment */}
       <div className="py-20 bg-gradient - to - r from - zion - purple / 20 to - zion -cyan / 20">
         <div className="container mx - auto px-4 text-center">
           <h2 className="text-4xl font - bold mb-6 text-white">
@@ -982,11 +963,11 @@ export default function MicroSAASServicesPage() {}
             improve productivity, and drive growth.No long - term contracts, cancel time.</p>
           <div className="flex flex - wrap justify - center gap-4">
             <Button className="bg-gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text-white px-8 py-3">
-              <TrendingUp className="h-5 w-5 mr-2"/>
+              <TrendingUp className="h-5 w-5 mr-2"   />
               Start Free Trial
             </Button>
             <Button className="border-zion - cyan text-zion - cyan hover:bg-zion - cyan / 10 px-8 py-3">
-              <Phone className="h-5 w-5 mr-2"/>
+              <Phone className="h-5 w-5 mr-2"   />
               Call + 1 302 464 0950
             </Button>
           </div>
@@ -996,11 +977,7 @@ export default function MicroSAASServicesPage() {}
 
 
 export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-
 export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-
 export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-
 export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };
-
 export { MicroSAASServicesPage, ServiceCard, MicroSaasServicesPage, ServiceCard };

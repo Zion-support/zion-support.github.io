@@ -1,67 +1,69 @@
-import { useEffect, useState } from 'react';'''
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'''
-import { Button } from '@/components/ui/button';'''
-import { Input } from '@/components/ui/input';'''
-import { useAuth } from '@/hooks/useAuth';'''
-import { supabase } from '@/integrations/supabase/client';'''
-import { ProtectedRoute } from '@/components/ProtectedRoute';'''
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';'''
-import { useToast } from '@/hooks/use-toast';'''
-import { apiClient } from '@/utils/apiClient';
+import { useEffect, useState } from "react";"""
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";"""
+import { Button } from "@/components/ui/button";"""
+import { Input } from "@/components/ui/input";"""
+import { useAuth } from "@/hooks/useAuth";"""
+import { supabase } from "@/integrations/supabase/client";"""
+import { ProtectedRoute } from "@/components/ProtectedRoute";"""
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";"""
+import { useToast } from "@/hooks/use-toast";"""
+import { apiClient } from "@/utils/apiClient";
 export { function };
 export default function TokenManager() {}
   const { user } = useAuth();
   const { toast } = useToast();
-  const [transactions, setTransactions] = useState([]);'
-  const [userId, setUserId] = useState('');
-  const [amount, setAmount] = useState(0);'
-  const isAdmin = user?.userType === 'admin';
+  const [transactions, setTransactions] = useState([]);"
+  const [userId, setUserId] = useState("");
+  const [amount, setAmount] = useState(0);"
+  const isAdmin = user?.userType === "admin";
   useEffect(() => {}
     if (isAdmin) fetchTransactions();
   }, [isAdmin]);
   const fetchTransactions = async () => {}
-'
-''
-'''
-    const { data, error } = await supabase''''
-      .from('token_transactions')'''
-      .select('*')'''
-      .order('created_at', { ascending: false })
+"
+""
+"""
+    const { data, error } = await supabase""""
+      .from("token_transactions")"""
+      .select("*")"""
+      .order("created_at", { ascending: false })
+
       .limit(100);
     if (!error) setTransactions(data || []);
   };
   const handleIssue = async type => {}
-    if (!userId || amount <= 0) return;'
-    const res = await apiClient(''
-      `/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`,
+    if (!userId || amount <= 0) return;"
+    const res = await apiClient(""
+      "/functions/v1/token-manager/${type === "earn" ? "earn" : "burn"}",
       {}
-'
-''
-'''
-        method: 'POST','''
-        headers: { 'Content-Type': 'application/json' },
+"
+""
+"""
+        method: "POST","""
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId, amount })}
     );
     if (res.ok) {}
       toast({}
-'
-''
-'''
-        title: 'Success','''
-        description: 'Transaction processed'});
+"
+""
+"""
+        title: "Success","""
+        description: "Transaction processed"});
       fetchTransactions();
     } else {}
       const err = await res.json();
       toast({}
-'
-''
-'''
-        title: 'Error','''
-        description: err.error || 'Failed','''
-        variant: 'destructive'});
+"
+""
+"""
+        title: "Error","""
+        description: err.error || "Failed","""
+        variant: "destructive"});
     }
   };
   return()
+
     <ProtectedRoute adminOnly>
       <div>
         <div className="min-h-screen bg-zion-blue px-4 py-8">""""
@@ -78,18 +80,17 @@ export default function TokenManager() {}
                   placeholder="User ID"""
                   value={userId}
                   onChange={e => setUserId(e.target.value)}
-                />"""
+               />"""
                 <Input""""
                   type="number""""
                   placeholder="Amount"""
                   value={amount}
-                  onChange={e => setAmount(parseInt(e.target.value))}"""
-                />""""
-                <div className="flex gap-2">'
-                  <Button onClick={() => handleIssue('earn')}>Issue</Button>"""
-                  <Button"'"""
-                    variant="destructive"''
-                    onClick={() => handleIssue('burn')}
+                  onChange={e => setAmount(parseInt(e.target.value))}""" />""""
+                <div className="flex gap-2">"
+                  <Button onClick={() => handleIssue("earn")}>Issue</Button>"""
+                  <Button"""""
+                    variant="destructive"""
+                    onClick={() => handleIssue("burn")}
                   >
                     Revoke;
                   </Button>
@@ -109,8 +110,8 @@ export default function TokenManager() {}
                       className="flex justify-between border-b py-2 text-white"""
                     >
                       <span>{tx.user_id}</span>
-                      <span>'
-                        {tx.transaction_type === 'earn' ? '+' : '-'}
+                      <span>"
+                        {tx.transaction_type === "earn" ? "+" : "-'}
                         {tx.amount}
                       </span>
                     </li>
@@ -125,11 +126,7 @@ export default function TokenManager() {}
 
 
 export { TokenManager };
-
 export { TokenManager };
-
 export { TokenManager };
-
 export { TokenManager };
-
 export { TokenManager };

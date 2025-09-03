@@ -1,13 +1,13 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { Button } from '@/components/ui/button';
+import React from "react";"""
+import { Link } from "react-router-dom";"""
+import { Button } from "@/components/ui/button";
 import {}
   Card,
-  CardContent,'
-  CardDescription,''
-  CardHeader,'''
-  CardTitle} from '@/components/ui/card';'''
-import { Badge } from '@/components/ui/badge';
+  CardContent,"
+  CardDescription,""
+  CardHeader,"""
+  CardTitle} from "@/components/ui/card";"""
+import { Badge } from "@/components/ui/badge";
 import {}
   Check,
   Phone,
@@ -16,19 +16,20 @@ import {}
   Globe,
   DollarSign,
   Star,
-  Users,'
-  Shield,''
-  Zap,'''
-  Building} from 'lucide-react';
+  Users,"
+  Shield,""
+  Zap,"""
+  Building} from "lucide-react";
 import {}
   COMPREHENSIVE_SERVICES,
-  PRICING_TIERS,'
-  SERVICE_CATEGORIES} from '@/data/comprehensiveServices';'
-import { SEO } from '@/components/SEO';
+  PRICING_TIERS,"
+  SERVICE_CATEGORIES} from "@/data/comprehensiveServices";"
+import { SEO } from "@/components/SEO";
 export default function ServicesPricingPage() {}
   // Group services by category for pricing table;
   const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {}
     const categoryServices = COMPREHENSIVE_SERVICES.filter()
+
       service => service.category === category;
     );
     if (categoryServices.length > 0) {}
@@ -37,15 +38,15 @@ export default function ServicesPricingPage() {}
     return acc;
   }, {});
   return()
+
     <div className="min-h-screen bg-zion-blue-dark">"""
       <SEO""""
         title="Services Pricing - Zion Tech Group""""
         description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes.""""
         keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group""""
-        url="https://ziontechgroup.com/services-pricing"""
-      />
+        url="https://ziontechgroup.com/services-pricing""" />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">""""
         <div className="container mx-auto text-center">""""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -62,7 +63,7 @@ export default function ServicesPricingPage() {}
                 size="lg""""
                 className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light""""
               >""""
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"   />
                 Get Custom Quote;
               </Button>"""
             </Link>""""
@@ -72,7 +73,7 @@ export default function ServicesPricingPage() {}
                 variant="outline""""
                 className="border-white text-white hover:bg-white/10""""
               >""""
-                <Building className="w-5 h-5 mr-2" />
+                <Building className="w-5 h-5 mr-2"   />
                 View All Services;
               </Button>
             </Link>
@@ -80,24 +81,24 @@ export default function ServicesPricingPage() {}
         </div>
       </div>
 """
-      {/* Contact Information */}""""
+      {/* comment */}""""
       <div className="bg-zion-blue py-8 px-4">""""
         <div className="container mx-auto">""""
           <div className="flex flex-wrap justify-center items-center gap-8 text-white">""""
             <div className="flex items-center gap-2">""""
-              <Phone className="w-5 h-5 text-zion-cyan" />
+              <Phone className="w-5 h-5 text-zion-cyan"   />
               <span>+1 302 464 0950</span>"""
             </div>""""
             <div className="flex items-center gap-2">""""
-              <Mail className="w-5 h-5 text-zion-cyan" />
+              <Mail className="w-5 h-5 text-zion-cyan"   />
               <span>kleber@ziontechgroup.com</span>"""
             </div>""""
             <div className="flex items-center gap-2">""""
-              <MapPin className="w-5 h-5 text-zion-cyan" />
+              <MapPin className="w-5 h-5 text-zion-cyan"   />
               <span>364 E Main St STE 1008 Middletown DE 19709</span>"""
             </div>""""
             <div className="flex items-center gap-2">""""
-              <Globe className="w-5 h-5 text-zion-cyan" />"""
+              <Globe className="w-5 h-5 text-zion-cyan"   />"""
               <a""""
                 href="https://ziontechgroup.com""""
                 className="hover:text-zion-cyan transition-colors"""
@@ -109,7 +110,7 @@ export default function ServicesPricingPage() {}
         </div>
       </div>
 """
-      {/* Pricing Tiers */}""""
+      {/* comment */}""""
       <div className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -124,8 +125,8 @@ export default function ServicesPricingPage() {}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {Object.entries(PRICING_TIERS).map(([tierName, tier], index) => (
               <Card;
-                key={tierName}'
-                className={`bg-zion-blue border-zion-blue-light ${index === 1 ? 'ring-2 ring-zion-cyan scale-105' : ''}`}"""
+                key={tierName}"
+                className={"bg-zion-blue border-zion-blue-light ${index === 1 ? "ring-2 ring-zion-cyan scale-105" : ""}"}"""
               >""""
                 <CardHeader className="text-center pb-6">""""
                   <CardTitle className="text-2xl text-white">
@@ -141,25 +142,25 @@ export default function ServicesPricingPage() {}
                 <CardContent className="space-y-6">""""
                   <ul className="space-y-3">""""
                     <li className="flex items-center gap-3">""""
-                      <Check className="w-5 h-5 text-green-400 flex-shrink-0" />""""
+                      <Check className="w-5 h-5 text-green-400 flex-shrink-0"   />""""
                       <span className="text-white text-sm">
                         Custom solution development;
                       </span>"""
                     </li>""""
                     <li className="flex items-center gap-3">""""
-                      <Check className="w-5 h-5 text-green-400 flex-shrink-0" />""""
+                      <Check className="w-5 h-5 text-green-400 flex-shrink-0"   />""""
                       <span className="text-white text-sm">
                         Technical support;
                       </span>"""
                     </li>""""
                     <li className="flex items-center gap-3">""""
-                      <Check className="w-5 h-5 text-green-400 flex-shrink-0" />""""
+                      <Check className="w-5 h-5 text-green-400 flex-shrink-0"   />""""
                       <span className="text-white text-sm">
                         Documentation & training;
                       </span>"""
                     </li>""""
                     <li className="flex items-center gap-3">""""
-                      <Check className="w-5 h-5 text-green-400 flex-shrink-0" />""""
+                      <Check className="w-5 h-5 text-green-400 flex-shrink-0"   />""""
                       <span className="text-white text-sm">
                         Maintenance & updates;
                       </span>
@@ -167,7 +168,7 @@ export default function ServicesPricingPage() {}
                   </ul>"""
 """"
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">""""
-                    <Phone className="w-4 h-4 mr-2" />
+                    <Phone className="w-4 h-4 mr-2"   />
                     Get Started;
                   </Button>
                 </CardContent>
@@ -177,7 +178,7 @@ export default function ServicesPricingPage() {}
         </div>
       </div>
 """
-      {/* Service-Specific Pricing */}""""
+      {/* comment */}""""
       <div className="bg-zion-blue-dark py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -217,13 +218,13 @@ export default function ServicesPricingPage() {}
                       </p>""""
                       <div className="flex items-center justify-between">""""
                         <div className="flex items-center gap-2">""""
-                          <DollarSign className="w-4 h-4 text-zion-cyan" />""""
+                          <DollarSign className="w-4 h-4 text-zion-cyan"   />""""
                           <span className="text-white font-semibold">
                             {service.price?.toLocaleString()}
                           </span>"""
                         </div>""""
                         <div className="flex items-center gap-1">""""
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />""""
+                          <Star className="w-4 h-4 text-yellow-400 fill-current"   />""""
                           <span className="text-white text-sm">
                             {service.rating}
                           </span>
@@ -238,7 +239,7 @@ export default function ServicesPricingPage() {}
         </div>
       </div>
 """
-      {/* Why Choose Zion Tech Group */}""""
+      {/* comment */}""""
       <div className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -256,31 +257,31 @@ export default function ServicesPricingPage() {}
               {}
 """
 """"
-                icon: <Zap className="w-8 h-8" />,'
-                title: 'Competitive Pricing','
-                description:''
-                  'Market-leading rates without compromising on quality or features'},
+                icon: <Zap className="w-8 h-8"   />,"
+                title: "Competitive Pricing","
+                description:""
+                  "Market-leading rates without compromising on quality or features"},
               {}
 """
 """"
-                icon: <Shield className="w-8 h-8" />,'
-                title: 'No Hidden Fees','
-                description:''
-                  'Transparent pricing with clear breakdowns of all costs'},
+                icon: <Shield className="w-8 h-8"   />,"
+                title: "No Hidden Fees","
+                description:""
+                  "Transparent pricing with clear breakdowns of all costs"},
               {}
 """
 """"
-                icon: <Users className="w-8 h-8" />,'
-                title: 'Flexible Plans','
-                description:''
-                  'Customizable solutions that grow with your business needs'},
+                icon: <Users className="w-8 h-8"   />,"
+                title: "Flexible Plans","
+                description:""
+                  "Customizable solutions that grow with your business needs"},
               {}
 """
 """"
-                icon: <Building className="w-8 h-8" />,'
-                title: 'Proven ROI','
-                description:''
-                  'Measurable business outcomes and return on investment'}
+                icon: <Building className="w-8 h-8"   />,"
+                title: "Proven ROI","
+                description:""
+                  "Measurable business outcomes and return on investment"}
             ].map((feature, index) => (
               <div"""
                 key={index}""""
@@ -301,7 +302,7 @@ export default function ServicesPricingPage() {}
         </div>
       </div>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">""""
         <div className="container mx-auto text-center">""""
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -316,7 +317,7 @@ export default function ServicesPricingPage() {}
               size="lg""""
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light""""
             >""""
-              <Phone className="w-5 h-5 mr-2" />
+              <Phone className="w-5 h-5 mr-2"   />
               Get Custom Quote;
             </Button>"""
             <Button""""
@@ -324,7 +325,7 @@ export default function ServicesPricingPage() {}
               variant="outline""""
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10""""
             >""""
-              <Mail className="w-5 h-5 mr-2" />
+              <Mail className="w-5 h-5 mr-2"   />
               Schedule Consultation;
             </Button>
           </div>
@@ -334,11 +335,7 @@ export default function ServicesPricingPage() {}
 
 
 export { ServicesPricingPage };
-
 export { ServicesPricingPage };
-
 export { ServicesPricingPage };
-
 export { ServicesPricingPage };
-
 export { ServicesPricingPage };

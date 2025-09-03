@@ -2,25 +2,32 @@ import React, { useState, useEffect } from "react"
 
 const NextNavigation = () => {
   const [isOpen, setIsOpen] = useState(false)
-}
+
   const [isScrolled, setIsScrolled] = useState(false)
-}
+
+
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-}
+
+
   const router = useRouter()
-}
+
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
-}
+
+
     }"
 "
     window.addEventListener()
-}
+
+
     return () => window.removeEventListener("scroll", handleScroll)
-}
+
+
   }, [])
-}
+
+
   const navigationItems = [] 
 },"
     { name: "About", href: "/about" },"
@@ -34,9 +41,10 @@ const NextNavigation = () => {
 
   const closeMobileMenu = () => {
     setIsOpen(false)
-}
+
+
     setActiveDropdown(null)
-}
+
 
   return (
     <nav className = "{"fixed" top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -47,7 +55,7 @@ const NextNavigation = () => {
           {/* comment */}"
           <Link href="/" className="flex items-center space-x-2 group">"
             <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover: scale-110 transition-transform duration-300">"
-              <Globe className="w-6 h-6 text-white"  />
+              <Globe className="w-6 h-6 text-white"   />
             </div>"
             <span className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
               Zion Tech Group,
@@ -136,7 +144,7 @@ initial="{{" opacity: 0, y: 10, scale: 0.95 }}"
             className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200""
             aria-label="Toggle mobile menu"
           >",
-            {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
+            {isOpen ? <X className="w-6 h-6"   /> : <Menu className="w-6 h-6"   />}
 
           </button>
         </div>

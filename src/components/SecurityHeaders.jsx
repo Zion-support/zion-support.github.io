@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 export function SecurityHeadersCompact({ className }) {
 import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {
     const securityFeatures = [{
@@ -41,9 +41,9 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
         { name: "CCPA", status: "Compliant", year: "2024", icon: CheckCircle },"
         { name: "HIPAA", status: "Ready", year: "2024", icon: AlertTriangle }
     ];
-    return (<section className={`py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ''}`}>"
+    return (<section className={"py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark ${className || ""}"}>"
       <div className="container mx-auto px-4">
-        {/* Header */}"
+        {/* comment */}"
         <div className="text-center mb-16">"
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Enterprise Security & Compliance
@@ -52,12 +52,11 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
             Zion Tech Group maintains the highest standards of security and compliance
             to protect your business data and ensure regulatory adherence.</p>
         </div>
-
-        {/* Security Features Grid */}"
+        {/* comment */}"
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">"
-          {securityFeatures.map((feature, index) => (<div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">`
-              <div className={`mx-auto w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center mb-4`}>`
-                <feature.icon className={`w-8 h-8 ${feature.color}`}/>
+          {securityFeatures.map((feature, index) => (<div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:transform hover:scale-105">"
+              <div className={"mx-auto w-16 h-16 bg-zion-cyan/10 rounded-full flex items-center justify-center mb-4"}>"
+                <feature.icon className={"w-8 h-8 ${feature.color}"}/>
               </div>"
               <h3 className="text-lg font-semibold text-white mb-2">
                 {feature.title}
@@ -66,38 +65,36 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
                 {feature.description}
               </p>"
               <div className="mt-3 flex items-center justify-center gap-2">"
-                <CheckCircle className="w-4 h-4 text-zion-cyan"/>"
+                <CheckCircle className="w-4 h-4 text-zion-cyan"   />"
                 <span className="text-xs text-zion-cyan font-medium">Verified</span>
               </div>
             </div>) ) }
         </div>
-
-        {/* Compliance Section */}"
+        {/* comment */}"
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-16">"
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Compliance & Certifications
           </h3>"
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">"
-            {complianceBadges.map((badge, index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">'`
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${badge.status === 'Certified' || badge.status === 'Compliant''
-                ? 'bg-zion-cyan/20''`
-                : 'bg-yellow-500/20'}`}>'`
-                  <badge.icon className={`w-6 h-6 ${badge.status === 'Certified' || badge.status === 'Compliant''
-                ? 'text-zion-cyan''`
-                : 'text-yellow-500'}`}/>
+            {complianceBadges.map((badge, index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">""
+                <div className={"w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${badge.status === "Certified" || badge.status === "Compliant""
+                ? "bg-zion-cyan/20"""
+                : "bg-yellow-500/20"}"}>""
+                  <badge.icon className={"w-6 h-6 ${badge.status === "Certified" || badge.status === "Compliant""
+                ? "text-zion-cyan"""
+                : "text-yellow-500"}"}/>
                 </div>"
-                <h4 className="font-semibold text-white mb-1">{badge.name}</h4>'`
-                <div className={`text-sm font-medium mb-1 ${badge.status === 'Certified' || badge.status === 'Compliant''
-                ? 'text-zion-cyan''`
-                : 'text-yellow-500'}`}>
+                <h4 className="font-semibold text-white mb-1">{badge.name}</h4>""
+                <div className={"text-sm font-medium mb-1 ${badge.status === "Certified" || badge.status === "Compliant""
+                ? "text-zion-cyan"""
+                : "text-yellow-500"}"}>
                   {badge.status}
                 </div>"
                 <div className="text-zion-slate-light text-xs">{badge.year}</div>
               </div>))}
           </div>
         </div>
-
-        {/* Security Metrics */}"
+        {/* comment */}"
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">"
           <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">"
             <div className="text-4xl font-bold text-zion-cyan mb-2">99.99%</div>"
@@ -112,8 +109,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
             <div className="text-zion-slate-light">Security Monitoring</div>
           </div>
         </div>
-
-        {/* Trust Indicators */}"
+        {/* comment */}"
         <div className="text-center">"
           <div className="flex justify-center items-center gap-8 mb-6 opacity-60">"
             <div className="text-zion-slate-light text-sm font-medium">Microsoft Azure</div>"
@@ -129,23 +125,25 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
     </section>) }
 // Compact version for smaller spaces
 export function SecurityHeadersCompact({ className }) {
-'`
-    return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>"
+""
+    return (<div className={"flex flex-wrap justify-center gap-6 ${className || ""}"}>"
       <div className="flex items-center gap-2 text-zion-cyan text-sm">"
-        <Shield className="w-4 h-4"/>
+        <Shield className="w-4 h-4"   />
         <span>SOC 2 Certified</span>
       </div>"
       <div className="flex items-center gap-2 text-zion-purple text-sm">"
-        <Lock className="w-4 h-4"/>
+        <Lock className="w-4 h-4"   />
         <span>256-bit AES</span>
       </div>"
       <div className="flex items-center gap-2 text-zion-cyan text-sm">"
-        <CheckCircle className="w-4 h-4"/>
+        <CheckCircle className="w-4 h-4"   />
         <span>GDPR Compliant</span>
       </div>"
       <div className="flex items-center gap-2 text-zion-purple text-sm">"
-        <Shield className="w-4 h-4"/>
+        <Shield className="w-4 h-4"   />
         <span>Zero-Knowledge</span>
       </div>
     </div>)}
-'"`
+'""
+
+export default Component

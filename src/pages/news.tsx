@@ -1,22 +1,21 @@
-import React from 'react';
+import React from "react";
 import { 
-  Newspaper, 
-  Calendar, 
-  Clock, 
-  User, 
-  Tag, 
+  Newspaper,
+  Calendar,
+  Clock,
+  User,
+  Tag,
   ArrowRight,
   ExternalLink,
   TrendingUp,
   Award,
   Lightbulb
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function NewsPage() {
   const newsArticles = [
     {
       title: "Zion Tech Group Named Top AI Innovation Company 2025",
-      excerpt: "We're proud to announce that Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechInsights Magazine.",
+      excerpt: "We"re proud to announce that Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechInsights Magazine.",
       category: "Company News",
       author: "Kleber Santos",
       date: "December 10, 2025",
@@ -76,7 +75,6 @@ export default function NewsPage() {
       url: "/news/retailmax-ai-transformation-success"
     }
   ];
-
   const pressReleases = [
     {
       title: "Zion Tech Group Announces Q4 2025 Financial Results",
@@ -87,7 +85,7 @@ export default function NewsPage() {
     {
       title: "New Board Member Appointment: Dr. Emily Watson Joins Advisory Board",
       date: "December 12, 2025",
-      summary: "Leading AI ethics expert brings valuable perspective to company's responsible AI initiatives.",
+      summary: "Leading AI ethics expert brings valuable perspective to company"s responsible AI initiatives.",
       url: "/press-releases/dr-emily-watson-board-appointment"
     },
     {
@@ -97,17 +95,15 @@ export default function NewsPage() {
       url: "/press-releases/iso-27001-certification"
     }
   ];
-
   const categories = ["All", "Company News", "Product Launch", "Partnerships", "Research", "Customer Success", "Press Releases"];
-
   return (
     <div className="min-h-screen bg-zion-slate-dark text-white">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
-              <Newspaper className="w-4 h-4 mr-2" />
+              <Newspaper className="w-4 h-4 mr-2"   />
               Latest Updates
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -119,8 +115,7 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
-
-      {/* Featured News Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -131,12 +126,11 @@ export default function NewsPage() {
               The most important updates and announcements from Zion Tech Group.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {newsArticles.filter(article => article.featured).map((article, index) => (
               <div key={index} className="bg-zion-blue-dark rounded-lg border border-zion-purple/30 overflow-hidden hover:border-zion-cyan/50 transition-all duration-300">
                 <div className="h-48 bg-zion-cyan/20 flex items-center justify-center">
-                  <Newspaper className="w-16 h-16 text-zion-cyan" />
+                  <Newspaper className="w-16 h-16 text-zion-cyan"   />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
@@ -145,18 +139,15 @@ export default function NewsPage() {
                     </span>
                     <span className="text-zion-slate-light text-sm">{article.date}</span>
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-3">{article.title}</h3>
                   <p className="text-zion-slate-light mb-4">{article.excerpt}</p>
-                  
                   <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">
                     <span>By {article.author}</span>
                     <span>{article.readTime}</span>
                   </div>
-                  
                   <a href={article.url} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">
                     Read Full Article
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2"   />
                   </a>
                 </div>
               </div>
@@ -164,8 +155,7 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
-
-      {/* Latest News Grid */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -176,12 +166,11 @@ export default function NewsPage() {
               All the latest updates, insights, and announcements from our team.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {newsArticles.filter(article => !article.featured).map((article, index) => (
               <div key={index} className="bg-zion-blue-dark rounded-lg border border-zion-purple/30 overflow-hidden hover:border-zion-cyan/50 transition-all duration-300">
                 <div className="h-40 bg-zion-cyan/20 flex items-center justify-center">
-                  <Newspaper className="w-12 h-12 text-zion-cyan" />
+                  <Newspaper className="w-12 h-12 text-zion-cyan"   />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
@@ -190,18 +179,15 @@ export default function NewsPage() {
                     </span>
                     <span className="text-zion-slate-light text-xs">{article.date}</span>
                   </div>
-                  
                   <h3 className="text-lg font-semibold text-white mb-3">{article.title}</h3>
                   <p className="text-zion-slate-light text-sm mb-4">{article.excerpt}</p>
-                  
                   <div className="flex items-center justify-between text-xs text-zion-slate-light mb-4">
                     <span>By {article.author}</span>
                     <span>{article.readTime}</span>
                   </div>
-                  
                   <a href={article.url} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors">
                     Read More
-                    <ArrowRight className="w-3 h-3 ml-1" />
+                    <ArrowRight className="w-3 h-3 ml-1"   />
                   </a>
                 </div>
               </div>
@@ -209,8 +195,7 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
-
-      {/* Press Releases Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -221,7 +206,6 @@ export default function NewsPage() {
               Official announcements and press releases from Zion Tech Group.
             </p>
           </div>
-
           <div className="max-w-4xl mx-auto">
             {pressReleases.map((release, index) => (
               <div key={index} className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30 mb-6 hover:border-zion-cyan/50 transition-all duration-300">
@@ -230,12 +214,12 @@ export default function NewsPage() {
                     <h3 className="text-xl font-semibold text-white mb-2">{release.title}</h3>
                     <p className="text-zion-slate-light mb-3">{release.summary}</p>
                     <div className="flex items-center text-sm text-zion-slate-light">
-                      <Calendar className="w-4 h-4 mr-2" />
+                      <Calendar className="w-4 h-4 mr-2"   />
                       {release.date}
                     </div>
                   </div>
                   <a href={release.url} className="ml-6 text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                    <ExternalLink className="w-5 h-5" />
+                    <ExternalLink className="w-5 h-5"   />
                   </a>
                 </div>
               </div>
@@ -243,8 +227,7 @@ export default function NewsPage() {
           </div>
         </div>
       </section>
-
-      {/* Newsletter Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -254,11 +237,9 @@ export default function NewsPage() {
             Subscribe to our newsletter to receive the latest news, insights, and updates directly in your inbox.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input 
-              type="email" 
+            <input type="email" 
               placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 bg-white text-zion-slate-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-            />
+              className="flex-1 px-4 py-3 bg-white text-zion-slate-dark rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"   />
             <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300">
               Subscribe
             </button>
@@ -267,4 +248,3 @@ export default function NewsPage() {
       </section>
     </div>
   );
-}

@@ -1,70 +1,66 @@
-import React from 'react';
-import Head from 'next/head';
-
+import React from "react";
+import Head from "next/head";
 const Discord: React.FC = () => {
   const channels = [
     {
-      name: 'general',
-      description: 'General discussion about Zion AI Marketplace',
+      name: "general",
+      description: "General discussion about Zion AI Marketplace",
       members: 1250,
       online: 89,
-      icon: '💬',
+      icon: "💬",
     },
     {
-      name: 'api-support',
-      description: 'Get help with API integration and development',
+      name: "api-support",
+      description: "Get help with API integration and development",
       members: 890,
       online: 45,
-      icon: '🔧',
+      icon: "🔧",
     },
     {
-      name: 'ai-discussions',
-      description: 'Discuss AI trends, technologies, and use cases',
+      name: "ai-discussions",
+      description: "Discuss AI trends, technologies, and use cases",
       members: 2100,
       online: 156,
-      icon: '🤖',
+      icon: "🤖",
     },
     {
-      name: 'marketplace',
-      description: 'Share marketplace experiences and feedback',
+      name: "marketplace",
+      description: "Share marketplace experiences and feedback",
       members: 750,
       online: 32,
-      icon: '🏪',
+      icon: "🏪",
     },
     {
-      name: 'showcase',
-      description: 'Show off your AI projects and integrations',
+      name: "showcase",
+      description: "Show off your AI projects and integrations",
       members: 680,
       online: 28,
-      icon: '🎨',
+      icon: "🎨",
     },
     {
-      name: 'events',
-      description: 'Stay updated on upcoming events and webinars',
+      name: "events",
+      description: "Stay updated on upcoming events and webinars",
       members: 1200,
       online: 67,
-      icon: '📅',
+      icon: "📅",
     },
   ];
-
   const roles = [
-    { name: 'Community Member', color: 'bg-gray-600', description: 'Basic access to community channels' },
-    { name: 'Developer', color: 'bg-blue-600', description: 'Access to technical channels and resources' },
-    { name: 'AI Expert', color: 'bg-purple-600', description: 'Access to advanced AI discussions' },
-    { name: 'Marketplace Partner', color: 'bg-green-600', description: 'Special access for marketplace partners' },
-    { name: 'Moderator', color: 'bg-yellow-600', description: 'Community moderation and support' },
+    { name: "Community Member", color: "bg-gray-600", description: "Basic access to community channels" },
+    { name: "Developer", color: "bg-blue-600", description: "Access to technical channels and resources" },
+    { name: "AI Expert", color: "bg-purple-600", description: "Access to advanced AI discussions" },
+    { name: "Marketplace Partner", color: "bg-green-600", description: "Special access for marketplace partners" },
+    { name: "Moderator", color: "bg-yellow-600", description: "Community moderation and support" },
   ];
-
   return (
     <>
       <Head>
         <title>Discord Community - Zion AI Marketplace</title>
-        <meta name="description" content="Join our Discord community for AI discussions, support, and networking" />
-        <meta name="keywords" content="discord, community, AI, support, networking" />
+        <meta name="description" content="Join our Discord community for AI discussions, support, and networking"  />
+        <meta name="keywords" content="discord, community, AI, support, networking"  />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
-        {/* Header */}
+        {/* comment */}
         <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">
           <div className="container mx-auto px-6 py-8">
             <div className="flex items-center justify-between">
@@ -76,7 +72,6 @@ const Discord: React.FC = () => {
                   Join thousands of AI enthusiasts, developers, and professionals
                 </p>
               </div>
-              
               <div className="text-right">
                 <div className="text-6xl mb-4">🎮</div>
                 <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
@@ -86,8 +81,7 @@ const Discord: React.FC = () => {
             </div>
           </div>
         </header>
-
-        {/* Community Stats */}
+        {/* comment */}
         <section className="container mx-auto px-6 py-12">
           <div className="bg-gray-800/50 rounded-lg p-8 border border-blue-500/30 text-center">
             <h2 className="text-3xl font-bold text-blue-400 mb-8">Community Overview</h2>
@@ -111,8 +105,7 @@ const Discord: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Popular Channels */}
+        {/* comment */}
         <section className="container mx-auto px-6 py-12">
           <h2 className="text-3xl font-bold text-blue-400 mb-8">Popular Channels</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -125,10 +118,8 @@ const Discord: React.FC = () => {
                     <div className="text-xs text-gray-500">{channel.members} members</div>
                   </div>
                 </div>
-                
                 <h3 className="text-lg font-semibold text-white mb-2">#{channel.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{channel.description}</p>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-xs bg-green-600 text-white px-2 py-1 rounded-full">
                     Active
@@ -141,22 +132,20 @@ const Discord: React.FC = () => {
             ))}
           </div>
         </section>
-
-        {/* Community Roles */}
+        {/* comment */}
         <section className="container mx-auto px-6 py-12">
           <h2 className="text-3xl font-bold text-blue-400 mb-8">Community Roles</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {roles.map((role, index) => (
               <div key={index} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">
-                <div className={`w-4 h-4 ${role.color} rounded-full mb-4`}></div>
+                <div className={"w-4 h-4 ${role.color} rounded-full mb-4"}></div>
                 <h3 className="text-lg font-semibold text-white mb-2">{role.name}</h3>
                 <p className="text-gray-300 text-sm">{role.description}</p>
               </div>
             ))}
           </div>
         </section>
-
-        {/* What You'll Find */}
+        {/* comment */}
         <section className="container mx-auto px-6 py-16">
           <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center">What You'll Find</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -165,19 +154,16 @@ const Discord: React.FC = () => {
               <h3 className="text-lg font-semibold text-white mb-2">Expert Insights</h3>
               <p className="text-gray-300 text-sm">Learn from AI professionals and industry experts</p>
             </div>
-            
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-lg font-semibold text-white mb-2">Technical Support</h3>
               <p className="text-gray-300 text-sm">Get help with integration and development issues</p>
             </div>
-            
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-lg font-semibold text-white mb-2">Networking</h3>
               <p className="text-gray-300 text-sm">Connect with like-minded professionals</p>
             </div>
-            
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">
               <div className="text-4xl mb-4">📢</div>
               <h3 className="text-lg font-semibold text-white mb-2">Latest Updates</h3>
@@ -185,8 +171,7 @@ const Discord: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Join CTA */}
+        {/* comment */}
         <section className="container mx-auto px-6 py-16">
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Join?</h2>
@@ -206,8 +191,7 @@ const Discord: React.FC = () => {
             </p>
           </div>
         </section>
-
-        {/* Community Guidelines */}
+        {/* comment */}
         <section className="container mx-auto px-6 py-16">
           <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center">Community Guidelines</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -220,7 +204,6 @@ const Discord: React.FC = () => {
                 <li>• Respect different opinions and perspectives</li>
               </ul>
             </div>
-            
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">
               <h3 className="text-xl font-semibold text-white mb-4">Stay On Topic</h3>
               <ul className="text-gray-300 space-y-2">
@@ -232,8 +215,7 @@ const Discord: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Footer */}
+        {/* comment */}
         <footer className="bg-black/20 backdrop-blur-sm border-t border-blue-500/30 mt-20">
           <div className="container mx-auto px-6 py-8">
             <div className="text-center text-gray-400">
@@ -250,5 +232,4 @@ const Discord: React.FC = () => {
     </>
   );
 };
-
 export default Discord;

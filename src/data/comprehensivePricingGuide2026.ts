@@ -16,7 +16,6 @@ export type PricingCategory = {}
   marketSize: string;
   averageROI: string;
   implementationTime: string};
-
 export type PricingBenefit = {}
   title: string;
   description: string;
@@ -327,7 +326,6 @@ export type PricingBenefit = {}
     }}
   }
 };
-
 // BlockchainForge Pricing;
 export const blockchainForgePricing: ServicePricing = {}
 """
@@ -429,7 +427,6 @@ export const blockchainForgePricing: ServicePricing = {}
     referralProgram: "25% commission for successful referrals"""
   }
 };
-
 // Export all pricing guides;
 export;
 ;export const PRICING_SUMMARY_2026: unknown = {}

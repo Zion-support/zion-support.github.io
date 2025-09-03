@@ -1,67 +1,64 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Menu, X, Search, User, Bell, ChevronDown } from "lucide-react";
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Navigate to search results
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+      window.location.href = "/search?q=${encodeURIComponent(searchQuery.trim())}";
     }
   };
-
   // Organized Services Categories
   const servicesCategories = [{
-      title: 'AI & Machine Learning',
+      title: "AI & Machine Learning",
       icon: Brain,
-      color: 'from-zion-cyan to-zion-purple',
+      color: "from-zion-cyan to-zion-purple",
       dropdown: [
-        { name: 'Machine Learning', href: '/ai-solutions/machine-learning', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-        { name: 'Computer Vision', href: '/ai-solutions/computer-vision', icon: Eye, color: 'from-zion-purple to-zion-pink' },
-        { name: 'NLP & Chatbots', href: '/ai-solutions/nlp-chatbots', icon: MessageCircle, color: 'from-zion-green to-zion-cyan' },
-        { name: 'Predictive Analytics', href: '/ai-solutions/predictive-analytics', icon: TrendingUp, color: 'from-zion-blue to-zion-green' },
-        { name: 'AI Consulting', href: '/ai-solutions/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },
-        { name: 'Custom AI Models', href: '/ai-solutions/custom-models', icon: Code, color: 'from-zion-orange to-zion-purple' }
+        { name: "Machine Learning", href: "/ai-solutions/machine-learning", icon: Brain, color: "from-zion-cyan to-zion-purple" },
+        { name: "Computer Vision", href: "/ai-solutions/computer-vision", icon: Eye, color: "from-zion-purple to-zion-pink" },
+        { name: "NLP & Chatbots", href: "/ai-solutions/nlp-chatbots", icon: MessageCircle, color: "from-zion-green to-zion-cyan" },
+        { name: "Predictive Analytics", href: "/ai-solutions/predictive-analytics", icon: TrendingUp, color: "from-zion-blue to-zion-green" },
+        { name: "AI Consulting", href: "/ai-solutions/consulting", icon: Users, color: "from-zion-pink to-zion-purple" },
+        { name: "Custom AI Models", href: "/ai-solutions/custom-models", icon: Code, color: "from-zion-orange to-zion-purple" }
       ]
     },
     {
-      name: 'Innovation Lab',
-      href: '/innovation-lab',
+      name: "Innovation Lab",
+      href: "/innovation-lab",
       icon: Sparkles,
-      color: 'from-zion-purple to-zion-pink',
+      color: "from-zion-purple to-zion-pink",
       dropdown: [
-        { name: 'Research & Development', href: '/innovation-lab/research', icon: Sparkles, color: 'from-zion-purple to-zion-pink' },
-        { name: 'Emerging Tech', href: '/innovation-lab/emerging-tech', icon: Rocket, color: 'from-zion-purple to-zion-cyan' },
-        { name: 'Prototyping', href: '/innovation-lab/prototyping', icon: Code, color: 'from-zion-green to-zion-cyan' },
-        { name: 'Innovation Consulting', href: '/innovation-lab/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },
-        { name: 'Tech Partnerships', href: '/innovation-lab/partnerships', icon: Handshake, color: 'from-zion-blue to-zion-green' }
+        { name: "Research & Development", href: "/innovation-lab/research", icon: Sparkles, color: "from-zion-purple to-zion-pink" },
+        { name: "Emerging Tech", href: "/innovation-lab/emerging-tech", icon: Rocket, color: "from-zion-purple to-zion-cyan" },
+        { name: "Prototyping", href: "/innovation-lab/prototyping", icon: Code, color: "from-zion-green to-zion-cyan" },
+        { name: "Innovation Consulting", href: "/innovation-lab/consulting", icon: Users, color: "from-zion-pink to-zion-purple" },
+        { name: "Tech Partnerships", href: "/innovation-lab/partnerships", icon: Handshake, color: "from-zion-blue to-zion-green" }
       ]
     }
   ];
         setServicesDropdownOpen(true);
         setSolutionsDropdownOpen(false);
         setCompanyDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if(nav.name === 'Solutions') {
+        setResourcesDropdownOpen(false)} else if(nav.name === "Solutions") {
 
         setSolutionsDropdownOpen(true);
         setServicesDropdownOpen(false);
         setCompanyDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if(nav.name === 'Pricing') {
+        setResourcesDropdownOpen(false)} else if(nav.name === "Pricing") {
         // Use the same dropdown state as solutions for pricing
         setSolutionsDropdownOpen(true);
         setServicesDropdownOpen(false);
         setCompanyDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if(nav.name === 'Company') {
+        setResourcesDropdownOpen(false)} else if(nav.name === "Company") {
 
         setCompanyDropdownOpen(true);
         setServicesDropdownOpen(false);
         setSolutionsDropdownOpen(false);
-        setResourcesDropdownOpen(false)} else if(nav.name === 'Resources') {
+        setResourcesDropdownOpen(false)} else if(nav.name === "Resources") {
         setResourcesDropdownOpen(true);
         setServicesDropdownOpen(false);
         setSolutionsDropdownOpen(false);
@@ -74,27 +71,26 @@ export function AppHeader() {
       setCompanyDropdownOpen(false);
       setResourcesDropdownOpen(false)}
   };
-
   const closeAllDropdowns = (...args: unknown[]): unknown => {
     setServicesDropdownOpen(false);    setSolutionsDropdownOpen(false);
     setCompanyDropdownOpen(false);
     setResourcesDropdownOpen(false);
     setActiveNav(null)};
-
   return ()
-    <>`
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>
+
+    <>"
+      <header className={"sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled
+          ? "bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10"
+          : "bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20"      }"}>
         <div className="container-responsive">"
           <div className="flex h-20 items-center justify-between">
-            {/* Logo */}"
+            {/* comment */}"
             <div className="flex items-center">"
               <Link to="/" className="flex-shrink-0 group">"
                 <div className="flex items-center space-x-3">"
                   <div className="relative">"
                     <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
-                      <Zap className="w-6 h-6 text-white"  />
+                      <Zap className="w-6 h-6 text-white"   />
                     </div>"                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
                   </div>"
                   <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
@@ -106,8 +102,7 @@ export function AppHeader() {
                 </span>
               </Link>
             </div>
-
-            {/* Desktop Navigation */}            <nav className="hidden lg:flex items-center space-x-8">
+            {/* comment */}            <nav className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => ("
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? ("
@@ -116,7 +111,7 @@ export function AppHeader() {
                         onClick={() => {
 
               <AnimatePresence>
-                {activeDropdown === 'services' && (
+                {activeDropdown === "services" && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -133,7 +128,7 @@ export function AppHeader() {
                             onClick={() => setActiveDropdown(null)}
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group"
                           >
-                            <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>
+                            <div className={"w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform"}>
                               <service.icon className="w-5 h-5 text-white" />
                             </div>
                             <div>
@@ -152,21 +147,19 @@ export function AppHeader() {
                 )}
               </AnimatePresence>
             </div>
-
-            {/* Solutions Dropdown */}
+            {/* comment */}
             <div className="relative dropdown-container">
               <button
-                onClick={() => toggleDropdown('solutions')}
+                onClick={() => toggleDropdown("solutions")}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
-                aria-expanded={activeDropdown === 'solutions'}
+                aria-expanded={activeDropdown === "solutions"}
                 aria-haspopup="true"
               >
                 Solutions
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={"ml-1 h-4 w-4 transition-transform ${activeDropdown === "solutions" ? "rotate-180" : ""}"}    />
               </button>
-
               <AnimatePresence>
-                {activeDropdown === 'solutions' && (
+                {activeDropdown === "solutions" && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -183,7 +176,7 @@ export function AppHeader() {
                             onClick={() => setActiveDropdown(null)}
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group"
                           >
-                            <div className={`w-10 h-10 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>
+                            <div className={"w-10 h-10 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform"}>
                               <solution.icon className="w-5 h-5 text-white" />
                             </div>
                             <div>
@@ -202,21 +195,19 @@ export function AppHeader() {
                 )}
               </AnimatePresence>
             </div>
-
-            {/* Resources Dropdown */}
+            {/* comment */}
             <div className="relative dropdown-container">
               <button
-                onClick={() => toggleDropdown('resources')}
+                onClick={() => toggleDropdown("resources")}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
-                aria-expanded={activeDropdown === 'resources'}
+                aria-expanded={activeDropdown === "resources"}
                 aria-haspopup="true"
               >
                 Resources
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={"ml-1 h-4 w-4 transition-transform ${activeDropdown === "resources" ? "rotate-180" : ""}"}    />
               </button>
-
               <AnimatePresence>
-                {activeDropdown === 'resources' && (
+                {activeDropdown === "resources" && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -245,21 +236,19 @@ export function AppHeader() {
                 )}
               </AnimatePresence>
             </div>
-
-            {/* Company Dropdown */}
+            {/* comment */}
             <div className="relative dropdown-container">
               <button
-                onClick={() => toggleDropdown('company')}
+                onClick={() => toggleDropdown("company")}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
-                aria-expanded={activeDropdown === 'company'}
+                aria-expanded={activeDropdown === "company"}
                 aria-haspopup="true"
               >
                 Company
-                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
+                <ChevronDown className={"ml-1 h-4 w-4 transition-transform ${activeDropdown === "company" ? "rotate-180" : ""}"}    />
               </button>
-
               <AnimatePresence>
-                {activeDropdown === 'company' && (
+                {activeDropdown === "company" && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -289,10 +278,9 @@ export function AppHeader() {
               </AnimatePresence>
             </div>
           </nav>
-
-          {/* Right side - Search, User, Mobile menu */}
+          {/* comment */}
           <div className="flex items-center space-x-4">
-            {/* Search */}
+            {/* comment */}
             <div className="relative hidden md:block">
               <form onSubmit={handleSearch} className="relative">
                 <input
@@ -302,32 +290,30 @@ export function AppHeader() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   onFocus={() => setSearchFocused(true)}
                   onBlur={() => setSearchFocused(false)}
-                  className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-200 ${
-                    searchFocused ? 'w-80' : ''
-                  }`}
-                />
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
+                  className={"w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-200 ${
+                    searchFocused ? "w-80" : ""
+                  }"}
+               />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"   />
               </form>
             </div>
-
-            {/* User Menu */}
+            {/* comment */}
             {user ? (
               <div className="relative dropdown-container">
                 <button
-                  onClick={() => toggleDropdown('user')}
+                  onClick={() => toggleDropdown("user")}
                   className="flex items-center space-x-2 p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors"
-                  aria-expanded={activeDropdown === 'user'}
+                  aria-expanded={activeDropdown === "user"}
                   aria-haspopup="true"
                 >
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
-                    <User className="w-4 h-4 text-white" />
+                    <User className="w-4 h-4 text-white"   />
                   </div>
                   <span className="text-white text-sm hidden lg:block">{user.name}</span>
-                  <ChevronDown className="w-4 h-4 text-zion-slate-light" />
+                  <ChevronDown className="w-4 h-4 text-zion-slate-light"   />
                 </button>
-
                 <AnimatePresence>
-                  {activeDropdown === 'user' && (
+                  {activeDropdown === "user" && (
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -341,7 +327,7 @@ export function AppHeader() {
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan"
                         >
-                          <PanelLeft className="w-4 h-4 mr-3" />
+                          <PanelLeft className="w-4 h-4 mr-3"   />
                           Dashboard
                         </Link>
                         <Link
@@ -349,7 +335,7 @@ export function AppHeader() {
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan"
                         >
-                          <User className="w-4 h-4 mr-3" />
+                          <User className="w-4 h-4 mr-3"   />
                           Profile
                         </Link>
                         <Link
@@ -357,10 +343,10 @@ export function AppHeader() {
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan"
                         >
-                          <Settings className="w-4 h-4 mr-3" />
+                          <Settings className="w-4 h-4 mr-3"   />
                           Settings
                         </Link>
-                        <hr className="border-zion-slate/20 my-2" />
+                        <hr className="border-zion-slate/20 my-2"   />
                         <button
                           onClick={() => {
                             logout();
@@ -368,7 +354,7 @@ export function AppHeader() {
                           }}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan"
                         >
-                          <LogOut className="w-4 h-4 mr-3" />
+                          <LogOut className="w-4 h-4 mr-3"   />
                           Logout
                         </button>
                       </div>
@@ -378,30 +364,27 @@ export function AppHeader() {
               </div>
             ))}
           </nav>
-
-          {/* Right side actions */}
+          {/* comment */}
           <div className="flex items-center space-x-4">
-            {/* Search */}
+            {/* comment */}
             <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [
-    { name: 'Home', href: '/', current: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: "Home", href: "/", current: true },
+    { name: "About", href: "/about", current: false },
+    { name: "Contact", href: "/contact", current: false },
   ];
-
   const services = [
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },
-    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
-    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },
-    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },
+    { name: "AI Solutions", href: "/services/ai", description: "Machine Learning & NLP" },
+    { name: "Tech Talent", href: "/talent", description: "Expert Developers & Engineers" },
+    { name: "Equipment", href: "/equipment", description: "Infrastructure & Hardware" },
+    { name: "Consulting", href: "/consulting", description: "Digital Transformation" },
+    { name: "Cybersecurity", href: "/services/cybersecurity", description: "Security & Compliance" },
+    { name: "Cloud Services", href: "/services/cloud", description: "DevOps & Infrastructure" },
   ];
-
   return (
     <>
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
         <div className="container flex h-16 items-center px-4 sm:px-6">
-          {/* Logo */}
+          {/* comment */}
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -409,8 +392,7 @@ export function AppHeader() {
               </h1>
             </Link>
           </div>
-          
-          {/* Desktop Navigation */}
+          {/* comment */}
           <nav className="hidden md:flex ml-8 space-x-8">
             {navigation.map((item) => (
               <Link
@@ -422,7 +404,7 @@ export function AppHeader() {
               </Link>
             ))}
             
-            {/* Services Dropdown */}
+            {/* comment */}
             <div className="relative">
               <button
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
@@ -431,9 +413,8 @@ export function AppHeader() {
                 className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
               >
                 Services
-                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={"w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? "rotate-180" : ""}"}    />
               </button>
-              
               {servicesDropdownOpen && (
                 <div 
                   className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 border border-slate-700/50 rounded-lg shadow-xl backdrop-blur-md"
@@ -472,16 +453,15 @@ export function AppHeader() {
               )}
             </div>
           </nav>
-
-          {/* Search Bar - Hidden on mobile */}
+          {/* comment */}
           <div className="hidden md:flex ml-6 flex-1 max-w-md">
             <form onSubmit={handleSearch} className="relative w-full">
-              />
+             />
               <button
                 type="submit"
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-cyan-400 transition-colors"
               >
-                <Search className="h-4 h-4" />
+                <Search className="h-4 h-4"   />
               <div className="hidden md:flex items-center space-x-3">
                 <Link
                   to="/login"
@@ -497,74 +477,69 @@ export function AppHeader() {
                 </Link>
               </div>
             )}
-          {/* Right side actions */}
+          {/* comment */}
           <div className="ml-6 flex items-center space-x-4">
-            {/* Notifications */}
+            {/* comment */}
             <button className="p-2 text-slate-400 hover:text-cyan-400 transition-colors">
-              <Bell className="h-5 w-5" />
+              <Bell className="h-5 w-5"   />
             </button>
-
-            {/* User menu */}
+            {/* comment */}
             <button className="p-2 text-slate-400 hover:text-cyan-400 transition-colors">
-              <User className="h-5 w-5" />
+              <User className="h-5 w-5"   />
             </button>
               {mobileMenuOpen ? (
-                <X className="w-6 h-6 text-white" />
+                <X className="w-6 h-6 text-white"   />
               ) : (
-                <Menu className="w-6 h-6 text-zinc-400" />              className="md:hidden p-2 text-slate-400 hover:text-cyan-400 transition-colors"
+                <Menu className="w-6 h-6 text-zinc-400"   />              className="md:hidden p-2 text-slate-400 hover:text-cyan-400 transition-colors"
             >
               {mobileMenuOpen ? (
-                <X className="h-5 w-5" />
+                <X className="h-5 w-5"   />
               ) : (
-                <Menu className="h-5 w-5" />
-                <Menu className="w-6 h-6 text-white" />
+                <Menu className="h-5 w-5"   />
+                <Menu className="w-6 h-6 text-white"   />
               )}
             </button>
           </div>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
+      {/* comment */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-zion-slate-dark border-t border-zion-cyan/20"
           >
-            <div className="container mx-auto px-6 py-6">              {/* Mobile Search */}
+            <div className="container mx-auto px-6 py-6">              {/* comment */}
               <form onSubmit={handleSearch} className="relative">
                 <input
                   type="text"
                   placeholder="Search..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan"
-                />
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
+                  className="w-full px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light"   />
               </form>
-
-              {/* Mobile Navigation Links */}
+              {/* comment */}
               <div className="space-y-2">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     to={item.href}
                     onClick={closeMobileMenu}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    className={"block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       item.current
-                        ? 'text-zion-cyan bg-zion-cyan/10'
-                        : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10'
+                        ? "text-zion-cyan bg-zion-cyan/10"
+                        : "text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10"
                     }`}
                   >
                     {item.name}
                   </Link>
                 ))}
               </nav>
-
-              {/* Mobile Quick Actions */}
+              {/* comment */}
               <div className="mt-6 pt-6 border-t border-zinc-800/50">
                 <div className="grid grid-cols-1 gap-3">
                   {quickActions.map((action) => (
@@ -573,7 +548,7 @@ export function AppHeader() {
                       to={action.href}
                       className="btn-futuristic text-center"
                     >
-                      {action.name}        {/* Mobile Navigation */}
+                      {action.name}        {/* comment */}
         {mobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 border-t border-slate-700/20">
@@ -588,7 +563,7 @@ export function AppHeader() {
                 </Link>
               ))}
               
-              {/* Mobile Services */}
+              {/* comment */}
               <div className="px-3 py-2">
                 <div className="text-slate-400 text-sm font-medium mb-2">Services</div>
                 <div className="space-y-1">
@@ -605,8 +580,7 @@ export function AppHeader() {
                 </div>
               </div>
               </div>
-
-              {/* Mobile Services */}
+              {/* comment */}
               <div className="space-y-2">
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
                   Services
@@ -622,8 +596,7 @@ export function AppHeader() {
                   </Link>
                 ))}
               </div>
-
-              {/* Mobile Solutions */}
+              {/* comment */}
               <div className="space-y-2">
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
                   Solutions
@@ -639,8 +612,7 @@ export function AppHeader() {
                   </Link>
                 ))}
               </div>
-
-              {/* Mobile Resources */}
+              {/* comment */}
               <div className="space-y-2">
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
                   Resources
@@ -656,8 +628,7 @@ export function AppHeader() {
                   </Link>
                 ))}
               </div>
-
-              {/* Mobile Company */}
+              {/* comment */}
               <div className="space-y-2">
                 <div className="px-3 py-2 text-sm font-semibold text-zion-cyan uppercase tracking-wider">
                   Company
@@ -673,8 +644,7 @@ export function AppHeader() {
                   </Link>
                 ))}
               </div>
-
-              {/* Mobile Auth */}
+              {/* comment */}
               {!user ? (
                 <div className="pt-4 border-t border-zion-slate/20">
                   <div className="space-y-3">
@@ -721,4 +691,4 @@ export function AppHeader() {
         )}
       </AnimatePresence>
     </header>  );
-}
+export default Component

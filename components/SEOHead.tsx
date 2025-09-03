@@ -1,7 +1,6 @@
 import Head from "next/head"
 import React from "react"
 interface SEOHeadProps {;
-
   title?: string;
   description?: string;
   keywords?: string;
@@ -32,7 +31,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({",
   nofollow = false,
 }) => {
   const robots = [].join(", ")
-}
+
   const structuredData = {} : undefined,
     publisher: {",
       "@type": "Organization","
@@ -57,7 +56,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({",
       <meta name="keywords" content="{keywords}"  />"
       <meta name="author" content="{author}"  />"
       <meta name="robots" content="{robots}"  />"
-      <link rel="canonical" href="{url}"  />
+      <link rel="canonical" href="{url}"   />
 
       {/* comment */}"
       <meta property="og:type" content="{type}"  />"
@@ -92,15 +91,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({",
           __html: JSON.stringify(),>
 }}
 
-     />
+    />
 
       {/* comment */}"
-      <meta name="viewport" content="width="device-width," initial-scale="1," shrink-to-fit=no"  />"
+      <meta name="viewport" content="width="device-width," initial-scale="1," shrink-to-fit=no"   />"
       <meta name="theme-color" content="#0a0a1a"  />"
       <meta name="apple-mobile-web-app-capable" content="yes"  />"
       <meta name="apple-mobile-web-app-status-bar-style" content="default"  />"
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />
     </Head>
   )
-}
+
+
 ""export default SEOHead

@@ -46,5 +46,4 @@ const SpaceTech = () => {
             </div>
     </>
   );
-}
 export default SpaceTech

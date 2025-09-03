@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Brain, Menu } from 'lucide-react';
-
+import React, { useState } from "react";
+import Link from "next/link";
+import { Brain, Menu } from "lucide-react";
 export default function Navigation() {
   const [open, setOpen] = useState(false);
   return (
@@ -9,7 +8,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg grid place-items-center">
-            <Brain className="w-5 h-5 text-white" />
+            <Brain className="w-5 h-5 text-white"   />
           </div>
           <span className="font-semibold">Zion Tech Group</span>
         </Link>
@@ -19,7 +18,7 @@ export default function Navigation() {
           <Link href="/contact" className="text-sm text-white bg-blue-600 px-3 py-1.5 rounded hover:bg-blue-700">Contact</Link>
         </div>
         <button className="md:hidden" aria-label="Toggle menu" onClick={() => setOpen(v => !v)}>
-          <Menu className="w-6 h-6" />
+          <Menu className="w-6 h-6"   />
         </button>
       </div>
       {open && (
@@ -31,4 +30,3 @@ export default function Navigation() {
       )}
     </nav>
   );
-}

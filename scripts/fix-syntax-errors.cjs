@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs = require("$1");
+const fs = require("fs");
 const path = require("path")
 class SyntaxErrorFixer {
   constructor() {

@@ -47,7 +47,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
         placeholder="{placeholder}""
         blurDataURL="{blurDataURL}""
         sizes="{sizes}""
-        className="object-cover transition-transform duration-300 hover: scale-105"  />",
+        className="object-cover transition-transform duration-300 hover: scale-105"   />",
     </div>
   )}
 

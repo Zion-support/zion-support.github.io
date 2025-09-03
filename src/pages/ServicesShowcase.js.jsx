@@ -1,7 +1,7 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { motion } from 'framer-motion';'''
-import { Brain, Cloud, Shield, Rocket, Target } from 'lucide-react';
+import React from "react";"""
+import { Link } from "react-router-dom";"""
+import { motion } from "framer-motion";"""
+import { Brain, Cloud, Shield, Rocket, Target } from "lucide-react';
 const ServicesShowcase = () => {}
     const services = []
         {}
@@ -185,9 +185,9 @@ const ServicesShowcase = () => {}
         }"""
     };""""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <div className="relative overflow-hidden">""""
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>"""
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"   />"""
         """"
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial = {}
@@ -204,7 +204,7 @@ const ServicesShowcase = () => {}
               </span>"""
             </h1>""""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover our comprehensive portfolio of cutting-edge technology solutions, 
+              Discover our comprehensive portfolio of cutting-edge technology solutions,
               from AI and cloud services to emerging technologies and specialized enterprise solutions."""
             </p>""""
             <div className="flex flex-wrap justify-center gap-4">""""
@@ -219,13 +219,13 @@ const ServicesShowcase = () => {}
         </div>
       </div>
 """
-      {/* Services Grid */}""""
+      {/* comment */}""""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">""""
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-16">"""
           {services.map((category, categoryIndex) => (<motion.div key={category.category} variants={itemVariants}>""""
               <div className="text-center mb-12">""""
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-4">""""
-                  <category.icon className="w-8 h-8 text-white"/>"""
+                  <category.icon className="w-8 h-8 text-white" />"""
                 </div>""""
                 <h2 className="text-3xl font-bold text-white mb-4">{category.category}</h2>""""
                 <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"></div>
@@ -255,7 +255,7 @@ const ServicesShowcase = () => {}
                     <Link to={service.href} className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300">"""
                       Learn More""""
                       <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">""""
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"   />
                       </svg>
                     </Link>
                   </motion.div>) ) }
@@ -264,7 +264,7 @@ const ServicesShowcase = () => {}
         </motion.div>
       </div>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {}
@@ -295,14 +295,8 @@ const ServicesShowcase = () => {}
       </div>
     </div>)};
 export default ServicesShowcase;
-
-
 export { ServicesShowcase };
-
 export { ServicesShowcase };
-
 export { ServicesShowcase };
-
 export { ServicesShowcase };
-
 export { ServicesShowcase };

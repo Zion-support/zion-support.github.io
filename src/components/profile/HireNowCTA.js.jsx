@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Button } from "../ui/Button.jsx";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/Card.jsx";
 import { Input } from "../ui/Input.jsx";
-import { Textarea } from "../ui/Textarea.jsx";import { DollarSign, MessageSquare } from 'lucide-react';
+import { Textarea } from "../ui/Textarea.jsx";import { DollarSign, MessageSquare } from "lucide-react";
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [formData, setFormData] = useState({}
-'
-''
-'''
-    projectDescription: '','''
-    budget: '','''
-    startDate: '','''
-    message: ''});
+"
+""
+"""
+    projectDescription: "","""
+    budget: "","""
+    startDate: "","""
+    message: ""});
   const handleSubmit = e => {}
     e.preventDefault();
     if (onHire) {}
@@ -20,13 +20,13 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
     }
     // Reset form and close;
     setFormData({}
-'
-''
-'''
-      projectDescription: '','''
-      budget: '','''
-      startDate: '','''
-      message: ''});
+"
+""
+"""
+      projectDescription: "","""
+      budget: "","""
+      startDate: "","""
+      message: ""});
     setIsFormOpen(false);
   };
   const handleChange = e => {}
@@ -35,10 +35,11 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
       [e.target.name]: e.target.value}));
   };
   return()
+
     <Card className="bg-zion-blue-light border-zion-blue-lighter">"""
       <CardHeader>""""
         <CardTitle className="text-white flex items-center gap-2">""""
-          <MessageSquare className="h-5 w-5 text-zion-cyan" />
+          <MessageSquare className="h-5 w-5 text-zion-cyan"   />
           Hire {talentName}
         </CardTitle>
       </CardHeader>
@@ -47,7 +48,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
           <div className="space-y-4">"""
             {hourlyRate && (""""
               <div className="flex items-center gap-2 text-zion-slate-light">""""
-                <DollarSign className="h-4 w-4" />
+                <DollarSign className="h-4 w-4"   />
                 <span>Starting at ${hourlyRate}/hour</span>
               </div>"""
             )}""""
@@ -79,7 +80,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
                 placeholder="Describe your project requirements...""""
                 className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"""
                 required;
-              />
+             />
             </div>"""
 """"
             <div className="grid grid-cols-2 gap-4">
@@ -98,7 +99,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
                   placeholder="e.g., $1000-5000""""
                   className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"""
                   required;
-                />
+               />
               </div>
               <div>"""
                 <label""""
@@ -115,7 +116,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
                   onChange={handleChange}""""
                   className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan"""
                   required;
-                />
+               />
               </div>
             </div>
             <div>"""
@@ -133,7 +134,7 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
                 placeholder="Any additional details or questions...""""
                 className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"""
                 rows={3}
-              />
+             />
             </div>"""
 """"
             <div className="flex gap-3">"""
@@ -157,5 +158,5 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {}
       </CardContent>
     </Card>
   );
-}'"""
-'"'"""
+}""""
+""'"""

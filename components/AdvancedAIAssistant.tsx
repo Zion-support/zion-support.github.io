@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { 
-  Brain, 
-  TrendingUp, 
-  Zap, 
-  MessageCircle, 
-  Users, 
+  Brain,
+  TrendingUp,
+  Zap,
+  MessageCircle,
+  Users,
   Shield,
   CheckCircle,
   AlertCircle,
@@ -12,7 +12,6 @@ import {
   Activity,
   Bot
 } from "lucide-react";
-
 interface AIConversation {
   id: string;
   type: "chat" | "task" | "analysis" | "recommendation";
@@ -22,8 +21,6 @@ interface AIConversation {
   priority: "low" | "medium" | "high" | "critical";
   createdAt: string;
   lastUpdated: string;
-}
-
 interface AIInsight {
   id: string;
   title: string;
@@ -33,8 +30,6 @@ interface AIInsight {
   confidence: number;
   data: Record<string, string | number | boolean>;
   createdAt: string;
-}
-
 interface AIFeature {
   id: string;
   name: string;
@@ -43,18 +38,15 @@ interface AIFeature {
   status: "active" | "beta" | "coming-soon";
   usage: number;
   accuracy: number;
-}
-
 const AdvancedAIAssistant: React.FC = () => {
   const [selectedView, setSelectedView] = useState<"overview" | "conversations" | "insights" | "features">("overview");
   const [searchQuery, setSearchQuery] = useState("");
-
   const aiFeatures: AIFeature[] = [
     {
       id: "1",
       name: "Natural Language Processing",
       description: "Advanced NLP for understanding complex queries and context",
-      icon: <Brain className="w-6 h-6" />,
+      icon: <Brain className="w-6 h-6"   />,
       status: "active",
       usage: 95,
       accuracy: 94
@@ -63,7 +55,7 @@ const AdvancedAIAssistant: React.FC = () => {
       id: "2",
       name: "Predictive Analytics",
       description: "AI-powered predictions for project outcomes and resource needs",
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: <TrendingUp className="w-6 h-6"   />,
       status: "active",
       usage: 87,
       accuracy: 89
@@ -72,7 +64,7 @@ const AdvancedAIAssistant: React.FC = () => {
       id: "3",
       name: "Intelligent Automation",
       description: "Smart automation of repetitive tasks and workflows",
-      icon: <Zap className="w-6 h-6" />,
+      icon: <Zap className="w-6 h-6"   />,
       status: "active",
       usage: 92,
       accuracy: 91
@@ -81,7 +73,7 @@ const AdvancedAIAssistant: React.FC = () => {
       id: "4",
       name: "Sentiment Analysis",
       description: "Real-time analysis of client and team sentiment",
-      icon: <MessageCircle className="w-6 h-6" />,
+      icon: <MessageCircle className="w-6 h-6"   />,
       status: "beta",
       usage: 73,
       accuracy: 87
@@ -90,7 +82,7 @@ const AdvancedAIAssistant: React.FC = () => {
       id: "5",
       name: "Resource Optimization",
       description: "AI-driven resource allocation and optimization",
-      icon: <Users className="w-6 h-6" />,
+      icon: <Users className="w-6 h-6"   />,
       status: "active",
       usage: 89,
       accuracy: 93
@@ -99,13 +91,12 @@ const AdvancedAIAssistant: React.FC = () => {
       id: "6",
       name: "Risk Assessment",
       description: "Intelligent risk identification and mitigation strategies",
-      icon: <Shield className="w-6 h-6" />,
+      icon: <Shield className="w-6 h-6"   />,
       status: "beta",
       usage: 68,
       accuracy: 85
     }
   ];
-
   const aiInsights: AIInsight[] = [
     {
       id: "1",
@@ -138,20 +129,18 @@ const AdvancedAIAssistant: React.FC = () => {
       createdAt: "2025-01-27 15:30"
     }
   ];
-
   const getInsightIcon = (type: string) => {
     switch (type) {
       case "positive":
-        return <CheckCircle className="w-6 h-6 text-green-400" />;
+        return <CheckCircle className="w-6 h-6 text-green-400"   />;
       case "warning":
-        return <AlertCircle className="w-6 h-6 text-yellow-400" />;
+        return <AlertCircle className="w-6 h-6 text-yellow-400"   />;
       case "critical":
-        return <AlertCircle className="w-6 h-6 text-red-400" />;
+        return <AlertCircle className="w-6 h-6 text-red-400"   />;
       default:
-        return <Activity className="w-6 h-6 text-blue-400" />;
+        return <Activity className="w-6 h-6 text-blue-400"   />;
     }
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">
       <div className="container mx-auto px-4">
@@ -160,12 +149,11 @@ const AdvancedAIAssistant: React.FC = () => {
             Advanced AI Assistant
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Leverage cutting-edge AI technology to optimize your business operations, 
+            Leverage cutting-edge AI technology to optimize your business operations,
             predict outcomes, and automate complex workflows.
           </p>
         </div>
-
-        {/* Navigation Tabs */}
+        {/* comment */}
         <div className="flex flex-wrap justify-center mb-8">
           {[
             { id: "overview", label: "Overview" },
@@ -176,29 +164,26 @@ const AdvancedAIAssistant: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setSelectedView(tab.id as any)}
-              className={`px-6 py-3 mx-2 mb-2 rounded-lg font-medium transition-colors ${
+              className={"px-6 py-3 mx-2 mb-2 rounded-lg font-medium transition-colors ${
                 selectedView === tab.id
                   ? "bg-blue-600 text-white"
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-              }`}
+              }"}
             >
               {tab.label}
             </button>
           ))}
         </div>
-
-        {/* Search Bar */}
+        {/* comment */}
         <div className="max-w-md mx-auto mb-8">
           <input
             type="text"
             placeholder="Search AI features and insights..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
+            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </div>
-
-        {/* Content based on selected view */}
+        {/* comment */}
         {selectedView === "overview" && (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {aiFeatures.slice(0, 6).map((feature) => (
@@ -211,13 +196,13 @@ const AdvancedAIAssistant: React.FC = () => {
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <div className="flex justify-between items-center">
-                  <span className={`px-3 py-1 rounded-full text-sm ${
+                  <span className={"px-3 py-1 rounded-full text-sm ${
                     feature.status === "active" 
                       ? "bg-green-900 text-green-300"
                       : feature.status === "beta"
                       ? "bg-yellow-900 text-yellow-300"
                       : "bg-gray-700 text-gray-300"
-                  }`}>
+                  }"}>
                     {feature.status}
                   </span>
                   <div className="text-right">
@@ -243,13 +228,13 @@ const AdvancedAIAssistant: React.FC = () => {
                     <p className="text-gray-300 mb-4">{insight.description}</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4">
-                        <span className={`px-3 py-1 rounded-full text-sm ${
+                        <span className={"px-3 py-1 rounded-full text-sm ${
                           insight.impact === "high" 
                             ? "bg-red-900 text-red-300"
                             : insight.impact === "medium"
                             ? "bg-yellow-900 text-yellow-300"
                             : "bg-green-900 text-green-300"
-                        }`}>
+                        }"}>
                           {insight.impact} impact
                         </span>
                         <span className="text-sm text-gray-400">
@@ -286,7 +271,7 @@ const AdvancedAIAssistant: React.FC = () => {
                   <div className="w-full bg-gray-700 rounded-full h-2">
                     <div 
                       className="bg-blue-600 h-2 rounded-full" 
-                      style={{ width: `${feature.usage}%` }}
+                      style={{ width: "${feature.usage}%" }}
                     ></div>
                   </div>
                   <div className="flex justify-between text-sm">
@@ -296,7 +281,7 @@ const AdvancedAIAssistant: React.FC = () => {
                   <div className="w-full bg-gray-700 rounded-full h-2">
                     <div 
                       className="bg-green-600 h-2 rounded-full" 
-                      style={{ width: `${feature.accuracy}%` }}
+                      style={{ width: "${feature.accuracy}%" }}
                     ></div>
                   </div>
                 </div>
@@ -308,5 +293,4 @@ const AdvancedAIAssistant: React.FC = () => {
     </section>
   );
 };
-
 export default AdvancedAIAssistant;

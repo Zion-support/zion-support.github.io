@@ -1,15 +1,14 @@
-import React from 'react';
+import React from "react";
 export default Solutions;
-
 const Solutions = () => {}
   return()
+
     <>
       <Helmet>
         <title>Custom Solutions - Zion Tech Group</title>
         <meta;
           name="description""""
-          content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results."""
-        />
+          content="Custom technology solutions tailored to your business needs. Zion Tech Group delivers innovative solutions that drive results.""" />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -25,8 +24,8 @@ const Solutions = () => {}
           </div>"""
 """"
           <div className="bg-white rounded-lg shadow-lg p-8">""""
-            <p className="text-gray-600 text-center">'
-              Custom solutions page coming soon. We're building comprehensive;
+            <p className="text-gray-600 text-center">"
+              Custom solutions page coming soon. We"re building comprehensive;
               solution offerings.
             </p>
           </div>
@@ -34,14 +33,8 @@ const Solutions = () => {}
       </div>
     </>)};
 export default Solutions;
-
-
 export { Solutions };
-
 export { Solutions };
-
 export { Solutions };
-
 export { Solutions };
-
 export { Solutions };

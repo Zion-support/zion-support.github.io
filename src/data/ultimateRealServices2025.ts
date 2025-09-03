@@ -1,5 +1,4 @@
-import { ProductListing } from '@/types/listings';
-
+import { ProductListing } from "@/types/listings";
 export default function Page() {
 ,
   "Quantum Computing": {
@@ -69,7 +68,6 @@ export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
   "Cryptography": { icon: "🔑", count: 1 },;
   "Content Generation": { icon: "✍️", count: 1 };
 };
-
 export const ULTIMATE_PRICING_TIERS_2025 = {
   "Starter": {
     range: "$8,000 - $15,000",
@@ -101,5 +99,4 @@ export const ULTIMATE_CONTACT_INFO_2025 = {
   ;"
   emergencySupport: "24/7 available for critical issues"};
 ;
-
 };

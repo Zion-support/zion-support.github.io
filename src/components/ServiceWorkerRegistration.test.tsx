@@ -5,12 +5,15 @@ import ServiceWorkerRegistration from &apos;./ServiceWorkerRegistration
 describe(&apos;ServiceWorkerRegistration&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
-}
+
+
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
-}
+
+
   it(&apos;displays expected content&apos, () => {
     render()
-}
+
+
     // comment
     render(<ServiceWorkerRegistration / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""

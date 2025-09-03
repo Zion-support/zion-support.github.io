@@ -46,5 +46,4 @@ const MicroSAASPage = () => {
             </div>
     </>
   );
-}
 export default MicroSAASPage

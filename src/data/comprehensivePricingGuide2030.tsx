@@ -88,7 +88,6 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
     paymentOptions["One-time payment", "Annual subscription", "Monthly payment"],;"
     volumeDiscounts["10% off for 3+ licenses", "20% off for 10+ licenses", "Custom pricing for enterprise"],;"
     enterpriseFeatures["Custom AI models", "On-premise deployment", "Dedicated support", "White-label solutions"]},;
-
   // AI-Powered Metaverse Development Platform
   {
 "
@@ -150,7 +149,6 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
     paymentOptions["One-time payment", "Annual subscription", "Revenue sharing"],;"
     volumeDiscounts["15% off for 5+ licenses", "25% off for 20+ licenses", "Custom enterprise pricing"],;"
     enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]},;
-
   // Zero-Trust Network Access Platform
   {
 "
@@ -212,7 +210,6 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
     paymentOptions["One-time payment", "Annual subscription", "Per-user pricing"],;"
     volumeDiscounts["20% off for 100+ users", "30% off for 500+ users", "Custom enterprise pricing"],;"
     enterpriseFeatures["Custom integrations", "White-label solutions", "Enterprise support", "Custom compliance"]},;
-
   // AI-Powered Medical Imaging Analysis
   {
 "
@@ -275,7 +272,6 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
     paymentOptions["One-time payment", "Annual subscription", "Per-image pricing"],;"
     volumeDiscounts["25% off for 5+ licenses", "40% off for 20+ licenses", "Custom enterprise pricing"],;"
     enterpriseFeatures["Custom AI models", "White-label solutions", "Enterprise support", "Custom integrations"]},;
-
   // AI-Powered Risk Assessment Platform
   {
 "
@@ -339,7 +335,6 @@ export const comprehensivePricingGuide2030: ServicePricing[] = [// Micro SaaS Se
     volumeDiscounts["20% off for 10+ licenses", "35% off for 50+ licenses", "Custom enterprise pricing"],;"
     enterpriseFeatures["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]}
 ];
-
 // Pricing Analysis and Insights
 export const PRICING_ANALYSIS_2030 = {
   averagePrice: Math.round(COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) /
@@ -348,6 +343,7 @@ export const PRICING_ANALYSIS_2030 = {
   priceRange: {
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
   max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
+
 },;
   categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce(acc: unknown, service: unknown {;
     if (!acc[service.category]) {;
@@ -359,7 +355,6 @@ export const PRICING_ANALYSIS_2030 = {
     roi: service.roi,;
     setupTime: service.setupTime,;
     price: service.basePrice}))};
-
 // Payment and Discount Information;
 export const PAYMENT_OPTIONS_2030 = {
 "

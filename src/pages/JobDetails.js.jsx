@@ -1,16 +1,16 @@
-import React, { useState } from 'react';'''
-import { useParams, useNavigate } from 'react-router-dom';'''
-import { Button } from '@/components/ui/button';'''
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';'''
-import { Badge } from '@/components/ui/badge';'''
-import { Calendar, Clock, DollarSign, Briefcase } from '@/components/icons';'''
-import { formatDistanceToNow } from 'date-fns';'''
-import { toast } from 'sonner';'''
-import { useAuth } from '@/hooks/useAuth';'''
-import useJobDetails from '@/hooks/useJobDetails';'''
-import { ApplyToJobModal } from '@/components/messaging/job-application';'''
-import { SEO } from '@/components/SEO';'''
-import { useWhitelabel } from '@/context/WhitelabelContext';
+import React, { useState } from "react";"""
+import { useParams, useNavigate } from "react-router-dom";"""
+import { Button } from "@/components/ui/button";"""
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";"""
+import { Badge } from "@/components/ui/badge";"""
+import { Calendar, Clock, DollarSign, Briefcase } from "@/components/icons";"""
+import { formatDistanceToNow } from "date-fns";"""
+import { toast } from "sonner";"""
+import { useAuth } from "@/hooks/useAuth";"""
+import useJobDetails from "@/hooks/useJobDetails";"""
+import { ApplyToJobModal } from "@/components/messaging/job-application";"""
+import { SEO } from "@/components/SEO";"""
+import { useWhitelabel } from "@/context/WhitelabelContext";
 export default function JobDetails() {}
   // Cast to specify the expected route param type since useParams may be untyped;
   const { jobId } = useParams();
@@ -21,6 +21,7 @@ export default function JobDetails() {}
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
   if (isLoading) {}
     return()
+
       <div className="flex items-center justify-center min-h-screen">""""
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
       </div>
@@ -31,55 +32,56 @@ export default function JobDetails() {}
       <>""""
         <div className="container mx-auto px-4 py-16 text-center">""""
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>""""
-          <p className="mb-8">'
-            The job you're looking for doesn't exist or has been removed.
-          </p>'
-          <Button onClick={() => router('/jobs')}>View All Jobs</Button>
+          <p className="mb-8">"
+            The job you"re looking for doesn"t exist or has been removed.
+          </p>"
+          <Button onClick={() => router("/jobs")}>View All Jobs</Button>
         </div>
       </>
     );
   }
   const handleApply = () => {}
     if (!isAuthenticated) {}
-'
-      toast.error('Please log in to apply for this job');'
-      router('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
+"
+      toast.error("Please log in to apply for this job");"
+      router("/login?redirect=" + encodeURIComponent("/jobs/${jobId}"));
       return;
-    }'
-    if (user?.userType !== 'jobSeeker' && user?.userType !== 'talent') {}
-'
-''
-'''
-      toast.error('Only job seekers can apply for jobs');
+    }"
+    if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {}
+"
+""
+"""
+      toast.error("Only job seekers can apply for jobs");
       return;
     }
     setIsApplyModalOpen(true);
   };
   const handleApplySuccess = async appliedJobId => {}
-'
-''
-'''
-    toast.success('Application submitted successfully!');
+"
+""
+"""
+    toast.success("Application submitted successfully!");
     setIsApplyModalOpen(false);
   };
   const formatBudget = budget => {}
-'`
-'`'`
-'`'`'`
-    if (!budget) return 'Not specified';````
-    return `$${budget.min} - $${budget.max}`;
+""
+""""
+""""""
+    if (!budget) return "Not specified";""""
+    return "$${budget.min} - $${budget.max}";
   };
   const isOwnJob = user?.id === job.client_id;
   return()
-    <>'`
-      <SEO'`'`
-        title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
+
+    <>""
+      <SEO""""
+        title={"${job.title} - ${isWhitelabel ? brandName : "Zion AI Marketplace"}`}
         description={job.description.substring(0, 160)}
-      />"""
+     />"""
 """"
-      <main className="container mx-auto px-4 py-8">"'"""
-        <div className="mb-6">'"'"""
-          <Button variant="outline" size="sm" onClick={() => router('/jobs')}>
+      <main className="container mx-auto px-4 py-8">"""""
+        <div className="mb-6">""""""
+          <Button variant="outline" size="sm" onClick={() => router("/jobs")}>
             ← Back to Jobs;
           </Button>
         </div>"""
@@ -92,9 +94,9 @@ export default function JobDetails() {}
                   <div>""""
                     <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>""""
                     <div className="flex items-center text-muted-foreground">""""
-                      <Calendar className="mr-2 h-4 w-4" />
-                      <span>'
-                        Posted{' '}
+                      <Calendar className="mr-2 h-4 w-4"   />
+                      <span>"
+                        Posted{" "}
                         {formatDistanceToNow(new Date(job.created_at), {}
                           addSuffix: true})}
                       </span>
@@ -126,12 +128,11 @@ export default function JobDetails() {}
               </CardContent>
             </Card>
           </div>
-
           <div>"""
             <Card>""""
               <CardContent className="pt-6 space-y-4">""""
                 <div className="flex items-start">""""
-                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground" />""""
+                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground"   />""""
                   <div className="ml-3">""""
                     <p className="text-sm text-muted-foreground">Budget</p>""""
                     <p className="font-medium">{formatBudget(job.budget)}</p>
@@ -139,25 +140,24 @@ export default function JobDetails() {}
                 </div>"""
 """"
                 <div className="flex items-start">""""
-                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />""""
+                  <Clock className="mt-1 h-5 w-5 text-muted-foreground"   />""""
                   <div className="ml-3">""""
                     <p className="text-sm text-muted-foreground">Deadline</p>""""
                     <p className="font-medium">
                       {job.deadline;
-                        ? new Date(job.deadline).toLocaleDateString()'
-                        : 'Flexible'}
+                        ? new Date(job.deadline).toLocaleDateString()"
+                        : "Flexible'}
                     </p>
                   </div>
                 </div>"""
 """"
                 <div className="flex items-start">""""
-                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />""""
+                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground"   />""""
                   <div className="ml-3">""""
                     <p className="text-sm text-muted-foreground">Job Type</p>""""
                     <p className="font-medium">Freelance / Remote</p>
                   </div>
                 </div>
-
                 {!isOwnJob && ("""
                   <Button""""
                     className="w-full mt-4"""
@@ -180,17 +180,12 @@ export default function JobDetails() {}
           </div>
         </div>
       </main>
-
 }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>)}
 
 
 export { JobDetails };
-
 export { JobDetails };
-
 export { JobDetails };
-
 export { JobDetails };
-
 export { JobDetails };

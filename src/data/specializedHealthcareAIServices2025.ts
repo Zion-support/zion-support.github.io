@@ -41,9 +41,7 @@ const zionContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 ;
-
 };
-
 export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{
 
     id: 1,"
@@ -298,5 +296,4 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [{
     ],;"
     technologies["Natural Language Processing", "Sentiment Analysis", "Machine Learning", "Mobile Health"]}
 ];
-
 export default specializedHealthcareAIServices2025}}"

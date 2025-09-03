@@ -6,7 +6,6 @@ interface ApiResponse<T = unknown> {
     s: number,  message?: string}
 ;
 interface User {;
-
   id: string,;
   email: string,;
   nam,;
@@ -15,7 +14,6 @@ interface User {;
     e: "admin" | "user" | "guest"}
 ;
 interface Service {;
-
   id: string,
   email: string,
   nam,
@@ -32,7 +30,6 @@ interface Service {
   categor,    y: string}
 ;
 interface FormData {;
-
   [key: string]: string | number | boolean | File}
 ;
 interface ComponentProps {;
@@ -138,7 +135,7 @@ clients have to say about working with us."
                   <div className="flex items-center mb-4">,
                     {[...Array(testimonial.rating)].map((_, i) => ("
                       <Star key={i}""
-                        className="h-5 w-5 text-yellow-400 fill-current"  />"
+                        className="h-5 w-5 text-yellow-400 fill-current"   />"
                   </div>""
                   <blockquote className="text-gray-600 mb-6 italic">""
                     "{testimonial.content}"

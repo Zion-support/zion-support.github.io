@@ -72,7 +72,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "Immediate",
     aiScore: 91
   },
-
   // Cloud & Infrastructure Services
   {
 "
@@ -121,7 +120,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "4-6 Weeks",
     aiScore: 92
   },
-
   // Cybersecurity Services
   {
 "
@@ -170,7 +168,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "6-8 Weeks",
     aiScore: 93
   },
-
   // Data & Analytics Services
   {
 "
@@ -218,7 +215,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "4-5 Weeks",
     aiScore: 92
   },
-
   // Business Intelligence & Reporting
   {
 "
@@ -244,7 +240,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "1-2 Weeks",
     aiScore: 94
   },
-
   // Development & DevOps Services
   {
 "
@@ -292,7 +287,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "2-3 Weeks",
     aiScore: 91
   },
-
   // Digital Transformation Services
   {
 "
@@ -318,7 +312,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "8-12 Weeks",
     aiScore: 95
   },
-
   // Industry-Specific Solutions
   {
 "
@@ -366,7 +359,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "4-6 Weeks",
     aiScore: 93
   },
-
   // Emerging Technology Services
   {
 "
@@ -415,7 +407,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "4-6 Weeks",
     aiScore: 94
   },
-
   // Advanced AI & Machine Learning Services
   {
 "
@@ -534,7 +525,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "3-4 Weeks",
     aiScore: 95
   },
-
   // Advanced Cloud & Infrastructure Services
   {
 "
@@ -653,7 +643,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "4-6 Weeks",
     aiScore: 95
   },
-
   // Advanced Cybersecurity Services
   {
 "
@@ -771,7 +760,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "3-4 Weeks",
     aiScore: 94
   },
-
   // Advanced Data & Analytics Services
   {
 "
@@ -889,7 +877,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "4-6 Weeks",
     aiScore: 94
   },
-
   // Business Intelligence & Development Services
   {
 "
@@ -1008,7 +995,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "2-3 Weeks",
     aiScore: 92
   },
-
   // Digital Transformation & Industry Solutions
   {
 "
@@ -1130,7 +1116,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "20-24 Weeks",
     aiScore: 97
   },
-
   // Innovative & Emerging Technology Services
   {
 "
@@ -1249,7 +1234,6 @@ export const ENHANCED_SERVICES: ProductListing[] = [// AI & Machine Learning Ser
     availability: "3-4 Weeks",;
     aiScore: 91};
 ];
-
 // Append additional diversified, real micro SaaS, IT, and AI services;
 export const MORE_ENHANCED_SERVICES: ProductListing[] = [{
 "
@@ -1334,17 +1318,15 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [{
 export const ALL_ENHANCED_SERVICES: ProductListing[] = [...ENHANCED_SERVICES,
   ...MORE_ENHANCED_SERVICES
 ];
-
 // Service categories for filtering
 export 
-  { label: 'Financial Technology', value: 'fintech' },;
-  { label: 'Blockchain', value: 'blockchain' },;
-  { label: 'Quantum Computing', value: 'quantum-computing' },;
-  { label: 'Edge Computing', value: 'edge-computing' },;
-  { label: 'Emerging Technology', value: 'emerging-tech' },;
-  { label: 'AI Automation', value: 'ai-automation' };
+  { label: "Financial Technology", value: "fintech" },;
+  { label: "Blockchain", value: "blockchain" },;
+  { label: "Quantum Computing", value: "quantum-computing" },;
+  { label: "Edge Computing", value: "edge-computing" },;
+  { label: "Emerging Technology", value: "emerging-tech" },;
+  { label: "AI Automation", value: "ai-automation" };
 ];
-
 // Pricing tiers for different service levels
 export const SERVICE_PRICING_TIERS = {
   basic: { range: "$500 - $2,000",
@@ -1353,7 +1335,6 @@ export const SERVICE_PRICING_TIERS = {
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;"
   enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },;"
   premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" }};
-
 // Contact information;
 export const CONTACT_INFO: unknown = {}
 """
@@ -1368,7 +1349,7 @@ import React from "react"
 import { SEO } from "@/components/SEO"
 export default function enhancedServices() {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="enhancedServices - Zion Tech Group" description="Professional enhancedServices services by Zion Tech Group"  />"
+      <SEO title="enhancedServices - Zion Tech Group" description="Professional enhancedServices services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
         <h1 className="text-4xl font-bold text-white mb-8">enhancedServices</h1>"
         <p className="text-gray-300 text-lg">

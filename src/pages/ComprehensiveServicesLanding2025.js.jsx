@@ -1,40 +1,40 @@
-import React, { useState } from 'react';'''
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";"""
+import { Link } from "react-router-dom";
 ;
 const ComprehensiveServicesLanding2025 = () => {
-    const [selectedIndustry, setSelectedIndustry] = useState('all');
+    const [selectedIndustry, setSelectedIndustry] = useState("all");
     const industries = [
-        { id: 'all', name: 'All Industries', icon: '🏢', description: 'Comprehensive solutions across all sectors' },
-        { id: 'finance', name: 'Financial Services', icon: '💰', description: 'AI-powered trading, risk management, and compliance' },
-        { id: 'healthcare', name: 'Healthcare', icon: '🏥', description: 'Advanced analytics, patient care, and research' },
-        { id: 'manufacturing', name: 'Manufacturing', icon: '🏭', description: 'Smart factories, IoT, and supply chain optimization' },
-        { id: 'energy', name: 'Energy & Utilities', icon: '⚡', description: 'Renewable energy management and grid optimization' },
-        { id: 'logistics', name: 'Logistics & Transportation', icon: '🚚', description: 'Autonomous logistics and route optimization' },
-        { id: 'legal', name: 'Legal Services', icon: '⚖️', description: 'AI-powered research and document analysis' },        { id: 'marketing', name: 'Marketing & Advertising', icon: '📢', description: 'Autonomous campaigns and AI content generation' }
+        { id: "all", name: "All Industries", icon: "🏢", description: "Comprehensive solutions across all sectors" },
+        { id: "finance", name: "Financial Services", icon: "💰", description: "AI-powered trading, risk management, and compliance" },
+        { id: "healthcare", name: "Healthcare", icon: "🏥", description: "Advanced analytics, patient care, and research" },
+        { id: "manufacturing", name: "Manufacturing", icon: "🏭", description: "Smart factories, IoT, and supply chain optimization" },
+        { id: "energy", name: "Energy & Utilities", icon: "⚡", description: "Renewable energy management and grid optimization" },
+        { id: "logistics", name: "Logistics & Transportation", icon: "🚚", description: "Autonomous logistics and route optimization" },
+        { id: "legal", name: "Legal Services", icon: "⚖️", description: "AI-powered research and document analysis" },        { id: "marketing", name: "Marketing & Advertising", icon: "📢", description: "Autonomous campaigns and AI content generation" }
     ];
     const getServicesByIndustry = (industry) => {}
-'
-''
-'''
-        if (industry === 'all')
+"
+""
+"""
+        if (industry === "all")
+
             return allEnhancedServices;
         const industryMap = {}
-'
-''
-'''
-  'finance'['FinTech & AI',Cybersecurity & Quantum Computing'],;'''
-            'healthcare'['Healthcare & AI'],;'''
-            'manufacturing'['IoT & Edge Computing',Blockchain & Supply Chain'],;'''
-            'energy'['Energy & Sustainability'],;'''
-            'logistics'['Logistics & Transportation'],;'''
-            'legal'['Legal Tech & AI'],;'''
-  'marketing'['Marketing & AI'];
-
+"
+""
+"""
+  "finance"["FinTech & AI",Cybersecurity & Quantum Computing"],;"""
+            "healthcare"["Healthcare & AI"],;"""
+            "manufacturing"["IoT & Edge Computing",Blockchain & Supply Chain"],;"""
+            "energy"["Energy & Sustainability"],;"""
+            "logistics"["Logistics & Transportation"],;"""
+            "legal"["Legal Tech & AI"],;"""
+  "marketing"["Marketing & AI"];
 };
         return allEnhancedServices.filter(service => industryMap[industry]?.includes(service.category))};"""
     const filteredServices = getServicesByIndustry(selectedIndustry);""""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <h1 className="text-4xl md:text-6xl font-bold mb-6">"""
@@ -48,7 +48,7 @@ const ComprehensiveServicesLanding2025 = () => {
             designed to revolutionize your operations and drive unprecedented growth.
           </p>
           """
-          {/* Key Statistics */}""""
+          {/* comment */}""""
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">""""
               <div className="text-3xl font-bold text-blue-400">12+</div>""""
@@ -68,7 +68,7 @@ const ComprehensiveServicesLanding2025 = () => {
             </div>
           </div>
 """
-          {/* CTA Buttons */}""""
+          {/* comment */}""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
             <Link to="/enhanced-services-2025" className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 hover:scale-105">
               Explore All Services"""
@@ -80,7 +80,7 @@ const ComprehensiveServicesLanding2025 = () => {
         </div>
       </section>
 """
-      {/* Industry Solutions */}""""
+      {/* comment */}""""
       <section className="px-4 sm:px-6 lg:px-8 py-20">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -92,20 +92,20 @@ const ComprehensiveServicesLanding2025 = () => {
             </p>
           </div>"""
 """"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">'
-            {industries.map((industry) => (<button key={industry.id} onClick={() => setSelectedIndustry(industry.id)} className={`p-6 rounded-xl border transition-all duration-300 text-left ${selectedIndustry === industry.id''`
-                ? 'bg-blue-500/20 border-blue-400 scale-105''`'"`
-                : 'bg-white/10 border-white/20 hover:border-blue-400 hover:scale-105'}`}>""""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">"
+            {industries.map((industry) => (<button key={industry.id} onClick={() => setSelectedIndustry(industry.id)} className={"p-6 rounded-xl border transition-all duration-300 text-left ${selectedIndustry === industry.id"""
+                ? "bg-blue-500/20 border-blue-400 scale-105""""""
+                : "bg-white/10 border-white/20 hover:border-blue-400 hover:scale-105"}"}>""""
                 <div className="text-4xl mb-3">{industry.icon}</div>""""
                 <h3 className="text-lg font-semibold mb-2">{industry.name}</h3>""""
                 <p className="text-sm text-gray-400">{industry.description}</p>
               </button>))}
           </div>
 """
-          {/* Services Grid */}""""
+          {/* comment */}""""
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">""""
             {filteredServices.map((service) => (<div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 overflow-hidden hover:border-blue-400 transition-all duration-300 hover:scale-105">"""
-                {/* Service Header */}""""
+                {/* comment */}""""
                 <div className="p-6 bg-gradient-to-r from-blue-600 to-purple-600">""""
                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>""""
                   <p className="text-white/90 text-sm">{service.tagline}</p>""""
@@ -114,18 +114,18 @@ const ComprehensiveServicesLanding2025 = () => {
                       {service.price}""""
                       <span className="text-sm text-white/70">{service.period}</span>"""
                     </span>""""
-                    <div className="flex items-center text-yellow-400">'"""
-                      {'★'.repeat(Math.floor(service.rating))}""""
+                    <div className="flex items-center text-yellow-400">""""
+                      {"★'.repeat(Math.floor(service.rating))}""""
                       <span className="text-white/70 ml-1">({service.reviews})</span>
                     </div>
                   </div>
                 </div>
 """
-                {/* Service Content */}""""
+                {/* comment */}""""
                 <div className="p-6">""""
                   <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                   """
-                  {/* Key Benefits */}""""
+                  {/* comment */}""""
                   <div className="mb-4">""""
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Benefits</h4>""""
                     <div className="space-y-1">""""
@@ -136,7 +136,7 @@ const ComprehensiveServicesLanding2025 = () => {
                     </div>
                   </div>
 """
-                  {/* Market Info */}""""
+                  {/* comment */}""""
                   <div className="grid grid-cols-2 gap-4 text-xs text-gray-400 mb-4">"""
                     <div>""""
                       <span className="text-blue-400">Market:</span> {service.marketSize}
@@ -146,12 +146,12 @@ const ComprehensiveServicesLanding2025 = () => {
                     </div>
                   </div>
 """
-                  {/* CTA */}""""
+                  {/* comment */}""""
                   <div className="flex gap-2">""""
                     <button className="flex-1 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105">
-                      Learn More"`
-                    </button>"`"`
-                    <a href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}`} className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105">
+                      Learn More""
+                    </button>""""
+                    <a href={"mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.name}"} className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 hover:scale-105">
                       Contact;
                     </a>
                   </div>
@@ -161,7 +161,7 @@ const ComprehensiveServicesLanding2025 = () => {
         </div>
       </section>
 """
-      {/* Why Choose Zion Tech Group */}""""
+      {/* comment */}""""
       <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white/5">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -220,7 +220,7 @@ const ComprehensiveServicesLanding2025 = () => {
         </div>
       </section>
 """
-      {/* Pricing Comparison */}""""
+      {/* comment */}""""
       <section className="px-4 sm:px-6 lg:px-8 py-20">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -334,7 +334,7 @@ const ComprehensiveServicesLanding2025 = () => {
         </div>
       </section>
 """
-      {/* Success Stories */}""""
+      {/* comment */}""""
       <section className="px-4 sm:px-6 lg:px-8 py-20 bg-white/5">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -392,7 +392,7 @@ const ComprehensiveServicesLanding2025 = () => {
         </div>
       </section>
 """
-      {/* Final CTA */}""""
+      {/* comment */}""""
       <section className="px-4 sm:px-6 lg:px-8 py-20">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -426,14 +426,8 @@ const ComprehensiveServicesLanding2025 = () => {
       </section>
     </div>)};
 export default ComprehensiveServicesLanding2025;
-
-
 export { ComprehensiveServicesLanding2025 };
-
 export { ComprehensiveServicesLanding2025 };
-
 export { ComprehensiveServicesLanding2025 };
-
 export { ComprehensiveServicesLanding2025 };
-
 export { ComprehensiveServicesLanding2025 };

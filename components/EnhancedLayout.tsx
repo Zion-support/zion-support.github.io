@@ -1,7 +1,6 @@
 import Head from "next/head"
 import React, { ReactNode } from "react"
 interface EnhancedLayoutProps {;
-
   children: ReactNode;
   title?: string;
   description?: string;
@@ -22,9 +21,8 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,;
   noindex = false,;
   showPerformanceMetrics = false,;
   showSEOAnalysis = false}) => {";
-  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
   const canonicalUrl = canonical || "https: //ziontechgroup.com",;
-
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
   title = "Zion Tech Group - Leading Technology Solutions Provider","
   description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.","
@@ -46,10 +44,10 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
         <meta name="description" content="{description}"  />
         <meta name="keywords" content="{keywords}"  />"
         <meta name="viewport" content="width=device-width, initial-scale=1"  />""
-        <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}       />
+        <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}          />
         
         {/* comment */}"
-        {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
+        {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"   />}
 
         {/* comment */}"
         <meta property="og:title" content="{fullTitle}"  />"
@@ -108,14 +106,14 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
           href="/fonts/inter-var.woff2" "
           as="font" "
           type="font/woff2" "
-          crossOrigin="anonymous"  />
+          crossOrigin="anonymous"   />
         
         {/* comment */}"
-        <link rel="icon" href="/favicon.ico"  />"
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />"
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />"
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />"
-        <link rel="manifest" href="/site.webmanifest"  />
+        <link rel="icon" href="/favicon.ico"   />"
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"   />"
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"   />"
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"   />"
+        <link rel="manifest" href="/site.webmanifest"   />
         
         {/* comment */}"
         <script type="application/ld+json""
@@ -166,7 +164,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
 })>
 }}
 
-       />
+      />
       </Head>
       {/* comment */}"
       <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">

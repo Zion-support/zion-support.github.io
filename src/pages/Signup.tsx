@@ -5,7 +5,6 @@ import { useForm, type UseFormReturn } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
-
 import { useAuth } from "@/hooks/useAuth";
 import { register } from "@/services/auth";
 import { toast } from "@/hooks/use-toast";
@@ -22,29 +21,31 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
 // Form validation schema
 const signupSchema = z
   .object({
     displayName: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
     password: z.string()
+
       .min(8, "Password must be at least 8 characters")
+
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+
       .regex(/[0-9]/, "Password must contain at least one number"),
     confirmPassword: z.string(),
     termsAccepted: z.boolean().refine(val => val === true, {
       message: "You must accept the terms and conditions",
     }),
   })
+
   .refine(data => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"],
   });
-
 type SignupFormValues = z.infer<typeof signupSchema>;
-
 export default function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const navigate = useNavigate();
@@ -54,7 +55,6 @@ export default function Signup() {
   const [confirmPasswordValue, setConfirmPasswordValue] = useState("");
   const passwordValue = form.watch("password");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
   // Initialize react-hook-form
   const form = useForm({
     resolver: zodResolver(signupSchema),
@@ -66,7 +66,6 @@ export default function Signup() {
       termsAccepted: false,
     },
   }) as UseFormReturn<SignupFormValues>;
-
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return; // Prevent multiple submissions
@@ -78,21 +77,19 @@ export default function Signup() {
         data.email,
         data.password
       );
-
       // Handle duplicate email error from API
-      if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
-        form.setError('email', { message: resData.message });
-        toast.error('Email already registered – please login.');
+      if (res.status === 409 && resData?.code === "EMAIL_EXISTS") {
+        form.setError("email", { message: resData.message });
+        toast.error("Email already registered – please login.");
         return;
       }
 
       // Check for successful response
       if (res.ok && resData.token && resData.user) {
         // Successful registration
-        safeStorage.setItem('authToken', resData.token);
+        safeStorage.setItem("authToken", resData.token);
         setUser(resData.user);
         setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken || null });
-
       // Handle email verification required case
       if (resData?.emailVerificationRequired) {
         setShowVerificationMessage(true);
@@ -121,16 +118,17 @@ export default function Signup() {
       }
 
       // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
+
       if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
         try {
           await mailchimpService.addSubscriber({
             email: data.email,
             mergeFields: { FNAME: data.displayName }
           });
-          await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
+          await mailchimpService.sendWelcomeEmail(data.email, "NEW10");
         } catch (err) {
-          console.error('Mailchimp subscription failed', err);
-          // Non-critical error, don't block user flow
+          console.error("Mailchimp subscription failed", err);
+          // Non-critical error, don"t block user flow
         }
       }
       // Toast and navigation are handled above if session is present
@@ -142,22 +140,20 @@ export default function Signup() {
     } finally {
       setIsSubmitting(false);    }
   };
-
   const onInvalid = (errors: any) => {
     const firstError = Object.keys(errors)[0] as keyof SignupFormValues;
     if (firstError) {
       form.setFocus(firstError);
     }
   };
-
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />;
+    return <Navigate to="/"   />;
   }
   
-  // Redirect to onboarding if user is authenticated but hasn't completed profile
+  // Redirect to onboarding if user is authenticated but hasn"t completed profile
   if (isAuthenticated && !user?.profileComplete) {
-    return <Navigate to="/onboarding" />;
+    return <Navigate to="/onboarding"   />;
   }
 
 import React from "react"
@@ -207,4 +203,3 @@ const Signup = () => {
               </Link>
             </div>
     </>  );
-}

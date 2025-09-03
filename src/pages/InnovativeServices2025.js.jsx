@@ -1,5 +1,5 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';
+import React from "react";"""
+import { Link } from "react-router-dom";
 const InnovativeServices2025 = () => {}
     const innovativeServices = []
         {}
@@ -309,7 +309,7 @@ const InnovativeServices2025 = () => {}
         }"""
     ];""""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <h1 className="text-4xl md:text-6xl font-bold mb-6">"""
@@ -335,9 +335,8 @@ const InnovativeServices2025 = () => {}
           </div>
         </div>
       </section>
-
-      {/* Services Categories */}'"""
-      {innovativeServices.map((category, categoryIndex) => (<section key={categoryIndex} className={`py-20 px-4 sm:px-6 lg:px-8 ${categoryIndex % 2 === 0 ? 'bg-white/5' : ''}`}>""""
+      {/* comment */}""""
+      {innovativeServices.map((category, categoryIndex) => (<section key={categoryIndex} className={"py-20 px-4 sm:px-6 lg:px-8 ${categoryIndex % 2 === 0 ? "bg-white/5" : ""}"}>""""
           <div className="max-w-7xl mx-auto">""""
             <div className="text-center mb-16">""""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -351,7 +350,7 @@ const InnovativeServices2025 = () => {}
             <div className="space-y-12">""""
               {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300">""""
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    {/* Service Details */}"""
+                    {/* comment */}"""
                     <div>""""
                       <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>""""
                       <p className="text-gray-300 mb-6 text-lg">{service.description}</p>"""
@@ -377,7 +376,7 @@ const InnovativeServices2025 = () => {}
                       </div>
                     </div>
 """
-                    {/* Market Information */}""""
+                    {/* comment */}""""
                     <div className="space-y-6">""""
                       <div className="bg-white/5 rounded-lg p-6">""""
                         <h4 className="text-lg font-semibold text-yellow-400 mb-3">Pricing & Market Position</h4>""""
@@ -417,14 +416,14 @@ const InnovativeServices2025 = () => {}
           </div>
         </section>) ) }
 """
-      {/* Enhanced CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business with Innovation?"""
           </h2>""""
-          <p className="text-xl text-gray-300 mb-8">'
-            Let's discuss how our cutting-edge services can position your business for success in 2025 and beyond"""
+          <p className="text-xl text-gray-300 mb-8">"
+            Let"s discuss how our cutting-edge services can position your business for success in 2025 and beyond"""
           </p>""""
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">""""
             <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
@@ -443,14 +442,8 @@ const InnovativeServices2025 = () => {}
       </section>
     </div>)};
 export default InnovativeServices2025;
-
-
 export { InnovativeServices2025 };
-
 export { InnovativeServices2025 };
-
 export { InnovativeServices2025 };
-
 export { InnovativeServices2025 };
-
 export { InnovativeServices2025 };

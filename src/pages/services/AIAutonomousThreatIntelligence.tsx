@@ -1,10 +1,10 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Shield, 
-  Eye, 
-  AlertTriangle, 
-  Target, 
-  CheckCircle, 
+import React from "react.ts";
+import { motion  } from "framer-motion.ts";
+import { Shield,
+  Eye,
+  AlertTriangle,
+  Target,
+  CheckCircle,
   Star,
   BarChart3,
   Users,
@@ -34,118 +34,113 @@ import { Shield,
   TrendingUp,
   Activity,
   ShieldCheck
- } from 'lucide-react.ts';
-
+ } from "lucide-react.ts";
 export default function AIAutonomousThreatIntelligence(...args: unknown[]): unknown {
   const features = [
     {
       icon: Eye,
-      title: 'Real-time Threat Detection',
-      description: 'AI-powered monitoring that identifies threats before they become attacks',
-      benefits: ['24/7 surveillance', 'Zero-day threat detection', 'Behavioral analysis']
+      title: "Real-time Threat Detection",
+      description: "AI-powered monitoring that identifies threats before they become attacks",
+      benefits: ["24/7 surveillance", "Zero-day threat detection", "Behavioral analysis"]
     },
     {
       icon: Shield,
-      title: 'Autonomous Response',
-      description: 'AI that automatically blocks and mitigates threats without human intervention',
-      benefits: ['Instant threat neutralization', 'Adaptive defense strategies', 'Self-learning protection']
+      title: "Autonomous Response",
+      description: "AI that automatically blocks and mitigates threats without human intervention",
+      benefits: ["Instant threat neutralization", "Adaptive defense strategies", "Self-learning protection"]
     },
     {
       icon: Target,
-      title: 'Predictive Intelligence',
-      description: 'Machine learning models that predict and prevent future attacks',
-      benefits: ['Attack pattern recognition', 'Risk assessment', 'Proactive defense']
+      title: "Predictive Intelligence",
+      description: "Machine learning models that predict and prevent future attacks",
+      benefits: ["Attack pattern recognition", "Risk assessment", "Proactive defense"]
     },
     {
       icon: Network,
-      title: 'Global Threat Intelligence',
-      description: 'Real-time threat data from worldwide sources and dark web monitoring',
-      benefits: ['Global threat visibility', 'Dark web intelligence', 'Cross-platform correlation']
+      title: "Global Threat Intelligence",
+      description: "Real-time threat data from worldwide sources and dark web monitoring",
+      benefits: ["Global threat visibility", "Dark web intelligence", "Cross-platform correlation"]
     }
   ];
-
   const threatTypes = [
     {
-      title: 'Ransomware Protection',
-      description: 'Advanced ransomware detection and prevention',
+      title: "Ransomware Protection",
+      description: "Advanced ransomware detection and prevention",
       icon: Lock,
-      price: '$15,000/month',
-      features: ['Behavioral analysis', 'File encryption detection', 'Backup protection']
+      price: "$15,000/month",
+      features: ["Behavioral analysis", "File encryption detection", "Backup protection"]
     },
     {
-      title: 'Phishing Defense',
-      description: 'AI-powered email and web phishing detection',
+      title: "Phishing Defense",
+      description: "AI-powered email and web phishing detection",
       icon: Mail,
-      price: '$12,000/month',
-      features: ['URL analysis', 'Content filtering', 'Social engineering detection']
+      price: "$12,000/month",
+      features: ["URL analysis", "Content filtering", "Social engineering detection"]
     },
     {
-      title: 'DDoS Mitigation',
-      description: 'Intelligent DDoS attack prevention and mitigation',
+      title: "DDoS Mitigation",
+      description: "Intelligent DDoS attack prevention and mitigation",
       icon: Network,
-      price: '$18,000/month',
-      features: ['Traffic analysis', 'Rate limiting', 'Geographic blocking']
+      price: "$18,000/month",
+      features: ["Traffic analysis", "Rate limiting", "Geographic blocking"]
     },
     {
-      title: 'Insider Threat Detection',
-      description: 'Monitor and detect malicious insider activities',
+      title: "Insider Threat Detection",
+      description: "Monitor and detect malicious insider activities",
       icon: Users,
-      price: '$20,000/month',
-      features: ['User behavior analysis', 'Access monitoring', 'Anomaly detection']
+      price: "$20,000/month",
+      features: ["User behavior analysis", "Access monitoring", "Anomaly detection"]
     }
   ];
-
   const pricing = [
     {
-      name: 'Threat Shield Basic',
-      price: '$8,000',
-      period: '/month',
-      description: 'Essential threat intelligence for small organizations',
+      name: "Threat Shield Basic",
+      price: "$8,000",
+      period: "/month",
+      description: "Essential threat intelligence for small organizations",
       features: [
-        'Basic threat detection',
-        'Email security',
-        'Standard support',
-        'Basic reporting'
+        "Basic threat detection",
+        "Email security",
+        "Standard support",
+        "Basic reporting"
       ]
     },
     {
-      name: 'Threat Shield Pro',
-      price: '$25,000',
-      period: '/month',
-      description: 'Advanced threat intelligence for growing organizations',
+      name: "Threat Shield Pro",
+      price: "$25,000",
+      period: "/month",
+      description: "Advanced threat intelligence for growing organizations",
       features: [
-        'Advanced threat detection',
-        'Autonomous response',
-        'Priority support',
-        'Real-time monitoring',
-        'Predictive analytics'
+        "Advanced threat detection",
+        "Autonomous response",
+        "Priority support",
+        "Real-time monitoring",
+        "Predictive analytics"
       ],
       popular: true
     },
     {
-      name: 'Threat Shield Enterprise',
-      price: '$75,000',
-      period: '/month',
-      description: 'Complete threat intelligence for large enterprises',
+      name: "Threat Shield Enterprise",
+      price: "$75,000",
+      period: "/month",
+      description: "Complete threat intelligence for large enterprises",
       features: [
-        'Everything in Pro',
-        'Custom AI models',
-        'Dedicated security analyst',
-        '24/7 support',
-        'White-label solutions'
+        "Everything in Pro",
+        "Custom AI models",
+        "Dedicated security analyst",
+        "24/7 support",
+        "White-label solutions"
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-orange-900 text-white">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(239,68,68,0.1)_50%,transparent_70%)] animate-pulse"></div>
         </div>
-        
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -154,19 +149,16 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-full">
-                <Shield className="h-8 w-8 text-white" />
+                <Shield className="h-8 w-8 text-white"   />
               </div>
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
               AI Autonomous Threat Intelligence
             </h1>
-            
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              The world's most advanced AI-powered threat intelligence platform that autonomously detects, 
+              The world"s most advanced AI-powered threat intelligence platform that autonomously detects,
               analyzes, and neutralizes cyber threats in real-time.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -186,8 +178,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
           </motion.div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -219,15 +210,13 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
                   </div>
                   <h3 className="text-2xl font-bold">{feature.title}</h3>
                 </div>
-                
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                   {feature.description}
                 </p>
-                
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-gray-200">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0"   />
                       {benefit}
                     </li>
                   ))}
@@ -237,8 +226,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
           </div>
         </div>
       </section>
-
-      {/* Threat Types Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/30 to-orange-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -270,19 +258,16 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
                   </div>
                   <h3 className="text-lg font-semibold">{threat.title}</h3>
                 </div>
-                
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                   {threat.description}
                 </p>
-                
                 <div className="text-red-400 font-semibold text-lg mb-4">
                   {threat.price}
                 </div>
-
                 <ul className="space-y-2">
                   {threat.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-200 text-sm">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"   />
                       {feature}
                     </li>
                   ))}
@@ -292,8 +277,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -317,11 +301,11 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`relative bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
+                className={"relative bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
                   plan.popular 
-                    ? 'border-red-400/60 shadow-lg shadow-red-500/25' 
-                    : 'border-red-500/20'
-                } hover:border-red-400/40 transition-all duration-300`}
+                    ? "border-red-400/60 shadow-lg shadow-red-500/25" 
+                    : "border-red-500/20"
+                } hover:border-red-400/40 transition-all duration-300"}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -339,24 +323,22 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-200">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0"   />
                       {feature}
                     </li>
                   ))}
                 </ul>
-                
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  className={"w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700'
-                      : 'bg-red-600/20 border border-red-400 hover:bg-red-600/30'
-                  }`}
+                      ? "bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700"
+                      : "bg-red-600/20 border border-red-400 hover:bg-red-600/30'
+                  }"}
                 >
                   Get Started
                 </motion.button>
@@ -365,8 +347,7 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-900/50 to-orange-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -380,7 +361,6 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Join the cybersecurity revolution with autonomous AI threat intelligence
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -400,40 +380,32 @@ export default function AIAutonomousThreatIntelligence(...args: unknown[]): unkn
           </motion.div>
         </div>
       </section>
-
-      {/* Contact Information */}
+      {/* comment */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
-              <Phone className="h-8 w-8 text-red-400 mb-4" />
+              <Phone className="h-8 w-8 text-red-400 mb-4"   />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
             </div>
             <div className="flex flex-col items-center">
-              <Mail className="h-8 w-8 text-red-400 mb-4" />
+              <Mail className="h-8 w-8 text-red-400 mb-4"   />
               <h3 className="text-lg font-semibold mb-2">Email</h3>
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </div>
             <div className="flex flex-col items-center">
-              <MapPin className="h-8 w-8 text-red-400 mb-4" />
+              <MapPin className="h-8 w-8 text-red-400 mb-4"   />
               <h3 className="text-lg font-semibold mb-2">Address</h3>
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className="text-gray-300">364 E Main St STE 1008<br  />Middletown DE 19709</p>
             </div>
           </div>
         </div>
       </section>
     </div>
   );
-}
-
-
 export { AIAutonomousThreatIntelligence };
-
 export { AIAutonomousThreatIntelligence };
-
 export { AIAutonomousThreatIntelligence };
-
 export { AIAutonomousThreatIntelligence };
-
 export { AIAutonomousThreatIntelligence };

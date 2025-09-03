@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 export default function Page() {
 ,
     { value: "quote_received", label: "Quote Request Received" },
     { value: "milestone_approved", label: "Milestone Approved" },
     { value: "talent_hired", label: "Talent Hired" }
   ];
-  
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
@@ -15,7 +14,6 @@ export default function Page() {
   
   const handleAddEvent = () => {
     if(!newWebhook.selectedEvent) return;
-    
     if(newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added");
       return;
@@ -27,26 +25,22 @@ export default function Page() {
       selectedEvent: "" as WebhookEventType
     });
   };
-  
   const handleRemoveEvent = (event: WebhookEventType) => {
     setNewWebhook({
       ...newWebhook,
       eventTypes: newWebhook.eventTypes.filter(e => e !== event)
+
     });
   };
-  
   const handleCreateWebhook = async () => {
     if(!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields");
       return;
-    }
-    
-    await createWebhook(newWebhook.name, 
-      newWebhook.url, 
-      newWebhook.eventTypes, 
+    await createWebhook(newWebhook.name,
+      newWebhook.url,
+      newWebhook.eventTypes,
       newWebhook.secret || undefined
     );
-    
     // Reset form
     setNewWebhook({
       name: "",
@@ -56,11 +50,9 @@ export default function Page() {
       secret: ""
     });
   };
-  
   const handleTestWebhook = async(webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType);
   };
-  
   return (<div className="space-y-8">
       <Card>
         <CardHeader>
@@ -77,9 +69,8 @@ export default function Page() {
                 placeholder="e.g., Job Postings Webhook"
                 value={newWebhook.name}
                 onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
-              />
+             />
             </div>
-            
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
               <Input 
@@ -87,10 +78,9 @@ export default function Page() {
                 placeholder="https://example.com/webhook"
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
-              />
+             />
             </div>
           </div>
-          
           <div className="space-y-2">
             <Label>Events</Label>
             <div className="flex flex-wrap gap-2 mb-2">
@@ -109,7 +99,7 @@ export default function Page() {
                 onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
               >
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select event" />
+                  <SelectValue placeholder="Select event"   />
                 </SelectTrigger>
                 <SelectContent>
                   {eventOptions.map(option => (
@@ -120,11 +110,10 @@ export default function Page() {
                 </SelectContent>
               </Select>
               <Button type="button" onClick={handleAddEvent} variant="outline">
-                <PlusCircle className="h-4 w-4 mr-2" /> Add
+                <PlusCircle className="h-4 w-4 mr-2"   /> Add
               </Button>
             </div>
           </div>
-          
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret(optional)</Label>
             <Input 
@@ -132,21 +121,19 @@ export default function Page() {
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
-            />
+           />
             <p className="text-xs text-muted-foreground">
               If provided, this secret will be used to sign the webhook payload.</p>
           </div>
         </CardContent>
         <CardFooter>
           <Button onClick={handleCreateWebhook}>
-            <Save className="h-4 w-4 mr-2" /> Create Webhook
+            <Save className="h-4 w-4 mr-2"   /> Create Webhook
           </Button>
         </CardFooter>
       </Card>
-      
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
-        
         {loading ? (
           <p>Loading webhooks...</p>
         ) : error ? (
@@ -167,8 +154,8 @@ export default function Page() {
                     </div>
                     <div className="flex items-center">
                       <div className="mr-2 flex items-center">
-                        <div className={`h-2 w-2 rounded-full mr-2 ${webhook.is_active ? 'bg-green-500' : 'bg-gray-400'}`}></div>
-                        <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
+                        <div className={"h-2 w-2 rounded-full mr-2 ${webhook.is_active ? "bg-green-500" : "bg-gray-400"}"}></div>
+                        <span className="text-sm">{webhook.is_active ? "Active" : "Inactive"}</span>
                       </div>
                       <div className="flex-shrink-0">
                         <Button 
@@ -176,7 +163,7 @@ export default function Page() {
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
-                          {webhook.is_active ? 'Disable' : 'Enable'}
+                          {webhook.is_active ? "Disable" : "Enable"}
                         </Button>
                       </div>
                     </div>
@@ -196,8 +183,8 @@ export default function Page() {
                     </div>
                     <div className="text-xs text-muted-foreground">
                       {webhook.last_triggered_at 
-                        ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
-                        : 'Never triggered'}
+                        ? "Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}"
+                        : "Never triggered"}
                     </div>
                   </div>
                 </CardContent>
@@ -207,14 +194,13 @@ export default function Page() {
                     size="sm"
                     onClick={() => deleteWebhook(webhook.id)}
                   >
-                    <Trash className="h-4 w-4 mr-2" /> Delete
+                    <Trash className="h-4 w-4 mr-2"   /> Delete
                   </Button>
-                  
                   <Select
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
                   >
                     <SelectTrigger className="w-[180px]">
-                      <SelectValue placeholder="Test webhook" />
+                      <SelectValue placeholder="Test webhook"   />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="test_event">Test(generic)</SelectItem>
@@ -240,14 +226,14 @@ export default function Page() {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="font-medium">Status:</span>
-                  <span className={testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600'}>
+                  <span className={testResult.status >= 200 && testResult.status < 300 ? "text-green-600" : "text-red-600"}>
                     {testResult.status} {testResult.statusText}
                   </span>
                 </div>
                 <div>
                   <span className="font-medium">Response:</span>
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">
-                    {testResult.responseBody || '<empty>'}
+                    {testResult.responseBody || "<empty>"}
                   </pre>
                 </div>
               </div>
@@ -257,4 +243,3 @@ export default function Page() {
       </div>
     </div>
   );
-}

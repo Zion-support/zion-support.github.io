@@ -1,18 +1,16 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-
+import React from "react";
+import { SEO } from "../components/SEO";
 export default function Services(...args: any[]): any {): unknown {): unknown {}
-  const [activeCategory, setActiveCategory] = useState(0);'
-  const [searchTerm, setSearchTerm] = useState('');
-
+  const [activeCategory, setActiveCategory] = useState(0);"
+  const [searchTerm, setSearchTerm] = useState("");
   const filteredServices: unknown = allServices.filter(service => {}
     const matchesSearch: unknown = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
-    const matchesCategory: unknown = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory: unknown = selectedCategory === "all" || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   }) ;
-
   return()
+
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">""""
       <div className="container mx-auto px-4 py-24 text-center text-white">"        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
           Our Services"""
@@ -37,7 +35,7 @@ export default function Services(...args: any[]): any {): unknown {): unknown {}
             <p className="text-2xl font-bold text-blue-400 mb-4">$3,000 - $25,000</p>
           </div>
         </div>"""
-        {/* New: AI-Powered Micro-SaaS Solutions */}""""
+        {/* comment */}""""
         <div className="mt-24 text-left">""""
           <h2 className="text-4xl font-bold mb-4">AI-Powered Micro-SaaS Solutions</h2>""""
           <p className="text-gray-300 mb-10 max-w-4xl">Intelligent, subscription-based tools that solve specific business problems with AI-powered automation and clear ROI.</p>""""
@@ -114,7 +112,7 @@ export default function Services(...args: any[]): any {): unknown {): unknown {}
           </div>
         </section>
 """
-        {/* New: AI Services & Solutions */}""""
+        {/* comment */}""""
         <div className="mt-24 text-left">""""
           <h2 className="text-4xl font-bold mb-4">AI Services & Solutions</h2>""""
           <p className="text-gray-300 mb-10 max-w-4xl">From strategy to production MLOps, we deliver outcomes, not experiments.</p>""""
@@ -146,7 +144,7 @@ export default function Services(...args: any[]): any {): unknown {): unknown {}
           </div>
         </section>
 """
-        {/* New: IT Services & Modernization */}""""
+        {/* comment */}""""
         <div className="mt-24 text-left">""""
           <h2 className="text-4xl font-bold mb-4">IT Services & Modernization</h2>""""
           <p className="text-gray-300 mb-10 max-w-4xl">End-to-end services to secure, scale, and streamline your technology footprint.</p>""""
@@ -178,7 +176,7 @@ export default function Services(...args: any[]): any {): unknown {): unknown {}
           </div>
         </section>
 """
-        {/* CTA and Contact */}""""
+        {/* comment */}""""
         <div className="mt-24 text-left">""""
           <div className="bg-white/5 rounded-2xl p-8 border border-white/10">""""
             <h3 className="text-3xl font-bold mb-4">Ready to start?</h3>""""
@@ -201,15 +199,14 @@ export default function Services(...args: any[]): any {): unknown {): unknown {}
       </div>
     </>
   )};
-export default Services;'"""
-'"'"""
+export default Services;""""
+""""""
 
 export { Services };
-
 export default function Services() {
   const services = [
     {
-      id: 'ai',
+      id: "ai",
       title: "AI Solutions",
       description: "Transform your business with cutting-edge artificial intelligence and machine learning solutions",
       icon: Brain,
@@ -231,7 +228,7 @@ export default function Services() {
       link: "/services/ai"
     },
     {
-      id: 'talent',
+      id: "talent",
       title: "Tech Talent",
       description: "Access world-class developers, engineers, and IT professionals for your projects",
       icon: Users,      color: "from-blue-500 to-cyan-500",
@@ -252,7 +249,7 @@ export default function Services() {
       link: "/talent"
     },
     {
-      id: 'equipment',
+      id: "equipment",
       title: "Equipment & Infrastructure",
       description: "High-performance technology infrastructure and hardware solutions for modern businesses",
       icon: Zap,
@@ -274,7 +271,7 @@ export default function Services() {
       link: "/equipment"
     },
     {
-      id: 'consulting',
+      id: "consulting",
       title: "Technology Consulting",
       description: "Strategic guidance for digital transformation and technology optimization",
       icon: TrendingUp,
@@ -296,7 +293,7 @@ export default function Services() {
       link: "/consulting"
     },
     {
-      id: 'cybersecurity',
+      id: "cybersecurity",
       title: "Cybersecurity Services",
       description: "Comprehensive security solutions to protect your digital assets and ensure compliance",
       icon: Shield,
@@ -318,7 +315,7 @@ export default function Services() {
       link: "/services/cybersecurity"
     },
     {
-      id: 'cloud',
+      id: "cloud",
       title: "Cloud Services",
       description: "Scalable cloud solutions and DevOps services for modern application development",
       icon: Cloud,
@@ -339,7 +336,6 @@ export default function Services() {
       ],
       link: "/services/cloud"    }
   ];
-
   const stats = [
     {
       icon: Globe,
@@ -366,7 +362,6 @@ export default function Services() {
       description: "Zero breaches"
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -376,7 +371,6 @@ export default function Services() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -387,16 +381,14 @@ export default function Services() {
       }
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
         </div>
-        
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div 
             variants={containerVariants}
@@ -425,7 +417,7 @@ export default function Services() {
                 className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="inline ml-2 h-5 w-5" />
+                <ArrowRight className="inline ml-2 h-5 w-5"   />
               </Link>
               <Link
                 to="/solutions"
@@ -437,8 +429,7 @@ export default function Services() {
           </motion.div>
         </div>
       </section>
-
-      {/* Stats Section */}
+      {/* comment */}
       <section className="py-16 bg-black/50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
@@ -464,8 +455,7 @@ export default function Services() {
           </motion.div>
         </div>
       </section>
-
-      {/* Services Grid */}
+      {/* comment */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div 
@@ -482,59 +472,54 @@ export default function Services() {
                 className="group bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:bg-slate-800/70 hover:shadow-xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-start justify-between mb-6">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.color} rounded-full group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={"inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.color} rounded-full group-hover:scale-110 transition-transform duration-300"}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   <Link 
                     to={service.link}
                     className="text-cyan-400 hover:text-cyan-300 transition-colors group/link"
                   >
-                    <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform"   />
                   </Link>
                 </div>
-                
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-400 mb-6">{service.description}</p>
-                
-                {/* Features */}
+                {/* comment */}
                 <div className="mb-6">
                   <h4 className="text-white font-medium mb-3">Key Features</h4>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"   />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-
-                {/* Benefits */}
+                {/* comment */}
                 <div className="mb-6">
                   <h4 className="text-white font-medium mb-3">Business Benefits</h4>
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm text-gray-300">
-                        <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0 mt-0.5" />
+                        <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0 mt-0.5"   />
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-
                 <Link 
                   to={service.link}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
                 >
                   Learn More About {service.title}
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"   />
                 </Link>
               </motion.div>
             ))}
           </motion.div>        </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
@@ -555,7 +540,7 @@ export default function Services() {
               >
                 <span className="flex items-center justify-center">
                   Get a Free Consultation
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"   />
                 </span>
               </Link>
               <Link 
@@ -591,5 +576,4 @@ export default function Services() {
             </div>
     </>
   );
-}
 export default Services

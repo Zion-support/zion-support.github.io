@@ -1,3 +1,4 @@
+import React from "react"
 import { useState } from "react";""""
 import { useParams, Link } from "react-router-dom";""""
 import SEO from "@/components/SEO";""""
@@ -17,7 +18,17 @@ const mockPost = {}
 """"
   id: "1",""""
     title: "Best practices for AI model fine-tuning",""""
-    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
+    content: "I"ve been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.
+
+First, it"s important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.
+
+Second, for parameter optimization, I"ve found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.
+
+Third, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.
+
+Finally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.
+
+What has been your experience with fine-tuning? Any techniques you"ve found particularly effective?",
     author: {}
 """
 """"
@@ -52,8 +63,8 @@ const mockReplies = []
 """
 """"
         id: "reply1",""""
-        postId: "1","'"""
-        content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
+        postId: "1","""""
+        content: "Great post! I"ve had similar experiences with data preparation being the key to successful fine-tuning. One thing I"d add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
         author: {}
 """
 """"
@@ -72,8 +83,8 @@ const mockReplies = []
 """
 """"
         id: "reply2",""""
-        postId: "1","'"""
-        content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance.",
+        postId: "1","""""
+        content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I"ve found them to be much more resource-friendly while maintaining good performance.",
         author: {}
 """
 """"
@@ -92,8 +103,10 @@ const mockReplies = []
 """
 """"
         id: "reply3",""""
-        postId: "1","'"""
-        content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
+        postId: "1","""""
+        content: "A technique that"s worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.
+
+Also, when fine-tuning language models, I"ve found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
         author: {}
 """
 """"
@@ -129,22 +142,22 @@ const mockReplies = []
         isAnswer: false;
 ];
 export default function ForumPostPage() {}
-'
-''
-'''
-    // Using `useParams` without type arguments avoids issues when TypeScript''''
-    // can't determine the generic type for the helper from React Router.
+"
+""
+"""
+    // Using "useParams" without type arguments avoids issues when TypeScript""""
+    // can"t determine the generic type for the helper from React Router.
     // Cast the result instead to provide the expected shape.
     const { postId } = useParams();
     const { user } = useAuth();
     const { toast } = useToast();
     const [post, setPost] = useState(mockPost);
-    const [replies, setReplies] = useState(mockReplies);'
-    // Check if this is the user's own post;
-    const isAuthor = user?.id === post?.authorId;'
-    // Check if user is admin/mod''
-    const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';'
-    // For this demo, we'll assume the post is found;
+    const [replies, setReplies] = useState(mockReplies);"
+    // Check if this is the user"s own post;
+    const isAuthor = user?.id === post?.authorId;"
+    // Check if user is admin/mod""
+    const isAdminOrMod = user?.userType === "admin" || user?.role === "admin";"
+    // For this demo, we"ll assume the post is found;
     if (!post) {}
 """
 """"
@@ -192,21 +205,21 @@ export default function ForumPostPage() {}
             return}
         // Create a new reply;
         const newReply = {}
-`
-``
-```
-````
-            id: `reply${Date.now()}`,
+"
+""
+"""
+""""
+            id: "reply${Date.now()}",
             postId: post.id,
             content,
             author: {}
-'
-''
-'''
-                id: user.id || 'unknown','''
-                name: user.displayName || 'Anonymous','''
-                avatar: user.avatarUrl || 'https://i.pravatar.cc/150?img=1','''
-                role: user.role || 'user'
+"
+""
+"""
+                id: user.id || "unknown","""
+                name: user.displayName || "Anonymous","""
+                avatar: user.avatarUrl || "https://i.pravatar.cc/150?img=1","""
+                role: user.role || "user"
             },
             createdAt: new Date () .toISOString () ,
             updatedAt: new Date () .toISOString () ,
@@ -272,37 +285,34 @@ export default function ForumPostPage() {}
 """
 """"
             title: post.isLocked ? "Post unlocked" : "Post locked",""""
-            description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})};'"""
-    const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });'"'"""
-    const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");`
-    return (<>``
-      <SEO title={`${post.title} | Community Forum | Zion AI Marketplace`} description = {}
+            description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})};""""
+    const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });""""""
+    const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy "at" h:mm a");"
+    return (<>""
+      <SEO title={"${post.title} | Community Forum | Zion AI Marketplace"} description = {}
   post.content.substring (0,
   160) } keywords = {}
-  `community, forum, discussion, ${post.tags.join(',
-  ') ;
-
-}`} canonical={`https://ziontechgroup.com / community / post/${post.id}`}/>;
-
+  "community, forum, discussion, ${post.tags.join(",
+  ") ;
+}"} canonical={"https://ziontechgroup.com / community / post/${post.id}"}   />;
 } keywords = {}
-'`
-'`'`
-'`'`'`
-'`'`'`'`
-  `community, forum, discussion, ${post.tags.join(',);
-
-`
-``
-}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>;"""
+""
+""""
+""""""
+""""""""
+  "community, forum, discussion, ${post.tags.join(",);
+"
+""
+}"} canonical={"https://ziontechgroup.com/community/post/${post.id}"}/>;"""
       """"
       <div className="container py-8">""""
         <div className="flex items-center gap-3 mb-6">""""
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
             Forum"""
-          </Link>""`
-          <span className="text-muted-foreground">/</span>"`"`
-          <Link to={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">'
-            {post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}"""
+          </Link>"""
+          <span className="text-muted-foreground">/</span>""""
+          <Link to={"/community/category/${post.categoryId}"} className="text-sm text-muted-foreground hover:text-foreground">"
+            {post.categoryId.split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")}"""
           </Link>""""
           <span className="text-muted-foreground">/</span>""""
           <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>
@@ -313,7 +323,7 @@ export default function ForumPostPage() {}
             <div className="flex justify-between items-start mb-6">""""
               <div className="flex items-center gap-4">""""
                 <Avatar className="h-12 w-12">
-                  <AvatarImage src={post.authorAvatar}/>
+                  <AvatarImage src={post.authorAvatar}   />
                   <AvatarFallback>{post.authorName.charAt (0) }</AvatarFallback>
                 </Avatar>"""
                 <div>""""
@@ -325,7 +335,7 @@ export default function ForumPostPage() {}
               </div>"""
 """"
               <div className="flex items-center text-sm text-muted-foreground">""""
-                <Calendar className="h-4 w-4 mr-1"/>
+                <Calendar className="h-4 w-4 mr-1"   />
                 <time dateTime={post.createdAt} title={formattedDate}>
                   {timeAgo}
                 </time>
@@ -340,43 +350,45 @@ export default function ForumPostPage() {}
                 </Badge>) ) }
             </div>"""
 """"
-            <div className="prose dark:prose-invert max-w-none mb-6">'
-              {post.content.split('\n\n').map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
+            <div className="prose dark:prose-invert max-w-none mb-6">"
+              {post.content.split("
+
+').map((paragraph, i) => (<p key={i}>{paragraph}</p>))}
             </div>"""
 """"
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">""""
               <div className="flex items-center gap-4">""""
                 <Button variant="outline" size="sm" onClick={handleUpvote} className="flex items-center gap-2">""""
-                  <ThumbsUp className="h-4 w-4"/>
+                  <ThumbsUp className="h-4 w-4"   />
                   <span>{post.upvotes}</span>"""
                 </Button>""""
                 <Button variant="outline" size="sm" onClick={handleDownvote} className="flex items-center gap-2">""""
-                  <ThumbsDown className="h-4 w-4"/>
+                  <ThumbsDown className="h-4 w-4"   />
                   <span>{post.downvotes}</span>
                 </Button>
               </div>"""
 """"
-              <div className="flex items-center gap-2">""`
-                {(isAuthor || isAdminOrMod) && (<Button variant="ghost" size="sm" asChild>`"`
-                    <Link to={`/community/edit/${post.id}`}>""""
-                      <Edit className="h-4 w-4 mr-1"/>
+              <div className="flex items-center gap-2">"""
+                {(isAuthor || isAdminOrMod) && (<Button variant="ghost" size="sm" asChild>"""
+                    <Link to={"/community/edit/${post.id}"}>""""
+                      <Edit className="h-4 w-4 mr-1"   />
                       Edit;
                     </Link>
                   </Button>) }
 """
                 {isAdminOrMod && (<>""""
                     <Button variant="ghost" size="sm" onClick={handlePinPost}>""""
-                      <Pin className="h-4 w-4 mr-1"/>""""
+                      <Pin className="h-4 w-4 mr-1"   />""""
                       {post.isPinned ? "Unpin" : "Pin"}"""
                     </Button>""""
                     <Button variant="ghost" size="sm" onClick={handleLockPost}>""""
-                      <Lock className="h-4 w-4 mr-1"/>""""
+                      <Lock className="h-4 w-4 mr-1"   />""""
                       {post.isLocked ? "Unlock" : "Lock"}
                     </Button>
                   </>)}"""
 """"
                 <Button variant="ghost" size="sm" onClick={handleReportPost}>""""
-                  <Flag className="h-4 w-4 mr-1"/>
+                  <Flag className="h-4 w-4 mr-1"   />
                   Report;
                 </Button>
               </div>
@@ -389,15 +401,15 @@ export default function ForumPostPage() {}
 """"
           {post.isAnswered && (<div className="mb-6">""""
               <h3 className="flex items-center text-green-600 font-medium mb-2">""""
-                <CheckCircle className="h-4 w-4 mr-2"/>
+                <CheckCircle className="h-4 w-4 mr-2"   />
                 Accepted Answer"""
               </h3>""""
-              {replies.filter(reply => reply.isAnswer).map(reply => (<ReplyCard key={reply.id} reply={reply} className="border-green-500"/>))}
+              {replies.filter(reply => reply.isAnswer).map(reply => (<ReplyCard key={reply.id} reply={reply} className="border-green-500"   />))}
             </div>)}"""
 """"
           {!post.isLocked && (<div className="mb-8">""""
               <h3 className="text-lg font-medium mb-4">Your Response</h3>
-              {user ? (<ReplyForm onSubmit={handleSubmitReply}/>) : (<Alert>"""
+              {user ? (<ReplyForm onSubmit={handleSubmitReply}   />) : (<Alert>"""
                   <AlertDescription>""""
                     Please <Link to="/login" className="font-medium text-zion-purple hover:underline">sign in</Link> to join the discussion.
                   </AlertDescription>
@@ -406,7 +418,7 @@ export default function ForumPostPage() {}
 """"
           {post.isLocked && (<Alert className="mb-8">""""
               <AlertDescription className="flex items-center">""""
-                <Lock className="h-4 w-4 mr-2"/>
+                <Lock className="h-4 w-4 mr-2"   />
                 This thread has been locked and is no longer open for responses.
               </AlertDescription>
             </Alert>)}"""
@@ -421,11 +433,7 @@ export default function ForumPostPage() {}
 
 
 export { ForumPostPage };
-
 export { ForumPostPage };
-
 export { ForumPostPage };
-
 export { ForumPostPage };
-
 export { ForumPostPage };

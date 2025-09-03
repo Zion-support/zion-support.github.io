@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import React from "react";
+import { motion } from "framer-motion";
+import { SEO } from "@/components/SEO";
 import { 
-  Brain, 
-  Heart, 
-  Stethoscope, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
+  Brain,
+  Heart,
+  Stethoscope,
+  Shield,
+  Zap,
+  CheckCircle,
   ArrowRight,
   Phone,
   Mail,
@@ -24,8 +24,7 @@ import {
   FileText,
   Eye,
   Brain as BrainIcon
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
   const features = [
     {
@@ -53,7 +52,6 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       benefits: ["HIPAA compliant", "End-to-end encryption", "Audit trails"]
     }
   ];
-
   const pricingPlans = [
     {
       name: "Clinic",
@@ -97,7 +95,6 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       popular: false
     }
   ];
-
   const useCases = [
     {
       title: "Radiology Departments",
@@ -120,7 +117,6 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       icon: Microscope
     }
   ];
-
   const benefits = [
     {
       metric: "99.7%",
@@ -143,7 +139,6 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
       detail: "Average reduction in diagnostic costs"
     }
   ];
-
   const specialties = [
     "Cardiology",
     "Neurology",
@@ -154,17 +149,14 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
     "Ophthalmology",
     "Orthopedics"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <SEO 
-        title="AI Autonomous Healthcare Diagnostics Platform - Zion Tech Group"
+      <SEO title="AI Autonomous Healthcare Diagnostics Platform - Zion Tech Group"
         description="Revolutionary AI-powered healthcare platform that autonomously analyzes medical images, detects diseases, and provides diagnostic insights with 99.7% accuracy."
         keywords="AI healthcare, medical diagnostics, medical imaging, disease detection, healthcare technology, medical AI"
-        canonical="https://ziontechgroup.com/services/ai-autonomous-healthcare-diagnostics-platform"
-      />
+        canonical="https://ziontechgroup.com/services/ai-autonomous-healthcare-diagnostics-platform"   />
 
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -174,42 +166,38 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
           >
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mr-4">
-                <Brain className="w-8 h-8 text-white" />
+                <Brain className="w-8 h-8 text-white"   />
               </div>
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
-                <Heart className="w-8 h-8 text-white" />
+                <Heart className="w-8 h-8 text-white"   />
               </div>
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous Healthcare Diagnostics Platform
             </h1>
-            
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform healthcare delivery with the world's most advanced AI platform for autonomous medical diagnostics, disease detection, and predictive health analytics.
+              Transform healthcare delivery with the world"s most advanced AI platform for autonomous medical diagnostics, disease detection, and predictive health analytics.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </a>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-slate-700 text-white font-semibold rounded-xl hover:bg-slate-600 transition-all duration-300"
               >
-                <Phone className="mr-2 w-5 h-5" />
+                <Phone className="mr-2 w-5 h-5"   />
                 +1 302 464 0950
               </a>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -245,8 +233,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -277,14 +264,12 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-slate-300 mb-6 leading-relaxed">{feature.description}</p>
-                
                 <ul className="space-y-3">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0"   />
                       {benefit}
                     </li>
                   ))}
@@ -294,8 +279,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Medical Specialties Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -329,8 +313,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -344,7 +327,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Choose the plan that fits your healthcare facility's needs and scale as you grow
+              Choose the plan that fits your healthcare facility"s needs and scale as you grow
             </p>
           </motion.div>
 
@@ -356,11 +339,11 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border-2 ${
+                className={"relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border-2 ${
                   plan.popular 
-                    ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
-                    : 'border-slate-700/50'
-                }`}
+                    ? "border-blue-500 shadow-lg shadow-blue-500/25" 
+                    : "border-slate-700/50"
+                }"}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -373,29 +356,26 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-slate-400 mb-6">{plan.description}</p>
-                  
                   <div className="flex items-baseline justify-center">
                     <span className="text-5xl font-bold text-white">{plan.price}</span>
                     <span className="text-slate-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0"   />
                       {feature}
                     </li>
                   ))}
                 </ul>
-
                 <a
                   href="https://ziontechgroup.com/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                  className={"w-full block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
-                  }`}
+                      ? "bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700"
+                      : "bg-slate-700 text-white hover:bg-slate-600"
+                  }"}
                 >
                   Get Started
                 </a>
@@ -404,8 +384,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -436,7 +415,6 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
-                
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-slate-300 leading-relaxed">{useCase.description}</p>
               </motion.div>
@@ -444,8 +422,7 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -457,19 +434,17 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Healthcare Delivery?
             </h2>
-            
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
               Join the future of healthcare with our AI Autonomous Diagnostics Platform. 
               Get in touch today to schedule a personalized demo and see how we can improve patient care.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="https://ziontechgroup.com/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
@@ -478,7 +453,6 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
                 Contact Sales
               </a>
             </div>
-            
             <div className="mt-8 text-slate-400">
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">+1 302 464 0950</a></p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -489,5 +463,4 @@ const AIAutonomousHealthcareDiagnosticsPlatform: React.FC = () => {
     </div>
   );
 };
-
 export default AIAutonomousHealthcareDiagnosticsPlatform;

@@ -46,5 +46,4 @@ const RevolutionaryServicesLanding2025 = () => {
             </div>
     </>
   );
-}
 export default RevolutionaryServicesLanding2025

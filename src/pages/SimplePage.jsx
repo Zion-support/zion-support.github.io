@@ -555,7 +555,8 @@ title: "Become a Partner,"
 "
   const pageInfo = getPageInfo(location.pathname);""
   const breadcrumbs = location.pathname.split("/").filter(Boolean)
-}
+
+
 "
   return ('
     <div className = "min-h-screen bg-zion-blue-dark">"
@@ -569,7 +570,7 @@ title: "Become a Partner,"
       <div className="container mx-auto px-4 py-6">"
         <nav className="flex items-center space-x-2 text-sm text-zion-slate-light">"
           <Link to="/" className="flex items-center hover: text-zion-cyan transition-colors">"
-            <Home className="h-4 w-4 mr-1"  />",
+            <Home className="h-4 w-4 mr-1"   />",
       {/* comment */}"""
       <div className="container mx-auto px-4 py-6">"""
         <nav className="flex items-center space-x-2 text-sm text-zion-slate-light">"""
@@ -579,7 +580,7 @@ title: "Become a Partner,"
           </Link>",
           {breadcrumbs.map((crumb, index) => (""
             <div key="{index}" className="flex items-center">""
-              <ChevronRight className="h-4 w-4 mx-2 text-zion-purple/50"  />""
+              <ChevronRight className="h-4 w-4 mx-2 text-zion-purple/50"   />""
           {breadcrumbs.map((crumb, index) => ("""
             <div key="{index}" className="flex items-center">"""
               <ChevronRight className="h-4 w-4 mx-2 text-zion-purple/50" /" >""
@@ -643,7 +644,7 @@ title: "Become a Partner,"
                   >"
                     Learn More"",
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hove,"
-    r: translate-x-1"  />,
+    r: translate-x-1"   />,
       {/* comment */}, {pageInfo.sections.length > 0 && ("
         <section className="py-20">"
           <div className="container mx-auto px-4">"
@@ -666,7 +667,7 @@ title: "Become a Partner,"
                   </p>"
                   <Link to="{section.link}" className="inline-flex items-center text-zion-cyan hover: text-white transition-colors group-hover:translate-x-1" >
                     Learn More"
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"  />",
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"   />",
                   <Link to={section.link}"""
                     className="inline-flex items-center text-zion-cyan hover: text-white transition-colors group-hover:translate-x-1"" >""
                     Learn More"""
@@ -696,7 +697,7 @@ title: "Become a Partner,"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"
               >"
                 Contact Us""
-                <ArrowRight className="ml-2 h-5 w-5"  />
+                <ArrowRight className="ml-2 h-5 w-5"   />
               </Link>"
               <Link""
                 to="/services""",
@@ -724,7 +725,7 @@ title: "Become a Partner,"
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25" >
                 Contact Us"
-                <ArrowRight className="ml-2 h-5 w-5"  />
+                <ArrowRight className="ml-2 h-5 w-5"   />
               </Link>"
               <Link to="/services" className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300" >"
             </p>"""

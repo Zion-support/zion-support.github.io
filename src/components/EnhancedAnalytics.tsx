@@ -1,4 +1,5 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
+import React from "react"
+import {  import { motion, AnimatePresence  } from "framer-motion";
 export default function Page() {
 ;
   performance: {
@@ -21,7 +22,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
   enabled = true,
   showDashboard = false,
-  trackingId = 'G-XXXXXXXXXX'}) => {
+  trackingId = "G-XXXXXXXXXX"}) => {
 
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
     null
@@ -32,7 +33,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   const [userInteractions, setUserInteractions] = useState(0);
   const [scrollDepth, setScrollDepth] = useState(0);
   const [timeOnPage, setTimeOnPage] = useState(0);
-
   // Initialize analytics
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -42,46 +42,42 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
-
     // Initialize Google Analytics(if tracking ID provided)
-    if(trackingId && trackingId !== 'G-XXXXXXXXXX') {
 
-      // Google Analytics 4 initialization'
-      const script = document.createElement('script');      script.async = true;
-      script.src = `https://www.googletagmanager.com / gtag / js?id=${trackingId}`;
+    if(trackingId && trackingId !== "G-XXXXXXXXXX") {
+
+      // Google Analytics 4 initialization"
+      const script = document.createElement("script");      script.async = true;
+      script.src = "https://www.googletagmanager.com / gtag / js?id=${trackingId}";
       document.head.appendChild(script) ;
-
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
 
         window.dataLayer.push(args);
       }
-      gtag('js', new Date());
-      gtag('config', trackingId, {
+      gtag("js", new Date());
+      gtag("config", trackingId, {
         page_title: document.title,
         page_location: window.location.href,
         custom_map: {
 
-          custom_parameter_1: 'user_type',
-          custom_parameter_2: 'page_category'}});
-
-      // Track page view'
-      gtag('event',page_view', {
+          custom_parameter_1: "user_type",
+          custom_parameter_2: "page_category"}});
+      // Track page view"
+      gtag("event",page_view", {
 
         page_title: document.title,
         page_location: window.location.href,
         page_referrer: document.referrer})}
     // Initialize session tracking
     setSessionStart(Date.now());
-
-    // Track session start'
-    trackEvent('session_start', {
+    // Track session start"
+    trackEvent("session_start", {
 
       timestamp: Date.now(),
       user_agent: navigator.userAgent,
       language: navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone});
-
     return : unknown {
       if(script) {
 
@@ -96,36 +92,32 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
-
     const handleRouteChange = (...args: unknown[]): unknown => {
       const newPage = window.location.pathname;      if(newPage !== currentPage) {
 
-        // Track page view'
-        trackEvent('page_view', {
+        // Track page view"
+        trackEvent("page_view", {
 
           page_path: newPage,
           page_title: document.title,
           previous_page: currentPage,
           time_on_previous_page: timeOnPage});
-
         setCurrentPage(newPage) ;
         setTimeOnPage(0) ;
         setScrollDepth(0) ;
         setUserInteractions(0) }    };
-
     // Listen for route changes(for SPA)
-    window.addEventListener('popstate', handleRouteChange);
 
-    // Track initial page'
-    trackEvent('page_view', {
+    window.addEventListener("popstate", handleRouteChange);
+    // Track initial page"
+    trackEvent("page_view", {
 
       page_path: currentPage,
       page_title: document.title,
       is_initial_page: true});
-
     return () => {
 
-      window.removeEventListener('popstate', handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;
+      window.removeEventListener("popstate", handleRouteChange)}}, [enabled, currentPage, timeOnPage]) ;
   // Track user interactions
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -135,54 +127,49 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
+      trackEvent("user_interaction", {
 
-      trackEvent('user_interaction', {
-
-      setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {
-'
-        interaction_type: 'click',
+      setUserInteractions(prev => prev + 1);"      trackEvent("user_interaction", {
+"
+        interaction_type: "click",
         page_path: currentPage,
         timestamp: Date.now()})};
-
       if(scrollPercent > scrollDepth) {
 
         setScrollDepth(scrollPercent);
-
         // Track scroll milestones
         if(scrollPercent >= 25 && scrollDepth < 25) {
 
-          trackEvent('scroll_milestone', {
+          trackEvent("scroll_milestone", {
 
             milestone: 25,
             page_path: currentPage})} else if(scrollPercent >= 50 && scrollDepth < 50) {
 
-          trackEvent('scroll_milestone', {
+          trackEvent("scroll_milestone", {
 
             milestone: 50,
             page_path: currentPage})} else if(scrollPercent >= 75 && scrollDepth < 75) {
 
-          trackEvent('scroll_milestone', {
+          trackEvent("scroll_milestone", {
 
             milestone: 75,
             page_path: currentPage})} else if(scrollPercent >= 90 && scrollDepth < 90) {
 
-          trackEvent('scroll_milestone', {
+          trackEvent("scroll_milestone", {
 
             milestone: 90,
             page_path: currentPage})}
       }
     }};
-    // Set up event listeners'
-    document.addEventListener('click', trackInteraction);
-    window.addEventListener('scroll', trackScroll);
-
+    // Set up event listeners"
+    document.addEventListener("click", trackInteraction);
+    window.addEventListener("scroll", trackScroll);
     // Update time on page every second
     sessionRef.current = setInterval(trackTimeOnPage, 1000) ;
-
     return () => {
 
-      document.removeEventListener('click', trackInteraction);
-      window.removeEventListener('scroll', trackScroll);
+      document.removeEventListener("click", trackInteraction);
+      window.removeEventListener("scroll", trackScroll);
       if(sessionRef.current) {
 
         clearInterval(sessionRef.current)}
@@ -196,21 +183,18 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
-
-
-        trackEvent('performance_metrics', {
+        trackEvent("performance_metrics", {
           load_time: loadTime,
           fcp: fcp,
           lcp: lcp,
           page_path: currentPage})}    };
-
-    // Track performance after page load'
-    if(document.readyState === 'complete') {
+    // Track performance after page load"
+    if(document.readyState === "complete") {
 
       trackPerformance()} else {
 
-      window.addEventListener('load', trackPerformance);
-      return () => window.removeEventListener('load', trackPerformance)}
+      window.addEventListener("load", trackPerformance);
+      return () => window.removeEventListener("load", trackPerformance)}
   }, [enabled, currentPage]) ;
   // Track session end
   useEffect(() => {
@@ -221,52 +205,47 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
-
-
-      trackEvent('session_end', {
+      trackEvent("session_end", {
         session_duration: sessionDuration,
         pages_viewed: 1, // Simplified
         total_interactions: userInteractions,
         average_time_on_page: timeOnPage})};
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload)}, [enabled, sessionStart, userInteractions, timeOnPage]);
-
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload)}, [enabled, sessionStart, userInteractions, timeOnPage]);
   // Track event function
   
       // Google Analytics 4
       if(window.gtag) {
 
-        window.gtag('event', eventName, parameters)}
+        window.gtag("event", eventName, parameters)}
 
       // Custom analytics tracking
       
       // Send to analytics endpoint(if configured)
+
       if(process.env.REACT_APP_ANALYTICS_ENDPOINT) {
 
         fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {
 
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify(eventData)}).catch(console.error)}
 
       // Store locally for dashboard
       setAnalyticsData(prev => {
 
         if (!prev) return null;
-
         return {
 
           ...prev,
-          pageViews: prev.pageViews + (eventName === 'page_view' ? 1 : 0),
+          pageViews: prev.pageViews + (eventName === "page_view" ? 1 : 0),
           userEngagement: {
 
             ...prev.userEngagement,
             scrollDepth: Math.max(prev.userEngagement.scrollDepth, scrollDepth),
             timeOnPage: Math.max(prev.userEngagement.timeOnPage, timeOnPage),
             interactions: userInteractions}}});
-
-      // console.log('Analytics Event:', eventData)},
+      // console.log("Analytics Event:", eventData)},
     [enabled, currentPage, scrollDepth, timeOnPage, userInteractions]
   );
   // Initialize mock data for dashboard
@@ -290,11 +269,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           desktop: 65,
           mobile: 28,
           tablet: 7},
-        topPages: ['
-          { path: '/', views: 456, title: 'Home' },
-          { path: '/services', views: 234, title: 'Services' },
-          { path: '/about', views: 189, title: 'About' },
-          { path: '/contact', views: 156, title: 'Contact' },
+        topPages: ["
+          { path: "/", views: 456, title: "Home" },
+          { path: "/services", views: 234, title: "Services" },
+          { path: "/about", views: 189, title: "About" },
+          { path: "/contact", views: 156, title: "Contact" },
         ],
         userEngagement: {
 
@@ -312,10 +291,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             cls: 0.05}}})}
   }, [showDashboard, scrollDepth, timeOnPage, userInteractions]) ;
   if(!enabled) return null;
-
   return ()
+
     <>
-      {/* Analytics Toggle Button */}
+      {/* comment */}
       {showDashboard && (<motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -326,11 +305,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           
           title="Analytics Dashboard"
         >"
-          <BarChart3 className="w-5 h-5" />
+          <BarChart3 className="w-5 h-5"   />
         </motion.button>
       )}
 
-      {/* Analytics Dashboard */}
+      {/* comment */}
       <AnimatePresence>
         {isVisible && showDashboard && analyticsData && (<motion.div
             initial={{ opacity: 0, x: 300 }}
@@ -338,10 +317,10 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             exit={{ opacity: 0, x: 300 }}"
             className="fixed top-4 right-48 z-50 w-96 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden max-h-[80vh]"
           >
-            {/* Header */}"
+            {/* comment */}"
             <div className="flex items-center justify-between p-4 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
               <div className="flex items-center space-x-2">"
-                <BarChart3 className="w-5 h-5" />"
+                <BarChart3 className="w-5 h-5"   />"
                 <h3 className="font-semibold">Analytics</h3>
               </div>
               <button
@@ -349,12 +328,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                 className="p-1 hover:bg-white/20 rounded transition-colors"
                 
               >"
-                <Eye className="w-4 h-4"  />              </button>
+                <Eye className="w-4 h-4"   />              </button>
             </div>
-
-            {/* Content */}"
+            {/* comment */}"
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
-              {/* Overview Metrics */}"
+              {/* comment */}"
               <div className="grid grid-cols-2 gap-4">"
                 <div className="text-center p-3 bg-slate-50 dark:bg-slate-700 rounded-lg">"
                   <div className="text-2xl font-bold text-green-600">
@@ -372,8 +350,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                     Unique Visitors                  </div>
                 </div>
               </div>
-
-              {/* Device Types */}"
+              {/* comment */}"
               <div className="space-y-3">"
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                   Device Types
@@ -381,7 +358,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                 <div className="space-y-2">"
                   <div className="flex items-center justify-between">"
                     <div className="flex items-center space-x-2">"
-                      <Monitor className="w-4 h-4 text-blue-500"  />"
+                      <Monitor className="w-4 h-4 text-blue-500"   />"
                       <span className="text-sm text-slate-600 dark:text-slate-400">
                         Desktop
                       </span>
@@ -392,7 +369,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                   </div>"
                   <div className="flex items-center justify-between">"
                     <div className="flex items-center space-x-2">"
-                      <Smartphone className="w-4 h-4 text-green-500"  />"
+                      <Smartphone className="w-4 h-4 text-green-500"   />"
                       <span className="text-sm text-slate-600 dark:text-slate-400">
                         Mobile
                       </span>
@@ -403,7 +380,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                   </div>"
                   <div className="flex items-center justify-between">"
                     <div className="flex items-center space-x-2">"
-                      <Tablet className="w-4 h-4 text-purple-500"  />"
+                      <Tablet className="w-4 h-4 text-purple-500"   />"
                       <span className="text-sm text-slate-600 dark:text-slate-400">
                         Tablet
                       </span>
@@ -414,8 +391,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                   </div>
                 </div>
               </div>
-
-              {/* User Engagement */}"
+              {/* comment */}"
               <div className="space-y-3">"
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                   User Engagement
@@ -447,8 +423,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                   </div>
                 </div>
               </div>
-
-              {/* Performance */}"
+              {/* comment */}"
               <div className="space-y-3">"
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                   Performance
@@ -466,11 +441,11 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                     <span className="text-sm text-slate-600 dark:text-slate-400">
                       FCP
                     </span>
-                    <span`
-                      className={`text-sm font-medium ${analyticsData.performance.coreWebVitals.fcp <= 1800'
-                          ? 'text-green-600''
-                          : 'text-yellow-600'`
-                      }`}
+                    <span"
+                      className={"text-sm font-medium ${analyticsData.performance.coreWebVitals.fcp <= 1800"
+                          ? "text-green-600""
+                          : "text-yellow-600""
+                      }"}
                     >
                       {analyticsData.performance.coreWebVitals.fcp}ms
                     </span>
@@ -479,19 +454,18 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                     <span className="text-sm text-slate-600 dark:text-slate-400">
                       LCP
                     </span>
-                    <span`
-                      className={`text-sm font-medium ${analyticsData.performance.coreWebVitals.lcp <= 2500'
-                          ? 'text-green-600''
-                          : 'text-yellow-600'`
-                      }`}
+                    <span"
+                      className={"text-sm font-medium ${analyticsData.performance.coreWebVitals.lcp <= 2500"
+                          ? "text-green-600""
+                          : "text-yellow-600""
+                      }"}
                     >
                       {analyticsData.performance.coreWebVitals.lcp}ms
                     </span>
                   </div>
                 </div>
               </div>
-
-              {/* Top Pages */}"
+              {/* comment */}"
               <div className="space-y-3">"
                 <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
                   Top Pages
@@ -522,4 +496,4 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       </AnimatePresence>
     </>) };
 export default EnhancedAnalytics;
-'"`
+""`

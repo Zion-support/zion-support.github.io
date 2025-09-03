@@ -1,5 +1,5 @@
-import React from 'react';'''
-import Link from 'next/link';
+import React from "react";"""
+import Link from "next/link';
 const AdvancedCybersecuritySuite = () => {}
     const features = []
         {}
@@ -110,7 +110,7 @@ const AdvancedCybersecuritySuite = () => {}
             </p>
           </div>
           """
-          {/* Key Features */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Enterprise-Grade Security Features</h2>""""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">""""
@@ -122,7 +122,7 @@ const AdvancedCybersecuritySuite = () => {}
             </div>
           </div>
           """
-          {/* Security Modules */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Security Modules</h2>""""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">""""
@@ -140,7 +140,7 @@ const AdvancedCybersecuritySuite = () => {}
             </div>
           </div>
           """
-          {/* Compliance Frameworks */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">""""
               <h2 className="text-3xl font-bold text-center mb-8">Compliance & Standards</h2>""""
@@ -156,7 +156,7 @@ const AdvancedCybersecuritySuite = () => {}
             </div>
           </div>
           """
-          {/* Threat Intelligence */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Advanced Threat Intelligence</h2>""""
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""""
@@ -167,7 +167,7 @@ const AdvancedCybersecuritySuite = () => {}
             </div>
           </div>
           """
-          {/* Security Dashboard */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">""""
               <h2 className="text-3xl font-bold text-center mb-8">Unified Security Dashboard</h2>""""
@@ -199,7 +199,7 @@ const AdvancedCybersecuritySuite = () => {}
             </div>
           </div>
           """
-          {/* Benefits */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Cybersecurity Suite?</h2>""""
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""""
@@ -249,7 +249,7 @@ const AdvancedCybersecuritySuite = () => {}
             </div>
           </div>
           """
-          {/* CTA Section */}""""
+          {/* comment */}""""
           <div className="text-center">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">""""
               <h3 className="text-2xl font-bold mb-4">Ready to Secure Your Enterprise?</h3>""""
@@ -271,14 +271,8 @@ const AdvancedCybersecuritySuite = () => {}
       </section>
     </div>)};
 export default AdvancedCybersecuritySuite;
-
-
 export { AdvancedCybersecuritySuite };
-
 export { AdvancedCybersecuritySuite };
-
 export { AdvancedCybersecuritySuite };
-
 export { AdvancedCybersecuritySuite };
-
 export { AdvancedCybersecuritySuite };

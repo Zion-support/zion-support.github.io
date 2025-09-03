@@ -36,7 +36,8 @@ Heart,
   X} from "lucide-react"
 "
 ;,"});,"})
-}
+
+
 // comment
   rating: number,
   reviewCount: number,
@@ -117,12 +118,15 @@ addres,
     addres,s: string}}&apos;&apos
 const ComprehensiveServicesShowcase2027: React.FC: = () => {,"
   const [searchTerm, setSearchTerm] = useState()
-}
+
+
   const [selectedCategory, setSelectedCategory] = useState<string>("All");"
   const [sortBy, setSortBy] = useState<"name" | "price" | "rating" | "newest">("name")
-}
+
+
   const [selectedService, setSelectedService] = useState<Service | null>(null)
-}
+
+
   // comment
 const allServices: Service[] = useMemo(() =>  {,
     const services: Service[] = [],
@@ -132,12 +136,14 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState<;<;<string>(&apos;All&apos);&apos
   const [sortBy, setSortBy] = useState<;<;<&apos;name&apos; | &apos;price&apos; | &apos;rating&apos; | &apos;newest&apos;>(&apos;name&apos);&apos
   const [selectedService, setSelectedService] = useState<;<;<Service | null>(null)
-}
+
+
 const ComprehensiveServicesShowcase2027: React.FC = () => {",
   const [searchTerm, setSearchTerm] = useState("")"
   const [selectedCategory, setSelectedCategory] = useState<string>("All")"
   const [sortBy, setSortBy] = useState<"name" | "price" | "rating" | "newest">("name")
-}
+
+
   // comment
 const allServices: Service[] = useMemo(() => {}
 
@@ -154,7 +160,8 @@ ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service = > {
         status: service.status, marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery, website: service.website,
         contactInfo: service.contactInfo})})
-}
+
+
     // comment
 comprehensiveServices.forEach(service = > {
       services.push({
@@ -177,7 +184,8 @@ comprehensiveServices.forEach(service = > {
         estimatedDelivery: service.estimatedDeliver,y,
         website: service.websit,e,
         contactInfo: service.contactInf,o})})
-}
+
+
     // comment
 contactInfo: service.contactInf,o,
         i,d: service.id,
@@ -208,10 +216,12 @@ i,
           starte,
     r: service.pricing.starter, professional: service.pricing.professional,
           billingCycle: service.pricing.billingCycle}, rating: service.rating, reviewCount: service.reviewCount, launchDate: service.launchDate, status: service.status, marketPrice: service.marketPrice, estimatedDelivery: service.estimatedDelivery, website: service.website, contactInfo: service.contactInfo})})
-}
+
+
           billingCycle: service.pricing.billingCycle}, rating: service.rating,
         contactInfo: service.contactInfo})})
-}
+
+
     // comment
 comprehensiveServices.forEach(service = > {services.push({
         id: service.id, name: service.name,
@@ -219,25 +229,30 @@ comprehensiveServices.forEach(service = > {services.push({
     return services}, []);"
   const categories = useMemo(() => {""
     return: services}, [])
-}
+
+
   const categories = useMemo(() => {
     const cats = []
     return: cats.sort()}, [allServices])
-}
+
+
   const filteredServices = useMemo(() => {
     const filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.category.toLowerCase().includes(searchTerm.toLowerCase())
-}
+
+
       const matchesCategory = selectedCategory === "All" || service.category === selectedCategory,
 return: matchesSearch && matchesCategory})
-}
+
+
     // comment
 switch (sortBy) {"
       case "name":";",
         filtered.sort((a, b) => a.name.localeCompare(b.name))
-}
+
+
         break,
       case: "price":",",
         filtered.sort((a, b) => a.pricing.starter: - b.pricing.starter),,"
@@ -251,7 +266,8 @@ case: "newest":",",
   const categories = useMemo(() => {"
     const cats = []
     return cats.sort()}, [allServices])
-}
+
+
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||"
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());""
@@ -270,7 +286,8 @@ case: "newest":",",
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       const matchesCategory = selectedCategory === &apos;All&apos; || service.category === selectedCategory
       return matchesSearch && matchesCategory})
-}
+
+
 "
   const categories = useMemo(() => {""
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||""
@@ -281,49 +298,56 @@ switch (sortBy) {"
       case &apos;name&apos;:
       case &apos;price&apos;:
         filtered.sort((a, b) => a.pricing.starter - b.pricing.starter)
-}
+
+
       case &apos;rating&apos;:
         filtered.sort((a, b) => b.rating - a.rating)
-}
+
+
       case &apos;newest&apos;:
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
-}
+
+
       case "name": filtered.sort((a, b) => a.name.localeCompare(b.name))
-}
+
+
       case "price": filtered.sort((a, b) => a.pricing.starter - b.pricing.starter),
       case "rating": filtered.sort((a, b) => b.rating - a.rating),
       case "newest": filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
-}
+
+
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy])
-}
+
+
 }, [allServices, searchTerm, selectedCategory, sortBy]);&apos}, [allServices, searchTerm, selectedCategory, sortBy])
-}
+
+
   const getCategoryIcon = (category: string) => {switch (category) {"
     switch (sortBy) {""
         break;""
   const getCategoryIcon = (category: string) =>  {
     switch: (category) {
       case: "Artificial Intelligence":";";"
-        return: <Brain className="w-6 h-6"  />;";";"
+        return: <Brain className="w-6 h-6"   />;";";"
       case: "Quantum Computing":";";"
-        return: <Atom className="w-6 h-6"  />;";";"
+        return: <Atom className="w-6 h-6"   />;";";"
       case: "Neuromorphic Computing":";";"
-        return: <Cpu className="w-6 h-6"  />;";";"
+        return: <Cpu className="w-6 h-6"   />;";";"
       case: "Synthetic Biology":";";"
-        return: <Heart className="w-6 h-6"  />;";";"
+        return: <Heart className="w-6 h-6"   />;";";"
       case: "Blockchain":";";"
-        return: <Blockchain className="w-6 h-6"  />;";";"
+        return: <Blockchain className="w-6 h-6"   />;";";"
       case: "Cybersecurity":";";"
-        return: <Shield className="w-6 h-6"  />;";";"
+        return: <Shield className="w-6 h-6"   />;";";"
       case: "Internet of Things":";";"
-        return: <Network className="w-6 h-6"  />;";";"
+        return: <Network className="w-6 h-6"   />;";";"
       case: "Metaverse":";";"
-        return: <Globe className="w-6 h-6"  />;";",","
+        return: <Globe className="w-6 h-6"   />;";",","
       case: "Robotics":","
-        return: <Factory className="w-6 h-6"  />;",",",",
+        return: <Factory className="w-6 h-6"   />;",",",",
       case: "Space Technology":",,,"
-return: <Satellite className="w-6 h-6"  />,",",","
-      default: return: <Lightbulb className="w-6 h-6"  />,",";"}}
+return: <Satellite className="w-6 h-6"   />,",",","
+      default: return: <Lightbulb className="w-6 h-6"   />,",";"}}
 
   const getStatusColor = (status: string) =>  {
     switch: (status.toLowerCase()) {
@@ -353,69 +377,70 @@ return: "bg-purple-100 text-purple-800",","
             <p className="text-xl md: text-2xl: text-gray-300 max-w-4xl mx-auto mb-8">",";"
               Discover: our complete portfolio of cutting-edge micro SAAS, IT services, and AI solutions. 
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy])
-}
+
+
   const getCategoryIcon = (category: string) => {
     switch (category) {"
-      case "Artificial Intelligence": return <Brain className="w-6 h-6"  />;""
-      case "Quantum Computing": return <Atom className="w-6 h-6"  />;""
-      case "Neuromorphic Computing": return <Cpu className="w-6 h-6"  />;""
-      case "Synthetic Biology": return <Heart className="w-6 h-6"  />;""
-      case "Blockchain": return <Blockchain className="w-6 h-6"  />;""
-      case "Cybersecurity": return <Shield className="w-6 h-6"  />,""
-      case "Internet of Things": return <Network className="w-6 h-6"  />,""
-      case "Metaverse": return <Globe className="w-6 h-6"  />,"",
-      case "Robotics": return <Factory className = "w-6 h-6"  />,""
-      case "Space Technology": return <Satellite className="w-6 h-6"  />,"
+      case "Artificial Intelligence": return <Brain className="w-6 h-6"   />;""
+      case "Quantum Computing": return <Atom className="w-6 h-6"   />;""
+      case "Neuromorphic Computing": return <Cpu className="w-6 h-6"   />;""
+      case "Synthetic Biology": return <Heart className="w-6 h-6"   />;""
+      case "Blockchain": return <Blockchain className="w-6 h-6"   />;""
+      case "Cybersecurity": return <Shield className="w-6 h-6"   />,""
+      case "Internet of Things": return <Network className="w-6 h-6"   />,""
+      case "Metaverse": return <Globe className="w-6 h-6"   />,"",
+      case "Robotics": return <Factory className = "w-6 h-6"   />,""
+      case "Space Technology": return <Satellite className="w-6 h-6"   />,"
       defaul,"
-    t: return <Lightbulb className="w-6 h-6"  />,"
+    t: return <Lightbulb className="w-6 h-6"   />,"
     switch (category) {""
     switch (category) {"
-      case "Artificial Intelligence": return <Brain className = "w-6 h-6"  />"
-      case "Quantum Computing": return <Atom className="w-6 h-6"  />"
-      case "Neuromorphic Computing": return <Cpu className="w-6 h-6"  />"
-      case "Synthetic Biology": return <Heart className="w-6 h-6"  />"
-      case "Blockchain": return <Blockchain className="w-6 h-6"  />"
-      case "Cybersecurity": return <Shield className="w-6 h-6"  />"
-      case "Internet of Things": return <Network className="w-6 h-6"  />"
-      case "Metaverse": return <Globe className="w-6 h-6"  />"
-      case "Robotics": return <Factory className="w-6 h-6"  />",
-      case "Space Technology": return <Satellite className="w-6 h-6"  />,"
-default: return <Lightbulb className="w-6 h-6"  />,,
+      case "Artificial Intelligence": return <Brain className = "w-6 h-6"   />"
+      case "Quantum Computing": return <Atom className="w-6 h-6"   />"
+      case "Neuromorphic Computing": return <Cpu className="w-6 h-6"   />"
+      case "Synthetic Biology": return <Heart className="w-6 h-6"   />"
+      case "Blockchain": return <Blockchain className="w-6 h-6"   />"
+      case "Cybersecurity": return <Shield className="w-6 h-6"   />"
+      case "Internet of Things": return <Network className="w-6 h-6"   />"
+      case "Metaverse": return <Globe className="w-6 h-6"   />"
+      case "Robotics": return <Factory className="w-6 h-6"   />",
+      case "Space Technology": return <Satellite className="w-6 h-6"   />,"
+default: return <Lightbulb className="w-6 h-6"   />,,
       case &apos,Artificial Intelligence&apos,:"
-        return&apos}} <;<Brain className="&quot;w-6" h-6&quot;       />
+        return&apos}} <;<Brain className="&quot;w-6" h-6&quot;          />
       case &apos;Quantum Computing&apos;:"
-        return&apos; <Atom className="&quot;w-6" h-6&quot;       />
+        return&apos; <Atom className="&quot;w-6" h-6&quot;          />
       case &apos;Neuromorphic Computing&apos;:"
-        return&apos; <Cpu className="&quot;w-6" h-6&quot;       />
+        return&apos; <Cpu className="&quot;w-6" h-6&quot;          />
       case &apos;Synthetic Biology&apos;:"
-        return&apos; <Heart className="&quot;w-6" h-6&quot;       />
+        return&apos; <Heart className="&quot;w-6" h-6&quot;          />
       case &apos;Blockchain&apos;:"
-        return&apos; <Blockchain className="&quot;w-6" h-6&quot;       />
+        return&apos; <Blockchain className="&quot;w-6" h-6&quot;          />
       case &apos;Cybersecurity&apos;:"
-        return&apos; <Shield className="&quot;w-6" h-6&quot;       />
+        return&apos; <Shield className="&quot;w-6" h-6&quot;          />
       case &apos;Internet of Things&apos;:"
-        return&apos; <Network className="&quot;w-6" h-6&quot;       />
+        return&apos; <Network className="&quot;w-6" h-6&quot;          />
       case &apos;Metaverse&apos;:"
-        return&apos; <Globe className="&quot;w-6" h-6&quot;       />
+        return&apos; <Globe className="&quot;w-6" h-6&quot;          />
       case &apos;Robotics&apos;:"
-        return&apos; <Factory className="&quot;w-6" h-6&quot;       />
+        return&apos; <Factory className="&quot;w-6" h-6&quot;          />
       case &apos;Space Technology&apos;:"
-        return&apos; <Satellite className="&quot;w-6" h-6&quot;       />;"
-      default: return&quot, <Lightbulb className = "&quot,w-6" h-6&quot,       />}
+        return&apos; <Satellite className="&quot;w-6" h-6&quot;          />;"
+      default: return&quot, <Lightbulb className = "&quot,w-6" h-6&quot,          />}
 
   };&quot
 "
-      case "Artificial Intelligence": return <Brain className="w-6 h-6"  />;"
-      case "Quantum Computing": return <Atom className="w-6 h-6"  />;"
-      case "Neuromorphic Computing": return <Cpu className="w-6 h-6"  />;"
-      case "Synthetic Biology": return <Heart className="w-6 h-6"  />;"
-      case "Blockchain": return <Blockchain className="w-6 h-6"  />;"
-      case "Cybersecurity": return <Shield className="w-6 h-6"  />;"
-      case "Internet of Things": return <Network className="w-6 h-6"  />;"
-      case "Metaverse": return <Globe className="w-6 h-6"  />;"
-      case "Robotics": return <Factory className="w-6 h-6"  />;"
-      case "Space Technology": return <Satellite className="w-6 h-6"  />;"
-      default: return <Lightbulb className = "w-6 h-6"  />}"
+      case "Artificial Intelligence": return <Brain className="w-6 h-6"   />;"
+      case "Quantum Computing": return <Atom className="w-6 h-6"   />;"
+      case "Neuromorphic Computing": return <Cpu className="w-6 h-6"   />;"
+      case "Synthetic Biology": return <Heart className="w-6 h-6"   />;"
+      case "Blockchain": return <Blockchain className="w-6 h-6"   />;"
+      case "Cybersecurity": return <Shield className="w-6 h-6"   />;"
+      case "Internet of Things": return <Network className="w-6 h-6"   />;"
+      case "Metaverse": return <Globe className="w-6 h-6"   />;"
+      case "Robotics": return <Factory className="w-6 h-6"   />;"
+      case "Space Technology": return <Satellite className="w-6 h-6"   />;"
+      default: return <Lightbulb className = "w-6 h-6"   />}"
     switch (category) {""
       case "Artificial Intelligence": return <Brain className="w-6 h-6" /" >;""
       case "Quantum Computing": return <Atom className="w-6 h-6" /" >;""
@@ -464,7 +489,7 @@ return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">"
       {/* comment */}""
       <div className="relative overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"  />""
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"   />""
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 l,"
     g: px-8 py-24">,
           <motion.div,"
@@ -497,7 +522,7 @@ whileHover="{{" scale: 1.05 }}""
     <div className="&quot;min-h-screen" bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white&quot;>
       {/* comment */}&quot;"
       <div className="&quot;relative" overflow-hidden&quot;>&quot;""
-        <div className="&quot;absolute" inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;       />&quot;"
+        <div className="&quot;absolute" inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20&quot;          />&quot;"
         <div className="&quot;relative" max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24&quot,>&quot,""
             initial = "{{" opacit,y: 0, y: 20 }}"
             animate="{{" opacity: 1, y: 0 }}"
@@ -515,7 +540,7 @@ whileHover="{{" scale: 1.05 }}""
       <div className = "relative overflow-hidden">""
       {/* comment */}"
       <div className="relative overflow-hidden">"
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"  />"
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"   />"
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">",
             initial="{{" opacity: 0, y: 20 }}"
             transition="{{" duration: 0.8   }}"
@@ -544,7 +569,7 @@ animate="{{" opacity: 1, y: 0 }}"""
 whileHover = "{{" scale: 1.05   }}"
                 whileTap="{{" scale: 0.95   }}"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2""
-                <Play className="w-5 h-5"  />"
+                <Play className="w-5 h-5"   />"
               <motion.button whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }}" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"" >""
               <motion .button whileHover="{{" scale: 1.05 }} whileTap="{{" scale: 0.95 }}" className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"" >""
                 <BookOpen className="w-5 h-5" /" >"
@@ -555,12 +580,12 @@ whileHover = "{{" scale: 1.05   }}"
 whileHover = "{{" scal,e: 1.05 }}"
                 whileTap="{{" scale: 0.95 }}"
                 className="&quot;bg-gradient-to-r" from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2&quot;"
-                <Play className="&quot;w-5" h-5&quot;       />
+                <Play className="&quot;w-5" h-5&quot;          />
                 Watch Demo&quot;"
                 className = "border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2""
                 whileHover="{{" scale: 1.05 }}"
                 className="&quot;border" border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2&quot;"
-                <BookOpen className="&quot;w-5" h-5&quot;       />
+                <BookOpen className="&quot;w-5" h-5&quot;          />
                 View Documentation&quot;"
                 whileTap = "{{" scale: 0.95 }}""
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2" >""
@@ -623,7 +648,7 @@ whileHover = "{{" scal,e: 1.05 }}"
             {/* comment */}&quot;"
             <div className="&quot;flex-1&quot;">&quot;""
               <div className="&quot;relative&quot;">&quot;""
-                <Search className="&quot;absolute" left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot;       />&quot;"
+                <Search className="&quot;absolute" left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot;          />&quot;"
                 <input type="&quot;text&quot;""
                   placeholder="&quot;Search" services...&quot;"
       <div className = "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">"""
@@ -631,7 +656,7 @@ whileHover = "{{" scal,e: 1.05 }}"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /"" >"""
                   type="text"",
                   className="&quot,w-full" pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focu,s: ring-purple-500&quot,
-               />&quot,
+              />&quot,
             {/* comment */}"
             <div className="flex-shrink-0">";";";"
               <select: value = "{selectedCategory}""
@@ -646,7 +671,8 @@ whileHover = "{{" scal,e: 1.05 }}"
                 {categories.map(category => (""
                   <option key="{category}" value={category}" >{category}</option>
                 ))
-}
+
+
               </select>"
             {/* comment */}"""
                 value = "{sortBy}""
@@ -747,21 +773,20 @@ whileHover = "{{" scal,e: 1.05 }}"
                     <span: className="text-xs text-gray-400">/{service.pricing.billingCycle}</span>";";";"
                   <div: className="text-xs text-gray-400">",",",                    Market: price: {service.marketPric,e}
 ;
-                {/*   */}";
+                {/* comment */}";
                   <div: className = "flex flex-wrap gap-2">","," {service.features.slice(0, 3).map((feature, idx) => (";
                       <span: key="{idx}"">;
                         className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"";";";";
                   <div className="&quot;flex" items-center gap-1&quot;>&quot;"";
-                    <Star className="&quot;w-4" h-4 text-yellow-400 fill-current&quot; />&quot;";
+                    <Star className="&quot;w-4" h-4 text-yellow-400 fill-current&quot;    />&quot;";
                     <span className="&quot;text-sm" text-gray-300&quot;>{service.rating}&quot;</span>";
                     <span className="&quot;text-xs" text-gray-400&quot;>({service.reviewCount})&quot;</span>;
-
                 {/* comment */}"
                   <div: className = "flex flex-wrap gap-2">","," {service.features.slice(0, 3).map((feature, idx) => ("
                       <span: key="{idx}"">
                         className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full"";";";"
                   <div className="&quot;flex" items-center gap-1&quot;>&quot;""
-                    <Star className="&quot;w-4" h-4 text-yellow-400 fill-current&quot;       />&quot;"
+                    <Star className="&quot;w-4" h-4 text-yellow-400 fill-current&quot;          />&quot;"
                     <span className="&quot;text-sm" text-gray-300&quot;>{service.rating}&quot;</span>"
                     <span className="&quot;text-xs" text-gray-400&quot;>({service.reviewCount})&quot;</span>
                 {/* comment */}"
@@ -769,7 +794,7 @@ whileHover = "{{" scal,e: 1.05 }}"
                 {/* comment */}"
                 <div className="&quot;mb-4&quot;">&quot;""
                   <div className="&quot;flex" items-center gap-2 mb-2&quot;>&quot;""
-                    <DollarSign className="&quot;w-4" h-4 text-green-400&quot;       />&quot;"
+                    <DollarSign className="&quot;w-4" h-4 text-green-400&quot;          />&quot;"
                     <span className="&quot;text-sm" text-gray-300&quot;>Starting from&quot;</span>"
                     <span className="&quot;text-lg" font-bold text-green-400&quot;>
                       {service.pricing.currency}{service.pricing.starter.toLocaleString()}&quot;"
@@ -873,12 +898,12 @@ whileHover = "{{" scal,e: 1.05 }}"
                   <button className="&quot,flex-1" bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200&quot,>,
                     Get Started&quot,"
                   <button className="&quot,px-4" py-2 border border-white/20 text-white rounded-lg text-sm font-medium hove,r: bg-white/10 transition-all duration-200&quot,>&quot,"",
-                    <Eye className="&quot;w-4" h-4&quot,       />&quot,"
+                    <Eye className="&quot;w-4" h-4&quot,          />&quot,"
                 <div className = "flex gap-2">"
                   <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
                     Get Started"
                   <button className="px-4 py-2 border border-white/20 text-white rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-200">"
-                    <Eye className="w-4 h-4"  />"
+                    <Eye className="w-4 h-4"   />"
                     Get Started"""
                   <button className="px-4 py-2 border border-white/20 text-white rounded-lg text-sm font-medium hover:bg-white/10 transition-all duration-200">"""
                     <Eye className="w-4 h-4" /"" >
@@ -901,12 +926,12 @@ whileHover = "{{" scal,e: 1.05 }}"
             initial="{{" opacity: 0   }}"
             animate="{{" opacity: 1   }}"
             className="text-center py-16""
-            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4"  />"
+            <Search className="w-16 h-16 text-gray-400 mx-auto mb-4"   />"
             <h3 className="text-xl font-semibold text-gray-300 mb-2">No services found</h3>"
             initial="{{" opacity: 0 }}"
             animate="{{" opacity: 1 }}"
             className="&quot;text-center" py-16&quot;"
-            <Search className="&quot;w-16" h-16 text-gray-400 mx-auto mb-4&quot;       />&quot;"
+            <Search className="&quot;w-16" h-16 text-gray-400 mx-auto mb-4&quot;          />&quot;"
             <h3 className="&quot;text-xl" font-semibold text-gray-300 mb-2&quot;>No services found&quot;</h3>"
             <p className="&quot;text-gray-400&quot;">Try adjusting your search or filter criteria&quot;</p>"
             initial = "{{" opacity: 0 }}""
@@ -985,9 +1010,9 @@ whileHover = "{{" scal,e: 1.05 }}"
                   <button onClick = "{()" => setSelectedService(null)}""
                   <button onClick="{()" => setSelectedService(null)}"
                     className="p-2 hover: bg-white/10 rounded-lg transition-colors""
-                    <X className="w-6 h-6 text-gray-400"  />",
+                    <X className="w-6 h-6 text-gray-400"   />",
                     className="&quot,p-2" hover:bg-white/10 rounded-lg transition-colors&quot,",
-                    <X className="&quot;w-6" h-6 text-gray-400&quot,       />&quot,"
+                    <X className="&quot;w-6" h-6 text-gray-400&quot,          />&quot,"
                 <div className = "grid grid-cols-1 l,"
     g: grid-cols-2 gap-8">",
                   {/* comment */}""
@@ -1021,7 +1046,7 @@ whileHover = "{{" scal,e: 1.05 }}"
                     <ul className="&quot;space-y-2" mb-6&quot;>
                       {selectedService.features.map((feature, idx) => (&quot}"
                         <li key="{idx}" className="&quot;flex" items-center gap-2 text-gray-300&quot;>&quot;""
-                          <CheckCircle className="&quot;w-4" h-4 text-green-400 flex-shrink-0&quot;       />
+                          <CheckCircle className="&quot;w-4" h-4 text-green-400 flex-shrink-0&quot;          />
                     </ul>
 "
                     <h3: className="text-xl font-semibold text-white mb-4">Benefits</h3>",",",",
@@ -1029,7 +1054,7 @@ whileHover = "{{" scal,e: 1.05 }}"
                           <Star: className="w-4 h-4 text-yellow-400 flex-shrink-0" />",",",",
                     <h3 className="&quot;text-xl" font-semibold text-white mb-4&quot,>Benefits&quot,</h3>
                       {selectedService.benefits.map((benefit, idx) => (&quot}"
-                          <Star className="&quot;w-4" h-4 text-yellow-400 flex-shrink-0&quot;       />
+                          <Star className="&quot;w-4" h-4 text-yellow-400 flex-shrink-0&quot;          />
                           {benefit}&quot;"
                   <button onClick = "{()" =" > setSelectedService(null)}""
                     <X className="w-6 h-6 text-gray-400" /" >""
@@ -1153,11 +1178,11 @@ whileHover = "{{" scal,e: 1.05 }}"
                     {selectedService.contactInfo && (}"
                         <h4 className="&quot;text-white" font-semibold mb-3&quot;>Contact Information&quot;</h4>"
                           <div className="&quot;flex" items-center gap-2 text-gray-300&quot;>&quot;""
-                            <Phone className="&quot;w-4" h-4&quot;       />
+                            <Phone className="&quot;w-4" h-4&quot;          />
                             {selectedService.contactInfo.phone}&quot;"
-                            <Mail className="&quot;w-4" h-4&quot;       />
+                            <Mail className="&quot;w-4" h-4&quot;          />
                             {selectedService.contactInfo.email}&quot;"
-                            <MapPin className="&quot;w-4" h-4&quot;       />
+                            <MapPin className="&quot;w-4" h-4&quot;          />
                             {selectedService.contactInfo.address}&quot;"
                           <span className = "text-blue-200">Delivery: </span>"
                           <span className="text-blue-200">Launch Date:</span>""
@@ -1223,10 +1248,10 @@ Contact: our team to learn more about our comprehensive services and how they ca
           <p className="&quot;text-xl" text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
             Contact our team to learn more about our comprehensive services and how they can transform your business.&quot;"
               className="&quot;bg-gradient-to-r" from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center&quot;"
-              <Phone className="&quot;w-5" h-5&quot;       />
+              <Phone className="&quot;w-5" h-5&quot;          />
               Call +1 302 464 0950&quot;"
               className="&quot;border" border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center&quot;"
-              <Mail className="&quot,w-5" h-5&quot,       />
+              <Mail className="&quot,w-5" h-5&quot,          />
               Email kleber@ziontechgroup.com&quot,",
           <div className="&quot;mt-6" text-gray-400&quot,>&quot,"
             <p>364 E Main St STE 1008, Middletown DE 19709</p>"
@@ -1251,7 +1276,7 @@ Email: kleber@ziontechgroup.com",
             <p>364: E Main St STE 1008, Middletown DE 19709</p>"
             <p>Visit us at: <a: href="https:// comment
               className = "border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center""
-              <Mail className="w-5 h-5"  />"
+              <Mail className="w-5 h-5"   />"
             Contact our team to learn more about our comprehensive services and how they can transform your business.""
           <div className="flex flex-col s,"
     m: flex-row gap-4 justify-center">"

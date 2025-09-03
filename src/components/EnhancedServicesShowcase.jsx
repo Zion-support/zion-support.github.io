@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 export default EnhancedServicesShowcase;
-import { enhancedServices2025 } from '../data/enhanced - services -2025';
+import { enhancedServices2025 } from "../data/enhanced - services -2025";
 export default function Page() {
 ,
-        { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
+        { id: "emerging-tech", name: "Emerging Tech", icon: "🚀" }
     ];
     const filteredServices = enhancedServices2025.filter(service => {
 
@@ -22,13 +22,17 @@ export default function Page() {
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-}
+
+
     return matchesCategory && matchesSearch})
-}
+
+
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-}
+
+
     return matchesCategory && matchesSearch})
-}
+
+
   const containerVariants = {}
 
     hidden: { opacity: 0 },
@@ -587,7 +591,7 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,"
   delay: 0.2
 
 }}>
-            Let's discuss how our innovative services can help drive your success and competitive advantage
+            Let"s discuss how our innovative services can help drive your success and competitive advantage
           </motion.p>
 
           <motion.div className="flex flex - col sm:flex - row gap-4 justify - center mb-8" initial = {  { opacity: 0,
@@ -655,13 +659,9 @@ export default EnhancedServicesShowcase;
 }}}
 
 export { EnhancedServicesShowcase };
-
 export { EnhancedServicesShowcase };
-
 export { EnhancedServicesShowcase };
-
 export { EnhancedServicesShowcase };
-
 export { EnhancedServicesShowcase };
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>"
             <p>"""
@@ -675,5 +675,5 @@ export default EnhancedServicesShowcaseexport { EnhancedServicesShowcase }
 ;
 export { EnhancedServicesShowcase }
 
-'"
+""
 `""

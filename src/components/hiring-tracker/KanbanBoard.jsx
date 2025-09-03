@@ -1,3 +1,4 @@
+import React from "react"
 import { useState, useEffect } from "react";
 import { DragDropContext } from "@hello-pangea/dnd";
 import { useJobApplications } from "@/hooks/useJobApplications";
@@ -38,7 +39,7 @@ export function KanbanBoard({ jobId }) {}
     useJobApplications(jobId);
   const [columns, setColumns] = useState({
 
-    /* empty */
+    /* comment */
   });
   const isMobile = useIsMobile();
   // Initialize columns with applications based on their status
@@ -58,17 +59,18 @@ export function KanbanBoard({ jobId }) {}
         return acc;
       }, {});
       setColumns(groupedApplications);
-    }
   }, [applications]);
   // Handle drag end event to update the application status
   const handleDragEnd = async result => {
 
     const { destination, source, draggableId } = result;
-    // If there's no destination or the item is dropped in the same place, do nothing
+    // If there"s no destination or the item is dropped in the same place, do nothing
     if()
+
       !destination ||
       (destination.droppableId === source.droppableId &&
         destination.index === source.index)
+
     ) {
 
       return;
@@ -93,30 +95,31 @@ export function KanbanBoard({ jobId }) {}
       await updateApplicationStatus(draggableId, newStatus);
       toast({
 
-        title: 'Status updated',
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`});
+        title: "Status updated",
+        description: "Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}"});
     } catch(error) {
       // Revert the UI changes if the database update fails
       toast({
 
-        title: 'Failed to update status',
-        description: 'Please try again',
-        variant: 'destructive'});
+        title: "Failed to update status",
+        description: "Please try again",
+        variant: "destructive"});
     }
   };
   if(isLoading) {
 
     return ()
-      <div'`
-        className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}
+
+      <div""
+        className={"grid grid-cols-1 ${!isMobile ? "md:grid-cols-3 lg:grid-cols-5" : ""} gap-4"}
       >
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (
           <Card key={i} className="h-[500px]">
             <CardHeader>"
-              <Skeleton className="h-8 w-24" />
+              <Skeleton className="h-8 w-24"   />
             </CardHeader>
             <CardContent>"
-              <Skeleton className="h-[400px] w-full" />
+              <Skeleton className="h-[400px] w-full"   />
             </CardContent>
           </Card>
         ))}
@@ -130,28 +133,29 @@ export function KanbanBoard({ jobId }) {}
         <CardContent>"
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>"
           <p className="text-muted-foreground mb-6">
-            You haven't received applications for this job yet.</p>
+            You haven"t received applications for this job yet.</p>
         </CardContent>
       </Card>
     );
   }
   return ()
+
     <DragDropContext onDragEnd={handleDragEnd}>
-      <div'`
-        className={`grid ${isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4'} overflow-x-auto`}
+      <div""
+        className={"grid ${isMobile ? "grid-cols-1 gap-y-6" : "grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4"} overflow-x-auto"}
       >
         {COLUMNS.map(column => (
-          <KanbanColumn
-            key={column.id}
+          <KanbanColumn key={column.id}
             id={column.id}
             title={column.title}
             description={column.description}
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
-          />
+             />
         ))}
       </div>
     </DragDropContext>
   );
-}
 '"`
+
+export default Component

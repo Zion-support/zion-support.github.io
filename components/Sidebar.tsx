@@ -6,7 +6,6 @@ interface SidebarProps {
   onClose: () => void}
 ;
 export default function Sidebar() {;
-
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const toggleSection = (section: string) => {,;
@@ -14,7 +13,6 @@ export default function Sidebar() {;
         ? prev.filter(),,;
         : [...prev, section];
     );,
-}
   const mainNavigation = [";
   { name: "Home", href: "/", icon: Home },";
     { name: "About", href: "/about", icon: Users },";
@@ -60,17 +58,18 @@ export default function Sidebar() {;
     { name: "Project Management", href: "/solutions/project-management", icon: BarChart3 },";
     { name: "Workflow Automation", href: "/solutions/workflow-automation", icon: Zap }
   ];
-
   const router = useRouter()
-}
+
+
   const [expandedSections, setExpandedSections] = useState<string[]>([])
-}
+
+
   const toggleSection = (section: string) => {,
     setExpandedSections(),
         ? prev.filter(),,
         : [...prev, section]
     )
-}
+
 
   const mainNavigation = []
   const services = []
@@ -97,9 +96,9 @@ export default function Sidebar() {;
 
           </span>
           {isExpanded ? ("
-            <ChevronDown className="w-4 h-4"  />
+            <ChevronDown className="w-4 h-4"   />
           ) : ("
-            <ChevronRight className="w-4 h-4"  />
+            <ChevronRight className="w-4 h-4"   />
           )}
 
         </button>
@@ -125,7 +124,7 @@ export default function Sidebar() {;
 
       </div>
     )
-}
+
 
   if (!isOpen) return null
   return (
@@ -141,7 +140,7 @@ export default function Sidebar() {;
           <div className="flex items-center justify-between mb-8">"
             <div className="flex items-center space-x-2">"
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"
-                <Globe className="w-5 h-5 text-white"  />
+                <Globe className="w-5 h-5 text-white"   />
               </div>"
               <span className="text-xl font-bold text-gray-900">
                 Zion Tech Group,
@@ -150,17 +149,17 @@ export default function Sidebar() {;
             <button onClick="{onClose}""
               className="p-2 rounded-lg text-gray-400 hover: text-gray-600 hover:bg-gray-100"
             >"
-              <X className="w-5 h-5"  />
+              <X className="w-5 h-5"   />
             </button>
           </div>
 ,
           {/* comment */}"
           <div className="mb-6">"
             <div className="relative">"
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"  />"
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"   />"
               <input type="text""
                 placeholder="Search...""
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent text-sm"  />
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent text-sm"   />
             </div>
 ,
           {/* comment */}"
@@ -238,7 +237,7 @@ export default function Sidebar() {;
               className="flex items-center justify-center w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors"
             >
               Get Started"
-              <ArrowRight className="w-4 h-4 ml-2"  />
+              <ArrowRight className="w-4 h-4 ml-2"   />
             </Link>
           </div>
     </>

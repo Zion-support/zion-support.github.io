@@ -1,6 +1,6 @@
-import {  import { motion, useAnimation  } from 'framer-motion';
- from 'lucide-react';
-
+import React from "react"
+import {  import { motion, useAnimation  } from "framer-motion";
+ from "lucide-react";
 interface Stat {
   id: string;
   icon: React.ComponentType < any>;
@@ -9,92 +9,87 @@ interface Stat {
   description: string;
   color: string;
   gradient: string
-}
+
 ;
 const stats: Stat[] = [{
 
-    id: 'clients',
+    id: "clients",
     icon: Users,
-    value: '500+',
-    label: 'Global Clients',
-    description: 'Serving businesses across 50+ countries',
-    color: 'zion-cyan',
-    gradient: 'from-zion-cyan to-zion-blue'
+    value: "500+",
+    label: "Global Clients",
+    description: "Serving businesses across 50+ countries",
+    color: "zion-cyan",
+    gradient: "from-zion-cyan to-zion-blue"
   },
   {
 
-    id: 'uptime',
+    id: "uptime",
     icon: Shield,
-    value: '99.99%',
-    label: 'Uptime Guarantee',
-    description: 'Enterprise-grade reliability and performance',
-    color: 'zion-purple',
-    gradient: 'from-zion-purple to-zion-cyan'
+    value: "99.99%",
+    label: "Uptime Guarantee",
+    description: "Enterprise-grade reliability and performance",
+    color: "zion-purple",
+    gradient: "from-zion-purple to-zion-cyan"
   },
   {
 
-    id: 'roi',
+    id: "roi",
     icon: TrendingUp,
-    value: '600%',
-    label: 'Average ROI',
-    description: 'Proven business impact and cost savings',
-    color: 'zion-blue',
-    gradient: 'from-zion-blue to-zion-purple'
+    value: "600%",
+    label: "Average ROI",
+    description: "Proven business impact and cost savings",
+    color: "zion-blue",
+    gradient: "from-zion-blue to-zion-purple"
   },
   {
 
-    id: 'satisfaction',
+    id: "satisfaction",
     icon: Star,
-    value: '4.9/5',
-    label: 'Client Satisfaction',
-    description: 'Consistently exceeding expectations',
-    color: 'zion-cyan',
-    gradient: 'from-zion-cyan to-zion-purple'
+    value: "4.9/5",
+    label: "Client Satisfaction",
+    description: "Consistently exceeding expectations",
+    color: "zion-cyan",
+    gradient: "from-zion-cyan to-zion-purple"
   },
   {
 
-    id: 'innovation',
+    id: "innovation",
     icon: Zap,
-    value: '50+',
-    label: 'Patents & Innovations',
-    description: 'Leading edge technology development',
-    color: 'zion-purple',
-    gradient: 'from-zion-purple to-zion-blue'
+    value: "50+",
+    label: "Patents & Innovations",
+    description: "Leading edge technology development",
+    color: "zion-purple",
+    gradient: "from-zion-purple to-zion-blue"
   },
   {
 
-    id: 'growth',
+    id: "growth",
     icon: Rocket,
-    value: '300%',
-    label: 'Annual Growth',
-    description: 'Rapidly expanding global presence',
-    color: 'zion-blue',
-    gradient: 'from-zion-blue to-zion-cyan'
+    value: "300%",
+    label: "Annual Growth",
+    description: "Rapidly expanding global presence",
+    color: "zion-blue",
+    gradient: "from-zion-blue to-zion-cyan"
 
 ];
-
 export default function EnhancedStatsSection(...args[]):  {
 
   const [countedValues, setCountedValues] = useState<any>({});
-  
   const [ref, inView] = useInView({
 
     threshold: 0.3,
     triggerOnce: true
   }) ;
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     if(inView) {
 
-      controls.start('visible')}
+      controls.start("visible")}
   }, [controls, inView]);
-
     const increment = numericValue / (duration / 16) ; // 60fps
 
     let current = start;
-    
       current += increment;
       if(current >= numericValue) {
 
@@ -103,9 +98,7 @@ export default function EnhancedStatsSection(...args[]):  {
 setCountedValues(prev:  > ({;
         ...prev,;
         [target]: Math.floor (current) }) ) }, 16) ;
-
     return timer};
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
@@ -117,8 +110,9 @@ setCountedValues(prev:  > ({;
         return () => clearTimeout(timer)})}
   }, [inView]) ;
   return ()
+
     <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Background decoration */}"
+      {/* comment */}"
       <div className="absolute inset-0">"
         <div className="absolute top-0 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>"
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>"
@@ -126,7 +120,7 @@ setCountedValues(prev:  > ({;
       </div>
 "
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
+        {/* comment */}
         <motion.div
           ref={ref}
           initial = {
@@ -148,7 +142,6 @@ setCountedValues(prev:  > ({;
 
                 duration: 0.6
 
-}
             }
           }}"
           className="text-center mb-16"
@@ -161,7 +154,7 @@ setCountedValues(prev:  > ({;
           </p>
         </motion.div>
 
-        {/* Stats Grid */}"
+        {/* comment */}"
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((stat, index)  => (
             <motion.div
@@ -186,8 +179,7 @@ setCountedValues(prev:  > ({;
                     duration: 0.6,
   delay: index * 0.1
 
-}
-                }
+
               }}"
               className="group relative"
 
@@ -197,18 +189,17 @@ setCountedValues(prev:  > ({;
 
                   y: -10,
                   scale: 1.02,
-                  borderColor: `rgba(34, 221, 210,`
-  0.5)`
+                  borderColor: "rgba(34, 221, 210,"
+  0.5)"
 
 }}
                 transition={{ duration: 0.3 }}
 
-                {/* Background gradient overlay */}`
-                <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-
-                {/* Icon */}
-                <motion.div`
-className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
+                {/* comment */}"
+                <div className={"absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300"}></div>
+                {/* comment */}
+                <motion.div"
+className: {"w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20"}
                   whileHover={{
 
                     rotate: 360,
@@ -216,11 +207,11 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
 
 }}
                   transition={{ duration: 0.6 }}
-`
-                  <stat.icon className={`w-10 h-10 text-${stat.color}`} />
+"
+                  <stat.icon className={"w-10 h-10 text-${stat.color}"} />
                 </motion.div>
 
-                {/* Value */}
+                {/* comment */}
                 <motion.div"
                   className="mb-4 relative z-10"
                   initial={{ scale: 0.8 }}
@@ -234,31 +225,28 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
                 >"
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                     {countedValues[stat.value] || 0}
-                    {stat.value.includes('%') && '%'}
-                    {stat.value.includes('/') && stat.value.split('/')[1]}
+                    {stat.value.includes("%") && "%"}
+                    {stat.value.includes("/") && stat.value.split("/")[1]}
                   </span>
                 </motion.div>
 
-                {/* Label */}"
+                {/* comment */}"
                 <h3 className="text-2xl font-bold text-white mb-3 relative z-10">
                   {stat.label}
                 </h3>
-
-                {/* Description */}"
+                {/* comment */}"
                 <p className="text-gray-300 leading-relaxed relative z-10">
                   {stat.description}
                 </p>
-
-                {/* Hover effect overlay */}
+                {/* comment */}
                 <motion.div"
                   className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   initial={false}
-                />
+               />
               </motion.div>
             </motion.div>;) ) }
         </div>
-
-        {/* Bottom Achievement Section */}
+        {/* comment */}
         <motion.div
           initial = {
 
@@ -285,7 +273,7 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
 "
-              <Award className="w-10 h-10 text-white"  />            </motion.div>
+              <Award className="w-10 h-10 text-white"   />            </motion.div>
 "
             <h3 className="text-3xl font-bold text-white mb-4">
               Industry Recognition & Awards

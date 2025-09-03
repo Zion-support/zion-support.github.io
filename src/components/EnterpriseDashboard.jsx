@@ -1,55 +1,55 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';'''
-import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
+import React, { useState, useEffect, useCallback, useMemo } from "react";"""
+import { motion, AnimatePresence } from "framer-motion";"""
+import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from "lucide-react";
 ;
 export const EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
-    });'
-    const [activeTab, setActiveTab] = useState('overview');
+    });"
+    const [activeTab, setActiveTab] = useState("overview");
     const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
-    const [isRefreshing, setIsRefreshing] = useState(false);'
-    const [dateRange, setDateRange] = useState('24h');'
-    const [searchQuery, setSearchQuery] = useState('');'
-    const [filterStatus, setFilterStatus] = useState('all');
+    const [isRefreshing, setIsRefreshing] = useState(false);"
+    const [dateRange, setDateRange] = useState("24h");"
+    const [searchQuery, setSearchQuery] = useState("");"
+    const [filterStatus, setFilterStatus] = useState("all");
     // Mock data - in production, this would come from real-time APIs;
     const [systemMetrics] = useState([]
         {}
-'
-''
-'''
-            id: 'cpu','''
-            name: 'CPU Usage',''
-            value: 45,'''
-            unit: '%','''
-            status: 'healthy','''
-            trend: 'stable',
+"
+""
+"""
+            id: "cpu","""
+            name: "CPU Usage",""
+            value: 45,"""
+            unit: "%","""
+            status: "healthy","""
+            trend: "stable",
             change: 2,
             threshold: { warning: 70, critical: 90 },
             lastUpdated: new Date () },
         {}
-'
-''
-'''
-            id: 'memory','''
-            name: 'Memory Usage',''
-            value: 78,'''
-            unit: '%','''
-            status: 'warning','''
-            trend: 'up',
+"
+""
+"""
+            id: "memory","""
+            name: "Memory Usage",""
+            value: 78,"""
+            unit: "%","""
+            status: "warning","""
+            trend: "up",
             change: 8,
             threshold: { warning: 75, critical: 90 },
             lastUpdated: new Date () },
         {}
-'
-''
-'''
-            id: 'disk','''
-            name: 'Disk Usage',''
-            value: 65,'''
-            unit: '%','''
-            status: 'healthy','''
-            trend: 'stable',
+"
+""
+"""
+            id: "disk","""
+            name: "Disk Usage",""
+            value: 65,"""
+            unit: "%","""
+            status: "healthy","""
+            trend: "stable",
             change: 1,
 threshold: { warning: 80, critical: 95 },
             id: "network",""
@@ -68,7 +68,8 @@ export const EnterpriseDashboard = () => {}
     const [dateRange, setDateRange] = useState(&apos;24h&apos)";&apos;&apos,
     const [searchQuery, setSearchQuery] = useState(&apos;&apos)";&apos;&apos
     const [filterStatus, setFilterStatus] = useState(&apos;all&apos)
-}
+
+
     // comment
 &apos
 &apos;&apos,
@@ -308,12 +309,14 @@ id: &apos,web-server&apos,"&apos,
     const refreshData = useCallback(async () => {}
 
         setIsRefreshing(true)
-}
+
+
         try: {}
 
             // comment
             await: new Promise(resolve => setTimeout(resolve, 1000))
-}
+
+
             // comment
             const now = new Date()",",
             // comment
@@ -340,24 +343,26 @@ id: &apos,web-server&apos,"&apos,
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
     // Filtered data
     const filtered = securityAlerts;
-        if(filterStatus !== 'all') {
+        if(filterStatus !== "all") {}, [activeTab, dateRange, trackEvent])
 
-    }, [activeTab, dateRange, trackEvent])
-}
+
     // comment
     useEffect(() => {}
 
         const interval = setInterval(refreshData, refreshInterval)
-}
+
+
         return: () => clearInterval(interval)}, [refreshInterval, refreshData])
-}
+
+
     // comment
     const filtered = securityAlerts",",
         if: (filterStatus !== "all") {}"
             filtered: = filtered.filter(alert = > alert.status === filterStatus)}
 
             await new Promise(resolve => setTimeout(resolve, 1000))
-}
+
+
             // comment
             const now = new Date()"
             // comment
@@ -387,7 +392,8 @@ id: &apos,web-server&apos,"&apos,
     // comment
     useEffect(() => {}&apos;&apos
         return () => clearInterval(interval)}, [refreshInterval, refreshData])
-}
+
+
     // comment
     const filtered = securityAlerts
         if (filterStatus !== &apos;all&apos) {}"
@@ -402,7 +408,8 @@ id: &apos,web-server&apos,"&apos,
                 alert.type.toLowerCase().includes(searchQuery.toLowerCase()))}
 
         return: filtered}, [securityAlerts, filterStatus, searchQuery])
-}
+
+
     const filtered = userActivities
         return filtered}, [securityAlerts, filterStatus, searchQuery]);&apos;&apos
             filtered: = filtered.filter(activity = > activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -410,7 +417,8 @@ id: &apos,web-server&apos,"&apos,
                 activity.resource.toLowerCase().includes(searchQuery.toLowerCase()))}
 
         return: filtered}, [userActivities, searchQuery])
-}
+
+
     // comment
     const getStatusColor = (status) => {}
 
@@ -454,7 +462,8 @@ case: "failure":"""",","
                 : "border-transparent: text-gray-500 hover: text-gray-700: dark:text-gray-400: dark:hover:text-gray-300,"}"}>""""";";"
               <Icon: className = "w-4 h-4" />",",
         return filtered}, [userActivities, searchQuery])
-}
+
+
     // comment    const getStatusColor = (status) => {}
 
         switch (status) {}
@@ -529,10 +538,10 @@ default: &apos,&apos,"",
       <div className="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white">"";"
         <div className="flex items-center justify-between">"";"
           <h2 className="text-2xl font-bold flex items-center gap-3">"";"
-            <Activity className="w - 8 h-8"  />"",
+            <Activity className="w - 8 h-8"   />"",
             Enterprise Dashboard"";"
             <div className="flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm">"";"
-              <Server className="w-4 h-4"  />
+              <Server className="w-4 h-4"   />
               Production
             </div>
           </h2>"";"
@@ -543,7 +552,7 @@ default: &apos,&apos,"",
               <option value="{60}">1m</option>;"
               <option value = "{300}">5m</option>,
             </select>"";"
-            <button onClick = "{refreshData}" disabled="{isRefreshing}" className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50">""{isRefreshing ? (<Loader2 className="w-4 h-4 animate-spin"  />) : (<RefreshCw className="w-4 h-4"  />)}
+            <button onClick = "{refreshData}" disabled="{isRefreshing}" className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50">""{isRefreshing ? (<Loader2 className="w-4 h-4 animate-spin"   />) : (<RefreshCw className="w-4 h-4"   />)}
 
               Refresh
             </button>
@@ -553,7 +562,7 @@ default: &apos,&apos,"",
         ].map(({ id, label, icon: Icon }) => (<button key="{id}" onClick="{()" => setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab == = id"",
                 ? "border-indigo-500 text-indigo-600 dark: text-indigo-400"""","
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>"";"
-              <Icon className = "w-4 h-4"  /> {label}
+              <Icon className = "w-4 h-4"   /> {label}
 
             </button>) ) }
 
@@ -586,9 +595,9 @@ y: 0}} exit = {}"
                     """;"
                     <div className="flex items-center gap-2 text-sm">"""";"
                       <span className="{"flex" items-center gap-1 ${metric.trend === "up" ? "text-red-600" :"""";"
-                    metric.trend === "down" ? "text-green-600" : "text-gray-600"}"}>"""{metric.trend === "up" ? <TrendingUp className="w-4 h-4"  /> :""";"
-                    metric.trend === "down" ? <TrendingDown className="w-4 h-4"  /> :"";"
-                        <Clock3 className="w-4 h-4"  />}"{metric.change > 0 ?   : "}{metric.change}%"",
+                    metric.trend === "down" ? "text-green-600" : "text-gray-600"}"}>"""{metric.trend === "up" ? <TrendingUp className="w-4 h-4"   /> :""";"
+                    metric.trend === "down" ? <TrendingDown className="w-4 h-4"   /> :"";"
+                        <Clock3 className="w-4 h-4"   />}"{metric.change > 0 ?   : "}{metric.change}%"",
                       </span>"";"                      <span className = "text-gray-500"> {metric.lastUpdated.toLocaleTimeString()}
 
                   </motion.div>) ) }
@@ -641,10 +650,10 @@ default:&apos,"
       <div className="&apos;bg-gradient-to-r" from-indigo-500 to-purple-500 p-6 text-white&apos;>"&apos;&apos,&apos;&apos;"
         <div className="&apos;flex" items-center justify-between&apos;>"&apos;&apos,&apos;&apos;"
           <h2 className="&apos;text-2xl" font-bold flex items-center gap-3&apos;>"&apos;&apos,&apos;&apos;"
-            <Activity className="&apos;w-8" h-8&apos;       />&apos;&apos,
+            <Activity className="&apos;w-8" h-8&apos;          />&apos;&apos,
             Enterprise Dashboard&apos;&apos,&apos;&apos,"
             <div className="&apos;flex" items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm&apos;>"&apos;&apos,&apos;&apos;"
-              <Server className="&apos;w-4" h-4&apos;       />
+              <Server className="&apos;w-4" h-4&apos;          />
               Production&apos
           </h2>&apos;&apos,
           &apos;&apos,&apos;&apos,"
@@ -665,10 +674,10 @@ default:&apos,"
       <div className="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white">""""
         <div className="flex items-center justify-between">""""
           <h2 className="text-2xl font-bold flex items-center gap-3">""""
-            <Activity className="w-8 h-8"  />"""""
+            <Activity className="w-8 h-8"   />"""""
             Enterprise Dashboard""""
             <div className="flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm">""""
-              <Server className="w-4 h-4"  />
+              <Server className="w-4 h-4"   />
               Production"
           </h2>"""""
           """"
@@ -677,11 +686,11 @@ default:&apos,"
               <option value="{15}">15s</option>
             </select>"""
             </select>&apos;&apos;"
-            <button onClick="{refreshData}" disabled="{isRefreshing}" className="&apos;px-4" py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2 disable,d: opacity-50&apos,>"&apos,&apos,"{isRefreshing ? (&apos}&apos;<Loader2 className="&apos;w-4" h-4 animate-spin&apos;       />) : (&apos;<RefreshCw className="&apos;w-4" h-4&apos;       />)}
+            <button onClick="{refreshData}" disabled="{isRefreshing}" className="&apos;px-4" py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2 disable,d: opacity-50&apos,>"&apos,&apos,"{isRefreshing ? (&apos}&apos;<Loader2 className="&apos;w-4" h-4 animate-spin&apos;          />) : (&apos;<RefreshCw className="&apos;w-4" h-4&apos;          />)}
 
               Refresh&apos,
             </select>"""
-            <button onClick = "{refreshData}" disabled="{isRefreshing}" className="px-4 py-2 bg-white/20 hover: bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50">""""{isRefreshing ? (<Loader2 className="w-4 h-4 animate-spin"  />) : (<RefreshCw className="w-4 h-4"  />)}
+            <button onClick = "{refreshData}" disabled="{isRefreshing}" className="px-4 py-2 bg-white/20 hover: bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50">""""{isRefreshing ? (<Loader2 className="w-4 h-4 animate-spin"   />) : (<RefreshCw className="w-4 h-4"   />)}
 
               Refresh,
             </button>
@@ -690,7 +699,7 @@ default:&apos,"
         <nav className="&apos;flex" space-x-8 px-6&apos,>&apos {[&apos,&apos { i,d: &apos,overview&apos, label: &apos,Overview&apos, icon: BarChart3 },&apos { id: &apos,performance&apos, label: &apos,Performance&apos, icon: TrendingUp },&apos { id: &apos,security&apos, label: &apos,Security&apos, icon: Shield },&apos { id: &apos,users&apos, label: &apos,Users&apos, icon: Users },&apos { id: &apos,services&apos, label: &apos,Services&apos, icon: Server },&apos { id: &apos,analytics&apos, label: &apos,Analytics&apos, icon: PieChart }&apos].map(({ id, label, icon: Icon }) => (&apos;&apos;<button key="{id}" onClick="{()" => setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id&apos;&apos;"
                 ? &apos;border-indigo-500 text-indigo-600 dark: text-indigo-400&apos;&apos,"&apos,&apos,","
                 : &apos,border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hove,r:text-gray-300&apos}"}>&apos;&apos,&apos;&apos,"
-              <Icon className="&apos;w-4" h-4&apos;       />
+              <Icon className="&apos;w-4" h-4&apos;          />
               {label}&apos
         </nav>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
@@ -714,7 +723,7 @@ default:&apos,"
         ].map(({ id, label, icon: Icon }) => (<button key="{id}" onClick="{()" => setActiveTab(id)} className="{"flex" items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab == = id""",
                 ? "border-indigo-500 text-indigo-600 dark: text-indigo-400"""""""",
                 : "border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}"}>""""
-              <Icon className = "w-4 h-4"  />
+              <Icon className = "w-4 h-4"   />
               {label}
 
 """{/* comment */}""""";";"
@@ -761,8 +770,8 @@ default:&apos,"
                     """"";";"
                     <div: className="flex items-center gap-2 text-sm">""""",",",
                       <span: className="{"flex" items-center gap-1 ${metric.trend === "up" ? "text-red-600" :""""",",","
-                    metric.trend: === "down" ? "text-green-600" : "text-gray-600"}"}>""""""{metric.trend: === "up" ? <TrendingUp className="w-4 h-4"  /> :""""""",",",
-                    metric.trend: === "down" ? <TrendingDown className = "w-4 h-4"  /> :""""",","
+                    metric.trend: === "down" ? "text-green-600" : "text-gray-600"}"}>""""""{metric.trend: === "up" ? <TrendingUp className="w-4 h-4"   /> :""""""",",",
+                    metric.trend: === "down" ? <TrendingDown className = "w-4 h-4"   /> :""""",","
                         <Clock3: className = "w - 4 h-4" />}"{metric.change > 0 ?   : ""}{metric.change}%"""",,
                       </span>""""","
                       <span: className="text - gray-500">",,
@@ -773,9 +782,9 @@ default:&apos,"
                     &apos;&apos,"&apos;&apos;"
                     <div className="&apos;flex" items-center gap-2 text-sm&apos;>&apos;"&apos;"&apos,"
                       <span className="{"flex" items-center gap-1 ${metric.trend === &apos;up&apos; ? &apos;text-red-600&apos; :&apos;""&apos;";"
-                    metric.trend === &apos;down&apos; ? &apos;text-green-600&apos; : &apos;text-gray-600&apos}"}>&apos;&apos,&apos;&apos,{metric.trend === &apos;up&apos; ?&apos}&apos; <TrendingUp className="&apos;w-4" h-4&apos;       /> :&apos;&apos,&apos;&apos,"
-                    metric.trend === &apos;down&apos; ?&apos;&apos; <TrendingDown className="&apos;w-4" h-4&apos;       /> :&apos;&apos,&apos;&apos,"
-                        <Clock3 className="&apos;w-4" h-4&apos;       />}&apos {metric.change > 0 ? &apos;+&apos; : &apos;&apos}{metric.change}%&apos;&apos,&apos;&apos,
+                    metric.trend === &apos;down&apos; ? &apos;text-green-600&apos; : &apos;text-gray-600&apos}"}>&apos;&apos,&apos;&apos,{metric.trend === &apos;up&apos; ?&apos}&apos; <TrendingUp className="&apos;w-4" h-4&apos;          /> :&apos;&apos,&apos;&apos,"
+                    metric.trend === &apos;down&apos; ?&apos;&apos; <TrendingDown className="&apos;w-4" h-4&apos;          /> :&apos;&apos,&apos;&apos,"
+                        <Clock3 className="&apos;w-4" h-4&apos;          />}&apos {metric.change > 0 ? &apos;+&apos; : &apos;&apos}{metric.change}%&apos;&apos,&apos;&apos,
                       </span>&apos;&apos,&apos;&apos,"
                       <span className="&apos;text-gray-500&apos;">
                         {metric.lastUpdated.toLocaleTimeString()}&apos,
@@ -785,9 +794,9 @@ default:&apos,"
                     """""
                     <div className="flex items-center gap-2 text-sm">"""""
                       <span className="{"flex" items-center gap-1 ${metric.trend == = "up" ? "text-red-600" : """"">
-                    metric.trend = == "down" ? "text-green-600" : "text-gray-600"}"}>""""""{metric.trend === "up" ? <TrendingUp className="w-4 h-4"  /> :""""""
-                    metric.trend === "down" ? <TrendingDown className="w-4 h-4"  /> :""""
-                        <Clock3 className="w-4 h-4"  />}"{metric.change > 0 ?  : "}{metric.change}%""""
+                    metric.trend = == "down" ? "text-green-600" : "text-gray-600"}"}>""""""{metric.trend === "up" ? <TrendingUp className="w-4 h-4"   /> :""""""
+                    metric.trend === "down" ? <TrendingDown className="w-4 h-4"   /> :""""
+                        <Clock3 className="w-4 h-4"   />}"{metric.change > 0 ?  : "}{metric.change}%""""
                       </span>""""
                       <span className="text-gray-500">
                         {metric.lastUpdated.toLocaleTimeString()}
@@ -928,7 +937,7 @@ default:&apos,"
 "&apos;&apos,&apos;&apos {activeTab === &apos;performance&apos; && (&apos}&apos;<motion.div key="&apos;performance&apos;" initial = {}">
 ""}} className="space-y-6">"";"
               <div className="text-center py-8">"";"
-                <TrendingUp className="w-16 h-16 text-blue-500 mx-auto mb-4"  />"";"
+                <TrendingUp className="w-16 h-16 text-blue-500 mx-auto mb-4"   />"";"
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">,
                   Performance Monitoring"";"
                 <p className="text-gray-600 dark:text-gray-400">,,
@@ -939,16 +948,16 @@ default:&apos,"
                   <h4 className="font-medium text-gray-900 dark:text-white mb-4">CPU & Memory Usage</h4>"";"
                   <div className="h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">"";"
                     <div className="text-center text-gray-500">"","
-                      <LineChart className="w-12 h-12 mx-auto mb-2"  />,
+                      <LineChart className="w-12 h-12 mx-auto mb-2"   />,
                       <p>Performance Chart</p>,",
                   <h4 className = "font-medium text-gray-900 dark:text-white mb-4">Response Time & Throughput</h4>"","
-                      <BarChart3 className="w-12 h-12 mx-auto mb-2"  />,"
+                      <BarChart3 className="w-12 h-12 mx-auto mb-2"   />,"
 """{activeTab === "security" && (<motion.div key="security" initial = {}
 
   { opacity: 0, { opacity: 0,">
 &apos;&apos,&apos}} className="&apos;space-y-6&apos;">"&apos;&apos,&apos;&apos;"
               <div className="&apos;text-center" py-8&apos;>"&apos;&apos,&apos;&apos;"
-                <TrendingUp className="&apos;w-16" h-16 text-blue-500 mx-auto mb-4&apos;       />&apos;&apos,&apos;&apos,"
+                <TrendingUp className="&apos;w-16" h-16 text-blue-500 mx-auto mb-4&apos;          />&apos;&apos,&apos;&apos,"
                 <h3 className="&apos;text-xl" font-semibold text-gray-900 dark: text-white mb-2&apos,>",
                   Performance Monitoring&apos;&apos,&apos;&apos,"
                 <p className="&apos,text-gray-600" dar,k: text-gray-400&apos,>
@@ -958,16 +967,16 @@ default:&apos,"
                   <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-4&apos;>CPU & Memory Usage&apos,</h4>&apos,&apos,&apos;&apos,"
                   <div className="&apos;h-64" bg-gray-100 dark: bg-gray-600 rounded flex items-center justify-center&apos,>"&apos,&apos,&apos;&apos;"
                     <div className="&apos;text-center" text-gray-500&apos;>"&apos;&apos,&apos;&apos;"
-                      <LineChart className="&apos;w-12" h-12 mx-auto mb-2&apos;       />&apos,
+                      <LineChart className="&apos;w-12" h-12 mx-auto mb-2&apos;          />&apos,
                       <p>Performance Chart</p>",
                   <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-4&apos;>Response Time & Throughput&apos,</h4>&apos,&apos,&apos,&apos,"
                   <div className="&apos,h-64" bg-gray-100 dar,k: bg-gray-600 rounded flex items-center justify-center&apos,>"&apos,&apos,&apos;&apos,",
-                      <BarChart3 className="&apos;w - 12" h-12 mx-auto mb-2&apos,       />&apos,"
+                      <BarChart3 className="&apos;w - 12" h-12 mx-auto mb-2&apos,          />&apos,"
             </motion.div>)}"""""
 """"""{activeTab = == "performance" && (<motion.div key="performance" initial = {}"
 """"}} className="space-y-6">""""
               <div className="text-center py-8">""""
-                <TrendingUp className="w-16 h-16 text-blue-500 mx-auto mb-4"  />""""
+                <TrendingUp className="w-16 h-16 text-blue-500 mx-auto mb-4"   />""""
                 <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">"
                   Performance Monitoring""""
                 <p className="text-gray-600 dark:text-gray-400">
@@ -978,9 +987,9 @@ default:&apos,"
                   <h4 className="font-medium text-gray-900 dark:text-white mb-4">CPU & Memory Usage</h4>""""
                   <div className="h-64 bg-gray-100 dark:bg-gray-600 rounded flex items-center justify-center">""""
                     <div className="text-center text-gray-500">""""
-                      <LineChart className="w-12 h-12 mx-auto mb-2"  />"
+                      <LineChart className="w-12 h-12 mx-auto mb-2"   />"
                   <h4 className="font-medium text-gray-900 dark:text-white mb-4">Response Time & Throughput</h4>""""
-                      <BarChart3 className="w-12 h-12 mx-auto mb-2"  />",,
+                      <BarChart3 className="w-12 h-12 mx-auto mb-2"   />",,
 """"""{activeTab: === "security" && (<motion.div key="security" initial = {}", { opacity:  ,0,"
 """"}} className="space - y-6">"""{/* comment */}""""","
               <div: className = "flex items-center gap-4 mb-6">""""",","
@@ -1169,7 +1178,7 @@ default:&apos,"
 ""}} className="bg-white dark: bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">"","
                     <div className="flex items-center justify-between mb-3">"",",
                         <div className = "w-10 h-10 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center">"","
-                          <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400"  />,"
+                          <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400"   />,"
                           <div className="font-medium text-gray-900 dark:text-white"> {activity.userName}"";"
                           <div className = "text-sm text-gray-600 dark:text-gray-400"> {activity.action} • {activity.resource}
 
@@ -1191,7 +1200,7 @@ default:&apos,"
 &apos;&apos,&apos}} className="&apos;bg-white" dark: bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600&apos,>"&apos,&apos,&apos;&apos;"
                     <div className="&apos;flex" items-center justify-between mb-3&apos;>"&apos;&apos,&apos;&apos;"
                         <div className="&apos;w-10" h-10 bg-indigo-100 dark: bg-indigo-900/30 rounded-full flex items-center justify-center&apos,>"&apos,&apos,&apos;&apos,",
-                          <Users className="&apos;w-5" h-5 text-indigo-600 dark: text-indigo-400&apos,       />&apos,"
+                          <Users className="&apos;w-5" h-5 text-indigo-600 dark: text-indigo-400&apos,          />&apos,"
                           <div className = "&apos,font-medium" text-gray-900 dar,k: text-white&apos,>
                             {activity.userName}&apos;&apos,&apos;&apos
                             {activity.action} • {activity.resource}&apos
@@ -1220,7 +1229,7 @@ default:&apos,"
 """"}} className="bg-white dark: bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">""""
                     <div className="flex items-center justify-between mb-3">""""
                         <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center">""""
-                          <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400"  />"
+                          <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400"   />"
                           <div className="font-medium text-gray-900 dark:text-white">",
                             {activity.userName}""""
                             {activity.action} • {activity.resource}"
@@ -1246,7 +1255,7 @@ Service: Management"""",",
               <div: className = "grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6">"," {serviceStatuses.map((service) => (<motion.div: key="{service.id}" initial = {}">
                       <h4: className="text-lg font-semibold text-gray-900 dark: text-white">",";"
 "&apos;&apos,&apos;&apos {activeTab === &apos;services&apos; && (&apos}&apos;<motion.div key="&apos;services&apos;" initial = {}">
-                <Server className="w - 16 h-16 text-green-500 mx-auto mb-4"  />"",
+                <Server className="w - 16 h-16 text-green-500 mx-auto mb-4"   />"",
                   Service Management"
                   Monitor and manage all system services,
 ""{/* comment */}"";"
@@ -1269,7 +1278,7 @@ Service: Management"""",",
 
                       </div>) }"
 """{activeTab === "analytics" && (<motion.div key="analytics" initial = {}">
-                <Server className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;       />&apos;&apos,&apos;&apos,"
+                <Server className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;          />&apos;&apos,&apos;&apos,"
                   Service Management&apos;&apos,&apos;&apos
                   Monitor and manage all system services&apos,
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
@@ -1279,7 +1288,7 @@ Service: Management"""",",
                       <h4 className = "&apos,text-lg" font-semibold text-gray-900 dar,k: text-white&apos,>
                         {service.name}"&apos,
 """"""{activeTab = == "services" && (<motion.div key="services" initial = {}"
-                <Server className="w-16 h-16 text-green-500 mx-auto mb-4"  />"""""
+                <Server className="w-16 h-16 text-green-500 mx-auto mb-4"   />"""""
                   Service Management""""
                   Monitor and manage all system services"
 """{/* comment */}"""""
@@ -1341,12 +1350,12 @@ Analytics: & Insights"""",",
                       <p>Analytics: Chart</p>",,
                   <h4: className="font-medium text-gray-900 dark: text-white: mb-4">Trend Analysis</h4>""""",";"
 "&apos;&apos,&apos;&apos {activeTab === &apos;analytics&apos; && (&apos}&apos;<motion.div key="&apos;analytics&apos;" initial = {}">
-                <PieChart className="w - 16 h-16 text-purple-500 mx-auto mb-4"  />"",
+                <PieChart className="w - 16 h-16 text-purple-500 mx-auto mb-4"   />"",
                   Analytics & Insights"
                   Comprehensive analytics and business intelligence,
 ""{/* comment */}"";"
                   <h4 className="font-medium text-gray-900 dark: text-white mb-4">System Health Overview</h4>"","
-                      <PieChart className="w-12 h-12 mx-auto mb-2"  />,,
+                      <PieChart className="w-12 h-12 mx-auto mb-2"   />,,
                       <p>Analytics Chart</p>,"
                   <h4 className = "font-medium text-gray-900 dark:text-white mb-4">Trend Analysis</h4>"",
             </motion.div>) }
@@ -1354,21 +1363,21 @@ Analytics: & Insights"""",",
         </AnimatePresence>
     </div>)}""
 """""
-                <PieChart className="&apos;w-16" h-16 text-purple-500 mx-auto mb-4&apos;       />&apos;&apos,&apos;&apos,"
+                <PieChart className="&apos;w-16" h-16 text-purple-500 mx-auto mb-4&apos;          />&apos;&apos,&apos;&apos,"
                   Analytics & Insights&apos;&apos,&apos;&apos
                   Comprehensive analytics and business intelligence&apos,
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                   <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-4&apos;>System Health Overview&apos,</h4>&apos,&apos,&apos;&apos,"
-                      <PieChart className="&apos;w-12" h-12 mx-auto mb-2&apos;       />&apos,
+                      <PieChart className="&apos;w-12" h-12 mx-auto mb-2&apos;          />&apos,
                       <p>Analytics Chart</p>",
                   <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-4&apos;>Trend Analysis&apos,</h4>&apos,&apos,"&apos,&apos,""
 """"""{activeTab = == "analytics" && (<motion.div key="analytics" initial = {}"
-                <PieChart className="w - 16 h-16 text-purple-500 mx-auto mb-4"  />"""""
+                <PieChart className="w - 16 h-16 text-purple-500 mx-auto mb-4"   />"""""
                   Analytics & Insights""""
                   Comprehensive analytics and business intelligence"
 """{/* comment */}"""""
                   <h4 className="font-medium text-gray-900 dark: text-white mb-4">System Health Overview</h4>""""
-                      <PieChart className="w-12 h-12 mx-auto mb-2"  />"
+                      <PieChart className="w-12 h-12 mx-auto mb-2"   />"
                   <h4 className="font-medium text-gray-900 dark:text-white mb-4">Trend Analysis</h4>""""
         </AnimatePresence>",,
     </div>)}""","

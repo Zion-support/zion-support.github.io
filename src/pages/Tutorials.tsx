@@ -46,5 +46,4 @@ const Tutorials = () => {
             </div>
     </>
   );
-}
 export default Tutorials

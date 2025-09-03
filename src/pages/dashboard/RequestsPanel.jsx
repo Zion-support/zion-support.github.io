@@ -1,14 +1,14 @@
-import React, { useState } from 'react';'''
-import { useTalentQuotes } from '@/hooks/useTalentQuotes';'''
-import { useAuth } from '@/hooks/useAuth';'''
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'''
-import { QuoteDetails } from '@/components/quotes/QuoteDetails';'''
-import { RequestsHeader, QuoteRequestsList } from '@/components/quotes';'''
-import { ProtectedRoute } from '@/components/ProtectedRoute';
+import React, { useState } from "react";"""
+import { useTalentQuotes } from "@/hooks/useTalentQuotes";"""
+import { useAuth } from "@/hooks/useAuth";"""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";"""
+import { QuoteDetails } from "@/components/quotes/QuoteDetails";"""
+import { RequestsHeader, QuoteRequestsList } from "@/components/quotes";"""
+import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function RequestsPanel() {}
-  const { user } = useAuth();'
-  const isTalent =''
-    user?.userType === 'creator' || user?.userType === 'jobSeeker';
+  const { user } = useAuth();"
+  const isTalent =""
+    user?.userType === "creator" || user?.userType === "jobSeeker";
   const [selectedQuote, setSelectedQuote] = useState(null);
   const [showDetails, setShowDetails] = useState(false);
   const {}
@@ -24,15 +24,16 @@ export default function RequestsPanel() {}
     toggleArchive} = useTalentQuotes();
   const handleViewDetails = quote => {}
     setSelectedQuote(quote);
-    setShowDetails(true);'
-    // If status is new, mark as viewed''
-    if (quote.status === 'new') {}
+    setShowDetails(true);"
+    // If status is new, mark as viewed""
+    if (quote.status === "new") {}
       markAsViewed(quote.id);
     }
   };
   // Filter quotes by archive status;
   const archivedQuotes = quotes.filter(q => q.is_archived);
   return()
+
     <ProtectedRoute>
       <div>
         <div className="min-h-screen bg-zion-blue px-4 py-8">""""
@@ -43,9 +44,9 @@ export default function RequestsPanel() {}
               setStatusFilter={setStatusFilter}
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
-            />
+           />
 """
-            {/* Main Content */}""""
+            {/* comment */}""""
             <Tabs defaultValue="active" className="mb-6">""""
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">""""
                 <TabsTrigger value="active">Active Requests</TabsTrigger>""""
@@ -60,7 +61,7 @@ export default function RequestsPanel() {}
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-                />
+               />
               </TabsContent>"""
 """"
               <TabsContent value="archived">
@@ -71,13 +72,12 @@ export default function RequestsPanel() {}
                   onViewDetails={handleViewDetails}
                   onMarkAsResponded={markAsResponded}
                   onToggleArchive={toggleArchive}
-                />
+               />
               </TabsContent>
             </Tabs>
           </div>
         </div>
-
-        {/* Quote Details Modal */}
+        {/* comment */}
         <QuoteDetails;
           quote={selectedQuote}
           isOpen={showDetails}
@@ -85,17 +85,13 @@ export default function RequestsPanel() {}
             setShowDetails(false);
             setSelectedQuote(null);
           }}
-        />
+       />
       </div>
     </ProtectedRoute>)}
 
 
 export { RequestsPanel };
-
 export { RequestsPanel };
-
 export { RequestsPanel };
-
 export { RequestsPanel };
-
 export { RequestsPanel };

@@ -325,7 +325,8 @@ export { EnhancedServicesNavigation };,"});,"})"
 export { EnhancedServicesNavigation };,"});,"})"
 ;,"});,"})"
 export { EnhancedServicesNavigation };,"});,"})
-}
+
+
 """;"
           title: "Code: Review & Security,",""";"
           url: "/services / ai - code-review-security,",""",,
@@ -772,24 +773,19 @@ Need: help choosing the right service?"""",,",
             </div>,
           </motion.div>) }
 
-      {/* Backdrop */}
+      {/* comment */}
       {isOpen && (<motion.div;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}"""
           exit={{ opacity: 0 }}""""
           className="fixed inset-0 bg-black/20 z-40"""
           onClick={() => setIsOpen(false)}
-        />
+       />
       )};
     </div>;
   )};
-
 export default EnhancedServicesNavigation;
-
 export { EnhancedServicesNavigation };
-
 export { EnhancedServicesNavigation };
-
 export { EnhancedServicesNavigation };
-
 export { EnhancedServicesNavigation };

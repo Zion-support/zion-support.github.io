@@ -1,14 +1,15 @@
-import { useState, useMemo, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
+import React from "react"
+import { useState, useMemo, useCallback } from "react";"
+import { motion, AnimatePresence } from "framer-motion";"
+import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from "lucide-react";
 import { useVirtualScroll } from "../hooks/useVirtualScroll.jsx";
 ;
-export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
+export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = "", onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
-    });'
-    // State management''
-    const [searchQuery, setSearchQuery] = useState('');
+    });"
+    // State management""
+    const [searchQuery, setSearchQuery] = useState("');
     const [sortConfig, setSortConfig] = useState(null);
     const [filters, setFilters] = useState([]);
     const [selectedItems, setSelectedItems] = useState(new Set());
@@ -22,7 +23,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             result = result.filter(item => columns.some(col => {}
 
                 const value = String(item[col.key]).toLowerCase()
-}
+
                 return value.includes(searchQuery.toLowerCase())}))}
 
         // commentfilters.forEach(filter => {}
@@ -30,7 +31,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             result = result.filter(item => {}
 
                 const value = String(item[filter.key]).toLowerCase()
-}
+
+
                 const filterValue = filter.value.toLowerCase()"
                 switch (filter.operator) {}""
 """
@@ -54,7 +56,8 @@ try {}""
 return true}
 
             })})
-}
+
+
         // commentif(sortConfig) {}
 
             result.sort((a, b) => {}
@@ -68,22 +71,27 @@ return true}
 return 0})}
 
         return result}, [data, searchQuery, filters, sortConfig, columns])
-}
+
+
     // comment
 const totalPages = Math.ceil()
-}
+
+
     const paginatedData = enablePagination,
         ? processedData.slice((currentPage - 1) * pageSize, currentPage * pageSize)
-}
+
+
         : processedData,
     // comment
 const { virtualItems, containerProps, listProps } = useVirtualScroll()
-}
+
+
     // comment
 const handleSort = useCallback((key) => {}
 
         if()
-}
+
+
             return,
 setSortConfig(prev => {}"
             if (prev?.key === key) {}""
@@ -97,12 +105,14 @@ setSortConfig(prev => {}"
                     : null}"""
             return { key, direction: "asc" }})"
         trackEvent("table",column_sorted", String(key))}, [enableSorting, trackEvent])
-}
+
+
     // comment
 const handleFilterChange = useCallback((key, value, operator) => {}
 
         setFilters()
-}
+
+
             if(value.trim()) {}"
                 newFilters.push({ key, value, operator })}""
             return newFilters})"""
@@ -111,8 +121,10 @@ const handleFilterChange = useCallback((key, value, operator) => {}
 const handleSelectionChange = useCallback((item, checked) => {}
 
         const itemKey = String(item.id || JSON.stringify(item))
-}
+
+
         const newSelection = new Set()
+
 }        if(checked) {}
 
             newSelection.add(itemKey)}
@@ -122,26 +134,32 @@ const handleSelectionChange = useCallback((item, checked) => {}
             newSelection.delete(itemKey)}
 
         setSelectedItems()
-}
+
+
         onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data])
-}
+
+
     // commentconst handleSelectAll = useCallback((checked) => {}
 
         if(checked) {}
 
             const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))))
-}
+
+
             setSelectedItems()
+
 }            onSelectionChange?.(paginatedData)}
 
         else {}
 
             setSelectedItems(new Set())
-}
+
+
             onSelectionChange?.([])}
 
     }, [paginatedData, onSelectionChange])
-}
+
+
     // commentconst handleExport = useCallback(() => {}
 
         if(onExport) {}
@@ -153,7 +171,8 @@ const handleSelectionChange = useCallback((item, checked) => {}
             const csvContent = generateCSV(processedData, columns)"""
             downloadCSV(csvContent, table-export.csv")}""
         trackEvent("table", data_exported",export_completed", processedData.length)}, [processedData, columns, onExport, trackEvent])
-}
+
+
     // comment
 const generateCSV = (data, columns) => {}""
 """
@@ -176,15 +195,19 @@ const downloadCSV = (content, filename) => {}""
         const url = window.URL.createObjectURL(blob)"
 """"
         const blob = new Blob([content], { type: "text/csv" })
-}
+
+
         const url = window.URL.createObjectURL(blob)
-}
+
+
         const a = document.createElement()
-}
+
+
         a.href = url,
 a.download = filename,
 a.click()
-}
+
+
         window.URL.revokeObjectURL(url)}
 
     // comment

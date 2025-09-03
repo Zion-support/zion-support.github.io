@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import { 
-  Cloud, 
-  TrendingUp, 
-  DollarSign, 
-  BarChart3, 
-  Zap, 
-  Shield, 
+  Cloud,
+  TrendingUp,
+  DollarSign,
+  BarChart3,
+  Zap,
+  Shield,
   CheckCircle,
   ArrowRight,
   Star,
@@ -15,17 +15,16 @@ import {
   PieChart,
   AlertTriangle,
   Lightbulb
-} from 'lucide-react';
-
+} from "lucide-react";
 export default function CloudFinOpsOptimizerPage() {
   return (
     <div className="min-h-screen bg-zion-slate-dark text-white">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
-              <Cloud className="w-4 h-4 mr-2" />
+              <Cloud className="w-4 h-4 mr-2"   />
               Cloud Cost Optimization
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -45,8 +44,7 @@ export default function CloudFinOpsOptimizerPage() {
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -57,61 +55,55 @@ export default function CloudFinOpsOptimizerPage() {
               Our FinOps platform provides end-to-end visibility and control over your cloud spending with intelligent automation and optimization.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <DollarSign className="w-6 h-6 text-zion-cyan" />
+                <DollarSign className="w-6 h-6 text-zion-cyan"   />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Cost Optimization</h3>
               <p className="text-zion-slate-light">
                 AI-powered recommendations for resource optimization, reserved instance planning, and cost allocation strategies that reduce cloud spending by up to 40%.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="w-6 h-6 text-zion-cyan" />
+                <BarChart3 className="w-6 h-6 text-zion-cyan"   />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Real-time Analytics</h3>
               <p className="text-zion-slate-light">
                 Live dashboards and reports that provide instant visibility into cloud spending, usage patterns, and optimization opportunities across all services.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-zion-cyan" />
+                <Zap className="w-6 h-6 text-zion-cyan"   />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Automated Optimization</h3>
               <p className="text-zion-slate-light">
                 Intelligent automation that continuously monitors and optimizes resource allocation, scaling, and cost management without manual intervention.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-zion-cyan" />
+                <Shield className="w-6 h-6 text-zion-cyan"   />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Budget Management</h3>
               <p className="text-zion-slate-light">
                 Comprehensive budget controls, alerts, and forecasting tools that help you stay within budget while maximizing cloud performance and value.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <PieChart className="w-6 h-6 text-zion-cyan" />
+                <PieChart className="w-6 h-6 text-zion-cyan"   />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Resource Allocation</h3>
               <p className="text-zion-slate-light">
                 Smart resource allocation and rightsizing recommendations that ensure optimal performance while minimizing unnecessary costs.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
-                <Activity className="w-6 h-6 text-zion-cyan" />
+                <Activity className="w-6 h-6 text-zion-cyan"   />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Performance Monitoring</h3>
               <p className="text-zion-slate-light">
@@ -121,8 +113,7 @@ export default function CloudFinOpsOptimizerPage() {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -132,7 +123,7 @@ export default function CloudFinOpsOptimizerPage() {
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0"   />
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Reduce Cloud Costs</h3>
                     <p className="text-zion-slate-light">
@@ -141,7 +132,7 @@ export default function CloudFinOpsOptimizerPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0"   />
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Improve Visibility</h3>
                     <p className="text-zion-slate-light">
@@ -150,7 +141,7 @@ export default function CloudFinOpsOptimizerPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0"   />
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Automate Operations</h3>
                     <p className="text-zion-slate-light">
@@ -159,7 +150,7 @@ export default function CloudFinOpsOptimizerPage() {
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 mr-3 flex-shrink-0"   />
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">Enhance Accountability</h3>
                     <p className="text-zion-slate-light">
@@ -193,8 +184,7 @@ export default function CloudFinOpsOptimizerPage() {
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-darker">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -205,7 +195,6 @@ export default function CloudFinOpsOptimizerPage() {
               Whether you're running on AWS, Azure, Google Cloud, or multi-cloud environments, our FinOps platform adapts to your needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <h3 className="text-xl font-semibold text-white mb-3">Enterprise Organizations</h3>
@@ -218,7 +207,6 @@ export default function CloudFinOpsOptimizerPage() {
                 <li>• Compliance and audit support</li>
               </ul>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <h3 className="text-xl font-semibold text-white mb-3">Startups & SMBs</h3>
               <p className="text-zion-slate-light mb-4">
@@ -230,7 +218,6 @@ export default function CloudFinOpsOptimizerPage() {
                 <li>• Growth-focused insights</li>
               </ul>
             </div>
-
             <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-purple/30">
               <h3 className="text-xl font-semibold text-white mb-3">DevOps Teams</h3>
               <p className="text-zion-slate-light mb-4">
@@ -245,8 +232,7 @@ export default function CloudFinOpsOptimizerPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -267,4 +253,3 @@ export default function CloudFinOpsOptimizerPage() {
       </section>
     </div>
   );
-}

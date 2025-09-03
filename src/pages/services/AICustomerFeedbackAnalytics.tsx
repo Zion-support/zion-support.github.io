@@ -1,13 +1,13 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '../../components/SEO';
-import { MessageSquare, 
-  TrendingUp, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Globe, 
-  Lock, 
+import React from "react.ts";
+import { motion  } from "framer-motion.ts";
+import { SEO  } from "../../components/SEO";
+import { MessageSquare,
+  TrendingUp,
+  BarChart3,
+  Users,
+  Zap,
+  Globe,
+  Lock,
   Eye,
   Star,
   Cpu,
@@ -30,8 +30,7 @@ import { MessageSquare,
   ShoppingCart,
   Shield,
   Settings
- } from 'lucide-react.ts';
-
+ } from "lucide-react.ts";
 export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown {
   const features = [
     {
@@ -65,7 +64,6 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations.";
     };
   ];
-
   const benefits = [
     {
       icon: Zap,
@@ -98,7 +96,6 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       description: "Automate feedback analysis and reporting, saving hours of manual work each week.";
     };
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -153,7 +150,6 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       popular: false;
     };
   ];
-
   const useCases = [
     {
       industry: "E-commerce",
@@ -186,7 +182,6 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       icon: Settings;
     };
   ];
-
   const integrations = [
     {
       name: "Survey Platforms",
@@ -213,18 +208,14 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"];
     };
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="AI Customer Feedback Analytics - Zion Tech Group"
-        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."
-      />
+      <SEO title="AI Customer Feedback Analytics - Zion Tech Group"
+        description="Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction."   />
       
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
-        
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
@@ -250,13 +241,13 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
+              <Brain className="w-4 h-4 mr-2"   />
               AI-Powered Analytics
             </div>
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
               AI Customer Feedback
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {' '}Analytics
+                {" "}Analytics
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
@@ -265,19 +256,18 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2"   />
                 Start Free Trial
               </button>
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
-                <Download className="w-5 h-5 mr-2 inline" />
+                <Download className="w-5 h-5 mr-2 inline"   />
                 Download Brochure
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -350,14 +340,13 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
               >
-                {/* Icon */}
+                {/* comment */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
-                {/* Content */}
+                {/* comment */}
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
                     {feature.title}
@@ -366,16 +355,14 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                     {feature.description}
                   </p>
                 </div>
-
-                {/* Hover Effect */}
+                {/* comment */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -448,14 +435,13 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
               >
-                {/* Icon */}
+                {/* comment */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
-                {/* Content */}
+                {/* comment */}
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
                     {benefit.title}
@@ -464,16 +450,14 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                     {benefit.description}
                   </p>
                 </div>
-
-                {/* Hover Effect */}
+                {/* comment */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -544,11 +528,11 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
 
 }}
                 viewport={{ once: true }}
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
+                className={"relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
-                    ? 'border-blue-500/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10' 
-                    : 'border-white/10 hover:border-blue-500/50'
-                }`}
+                    ? "border-blue-500/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10" 
+                    : "border-white/10 hover:border-blue-500/50"
+                }"}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -566,21 +550,19 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                     <span className="text-lg text-gray-400">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0"   />
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
-
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                <button className={"w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
-                    : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
-                }`}>
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700"
+                    : "bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                }"}>
                   {plan.cta}
                 </button>
               </motion.div>
@@ -588,8 +570,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -662,14 +643,13 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
               >
-                {/* Icon */}
+                {/* comment */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
-                {/* Content */}
+                {/* comment */}
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
                     {useCase.industry}
@@ -678,16 +658,14 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
                     {useCase.description}
                   </p>
                 </div>
-
-                {/* Hover Effect */}
+                {/* comment */}
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Integrations Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -778,8 +756,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 bg-gradient-to-r from-blue-900/20 to-purple-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -815,11 +792,11 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg flex items-center justify-center">
-                <Star className="w-5 h-5 mr-2" />
+                <Star className="w-5 h-5 mr-2"   />
                 Start Free Trial
               </button>
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
-                <Share2 className="w-5 h-5 mr-2 inline" />
+                <Share2 className="w-5 h-5 mr-2 inline"   />
                 Schedule Demo;
               </button>;
             </div>;
@@ -828,14 +805,8 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
       </section>;
     </div>;
   );
-}
-
 export { AICustomerFeedbackAnalytics };
-
 export { AICustomerFeedbackAnalytics };
-
 export { AICustomerFeedbackAnalytics };
-
 export { AICustomerFeedbackAnalytics };
-
 export { AICustomerFeedbackAnalytics };

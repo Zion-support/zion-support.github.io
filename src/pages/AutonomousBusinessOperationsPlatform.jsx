@@ -1,100 +1,101 @@
-import { motion } from 'framer-motion';
-import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
-import { Building, Brain, ArrowRight, Star, Rocket, Cpu, Database } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Network } from 'lucide-react';
+import React from "react"
+import { motion } from "framer-motion";
+import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from "lucide-react";
+import { Building, Brain, ArrowRight, Star, Rocket, Cpu, Database } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Network } from "lucide-react";
 import SEOHead from "../components/SEOHead.jsx";
-import { Target, CheckCircle, Lightbulb, Code, Cloud } from 'lucide-react';import { Clock, Workflow, BarChart } from 'lucide-react';
+import { Target, CheckCircle, Lightbulb, Code, Cloud } from "lucide-react";import { Clock, Workflow, BarChart } from "lucide-react";
 const AutonomousBusinessOperationsPlatform = () => {}
     const features = []
                                             {}
-                                                icon: Bot,'
-                                                title: 'Intelligent Automation','
-                                                description: 'AI-powered automation that learns from your business processes and continuously improves efficiency.'
+                                                icon: Bot,"
+                                                title: "Intelligent Automation","
+                                                description: "AI-powered automation that learns from your business processes and continuously improves efficiency."
                                             },
                                             {}
-                                                icon: Workflow,'
-                                                title: 'Process Orchestration','
-                                                description: 'Seamlessly orchestrate complex business workflows across multiple systems and departments.'
+                                                icon: Workflow,"
+                                                title: "Process Orchestration","
+                                                description: "Seamlessly orchestrate complex business workflows across multiple systems and departments."
                                             },
                                             {}
-                                                icon: Zap,'
-                                                title: 'Real-time Optimization','
-                                                description: 'Dynamic optimization of business operations based on real-time data and market conditions.'
+                                                icon: Zap,"
+                                                title: "Real-time Optimization","
+                                                description: "Dynamic optimization of business operations based on real-time data and market conditions."
                                             },
                                             {}
-                                                icon: Shield,'
-                                                title: 'Secure Operations','
-                                                description: 'Enterprise-grade security with role-based access control and audit trails for all operations.'
+                                                icon: Shield,"
+                                                title: "Secure Operations","
+                                                description: "Enterprise-grade security with role-based access control and audit trails for all operations."
                                             }
                                         ];
                                         const useCases = []
                                             {}
-'
-''
-'''
-                                                title: 'Supply Chain Management','''
-                                                description: 'Automated inventory management, demand forecasting, and supplier coordination.',
+"
+""
+"""
+                                                title: "Supply Chain Management","""
+                                                description: "Automated inventory management, demand forecasting, and supplier coordination.",
                                                 icon: Workflow;
                                             },
                                             {}
-'
-''
-'''
-                                                title: 'Customer Service','''
-                                                description: 'Intelligent chatbots, ticket routing, and automated customer support workflows.',
+"
+""
+"""
+                                                title: "Customer Service","""
+                                                description: "Intelligent chatbots, ticket routing, and automated customer support workflows.",
                                                 icon: Users;
                                             },
                                             {}
-'
-''
-'''
-                                                title: 'Financial Operations','''
-                                                description: 'Automated invoicing, expense management, and financial reporting.',
+"
+""
+"""
+                                                title: "Financial Operations","""
+                                                description: "Automated invoicing, expense management, and financial reporting.",
                                                 icon: BarChart3;
                                             },
                                             {}
-'
-''
-'''
-                                                title: 'HR & Recruitment','''
-                                                description: 'Automated candidate screening, onboarding processes, and performance management.',
+"
+""
+"""
+                                                title: "HR & Recruitment","""
+                                                description: "Automated candidate screening, onboarding processes, and performance management.",
                                                 icon: Users;
                                             }
-                                        ];'
-                                        const benefits = [''
-                                            'Reduce operational costs by up to 40%',Improve process efficiency by 60%',Eliminate manual errors and delays',24/7 automated operations',Scalable infrastructure for growth',Real-time monitoring and analytics'
-                                        ];'
-                                        const industries = [''
-                                            'Manufacturing',Healthcare',Finance',Retail',Logistics',Technology',Energy',Education'"""
+                                        ];"
+                                        const benefits = [""
+                                            "Reduce operational costs by up to 40%",Improve process efficiency by 60%",Eliminate manual errors and delays",24/7 automated operations",Scalable infrastructure for growth",Real-time monitoring and analytics"
+                                        ];"
+                                        const industries = [""
+                                            "Manufacturing",Healthcare",Finance",Retail",Logistics",Technology",Energy",Education""""
                                         ];""""
                                         return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <div className="mb-8">""""
             <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">""""
-              <Bot className="w-4 h-4 mr-2"/>
+              <Bot className="w-4 h-4 mr-2"   />
               Autonomous Operations"""
             </div>""""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"""
               Autonomous Business""""
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">'
-                {' '}Operations Platform;
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">"
+                {" "}Operations Platform;
               </span>"""
             </h1>""""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your business with intelligent automation that runs 24/7. 
-              Our platform orchestrates your entire business operations autonomously, 
+              Our platform orchestrates your entire business operations autonomously,
               driving efficiency and growth."""
             </p>""""
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">""""
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300">"""
                 Get Started""""
-                <ArrowRight className="ml-2 w-5 h-5"/>"""
+                <ArrowRight className="ml-2 w-5 h-5"   />"""
               </Link>""""
               <button className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">""""
-                <Play className="mr-2 w-5 h-5"/>
+                <Play className="mr-2 w-5 h-5"   />
                 Watch Demo;
               </button>
             </div>"""
@@ -144,7 +145,7 @@ const AutonomousBusinessOperationsPlatform = () => {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""""
             {features.map((feature, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">""""
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">""""
-                  <feature.icon className="w-8 h-8 text-white"/>"""
+                  <feature.icon className="w-8 h-8 text-white" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""""
                 <p className="text-gray-300">{feature.description}</p>
@@ -157,7 +158,7 @@ const AutonomousBusinessOperationsPlatform = () => {}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105""""
               >""""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 mx-auto">""""
-                  <feature.icon className="w-8 h-8 text-white"/>"""
+                  <feature.icon className="w-8 h-8 text-white" />"""
                 </div>""""
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>""""
                 <p className="text-gray-300">{feature.description}</p>
@@ -166,7 +167,7 @@ const AutonomousBusinessOperationsPlatform = () => {}
 export default function AutonomousBusinessOperationsPlatform() {}"""
   return (""""
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative py-20 px-4 overflow-hidden">""""
         <div className="absolute inset-0 bg-black/20"></div>""""
         <div className="relative container mx-auto text-center">""""
@@ -183,7 +184,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             <Link to="/demo" className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
               Request Demo;
             </Link>"""
-      {/* Capabilities Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -199,7 +200,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
                 <h3 className="text-2xl font-semibold text-white mb-4">{capability.title}</h3>""""
                 <p className="text-gray-300 text-lg">{capability.description}</p>
               </div>))}"""
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 bg-gray-800/20">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -239,7 +240,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </></section>
 """
-      {/* Features Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -258,7 +259,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
                                                             const IconComponent = feature.icon;""""
                                                             return (<div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300">""""
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">""""
-                    <IconComponent className="w-6 h-6 text-white"/>"""
+                    <IconComponent className="w-6 h-6 text-white"   />"""
                   </div>""""
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""""
                   <p className="text-gray-300">{feature.description}</p>
@@ -267,7 +268,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Use Cases Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -286,7 +287,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
                                                             const IconComponent = useCase.icon;""""
                                                             return (<div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">""""
                   <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-6">""""
-                    <IconComponent className="w-8 h-8 text-white"/>"""
+                    <IconComponent className="w-8 h-8 text-white"   />"""
                   </div>""""
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>""""
                   <p className="text-gray-300 text-lg">{useCase.description}</p>
@@ -295,7 +296,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">"""
@@ -309,7 +310,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
               </p>""""
               <div className="space-y-4">""""
                 {benefits.map((benefit, index) => (<div key={index} className="flex items-center">""""
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>""""
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />""""
                     <span className="text-gray-300">{benefit}</span>
                   </div>))}
               </div>
@@ -322,34 +323,34 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
                   <div className="flex justify-between items-center mb-2">""""
                     <span className="text-gray-300">Cost Reduction</span>""""
                     <span className="text-green-400 font-semibold">40%</span>"""
-                  </div>"'"""
-                  <div className="w-full bg-slate-700 rounded-full h-2">'"'"""
-                    <div className="bg-gradient-to-r from-green-600 to-emerald-600 h-2 rounded-full" style={{ width: '40%' }}></div>
+                  </div>"""""
+                  <div className="w-full bg-slate-700 rounded-full h-2">""""""
+                    <div className="bg-gradient-to-r from-green-600 to-emerald-600 h-2 rounded-full" style={{ width: "40%" }}></div>
                   </div>
                 </div>"""
                 <div>""""
                   <div className="flex justify-between items-center mb-2">""""
                     <span className="text-gray-300">Efficiency Gain</span>""""
                     <span className="text-green-400 font-semibold">60%</span>"""
-                  </div>"'"""
-                  <div className="w-full bg-slate-700 rounded-full h-2">'"'"""
-                    <div className="bg-gradient-to-r from-green-600 to-emerald-600 h-2 rounded-full" style={{ width: '60%' }}></div>
+                  </div>"""""
+                  <div className="w-full bg-slate-700 rounded-full h-2">""""""
+                    <div className="bg-gradient-to-r from-green-600 to-emerald-600 h-2 rounded-full" style={{ width: "60%" }}></div>
                   </div>
                 </div>"""
                 <div>""""
                   <div className="flex justify-between items-center mb-2">""""
                     <span className="text-gray-300">Error Reduction</span>""""
                     <span className="text-green-400 font-semibold">95%</span>"""
-                  </div>"'"""
-                  <div className="w-full bg-slate-700 rounded-full h-2">'"'"""
-                    <div className="bg-gradient-to-r from-green-600 to-emerald-600 h-2 rounded-full" style={{ width: '95%' }}></div>
+                  </div>"""""
+                  <div className="w-full bg-slate-700 rounded-full h-2">""""""
+                    <div className="bg-gradient-to-r from-green-600 to-emerald-600 h-2 rounded-full" style={{ width: "95%" }}></div>
                   </div>
                 </div>"""
               </div>""""
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"""
               >"""
                 Get Started""""
-                <ArrowRight className="w-5 h-5"/>"""
+                <ArrowRight className="w-5 h-5"   />"""
               </Link>""""
               <Link to="/services" className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2">
                 View All Services;
@@ -359,7 +360,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </></div>
       </></section>
 """
-      {/* Industries Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -375,7 +376,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">""""
             {industries.map((industry, index) => (<div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300 text-center">""""
                 <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">""""
-                  <Target className="w-6 h-6 text-white"/>"""
+                  <Target className="w-6 h-6 text-white"   />"""
                 </div>""""
                 <h3 className="text-lg font-semibold text-white">{industry}</h3>
               </div>))}
@@ -383,7 +384,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Technology Stack Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -391,7 +392,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
               Built on Cutting-Edge Technology"""
             </h2>""""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform leverages the latest advancements in AI, machine learning, 
+              Our platform leverages the latest advancements in AI, machine learning,
               and cloud computing to deliver enterprise - grade performance.
             </p>
           </div>"""
@@ -399,7 +400,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""""
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">""""
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-6">""""
-                <Cpu className="w-8 h-8 text-white"/>"""
+                <Cpu className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-semibold text-white mb-4">AI & Machine Learning</h3>""""
               <p className="text-gray-300 text-lg mb-4">
@@ -415,7 +416,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             """"
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">""""
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-6">""""
-                <Database className="w-8 h-8 text-white"/>"""
+                <Database className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-semibold text-white mb-4">Cloud Infrastructure</h3>""""
               <p className="text-gray-300 text-lg mb-4">
@@ -431,7 +432,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             """"
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">""""
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-6">""""
-                <Shield className="w-8 h-8 text-white"/>"""
+                <Shield className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-semibold text-white mb-4">Enterprise Security</h3>""""
               <p className="text-gray-300 text-lg mb-4">
@@ -444,7 +445,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
                 <li>• Role - based Access Control</li>
               </ul>
             </div>"""
-      {/* Features Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">""""
         <div className="container mx-auto max-w-7xl">""""
           <div className="text-center mb-16">""""
@@ -459,7 +460,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""""
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">""""
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">""""
-                <Bot className="w-8 h-8 text-white"/>"""
+                <Bot className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Automation</h3>""""
               <p className="text-zion-slate-light leading-relaxed">
@@ -469,7 +470,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
 """"
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">""""
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center mb-6">""""
-                <TrendingUp className="w-8 h-8 text-white"/>"""
+                <TrendingUp className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-bold text-white mb-4">Performance Analytics</h3>""""
               <p className="text-zion-slate-light leading-relaxed">
@@ -479,7 +480,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
 """"
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">""""
               <div className="w-16 h-16 bg-gradient-to-br from-zion-blue to-zion-cyan rounded-lg flex items-center justify-center mb-6">""""
-                <Users className="w-8 h-8 text-white"/>"""
+                <Users className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-bold text-white mb-4">Team Collaboration</h3>""""
               <p className="text-zion-slate-light leading-relaxed">
@@ -489,7 +490,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
 """"
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">""""
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">""""
-                <Shield className="w-8 h-8 text-white"/>"""
+                <Shield className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>""""
               <p className="text-zion-slate-light leading-relaxed">
@@ -499,7 +500,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
 """"
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">""""
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-blue rounded-lg flex items-center justify-center mb-6">""""
-                <Zap className="w-8 h-8 text-white"/>"""
+                <Zap className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-bold text-white mb-4">Lightning Fast</h3>""""
               <p className="text-zion-slate-light leading-relaxed">
@@ -509,7 +510,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
 """"
             <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">""""
               <div className="w-16 h-16 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center mb-6">""""
-                <Globe className="w-8 h-8 text-white"/>"""
+                <Globe className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-2xl font-bold text-white mb-4">Global Scalability</h3>""""
               <p className="text-zion-slate-light leading-relaxed">
@@ -520,7 +521,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Use Cases Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4">""""
         <div className="container mx-auto max-w-7xl">""""
           <div className="text-center mb-16">""""
@@ -624,7 +625,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Technology Stack Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">""""
         <div className="container mx-auto max-w-7xl">""""
           <div className="text-center mb-16">""""
@@ -639,7 +640,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""""
             <div className="text-center">""""
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">""""
-                <Cpu className="w-10 h-10 text-white"/>"""
+                <Cpu className="w-10 h-10 text-white"   />"""
               </div>""""
               <h3 className="text-xl font-bold text-white mb-2">Machine Learning</h3>""""
               <p className="text-zion-slate-light text-sm">
@@ -649,7 +650,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
 """"
             <div className="text-center">""""
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-6">""""
-                <Network className="w-10 h-10 text-white"/>"""
+                <Network className="w-10 h-10 text-white"   />"""
               </div>""""
               <h3 className="text-xl font-bold text-white mb-2">Cloud Native</h3>""""
               <p className="text-zion-slate-light text-sm">
@@ -659,7 +660,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
 """"
             <div className="text-center">""""
               <div className="w-20 h-20 bg-gradient-to-br from-zion-blue to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-6">""""
-                <BarChart3 className="w-10 h-10 text-white"/>"""
+                <BarChart3 className="w-10 h-10 text-white"   />"""
               </div>""""
               <h3 className="text-xl font-bold text-white mb-2">Real-time Analytics</h3>""""
               <p className="text-zion-slate-light text-sm">
@@ -669,14 +670,14 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
 """"
             <div className="text-center">""""
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6">""""
-                <Shield className="w-10 h-10 text-white"/>"""
+                <Shield className="w-10 h-10 text-white"   />"""
               </div>""""
               <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>""""
               <p className="text-zion-slate-light text-sm">
                 SOC2 compliant with advanced encryption and access controls;
               </p>
             </div>"""
-      {/* Integration Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-gray-800/20">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -690,7 +691,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
                                                         ].map((tool, index) => (<div key={index} className="bg-gray-800/50 rounded-lg p-4 text-center border border-gray-700/50 hover:border-green-500/50 transition-colors duration-200">""""
                 <div className="text-gray-300 font-medium">{tool}</div>
               </div>))}"""
-      {/* Capabilities Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-green-900/50">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">"""
@@ -705,7 +706,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
               """"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">""""
                 {capabilities.map((capability, index) => (<div key={index} className="flex items-center">""""
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>""""
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />""""
                     <span className="text-gray-300 text-sm">{capability}</span>
                   </div>))}
               </div>
@@ -714,7 +715,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             <div className="relative">""""
               <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">""""
                 <div className="text-center mb-6">""""
-                  <Settings className="w-12 h-12 text-green-400 mx-auto mb-4"/>""""
+                  <Settings className="w-12 h-12 text-green-400 mx-auto mb-4"   />""""
                   <h3 className="text-2xl font-bold text-white mb-2">Platform Benefits</h3>""""
                   <p className="text-gray-300">Transform your business operations today</p>
                 </div>"""
@@ -731,7 +732,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Industries Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -739,7 +740,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
               Industry Solutions"""
             </h2>""""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our autonomous operations platform is designed to work across all industries, 
+              Our autonomous operations platform is designed to work across all industries,
               with specialized solutions for your specific business needs.
             </p>
           </div>"""
@@ -747,7 +748,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">""""
             {industries.map((industry, index) => (<div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300 transform hover:scale-105">""""
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">""""
-                  <Users className="w-6 h-6 text-white"/>"""
+                  <Users className="w-6 h-6 text-white"   />"""
                 </div>""""
                 <h3 className="text-lg font-semibold text-white">{industry}</h3>
               </div>))}
@@ -755,7 +756,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -768,7 +769,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
             <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300">"""
               Schedule a Demo""""
-              <ArrowRight className="ml-2 w-5 h-5"/>"""
+              <ArrowRight className="ml-2 w-5 h-5"   />"""
             </Link>""""
             <Link to="/pricing" className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View Pricing;
@@ -777,7 +778,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Resources Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -792,7 +793,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""""
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300">""""
               <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">""""
-                <BookOpen className="w-6 h-6 text-white"/>"""
+                <BookOpen className="w-6 h-6 text-white"   />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-3">Documentation</h3>""""
               <p className="text-gray-300 mb-4">Comprehensive guides and API documentation for developers.</p>""""
@@ -803,7 +804,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             """"
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300">""""
               <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">""""
-                <Download className="w-6 h-6 text-white"/>"""
+                <Download className="w-6 h-6 text-white"   />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-3">SDK & Tools</h3>""""
               <p className="text-gray-300 mb-4">Download our SDK and development tools to get started.</p>""""
@@ -814,7 +815,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             """"
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/30 transition-all duration-300">""""
               <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4">""""
-                <MessageSquare className="w-6 h-6 text-white"/>"""
+                <MessageSquare className="w-6 h-6 text-white"   />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-3">Support</h3>""""
               <p className="text-gray-300 mb-4">Get help from our automation experts and support team.</p>""""
@@ -831,7 +832,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
             <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">"""
               Get Started Now""""
-              <ArrowRight className="w-5 h-5 ml-2"/>"""
+              <ArrowRight className="w-5 h-5 ml-2"   />"""
             </button>""""
             <button className="px-8 py-4 border border-green-500/30 text-green-400 hover:bg-green-500/20 rounded-lg font-semibold transition-all duration-300">
               Contact Sales;
@@ -871,7 +872,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg text-white font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"""
               >"""
                 <span>Schedule a Demo</span>""""
-                <ArrowRight className="ml-2 w-5 h-5"/>"""
+                <ArrowRight className="ml-2 w-5 h-5"   />"""
               </Link>""""
               <Link to="/pricing" className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200">
                 View Pricing;
@@ -883,11 +884,11 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
     </>
       </section>
     </div>"""
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <section className="py-20 relative">""""
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
             <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-3xl p-12">""""
-              <Lightbulb className="w-20 h-20 text-green-400 mx-auto mb-6"/>""""
+              <Lightbulb className="w-20 h-20 text-green-400 mx-auto mb-6"   />""""
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Go Autonomous?"""
               </h2>""""
@@ -898,7 +899,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
                 <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-green-500/25">"""
                   Get Started Now""""
-                  <ArrowRight className="w-5 h-5 ml-2 inline"/>"""
+                  <ArrowRight className="w-5 h-5 ml-2 inline"   />"""
                 </button>""""
                 <button className="px-8 py-4 border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-semibold rounded-xl transition-all duration-300">
                   Contact Sales;
@@ -919,10 +920,10 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
                                                             keywords["business automation", "AI operations", "process automation", "business intelligence", "autonomous systems", "enterprise automation", "workflow automation"],""""
                                                             type: "website",""""
   url: "https://ziontechgroup.com/autonomous-business-operations-platform"""
-}}/>"""
+}}   />"""
       """"
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">"""
-        {/* Hero Section */}""""
+        {/* comment */}""""
         <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto text-center">""""
             <div className="mb-8">""""
@@ -935,7 +936,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
                 <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">"""
                   Get Started""""
-                  <ArrowRight className="ml-2 h-5 w-5"/>"""
+                  <ArrowRight className="ml-2 h-5 w-5"   />"""
                 </Link>""""
                 <Link to="/services/ai-autonomous-systems" className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
                   Learn More;
@@ -943,11 +944,11 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
               </div>
             </div>
             """
-            {/* Stats */}""""
+            {/* comment */}""""
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">""""
               {stats.map((stat, index) => (<div key={index} className="text-center">""""
                   <div className="flex justify-center mb-3">""""
-                    <stat.icon className="h-8 w-8 text-cyan-400"/>"""
+                    <stat.icon className="h-8 w-8 text-cyan-400" />"""
                   </div>""""
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>""""
                   <div className="text-sm font-medium text-cyan-300 mb-1">{stat.label}</div>""""
@@ -957,7 +958,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           </div>
         </section>
 """
-        {/* Features Section */}""""
+        {/* comment */}""""
         <section className="py-16 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto">""""
             <div className="text-center mb-16">""""
@@ -972,13 +973,13 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""""
               {features.map((feature, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">""""
                   <div className="flex justify-center mb-4">""""
-                    <feature.icon className="h-12 w-12 text-cyan-400"/>"""
+                    <feature.icon className="h-12 w-12 text-cyan-400" />"""
                   </div>""""
                   <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>""""
                   <p className="text-gray-300 text-center mb-4">{feature.description}</p>""""
                   <ul className="space-y-2">""""
                     {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">""""
-                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2"/>
+                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2"   />
                         {benefit}
                       </li>) ) }
                   </ul>
@@ -987,7 +988,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           </div>
         </section>
 """
-        {/* Use Cases Section */}""""
+        {/* comment */}""""
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">""""
           <div className="max-w-7xl mx-auto">""""
             <div className="text-center mb-16">""""
@@ -1003,7 +1004,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
               {useCases.map((useCase, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">""""
                   <div className="flex items-start mb-6">""""
                     <div className="flex-shrink-0">""""
-                      <useCase.icon className="h-12 w-12 text-cyan-400"/>"""
+                      <useCase.icon className="h-12 w-12 text-cyan-400" />"""
                     </div>""""
                     <div className="ml-4">""""
                       <h3 className="text-2xl font-semibold text-white mb-2">{useCase.title}</h3>""""
@@ -1018,7 +1019,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           </div>
         </section>
 """
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <section className="py-16 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-4xl mx-auto text-center">""""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1030,7 +1031,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">"""
                 Schedule a Demo""""
-                <ArrowRight className="ml-2 h-5 w-5"/>"""
+                <ArrowRight className="ml-2 h-5 w-5"   />"""
               </Link>""""
               <Link to="/services/ai-autonomous-systems" className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
                 Explore AI Services;
@@ -1045,7 +1046,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             >
               Get Started Free"""
             </Link>""""
-            <Link to="/pricing" className="px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"/>""""
+            <Link to="/pricing" className="px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"   />""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1059,7 +1060,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""""
             <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105">"""
               Get Free Consultation""""
-              <ArrowRight className="ml-2 w-5 h-5"/>"""
+              <ArrowRight className="ml-2 w-5 h-5"   />"""
             </Link>""""
             <Link to="/pricing" className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-semibold rounded-lg transition-all duration-200">
               View Pricing Plans;
@@ -1067,22 +1068,22 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
   const testimonials = [""""
     {name}: "Operations Director",""""
       role: "Chief Operations Officer",""""
-      comp: "Global Manufacturing Co.","'"""
-      content: "The autonomous operations platform has transformed our business. We've achieved 60% efficiency gains and 24/7 operations.","""
+      comp: "Global Manufacturing Co.","""""
+      content: "The autonomous operations platform has transformed our business. We"ve achieved 60% efficiency gains and 24/7 operations.","""
       rating: 5,""""
       avatar: "👨‍💼""""
     },""""
     {name}: "Sarah Operations",""""
       role: "VP of Operations",""""
-      comp: "Tech Solutions Inc.","'"""
-      content: "The platform's autonomous decision-making capabilities have revolutionized how we manage our operations.","""
+      comp: "Tech Solutions Inc.","""""
+      content: "The platform"s autonomous decision-making capabilities have revolutionized how we manage our operations.","""
       rating: 5,""""
       avatar: "👩‍💼""""
     },""""
     {name}: "Michael Operations",""""
       role: "Operations Manager",""""
-      comp: "Innovation Corp","'"""
-      content: "We've seen unprecedented improvements in efficiency and cost reduction with this platform.","""
+      comp: "Innovation Corp","""""
+      content: "We"ve seen unprecedented improvements in efficiency and cost reduction with this platform.","""
       rating: 5,""""
       avatar: "👨‍💻"""
     }
@@ -1090,7 +1091,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
 """
   return (""""
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-32 pb-20 overflow-hidden">""""
         <div className="absolute inset-0 cyber-grid opacity-20"></div>""""
         <div className="absolute inset-0 quantum-particles">""""
@@ -1102,7 +1103,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
           <div className="max-w-4xl mx-auto">""""
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/50 text-green-400 text-sm font-medium mb-6">""""
-              <Zap className="w-4 h-4 mr-2"/>
+              <Zap className="w-4 h-4 mr-2"   />
               Autonomous Operations Platform;
             </div>"""
             """"
@@ -1117,11 +1118,11 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             """"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">""""
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-green-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/30 flex items-center">""""
-                <Play className="w-5 h-5 mr-2"/>
+                <Play className="w-5 h-5 mr-2"   />
                 Watch Demo"""
               </button>""""
               <button className="px-8 py-4 border border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/20 transition-all duration-300 flex items-center">""""
-                <ArrowRight className="w-5 h-5 mr-2"/>
+                <ArrowRight className="w-5 h-5 mr-2"   />
                 Get Started;
               </button>
             </div>"""
@@ -1148,7 +1149,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Features Section */}""""
+      {/* comment */}""""
       <section className="py-20 relative">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -1165,14 +1166,14 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             {features.map((feature, index) => (<div key={index} className="p-8 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-green-500/30 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">""""
                 <div className="flex items-start space-x-4">""""
                   <div className="p-3 rounded-xl bg-green-500/20 border border-green-400/50">""""
-                    <feature.icon className="w-8 h-8 text-green-400"/>"""
+                    <feature.icon className="w-8 h-8 text-green-400" />"""
                   </div>""""
                   <div className="flex-1">""""
                     <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>""""
                     <p className="text-gray-300 mb-4">{feature.description}</p>""""
                     <ul className="space-y-2">""""
                       {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-gray-300">""""
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"/>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"   />
                           {benefit}
                         </li>) ) }
                     </ul>
@@ -1183,7 +1184,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Capabilities Section */}""""
+      {/* comment */}""""
       <section className="py-20 relative bg-gradient-to-br from-gray-900/50 to-black/50">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -1200,7 +1201,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
                 <h3 className="text-xl font-bold text-green-400 mb-4">{capability.category}</h3>""""
                 <ul className="space-y-3">""""
                   {capability.items.map((item, idx) => (<li key={idx} className="flex items-start text-gray-300">""""
-                      <Target className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0"/>
+                      <Target className="w-4 h-4 text-green-400 mr-2 mt-1 flex-shrink-0"   />
                       {item}
                     </li>) ) }
                 </ul>
@@ -1209,7 +1210,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Pricing Section */}""""
+      {/* comment */}""""
       <section className="py-20 relative">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -1221,10 +1222,10 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             </p>
           </div>"""
           """"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">'
-            {pricingPlans.map((plan, index) => (<div key={index} className={`relative p-8 rounded-2xl border transition-all duration-300 hover:transform hover:scale-105 ${plan.popular''`
-                                                                ? 'bg-gradient-to-br from-green-500/20 to-cyan-500/20 border-green-400/50 shadow-2xl shadow-green-500/30''`'"`
-                                                                : 'bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-gray-700/50'}`}>""""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+            {pricingPlans.map((plan, index) => (<div key={index} className={"relative p-8 rounded-2xl border transition-all duration-300 hover:transform hover:scale-105 ${plan.popular"""
+                                                                ? "bg-gradient-to-br from-green-500/20 to-cyan-500/20 border-green-400/50 shadow-2xl shadow-green-500/30""""""
+                                                                : "bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-gray-700/50"}"}>""""
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""""
                     <div className="px-4 py-2 bg-gradient-to-r from-green-500 to-cyan-500 text-white text-sm font-semibold rounded-full">
                       Most Popular;
@@ -1242,14 +1243,14 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
                 """"
                 <ul className="space-y-4 mb-8">""""
                   {plan.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">""""
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
-                      {feature}`
-                    </li>) ) }`'`
-                </ul>`'`'`
-                `'`'`'`
-                <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${plan.popular''`'`'`
-                                                                ? 'bg-gradient-to-r from-green-500 to-cyan-500 text-white hover:from-green-400 hover:to-cyan-400''`'`'`'`
-                                                                : 'border border-green-400/50 text-green-400 hover:bg-green-400/20'}`}>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />
+                      {feature}"
+                    </li>) ) }"""
+                </ul>"""""
+                """""""
+                <button className={"w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${plan.popular"""""""
+                                                                ? "bg-gradient-to-r from-green-500 to-cyan-500 text-white hover:from-green-400 hover:to-cyan-400"""""""""
+                                                                : "border border-green-400/50 text-green-400 hover:bg-green-400/20'}"}>
                   Get Started;
                 </button>
               </div>) ) }
@@ -1257,7 +1258,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Testimonials Section */}""""
+      {/* comment */}""""
       <section className="py-20 relative bg-gradient-to-br from-gray-900/50 to-black/50">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="text-center mb-16">""""
@@ -1281,7 +1282,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
                 </div>"""
                 """"
                 <div className="flex items-center mb-4">""""
-                  {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current"/>))}
+                  {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current"   />))}
                 </div>"""
                 """"
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
@@ -1290,7 +1291,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 relative">""""
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""""
           <div className="p-12 rounded-3xl bg-gradient-to-br from-green-500/20 to-cyan-500/20 border border-green-400/50">""""
@@ -1303,11 +1304,11 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
             """"
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">""""
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-green-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/30 flex items-center">""""
-                <Rocket className="w-5 h-5 mr-2"/>
+                <Rocket className="w-5 h-5 mr-2"   />
                 Start Free Trial"""
               </button>""""
               <button className="px-8 py-4 border border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/20 transition-all duration-300 flex items-center">""""
-                <ArrowRight className="w-5 h-5 mr-2"/>
+                <ArrowRight className="w-5 h-5 mr-2"   />
                 Schedule Demo;
               </button>
             </div>"""
@@ -1319,7 +1320,7 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
         </div>
       </section>
 """
-      {/* Footer Navigation */}""""
+      {/* comment */}""""
       <section className="py-12 border-t border-gray-700/50">""""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""""
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">"""
@@ -1367,16 +1368,9 @@ export default function AutonomousBusinessOperationsPlatform() {}"""
       </section>
     </div>
   )};
-
 export default AutonomousBusinessOperationsPlatform;
-
-
 export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
-
 export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
-
 export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
-
 export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };
-
 export { AutonomousBusinessOperationsPlatform, AutonomousBusinessOperationsPlatform, IconComponent, IconComponent };

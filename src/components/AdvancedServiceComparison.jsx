@@ -1,27 +1,27 @@
-import React, { useState, useMemo } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState, useMemo } from "react";
+import { motion  } from "framer-motion";
 export default function Page() {
- from './ui/badge';"
-import { Input } from './ui/input';
+ from "./ui/badge";"
+import { Input } from "./ui/input";
 export default function Page() {
 ,
         {
 
-            id: 'quantum-enterprise',
-            name: 'Quantum Computing Enterprise',
-            category: 'quantum',
-            price: '$200,000/month',
-            duration: '18-24 months',
-            features['Custom quantum algorithms',Dedicated processors',24/7 support',Custom development'],;
-            benefits['Competitive advantage',Custom solutions',Priority access',Expert support'],;
-            technology['Quantum Computing',Custom Algorithms',Dedicated Hardware',Advanced Support'],;
-            targetAudience['Large Corporations',Government',Financial Services'],;
+            id: "quantum-enterprise",
+            name: "Quantum Computing Enterprise",
+            category: "quantum",
+            price: "$200,000/month",
+            duration: "18-24 months",
+            features["Custom quantum algorithms",Dedicated processors",24/7 support",Custom development"],;
+            benefits["Competitive advantage",Custom solutions",Priority access",Expert support"],;
+            technology["Quantum Computing",Custom Algorithms",Dedicated Hardware",Advanced Support"],;
+            targetAudience["Large Corporations",Government",Financial Services"],;
             rating: 4.9,
-            complexity: 'Enterprise',
-            popularity: 'Trending',
-            contactInfo: '+1 302 464 0950',
-            email: 'kleber@ziontechgroup.com',
-            link: 'https://ziontechgroup.com/services/quantum-enterprise'
+            complexity: "Enterprise",
+            popularity: "Trending",
+            contactInfo: "+1 302 464 0950",
+            email: "kleber@ziontechgroup.com",
+            link: "https://ziontechgroup.com/services/quantum-enterprise"
 
     ];
     const filteredServices = useMemo(() => {
@@ -32,30 +32,32 @@ export default function Page() {
     const toggleServiceSelection = (serviceId) => {
 
         setSelectedServices(prev => prev.includes(serviceId)
+
             ? prev.filter(id => id !== serviceId)
+
             [...prev, serviceId])};
     const getComplexityColor = (complexity) => {
 
         switch(complexity) {
 
-            case 'Basic': return 'bg-green-100 text-green-800';
-            case 'Intermediate': return 'bg-blue-100 text-blue-800';
-            case 'Advanced': return 'bg-orange-100 text-orange-800';
-            case 'Enterprise': return 'bg-purple-100 text-purple-800';
-            default: return 'bg-gray-100 text-gray-800'}
+            case "Basic": return "bg-green-100 text-green-800";
+            case "Intermediate": return "bg-blue-100 text-blue-800";
+            case "Advanced": return "bg-orange-100 text-orange-800";
+            case "Enterprise": return "bg-purple-100 text-purple-800";
+            default: return "bg-gray-100 text-gray-800"}
     };
     const getPopularityIcon = (popularity) => {
 
         switch(popularity) {
-'"
-            case 'Trending': return <TrendingUp className="w-4 h-4 text-red-500"/>;'"
-            case 'High': return <Star className="w-4 h-4 text-yellow-500"/>;'"
-            case 'Medium': return <Zap className="w-4 h-4 text-blue-500"/>;'"
-            case 'Low': return <Target className="w-4 h-4 text-gray-500"/>;"
-            default: return <Users className="w-4 h-4 text-gray-500"/>}
+""
+            case "Trending": return <TrendingUp className="w-4 h-4 text-red-500"   />;""
+            case "High": return <Star className="w-4 h-4 text-yellow-500"   />;""
+            case "Medium": return <Zap className="w-4 h-4 text-blue-500"   />;""
+            case "Low": return <Target className="w-4 h-4 text-gray-500"   />;"
+            default: return <Users className="w-4 h-4 text-gray-500"   />}
     };"
     return (<div className="max-w-7xl mx-auto p-6">
-      {/* Header */}
+      {/* comment */}
       <motion.div initial = {
 
   { opacity: 0,
@@ -75,7 +77,7 @@ export default function Page() {
           Compare our cutting-edge services across different tiers, complexity levels, and pricing to find the perfect solution for your business needs.</p>
       </motion.div>
 
-      {/* Filters and Controls */}
+      {/* comment */}
       <motion.div initial = {
 
   { opacity: 0,
@@ -101,7 +103,6 @@ export default function Page() {
               <option value="cybersecurity">Cybersecurity</option>
             </select>
           </div>
-
           <div>
             <label className="block text-sm font - medium text-zion - slate - dark mb-2">Complexity</label>
             <select value={filters.complexity} onChange = { (e) => setFilters(prev => ({ ...prev,
@@ -112,7 +113,6 @@ export default function Page() {
               {COMPLEXITY_LEVELS.map(level => (<option key={level} value={level}>{level}</option>) ) }
             </select>
           </div>
-
           <div>
             <label className="block text-sm font - medium text-zion - slate - dark mb-2">Price Range</label>
             <select value={filters.priceRange} onChange = { (e) => setFilters(prev => ({ ...prev,
@@ -123,7 +123,6 @@ export default function Page() {
               {PRICE_RANGES.map(range => (<option key={range} value={range}>{range}</option>) ) }
             </select>
           </div>
-
           <div>
             <label className="block text-sm font - medium text-zion - slate - dark mb-2">Technology</label>
             <select value={filters.technology} onChange = { (e) => setFilters(prev => ({ ...prev,
@@ -137,29 +136,28 @@ export default function Page() {
               <option value="Cybersecurity">Cybersecurity</option>
             </select>
           </div>
-
           <div>"
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">View Mode</label>"
-            <div className="flex gap-2">'"
-              <Button variant={viewMode === 'grid' ? 'default' : 'outline'} size="sm" onClick={() => setViewMode('grid')}>"
-                <BarChart3 className="w-4 h-4"/>
-              </Button>'"
-              <Button variant={viewMode === 'table' ? 'default' : 'outline'} size="sm" onClick={() => setViewMode('table')}>"
-                <Target className="w-4 h-4"/>
-              </Button>'"
-              <Button variant={viewMode === 'detailed' ? 'default' : 'outline'} size="sm" onClick={() => setViewMode('detailed')}>"
-                <Globe className="w-4 h-4"/>
+            <div className="flex gap-2">""
+              <Button variant={viewMode === "grid" ? "default" : "outline"} size="sm" onClick={() => setViewMode("grid")}>"
+                <BarChart3 className="w-4 h-4"   />
+              </Button>""
+              <Button variant={viewMode === "table" ? "default" : "outline"} size="sm" onClick={() => setViewMode("table")}>"
+                <Target className="w-4 h-4"   />
+              </Button>""
+              <Button variant={viewMode === "detailed" ? "default" : "outline"} size="sm" onClick={() => setViewMode("detailed")}>"
+                <Globe className="w-4 h-4"   />
               </Button>
             </div>
           </div>
         </div>
 "
         <div className="mt-4">"
-          <Input placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="max-w-md"/>
+          <Input placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="max-w-md" />
         </div>
       </motion.div>
 
-      {/* Service Grid */}
+      {/* comment */}
       <motion.div initial = {
 
   { opacity: 0,
@@ -183,14 +181,14 @@ export default function Page() {
   y: 0
 
 }} transition={{ delay: 0.1 * index }}>
-            <Card className={`h-full transition-all duration-300 hover:shadow-xl ${selectedServices.includes(service.id) ? 'ring-2 ring-zion-cyan' : ''}`}>"
+            <Card className={"h-full transition-all duration-300 hover:shadow-xl ${selectedServices.includes(service.id) ? "ring-2 ring-zion-cyan" : ""}"}>"
               <CardHeader className="pb-4">"
                 <div className="flex items-start justify-between mb-2">"
                   <CardTitle className="text-lg text-zion-blue-dark">
                     {service.name}
-                  </CardTitle>'"
-                  <Button variant="ghost" size="sm" onClick={() => toggleServiceSelection(service.id)} className={selectedServices.includes(service.id) ? 'text-zion-cyan' : 'text-zion-slate-light'}>"
-                    {selectedServices.includes(service.id) ? <Check className="w-4 h-4"/> : <X className="w-4 h-4"/>}
+                  </CardTitle>""
+                  <Button variant="ghost" size="sm" onClick={() => toggleServiceSelection(service.id)} className={selectedServices.includes(service.id) ? "text-zion-cyan" : "text-zion-slate-light"}>"
+                    {selectedServices.includes(service.id) ? <Check className="w-4 h-4"   /> : <X className="w-4 h-4"   />}
                   </Button>
                 </div>
 "
@@ -206,15 +204,15 @@ export default function Page() {
 "
                 <div className="flex items-center gap-4 text-sm text-zion-slate-light">"
                   <div className="flex items-center gap-1">"
-                    <DollarSign className="w-4 h-4"/>
+                    <DollarSign className="w-4 h-4"   />
                     {service.price}
                   </div>"
                   <div className="flex items-center gap-1">"
-                    <Clock className="w-4 h-4"/>
+                    <Clock className="w-4 h-4"   />
                     {service.duration}
                   </div>"
                   <div className="flex items-center gap-1">"
-                    <Star className="w-4 h-4 text-yellow-500"/>
+                    <Star className="w-4 h-4 text-yellow-500"   />
                     {service.rating}
                   </div>
                 </div>
@@ -224,20 +222,19 @@ export default function Page() {
                 <div className="space-y-4">
                   <div>"
                     <h4 className="font-semibold text-zion-slate-dark mb-2 flex items-center gap-2">"
-                      <Shield className="w-4 h-4 text-zion-cyan"/>
+                      <Shield className="w-4 h-4 text-zion-cyan"   />
                       Key Features
                     </h4>"
                     <ul className="space-y-1">"
                       {service.features.slice(0, 3).map((feature, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">"
-                          <Check className="w-3 h-3 text-green-500"/>
+                          <Check className="w-3 h-3 text-green-500"   />
                           {feature}
                         </li>) ) }
                     </ul>
                   </div>
-
                   <div>"
                     <h4 className="font-semibold text-zion-slate-dark mb-2 flex items-center gap-2">"
-                      <Target className="w-4 h-4 text-zion-purple"/>
+                      <Target className="w-4 h-4 text-zion-purple"   />
                       Target Audience
                     </h4>"
                     <div className="flex flex-wrap gap-1">"
@@ -250,7 +247,7 @@ export default function Page() {
                   <div className="pt-2">"
                     <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
 
-  () => window.open(service.link,_blank')
+  () => window.open(service.link,_blank")
 
 }>
                       Learn More
@@ -262,7 +259,7 @@ export default function Page() {
           </motion.div>) ) }
       </motion.div>
 
-      {/* Comparison Summary */}
+      {/* comment */}
       {selectedServices.length > 0 && (<motion.div initial = {
 
   { opacity: 0,
@@ -277,6 +274,7 @@ export default function Page() {
 }} transition={{ delay: 0.3 }} className="mt-8 bg-white rounded-lg shadow-lg p-6">"
           <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
             Comparison Summary({selectedServices.length} services selected)
+
           </h3>"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
             <div className="text-center p-4 bg-zion-blue-light/10 rounded-lg">"
@@ -293,7 +291,7 @@ export default function Page() {
             </div>"
             <div className="text-center p-4 bg-zion-green/10 rounded-lg">"
               <div className="text-2xl font-bold text-zion-green">
-                {filteredServices.filter(s => selectedServices.includes(s.id)).filter(s => s.complexity === 'Enterprise').length}
+                {filteredServices.filter(s => selectedServices.includes(s.id)).filter(s => s.complexity === "Enterprise").length}
               </div>"
               <div className="text-zion-slate-light">Enterprise Solutions</div>
             </div>
@@ -302,16 +300,15 @@ export default function Page() {
           <div className="mt-6 text-center">"
             <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
 
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Comparison Inquiry',_blank')
-
+  () => window.open("mailto:kleber@ziontechgroup.com?subject=Service Comparison Inquiry",_blank")
 }>"
-              <Mail className="w-4 h-4 mr-2"/>
+              <Mail className="w-4 h-4 mr-2"   />
               Get Detailed Comparison
             </Button>
           </div>
         </motion.div>) }
 
-      {/* CTA Section */}
+      {/* comment */}
       <motion.div initial = {
 
   { opacity: 0,
@@ -331,18 +328,18 @@ export default function Page() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
 
-  () => window.open('mailto:kleber@ziontechgroup.com',_blank')
+  () => window.open("mailto:kleber@ziontechgroup.com",_blank")
 
 }>"
-              <Mail className="w-4 h-4 mr-2"/>
+              <Mail className="w-4 h-4 mr-2"   />
               Get Started
             </Button>"
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
 
-  () => window.open('tel:+13024640950',_blank')
+  () => window.open("tel:+13024640950",_blank")
 
 }>"
-              <Phone className="w-4 h-4 mr-2"/>
+              <Phone className="w-4 h-4 mr-2"   />
               Call Now
             </Button>
           </div>
@@ -350,4 +347,4 @@ export default function Page() {
       </motion.div>
     </div>)};
 export default AdvancedServiceComparison;
-}}}}'"`
+}}}}""`

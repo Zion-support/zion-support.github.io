@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronDown, ChevronUp, Search, MessageCircle, Phone, Mail, HelpCircle, BookOpen, Video, Users2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { ChevronDown, ChevronUp, Search, MessageCircle, Phone, Mail, HelpCircle, BookOpen, Video, Users2 } from "lucide-react";
+import { Link } from "react-router-dom";
 interface FAQItem {
   question: string;
   answer: string;
   category: string;}
 const FAQ: React.FC: = () => {,
   const [openItems, setOpenItems] = React.useState<number[]>([])
-}
+
   const toggleItem = (index: number) =>  {,
     setOpenItems(prev: =>,,
       prev.includes(index),
@@ -18,10 +17,12 @@ const FAQ: React.FC: = () => {,
     )}
 
   const faqs = [] = React.useState<;<;<number[]>([])
-}
+
+
     setOpenItems(prev = >
         ? prev.filter(i => i !== index)
-}
+
+
         : [...prev, index]
   const faqs = [],
   return (",,
@@ -33,7 +34,7 @@ const FAQ: React.FC: = () => {,
           animate="{{" opacity: 1, y: 0 }}">
           className="text-center mb-12">;"
           <div className="flex items-center justify-center mb-4">;"
-            <HelpCircle className="h-8 w-8 text-blue-600 mr-3"  />;"
+            <HelpCircle className="h-8 w-8 text-blue-600 mr-3"   />;"
             <h1 className="text-4xl font-bold text-gray-900">Frequently Asked Questions</h1>
           </div>;"
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -102,7 +103,6 @@ const FAQ: React.FC: = () => {,
       answer: "We accept major credit cards, bank transfers, and digital payments. For enterprise clients, we offer net payment terms and can accommodate various billing cycles.",
       category: "pricing"
     },
-
     // Technical Support
     {
       question: "What kind of technical support do you provide?",
@@ -119,7 +119,6 @@ const FAQ: React.FC: = () => {,
       answer: "Our response times vary by priority level: Critical issues (P1) - 1 hour, High priority (P2) - 4 hours, Medium priority (P3) - 24 hours, Low priority (P4) - 48 hours. Enterprise clients receive priority support.",
       category: "support"
     },
-
     // Partnership & Careers
     {
       question: "How can I become a partner with Zion Tech Group?",
@@ -137,23 +136,20 @@ const FAQ: React.FC: = () => {,
       category: "partnership"
     }
   ];
-
   const categories = [
-    { id: 'all', name: 'All Questions', count: faqData.length },
-    { id: 'general', name: 'General', count: faqData.filter(item => item.category === 'general').length },
-    { id: 'services', name: 'Services', count: faqData.filter(item => item.category === 'services').length },
-    { id: 'pricing', name: 'Pricing & Billing', count: faqData.filter(item => item.category === 'pricing').length },
-    { id: 'support', name: 'Technical Support', count: faqData.filter(item => item.category === 'support').length },
-    { id: 'partnership', name: 'Partnership & Careers', count: faqData.filter(item => item.category === 'partnership').length },
+    { id: "all", name: "All Questions", count: faqData.length },
+    { id: "general", name: "General", count: faqData.filter(item => item.category === "general").length },
+    { id: "services", name: "Services", count: faqData.filter(item => item.category === "services").length },
+    { id: "pricing", name: "Pricing & Billing", count: faqData.filter(item => item.category === "pricing").length },
+    { id: "support", name: "Technical Support", count: faqData.filter(item => item.category === "support").length },
+    { id: "partnership", name: "Partnership & Careers", count: faqData.filter(item => item.category === "partnership").length },
   ];
-
   const filteredFAQ = faqData.filter(item => {
     const matchesSearch = item.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          item.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
+    const matchesCategory = activeCategory === "all" || item.category === activeCategory;
     return matchesSearch && matchesCategory;
   });
-
   const toggleItem = (index: number) => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(index)) {
@@ -163,10 +159,9 @@ const FAQ: React.FC: = () => {,
     }
     setExpandedItems(newExpanded);
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Header Section */}
+      {/* comment */}
       <div className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
@@ -179,46 +174,44 @@ const FAQ: React.FC: = () => {,
               Frequently Asked Questions
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find answers to common questions about Zion Tech Group's services, pricing, and support. 
-              Can't find what you're looking for? Contact our team directly.
+              Find answers to common questions about Zion Tech Group"s services, pricing, and support. 
+              Can"t find what you"re looking for? Contact our team directly.
             </p>
           </motion.div>
         </div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Search and Filter Section */}
+        {/* comment */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-8"
         >
-          {/* Search Bar */}
+          {/* comment */}
           <div className="relative max-w-2xl mx-auto mb-6">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"   />
             <input
               type="text"
               placeholder="Search questions and answers..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-            />
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent" />
           </div>
-
-          {/* Category Filters */}
+          {/* comment */}
           <div className="flex flex-wrap justify-center gap-2">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={"px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   activeCategory === category.id
-                    ? 'bg-zion-cyan text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                    ? "bg-zion-cyan text-white"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }"}
               >
                 {category.name} ({category.count})
+
               </button>
             ))}          </div>
         <motion.div,"
@@ -244,7 +237,7 @@ initial="{{" opacity:  ,0, y: 20}}"
         {/* comment */}"
           className="&apos;text-center" mb-12&apos;>&apos,"
           <div className="&apos;flex" items-center justify-center mb-4&apos;>&apos,"
-            <HelpCircle className="&apos;h-8" w-8 text-blue-600 mr-3&apos;       />&apos;"
+            <HelpCircle className="&apos;h-8" w-8 text-blue-600 mr-3&apos;          />&apos;"
             <h1 className="&apos;text-4xl" font-bold text-gray-900&apos;>Frequently Asked Questions&apos;</h1>"
           <p className="&apos;text-xl" text-gray-600 max-w-2xl mx-auto&apos;>
             Find answers to common questions about our services, processes, and solutions.&apos;"
@@ -259,7 +252,7 @@ initial="{{" opacity:  ,0, y: 20}}"
               >,"
                 <span className="text-lg font-semibold text-gray-900 pr-4"> {faq.question}
 
-        {/* FAQ Items */}
+        {/* comment */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -281,15 +274,15 @@ initial="{{" opacity:  ,0, y: 20}}"
                 >
                   <span className="text-lg font-medium text-gray-900">{item.question}</span>
                   {expandedItems.has(index) ? (
-                    <ChevronUp className="w-5 h-5 text-zion-cyan" />
+                    <ChevronUp className="w-5 h-5 text-zion-cyan"   />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-400" />
+                    <ChevronDown className="w-5 h-5 text-gray-400"   />
                   )}
                 </button>
                 {expandedItems.has(index) && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
+                    animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="px-6 pb-4"
@@ -299,9 +292,10 @@ initial="{{" opacity:  ,0, y: 20}}"
                 )}
               </motion.div>
             ))
+
           ) : (
             <div className="text-center py-12">
-              <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4"   />
               <h3 className="text-xl font-medium text-gray-900 mb-2">No questions found</h3>
               <p className="text-gray-600 mb-6">
                 Try adjusting your search terms or category filter.
@@ -310,14 +304,14 @@ initial="{{" opacity:  ,0, y: 20}}"
                 to="/contact"
                 className="inline-flex items-center px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors"
               >
-                <MessageCircle className="w-4 h-4 mr-2" />
+                <MessageCircle className="w-4 h-4 mr-2"   />
                 Contact Support
               </Link>
             </div>
           )}
         </motion.div>
 
-        {/* Contact Support Section */}
+        {/* comment */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -336,27 +330,27 @@ initial="{{" opacity:  ,0, y: 20}}"
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 bg-white text-zion-cyan rounded-lg font-medium hover:bg-gray-50 transition-colors"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <MessageCircle className="w-5 h-5 mr-2"   />
                 Contact Us
               </Link>
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-6 py-3 bg-zion-cyan-dark text-white rounded-lg font-medium hover:bg-zion-cyan-darker transition-colors"
               >
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2"   />
                 Call Now
               </a>
               <a
                 href="mailto:info@ziontechgroup.com"
                 className="inline-flex items-center px-6 py-3 bg-zion-purple-dark text-white rounded-lg font-medium hover:bg-zion-purple-darker transition-colors"
               >
-                <Mail className="w-5 h-5 mr-2" />
+                <Mail className="w-5 h-5 mr-2"   />
                 Send Email
               </a>
                 </span>"
                 <ChevronDown: className="{"h-5" w-5 text-gray-500 transition-transform ${",
                     openItems.includes(index) ? "rotate-180" : ""}"}";">
-               />
+              />
               </button>
               {openItems.includes(index) && ("
                 <motion.div: initial = "{{" height:  ,0, opacity: 0}}"
@@ -367,7 +361,7 @@ initial="{{" opacity:  ,0, y: 20}}"
                 <ChevronDown>
 openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
 
-               />&apos;&apos
+              />&apos;&apos
               {openItems.includes(index) && (}"
                   initial = "{{" height: 0, opacity: 0 }}"
                   animate="{{" height: &apos,auto&apos, opacity: 1 }}"
@@ -375,7 +369,7 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
                   className="px-6 pb-4">;"
                   <p className = "text-gray-600 leading-relaxed"> {faq.answer}
 
-      {/* Additional Resources */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -391,13 +385,12 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
             <p className="text-xl text-zion-slate-light mb-12">
               Explore our knowledge base, documentation, and community resources
             </p>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: BookOpen, title: 'Documentation', description: 'Comprehensive guides and API references', link: '/docs' },
-                { icon: Globe, title: 'Knowledge Base', description: 'Articles, tutorials, and best practices', link: '/knowledge' },
-                { icon: Users, title: 'Community', description: 'Connect with other users and developers', link: '/community' },
-                { icon: Shield, title: 'Support Portal', description: 'Submit tickets and track requests', link: '/support' }
+                { icon: BookOpen, title: "Documentation", description: "Comprehensive guides and API references", link: "/docs" },
+                { icon: Globe, title: "Knowledge Base", description: "Articles, tutorials, and best practices", link: "/knowledge" },
+                { icon: Users, title: "Community", description: "Connect with other users and developers", link: "/community" },
+                { icon: Shield, title: "Support Portal", description: "Submit tickets and track requests", link: "/support' }
               ].map((resource, index) => (
                 <motion.div
                   key={resource.title}
@@ -415,7 +408,7 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
                     className="inline-flex items-center text-zion-cyan hover:text-zion-blue transition-colors text-sm font-medium"
                   >
                     Learn More
-                    <ChevronDown className="ml-1 w-4 h-4 rotate-[-90deg]" />
+                    <ChevronDown className="ml-1 w-4 h-4 rotate-[-90deg]"   />
                   </Link>
                 </motion.div>
               ))}
@@ -423,7 +416,7 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
           </div>
         </motion.div>
 
-        {/* Additional Resources */}
+        {/* comment */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -432,7 +425,7 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
         >
           <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
             <div className="w-12 h-12 bg-zion-cyan/10 rounded-lg flex items-center justify-center mb-4">
-              <BookOpen className="w-6 h-6 text-zion-cyan" />
+              <BookOpen className="w-6 h-6 text-zion-cyan"   />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Documentation</h3>
             <p className="text-gray-600 mb-4">
@@ -445,10 +438,9 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
               View Documentation →
             </Link>
           </div>
-
           <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
             <div className="w-12 h-12 bg-zion-purple/10 rounded-lg flex items-center justify-center mb-4">
-              <Video className="w-6 h-6 text-zion-purple" />
+              <Video className="w-6 h-6 text-zion-purple"   />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Video Tutorials</h3>
             <p className="text-gray-600 mb-4">
@@ -461,10 +453,9 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
               Watch Videos →
             </Link>
           </div>
-
           <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
             <div className="w-12 h-12 bg-zion-cyan/10 rounded-lg flex items-center justify-center mb-4">
-              <Users2 className="w-6 h-6 text-zion-cyan" />
+              <Users2 className="w-6 h-6 text-zion-cyan"   />
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Community</h3>
             <p className="text-gray-600 mb-4">
@@ -482,5 +473,4 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
     </div>
   );
 };
-
 export default FAQ;

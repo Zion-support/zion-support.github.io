@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import { useToast } from '@/hooks/use-toast';
-import { useAuth } from '@/hooks/useAuth';
+import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
  from "react";"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';"
-import { Button } from '@/components/ui/button';"
-import { Wallet, Info, Check, ArrowUpRight import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';"
-import { useToast } from '@/hooks/use-toast';"import { useAuth } from '@/hooks/useAuth';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
+import { Button } from "@/components/ui/button";"
+import { Wallet, Info, Check, ArrowUpRight import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";"
+import { useToast } from "@/hooks/use-toast";"import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
     const [isConnected, setIsConnected] = useState(false);
     const [isExporting, setIsExporting] = useState(false);
-    const [exportStatus, setExportStatus] = useState('idle');
+    const [exportStatus, setExportStatus] = useState("idle");
     const { toast } = useToast();
     const { user } = useAuth();
     const handleConnectWallet = async () => {
@@ -28,17 +28,19 @@ export function OnChainExport() {
             // Request accounts
             const address = accounts[0];
             // Sign message to verify ownership
-            const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
+            const message = "Zion AI Marketplace wallet verification
+Address: ${address}
+Time: ${new Date().toISOString()}";
             await ethereum.request({
 
-                method: 'personal_sign',
+                method: "personal_sign",
                 params[address, message];
             });
             setIsConnected(true);
             toast({
 "
-                title: "Wallet connected",`
-                description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})}
+                title: "Wallet connected","
+                description: "Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully"})}
         catch(error) {
             toast({
 "
@@ -49,18 +51,18 @@ export function OnChainExport() {
     };
     const handleExportTokens = async () => {
         setIsExporting(true);
-        setExportStatus('processing');
+        setExportStatus("processing");
         try {
             // Simulate token export
             await new Promise(resolve => setTimeout(resolve, 2000));
-            setExportStatus('success');
+            setExportStatus("success");
             toast({
 "
                 title: "Tokens exported","
                 description: "Your ZION$ tokens have been exported to your wallet"})}
         catch(error) {
 
-            setExportStatus('error');
+            setExportStatus("error");
             toast({
 "
                 title: "Export failed","
@@ -74,12 +76,12 @@ export function OnChainExport() {
     return (<Card>
       <CardHeader>"
         <CardTitle className="flex items-center gap-2">"
-          {isConnected ? (<Wallet aria-hidden="true" className="h-5 w-5"/>)}
+          {isConnected ? (<Wallet aria-hidden="true" className="h-5 w-5"   />)}
           On-chain Export
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>"
-                <Info  className="h-4 w-4 text-muted-foreground cursor-help"/>
+                <Info className="h-4 w-4 text-muted-foreground cursor-help"   />
               </TooltipTrigger>
               <TooltipContent>"
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>
@@ -94,13 +96,13 @@ export function OnChainExport() {
             <div className="flex justify-between text-sm">
               <span>Available to export:</span>"
               <span className="font-medium">250 ZION$</span>
-            </div>'"
-            {exportStatus === 'success' ? (<Button className="w-full bg-green-600 hover:bg-green-700" disabled>"
-                <Check aria-hidden="true" className="mr-2 h-4 w-4"/>
+            </div>""
+            {exportStatus === "success" ? (<Button className="w-full bg-green-600 hover:bg-green-700" disabled>"
+                <Check aria-hidden="true" className="mr-2 h-4 w-4"   />
                 Tokens Exported"
               </Button>) : (<Button className="w-full" onClick={handleExportTokens} disabled={isExporting}>"
                 {isExporting ? "Processing..." : "Export Tokens"}"
-                {!isExporting && <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4"/>}
+                {!isExporting && <ArrowUpRight aria-hidden="true" className="ml-2 h-4 w-4"   />}
               </Button>)}"
           </div>) : (<div className="space-y-2">"
             <p className="text-sm text-muted-foreground mb-3">
@@ -111,4 +113,6 @@ export function OnChainExport() {
           </div>)}
       </CardContent>
     </Card>)}
-'"`
+"""
+
+export default Component

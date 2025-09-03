@@ -46,5 +46,4 @@ const RequestQuote = () => {
             </div>
     </>
   );
-}
 export default RequestQuote

@@ -58,7 +58,6 @@
       popular: false;
     };
   ];
-
   const servicePricing: unknown = []
     {}
 """
@@ -108,15 +107,14 @@
 """"
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
       <SEO """"
-        title="Pricing Guide - Zion Tech Group""        description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."""
-       />
+        title="Pricing Guide - Zion Tech Group""        description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."""   />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center">""""
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6">""""
-              <Calculator className="h-10 w-10 text-white"  />"""
+              <Calculator className="h-10 w-10 text-white"   />"""
             </div>"            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Pricing Guide"""
             </h1>""""
@@ -138,15 +136,15 @@
           </div>
         </div>
 """
-        {/* Background Elements */}""""
+        {/* comment */}""""
         <div className="absolute inset-0 -z-10">;""""
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />""""
-          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />""""
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"   />""""
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"   />""""
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"   />
         </div>
       </section>
 """
-      {/* Pricing Plans */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">;""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -154,14 +152,14 @@
             <p className="text-xl text-slate-300">Flexible pricing options designed to scale with your business</p>
           </div>"""
           """"
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">`
-            {pricingPlans.map((plan, index)  => (``
-              <div key={index} className={`relative bg-slate-800/50 border rounded-2xl p-8 ${}
-'
-                plan.popular''
-                  ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'''`
-                  : 'border-slate-700/50'``
-              }`}>"""
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">"
+            {pricingPlans.map((plan, index)  => (""
+              <div key={index} className={"relative bg-slate-800/50 border rounded-2xl p-8 ${}
+"
+                plan.popular""
+                  ? "border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20""""
+                  : "border-slate-700/50"""
+              }"}>"""
                 {plan.popular && (""""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""""
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -180,32 +178,31 @@
                   <div className="mb-6">""""
                     <div className="text-4xl font-bold text-white">"""
                       {calculatePrice(plan.price[selectedPeriod as keyof typeof plan.price])}""""
-                      <span className="text-lg text-slate-400 font-normal">'
-                        /{selectedPeriod === 'monthly' ? 'month' : 'year'}
+                      <span className="text-lg text-slate-400 font-normal">"
+                        /{selectedPeriod === "monthly" ? "month" : "year"}
                       </span>"""
                       <span className="text-slate-400">{tier.period}</span>
                     </div>
                   </div>
 """
-                  <Link""`
-                    to={plan.cta === "Contact Sales" ? "/contact" : "/request-quote"}``
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${}
-'
-                      plan.popular''
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'''`
-                        : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'``
-                    }`}
+                  <Link"""
+                    to={plan.cta === "Contact Sales" ? "/contact" : "/request-quote"}""
+                    className={"w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${}
+"
+                      plan.popular""
+                        ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700""""
+                        : "bg-slate-700 text-white hover:bg-slate-600 border border-slate-600"""
+                    }"}
                   >
                     {tier.cta}"""
-                    <ArrowRight className="w-4 h-4"  />
+                    <ArrowRight className="w-4 h-4"   />
                   </Link>
                 </div>
-
                 <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: unknown</h4>
+                  <h4 className="text-lg font-semibold text-white mb-4">What"s Included: unknown</h4>
                   {plan.features.map((feature, featureIndex)  => (
                     <div key={featureIndex} className="flex items-center text-slate-300">
-                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />
                       <span className="text-sm">{feature}</span>
                     </div>
                   ))}
@@ -215,7 +212,7 @@
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: unknown</h4>
                       {plan.notIncluded.map((feature, featureIndex)  => (
                         <div key={featureIndex} className="flex items-center text-slate-500">
-                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                          <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0"   />
                           <span className="text-sm">{feature}</span>                        </div>
                       ))}
                     </>
@@ -226,7 +223,7 @@
         </div>
       </section>
 """
-      {/* Service-Specific Pricing */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -263,8 +260,7 @@
           </div>
         </div>
       </section>
-
-      {/* Pricing FAQ */}"""
+      {/* comment */}"""
       <section className="py-16 px-4">"""
         <div className="container mx-auto">
           <motion.div;
@@ -295,13 +291,7 @@
       </section>;
     </div>;
   );
-}
-
-
 export { PricingGuide };
-
 export { PricingGuide };
-
 export { PricingGuide };
-
 export { PricingGuide };

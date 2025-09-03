@@ -1,47 +1,41 @@
-import React, { Suspense, lazy } from 'react';
-import { Routes, Route  } from 'react-router-dom';
-import { HelmetProvider  } from 'react-helmet-async';
-
+import React, { Suspense, lazy } from "react";
+import { Routes, Route  } from "react-router-dom";
+import { HelmetProvider  } from "react-helmet-async";
 // Core Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { SEO } from './components/SEO';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { LoadingSpinner  } from './components/ui/loading-spinner';
-
+import { PerformanceOptimizer } from "./components/PerformanceOptimizer";
+import { SEO } from "./components/SEO";
+import { ErrorBoundary } from "./components/ErrorBoundary";
+import { LoadingSpinner  } from "./components/ui/loading-spinner";
 // Layout Components
-import { EnhancedHeader } from './components/EnhancedHeader';
-import { EnhancedFooter } from './components/EnhancedFooter';
-
+import { EnhancedHeader } from "./components/EnhancedHeader";
+import { EnhancedFooter } from "./components/EnhancedFooter";
 // Optimized lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
   return(props: any) => (
-    <Suspense fallback={fallback || <LoadingSpinner />}>
-      <LazyComponent {...props} />
+    <Suspense fallback={fallback || <LoadingSpinner    />}>
+      <LazyComponent {...props}  />
     </Suspense>
   );
 };
-
 // Core pages with optimized imports
-const Home = createLazyComponent(() => import('./pages/Home'));
-const About = createLazyComponent(() => import('./pages/About'));
-const Contact = createLazyComponent(() => import('./pages/Contact'));
-const Careers = createLazyComponent(() => import('./pages/Careers'));
-const Services = createLazyComponent(() => import('./pages/Services'));
-const Solutions = createLazyComponent(() => import('./pages/Solutions'));
-const News = createLazyComponent(() => import('./pages/News'));
-const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
-const Privacy = createLazyComponent(() => import('./pages/Privacy'));
-const Terms = createLazyComponent(() => import('./pages/Terms'));
-
+const Home = createLazyComponent(() => import("./pages/Home"));
+const About = createLazyComponent(() => import("./pages/About"));
+const Contact = createLazyComponent(() => import("./pages/Contact"));
+const Careers = createLazyComponent(() => import("./pages/Careers"));
+const Services = createLazyComponent(() => import("./pages/Services"));
+const Solutions = createLazyComponent(() => import("./pages/Solutions"));
+const News = createLazyComponent(() => import("./pages/News"));
+const CaseStudies = createLazyComponent(() => import("./pages/CaseStudies"));
+const Privacy = createLazyComponent(() => import("./pages/Privacy"));
+const Terms = createLazyComponent(() => import("./pages/Terms"));
 // Service pages
-const AIServices = createLazyComponent(() => import('./pages/AIServices'));
-const CloudServices = createLazyComponent(() => import('./pages/CloudServices'));
-const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'));
-const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'));
-const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'));
-const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'));
-
+const AIServices = createLazyComponent(() => import("./pages/AIServices"));
+const CloudServices = createLazyComponent(() => import("./pages/CloudServices"));
+const CybersecurityServices = createLazyComponent(() => import("./pages/CybersecurityServices"));
+const InfrastructureServices = createLazyComponent(() => import("./pages/InfrastructureServices"));
+const TransformationServices = createLazyComponent(() => import("./pages/TransformationServices"));
+const ConsultingServices = createLazyComponent(() => import("./pages/ConsultingServices"));
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void   }) => (
   <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">
@@ -49,7 +43,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       <div className="text-red-400 text-6xl mb-4">⚠️</div>
       <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
       <p className="text-gray-300 mb-6">
-        {error.message || 'An unexpected error occurred.Please try again.'}
+        {error.message || "An unexpected error occurred.Please try again."}
       </p>
       <div className="space-y-3">
         <button
@@ -59,7 +53,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
           Try again
         </button>
         <button
-          onClick={() => window.location.href = '/'}
+          onClick={() => window.location.href = "/"}
           className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
         >
           Go home
@@ -68,41 +62,40 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </div>
   </div>
 );
-
 function App() {
   return(<HelmetProvider>
-      <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
+      <ErrorBoundary fallback={<ErrorFallback error={new Error("App failed to load")} resetErrorBoundary={() => window.location.reload()} />}>
         <PerformanceOptimizer>
-          <SEO />
+          <SEO  />
           <div className="min-h-screen bg-gray-50">
-            <EnhancedHeader />
+            <EnhancedHeader  />
             <main className="flex-1">
               <Routes>
-                {/* Core Pages */}
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/solutions" element={<Solutions />} />
-                <Route path="/research-development" element={<Solutions />} />
-                <Route path="/case-studies" element={<CaseStudies />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/events" element={<News />} />
+                {/* comment */}
+                <Route path="/" element={<Home    />} />
+                <Route path="/about" element={<About    />} />
+                <Route path="/contact" element={<Contact    />} />
+                <Route path="/careers" element={<Careers    />} />
+                <Route path="/solutions" element={<Solutions    />} />
+                <Route path="/research-development" element={<Solutions    />} />
+                <Route path="/case-studies" element={<CaseStudies    />} />
+                <Route path="/news" element={<News    />} />
+                <Route path="/events" element={<News    />} />
                 
-                {/* Services */}
-                <Route path="/services" element={<Services />} />
-                <Route path="/services/ai" element={<AIServices />} />
-                <Route path="/services/cloud" element={<CloudServices />} />
-                <Route path="/services/cybersecurity" element={<CybersecurityServices />} />
-                <Route path="/services/infrastructure" element={<InfrastructureServices />} />
-                <Route path="/services/transformation" element={<TransformationServices />} />
-                <Route path="/services/consulting" element={<ConsultingServices />} />
+                {/* comment */}
+                <Route path="/services" element={<Services    />} />
+                <Route path="/services/ai" element={<AIServices    />} />
+                <Route path="/services/cloud" element={<CloudServices    />} />
+                <Route path="/services/cybersecurity" element={<CybersecurityServices    />} />
+                <Route path="/services/infrastructure" element={<InfrastructureServices    />} />
+                <Route path="/services/transformation" element={<TransformationServices    />} />
+                <Route path="/services/consulting" element={<ConsultingServices    />} />
                 
-                {/* Legal */}
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
+                {/* comment */}
+                <Route path="/privacy" element={<Privacy    />} />
+                <Route path="/terms" element={<Terms    />} />
                 
-                {/* 404 Fallback */}
+                {/* comment */}
                 <Route path="*" element={
                   <div className="min-h-screen flex items-center justify-center">
                     <div className="text-center">
@@ -122,10 +115,11 @@ function App() {
     </HelmetProvider>
 export default App;"
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn)
-}
+
+
   return(props: any) => (,"
-    <Suspense fallback="{fallback" || <LoadingSpinner       />}>
-      <LazyComponent {...props}      />
+    <Suspense fallback="{fallback" || <LoadingSpinner          />}>
+      <LazyComponent {...props}  />
     </Suspense>
 // comment
 const Home = createLazyComponent(() => import("./pages/Home"));const About = createLazyComponent(() => import("./pages/About"));const Contact = createLazyComponent(() => import("./pages/Contact"));const Careers = createLazyComponent(() => import("./pages/Careers"));const Services = createLazyComponent(() => import("./pages/Services"));const Solutions = createLazyComponent(() => import("./pages/Solutions"));const News = createLazyComponent(() => import("./pages/News"));const CaseStudies = createLazyComponent(() => import("./pages/CaseStudies"));const Privacy = createLazyComponent(() => import("./pages/Privacy"));const Terms = createLazyComponent(() => import("./pages/Terms"));// comment
@@ -141,10 +135,10 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
         </button>      </div>,"
   "        <PerformanceOptimizer>"          <SEO  />,"
           <div className = "min-h-screen bg-gray-50">"            <EnhancedHeader  />"            <main className="flex-1">"              <Routes>"                {/* comment */}"
-                <Route path="/" element="{<Home"  />} />"                <Route path="/about" element="{<About"  />} />"                <Route path="/contact" element="{<Contact"  />} />"                <Route path="/careers" element="{<Careers"  />} />"                <Route path="/solutions" element="{<Solutions"  />} />"                <Route path="/research-development" element="{<Solutions"  />} />"                <Route path="/case-studies" element="{<CaseStudies"  />} />"                <Route path="/news" element="{<News"  />} />"                <Route path="/events" element="{<News"  />} />"                "                {/* comment */}"
-                <Route path="/services" element="{<Services"  />} />"                <Route path="/services/ai" element="{<AIServices"  />} />"                <Route path="/services/cloud" element="{<CloudServices"  />} />"                <Route path="/services/cybersecurity" element="{<CybersecurityServices"  />} />"                <Route path="/services/infrastructure" element="{<InfrastructureServices"  />} />"                <Route path="/services/transformation" element="{<TransformationServices"  />} />"                <Route path="/services/consulting" element="{<ConsultingServices"  />} />"                "                {/* comment */}"
-                <Route path="/privacy" element="{<Privacy"  />} />"                <Route path="/terms" element="{<Terms"  />} />"                "                {/* comment */}";"
-                <Route path="*" element={"                  <div className="min-h-screen flex items-center justify-center">"                    <div className="text-center">"                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"                      <p className="text-gray-600 mb-8">Page not found</p>"                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">"                        Go Home"                      </a></div><Route path="/services/ai" element="{<AIServices"  />} />";"
+                <Route path="/" element="{<Home"   />} />"                <Route path="/about" element="{<About"   />} />"                <Route path="/contact" element="{<Contact"   />} />"                <Route path="/careers" element="{<Careers"   />} />"                <Route path="/solutions" element="{<Solutions"   />} />"                <Route path="/research-development" element="{<Solutions"   />} />"                <Route path="/case-studies" element="{<CaseStudies"   />} />"                <Route path="/news" element="{<News"   />} />"                <Route path="/events" element="{<News"   />} />"                "                {/* comment */}"
+                <Route path="/services" element="{<Services"   />} />"                <Route path="/services/ai" element="{<AIServices"   />} />"                <Route path="/services/cloud" element="{<CloudServices"   />} />"                <Route path="/services/cybersecurity" element="{<CybersecurityServices"   />} />"                <Route path="/services/infrastructure" element="{<InfrastructureServices"   />} />"                <Route path="/services/transformation" element="{<TransformationServices"   />} />"                <Route path="/services/consulting" element="{<ConsultingServices"   />} />"                "                {/* comment */}"
+                <Route path="/privacy" element="{<Privacy"   />} />"                <Route path="/terms" element="{<Terms"   />} />"                "                {/* comment */}";"
+                <Route path="*" element={"                  <div className="min-h-screen flex items-center justify-center">"                    <div className="text-center">"                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"                      <p className="text-gray-600 mb-8">Page not found</p>"                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">"                        Go Home"                      </a></div><Route path="/services/ai" element="{<AIServices"   />} />";"
                 <Route path = "*" element="{"">
                   <div className="min-h-screen flex items-center justify-center">;"
                     <div className="text-center">;"
@@ -197,7 +191,8 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
 <button onClick="{resetErrorBoundary}" className="w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">Try again</button>
     </div>  </div>
 )
-}
+
+
   return(<HelmetProvider>",
       <ErrorBoundary fallback="{<ErrorFallback" error="{new" Error("App failed to load")} resetErrorBoundary="{()" => window.location.reload()} />}>
   return("
@@ -244,51 +239,51 @@ function App() {return(
             <main className="&apos;flex-1&apos;">&apos,
               <Routes>
                 {/* comment */}"
-                <Route path = "/" element="{<Home"  />} />"
-                <Route path="/about" element="{<About"  />} />"
-                <Route path="/contact" element="{<Contact"  />} />"
-                <Route path="/careers" element="{<Careers"  />} />"
-                <Route path="/solutions" element="{<Solutions"  />} />"
-                <Route path="/research-development" element="{<Solutions"  />} />"
-                <Route path="/case-studies" element="{<CaseStudies"  />} />"
-                <Route path="/news" element="{<News"  />} />"
-                <Route path="/events" element="{<News"  />} />
+                <Route path = "/" element="{<Home"   />} />"
+                <Route path="/about" element="{<About"   />} />"
+                <Route path="/contact" element="{<Contact"   />} />"
+                <Route path="/careers" element="{<Careers"   />} />"
+                <Route path="/solutions" element="{<Solutions"   />} />"
+                <Route path="/research-development" element="{<Solutions"   />} />"
+                <Route path="/case-studies" element="{<CaseStudies"   />} />"
+                <Route path="/news" element="{<News"   />} />"
+                <Route path="/events" element="{<News"   />} />
                 
                 {/* comment */}"
-                <Route path="/services" element="{<Services"  />} />"
-                <Route path="/services/ai" element="{<AIServices"  />} />"
-                <Route path="/services/cloud" element="{<CloudServices"  />} />"
-                <Route path="/services/cybersecurity" element="{<CybersecurityServices"  />} />"
-                <Route path="/services/infrastructure" element="{<InfrastructureServices"  />} />"
-                <Route path="/services/transformation" element="{<TransformationServices"  />} />"
-                <Route path="/services/consulting" element="{<ConsultingServices"  />} />
+                <Route path="/services" element="{<Services"   />} />"
+                <Route path="/services/ai" element="{<AIServices"   />} />"
+                <Route path="/services/cloud" element="{<CloudServices"   />} />"
+                <Route path="/services/cybersecurity" element="{<CybersecurityServices"   />} />"
+                <Route path="/services/infrastructure" element="{<InfrastructureServices"   />} />"
+                <Route path="/services/transformation" element="{<TransformationServices"   />} />"
+                <Route path="/services/consulting" element="{<ConsultingServices"   />} />
 
                 {/* comment */}"
-                <Route path="/privacy" element="{<Privacy"  />} />"
-                <Route path="/terms" element="{<Terms"  />} />
+                <Route path="/privacy" element="{<Privacy"   />} />"
+                <Route path="/terms" element="{<Terms"   />} />
 
                 {/* comment */}"
                 <Route path="*" element="{<div" className="min-h-screen flex items-center justify-center"><div className="text-center"><h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1><p className="text-gray-600 mb-8">Page not found</p><a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">Go Home</a></div></div>} />"
-                <Route path="&apos;/&apos;" element="{&apos}&apos;<Home"  />} />"
-                <Route path="&apos;/about&apos;" element = "{&apos}<About"  />} />"
-                <Route path="&apos;/contact&apos;" element = "{&apos}<Contact"  />} />"
-                <Route path="&apos;/careers&apos;" element = "{&apos}<Careers"  />} />"
-                <Route path="&apos;/solutions&apos;" element = "{&apos}<Solutions"  />} />"
-                <Route path="&apos;/research-development&apos;" element = "{&apos}<Solutions"  />} />"
-                <Route path="&apos;/case-studies&apos;" element = "{&apos}<CaseStudies"  />} />"
-                <Route path="&apos;/news&apos;" element = "{&apos}<News"  />} />"
-                <Route path="&apos;/events&apos;" element = "{&apos}<News"  />} />{/* comment */}"
-                <Route path="&apos;/services&apos;" element = "{&apos}<Services"  />} />"
-                <Route path="&apos;/enterprise&apos;" element = "{&apos}<Enterprise"  />} />"
-                <Route path="&apos;/request-quote&apos;" element = "{&apos}<RequestQuote"  />} />"
-                <Route path="&apos;/services/ai&apos;" element = "{&apos}<AIServices"  />} />"
-                <Route path="&apos;/services/cloud&apos;" element = "{&apos}<CloudServices"  />} />"
-                <Route path="&apos;/services/cybersecurity&apos;" element = "{&apos}<CybersecurityServices"  />} />"
-                <Route path="&apos;/services/infrastructure&apos;" element = "{&apos}<InfrastructureServices"  />} />"
-                <Route path="&apos;/services/transformation&apos;" element = "{&apos}<TransformationServices"  />} />"
-                <Route path="&apos;/services/consulting&apos;" element = "{&apos}<ConsultingServices"  />} />{/* comment */}"
-                <Route path="&apos;/privacy&apos;" element = "{&apos}<Privacy"  />} />"
-                <Route path="&apos;/terms&apos;" element = "{&apos}<Terms"  />} />{/* comment */}"
+                <Route path="&apos;/&apos;" element="{&apos}&apos;<Home"   />} />"
+                <Route path="&apos;/about&apos;" element = "{&apos}<About"   />} />"
+                <Route path="&apos;/contact&apos;" element = "{&apos}<Contact"   />} />"
+                <Route path="&apos;/careers&apos;" element = "{&apos}<Careers"   />} />"
+                <Route path="&apos;/solutions&apos;" element = "{&apos}<Solutions"   />} />"
+                <Route path="&apos;/research-development&apos;" element = "{&apos}<Solutions"   />} />"
+                <Route path="&apos;/case-studies&apos;" element = "{&apos}<CaseStudies"   />} />"
+                <Route path="&apos;/news&apos;" element = "{&apos}<News"   />} />"
+                <Route path="&apos;/events&apos;" element = "{&apos}<News"   />} />{/* comment */}"
+                <Route path="&apos;/services&apos;" element = "{&apos}<Services"   />} />"
+                <Route path="&apos;/enterprise&apos;" element = "{&apos}<Enterprise"   />} />"
+                <Route path="&apos;/request-quote&apos;" element = "{&apos}<RequestQuote"   />} />"
+                <Route path="&apos;/services/ai&apos;" element = "{&apos}<AIServices"   />} />"
+                <Route path="&apos;/services/cloud&apos;" element = "{&apos}<CloudServices"   />} />"
+                <Route path="&apos;/services/cybersecurity&apos;" element = "{&apos}<CybersecurityServices"   />} />"
+                <Route path="&apos;/services/infrastructure&apos;" element = "{&apos}<InfrastructureServices"   />} />"
+                <Route path="&apos;/services/transformation&apos;" element = "{&apos}<TransformationServices"   />} />"
+                <Route path="&apos;/services/consulting&apos;" element = "{&apos}<ConsultingServices"   />} />{/* comment */}"
+                <Route path="&apos;/privacy&apos;" element = "{&apos}<Privacy"   />} />"
+                <Route path="&apos;/terms&apos;" element = "{&apos}<Terms"   />} />{/* comment */}"
                 <Route path="&apos;*&apos;" element="{&apos}&apos;<div" className="&apos;min-h-screen" flex items-center justify-center&apos;>&apos,<div className="&apos;text-center&apos;">&apos,<h1 className="&apos;text-4xl" font-bold text-gray-900 mb-4&apos;>404&apos;</h1><p className="&apos;text-gray-600" mb-8&apos;>Page not found&apos;</p><a href="&apos;/&apos;" className="&apos;bg-blue-600" text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors&apos,>Go Home&apos,&apos,</a></div></div>} />"
     <HelmetProvider>"""
   "App failed to load")} resetErrorBoundary = "{()" ="" > window.location.reload()} />}>"
@@ -327,7 +322,7 @@ function App() {return(
       </ErrorBoundary>
     </HelmetProvider>
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {}const LazyComponent = lazy(importFn)  return(props: any) => (",,
-    <Suspense fallback="{fallback" ||} <LoadingSpinner       />}>
+    <Suspense fallback="{fallback" ||} <LoadingSpinner          />}>
     <;<;</Suspense>"
 const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn)  return(props: ) => (""",
     <Suspense fallback="{fallback" || <LoadingSpinner /"" >}>"""
@@ -368,10 +363,10 @@ const AIServices = createLazyComponent(() => import("./pages/AIServices"));const
   &apos,App failed to load&apos)} resetErrorBoundary="{()" => window.location.reload()} />}>
   &apos;&apos,        <PerformanceOptimizer>&apos;&apos,          <SEO  />"
           <div className="&apos;min-h-screen" bg-gray-50&apos;>"&apos;&apos;            <EnhancedHeader  />&apos;&apos,            <main className="&apos;flex-1&apos;">"&apos;&apos;              <Routes>&apos {/* comment */}&apos;"
-                <Route path="&apos;/&apos;" element="{&apos}&apos;<Home"  />} />&apos;&apos,                <Route path="&apos;/about&apos;" element="{&apos}<About"  />} />&apos;&apos,                <Route path="&apos;/contact&apos;" element="{&apos}<Contact"  />} />&apos;&apos,                <Route path="&apos;/careers&apos;" element="{&apos}<Careers"  />} />&apos;&apos,                <Route path="&apos;/solutions&apos;" element="{&apos}<Solutions"  />} />&apos;&apos,                <Route path="&apos;/research-development&apos;" element="{&apos}<Solutions"  />} />&apos;&apos,                <Route path="&apos;/case-studies&apos;" element="{&apos}<CaseStudies"  />} />&apos;&apos,                <Route path="&apos;/news&apos;" element="{&apos}<News"  />} />&apos;&apos,                <Route path="&apos;/events&apos;" element="{&apos}<News"  />} />&apos;                &apos {/* comment */}&apos;"
-                <Route path="&apos;/services&apos;" element="{&apos}<Services"  />} />&apos;&apos,                <Route path="&apos;/services/ai&apos;" element="{&apos}<AIServices"  />} />&apos;&apos,                <Route path="&apos;/services/cloud&apos;" element="{&apos}<CloudServices"  />} />&apos;&apos,                <Route path="&apos;/services/cybersecurity&apos;" element="{&apos}<CybersecurityServices"  />} />&apos;&apos,                <Route path="&apos;/services/infrastructure&apos;" element="{&apos}<InfrastructureServices"  />} />&apos;&apos,                <Route path="&apos;/services/transformation&apos;" element="{&apos}<TransformationServices"  />} />&apos;&apos,                <Route path="&apos;/services/consulting&apos;" element="{&apos}<ConsultingServices"  />} />&apos;                &apos {/* comment */}&apos;"
-                <Route path="&apos;/privacy&apos;" element="{&apos}<Privacy"  />} />&apos;&apos,                <Route path="&apos;/terms&apos;" element="{&apos}<Terms"  />} />&apos;                &apos {/* comment */}&apos;&apos,"
-                <Route path="&apos;*&apos;" element={&apos;&apos}"                  <div className="&apos;min-h-screen" flex items-center justify-center&apos;>"&apos;&apos;                    <div className="&apos;text-center&apos;">"&apos;&apos;                      <h1 className="&apos;text-4xl" font-bold text-gray-900 mb-4&apos;>404&apos;</h1>&apos;&apos,                      <p className="&apos;text-gray-600" mb-8&apos;>Page not found&apos;</p>&apos;&apos,                      <a href="&apos;/&apos;" className="&apos;bg-blue-600" text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors&apos;>&apos,                        Go Home&apos,&apos,"                      </a></div><Route path="&apos,/services/ai&apos," element="{&apos}<AIServices"  />} />&apos;&apos,"
+                <Route path="&apos;/&apos;" element="{&apos}&apos;<Home"   />} />&apos;&apos,                <Route path="&apos;/about&apos;" element="{&apos}<About"   />} />&apos;&apos,                <Route path="&apos;/contact&apos;" element="{&apos}<Contact"   />} />&apos;&apos,                <Route path="&apos;/careers&apos;" element="{&apos}<Careers"   />} />&apos;&apos,                <Route path="&apos;/solutions&apos;" element="{&apos}<Solutions"   />} />&apos;&apos,                <Route path="&apos;/research-development&apos;" element="{&apos}<Solutions"   />} />&apos;&apos,                <Route path="&apos;/case-studies&apos;" element="{&apos}<CaseStudies"   />} />&apos;&apos,                <Route path="&apos;/news&apos;" element="{&apos}<News"   />} />&apos;&apos,                <Route path="&apos;/events&apos;" element="{&apos}<News"   />} />&apos;                &apos {/* comment */}&apos;"
+                <Route path="&apos;/services&apos;" element="{&apos}<Services"   />} />&apos;&apos,                <Route path="&apos;/services/ai&apos;" element="{&apos}<AIServices"   />} />&apos;&apos,                <Route path="&apos;/services/cloud&apos;" element="{&apos}<CloudServices"   />} />&apos;&apos,                <Route path="&apos;/services/cybersecurity&apos;" element="{&apos}<CybersecurityServices"   />} />&apos;&apos,                <Route path="&apos;/services/infrastructure&apos;" element="{&apos}<InfrastructureServices"   />} />&apos;&apos,                <Route path="&apos;/services/transformation&apos;" element="{&apos}<TransformationServices"   />} />&apos;&apos,                <Route path="&apos;/services/consulting&apos;" element="{&apos}<ConsultingServices"   />} />&apos;                &apos {/* comment */}&apos;"
+                <Route path="&apos;/privacy&apos;" element="{&apos}<Privacy"   />} />&apos;&apos,                <Route path="&apos;/terms&apos;" element="{&apos}<Terms"   />} />&apos;                &apos {/* comment */}&apos;&apos,"
+                <Route path="&apos;*&apos;" element={&apos;&apos}"                  <div className="&apos;min-h-screen" flex items-center justify-center&apos;>"&apos;&apos;                    <div className="&apos;text-center&apos;">"&apos;&apos;                      <h1 className="&apos;text-4xl" font-bold text-gray-900 mb-4&apos;>404&apos;</h1>&apos;&apos,                      <p className="&apos;text-gray-600" mb-8&apos;>Page not found&apos;</p>&apos;&apos,                      <a href="&apos;/&apos;" className="&apos;bg-blue-600" text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors&apos;>&apos,                        Go Home&apos,&apos,"                      </a></div><Route path="&apos,/services/ai&apos," element="{&apos}<AIServices"   />} />&apos;&apos,"
                 <Route path="&apos;*&apos;" element="{&apos}&apos;""
                   <div className="&apos;min-h-screen" flex items-center justify-center&apos;>&apos,"
                     <div className="&apos;text-center&apos;">&apos,"
@@ -422,10 +417,10 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
         </button>,"
       <ErrorBoundary fallback="{<ErrorFallback" error="{new" Error("App failed to load")} resetErrorBoundary="{()" => window.location.reload()} />}>"        <PerformanceOptimizer>"          <SEO  />";"
           <div className="min-h-screen bg-gray-50">"            <EnhancedHeader  />"            <main className="flex-1">"              <Routes>"                {/* comment */}";"
-                <Route path="/" element="{<Home"  />} />"                <Route path="/about" element="{<About"  />} />"                <Route path="/contact" element="{<Contact"  />} />"                <Route path="/careers" element="{<Careers"  />} />"                <Route path="/solutions" element="{<Solutions"  />} />"                <Route path="/research-development" element="{<Solutions"  />} />"                <Route path="/case-studies" element="{<CaseStudies"  />} />"                <Route path="/news" element="{<News"  />} />"                <Route path="/events" element="{<News"  />} />"                "                {/* comment */}";"
-                <Route path="/services" element="{<Services"  />} />"                <Route path="/services/ai" element="{<AIServices"  />} />"                <Route path="/services/cloud" element="{<CloudServices"  />} />"                <Route path="/services/cybersecurity" element="{<CybersecurityServices"  />} />"                <Route path="/services/infrastructure" element="{<InfrastructureServices"  />} />"                <Route path="/services/transformation" element="{<TransformationServices"  />} />"                <Route path="/services/consulting" element="{<ConsultingServices"  />} />"                "                {/* comment */}";"
-                <Route path="/privacy" element="{<Privacy"  />} />"                <Route path="/terms" element="{<Terms"  />} />"                "                {/* comment */}"";"
-                <Route path="*" element={"                  <div className="min-h-screen flex items-center justify-center">"                    <div className="text-center">"                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"                      <p className="text-gray-600 mb-8">Page not found</p>"                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">"                        Go Home"                      </a></div><Route path="/services/ai" element="{<AIServices"  />} />"";"
+                <Route path="/" element="{<Home"   />} />"                <Route path="/about" element="{<About"   />} />"                <Route path="/contact" element="{<Contact"   />} />"                <Route path="/careers" element="{<Careers"   />} />"                <Route path="/solutions" element="{<Solutions"   />} />"                <Route path="/research-development" element="{<Solutions"   />} />"                <Route path="/case-studies" element="{<CaseStudies"   />} />"                <Route path="/news" element="{<News"   />} />"                <Route path="/events" element="{<News"   />} />"                "                {/* comment */}";"
+                <Route path="/services" element="{<Services"   />} />"                <Route path="/services/ai" element="{<AIServices"   />} />"                <Route path="/services/cloud" element="{<CloudServices"   />} />"                <Route path="/services/cybersecurity" element="{<CybersecurityServices"   />} />"                <Route path="/services/infrastructure" element="{<InfrastructureServices"   />} />"                <Route path="/services/transformation" element="{<TransformationServices"   />} />"                <Route path="/services/consulting" element="{<ConsultingServices"   />} />"                "                {/* comment */}";"
+                <Route path="/privacy" element="{<Privacy"   />} />"                <Route path="/terms" element="{<Terms"   />} />"                "                {/* comment */}"";"
+                <Route path="*" element={"                  <div className="min-h-screen flex items-center justify-center">"                    <div className="text-center">"                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"                      <p className="text-gray-600 mb-8">Page not found</p>"                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">"                        Go Home"                      </a></div><Route path="/services/ai" element="{<AIServices"   />} />"";"
                 <Route path="*" element={";"
                   <div className="min-h-screen flex items-center justify-center">";"
                     <div className="text-center">";"
@@ -434,15 +429,15 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
                       <a href = "/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">,"
       <ErrorBoundary fallback="{<ErrorFallback" error="{new" Error("App failed to load")} resetErrorBoundary="{()" => window.location.reload()} />}>"        <PerformanceOptimizer>"          <SEO  />";"
           <div className="min-h-screen bg-gray-50">"            <EnhancedHeader  />"            <main className="flex-1">"              <Routes>"                {/* comment */}";"
-                <Route path="/" element="{<Home"  />} />"                <Route path="/about" element="{<About"  />} />"                <Route path="/contact" element="{<Contact"  />} />"                <Route path="/careers" element="{<Careers"  />} />"                <Route path="/solutions" element="{<Solutions"  />} />"                <Route path="/research-development" element="{<Solutions"  />} />"                <Route path="/case-studies" element="{<CaseStudies"  />} />"                <Route path="/news" element="{<News"  />} />"                <Route path="/events" element="{<News"  />} />"                "                {/* comment */}";"
-                <Route path="/services" element="{<Services"  />} />"                <Route path="/services/ai" element="{<AIServices"  />} />"                <Route path="/services/cloud" element="{<CloudServices"  />} />"                <Route path="/services/cybersecurity" element="{<CybersecurityServices"  />} />"                <Route path="/services/infrastructure" element="{<InfrastructureServices"  />} />"                <Route path="/services/transformation" element="{<TransformationServices"  />} />"                <Route path="/services/consulting" element="{<ConsultingServices"  />} />"                "                {/* comment */}";"
-                <Route path="/services/cloud" element="{<CloudServices"  />} />";"
-                <Route path="/services/cybersecurity" element="{<CybersecurityServices"  />} />";"
-                <Route path="/services/infrastructure" element="{<InfrastructureServices"  />} />";"
-                <Route path="/services/transformation" element="{<TransformationServices"  />} />";"
-                <Route path="/services/consulting" element="{<ConsultingServices"  />} />{/* comment */}";"
-                <Route path="/privacy" element="{<Privacy"  />} />";"
-                <Route path = "/terms" element="{<Terms"  />} />{/* comment */}",
+                <Route path="/" element="{<Home"   />} />"                <Route path="/about" element="{<About"   />} />"                <Route path="/contact" element="{<Contact"   />} />"                <Route path="/careers" element="{<Careers"   />} />"                <Route path="/solutions" element="{<Solutions"   />} />"                <Route path="/research-development" element="{<Solutions"   />} />"                <Route path="/case-studies" element="{<CaseStudies"   />} />"                <Route path="/news" element="{<News"   />} />"                <Route path="/events" element="{<News"   />} />"                "                {/* comment */}";"
+                <Route path="/services" element="{<Services"   />} />"                <Route path="/services/ai" element="{<AIServices"   />} />"                <Route path="/services/cloud" element="{<CloudServices"   />} />"                <Route path="/services/cybersecurity" element="{<CybersecurityServices"   />} />"                <Route path="/services/infrastructure" element="{<InfrastructureServices"   />} />"                <Route path="/services/transformation" element="{<TransformationServices"   />} />"                <Route path="/services/consulting" element="{<ConsultingServices"   />} />"                "                {/* comment */}";"
+                <Route path="/services/cloud" element="{<CloudServices"   />} />";"
+                <Route path="/services/cybersecurity" element="{<CybersecurityServices"   />} />";"
+                <Route path="/services/infrastructure" element="{<InfrastructureServices"   />} />";"
+                <Route path="/services/transformation" element="{<TransformationServices"   />} />";"
+                <Route path="/services/consulting" element="{<ConsultingServices"   />} />{/* comment */}";"
+                <Route path="/privacy" element="{<Privacy"   />} />";"
+                <Route path = "/terms" element="{<Terms"   />} />{/* comment */}",
                 <Route path="*" element={";"
                   <div className="min-h-screen flex items-center justify-center">";"
                     <div className="text-center">";"
@@ -468,10 +463,10 @@ function App() {return (
 return (}""
       <ErrorBoundary fallback="{<ErrorFallback" error="{new" Error("App failed to load")} resetErrorBoundary="{()" => window.location.reload()} />}>"        <PerformanceOptimizer>"          <SEO  />"
           <div className="min-h-screen bg-gray-50">"            <EnhancedHeader  />"            <main className="flex-1">"              <Routes>"                {/* comment */}"
-                <Route path="/" element="{<Home"  />} />"                <Route path="/about" element="{<About"  />} />"                <Route path="/contact" element="{<Contact"  />} />"                <Route path="/careers" element="{<Careers"  />} />"                <Route path="/solutions" element="{<Solutions"  />} />"                <Route path="/research-development" element="{<Solutions"  />} />"                <Route path="/case-studies" element="{<CaseStudies"  />} />"                <Route path="/news" element="{<News"  />} />"                <Route path="/events" element="{<News"  />} />"                "                {/* comment */}"
-                <Route path="/services" element="{<Services"  />} />"                <Route path="/services/ai" element="{<AIServices"  />} />"                <Route path="/services/cloud" element="{<CloudServices"  />} />"                <Route path="/services/cybersecurity" element="{<CybersecurityServices"  />} />"                <Route path="/services/infrastructure" element="{<InfrastructureServices"  />} />"                <Route path="/services/transformation" element="{<TransformationServices"  />} />"                <Route path="/services/consulting" element="{<ConsultingServices"  />} />"                "                {/* comment */}"
-                <Route path="/privacy" element="{<Privacy"  />} />"                <Route path="/terms" element="{<Terms"  />} />"                "                {/* comment */}""
-                <Route path="*" element={"                  <div className="min-h-screen flex items-center justify-center">"                    <div className="text-center">"                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"                      <p className="text-gray-600 mb-8">Page not found</p>"                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">"                        Go Home"                      </a></div><Route path="/services/ai" element="{<AIServices"  />} />"
+                <Route path="/" element="{<Home"   />} />"                <Route path="/about" element="{<About"   />} />"                <Route path="/contact" element="{<Contact"   />} />"                <Route path="/careers" element="{<Careers"   />} />"                <Route path="/solutions" element="{<Solutions"   />} />"                <Route path="/research-development" element="{<Solutions"   />} />"                <Route path="/case-studies" element="{<CaseStudies"   />} />"                <Route path="/news" element="{<News"   />} />"                <Route path="/events" element="{<News"   />} />"                "                {/* comment */}"
+                <Route path="/services" element="{<Services"   />} />"                <Route path="/services/ai" element="{<AIServices"   />} />"                <Route path="/services/cloud" element="{<CloudServices"   />} />"                <Route path="/services/cybersecurity" element="{<CybersecurityServices"   />} />"                <Route path="/services/infrastructure" element="{<InfrastructureServices"   />} />"                <Route path="/services/transformation" element="{<TransformationServices"   />} />"                <Route path="/services/consulting" element="{<ConsultingServices"   />} />"                "                {/* comment */}"
+                <Route path="/privacy" element="{<Privacy"   />} />"                <Route path="/terms" element="{<Terms"   />} />"                "                {/* comment */}""
+                <Route path="*" element={"                  <div className="min-h-screen flex items-center justify-center">"                    <div className="text-center">"                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"                      <p className="text-gray-600 mb-8">Page not found</p>"                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">"                        Go Home"                      </a></div><Route path="/services/ai" element="{<AIServices"   />} />"
                 "
                 <Route path="*" element="{""
                   <div className="min-h-screen flex items-center justify-center">"
@@ -481,17 +476,17 @@ return (}""
                       <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">",,
       <ErrorBoundary fallback="{}<ErrorFallback" error="{new" Error(&apos;App failed to load&apos)} resetErrorBoundary="{()" => window.location.reload()} />}>&apos;&apos,        <PerformanceOptimizer>&apos;&apos,          <SEO  />&apos;&apos,"
           <div className="&apos;min-h-screen" bg-gray-50&apos;>"&apos;&apos;            <EnhancedHeader  />&apos;&apos,            <main className="&apos;flex-1&apos;">"&apos;&apos;              <Routes>&apos {/* comment */}&apos;&apos,"
-                <Route path="&apos;/&apos;" element="{&apos}&apos;<Home"  />} />&apos;&apos,                <Route path="&apos;/about&apos;" element="{&apos}<About"  />} />&apos;&apos,                <Route path="&apos;/contact&apos;" element="{&apos}<Contact"  />} />&apos;&apos,                <Route path="&apos;/careers&apos;" element="{&apos}<Careers"  />} />&apos;&apos,                <Route path="&apos;/solutions&apos;" element="{&apos}<Solutions"  />} />&apos;&apos,                <Route path="&apos;/research-development&apos;" element="{&apos}<Solutions"  />} />&apos;&apos,                <Route path="&apos;/case-studies&apos;" element="{&apos}<CaseStudies"  />} />&apos;&apos,                <Route path="&apos;/news&apos;" element="{&apos}<News"  />} />&apos;&apos,                <Route path="&apos;/events&apos;" element="{&apos}<News"  />} />&apos;                &apos {/* comment */}&apos;&apos,"
-                <Route path="&apos;/services&apos;" element="{&apos}<Services"  />} />&apos;&apos,                <Route path="&apos;/services/ai&apos;" element="{&apos}<AIServices"  />} />&apos;&apos,                <Route path="&apos;/services/cloud&apos;" element="{&apos}<CloudServices"  />} />&apos;&apos,                <Route path="&apos;/services/cybersecurity&apos;" element="{&apos}<CybersecurityServices"  />} />&apos;&apos,                <Route path="&apos;/services/infrastructure&apos;" element="{&apos}<InfrastructureServices"  />} />&apos;&apos,                <Route path="&apos;/services/transformation&apos;" element="{&apos}<TransformationServices"  />} />&apos;&apos,                <Route path="&apos;/services/consulting&apos;" element="{&apos}<ConsultingServices"  />} />&apos;                &apos {/* comment */}&apos;&apos,"
-                <Route path="&apos;/privacy&apos;" element="{&apos}<Privacy"  />} />&apos;&apos,                <Route path="&apos;/terms&apos;" element="{&apos}<Terms"  />} />&apos;                &apos {/* comment */}&apos;&apos,"
-                <Route path="&apos;*&apos;" element={&apos;&apos}"                  <div className="&apos;min-h-screen" flex items-center justify-center&apos;>"&apos;&apos;                    <div className="&apos;text-center&apos;">"&apos;&apos;                      <h1 className="&apos;text-4xl" font-bold text-gray-900 mb-4&apos;>404&apos;</h1>&apos;&apos,                      <p className="&apos;text-gray-600" mb-8&apos;>Page not found&apos;</p>&apos;&apos,                      <a href="&apos;/&apos;" className="&apos;bg-blue-600" text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors&apos;>&apos,                        Go Home&apos,&apos,"                      </a></div><Route path="&apos,/services/ai&apos," element="{&apos}<AIServices"  />} />&apos;&apos,"
-                <Route path="&apos;/services/cloud&apos;" element="{&apos}<CloudServices"  />} />&apos;&apos,"
-                <Route path="&apos;/services/cybersecurity&apos;" element="{&apos}<CybersecurityServices"  />} />&apos;&apos,"
-                <Route path="&apos;/services/infrastructure&apos;" element="{&apos}<InfrastructureServices"  />} />&apos;&apos,"
-                <Route path="&apos;/services/transformation&apos;" element="{&apos}<TransformationServices"  />} />&apos;&apos,"
-                <Route path="&apos;/services/consulting&apos;" element="{&apos}<ConsultingServices"  />} />{/* comment */}&apos;&apos,"
-                <Route path="&apos;/privacy&apos;" element="{&apos}<Privacy"  />} />&apos;&apos,"
-                <Route path="&apos;/terms&apos;" element="{&apos}<Terms"  />} />{/* comment */}&apos;&apos,"
+                <Route path="&apos;/&apos;" element="{&apos}&apos;<Home"   />} />&apos;&apos,                <Route path="&apos;/about&apos;" element="{&apos}<About"   />} />&apos;&apos,                <Route path="&apos;/contact&apos;" element="{&apos}<Contact"   />} />&apos;&apos,                <Route path="&apos;/careers&apos;" element="{&apos}<Careers"   />} />&apos;&apos,                <Route path="&apos;/solutions&apos;" element="{&apos}<Solutions"   />} />&apos;&apos,                <Route path="&apos;/research-development&apos;" element="{&apos}<Solutions"   />} />&apos;&apos,                <Route path="&apos;/case-studies&apos;" element="{&apos}<CaseStudies"   />} />&apos;&apos,                <Route path="&apos;/news&apos;" element="{&apos}<News"   />} />&apos;&apos,                <Route path="&apos;/events&apos;" element="{&apos}<News"   />} />&apos;                &apos {/* comment */}&apos;&apos,"
+                <Route path="&apos;/services&apos;" element="{&apos}<Services"   />} />&apos;&apos,                <Route path="&apos;/services/ai&apos;" element="{&apos}<AIServices"   />} />&apos;&apos,                <Route path="&apos;/services/cloud&apos;" element="{&apos}<CloudServices"   />} />&apos;&apos,                <Route path="&apos;/services/cybersecurity&apos;" element="{&apos}<CybersecurityServices"   />} />&apos;&apos,                <Route path="&apos;/services/infrastructure&apos;" element="{&apos}<InfrastructureServices"   />} />&apos;&apos,                <Route path="&apos;/services/transformation&apos;" element="{&apos}<TransformationServices"   />} />&apos;&apos,                <Route path="&apos;/services/consulting&apos;" element="{&apos}<ConsultingServices"   />} />&apos;                &apos {/* comment */}&apos;&apos,"
+                <Route path="&apos;/privacy&apos;" element="{&apos}<Privacy"   />} />&apos;&apos,                <Route path="&apos;/terms&apos;" element="{&apos}<Terms"   />} />&apos;                &apos {/* comment */}&apos;&apos,"
+                <Route path="&apos;*&apos;" element={&apos;&apos}"                  <div className="&apos;min-h-screen" flex items-center justify-center&apos;>"&apos;&apos;                    <div className="&apos;text-center&apos;">"&apos;&apos;                      <h1 className="&apos;text-4xl" font-bold text-gray-900 mb-4&apos;>404&apos;</h1>&apos;&apos,                      <p className="&apos;text-gray-600" mb-8&apos;>Page not found&apos;</p>&apos;&apos,                      <a href="&apos;/&apos;" className="&apos;bg-blue-600" text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors&apos;>&apos,                        Go Home&apos,&apos,"                      </a></div><Route path="&apos,/services/ai&apos," element="{&apos}<AIServices"   />} />&apos;&apos,"
+                <Route path="&apos;/services/cloud&apos;" element="{&apos}<CloudServices"   />} />&apos;&apos,"
+                <Route path="&apos;/services/cybersecurity&apos;" element="{&apos}<CybersecurityServices"   />} />&apos;&apos,"
+                <Route path="&apos;/services/infrastructure&apos;" element="{&apos}<InfrastructureServices"   />} />&apos;&apos,"
+                <Route path="&apos;/services/transformation&apos;" element="{&apos}<TransformationServices"   />} />&apos;&apos,"
+                <Route path="&apos;/services/consulting&apos;" element="{&apos}<ConsultingServices"   />} />{/* comment */}&apos;&apos,"
+                <Route path="&apos;/privacy&apos;" element="{&apos}<Privacy"   />} />&apos;&apos,"
+                <Route path="&apos;/terms&apos;" element="{&apos}<Terms"   />} />{/* comment */}&apos;&apos,"
                 <Route path="&apos;*&apos;" element={";&apos}&apos;"
                   <div className="&apos;min-h-screen" flex items-center justify-center&apos;>"&apos;&apos;"
                     <div className="&apos;text-center&apos;">"&apos;&apos;"
@@ -500,28 +495,28 @@ return (}""
 return ("
       <ErrorBoundary fallback = "{<ErrorFallback" error="{new" Error("App failed to load")} resetErrorBoundary="{()" => window.location.reload()} />}>"        <PerformanceOptimizer>"          <SEO  />""
           <div className="min-h-screen bg-gray-50>            <EnhancedHeader  />            <main className="flex-1>              <Routes>"                {/* comment */}"
-                <Route path="/" element="{<Home"  />} />                <Route path="/about" element="{<About"  />} />                <Route path="/contact" element="{<Contact"  />} />                <Route path="/careers" element="{<Careers"  />} />                <Route path="/solutions" element="{<Solutions"  />} />                <Route path="/research-development" element="{<Solutions"  />} />                <Route path="/case-studies" element="{<CaseStudies"  />} />                <Route path="/news" element="{<News"  />} />                <Route path="/events" element="{<News"  />} />                "                {/* comment */}"
-                <Route path="/services" element="{<Services"  />} />                <Route path="/services/ai" element="{<AIServices"  />} />                <Route path="/services/cloud" element="{<CloudServices"  />} />                <Route path="/services/cybersecurity" element="{<CybersecurityServices"  />} />                <Route path="/services/infrastructure" element="{<InfrastructureServices"  />} />                <Route path="/services/transformation" element="{<TransformationServices"  />} />                <Route path="/services/consulting" element="{<ConsultingServices"  />} />                "                {/* comment */}"
-                <Route path="/privacy" element="{<Privacy"  />} />                <Route path="/terms" element="{<Terms"  />} />                "                {/* comment */}""
-                <Route path="*" element={"                  <div className="min-h-screen flex items-center justify-center>                    <div className="text-center>                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"                      <p className="text-gray-600 mb-8">Page not found</p>"                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors>                        Go Home"                      </a></div><Route path="/services/ai" element="{<AIServices"  />} />"""
+                <Route path="/" element="{<Home"   />} />                <Route path="/about" element="{<About"   />} />                <Route path="/contact" element="{<Contact"   />} />                <Route path="/careers" element="{<Careers"   />} />                <Route path="/solutions" element="{<Solutions"   />} />                <Route path="/research-development" element="{<Solutions"   />} />                <Route path="/case-studies" element="{<CaseStudies"   />} />                <Route path="/news" element="{<News"   />} />                <Route path="/events" element="{<News"   />} />                "                {/* comment */}"
+                <Route path="/services" element="{<Services"   />} />                <Route path="/services/ai" element="{<AIServices"   />} />                <Route path="/services/cloud" element="{<CloudServices"   />} />                <Route path="/services/cybersecurity" element="{<CybersecurityServices"   />} />                <Route path="/services/infrastructure" element="{<InfrastructureServices"   />} />                <Route path="/services/transformation" element="{<TransformationServices"   />} />                <Route path="/services/consulting" element="{<ConsultingServices"   />} />                "                {/* comment */}"
+                <Route path="/privacy" element="{<Privacy"   />} />                <Route path="/terms" element="{<Terms"   />} />                "                {/* comment */}""
+                <Route path="*" element={"                  <div className="min-h-screen flex items-center justify-center>                    <div className="text-center>                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"                      <p className="text-gray-600 mb-8">Page not found</p>"                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors>                        Go Home"                      </a></div><Route path="/services/ai" element="{<AIServices"   />} />"""
           <div className="min-h-screen bg-gray-50">"            <EnhancedHeader  />"            <main className="flex-1">"              <Routes>"                {/* comment */}""
-                <Route path="/" element="{<Home"  />} />"                <Route path="/about" element="{<About"  />} />"                <Route path="/contact" element="{<Contact"  />} />"                <Route path="/careers" element="{<Careers"  />} />"                <Route path="/solutions" element="{<Solutions"  />} />"                <Route path="/research-development" element="{<Solutions"  />} />"                <Route path="/case-studies" element="{<CaseStudies"  />} />"                <Route path="/news" element="{<News"  />} />"                <Route path="/events" element="{<News"  />} />"                "                {/* comment */}""
-                <Route path="/services" element="{<Services"  />} />"                <Route path="/services/ai" element="{<AIServices"  />} />"                <Route path="/services/cloud" element="{<CloudServices"  />} />"                <Route path="/services/cybersecurity" element="{<CybersecurityServices"  />} />"                <Route path="/services/infrastructure" element="{<InfrastructureServices"  />} />"                <Route path="/services/transformation" element="{<TransformationServices"  />} />"                <Route path="/services/consulting" element="{<ConsultingServices"  />} />"                "                {/* comment */}""
-                <Route path="/privacy" element="{<Privacy"  />} />"                <Route path="/terms" element="{<Terms"  />} />"                "                {/* comment */}"""
-                <Route path="*" element={" <div className="min-h-screen flex items-center justify-center">"                    <div className="text-center">"                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"                      <p className="text-gray-600 mb-8">Page not found</p>"                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">"                        Go Home"                      </a></div><Route path="/services/ai" element="{<AIServices"  />} />"""
-                <Route path="/services/cloud" element="{<CloudServices"  />} />""
-                <Route path="/services/cybersecurity" element="{<CybersecurityServices"  />} />""
-                <Route path="/services/infrastructure" element="{<InfrastructureServices"  />} />""
-                <Route path="/services/transformation" element="{<TransformationServices"  />} />""
-                <Route path="/services/consulting" element="{<ConsultingServices"  />} />{/* comment */}"
-                <Route path="/privacy" element="{<Privacy"  />} />""
-                <Route path="/terms" element="{<Terms"  />} />{/* comment */}"
+                <Route path="/" element="{<Home"   />} />"                <Route path="/about" element="{<About"   />} />"                <Route path="/contact" element="{<Contact"   />} />"                <Route path="/careers" element="{<Careers"   />} />"                <Route path="/solutions" element="{<Solutions"   />} />"                <Route path="/research-development" element="{<Solutions"   />} />"                <Route path="/case-studies" element="{<CaseStudies"   />} />"                <Route path="/news" element="{<News"   />} />"                <Route path="/events" element="{<News"   />} />"                "                {/* comment */}""
+                <Route path="/services" element="{<Services"   />} />"                <Route path="/services/ai" element="{<AIServices"   />} />"                <Route path="/services/cloud" element="{<CloudServices"   />} />"                <Route path="/services/cybersecurity" element="{<CybersecurityServices"   />} />"                <Route path="/services/infrastructure" element="{<InfrastructureServices"   />} />"                <Route path="/services/transformation" element="{<TransformationServices"   />} />"                <Route path="/services/consulting" element="{<ConsultingServices"   />} />"                "                {/* comment */}""
+                <Route path="/privacy" element="{<Privacy"   />} />"                <Route path="/terms" element="{<Terms"   />} />"                "                {/* comment */}"""
+                <Route path="*" element={" <div className="min-h-screen flex items-center justify-center">"                    <div className="text-center">"                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"                      <p className="text-gray-600 mb-8">Page not found</p>"                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">"                        Go Home"                      </a></div><Route path="/services/ai" element="{<AIServices"   />} />"""
+                <Route path="/services/cloud" element="{<CloudServices"   />} />""
+                <Route path="/services/cybersecurity" element="{<CybersecurityServices"   />} />""
+                <Route path="/services/infrastructure" element="{<InfrastructureServices"   />} />""
+                <Route path="/services/transformation" element="{<TransformationServices"   />} />""
+                <Route path="/services/consulting" element="{<ConsultingServices"   />} />{/* comment */}"
+                <Route path="/privacy" element="{<Privacy"   />} />""
+                <Route path="/terms" element="{<Terms"   />} />{/* comment */}"
                 <Route path = "*" element={">
                   <div className = "min-h-screen flex items-center justify-center>"""
                     <div className="text-center>"""
                       <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"""
                       <p className="text-gray-600 mb-8">Page not found</p>"""
-                <Route path="/terms" element="{<Terms"  />} />{/* comment */}""
+                <Route path="/terms" element="{<Terms"   />} />{/* comment */}""
                 <Route path = "*" element={", <div className = "min-h-screen flex items-center justify-center">""
       <ErrorBoundary fallback="{<ErrorFallback" error="{new" Error("App failed to load")} resetErrorBoundary="{()" =" > window.location.reload()} />}>"        <PerformanceOptimizer>"          <SEO /" >""
           <div className="min-h-screen bg-gray-50">"            <EnhancedHeader /" >"            <main className="flex-1">"              <Routes>"                {/* comment */}"""

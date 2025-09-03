@@ -1,61 +1,59 @@
-import { DollarSign  } from 'lucide-react';
+import React from "react"
+import { DollarSign  } from "lucide-react";
 export default function Page() {
  else {
-`
-      router(`/request-quote?listing=${listing.id}`)}
+"
+      router("/request-quote?listing=${listing.id}")}
   };
-
   return ()
+
     <div
-      data-testid= "equipment-link";'`
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
+      data-testid= "equipment-link";""
+      className={"bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? "flex-col" : "flex-row"} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300"};
       onClick={handleViewListing};
       tabIndex={0};"
       ;
       onKeyDown={(e) => {;
-        if(e.key === 'Enter' || e.key === ' ') {;
+        if(e.key === "Enter" || e.key === " ") {;
           e.preventDefault () ;
           handleViewListing () }
       }}
 
-      {/* Image */}
-      <div'
-        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
+      {/* comment */}
+      <div"
+        className = {isGrid ? "block w-full" : "block w-48 flex-shrink-0"};
         onClick={handleViewListing} // Keep existing onClick for navigation;"
         ;
         tabIndex={-1} // Remove from tab order as parent is focusable;
         onKeyDown={(e) => {;
-          if(e.key === 'Enter' || e.key === ' ') {;
+          if(e.key === "Enter" || e.key === " ") {;
             e.preventDefault () ;
             handleViewListing () }
         }}
-      >`
-        <div className = {`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-          <img
-            src={imageSrc}
+      >"
+        <div className = {"relative ${imageContainerClasses}"}> {/* comment */}
+          <img src={imageSrc}
             alt={listing.title}"
             className="w-full h-full object-cover"
             onError={handleImageError}
-          />
+             />
           {listing.featured && ("
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">
               Featured
             </Badge>
           )}"
-          <FavoriteButton itemId={listing.id} itemType="product"  />        </div>
+          <FavoriteButton itemId={listing.id} itemType="product"   />        </div>
       </div>
-
-      {/* Content */}'`
-      <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
+      {/* comment */}""
+      <div className={"flex flex-col justify-between ${isGrid ? "p-4 flex-1" : "p-4 flex-1"}"}>
         <div>
-          {/* Category & Rating */}"
+          {/* comment */}"
           <div className="flex justify-between items-center mb-2">"
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
               {listing.category}
             </Badge>
-            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount}  />) }          </div>
-
-          {/* Title & Description */}"
+            {listing.rating && (<RatingStars value={listing.rating} count={listing.reviewCount}     />) }          </div>
+          {/* comment */}"
           <div onClick={handleViewListing} className="block">"
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
               {listing.title}
@@ -64,8 +62,7 @@ export default function Page() {
           <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
             {listing.description}
           </p>
-
-          {/* Tags */}
+          {/* comment */}
           {listing.tags && listing.tags.length > 0 && ("
             <div className="flex flex-wrap gap-1 mb-4">
               {listing.tags.map((tag, idx) => (
@@ -77,13 +74,12 @@ export default function Page() {
                 </span>) ) }
             </div>) }
         </div>
-
-        {/* Footer with price and button */}"
+        {/* comment */}"
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">"
           <div className="text-sm font-medium">
             {listing.price !== null ? ("
               <div className="flex items-center text-primary">"
-                <DollarSign className="h-4 w-4 mr-1"  />                {formatPrice()}
+                <DollarSign className="h-4 w-4 mr-1"   />                {formatPrice()}
               </div>
             ) : ("
               <span className="text-foreground/80">
@@ -98,8 +94,8 @@ export default function Page() {
               className="bg-primary hover:bg-primary/80 text-primary-foreground"
               onClick={(e) => {
 
-                e.stopPropagation();`
-                router(`${detailBasePath}/${listing.id}`)}}              disabled = {loading}
+                e.stopPropagation();"
+                router("${detailBasePath}/${listing.id}")}}              disabled = {loading}
             >
               {loading ? (
                 <>"
@@ -127,7 +123,6 @@ export default function Page() {
       </div>;
     </div>;) }
 export default React.memo(ProductListingCard);
-
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
@@ -135,4 +130,4 @@ export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
-'"`
+"""

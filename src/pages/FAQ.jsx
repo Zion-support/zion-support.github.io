@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -10,10 +10,9 @@ import { Footer } from "@/components/Footer";        <div className="container m
               Find answers to the most common questions about Zion Tech Group and our marketplace platform
             </p>
           </div>
-          
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="w-full">
-              {faqData.map((item, index) => (<AccordionItem key={index} value={`item-${index}`} className="border-zion-blue-light">
+              {faqData.map((item, index) => (<AccordionItem key={index} value={"item-${index}"} className="border-zion-blue-light">
                   <AccordionTrigger className="text-left text-white hover:text-zion-cyan px-6 py-4">
                     <span className="text-lg font-medium">{item.question}</span>
                   </AccordionTrigger>
@@ -25,12 +24,11 @@ import { Footer } from "@/components/Footer";        <div className="container m
                 </AccordionItem>))}
             </Accordion>
           </div>
-          
           <div className="mt-16 text-center">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
               <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
               <p className="text-zion-slate-light mb-6">
-                Can't find what you're looking for? Our support team is here to help.
+                Can"t find what you"re looking for? Our support team is here to help.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple hover:bg-zion-purple-dark text-white font-medium rounded-lg transition-colors">
@@ -44,18 +42,11 @@ import { Footer } from "@/components/Footer";        <div className="container m
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer  />
     </>
   );
-}
-
-
 export { CustomAccordion, FAQ };
-
 export { CustomAccordion, FAQ };
-
 export { CustomAccordion, FAQ };
-
 export { CustomAccordion, FAQ };
-
 export { CustomAccordion, FAQ };

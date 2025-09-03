@@ -46,5 +46,4 @@ const Interviews = () => {
             </div>
     </>
   );
-}
 export default Interviews

@@ -1,5 +1,5 @@
 import { Check, Shield, AlertTriangle, Eye import { Link } from "react - router - dom";
-import React from 'react';"""
+import React from "react";"""
 import SEO from "@/components/SEO";""""
 import { Button } from "@/components/ui/button";""""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""""
@@ -85,28 +85,28 @@ export default function CybersecuritySuite() {}
 """"
             title: "Threat Detection & Response",""""
             description: "Advanced AI-powered threat detection with automated response capabilities to neutralize threats in real-time.",""""
-            icon: <Eye className="h-8 w-8 text-zion-cyan"/>
+            icon: <Eye className="h-8 w-8 text-zion-cyan"   />
         },
         {}
 """
 """"
             title: "Vulnerability Management",""""
             description: "Continuous vulnerability assessment and prioritization with automated remediation workflows.",""""
-            icon: <AlertTriangle className="h-8 w-8 text-zion-purple"/>
+            icon: <AlertTriangle className="h-8 w-8 text-zion-purple"   />
         },
         {}
 """
 """"
             title: "Security Compliance",""""
             description: "Automated compliance monitoring and reporting for major frameworks including GDPR, HIPAA, and SOC2.",""""
-            icon: <Shield className="h-8 w-8 text-zion-cyan"/>
+            icon: <Shield className="h-8 w-8 text-zion-cyan"   />
         },
         {}
 """
 """"
             title: "Incident Response",""""
             description: "Rapid incident response with automated playbooks and expert security team support.",""""
-            icon: <Shield className="h-8 w-8 text-zion-purple"/>
+            icon: <Shield className="h-8 w-8 text-zion-purple"   />
 
     ];"""
     const complianceFrameworks = [""""
@@ -120,9 +120,9 @@ export default function CybersecuritySuite() {}
         "FedRAMP (Federal Risk and Authorization Management Program)""""
     ];""""
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">""""
-      <SEO title="Cybersecurity Suite - Zion Tech Group" description="Comprehensive security monitoring, threat detection, and incident response for businesses of all sizes. Starting at $199/month." keywords="cybersecurity, threat detection, security monitoring, incident response, compliance, security audit" canonical="https://ziontechgroup.com/cybersecurity-suite"/>
+      <SEO title="Cybersecurity Suite - Zion Tech Group" description="Comprehensive security monitoring, threat detection, and incident response for businesses of all sizes. Starting at $199/month." keywords="cybersecurity, threat detection, security monitoring, incident response, compliance, security audit" canonical="https://ziontechgroup.com/cybersecurity-suite"   />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="pt-20 pb-16 px-4">""""
         <div className="container mx-auto text-center">""""
           <div className="mb-8">""""
@@ -142,14 +142,14 @@ export default function CybersecuritySuite() {}
               Start Security Assessment"""
             </Button>""""
             <Button size="lg" variant="outline" className="border-red-500 text-red-400 hover:bg-red-500/10 px-8 py-4 text-lg">""""
-              <Shield className="h-5 w-5 mr-2"/>
+              <Shield className="h-5 w-5 mr-2"   />
               Security Demo;
             </Button>
           </div>
         </div>
       </section>
 """
-      {/* Security Services */}""""
+      {/* comment */}""""
       <section className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -175,7 +175,7 @@ export default function CybersecuritySuite() {}
         </div>
       </section>
 """
-      {/* Features Grid */}""""
+      {/* comment */}""""
       <section className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -191,7 +191,7 @@ export default function CybersecuritySuite() {}
             {features.map((feature, index) => (<Card key={index} className="bg-zion-slate/50 border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-red-500/20">""""
                 <CardContent className="p-6">""""
                   <div className="flex items-start gap-3">""""
-                    <Check className="h-5 w-5 text-red-400 mt-1 flex-shrink-0"/>""""
+                    <Check className="h-5 w-5 text-red-400 mt-1 flex-shrink-0"   />""""
                     <span className="text-zion-slate-light">{feature}</span>
                   </div>
                 </CardContent>
@@ -200,7 +200,7 @@ export default function CybersecuritySuite() {}
         </div>
       </section>
 """
-      {/* Compliance Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 bg-zion-slate/30">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -215,7 +215,7 @@ export default function CybersecuritySuite() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">""""
             {complianceFrameworks.map((framework, index) => (<Card key={index} className="bg-zion-slate/50 border-red-500/20 hover:border-red-500/40 transition-all duration-300">""""
                 <CardContent className="p-4 text-center">""""
-                  <Check className="h-5 w-5 text-red-400 mx-auto mb-2"/>""""
+                  <Check className="h-5 w-5 text-red-400 mx-auto mb-2"   />""""
                   <span className="text-sm text-zion-slate-light">{framework}</span>
                 </CardContent>
               </Card>) ) }
@@ -223,7 +223,7 @@ export default function CybersecuritySuite() {}
         </div>
       </section>
 """
-      {/* Pricing Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -235,8 +235,8 @@ export default function CybersecuritySuite() {}
             </p>
           </div>"""
 """"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'"""
-            {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-red-500 border-2 scale-105' : 'border-red-500/20'} bg-zion-slate/50 hover:border-red-500/40 transition-all duration-300`}>""""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">""""
+            {pricingPlans.map((plan, index) => (<Card key={index} className={"relative ${plan.popular ? "border-red-500 border-2 scale-105" : "border-red-500/20"} bg-zion-slate/50 hover:border-red-500/40 transition-all duration-300"}>""""
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""""
                     <Badge className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2">
                       Most Popular;
@@ -252,12 +252,12 @@ export default function CybersecuritySuite() {}
                 </CardHeader>""""
                 <CardContent className="space-y-3">""""
                   {plan.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-start gap-3">""""
-                      <Check className="h-4 w-4 text-red-400 mt-1 flex-shrink-0"/>""""
+                      <Check className="h-4 w-4 text-red-400 mt-1 flex-shrink-0"   />""""
                       <span className="text-sm text-zion-slate-light">{feature}</span>
                     </div>))}"""
-                </CardContent>"'"`
-                <div className="p-6 pt-0">'`'`
-                  <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-red-500 to-orange-500' : 'bg-red-500 hover:bg-red-600'}`}>
+                </CardContent>""""
+                <div className="p-6 pt-0">""""
+                  <Button className={"w-full ${plan.popular ? "bg-gradient-to-r from-red-500 to-orange-500" : "bg-red-500 hover:bg-red-600"}`}>
                     Get Started;
                   </Button>
                 </div>
@@ -266,7 +266,7 @@ export default function CybersecuritySuite() {}
         </div>
       </section>
 """
-      {/* Contact Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 bg-zion-slate/30">""""
         <div className="container mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -296,11 +296,7 @@ export default function CybersecuritySuite() {}
 
 
 export { CybersecuritySuite };
-
 export { CybersecuritySuite };
-
 export { CybersecuritySuite };
-
 export { CybersecuritySuite };
-
 export { CybersecuritySuite };

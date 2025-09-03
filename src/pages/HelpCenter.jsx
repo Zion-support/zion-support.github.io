@@ -1,175 +1,173 @@
-import React, { useState } from 'react';'''
-import { Helmet } from 'react-helmet-async';'''
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";"""
+import { Helmet } from "react-helmet-async";"""
+import { Link } from "react-router-dom";
 import {}
   Search,
   BookOpen,
   MessageSquare,
   Phone,
-  Mail,'
-  ArrowRight,''
-  ChevronDown,'''
-  ChevronRight} from 'lucide-react';
-
+  Mail,"
+  ArrowRight,""
+  ChevronDown,"""
+  ChevronRight} from "lucide-react";
 export default function HelpCenter() {}
-'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [expandedCategories, setExpandedCategories] = useState([''
-    'getting-started'
+"
+  const [searchQuery, setSearchQuery] = useState("");"
+  const [expandedCategories, setExpandedCategories] = useState([""
+    "getting-started"
   ]);
   const toggleCategory = category => {}
     setExpandedCategories(prev =>
       prev.includes(category)
+
         ? prev.filter(c => c !== category)
+
         : [...prev, category]
     );
   };
-
   const helpCategories = {}
-'
-    'getting-started': {}
-'
-''
-'''
-      title: 'Getting Started',
+"
+    "getting-started": {}
+"
+""
+"""
+      title: "Getting Started",
       icon: BookOpen,
       articles: []
         {}
-'
-''
-'''
-          title: 'How to create your first account','''
-          href: '/help/create-account'},'''
-        { title: 'Complete profile setup guide', href: '/help/profile-setup' },
+"
+""
+"""
+          title: "How to create your first account","""
+          href: "/help/create-account"},"""
+        { title: "Complete profile setup guide", href: "/help/profile-setup" },
         {}
-'
-          title: 'Understanding the marketplace','
-          href: '/help/marketplace-guide'},'
-        { title: 'First steps for new users', href: '/help/first-steps' }
+"
+          title: "Understanding the marketplace","
+          href: "/help/marketplace-guide"},"
+        { title: "First steps for new users", href: "/help/first-steps" }
       ]},
     marketplace: {}
-'
-''
-'''
-      title: 'Marketplace',
+"
+""
+"""
+      title: "Marketplace",
       icon: BookOpen,
       articles: []
         {}
-'
-''
-'''
-          title: 'How to list products and services','''
-          href: '/help/list-products'},'''
-        { title: 'Managing your listings', href: '/help/manage-listings' },'''
-        { title: 'Understanding pricing and fees', href: '/help/pricing-fees' },
+"
+""
+"""
+          title: "How to list products and services","""
+          href: "/help/list-products"},"""
+        { title: "Managing your listings", href: "/help/manage-listings" },"""
+        { title: "Understanding pricing and fees", href: "/help/pricing-fees" },
         {}
-'
-          title: 'Marketplace policies and guidelines','
-          href: '/help/marketplace-policies'}
+"
+          title: "Marketplace policies and guidelines","
+          href: "/help/marketplace-policies"}
       ]},
     talent: {}
-'
-''
-'''
-      title: 'Talent & Hiring',''
-      icon: BookOpen,'''
-      articles: [''''
-        { title: 'Creating a talent profile', href: '/help/talent-profile' },'''
-        { title: 'Finding and hiring talent', href: '/help/hire-talent' },
+"
+""
+"""
+      title: "Talent & Hiring",""
+      icon: BookOpen,"""
+      articles: [""""
+        { title: "Creating a talent profile", href: "/help/talent-profile" },"""
+        { title: "Finding and hiring talent", href: "/help/hire-talent" },
         {}
-'
-          title: 'Managing projects and contracts','
-          href: '/help/manage-projects'},'
-        { title: 'Payment and escrow system', href: '/help/payment-system' }
+"
+          title: "Managing projects and contracts","
+          href: "/help/manage-projects"},"
+        { title: "Payment and escrow system", href: "/help/payment-system" }
       ]},
     technical: {}
-'
-''
-'''
-      title: 'Technical Support',''
-      icon: BookOpen,'''
-      articles: [''''
-        { title: 'Common technical issues', href: '/help/technical-issues' },'''
-        { title: 'Browser compatibility', href: '/help/browser-compatibility' },
+"
+""
+"""
+      title: "Technical Support",""
+      icon: BookOpen,"""
+      articles: [""""
+        { title: "Common technical issues", href: "/help/technical-issues" },"""
+        { title: "Browser compatibility", href: "/help/browser-compatibility" },
         {}
-'
-          title: 'Mobile app troubleshooting','
-          href: '/help/mobile-troubleshooting'},'
-        { title: 'API and integration support', href: '/help/api-support' }
+"
+          title: "Mobile app troubleshooting","
+          href: "/help/mobile-troubleshooting"},"
+        { title: "API and integration support", href: "/help/api-support" }
       ]},
     billing: {}
-'
-''
-'''
-      title: 'Billing & Payments',''
-      icon: BookOpen,'''
-      articles: [''''
-        { title: 'Understanding your invoice', href: '/help/invoice-guide' },
+"
+""
+"""
+      title: "Billing & Payments",""
+      icon: BookOpen,"""
+      articles: [""""
+        { title: "Understanding your invoice", href: "/help/invoice-guide" },
         {}
-'
-''
-'''
-          title: 'Payment methods and security','''
-          href: '/help/payment-methods'},
+"
+""
+"""
+          title: "Payment methods and security","""
+          href: "/help/payment-methods"},
         {}
-'
-''
-'''
-          title: 'Refund and cancellation policy','''
-          href: '/help/refund-policy'},
+"
+""
+"""
+          title: "Refund and cancellation policy","""
+          href: "/help/refund-policy"},
         {}
-'
-          title: 'Tax information and reporting','
-          href: '/help/tax-information'}
+"
+          title: "Tax information and reporting","
+          href: "/help/tax-information"}
       ]},
     account: {}
-'
-''
-'''
-      title: 'Account & Security',
+"
+""
+"""
+      title: "Account & Security",
       icon: BookOpen,
       articles: []
         {}
-'
-''
-'''
-          title: 'Account security best practices','''
-          href: '/help/account-security'},'''
-        { title: 'Two-factor authentication setup', href: '/help/2fa-setup' },
+"
+""
+"""
+          title: "Account security best practices","""
+          href: "/help/account-security"},"""
+        { title: "Two-factor authentication setup", href: "/help/2fa-setup" },
         {}
-'
-''
-'''
-          title: 'Password reset and recovery','''
-          href: '/help/password-recovery'},
+"
+""
+"""
+          title: "Password reset and recovery","""
+          href: "/help/password-recovery"},
         {}
-'
-          title: 'Privacy settings and data control','
-          href: '/help/privacy-settings'}
-      ]}};'
-  const popularArticles = [''
-    'How to create your first account',Understanding the marketplace',Creating a talent profile',Finding and hiring talent',Payment and escrow system',Account security best practices'
+"
+          title: "Privacy settings and data control","
+          href: "/help/privacy-settings"}
+      ]}};"
+  const popularArticles = [""
+    "How to create your first account",Understanding the marketplace",Creating a talent profile",Finding and hiring talent",Payment and escrow system",Account security best practices"
   ];
   return (<>
       <Helmet>
         <title>Help Center - Zion Tech Group</title>
-        <meta'
-          name="description"'"'"""
-          content="Get help and support for Zion Tech Group's platform. Find answers to common questions, tutorials, and contact information."""
-        />"""
+        <meta"
+          name="description"""""""
+          content="Get help and support for Zion Tech Group"s platform. Find answers to common questions, tutorials, and contact information.""" />"""
         <meta""""
           name="keywords""""
-          content="help center, support, FAQ, tutorials, Zion Tech Group""""
-        />""""
-        <link rel="canonical" href="https://ziontechgroup.com/help-center" />
+          content="help center, support, FAQ, tutorials, Zion Tech Group"""" />""""
+        <link rel="canonical" href="https://ziontechgroup.com/help-center"   />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">"""
-        {/* Hero Section */}""""
+        {/* comment */}""""
         <section className="pt-24 pb-16 px-4">""""
           <div className="container mx-auto text-center">""""
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">'"""
-              How can we{' '}""""
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">""""
+              How can we{" "}""""
               <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 help you?
               </span>"""
@@ -179,21 +177,20 @@ export default function HelpCenter() {}
               support you need to succeed with Zion Tech Group.
             </p>
 """
-            {/* Search Bar */}""""
+            {/* comment */}""""
             <div className="max-w-2xl mx-auto relative">""""
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />"""
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"   />"""
               <input""""
                 type="text""""
                 placeholder="Search for help articles, tutorials, or topics..."""
                 value={searchQuery}"""
                 onChange={e => setSearchQuery(e.target.value)}""""
-                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-zion-blue-light/30 rounded-xl text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"""
-              />
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-zion-blue-light/30 rounded-xl text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent""" />
             </div>
           </div>
         </section>
 """
-        {/* Help Categories */}""""
+        {/* comment */}""""
         <section className="py-16 px-4">""""
           <div className="container mx-auto">""""
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -219,9 +216,9 @@ export default function HelpCenter() {}
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors"""
                     >"""
                       {expandedCategories.includes(key) ? (""""
-                        <ChevronDown className="w-5 h-5" />"""
+                        <ChevronDown className="w-5 h-5"   />"""
                       ) : (""""
-                        <ChevronRight className="w-5 h-5" />
+                        <ChevronRight className="w-5 h-5"   />
                       )}
                     </button>
                   </div>
@@ -242,7 +239,7 @@ export default function HelpCenter() {}
           </div>
         </section>
 """
-        {/* Popular Articles */}""""
+        {/* comment */}""""
         <section className="py-16 px-4 bg-zion-blue-light/10">""""
           <div className="container mx-auto">""""
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -256,20 +253,20 @@ export default function HelpCenter() {}
                 >""""
                   <h3 className="text-lg font-semibold text-white mb-3">
                     {article}
-                  </h3>'
-                  <Link''"""
-                    to={`/help/${article.toLowerCase().replace(/\s+/g,-')}`}""""
+                  </h3>"
+                  <Link"""""
+                    to={"/help/${article.toLowerCase().replace(/\s+/g,-")}"}""""
                     className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors"""
                   >"""
                     Read Article""""
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2"   />
                   </Link>
                 </div>) ) }
             </div>
           </div>
         </section>
 """
-        {/* Contact Support */}""""
+        {/* comment */}""""
         <section className="py-16 px-4">""""
           <div className="container mx-auto text-center">""""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -283,7 +280,7 @@ export default function HelpCenter() {}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">""""
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">""""
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">""""
-                  <MessageSquare className="w-6 h-6 text-zion-cyan" />"""
+                  <MessageSquare className="w-6 h-6 text-zion-cyan"   />"""
                 </div>""""
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Live Chat"""
@@ -298,7 +295,7 @@ export default function HelpCenter() {}
 """"
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">""""
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">""""
-                  <Mail className="w-6 h-6 text-zion-cyan" />"""
+                  <Mail className="w-6 h-6 text-zion-cyan"   />"""
                 </div>""""
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Email Support"""
@@ -316,7 +313,7 @@ export default function HelpCenter() {}
 """"
               <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-blue-light/20 rounded-xl p-6">""""
                 <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mx-auto mb-4">""""
-                  <Phone className="w-6 h-6 text-zion-cyan" />"""
+                  <Phone className="w-6 h-6 text-zion-cyan"   />"""
                 </div>""""
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Phone Support"""
@@ -341,11 +338,7 @@ export default function HelpCenter() {}
 
 
 export { HelpCenter };
-
 export { HelpCenter };
-
 export { HelpCenter };
-
 export { HelpCenter };
-
 export { HelpCenter };

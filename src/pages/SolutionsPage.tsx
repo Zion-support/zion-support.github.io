@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from "react";
 const SolutionsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-20">
@@ -10,7 +9,6 @@ const SolutionsPage: React.FC = () => {
             Comprehensive technology solutions designed to meet your business needs.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Cloud Solutions</h3>
@@ -22,7 +20,6 @@ const SolutionsPage: React.FC = () => {
               Learn More →
             </a>
           </div>
-          
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Cybersecurity</h3>
             <p className="text-gray-600 mb-6">
@@ -38,5 +35,4 @@ const SolutionsPage: React.FC = () => {
     </div>
   );
 };
-
 export default SolutionsPage;

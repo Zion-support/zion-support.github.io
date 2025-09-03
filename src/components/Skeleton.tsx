@@ -5,12 +5,10 @@ interface SkeletonProps {
 ;
   );
 export default function Skeleton() {;
-
   if (lines === 1) {;
     return (";
     <div className={cn(";
           "animate-pulse bg-gray-200 rounded", className;
-
   if (lines === 1) {
     return ("
     <div className={cn("
@@ -24,7 +22,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
           "animate-pulse bg-gray-200 rounded",>
           className)}
 
-     />    )}
+    />    )}
 ;
   return (";
     <div className="space-y-2">;
@@ -43,7 +41,6 @@ export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (
       {Array.from({ length: lines }).map((_, i) => (";
         <div key="{i}" className="{cn(" "animate-pulse bg-gray-200 rounded h-4", i === lines - 1 ? "w-3/4" : "w-full" )} /" >;@/lib/utils;
 interface SkeletonProps {;
-
 export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (lines === 1) {
     return ("
     <div className="{cn(" "animate-pulse bg-gray-200 rounded", className )} /" >
@@ -61,7 +58,7 @@ interface SkeletonProps {
           className>;
         )}
 
-     />
+    />
     )}
 
   return ("
@@ -77,7 +74,7 @@ interface SkeletonProps {
             &apos;animate-pulse bg-gray-200 rounded h-4&apos,
             i === lines - 1 ? &apos;w-3/4&apos; : &apos;w-full&apos)}
 
-       />
+      />
       ))}&apos
     </div>
   )}
@@ -105,7 +102,7 @@ interface SkeletonProps {
           className>
         )}
 
-     />
+    />
     )}
 
   return ("
@@ -124,13 +121,13 @@ interface SkeletonProps {
             i === lines - 1 ? "w-3/4" : "w-full>
           )}
 
-       />
+      />
       ))}
 
     </div>
   )}
 
-       />
+      />
       ))}"
     </div>""
   )}""

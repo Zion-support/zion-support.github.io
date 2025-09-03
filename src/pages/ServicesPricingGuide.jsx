@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {}
-  EXPANDED_SERVICES,'
-  EXPANDED_SERVICE_CATEGORIES} from '@/data/expandedServices';'
-import { Button } from '@/components/ui/button';
+  EXPANDED_SERVICES,"
+  EXPANDED_SERVICE_CATEGORIES} from "@/data/expandedServices";"
+import { Button } from "@/components/ui/button";
 import {}
   Card,
-  CardContent,'
-  CardDescription,''
-  CardHeader,'''
-  CardTitle} from '@/components/ui/card';'''
-import { Badge } from '@/components/ui/badge';'''
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+  CardContent,"
+  CardDescription,""
+  CardHeader,"""
+  CardTitle} from "@/components/ui/card";"""
+import { Badge } from "@/components/ui/badge";"""
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {}
   Table,
   TableBody,
-  TableCell,'
-  TableHead,''
-  TableHeader,'''
-  TableRow} from '@/components/ui/table';
+  TableCell,"
+  TableHead,""
+  TableHeader,"""
+  TableRow} from "@/components/ui/table";
 import {}
   CheckCircle,
   Star,
@@ -27,68 +27,69 @@ import {}
   Phone,
   MapPin,
   ExternalLink,
-  TrendingUp,'
-  Shield,''
-  Zap,'''
-  DollarSign} from 'lucide-react';'''
-import SEO from '@/components/SEO';
+  TrendingUp,"
+  Shield,""
+  Zap,"""
+  DollarSign} from "lucide-react";"""
+import SEO from "@/components/SEO";
 export default function ServicesPricingGuide() {}
-'
-''
-'''
-  const [selectedCategory, setSelectedCategory] = useState('all');'''
-  const filteredServices =''''
-    selectedCategory === 'all'
+"
+""
+"""
+  const [selectedCategory, setSelectedCategory] = useState("all");"""
+  const filteredServices =""""
+    selectedCategory === "all"
       ? EXPANDED_SERVICES;
       : EXPANDED_SERVICES.filter()
-          service =>'
-            service.category.toLowerCase().replace(/\s+/g,-') ===
+
+          service =>"
+            service.category.toLowerCase().replace(/\s+/g,-") ===
             selectedCategory;
         );
   const getPriceTier = price => {}
-'
-''
-'''
-    if (price < 10000) return 'Starter';'''
-    if (price < 25000) return 'Professional';'''
-    return 'Enterprise';
+"
+""
+"""
+    if (price < 10000) return "Starter";"""
+    if (price < 25000) return "Professional";"""
+    return "Enterprise";
   };
   const getPriceTierColor = tier => {}
     switch (tier) {}
-'
-''
-'''
-      case 'Starter':''''
-        return 'bg-green-500';'''
-      case 'Professional':''''
-        return 'bg-blue-500';'''
-      case 'Enterprise':''''
-        return 'bg-purple-500';'''
-      default:''''
-        return 'bg-gray-500';
+"
+""
+"""
+      case "Starter":""""
+        return "bg-green-500";"""
+      case "Professional":""""
+        return "bg-blue-500";"""
+      case "Enterprise":""""
+        return "bg-purple-500";"""
+      default:""""
+        return "bg-gray-500";
     }
   };
   const getServiceIcon = category => {}
     switch (category) {}
-'
-      case 'AI Development': any;
-        return <TrendingUp className="w-5 h-5 text-blue-500" />;'"""
-      case 'Cloud Services':""""
-        return <Globe className="w-5 h-5 text-green-500" />;'"""
-      case 'Cybersecurity':""""
-        return <Shield className="w-5 h-5 text-red-500" />;'"""
-      case 'Data & Analytics':""""
-        return <TrendingUp className="w-5 h-5 text-purple-500" />;'"""
-      case 'Digital Transformation':""""
-        return <Zap className="w-5 h-5 text-yellow-500" />;'"""
-      case 'IoT & Edge Computing':""""
-        return <Globe className="w-5 h-5 text-indigo-500" />;'"""
-      case 'Blockchain & Web3':""""
-        return <TrendingUp className="w-5 h-5 text-orange-500" />;'"""
-      case 'AR/VR & Metaverse':""""
-        return <Globe className="w-5 h-5 text-pink-500" />;"""
+"
+      case "AI Development": any;
+        return <TrendingUp className="w-5 h-5 text-blue-500"   />;""""
+      case "Cloud Services":""""
+        return <Globe className="w-5 h-5 text-green-500"   />;""""
+      case "Cybersecurity":""""
+        return <Shield className="w-5 h-5 text-red-500"   />;""""
+      case "Data & Analytics":""""
+        return <TrendingUp className="w-5 h-5 text-purple-500"   />;""""
+      case "Digital Transformation":""""
+        return <Zap className="w-5 h-5 text-yellow-500"   />;""""
+      case "IoT & Edge Computing":""""
+        return <Globe className="w-5 h-5 text-indigo-500"   />;""""
+      case "Blockchain & Web3":""""
+        return <TrendingUp className="w-5 h-5 text-orange-500"   />;""""
+      case "AR/VR & Metaverse":""""
+        return <Globe className="w-5 h-5 text-pink-500"   />;"""
       default:""""
-        return <TrendingUp className="w-5 h-5 text-gray-500" />;
+        return <TrendingUp className="w-5 h-5 text-gray-500"   />;
     }
   };"""
   return (""""
@@ -97,10 +98,9 @@ export default function ServicesPricingGuide() {}
         title="Services Pricing Guide - Zion Tech Group""""
         description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio.""""
         keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing""""
-        canonical="https://ziontechgroup.com/services-pricing-guide"""
-      />
+        canonical="https://ziontechgroup.com/services-pricing-guide""" />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">""""
         <div className="container mx-auto text-center">""""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -116,7 +116,7 @@ export default function ServicesPricingGuide() {}
               size="lg""""
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light""""
             >""""
-              <Mail className="w-5 h-5 mr-2" />
+              <Mail className="w-5 h-5 mr-2"   />
               Get Custom Quote;
             </Button>"""
             <Button""""
@@ -124,31 +124,31 @@ export default function ServicesPricingGuide() {}
               variant="outline""""
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10""""
             >""""
-              <Phone className="w-5 h-5 mr-2" />
+              <Phone className="w-5 h-5 mr-2"   />
               Call + 1 302 464 0950;
             </Button>
           </div>
         </div>
       </div>
 """
-      {/* Contact Information Banner */}""""
+      {/* comment */}""""
       <div className="bg-zion-blue-dark py-6 px-4 border-b border-zion-blue-light">""""
         <div className="container mx-auto">""""
           <div className="flex flex-wrap items-center justify-center gap-8 text-zion-cyan">""""
             <div className="flex items-center gap-2">""""
-              <Phone className="w-5 h-5" />
+              <Phone className="w-5 h-5"   />
               <span>+1 302 464 0950</span>"""
             </div>""""
             <div className="flex items-center gap-2">""""
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5"   />
               <span>kleber@ziontechgroup.com</span>"""
             </div>""""
             <div className="flex items-center gap-2">""""
-              <MapPin className="w-5 h-5" />
+              <MapPin className="w-5 h-5"   />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>"""
             </div>""""
             <div className="flex items-center gap-2">""""
-              <ExternalLink className="w-5 h-5" />"""
+              <ExternalLink className="w-5 h-5"   />"""
               <a""""
                 href="https://ziontechgroup.com""""
                 target="_blank""""
@@ -162,20 +162,20 @@ export default function ServicesPricingGuide() {}
         </div>
       </div>
 """
-      {/* Category Filter */}""""
+      {/* comment */}""""
       <div className="bg-zion-blue py-8 px-4">""""
         <div className="container mx-auto">""""
-          <div className="flex flex-wrap justify-center gap-4">'
-            <Button''
-              variant={selectedCategory === 'all' ? 'default' : 'outline'}'
-              onClick={() => setSelectedCategory('all')}
+          <div className="flex flex-wrap justify-center gap-4">"
+            <Button""
+              variant={selectedCategory === "all" ? "default" : "outline"}"
+              onClick={() => setSelectedCategory("all")}
               className={}
-'
-''
-'''
-                selectedCategory === 'all'''''
-                  ? 'bg-zion-purple text-white'''''
-                  : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10'
+"
+""
+"""
+                selectedCategory === "all"""""
+                  ? "bg-zion-purple text-white"""""
+                  : "border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10"
               }
             >
               All Services;
@@ -183,19 +183,19 @@ export default function ServicesPricingGuide() {}
             {EXPANDED_SERVICE_CATEGORIES.map(category => (<Button;
                 key={category.value}
                 variant={}
-'
-''
-'''
-                  selectedCategory === category.value ? 'default' : 'outline'
+"
+""
+"""
+                  selectedCategory === category.value ? "default" : "outline"
                 }
                 onClick={ () => setSelectedCategory(category.value) }
                 className={}
-'
-''
-'''
-                  selectedCategory === category.value''''
-                    ? 'bg-zion-purple text-white'''''
-                    : 'border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10'
+"
+""
+"""
+                  selectedCategory === category.value""""
+                    ? "bg-zion-purple text-white"""""
+                    : "border-zion-purple/50 text-zion-purple hover:bg-zion-purple/10"
                 }
               >
                 {category.label}
@@ -204,7 +204,7 @@ export default function ServicesPricingGuide() {}
         </div>
       </div>
 """
-      {/* Pricing Overview */}""""
+      {/* comment */}""""
       <div className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -221,7 +221,7 @@ export default function ServicesPricingGuide() {}
             <Card className="bg-zion-blue-dark border-zion-blue-light">""""
               <CardHeader className="text-center">""""
                 <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                  <DollarSign className="w-8 h-8 text-white" />"""
+                  <DollarSign className="w-8 h-8 text-white"   />"""
                 </div>""""
                 <CardTitle className="text-white">Starter Tier</CardTitle>""""
                 <CardDescription className="text-zion-slate-light">
@@ -235,15 +235,15 @@ export default function ServicesPricingGuide() {}
                 </p>""""
                 <ul className="text-sm text-zion-slate-light space-y-2">""""
                   <li className="flex items-center justify-center gap-2">""""
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-green-400"   />
                     Basic implementation"""
                   </li>""""
                   <li className="flex items-center justify-center gap-2">""""
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-green-400"   />
                     Standard support"""
                   </li>""""
                   <li className="flex items-center justify-center gap-2">""""
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-green-400"   />
                     Documentation included;
                   </li>
                 </ul>
@@ -253,7 +253,7 @@ export default function ServicesPricingGuide() {}
             <Card className="bg-zion-blue-dark border-zion-purple/50">""""
               <CardHeader className="text-center">""""
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                  <DollarSign className="w-8 h-8 text-white" />"""
+                  <DollarSign className="w-8 h-8 text-white"   />"""
                 </div>""""
                 <CardTitle className="text-white">Professional Tier</CardTitle>""""
                 <CardDescription className="text-zion-slate-light">
@@ -267,15 +267,15 @@ export default function ServicesPricingGuide() {}
                 </p>""""
                 <ul className="text-sm text-zion-slate-light space-y-2">""""
                   <li className="flex items-center justify-center gap-2">""""
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-green-400"   />
                     Advanced features"""
                   </li>""""
                   <li className="flex items-center justify-center gap-2">""""
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-green-400"   />
                     Priority support"""
                   </li>""""
                   <li className="flex items-center justify-center gap-2">""""
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-green-400"   />
                     Training included;
                   </li>
                 </ul>
@@ -285,7 +285,7 @@ export default function ServicesPricingGuide() {}
             <Card className="bg-zion-blue-dark border-zion-blue-light">""""
               <CardHeader className="text-center">""""
                 <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                  <DollarSign className="w-8 h-8 text-white" />"""
+                  <DollarSign className="w-8 h-8 text-white"   />"""
                 </div>""""
                 <CardTitle className="text-white">Enterprise Tier</CardTitle>""""
                 <CardDescription className="text-zion-slate-light">
@@ -299,15 +299,15 @@ export default function ServicesPricingGuide() {}
                 </p>""""
                 <ul className="text-sm text-zion-slate-light space-y-2">""""
                   <li className="flex items-center justify-center gap-2">""""
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-green-400"   />
                     Full customization"""
                   </li>""""
                   <li className="flex items-center justify-center gap-2">""""
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-green-400"   />
                     24/7 dedicated support"""
                   </li>""""
                   <li className="flex items-center justify-center gap-2">""""
-                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    <CheckCircle className="w-4 h-4 text-green-400"   />
                     Ongoing maintenance;
                   </li>
                 </ul>
@@ -315,7 +315,7 @@ export default function ServicesPricingGuide() {}
             </Card>
           </div>
 """
-          {/* Services Table */}""""
+          {/* comment */}""""
           <Tabs defaultValue="table" className="w-full">""""
             <TabsList className="grid w-full grid-cols-2 bg-zion-blue-dark border-zion-blue-light">""""
               <TabsTrigger value="table" className="text-white">
@@ -374,21 +374,22 @@ export default function ServicesPricingGuide() {}
                         </TableCell>
                         <TableCell>
                           <Badge;
-                            className={`${getPriceTierColor(getPriceTier (service.price || 0) ) } text-white`}
+                            className={"${getPriceTierColor(getPriceTier (service.price || 0) ) } text-white"}
                           >
                             {getPriceTier(service.price || 0)}
                           </Badge>"""
                         </TableCell>""""
                         <TableCell className="text-zion-slate-light">""""
                           <div className="flex items-center gap-2">""""
-                            <Clock className="w-4 h-4" />
+                            <Clock className="w-4 h-4"   />
                             {service.availability}
                           </div>"""
                         </TableCell>""""
                         <TableCell className="text-white">""""
                           <div className="flex items-center gap-1">""""
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                            <Star className="w-4 h-4 text-yellow-400 fill-current"   />
                             {service.rating} ({service.reviewCount})
+
                           </div>
                         </TableCell>
                         <TableCell>"""
@@ -396,7 +397,7 @@ export default function ServicesPricingGuide() {}
                             size="sm""""
                             className="bg-zion-purple hover:bg-zion-purple-dark text-white""""
                           >""""
-                            <Mail className="w-4 h-4 mr-2" />
+                            <Mail className="w-4 h-4 mr-2"   />
                             Quote;
                           </Button>
                         </TableCell>
@@ -415,9 +416,9 @@ export default function ServicesPricingGuide() {}
                   >""""
                     <CardHeader className="pb-4">""""
                       <div className="flex items-start justify-between mb-3">
-                        {getServiceIcon(service.category)}`
-                        <Badge``
-                          className={`${getPriceTierColor(getPriceTier(service.price || 0))} text-white`}
+                        {getServiceIcon(service.category)}"
+                        <Badge""
+                          className={"${getPriceTierColor(getPriceTier(service.price || 0))} text-white`}
                         >
                           {getPriceTier(service.price || 0)}
                         </Badge>"""
@@ -437,31 +438,32 @@ export default function ServicesPricingGuide() {}
 """"
                       <div className="space-y-2 text-sm text-zion-slate-light">""""
                         <div className="flex items-center gap-2">""""
-                          <Clock className="w-4 h-4" />
+                          <Clock className="w-4 h-4"   />
                           <span>Delivery: {service.availability}</span>"""
                         </div>""""
                         <div className="flex items-center gap-2">""""
-                          <Globe className="w-4 h-4" />
+                          <Globe className="w-4 h-4"   />
                           <span>Location: {service.location}</span>
                         </div>"""
                         {service.aiScore && (""""
                           <div className="flex items-center gap-2">""""
-                            <TrendingUp className="w-4 h-4" />
+                            <TrendingUp className="w-4 h-4"   />
                             <span>AI Score: {service.aiScore}/100</span>
                           </div>
                         )}
                       </div>"""
 """"
                       <div className="flex items-center gap-2">""""
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />""""
+                        <Star className="w-4 h-4 text-yellow-400 fill-current"   />""""
                         <span className="text-white">{service.rating}</span>""""
                         <span className="text-zion-slate-light">
                           ({service.reviewCount} reviews)
+
                         </span>
                       </div>"""
 """"
                       <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">""""
-                        <Mail className="w-4 h-4 mr-2" />
+                        <Mail className="w-4 h-4 mr-2"   />
                         Get Quote;
                       </Button>
                     </CardContent>
@@ -472,7 +474,7 @@ export default function ServicesPricingGuide() {}
         </div>
       </div>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">""""
         <div className="container mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -487,7 +489,7 @@ export default function ServicesPricingGuide() {}
               size="lg""""
               className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light""""
             >""""
-              <Mail className="w-5 h-5 mr-2" />
+              <Mail className="w-5 h-5 mr-2"   />
               Request Custom Quote;
             </Button>"""
             <Button""""
@@ -495,13 +497,13 @@ export default function ServicesPricingGuide() {}
               variant="outline""""
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10""""
             >""""
-              <Phone className="w-5 h-5 mr-2" />
+              <Phone className="w-5 h-5 mr-2"   />
               Call +1 302 464 0950;
             </Button>"""
           </div>""""
           <div className="mt-8 text-zion-cyan">
-            <p>'
-              Visit us at:{' '}"""
+            <p>"
+              Visit us at:{" "}"""
               <a""""
                 href="https://ziontechgroup.com""""
                 target="_blank""""
@@ -519,11 +521,7 @@ export default function ServicesPricingGuide() {}
 
 
 export { ServicesPricingGuide };
-
 export { ServicesPricingGuide };
-
 export { ServicesPricingGuide };
-
 export { ServicesPricingGuide };
-
 export { ServicesPricingGuide };

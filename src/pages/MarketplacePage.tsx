@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { 
-  Search, 
-  Filter, 
-  Star, 
-  ShoppingCart, 
-  Heart, 
-  Eye, 
-  Download, 
+  Search,
+  Filter,
+  Star,
+  ShoppingCart,
+  Heart,
+  Eye,
+  Download,
   Play,
   Users,
   TrendingUp,
@@ -26,139 +26,134 @@ import {
   BarChart3,
   Globe,
   Lock
-} from 'lucide-react';
-
+} from "lucide-react";
 export function MarketplacePage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
   const categories = [
-    { id: 'all', name: 'All Products', icon: Globe },
-    { id: 'ai', name: 'AI Solutions', icon: Brain },
-    { id: 'security', name: 'Security', icon: Shield },
-    { id: 'cloud', name: 'Cloud Services', icon: Cloud },
-    { id: 'data', name: 'Data Analytics', icon: Database },
-    { id: 'development', name: 'Development Tools', icon: Code },
-    { id: 'automation', name: 'Automation', icon: Settings },
-    { id: 'analytics', name: 'Analytics', icon: BarChart3 }
+    { id: "all", name: "All Products", icon: Globe },
+    { id: "ai", name: "AI Solutions", icon: Brain },
+    { id: "security", name: "Security", icon: Shield },
+    { id: "cloud", name: "Cloud Services", icon: Cloud },
+    { id: "data", name: "Data Analytics", icon: Database },
+    { id: "development", name: "Development Tools", icon: Code },
+    { id: "automation", name: "Automation", icon: Settings },
+    { id: "analytics", name: "Analytics", icon: BarChart3 }
   ];
-
   const marketplaceProducts = [
     {
       id: 1,
-      title: 'AI Sales Copilot Pro',
-      category: 'ai',
-      description: 'Advanced AI-powered sales assistant that helps close deals faster and increase conversion rates.',
-      price: '$299/month',
-      originalPrice: '$399/month',
+      title: "AI Sales Copilot Pro",
+      category: "ai",
+      description: "Advanced AI-powered sales assistant that helps close deals faster and increase conversion rates.",
+      price: "$299/month",
+      originalPrice: "$399/month",
       rating: 4.9,
       reviews: 127,
       downloads: 2500,
-      image: '🤖',
-      features: ['Lead Scoring', 'Email Automation', 'CRM Integration', 'Analytics Dashboard'],
-      tags: ['AI', 'Sales', 'CRM', 'Automation'],
+      image: "🤖",
+      features: ["Lead Scoring", "Email Automation", "CRM Integration", "Analytics Dashboard"],
+      tags: ["AI", "Sales", "CRM", "Automation"],
       isFeatured: true,
       isNew: false,
-      vendor: 'Zion Tech Group'
+      vendor: "Zion Tech Group"
     },
     {
       id: 2,
-      title: 'Enterprise Security Suite',
-      category: 'security',
-      description: 'Comprehensive cybersecurity solution with threat detection, compliance management, and incident response.',
-      price: '$599/month',
-      originalPrice: '$799/month',
+      title: "Enterprise Security Suite",
+      category: "security",
+      description: "Comprehensive cybersecurity solution with threat detection, compliance management, and incident response.",
+      price: "$599/month",
+      originalPrice: "$799/month",
       rating: 4.8,
       reviews: 89,
       downloads: 1800,
-      image: '🛡️',
-      features: ['Threat Detection', 'Compliance', 'Incident Response', 'Security Analytics'],
-      tags: ['Security', 'Compliance', 'Threat Detection', 'Enterprise'],
+      image: "🛡️",
+      features: ["Threat Detection", "Compliance", "Incident Response", "Security Analytics"],
+      tags: ["Security", "Compliance", "Threat Detection", "Enterprise"],
       isFeatured: true,
       isNew: true,
-      vendor: 'Zion Tech Group'
+      vendor: "Zion Tech Group"
     },
     {
       id: 3,
-      title: 'Cloud FinOps Optimizer',
-      category: 'cloud',
-      description: 'Intelligent cloud cost optimization platform that reduces spending while maintaining performance.',
-      price: '$199/month',
-      originalPrice: '$299/month',
+      title: "Cloud FinOps Optimizer",
+      category: "cloud",
+      description: "Intelligent cloud cost optimization platform that reduces spending while maintaining performance.",
+      price: "$199/month",
+      originalPrice: "$299/month",
       rating: 4.7,
       reviews: 156,
       downloads: 3200,
-      image: '☁️',
-      features: ['Cost Optimization', 'Resource Management', 'Automated Scaling', 'Cost Analytics'],
-      tags: ['Cloud', 'FinOps', 'Cost Optimization', 'AWS'],
+      image: "☁️",
+      features: ["Cost Optimization", "Resource Management", "Automated Scaling", "Cost Analytics"],
+      tags: ["Cloud", "FinOps", "Cost Optimization", "AWS"],
       isFeatured: false,
       isNew: false,
-      vendor: 'Zion Tech Group'
+      vendor: "Zion Tech Group"
     },
     {
       id: 4,
-      title: 'AI Business Intelligence Platform',
-      category: 'ai',
-      description: 'Transform your data into actionable insights with advanced AI-powered analytics and reporting.',
-      price: '$399/month',
-      originalPrice: '$499/month',
+      title: "AI Business Intelligence Platform",
+      category: "ai",
+      description: "Transform your data into actionable insights with advanced AI-powered analytics and reporting.",
+      price: "$399/month",
+      originalPrice: "$499/month",
       rating: 4.9,
       reviews: 203,
       downloads: 4100,
-      image: '📊',
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Data Visualization'],
-      tags: ['AI', 'Analytics', 'Business Intelligence', 'Data'],
+      image: "📊",
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "Data Visualization"],
+      tags: ["AI", "Analytics", "Business Intelligence", "Data"],
       isFeatured: true,
       isNew: false,
-      vendor: 'Zion Tech Group'
+      vendor: "Zion Tech Group"
     },
     {
       id: 5,
-      title: 'DevOps Automation Toolkit',
-      category: 'development',
-      description: 'Complete DevOps automation solution with CI/CD pipelines, monitoring, and deployment tools.',
-      price: '$149/month',
-      originalPrice: '$199/month',
+      title: "DevOps Automation Toolkit",
+      category: "development",
+      description: "Complete DevOps automation solution with CI/CD pipelines, monitoring, and deployment tools.",
+      price: "$149/month",
+      originalPrice: "$199/month",
       rating: 4.6,
       reviews: 94,
       downloads: 2800,
-      image: '⚙️',
-      features: ['CI/CD Pipelines', 'Monitoring', 'Deployment', 'Infrastructure as Code'],
-      tags: ['DevOps', 'CI/CD', 'Automation', 'Monitoring'],
+      image: "⚙️",
+      features: ["CI/CD Pipelines", "Monitoring", "Deployment", "Infrastructure as Code"],
+      tags: ["DevOps", "CI/CD", "Automation", "Monitoring"],
       isFeatured: false,
       isNew: true,
-      vendor: 'Zion Tech Group'
+      vendor: "Zion Tech Group"
     },
     {
       id: 6,
-      title: 'Customer Support AI',
-      category: 'ai',
-      description: 'Intelligent customer support automation with chatbots, ticket routing, and sentiment analysis.',
-      price: '$249/month',
-      originalPrice: '$349/month',
+      title: "Customer Support AI",
+      category: "ai",
+      description: "Intelligent customer support automation with chatbots, ticket routing, and sentiment analysis.",
+      price: "$249/month",
+      originalPrice: "$349/month",
       rating: 4.8,
       reviews: 178,
       downloads: 3600,
-      image: '💬',
-      features: ['Chatbots', 'Ticket Routing', 'Sentiment Analysis', 'Knowledge Base'],
-      tags: ['AI', 'Customer Support', 'Chatbots', 'Automation'],
+      image: "💬",
+      features: ["Chatbots", "Ticket Routing", "Sentiment Analysis", "Knowledge Base"],
+      tags: ["AI", "Customer Support", "Chatbots", "Automation"],
       isFeatured: false,
       isNew: false,
-      vendor: 'Zion Tech Group'
+      vendor: "Zion Tech Group"
     }
   ];
-
   const filteredProducts = marketplaceProducts.filter(product => {
-    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
+    const matchesCategory = selectedCategory === "all" || product.category === selectedCategory;
     const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
-
   return (
     <div className="min-h-screen bg-zion-slate-dark">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-darker py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
@@ -169,22 +164,19 @@ export function MarketplacePage() {
               Discover, purchase, and deploy cutting-edge technology solutions from our curated marketplace. 
               All products are enterprise-ready and backed by our support team.
             </p>
-            
-            {/* Search Bar */}
+            {/* comment */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"   />
                 <input
                   type="text"
                   placeholder="Search products, solutions, or technologies..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-zion-slate-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                />
+                  className="w-full pl-12 pr-4 py-4 bg-zion-slate-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent" />
               </div>
             </div>
-
-            {/* Quick Stats */}
+            {/* comment */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-zion-cyan">50+</div>
@@ -206,8 +198,7 @@ export function MarketplacePage() {
           </div>
         </div>
       </section>
-
-      {/* Categories Filter */}
+      {/* comment */}
       <section className="py-8 bg-zion-slate-darker border-b border-zion-purple/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-4 justify-center">
@@ -215,11 +206,11 @@ export function MarketplacePage() {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                className={"flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                   selectedCategory === category.id
-                    ? 'bg-zion-cyan text-white'
-                    : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'
-                }`}
+                    ? "bg-zion-cyan text-white"
+                    : "bg-zion-slate-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-white"
+                }"}
               >
                 <category.icon className="w-4 h-4" />
                 <span>{category.name}</span>
@@ -228,33 +219,30 @@ export function MarketplacePage() {
           </div>
         </div>
       </section>
-
-      {/* Products Grid */}
+      {/* comment */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-bold text-white">
-              {selectedCategory === 'all' ? 'All Products' : categories.find(c => c.id === selectedCategory)?.name}
+              {selectedCategory === "all" ? "All Products" : categories.find(c => c.id === selectedCategory)?.name}
             </h2>
             <div className="flex items-center space-x-4">
               <span className="text-zion-slate-light">
                 {filteredProducts.length} products found
               </span>
               <button className="flex items-center space-x-2 text-zion-slate-light hover:text-white transition-colors">
-                <Filter className="w-4 h-4" />
+                <Filter className="w-4 h-4"   />
                 <span>Filter</span>
               </button>
             </div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-zion-slate-darker border border-zion-purple/20 rounded-lg overflow-hidden hover:border-zion-cyan/50 transition-all duration-300 group">
-                {/* Product Image/Icon */}
+                {/* comment */}
                 <div className="relative p-6 bg-gradient-to-br from-zion-blue-dark to-zion-slate-darker">
                   <div className="text-6xl text-center mb-4">{product.image}</div>
-                  
-                  {/* Badges */}
+                  {/* comment */}
                   <div className="absolute top-4 left-4 flex flex-col space-y-2">
                     {product.isFeatured && (
                       <span className="bg-zion-cyan text-white text-xs px-2 py-1 rounded-full">
@@ -267,40 +255,35 @@ export function MarketplacePage() {
                       </span>
                     )}
                   </div>
-
-                  {/* Actions */}
+                  {/* comment */}
                   <div className="absolute top-4 right-4 flex flex-col space-y-2">
                     <button className="p-2 bg-zion-slate-dark/80 rounded-full hover:bg-zion-slate-dark transition-colors">
-                      <Heart className="w-4 h-4 text-zion-slate-light hover:text-red-500" />
+                      <Heart className="w-4 h-4 text-zion-slate-light hover:text-red-500"   />
                     </button>
                     <button className="p-2 bg-zion-slate-dark/80 rounded-full hover:bg-zion-slate-dark transition-colors">
-                      <Eye className="w-4 h-4 text-zion-slate-light hover:text-zion-cyan" />
+                      <Eye className="w-4 h-4 text-zion-slate-light hover:text-zion-cyan"   />
                     </button>
                   </div>
                 </div>
-
-                {/* Product Info */}
+                {/* comment */}
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs text-zion-cyan bg-zion-blue-dark px-2 py-1 rounded">
                       {categories.find(c => c.id === product.category)?.name}
                     </span>
                     <div className="flex items-center space-x-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                      <Star className="w-4 h-4 text-yellow-400 fill-current"   />
                       <span className="text-sm text-zion-slate-light">{product.rating}</span>
                       <span className="text-xs text-zion-slate-light">({product.reviews})</span>
                     </div>
                   </div>
-
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                     {product.title}
                   </h3>
-                  
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                     {product.description}
                   </p>
-
-                  {/* Features */}
+                  {/* comment */}
                   <div className="mb-4">
                     <div className="flex flex-wrap gap-1">
                       {product.features.slice(0, 3).map((feature, index) => (
@@ -315,20 +298,18 @@ export function MarketplacePage() {
                       )}
                     </div>
                   </div>
-
-                  {/* Stats */}
+                  {/* comment */}
                   <div className="flex items-center justify-between mb-4 text-xs text-zion-slate-light">
                     <div className="flex items-center space-x-1">
-                      <Download className="w-3 h-3" />
+                      <Download className="w-3 h-3"   />
                       <span>{product.downloads.toLocaleString()}</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <Users className="w-3 h-3" />
+                      <Users className="w-3 h-3"   />
                       <span>{product.reviews} reviews</span>
                     </div>
                   </div>
-
-                  {/* Price */}
+                  {/* comment */}
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <span className="text-2xl font-bold text-white">{product.price}</span>
@@ -342,22 +323,20 @@ export function MarketplacePage() {
                       by {product.vendor}
                     </div>
                   </div>
-
-                  {/* Actions */}
+                  {/* comment */}
                   <div className="flex space-x-2">
                     <button className="flex-1 bg-zion-cyan text-white py-2 px-4 rounded-lg hover:bg-zion-cyan-light transition-colors flex items-center justify-center space-x-2">
-                      <ShoppingCart className="w-4 h-4" />
+                      <ShoppingCart className="w-4 h-4"   />
                       <span>Add to Cart</span>
                     </button>
                     <button className="px-4 py-2 border border-zion-purple/30 text-zion-slate-light rounded-lg hover:border-zion-cyan hover:text-zion-cyan transition-colors">
-                      <Play className="w-4 h-4" />
+                      <Play className="w-4 h-4"   />
                     </button>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
           {filteredProducts.length === 0 && (
             <div className="text-center py-12">
               <div className="text-6xl mb-4">🔍</div>
@@ -367,8 +346,8 @@ export function MarketplacePage() {
               </p>
               <button
                 onClick={() => {
-                  setSearchTerm('');
-                  setSelectedCategory('all');
+                  setSearchTerm("");
+                  setSelectedCategory("all");
                 }}
                 className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
               >
@@ -378,8 +357,7 @@ export function MarketplacePage() {
           )}
         </div>
       </section>
-
-      {/* Featured Section */}
+      {/* comment */}
       <section className="py-16 bg-zion-slate-darker">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -390,31 +368,28 @@ export function MarketplacePage() {
               Enterprise-grade solutions with comprehensive support and guaranteed quality
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-zion-cyan" />
+                <Shield className="w-8 h-8 text-zion-cyan"   />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise Ready</h3>
               <p className="text-zion-slate-light">
                 All products are tested, secure, and ready for enterprise deployment with full compliance support.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-zion-cyan" />
+                <Award className="w-8 h-8 text-zion-cyan"   />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Quality Guaranteed</h3>
               <p className="text-zion-slate-light">
                 Every product is vetted by our technical team and comes with a satisfaction guarantee.
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-zion-cyan" />
+                <Users className="w-8 h-8 text-zion-cyan"   />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Expert Support</h3>
               <p className="text-zion-slate-light">
@@ -424,12 +399,11 @@ export function MarketplacePage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Can't Find What You're Looking For?
+            Can"t Find What You"re Looking For?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Our team can help you find the perfect solution or create a custom solution tailored to your needs.
@@ -452,6 +426,4 @@ export function MarketplacePage() {
       </section>
     </div>
   );
-}
-
 export default MarketplacePage;

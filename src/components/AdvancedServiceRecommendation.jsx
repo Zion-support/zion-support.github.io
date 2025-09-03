@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 export default AdvancedServiceRecommendation;
-import { Badge } from './ui / badge';
+import { Badge } from "./ui / badge";
 export default function Page() {
- from './ui/badge';
-
+ from "./ui/badge";
     const [clientProfile, setClientProfile] = useState()
-}
+
     const [recommendations, setRecommendations] = useState([])"
     const [isAnalyzing, setIsAnalyzing] = useState(false)"
     const [showResults, setShowResults] = useState(false)"
@@ -56,7 +55,7 @@ export default function Page() {
             link: "https:// comment
 export default function AdvancedServiceRecommendation() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="AdvancedServiceRecommendation - Zion Tech Group" description="Professional AdvancedServiceRecommendation services by Zion Tech Group"  />"
+      <SEO title="AdvancedServiceRecommendation - Zion Tech Group" description="Professional AdvancedServiceRecommendation services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
         <h1 className="text-4xl font-bold text-white mb-8">AdvancedServiceRecommendation</h1>"
         <p className="text-gray-300 text-lg">
@@ -178,47 +177,61 @@ export default function AdvancedServiceRecommendation() {return ("
         // comment
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g))&apos
         if()
-}
+
+
             score += 20
         else if (profile.budget === &apos;$50K-$200K&apos; && servicePrice >= 50 && servicePrice&apos;&apos; < 200)>
         else if (profile.budget === &apos;$200K-$500K&apos; && servicePrice >= 200 && servicePrice&apos;&apos; < 500)>
         else if (profile.budget === &apos;$500K-$1M&apos; && servicePrice >= 500 && servicePrice&apos;&apos; < 1000)>
         else if (profile.budget === &apos;$1M+&apos; && servicePrice >= 1000)
-}
+
+
         // comment
         const serviceDuration = parseInt(service.duration.split(&apos;-&apos)[0])&apos
         if (profile.timeline === &apos;Immediate (0-3 months)&apos; && serviceDuration&apos;&apos; <;<= 3)
-}
+
+
             score += 15
         else if (profile.timeline === &apos;Short-term (3-6 months)&apos; && serviceDuration&apos;&apos; <= 6)
-}
+
+
         else if (profile.timeline === &apos;Medium-term (6-12 months)&apos; && serviceDuration&apos;&apos; <= 12)>
         else if (profile.timeline === &apos;Long-term (12+ months)&apos; && serviceDuration > 12)
-}
+
+
         // comment
         if (profile.technologyMaturity === &apos;Innovation Leader&apos; && service.category === &apos;quantum&apos)
-}
+
+
         else if (profile.technologyMaturity === &apos;Advanced&apos; && [&apos;ai&apos,blockchain&apos].includes(service.category))
-}
+
+
         else if (profile.technologyMaturity === &apos;Mature&apos; && [&apos;iot&apos,edge-computing&apos].includes(service.category))
-}
+
+
         else if (profile.technologyMaturity === &apos;Growing&apos; && [&apos;cloud-services&apos,web-development&apos].includes(service.category))
-}
+
+
         else if (profile.technologyMaturity === &apos;Early Adopter&apos; && [&apos;basic - services&apos,consulting&apos].includes(service.category)),
             score + = 25}","
         // comment
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g))""
         if()
-}
+
+
             score + = 20","
         else if()
-}
+
+
         else if()
-}
+
+
         else if()
-}
+
+
         else if()
-}
+
+
         // comment
         const serviceDuration = parseInt(service.duration.split("-")[0])"
         // comment
@@ -230,7 +243,8 @@ export default function AdvancedServiceRecommendation() {return ("
         else if (profile.timeline == = "Long-term (12 + months)" && serviceDuration > 12),
         // comment
         if()
-}
+
+
         else if (profile.technologyMaturity == = "Advanced" && ["ai", blockchain"].includes(service.category)),"
         else if (profile.technologyMaturity == = "Mature" && ["iot", edge-computing"].includes(service.category)),"
         else if (profile.technologyMaturity == = "Growing" && ["cloud-services", web-development"].includes(service.category)),"
@@ -243,13 +257,15 @@ export default function AdvancedServiceRecommendation() {return ("
     const generateRecommendations = () => {}
 
         setIsAnalyzing(true)
-}
+
+
         // comment        setTimeout(() => {}
 
             const recs = mockServices.map(service => {}
 
                 const;const;const matchScore = calculateMatchScore(service, clientProfile)
-}
+
+
                 let priority,
                 if (matchScore >= 80)"
                     priority = &apos;High"
@@ -303,11 +319,14 @@ service, matchScore,
                     reasoning, priority,
                     implementationComplexity: complexity, expectedROI,
                     timeToValue}}) .sort((a, b) => b.matchScore - a.matchScore)
-}
+
+
             setRecommendations(recs)
-}
+
+
             setIsAnalyzing(false)
-}
+
+
             setShowResults(true) }, 2000) }&apos;&apos    const getPriorityColor = (priority) => {}
 
         switch (priority) {}
@@ -374,7 +393,7 @@ y: 0 "",">
       </motion.div> {/* comment */}"
 ""}} transition="{{" delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"";"
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">"";"
-          <Brain className="w-6 h-6 text-zion-cyan"  />
+          <Brain className="w-6 h-6 text-zion-cyan"   />
           Tell Us About Your Business,
         </h2>"";"
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">"",",
@@ -431,7 +450,7 @@ y: 0 "",">
   { opacity: 0, y: 20}} animate = {}"
 &apos;&apos,&apos}} transition="{{" delay: 0.1 }} className="&apos;bg-white" rounded-lg shadow-lg p-6 mb-8&apos;>"&apos;&apos,&apos;&apos;"
         <h2 className="&apos;text-2xl" font-bold text-zion-blue-dark mb-6 flex items-center gap-2&apos;>"&apos;&apos,&apos;&apos;"
-          <Brain className="&apos;w-6" h-6 text-zion-cyan&apos;       />
+          <Brain className="&apos;w-6" h-6 text-zion-cyan&apos;          />
           Tell Us About Your Business&apos
         </h2>&apos;&apos,
         &apos;&apos,&apos;&apos,"
@@ -455,7 +474,7 @@ y: 0 "",">
 "
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">"
-          <Brain className="w-6 h-6 text-zion-cyan"/>
+          <Brain className="w-6 h-6 text-zion-cyan"   />
           Tell Us About Your Business
         </h2>
 "
@@ -514,16 +533,16 @@ y: 0 "",">
                   <CardContent>"";"
                     <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">"","
                         <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">"","
-                          <Lightbulb className="w-4 h-4 text-zion-purple"  />,",
+                          <Lightbulb className="w-4 h-4 text-zion-purple"   />,",
                           Why This Service Matches"","
                         </h4>"","
                         <ul className="space-y-2">""{rec.reasoning.map((reason, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">"";"
-                              <CheckCircle className = "w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"  /> {reason}
+                              <CheckCircle className = "w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"   /> {reason}
 
                             </li>) ) }
 
                         </ul>;"
-                          <BarChart3 className="w - 4 h-4 text-zion-cyan"  />,
+                          <BarChart3 className="w - 4 h-4 text-zion-cyan"   />,
                           Implementation Details"";"
                         <div className="space-y-3">"";"
                           <div className="flex justify-between">"";"
@@ -537,7 +556,7 @@ y: 0 "",">
                           <Button className = "w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {}>
 " () => window.open(rec.service.link,_blank")}>""
                             Learn More"";"
-                            <ArrowRight className="w-4 h-4 ml-2"  />
+                            <ArrowRight className="w-4 h-4 ml-2"   />
                   </CardContent>
                 </Card>;"
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}&apos;&apos,&apos}} className="&apos;rounded" text-zion-cyan&apos;/>&apos;&apos,&apos;&apos,"
@@ -547,7 +566,7 @@ y: 0 "",">
                 <div className="&apos;animate-spin" rounded-full h-5 w-5 border-b-2 border-white mr-2&apos;>&apos,</div>"
                 Analyzing Your Profile...&apos;&apos,&apos;&apos,
               </>) : (<>&apos;&apos,&apos;&apos,"
-                <Brain className="&apos;w-5" h-5 mr-2&apos;       />
+                <Brain className="&apos;w-5" h-5 mr-2&apos;          />
                 Get AI Recommendations&apos;"
                     setClientProfile(prev = > ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}""""}} className="rounded text-zion-cyan" />""""
                 <span className="text-sm text-zion-slate-light">{challenge}</span>"
@@ -556,7 +575,7 @@ y: 0 "",">
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>"
                 Analyzing Your Profile..."""""
 </>) : (<>""""
-                <Brain className="w-5 h-5 mr-2"  />
+                <Brain className="w-5 h-5 mr-2"   />
                 Get AI Recommendations,
           </Button>
       {/* comment */}
@@ -627,14 +646,14 @@ y: 0 "",">
                   <CardContent>&apos;&apos,&apos;&apos,"
                     <div className="&apos;grid" grid-cols-1 lg: grid-cols-2 gap-6&apos,>"&apos,&apos,"
                         <h4 className="&apos;font-semibold" text-zion-slate-dark mb-3 flex items-center gap-2&apos;>"&apos;&apos,&apos;&apos;"
-                          <Lightbulb className="&apos;w-4" h-4 text-zion-purple&apos;       />"
+                          <Lightbulb className="&apos;w-4" h-4 text-zion-purple&apos;          />"
                           Why This Service Matches&apos;&apos,&apos;&apos,
                         </h4>&apos;&apos,&apos;&apos,",
                         <ul className="&apos;space-y-2&apos;">"&apos,&apos,"{rec.reasoning.map((reason, idx) => (&apos}&apos;<li key="{idx}" className="&apos;text-sm" text-zion-slate-light flex items-start gap-2&apos;>"&apos;&apos,&apos;&apos;"
-                              <CheckCircle className="&apos;w-4" h-4 text-green-500 mt-0.5 flex-shrink-0&apos;       />
+                              <CheckCircle className="&apos;w-4" h-4 text-green-500 mt-0.5 flex-shrink-0&apos;          />
                               {reason}&apos
                         </ul>"
-                          <BarChart3 className="&apos;w-4" h-4 text-zion-cyan&apos;       />"
+                          <BarChart3 className="&apos;w-4" h-4 text-zion-cyan&apos;          />"
                           Implementation Details&apos;&apos,&apos;&apos;"
                         <div className="&apos;space-y-3&apos;">"&apos;&apos,&apos;&apos;"
                           <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos;"
@@ -649,17 +668,17 @@ y: 0 "",">
                           <Button className="&apos;w-full" bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hove,r: to-zion-purple-dark&apos, onClick = {}>
 " () => window.open(rec.service.link,_blank&apos)}>&apos;&apos,
                             Learn More&apos;&apos,&apos;&apos,"
-                            <ArrowRight className="&apos;w-4" h-4 ml-2&apos;       />&apos,
+                            <ArrowRight className="&apos;w-4" h-4 ml-2&apos;          />&apos,
                   <CardContent>""""
                     <div className = "grid grid-cols-1 lg: grid-cols-2 gap-6">""""
                         <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">""""
-                          <Lightbulb className="w-4 h-4 text-zion-purple"  />"
+                          <Lightbulb className="w-4 h-4 text-zion-purple"   />"
                           Why This Service Matches"""""
                         </h4>"""",
                         <ul className="space-y-2">""""{rec.reasoning.map((reason, idx) => (<li key="{idx}" className="text-sm text-zion-slate-light flex items-start gap-2">""""
-                              <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"  />
+                              <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"   />
                               {reason}"
-                          <BarChart3 className="w-4 h-4 text-zion-cyan"  />"
+                          <BarChart3 className="w-4 h-4 text-zion-cyan"   />"
                           Implementation Details""""
                         <div className="space-y-3">""""
                           <div className="flex justify-between">""""
@@ -674,7 +693,7 @@ y: 0 "",">
                           <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {}"
   () => window.open(rec.service.link, _blank")}>""""
                             Learn More""""
-                            <ArrowRight className="w-4 h-4 ml-2"  />
+                            <ArrowRight className="w-4 h-4 ml-2"   />
                   </CardContent>
                 </Card>
               </motion.div>) ) }
@@ -689,14 +708,15 @@ y: 0 "",">
               <div className = "flex flex-col sm: flex-row gap-4 justify-center">"","
                 <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}">
 " () => window.open()
-}
+
+
 ""}>"";"
-                  <Users className = "w - 5 h-5 mr-2"  />,
+                  <Users className = "w - 5 h-5 mr-2"   />,
                   Get Expert Consultation"",
                 </Button>"";"
                 <Button variant = "outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {}>
 " () => window.open("tel:+13024640950",_blank");"
-                  <Zap className="w-5 h-5 mr-2`       />
+                  <Zap className="w-5 h-5 mr-2`          />
                   Call Now
           </motion.div> { opacity: 0, y: 20}} animate = {}"
 &apos;&apos;"&apos}} transition="{{" delay: 0.4 }} className="&apos;mt-12" text-center&apos;>"&apos;&apos,&apos;&apos;"
@@ -708,14 +728,15 @@ y: 0 "",">
               <div className="&apos;flex" flex-col sm: flex-row gap-4 justify-center&apos,>"&apos,&apos,&apos,&apos,"
                 <Button className = "&apos,bg-white" text-zion-purple hove,r: bg-zion-slate-light&apos, onClick = {}">
 " () => window.open()
-}
+
+
 &apos;&apos,}>&apos;&apos,&apos;&apos,"
-                  <Users className="&apos;w-5" h-5 mr-2&apos;       />"
+                  <Users className="&apos;w-5" h-5 mr-2&apos;          />"
                   Get Expert Consultation&apos;&apos,&apos;&apos,
                 </Button>&apos;&apos,&apos;&apos,"
                 <Button variant="&apos;outline&apos;" className="&apos;border-white" text-white hover:bg-white hove,r: text-zion-purple&apos, onClick = {}>
 " () => window.open(&apos;tel: +13024640950&apos,_blank&apos);"
-                  <Zap className="&apos;w-5" h-5 mr-2&quot;       />
+                  <Zap className="&apos;w-5" h-5 mr-2&quot;          />
                   Call Now&quot;"
 """"}} transition = "{{" delay: 0.4 }} className="mt-12 text-center">""""
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""""
@@ -726,17 +747,17 @@ for your business needs. Contact us today for a personalized consultation.""""
               <div className="flex flex-col sm: flex-row gap-4 justify-center">"""",
   () => window.open("mailto: kleber@ziontechgroup.com?subject="Service" Recommendation Consultation", _blank")""
 """}>"""""
-                  <Users className="w-5 h-5 mr-2"  />"
+                  <Users className="w-5 h-5 mr-2"   />"
                   Get Expert Consultation"""""
                 </Button>""""
                 <Button variant="outline" className="border-white text-white hover: bg-white hover:text-zion-purple" onClick = {}"
   () => window.open("tel: +13024640950", _blank")"
-                  <Zap className="w-5 h-5 mr-2"  />""
+                  <Zap className="w-5 h-5 mr-2"   />""
                   Call Now,        </motion.div>)}
 
 """
 }>""""
-                  <Zap className="w-5 h-5 mr-2"/>
+                  <Zap className="w-5 h-5 mr-2"   />
                   Call Now;
                 </Button>
               </div>
@@ -748,11 +769,7 @@ export default AdvancedServiceRecommendation;
 }}}}}}}}}
 
 export { AdvancedServiceRecommendation };
-
 export { AdvancedServiceRecommendation };
-
 export { AdvancedServiceRecommendation };
-
 export { AdvancedServiceRecommendation };
-
 export { AdvancedServiceRecommendation };

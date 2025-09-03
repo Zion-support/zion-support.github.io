@@ -2,9 +2,10 @@ import React, { useState } from "react"
 
 const ImprovedNavigation: React.FC = () => {,,
   const [isOpen, setIsOpen] = useState(false)
-}
+
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-}
+
+
   const navigationItems = []
 },
     { "
@@ -51,9 +52,10 @@ const ImprovedNavigation: React.FC = () => {,,
 
   const closeMobileMenu = () => {
     setIsOpen(false)
-}
+
+
     setActiveDropdown(null)
-}
+
 
   return (
     <nav className = "bg-white shadow-lg sticky top-0 z-50">"
@@ -79,7 +81,7 @@ const ImprovedNavigation: React.FC = () => {,,
                         className="text-gray-700 hover: text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
                       >,
                         {item.name}"
-                        <ChevronDown className="ml-1 h-4 w-4"  />
+                        <ChevronDown className="ml-1 h-4 w-4"   />
                       </button>
                       {activeDropdown === item.name && ("
                         <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg py-1 z-50 border">
@@ -126,7 +128,7 @@ const ImprovedNavigation: React.FC = () => {,,
             <button onClick="{()" => setIsOpen(!isOpen)}"
               className="text-gray-700 hover: text-blue-600 p-2 rounded-md transition-colors"
             >",
-              {isOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
+              {isOpen ? <X className="h-6 w-6"   /> : <Menu className="h-6 w-6"   />}
 
             </button>
           </div>
@@ -143,7 +145,7 @@ const ImprovedNavigation: React.FC = () => {,,
                       className="text-gray-700 hover: text-blue-600 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
                     >,
                       {item.name}"
-                      <ChevronDown className="h-4 w-4"  />
+                      <ChevronDown className="h-4 w-4"   />
                     </button>
                     {activeDropdown === item.name && ("
                       <div className="pl-4 space-y-1">
@@ -186,11 +188,11 @@ const ImprovedNavigation: React.FC = () => {,,
             {/* comment */}"
             <div className="pt-4 border-t space-y-2">"
               <div className="flex items-center px-3 py-2 text-sm text-gray-600">"
-                <Phone className="w-4 h-4 mr-2"  />
+                <Phone className="w-4 h-4 mr-2"   />
                 <span>+1 (555) 123-4567</span>
               </div>"
               <div className="flex items-center px-3 py-2 text-sm text-gray-600">"
-                <Mail className="w-4 h-4 mr-2"  />
+                <Mail className="w-4 h-4 mr-2"   />
                 <span>info@ziontechgroup.com</span>
               </div>
       )}

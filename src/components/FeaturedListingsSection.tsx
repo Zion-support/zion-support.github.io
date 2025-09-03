@@ -1,14 +1,8 @@
-import { Link  } from 'react-router-dom';
-import { Link  } from 'react-router-dom';
- from 'react';
-import React, { useState } from 'react';
-export /**
-import { motion  } from 'framer-motion';
-import { motion, AnimatePresence  } from 'framer-motion';
-
- params - Function parameters
- * @returns {*} Function return value
- */
+import { Link  } from "react-router-dom";
+import { Link  } from "react-router-dom";
+ from "react";
+import React, { useState } from "react";
+export /* comment */
 function FeaturedListingsSection () {          initial = {
 
   { opacity: 0,
@@ -43,11 +37,9 @@ function FeaturedListingsSection () {          initial = {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >"
               <div className="relative">
-                <img
-                  src={listing.image}
+                <img src={listing.image}
                   alt={listing.title}
-                  className="w-full h-48 object -cover"
-                />
+                  className="w-full h-48 object -cover"   />
                 <div className="absolute top - 3 left -3">
                   <span className="px-3 py-1 bg-blue - 600 text-white text-xs font - semibold rounded-full">                    {listing.category}
                   </span>
@@ -97,7 +89,6 @@ function FeaturedListingsSection () {          initial = {
               </div>;
             </motion.div>) ) }
         </div>
-
         <motion.div
           className="mt-16 text-center"          initial = {
 

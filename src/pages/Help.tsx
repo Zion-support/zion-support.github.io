@@ -1,9 +1,10 @@
 import React from "react"
 ;,"});,"})
-}
+
+
 export default function Help() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="Help - Zion Tech Group" description="Professional Help services by Zion Tech Group"  />"
+      <SEO title="Help - Zion Tech Group" description="Professional Help services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
         <h1 className="text-4xl font-bold text-white mb-8">Help</h1>"
         <p className="text-gray-300 text-lg">
@@ -11,7 +12,8 @@ export default function Help() {return ("
         </p>
       </div>
   )
-}
+
+
 }"react"framer - motion",../components/SEO";""""""
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,
   ChevronUp, HelpCircle, CheckCircle, ArrowRight"
@@ -24,9 +26,11 @@ export default function Help() {return ("
 "
 export default function Help() {"
   const [searchQuery, setSearchQuery] = useState(")
-}
+
+
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
-}
+
+
   const faqs = []
 
   const helpCategories = []
@@ -42,10 +46,10 @@ export default function Help() {"
         title="Help Center - Zion Tech Group | Support & Documentation";";
         description="Get help with Zion Tech Group services. Find answers to common questions, access documentation, and contact our support team for assistance.";";
         keywords="help, support, documentation, FAQ, customer service, Zion Tech Group">;
-      />;
+     />;
       ;";
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-        {/*   */}";
+        {/* comment */}";
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;";
           <div className="container mx-auto px-4">;
             <motion.div;";
@@ -61,22 +65,21 @@ export default function Help() {"
                 Find answers to your questions, access documentation, and get support from our expert team;
               </p>;
               ;
-              {/*   */}";
+              {/* comment */}";
               <div className="max-w-2xl mx-auto">;";
                 <div className="relative">;";
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"   />;
                   <input;";
                     type="text";";
                     placeholder="Search for help articles, guides, or FAQs...";";
                     value = "{searchQuery}"";
                     onChange="{(e)" => setSearchQuery(e.target.value)}";
                     className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-                  />;
+                 />;
                 </div>,;
             </motion.div>,,;
           </div>,;
         </section>,;
-
   return (
     
     <>
@@ -84,7 +87,7 @@ export default function Help() {"
         title="Help Center - Zion Tech Group | Support & Documentation";"
         description="Get help with Zion Tech Group services. Find answers to common questions, access documentation, and contact our support team for assistance.";"
         keywords="help, support, documentation, FAQ, customer service, Zion Tech Group">
-     />
+    />
       ;"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* comment */}"
@@ -105,7 +108,7 @@ export default function Help() {"
               {/* comment */}"
               <div className="max-w-2xl mx-auto">;"
                 <div className="relative">;"
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"   />
                   <input;"
                     type="text";"
                     placeholder="Search for help articles, guides, or FAQs...";"
@@ -140,7 +143,8 @@ export default function Help() ;{}
 
   const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos>
   const [expandedFAQ, setExpandedFAQ] = useState<;<;<number | null>(null)
-}
+
+
   const faqs = []&quot
   const helpCategories = []&quot
   const contactMethods = []&quot
@@ -153,7 +157,7 @@ export default function Help() ;{}
       <SEO title="&quot;Help" Center - Zion Tech Group | Support & Documentation&quot;"
         description="&quot;Get" help with Zion Tech Group services. Find answers to common questions, access documentation, and contact our support team for assistance.&quot;"
         keywords="&quot;help," support, documentation, FAQ, customer service, Zion Tech Group&quot>
-     />&quot
+    />&quot
       "
       <div className="&quot;min-h-screen" bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
         {/* comment */}&quot;"
@@ -179,13 +183,13 @@ transition="{{" duration: 0.8 }}"
               {/* comment */}"
               <div className="&quot;max-w-2xl" mx-auto&quot;>&quot;""
                 <div className="&quot;relative&quot;">&quot;""
-                  <Search className="&quot;absolute" left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot;       />&quot;"
+                  <Search className="&quot;absolute" left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot;          />&quot;"
                   <input type="&quot;text&quot;""
                     placeholder="&quot;Search" for help articles, guides, or FAQs...&quot;"
                     value = "{searchQuery}""
                     onChange="{(e)" => setSearchQuery(e.target.value)}"
                     className="&quot;w-full" pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,s: border-transparent&quot,
-                 />&quot,"
+                />&quot,"
                     className = "w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                 </div>
             </motion.div>
@@ -230,7 +234,7 @@ key = "{category.title}""
                   <p className="text-gray-300 text-sm mb-3">{category.description}</p>;"
                   <div className="flex items-center justify-between">;"
                     <span className="text-blue-400 text-sm">{category.articles} articles</span>;"
-                    <ArrowRight className="{"w-5" h-5 text-gray-400"  />
+                    <ArrowRight className="{"w-5" h-5 text-gray-400"   />
                   </div>
                 </motion.div>;"
                   className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hove,r: scale-105 cursor-pointer&quot,
@@ -242,7 +246,7 @@ key = "{category.title}""
                   <p className="&quot;text-gray-300" text-sm mb-3&quot;>{category.description}&quot;</p>"
                   <div className="&quot;flex" items-center justify-between&quot;>&quot;""
                     <span className="&quot;text-blue-400" text-sm&quot;>{category.articles} articles&quot;</span>"
-                    <ArrowRight className="&quot;w-5" h-5 text-gray-400&quot;       />&quot
+                    <ArrowRight className="&quot;w-5" h-5 text-gray-400&quot;          />&quot
                   </div>
                 </motion.div>
               ))}
@@ -311,9 +315,9 @@ key = "{faq.id}""
                       <h3 className="text-lg font-semibold text-white">{faq.question}</h3>
                     </div>
                     {expandedFAQ === faq.id ? (;"
-                      <ChevronUp className="w-6 h-6 text-gray-400"  />
+                      <ChevronUp className="w-6 h-6 text-gray-400"   />
                     ) : (;"
-                      <ChevronDown className="w-6 h-6 text-gray-400"  />
+                      <ChevronDown className="w-6 h-6 text-gray-400"   />
                     )}
 
                   </button>
@@ -340,9 +344,9 @@ key = "{faq.id}""
                       <h3 className="&quot;text-lg" font-semibold text-white&quot;>{faq.question}&quot;</h3>
                     </div>
                     {expandedFAQ = == faq.id ? (}"
-                      <ChevronUp className="&quot;w-6" h-6 text-gray-400&quot;       />
+                      <ChevronUp className="&quot;w-6" h-6 text-gray-400&quot;          />
                     ) : (&quot;"
-                      <ChevronDown className="&quot;w-6" h-6 text-gray-400&quot;       />
+                      <ChevronDown className="&quot;w-6" h-6 text-gray-400&quot;          />
                     )}&quot
                   </button>
                   {expandedFAQ = == faq.id && (}
@@ -430,12 +434,12 @@ key="{method.title}""
                   <p className="text-gray-300 text-sm mb-4">{method.description}</p>;"
                   <div className="space-y-2 mb-6">;"
                     <div className="flex items-center text-sm text-gray-400">;"
-                      <Clock className="w-4 h-4 mr-2"  />
+                      <Clock className="w-4 h-4 mr-2"   />
                       {method.availability}
 
                     </div>;"
                     <div className="flex items-center text-sm text-gray-400">;"
-                      <CheckCircle className="w-4 h-4 mr-2"  />
+                      <CheckCircle className="w-4 h-4 mr-2"   />
                       Response: {method.responseTime}
 
                     </div>
@@ -460,11 +464,11 @@ key="{method.title}""
                   <p className="&quot;text-gray-300" text-sm mb-4&quot;>{method.description}&quot;</p>"
                   <div className="&quot;space-y-2" mb-6&quot;>&quot;""
                     <div className="&quot;flex" items-center text-sm text-gray-400&quot;>&quot;""
-                      <Clock className="&quot;w-4" h-4 mr-2&quot;       />
+                      <Clock className="&quot;w-4" h-4 mr-2&quot;          />
                       {method.availability}&quot
                     </div>"
                     <div className="&quot;flex" items-center text-sm text-gray-400&quot;>&quot;""
-                      <CheckCircle className="&quot;w-4" h-4 mr-2&quot;       />
+                      <CheckCircle className="&quot;w-4" h-4 mr-2&quot;          />
                       Response: {method.responseTime}&quot
                     </div>
                   </div>"
@@ -479,8 +483,10 @@ key="{method.title}""
       </div>
 </>
   )
-}
+
+
   )
-}
+
+
 }"
   ChevronUp, HelpCircle, CheckCircle, ArrowRight;"} from 'lucide-react""

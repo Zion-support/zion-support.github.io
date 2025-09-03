@@ -46,5 +46,4 @@ const SystemStatus = () => {
             </div>
     </>
   );
-}
 export default SystemStatus

@@ -1,26 +1,23 @@
-import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';
-import Web3Modal from 'web3modal';
-import { ethers } from 'ethers';
-
+import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from "react";
+import Web3Modal from "web3modal";
+import { ethers } from "ethers";
 export default function Page() {
 > = ({ children }) => {
   const [wallet, setWallet] = useState<WalletState>(initialWalletState);
   const [web3ModalInstance, setWeb3ModalInstance] = useState<Web3Modal | null>(null);
-
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
-    if(typeof window !== 'undefined') {
+    if(typeof window !== "undefined") {
         const providerOptions = {};
         const modal = new Web3Modal({
-            network: 'mainnet', 
-            cacheProvider: true, 
+            network: "mainnet",
+            cacheProvider: true,
             providerOptions,
         });
         setWeb3ModalInstance(modal);
     }
   }, []);
-
   const disconnectWallet = useCallback(async () => {
     if(web3ModalInstance?.cachedProvider) {
         web3ModalInstance.clearCachedProvider();
@@ -30,7 +27,7 @@ export default function Page() {
 
   const connectWallet = useCallback(async () => {
     if(!web3ModalInstance) {
-        console.error('Web3Modal not initialized');
+        console.error("Web3Modal not initialized");
         return;
     }
     try {
@@ -39,7 +36,6 @@ export default function Page() {
       const signer = provider.getSigner();
       const address = await signer.getAddress();
       const network = await provider.getNetwork();
-
       setWallet({
         provider,
         signer,
@@ -47,15 +43,14 @@ export default function Page() {
         chainId: network.chainId,
         isConnected: true,
       });
-
-      instance.on('accountsChanged', (accounts: string[]) => {
+      instance.on("accountsChanged", (accounts: string[]) => {
         if(accounts.length > 0) {
           // Re-fetch signer and network info as account change might imply network change in some wallets
           const newProvider = new ethers.providers.Web3Provider(instance);
           const newSigner = newProvider.getSigner();
           newProvider.getNetwork().then(newNetwork => {
             setWallet(prev => ({ 
-              ...prev, 
+              ...prev,
               address: accounts[0],
               signer: newSigner, // Update signer
               provider: newProvider, // Update provider
@@ -66,8 +61,7 @@ export default function Page() {
           disconnectWallet();
         }
       });
-
-      instance.on('chainChanged', async () => { // Added async
+      instance.on("chainChanged", async () => { // Added async
         // Re-initialize provider, signer, address, and chainId
         const newProvider = new ethers.providers.Web3Provider(instance);
         const newSigner = newProvider.getSigner();
@@ -80,35 +74,31 @@ export default function Page() {
           chainId: newNetwork.chainId,
           isConnected: true,
         });
-        console.log('Network changed to:', newNetwork.chainId);
+        console.log("Network changed to:", newNetwork.chainId);
       });
-
-      instance.on('disconnect', (error: any) => {
-        console.log('Disconnected', error);
+      instance.on("disconnect", (error: any) => {
+        console.log("Disconnected", error);
         disconnectWallet();
       });
-
     } catch(error) {
-      console.error('Error connecting wallet:', error);
+      console.error("Error connecting wallet:", error);
       // If user closes modal, it might throw an error, so we ensure state is reset
       disconnectWallet();
     }
   }, [web3ModalInstance, disconnectWallet]); // Added disconnectWallet
 
   const displayAddress = wallet.address
-    ? `${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length-4)}`
+    ? "${wallet.address.substring(0, 6)}...${wallet.address.substring(wallet.address.length-4)}"
     : null;
-
   return (<WalletContext.Provider value={{ ...wallet, connectWallet, disconnectWallet, displayAddress }}>
       {children}
     </WalletContext.Provider>
   );
 };
-
 export const useWallet = (): WalletContextType => {
   const context = useContext(WalletContext);
   if(context === undefined) {
-    throw new Error('useWallet must be used within a WalletProvider');
+    throw new Error("useWallet must be used within a WalletProvider");
   }
   return context;
 };

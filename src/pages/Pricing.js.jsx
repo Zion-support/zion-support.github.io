@@ -1,13 +1,13 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { CogIcon } from '@heroicons/react/24/outline';
+import React from "react";"""
+import { Link } from "react-router-dom";"""
+import { CogIcon } from "@heroicons/react/24/outline";
 const $page = () => {}
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">""""
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <div className="flex justify-center mb-6">""""
             <div className="p-3 bg-blue-600/20 rounded-full">""""
-              <CogIcon className="h-12 w-12 text-blue-400"/>
+              <CogIcon className="h-12 w-12 text-blue-400"   />
             </div>"""
           </div>""""
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -131,7 +131,7 @@ export default function Pricing() {}
 """
 """"
             name: "AI & Machine Learning",""""
-            icon: <Brain className="h-8 w-8 text-zion-cyan"/>,"""
+            icon: <Brain className="h-8 w-8 text-zion-cyan"   />,"""
             services[;""""
                 { name: "AI Content Generator Pro", price: "$29/month", features["Unlimited content generation", "50+ content types", "API access", "Advanced AI models"] },;""""
                 { name: "AI Image & Video Editor", price: "$19/month", features["Background removal", "Quality enhancement", "Style transfer", "Batch processing"] },;""""
@@ -143,7 +143,7 @@ export default function Pricing() {}
 """
 """"
             name: "Cybersecurity",""""
-            icon: <Shield className="h-8 w-8 text-zion-purple"/>,"""
+            icon: <Shield className="h-8 w-8 text-zion-purple"   />,"""
             services[;""""
                 { name: "AI Threat Detection", price: "$99/month", features["24/7 monitoring", "Instant alerts", "Automated response", "Threat intelligence"] },;""""
                 { name: "Zero Trust Security", price: "$499/month", features["Identity verification", "Network segmentation", "Continuous monitoring", "Compliance tools"] },;""""
@@ -154,7 +154,7 @@ export default function Pricing() {}
 """
 """"
             name: "Cloud & Infrastructure",""""
-            icon: <Cloud className="h-8 w-8 text-zion-blue"/>,"""
+            icon: <Cloud className="h-8 w-8 text-zion-blue"   />,"""
             services[;""""
                 { name: "Multi-Cloud Management", price: "$79/month", features["Unified dashboard", "Cost optimization", "Security compliance", "Performance monitoring"] },;""""
                 { name: "DevOps Automation", price: "$49/month", features["CI/CD pipelines", "Infrastructure as code", "Automated testing", "Deployment automation"] },;""""
@@ -165,7 +165,7 @@ export default function Pricing() {}
 """
 """"
             name: "Business Intelligence",""""
-            icon: <Users className="h-8 w-8 text-zion-green"/>,"""
+            icon: <Users className="h-8 w-8 text-zion-green"   />,"""
             services[;""""
                 { name: "AI-Powered CRM", price: "$39/user/month", features["Lead scoring", "Sales forecasting", "Automated follow-ups", "Predictive analytics"] },;""""
                 { name: "Business Automation", price: "$29/month", features["Workflow automation", "100+ integrations", "Document processing", "Process optimization"] },;""""
@@ -176,7 +176,7 @@ export default function Pricing() {}
 """
 """"
             name: "Communication & Collaboration",""""
-            icon: <MessageCircle className="h-8 w-8 text-zion-orange"/>,"""
+            icon: <MessageCircle className="h-8 w-8 text-zion-orange"   />,"""
             services[;""""
                 { name: "AI Meeting Assistant", price: "$19/month", features["Real-time transcription", "Smart summaries", "Action tracking", "Automated follow-ups"] },;""""
                 { name: "Virtual Event Platform", price: "$99/month", features["Interactive features", "AI engagement", "Event analytics", "1000 attendees"] },;""""
@@ -187,7 +187,7 @@ export default function Pricing() {}
 """
 """"
             name: "Specialized Tools",""""
-            icon: <FileText className="h-8 w-8 text-zion-red"/>,"""
+            icon: <FileText className="h-8 w-8 text-zion-red"   />,"""
             services[;""""
                 { name: "AI Legal Review", price: "$149/month", features["Contract analysis", "Risk assessment", "Compliance monitoring", "Legal insights"] },;""""
                 { name: "AI Financial Advisor", price: "$39/month", features["Portfolio optimization", "Risk assessment", "Financial planning", "Investment advice"] },;""""
@@ -196,45 +196,45 @@ export default function Pricing() {}
         }"""
     ];""""
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-purple-dark">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <div className="pt-20 pb-16 px-4">""""
         <div className="container mx-auto text-center">""""
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
             Transparent Pricing for Every Business"""
           </h1>""""
           <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto mb-8">
-            Choose the perfect plan for your needs. All plans include a 14-day free trial, 
+            Choose the perfect plan for your needs. All plans include a 14-day free trial,
             no credit card required. Scale up or down time."""
           </p>""""
           <div className="flex flex-wrap justify-center gap-4 mb-12">""""
             <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 px-4 py-2 text-lg">""""
-              <Zap className="h-5 w-5 mr-2"/>
+              <Zap className="h-5 w-5 mr-2"   />
               14-Day Free Trial"""
             </Badge>""""
             <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30 px-4 py-2 text-lg">""""
-              <Shield className="h-5 w-5 mr-2"/>
+              <Shield className="h-5 w-5 mr-2"   />
               Enterprise Security"""
             </Badge>""""
             <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 px-4 py-2 text-lg">""""
-              <Brain className="h-5 w-5 mr-2"/>
+              <Brain className="h-5 w-5 mr-2"   />
               AI-Powered Tools;
             </Badge>
           </div>
         </div>
       </div>
 """
-      {/* Pricing Tiers */}""""
+      {/* comment */}""""
       <div className="py-16 px-4">""""
         <div className="container mx-auto">""""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">'
-            {pricingTiers.map((tier, index) => (<Card key={index} className={`relative overflow-hidden transition-all duration-300 hover:scale-105 ${tier.popular''`
-                ? 'border-zion-purple shadow-2xl shadow-zion-purple/25 bg-gradient-to-br from-zion-purple/10 to-zion-purple/5''`'"`
-                : 'border-zion-blue-light/30 hover:border-zion-purple/50 hover:shadow-xl hover:shadow-zion-purple/20'} bg-zion-slate-dark/80 backdrop-blur-sm`}>""""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+            {pricingTiers.map((tier, index) => (<Card key={index} className={"relative overflow-hidden transition-all duration-300 hover:scale-105 ${tier.popular"""
+                ? "border-zion-purple shadow-2xl shadow-zion-purple/25 bg-gradient-to-br from-zion-purple/10 to-zion-purple/5""""""
+                : "border-zion-blue-light/30 hover:border-zion-purple/50 hover:shadow-xl hover:shadow-zion-purple/20"} bg-zion-slate-dark/80 backdrop-blur-sm"}>""""
                 {tier.popular && (<div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white text-center py-2 text-sm font-semibold">""""
-                    <Star className="h-4 w-4 inline mr-2"/>
-                    Most Popular'`
-                  </div>)}'`'"`
-                <CardHeader className={`text-center ${tier.popular ? 'pt-12' : 'pt-6'}`}>""""
+                    <Star className="h-4 w-4 inline mr-2"   />
+                    Most Popular""
+                  </div>)}"""""
+                <CardHeader className={"text-center ${tier.popular ? "pt-12" : "pt-6"}"}>""""
                   <CardTitle className="text-2xl font-bold text-white mb-2">{tier.name}</CardTitle>""""
                   <div className="mb-4">""""
                     <span className="text-4xl font-bold text-zion-cyan">{tier.price}</span>""""
@@ -244,14 +244,14 @@ export default function Pricing() {}
                 </CardHeader>""""
                 <CardContent className="space-y-3">""""
                   {tier.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-center gap-3">""""
-                      <Check className="h-5 w-5 text-zion-cyan flex-shrink-0"/>""""
+                      <Check className="h-5 w-5 text-zion-cyan flex-shrink-0"   />""""
                       <span className="text-zion-cyan/90 text-sm">{feature}</span>
                     </div>))}
-                </CardContent>`
-                <CardFooter>`'`
-                  <Button asChild className={`w-full ${tier.popular''`
-                ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple''`'`
-                : 'bg-gradient-to-r from-zion-blue to-zion-blue-dark hover:from-zion-cyan hover:to-zion-blue'} text-white border-0 shadow-lg`}>
+                </CardContent>"
+                <CardFooter>"""
+                  <Button asChild className={"w-full ${tier.popular"""
+                ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"""""
+                : "bg-gradient-to-r from-zion-blue to-zion-blue-dark hover:from-zion-cyan hover:to-zion-blue"} text-white border-0 shadow-lg"}>
                     <Link to={tier.link}>
                       {tier.cta}
                     </Link>
@@ -262,7 +262,7 @@ export default function Pricing() {}
         </div>
       </div>
 """
-      {/* Service Categories */}""""
+      {/* comment */}""""
       <div className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -270,7 +270,7 @@ export default function Pricing() {}
               Explore Our Service Categories"""
             </h2>""""
             <p className="text-lg text-zion-cyan/80 max-w-3xl mx-auto">
-              Discover our comprehensive range of AI-powered micro SAAS solutions, 
+              Discover our comprehensive range of AI-powered micro SAAS solutions,
               each designed to address specific business needs and challenges.
             </p>
           </div>"""
@@ -291,7 +291,7 @@ export default function Pricing() {}
                       </div>""""
                       <ul className="space-y-1">""""
                         {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="text-sm text-zion-cyan/70 flex items-center gap-2">""""
-                            <Check className="h-3 w-3 text-zion-purple"/>
+                            <Check className="h-3 w-3 text-zion-purple"   />
                             {feature}
                           </li>) ) }
                       </ul>
@@ -302,7 +302,7 @@ export default function Pricing() {}
         </div>
       </div>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <div className="py-16 px-4">""""
         <div className="container mx-auto text-center">""""
           <Card className="bg-gradient-to-r from-zion-purple/20 to-zion-blue/20 backdrop-blur-sm border-zion-purple/30 max-w-4xl mx-auto">"""
@@ -310,8 +310,8 @@ export default function Pricing() {}
               <CardTitle className="text-3xl text-white mb-4">
                 Ready to Transform Your Business?"""
               </CardTitle>""""
-              <CardDescription className="text-lg text-zion-cyan/80">'
-                Join thousands of businesses already using Zion's AI-powered solutions to accelerate growth, 
+              <CardDescription className="text-lg text-zion-cyan/80">"
+                Join thousands of businesses already using Zion"s AI-powered solutions to accelerate growth,
                 improve efficiency, and stay ahead of the competition.
               </CardDescription>"""
             </CardHeader>""""
@@ -339,7 +339,7 @@ export default function Pricing() {}
               </Button>""""
               <Button asChild variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">""""
                 <Link to="/contact">""""
-                  <MessageCircle className="h-5 w-5 mr-2"/>
+                  <MessageCircle className="h-5 w-5 mr-2"   />
                   Contact Sales;
                 </Link>
               </Button>
@@ -348,7 +348,7 @@ export default function Pricing() {}
         </div>
       </div>
 """
-      {/* FAQ Section */}""""
+      {/* comment */}""""
       <div className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -358,9 +358,9 @@ export default function Pricing() {}
           </div>"""
           """"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">""""
-            <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">'"""
-              <CardHeader>'"'"""
-                <CardTitle className="text-white">What's included in the free trial?</CardTitle>
+            <Card className="bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/30">""""
+              <CardHeader>""""""
+                <CardTitle className="text-white">What"s included in the free trial?</CardTitle>
               </CardHeader>"""
               <CardContent>""""
                 <p className="text-zion-cyan/80">
@@ -376,7 +376,7 @@ export default function Pricing() {}
               </CardHeader>"""
               <CardContent>""""
                 <p className="text-zion-cyan/80">
-                  Yes! You can upgrade or downgrade your plan at  time. Changes take effect immediately,'
+                  Yes! You can upgrade or downgrade your plan at  time. Changes take effect immediately,"
                   and we'll prorate  billing adjustments.
                 </p>
               </CardContent>
@@ -400,7 +400,7 @@ export default function Pricing() {}
               </CardHeader>"""
               <CardContent>""""
                 <p className="text-zion-cyan/80">
-                  All plans include email support. Professional and Business plans include priority support, 
+                  All plans include email support. Professional and Business plans include priority support,
                   while Enterprise plans include 24 / 7 dedicated support.
                 </p>
               </CardContent>
@@ -412,11 +412,7 @@ export default function Pricing() {}
 
 
 export { Pricing };
-
 export { Pricing };
-
 export { Pricing };
-
 export { Pricing };
-
 export { Pricing };

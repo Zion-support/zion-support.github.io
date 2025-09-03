@@ -46,5 +46,4 @@ const Resources = () => {
             </div>
     </>
   );
-}
 export default Resources

@@ -5,12 +5,15 @@ import TalentProfile from &apos;./TalentProfile
 describe(&apos;TalentProfile&apos, () => {
   it(&apos;renders without crashing&apos, () => {
     render()
-}
+
+
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
-}
+
+
   it(&apos;displays expected content&apos, () => {
     render()
-}
+
+
     // comment
     render(<TalentProfile / >)"
     expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""

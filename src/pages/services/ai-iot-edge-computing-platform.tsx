@@ -1,19 +1,16 @@
-import React from 'react.ts';
-import { SEO   } from '../../components/SEO';
-import { motion   } from 'framer-motion.ts';
-
+import React from "react.ts";
+import { SEO   } from "../../components/SEO";
+import { motion   } from "framer-motion.ts";
 const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
   return (
     <>
-      <SEO
-        title="AI-Powered IoT Edge Computing Platform | Zion Tech Group"
+      <SEO title="AI-Powered IoT Edge Computing Platform | Zion Tech Group"
         description="Advanced AI-driven IoT edge computing platform. Reduce latency by 90%, lower bandwidth costs by 70%, and process data at the edge with sub-millisecond response times."
         keywords="AI IoT, edge computing, real-time processing, distributed computing, hybrid cloud, edge intelligence, IoT analytics, edge AI"
-        canonical="https://ziontechgroup.com/services/ai-iot-edge-computing-platform"
-      />
+        canonical="https://ziontechgroup.com/services/ai-iot-edge-computing-platform"   />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+        {/* comment */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
@@ -46,8 +43,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
             </motion.div>
           </div>
         </section>
-
-        {/* Features Section */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -134,8 +130,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
-        {/* Benefits Section */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -197,8 +192,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
-        {/* Use Cases Section */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -282,8 +276,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
-        {/* Technologies Section */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -340,8 +333,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-
-        {/* Pricing Section */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -437,11 +429,11 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 }}
                   viewport={{ once: true }}
-                  className={`relative rounded-xl p-8 ${
+                  className={"relative rounded-xl p-8 ${
                     plan.popular 
-                      ? 'bg-gradient-to-br from-orange-600 to-red-600 border-2 border-orange-400' 
-                      : 'bg-white/10 backdrop-blur-sm border border-white/20'
-                  }`}
+                      ? "bg-gradient-to-br from-orange-600 to-red-600 border-2 border-orange-400" 
+                      : "bg-white/10 backdrop-blur-sm border border-white/20"
+                  }"}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -459,7 +451,6 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                     </div>
                     <p className="text-gray-300 mt-2">{plan.description}</p>
                   </div>
-                  
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-white">
@@ -468,18 +459,16 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                       </li>
                     ))}
                   </ul>
-                  
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  <button className={"w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-white text-orange-600 hover:bg-gray-100'
-                      : 'bg-orange-600 text-white hover:bg-orange-700'
-                  }`}>
+                      ? "bg-white text-orange-600 hover:bg-gray-100"
+                      : "bg-orange-600 text-white hover:bg-orange-700"
+                  }"}>
                     Get Started
                   </button>
                 </motion.div>
               ))}
             </div>
-            
             <motion.div
               initial = {
   { opacity: 0,
@@ -508,8 +497,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
             </motion.div>
           </div>
         </section>
-
-        {/* Contact Section */}
+        {/* comment */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -532,7 +520,6 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               <p className="text-xl text-gray-300 mb-8">
                 Join leading organizations who trust our AI-powered platform to revolutionize their IoT deployments.
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-3">Contact Information</h3>
@@ -542,7 +529,6 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                     <p>📍 <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span></p>
                   </div>
                 </div>
-                
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-3">Quick Actions</h3>
                   <div className="space-y-3">
@@ -558,7 +544,6 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   </div>
                 </div>
               </div>
-              
               <div className="text-gray-300">
                 <p>Visit our website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
               </div>
@@ -569,15 +554,9 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
     </>;
   );
 };
-
 export default AIIoTEdgeComputingPlatform;
-
 export { AIIoTEdgeComputingPlatform };
-
 export { AIIoTEdgeComputingPlatform };
-
 export { AIIoTEdgeComputingPlatform };
-
 export { AIIoTEdgeComputingPlatform };
-
 export { AIIoTEdgeComputingPlatform };

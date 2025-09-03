@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import { MainNavigation } from "./header/MainNavigation";
-
 export function Header() {
     return (
       <header className="bg-white shadow-sm border-b border-gray-200">
@@ -12,9 +11,9 @@ export function Header() {
                 <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
               </Link>
             </div>
-            <MainNavigation />
+            <MainNavigation  />
           </div>
         </div>
       </header>
     );
-}
+export default Component

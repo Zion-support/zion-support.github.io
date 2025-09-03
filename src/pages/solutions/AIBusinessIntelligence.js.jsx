@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {}
   Brain,
   TrendingUp,
@@ -6,71 +6,72 @@ import {}
   Globe,
   Cpu,
   Lightbulb,
-  BarChart3,'
-  PieChart,''
-  Activity,'''
-  Search} from 'lucide-react';
+  BarChart3,"
+  PieChart,""
+  Activity,"""
+  Search} from "lucide-react";
 const AIBusinessIntelligence = () => {}
-'
-  const benefits = [''
-    'Data-driven decision making across all business areas',Real-time insights and instant access to critical information',Automated reporting and reduced manual analysis time',Predictive capabilities for proactive business planning',Improved operational efficiency and cost optimization',Enhanced customer understanding and engagement'
+"
+  const benefits = [""
+    "Data-driven decision making across all business areas",Real-time insights and instant access to critical information",Automated reporting and reduced manual analysis time",Predictive capabilities for proactive business planning",Improved operational efficiency and cost optimization",Enhanced customer understanding and engagement"
   ];
   const implementation = []
     {}
-'
-''
-'''
-      phase: 'Data Assessment','''
-      description: 'Evaluate current data sources and quality','''
-      duration: '2-3 weeks'},
+"
+""
+"""
+      phase: "Data Assessment","""
+      description: "Evaluate current data sources and quality","""
+      duration: "2-3 weeks"},
     {}
-'
-''
-'''
-      phase: 'BI Strategy','''
-      description: 'Define business intelligence goals and requirements','''
-      duration: '3-4 weeks'},
+"
+""
+"""
+      phase: "BI Strategy","""
+      description: "Define business intelligence goals and requirements","""
+      duration: "3-4 weeks"},
     {}
-'
-''
-'''
-      phase: 'Data Integration','''
-      description: 'Connect and integrate data sources','''
-      duration: '6-10 weeks'},
+"
+""
+"""
+      phase: "Data Integration","""
+      description: "Connect and integrate data sources","""
+      duration: "6-10 weeks"},
     {}
-'
-''
-'''
-      phase: 'AI Model Development','''
-      description: 'Build and train AI models for analytics','''
-      duration: '8-12 weeks'},
+"
+""
+"""
+      phase: "AI Model Development","""
+      description: "Build and train AI models for analytics","""
+      duration: "8-12 weeks"},
     {}
-'
-''
-'''
-      phase: 'Dashboard Development','''
-      description: 'Create interactive dashboards and reports','''
-      duration: '6-8 weeks'},
+"
+""
+"""
+      phase: "Dashboard Development","""
+      description: "Create interactive dashboards and reports","""
+      duration: "6-8 weeks"},
     {}
-'
-      phase: 'Deployment & Training','
-      description: 'Deploy system and train users','
-      duration: '2-4 weeks'}
+"
+      phase: "Deployment & Training","
+      description: "Deploy system and train users","
+      duration: "2-4 weeks"}
   ];
   return()
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""
           <div className="mb-8">""""
             <div className="inline-flex items-center px-4 py-2 bg-violet-500/10 text-violet-400 rounded-full text-sm font-medium mb-6">""""
-              <BarChart3 className="w-4 h-4 mr-2" />
+              <BarChart3 className="w-4 h-4 mr-2"   />
               AI BI Solution"""
             </div>""""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"""
               AI""""
-              <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">'
-                {' '}
+              <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">"
+                {" "}
                 Business Intelligence;
               </span>"""
             </h1>""""
@@ -96,7 +97,7 @@ const AIBusinessIntelligence = () => {}
         </div>
       </section>
 """
-      {/* BI Features */}""""
+      {/* comment */}""""
       <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -139,7 +140,7 @@ const AIBusinessIntelligence = () => {}
         </div>
       </section>
 """
-      {/* BI Solutions */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="text-center mb-16">""""
@@ -182,7 +183,7 @@ const AIBusinessIntelligence = () => {}
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">""""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"""
@@ -205,7 +206,7 @@ const AIBusinessIntelligence = () => {}
             </div>""""
             <div className="bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-2xl p-8 border border-violet-500/30">""""
               <div className="text-center">""""
-                <Lightbulb className="w-24 h-24 text-violet-400 mx-auto mb-4" />""""
+                <Lightbulb className="w-24 h-24 text-violet-400 mx-auto mb-4"   />""""
                 <h3 className="text-2xl font-bold text-white mb-2">
                   Data Intelligence"""
                 </h3>""""
@@ -224,7 +225,7 @@ const AIBusinessIntelligence = () => {}
         </div>
       </section>
 """
-      {/* Implementation Process */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -252,7 +253,7 @@ const AIBusinessIntelligence = () => {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-4xl mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -282,14 +283,8 @@ const AIBusinessIntelligence = () => {}
   );
 };
 export default AIBusinessIntelligence;
-
-
 export { AIBusinessIntelligence };
-
 export { AIBusinessIntelligence };
-
 export { AIBusinessIntelligence };
-
 export { AIBusinessIntelligence };
-
 export { AIBusinessIntelligence };

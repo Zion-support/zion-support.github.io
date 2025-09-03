@@ -1,27 +1,25 @@
-import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
+import React from "react";"""
+import { Helmet } from "react-helmet-async";
 const AIAutonomousLogistics = () => {}
   return()
+
     <>
       <Helmet>
         <title>AI Autonomous Logistics Platform | Zion Tech Group</title>
         <meta;
           name="description""""
-          content="Revolutionary AI autonomous logistics platform that optimizes supply chains, automates warehouse operations, and provides intelligent logistics management with 24/7 efficiency."""
-        />"""
+          content="Revolutionary AI autonomous logistics platform that optimizes supply chains, automates warehouse operations, and provides intelligent logistics management with 24/7 efficiency.""" />"""
         <meta""""
           name="keywords""""
-          content="AI logistics, autonomous logistics, supply chain optimization, warehouse automation, AI logistics management"""
-        />"""
+          content="AI logistics, autonomous logistics, supply chain optimization, warehouse automation, AI logistics management""" />"""
         <link""""
           rel="canonical""""
-          href="https://ziontechgroup.com/ai-autonomous-logistics"""
-        />
+          href="https://ziontechgroup.com/ai-autonomous-logistics""" />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">""""
         <div className="container mx-auto px-4 py-16">"""
-          {/* Hero Section */}""""
+          {/* comment */}""""
           <div className="text-center mb-16">""""
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-sky-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
               AI Autonomous Logistics Platform"""
@@ -33,7 +31,7 @@ const AIAutonomousLogistics = () => {}
             </p>
           </div>
 """
-          {/* Logistics Capabilities */}""""
+          {/* comment */}""""
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">""""
             <div className="text-center">""""
               <div className="text-6xl mb-4">🚚</div>""""
@@ -69,7 +67,7 @@ const AIAutonomousLogistics = () => {}
             </div>
           </div>
 """
-          {/* Features Grid */}""""
+          {/* comment */}""""
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">""""
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">""""
               <div className="text-sky-400 text-4xl mb-4">🤖</div>""""
@@ -132,7 +130,7 @@ const AIAutonomousLogistics = () => {}
             </div>
           </div>
 """
-          {/* Logistics Process */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-4xl font-bold text-white text-center mb-12">
               Autonomous Logistics Process"""
@@ -198,14 +196,14 @@ const AIAutonomousLogistics = () => {}
             </div>
           </div>
 """
-          {/* Logistics Areas */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-4xl font-bold text-white text-center mb-12">
               Logistics Solutions"""
             </h2>""""
-            <div className="grid md:grid-cols-4 gap-6">'
-              {[''
-                'Warehouse Management',Transportation',Inventory Control',Order Fulfillment',Supply Chain Planning',Last Mile Delivery',Returns Management',Supplier Management'
+            <div className="grid md:grid-cols-4 gap-6">"
+              {[""
+                "Warehouse Management",Transportation",Inventory Control",Order Fulfillment",Supply Chain Planning",Last Mile Delivery",Returns Management",Supplier Management'
               ].map(area => (
                 <div"""
                   key={area}""""
@@ -217,7 +215,7 @@ const AIAutonomousLogistics = () => {}
             </div>
           </div>
 """
-          {/* Use Cases */}""""
+          {/* comment */}""""
           <div className="mb-16">""""
             <h2 className="text-4xl font-bold text-white text-center mb-12">
               Industry Applications"""
@@ -252,7 +250,7 @@ const AIAutonomousLogistics = () => {}
             </div>
           </div>
 """
-          {/* CTA Section */}""""
+          {/* comment */}""""
           <div className="text-center bg-gradient-to-r from-sky-600 to-blue-600 rounded-2xl p-12">""""
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Optimize Your Logistics?"""
@@ -274,14 +272,8 @@ const AIAutonomousLogistics = () => {}
       </div>
     </>)};
 export default AIAutonomousLogistics;
-
-
 export { AIAutonomousLogistics };
-
 export { AIAutonomousLogistics };
-
 export { AIAutonomousLogistics };
-
 export { AIAutonomousLogistics };
-
 export { AIAutonomousLogistics };

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'''
-import { motion } from 'framer-motion';
+import React, { useState } from "react";"""
+import { motion } from "framer-motion";
 import {}
   Wifi,
   Server,
@@ -19,12 +19,11 @@ import {}
   Database,
   Monitor,
   Code,
-  FileText,'
-  Truck,''
-  Wrench,'''
-  Cpu''''
-} from 'lucide-react';
-
+  FileText,"
+  Truck,""
+  Wrench,"""
+  Cpu""""
+} from "lucide-react";
     technologies["TLS / SSL", "OAuth 2.0", "JWT", "Zero Trust"]
   }
 ];
@@ -132,23 +131,22 @@ const processSteps = []
     icon: CheckCircle,""""
     duration: "2-4 weeks"""
 ];
-
 export default function IoTEdge() {}
-'
-''
-'''
-  const [selectedCategory, setSelectedCategory] = useState('All');'
-  const [selectedSolution, setSelectedSolution] = useState(null);''
-'''
-  const categories = ['All',IoT Platform',Edge Computing',Analytics',Smart Cities',Industrial IoT',Security'];''
-'''
-  const filteredSolutions = selectedCategory === 'All'
+"
+""
+"""
+  const [selectedCategory, setSelectedCategory] = useState("All");"
+  const [selectedSolution, setSelectedSolution] = useState(null);""
+"""
+  const categories = ["All",IoT Platform",Edge Computing",Analytics",Smart Cities",Industrial IoT",Security"];""
+"""
+  const filteredSolutions = selectedCategory === "All"
     ? iotEdgeSolutions;
     : iotEdgeSolutions.filter (solution => solution.category === selectedCategory) ;
 """
   return (""""
     <div className="min-h-screen bg-futuristic">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative pt-32 pb-20 overflow-hidden">""""
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>""""
         <div className="absolute inset-0">""""
@@ -186,7 +184,7 @@ export default function IoTEdge() {}
 }}""""
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8""""
 """"
-              <Wifi className="w-10 h-10 text-white" />
+              <Wifi className="w-10 h-10 text-white"   />
             </motion.div>"""
 """"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"""
@@ -201,15 +199,15 @@ export default function IoTEdge() {}
 """"
             <div className="flex flex-wrap justify-center gap-4 text-sm">""""
               <div className="flex items-center gap-2 text-zion-cyan">""""
-                <Wifi className="w-4 h-4" />
+                <Wifi className="w-4 h-4"   />
                 <span>Connected Devices</span>"""
               </div>""""
               <div className="flex items-center gap-2 text-zion-purple">""""
-                <Server className="w-4 h-4" />
+                <Server className="w-4 h-4"   />
                 <span>Edge Processing</span>"""
               </div>""""
               <div className="flex items-center gap-2 text-zion-blue">""""
-                <Zap className="w-4 h-4" />
+                <Zap className="w-4 h-4"   />
                 <span > Real - time Analytics</span>
               </div>
             </div>
@@ -217,7 +215,7 @@ export default function IoTEdge() {}
         </div>
       </section>;
 """
-      {/* IoT Technologies */}""""
+      {/* comment */}""""
       <section className="py-20 bg-zion-blue-dark/50">;""""
         <div className="container-responsive">
           <motion.div;
@@ -266,17 +264,16 @@ export default function IoTEdge() {}
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>""""
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{technology.description}</p>""""
                 <p className="text-zion-cyan font-semibold mb-2">{technology.useCase}</p>
-
-                <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${}
-'
-''
-'''
-                  technology.reliability === 'Critical'''''
-                    ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`
-                    : technology.reliability === 'High''''`'`
-                    ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````
-                }`}>
+                <span className={"inline-block px-3 py-1 rounded-full text-sm font-semibold ${}
+"
+""
+"""
+                  technology.reliability === "Critical"""""
+                    ? "bg-red-500/20 text-red-400 border border-red-500/30""""""
+                    : technology.reliability === "High"""""""
+                    ? "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30""""""""
+                    : "bg-green-500/20 text-green-400 border border-green-500/30"""""
+                }"}>
                   {technology.reliability} Reliability;
                 </span>
               </motion.div>;) ) }
@@ -284,7 +281,7 @@ export default function IoTEdge() {}
         </div>
       </section>
 """
-      {/* Process Section */}""""
+      {/* comment */}""""
       <section className="py-20">;""""
         <div className="container-responsive">
           <motion.div;
@@ -343,7 +340,7 @@ export default function IoTEdge() {}
         </div>
       </section>
 """
-      {/* Solutions Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-zion-blue-dark/50">;""""
         <div className="container-responsive">
           <motion.div;
@@ -364,19 +361,19 @@ export default function IoTEdge() {}
             </p>
           </motion.div>
 """
-          {/* Category Filter */}""""
+          {/* comment */}""""
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
               <button;
-                key={category}`
-                onClick={() => setSelectedCategory(category)}``
-                className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${}
-'
-''
-'''`
-                  selectedCategory === category'''`'`
-                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````
+                key={category}"
+                onClick={() => setSelectedCategory(category)}""
+                className={"px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${}
+"
+""
+""""
+                  selectedCategory === category""""""
+                    ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25""""""""
+                    : "bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40"""""
                 }`}
 
                 {category}
@@ -417,7 +414,7 @@ export default function IoTEdge() {}
                 <div className="space-y-3 mb-6">"""
                   {solution.features.map((feature, featureIndex) => (""""
                     <div key={featureIndex} className="flex items-center gap-3">""""
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />""""
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"   />""""
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -443,7 +440,7 @@ export default function IoTEdge() {}
                   </span>""""
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">""""
                     <span className="text-sm font-medium">Learn More</span>""""
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"   />
                   </button>
                 </div>
               </motion.div>) ) }
@@ -451,7 +448,7 @@ export default function IoTEdge() {}
         </div>
       </section>
 """
-      {/* Success Stories */}""""
+      {/* comment */}""""
       <section className="py-20">;""""
         <div className="container-responsive">
           <motion.div;
@@ -520,7 +517,7 @@ export default function IoTEdge() {}
 """"
                 <div className="flex items-center gap-2">"""
                   {[...Array(5)].map((_, i) => (""""
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />"""
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"   />"""
                   ))}""""
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -529,7 +526,7 @@ export default function IoTEdge() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;""""
         <div className="container-responsive">
           <motion.div;
@@ -545,8 +542,8 @@ export default function IoTEdge() {}
             className="text-center max-w-4xl mx-auto""""
 """"
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Connect Your World?</h2>""""
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">'
-              Let's discuss how our IoT and edge computing solutions can transform your business,
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">"
+              Let"s discuss how our IoT and edge computing solutions can transform your business,
               improve efficiency, and create new opportunities through connected technology.
             </p>"""
 """"
@@ -570,11 +567,7 @@ export default function IoTEdge() {}
 
 
 export { IoTEdge };
-
 export { IoTEdge };
-
 export { IoTEdge };
-
 export { IoTEdge };
-
 export { IoTEdge };

@@ -1,6 +1,5 @@
-import React from 'react';
-import { Link  } from 'react-router-dom';
-
+import React from "react";
+import { Link  } from "react-router-dom";
 const ServicesSitemap: React.FC = (): JSX.Element => {}
         {}
 """"
@@ -166,17 +165,16 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
     { title: "Pricing Guide", url: "/pricing", description: "Transparent pricing information" },""""
     { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },;"    { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" };
   ];
-
   return()
+
     <>"""
       <SEO""""
         title = "Services Sitemap | Zion Tech Group - Complete Service Directory""""
         description="Complete directory of all Zion Tech Group services: AI-powered micro SAAS, cloud infrastructure, data analytics, security, and more. Find the perfect solution for your business needs.""""
         keywords="Zion Tech Group services, AI services, cloud services, data analytics, cybersecurity, micro SAAS, business solutions, service directory""""
-        canonical="https://ziontechgroup.com/services-sitemap"""
-      />"""
+        canonical="https://ziontechgroup.com/services-sitemap""" />"""
       "      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"""
-        {/* Hero Section */}""""
+        {/* comment */}""""
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
@@ -194,7 +192,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
                 Complete Services Directory"""
               </h1>""""
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Discover our comprehensive portfolio of AI-powered micro SAAS, cloud infrastructure, 
+                Discover our comprehensive portfolio of AI-powered micro SAAS, cloud infrastructure,
                 data analytics, security, and specialized business solutions."""
               </p>""""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
@@ -215,7 +213,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           </div>
         </section>
 """
-        {/* Quick Access Links */}""""
+        {/* comment */}""""
         <section className="py-16 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -272,7 +270,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           </div>
         </section>
 """
-        {/* Complete Services Directory */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto">
             <motion.div;
@@ -323,7 +321,6 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
                       {category.description}
                     </p>
                   </div>
-
                   <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">                    {category.services.map((service, serviceIndex)   => (
                       <motion.div;
                         key={service.title}
@@ -365,7 +362,6 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
                               </li>) ) }
                           </ul>
                         </div>
-
                         <Link"""
                           to={service.url}""""
                           className="inline-block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"""
@@ -379,7 +375,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
           </div>
         </section>
 """
-        {/* Contact & CTA Section */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">""""
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
@@ -440,15 +436,9 @@ const ServicesSitemap: React.FC = (): JSX.Element => {}
             </div>
     </>
   )};
-
 export default ServicesSitemap;
-
 export { ServicesSitemap };
-
 export { ServicesSitemap };
-
 export { ServicesSitemap };
-
 export { ServicesSitemap };
-
 export { ServicesSitemap };

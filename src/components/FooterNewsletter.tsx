@@ -1,18 +1,20 @@
+const Component = () => {
+import React from "react"
 
-      // // // // // // // console.error('Newsletter subscription failed:', error) ;
+      // // // // // // // console.error("Newsletter subscription failed:", error) ;
     } finally {
       setIsSubmitting(false) ;
-      // console.error('Newsletter subscription failed:', error)} finally {
+      // console.error("Newsletter subscription failed:", error)} finally {
 
       setIsSubmitting(false)}
   };
-
   return ()
+
     <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">"
       <div className="text-center">"
         <div className="flex justify-center mb-4">"
           <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">"
-            <Mail className="w-6 h-6 text-white"  />          </div>
+            <Mail className="w-6 h-6 text-white"   />          </div>
         </div>
 "
         <h3 className="text-xl font-bold text-white mb-2">
@@ -20,10 +22,9 @@
         </h3>"
         <p className="text-gray-300 mb-6 max-w-md mx-auto">
           Get the latest insights on AI technology, cybersecurity trends, and IT solutions delivered to your inbox.</p>
-
         {isSubmitted ? ("
           <div className="flex items-center justify-center gap-2 text-green-400">"
-            <CheckCircle className="w-5 h-5"  />            <span>Successfully subscribed!</span>
+            <CheckCircle className="w-5 h-5"   />            <span>Successfully subscribed!</span>
           </div>
         ) : ("
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -34,7 +35,7 @@
               placeholder="Enter your email address"
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
               required
-            />
+           />
             <button"
               type="submit"
               disabled={isSubmitting || !email.trim()}"
@@ -42,12 +43,12 @@
 
               {isSubmitting ? (;
                 <>"
-                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"   />
                   Subscribing...
                 </>
               ) : (
                 <>"
-                  <Send className="w-4 h-4"  />                  Subscribe
+                  <Send className="w-4 h-4"   />                  Subscribe
                 </>) }
             </button>
           </form>;
@@ -59,3 +60,6 @@
       </div>;
     </div>;) };
 '"
+
+
+export default Component

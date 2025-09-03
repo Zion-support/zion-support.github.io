@@ -1,6 +1,6 @@
 import { Check, Cloud, BarChart3, Globe, Settings } from "lucide - react";"""
 import { Link } from "react - router - dom";
-import React from 'react';"""
+import React from "react";"""
 import { SEO } from "@/components/SEO";""""
 import { Button } from "@/components/ui/button";""""
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""""
@@ -88,28 +88,28 @@ export default function CloudCostOptimizer() {}
 """"
             title: "Cost Analysis & Monitoring",""""
             description: "Real-time visibility into your cloud spending with detailed breakdowns and trend analysis.",""""
-            icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>
+            icon: <BarChart3 className="h-8 w-8 text-zion-cyan"   />
         },
         {}
 """
 """"
             title: "AI-Powered Optimization",""""
             description: "Machine learning algorithms that continuously optimize your cloud resources for maximum cost efficiency.",""""
-            icon: <BarChart3 className="h-8 w-8 text-zion-purple"/>
+            icon: <BarChart3 className="h-8 w-8 text-zion-purple"   />
         },
         {}
 """
 """"
             title: "Multi-Cloud Management",""""
             description: "Unified cost optimization across AWS, Azure, and Google Cloud Platform.",""""
-            icon: <Globe className="h-8 w-8 text-zion-cyan"/>
+            icon: <Globe className="h-8 w-8 text-zion-cyan"   />
         },
         {}
 """
 """"
             title: "Automated Actions",""""
             description: "Automatically implement cost-saving measures with your approval and oversight.",""""
-            icon: <Settings className="h-8 w-8 text-zion-purple"/>
+            icon: <Settings className="h-8 w-8 text-zion-purple"   />
         }
     ];"""
     const supportedClouds = [""""
@@ -153,9 +153,9 @@ export default function CloudCostOptimizer() {}
         }"""
     ];""""
     return (<div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-slate to-background">""""
-      <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>
+      <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"   />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="pt-20 pb-16 px-4">""""
         <div className="container mx-auto text-center">""""
           <div className="mb-8">""""
@@ -175,14 +175,14 @@ export default function CloudCostOptimizer() {}
               Start Free Cost Analysis"""
             </Button>""""
             <Button size="lg" variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500/10 px-8 py-4 text-lg">""""
-              <Cloud className="h-5 w-5 mr-2"/>
+              <Cloud className="h-5 w-5 mr-2"   />
               Cost Calculator;
             </Button>
           </div>
         </div>
       </section>
 """
-      {/* Cost Savings Metrics */}""""
+      {/* comment */}""""
       <section className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -206,7 +206,7 @@ export default function CloudCostOptimizer() {}
         </div>
       </section>
 """
-      {/* Optimization Services */}""""
+      {/* comment */}""""
       <section className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -232,7 +232,7 @@ export default function CloudCostOptimizer() {}
         </div>
       </section>
 """
-      {/* Supported Cloud Providers */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 bg-zion-slate/30">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -247,7 +247,7 @@ export default function CloudCostOptimizer() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">""""
             {supportedClouds.map((cloud, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">""""
                 <CardContent className="p-4 text-center">""""
-                  <Cloud className="h-6 w-6 text-blue-400 mx-auto mb-2"/>""""
+                  <Cloud className="h-6 w-6 text-blue-400 mx-auto mb-2"   />""""
                   <span className="text-sm text-zion-slate-light">{cloud}</span>
                 </CardContent>
               </Card>) ) }
@@ -255,7 +255,7 @@ export default function CloudCostOptimizer() {}
         </div>
       </section>
 """
-      {/* Features Grid */}""""
+      {/* comment */}""""
       <section className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -271,7 +271,7 @@ export default function CloudCostOptimizer() {}
             {features.map((feature, index) => (<Card key={index} className="bg-zion-slate/50 border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">""""
                 <CardContent className="p-6">""""
                   <div className="flex items-start gap-3">""""
-                    <Check className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0"/>""""
+                    <Check className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0"   />""""
                     <span className="text-zion-slate-light">{feature}</span>
                   </div>
                 </CardContent>
@@ -280,7 +280,7 @@ export default function CloudCostOptimizer() {}
         </div>
       </section>
 """
-      {/* Pricing Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4">""""
         <div className="container mx-auto">""""
           <div className="text-center mb-12">""""
@@ -292,8 +292,8 @@ export default function CloudCostOptimizer() {}
             </p>
           </div>"""
           """"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">'"""
-            {pricingPlans.map((plan, index) => (<Card key={index} className={`relative ${plan.popular ? 'border-blue-500 border-2 scale-105' : 'border-blue-500/20'} bg-zion-slate/50 hover:border-blue-500/40 transition-all duration-300`}>""""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">""""
+            {pricingPlans.map((plan, index) => (<Card key={index} className={"relative ${plan.popular ? "border-blue-500 border-2 scale-105" : "border-blue-500/20"} bg-zion-slate/50 hover:border-blue-500/40 transition-all duration-300"}>""""
                 {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""""
                     <Badge className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2">
                       Most Popular;
@@ -309,12 +309,12 @@ export default function CloudCostOptimizer() {}
                 </CardHeader>""""
                 <CardContent className="space-y-3">""""
                   {plan.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-start gap-3">""""
-                      <Check className="h-4 w-4 text-blue-400 mt-1 flex-shrink-0"/>""""
+                      <Check className="h-4 w-4 text-blue-400 mt-1 flex-shrink-0"   />""""
                       <span className="text-sm text-zion-slate-light">{feature}</span>
                     </div>))}"""
-                </CardContent>"'"`
-                <div className="p-6 pt-0">'`'`
-                  <Button className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-500' : 'bg-blue-500 hover:bg-blue-600'}`}>
+                </CardContent>""""
+                <div className="p-6 pt-0">""""
+                  <Button className={"w-full ${plan.popular ? "bg-gradient-to-r from-blue-500 to-cyan-500" : "bg-blue-500 hover:bg-blue-600"}`}>
                     Get Started;
                   </Button>
                 </div>
@@ -323,7 +323,7 @@ export default function CloudCostOptimizer() {}
         </div>
       </section>
 """
-      {/* Contact Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 bg-zion-slate/30">""""
         <div className="container mx-auto text-center">""""
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -353,11 +353,7 @@ export default function CloudCostOptimizer() {}
 
 
 export { CloudCostOptimizer };
-
 export { CloudCostOptimizer };
-
 export { CloudCostOptimizer };
-
 export { CloudCostOptimizer };
-
 export { CloudCostOptimizer };

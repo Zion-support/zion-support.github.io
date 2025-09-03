@@ -1,15 +1,13 @@
-import React from 'react';
-
+import React from "react";
 type SidebarProps = {
   isOpen: boolean;
   onClose: () => void;
 };
-
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-50" role="dialog" aria-modal="true">
-      <div className="absolute inset-0 bg-black/40" onClick={onClose} />
+      <div className="absolute inset-0 bg-black/40" onClick={onClose}    />
       <div className="absolute right-0 top-0 h-full w-80 bg-white shadow-xl p-4">
         <button onClick={onClose} className="text-sm text-gray-600">Close</button>
         <nav className="mt-4 space-y-2">
@@ -20,4 +18,3 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       </div>
     </div>
   );
-}

@@ -46,5 +46,4 @@ const MobileLaunch = () => {
             </div>
     </>
   );
-}
 export default MobileLaunch

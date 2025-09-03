@@ -1,7 +1,6 @@
 import Head from "next/head"
 import React from "react"
 interface SEOProps {;
-
   title: string,,;
 description: string,;
   keywords?: string,;
@@ -19,10 +18,9 @@ const SEO: React.FC<SEOProps> = ({,;
   type = "website",";
   siteName = "Zion Tech Group";,
 }) => {;
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullTitle = title.includes(siteName) ? title : "${title} | ${siteName}";
   const fullImage = image || "/images/og-image.jpg";
   const fullUrl = url || "https: //ziontechgroup.com",;
-
 const SEO: React.FC<SEOProps> = ({,
   title,
   description,
@@ -57,7 +55,7 @@ const SEO: React.FC<SEOProps> = ({,
       {/* comment */}""
       <meta name="viewport" content="width=device-width, initial-scale=1"  />"
       <meta name="robots" content="index, follow"  />""
-      <link rel="canonical" href="{fullUrl}"  />
+      <link rel="canonical" href="{fullUrl}"   />
       {/* comment */}"
       <script type="application/ld+json""
         dangerouslySetInnerHTML="{{"
@@ -89,7 +87,7 @@ const SEO: React.FC<SEOProps> = ({,
 })>
 }}
 
-     />
+    />
     </Head>
   )}
 "';

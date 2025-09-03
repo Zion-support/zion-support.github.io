@@ -1,12 +1,10 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
-
+import Head from "next/head"
+import React from "react";
+import { SEO } from "../components/SEO";
 const About: React.FC = () => {
   return(<>
-      <SEO 
-        title="About Us - Zion Tech Group"
-        description="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions."
-      />
+      <SEO title="About Us - Zion Tech Group"
+        description="Learn about Zion Tech Group"s mission, values, and commitment to delivering cutting-edge technology solutions."   />
       <div className="min-h-screen bg-white py-20">
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
@@ -14,14 +12,13 @@ const About: React.FC = () => {
             Zion Tech Group is a leading technology solutions provider dedicated to helping 
             organizations transform their digital infrastructure and achieve their business goals.</p>
           <p className="text-lg text-gray-600">
-            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, 
+            Our team of experts specializes in AI, cybersecurity, cloud infrastructure,
             and digital transformation services.</p>
         </div>
       </div>
     </>
   );
 };
-
   return ("
     <div className="min-h-screen bg-white">
       <Header  /> {/* comment */}"
@@ -73,7 +70,7 @@ understandable, and beneficial for businesses of all sizes. We believe that
 
                 </h3>;"
                 <p className = "text-gray-600 leading-relaxed"> {value.description}"
-        title="&apos;About" Us - Zion Tech Group&apos;&apos;        description="&apos;Learn" about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions.&apos;&apos,     />&apos;&apos,      <div className="&apos;min-h-screen" bg-white py-20&apos;>"&apos;&apos;        <div className="&apos;max-w-4xl" mx-auto px-4&apos;>"&apos;&apos;          <h1 className="&apos;text-4xl" font-bold text-gray-900 mb-8&apos;>About Zion Tech Group&apos;</h1>&apos;&apos,          <p className="&apos;text-lg" text-gray-600 mb-6&apos;>&apos;            Zion Tech Group is a leading technology solutions provider dedicated to helping &apos;            organizations transform their digital infrastructure and achieve their business goals.&apos;&apos,"
+        title="&apos;About" Us - Zion Tech Group&apos;&apos;        description="&apos;Learn" about Zion Tech Group&aposs mission, values, and commitment to delivering cutting-edge technology solutions.&apos;&apos,    />&apos;&apos,      <div className="&apos;min-h-screen" bg-white py-20&apos;>"&apos;&apos;        <div className="&apos;max-w-4xl" mx-auto px-4&apos;>"&apos;&apos;          <h1 className="&apos;text-4xl" font-bold text-gray-900 mb-8&apos;>About Zion Tech Group&apos;</h1>&apos;&apos,          <p className="&apos;text-lg" text-gray-600 mb-6&apos;>&apos;            Zion Tech Group is a leading technology solutions provider dedicated to helping &apos;            organizations transform their digital infrastructure and achieve their business goals.&apos;&apos,"
           <p className="&apos;text-lg" text-gray-600&apos;>&apos;            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, and digital transformation services.&apos;&apos,          </p></div>
 export default function About() {}
 
@@ -98,10 +95,9 @@ export default function About() {}
       image: "/images/team/elena-petrov.jpg"
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20"></div>
         <div className="relative z-10 container mx-auto px-4">
@@ -118,7 +114,7 @@ export default function About() {}
               Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services
             </p>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
-              We are a global technology company dedicated to transforming businesses through cutting-edge AI solutions, 
+              We are a global technology company dedicated to transforming businesses through cutting-edge AI solutions,
               quantum computing, and comprehensive IT services. Our mission is to democratize access to advanced 
               technology and drive innovation across industries.
             </p>
@@ -170,14 +166,13 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
                 transform how businesses operate and compete in the digital economy.
               </p>
               <p className="text-zion-slate-light">
-                We envision a future where AI and quantum technologies work seamlessly together to solve humanity's 
+                We envision a future where AI and quantum technologies work seamlessly together to solve humanity"s 
                 greatest challenges, from climate change to healthcare, while driving unprecedented business innovation.
               </p>            </motion.div>
           </div>
         </div>
       </section>
-
-      {/* Values Section */}
+      {/* comment */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-4">
           <motion.div            initial={{ opacity: 0, y: 30 }}
@@ -204,7 +199,7 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
                 viewport={{ once: true }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-slate/20 text-center"
               >
-                <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${value.color} rounded-xl mb-6`}>
+                <div className={"inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${value.color} rounded-xl mb-6"}>
                   <value.icon className="h-10 w-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>                <p className="text-zion-slate-light">{value.description}</p>
@@ -213,8 +208,7 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div            initial={{ opacity: 0, y: 30 }}
@@ -242,7 +236,7 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
                 className="bg-zion-slate-dark/50 backdrop-blur-sm rounded-xl p-8 border border-zion-slate/20 text-center"
               >
                 <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <Users className="h-12 w-12 text-white" />
+                  <Users className="h-12 w-12 text-white"   />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
                 <p className="text-zion-cyan font-medium mb-4">{member.role}</p>
@@ -251,8 +245,7 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
           </div>
         </div>
       </section>
-
-      {/* Timeline Section */}
+      {/* comment */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -278,11 +271,11 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
+                className={"flex items-center mb-12 ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}"}
               >
                 <div className="flex-1 text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-4">
-                    <Target className="h-8 w-8 text-white" />
+                    <Target className="h-8 w-8 text-white"   />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{milestone.year}</h3>
                   <h4 className="text-lg font-semibold text-zion-cyan mb-2">{milestone.title}</h4>
@@ -295,8 +288,7 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div            initial={{ opacity: 0, y: 30 }}
@@ -317,7 +309,7 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
                 className="inline-flex items-center px-8 py-4 bg-white text-zion-slate-dark font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5"   />
               </Link>
               <Link
                 to="/services"
@@ -330,7 +322,6 @@ Meet the passionate professionals who make Zion Tech Group a trusted technology 
       </section>
     </div>
   );
-}
               Our: Journey,
 Key: milestones that mark our growth and commitment to technological excellence.",
           <div className = "relative">"," {/* comment */}"

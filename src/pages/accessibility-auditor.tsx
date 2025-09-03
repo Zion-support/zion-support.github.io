@@ -46,5 +46,4 @@ const accessibilityauditor = () => {
             </div>
     </>
   );
-}
 export default accessibilityauditor

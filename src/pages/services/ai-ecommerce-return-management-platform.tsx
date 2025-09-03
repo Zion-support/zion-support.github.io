@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import { 
-  RotateCcw, 
-  Bot, 
-  TrendingUp, 
-  Users, 
-  BarChart3, 
-  Zap, 
-  Shield, 
+  RotateCcw,
+  Bot,
+  TrendingUp,
+  Users,
+  BarChart3,
+  Zap,
+  Shield,
   CheckCircle,
   ArrowRight,
   Star,
@@ -37,42 +37,40 @@ import {
   FileText,
   QrCode,
   Mail
-} from 'lucide-react';
-
+} from "lucide-react";
 const AIEcommerceReturnManagementPlatform = () => {
   const features = [
     {
-      icon: <Bot className="w-6 h-6" />,
+      icon: <Bot className="w-6 h-6"   />,
       title: "AI-Powered Return Prediction",
       description: "Machine learning algorithms predict return likelihood and reasons, enabling proactive customer service and inventory optimization."
     },
     {
-      icon: <RotateCcw className="w-6 h-6" />,
+      icon: <RotateCcw className="w-6 h-6"   />,
       title: "Automated Return Processing",
       description: "Streamlined return workflows with automatic approval, label generation, and tracking updates for faster processing."
     },
     {
-      icon: <QrCode className="w-6 h-6" />,
+      icon: <QrCode className="w-6 h-6"   />,
       title: "Smart Return Labels",
       description: "Generate QR code return labels with automatic routing, condition assessment, and restocking instructions."
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
+      icon: <BarChart3 className="w-6 h-6"   />,
       title: "Return Analytics Dashboard",
       description: "Comprehensive analytics on return patterns, reasons, costs, and customer satisfaction with actionable insights."
     },
     {
-      icon: <Shield className="w-6 h-6" />,
+      icon: <Shield className="w-6 h-6"   />,
       title: "Fraud Detection",
       description: "AI-powered fraud detection to identify suspicious return patterns and prevent abuse while maintaining customer satisfaction."
     },
     {
-      icon: <Zap className="w-6 h-6" />,
+      icon: <Zap className="w-6 h-6"   />,
       title: "Inventory Optimization",
       description: "Automated restocking decisions based on return condition, demand forecasting, and inventory levels."
     }
   ];
-
   const pricingTiers = [
     {
       name: "Starter",
@@ -127,30 +125,28 @@ const AIEcommerceReturnManagementPlatform = () => {
       popular: false
     }
   ];
-
   const benefits = [
     {
-      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      icon: <TrendingUp className="w-8 h-8 text-green-500"   />,
       title: "60% Faster Processing",
       description: "Automated workflows reduce return processing time from days to hours."
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-blue-500" />,
+      icon: <DollarSign className="w-8 h-8 text-blue-500"   />,
       title: "40% Cost Reduction",
       description: "Optimized return handling and inventory management reduce operational costs."
     },
     {
-      icon: <Users className="w-8 h-8 text-purple-500" />,
+      icon: <Users className="w-8 h-8 text-purple-500"   />,
       title: "85% Customer Satisfaction",
       description: "Streamlined return experience improves customer satisfaction and retention."
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
+      icon: <Shield className="w-8 h-8 text-red-500"   />,
       title: "90% Fraud Prevention",
       description: "AI-powered fraud detection prevents return abuse and protects your business."
     }
   ];
-
   const integrations = [
     { name: "Shopify", logo: "🛍️" },
     { name: "WooCommerce", logo: "🛒" },
@@ -165,7 +161,6 @@ const AIEcommerceReturnManagementPlatform = () => {
     { name: "USPS", logo: "📮" },
     { name: "DHL", logo: "🌍" }
   ];
-
   const workflowSteps = [
     {
       step: "1",
@@ -193,10 +188,9 @@ const AIEcommerceReturnManagementPlatform = () => {
       description: "Automatic refund processing or exchange fulfillment based on return condition."
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -206,7 +200,7 @@ const AIEcommerceReturnManagementPlatform = () => {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
-              <RotateCcw className="w-4 h-4 mr-2" />
+              <RotateCcw className="w-4 h-4 mr-2"   />
               AI-Powered Return Management
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -220,7 +214,7 @@ const AIEcommerceReturnManagementPlatform = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-semibold transition-colors flex items-center justify-center">
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"   />
               </button>
               <button className="px-8 py-4 border border-gray-600 hover:border-gray-500 text-white rounded-lg font-semibold transition-colors">
                 Watch Demo
@@ -229,8 +223,7 @@ const AIEcommerceReturnManagementPlatform = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -270,8 +263,7 @@ const AIEcommerceReturnManagementPlatform = () => {
           </div>
         </div>
       </section>
-
-      {/* Workflow Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -314,8 +306,7 @@ const AIEcommerceReturnManagementPlatform = () => {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -355,8 +346,7 @@ const AIEcommerceReturnManagementPlatform = () => {
           </div>
         </div>
       </section>
-
-      {/* Integrations Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -389,8 +379,7 @@ const AIEcommerceReturnManagementPlatform = () => {
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -414,11 +403,11 @@ const AIEcommerceReturnManagementPlatform = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${
+                className={"bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${
                   tier.popular 
-                    ? 'border-orange-500 ring-2 ring-orange-500/20' 
-                    : 'border-slate-700'
-                }`}
+                    ? "border-orange-500 ring-2 ring-orange-500/20" 
+                    : "border-slate-700"
+                }"}
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -444,21 +433,19 @@ const AIEcommerceReturnManagementPlatform = () => {
                     </span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0"   />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
-
-                <button className={`w-full py-3 rounded-lg font-semibold transition-colors ${
+                <button className={"w-full py-3 rounded-lg font-semibold transition-colors ${
                   tier.popular
-                    ? 'bg-orange-600 hover:bg-orange-700 text-white'
-                    : 'bg-slate-700 hover:bg-slate-600 text-white'
-                }`}>
+                    ? "bg-orange-600 hover:bg-orange-700 text-white"
+                    : "bg-slate-700 hover:bg-slate-600 text-white"
+                }"}>
                   {tier.cta}
                 </button>
               </motion.div>
@@ -466,8 +453,7 @@ const AIEcommerceReturnManagementPlatform = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-600 to-red-600">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -484,7 +470,7 @@ const AIEcommerceReturnManagementPlatform = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-white text-orange-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"   />
               </button>
               <button className="px-8 py-4 border border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
                 Schedule Demo
@@ -493,8 +479,7 @@ const AIEcommerceReturnManagementPlatform = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* Contact Section */}
+      {/* comment */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
@@ -508,36 +493,30 @@ const AIEcommerceReturnManagementPlatform = () => {
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-orange-400 mr-3" />
+                    <Phone className="w-5 h-5 text-orange-400 mr-3"   />
                     <span className="text-white">+1 302 464 0950</span>
                   </div>
                   <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-orange-400 mr-3" />
+                    <Mail className="w-5 h-5 text-orange-400 mr-3"   />
                     <span className="text-white">kleber@ziontechgroup.com</span>
                   </div>
                   <div className="flex items-center">
-                    <MapPin className="w-5 h-5 text-orange-400 mr-3" />
+                    <MapPin className="w-5 h-5 text-orange-400 mr-3"   />
                     <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
                 </div>
               </div>
               <div>
                 <form className="space-y-4">
-                  <input
-                    type="text"
+                  <input type="text"
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500"
-                  />
-                  <input
-                    type="email"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500"   />
+                  <input type="email"
                     placeholder="Your Email"
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500"
-                  />
-                  <textarea
-                    placeholder="Your Message"
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500"   />
+                  <textarea placeholder="Your Message"
                     rows={4}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500"
-                  />
+                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500"   />
                   <button className="w-full px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-semibold transition-colors">
                     Send Message
                   </button>
@@ -550,5 +529,4 @@ const AIEcommerceReturnManagementPlatform = () => {
     </div>
   );
 };
-
 export default AIEcommerceReturnManagementPlatform;

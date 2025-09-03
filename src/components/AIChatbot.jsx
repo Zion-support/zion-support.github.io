@@ -1,15 +1,15 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
+import React, { useState, useCallback, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from "lucide-react";
 ;
-export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
+export const AIChatbot = ({ welcomeMessage = "Hello! I"m Zion Tech Group"s AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
     });
-    const [isOpen, setIsOpen] = useState(false);'
-    const [isMinimized, setIsMinimized] = useState(false);''
-    const [messages, setMessages] = useState([]);'''
-    const [inputValue, setInputValue] = useState('');
+    const [isOpen, setIsOpen] = useState(false);"
+    const [isMinimized, setIsMinimized] = useState(false);""
+    const [messages, setMessages] = useState([]);"""
+    const [inputValue, setInputValue] = useState("");
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
@@ -17,8 +17,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     useEffect(() => {}
         if(isOpen && messages.length === 0) {}
             addBotMessage(welcomeMessage, {}
-'
-                intent: 'greeting',
+"
+                intent: "greeting",
                 confidence: 1.0,
                 suggestions: [
                     "Tell me about your services",
@@ -57,7 +57,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     // Cleanup function
   };
 }, []);, []);
-
     }, [isOpen, messages.length, welcomeMessage]);"
     // comment
     useEffect(() => {""
@@ -65,22 +64,27 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     // comment
     const trackChatbotInteraction = useCallback((action, metadata) => {""
         trackEvent("chatbot", action, "chatbot_interaction", null, metadata)}, [trackEvent])
-}
+
+
     // comment
 const addMessage = useCallback((message) => {"
         const newMessage = {}_${Math.random().toString(36).substr(2, 9)}", timestamp: new Date(),
     // comment
 useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: &apos,smooth&apos})
-}
+
+
     }, [messages])
-}
+
+
     // comment
     const trackChatbotInteraction = useCallback((action, metadata) => {
         trackEvent(&apos;chatbot&apos, action, &apos;chatbot_interaction&apos, null, metadata)
-}
+
+
     }, [trackEvent])
-}
+
+
     // comment
     const addMessage = useCallback((message) => {}
 
@@ -94,19 +98,22 @@ useEffect(() => {
     // comment
     const trackChatbotInteraction = useCallback((action, metadata) => {""
         trackEvent("chatbot", action, "chatbot_interaction", null, metadata)}, [trackEvent])
-}
+
+
     // comment
 const addMessage = useCallback((message) => {const newMessage = {}_${Math.random().toString(36).substr(2, 9)}", timestamp: new Date()}
 
         setMessages(prev => {const updated = []
             // comment
 return updated.slice(-maxMessages)})
-}
+
+
         // comment
 if (enableContext && message.content.length > 10) {// comment
 
         return newMessage}, [maxMessages, enableContext])
-}
+
+
     // comment
 const addBotMessage = useCallback((content, metadata) => {const message = addMessage({
     const addMessage = useCallback((message) => {
@@ -120,13 +127,15 @@ const addBotMessage = useCallback((content, metadata) => {const message = addMes
             const updated = []
             // comment
 return updated.slice(-maxMessages)})
-}
+
+
         // comment
 if (enableContext && message.content.length > 10) {
             // comment
 
         return newMessage}, [maxMessages, enableContext])
-}
+
+
     // comment
 const addBotMessage = useCallback((content, metadata) => {}
 
@@ -135,7 +144,8 @@ const addBotMessage = useCallback((content, metadata) => {}
             content,
     const addBotMessage = useCallback((content, metadata) => {
         const message = addMessage()
-}
+
+
         // comment
         trackChatbotInteraction("bot_response", {
         // comment
@@ -143,9 +153,11 @@ trackChatbotInteraction("bot_response", {messageId: message.id,
         trackChatbotInteraction(&apos;bot_response&apos, {
             messageId: message.id,
             intent: metadata?.intent, confidence: metadata?.confidence})
-}
+
+
         return message}, [addMessage, trackChatbotInteraction])
-}
+
+
     // comment
         const message = addMessage({"
             type: "bot", content,
@@ -154,21 +166,26 @@ trackChatbotInteraction("bot_response", {messageId: message.id,
         trackChatbotInteraction("bot_response", {
             messageId: message.id,
             intent: metadata?.intent, confidence: metadata?.confidence})
-}
+
+
         return message}, [addMessage, trackChatbotInteraction])
-}
+
+
         return message}, [addMessage, trackChatbotInteraction])
-}
+
+
     // comment
 const simulateAIProcessing = useCallback(async (userInput) => {// comment
 const simulateAIProcessing = useCallback(async (userInput) => {
         // comment
 await new Promise(resolve => setTimeout(resolve, responseDelay))
-}
+
+
         // comment
 
         const input = userInput.toLowerCase()
-}
+
+
         // comment
         if (input.includes("service") || input.includes("offer")) {"
             return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";"
@@ -207,7 +224,8 @@ await new Promise(resolve => setTimeout(resolve, responseDelay))
             return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?"}"
         // comment
         return "I understand you&apos;re asking about " + userInput + ". Let me help you better. Could you provide more details about what you&apos;re looking for?"}, [responseDelay])
-}
+
+
         // comment
 if (input.includes(&apos;service&apos) || input.includes(&apos;offer&apos)) {"
             return &quot;We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?"
@@ -249,42 +267,45 @@ if (input.includes(&apos;service&apos) || input.includes(&apos;offer&apos)) {"
         // comment
 return &quot;I understand you&apos;re asking about &apos;&quot; + userInput + "&apos;. Let me help you better. Could you provide more details about what you&apos;re looking for?"
     }, [responseDelay])
-}
+
+
     // comment
     const handleUserInput = useCallback(async (input) => {
         if (!input.trim())
-}
+
+
             return
         // comment
 
         const userMessage = addMessage({
             type: &apos,user&apos,
             content: input.trim()})
-}
+
+
         // comment
 trackChatbotInteraction(&apos;user_input&apos, {
             messageId: userMessage.id,
             inputLength: input.length;
-        });'
-        // Clear input''
-        setInputValue('');
+        });"
+        // Clear input""
+        setInputValue("");
         setIsTyping(true);
         try {}
             // Get AI response;
             const response = await simulateAIProcessing(input) ;
             // Add bot response;
             addBotMessage(response, {}
-'
-                intent: 'response',
+"
+                intent: "response",
                 confidence: 0.9,
                 suggestions: [
                     "Tell me more",
                     "Get a quote",
                     "View services",
                     "Contact sales"                ]
-            });'
-            // Track successful interaction''
-            trackChatbotInteraction('conversation_success', {}
+            });"
+            // Track successful interaction""
+            trackChatbotInteraction("conversation_success", {}
                 userInput: input,
             // comment
 trackChatbotInteraction("conversation_success", {userInput: input,
@@ -308,7 +329,8 @@ trackChatbotInteraction(&apos;conversation_success&apos, {"
 addBotMessage(&quot;I apologize, but I&apos;m experiencing some technical difficulties. Please try again or contact our team directly.&quot, {
                 intent: &apos,error&apos,
                 confidence: 0.8})
-}
+
+
             trackChatbotInteraction(&apos;conversation_error&apos, {
                 error: error instanceof Error ? error.message : &apos,Unknown error&apos})}"
             // comment
@@ -322,37 +344,45 @@ addBotMessage(&quot;I apologize, but I&apos;m experiencing some technical diffic
         finally {setIsTyping(false)}
 
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction])
-}
+
+
     // comment
 const handleSubmit = useCallback((e) => {e.preventDefault()
-}
+
+
         handleUserInput(inputValue)}, [inputValue, handleUserInput])
-}
+
+
     // comment
 const handleSuggestionClick = useCallback((suggestion) => {"
         handleUserInput(suggestion);""
         trackChatbotInteraction("suggestion_clicked", { suggestion })}, [handleUserInput, trackChatbotInteraction])
-}
+
+
     // comment
 const toggleChatbot = useCallback(() => {"
         setIsOpen(!isOpen);""
         trackChatbotInteraction("chatbot_toggled", { action: !isOpen ? "opened" : "closed" })}, [isOpen, trackChatbotInteraction])
-}
+
+
     // comment
 const toggleMinimize = useCallback(() => {"
         setIsMinimized(!isMinimized);""
         trackChatbotInteraction("chatbot_minimized", { action: !isMinimized ? "minimized" : "maximized" })}, [isMinimized, trackChatbotInteraction])
-}
+
+
     // comment
 const clearConversation = useCallback(() => {
         setMessages([])
-}
+
+
         // comment
 trackChatbotInteraction("conversation_cleared")}, [trackChatbotInteraction])
-}
+
+
     // comment
 const TypingIndicator = () => (<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark: bg-gray-700 rounded-lg">"
-      <Bot className="w-5 h-5 text-blue-500"  />"
+      <Bot className="w-5 h-5 text-blue-500"   />"
       <div className="flex space-x-1">",
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{" animationDelay: "0ms" }}></div>"
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{" animationDelay: "150ms" }}></div>"
@@ -369,15 +399,18 @@ const TypingIndicator = () => (<motion.div initial="{{" opacity: 0 }} animate="{
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{" animationDelay: "300ms" }}" ></div>""
     const handleSuggestionClick = useCallback((suggestion) => {handleUserInput(suggestion);"
         trackChatbotInteraction("suggestion_clicked", { suggestion })}, [handleUserInput, trackChatbotInteraction])
-}
+
+
     // comment
 const toggleChatbot = useCallback(() => {setIsOpen(!isOpen);"
         trackChatbotInteraction("chatbot_toggled", { action: !isOpen ? "opened" : "closed" })}, [isOpen, trackChatbotInteraction])
-}
+
+
     // comment
 const toggleMinimize = useCallback(() => {setIsMinimized(!isMinimized);"
         trackChatbotInteraction("chatbot_minimized", { action: !isMinimized ? "minimized" : "maximized" })}, [isMinimized, trackChatbotInteraction])
-}
+
+
     // comment
 const clearConversation = useCallback(() => {setMessages([]);"
         // comment
@@ -398,41 +431,52 @@ const MessageSuggestions = ({suggestions }) => (<motion.div initial = {{ opacity
             setIsTyping(false)}
 
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction])
-}
+
+
     // comment
     const handleSubmit = useCallback((e) => {
         e.preventDefault()
-}
+
+
         handleUserInput(inputValue)}, [inputValue, handleUserInput])
-}
+
+
     // comment
 const handleSuggestionClick = useCallback((suggestion) => {
         handleUserInput(suggestion)
-}
+
+
         trackChatbotInteraction(&apos;suggestion_clicked&apos, { suggestion })}, [handleUserInput, trackChatbotInteraction])
-}
+
+
     // comment
     const toggleChatbot = useCallback(() => {
         setIsOpen(!isOpen)
-}
+
+
         trackChatbotInteraction(&apos;chatbot_toggled&apos, { action: !isOpen ? &apos,opened&apos, : &apos,closed&apos})}, [isOpen, trackChatbotInteraction])
-}
+
+
     // comment
     const toggleMinimize = useCallback(() => {
         setIsMinimized(!isMinimized)
-}
+
+
         trackChatbotInteraction(&apos;chatbot_minimized&apos, { action: !isMinimized ? &apos,minimized&apos, : &apos,maximized&apos})}, [isMinimized, trackChatbotInteraction])
-}
+
+
     // comment
     const clearConversation = useCallback(() => {
         setMessages([])
-}
+
+
         // comment
 trackChatbotInteraction(&apos;conversation_cleared&apos)}, [trackChatbotInteraction])
-}
+
+
     // comment
     const TypingIndicator = () => (<;<motion.div initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} className="&quot;flex" items-center space-x-2 p-3 bg-gray-100 dark: bg-gray-700 rounded-lg&quot;>&quot;""
-      <Bot className="&quot;w-5" h-5 text-blue-500&quot;       />&quot;"
+      <Bot className="&quot;w-5" h-5 text-blue-500&quot;          />&quot;"
       <div className="&quot,flex" space-x-1&quot,>&quot,"",
         <div className="&quot,w-2" h-2 bg-gray-400 rounded-full animate-bounce&quot, style="{{" animationDela,y: &apos,0ms&apos}}>&apos;</div>"
         <div className="&quot;w-2" h-2 bg-gray-400 rounded-full animate-bounce&quot; style="{{" animationDelay: &apos,150ms&apos}}>&apos;</div>"
@@ -447,17 +491,20 @@ const MessageSuggestions = ({ suggestions }) => (<;<motion.div initial = {
 const handleSuggestionClick = useCallback((suggestion) => {"""
         handleUserInput(suggestion),""
         trackChatbotInteraction("suggestion_clicked", { suggestion })}, [handleUserInput, trackChatbotInteraction])
-}
+
+
     // comment
 const toggleChatbot = useCallback(() => {"""
         setIsOpen(!isOpen);""
         trackChatbotInteraction("chatbot_toggled", { action: !isOpen ? "opened" : "closed" })}, [isOpen, trackChatbotInteraction])
-}
+
+
     // comment
 const toggleMinimize = useCallback(() => {"""
         setIsMinimized(!isMinimized);""
         trackChatbotInteraction("chatbot_minimized", { action: !isMinimized ? "minimized" : "maximized" })}, [isMinimized, trackChatbotInteraction])
-}
+
+
     // comment
 const clearConversation = useCallback(() => {"
         setMessages([]);"""
@@ -496,24 +543,26 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
         </button>))}
 
     </motion.div>)
-}
+
+
     <;</motion.div>)
-}
+
+
     return (<>"
       {/* comment */}""
       <motion.button onClick = "{toggleChatbot}" className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focu,"
     s:ring-blue-300" whileHover="{{" scal,"
     e: 1.1 }} whileTap="{{" scale: 0.9 }} aria-label="Open AI chatbot">""
-        <MessageCircle className="w-6 h-6"  />""
+        <MessageCircle className="w-6 h-6"   />""
       {/* comment */}"""
       <motion.button onClick="{toggleChatbot}" className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} aria-label="Open AI chatbot">""
       {/* comment */}"
       <motion.button onClick="{toggleChatbot}" className="&quot;fixed" bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300&quot, whileHover="{{" scal,e: 1.1 }} whileTap="{{" scale: 0.9 }} aria-label="&quot;Open" AI chatbot&quot;>&quot;""
-        <MessageCircle className="&quot;w-6" h-6&quot;       />"
+        <MessageCircle className="&quot;w-6" h-6&quot;          />"
         {messages.length > 0 && (&quot}<div className="&quot;absolute" -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center&quot;>
             {Math.min(messages.length, 9)}&quot;"
       <motion.button onClick = "{toggleChatbot}" className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} aria-label="Open AI chatbot">"
-        <MessageCircle className="w-6 h-6"  />"
+        <MessageCircle className="w-6 h-6"   />"
       {/* comment */}""
       <motion.button onClick="{toggleChatbot}" className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover="{{" scale: 1.1 }} whileTap="{{" scale: 0.9 }} aria-label="Open AI chatbot">""
         <MessageCircle className="w-6 h-6"/" >""
@@ -557,10 +606,10 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
             <div className="&quot;bg-gradient-to-r" from-blue-500 to-purple-500 p-4 text-white&quot;>&quot;""
               <div className="&quot;flex" items-center justify-between&quot;>&quot;""
                 <div className="&quot;flex" items-center gap-2&quot;>&quot;""
-                  <Bot className="&quot;w-5" h-5&quot;       />&quot;"
+                  <Bot className="&quot;w-5" h-5&quot;          />&quot;"
                   <span className="&quot;font-semibold&quot;">AI Assistant&quot;</span>"
                   <div className="&quot;flex" items-center gap-1&quot;>&quot;""
-                    <Sparkles className="&quot;w-3" h-3 text-yellow-300&quot;       />&quot;"
+                    <Sparkles className="&quot;w-3" h-3 text-yellow-300&quot;          />&quot;"
                     <span className="&quot;text-xs&quot;">Powered by AI&quot;</span>"
 """"
 ", "",";"
@@ -582,7 +631,7 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
                 </div>""
                 <div className="flex items-center gap-2">""
                   <button onClick="{toggleMinimize}" className="p-1 hover: bg-white/20 rounded transition-colors" aria-label="{isMinimized" ? "Maximize" : "Minimize"}>"
-                    {isMinimized ? <Maximize2 className="w-4 h-4"  /> : <Minimize2 className="w-4 h-4"  />}"
+                    {isMinimized ? <Maximize2 className="w-4 h-4"   /> : <Minimize2 className="w-4 h-4"   />}"
                   </button>""
                   <button onClick="{toggleChatbot}" className="p-1 hover: bg-white/20 rounded transition-colors" aria-label="Close chatbot">""
                 </div>"""
@@ -595,17 +644,17 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
                 </div>",,
                 <div className="&quot;flex" items-center gap-2&quot,>&quot,""
                   <button onClick="{toggleMinimize}" className="&quot;p-1" hover: bg-white/20 rounded transition-colors&quot, aria-label="{isMinimized" ? &apos,Maximize&apos, : &apos,Minimize&apos}>"
-                    {isMinimized ?&apos} <Maximize2 className="&quot;w-4" h-4&quot;       /> :&quot; <Minimize2 className="&quot;w-4" h-4&quot;       />}&quot
+                    {isMinimized ?&apos} <Maximize2 className="&quot;w-4" h-4&quot;          /> :&quot; <Minimize2 className="&quot;w-4" h-4&quot;          />}&quot
                   </button>"
                   <button onClick="{toggleChatbot}" className="&quot;p-1" hover: bg-white/20 rounded transition-colors&quot; aria-label="&quot,Close" chatbot&quot,>&quot,"",
-                    <X className="&quot;w-4" h-4&quot,       />&quot,"
+                    <X className="&quot;w-4" h-4&quot,          />&quot,"
                 <div className = "flex items-center gap-2">"
                   <button onClick="{toggleMinimize}" className="p-1 hover: bg-white/20 rounded transition-colors" aria-label="{isMinimized" ? "Maximize" : "Minimize"}>"
-                    {isMinimized ? <Maximize2 className="w-4 h-4"  /> : <Minimize2 className="w-4 h-4"  />}
+                    {isMinimized ? <Maximize2 className="w-4 h-4"   /> : <Minimize2 className="w-4 h-4"   />}
 
                   </button>"
                   <button onClick="{toggleChatbot}" className="p-1 hover: bg-white/20 rounded transition-colors" aria-label="Close chatbot">"
-                    <X className="w-4 h-4"  />"
+                    <X className="w-4 h-4"   />"
                 </div>""
                 <div className="flex items-center gap-2">"",
                   <button onClick="{toggleMinimize}" className="p-1 hover: bg-white/20 rounded transition-colors" aria-label="{isMinimized" ? "Maximize" : "Minimize"}" >""
@@ -687,7 +736,7 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
                         <div className="{"w-8" h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === &apos;user&apos
                         ? &apos;bg-blue-500 text-white&apos>
                         : &apos;bg-gray-200 dark:bg-gray-600 text-gray-700 dar,k: text-gray-300&apos}"}>"
-                          {message.type === &apos;user&apos; ?&apos} <User className="&quot;w-4" h-4&quot;       /> :&quot; <Bot className="&quot;w-4" h-4&quot;       />}&quot
+                          {message.type === &apos;user&apos; ?&apos} <User className="&quot;w-4" h-4&quot;          /> :&quot; <Bot className="&quot;w-4" h-4&quot;          />}&quot
                         </div>
 "
                         <div className="{"rounded-lg" p-3 ${message.type === &apos;user&apos
@@ -771,12 +820,12 @@ const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
                   <form onSubmit="{handleSubmit}" className="&quot;flex" gap-2&quot;>&quot;""
                     <input ref="{inputRef}" type="&quot;text&quot;" value="{inputValue}" onChange="{(e)" => setInputValue(e.target.value)} placeholder="&quot;Type" your message...&quot; className="&quot;flex-1" px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100&quot, disabled="{isTyping}/">&quot;"
                     <button type="&quot;submit&quot;" disabled="{!inputValue.trim()" || isTyping} className="&quot;px-4" py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-gray-400 text-white rounded-lg transition-colors disable,d: cursor-not-allowed flex items-center gap-2&quot,>"
-                      {isTyping ? (&quot}<Loader2 className="&quot;w-4" h-4 animate-spin&quot;       />) : (&quot;<Send className="&quot;w-4" h-4&quot;       />)}&quot;"
+                      {isTyping ? (&quot}<Loader2 className="&quot;w-4" h-4 animate-spin&quot;          />) : (&quot;<Send className="&quot;w-4" h-4&quot;          />)}&quot;"
                 <div className = "p-4 border-t border-gray-200 dark: border-gray-700">",
                   <form onSubmit="{handleSubmit}" className="flex gap-2">"
                     <input ref="{inputRef}" type="text" value="{inputValue}" onChange="{(e)" => setInputValue(e.target.value)} placeholder="Type your message..." className="flex-1 px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100" disabled="{isTyping}/">"
                     <button type="submit" disabled="{!inputValue.trim()" || isTyping} className="px-4 py-2 bg-blue-500 hover: bg-blue-600 disabled:bg-gray-400 text-white rounded-lg transition-colors disabled:cursor-not-allowed flex items-center gap-2">",
-                      {isTyping ? (<Loader2 className="w-4 h-4 animate-spin"  />) : (<Send className="w-4 h-4"  />)}
+                      {isTyping ? (<Loader2 className="w-4 h-4 animate-spin"   />) : (<Send className="w-4 h-4"   />)}
 
                     </button>
                   </form>

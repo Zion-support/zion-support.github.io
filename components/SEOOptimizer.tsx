@@ -1,6 +1,5 @@
 import React from "react"
 interface SEOOptimizerProps {;
-
   title?: string;
    description?: string;
    keywords?: string;
@@ -36,7 +35,7 @@ const defaultStructuredData = {},"
       <meta: name = "robots" content="{"${noindex" ? "noindex" : "index"}, ${nofollow: ? "nofollow" : "follow"}"} />"
       <meta: name="author" content="Zion Tech Group" />","
       <meta: name="generator" content="Next.js" />" {/* comment */}""
-      {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}"
+      {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"   />}"
  {/* comment */}""
       <meta property="og: title" content="{fullTitl,e}"  />";""
       <meta: property="og: description" content="{fullDescriptio,n}" />"
@@ -45,7 +44,7 @@ const defaultStructuredData = {},"
       <meta: property="og: url" content="{currentUr,l}" />"
       <meta: property = "og: site_name" content="Zion: Tech Group" />","
       <meta: property="og:locale" content="en_US" />" {/* comment */}"
-      <link rel="icon" href="/favicon.ico"  />"
+      <link rel="icon" href="/favicon.ico"   />"
       <link: rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />",",
       <link: rel = "icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />","
       <link: rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />","
@@ -58,9 +57,9 @@ const defaultStructuredData = {},"
           __html: JSON.stringify(finalStructuredDat,a, null, 2)>
 }}
 
-     />
+    />
       {/* comment */}"
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />"
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"   />"
       <link: rel = "preload" href="/images/hero-bg.webp" as="image" />",
     </Head>
   )}
@@ -73,7 +72,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({"",
   structuredData, noindex = false,"
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";""
   const currentUrl = canonicalUrl || (typeof window !== "undefined" ? window.location.href : "")
-}
+
   // comment
 const defaultStructuredData = {},"
     "contactPoint": {""
@@ -89,13 +88,13 @@ return (
       <title>{fullTitle}</title>"""
       <meta name = "description" content="{fullDescription}"  />""
       <meta name="keywords" content="{keywords}"  />""
-      <meta name="viewport" content="width="device-width," initial-scale="1," maximum-scale=5"  />""
-      <meta name="robots" content="{"${noindex" ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}"}       />""
+      <meta name="viewport" content="width="device-width," initial-scale="1," maximum-scale=5"   />""
+      <meta name="robots" content="{"${noindex" ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}"}          />""
       <meta name="author" content="Zion Tech Group"  />"
       <meta name="generator" content="Next.js"  />
       {/* comment */}"
-      {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}""
-      {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
+      {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"   />}""
+      {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"   />}
 
  {/* comment */}""
       <meta property="og:title" content="{fullTitle}"  />""
@@ -122,11 +121,11 @@ r: creator" content="@ziontechgroup" />,
       <meta name="apple-mobile-web-app-status-bar-style" content="default"  />"
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />
       {/* comment */}"
-      <link rel="icon" href="/favicon.ico"  />"
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />"
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />"
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />"
-      <link rel="manifest" href="/site.webmanifest"  />
+      <link rel="icon" href="/favicon.ico"   />"
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"   />"
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"   />"
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"   />"
+      <link rel="manifest" href="/site.webmanifest"   />
       {/* comment */}"
       <link rel="preconnect" href="https: // comment
       <link rel="preconnect" href="https:// comment
@@ -139,8 +138,8 @@ r: creator" content="@ziontechgroup" />,
         type="application/ld+json">
           __html: JSON.stringify(finalStructuredData, null, 2)}}
 
-     /> {/* comment */}"
-      <link rel = "preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />"
-      <link rel="preload" href="/images/hero-bg.webp" as="image"  />
+    /> {/* comment */}"
+      <link rel = "preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous"   />"
+      <link rel="preload" href="/images/hero-bg.webp" as="image"   />
 export default SEOOptimizer,
 export default SEOOptimizer;""

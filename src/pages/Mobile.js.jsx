@@ -1,3 +1,4 @@
+import React from "react"
 ;
 const Mobile = () => {
     const mobileStats = [
@@ -23,24 +24,24 @@ const Mobile = () => {
         }
     ];
     return (<>
-      <SEO title="Mobile-First Solutions - Zion Tech Group" description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences." canonical="/mobile"/>
+      <SEO title="Mobile-First Solutions - Zion Tech Group" description="Experience mobile-first design and development with Zion Tech Group. From responsive websites to native mobile apps, we ensure optimal mobile experiences." canonical="/mobile"   />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
         <main className="pt-12">
           <div className="container mx-auto px-4 py-16">
-            {/* Header */}
+            {/* comment */}
             <div className="text-center mb-16">              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Mobile-First Solutions"""
               </h1>""""
-              <p className="text-xl text-blue-100 max-w-4xl mx-auto">'
-                In today's mobile-first world, we ensure your digital presence;
+              <p className="text-xl text-blue-100 max-w-4xl mx-auto">"
+                In today"s mobile-first world, we ensure your digital presence;
                 is optimized for mobile devices. From responsive websites to;
                 native mobile applications, we deliver exceptional mobile;
                 experiences that drive engagement and results.
               </p>
             </div>
 """
-            {/* Mobile Features */}""""
+            {/* comment */}""""
             <div className="mb-20">""""
               <h2 className="text-3xl font-semibold text-white text-center mb-12">
                 Our Mobile Approach"""
@@ -76,7 +77,7 @@ const Mobile = () => {
               </div>
             </div>
 """
-            {/* Mobile Services */}""""
+            {/* comment */}""""
             <div className="mb-20">""""
               <h2 className="text-3xl font-semibold text-white text-center mb-12">
                 Mobile Development Services"""
@@ -112,7 +113,7 @@ const Mobile = () => {
               </div>
             </div>
 """
-            {/* Mobile Stats */}""""
+            {/* comment */}""""
             <div className="mb-20">""""
               <h2 className="text-3xl font-semibold text-white text-center mb-12">
                 Why Mobile Matters"""
@@ -135,7 +136,7 @@ const Mobile = () => {
               </div>
             </div>
 """
-            {/* Mobile Benefits */}""""
+            {/* comment */}""""
             <div className="mb-20">""""
               <h2 className="text-3xl font-semibold text-white text-center mb-12">
                 Benefits of Mobile-First Design"""
@@ -158,7 +159,7 @@ const Mobile = () => {
               </div>
             </div>
 """
-            {/* Zion Mobile App */}""""
+            {/* comment */}""""
             <div className="mb-20">""""
               <div className="max-w-4xl mx-auto">""""
                 <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-lg border border-blue-500/30 p-8 text-center">""""
@@ -188,14 +189,14 @@ const Mobile = () => {
               </div>
             </div>
 """
-            {/* Call to Action */}""""
+            {/* comment */}""""
             <div className="max-w-4xl mx-auto">""""
               <div className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-8 text-center">""""
                 <h2 className="text-3xl font-semibold text-white mb-4">
                   Ready to Go Mobile?"""
                 </h2>""""
-                <p className="text-blue-100 mb-6 text-lg">'
-                  Let's discuss your mobile strategy and create solutions that;
+                <p className="text-blue-100 mb-6 text-lg">"
+                  Let"s discuss your mobile strategy and create solutions that;
                   deliver exceptional experiences across all devices."""
                 </p>""""
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
@@ -219,14 +220,8 @@ const Mobile = () => {
       </div>
     </>)};
 export default Mobile;
-
-
 export { Mobile };
-
 export { Mobile };
-
 export { Mobile };
-
 export { Mobile };
-
 export { Mobile };

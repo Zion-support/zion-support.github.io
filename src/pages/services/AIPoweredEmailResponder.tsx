@@ -1,5 +1,4 @@
-import React from 'react.ts';
-
+import React from "react.ts";
 const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -13,7 +12,6 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
             that drafts and automates replies, prioritizes important threads, and escalates to humans when needed.
           </p>
         </header>
-
         <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">
@@ -27,7 +25,6 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
                 <li className="p-3 rounded-lg bg-slate-800/50">Analytics: response time, CSAT proxy, deflection rate</li>
               </ul>
             </div>
-
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">
               <h2 className="text-2xl font-semibold mb-3">Pricing (avg market ranges)</h2>
               <ul className="space-y-2 text-slate-300">
@@ -40,7 +37,6 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
                 Benchmarks informed by public pricing from common CX platforms and AI add-ons.
               </p>
             </div>
-
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
@@ -51,7 +47,6 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
               </ul>
             </div>
           </div>
-
           <aside className="space-y-6">
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">
               <h3 className="text-xl font-semibold">Get a Quote</h3>
@@ -71,18 +66,9 @@ const AIPoweredEmailResponder: React.FC = (): JSX.Element => {
       </div>
     </div>
   );
-}
-
 export default AIPoweredEmailResponder;
-
-
-
 export { AIPoweredEmailResponder };
-
 export { AIPoweredEmailResponder };
-
 export { AIPoweredEmailResponder };
-
 export { AIPoweredEmailResponder };
-
 export { AIPoweredEmailResponder };

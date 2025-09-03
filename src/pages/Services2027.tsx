@@ -46,5 +46,4 @@ const Services2027 = () => {
             </div>
     </>
   );
-}
 export default Services2027

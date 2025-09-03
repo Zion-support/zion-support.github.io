@@ -1,18 +1,16 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
 export default function ServiceVirtualScroll() {
 
 export function VirtualScroll < T> ({
-import { motion, AnimatePresence  } from 'framer-motion';
-
+import { motion, AnimatePresence  } from "framer-motion";
   items,
   height,
   itemHeight,
   renderItem,
   overscan = 5,;
-  className = '',;
+  className = "",;
   onScroll}: VirtualScrollProps < T>) {;
   const [scrollTop, setScrollTop] = useState(0);
-  
   // Calculate visible range
   const visibleRange = useMemo(() => {;
     const start = Math.floor(scrollTop / itemHeight) ;
@@ -22,20 +20,18 @@ import { motion, AnimatePresence  } from 'framer-motion';
 
       start: Math.max(0, start - overscan),
       end: Math.min(items.length, end)
-    }}, [scrollTop, itemHeight, height, overscan, items.length]);
 
+    }}, [scrollTop, itemHeight, height, overscan, items.length]);
   // Calculate total height and transform
   
   // Handle scroll
 
     setScrollTop(newScrollTop) ;
     onScroll?.(newScrollTop) }, [onScroll]) ;
-
   // Scroll to specific item
   
       containerRef.current.scrollTop = scrollTop}
   }, [itemHeight]) ;
-
   // Scroll to top
   
     scrollToItem(0) }, [scrollToItem]) ;
@@ -53,10 +49,9 @@ import { motion, AnimatePresence  } from 'framer-motion';
       // For example, scroll to the last viewed item
     }
   }, [items.length]) ;
-
-  return ()`
-    <div className = {`relative ${className}`}>
-      {/* Scroll to top button */}
+  return ()"
+    <div className = {"relative ${className}"}>
+      {/* comment */}
       {scrollTop > 200 && (<motion.button
           initial = {
 
@@ -81,11 +76,11 @@ import { motion, AnimatePresence  } from 'framer-motion';
           
         >"
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18"   />
           </svg>
         </motion.button>) }
 
-      {/* Virtual scroll container */}
+      {/* comment */}
       <div
         ref={containerRef}"
         className="overflow-auto"
@@ -95,7 +90,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
         <div style = {
 
   { height: totalHeight,
-  position: 'relative'
+  position: "relative"
 
 }}>
           <div  style={{ transform }}>
@@ -130,7 +125,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
         </div>
       </div>;
 ;
-      {/* Scroll position indicator */};"
+      {/* comment */};"
       <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;
         {Math.round((scrollTop / (totalHeight - height)) * 100)}%;
       </div>;
@@ -178,12 +173,12 @@ export default function ServiceVirtualScroll() {
         </div>;
       </motion.div>;
     </div>;) , [onServiceClick]) ;
-
   return ()
+
     <VirtualScroll items = {services};      height={height};
       itemHeight={120};
       renderItem={renderServiceCard};
       overscan={3};
       className={className};
-     />;
-  )}'"`
+        />;
+  )}'""

@@ -1,3 +1,4 @@
+import React from "react"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -55,10 +56,11 @@ export function ChatBotPanel() {}
     const handleSendMessage = async(text = inputValue) => {
 
         if(!text.trim())
+
             return;
         const userMessage = {
 
-            id: `user-${Date.now()}`,
+            id: "user-${Date.now()}",
             content: text,"
             sender: "user",
             timestamp: new Date()};
@@ -69,9 +71,9 @@ export function ChatBotPanel() {}
             // Call the OpenAI-powered support function
             const response = await sendToAIAssistant(text);
             const botMessage = {
-`
-                id: `bot-${Date.now()}`,"
-                content: response.message || "Sorry, I couldn't process your request.Please try again.","
+"
+                id: "bot-${Date.now()}","
+                content: response.message || "Sorry, I couldn"t process your request.Please try again.","
                 sender: "bot",
                 timestamp: new Date()};
             setMessages((prev) => [...prev, botMessage]);
@@ -96,7 +98,7 @@ export function ChatBotPanel() {}
 "
                 variant: "destructive","
                 title: "Communication Error","
-                description: "We're having trouble connecting to our support service."});
+                description: "We"re having trouble connecting to our support service."});
             setFailedAttempts((prev) => prev + 1);
             if(failedAttempts >= 2) {
 
@@ -126,7 +128,7 @@ export function ChatBotPanel() {}
                 return {
 
                     success: false,"
-                    message: "I'm having trouble connecting to my knowledge base right now."
+                    message: "I"m having trouble connecting to my knowledge base right now."
                 }}
             const data = await response.json();
             return {
@@ -140,14 +142,14 @@ export function ChatBotPanel() {}
             return {
 
                 success: false,"
-                message: "I'm experiencing technical difficulties.Please try again later."
+                message: "I"m experiencing technical difficulties.Please try again later."
             }}
     };
     const suggestEscalation = () => {
         const escalationMessage = {
-`
-            id: `bot-escalation-${Date.now()}`,"
-            content: "I'm having trouble understanding your request.Would you like to speak with a human support agent or send an email to our support team?","
+"
+            id: "bot-escalation-${Date.now()}","
+            content: "I"m having trouble understanding your request.Would you like to speak with a human support agent or send an email to our support team?","
             sender: "bot",
             timestamp: new Date()};
         setMessages((prev) => [...prev, escalationMessage]);
@@ -179,16 +181,17 @@ export function ChatBotPanel() {}
     const handleEscalateToLiveAgent = () => {
         setMessages((prev) => [...prev,
             {
-`
-                id: `user-${Date.now()}`,"
-                content: "I'd like to speak with a human agent","
+"
+                id: "user-${Date.now()}","
+                content: "I"d like to speak with a human agent","
                 sender: "user",
                 timestamp: new Date()
+
             },
             {
-`
-                id: `bot-${Date.now()}`,"
-                content: "I'm connecting you with a support agent.Please note that our support hours are Monday to Friday, 9AM to 6PM EST.If you're messaging outside these hours, a team member will follow up with you as soon as possible.","
+"
+                id: "bot-${Date.now()}","
+                content: "I"m connecting you with a support agent.Please note that our support hours are Monday to Friday, 9AM to 6PM EST.If you"re messaging outside these hours, a team member will follow up with you as soon as possible.","
                 sender: "bot",
                 timestamp: new Date()
 
@@ -201,27 +204,29 @@ export function ChatBotPanel() {}
     const handleEmailSupport = () => {
         setMessages((prev) => [...prev,
             {
-`
-                id: `user-${Date.now()}`,"
-                content: "I'd like to email support","
+"
+                id: "user-${Date.now()}","
+                content: "I"d like to email support","
                 sender: "user",
                 timestamp: new Date()
+
             },
             {
-`
-                id: `bot-${Date.now()}`,"
+"
+                id: "bot-${Date.now()}","
                 content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours.","
                 sender: "bot",
                 timestamp: new Date()
+
             }
         ])};"
     return (<div className="flex flex-col h-full">"
       <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>"
         <div className="flex flex-col gap-4">"
-          {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp}/>))}
+          {messages.map((message) => (<ChatMessage key={message.id} message={message.content} isUser={message.sender === "user"} timestamp={message.timestamp}   />))}
 "
           {isLoading && (<div className="flex items-center justify-center py-2">"
-              <Loader2 className="h-5 w-5 animate-spin text-zion-purple"/>
+              <Loader2 className="h-5 w-5 animate-spin text-zion-purple"   />
             </div>)}
         </div>
       </ScrollArea>
@@ -267,7 +272,6 @@ export function ChatBotPanel() {}
 
             e.preventDefault();
             handleSendMessage();
-
 }} className="flex items-center gap-2">
           <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className={
   cn("flex-1",  theme === "dark"
@@ -275,9 +279,11 @@ export function ChatBotPanel() {}
             : "bg-white border-gray-200")
 
 }/>
-          <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">            <Send className="h-4 w-4"/>
+          <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">            <Send className="h-4 w-4"   />
           </Button>
         </form>
       </div>
     </div>)}
-'"`
+""`
+
+export default Component

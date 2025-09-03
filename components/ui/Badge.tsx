@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 // Inline minimal cva/VariantProps to avoid external dependency during build
 type VariantProps<T> = T extends (...args: any) => any ? Parameters<T>[0] : never;
 function cva(base: string, config: { variants?: Record<string, Record<string, string>>; defaultVariants?: Record<string, string> } = {}) {
@@ -10,11 +10,9 @@ function cva(base: string, config: { variants?: Record<string, Record<string, st
       if (val && variants[key][val]) classes.push(variants[key][val]);
       else if (config.defaultVariants && config.defaultVariants[key]) classes.push(variants[key][config.defaultVariants[key]]);
     }
-    return classes.join(' ');
+    return classes.join(" ");
   };
-}
-import { cn } from '../../lib/utils';
-
+import { cn } from "../../lib/utils";
 const badgeVariants = cva(
   "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
@@ -34,14 +32,12 @@ const badgeVariants = cva(
     },
   }
 );
-
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof badgeVariants> {}
 
 function Badge({ className, variant, ...props }: BadgeProps) {
   return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+    <div className={cn(badgeVariants({ variant }), className)} {...props}  />
   );
-}
-
 export { Badge, badgeVariants };
+export default Component

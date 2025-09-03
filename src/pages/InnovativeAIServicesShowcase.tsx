@@ -1,105 +1,101 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Zap, Sparkles, TrendingUp, Route, Users, PenTool,
   CheckCircle, ArrowRight, ExternalLink, Phone, Mail,
   BarChart3, Shield, Briefcase, Package, Target
-} from 'lucide-react';
-import SEO from '@/components/SEO';
-
+} from "lucide-react";
+import SEO from "@/components/SEO";
 export default function InnovativeAIServicesShowcase(...args: unknown[]): unknown {
   const services = [
     {
-      id: 'ai-project-manager',
-      title: 'AI Project Manager',
-      description: 'Transform your project management with AI-driven insights, automated planning, and intelligent resource optimization.',
+      id: "ai-project-manager",
+      title: "AI Project Manager",
+      description: "Transform your project management with AI-driven insights, automated planning, and intelligent resource optimization.",
       icon: Zap,
-      color: 'from-blue-600 to-indigo-700',
+      color: "from-blue-600 to-indigo-700",
       features: [
-        'AI-powered project planning and scheduling',
-        'Automated resource allocation and team management',
-        'Real-time progress tracking with predictive analytics',
-        'Intelligent risk assessment and mitigation'
+        "AI-powered project planning and scheduling",
+        "Automated resource allocation and team management",
+        "Real-time progress tracking with predictive analytics",
+        "Intelligent risk assessment and mitigation"
       ],
-      benefits: ['70% faster project planning', '40% higher success rate', '3x ROI within 6 months'],
-      pricing: { starter: '$99/mo', professional: '$299/mo', enterprise: '$799/mo' },
-      route: '/services/ai-project-manager'
+      benefits: ["70% faster project planning", "40% higher success rate", "3x ROI within 6 months"],
+      pricing: { starter: "$99/mo", professional: "$299/mo", enterprise: "$799/mo" },
+      route: "/services/ai-project-manager"
     },
     {
-      id: 'ai-content-marketing-suite',
-      title: 'AI Content Marketing Suite',
-      description: 'Transform your content marketing with AI that writes, optimizes, and distributes content across all channels.',
+      id: "ai-content-marketing-suite",
+      title: "AI Content Marketing Suite",
+      description: "Transform your content marketing with AI that writes, optimizes, and distributes content across all channels.",
       icon: PenTool,
-      color: 'from-purple-600 to-indigo-700',
+      color: "from-purple-600 to-indigo-700",
       features: [
-        'AI-powered content generation for blogs, social media, and emails',
-        'Multi-language content creation and localization',
-        'SEO optimization with keyword research and content planning',
-        'Content performance analytics and A/B testing'
+        "AI-powered content generation for blogs, social media, and emails",
+        "Multi-language content creation and localization",
+        "SEO optimization with keyword research and content planning",
+        "Content performance analytics and A/B testing"
       ],
-      benefits: ['10x more content output', '60% better SEO rankings', '70% cost reduction'],
-      pricing: { starter: '$79/mo', professional: '$199/mo', enterprise: '$499/mo' },
-      route: '/services/ai-content-marketing-suite'
+      benefits: ["10x more content output", "60% better SEO rankings", "70% cost reduction"],
+      pricing: { starter: "$79/mo", professional: "$199/mo", enterprise: "$499/mo" },
+      route: "/services/ai-content-marketing-suite"
     },
     {
-      id: 'ai-financial-analytics',
-      title: 'AI Financial Analytics Platform',
-      description: 'Transform your financial decision-making with AI-driven insights, predictive analytics, and automated portfolio optimization.',
+      id: "ai-financial-analytics",
+      title: "AI Financial Analytics Platform",
+      description: "Transform your financial decision-making with AI-driven insights, predictive analytics, and automated portfolio optimization.",
       icon: TrendingUp,
-      color: 'from-green-600 to-emerald-700',
+      color: "from-green-600 to-emerald-700",
       features: [
-        'AI-powered financial forecasting and trend analysis',
-        'Real-time market data integration and analysis',
-        'Automated financial reporting and compliance',
-        'Risk assessment and portfolio optimization'
+        "AI-powered financial forecasting and trend analysis",
+        "Real-time market data integration and analysis",
+        "Automated financial reporting and compliance",
+        "Risk assessment and portfolio optimization"
       ],
-      benefits: ['25-40% better investment returns', '80% faster analysis time', '85% market prediction accuracy'],
-      pricing: { starter: '$199/mo', professional: '$499/mo', enterprise: '$1,299/mo' },
-      route: '/services/ai-financial-analytics'
+      benefits: ["25-40% better investment returns", "80% faster analysis time", "85% market prediction accuracy"],
+      pricing: { starter: "$199/mo", professional: "$499/mo", enterprise: "$1,299/mo" },
+      route: "/services/ai-financial-analytics"
     },
     {
-      id: 'ai-hr-talent-platform',
-      title: 'AI HR & Talent Platform',
-      description: 'Transform your HR operations with AI-driven insights, automated workflows, and intelligent talent management.',
+      id: "ai-hr-talent-platform",
+      title: "AI HR & Talent Platform",
+      description: "Transform your HR operations with AI-driven insights, automated workflows, and intelligent talent management.",
       icon: Users,
-      color: 'from-orange-600 to-red-700',
+      color: "from-orange-600 to-red-700",
       features: [
-        'AI-powered candidate screening and matching',
-        'Automated resume parsing and skill assessment',
-        'Intelligent interview scheduling and feedback',
-        'Employee performance analytics and insights'
+        "AI-powered candidate screening and matching",
+        "Automated resume parsing and skill assessment",
+        "Intelligent interview scheduling and feedback",
+        "Employee performance analytics and insights"
       ],
-      benefits: ['60% faster time-to-hire', '40% better candidate quality', '30% reduced hiring costs'],
-      pricing: { starter: '$149/mo', professional: '$399/mo', enterprise: '$999/mo' },
-      route: '/services/ai-hr-talent-platform'
+      benefits: ["60% faster time-to-hire", "40% better candidate quality", "30% reduced hiring costs"],
+      pricing: { starter: "$149/mo", professional: "$399/mo", enterprise: "$999/mo" },
+      route: "/services/ai-hr-talent-platform"
     },
     {
-      id: 'ai-supply-chain-optimization',
-      title: 'AI Supply Chain Optimization',
-      description: 'Transform your supply chain with AI-driven insights, predictive analytics, and automated optimization.',
+      id: "ai-supply-chain-optimization",
+      title: "AI Supply Chain Optimization",
+      description: "Transform your supply chain with AI-driven insights, predictive analytics, and automated optimization.",
       icon: Route,
-      color: 'from-teal-600 to-cyan-700',
+      color: "from-teal-600 to-cyan-700",
       features: [
-        'AI-powered demand forecasting and inventory optimization',
-        'Real-time supply chain visibility and tracking',
-        'Automated route optimization and logistics planning',;
-        'Supplier performance analytics and risk assessment';
+        "AI-powered demand forecasting and inventory optimization",
+        "Real-time supply chain visibility and tracking",
+        "Automated route optimization and logistics planning",;
+        "Supplier performance analytics and risk assessment";
       ],;
-      benefits: ['20-30% reduced inventory costs', '25% improved delivery times', '40% fewer disruptions'],;
-      pricing: { starter: '$299/mo', professional: '$799/mo', enterprise: '$1,999/mo' },;
-      route: '/services/ai-supply-chain-optimization';
+      benefits: ["20-30% reduced inventory costs", "25% improved delivery times", "40% fewer disruptions"],;
+      pricing: { starter: "$299/mo", professional: "$799/mo", enterprise: "$1,999/mo" },;
+      route: "/services/ai-supply-chain-optimization";
     };
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
-        title="Innovative AI Services Showcase - Zion Tech Group"
-        description="Discover our comprehensive suite of AI-powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."
-      />
+      <SEO title="Innovative AI Services Showcase - Zion Tech Group"
+        description="Discover our comprehensive suite of AI-powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."   />
 
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative py-20 sm:py-24">        <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial = {}
@@ -113,7 +109,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
             transition={{ duration: 0.6 }}""""
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold mb-6""""
 """"
-            <Sparkles className="w-4 h-4 mr-2"  />            Innovative AI-Powered Solutions;
+            <Sparkles className="w-4 h-4 mr-2"   />            Innovative AI-Powered Solutions;
           </motion.div>
 
           <motion.h1;
@@ -160,7 +156,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
         </div>;
       </section>
 """
-      {/* Services Grid */}""""
+      {/* comment */}""""
       <section className="pb-20">;""""
         <div className="container mx-auto px-4">""""
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -184,7 +180,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
 }}""""
                 className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-500/10"""
 """
-                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} mb-4`}>""""
+                <div className={"inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} mb-4"}>""""
                   <service.icon className="w-6 h-6 text-white" />
                 </div>"""
 """"
@@ -201,7 +197,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
                   <ul className="space-y-1">"""
                     {service.features.slice(0, 3).map((feature, featureIndex) => (""""
                       <li key={featureIndex} className="flex items-start text-xs text-slate-300">""""
-                        <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0"  />                        {feature}
+                        <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0"   />                        {feature}
                       </li>) ) }
                   </ul>
                 </div>"""
@@ -224,13 +220,13 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
                 <Link to={service.route}""""
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-semibold group-hover:translate-x-1 transition-all duration-300""""
 """"
-                  Learn More <ArrowRight className="w-4 h-4 ml-1"  />                </Link>;
+                  Learn More <ArrowRight className="w-4 h-4 ml-1"   />                </Link>;
               </motion.div>) ) }
           </div>
         </div>
       </section>
 """
-      {/* Why Choose Zion Tech Group */}""""
+      {/* comment */}""""
       <section className="py-16 bg-slate-900/40">;""""
         <div className="container mx-auto px-4">""""
           <div className="text-center mb-12">""""
@@ -241,7 +237,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
           <div className="grid md:grid-cols-3 gap-8">""""
             <div className="text-center">""""
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Shield className="w-8 h-8 text-white"  />"""
+                <Shield className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise-Grade Security</h3>""""
               <p className="text-slate-300">SOC 2 compliant, end-to-end encryption, and multi-factor authentication</p>
@@ -249,7 +245,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
 """"
             <div className="text-center">""""
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Target className="w-8 h-8 text-white"  />"""
+                <Target className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>""""
               <p className="text-slate-300">Track record of delivering measurable ROI and business transformation</p>
@@ -257,7 +253,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
 """"
             <div className="text-center">""""
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">""""
-                <Zap className="w-8 h-8 text-white"  />"""
+                <Zap className="w-8 h-8 text-white"   />"""
               </div>""""
               <h3 className="text-xl font-semibold text-white mb-2">Cutting-Edge AI</h3>"              <p className="text-slate-300">Latest AI technologies and continuous innovation in all our solutions</p>
             </div>
@@ -265,7 +261,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600">;""""
         <div className="container mx-auto px-4 text-center">""""
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>""""
@@ -293,7 +289,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
         </div>
       </section>
 """
-      {/* Contact & Website Section */}""""
+      {/* comment */}""""
       <section className="py-16">;""""
         <div className="container mx-auto px-4 text-center">""""
           <div className="bg-slate-900/40 rounded-2xl p-8 max-w-4xl mx-auto">""""
@@ -308,7 +304,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
               rel="noreferrer""""
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all duration-300""""
             >;""""
-              Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2"  />;            </a>;
+              Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2"   />;            </a>;
           </div>;
         </div>;
       </section>;
@@ -317,11 +313,7 @@ export default function InnovativeAIServicesShowcase(...args: unknown[]): unknow
 }}}
 
 export { InnovativeAIServicesShowcase };
-
 export { InnovativeAIServicesShowcase };
-
 export { InnovativeAIServicesShowcase };
-
 export { InnovativeAIServicesShowcase };
-
 export { InnovativeAIServicesShowcase };

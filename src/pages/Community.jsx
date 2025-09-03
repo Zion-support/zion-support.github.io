@@ -1,14 +1,14 @@
-import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
+import React from "react";"""
+import { Helmet } from "react-helmet-async";
 const Community = () => {}
   return()
+
     <>
       <Helmet>
         <title>Community - Zion Tech Group</title>
         <meta;
           name="description""""
-          content="Join the Zion Tech Group community. Connect with technology professionals, share knowledge, and stay updated on industry trends."""
-        />
+          content="Join the Zion Tech Group community. Connect with technology professionals, share knowledge, and stay updated on industry trends.""" />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -22,7 +22,7 @@ const Community = () => {}
           </div>"""
 """"
           <div className="bg-white rounded-lg shadow-lg p-8">""""
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">"
               Community page coming soon. We're building a vibrant community;
               platform.
             </p>
@@ -31,14 +31,8 @@ const Community = () => {}
       </div>
     </>)};
 export default Community;
-
-
 export { Community };
-
 export { Community };
-
 export { Community };
-
 export { Community };
-
 export { Community };

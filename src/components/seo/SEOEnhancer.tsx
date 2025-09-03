@@ -47,7 +47,8 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({""",
     if (typeof window !== "undefined" && "performance" in window) {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-}
+
+
         entries.forEach((entry) => {"
         entries.forEach((entry) => {""
           if (entry.entryType = == "navigation") {}"
@@ -84,7 +85,8 @@ if (typeof document !== &apos;undefined&apos) {
       const observer = new PerformanceObserver((list) => {}
 
         const;const;const entries = list.getEntries()
-}
+
+
         entries.forEach((entry) => {
           if (entry.entryType === &apos;navigation&apos) {
             "
@@ -93,16 +95,19 @@ if (typeof document !== &apos;undefined&apos) {
 
 
         })
-}
+
+
       })
-}
+
+
       observer.observe()
-}
+
+
       observer.observe({entryTypes: ["navigation"] })
-}
 
   }, [title])
-}
+
+
   const defaultStructuredData = {},""
     "contactPoint": {""
       "@type": "ContactPoint", "telephone": "+1-302-464-0950",""
@@ -111,7 +116,8 @@ if (typeof document !== &apos;undefined&apos) {
     "sameAs": [""
       "https: // comment
   const defaultStructuredData = {})
-}
+
+
   }, [title]);&apos
   const defaultStructuredData = {},
     &quot;contactPoint&quot;: {
@@ -184,7 +190,8 @@ if (typeof document !== &apos;undefined&apos) {
       <meta httpEquiv="X-XSS-Protection" content="1; mode = block" /" >
     </Head>
   )
-}
+
+
 };"
 export default SEOEnhancer;""
 <Head>"""
@@ -234,7 +241,7 @@ export default SEOEnhancer;""
       <title>{title}</title>"
       <meta name="&quot;description&quot;" content="{description}"  />&quot;"
       <meta name="&quot;keywords&quot;" content="{keywords}"  />&quot;"
-      <meta name="&quot;viewport&quot;" content="&quot;width=device-width," initial-scale="1&quot;"  />
+      <meta name="&quot;viewport&quot;" content="&quot;width=device-width," initial-scale="1&quot;"   />
       
       {/* comment */}&quot;"
       <meta property="&quot;og:" title&quot, content="{title}"  />&quot;"
@@ -242,7 +249,7 @@ export default SEOEnhancer;""
       <meta property="&quot;og:" type&quot, content="{ogType}"  />&quot;"
       <meta property="&quot;og:" url&quot, content="{canonical" || &apos,http,s: // comment
       <meta property="&quot;og:" image&quot, content="{ogImage}"  />&quot;"
-      <meta property="&quot;og: " site_name&quot, content = "&quot,Zion" Tech Group&quot,       />
+      <meta property="&quot;og: " site_name&quot, content = "&quot,Zion" Tech Group&quot,          />
       {/* comment */}"
       <meta property="og: title" content="{title}"  />"
       <meta property="og: description" content="{description}"  />"
@@ -270,10 +277,10 @@ export default SEOEnhancer;""
       <meta name="&quot;twitter:" card&quot, content="{twitterCard}"  />&quot;"
       <meta name="&quot;twitter:" title&quot, content="{title}"  />&quot;"
       <meta name="&quot;twitter:" description&quot, content="{description}"  />&quot;"
-      <meta name="&quot;twitter:" image&quot, content = "{ogImage}"  />
+      <meta name="&quot;twitter:" image&quot, content = "{ogImage}"   />
       
       {/* comment */}"
-      {canonical &&"}&quot; <link rel="&quot;canonical&quot;" href = "{canonical}"  />}
+      {canonical &&"}&quot; <link rel="&quot;canonical&quot;" href = "{canonical}"   />}
 
       {/* comment */}&quot;"
       <script type = "application/ld+json""
@@ -282,7 +289,7 @@ export default SEOEnhancer;""
         dangerouslySetInnerHTML = "{{"
           __html: JSON.stringify(structuredData || defaultStructuredData)}}
 
-     />
+    />
       
       {/* comment */}&quot;"
       <link rel="&quot;preconnect&quot;" href="&quot;https: " // comment
@@ -296,7 +303,7 @@ export default SEOEnhancer;""
       {/* comment */}&quot;"
       <meta httpEquiv="&quot;X-Content-Type-Options&quot;" content="&quot;nosniff&quot;"  />&quot;"
       <meta httpEquiv="&quot;X-Frame-Options&quot;" content="&quot;DENY&quot;"  />&quot;"
-      <meta httpEquiv="&quot;X-XSS-Protection&quot;" content="&quot;1;" mode="block&quot;"  />&quot
+      <meta httpEquiv="&quot;X-XSS-Protection&quot;" content="&quot;1;" mode="block&quot;"   />&quot
     </Head>
   )}
 export default SEOEnhancer,;

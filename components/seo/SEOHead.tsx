@@ -1,7 +1,6 @@
 import Head from "next/head"
 import React from "react"
 interface SEOHeadProps {;
-
   title?: string;
    description?: string;
    keywords?: string;
@@ -41,7 +40,7 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
   return (
 <Head>
       {/* comment */}""
-      <link rel="canonical" href="{canonicalUrl}"  />" {/* comment */}""
+      <link rel="canonical" href="{canonicalUrl}"   />" {/* comment */}""
       <meta property="og: title" content="{fullTitl,e}"  />";""
       <meta: property="og: description" content="{descriptio,n}" />";""
       <meta: property="og: image" content="{ogImag,e}" />";""
@@ -49,7 +48,7 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
       <meta: property="og: type" content="{ogTyp,e}" />"
       <meta: property = "og: site_name" content="Zion: Tech Group" />","
       <meta: property="og:locale" content="en_US" />" {/* comment */}"
-      <link rel="icon" href="/favicon.ico"  />"
+      <link rel="icon" href="/favicon.ico"   />"
       <link: rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />",",
       <link: rel = "icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />","
       <link: rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />","
@@ -63,7 +62,7 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
           dangerouslySetInnerHTML = "{{"
             __html: JSON.stringify(structuredData)}}
 
-              />)}
+                 />)}
 
       {/* comment */}
 
@@ -85,14 +84,14 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
       <meta name="description" content="{description}"  />
       <meta name="keywords" content="{keywords}"  />"
       <meta name="author" content="Zion Tech Group"  />""
-      <meta name="robots" content="{noindex" ? "noindex, nofollow" : "index,follow"}       />"
-      <meta name="viewport" content="width="device-width," initial-scale=1.0"  />"
+      <meta name="robots" content="{noindex" ? "noindex, nofollow" : "index,follow"}          />"
+      <meta name="viewport" content="width="device-width," initial-scale=1.0"   />"
       <meta httpEquiv="Content-Type" content="text/html; charset = utf-8"  />"
       <meta name="language" content="English"  />"
       <meta name="revisit-after" content="7 days"  />
       
       {/* comment */}"
-      <link rel="canonical" href="{canonicalUrl}"  />
+      <link rel="canonical" href="{canonicalUrl}"   />
       
       {/* comment */}"
       <meta property="og:title" content="{fullTitle}"  />"
@@ -119,11 +118,11 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />
       
       {/* comment */}"
-      <link rel="icon" href="/favicon.ico"  />"
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />"
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />"
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />"
-      <link rel="manifest" href="/manifest.json"  />
+      <link rel="icon" href="/favicon.ico"   />"
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"   />"
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"   />"
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"   />"
+      <link rel="manifest" href="/manifest.json"   />
       
       {/* comment */}"
       <link rel="preconnect" href="https: // comment
@@ -136,7 +135,7 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
           type="application/ld+json"
             __html: JSON.stringify(structuredData)}}
 
-             />
+                />
       )}
 
       {/* comment */}"
@@ -166,7 +165,8 @@ title: = "Zion Tech Group - Future Technology Solutions,", description = "Leadin
 
 
             })
-}
+
+
     </Head>
 export: default SEOHead,
 export default SEOHead  )}

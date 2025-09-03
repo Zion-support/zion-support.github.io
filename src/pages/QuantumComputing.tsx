@@ -46,5 +46,4 @@ const QuantumComputing = () => {
             </div>
     </>
   );
-}
 export default QuantumComputing

@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React from "react.ts";
+import { Link  } from "react-router-dom.ts";
+import { motion  } from "framer-motion.ts";
 import { Brain,
   Atom,
   Shield,
@@ -165,527 +165,525 @@ import { Brain,
   Mail,
   MapPin,
   Package
- } from 'lucide-react.ts';
-
+ } from "lucide-react.ts";
 export function EnhancedNewServices2025(...args: unknown[]): unknown {
   const newServices = [
     {
-      id: 'agent-ops-monitor',
-      title: 'AgentOps Reliability Monitor',
-      description: 'Production monitoring for AI agents. Detect tool-call failures, long-running chains, and hallucination spikes. Alert to Slack, auto-open Jira with traces.',
+      id: "agent-ops-monitor",
+      title: "AgentOps Reliability Monitor",
+      description: "Production monitoring for AI agents. Detect tool-call failures, long-running chains, and hallucination spikes. Alert to Slack, auto-open Jira with traces.",
       icon: Brain,
-      color: 'from-cyan-600 to-blue-700',
-      price: '$99/month',
-      category: 'AI Quality & Monitoring',
+      color: "from-cyan-600 to-blue-700",
+      price: "$99/month",
+      category: "AI Quality & Monitoring",
       features: [
-        'Latency, error and hallucination tracking',
-        'Workflow heatmaps and slow-step detection',
-        'PII guardrail violations dashboard',
-        'Slack/PagerDuty alerts with deep links',
-        'Jira/Linear ticket auto-creation'
+        "Latency, error and hallucination tracking",
+        "Workflow heatmaps and slow-step detection",
+        "PII guardrail violations dashboard",
+        "Slack/PagerDuty alerts with deep links",
+        "Jira/Linear ticket auto-creation"
       ],
       benefits: [
-        'Reduce AI agent failures by 30–60%',
-        'Real-time monitoring and alerting',
-        'Automated incident response',
-        'Comprehensive audit trails',
-        'Integration with existing tools'
+        "Reduce AI agent failures by 30–60%",
+        "Real-time monitoring and alerting",
+        "Automated incident response",
+        "Comprehensive audit trails",
+        "Integration with existing tools"
       ],
       useCases: [
-        'AI platform teams',
-        'Product development',
-        'Quality assurance',
-        'Operations monitoring',
-        'Compliance management'
+        "AI platform teams",
+        "Product development",
+        "Quality assurance",
+        "Operations monitoring",
+        "Compliance management"
       ],
-      marketPrice: '$500 - $2,000/month',
-      roi: '300-500%',
-      launchDate: 'Q1 2025',
-      technology: ['Next.js', 'OpenTelemetry', 'Postgres', 'Redis'],
-      integrations: ['Slack', 'PagerDuty', 'Jira', 'Linear'],
-      competitors: ['Langfuse', 'Arize', 'WhyLabs'],
-      marketSize: '$3B AI Observability',
-      growthRate: 'High'
+      marketPrice: "$500 - $2,000/month",
+      roi: "300-500%",
+      launchDate: "Q1 2025",
+      technology: ["Next.js", "OpenTelemetry", "Postgres", "Redis"],
+      integrations: ["Slack", "PagerDuty", "Jira", "Linear"],
+      competitors: ["Langfuse", "Arize", "WhyLabs"],
+      marketSize: "$3B AI Observability",
+      growthRate: "High"
     },
     {
-      id: 'pii-privacy-scanner',
-      title: 'Data Lake PII & Privacy Scanner',
-      description: 'Scan object stores and warehouses for PII/PHI with classifiers and regex+ML. Map owners, file tickets, and track remediation SLAs.',
+      id: "pii-privacy-scanner",
+      title: "Data Lake PII & Privacy Scanner",
+      description: "Scan object stores and warehouses for PII/PHI with classifiers and regex+ML. Map owners, file tickets, and track remediation SLAs.",
       icon: Shield,
-      color: 'from-rose-600 to-orange-700',
-      price: '$149/month',
-      category: 'Security & Compliance',
+      color: "from-rose-600 to-orange-700",
+      price: "$149/month",
+      category: "Security & Compliance",
       features: [
-        'Prebuilt PII detectors (SSN, CCN, PHI)',
-        'Custom rules and dictionaries',
-        'Owners and data lineage lookups',
-        'Remediation tickets and SLA tracking',
-        'Compliance export packs'
+        "Prebuilt PII detectors (SSN, CCN, PHI)",
+        "Custom rules and dictionaries",
+        "Owners and data lineage lookups",
+        "Remediation tickets and SLA tracking",
+        "Compliance export packs"
       ],
       benefits: [
-        'Cut privacy review time by 50–70%',
-        'Automated compliance monitoring',
-        'Real-time PII detection',
-        'Comprehensive audit trails',
-        'Regulatory compliance assurance'
+        "Cut privacy review time by 50–70%",
+        "Automated compliance monitoring",
+        "Real-time PII detection",
+        "Comprehensive audit trails",
+        "Regulatory compliance assurance"
       ],
       useCases: [
-        'Data engineering teams',
-        'Security compliance',
-        'GDPR/CCPA compliance',
-        'Data governance',
-        'Risk management'
+        "Data engineering teams",
+        "Security compliance",
+        "GDPR/CCPA compliance",
+        "Data governance",
+        "Risk management"
       ],
-      marketPrice: '$300 - $1,500/month',
-      roi: '250-400%',
-      launchDate: 'Q1 2025',
-      technology: ['Node.js', 'Python', 'Snowflake', 'S3'],
-      integrations: ['AWS', 'GCP', 'Snowflake', 'BigQuery', 'Jira'],
-      competitors: ['BigID', 'OneTrust'],
-      marketSize: '$8B Data Privacy',
-      growthRate: 'High'
+      marketPrice: "$300 - $1,500/month",
+      roi: "250-400%",
+      launchDate: "Q1 2025",
+      technology: ["Node.js", "Python", "Snowflake", "S3"],
+      integrations: ["AWS", "GCP", "Snowflake", "BigQuery", "Jira"],
+      competitors: ["BigID", "OneTrust"],
+      marketSize: "$8B Data Privacy",
+      growthRate: "High"
     },
     {
-      id: 'vector-db-benchmark',
-      title: 'Vector DB Benchmark & Tuning',
-      description: 'Benchmark Pinecone, Weaviate, Qdrant or pgvector using your corpus. Get query plans, ANN configs and recall/latency trade-offs with recommendations.',
+      id: "vector-db-benchmark",
+      title: "Vector DB Benchmark & Tuning",
+      description: "Benchmark Pinecone, Weaviate, Qdrant or pgvector using your corpus. Get query plans, ANN configs and recall/latency trade-offs with recommendations.",
       icon: Database,
-      color: 'from-emerald-600 to-teal-700',
-      price: '$79/month',
-      category: 'AI & Data',
+      color: "from-emerald-600 to-teal-700",
+      price: "$79/month",
+      category: "AI & Data",
       features: [
-        'Corpus sampling and ground-truth evals',
-        'Latency/recall trade-off explorer',
-        'ANN/hnsw/ivf config generator',
-        'Cost projection by provider',
-        'One-click config export'
+        "Corpus sampling and ground-truth evals",
+        "Latency/recall trade-off explorer",
+        "ANN/hnsw/ivf config generator",
+        "Cost projection by provider",
+        "One-click config export"
       ],
       benefits: [
-        'Improve recall 10–30% with same budget',
-        'Optimized vector database performance',
-        'Cost-effective solution selection',
-        'Data-driven configuration',
-        'Performance benchmarking'
+        "Improve recall 10–30% with same budget",
+        "Optimized vector database performance",
+        "Cost-effective solution selection",
+        "Data-driven configuration",
+        "Performance benchmarking"
       ],
       useCases: [
-        'Search and platform teams',
-        'RAG optimization',
-        'Cost optimization',
-        'Performance tuning',
-        'Technology selection'
+        "Search and platform teams",
+        "RAG optimization",
+        "Cost optimization",
+        "Performance tuning",
+        "Technology selection"
       ],
-      marketPrice: '$200 - $1,000/month',
-      roi: '200-350%',
-      launchDate: 'Q1 2025',
-      technology: ['Typescript', 'Docker', 'Python'],
-      integrations: ['Pinecone', 'Weaviate', 'Qdrant', 'Postgres'],
-      competitors: ['Self-built harnesses'],
-      marketSize: '$1B Vector DB Tools',
-      growthRate: 'Strong'
+      marketPrice: "$200 - $1,000/month",
+      roi: "200-350%",
+      launchDate: "Q1 2025",
+      technology: ["Typescript", "Docker", "Python"],
+      integrations: ["Pinecone", "Weaviate", "Qdrant", "Postgres"],
+      competitors: ["Self-built harnesses"],
+      marketSize: "$1B Vector DB Tools",
+      growthRate: "Strong"
     },
     {
-      id: 'llm-prompt-safety-scanner',      title: 'LLM Prompt Safety Scanner',
+      id: "llm-prompt-safety-scanner",      title: "LLM Prompt Safety Scanner",
       description: unknown;
-        'Scan prompts, tools and context windows for injection vectors.Generate red - team prompts and propose mitigations with policy diffs.',
+        "Scan prompts, tools and context windows for injection vectors.Generate red - team prompts and propose mitigations with policy diffs.",
       icon: Lock,
-      color: 'from - purple - 600 to - pink - 700',
-      price: '$59 / month',
-      category: 'AI Security',
-      features: ['Prompt injection pattern library',
-        'Content policy diffing',
-        'Automatic test corpus generation',
-        'CI / CD gate with pass / fail',
-        'Report exports for security review'
+      color: "from - purple - 600 to - pink - 700",
+      price: "$59 / month",
+      category: "AI Security",
+      features: ["Prompt injection pattern library",
+        "Content policy diffing",
+        "Automatic test corpus generation",
+        "CI / CD gate with pass / fail",
+        "Report exports for security review"
       ],
-      benefits: ['Reduce safety incidents 40%',
-        'Shift - left AI safety testing',
-        'Automated security validation',
-        'Comprehensive threat detection',
-        'Developer - friendly security'
+      benefits: ["Reduce safety incidents 40%",
+        "Shift - left AI safety testing",
+        "Automated security validation",
+        "Comprehensive threat detection",
+        "Developer - friendly security"
       ],
-      useCases: ['AppSec and platform teams',
-        'Pre - prod safety testing',
-        'Policy hardening',
-        'Regulatory readiness',
-        'Security compliance'
+      useCases: ["AppSec and platform teams",
+        "Pre - prod safety testing",
+        "Policy hardening",
+        "Regulatory readiness",
+        "Security compliance"
       ],
-      marketPrice: '$150 - $800 / month',
-      roi: '200 - 300%',
-      launchDate: 'Q1 2025',
-      technology: ['Node.js', 'OpenAI', 'Anthropic'],
-      integrations: ['GitHub', 'GitLab', 'Jenkins', 'Vercel'],
-      competitors: ['Promptfoo', 'Guardrails libraries'],
-      marketSize: '$1B AI Safety',
-      growthRate: 'Emerging'
+      marketPrice: "$150 - $800 / month",
+      roi: "200 - 300%",
+      launchDate: "Q1 2025",
+      technology: ["Node.js", "OpenAI", "Anthropic"],
+      integrations: ["GitHub", "GitLab", "Jenkins", "Vercel"],
+      competitors: ["Promptfoo", "Guardrails libraries"],
+      marketSize: "$1B AI Safety",
+      growthRate: "Emerging"
     },
     {}
-      id: 'rfp - auto - responder',
-      title: 'RFP Auto - Responder',
+      id: "rfp - auto - responder",
+      title: "RFP Auto - Responder",
       description: unknown;
-        'Upload RFP PDFs, map to knowledge base, and generate answers with citations and policy references.Export clean DOCX / Google Docs.',
+        "Upload RFP PDFs, map to knowledge base, and generate answers with citations and policy references.Export clean DOCX / Google Docs.",
       icon: FileText,
-      color: 'from - blue - 600 to - indigo - 700',
-      price: '$129 / month',
-      category: 'AI & Business',
-      features: ['Document parsing and mapping',
-        'Policy / KB grounding with citations',
-        'Gaps highlighting and follow-ups',
-        'Export to DOCX / Google Docs',
-        'Collaborative review modes'
+      color: "from - blue - 600 to - indigo - 700",
+      price: "$129 / month",
+      category: "AI & Business",
+      features: ["Document parsing and mapping",
+        "Policy / KB grounding with citations",
+        "Gaps highlighting and follow-ups",
+        "Export to DOCX / Google Docs",
+        "Collaborative review modes"
       ],
-      benefits: ['Cut response time 60–80%',
-        'Automated RFP processing',
-        'Consistent response quality',
-        'Knowledge base integration',
-        'Collaborative workflow'
+      benefits: ["Cut response time 60–80%",
+        "Automated RFP processing",
+        "Consistent response quality",
+        "Knowledge base integration",
+        "Collaborative workflow"
       ],
-      useCases: ['Sales engineering teams',
-        'RFP responses',
-        'Security questionnaires',
-        'Due diligence',
-        'Compliance documentation'
+      useCases: ["Sales engineering teams",
+        "RFP responses",
+        "Security questionnaires",
+        "Due diligence",
+        "Compliance documentation"
       ],
-      marketPrice: '$400 - $2,000 / month',
-      roi: '300 - 500%',
-      launchDate: 'Q1 2025',
-      technology: ['Next.js', 'OpenAI', 'Pinecone'],
-      integrations: ['Google Drive', 'Confluence', 'Notion'],
-      competitors: ['Loopio', 'Responsive'],
-      marketSize: '$2B RFP Tech',
-      growthRate: 'Strong'
+      marketPrice: "$400 - $2,000 / month",
+      roi: "300 - 500%",
+      launchDate: "Q1 2025",
+      technology: ["Next.js", "OpenAI", "Pinecone"],
+      integrations: ["Google Drive", "Confluence", "Notion"],
+      competitors: ["Loopio", "Responsive"],
+      marketSize: "$2B RFP Tech",
+      growthRate: "Strong"
     },
     {}
-      id: 'ai - red - team - simulator',
-      title: 'AI Red Team Simulator',
+      id: "ai - red - team - simulator",
+      title: "AI Red Team Simulator",
       description: unknown;
-        'Continuously attack your AI stack with curated jailbreak prompts and tool abuse scenarios.Track regressions, export reports for auditors.',
+        "Continuously attack your AI stack with curated jailbreak prompts and tool abuse scenarios.Track regressions, export reports for auditors.",
       icon: Shield,
-      color: 'from - amber - 600 to - red - 700',
-      price: '$199 / month',
-      category: 'AI Security',
-      features: ['Curated jailbreak corpora',
-        'Tool - abuse and exfiltration scenarios',
-        'Scoring and trend reports',
-        'CI / CD gating and webhooks',
-        'Auditor - friendly exports'
+      color: "from - amber - 600 to - red - 700",
+      price: "$199 / month",
+      category: "AI Security",
+      features: ["Curated jailbreak corpora",
+        "Tool - abuse and exfiltration scenarios",
+        "Scoring and trend reports",
+        "CI / CD gating and webhooks",
+        "Auditor - friendly exports"
       ],
-      benefits: ['Reduce time - to - fix 30%',
-        'Continuous security testing',
-        'Automated threat simulation',
-        'Comprehensive risk assessment',
-        'Audit compliance'
+      benefits: ["Reduce time - to - fix 30%",
+        "Continuous security testing",
+        "Automated threat simulation",
+        "Comprehensive risk assessment",
+        "Audit compliance"
       ],
-      useCases: ['Security teams',
-        'Platform security',
-        'Risk assessment',
-        'Compliance auditing',
-        'Security training'
+      useCases: ["Security teams",
+        "Platform security",
+        "Risk assessment",
+        "Compliance auditing",
+        "Security training"
       ],
-      marketPrice: '$500 - $3,000 / month',
-      roi: '250 - 400%',
-      launchDate: 'Q1 2025',
-      technology: ['Node.js', 'Docker', 'OpenAI'],
-      integrations: ['GitHub', 'GitLab', 'Jenkins'],
-      competitors: ['External red team services'],
-      marketSize: '$1B AI Security',
-      growthRate: 'High'
+      marketPrice: "$500 - $3,000 / month",
+      roi: "250 - 400%",
+      launchDate: "Q1 2025",
+      technology: ["Node.js", "Docker", "OpenAI"],
+      integrations: ["GitHub", "GitLab", "Jenkins"],
+      competitors: ["External red team services"],
+      marketSize: "$1B AI Security",
+      growthRate: "High"
     },
     {}
-      id: 'speech-analytics - center',
-      title: 'Contact Center Speech Analytics',
+      id: "speech-analytics - center",
+      title: "Contact Center Speech Analytics",
       description: unknown;
-        'Ingest call recordings or live streams, transcribe, detect topics and sentiment, and score QA with dashboards.Coach agents with snippets.',
+        "Ingest call recordings or live streams, transcribe, detect topics and sentiment, and score QA with dashboards.Coach agents with snippets.",
       icon: Mic,
-      color: 'from - indigo - 600 to - violet - 700',
-      price: '$179 / month',
-      category: 'Customer Support & Success',
-      features: ['Accurate transcription with diarization',
-        'Sentiment and topic mining',
-        'QA auto - scoring and calibration',
-        'Coaching snippets and playbooks',
-        'PII redaction and access controls'
+      color: "from - indigo - 600 to - violet - 700",
+      price: "$179 / month",
+      category: "Customer Support & Success",
+      features: ["Accurate transcription with diarization",
+        "Sentiment and topic mining",
+        "QA auto - scoring and calibration",
+        "Coaching snippets and playbooks",
+        "PII redaction and access controls"
       ],
-      benefits: ['Improve CSAT and AHT 10–20%',
-        'Automated quality assurance',
-        'Real - time insights',
-        'Agent performance improvement',
-        'Compliance and privacy'
+      benefits: ["Improve CSAT and AHT 10–20%",
+        "Automated quality assurance",
+        "Real - time insights",
+        "Agent performance improvement",
+        "Compliance and privacy"
       ],
-      useCases: ['Contact centers',
-        'Customer support',
-        'Sales teams',
-        'Quality assurance',
-        'Training and coaching'
+      useCases: ["Contact centers",
+        "Customer support",
+        "Sales teams",
+        "Quality assurance",
+        "Training and coaching"
       ],
-      marketPrice: '$300 - $2,000 / month',
-      roi: '200 - 350%',
-      launchDate: 'Q1 2025',
-      technology: ['Whisper', 'VAD', 'Next.js'],
-      integrations: ['Twilio', 'Amazon Connect', 'Five9'],
-      competitors: ['Gong', 'Chorus', 'Observe.AI'],
-      marketSize: '$6B Speech Analytics',
-      growthRate: 'High'
+      marketPrice: "$300 - $2,000 / month",
+      roi: "200 - 350%",
+      launchDate: "Q1 2025",
+      technology: ["Whisper", "VAD", "Next.js"],
+      integrations: ["Twilio", "Amazon Connect", "Five9"],
+      competitors: ["Gong", "Chorus", "Observe.AI"],
+      marketSize: "$6B Speech Analytics",
+      growthRate: "High"
     },
     {}
-      id: 'synthetic - data - studio',
-      title: 'Synthetic Data Studio',
+      id: "synthetic - data - studio",
+      title: "Synthetic Data Studio",
       description: unknown;
-        'Create class - balanced datasets with differentially private generators.Export to parquet / CSV and seed sandboxes for testing.',
+        "Create class - balanced datasets with differentially private generators.Export to parquet / CSV and seed sandboxes for testing.",
       icon: TestTube,
-      color: 'from - teal - 600 to - emerald - 700',
-      price: '$199 / month',
-      category: 'AI & Data',
-      features: ['DP and k - anonymity options',
-        'Imbalance correction and sampling',
-        'Drift detection on synthetic sets',
-        'Row / column level lineage',
-        'Governed export with approvals'
+      color: "from - teal - 600 to - emerald - 700",
+      price: "$199 / month",
+      category: "AI & Data",
+      features: ["DP and k - anonymity options",
+        "Imbalance correction and sampling",
+        "Drift detection on synthetic sets",
+        "Row / column level lineage",
+        "Governed export with approvals"
       ],
-      benefits: ['Reduce manual data prep 50%',
-        'Privacy - safe data generation',
-        'Balanced datasets',
-        'Compliance assurance',
-        'Testing and development'
+      benefits: ["Reduce manual data prep 50%",
+        "Privacy - safe data generation",
+        "Balanced datasets",
+        "Compliance assurance",
+        "Testing and development"
       ],
-      useCases: ['Data science teams',
-        'ML platform development',
-        'Privacy - safe analytics',
-        'Model testing',
-        'Research and development'
+      useCases: ["Data science teams",
+        "ML platform development",
+        "Privacy - safe analytics",
+        "Model testing",
+        "Research and development"
       ],
-      marketPrice: '$400 - $2,500 / month',
-      roi: '200 - 400%',
-      launchDate: 'Q1 2025',
-      technology: ['Python', 'JAX / PyTorch', 'Postgres'],
-      integrations: ['S3', 'GCS', 'Snowflake'],
-      competitors: ['Gretel.ai', 'Mostly AI'],
-      marketSize: '$2B Synthetic Data',
-      growthRate: 'High'
+      marketPrice: "$400 - $2,500 / month",
+      roi: "200 - 400%",
+      launchDate: "Q1 2025",
+      technology: ["Python", "JAX / PyTorch", "Postgres"],
+      integrations: ["S3", "GCS", "Snowflake"],
+      competitors: ["Gretel.ai", "Mostly AI"],
+      marketSize: "$2B Synthetic Data",
+      growthRate: "High"
     },
     {}
-      id: 'feature - store - starter',
-      title: 'Feature Store Starter',
+      id: "feature - store - starter",
+      title: "Feature Store Starter",
       description: unknown;
-        'Bootstrap an offline + online feature store with transformations, point - in - time joins and approvals.Ship faster with templates.',
+        "Bootstrap an offline + online feature store with transformations, point - in - time joins and approvals.Ship faster with templates.",
       icon: Database,
-      color: 'from - amber - 600 to - yellow-700',
-      price: '$99 / month',
-      category: 'AI & Data',
-      features: ['Point - in - time correctness',
-        'Transformation registry',
-        'Approval workflows',
-        'Lineage and ownership',
-        'Rollbacks and versioning'
+      color: "from - amber - 600 to - yellow-700",
+      price: "$99 / month",
+      category: "AI & Data",
+      features: ["Point - in - time correctness",
+        "Transformation registry",
+        "Approval workflows",
+        "Lineage and ownership",
+        "Rollbacks and versioning"
       ],
-      benefits: ['Accelerate feature shipping 2×',
-        'Governed feature management',
-        'Real - time feature serving',
-        'Comprehensive lineage tracking',
-        'Production - ready templates'
+      benefits: ["Accelerate feature shipping 2×",
+        "Governed feature management",
+        "Real - time feature serving",
+        "Comprehensive lineage tracking",
+        "Production - ready templates"
       ],
-      useCases: ['ML platform teams',
-        'Feature engineering',
-        'Real - time ML',
-        'Model serving',
-        'Data governance'
+      useCases: ["ML platform teams",
+        "Feature engineering",
+        "Real - time ML",
+        "Model serving",
+        "Data governance"
       ],
-      marketPrice: '$500 - $3,000 / month',
-      roi: '300 - 500%',
-      launchDate: 'Q1 2025',
-      technology: ['Kafka', 'Postgres', 'Redis'],
-      integrations: ['dbt', 'Airflow', 'Spark'],
-      competitors: ['Feast', 'Tecton(enterprise) '],
-      marketSize: '$1B Feature Platforms',
-      growthRate: 'Growing'
+      marketPrice: "$500 - $3,000 / month",
+      roi: "300 - 500%",
+      launchDate: "Q1 2025",
+      technology: ["Kafka", "Postgres", "Redis"],
+      integrations: ["dbt", "Airflow", "Spark"],
+      competitors: ["Feast", "Tecton(enterprise) "],
+      marketSize: "$1B Feature Platforms",
+      growthRate: "Growing"
     },
     {}
-      id: 'model - registry - lite',
-      title: 'Model Registry Lite',
+      id: "model - registry - lite",
+      title: "Model Registry Lite",
       description: unknown;
-        'Lightweight model registry with artifacts, metrics and stage transitions.Webhooks to CI for canary rollouts.',
+        "Lightweight model registry with artifacts, metrics and stage transitions.Webhooks to CI for canary rollouts.",
       icon: Package,
-      color: 'from - sky - 600 to - cyan - 700',
-      price: '$79 / month',
-      category: 'AI & Data',
-      features: ['Artifacts and signatures',
-        'Metrics and evals',
-        'Stage transitions and approvals',
-        'RBAC and audit logs',
-        'Webhooks and rollback'
+      color: "from - sky - 600 to - cyan - 700",
+      price: "$79 / month",
+      category: "AI & Data",
+      features: ["Artifacts and signatures",
+        "Metrics and evals",
+        "Stage transitions and approvals",
+        "RBAC and audit logs",
+        "Webhooks and rollback"
       ],
-      benefits: ['Reduce release risk 20–40%',
-        'Governed model deployment',
-        'Automated workflows',
-        'Comprehensive tracking',
-        'Production safety'
+      benefits: ["Reduce release risk 20–40%",
+        "Governed model deployment",
+        "Automated workflows",
+        "Comprehensive tracking",
+        "Production safety"
       ],
-      useCases: ['ML platform teams',
-        'Model governance',
-        'Deployment management',
-        'Compliance tracking',
-        'Risk management'
+      useCases: ["ML platform teams",
+        "Model governance",
+        "Deployment management",
+        "Compliance tracking",
+        "Risk management"
       ],
-      marketPrice: '$300 - $2,000 / month',
-      roi: '250 - 400%',
-      launchDate: 'Q1 2025',
-      technology: ['S3', 'Postgres', 'Next.js'],
-      integrations: ['MLflow', 'Weights & Biases', 'Arize'],
-      competitors: ['MLflow(self - hosted) '],
-      marketSize: '$1B MLOps',
-      growthRate: 'High'
+      marketPrice: "$300 - $2,000 / month",
+      roi: "250 - 400%",
+      launchDate: "Q1 2025",
+      technology: ["S3", "Postgres", "Next.js"],
+      integrations: ["MLflow", "Weights & Biases", "Arize"],
+      competitors: ["MLflow(self - hosted) "],
+      marketSize: "$1B MLOps",
+      growthRate: "High"
     },
     {}
-      id: 'data - quality - monitoring',
-      title: 'Data Quality Monitoring',
+      id: "data - quality - monitoring",
+      title: "Data Quality Monitoring",
       description: unknown;
-        'Monitor tables, streams and ML features for freshness, volume and validity.Alert owners and auto - create issues with owners preset.',
+        "Monitor tables, streams and ML features for freshness, volume and validity.Alert owners and auto - create issues with owners preset.",
       icon: Activity,
-      color: 'from - lime - 600 to - green - 700',
-      price: '$129 / month',
-      category: 'Data Observability',
-      features: ['Freshness and volume checks',
-        'Anomaly detection on metrics',
-        'Schema drift notifications',
-        'Ownership and runbooks',
-        'Incident export and trends'
+      color: "from - lime - 600 to - green - 700",
+      price: "$129 / month",
+      category: "Data Observability",
+      features: ["Freshness and volume checks",
+        "Anomaly detection on metrics",
+        "Schema drift notifications",
+        "Ownership and runbooks",
+        "Incident export and trends"
       ],
-      benefits: ['Reduce incidents and firefighting 30%',
-        'Proactive data quality monitoring',
-        'Automated alerting',
-        'Ownership accountability',
-        'Incident prevention'
+      benefits: ["Reduce incidents and firefighting 30%",
+        "Proactive data quality monitoring",
+        "Automated alerting",
+        "Ownership accountability",
+        "Incident prevention"
       ],
-      useCases: ['Data engineering teams',
-        'Analytics reliability',
-        'ML pipeline health',
-        'Data governance',
-        'Operational excellence'
+      useCases: ["Data engineering teams",
+        "Analytics reliability",
+        "ML pipeline health",
+        "Data governance",
+        "Operational excellence"
       ],
-      marketPrice: '$400 - $2,500 / month',
-      roi: '250 - 400%',
-      launchDate: 'Q1 2025',
-      technology: ['dbt', 'Airflow', 'OpenTelemetry'],
-      integrations: ['Snowflake', 'BigQuery', 'Redshift'],
-      competitors: ['Monte Carlo', 'Bigeye'],
-      marketSize: '$2B Data Reliability',
-      growthRate: 'High'
+      marketPrice: "$400 - $2,500 / month",
+      roi: "250 - 400%",
+      launchDate: "Q1 2025",
+      technology: ["dbt", "Airflow", "OpenTelemetry"],
+      integrations: ["Snowflake", "BigQuery", "Redshift"],
+      competitors: ["Monte Carlo", "Bigeye"],
+      marketSize: "$2B Data Reliability",
+      growthRate: "High"
     },
     {}
-      id: 'privacy - request - automation',
-      title: 'Privacy Request Automation',
+      id: "privacy - request - automation",
+      title: "Privacy Request Automation",
       description: unknown;
-        'Automate data subject access requests across SaaS and data stores.Identity verification, redact / export, and audit - ready logs.',
+        "Automate data subject access requests across SaaS and data stores.Identity verification, redact / export, and audit - ready logs.",
       icon: FileText,
-      color: 'from - fuchsia - 600 to - pink - 700',
-      price: '$89 / month',
-      category: 'Security & Compliance',
-      features: ['Identity verification and portals',
-        'Connector library for SaaS and data',
-        'Redaction and export pipelines',
-        'Approvals and audit logs',
-        'SLA tracking and escalations'
+      color: "from - fuchsia - 600 to - pink - 700",
+      price: "$89 / month",
+      category: "Security & Compliance",
+      features: ["Identity verification and portals",
+        "Connector library for SaaS and data",
+        "Redaction and export pipelines",
+        "Approvals and audit logs",
+        "SLA tracking and escalations"
       ],
-      benefits: ['Reduce manual work 70%',
-        'Automated compliance workflows',
-        'Real - time request processing',
-        'Comprehensive audit trails',
-        'Regulatory compliance'
+      benefits: ["Reduce manual work 70%",
+        "Automated compliance workflows",
+        "Real - time request processing",
+        "Comprehensive audit trails",
+        "Regulatory compliance"
       ],
-      useCases: ['Legal and compliance teams',
-        'Data privacy operations',
-        'DSAR automation',
-        'Regulatory compliance',
-        'Data governance'
+      useCases: ["Legal and compliance teams",
+        "Data privacy operations",
+        "DSAR automation",
+        "Regulatory compliance",
+        "Data governance"
       ],
-      marketPrice: '$300 - $2,000 / month',
-      roi: '200 - 350%',
-      launchDate: 'Q1 2025',
-      technology: ['Node.js', 'Workers', 'Queues'],
-      integrations: ['Google Workspace', 'Salesforce', 'HubSpot'],
-      competitors: ['Transcend', 'OneTrust'],
-      marketSize: '$4B Privacy Ops',
-      growthRate: 'High'
+      marketPrice: "$300 - $2,000 / month",
+      roi: "200 - 350%",
+      launchDate: "Q1 2025",
+      technology: ["Node.js", "Workers", "Queues"],
+      integrations: ["Google Workspace", "Salesforce", "HubSpot"],
+      competitors: ["Transcend", "OneTrust"],
+      marketSize: "$4B Privacy Ops",
+      growthRate: "High"
     },
     {}
-      id: 'customer - 360 - cdp - starter',
-      title: 'Customer 360 CDP Starter',
+      id: "customer - 360 - cdp - starter",
+      title: "Customer 360 CDP Starter",
       description: unknown;
-        'Ingest web / app events, stitch identities, and build segments for activation with basic RT engagement dashboards.',
+        "Ingest web / app events, stitch identities, and build segments for activation with basic RT engagement dashboards.",
       icon: Users,
-      color: 'from - cyan - 600 to - sky - 700',
-      price: '$149 / month',
-      category: 'AI & Data',
-      features: ['Event schema and SDKs',
-        'Identity stitching and dedupe',
-        'Segments and audiences',
-        'Warehouse sync and reverse ETL',
-        'Consent and governance basics'
+      color: "from - cyan - 600 to - sky - 700",
+      price: "$149 / month",
+      category: "AI & Data",
+      features: ["Event schema and SDKs",
+        "Identity stitching and dedupe",
+        "Segments and audiences",
+        "Warehouse sync and reverse ETL",
+        "Consent and governance basics"
       ],
-      benefits: ['Increase conversion 5–15%',
-        'Unified customer view',
-        'Real - time segmentation',
-        'Data - driven marketing',
-        'Privacy compliance'
+      benefits: ["Increase conversion 5–15%",
+        "Unified customer view",
+        "Real - time segmentation",
+        "Data - driven marketing",
+        "Privacy compliance"
       ],
-      useCases: ['Growth and data teams',
-        'Customer personalization',
-        'Lifecycle marketing',
-        'Attribution analysis',
-        'Customer insights'
+      useCases: ["Growth and data teams",
+        "Customer personalization",
+        "Lifecycle marketing",
+        "Attribution analysis",
+        "Customer insights"
       ],
-      marketPrice: '$500 - $3,000 / month',
-      roi: '200 - 400%',
-      launchDate: 'Q1 2025',
-      technology: ['Next.js', 'Kafka', 'Snowflake'],
-      integrations: ['Segment', 'RudderStack', 'HubSpot'],
-      competitors: ['Twilio Segment', 'mParticle'],
-      marketSize: '$5B CDP',
-      growthRate: 'High'
+      marketPrice: "$500 - $3,000 / month",
+      roi: "200 - 400%",
+      launchDate: "Q1 2025",
+      technology: ["Next.js", "Kafka", "Snowflake"],
+      integrations: ["Segment", "RudderStack", "HubSpot"],
+      competitors: ["Twilio Segment", "mParticle"],
+      marketSize: "$5B CDP",
+      growthRate: "High"
     },
     {}
-      id: 'ab - testing - lab',
-      title: 'A / B Testing Lab',
+      id: "ab - testing - lab",
+      title: "A / B Testing Lab",
       description: unknown;
-        'Run experiments with CUPED / Sequential testing, guardrail metrics and sample ratio checks.SDKs for web and backend.',
+        "Run experiments with CUPED / Sequential testing, guardrail metrics and sample ratio checks.SDKs for web and backend.",
       icon: TestTube,
-      color: 'from - pink - 600 to - rose - 700',
-      price: '$89 / month',
-      category: 'Developer Tools',
-      features: ['Bucketing and targeting',
-        'CUPED / Sequential methods',
-        'Guardrails and SRM detection',
-        'Feature flags and killswitches',
-        'Dashboards and exports'
+      color: "from - pink - 600 to - rose - 700",
+      price: "$89 / month",
+      category: "Developer Tools",
+      features: ["Bucketing and targeting",
+        "CUPED / Sequential methods",
+        "Guardrails and SRM detection",
+        "Feature flags and killswitches",
+        "Dashboards and exports"
       ],
-      benefits: ['Ship safer and faster',
-        'Data - driven decisions',
-        'Risk mitigation',
-        'Performance optimization',
-        'Statistical rigor'
+      benefits: ["Ship safer and faster",
+        "Data - driven decisions",
+        "Risk mitigation",
+        "Performance optimization",
+        "Statistical rigor"
       ],
-      useCases: ['Product and growth teams',
-        'Feature rollout',
-        'Experimentation',
-        'Performance optimization',
-        'Risk management'
+      useCases: ["Product and growth teams",
+        "Feature rollout",
+        "Experimentation",
+        "Performance optimization",
+        "Risk management"
       ],
-      marketPrice: '$300 - $2,000 / month',
-      roi: '200 - 350%',
-      launchDate: 'Q1 2025',
-      technology: ['Typescript', 'Postgres', 'ClickHouse'],
-      integrations: ['Segment', 'RudderStack', 'Snowplow'],
-      competitors: ['Optimizely', 'VWO'],
-      marketSize: '$2B Experimentation',
-      growthRate: 'Strong'
+      marketPrice: "$300 - $2,000 / month",
+      roi: "200 - 350%",
+      launchDate: "Q1 2025",
+      technology: ["Typescript", "Postgres", "ClickHouse"],
+      integrations: ["Segment", "RudderStack", "Snowplow"],
+      competitors: ["Optimizely", "VWO"],
+      marketSize: "$2B Experimentation",
+      growthRate: "Strong"
     }
   ];
-
   const categories: unknown = [...new Set(newServices.map (service => service.category) ) ];
-
 export function EnhancedNewServices2025(...args: unknown[]): unknown {}
   return()
+
     <div className="min-h-screen py-8">"      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"""
-        {/* Page Header */}""""
+        {/* comment */}""""
         <div className="text-center mb-16">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -715,8 +713,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
             </div>
           </motion.div>
         </div>
-
-        {/* Services Grid by Category */}"""
+        {/* comment */}"""
         {categories.map((category, categoryIndex) => (""""
           <div key={category} className="mb-16">
             <motion.div;
@@ -732,6 +729,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
             <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">
               {newServices
                 .filter(service  => service.category === category)
+
                 .map((service, index) => (
                   <motion.div                    key={service.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -739,10 +737,10 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                     transition={{ duration: 0.5, delay: index * 0.1 }}""""
                     className="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition-all duration-300 border border-gray-700 hover:border-cyan-500/30 group"""
                   >"""
-                    {/* Service Header */}""""
+                    {/* comment */}""""
                     <div className="flex items-center space-x-4 mb-6">
                       <div;
-                        className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}"""
+                        className={"w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300"}"""
                       >""""
                         <service.icon className="w-8 h-8 text-white" />
                       </div>"""
@@ -762,12 +760,12 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                       </div>
                     </div>
 """
-                    {/* Description */}""""
+                    {/* comment */}""""
                     <p className="text-gray-400 mb-6 leading-relaxed">
                       {service.description}
                     </p>
 """
-                    {/* Key Metrics */}""""
+                    {/* comment */}""""
                     <div className="grid grid-cols-2 gap-4 mb-6">""""
                       <div className="text-center p-3 bg-gray-700/50 rounded-lg">""""
                         <div className="text-cyan-400 font-bold text-sm">
@@ -785,16 +783,17 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                       </div>
                     </div>
 """
-                    {/* Features Preview */}""""
+                    {/* comment */}""""
                     <div className="space-y-2 mb-6">
                       {service.features;
                         .slice(0, 3)
+
                         .map((feature, featureIndex) => (
                           <div"""
                             key={featureIndex}""""
                             className="flex items-center space-x-2 text-sm text-gray-300""""
                           >""""
-                            <CheckCircle className="w-4 h-4 text-cyan-400"  />
+                            <CheckCircle className="w-4 h-4 text-cyan-400"   />
                             <span>{feature}</span>
                           </div>
                         ))}"""
@@ -803,7 +802,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                         </div>) }
                     </div>
 """
-                    {/* Technology Stack */}""""
+                    {/* comment */}""""
                     <div className="mb-6">""""
                       <div className="text-sm text-gray-400 mb-2">
                         Technology Stack:"""
@@ -811,6 +810,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                       <div className="flex flex-wrap gap-2">
                         {service.technology;
                           .slice(0, 3)
+
                           .map((tech, techIndex) => (
                             <span"""
                               key={techIndex}""""
@@ -826,7 +826,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                       </div>
                     </div>
 """
-                    {/* Market Info */}""""
+                    {/* comment */}""""
                     <div className="mb-6 p-4 bg-gray-700/50 rounded-lg">""""
                       <div className="grid grid-cols-2 gap-4 text-xs">"""
                         <div>""""
@@ -844,10 +844,10 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                       </div>
                     </div>
 """
-                    {/* CTA */}""""
-                    <div className="space-y-3">`
-                      <Link`"`
-                        to={`/services/${service.id}`}""""
+                    {/* comment */}""""
+                    <div className="space-y-3">"
+                      <Link"""
+                        to={"/services/${service.id}"}""""
                         className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"""
                       >
                         Learn More;
@@ -863,7 +863,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
             </div>
           </div>) ) }
 """
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <div className="text-center mt-16">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -886,7 +886,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"""
               >"""
                 <span>Get Started Today</span>""""
-                <ArrowRight className="w-5 h-5"  />              </Link>"""
+                <ArrowRight className="w-5 h-5"   />              </Link>"""
               <Link""""
                 to="/request-quote""""
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"""
@@ -897,7 +897,7 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
           </motion.div>
         </div>
 """
-        {/* Contact Information */}""""
+        {/* comment */}""""
         <div className="text-center mt-16">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -908,15 +908,15 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>""""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">""""
               <div className="flex items-center justify-center space-x-3 text-gray-300">""""
-                <Phone className="w-5 h-5 text-cyan-400"  />
+                <Phone className="w-5 h-5 text-cyan-400"   />
                 <span>+1 302 464 0950</span>"""
               </div>""""
               <div className="flex items-center justify-center space-x-3 text-gray-300">""""
-                <Mail className="w-5 h-5 text-cyan-400"  />
+                <Mail className="w-5 h-5 text-cyan-400"   />
                 <span>kleber@ziontechgroup.com</span>"""
               </div>""""
               <div className="flex items-center justify-center space-x-3 text-gray-300">""""
-                <MapPin className="w-5 h-5 text-cyan-400"  />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
+                <MapPin className="w-5 h-5 text-cyan-400"   />                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>"""
             </div>""""
             <div className="mt-6">"""
@@ -926,13 +926,13 @@ export function EnhancedNewServices2025(...args: unknown[]): unknown {}
                 rel="noopener noreferrer""""
                 className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors""""
               >""""
-                <Globe className="w-5 h-5"  />                <span>Visit our website</span>
+                <Globe className="w-5 h-5"   />                <span>Visit our website</span>
               </a>
             </div>
           </motion.div>
         </div>
-      </div>'"`
-    </div>'"`'"`
-  )}'"`'"`'"`
-'"`'"`'"`
-'"`'"`
+      </div>"""
+    </div>""""""
+  )}"""""""""
+"""""""""
+"""'""

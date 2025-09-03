@@ -452,7 +452,7 @@
 "
     id: "neuromorphic-computing-platform","
     title: "Neuromorphic Computing & Brain-Inspired AI Platform","
-    description: "Advanced computing platform that mimics the human brain's neural structure to process information more efficiently, enabling faster AI training, lower power consumption, and real-time learning capabilities.","
+    description: "Advanced computing platform that mimics the human brain"s neural structure to process information more efficiently, enabling faster AI training, lower power consumption, and real-time learning capabilities.","
     category: "Neuromorphic Computing","
     subcategory: "AI Platform",
     price: 12999,"
@@ -644,13 +644,13 @@
 ];
 export;
 export;
-export '
-export const pricingCategories2027: unknown = [;''
-  'Metaverse Solutions',;''
-  'Web3 Solutions',;''
-  'Sustainable Tech',;''
-  'NeuroTech Solutions',;'  'Fusion Energy Solutions';
+export "
+export const pricingCategories2027: unknown = [;""
+  "Metaverse Solutions",;""
+  "Web3 Solutions",;""
+  "Sustainable Tech",;""
+  "NeuroTech Solutions",;"  "Fusion Energy Solutions";
 ];
 export const pricingSubcategories2027: unknown = {}
-'"""
-'"'"""
+""""
+""""""

@@ -46,5 +46,4 @@ const Leadership = () => {
             </div>
     </>
   );
-}
 export default Leadership

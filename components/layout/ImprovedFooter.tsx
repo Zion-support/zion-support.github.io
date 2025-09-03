@@ -70,19 +70,19 @@ with cutting-edge AI, cloud architecture, and innovative development services.
             {/* comment */}"
             <div className="space-y-3">"
               <div className="flex items-center text-gray-300">"
-                <Mail className="h-5 w-5 mr-3 text-blue-400"  />"
+                <Mail className="h-5 w-5 mr-3 text-blue-400"   />"
                 <a href="mailto: info@ziontechgroup.com" className="hover:text-white transition-colors">
                   info@ziontechgroup.com,
                 </a>
               </div>"
               <div className="flex items-center text-gray-300">"
-                <Phone className="h-5 w-5 mr-3 text-blue-400"  />"
+                <Phone className="h-5 w-5 mr-3 text-blue-400"   />"
                 <a href="tel:+15551234567" className="hover:text-white transition-colors">
                   +1 (555) 123-4567,
                 </a>
               </div>"
               <div className="flex items-center text-gray-300">"
-                <MapPin className="h-5 w-5 mr-3 text-blue-400"  />,
+                <MapPin className="h-5 w-5 mr-3 text-blue-400"   />,
                 <span>San Francisco, CA</span>
               </div>
           {/* comment */}
@@ -95,7 +95,7 @@ with cutting-edge AI, cloud architecture, and innovative development services.
                   <Link href="{link.href}" "
                     className="text-gray-300 hover: text-white transition-colors flex items-center group"
                   >"
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"   />,
                     {link.name}
 
                   </Link>
@@ -114,7 +114,7 @@ with cutting-edge AI, cloud architecture, and innovative development services.
                   <Link href="{link.href}" "
                     className="text-gray-300 hover: text-white transition-colors flex items-center group"
                   >"
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"   />,
                     {link.name}
 
                   </Link>
@@ -133,7 +133,7 @@ with cutting-edge AI, cloud architecture, and innovative development services.
                   <Link href="{link.href}" "
                     className="text-gray-300 hover: text-white transition-colors flex items-center group"
                   >"
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"   />,
                     {link.name}
 
                   </Link>
@@ -152,7 +152,7 @@ with cutting-edge AI, cloud architecture, and innovative development services.
                   <Link href="{link.href}" "
                     className="text-gray-300 hover: text-white transition-colors flex items-center group"
                   >"
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"   />,
                     {link.name}
 
                   </Link>
@@ -171,7 +171,7 @@ with cutting-edge AI, cloud architecture, and innovative development services.
             <div className="flex">"
               <input type="email""
                 placeholder="Enter your email""
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-600 rounded-l-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"  />"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-600 rounded-l-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"   />"
               <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-r-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                 Subscribe,
               </button>
@@ -184,7 +184,7 @@ with cutting-edge AI, cloud architecture, and innovative development services.
             {/* comment */}"
             <div className="flex items-center text-gray-400 text-sm mb-4 md: mb-0">,
               <span>© {currentYear} Zion Tech Group. All rights reserved.</span>"
-              <Heart className="w-4 h-4 mx-2 text-red-500"  />
+              <Heart className="w-4 h-4 mx-2 text-red-500"   />
               <span>Made with love in San Francisco</span>
             </div>
             {/* comment */}"
@@ -217,5 +217,6 @@ with cutting-edge AI, cloud architecture, and innovative development services.
             </div>
     </footer>
   )
-}
+
+
 ""export default ImprovedFooter

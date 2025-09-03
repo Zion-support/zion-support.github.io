@@ -1,8 +1,8 @@
-import { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
+import { useState, useEffect, useCallback } from "react";"
+import { motion, AnimatePresence } from "framer-motion";"
+import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from "lucide-react";
 ;
-export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
+export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle = "Get in touch with our team", submitText = "Send Message", className = "", enableAnalytics = true, showProgressBar = true }) => {
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true;
     });
@@ -209,11 +209,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
         switch(field.type) {}"});,"})"
 """;,"});,"})"
 """"";,"});,"})"
-            case "email": return <Mail className="w-4 h-4"  />;"""";,"});,"})"
-            case "tel": return <Phone className="w-4 h-4"  />;"""";,"});,"})"
-            case "textarea": return <MessageSquare className="w-4 h-4"  />;"""";,"});,"})"
-            case "select": return <Building className="w-4 h-4"  />;"""";,"});,"})"
-            default: return <User className="w-4 h-4"  />}"});,"});"
+            case "email": return <Mail className="w-4 h-4"   />;"""";,"});,"})"
+            case "tel": return <Phone className="w-4 h-4"   />;"""";,"});,"})"
+            case "textarea": return <MessageSquare className="w-4 h-4"   />;"""";,"});,"})"
+            case "select": return <Building className="w-4 h-4"   />;"""";,"});,"})"
+            default: return <User className="w-4 h-4"   />}"});,"});"
 }, []);,"});,"})"
     // comment
     const renderField = useCallback((field) => {}"});,"})"
@@ -280,12 +280,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
           {isPasswordField && (<button type="button" onClick="{()" => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors">"""","});,"})"
-              {showPassword[field.name] ? <EyeOff className="w-4 h-4"  /> : <Eye className="w-4 h-4"  />}"});,"})"
+              {showPassword[field.name] ? <EyeOff className="w-4 h-4"   /> : <Eye className="w-4 h-4"   />}"});,"})"
             </button>)}"});,"})"
 """;,"});,"})"
           {/* comment */}"""";,"});,"})"
           {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">"""";,"});,"})"
-              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"  />) : (<AlertCircle className="w-5 h-5 text-red-500"  />)}"});,"})"
+              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"   />) : (<AlertCircle className="w-5 h-5 text-red-500"   />)}"});,"})"
             </div>)}"});,"})"
         </div>;,"});,"})"
         {/* comment */}"});,"})"
@@ -309,7 +309,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
   scale: 1 ""","});,"})"
 """";,"});,"});"
 }} className="text-center p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">"""","});,"})"
-        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />"""";,"});,"})"
+        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"   />"""";,"});,"})"
         <h3 className="text-2xl font-bold text-green-800 dark: text-green-200 mb-2">,"});,"})"
           Thank You!""";,"});,"})"
         </h3>"""";,"});,"})"
@@ -353,10 +353,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
             ? "bg-gray-400 cursor-not-allowed""""";,"}});,"})"
             : "bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105"}"} whileHover="{isFormValid()" && !isSubmitting ? { scale: 1.02 } : {}} whileTap="{isFormValid()" && !isSubmitting ? { scale: 0.98 } : {}}>""";,"});,"})"
           {isSubmitting ? (<>"""";,"});,"})"
-              <Loader2 className="w-5 h-5 animate-spin"  />;,"});,"})"
+              <Loader2 className="w-5 h-5 animate-spin"   />;,"});,"})"
               Sending...""";,"});,"})"
             </>) : (<>"""";,"});,"})"
-              <Send className="w-5 h-5"  />;,"});,"})"
+              <Send className="w-5 h-5"   />;,"});,"})"
               {submitText}"});,"})"
             </>) }"});,"})"
         </motion.button>;,"});,"})"
@@ -381,29 +381,39 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
     </motion.div>)};"";,"});,"})"
 """"";,"});,"})"""""""""
     const { trackEvent, trackConversion } = useAnalytics()
-}
+
+
     const [formData, setFormData] = useState()
-}
+
+
     const [validation, setValidation] = useState()
-}
+
+
     const [isSubmitting, setIsSubmitting] = useState()
-}
+
+
     const [isSubmitted, setIsSubmitted] = useState()
-}
+
+
     const [showPassword, setShowPassword] = useState()
-}
+
+
     const [progress, setProgress] = useState()
-}
+
+
     // comment
 useEffect(() => {}
 
         const initialValidation = {}"
         fields.forEach()
-}
+
+
         setFormData()
-}
+
+
         setValidation(initialValidation)}, [fields])
-}
+
+
     // comment
 useEffect(() => {}""
 """
@@ -411,12 +421,13 @@ useEffect(() => {}""
         const filledFields = Object.values(formData).filter(value => typeof value === "boolean" ? value : value.toString().trim() !== "").length,
 const totalFields = fields.length,
 setProgress((filledFields / totalFields) * 100)}, [formData, fields.length])
-}
+
+
     // comment
 const validateField = useCallback((name, value) => {}
 
                 isValid: !field.required,
-                message: '',
+                message: "",
                 isTouched: false
             }});
         setFormData(initialData);
@@ -429,7 +440,6 @@ const validateField = useCallback((name, value) => {}
     // Cleanup function
   };
 }, []);, []);
-
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/"
                 if (!emailPattern.test(stringValue)) {}""
 ""
@@ -468,29 +478,35 @@ if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {}
 if(field.validation?.custom) {}
 
                 const customError = field.validation.custom()
-}
+
+
                 if()
+
 }                    return customError}
 
         }
 
         return null}, [fields])
-}
+
+
     // comment
 const handleFieldChange = useCallback((name, value) => {}
 
         setFormData(prev => ({ ...prev, [name]: value }))
-}
+
+
         // comment
 const error = validateField()
-}
+
+
         setValidation(prev => ({}"
             ...prev, [name]: {}""
                 isValid: !error, """
                 message: error || "", isTouched: true}
 
         }))
-}
+
+
         // comment
 if (enableAnalytics) {}""
 """
@@ -498,30 +514,35 @@ if (enableAnalytics) {}""
             trackEvent("form", field_changed", name, null, { fieldName: name, value: String(value) })}
 
 }, [validateField, enableAnalytics, trackEvent])
-}
+
+
     // comment
 const handleFieldBlur = useCallback((name) => {}
 
         const value = formData[name]
         const error = validateField()
-}
+
+
         setValidation(prev => ({}"
             ...prev, [name]: {}""
                 ...prev[name], isValid: !error,"""
                 message: error || "", isTouched: true}
 
         }))}, [formData, validateField])
-}
+
+
     // comment
 const isFormValid = useCallback(() => {}
 
         return Object.values(validation).every(v => v.isValid)}, [validation])
-}
+
+
     // comment
 const handleSubmit = useCallback(async (e) => {}
 
         e.preventDefault()
-}
+
+
         if(!isFormValid()) {}
 
             // comment
@@ -533,7 +554,8 @@ if (enableAnalytics) {}""
             return}
 
         setIsSubmitting()
-}
+
+
         try {}
 
             // comment
@@ -543,7 +565,8 @@ if (enableAnalytics) {}""
                 trackEvent("form", submission_started",form_submitted")}
 
             await onSubmit()
-}
+
+
             // comment
 if (enableAnalytics) {}""
 """
@@ -554,15 +577,19 @@ if (enableAnalytics) {}""
                 trackConversion("form_submission", 1, { formType: title })}
 
             setIsSubmitted()
-}
+
+
             // comment
 setTimeout(() => {}
 
                 setIsSubmitted()
-}
+
+
                 setFormData()
-}
+
+
                 setValidation()
+
 }                setProgress(0)}, 5000)}
 
         catch(error) {}
@@ -580,12 +607,14 @@ if (enableAnalytics) {}""
             setIsSubmitting(false)}
 
     }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title])
-}
+
+
     // comment
 const togglePasswordVisibility = useCallback((fieldName) => {}
 
         setShowPassword(prev => ({ ...prev, [fieldName]: !prev[fieldName] }))}, [])
-}
+
+
     // comment
 const getFieldIcon = useCallback((field) => {}"
         switch(field.type) {}""
@@ -603,7 +632,8 @@ const getFieldIcon = useCallback((field) => {}"
             default: return <User className="w-4 h-4"/" >}
 
     }, [])
-}
+
+
     // comment
 const renderField = useCallback((field) => {}""
         const fieldValidation = validation[field.name]"""
@@ -680,7 +710,8 @@ const renderField = useCallback((field) => {}""
           </motion.p>)}
 
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility])
-}
+
+
     if(isSubmitted) {}
 
         return (<motion.div initial = {}"

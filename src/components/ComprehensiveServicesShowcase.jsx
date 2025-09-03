@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 ;
 ;
 ;
 ;
 ;
-const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSelectedCategory] = useState('all');
+const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSelectedCategory] = useState("all");
     const [selectedService, setSelectedService] = useState(null);
     const allServices = []
         ...comprehensiveMicroSaasServices2025,
@@ -12,98 +12,94 @@ const ComprehensiveServicesShowcase = () => {    const [selectedCategory, setSel
         ...expandedInnovativeServices2025,
         ...emergingTechInnovationServices2025,
         ...enterpriseITInnovationServices2025;
-    ];'
-    const categories = [''
-        { id: 'all', name: 'All Services', count: allServices.length },'
-        { id: 'ai-content-marketing', name: 'AI Content & Marketing', count: allServices.filter(s => s.category.includes('Content') || s.category.includes('Marketing')).length },'
-        { id: 'ai-customer-service', name: 'AI Customer Service', count: allServices.filter(s => s.category.includes('Customer Service')).length },'
-        { id: 'data-analytics-bi', name: 'Data Analytics & BI', count: allServices.filter(s => s.category.includes('Analytics') || s.category.includes('BI')).length },'
-        { id: 'ai-sales-crm', name: 'AI Sales & CRM', count: allServices.filter(s => s.category.includes('Sales') || s.category.includes('CRM')).length },'
-        { id: 'ai-social-media', name: 'AI Social Media', count: allServices.filter(s => s.category.includes('Social Media')).length },'
-        { id: 'ai-supply-chain', name: 'AI Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length },'
-        { id: 'ai-hr-recruitment', name: 'AI HR & Recruitment', count: allServices.filter(s => s.category.includes('HR') || s.category.includes('Recruitment')).length },'
-        { id: 'ai-finance-accounting', name: 'AI Finance & Accounting', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Accounting')).length },'
-        { id: 'quantum-computing-ai', name: 'Quantum Computing & AI', count: allServices.filter(s => s.category.includes('Quantum')).length },'
-        { id: 'autonomous-ai-ml', name: 'Autonomous AI & ML', count: allServices.filter(s => s.category.includes('Autonomous')).length },'
-        { id: 'edge-computing-ai', name: 'Edge Computing & AI', count: allServices.filter(s => s.category.includes('Edge')).length },'
-        { id: 'ai-cybersecurity', name: 'AI Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity')).length },'
-        { id: 'blockchain-ai', name: 'Blockchain & AI', count: allServices.filter(s => s.category.includes('Blockchain')).length },'
-        { id: 'autonomous-devops', name: 'Autonomous DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },'
-        { id: 'ai-data-governance', name: 'AI Data Governance', count: allServices.filter(s => s.category.includes('Data Governance')).length },'
-        { id: 'ai-api-management', name: 'AI API Management', count: allServices.filter(s => s.category.includes('API Management')).length },'
-        { id: 'autonomous-cloud-migration', name: 'Autonomous Cloud Migration', count: allServices.filter(s => s.category.includes('Cloud Migration')).length },'
-        { id: 'ai-legal-compliance', name: 'AI Legal & Compliance', count: allServices.filter(s => s.category.includes('Legal') || s.category.includes('Compliance')).length },'
-        { id: 'quantum-security-communication', name: 'Quantum Security & Communication', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Security') || s.category.includes('Communication'))).length },'
-        { id: 'ai-healthcare-diagnostics', name: 'AI Healthcare & Diagnostics', count: allServices.filter(s => s.category.includes('Healthcare') || s.category.includes('Diagnostics')).length },'
-        { id: 'autonomous-supply-chain-logistics', name: 'Autonomous Supply Chain & Logistics', count: allServices.filter(s => s.category.includes('Supply Chain') || s.category.includes('Logistics')).length },'
-        { id: 'blockchain-digital-identity', name: 'Blockchain & Digital Identity', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('Digital Identity')).length },'
-        { id: 'ai-finance-trading', name: 'AI Finance & Trading', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Trading')).length },'
-        { id: 'space-technology-innovation', name: 'Space Technology & Innovation', count: allServices.filter(s => s.category.includes('Space') || s.category.includes('Innovation')).length },'
-        { id: 'metaverse-virtual-reality', name: 'Metaverse & Virtual Reality', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('Virtual Reality')).length },'
-        { id: 'sustainable-energy-green-tech', name: 'Sustainable Energy & Green Tech', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Green Tech')).length },'
-        { id: 'advanced-robotics-automation', name: 'Advanced Robotics & Automation', count: allServices.filter(s => s.category.includes('Robotics') || s.category.includes('Automation')).length },'
-        { id: 'quantum-internet-networking', name: 'Quantum Internet & Networking', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Internet') || s.category.includes('Networking'))).length },'
-        { id: 'climate-tech-sustainability', name: 'Climate Tech & Sustainability', count: allServices.filter(s => s.category.includes('Climate') || s.category.includes('Sustainability')).length },'
-        { id: 'autonomous-vehicles-transportation', name: 'Autonomous Vehicles & Transportation', count: allServices.filter(s => s.category.includes('Vehicle') || s.category.includes('Transportation')).length },'
-        { id: 'brain-computer-interface-neuroscience', name: 'Brain-Computer Interface & Neuroscience', count: allServices.filter(s => s.category.includes('Brain-Computer') || s.category.includes('Neuroscience')).length },'
-        { id: 'synthetic-biology-biotechnology', name: 'Synthetic Biology & Biotechnology', count: allServices.filter(s => s.category.includes('Biology') || s.category.includes('Biotechnology')).length },'
-        { id: 'enterprise-data-analytics', name: 'Enterprise Data & Analytics', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Data') || s.category.includes('Analytics'))).length },'
-        { id: 'multi-cloud-infrastructure', name: 'Multi-Cloud & Infrastructure', count: allServices.filter(s => s.category.includes('Multi-Cloud') || s.category.includes('Infrastructure')).length },'
-        { id: 'enterprise-api-integration', name: 'Enterprise API & Integration', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('API') || s.category.includes('Integration'))).length },'
-        { id: 'enterprise-itsm', name: 'Enterprise IT Service Management', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('IT Service Management')).length },'
-        { id: 'enterprise-security-soc', name: 'Enterprise Security & SOC', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Security') || s.category.includes('SOC'))).length },'
-        { id: 'enterprise-governance', name: 'Enterprise Data Governance', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('Data Governance')).length },'
-        { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length },'
-        { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length }
+    ];"
+    const categories = [""
+        { id: "all", name: "All Services", count: allServices.length },"
+        { id: "ai-content-marketing", name: "AI Content & Marketing", count: allServices.filter(s => s.category.includes("Content") || s.category.includes("Marketing")).length },"
+        { id: "ai-customer-service", name: "AI Customer Service", count: allServices.filter(s => s.category.includes("Customer Service")).length },"
+        { id: "data-analytics-bi", name: "Data Analytics & BI", count: allServices.filter(s => s.category.includes("Analytics") || s.category.includes("BI")).length },"
+        { id: "ai-sales-crm", name: "AI Sales & CRM", count: allServices.filter(s => s.category.includes("Sales") || s.category.includes("CRM")).length },"
+        { id: "ai-social-media", name: "AI Social Media", count: allServices.filter(s => s.category.includes("Social Media")).length },"
+        { id: "ai-supply-chain", name: "AI Supply Chain", count: allServices.filter(s => s.category.includes("Supply Chain")).length },"
+        { id: "ai-hr-recruitment", name: "AI HR & Recruitment", count: allServices.filter(s => s.category.includes("HR") || s.category.includes("Recruitment")).length },"
+        { id: "ai-finance-accounting", name: "AI Finance & Accounting", count: allServices.filter(s => s.category.includes("Finance") || s.category.includes("Accounting")).length },"
+        { id: "quantum-computing-ai", name: "Quantum Computing & AI", count: allServices.filter(s => s.category.includes("Quantum")).length },"
+        { id: "autonomous-ai-ml", name: "Autonomous AI & ML", count: allServices.filter(s => s.category.includes("Autonomous")).length },"
+        { id: "edge-computing-ai", name: "Edge Computing & AI", count: allServices.filter(s => s.category.includes("Edge")).length },"
+        { id: "ai-cybersecurity", name: "AI Cybersecurity", count: allServices.filter(s => s.category.includes("Cybersecurity")).length },"
+        { id: "blockchain-ai", name: "Blockchain & AI", count: allServices.filter(s => s.category.includes("Blockchain")).length },"
+        { id: "autonomous-devops", name: "Autonomous DevOps", count: allServices.filter(s => s.category.includes("DevOps")).length },"
+        { id: "ai-data-governance", name: "AI Data Governance", count: allServices.filter(s => s.category.includes("Data Governance")).length },"
+        { id: "ai-api-management", name: "AI API Management", count: allServices.filter(s => s.category.includes("API Management")).length },"
+        { id: "autonomous-cloud-migration", name: "Autonomous Cloud Migration", count: allServices.filter(s => s.category.includes("Cloud Migration")).length },"
+        { id: "ai-legal-compliance", name: "AI Legal & Compliance", count: allServices.filter(s => s.category.includes("Legal") || s.category.includes("Compliance")).length },"
+        { id: "quantum-security-communication", name: "Quantum Security & Communication", count: allServices.filter(s => s.category.includes("Quantum") && (s.category.includes("Security") || s.category.includes("Communication"))).length },"
+        { id: "ai-healthcare-diagnostics", name: "AI Healthcare & Diagnostics", count: allServices.filter(s => s.category.includes("Healthcare") || s.category.includes("Diagnostics")).length },"
+        { id: "autonomous-supply-chain-logistics", name: "Autonomous Supply Chain & Logistics", count: allServices.filter(s => s.category.includes("Supply Chain") || s.category.includes("Logistics")).length },"
+        { id: "blockchain-digital-identity", name: "Blockchain & Digital Identity", count: allServices.filter(s => s.category.includes("Blockchain") || s.category.includes("Digital Identity")).length },"
+        { id: "ai-finance-trading", name: "AI Finance & Trading", count: allServices.filter(s => s.category.includes("Finance") || s.category.includes("Trading")).length },"
+        { id: "space-technology-innovation", name: "Space Technology & Innovation", count: allServices.filter(s => s.category.includes("Space") || s.category.includes("Innovation")).length },"
+        { id: "metaverse-virtual-reality", name: "Metaverse & Virtual Reality", count: allServices.filter(s => s.category.includes("Metaverse") || s.category.includes("Virtual Reality")).length },"
+        { id: "sustainable-energy-green-tech", name: "Sustainable Energy & Green Tech", count: allServices.filter(s => s.category.includes("Energy") || s.category.includes("Green Tech")).length },"
+        { id: "advanced-robotics-automation", name: "Advanced Robotics & Automation", count: allServices.filter(s => s.category.includes("Robotics") || s.category.includes("Automation")).length },"
+        { id: "quantum-internet-networking", name: "Quantum Internet & Networking", count: allServices.filter(s => s.category.includes("Quantum") && (s.category.includes("Internet") || s.category.includes("Networking"))).length },"
+        { id: "climate-tech-sustainability", name: "Climate Tech & Sustainability", count: allServices.filter(s => s.category.includes("Climate") || s.category.includes("Sustainability")).length },"
+        { id: "autonomous-vehicles-transportation", name: "Autonomous Vehicles & Transportation", count: allServices.filter(s => s.category.includes("Vehicle") || s.category.includes("Transportation")).length },"
+        { id: "brain-computer-interface-neuroscience", name: "Brain-Computer Interface & Neuroscience", count: allServices.filter(s => s.category.includes("Brain-Computer") || s.category.includes("Neuroscience")).length },"
+        { id: "synthetic-biology-biotechnology", name: "Synthetic Biology & Biotechnology", count: allServices.filter(s => s.category.includes("Biology") || s.category.includes("Biotechnology")).length },"
+        { id: "enterprise-data-analytics", name: "Enterprise Data & Analytics", count: allServices.filter(s => s.category.includes("Enterprise") && (s.category.includes("Data") || s.category.includes("Analytics"))).length },"
+        { id: "multi-cloud-infrastructure", name: "Multi-Cloud & Infrastructure", count: allServices.filter(s => s.category.includes("Multi-Cloud") || s.category.includes("Infrastructure")).length },"
+        { id: "enterprise-api-integration", name: "Enterprise API & Integration", count: allServices.filter(s => s.category.includes("Enterprise") && (s.category.includes("API") || s.category.includes("Integration"))).length },"
+        { id: "enterprise-itsm", name: "Enterprise IT Service Management", count: allServices.filter(s => s.category.includes("Enterprise") && s.category.includes("IT Service Management")).length },"
+        { id: "enterprise-security-soc", name: "Enterprise Security & SOC", count: allServices.filter(s => s.category.includes("Enterprise") && (s.category.includes("Security") || s.category.includes("SOC"))).length },"
+        { id: "enterprise-governance", name: "Enterprise Data Governance", count: allServices.filter(s => s.category.includes("Enterprise") && s.category.includes("Data Governance")).length },"
+        { id: "enterprise-workflow-automation", name: "Enterprise Workflow & Automation", count: allServices.filter(s => s.category.includes("Enterprise") && (s.category.includes("Workflow") || s.category.includes("Automation"))).length },"
+        { id: "enterprise-digital-twin-iot", name: "Enterprise Digital Twin & IoT", count: allServices.filter(s => s.category.includes("Enterprise") && (s.category.includes("Digital Twin") || s.category.includes("IoT"))).length }
     ];
-    const filteredServices = selectedCategory === 'all'
+    const filteredServices = selectedCategory === "all'
         ? allServices;
         : allServices.filter(service => {}
             const category = categories.find(c => c.id === selectedCategory);
             if(!category)
+
                 return true;
             // Handle special category mappings
             const categoryMappings = {
 
 
 export { ComprehensiveServicesShowcase };
-
 export { ComprehensiveServicesShowcase };
-
 export { ComprehensiveServicesShowcase };
-
 export { ComprehensiveServicesShowcase };
-
 export { ComprehensiveServicesShowcase };
-
 "
     id: "micro - saas","",
     name: "Micro SAAS Solutions","";"
-    icon: <Rocket className="w - 6 h-6"  />,",
+    icon: <Rocket className="w - 6 h-6"   />,",
     color: "from - purple-600 to-pink-600",
 services: revolutionary2027AdvancedMicroSaasServices}, {}"
     id: "it-infrastructure","",
     name: "IT Infrastructure & Cybersecurity","";"
-    icon: <Shield className="w - 6 h-6"  />,",
+    icon: <Shield className="w - 6 h-6"   />,",
     color: "from - red-600 to-orange-600",
 services: revolutionary2027ITInfrastructureCybersecurityServices}, {}"
     id: "ai-innovation","",
     name: "AI Innovation Services","";"
-    icon: <Brain className="w - 6 h-6"  />,",
+    icon: <Brain className="w - 6 h-6"   />,",
     color: "from-blue-600 to-cyan-600","
 id: &apos,micro-saas&apos,"&apos;&apos,
     name: &apos,Micro SAAS Solutions&apos,"&apos;&apos;"
-    icon: &apos,&apos, <Rocket className="&apos,w-6" h-6&apos,       />,
+    icon: &apos,&apos, <Rocket className="&apos,w-6" h-6&apos,          />,
     color: &apos,from-purple-600 to-pink-600&apos,
     services: revolutionary2027AdvancedMicroSaasServices} {}"
     id: &apos,it-infrastructure&apos,"&apos;&apos,
     name: &apos,IT Infrastructure & Cybersecurity&apos,"&apos;&apos,"
-    icon: &apos,&apos, <Shield className="&apos,w-6" h-6&apos,       />,
+    icon: &apos,&apos, <Shield className="&apos,w-6" h-6&apos,          />,
     color: &apos,from-red-600 to-orange-600&apos,
     services: revolutionary2027ITInfrastructureCybersecurityServices} {}"
     id: &apos,ai-innovation&apos,"&apos;&apos,
     name: &apos,AI Innovation Services&apos,"&apos;&apos,"
-    icon: &apos,&apos, <Brain className="&apos,w-6" h-6&apos,       />,
+    icon: &apos,&apos, <Brain className="&apos,w-6" h-6&apos,          />,
     color: &apos,from-blue-600 to-cyan-600&apos,
     services: revolutionary2027AIInnovationServices}
 
@@ -111,9 +107,11 @@ id: &apos,micro-saas&apos,"&apos;&apos,
 export function ComprehensiveServicesShowcase() {}"
 ""
   const [selectedCategory, setSelectedCategory] = useState("micro-saas")
-}
+
+
   const [selectedService, setSelectedService] = useState(null)
-}
+
+
   const containerVariants = {}
 
     hidden: { opacity: 0 },
@@ -132,15 +130,15 @@ delayChildren: 0.2}
 ";""
     id: "micro - saas", """",
     name: "Micro SAAS Solutions", """";"
-    icon: <Rocket className = "w - 6 h-6"  />, ","
+    icon: <Rocket className = "w - 6 h-6"   />, ","
     color: "from - purple-600 to-pink-600", services: revolutionary2027AdvancedMicroSaasServices} {}"
     id: "it-infrastructure", """""
     name: "IT Infrastructure & Cybersecurity", """"
-    icon: <Shield className="w-6 h-6"  />,","
+    icon: <Shield className="w-6 h-6"   />,","
     color: "from - red-600 to-orange-600", services: revolutionary2027ITInfrastructureCybersecurityServices} {}"
     id: "ai-innovation", """""
     name: "AI Innovation Services", """"
-    icon: <Brain className="w-6 h-6"  />,","
+    icon: <Brain className="w-6 h-6"   />,","
     color: "from - blue-600 to-cyan-600", services: revolutionary2027AIInnovationServices}
 
 ],
@@ -221,12 +219,12 @@ y: 0}}">
             <h3 className="text-2xl font-semibold text-zion-cyan mb-4">Ready to Transform Your Business?</h3>"";"
             <div className="grid md: grid-cols-3 gap-6 text-sm">"";"
               <div className="flex items-center justify-center space-x-2">"","
-                <Clock className="w-5 h-5 text-zion-cyan"  />"","
+                <Clock className="w-5 h-5 text-zion-cyan"   />"","
                 <span className="text - white">24/7 Support Available</span>"",
               </div>"";"
-                <Target className="w-5 h-5 text-zion-cyan"  />"";"
+                <Target className="w-5 h-5 text-zion-cyan"   />"";"
                 <span className="text-white">Custom Solutions</span>"";"
-                <Award className="w-5 h-5 text-zion-cyan"  />"";"
+                <Award className="w-5 h-5 text-zion-cyan"   />"";"
                 <span className="text-white">Proven Results</span>;"
             <div className="mt-4 text-center">"";"
               <p className="text - zion-cyan-light">,
@@ -256,12 +254,12 @@ designed to transform your business and drive exponential growth.
             <h3 className="&apos;text-2xl" font-semibold text-zion-cyan mb-4&apos;>Ready to Transform Your Business?&apos;</h3>&apos;&apos,&apos;&apos,"
             <div className="&apos;grid" md: grid-cols-3 gap-6 text-sm&apos,>"&apos,&apos,&apos;&apos;"
               <div className="&apos;flex" items-center justify-center space-x-2&apos;>"&apos;&apos,&apos;&apos;"
-                <Clock className="&apos;w-5" h-5 text-zion-cyan&apos;       />&apos;&apos,&apos;&apos,"
+                <Clock className="&apos;w-5" h-5 text-zion-cyan&apos;          />&apos;&apos,&apos;&apos,"
                 <span className="&apos;text-white&apos;">24/7 Support Available&apos;</span>&apos;&apos,&apos;&apos,
               </div>&apos;&apos,&apos;&apos,"
-                <Target className="&apos;w-5" h-5 text-zion-cyan&apos;       />&apos;&apos,&apos;&apos,"
+                <Target className="&apos;w-5" h-5 text-zion-cyan&apos;          />&apos;&apos,&apos;&apos,"
                 <span className="&apos;text-white&apos;">Custom Solutions&apos;</span>&apos;&apos,&apos;&apos;"
-                <Award className="&apos;w-5" h-5 text-zion-cyan&apos;       />&apos;&apos,&apos;&apos,"
+                <Award className="&apos;w-5" h-5 text-zion-cyan&apos;          />&apos;&apos,&apos;&apos,"
                 <span className="&apos;text-white&apos;">Proven Results&apos;</span>"
               </div>&apos;&apos,&apos;&apos;"
             <div className="&apos;mt-4" text-center&apos;>"&apos;&apos,&apos;&apos,",
@@ -275,12 +273,12 @@ designed to transform your business and drive exponential growth.
             <h3 className="text-2xl font-semibold text-zion-cyan mb-4">Ready to Transform Your Business?</h3>""""
             <div className="grid md: grid-cols-3 gap-6 text-sm">""""
               <div className="flex items-center justify-center space-x-2">""""
-                <Clock className="w-5 h-5 text-zion-cyan"  />""""
+                <Clock className="w-5 h-5 text-zion-cyan"   />""""
                 <span className="text-white">24/7 Support Available</span>"""""
               </div>""""
-                <Target className="w-5 h-5 text-zion-cyan"  />""""
+                <Target className="w-5 h-5 text-zion-cyan"   />""""
                 <span className="text-white">Custom Solutions</span>""""
-                <Award className="w-5 h-5 text-zion-cyan"  />""""
+                <Award className="w-5 h-5 text-zion-cyan"   />""""
                 <span className="text-white">Proven Results</span>"
             <div className="mt-4 text-center">""""
               <p className="text-zion-cyan-light">"
@@ -361,11 +359,11 @@ designed to transform your business and drive exponential growth.
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
                 <div className="&apos;flex" items-center justify-between mb-4&apos;>"&apos;&apos,&apos;&apos;"
                   <div className="&apos;flex" items-center space-x-2&apos;>"&apos;&apos,&apos;&apos;"
-                    <DollarSign className="&apos;w-5" h-5 text-zion-cyan&apos;       />&apos;&apos,&apos;&apos,"
+                    <DollarSign className="&apos;w-5" h-5 text-zion-cyan&apos;          />&apos;&apos,&apos;&apos,"
                     <span className="&apos;text-2xl" font-bold text-white&apos;>{service.price}&apos;</span>&apos;&apos,&apos;&apos,"
                     <span className="&apos;text-zion-cyan-light&apos;">{service.period}&apos;</span>&apos;&apos,&apos;&apos;"
                   <div className="&apos;flex" items-center space-x-1&apos;>"&apos;&apos,&apos;&apos;"
-                    <Star className="&apos;w-4" h-4 text-yellow-400 fill-current&apos;       />&apos;&apos,&apos;&apos,"
+                    <Star className="&apos;w-4" h-4 text-yellow-400 fill-current&apos;          />&apos;&apos,&apos;&apos,"
                     <span className="&apos;text-white" text-sm&apos;>{service.rating}&apos;</span>&apos;&apos,&apos;&apos,"
                     <span className="&apos;text-zion-cyan-light" text-sm&apos;>({service.reviews})&apos;</span>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
@@ -394,7 +392,7 @@ designed to transform your business and drive exponential growth.
                     to={service.link}&apos;&apos,";"
                     className="&apos;flex" items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover: shadow-lg transition-all duration-300 group-hover:scale-105 &apos,>"&apos,&apos,""",
                     <span>Learn More</span>&apos;&apos,&apos;&apos,"
-                    <ArrowRight className="&apos,w-4" h-4 group-hove,r: translate-x-1 transition-transform&apos,       />&apos,&apos,&apos;&apos,
+                    <ArrowRight className="&apos,w-4" h-4 group-hove,r: translate-x-1 transition-transform&apos,          />&apos,&apos,&apos;&apos,
                   </Link>&apos;&apos,&apos;&apos,"",
                   <div className = "&apos,text-xs" text-zion-cyan-light&apos,>
                     {service.trialDays} day trial&apos,
@@ -428,11 +426,11 @@ designed to transform your business and drive exponential growth.
 ""{/* comment */}"";"
                 <div className="flex items-center justify-between mb-4">"";"
                   <div className="flex items-center space-x-2">"";"
-                    <DollarSign className="w-5 h-5 text-zion-cyan"  />"";"
+                    <DollarSign className="w-5 h-5 text-zion-cyan"   />"";"
                     <span className="text-2xl font-bold text-white">{service.price}</span>"";"
                     <span className="text-zion-cyan-light">{service.period}</span>"";"
                   <div className="flex items-center space-x-1">"";"
-                    <Star className="w-4 h-4 text-yellow-400 fill-current"  />"";"
+                    <Star className="w-4 h-4 text-yellow-400 fill-current"   />"";"
                     <span className="text-white text-sm">{service.rating}</span>"";"
                     <span className="text - zion-cyan-light text-sm">({service.reviews})</span>,
 ""{/* comment */}"";"
@@ -460,7 +458,7 @@ designed to transform your business and drive exponential growth.
                     to={service.link}"";"
                     className="flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover: shadow-lg transition-all duration-300 group-hover:scale-105 ">"",
                     <span>Learn More</span>"",",
-                    <ArrowRight className = "w-4 h-4 group-hover:translate-x-1 transition-transform"  />"","
+                    <ArrowRight className = "w-4 h-4 group-hover:translate-x-1 transition-transform"   />"","
                   </Link>"","
                   <div className="text-xs text-zion-cyan-light"> {service.trialDays} day trial
               </motion.div>
@@ -496,11 +494,11 @@ designed to transform your business and drive exponential growth.
 """{/* comment */}"""""
                 <div className="flex items-center justify-between mb-4">""""
                   <div className="flex items-center space-x-2">""""
-                    <DollarSign className="w-5 h-5 text-zion-cyan"  />""""
+                    <DollarSign className="w-5 h-5 text-zion-cyan"   />""""
                     <span className="text-2xl font-bold text-white">{service.price}</span>""""
                     <span className="text-zion-cyan-light">{service.period}</span>""""
                   <div className="flex items-center space-x-1">""""
-                    <Star className="w-4 h-4 text-yellow-400 fill-current"  />""""
+                    <Star className="w-4 h-4 text-yellow-400 fill-current"   />""""
                     <span className="text-white text-sm">{service.rating}</span>""""
                     <span className="text-zion-cyan-light text-sm">({service.reviews})</span>"
 """{/* comment */}"""""
@@ -526,7 +524,7 @@ designed to transform your business and drive exponential growth.
                     to={service.link}"""";"
                     className = "flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover: shadow-lg transition-all duration-300 group-hover:scale-105 ">"""""
                     <span>Learn More</span>""""
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"  />"""""
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"   />"""""
                   </Link>""""
                   <div className="text-xs text-zion-cyan-light">,
                     {service.trialDays} day trial
@@ -621,7 +619,7 @@ opacity: 1}}
                   <h3 className = "text-xl font-semibold text-white mb-4">Features</h3>"","
                   <ul className="space-y-2">""{selectedService.features.map((feature, index) => ("";"
                       <li key="{index}" className="flex items-center space-x-2">"";"
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />"";"
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"   />"";"
                         <span className="text-zion-cyan-light">{feature}</span>
                       </li>
                     ))}
@@ -674,7 +672,7 @@ opacity: 1}}
                   <h3 className="&apos;text-xl" font-semibold text-white mb-4&apos;>Features&apos;</h3>&apos;&apos,&apos;&apos,",
                   <ul className="&apos;space-y-2&apos,">"&apos,&apos {selectedService.features.map((feature, index) => (&apos;&apos,&apos;&apos}"
                       <li key="{index}" className="&apos;flex" items-center space-x-2&apos;>"&apos;&apos,&apos;&apos;"
-                        <CheckCircle className="&apos;w-5" h-5 text-green-400 flex-shrink-0&apos;       />&apos;&apos,&apos;&apos,"
+                        <CheckCircle className="&apos;w-5" h-5 text-green-400 flex-shrink-0&apos;          />&apos;&apos,&apos;&apos,"
                         <span className="&apos;text-zion-cyan-light&apos;">{feature}&apos;</span>"
               onClick = "{(e)" => e.stopPropagation()}""">"""""
               <div className="flex items-start justify-between mb-6">""""
@@ -691,7 +689,7 @@ opacity: 1}}
                   <h3 className="text-xl font-semibold text-white mb-4">Features</h3>"""",
                   <ul className="space-y-2">"""{selectedService.features.map((feature, index) => ("""""
                       <li key="{index}" className="flex items-center space-x-2">""""
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />""""
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"   />""""
                         <span className="text-zion-cyan-light">{feature}</span>
                       </li>
                   </ul>

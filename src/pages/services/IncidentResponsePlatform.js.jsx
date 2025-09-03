@@ -1,7 +1,7 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { Helmet } from 'react-helmet-async';'''
-import { motion } from 'framer-motion';
+import React from "react";"""
+import { Link } from "react-router-dom";"""
+import { Helmet } from "react-helmet-async";"""
+import { motion } from "framer-motion";
 import {}
   CheckCircle,
   Shield,
@@ -9,100 +9,101 @@ import {}
   TrendingUp,
   AlertTriangle,
   Clock,
-  Eye,'
-  Target,''
-  ArrowRight,'''
-  Activity} from 'lucide-react';
+  Eye,"
+  Target,""
+  ArrowRight,"""
+  Activity} from "lucide-react";
 const IncidentResponsePlatform = () => {}
   const features = []
     {}
-'
-''
-'''
-      title: 'AI-Powered Threat Detection','''
-      description:''''
-        'Advanced machine learning algorithms detect threats in real-time with high accuracy and low false positives',
-      icon: <Eye className="w-6 h-6" />},
+"
+""
+"""
+      title: "AI-Powered Threat Detection","""
+      description:""""
+        "Advanced machine learning algorithms detect threats in real-time with high accuracy and low false positives",
+      icon: <Eye className="w-6 h-6"   />},
     {}
-'
-      title: 'Automated Response Workflows','
-      description:''"""
-        'Intelligent automation handles routine incidents while escalating critical threats to human analysts',""""
-      icon: <Zap className="w-6 h-6" />},
+"
+      title: "Automated Response Workflows","
+      description:"""""
+        "Intelligent automation handles routine incidents while escalating critical threats to human analysts",""""
+      icon: <Zap className="w-6 h-6"   />},
     {}
-'
-      title: 'Real-time Alerting & Notifications','
-      description:''"""
-        'Instant notifications across multiple channels with customizable escalation paths and response teams',""""
-      icon: <AlertTriangle className="w-6 h-6" />},
+"
+      title: "Real-time Alerting & Notifications","
+      description:"""""
+        "Instant notifications across multiple channels with customizable escalation paths and response teams",""""
+      icon: <AlertTriangle className="w-6 h-6"   />},
     {}
-'
-      title: 'Incident Timeline Tracking','
-      description:''"""
-        'Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance',""""
-      icon: <Clock className="w-6 h-6" />}
+"
+      title: "Incident Timeline Tracking","
+      description:"""""
+        "Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance",""""
+      icon: <Clock className="w-6 h-6"   />}
   ];
   const benefits = []
     {}
-'
-      metric: '70%','"""
-      description: 'Reduction in response time',""""
-      icon: <Clock className="w-5 h-5" />},
+"
+      metric: "70%",""""
+      description: "Reduction in response time",""""
+      icon: <Clock className="w-5 h-5"   />},
     {}
-'
-      metric: '45%','"""
-      description: 'Improvement in resolution quality',""""
-      icon: <TrendingUp className="w-5 h-5" />},
+"
+      metric: "45%",""""
+      description: "Improvement in resolution quality",""""
+      icon: <TrendingUp className="w-5 h-5"   />},
     {}
-'
-      metric: '24/7','"""
-      description: 'Automated monitoring',""""
-      icon: <Activity className="w-5 h-5" />},
+"
+      metric: "24/7",""""
+      description: "Automated monitoring",""""
+      icon: <Activity className="w-5 h-5"   />},
     {}
-'
-      metric: '90%','"""
-      description: 'Compliance assurance',""""
-      icon: <Shield className="w-5 h-5" />}
+"
+      metric: "90%",""""
+      description: "Compliance assurance",""""
+      icon: <Shield className="w-5 h-5"   />}
   ];
   const pricingPlans = []
     {}
-'
-      name: 'Professional','
-      price: '$299','
-      period: '/month','
-      description: 'Perfect for growing security teams','
-      features: [''
-        'Up to 50 users',Basic threat detection',Standard response workflows',Email & Slack notifications',Basic reporting',Email support'
+"
+      name: "Professional","
+      price: "$299","
+      period: "/month","
+      description: "Perfect for growing security teams","
+      features: [""
+        "Up to 50 users",Basic threat detection",Standard response workflows",Email & Slack notifications",Basic reporting",Email support"
       ],
       popular: false},
     {}
-'
-      name: 'Enterprise','
-      price: '$599','
-      period: '/month','
-      description: 'Ideal for large organizations','
-      features: [''
-        'Unlimited users',Advanced AI detection',Custom response workflows',Multi-channel notifications',Advanced analytics',Priority support',Compliance reporting'
+"
+      name: "Enterprise","
+      price: "$599","
+      period: "/month","
+      description: "Ideal for large organizations","
+      features: [""
+        "Unlimited users",Advanced AI detection",Custom response workflows",Multi-channel notifications",Advanced analytics",Priority support",Compliance reporting"
       ],
       popular: true},
     {}
-'
-      name: 'Custom','
-      price: 'Custom','
-      period: '','
-      description: 'For complex enterprise needs','
-      features: [''
-        'Custom integrations',Dedicated support team',Custom training',SLA guarantees',On-premise options',Custom development'
+"
+      name: "Custom","
+      price: "Custom","
+      period: "","
+      description: "For complex enterprise needs","
+      features: [""
+        "Custom integrations",Dedicated support team",Custom training",SLA guarantees",On-premise options",Custom development"
       ],
       popular: false}
-  ];'
-  const integrations = [''
-    'SIEM Systems',EDR Solutions',Firewall',IDS/IPS',Slack',Teams',Jira',ServiceNow'
-  ];'
-  const useCases = [''
-    'Security incident management',IT operations',Compliance management',Team collaboration',Audit preparation',Risk mitigation'
+  ];"
+  const integrations = [""
+    "SIEM Systems",EDR Solutions",Firewall",IDS/IPS",Slack",Teams",Jira",ServiceNow"
+  ];"
+  const useCases = [""
+    "Security incident management",IT operations",Compliance management",Team collaboration",Audit preparation",Risk mitigation"
   ];
   return()
+
     <>
       <Helmet>
         <title>
@@ -111,28 +112,23 @@ const IncidentResponsePlatform = () => {}
         </title>"""
         <meta""""
           name="description""""
-          content="Transform your security operations with our AI-driven incident response platform. Automated threat detection, response workflows, and compliance reporting."""
-        />"""
+          content="Transform your security operations with our AI-driven incident response platform. Automated threat detection, response workflows, and compliance reporting.""" />"""
         <meta""""
           property="og:title""""
-          content="Intelligent Incident Response Platform — Zion Tech Group"""
-        />"""
+          content="Intelligent Incident Response Platform — Zion Tech Group""" />"""
         <meta""""
           property="og:description""""
-          content="AI-powered incident response platform with automated workflows and real-time threat detection."""
-        />"""
+          content="AI-powered incident response platform with automated workflows and real-time threat detection.""" />"""
         <meta""""
           property="og:url""""
-          content="https://ziontechgroup.com/services/incident-response-platform"""
-        />"""
+          content="https://ziontechgroup.com/services/incident-response-platform""" />"""
         <link""""
           rel="canonical""""
-          href="https://ziontechgroup.com/services/incident-response-platform"""
-        />
+          href="https://ziontechgroup.com/services/incident-response-platform""" />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white pt-20">"""
-        {/* Hero Section */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
@@ -150,8 +146,8 @@ const IncidentResponsePlatform = () => {}
               transition={{ duration: 0.6, delay: 0.2 }}
             >"""
               Intelligent""""
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">'
-                {' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">"
+                {" "}
                 Incident Response Platform;
               </span>
             </motion.h1>"""
@@ -166,7 +162,7 @@ const IncidentResponsePlatform = () => {}
               response time and improving resolution quality.
             </motion.p>
 
-            {/* Key Metrics */}"""
+            {/* comment */}"""
             <motion.div""""
               className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto"""
               initial={{ opacity: 0, y: 20 }}
@@ -207,7 +203,7 @@ const IncidentResponsePlatform = () => {}
           </div>
         </section>
 """
-        {/* Features Section */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""""
           <div className="max-w-7xl mx-auto">"""
             <motion.div""""
@@ -245,7 +241,7 @@ const IncidentResponsePlatform = () => {}
           </div>
         </section>
 """
-        {/* Pricing Section */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8">""""
           <div className="max-w-7xl mx-auto">"""
             <motion.div""""
@@ -257,8 +253,8 @@ const IncidentResponsePlatform = () => {}
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Flexible Security Solutions"""
               </h2>""""
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">'
-                Choose the security level that matches your organization's needs;
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">"
+                Choose the security level that matches your organization"s needs;
               </p>
             </motion.div>"""
 """"
@@ -266,14 +262,14 @@ const IncidentResponsePlatform = () => {}
               {pricingPlans.map((plan, index) => (
                 <motion.div;
                   key={index}
-                  className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${}
-'
-''
-'''`
-                    plan.popular'''`'`
-                      ? 'border-red-400 bg-red-900/20'''`'`'`
-                      : 'border-white/20 hover:border-white/40'````
-                  }`}
+                  className={"bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${}
+"
+""
+""""
+                    plan.popular""""""
+                      ? "border-red-400 bg-red-900/20""""""""
+                      : "border-white/20 hover:border-white/40"""""
+                  }"}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -302,21 +298,21 @@ const IncidentResponsePlatform = () => {}
                   <ul className="space-y-3 mb-8">"""
                     {plan.features.map((feature, idx) => (""""
                       <li key={idx} className="flex items-center text-gray-300">""""
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"   />
                         {feature}
                       </li>
                     ))}
                   </ul>
 """
-                  <Link""`
-                    to="/contact"``
-                    className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
-'
-''
-'''`
-                      plan.popular'''`'`
-                        ? 'bg-red-600 hover:bg-red-700 text-white'''`'`'`
-                        : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'````
+                  <Link"""
+                    to="/contact"""
+                    className={"w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+"
+""
+""""
+                      plan.popular""""""
+                        ? "bg-red-600 hover:bg-red-700 text-white""""""""
+                        : "bg-white/10 hover:bg-white/20 text-white border border-white/20"""""
                     }`}
                   >
                     Get Started;
@@ -327,11 +323,11 @@ const IncidentResponsePlatform = () => {}
           </div>
         </section>
 """
-        {/* Integrations & Use Cases */}""""
+        {/* comment */}""""
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""""
           <div className="max-w-7xl mx-auto">""""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              {/* Integrations */}
+              {/* comment */}
               <motion.div;
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -346,14 +342,14 @@ const IncidentResponsePlatform = () => {}
                       key={index}""""
                       className="flex items-center bg-white/10 rounded-lg p-3""""
                     >""""
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />""""
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3"   />""""
                       <span className="text-gray-300">{integration}</span>
                     </div>
                   ))}
                 </div>
               </motion.div>
 
-              {/* Use Cases */}
+              {/* comment */}
               <motion.div;
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -368,7 +364,7 @@ const IncidentResponsePlatform = () => {}
                       key={index}""""
                       className="flex items-center bg-white/10 rounded-lg p-3""""
                     >""""
-                      <Target className="w-5 h-5 text-yellow-400 mr-3" />""""
+                      <Target className="w-5 h-5 text-yellow-400 mr-3"   />""""
                       <span className="text-gray-300">{useCase}</span>
                     </div>
                   ))}
@@ -378,7 +374,7 @@ const IncidentResponsePlatform = () => {}
           </div>
         </section>
 """
-        {/* CTA Section */}""""
+        {/* comment */}""""
         <section className="py-20 bg-gradient-to-r from-red-900/50 to-pink-900/50">""""
           <div className="max-w-4xl mx-auto text-center">"""
             <motion.h2""""
@@ -410,7 +406,7 @@ const IncidentResponsePlatform = () => {}
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300"""
               >"""
                 Start Free Trial""""
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </Link>"""
               <a""""
                 href="tel:+13024640950""""
@@ -457,8 +453,8 @@ const IncidentResponsePlatform = () => {}
             >
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>'
-                Website:{' '}"""
+              <p>"
+                Website:{" '}"""
                 <a""""
                   href="https://ziontechgroup.com""""
                   className="text-red-400 hover:text-red-300"""
@@ -474,14 +470,8 @@ const IncidentResponsePlatform = () => {}
   );
 };
 export default IncidentResponsePlatform;
-
-
 export { IncidentResponsePlatform };
-
 export { IncidentResponsePlatform };
-
 export { IncidentResponsePlatform };
-
 export { IncidentResponsePlatform };
-
 export { IncidentResponsePlatform };

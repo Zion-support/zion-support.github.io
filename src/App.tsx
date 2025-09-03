@@ -1,23 +1,20 @@
-import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { ErrorBoundary } from 'react-error-boundary';
-import Layout from './components/layout/Layout';
-import LoadingSpinner from './components/ui/loading-spinner';
-
+import React, { Suspense, lazy } from "react";
+import { Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { ErrorBoundary } from "react-error-boundary";
+import Layout from "./components/layout/Layout";
+import LoadingSpinner from "./components/ui/loading-spinner";
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/index'));
-const AboutPage = lazy(() => import('./pages/about'));
-const ContactPage = lazy(() => import('./pages/contact'));
-const ServicesPage = lazy(() => import('./pages/services'));
-const SolutionsPage = lazy(() => import('./pages/solutions'));
-const ServicesOverview = lazy(() => import('./pages/services-overview'));
-
+const HomePage = lazy(() => import("./pages/index"));
+const AboutPage = lazy(() => import("./pages/about"));
+const ContactPage = lazy(() => import("./pages/contact"));
+const ServicesPage = lazy(() => import("./pages/services"));
+const SolutionsPage = lazy(() => import("./pages/solutions"));
+const ServicesOverview = lazy(() => import("./pages/services-overview"));
 // Service pages
-const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
-const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
-const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
-
+const AIContentGenerationSuite = lazy(() => import("./pages/services/ai-content-generation-suite"));
+const CloudMigrationServices = lazy(() => import("./pages/services/cloud-migration-services"));
+const SmartCRMPlatform = lazy(() => import("./pages/services/smart-crm-platform"));
 // Simple Header component
 const Header = () => (
   <header className="bg-zion-slate-dark text-white p-4 shadow-lg">
@@ -36,7 +33,6 @@ const Header = () => (
     </div>
   </header>
 );
-
 // Simple Footer component
 const Footer = () => (
   <footer className="bg-zion-slate-dark text-white p-4 mt-auto">
@@ -51,31 +47,28 @@ const Footer = () => (
     </div>
   </footer>
 );
-
 function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <Header />
+      <Header  />
       <main className="flex-1">
-        <Suspense fallback={<LoadingSpinner />}>
+        <Suspense fallback={<LoadingSpinner    />}>
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/services-overview" element={<ServicesOverview />} />
-            <Route path="/solutions" element={<SolutionsPage />} />
-            {/* Service pages */}
-            <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
-            <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
-            <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
-            <Route path="*" element={<HomePage />} />
+            <Route path="/" element={<HomePage    />} />
+            <Route path="/about" element={<AboutPage    />} />
+            <Route path="/contact" element={<ContactPage    />} />
+            <Route path="/services" element={<ServicesPage    />} />
+            <Route path="/services-overview" element={<ServicesOverview    />} />
+            <Route path="/solutions" element={<SolutionsPage    />} />
+            {/* comment */}
+            <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite    />} />
+            <Route path="/services/cloud-migration-services" element={<CloudMigrationServices    />} />
+            <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform    />} />
+            <Route path="*" element={<HomePage    />} />
           </Routes>
         </Suspense>
       </main>
-      <Footer />
+      <Footer  />
     </div>
   );
-}
-
 export default App;

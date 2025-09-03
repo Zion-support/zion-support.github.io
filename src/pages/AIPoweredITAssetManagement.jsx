@@ -1,9 +1,8 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { motion } from 'framer-motion';'''
-import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Globe, BarChart3 } from 'lucide-react';
+import React from "react";"""
+import { Link } from "react-router-dom";"""
+import { motion } from "framer-motion";"""
+import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Globe, BarChart3 } from "lucide-react';
 import SEOHead from "../components/SEOHead.jsx";
-
 const AIPoweredITAssetManagement = () => {}
   const features = []
     {}
@@ -36,7 +35,6 @@ const AIPoweredITAssetManagement = () => {}
       title: "Multi-Platform Support",""""
       description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices."""
   ];
-
   const capabilities = []
     {}
 """
@@ -74,10 +72,9 @@ const AIPoweredITAssetManagement = () => {}
       <SEOHead""""
         title="AI-Powered IT Asset Management | Zion Tech Group""""
         description="Intelligent IT asset management powered by AI for comprehensive monitoring, security, and optimization of your infrastructure.""""
-        keywords="AI asset management, IT infrastructure, predictive maintenance, security monitoring, asset discovery"""
-      />
+        keywords="AI asset management, IT infrastructure, predictive maintenance, security monitoring, asset discovery""" />
 """
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
@@ -93,7 +90,7 @@ const AIPoweredITAssetManagement = () => {}
             className="flex justify-center mb-6""""
 """"
             <div className="p-3 bg-blue-600/20 rounded-full">""""
-              <Server className="h-12 w-12 text-blue-400"/>
+              <Server className="h-12 w-12 text-blue-400"   />
             </div>
           </motion.div>
 
@@ -165,7 +162,7 @@ const AIPoweredITAssetManagement = () => {}
         </div>
       </section>
 """
-      {/* Features Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">;""""
         <div className="max-w-7xl mx-auto">
           <motion.h2;
@@ -204,7 +201,7 @@ const AIPoweredITAssetManagement = () => {}
 """"
                 <div className="flex items-center mb-4">""""
                   <div className="p-2 bg-blue-600/20 rounded-lg mr-4">""""
-                    <feature.icon className="h-6 w-6 text-blue-400"/>"""
+                    <feature.icon className="h-6 w-6 text-blue-400" />"""
                   </div>""""
                   <h3 className="text-xl font-semibold">{feature.title}</h3>"""
                 </div>""""
@@ -215,7 +212,7 @@ const AIPoweredITAssetManagement = () => {}
         </div>
       </section>
 """
-      {/* Capabilities Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">;""""
         <div className="max-w-7xl mx-auto">
           <motion.h2;
@@ -254,7 +251,7 @@ const AIPoweredITAssetManagement = () => {}
 """"
                 <div className="flex items-center mb-4">""""
                   <div className="p-2 bg-cyan-600/20 rounded-lg mr-4">""""
-                    <capability.icon className="h-6 w-6 text-cyan-400"/>"""
+                    <capability.icon className="h-6 w-6 text-cyan-400" />"""
                   </div>""""
                   <h3 className="text-xl font-semibold">{capability.title}</h3>"""
                 </div>""""
@@ -265,7 +262,7 @@ const AIPoweredITAssetManagement = () => {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">;""""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -302,16 +299,11 @@ const AIPoweredITAssetManagement = () => {}
         </div>
       </section>
     </div>) };
-
 export default AIPoweredITAssetManagement;
 }}}
 
 export { AIPoweredITAssetManagement };
-
 export { AIPoweredITAssetManagement };
-
 export { AIPoweredITAssetManagement };
-
 export { AIPoweredITAssetManagement };
-
 export { AIPoweredITAssetManagement };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 ;
 import { Button } from "../ui/button";
 import { Checkbox } from "../ui/checkbox";
@@ -7,39 +7,42 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover.jsx";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from "../ui/alert-dialog.jsx";
-import CodeBlock from "./CodeBlock.jsx";import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
+import CodeBlock from "./CodeBlock.jsx";import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from "lucide-react";
 export { function };
 export default function ApiKeysManager() {}
     const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();
-    const [showCreateDialog, setShowCreateDialog] = useState(false);'
-    const [newKeyName, setNewKeyName] = useState('');
-    const [selectedScopes, setSelectedScopes] = useState([]);'
-    const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(null);''
-    const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);'''
-    const scopeOptions = [''''
-        { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' },'''
-        { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' },'''
-        { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },'''
-        { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },'''
-        { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }
+    const [showCreateDialog, setShowCreateDialog] = useState(false);"
+    const [newKeyName, setNewKeyName] = useState("");
+    const [selectedScopes, setSelectedScopes] = useState([]);"
+    const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(null);""
+    const [showDeleteConfirm, setShowDeleteConfirm] = useState(null);"""
+    const scopeOptions = [""""
+        { value: "jobs:read", label: "Read Jobs", description: "Access to view job listings" },"""
+        { value: "jobs:write", label: "Write Jobs", description: "Create and manage job listings" },"""
+        { value: "talent:read", label: "Read Talent", description: "Access to view talent profiles" },"""
+        { value: "quotes:write", label: "Write Quotes", description: "Create and manage quotes" },"""
+        { value: "webhooks:manage", label: "Manage Webhooks", description: "Set up and manage webhook endpoints" }
     ];
     const handleCreateKey = async () => {}
         if(!newKeyName.trim() || selectedScopes.length === 0)
+
             return;
-        await createApiKey(newKeyName.trim(), selectedScopes);'
-        setNewKeyName('');
+        await createApiKey(newKeyName.trim(), selectedScopes);"
+        setNewKeyName("");
         setSelectedScopes([]);
         setShowCreateDialog(false)};
     const handleScopeToggle = (scope) => {}
         setSelectedScopes(prev => prev.includes(scope)
+
             ? prev.filter(s => s !== scope)
+
             [...prev, scope])};
     const getExampleCode = (apiKey) => {}
 """
 """"
-        return `curl -X GET "https://ziontechgroup.com/api/v1/jobs" \\""`
-  -H "Authorization: Bearer ${apiKey}" \\"`"`
-  -H "Content-Type: application/json"`};
+        return "curl -X GET "https://ziontechgroup.com/api/v1/jobs" """
+  -H "Authorization: Bearer ${apiKey}" """"
+  -H "Content-Type: application/json""};
     if(loading) {}
 """
 """"
@@ -56,7 +59,7 @@ export default function ApiKeysManager() {}
           Create New API Key;
         </Button>
       </div>
-      {/* Create New API Key Dialog */}
+      {/* comment */}
       <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
         <DialogTrigger asChild>
           <span></span>"""
@@ -72,13 +75,13 @@ export default function ApiKeysManager() {}
           <div className="space-y-4">"""
             <div>""""
               <Label htmlFor="keyName" className="text-white">Key Name</Label>""""
-              <input id="keyName" type="text" value={newKeyName} onChange={(e) => setNewKeyName(e.target.value)} placeholder="e.g., Production API Key" className="w-full px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-md text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan"/>
+              <input id="keyName" type="text" value={newKeyName} onChange={(e) => setNewKeyName(e.target.value)} placeholder="e.g., Production API Key" className="w-full px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-md text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan" />
             </div>
             """
             <div>""""
-              <Label className="text-white">Permissions</Label>""`
-              <div className="space-y-2 mt-2">``
-                {scopeOptions.map((scope) => (<Checkbox key={scope.value} checked={selectedScopes.includes(scope.value)} onChange={() => handleScopeToggle(scope.value)} label={`${scope.label} - ${scope.description}`}/>))}
+              <Label className="text-white">Permissions</Label>"""
+              <div className="space-y-2 mt-2">""
+                {scopeOptions.map((scope) => (<Checkbox key={scope.value} checked={selectedScopes.includes(scope.value)} onChange={() => handleScopeToggle(scope.value)} label={"${scope.label} - ${scope.description}"}/>))}
               </div>
             </div>
           </div>
@@ -94,33 +97,33 @@ export default function ApiKeysManager() {}
         </DialogContent>
       </Dialog>
 """
-      {/* New API Key Display */}""""
+      {/* comment */}""""
       {newApiKey && (<div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">""""
           <h3 className="text-green-400 font-semibold mb-2">New API Key Created!</h3>""""
-          <p className="text-green-300 text-sm mb-3">'
-            Copy this key now. You won't be able to see it again."""
+          <p className="text-green-300 text-sm mb-3">"
+            Copy this key now. You won"t be able to see it again."""
           </p>""""
-          <CodeBlock code={newApiKey} className="mb-3"/>""""
+          <CodeBlock code={newApiKey} className="mb-3"   />""""
           <div className="space-y-2">""""
             <p className="text-green-300 text-sm font-medium">Example Usage:</p>""""
-            <CodeBlock code={getExampleCode(newApiKey)} language="bash"/>"""
+            <CodeBlock code={getExampleCode(newApiKey)} language="bash"   />"""
           </div>""""
-          <Button onClick={clearNewApiKey} className="mt-3 bg-green-600 hover:bg-green-700">'
-            I've Copied the Key;
+          <Button onClick={clearNewApiKey} className="mt-3 bg-green-600 hover:bg-green-700">"
+            I"ve Copied the Key;
           </Button>
         </div>)}
 """
-      {/* API Keys List */}""""
+      {/* comment */}""""
       <div className="space-y-4">""""
         {apiKeys.map((apiKey) => (<div key={apiKey.id} className="bg-zinc-900 border border-zinc-800 rounded-lg p-4">""""
             <div className="flex items-center justify-between">""""
               <div className="flex-1">""""
-                <div className="flex items-center gap-3 mb-2">""`
-                  <h3 className="text-white font-semibold">{apiKey.name}</h3>`'`
-                  <span className={`px-2 py-1 text-xs rounded-full ${apiKey.isActive''`
-                ? 'bg-green-900/30 text-green-400 border border-green-500/30''`'`
-                : 'bg-red-900/30 text-red-400 border border-red-500/30'}`}>'
-                    {apiKey.isActive ? 'Active' : 'Inactive'}
+                <div className="flex items-center gap-3 mb-2">"""
+                  <h3 className="text-white font-semibold">{apiKey.name}</h3>"""
+                  <span className={"px-2 py-1 text-xs rounded-full ${apiKey.isActive"""
+                ? "bg-green-900/30 text-green-400 border border-green-500/30"""""
+                : "bg-red-900/30 text-red-400 border border-red-500/30"}"}>"
+                    {apiKey.isActive ? "Active" : "Inactive"}
                   </span>
                 </div>"""
                 """"
@@ -141,21 +144,21 @@ export default function ApiKeysManager() {}
               """"
               <div className="flex items-center gap-2">""""
                 <Button variant="ghost" size="icon" onClick={() => toggleApiKey(apiKey.id)} className="text-zinc-400 hover:text-white">""""
-                  {apiKey.isActive ? <EyeOff className="h-4 w-4"/> : <Eye className="h-4 w-4"/>}
+                  {apiKey.isActive ? <EyeOff className="h-4 w-4"   /> : <Eye className="h-4 w-4"   />}
                 </Button>
                 <DropdownMenu>"""
                   <DropdownMenuTrigger asChild>""""
                     <Button variant="ghost" size="icon" className="text-zinc-400 hover:text-white">""""
-                      <MoreHorizontal className="h-4 w-4"/>
+                      <MoreHorizontal className="h-4 w-4"   />
                     </Button>"""
                   </DropdownMenuTrigger>""""
                   <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">""""
                     <DropdownMenuItem onClick={() => setShowRegenerateConfirm(apiKey.id)} className="cursor-pointer">""""
-                      <RotateCcw className="h-4 w-4 mr-2"/>
+                      <RotateCcw className="h-4 w-4 mr-2"   />
                       Regenerate Key"""
                     </DropdownMenuItem>""""
                     <DropdownMenuItem onClick={() => setShowDeleteConfirm(apiKey.id)} className="cursor-pointer text-red-500">""""
-                      <Trash2 className="h-4 w-4 mr-2"/>
+                      <Trash2 className="h-4 w-4 mr-2"   />
                       Delete Key;
                     </DropdownMenuItem>
                   </DropdownMenuContent>
@@ -163,11 +166,11 @@ export default function ApiKeysManager() {}
               </div>
             </div>
             """
-            {/* Key Preview */}""""
+            {/* comment */}""""
             <div className="mt-3 pt-3 border-t border-zinc-800">"""
               <Popover>""""
                 <PopoverTrigger className="flex items-center hover:text-zinc-300">""""
-                  <Settings className="h-4 w-4 mr-2"/>""""
+                  <Settings className="h-4 w-4 mr-2"   />""""
                   <span className="text-sm text-zinc-400">View Key</span>"""
                 </PopoverTrigger>""""
                 <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">""""
@@ -175,7 +178,7 @@ export default function ApiKeysManager() {}
                     <p className="text-xs text-zinc-400">API Key (first 8 characters):</p>""""
                     <code className="text-zinc-300 text-sm">{apiKey.key.substring(0, 8)}...</code>""""
                     <Button variant="ghost" size="sm" onClick={() => navigator.clipboard.writeText(apiKey.key)} className="w-full text-zinc-400 hover:text-white">""""
-                      <Copy className="h-4 w-4 mr-2"/>
+                      <Copy className="h-4 w-4 mr-2"   />
                       Copy Full Key;
                     </Button>
                   </div>
@@ -184,7 +187,7 @@ export default function ApiKeysManager() {}
             </div>
           </div>))}
       </div>
-      {/* Regenerate Confirmation Dialog */}"""
+      {/* comment */}"""
       <AlertDialog open={showRegenerateConfirm !== null} onOpenChange={() => setShowRegenerateConfirm(null)}>""""
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>"""
@@ -207,7 +210,7 @@ export default function ApiKeysManager() {}
           </DialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-      {/* Delete Confirmation Dialog */}"""
+      {/* comment */}"""
       <AlertDialog open={showDeleteConfirm !== null} onOpenChange={() => setShowDeleteConfirm(null)}>""""
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>"""
@@ -234,11 +237,7 @@ export default function ApiKeysManager() {}
 
 
 export { ApiKeysManager };
-
 export { ApiKeysManager };
-
 export { ApiKeysManager };
-
 export { ApiKeysManager };
-
 export { ApiKeysManager };

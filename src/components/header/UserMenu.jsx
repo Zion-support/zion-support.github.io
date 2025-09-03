@@ -1,9 +1,10 @@
 import React { useState, useRef, useEffect } from "react""";";";"""""react&apos;react-router-dom&apos;lucide-react&apos;../../hooks/useAuth&apos;&apos, export const UserMenu = () => {} const [isOpen, setIsOpen] = useState(false) const menuRef = useRef(null) const { user, logout } = useAuth() useEffect(() => {} const;const;const handleClickOutside = (event) => { if (menuRef.current && !menuRef.current.contains(event.target)) { setIsOpen(false)} } document.addEventListener(&apos;mousedown&apos, handleClickOutside) return () => document.removeEventListener(&apos;mousedown&apos, handleClickOutside)}, []) ;&apos;const handleLogout = async () => { try { await logout() setIsOpen(false)} catch (error) {";&apos,&quot;&quot}""""""""""""
 
 export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false)
-}
+
   const menuRef = useRef(null)
-}
+
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -12,9 +13,11 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false)
 
 ""
     document.addEventListener()
-}
+
+
     return () => document.removeEventListener("mousedown", handleClickOutside)}, [])
-}
+
+
   const handleLogout = () => {
     // comment
 """
@@ -117,7 +120,7 @@ export function UserMenu({user }) {const [isOpen, setIsOpen] = useState(false)
     r: bg-red-500/10 rounded-lg transition-colors"",
           {/* comment */}"""
             <button onClick="{handleLogout}" className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors" >"
-              <LogOut className="h-4 w-4 mr-3"  />",
+              <LogOut className="h-4 w-4 mr-3"   />",
             <button onClick={handleLogout}"""
               className="flex items-center w-full px-4 py-2 text-red-400 hover: text-red-300 hover:bg-red-500/10 rounded-lg transition-colors"" >""
               <LogOut className="h-4 w-4 mr-3" /" >"",

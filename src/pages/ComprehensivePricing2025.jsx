@@ -3,13 +3,16 @@ import React, {useState } from "react"
   );
 export default function ComprehensivePricing2025() {""
   const [billingCycle, setBillingCycle] = useState()
-}
+
   const [selectedPlan, setSelectedPlan] = useState("professional")
-}
+
+
   const plans = [] = useState()
-}
+
+
   const [selectedPlan, setSelectedPlan] = useState("professional")
-}
+
+
   const plans = [],
       icon: Zap,"
       color: "from-blue-500 to-cyan-500",
@@ -87,7 +90,8 @@ export default function ComprehensivePricing2025() {""
     d: text-2xl text-zion-slate-light mb-8 leading-relaxed">",,
     {name: "Digital Transformation",""""""""
   const [selectedPlan, setSelectedPlan] = useState("professional")
-}
+
+
   const plans = [], icon: Zap,"""
       color: "from-blue-500 to-cyan-500", popular: false}, {"""
       id: "professional","""
@@ -228,7 +232,7 @@ with flexible options to scale as you grow.
 }"}
 
               >"
-                <div className = "{"absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${ billingCycle === "yearly" ? "translate-x-8" : "translate-x-1" }"}       />
+                <div className = "{"absolute" top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${ billingCycle === "yearly" ? "translate-x-8" : "translate-x-1" }"}          />
               </button>"
               <span className="{"text-lg" ${billingCycle === "yearly" ? "text-white" : "text-zion-slate-light"}"}>
                 Yearly"
@@ -349,13 +353,13 @@ with flexible options to scale as you grow.
                   <h4 className="font-semibold text-white mb-4">What"s included: </h4>",
                   {plan.features.map((feature, index) => ("
                     <div key="{index}" className="flex items-start space-x-3">""
-                      <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0"  />"
+                      <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0"   />"
 "
                 <div className="space-y-4">"
                   <h4 className="font-semibold text-white mb-4">What"s included: </h4>,
                   {plan.features.map((feature, index) => ("
                     <div key="{index}" className="flex items-start space-x-3">"
-                      <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0"  />"
+                      <Check className="h-5 w-5 text-zion-cyan mt-0.5 flex-shrink-0"   />"
                   <button onClick="{()" =" > setSelectedPlan(plan.id)}"""
                     className="{"w-full" py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${"
                       plan.popular""

@@ -1,30 +1,30 @@
-import React, { useState, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
+import React, { useState, useCallback } from "react";"
+import { motion, AnimatePresence } from "framer-motion";"
+import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from "lucide-react";
 ;
 ;
-export const MachineLearningDashboard = ({ className = '' }) => {
+export const MachineLearningDashboard = ({ className = "" }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
-    });'
-    const [activeTab, setActiveTab] = useState('overview');
+    });"
+    const [activeTab, setActiveTab] = useState("overview");
     const [showCreateModel, setShowCreateModel] = useState(false);
     const [showImportModel, setShowImportModel] = useState(false);
     const { models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel } = useMachineLearning();
     const [newModelForm, setNewModelForm] = useState({}
-'
-''
-'''
-        name: '','''
-        type: 'classification','''
-        framework: 'tensorflow'
+"
+""
+"""
+        name: "","""
+        type: "classification","""
+        framework: "tensorflow"
     });
     const [predictionForm, setPredictionForm] = useState({}
-'
-''
-'''
-        modelId: '','''
-        input: ''
+"
+""
+"""
+        modelId: "","""
+        input: ""
     });
     const handleCreateModel = useCallback(() => {}
         if(newModelForm.name.trim()) {}
@@ -32,16 +32,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 name: newModelForm.name,
                 type: newModelForm.type,
                 framework: newModelForm.framework;
-            });'
-            setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' });
-            setShowCreateModel(false);'
-            trackEvent('ml',dashboard',model_created')}
+            });"
+            setNewModelForm({ name: "", type: "classification", framework: "tensorflow" });
+            setShowCreateModel(false);"
+            trackEvent("ml",dashboard",model_created")}
     }, [newModelForm, createModel, trackEvent]);
     const hyperparameters = {}
   learningRate: 0.001,
             batchSize: 32,
-            epochs: 100,'
-  optimizer: 'adam'
+            epochs: 100,"
+  optimizer: "adam"
 
         if(predictionForm.modelId && predictionForm.input.trim()) {}
 
@@ -59,7 +59,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         }
 
     }, [predictionForm, makePrediction, trackEvent])
-}
+
+
     const handleExportModel = useCallback((modelId) => {}
 
         try {}"
@@ -72,13 +73,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             // comment
 
     }, [exportModel, trackEvent])
-}
+
+
     const handleImportModel = useCallback((event) => {}
 
         const file = event.target.files?.[0]
         if(file) {}
 
             const reader = new FileReader()
+
 }            reader.onload = (e) => {}
 
                 try {}
@@ -96,7 +99,8 @@ importModel(modelData)""
             reader.readAsText(file) }
 
     }, [importModel, trackEvent])
-}
+
+
     const getStatusColor = (status) => {}"
         switch (status) {}""
 """
@@ -660,7 +664,7 @@ Started: {job.startTime.toLocaleString()}"
         </AnimatePresence>"
       </div>""""
     </div>)}"""""""
-""""'""`""
+"""""""`""
 "
 
   } catch (error) {

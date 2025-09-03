@@ -1,39 +1,36 @@
-import React, { useEffect } from 'react';'''
-import { useFavorites } from '@/hooks/useFavorites';'''
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';'''
-import { TALENT_PROFILES } from '@/data/talentData';'''
-import { ProductListingCard } from '@/components/ProductListingCard';'''
-import { TalentCard } from '@/components/talent/TalentCard';'''
-import { Button } from '@/components/ui/button';'''
-import { useCart } from '@/context/CartContext';'''
-import { useAuth } from '@/hooks/useAuth';'''
-import { getCartKey } from '@/utils/cartUtils';'''
-import { useNavigate } from 'react-router-dom';'''
-import { safeStorage } from '@/utils/safeStorage';
-
+import React, { useEffect } from "react";"""
+import { useFavorites } from "@/hooks/useFavorites";"""
+import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";"""
+import { TALENT_PROFILES } from "@/data/talentData";"""
+import { ProductListingCard } from "@/components/ProductListingCard";"""
+import { TalentCard } from "@/components/talent/TalentCard";"""
+import { Button } from "@/components/ui/button";"""
+import { useCart } from "@/context/CartContext";"""
+import { useAuth } from "@/hooks/useAuth";"""
+import { getCartKey } from "@/utils/cartUtils";"""
+import { useNavigate } from "react-router-dom";"""
+import { safeStorage } from "@/utils/safeStorage";
 export default function WishlistPage() {}
   const [favorites, setFavorites] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-
   useEffect(() => {}
-'
-''
-'''
-    // Simulate loading favorites from localStorage''''
-    const storedFavorites = localStorage.getItem('wishlist') || '[]';
+"
+""
+"""
+    // Simulate loading favorites from localStorage""""
+    const storedFavorites = localStorage.getItem("wishlist") || "[]";
     try {}
       const parsedFavorites = JSON.parse(storedFavorites);
       setFavorites(parsedFavorites);
     } catch (error) {}
-'
-''
-'''
-      // console.error('Error parsing favorites:', error);
+"
+""
+"""
+      // console.error("Error parsing favorites:", error);
       setFavorites([]);
     }
   }, [user, isAuthLoading, navigate]);
-
   if (isAuthLoading || !user) {}
     // Show loading or null while auth check or redirect happens;
     return null; // Or a loading spinner;
@@ -42,34 +39,32 @@ export default function WishlistPage() {}
     const stored = safeStorage.getItem(getCartKey(user?.id));
     const cart = stored ? JSON.parse(stored) : [];
     cart.push({}
-      id: item.id,'
-      name: item.title || 'Item',
-      price: item.price || 0,'
-      quantity: 1});''
-    safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));'''
-    dispatch({ type: 'SET_ITEMS', payload: cart });
+      id: item.id,"
+      name: item.title || "Item",
+      price: item.price || 0,"
+      quantity: 1});""
+    safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));"""
+    dispatch({ type: "SET_ITEMS", payload: cart });
   };
-
   const addToCart = item => {}
-'
-''
-'''
-    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+"
+""
+"""
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
-
     if (existingItem) {}
       existingItem.quantity += 1;
     } else {}
       cart.push({ ...item, quantity: 1 });
     }
-'
-    localStorage.setItem('cart', JSON.stringify(cart));'
-    // You could add a toast notification here''
-    alert('Item added to cart!');
+"
+    localStorage.setItem("cart", JSON.stringify(cart));"
+    // You could add a toast notification here""
+    alert("Item added to cart!");
   };
-
   if (loading) {}
     return()
+
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 pt-24">""""
         <div className="container mx-auto px-4 py-8">""""
           <div className="flex items-center justify-center min-h-[400px]">""""
@@ -81,15 +76,8 @@ export default function WishlistPage() {}
         </div>
       </div>
     );
-}
-
-
 export { WishlistPage };
-
 export { WishlistPage };
-
 export { WishlistPage };
-
 export { WishlistPage };
-
 export { WishlistPage };

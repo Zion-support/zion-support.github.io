@@ -1,27 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import { 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Rocket, 
-  Atom, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Lock, 
-  Database, 
-  Network, 
-  Server, 
-  CircuitBoard, 
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Cpu,
+  Rocket,
+  Atom,
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Lock,
+  Database,
+  Network,
+  Server,
+  CircuitBoard,
   Microchip 
-} from 'lucide-react';
-
+} from "lucide-react";
 const QuantumComputing = () => {
   const features = [
     {
@@ -45,7 +44,6 @@ const QuantumComputing = () => {
       description: "Access quantum computing power through our cloud platform"
     }
   ];
-
   const useCases = [
     {
       title: "Financial Modeling",
@@ -68,7 +66,6 @@ const QuantumComputing = () => {
       icon: Network
     }
   ];
-
   const technologies = [
     "Quantum Annealing",
     "Quantum Machine Learning",
@@ -77,10 +74,9 @@ const QuantumComputing = () => {
     "Quantum-Classical Hybrid Systems",
     "Quantum Cloud Infrastructure"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      {/* Hero Section */}
+      {/* comment */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
@@ -90,7 +86,7 @@ const QuantumComputing = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
-              <Star className="w-4 h-4 mr-2" />
+              <Star className="w-4 h-4 mr-2"   />
               Revolutionary Technology
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -109,7 +105,7 @@ const QuantumComputing = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"   />
               </Link>
               <Link
                 to="/services"
@@ -121,8 +117,7 @@ const QuantumComputing = () => {
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -143,7 +138,7 @@ const QuantumComputing = () => {
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-8 h-8 text-white" />
+                    <Icon className="w-8 h-8 text-white"   />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-slate-300 text-sm">{feature.description}</p>
@@ -153,8 +148,7 @@ const QuantumComputing = () => {
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -175,7 +169,7 @@ const QuantumComputing = () => {
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-8 h-8 text-white" />
+                    <Icon className="w-8 h-8 text-white"   />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                   <p className="text-slate-300 text-sm">{useCase.description}</p>
@@ -185,8 +179,7 @@ const QuantumComputing = () => {
           </div>
         </div>
       </section>
-
-      {/* Technologies Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -205,7 +198,7 @@ const QuantumComputing = () => {
                 className="bg-slate-800/50 border border-slate-700/50 rounded-lg p-4 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"   />
                   <span className="text-white font-medium">{technology}</span>
                 </div>
               </div>
@@ -213,8 +206,7 @@ const QuantumComputing = () => {
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* comment */}
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -229,7 +221,7 @@ const QuantumComputing = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-4">
-                <Zap className="w-8 h-8 text-white" />
+                <Zap className="w-8 h-8 text-white"   />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Exponential Speed</h3>
               <p className="text-slate-300 text-sm">
@@ -238,7 +230,7 @@ const QuantumComputing = () => {
             </div>
             <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4">
-                <Brain className="w-8 h-8 text-white" />
+                <Brain className="w-8 h-8 text-white"   />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">AI Enhancement</h3>
               <p className="text-slate-300 text-sm">
@@ -247,7 +239,7 @@ const QuantumComputing = () => {
             </div>
             <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-4">
-                <Shield className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white"   />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Quantum Security</h3>
               <p className="text-slate-300 text-sm">
@@ -257,8 +249,7 @@ const QuantumComputing = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* comment */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl p-12 text-center">
@@ -275,7 +266,7 @@ const QuantumComputing = () => {
                 className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </Link>
               <Link
                 to="/services"
@@ -290,5 +281,4 @@ const QuantumComputing = () => {
     </div>
   );
 };
-
 export default QuantumComputing;

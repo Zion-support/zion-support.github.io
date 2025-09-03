@@ -1,37 +1,34 @@
-import React, { useState } from 'react';
-import { useState } from 'react';
+import React, { useState } from "react";
+import { useState } from "react";
 export default function Page() {
 );
-
   const onSubmit = async data => {
 
     if(isSubmitting) return;
-
     try {
       setIsSubmitting(true);
       const result = await login(data.email, data.password);
-
       if(result.success) {
 
-        navigate('/');
+        navigate("/");
       } else {
 
-        form.setError('root', {
+        form.setError("root", {
 
-          message: 'Login failed.Please check your credentials.'});
+          message: "Login failed.Please check your credentials."});
       }
     } catch(error) {
 
-      form.setError('root', {
+      form.setError("root", {
 
-        message: 'An error occurred.Please try again.'});
+        message: "An error occurred.Please try again."});
     } finally {
 
       setIsSubmitting(false);
     }
   };
-
   return ()
+
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
@@ -58,15 +55,14 @@ export default function Page() {
                     placeholder="you@example.com"
                     className="bg-zion-blue pl-10 placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
                     {...field}"
-                    autoComplete="off"
-                  />"
-                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                    autoComplete="off" />"
+                  <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"   />
                 </div>
               </FormControl>"
-              <FormMessage className="text-red-400" />
+              <FormMessage className="text-red-400"   />
             </FormItem>
           )}
-        />
+       />
 
         <FormField
           control={form.control}"
@@ -76,14 +72,13 @@ export default function Page() {
               <FormLabel className="text-zion-slate-light">Password</FormLabel>
               <FormControl>"
                 <div className="relative">
-                  <Input'
-                    type={showPassword ? 'text' : 'password'}"
+                  <Input"
+                    type={showPassword ? "text" : "password"}"
                     placeholder="••••••••"
                     className="bg-zion-blue pl-10 border-zion-blue-light focus:border-zion-purple"
                     {...field}"
-                    autoComplete="off"
-                  />"
-                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                    autoComplete="off" />"
+                  <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"   />
                   <Button"
                     type="button"
                     variant="ghost"
@@ -92,20 +87,20 @@ export default function Page() {
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? ("
-                      <EyeOff className="h-4 w-4" />
+                      <EyeOff className="h-4 w-4"   />
                     ) : ("
-                      <Eye className="h-4 w-4" />
+                      <Eye className="h-4 w-4"   />
                     )}"
                     <span className="sr-only">
-                      {showPassword ? 'Hide password' : 'Show password'}
+                      {showPassword ? "Hide password" : "Show password"}
                     </span>
                   </Button>
                 </div>
               </FormControl>"
-              <FormMessage className="text-red-400" />
+              <FormMessage className="text-red-400"   />
             </FormItem>
           )}
-        />
+       />
 "
         <div className="flex items-center justify-between">"
           <div className="text-sm">
@@ -117,7 +112,6 @@ export default function Page() {
             </Link>
           </div>
         </div>
-
         <Button"
           type="submit"
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -130,13 +124,13 @@ export default function Page() {
             </>
           ) : (
             <>"
-              <LogIn className="h-4 w-4 mr-2" />
+              <LogIn className="h-4 w-4 mr-2"   />
               Sign in
             </>
           )}
         </Button>
 "
-        <div className="text-center text-sm">'"
+        <div className="text-center text-sm">""
           <span className="text-zion-slate-light">Don't have an account? </span>
           <Link"
             to="/signup"
@@ -148,17 +142,9 @@ export default function Page() {
       </form>
     </Form>
   );
-}
-
 export default LoginForm;
-
-
 export { LoginForm };
-
 export { LoginForm };
-
 export { LoginForm };
-
 export { LoginForm };
-
 export { Page, LoginForm };

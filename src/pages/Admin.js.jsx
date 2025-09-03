@@ -1,14 +1,14 @@
-import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
+import React from "react";"""
+import { Helmet } from "react-helmet-async";
 const Admin = () => {}
   return()
+
     <>
       <Helmet>
         <title>Admin - Zion Tech Group</title>
         <meta;
           name="description""""
-          content="Administrative dashboard for Zion Tech Group. Manage users, services, and system configurations."""
-        />
+          content="Administrative dashboard for Zion Tech Group. Manage users, services, and system configurations.""" />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -24,7 +24,7 @@ const Admin = () => {}
           </div>"""
 """"
           <div className="bg-white rounded-lg shadow-lg p-8">""""
-            <p className="text-gray-600 text-center">'
+            <p className="text-gray-600 text-center">"
               Admin dashboard coming soon. We're building comprehensive;
               administrative tools.
             </p>
@@ -33,14 +33,8 @@ const Admin = () => {}
       </div>
     </>)};
 export default Admin;
-
-
 export { Admin };
-
 export { Admin };
-
 export { Admin };
-
 export { Admin };
-
 export { Admin };

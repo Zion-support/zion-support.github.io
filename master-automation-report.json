@@ -1,21 +1,44 @@
 {
-  "summary": {
-    "totalDuration": "39 seconds",
-    "prsProcessed": 1,
-    "conflictsResolved": 0,
-    "improvementsMade": 1,
-    "testsRun": 0,
-    "deployments": 0,
-    "totalErrors": 0
-  },
+  "timestamp": "2025-09-03T11:43:39.653Z",
+  "duration": "70253ms",
   "results": {
-    "prsProcessed": 1,
-    "conflictsResolved": 0,
-    "improvementsMade": 1,
-    "testsRun": 0,
-    "deployments": 0,
-    "errors": []
+    "syntaxFixes": 3172,
+    "buildSuccess": false,
+    "testsPassed": 0,
+    "optimizations": 0,
+    "errors": [
+      {
+        "command": "npm run lint:fix",
+        "description": "Linting",
+        "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      },
+      {
+        "command": "npm run build",
+        "description": "Build",
+        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nwarn  - Invalid next.config.js options detected: \n  - The value at .experimental has an unexpected property, optimizePackageImports, which is not in the list of allowed properties (adjustFontFallbacks, allowMiddlewareResponseBody, amp, appDir, browsersListForSwc, cpus, craCompat, disableOptimizedLoading, disablePostcssPresetEnv, esmExternals, externalDir, fallbackNodePolyfills, forceSwcTransforms, fullySpecified, gzipSize, incrementalCacheHandlerPath, isrFlushToDisk, isrMemoryCacheSize, largePageDataBytes, legacyBrowsers, manualClientBasePath, modularizeImports, newNextLinkBehavior, nextScriptWorkers, optimizeCss, optimisticClientCache, outputFileTracingRoot, pageEnv, profiling, proxyTimeout, runtime, scrollRestoration, serverComponents, sharedPool, skipMiddlewareUrlNormalize, skipTrailingSlashRedirect, sri, swcFileReading, swcMinify, swcMinifyDebugOptions, swcPlugins, swcTraceProfiling, urlImports, workerThreads).\n\nSee more info here: https://nextjs.org/docs/messages/invalid-next-config\nwarn  - You have enabled experimental feature (optimizePackageImports) in next.config.js.\nwarn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.\n\nerror - ESLint: Cannot read config file: /workspace/.eslintrc.js Error: module is not defined\nFailed to compile.\n\n./components/AccessibilityEnhancer.tsx:60:60\nType error: Unterminated string literal.\n\n\u001b[0m \u001b[90m 58 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 59 | \u001b[39m            onClick\u001b[33m=\u001b[39m{toggleHighContrast}\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 60 | \u001b[39m            className\u001b[33m=\u001b[39m{\u001b[32m\"w-full px-3 py-1 text-xs rounded ${\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 61 | \u001b[39m              isHighContrast \u001b[0m\n\u001b[0m \u001b[90m 62 | \u001b[39m                \u001b[33m?\u001b[39m \u001b[32m\"bg-blue-600 text-white\"\u001b[39m \u001b[0m\n\u001b[0m \u001b[90m 63 | \u001b[39m                \u001b[33m:\u001b[39m \u001b[32m\"bg-gray-200 text-gray-700 hover:bg-gray-300\"\u001b[39m\u001b[0m\n"
+      },
+      {
+        "command": "npm test",
+        "description": "Tests",
+        "error": "Command failed: npm test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
+      },
+      {
+        "command": "node scripts/performance-monitor.cjs",
+        "description": "Performance Monitor",
+        "error": "Command failed: node scripts/performance-monitor.cjs\n/workspace/scripts/performance-monitor.cjs:19\n}\n^\n\nSyntaxError: Unexpected token '}'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
+      },
+      {
+        "command": "npm audit --audit-level=moderate",
+        "description": "Security Audit",
+        "error": "Command failed: npm audit --audit-level=moderate\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+      }
+    ]
   },
-  "timestamp": "2025-09-03T05:49:15.135Z",
-  "status": "SUCCESS"
+  "summary": {
+    "totalFilesFixed": 3172,
+    "buildSuccess": false,
+    "testsPassed": 0,
+    "optimizations": 0,
+    "totalErrors": 5
+  }
 }

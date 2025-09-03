@@ -46,5 +46,4 @@ const documentation = () => {
             </div>
     </>
   );
-}
 export default documentation

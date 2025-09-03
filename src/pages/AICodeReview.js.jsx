@@ -1,55 +1,56 @@
-import React from 'react';'''
-import { motion } from 'framer-motion';
+import React from "react";"""
+import { motion } from "framer-motion";
 import {}
   Code,
   Shield,
   Zap,
-  Users,'
-  BarChart3,''
-  Target,'''
-  CheckCircle} from 'lucide-react';
+  Users,"
+  BarChart3,""
+  Target,"""
+  CheckCircle} from "lucide-react";
 export default function AICodeReview() {}
   const features = []
     {}
-      icon: Code,'
-      title: 'Automated Code Analysis','
-      description:''
-        'AI-powered code review that identifies bugs, security vulnerabilities, and performance issues'},
+      icon: Code,"
+      title: "Automated Code Analysis","
+      description:""
+        "AI-powered code review that identifies bugs, security vulnerabilities, and performance issues"},
     {}
-      icon: Shield,'
-      title: 'Security Scanning','
-      description:''
-        'Comprehensive security analysis to detect vulnerabilities and compliance issues'},
+      icon: Shield,"
+      title: "Security Scanning","
+      description:""
+        "Comprehensive security analysis to detect vulnerabilities and compliance issues"},
     {}
-      icon: Zap,'
-      title: 'Performance Optimization','
-      description:''
-        'Identify and fix performance bottlenecks and inefficient code patterns'},
+      icon: Zap,"
+      title: "Performance Optimization","
+      description:""
+        "Identify and fix performance bottlenecks and inefficient code patterns"},
     {}
-      icon: Users,'
-      title: 'Team Collaboration','
-      description:''
-        'Streamlined code review process with team feedback and approval workflows'},
+      icon: Users,"
+      title: "Team Collaboration","
+      description:""
+        "Streamlined code review process with team feedback and approval workflows"},
     {}
-      icon: BarChart3,'
-      title: 'Quality Metrics','
-      description:''
-        'Track code quality improvements and maintain high standards across projects'},
+      icon: BarChart3,"
+      title: "Quality Metrics","
+      description:""
+        "Track code quality improvements and maintain high standards across projects"},
     {}
-      icon: Target,'
-      title: 'Best Practices','
-      description:''
-        'Ensure code follows industry best practices and coding standards'}
-  ];'
-  const benefits = [''
-    'Reduce code review time by 80%',Improve code quality and maintainability',Detect security vulnerabilities early',Ensure consistent coding standards',Accelerate development cycles',Reduce production bugs by 60%'
-  ];'
-  const supportedLanguages = [''
-    'JavaScript/TypeScript',Python',Java',C#',Go',Rust',PHP',Ruby',Swift',Kotlin'
+      icon: Target,"
+      title: "Best Practices","
+      description:""
+        "Ensure code follows industry best practices and coding standards"}
+  ];"
+  const benefits = [""
+    "Reduce code review time by 80%",Improve code quality and maintainability",Detect security vulnerabilities early",Ensure consistent coding standards",Accelerate development cycles",Reduce production bugs by 60%"
+  ];"
+  const supportedLanguages = [""
+    "JavaScript/TypeScript",Python",Java",C#",Go",Rust",PHP",Ruby",Swift",Kotlin"
   ];
   return()
+
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker">"""
-      {/* Hero Section */}""""
+      {/* comment */}""""
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
@@ -59,7 +60,7 @@ export default function AICodeReview() {}
             className="mb-8""""
           >""""
             <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">""""
-              <Code className="w-4 h-4 mr-2" />
+              <Code className="w-4 h-4 mr-2"   />
               AI Code Review;
             </div>
           </motion.div>
@@ -71,8 +72,8 @@ export default function AICodeReview() {}
             className="text-4xl md:text-6xl font-bold text-white mb-6"""
           >"""
             AI-Powered""""
-            <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">'
-              {' '}
+            <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">"
+              {" "}
               Code Review;
             </span>
           </motion.h1>
@@ -104,7 +105,7 @@ export default function AICodeReview() {}
         </div>
       </section>
 """
-      {/* Features Grid */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -147,7 +148,7 @@ export default function AICodeReview() {}
         </div>
       </section>
 """
-      {/* Benefits Section */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -176,7 +177,7 @@ export default function AICodeReview() {}
                 viewport={{ once: true }}""""
                 className="flex items-center space-x-4""""
               >""""
-                <CheckCircle className="w-6 h-6 text-zion-cyan flex-shrink-0" />""""
+                <CheckCircle className="w-6 h-6 text-zion-cyan flex-shrink-0"   />""""
                 <span className="text-zion-slate-light text-lg">{benefit}</span>
               </motion.div>
             ))}
@@ -184,7 +185,7 @@ export default function AICodeReview() {}
         </div>
       </section>
 """
-      {/* Supported Languages */}""""
+      {/* comment */}""""
       <section className="py-16 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto">
           <motion.div;
@@ -213,7 +214,7 @@ export default function AICodeReview() {}
                 viewport={{ once: true }}""""
                 className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 text-center hover:border-zion-cyan/50 transition-all duration-300""""
               >""""
-                <Code className="w-8 h-8 text-zion-cyan mx-auto mb-3" />""""
+                <Code className="w-8 h-8 text-zion-cyan mx-auto mb-3"   />""""
                 <span className="text-white font-medium">{language}</span>
               </motion.div>
             ))}
@@ -221,7 +222,7 @@ export default function AICodeReview() {}
         </div>
       </section>
 """
-      {/* CTA Section */}""""
+      {/* comment */}""""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -254,11 +255,7 @@ export default function AICodeReview() {}
 
 
 export { AICodeReview };
-
 export { AICodeReview };
-
 export { AICodeReview };
-
 export { AICodeReview };
-
 export { AICodeReview };

@@ -1,26 +1,25 @@
-import {  import { motion, AnimatePresence  } from 'framer-motion';
- from 'lucide-react';
-
+import React from "react"
+import {  import { motion, AnimatePresence  } from "framer-motion";
+ from "lucide-react";
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
-  size?: 'sm' | 'md' | 'lg';
+  size?: "sm" | "md" | "lg";
   text?: string;
   fullScreen?: boolean}
 
 export function LoadingSpinner({
 
-  size = 'md',
-  text = 'Loading...',
+  size = "md",
+  text = "Loading...",
   fullScreen = false}: LoadingSpinnerProps) {
 
   ;
 }}
-            />"
+           />"
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-xl">
               ZION
             </div>
           </div>
-
           <motion.h2"
             className="text-2xl font-bold text-white mb-2"
             animate = {
@@ -57,7 +56,7 @@ export function LoadingSpinner({
             Please wait while we prepare everything for you...
           </motion.p>
 
-          {/* Progress Bar */}"
+          {/* comment */}"
           <div className="mt-6 w-64 mx-auto">"
             <div className="bg-zion-slate-light/20 rounded-full h-2 overflow-hidden">
               <motion.div"
@@ -68,7 +67,7 @@ export function LoadingSpinner({
   { duration: 3,
   ease: "easeInOut"
 }}
-              />
+             />
             </div>;
           </div>;
         </motion.div>;
@@ -79,8 +78,8 @@ export function LoadingSpinner({
 
 export function SkeletonLoader(...args[]):  {
 
-  return ()`
-<div className:  {`space-y-3 ${className}`}>;
+  return ()"
+<div className:  {"space-y-3 ${className}"}>;
       {Array.from({ length: lines }).map((_, index)  => (;
         <motion.div
           key={index}"
@@ -90,7 +89,7 @@ export function SkeletonLoader(...args[]):  {
   {
 
             opacity: [0.5, 1, 0.5],
-            backgroundPosition: ['200% 0',-200% 0']
+            backgroundPosition: ["200% 0",-200% 0"]
 
 }}
           transition = {
@@ -106,4 +105,7 @@ export function SkeletonLoader(...args[]):  {
 
   {
 
-            background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent),"`
+            background: "linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent),""
+
+
+export default Component

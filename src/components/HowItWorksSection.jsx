@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import {  import { motion, AnimatePresence  } from 'framer-motion';
- from 'lucide-react';
-
+import React, { useState } from "react";
+import { motion, AnimatePresence  } from "framer-motion";
+import {  import { motion, AnimatePresence  } from "framer-motion";
+ from "lucide-react";
 export const HowItWorksSection = () => {
   return (
     <section className="py-12">
@@ -27,4 +26,4 @@ export const HowItWorksSection = () => {
   );
 };
   );
-}
+export default Component

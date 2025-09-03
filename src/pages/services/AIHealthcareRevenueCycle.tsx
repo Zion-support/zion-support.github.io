@@ -1,47 +1,42 @@
-import React from 'react';
-import { Heart, Check, ArrowRight } from 'lucide-react';
-import { SEO } from '../../components/SEO';
-
+import React from "react";
+import { Heart, Check, ArrowRight } from "lucide-react";
+import { SEO } from "../../components/SEO";
 export default function AIHealthcareRevenueCycle() {
   const features = [
-    'Automated revenue cycle management',
-    'Predictive analytics for billing optimization',
-    'Real-time claim processing and tracking',
-    'AI-powered denial management',
-    'Integration with major EHR systems',
-    'Custom reporting and analytics'
+    "Automated revenue cycle management",
+    "Predictive analytics for billing optimization",
+    "Real-time claim processing and tracking",
+    "AI-powered denial management",
+    "Integration with major EHR systems",
+    "Custom reporting and analytics"
   ];
-
   const tiers = [
     {
-      name: 'Starter',
-      price: '$299/mo',
-      details: ['Basic RCM features', 'Standard support', 'Up to 100 claims/month']
+      name: "Starter",
+      price: "$299/mo",
+      details: ["Basic RCM features", "Standard support", "Up to 100 claims/month"]
     },
     {
-      name: 'Professional',
-      price: '$999/mo',
-      details: ['Advanced RCM features', 'Priority support', 'Up to 1000 claims/month']
+      name: "Professional",
+      price: "$999/mo",
+      details: ["Advanced RCM features", "Priority support", "Up to 1000 claims/month"]
     },
     {
-      name: 'Enterprise',
-      price: '$2,999/mo',
-      details: ['All RCM features', 'Dedicated support', 'Unlimited claims']
+      name: "Enterprise",
+      price: "$2,999/mo",
+      details: ["All RCM features", "Dedicated support", "Unlimited claims"]
     }
   ];
-
   return (
     <>
-      <SEO 
-        title="AI Healthcare Revenue Cycle - AI Solutions | Zion Tech Group"
+      <SEO title="AI Healthcare Revenue Cycle - AI Solutions | Zion Tech Group"
         description="Optimize your healthcare revenue cycle with our AI-powered solutions. Streamline billing, reduce denials, and maximize revenue."
-        keywords="AI healthcare revenue cycle, medical billing AI, healthcare RCM, revenue optimization"
-      />
+        keywords="AI healthcare revenue cycle, medical billing AI, healthcare RCM, revenue optimization"   />
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center">
           <div className="max-w-5xl mx-auto px-6">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-              <Heart className="w-4 h-4 mr-2" />
+              <Heart className="w-4 h-4 mr-2"   />
               AI-Powered Revenue Cycle Intelligence
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -52,7 +47,6 @@ export default function AIHealthcareRevenueCycle() {
             </p>
           </div>
         </section>
-
         <section className="py-16 max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-10">
             <div>
@@ -62,7 +56,7 @@ export default function AIHealthcareRevenueCycle() {
               <ul className="space-y-3">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start">
-                    <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"   />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -71,7 +65,6 @@ export default function AIHealthcareRevenueCycle() {
                 Built with enterprise-grade security, HIPAA compliance, and 99.9% uptime SLA.
               </div>
             </div>
-            
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                 Competitive Pricing
@@ -95,7 +88,7 @@ export default function AIHealthcareRevenueCycle() {
                   className="px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors inline-flex items-center"
                 >
                   View Full Pricing 
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2"   />
                 </a>
                 <a 
                   href="/contact" 
@@ -110,4 +103,3 @@ export default function AIHealthcareRevenueCycle() {
       </div>
     </>
   );
-}

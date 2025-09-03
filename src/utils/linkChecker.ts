@@ -1,6 +1,6 @@
 export interface LinkInfo {
   url: string;
-  status: 'working' | 'broken' | 'missing' | 'external';
+  status: "working" | "broken" | "missing" | "external";
   page: string;
   anchor?: string;
   error?: string}
@@ -14,8 +14,7 @@ export class LinkChecker {
   private visitedUrls: Set<string> = new Set();
   private brokenLinks: LinkInfo[] = [];
   private missingPages: string[] = [];
-
-  constructor(baseUrl: string = 'https://ziontechgroup.com') {
+  constructor(baseUrl: string = "https://ziontechgroup.com") {
 
     this.baseUrl = baseUrl}
   // Check if a link is internal or external
@@ -32,16 +31,16 @@ export class LinkChecker {
 
     try {
 
-      if(url.startsWith('http')) {
+      if(url.startsWith("http")) {
 
         return url}
-      if(url.startsWith('/')) {
+      if(url.startsWith("/")) {
 
-        return `${this.baseUrl}${url}`}
-      if(url.startsWith('#')) {
-`
-        return `${this.baseUrl}${basePage}${url}`}`
-      return `${this.baseUrl}${basePage}/${url}`} catch {
+        return "${this.baseUrl}${url}"}
+      if(url.startsWith("#")) {
+"
+        return "${this.baseUrl}${basePage}${url}"}"
+      return "${this.baseUrl}${basePage}/${url}"} catch {
 
       return url}  }
 
@@ -49,37 +48,37 @@ export class LinkChecker {
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {
 
     const links: LinkInfo[] = [];
-
-    // Extract href attributes from anchor tags'
-    const hrefRegex = /href=["']([^"']+)["']/g;    let match;
-
+    // Extract href attributes from anchor tags"
+    const hrefRegex = /href=[""]([^""]+)[""]/g;    let match;
     while((match = hrefRegex.exec(pageContent)) !== null) {
 
       if()
-        url &&'
-        !url.startsWith('javascript:') &&'
-        !url.startsWith('mailto:') &&'
-        !url.startsWith('tel:')
+
+        url &&"
+        !url.startsWith("javascript:") &&"
+        !url.startsWith("mailto:") &&"
+        !url.startsWith("tel:")
+
       ) {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
           url: normalizedUrl,
-          status: 'working',
+          status: "working",
           page: pagePath,
-          anchor: url.startsWith('#') ? url : undefined})}
+          anchor: url.startsWith("#") ? url : undefined})}
     }
 
-    // Extract src attributes from img, script, and link tags'"
+    // Extract src attributes from img, script, and link tags""
     
     while((match = srcRegex.exec(pageContent)) !== null) {
 
-      if(url && !url.startsWith('data:') && !url.startsWith('blob:')) {
+      if(url && !url.startsWith("data:") && !url.startsWith("blob:")) {
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({
 
           url: normalizedUrl,
-          status: 'working',
+          status: "working",
           page: pagePath})}    }
 
     return links}
@@ -98,24 +97,22 @@ export class LinkChecker {
   async checkPageLinks(pagePath: string, pageContent: string: any): Promise<any> {
 
     const links = this.extractLinks(pageContent, pagePath);    const checkedLinks: LinkInfo[] = [];
-
     for(const link of links) {
 
       if(this.visitedUrls.has(link.url)) {
 
         continue}
       this.visitedUrls.add(link.url);
-
       if(this.isInternalLink(link.url)) {
 
         if(exists) {
 
-          link.status = 'working'} else {
+          link.status = "working"} else {
 
-          link.status = 'missing';
+          link.status = "missing";
           this.missingPages.push(link.url)}      } else {
 
-        link.status = 'external'}
+        link.status = "external"}
       checkedLinks.push(link)}
 
     return {
@@ -128,7 +125,7 @@ export class LinkChecker {
   // Extract page title
   private extractPageTitle(content: string): string {
 
-    return titleMatch ? titleMatch[1].trim() : 'Untitled'}
+    return titleMatch ? titleMatch[1].trim() : "Untitled"}
   // Get analysis summary
   getSummary() {
     return {
@@ -137,7 +134,9 @@ export class LinkChecker {
       brokenLinks: this.brokenLinks.length,
       missingPages: this.missingPages.length,
       externalLinks: Array.from(this.visitedUrls).filter()
+
         url => !this.isInternalLink(url)
+
       ).length}}
 
   // Get all broken links

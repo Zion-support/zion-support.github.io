@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/Button.jsx';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea.jsx';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox } from './ui/checkbox';
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/Button.jsx";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea.jsx";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";import { Checkbox } from "./ui/checkbox";
 import {}
 
   const;const;const [formData, setFormData] = useState({}"
@@ -24,9 +24,11 @@ import {}
     agreeToTerms: false,
     agreeToMarketing: false})&apos;&apos
   const [isSubmitting, setIsSubmitting] = useState (false)
-}
+
+
   const [isSubmitted, setIsSubmitted] = useState (false)
-}
+
+
   const [errors, setErrors] = useState ({}) ";&apos;&apos
   const serviceTypes = []";&apos;&apos
   const timelineOptions = []";&apos;&apos
@@ -57,20 +59,25 @@ export const QuoteRequestForm = () => {}
     contactMethod: "email",
 agreeToTerms: false,
 agreeToMarketing: false})
-}
+
+
   const [isSubmitting, setIsSubmitting] = useState (false)
-}
+
+
   const [isSubmitted, setIsSubmitted] = useState (false)
-}
+
+
   const [errors, setErrors] = useState ({}) "
   const serviceTypes = []"
   const timelineOptions = []"
   const budgetRanges = []"
   const urgencyLevels = [] = useState()
-}
+
+
   const [isSubmitting, setIsSubmitting] = useState (false) "
   const [isSubmitted, setIsSubmitted] = useState (false)
-}
+
+
   const [errors, setErrors] = useState ({}) ";""
   const serviceTypes = []";""
   const timelineOptions = []";""
@@ -81,9 +88,11 @@ agreeToMarketing: false})
 
       ...prev,
       [field]: value}))
-}
+
+
       ...prev, [field]: value}))
-}
+
+
     // comment    if(errors[field]) {}
 
       setErrors(prev = > ({}
@@ -126,26 +135,31 @@ agreeToMarketing: false})
     if (!formData.agreeToTerms)";""
       newErrors.agreeToTerms = "You must agree to the terms and conditions
     setErrors(newErrors)
-}
+
+
     return Object.keys(newErrors) .length = == 0}
 
 ;&apos;&apos
   const handleSubmit = async e => {}
 
     e.preventDefault()
+
 }    if(!validateForm()) {}
 
       return}
 
     setIsSubmitting(true)
-}
+
+
     try {}
 
       // comment
       await new Promise(resolve => setTimeout(resolve, 2000))
-}
+
+
       setIsSubmitted(true)
-}
+
+
       // comment
       setFormData({}"
 
@@ -212,7 +226,7 @@ agreeToMarketing: false})} catch (error) {}"
     return();"
       <Card className="max-w-2xl mx-auto">"";"
         <CardContent className="p-8 text-center">"";"
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />"";"
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"   />"";"
           <h2 className = "text - 2xl font-bold text-gray-900 mb-2">,
             Quote Request Submitted!"",
           </h2>"";"
@@ -246,7 +260,7 @@ agreeToMarketing: false})} catch (error) {}"
                 placeholder="John"";"
                 className = "{errors.firstName" ? "border-red-500" : "}
 
-             />""{errors.firstName && ("";"
+            />""{errors.firstName && ("";"
                 <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
               )}
 
@@ -262,7 +276,7 @@ agreeToMarketing: false})} catch (error) {}"
                 placeholder="Doe"";"
                 className = "{errors.lastName" ? "border-red-500" : "}
 
-             />""{errors.lastName && ("";"
+            />""{errors.lastName && ("";"
                 <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
               )}
 
@@ -280,7 +294,7 @@ agreeToMarketing: false})} catch (error) {}"
                 placeholder="john@company.com"";"
                 className = "{errors.email" ? "border-red-500" : "}
 
-             />""{errors.email && ("";"
+            />""{errors.email && ("";"
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>
               )}
 
@@ -306,7 +320,7 @@ agreeToMarketing: false})} catch (error) {}"
               placeholder="Your Company Inc."";"
               className = "{errors.company" ? "border-red-500" : "}
 
-           />""{errors.company && ("";"
+          />""{errors.company && ("";"
               <p className="text-red-500 text-sm mt-1">{errors.company}</p>
             )}
 
@@ -320,7 +334,7 @@ agreeToMarketing: false})} catch (error) {}"
     return()&apos;&apos;"
       <Card className="&apos;max-w-2xl" mx-auto&apos;>"&apos;&apos,&apos;&apos;"
         <CardContent className="&apos;p-8" text-center&apos;>"&apos;&apos,&apos;&apos;"
-          <CheckCircle className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;       />&apos;&apos,&apos;&apos,"
+          <CheckCircle className="&apos;w-16" h-16 text-green-500 mx-auto mb-4&apos;          />&apos;&apos,&apos;&apos,"
           <h2 className="&apos;text-2xl" font-bold text-gray-900 mb-2&apos;>"
             Quote Request Submitted!&apos;&apos,&apos;&apos,
           </h2>&apos;&apos,&apos;&apos,",
@@ -328,7 +342,7 @@ agreeToMarketing: false})} catch (error) {}"
     return()"
       <Card className = "max-w-2xl mx-auto">""""
         <CardContent className="p-8 text-center">""""
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"  />""""
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"   />""""
           <h2 className="text-2xl font-bold text-gray-900 mb-2">"
             Quote Request Submitted!"""""
           </h2>""""
@@ -470,7 +484,7 @@ get back to you within 24 hours.&apos,</p>"
                 value={formData.phone}&apos;&apos,";"
                 onChange="{e" => handleChange(&apos;phone&apos, e.target.value)}&apos;&apos,";"
                 placeholder="&apos;+1" (555) 123-4567&apos;&apos,
-             />&apos;&apos
+            />&apos;&apos
             </div>
           </div>"
           {/* comment */}&apos;&apos,&apos;&apos,
@@ -498,7 +512,7 @@ get back to you within 24 hours.&apos,</p>"
               >&apos;&apos,
                 <SelectTrigger&apos;"
                   className="{errors.serviceType" ? &apos;border-red-500&apos; : &apos;&apos}&apos;&apos,>&apos;&apos,&apos;&apos,"
-                  <SelectValue placeholder="&apos;Select" a service&apos;       />&apos,
+                  <SelectValue placeholder="&apos;Select" a service&apos;          />&apos,
           {/* comment */}"""""
           <div>""""
             <label className = "block text-sm font-medium text-gray-700 mb-2">
@@ -525,7 +539,7 @@ get back to you within 24 hours.&apos,</p>"
               >"
                 <SelectTrigger";"
                   className="{errors.serviceType" ? "border - red-500" : "}"">"",
-                  <SelectValue placeholder="Select a service"  />
+                  <SelectValue placeholder="Select a service"   />
                 </SelectTrigger>
                 <SelectContent>
                   {serviceTypes.map(service => (;"
@@ -539,7 +553,7 @@ get back to you within 24 hours.&apos,</p>"
               >"""
                 <SelectTrigger"";"
                   className = "{errors.serviceType" ? "border-red-500" : ""}""">""""""
-                  <SelectValue placeholder="Select a service"  />
+                  <SelectValue placeholder="Select a service"   />
                 </SelectTrigger>
                 <SelectContent>
                   {serviceTypes.map(service => (}"
@@ -565,7 +579,7 @@ get back to you within 24 hours.&apos,</p>"
                 onValueChange="{value" => handleChange(&apos;timeline&apos, value)}"
               >&apos;&apos,&apos;&apos,
                 <SelectTrigger>&apos;&apos,&apos;&apos,"
-                  <SelectValue placeholder="&apos;Select" timeline&apos;       />&apos,
+                  <SelectValue placeholder="&apos;Select" timeline&apos;          />&apos,
               </Select>"""{errors.serviceType && ("""""
                 <p className = "text-red-500 text-sm mt-1">
                   {errors.serviceType}
@@ -591,7 +605,7 @@ get back to you within 24 hours.&apos,</p>"
 
               >""
                 <SelectTrigger>""
-                  <SelectValue placeholder="Select timeline"  />
+                  <SelectValue placeholder="Select timeline"   />
                 </SelectTrigger>
                 <SelectContent>
                   {timelineOptions.map(timeline => (;"
@@ -611,7 +625,7 @@ get back to you within 24 hours.&apos,</p>"
               </label>,"
               >"""""
                 <SelectTrigger>"""""
-                  <SelectValue placeholder = "Select timeline"  />
+                  <SelectValue placeholder = "Select timeline"   />
                 </SelectTrigger>
                 <SelectContent>
                   {timelineOptions.map(timeline => (}"
@@ -634,7 +648,7 @@ get back to you within 24 hours.&apos,</p>"
                 onValueChange="{value" => handleChange(&apos;budget&apos, value)}"
               >&apos;&apos,&apos;&apos,
                 <SelectTrigger>&apos;&apos,&apos;&apos,"
-                  <SelectValue placeholder="&apos;Select" budget range&apos;       />&apos,
+                  <SelectValue placeholder="&apos;Select" budget range&apos;          />&apos,
           </div>""";""
 """"
           <div className = "grid grid-cols-1 md: grid-cols-2 gap-4">"""""
@@ -647,7 +661,7 @@ get back to you within 24 hours.&apos,</p>"
 
               >""
                 <SelectTrigger>""
-                  <SelectValue placeholder="Select budget range"  />
+                  <SelectValue placeholder="Select budget range"   />
                 </SelectTrigger>
                 <SelectContent>
                   {budgetRanges.map(budget => (;"
@@ -665,7 +679,7 @@ get back to you within 24 hours.&apos,</p>"
               </label>
               >"""""
                 <SelectTrigger>"""""
-                  <SelectValue placeholder = "Select budget range"  />
+                  <SelectValue placeholder = "Select budget range"   />
                 </SelectTrigger>
                 <SelectContent>
                   {budgetRanges.map(budget => (}"
@@ -720,7 +734,7 @@ get back to you within 24 hours.&apos,</p>"
               rows={6}";"
               className = "{errors.projectDescription" ? "border-red-500" : "}
 
-           />""{errors.projectDescription && ("";"
+          />""{errors.projectDescription && ("";"
               <p className="text-red-500 text-sm mt-1">
               >
                 <SelectTrigger>
@@ -856,7 +870,7 @@ get back to you within 24 hours.&apos,</p>"
                 </>
               )  : ("",
                 <>"";"
-                  <Send className="w-5 h-5 mr-2"  />
+                  <Send className="w-5 h-5 mr-2"   />
                   Submit Quote Request
                 </>) }
 
@@ -921,7 +935,7 @@ get back to you within 24 hours.&apos,</p>"
                 </>"
               ) : (&apos;&apos,&apos;&apos,
                 <>&apos;&apos,&apos;&apos,"
-                  <Send className="&apos;w-5" h-5 mr-2&apos;       />
+                  <Send className="&apos;w-5" h-5 mr-2&apos;          />
                   Submit Quote Request&apos
                 </>) }"
 """{/* comment */}"""""
@@ -967,7 +981,7 @@ get back to you within 24 hours.&apos,</p>"
 </>"
               ) : ("""""
                 <>""""
-                  <Send className="w-5 h-5 mr-2"  />
+                  <Send className="w-5 h-5 mr-2"   />
                   Submit Quote Request,
 </>) }
 

@@ -1,11 +1,6 @@
-import { useState, useEffect } from 'react';
- from 'react';
-export /**
-import { motion, AnimatePresence  } from 'framer-motion';
-
- params - Function parameters
- * @returns {*} Function return value
- */
+import { useState, useEffect } from "react";
+ from "react";
+export /* comment */
 function Accessibility () {
 
   Accessibility as AccessibilityIcon,
@@ -13,11 +8,11 @@ function Accessibility () {
   Eye,
   Volume2,
   Keyboard,
-              {/* Header */}
-  Keyboard,              {/* Header */}
+              {/* comment */}
+  Keyboard,              {/* comment */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-semibold text-white flex items-center gap-2">
-                  <AccessibilityIcon className="w-5 h-5 text-cyan-400"  />
+                  <AccessibilityIcon className="w-5 h-5 text-cyan-400"   />
                   Accessibility
                 </h2>
                 <button
@@ -25,14 +20,13 @@ function Accessibility () {
                   className="text-gray-400 hover:text-white transition-colors"
                   
                 >
-                  <X className="w-5 h-5"  />
+                  <X className="w-5 h-5"   />
                 </button>
               </div>
-
-              {/* Font Size Control */}
+              {/* comment */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
-                  <Type className="w-4 h-4"  />
+                  <Type className="w-4 h-4"   />
                   Font Size
                 </label>
                 <div className="flex items-center gap-3">
@@ -42,7 +36,7 @@ function Accessibility () {
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
                     
                   >
-                    <Minus className="w-4 h-4 text-white"  />
+                    <Minus className="w-4 h-4 text-white"   />
                   </button>
                   <span className="text-white font-mono min-w-[3rem] text-center">
                     {settings.fontSize}px
@@ -53,102 +47,94 @@ function Accessibility () {
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors"
                     
                   >
-                    <Plus className="w-4 h-4 text-white"  />
+                    <Plus className="w-4 h-4 text-white"   />
                   </button>
                 </div>
               </div>
-
-              {/* High Contrast Toggle */}
+              {/* comment */}
               <div className="mb-6">
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
-                    <Contrast className="w-4 h-4"  />
+                    <Contrast className="w-4 h-4"   />
                     High Contrast
                   </span>
                   <input
                     type="checkbox"
                     checked={settings.highContrast}
-                    onChange={(e) => updateSetting('highContrast', e.target.checked)}
-                    className="sr-only"
-                  />
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-cyan-500' : 'bg-slate-700'
-                  }`}>
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast ? 'translate-x-6' : 'translate-x-1'
-                    }`} />
+                    onChange={(e) => updateSetting("highContrast", e.target.checked)}
+                    className="sr-only" />
+                  <div className={"relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? "bg-cyan-500" : "bg-slate-700"
+                  }"}>
+                    <span className={"inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast ? "translate-x-6" : "translate-x-1"
+                    }"}    />
                   </div>
                 </label>
               </div>
-
-              {/* Reduced Motion Toggle */}
+              {/* comment */}
               <div className="mb-6">
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
-                    <Eye className="w-4 h-4"  />
+                    <Eye className="w-4 h-4"   />
                     Reduced Motion
                   </span>
                   <input
                     type="checkbox"
                     checked={settings.reducedMotion}
-                    onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
-                    className="sr-only"
-                  />
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-cyan-500' : 'bg-slate-700'
-                  }`}>
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
-                    }`} />
+                    onChange={(e) => updateSetting("reducedMotion", e.target.checked)}
+                    className="sr-only" />
+                  <div className={"relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? "bg-cyan-500" : "bg-slate-700"
+                  }"}>
+                    <span className={"inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? "translate-x-6" : "translate-x-1"
+                    }"}    />
                   </div>
                 </label>
               </div>
-
-              {/* Theme Selection */}
+              {/* comment */}
               <div className="mb-6">
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
-                  <Settings className="w-4 h-4"  />
+                  <Settings className="w-4 h-4"   />
                   Theme
                 </label>
                 <div className="grid grid-cols-3 gap-2">
-                  {(['auto', 'light', 'dark'] as const).map((theme) => (
+                  {(["auto", "light", "dark"] as const).map((theme) => (
                     <button
                       key={theme}
-                      onClick={() => updateSetting('theme', theme)}
-                      className={`p-2 rounded-md text-xs font-medium transition-colors ${settings.theme === theme
-                          ? 'bg-cyan-500 text-white'
-                          : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                      }`}
+                      onClick={() => updateSetting("theme", theme)}
+                      className={"p-2 rounded-md text-xs font-medium transition-colors ${settings.theme === theme
+                          ? "bg-cyan-500 text-white"
+                          : "bg-slate-800 text-gray-300 hover:bg-slate-700"
+                      }"}
                     >
-                      {theme === 'auto' && 'Auto'}
-                      {theme === 'light' && <Sun className="w-4 h-4 mx-auto"  />}
-                      {theme === 'dark' && <Moon className="w-4 h-4 mx-auto"  />}
+                      {theme === "auto" && "Auto"}
+                      {theme === "light" && <Sun className="w-4 h-4 mx-auto"   />}
+                      {theme === "dark" && <Moon className="w-4 h-4 mx-auto"   />}
                     </button>
                   ))}
                 </div>
               </div>
-
-              {/* Sound Toggle */}
+              {/* comment */}
               <div className="mb-6">
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
-                    <Volume2 className="w-4 h-4" />
+                    <Volume2 className="w-4 h-4"   />
                     Sound Effects
                   </span>
                   <input
                     type="checkbox"
                     checked={settings.soundEnabled}
-                    onChange={(e) => updateSetting('soundEnabled', e.target.checked)}
-                    className="sr-only"
-                  />
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.soundEnabled ? 'bg-cyan-500' : 'bg-slate-700'
-                  }`}>
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.soundEnabled ? 'translate-x-6' : 'translate-x-1'
-                    }`} />
+                    onChange={(e) => updateSetting("soundEnabled", e.target.checked)}
+                    className="sr-only" />
+                  <div className={"relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.soundEnabled ? "bg-cyan-500" : "bg-slate-700"
+                  }"}>
+                    <span className={"inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.soundEnabled ? "translate-x-6" : "translate-x-1"
+                    }"}    />
                   </div>
                 </label>
               </div>
-
-              {/* Keyboard Shortcuts Help */}
+              {/* comment */}
               <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">
                 <h3 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
-                  <Keyboard className="w-4 h-4"  />
+                  <Keyboard className="w-4 h-4"   />
                   Keyboard Shortcuts
                 </h3>
                 <div className="space-y-2 text-xs text-gray-300">
@@ -166,8 +152,7 @@ function Accessibility () {
                   </div>
                 </div>
               </div>
-
-              {/* Reset Button */}
+              {/* comment */}
               <button
                 onClick={resetSettings}
                 className="w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium"

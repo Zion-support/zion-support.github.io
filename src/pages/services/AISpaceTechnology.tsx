@@ -1,16 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
-  Rocket, 
-  Satellite, 
-  Globe, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
+  Rocket,
+  Satellite,
+  Globe,
+  Brain,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Mail,
+  Phone,
   MapPin,
   Orbit,
   Circle,
@@ -24,9 +24,8 @@ import {
   Clock,
   Award,
   SatelliteDish
-} from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+} from "lucide-react";
+import { SEO } from "@/components/SEO";
 export default function AISpaceTechnology() {
   const features = [
     "AI-powered satellite navigation systems",
@@ -38,7 +37,6 @@ export default function AISpaceTechnology() {
     "Deep space exploration AI",
     "Space mining and resource detection"
   ];
-
   const benefits = [
     "Enhanced satellite communication reliability",
     "Improved space mission success rates",
@@ -49,7 +47,6 @@ export default function AISpaceTechnology() {
     "Enhanced GPS and navigation accuracy",
     "Revolutionary space resource discovery"
   ];
-
   const pricingTiers = [
     {
       name: "Space Starter",
@@ -97,7 +94,6 @@ export default function AISpaceTechnology() {
       ]
     }
   ];
-
   const useCases = [
     {
       title: "Satellite Communications",
@@ -120,7 +116,6 @@ export default function AISpaceTechnology() {
       icon: Circle
     }
   ];
-
   const technologies = [
     {
       name: "Machine Learning",
@@ -143,19 +138,16 @@ export default function AISpaceTechnology() {
       icon: Signal
     }
   ];
-
   return (
     <>
-      <SEO 
-        title="AI Space Technology Services - Zion Tech Group"
+      <SEO title="AI Space Technology Services - Zion Tech Group"
         description="Revolutionary AI-powered space technology solutions. From satellite operations to space exploration, discover the future of space technology."
-        canonical="/services/ai-space-technology"
-      />
+        canonical="/services/ai-space-technology"   />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */}
+        {/* comment */}
         <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/images/space-pattern.svg')] bg-center opacity-10"></div>
+          <div className="absolute inset-0 bg-[url("/images/space-pattern.svg")] bg-center opacity-10"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -164,14 +156,14 @@ export default function AISpaceTechnology() {
               className="text-center"
             >
               <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-medium mb-6">
-                <Rocket className="w-4 h-4 mr-2" />
+                <Rocket className="w-4 h-4 mr-2"   />
                 Space Technology
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-500 to-indigo-400 bg-clip-text text-transparent">
                 AI Space Technology
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Explore the final frontier with our AI-powered space technology solutions. From satellite operations to deep space exploration, we're pushing the boundaries of what's possible.
+                Explore the final frontier with our AI-powered space technology solutions. From satellite operations to deep space exploration, we"re pushing the boundaries of what"s possible.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -190,8 +182,7 @@ export default function AISpaceTechnology() {
             </motion.div>
           </div>
         </section>
-
-        {/* Features Section */}
+        {/* comment */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -218,7 +209,7 @@ export default function AISpaceTechnology() {
                   className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border border-blue-500/30 rounded-xl p-6 hover:border-blue-400/60 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
-                    <Rocket className="w-6 h-6 text-white" />
+                    <Rocket className="w-6 h-6 text-white"   />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
                 </motion.div>
@@ -226,8 +217,7 @@ export default function AISpaceTechnology() {
             </div>
           </div>
         </section>
-
-        {/* Benefits Section */}
+        {/* comment */}
         <section className="py-20 bg-black/20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -254,7 +244,7 @@ export default function AISpaceTechnology() {
                   className="flex items-start space-x-4"
                 >
                   <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-5 h-5 text-white" />
+                    <CheckCircle className="w-5 h-5 text-white"   />
                   </div>
                   <p className="text-lg text-gray-300">{benefit}</p>
                 </motion.div>
@@ -262,8 +252,7 @@ export default function AISpaceTechnology() {
             </div>
           </div>
         </section>
-
-        {/* Technologies Section */}
+        {/* comment */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -301,8 +290,7 @@ export default function AISpaceTechnology() {
             </div>
           </div>
         </section>
-
-        {/* Use Cases Section */}
+        {/* comment */}
         <section className="py-20 bg-black/20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -340,8 +328,7 @@ export default function AISpaceTechnology() {
             </div>
           </div>
         </section>
-
-        {/* Pricing Section */}
+        {/* comment */}
         <section id="pricing" className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -365,11 +352,11 @@ export default function AISpaceTechnology() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`relative bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border rounded-xl p-8 ${
+                  className={"relative bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border rounded-xl p-8 ${
                     tier.popular 
-                      ? 'border-blue-400 scale-105' 
-                      : 'border-blue-500/30'
-                  }`}
+                      ? "border-blue-400 scale-105" 
+                      : "border-blue-500/30"
+                  }"}
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -387,23 +374,21 @@ export default function AISpaceTechnology() {
                       <span className="text-lg text-gray-400">/{tier.period}</span>
                     </div>
                   </div>
-
                   <ul className="space-y-4 mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0"   />
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
-
                   <Link 
                     to="/contact" 
-                    className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className={"w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       tier.popular
-                        ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white'
-                        : 'border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-                    }`}
+                        ? "bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white"
+                        : "border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white"
+                    }"}
                   >
                     Launch Mission
                   </Link>
@@ -412,8 +397,7 @@ export default function AISpaceTechnology() {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
+        {/* comment */}
         <section className="py-20 bg-black/20">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <motion.div
@@ -444,8 +428,7 @@ export default function AISpaceTechnology() {
             </motion.div>
           </div>
         </section>
-
-        {/* Contact Information */}
+        {/* comment */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <motion.div
@@ -456,19 +439,19 @@ export default function AISpaceTechnology() {
               <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center">
-                  <Phone className="w-8 h-8 text-blue-400 mb-4" />
+                  <Phone className="w-8 h-8 text-blue-400 mb-4"   />
                   <p className="text-white font-semibold">Phone</p>
                   <p className="text-gray-300">+1 302 464 0950</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <Mail className="w-8 h-8 text-blue-400 mb-4" />
+                  <Mail className="w-8 h-8 text-blue-400 mb-4"   />
                   <p className="text-white font-semibold">Email</p>
                   <p className="text-gray-300">kleber@ziontechgroup.com</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <MapPin className="w-8 h-8 text-blue-400 mb-4" />
+                  <MapPin className="w-8 h-8 text-blue-400 mb-4"   />
                   <p className="text-white font-semibold">Address</p>
-                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-gray-300">364 E Main St STE 1008<br  />Middletown DE 19709</p>
                 </div>
               </div>
             </motion.div>
@@ -477,4 +460,3 @@ export default function AISpaceTechnology() {
       </div>
     </>
   );
-}

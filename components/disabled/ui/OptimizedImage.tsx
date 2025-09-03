@@ -45,7 +45,7 @@ src, alt,
         blurDataURL="{blurDataURL}""
         sizes="{sizes}"
 :components/ui/OptimizedImage.tsx,"
-className="object-cover transition-transform duration-300 hover: scale-105"  />,
+className="object-cover transition-transform duration-300 hover: scale-105"   />,
     </div>,,
   )}
 

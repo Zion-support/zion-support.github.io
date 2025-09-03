@@ -1,22 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import { SEO } from "./SEO";
 ;
 export default function SitemapPage() {
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth);
     const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&
         route.requiredRoles &&
-        (route.requiredRoles.includes('jobSeeker') ||
-            route.requiredRoles.includes('creator')));
+        (route.requiredRoles.includes("jobSeeker") ||
+            route.requiredRoles.includes("creator")));
     const employerRoutes = completeSitemap.filter(route => route.requiredAuth &&
         route.requiredRoles &&
-        (route.requiredRoles.includes('employer') ||
-            route.requiredRoles.includes('buyer')));
+        (route.requiredRoles.includes("employer") ||
+            route.requiredRoles.includes("buyer")));
     const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&
         route.requiredRoles &&
-        route.requiredRoles.includes('admin'));
+        route.requiredRoles.includes("admin"));
     return (<div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https://ziontechgroup.com/content/sitemap-page"/>
+      <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https://ziontechgroup.com/content/sitemap-page"   />
       
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
@@ -26,7 +26,7 @@ export default function SitemapPage() {
         </div>"""
 """"
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">"""
-          {/* Public Routes */}""""
+          {/* comment */}""""
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">""""
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">
               Public Pages"""
@@ -45,7 +45,7 @@ export default function SitemapPage() {
             </ul>
           </div>
 """
-          {/* Talent Routes */}""""
+          {/* comment */}""""
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">""""
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">
               Talent & Job Seeker Pages"""
@@ -64,7 +64,7 @@ export default function SitemapPage() {
             </ul>
           </div>
 """
-          {/* Employer Routes */}""""
+          {/* comment */}""""
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">""""
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">
               Employer & Buyer Pages"""
@@ -83,7 +83,7 @@ export default function SitemapPage() {
             </ul>
           </div>
 """
-          {/* Admin Routes */}""""
+          {/* comment */}""""
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">""""
             <h2 className="text-2xl font-semibold text-zion-cyan mb-4">
               Administrative Pages"""
@@ -103,7 +103,7 @@ export default function SitemapPage() {
           </div>
         </div>
 """
-        {/* All Routes List */}""""
+        {/* comment */}""""
         <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">""""
           <h2 className="text-2xl font-semibold text-zion-cyan mb-6">
             Complete Route List"""
@@ -136,7 +136,8 @@ export default function SitemapPage() {,"});,"})"
             route.requiredRoles.includes("buyer")));,"});,"})"
     const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&;,"});,"})"
         route.requiredRoles.includes("admin"));,"});,"})
-}
+
+
     return ("
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">;,"});,"})"
       <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: // comment
@@ -197,19 +198,23 @@ export { SitemapPage };,"});,"})"
 export default function SitemapPage() {
 
     const publicRoutes = completeSitemap.filter(route => !route.requiredAuth)
-}
+
+
     const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&
         route.requiredRoles && (route.requiredRoles.includes("jobSeeker") ||,
             route.requiredRoles.includes("creator")))
-}
+
+
     const employerRoutes = completeSitemap.filter(route => route.requiredAuth &&
         route.requiredRoles && (route.requiredRoles.includes("employer") ||,
             route.requiredRoles.includes("buyer")))
-}
+
+
     const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&
         route.requiredRoles &&
         route.requiredRoles.includes("admin"))
-}
+
+
     return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
       <SEO title="Sitemap" description="Complete navigation guide for Zion Tech Group website" keywords="sitemap, navigation, website structure, Zion Tech Group" canonical="https: // comment
@@ -238,11 +243,7 @@ export: default function SitemapPage () { const publicRoutes = completeSitemap.f
 
 
 export { SitemapPage };
-
 export { SitemapPage };
-
 export { SitemapPage };
-
 export { SitemapPage };
-
 export { SitemapPage };

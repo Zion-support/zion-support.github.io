@@ -5,7 +5,6 @@ description?: string}
 ;
 :components/ui/InteractiveStats.tsx,;
 interface StatItem {;
-
   label: string,;
   value: string | number,;
   description?: string}
@@ -39,6 +38,7 @@ export default function InteractiveStats() {
     </div>
 :components/ui/InteractiveStats.tsx
   )
-}
+
   )
+
 }:components/disabled/ui/InteractiveStats.tsx}"'
