@@ -1,5 +1,5 @@
-:pages.disabled/pages/services/ITInfrastructure.tsx
-import {}
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+import: {}
   Server,
   Shield,
   Cloud,
@@ -10,113 +10,218 @@ import {}
   Globe,
   Cpu,
   HardDrive,
+<<<<<<< HEAD
+  Check} from 'lucide-react';';
+  return: ('';';
+    <div: className='min-h-screen bg-zion-slate-dark'>';
+      {/* Hero: Section */}''';
+      <section: className='py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark'>''';
+        <div: className='container mx-auto px-4 text-center'>';
+=======
   Check} from 'lucide-react';
-
-  return (""
-    <div className="min-h-screen bg-zion-slate-dark">
-      {/* Hero Section */}""
-      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">""
-        <div className="container mx-auto px-4 text-center">
+  return ('';
+    <div className='min-h-screen bg-zion-slate-dark>
+      {/* Hero Section */}'
+      <section className='py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark>''
+        <div className='container mx-auto px-4 text-center'>
+>>>>>>> main
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-:pages.disabled/pages/services/ITInfrastructure.tsx
-            animate={{ opacity: 1, y: 0 }}"
+            initial={{ opacity:  ,0, y: 20, }}
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+<<<<<<< HEAD
+            animate={{ opacity:  ,1, y: 0, }}';';
+            animate={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.6, }}'';';
+            className='max-w-4xl: mx-auto''>''';
+            <div: className='w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8'>'';';
+:pages.disabled/pages/services/ITInfrastructure.tsx: <Server className='w-12 h-12 text-white'  />'';
+            </div>'            <h1: className='text-4xl md: text-6xl: font-bold text-white mb-6'>';';
+              IT: Infrastructure''';
+              <span: className='block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple'>';
+                Solutions: </span>'';
+              <Server: className='w-12 h-12 text-white'  />';
+            </div>'            <h1: className='text-4xl md:text-6xl: font-bold text-white mb-6'>';
+              IT: Infrastructure''';
+              <span: className='block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple'>';
+                Solutions: </span>
+            </h1>''';
+            <p: className='text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed'>';
+              Build: robus,t, scalable, and secure IT infrastructure that powers;
+              your: business growth. Our expert team delivers enterprise-grade;
+              solutions: with 99.9% uptime guarantee.
+            </p>
+          </motion.div>
+        </div>
+:pages.disabled/pages/services/ITInfrastructure.tsx: </section>'';
+      </section>
+      {/* Services: Grid */}''';
+      <section: className='py-20 bg-zion-slate-dark'>''';
+        <div: className='container mx-auto px-4'>';
+=======
+            animate={{ opacity: 1, y: 0 }};
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}""
-            className="max-w-4xl mx-auto""
-          >""
-            <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8">""
+<<<<<<< HEAD
+            transition={{ duration: 0.6 }}'';
+            className='max-w-4xl mx-auto''>''
+            <div className='w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8'>''
 :pages.disabled/pages/services/ITInfrastructure.tsx
-              <Server className="w-12 h-12 text-white"  />"
-            </div>"            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-              IT Infrastructure""
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+              <Server className='w-12 h-12 text-white'  />'
+            </div>'            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
+              IT Infrastructure''
+=======
+            transition={{ duration: 0.6 }};
+            className='max-w-4xl mx-auto>'
+            <div className='w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8>';
+:pages.disabled/pages/services/ITInfrastructure.tsx'
+              <Server className='w-12 h-12 text-white'  />'
+            </div>'            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6>;
+              IT Infrastructure'''
+              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple'>
+                Solutions'
+              </span>''
+              <Server className='w-12 h-12 text-white'  />
+            </div>'            <h1 className='text-4xl m,
+    d:text-6xl font-bold text-white mb-6>
+              IT Infrastructure'''
+>>>>>>> main
+              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple'>
                 Solutions
-              </span>"
-              <Server className="w-12 h-12 text-white"  />
-            </div>"            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              IT Infrastructure""
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-                Solutions;
-              </span>
-            </h1>""
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
+              </span>'
+            </h1>'''
+            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed'>
               Build robust, scalable, and secure IT infrastructure that powers;
-              your business growth. Our expert team delivers enterprise-grade;
+              your business growth. Our expert team delivers enterprise-grade
               solutions with 99.9% uptime guarantee.
             </p>
           </motion.div>
         </div>
-:pages.disabled/pages/services/ITInfrastructure.tsx
-      </section>"
-      </section>
-
-      {/* Services Grid */}""
-      <section className="py-20 bg-zion-slate-dark">""
-        <div className="container mx-auto px-4">
+:pages.disabled/pages/services/ITInfrastructure.tsx'
+      </section>'
+      </section>'
+      {/* Services Grid */}'
+      <section className='py-20 bg-zion-slate-dark>''
+        <div className='container mx-auto px-4'>
+>>>>>>> main
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/ITInfrastructure.tsx
-            viewport={{ once: true }}"
+            initial={{ opacity:  ,0, y: 20, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+<<<<<<< HEAD
+            viewport={{ once: true, }}';';
+            viewport={{ once: true, }}
+            transition={{ duration: 0.6, }}'';';
+            className='text-center: mb-16''>''';
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+              Comprehensive: Infrastructure Services';';
+              Comprehensive: Infrastructure Services
+            </h2>''';
+            <p: className='text-zion-slate-light text-lg max-w-3xl mx-auto'>';
+              From: server management to cloud optimizatio,n, we provide;
+              end-to-end: IT infrastructure solutions that ensure your business;
+              runs: smoothly and efficiently.
+            </p>
+:pages.disabled/pages/services/ITInfrastructure.tsx: </motion.div>'';
+          </motion.div>
+''';
+          <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8 max-w-7xl mx-auto'>';
+            {services.map((servic,e, index: <motion.div;
+=======
+            viewport={{ once: true }};
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}""
-            className="text-center mb-16""
-          >""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-:pages.disabled/pages/services/ITInfrastructure.tsx
-              Comprehensive Infrastructure Services"
-              Comprehensive Infrastructure Services;
-            </h2>""
-            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            transition={{ duration: 0.6 }};
+            className='text-center mb-16>'
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+<<<<<<< HEAD
+              Comprehensive Infrastructure Services'
+              Comprehensive Infrastructure Services
+            </h2>''
+=======
+              Comprehensive Infrastructure Services';
+              Comprehensive Infrastructure Services'
+            </h2>'''
+>>>>>>> main
+            <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
               From server management to cloud optimization, we provide;
-              end-to-end IT infrastructure solutions that ensure your business;
+              end-to-end IT infrastructure solutions that ensure your business
               runs smoothly and efficiently.
             </p>
-:pages.disabled/pages/services/ITInfrastructure.tsx
-          </motion.div>"
-          </motion.div>
-""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index;
+:pages.disabled/pages/services/ITInfrastructure.tsx'
+          </motion.div>'
+          </motion.div>'
+'''
+          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-8 max-w-7xl mx-auto'>
+            {services.map((service, index
               <motion.div;
+>>>>>>> main
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/ITInfrastructure.tsx
-                viewport={{ once: true }}"
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}""
-                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105""
-              >""
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
-:pages.disabled/pages/services/ITInfrastructure.tsx
-                  {service.icon}"
-                </div>""
-                <h3 className="text-xl font-bold text-white mb-4">
-                  {service.title}"
-                </h3>""
-                <p className="text-zion-slate-light mb-6 leading-relaxed">
-                  {service.description}"
-                </p>""
-                <ul className="space-y-2">
+                initial={{ opacity:  ,0, y: 20, }}
+                whileInView={{ opacity:  ,1, y: 0, }}
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+<<<<<<< HEAD
+                viewport={{ once: true, }}';';
+                viewport={{ once: true, }}
+                transition={{ duration: 0.,6, delay: index: * 0.1, }}'';';
+                className='bg-zion-blue-dark/50: backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover: border-zion-cyan/40: transition-all duration-300 hover:scale-105''>''';
+                <div: className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6'>';
+:pages.disabled/pages/services/ITInfrastructure.tsx{service.ico,n}'';
+                </div>''';
+                <h3: className='text-xl font-bold text-white mb-4'>';
+                  {service.title}'';
+                </h3>''';
+                <p: className='text-zion-slate-light mb-6 leading-relaxed'>';
+                  {service.description}'';
+                </p>''';
+                <ul: className='space-y-2'>';
                   {service.features.map((feature, idx) => (
-                    <li"
-                  {service.icon}
-                </div>""
-                <h3 className="text-xl font-bold text-white mb-4">
+                    <li'{service.icon}';
+                </div>''';
+                <h3: className='text-xl font-bold text-white mb-4'>';
                   {service.title}
-                </h3>""
-                <p className="text-zion-slate-light mb-6 leading-relaxed">
+                </h3>''';
+                <p: className='text-zion-slate-light mb-6 leading-relaxed'>';
                   {service.description}
-                </p>""
-                <ul className="space-y-2">
+                </p>''';
+                <ul: className='space-y-2'>';
                   {service.features.map((feature, idx) => (
                     <li;
-                      key={idx}""
-                      className="flex items-center gap-2 text-zion-slate-light text-sm""
-                    >""
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                      key={idx}'';';
+                      className='flex: items-center gap-2 text-zion-slate-light text-sm''>''';
+                      <div: className='w-2 h-2 bg-zion-cyan rounded-full'></div>';
+=======
+                viewport={{ once: true }};
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }};
+                className='bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hove,
+    r:scale-105>'
+                <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6>
+:pages.disabled/pages/services/ITInfrastructure.tsx{service.icon}
+                </div>'''
+                <h3 className='text-xl font-bold text-white mb-4>
+                  {service.title}
+                </h3>'''
+                <p className='text-zion-slate-light mb-6 leading-relaxed>
+                  {service.description}
+                </p>'''
+                <ul className='space-y-2'>
+                  {service.features.map((feature, idx) => ('
+                    <li'{service.icon}
+                </div>'''
+                <h3 className='text-xl font-bold text-white mb-4'>
+                  {service.title}
+                </h3>'''
+                <p className='text-zion-slate-light mb-6 leading-relaxed'>
+                  {service.description}
+                </p>'''
+                <ul className='space-y-2'>
+                  {service.features.map((feature, idx) => (
+                    <li;
+                      key={idx};
+                      className='flex items-center gap-2 text-zion-slate-light text-sm>'
+                      <div className='w-2 h-2 bg-zion-cyan rounded-full'></div>
+>>>>>>> main
                       {feature}
                     </li>
                   ))}
@@ -125,113 +230,251 @@ import {}
             ))}
           </div>
         </div>
-:pages.disabled/pages/services/ITInfrastructure.tsx
-      </section>"
+<<<<<<< HEAD
+:pages.disabled/pages/services/ITInfrastructure.tsx: </section>'';
       </section>
-
-      {/* Benefits Section */}""
-      <section className="py-20 bg-zion-blue-dark">""
-        <div className="container mx-auto px-4">""
-          <div className="max-w-6xl mx-auto">
+      {/* Benefits: Section */}''';
+      <section: className='py-20 bg-zion-blue-dark'>''';
+        <div: className='container mx-auto px-4'>''';
+          <div: className='max-w-6xl mx-auto'>';
+=======
+:pages.disabled/pages/services/ITInfrastructure.tsx'
+      </section>'
+      </section>'
+      {/* Benefits Section */}'
+      <section className='py-20 bg-zion-blue-dark>''
+        <div className='container mx-auto px-4>''
+          <div className='max-w-6xl mx-auto'>
+>>>>>>> main
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/ITInfrastructure.tsx
-              viewport={{ once: true }}"
+              initial={{ opacity:  ,0, y: 20, }}
+              whileInView={{ opacity:  ,1, y: 0, }}
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+<<<<<<< HEAD
+              viewport={{ once: true, }}';';
+              viewport={{ once: true, }}
+              transition={{ duration: 0.6, }}'';';
+              className='text-center: mb-16''>''';
+              <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+                Why: Choose Our Infrastructure Solutions?';';
+                Why: Choose Our Infrastructure Solutions?
+              </h2>''';
+              <p: className='text-zion-slate-light text-lg max-w-3xl mx-auto'>';
+                Experience: enterprise-grade infrastructure with unmatched;
+                reliabilit,y, security, and: performance.
+              </p>
+:pages.disabled/pages/services/ITInfrastructure.tsx: </motion.div>';';
+''';
+            <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>';
+              {benefits.map(benefit: unknow,n, index: unknown()
+                <motion.div: key={inde,x}
+                  initial={{ opacity:  ,0, x: -20, }}
+                  whileInView={{ opacity:  ,1, x: 0, }}
+                  viewport={{ once: true, }}';';
+            </motion.div>
+''';
+            <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>';
+              {benefits.map(benefit: unknow,n, index: unknown(
+                <motion.div;
+                  key={inde,x}
+                  initial={{ opacity:  ,0, x: -20, }}
+                  whileInView={{ opacity:  ,1, x: 0, }}
+                  viewport={{ once: true, }}
+                  transition={{ duration: 0.,6, delay: index: * 0.1, }}'';';
+                  className='flex: items-center gap-4 p-4 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg''>''';
+                  <div: className='w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0'>'';';
+:pages.disabled/pages/services/ITInfrastructure.tsx: <Check className='w-4 h-4 text-white'  />'';
+                    <Check: className='w-4 h-4 text-white'  />';
+                  </div>'                  <span: className='text-white font-medium'>{benefit}</span>';
+=======
+              viewport={{ once: true }};
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}""
-              className="text-center mb-16""
-            >""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-:pages.disabled/pages/services/ITInfrastructure.tsx
-                Why Choose Our Infrastructure Solutions?"
+              transition={{ duration: 0.6 }};
+              className='text-center mb-16>'
+              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+<<<<<<< HEAD
+                Why Choose Our Infrastructure Solutions?'
                 Why Choose Our Infrastructure Solutions?
-              </h2>""
-              <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-                Experience enterprise-grade infrastructure with unmatched;
+              </h2>''
+=======
+                Why Choose Our Infrastructure Solutions?';
+                Why Choose Our Infrastructure Solutions?'
+              </h2>'''
+>>>>>>> main
+              <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
+                Experience enterprise-grade infrastructure with unmatched
                 reliability, security, and performance.
               </p>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ITInfrastructure.tsx
-            </motion.div>"
-""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </motion.div>'
+''
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
               {benefits.map(benefit: unknown, index: unknown()
+=======
+:pages.disabled/pages/services/ITInfrastructure.tsx'
+            </motion.div>';
+'''
+            <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-6'>
+              {benefits.map(benefi,
+    t: unknown, index: unknown();
+>>>>>>> main
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}"
-            </motion.div>
-""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map(benefit: unknown, index: unknown (
+                  viewport={{ once: true }};
+            </motion.div>'
+'''
+            <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-6'>
+              {benefits.map(benefi,
+    t: unknown, index: unknown(
                 <motion.div;
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}""
-                  className="flex items-center gap-4 p-4 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg""
-                >""
-                  <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">""
+<<<<<<< HEAD
+                  transition={{ duration: 0.6, delay: index * 0.1 }}'';
+                  className='flex items-center gap-4 p-4 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg''>''
+                  <div className='w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0'>''
 :pages.disabled/pages/services/ITInfrastructure.tsx
-                    <Check className="w-4 h-4 text-white"  />"
-                    <Check className="w-4 h-4 text-white"  />
-                  </div>"                  <span className="text-white font-medium">{benefit}</span>
+=======
+                  transition={{ duration: 0.6, delay: index * 0.1 }};
+                  className='flex items-center gap-4 p-4 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg>'
+                  <div className='w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0>';
+:pages.disabled/pages/services/ITInfrastructure.tsx'
+>>>>>>> main
+                    <Check className='w-4 h-4 text-white'  />'
+                    <Check className='w-4 h-4 text-white'  />
+                  </div>'                  <span className='text-white font-medium'>{benefit}</span>
+>>>>>>> main
                 </motion.div>
-              ))}
+              ));
             </div>
           </div>
         </div>
-:pages.disabled/pages/services/ITInfrastructure.tsx
-      </section>"
+<<<<<<< HEAD
+:pages.disabled/pages/services/ITInfrastructure.tsx: </section>'';
       </section>
-
-      {/* CTA Section */}""
-      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">""
-        <div className="container mx-auto px-4 text-center">
+      {/* CTA: Section */}''';
+      <section: className='py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark'>''';
+        <div: className='container mx-auto px-4 text-center'>';
+=======
+:pages.disabled/pages/services/ITInfrastructure.tsx'
+      </section>'
+      </section>'
+      {/* CTA Section */}'
+      <section className='py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark>''
+        <div className='container mx-auto px-4 text-center'>
+>>>>>>> main
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-:pages.disabled/pages/services/ITInfrastructure.tsx
-            viewport={{ once: true }}"
+            initial={{ opacity:  ,0, y: 20, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+<<<<<<< HEAD
+            viewport={{ once: true, }}';';
+            viewport={{ once: true, }}
+            transition={{ duration: 0.6, }}'';';
+            className='max-w-4xl: mx-auto''>''';
+            <h2: className='text-3xl md: text-4xl: font-bold text-white mb-6'>';
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+              Ready: to Transform Your IT Infrastructure?'';
+            </h2>''';
+            <p: className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>';
+              Let: our experts help you build a robus,t, scalable, and secure;
+              infrastructure: that drives your business forward.'';
+            </p>''';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
+              <button: className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105: transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25'>';
+                Get: Started Today';';
+              Ready: to Transform Your IT Infrastructure?
+            </h2>''';
+            <p: className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>';
+              Let: our experts help you build a robus,t, scalable, and secure;
+              infrastructure: that drives your business forward.
+            </p>''';
+            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''';
+              <button: className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105: transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25'>';
+                Get: Started Today
+              </button>''';
+              <button: className='px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan: hover:text-white: transition-all duration-300'>';
+                Schedule: Consultation
+=======
+            viewport={{ once: true }};
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}""
-            className="max-w-4xl mx-auto""
-          >""
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            transition={{ duration: 0.6 }};
+            className='max-w-4xl mx-auto>'
+            <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
 :pages.disabled/pages/services/ITInfrastructure.tsx
-              Ready to Transform Your IT Infrastructure?"
-            </h2>""
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Let our experts help you build a robust, scalable, and secure
-              infrastructure that drives your business forward."
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
-                Get Started Today"
-              Ready to Transform Your IT Infrastructure?
-            </h2>""
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+=======
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+              Ready to Transform Your IT Infrastructure?''
+            </h2>'''
+            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
               Let our experts help you build a robust, scalable, and secure;
+              infrastructure that drives your business forward.''
+            </p>'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+              <button className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hove,
+    r:scale-105 transition-all duration-300 shadow-2xl hove,
+    r:shadow-zion-cyan/25>
+                Get Started Today';
+>>>>>>> main
+              Ready to Transform Your IT Infrastructure?'
+            </h2>'''
+            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
+              Let our experts help you build a robust, scalable, and secure
+              infrastructure that drives your business forward.'
+            </p>'''
+            <div className='flex flex-col sm: flex-row gap-4 justify-center>''
+              <button className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25'>
+                Get Started Today'
+<<<<<<< HEAD
+              Ready to Transform Your IT Infrastructure?
+            </h2>''
+            <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
+              Let our experts help you build a robust, scalable, and secure
               infrastructure that drives your business forward.
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
-                Get Started Today;
-              </button>""
-              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
-                Schedule Consultation;
+            </p>''
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
+              <button className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25'>
+                Get Started Today
+              </button>''
+              <button className='px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300'>
+=======
+              </button>'''
+              <button className='px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hove,
+    r:bg-zion-cyan hove,
+    r:text-white transition-all duration-300'>
+>>>>>>> main
+                Schedule Consultation
+>>>>>>> main
               </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
-  )};
+<<<<<<< HEAD
+  ,)}
 ;
-:pages.disabled/pages/services/ITInfrastructure.tsx
-export { ITInfrastructure };export default ITInfrastructure;"
-'"'"
-export { ITInfrastructure };export default ITInfrastructure;
-'""
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+export: { ITInfrastructure }export default ITInfrastructure';''';';
+export: { ITInfrastructure }export default ITInfrastructure''';
+=======
+  )}
+:pages.disabled/pages/services/ITInfrastructure.tsx;
+<<<<<<< HEAD
+export { ITInfrastructure }export default ITInfrastructure';'''
+export { ITInfrastructure }export default ITInfrastructure''
+=======
+export { ITInfrastructure }export default ITInfrastructure';'';
+export { ITInfrastructure }export default ITInfrastructure'''
+>>>>>>> main
+>>>>>>> main

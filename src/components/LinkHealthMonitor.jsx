@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';''';,"});,"})
 import { motion } from 'framer-motion';,"});,"})
 import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = () => {}"});,"})
@@ -287,3 +288,35 @@ export { LinkHealthMonitor };,"});,"})
 export { LinkHealthMonitor };,"});,"})
 ;,"});,"})
 export { LinkHealthMonitor };,"});,"})
+=======
+<<<<<<< HEAD
+ const: LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';";";";";
+=======
+<<<<<<< HEAD
+ const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';"'"
+=======
+<<<<<<< HEAD
+ const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';";"
+"
+=======
+<<<<<<< HEAD
+ const LinkHealthMonitor = () => {} const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const;const;const [selectedFilter, setSelectedFilter] = useState (&apos;all&apos;) ';";
+&quot;"
+=======
+<<<<<<< HEAD
+ const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ';";'"
+<<<<<<< HEAD
+""
+}
+=======
+=======
+ const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false)  const [isMonitoring, setIsMonitoring] = useState (false)  const [linkStatuses, setLinkStatuses] = useState ([])  const [report, setReport] = useState (null)  const [selectedFilter, setSelectedFilter] = useState ('all') ;'"
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

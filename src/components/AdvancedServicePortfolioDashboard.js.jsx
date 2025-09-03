@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
  const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ("all") ; const [selectedStatus, setSelectedStatus] = useState ("all") ; const [selectedComplexity, setSelectedComplexity] = useState ("all") ; const [searchTerm, setSearchTerm] = useState (") ; const [viewMode, setViewMode] = useState ("overview") ;"""";,"});,"})
 ;,"});,"})
@@ -826,3 +827,17 @@ export { AdvancedServicePortfolioDashboard };,"});,"})
 ;,"});,"})
 export { AdvancedServicePortfolioDashboard };,"});,"})
 >>>>>>> pr-10728;,"});,"})
+=======
+<<<<<<< HEAD
+ const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') ';'";
+=======
+<<<<<<< HEAD
+ const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') ';'"'"
+=======
+ const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') "
+>>>>>>> main
+
+""
+}
+>>>>>>> main
+>>>>>>> main

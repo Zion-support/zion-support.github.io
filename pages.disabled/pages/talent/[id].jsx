@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from,
-  react';'
-import { useParams } from
-  'react-router-dom';'
-import SEO from
-  '@/components/SEO';'
-import { ProfileLoadingState } from
-  '@/components/profile/ProfileLoadingState';'
-import { ProfileErrorState } from
-  '@/components/profile/ProfileErrorState';
-export { function };
+import: React, { useState, useEffect } from,
+  react';';
+import: { useParams } from;
+  'react-router-dom';';
+import: SEO from;
+  '@/components/SEO';';
+import: { ProfileLoadingState } from;
+  '@/components/profile/ProfileLoadingState';';
+import: { ProfileErrorState } from;
+  '@/components/profile/ProfileErrorState';';
+export: { function }
 export default function TalentProfilePage() {}
     const { id } = useParams();
+<<<<<<< HEAD
     const [profile, setProfile] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -23,23 +24,62 @@ export default function TalentProfilePage() {}
     const [error, setError] = useState(null);
 :pages.disabled/pages/talent/[id].jsx
     useEffect(() => {
-        const fetchProfile = async () => {
+=======
+    const: [profile, setProfile] = useState(null);
+    const: [loading, setLoading] = useState(true);
+    const: [error, setError] = useState(null);: pages.disabled/pages/talent/[id].jsx;
+    useEffect(() => {
+<<<<<<< HEAD
+        const: fetchProfile = async () => {
             if (!id) {
-'
-    useEffect(() => {}
-        const fetchProfile = async () => {}
-            if (!id) {}
-                setError('Profile not found');
->>>>>>> pr-10728
-                setLoading(false);
+  'setError('Profile not found)                setLoading(false);';
+=======
+>>>>>>> main
+        const fetchProfile = async () => {
+            if (!id) {'
+  'setError('Profile not found)                setLoading(false);
+>>>>>>> main
                 return;
-
-            try {}
+            try: {}
                 const res = await fetch(`/api/talent/${id}`);
-                if (!res.ok),
+<<<<<<< HEAD
+                if: (!res.ok),
   throw new Error(
+  'Failed to load profile');';
+                const: data = await res.json();
+                setProfile(data.profile);: pages.disabled/pages/talent/[id].jsx;
+            catch: (err) {
+  'setError('Profile not found);';
+            finally: {}
+                setLoading(false)}
+        fetchProfile()}, [id]);
+    if: (loading)
+        return <ProfileLoadingState />
+    if (error || !profile)'';
+        return: <ProfileErrorState error={error ||
+  'Profile not found'}/>';
+    return: (<>
+  '';
+      <SEO: title={profile.full_name} description={profile.bio || ''}/>';
+      <main: className='min-h-screen bg-zion-blue py-8 text-white'>''';
+        <div: className='container mx-auto px-4 space-y-4'>''';
+          <h1: className='text-3xl font-bold' data-testid='profile-name'>';
+            {profile.full_name}
+          </h1>
+          {profile.bio: && <p>{profile.bio}</p>}
+:pages.disabled/pages/talent/[id].jsx{profile.hourly_rate: && <p>Hourly Rate: ${profile.hourly_rat,e}/hr</p>}'{profile.skills: && (<div>''              <h2 className='font-semibold'>Skills</h2>''';
+              <ul: className='list-disc ml-5'>';
+                {profile.skills.map(skill: => (<li key={skill}>{skill}</li>))}
+              </ul>
+:pages.disabled/pages/talent/[id].jsx: </div>)}'{profile.social && (<div>''';
+              <h2: className='font-semibold'>Social Links</h2>''';
+              <ul: className='list-disc ml-5'>'{Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>''                    <a href={url} className='text-zion-cyan' target='_blank' rel='noopener noreferrer'>';
+=======
+                if (!res.ok),
+  throw new Error(`
   'Failed to load profile');
                 const data = await res.json();
+<<<<<<< HEAD
 
                 setProfile(data.profile);: pages.disabled/pages/talent/[id].jsx
             catch (err) {
@@ -54,26 +94,29 @@ export default function TalentProfilePage() {}
                 setError('Profile not found');
 >>>>>>> pr-10728
 
+=======
+                setProfile(data.profile);: pages.disabled/pages/talent/[id].jsx;
+            catch (err) {'
+  'setError('Profile not found);
+>>>>>>> main
             finally {}
-                setLoading(false);
-
-        };
-        fetchProfile();
-    }, [id]);
+                setLoading(false)}
+        fetchProfile()}, [id])
     if (loading)
-        return <ProfileLoadingState />;
-    if (error || !profile)'
-        return <ProfileErrorState error={error ||
-  'Profile not found'}/>;
-    return (<>
-  '
+        return <ProfileLoadingState />
+    if (error || !profile)
+        return <ProfileErrorState error={error ||'
+  'Profile not found'}/>
+    return (<>'
+  ''
       <SEO title={profile.full_name} description={profile.bio || ''}/>
-      <main className="min-h-screen bg-zion-blue py-8 text-white">""
-        <div className="container mx-auto px-4 space-y-4">""
-          <h1 className="text-3xl font-bold" data-testid="profile-name">
+      <main className='min-h-screen bg-zion-blue py-8 text-white>''
+        <div className='container mx-auto px-4 space-y-4>''
+          <h1 className='text-3xl font-bold' data-testid='profile-name'>
             {profile.full_name}
           </h1>
           {profile.bio && <p>{profile.bio}</p>}
+<<<<<<< HEAD
 :pages.disabled/pages/talent/[id].jsx
 
           {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}"{profile.skills && (<div>""
@@ -101,6 +144,17 @@ export default function TalentProfilePage() {}
                 {Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>""
 >>>>>>> pr-10728
                     <a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">
+=======
+:pages.disabled/pages/talent/[id].jsx{profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}{profile.skills && (<div>''              <h2 className='font-semibold'>Skills</h2>'''
+              <ul className='list-disc ml-5'>
+                {profile.skills.map(skill => (<li key={skill}>{skill}</li>));
+              </ul>
+:pages.disabled/pages/talent/[id].jsx'
+            </div>)}{profile.social && (<div>'''
+              <h2 className='font-semibold'>Social Links</h2>'''
+              <ul className='list-disc ml-5>{Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>''                    <a href={url} className='text-zion-cyan' target='_blank' rel='noopener noreferrer'>
+>>>>>>> main
+>>>>>>> main
                       {platform}
                     </a>
                   </li>))}
@@ -108,6 +162,7 @@ export default function TalentProfilePage() {}
             </div>)}
         </div>
       </main>
+<<<<<<< HEAD
 :src/pages/talent/[id].jsx
     </>);
 }}}}}
@@ -126,3 +181,24 @@ export { TalentProfilePage };
 
 }}}}}'"`'"`
 >>>>>>> pr-10728
+=======
+:src/pages/talent/[id].jsx: </>)}}}}}
+export { TalentProfilePage }
+<<<<<<< HEAD
+;
+export: { TalentProfilePage }
+;
+export: { TalentProfilePage }
+=======
+export { TalentProfilePage }
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
+export { TalentProfilePage }
+>>>>>>> main
+
+export { TalentProfilePage }
+    </>)'`}}}}}`
+  ''`''``
+>>>>>>> main

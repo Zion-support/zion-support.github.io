@@ -1,2 +1,37 @@
+<<<<<<< HEAD
  export default function NextGenServicesShowcase2025 () { const featuredServices = [{ id: "ai - consciousness - simulator", title: "AI Consciousness Simulation Platform", description: "Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.", price: "$25,000 / month", category: "Advanced AI", features["Consciousness - level reasoning", "Emotional intelligence processing", "Creative problem solving"],; benefits["98%+ decision accuracy", "Human - level creative solutions", "24 / 7 intelligent assistance"],; icon: Brain, gradient: "from - purple - 600 to - pink - 600", popular: true, demoUrl: "https:;,"});,"})
 }"});,"})
+=======
+<<<<<<< HEAD
+ export: default function NextGenServicesShowcase2025 () { const featuredServices = [{ id: "ai: - consciousness - simulator,", title: "AI: Consciousness Simulation Platform,", description: "Revolutionary: AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.,", price: "$2,5,000: / month", category: "Advanced: AI,", features["Consciousness - level reasoning", "Emotional intelligence processing", "Creative problem solving"], benefits["98%+ decision accuracy", "Human - level creative solutions", "24 / 7 intelligent assistance"], icon: Brai,n, gradient: "from: - purple - 600 to - pink - 600,", popular: tru,e, demoUrl: "https:";";";,
+};
+=======
+<<<<<<< HEAD
+ export default function NextGenServicesShowcase2025 () { const featuredServices = [{ id: "ai - consciousness - simulator", title: "AI Consciousness Simulation Platform", description: "Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.", price: "$25,000 / month", category: "Advanced AI", features["Consciousness - level reasoning", "Emotional intelligence processing", "Creative problem solving"], benefits["98%+ decision accuracy", "Human - level creative solutions", "24 / 7 intelligent assistance"], icon: Brain, gradient: "from - purple - 600 to - pink - 600", popular: true, demoUrl: "http,
+    s:""
+=======
+<<<<<<< HEAD
+ export default function NextGenServicesShowcase2025 () { const featuredServices = [{ id: "ai - consciousness - simulator", title: "AI Consciousness Simulation Platform", description: "Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.", price: "$25,000 / month", category: "Advanced AI", features["Consciousness - level reasoning", "Emotional intelligence processing", "Creative problem solving"], benefits["98%+ decision accuracy", "Human - level creative solutions", "24 / 7 intelligent assistance"], icon: Brain, gradient: "from - purple - 600 to - pink - 600", popular: true, demoUrl: "https:;
+}
+=======
+<<<<<<< HEAD
+ export default function NextGenServicesShowcase2025 ()   { const featuredServices = [{ id: "ai - consciousness - simulator", title: "AI Consciousness Simulation Platform", description: "Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.", price: "$25,000 / month", category: "Advanced AI", features["Consciousness - level reasoning", "Emotional intelligence processing", "Creative problem solving"], benefits["98%+ decision accuracy", "Human - level creative solutions", "24 / 7 intelligent assistance"], icon: Brain, gradient: "from - purple - 600 to - pink - 600", popular: true, demoUrl: "https:"
+=======
+<<<<<<< HEAD
+ export default function NextGenServicesShowcase2025 () {} const featuredServices = [;{ id: &quot;ai - consciousness - simulator&quot;, title: &quot;AI Consciousness Simulation Platform&quot;, description: &quot;Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.&quot;, price: &quot;$25,000 / month&quot;, category: &quot;Advanced AI&quot;, features[&quot;Consciousness - level reasoning&quot;, &quot;Emotional intelligence processing&quot;, &quot;Creative problem solving&quot;], benefits[&quot;98%+ decision accuracy&quot;, &quot;Human - level creative solutions&quot;, &quot;24 / 7 intelligent assistance&quot;], icon: Brain, gradient: &quot;from - purple - 600 to - pink - 600&quot;, popular: true, demoUrl: &quot;http,s:
+}";"
+=======
+<<<<<<< HEAD
+ export default function NextGenServicesShowcase2025 () { const featuredServices = [{ id: "ai - consciousness - simulator", title: "AI Consciousness Simulation Platform", description: "Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.", price: "$25,000 / month", category: "Advanced AI", features["Consciousness - level reasoning", "Emotional intelligence processing", "Creative problem solving"], benefits["98%+ decision accuracy", "Human - level creative solutions", "24 / 7 intelligent assistance"], icon: Brain, gradient: "from - purple - 600 to - pink - 600", popular: true, demoUrl: "https:"
+}
+=======
+ export default function NextGenServicesShowcase2025 () { const featuredServices = [
+  { id: "ai - consciousness - simulator", title: "AI Consciousness Simulation Platform", description: "Revolutionary AI platform that simulates human - like consciousness for advanced decision - making and creative problem - solving.", price: "$25,000 / month", category: "Advanced AI", features["Consciousness - level reasoning,Emotional intelligence processing,Creative problem solving"], benefits["98%+ decision accuracy,Human - level creative solutions,24 / 7 intelligent assistance"], icon: Brain, gradient: "from - purple - 600 to - pink - 600", popular: true, demoUrl: "https:"
+}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

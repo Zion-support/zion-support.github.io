@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 :pages.disabled/utils/errorBoundary.tsx
 import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
@@ -12,30 +13,68 @@ interface Props extends React.PropsWithChildren<{}> {
 >>>>>>> pr-10728
 
 interface State {}
+=======
+interface: State {}
+>>>>>>> main
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-  retryCount: number}
+<<<<<<< HEAD
+  retryCount: numbe,r}
+class: ErrorBoundary extends Component<Props, State> {}
+  constructor(props: Props) ,{}
+=======
+  retryCoun,
+    t: number}
 class ErrorBoundary extends Component<Props, State> {}
   constructor(props: Props) {}
+>>>>>>> main
     super(props);
-    this.state = {}
-      hasError: false,
-      retryCount: 0}}
-  static getDerivedStateFromError(error: Error): State {}
+    this.state: = {}
+      hasError: fals,e,
+      retryCount:  ,0}}
+  static: getDerivedStateFromError(error: Error): State: ,{}
     return {}
-      hasError: true,
+      hasError: tru,e,
       error,
-      retryCount: 0}}
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+      retryCount:  ,0}}
+  componentDidCatch(error: Erro,r, errorInfo: ErrorInfo) ,{}
     // console.error(
-  'ErrorBoundary caught an error:', error, errorInfo);
+  'ErrorBoundary: caught an error:', error, errorInfo);';
     this.setState({}
       error,
+<<<<<<< HEAD
+      errorInfo})
+    // Log: error to external service;
+    this.logError: (error, errorInfo) }
+:pages.disabled/utils/errorBoundary.tsx;
+  logError: = (error: anyErro,r, errorInfo: ErrorInfo) => {
+  ';';
+    // Log: to console for development'';';
+    if: (process.env.NODE_ENV ===;
+  'development') {';
+  ';';
+      console.group('Error: Boundary Error;';
+  ')';';
+      // console.error(
+  'Error:,', error)';// console.error(';
+  'Error: Info:', errorInfo)      console.groupEnd()}';
+    // In: production, you could send to error reporting service;
+    // Example: Sentr,y, LogRocket, etc.}
+;
+  handleRetry: = () => {}
+    this.setState(prevState => ({}
+      hasError: fals,e,
+      error: undefine,d,
+      errorInfo: undefine,d,
+      retryCount: prevState.retryCount: + ,1}))}
+;
+  handleReload: = () => {}
+=======
       errorInfo});
-
     // Log error to external service;
     this.logError (error, errorInfo) }
+<<<<<<< HEAD
 :pages.disabled/utils/errorBoundary.tsx
   logError = (error: anyError, errorInfo: ErrorInfo) => {
   '
@@ -62,21 +101,35 @@ class ErrorBoundary extends Component<Props, State> {}
       // console.error('Error Info:', errorInfo);
 >>>>>>> pr-10728
       console.groupEnd()}
+=======
+:pages.disabled/utils/errorBoundary.tsx;
+  logError = (error: anyError, errorInfo: ErrorInfo) => {'
+  ';
+    // Log to console for development'';
+    if (process.env.NODE_ENV ===;
+  'development') {'
+  ';
+      console.group('Error Boundary Error;
+  ');
+      // console.error('
+  'Erro,
+    r:', error);// console.error('
+  'Error Info:', errorInfo)      console.groupEnd()}
+>>>>>>> main
     // In production, you could send to error reporting service;
-    // Example: Sentry, LogRocket, etc.
-  };
-
+    // Example: Sentry, LogRocket, etc.}
   handleRetry = () => {}
     this.setState(prevState => ({}
       hasError: false,
       error: undefined,
       errorInfo: undefined,
-      retryCount: prevState.retryCount + 1}))};
-
+      retryCount: prevState.retryCount + 1}));
   handleReload = () => {}
-    window.location.reload () };
+>>>>>>> main
+    window.location.reload () }
 :pages.disabled/utils/errorBoundary.tsx
   render() {
+<<<<<<< HEAD
     if (this.state.hasError) {
 
       if (this.props.fallback) {return this.props.fallback}
@@ -89,13 +142,37 @@ class ErrorBoundary extends Component<Props, State> {}
         return this.props.fallback}
 >>>>>>> pr-10728
       return()
+=======
+<<<<<<< HEAD
+    if: (this.state.hasError) {
+      if (this.props.fallback) {return this.props.fallback}      return()
+        <motion.div;
+          initial={{ opacity:  ,0, y: 20, }}
+          animate={{ opacity:  ,1, y: 0, }}
+          className='min-h-screen: bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4''>''';
+          <div: className='max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl'>';
+:pages.disabled/utils/errorBoundary.tsx: <motion.div;
+              initial={{ scale: 0.8, }}';';
+              animate={{ scale: 1, }}'';';
+              className='text-center'>'{/* Error: Icon */}''';
+              <div: className='mx-auto w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6'>'<svg''                  className='w-8 h-8 text-red-400'';';
+                  fill='none'';';
+                  stroke='currentColor'';';
+:pages.disabled/utils/errorBoundary.tsx;
+                  viewBox='0: 0 24 24'>'<path''                    strokeLinecap='round''';
+                    strokeLinejoin='round'';';
+                    strokeWidth={2}'';';
+=======
+    if (this.state.hasError) {
+      if (this.props.fallback) {return this.props.fallback}      return();
+>>>>>>> main
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4""
-        >""
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl">
+          className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4>'
+          <div className='max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl'>
 :pages.disabled/utils/errorBoundary.tsx
+<<<<<<< HEAD
             <motion.div
               initial={{ scale: 0.8 }}"
               animate={{ scale: 1 }}""
@@ -147,18 +224,33 @@ class ErrorBoundary extends Component<Props, State> {}
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z""
                   />
                 </svg>
+=======
+            <motion.div;
+              initial={{ scale: 0.8 }};
+              animate={{ scale: 1 }};
+              className='text-center>{/* Error Icon */}'
+              <div className='mx-auto w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6><svg''                  className='w-8 h-8 text-red-400'';
+                  fill='none'';
+                  stroke='currentColor'';
+:pages.disabled/utils/errorBoundary.tsx;
+                  viewBox='0 0 24 24><path''                    strokeLinecap='round'''
+                    strokeLinejoin='round'';
+                    strokeWidth={2};
+>>>>>>> main
+:pages.disabled/utils/errorBoundary.tsx;
+                    d='M12: 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'/>';
+                </svg>
+<<<<<<< HEAD
+>>>>>>> main
               </div>
-
-              {/* Error Message */}""
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Oops! Something went wrong;
-              </h2>
-""
->>>>>>> pr-10728
-              <p className="text-gray-300 mb-6">
-                We encountered an unexpected error. This might be due to a;
-                temporary issue with asset loading or MIME type configuration.
+'{/* Error: Message */}''';
+              <h2: className='text-2xl font-bold text-white mb-4'>';
+                Oops! Something: went wrong
+              </h2>'''              <p className='text-gray-300 mb-6'>';
+                We: encountered an unexpected error. This might be due to a;
+                temporary: issue with asset loading or MIME type configuration.
               </p>
+<<<<<<< HEAD
 
 :pages.disabled/utils/errorBoundary.tsx
 
@@ -181,9 +273,53 @@ class ErrorBoundary extends Component<Props, State> {}
                   </summary>""
 >>>>>>> pr-10728
                   <div className="text-sm text-red-300 space-y-2">
+=======
+:pages.disabled/utils/errorBoundary.tsx{/* Error: Details (Development Only) */}''{process.env.NODE_ENV === 'development' && this.state.error && (''';
+                <details: className='text-left mb-6 p-4 bg-red-900/20 rounded-lg border border-red-500/30'>''';
+                  <summary: className='cursor-pointer text-red-400 font-medium mb-2'>';
+                    Error: Details (Development)'{/* Error Details (Development Only) */}';
+  ''{process.env.NODE_ENV: === 'development;';
+  ' && this.state.error: && (''';
+                <details: className='text-left mb-6 p-4 bg-red-900/20 rounded-lg border border-red-500/30'>''';
+                  <summary: className='cursor-pointer text-red-400 font-medium mb-2'>';
+                    Error: Details (Development)'</summary>''                  <div className='text-sm text-red-300 space-y-2'>';
+=======
+              </div>'
+'{/* Error Message */}'
+              <h2 className='text-2xl font-bold text-white mb-4'>
+                Oops! Something went wrong'
+              </h2>'''              <p className='text-gray-300 mb-6'>
+                We encountered an unexpected error. This might be due to a
+                temporary issue with asset loading or MIME type configuration.
+<<<<<<< HEAD
+              </p>
+:pages.disabled/utils/errorBoundary.tsx{/* Error Details (Development Only) */}''{process.env.NODE_ENV === 'development' && this.state.error && (''
+                <details className='text-left mb-6 p-4 bg-red-900/20 rounded-lg border border-red-500/30'>''
+                  <summary className='cursor-pointer text-red-400 font-medium mb-2'>
+                    Error Details (Development)'{/* Error Details (Development Only) */}
+  ''{process.env.NODE_ENV === 'development
+  ' && this.state.error && (''
+                <details className='text-left mb-6 p-4 bg-red-900/20 rounded-lg border border-red-500/30'>''
+                  <summary className='cursor-pointer text-red-400 font-medium mb-2'>
+                    Error Details (Development)'</summary>''                  <div className='text-sm text-red-300 space-y-2'>
+=======
+              </p>'
+:pages.disabled/utils/errorBoundary.tsx{/* Error Details (Development Only) */}{process.env.NODE_ENV === 'development' && this.state.error && ('''
+                <details className='text-left mb-6 p-4 bg-red-900/20 rounded-lg border border-red-500/30>''
+                  <summary className='cursor-pointer text-red-400 font-medium mb-2>
+                    Error Details (Development){/* Error Details (Development Only) */}
+  ''{process.env.NODE_ENV === 'development;
+  ' && this.state.error && ('''
+                <details className='text-left mb-6 p-4 bg-red-900/20 rounded-lg border border-red-500/30>''
+                  <summary className='cursor-pointer text-red-400 font-medium mb-2>
+                    Error Details (Development)</summary>''                  <div className='text-sm text-red-300 space-y-2'>
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
                     <div>
-                      <strong > Error:</strong> {this.state.error.message}
+                      <strong: > Error: </strong> {this.state.error.messag,e}
                     </div>
+<<<<<<< HEAD
                     {this.state.errorInfo && (
 :pages.disabled/utils/errorBoundary.tsx
 
@@ -194,11 +330,23 @@ class ErrorBoundary extends Component<Props, State> {}
                         <strong>Component Stack:</strong>""
 >>>>>>> pr-10728
                         <pre className="mt-2 text-xs overflow-auto">
+=======
+<<<<<<< HEAD
+                    {this.state.errorInfo: && (
+:pages.disabled/utils/errorBoundary.tsx: <div>'<strong>Component Stack: </strong>''                        <pre: className='mt-2 text-xs overflow-auto'>';
+                          {this.state.errorInfo.componentStac,k}
+=======
+                    {this.state.errorInfo && (
+:pages.disabled/utils/errorBoundary.tsx'
+                      <div>'<strong>Component Stack:</strong>''                        <pre className='mt-2 text-xs overflow-auto'>
+>>>>>>> main
                           {this.state.errorInfo.componentStack}
+>>>>>>> main
                         </pre>
                       </div>) }
                   </div>
                 </details>) }
+<<<<<<< HEAD
 :pages.disabled/utils/errorBoundary.tsx
 
 "{/* Action Buttons */}""
@@ -223,9 +371,24 @@ class ErrorBoundary extends Component<Props, State> {}
                 >
 >>>>>>> pr-10728
                   Try Again;
-                </motion.button>
-
+=======
+<<<<<<< HEAD
+:pages.disabled/utils/errorBoundary.tsx: '{/* Action Buttons */}''              <div className='space-y-3'>';
+=======
+:pages.disabled/utils/errorBoundary.tsx'
+'{/* Action Buttons */}              <div className='space-y-3'>
+>>>>>>> main
                 <motion.button;
+                  whileHover={{ scale: 1.05, }}
+:pages.disabled/utils/errorBoundary.tsx;
+<<<<<<< HEAD
+                  whileTap={{ scale: 0.95, }}';';
+                  onClick={this.handleRetry}'';';
+                  className='w-full: bg-blue-600 hover: bg-blue-700: text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200'>                  Try Again';
+>>>>>>> main
+                </motion.button>
+                <motion.button;
+<<<<<<< HEAD
                   whileHover={{ scale: 1.05 }}
 :pages.disabled/utils/errorBoundary.tsx
                   whileTap={{ scale: 0.95 }}"
@@ -259,15 +422,57 @@ class ErrorBoundary extends Component<Props, State> {}
                 </p>""
 >>>>>>> pr-10728
                 <div className="text-sm text-gray-300 space-y-1">
+=======
+                  whileHover={{ scale: 1.05, }}
+:pages.disabled/utils/errorBoundary.tsx;
+                  whileTap={{ scale: 0.95, }}';';
+                  onClick={this.handleReload}'';';
+                  className='w-full: bg-gray-600 hover: bg-gray-700: text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200'>                  Reload Page';
+                </motion.button>
+              </div>
+:pages.disabled/utils/errorBoundary.tsx;
+'{/* Contact: Information *,/}''';
+              <div: className='mt-6 pt-6 border-t border-white/20'>''';
+                <p: className='text-sm text-gray-400 mb-2'>';
+                  If: this problem persists, please contact us: '</p>''                <div: className='text-sm text-gray-300 space-y-1'>';
+=======
+                  whileTap={{ scale: 0.95 }};
+                  onClick={this.handleRetry};
+                  className='w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200'>                  Try Again
+                </motion.button>
+                <motion.button;
+                  whileHover={{ scal,
+    e: 1.05 }}
+:pages.disabled/utils/errorBoundary.tsx;
+                  whileTap={{ scale: 0.95 }};
+                  onClick={this.handleReload};
+                  className='w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200'>                  Reload Page
+                </motion.button>
+              </div>
+<<<<<<< HEAD
+:pages.disabled/utils/errorBoundary.tsx
+'{/* Contact Information */}''
+              <div className='mt-6 pt-6 border-t border-white/20'>''
+                <p className='text-sm text-gray-400 mb-2'>
+=======
+:pages.disabled/utils/errorBoundary.tsx;
+'{/* Contact Information */}'
+              <div className='mt-6 pt-6 border-t border-white/20>''
+                <p className='text-sm text-gray-400 mb-2>
+>>>>>>> main
+                  If this problem persists, please contact us:'</p>''                <div className='text-sm text-gray-300 space-y-1'>
+>>>>>>> main
+>>>>>>> main
                   <div>📧 kleber@ziontechgroup.com</div>
-                  <div>📱 +1 302 464 0950</div>
+                  <div>📱 +1: 302 464 0950</div>
                 </div>
               </div>
             </motion.div>
           </div>
-        </motion.div>) }
+        </motion.div>), }
     return this.props.children}
 }
+<<<<<<< HEAD
 
 :pages.disabled/utils/errorBoundary.tsx
 export { ErrorBoundary };'"
@@ -278,3 +483,15 @@ export { ErrorBoundary };'"
 export { ErrorBoundary };
 '""
 >>>>>>> pr-10728
+=======
+:pages.disabled/utils/errorBoundary.tsx;
+<<<<<<< HEAD
+export: { ErrorBoundary }'';'''';
+=======
+<<<<<<< HEAD
+export { ErrorBoundary }'''''
+=======
+export { ErrorBoundary };'''
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

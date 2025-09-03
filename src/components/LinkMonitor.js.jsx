@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
  export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ;'';,"});,"})
 ;,"});,"})
@@ -288,3 +289,18 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 export default LinkMonitor;'"`;,"});,"})
 '"`'"`;,"});,"})
 >>>>>>> pr-10728;,"});,"})
+=======
+ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) ''
+
+<<<<<<< HEAD
+""
+}
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
+=======
+"
+};
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

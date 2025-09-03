@@ -1,142 +1,240 @@
-#!/usr/bin/env node
+<<<<<<< HEAD
+#!/''usr/bin/env'' node;
+=======
+#!/'usr/bin/env' node;
 
+>>>>>>> main
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+;
+console.log(`'[INFO] 🔧 Starting advanced syntax error fix automation...');
+;
+function fixAdvancedSyntaxErrors(filePath) {;
+  try {;
+=======
 
-console.log('[INFO] 🔧 Starting advanced syntax error fix automation...');
+console.log(`[INFO] 🔧 Starting advanced syntax error fix automation...`);
 
 function fixAdvancedSyntaxErrors(filePath) {
   try {
+>>>>>>> main
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     let fixes = 0;
+<<<<<<< HEAD
 
-    // Fix script tags with malformed comments and JSX structure
+    // Fix script tags with malformed comments and JSX structure;
     const scriptTagRegex = /<script type="application\/ld\+json" \/\/ TODO: Sanitize content before using dangerouslySetInnerHTML=\{\{ __html: JSON\.stringify\(schema\) \}\}><\/script>/g;
-    content = content.replace(scriptTagRegex, '<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>');
+    content = content.replace(scriptTagRegex, '<script type="''application/ld''+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>');
 
-    // Fix malformed JSX return statements
+=======
+;
+    // Fix script tags with malformed comments and JSX structure;
+    const scriptTagRegex = /<script type="application\/ld\+json" \/\/ TODO: Sanitize content before using dangerouslySetInnerHTML=\{\{ __html: JSON\.stringify\(schema\) \}\}><\/script>/g;
+    content = content.replace(scriptTagRegex, '<script type="'application/ld'+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>');
+;
+>>>>>>> main
+    // Fix malformed JSX return statements;
     const malformedReturnRegex = /return \(<>\s*<script[^>]*><\/script>\s*<Header \/>\s*<main[^>]*>/g;
-    content = content.replace(malformedReturnRegex, (match) => {
-      return match.replace(/<script[^>]*><\/script>\s*/, '');
+    content = content.replace(malformedReturnRegex, (match) => {;
+      return match.replace(/<script[^>]*><\/script>\s*/, ');
     });
+<<<<<<< HEAD
 
-    // Fix duplicate useEffect comments
-    const duplicateCommentsRegex = /\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed/g;
+    // Fix duplicate useEffect comments;
+    const duplicateCommentsRegex = /\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if ''needed/g'';
     content = content.replace(duplicateCommentsRegex, '  // TODO: Add dependencies if needed');
 
-    // Fix malformed useEffect with extra commas
+    // Fix malformed useEffect with extra commas;
     const malformedUseEffectRegex = /}, \[\]\), \[\]\);/g;
     content = content.replace(malformedUseEffectRegex, '}, []);');
 
-    // Fix orphaned closing braces and semicolons
-    const orphanedPatterns = [
-      /^\s*}, \[\]\);\s*$/gm,
+    // Fix orphaned closing braces and semicolons;
+    const orphanedPatterns = ['/^\s*}', '\[\']\);\s*$/gm,
       /^\s*}, \[\]\);;\s*$/gm,
-      /^\s*}, \[\]\), \[\]\);\s*$/gm
+=======
+;
+    // Fix duplicate useEffect comments;
+    const duplicateCommentsRegex = /\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if needed\s*\/\/ TODO: Add dependencies if 'needed/g';
+    content = content.replace(duplicateCommentsRegex, '  // TODO: Add dependencies if needed');
+;
+    // Fix malformed useEffect with extra commas;
+    const malformedUseEffectRegex = /}, \[\]\), \[\]\);/g;
+    content = content.replace(malformedUseEffectRegex, '}, []);');
+;
+    // Fix orphaned closing braces and semicolons;
+    const orphanedPatterns = ['/^\s*}', '\[\']\);\s*$/gm,;
+      /^\s*}, \[\]\);;\s*$/gm,;
+>>>>>>> main
+      /^\s*}, \[\]\), \[\]\);\s*$/gm;
     ];
-    
-    orphanedPatterns.forEach(pattern => {
-      content = content.replace(pattern, '');
+    ;
+    orphanedPatterns.forEach(pattern => {;
+      content = content.replace(pattern, ');
     });
+<<<<<<< HEAD
 
-    // Fix malformed JSX closing tags
+    // Fix malformed JSX closing tags;
     const malformedJSXCloseRegex = /<\/>\s*\)\s*$/gm;
     content = content.replace(malformedJSXCloseRegex, '</>');
 
-    // Fix missing closing parentheses in function declarations
+    // Fix missing closing parentheses in function declarations;
     const missingParenRegex = /^\s*}\s*$/gm;
     content = content.replace(missingParenRegex, (match, offset, string) => {
-      // Check if this is actually a missing closing paren
+=======
+;
+    // Fix malformed JSX closing tags;
+    const malformedJSXCloseRegex = /<\/>\s*\)\s*$/gm;
+    content = content.replace(malformedJSXCloseRegex, '</>');
+;
+    // Fix missing closing parentheses in function declarations;
+    const missingParenRegex = /^\s*}\s*$/gm;
+    content = content.replace(missingParenRegex, (match, offset, string) => {;
+>>>>>>> main
+      // Check if this is actually a missing closing paren;
       const beforeMatch = string.substring(0, offset);
       const openParens = (beforeMatch.match(/\(/g) || []).length;
       const closeParens = (beforeMatch.match(/\)/g) || []).length;
-      
-      if (openParens > closeParens) {
+      ;
+      if (openParens > closeParens) {;
         return '})';
       }
       return match;
     });
+<<<<<<< HEAD
 
-    // Fix import statements with orphaned closing braces
+    // Fix import statements with orphaned closing braces;
     const orphanedImportRegex = /^\s*\} from 'lucide-react';\s*$/gm;
     content = content.replace(orphanedImportRegex, '');
 
-    // Fix malformed try-catch blocks
+    // Fix malformed try-catch blocks;
     const malformedTryCatchRegex = /^\s*\}\s*catch\s*\(/gm;
-    content = content.replace(malformedTryCatchRegex, '  } catch (');
+    content = content.replace(malformedTryCatchRegex, `  } catch (`);
 
     if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, `utf8`);
+=======
+;
+    // Fix import statements with orphaned closing braces;
+    const orphanedImportRegex = /^\s*\} from 'lucide-react';\s*$/gm;
+    content = content.replace(orphanedImportRegex, ');
+;
+    // Fix malformed try-catch blocks;
+    const malformedTryCatchRegex = /^\s*\}\s*catch\s*\(/gm;
+    content = content.replace(malformedTryCatchRegex, '  } catch (');
+;
+    if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8');
+>>>>>>> main
       fixes++;
-      console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)}`);
+<<<<<<< HEAD
+      console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});
     }
-
+;
     return fixes;
-  } catch (error) {
-    console.log(`[ERROR] Failed to fix ${filePath}: ${error.message}`);
+<<<<<<< HEAD
+  } catch (error) {  console.log([ERROR] Failed to fix ${filePath  }: ${error.message}``);
     return 0;
   }
 }
 
-function getAllFiles(dir, extensions = ['.jsx', '.tsx', '.js']) {
+function getAllFiles(dir, extensions = [`.jsx`, `.tsx`, '.js']) {
+=======
+=======
+      console.log(`[INFO] ✅ Fixed advanced syntax errors in ${path.basename(filePath)});`);
+    }`);
+`);
+    return fixes;`);
+>>>>>>> main
+  } catch (error) {console.log([ERROR] Failed to fix ${filePath}: ${error.message}``);
+    return 0;
+  }
+}
+;
+function getAllFiles(dir, extensions = ['.jsx', '.tsx', '.js']) {;
+>>>>>>> main
   const files = [];
-  
-  function traverse(currentDir) {
+  ;
+  function traverse(currentDir) {;
     const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
+    ;
+    for (const item of items) {;
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== `node_modules`) {
+=======
+      ;
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
+>>>>>>> main
         traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {;
         files.push(fullPath);
       }
     }
   }
-  
+  ;
   traverse(dir);
   return files;
 }
+<<<<<<< HEAD
 
-// Main execution
+// Main execution;
+const srcDir = path.join(process.cwd(), `src`);
+=======
+;
+// Main execution;
 const srcDir = path.join(process.cwd(), 'src');
+>>>>>>> main
 const files = getAllFiles(srcDir);
-
+;
 let totalFixes = 0;
 const fixedFiles = [];
-
-for (const file of files) {
+;
+for (const file of files) {;
   const fixes = fixAdvancedSyntaxErrors(file);
-  if (fixes > 0) {
+  if (fixes > 0) {;
     totalFixes += fixes;
     fixedFiles.push(path.basename(file));
   }
 }
+console.log(`\n🎯 Advanced Syntax Error Fixer Summary:`);console.log(`✅ Total fixes applied: ${totalFixes}`);console.log(`📁 Files fixed: ${fixedFiles.length}`);console.log(`📋 Fixed files: ${fixedFiles.join(', ')}`);
+<<<<<<< HEAD
 
-console.log(`\n🎯 Advanced Syntax Error Fixer Summary:`);
-console.log(`✅ Total fixes applied: ${totalFixes}`);
-console.log(`📁 Files fixed: ${fixedFiles.length}`);
-console.log(`📋 Fixed files: ${fixedFiles.join(', ')}`);
-
-// Generate report
+// Generate report;
 const report = {
   timestamp: new Date().toISOString(),
   totalFixes,
-  fixedFiles,
-  summary: `Fixed ${totalFixes} advanced syntax errors across ${fixedFiles.length} files`
+  fixedFiles,summary: `Fixed ${totalFixes} advanced syntax errors across ${fixedFiles.length} files`
 };
 
-const logsDir = path.join(process.cwd(), 'logs');
+const logsDir = path.join(process.cwd(), `logs`);
 if (!fs.existsSync(logsDir)) {
   fs.mkdirSync(logsDir, { recursive: true });
 }
 
 fs.writeFileSync(
-  path.join(logsDir, 'advanced-syntax-fixes.json'),
+  path.join(logsDir, `advanced-syntax-fixes.json`),
   JSON.stringify(report, null, 2)
+=======
+;
+// Generate report;
+const report = {;
+  timestamp: new Date().toISOString(),;
+  totalFixes,;
+  fixedFiles,summary: `Fixed ${totalFixes} advanced syntax errors across ${fixedFiles.length} files`;
+};
+;
+const logsDir = path.join(process.cwd(), 'logs');
+if (!fs.existsSync(logsDir)) {;
+  fs.mkdirSync(logsDir, { recursive: true });
+}
+;
+fs.writeFileSync(;
+  path.join(logsDir, 'advanced-syntax-fixes.json'),;
+  JSON.stringify(report, null, 2);
+>>>>>>> main
 );
-
-console.log(`📊 Report generated: logs/advanced-syntax-fixes.json`);
+console.log(`📊 Report generated: 'logs/advanced-syntax-fixes.json'`);

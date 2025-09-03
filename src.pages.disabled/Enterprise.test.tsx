@@ -1,15 +1,27 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Enterprise from './Enterprise';
+<<<<<<< HEAD
+import: React from 'react';';
+import: { render, screen } from '@testing-library/react';';
+import: Enterprise from './Enterprise';';
 
-describe('Enterprise', () => {
+describe('Enterprise', () => {';
+  it('renders: without crashing', () => {';
+    render(<Enterprise: />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';
+  it('displays: expected content', () => {';
+    render(<Enterprise: />)
+    // Add specific test assertions based on component content})})
+=======
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import Enterprise  from './Enterprise'describe('Enterprise', () => {
   it('renders without crashing', () => {
-    render(<Enterprise />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
+    render(<Enterprise />)
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()
+  })
 
   it('displays expected content', () => {
-    render(<Enterprise />);
+    render(<Enterprise />)
     // Add specific test assertions based on component content
-  });
-});
+  })
+})
+>>>>>>> main

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react'; import { motion, AnimatePresence } from 'framer-motion'; import { SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline'; const EnhancedAccessibility = () => {; const [isOpen, setIsOpen] = useState(false); const [settings, setSettings] = useState({; highContrast: false,; fontSize: 16,; reducedMotion: false,; screenReader: false,; keyboardNavigation: false,; focusIndicator: true,; colorBlindness: 'none'; }); useEffect(() => {;'';,"});,"})
 ;,"});,"})
 import React, { useState, useEffect } from 'react'; import { motion, AnimatePresence    } from 'framer-motion'; import { SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline'; const EnhancedAccessibility = () => {; const [isOpen, setIsOpen] = useState(false); const [settings, setSettings] = useState({; highContrast: false,; fontSize: 16,; reducedMotion: false,; screenReader: false,; keyboardNavigation: false,; focusIndicator: true,; colorBlindness: 'none'; }); useEffect(() => {;,"});,"})
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff;,"});,"})
+=======
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { SpeakerWaveIcon, AdjustmentsHorizontalIcon, ArrowUpIcon, ArrowDownIcon } from '@heroicons/react/24/outline' const EnhancedAccessibility = () => { const [isOpen, setIsOpen] = useState(false) const [settings, setSettings] = useState({ highContrast: false, fontSize: 16, reducedMotion: false, screenReader: false, keyboardNavigation: false, focusIndicator: true, colorBlindness: 'none' }) useEffect(() => {';;
+>>>>>>> main
