@@ -1298,6 +1298,374 @@ export default function ITServices() {
         'Advanced data processing and analysis'
       ],
       category: 'High-Performance Computing'
+    },
+    {
+      icon: Cloud,
+      name: 'Multi-Cloud Management Platform',
+      description: 'Unified cloud management solution that provides visibility, governance, and optimization across AWS, Azure, and GCP.',
+      features: [
+        'Multi-cloud resource monitoring and management',
+        'Cost optimization and budget management',
+        'Security compliance and governance',
+        'Automated backup and disaster recovery',
+        'Performance monitoring and optimization',
+        'Single-pane-of-glass dashboard'
+      ],
+      pricing: '$8,000 – $50,000 setup',
+      projectPricing: '$2,000 – $10,000/month managed',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Reduced cloud costs by 30%',
+        'Improved security posture',
+        'Simplified multi-cloud operations',
+        'Enhanced disaster recovery capabilities'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust implementation with identity verification, network segmentation, and continuous monitoring.',
+      features: [
+        'Identity and access management (IAM)',
+        'Network micro-segmentation',
+        'Continuous security monitoring',
+        'Privileged access management',
+        'Endpoint detection and response',
+        'Security orchestration and automation'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      projectPricing: '$5,000 – $25,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Compliance with regulations',
+        'Automated threat response'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Database,
+      name: 'Data Lake & Analytics Platform',
+      description: 'Scalable data lake solution with real-time analytics, machine learning integration, and business intelligence.',
+      features: [
+        'Data ingestion and processing pipelines',
+        'Real-time analytics and streaming',
+        'Machine learning model deployment',
+        'Business intelligence dashboards',
+        'Data governance and cataloging',
+        'Integration with existing systems'
+      ],
+      pricing: '$20,000 – $150,000 setup',
+      projectPricing: '$5,000 – $30,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Unified data platform',
+        'Real-time business insights',
+        'Scalable analytics infrastructure',
+        'Improved data-driven decisions'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Code,
+      name: 'API Gateway & Management Platform',
+      description: 'Enterprise-grade API management with security, monitoring, and developer portal capabilities.',
+      features: [
+        'API gateway and routing',
+        'Authentication and authorization',
+        'Rate limiting and throttling',
+        'API analytics and monitoring',
+        'Developer portal and documentation',
+        'Integration with existing systems'
+      ],
+      pricing: '$10,000 – $60,000 setup',
+      projectPricing: '$2,000 – $12,000/month managed',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Centralized API management',
+        'Enhanced security and compliance',
+        'Improved developer experience',
+        'Better API performance monitoring'
+      ],
+      category: 'Integration & APIs'
+    },
+    {
+      icon: Server,
+      name: 'Kubernetes Container Orchestration',
+      description: 'Production-ready Kubernetes deployment with monitoring, scaling, and security best practices.',
+      features: [
+        'Kubernetes cluster setup and configuration',
+        'Container registry and management',
+        'Auto-scaling and load balancing',
+        'Monitoring and logging',
+        'Security hardening and compliance',
+        'CI/CD pipeline integration'
+      ],
+      pricing: '$12,000 – $80,000 setup',
+      projectPricing: '$3,000 – $15,000/month managed',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Improved application scalability',
+        'Reduced infrastructure costs',
+        'Enhanced deployment automation',
+        'Better resource utilization'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Globe,
+      name: 'Content Delivery Network (CDN)',
+      description: 'Global CDN implementation with edge computing, security, and performance optimization.',
+      features: [
+        'Global edge server deployment',
+        'Dynamic content acceleration',
+        'DDoS protection and security',
+        'Image and video optimization',
+        'Real-time analytics and monitoring',
+        'Custom caching rules and policies'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      projectPricing: '$500 – $5,000/month based on usage',
+      timeline: '2–4 weeks',
+      benefits: [
+        '50% faster content delivery',
+        'Reduced server load',
+        'Global performance optimization',
+        'Enhanced security protection'
+      ],
+      category: 'Performance & Optimization'
+    },
+    {
+      icon: BarChart3,
+      name: 'Business Intelligence & Data Warehouse',
+      description: 'Enterprise data warehouse with ETL pipelines, reporting, and advanced analytics capabilities.',
+      features: [
+        'Data warehouse design and implementation',
+        'ETL/ELT pipeline development',
+        'Business intelligence dashboards',
+        'Advanced analytics and reporting',
+        'Data quality and governance',
+        'Integration with business applications'
+      ],
+      pricing: '$25,000 – $200,000 setup',
+      projectPricing: '$5,000 – $40,000/month managed',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Unified data platform',
+        'Improved business insights',
+        'Automated reporting processes',
+        'Enhanced decision-making capabilities'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Shield,
+      name: 'Identity & Access Management (IAM)',
+      description: 'Comprehensive IAM solution with single sign-on, multi-factor authentication, and privileged access management.',
+      features: [
+        'Single sign-on (SSO) implementation',
+        'Multi-factor authentication (MFA)',
+        'Privileged access management',
+        'Identity governance and compliance',
+        'Directory services integration',
+        'Audit and compliance reporting'
+      ],
+      pricing: '$8,000 – $50,000 setup',
+      projectPricing: '$2,000 – $10,000/month managed',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Simplified user management',
+        'Compliance with regulations',
+        'Reduced security risks'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Smartphone,
+      name: 'Mobile Application Development',
+      description: 'Native and cross-platform mobile app development with backend integration and cloud services.',
+      features: [
+        'Native iOS and Android development',
+        'Cross-platform development (React Native, Flutter)',
+        'Backend API development and integration',
+        'Cloud backend services',
+        'Push notifications and analytics',
+        'App store deployment and management'
+      ],
+      pricing: '$15,000 – $150,000/project',
+      projectPricing: '$3,000 – $20,000/month maintenance',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Enhanced customer engagement',
+        'Increased business reach',
+        'Improved operational efficiency',
+        'Competitive market advantage'
+      ],
+      category: 'Application Development'
+    },
+    {
+      icon: Database,
+      name: 'Database Migration & Optimization',
+      description: 'Database migration services with performance optimization, backup strategies, and high availability setup.',
+      features: [
+        'Database migration planning and execution',
+        'Performance tuning and optimization',
+        'Backup and disaster recovery setup',
+        'High availability and clustering',
+        'Security hardening and compliance',
+        'Monitoring and maintenance'
+      ],
+      pricing: '$10,000 – $80,000/project',
+      projectPricing: '$2,000 – $15,000/month managed',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Improved database performance',
+        'Enhanced data security',
+        'Reduced downtime risks',
+        'Optimized operational costs'
+      ],
+      category: 'Database Services'
+    },
+    {
+      icon: Globe,
+      name: 'Web Application Development',
+      description: 'Modern web application development with responsive design, performance optimization, and security best practices.',
+      features: [
+        'Responsive web design and development',
+        'Frontend and backend development',
+        'API development and integration',
+        'Performance optimization',
+        'Security implementation',
+        'SEO optimization and analytics'
+      ],
+      pricing: '$20,000 – $200,000/project',
+      projectPricing: '$3,000 – $25,000/month maintenance',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Enhanced online presence',
+        'Improved user experience',
+        'Increased conversion rates',
+        'Better search engine visibility'
+      ],
+      category: 'Application Development'
+    },
+    {
+      icon: BarChart3,
+      name: 'IT Infrastructure Monitoring',
+      description: 'Comprehensive infrastructure monitoring with alerting, performance analytics, and capacity planning.',
+      features: [
+        'Server and network monitoring',
+        'Application performance monitoring',
+        'Log aggregation and analysis',
+        'Alerting and notification systems',
+        'Capacity planning and forecasting',
+        'Custom dashboards and reporting'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      projectPricing: '$1,000 – $8,000/month managed',
+      timeline: '2–6 weeks',
+      benefits: [
+        'Proactive issue detection',
+        'Reduced downtime',
+        'Improved system performance',
+        'Better resource utilization'
+      ],
+      category: 'Monitoring & Management'
+    },
+    {
+      icon: Shield,
+      name: 'Penetration Testing & Security Assessment',
+      description: 'Comprehensive security testing including penetration testing, vulnerability assessment, and compliance auditing.',
+      features: [
+        'Network and application penetration testing',
+        'Vulnerability assessment and scanning',
+        'Social engineering testing',
+        'Compliance auditing (SOC 2, ISO 27001)',
+        'Security gap analysis and remediation',
+        'Ongoing security monitoring'
+      ],
+      pricing: '$5,000 – $50,000/project',
+      projectPricing: '$2,000 – $10,000/month ongoing',
+      timeline: '2–8 weeks',
+      benefits: [
+        'Enhanced security posture',
+        'Compliance with regulations',
+        'Reduced security risks',
+        'Improved incident response'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Code,
+      name: 'DevOps & CI/CD Pipeline Implementation',
+      description: 'Complete DevOps transformation with automated CI/CD pipelines, infrastructure as code, and deployment automation.',
+      features: [
+        'CI/CD pipeline setup and optimization',
+        'Infrastructure as Code (IaC) implementation',
+        'Automated testing and deployment',
+        'Container orchestration and management',
+        'Monitoring and logging integration',
+        'Team training and best practices'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      projectPricing: '$3,000 – $20,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Faster time to market',
+        'Improved code quality',
+        'Reduced deployment risks',
+        'Enhanced team productivity'
+      ],
+      category: 'DevOps & Automation'
+    },
+    {
+      icon: Database,
+      name: 'Data Backup & Disaster Recovery',
+      description: 'Comprehensive backup and disaster recovery solution with automated testing and rapid recovery capabilities.',
+      features: [
+        'Automated backup scheduling and management',
+        'Multi-tier backup strategies',
+        'Disaster recovery planning and testing',
+        'Rapid recovery and failover capabilities',
+        'Compliance and audit reporting',
+        '24/7 monitoring and support'
+      ],
+      pricing: '$8,000 – $60,000 setup',
+      projectPricing: '$2,000 – $15,000/month managed',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Minimized data loss risks',
+        'Reduced recovery time',
+        'Compliance with regulations',
+        'Peace of mind for business continuity'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: Globe,
+      name: 'Cloud Cost Optimization & FinOps',
+      description: 'Cloud financial operations management with cost optimization, budget management, and resource right-sizing.',
+      features: [
+        'Cloud cost analysis and optimization',
+        'Budget management and alerting',
+        'Resource right-sizing recommendations',
+        'Reserved instance planning',
+        'Cost allocation and chargeback',
+        'FinOps best practices implementation'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      projectPricing: '$1,000 – $8,000/month managed',
+      timeline: '2–6 weeks',
+      benefits: [
+        '30% reduction in cloud costs',
+        'Improved budget control',
+        'Better resource utilization',
+        'Enhanced financial visibility'
+      ],
+      category: 'Cloud & Infrastructure'
     }
   ];
 

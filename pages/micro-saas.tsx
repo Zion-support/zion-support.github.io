@@ -1352,6 +1352,446 @@ export default function MicroSaaS() {
         'Cutting-edge research capabilities'
       ],
       category: 'Quantum Computing'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Email Follow-Up Automation',
+      description: 'Intelligent email sequence automation that nurtures leads and maintains customer engagement with personalized, behavior-triggered responses.',
+      features: [
+        'Behavior-triggered email sequences',
+        'Personalized content based on user actions',
+        'A/B testing and optimization',
+        'CRM integration and lead scoring',
+        'Advanced analytics and reporting',
+        'Multi-channel follow-up coordination'
+      ],
+      pricing: '$99 – $799/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '40% increase in lead conversion rates',
+        'Automated nurturing workflows',
+        'Personalized customer journeys',
+        'Reduced manual follow-up effort'
+      ],
+      category: 'Email Marketing'
+    },
+    {
+      icon: Users,
+      name: 'Employee Scheduling & Shift Management',
+      description: 'Smart workforce scheduling platform with AI-powered optimization, shift swapping, and labor cost management.',
+      features: [
+        'AI-powered schedule optimization',
+        'Shift swapping and coverage management',
+        'Labor cost tracking and budgeting',
+        'Employee preference management',
+        'Compliance and overtime monitoring',
+        'Mobile app for employees'
+      ],
+      pricing: '$149 – $1,199/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '25% reduction in scheduling conflicts',
+        'Optimized labor costs',
+        'Improved employee satisfaction',
+        'Automated compliance tracking'
+      ],
+      category: 'HR Management'
+    },
+    {
+      icon: BookOpen,
+      name: 'Learning Management System (LMS)',
+      description: 'Comprehensive employee training platform with course creation, progress tracking, and certification management.',
+      features: [
+        'Course creation and content management',
+        'Progress tracking and analytics',
+        'Certification and compliance tracking',
+        'Interactive learning modules',
+        'Assessment and quiz tools',
+        'Integration with HR systems'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Centralized training management',
+        'Improved employee skill development',
+        'Automated compliance tracking',
+        'Reduced training costs'
+      ],
+      category: 'HR Management'
+    },
+    {
+      icon: Globe,
+      name: 'Multi-Channel Social Media Scheduler',
+      description: 'AI-powered social media management with content scheduling, hashtag optimization, and performance analytics.',
+      features: [
+        'Multi-platform content scheduling',
+        'AI-powered hashtag optimization',
+        'Content performance analytics',
+        'Competitor analysis and insights',
+        'User-generated content management',
+        'Influencer collaboration tools'
+      ],
+      pricing: '$149 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '50% increase in social media engagement',
+        'Automated content optimization',
+        'Streamlined social media management',
+        'Data-driven content strategy'
+      ],
+      category: 'Social Media'
+    },
+    {
+      icon: BarChart3,
+      name: 'Customer Lifetime Value Predictor',
+      description: 'AI-driven customer analytics platform that predicts lifetime value, churn risk, and optimal engagement strategies.',
+      features: [
+        'Customer lifetime value prediction',
+        'Churn risk analysis and alerts',
+        'Segmentation and targeting optimization',
+        'Revenue forecasting and planning',
+        'Customer journey mapping',
+        'Retention strategy recommendations'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '35% improvement in customer retention',
+        'Data-driven customer insights',
+        'Optimized marketing spend',
+        'Increased customer lifetime value'
+      ],
+      category: 'Analytics'
+    },
+    {
+      icon: Shield,
+      name: 'Automated Backup & Disaster Recovery',
+      description: 'Cloud-based backup solution with automated scheduling, version control, and instant disaster recovery capabilities.',
+      features: [
+        'Automated backup scheduling',
+        'Version control and file history',
+        'Instant disaster recovery',
+        'Cross-platform synchronization',
+        'Encryption and security compliance',
+        'Real-time monitoring and alerts'
+      ],
+      pricing: '$99 – $899/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '99.9% data protection guarantee',
+        'Automated backup management',
+        'Instant recovery capabilities',
+        'Reduced data loss risks'
+      ],
+      category: 'Data Management'
+    },
+    {
+      icon: Code,
+      name: 'API Documentation Generator',
+      description: 'Automated API documentation creation with interactive testing, version control, and developer portal management.',
+      features: [
+        'Automated documentation generation',
+        'Interactive API testing interface',
+        'Version control and change tracking',
+        'Developer portal customization',
+        'Code example generation',
+        'Integration with development tools'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '90% reduction in documentation time',
+        'Improved developer experience',
+        'Automated API testing',
+        'Better API adoption rates'
+      ],
+      category: 'Development Tools'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Dynamic Pricing Optimization Engine',
+      description: 'AI-powered pricing strategy optimization that adjusts prices based on demand, competition, and market conditions.',
+      features: [
+        'Real-time price optimization',
+        'Competitor price monitoring',
+        'Demand-based pricing algorithms',
+        'A/B testing for pricing strategies',
+        'Revenue impact analysis',
+        'Integration with e-commerce platforms'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '15% increase in revenue',
+        'Automated pricing optimization',
+        'Competitive pricing advantage',
+        'Data-driven pricing decisions'
+      ],
+      category: 'E-commerce'
+    },
+    {
+      icon: FileText,
+      name: 'Smart Contract Generator',
+      description: 'AI-powered legal document creation with template management, clause optimization, and compliance checking.',
+      features: [
+        'AI-powered document generation',
+        'Template library and customization',
+        'Legal compliance checking',
+        'Clause optimization suggestions',
+        'Version control and collaboration',
+        'Integration with legal databases'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '80% reduction in document creation time',
+        'Improved legal compliance',
+        'Automated contract optimization',
+        'Reduced legal costs'
+      ],
+      category: 'Legal Tech'
+    },
+    {
+      icon: Users,
+      name: 'Customer Feedback Analysis Platform',
+      description: 'AI-powered sentiment analysis and feedback categorization with actionable insights and trend identification.',
+      features: [
+        'AI-powered sentiment analysis',
+        'Feedback categorization and tagging',
+        'Trend identification and reporting',
+        'Actionable insight generation',
+        'Multi-channel feedback collection',
+        'Integration with CRM systems'
+      ],
+      pricing: '$199 – $1,599/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Improved customer satisfaction',
+        'Data-driven product decisions',
+        'Automated feedback processing',
+        'Proactive issue identification'
+      ],
+      category: 'Customer Analytics'
+    },
+    {
+      icon: Globe,
+      name: 'Website Performance Optimizer',
+      description: 'Automated website speed optimization with image compression, caching, and performance monitoring.',
+      features: [
+        'Automated image optimization',
+        'Caching and CDN management',
+        'Performance monitoring and alerts',
+        'Core Web Vitals optimization',
+        'Mobile performance optimization',
+        'SEO impact analysis'
+      ],
+      pricing: '$149 – $1,199/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '50% improvement in page load speed',
+        'Better search engine rankings',
+        'Improved user experience',
+        'Automated performance optimization'
+      ],
+      category: 'Web Optimization'
+    },
+    {
+      icon: BarChart3,
+      name: 'Supply Chain Risk Monitor',
+      description: 'Real-time supply chain monitoring with risk assessment, supplier performance tracking, and disruption alerts.',
+      features: [
+        'Real-time risk monitoring',
+        'Supplier performance tracking',
+        'Disruption prediction and alerts',
+        'Alternative supplier recommendations',
+        'Cost impact analysis',
+        'Integration with ERP systems'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Reduced supply chain disruptions',
+        'Proactive risk management',
+        'Optimized supplier relationships',
+        'Cost savings through better planning'
+      ],
+      category: 'Supply Chain'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Chatbot Builder',
+      description: 'No-code chatbot creation platform with natural language processing, multi-channel deployment, and analytics.',
+      features: [
+        'No-code chatbot builder',
+        'Natural language processing',
+        'Multi-channel deployment',
+        'Conversation analytics',
+        'Integration with business systems',
+        'Custom training and optimization'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '24/7 customer support availability',
+        'Reduced support costs',
+        'Improved customer engagement',
+        'Automated lead qualification'
+      ],
+      category: 'Customer Support'
+    },
+    {
+      icon: Shield,
+      name: 'Compliance Management System',
+      description: 'Automated compliance tracking with regulatory updates, audit preparation, and risk assessment tools.',
+      features: [
+        'Automated compliance monitoring',
+        'Regulatory update notifications',
+        'Audit preparation and documentation',
+        'Risk assessment and scoring',
+        'Policy management and distribution',
+        'Integration with business systems'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Reduced compliance risks',
+        'Automated audit preparation',
+        'Improved regulatory adherence',
+        'Lower compliance costs'
+      ],
+      category: 'Compliance'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Revenue Recognition Automation',
+      description: 'Automated revenue recognition with ASC 606 compliance, contract analysis, and financial reporting.',
+      features: [
+        'ASC 606 compliance automation',
+        'Contract analysis and classification',
+        'Automated revenue calculations',
+        'Financial reporting and analytics',
+        'Audit trail and documentation',
+        'Integration with accounting systems'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Automated compliance management',
+        'Reduced accounting errors',
+        'Improved financial accuracy',
+        'Streamlined audit processes'
+      ],
+      category: 'Financial Management'
+    },
+    {
+      icon: Users,
+      name: 'Employee Engagement Survey Platform',
+      description: 'Comprehensive employee engagement measurement with pulse surveys, analytics, and action planning tools.',
+      features: [
+        'Pulse survey automation',
+        'Engagement analytics and insights',
+        'Action planning and tracking',
+        'Benchmarking and comparison',
+        'Anonymous feedback collection',
+        'Integration with HR systems'
+      ],
+      pricing: '$149 – $1,199/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Improved employee satisfaction',
+        'Data-driven HR decisions',
+        'Reduced turnover rates',
+        'Enhanced workplace culture'
+      ],
+      category: 'HR Management'
+    },
+    {
+      icon: Globe,
+      name: 'Multi-Language Customer Support',
+      description: 'AI-powered multilingual customer support with real-time translation and cultural adaptation.',
+      features: [
+        'Real-time language translation',
+        'Cultural adaptation and localization',
+        'Multi-channel support integration',
+        'Quality assurance and monitoring',
+        'Agent training and support',
+        'Performance analytics'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Global customer support capability',
+        'Improved international customer satisfaction',
+        'Reduced language barriers',
+        'Cost-effective multilingual support'
+      ],
+      category: 'Customer Support'
+    },
+    {
+      icon: BarChart3,
+      name: 'Predictive Maintenance System',
+      description: 'AI-driven equipment maintenance prediction with IoT integration, failure forecasting, and cost optimization.',
+      features: [
+        'IoT sensor data integration',
+        'Failure prediction algorithms',
+        'Maintenance scheduling optimization',
+        'Cost analysis and budgeting',
+        'Equipment performance monitoring',
+        'Integration with maintenance systems'
+      ],
+      pricing: '$499 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '30% reduction in maintenance costs',
+        'Reduced equipment downtime',
+        'Proactive maintenance planning',
+        'Improved equipment reliability'
+      ],
+      category: 'IoT & Manufacturing'
+    },
+    {
+      icon: FileText,
+      name: 'Digital Asset Management System',
+      description: 'Centralized digital asset organization with AI tagging, version control, and usage analytics.',
+      features: [
+        'AI-powered asset tagging',
+        'Version control and history',
+        'Usage analytics and reporting',
+        'Collaboration and sharing tools',
+        'Integration with creative tools',
+        'Automated backup and sync'
+      ],
+      pricing: '$199 – $1,599/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Improved asset organization',
+        'Reduced search time',
+        'Better brand consistency',
+        'Enhanced team collaboration'
+      ],
+      category: 'Content Management'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Market Research Platform',
+      description: 'Automated market research with competitor analysis, trend identification, and consumer insights generation.',
+      features: [
+        'Automated competitor monitoring',
+        'Trend identification and analysis',
+        'Consumer sentiment tracking',
+        'Market opportunity identification',
+        'Custom research reports',
+        'Integration with business intelligence tools'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Data-driven market insights',
+        'Competitive advantage identification',
+        'Automated research processes',
+        'Improved strategic decision making'
+      ],
+      category: 'Market Research'
     }
   ];
 
