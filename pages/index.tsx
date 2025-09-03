@@ -41,6 +41,18 @@ const services = [
     description: "Scalable software as a service solutions",
     icon: Cloud,
     href: "/micro-saas",
+  },
+  {
+    title: "Innovative Services",
+    description: "Cutting-edge micro SaaS, IT, and AI solutions",
+    icon: Zap,
+    href: "/innovative-services",
+  },
+  {
+    title: "Enhanced Services",
+    description: "Comprehensive technology services showcase",
+    icon: Award,
+    href: "/enhanced-services",
   }
 ];
 
