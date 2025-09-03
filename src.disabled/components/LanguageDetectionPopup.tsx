@@ -1,1 +1,35 @@
+<<<<<<< HEAD
 export function LanguageDetectionPopup() { const [open, setOpen] = useState(false); const { t } = useTranslation(); const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType; const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null); useEffect(() => { const hasVisited = safeStorage.getItem("zion_has_visited"); if(hasVisited) return; safeStorage.setItem("zion_has_visited", "true"); const browserLang = navigator.language.substring(0, 2) as SupportedLanguage; const isSupported = supportedLanguages.some(lang => lang.code === browserLang); if(isSupported && browserLang !== currentLanguage) { setDetectedLanguage(browserLang); setOpen(true); } }, [currentLanguage, supportedLanguages]);
+=======
+<<<<<<< HEAD
+
+export /**
+ * LanguageDetectionPopup function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function LanguageDetectionPopup () { const [open, setOpen] = useState (false) ; const { t } = useTranslation () ; const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage () as LanguageContextType; const [detectedLanguage, setDetectedLanguage] = useState < SupportedLanguage | null> (null) ; useEffect ( () => { const hasVisited = safeStorage.getItem ("zion_has_visited") ; if (hasVisited) return; safeStorage.setItem ("zion_has_visited", "true") ; const browserLang = navigator.language.substring (0, 2) as SupportedLanguage; const isSupported = supportedLanguages.some (lang => lang.code === browserLang) ; if (isSupported && browserLang !== currentLanguage) { setDetectedLanguage (browserLang) ; setOpen (true) ; } }, [currentLanguage, supportedLanguages]) ;""";
+
+export function LanguageDetectionPopup() { const [open, setOpen] = useState(false); const { t } = useTranslation(); const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType; const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null); useEffect(() => { const hasVisited = safeStorage.getItem("zion_has_visited"); if(hasVisited) return; safeStorage.setItem("zion_has_visited", "true"); const browserLang = navigator.language.substring(0, 2) as SupportedLanguage; const isSupported = supportedLanguages.some(lang => lang.code === browserLang); if(isSupported && browserLang !== currentLanguage) { setDetectedLanguage(browserLang); setOpen(true); } }, [currentLanguage, supportedLanguages]);
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
+=======
+export: /**;
+ * LanguageDetectionPopup: function;
+ * @param: {*} params - Function parameters;
+ * @returns: {*} Function return value;
+ */;
+<<<<<<< HEAD
+function: LanguageDetectionPopup () { const [open, setOpen] = useState (false)  const { t } = useTranslation ()  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage () as LanguageContextType const [detectedLanguage, setDetectedLanguage] = useState < SupportedLanguage | null> (null)  useEffect ( () => { const hasVisited = safeStorage.getItem ('zion_has_visited')  if (hasVisited) return safeStorage.setItem ('zion_has_visited', 'true')  const browserLang = navigator.language.substring (0, 2) as SupportedLanguage const isSupported = supportedLanguages.some (lang => lang.code === browserLang)  if (isSupported && browserLang !== currentLanguage) { setDetectedLanguage (browserLang)  setOpen (true)  } }, [currentLanguage, supportedLanguages]) ';"";
+=======
+<<<<<<< HEAD
+function LanguageDetectionPopup () { const [open, setOpen] = useState (false)  const { t } = useTranslation ()  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage () as LanguageContextType const [detectedLanguage, setDetectedLanguage] = useState < SupportedLanguage | null> (null)  useEffect ( () => { const hasVisited = safeStorage.getItem ('zion_has_visited')  if (hasVisited) return safeStorage.setItem ('zion_has_visited', 'true')  const browserLang = navigator.language.substring (0, 2) as SupportedLanguage const isSupported = supportedLanguages.some (lang => lang.code === browserLang)  if (isSupported && browserLang !== currentLanguage) { setDetectedLanguage (browserLang)  setOpen (true)  } }, [currentLanguage, supportedLanguages]) '"
+=======
+<<<<<<< HEAD
+function LanguageDetectionPopup () { const [open, setOpen] = useState (false)  const { t } = useTranslation ()  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage () as LanguageContextType const [detectedLanguage, setDetectedLanguage] = useState < SupportedLanguage | null> (null)  useEffect ( () => { const hasVisited = safeStorage.getItem ('zion_has_visited')  if (hasVisited) return safeStorage.setItem ('zion_has_visited', 'true')  const browserLang = navigator.language.substring (0, 2) as SupportedLanguage const isSupported = supportedLanguages.some (lang => lang.code === browserLang)  if (isSupported && browserLang !== currentLanguage) { setDetectedLanguage (browserLang)  setOpen (true)  } }, [currentLanguage, supportedLanguages]) ';""
+=======
+function LanguageDetectionPopup () { const [open, setOpen] = useState (false)  const { t } = useTranslation ()  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage () as LanguageContextType const [detectedLanguage, setDetectedLanguage] = useState < SupportedLanguage | null> (null)  useEffect ( () => { const hasVisited = safeStorage.getItem ('zion_has_visited')  if (hasVisited) return safeStorage.setItem ('zion_has_visited,true')  const browserLang = navigator.language.substring (0, 2) as SupportedLanguage const isSupported = supportedLanguages.some (lang => lang.code === browserLang)  if (isSupported && browserLang !== currentLanguage) { setDetectedLanguage (browserLang)  setOpen (true)  } }, [currentLanguage, supportedLanguages]) 
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

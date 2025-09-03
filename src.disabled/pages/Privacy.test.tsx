@@ -1,7 +1,23 @@
+<<<<<<< HEAD
+describe: (
+  'Privacy', () => {}' it ('renders without crashing';
+  ', () => {} render: (<Privacy />) '; expect: (screen.getByRole (';
+  'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
+  ', () => {} render: (<Privacy />) ''';
+=======
 describe (
-  'Privacy', () => {}; 
-  '; it ('renders without crashing
-  ', () => {}; render (<Privacy />) ;'; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; 
-  '; it ('displays expected content
-  ', () => {}; render (<Privacy />) ;'''
+<<<<<<< HEAD
+  'Privacy', () => {}' it ('renders without crashing
+  ', () => {} render (<Privacy />) ' expect (screen.getByRole (
+=======
+<<<<<<< HEAD
+  'Privacy', () => {} it('renders without crashing', () => {} render (<Privacy />) '; expect (screen.getByRole ('
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
+  ', () => {} render (<Privacy />) '''
+=======
+  'Privacy', () => {}' it('renders without crashing', () => {} render (<Privacy />) ' expect (screen.getByRole (
+>>>>>>> main
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
+  ', () => {} render (<Privacy />) ''
+>>>>>>> main
+>>>>>>> main

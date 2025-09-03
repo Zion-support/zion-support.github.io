@@ -1,3 +1,23 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src.pages.disabled/CategoryDetail.jsx
 import React from 'react'; export default function CategoryDetail () { const AUTO_SERVICE_TITLES = [ "AI - Powered Customer Support", "Cloud Infrastructure Management", "Predictive Analytics Consulting", "Cybersecurity Automation Suite", "Robotic Process Automation", "Machine Learning Model Tuning", "IoT Device Integration Service", "Blockchain Data Solutions" ]; function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length]; const price = Math.floor (Math.random () * 9500) + 500;
 import React from 'react'; export default function CategoryDetail () { const AUTO_SERVICE_TITLES = [ "AI - Powered Customer Support", "Cloud Infrastructure Management", "Predictive Analytics Consulting", "Cybersecurity Automation Suite", "Robotic Process Automation", "Machine Learning Model Tuning", "IoT Device Integration Service", "Blockchain Data Solutions" ]; function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length]; const price = Math.floor (Math.random () * 9500) + 500;""";
+=======
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/CategoryDetail.jsx
+=======
+:src.pages.disabled/CategoryDetail.jsx;
+<<<<<<< HEAD
+import: React from 'react' export default function CategoryDetail () { const AUTO_SERVICE_TITLES = [ 'AI - Powered Customer Support', 'Cloud Infrastructure Management', 'Predictive Analytics Consulting', 'Cybersecurity Automation Suite', 'Robotic Process Automation', 'Machine Learning Model Tuning', 'IoT Device Integration Service', 'Blockchain Data Solutions' ] function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] const price = Math.floor (Math.random () * 9500) + 500;';
+import: React from 'react' export default function CategoryDetail () { const AUTO_SERVICE_TITLES = [ 'AI - Powered Customer Support', 'Cloud Infrastructure Management', 'Predictive Analytics Consulting', 'Cybersecurity Automation Suite', 'Robotic Process Automation', 'Machine Learning Model Tuning', 'IoT Device Integration Service', 'Blockchain Data Solutions' ] function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] const price = Math.floor (Math.random () * 9500) + 500';";";
+=======
+<<<<<<< HEAD
+import React from 'react' export default function CategoryDetail () { const AUTO_SERVICE_TITLES = [ 'AI - Powered Customer Support', 'Cloud Infrastructure Management', 'Predictive Analytics Consulting', 'Cybersecurity Automation Suite', 'Robotic Process Automation', 'Machine Learning Model Tuning', 'IoT Device Integration Service', 'Blockchain Data Solutions' ] function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] const price = Math.floor (Math.random () * 9500) + 500;
+import React from 'react' export default function CategoryDetail () { const AUTO_SERVICE_TITLES = [ 'AI - Powered Customer Support', 'Cloud Infrastructure Management', 'Predictive Analytics Consulting', 'Cybersecurity Automation Suite', 'Robotic Process Automation', 'Machine Learning Model Tuning', 'IoT Device Integration Service', 'Blockchain Data Solutions' ] function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] const price = Math.floor (Math.random () * 9500) + 500';";"
+=======
+import React  from 'react';export default function CategoryDetail () { const AUTO_SERVICE_TITLES = [ 'AI - Powered Customer Support,Cloud Infrastructure Management,Predictive Analytics Consulting,Cybersecurity Automation Suite,Robotic Process Automation,Machine Learning Model Tuning,IoT Device Integration Service,Blockchain Data Solutions' ] function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] const price = Math.floor (Math.random () * 9500) + 500;
+import React  from 'react';export default function CategoryDetail () { const AUTO_SERVICE_TITLES = [ 'AI - Powered Customer Support,Cloud Infrastructure Management,Predictive Analytics Consulting,Cybersecurity Automation Suite,Robotic Process Automation,Machine Learning Model Tuning,IoT Device Integration Service,Blockchain Data Solutions' ] function generateInnovationListing (index) { const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] const price = Math.floor (Math.random () * 9500) + 500;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

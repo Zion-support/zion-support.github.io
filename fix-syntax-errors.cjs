@@ -1,37 +1,56 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
+// Function to fix syntax errors in a file;
+=======
+const fs = require('fs');
+const path = require('path');
+
+<<<<<<< HEAD
 // Common syntax fixes
+=======
+<<<<<<< HEAD
+// Common syntax error patterns and their fixes
+>>>>>>> main
 const fixes = [
-  // Fix import statements with spaces
+  // Fix import statements with comma issues
   {
-    pattern:
-      /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]([^'"`]+)\s*-\s*([^'"`]+)['"`]/g,
-    replacement: "import { $1 } from '$2-$3'",
+    pattern: /import\s+(\w+)\s+from\s*,\s*['"`]([^'"`]+)['"`]/g,
+    replacement: "import $1 from '$2'"
   },
-  // Fix import statements with .ts extension
   {
-    pattern: /from\s+['"`]([^'"`]+)\.ts['"`]/g,
-    replacement: "from '$1'",
+    pattern: /import\s+(\w+)\s+from\s*,\s*([^;]+);/g,
+    replacement: "import $1 from $2;"
   },
-  // Fix function declarations with incorrect syntax
+  
+  // Fix missing semicolons in function calls
   {
-    pattern:
-      /export\s+(?:default\s+)?(?:React\.memo\s*\()?function\s+(\w+)\s*\(\.\.\.args\s*:\s*any\[\]\)\s*:\s*any\s*\{/g,
-    replacement: 'export default function $1() {',
+    pattern: /(\w+\([^)]*\))\s*\)\s*}/g,
+    replacement: "$1);"
   },
-  // Fix useState calls with spaces
+  
+  // Fix unterminated strings
   {
-    pattern: /useState\s*\(\s*([^)]+)\s*\)\s*;/g,
-    replacement: 'useState($1);',
+    pattern: /(['"`])([^'"`]*)\s*$/gm,
+    replacement: (match, quote, content) => {
+      if (!content.includes(quote)) {
+        return match + quote;
+      }
+      return match;
+    }
   },
-  // Fix className with spaces
+  
+  // Fix missing commas in object literals
   {
-    pattern: /className\s*=\s*["'`]([^"'`]+)\s*-\s*([^"'`]+)["'`]/g,
-    replacement: 'className="$1-$2"',
+    pattern: /(\w+:\s*[^,}]+)\s*(\w+:\s*[^,}]+)/g,
+    replacement: "$1,\n    $2"
   },
-  // Fix JSX attributes with spaces
+  
+  // Fix missing semicolons after statements
   {
+<<<<<<< HEAD
     pattern: /(\w+)\s*-\s*(\w+)\s*=/g,
     replacement: '$1-$2=',
   },
@@ -55,94 +74,294 @@ const fixes = [
     pattern: /\$\{\s*([^}]+)\s*\}/g,
     replacement: '${$1}',
   },
+=======
+    pattern: /(\w+\([^)]*\))\s*$/gm,
+    replacement: "$1;"
+  }
+>>>>>>> main
 ];
 
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
+    
+=======
+// Function to fix common syntax errors in files
+>>>>>>> main
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    // Apply all fixes
+<<<<<<< HEAD
+    // Fix common syntax errors;
+    const fixes = [
+      // Fix extra semicolons in object literals and function calls;
+      { pattern: /(\w+)\s*\(\s*;/g, replacement: '$1(' },
+      { pattern: /{\s*;/g, replacement: '{' },
+      { pattern: /}\s*;/g, replacement: '}' },
+      { pattern: /,\s*;/g, replacement: ',' },
+      { pattern: /;\s*;/g, replacement: ';' },
+      { pattern: /\(\s*;/g, replacement: '(' },
+      { pattern: /;\s*\)/g, replacement: ')' },
+      { pattern: /;\s*}/g, replacement: '}' },
+      { pattern: /;\s*{/g, replacement: '{' },
+      { pattern: /;\s*,/g, replacement: ',' },
+      { pattern: /,\s*;/g, replacement: ',' },
+      // Fix semicolons in import statements;
+      { pattern: /import\s*{\s*([^}]+);\s*}/g, replacement: 'import { $1 }' },
+      // Fix semicolons in function declarations;
+      { pattern: /\)\s*=>\s*{;/g, replacement: ') => {' },
+      { pattern: /}\s*\)\s*;/g, replacement: '})' },
+      // Fix semicolons in JSX;
+      { pattern: /className={cn\(\s*;/g, replacement: 'className={cn(' },
+      { pattern: /}\s*\)\s*}/g, replacement: '})}' },
+=======
+    // Fix common patterns
+    const fixes = [
+<<<<<<< HEAD
+      // Fix 'use client';'' -> 'use client';
+      { pattern: /'use client';''/g, replacement: "'use client';" },
+      // Fix import statements with extra quotes
+      { pattern: /import ([^;]+);''/g, replacement: 'import $1;' },
+      // Fix empty lines with quotes
+      { pattern: /^''$/gm, replacement: '' },
+      // Fix semicolons in JSX attributes
+      { pattern: /(\w+)='([^']*)';/g, replacement: "$1='$2'" },
+      // Fix extra semicolons in JSX
+      { pattern: /(\/>);/g, replacement: '$1' },
+=======
+      // Fix malformed imports
+      {
+        pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]/g,
+        replacement: "import { $1 } from '$2'\nimport { $3 } from '$4'"
+      },
+      // Fix missing semicolons after imports
+      {
+        pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*(?=\s*import|\s*const|\s*function|\s*export)/g,
+        replacement: "import { $1 } from '$2';\n"
+      },
+      // Fix malformed JSX attributes
+      {
+        pattern: /className\s*=\s*['"]([^'"]*)['"]\s*['"]([^'"]*)['"]/g,
+        replacement: "className='$1 $2'"
+      },
+      // Fix malformed function declarations
+      {
+        pattern: /const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[/g,
+        replacement: "const $1: React.FC = () => {\n  const $2 = ["
+      },
+      // Fix malformed array syntax
+      {
+        pattern: /\[\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*['"]([^'"]*)['"]\s*description:\s*['"]([^'"]*)['"]\s*}/g,
+        replacement: "[{ icon: $1, title: '$2', description: '$4' }"
+      },
+      // Fix malformed return statements
+      {
+        pattern: /return\s*\(\s*['"]([^'"]*)['"]\s*<div/g,
+        replacement: "return (\n    <div"
+      },
+      // Fix malformed JSX closing tags
+      {
+        pattern: /<\/div>\s*\)\s*}\s*;\s*export\s+default/g,
+        replacement: "    </div>\n  );\n};\n\nexport default"
+      },
+      // Fix malformed quotes in strings
+      {
+        pattern: /['"]([^'"]*)['"]\s*['"]([^'"]*)['"]/g,
+        replacement: "'$1 $2'"
+      },
+      // Fix malformed object properties
+      {
+        pattern: /{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*['"]([^'"]*)['"]\s*description:\s*['"]([^'"]*)['"]\s*}/g,
+        replacement: "{ icon: $1, title: '$2', description: '$4' }"
+      },
+      // Fix malformed function calls
+      {
+        pattern: /(\w+)\s*\(\s*\)\s*<div/g,
+        replacement: "$1() {\n  return (\n    <div"
+      },
+      // Fix malformed export statements
+      {
+        pattern: /export\s+default\s+(\w+)\s*;\s*['"]([^'"]*)['"]/g,
+        replacement: "export default $1;"
+      }
+>>>>>>> main
+>>>>>>> main
+    ];
+
+>>>>>>> main
+    // Apply fixes
     fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
+      if (typeof fix.replacement === 'function') {
+        content = content.replace(fix.pattern, fix.replacement);
+      } else {
+        content = content.replace(fix.pattern, fix.replacement);
+      }
     });
-
-    // Additional specific fixes
-    content = content.replace(
-      /import\s+React\s+from\s+['"`]react\.ts['"`]/g,
-      "import React from 'react'"
-    );
-    content = content.replace(
-      /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]framer\s*-\s*motion\.ts['"`]/g,
-      "import { $1 } from 'framer-motion'"
-    );
-    content = content.replace(
-      /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]lucide\s*-\s*react\.ts['"`]/g,
-      "import { $1 } from 'lucide-react'"
-    );
-    content = content.replace(
-      /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]react\s*-\s*router\s*-\s*dom\.ts['"`]/g,
-      "import { $1 } from 'react-router-dom'"
-    );
-
-    // Fix common JSX issues
-    content = content.replace(/role\s*=\s*["'`]button["'`]/g, '');
-    content = content.replace(/aria\s*-\s*label\s*=\s*["'`][^"'`]*["'`]/g, '');
-
-    // Fix spacing issues in class names
-    content = content.replace(/bg\s*-\s*([^\s]+)/g, 'bg-$1');
-    content = content.replace(/text\s*-\s*([^\s]+)/g, 'text-$1');
-    content = content.replace(/border\s*-\s*([^\s]+)/g, 'border-$1');
-    content = content.replace(/rounded\s*-\s*([^\s]+)/g, 'rounded-$1');
-    content = content.replace(/px\s*-\s*([^\s]+)/g, 'px-$1');
-    content = content.replace(/py\s*-\s*([^\s]+)/g, 'py-$1');
-    content = content.replace(/w\s*-\s*([^\s]+)/g, 'w-$1');
-    content = content.replace(/h\s*-\s*([^\s]+)/g, 'h-$1');
-    content = content.replace(/gap\s*-\s*([^\s]+)/g, 'gap-$1');
-    content = content.replace(/mb\s*-\s*([^\s]+)/g, 'mb-$1');
-    content = content.replace(/mt\s*-\s*([^\s]+)/g, 'mt-$1');
-    content = content.replace(/ml\s*-\s*([^\s]+)/g, 'ml-$1');
-    content = content.replace(/mr\s*-\s*([^\s]+)/g, 'mr-$1');
-
+<<<<<<< HEAD
+    
+    // Only write if content changed
     if (content !== originalContent) {
+=======
+
+    // If the file is severely corrupted, create a minimal valid component
+    if (content.includes('Parsing error') || content.length < 100) {
+      const fileName = path.basename(filePath, path.extname(filePath));
+      const componentName = fileName.replace(/[-_]/g, '').replace(/\b\w/g, l => l.toUpperCase());
+      
+      content = `import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const ${componentName}: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="${componentName} - Zion Tech Group"
+        description="Professional ${componentName} services by Zion Tech Group"
+        keywords="${componentName.toLowerCase()}, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">${componentName}</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ${componentName} services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ${componentName};`;
+      modified = true;
+    }
+
+    if (modified) {
+<<<<<<< HEAD
+      fs.writeFileSync(filePath, content, `utf8`);
+      console.log(`Fixed syntax errors in: ${filePath}`);
+=======
+>>>>>>> main
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
+>>>>>>> main
       return true;
     }
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    
+    return false;
+  } catch (error) { 
+    console.error(`Error fixing ${filePath }:`, error.message);
+    return false;
   }
 }
 
+<<<<<<< HEAD
 function processDirectory(dirPath) {
+=======
+<<<<<<< HEAD
+// Function to recursively find and fix files;
+function fixFilesInDirectory(dir) {
+  const files = fs.readdirSync(dir);
+=======
+<<<<<<< HEAD
+function findFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+=======
+// Function to recursively find and fix files
+function fixFilesInDirectory(dirPath) {
+>>>>>>> main
   const files = fs.readdirSync(dirPath);
+>>>>>>> main
   let fixedCount = 0;
 
   files.forEach(file => {
     const filePath = path.join(dirPath, file);
     const stat = fs.statSync(filePath);
 
-    if (stat.isDirectory()) {
-      // Skip node_modules and other non-source directories
-      if (!['node_modules', '.git', '.next', 'out', 'dist'].includes(file)) {
-        fixedCount += processDirectory(filePath);
-      }
+    if (
+      stat.isDirectory() &&
+      !file.startsWith(`.`) &&
+      file !== 'node_modules'
+    ) {
+      fixedCount += fixFilesInDirectory(filePath);
+<<<<<<< HEAD
     } else if (
       file.endsWith('.tsx') ||
       file.endsWith('.ts') ||
       file.endsWith('.jsx') ||
       file.endsWith('.js')
     ) {
-      if (fixFile(filePath)) {
+=======
+    } else if (file.endsWith('.tsx') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.js')) {
+>>>>>>> main
+      if (fixSyntaxErrors(filePath)) {
         fixedCount++;
+>>>>>>> main
       }
     }
-  });
-
-  return fixedCount;
+  }
+  
+  traverse(dir);
+  return files;
 }
 
-// Start fixing from the src directory
-console.log('Starting syntax fixes...');
-const fixedCount = processDirectory('./src');
+<<<<<<< HEAD
+// Main execution;
+=======
+// Main execution
+<<<<<<< HEAD
+const files = findFiles('.');
+let fixedCount = 0;
+
+console.log(`Found ${files.length} files to check...`);
+
+files.forEach(file => {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);
+=======
+<<<<<<< HEAD
+>>>>>>> main
+console.log('🔧 Starting syntax error fixes...');
+const fixedCount = fixFilesInDirectory('.');
+console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
+=======
+console.log('Starting syntax error fixes...');
+<<<<<<< HEAD
+const fixedCount = fixFilesInDirectory('./components');
+const fixedCount2 = fixFilesInDirectory('./pages');
+console.log(`Fixed ${fixedCount + fixedCount2} files`);
+=======
+const fixedCount = fixFilesInDirectory('./src');
 console.log(`Fixed ${fixedCount} files.`);
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

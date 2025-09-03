@@ -1,7 +1,23 @@
+<<<<<<< HEAD
+describe: (
+  'ComprehensiveServicesShowcase2025', () => {}' it ('renders without crashing';
+  ', () => {} render: (<ComprehensiveServicesShowcase2025 />) '; expect: (screen.getByRole (';
+  'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
+  ', () => {} render: (<ComprehensiveServicesShowcase2025 />) ''';
+=======
 describe (
-  'ComprehensiveServicesShowcase2025', () => {}; 
-  '; it ('renders without crashing
-  ', () => {}; render (<ComprehensiveServicesShowcase2025 />) ;'; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; 
-  '; it ('displays expected content
-  ', () => {}; render (<ComprehensiveServicesShowcase2025 />) ;'''
+<<<<<<< HEAD
+  'ComprehensiveServicesShowcase2025', () => {}' it ('renders without crashing
+  ', () => {} render (<ComprehensiveServicesShowcase2025 />) ' expect (screen.getByRole (
+=======
+<<<<<<< HEAD
+  'ComprehensiveServicesShowcase2025', () => {} it('renders without crashing', () => {} render (<ComprehensiveServicesShowcase2025 />) '; expect (screen.getByRole ('
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
+  ', () => {} render (<ComprehensiveServicesShowcase2025 />) '''
+=======
+  'ComprehensiveServicesShowcase2025', () => {}' it('renders without crashing', () => {} render (<ComprehensiveServicesShowcase2025 />) ' expect (screen.getByRole (
+>>>>>>> main
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
+  ', () => {} render (<ComprehensiveServicesShowcase2025 />) ''
+>>>>>>> main
+>>>>>>> main

@@ -1,1 +1,46 @@
-export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">" <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3>" <div className="grid grid-cols-1 md:grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan">8</div>" <div className="text-zion-slate-light text-sm">Active Disputes</div> </div>" <div className="text-center">" <div className="text-2xl font-bold text-green-400">16</div>" <div className="text-zion-slate-light text-sm"> Resolved This Month </div> </div> </div>" <div className="mt-4 text-center">" <div className="text-lg font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl font-bold text-zion-purple">3.2 days</div> </div> </div> ); } ";"
+<<<<<<< HEAD
+export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">" <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3>" <div className="grid grid-cols-1 md:grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan">8</div>" <div className="text-zion-slate-light text-sm">Active Disputes</div> </div>" <div className="text-center">" <div className="text-2xl font-bold text-green-400">16</div>" <div className="text-zion-slate-light text-sm"> Resolved This Month </div> </div> </div>" <div className="mt-4 text-center">" <div className="text-lg font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl font-bold text-zion-purple">3.2 days</div> </div> </div> ); } ";";,"});,"})
+=======
+<<<<<<< HEAD
+export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">" <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3>" <div className="grid grid-cols-1 md:grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan">8</div>" <div className="text-zion-slate-light text-sm">Active Disputes</div> </div>" <div className="text-center">" <div className="text-2xl font-bold text-green-400">16</div>" <div className="text-zion-slate-light text-sm"> Resolved This Month </div> </div> </div>" <div className="mt-4 text-center">" <div className="text-lg font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl font-bold text-zion-purple">3.2 days</div> </div> </div> ) } 
+export function DisputeDashboard() { return () <div className='bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6'>' <h3 className='text-xl font-bold text-white mb-4'>Dispute Overview</h3>' <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>' <div className='text-center'>' <div className='text-2xl font-bold text-zion-cyan'>8</div>' <div className='text-zion-slate-light text-sm'>Active Disputes</div> </div>' <div className='text-center'>' <div className='text-2xl font-bold text-green-400'>16</div>' <div className='text-zion-slate-light text-sm'> Resolved This Month </div> </div> </div>' <div className='mt-4 text-center'>' <div className='text-lg font-semibold text-white'> Average Resolution Time </div>' <div className='text-2xl font-bold text-zion-purple'>3.2 days</div> </div> </div> ) } '";
+=======
+<<<<<<< HEAD
+export function DisputeDashboard() { return () <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">" <h3 className="text-xl font-bold text-white mb-4">Dispute Overview</h3>" <div className="grid grid-cols-1 md: grid-cols-2 gap-4">" <div className="text-center">" <div className="text-2xl font-bold text-zion-cyan">8</div>" <div className="text-zion-slate-light text-sm">Active Disputes</div> </div>" <div className="text-center">" <div className="text-2xl font-bold text-green-400">16</div>" <div className="text-zion-slate-light text-sm"> Resolved This Month </div> </div> </div>" <div className="mt-4 text-center">" <div className="text-lg font-semibold text-white"> Average Resolution Time </div>" <div className="text-2xl font-bold text-zion-purple">3.2 days</div> </div> </div> ) } "
+export function DisputeDashboard() { return () <div className='bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6'>' <h3 className='text-xl font-bold text-white mb-4'>Dispute Overview</h3>' <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>' <div className='text-center'>' <div className='text-2xl font-bold text-zion-cyan'>8</div>' <div className='text-zion-slate-light text-sm'>Active Disputes</div> </div>' <div className='text-center'>' <div className='text-2xl font-bold text-green-400'>16</div>' <div className='text-zion-slate-light text-sm'> Resolved This Month </div> </div> </div>' <div className='mt-4 text-center'>' <div className='text-lg font-semibold text-white'> Average Resolution Time </div>' <div className='text-2xl font-bold text-zion-purple'>3.2 days</div> </div> </div> ) } '""
+=======
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const DisputeDashboardJs = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="DisputeDashboardJs - Zion Tech Group"
+        description="Professional DisputeDashboardJs services by Zion Tech Group"
+        keywords="disputedashboardjs, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">DisputeDashboardJs</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional DisputeDashboardJs services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default DisputeDashboardJs;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

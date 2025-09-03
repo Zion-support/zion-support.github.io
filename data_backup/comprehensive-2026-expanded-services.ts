@@ -1,19 +1,24 @@
-export interface ComprehensiveService {
+export: interface ComprehensiveService {
   id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period?: string;
-  description: string;
-  features: string[];
-  category: string;
-  subcategory: string;
-  realImplementation: boolean;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-  };
+   name: string;
+   tagline: string;
+   price: string;
+   period?: string;
+   description: string;
+   features: string[];
+   category: string;
+   subcategory: string;
+   realImplementation: boolean;
+   contactInfo: { mobile: string;
+<<<<<<< HEAD
+   email: string;
+   address: strin,g}
+=======
+   emai,
+    l: string;
+   addres,
+    s: string}
+>>>>>>> main
   link: string;
   icon: string;
   color: string;
@@ -32,1021 +37,1021 @@ export interface ComprehensiveService {
   growthRate: string;
   launchDate: string;
   customers: number;
+<<<<<<< HEAD
   rating: number;
-  reviews: number;
-}
-
+  reviews: numbe,r}
+const: contact = {
+  mobile: '+1: 302 464 0950,',';
+  email: 'kleber@ziontechgroup.com,',';
+  address: '364: E Main St STE 1008 Middletown DE 19709,'}';
+;
+export: const comprehensiveExpandedServices: ComprehensiveService[] = [;
+  // AI: & Machine Learning Services{
+    id,:,
+  ai-autonomous-customer-success',';
+    name: 'AI: Autonomous Customer Succes,s,';
+=======
+  ratin,
+    g: number;
+  review,
+    s: number}
 const contact = {
-  mobile: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
-};
-
-export const comprehensiveExpandedServices: ComprehensiveService[] = [
-  // AI & Machine Learning Services
-  {
-    id:,
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709'}
+export const comprehensiveExpandedServices: ComprehensiveService[] = [;
+  // AI & Machine Learning Services{
+    i,
+    d:,
   ai-autonomous-customer-success',
     name: 'AI Autonomous Customer Success,
+>>>>>>> main
     tagline:,
-  Predictive customer health scoring with automated interventions',
-    price: '$299,
+  Predictive: customer health scoring with automated interventions',';
+    price: '$29,9,';
     period:,
-  /month',
-    description: 'AI-powered platform that predicts customer churn risk and automatically triggers personalized retention campaigns.,
-    features: [,
-  Predictive churn scoring',
-  'Automated intervention workflows',
-  'Customer health dashboards',
-  'Integration with CRM systems',
-  'ROI tracking and analytics'
+  /month',';
+    description: 'AI-powered: platform that predicts customer churn risk and automatically triggers personalized retention campaigns,.,';
+    features:  ,[,
+  Predictive: churn scoring',';
+  'Automated: intervention workflows',';
+  'Customer: health dashboards',';
+  'Integration: with CRM systems',';
+  'ROI: tracking and analytics';';
     ],
-    category: 'AI & Machine Learning,
-    subcategory:
-  'Customer Success',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'AI: & Machine Learnin,g,';
+    subcategory: ;
+  'Customer: Success,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/ai-autonomous-customer-success,
+  https: //ziontechgroup.com/services/ai-autonomous-customer-succes,s,
     icon:,
-  🤖',
-    color: 'from-blue-600 to-indigo-700,
-    textColor:
-  'text-blue-300',
-    popular: true,
+  🤖',';
+    color: 'from-blue-600: to-indigo-70,0,';
+    textColor: ;
+  'text-blue-300,',';
+    popular: tru,e,
     marketPosition:,
-  Advanced AI capabilities with enterprise-grade automation',
-    targetAudience: Customer success teams, SaaS companies',
-    trialDays: 21,
+  Advanced: AI capabilities with enterprise-grade automation',';
+    targetAudience: Customer: success team,s, SaaS companies',';
+    trialDays: 2,1,
     setupTime:,
-  2-3 days',
-    technology: [
-  'Machine Learning,
+  2-3: days',';
+    technology: [;
+  'Machine: Learnin,g,';
 ,
-  Predictive Analytics',
-  'Workflow Automation'],
-    integrations: [
-  'Salesforce,
+  Predictive: Analytics',';
+  'Workflow: Automation'],';
+    integrations: [;
+  'Salesforc,e,';
 ,
-  HubSpot',
-  'Intercom',
-  'Zendesk'],
-    useCases: [
-  'Churn prevention,
+  HubSpot',';
+  'Intercom',';
+  'Zendesk'],';
+    useCases: [;
+  'Churn: preventio,n,';
 ,
-  Customer health monitoring',
-  'Automated retention'],
-    roi: 'Reduces churn by 25-40%,
-    competitors: [,
-  Gainsight',
-  'Totango',
-  'ChurnZero'],
-    marketSize: '$2.8B customer success platform market,
+  Customer: health monitoring',';
+  'Automated: retention'],';
+    roi: 'Reduces: churn by 25-40,%,';
+    competitors:  ,[,
+  Gainsight',';
+  'Totango',';
+  'ChurnZero'],';
+    marketSize: '$2.8B: customer success platform marke,t,';
     growthRate:,
-  22% CAGR',
-    launchDate: '2025-01-15,
-    customers: 85,
-    rating: 4.8,
-    reviews: 47
-  },
+  22% CAGR',';
+    launchDate: '2025-01-1,5,';
+    customers: 8,5,
+    rating: 4.,8,
+    reviews: 4,7},
   {
     id:,
-  ai-powered-sales-intelligence',
-    name: 'AI Sales Intelligence Platform,
+  ai-powered-sales-intelligence',';
+    name: 'AI: Sales Intelligence Platfor,m,';
     tagline:,
-  Real-time sales coaching and opportunity scoring',
-    price: '$199,
+  Real-time: sales coaching and opportunity scoring',';
+    price: '$19,9,';
     period:,
-  /month',
-    description: Intelligent sales platform that analyzes calls, emails, and meetings to provide real-time coaching and opportunity insights.,
+  /month',';
+    description: Intelligent: sales platform that analyzes call,s, emails, and meetings to provide real-time coaching and opportunity insights.,
   ,
-    features: [
-  'Call transcription and analysis,
+    features: [;
+  'Call: transcription and analysi,s,';
 ,
-  Real-time sales coaching',
-  'Opportunity scoring',
-  'Competitor tracking',
-  'Sales performance analytics'
+  Real-time: sales coaching',';
+  'Opportunity: scoring',';
+  'Competitor: tracking',';
+  'Sales: performance analytics';';
     ],
-    category: 'AI & Machine Learning,
-    subcategory:
-  'Sales Intelligence',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'AI: & Machine Learnin,g,';
+    subcategory: ;
+  'Sales: Intelligence,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/ai-powered-sales-intelligence,
+  https: //ziontechgroup.com/services/ai-powered-sales-intelligenc,e,
     icon:,
-  📊',
-    color: 'from-green-600 to-emerald-700,
-    textColor:
-  'text-green-300',
-    popular: false,
+  📊',';
+    color: 'from-green-600: to-emerald-70,0,';
+    textColor: ;
+  'text-green-300,',';
+    popular: fals,e,
     marketPosition:,
-  Comprehensive AI sales coaching with real-time insights',
-    targetAudience: Sales teams, B2B companies',
-    trialDays: 14,
+  Comprehensive: AI sales coaching with real-time insights',';
+    targetAudience: Sales: team,s, B2B companies',';
+    trialDays: 1,4,
     setupTime:,
-  1 week',
-    technology: [
-  'Natural Language Processing,
+  1: week',';
+    technology: [;
+  'Natural: Language Processin,g,';
 ,
-  Speech Recognition',
-  'Machine Learning'],
-    integrations: [
-  'Salesforce,
+  Speech: Recognition',';
+  'Machine: Learning'],';
+    integrations: [;
+  'Salesforc,e,';
 ,
-  HubSpot',
-  'Zoom',
-  'Teams'],
-    useCases: [
-  'Sales coaching,
+  HubSpot',';
+  'Zoom',';
+  'Teams'],';
+    useCases: [;
+  'Sales: coachin,g,';
 ,
-  Call analysis',
-  'Opportunity management'],
-    roi: 'Increases win rates by 30%,
-    competitors: [,
-  Gong',
-  'Chorus',
-  'SalesLoft'],
-    marketSize: '$1.9B sales intelligence market,
+  Call: analysis',';
+  'Opportunity: management'],';
+    roi: 'Increases: win rates by 30,%,';
+    competitors:  ,[,
+  Gong',';
+  'Chorus',';
+  'SalesLoft'],';
+    marketSize: '$1.9B: sales intelligence marke,t,';
     growthRate:,
-  18% CAGR',
-    launchDate: '2025-02-01,
-    customers: 62,
-    rating: 4.6,
-    reviews: 38
-  },
+  18% CAGR',';
+    launchDate: '2025-02-0,1,';
+    customers: 6,2,
+    rating: 4.,6,
+    reviews: 3,8},
   {
     id:,
-  ai-content-personalization-engine',
-    name: 'AI Content Personalization Engine,
+  ai-content-personalization-engine',';
+    name: 'AI: Content Personalization Engin,e,';
     tagline:,
-  Dynamic content adaptation based on user behavior',
-    price: '$149,
+  Dynamic: content adaptation based on user behavior',';
+    price: '$14,9,';
     period:,
-  /month',
-    description: AI engine that automatically personalizes website content, emails, and marketing materials based on user behavior and preferences.,
+  /month',';
+    description: AI: engine that automatically personalizes website conten,t, emails, and marketing materials based on user behavior and preferences.,
   ,
-    features: [
-  'Real-time content adaptation,
+    features: [;
+  'Real-time: content adaptatio,n,';
 ,
-  Behavioral analysis',
-  'A/B testing automation',
-  'Personalization rules engine',
-  'Performance analytics'
+  Behavioral: analysis',';
+  'A/B: testing automation',';
+  'Personalization: rules engine',';
+  'Performance: analytics';';
     ],
-    category: 'AI & Machine Learning,
-    subcategory:
-  'Content Marketing',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'AI: & Machine Learnin,g,';
+    subcategory: ;
+  'Content: Marketing,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/ai-content-personalization-engine,
+  https: //ziontechgroup.com/services/ai-content-personalization-engin,e,
     icon:,
-  🎯',
-    color: 'from-purple-600 to-pink-700,
-    textColor:
-  'text-purple-300',
-    popular: false,
+  🎯',';
+    color: 'from-purple-600: to-pink-70,0,';
+    textColor: ;
+  'text-purple-300,',';
+    popular: fals,e,
     marketPosition:,
-  Advanced personalization with behavioral insights',
-    targetAudience: Marketing teams, E-commerce companies',
-    trialDays: 30,
+  Advanced: personalization with behavioral insights',';
+    targetAudience: Marketing: team,s, E-commerce companies',';
+    trialDays: 3,0,
     setupTime:,
-  1-2 weeks',
-    technology: [
-  'Machine Learning,
+  1-2: weeks',';
+    technology: [;
+  'Machine: Learnin,g,';
 ,
-  Behavioral Analytics',
-  'Content Optimization'],
-    integrations: [
-  'Shopify,
+  Behavioral: Analytics',';
+  'Content: Optimization'],';
+    integrations: [;
+  'Shopif,y,';
 ,
-  WordPress',
-  'Mailchimp',
-  'HubSpot'],
-    useCases: [
-  'Website personalization,
+  WordPress',';
+  'Mailchimp',';
+  'HubSpot'],';
+    useCases: [;
+  'Website: personalizatio,n,';
 ,
-  Email marketing',
-  'Product recommendations'],
-    roi: 'Increases conversion rates by 35%,
-    competitors: [,
-  Optimizely',
-  'Dynamic Yield',
-  'Evergage'],
-    marketSize: '$1.2B personalization market,
+  Email: marketing',';
+  'Product: recommendations'],';
+    roi: 'Increases: conversion rates by 35,%,';
+    competitors:  ,[,
+  Optimizely',';
+  'Dynamic: Yield',';
+  'Evergage'],';
+    marketSize: '$1.2B: personalization marke,t,';
     growthRate:,
-  25% CAGR',
-    launchDate: '2025-01-20,
-    customers: 73,
-    rating: 4.7,
-    reviews: 41
-  },
-
-  // Cloud & Infrastructure Services
-  {
+  25% CAGR',';
+    launchDate: '2025-01-2,0,';
+    customers: 7,3,
+    rating: 4.,7,
+    reviews: 4,1},
+  // Cloud: & Infrastructure Services{
     id:,
-  autonomous-cloud-cost-optimization',
-    name: 'Autonomous Cloud Cost Optimization,
+  autonomous-cloud-cost-optimization',';
+    name: 'Autonomous: Cloud Cost Optimizatio,n,';
     tagline:,
-  AI-driven cloud spending optimization and FinOps automation',
-    price: '$399,
+  AI-driven: cloud spending optimization and FinOps automation',';
+    price: '$39,9,';
     period:,
-  /month',
-    description: Intelligent platform that automatically optimizes cloud costs across AWS, Azure, and GCP using machine learning and predictive analytics.,
+  /month',';
+    description: Intelligent: platform that automatically optimizes cloud costs across AW,S, Azure, and GCP using machine learning and predictive analytics.,
   ,
-    features: [
-  'Multi-cloud cost optimization,
+    features: [;
+  'Multi-cloud: cost optimizatio,n,';
 ,
-  Predictive cost forecasting',
-  'Automated resource scaling',
-  'Waste detection and elimination',
-  'FinOps reporting and analytics'
+  Predictive: cost forecasting',';
+  'Automated: resource scaling',';
+  'Waste: detection and elimination',';
+  'FinOps: reporting and analytics';';
     ],
-    category: 'Cloud & Infrastructure,
-    subcategory:
-  'Cost Optimization',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'Cloud: & Infrastructur,e,';
+    subcategory: ;
+  'Cost: Optimization,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/autonomous-cloud-cost-optimization,
+  https: //ziontechgroup.com/services/autonomous-cloud-cost-optimizatio,n,
     icon:,
-  💰',
-    color: 'from-yellow-600 to-orange-700,
-    textColor:
-  'text-yellow-300',
-    popular: true,
+  💰',';
+    color: 'from-yellow-600: to-orange-70,0,';
+    textColor: ;
+  'text-yellow-300,',';
+    popular: tru,e,
     marketPosition:,
-  Comprehensive FinOps automation with AI optimization',
-    targetAudience: DevOps teams, Cloud architects, Finance teams',
-    trialDays: 30,
+  Comprehensive: FinOps automation with AI optimization',';
+    targetAudience: DevOps: team,s, Cloud architects, Finance teams',';
+    trialDays: 3,0,
     setupTime:,
-  2-3 weeks',
-    technology: [
-  'Machine Learning,
+  2-3: weeks',';
+    technology: [;
+  'Machine: Learnin,g,';
 ,
-  Cloud APIs',
-  'Predictive Analytics'],
-    integrations: [
-  'AWS,
+  Cloud: APIs',';
+  'Predictive: Analytics'],';
+    integrations: [;
+  'AW,S,';
 ,
-  Azure',
-  'GCP',
-  'Kubernetes',
-  'Terraform'],
-    useCases: [
-  'Cloud cost optimization,
+  Azure',';
+  'GCP',';
+  'Kubernetes',';
+  'Terraform'],';
+    useCases: [;
+  'Cloud: cost optimizatio,n,';
 ,
-  FinOps automation',
-  'Resource management'],
-    roi: 'Reduces cloud costs by 25-40%,
-    competitors: [,
-  CloudHealth',
-  'CloudCheckr',
-  'Apptio'],
-    marketSize: '$3.2B cloud management market,
+  FinOps: automation',';
+  'Resource: management'],';
+    roi: 'Reduces: cloud costs by 25-40,%,';
+    competitors:  ,[,
+  CloudHealth',';
+  'CloudCheckr',';
+  'Apptio'],';
+    marketSize: '$3.2B: cloud management marke,t,';
     growthRate:,
-  28% CAGR',
-    launchDate: '2025-01-10,
-    customers: 128,
-    rating: 4.9,
-    reviews: 89
-  },
+  28% CAGR',';
+    launchDate: '2025-01-1,0,';
+    customers: 12,8,
+    rating: 4.,9,
+    reviews: 8,9},
   {
     id:,
-  zero-trust-security-platform',
-    name: 'Zero Trust Security Platform,
+  zero-trust-security-platform',';
+    name: 'Zero: Trust Security Platfor,m,';
     tagline:,
-  Comprehensive zero-trust architecture implementation',
-    price: '$599,
+  Comprehensive: zero-trust architecture implementation',';
+    price: '$59,9,';
     period:,
-  /month',
-    description: 'Enterprise-grade zero-trust security platform that implements continuous verification and least-privilege access across all systems.,
-    features: [,
-  Identity verification and management',
-  'Continuous monitoring and analytics',
-  'Micro-segmentation',
-  'Threat detection and response',
-  'Compliance reporting'
+  /month',';
+    description: 'Enterprise-grade: zero-trust security platform that implements continuous verification and least-privilege access across all systems,.,';
+    features:  ,[,
+  Identity: verification and management',';
+  'Continuous: monitoring and analytics',';
+  'Micro-segmentation',';
+  'Threat: detection and response',';
+  'Compliance: reporting';';
     ],
-    category: 'Cloud & Infrastructure,
-    subcategory:
-  'Security',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'Cloud: & Infrastructur,e,';
+    subcategory: ;
+  'Security,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/zero-trust-security-platform,
+  https: //ziontechgroup.com/services/zero-trust-security-platfor,m,
     icon:,
-  🔒',
-    color: 'from-red-600 to-pink-700,
-    textColor:
-  'text-red-300',
-    popular: true,
+  🔒',';
+    color: 'from-red-600: to-pink-70,0,';
+    textColor: ;
+  'text-red-300,',';
+    popular: tru,e,
     marketPosition:,
-  Enterprise zero-trust with advanced threat detection',
-    targetAudience: Security teams, Enterprise companies',
-    trialDays: 21,
+  Enterprise: zero-trust with advanced threat detection',';
+    targetAudience: Security: team,s, Enterprise companies',';
+    trialDays: 2,1,
     setupTime:,
-  3-4 weeks',
-    technology: [
-  'Zero Trust Architecture,
+  3-4: weeks',';
+    technology: [;
+  'Zero: Trust Architectur,e,';
 ,
-  Identity Management',
-  'Threat Detection'],
-    integrations: [
-  'Active Directory,
+  Identity: Management',';
+  'Threat: Detection'],';
+    integrations: [;
+  'Active: Director,y,';
 ,
-  Okta',
-  'CrowdStrike',
-  'Splunk'],
-    useCases: [
-  'Enterprise security,
+  Okta',';
+  'CrowdStrike',';
+  'Splunk'],';
+    useCases: [;
+  'Enterprise: securit,y,';
 ,
-  Compliance',
-  'Threat prevention'],
-    roi: 'Reduces security incidents by 60%,
-    competitors: [,
-  Palo Alto Networks',
-  'Cisco',
-  'Fortinet'],
-    marketSize: '$4.8B zero-trust market,
+  Compliance',';
+  'Threat: prevention'],';
+    roi: 'Reduces: security incidents by 60,%,';
+    competitors:  ,[,
+  Palo: Alto Networks',';
+  'Cisco',';
+  'Fortinet'],';
+    marketSize: '$4.8B: zero-trust marke,t,';
     growthRate:,
-  32% CAGR',
-    launchDate: '2025-01-05,
-    customers: 156,
-    rating: 4.8,
-    reviews: 112
-  },
+  32% CAGR',';
+    launchDate: '2025-01-0,5,';
+    customers: 15,6,
+    rating: 4.,8,
+    reviews: 11,2},
   {
     id:,
-  kubernetes-autonomous-operations',
-    name: 'Kubernetes Autonomous Operations,
+  kubernetes-autonomous-operations',';
+    name: 'Kubernetes: Autonomous Operation,s,';
     tagline:,
-  Self-healing Kubernetes clusters with AI-driven optimization',
-    price: '$299,
+  Self-healing: Kubernetes clusters with AI-driven optimization',';
+    price: '$29,9,';
     period:,
-  /month',
-    description: AI-powered Kubernetes management platform that automatically optimizes, scales, and heals clusters while providing comprehensive monitoring.,
+  /month',';
+    description: AI-powered: Kubernetes management platform that automatically optimize,s, scales, and heals clusters while providing comprehensive monitoring.,
   ,
-    features: [
-  'Autonomous cluster optimization,
+    features: [;
+  'Autonomous: cluster optimizatio,n,';
 ,
-  Self-healing capabilities',
-  'Intelligent scaling',
-  'Performance monitoring',
-  'Cost optimization'
+  Self-healing: capabilities',';
+  'Intelligent: scaling',';
+  'Performance: monitoring',';
+  'Cost: optimization';';
     ],
-    category: 'Cloud & Infrastructure,
-    subcategory:
-  'Container Management',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'Cloud: & Infrastructur,e,';
+    subcategory: ;
+  'Container: Management,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/kubernetes-autonomous-operations,
+  https: //ziontechgroup.com/services/kubernetes-autonomous-operation,s,
     icon:,
-  ☸️',
-    color: 'from-blue-600 to-cyan-700,
-    textColor:
-  'text-blue-300',
-    popular: false,
+  ☸️',';
+    color: 'from-blue-600: to-cyan-70,0,';
+    textColor: ;
+  'text-blue-300,',';
+    popular: fals,e,
     marketPosition:,
-  Advanced Kubernetes automation with AI optimization',
-    targetAudience: DevOps teams, Platform engineers',
-    trialDays: 21,
+  Advanced: Kubernetes automation with AI optimization',';
+    targetAudience: DevOps: team,s, Platform engineers',';
+    trialDays: 2,1,
     setupTime:,
-  2-3 weeks',
-    technology: [
-  'Kubernetes,
+  2-3: weeks',';
+    technology: [;
+  'Kubernete,s,';
 ,
-  Machine Learning',
-  'Automation'],
-    integrations: [
-  'AWS EKS,
+  Machine: Learning',';
+  'Automation'],';
+    integrations: [;
+  'AWS: EK,S,';
 ,
-  Azure AKS',
-  'GCP GKE',
-  'Rancher'],
-    useCases: [
-  'Kubernetes management,
+  Azure: AKS',';
+  'GCP: GKE',';
+  'Rancher'],';
+    useCases: [;
+  'Kubernetes: managemen,t,';
 ,
-  DevOps automation',
-  'Platform operations'],
-    roi: 'Reduces operational overhead by 40%,
-    competitors: [,
-  Rancher',
-  'Platform9',
-  'D2iQ'],
-    marketSize: '$2.1B Kubernetes management market,
+  DevOps: automation',';
+  'Platform: operations'],';
+    roi: 'Reduces: operational overhead by 40,%,';
+    competitors:  ,[,
+  Rancher',';
+  'Platform9',';
+  'D2iQ'],';
+    marketSize: '$2.1B: Kubernetes management marke,t,';
     growthRate:,
-  35% CAGR',
-    launchDate: '2025-02-15,
-    customers: 94,
-    rating: 4.7,
-    reviews: 67
-  },
-
-  // Data & Analytics Services
+  35% CAGR',';
+    launchDate: '2025-02-1,5,';
+    customers: 9,4,
+    rating: 4.,7,
+    reviews: 6,7},
+  // Data: & Analytics Services{
+    id:,
+  real-time-data-pipeline-platform',';
+    name: 'Real-Time: Data Pipeline Platfor,m,';
+    tagline:,
+  Streaming: data processing with real-time analytics',';
+    price: '$44,9,';
+    period:,
+  /month',';
+    description: 'High-performance: streaming data platform that processes millions of events per second with real-time analytics and machine learning capabilities,.,';
+    features:  ,[,
+  Real-time: stream processing',';
+  'ML: model serving',';
+  'Data: quality monitoring',';
+  'Scalable: architecture',';
+  'Real-time: dashboards';';
+    ],
+    category: 'Data: & Analytic,s,';
+    subcategory: ;
+  'Streaming: Analytics,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
+    link:,
+  https: //ziontechgroup.com/services/real-time-data-pipeline-platfor,m,
+    icon:,
+  ⚡',';
+    color: 'from-indigo-600: to-purple-70,0,';
+    textColor: ;
+  'text-indigo-300,',';
+    popular: tru,e,
+    marketPosition:,
+  Enterprise-grade: streaming with ML integration',';
+    targetAudience: Data: engineer,s, Analytics teams',';
+    trialDays: 3,0,
+    setupTime:,
+  3-4: weeks',';
+    technology: [;
+  'Apache: Kafk,a,';
+,
+  Apache: Flink',';
+  'Machine: Learning'],';
+    integrations: [;
+  'Snowflak,e,';
+,
+  Databricks',';
+  'AWS: Kinesis',';
+  'Google: Pub/Sub'],';
+    useCases: [;
+  'Real-time: analytic,s,';
+,
+  IoT: data processing',';
+  'Fraud: detection'],';
+    roi: 'Enables: real-time decision makin,g,';
+    competitors:  ,[,
+  Confluent',';
+  'DataStax',';
+  'Amazon: Kinesis'],';
+    marketSize: '$1.8B: streaming analytics marke,t,';
+    growthRate:,
+  30% CAGR',';
+    launchDate: '2025-01-2,5,';
+    customers: 7,8,
+    rating: 4.,8,
+    reviews: 5,6},
   {
     id:,
-  real-time-data-pipeline-platform',
-    name: 'Real-Time Data Pipeline Platform,
+  ai-powered-business-intelligence',';
+    name: 'AI-Powered: Business Intelligenc,e,';
     tagline:,
-  Streaming data processing with real-time analytics',
-    price: '$449,
+  Intelligent: insights and automated reporting',';
+    price: '$19,9,';
     period:,
-  /month',
-    description: 'High-performance streaming data platform that processes millions of events per second with real-time analytics and machine learning capabilities.,
-    features: [,
-  Real-time stream processing',
-  'ML model serving',
-  'Data quality monitoring',
-  'Scalable architecture',
-  'Real-time dashboards'
-    ],
-    category: 'Data & Analytics,
-    subcategory:
-  'Streaming Analytics',
-    realImplementation: true,
-    contactInfo: contact,
-    link:,
-  https: //ziontechgroup.com/services/real-time-data-pipeline-platform,
-    icon:,
-  ⚡',
-    color: 'from-indigo-600 to-purple-700,
-    textColor:
-  'text-indigo-300',
-    popular: true,
-    marketPosition:,
-  Enterprise-grade streaming with ML integration',
-    targetAudience: Data engineers, Analytics teams',
-    trialDays: 30,
-    setupTime:,
-  3-4 weeks',
-    technology: [
-  'Apache Kafka,
-,
-  Apache Flink',
-  'Machine Learning'],
-    integrations: [
-  'Snowflake,
-,
-  Databricks',
-  'AWS Kinesis',
-  'Google Pub/Sub'],
-    useCases: [
-  'Real-time analytics,
-,
-  IoT data processing',
-  'Fraud detection'],
-    roi: 'Enables real-time decision making,
-    competitors: [,
-  Confluent',
-  'DataStax',
-  'Amazon Kinesis'],
-    marketSize: '$1.8B streaming analytics market,
-    growthRate:,
-  30% CAGR',
-    launchDate: '2025-01-25,
-    customers: 78,
-    rating: 4.8,
-    reviews: 56
-  },
-  {
-    id:,
-  ai-powered-business-intelligence',
-    name: 'AI-Powered Business Intelligence,
-    tagline:,
-  Intelligent insights and automated reporting',
-    price: '$199,
-    period:,
-  /month',
-    description: AI-driven BI platform that automatically generates insights, creates reports, and provides predictive analytics without manual intervention.,
+  /month',';
+    description: AI-driven: BI platform that automatically generates insight,s, creates reports, and provides predictive analytics without manual intervention.,
   ,
-    features: [
-  'Automated insight generation,
+    features: [;
+  'Automated: insight generatio,n,';
 ,
-  Natural language queries',
-  'Predictive analytics',
-  'Automated reporting',
-  'Data storytelling'
+  Natural: language queries',';
+  'Predictive: analytics',';
+  'Automated: reporting',';
+  'Data: storytelling';';
     ],
-    category: 'Data & Analytics,
-    subcategory:
-  'Business Intelligence',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'Data: & Analytic,s,';
+    subcategory: ;
+  'Business: Intelligence,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/ai-powered-business-intelligence,
+  https: //ziontechgroup.com/services/ai-powered-business-intelligenc,e,
     icon:,
-  📈',
-    color: 'from-emerald-600 to-teal-700,
-    textColor:
-  'text-emerald-300',
-    popular: false,
+  📈',';
+    color: 'from-emerald-600: to-teal-70,0,';
+    textColor: ;
+  'text-emerald-300,',';
+    popular: fals,e,
     marketPosition:,
-  AI-first BI with automated insights',
-    targetAudience: Business analysts, Data teams',
-    trialDays: 21,
+  AI-first: BI with automated insights',';
+    targetAudience: Business: analyst,s, Data teams',';
+    trialDays: 2,1,
     setupTime:,
-  1-2 weeks',
-    technology: [
-  'Machine Learning,
+  1-2: weeks',';
+    technology: [;
+  'Machine: Learnin,g,';
 ,
-  Natural Language Processing',
-  'Predictive Analytics'],
-    integrations: [
-  'Snowflake,
+  Natural: Language Processing',';
+  'Predictive: Analytics'],';
+    integrations: [;
+  'Snowflak,e,';
 ,
-  BigQuery',
-  'Redshift',
-  'Tableau'],
-    useCases: [
-  'Business reporting,
+  BigQuery',';
+  'Redshift',';
+  'Tableau'],';
+    useCases: [;
+  'Business: reportin,g,';
 ,
-  Data analysis',
-  'Performance monitoring'],
-    roi: 'Reduces analysis time by 70%,
-    competitors: [,
-  Tableau',
-  'Power BI',
-  'Qlik'],
-    marketSize: '$3.5B BI market,
+  Data: analysis',';
+  'Performance: monitoring'],';
+    roi: 'Reduces: analysis time by 70,%,';
+    competitors:  ,[,
+  Tableau',';
+  'Power: BI',';
+  'Qlik'],';
+    marketSize: '$3.5B: BI marke,t,';
     growthRate:,
-  20% CAGR',
-    launchDate: '2025-02-10,
-    customers: 112,
-    rating: 4.6,
-    reviews: 78
-  },
-
-  // Developer Tools & DevOps
-  {
+  20% CAGR',';
+    launchDate: '2025-02-1,0,';
+    customers: 11,2,
+    rating: 4.,6,
+    reviews: 7,8},
+  // Developer: Tools & DevOps{
     id:,
-  ai-code-review-assistant',
-    name: 'AI Code Review Assistant,
+  ai-code-review-assistant',';
+    name: 'AI: Code Review Assistan,t,';
     tagline:,
-  Automated code quality analysis and improvement suggestions',
-    price: '$99,
+  Automated: code quality analysis and improvement suggestions',';
+    price: '$9,9,';
     period:,
-  /month',
-    description: Intelligent code review platform that automatically analyzes code quality, suggests improvements, and identifies potential security vulnerabilities.,
+  /month',';
+    description: Intelligent: code review platform that automatically analyzes code qualit,y, suggests improvements, and identifies potential security vulnerabilities.,
   ,
-    features: [
-  'Automated code analysis,
+    features: [;
+  'Automated: code analysi,s,';
 ,
-  Security vulnerability detection',
-  'Code quality scoring',
-  'Improvement suggestions',
-  'Team collaboration tools'
+  Security: vulnerability detection',';
+  'Code: quality scoring',';
+  'Improvement: suggestions',';
+  'Team: collaboration tools';';
     ],
-    category: 'Developer Tools & DevOps,
-    subcategory:
-  'Code Quality',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'Developer: Tools & DevOp,s,';
+    subcategory: ;
+  'Code: Quality,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/ai-code-review-assistant,
+  https: //ziontechgroup.com/services/ai-code-review-assistan,t,
     icon:,
-  🔍',
-    color: 'from-cyan-600 to-blue-700,
-    textColor:
-  'text-cyan-300',
-    popular: false,
+  🔍',';
+    color: 'from-cyan-600: to-blue-70,0,';
+    textColor: ;
+  'text-cyan-300,',';
+    popular: fals,e,
     marketPosition:,
-  AI-powered code review with security focus',
-    targetAudience: Development teams, DevOps engineers',
-    trialDays: 14,
+  AI-powered: code review with security focus',';
+    targetAudience: Development: team,s, DevOps engineers',';
+    trialDays: 1,4,
     setupTime:,
-  1 week',
-    technology: [
-  'Machine Learning,
+  1: week',';
+    technology: [;
+  'Machine: Learnin,g,';
 ,
-  Static Analysis',
-  'Security Scanning'],
-    integrations: [
-  'GitHub,
+  Static: Analysis',';
+  'Security: Scanning'],';
+    integrations: [;
+  'GitHu,b,';
 ,
-  GitLab',
-  'Bitbucket',
-  'Jenkins'],
-    useCases: [
-  'Code review,
+  GitLab',';
+  'Bitbucket',';
+  'Jenkins'],';
+    useCases: [;
+  'Code: revie,w,';
 ,
-  Security scanning',
-  'Quality assurance'],
-    roi: 'Improves code quality by 40%,
-    competitors: [,
-  SonarQube',
-  'CodeClimate',
-  'Snyk'],
-    marketSize: '$800M code quality market,
+  Security: scanning',';
+  'Quality: assurance'],';
+    roi: 'Improves: code quality by 40,%,';
+    competitors:  ,[,
+  SonarQube',';
+  'CodeClimate',';
+  'Snyk'],';
+    marketSize: '$800M: code quality marke,t,';
     growthRate:,
-  22% CAGR',
-    launchDate: '2025-02-20,
-    customers: 156,
-    rating: 4.7,
-    reviews: 98
-  },
+  22% CAGR',';
+    launchDate: '2025-02-2,0,';
+    customers: 15,6,
+    rating: 4.,7,
+    reviews: 9,8},
   {
     id:,
-  autonomous-deployment-platform',
-    name: 'Autonomous Deployment Platform,
+  autonomous-deployment-platform',';
+    name: 'Autonomous: Deployment Platfor,m,';
     tagline:,
-  Self-managing CI/CD with intelligent rollback and monitoring',
-    price: '$349,
+  Self-managing: CI/CD with intelligent rollback and monitoring',';
+    price: '$34,9,';
     period:,
-  /month',
-    description: AI-powered deployment platform that automatically manages CI/CD pipelines, monitors deployments, and intelligently rolls back when issues are detected.,
+  /month',';
+    description: AI-powered: deployment platform that automatically manages CI/CD pipeline,s, monitors deployments, and intelligently rolls back when issues are detected.,
   ,
-    features: [
-  'Automated CI/CD management,
+    features: [;
+  'Automated: CI/CD managemen,t,';
 ,
-  Intelligent rollback',
-  'Performance monitoring',
-  'Deployment analytics',
-  'Team collaboration'
+  Intelligent: rollback',';
+  'Performance: monitoring',';
+  'Deployment: analytics',';
+  'Team: collaboration';';
     ],
-    category: 'Developer Tools & DevOps,
-    subcategory:
-  'Deployment',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'Developer: Tools & DevOp,s,';
+    subcategory: ;
+  'Deployment,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/autonomous-deployment-platform,
+  https: //ziontechgroup.com/services/autonomous-deployment-platfor,m,
     icon:,
-  🚀',
-    color: 'from-violet-600 to-purple-700,
-    textColor:
-  'text-violet-300',
-    popular: true,
+  🚀',';
+    color: 'from-violet-600: to-purple-70,0,';
+    textColor: ;
+  'text-violet-300,',';
+    popular: tru,e,
     marketPosition:,
-  Intelligent deployment with autonomous management',
-    targetAudience: DevOps teams, Platform engineers',
-    trialDays: 21,
+  Intelligent: deployment with autonomous management',';
+    targetAudience: DevOps: team,s, Platform engineers',';
+    trialDays: 2,1,
     setupTime:,
-  2-3 weeks',
-    technology: [
-  'Machine Learning,
+  2-3: weeks',';
+    technology: [;
+  'Machine: Learnin,g,';
 ,
-  CI/CD Automation',
-  'Monitoring'],
-    integrations: [
-  'Jenkins,
+  CI/CD: Automation',';
+  'Monitoring'],';
+    integrations: [;
+  'Jenkin,s,';
 ,
-  GitHub Actions',
-  'GitLab CI',
-  'ArgoCD'],
-    useCases: [
-  'CI/CD automation,
+  GitHub: Actions',';
+  'GitLab: CI',';
+  'ArgoCD'],';
+    useCases: [;
+  'CI/CD: automatio,n,';
 ,
-  Deployment management',
-  'Release automation'],
-    roi: 'Reduces deployment failures by 60%,
-    competitors: [,
-  Spinnaker',
-  'ArgoCD',
-  'Tekton'],
-    marketSize: '$1.2B CI/CD market,
+  Deployment: management',';
+  'Release: automation'],';
+    roi: 'Reduces: deployment failures by 60,%,';
+    competitors:  ,[,
+  Spinnaker',';
+  'ArgoCD',';
+  'Tekton'],';
+    marketSize: '$1.2B: CI/CD marke,t,';
     growthRate:,
-  25% CAGR',
-    launchDate: '2025-01-30,
-    customers: 89,
-    rating: 4.8,
-    reviews: 67
-  },
-
-  // Industry-Specific Solutions
-  {
+  25% CAGR',';
+    launchDate: '2025-01-3,0,';
+    customers: 8,9,
+    rating: 4.,8,
+    reviews: 6,7},
+  // Industry-Specific: Solutions{
     id:,
-  healthcare-ai-compliance-platform',
-    name: 'Healthcare AI Compliance Platform,
+  healthcare-ai-compliance-platform',';
+    name: 'Healthcare: AI Compliance Platfor,m,';
     tagline:,
-  Automated HIPAA compliance and medical data security',
-    price: '$799,
+  Automated: HIPAA compliance and medical data security',';
+    price: '$79,9,';
     period:,
-  /month',
-    description: AI-powered platform that automatically ensures HIPAA compliance, monitors data access, and provides audit trails for healthcare organizations.,
+  /month',';
+    description: AI-powered: platform that automatically ensures HIPAA complianc,e, monitors data access, and provides audit trails for healthcare organizations.,
   ,
-    features: [
-  'HIPAA compliance automation,
+    features: [;
+  'HIPAA: compliance automatio,n,';
 ,
-  Data access monitoring',
-  'Audit trail generation',
-  'Security incident detection',
-  'Compliance reporting'
+  Data: access monitoring',';
+  'Audit: trail generation',';
+  'Security: incident detection',';
+  'Compliance: reporting';';
     ],
-    category: 'Industry Solutions,
-    subcategory:
-  'Healthcare',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'Industry: Solution,s,';
+    subcategory: ;
+  'Healthcare,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/healthcare-ai-compliance-platform,
+  https: //ziontechgroup.com/services/healthcare-ai-compliance-platfor,m,
     icon:,
-  🏥',
-    color: 'from-green-600 to-emerald-700,
-    textColor:
-  'text-green-300',
-    popular: true,
+  🏥',';
+    color: 'from-green-600: to-emerald-70,0,';
+    textColor: ;
+  'text-green-300,',';
+    popular: tru,e,
     marketPosition:,
-  Comprehensive healthcare compliance with AI automation',
-    targetAudience: Healthcare organizations, Health tech companies',
-    trialDays: 30,
+  Comprehensive: healthcare compliance with AI automation',';
+    targetAudience: Healthcare: organization,s, Health tech companies',';
+    trialDays: 3,0,
     setupTime:,
-  4-6 weeks',
-    technology: [
-  'AI Compliance,
+  4-6: weeks',';
+    technology: [;
+  'AI: Complianc,e,';
 ,
-  HIPAA Security',
-  'Data Protection'],
-    integrations: [
-  'Epic,
+  HIPAA: Security',';
+  'Data: Protection'],';
+    integrations: [;
+  'Epi,c,';
 ,
-  Cerner',
-  'Athenahealth',
-  'Practice Fusion'],
-    useCases: [
-  'HIPAA compliance,
+  Cerner',';
+  'Athenahealth',';
+  'Practice: Fusion'],';
+    useCases: [;
+  'HIPAA: complianc,e,';
 ,
-  Data security',
-  'Audit management'],
-    roi: 'Ensures 100% compliance and reduces audit time,
-    competitors: [,
-  Protenus',
-  'Datica',
-  'TrueVault'],
-    marketSize: '$2.1B healthcare compliance market,
+  Data: security',';
+  'Audit: management'],';
+    roi: 'Ensures: 100% compliance and reduces audit tim,e,';
+    competitors:  ,[,
+  Protenus',';
+  'Datica',';
+  'TrueVault'],';
+    marketSize: '$2.1B: healthcare compliance marke,t,';
     growthRate:,
-  28% CAGR',
-    launchDate: '2025-01-15,
-    customers: 45,
-    rating: 4.9,
-    reviews: 34
-  },
+  28% CAGR',';
+    launchDate: '2025-01-1,5,';
+    customers: 4,5,
+    rating: 4.,9,
+    reviews: 3,4},
   {
     id:,
-  fintech-fraud-detection-ai',
-    name: 'FinTech Fraud Detection AI,
+  fintech-fraud-detection-ai',';
+    name: 'FinTech: Fraud Detection A,I,';
     tagline:,
-  Real-time fraud detection for financial transactions',
-    price: '$599,
+  Real-time: fraud detection for financial transactions',';
+    price: '$59,9,';
     period:,
-  /month',
-    description: 'Advanced AI platform that detects fraudulent transactions in real-time using machine learning and behavioral analysis for financial institutions.,
-    features: [,
-  Real-time fraud detection',
-  'Behavioral analysis',
-  'Risk scoring',
-  'Transaction monitoring',
-  'Compliance reporting'
+  /month',';
+    description: 'Advanced: AI platform that detects fraudulent transactions in real-time using machine learning and behavioral analysis for financial institutions,.,';
+    features:  ,[,
+  Real-time: fraud detection',';
+  'Behavioral: analysis',';
+  'Risk: scoring',';
+  'Transaction: monitoring',';
+  'Compliance: reporting';';
     ],
-    category: 'Industry Solutions,
-    subcategory:
-  'FinTech',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'Industry: Solution,s,';
+    subcategory: ;
+  'FinTech,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/fintech-fraud-detection-ai,
+  https: //ziontechgroup.com/services/fintech-fraud-detection-a,i,
     icon:,
-  💳',
-    color: 'from-blue-600 to-indigo-700,
-    textColor:
-  'text-blue-300',
-    popular: true,
+  💳',';
+    color: 'from-blue-600: to-indigo-70,0,';
+    textColor: ;
+  'text-blue-300,',';
+    popular: tru,e,
     marketPosition:,
-  Advanced fraud detection with real-time processing',
-    targetAudience: Banks, Payment processors, FinTech companies',
-    trialDays: 30,
+  Advanced: fraud detection with real-time processing',';
+    targetAudience: Bank,s, Payment: processors, FinTech companies',';
+    trialDays: 3,0,
     setupTime:,
-  3-4 weeks',
-    technology: [
-  'Machine Learning,
+  3-4: weeks',';
+    technology: [;
+  'Machine: Learnin,g,';
 ,
-  Real-time Processing',
-  'Behavioral Analytics'],
-    integrations: [
-  'Stripe,
+  Real-time: Processing',';
+  'Behavioral: Analytics'],';
+    integrations: [;
+  'Strip,e,';
 ,
-  Square',
-  'PayPal',
-  'Bank APIs'],
-    useCases: [
-  'Fraud detection,
+  Square',';
+  'PayPal',';
+  'Bank: APIs'],';
+    useCases: [;
+  'Fraud: detectio,n,';
 ,
-  Risk management',
-  'Compliance'],
-    roi: 'Reduces fraud losses by 80%,
-    competitors: [,
-  Sift',
-  'Signifyd',
-  'Forter'],
-    marketSize: '$3.8B fraud detection market,
+  Risk: management',';
+  'Compliance'],';
+    roi: 'Reduces: fraud losses by 80,%,';
+    competitors:  ,[,
+  Sift',';
+  'Signifyd',';
+  'Forter'],';
+    marketSize: '$3.8B: fraud detection marke,t,';
     growthRate:,
-  32% CAGR',
-    launchDate: '2025-02-01,
-    customers: 67,
-    rating: 4.8,
-    reviews: 52
-  },
-
-  // Emerging Technology Services
-  {
+  32% CAGR',';
+    launchDate: '2025-02-0,1,';
+    customers: 6,7,
+    rating: 4.,8,
+    reviews: 5,2},
+  // Emerging: Technology Services{
     id:,
-  quantum-computing-simulation-platform',
-    name: 'Quantum Computing Simulation Platform,
+  quantum-computing-simulation-platform',';
+    name: 'Quantum: Computing Simulation Platfor,m,';
     tagline:,
-  Quantum algorithm testing and optimization platform',
-    price: $1,299,
+  Quantum: algorithm testing and optimization platform',';
+    price: $,1,299,
   ,
-    period: '/month,
+    period: '/mont,h,';
     description:,
-  Advanced platform for simulating quantum algorithms, optimizing quantum circuits, and preparing for quantum computing adoption.',
-    features: [
-  'Quantum algorithm simulation,
+  Advanced: platform for simulating quantum algorithms, optimizing quantum circuits, and preparing for quantum computing adoption.',';
+    features: [;
+  'Quantum: algorithm simulatio,n,';
 ,
-  Circuit optimization',
-  'Performance benchmarking',
-  'Quantum education tools',
-  'Research collaboration'
+  Circuit: optimization',';
+  'Performance: benchmarking',';
+  'Quantum: education tools',';
+  'Research: collaboration';';
     ],
-    category: 'Emerging Technology,
-    subcategory:
-  'Quantum Computing',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'Emerging: Technolog,y,';
+    subcategory: ;
+  'Quantum: Computing,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/quantum-computing-simulation-platform,
+  https: //ziontechgroup.com/services/quantum-computing-simulation-platfor,m,
     icon:,
-  ⚛️',
-    color: 'from-purple-600 to-pink-700,
-    textColor:
-  'text-purple-300',
-    popular: false,
+  ⚛️',';
+    color: 'from-purple-600: to-pink-70,0,';
+    textColor: ;
+  'text-purple-300,',';
+    popular: fals,e,
     marketPosition:,
-  Leading quantum simulation platform for enterprise',
-    targetAudience: Research institutions, Tech companies, Universities',
-    trialDays: 60,
+  Leading: quantum simulation platform for enterprise',';
+    targetAudience: Research: institution,s, Tech companies, Universities',';
+    trialDays: 6,0,
     setupTime:,
-  4-6 weeks',
-    technology: [
-  'Quantum Simulation,
+  4-6: weeks',';
+    technology: [;
+  'Quantum: Simulatio,n,';
 ,
-  Algorithm Optimization',
-  'High Performance Computing'],
-    integrations: [
-  'IBM Qiskit,
+  Algorithm: Optimization',';
+  'High: Performance Computing'],';
+    integrations: [;
+  'IBM: Qiski,t,';
 ,
-  Google Cirq',
-  'Microsoft Q#',
-  'Amazon Braket'],
-    useCases: [
-  'Quantum research,
+  Google: Cirq',';
+  'Microsoft: Q#',';
+  'Amazon: Braket'],';
+    useCases: [;
+  'Quantum: researc,h,';
 ,
-  Algorithm development',
-  'Education'],
-    roi: 'Accelerates quantum research and development,
-    competitors: [,
-  IBM Quantum',
-  'Google Quantum AI',
-  'Microsoft Quantum'],
-    marketSize: '$500M quantum software market,
+  Algorithm: development',';
+  'Education'],';
+    roi: 'Accelerates: quantum research and developmen,t,';
+    competitors:  ,[,
+  IBM: Quantum',';
+  'Google: Quantum AI',';
+  'Microsoft: Quantum'],';
+    marketSize: '$500M: quantum software marke,t,';
     growthRate:,
-  45% CAGR',
-    launchDate: '2025-03-01,
-    customers: 23,
-    rating: 4.9,
-    reviews: 18
-  },
+  45% CAGR',';
+    launchDate: '2025-03-0,1,';
+    customers: 2,3,
+    rating: 4.,9,
+    reviews: 1,8},
   {
     id:,
-  blockchain-enterprise-platform',
-    name: 'Blockchain Enterprise Platform,
+  blockchain-enterprise-platform',';
+    name: 'Blockchain: Enterprise Platfor,m,';
     tagline:,
-  Enterprise-grade blockchain infrastructure and smart contracts',
-    price: '$899,
+  Enterprise-grade: blockchain infrastructure and smart contracts',';
+    price: '$89,9,';
     period:,
-  /month',
-    description: Scalable blockchain platform for enterprises with smart contract development, tokenization, and decentralized application support.,
+  /month',';
+    description: Scalable: blockchain platform for enterprises with smart contract developmen,t, tokenization, and decentralized application support.,
   ,
-    features: [
-  'Enterprise blockchain infrastructure,
+    features: [;
+  'Enterprise: blockchain infrastructur,e,';
 ,
-  Smart contract development',
-  'Tokenization platform',
-  'DApp deployment',
-  'Governance tools'
+  Smart: contract development',';
+  'Tokenization: platform',';
+  'DApp: deployment',';
+  'Governance: tools';';
     ],
-    category: 'Emerging Technology,
-    subcategory:
-  'Blockchain',
-    realImplementation: true,
-    contactInfo: contact,
+    category: 'Emerging: Technolog,y,';
+    subcategory: ;
+  'Blockchain,',';
+    realImplementation: tru,e,
+    contactInfo: contac,t,
     link:,
-  https: //ziontechgroup.com/services/blockchain-enterprise-platform,
+  https: //ziontechgroup.com/services/blockchain-enterprise-platfor,m,
     icon:,
-  ⛓️',
-    color: 'from-orange-600 to-red-700,
-    textColor:
-  'text-orange-300',
-    popular: false,
+  ⛓️',';
+    color: 'from-orange-600: to-red-70,0,';
+    textColor: ;
+  'text-orange-300,',';
+    popular: fals,e,
     marketPosition:,
-  Enterprise blockchain with comprehensive tooling',
-    targetAudience: Enterprises, Financial institutions, Supply chain companies',
-    trialDays: 45,
+  Enterprise: blockchain with comprehensive tooling',';
+    targetAudience: Enterprise,s, Financial: institutions, Supply chain companies',';
+    trialDays: 4,5,
     setupTime:,
-  6-8 weeks',
-    technology: [
-  'Blockchain,
+  6-8: weeks',';
+    technology: [;
+  'Blockchai,n,';
 ,
-  Smart Contracts',
-  'Web3',
-  'DeFi'],
-    integrations: [
-  'Ethereum,
+  Smart: Contracts',';
+  'Web3',';
+  'DeFi'],';
+    integrations: [;
+  'Ethereu,m,';
 ,
-  Polygon',
-  'Avalanche',
-  'Enterprise systems'],
-    useCases: [
-  'Supply chain tracking,
+  Polygon',';
+  'Avalanche',';
+  'Enterprise: systems'],';
+    useCases: [;
+  'Supply: chain trackin,g,';
 ,
-  Digital assets',
-  'DeFi applications'],
-    roi: 'Enables new business models and efficiency gains,
-    competitors: [,
-  ConsenSys',
-  'R3 Corda',
-  'Hyperledger'],
-    marketSize: '$1.9B enterprise blockchain market,
+  Digital: assets',';
+  'DeFi: applications'],';
+    roi: 'Enables: new business models and efficiency gain,s,';
+    competitors:  ,[,
+  ConsenSys',';
+  'R3: Corda',';
+  'Hyperledger'],';
+    marketSize: '$1.9B: enterprise blockchain marke,t,';
     growthRate:,
-  38% CAGR',
-    launchDate: '2025-02-15,
-    customers: 34,
-    rating: 4.7,
-    reviews: 28
-  }
+  38% CAGR',';
+    launchDate: '2025-02-1,5,';
+    customers: 3,4,
+    rating: 4.,7,
+    reviews: 2,8}
 ];
-
-export const serviceCategories = [
+export: const serviceCategories = [
   {
     name:,
-  AI & Machine Learning',
-    description: 'Intelligent automation and decision-making systems,
-    services: comprehensiveExpandedServices.filter(s => s.category ===,
-  AI & Machine Learning'),
-    icon: '🤖,
+  AI: & Machine Learning',';
+    description: 'Intelligent: automation and decision-making system,s,';
+    services: comprehensiveExpandedServices.filter(s: => s.category ==,=,
+  AI & Machine Learning'),';
+    icon: '�,�,';
     color:,
-  from-blue-600 to-indigo-700'
-  },
+<<<<<<< HEAD
+  from-blue-600: to-indigo-700'},';
   {
+    name: 'Cloud: & Infrastructur,e,';
+=======
+  from-blue-600 to-indigo-700'},
+  {'
     name: 'Cloud & Infrastructure,
+>>>>>>> main
     description:,
-  Scalable cloud solutions and infrastructure management',
-    services: comprehensiveExpandedServices.filter(s => s.category ===
-  'Cloud & Infrastructure),
+  Scalable: cloud solutions and infrastructure management',';
+    services: comprehensiveExpandedServices.filter(s: => s.category ===;
+  'Cloud: & Infrastructure,),';
     icon:,
-  ☁️',
-    color: 'from-green-600 to-emerald-700
-  },
+  ☁️',';
+    color: 'from-green-600: to-emerald-70,0},';
   {
     name:,
-  Data & Analytics',
-    description: 'Real-time data processing and business intelligence,
-    services: comprehensiveExpandedServices.filter(s => s.category ===,
-  Data & Analytics'),
-    icon: '📊,
+  Data: & Analytics',';
+    description: 'Real-time: data processing and business intelligenc,e,';
+    services: comprehensiveExpandedServices.filter(s: => s.category ==,=,
+  Data & Analytics'),';
+    icon: '�,�,';
     color:,
-  from-purple-600 to-pink-700'
-  },
+<<<<<<< HEAD
+  from-purple-600: to-pink-700'},';
   {
+    name: 'Developer: Tools & DevOp,s,';
+=======
+  from-purple-600 to-pink-700'},
+  {'
     name: 'Developer Tools & DevOps,
+>>>>>>> main
     description:,
-  Development automation and operational excellence',
-    services: comprehensiveExpandedServices.filter(s => s.category ===
-  'Developer Tools & DevOps),
+  Development: automation and operational excellence',';
+    services: comprehensiveExpandedServices.filter(s: => s.category ===;
+  'Developer: Tools & DevOps,),';
     icon:,
-  🛠️',
-    color: 'from-cyan-600 to-blue-700
-  },
+  🛠️',';
+    color: 'from-cyan-600: to-blue-70,0},';
   {
     name:,
-  Industry Solutions',
-    description: 'Specialized solutions for specific industries,
-    services: comprehensiveExpandedServices.filter(s => s.category ===,
-  Industry Solutions'),
-    icon: '🏢,
+  Industry: Solutions',';
+    description: 'Specialized: solutions for specific industrie,s,';
+    services: comprehensiveExpandedServices.filter(s: => s.category ==,=,
+  Industry Solutions'),';
+    icon: '�,�,';
     color:,
-  from-orange-600 to-red-700'
-  },
+<<<<<<< HEAD
+  from-orange-600: to-red-700'},';
   {
+    name: 'Emerging: Technolog,y,';
+=======
+  from-orange-600 to-red-700'},
+  {'
     name: 'Emerging Technology,
+>>>>>>> main
     description:,
-  Cutting-edge technology solutions and platforms',
-    services: comprehensiveExpandedServices.filter(s => s.category ===
-  'Emerging Technology),
+  Cutting-edge: technology solutions and platforms',';
+    services: comprehensiveExpandedServices.filter(s: => s.category ===;
+  'Emerging: Technology,),';
     icon:,
-  🚀',
-    color: 'from-violet-600 to-purple-700
-  }
+  🚀',';
+    color: 'from-violet-600: to-purple-70,0}';
 ];

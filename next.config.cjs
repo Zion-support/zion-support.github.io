@@ -1,18 +1,25 @@
+<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
+=======
+/** @type {import(
+  'next').NextConfig} */
+>>>>>>> main
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    esmExternals: false,
-  },
   eslint: {
-    // Allow production builds to successfully complete even if
-    // there are ESLint errors.
     ignoreDuringBuilds: true,
   },
+<<<<<<< HEAD
 <<<<<<< HEAD:next.config.js
   typescript: {
     // Allow production builds to successfully complete even if
     // there are type errors.
+=======
+  experimental: {
+    // Removed deprecated options
+  },
+  typescript: {
+>>>>>>> main
     ignoreBuildErrors: true,
   },
   images: {
@@ -24,8 +31,11 @@ const nextConfig = {
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
+<<<<<<< HEAD
 <<<<<<< HEAD:next.config.js
     // Keep default TS/JS handling; we already ignore build errors via config
+=======
+>>>>>>> main
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -33,7 +43,6 @@ const nextConfig = {
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
-        /components\//,
         /\.backup/,
         /\.disabled/,
         /automation\/backups/,
@@ -41,9 +50,14 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /hardhat/,
+        /^components\//, // Exclude root components directory
       ],
     });
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> main
     // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
@@ -51,12 +65,11 @@ const nextConfig = {
       net: false,
       tls: false,
     };
-    
+
     return config;
   },
   // Try to exclude problematic directories at the Next.js level
-  // Disable Next.js pages by pointing to a non-existent extension so Next won't pick them up
-  pageExtensions: ['do_not_use'],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
@@ -65,6 +78,7 @@ const nextConfig = {
   },
 };
 
+<<<<<<< HEAD
 export default nextConfig;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -104,4 +118,6 @@ const nextConfig = {
   }
 };
 
+=======
+>>>>>>> main
 module.exports = nextConfig;

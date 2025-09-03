@@ -1,9 +1,10 @@
 {
-  "name": "Zion Tech Group - AI Solutions & Technology Services",
+  "name": "Zion Tech Group",
   "short_name": "Zion Tech",
-  "description": "Leading the future of technology with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services.",
+  "description": "Leading provider of AI-powered solutions, micro SaaS applications, and enterprise IT services",
   "start_url": "/",
   "display": "standalone",
+<<<<<<< HEAD
   "background_color": "#17072b",
   "theme_color": "#22ddd2",
   "orientation": "portrait-primary",
@@ -52,17 +53,23 @@
   "scope": "/",
   "lang": "en",
   "categories": ["business", "productivity", "technology"],
+=======
+  "background_color": "#0a0a1a",
+  "theme_color": "#0a0a1a",
+  "orientation": "portrait-primary",
+>>>>>>> main
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable any"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
+<<<<<<< HEAD
       "purpose": "any maskable"
     },
     {
@@ -164,3 +171,14 @@
     "client_mode": "navigate-existing"
   }
 } 
+=======
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}
+>>>>>>> main

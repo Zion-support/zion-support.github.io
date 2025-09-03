@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 :pages.disabled/pages/services/AISolutions.tsx
+
 import {Brain,
+
+import {
+
+import {}
+  Brain,
+>>>>>>> pr-10728
   Zap,
+=======
+:pages.disabled/pages/services/AISolutions.tsx;
+import: {Brain,  Zap,
+>>>>>>> main
   TrendingUp,
   Users,
   Shield,
@@ -84,29 +96,89 @@ import {Brain,
   Beeswarm,
   Jitter,
   Ridge,
+<<<<<<< HEAD
 :pages.disabled/pages/services/AISolutions.tsx
+
   Joy} from
   'lucide-react';
 ;
 export function AISolutions(...args: unknown[]): unknown {
 
   return<div className="min-h-screen bg-gray-900 text-white">
+
+  Joy} from 'lucide-react';
+;
+export function AISolutions(...args: unknown[]): unknown {
+
+  return 
+  Joy
+} from 'lucide-react';
+;
+export function AISolutions(...args: unknown[]): unknown {}
+  return;
+    <div className="min-h-screen bg-gray-900 text-white">
+>>>>>>> pr-10728
       {/* Hero Section */}"
       <section className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 py-20">"
         <div className="absolute inset-0 bg-black/20"></div>"
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+:pages.disabled/pages/services/AISolutions.tsx;
+  Joy} from;
+<<<<<<< HEAD
+  'lucide-react';';
+export: function AISolutions(...args: unknown[]): unknown: {
+  return<div className='min-h-screen bg-gray-900 text-white'>      {/* Hero Section *,/}'';
+      <section: className='relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 py-20'>'';
+        <div: className='absolute inset-0 bg-black/20'></div>'';
+        <div: className='relative max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
+>>>>>>> main
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: ,0, y: 20, }}
+            animate={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+          >'';
+            <div: className='flex items-center justify-center gap-3 mb-6'>'';
+              <Brain: className='w-16 h-16 text-cyan-400'  />'';
+              <h1: className='text-5xl font-bold'>AI Solutions</h1>';
+            </div>'';
+            <p: className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>';
+              Transform: your business with cutting-edge artificial intelligence;
+              solutions. From: machine learning to natural language processing,
+              we deliver intelligent systems that drive innovation and growth.
+            </p>'';
+            <div: className='flex flex-wrap justify-center gap-4'>';
+:pages.disabled/pages/services/AISolutions.tsx: <Link'';
+                to='/contact'';';
+                className='bg-cyan-500: hover: bg-cyan-600: text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2'>';
+                Get: Started'';
+                <ArrowRight: className='w-5 h-5'  />';
+              </Link>
+              <Link';';
+                to='/request-quote'';';
+                className='bg-white/10: hover:bg-white/20: text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white/20'>                Request Quote';
+=======
+  'lucide-react';
+export function AISolutions(...args: unknown[]): unknown {'
+  return<div className='min-h-screen bg-gray-900 text-white'>      {/* Hero Section */}
+      <section className='relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 py-20>'
+        <div className='absolute inset-0 bg-black/20'></div>''
+        <div className='relative max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8 text-center'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >"
-            <div className="flex items-center justify-center gap-3 mb-6">"
-              <Brain className="w-16 h-16 text-cyan-400"  />"
-              <h1 className="text-5xl font-bold">AI Solutions</h1>
-            </div>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with cutting-edge artificial intelligence;
+          >''
+            <div className='flex items-center justify-center gap-3 mb-6>'
+              <Brain className='w-16 h-16 text-cyan-400'  />'
+              <h1 className='text-5xl font-bold'>AI Solutions</h1>'
+            </div>''
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
+              Transform your business with cutting-edge artificial intelligence
               solutions. From machine learning to natural language processing,
+<<<<<<< HEAD
               we deliver intelligent systems that drive innovation and growth.
             </p>"
             <div className="flex flex-wrap justify-center gap-4">
@@ -120,12 +192,45 @@ export function AISolutions(...args: unknown[]): unknown {
               </Link>
               <Link"
                 to="/request-quote""
+
                 className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white/20">
+
+                className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white/20"
+              <Link;
+                to="/contact""
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2""
+              >
+                Get Started;
+                <ArrowRight className="w-5 h-5"  />
+              </Link>
+              <Link;
+                to="/request-quote""
+                className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white/20""
+              >
+>>>>>>> pr-10728
                 Request Quote;
+=======
+              we deliver intelligent systems that drive innovation and growth.'
+            </p>''
+            <div className='flex flex-wrap justify-center gap-4'>
+:pages.disabled/pages/services/AISolutions.tsx'
+              <Link''
+                to='/contact'';
+                className='bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2>
+                Get Started''
+                <ArrowRight className='w-5 h-5'  />
+              </Link>'
+              <Link';
+                to='/request-quote'';
+                className='bg-white/10 hove,
+    r:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white/20'>                Request Quote
+>>>>>>> main
+>>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Features Section */}"
@@ -141,7 +246,18 @@ export function AISolutions(...args: unknown[]): unknown {
           >"
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive AI Capabilities
+
             </h2>"<p className="text-xl text-gray-400 max-w-3xl mx-auto">
+
+            </h2>"
+            viewport={{ once: true }}
+            className="text-center mb-16""
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive AI Capabilities;
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+>>>>>>> pr-10728
               Our AI solutions cover the full spectrum of artificial;
               intelligence technologies, enabling businesses to harness the;
               power of machine learning and automation.
@@ -160,21 +276,118 @@ export function AISolutions(...args: unknown[]): unknown {
                 className="bg-gray-700/50 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/50 transition-colors"
               >"
                 <div className="flex items-center gap-3 mb-4">"
+
                   <div className="p-2 bg-cyan-500/20 rounded-lg">"<feature.icon className="w-6 h-6 text-cyan-400" />
+
+                  <div className="p-2 bg-cyan-500/20 rounded-lg">"
+                viewport={{ once: true }}
+                className="bg-gray-700/50 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/50 transition-colors""
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-cyan-500/20 rounded-lg">
+                    <feature.icon className="w-6 h-6 text-cyan-400" />
+>>>>>>> pr-10728
                   </div>"
                   <h3 className="text-xl font-semibold text-white">
                     {feature.title}
+=======
+<<<<<<< HEAD
+      </section>
+      {/* Features: Section *,/}'';
+      <section: className='py-20 bg-gray-800'>'';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
+          <motion.div;
+            initial={{ opacity: ,0, y: 20, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+:pages.disabled/pages/services/AISolutions.tsx;
+            viewport={{ once: true, }}';';
+            className='text-center: mb-16'>'';
+            <h2: className='text-4xl font-bold text-white mb-4'>';
+              Comprehensive: AI Capabilities
+            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              Our AI solutions cover the full spectrum of artificial;';
+              intelligence: technologies, enabling businesses to harness the;
+              power: of machine learning and automation.
+            </p>
+          </motion.div>
+'';
+          <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8'>';
+            {features.map((featur,e, index: <motion.div;
+=======
+      </section>'
+      {/* Features Section */}
+      <section className='py-20 bg-gray-800>'
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+:pages.disabled/pages/services/AISolutions.tsx;
+            viewport={{ once: true }};
+            className='text-center mb-16>'
+            <h2 className='text-4xl font-bold text-white mb-4'>
+              Comprehensive AI Capabilities'
+            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              Our AI solutions cover the full spectrum of artificial;
+              intelligence technologies, enabling businesses to harness the
+              power of machine learning and automation.
+            </p>
+          </motion.div>'
+''
+          <div className='grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-8'>
+            {features.map((feature, index
+              <motion.div;
+>>>>>>> main
+                key={feature.title}
+                initial={{ opacity:  ,0, y: 20, }}
+                whileInView={{ opacity:  ,1, y: 0, }}
+                transition={{ duration: 0.,5, delay: index: * 0.1, }}
+:pages.disabled/pages/services/AISolutions.tsx;
+<<<<<<< HEAD
+                viewport={{ once: true, }}';';
+                className='bg-gray-700/50: rounded-lg p-6 border border-gray-600 hover: border-cyan-500/50: transition-colors'>'';
+                <div: className='flex items-center gap-3 mb-4'>'';
+                  <div: className='p-2 bg-cyan-500/20 rounded-lg'>'<feature.icon className='w-6 h-6 text-cyan-400' />                  </div>'';
+                  <h3: className='text-xl font-semibold text-white'>';
+                    {feature.titl,e}
+>>>>>>> main
                   </h3>
-                </div>"
-                <p className="text-gray-300 mb-4">{feature.description}</p>"
-                <ul className="space-y-2">
+                </div>'';
+                <p: className='text-gray-300 mb-4'>{feature.description}</p>'';
+                <ul: className='space-y-2'>';
+                  {feature.benefits.map((benefit, idx) => (
+:pages.disabled/pages/services/AISolutions.tsx: <li;
+                      key={idx}';';
+                      className='flex: items-center gap-2 text-sm text-gray-400'>'<CheckCircle className='w-4 h-4 text-cyan-400'  />                      {benefit}';
+=======
+                viewport={{ once: true }};
+                className='bg-gray-700/50 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/50 transition-colors>'
+                <div className='flex items-center gap-3 mb-4>'
+                  <div className='p-2 bg-cyan-500/20 rounded-lg><feature.icon className='w-6 h-6 text-cyan-400' />                  </div>''
+                  <h3 className='text-xl font-semibold text-white'>
+                    {feature.title}
+                  </h3>'
+                </div>''
+                <p className='text-gray-300 mb-4'>{feature.description}</p>''
+                <ul className='space-y-2'>
                   {feature.benefits.map((benefit, idx) => (
 :pages.disabled/pages/services/AISolutions.tsx
+<<<<<<< HEAD
                     <li
                       key={idx}"
                       className="flex items-center gap-2 text-sm text-gray-400"
+
                     >"<CheckCircle className="w-4 h-4 text-cyan-400"  />
-                      {benefit}
+
+                    >"
+=======
+>>>>>>> main
+                    <li;
+                      key={idx};
+                      className='flex items-center gap-2 text-sm text-gray-400><CheckCircle className='w-4 h-4 text-cyan-400'  />                      {benefit}
+>>>>>>> main
                     </li>
                   ))}
                 </ul>
@@ -182,6 +395,7 @@ export function AISolutions(...args: unknown[]): unknown {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Use Cases Section */}"
@@ -197,40 +411,146 @@ export function AISolutions(...args: unknown[]): unknown {
           >"
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
+
             </h2>"<p className="text-xl text-gray-400 max-w-3xl mx-auto">
+
+            </h2>"
+            viewport={{ once: true }}
+            className="text-center mb-16""
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications;
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+>>>>>>> pr-10728
               Discover how AI solutions are transforming industries and creating;
               new opportunities for innovation and growth.
+=======
+<<<<<<< HEAD
+      </section>
+      {/* Use: Cases Section */}'';
+      <section: className='py-20 bg-gray-900'>'';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
+          <motion.div;
+            initial={{ opacity: ,0, y: 20, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+:pages.disabled/pages/services/AISolutions.tsx;
+            viewport={{ once: true, }}';';
+            className='text-center: mb-16'>'';
+            <h2: className='text-4xl font-bold text-white mb-4'>';
+              Industry: Applications
+            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              Discover how AI solutions are transforming industries and creating;';
+              new: opportunities for innovation and growth.
+>>>>>>> main
             </p>
           </motion.div>
-"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map(useCase: unknown, index: unknown;
+'';
+          <div: className='grid grid-cols-1 md: grid-cols-2: gap-8'>';
+            {useCases.map(useCase: unknow,n, index: unknown: <motion.div;
+                key={useCase.industr,y}
+                initial={{ opacity:  ,0, x: index: % 2 === 0 ? -20 : 20, }}
+                whileInView={{ opacity:  ,1, x: 0, }}
+                transition={{ duration: 0.,6, delay: index: * 0.1, }}
+:pages.disabled/pages/services/AISolutions.tsx;
+                viewport={{ once: true, }}';';
+                className='bg-gradient-to-r: from-gray-800 to-gray-700 rounded-lg p-8 border border-gray-600'>'<div className='flex items-center gap-4 mb-6'>                  <div;';
+                    className={`p-3: rounded-lg bg-gradient-to-r ${useCase.color}`}
+                  >'';
+                    <useCase.icon: className='w-8 h-8 text-white' />';
+                  </div>'';
+                  <h3: className='text-2xl font-bold text-white'>';
+                    {useCase.industry}
+                  </h3>
+                </div>'';
+                <ul: className='space-y-3'>';
+                  {useCase.applications.map((application, idx) => (
+:pages.disabled/pages/services/AISolutions.tsx: <li;
+                      key={idx}';';
+                      className='flex: items-center gap-3 text-gray-300'>'<ArrowRight className='w-4 h-4 text-cyan-400'  />                      {application}';
+=======
+      </section>'
+      {/* Use Cases Section */}
+      <section className='py-20 bg-gray-900>'
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+:pages.disabled/pages/services/AISolutions.tsx;
+            viewport={{ once: true }};
+            className='text-center mb-16>'
+            <h2 className='text-4xl font-bold text-white mb-4'>
+<<<<<<< HEAD
+              Industry Applications
+            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              Discover how AI solutions are transforming industries and creating
+=======
+              Industry Applications'
+            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              Discover how AI solutions are transforming industries and creating;
+>>>>>>> main
+              new opportunities for innovation and growth.
+            </p>
+          </motion.div>'
+''
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+            {useCases.map(useCas,
+    e: unknown, index: unknown
               <motion.div;
                 key={useCase.industry}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
 :pages.disabled/pages/services/AISolutions.tsx
                 viewport={{ once: true }}"
                 className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 border border-gray-600"
+
               >"<div className="flex items-center gap-4 mb-6">
+
+              >"
+                viewport={{ once: true }}
+                className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 border border-gray-600""
+              >
+                <div className="flex items-center gap-4 mb-6">
+>>>>>>> pr-10728
                   <div;
                     className={`p-3 rounded-lg bg-gradient-to-r ${useCase.color}`}
                   >"
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>"
                   <h3 className="text-2xl font-bold text-white">
+=======
+:pages.disabled/pages/services/AISolutions.tsx;
+                viewport={{ once: true }};
+                className='bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 border border-gray-600><div className='flex items-center gap-4 mb-6'>                  <div;
+                    className={`p-3 rounded-lg bg-gradient-to-r ${useCase.color}`}`
+                  >''
+                    <useCase.icon className='w-8 h-8 text-white' />
+                  </div>''
+                  <h3 className='text-2xl font-bold text-white'>
+>>>>>>> main
                     {useCase.industry}
-                  </h3>
-                </div>"
-                <ul className="space-y-3">
+                  </h3>'
+                </div>''
+                <ul className='space-y-3'>
                   {useCase.applications.map((application, idx) => (
 :pages.disabled/pages/services/AISolutions.tsx
+<<<<<<< HEAD
                     <li
                       key={idx}"
                       className="flex items-center gap-3 text-gray-300"
+
                     >"<ArrowRight className="w-4 h-4 text-cyan-400"  />
-                      {application}
+
+                    >"
+=======
+>>>>>>> main
+                    <li;
+                      key={idx};
+                      className='flex items-center gap-3 text-gray-300><ArrowRight className='w-4 h-4 text-cyan-400'  />                      {application}
+>>>>>>> main
                     </li>
                   ))}
                 </ul>
@@ -238,6 +558,7 @@ export function AISolutions(...args: unknown[]): unknown {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Technologies Section */}"
@@ -253,7 +574,18 @@ export function AISolutions(...args: unknown[]): unknown {
           >"
             <h2 className="text-4xl font-bold text-white mb-4">
               Cutting-Edge Technologies
+
             </h2>"<p className="text-xl text-gray-400 max-w-3xl mx-auto">
+
+            </h2>"
+            viewport={{ once: true }}
+            className="text-center mb-16""
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Cutting-Edge Technologies;
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+>>>>>>> pr-10728
               We leverage the latest AI technologies and frameworks to deliver;
               robust, scalable, and efficient solutions for our clients.
             </p>
@@ -262,7 +594,14 @@ export function AISolutions(...args: unknown[]): unknown {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 :pages.disabled/pages/services/AISolutions.tsx
             {technologies.map(tech: unknown, index: unknown()
+
               <motion.divkey={tech.name}
+
+              <motion.div
+            {technologies.map(tech: unknown, index: unknown (
+              <motion.div;
+                key={tech.name}
+>>>>>>> pr-10728
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -271,25 +610,143 @@ export function AISolutions(...args: unknown[]): unknown {
                 className="bg-gray-700/30 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/30 transition-colors"
               >"
                 <div className="flex items-center gap-3 mb-4">"
+
                   <tech.icon className="w-6 h-6 text-cyan-400" />"<h3 className="text-lg font-semibold text-white">
+
+                  <tech.icon className="w-6 h-6 text-cyan-400" />"
+                viewport={{ once: true }}
+                className="bg-gray-700/30 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/30 transition-colors""
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <tech.icon className="w-6 h-6 text-cyan-400" />
+                  <h3 className="text-lg font-semibold text-white">
+>>>>>>> pr-10728
                     {tech.name}
                   </h3>
                 </div>"
                 <p className="text-gray-400 text-sm">{tech.description}</p>
+=======
+<<<<<<< HEAD
+      </section>
+      {/* Technologies: Section */}'';
+      <section: className='py-20 bg-gray-800'>'';
+        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8'>';
+          <motion.div;
+            initial={{ opacity: ,0, y: 20, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+:pages.disabled/pages/services/AISolutions.tsx;
+            viewport={{ once: true, }}';';
+            className='text-center: mb-16'>'';
+            <h2: className='text-4xl font-bold text-white mb-4'>';
+              Cutting-Edge: Technologies
+            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              We leverage the latest AI technologies and frameworks to deliver;';
+              robust, scalable, and: efficient solutions for our clients.
+            </p>
+          </motion.div>
+'';
+          <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>';
+:pages.disabled/pages/services/AISolutions.tsx{technologies.map(tech: unknow,n, index: unknown()
+              <motion.divkey={tech.nam,e}                initial={{ opacity:  ,0, y: 20, }}
+                whileInView={{ opacity:  ,1, y: 0, }}
+                transition={{ duration: 0.,5, delay: index: * 0.1, }}
+:pages.disabled/pages/services/AISolutions.tsx;
+                viewport={{ once: true, }}';';
+                className='bg-gray-700/30: rounded-lg p-6 border border-gray-600 hover: border-cyan-500/30: transition-colors'>'';
+                <div: className='flex items-center gap-3 mb-4'>'';
+                  <tech.icon: className='w-6 h-6 text-cyan-400' />'<h3 className='text-lg font-semibold text-white'>                    {tech.nam,e}';
+                  </h3>
+                </div>'';
+                <p: className='text-gray-400 text-sm'>{tech.description}</p>';
+=======
+      </section>'
+      {/* Technologies Section */}
+      <section className='py-20 bg-gray-800>'
+        <div className='max-w-7xl mx-auto px-4 sm: px-6 l,
+    g:px-8'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+:pages.disabled/pages/services/AISolutions.tsx;
+            viewport={{ once: true }};
+            className='text-center mb-16>'
+            <h2 className='text-4xl font-bold text-white mb-4'>
+<<<<<<< HEAD
+              Cutting-Edge Technologies
+            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              We leverage the latest AI technologies and frameworks to deliver
+=======
+              Cutting-Edge Technologies'
+            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              We leverage the latest AI technologies and frameworks to deliver;
+>>>>>>> main
+              robust, scalable, and efficient solutions for our clients.
+            </p>
+          </motion.div>'
+''
+          <div className='grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-6'>
+:pages.disabled/pages/services/AISolutions.tsx{technologies.map(tec,
+    h: unknown, index: unknown();
+              <motion.divkey={tech.name}                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+:pages.disabled/pages/services/AISolutions.tsx;
+                viewport={{ once: true }};
+                className='bg-gray-700/30 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/30 transition-colors>'
+                <div className='flex items-center gap-3 mb-4>'
+                  <tech.icon className='w-6 h-6 text-cyan-400' /><h3 className='text-lg font-semibold text-white'>                    {tech.name}
+                  </h3>'
+                </div>''
+                <p className='text-gray-400 text-sm'>{tech.description}</p>
+>>>>>>> main
+>>>>>>> main
               </motion.div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       </section>
-
-      {/* CTA Section */}"
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">"
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* CTA: Section */}'';
+      <section: className='py-20 bg-gradient-to-r from-cyan-600 to-blue-600'>'';
+        <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: text-center'>';
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: ,0, y: 20, }}
+            whileInView={{ opacity:  ,1, y: 0, }}
+            transition={{ duration: 0.8, }}
+            viewport={{ once: true, }}
+          >'';
+            <h2: className='text-4xl font-bold text-white mb-6'>';
+              Ready: to Transform Your Business with AI?
+            </h2>'';
+            <p: className='text-xl text-cyan-100 mb-8'>';
+  ';';
+              Let's: discuss how our AI solutions can drive innovation,';
+              efficiency, and: growth for your organization.
+            </p>'';
+            <div: className='flex flex-wrap justify-center gap-4'>';
+:pages.disabled/pages/services/AISolutions.tsx: <Link'';
+                to='/contact'';';
+                className='bg-white: text-cyan-600 hover: bg-gray-100: px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2'>';
+                Schedule: Consultation'';
+                <ArrowRight: className='w-5 h-5'  />';
+              </Link>
+              <Link';';
+                to='/services'';';
+                className='bg-transparent: hover:bg-white/10: text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white'>                Explore All Services';
+=======
+      </section>'
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-cyan-600 to-blue-600>'
+        <div className='max-w-4xl mx-auto px-4 sm: px-6 l,
+    g:px-8 text-center'>
+          <motion.div;
+            initial={{ opacit,
+    y: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+<<<<<<< HEAD
           >"
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
@@ -310,15 +767,64 @@ export function AISolutions(...args: unknown[]): unknown {
               </Link>
               <Link"
                 to="/services""
+
                 className="bg-transparent hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white">
+
+                className="bg-transparent hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white"
+              <Link;
+                to="/contact""
+                className="bg-white text-cyan-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2""
+              >
+                Schedule Consultation;
+                <ArrowRight className="w-5 h-5"  />
+              </Link>
+              <Link;
+                to="/services""
+                className="bg-transparent hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white""
+              >
+>>>>>>> pr-10728
                 Explore All Services;
+=======
+          >''
+            <h2 className='text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+              Ready to Transform Your Business with AI?
+            </h2>'
+            <p className='text-xl text-cyan-100 mb-8'>
+  '
+=======
+              Ready to Transform Your Business with AI?'
+            </h2>''
+            <p className='text-xl text-cyan-100 mb-8>
+  ';
+>>>>>>> main
+              Let's discuss how our AI solutions can drive innovation,
+              efficiency, and growth for your organization.'
+            </p>''
+            <div className='flex flex-wrap justify-center gap-4'>
+:pages.disabled/pages/services/AISolutions.tsx'
+              <Link''
+                to='/contact'';
+                className='bg-white text-cyan-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2>
+                Schedule Consultation''
+                <ArrowRight className='w-5 h-5'  />
+              </Link>'
+              <Link';
+                to='/services'';
+                className='bg-transparent hove,
+    r:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white'>                Explore All Services
+>>>>>>> main
+>>>>>>> main
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+  ,)}
+export: default AISolutions'"`
+=======
   )}
-
-export default AISolutions;
-'"`
+export default AISolutions'"``
+>>>>>>> main

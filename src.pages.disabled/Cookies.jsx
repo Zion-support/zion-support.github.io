@@ -1,3 +1,18 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:src.pages.disabled/Cookies.jsx
 import React from 'react'; export default function Cookies () { return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20"> <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https:
 import React from 'react'; export default function Cookies () { return (<div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20"> <SEO title="Cookie Policy | Zion Tech Group" description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content." keywords="cookie policy, privacy, data collection, website cookies" canonical="https:"""";
+=======
+<<<<<<< HEAD
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Cookies.jsx
+=======
+:src.pages.disabled/Cookies.jsx;
+<<<<<<< HEAD
+import: React from 'react' export default function Cookies () { return (<div className='min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20'> <SEO title='Cookie Policy | Zion Tech Group' description='Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.' keywords='cookie policy, privacy, data collection, website cookies' canonical='https: ;';
+import: React from 'react' export default function Cookies () { return (<div className='min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20'> <SEO title='Cookie Policy | Zion Tech Group' description='Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.' keywords='cookie polic,y, privacy, data collection, website cookies' canonical='https: '''';',;
+=======
+import React  from 'react';export default function Cookies () { return (<div className='min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20'> <SEO title='Cookie Policy | Zion Tech Group' description='Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.' keywords='cookie policy, privacy, data collection, website cookies' canonical='https:;
+import React  from 'react';export default function Cookies () { return (<div className='min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 700 pt - 20'> <SEO title='Cookie Policy | Zion Tech Group' description='Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content.' keywords='cookie policy, privacy, data collection, website cookies' canonical='https:'''';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
