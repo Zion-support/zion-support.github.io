@@ -1,47 +1,50 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Shield, Rocket, Cpu, Globe, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Play, Pause, Volume2, VolumeX, Maximize2, Minimize2, RotateCcw, Sparkles, Target, Users, Award, Clock, Eye, Heart, Share2, Download, ExternalLink    } from 'lucide-react'  export function HomeHero() { const [isVideoPlaying, setIsVideoPlaying] = useState(false) const [isMuted, setIsMuted] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [currentStatIndex, setCurrentStatIndex] = useState(0)  const heroStats = [ { label: 'AI Solutions', value: '50+', icon: Brain, color: 'from-purple-600 to-pink-600', description: 'Cutting-edge AI services' }, { label: 'Enterprise Clients', value: '200+', icon: Building, color: 'from-blue-600 to-cyan-600', description: 'Trusted by industry leaders' }, { label: 'Success Rate', value: '98%', icon: CheckCircle, color: 'from-green-600 to-emerald-600', description: 'Proven track record' }, { label: 'Years Experience', value: '15+', icon: Star, color: 'from-yellow-600 to-orange-600', description: 'Deep expertise' } ]  const containerVariants = { hidden: { opacit,
+    y: 0  }, visible: { opacit,
+    y: 1, transition: { staggerChildre,
+    n: 0.2, delayChildren: 0.3 } } }  const itemVariants = { hidden: { opacit,
+    y: 0, y: 20 }, visible: { opacit,
+    y: 1, y: 0, transition: { duratio,
+    n: 0.6, ease: 'easeOut' } } }  const floatingVariants = { float: {' ,
+    y: [-10, 10, -10], '; transition: {'; duratio,
+    n: 6, ''; repeat: Infinity, ';'; ease: 'easeInOut' } } }  const pulseVariants = { pulse: { scal,
+    e: [1, 1.05, 1], ' opacity: [0.5, 0.8, 0.5], '; transition: {'; duratio,
+    n: 3, ''; repeat: Infinity, ';'; ease: 'easeInOut' } } }
+=======
+<<<<<<< HEAD
+import React, {useState, useEffect } from 'react' ;
+import {motion, AnimatePresence    } from 'framer-motion' import {Link    } from 'react-router-dom' import {Brain, Shield, Rocket, Cpu, Globe, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Play, Pause, Volume2, VolumeX, Maximize2, Minimize2, RotateCcw, Sparkles, Target, Users, Award, Clock, Eye, Heart, Share2, Download, ExternalLink    } from 'lucide-react'  export function HomeHero() {const [isVideoPlaying, setIsVideoPlaying] = useState(false) const [isMuted, setIsMuted] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [currentStatIndex, setCurrentStatIndex] = useState(0)  const heroStats = [{ label: 'AI Solutions', value: '50+', icon: Brain, color: 'from-purple-600 to-pink-600', description: 'Cutting-edge AI services' }, {label: 'Enterprise Clients', value: '200+', icon: Building, color: 'from-blue-600 to-cyan-600', description: 'Trusted by industry leaders' }, {label: 'Success Rate', value: '98%', icon: CheckCircle, color: 'from-green-600 to-emerald-600', description: 'Proven track record' }, {label: 'Years Experience', value: '15+', icon: Star, color: 'from-yellow-600 to-orange-600', description: 'Deep expertise' } ]  const containerVariants = {hidden: { opacity: 0  }, visible: {opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } } }  const itemVariants = {hidden: { opacity: 0, y: 20 }, visible: {opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } } }  const floatingVariants = {float: {' y: [-10, 10, -10], ';' transition: {';' duration: 6, '';' repeat: Infinity, ';'';' ease: 'easeInOut' } } }  const pulseVariants = {pulse: { scale: [1, 1.05, 1], ' opacity: [0.5, 0.8, 0.5], ';' transition: {';' duration: 3, '';' repeat: Infinity, ';'';' ease: 'easeInOut' } } }
+=======
+<<<<<<< HEAD
 
-export default function HomeHero() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="HomeHero - Zion Tech Group"
-        description="Professional homehero services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              HomeHero
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional homehero services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
+;
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Shield, Rocket, Cpu, Globe, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Play, Pause, Volume2, VolumeX, Maximize2, Minimize2, RotateCcw, Sparkles, Target, Users, Award, Clock, Eye, Heart, Share2, Download, ExternalLink    } from 'lucide-react'  export function HomeHero() { const [isVideoPlaying, setIsVideoPlaying] = useState(false) const [isMuted, setIsMuted] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [currentStatIndex, setCurrentStatIndex] = useState(0)  const heroStats = [ { label: 'AI Solutions', value: '50+', icon: Brain, color: 'from-purple-600 to-pink-600', description: 'Cutting-edge AI services' }, { label: 'Enterprise Clients', value: '200+', icon: Building, color: 'from-blue-600 to-cyan-600', description: 'Trusted by industry leaders' }, { label: 'Success Rate', value: '98%', icon: CheckCircle, color: 'from-green-600 to-emerald-600', description: 'Proven track record' }, { label: 'Years Experience', value: '15+', icon: Star, color: 'from-yellow-600 to-orange-600', description: 'Deep expertise' } ]  const containerVariants = { hidden: { opacity: 0    }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } } }  const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } } }  const floatingVariants = { float: {' y: [-10, 10, -10], ';' transition: {';' duration: 6, '';' repeat: Infinity, ';'';' ease: 'easeInOut' } } }  const pulseVariants = { pulse: { scale: [1, 1.05, 1], ' opacity: [0.5, 0.8, 0.5], ';' transition: {';' duration: 3, '';' repeat: Infinity, ';'';' ease: 'easeInOut' } } }
+;
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Shield, Rocket, Cpu, Globe, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Play, Pause, Volume2, VolumeX, Maximize2, Minimize2, RotateCcw, Sparkles, Target, Users, Award, Clock, Eye, Heart, Share2, Download, ExternalLink    } from 'lucide-react'  export function HomeHero() { const [isVideoPlaying, setIsVideoPlaying] = useState(false) const [isMuted, setIsMuted] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [currentStatIndex, setCurrentStatIndex] = useState(0)  const heroStats = [ { label: 'AI Solutions', value: '50+', icon: Brain, color: 'from-purple-600 to-pink-600', description: 'Cutting-edge AI services' }, { label: 'Enterprise Clients', value: '200+', icon: Building, color: 'from-blue-600 to-cyan-600', description: 'Trusted by industry leaders' }, { label: 'Success Rate', value: '98%', icon: CheckCircle, color: 'from-green-600 to-emerald-600', description: 'Proven track record' }, { label: 'Years Experience', value: '15+', icon: Star, color: 'from-yellow-600 to-orange-600', description: 'Deep expertise' } ]  const containerVariants = { hidden: { opacity: 0  }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } } }  const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } } }  const floatingVariants = { float: {' y: [-10, 10, -10],';' transition: {';' duration: 6,';' repeat: Infinity,';';' ease: 'easeInOut' } } }  const pulseVariants = { pulse: { scale: [1, 1.05, 1],' opacity: [0.5, 0.8, 0.5],';' transition: {';' duration: 3,';' repeat: Infinity,';';' ease: 'easeInOut' } } }
+;
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from &apos;react&apos; import { motion, AnimatePresence    } from &apos;framer-motion&apos; import { Link    } from &apos;react-router-dom&apos; import {  Brain, Shield, Rocket, Cpu, Globe, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Play, Pause, Volume2, VolumeX, Maximize2, Minimize2, RotateCcw, Sparkles, Target, Users, Award, Clock, Eye, Heart, Share2, Download, ExternalLink    } from &apos;lucide-react&apos;&apos;'  export function HomeHero() {} const [isVideoPlaying, setIsVideoPlaying] = useState(false) const [isMuted, setIsMuted] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [currentStatIndex, setCurrentStatIndex] = useState(0)  const;const heroStats = [ { label: &apos;AI Solutions&apos;, value: &apos;50+&apos;, icon: Brain, color: &apos;from-purple-600 to-pink-600&apos;, description: &apos;Cutting-edge AI services&apos; }, { label: &apos;Enterprise Clients&apos;, value: &apos;200+&apos;, icon: Building, color: &apos;from-blue-600 to-cyan-600&apos;, description: &apos;Trusted by industry leaders&apos; }, { label: &apos;Success Rate&apos;, value: &apos;98%&apos;, icon: CheckCircle, color: &apos;from-green-600 to-emerald-600&apos;, description: &apos;Proven track record&apos; }, { label: &apos;Years Experience&apos;, value: &apos;15+&apos;, icon: Star, color: &apos;from-yellow-600 to-orange-600&apos;, description: &apos;Deep expertise&apos; } ]&apos;  const containerVariants = { hidden: { opacit,y: 0  }, visible: { opacit,y: 1, transition: { staggerChildre,n: 0.2, delayChildren: 0.3 } } }  const;const;const itemVariants = { hidden: { opacit,y: 0, y: 20 }, visible: { opacit,y: 1, y: 0, transition: { duratio,n: 0.6, ease: &apos;easeOut&apos; } } }  ;&apos;const floatingVariants = { float: {&apos; ,y: [-10, 10, -10],';&apos; transition: {';&apos; duratio,n: 6,&apos;';&apos; repeat: Infinity,';&apos;';&apos; ease: &apos;easeInOut&apos; } } }&apos;&apos;  const pulseVariants = { pulse: { scal,e: [1, 1.05, 1],&apos; opacity: [0.5, 0.8, 0.5],';&apos; transition: {';&apos; duratio,n: 3,&apos;';&apos; repeat: Infinity,';&apos;';&apos; ease: &apos;easeInOut&apos; } } }
+;&apos;'
+=======
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Shield, Rocket, Cpu, Globe, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Play, Pause, Volume2, VolumeX, Maximize2, Minimize2, RotateCcw, Sparkles, Target, Users, Award, Clock, Eye, Heart, Share2, Download, ExternalLink    } from 'lucide-react'  export function HomeHero() { const [isVideoPlaying, setIsVideoPlaying] = useState(false) const [isMuted, setIsMuted] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [currentStatIndex, setCurrentStatIndex] = useState(0)  const heroStats = [ { label: 'AI Solutions', value: '50+', icon: Brain, color: 'from-purple-600 to-pink-600', description: 'Cutting-edge AI services' }, { label: 'Enterprise Clients', value: '200+', icon: Building, color: 'from-blue-600 to-cyan-600', description: 'Trusted by industry leaders' }, { label: 'Success Rate', value: '98%', icon: CheckCircle, color: 'from-green-600 to-emerald-600', description: 'Proven track record' }, { label: 'Years Experience', value: '15+', icon: Star, color: 'from-yellow-600 to-orange-600', description: 'Deep expertise' } ]  const containerVariants = { hidden: { opacity: 0  }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } } }  const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } } }  const floatingVariants = { float: {' y: [-10, 10, -10], ';' transition: {';' duration: 6, '';' repeat: Infinity, ';'';' ease: 'easeInOut' } } }  const pulseVariants = { pulse: { scale: [1, 1.05, 1], ' opacity: [0.5, 0.8, 0.5], ';' transition: {';' duration: 3, '';' repeat: Infinity, ';'';' ease: 'easeInOut' } } }
+<<<<<<< HEAD
+""
 }
+=======
+;
+=======
+import React, { useState, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Shield, Rocket, Cpu, Globe, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Play, Pause, Volume2, VolumeX, Maximize2, Minimize2, RotateCcw, Sparkles, Target, Users, Award, Clock, Eye, Heart, Share2, Download, ExternalLink    }  from 'lucide-react';export function HomeHero() { const [isVideoPlaying, setIsVideoPlaying] = useState(false) const [isMuted, setIsMuted] = useState(false) const [isFullscreen, setIsFullscreen] = useState(false) const [currentStatIndex, setCurrentStatIndex] = useState(0)  const heroStats = [
+  { label: 'AI Solutions', value: '50+', icon: Brain, color: 'from-purple-600 to-pink-600', description: 'Cutting-edge AI services' }, { label: 'Enterprise Clients', value: '200+', icon: Building, color: 'from-blue-600 to-cyan-600', description: 'Trusted by industry leaders' }, { label: 'Success Rate', value: '98%', icon: CheckCircle, color: 'from-green-600 to-emerald-600', description: 'Proven track record' }, { label: 'Years Experience', value: '15+', icon: Star, color: 'from-yellow-600 to-orange-600', description: 'Deep expertise' } ]  const containerVariants = { hidden: { opacity: 0  }, visible: { opacity: 1, transition: { staggerChildren: 0.2, delayChildren: 0.3 } } }  const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } } }  const floatingVariants = { float: {' y: [-10, 10, -10],  transition: { duration: 6, ' repeat: Infinity,  ease: 'easeInOut' } } }  const pulseVariants = { pulse: { scale: [1, 1.05, 1], ' opacity: [0.5, 0.8, 0.5],  transition: { duration: 3, ' repeat: Infinity,  ease: 'easeInOut' } } }
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -1,47 +1,65 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+<<<<<<< HEAD
+  export const SkipLink: React.FC = () => { return ( <a href="#main - content"';" className="skip - link" data - skip - link >" Skip to main content' </a>') ';" }';"'""""
+  export const SkipLink: React.FC = () => { return ( <a href='#main - content'';' className='skip - link' data - skip - link >' Skip to main content' </a>') ';' }';''''""
+=======
+<<<<<<< HEAD
+  export const SkipLink: React.FC = () => { return ( <a href="#main - content"';" className="skip - link" data - skip - link >" Skip to main content' </a>') ';" }';"';"";
+  export const SkipLink: React.FC = () => { return ( <a href='#main - content';' className='skip - link' data - skip - link >' Skip to main content' </a>') ';' }';';'";
+=======
+<<<<<<< HEAD
+  export const SkipLink: React.FC = () => { return (} <;<;<a href=&quot;#main - content&quot;';&quot; className=&quot;skip - link&quot; data - skip - link >&quot; Skip to main content&apos;&apos;' </a>&apos;) ';&quot; }';&quot;';&quot;&quot;"&quot;&quot;
+  export const SkipLink: React.FC = () => { return (} <;<;<a href=&apos;#main - content&apos;';&apos; className=&apos;skip - link&apos; data - skip - link >&apos; Skip to main content&apos;&apos;' </a>&apos;) ';&apos; }';&apos;';&apos;'&quot;
+&quot;"
+=======
+<<<<<<< HEAD
+  export const SkipLink: React.FC = () => { return ( <a href="#main - content"';" className="skip - link" data - skip - link >" Skip to main content' </a>') ';" }';"';""""
+  export const SkipLink: React.FC = () => { return ( <a href='#main - content'';' className='skip - link' data - skip - link >' Skip to main content' </a>') ';' }';'';''""
+=======
+import Link from 'next/link';
 
+<<<<<<< HEAD
+export default function SkipLink()   {return (
+    <Link href="#main-content" className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded focus:shadow-lg" >
+=======
 export default function SkipLink() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="SkipLink - Zion Tech Group"
-        description="Professional skiplink services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              SkipLink
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional skiplink services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+    <Link'
+      href="#main-content""
+      className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focu,
+    s:rounded focu,
+    s:shadow-lg"
+=======
+    <Link ""
+      href="#main-content"
+<<<<<<< HEAD
+      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded focus:shadow-lg"
+>>>>>>> main
+    >
+=======
+      className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded focus:shadow-lg"" >"
+>>>>>>> main
+>>>>>>> main
+      Skip to main content
+    </Link>
+<<<<<<< HEAD
+  )}"
+=======
+<<<<<<< HEAD
+  )}""
+  export const SkipLink: React.FC = () => { return ( <a href="#main - content"';" className="skip - link" data - skip - link" >" Skip to main content'; </a>';) ';" }';;"';"""
+  export const SkipLink: React.FC = () => { return ( <a href='#main - content'';' className='skip - link' data - skip - link" >' Skip to main content'; </a>';) ';' }';;'';''"
+
+""
+=======
+  )}"
+  export const SkipLink: React.FC = () => { return ( <a href="#main - content" className="skip - link" data - skip - link" >" Skip to main content'; </a>';)  }';;"""
+  export const SkipLink: React.FC = () => { return ( <a href='#main - content' className='skip - link' data - skip - link" >' Skip to main content'; </a>';)  }';;''"
+
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

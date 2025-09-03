@@ -1,47 +1,40 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 
-export default function EnhancedSecurity() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="EnhancedSecurity - Zion Tech Group"
-        description="Professional enhancedsecurity services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              EnhancedSecurity
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional enhancedsecurity services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+;
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react' import { motion    } from 'framer-motion' import {  Shield, Lock, AlertTriangle, CheckCircle, Eye, EyeOff, Settings, X, RefreshCw, Info    } from 'lucide-react'  interface SecurityStatus { https: boolean csp: boolean hsts: boolean xss: boolean frameOptions: boolean contentType: boolean referrerPolicy: boolean permissionsPolicy: boolean    } interface SecurityThreat { id: string type: 'low' | 'medium' | 'high' | 'critical' description: string recommendation: string timestamp: Date    } export const EnhancedSecurity: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({ https: false, csp: false, hsts: false, xss: false, frameOptions: false, contentType: false, referrerPolicy: false, permissionsPolicy: false }) const [threats, setThreats] = useState<SecurityThreat[]>([]) const [isScanning, setIsScanning] = useState(false) const [lastScan, setLastScan] = useState<Date | null>(null)  useEffect(() => {
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react' import { motion    } from 'framer-motion' import {  Shield, Lock, AlertTriangle, CheckCircle, Eye, EyeOff, Settings, X, RefreshCw, Info    } from 'lucide-react'  interface SecurityStatus { https: boolean csp: boolean hsts: boolean xss: boolean frameOptions: boolean contentType: boolean referrerPolic,
+    y: boolean permissionsPolic,
+    y: boolean  } interface SecurityThreat { id: string type: 'low' | 'medium' | 'high' | 'critical' description: string recommendatio,
+    n: string timestam,
+    p: Date  } export const EnhancedSecurity: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({ https: false, csp: false, hsts: false, xss: false, frameOptions: false, contentType: false, referrerPolicy: false, permissionsPolicy: false }) const [threats, setThreats] = useState<SecurityThreat []" >([]) const [isScanning, setIsScanning] = useState(false) const [lastScan, setLastScan] = useState<Date | null" >(null)  useEffect(() => {"
+;"
+}}"
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react' import { motion    } from 'framer-motion' import {  Shield, Lock, AlertTriangle, CheckCircle, Eye, EyeOff, Settings, X, RefreshCw, Info    } from 'lucide-react'  interface SecurityStatus { https: boolean csp: boolean hsts: boolean xss: boolean frameOptions: boolean contentType: boolean referrerPolicy: boolean permissionsPolicy: boolean  } interface SecurityThreat { id: string type: 'low' | 'medium' | 'high' | 'critical' description: string recommendation: string timestamp: Date  } export const EnhancedSecurity: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({ https: false, csp: false, hsts: false, xss: false, frameOptions: false, contentType: false, referrerPolicy: false, permissionsPolicy: false }) const [threats, setThreats] = useState<SecurityThreat[]>([]) const [isScanning, setIsScanning] = useState(false) const [lastScan, setLastScan] = useState<Date | null>(null)  useEffect(() => {;
+=======
+<<<<<<< HEAD
+import React, {useEffect, useState } from 'react' ;
+import {motion    } from 'framer-motion' import {Shield, Lock, AlertTriangle, CheckCircle, Eye, EyeOff, Settings, X, RefreshCw, Info    } from 'lucide-react'  interface SecurityStatus {https: boolean csp: boolean hsts: boolean xss: boolean frameOptions: boolean contentType: boolean referrerPolicy: boolean permissionsPolicy: boolean  } interface SecurityThreat {id: string type: 'low' | 'medium' | 'high' | 'critical' description: string recommendation: string timestamp: Date  } export const EnhancedSecurity: React.FC = () => {const [isOpen, setIsOpen] = useState(false) const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({ https: false, csp: false, hsts: false, xss: false, frameOptions: false, contentType: false, referrerPolicy: false, permissionsPolicy: false }) const [threats, setThreats] = useState<SecurityThreat []" >([]) const [isScanning, setIsScanning] = useState(false) const [lastScan, setLastScan] = useState<Date | null" >(null)  useEffect(() => {;
+;"
+}}
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from &apos;react&apos; import { motion    } from &apos;framer-motion&apos; import {  Shield, Lock, AlertTriangle, CheckCircle, Eye, EyeOff, Settings, X, RefreshCw, Info    } from &apos;lucide-react&apos;  interface SecurityStatus { https: boolean csp: boolean hsts: boolean xss: boolean frameOptions: boolean contentType: boolean referrerPolicy: boolean permissionsPolic,y: boolean  } interface SecurityThreat { id: string type: &apos;low&apos; | &apos;medium&apos; | &apos;high&apos; | &apos;critical&apos; description: string recommendation: string timestam,p: Date  }&apos; export const EnhancedSecurity: React.FC = () => {} const [isOpen, setIsOpen] = useState(false) const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({ https: false, csp: false, hsts: false, xss: false, frameOptions: false, contentType: false, referrerPolicy: false, permissionsPolicy: false }) const [threats, setThreats] = useState<SecurityThreat[]>([]) const [isScanning, setIsScanning] = useState(false) const [lastScan, setLastScan] = useState<;<;<Date | null>(null)  useEffect(() => {
+;}
+=======
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react' import { motion    } from 'framer-motion' import {  Shield, Lock, AlertTriangle, CheckCircle, Eye, EyeOff, Settings, X, RefreshCw, Info    } from 'lucide-react'  interface SecurityStatus { https: boolean csp: boolean hsts: boolean xss: boolean frameOptions: boolean contentType: boolean referrerPolicy: boolean permissionsPolicy: boolean  } interface SecurityThreat { id: string type: 'low' | 'medium' | 'high' | 'critical' description: string recommendation: string timestamp: Date  } export const EnhancedSecurity: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({ https: false, csp: false, hsts: false, xss: false, frameOptions: false, contentType: false, referrerPolicy: false, permissionsPolicy: false }) const [threats, setThreats] = useState<SecurityThreat []"" >([]) const [isScanning, setIsScanning] = useState(false) const [lastScan, setLastScan] = useState<Date | null"" >(null)  useEffect(() => {;""
+;","
+=======
+import React, { useEffect, useState } from 'react' import { motion    } from 'framer-motion' import {  Shield, Lock, AlertTriangle, CheckCircle, Eye, EyeOff, Settings, X, RefreshCw, Info    }  from 'lucide-react';interface SecurityStatus { https: boolean csp: boolean hsts: boolean xss: boolean frameOptions: boolean contentType: boolean referrerPolicy: boolean permissionsPolicy: boolean  } interface SecurityThreat { id: string type: 'low' | 'medium' | 'high' | 'critical' description: string recommendation: string timestamp: Date  } export const EnhancedSecurity: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({ https: false, csp: false, hsts: false, xss: false, frameOptions: false, contentType: false, referrerPolicy: false, permissionsPolicy: false }) const [threats, setThreats] = useState<SecurityThreat []"" >([]) const [isScanning, setIsScanning] = useState(false) const [lastScan, setLastScan] = useState<Date | null"" >(null)  useEffect(() => {;,
+>>>>>>> main
+}}
+""
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

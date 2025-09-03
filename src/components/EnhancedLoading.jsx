@@ -1,47 +1,37 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function EnhancedLoading() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="EnhancedLoading - Zion Tech Group"
-        description="Professional enhancedloading services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              EnhancedLoading
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional enhancedloading services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = ' }) => { const sizeClasses = { sm: 'w - 4 h - 4', md: 'w - 8 h - 8', lg: 'w - 12 h - 12', xl: 'w - 16 h - 16' } const renderBars = () => (<div className='flex space - x-1'> {[0, 1, 2, 3].map ( (i) => (<motion.div key={i} className={`w - 1 ${size === 'sm' ? 'h - 3' : size === 'md' ? 'h - 6' : size === 'lg' ? 'h - 8' : 'h - 12'} bg - blue - 400 rounded - full`} animate = { { scaleY[1, 1.5, 1], opacity[0.5, 1, 0.5] }} transition = { { duration: 1.2, repeat: Infinity, delay: i * 0.1 }}/>) ) } </div>)  const renderVariant = () => { switch (variant) { case 'dots': return renderDots ()  case 'pulse': return renderPulse ()  case 'bars': return renderBars ()  default: return renderSpinner () } }` return (<div className={`flex flex - col items - center justify - center space - y-3 ${className}`}> {renderVariant () }' {text && (<motion.p className='text - sm text - gray - 400 text - center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}> {text} </motion.p>) } </div>) } export default EnhancedLoading'` '';''`'import { motion } from 'framer-motion'
+=======
+<<<<<<< HEAD
+ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = ' }) => { const sizeClasses = { sm: 'w - 4 h - 4', md: 'w - 8 h - 8', lg: 'w - 12 h - 12', xl: 'w - 16 h - 16' } const renderBars = () => (<div className='flex space - x-1'> {[0, 1, 2, 3].map ( (i) => (<motion .div key={i} className={`w - 1 ${size === 'sm' ? 'h - 3' : size === 'md' ? 'h - 6' : size === 'lg' ? 'h - 8' : 'h - 12'} bg - blue - 400 rounded - full`} animate = { { scaleY[1, 1.5, 1], opacity[0.5, 1, 0.5] }} transition = { { duration: 1.2, repeat: Infinity, delay: i * 0.1 }}/" >) ) } </div>)  const renderVariant = () => { switch (variant) { case 'dots': return renderDots ()  case 'pulse': return renderPulse ()  case 'bars': return renderBars ()  default: return renderSpinner () } }` return (<div className={`flex flex - col items - center justify - center space - y-3 ${className}`}" > {renderVariant () } {text && (<motion .p className='text - sm text - gray - 400 text - center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}" > {text} </motion.p>) } </div>) } export default EnhancedLoading'` '';'`';import { motion } from 'framer-motion';
+;"``
+=======
+<<<<<<< HEAD
+ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = ' }) => { const sizeClasses = { sm: 'w - 4 h - 4', md: 'w - 8 h - 8', lg: 'w - 12 h - 12', xl: 'w - 16 h - 16' } const renderBars = () => (<div className='flex space - x-1'> {[0, 1, 2, 3].map ( (i) => (<motion.div key={i} className={`w - 1 ${size === 'sm' ? 'h - 3' : size === 'md' ? 'h - 6' : size === 'lg' ? 'h - 8' : 'h - 12'} bg - blue - 400 rounded - full`} animate = { { scaleY[1, 1.5, 1], opacity[0.5, 1, 0.5] }} transition = { { duration: 1.2, repeat: Infinity, delay: i * 0.1 }}/>) ) } </div>)  const renderVariant = () => { switch (variant) { case 'dots': return renderDots ()  case 'pulse': return renderPulse ()  case 'bars': return renderBars ()  default: return renderSpinner () } }` return (<div className={`flex flex - col items - center justify - center space - y-3 ${className}`}> {renderVariant () }' {text && (<motion.p className='text - sm text - gray - 400 text - center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}> {text} </motion.p>) } </div>) } export default EnhancedLoading'` ';'`';import { motion } from 'framer-motion';
+=======
+<<<<<<< HEAD
+ const EnhancedLoading = ({variant = 'spinner', size = 'md', text, className=' }) => {const sizeClasses = { sm: 'w - 4 h - 4', md: 'w - 8 h - 8', lg: 'w - 12 h - 12', xl: 'w - 16 h - 16' } const renderBars = () => (<div className='flex space - x-1'> {[0, 1, 2, 3].map ( (i) => (<motion .div key={i} className={`w - 1 ${size === 'sm' ? 'h - 3' : size === 'md' ? 'h - 6' : size === 'lg' ? 'h - 8' : 'h - 12'} bg - blue - 400 rounded - full`} animate = {{ scaleY[1, 1.5, 1], opacity[0.5, 1, 0.5] }} transition = {{ duration: 1.2, repeat: Infinity, delay: i * 0.1 }}/" >) ) } </div>)  const renderVariant = () => {switch (variant) { case 'dots': return renderDots ()  case 'pulse': return renderPulse ()  case 'bars': return renderBars ()  default: return renderSpinner () } }` return (<div className={`flex flex - col items - center justify - center space - y-3 ${className}`}" > {renderVariant () }' {text && (<motion .p className='text - sm text - gray - 400 text - center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}" > {text} </motion.p>) } </div>) } export default EnhancedLoading'` '';''`';import {motion } from 'framer-motion';
+;"`
+=======
+<<<<<<< HEAD
+ const EnhancedLoading = memo(({ variant = 'spinner', size = 'md', text, className = ' }) => { const sizeClasses = { sm: 'w - 4 h - 4', md: 'w - 8 h - 8', lg: 'w - 12 h - 12', xl: 'w - 16 h - 16' } const renderBars = () => (<div className='flex space - x-1'> {[0, 1, 2, 3].map ( (i) => (<motion .div key={i} className={`w - 1 ${size === 'sm' ? 'h - 3' : size === 'md' ? 'h - 6' : size === 'lg' ? 'h - 8' : 'h - 12'} bg - blue - 400 rounded - full`} animate = { { scaleY[1, 1.5, 1], opacity[0.5, 1, 0.5] }} transition = { { duration: 1.2, repeat: Infinity, delay: i * 0.1 }}/" >) ) } </div>)  const renderVariant = () => { switch (variant) { case 'dots': return renderDots ()  case 'pulse': return renderPulse ()  case 'bars': return renderBars ()  default: return renderSpinner () } }` return (<div className={`flex flex - col items - center justify - center space - y-3 ${className}`}" > {renderVariant () }' {text && (<motion .p className='text - sm text - gray - 400 text - center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}" > {text} </motion.p>) } </div>) } export default EnhancedLoading'` '';''`';import { motion } from 'framer-motion';
+;"`
+=======
+<<<<<<< HEAD
+ const EnhancedLoading = ({ variant = &apos;spinner&apos;, size = &apos;md&apos;, text, className = &apos; }) => {&apos;} const sizeClasses = { sm: &apos;w - 4 h - 4&apos;, md: &apos;w - 8 h - 8&apos;, lg: &apos;w - 12 h - 12&apos;, xl: &apos;w - 16 h - 16&apos; }&apos; const renderBars = () => (<;<div className=&apos;flex space - x-1&apos;> {[0, 1, 2, 3].map ( (i) => (&apos;}<motion.div key={i} className={`w - 1 ${size === &apos;sm&apos; ? &apos;h - 3&apos; : size === &apos;md&apos; ? &apos;h - 6&apos; : size === &apos;lg&apos; ? &apos;h - 8&apos; : &apos;h - 12&apos;} bg - blue - 400 rounded - full`} animate = { { scaleY[1, 1.5, 1], opacity[0.5, 1, 0.5] }} transition = { { duration: 1.2, repeat: Infinity, delay: i * 0.1 }}/>) ) }&apos; </div>)  const renderVariant = () => { switch (variant) { case &apos;dots&apos;: return renderDots ()  case &apos;pulse&apos;: return renderPulse ()  case &apos;bars&apos;: return renderBars ()  default: return renderSpinner () } }` return (&apos;<div className={`flex flex - col items - center justify - center space - y-3 ${className}`}> {renderVariant () }&apos; {text && (&apos;}<motion.p className=&apos;text - sm text - gray - 400 text - center&apos; initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}> {text}&apos; </motion.p>) } </div>) } export;export default EnhancedLoading&apos;` &apos;';&apos;&apos;`';import { motion } from &apos;framer-motion&apos;
+;&apos;'
+=======
+<<<<<<< HEAD
+ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = ' }) => { const sizeClasses = { sm: 'w - 4 h - 4', md: 'w - 8 h - 8', lg: 'w - 12 h - 12', xl: 'w - 16 h - 16' } const renderBars = () => (<div className='flex space - x-1'> {[0, 1, 2, 3].map ( (i) => (<motion .div key={i} className={`w - 1 ${size === 'sm' ? 'h - 3' : size === 'md' ? 'h - 6' : size === 'lg' ? 'h - 8' : 'h - 12'} bg - blue - 400 rounded - full`} animate = { { scaleY[1, 1.5, 1], opacity[0.5, 1, 0.5] }} transition = { { duration: 1.2, repeat: Infinity, delay: i * 0.1 }}/"" >) ) } </div>)  const renderVariant = () => { switch (variant) { case 'dots': return renderDots ()  case 'pulse': return renderPulse ()  case 'bars': return renderBars ()  default: return renderSpinner () } }` return (<div className={`flex flex - col items - center justify - center space - y-3 ${className}`}"" > {renderVariant () }' {text && (<motion .p className='text - sm text - gray - 400 text - center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}"" > {text} </motion.p>) } </div>) } export default EnhancedLoading'` '';''`';import { motion } from 'framer-motion';"`"
+;"`"
+"`"
+=======
+ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = ' }) => { const sizeClasses = { sm: 'w - 4 h - 4', md: 'w - 8 h - 8', lg: 'w - 12 h - 12', xl: 'w - 16 h - 16' } const renderBars = () => (<div className='flex space - x-1'> {[0, 1, 2, 3].map ( (i) => (<motion .div key={i} className={`w - 1 ${size === 'sm' ? 'h - 3' : size === 'md' ? 'h - 6' : size === 'lg' ? 'h - 8' : 'h - 12'} bg - blue - 400 rounded - full`} animate = { { scaleY[1, 1.5, 1], opacity[0.5, 1, 0.5] }} transition = { { duration: 1.2, repeat: Infinity, delay: i * 0.1 }}/"" >) ) } </div>)  const renderVariant = () => { switch (variant) { case 'dots': return renderDots ()  case 'pulse': return renderPulse ()  case 'bars': return renderBars ()  default: return renderSpinner () } }` return (<div className={`flex flex - col items - center justify - center space - y-3 ${className}`}"" > {renderVariant () }' {text && (<motion .p className='text - sm text - gray - 400 text - center' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}"" > {text} </motion.p>) } </div>) } export default EnhancedLoading'` ''`';import { motion } from 'framer-motion`
+;"`
+"`
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

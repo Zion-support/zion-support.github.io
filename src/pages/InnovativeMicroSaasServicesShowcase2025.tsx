@@ -1,47 +1,27 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function InnovativeMicroSaasServicesShowcase2025() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="InnovativeMicroSaasServicesShowcase2025 - Zion Tech Group"
-        description="Professional innovativemicrosaasservicesshowcase2025 services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              InnovativeMicroSaasServicesShowcase2025
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional innovativemicrosaasservicesshowcase2025 services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Brain, Cloud, Shield, Rocket, Zap, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, TrendingUp, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Atom, Blockchain, VirtualReality, Satellite, Leaf as LeafIcon, Stethoscope, Scale, Truck, PenTool, MessageCircle, UserCheck, Search as SearchIcon, Kanban, TestTube    } from 'lucide-react' import { SEO } from '../components/SEO' import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025'  export default function InnovativeMicroSaasServicesShowcase2025() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [sortBy, setSortBy] = useState('rating') ;"
+}"
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Brain, Cloud, Shield, Rocket, Zap, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, TrendingUp, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Atom, Blockchain, VirtualReality, Satellite, Leaf as LeafIcon, Stethoscope, Scale, Truck, PenTool, MessageCircle, UserCheck, Search as SearchIcon, Kanban, TestTube    } from 'lucide-react' import { SEO } from '../components/SEO' import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025'  export default function InnovativeMicroSaasServicesShowcase2025() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState(') const [sortBy, setSortBy] = useState('rating') ;
+=======
+<<<<<<< HEAD
+import React, {useState } from 'react' ;
+import {motion, AnimatePresence    } from 'framer-motion' import {Brain, Cloud, Shield, Rocket, Zap, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, TrendingUp, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Atom, Blockchain, VirtualReality, Satellite, Leaf as LeafIcon, Stethoscope, Scale, Truck, PenTool, MessageCircle, UserCheck, Search as SearchIcon, Kanban, TestTube    } from 'lucide-react' ;
+import {SEO } from '../components/SEO' import {INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025'  export default function InnovativeMicroSaasServicesShowcase2025()   {const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [sortBy, setSortBy] = useState('rating') ;"
 }
+=======
+<<<<<<< HEAD
+import React, { useState } from &apos;react&apos; import { motion, AnimatePresence    } from &apos;framer-motion&apos; import {  Brain, Cloud, Shield, Rocket, Zap, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, TrendingUp, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Atom, Blockchain, VirtualReality, Satellite, Leaf as LeafIcon, Stethoscope, Scale, Truck, PenTool, MessageCircle, UserCheck, Search as SearchIcon, Kanban, TestTube    } from &apos;lucide-react&apos; import { SEO } from &apos;../components/SEO&apos; import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from &apos;../data/innovativeMicroSaasServices2025&apos;&apos;'  export default function InnovativeMicroSaasServicesShowcase2025() ;{} const [activeCategory, setActiveCategory] = useState(&apos;all&apos;)&apos;' const;const [searchTerm, setSearchTerm] = useState(&apos;&apos;) ;&apos;&apos;const [sortBy, setSortBy] = useState(&apos;rating&apos;) ;&apos;'
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Brain, Cloud, Shield, Rocket, Zap, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, TrendingUp, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Atom, Blockchain, VirtualReality, Satellite, Leaf as LeafIcon, Stethoscope, Scale, Truck, PenTool, MessageCircle, UserCheck, Search as SearchIcon, Kanban, TestTube    } from 'lucide-react' import { SEO } from '../components/SEO' import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025'  export default function InnovativeMicroSaasServicesShowcase2025() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [sortBy, setSortBy] = useState('rating') ;","
+=======
+import React, { useState } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Brain, Cloud, Shield, Rocket, Zap, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, TrendingUp, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Atom, Blockchain, VirtualReality, Satellite, Leaf as LeafIcon, Stethoscope, Scale, Truck, PenTool, MessageCircle, UserCheck, Search as SearchIcon, Kanban, TestTube    } from 'lucide-react' import { SEO } from '../components/SEO' import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 }  from '../data/innovativeMicroSaasServices2025';export default function InnovativeMicroSaasServicesShowcase2025() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [sortBy, setSortBy] = useState('rating') ;",
+>>>>>>> main
+}
+""
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

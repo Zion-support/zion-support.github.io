@@ -1,47 +1,162 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+<<<<<<< HEAD
+ export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className='min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light'> <SEO' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https:'';import { Link } from 'react-router-dom';
+import { SEO } from './SEO';
+;
+=======
+<<<<<<< HEAD
+ export default function SitemapPage ()   {const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className='min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light'> <SEO' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '''';import { Link } from 'react-router-dom';'
+import {SEO } from './SEO';
+=======
+<<<<<<< HEAD
+ export default function SitemapPage () ;{} const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const;const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes (&apos;jobSeeker&apos;) ||&apos; route.requiredRoles.includes (&apos;creator&apos;) ) )&apos;&apos;  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes (&apos;employer&apos;) ||&apos; route.requiredRoles.includes (&apos;buyer&apos;) ) )&apos;&apos;  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes (&apos;admin&apos;) )  return ()&apos;&apos; <div className=&apos;min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light&apos;>&apos;' <;<SEO&apos; title=&apos;Sitemap&apos; description=&apos;Complete navigation guide for Zion Tech Group website&apos; keywords=&apos;sitemap, navigation, website structure, Zion Tech Group&apos; canonical=&apos;https:&apos;&apos;'';import { Link } from &apos;react-router-dom';
+import { SEO } from &apos;./SEO';
 
-export default function SitemapPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="SitemapPage - Zion Tech Group"
-        description="Professional sitemappage services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              SitemapPage
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional sitemappage services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
+&apos;'
+=======
+<<<<<<< HEAD
+ export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className='min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light'> <SEO ' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '''';import { Link } from 'react-router-dom';'
+import { SEO } from './SEO';""
+=======
+<<<<<<< HEAD
+ export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className='min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light'> <SEO' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '''';import { Link } from 'react-router-dom';'
+=======
+ export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('jobSeeker') ||' route.requiredRoles.includes ('creator') ) )  const employerRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' (route.requiredRoles.includes ('employer') ||' route.requiredRoles.includes ('buyer') ) )  const adminRoutes = completeSitemap.filter () route => route.requiredAuth && route.requiredRoles &&' route.requiredRoles.includes ('admin') )  return () <div className='min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate - light'> <SEO ' title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: '''';import { Link } from 'react-router-dom
+import { SEO } from './SEO
+>>>>>>> main
+>>>>>>> main
+import { SEO } from './SEO';
+    const publicRoutes = completeSitemap.filter(route =" > !route.requiredAuth)"
+    const talentRoutes = completeSitemap.filter(route => route.requiredAuth &&
+        route.requiredRoles &&""
+        (route.requiredRoles.includes('jobSeeker') ||""
+            route.requiredRoles.includes('creator')))
+    const employerRoutes = completeSitemap.filter(route => route.requiredAuth &&
+        route.requiredRoles &&""
+        (route.requiredRoles.includes('employer') ||""
+            route.requiredRoles.includes('buyer')))
+    const adminRoutes = completeSitemap.filter(route => route.requiredAuth &&
+        route.requiredRoles &&""
+        route.requiredRoles.includes('admin'))""
+    return (<div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>""
+      <SEO title='Sitemap' description='Complete navigation guide for Zion Tech Group website' keywords='sitemap, navigation, website structure, Zion Tech Group' canonical='https: //ziontechgroup.com/content/sitemap-page'/" >"
+      <div className='container mx-auto px-4 py-12'>""
+        <div className='text-center mb-12'>""
+          <h1 className='text-4xl font-bold text-white mb-4'>Site Map</h1>          <p className='text-xl text-zion-slate-light'>
+            Complete navigation guide for Zion Tech Group
+          </p>""
+        </div>''''
+''''
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>''''
+          {/* Public Routes */}''''
+          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>''''
+            <h2 className='text-2xl font-semibold text-zion-cyan mb-4'>""
+              Public Pages''''
+            </h2>''''
+            <ul className='space-y-2'>
+              {publicRoutes.map(route => (
+                <li key={route.path}" >"
+                  <Link''''
+                    to={route.path}''''
+                    className='text-zion-slate-light hover:text-zion-cyan transition-colors block '>
+                    {route.label || route.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>""
+''''
+          {/* Talent Routes */}''''
+          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>''''
+            <h2 className='text-2xl font-semibold text-zion-cyan mb-4'>""
+              Talent & Job Seeker Pages''''
+            </h2>''''
+            <ul className='space-y-2'>
+              {talentRoutes.map(route => (
+                <li key={route.path}" >"
+                  <Link''''
+                    to={route.path}''''
+                    className='text-zion-slate-light hover: text-zion-cyan transition-colors block '>
+                    {route.label || route.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>""
+''''
+          {/* Employer Routes */}''''
+          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>''''
+            <h2 className='text-2xl font-semibold text-zion-cyan mb-4'>""
+              Employer & Buyer Pages''''
+            </h2>''''
+            <ul className='space-y-2'>
+              {employerRoutes.map(route => (
+                <li key={route.path}" >"
+                  <Link''''
+                    to={route.path}''''
+                    className='text-zion-slate-light hover: text-zion-cyan transition-colors block '>
+                    {route.label || route.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>""
+''''
+          {/* Admin Routes */}''''
+          <div className='bg-white/10 backdrop-blur-sm rounded-lg p-6'>''''
+            <h2 className='text-2xl font-semibold text-zion-cyan mb-4'>""
+              Administrative Pages''''
+            </h2>''''
+            <ul className='space-y-2'>
+              {adminRoutes.map(route => (
+                <li key={route.path}" >"
+                  <Link''''
+                    to={route.path}''''
+                    className='text-zion-slate-light hover: text-zion-cyan transition-colors block '>
+                    {route.label || route.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>""
+''''
+        {/* All Routes List */}''''
+        <div className='mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6'>''''
+          <h2 className='text-2xl font-semibold text-zion-cyan mb-6'>""
+            Complete Route List''''
+          </h2>''''
+          <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4'>''''
+            {completeSitemap.map(route => (''''
+              <div key={route.path} className='bg-white/5 rounded p-3'>""
+                <Link''''
+                  to={route.path}''''
+                  className='text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium '>""
+                  {route.path}''''
+                </Link>''''
+                <span className='ml-2 text-xs italic text-zion-slate-light'>""
+                  ({route.priority})''''
+                </span>''''
+                <p className='text-sm text-zion-slate-light mt-1">'"
+                  {route.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      </section>
-    </div>
-  );
+      </div>
+    </div>)}
+
+export { SitemapPage }
+
+export { SitemapPage }
+
+export { SitemapPage }
+
+export { SitemapPage }
+
+export { SitemapPage }
+;""
 }
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -1232,7 +1232,5 @@
     "fixed_types/index.ts",
     "syntax_errors"
   ],
-  "recommendations": [
-    "Review fixed syntax errors to ensure correctness"
-  ]
+  "recommendations": ["Review fixed syntax errors to ensure correctness"]
 }

@@ -2,10 +2,12 @@
 import;
   '@testing-library/jest-dom'';// Mock window.matchMedia;
 Object.defineProperty(window,
-  'matchMedia', {
-  '  writable: true, value: vi.fn().mockImplementation(query => ({'    matches: false, media: query,
+  'matchMedia', {'
+  '  writable: true, value: vi.fn().mockImplementation(query => ({'    matche,
+    s: false, media: query,
 import '@testing-library/jest-dom'';// Mock window.matchMedia;
-Object.defineProperty(window, 'matchMedia', {'  writable: true, value: vi.fn().mockImplementation(query => ({'    matches: false, media: query,
+Object.defineProperty(window, 'matchMedia', {'  writable: true, value: vi.fn().mockImplementation(query => ({'    matche,
+    s: false, media: query,
     onchange: null, addListener: vi.fn(), // deprecated,
   removeListener: vi.fn(), // deprecated,
   addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn()}))})

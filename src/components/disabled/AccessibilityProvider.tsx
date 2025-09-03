@@ -1,47 +1,78 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function AccessibilityProvider() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AccessibilityProvider - Zion Tech Group"
-        description="Professional accessibilityprovider services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AccessibilityProvider
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional accessibilityprovider services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { SkipForward, Volume2, VolumeX, Sun, Moon } from 'lucide-react'  interface AccessibilityContextType { highContrast: boolean;
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { SkipForward, Volume2, VolumeX, Sun, Moon } from 'lucide-react'  interface AccessibilityContextType {;
+=======
+<<<<<<< HEAD
+import React, {createContext, useContext, useEffect, useState, ReactNode } from 'react' ;
+import {motion, AnimatePresence } from 'framer-motion' import {SkipForward, Volume2, VolumeX, Sun, Moon } from 'lucide-react'  interface AccessibilityContextType {;
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useEffect, useState, ReactNode } from &apos;react&apos; import { motion, AnimatePresence } from &apos;framer-motion&apos; import { SkipForward, Volume2, VolumeX, Sun, Moon } from &apos;lucide-react&apos;  interface AccessibilityContextType {
+=======
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { SkipForward, Volume2, VolumeX, Sun, Moon }  from 'lucide-react';interface AccessibilityContextType {;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+   highContrast: boolean;
+>>>>>>> main
+   toggleHighContrast: () => void;
+   reducedMotion: boolean;
+   toggleReducedMotion: () => void;
+   fontSize: number;
+   increaseFontSize: () => void;
+   decreaseFontSize: () => void;
+   resetFontSize: () => void;
+   showSkipLinks: boolean;
+<<<<<<< HEAD
+   setShowSkipLinks: (show: boolean) => void
+   voiceNavigation: boolean
+   toggleVoiceNavigation: () => void  } const AccessibilityContext = createContext<AccessibilityContextType | null>(null)  export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider') } return context }  interface AccessibilityProviderProps { children: ReactNode  } export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => { const [highContrast, setHighContrast] = useState(false) const [reducedMotion, setReducedMotion] = useState(false) const [fontSize, setFontSize] = useState(16) const [showSkipLinks, setShowSkipLinks] = useState(false) const [voiceNavigation, setVoiceNavigation] = useState(false) ''
+=======
+   setShowSkipLinks: (show: boolean) => void;
+<<<<<<< HEAD
+   voiceNavigatio,
+    n: boolean'
+   toggleVoiceNavigatio,
+    n: () => void} const AccessibilityContext = createContext<AccessibilityContextType | null>(null)  export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider') } return context }  interface AccessibilityProviderProps {'
+   children: ReactNode} export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => { const [highContrast, setHighContrast] = useState(false) const [reducedMotion, setReducedMotion] = useState(false) const [fontSize, setFontSize] = useState(16) const [showSkipLinks, setShowSkipLinks] = useState(false) const [voiceNavigation, setVoiceNavigation] = useState(false) ';
+'
+=======
+<<<<<<< HEAD
+   voiceNavigation: boolean;
+   toggleVoiceNavigation: () => void} const AccessibilityContext = createContext<AccessibilityContextType | null>(null)  export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider') } return context }  interface AccessibilityProviderProps {;
+   children: ReactNode} export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => { const [highContrast, setHighContrast] = useState(false) const [reducedMotion, setReducedMotion] = useState(false) const [fontSize, setFontSize] = useState(16) const [showSkipLinks, setShowSkipLinks] = useState(false) const [voiceNavigation, setVoiceNavigation] = useState(false) ';
+=======
+<<<<<<< HEAD
+   voiceNavigation: boolean""
+   toggleVoiceNavigation: () => void} const AccessibilityContext = createContext<AccessibilityContextType | null" >(null)  export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider') } return context }  interface AccessibilityProviderProps {"
+   children: ReactNode} export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => { const [highContrast, setHighContrast] = useState(false) const [reducedMotion, setReducedMotion] = useState(false) const [fontSize, setFontSize] = useState(16) const [showSkipLinks, setShowSkipLinks] = useState(false) const [voiceNavigation, setVoiceNavigation] = useState(false) ';'
+""
 }
+=======
+<<<<<<< HEAD
+   voiceNavigation: boolean
+<<<<<<< HEAD
+   toggleVoiceNavigation: () => void} const AccessibilityContext = createContext<AccessibilityContextType | null>(null)  export const useAccessibility = () => {const context = useContext(AccessibilityContext) if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider') } return context }  interface AccessibilityProviderProps {children: ReactNode} export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({children }) => { const [highContrast, setHighContrast] = useState(false) const [reducedMotion, setReducedMotion] = useState(false) const [fontSize, setFontSize] = useState(16) const [showSkipLinks, setShowSkipLinks] = useState(false) const [voiceNavigation, setVoiceNavigation] = useState(false) ';'
+=======
+<<<<<<< HEAD
+   toggleVoiceNavigatio,n: () => void}&apos; const AccessibilityContext = createContext<AccessibilityContextType | null>(null)  export const useAccessibility = () => {} const;const context = useContext(AccessibilityContext) if (!context) { throw new Error(&apos;useAccessibility must be used within an AccessibilityProvider&apos;) } return context }  interface AccessibilityProviderProps {
+   children: ReactNode}&apos; export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {} const [highContrast, setHighContrast] = useState(false) const [reducedMotion, setReducedMotion] = useState(false) const [fontSize, setFontSize] = useState(16) const [showSkipLinks, setShowSkipLinks] = useState(false) const;const;const [voiceNavigation, setVoiceNavigation] = useState(false) ';
+&apos;'
+=======
+   toggleVoiceNavigation: () => void} const AccessibilityContext = createContext<AccessibilityContextType | null>(null)  export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider') } return context }  interface AccessibilityProviderProps {
+   children: ReactNode} export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => { const [highContrast, setHighContrast] = useState(false) const [reducedMotion, setReducedMotion] = useState(false) const [fontSize, setFontSize] = useState(16) const [showSkipLinks, setShowSkipLinks] = useState(false) const [voiceNavigation, setVoiceNavigation] = useState(false) ';'
+=======
+   voiceNavigation: boolean"
+   toggleVoiceNavigation: () => void} const AccessibilityContext = createContext<AccessibilityContextType | null" >(null)  export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider') } return context }  interface AccessibilityProviderProps {"
+   children: ReactNode} export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => { const [highContrast, setHighContrast] = useState(false) const [reducedMotion, setReducedMotion] = useState(false) const [fontSize, setFontSize] = useState(16) const [showSkipLinks, setShowSkipLinks] = useState(false) const [voiceNavigation, setVoiceNavigation] = useState(false) 
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

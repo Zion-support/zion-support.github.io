@@ -1,75 +1,39 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+<<<<<<< HEAD
+ import { Link } from 'react-router-dom' const DigitalTransformation = () => { return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>''' <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white'>''' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>''' <div className='text-center'>''' <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation</h1>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>Modernize your business processes and operations.</p>' </div>' </div>'' </section>''' <section className='py-16 bg-white'>''' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>''' <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>''' <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Process Automation</h3>''' <p className='text-slate-600'>Streamline workflows with intelligent automation.</p>'' </div>''' <div className='bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Legacy Modernization</h3>''' <p className='text-slate-600'>Update and integrate legacy systems.</p>'' </div>''' <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Change Management</h3>''' <p className='text-slate-600'>Guide your team through digital adoption.</p>' </div>' </div>' </div>'' </section>''' <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white'>''' <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>''' <h2 className='text-3xl font-bold mb-6'>Transform Your Business</h2>''' <Link to='/contact' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-300'>Get Started</Link> </div> </section>' </div>)'}'; export default DigitalTransformation';'''"'"
+=======
+<<<<<<< HEAD
+ import { Link } from 'react-router-dom' const DigitalTransformation = () => { return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100>'' <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white>'' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>'' <div className='text-center>'' <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation</h1>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>Modernize your business processes and operations.</p>' </div>' </div>'' </section>''' <section className='py-16 bg-white>'' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>'' <div className='grid grid-cols-1 md: grid-cols-3 gap-8>'' <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl>'' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Process Automation</h3>''' <p className='text-slate-600'>Streamline workflows with intelligent automation.</p>'' </div>''' <div className='bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl>'' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Legacy Modernization</h3>''' <p className='text-slate-600'>Update and integrate legacy systems.</p>'' </div>''' <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl>'' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Change Management</h3>''' <p className='text-slate-600'>Guide your team through digital adoption.</p>' </div>' </div>' </div>'' </section>''' <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white>'' <div className='max-w-4xl mx-auto px-4 sm: px-6 l,
+    g:px-8 text-center>'' <h2 className='text-3xl font-bold mb-6'>Transform Your Business</h2>''' <Link to='/contact' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hove,
+    r: bg-gray-100 transition-colors duration-300'>Get Started</Link> </div> </section>' </div>)}; export default DigitalTransformation';';"'"
+"
+=======
+<<<<<<< HEAD
+ import { Link } from 'react-router-dom' const DigitalTransformation = () => { return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>'' <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white'>'' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>'' <div className='text-center'>'' <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation</h1>'' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>Modernize your business processes and operations.</p>' </div>' </div>' </section>'' <section className='py-16 bg-white'>'' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>'' <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>'' <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl'>'' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Process Automation</h3>'' <p className='text-slate-600'>Streamline workflows with intelligent automation.</p>' </div>'' <div className='bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl'>'' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Legacy Modernization</h3>'' <p className='text-slate-600'>Update and integrate legacy systems.</p>' </div>'' <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl'>'' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Change Management</h3>'' <p className='text-slate-600'>Guide your team through digital adoption.</p>' </div>' </div>' </div>' </section>'' <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white'>'' <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>'' <h2 className='text-3xl font-bold mb-6'>Transform Your Business</h2>'' <Link to='/contact' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-300'>Get Started</Link> </div> </section>' </div>)'}'; export default DigitalTransformation';';'";
+=======
+<<<<<<< HEAD
+ import {Link } from 'react-router-dom' const DigitalTransformation = () => {return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>''' <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white'>''' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>''' <div className='text-center'>''' <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation</h1>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>Modernize your business processes and operations.</p>' </div>' </div>'' </section>''' <section className='py-16 bg-white'>''' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>''' <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>''' <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Process Automation</h3>''' <p className='text-slate-600'>Streamline workflows with intelligent automation.</p>'' </div>''' <div className='bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Legacy Modernization</h3>''' <p className='text-slate-600'>Update and integrate legacy systems.</p>'' </div>''' <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Change Management</h3>''' <p className='text-slate-600'>Guide your team through digital adoption.</p>' </div>' </div>' </div>'' </section>''' <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white'>''' <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>''' <h2 className='text-3xl font-bold mb-6'>Transform Your Business</h2>''' <Link to='/contact' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-300'>Get Started</Link> </div> </section>' </div>)'}'; export default DigitalTransformation';'';'"'"
+=======
+<<<<<<< HEAD
+ import { Link } from &apos;
+import Link from &apos;next/link';react-router-dom&apos;&apos;' const DigitalTransformation = () => { return (}<;<div className=&apos;min-h-screen bg-gradient-to-br from-slate-50 to-slate-100&apos;>'&apos;&apos;'' <section className=&apos;pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white&apos;>'&apos;&apos;'' <div className=&apos;max-w-7xl mx-auto px-4 sm: px-6 lg:px-8&apos;>'&apos;&apos;'' <div className=&apos;text-center&apos;>'&apos;&apos;'' <h1 className=&apos;text-4xl md: text-5xl font-bold mb-6&apos;>Digital Transformation&apos;</h1>&apos;&apos;'&apos;&apos; <p className=&apos;text-xl text-gray-300 max-w-3xl mx-auto&apos;>Modernize your business processes and operations.&apos;</p>&apos;&apos;' </div>&apos;&apos;' </div>&apos;&apos;'' </section>&apos;&apos;'&apos;&apos; <section className=&apos;py-16 bg-white&apos;>'&apos;&apos;'' <div className=&apos;max-w-7xl mx-auto px-4 sm: px-6 lg:px-8&apos;>'&apos;&apos;'' <div className=&apos;grid grid-cols-1 md: grid-cols-3 gap-8&apos;>'&apos;&apos;'' <div className=&apos;bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl&apos;>'&apos;&apos;'' <h3 className=&apos;text-xl font-semibold text-slate-900 mb-4&apos;>Process Automation&apos;</h3>&apos;&apos;'&apos;&apos; <p className=&apos;text-slate-600&apos;>Streamline workflows with intelligent automation.&apos;</p>&apos;&apos;'' </div>&apos;&apos;'&apos;&apos; <div className=&apos;bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl&apos;>'&apos;&apos;'' <h3 className=&apos;text-xl font-semibold text-slate-900 mb-4&apos;>Legacy Modernization&apos;</h3>&apos;&apos;'&apos;&apos; <p className=&apos;text-slate-600&apos;>Update and integrate legacy systems.&apos;</p>&apos;&apos;'' </div>&apos;&apos;'&apos;&apos; <div className=&apos;bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl&apos;>'&apos;&apos;'' <h3 className=&apos;text-xl font-semibold text-slate-900 mb-4&apos;>Change Management&apos;</h3>&apos;&apos;'&apos;&apos; <p className=&apos;text-slate-600&apos;>Guide your team through digital adoption.&apos;</p>&apos;&apos;' </div>&apos;&apos;' </div>&apos;&apos;' </div>&apos;&apos;'' </section>&apos;&apos;'&apos;&apos; <section className=&apos;py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white&apos;>'&apos;&apos;'' <div className=&apos;max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center&apos;>'&apos;&apos;'' <h2 className=&apos;text-3xl font-bold mb-6&apos;>Transform Your Business&apos;</h2>&apos;&apos;'&apos;&apos; <Link to=&apos;/contact&apos; className=&apos;bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hove,r: bg-gray-100 transition-colors duration-300&apos;>Get Started&apos;</Link> </div> <;</section>&apos; ;&apos;</div>)&apos;}';&apos;&apos; export default DigitalTransformation';&apos;';&apos;&quot;
+&quot;"
+=======
+<<<<<<< HEAD
+ import { Link } from 'react-router-dom' const DigitalTransformation = () => { return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>''' <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white'>''' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>''' <div className='text-center'>''' <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation</h1>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>Modernize your business processes and operations.</p>' </div>' </div>'' </section>''' <section className='py-16 bg-white'>''' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>''' <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>''' <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Process Automation</h3>''' <p className='text-slate-600'>Streamline workflows with intelligent automation.</p>'' </div>''' <div className='bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Legacy Modernization</h3>''' <p className='text-slate-600'>Update and integrate legacy systems.</p>'' </div>''' <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Change Management</h3>''' <p className='text-slate-600'>Guide your team through digital adoption.</p>' </div>' </div>' </div>'' </section>''' <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white'>''' <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>''' <h2 className='text-3xl font-bold mb-6'>Transform Your Business</h2>''' <Link to='/contact' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-300'>Get Started</Link> </div> </section>' </div>)'}'; export default DigitalTransformation';'';'"'"
+<<<<<<< HEAD
+ import { Link } from 'react-router-dom' const DigitalTransformation = () => { return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>'';' <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white'>'';' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>'';' <div className='text-center'>'';' <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation</h1>'';' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>Modernize your business processes and operations.</p>'; </div>'; </div>';' </section>'';' <section className='py-16 bg-white'>'';' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>'';' <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>'';' <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl'>'';' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Process Automation</h3>'';' <p className='text-slate-600'>Streamline workflows with intelligent automation.</p>';' </div>'';' <div className='bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl'>'';' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Legacy Modernization</h3>'';' <p className='text-slate-600'>Update and integrate legacy systems.</p>';' </div>'';' <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl'>'';' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Change Management</h3>'';' <p className='text-slate-600'>Guide your team through digital adoption.</p>' </div>'; </div>'; </div>';' </section>'';' <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white'>'';' <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>'';' <h2 className='text-3xl font-bold mb-6'>Transform Your Business</h2>'';' <Link to='/contact' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-300'>Get Started</Link> </div> </section>' </div>)'}'; export default DigitalTransformation';;'';'"'"
 
-export default function Transformation() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Transformation - Zion Tech Group"
-        description="Professional transformation services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transformation
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional transformation services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide comprehensive transformation solutions tailored to your requirements.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
-              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
-              <p className="text-gray-300">Professional service description</p>
-            </div>
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
-              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
-              <p className="text-gray-300">Professional service description</p>
-            </div>
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
-              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
-              <p className="text-gray-300">Professional service description</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
+""
+=======
+=======
+ import { Link  } from 'react-router-dom';const DigitalTransformation = () => { return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>''' <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white'>''' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>''' <div className='text-center'>''' <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation</h1>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>Modernize your business processes and operations.</p>' </div>' </div>'' </section>''' <section className='py-16 bg-white'>''' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>''' <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>''' <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Process Automation</h3>''' <p className='text-slate-600'>Streamline workflows with intelligent automation.</p>'' </div>''' <div className='bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Legacy Modernization</h3>''' <p className='text-slate-600'>Update and integrate legacy systems.</p>'' </div>''' <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl'>''' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Change Management</h3>''' <p className='text-slate-600'>Guide your team through digital adoption.</p>' </div>' </div>' </div>'' </section>''' <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white'>''' <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>''' <h2 className='text-3xl font-bold mb-6'>Transform Your Business</h2>''' <Link to='/contact' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-300'>Get Started</Link> </div> </section>' </div>)'}'; export default DigitalTransformation"'"
+ import { Link  } from 'react-router-dom';const DigitalTransformation = () => { return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>' <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white'>' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>' <div className='text-center'>' <h1 className='text-4xl md: text-5xl font-bold mb-6'>Digital Transformation</h1>' <p className='text-xl text-gray-300 max-w-3xl mx-auto'>Modernize your business processes and operations.</p>'; </div>'; </div> </section>' <section className='py-16 bg-white'>' <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>' <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>' <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl'>' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Process Automation</h3>' <p className='text-slate-600'>Streamline workflows with intelligent automation.</p> </div>' <div className='bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl'>' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Legacy Modernization</h3>' <p className='text-slate-600'>Update and integrate legacy systems.</p> </div>' <div className='bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl'>' <h3 className='text-xl font-semibold text-slate-900 mb-4'>Change Management</h3>' <p className='text-slate-600'>Guide your team through digital adoption.</p>' </div>'; </div>'; </div> </section>' <section className='py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white'>' <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>' <h2 className='text-3xl font-bold mb-6'>Transform Your Business</h2>' <Link to='/contact' className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors duration-300'>Get Started</Link> </div> </section>' </div>)'}'; export default DigitalTransformation';;'"
+
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

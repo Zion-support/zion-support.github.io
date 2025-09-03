@@ -1,47 +1,20 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function InnovativeServicesShowcase2034() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="InnovativeServicesShowcase2034 - Zion Tech Group"
-        description="Professional innovativeservicesshowcase2034 services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              InnovativeServicesShowcase2034
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional innovativeservicesshowcase2034 services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import {  Brain, Shield, Zap, Cpu, Database, Network, Globe, ArrowRight, CheckCircle, Star, Users, Rocket, Target, Lightbulb, Atom, Lock, BarChart3, Code, Server, Wifi, ShieldCheck, Bot, Workflow, Eye, Sparkles, Phone, Mail, MapPin, Clock, DollarSign, Leaf, Gamepad2, Coins, Satellite, Activity, FileText, MessageCircle, Search, BarChart, Users2, Settings, Palette, TrendingUp, Scale, Gauge, PenTool, Briefcase, Heart, Home, BookOpen, ShoppingCart, Car, Factory, Building2    } from 'lucide-react' ;""
+=======
+<<<<<<< HEAD
+import React, {useState } from 'react' ;
+import {motion    } from 'framer-motion' import {Helmet  } from 'react-helmet-async' import {Brain, Shield, Zap, Cpu, Database, Network, Globe, ArrowRight, CheckCircle, Star, Users, Rocket, Target, Lightbulb, Atom, Lock, BarChart3, Code, Server, Wifi, ShieldCheck, Bot, Workflow, Eye, Sparkles, Phone, Mail, MapPin, Clock, DollarSign, Leaf, Gamepad2, Coins, Satellite, Activity, FileText, MessageCircle, Search, BarChart, Users2, Settings, Palette, TrendingUp, Scale, Gauge, PenTool, Briefcase, Heart, Home, BookOpen, ShoppingCart, Car, Factory, Building2    } from 'lucide-react' ;"
+=======
+<<<<<<< HEAD
+import React, { useState } from &apos;react&apos; import { motion    } from &apos;framer-motion&apos; import { Helmet  } from &apos;react-helmet-async&apos; import {  Brain, Shield, Zap, Cpu, Database, Network, Globe, ArrowRight, CheckCircle, Star, Users, Rocket, Target, Lightbulb, Atom, Lock, BarChart3, Code, Server, Wifi, ShieldCheck, Bot, Workflow, Eye, Sparkles, Phone, Mail, MapPin, Clock, DollarSign, Leaf, Gamepad2, Coins, Satellite, Activity, FileText, MessageCircle, Search, BarChart, Users2, Settings, Palette, TrendingUp, Scale, Gauge, PenTool, Briefcase, Heart, Home, BookOpen, ShoppingCart, Car, Factory, Building2    } from &apos;lucide-react&apos; ;&apos;'
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import {  Brain, Shield, Zap, Cpu, Database, Network, Globe, ArrowRight, CheckCircle, Star, Users, Rocket, Target, Lightbulb, Atom, Lock, BarChart3, Code, Server, Wifi, ShieldCheck, Bot, Workflow, Eye, Sparkles, Phone, Mail, MapPin, Clock, DollarSign, Leaf, Gamepad2, Coins, Satellite, Activity, FileText, MessageCircle, Search, BarChart, Users2, Settings, Palette, TrendingUp, Scale, Gauge, PenTool, Briefcase, Heart, Home, BookOpen, ShoppingCart, Car, Factory, Building2    } from 'lucide-react' ;""
+""
+=======
+import React, { useState } from 'react' import { motion    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import {  Brain, Shield, Zap, Cpu, Database, Network, Globe, ArrowRight, CheckCircle, Star, Users, Rocket, Target, Lightbulb, Atom, Lock, BarChart3, Code, Server, Wifi, ShieldCheck, Bot, Workflow, Eye, Sparkles, Phone, Mail, MapPin, Clock, DollarSign, Leaf, Gamepad2, Coins, Satellite, Activity, FileText, MessageCircle, Search, BarChart, Users2, Settings, Palette, TrendingUp, Scale, Gauge, PenTool, Briefcase, Heart, Home, BookOpen, ShoppingCart, Car, Factory, Building2    }  from 'lucide-react'; ;"
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

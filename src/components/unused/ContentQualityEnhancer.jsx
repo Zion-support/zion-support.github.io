@@ -1,47 +1,37 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function ContentQualityEnhancer() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="ContentQualityEnhancer - Zion Tech Group"
-        description="Professional contentqualityenhancer services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              ContentQualityEnhancer
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional contentqualityenhancer services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline' export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*='content']', 'article', 'section'] }) => { const [isOpen, setIsOpen] = useState(false) const [analysis, setAnalysis] = useState(null) const [isAnalyzing, setIsAnalyzing] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedElement, setSelectedElement] = useState(null)'"'"
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline' export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*='content'], 'article', 'section'] }) => { const [isOpen, setIsOpen] = useState(false) const [analysis, setAnalysis] = useState(null) const [isAnalyzing, setIsAnalyzing] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedElement, setSelectedElement] = useState(null);"'""
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline' export const ContentQualityEnhancer = ({ className = ', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*='content']', 'article', 'section'] }) => { const [isOpen, setIsOpen] = useState(false) const [analysis, setAnalysis] = useState(null) const [isAnalyzing, setIsAnalyzing] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedElement, setSelectedElement] = useState(null)';"
+=======
+<<<<<<< HEAD
+import React, {useState, useEffect, useCallback } from 'react' ;
+import {motion, AnimatePresence } from 'framer-motion' import {DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline' export const ContentQualityEnhancer = ({className='', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*='content']', 'article', 'section'] }) => { const [isOpen, setIsOpen] = useState(false) const [analysis, setAnalysis] = useState(null) const [isAnalyzing, setIsAnalyzing] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedElement, setSelectedElement] = useState(null)';"'"
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline' export const ContentQualityEnhancer = memo(({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*='content']', 'article', 'section'] }) => { const [isOpen, setIsOpen] = useState(false) const [analysis, setAnalysis] = useState(null) const [isAnalyzing, setIsAnalyzing] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedElement, setSelectedElement] = useState(null)';"'"
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from &apos;react&apos; import { motion, AnimatePresence } from &apos;framer-motion&apos; import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from &apos;@heroicons/react/24/outline&apos;&apos;' export const ContentQualityEnhancer = ({ className = &apos;&apos;, showAnalysis = true, autoAnalyze = true, targetElements = [&apos;p&apos;, &apos;h1&apos;, &apos;h2&apos;, &apos;h3&apos;, &apos;h4&apos;, &apos;h5&apos;, &apos;h6&apos;, &apos;div[class*=&apos;content&apos;]&apos;, &apos;article&apos;, &apos;section&apos;] }) => {&apos;}&apos; const [isOpen, setIsOpen] = useState(false) const [analysis, setAnalysis] = useState(null) const [isAnalyzing, setIsAnalyzing] = useState(false) const;const;const [activeTab, setActiveTab] = useState(&apos;overview&apos;) ;&apos;const [selectedElement, setSelectedElement] = useState(null)';&quot;&quot;"
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from '@heroicons/react/24/outline' export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'div[class*='content']', 'article', 'section'] }) => { const [isOpen, setIsOpen] = useState(false) const [analysis, setAnalysis] = useState(null) const [isAnalyzing, setIsAnalyzing] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedElement, setSelectedElement] = useState(null)';"'"
+<<<<<<< HEAD
+""
 }
+=======
+=======
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon }  from '@heroicons/react/24/outline';export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, autoAnalyze = true, targetElements = ['p,h1,h2,h3,h4,h5,h6,div[class*='content'],article,section'] }) => { const [isOpen, setIsOpen] = useState(false) const [analysis, setAnalysis] = useState(null) const [isAnalyzing, setIsAnalyzing] = useState(false) const [activeTab, setActiveTab] = useState('overview') const [selectedElement, setSelectedElement] = useState(null)'"
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

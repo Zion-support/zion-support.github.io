@@ -1,47 +1,43 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function AdminLayout() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AdminLayout - Zion Tech Group"
-        description="Professional adminlayout services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AdminLayout
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional adminlayout services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+ interface AdminLayoutProps { children: React.ReactNode  } export function AdminLayout({ children }: AdminLayoutProps) { return ( <div className='flex min-h-screen'> <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'> <h2 className='font-semibold text-lg mb-4'>Back Office</h2> <nav className='space-y-1'> {navItems.map((item) => ( <Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent' > {item.title} </Link> ))} </nav> </aside> <main className='flex-1 p-6 overflow-y-auto'>{children}</main> </div> )} export default AdminLayout'''"'"
+=======
+<<<<<<< HEAD
+ interface AdminLayoutProps {;
+  children: React.ReactNode} export function AdminLayout({ children }: AdminLayoutProps) { return ( <div className='flex min-h-screen'> <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'> <h2 className='font-semibold text-lg mb-4'>Back Office</h2> <nav className='space-y-1'> {navItems.map((item) => ( <Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent' > {item.title} </Link> ))} </nav> </aside> <main className='flex-1 p-6 overflow-y-auto'>{children}</main> </div> )} export default AdminLayout';'"
+=======
+<<<<<<< HEAD
+import {Back } from 'lucide-react';
+ interface AdminLayoutProps {children: React.ReactNode} export function AdminLayout({children }: AdminLayoutProps) {return ( <div className='flex min-h-screen'> <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'> <h2 className='font-semibold text-lg mb-4'>Back Office</h2> <nav className='space-y-1'> {navItems.map((item) => ( <Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent' > {item.title} </Link> ))} </nav> </aside> <main className='flex-1 p-6 overflow-y-auto'>{children}</main> </div> )} export default AdminLayout';''"'"
+=======
+import { Back } from 'lucide-react';
+<<<<<<< HEAD
+ interface AdminLayoutProps {'
+  children: React.ReactNode} export function AdminLayout({ children }: AdminLayoutProps) { return ( <div className='flex min-h-screen'> <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'> <h2 className='font-semibold text-lg mb-4'>Back Office</h2> <nav className='space-y-1'> {navItems.map((item) => ( <Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent' > {item.title} </Link> ))} </nav> </aside> <main className='flex-1 p-6 overflow-y-auto'>{children}</main> </div> )} export default AdminLayout';'"'""
+=======
+<<<<<<< HEAD
+ interface AdminLayoutProps {""
+  children: React.ReactNode} export function AdminLayout({ children }: AdminLayoutProps) { return ( <div className='flex min-h-screen'> <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'> <h2 className='font-semibold text-lg mb-4'>Back Office</h2> <nav className='space-y-1'> {navItems.map((item) => ( <Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent'" > {item.title} </Link> ))} </nav> </aside> <main className='flex-1 p-6 overflow-y-auto'>{children}</main> </div> )} export default AdminLayout';''"'""
+ interface AdminLayoutProps {
+<<<<<<< HEAD
+  children: React.ReactNode} export function AdminLayout({ children }: AdminLayoutProps) { return (} <div className=&apos;flex min-h-screen&apos;>&apos;' <aside className=&apos;w-64 border-r p-6 space-y-2 bg-muted/50&apos;>&apos;' <h2 className=&apos;font-semibold text-lg mb-4&apos;>Back Office&apos;</h2> <nav className=&apos;space-y-1&apos;> {navItems.map((item) => (&apos;} <Link key={item.href} href={item.href} className=&apos;block rounded-md px-3 py-2 text-sm hover: bg-accent&apos; > {item.title}&apos; </Link> ))} </nav> </aside> <main className=&apos;flex-1 p-6 overflow-y-auto&apos;>{children}&apos;</main> </div> )} export default AdminLayout';&apos;'&quot;&quot;"
+=======
+  children: React.ReactNode", "
+} export function AdminLayout({ children }: AdminLayoutProps) { return ( <div className='flex min-h-screen'> <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'> <h2 className='font-semibold text-lg mb-4'>Back Office</h2> <nav className='space-y-1'> {navItems.map((item) => ( <Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent'" > {item.title} </Link> ))} </nav> </aside> <main className='flex-1 p-6 overflow-y-auto'>{children}</main> </div> )} export default AdminLayout';;''"'
+""
+=======
+ interface AdminLayoutProps {"
+  children: React.ReactNode} export function AdminLayout({ children }: AdminLayoutProps) { return ( <div className='flex min-h-screen'> <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'> <h2 className='font-semibold text-lg mb-4'>Back Office</h2> <nav className='space-y-1'> {navItems.map((item) => ( <Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent'" > {item.title} </Link> ))} </nav> </aside> <main className='flex-1 p-6 overflow-y-auto'>{children}</main> </div> )} export default AdminLayout'"'"
+ interface AdminLayoutProps {
+<<<<<<< HEAD
+  children: React.ReactNode} export function AdminLayout({ children }: AdminLayoutProps) { return ( <div className='flex min-h-screen'> <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'> <h2 className='font-semibold text-lg mb-4'>Back Office</h2> <nav className='space-y-1'> {navItems.map((item) => ( <Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent' > {item.title} </Link> ))} </nav> </aside> <main className='flex-1 p-6 overflow-y-auto'>{children}</main> </div> )} export default AdminLayout';''"'"
+=======
+  children: React.ReactNode",
+} export function AdminLayout({ children }: AdminLayoutProps) { return ( <div className='flex min-h-screen'> <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'> <h2 className='font-semibold text-lg mb-4'>Back Office</h2> <nav className='space-y-1'> {navItems.map((item) => ( <Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent'" > {item.title} </Link> ))} </nav> </aside> <main className='flex-1 p-6 overflow-y-auto'>{children}</main> </div> )} export default AdminLayout';;''"
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

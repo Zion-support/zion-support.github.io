@@ -1,47 +1,42 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function dataAnalyticsServices2025() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="dataAnalyticsServices2025 - Zion Tech Group"
-        description="Professional dataanalyticsservices2025 services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              dataAnalyticsServices2025
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional dataanalyticsservices2025 services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import { ProductListing } from '@/types/listings'  export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [ {'; i,
+    d: "real-time-data-streaming-platform", ""; title: "Real-Time Data Streaming & Analytics Platform", ""; description: "High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.",""; category: "Data & Analytics", ""; subcategory: "Real-Time Streaming", "; price: 4999, ""; currency: "$", ""; tags: ["Real-Time", "Data Streaming", "Event Processing", "Anomaly Detection", "Instant Insights"], ""; author: { nam,
+    e: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "http,
+    s:''
+import { ProductListing } from '@/types/listings'  export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [ {'; i,
+    d: 'real-time-data-streaming-platform', ''; title: 'Real-Time Data Streaming & Analytics Platform', ''; description: 'High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.','; category: 'Data & Analytics', ''; subcategory: 'Real-Time Streaming', '; price: 4999, ''; currency: '$', ''; tags: ['Real-Time', 'Data Streaming', 'Event Processing', 'Anomaly Detection', 'Instant Insights'], ''; author: { nam,
+    e: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'http,
+    s:''";"
+"
+=======
+<<<<<<< HEAD
+import { ProductListing } from '@/types/listings'  export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [ {'; id: "real-time-data-streaming-platform", "; title: "Real-Time Data Streaming & Analytics Platform", "; description: "High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.","; category: "Data & Analytics", "; subcategory: "Real-Time Streaming","; price: 4999, "; currency: "$", "; tags: ["Real-Time", "Data Streaming", "Event Processing", "Anomaly Detection", "Instant Insights"], "; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:;
+import { ProductListing } from '@/types/listings'  export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [ {'; id: 'real-time-data-streaming-platform', '; title: 'Real-Time Data Streaming & Analytics Platform', '; description: 'High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.','; category: 'Data & Analytics', '; subcategory: 'Real-Time Streaming','; price: 4999, '; currency: '$', '; tags: ['Real-Time', 'Data Streaming', 'Event Processing', 'Anomaly Detection', 'Instant Insights'], '; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:'";
+=======
+<<<<<<< HEAD
+import {ProductListing } from '@/types/listings'  export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [{'; id: "real-time-data-streaming-platform", ""; title: "Real-Time Data Streaming & Analytics Platform", ""; description: "High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.",""; category: "Data & Analytics", ""; subcategory: "Real-Time Streaming", "; price: 4999, ""; currency: "$", ""; tags: ["Real-Time", "Data Streaming", "Event Processing", "Anomaly Detection", "Instant Insights"], ""; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:'
+import { ProductListing } from '@/types/listings'  export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [{'; id: 'real-time-data-streaming-platform', ''; title: 'Real-Time Data Streaming & Analytics Platform', ''; description: 'High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.',''; category: 'Data & Analytics', ''; subcategory: 'Real-Time Streaming', '; price: 4999, ''; currency: '$', ''; tags: ['Real-Time', 'Data Streaming', 'Event Processing', 'Anomaly Detection', 'Instant Insights'], ''; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:''";'"
+=======
+<<<<<<< HEAD
+import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export ;const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [ {'; i,d: &quot;real-time-data-streaming-platform&quot;, &quot;"; title: &quot;Real-Time Data Streaming & Analytics Platform&quot;, &quot;"; description: &quot;High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.&quot;,&quot;"; category: &quot;Data & Analytics&quot;, &quot;"; subcategory: &quot;Real-Time Streaming&quot;,"; price: 4999, &quot;"; currency: &quot;$&quot;, &quot;"; tags: [&quot;Real-Time&quot;, &quot;Data Streaming&quot;, &quot;Event Processing&quot;, &quot;Anomaly Detection&quot;, &quot;Instant Insights&quot;], &quot;"; author: { nam,e: &quot;Zion Tech Group&quot;, id: &quot;zion-tech-group&quot;, email: &quot;kleber@ziontechgroup.com&quot;, avatarUrl: &quot;http,s:
+import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export ;const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [ {'; i,d: &apos;real-time-data-streaming-platform&apos;, &apos;'; title: &apos;Real-Time Data Streaming & Analytics Platform&apos;, &apos;'; description: &apos;High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.&apos;,&apos;'; category: &apos;Data & Analytics&apos;, &apos;'; subcategory: &apos;Real-Time Streaming&apos;,'; price: 4999, &apos;'; currency: &apos;$&apos;, &apos;'; tags: [&apos;Real-Time&apos;, &apos;Data Streaming&apos;, &apos;Event Processing&apos;, &apos;Anomaly Detection&apos;, &apos;Instant Insights&apos;], &apos;'; author: { nam,e: &apos;Zion Tech Group&apos;, id: &apos;zion-tech-group&apos;, email: &apos;kleber@ziontechgroup.com&apos;, avatarUrl: &apos;http,s:&apos;&apos;";
+&quot;}}"
+=======
+<<<<<<< HEAD
+import { ProductListing } from '@/types/listings'  export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [ {'; id: "real-time-data-streaming-platform", ""; title: "Real-Time Data Streaming & Analytics Platform", ""; description: "High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.",""; category: "Data & Analytics", ""; subcategory: "Real-Time Streaming", "; price: 4999, ""; currency: "$", ""; tags: ["Real-Time", "Data Streaming", "Event Processing", "Anomaly Detection", "Instant Insights"], ""; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:'
+import { ProductListing } from '@/types/listings'  export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [ {'; id: 'real-time-data-streaming-platform', ''; title: 'Real-Time Data Streaming & Analytics Platform', ''; description: 'High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.',''; category: 'Data & Analytics', ''; subcategory: 'Real-Time Streaming', '; price: 4999, ''; currency: '$', ''; tags: ['Real-Time', 'Data Streaming', 'Event Processing', 'Anomaly Detection', 'Instant Insights'], ''; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:''";'"
+<<<<<<< HEAD
+""
+}}}}
+=======
+=======
+import { ProductListing }  from '@/types/listings';export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [ {'; id: "real-time-data-streaming-platform,"; title: "Real-Time Data Streaming & Analytics Platform,"; description: "High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.,"; category: "Data & Analytics,"; subcategory: "Real-Time Streaming,; price: 4999, ""; currency: "$,"; tags: ["Real-Time,Data Streaming,Event Processing,Anomaly Detection,Instant Insights"], ""; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:'
+import { ProductListing }  from '@/types/listings';export const DATA_ANALYTICS_SERVICES_2025: ProductListing[] = [ {'; id: 'real-time-data-streaming-platform,'; title: 'Real-Time Data Streaming & Analytics Platform,'; description: 'High-performance data streaming platform that processes millions of events per second, providing real-time analytics, anomaly detection, and instant insights for time-critical business decisions.,'; category: 'Data & Analytics,'; subcategory: 'Real-Time Streaming,; price: 4999, ''; currency: '$,'; tags: ['Real-Time,Data Streaming,Event Processing,Anomaly Detection,Instant Insights'], ''; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:''"
+"
+}}}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

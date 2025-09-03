@@ -1,47 +1,32 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function label() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="label - Zion Tech Group"
-        description="Professional label services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              label
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional label services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import * as React from 'react'';' import * as LabelPrimitive from '@radix-ui/react-label'' import { cva, type VariantProps } from 'class-variance-authority'';' import { cn } from '@/lib/utils'';' const labelVariants = cva('';text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70' ) const Label = React.forwardRef< React.ElementRef<typeof LabelPrimitive.Root>, React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> >(({ className, ...props }, ref) => ( <LabelPrimitive.Root ref={ref} className={cn(labelVariants(), className)} {...props}' />'))'; Label.displayName = LabelPrimitive.Root.displayName';' export { Label }'';''"'"
+=======
+<<<<<<< HEAD
+import * as React from 'react''; import * as LabelPrimitive from '@radix-ui/react-label'' import { cva, type VariantProps } from 'class-variance-authority''; import { cn } from '@/lib/utils''; const labelVariants = cva('';text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disable,
+    d:opacity-70' ) const Label = React.forwardRef< React.ElementRef<typeof LabelPrimitive.Root>, React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> >(({ className, ...props }, ref) => ( <LabelPrimitive.Root ref={ref} className={cn(labelVariants(), className)} {...props} />)); Label.displayName = LabelPrimitive.Root.displayName'; export { Label };;"'""
+=======
+<<<<<<< HEAD
+import * as React from 'react';' import * as LabelPrimitive from '@radix-ui/react-label' import { cva, type VariantProps } from 'class-variance-authority';' import { cn } from '@/lib/utils';' const labelVariants = cva(';text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70' ) const Label = React.forwardRef< React.ElementRef<typeof LabelPrimitive.Root>, React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> >(({ className, ...props }, ref) => ( <LabelPrimitive.Root ref={ref} className={cn(labelVariants(), className)} {...props}' />'))'; Label.displayName = LabelPrimitive.Root.displayName';' export { Label }';';'"
+=======
+<<<<<<< HEAD
+import * as React from 'react'';' import * as LabelPrimitive from '@radix-ui/react-label'' import {cva, type VariantProps } from 'class-variance-authority'';' import {cn } from '@/lib/utils'';' const labelVariants = cva('';text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70' ) const Label = React.forwardRef< React.ElementRef<typeof LabelPrimitive.Root>, React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> >(({className, ...props }, ref) => ( <LabelPrimitive.Root ref={ref} className={cn(labelVariants(), className)}, {...props}' />'))'; Label.displayName = LabelPrimitive.Root.displayName';' export {Label }'';';'"'"
+=======
+<<<<<<< HEAD
+import * as React from &apos;react&apos;';&apos; import * as LabelPrimitive from &apos;@radix-ui/react-label&apos;&apos; import { cva, type VariantProps } from &apos;class-variance-authority&apos;';&apos; import { cn } from &apos;@/lib/utils&apos;';&apos;&apos;' const labelVariants = cva(&apos;';text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disable,d:opacity-70&apos; )&apos;&apos; const Label = React.forwardRef< React.ElementRef<typeof LabelPrimitive.Root>, React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> >(({ className, ...props }, ref) => ( <;<;<LabelPrimitive.Root ref={ref} className={cn(labelVariants(), className)} {...props}&apos; />&apos;))'; Label.displayName = LabelPrimitive.Root.displayName';&apos;&apos;' export { Label }&apos;';';&apos;&quot;&quot;"
+=======
+<<<<<<< HEAD
+import * as React from 'react'';' import * as LabelPrimitive from '@radix-ui/react-label'' import { cva, type VariantProps } from 'class-variance-authority'';' import { cn } from '@/lib/utils'';' const labelVariants = cva('';text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70' ) const Label = React.forwardRef< React.ElementRef<typeof LabelPrimitive.Root" >, React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root" > & VariantProps<typeof labelVariants" > >(({ className, ...props }, ref) => ( <LabelPrimitive .Root ref={ref} className={cn(labelVariants(), className)} {...props}' /" >'))'; Label.displayName = LabelPrimitive.Root.displayName';' export { Label }'';';'"'"
+""
+=======
+<<<<<<< HEAD
+import * as React from 'react'';' import * as LabelPrimitive from '@radix-ui/react-label'' import { cva, type VariantProps } from 'class-variance-authority'';' import { cn } from '@/lib/utils'';' const labelVariants = cva('';text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70' ) const Label = React.forwardRef< React.ElementRef<typeof LabelPrimitive.Root>, React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> & VariantProps<typeof labelVariants> >(({ className, ...props }, ref) => ( <LabelPrimitive.Root ref={ref} className={cn(labelVariants(), className)} {...props}' />'))'; Label.displayName = LabelPrimitive.Root.displayName';' export { Label }'';';'"'"
+=======
+import * as React  from 'react;' import * as LabelPrimitive from '@radix-ui/react-label'' import { cva, type VariantProps }  from 'class-variance-authority;' import { cn }  from '@/lib/utils;' const labelVariants = cva('';text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70' ) const Label = React.forwardRef< React.ElementRef<typeof LabelPrimitive.Root" >, React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root" > & VariantProps<typeof labelVariants" > >(({ className, ...props }, ref) => ( <LabelPrimitive .Root ref={ref} className={cn(labelVariants(), className)} {...props}' /" >'))'; Label.displayName = LabelPrimitive.Root.displayName export { Label }';'"'"
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

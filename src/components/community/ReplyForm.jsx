@@ -1,47 +1,74 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+<<<<<<< HEAD
+';export default function ReplyForm({' onSubmit, placeholder = 'Write your reply...'}) {' const [content, setContent] = useState(')' const handleSubmit = e => {' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(')' }' } return() <form onSubmit={handleSubmit} className='mt-4'>' <textarea' value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}' className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none' rows={3}' />' <div className='mt-2 flex justify-end'>' <Button type='submit' disabled={!content.trim()}>' Post Reply' </Button> </div> </form> ) } '';''';import React, { useState } from 'react'
+=======
+<<<<<<< HEAD
+';export default function ReplyForm({' onSubmit, placeholder = 'Write your reply...'}) {' const [content, setContent] = useState(') const handleSubmit = e => {' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(') } } return() <form onSubmit={handleSubmit} className='mt-4> <textarea' value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder} className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focu,
+    s:ring-2 focu,
+    s:ring-zion-cyan resize-none' rows={3} /> <div className='mt-2 flex justify-end> <Button type='submit' disabled={!content.trim()}>' Post Reply' </Button> </div> </form> ) } '';'';import React, { useState } from 'react';
+=======
+<<<<<<< HEAD
+';export default function ReplyForm({' onSubmit, placeholder = 'Write your reply...'}) {' const [content, setContent] = useState(')' const handleSubmit = e => {' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(')' }' } return() <form onSubmit={handleSubmit} className='mt-4'>' <textarea' value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}' className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none' rows={3}' />' <div className='mt-2 flex justify-end'>' <Button type='submit' disabled={!content.trim()}>' Post Reply' </Button> </div> </form> ) } ';'';import React, { useState } from 'react';
+=======
+<<<<<<< HEAD
+';export default function ReplyForm(  {' onSubmit, placeholder = 'Write your reply...'}) {' const [content, setContent] = useState(')' const handleSubmit = e => {' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(')' }' } return() <form onSubmit={handleSubmit} className='mt-4'>' <textarea' value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}' className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none' rows={3}' />' <div className='mt-2 flex justify-end'>' <Button type='submit' disabled={!content.trim()}>' Post Reply' </Button> </div> </form> ) } '';''';import React, {useState } from 'react';
+=======
+<<<<<<< HEAD
+';&apos;&apos;export default function ReplyForm(;{&apos; onSubmit, placeholder = &apos;Write your reply...&apos;}) {&apos;&apos;}' const [content, setContent] = useState(&apos;)'&apos;&apos; const handleSubmit = e => {&apos; e.preventDefault() if (content.trim()) { onSubmit(content) setContent(&apos;)&apos; }&apos; } return()&apos;&apos; <form onSubmit={handleSubmit} className=&apos;mt-4&apos;>'&apos;&apos; <textarea&apos; value={content} onChange={e => setContent(e.target.value)} placeholder={placeholder}&apos; className=&apos;w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focu,s:ring-zion-cyan resize-none&apos; rows={3}&apos; />&apos;&apos;' <div className=&apos;mt-2 flex justify-end&apos;>'&apos;&apos; <Button type=&apos;submit&apos; disabled={!content.trim()}>&apos; Post Reply&apos;&apos;' </Button> </div> <;</form> ) } &apos;';&apos;&apos;';import React, { useState } from &apos;react';
+&apos;'
+=======
+<<<<<<< HEAD
+';export default function ReplyForm({' onSubmit, placeholder = 'Write your reply...'}) {' const [content, setContent] = useState(')' const handleSubmit = e => {' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(')' }' } return() <form onSubmit={handleSubmit} className='mt-4'>' <textarea ' value={content} onChange={e =" > setContent(e.target.value)} placeholder={placeholder}' className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none' rows={3}' />' <div className='mt-2 flex justify-end'>' <Button type='submit' disabled={!content.trim()}" >' Post Reply' </Button> </div> </form> ) } '';''';import React, { useState } from 'react';""
+';export default function ReplyForm({' onSubmit, placeholder = 'Write your reply...'}) {' const [content, setContent] = useState(')' const handleSubmit = e => {' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(')' }' } return() <form onSubmit={handleSubmit} className='mt-4'>' <textarea ' value={content} onChange={e =" > setContent(e.target.value)} placeholder={placeholder}' className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none' rows={3}' />' <div className='mt-2 flex justify-end'>' <Button type='submit' disabled={!content.trim()}" >' Post Reply' </Button> </div> </form> ) } '';''';import React, { useState } from 'react'
+import { Button } from '@/components/ui/button';""
+  onSubmit, ''
+  placeholder = 'Write your reply...'}) {}""
+=======
+';export default function ReplyForm({' onSubmit, placeholder = 'Write your reply...'}) {' const [content, setContent] = useState(')' const handleSubmit = e => {' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(')' }' } return() <form onSubmit={handleSubmit} className='mt-4'>' <textarea ' value={content} onChange={e =" > setContent(e.target.value)} placeholder={placeholder}' className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none' rows={3}' />' <div className='mt-2 flex justify-end'>' <Button type='submit' disabled={!content.trim()}" >' Post Reply' </Button> </div> </form> ) } ''';import React, { useState } from 'react
+';export default function ReplyForm({' onSubmit, placeholder = 'Write your reply...'}) {' const [content, setContent] = useState(')' const handleSubmit = e => {' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(')' }' } return() <form onSubmit={handleSubmit} className='mt-4'>' <textarea ' value={content} onChange={e =" > setContent(e.target.value)} placeholder={placeholder}' className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none' rows={3}' />' <div className='mt-2 flex justify-end'>' <Button type='submit' disabled={!content.trim()}" >' Post Reply' </Button> </div> </form> ) } ''';import React, { useState }  from 'react';import { Button } from '@/components/ui/button
+  onSubmit,'
+  placeholder = 'Write your reply...'}) {}"
+'
+>>>>>>> main
+''
+''
+''''
+  const [content, setContent] = useState('')
+  const handleSubmit = e => {}
+    e.preventDefault()
+    if (content.trim()) {}""
+      onSubmit(content)''
+      setContent(''), }
+  }
+  return()""
+    <form onSubmit={handleSubmit} className='mt-4'>
+      <textarea value={content}""
+        onChange={e =" > setContent(e.target.value)}''''"
+        placeholder={placeholder}''''
+<<<<<<< HEAD
+        className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none'''
+        rows={3}''''
+=======
+        className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none'
+        rows={3}'''
+>>>>>>> main
+      />''''
+      <div className='mt-2 flex justify-end'>''''
+        <Button type='submit" disabled={!content.trim()}" >'
+          Post Reply
+        </Button>
+      </div>
+    </form>)}
 
-export default function ReplyForm() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="ReplyForm - Zion Tech Group"
-        description="Professional replyform services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              ReplyForm
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional replyform services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+export { ReplyForm }
+
+export { ReplyForm }
+
+export { ReplyForm }
+
+export { ReplyForm }
+;""
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

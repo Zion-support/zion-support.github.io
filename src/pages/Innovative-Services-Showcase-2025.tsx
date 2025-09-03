@@ -1,47 +1,37 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+<<<<<<< HEAD
+ import { motion } from 'framer - motion' import {  Rocket, Brain, Shield, Heart, Link, Network, FileText, CheckCircle, ArrowRight, Star, TrendingUp, Award, Phone, Mail, MapPin, ExternalLink, Zap, Globe, Users, DollarSign, Clock } from 'lucide - react' import { SEO } from '../components / SEO'  export default React.memo(function InnovativeServicesShowcase2025 () { const featuredServices = [ { id: 'ai - legal - document - generator', ''; title: 'AI - Powered Legal Document Generator', ''; description: 'Revolutionary AI - powered legal document generation with real - time compliance monitoring and multi - jurisdiction support. Save 80% on legal document creation time.', ''; category: 'AI & Legal Tech', ''; price: '$2, 999','; period: '/month', ''; features: ['AI - powered contract generation', 'Real - time compliance monitoring', 'Multi - jurisdiction support', 'Automated legal advice'], ''; benefits: ['80% faster document creation', '99.9% compliance accuracy', 'Save $50K + annually', '24 / 7 legal assistance'], ''; marketPrice: '$2, 500 - 6,000', ''; roi: '500% within 6 months', ''; link: 'http,
+    s:'''";""
+=======
+<<<<<<< HEAD
+ import { motion } from 'framer - motion' import {  Rocket, Brain, Shield, Heart, Link, Network, FileText, CheckCircle, ArrowRight, Star, TrendingUp, Award, Phone, Mail, MapPin, ExternalLink, Zap, Globe, Users, DollarSign, Clock } from 'lucide - react' import { SEO } from '../components / SEO'  export default React.memo(function InnovativeServicesShowcase2025 () { const featuredServices = [ { id: 'ai - legal - document - generator', ';' title: 'AI - Powered Legal Document Generator', ';' description: 'Revolutionary AI - powered legal document generation with real - time compliance monitoring and multi - jurisdiction support. Save 80% on legal document creation time.', ';' category: 'AI & Legal Tech', ';' price: '$2, 999',';' period: '/month', ';' features: ['AI - powered contract generation', 'Real - time compliance monitoring', 'Multi - jurisdiction support', 'Automated legal advice'], ';' benefits: ['80% faster document creation', '99.9% compliance accuracy', 'Save $50K + annually', '24 / 7 legal assistance'], ';' marketPrice: '$2, 500 - 6,000', ';' roi: '500% within 6 months', ';' link: 'https:''";
+=======
+<<<<<<< HEAD
+ ;
+import {motion } from 'framer - motion' import {Rocket, Brain, Shield, Heart, Link, Network, FileText, CheckCircle, ArrowRight, Star, TrendingUp, Award, Phone, Mail, MapPin, ExternalLink, Zap, Globe, Users, DollarSign, Clock } from 'lucide - react' import {SEO } from '../components / SEO'  export default React.memo(function InnovativeServicesShowcase2025 () { const featuredServices = [{ id: 'ai - legal - document - generator', '';' title: 'AI - Powered Legal Document Generator', '';' description: 'Revolutionary AI - powered legal document generation with real - time compliance monitoring and multi - jurisdiction support. Save 80% on legal document creation time.', '';' category: 'AI & Legal Tech', '';' price: '$2, 999','';' period: '/month', '';' features: ['AI - powered contract generation', 'Real - time compliance monitoring', 'Multi - jurisdiction support', 'Automated legal advice'], '';' benefits: ['80% faster document creation', '99.9% compliance accuracy', 'Save $50K + annually', '24 / 7 legal assistance'], '';' marketPrice: '$2, 500 - 6,000', '';' roi: '500% within 6 months', '';' link: 'https:'''";"
+=======
+<<<<<<< HEAD
+ import { motion } from &apos;framer - motion&apos; import {  Rocket, Brain, Shield, Heart, Link, Network, FileText, CheckCircle, ArrowRight, Star, TrendingUp, Award, Phone, Mail, MapPin, ExternalLink, Zap, Globe, Users, DollarSign, Clock } from &apos;lucide - react&apos; import { SEO } from &apos;../components / SEO&apos;&apos;'  export default React.memo(function InnovativeServicesShowcase2025 () { ;}const featuredServices = [ { id: &apos;ai - legal - document - generator&apos;, &apos;';&apos; title: &apos;AI - Powered Legal Document Generator&apos;, &apos;';&apos; description: &apos;Revolutionary AI - powered legal document generation with real - time compliance monitoring and multi - jurisdiction support. Save 80% on legal document creation time.&apos;, &apos;';&apos; category: &apos;AI & Legal Tech&apos;, &apos;';&apos; price: &apos;$2, 999&apos;,&apos;';&apos; period: &apos;/month&apos;, &apos;';&apos; features: [&apos;AI - powered contract generation&apos;, &apos;Real - time compliance monitoring&apos;, &apos;Multi - jurisdiction support&apos;, &apos;Automated legal advice&apos;], &apos;';&apos; benefits: [&apos;80% faster document creation&apos;, &apos;99.9% compliance accuracy&apos;, &apos;Save $50K + annually&apos;, &apos;24 / 7 legal assistance&apos;], &apos;';&apos; marketPrice: &apos;$2, 500 - 6,000&apos;, &apos;';&apos; roi: &apos;500% within 6 months&apos;, &apos;';&apos; link: &apos;http,s:&apos;&apos;'";
+&quot;}"
+=======
+<<<<<<< HEAD
+ import { motion } from 'framer - motion' import {  Rocket, Brain, Shield, Heart, Link, Network, FileText, CheckCircle, ArrowRight, Star, TrendingUp, Award, Phone, Mail, MapPin, ExternalLink, Zap, Globe, Users, DollarSign, Clock } from 'lucide - react' import { SEO } from '../components / SEO'  export default React.memo(function InnovativeServicesShowcase2025 () { const featuredServices = [ { id: 'ai - legal - document - generator', '';' title: 'AI - Powered Legal Document Generator', '';' description: 'Revolutionary AI - powered legal document generation with real - time compliance monitoring and multi - jurisdiction support. Save 80% on legal document creation time.', '';' category: 'AI & Legal Tech', '';' price: '$2, 999','';' period: '/month', '';' features: ['AI - powered contract generation', 'Real - time compliance monitoring', 'Multi - jurisdiction support', 'Automated legal advice'], '';' benefits: ['80% faster document creation', '99.9% compliance accuracy', 'Save $50K + annually', '24 / 7 legal assistance'], '';' marketPrice: '$2, 500 - 6,000', '';' roi: '500% within 6 months', '';' link: 'https:'''";"
+<<<<<<< HEAD
+ import { motion } from 'framer - motion' import {  Rocket, Brain, Shield, Heart, Link, Network, FileText, CheckCircle, ArrowRight, Star, TrendingUp, Award, Phone, Mail, MapPin, ExternalLink, Zap, Globe, Users, DollarSign, Clock } from 'lucide - react' import { SEO } from '../components / SEO'  export default React.memo(function InnovativeServicesShowcase2025 () { const featuredServices = [ { id: 'ai - legal - document - generator', '';' title: 'AI - Powered Legal Document Generator', '';' description: 'Revolutionary AI - powered legal document generation with real - time compliance monitoring and multi - jurisdiction support. Save 80% on legal document creation time.', '';' category: 'AI & Legal Tech', '';' price: '$2, 999','';' period: '/month', '';' features: ['AI - powered contract generation', 'Real - time compliance monitoring', 'Multi - jurisdiction support', 'Automated legal advice'], '';' benefits: ['80% faster document creation', '99.9% compliance accuracy', 'Save $50K + annually', '24 / 7 legal assistance'], '';' marketPrice: '$2, 500 - 6,000', '';' roi: '500% within 6 months', '';' link: 'https:'''""
 
-export default function InnovativeServicesShowcase2025() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Innovative Services Showcase 2025 - Zion Tech Group"
-        description="Professional innovative services showcase 2025 services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Innovative Services Showcase 2025
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional innovative services showcase 2025 services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+""
+}}}}
+=======
+=======
+ import { motion } from 'framer - motion' import {  Rocket, Brain, Shield, Heart, Link, Network, FileText, CheckCircle, ArrowRight, Star, TrendingUp, Award, Phone, Mail, MapPin, ExternalLink, Zap, Globe, Users, DollarSign, Clock } from 'lucide - react' import { SEO }  from '../components / SEO';export default React.memo(function InnovativeServicesShowcase2025 () { const featuredServices = [
+  { id: 'ai - legal - document - generator, title: 'AI - Powered Legal Document Generator, description: 'Revolutionary AI - powered legal document generation with real - time compliance monitoring and multi - jurisdiction support. Save 80% on legal document creation time., category: 'AI & Legal Tech, price: '$2, 999, period: '/month, features: ['AI - powered contract generation,Real - time compliance monitoring,Multi - jurisdiction support,Automated legal advice'], ' benefits: ['80% faster document creation,99.9% compliance accuracy,Save $50K + annually,24 / 7 legal assistance'], ' marketPrice: '$2, 500 - 6,000, roi: '500% within 6 months, link: 'https:'''
+ import { motion } from 'framer - motion' import {  Rocket, Brain, Shield, Heart, Link, Network, FileText, CheckCircle, ArrowRight, Star, TrendingUp, Award, Phone, Mail, MapPin, ExternalLink, Zap, Globe, Users, DollarSign, Clock } from 'lucide - react' import { SEO }  from '../components / SEO';export default React.memo(function InnovativeServicesShowcase2025 () { const featuredServices = [
+  { id: 'ai - legal - document - generator, title: 'AI - Powered Legal Document Generator, description: 'Revolutionary AI - powered legal document generation with real - time compliance monitoring and multi - jurisdiction support. Save 80% on legal document creation time., category: 'AI & Legal Tech, price: '$2, 999, period: '/month, features: ['AI - powered contract generation,Real - time compliance monitoring,Multi - jurisdiction support,Automated legal advice'], ' benefits: ['80% faster document creation,99.9% compliance accuracy,Save $50K + annually,24 / 7 legal assistance'], ' marketPrice: '$2, 500 - 6,000, roi: '500% within 6 months, link: 'https:'''"
+
+"
+}}}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

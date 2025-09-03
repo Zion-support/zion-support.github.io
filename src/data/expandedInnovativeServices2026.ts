@@ -1,5 +1,13 @@
-export interface ExpandedInnovativeService2026 {
+<<<<<<< HEAD
+export interface ExpandedInnovativeService2026 { id: string;
+=======
+<<<<<<< HEAD
+export interface ExpandedInnovativeService2026 {;
   id: string;
+=======
+export interface ExpandedInnovativeService2026 {id: string;
+>>>>>>> main
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -17,6 +25,25 @@ export interface ExpandedInnovativeService2026 {
    marketPrice: string;
    roi: string;
    innovationLevel: string;
+<<<<<<< HEAD
    contactInfo: { phone: string;
    email: string;
+   website: string  } technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]    } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] = [;
+=======
+   contactInfo: {  phone: string;
+<<<<<<< HEAD
+   emai,
+    l: string
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] = [;
+=======
+   email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] = [;
+=======
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const EXPANDED_INNOVATIVE_SERVICES_2026: ExpandedInnovativeService2026[] = [;
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

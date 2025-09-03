@@ -1,47 +1,21 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function ChatMessage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="ChatMessage - Zion Tech Group"
-        description="Professional chatmessage services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              ChatMessage
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional chatmessage services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'' import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar'' import { cn } from '@/lib/utils'' export function ChatMessage({ message, isUser, timestamp }) {';' return (_jsxs('div', { className: cn('flex gap-3 mb-4', isUser ? 'flex-row-reverse' : 'flex-row'), children[_jsxs(Avatar, { className: 'w-8 h-8', children[_jsx(AvatarImage, { src: isUser ? '/user-avatar.png' : '/ai-avatar.png' }), _jsx(AvatarFallback, { className: cn('text-xs', isUser ? 'bg-zion-purple text-white' : 'bg-zion-cyan text-white'), children: isUser ? 'U' : 'AI' })] }), _jsxs('div', { className: cn('flex-1 max-w-[80%], isUser ? 'text-right' : 'text-left'), children[_jsx('div', { className: cn('inline-block p-3 rounded-lg', isUser'; ? 'bg-zion-purple text-white'''; : 'bg-zion-blue-light text-white'), children: _jsx('p', { className: 'text-sm', children: message })}), _jsx('p', { className: 'text-xs text-zion-slate-light mt-1', children: timestamp.toLocaleTimeString() })] })] }))};';";""
+=======
+<<<<<<< HEAD
+import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime' import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar' import { cn } from '@/lib/utils' export function ChatMessage({ message, isUser, timestamp }) {';' return (_jsxs('div', { className: cn('flex gap-3 mb-4', isUser ? 'flex-row-reverse' : 'flex-row'), children[_jsxs(Avatar, { className: 'w-8 h-8', children[_jsx(AvatarImage, { src: isUser ? '/user-avatar.png' : '/ai-avatar.png' }), _jsx(AvatarFallback, { className: cn('text-xs', isUser ? 'bg-zion-purple text-white' : 'bg-zion-cyan text-white'), children: isUser ? 'U' : 'AI' })] }), _jsxs('div', { className: cn('flex-1 max-w-[80%]', isUser ? 'text-right' : 'text-left'), children[_jsx('div', { className: cn('inline-block p-3 rounded-lg', isUser';' ? 'bg-zion-purple text-white'';' : 'bg-zion-blue-light text-white'), children: _jsx('p', { className: 'text-sm', children: message })}), _jsx('p', { className: 'text-xs text-zion-slate-light mt-1', children: timestamp.toLocaleTimeString() })] })] }))}';';'";
+=======
+<<<<<<< HEAD
+import {jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'' import {Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar'' import {cn } from '@/lib/utils'' export function ChatMessage({message, isUser, timestamp }) {';'' return (_jsxs('div', { className: cn('flex gap-3 mb-4', isUser ? 'flex-row-reverse' : 'flex-row'), children[_jsxs(Avatar, { className: 'w-8 h-8', children[_jsx(AvatarImage, { src: isUser ? '/user-avatar.png' : '/ai-avatar.png' }), _jsx(AvatarFallback, {className: cn('text-xs', isUser ? 'bg-zion-purple text-white' : 'bg-zion-cyan text-white'), children: isUser ? 'U' : 'AI' })] }), _jsxs('div', {className: cn('flex-1 max-w-[80%]', isUser ? 'text-right' : 'text-left'), children[_jsx('div', { className: cn('inline-block p-3 rounded-lg', isUser';' ? 'bg-zion-purple text-white''';' : 'bg-zion-blue-light text-white'), children: _jsx('p', { className: 'text-sm', children: message })}), _jsx('p', {className: 'text-xs text-zion-slate-light mt-1', children: timestamp.toLocaleTimeString() })] })] }))}';'';'";'"
+=======
+<<<<<<< HEAD
+import { jsx as _jsx, jsxs as _jsxs } from &apos;react/jsx-runtime&apos;&apos; import { Avatar, AvatarFallback, AvatarImage } from &apos;@/components/ui/Avatar&apos;&apos; import { cn } from &apos;@/lib/utils&apos;&apos;'' export ;function ChatMessage({ message, isUser, timestamp }) {';&apos;&apos; return (_jsxs(&apos;div&apos;, { className: cn(&apos;flex gap-3 mb-4&apos;, isUser ? &apos;flex-row-reverse&apos; : &apos;flex-row&apos;), children[_jsxs(Avatar, { className: &apos;w-8 h-8&apos;, children[_jsx(AvatarImage, { src: isUser ? &apos;/user-avatar.png&apos; : &apos;/ai-avatar.png&apos; }), _jsx(AvatarFallback, { className: cn(&apos;text-xs&apos;, isUser ? &apos;bg-zion-purple text-white&apos; : &apos;bg-zion-cyan text-white&apos;), children: isUser ? &apos;U&apos; : &apos;AI&apos; })] }), _jsxs(&apos;div&apos;, { className: cn(&apos;flex-1 max-w-[80%]&apos;, isUser ? &apos;text-right&apos; : &apos;text-left&apos;), children[_jsx(&apos;div&apos;, { className: cn(&apos;inline-block p-3 rounded-lg&apos;, isUser';&apos; ? &apos;bg-zion-purple text-white&apos;&apos;';&apos; : &apos;bg-zion-blue-light text-white&apos;), children: _jsx(&apos;p&apos;, { className: &apos;text-sm&apos;, children: message })}), _jsx(&apos;p&apos;, { className: &apos;text-xs text-zion-slate-light mt-1&apos;, children: timestamp.toLocaleTimeString() })] })] }))}';&apos;';&apos;";&quot;"
+=======
+<<<<<<< HEAD
+import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'' import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar'' import { cn } from '@/lib/utils'' export function ChatMessage({ message, isUser, timestamp }) {';'' return (_jsxs('div', { className: cn('flex gap-3 mb-4', isUser ? 'flex-row-reverse' : 'flex-row'), children[_jsxs(Avatar, { className: 'w-8 h-8', children[_jsx(AvatarImage, { src: isUser ? '/user-avatar.png' : '/ai-avatar.png' }), _jsx(AvatarFallback, { className: cn('text-xs', isUser ? 'bg-zion-purple text-white' : 'bg-zion-cyan text-white'), children: isUser ? 'U' : 'AI' })] }), _jsxs('div', { className: cn('flex-1 max-w-[80%]', isUser ? 'text-right' : 'text-left'), children[_jsx('div', { className: cn('inline-block p-3 rounded-lg', isUser';' ? 'bg-zion-purple text-white''';' : 'bg-zion-blue-light text-white'), children: _jsx('p', { className: 'text-sm', children: message })}), _jsx('p', { className: 'text-xs text-zion-slate-light mt-1', children: timestamp.toLocaleTimeString() })] })] }))}';'';'";'"
+=======
+import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'' import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar'' import { cn }  from '@/lib/utils export function ChatMessage({ message, isUser, timestamp }) {' return (_jsxs('div', { className: cn('flex gap-3 mb-4', isUser ? 'flex-row-reverse' : 'flex-row'), children[_jsxs(Avatar, { className: 'w-8 h-8', children[_jsx(AvatarImage, { src: isUser ? '/user-avatar.png' : '/ai-avatar.png' }), _jsx(AvatarFallback, { className: cn('text-xs', isUser ? 'bg-zion-purple text-white' : 'bg-zion-cyan text-white'), children: isUser ? 'U' : 'AI' })] }), _jsxs('div', { className: cn('flex-1 max-w-[80%]', isUser ? 'text-right' : 'text-left'), children[_jsx('div', { className: cn('inline-block p-3 rounded-lg', isUser ? 'bg-zion-purple text-white'' : 'bg-zion-blue-light text-white'), children: _jsx('p', { className: 'text-sm', children: message })}), _jsx('p', { className: 'text-xs text-zion-slate-light mt-1', children: timestamp.toLocaleTimeString() })] })] }))}"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

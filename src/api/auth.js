@@ -1,47 +1,233 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+<<<<<<< HEAD
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if (!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if (!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || 'Failed to reset password') return data } ';`';const API_URL = import.meta.env.VITE_API_URL || ';
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if (!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if (!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || 'Failed to reset password') return data } ';'`';
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if(!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if(!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if(!res.ok) throw new Error(data.message || 'Failed to reset password') return data } ';
+const API_URL = import.meta.env.VITE_API_URL || ';
+export async function requestPasswordReset(email) {}
+  const res = await fetch(`${API_URL}/auth/forgot`, {}
+';
+';
+'';
+    method: 'POST','';
+    headers: { 'Content-Type': 'application/json' },';
+    body: JSON.stringify({ email })'})';';
+=======
+<<<<<<< HEAD
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) {const res = await fetch(`${API_URL}/auth/forgot`, {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({email })}) if (!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) {const res = await fetch(`${API_URL}/auth/verify-code`, {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({email, code })}) if (!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) {const res = await fetch(`${API_URL}/auth/reset`, {method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({token, password })}) const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || 'Failed to reset password') return data } '';`';const API_URL = import.meta.env.VITE_API_URL || '';
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) {const res = await fetch(`${API_URL}/auth/forgot`, {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({email })}) if (!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) {const res = await fetch(`${API_URL}/auth/verify-code`, {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({email, code })}) if (!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) {const res = await fetch(`${API_URL}/auth/reset`, {method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({token, password })}) const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || 'Failed to reset password') return data } ';''`';'
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) {const res = await fetch(`${API_URL}/auth/forgot`, {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({email })}) if(!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) {const res = await fetch(`${API_URL}/auth/verify-code`, {method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({email, code })}) if(!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) {const res = await fetch(`${API_URL}/auth/reset`, {method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({token, password })}) const data = await res.json().catch(() => ({})) if(!res.ok) throw new Error(data.message || 'Failed to reset password') return data } ';
+=======
+<<<<<<< HEAD
+const API_URL = import.meta.env.VITE_API_URL || &apos;&apos;' export async function requestPasswordReset(email) {} const res = await fetch(`${API_URL}/auth/forgot`, { method: &apos;POST&apos;, headers: { &apos;Content-Type&apos;: &apos;application/json&apos; }, body: JSON.stringify({ email })}) if (!res.ok) throw new Error(&apos;Failed to send reset code&apos;) return res.json().catch(() => ({})) }&apos; export async function verifyResetCode(email, code) {} const res = await fetch(`${API_URL}/auth/verify-code`, { method: &apos;POST&apos;, headers: { &apos;Content-Type&apos;: &apos;application/json&apos; }, body: JSON.stringify({ email, code })}) if (!res.ok) throw new Error(&apos;Invalid code&apos;) return res.json() }&apos; export async function resetPassword(token, password) {} const res = await fetch(`${API_URL}/auth/reset`, { method: &apos;PUT&apos;, headers: { &apos;Content-Type&apos;: &apos;application/json&apos; }, body: JSON.stringify({ token, password })})&apos; const;const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || &apos;Failed to reset password&apos;) return data } &apos;';`';&apos;&apos;const API_URL = import.meta.env.VITE_API_URL || &apos;';&apos;&apos;
+const API_URL = import.meta.env.VITE_API_URL || &apos;&apos;' export async function requestPasswordReset(email) {} const res = await fetch(`${API_URL}/auth/forgot`, { method: &apos;POST&apos;, headers: { &apos;Content-Type&apos;: &apos;application/json&apos; }, body: JSON.stringify({ email })}) if (!res.ok) throw new Error(&apos;Failed to send reset code&apos;) return res.json().catch(() => ({})) }&apos; export async function verifyResetCode(email, code) {} const res = await fetch(`${API_URL}/auth/verify-code`, { method: &apos;POST&apos;, headers: { &apos;Content-Type&apos;: &apos;application/json&apos; }, body: JSON.stringify({ email, code })}) if (!res.ok) throw new Error(&apos;Invalid code&apos;) return res.json() }&apos; export async function resetPassword(token, password) {} const res = await fetch(`${API_URL}/auth/reset`, { method: &apos;PUT&apos;, headers: { &apos;Content-Type&apos;: &apos;application/json&apos; }, body: JSON.stringify({ token, password })})&apos; const;const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || &apos;Failed to reset password&apos;) return data } ';&apos;&apos;`';&apos;&apos;
+const API_URL = import.meta.env.VITE_API_URL || &apos;&apos;' export async function requestPasswordReset(email) {} const res = await fetch(`${API_URL}/auth/forgot`, { method: &apos;POST&apos;, headers: { &apos;Content-Type&apos;: &apos;application/json&apos; }, body: JSON.stringify({ email })}) if(!res.ok) throw new Error(&apos;Failed to send reset code&apos;) return res.json().catch(() => ({})) }&apos; export async function verifyResetCode(email, code) {} const res = await fetch(`${API_URL}/auth/verify-code`, { method: &apos;POST&apos;, headers: { &apos;Content-Type&apos;: &apos;application/json&apos; }, body: JSON.stringify({ email, code })}) if(!res.ok) throw new Error(&apos;Invalid code&apos;) return res.json() }&apos; export async function resetPassword(token, password) {} const res = await fetch(`${API_URL}/auth/reset`, { method: &apos;PUT&apos;, headers: { &apos;Content-Type&apos;: &apos;application/json&apos; }, body: JSON.stringify({ token, password })})&apos; const;const data = await res.json().catch(() => ({})) if(!res.ok) throw new Error(data.message || &apos;Failed to reset password&apos;) return data } ';&apos;&apos;
+const API_URL = import.meta.env.VITE_API_URL || &apos;';&apos;&apos;
+export async function requestPasswordReset(email) {}
+  const res = await fetch(`${API_URL}/auth/forgot`, {}
+';
+&apos;';
+&apos;&apos;';
+    method: &apos;POST&apos;,'&apos;';
+    headers: { &apos;Content-Type&apos;: &apos;application/json&apos; },';
+    body: JSON.stringify({ email })&apos;&apos;})';';
+  if (!res.ok) throw new Error(&apos;Failed to send reset code&apos;);
+  return res.json().catch(() => ({}))}&apos;&apos;
+export async function verifyResetCode(email, code) {}
+`;
+  const res = await fetch(`${API_URL}/auth/verify-code`, {}
+';
+&apos;';
+&apos;&apos;';
+    method: &apos;POST&apos;,'&apos;';
+    headers: { &apos;Content-Type&apos;: &apos;application/json&apos; },';
+    body: JSON.stringify({ email, code })&apos;&apos;})';';
+  if (!res.ok) throw new Error(&apos;Invalid code&apos;);
+  return res.json()}&apos;&apos;
+export async function resetPassword(token, password) {}
+`;
+  const res = await fetch(`${API_URL}/auth/reset`, {}
+';
+&apos;';
+&apos;&apos;';
+    method: &apos;PUT&apos;,'&apos;';
+    headers: { &apos;Content-Type&apos;: &apos;application/json&apos; },
+    body: JSON.stringify({ token, password })&apos;})';&apos;&apos;
+=======
+<<<<<<< HEAD
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if (!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if (!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || 'Failed to reset password') return data } '';`';const API_URL = import.meta.env.VITE_API_URL || '';"`"
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if (!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if (!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || 'Failed to reset password') return data } ';''`';'`
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if(!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if(!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if(!res.ok) throw new Error(data.message || 'Failed to reset password') return data } ';""
+const API_URL = import.meta.env.VITE_API_URL || '';
+export async function requestPasswordReset(email) {}`
+  const res = await fetch(`${API_URL}/auth/forgot`, {}""
+';'
+'';""
+''';'
+    method: 'POST', ''';'
+    headers: { 'Content-Type': 'application/json' }, ';'
+    body: JSON.stringify({ email })''})';';""
+=======
+<<<<<<< HEAD
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if (!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if (!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || 'Failed to reset password') return data } '';`';const API_URL = import.meta.env.VITE_API_URL || '';
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if (!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if (!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || 'Failed to reset password') return data } ';'`';'
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if(!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if(!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if(!res.ok) throw new Error(data.message || 'Failed to reset password') return data } ';
+>>>>>>> main
+const API_URL = import.meta.env.VITE_API_URL || '';
+export async function requestPasswordReset(email) {}
+  const res = await fetch(`${API_URL}/auth/forgot`, {}`
+';'
+'';
+''';'
+    method: 'POST', ''';'
+<<<<<<< HEAD
+    headers: { 'Content-Type': 'application/json' }, ';'
+    body: JSON.stringify({ email })'});;
+  if (!res.ok) throw new Error('Failed to send reset code');
+  return res.json().catch(() => ({}))}
+export async function verifyResetCode(email, code) {}
+`;`
+  const res = await fetch(`${API_URL}/auth/verify-code`, {}`
+=======
+    headers: {'Content-Type': 'application/json' }, ';'
+    body: JSON.stringify({email })''})';';
+>>>>>>> main
+  if (!res.ok) throw new Error('Failed to send reset code');
+  return res.json().catch(() => ({}))}
+export async function verifyResetCode(email, code) {}
+`;
+  const res = await fetch(`${API_URL}/auth/verify-code`, {}
+<<<<<<< HEAD
+';
+';
+'';
+    method: 'POST','';
+    headers: { 'Content-Type': 'application/json' },';
+    body: JSON.stringify({ email, code })'})';';
+=======
+>>>>>>> main
+';'
+'';
+''';'
+    method: 'POST', ''';'
+<<<<<<< HEAD
+    headers: { 'Content-Type': 'application/json' }, ';'
+    body: JSON.stringify({ email, code })'});;
+  if (!res.ok) throw new Error('Invalid code');
+  return res.json()}
+export async function resetPassword(token, password) {}
+`;`
+  const res = await fetch(`${API_URL}/auth/reset`, {}`
+=======
+    headers: {'Content-Type': 'application/json' }, ';'
+    body: JSON.stringify({email, code })''})';';
+>>>>>>> main
+  if (!res.ok) throw new Error('Invalid code');
+  return res.json()}
+export async function resetPassword(token, password) {}
+`;
+  const res = await fetch(`${API_URL}/auth/reset`, {}
+<<<<<<< HEAD
+';
+';
+'';
+    method: 'PUT','';
+    headers: { 'Content-Type': 'application/json' },;
+    body: JSON.stringify({ token, password })'})';
+=======
+>>>>>>> main
+';'
+'';
+''';'
+    method: 'PUT', ''';'
+<<<<<<< HEAD
+    headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })});
+  const data = await res.json().catch(() => ({}));;
+  if (!res.ok) throw new Error(data.message || 'Failed to reset password');
+  return data}
+'`;
+=======
+<<<<<<< HEAD
+    headers: {'Content-Type': 'application/json' }, body: JSON.stringify({token, password })'})';
+=======
+    headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })'})';
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+  const data = await res.json().catch(() => ({}))';';
+  if (!res.ok) throw new Error(data.message || &apos;Failed to reset password&apos;);
+  return data}
+<<<<<<< HEAD
+&apos;`;&apos;&apos;
+=======
+=======
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if (!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if (!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || 'Failed to reset password') return data } '';`';const API_URL = import.meta.env.VITE_API_URL || '`
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if (!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if (!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if (!res.ok) throw new Error(data.message || 'Failed to reset password') return data } '``
+const API_URL = import.meta.env.VITE_API_URL || ' export async function requestPasswordReset(email) { const res = await fetch(`${API_URL}/auth/forgot`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email })}) if(!res.ok) throw new Error('Failed to send reset code') return res.json().catch(() => ({})) } export async function verifyResetCode(email, code) { const res = await fetch(`${API_URL}/auth/verify-code`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code })}) if(!res.ok) throw new Error('Invalid code') return res.json() } export async function resetPassword(token, password) { const res = await fetch(`${API_URL}/auth/reset`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })}) const data = await res.json().catch(() => ({})) if(!res.ok) throw new Error(data.message || 'Failed to reset password') return data } 
+const API_URL = import.meta.env.VITE_API_URL || '';
+export async function requestPasswordReset(email) {}`
+  const res = await fetch(`${API_URL}/auth/forgot`, {}"
 
-export default function auth() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="auth - Zion Tech Group"
-        description="Professional auth services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              auth
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional auth services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+'
+''
+    method: 'POST,'
+    headers: { 'Content-Type': 'application/json' }, 
+    body: JSON.stringify({ email })''});"
+>>>>>>> main
+  if (!res.ok) throw new Error('Failed to send reset code');
+  return res.json().catch(() => ({}))}
+export async function verifyResetCode(email, code) {}`
+`
+<<<<<<< HEAD
+  const res = await fetch(`${API_URL}/auth/verify-code`, {}""
+';'
+'';""
+''';'
+    method: 'POST', ''';'
+    headers: { 'Content-Type': 'application/json' }, ';'
+    body: JSON.stringify({ email, code })''})';';""
+=======
+  const res = await fetch(`${API_URL}/auth/verify-code`, {}"
+
+'
+''
+    method: 'POST,'
+    headers: { 'Content-Type': 'application/json' }, 
+    body: JSON.stringify({ email, code })''});"
+>>>>>>> main
+  if (!res.ok) throw new Error('Invalid code');
+  return res.json()}
+export async function resetPassword(token, password) {}`
+`
+<<<<<<< HEAD
+  const res = await fetch(`${API_URL}/auth/reset`, {}""
+';'
+'';""
+''';'
+    method: 'PUT', ''';'
+    headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })'})';""
+  const data = await res.json().catch(() => ({}))';';""
+  if (!res.ok) throw new Error(data.message || 'Failed to reset password');
+  return data}"`;"
+=======
+  const res = await fetch(`${API_URL}/auth/reset`, {}"
+
+'
+''
+    method: 'PUT,'
+    headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token, password })'})
+  const data = await res.json().catch(() => ({}));"
+  if (!res.ok) throw new Error(data.message || 'Failed to reset password');
+  return data}"`;
+>>>>>>> main
+>>>>>>> main
+'`;'
+<<<<<<< HEAD
+export {API_URL }
+;
+=======
+>>>>>>> main
+>>>>>>> main
+export { API_URL }
+;
+"`"
+>>>>>>> main

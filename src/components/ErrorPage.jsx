@@ -1,47 +1,149 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+<<<<<<< HEAD
+;import {Link } from 'react-router-dom';
+import {Home } from 'lucide-react';
+=======
+<<<<<<< HEAD
+;import { Link } from &apos;
+import Link from &apos;next/link';react-router-dom';&apos;&apos;
+export const ErrorPage = ({}
+  statusCode = 404,';
+  title = &apos;Page Not Found&apos;,';
+  message = &apos;The page you are looking for does not exist.&apos;}) => {}
+  return()&apos;&apos;
+    <div className=&apos;min-h-screen bg-zion-blue flex items-center justify-center&apos;>'&apos;&apos;'&apos;&apos;
+      <div className=&apos;text-center text-white&apos;>'&apos;&apos;'&apos;&apos;
+        <h1 className=&apos;text-6xl font-bold mb-4&apos;>{statusCode}&apos;</h1>&apos;&apos;'&apos;&apos;'
+        <h2 className=&apos;text-2xl font-semibold mb-4&apos;>{title}&apos;</h2>&apos;&apos;'&apos;&apos;'
+        <p className=&apos;text-lg mb-8 max-w-md mx-auto&apos;>{message}&apos;</p>&apos;&apos;'&apos;&apos;'
+        <div className=&apos;space-x-4&apos;>'&apos;&apos;''
+          <Button asChild>&apos;&apos;'&apos;&apos;'
+            <Link to=&apos;/&apos;>Go Home&apos;&apos;</Link>&apos;&apos;'&apos;&apos;
+          </Button>&apos;&apos;'&apos;&apos;'
+          <Button variant=&apos;outline&apos; asChild>&apos;&apos;'&apos;&apos;'
+            <Link to=&apos;/contact&apos;>Contact Support&apos;</Link>
+=======
+<<<<<<< HEAD
+;import { Link } from 'react-router-dom';""
+import { Home } from 'lucide-react';
+>>>>>>> main
 
-export default function ErrorPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="ErrorPage - Zion Tech Group"
-        description="Professional errorpage services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              ErrorPage
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional errorpage services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
+export const ErrorPage = ({}""
+  statusCode = 404, ';'
+  title = 'Page Not Found', ';'
+  message = 'The page you are looking for does not exist.'}) => {}""
+  return()""
+=======
+<<<<<<< HEAD
+;import { Link } from 'react-router-dom';
+export const ErrorPage = ({}
+  statusCode = 404, ';'
+  title = 'Page Not Found', ';'
+  message = 'The page you are looking for does not exist.'}) => {}
+<<<<<<< HEAD
+  return()""
+    <div className='min-h-screen bg-zion-blue flex items-center justify-center>''''
+      <div className='text-center text-white>''''
+        <h1 className='text-6xl font-bold mb-4'>{statusCode}</h1>'''''
+        <h2 className='text-2xl font-semibold mb-4'>{title}</h2>'''''
+        <p className='text-lg mb-8 max-w-md mx-auto'>{message}</p>'''''
+        <div className='space-x-4>''''
+          <Button asChild>'''''
+            <Link to='/'>Go Home</Link>'''''
+          </Button>'''''
+          <Button variant='outline' asChild" >'''''
+=======
+<<<<<<< HEAD
+  return();
+    <div className='min-h-screen bg-zion-blue flex items-center justify-center'>'';
+      <div className='text-center text-white'>'';
+        <h1 className='text-6xl font-bold mb-4'>{statusCode}</h1>'';
+        <h2 className='text-2xl font-semibold mb-4'>{title}</h2>'';
+        <p className='text-lg mb-8 max-w-md mx-auto'>{message}</p>'';
+        <div className='space-x-4'>'';
+          <Button asChild>'';
+            <Link to='/'>Go Home</Link>'';
+          </Button>'';
+          <Button variant='outline' asChild>'';
+            <Link to='/contact'>Contact Support</Link>;
+          </Button>;
+        </div>;
+      </div>;
+    </div>;
+  )}
+export default ErrorPage';";
+export default ErrorPage';';
+'''";
+=======
+  return()
+=======
+;import { Link } from 'react-router-dom
+import { Home } from 'lucide-react';
+
+export const ErrorPage = ({}"
+  statusCode = 404, 
+  title = 'Page Not Found', 
+  message = 'The page you are looking for does not exist.'}) => {}"
+  return()"
+>>>>>>> main
+>>>>>>> main
+    <div className='min-h-screen bg-zion-blue flex items-center justify-center'>''''
+      <div className='text-center text-white'>''''
+        <h1 className='text-6xl font-bold mb-4'>{statusCode}</h1>''''
+        <h2 className='text-2xl font-semibold mb-4'>{title}</h2>''''
+        <p className='text-lg mb-8 max-w-md mx-auto'>{message}</p>''''
+        <div className='space-x-4'>''''
+<<<<<<< HEAD
+          <Button asChild" >''''"
+=======
+<<<<<<< HEAD
+          <Button asChild>''''
+=======
+          <Button asChild" >''''
+>>>>>>> main
+>>>>>>> main
+            <Link to='/'>Go Home</Link>''''
+          </Button>''''
+          <Button variant='outline' asChild"" >''''
+>>>>>>> main
+            <Link to='/contact'>Contact Support</Link>
+>>>>>>> main
+          </Button>
         </div>
-      </section>
+      </div>
     </div>
-  );
-}
+<<<<<<< HEAD
+  )}
+<<<<<<< HEAD
+export default ErrorPage''""
+=======
+export default ErrorPage'';"""
+'''''"'"
+"
+=======
+<<<<<<< HEAD
+  )}""
+export default ErrorPage'';""
+>>>>>>> main
+'''''"'"
+""
+=======
+<<<<<<< HEAD
+  )}
+<<<<<<< HEAD
+export default ErrorPage&apos;';&quot;&quot;"
+export default ErrorPage&apos;';';
+&apos;&apos;'&apos;'&quot;
+&quot;"
+=======
+export default ErrorPage'';""
+'''''"'"
+=======
+  )}"
+export default ErrorPage'"
+'''''"'"
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

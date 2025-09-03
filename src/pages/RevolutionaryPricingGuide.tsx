@@ -1,47 +1,27 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function RevolutionaryPricingGuide() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="RevolutionaryPricingGuide - Zion Tech Group"
-        description="Professional revolutionarypricingguide services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              RevolutionaryPricingGuide
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional revolutionarypricingguide services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Star, CheckCircle, X, DollarSign, TrendingUp, Clock, Users, Shield, Zap, Brain, Award, Phone, Mail, MapPin, ArrowRight, Search, Filter, Calculator, BarChart3, Target, Rocket    } from 'lucide-react' import { SEO } from '../components/SEO' import { REVOLUTIONARY_PRICING_GUIDE_2030 } from '../data/revolutionaryPricingGuide2030'  export default function RevolutionaryPricingGuide() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [priceRange, setPriceRange] = useState('all') ;"
+}"
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Star, CheckCircle, X, DollarSign, TrendingUp, Clock, Users, Shield, Zap, Brain, Award, Phone, Mail, MapPin, ArrowRight, Search, Filter, Calculator, BarChart3, Target, Rocket    } from 'lucide-react' import { SEO } from '../components/SEO' import { REVOLUTIONARY_PRICING_GUIDE_2030 } from '../data/revolutionaryPricingGuide2030'  export default function RevolutionaryPricingGuide() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState(') const [priceRange, setPriceRange] = useState('all') ;
+=======
+<<<<<<< HEAD
+import React, {useState } from 'react' ;
+import {motion, AnimatePresence    } from 'framer-motion' import {Star, CheckCircle, X, DollarSign, TrendingUp, Clock, Users, Shield, Zap, Brain, Award, Phone, Mail, MapPin, ArrowRight, Search, Filter, Calculator, BarChart3, Target, Rocket    } from 'lucide-react' ;
+import {SEO } from '../components/SEO' import {REVOLUTIONARY_PRICING_GUIDE_2030 } from '../data/revolutionaryPricingGuide2030'  export default function RevolutionaryPricingGuide()   {const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [priceRange, setPriceRange] = useState('all') ;"
 }
+=======
+<<<<<<< HEAD
+import React, { useState } from &apos;react&apos; import { motion, AnimatePresence    } from &apos;framer-motion&apos; import {  Star, CheckCircle, X, DollarSign, TrendingUp, Clock, Users, Shield, Zap, Brain, Award, Phone, Mail, MapPin, ArrowRight, Search, Filter, Calculator, BarChart3, Target, Rocket    } from &apos;lucide-react&apos; import { SEO } from &apos;../components/SEO&apos; import { REVOLUTIONARY_PRICING_GUIDE_2030 } from &apos;../data/revolutionaryPricingGuide2030&apos;&apos;'  export default function RevolutionaryPricingGuide() ;{} const [activeCategory, setActiveCategory] = useState(&apos;all&apos;)&apos;' const;const [searchTerm, setSearchTerm] = useState(&apos;&apos;) ;&apos;&apos;const [priceRange, setPriceRange] = useState(&apos;all&apos;) ;&apos;'
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Star, CheckCircle, X, DollarSign, TrendingUp, Clock, Users, Shield, Zap, Brain, Award, Phone, Mail, MapPin, ArrowRight, Search, Filter, Calculator, BarChart3, Target, Rocket    } from 'lucide-react' import { SEO } from '../components/SEO' import { REVOLUTIONARY_PRICING_GUIDE_2030 } from '../data/revolutionaryPricingGuide2030'  export default function RevolutionaryPricingGuide() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [priceRange, setPriceRange] = useState('all') ;","
+=======
+import React, { useState } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Star, CheckCircle, X, DollarSign, TrendingUp, Clock, Users, Shield, Zap, Brain, Award, Phone, Mail, MapPin, ArrowRight, Search, Filter, Calculator, BarChart3, Target, Rocket    } from 'lucide-react' import { SEO } from '../components/SEO' import { REVOLUTIONARY_PRICING_GUIDE_2030 }  from '../data/revolutionaryPricingGuide2030';export default function RevolutionaryPricingGuide() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [priceRange, setPriceRange] = useState('all') ;",
+>>>>>>> main
+}
+""
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

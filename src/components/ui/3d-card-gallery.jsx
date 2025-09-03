@@ -1,47 +1,27 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function 3dcardgallery() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="3d card gallery - Zion Tech Group"
-        description="Professional 3d card gallery services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              3d card gallery
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional 3d card gallery services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect, useCallback } from 'react'' import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion'' import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react' import { Button } from './button'';' import { Badge } from './badge'';' export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = '' }) {} const [selectedItem, setSelectedItem] = useState(null); const [viewMode, setViewMode] = useState('grid') const [filters, setFilters] = useState({} category[], status[], complexity[], verified: false, featured: false }); const [searchQuery, setSearchQuery] = useState(''); const [sortBy, setSortBy] = useState('rating'); const [sortOrder, setSortOrder] = useState('desc') const [isPlaying, setIsPlaying] = useState(autoPlay) const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0) const galleryRef = useRef(null);";""
+=======
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect, useCallback } from 'react' import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion' import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react' import { Button } from './button';' import { Badge } from './badge';' export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = ' }) {} const [selectedItem, setSelectedItem] = useState(null)'; const [viewMode, setViewMode] = useState('grid') const [filters, setFilters] = useState({} category[], status[], complexity[], verified: false, featured: false })'; const [searchQuery, setSearchQuery] = useState(')'; const [sortBy, setSortBy] = useState('rating')'; const [sortOrder, setSortOrder] = useState('desc') const [isPlaying, setIsPlaying] = useState(autoPlay) const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0) const galleryRef = useRef(null)';";
+=======
+<<<<<<< HEAD
+import React, {useState, useRef, useEffect, useCallback } from 'react'' import {motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion'' ;
+import {Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react' import {Button } from './button'';'' import {Badge } from './badge'';'' export function Card3DGallery({enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className='' }) {} const [selectedItem, setSelectedItem] = useState(null)'; const [viewMode, setViewMode] = useState('grid') const [filters, setFilters] = useState({} category[], status[], complexity[], verified: false, featured: false })'; const [searchQuery, setSearchQuery] = useState('')'; const [sortBy, setSortBy] = useState('rating')'; const [sortOrder, setSortOrder] = useState('desc') const [isPlaying, setIsPlaying] = useState(autoPlay) const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0) const galleryRef = useRef(null)';";'"
+=======
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect, useCallback } from &apos;react&apos;&apos; import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from &apos;framer-motion&apos;&apos; import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from &apos;lucide-react&apos; import { Button } from &apos;./button&apos;';&apos;&apos; import { Badge } from &apos;./badge&apos;';&apos;&apos;'' export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = &apos;&apos; }) {}&apos;&apos; const [selectedItem, setSelectedItem] = useState(null)';&apos;&apos; const [viewMode, setViewMode] = useState(&apos;grid&apos;)&apos;' const;const [filters, setFilters] = useState({} category[], status[], complexity[], verified: false, featured: false })';&apos;&apos; const [searchQuery, setSearchQuery] = useState(&apos;&apos;)';&apos;&apos; const [sortBy, setSortBy] = useState(&apos;rating&apos;)';&apos;&apos; const [sortOrder, setSortOrder] = useState(&apos;desc&apos;)&apos;' const [isPlaying, setIsPlaying] = useState(autoPlay) const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0) const;const;const galleryRef = useRef(null)';";&quot;"
+=======
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect, useCallback } from 'react'' import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion'' import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react' import { Button } from './button'';'' import { Badge } from './badge'';'' export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = '' }) {} const [selectedItem, setSelectedItem] = useState(null)'; const [viewMode, setViewMode] = useState('grid') const [filters, setFilters] = useState({} category[], status[], complexity[], verified: false, featured: false })'; const [searchQuery, setSearchQuery] = useState('')'; const [sortBy, setSortBy] = useState('rating')'; const [sortOrder, setSortOrder] = useState('desc') const [isPlaying, setIsPlaying] = useState(autoPlay) const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0) const galleryRef = useRef(null)';";'"
+<<<<<<< HEAD
+""
+=======
+=======
+import React, { useState, useRef, useEffect, useCallback } from 'react'' import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion'' import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react' import { Button }  from './button;'' import { Badge }  from './badge;'' export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = '' }) {} const [selectedItem, setSelectedItem] = useState(null)'; const [viewMode, setViewMode] = useState('grid') const [filters, setFilters] = useState({} category[], status[], complexity[], verified: false, featured: false })'; const [searchQuery, setSearchQuery] = useState('')'; const [sortBy, setSortBy] = useState('rating')'; const [sortOrder, setSortOrder] = useState('desc') const [isPlaying, setIsPlaying] = useState(autoPlay) const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0) const galleryRef = useRef(null);'"
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

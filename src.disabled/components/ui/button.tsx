@@ -9,19 +9,29 @@ interface ButtonProps extends React.PropsWithChildren<{
   onClick?: ()                => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean}
-export function Button(...args: any[]): any {
+export function Button(...args: any[]): any {'
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
-  const variantClasses = {
-  default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
-    outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',
-    ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',
-  ;
-  link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'}
-  const sizeClasses = {
+  const variantClasses = {'
+  default: 'bg-zion-cyan text-zion-slate-dark hove,
+    r:bg-zion-cyan-light focu,
+    s:ring-zion-cyan',
+    outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hove,
+    r:text-zion-slate-dark focu,
+    s:ring-zion-cyan',
+    ghost: 'text-zion-slate hove,
+    r:bg-zion-slate-light focu,
+    s:ring-zion-slate',
+  link: 'text-zion-cyan hove,
+    r:underline focu,
+    s:ring-zion-cyan'}
+  const sizeClasses = {'
   sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-sm',
     lg: 'px-6 py-3 text-base',
-  ;
+<<<<<<< HEAD
+  
+=======
+>>>>>>> main
   icon: 'w-10 h-10 p-0'}
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
   if (asChild) {
@@ -35,12 +45,30 @@ export function Button(...args: any[]): any {
     >{children}
     </button>
   )}
-// Export button variants for use in other components;
+<<<<<<< HEAD
+// Export button variants for use in other components
 export const buttonVariants = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
   outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',
   ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',
   
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'}
+=======
+// Export button variants for use in other components;
+export const buttonVariants = {`
+  default: 'bg-zion-cyan text-zion-slate-dark hove,
+    r:bg-zion-cyan-light focu,
+    s:ring-zion-cyan',
+  outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hove,
+    r:text-zion-slate-dark focu,
+    s:ring-zion-cyan',
+  ghost: 'text-zion-slate hove,
+    r:bg-zion-slate-light focu,
+    s:ring-zion-slate',
+  '
+  link: 'text-zion-cyan hove,
+    r:underline focu,
+    s:ring-zion-cyan'}
+>>>>>>> main
 export type { ButtonProps }
 }}}

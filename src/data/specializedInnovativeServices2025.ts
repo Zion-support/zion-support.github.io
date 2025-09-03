@@ -1,47 +1,42 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function specializedInnovativeServices2025() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="specializedInnovativeServices2025 - Zion Tech Group"
-        description="Professional specializedinnovativeservices2025 services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              specializedInnovativeServices2025
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional specializedinnovativeservices2025 services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import { ProductListing } from '@/types/listings'  export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [ {'; i,
+    d: "ai-biotech-drug-discovery", ""; title: "AI Biotech Drug Discovery & Molecular Design Platform", ""; description: "Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.", ""; category: "Biotechnology", ""; subcategory: "Drug Discovery", "; price: 12999, ""; currency: "$", ""; tags: ["Biotechnology", "Drug Discovery", "Molecular Design", "AI Research", "Pharmaceutical R&D"], ""; author: { nam,
+    e: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "http,
+    s:''
+import { ProductListing } from '@/types/listings'  export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [ {'; i,
+    d: 'ai-biotech-drug-discovery', ''; title: 'AI Biotech Drug Discovery & Molecular Design Platform', ''; description: 'Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.', ''; category: 'Biotechnology', ''; subcategory: 'Drug Discovery', '; price: 12999, ''; currency: '$', ''; tags: ['Biotechnology', 'Drug Discovery', 'Molecular Design', 'AI Research', 'Pharmaceutical R&D'], ''; author: { nam,
+    e: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'http,
+    s:''";"
+"
+=======
+<<<<<<< HEAD
+import { ProductListing } from '@/types/listings'  export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [ {'; id: "ai-biotech-drug-discovery", "; title: "AI Biotech Drug Discovery & Molecular Design Platform", "; description: "Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.", "; category: "Biotechnology", "; subcategory: "Drug Discovery","; price: 12999, "; currency: "$", "; tags: ["Biotechnology", "Drug Discovery", "Molecular Design", "AI Research", "Pharmaceutical R&D"], "; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:;
+import { ProductListing } from '@/types/listings'  export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [ {'; id: 'ai-biotech-drug-discovery', '; title: 'AI Biotech Drug Discovery & Molecular Design Platform', '; description: 'Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.', '; category: 'Biotechnology', '; subcategory: 'Drug Discovery','; price: 12999, '; currency: '$', '; tags: ['Biotechnology', 'Drug Discovery', 'Molecular Design', 'AI Research', 'Pharmaceutical R&D'], '; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:'";
+=======
+<<<<<<< HEAD
+import {ProductListing } from '@/types/listings'  export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [{'; id: "ai-biotech-drug-discovery", ""; title: "AI Biotech Drug Discovery & Molecular Design Platform", ""; description: "Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.", ""; category: "Biotechnology", ""; subcategory: "Drug Discovery", "; price: 12999, ""; currency: "$", ""; tags: ["Biotechnology", "Drug Discovery", "Molecular Design", "AI Research", "Pharmaceutical R&D"], ""; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:'
+import { ProductListing } from '@/types/listings'  export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [{'; id: 'ai-biotech-drug-discovery', ''; title: 'AI Biotech Drug Discovery & Molecular Design Platform', ''; description: 'Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.', ''; category: 'Biotechnology', ''; subcategory: 'Drug Discovery', '; price: 12999, ''; currency: '$', ''; tags: ['Biotechnology', 'Drug Discovery', 'Molecular Design', 'AI Research', 'Pharmaceutical R&D'], ''; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:''";'"
+=======
+<<<<<<< HEAD
+import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export ;const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [ {'; i,d: &quot;ai-biotech-drug-discovery&quot;, &quot;"; title: &quot;AI Biotech Drug Discovery & Molecular Design Platform&quot;, &quot;"; description: &quot;Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.&quot;, &quot;"; category: &quot;Biotechnology&quot;, &quot;"; subcategory: &quot;Drug Discovery&quot;,"; price: 12999, &quot;"; currency: &quot;$&quot;, &quot;"; tags: [&quot;Biotechnology&quot;, &quot;Drug Discovery&quot;, &quot;Molecular Design&quot;, &quot;AI Research&quot;, &quot;Pharmaceutical R&D&quot;], &quot;"; author: { nam,e: &quot;Zion Tech Group&quot;, id: &quot;zion-tech-group&quot;, email: &quot;kleber@ziontechgroup.com&quot;, avatarUrl: &quot;http,s:
+import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export ;const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [ {'; i,d: &apos;ai-biotech-drug-discovery&apos;, &apos;'; title: &apos;AI Biotech Drug Discovery & Molecular Design Platform&apos;, &apos;'; description: &apos;Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.&apos;, &apos;'; category: &apos;Biotechnology&apos;, &apos;'; subcategory: &apos;Drug Discovery&apos;,'; price: 12999, &apos;'; currency: &apos;$&apos;, &apos;'; tags: [&apos;Biotechnology&apos;, &apos;Drug Discovery&apos;, &apos;Molecular Design&apos;, &apos;AI Research&apos;, &apos;Pharmaceutical R&D&apos;], &apos;'; author: { nam,e: &apos;Zion Tech Group&apos;, id: &apos;zion-tech-group&apos;, email: &apos;kleber@ziontechgroup.com&apos;, avatarUrl: &apos;http,s:&apos;&apos;";
+&quot;}}"
+=======
+<<<<<<< HEAD
+import { ProductListing } from '@/types/listings'  export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [ {'; id: "ai-biotech-drug-discovery", ""; title: "AI Biotech Drug Discovery & Molecular Design Platform", ""; description: "Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.", ""; category: "Biotechnology", ""; subcategory: "Drug Discovery", "; price: 12999, ""; currency: "$", ""; tags: ["Biotechnology", "Drug Discovery", "Molecular Design", "AI Research", "Pharmaceutical R&D"], ""; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:'
+import { ProductListing } from '@/types/listings'  export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [ {'; id: 'ai-biotech-drug-discovery', ''; title: 'AI Biotech Drug Discovery & Molecular Design Platform', ''; description: 'Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.', ''; category: 'Biotechnology', ''; subcategory: 'Drug Discovery', '; price: 12999, ''; currency: '$', ''; tags: ['Biotechnology', 'Drug Discovery', 'Molecular Design', 'AI Research', 'Pharmaceutical R&D'], ''; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:''";'"
+<<<<<<< HEAD
+""
+}}}}
+=======
+=======
+import { ProductListing }  from '@/types/listings';export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [ {'; id: "ai-biotech-drug-discovery,"; title: "AI Biotech Drug Discovery & Molecular Design Platform,"; description: "Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.,"; category: "Biotechnology,"; subcategory: "Drug Discovery,; price: 12999, ""; currency: "$,"; tags: ["Biotechnology,Drug Discovery,Molecular Design,AI Research,Pharmaceutical R&D"], ""; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:'
+import { ProductListing }  from '@/types/listings';export const SPECIALIZED_INNOVATIVE_SERVICES_2025: ProductListing[] = [ {'; id: 'ai-biotech-drug-discovery,'; title: 'AI Biotech Drug Discovery & Molecular Design Platform,'; description: 'Revolutionary biotech platform that uses AI to accelerate drug discovery, design novel molecules, and predict drug efficacy for pharmaceutical research and development.,'; category: 'Biotechnology,'; subcategory: 'Drug Discovery,; price: 12999, ''; currency: '$,'; tags: ['Biotechnology,Drug Discovery,Molecular Design,AI Research,Pharmaceutical R&D'], ''; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:''"
+"
+}}}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

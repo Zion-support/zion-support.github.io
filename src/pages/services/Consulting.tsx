@@ -1,75 +1,69 @@
+<<<<<<< HEAD
+ import { motion } from 'framer-motion' import { Link } from 'react-router-dom' import { SEO } from '@/components/SEO'  export default function Consulting() { const consultingServices = [ { title: 'Technology Assessment', '' description: 'Comprehensive evaluation of your current technology landscape and capabilities', '' features: ['Infrastructure Review', 'Technology Stack Analysis', 'Gap Identification', 'Recommendations'], '' icon: '🔍' }, {'; title: 'Strategic Planning', '' description: 'Develop long-term technology strategy aligned with business objectives', '' features: ['Technology Roadmap', 'Investment Planning', 'Risk Assessment', 'Success Metrics'], '' icon: '📋' }, {'; title: 'Vendor Selection', '' description: 'Expert guidance in selecting the right technology partners and solutions', '' features: ['Requirements Analysis', 'Vendor Evaluation', 'Contract Negotiation', 'Implementation Support'], '' icon: '🤝' }, {'' title: 'Project Management', '' description: 'Professional project management for successful technology implementations', '' features: ['Project Planning', 'Team Coordination', 'Timeline Management', 'Quality Assurance'], '' icon: '📊' } ] ' const consultingApproach = ['' { step: 'Discovery', icon: '🔍', description: 'Understand your business needs and challenges' }, '' { step: 'Analysis', icon: '📊', description: 'Analyze current state and identify opportunities' }, '' { step: 'Strategy', icon: '🎯', description: 'Develop comprehensive recommendations' }, '' { step: 'Implementation', icon: '🚀', description: 'Execute strategy with ongoing support' } ] ' const consultingAreas = ['' { area: 'Enterprise Architecture', solutions: ['Technology strategy', 'System design', 'Integration planning', 'Scalability assessment'] }, '' { area: 'Digital Strategy', solutions: ['Digital transformation', 'Technology roadmap', 'Innovation strategy', 'Change management'] }, '' { area: 'Security & Compliance', solutions: ['Security assessment', 'Compliance audit', 'Risk management', 'Security strategy'] }, '' { area: 'Cloud Strategy', solutions: ['Cloud assessment', 'Migration planning', 'Cost optimization', 'Multi-cloud strategy'] } ] ' return ('' <div className='min-h-screen bg-background> <SEO '' title='Technology Consulting - Zion Tech Group'' description='Get expert technology consulting services to align your business strategy with cutting-edge solutions.'' keywords='technology consulting, strategic consulting, team training, project management, performance optimization'' canonical='https: '''";""
+=======
+<<<<<<< HEAD
+ import { motion } from 'framer-motion' import { Link } from 'react-router-dom' import { SEO } from '@/components/SEO'  export default function Consulting() { const consultingServices = [ { title: 'Technology Assessment', ' description: 'Comprehensive evaluation of your current technology landscape and capabilities', ' features: ['Infrastructure Review', 'Technology Stack Analysis', 'Gap Identification', 'Recommendations'], ' icon: '🔍' }, {';' title: 'Strategic Planning', ' description: 'Develop long-term technology strategy aligned with business objectives', ' features: ['Technology Roadmap', 'Investment Planning', 'Risk Assessment', 'Success Metrics'], ' icon: '📋' }, {';' title: 'Vendor Selection', ' description: 'Expert guidance in selecting the right technology partners and solutions', ' features: ['Requirements Analysis', 'Vendor Evaluation', 'Contract Negotiation', 'Implementation Support'], ' icon: '🤝' }, {' title: 'Project Management', ' description: 'Professional project management for successful technology implementations', ' features: ['Project Planning', 'Team Coordination', 'Timeline Management', 'Quality Assurance'], ' icon: '📊' } ] ' const consultingApproach = [' { step: 'Discovery', icon: '🔍', description: 'Understand your business needs and challenges' }, ' { step: 'Analysis', icon: '📊', description: 'Analyze current state and identify opportunities' }, ' { step: 'Strategy', icon: '🎯', description: 'Develop comprehensive recommendations' }, ' { step: 'Implementation', icon: '🚀', description: 'Execute strategy with ongoing support' } ] ' const consultingAreas = [' { area: 'Enterprise Architecture', solutions: ['Technology strategy', 'System design', 'Integration planning', 'Scalability assessment'] }, ' { area: 'Digital Strategy', solutions: ['Digital transformation', 'Technology roadmap', 'Innovation strategy', 'Change management'] }, ' { area: 'Security & Compliance', solutions: ['Security assessment', 'Compliance audit', 'Risk management', 'Security strategy'] }, ' { area: 'Cloud Strategy', solutions: ['Cloud assessment', 'Migration planning', 'Cost optimization', 'Multi-cloud strategy'] } ] ' return (' <div className='min-h-screen bg-background'>' <SEO ' title='Technology Consulting - Zion Tech Group' description='Get expert technology consulting services to align your business strategy with cutting-edge solutions.' keywords='technology consulting, strategic consulting, team training, project management, performance optimization' canonical='https:''";
+=======
+<<<<<<< HEAD
 import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from '@/components/SEO';
 
 export default function Consulting() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO 
-        title="Consulting - Zion Tech Group"
-        description="Professional consulting services by Zion Tech Group"
+        title="Consulting - Zion Technologies"
+        description="Professional Consulting services by Zion Technologies"
       />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Consulting
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional consulting services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">
+            Consulting
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional Consulting services delivered with cutting-edge technology and expertise.
+          </p>
         </div>
-      </section>
-      
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide comprehensive consulting solutions tailored to your requirements.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
-              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
-              <p className="text-gray-300">Professional service description</p>
-            </div>
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
-              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
-              <p className="text-gray-300">Professional service description</p>
-            </div>
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
-              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
-              <p className="text-gray-300">Professional service description</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
+=======
+<<<<<<< HEAD
+ import { motion } from &apos;framer-motion&apos; import { Link } from &apos;react-router-dom&apos; import { SEO } from &apos;@/components/SEO&apos;&apos;'  export default function Consulting() ;{ ;}const consultingServices = [ { title: &apos;Technology Assessment&apos;, &apos;&apos; description: &apos;Comprehensive evaluation of your current technology landscape and capabilities&apos;, &apos;&apos; features: [&apos;Infrastructure Review&apos;, &apos;Technology Stack Analysis&apos;, &apos;Gap Identification&apos;, &apos;Recommendations&apos;], &apos;&apos; icon: &apos;🔍&apos; }, {';&apos; title: &apos;Strategic Planning&apos;, &apos;&apos; description: &apos;Develop long-term technology strategy aligned with business objectives&apos;, &apos;&apos; features: [&apos;Technology Roadmap&apos;, &apos;Investment Planning&apos;, &apos;Risk Assessment&apos;, &apos;Success Metrics&apos;], &apos;&apos; icon: &apos;📋&apos; }, {';&apos; title: &apos;Vendor Selection&apos;, &apos;&apos; description: &apos;Expert guidance in selecting the right technology partners and solutions&apos;, &apos;&apos; features: [&apos;Requirements Analysis&apos;, &apos;Vendor Evaluation&apos;, &apos;Contract Negotiation&apos;, &apos;Implementation Support&apos;], &apos;&apos; icon: &apos;🤝&apos; }, {&apos;&apos; title: &apos;Project Management&apos;, &apos;&apos; description: &apos;Professional project management for successful technology implementations&apos;, &apos;&apos; features: [&apos;Project Planning&apos;, &apos;Team Coordination&apos;, &apos;Timeline Management&apos;, &apos;Quality Assurance&apos;], &apos;&apos; icon: &apos;📊&apos; } ] &apos;&apos;' const consultingApproach = [&apos;&apos; { step: &apos;Discovery&apos;, icon: &apos;🔍&apos;, description: &apos;Understand your business needs and challenges&apos; }, &apos;&apos; { step: &apos;Analysis&apos;, icon: &apos;📊&apos;, description: &apos;Analyze current state and identify opportunities&apos; }, &apos;&apos; { step: &apos;Strategy&apos;, icon: &apos;🎯&apos;, description: &apos;Develop comprehensive recommendations&apos; }, &apos;&apos; { step: &apos;Implementation&apos;, icon: &apos;🚀&apos;, description: &apos;Execute strategy with ongoing support&apos; } ] &apos;&apos;' const consultingAreas = [&apos;&apos; { area: &apos;Enterprise Architecture&apos;, solutions: [&apos;Technology strategy&apos;, &apos;System design&apos;, &apos;Integration planning&apos;, &apos;Scalability assessment&apos;] }, &apos;&apos; { area: &apos;Digital Strategy&apos;, solutions: [&apos;Digital transformation&apos;, &apos;Technology roadmap&apos;, &apos;Innovation strategy&apos;, &apos;Change management&apos;] }, &apos;&apos; { area: &apos;Security & Compliance&apos;, solutions: [&apos;Security assessment&apos;, &apos;Compliance audit&apos;, &apos;Risk management&apos;, &apos;Security strategy&apos;] }, &apos;&apos; { area: &apos;Cloud Strategy&apos;, solutions: [&apos;Cloud assessment&apos;, &apos;Migration planning&apos;, &apos;Cost optimization&apos;, &apos;Multi-cloud strategy&apos;] } ] &apos; return (&apos;&apos;'' <div className=&apos;min-h-screen bg-background&apos;>'&apos;&apos; <;<SEO &apos;&apos; title=&apos;Technology Consulting - Zion Tech Group&apos;&apos; description=&apos;Get expert technology consulting services to align your business strategy with cutting-edge solutions.&apos;&apos; keywords=&apos;technology consulting, strategic consulting, team training, project management, performance optimization&apos;&apos; canonical=&apos;https:&apos;&apos;'";
+&quot;"
+=======
+<<<<<<< HEAD
+ import { motion } from 'framer-motion' import { Link } from 'react-router-dom' import { SEO } from '@/components/SEO'  export default function Consulting() { const consultingServices = [ { title: 'Technology Assessment', '' description: 'Comprehensive evaluation of your current technology landscape and capabilities', '' features: ['Infrastructure Review', 'Technology Stack Analysis', 'Gap Identification', 'Recommendations'], '' icon: '🔍' }, {';' title: 'Strategic Planning', '' description: 'Develop long-term technology strategy aligned with business objectives', '' features: ['Technology Roadmap', 'Investment Planning', 'Risk Assessment', 'Success Metrics'], '' icon: '📋' }, {';' title: 'Vendor Selection', '' description: 'Expert guidance in selecting the right technology partners and solutions', '' features: ['Requirements Analysis', 'Vendor Evaluation', 'Contract Negotiation', 'Implementation Support'], '' icon: '🤝' }, {'' title: 'Project Management', '' description: 'Professional project management for successful technology implementations', '' features: ['Project Planning', 'Team Coordination', 'Timeline Management', 'Quality Assurance'], '' icon: '📊' } ] ' const consultingApproach = ['' { step: 'Discovery', icon: '🔍', description: 'Understand your business needs and challenges' }, '' { step: 'Analysis', icon: '📊', description: 'Analyze current state and identify opportunities' }, '' { step: 'Strategy', icon: '🎯', description: 'Develop comprehensive recommendations' }, '' { step: 'Implementation', icon: '🚀', description: 'Execute strategy with ongoing support' } ] ' const consultingAreas = ['' { area: 'Enterprise Architecture', solutions: ['Technology strategy', 'System design', 'Integration planning', 'Scalability assessment'] }, '' { area: 'Digital Strategy', solutions: ['Digital transformation', 'Technology roadmap', 'Innovation strategy', 'Change management'] }, '' { area: 'Security & Compliance', solutions: ['Security assessment', 'Compliance audit', 'Risk management', 'Security strategy'] }, '' { area: 'Cloud Strategy', solutions: ['Cloud assessment', 'Migration planning', 'Cost optimization', 'Multi-cloud strategy'] } ] ' return ('' <div className='min-h-screen bg-background'>' <SEO '' title='Technology Consulting - Zion Tech Group'' description='Get expert technology consulting services to align your business strategy with cutting-edge solutions.'' keywords='technology consulting, strategic consulting, team training, project management, performance optimization'' canonical='https: '''";'"
+<<<<<<< HEAD
+ import { motion } from 'framer-motion' import { Link } from 'react-router-dom' import { SEO } from '@/components/SEO'  export default function Consulting() { const consultingServices = [ { title: 'Technology Assessment', '' description: 'Comprehensive evaluation of your current technology landscape and capabilities', '' features: ['Infrastructure Review', 'Technology Stack Analysis', 'Gap Identification', 'Recommendations'], '' icon: '🔍' }, {';' title: 'Strategic Planning', '' description: 'Develop long-term technology strategy aligned with business objectives', '' features: ['Technology Roadmap', 'Investment Planning', 'Risk Assessment', 'Success Metrics'], '' icon: '📋' }, {';' title: 'Vendor Selection', '' description: 'Expert guidance in selecting the right technology partners and solutions', '' features: ['Requirements Analysis', 'Vendor Evaluation', 'Contract Negotiation', 'Implementation Support'], '' icon: '🤝' }, {'' title: 'Project Management', '' description: 'Professional project management for successful technology implementations', '' features: ['Project Planning', 'Team Coordination', 'Timeline Management', 'Quality Assurance'], '' icon: '📊' } ] ' const consultingApproach = ['' { step: 'Discovery', icon: '🔍', description: 'Understand your business needs and challenges' }, '' { step: 'Analysis', icon: '📊', description: 'Analyze current state and identify opportunities' }, '' { step: 'Strategy', icon: '🎯', description: 'Develop comprehensive recommendations' }, '' { step: 'Implementation', icon: '🚀', description: 'Execute strategy with ongoing support' } ] ' const consultingAreas = ['' { area: 'Enterprise Architecture', solutions: ['Technology strategy', 'System design', 'Integration planning', 'Scalability assessment'] }, '' { area: 'Digital Strategy', solutions: ['Digital transformation', 'Technology roadmap', 'Innovation strategy', 'Change management'] }, '' { area: 'Security & Compliance', solutions: ['Security assessment', 'Compliance audit', 'Risk management', 'Security strategy'] }, '' { area: 'Cloud Strategy', solutions: ['Cloud assessment', 'Migration planning', 'Cost optimization', 'Multi-cloud strategy'] } ] ' return ('' <div className='min-h-screen bg-background'>' <SEO '' title='Technology Consulting - Zion Tech Group'' description='Get expert technology consulting services to align your business strategy with cutting-edge solutions.'' keywords='technology consulting, strategic consulting, team training, project management, performance optimization'' canonical='https:'''"'"
+
+""
+}}
+=======
+=======
+ import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom'; import { SEO  } from '@/components/SEO';export default function Consulting() { const consultingServices = [
+  { title: 'Technology Assessment',
+    description: 'Comprehensive evaluation of your current technology landscape and capabilities,' features: ['Infrastructure Review,Technology Stack Analysis,Gap Identification,Recommendations'], '' icon: '🔍' }, { title: 'Strategic Planning',
+    description: 'Develop long-term technology strategy aligned with business objectives,' features: ['Technology Roadmap,Investment Planning,Risk Assessment,Success Metrics'], '' icon: '📋' }, { title: 'Vendor Selection',
+    description: 'Expert guidance in selecting the right technology partners and solutions,' features: ['Requirements Analysis,Vendor Evaluation,Contract Negotiation,Implementation Support'], '' icon: '🤝' }, {'' title: 'Project Management',
+    description: 'Professional project management for successful technology implementations,' features: ['Project Planning,Team Coordination,Timeline Management,Quality Assurance'], '' icon: '📊' } ] ' const consultingApproach = ['' { step: 'Discovery', icon: '🔍', description: 'Understand your business needs and challenges' }, '' { step: 'Analysis', icon: '📊', description: 'Analyze current state and identify opportunities' }, '' { step: 'Strategy', icon: '🎯', description: 'Develop comprehensive recommendations' }, '' { step: 'Implementation', icon: '🚀', description: 'Execute strategy with ongoing support' } ] ' const consultingAreas = ['' { area: 'Enterprise Architecture', solutions: ['Technology strategy,System design,Integration planning,Scalability assessment'] }, '' { area: 'Digital Strategy', solutions: ['Digital transformation,Technology roadmap,Innovation strategy,Change management'] }, '' { area: 'Security & Compliance', solutions: ['Security assessment,Compliance audit,Risk management,Security strategy'] }, '' { area: 'Cloud Strategy', solutions: ['Cloud assessment,Migration planning,Cost optimization,Multi-cloud strategy'] } ] ' return (
+    <div className='min-h-screen bg-background'>' <SEO '' title='Technology Consulting - Zion Tech Group'' description='Get expert technology consulting services to align your business strategy with cutting-edge solutions.'' keywords='technology consulting, strategic consulting, team training, project management, performance optimization'' canonical='https: '''"
+ import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom'; import { SEO  } from '@/components/SEO';export default function Consulting() { const consultingServices = [
+  { title: 'Technology Assessment',
+    description: 'Comprehensive evaluation of your current technology landscape and capabilities,' features: ['Infrastructure Review,Technology Stack Analysis,Gap Identification,Recommendations'], '' icon: '🔍' }, { title: 'Strategic Planning',
+    description: 'Develop long-term technology strategy aligned with business objectives,' features: ['Technology Roadmap,Investment Planning,Risk Assessment,Success Metrics'], '' icon: '📋' }, { title: 'Vendor Selection',
+    description: 'Expert guidance in selecting the right technology partners and solutions,' features: ['Requirements Analysis,Vendor Evaluation,Contract Negotiation,Implementation Support'], '' icon: '🤝' }, {'' title: 'Project Management',
+    description: 'Professional project management for successful technology implementations,' features: ['Project Planning,Team Coordination,Timeline Management,Quality Assurance'], '' icon: '📊' } ] ' const consultingApproach = ['' { step: 'Discovery', icon: '🔍', description: 'Understand your business needs and challenges' }, '' { step: 'Analysis', icon: '📊', description: 'Analyze current state and identify opportunities' }, '' { step: 'Strategy', icon: '🎯', description: 'Develop comprehensive recommendations' }, '' { step: 'Implementation', icon: '🚀', description: 'Execute strategy with ongoing support' } ] ' const consultingAreas = ['' { area: 'Enterprise Architecture', solutions: ['Technology strategy,System design,Integration planning,Scalability assessment'] }, '' { area: 'Digital Strategy', solutions: ['Digital transformation,Technology roadmap,Innovation strategy,Change management'] }, '' { area: 'Security & Compliance', solutions: ['Security assessment,Compliance audit,Risk management,Security strategy'] }, '' { area: 'Cloud Strategy', solutions: ['Cloud assessment,Migration planning,Cost optimization,Multi-cloud strategy'] } ] ' return (
+    <div className='min-h-screen bg-background'>' <SEO '' title='Technology Consulting - Zion Tech Group'' description='Get expert technology consulting services to align your business strategy with cutting-edge solutions.'' keywords='technology consulting, strategic consulting, team training, project management, performance optimization'' canonical='https:'''"
+
+"
+}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

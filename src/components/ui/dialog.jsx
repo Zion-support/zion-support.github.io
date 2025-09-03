@@ -1,47 +1,31 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function dialog() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="dialog - Zion Tech Group"
-        description="Professional dialog services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              dialog
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional dialog services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import React, { createContext, useContext, useState } from 'react' const Dialog({ children, open, onOpenChange }) {} const [internalOpen, setInternalOpen] = useState(false) const isOpen = isControlled ? open : internalOpen const setIsOpen = (newOpen) => {} if (!isControlled) {} setInternalOpen(newOpen)} if (onOpenChange) {} onOpenChange(newOpen)} } return (<DialogContext.Provider value = {} { isOpen, setIsOpen }}> <div className='relative'> {children} </div> </DialogContext.Provider>)} export function DialogTrigger({ children, asChild = false }) {} const context = useContext(DialogContext) if (!context)' throw new Error('DialogTrigger must be used within Dialog') if (asChild) {} return (<div onClick={() => context.setIsOpen(true)}> {children} </div>)} return (<div onClick={() => context.setIsOpen(true)}> {children} </div>)}' export function DialogContent({ children, className = '' }) {} const context = useContext(DialogContext) if (!context)'' throw new Error('DialogContent must be used within Dialog')' if (!context.isOpen)'''' return null''' return (<div className='fixed inset-0 z-50 flex items-center justify-center'>'''' <div className='fixed inset-0 bg-black bg-opacity-50' onClick={() => context.setIsOpen(false)}/> <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}> {children} </div> </div>)}' export function DialogFooter({ children, className = '' }) {}`'`'' return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}''`'';'`''`';'''`"'"
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useState } from 'react' const Dialog({ children, open, onOpenChange }) {} const [internalOpen, setInternalOpen] = useState(false) const isOpen = isControlled ? open : internalOpen const setIsOpen = (newOpen) => {} if (!isControlled) {} setInternalOpen(newOpen)} if (onOpenChange) {} onOpenChange(newOpen)} } return (<DialogContext.Provider value = {} { isOpen, setIsOpen }}> <div className='relative'> {children} </div> </DialogContext.Provider>)} export function DialogTrigger({ children, asChild = false }) {} const context = useContext(DialogContext) if (!context) throw new Error('DialogTrigger must be used within Dialog') if (asChild) {} return (<div onClick={() => context.setIsOpen(true)}> {children} </div>)} return (<div onClick={() => context.setIsOpen(true)}> {children} </div>)} export function DialogContent({ children, className = '' }) {} const context = useContext(DialogContext) if (!context)' throw new Error('DialogContent must be used within Dialog'); if (!context.isOpen)''' return null''' return (<div className='fixed inset-0 z-50 flex items-center justify-center>''' <div className='fixed inset-0 bg-black bg-opacity-50' onClick={() => context.setIsOpen(false)}/> <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}> {children} </div> </div>)} export function DialogFooter({ children, className = '' }) {}`;`'' return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}`'';`''`';;'`"'""
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useState } from 'react' const Dialog({ children, open, onOpenChange }) {} const [internalOpen, setInternalOpen] = useState(false) const isOpen = isControlled ? open : internalOpen const setIsOpen = (newOpen) => {} if (!isControlled) {} setInternalOpen(newOpen)} if (onOpenChange) {} onOpenChange(newOpen)} } return (<DialogContext.Provider value = {} { isOpen, setIsOpen }}> <div className='relative'> {children} </div> </DialogContext.Provider>)} export function DialogTrigger({ children, asChild = false }) {} const context = useContext(DialogContext) if (!context)' throw new Error('DialogTrigger must be used within Dialog') if (asChild) {} return (<div onClick={() => context.setIsOpen(true)}> {children} </div>)} return (<div onClick={() => context.setIsOpen(true)}> {children} </div>)}' export function DialogContent({ children, className = ' }) {} const context = useContext(DialogContext) if (!context)' throw new Error('DialogContent must be used within Dialog')'; if (!context.isOpen)'' return null'' return (<div className='fixed inset-0 z-50 flex items-center justify-center'>'' <div className='fixed inset-0 bg-black bg-opacity-50' onClick={() => context.setIsOpen(false)}/> <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}> {children} </div> </div>)}' export function DialogFooter({ children, className = ' }) {}`;'`' return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}'`';'`'`';';'`"
+=======
+<<<<<<< HEAD
+import React, {createContext, useContext, useState } from 'react' const Dialog({children, open, onOpenChange }) {} const [internalOpen, setInternalOpen] = useState(false) const isOpen = isControlled ? open : internalOpen const setIsOpen = (newOpen) => {} if (!isControlled) {} setInternalOpen(newOpen)} if (onOpenChange) {} onOpenChange(newOpen)} } return (<DialogContext.Provider value = {}, {isOpen, setIsOpen }}> <div className='relative'> {children} </div> </DialogContext.Provider>)} export function DialogTrigger({children, asChild = false }) {} const context = useContext(DialogContext) if (!context)' throw new Error('DialogTrigger must be used within Dialog') if (asChild) {} return (<div onClick={() => context.setIsOpen(true)}> {children} </div>)} return (<div onClick={() => context.setIsOpen(true)}> {children} </div>)}' export function DialogContent({children, className='' }) {} const context = useContext(DialogContext) if (!context)'' throw new Error('DialogContent must be used within Dialog')'; if (!context.isOpen)'''' return null''' return (<div className='fixed inset-0 z-50 flex items-center justify-center'>'''' <div className='fixed inset-0 bg-black bg-opacity-50' onClick={() => context.setIsOpen(false)}/> <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}> {children} </div> </div>)}' export function DialogFooter({children, className='' }) {}`;'`'' return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}''`'';'`''`';';''`"'"
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useState } from &apos;react&apos;&apos;' const Dialog({ children, open, onOpenChange }) {} const [internalOpen, setInternalOpen] = useState(false) const isOpen = isControlled ? open : internalOpen const setIsOpen = (newOpen) => {} if (!isControlled) {} setInternalOpen(newOpen)} if (onOpenChange) {} onOpenChange(newOpen)} } return (<DialogContext.Provider value = {} { isOpen, setIsOpen }}> <;<div className=&apos;relative&apos;> {children}&apos; </div> </DialogContext.Provider>)} export function DialogTrigger({ children, asChild = false }) {} const context = useContext(DialogContext) if (!context)&apos; throw new Error(&apos;DialogTrigger must be used within Dialog&apos;) if (asChild) {} return (&apos;<div onClick={() => context.setIsOpen(true)}> {children} </div>)} return (<div onClick={() => context.setIsOpen(true)}> {children} </div>)}&apos;&apos;' export function;function DialogContent({ children, className = &apos;&apos; }) {} ;&apos;&apos;const context = useContext(DialogContext) if (!context)&apos;&apos; throw new Error(&apos;DialogContent must be used within Dialog&apos;)'; if (!context.isOpen)&apos;&apos;'&apos; return null&apos;&apos;' return (&apos;&apos;<div className=&apos;fixed inset-0 z-50 flex items-center justify-center&apos;>'&apos;&apos;'&apos;&apos; <div className=&apos;fixed inset-0 bg-black bg-opacity-50&apos; onClick={() => context.setIsOpen(false)}/>&apos; <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}> {children} </div> </div>)}&apos;&apos;' export function DialogFooter({ children, className = &apos;&apos; }) {}`;&apos;`'&apos; return&apos;&apos; <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}&apos;&apos;`&apos;';&apos;`'&apos;`';';&apos;&apos;`&quot;&quot;"
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useState } from 'react' const Dialog({ children, open, onOpenChange }) {} const [internalOpen, setInternalOpen] = useState(false) const isOpen = isControlled ? open : internalOpen const setIsOpen = (newOpen) => {} if (!isControlled) {} setInternalOpen(newOpen)} if (onOpenChange) {} onOpenChange(newOpen)} } return (<DialogContext .Provider value = {} { isOpen, setIsOpen }}" > <div className='relative'> {children} </div> </DialogContext.Provider>)} export function DialogTrigger({ children, asChild = false }) {} const context = useContext(DialogContext) if (!context)' throw new Error('DialogTrigger must be used within Dialog') if (asChild) {} return (<div onClick={() =" > context.setIsOpen(true)}> {children} </div>)} return (<div onClick={() =" > context.setIsOpen(true)}> {children} </div>)}' export function DialogContent({ children, className = '' }) {} const context = useContext(DialogContext) if (!context)'' throw new Error('DialogContent must be used within Dialog')'; if (!context.isOpen)'''' return null''' return (<div className='fixed inset-0 z-50 flex items-center justify-center'>'''' <div className='fixed inset-0 bg-black bg-opacity-50' onClick={() =" > context.setIsOpen(false)}/> <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}" > {children} </div> </div>)}' export function DialogFooter({ children, className = '' }) {}`;'`'' return <div className={`flex justify-end gap-2 mt-6 ${className}`}" >{children}</div>}''`'';'`''`';';''`"'"
+"`"
+=======
+<<<<<<< HEAD
+import React, { createContext, useContext, useState } from 'react' const Dialog({ children, open, onOpenChange }) {} const [internalOpen, setInternalOpen] = useState(false) const isOpen = isControlled ? open : internalOpen const setIsOpen = (newOpen) => {} if (!isControlled) {} setInternalOpen(newOpen)} if (onOpenChange) {} onOpenChange(newOpen)} } return (<DialogContext.Provider value = {} { isOpen, setIsOpen }}> <div className='relative'> {children} </div> </DialogContext.Provider>)} export function DialogTrigger({ children, asChild = false }) {} const context = useContext(DialogContext) if (!context)' throw new Error('DialogTrigger must be used within Dialog') if (asChild) {} return (<div onClick={() => context.setIsOpen(true)}> {children} </div>)} return (<div onClick={() => context.setIsOpen(true)}> {children} </div>)}' export function DialogContent({ children, className = '' }) {} const context = useContext(DialogContext) if (!context)'' throw new Error('DialogContent must be used within Dialog')'; if (!context.isOpen)'''' return null''' return (<div className='fixed inset-0 z-50 flex items-center justify-center'>'''' <div className='fixed inset-0 bg-black bg-opacity-50' onClick={() => context.setIsOpen(false)}/> <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}> {children} </div> </div>)}' export function DialogFooter({ children, className = '' }) {}`;'`'' return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}''`'';'`''`';';''`"'"
+=======
+import React, { createContext, useContext, useState }  from 'react';const Dialog({ children, open, onOpenChange }) {} const [internalOpen, setInternalOpen] = useState(false) const isOpen = isControlled ? open : internalOpen const setIsOpen = (newOpen) => {} if (!isControlled) {} setInternalOpen(newOpen)} if (onOpenChange) {} onOpenChange(newOpen)} } return (<DialogContext .Provider value = {} { isOpen, setIsOpen }}" > <div className='relative'> {children} </div> </DialogContext.Provider>)} export function DialogTrigger({ children, asChild = false }) {} const context = useContext(DialogContext) if (!context)' throw new Error('DialogTrigger must be used within Dialog') if (asChild) {} return (<div onClick={() =" > context.setIsOpen(true)}> {children} </div>)} return (<div onClick={() =" > context.setIsOpen(true)}> {children} </div>)}' export function DialogContent({ children, className = '' }) {} const context = useContext(DialogContext) if (!context)'' throw new Error('DialogContent must be used within Dialog')'; if (!context.isOpen)'''' return null''' return (<div className='fixed inset-0 z-50 flex items-center justify-center'>'''' <div className='fixed inset-0 bg-black bg-opacity-50' onClick={() =" > context.setIsOpen(false)}/> <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}" > {children} </div> </div>)}' export function DialogFooter({ children, className = '' }) {}`;'`'' return <div className={`flex justify-end gap-2 mt-6 ${className}`}" >{children}</div>}''`'`''`;''`"'"
+"`
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

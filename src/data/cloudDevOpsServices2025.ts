@@ -1,47 +1,42 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function cloudDevOpsServices2025() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="cloudDevOpsServices2025 - Zion Tech Group"
-        description="Professional clouddevopsservices2025 services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              cloudDevOpsServices2025
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional clouddevopsservices2025 services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+import { ProductListing } from '@/types/listings'  export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; i,
+    d: "multi-cloud-orchestration-platform", ""; title: "Multi-Cloud Orchestration & Management Platform", ""; description: "Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.",""; category: "Cloud & DevOps", ""; subcategory: "Multi-Cloud Management", "; price: 3999, ""; currency: "$", ""; tags: ["Multi-Cloud", "Cloud Orchestration", "Cost Optimization", "Security Compliance", "Unified Management"], ""; author: { nam,
+    e: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "http,
+    s:''
+import { ProductListing } from '@/types/listings'  export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; i,
+    d: 'multi-cloud-orchestration-platform', ''; title: 'Multi-Cloud Orchestration & Management Platform', ''; description: 'Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.','; category: 'Cloud & DevOps', ''; subcategory: 'Multi-Cloud Management', '; price: 3999, ''; currency: '$', ''; tags: ['Multi-Cloud', 'Cloud Orchestration', 'Cost Optimization', 'Security Compliance', 'Unified Management'], ''; author: { nam,
+    e: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'http,
+    s:''";"
+"
+=======
+<<<<<<< HEAD
+import { ProductListing } from '@/types/listings'  export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; id: "multi-cloud-orchestration-platform", "; title: "Multi-Cloud Orchestration & Management Platform", "; description: "Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.","; category: "Cloud & DevOps", "; subcategory: "Multi-Cloud Management","; price: 3999, "; currency: "$", "; tags: ["Multi-Cloud", "Cloud Orchestration", "Cost Optimization", "Security Compliance", "Unified Management"], "; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:;
+import { ProductListing } from '@/types/listings'  export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; id: 'multi-cloud-orchestration-platform', '; title: 'Multi-Cloud Orchestration & Management Platform', '; description: 'Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.','; category: 'Cloud & DevOps', '; subcategory: 'Multi-Cloud Management','; price: 3999, '; currency: '$', '; tags: ['Multi-Cloud', 'Cloud Orchestration', 'Cost Optimization', 'Security Compliance', 'Unified Management'], '; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:'";
+=======
+<<<<<<< HEAD
+import {ProductListing } from '@/types/listings'  export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [{'; id: "multi-cloud-orchestration-platform", ""; title: "Multi-Cloud Orchestration & Management Platform", ""; description: "Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.",""; category: "Cloud & DevOps", ""; subcategory: "Multi-Cloud Management", "; price: 3999, ""; currency: "$", ""; tags: ["Multi-Cloud", "Cloud Orchestration", "Cost Optimization", "Security Compliance", "Unified Management"], ""; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:'
+import { ProductListing } from '@/types/listings'  export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [{'; id: 'multi-cloud-orchestration-platform', ''; title: 'Multi-Cloud Orchestration & Management Platform', ''; description: 'Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.',''; category: 'Cloud & DevOps', ''; subcategory: 'Multi-Cloud Management', '; price: 3999, ''; currency: '$', ''; tags: ['Multi-Cloud', 'Cloud Orchestration', 'Cost Optimization', 'Security Compliance', 'Unified Management'], ''; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:''";'"
+=======
+<<<<<<< HEAD
+import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export ;const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; i,d: &quot;multi-cloud-orchestration-platform&quot;, &quot;"; title: &quot;Multi-Cloud Orchestration & Management Platform&quot;, &quot;"; description: &quot;Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.&quot;,&quot;"; category: &quot;Cloud & DevOps&quot;, &quot;"; subcategory: &quot;Multi-Cloud Management&quot;,"; price: 3999, &quot;"; currency: &quot;$&quot;, &quot;"; tags: [&quot;Multi-Cloud&quot;, &quot;Cloud Orchestration&quot;, &quot;Cost Optimization&quot;, &quot;Security Compliance&quot;, &quot;Unified Management&quot;], &quot;"; author: { nam,e: &quot;Zion Tech Group&quot;, id: &quot;zion-tech-group&quot;, email: &quot;kleber@ziontechgroup.com&quot;, avatarUrl: &quot;http,s:
+import { ProductListing } from &apos;@/types/listings&apos;&apos;'  export ;const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; i,d: &apos;multi-cloud-orchestration-platform&apos;, &apos;'; title: &apos;Multi-Cloud Orchestration & Management Platform&apos;, &apos;'; description: &apos;Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.&apos;,&apos;'; category: &apos;Cloud & DevOps&apos;, &apos;'; subcategory: &apos;Multi-Cloud Management&apos;,'; price: 3999, &apos;'; currency: &apos;$&apos;, &apos;'; tags: [&apos;Multi-Cloud&apos;, &apos;Cloud Orchestration&apos;, &apos;Cost Optimization&apos;, &apos;Security Compliance&apos;, &apos;Unified Management&apos;], &apos;'; author: { nam,e: &apos;Zion Tech Group&apos;, id: &apos;zion-tech-group&apos;, email: &apos;kleber@ziontechgroup.com&apos;, avatarUrl: &apos;http,s:&apos;&apos;";
+&quot;}}"
+=======
+<<<<<<< HEAD
+import { ProductListing } from '@/types/listings'  export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; id: "multi-cloud-orchestration-platform", ""; title: "Multi-Cloud Orchestration & Management Platform", ""; description: "Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.",""; category: "Cloud & DevOps", ""; subcategory: "Multi-Cloud Management", "; price: 3999, ""; currency: "$", ""; tags: ["Multi-Cloud", "Cloud Orchestration", "Cost Optimization", "Security Compliance", "Unified Management"], ""; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:'
+import { ProductListing } from '@/types/listings'  export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; id: 'multi-cloud-orchestration-platform', ''; title: 'Multi-Cloud Orchestration & Management Platform', ''; description: 'Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.',''; category: 'Cloud & DevOps', ''; subcategory: 'Multi-Cloud Management', '; price: 3999, ''; currency: '$', ''; tags: ['Multi-Cloud', 'Cloud Orchestration', 'Cost Optimization', 'Security Compliance', 'Unified Management'], ''; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:''";'"
+<<<<<<< HEAD
+""
+}}}}
+=======
+=======
+import { ProductListing }  from '@/types/listings';export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; id: "multi-cloud-orchestration-platform,"; title: "Multi-Cloud Orchestration & Management Platform,"; description: "Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.,"; category: "Cloud & DevOps,"; subcategory: "Multi-Cloud Management,; price: 3999, ""; currency: "$,"; tags: ["Multi-Cloud,Cloud Orchestration,Cost Optimization,Security Compliance,Unified Management"], ""; author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https:'
+import { ProductListing }  from '@/types/listings';export const CLOUD_DEVOPS_SERVICES_2025: ProductListing[] = [ {'; id: 'multi-cloud-orchestration-platform,'; title: 'Multi-Cloud Orchestration & Management Platform,'; description: 'Advanced platform that provides unified management, monitoring, and optimization across AWS, Azure, Google Cloud, and private cloud environments with intelligent cost optimization and security compliance.,'; category: 'Cloud & DevOps,'; subcategory: 'Multi-Cloud Management,; price: 3999, ''; currency: '$,'; tags: ['Multi-Cloud,Cloud Orchestration,Cost Optimization,Security Compliance,Unified Management'], ''; author: { name: 'Zion Tech Group', id: 'zion-tech-group', email: 'kleber@ziontechgroup.com', avatarUrl: 'https:''"
+"
+}}}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -1,1 +1,0 @@
-setOnboardingStep(0);

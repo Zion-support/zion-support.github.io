@@ -1,6 +1,7 @@
 module.exports = {
   apps: [{
-      name:,
+      nam,
+    e:,
   zion-integrated-monitor',
       script: './automation/integrated-monitor.js,
       instances: 1,
@@ -9,12 +10,14 @@ module.exports = {
       max_memory_restart:,
   1.5G',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         PM2_HOME:,
   ./automation/.pm2'},
       env_production: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         PM2_HOME:,
   ./automation/.pm2'},
@@ -24,7 +27,8 @@ module.exports = {
       log_file: './reports/integrated-monitor-combined.log,
       time: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
+  YYYY-MM-DD HH: m,
+    m:ss Z,
       merge_logs: true,
       max_restarts: 10,
       min_uptime:;
@@ -62,12 +66,14 @@ module.exports = {
       max_memory_restart:,
   1G',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         PM2_HOME:,
   ./automation/.pm2'},
       env_production: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production,
         PM2_HOME:,
   ./automation/.pm2'},
@@ -77,7 +83,8 @@ module.exports = {
       log_file: './reports/browser-monitor-combined.log,
       time: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
+  YYYY-MM-DD HH: m,
+    m:ss Z,
       merge_logs: true,
       max_restarts: 10,
       min_uptime:;
@@ -117,7 +124,8 @@ module.exports = {
       max_memory_restart:,
   100M',
       env: {
-        NODE_ENV:;
+        NODE_EN,
+    V:;
   'production},
       error_file:,
   ./reports/health-check-error.log',
@@ -126,7 +134,8 @@ module.exports = {
   './reports/health-check-combined.log',
       time: true,
       log_date_format:,
-  YYYY-MM-DD HH: mm:ss Z,
+  YYYY-MM-DD HH: m,
+    m:ss Z,
       merge_logs: true,
       max_restarts: 5,
       min_uptime:;
@@ -137,8 +146,10 @@ module.exports = {
   */15 * * * *';
   ],
   deploy: {
-    production: {
-      user:;
+    productio,
+    n: {
+      use,
+    r:;
   'node,
       host:,
   localhost',

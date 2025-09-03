@@ -1,7 +1,13 @@
 import React, { useState } from,
   react' import { ChevronDown, Globe } from;
-  'lucide-react' export const LanguageSelector = () => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState(
+<<<<<<< HEAD
+  'lucide-react' export const LanguageSelector = () => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState('
   'EN') const languages = [ { code: 'EN, name:,
+=======
+  'lucide-react' export const LanguageSelector = () => { const [isOpen, setIsOpen] = useState(false) const [currentLanguage, setCurrentLanguage] = useState(
+  'EN') const languages = [
+  { code: 'EN, name:,
+>>>>>>> main
   English', flag: '🇺🇸 }, { code:,
   ES', name: 'Español, flag:,
   🇪🇸' }, { code: 'FR, name:,
@@ -15,5 +21,5 @@ import React, { useState } from,
   ZH', name: '中文, flag:,
   🇨🇳' }, { code: 'JA, name:,
   日本語', flag: '🇯🇵 }, { code:,
-  KO', name: '한국어, flag:;
+  KO', name: '한국어, flag:
   '🇰🇷' } ] const handleLanguageChange = (languageCode) => { setCurrentLanguage(languageCode) setIsOpen(false)'

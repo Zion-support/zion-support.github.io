@@ -1,47 +1,39 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function WebsiteImprovementDashboard() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="WebsiteImprovementDashboard - Zion Tech Group"
-        description="Professional websiteimprovementdashboard services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              WebsiteImprovementDashboard
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional websiteimprovementdashboard services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline' const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => { const [isOpen, setIsOpen] = useState(showOnLoad) const [activeTab, setActiveTab] = useState('overview') const [metrics, setMetrics] = useState({ loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0, firstInputDelay: 0, timeToInteractive: 0 }) const [seoAnalysis, setSeoAnalysis] = useState({ score: 0, issues[], suggestions[], metaTags: { title: false, description: false, keywords: false, canonical: false, ogTags: false, twitterTags: false } }) const [accessibilityReport, setAccessibilityReport] = useState({ score: 0, issues[], wcagCompliance: 'Non-Compliant', criticalIssues: 0, warnings: 0 }) const [isAnalyzing, setIsAnalyzing] = useState(false)''
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline' const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => { const [isOpen, setIsOpen] = useState(showOnLoad) const [activeTab, setActiveTab] = useState('overview') const [metrics, setMetrics] = useState({ loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0, firstInputDelay: 0, timeToInteractive: 0 }) const [seoAnalysis, setSeoAnalysis] = useState({ score: 0, issues[], suggestions[], metaTags: { titl,
+    e: false, description: false, keywords: false, canonical: false, ogTags: false, twitterTags: false } }) const [accessibilityReport, setAccessibilityReport] = useState({ score: 0, issues[], wcagCompliance: 'Non-Compliant', criticalIssues: 0, warnings: 0 }) const [isAnalyzing, setIsAnalyzing] = useState(false);'
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline' const WebsiteImprovementDashboard = ({ className = ', showOnLoad = false }) => { const [isOpen, setIsOpen] = useState(showOnLoad) const [activeTab, setActiveTab] = useState('overview') const [metrics, setMetrics] = useState({ loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0, firstInputDelay: 0, timeToInteractive: 0 }) const [seoAnalysis, setSeoAnalysis] = useState({ score: 0, issues[], suggestions[], metaTags: { title: false, description: false, keywords: false, canonical: false, ogTags: false, twitterTags: false } }) const [accessibilityReport, setAccessibilityReport] = useState({ score: 0, issues[], wcagCompliance: 'Non-Compliant', criticalIssues: 0, warnings: 0 }) const [isAnalyzing, setIsAnalyzing] = useState(false)';
+=======
+<<<<<<< HEAD
+import React, {useState, useEffect, useCallback } from 'react' ;
+import {motion, AnimatePresence } from 'framer-motion' import {ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline' const WebsiteImprovementDashboard = ({className='', showOnLoad = false }) => {const [isOpen, setIsOpen] = useState(showOnLoad) const [activeTab, setActiveTab] = useState('overview') const [metrics, setMetrics] = useState({ loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0, firstInputDelay: 0, timeToInteractive: 0 }) const [seoAnalysis, setSeoAnalysis] = useState({score: 0, issues[], suggestions[], metaTags: { title: false, description: false, keywords: false, canonical: false, ogTags: false, twitterTags: false } }) const [accessibilityReport, setAccessibilityReport] = useState({score: 0, issues[], wcagCompliance: 'Non-Compliant', criticalIssues: 0, warnings: 0 }) const [isAnalyzing, setIsAnalyzing] = useState(false)';'
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline' const WebsiteImprovementDashboard = memo(({ className = '', showOnLoad = false }) => { const [isOpen, setIsOpen] = useState(showOnLoad) const [activeTab, setActiveTab] = useState('overview') const [metrics, setMetrics] = useState({ loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0, firstInputDelay: 0, timeToInteractive: 0 }) const [seoAnalysis, setSeoAnalysis] = useState({ score: 0, issues[], suggestions[], metaTags: { title: false, description: false, keywords: false, canonical: false, ogTags: false, twitterTags: false } }) const [accessibilityReport, setAccessibilityReport] = useState({ score: 0, issues[], wcagCompliance: 'Non-Compliant', criticalIssues: 0, warnings: 0 }) const [isAnalyzing, setIsAnalyzing] = useState(false)';'
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from &apos;react&apos; import { motion, AnimatePresence } from &apos;framer-motion&apos; import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from &apos;@heroicons/react/24/outline&apos;&apos;' const WebsiteImprovementDashboard = ({ className = &apos;&apos;, showOnLoad = false }) => {&apos;}&apos; const [isOpen, setIsOpen] = useState(showOnLoad) const;const [activeTab, setActiveTab] = useState(&apos;overview&apos;)&apos;' const [metrics, setMetrics] = useState({ loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0, firstInputDelay: 0, timeToInteractive: 0 }) const [seoAnalysis, setSeoAnalysis] = useState({ score: 0, issues[], suggestions[], metaTags: { titl,e: false, description: false, keywords: false, canonical: false, ogTags: false, twitterTags: false } }) const;const;const [accessibilityReport, setAccessibilityReport] = useState({ score: 0, issues[], wcagCompliance: &apos;Non-Compliant&apos;, criticalIssues: 0, warnings: 0 }) ;&apos;const [isAnalyzing, setIsAnalyzing] = useState(false)';
+&apos;'
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline' const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => { const [isOpen, setIsOpen] = useState(showOnLoad) const [activeTab, setActiveTab] = useState('overview') const [metrics, setMetrics] = useState({ loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0, firstInputDelay: 0, timeToInteractive: 0 }) const [seoAnalysis, setSeoAnalysis] = useState({ score: 0, issues[], suggestions[], metaTags: { title: false, description: false, keywords: false, canonical: false, ogTags: false, twitterTags: false } }) const [accessibilityReport, setAccessibilityReport] = useState({ score: 0, issues[], wcagCompliance: 'Non-Compliant', criticalIssues: 0, warnings: 0 }) const [isAnalyzing, setIsAnalyzing] = useState(false)';'
+<<<<<<< HEAD
+""
 }
+=======
+=======
+import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon }  from '@heroicons/react/24/outline';const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => { const [isOpen, setIsOpen] = useState(showOnLoad) const [activeTab, setActiveTab] = useState('overview') const [metrics, setMetrics] = useState({ loadTime: 0, firstContentfulPaint: 0, largestContentfulPaint: 0, cumulativeLayoutShift: 0, firstInputDelay: 0, timeToInteractive: 0 }) const [seoAnalysis, setSeoAnalysis] = useState({ score: 0, issues[], suggestions[], metaTags: { title: false, description: false, keywords: false, canonical: false, ogTags: false, twitterTags: false } }) const [accessibilityReport, setAccessibilityReport] = useState({ score: 0, issues[], wcagCompliance: 'Non-Compliant', criticalIssues: 0, warnings: 0 }) const [isAnalyzing, setIsAnalyzing] = useState(false)
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

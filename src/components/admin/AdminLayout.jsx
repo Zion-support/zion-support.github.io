@@ -1,47 +1,40 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function AdminLayout() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AdminLayout - Zion Tech Group"
-        description="Professional adminlayout services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AdminLayout
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional adminlayout services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+<<<<<<< HEAD
+";const navItems = [" { title: "Products", href: "/admin/products" }," { title: "Services", href: "/admin/services" }," { title: "Users", href: "/admin/users" }," { title: "Reports", href: "/admin/reports" },"]";export function AdminLayout({ children }) { return (<div className="flex min-h-screen">" <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">" <h2 className="font-semibold text-lg mb-4">Back Office</h2>" <nav className="space-y-1">" {navItems.map((item) => (<Link key={item.href} href={item.href} className="block rounded-md px-3 py-2 text-sm hover: bg-accent">" {item.title}" </Link>))} </nav> </aside>" <main className="flex-1 p-6 overflow-y-auto">{children}</main>" </div>)}";export { AdminLayout } export default AdminLayout ';
+';const navItems = [' { title: 'Products', href: '/admin/products' },' { title: 'Services', href: '/admin/services' },' { title: 'Users', href: '/admin/users' },' { title: 'Reports', href: '/admin/reports' },']'export function AdminLayout({ children }) { return (<div className='flex min-h-screen'>' <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'>' <h2 className='font-semibold text-lg mb-4'>Back Office</h2>' <nav className='space-y-1'>' {navItems.map((item) => (<Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent'>' {item.title}' </Link>))} </nav> </aside>' <main className='flex-1 p-6 overflow-y-auto'>{children}</main>' </div>)}';export { AdminLayout } export default AdminLayout ';'";
+=======
+<<<<<<< HEAD
+";const navItems = [" {title: "Products", href: "/admin/products" }," {title: "Services", href: "/admin/services" }," {title: "Users", href: "/admin/users" }," {title: "Reports", href: "/admin/reports" },"]";export function AdminLayout({children }) {return (<div className="flex min-h-screen">" <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">" <h2 className="font-semibold text-lg mb-4">Back Office</h2>" <nav className="space-y-1">" {navItems.map((item) => (<Link key={item.href} href={item.href} className="block rounded-md px-3 py-2 text-sm hover: bg-accent">" {item.title}" </Link>))} </nav> </aside>" <main className="flex-1 p-6 overflow-y-auto">{children}</main>" </div>)}";export {AdminLayout } export default AdminLayout ';'
+';const navItems = [' {title: 'Products', href: '/admin/products' },' {title: 'Services', href: '/admin/services' },' {title: 'Users', href: '/admin/users' },' {title: 'Reports', href: '/admin/reports' },']'export function AdminLayout({children }) {return (<div className='flex min-h-screen'>' <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'>' <h2 className='font-semibold text-lg mb-4'>Back Office</h2>' <nav className='space-y-1'>' {navItems.map((item) => (<Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent'>' {item.title}' </Link>))} </nav> </aside>' <main className='flex-1 p-6 overflow-y-auto'>{children}</main>' </div>)}';export {AdminLayout } export default AdminLayout ';''";'"
+=======
+<<<<<<< HEAD
+";&quot;&quot;const navItems = [&quot; { title: &quot;Products&quot;, href: &quot;/admin/products&quot; },&quot; { title: &quot;Services&quot;, href: &quot;/admin/services&quot; },&quot; { title: &quot;Users&quot;, href: &quot;/admin/users&quot; },&quot; { title: &quot;Reports&quot;, href: &quot;/admin/reports&quot; },&quot;]";&quot;&quot;export function AdminLayout({ children }) { return (}<div className=&quot;flex min-h-screen&quot;>"&quot;&quot; <aside className=&quot;w-64 border-r p-6 space-y-2 bg-muted/50&quot;>"&quot;&quot; <h2 className=&quot;font-semibold text-lg mb-4&quot;>Back Office&quot;</h2>&quot;&quot;" <nav className=&quot;space-y-1&quot;>&quot; {navItems.map((item) => (&quot;}&quot;<Link key={item.href} href={item.href} className=&quot;block rounded-md px-3 py-2 text-sm hover: bg-accent&quot;>&quot; {item.title}&quot;&quot;" </Link>))} </nav> </aside>&quot;&quot;" <main className=&quot;flex-1 p-6 overflow-y-auto&quot;>{children}&quot;</main>&quot;&quot;" </div>)}";&quot;&quot;export { AdminLayout } export default AdminLayout ';
+';&apos;&apos;const navItems = [&apos; { title: &apos;Products&apos;, href: &apos;/admin/products&apos; },&apos; { title: &apos;Services&apos;, href: &apos;/admin/services&apos; },&apos; { title: &apos;Users&apos;, href: &apos;/admin/users&apos; },&apos; { title: &apos;Reports&apos;, href: &apos;/admin/reports&apos; },&apos;]'&apos;&apos;export function AdminLayout({ children }) { return (}<div className=&apos;flex min-h-screen&apos;>'&apos;&apos; <aside className=&apos;w-64 border-r p-6 space-y-2 bg-muted/50&apos;>'&apos;&apos; <h2 className=&apos;font-semibold text-lg mb-4&apos;>Back Office&apos;</h2>&apos;&apos;' <nav className=&apos;space-y-1&apos;>&apos; {navItems.map((item) => (&apos;}&apos;<Link key={item.href} href={item.href} className=&apos;block rounded-md px-3 py-2 text-sm hover: bg-accent&apos;>&apos; {item.title}&apos;&apos;' </Link>))} </nav> </aside>&apos;&apos;' <main className=&apos;flex-1 p-6 overflow-y-auto&apos;>{children}&apos;</main>&apos;&apos;' <;</div>)}';&apos;&apos;export { AdminLayout } export default AdminLayout ';&apos;&apos;";
+&quot;"
+=======
+<<<<<<< HEAD
+";const navItems = [" { title: "Products", href: "/admin/products" }," { title: "Services", href: "/admin/services" }," { title: "Users", href: "/admin/users" }," { title: "Reports", href: "/admin/reports" },"]";export function AdminLayout({ children }) { return (<div className="flex min-h-screen">" <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">" <h2 className="font-semibold text-lg mb-4">Back Office</h2>" <nav className="space-y-1">" {navItems.map((item) => (<Link key={item.href} href={item.href} className="block rounded-md px-3 py-2 text-sm hover: bg-accent">" {item.title}" </Link>))} </nav> </aside>" <main className="flex-1 p-6 overflow-y-auto">{children}</main>" </div>)}";export { AdminLayout } export default AdminLayout ';'
+<<<<<<< HEAD
+'const navItems = [' { title: 'Products', href: '/admin/products' },' { title: 'Services', href: '/admin/services' },' { title: 'Users', href: '/admin/users' },' { title: 'Reports', href: '/admin/reports' },']'export function AdminLayout({ children }) { return (<div className='flex min-h-screen'>' <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'>' <h2 className='font-semibold text-lg mb-4'>Back Office</h2>' <nav className='space-y-1'>' {navItems.map((item) => (<Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent'>' {item.title}' </Link>))} </nav> </aside>' <main className='flex-1 p-6 overflow-y-auto'>{children}</main>' </div>)}';export { AdminLayout } export default AdminLayout ';''"'"
+=======
+<<<<<<< HEAD
+';const navItems = [' { title: 'Products', href: '/admin/products' }, { title: 'Services', href: '/admin/services' }, { title: 'Users', href: '/admin/users' }, { title: 'Reports', href: '/admin/reports' },]export function AdminLayout({ children }) { return (<div className='flex min-h-screen> <aside className='w-64 border-r p-6 space-y-2 bg-muted/50> <h2 className='font-semibold text-lg mb-4'>Back Office</h2>' <nav className='space-y-1> {navItems.map((item) => (<Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent> {item.title} </Link>))} </nav> </aside>' <main className='flex-1 p-6 overflow-y-auto'>{children}</main>' </div>)};export { AdminLayout } export default AdminLayout ';'";""
+=======
+';const navItems = [' { title: 'Products', href: '/admin/products' },' { title: 'Services', href: '/admin/services' },' { title: 'Users', href: '/admin/users' },' { title: 'Reports', href: '/admin/reports' },']'export function AdminLayout({ children }) { return (<div className='flex min-h-screen'>' <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'>' <h2 className='font-semibold text-lg mb-4'>Back Office</h2>' <nav className='space-y-1'>' {navItems.map((item) => (<Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent'>' {item.title}' </Link>))} </nav> </aside>' <main className='flex-1 p-6 overflow-y-auto'>{children}</main>' </div>)}';export { AdminLayout } export default AdminLayout ';''";'"
+<<<<<<< HEAD
+";const navItems = [" { title: "Products", href: "/admin/products" }," { title: "Services", href: "/admin/services" }," { title: "Users", href: "/admin/users" }," { title: "Reports", href: "/admin/reports" },"]";export function AdminLayout({ children }) { return (<div className="flex min-h-screen">" <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">" <h2 className="font-semibold text-lg mb-4">Back Office</h2>" <nav className="space-y-1">" {navItems.map((item) => (<Link key={item.href} href={item.href} className="block rounded-md px-3 py-2 text-sm hover: bg-accent">" {item.title}" </Link>))} </nav> </aside>" <main className="flex-1 p-6 overflow-y-auto">{children}</main>" </div>)}";export { AdminLayout } export default AdminLayout ''
+';const navItems = [' { title: 'Products', href: '/admin/products' },' { title: 'Services', href: '/admin/services' },' { title: 'Users', href: '/admin/users' },' { title: 'Reports', href: '/admin/reports' },']';export function AdminLayout({ children }) { return (<div className='flex min-h-screen'>' <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'>' <h2 className='font-semibold text-lg mb-4'>Back Office</h2>' <nav className='space-y-1'>' {navItems.map((item) => (<Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent'>' {item.title}' </Link>))} </nav> </aside>' <main className='flex-1 p-6 overflow-y-auto'>{children}</main>' </div>)}';export { AdminLayout } export default AdminLayout ';;''"'"
+""
+=======
+=======
+";const navItems = [" { title: "Products", href: "/admin/products" }," { title: "Services", href: "/admin/services" }," { title: "Users", href: "/admin/users" }," { title: "Reports", href: "/admin/reports" },"]";export function AdminLayout({ children }) { return (<div className="flex min-h-screen">" <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">" <h2 className="font-semibold text-lg mb-4">Back Office</h2>" <nav className="space-y-1">" {navItems.map((item) => (<Link key={item.href} href={item.href} className="block rounded-md px-3 py-2 text-sm hover: bg-accent">" {item.title}" </Link>))} </nav> </aside>" <main className="flex-1 p-6 overflow-y-auto">{children}</main>" </div>)}";export { AdminLayout } export default AdminLayout 
+';const navItems = [' { title: 'Products', href: '/admin/products' },' { title: 'Services', href: '/admin/services' },' { title: 'Users', href: '/admin/users' },' { title: 'Reports', href: '/admin/reports' },']'export function AdminLayout({ children }) { return (<div className='flex min-h-screen'>' <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'>' <h2 className='font-semibold text-lg mb-4'>Back Office</h2>' <nav className='space-y-1'>' {navItems.map((item) => (<Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent'>' {item.title}' </Link>))} </nav> </aside>' <main className='flex-1 p-6 overflow-y-auto'>{children}</main>' </div>)}';export { AdminLayout } export default AdminLayout '"
+";const navItems = [" { title: "Products", href: "/admin/products" }," { title: "Services", href: "/admin/services" }," { title: "Users", href: "/admin/users" }," { title: "Reports", href: "/admin/reports" },"]";export function AdminLayout({ children }) { return (<div className="flex min-h-screen">" <aside className="w-64 border-r p-6 space-y-2 bg-muted/50">" <h2 className="font-semibold text-lg mb-4">Back Office</h2>" <nav className="space-y-1">" {navItems.map((item) => (<Link key={item.href} href={item.href} className="block rounded-md px-3 py-2 text-sm hover: bg-accent">" {item.title}" </Link>))} </nav> </aside>" <main className="flex-1 p-6 overflow-y-auto">{children}</main>" </div>)}";export { AdminLayout } export default AdminLayout '
+';const navItems = [' { title: 'Products', href: '/admin/products' },' { title: 'Services', href: '/admin/services' },' { title: 'Users', href: '/admin/users' },' { title: 'Reports', href: '/admin/reports' },']';export function AdminLayout({ children }) { return (<div className='flex min-h-screen'>' <aside className='w-64 border-r p-6 space-y-2 bg-muted/50'>' <h2 className='font-semibold text-lg mb-4'>Back Office</h2>' <nav className='space-y-1'>' {navItems.map((item) => (<Link key={item.href} href={item.href} className='block rounded-md px-3 py-2 text-sm hover: bg-accent'>' {item.title}' </Link>))} </nav> </aside>' <main className='flex-1 p-6 overflow-y-auto'>{children}</main>' </div>)}';export { AdminLayout } export default AdminLayout ';;''"
+"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

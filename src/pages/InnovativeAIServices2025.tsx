@@ -1,47 +1,27 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-
-export default function InnovativeAIServices2025() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="InnovativeAIServices2025 - Zion Tech Group"
-        description="Professional innovativeaiservices2025 services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              InnovativeAIServices2025
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional innovativeaiservices2025 services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
-                Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Zap, Shield, TrendingUp, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink, BookOpen, Lightbulb, Settings, BarChart, PieChart, Activity, TrendingDown, Eye, EyeOff, Download, Share2, Bookmark, Heart as HeartIcon, Robot, Microscope, TestTube, Flask, Atom, Rocket, Satellite, Telescope, DNA, Pill, Stethoscope, Calculator, ChartBar, Cog, Wrench, Hammer, Paintbrush, Palette, Camera, Video, Music, Gamepad2, Car, Plane, Ship, Train, Building, Factory, Home, Store, Bank, GraduationCap, Briefcase, UserCheck, UserPlus, Users2, UserX, UserMinus, UserCog, UserEdit, UserSearch, UserVoice, UserHeart, UserStar, UserCheck2, UserPlus2, UserX2, UserMinus2, UserCog2, UserEdit2, UserSearch2, UserVoice2, UserHeart2, UserStar2    } from 'lucide-react' import { SEO } from '../components/SEO'  export default function InnovativeAIServices2025() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [viewMode, setViewMode] = useState('grid')  const aiServices = [;"
+}"
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Zap, Shield, TrendingUp, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink, BookOpen, Lightbulb, Settings, BarChart, PieChart, Activity, TrendingDown, Eye, EyeOff, Download, Share2, Bookmark, Heart as HeartIcon, Robot, Microscope, TestTube, Flask, Atom, Rocket, Satellite, Telescope, DNA, Pill, Stethoscope, Calculator, ChartBar, Cog, Wrench, Hammer, Paintbrush, Palette, Camera, Video, Music, Gamepad2, Car, Plane, Ship, Train, Building, Factory, Home, Store, Bank, GraduationCap, Briefcase, UserCheck, UserPlus, Users2, UserX, UserMinus, UserCog, UserEdit, UserSearch, UserVoice, UserHeart, UserStar, UserCheck2, UserPlus2, UserX2, UserMinus2, UserCog2, UserEdit2, UserSearch2, UserVoice2, UserHeart2, UserStar2    } from 'lucide-react' import { SEO } from '../components/SEO'  export default function InnovativeAIServices2025() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState(') const [viewMode, setViewMode] = useState('grid')  const aiServices = [;
+=======
+<<<<<<< HEAD
+import React, {useState } from 'react' ;
+import {motion    } from 'framer-motion' import {Link    } from 'react-router-dom' ;
+import {Brain, Zap, Shield, TrendingUp, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink, BookOpen, Lightbulb, Settings, BarChart, PieChart, Activity, TrendingDown, Eye, EyeOff, Download, Share2, Bookmark, Heart as HeartIcon, Robot, Microscope, TestTube, Flask, Atom, Rocket, Satellite, Telescope, DNA, Pill, Stethoscope, Calculator, ChartBar, Cog, Wrench, Hammer, Paintbrush, Palette, Camera, Video, Music, Gamepad2, Car, Plane, Ship, Train, Building, Factory, Home, Store, Bank, GraduationCap, Briefcase, UserCheck, UserPlus, Users2, UserX, UserMinus, UserCog, UserEdit, UserSearch, UserVoice, UserHeart, UserStar, UserCheck2, UserPlus2, UserX2, UserMinus2, UserCog2, UserEdit2, UserSearch2, UserVoice2, UserHeart2, UserStar2    } from 'lucide-react' import {SEO } from '../components/SEO'  export default function InnovativeAIServices2025()   {const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [viewMode, setViewMode] = useState('grid')  const aiServices = [;"
 }
+=======
+<<<<<<< HEAD
+import React, { useState } from &apos;react&apos; import { motion    } from &apos;framer-motion&apos; import { Link    } from &apos;react-router-dom&apos; import {  Brain, Zap, Shield, TrendingUp, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink, BookOpen, Lightbulb, Settings, BarChart, PieChart, Activity, TrendingDown, Eye, EyeOff, Download, Share2, Bookmark, Heart as HeartIcon, Robot, Microscope, TestTube, Flask, Atom, Rocket, Satellite, Telescope, DNA, Pill, Stethoscope, Calculator, ChartBar, Cog, Wrench, Hammer, Paintbrush, Palette, Camera, Video, Music, Gamepad2, Car, Plane, Ship, Train, Building, Factory, Home, Store, Bank, GraduationCap, Briefcase, UserCheck, UserPlus, Users2, UserX, UserMinus, UserCog, UserEdit, UserSearch, UserVoice, UserHeart, UserStar, UserCheck2, UserPlus2, UserX2, UserMinus2, UserCog2, UserEdit2, UserSearch2, UserVoice2, UserHeart2, UserStar2    } from &apos;lucide-react&apos; import { SEO } from &apos;../components/SEO&apos;&apos;'  export default function InnovativeAIServices2025() ;{} const [activeCategory, setActiveCategory] = useState(&apos;all&apos;)&apos;' const [searchTerm, setSearchTerm] = useState(&apos;&apos;)&apos;&apos; const;const [viewMode, setViewMode] = useState(&apos;grid&apos;)  ;&apos;const aiServices = [;
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react' import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Zap, Shield, TrendingUp, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink, BookOpen, Lightbulb, Settings, BarChart, PieChart, Activity, TrendingDown, Eye, EyeOff, Download, Share2, Bookmark, Heart as HeartIcon, Robot, Microscope, TestTube, Flask, Atom, Rocket, Satellite, Telescope, DNA, Pill, Stethoscope, Calculator, ChartBar, Cog, Wrench, Hammer, Paintbrush, Palette, Camera, Video, Music, Gamepad2, Car, Plane, Ship, Train, Building, Factory, Home, Store, Bank, GraduationCap, Briefcase, UserCheck, UserPlus, Users2, UserX, UserMinus, UserCog, UserEdit, UserSearch, UserVoice, UserHeart, UserStar, UserCheck2, UserPlus2, UserX2, UserMinus2, UserCog2, UserEdit2, UserSearch2, UserVoice2, UserHeart2, UserStar2    } from 'lucide-react' import { SEO } from '../components/SEO'  export default function InnovativeAIServices2025() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [viewMode, setViewMode] = useState('grid')  const aiServices = [;","
+=======
+import React, { useState } from 'react' import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Zap, Shield, TrendingUp, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink, BookOpen, Lightbulb, Settings, BarChart, PieChart, Activity, TrendingDown, Eye, EyeOff, Download, Share2, Bookmark, Heart as HeartIcon, Robot, Microscope, TestTube, Flask, Atom, Rocket, Satellite, Telescope, DNA, Pill, Stethoscope, Calculator, ChartBar, Cog, Wrench, Hammer, Paintbrush, Palette, Camera, Video, Music, Gamepad2, Car, Plane, Ship, Train, Building, Factory, Home, Store, Bank, GraduationCap, Briefcase, UserCheck, UserPlus, Users2, UserX, UserMinus, UserCog, UserEdit, UserSearch, UserVoice, UserHeart, UserStar, UserCheck2, UserPlus2, UserX2, UserMinus2, UserCog2, UserEdit2, UserSearch2, UserVoice2, UserHeart2, UserStar2    } from 'lucide-react' import { SEO }  from '../components/SEO';export default function InnovativeAIServices2025() { const [activeCategory, setActiveCategory] = useState('all') const [searchTerm, setSearchTerm] = useState('') const [viewMode, setViewMode] = useState('grid')  const aiServices = [;",
+>>>>>>> main
+}
+""
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -1,47 +1,248 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 
-export default function SimpleNavigation() {
+<<<<<<< HEAD
+import React, {useState, useEffect } from 'react';
+import {Link, useLocation } from 'react-router-dom';
+import {motion } from 'framer-motion';
+import {Menu, X, Home, Info, Phone, Brain, Code, Network, Rocket, ShoppingCart, BarChart3 } from 'lucide-react';
+
+const SimpleNavigation: React.FC = () => {const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {setMobileMenuOpen(false);
+  }, [location.pathname]);
+
+<<<<<<< HEAD
+  const navigationItems = ['
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'AI Services', href: '/ai-services', icon: Brain },
+    { name: 'Micro SAAS', href: '/micro-saas', icon: Code },
+    { name: 'IT Services', href: '/it-services', icon: Network },
+    { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket },
+    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+    { name: 'Services', href: '/services', icon: BarChart3 },
+    { name: 'About', href: '/about', icon: Info },
+    { name: 'Contact', href: '/contact', icon: Phone }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="SimpleNavigation - Zion Tech Group"
-        description="Professional simplenavigation services by Zion Tech Group"
-      />
-      
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              SimpleNavigation
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional simplenavigation services designed to meet your business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
-              >
+    <>'
+      <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${`
+        scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent''
+      }`}>`
+        <div className="max-w-7xl mx-auto px-6">"
+          <div className="flex items-center justify-between h-20">"
+            <Link to="/" className="flex items-center space-x-3 group">"
+              <div className="relative">"
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
+=======
+  const navigationItems = [{name: 'Home', href: '/', icon: Home },
+    {name: 'AI Services', href: '/ai-services', icon: Brain },
+    {name: 'Micro SAAS', href: '/micro-saas', icon: Code },
+    {name: 'IT Services', href: '/it-services', icon: Network },
+    {name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket },
+    {name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+    {name: 'Services', href: '/services', icon: BarChart3 },
+    {name: 'About', href: '/about', icon: Info },
+    {name: 'Contact', href: '/contact', icon: Phone }
+  ];
+
+  return (
+    <>
+      <nav className={`hidden lg: block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${ scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center justify-between h-20">
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover: scale-110 transition-transform duration-300">
+>>>>>>> main
+                  <span className="text-white font-bold text-xl">Z</span>
+                </div>"
+                <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl blur-lg opacity-50 group-hove,
+    r:opacity-75 transition-opacity duration-300"></div>
+              </div>
+              <div>"
+                <div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                  ZION
+                </div>"
+                <div className="text-xs text-zion-cyan font-medium">TECH GROUP</div>
+              </div>
+            </Link>
+"
+            <div className="flex items-center space-x-1">
+              {navigationItems.map((item) => (
+<<<<<<< HEAD
+                <Link
+                  key={item.name}
+                  to={item.href}"
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${`
+                    location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25' : 'text-gray-300 hover:text-white hove,
+    r:bg-zion-slate-light/30''
+                  }`}
+                >`
+=======
+                <Link key={item.name} to={item.href} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${ location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25' : 'text-gray-300 hover: text-white hover:bg-zion-slate-light/30' }`} >
+>>>>>>> main
+                  <item.icon className="w-4 h-4" />
+                  <span>{item.name}</span>
+                </Link>
+              ))}
+            </div>
+<<<<<<< HEAD
+"
+            <div className="flex items-center space-x-3">"
+              <button className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover: shadow-lg hove,
+    r:shadow-zion-cyan/25 transition-all duration-300">
+=======
+
+            <div className="flex items-center space-x-3">
+              <button className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover: shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
+>>>>>>> main
                 Get Started
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+<<<<<<< HEAD
+"
+      <nav className="l,
+    g:hidden fixed top-0 left-0 right-0 z-50">"
+        <div className={`transition-all duration-500 ${`
+          scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent''
+        }`}>`
+          <div className="max-w-7xl mx-auto px-6">"
+            <div className="flex items-center justify-between h-20">"
+              <Link to="/" className="flex items-center space-x-3">"
+                <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">"
+=======
+
+      <nav className="lg:hidden fixed top-0 left-0 right-0 z-50">
+        <div className={`transition-all duration-500 ${ scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}>
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex items-center justify-between h-20">
+              <Link to="/" className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
+>>>>>>> main
+                  <span className="text-white font-bold text-lg">Z</span>
+                </div>
+                <div>"
+                  <div className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                    ZION
+                  </div>"
+                  <div className="text-xs text-zion-cyan font-medium">TECH GROUP</div>
+                </div>
+              </Link>
+
+<<<<<<< HEAD
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}"
+                className="p-2 text-gray-400 hover:text-white hove,
+    r:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
+              >"
+=======
+              <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 text-gray-400 hover: text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
               >
-                Learn More
-              </motion.button>
+>>>>>>> main
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {mobileMenuOpen && (
+<<<<<<< HEAD
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}"
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden"
+          >"
+            <div className="max-w-7xl mx-auto px-6 py-6">"
+              <div className="space-y-2">
+                {navigationItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}"
+                    className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${`
+                      location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' : 'text-gray-300 hover:text-white hove,
+    r:bg-zion-slate-light/30''
+                    }`}
+                  >`
+                    <div className="flex items-center space-x-3">"
+=======
+          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }} className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden" >
+            <div className="max-w-7xl mx-auto px-6 py-6">
+              <div className="space-y-2">
+                {navigationItems.map((item) => (
+                  <Link key={item.name} to={item.href} className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${ location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' : 'text-gray-300 hover: text-white hover:bg-zion-slate-light/30' }`} >
+                    <div className="flex items-center space-x-3">
+>>>>>>> main
+                      <item.icon className="w-4 h-4" />
+                      <span>{item.name}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+"
+              <div className="mt-8 pt-6 border-t border-zion-cyan/20">"
+                <div className="text-center">"
+                  <div className="text-zion-cyan font-semibold mb-2">Contact Us</div>"
+                  <div className="text-sm text-gray-400 space-y-1">
+                    <div>+1 302 464 0950</div>
+                    <div>kleber@ziontechgroup.com</div>
+                    <div>364 E Main St STE 1008</div>
+                    <div>Middletown DE 19709</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        )}
+      </nav>
+"
+      <div className="h-20"></div>
+    </>
   );
-}
+};
+
+<<<<<<< HEAD
+export default SimpleNavigation;"
+=======
+export default SimpleNavigation;
+=======
+;
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { Link, useLocation    } from 'react-router-dom' import { motion    } from 'framer-motion' import { Menu, X, Home, Info, Phone, Brain, Code, Network, Rocket, ShoppingCart, BarChart3    } from 'lucide-react' const SimpleNavigation: React.FC = () => { const [scrolled, setScrolled] = useState(false) const [mobileMenuOpen, setMobileMenuOpen] = useState(false) const location = useLocation() useEffect(() => { const handleScroll = () => { setScrolled(window.scrollY > 20) } window.addEventListener('scroll', handleScroll) return () => window.removeEventListener('scroll', handleScroll) }, []) useEffect(() => { setMobileMenuOpen(false) }, [location.pathname]) const navigationItems = [{ name: 'Home', href: '/', icon: Home }, { name: 'AI Services', href: '/ai-services', icon: Brain }, { name: 'Micro SAAS', href: '/micro-saas', icon: Code }, { name: 'IT Services', href: '/it-services', icon: Network }, { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket }, { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart }, { name: 'Services', href: '/services', icon: BarChart3 }, { name: 'About', href: '/about', icon: Info }, { name: 'Contact', href: '/contact', icon: Phone } ] return (<> {} <nav className={`hidden lg: block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}> <div className='max-w-7xl mx-auto px-6'> <div className='flex items-center justify-between h-20'> {} <Link to='/' className='flex items-center space-x-3 group'> <div className='relative'> <div className='w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'> <span className='text-white font-bold text-xl'>Z</span> </div> <div className='absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div> </div> <div> <div className='text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'> ZION </div> <div className='text-xs text-zion-cyan font-medium'>TECH GROUP</div> </div> </Link> {} <div className='flex items-center space-x-1'> {navigationItems.map((item) => ( <Link key={item.name} to={item.href} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25' : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30' }`} > <item.icon className='w-4 h-4' /> <span>{item.name}</span> </Link> ))} </div> {} <div className='flex items-center space-x-3'> <button className='px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover: shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300'> Get Started </button> </div> </div> </div> </nav> {} <nav className='lg:hidden fixed top-0 left-0 right-0 z-50'> <div className={`transition-all duration-500 ${scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}> <div className='max-w-7xl mx-auto px-6'> <div className='flex items-center justify-between h-20'> {} <Link to='/' className='flex items-center space-x-3'> <div className='w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center'> <span className='text-white font-bold text-lg'>Z</span> </div> <div> <div className='text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'> ZION </div> <div className='text-xs text-zion-cyan font-medium'>TECH GROUP</div> </div> </Link> {} <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className='p-2 text-gray-400 hover: text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200' > {mobileMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />} </button> </div> </div> </div> {} {mobileMenuOpen && ( <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3    }} className='bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden' > <div className='max-w-7xl mx-auto px-6 py-6'> {} <div className='space-y-2'> {navigationItems.map((item) => ( <Link key={item.name} to={item.href} className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30' }`} > <div className='flex items-center space-x-3'> <item.icon className='w-4 h-4' /> <span>{item.name}</span> </div> </Link> ))} </div> {} <div className='mt-8 pt-6 border-t border-zion-cyan/20'> <div className='text-center'> <div className='text-zion-cyan font-semibold mb-2'>Contact Us</div> <div className='text-sm text-gray-400 space-y-1'> <div>+1 302 464 0950</div> <div>kleber@ziontechgroup.com</div> <div>364 E Main St STE 1008</div> <div>Middletown DE 19709</div> </div> </div> </div> </div> </motion.div> )} </nav> {} <div className='h-20'></div> </> ) } export default SimpleNavigation
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from &apos;
+import { motion } from &apos;framer-motion';;
+import Link from &apos;next/link';react&apos; import { Link, useLocation    } from &apos;react-router-dom&apos; import { motion    } from &apos;framer-motion&apos; import { Menu, X, Home, Info, Phone, Brain, Code, Network, Rocket, ShoppingCart, BarChart3    } from &apos;lucide-react&apos;&apos;' const SimpleNavigation: React.FC = () => {} const [scrolled, setScrolled] = useState(false) const [mobileMenuOpen, setMobileMenuOpen] = useState(false) const location = useLocation() useEffect(() => {} const;const handleScroll = () => { setScrolled(window.scrollY > 20) } window.addEventListener(&apos;scroll&apos;, handleScroll) return () => window.removeEventListener(&apos;scroll&apos;, handleScroll) }, []) useEffect(() => { setMobileMenuOpen(false) }, [location.pathname])&apos; const navigationItems = [{ name: &apos;Home&apos;, href: &apos;/&apos;, icon: Home }, { name: &apos;AI Services&apos;, href: &apos;/ai-services&apos;, icon: Brain }, { name: &apos;Micro SAAS&apos;, href: &apos;/micro-saas&apos;, icon: Code }, { name: &apos;IT Services&apos;, href: &apos;/it-services&apos;, icon: Network }, { name: &apos;Emerging Tech&apos;, href: &apos;/emerging-tech&apos;, icon: Rocket }, { name: &apos;Marketplace&apos;, href: &apos;/marketplace&apos;, icon: ShoppingCart }, { name: &apos;Services&apos;, href: &apos;/services&apos;, icon: BarChart3 }, { name: &apos;About&apos;, href: &apos;/about&apos;, icon: Info }, { name: &apos;Contact&apos;, href: &apos;/contact&apos;, icon: Phone } ] return (&apos;&apos;<> {} <nav className={`hidden lg:block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? &apos;bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10&apos; : &apos;bg-transparent&apos; }`}>&apos; <div className=&apos;max-w-7xl mx-auto px-6&apos;>&apos;' <div className=&apos;flex items-center justify-between h-20&apos;> {}&apos; <Link to=&apos;/&apos; className=&apos;flex items-center space-x-3 group&apos;>&apos;' <div className=&apos;relative&apos;>&apos;' <div className=&apos;w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300&apos;>&apos;' <span className=&apos;text-white font-bold text-xl&apos;>Z&apos;</span> </div> <div className=&apos;absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl blur-lg opacity-50 group-hove,r:opacity-75 transition-opacity duration-300&apos;>&apos;'</div> </div> <div> <div className=&apos;text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent&apos;> ZION&apos; </div> <div className=&apos;text-xs text-zion-cyan font-medium&apos;>TECH GROUP&apos;</div> </div> </Link> {} <div className=&apos;flex items-center space-x-1&apos;> {navigationItems.map((item) => (&apos;} <Link key={item.name} to={item.href} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${location.pathname === item.href ? &apos;bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25&apos; : &apos;text-gray-300 hover:text-white hove,r:bg-zion-slate-light/30&apos; }`} >&apos; <item.icon className=&apos;w-4 h-4&apos; />&apos; <span>{item.name}</span> </Link> ))} </div> {} <div className=&apos;flex items-center space-x-3&apos;>&apos;' <button className=&apos;px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hove,r:shadow-zion-cyan/25 transition-all duration-300&apos;> Get Started&apos; </button> </div> </div> </div> </nav> {} <nav className=&apos;lg:hidden fixed top-0 left-0 right-0 z-50&apos;>&apos;' <div className={`transition-all duration-500 ${scrolled ? &apos;bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10&apos; : &apos;bg-transparent&apos; }`}>&apos; <div className=&apos;max-w-7xl mx-auto px-6&apos;>&apos;' <div className=&apos;flex items-center justify-between h-20&apos;> {}&apos; <Link to=&apos;/&apos; className=&apos;flex items-center space-x-3&apos;>&apos;' <div className=&apos;w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center&apos;>&apos;' <span className=&apos;text-white font-bold text-lg&apos;>Z&apos;</span> </div> <div> <div className=&apos;text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent&apos;> ZION&apos; </div> <div className=&apos;text-xs text-zion-cyan font-medium&apos;>TECH GROUP&apos;</div> </div> </Link> {} <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className=&apos;p-2 text-gray-400 hover:text-white hove,r:bg-zion-slate-light/30 rounded-lg transition-all duration-200&apos; > {mobileMenuOpen ?&apos;} <X className=&apos;w-6 h-6&apos; /> :&apos; <Menu className=&apos;w-6 h-6&apos; />}&apos; </button> </div> </div> </div> {} {mobileMenuOpen && (} <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: &apos;auto&apos; }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3  }} className=&apos;bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden&apos; >&apos; <div className=&apos;max-w-7xl mx-auto px-6 py-6&apos;> {}&apos; <div className=&apos;space-y-2&apos;> {navigationItems.map((item) => (&apos;} <Link key={item.name} to={item.href} className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${location.pathname === item.href ? &apos;bg-gradient-to-r from-zion-cyan to-zion-purple text-white&apos; : &apos;text-gray-300 hover:text-white hove,r:bg-zion-slate-light/30&apos; }`} >&apos; <div className=&apos;flex items-center space-x-3&apos;>&apos;' <item.icon className=&apos;w-4 h-4&apos; />&apos; <span>{item.name}</span> </div> </Link> ))} </div> {} <div className=&apos;mt-8 pt-6 border-t border-zion-cyan/20&apos;>&apos;' <div className=&apos;text-center&apos;>&apos;' <div className=&apos;text-zion-cyan font-semibold mb-2&apos;>Contact Us&apos;</div> <div className=&apos;text-sm text-gray-400 space-y-1&apos;>&apos;' <div>+1 302 464 0950</div> <div>kleber@ziontechgroup.com</div> <div>364 E Main St STE 1008</div> <div>Middletown DE 19709</div> </div> </div> </div> </div> </motion.div> )} </nav> {} <div className=&apos;h-20&apos;>&apos;'</div> </> ) } export;export default SimpleNavigation;
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { Link, useLocation    } from 'react-router-dom' import { motion    } from 'framer-motion' import { Menu, X, Home, Info, Phone, Brain, Code, Network, Rocket, ShoppingCart, BarChart3    } from 'lucide-react' const SimpleNavigation: React.FC = () => { const [scrolled, setScrolled] = useState(false) const [mobileMenuOpen, setMobileMenuOpen] = useState(false) const location = useLocation() useEffect(() => { const handleScroll = () => { setScrolled(window.scrollY > 20) } window.addEventListener('scroll', handleScroll) return () => window.removeEventListener('scroll', handleScroll) }, []) useEffect(() => { setMobileMenuOpen(false) }, [location.pathname]) const navigationItems = [{ name: 'Home', href: '/', icon: Home }, { name: 'AI Services', href: '/ai-services', icon: Brain }, { name: 'Micro SAAS', href: '/micro-saas', icon: Code }, { name: 'IT Services', href: '/it-services', icon: Network }, { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket }, { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart }, { name: 'Services', href: '/services', icon: BarChart3 }, { name: 'About', href: '/about', icon: Info }, { name: 'Contact', href: '/contact', icon: Phone } ] return (<> {} <nav className={`hidden lg: block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}" > <div className='max-w-7xl mx-auto px-6'> <div className='flex items-center justify-between h-20'> {} <Link to='/' className='flex items-center space-x-3 group'> <div className='relative'> <div className='w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'> <span className='text-white font-bold text-xl'>Z</span> </div> <div className='absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div> </div> <div> <div className='text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'> ZION </div> <div className='text-xs text-zion-cyan font-medium'>TECH GROUP</div> </div> </Link> {} <div className='flex items-center space-x-1'> {navigationItems.map((item) => ( <Link key={item.name} to={item.href} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25' : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30' }`}" > <item .icon className='w-4 h-4' /" > <span>{item.name}</span> </Link> ))} </div> {} <div className='flex items-center space-x-3'> <button className='px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover: shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300'> Get Started </button> </div> </div> </div> </nav> {} <nav className='lg:hidden fixed top-0 left-0 right-0 z-50'> <div className={`transition-all duration-500 ${scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}" > <div className='max-w-7xl mx-auto px-6'> <div className='flex items-center justify-between h-20'> {} <Link to='/' className='flex items-center space-x-3'> <div className='w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center'> <span className='text-white font-bold text-lg'>Z</span> </div> <div> <div className='text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'> ZION </div> <div className='text-xs text-zion-cyan font-medium'>TECH GROUP</div> </div> </Link> {} <button onClick={() =" > setMobileMenuOpen(!mobileMenuOpen)} className='p-2 text-gray-400 hover: text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200' > {mobileMenuOpen ? <X className='w-6 h-6' /" > : <Menu className='w-6 h-6' /" >} </button> </div> </div> </div> {} {mobileMenuOpen && ( <motion .div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3  }} className='bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden'" > <div className='max-w-7xl mx-auto px-6 py-6'> {} <div className='space-y-2'> {navigationItems.map((item) => ( <Link key={item.name} to={item.href} className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30' }`}" > <div className='flex items-center space-x-3'> <item .icon className='w-4 h-4' /" > <span>{item.name}</span> </div> </Link> ))} </div> {} <div className='mt-8 pt-6 border-t border-zion-cyan/20'> <div className='text-center'> <div className='text-zion-cyan font-semibold mb-2'>Contact Us</div> <div className='text-sm text-gray-400 space-y-1'> <div>+1 302 464 0950</div> <div>kleber@ziontechgroup.com</div> <div>364 E Main St STE 1008</div> <div>Middletown DE 19709</div> </div> </div> </div> </div> </motion.div> )} </nav> {} <div className='h-20'></div> </> ) } export default SimpleNavigation
+;"`"
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react' import { Link, useLocation    } from 'react-router-dom' import { motion    } from 'framer-motion' import { Menu, X, Home, Info, Phone, Brain, Code, Network, Rocket, ShoppingCart, BarChart3    } from 'lucide-react' const SimpleNavigation: React.FC = () => { const [scrolled, setScrolled] = useState(false) const [mobileMenuOpen, setMobileMenuOpen] = useState(false) const location = useLocation() useEffect(() => { const handleScroll = () => { setScrolled(window.scrollY > 20) } window.addEventListener('scroll', handleScroll) return () => window.removeEventListener('scroll', handleScroll) }, []) useEffect(() => { setMobileMenuOpen(false) }, [location.pathname]) const navigationItems = [{ name: 'Home', href: '/', icon: Home }, { name: 'AI Services', href: '/ai-services', icon: Brain }, { name: 'Micro SAAS', href: '/micro-saas', icon: Code }, { name: 'IT Services', href: '/it-services', icon: Network }, { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket }, { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart }, { name: 'Services', href: '/services', icon: BarChart3 }, { name: 'About', href: '/about', icon: Info }, { name: 'Contact', href: '/contact', icon: Phone } ] return (<> {} <nav className={`hidden lg: block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}> <div className='max-w-7xl mx-auto px-6'> <div className='flex items-center justify-between h-20'> {} <Link to='/' className='flex items-center space-x-3 group'> <div className='relative'> <div className='w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'> <span className='text-white font-bold text-xl'>Z</span> </div> <div className='absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div> </div> <div> <div className='text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'> ZION </div> <div className='text-xs text-zion-cyan font-medium'>TECH GROUP</div> </div> </Link> {} <div className='flex items-center space-x-1'> {navigationItems.map((item) => ( <Link key={item.name} to={item.href} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25' : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30' }`} > <item.icon className='w-4 h-4' /> <span>{item.name}</span> </Link> ))} </div> {} <div className='flex items-center space-x-3'> <button className='px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover: shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300'> Get Started </button> </div> </div> </div> </nav> {} <nav className='lg:hidden fixed top-0 left-0 right-0 z-50'> <div className={`transition-all duration-500 ${scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}> <div className='max-w-7xl mx-auto px-6'> <div className='flex items-center justify-between h-20'> {} <Link to='/' className='flex items-center space-x-3'> <div className='w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center'> <span className='text-white font-bold text-lg'>Z</span> </div> <div> <div className='text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'> ZION </div> <div className='text-xs text-zion-cyan font-medium'>TECH GROUP</div> </div> </Link> {} <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className='p-2 text-gray-400 hover: text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200' > {mobileMenuOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />} </button> </div> </div> </div> {} {mobileMenuOpen && ( <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3  }} className='bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden' > <div className='max-w-7xl mx-auto px-6 py-6'> {} <div className='space-y-2'> {navigationItems.map((item) => ( <Link key={item.name} to={item.href} className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30' }`} > <div className='flex items-center space-x-3'> <item.icon className='w-4 h-4' /> <span>{item.name}</span> </div> </Link> ))} </div> {} <div className='mt-8 pt-6 border-t border-zion-cyan/20'> <div className='text-center'> <div className='text-zion-cyan font-semibold mb-2'>Contact Us</div> <div className='text-sm text-gray-400 space-y-1'> <div>+1 302 464 0950</div> <div>kleber@ziontechgroup.com</div> <div>364 E Main St STE 1008</div> <div>Middletown DE 19709</div> </div> </div> </div> </div> </motion.div> )} </nav> {} <div className='h-20'></div> </> ) } export default SimpleNavigation
+=======
+import React, { useState, useEffect } from 'react' import { Link, useLocation    } from 'react-router-dom' import { motion    } from 'framer-motion' import { Menu, X, Home, Info, Phone, Brain, Code, Network, Rocket, ShoppingCart, BarChart3    }  from 'lucide-react';const SimpleNavigation: React.FC = () => { const [scrolled, setScrolled] = useState(false) const [mobileMenuOpen, setMobileMenuOpen] = useState(false) const location = useLocation() useEffect(() => { const handleScroll = () => { setScrolled(window.scrollY > 20) } window.addEventListener('scroll', handleScroll) return () => window.removeEventListener('scroll', handleScroll) }, []) useEffect(() => { setMobileMenuOpen(false) }, [location.pathname]) const navigationItems = [
+  { name: 'Home', href: '/', icon: Home }, { name: 'AI Services', href: '/ai-services', icon: Brain }, { name: 'Micro SAAS', href: '/micro-saas', icon: Code }, { name: 'IT Services', href: '/it-services', icon: Network }, { name: 'Emerging Tech', href: '/emerging-tech', icon: Rocket }, { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart }, { name: 'Services', href: '/services', icon: BarChart3 }, { name: 'About', href: '/about', icon: Info }, { name: 'Contact', href: '/contact', icon: Phone } ] return (<> {} <nav className={`hidden lg: block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}" > <div className='max-w-7xl mx-auto px-6'> <div className='flex items-center justify-between h-20'> {} <Link to='/' className='flex items-center space-x-3 group'> <div className='relative'> <div className='w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'> <span className='text-white font-bold text-xl'>Z</span> </div> <div className='absolute inset-0 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div> </div> <div> <div className='text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'> ZION </div> <div className='text-xs text-zion-cyan font-medium'>TECH GROUP</div> </div> </Link> {} <div className='flex items-center space-x-1'> {navigationItems.map((item) => ( <Link key={item.name} to={item.href} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25' : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30' }`}" > <item .icon className='w-4 h-4' /" > <span>{item.name}</span> </Link> ))} </div> {} <div className='flex items-center space-x-3'> <button className='px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover: shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300'> Get Started </button> </div> </div> </div> </nav> {} <nav className='lg:hidden fixed top-0 left-0 right-0 z-50'> <div className={`transition-all duration-500 ${scrolled ? 'bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' : 'bg-transparent' }`}" > <div className='max-w-7xl mx-auto px-6'> <div className='flex items-center justify-between h-20'> {} <Link to='/' className='flex items-center space-x-3'> <div className='w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center'> <span className='text-white font-bold text-lg'>Z</span> </div> <div> <div className='text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'> ZION </div> <div className='text-xs text-zion-cyan font-medium'>TECH GROUP</div> </div> </Link> {} <button onClick={() =" > setMobileMenuOpen(!mobileMenuOpen)} className='p-2 text-gray-400 hover: text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200' > {mobileMenuOpen ? <X className='w-6 h-6' /" > : <Menu className='w-6 h-6' /" >} </button> </div> </div> </div> {} {mobileMenuOpen && ( <motion .div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3  }} className='bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden'" > <div className='max-w-7xl mx-auto px-6 py-6'> {} <div className='space-y-2'> {navigationItems.map((item) => ( <Link key={item.name} to={item.href} className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${location.pathname === item.href ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' : 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30' }`}" > <div className='flex items-center space-x-3'> <item .icon className='w-4 h-4' /" > <span>{item.name}</span> </div> </Link> ))} </div> {} <div className='mt-8 pt-6 border-t border-zion-cyan/20'> <div className='text-center'> <div className='text-zion-cyan font-semibold mb-2'>Contact Us</div> <div className='text-sm text-gray-400 space-y-1'> <div>+1 302 464 0950</div> <div>kleber@ziontechgroup.com</div> <div>364 E Main St STE 1008</div> <div>Middletown DE 19709</div> </div> </div> </div> </div> </motion.div> )} </nav> {} <div className='h-20'></div> </> ) } export default SimpleNavigation
+;"`
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

@@ -9,9 +9,12 @@ export interface InnovativeMicroSaasService {
    category: string;
    realImplementation: boolean;
    contactInfo: { mobile: string;
-   email: string;
-   address: string}export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [{
-    id: 'smart-project-manager',
+   emai,
+    l: string;
+   addres,
+    s: string}export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [{
+    i,
+    d: 'smart-project-manager',
     name: 'Smart Project Manager',
     tagline: 'AI-powered project management and collaboration',
     price: '$39/month',
@@ -26,8 +29,9 @@ export interface InnovativeMicroSaasService {
     link: '/services/smart-project-manager',
     category: 'Project Management',
     realImplementation: true,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: {'
+      mobil,
+    e: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709';
 ]}}}
