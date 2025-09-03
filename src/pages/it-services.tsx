@@ -58,13 +58,22 @@ const itservices = () => {
 
   const featuredITServices = [
     {
+      title: "Quantum Cloud Infrastructure",
+      description: "Next-generation quantum-enhanced cloud infrastructure with AI optimization, zero-trust security, and 99.99% uptime guarantee.",
+      price: "From $5,999/month",
+      features: ["Quantum-Enhanced Computing", "Hybrid Cloud Architecture", "AI-Optimized Resource Allocation", "Zero-Trust Security Framework", "Edge Computing Integration", "Automated Scaling"],
+      href: "/services/quantum-cloud-infrastructure",
+      color: "from-purple-400 to-indigo-500",
+      popular: true,
+      benefits: ["Reduce infrastructure costs by 60%", "Improve performance by 300%", "Achieve 99.99% uptime SLA", "Scale instantly to meet demand"]
+    },
+    {
       title: "Cloud Migration & Modernization",
       description: "End-to-end cloud migration services with modern architecture and optimization for AWS, Azure, and Google Cloud platforms.",
       price: "From $15,000",
       features: ["Cloud Strategy", "Migration Planning", "Architecture Design", "Data Migration", "Performance Optimization", "Cost Management"],
       href: "/services/cloud-migration",
       color: "from-blue-400 to-cyan-500",
-      popular: true,
       benefits: ["Reduce infrastructure costs by 40%", "Improve scalability and performance", "Enhance security and compliance", "Enable remote work capabilities"]
     },
     {

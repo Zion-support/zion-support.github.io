@@ -63,13 +63,40 @@ const microsaas = () => {
 
   const featuredMicroSaas = [
     {
+      title: "AI Code Review Assistant",
+      description: "Revolutionary AI-powered code review platform that automates code analysis, security scanning, and quality assurance with 95% accuracy.",
+      price: "From $299/month",
+      features: ["AI-Powered Code Analysis", "Automated Security Scanning", "Performance Optimization", "Code Quality Metrics", "Real-time Collaboration", "Git Integration"],
+      href: "/services/ai-code-review-assistant",
+      color: "from-blue-400 to-purple-500",
+      popular: true,
+      benefits: ["Reduce code review time by 70%", "Catch 95% of security vulnerabilities", "Improve code quality by 60%", "Accelerate development cycles"]
+    },
+    {
+      title: "AI Customer Insights Platform",
+      description: "Advanced AI-powered customer analytics platform that predicts behavior, prevents churn, and maximizes customer lifetime value with 95% accuracy.",
+      price: "From $1,999/month",
+      features: ["Real-time Customer Analytics", "Predictive Behavior Modeling", "Sentiment Analysis Engine", "Customer Journey Mapping", "Churn Prediction", "Personalization Engine"],
+      href: "/services/ai-customer-insights-platform",
+      color: "from-emerald-400 to-teal-500",
+      benefits: ["Increase customer retention by 45%", "Boost revenue per customer by 35%", "Reduce churn rate by 60%", "Improve customer satisfaction by 50%"]
+    },
+    {
+      title: "AI Financial Forecasting Suite",
+      description: "Advanced AI-powered financial forecasting platform that predicts revenue, optimizes budgets, and minimizes risks with unprecedented accuracy.",
+      price: "From $2,499/month",
+      features: ["AI-Powered Revenue Forecasting", "Cash Flow Prediction Models", "Risk Assessment & Analysis", "Budget Optimization Engine", "Scenario Planning Tools", "Real-time Dashboards"],
+      href: "/services/ai-financial-forecasting-suite",
+      color: "from-green-400 to-emerald-500",
+      benefits: ["Improve forecast accuracy by 85%", "Reduce financial planning time by 70%", "Optimize cash flow management", "Minimize financial risks by 60%"]
+    },
+    {
       title: "AI-Powered Content Creation Studio",
       description: "Revolutionary content creation platform that uses AI to generate high-quality, engaging content across multiple formats including blog posts, social media, videos, and marketing materials.",
       price: "From $2,999/month",
       features: ["AI Content Generation", "Multi-format Support", "Brand Consistency", "SEO Optimization", "Real-time Collaboration", "Analytics Dashboard"],
       href: "/services/ai-content-creation-studio",
       color: "from-purple-400 to-pink-500",
-      popular: true,
       benefits: ["Increase content production by 300%", "Reduce content creation costs by 60%", "Improve SEO rankings by 40%", "24/7 content generation capability"]
     },
     {
@@ -89,15 +116,7 @@ const microsaas = () => {
       href: "/services/ai-customer-support",
       color: "from-green-400 to-emerald-500",
       benefits: ["Reduce response time by 80%", "Handle 10x more inquiries", "Improve customer satisfaction by 50%", "24/7 automated support"]
-    },
-    {
-      title: "Intelligent Sales Analytics Platform",
-      description: "AI-driven sales analytics platform that provides real-time insights, predicts sales trends, and optimizes sales strategies for maximum revenue growth.",
-      price: "From $2,499/month",
-      features: ["Sales Forecasting", "Lead Scoring", "Pipeline Analytics", "Performance Tracking", "ROI Analysis", "Custom Reports"],
-      href: "/services/intelligent-sales-analytics",
-      color: "from-red-400 to-orange-500",
-      benefits: ["Increase sales conversion by 25%", "Improve forecast accuracy by 40%", "Optimize sales team performance", "Reduce sales cycle time"]
+    }
     },
     {
       title: "Smart HR Management Suite",

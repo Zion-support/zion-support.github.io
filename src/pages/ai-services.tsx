@@ -59,13 +59,40 @@ const aiservices = () => {
 
   const featuredAIServices = [
     {
+      title: "AI Autonomous Business Orchestrator",
+      description: "Revolutionary AI-powered autonomous business orchestrator that automates operations, optimizes processes, and makes intelligent decisions 24/7.",
+      price: "From $7,999/month",
+      features: ["Autonomous Decision Making", "Intelligent Process Automation", "Predictive Business Analytics", "Self-Optimizing Workflows", "Real-time Monitoring", "Adaptive Resource Allocation"],
+      href: "/services/ai-autonomous-business-orchestrator",
+      color: "from-indigo-400 to-purple-500",
+      popular: true,
+      benefits: ["Increase operational efficiency by 75%", "Reduce operational costs by 50%", "Improve decision-making speed by 90%", "Minimize human errors by 95%"]
+    },
+    {
+      title: "AI Customer Insights Platform",
+      description: "Advanced AI-powered customer analytics platform that predicts behavior, prevents churn, and maximizes customer lifetime value with 95% accuracy.",
+      price: "From $1,999/month",
+      features: ["Real-time Customer Analytics", "Predictive Behavior Modeling", "Sentiment Analysis Engine", "Customer Journey Mapping", "Churn Prediction", "Personalization Engine"],
+      href: "/services/ai-customer-insights-platform",
+      color: "from-emerald-400 to-teal-500",
+      benefits: ["Increase customer retention by 45%", "Boost revenue per customer by 35%", "Reduce churn rate by 60%", "Improve customer satisfaction by 50%"]
+    },
+    {
+      title: "AI Financial Forecasting Suite",
+      description: "Advanced AI-powered financial forecasting platform that predicts revenue, optimizes budgets, and minimizes risks with unprecedented accuracy.",
+      price: "From $2,499/month",
+      features: ["AI-Powered Revenue Forecasting", "Cash Flow Prediction Models", "Risk Assessment & Analysis", "Budget Optimization Engine", "Scenario Planning Tools", "Real-time Dashboards"],
+      href: "/services/ai-financial-forecasting-suite",
+      color: "from-green-400 to-emerald-500",
+      benefits: ["Improve forecast accuracy by 85%", "Reduce financial planning time by 70%", "Optimize cash flow management", "Minimize financial risks by 60%"]
+    },
+    {
       title: "AI-Powered Business Intelligence Platform",
       description: "Advanced analytics platform that uses machine learning to provide actionable business insights and predictive analytics with 99.9% accuracy.",
       price: "From $2,999/month",
       features: ["Predictive Analytics", "Real-time Dashboards", "Custom ML Models", "Data Visualization", "Automated Reporting", "API Integration"],
       href: "/services/ai-business-intelligence",
       color: "from-purple-400 to-pink-500",
-      popular: true,
       benefits: ["Increase decision-making speed by 60%", "Improve forecast accuracy by 45%", "Reduce manual reporting by 80%", "Enhance data-driven insights"]
     },
     {
