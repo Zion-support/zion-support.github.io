@@ -173,21 +173,6 @@ function Footer(): any {
         </div>
 
         {/* Services */}
-<<<<<<< HEAD
-        <div className="footer-section">
-          <h3>Services</h3>
-          <Link href="/services">All Services</Link>
-          <Link href="/micro-saas">Micro SaaS Products</Link>
-          <Link href="/ai-services">AI Services</Link>
-          <Link href="/it-services">IT Services</Link>
-          <Link href="/services-catalog">Services Catalog</Link>
-          <Link href="/docs">Documentation</Link>
-          <Link href="/pricing">Pricing</Link>
-          <div className="text-sm mt-2 space-y-1">
-            <div>• 130+ Micro SaaS Products</div>
-            <div>• 90+ AI Services</div>
-            <div>• 90+ IT Solutions</div>
-=======
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Our Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
@@ -202,7 +187,6 @@ function Footer(): any {
               <div>• 100+ AI Services</div>
               <div>• 100+ IT Solutions</div>
             </div>
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
           </div>
         </div>
 

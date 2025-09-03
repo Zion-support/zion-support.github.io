@@ -69,6 +69,53 @@ module.exports = {
       log_file: './logs/performance-monitor.log',
       out_file: './logs/performance-monitor-out.log',
       error_file: './logs/performance-monitor-error.log'
+    },
+    {
+      name: 'error-prevention-system',
+      script: 'node',
+      args: 'automation/error-prevention-system.js',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      cron_restart: '*/10 * * * *', // Run every 10 minutes
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './automation/logs/error-prevention.log',
+      out_file: './automation/logs/error-prevention-out.log',
+      error_file: './automation/logs/error-prevention-error.log'
+    },
+    {
+      name: 'pm2-error-monitor',
+      script: 'node',
+      args: 'automation/pm2-error-monitor.js 30000',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './automation/logs/pm2-error-monitor.log',
+      out_file: './automation/logs/pm2-error-monitor-out.log',
+      error_file: './automation/logs/pm2-error-monitor-error.log'
+    },
+    {
+      name: 'automated-git-workflow',
+      script: 'node',
+      args: 'automation/automated-git-workflow.js',
+      cwd: '/workspace',
+      instances: 1,
+      autorestart: false,
+      watch: false,
+      cron_restart: '0 */4 * * *', // Run every 4 hours
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: './automation/logs/git-workflow.log',
+      out_file: './automation/logs/git-workflow-out.log',
+      error_file: './automation/logs/git-workflow-error.log'
     }
   ]
 };
