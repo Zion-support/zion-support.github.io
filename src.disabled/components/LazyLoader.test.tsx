@@ -1,1 +1,23 @@
+<<<<<<< HEAD
 describe("LazyLoader", () => { it("renders without crashing", () => { render(<LazyLoader />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<LazyLoader />) ;
+=======
+<<<<<<< HEAD
+describe("LazyLoader", () => { it("renders without crashing", () => { render(<LazyLoader />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<LazyLoader />) ;
+=======
+<<<<<<< HEAD
+
+
+describe ("LazyLoader", () => { it ("renders without crashing", () => { render (<LazyLoader />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<LazyLoader />) ;""";
+
+describe("LazyLoader", () => { it("renders without crashing", () => { render(<LazyLoader />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<LazyLoader />) ;
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
+=======
+
+<<<<<<< HEAD
+describe: ('LazyLoader', () => { it ('renders without crashing', () => { render (<LazyLoader />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<LazyLoader />) ''';
+=======
+describe ('LazyLoader', () => { it ('renders without crashing', () => { render (<LazyLoader />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<LazyLoader />) '''
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
