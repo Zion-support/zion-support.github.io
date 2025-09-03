@@ -1,2 +1,32 @@
-export default function WishlistPage(function WishlistPage(function WishlistPage(function WishlistPage() {): any {): any {): any {} const { favorites, loading } = useFavorites() const { user } = useAuth()  if(!user) {} navigate('/login') return null} const addToCart: any = (item: { id: string title?: string price?: number  }) => {} let cart = stored ? JSON.parse(stored) : []  if(existing) existing.quantity += 1'; else cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 })' safeStorage.setItem('guestCart', JSON.stringify(cart))}  return acc}, {})  return acc}, {})  return () <div className="container py-8">"""" <h1 className="text-3xl font-bold mb-6">Wishlist</h1> {loading ? ( <p>Loading...</p> ) : favorites.length === 0 ? (" <p>No items saved.</p>"" ) : ("""" <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {favorites.map(fav => {}' if (fav.item_type === 'talent') {} return talent ? ( <TalentCard key={fav.item_id} talent={talent} onViewProfile={() =" > {}} onRequestHire={() => {}} isAuthenticated={true} /> ) : null}'" return item ? ("""" <div key={fav.item_id} className="relative">"" <ProductListingCard listing={item} /" >"""" <Button size="sm" className="absolute bottom-2 right-2" onClick={() =" > addToCart(item)}> Add to Cart </Button> </div> ) : null})} </div> )} </div>" )}"';'
-"
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const Wishlist: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Wishlist - Zion Tech Group"
+        description="Professional Wishlist services by Zion Tech Group"
+        keywords="wishlist, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Wishlist</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional Wishlist services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Wishlist;

@@ -8,8 +8,8 @@ export function Logo({ customLogo, customColor }) {"
     <Link to="/" className="flex items-center space-x-2 group">
       {customLogo ? (
         <img src={customLogo} "
-          alt="Zion Tech Group" "
-          className="h-8 w-auto"
+          alt='Zion Tech Group 
+          className='h-8 w-auto"
         /" >
       ) : ("
         <div className="flex items-center space-x-2">
@@ -38,8 +38,12 @@ export function Logo({ customLogo, customColor }) {"
     </Link>
   );,
 }"`
- import { Link } from 'react-router-dom' import { Zap } from 'lucide-react'  export function Logo({ customLogo, customColor, className = '' }) { if (customLogo) { return ( <Link to="/" className={`flex-shrink-0 group ${className}`}" >'; <img '" src={customLogo} "';" alt="Logo"';" className="h-8 w-auto" / / / / / / /" > </Link>" )'}'; const logoColor = customColor || '#3b82f6'';"`"`
- import { Link } from 'react-router-dom' import { Zap } from 'lucide-react'  export function Logo({ customLogo, customColor, className = '' }) { if (customLogo) { return ( <Link to='/' className={`flex-shrink-0 group ${className}`}" >'; <img '' src={customLogo} '';' alt='Logo'';' className='h-8 w-auto' / / / / / / /" > </Link>' )'}'; const logoColor = customColor || '#3b82f6'';'`"
+ import { Link   } from 'react-router-dom';
+import { Zap   } from 'lucide-react';
+export function Logo({ customLogo, customColor, className =   }) { if (customLogo) { return ( <Link to='/" className={`flex-shrink-0 group ${className}`}" >'; <img   src={customLogo} '';" alt='Logo ;' className="h-8 w-auto" / / / / / / /" > </Link>" )'}'; const logoColor = customColor || '#3b82f6 ;'`"`
+ import { Link   } from 'react-router-dom';
+import { Zap   } from 'lucide-react';
+export function Logo({ customLogo, customColor, className =   }) { if (customLogo) { return ( <Link to='/' className={`flex-shrink-0 group ${className}`}" >'; <img   src={customLogo} '';' alt='Logo ;' className='h-8 w-auto' / / / / / / /" > </Link>' )'}'; const logoColor = customColor || '#3b82f6 ;'`"
 
 "
 }}`

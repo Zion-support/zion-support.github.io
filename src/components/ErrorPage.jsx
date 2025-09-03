@@ -1,27 +1,32 @@
-;import { Link } from 'react-router-dom';"
-import { Home } from 'lucide-react';
+import React from 'react';
+import { SEO } from '@/components/SEO';
 
-export const ErrorPage = ({}"
-  statusCode = 404, ';'
-  title = 'Page Not Found', ';'
-  message = 'The page you are looking for does not exist.'}) => {}"
-  return()"
-    <div className='min-h-screen bg-zion-blue flex items-center justify-center'>''''
-      <div className='text-center text-white'>''''
-        <h1 className='text-6xl font-bold mb-4'>{statusCode}</h1>''''
-        <h2 className='text-2xl font-semibold mb-4'>{title}</h2>''''
-        <p className='text-lg mb-8 max-w-md mx-auto'>{message}</p>''''
-        <div className='space-x-4'>''''
-          <Button asChild" >''''
-            <Link to='/'>Go Home</Link>''''
-          </Button>''''
-          <Button variant='outline' asChild"" >''''
-            <Link to='/contact'>Contact Support</Link>
-          </Button>
+const ErrorPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ErrorPage - Zion Tech Group"
+        description="Professional ErrorPage services by Zion Tech Group"
+        keywords="errorpage, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">ErrorPage</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ErrorPage services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  )}"
-export default ErrorPage'';""
-'''''"'"
-"
+  );
+};
+
+export default ErrorPage;

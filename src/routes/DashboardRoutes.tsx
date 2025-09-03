@@ -14,46 +14,46 @@ const Analytics = lazy(() => import('../pages/Analytics'));"
 const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));"
 const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));"
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'))
-const DashboardRoutes: React.FC = () => {"
-  return (<Suspense fallback={<LoadingSpinner /"" >}>"
+const DashboardRoutes: React.FC = () => {'
+  return (<Suspense fallback={<LoadingSpinner /  >}>'
       <Routes>"
-        <Route path='/dashboard' element={"
-          <ProtectedRoute"" >"
+        <Route path='/dashboard' element={'
+          <ProtectedRoute  >'
             <Dashboard /"" >
           </ProtectedRoute>,",
 } />"
-        <Route path='/client-dashboard' element={"
-          <ProtectedRoute"" >"
+        <Route path='/client-dashboard' element={'
+          <ProtectedRoute  >'
             <ClientDashboard /"" >
           </ProtectedRoute>,",
 } />"
-        <Route path='/talent-dashboard' element={"
-          <ProtectedRoute"" >"
+        <Route path='/talent-dashboard' element={'
+          <ProtectedRoute  >'
             <TalentDashboard /"" >
           </ProtectedRoute>,",
 } />"
-        <Route path='/creator-dashboard' element={"
-          <ProtectedRoute"" >"
+        <Route path='/creator-dashboard' element={'
+          <ProtectedRoute  >'
             <CreatorDashboard /"" >
           </ProtectedRoute>,",
 } />"
-        <Route path='/analytics' element={"
-          <ProtectedRoute"" >"
+        <Route path='/analytics' element={'
+          <ProtectedRoute  >'
             <Analytics /"" >
           </ProtectedRoute>,",
 } />"
-        <Route path='/project-milestones' element={"
-          <ProtectedRoute"" >"
+        <Route path='/project-milestones' element={'
+          <ProtectedRoute  >'
             <ProjectMilestones /"" >
           </ProtectedRoute>,",
 } />"
-        <Route path='/project-details' element={"
-          <ProtectedRoute"" >"
+        <Route path='/project-details' element={'
+          <ProtectedRoute  >'
             <ProjectDetails /"" >
           </ProtectedRoute>,",
 } />"
-        <Route path='/project-room' element={"
-          <ProtectedRoute"" >"
+        <Route path='/project-room' element={'
+          <ProtectedRoute  >'
             <ProjectRoom /"" >
           </ProtectedRoute>,
 } />

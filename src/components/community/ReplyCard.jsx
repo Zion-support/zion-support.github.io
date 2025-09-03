@@ -1,83 +1,32 @@
-';export default function ReplyCard({' reply, className = ',' onMarkAnswer, canMarkAnswer}) {' return() <div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}`" > <div className='flex items-start space-x-3'>' <img ' src={reply.author.avatar} alt={reply.author.name}' className='w-8 h-8 rounded-full' / / / /" >' <div className='flex-1'>' <div className='flex items-center space-x-2 mb-2'>' <span className='font-medium text-zion-cyan'>' {reply.author.name}' </span>' <span className='text-xs text-zion-slate-light'>' {new Date(reply.createdAt).toLocaleDateString()}' </span> {reply.isSolution && (' <span className='text-xs bg-green-500 text-white px-2 py-1 rounded'>' Solution' </span> )} </div>' <p className='text-zion-slate-light text-sm'>{reply.content}</p>' <div className='flex items-center space-x-4 mt-2 text-xs text-zion-slate-light'>' <button className='hover: text-zion-cyan'>' Like ({reply.likes})' </button>' <button className='hover: text-zion-cyan'>Reply</button>' {canMarkAnswer && onMarkAnswer && (' <button onClick={onMarkAnswer}' className='hover:text-zion-cyan text-green-500'" >' Mark as Answer '';''`';export default function ReplyCard({}"
-  reply, ';'
-  className = '', onMarkAnswer,
-  canMarkAnswer}) {}`
-  return ()`"`
-    <div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}"" >"
-      <div className='flex items-start space-x-3'>
-        <img ;"
-          src={reply.author.avatar}''';'
-          alt={reply.author.name}'''';"
-          className='w-8 h-8 rounded-full''''/" >'''''
-        <div className='flex-1'>''''
-          <div className='flex items-center space-x-2 mb-2'>''''
-            <span className='font-medium text-zion-cyan'>"
-              {reply.author.name}''''
-            </span>''''
-            <span className='text-xs text-zion-slate-light'>
-              {new Date(reply.createdAt).toLocaleDateString()}"
-            </span>'''{reply.isSolution && ('''''
-              <span className='text-xs bg-green-500 text-white px-2 py-1 rounded'>
-                Solution
-              </span>"
-            )}''''
-          </div>''''
-          <p className='text-zion-slate-light text-sm'>{reply.content}</p>''''
-          <div className='flex items-center space-x-4 mt-2 text-xs text-zion-slate-light'>''''
-            <button className='hover: text-zion-cyan'>"
-              Like ({reply.likes})''''
-            </button>''''
-            <button className='hover: text-zion-cyan'>Reply</button>
-            {canMarkAnswer && onMarkAnswer && ("
-              <button''''
-                onClick={onMarkAnswer}'''';"
-                className='hover: text-zion-cyan text-green-500 '>"`
- export default function ReplyCard({ reply, className = ',' onMarkAnswer, canMarkAnswer}) {' return() <div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}`" > <div className='flex items-start space-x-3'>' <img ' src={reply.author.avatar} alt={reply.author.name}' className='w-8 h-8 rounded-full' / / / /" >' <div className='flex-1'>' <div className='flex items-center space-x-2 mb-2'>' <span className='font-medium text-zion-cyan'>' {reply.author.name}' </span>' <span className='text-xs text-zion-slate-light'>' {new Date(reply.createdAt).toLocaleDateString()}' </span> {reply.isSolution && (' <span className='text-xs bg-green-500 text-white px-2 py-1 rounded'>' Solution' </span> )} </div>' <p className='text-zion-slate-light text-sm'>{reply.content}</p>' <div className='flex items-center space-x-4 mt-2 text-xs text-zion-slate-light'>' <button className='hover: text-zion-cyan'>' Like ({reply.likes})' </button>' <button className='hover: text-zion-cyan'>Reply</button>' {canMarkAnswer && onMarkAnswer && (' <button onClick={onMarkAnswer}' className='hover:text-zion-cyan text-green-500'" >' Mark as Answer '';''`';export default function ReplyCard({}
-  canMarkAnswer}) {}
-  return ()`
-    <div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}" >"
-      <div className='flex items-start space-x-3'>
-        <img "
-          src={reply.author.avatar}'''
-          alt={reply.author.name}''''
-          className='w-8 h-8 rounded-full''''
-        /" >''''
-        <div className='flex-1'>''''
-          <div className='flex items-center space-x-2 mb-2'>''''
-            <span className='font-medium text-zion-cyan'>"
-              {reply.author.name}'''
-            </span>''''
-            <span className='text-xs text-zion-slate-light'>
-              {new Date(reply.createdAt).toLocaleDateString()}"
-            </span>'''
-            {reply.isSolution && (''''
-              <span className='text-xs bg-green-500 text-white px-2 py-1 rounded'>
-                Solution
-              </span>"
-            )}'''
-          </div>''''
-          <p className='text-zion-slate-light text-sm'>{reply.content}</p>''''
-          <div className='flex items-center space-x-4 mt-2 text-xs text-zion-slate-light'>''''
-            <button className='hover:text-zion-cyan'>"
-              Like ({reply.likes})'''
-            </button>''''
-            <button className='hover:text-zion-cyan'>Reply</button>
-            {canMarkAnswer && onMarkAnswer && ("
-              <button'''
-                onClick={onMarkAnswer}''''
-                className='hover:text-zion-cyan text-green-500 '>
-                Mark as Answer
-              </button>
-            )}
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const ReplyCard = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ReplyCard - Zion Tech Group"
+        description="Professional ReplyCard services by Zion Tech Group"
+        keywords="replycard, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">ReplyCard</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ReplyCard services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
           </div>
         </div>
       </div>
-    </div>)}
-export { ReplyCard }
-export { ReplyCard }
-export { ReplyCard }
-export { ReplyCard }
-export { ReplyCard }"`
-"`
-"
-}}`
+    </div>
+  );
+};
+
+export default ReplyCard;

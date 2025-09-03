@@ -1,2 +1,32 @@
-const teamMembers = [{ id: 1, name: "Dr.Sarah Chen"," role: "Chief Technology Officer", " expertise: "AI & Machine Learning"," experience: "15+ years", " avatar: "/avatars/sarah-chen.jpg"," bio: "Leading expert in artificial intelligence with PhD from MIT.Specializes in computer vision and natural language processing.", " skills["Machine Learning", "Computer Vision", "Deep Learning", "Python", "TensorFlow"], " achievements["50+ AI Projects", "15 Research Papers", "AI Innovation Award 2023"], rating: 4.9, projects: 45, " location: "San Francisco, CA"," linkedin: "https:"
-}
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const TeamExpertiseSection = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="TeamExpertiseSection - Zion Tech Group"
+        description="Professional TeamExpertiseSection services by Zion Tech Group"
+        keywords="teamexpertisesection, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">TeamExpertiseSection</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional TeamExpertiseSection services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TeamExpertiseSection;

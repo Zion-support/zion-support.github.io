@@ -18,21 +18,11 @@ export const SEO: React.FC<SEOProps> = ({"
   url = 'https://ziontechgroup.com',"
   type = 'website',
 }) => {
-  const structuredData = {"
-    '@context': 'https://schema.org',"
-    '@type': 'Organization',"
-    'name': 'Zion Tech Group',"
-    'url': 'https://ziontechgroup.com',"
-    'logo': 'https://ziontechgroup.com/logo.svg',"
-    'description': description,"
-    'sameAs': ["
-      'https://linkedin.com/compunknown/zion-tech-group',"
+  const structuredData = { @context': 'https://schema.org', @type': 'Organization', name': 'Zion Tech Group', url': 'https://ziontechgroup.com', logo': 'https://ziontechgroup.com/logo.svg', description': description,"
+    'sameAs': [ https://linkedin.com/compunknown/zion-tech-group',"
       'https://twitter.com/ziontechgroup',
-],"
-    'contactPoint': {"
-      '@type': 'ContactPoint',"
-      'telephone': '+1-555-ZION-TECH',"
-      'contactType': 'customer service',
+], contactPoint': {"
+      '@type': 'ContactPoint', telephone': '+1-555-ZION-TECH', contactType': 'customer service',
 }
   };
 

@@ -108,29 +108,19 @@ const AIWorkflowAutomation: React.FC = () => {
 }
   ];
 
-  const benefits = ["
-    'Reduce manual work by 90%',"
-    'Increase productivity by 300%',"
-    'Eliminate human errors',"
-    '24/7 automated operations',"
-    'Scalable workflows',"
-    'Cost savings up to 70%',"
-    'Faster decision making',"
+  const benefits = [ Reduce manual work by 90%',"
+    'Increase productivity by 300%', Eliminate human errors',"
+    '24/7 automated operations', Scalable workflows',"
+    'Cost savings up to 70%', Faster decision making',"
     'Improved compliance',;
 ];
 
-  const integrations = ["
-    'Salesforce',"
-    'HubSpot',"
-    'Slack',"
-    'Microsoft Teams',"
-    'Google Workspace',"
-    'Zapier',"
-    'Mailchimp',"
-    'QuickBooks',"
-    'Shopify',"
-    'WordPress',"
-    'Jira',"
+  const integrations = [ Salesforce',"
+    'HubSpot', Slack',"
+    'Microsoft Teams', Google Workspace',"
+    'Zapier', Mailchimp',"
+    'QuickBooks', Shopify',"
+    'WordPress', Jira',"
     'Trello',;
 ];
 
@@ -151,7 +141,7 @@ const AIWorkflowAutomation: React.FC = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}"
-              className="space-y-8"" >"
+              className='space-y-8  >'
               <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium">"
                 <Bot className="w-4 h-4" /" >
                 AI Workflow Automation
@@ -180,7 +170,7 @@ const AIWorkflowAutomation: React.FC = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}"
-              className="relative"" >"
+              className='relative  >'
               <div className="relative z-10">"
                 <div className="w-full h-96 bg-gradient-to-br from-green-500/20 via-blue-500/20 to-cyan-500/20 rounded-2xl border border-green-500/30 flex items-center justify-center">"
                   <div className="text-center">"
@@ -206,7 +196,7 @@ const AIWorkflowAutomation: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
-            className="text-center mb-16"" >"
+            className='text-center mb-16  >'
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
               Powerful Automation Features
             </h2>"
@@ -222,8 +212,8 @@ const AIWorkflowAutomation: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}"
-                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 hover:bg-slate-700/50"" >
-                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}" >"
+                className='group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 hover:bg-slate-700/50  >
+                <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}' >"
                   <feature .icon className="w-8 h-8 text-white" /" >
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
@@ -242,7 +232,7 @@ const AIWorkflowAutomation: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
-            className="text-center mb-16"" >"
+            className='text-center mb-16  >'
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
               Automation Solutions
             </h2>"
@@ -258,7 +248,7 @@ const AIWorkflowAutomation: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}"
-                className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/50 transition-all duration-300"" >"
+                className='p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/50 transition-all duration-300  >'
                 <div className="flex items-start gap-4 mb-6">`
                   <div className={`w-16 h-16 bg-gradient-to-br ${automation.color} rounded-xl flex items-center justify-center flex-shrink-0`}" >"
                     <automation .icon className="w-8 h-8 text-white" /" >
@@ -294,7 +284,7 @@ const AIWorkflowAutomation: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
-            className="text-center mb-16"" >"
+            className='text-center mb-16  >'
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
               Why Choose AI Automation?
             </h2>"
@@ -310,7 +300,7 @@ const AIWorkflowAutomation: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}"
-                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-green-500/50 transition-all duration-300 hover:bg-slate-600/50"" >"
+                className='p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-green-500/50 transition-all duration-300 hover:bg-slate-600/50  >'
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
                   <TrendingUp className="w-6 h-6 text-white" /" >
                 </div>"
@@ -329,7 +319,7 @@ const AIWorkflowAutomation: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
-            className="text-center mb-16"" >"
+            className='text-center mb-16  >'
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
               Seamless Integrations
             </h2>"
@@ -345,7 +335,7 @@ const AIWorkflowAutomation: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}"
-                className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-green-500/50 transition-all duration-300 hover:bg-slate-700/50 group"" >"
+                className='p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-green-500/50 transition-all duration-300 hover:bg-slate-700/50 group  >'
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">"
                   <Link className="w-6 h-6 text-white" /" >
                 </div>"
@@ -364,7 +354,7 @@ const AIWorkflowAutomation: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}"
-            className="max-w-4xl mx-auto"" >"
+            className='max-w-4xl mx-auto  >'
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
               Ready to Automate Your Business?
             </h2>"
@@ -435,7 +425,7 @@ const AIWorkflowAutomation: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}"
-              className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50"" >"
+              className='p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50  >'
               <h3 className="text-2xl font-semibold text-white mb-6">Request Automation Demo</h3>"
               <form className="space-y-6">"
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -463,10 +453,10 @@ const AIWorkflowAutomation: React.FC = () => {
                 <textarea "
                   placeholder="Tell us about your automation needs..."
                   rows={4}"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"" ></textarea>
-                <button "
+                  className='w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none  ></textarea>
+                <button '
                   type="submit"
-                  className="w-full btn-futuristic bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700"" >"
+                  className='w-full btn-futuristic bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700  >'
                   <MessageCircle className="w-5 h-5" /" >
                   Request Demo
                 </button>

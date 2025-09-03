@@ -1,8 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Async thunk for login
-export const loginUser = createAsyncThunk("
-  'auth/loginUser',
+export const loginUser = createAsyncThunk( auth/loginUser',
   async (credentials, { rejectWithValue }) => {
     try {
       // Simulate API call
@@ -36,8 +35,7 @@ export const loginUser = createAsyncThunk("
 );
 
 // Async thunk for signup
-export const signupUser = createAsyncThunk("
-  'auth/signupUser',
+export const signupUser = createAsyncThunk( auth/signupUser',
   async (userData, { rejectWithValue }) => {
     try {
       // Simulate API call
@@ -71,8 +69,7 @@ export const signupUser = createAsyncThunk("
 );
 
 // Async thunk for logout
-export const logoutUser = createAsyncThunk("
-  'auth/logoutUser',
+export const logoutUser = createAsyncThunk( auth/logoutUser',
   async (_, { rejectWithValue }) => {
     try {
       // Simulate API call
@@ -92,8 +89,7 @@ export const logoutUser = createAsyncThunk("
 );
 
 // Async thunk for checking auth status
-export const checkAuthStatus = createAsyncThunk("
-  'auth/checkAuthStatus',
+export const checkAuthStatus = createAsyncThunk( auth/checkAuthStatus',
   async (_, { rejectWithValue }) => {
     try {"
       const token = localStorage.getItem('token');"

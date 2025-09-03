@@ -5,10 +5,10 @@ interface PerformanceMetrics {
   memoryUsage: number;
   networkLatency: number}
 
-export const PerformanceOptimizer: React.FC = () => {"
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null"" >(null);
+export const PerformanceOptimizer: React.FC = () => {'
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null  >(null);
   const [isOptimized, setIsOptimized] = useState(false);
-  useEffect(() => {"
+  useEffect(() => {'
     const measurePerformance = () => {"
       if (typeof window !== 'undefined' && 'performance' in window) {"
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;"
@@ -47,8 +47,7 @@ export const PerformanceOptimizer: React.FC = () => {"
     // Implement performance optimizations"
     if (typeof window !== 'undefined') {
       // Preload critical resources
-      const criticalResources = ["
-        '/fonts/inter.woff2', '/images/hero-bg.jpg',
+      const criticalResources = [ /fonts/inter.woff2', '/images/hero-bg.jpg',
 ];
       criticalResources.forEach(resource => {"
         const link = document.createElement('link');"
@@ -79,16 +78,16 @@ export const PerformanceOptimizer: React.FC = () => {"
     <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">"
       <div className="flex items-center justify-between mb-2">"
         <h3 className="text-sm font-semibold text-gray-900">Performance</h3>"
-        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}"" ></div>
-      </div>"
+        <div className={`w-3 h-3 rounded-full ${isOptimized ? 'bg-green-500' : 'bg-yellow-500'}`}  ></div>
+      </div>'
       "
       <div className="space-y-2 text-xs">"
         <div className="flex justify-between">"
           <span className="text-gray-600">Load Time:</span>"
-          <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}"" >
+          <span className={metrics.loadTime < 3000 ? 'text-green-600' : 'text-red-600'}  >
             {metrics.loadTime.toFixed(0)}ms
           </span>
-        </div>"
+        </div>'
         <div className="flex justify-between">"
           <span className="text-gray-600">Render Time: </span>"
           <span className={metrics.renderTime < 1500 ? 'text-green-600' : 'text-red-600'}" >
@@ -111,11 +110,11 @@ export const PerformanceOptimizer: React.FC = () => {"
 
       {!isOptimized && (
         <button onClick={optimizePerformance}"
-          className="mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors"" >
+          className='mt-3 w-full bg-blue-600 text-white text-xs py-1 px-2 rounded hover: bg-blue-700 transition-colors  >
           Optimize Performance
         </button>
       )}
     </div>
   );,
 };
-export default PerformanceOptimizer;"`
+export default PerformanceOptimizer;'`

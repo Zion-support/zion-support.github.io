@@ -1,40 +1,32 @@
-';export { function }';export default function PostCard({ post }) { return() <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4'>' <div className='flex items-start space-x-4'>' <img ' src={post.author.avatar} alt={post.author.name}' className='w-10 h-10 rounded-full' / / / /" >' <div className='flex-1'>' <h3 className='text-lg font-semibold text-zion-cyan mb-2'>' {post.title}' </h3>' <p className='text-zion-slate-light mb-3 line-clamp-3'>' {post.content}' </p>' <div className='flex items-center justify-between text-sm text-zion-slate-light'>' <span>By {post.author.name}</span>' <span>{new Date(post.createdAt).toLocaleDateString()}</span> </div>' <div className='flex items-center space-x-4 mt-2 text-sm text-zion-slate-light'>' <span>{post.replies.length} replies</span>' <span>{post.likes} likes</span> '';''';export { function }
-export default function PostCard({ post }) {}
-  return()"
-    <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4'>''''
-      <div className='flex items-start space-x-4'>
-        <img "
-          src={post.author.avatar}'''
-          alt={post.author.name}''''
-          className='w-10 h-10 rounded-full''''
-        /" >''''
-        <div className='flex-1'>''''
-          <h3 className='text-lg font-semibold text-zion-cyan mb-2'>"
-            {post.title}'''
-          </h3>''''
-          <p className='text-zion-slate-light mb-3 line-clamp-3'>"
-            {post.content}'''
-          </p>''''
-          <div className='flex items-center justify-between text-sm text-zion-slate-light'>
-            <span>By {post.author.name}</span>"
-            <span>{new Date(post.createdAt).toLocaleDateString()}</span>'''
-          </div>''''
-          <div className='flex items-center space-x-4 mt-2 text-sm text-zion-slate-light'>
-            <span>{post.replies.length} replies</span>
-            <span>{post.likes} likes</span>
-            <span>{post.views} views</span>
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const PostCardJs = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="PostCardJs - Zion Tech Group"
+        description="Professional PostCardJs services by Zion Tech Group"
+        keywords="postcardjs, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">PostCardJs</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional PostCardJs services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
           </div>
         </div>
       </div>
-    </div>)}
+    </div>
+  );
+};
 
-export { PostCard }
-
-export { PostCard }
-
-export { PostCard }
-
-export { PostCard }
-
-export { PostCard }
-"
+export default PostCardJs;

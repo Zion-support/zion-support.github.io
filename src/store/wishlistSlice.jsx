@@ -4,8 +4,7 @@ export const getApiUrl = () => {
   const env = import.meta?.env || process.env;"
   return env.VITE_API_URL || env.API_URL || 'http: //localhost:3000';,
 };
-export const loadWishlistFromDB = createAsyncThunk("
-  'wishlist/loadFromDB', async (userId) => {
+export const loadWishlistFromDB = createAsyncThunk( wishlist/loadFromDB', async (userId) => {
     const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`);"
     if (!res.ok) throw new Error('Failed to load');
     return await res.json();,

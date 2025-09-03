@@ -96,7 +96,7 @@ export function MobileMenu({ isOpen, onClose, user, onNavigate }) {
             <span className="text-white font-semibold">Zion Tech Group</span>
           </div>
           <button onClick={onClose}"
-            className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors"" >"
+            className='p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-lg transition-colors  >'
             <X className="h-5 w-5" /" >
           </button>
         </div>

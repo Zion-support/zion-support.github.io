@@ -8,8 +8,7 @@ export default function SimplePage() {
   
   // Generate page title and content based on the current path
   const getPageInfo = (pathname) => {
-    const pathMap = {"
-      '/services': {"
+    const pathMap = { /services': {"
         title: 'Our Services',"
         subtitle: 'Comprehensive technology solutions for modern businesses',"
         description: 'Discover our full range of services designed to accelerate your digital transformation and drive business growth.',
@@ -35,8 +34,7 @@ export default function SimplePage() {
             link: '/services/transformation',
 }
         ],
-},"
-      '/solutions': {"
+}, /solutions': {"
         title: 'Industry Solutions',"
         subtitle: 'Tailored solutions for your specific industry needs',"
         description: 'We understand that every industry has unique challenges. Our specialized solutions are designed to address the specific needs of your sector.',
@@ -62,8 +60,7 @@ export default function SimplePage() {
             link: '/solutions/retail',
 }
         ],
-},"
-      '/about': {"
+}, /about': {"
         title: 'About Zion Tech Group',"
         subtitle: 'Innovating tomorrow through technology excellence',"
         description: 'We are a forward-thinking technology company dedicated to transforming businesses through innovative solutions and cutting-edge technology.',
@@ -89,8 +86,7 @@ export default function SimplePage() {
             link: '/about/history',
 }
         ],
-},"
-      '/contact': {"
+}, /contact': {"
         title: 'Contact Us',"
         subtitle: 'Let\'s discuss your technology needs',"
         description: 'Ready to transform your business? Get in touch with our team of experts to discuss how we can help you achieve your goals.',
@@ -116,8 +112,7 @@ export default function SimplePage() {
             link: '/partners',
 }
         ],
-},"
-      '/blog': {"
+}, /blog': {"
         title: 'Blog & Insights',"
         subtitle: 'Latest technology trends and industry insights',"
         description: 'Stay updated with the latest technology trends, industry insights, and expert perspectives from our team.',
@@ -143,8 +138,7 @@ export default function SimplePage() {
             link: '/blog/expert',
 }
         ],
-},"
-      '/careers': {"
+}, /careers': {"
         title: 'Join Our Team',"
         subtitle: 'Build the future with Zion Tech Group',"
         description: 'Join our team of innovators and help us shape the future of technology. We offer exciting opportunities for growth and development.',
@@ -170,8 +164,7 @@ export default function SimplePage() {
             link: '/careers/growth',
 }
         ],
-},"
-      '/partners': {"
+}, /partners': {"
         title: 'Partnerships',"
         subtitle: 'Collaborate with Zion Tech Group',"
         description: 'Join our network of trusted partners and expand your business opportunities through strategic collaboration.',
@@ -260,8 +253,8 @@ export default function SimplePage() {
                     {section.description}
                   </p>
                   <Link to={section.link}"
-                    className="inline-flex items-center text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1"" >
-                    Learn More"
+                    className='inline-flex items-center text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1  >
+                    Learn More'
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" /" >
                   </Link>
                 </div>
@@ -284,13 +277,13 @@ export default function SimplePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link "
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"" >
-                Contact Us"
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25  >
+                Contact Us'
                 <ArrowRight className="ml-2 h-5 w-5" /" >
               </Link>
               <Link "
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"" >
+                className='inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300  >
                 Explore Services
               </Link>
             </div>
@@ -299,4 +292,4 @@ export default function SimplePage() {
       </section>
     </div>
   );,
-}"
+}'

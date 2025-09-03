@@ -60,8 +60,8 @@ export default function Pricing() {
     <>
       <SEO 
         title="Pricing - Zion Tech Group | Transparent Technology Solutions Pricing"
-        description="Explore Zion Tech Group's transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs."'
-        keywords="pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group"
+        description="Explore Zion Tech Group's transparent pricing for AI services, quantum computing, cybersecurity, and micro SaaS solutions. Choose the plan that fits your needs. 
+        keywords='pricing, AI services pricing, quantum computing cost, cybersecurity pricing, micro SaaS pricing, Zion Tech Group"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

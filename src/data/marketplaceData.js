@@ -2,82 +2,47 @@
 
 export const generateSearchSuggestions = () => [
   // Services
-  'AI Services',"
-  'Cloud Migration',"
-  'Cybersecurity',"
-  'Digital Transformation',"
-  'IT Infrastructure',"
-  'DevOps',"
-  'Machine Learning',"
-  'Data Analytics',"
-  'Cloud Computing',"
-  'Network Security',"
-  'Software Development',"
-  'System Integration',"
-  'Business Intelligence',"
-  'Automation',"
-  'IoT Solutions',"
-  'Blockchain',"
-  'API Development',"
-  'Mobile Development',"
-  'Web Development',"
-  'Database Management',
+  'AI Services', Cloud Migration',"
+  'Cybersecurity', Digital Transformation',"
+  'IT Infrastructure', DevOps',"
+  'Machine Learning', Data Analytics',"
+  'Cloud Computing', Network Security',"
+  'Software Development', System Integration',"
+  'Business Intelligence', Automation',"
+  'IoT Solutions', Blockchain',"
+  'API Development', Mobile Development',"
+  'Web Development', Database Management',
   
   // Solutions"
-  'Manufacturing Solutions',"
-  'Financial Services',"
-  'Healthcare Solutions',"
-  'Retail Solutions',"
-  'Education Technology',"
-  'Energy Management',"
-  'Supply Chain',"
-  'Customer Experience',"
-  'Employee Productivity',"
-  'Risk Management',"
-  'Compliance Solutions',"
-  'Performance Optimization',"
-  'Scalability Solutions',"
-  'Disaster Recovery',"
+  'Manufacturing Solutions', Financial Services',"
+  'Healthcare Solutions', Retail Solutions',"
+  'Education Technology', Energy Management',"
+  'Supply Chain', Customer Experience',"
+  'Employee Productivity', Risk Management',"
+  'Compliance Solutions', Performance Optimization',"
+  'Scalability Solutions', Disaster Recovery',"
   'Backup Solutions',
   
-  // Industry Terms"
-  'Micro SAAS',"
-  'Enterprise Software',"
-  'Cloud Native',"
-  'Serverless',"
-  'Containerization',"
-  'Kubernetes',"
-  'Docker',"
-  'AWS',"
-  'Azure',"
-  'Google Cloud',"
-  'Hybrid Cloud',"
-  'Multi Cloud',"
-  'Edge Computing',"
-  '5G Solutions',"
-  'Smart Cities',
+  // Industry Terms Micro SAAS',"
+  'Enterprise Software', Cloud Native',"
+  'Serverless', Containerization',"
+  'Kubernetes', Docker',"
+  'AWS', Azure',"
+  'Google Cloud', Hybrid Cloud',"
+  'Multi Cloud', Edge Computing',"
+  '5G Solutions', Smart Cities',
   
   // Technologies"
-  'React',"
-  'Node.js',"
-  'Python',"
-  'Java',"
-  'JavaScript',"
-  'TypeScript',"
-  'Angular',"
-  'Vue.js',"
-  'MongoDB',"
-  'PostgreSQL',"
-  'Redis',"
-  'Elasticsearch',"
-  'Kafka',"
-  'RabbitMQ',"
-  'GraphQL',"
-  'REST API',"
-  'Microservices',"
-  'Event Driven Architecture',"
-  'CQRS',"
-  'Event Sourcing',
+  'React', Node.js',"
+  'Python', Java',"
+  'JavaScript', TypeScript',"
+  'Angular', Vue.js',"
+  'MongoDB', PostgreSQL',"
+  'Redis', Elasticsearch',"
+  'Kafka', RabbitMQ',"
+  'GraphQL', REST API',"
+  'Microservices', Event Driven Architecture',"
+  'CQRS', Event Sourcing',
 ];
 
 export const serviceCategories = [
@@ -86,14 +51,10 @@ export const serviceCategories = [
     name: 'AI & Machine Learning',"
     description: 'Intelligent solutions powered by artificial intelligence',"
     icon: '🤖',
-    services: ["
-      'Machine Learning Models',"
-      'Natural Language Processing',"
-      'Computer Vision',"
-      'Predictive Analytics',"
-      'AI Chatbots',"
-      'Recommendation Systems',"
-      'Data Mining',"
+    services: [ Machine Learning Models',"
+      'Natural Language Processing', Computer Vision',"
+      'Predictive Analytics', AI Chatbots',"
+      'Recommendation Systems', Data Mining',"
       'Neural Networks',
 ]
   },
@@ -102,14 +63,10 @@ export const serviceCategories = [
     name: 'Cloud & DevOps',"
     description: 'Scalable infrastructure and automated operations',"
     icon: '☁️',
-    services: ["
-      'Cloud Migration',"
-      'DevOps Automation',"
-      'Container Orchestration',"
-      'Infrastructure as Code',"
-      'CI/CD Pipelines',"
-      'Monitoring & Logging',"
-      'Auto Scaling',"
+    services: [ Cloud Migration',"
+      'DevOps Automation', Container Orchestration',"
+      'Infrastructure as Code', CI/CD Pipelines',"
+      'Monitoring & Logging', Auto Scaling',"
       'Load Balancing',
 ]
   },
@@ -118,14 +75,10 @@ export const serviceCategories = [
     name: 'Cybersecurity',"
     description: 'Protection and compliance solutions',"
     icon: '🔒',
-    services: ["
-      'Security Audits',"
-      'Penetration Testing',"
-      'Vulnerability Assessment',"
-      'Incident Response',"
-      'Security Monitoring',"
-      'Compliance Management',"
-      'Identity & Access Management',"
+    services: [ Security Audits',"
+      'Penetration Testing', Vulnerability Assessment',"
+      'Incident Response', Security Monitoring',"
+      'Compliance Management', Identity & Access Management',"
       'Data Protection',
 ]
   },
@@ -134,14 +87,10 @@ export const serviceCategories = [
     name: 'Digital Transformation',"
     description: 'Business evolution through technology',"
     icon: '🚀',
-    services: ["
-      'Process Automation',"
-      'Workflow Optimization',"
-      'Change Management',"
-      'Digital Strategy',"
-      'Legacy Modernization',"
-      'Business Process Reengineering',"
-      'Digital Adoption',"
+    services: [ Process Automation',"
+      'Workflow Optimization', Change Management',"
+      'Digital Strategy', Legacy Modernization',"
+      'Business Process Reengineering', Digital Adoption',"
       'Innovation Consulting',
 ]
   }
@@ -153,12 +102,9 @@ export const industrySolutions = [
     name: 'Manufacturing',"
     description: 'Smart factory and Industry 4.0 solutions',"
     icon: '🏭',
-    solutions: ["
-      'Predictive Maintenance',"
-      'Quality Control',"
-      'Supply Chain Optimization',"
-      'Production Planning',"
-      'Asset Management',"
+    solutions: [ Predictive Maintenance',"
+      'Quality Control', Supply Chain Optimization',"
+      'Production Planning', Asset Management',"
       'Performance Monitoring',
 ]
   },
@@ -167,12 +113,9 @@ export const industrySolutions = [
     name: 'Financial Services',"
     description: 'FinTech and banking solutions',"
     icon: '💳',
-    solutions: ["
-      'Digital Banking',"
-      'Payment Processing',"
-      'Risk Analytics',"
-      'Compliance Automation',"
-      'Customer Onboarding',"
+    solutions: [ Digital Banking',"
+      'Payment Processing', Risk Analytics',"
+      'Compliance Automation', Customer Onboarding',"
       'Fraud Detection',
 ]
   },
@@ -181,12 +124,9 @@ export const industrySolutions = [
     name: 'Healthcare',"
     description: 'Digital health and medical technology',"
     icon: '🏥',
-    solutions: ["
-      'Electronic Health Records',"
-      'Telemedicine Platforms',"
-      'Medical Imaging',"
-      'Patient Management',"
-      'Clinical Decision Support',"
+    solutions: [ Electronic Health Records',"
+      'Telemedicine Platforms', Medical Imaging',"
+      'Patient Management', Clinical Decision Support',"
       'Healthcare Analytics',
 ]
   },
@@ -195,12 +135,9 @@ export const industrySolutions = [
     name: 'Retail',"
     description: 'E-commerce and omnichannel solutions',"
     icon: '🛒',
-    solutions: ["
-      'E-commerce Platforms',"
-      'Inventory Management',"
-      'Customer Analytics',"
-      'Omnichannel Integration',"
-      'Personalization',"
+    solutions: [ E-commerce Platforms',"
+      'Inventory Management', Customer Analytics',"
+      'Omnichannel Integration', Personalization',"
       'Mobile Commerce',
 ]
   }
@@ -243,10 +180,8 @@ export const caseStudies = [
     industry: 'Financial Services',"
     challenge: 'Legacy on-premise systems causing scalability issues and high maintenance costs',"
     solution: 'Multi-cloud migration with automated DevOps pipelines',
-    results: ["
-      '50% reduction in infrastructure costs',"
-      '99.9% uptime achieved',"
-      'Deployment time reduced from weeks to hours',
+    results: [ 50% reduction in infrastructure costs',"
+      '99.9% uptime achieved', Deployment time reduced from weeks to hours',
 ],"
     technologies: ['AWS', 'Azure', 'Kubernetes', 'Terraform', 'Jenkins'],
 },
@@ -256,10 +191,8 @@ export const caseStudies = [
     industry: 'Manufacturing',"
     challenge: 'Inefficient production processes and high defect rates',"
     solution: 'Machine learning models for predictive maintenance and quality control',
-    results: ["
-      '30% reduction in production downtime',"
-      '25% improvement in product quality',"
-      '15% increase in overall efficiency',
+    results: [ 30% reduction in production downtime',"
+      '25% improvement in product quality', 15% increase in overall efficiency',
 ],"
     technologies: ['Python', 'TensorFlow', 'IoT Sensors', 'Real-time Analytics'],
 },
@@ -269,10 +202,8 @@ export const caseStudies = [
     industry: 'Healthcare',"
     challenge: 'Increasing cyber threats and compliance requirements',"
     solution: 'Comprehensive security framework with 24/7 monitoring',
-    results: ["
-      '100% compliance with HIPAA regulations',"
-      'Zero security breaches in 2 years',"
-      '50% faster incident response time',
+    results: [ 100% compliance with HIPAA regulations',"
+      'Zero security breaches in 2 years', 50% faster incident response time',
 ],"
     technologies: ['SIEM', 'EDR', 'Vulnerability Scanning', 'Compliance Automation'],
 }

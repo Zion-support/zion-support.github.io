@@ -1,3 +1,32 @@
-const partnershipTypes = [{ title: 'Technology Partners', description: 'Collaborate with leading tech companies to deliver cutting - edge solutions', icon: ', benefits: [ 'Access to latest technologies', 'Joint product development', 'Shared marketing opportunities']}, { title: 'Channel Partners', description: 'Expand your reach through our global network of resellers and distributors', icon: ', benefits: ['Increased market presence', 'Revenue sharing programs', 'Training and certification']}, { title: 'Strategic Partners', description: 'Form long - term alliances for mutual growth and market expansion', icon: ', benefits: ['Joint ventures', 'Market expansion support', 'Shared R & D initiatives']}, { title: 'Academic Partners', description: 'Partner with universities and research institutions for innovation', icon: ', benefits: ['Research collaboration', 'Talent pipeline', 'Innovation programs']}] const existingPartners = [ { name: 'Microsoft', logo: "https:;"
-"
-}
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const Partners = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Partners - Zion Tech Group"
+        description="Professional Partners services by Zion Tech Group"
+        keywords="partners, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Partners</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional Partners services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Partners;

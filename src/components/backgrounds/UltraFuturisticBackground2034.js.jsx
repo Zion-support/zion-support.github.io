@@ -12,13 +12,12 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
         canvas.width = window.innerWidth
         canvas.height = window.innerHeight
         const particles = []
-        const colors = {}"
-'
+        const colors = {} 
 ''
-''';"
+ ';"
   quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],';'
             neon['#ff0080',#8000ff',#00ffff',#ffff00'],';'
-            holographic['#ff6b6b',#4ecdc4',#45b7d1',''
+            holographic['#ff6b6b',#4ecdc4',#45b7d1', 
   '#96ceb4'],
 }
         const selectedColors = colors[theme]
@@ -61,7 +60,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                         ctx.lineWidth = 1
                         ctx.stroke()}",
 })})'
-            // Add quantum effects''
+            // Add quantum effects 
             if (theme === 'quantum') {}"
                 ctx.save()'
                 ctx.globalCompositeOperation = 'screen'
@@ -75,7 +74,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                     ctx.lineWidth = 2
                     ctx.stroke()}"
                 ctx.restore()}'
-            // Add neon effects''
+            // Add neon effects 
             if (theme === 'neon') {}"
                 ctx.save()'
                 ctx.shadowColor = '#ff0080'
@@ -89,7 +88,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                         ctx.stroke()}
                 })"
                 ctx.restore()}'
-            // Add holographic effects''
+            // Add holographic effects 
             if (theme === 'holographic') {}"
                 ctx.save()'
                 ctx.globalCompositeOperation = 'overlay'

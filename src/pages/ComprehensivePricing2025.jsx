@@ -12,12 +12,9 @@ export default function ComprehensivePricing2025() {"
       name: 'Starter',"
       description: 'Perfect for small businesses and startups',
       price: { monthly: 99, yearly: 990 },
-      features: ["
-        'Basic AI Consultation',"
-        'Cloud Migration Assessment',"
-        'Security Audit Report',"
-        'Email Support',"
-        'Basic Analytics Dashboard',"
+      features: [ Basic AI Consultation',"
+        'Cloud Migration Assessment', Security Audit Report',"
+        'Email Support', Basic Analytics Dashboard',"
         'Up to 5 Team Members',
 ],
       icon: Zap,"
@@ -29,16 +26,11 @@ export default function ComprehensivePricing2025() {"
       name: 'Professional',"
       description: 'Ideal for growing businesses and enterprises',
       price: { monthly: 299, yearly: 2990 },
-      features: ["
-        'Advanced AI Solutions',"
-        'Full Cloud Migration',"
-        'Cybersecurity Implementation',"
-        'Priority Support',"
-        'Advanced Analytics',"
-        'Up to 25 Team Members',"
-        'Custom Integrations',"
-        'Performance Monitoring',"
-        'Compliance Reporting',
+      features: [ Advanced AI Solutions',"
+        'Full Cloud Migration', Cybersecurity Implementation',"
+        'Priority Support', Advanced Analytics',"
+        'Up to 25 Team Members', Custom Integrations',"
+        'Performance Monitoring', Compliance Reporting',
 ],
       icon: Shield,"
       color: 'from-purple-500 to-pink-500',
@@ -49,18 +41,12 @@ export default function ComprehensivePricing2025() {"
       name: 'Enterprise',"
       description: 'Comprehensive solutions for large organizations',
       price: { monthly: 799, yearly: 7990 },
-      features: ["
-        'Full AI Suite Implementation',"
-        'Multi-Cloud Strategy',"
-        'Advanced Security Framework',"
-        '24/7 Dedicated Support',"
-        'Custom AI Models',"
-        'Unlimited Team Members',"
-        'White-label Solutions',"
-        'Advanced Analytics & ML',"
-        'Compliance & Governance',"
-        'Custom Development',"
-        'Training & Certification',"
+      features: [ Full AI Suite Implementation',"
+        'Multi-Cloud Strategy', Advanced Security Framework',"
+        '24/7 Dedicated Support', Custom AI Models',"
+        'Unlimited Team Members', White-label Solutions',"
+        'Advanced Analytics & ML', Compliance & Governance',"
+        'Custom Development', Training & Certification',"
         'Strategic Consulting',
 ],
       icon: Building,"
@@ -292,12 +278,12 @@ export default function ComprehensivePricing2025() {"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link "
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25"" >
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white font-semibold rounded-lg hover:from-zion-purple/80 hover:to-zion-cyan/80 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25  >
                 Get Custom Quote
               </Link>
-              <Link "
+              <Link '
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300"" >
+                className='inline-flex items-center px-8 py-4 border-2 border-zion-purple/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-purple/10 hover:border-zion-purple/50 transition-all duration-300  >
                 Learn More
               </Link>
             </div>
@@ -306,4 +292,4 @@ export default function ComprehensivePricing2025() {"
       </section>
     </div>
   );,
-}"`
+}'`

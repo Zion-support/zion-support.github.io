@@ -1,3 +1,32 @@
-import React, { useState, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { Code, Sparkles, Eye, Zap, TestTube, FileText, Download, Copy, CheckCircle, AlertCircle, Brain, Settings, Play, Save, Share2 } from 'lucide-react'  const AICodeGenerator = () => { const [activeTab, setActiveTab] = useState('generate') const [generatedCode, setGeneratedCode] = useState('') const [customCode, setCustomCode] = useState('') const [copied, setCopied] = useState(false) const [isGenerating, setIsGenerating] = useState(false) ';'
-"
-}
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const AICodeGenerator = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AICodeGenerator - Zion Tech Group"
+        description="Professional AICodeGenerator services by Zion Tech Group"
+        keywords="aicodegenerator, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">AICodeGenerator</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional AICodeGenerator services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AICodeGenerator;

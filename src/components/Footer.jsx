@@ -132,7 +132,7 @@ export function Footer() {
                 {section.links.map((link) => (
                   <li key={link.name}" >
                     <Link to={link.href}"
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center group"" >"
+                      className='text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center group  >'
                       <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" /" >
                       {link.name}
                     </Link>

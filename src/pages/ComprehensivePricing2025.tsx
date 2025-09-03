@@ -1,3 +1,32 @@
-import React, { useState, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Link    } from 'react-router-dom' import { Check, X, Star, Zap, Shield, Brain, Globe, TrendingUp, Users, ArrowRight, Phone, Mail, MapPin, ExternalLink    } from 'lucide-react' import { innovativeServices  } from '../data/innovative-services-2025' const ComprehensivePricing2025: React.FC = () => { const [selectedCategory, setSelectedCategory] = useState<string>('all') const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');",
-}
-"
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const ComprehensivePricing2025: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ComprehensivePricing2025 - Zion Tech Group"
+        description="Professional ComprehensivePricing2025 services by Zion Tech Group"
+        keywords="comprehensivepricing2025, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">ComprehensivePricing2025</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ComprehensivePricing2025 services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ComprehensivePricing2025;

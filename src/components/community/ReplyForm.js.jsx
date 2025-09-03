@@ -1,38 +1,32 @@
-';export default function ReplyForm({' onSubmit, placeholder = 'Write your reply...'}) {' const [content, setContent] = useState(')' const handleSubmit = e => {' e.preventDefault() if (content.trim()) { onSubmit(content) setContent(')' }' } return() <form onSubmit={handleSubmit} className='mt-4'>' <textarea ' value={content} onChange={e =" > setContent(e.target.value)} placeholder={placeholder}' className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none' rows={3}' />' <div className='mt-2 flex justify-end'>' <Button type='submit' disabled={!content.trim()}" >' Post Reply' </Button> </div> </form> ) } '';''';import React, { useState } from 'react'
-import { Button } from '@/components/ui/button';"
-  onSubmit,'
-  placeholder = 'Write your reply...'}) {}"
-'
-''
-'''
-  const [content, setContent] = useState('')
-  const handleSubmit = e => {}
-    e.preventDefault()
-    if (content.trim()) {}"
-      onSubmit(content)'
-      setContent(''),
-}
-  }
-  return()"
-    <form onSubmit={handleSubmit} className='mt-4'>
-      <textarea value={content}"
-        onChange={e =" > setContent(e.target.value)}'''
-        placeholder={placeholder}''''
-        className='w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none'''
-        rows={3}'''
-      />''''
-      <div className='mt-2 flex justify-end'>''''
-        <Button type='submit" disabled={!content.trim()}" >
-          Post Reply
-        </Button>
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const ReplyFormJs = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ReplyFormJs - Zion Tech Group"
+        description="Professional ReplyFormJs services by Zion Tech Group"
+        keywords="replyformjs, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">ReplyFormJs</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ReplyFormJs services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
       </div>
-    </form>)}
+    </div>
+  );
+};
 
-export { ReplyForm }
-
-export { ReplyForm }
-
-export { ReplyForm }
-
-export { ReplyForm }
-;"
+export default ReplyFormJs;

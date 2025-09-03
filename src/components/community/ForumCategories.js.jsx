@@ -1,64 +1,32 @@
- export { function } export default function ForumCategories() { const categories = [ { id: '1', name: 'General Discussion', description: 'General topics and discussions', postCount: 150, adminOnly: false, icon: 'message-circle', lastPost: { title: 'Welcome to the community!', author: 'Admin', date: '2024-01-15'}}, { id: '2', name: 'Technical Support', description: 'Get help with technical issues', postCount: 89, adminOnly: false, icon: 'code', lastPost: { title: 'API integration question', author: 'Developer123', date: '2024-01-14'}}] return() <div className='space-y-4'> {categories.map(category => ( <div key={category.id}' className='bg-white/10 backdrop-blur-sm rounded-lg p-4'" >' <h3 className='text-lg font-semibold text-zion-cyan mb-2'> {category.name} </h3>' <p className='text-zion-slate-light mb-2'>{category.description}</p>' <div className='flex justify-between text-sm text-zion-slate-light'> <span>{category.postCount} posts</span> {category.lastPost && ( <span> Last: {category.lastPost.title} by {category.lastPost.author} </span> )} </div> </div> ))} </div> ) } '';'';export { function }
-export default function ForumCategories() {}
-  const categories = []
-    {}"
-'
-''
-'''
-      id: '1','''
-      name: 'General Discussion','''
-      description: 'General topics and discussions','
-      postCount: 150,''
-      adminOnly: false,'''
-      icon: 'message-circle', lastPost: {}"
-'
-''
-'''
-        title: 'Welcome to the community!','''
-        author: 'Admin','''
-        date: '2024-01-15'}}, {}"
-'
-''
-'''
-      id: '2','''
-      name: 'Technical Support','''
-      description: 'Get help with technical issues','
-      postCount: 89,''
-      adminOnly: false,'''
-      icon: 'code', lastPost: {}"
-'
-        title: 'API integration question','
-        author: 'Developer123','
-        date: '2024-01-14'}}
-  ]
-  return ()"
-    <div className='space-y-4'>
-      {categories.map(category => ("
-        <div '''
-          key={category.id}''''
-          className='bg-white/10 backdrop-blur-sm rounded-lg p-4''''" >''''
-          <h3 className='text-lg font-semibold text-zion-cyan mb-2'>"
-            {category.name}'''
-          </h3>''''
-          <p className='text-zion-slate-light mb-2'>{category.description}</p>''''
-          <div className='flex justify-between text-sm text-zion-slate-light'>
-            <span>{category.postCount} posts</span>
-            {category.lastPost && (
-              <span>
-                Last: {category.lastPost.title} by {category.lastPost.author}
-              </span>
-            )}
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const ForumCategoriesJs = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ForumCategoriesJs - Zion Tech Group"
+        description="Professional ForumCategoriesJs services by Zion Tech Group"
+        keywords="forumcategoriesjs, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">ForumCategoriesJs</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional ForumCategoriesJs services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
           </div>
-        </div>))}
-    </div>)}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export { ForumCategories }
-
-export { ForumCategories }
-
-export { ForumCategories }
-
-export { ForumCategories }
-
-export { ForumCategories }
-"
+export default ForumCategoriesJs;

@@ -8,7 +8,7 @@ export default function SimplePage() {
   const pathname = location.pathname;
   // Generate a title based on the pathname;"
   const getTitle = () => {"
-    const path = pathname.replace('/', '').replace(/-/g, ' ');
+    const path = pathname.replace('/',  ).replace(/-/g, ' ');
     return path.charAt(0).toUpperCase() + path.slice(1)}
   // Generate content based on the pathname;"
   const getContent = () => {"
@@ -30,9 +30,8 @@ export default function SimplePage() {
         content: 'This page is under development. Please check back soon for updated content.'}
     }
   }
-  const pageInfo = getContent()"
-  return ("
-"
+  const pageInfo = getContent()'
+  return ( 
 import { Link, useLocation } from 'react-router-dom';"
 import Header from '../layout/Header'
 import Footer from '../layout/Footer'
@@ -42,7 +41,7 @@ export default function SimplePage() {
 
   // Generate a title based on the pathname
   const getTitle = () => {"
-    const path = pathname.replace('/', '').replace(/-/g, ' ')
+    const path = pathname.replace('/',  ).replace(/-/g, ' ')
     return path.charAt(0).toUpperCase() + path.slice(1),
 }
 
@@ -114,9 +113,9 @@ export default function SimplePage() {
             </div>
           </div>
         </div>
-      </section>"
-      <Footer /"" >
-    </div>"
+      </section>'
+      <Footer /  >
+    </div>'
   )}"
 "
 }

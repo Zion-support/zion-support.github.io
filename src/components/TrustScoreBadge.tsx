@@ -1,10 +1,32 @@
-import { No } from 'lucide-react';
- interface TrustScoreBadgeProps {
-  score: number | null | undefined"
-   tooltipText?: string} const TrustScoreBadge: React.FC < TrustScoreBadgeProps> = ({ score, tooltipText }) => { const displayScore = score !== null && score !== undefined ? score : 'N / A' const defaultTooltip = score !== null && score !== undefined ? `Detailed analysis: ${tooltipText || 'No analysis available'}` : 'Trust score not yet calculated.' const getScoreColor = () => { if (score === null || score === undefined) return 'text - gray - 500' if (score > 85) return 'text - green - 600' if (score > 70) return 'text - yellow - 600' return 'text - red - 600' } return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`";"
- interface TrustScoreBadgeProps {
-  score: number | null | undefined
-   tooltipText?: string",`
-} const TrustScoreBadge: React.FC < TrustScoreBadgeProps" > = ({ score, tooltipText }) => { const displayScore = score !== null && score !== undefined ? score : 'N / A' const defaultTooltip = score !== null && score !== undefined ? `Detailed analysis: ${tooltipText || 'No analysis available'}` : 'Trust score not yet calculated.' const getScoreColor = () => { if (score === null || score === undefined) return 'text - gray - 500' if (score > 85) return 'text - green - 600' if (score > 70) return 'text - yellow - 600' return 'text - red - 600' } return (<div className='trust - score - badge p - 2 border rounded - md shadow - sm bg - white inline - block' title={tooltipText || defaultTooltip}''`"
-"
-}}`
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const TrustScoreBadge: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="TrustScoreBadge - Zion Tech Group"
+        description="Professional TrustScoreBadge services by Zion Tech Group"
+        keywords="trustscorebadge, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">TrustScoreBadge</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional TrustScoreBadge services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TrustScoreBadge;

@@ -1,37 +1,32 @@
-const LoginErrorFallback = memo(({ error, resetErrorBoundary }) => {}
-  return()
-    <div className='min-h-screen bg-background flex items-center justify-center p-4'>''''
-      <div className='max-w-md w-full space-y-8'>''''
-        <div className='text-center'>''''
-          <h2 className='text-3xl font-bold text-foreground mb-4'>"
-            Something went wrong''''
-          </h2>''''
-          <p className='text-muted-foreground mb-6'>
-            We encountered an error while loading the login page. Please try again."
-          </p>'''{error && ('''''
-            <details className='text-left mb-6'>''''
-              <summary className='cursor-pointer text-sm text-muted-foreground'>"
-                Error details''''
-              </summary>''''
-              <pre className='mt-2 text-xs text-red-500 bg-red-50 p-2 rounded overflow-auto'>
-                {error.message}
-              </pre>
-            </details>
-          )}"
-          <button ''''
-            onClick={resetErrorBoundary}'''';"
-            className='w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium''';
-            Try Again;"
-          </button"" >
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const LoginErrorFallback = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="LoginErrorFallback - Zion Tech Group"
+        description="Professional LoginErrorFallback services by Zion Tech Group"
+        keywords="loginerrorfallback, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">LoginErrorFallback</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional LoginErrorFallback services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  )}
+  );
+};
+
 export default LoginErrorFallback;
-export { LoginErrorFallback }
-export { LoginErrorFallback }
-export { LoginErrorFallback }
-export { LoginErrorFallback }
-"
-export { LoginErrorFallback }"
-"

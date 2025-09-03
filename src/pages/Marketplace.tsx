@@ -46,8 +46,8 @@ export default function Marketplace() {
     <>
       <SEO 
         title="Marketplace - Zion Tech Group | Technology Solutions & Tools"
-        description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group's marketplace."'
-        keywords="marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group"
+        description="Discover and purchase cutting-edge technology solutions, AI tools, and micro SaaS applications from Zion Tech Group's marketplace. 
+        keywords='marketplace, technology solutions, AI tools, micro SaaS, software, Zion Tech Group"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

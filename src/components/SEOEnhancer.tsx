@@ -1,12 +1,32 @@
- import { Helmet } from 'react - helmet - async' interface SEOEnhancerProps {;"
- import { Helmet } from 'react - helmet - async' interface SEOEnhancerProps {
-  title?: string
-   description?: string
-   keywords?: string
-   image?: string
-   url?: string
-   type?: string
-   structuredData?: any",
-} const SEOEnhancer: React.FC < SEOEnhancerProps> = ({ title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Transform your business with cutting - edge AI, cloud architecture, and innovative development services. Expert technology solutions for modern enterprises.', keywords = 'technology solutions, AI services, cloud architecture, software development, digital transformation, IT consulting, micro - saas, enterprise solutions', image = 'https:'''"
-;"
-}}
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const SEOEnhancer: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="SEOEnhancer - Zion Tech Group"
+        description="Professional SEOEnhancer services by Zion Tech Group"
+        keywords="seoenhancer, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">SEOEnhancer</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional SEOEnhancer services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SEOEnhancer;

@@ -1,1 +1,32 @@
-import * as React from 'react'' import { Sheet, SheetContent } from '@/components/ui/sheet'' import { cn } from '@/lib/utils'' import { useSidebar } from './sidebar-context' export const Sidebar = React.forwardRef((props, ref) => {} const { isMobile, state, openMobile, setOpenMobile } = useSidebar()' if (props.collapsible === 'none') {} return() <div ' className={cn('';flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground', props.className )} ref={ref} {...props}" > {props.children} </div> ) } if (isMobile) {} return() <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}" > <SheetContent data-sidebar='sidebar'''' data-mobile='true'''' className='w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&" >button]: hidden'' style={{}' '--sidebar-width': '18rem'}}'' side={props.side}'''' >'''' <div className='flex h-full w-full flex-col'>{props.children}</div> </SheetContent> </Sheet> ) }' return()'' <div '''' ref={ref}'''' className='group peer hidden md: block text-sidebar-foreground'' data-state={state}' data-collapsible={state === 'collapsed' ? props.collapsible : ''} data-variant={props.variant} data-side={props.side}" >' {}'' <div ''' className={cn('''';duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear', group-data-[collapsible=offcanvas]: w-0', group-data-[side=right]: rotate-180', ''' props.variant === 'floating' || props.variant === 'inset''''' ? 'group-data-[collapsible=icon]: w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]''''' : 'group-data-[collapsible=icon]: w-[--sidebar-width-icon] )}' /" >'' <div''' className={cn('''';duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left, right,width] ease-linear md: flex', ''' props.side === 'left''''' ? 'left-0 group-data-[collapsible=offcanvas]: left-[calc(var(--sidebar-width)*-1)]''''' : 'right-0 group-data-[collapsible=offcanvas]: right-[calc(var(--sidebar-width)*-1)]', '''';';'
+import React from 'react';
+import { SEO } from '@/components/SEO';
+
+const Sidebarmain = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Sidebarmain - Zion Tech Group"
+        description="Professional Sidebarmain services by Zion Tech Group"
+        keywords="sidebarmain, technology, services"
+      />
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Sidebarmain</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional Sidebarmain services to help your business grow.
+          </p>
+          <div className="flex justify-center">
+            <a 
+              href="/contact" 
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Sidebarmain;
