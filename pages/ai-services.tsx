@@ -59,7 +59,7 @@ export default function AIServices() {
       features: [
         'Resume parsing and skill extraction,Cultural fit and personality analysis,Automated interview scheduling,Bias detection and elimination,Predictive hiring success metrics',
       ],
-      pricing: '$4,000 - $15, 000/month',
+      pricing: '$4,000 - $15,000/month',
       delivery: '4-6 weeks',
       category: 'HR AI'
 },
@@ -70,7 +70,7 @@ export default function AIServices() {
       features: [
         'Real-time object detection and recognition,Quality control and defect detection,Facial recognition and access control,Video analytics and monitoring,Custom model training and deployment',
       ],
-      pricing: '$5,000 - $20, 000/month',
+      pricing: '$5,000 - $20,000/month',
       delivery: '6-8 weeks',
       category: 'Vision AI'
 },
@@ -81,7 +81,7 @@ export default function AIServices() {
       features: [
         'Natural language understanding,Multi-channel deployment (web, mobile, voice),Integration with business systems,Sentiment analysis and escalation,Continuous learning and improvement',
       ],
-      pricing: '$2,000 - $10, 000/month',
+      pricing: '$2,000 - $10,000/month',
       delivery: '2-4 weeks',
       category: 'Conversational AI'
 },

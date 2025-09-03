@@ -86,9 +86,15 @@ const BlogIndex: NextPage = () => {
       </section>
 
       {/* Categories */}
+<<<<<<< HEAD
       <section className=py-8 bg-gray-50">
         <div className="container mx-auto px-4>
           <div className={`flex flex-wrap justify-center gap-4`>
+=======
+      <section className="py-8 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4">
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-05ff
             {categories.map((category) => (
               <button key={category}
                 className={`px-6 py-2 rounded-full font-semibold transition-colors ${

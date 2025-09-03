@@ -24,18 +24,12 @@ const Careers: NextPage = () => {
       icon: Heart,
       title: 'Health & Wellness',
       description: 'Comprehensive health insurance, dental, vision, and wellness programs.'
-<<<<<<< HEAD
     },
-=======
-},
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-1c7d
     {
       icon: Home,
       title: 'Remote Work',
-      description: 'Flexible remote work options and home office stipend.'},
       description: 'Flexible remote work options and home office stipend.'
     },
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
     {
       icon: Award,
       title: 'Growth Opportunities',
