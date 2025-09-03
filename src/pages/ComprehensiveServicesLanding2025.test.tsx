@@ -1,17 +1,20 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import ComprehensiveServicesLanding2025 from './ComprehensiveServicesLanding2025';
-"
+<<<<<<< HEAD
+describe('ComprehensiveServicesLanding2025', () => {}' it('renders without crashing', () => {} render(<ComprehensiveServicesLanding2025 />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<ComprehensiveServicesLanding2025 />) '
+=======
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import ComprehensiveServicesLanding2025 from './ComprehensiveServicesLanding2025
 describe('ComprehensiveServicesLanding2025', () => {"
   it('renders without crashing', () => {
     render(<ComprehensiveServicesLanding2025 /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<ComprehensiveServicesLanding2025 /" >);
-    // Add more specific tests here,
-});,
+    render(<ComprehensiveServicesLanding2025 /" >)
+    // Add more specific tests here
 });
+})
 "
+>>>>>>> main

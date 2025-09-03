@@ -108,25 +108,9 @@ export interface DocumentationConfig {
    primaryColor?: string;
    compName?: string}}
 export class APIDocGeneratorService {
-  private supportedFrameworks = ['express',
-  'fastify',
-  'koa',
-  'hapi',
-  'django',
-  'flask',
-  'fastapi',
-  'spring',
-  'aspnet',
-  'laravel';
+  private supportedFrameworks = ['express,fastify,koa,hapi,django,flask,fastapi,spring,aspnet,laravel';
   ];
-  private supportedLanguages = ['javascript',
-  'typescript',
-  'python',
-  'java',
-  'csharp',
-  'php',
-  'go',
-  'ruby';
+  private supportedLanguages = ['javascript,typescript,python,java,csharp,php,go,ruby';
   ];
   async generateDocumentation(
     sourcePath: string,
@@ -193,19 +177,15 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'js' || extension ===;
   'ts') {
         languages.push(
-  'javascript',
-  'typescript');
+  'javascript,typescript');
         frameworks.push(
-  'express',
-  'fastify');
+  'express,fastify');
         endpoints.push(...this.analyzeJavaScriptFile(file))} else if (extension = ==;
   'py') {
         languages.push(
   'python');
         frameworks.push(
-  'django',
-  'flask',
-  'fastapi');
+  'django,flask,fastapi');
         endpoints.push(...this.analyzePythonFile(file))} else if (extension = ==;
   'java') {
         languages.push(
@@ -224,13 +204,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   private async scanDirectory(path: string): Promise<string[]> {
     // Simulate directory scanning;
     return [,
-  src/routes/users.js',
-  'src/routes/products.js',
-  'src/routes/orders.js',
-  'src/models/User.js',
-  'src/models/Product.js',
-  'src/middleware/auth.js',
-  'src/config/database.js';
+  src/routes/users.js,src/routes/products.js,src/routes/orders.js,src/models/User.js,src/models/Product.js,src/middleware/auth.js,src/config/database.js';
     ]}
   private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
@@ -395,10 +369,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
             required: false,
             schema: { type:,
   string', enum[;
-  'pending',
-  'processing',
-  'completed',
-  'cancelled'] },
+  'pending,processing,completed,cancelled'] },
             description: 'Filter orders by status;
         ],
         requestBody: null,
@@ -437,9 +408,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   string', format: 'date-time }
         },
         required[,
-  id',
-  'email',
-  'name'],
+  id,email,name'],
         description: 'User entity schema},
       {
         type:,
@@ -460,9 +429,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'boolean }
         },
         required[,
-  id',
-  'name',
-  'price'],
+  id,name,price'],
         description: 'Product entity schema},
       {
         type:,
@@ -493,16 +460,10 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'number', minimum: 0 },
           status: { type:,
   string', enum[;
-  'pending',
-  'processing',
-  'completed',
-  'cancelled'] }
+  'pending,processing,completed,cancelled'] }
         },
         required[;
-  'id',
-  'userId',
-  'items',
-  'total'],
+  'id,userId,items,total'],
         description: 'Order entity schema},
       {
         type:,
@@ -518,10 +479,7 @@ documentation.examples = await this.generateExamples(documentation.endpoints)}
   'integer', minimum: 1 }
         },
         required[,
-  page',
-  'limit',
-  'total',
-  'pages'],
+  page,limit,total,pages'],
         description: 'Pagination metadata schema;
     ];
     return schemas}

@@ -1,107 +1,109 @@
- export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium'}) const [submissionStatus, setSubmissionStatus] = useState('idle') const projectTypes = [ { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications'}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications'}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics'}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation'}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting'}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design'}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions'}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines'}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup'}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization'}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance'}] const budgetRanges = [ { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs'}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications'}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications'}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions'}, { value: '100k-plus', label: '$100, 000+', description: 'Large-scale projects'}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs'}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed'}, { value: '1-month', label: '1 Month', description: 'Standard project timeline'}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline'}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project'}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed'}] const urgencyLevels = [ { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400'}, { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400'}, { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400'}, { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400'}] const handleInputChange = e => { const { name, value } = e.target setFormData(prev => ({ ...prev, [name]: value})) } const handleSubmit = async e => { e.preventDefault() setSubmissionStatus('submitting')';''';import { useState } from 'react''
+ export default function RequestQuote() { const [formData, setFormData] = useState({ firstName: ', lastName: ', email: ', phone: ', comp: ', projectType: ', budget: ', timeline: ', description: ', urgency: 'medium'}) const [submissionStatus, setSubmissionStatus] = useState('idle') const projectTypes = [
+  { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications'}, { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications'}, { value: 'ai-ml', label: 'AI & Machine Learning', icon: Brain, description: 'Intelligent automation and analytics'}, { value: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: Cloud, description: 'AWS, Azure, GCP solutions'}, { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield, description: 'Security audits and implementation'}, { value: 'data-analytics', label: 'Data Analytics', icon: BarChart3, description: 'Business intelligence and reporting'}, { value: 'ui-ux-design', label: 'UI/UX Design', icon: Palette, description: 'User interface and experience design'}, { value: 'software-development', label: 'Custom Software', icon: Code, description: 'Enterprise software solutions'}, { value: 'devops', label: 'DevOps & CI/CD', icon: Server, description: 'Automation and deployment pipelines'}, { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup'}, { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization'}, { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance'}] const budgetRanges = [
+  { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs'}, { value: '10k-25k', label: '$10,000 - $25, 000', description: 'Medium-sized applications'}, { value: '25k-50k', label: '$25, 000 - $50,000', description: 'Complex applications'}, { value: '50k-100k', label: '$50,000 - $100, 000', description: 'Enterprise solutions'}, { value: '100k-plus', label: '$100, 000+', description: 'Large-scale projects'}, { value: 'custom', label: 'Custom Pricing', description: 'Let&quots discuss your needs'}] const timelineOptions = [' { value: 'asap', label: 'ASAP', description: 'Immediate start required' }, { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed'}, { value: '1-month', label: '1 Month', description: 'Standard project timeline'}, { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline'}, { value: '3-plus-months', label: '3+ Months', description: 'Long-term project'}, { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed'}] const urgencyLevels = [
+  { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400'}, { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400'}, { value: 'high', label: 'High', description: 'Urgent delivery needed', color: 'text-orange-400'}, { value: 'critical', label: 'Critical', description: 'Emergency situation', color: 'text-red-400'}] const handleInputChange = e => { const { name, value } = e.target setFormData(prev => ({ ...prev, [name]: value})) } const handleSubmit = async e => { e.preventDefault() setSubmissionStatus('submitting')'';import { useState }  from 'react
 import { motion } from 'framer-motion';
 import {}"
   Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code,'
   Server,''
   Wifi,'''
-  Briefcase} from 'lucide-react'
-export default function RequestQuote() {}
+  Briefcase}  from 'lucide-react';export default function RequestQuote() {}
   const [formData, setFormData] = useState({}"
 '
 ''
 '''
-    firstName: '','''
-    lastName: '','''
-    email: '','''
-    phone: '','''
-    comp: '','''
-    projectType: '','''
-    budget: '','''
-    timeline: '','''
-    description: '',''';"
-    urgency: 'medium'})';'
+    firstName: ',''
+    lastName: ',''
+    email: ',''
+    phone: ',''
+    comp: ',''
+    projectType: ',''
+    budget: ',''
+    timeline: ',''
+    description: ','
+    urgency: 'medium'})
   const [submissionStatus, setSubmissionStatus] = useState('idle')
   const projectTypes = []
     {}"
 '
 ''
 '''
-      value: 'web-development','''
-      label: 'Web Development',''
+      value: 'web-development,''
+      label: 'Web Development,'
       icon: Globe,'''
       description: 'Custom websites and web applications'}, {}"
 '
 ''
 '''
-      value: 'mobile-app','''
-      label: 'Mobile App Development',''
+      value: 'mobile-app,''
+      label: 'Mobile App Development,'
       icon: Smartphone,'''
       description: 'iOS and Android applications'}, {}"
 '
 ''
 '''
-      value: 'ai-ml','''
-      label: 'AI & Machine Learning',''
+      value: 'ai-ml,''
+      label: 'AI & Machine Learning,'
       icon: Brain,'''
       description: 'Intelligent automation and analytics'}, {}"
 '
 ''
 '''
-      value: 'cloud-infrastructure','''
-      label: 'Cloud Infrastructure',''
+      value: 'cloud-infrastructure,''
+      label: 'Cloud Infrastructure,'
       icon: Cloud,'''
       description: 'AWS, Azure, GCP solutions'}, {}"
 '
 ''
 '''
-      value: 'cybersecurity','''
-      label: 'Cybersecurity',''
+      value: 'cybersecurity,''
+      label: 'Cybersecurity,'
       icon: Shield,'''
       description: 'Security audits and implementation'}, {}"
 '
 ''
 '''
-      value: 'data-analytics','''
-      label: 'Data Analytics',''
+      value: 'data-analytics,''
+      label: 'Data Analytics,'
       icon: BarChart3,'''
       description: 'Business intelligence and reporting'}, {}"
 '
 ''
 '''
-      value: 'ui-ux-design','''
-      label: 'UI/UX Design',''
+      value: 'ui-ux-design,''
+      label: 'UI/UX Design,'
       icon: Palette,'''
       description: 'User interface and experience design'}, {}"
 '
 ''
 '''
-      value: 'software-development','''
-      label: 'Custom Software',''
+      value: 'software-development,''
+      label: 'Custom Software,'
       icon: Code,'''
       description: 'Enterprise software solutions'}, {}"
 '
 ''
 '''
-      value: 'devops','''
-      label: 'DevOps & CI/CD',''
+      value: 'devops,''
+      label: 'DevOps & CI/CD,'
       icon: Server,'''
       description: 'Automation and deployment pipelines'}, {}"
 '
 ''
 '''
-      value: 'network-infrastructure','''
-      label: 'Network Infrastructure',''
+      value: 'network-infrastructure,''
+      label: 'Network Infrastructure,'
       icon: Wifi,'''
       description: 'Network design and setup'}, {}"
 '
 ''
 '''
-      value: 'database-design','''
-      label: 'Database Design',''
+      value: 'database-design,''
+      label: 'Database Design,'
       icon: Database,'''
       description: 'Database architecture and optimization'}, {}"
 '
-      value: 'consulting','
+      value: 'consulting,
       label: 'IT Consulting', icon: Briefcase,'
       description: 'Strategic technology guidance'}
   ]
@@ -110,36 +112,36 @@ export default function RequestQuote() {}
 '
 ''
 '''
-      value: 'under-10k','''
-      label: 'Under $10,000','''
+      value: 'under-10k,''
+      label: 'Under $10,000,''
       description: 'Small projects and MVPs'}, {}"
 '
 ''
 '''
-      value: '10k-25k','''
-      label: '$10,000 - $25,000','''
+      value: '10k-25k,''
+      label: '$10,000 - $25,000,''
       description: 'Medium-sized applications'}, {}"
 '
 ''
 '''
-      value: '25k-50k','''
-      label: '$25,000 - $50,000','''
+      value: '25k-50k,''
+      label: '$25,000 - $50,000,''
       description: 'Complex applications'}, {}"
 '
 ''
 '''
-      value: '50k-100k','''
-      label: '$50,000 - $100,000','''
+      value: '50k-100k,''
+      label: '$50,000 - $100,000,''
       description: 'Enterprise solutions'}, {}"
 '
 ''
 '''
-      value: '100k-plus','''
-      label: '$100,000+','''
+      value: '100k-plus,''
+      label: '$100,000+,''
       description: 'Large-scale projects'}, {}"
 '
-      value: 'custom','
-      label: 'Custom Pricing','
+      value: 'custom,
+      label: 'Custom Pricing,
       description: 'Let's discuss your needs'}",
 ]'
   const timelineOptions = [''
@@ -147,30 +149,30 @@ export default function RequestQuote() {}
 '
 ''
 '''
-      value: '1-2-weeks','''
-      label: '1-2 Weeks','''
+      value: '1-2-weeks,''
+      label: '1-2 Weeks,''
       description: 'Quick turnaround needed'}, {}"
 '
 ''
 '''
-      value: '1-month','''
-      label: '1 Month','''
+      value: '1-month,''
+      label: '1 Month,''
       description: 'Standard project timeline'}, {}"
 '
 ''
 '''
-      value: '2-3-months','''
-      label: '2-3 Months','''
+      value: '2-3-months,''
+      label: '2-3 Months,''
       description: 'Complex project timeline'}, {}"
 '
 ''
 '''
-      value: '3-plus-months','''
-      label: '3+ Months','''
+      value: '3-plus-months,''
+      label: '3+ Months,''
       description: 'Long-term project'}, {}"
 '
-      value: 'flexible','
-      label: 'Flexible','
+      value: 'flexible,
+      label: 'Flexible,
       description: 'Timeline can be discussed'}
   ]
   const urgencyLevels = []
@@ -178,28 +180,28 @@ export default function RequestQuote() {}
 '
 ''
 '''
-      value: 'low','''
-      label: 'Low','''
-      description: 'No immediate deadline','''
+      value: 'low,''
+      label: 'Low,''
+      description: 'No immediate deadline,''
       color: 'text-green-400'}, {}"
 '
 ''
 '''
-      value: 'medium','''
-      label: 'Medium','''
-      description: 'Standard project timeline','''
+      value: 'medium,''
+      label: 'Medium,''
+      description: 'Standard project timeline,''
       color: 'text-yellow-400'}, {}"
 '
 ''
 '''
-      value: 'high','''
-      label: 'High','''
-      description: 'Urgent delivery needed','''
+      value: 'high,''
+      label: 'High,''
+      description: 'Urgent delivery needed,''
       color: 'text-orange-400'}, {}"
 '
-      value: 'critical','
-      label: 'Critical','
-      description: 'Emergency situation','
+      value: 'critical,
+      label: 'Critical,
+      description: 'Emergency situation,
       color: 'text-red-400'}
   ]
   const handleInputChange = e => {}
@@ -222,16 +224,16 @@ export default function RequestQuote() {}
 '
 ''
 '''
-          firstName: '','''
-          lastName: '','''
-          email: '','''
-          phone: '','''
-          comp: '','''
-          projectType: '','''
-          budget: '','''
-          timeline: '','''
-          description: '','''
-          urgency: 'medium'})';'
+          firstName: ',''
+          lastName: ',''
+          email: ',''
+          phone: ',''
+          comp: ',''
+          projectType: ',''
+          budget: ',''
+          timeline: ',''
+          description: ',''
+          urgency: 'medium'})
         setSubmissionStatus('idle'),
 }, 3000),
 }, 2000),
@@ -240,7 +242,7 @@ export default function RequestQuote() {}
     formData.firstName &&
     formData.lastName &&
     formData.email &&";
-    formData.projectType';'
+    formData.projectType
   return (''''
     <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900'>'''
       {/* Hero Section */}''''
@@ -267,7 +269,7 @@ export default function RequestQuote() {}
                 initial={{ opacity: 0, y: 20 }}"
                 animate={{ opacity: 1, y: 0 }}'''
                 transition={{ duration: 0.6, delay: 0.1 }}''''
-                className='flex items-center justify-center space-x-3 text-white/80''''" >''''
+                className='flex items-center justify-center space-x-3 text-white/80''" >''''
                 <Clock className='w-5 h-5 text-cyan-400' /" >
                 <span>24-Hour Response</span>
               </motion.div>
@@ -275,7 +277,7 @@ export default function RequestQuote() {}
                 initial={{ opacity: 0, y: 20 }}"
                 animate={{ opacity: 1, y: 0 }}'''
                 transition={{ duration: 0.6, delay: 0.2 }}''''
-                className='flex items-center justify-center space-x-3 text-white/80''''" >''''
+                className='flex items-center justify-center space-x-3 text-white/80''" >''''
                 <CheckCircle className='w-5 h-5 text-green-400' /" >
                 <span>Free Consultation</span>
               </motion.div>
@@ -283,7 +285,7 @@ export default function RequestQuote() {}
                 initial={{ opacity: 0, y: 20 }}"
                 animate={{ opacity: 1, y: 0 }}'''
                 transition={{ duration: 0.6, delay: 0.3 }}''''
-                className='flex items-center justify-center space-x-3 text-white/80''''" >''''
+                className='flex items-center justify-center space-x-3 text-white/80''" >''''
                 <Calculator className='w-5 h-5 text-purple-400' /" >
                 <span>Detailed Estimate</span>
               </motion.div>
@@ -303,7 +305,7 @@ export default function RequestQuote() {}
                 whileInView={{ opacity: 1, x: 0 }}"
                 viewport={{ once: true }}'''
                 transition={{ duration: 0.8 }}''''
-                className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20''''" >''''
+                className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20''" >''''
                 <h2 className='text-3xl font-bold text-white mb-8'>
                   Project Details"
                 </h2>'''
@@ -321,7 +323,7 @@ export default function RequestQuote() {}
                         value={formData.firstName}"
                         onChange={handleInputChange}'''
                         required''''
-                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors''''
+                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors''
                         placeholder='Enter your first name'''
                       /" >"
                     </div>'''
@@ -335,7 +337,7 @@ export default function RequestQuote() {}
                         value={formData.lastName}"
                         onChange={handleInputChange}'''
                         required''''
-                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors''''
+                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors''
                         placeholder='Enter your last name'''
                       /" >
                     </div>"
@@ -352,7 +354,7 @@ export default function RequestQuote() {}
                         value={formData.email}"
                         onChange={handleInputChange}'''
                         required''''
-                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors''''
+                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors''
                         placeholder='Enter your email'''
                       /" >"
                     </div>'''
@@ -365,7 +367,7 @@ export default function RequestQuote() {}
                         name='phone'''
                         value={formData.phone}'''
                         onChange={handleInputChange}''''
-                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors''''
+                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors''
                         placeholder='Enter your phone number'''
                       /" >
                     </div>
@@ -380,7 +382,7 @@ export default function RequestQuote() {}
                       name='comp'''
                       value={formData.comp}'''
                       onChange={handleInputChange}''''
-                      className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors''''
+                      className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors''
                       placeholder='Enter your comp name'''
                     /" >
                   </div>"
@@ -404,7 +406,7 @@ export default function RequestQuote() {}
                             value={type.value}"
                             checked={formData.projectType === type.value}'''
                             onChange={handleInputChange}''''
-                            className='sr-only''''
+                            className='sr-only''
                           /" >''''
                           <div className='flex items-start space-x-3'>''''
                             <div className='w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0'>''''
@@ -434,7 +436,7 @@ export default function RequestQuote() {}
                         name='budget'''
                         value={formData.budget}'''
                         onChange={handleInputChange}''''
-                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors''''" >''''
+                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors''" >''''
                         <option value=''>Select budget range</option>
                         {budgetRanges.map(budget => (
                           <option key={budget.value} value={budget.value}" >
@@ -451,7 +453,7 @@ export default function RequestQuote() {}
                         name='timeline'''
                         value={formData.timeline}'''
                         onChange={handleInputChange}''''
-                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors''''" >''''
+                        className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors''" >''''
                         <option value=''>Select timeline</option>
                         {timelineOptions.map(timeline => (
                           <option key={timeline.value} value={timeline.value}" >
@@ -482,7 +484,7 @@ export default function RequestQuote() {}
                             value={level.value}"
                             checked={formData.urgency === level.value}'''
                             onChange={handleInputChange}''''
-                            className='sr-only''''`
+                            className='sr-only''`
                           /" >''`"`
                           <div className='text-center w-full'>``
                             <div className={`font-medium ${level.color}`}" >"
@@ -507,7 +509,7 @@ export default function RequestQuote() {}
                       onChange={handleInputChange}"
                       required'''
                       rows={6}''''
-                      className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none''''
+                      className='w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none''
                       placeholder='Describe your project requirements, goals, and  specific features you need...'''
                     /" >
                   </div>"
@@ -543,7 +545,7 @@ export default function RequestQuote() {}
                     <motion .div"
                       initial={{ opacity: 0, y: 10 }}'''
                       animate={{ opacity: 1, y: 0 }}''''
-                      className='flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg''''" >''''
+                      className='flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg''" >''''
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3' /" >''''
                       <span className='text-green-400'>'
                         Thank you! We've received your quote request and will
@@ -555,7 +557,7 @@ export default function RequestQuote() {}
                     <motion .div"
                       initial={{ opacity: 0, y: 10 }}'''
                       animate={{ opacity: 1, y: 0 }}''''
-                      className='flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg''''" >''''
+                      className='flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg''" >''''
                       <AlertCircle className='w-5 h-5 text-red-400 mr-3' /" >''''
                       <span className='text-red-400'>
                         Something went wrong.Please try again or contact us
@@ -574,20 +576,20 @@ export default function RequestQuote() {}
                 whileInView={{ opacity: 1, x: 0 }}"
                 viewport={{ once: true }}'''
                 transition={{ duration: 0.8 }}''''
-                className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''''" >''''
+                className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''" >''''
                 <h3 className='text-xl font-bold text-white mb-4'>"
                   Get in Touch'''
                 </h3>''''
                 <div className='space-y-4'>'''
                   <a ''''
                     href='tel:+13024640950''''
-                    className='flex items-center text-white/80 hover:text-cyan-400 transition-colors''''" >''''
+                    className='flex items-center text-white/80 hover:text-cyan-400 transition-colors''" >''''
                     <Phone className='w-5 h-5 mr-3 text-cyan-400' /" >
                     +1 (302) 464-0950"
                   </a>'''
                   <a ''''
                     href='mailto:kleber@ziontechgroup.com''''
-                    className='flex items-center text-white/80 hover:text-cyan-400 transition-colors''''" >''''
+                    className='flex items-center text-white/80 hover:text-cyan-400 transition-colors''" >''''
                     <Mail className='w-5 h-5 mr-3 text-purple-400' /" >"
                     kleber@ziontechgroup.com'''
                   </a>''''
@@ -603,7 +605,7 @@ export default function RequestQuote() {}
                 whileInView={{ opacity: 1, x: 0 }}"
                 viewport={{ once: true }}'''
                 transition={{ duration: 0.8, delay: 0.2 }}''''
-                className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''''" >''''
+                className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''" >''''
                 <h3 className='text-xl font-bold text-white mb-4'>"
                   Why Choose Us'''
                 </h3>''''
@@ -658,7 +660,7 @@ export default function RequestQuote() {}
                 whileInView={{ opacity: 1, x: 0 }}"
                 viewport={{ once: true }}'''
                 transition={{ duration: 0.8, delay: 0.4 }}''''
-                className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''''" >''''
+                className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20''" >''''
                 <h3 className='text-xl font-bold text-white mb-4'>"
                   Our Process'''
                 </h3>''''

@@ -5,17 +5,14 @@ import { ArrowRight, TrendingUp, Users, Clock, Award, CheckCircle, Star, Buildin
 
 export default function CaseStudies() {
   const caseStudies = [
-    {
+  {
       title: 'Enterprise Cloud Migration Success',
       client: 'Fortune 500 Manufacturing Company',
       industry: 'Manufacturing',
       challenge: 'Legacy system migration and digital transformation',
       solution: 'Complete cloud migration with AI-powered automation',
       results: [
-        '60% reduction in operational costs',
-        '40% improvement in system performance',
-        '99.9% uptime achieved',
-        '50% faster deployment cycles'
+        '60% reduction in operational costs,40% improvement in system performance,99.9% uptime achieved,50% faster deployment cycles'
       ],
       duration: '6 months',
       team: '12 specialists',
@@ -29,10 +26,7 @@ export default function CaseStudies() {
       challenge: 'High customer service volume and response times',
       solution: 'AI chatbot implementation with natural language processing',
       results: [
-        '80% reduction in response time',
-        '90% customer satisfaction rate',
-        '24/7 automated support',
-        '70% cost savings on support staff'
+        '80% reduction in response time,90% customer satisfaction rate,24/7 automated support,70% cost savings on support staff'
       ],
       duration: '4 months',
       team: '8 specialists',
@@ -46,10 +40,7 @@ export default function CaseStudies() {
       challenge: 'Advanced threat protection and compliance',
       solution: 'Comprehensive security framework with AI monitoring',
       results: [
-        '99.8% threat detection accuracy',
-        'Zero security breaches',
-        'SOC 2 Type II compliance',
-        '50% reduction in security incidents'
+        '99.8% threat detection accuracy,Zero security breaches,SOC 2 Type II compliance,50% reduction in security incidents'
       ],
       duration: '8 months',
       team: '15 specialists',
@@ -63,10 +54,7 @@ export default function CaseStudies() {
       challenge: 'Patient data analysis and predictive insights',
       solution: 'Custom analytics platform with machine learning',
       results: [
-        '30% improvement in patient outcomes',
-        '25% reduction in readmission rates',
-        'Real-time data insights',
-        'HIPAA compliance maintained'
+        '30% improvement in patient outcomes,25% reduction in readmission rates,Real-time data insights,HIPAA compliance maintained'
       ],
       duration: '10 months',
       team: '10 specialists',
@@ -80,10 +68,7 @@ export default function CaseStudies() {
       challenge: 'Rapid product development and market entry',
       solution: 'Custom micro SaaS platform with scalable architecture',
       results: [
-        '3x faster time to market',
-        '500% user growth in 6 months',
-        '99.5% platform reliability',
-        'Seamless scalability achieved'
+        '3x faster time to market,500% user growth in 6 months,99.5% platform reliability,Seamless scalability achieved'
       ],
       duration: '5 months',
       team: '6 specialists',
@@ -97,10 +82,7 @@ export default function CaseStudies() {
       challenge: 'Digital modernization and omnichannel experience',
       solution: 'End-to-end digital transformation with AI integration',
       results: [
-        '45% increase in online sales',
-        '60% improvement in customer engagement',
-        'Unified omnichannel experience',
-        '40% reduction in operational costs'
+        '45% increase in online sales,60% improvement in customer engagement,Unified omnichannel experience,40% reduction in operational costs'
       ],
       duration: '12 months',
       team: '20 specialists',
@@ -110,7 +92,7 @@ export default function CaseStudies() {
   ];
 
   const industries = [
-    { name: 'Manufacturing', count: 15, icon: Building },
+  { name: 'Manufacturing', count: 15, icon: Building },
     { name: 'Healthcare', count: 12, icon: Shield },
     { name: 'Financial Services', count: 18, icon: TrendingUp },
     { name: 'E-commerce', count: 22, icon: Target },
@@ -119,7 +101,7 @@ export default function CaseStudies() {
   ];
 
   const testimonials = [
-    {
+  {
       quote: "Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations, and we've seen significant improvements in efficiency and cost savings.",
       author: "Sarah Johnson",
       title: "CTO",

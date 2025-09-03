@@ -1,19 +1,35 @@
+<<<<<<< HEAD
 import { Link } from 'react - router - dom'';'
 
-;"
-import { Link } from 'react-router-dom';"
+;
+import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from 'lucide-react'
+export function ContactInfo() {
+    return (<section className='py-20 bg-zion-blue-dark'>
+      <div className='container mx-auto px-4'>
+        <div className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
+=======
+import { Link }  from 'react - router - dom;
+import { Link } from 'react-router-dom
 import { Bottom, By, Clock, ExternalLink, Globe, Mail, MapPin, MessageSquare, Now, Phone, Quick, Star } from 'lucide-react';
 export function ContactInfo() {"
     return (<section className='py-20 bg-zion-blue-dark'>"
       <div className='container mx-auto px-4'>"
         <div className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>"
+>>>>>>> main
             Get In Touch''''
           </h2>''''
           <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>;
             Ready to transform your business with cutting-edge technology?;
             Contact our experts today for a free consultation.
-          </p>"
+<<<<<<< HEAD
+          </p>
         </div>''';'
+''''
+        <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>'''{/* Contact Information */}'''''
+=======
+          </p>"
+        </div>''
 ''''
         <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>'''{/* Contact Information */}'''''
           <div className='space-y-6'>''''
@@ -27,48 +43,82 @@ export function ContactInfo() {"
                   Reach out to us through of these channels"
                 </CardDescription>''''
                 </CardTitle>'''
-import { Link } from 'react - router - dom';"
-';'
-';''
-import { Button } from '../ui/button'';''
-import { Badge } from '../ui/badge'';''
-import { Link } from 'react-router-dom'';''
+import { Link } from 'react - router - dom
+
+'
+import { Button }  from '../ui/button;''
+import { Badge }  from '../ui/badge;''
+import { Link }  from 'react-router-dom;''
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo() { return (<section className='py-20 bg-zion-blue-dark'> <div className='container mx-auto px-4'> <div className='text-center mb-16'> <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'> Get In Touch </h2> <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'> Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation. </p> </div> <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'> {/* Contact Information */ }''''
+>>>>>>> main
           <div className='space-y-6'>''''
-            <Card className='bg-zion-blue border-zion-blue-light'>'''
+            <Card className='bg-zion-blue border-zion-blue-light'>''''
               <CardHeader>''''
                 <CardTitle className='text-white flex items-center gap-2'>''''
-                  <Phone className='h-5 w-5 text-zion-cyan'/" >"
-                  Contact Details'''
+<<<<<<< HEAD
+                  <Phone className='h-5 w-5 text-zion-cyan' />
+                  Contact Details''''
                 </CardTitle>''''
                 <CardDescription className='text-zion-slate-light'>
-                  Reach out to us through  of these channels"
-                </CardDescription>'''
+                  Reach out to us through of these channels
+                </CardDescription>''''
               </CardHeader>''''
               <CardContent className='space-y-4'>''''
                 <div className='flex items-center gap-3'>''''
                   <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
-                    <Phone className='h-5 w-5 text-zion-purple' /" >"
+                    <Phone className='h-5 w-5 text-zion-purple' />
                   </div>''''
                   <div>''''
                     <p className='text-white font-medium'>Phone</p>''''
                     <p className='text-zion-cyan'>+1 302 464 0950</p>
-                  </div>;"
+                  </div>
                 </div>''';'
+''''
+                <div className='flex items-center gap-3'>''''
+                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
+                    <Mail className='h-5 w-5 text-zion-purple' />
+=======
+                  <Phone className='h-5 w-5 text-zion-cyan'/" >"
+                  Contact Details'''
+                </CardTitle>''''
+                <CardDescription className='text-zion-slate-light'>
+                  Reach out to us through  of these channels'
+                </CardDescription> '
+              </CardHeader>' '
+              <CardContent className='space-y-4'> ''
+                <div className='flex items-center gap-3'> ''
+                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'> ''
+                    <Phone className='h-5 w-5 text-zion-purple' /" >'
+                  </div> ''
+                  <div> ''
+                    <p className='text-white font-medium'>Phone</p> ''
+                    <p className='text-zion-cyan'>+1 302 464 0950</p>
+                  </div>;"
+                </div>''
 ''''
                 <div className='flex items-center gap-3'>''''
                   <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
                     <Mail className='h-5 w-5 text-zion-purple' /" >"
+>>>>>>> main
                   </div>''''
                   <div>''''
                     <p className='text-white font-medium'>Email</p>''''
                     <p className='text-zion-cyan'>kleber@ziontechgroup.com</p>
-                  </div>"
+<<<<<<< HEAD
+                  </div>
                 </div>''';'
 ''''
                 <div className='flex items-center gap-3'>''''
                   <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
+                    <MapPin className='h-5 w-5 text-zion-purple' />
+=======
+                  </div>"
+                </div>''
+''''
+                <div className='flex items-center gap-3'>''''
+                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
                     <MapPin className='h-5 w-5 text-zion-purple' /" >"
+>>>>>>> main
                   </div>''''
                   <div>''''
                     <p className='text-white font-medium'>Address</p>''''
@@ -77,8 +127,24 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                       <br /"" >
                       Middletown DE 19709
                     </p>
-                  </div>"
+<<<<<<< HEAD
+                  </div>
                 </div>''';'
+''''
+                <div className='flex items-center gap-3'>''''
+                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
+                    <Globe className='h-5 w-5 text-zion-purple' />
+                  </div>''''
+                  <div>''''
+                    <p className='text-white font-medium'>Website</p>''''
+                    <a'''';
+                      href='https: //ziontechgroup.com'''';'
+                      target='_blank'''';'
+                      rel='noopener noreferrer'''';'
+                      className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''';'
+=======
+                  </div>"
+                </div>''
 ''''
                 <div className='flex items-center gap-3'>''''
                   <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
@@ -86,41 +152,64 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   </div>''''
                   <div>''''
                     <p className='text-white font-medium'>Website</p>''''
-                    <a'''';"
-                      href='https: //ziontechgroup.com'''';'
-                      target='_blank'''';'
-                      rel='noopener noreferrer'''';'
-                      className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''';'
+                    <a'''
+                      href='https: //ziontechgroup.com'''
+                      target='_blank'''
+                      rel='noopener noreferrer'''
+                      className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''
+>>>>>>> main
                       ziontechgroup.com''''
                       <ExternalLink className='h-4 w-4' /"" >
                     </a>
                   </div>
                 </div>
-              </CardContent>"
+<<<<<<< HEAD
+              </CardContent>
             </Card>''';'
+=======
+              </CardContent>"
+            </Card>''
+>>>>>>> main
 ''''
             <Card className='bg-zion-blue border-zion-blue-light'>''''
               <CardHeader>''''
                 <CardTitle className='text-white flex items-center gap-2'>''''
-                  <Clock className='h-5 w-5 text-zion-cyan' /" >"
+<<<<<<< HEAD
+                  <Clock className='h-5 w-5 text-zion-cyan' />
                   Business Hours''''
                 </CardTitle>''''
                 <CardDescription className='text-zion-slate-light'>';'
                   We&apos;re available when you need us'
+                </CardDescription>
+=======
+                  <Clock className='h-5 w-5 text-zion-cyan' /" >"
+                  Business Hours''''
+                </CardTitle>''''
+                <CardDescription className='text-zion-slate-light'>
+                  We&apos;re available when you need us'
                 </CardDescription>"
+>>>>>>> main
               </CardHeader>''''
               <CardContent>''''
                 <div className='space-y-2 text-zion-slate-light'>''''
                   <div className='flex justify-between'>''''
                     <span>Monday - Friday</span>''''
                     <span className='text-zion-cyan'>
+<<<<<<< HEAD
+                      9: 00 AM - 6:00 PM EST
+=======
                       9: 00 AM - 6:00 PM EST"
+>>>>>>> main
                     </span>''''
                   </div>''''
                   <div className='flex justify-between'>''''
                     <span>Saturday</span>''''
                     <span className='text-zion-cyan'>
+<<<<<<< HEAD
+                      10:00 AM - 4:00 PM EST
+=======
                       10:00 AM - 4:00 PM EST"
+>>>>>>> main
                     </span>''''
                   </div>''''
                   <div className='flex justify-between'>''''
@@ -130,10 +219,17 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   <div className='pt-2 border-t border-zion-blue-light'>''''
                     <div className='flex justify-between'>''''
                       <span className='text-zion-cyan font-medium'>
-                        24/7 Support"
+<<<<<<< HEAD
+                        24/7 Support
                       </span>''''
                       <Badge''''
                         variant='secondary'''';'
+=======
+                        24/7 Support"
+                      </span>''''
+                      <Badge''''
+                        variant='secondary'''
+>>>>>>> main
                         className='bg-green-500/20 text-green-400 border-green-500/30 '>
                         Available
                       </Badge>
@@ -142,24 +238,37 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                 </div>
               </CardContent>
             </Card>
+<<<<<<< HEAD
+          </div>
+=======
           </div>"
+>>>>>>> main
 '''{/* Quick Actions & Services */}'''''
           <div className='space-y-6'>''''
             <Card className='bg-zion-blue border-zion-blue-light'>''''
               <CardHeader>''''
                 <CardTitle className='text-white flex items-center gap-2'>''''
+<<<<<<< HEAD
+                  <MessageSquare className='h-5 w-5 text-zion-cyan' />
+                  Quick Actions''''
+                </CardTitle>''''
+                <CardDescription className='text-zion-slate-light'>
+                  Get started with our most popular services
+=======
                   <MessageSquare className='h-5 w-5 text-zion-cyan' /" >"
                   Quick Actions''''
                 </CardTitle>''''
                 <CardDescription className='text-zion-slate-light'>
                   Get started with our most popular services"
+>>>>>>> main
                 </CardDescription>''''
               </CardHeader>''''
               <CardContent className='space-y-4'>''''
                 <Link to='/request-quote'>''''
                   <Button className='w-full bg-zion-purple hover: bg-zion-purple-dark text-white'>
                     Request Free Quote
-                  </Button>"
+<<<<<<< HEAD
+                  </Button>
                 </Link>''';'
 ''''
                 <Link to='/comprehensive-services'>''''
@@ -167,7 +276,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                     variant='outline'''';'
                     className='w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 '>
                     View All Services
-                  </Button>"
+                  </Button>
                 </Link>''';'
 ''''
                 <Link to='/it-onsite-services'>''''
@@ -175,11 +284,34 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                     variant='outline'''';'
                     className='w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 '>
                     IT Onsite Services
-                  </Button>"
+                  </Button>
                 </Link>''';'
 ''''
                 <div className='pt-4 border-t border-zion-blue-light'>''''
+                  <p className='text-zion-slate-light text-sm mb-3'>
+=======
+                  </Button>"
+                </Link>''
+''''
+                <Link to='/comprehensive-services'>''''
+                  <Button''''
+                    variant='outline'''
+                    className='w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 '>
+                    View All Services
+                  </Button>"
+                </Link>''
+''''
+                <Link to='/it-onsite-services'>''''
+                  <Button''''
+                    variant='outline'''
+                    className='w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 '>
+                    IT Onsite Services
+                  </Button>"
+                </Link>''
+''''
+                <div className='pt-4 border-t border-zion-blue-light'>''''
                   <p className='text-zion-slate-light text-sm mb-3'>"
+>>>>>>> main
                     Need immediate assistance?''''
                   </p>''''
                   <div className='flex items-center gap-2'>''''
@@ -189,22 +321,50 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                     </span>
                   </div>
                 </div>
-              </CardContent>"
+<<<<<<< HEAD
+              </CardContent>
             </Card>''';'
+=======
+              </CardContent>"
+            </Card>''
+>>>>>>> main
 ''''
             <Card className='bg-zion-blue border-zion-blue-light'>''''
               <CardHeader>''''
                 <CardTitle className='text-white flex items-center gap-2'>''''
+<<<<<<< HEAD
+                  <Star className='h-5 w-5 text-zion-cyan' />
+=======
                   <Star className='h-5 w-5 text-zion-cyan' /" >"
+>>>>>>> main
                   Why Choose Zion Tech Group?''''
                 </CardTitle>''''
                 <CardDescription className='text-zion-slate-light'>
                   What makes us different from the competition
+<<<<<<< HEAD
+                </CardDescription>
+=======
                 </CardDescription>"
+>>>>>>> main
               </CardHeader>''''
               <CardContent>''''
                 <div className='space-y-3 text-zion-slate-light'>''''
                   <div className='flex items-start gap-2'>''''
+<<<<<<< HEAD
+                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>
+                    <span>Global reach with local expertise</span>''''
+                  </div>''''
+                  <div className='flex items-start gap-2'>''''
+                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>
+                    <span>24/7 support and monitoring</span>''''
+                  </div>''''
+                  <div className='flex items-start gap-2'>''''
+                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>
+                    <span>Certified professionals</span>''''
+                  </div>''''
+                  <div className='flex items-start gap-2'>''''
+                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>
+=======
                     <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>"
                     <span>Global reach with local expertise</span>''''
                   </div>''''
@@ -218,6 +378,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   </div>''''
                   <div className='flex items-start gap-2'>''''
                     <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>"
+>>>>>>> main
                     <span>Competitive pricing</span>''''
                   </div>''''
                   <div className='flex items-start gap-2'>''''
@@ -228,6 +389,17 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
               </CardContent>
             </Card>
           </div>
+<<<<<<< HEAD
+        </div>
+'''{/* Bottom CTA */}'''''
+        <div className='text-center mt-16'>''''
+          <div className='bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto'>''''
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              Ready to Get Started?''''
+            </h3>''''
+            <p className='text-zion-slate-light mb-6'>
+              Join hundreds of satisfied clients who have transformed their;
+=======
         </div>"
 '''{/* Bottom CTA */}'''''
         <div className='text-center mt-16'>''''
@@ -237,20 +409,32 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
             </h3>''''
             <p className='text-zion-slate-light mb-6'>
               Join hundreds of satisfied clients who have transformed their;"
+>>>>>>> main
               businesses with our technology solutions''''
             </p>''''
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
               <Link to='/request-quote'>''''
                 <Button''''
+<<<<<<< HEAD
                   size='lg'''';'
                   className='bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3 '>
+                  Get Free Consultation
+=======
+                  size='lg'''
+                  className='bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3 '>
                   Get Free Consultation"
+>>>>>>> main
                 </Button>''''
               </Link>''''
               <a href='tel:+13024640950'>''''
                 <Button''''
+<<<<<<< HEAD
                   size='lg'''';'
                   variant='outline'''';'
+=======
+                  size='lg'''
+                  variant='outline'''
+>>>>>>> main
                   className='border-white text-white hover: bg-white hover:text-zion-purple px-8 py-3 '>
                   Call Now: +1 302 464 0950
                 </Button>
@@ -259,9 +443,15 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+    </section>
+  )}'"""'"
+}'''';
+=======
     </section>"
   )}'"""'",
-}'''';"
+}'''
+>>>>>>> main
 ''''''
 "
 "

@@ -5,7 +5,7 @@ import { BookOpen, Search, FileText, Code, Database, Cloud, Shield, Users, Arrow
 
 export default function Documentation() {
   const docCategories = [
-    {
+  {
       title: 'Getting Started',
       description: 'Quick start guides and setup instructions',
       icon: BookOpen,
@@ -74,7 +74,7 @@ export default function Documentation() {
   ];
 
   const popularDocs = [
-    {
+  {
       title: 'Quick Start Guide',
       description: 'Get started with Zion Tech Group services in minutes',
       category: 'Getting Started',
@@ -105,23 +105,23 @@ export default function Documentation() {
   ];
 
   const resources = [
-    {
+  {
       title: 'SDK Downloads',
       description: 'Download our SDKs for popular programming languages',
       icon: Download,
-      items: ['Python SDK', 'JavaScript SDK', 'Java SDK', 'C# SDK']
+      items: ['Python SDK,JavaScript SDK,Java SDK,C# SDK']
     },
     {
       title: 'Code Examples',
       description: 'Ready-to-use code examples and snippets',
       icon: Code,
-      items: ['REST API Examples', 'Webhook Examples', 'Integration Examples', 'Best Practices']
+      items: ['REST API Examples,Webhook Examples,Integration Examples,Best Practices']
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video tutorials',
       icon: ExternalLink,
-      items: ['Getting Started', 'Advanced Features', 'Troubleshooting', 'Case Studies']
+      items: ['Getting Started,Advanced Features,Troubleshooting,Case Studies']
     }
   ];
 

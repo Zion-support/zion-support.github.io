@@ -5,40 +5,72 @@ import {
 } from 'lucide-react';
 export default function Partners() {
   const partners = [
+<<<<<<< HEAD
     {
       id: 1, name: "Microsoft",
       category: "Technology Partner", description: "Strategic partnership in cloud computing and AI solutions",
       logo: "/api/placeholder/200/100", website: "https://microsoft.com",
       benefits: ["Azure Integration", "AI Services", "Enterprise Solutions"]
+=======
+  {
+      id: 1, name: "Microsoft",
+      category: "Technology Partner", description: "Strategic partnership in cloud computing and AI solutions",
+      logo: "/api/placeholder/200/100", website: "https://microsoft.com",
+      benefits: ["Azure Integration,AI Services,Enterprise Solutions"]
+>>>>>>> main
     }, {
       id: 2,
       name: "Google Cloud", category: "Cloud Partner",
       description: "Advanced cloud infrastructure and machine learning platforms", logo: "/api/placeholder/200/100",
+<<<<<<< HEAD
       website: "https://cloud.google.com", benefits: ["GCP Services", "ML Platforms", "Data Analytics"]
+=======
+      website: "https://cloud.google.com", benefits: ["GCP Services,ML Platforms,Data Analytics"]
+>>>>>>> main
     }, {
       id: 3,
       name: "IBM", category: "Quantum Computing Partner",
       description: "Quantum computing research and development collaboration", logo: "/api/placeholder/200/100",
+<<<<<<< HEAD
       website: "https://ibm.com", benefits: ["Quantum Systems", "Research Collaboration", "Enterprise AI"]
+=======
+      website: "https://ibm.com", benefits: ["Quantum Systems,Research Collaboration,Enterprise AI"]
+>>>>>>> main
     }, {
       id: 4,
       name: "Amazon Web Services", category: "Cloud Infrastructure Partner",
       description: "Comprehensive cloud services and infrastructure solutions", logo: "/api/placeholder/200/100",
+<<<<<<< HEAD
       website: "https://aws.amazon.com", benefits: ["AWS Services", "Infrastructure", "Global Reach"]
+=======
+      website: "https://aws.amazon.com", benefits: ["AWS Services,Infrastructure,Global Reach"]
+>>>>>>> main
     }, {
       id: 5,
       name: "NVIDIA", category: "AI Hardware Partner",
       description: "Advanced GPU solutions for AI and machine learning workloads", logo: "/api/placeholder/200/100",
+<<<<<<< HEAD
       website: "https://nvidia.com", benefits: ["GPU Solutions", "AI Acceleration", "Deep Learning"]
+=======
+      website: "https://nvidia.com", benefits: ["GPU Solutions,AI Acceleration,Deep Learning"]
+>>>>>>> main
     }, {
       id: 6,
       name: "Intel", category: "Technology Partner",
       description: "Advanced processor technologies and AI optimization", logo: "/api/placeholder/200/100",
+<<<<<<< HEAD
       website: "https://intel.com", benefits: ["Processor Tech", "AI Optimization", "Performance"]
+=======
+      website: "https://intel.com", benefits: ["Processor Tech,AI Optimization,Performance"]
+>>>>>>> main
     }
   ];
   const partnershipTypes = [
+<<<<<<< HEAD
     {
+=======
+  {
+>>>>>>> main
       title: "Technology Partners", description: "Leading technology companies providing cutting-edge solutions",
       icon: Building, count: 12,
       color: "from-blue-500 to-cyan-500"
@@ -58,9 +90,13 @@ export default function Partners() {
     }
   ];
   const benefits = [
+<<<<<<< HEAD
     "Access to cutting-edge technology and platforms", "Joint research and development opportunities",
     "Global market reach and distribution channels", "Technical support and training programs",
     "Co-marketing and go-to-market strategies", "Priority access to new features and updates"
+=======
+    "Access to cutting-edge technology and platforms,Joint research and development opportunities,Global market reach and distribution channels,Technical support and training programs,Co-marketing and go-to-market strategies,Priority access to new features and updates"
+>>>>>>> main
   ];
   return (
     <>
@@ -242,7 +278,11 @@ export default function Partners() {
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join our network of strategic partners and help shape the future of technology. 
+<<<<<<< HEAD
+                We&apos;re always looking for innovative companies to collaborate with.'
+=======
                 We're always looking for innovative companies to collaborate with.'
+>>>>>>> main
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a

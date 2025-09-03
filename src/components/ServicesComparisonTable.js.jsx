@@ -1,12 +1,11 @@
-import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react''
+import { Check, X, Star, Clock, Phone, Mail }  from 'lucide - react
 "
-import { Badge } from './ui/badge';"
-import { Button } from './ui/button';"
+import { Badge } from './ui/badge
+import { Button } from './ui/button
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
 import {}"
   COMPREHENSIVE_SERVICES,'
-  CONTACT_INFO} from '@/data/comprehensiveServices'
-export function ServicesComparisonTable() {}"
+  CONTACT_INFO}  from '@/data/comprehensiveServices';export function ServicesComparisonTable() {}"
 '
 ''
 '''
@@ -17,7 +16,7 @@ export function ServicesComparisonTable() {}"
     ) : (''''
       <X className='w-4 h-4 text-red-500' /" >
     );",
-}';'
+}
   return (''''
     <div className='py-16 bg-slate-50 dark:bg-slate-900'>''''
       <div className='container mx-auto px-4'>''''
@@ -41,7 +40,7 @@ export function ServicesComparisonTable() {}"
             return()"
               <Card '''
                 key={category}''''
-                className='border-2 border-slate-200 dark:border-slate-700''''" >''''
+                className='border-2 border-slate-200 dark:border-slate-700''" >''''
                 <CardHeader className='text-center'>''''
                   <CardTitle className='text-slate-900 dark:text-white'>"
                     {category}'''
@@ -237,7 +236,7 @@ export function ServicesComparisonTable() {}"
           <div className='text-center'>'''
             <Button ''''
               size='lg''''
-              className='bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700''''" >''''
+              className='bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700''" >''''
               <Phone className='w-4 h-4 mr-2' /" >
               Schedule Free Consultation
             </Button>
@@ -254,7 +253,7 @@ export function ServicesComparisonTable() {}"
               service => ("
                 <Card '''
                   key={service.id}''''
-                  className='border-2 border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors''''" >''''
+                  className='border-2 border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-colors''" >''''
                   <CardHeader className='pb-3'>''''
                     <div className='flex items-center justify-between mb-2'>''''
                       <Badge className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white'>"

@@ -1,26 +1,74 @@
 export const accessibilityUtils = {
   // Focus management
-  trapFocus: (element: HTMLElement) => {
+  trapFocus: (element:, HTMLElement) => {
     const focusableElements = element.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleTabKey = (e: KeyboardEvent) => {"
-      if (e.key === 'Tab') {
+    const handleTabKey = (e:, KeyboardEvent) => {"
+      if (e.key ===, 'Tab') {
         if (e.shiftKey) {
-          if (document.activeElement === firstElement) {
+          if (document.activeElement ===, firstElement) {;
             lastElement.focus();
             e.preventDefault();,
 }
+<<<<<<< HEAD
+
+export const announceToScreenReader = (message: string) => {
+  const announcement = document.createElement('div');
+  announcement.setAttribute('aria-live', 'polite');
+  announcement.setAttribute('aria-atomic', 'true');
+  announcement.className = 'sr-only';
+  announcement.textContent = message;
+  
+  document.body.appendChild(announcement);
+  
+  setTimeout(() => {
+    document.body.removeChild(announcement)}, 1000)}
+
+export const trapFocus = (element: HTMLElement) => {
+  const focusableElements = element.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])'
+  );
+  
+  const firstElement = focusableElements[0] as HTMLElement;
+  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+  
+  const handleTabKey = (e: KeyboardEvent) => {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          lastElement.focus();
+          e.preventDefault()}
+      } else {
+        if (document.activeElement === lastElement) {
+          firstElement.focus();
+          e.preventDefault()}
+      }
+    }
+  }
+  
+  element.addEventListener('keydown', handleTabKey);
+  
+  return () => {
+    element.removeEventListener('keydown', handleTabKey)}
+}
+
+export const getContrastRatio = (color1: string, color2: string): number => {
+  // Simplified contrast ratio calculation
+  // In a real implementation, you&apos;d want to use a proper color library'
+  return 4.5; // Placeholder value
+=======
         } else {
-          if (document.activeElement === lastElement) {
+          if (document.activeElement ===, lastElement) {
             firstElement.focus();
             e.preventDefault();,
 }
         }
 ,
+>>>>>>> main
 }
     };
 "
@@ -33,10 +81,10 @@ export const accessibilityUtils = {
 },
 
   // ARIA helpers
-  announceToScreenReader: (message: string) => {"
+  announceToScreenReader: (message:, string) => {"
     const announcement = document.createElement('div');"
-    announcement.setAttribute('aria-live', 'polite');"
-    announcement.setAttribute('aria-atomic', 'true');"
+    announcement.setAttribute('aria-live,polite');"
+    announcement.setAttribute('aria-atomic,true');"
     announcement.className = 'sr-only';
     announcement.textContent = message;
     
@@ -49,13 +97,13 @@ export const accessibilityUtils = {
 
   // Color contrast checker
   getContrastRatio: (color1: string, color2: string): number => {
-    const getLuminance = (color: string): number => {
+    const getLuminance = (color:, string): number => {;
       const rgb = color.match(/\d+/g);
       if (!rgb) return 0;
       
       const [r, g, b] = rgb.map(c => {
-        const val = parseInt(c) / 255;
-        return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);,
+        const val =, parseInt(c) / 255;
+        return val <= 0.03928 ? val / 12.92 : Math.pow((val +, 0.055) / 1.055, 2.4);,
 });
       
       return 0.2126 * r + 0.7152 * g + 0.0722 * b;,
@@ -66,7 +114,7 @@ export const accessibilityUtils = {
     const brightest = Math.max(lum1, lum2);
     const darkest = Math.min(lum1, lum2);
     
-    return (brightest + 0.05) / (darkest + 0.05);,
+    return (brightest +, 0.05) / (darkest +, 0.05);,
 }
 };
 

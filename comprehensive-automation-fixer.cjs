@@ -11,6 +11,20 @@ class ComprehensiveAutomationFixer {
     this.errors = [];
   }
 
+<<<<<<< HEAD
+  async fixAllScripts() {
+    console.log('🔧 Starting comprehensive automation script fixes...');
+
+    try {
+      const files = fs.readdirSync(this.automationDir);
+      const cjsFiles = files.filter(file => file.endsWith('.cjs'));
+
+      for (const file of cjsFiles) {
+        await this.fixScript(file);
+      }
+
+      console.log(`✅ Fixed ${this.fixedCount} scripts`);
+=======
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
@@ -25,12 +39,32 @@ class ComprehensiveAutomationFixer {
       });
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
+>>>>>>> main
     } catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
       return { success: false, error: error.message };
     }
   }
 
+<<<<<<< HEAD
+  async fixScript(filename) {
+    const filePath = path.join(this.automationDir, filename);
+
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let originalContent = content;
+
+      // Fix all common syntax errors
+      content = this.fixAllErrors(content);
+
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        console.log(`✅ Fixed: ${filename}`);
+        this.fixedCount++;
+      }
+    } catch (error) {
+      console.error(`❌ Error fixing ${filename}:`, error.message);
+=======
   fixRemainingTestFiles() {
     this.log('🔧 Fixing remaining test file issues');
     
@@ -66,6 +100,7 @@ class ComprehensiveAutomationFixer {
       } catch (error) {
         this.errors.push({ file: testFile, error: error.message });
       }
+>>>>>>> main
     }
     
     this.log(`✅ Fixed ${fixedCount} additional test files`);
@@ -85,6 +120,58 @@ class ComprehensiveAutomationFixer {
       } else if (item.endsWith('.test.tsx') || item.endsWith('.test.ts') || item.endsWith('.test.jsx') || item.endsWith('.test.js')) {
         testFiles.push(fullPath);
       }
+<<<<<<< HEAD
+    );
+
+    // Fix malformed path.join calls
+    content = content.replace(
+      /path\.join\(([^,]+),\s*'([^']+)',\s*'([^']+)'\)/g,
+      "path.join($1, '$2', '$3')"
+    );
+
+    // Fix arrays with malformed path.join calls
+    content = content.replace(
+      /const dirs = \[([^\]]*path\.join[^\]]*)\]/g,
+      (match, arrayContent) => {
+        // Replace path.join calls in arrays with proper string paths
+        const fixedContent = arrayContent.replace(
+          /path\.join\([^)]+\)/g,
+          pathJoinMatch => {
+            // Extract the path parts and create a proper string
+            const parts = pathJoinMatch.match(/path\.join\(([^)]+)\)/);
+            if (parts && parts[1]) {
+              const pathParts = parts[1]
+                .split(',')
+                .map(p => p.trim().replace(/['"]/g, ''));
+              return `'${pathParts.join('/')}'`;
+            }
+            return pathJoinMatch;
+          }
+        );
+        return `const dirs = [${fixedContent}]`;
+      }
+    );
+
+    // Fix template literal syntax errors
+    content = content.replace(
+      /console\.log\(([^`]+)`([^`]+)`([^)]*)\)/g,
+      'console.log(`$1$2$3`)'
+    );
+
+    // Fix missing quotes in string literals
+    content = content.replace(
+      /([a-zA-Z_][a-zA-Z0-9_]*\/[a-zA-Z0-9_\/\-\.]+)/g,
+      match => {
+        if (
+          !match.includes("'") &&
+          !match.includes('"') &&
+          !match.includes('path.join') &&
+          !match.includes('require') &&
+          !match.includes('process.') &&
+          !match.includes('__dirname')
+        ) {
+          return `'${match}'`;
+=======
     }
 
     return testFiles;
@@ -268,8 +355,19 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
           }
         } catch (error) {
           // Skip files that can't be read
+>>>>>>> main
         }
       }
+<<<<<<< HEAD
+    );
+
+    // Fix malformed require statements
+    content = content.replace(
+      /require\(([^)]*[^'",\s][^)]*)\)/g,
+      (match, requirePath) => {
+        if (!requirePath.includes("'") && !requirePath.includes('"')) {
+          return `require('${requirePath}')`;
+=======
     }
     
     return { issues: performanceIssues, count: performanceIssues.length };
@@ -300,8 +398,26 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
           }
         } catch (error) {
           // Skip files that can't be read
+>>>>>>> main
         }
       }
+<<<<<<< HEAD
+    );
+
+    // Fix console.log with emojis and template literals
+    content = content.replace(
+      /console\.log\(([^`]+)`([^`]+)`([^)]*)\)/g,
+      'console.log(`$1$2$3`)'
+    );
+
+    // Fix specific patterns that cause syntax errors
+    content = content.replace(
+      /console\.log\(📊 Running performance monitoring at \$\{new Date\(\)\.toISOString\(\)\}/g,
+      'console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`'
+    );
+
+    return content;
+=======
     }
     
     return { issues: securityIssues, count: securityIssues.length };
@@ -449,11 +565,23 @@ module.exports = ({ children }) => React.createElement('div', {}, children);`;
       this.log(`💥 Comprehensive Automation Fixer Failed: ${error.message}`);
       throw error;
     }
+>>>>>>> main
   }
 }
 
 // Run the comprehensive automation fixer
 const fixer = new ComprehensiveAutomationFixer();
+<<<<<<< HEAD
+fixer
+  .fixAllScripts()
+  .then(() => {
+    console.log('🎉 Comprehensive automation script fixing completed!');
+  })
+  .catch(error => {
+    console.error('💥 Error:', error);
+    process.exit(1);
+  });
+=======
 fixer.run()
   .then(report => {
     console.log('✅ Comprehensive Automation Fixer completed successfully');
@@ -463,3 +591,4 @@ fixer.run()
     console.error('❌ Comprehensive Automation Fixer failed:', error.message);
     process.exit(1);
   });
+>>>>>>> main

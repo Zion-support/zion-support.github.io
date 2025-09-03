@@ -131,11 +131,7 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Perfect for small businesses',
                   features: [;
-                    'Up to 1,000 customers',
-                    'Basic churn prediction',
-                    'Email automation',
-                    'Health score tracking',
-                    'Standard support';
+                    'Up to 1,000 customers,Basic churn prediction,Email automation,Health score tracking,Standard support';
                   ]},
                 {
                   name: 'Professional',
@@ -143,12 +139,7 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
                   period: '/month',
                   description: 'Ideal for growing companies',
                   features: [;
-                    'Up to 10,000 customers',
-                    'Advanced AI predictions',
-                    'Multi-channel automation',
-                    'Real-time analytics',
-                    'Priority support',
-                    'Custom integrations';
+                    'Up to 10,000 customers,Advanced AI predictions,Multi-channel automation,Real-time analytics,Priority support,Custom integrations';
                   ],
                   popular: true},
                 {
@@ -157,12 +148,7 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
                   period: '/month',
                   description: 'For large organizations',
                   features: [
-                    'Unlimited customers',
-                    'AI strategy consulting',
-                    'White-label options',
-                    'Advanced reporting',
-                    'Dedicated success manager',
-                    'Custom AI models'
+                    'Unlimited customers,AI strategy consulting,White-label options,Advanced reporting,Dedicated success manager,Custom AI models'
                   ]}
               ].map((plan, index) => (
                 <motion.div
@@ -229,12 +215,7 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
                   {[;
-                    'Reduce customer churn by up to 40% with predictive interventions',
-                    'Increase customer lifetime value by 250% through AI optimization',
-                    'Improve customer satisfaction scores by 60% with personalized experiences',
-                    'Save 30+ hours per week on manual customer success tasks',
-                    'Boost revenue retention by 180% with automated expansion strategies',
-                    'Scale customer success across unlimited accounts efficiently'
+                    'Reduce customer churn by up to 40% with predictive interventions,Increase customer lifetime value by 250% through AI optimization,Improve customer satisfaction scores by 60% with personalized experiences,Save 30+ hours per week on manual customer success tasks,Boost revenue retention by 180% with automated expansion strategies,Scale customer success across unlimited accounts efficiently'
                   ].map((benefit, index) => (
                     <div key={index} className='flex items-start'>
                       <div className='flex-shrink-0 w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4 mt-1'>

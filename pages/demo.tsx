@@ -3,9 +3,9 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
-import { Play, ArrowRight, CheckCircle, Users, Clock, Calendar, Phone, Mail, Monitor, Smartphone, Globe } from 'lucide-react';
+import { Play, Calendar, Users, Zap, Brain, Cloud, Shield, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
-export default function Demo() {
+const Demo = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-services');
 
   const demos = [
@@ -14,318 +14,253 @@ export default function Demo() {
       title: 'AI Services Demo',
       description: 'See how our AI solutions can transform your business processes',
       duration: '15 minutes',
-      features: ['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Automated Workflows']
+      icon: Brain,
+      features: [
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'Chatbot Integration',
+        'Document Processing'
+      ]
     },
     {
       id: 'it-services',
       title: 'IT Services Demo',
       description: 'Explore our comprehensive IT infrastructure and support solutions',
       duration: '20 minutes',
-      features: ['Cloud Migration', 'Security Assessment', 'Network Optimization', '24/7 Support']
+      icon: Cloud,
+      features: [
+        'Cloud Migration',
+        'Network Security',
+        'System Monitoring',
+        'Backup Solutions',
+        'Performance Optimization'
+      ]
     },
     {
       id: 'micro-saas',
       title: 'Micro SaaS Demo',
-      description: 'Discover our scalable software-as-a-service solutions',
+      description: 'Discover our scalable software-as-a-service development capabilities',
       duration: '25 minutes',
-      features: ['Custom Development', 'API Integration', 'Scalable Architecture', 'Performance Monitoring']
+      icon: Zap,
+      features: [
+        'Custom SaaS Development',
+        'API Integration',
+        'User Management',
+        'Payment Processing',
+        'Analytics Dashboard'
+      ]
     }
   ];
 
-  const demoFeatures = [
+  const testimonials = [
     {
-      icon: Monitor,
-      title: 'Live Product Tour',
-      description: 'Interactive walkthrough of our platform features and capabilities'
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'CTO',
+      content: 'The AI demo was incredible. We could see exactly how it would integrate with our existing systems.',
+      rating: 5
     },
     {
-      icon: Users,
-      title: 'Expert Consultation',
-      description: 'One-on-one session with our technical experts and solution architects'
+      name: 'Michael Chen',
+      company: 'StartupXYZ',
+      role: 'Founder',
+      content: 'The micro SaaS demo showed us the potential for our product. Highly recommended!',
+      rating: 5
     },
     {
-      icon: CheckCircle,
-      title: 'Custom Use Cases',
-      description: 'Tailored demonstrations based on your specific business requirements'
-    },
-    {
-      icon: Clock,
-      title: 'Q&A Session',
-      description: 'Get answers to all your questions about our services and solutions'
+      name: 'Emily Rodriguez',
+      company: 'Enterprise Solutions',
+      role: 'IT Director',
+      content: 'The IT services demo covered everything we needed. Very comprehensive and professional.',
+      rating: 5
     }
-  ];
-
-  const benefits = [
-    'See real-world applications of our solutions',
-    'Understand how our services fit your needs',
-    'Get personalized recommendations',
-    'Experience our platform firsthand',
-    'Meet our expert team',
-    'Get pricing and implementation details'
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <>
       <Head>
-        <title>Request a Demo | Zion Tech Group</title>
-        <meta name="description" content="Schedule a personalized demo of our AI services, IT solutions, and Micro SaaS platforms. See how we can transform your business." />
-        <meta name="keywords" content="demo, product tour, consultation, AI services, IT solutions, Micro SaaS" />
+        <title>Live Demo - Zion Tech Group</title>
+        <meta name="description" content="See our AI services, IT solutions, and micro SaaS development in action. Book a personalized demo today." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/demo" />
       </Head>
-
+      
       <Navigation />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                <Play className="w-8 h-8 text-white" />
+      
+      <main className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                See Our Solutions in <span className="text-blue-600">Action</span>
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Experience firsthand how our AI services, IT solutions, and micro SaaS development can transform your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+                  <Play className="w-5 h-5 mr-2" />
+                  Watch Demo Video
+                </button>
+                <Link href="#schedule" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Schedule Live Demo
+                </Link>
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Request a Demo
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              See our solutions in action with a personalized demo tailored to your business needs. 
-              Experience the power of our AI services, IT solutions, and Micro SaaS platforms.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#demo-form"
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-              >
-                Schedule Demo Now
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </a>
-              <Link
-                href="/contact"
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-              >
-                Contact Us Instead
-              </Link>
+          </div>
+        </section>
+
+        {/* Demo Selection */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Demo</h2>
+              <p className="text-lg text-gray-600">
+                Select the solution you'd like to see in action
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Demo Types Section */}
-      <section className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Choose Your Demo
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Select the type of demo that best matches your interests and business needs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {demos.map((demo) => (
-              <div
-                key={demo.id}
-                className={`bg-gray-900/50 border rounded-xl p-8 cursor-pointer transition-all duration-300 ${
-                  selectedDemo === demo.id
-                    ? 'border-purple-500/50 bg-purple-900/20'
-                    : 'border-gray-700 hover:border-purple-500/30'
-                }`}
-                onClick={() => setSelectedDemo(demo.id)}
-              >
-                <div className="text-center">
-                  <h3 className="text-2xl font-semibold mb-4">{demo.title}</h3>
-                  <p className="text-gray-300 mb-6">{demo.description}</p>
-                  <div className="flex items-center justify-center mb-6">
-                    <Clock className="w-5 h-5 text-purple-400 mr-2" />
-                    <span className="text-purple-400 font-medium">{demo.duration}</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {demos.map((demo) => (
+                <div
+                  key={demo.id}
+                  onClick={() => setSelectedDemo(demo.id)}
+                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
+                    selectedDemo === demo.id
+                      ? 'border-blue-500 bg-blue-50'
+                      : 'border-gray-200 hover:border-gray-300'
+                  }`}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                      <demo.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">{demo.title}</h3>
+                      <p className="text-sm text-gray-600">{demo.duration}</p>
+                    </div>
                   </div>
-                  <ul className="space-y-2 text-left">
+                  <p className="text-gray-600 mb-4">{demo.description}</p>
+                  <ul className="space-y-2">
                     {demo.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3" />
+                      <li key={index} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
+              ))}
+            </div>
+
+            {/* Selected Demo Details */}
+            <div className="bg-gray-50 rounded-lg p-8">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {demos.find(d => d.id === selectedDemo)?.title} - Live Demo
+                </h3>
+                <p className="text-lg text-gray-600 mb-6">
+                  {demos.find(d => d.id === selectedDemo)?.description}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+                    <Play className="w-5 h-5 mr-2" />
+                    Start Demo
+                  </button>
+                  <Link href="/contact" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors flex items-center justify-center">
+                    <Users className="w-5 h-5 mr-2" />
+                    Request Custom Demo
+                  </Link>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Demo Features Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What to Expect
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our demos are designed to give you a comprehensive understanding of our solutions.
-            </p>
-          </div>
+        {/* Testimonials */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+              <p className="text-lg text-gray-600">
+                Hear from businesses that have experienced our demos
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {demoFeatures.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mr-4">
-                    <feature.icon className="w-6 h-6 text-purple-400" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
                   </div>
-                  <h3 className="text-2xl font-semibold">{feature.title}</h3>
+                  <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
+                  </div>
                 </div>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Schedule a Demo?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Get the most out of your demo experience with these key benefits.
-            </p>
-          </div>
+        {/* Schedule Demo Section */}
+        <section id="schedule" className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Schedule Your Demo</h2>
+              <p className="text-lg text-gray-600">
+                Book a personalized demo with our experts
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center bg-gray-900/50 border border-gray-700 rounded-lg p-6">
-                <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Demo Form Section */}
-      <section id="demo-form" className="py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Schedule Your Demo
-            </h2>
-            <p className="text-xl text-gray-300">
-              Fill out the form below and we'll contact you to schedule your personalized demo.
-            </p>
-          </div>
-
-          <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-8">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-gray-50 rounded-lg p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    First Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
-                    placeholder="Enter your first name"
-                  />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Demo Information</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                      <span className="text-gray-600">Personalized to your business needs</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                      <span className="text-gray-600">Live Q&A with our experts</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                      <span className="text-gray-600">Custom use case scenarios</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                      <span className="text-gray-600">Follow-up consultation included</span>
+                    </li>
+                  </ul>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Last Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
-                    placeholder="Enter your last name"
-                  />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Ready to Get Started?</h3>
+                  <p className="text-gray-600 mb-6">
+                    Contact us to schedule your personalized demo and see how our solutions can benefit your business.
+                  </p>
+                  <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center">
+                    Schedule Demo
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
                 </div>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Company Name *
-                </label>
-                <input
-                  type="text"
-                  required
-                  className="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
-                  placeholder="Enter your company name"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Demo Type *
-                </label>
-                <select
-                  value={selectedDemo}
-                  onChange={(e) => setSelectedDemo(e.target.value)}
-                  className="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
-                >
-                  {demos.map((demo) => (
-                    <option key={demo.id} value={demo.id}>
-                      {demo.title}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Tell us about your needs
-                </label>
-                <textarea
-                  rows={4}
-                  className="w-full px-4 py-3 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
-                  placeholder="Describe your business needs and what you'd like to see in the demo..."
-                />
-              </div>
-
-              <div className="text-center">
-                <button
-                  type="submit"
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-                >
-                  Schedule My Demo
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
-                </button>
-              </div>
-            </form>
+            </div>
           </div>
-        </div>
-      </section>
-
+        </section>
+      </main>
+      
       <Footer />
-    </div>
+    </>
   );
-}
+};
+
+export default Demo;

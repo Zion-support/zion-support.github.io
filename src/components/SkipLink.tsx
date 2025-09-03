@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+  export const SkipLink: React.FC = () => { return ( <a href="#main - content"';" className="skip - link" data - skip - link >" Skip to main content' </a>') ';" }';"';""""
+  export const SkipLink: React.FC = () => { return ( <a href='#main - content'';' className='skip - link' data - skip - link >' Skip to main content' </a>') ';' }';'';''""
+=======
 import Link from 'next/link';
 
 export default function SkipLink() {
@@ -8,7 +12,8 @@ export default function SkipLink() {
       Skip to main content
     </Link>
   )}"
-  export const SkipLink: React.FC = () => { return ( <a href="#main - content"';" className="skip - link" data - skip - link" >" Skip to main content'; </a>';) ';" }';;"';"""
-  export const SkipLink: React.FC = () => { return ( <a href='#main - content'';' className='skip - link' data - skip - link" >' Skip to main content'; </a>';) ';' }';;'';''"
+  export const SkipLink: React.FC = () => { return ( <a href="#main - content" className="skip - link" data - skip - link" >" Skip to main content'; </a>';)  }';;"""
+  export const SkipLink: React.FC = () => { return ( <a href='#main - content' className='skip - link' data - skip - link" >' Skip to main content'; </a>';)  }';;''"
 
 "
+>>>>>>> main

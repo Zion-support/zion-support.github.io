@@ -1,17 +1,20 @@
-import React from 'react';"
-import { render, screen } from '@testing-library/react';"
-import '@testing-library/jest-dom';"
-import About from './About';
-"
+<<<<<<< HEAD
+describe('About', () => {}' it('renders without crashing', () => {} render(<About />) '; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ' it('displays expected content', () => {} render(<About />) '
+=======
+import React from 'react
+import { render, screen } from '@testing-library/react
+import '@testing-library/jest-dom
+import About from './About
 describe('About', () => {"
   it('renders without crashing', () => {
     render(<About /" >);"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
-});
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+})
 "
   it('displays expected content', () => {
-    render(<About /" >);
-    // Add more specific tests here,
-});,
+    render(<About /" >)
+    // Add more specific tests here
 });
+})
 "
+>>>>>>> main

@@ -1,12 +1,9 @@
 #!/usr/bin/env node;
 import axios from,
   axios';
-import fs from "fs";
-  'fs';
-import path from "path";
-  'path';
-import { fileURLToPath } from "url";
-  'url';
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const BASE_URL =;
@@ -119,8 +116,7 @@ class WebsiteAnalyzer {
   }
   extractLinks(html, baseUrl) {
     const links = [];
-    const linkRegex = /href=[']([^'']+)[";
-  ']/g;
+    const linkRegex = /href=[']([^'']+)[]/g;
     let match;
     while ((match = linkRegex.exec(html)) !== null) {
       links.push(match[1])}
@@ -128,40 +124,23 @@ class WebsiteAnalyzer {
   async checkNavigationLinks() {
     const navigationLinks = [
       '/;
-  ',
-      '/about;
-  ',
-      '/contact;
-  ',
-      '/services;
-  ',
-      '/ai-services;
-  ',
-      '/it-services;
-  ',
-      '/micro-saas;
-  ',
-      '/solutions;
-  ',
-      '/case-studies;
-  ',
-      '/white-papers;
-  ',
-      '/webinars;
-  ',
-      '/blog;
-  ',
-      '/careers;
-  ',
-      '/team;
-  ',
-      '/pricing;
-  ',
-      '/help;
-  ',
-      '/privacy;
-  ',
-      '/terms;
+  ,/about;
+  ,/contact;
+  ,/services;
+  ,/ai-services;
+  ,/it-services;
+  ,/micro-saas;
+  ,/solutions;
+  ,/case-studies;
+  ,/white-papers;
+  ,/webinars;
+  ,/blog;
+  ,/careers;
+  ,/team;
+  ,/pricing;
+  ,/help;
+  ,/privacy;
+  ,/terms;
   '    ];
     for (const link of navigationLinks) {
       const fullUrl = `${BASE_URL}${link}`;
@@ -170,38 +149,22 @@ class WebsiteAnalyzer {
   async checkServicePages() {
     const servicePages = [
       '/services/ai-supply-chain-optimization;
-  ',
-      '/services/ai-cybersecurity-platform;
-  ',
-      '/services/ai-healthcare-platform;
-  ',
-      '/services/ai-quantum-hybrid-platform;
-  ',
-      '/services/ai-business-intelligence;
-  ',
-      '/services/ai-sales-copilot;
-  ',
-      '/services/ai-content-marketing-automation;
-  ',
-      '/services/ai-hr-platform;
-  ',
-      '/services/ai-legal-research-platform;
-  ',
-      '/services/ai-education-platform;
-  ',
-      '/services/cloud-devops;
-  ',
-      '/services/zero-trust-network-architecture;
-  ',
-      '/services/ai-compliance-copilot;
-  ',
-      '/services/blockchain-enterprise-solutions;
-  ',
-      '/services/quantum-computing;
-  ',
-      '/services/iot-edge;
-  ',
-      '/services/digital-transformation;
+  ,/services/ai-cybersecurity-platform;
+  ,/services/ai-healthcare-platform;
+  ,/services/ai-quantum-hybrid-platform;
+  ,/services/ai-business-intelligence;
+  ,/services/ai-sales-copilot;
+  ,/services/ai-content-marketing-automation;
+  ,/services/ai-hr-platform;
+  ,/services/ai-legal-research-platform;
+  ,/services/ai-education-platform;
+  ,/services/cloud-devops;
+  ,/services/zero-trust-network-architecture;
+  ,/services/ai-compliance-copilot;
+  ,/services/blockchain-enterprise-solutions;
+  ,/services/quantum-computing;
+  ,/services/iot-edge;
+  ,/services/digital-transformation;
   '    ];
     for (const link of servicePages) {
       const fullUrl = `${BASE_URL}${link}`;
@@ -210,52 +173,29 @@ class WebsiteAnalyzer {
   async checkAdditionalPages() {
     const additionalPages = [
       '/enterprise;
-  ',
-      '/healthcare;
-  ',
-      '/financial;
-  ',
-      '/manufacturing;
-  ',
-      '/retail;
-  ',
-      '/government;
-  ',
-      '/education;
-  ',
-      '/startup;
-  ',
-      '/marketplace;
-  ',
-      '/talent;
-  ',
-      '/community;
-  ',
-      '/research-development;
-  ',
-      '/training;
-  ',
-      '/tutorials;
-  ',
-      '/support;
-  ',
-      '/faq;
-  ',
-      '/news;
-  ',
-      '/events;
-  ',
-      '/partners;
-  ',
-      '/signup;
-  ',
-      '/login;
-  ',
-      '/dashboard;
-  ',
-      '/request-quote;
-  ',
-      '/schedule-demo;
+  ,/healthcare;
+  ,/financial;
+  ,/manufacturing;
+  ,/retail;
+  ,/government;
+  ,/education;
+  ,/startup;
+  ,/marketplace;
+  ,/talent;
+  ,/community;
+  ,/research-development;
+  ,/training;
+  ,/tutorials;
+  ,/support;
+  ,/faq;
+  ,/news;
+  ,/events;
+  ,/partners;
+  ,/signup;
+  ,/login;
+  ,/dashboard;
+  ,/request-quote;
+  ,/schedule-demo;
   '    ];
     for (const link of additionalPages) {
       const fullUrl = `${BASE_URL}${link}`;
@@ -271,7 +211,7 @@ class WebsiteAnalyzer {
     this.generateRecommendations();
     // Save report;
     const reportPath = path.join(__dirname, '..;
-  ', 'comprehensive-website-analysis-report.json;
+  ,comprehensive-website-analysis-report.json;
   ')    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
     console.log(`📄 Report saved to: ${reportPath}`)}
   generateRecommendations() {
