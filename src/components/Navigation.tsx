@@ -100,7 +100,7 @@ const Navigation = () => {
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === item.name ? 'rotate-180' :  
+                        activeDropdown === item.name ? 'rotate-180' : ''
                       }`} />
                     </button>
                     <AnimatePresence>
