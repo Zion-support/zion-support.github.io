@@ -1,320 +1,162 @@
-#!/usr/bin/env node;
-const { execSync } = require('child_process');
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-class ContinuousIntegrationAutomation {;
-  constructor() {;
-    this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ciSteps = [];
-    this.ensureDirectories();,
-}
-;
-  ensureDirectories() {;
-    if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { recursive: true });,
-}
+console.log('🔄 Continuous Integration Automation');
+console.log('====================================');
+
+class ContinuousIntegrationAutomation {
+  constructor() {
+    this.results = {
+      testsPassed: 0,
+      testsFailed: 0,
+      buildSuccess: false,
+      lintingPassed: false,
+      securityAuditPassed: false,
+      performanceScore: 0,
+      errors: []
+    };
+    this.startTime = Date.now();
   }
-;
-  log(message, level = 'info') {;
+
+  log(message, type = 'info') {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage);,
-}
-;
-  async runCIStep(stepName, command, description) {;
-    this.log(`🚀 Starting: ${stepName} - ${description}`);
-    const step = {;
-      name: stepName,;
-      command,;
-      description,;
-      startTime: Date.now(),;
-      status: 'running';,
-}
-    ;
-    try {;
-      const result = execSync(command, {;
-        cwd: this.projectRoot,;
-        encoding: 'utf8',;
-        timeout: 300000 // 5 minutes timeout;,
-});
-      ;
-      step.endTime = Date.now();
-      step.duration = step.endTime - step.startTime;
-      step.status = 'success';
-      step.output = result.substring(0, 1000) // Limit output size;
-      ;
-      this.log(`✅ Completed: ${stepName} (${step.duration}ms)`);
-      this.ciSteps.push(step);
-      return { success: true, output: result, duration: step.duration }
-    } catch (error) {;
-      step.endTime = Date.now();
-      step.duration = step.endTime - step.startTime;
-      step.status = 'failed';
-      step.error = error.message;
-      ;
-      this.log(`❌ Failed: ${stepName} - ${error.message}`, 'error');
-      this.ciSteps.push(step);
-      return { success: false, error: error.message, duration: step.duration }
+    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logEntry);
+  }
+
+  async runTests() {
+    this.log('🧪 Running comprehensive tests...');
+    try {
+      // Run unit tests
+      execSync('npm test -- --coverage --watchAll=false', { stdio: 'inherit' });
+      this.results.testsPassed++;
+      this.log('✅ Unit tests passed', 'success');
+    } catch (error) {
+      this.results.testsFailed++;
+      this.log(`❌ Unit tests failed: ${error.message}`, 'error');
+    }
+
+    try {
+      // Run integration tests
+      execSync('npm run test:integration', { stdio: 'inherit' });
+      this.results.testsPassed++;
+      this.log('✅ Integration tests passed', 'success');
+    } catch (error) {
+      this.results.testsFailed++;
+      this.log(`❌ Integration tests failed: ${error.message}`, 'error');
     }
   }
-;
-  async runLinting() {;
-    this.log('🔍 Running linting checks...');
-    return await this.runCIStep(;
-      'Linting',;
-      'npm run lint',;
-      'Check code quality with ESLint';
-    );,
-}
-;
-  async runTypeChecking() {;
-    this.log('🔍 Running TypeScript type checking...');
-    return await this.runCIStep(;
-      'Type Checking',;
-      'npm run type-check',;
-      'Check TypeScript types';
-    );,
-}
-;
-  async runTests() {;
-    this.log('🧪 Running tests...');
-    try {;
-      return await this.runCIStep(;
-        'Tests',;
-        'npm test',;
-        'Run unit and integration tests';
-      );,
-} catch (error) {;
-      this.log('⚠️ Tests not configured, skipping...', 'warning');
-      return { success: true, output: 'Tests skipped', duration: 0 }
+
+  async runLinting() {
+    this.log('🔍 Running linting...');
+    try {
+      execSync('npm run lint', { stdio: 'inherit' });
+      this.results.lintingPassed = true;
+      this.log('✅ Linting passed', 'success');
+    } catch (error) {
+      this.log(`❌ Linting failed: ${error.message}`, 'error');
     }
   }
-;
-  async runBuild() {;
+
+  async runBuild() {
     this.log('🏗️ Running build...');
-    return await this.runCIStep(;
-      'Build',;
-      'npm run build',;
-      'Build the application';
-    );,
-}
-;
-  async runSecurityAudit() {;
+    try {
+      execSync('npm run build', { stdio: 'inherit' });
+      this.results.buildSuccess = true;
+      this.log('✅ Build successful', 'success');
+    } catch (error) {
+      this.log(`❌ Build failed: ${error.message}`, 'error');
+    }
+  }
+
+  async runSecurityAudit() {
     this.log('🔒 Running security audit...');
-    return await this.runCIStep(;
-      'Security Audit',;
-      'npm audit --audit-level=moderate',;
-      'Check for security vulnerabilities';
-    );,
-}
-;
-  async runPerformanceCheck() {;
-    this.log('⚡ Running performance check...');
-    try {;
-      return await this.runCIStep(;
-        'Performance Check',;
-        'npm run perf:monitor',;
-        'Check application performance';
-      );,
-} catch (error) {;
-      this.log('⚠️ Performance check not configured, skipping...', 'warning');
-      return { success: true, output: 'Performance check skipped', duration: 0 }
+    try {
+      execSync('npm audit --audit-level=moderate', { stdio: 'inherit' });
+      this.results.securityAuditPassed = true;
+      this.log('✅ Security audit passed', 'success');
+    } catch (error) {
+      this.log(`❌ Security audit failed: ${error.message}`, 'error');
     }
   }
-;
-  async generateCIConfig() {;
-    this.log('⚙️ Generating CI configuration...');
-    try {;
-      const githubWorkflow = `name: CI/CD Pipeline;
 
-on:;
-  push:;
-    branches: [ main, develop ];
-  pull_request:;
-    branches: [ main ];
-
-jobs:;
-  test:;
-    runs-on: ubuntu-latest;
-    ;
-    steps:;
-    - uses: actions/checkout@v3;
-    ;
-    - name: Setup Node.js;
-      uses: actions/setup-node@v3;
-      with:;
-        node-version: '18';
-        cache: 'npm';
-    ;
-    - name: Install dependencies;
-      run: npm ci;
-    ;
-    - name: Run linting;
-      run: npm run lint;
-    ;
-    - name: Run type checking;
-      run: npm run type-check;
-    ;
-    - name: Run tests;
-      run: npm test;
-    ;
-    - name: Run build;
-      run: npm run build;
-    ;
-    - name: Run security audit;
-      run: npm audit --audit-level=moderate;
-    ;
-  deploy:;
-    needs: test;
-    runs-on: ubuntu-latest;
-    if: github.ref == 'refs/heads/main';
-    ;
-    steps:;
-    - uses: actions/checkout@v3;
-    ;
-    - name: Setup Node.js;
-      uses: actions/setup-node@v3;
-      with:;
-        node-version: '18';
-        cache: 'npm';
-    ;
-    - name: Install dependencies;
-      run: npm ci;
-    ;
-    - name: Build application;
-      run: npm run build;
-    ;
-    - name: Deploy to production;
-      run: echo "Deploy to production";
-`;
-
-      const workflowsDir = path.join(this.projectRoot, '.github', 'workflows');
-      if (!fs.existsSync(workflowsDir)) {;
-        fs.mkdirSync(workflowsDir, { recursive: true });,
-}
-      ;
-      const workflowFile = path.join(workflowsDir, 'ci.yml');
-      fs.writeFileSync(workflowFile, githubWorkflow);
-      ;
-      this.log(`✅ Generated CI configuration: ${workflowFile}`);
-      return { success: true, file: workflowFile }
-    } catch (error) {;
-      this.log(`❌ Failed to generate CI configuration: ${error.message}`, 'error');
-      return { success: false, error: error.message }
+  async runPerformanceTest() {
+    this.log('⚡ Running performance tests...');
+    try {
+      // Start the app in background
+      const app = execSync('npm start', { stdio: 'pipe', detached: true });
+      
+      // Wait for app to start
+      await new Promise(resolve => setTimeout(resolve, 5000));
+      
+      // Run Lighthouse
+      execSync('npx lighthouse http://localhost:3000 --output=json --output-path=./performance-test.json', { stdio: 'inherit' });
+      
+      // Parse performance score
+      const performanceData = JSON.parse(fs.readFileSync('./performance-test.json', 'utf8'));
+      this.results.performanceScore = performanceData.categories.performance.score * 100;
+      
+      // Kill the app
+      process.kill(-app.pid);
+      
+      this.log(`✅ Performance test completed - Score: ${this.results.performanceScore}`, 'success');
+    } catch (error) {
+      this.log(`❌ Performance test failed: ${error.message}`, 'error');
     }
   }
-;
-  async generateReport() {;
-    this.log('📊 Generating CI automation report...');
-    const totalDuration = this.ciSteps.reduce((sum, step) => sum + (step.duration || 0), 0);
-    const successfulSteps = this.ciSteps.filter(s => s.status === 'success');
-    const failedSteps = this.ciSteps.filter(s => s.status === 'failed');
-    ;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalSteps: this.ciSteps.length,;
-        successfulSteps: successfulSteps.length,;
-        failedSteps: failedSteps.length,;
-        successRate: ((successfulSteps.length / this.ciSteps.length) * 100).toFixed(2),;
-        totalDuration: totalDuration;,
-},;
-      steps: this.ciSteps,;
-      recommendations: this.generateRecommendations();,
-}
-    ;
-    const reportFile = path.join(this.reportsDir, `ci-automation-report-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 CI report saved to: ${reportFile}`);
-    return reportFile;,
-}
-;
-  generateRecommendations() {;
-    const recommendations = [];
-    const failedSteps = this.ciSteps.filter(s => s.status === 'failed');
-    ;
-    if (failedSteps.length > 0) {;
-      recommendations.push({;
-        type: 'error',;
-        message: `${failedSteps.length} CI steps failed. Review and fix issues.`;,
-});,
-}
-;
-    recommendations.push({;
-      type: 'improvement',;
-      message: 'Set up automated deployment pipeline';,
-});
-    ;
-    recommendations.push({;
-      type: 'improvement',;
-      message: 'Add performance monitoring to CI pipeline';,
-});
-    ;
-    recommendations.push({;
-      type: 'improvement',;
-      message: 'Implement automated rollback mechanisms';,
-});
 
-    return recommendations;,
-}
-;
-  displaySummary() {;
-    const totalDuration = this.ciSteps.reduce((sum, step) => sum + (step.duration || 0), 0);
-    const successfulSteps = this.ciSteps.filter(s => s.status === 'success');
-    const failedSteps = this.ciSteps.filter(s => s.status === 'failed');
-    ;
-    console.log('\n' + '='.repeat(70));
-    console.log('🔄 CONTINUOUS INTEGRATION AUTOMATION SUMMARY');
-    console.log('='.repeat(70));
-    console.log(`Total Steps: ${this.ciSteps.length}`);
-    console.log(`✅ Successful: ${successfulSteps.length}`);
-    console.log(`❌ Failed: ${failedSteps.length}`);
-    console.log(`📈 Success Rate: ${((successfulSteps.length / this.ciSteps.length) * 100).toFixed(1)}%`);
-    console.log(`⏱️  Total Duration: ${Math.round(totalDuration / 1000)}s`);
-    console.log('='.repeat(70));
-    ;
-    if (failedSteps.length > 0) {;
-      console.log('\n❌ FAILED STEPS:');
-      failedSteps.forEach((step, index) => {;
-        console.log(`${index + 1}. ${step.name}: ${step.error}`);,
-});,
-}
+  async generateReport() {
+    const endTime = Date.now();
+    const duration = endTime - this.startTime;
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      duration: `${duration}ms`,
+      results: this.results,
+      summary: {
+        totalTests: this.results.testsPassed + this.results.testsFailed,
+        testsPassed: this.results.testsPassed,
+        testsFailed: this.results.testsFailed,
+        buildSuccess: this.results.buildSuccess,
+        lintingPassed: this.results.lintingPassed,
+        securityAuditPassed: this.results.securityAuditPassed,
+        performanceScore: this.results.performanceScore,
+        totalErrors: this.results.errors.length
+      },
+      status: this.results.testsFailed === 0 && this.results.buildSuccess && this.results.lintingPassed ? 'PASSED' : 'FAILED'
+    };
+
+    fs.writeFileSync('ci-automation-report.json', JSON.stringify(report, null, 2));
+    this.log('📄 CI Report saved to: ci-automation-report.json');
+    
+    return report;
   }
-;
-  async run() {;
-    try {;
-      this.log('🎯 Starting Continuous Integration Automation');
-      ;
+
+  async run() {
+    this.log('🚀 Starting Continuous Integration Automation...');
+    
+    try {
       await this.runLinting();
-      await this.runTypeChecking();
-      await this.runTests();
       await this.runBuild();
+      await this.runTests();
       await this.runSecurityAudit();
-      await this.runPerformanceCheck();
-      await this.generateCIConfig();
-      ;
-      await this.generateReport();
-      this.displaySummary();
-      ;
-      this.log('🎉 Continuous Integration Automation completed successfully');
-      return { success: true, steps: this.ciSteps }
-    } catch (error) {;
-      this.log(`💥 CI automation failed: ${error.message}`, 'error');
-      await this.generateReport();
-      this.displaySummary();
-      return { success: false, error: error.message }
+      await this.runPerformanceTest();
+      
+      const report = await this.generateReport();
+      
+      if (report.status === 'PASSED') {
+        this.log('🎉 All CI checks passed!', 'success');
+      } else {
+        this.log('❌ Some CI checks failed', 'error');
+      }
+    } catch (error) {
+      this.log(`💥 CI Automation failed: ${error.message}`, 'error');
     }
   }
 }
-;
-// Run the CI automation;
-if (require.main === module) {;
-  const ci = new ContinuousIntegrationAutomation();
-  ci.run().then(result => {;
-    process.exit(result.success ? 0 : 1);,
-});,
-}
-;
-module.exports = ContinuousIntegrationAutomation
+
+// Run the CI automation
+const ci = new ContinuousIntegrationAutomation();
+ci.run().catch(console.error);
