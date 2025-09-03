@@ -13,7 +13,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const handleMouseMove = (e) => {
 
             setMousePosition({ x: e.clientX, y: e.clientY })};

@@ -30,4 +30,4 @@ const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabl
 
 export default SmartNotificationSystem;
 
-;,"});,})";
+;,"});})";

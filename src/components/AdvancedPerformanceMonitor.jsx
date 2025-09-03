@@ -127,7 +127,7 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!enabled) return;
 
     const interval = setInterval(() => {

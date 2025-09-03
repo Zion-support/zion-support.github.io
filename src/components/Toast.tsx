@@ -96,9 +96,9 @@ export function ToastProvider({children }: {children: React.ReactNode }) {const 
 "
 ""
     // comment
-      setToasts(prev => prev.filter(t => t.id !== id));, duration)}, [])
+      setToasts(prev => prev.filter(t => t.id !== id)); duration)}, [])
 }
-    setToasts(prev => prev.filter(t => t.id !== id));, [])
+    setToasts(prev => prev.filter(t => t.id !== id)); [])
 }
 "
   return ("

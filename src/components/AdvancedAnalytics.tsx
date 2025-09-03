@@ -34,7 +34,7 @@ function AdvancedAnalytics({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     
     setUserSession(sessionId);
     localStorage.setItem('analytics_session_id', sessionId)}, []);
@@ -190,7 +190,7 @@ function AdvancedAnalytics({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
     if(!enabled || !('PerformanceObserver' in window)) return;
 
@@ -237,7 +237,7 @@ function AdvancedAnalytics({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!enabled) return;
 
     // Simulate data collection
@@ -429,4 +429,4 @@ function AdvancedAnalytics({
     </>
   )}}}}}}}}}}}}}'"`
 
-;,"});,})";
+;,"});})";

@@ -160,7 +160,7 @@ export default function Footer() {
       ]
     }
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
-ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
+ursor/automate-test-fix-improve-and-merge-code-99d1,"});"})"
   Linkedin,
   Instagram,
   Globe,

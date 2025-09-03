@@ -552,7 +552,7 @@ export const getSpecializedServiceById = (id: string) => {;
 export const getSpecializedServicesByCategory = (category: string) => {;
   return specializedInnovativeServices2027.filter(service => service.category === category)}
 export const getSpecializedPopularServices = () => {;
-  return specializedInnovativeServices2027.filter(service => service.popular);,
+  return specializedInnovativeServices2027.filter(service => service.popular);
 }
 export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return specializedInnovativeServices2027.filter(service => {;

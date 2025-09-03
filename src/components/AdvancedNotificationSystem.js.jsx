@@ -71,7 +71,7 @@ export function AdvancedNotificationSystem() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         setUnreadCount(notifications.filter(n => !n.isRead).length)}, [notifications]);
     const filteredNotifications = notifications.filter(notification => {
 

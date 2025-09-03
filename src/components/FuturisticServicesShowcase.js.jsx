@@ -171,7 +171,7 @@ export const FuturisticServicesShowcase = () => {}""
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const allIndices = new Set(filteredServices.map((_, index) => index));
         setVisibleServices(allIndices)}, [filteredServices]);"
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">

@@ -1,5 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/routes/DashboardRoutes.tsx;
-  );,
+  );
 }
 :src.disabled/routes/DashboardRoutes.tsx{ Route, Routes: } from;
   "react-router-dom";
@@ -132,7 +132,7 @@ const Dashboard = lazy(() => import("../pages/Dashboard"));"const ClientDashboar
 } />;
       </Routes>;
     </Suspense>;
-  );,
+  );
 }
   )}
 ;

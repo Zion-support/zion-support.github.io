@@ -1,6 +1,6 @@
 
-"";,"});,})"
-;,});,"})
+"";,"});})"
+;,});"})
 }
 
 // import { useAuth } from '@/hooks/useAuth'; // Assuming an auth hook exists
@@ -16,7 +16,7 @@ const useAuth = () => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
   //  // logic to check actual auth status and set user
   // }, []);
   return { user, isAuthenticated: user?.isLoggedIn ?? false };
@@ -100,7 +100,7 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(productId) {
       fetchReviews();
     }

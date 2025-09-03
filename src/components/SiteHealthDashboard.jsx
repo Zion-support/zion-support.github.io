@@ -10,7 +10,7 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         // Simulate health check data collection
         const performHealthCheck = async () => {
             setIsLoading(true) ;

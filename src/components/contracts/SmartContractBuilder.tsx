@@ -94,7 +94,7 @@ export function SmartContractBuilder({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(talent && clientName && !formValues) { // Only prefill if formValues is not already set(e.g., by a template)
       setFormValues(prev => ({
         ...prev,

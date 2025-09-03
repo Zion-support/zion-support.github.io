@@ -1,6 +1,6 @@
 const Component = () => {
 import React from "react"
-"use: client","
+"use client","
 "
 interface Props {;
 

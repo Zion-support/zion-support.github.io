@@ -166,7 +166,7 @@ export function SecurityMonitoringSystem({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(autoScan && isOpen && !scanComplete) {
 
       startSecurityScan()}
@@ -178,7 +178,7 @@ export function SecurityMonitoringSystem({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(showRealTime && isOpen && scanComplete) {
 
       scanIntervalRef.current = setInterval(() => {

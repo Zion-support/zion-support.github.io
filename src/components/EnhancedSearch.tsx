@@ -69,7 +69,7 @@ export function EnhancedSearch({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const handleKeyDown = (event: anyKeyboardEvent) => {
       if(event.key === 'Escape') {
         setIsOpen(false) ;
@@ -100,7 +100,7 @@ export function EnhancedSearch({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(debouncedQuery.trim().length < 2) {
 
       setResults([]);
@@ -126,7 +126,7 @@ export function EnhancedSearch({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     
         setRecentSearches(JSON.parse (saved) ) } catch(error) {
 
@@ -140,7 +140,7 @@ export function EnhancedSearch({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     
       if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
         setIsOpen(false) ;
@@ -157,7 +157,7 @@ export function EnhancedSearch({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         inputRef.current?.focus () }
     };
 
@@ -515,4 +515,4 @@ setFilters(prev: > ({;
     </div>;) }
 '"`
 
-;,"});,})";
+;,"});})";

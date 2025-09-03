@@ -19,7 +19,7 @@ const pricingModels = [{ id: 'all', name: 'All Pricing' },
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         let filtered = MICRO_SAAS_SERVICES;
         // Filter by category
         if(selectedCategory !== 'all') {

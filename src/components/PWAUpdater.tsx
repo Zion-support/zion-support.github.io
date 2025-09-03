@@ -22,7 +22,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     // Check if service worker is supported'
     if('serviceWorker' in navigator) {
 
@@ -78,7 +78,7 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(autoCheck && registration) {
 
       }, checkInterval);

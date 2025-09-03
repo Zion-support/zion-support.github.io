@@ -39,7 +39,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(jobId) {
       setIsFormLoading(true);
       getJobById(jobId)

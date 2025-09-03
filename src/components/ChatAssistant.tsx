@@ -46,7 +46,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     scrollToBottom();
   }, [messages]);
 

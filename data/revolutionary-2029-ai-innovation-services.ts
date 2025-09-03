@@ -579,10 +579,10 @@ export const getAIServicesByCategory = (category: string) => {;
 export const getPopularAIServices = () => {;
   return revolutionaryAIInnovationServices2029.filter(;
     service => service.isPopular;
-  );,
+  );
 }
 export const getNewAIServices = () => {;
-  return revolutionaryAIInnovationServices2029.filter(service => service.isNew);,
+  return revolutionaryAIInnovationServices2029.filter(service => service.isNew);
 }
 export const getAIServicesByPriceRange = (;
   minPrice: number,;
@@ -590,5 +590,5 @@ export const getAIServicesByPriceRange = (;
 ) => {;
   return revolutionaryAIInnovationServices2029.filter(service => {;
     const price = parseInt(service.price.replace("$", "").replace(",", ""));
-    return price >= minPrice && price <= maxPrice});,
+    return price >= minPrice && price <= maxPrice});
 }>

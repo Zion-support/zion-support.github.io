@@ -13,7 +13,7 @@ export default function Sidebar() {;
     setExpandedSections(),;
         ? prev.filter(),,;
         : [...prev, section];
-    );,
+    );
 }
   const mainNavigation = [";
   { name: "Home", href: "/", icon: Home },";

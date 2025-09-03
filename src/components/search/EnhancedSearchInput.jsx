@@ -42,7 +42,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(query.trim()) {
 
             const filtered = suggestions.filter(suggestion => suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
@@ -61,7 +61,7 @@ import React { useState, useEffect, useRef } from "react" break}"}"" return: (<d
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const handleClickOutside = (event) => {
 
             if(suggestionsRef.current && !suggestionsRef.current.contains(event.target)) {

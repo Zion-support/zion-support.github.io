@@ -35,7 +35,7 @@ showHeader:  true,;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(isOpen && messages.length = == 0) {
       const welcomeMessage: ChatMessage = {
   id: 'welcome',
@@ -64,7 +64,7 @@ showHeader:  true,;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' }) }
   }, [messages, autoScroll]) ;

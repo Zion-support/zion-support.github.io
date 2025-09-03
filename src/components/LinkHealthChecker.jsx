@@ -63,7 +63,7 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         // Auto-check links when component mounts
         checkAllLinks()}, [links]);
     const getStatusIcon = (status) => {

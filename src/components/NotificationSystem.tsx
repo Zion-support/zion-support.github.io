@@ -56,7 +56,7 @@ enableSound:  true,;
   return () => {
     // Cleanup function
   };
-}, []);, []); (window as) .addNotification = addNotification;
+}, []); []); (window as) .addNotification = addNotification;
     return () => {
       delete(window as) .addNotification}}, [addNotification]) ;
 
@@ -370,4 +370,4 @@ export
 };
 '"`
 
-;,"});,})";
+;,"});})";

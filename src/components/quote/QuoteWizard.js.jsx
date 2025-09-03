@@ -41,7 +41,7 @@ export function QuoteWizard({ category }) {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(delayedError) {
 
       toast({

@@ -21,7 +21,7 @@ export default function ResetPasswordPage () {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(!token) {
             setError('Invalid or missing reset token.') ;
             // Consider redirecting to an error page or login page

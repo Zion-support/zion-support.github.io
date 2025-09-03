@@ -47,12 +47,12 @@ export function middleware(_request: NextRequest) {;
   const { pathname } = request.nextUrl;
   // Redirect old routes to new ones;
   if (pathname.startsWith("/old-")) {;
-    return NextResponse.redirect(new URL(pathname.replace("/old-", "/"), request.url));,
+    return NextResponse.redirect(new URL(pathname.replace("/old-", "/"), request.url));
 }
 ;
   // Block suspicious requests;
   if (pathname.includes("..") || pathname.includes("//")) {;
-    return new NextResponse("Forbidden", { status: 403 });,
+    return new NextResponse("Forbidden", { status: 403 });
 }
 ;
   // Add response time header;

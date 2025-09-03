@@ -40,7 +40,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!enabled) return;
 
     // Initialize Google Analytics(if tracking ID provided)
@@ -94,7 +94,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!enabled) return;
 
     const handleRouteChange = (...args: unknown[]): unknown => {
@@ -133,7 +133,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!enabled) return;
 
       trackEvent('user_interaction', {
@@ -194,7 +194,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!enabled) return;
 
 
@@ -219,7 +219,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!enabled) return;
 
 
@@ -276,7 +276,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(showDashboard) {
 
       setAnalyticsData({

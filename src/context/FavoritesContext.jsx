@@ -10,7 +10,7 @@ import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const stored = localStorage.getItem('favorites');
     if(stored) {
       try {
@@ -27,7 +27,7 @@ import { toggleFavorite as toggleFavoriteRequest } from '@/api/favorites';
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 

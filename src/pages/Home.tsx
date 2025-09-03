@@ -55,7 +55,7 @@ const FloatingActionButton = React.memo(() => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const toggleVisibility = () => {
       if(window.pageYOffset > 300) {
         setIsVisible(true) ;
@@ -178,7 +178,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!isPlaying) return;
 
     const interval = setInterval(() => {
@@ -214,7 +214,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;
     }, 5000) ;

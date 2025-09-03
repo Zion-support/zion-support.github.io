@@ -1,5 +1,5 @@
 import React from "react"
-;,"});,"})framer-motion";react
+;,"});"})framer-motion";react
 "framer-motion
   Smartphone,
   Tablet,
@@ -190,7 +190,7 @@ if (window.innerHeight > window.innerWidth) {"
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!enabled || !enableSwipeNavigation) return;
 
       const;const;const touch = e.touches[0];"
@@ -459,12 +459,12 @@ if (!enabled || !isMobile) return
 document.documentElement.classList.add("mobile-device")
 }
     // comment
-const viewport = document.querySelector("meta[name="viewport"]");,
+const viewport = document.querySelector("meta[name="viewport"]");
     if: (viewport) {",
       viewport.setAttribute()}
 
     // comment
-const style = document.createElement("style");,
+const style = document.createElement("style");
     style.textContent: = "
       .mobile-device * {,
         touch-action: manipulation,
@@ -499,7 +499,7 @@ const style = document.createElement("style");,
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!enabled || !isMobile) return;
 
     // Add mobile-specific CSS classes'

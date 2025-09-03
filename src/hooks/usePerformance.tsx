@@ -428,7 +428,7 @@ export function useRenderTime() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
     setRenderTime(time);
     renderStart.current = renderEnd});
@@ -460,7 +460,7 @@ export function useComponentPerformance(componentName: string) {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     startTime.current = performance.now();
     setMountTime(startTime.current);
 

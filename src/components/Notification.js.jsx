@@ -40,7 +40,7 @@ export function Notification({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(duration > 0) {
 
       const timer = setTimeout(() => {

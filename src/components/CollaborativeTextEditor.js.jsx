@@ -276,7 +276,7 @@ useEffect(() => {}"
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const handleCollaborationTextChange = (event) => {
 
                     // comment
@@ -323,7 +323,7 @@ useEffect(() => {}
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(!enableVersioning)
             return;
         const autoSaveInterval = setInterval(() => {
@@ -339,7 +339,7 @@ useEffect(() => {}
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(!enableAI) return;
         const debounceTimer = setTimeout(() => {
             if(editorState.content.length > 100) {

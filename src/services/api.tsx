@@ -93,4 +93,3 @@ export default function Page() {
   deleteOrder: (id: number) =>
     apiRequest(`/orders/${id}`, { method: 'DELETE' }) ,
 };
-

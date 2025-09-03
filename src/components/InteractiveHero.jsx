@@ -15,7 +15,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const handleMouseMove = (e) => {
 
             setMousePosition({ x: e.clientX, y: e.clientY })};

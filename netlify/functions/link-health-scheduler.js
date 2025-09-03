@@ -10,13 +10,13 @@ exports.handler = async () => {
     const { status, stdout, stderr } = fn();
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);,
+    logs.push(`exit=${status}`);
 }
   const runNode = (script) => {
   return spawnSync("node", [script], {
   cwd: process.cwd(),;
       encoding: "utf8";,
-});,
+});
 }
   process.env.CANONICAL_URL = process.env.CANONICAL_URL || "https://ziontechgroup.com";
   logStep("sitemap:run", () => runNode("automation/sitemap-runner.cjs"));
@@ -27,6 +27,6 @@ exports.handler = async () => {
   logStep("homepage:advertise", () => runNode("automation/homepage-auto-advertiser.cjs"));
   return {
   statusCode: 200,;
-    body: JSON.stringify({ logs });,
+    body: JSON.stringify({ logs });
 }
 }

@@ -76,7 +76,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const interval = setInterval(nextSlide, 5000) ;
     return () => clearInterval(interval) ;
   }, [nextSlide]) ;
@@ -338,7 +338,7 @@ const EnhancedHome: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     setIsLoaded(true) ;
   }, []) ;
 

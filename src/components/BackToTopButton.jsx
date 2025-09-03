@@ -11,7 +11,7 @@ export function BackToTopButton () {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const onScroll = () => {
     useEffect(() => {        const onScroll = () => {
             setVisible(window.scrollY > 400)};"

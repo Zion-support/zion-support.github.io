@@ -826,8 +826,8 @@ export const getServicesByCategory = (;
     service => service.category === category;
   )}
 export const getPopularServices = () => {;
-  return zionEmergingTechServices2029.filter(service => service.isPopular);,
+  return zionEmergingTechServices2029.filter(service => service.isPopular);
 }
 export const getNewServices = () => {;
-  return zionEmergingTechServices2029.filter(service => service.isNew);,
+  return zionEmergingTechServices2029.filter(service => service.isNew);
 }

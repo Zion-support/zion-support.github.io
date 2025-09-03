@@ -8,7 +8,7 @@ const analyticsEnhancements = {
   page_title: document.title,;
         page_location: window.location.href,;
         page_path: page;,
-});,
+});
 }
   },;
 
@@ -18,13 +18,13 @@ const analyticsEnhancements = {
   gtag("event", action, {
   event_category: category,;
         event_label: label;,
-});,
+});
 }
   },;
 
   // Track form submissions;
   trackFormSubmission: (formName) => {
-  this.trackInteraction("form_submit", "engagement", formName);,
+  this.trackInteraction("form_submit", "engagement", formName);
 },;
 
   // Initialize analytics;
@@ -36,15 +36,15 @@ const analyticsEnhancements = {
     const forms = document.querySelectorAll("form");
     forms.forEach(form => {
   form.addEventListener("submit", () => {
-  this.trackFormSubmission(form.name || "unnamed_form");,
-});,
-});,
+  this.trackFormSubmission(form.name || "unnamed_form");
+});
+});
 }
 };
 ;
 // Auto-initialize when DOM is ready;
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", analyticsEnhancements.init);,
+  document.addEventListener("DOMContentLoaded", analyticsEnhancements.init);
 } else {
-  analyticsEnhancements.init();,
+  analyticsEnhancements.init();
 }

@@ -42,7 +42,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
     if(method === 'GET') {
 

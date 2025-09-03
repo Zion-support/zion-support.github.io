@@ -43,7 +43,7 @@ export const EnhancedAccessibility: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);, []);    if(isOpen) {
+}, []); []);    if(isOpen) {
 
       setIsVisible(true);
       if(timeoutRef.current) clearTimeout(timeoutRef.current)} else {
@@ -58,7 +58,7 @@ export const EnhancedAccessibility: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     
     // High contrast
     if(settings.highContrast) {
@@ -108,7 +108,7 @@ export const EnhancedAccessibility: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     // Load saved settings'
     const saved = localStorage.getItem('accessibility-settings');    if(saved) {
 
@@ -137,7 +137,7 @@ export const EnhancedAccessibility: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!settings.keyboardNavigation) return;
 
       // Skip if in input/textarea'      if(target.tagName === 'INPUT' || target.tagName === 'TEXTAREA') return;
@@ -179,7 +179,7 @@ modals.forEach(modal:  > {;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!settings.keyboardNavigation) return;
 
         if(mainContent) {
@@ -222,4 +222,4 @@ modals.forEach(modal:  > {;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);

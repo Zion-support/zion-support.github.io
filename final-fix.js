@@ -14,7 +14,7 @@ function fixFile(filePath) {
       return match});
     // Fix broken JSX syntax;
     fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {
-  return match.replace(/\s+/g, " ").trim();,
+  return match.replace(/\s+/g, " ").trim();
 });
     // Fix malformed arrays and objects;
     fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g, "[$1]");
@@ -38,7 +38,7 @@ function processDirectory(dirPath) {
   const fullPath = path.join(dirPath, file);
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {
-  fixedCount += processDirectory(fullPath);,
+  fixedCount += processDirectory(fullPath);
 } else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
   if (fixFile(fullPath)) {
   fixedCount++;,

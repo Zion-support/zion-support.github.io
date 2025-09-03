@@ -38,7 +38,7 @@ showStats:  true,;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const sampleFeedback: Feedback[] = [{
 
         id: '1',
@@ -121,7 +121,7 @@ showStats:  true,;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(feedback.length > 0) {
 
       const responseRate = 95; // Simulated response rate
@@ -150,7 +150,7 @@ showStats:  true,;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     let filtered = feedback;
 
     if(selectedCategory !== 'all') {

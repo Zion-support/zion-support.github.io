@@ -118,7 +118,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     setActivePath(location.pathname)}, [location]);
 
   useEffect(() => {
@@ -127,7 +127,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const handleClickOutside = (event: MouseEvent) => {
 
       if(menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -183,7 +183,7 @@ export default function EnhancedMobileNavigation() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     setIsOpen(false);
     setActiveSubmenu(null)}, [location.pathname]);
 
@@ -194,7 +194,7 @@ export default function EnhancedMobileNavigation() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(isOpen) {
 
       document.addEventListener('mousedown', handleClickOutside);

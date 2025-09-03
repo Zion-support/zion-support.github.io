@@ -219,7 +219,7 @@ const ${componentName} = () => {
         </div>;
       </div>;
     </>;
-  );,
+  );
 }
 export default ${componentName};`;,
 }
@@ -245,12 +245,12 @@ function $1() {
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@reduxjs\/toolkit[""];/, ;
           "import { $1  } from "@reduxjs/toolkit";");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed Redux file: ${filePath}`);,
+        console.log(`Fixed Redux file: ${filePath}`);
 }
     } catch (error) {
-  console.error(`Error fixing Redux file ${filePath}:`, error.message);,
+  console.error(`Error fixing Redux file ${filePath}:`, error.message);
 }
-  });,
+  });
 }
 ;
 // Function to fix test files;
@@ -266,12 +266,12 @@ function fixTestFiles() {
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@testing-library\/react[""];/, ;
           "import { $1  } from "@testing-library/react";");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed test file: ${filePath}`);,
+        console.log(`Fixed test file: ${filePath}`);
 }
     } catch (error) {
-  console.error(`Error fixing test file ${filePath}:`, error.message);,
+  console.error(`Error fixing test file ${filePath}:`, error.message);
 }
-  });,
+  });
 }
 ;
 // Function to remove problematic files;
@@ -284,12 +284,12 @@ function removeProblematicFiles() {
   try {
   if (fs.existsSync(filePath)) {
   fs.unlinkSync(filePath);
-        console.log(`Removed problematic file: ${filePath}`);,
+        console.log(`Removed problematic file: ${filePath}`);
 }
     } catch (error) {
-  console.error(`Error removing ${filePath}:`, error.message);,
+  console.error(`Error removing ${filePath}:`, error.message);
 }
-  });,
+  });
 }
 ;
 // Main execution;
@@ -301,9 +301,9 @@ corruptedFiles.forEach(filePath => {
   const fileName = path.basename(filePath, path.extname(filePath));
     const newContent = createPageComponent(fileName);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Rewrote corrupted file: ${filePath}`);,
+    console.log(`Rewrote corrupted file: ${filePath}`);
 } catch (error) {
-  console.error(`Error rewriting ${filePath}:`, error.message);,
+  console.error(`Error rewriting ${filePath}:`, error.message);
 }
 });
 // 2. Fix Redux files;

@@ -20,7 +20,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(isOpen && messages.length === 0) {
 
             addBotMessage(welcomeMessage, {
@@ -42,7 +42,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]);
     // Track chatbot interactions

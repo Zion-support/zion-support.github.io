@@ -618,7 +618,7 @@ export default function MicroSAASServicesPage() {}
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(selectedCategory === "All Services") {
             setFilteredServices(microSAASServices) ;
         }

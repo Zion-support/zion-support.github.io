@@ -101,7 +101,7 @@ export function useWallet() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     async function loadData() {
       if(user?.id) {
         setLoading(true);

@@ -44,7 +44,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         // In a real app, we would fetch the user data here
         // For now, we'll just use the mock data
         setUser(mockUser) ;

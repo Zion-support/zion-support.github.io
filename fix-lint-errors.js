@@ -19,14 +19,14 @@ function fixLintErrors(content) {
         imports.trim().split(/\s+/).length > 1;
       ) {
   const cleanImports = imports.trim().split(/\s+/).join(", ");
-        return match.replace(imports, cleanImports);,
+        return match.replace(imports, cleanImports);
 }
       return match;
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {
   // Check if imports have proper commas;
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {
   const cleanImports = imports.trim().split(/\s+/).join();
-      return match.replace(imports, cleanImports);,
+      return match.replace(imports, cleanImports);
 }
   );
   // Fix missing semicolons after variable declarations;
@@ -43,7 +43,7 @@ function fixLintErrors(content) {
   const openBraces = (fixed.match(/\{/g) || []).length;
   const closeBraces = (fixed.match(/\}/g) || []).length;
   if (openBraces > closeBraces) {
-  fixed += "\n}".repeat(openBraces - closeBraces);,
+  fixed += "\n}".repeat(openBraces - closeBraces);
 }
 ;
   return fixed}
@@ -71,7 +71,7 @@ async function $1() {
 }
   }
 ;
-  console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``);,
+  console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``);
 }
 ;
 main().catch(console.error)

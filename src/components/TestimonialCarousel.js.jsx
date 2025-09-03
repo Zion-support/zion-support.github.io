@@ -72,7 +72,7 @@ export function TestimonialCarousel() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const timer = setInterval(() => {
       setDirection(1);
       setCurrentIndex(prev => (prev + 1) % testimonials.length);

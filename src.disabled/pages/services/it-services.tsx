@@ -27,7 +27,7 @@ const ITServices: React.FC = () => {;
         <li>Zero Trust and Compliance</li>;
       </ul>;
     </div>;
-  );,
+  );
 }
 ;
 export default ITServices;

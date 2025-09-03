@@ -32,4 +32,3 @@ function Article({ title, subtitle, price, bullets, links }: { title: string; su
     </main>
   )
 }
-

@@ -35,7 +35,7 @@ Heart,
   ShieldCheck,"
   X} from "lucide-react"
 "
-;,"});,"})
+;,"});"})
 }
 // comment
   rating: number,

@@ -16,7 +16,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     setMounted(true);
     
     if(savedTheme) {
@@ -29,7 +29,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!mounted) return;
 
       root.classList.toggle('dark', theme === 'dark') ;

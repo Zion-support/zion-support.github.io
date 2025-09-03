@@ -29,7 +29,7 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!toAddress) return;
     
       try {

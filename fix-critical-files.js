@@ -49,12 +49,12 @@ const ServicesIndex: React.FC = () => {
         </div>;
       </div>;
     </div>;
-  );,
+  );
 }
 export default ServicesIndex;
 `;
   fs.writeFileSync("src/pages/services/index.tsx", content);
-  console.log("Fixed src/pages/services/index.tsx");,
+  console.log("Fixed src/pages/services/index.tsx");
 }
 ;
 function fixSolutions() {
@@ -119,11 +119,11 @@ export default function Solutions() {
         </div>;
       </main>;
     </>;
-  );,
+  );
 }
 `;
   fs.writeFileSync("src/pages/solutions.tsx", content);
-  console.log("Fixed src/pages/solutions.tsx");,
+  console.log("Fixed src/pages/solutions.tsx");
 }
 ;
 function fixTailwindConfig() {
@@ -202,7 +202,7 @@ export default {
 } satisfies Config;
 `;
   fs.writeFileSync("tailwind.config.ts", content);
-  console.log("Fixed tailwind.config.ts");,
+  console.log("Fixed tailwind.config.ts");
 }
 ;
 function fixViteConfig() {
@@ -216,7 +216,7 @@ export default defineConfig({
 });
 `;
   fs.writeFileSync("vite.config.ts", content);
-  console.log("Fixed vite.config.ts");,
+  console.log("Fixed vite.config.ts");
 }
 ;
 function fixVitestConfig() {
@@ -230,7 +230,7 @@ export default defineConfig({
 });
 `;
   fs.writeFileSync("vitest.config.ts", content);
-  console.log("Fixed vitest.config.ts");,
+  console.log("Fixed vitest.config.ts");
 }
 ;
 // Run the fixes;
@@ -241,8 +241,8 @@ try {
   fixTailwindConfig();
   fixViteConfig();
   fixVitestConfig();
-  console.log("All critical files have been fixed!");,
+  console.log("All critical files have been fixed!");
 } catch (error) {
   console.error("Error fixing files:", error);
-  process.exit(1);,
+  process.exit(1);
 }

@@ -24,7 +24,7 @@ export function AdvancedSearch() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const handleClickOutside = (event) => {
 
             if(searchRef.current && !searchRef.current.contains(event.target)) {
@@ -39,7 +39,7 @@ export function AdvancedSearch() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(query.trim()) {
 
             const filtered = mockSuggestions;

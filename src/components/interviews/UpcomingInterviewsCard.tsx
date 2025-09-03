@@ -19,7 +19,7 @@ export function UpcomingInterviewsCard() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const loadInterviews = async () => {
       setIsLoading(true);
       try {

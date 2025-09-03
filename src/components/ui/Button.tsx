@@ -47,7 +47,7 @@ export const Button: React.FC<ButtonProps> = ({ children,"
     >;
       {children}
     </button>;
-  );,
+  );
 }
 ";
 export default Button;"

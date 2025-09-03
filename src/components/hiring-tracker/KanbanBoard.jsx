@@ -48,7 +48,7 @@ export function KanbanBoard({ jobId }) {}
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(applications) {
 
       // Group applications by status

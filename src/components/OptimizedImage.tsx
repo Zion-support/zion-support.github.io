@@ -38,7 +38,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     return () => {
       if(observerRef.current) {
 

@@ -22,7 +22,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
     setHighContrast(savedHighContrast);
     setReducedMotion(savedReducedMotion);
@@ -36,7 +36,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     
     // Apply high contrast
     if(highContrast) {
@@ -58,7 +58,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     
         setTimeout(() => setShowSkipLinks(false), 5000)}
 

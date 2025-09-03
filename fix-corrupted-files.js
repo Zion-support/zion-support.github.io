@@ -232,7 +232,7 @@ export default function ${serviceName}() {
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }
 `;
 // Function to extract service name from file path;
@@ -242,7 +242,7 @@ function getServiceName(filePath) {
   return fileName;
     .split(/[-_]/);
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
-    .join("");,
+    .join("");
 }
 ;
 // Function to extract display name from service name;
@@ -251,7 +251,7 @@ function getDisplayName(serviceName) {
   return serviceName;
     .replace(/^AI/, "");
     .replace(/([A-Z])/g, " $1");
-    .trim();,
+    .trim();
 }
 ;
 // Fix corrupted files;
@@ -263,15 +263,15 @@ corruptedFiles.forEach(filePath => {
     // Ensure directory exists;
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });,
+  fs.mkdirSync(dir, { recursive: true });
 }
     ;
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
-    console.log(`✓ Fixed ${filePath}`);,
+    console.log(`✓ Fixed ${filePath}`);
 } catch (error) {
-  console.error(`✗ Error fixing ${filePath}:`, error.message);,
+  console.error(`✗ Error fixing ${filePath}:`, error.message);
 }
 });
 console.log("\\nFixed all corrupted service files!")

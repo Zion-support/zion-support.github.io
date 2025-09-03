@@ -23,7 +23,7 @@ const PerformanceOptimizedHero = memo(() => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const timer = setTimeout(() => setIsVisible(true), 100);
         const loadTimer = setTimeout(() => setIsLoaded(true), 500);
         return () => {

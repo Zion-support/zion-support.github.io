@@ -12,7 +12,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         // For demo purposes, we're using the loaded translations from i18next
         const currentTranslations = { /* empty */ };
         supportedLanguages.forEach(lang => {
@@ -42,7 +42,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(!searchQuery.trim () ) {
             // Get all unique keys across all languages
             const allKeys = new Set () ;

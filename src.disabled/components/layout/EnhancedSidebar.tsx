@@ -38,7 +38,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/Enhanc
 
   if (!isOpen) return null;
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/EnhancedSidebar.tsx;
-  );,
+  );
 }
 export default EnhancedSidebar;";
 :src.disabled/components/layout/EnhancedSidebar.tsx;
@@ -124,7 +124,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
         ))}
       </nav>;
     </aside>;
-  );,
+  );
 }
 export default EnhancedSidebar;
 

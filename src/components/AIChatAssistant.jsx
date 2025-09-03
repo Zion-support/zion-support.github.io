@@ -31,7 +31,7 @@ export function AIChatAssistant() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         scrollToBottom()}, [messages]);
     const handleSendMessage = async () => {
         if(!inputValue.trim())

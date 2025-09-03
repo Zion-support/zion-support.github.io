@@ -46,7 +46,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const handleError = event => {
 
       setHasError(true);

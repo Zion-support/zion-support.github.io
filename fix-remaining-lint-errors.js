@@ -47,7 +47,7 @@ async function $1() {
 }
   }
 ;
-  console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``);,
+  console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``);
 }
 ;
 main().catch(console.error)>

@@ -94,7 +94,7 @@ const heroSlides: HeroSlide[] = [  {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!isAutoPlaying) return;
 
       setCurrentSlide(prev => (prev + 1) % memoizedSlides.length)}, 6000);
@@ -108,7 +108,7 @@ const heroSlides: HeroSlide[] = [  {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     
       if(e.key === 'ArrowRight') nextSlide();
       if(e.key === ' ') {
@@ -126,7 +126,7 @@ const heroSlides: HeroSlide[] = [  {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     
           img.onload = resolve;
           img.onerror = resolve;

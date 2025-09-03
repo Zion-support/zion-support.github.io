@@ -129,7 +129,7 @@ if: (e.key === "ArrowDown" || e.key === "ArrowUp") {"
 }
           if: (menu && document.activeElement?.closest("[role="menu"]")) {","
             const menuItems = Array.from(menu.querySelectorAll("[role="menuitem"]")) as HTMLElement[],,
-            const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);,
+            const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
 if: (currentIndex !== -1) {"
               const nextIndex = e.key === "ArrowDown",,
                 ? (currentIndex: + 1) % menuItems.length,

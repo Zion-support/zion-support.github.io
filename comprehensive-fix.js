@@ -119,7 +119,7 @@ const ${componentName} = () => {
         </div>;
       </div>;
     </>;
-  );,
+  );
 }
 export default ${componentName};`;,
 }
@@ -134,7 +134,7 @@ function fixNextLinks(filePath) {
         /import React from "react";/,;
         `import React from "react";
 import Link from "next/link";`;
-      );,
+      );
 }
     ;
     // Replace <a href="/..."> with <Link href="/...">;
@@ -145,9 +145,9 @@ import Link from "next/link";`;
     // Replace </a> with </Link>;
     content = content.replace(/<\/a>/g, "</Link>");
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed Next.js links in: ${filePath}`);,
+    console.log(`Fixed Next.js links in: ${filePath}`);
 } catch (error) {
-  console.error(`Error fixing links in ${filePath}:`, error.message);,
+  console.error(`Error fixing links in ${filePath}:`, error.message);
 }
 }
 ;
@@ -169,12 +169,12 @@ function $1() {
         content = content.replace(/useSelector<([^>]*)>/g, "useSelector<$1>");
         content = content.replace(/useDispatch<([^>]*)>/g, "useDispatch<$1>");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed Redux file: ${filePath}`);,
+        console.log(`Fixed Redux file: ${filePath}`);
 }
     } catch (error) {
-  console.error(`Error fixing Redux file ${filePath}:`, error.message);,
+  console.error(`Error fixing Redux file ${filePath}:`, error.message);
 }
-  });,
+  });
 }
 ;
 // Function to fix test files;
@@ -190,12 +190,12 @@ function fixTestFiles() {
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@testing-library\/react[""];/, ;
           "import { $1  } from "@testing-library/react";");
         fs.writeFileSync(filePath, content);
-        console.log(`Fixed test file: ${filePath}`);,
+        console.log(`Fixed test file: ${filePath}`);
 }
     } catch (error) {
-  console.error(`Error fixing test file ${filePath}:`, error.message);,
+  console.error(`Error fixing test file ${filePath}:`, error.message);
 }
-  });,
+  });
 }
 ;
 // Main execution;
@@ -207,9 +207,9 @@ corruptedFiles.forEach(filePath => {
   const serviceName = path.basename(filePath, path.extname(filePath));
     const newContent = createServiceComponent(serviceName);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Rewrote corrupted file: ${filePath}`);,
+    console.log(`Rewrote corrupted file: ${filePath}`);
 } catch (error) {
-  console.error(`Error rewriting ${filePath}:`, error.message);,
+  console.error(`Error rewriting ${filePath}:`, error.message);
 }
 });
 // 2. Fix Next.js Link issues in all service files;
@@ -220,9 +220,9 @@ if (fs.existsSync(serviceDir)) {
   files.forEach(file => {
   if (file.endsWith(".tsx") || file.endsWith(".jsx")) {
   const filePath = path.join(serviceDir, file);
-      fixNextLinks(filePath);,
+      fixNextLinks(filePath);
 }
-  });,
+  });
 }
 ;
 // 3. Fix Redux files;
@@ -241,10 +241,10 @@ problematicFiles.forEach(filePath => {
   try {
   if (fs.existsSync(filePath)) {
   fs.unlinkSync(filePath);
-      console.log(`Removed problematic file: ${filePath}`);,
+      console.log(`Removed problematic file: ${filePath}`);
 }
   } catch (error) {
-  console.error(`Error removing ${filePath}:`, error.message);,
+  console.error(`Error removing ${filePath}:`, error.message);
 }
 });
 console.log("Comprehensive fix completed!")

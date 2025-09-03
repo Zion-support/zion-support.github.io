@@ -8,7 +8,7 @@ import React from "react"; export default function ExpensiveComponent() { const 
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     // Simulate expensive computation
     const timer = setTimeout(() => {
       const expensiveData = Array.from()

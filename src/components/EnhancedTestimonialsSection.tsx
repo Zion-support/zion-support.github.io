@@ -92,7 +92,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!isAutoPlaying) return;
 
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) }, 8000) ;

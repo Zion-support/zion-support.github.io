@@ -5,9 +5,9 @@ class TestAutomation {
   try {
   console.log("Running test suite...");
       execSync("npm test -- --passWithNoTests", { stdio: "inherit" });
-      console.log("Tests completed successfully");,
+      console.log("Tests completed successfully");
 } catch (error) {
-  console.error("Tests failed:", error.message);,
+  console.error("Tests failed:", error.message);
 }
   }
 ;
@@ -15,9 +15,9 @@ class TestAutomation {
   try {
   console.log("Running test coverage...");
       execSync("npm test -- --coverage --passWithNoTests", { stdio: "inherit" });
-      console.log("Coverage analysis completed");,
+      console.log("Coverage analysis completed");
 } catch (error) {
-  console.error("Coverage analysis failed:", error.message);,
+  console.error("Coverage analysis failed:", error.message);
 }
   }
 }
@@ -25,7 +25,7 @@ class TestAutomation {
 const testAutomation = new TestAutomation();
 const arg = process.argv[2];
 if (arg === "coverage") {
-  testAutomation.runCoverage();,
+  testAutomation.runCoverage();
 } else {
-  testAutomation.runTests();,
+  testAutomation.runTests();
 }

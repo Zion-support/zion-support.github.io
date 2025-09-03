@@ -7,11 +7,11 @@ const errorHandling = {
     ;
     // Send error to monitoring service (e.g., Sentry);
     if (typeof Sentry !== "undefined") {
-  Sentry.captureException(error, { extra: { context } });,
+  Sentry.captureException(error, { extra: { context } });
 }
     ;
     // Show user-friendly error message;
-    this.showErrorMessage("Something went wrong. Please try again.");,
+    this.showErrorMessage("Something went wrong. Please try again.");
 },;
 
   // Show user-friendly error messages;
@@ -35,23 +35,23 @@ const errorHandling = {
     // Remove after 5 seconds;
     setTimeout(() => {
   if (errorDiv.parentNode) {
-  errorDiv.parentNode.removeChild(errorDiv);,
+  errorDiv.parentNode.removeChild(errorDiv);
 }
-    }, 5000);,
+    }, 5000);
 },;
 
   // Handle unhandled promise rejections;
   handleUnhandledRejection: (event) => {
-  this.handleError(event.reason, "Unhandled Promise Rejection");,
+  this.handleError(event.reason, "Unhandled Promise Rejection");
 },;
 
   // Initialize error handling;
   init: () => {
   window.addEventListener("error", (event) => {
-  this.handleError(event.error, "Global Error");,
+  this.handleError(event.error, "Global Error");
 });
     ;
-    window.addEventListener("unhandledrejection", this.handleUnhandledRejection);,
+    window.addEventListener("unhandledrejection", this.handleUnhandledRejection);
 }
 };
 ;

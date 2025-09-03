@@ -227,6 +227,6 @@ const CookiePolicy: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,
+  );
 }
 export default CookiePolicy

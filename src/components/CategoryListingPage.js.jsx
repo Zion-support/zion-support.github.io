@@ -26,7 +26,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
     useEffect(() => {
@@ -35,7 +35,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
     useEffect(() => {
@@ -44,7 +44,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]);

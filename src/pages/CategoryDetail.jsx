@@ -82,7 +82,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         setIsLoading(true) ;
         // Find the category data based on slug
         const currentCategory = categoryData[slug] || {
@@ -122,7 +122,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(slug !== 'innovation') return;
         const interval = setInterval(() => {
             innovationCounterRef.current += 1;

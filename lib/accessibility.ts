@@ -57,7 +57,7 @@ export const accessibilityUtils = {;
     announcement.textContent = message;
     document.body.appendChild(announcement);
     setTimeout(() => {;
-      document.body.removeChild(announcement);,
-}, 1000);,
+      document.body.removeChild(announcement);
+}, 1000);
 }
 }

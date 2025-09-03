@@ -87,4 +87,9 @@ module.exports = {
     'pages-disabled/',
     'pages.disabled_auto/',
   ],
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+  },
 };

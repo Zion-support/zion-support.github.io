@@ -79,7 +79,7 @@ export function InteractiveTestimonials() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!isAutoPlaying) return;
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % filteredTestimonials.length);

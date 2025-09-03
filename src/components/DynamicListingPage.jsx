@@ -21,7 +21,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         setCurrentPage(1) ;
     }, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]) ;
     const handleRequestQuote = (listingId) => {

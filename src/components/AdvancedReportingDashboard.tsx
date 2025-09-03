@@ -36,7 +36,7 @@ showMetrics:  true,;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const sampleReports: ReportData[] = [{
 
         id: '1',
@@ -159,7 +159,7 @@ showMetrics:  true,;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     let filtered = reports;
 
     if(selectedType !== 'all') {

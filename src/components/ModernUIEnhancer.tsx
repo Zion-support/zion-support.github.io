@@ -119,7 +119,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!enabled) return;
 
     enhanceTypography () ;

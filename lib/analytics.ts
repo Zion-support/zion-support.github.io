@@ -5,7 +5,7 @@ export const trackEvent = (;
   properties?: Record<string, string | number | boolean>;
 ) => {;
   if (typeof window !== "undefined" && window.gtag) {";
-    window.gtag("event", eventName, properties);,
+    window.gtag("event", eventName, properties);
 }
 }
 export const trackPageView = (url: string) => {";
@@ -44,7 +44,7 @@ export const trackWebVitals = (metric: WebVitalMetric) => {";
       value: Math.round(metric.value),;
       event_category: "Web Vitals",;
       event_label: metric.id,;
-      non_interaction: true});,
+      non_interaction: true});
 }
 }
 declare global {;

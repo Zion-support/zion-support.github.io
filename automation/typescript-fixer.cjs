@@ -3,18 +3,18 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class $1 {
+class TypeScriptFixer {
   constructor() {
   this.projectRoot = process.cwd();
     this.fixes = [];
-    this.errors = [];,
+    this.errors = [];
 }
-;
+
   log(message, type = "INFO") {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type}] ${message}`);,
+    console.log(`[${timestamp}] [${type}] ${message}`);
 }
-;
+
   async createTypeDeclarations() {
   this.log("📝 Creating comprehensive type declarations...");
     const typeDeclarations = `// Global type declarations;
@@ -22,52 +22,52 @@ declare module "*.svg" {
   const content: string;
   export default content;,
 }
-;
+
 declare module "*.png" {
   const content: string;
   export default content;,
 }
-;
+
 declare module "*.jpg" {
   const content: string;
   export default content;,
 }
-;
+
 declare module "*.jpeg" {
   const content: string;
   export default content;,
 }
-;
+
 declare module "*.gif" {
   const content: string;
   export default content;,
 }
-;
+
 declare module "*.webp" {
   const content: string;
   export default content;,
 }
-;
+
 declare module "*.css" {
   const content: { [className: string]: string }
   export default content;,
 }
-;
+
 declare module "*.scss" {
   const content: { [className: string]: string }
   export default content;,
 }
-;
+
 declare module "*.module.css" {
   const content: { [className: string]: string }
   export default content;,
 }
-;
+
 declare module "*.module.scss" {
   const content: { [className: string]: string }
   export default content;,
 }
-;
+
 // Next.js specific types;
 declare namespace NodeJS {
   interface ProcessEnv {
@@ -77,26 +77,26 @@ declare namespace NodeJS {
     SUPABASE_SERVICE_ROLE_KEY?: string;,
 }
 }
-;
+
 // Global window extensions;
 declare global {
   interface Window {
   gtag?: (...args: any[]) => void;,
 }
 }
-;
+
 export {};`;
     const typesDir = path.join(this.projectRoot, "types");
     if (!fs.existsSync(typesDir)) {
-  fs.mkdirSync(typesDir, { recursive: true });,
+  fs.mkdirSync(typesDir, { recursive: true });
 }
-    ;
+
     const globalTypesPath = path.join(typesDir, "global.d.ts");
     fs.writeFileSync(globalTypesPath, typeDeclarations);
     this.fixes.push("Created comprehensive type declarations");
-    this.log("✅ Type declarations created");,
+    this.log("✅ Type declarations created");
 }
-;
+
   async fixTsConfig() {
   this.log("⚙️  Fixing tsconfig.json...");
     const tsConfig = {
@@ -126,7 +126,7 @@ export {};`;
           "@/components/*": ["./components/*"],;
           "@/utils/*": ["./utils/*"],;
           "@/hooks/*": ["./hooks/*"],;
-          "@/types/*": ["./types/*"];,
+          "@/types/*": ["./types/*"];
 }
       },;
       include: [
@@ -138,14 +138,14 @@ export {};`;
       ],;
       exclude: [
   "node_modules";
-      ];,
+      ];
 }
     const tsConfigPath = path.join(this.projectRoot, "tsconfig.json");
     fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2));
     this.fixes.push("Fixed tsconfig.json configuration");
-    this.log("✅ tsconfig.json fixed");,
+    this.log("✅ tsconfig.json fixed");
 }
-;
+
   async fixCommonTypeErrors() {
   this.log("🔧 Fixing common TypeScript errors...");
     const filesToFix = [
@@ -154,28 +154,28 @@ export {};`;
       "utils",;
       "hooks";
     ];
-    ;
+
     for (const dir of filesToFix) {
   const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {
-  this.fixFilesInDirectory(dirPath);,
+  this.fixFilesInDirectory(dirPath);
 }
     }
   }
-;
+
   fixFilesInDirectory(dirPath) {
   const items = fs.readdirSync(dirPath);
     for (const item of items) {
   const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-  this.fixFilesInDirectory(fullPath);,
+  this.fixFilesInDirectory(fullPath);
 } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {
-  this.fixTypeScriptFile(fullPath);,
+  this.fixTypeScriptFile(fullPath);
 }
     }
   }
-;
+
   fixTypeScriptFile(filePath) {
   try {
   let content = fs.readFileSync(filePath, "utf8");
@@ -188,7 +188,7 @@ export {};`;
         );
         modified = true;,
 }
-      ;
+
       // Add missing React import for JSX;
       if (content.includes("<") && content.includes(">") && !content.includes("import React")) {
   if (!content.includes("import React")) {
@@ -196,13 +196,13 @@ export {};`;
           modified = true;,
 }
       }
-      ;
+
       // Fix any type issues;
       if (content.includes(": any")) {
   content = content.replace(/: any/g, ": unknown");
         modified = true;,
 }
-      ;
+
       // Remove unused imports (basic cleanup);
       const lines = content.split("\\n");
       const cleanedLines = lines.filter(line => {
@@ -216,17 +216,17 @@ export {};`;
   content = cleanedLines.join("\\n");
         modified = true;,
 }
-      ;
+
       if (modified) {
   fs.writeFileSync(filePath, content);
-        this.fixes.push(`Fixed TypeScript file: ${path.relative(this.projectRoot, filePath)}`);,
+        this.fixes.push(`Fixed TypeScript file: ${path.relative(this.projectRoot, filePath)}`);
 }
       ;,
 } catch (error) {
-  this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN");,
+  this.log(`⚠️  Could not fix file ${filePath}: ${error.message}`, "WARN");
 }
   }
-;
+
   async runTypeCheck() {
   this.log("🔍 Running TypeScript type check...");
     try {
@@ -244,7 +244,7 @@ export {};`;
       return false;,
 }
   }
-;
+
   async run() {
   this.log("🚀 Starting TypeScript Fixing Process...");
     this.log("===");
@@ -260,25 +260,25 @@ export {};`;
       if (this.fixes.length > 0) {
   this.log("\\n✅ Fixes Applied:");
         this.fixes.forEach((fix, index) => {
-  this.log(`  ${index + 1}. ${fix}`);,
-});,
+  this.log(`  ${index + 1}. ${fix}`);
+});
 }
-      ;
+
       if (this.errors.length > 0) {
   this.log("\\n❌ Errors:");
         this.errors.forEach((error, index) => {
-  this.log(`  ${index + 1}. ${error}`);,
-});,
+  this.log(`  ${index + 1}. ${error}`);
+});
 }
-      ;
+
       this.log("\\n🎉 TypeScript fixing completed!");
       ;,
 } catch (error) {
   this.log(`💥 Fatal error: ${error.message}`, "ERROR");
-      process.exit(1);,
+      process.exit(1);
 }
   }
 }
-;
+
 const fixer = new TypeScriptFixer();
 fixer.run().catch(console.error)

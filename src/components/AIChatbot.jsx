@@ -56,7 +56,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
     }, [isOpen, messages.length, welcomeMessage]);"
     // comment

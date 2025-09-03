@@ -116,7 +116,7 @@ export function UserExperienceOptimizer({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(autoAnalyze && isOpen && !analysisComplete) {
 
       startUXAnalysis()}
@@ -128,7 +128,7 @@ export function UserExperienceOptimizer({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(showRealTime && isOpen && analysisComplete) {
 
       analysisIntervalRef.current = setInterval(() => {

@@ -86,7 +86,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 		if(!isPlaying) return;
 		
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length) }, 5000) ;

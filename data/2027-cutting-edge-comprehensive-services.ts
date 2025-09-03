@@ -655,7 +655,7 @@ export const getServiceById = (id: string) => {;
 export const getServicesByCategory = (category: string) => {;
   return cuttingEdgeComprehensiveServices2027.filter(service => service.category === category)}
 export const getPopularServices = () => {;
-  return cuttingEdgeComprehensiveServices2027.filter(service => service.popular);,
+  return cuttingEdgeComprehensiveServices2027.filter(service => service.popular);
 }
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return cuttingEdgeComprehensiveServices2027.filter(service => {;

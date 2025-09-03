@@ -68,7 +68,7 @@ showProjects:  true,;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const sampleFiles: FileItem[] = [{
 
         id: '1',

@@ -75,10 +75,10 @@ const LazyImage: React.FC<LazyImageProps> = ({,
       { threshold: 0.1 }
     );
     if (imgRef.current) {;
-      observer.observe(imgRef.current);,
+      observer.observe(imgRef.current);
 }
 ;
-    return () => observer.disconnect();,
+    return () => observer.disconnect();
 }, [priority]);
   return (;
     <div ref = "{imgRef}" className="{`relative" ${className}`}>;
@@ -103,7 +103,7 @@ const LazyImage: React.FC<LazyImageProps> = ({,
         />;
       )}
     </div>;
-  );,
+  );
 }
 ";
 export default LazyImage;"

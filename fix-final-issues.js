@@ -15,7 +15,7 @@ function fixNextLinks(filePath) {
         /import React from "react";/,;
         `import React from "react";
 import Link from "next/link";`;
-      );,
+      );
 }
     ;
     // Replace <a href="/..."> with <Link href="/...">;
@@ -26,9 +26,9 @@ import Link from "next/link";`;
     // Replace </a> with </Link>;
     content = content.replace(/<\/a>/g, "</Link>");
     fs.writeFileSync(filePath, content, "utf8");
-    console.log(`✓ Fixed Next.js links in ${filePath}`);,
+    console.log(`✓ Fixed Next.js links in ${filePath}`);
 } catch (error) {
-  console.error(`✗ Error fixing ${filePath}:`, error.message);,
+  console.error(`✗ Error fixing ${filePath}:`, error.message);
 }
 }
 ;
@@ -128,10 +128,10 @@ problematicFiles.forEach(filePath => {
   try {
   if (fs.existsSync(filePath)) {
   fs.unlinkSync(filePath);
-      console.log(`✓ Deleted problematic file ${filePath}`);,
+      console.log(`✓ Deleted problematic file ${filePath}`);
 }
   } catch (error) {
-  console.error(`✗ Error deleting ${filePath}:`, error.message);,
+  console.error(`✗ Error deleting ${filePath}:`, error.message);
 }
 });
 // List of remaining corrupted files that need complete replacement;
@@ -224,7 +224,7 @@ export default function ${componentName}() {
         </div>` : ""}
       </div>;
     </div>;
-  );,
+  );
 }
 `;
 // Template for utility files;
@@ -232,7 +232,7 @@ const utilityTemplate = (fileName) => `// ${fileName} utility;
 export const ${fileName.replace(/[^a-zA-Z0-9]/g, "")} = {
   // Placeholder utility functions;
   init: () => {
-  console.log("${fileName} initialized");,
+  console.log("${fileName} initialized");
 }
 }
 export default ${fileName.replace(/[^a-zA-Z0-9]/g, "")}
@@ -247,7 +247,7 @@ export class ${fileName.replace(/[^a-zA-Z0-9]/g, "")}Service {
   async get() {
   try {
   const response = await fetch(\`\${this.baseUrl}/${fileName.toLowerCase()}\`);
-      return await response.json();,
+      return await response.json();
 } catch (error) {
   console.error("Error fetching data:", error);
       throw error;,
@@ -279,7 +279,7 @@ function getComponentName(filePath) {
   return fileName;
     .split(/[-_]/);
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
-    .join("");,
+    .join("");
 }
 ;
 // Fix remaining corrupted files;
@@ -294,24 +294,24 @@ remainingCorruptedFiles.forEach(filePath => {
     // Ensure directory exists;
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });,
+  fs.mkdirSync(dir, { recursive: true });
 }
     ;
     let content;
     if (isUtility) {
-  content = utilityTemplate(path.basename(filePath, path.extname(filePath)));,
+  content = utilityTemplate(path.basename(filePath, path.extname(filePath)));
 } else if (isService) {
-  content = serviceTemplate(path.basename(filePath, path.extname(filePath)));,
+  content = serviceTemplate(path.basename(filePath, path.extname(filePath)));
 } else if (isType) {
-  content = typeTemplate(path.basename(filePath, path.extname(filePath)));,
+  content = typeTemplate(path.basename(filePath, path.extname(filePath)));
 } else {
-  content = basicComponentTemplate(componentName, isPage);,
+  content = basicComponentTemplate(componentName, isPage);
 }
     ;
     fs.writeFileSync(filePath, content, "utf8");
-    console.log(`✓ Fixed ${filePath}`);,
+    console.log(`✓ Fixed ${filePath}`);
 } catch (error) {
-  console.error(`✗ Error fixing ${filePath}:`, error.message);,
+  console.error(`✗ Error fixing ${filePath}:`, error.message);
 }
 });
 console.log("\\nFixed all final issues!")

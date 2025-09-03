@@ -139,7 +139,7 @@ export function InteractivePortfolio() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(isModalOpen) {
 
             document.body.style.overflow = 'hidden'}

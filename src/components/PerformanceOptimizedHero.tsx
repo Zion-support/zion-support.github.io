@@ -17,7 +17,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     setIsVisible(true) ;
 
     const interval = setInterval(() => {;

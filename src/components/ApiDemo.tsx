@@ -22,7 +22,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     checkHealth () ;
     fetchUsers () }, []) ;
 

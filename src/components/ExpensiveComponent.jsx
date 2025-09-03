@@ -8,7 +8,7 @@ import React from "react"; export default function ExpensiveComponent() { const 
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     // Simulate expensive computation
     const timer = setTimeout(() => {
       const expensiveData = Array.from()
@@ -42,59 +42,59 @@ export { ExpensiveComponent };
 }
   })"
  export default function ExpensiveComponent () { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {"";"
-  });,"})"
+  });"})"
 ;,"})
 }
   })
 }
  export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {;"
-  });,"});"
+  });"});"
 }"})
 }
   })""
-  });,"})"
+  });"})"
 export default function ExpensiveComponent() {}"})
 }
   })
 }
   const [data, setData] = useState([]);"
-  });,"})"
-  const [loading, setLoading] = useState(true);,"})
+  });"})"
+  const [loading, setLoading] = useState(true);"})
 }
   })"
-  useEffect(() => {}});,"})"
+  useEffect(() => {}});"})"
     // comment
   })"
-    const timer = setTimeout(() => {}});,"})"
-      const expensiveData = Array.from();,"})
+    const timer = setTimeout(() => {}});"})"
+      const expensiveData = Array.from();"})
 }
   })
 }
         { length: 10000 },"
-  });,"})"
-        (_, i) => Math.sqrt(i) * Math.PI * Math.random();,"})
+  });"})"
+        (_, i) => Math.sqrt(i) * Math.PI * Math.random();"})
 }
   })
 }
       );"
-  });,"})"
-      setData(expensiveData);,"})
+  });"})"
+      setData(expensiveData);"})
 }
   })
 }
       setLoading(false);"
-  });,"});"
-}, 2000);,"})
+  });"});"
+}, 2000);"})
 }
   })
 }
     return () => clearTimeout(timer);"
-  });,"});"
-}, []);,"})
+  });"});"
+}, []);"})
 }
   })"
-  if(loading) {}});,"})"
-    return();,"})
+  if(loading) {}});"})"
+    return();"})
 }
   })"
       <div className="text-center" p-8">"";,"})
@@ -108,37 +108,37 @@ export default function ExpensiveComponent() {}"})
   })
 }
       </div>;"
-  });,"})"
+  });"})"
     </div>)}"})
 }
   })
 }
 ;"
-  });,"})"
+  });"})"
 export { ExpensiveComponent };,"})
 }
   })
 }
 ;"
-  });,"})"
+  });"})"
 export { ExpensiveComponent };,"})
 }
   })
 }
 ;"
-  });,"})"
+  });"})"
 export { ExpensiveComponent };,"})
 }
   })
 }
 ;"
-  });,"})"
+  });"})"
 export { ExpensiveComponent };,"})
 }
   })
 }
 ;"
-  });,"})"
+  });"})"
 export { ExpensiveComponent };,"})
 }
   })"

@@ -14,4 +14,3 @@ const GreenITPage = () => {
 };
 
 export default GreenITPage;
-

@@ -97,7 +97,7 @@ export function AdvancedAnalyticsDashboard({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(showRealTime && isOpen) {
 
       generateAnalyticsData();
@@ -116,7 +116,7 @@ export function AdvancedAnalyticsDashboard({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(isOpen) {
 
       generateAnalyticsData()}

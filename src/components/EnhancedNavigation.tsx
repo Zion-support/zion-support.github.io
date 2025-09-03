@@ -264,7 +264,7 @@ className:  '',;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
       root.classList.add(newTheme)}
     '
@@ -490,4 +490,4 @@ className:  '',;
     </nav>
   )};'"`
 
-;,"});,})";
+;,"});})";

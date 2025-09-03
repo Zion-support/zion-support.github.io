@@ -220,7 +220,7 @@ declare global {
   interface Window {
     gtag?: (...args[])  => void}
 }
-:src/hooks/usePerformanceOptimization.tsx: interface PerformanceMetrics {,
+:src/hooks/usePerformanceOptimization.tsx: interface PerformanceMetrics {
 loadTime: number,
    renderTime: number,
    memoryUsage: number,

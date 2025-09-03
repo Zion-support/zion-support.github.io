@@ -27,7 +27,7 @@ const MicroSaaS: React.FC = () => {;
         <li>Interview Assessment AI</li>;
       </ul>;
     </div>;
-  );,
+  );
 }
 ;
 export default MicroSaaS;

@@ -17,7 +17,7 @@ function EnhancedHeader () {export function EnhancedHeader() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     
     };
 
@@ -326,27 +326,27 @@ function EnhancedHeader () {export function EnhancedHeader() {
             <a href="/blog" className="text-gray-700 hover:text-blue-600">Blog</a>"
             <a href="/careers" className="text-gray-700 hover:text-blue-600">Careers</a>,,
   ),"
-,"});,"})"
-;,"});,"})"
-export const EnhancedHeader: React.FC = () => {,"});,"})"
-  return (<header className="bg-white shadow-lg">;,"});,"})"
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,"});,"})"
-        <div className="flex justify-between items-center py-4 md: py-6">,"});,"})"
-          <div className="flex items-center">;,"});,"})"
-            <a href="/" className="text-xl md: text-2xl font-bold text-blue-900">,"});,"})"
-              Zion Tech Group,"});,"})"
-            </a>;,"});,"})"
-          </div>;,"});,"})"
-          <nav className="hidden md: flex gap-6">,"});,"})"
-            <a href="/" className="text-gray-700 hover: text-blue-600">Home</a>,"});,"})"
-            <a href="/services" className="text-gray-700 hover: text-blue-600">Services</a>,"});,"})"
-            <a href="/solutions" className="text-gray-700 hover: text-blue-600">Solutions</a>,"});,"})"
-            <a href="/pricing-guide" className="text-gray-700 hover: text-blue-600">Pricing</a>,"});,"})"
-            <a href="/contact" className="text-gray-700 hover: text-blue-600">Contact</a>,"});,"})"
-          </nav>;,"});,"})"
-    </header>;,"});,"})"
-  );,"});,"});"
-};,"});,"})""
+,"});"})"
+;,"});"})"
+export const EnhancedHeader: React.FC = () => {,"});"})"
+  return (<header className="bg-white shadow-lg">;,"});"})"
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,"});"})"
+        <div className="flex justify-between items-center py-4 md: py-6">,"});"})"
+          <div className="flex items-center">;,"});"})"
+            <a href="/" className="text-xl md: text-2xl font-bold text-blue-900">,"});"})"
+              Zion Tech Group,"});"})"
+            </a>;,"});"})"
+          </div>;,"});"})"
+          <nav className="hidden md: flex gap-6">,"});"})"
+            <a href="/" className="text-gray-700 hover: text-blue-600">Home</a>,"});"})"
+            <a href="/services" className="text-gray-700 hover: text-blue-600">Services</a>,"});"})"
+            <a href="/solutions" className="text-gray-700 hover: text-blue-600">Solutions</a>,"});"})"
+            <a href="/pricing-guide" className="text-gray-700 hover: text-blue-600">Pricing</a>,"});"})"
+            <a href="/contact" className="text-gray-700 hover: text-blue-600">Contact</a>,"});"})"
+          </nav>;,"});"})"
+    </header>;,"});"})"
+  );"});"});"
+};,"});"})""
   Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
   Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star,

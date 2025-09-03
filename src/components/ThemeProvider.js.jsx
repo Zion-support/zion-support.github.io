@@ -17,7 +17,7 @@ export const ThemeProvider({ children }) {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const root = window.document.documentElement;"
         root.classList.remove("light", "dark");"
         root.classList.add("dark")}, []);

@@ -47,7 +47,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     onResultsChange?.(filteredResults) }, [filteredResults, onResultsChange]) ;
 
   // Toggle filter

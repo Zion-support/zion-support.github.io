@@ -52,7 +52,7 @@ export const TestimonialsSection: React.FC = props {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(!isAutoPlaying) return}, 5000) ;
 
     return () => clearInterval(interval) }, [isAutoPlaying, currentTestimonial]) ;

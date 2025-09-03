@@ -144,4 +144,4 @@ export function EnhancedAccessibilityPanel() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);

@@ -62,7 +62,7 @@ export function AnalyticsManager() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     initializeAnalytics();
     return () => cleanupAnalytics()}, []);
 
@@ -274,7 +274,7 @@ export function AnalyticsManager() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(currentSession) {
 
       setAnalyticsData(report)}

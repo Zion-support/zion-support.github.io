@@ -35,7 +35,7 @@ export function ChatBotPanel() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(scrollAreaRef.current) {
 
             scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight}
@@ -47,7 +47,7 @@ export function ChatBotPanel() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(inputRef.current) {
 
             inputRef.current.focus()}

@@ -58,7 +58,7 @@ threshold: { warning: 80, critical: 95 },
             unit: "Mbps",""
             trend: "down",
 change: -5,
-threshold: { warning: 100, critical: 150 },""framer-motion";;react&apos;framer-motion&apos,lucide-react";&apos;&apos
+threshold: { warning: 100, critical: 150 },""framer-motion";react&apos;framer-motion&apos,lucide-react";&apos;&apos
 export const EnterpriseDashboard = () => {}
 
     const;const;const { trackEvent } = useAnalytics({        enableTracking: true,"
@@ -335,7 +335,7 @@ id: &apos,web-server&apos,"&apos,
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
     // Filtered data

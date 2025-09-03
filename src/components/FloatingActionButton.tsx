@@ -52,7 +52,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
     if(theme === 'auto') {
 
@@ -71,7 +71,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     
     };
 

@@ -9,7 +9,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const { startIndex, endIndex } = virtualScrollParams;
         setState(prev => ({
 
@@ -98,7 +98,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(!enableInfiniteScroll || !containerRef.current)
             return;
         const handleScrollEnd = () => {
@@ -124,7 +124,7 @@ export default function Page() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         return () => {
             if(rafRef.current) {
 
@@ -186,7 +186,7 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(!searchQuery.trim()) {
 
             setFilteredItems(items);
@@ -243,7 +243,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const heights = new Map();
         const total = 0;
         items.forEach((item, index) => {
@@ -291,7 +291,7 @@ export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const startIndex = Math.max(0, findIndexFromScrollTop(state.scrollTop) - (options.overscan || 5));
         const endIndex = Math.min(items.length-1, findIndexFromScrollTop(state.scrollTop + state.containerHeight) + (options.overscan || 5));
         setState(prev => ({

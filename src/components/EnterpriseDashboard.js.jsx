@@ -204,7 +204,7 @@ await new Promise(resolve => setTimeout(resolve, 1000))"
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
     // Filtered data

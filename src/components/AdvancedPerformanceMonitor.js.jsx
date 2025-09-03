@@ -66,7 +66,7 @@ export function AdvancedPerformanceMonitor() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(autoRefresh) {
 
       const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds

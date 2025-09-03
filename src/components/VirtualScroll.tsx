@@ -46,7 +46,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(items.length > 0 && containerRef.current) {
 
       // You can add logic here to scroll to a specific item on mount

@@ -1,5 +1,5 @@
 import React from "react"
-;,"});,"})
+;,"});"})
 }
 export default function Help() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"

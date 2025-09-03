@@ -43,7 +43,7 @@ export function usePoints() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     fetchLedger(); // Initial fetch
     const interval = setInterval(fetchLedger, 30000); // Subsequent fetches every 30s
     return () => clearInterval(interval); // Cleanup interval on unmount

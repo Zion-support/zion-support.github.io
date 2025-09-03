@@ -1,21 +1,48 @@
 {
-  "summary": {
-    "totalDuration": "39 seconds",
-    "prsProcessed": 1,
-    "conflictsResolved": 0,
-    "improvementsMade": 1,
-    "testsRun": 0,
-    "deployments": 0,
-    "totalErrors": 0
-  },
+  "timestamp": "2025-09-03T13:59:09.201Z",
+  "totalDuration": "98s",
   "results": {
-    "prsProcessed": 1,
-    "conflictsResolved": 0,
-    "improvementsMade": 1,
-    "testsRun": 0,
-    "deployments": 0,
-    "errors": []
+    "dependencyFix": {
+      "success": false,
+      "duration": 23,
+      "errors": [
+        "Command failed: node automation/dependency-fixer.cjs"
+      ]
+    },
+    "typescriptFix": {
+      "success": false,
+      "duration": 18,
+      "errors": [
+        "Command failed: node automation/typescript-fixer.cjs"
+      ]
+    },
+    "healthCheck": {
+      "success": true,
+      "duration": 4344,
+      "errors": []
+    },
+    "securityScan": {
+      "success": true,
+      "duration": 1140,
+      "errors": []
+    },
+    "performanceOptimize": {
+      "success": true,
+      "duration": 45547,
+      "errors": []
+    },
+    "buildTest": {
+      "success": false,
+      "duration": 46615,
+      "errors": [
+        "Command failed: npm run build"
+      ]
+    }
   },
-  "timestamp": "2025-09-03T05:49:15.135Z",
-  "status": "SUCCESS"
+  "summary": {
+    "totalPhases": 6,
+    "successfulPhases": 3,
+    "failedPhases": 3,
+    "overallSuccess": false
+  }
 }

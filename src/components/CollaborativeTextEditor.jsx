@@ -497,7 +497,7 @@ ${editorState.content}"}
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const handleCollaborationTextChange = (event) => {
 
 "
@@ -605,7 +605,7 @@ version: Math.max(prev.version, message.payload.version)}})"
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
                 generateAISuggestions()}
 

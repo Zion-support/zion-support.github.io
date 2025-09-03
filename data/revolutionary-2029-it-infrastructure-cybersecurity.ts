@@ -646,12 +646,12 @@ export const getITInfrastructureServicesByCategory = (category: string) => {;
 export const getPopularITInfrastructureServices = () => {;
   return revolutionaryITInfrastructureServices2029.filter(;
     service => service.isPopular;
-  );,
+  );
 }
 export const getNewITInfrastructureServices = () => {;
   return revolutionaryITInfrastructureServices2029.filter(;
     service => service.isNew;
-  );,
+  );
 }
 export const getITInfrastructureServicesByPriceRange = (;
   minPrice: number,;
@@ -659,5 +659,5 @@ export const getITInfrastructureServicesByPriceRange = (;
 ) => {;
   return revolutionaryITInfrastructureServices2029.filter(service => {;
     const price = parseInt(service.price.replace("$", "").replace(",", ""));
-    return price >= minPrice && price <= maxPrice});,
+    return price >= minPrice && price <= maxPrice});
 }>

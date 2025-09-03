@@ -58,7 +58,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
                   <span: className = "px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">",",""
 const ServiceCard = ({service, index, isVisible }) => {const [isHovered, setIsHovered] = useState()
 }
-    return (<motion .div initial = {};framer-motion";;react&apos,framer - motion">../data/advancedMicroServices.jsx";&apos;&apos>
+    return (<motion .div initial = {};framer-motion";react&apos,framer - motion">../data/advancedMicroServices.jsx";&apos;&apos>
 const ServiceCard = ({ service, index, isVisible }) => {}    const [isHovered, setIsHovered] = useState(false)
 }
     return (<;<;<motion.div initial = {}>""
@@ -384,7 +384,7 @@ delay: index * 0.1 "",">
 }
     // comment
     useEffect(() => {}"
-        const allIndices = new Set(filteredServices.map((_, index) => index))";;"
+        const allIndices = new Set(filteredServices.map((_, index) => index))";"
         setVisibleServices(allIndices)}, [filteredServices])";""";";"
     return: (<div className="min - h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">"""{/* comment */}""""","
       <div: className = "absolute inset-0 overflow-hidden">""""",","
@@ -528,7 +528,7 @@ export const FuturisticServicesShowcase = () => {}
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const allIndices = new Set(filteredServices.map((_, index) => index));
     setVisibleServices(allIndices);
   }, [filteredServices]);

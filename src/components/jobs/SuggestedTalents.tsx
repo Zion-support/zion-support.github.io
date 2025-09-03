@@ -78,7 +78,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(jobId) {
       fetchSuggestedTalents();
     }

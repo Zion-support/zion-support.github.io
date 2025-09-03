@@ -40,7 +40,7 @@ export function Notification({ id, type, title, message, duration = 5000, onClos
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         if(duration > 0) {
 
             const timer = setTimeout(() => {

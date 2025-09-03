@@ -9,7 +9,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     if(metrics) {
 
       setPerformanceScore(score)}
@@ -20,7 +20,7 @@ import { motion, AnimatePresence  } from 'framer-motion';
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     // Show monitor after 3 seconds
     
     return () => clearTimeout(timer) }, []) ;

@@ -13,7 +13,7 @@ export default function UltimateHomepage2025() {    const [currentServiceIndex, 
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         setIsVisible(true) ;
         const interval = setInterval(() => {
             setCurrentServiceIndex((prev) => (prev + 1) % ultimateInnovativeServices2025.length) }, 5000) ;

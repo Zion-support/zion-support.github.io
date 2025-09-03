@@ -27,7 +27,7 @@ export default function ${componentName}() {
         </div>;
       </div>;
     </div>;
-  );,
+  );
 }
 `;,
 }
@@ -155,9 +155,9 @@ for (const filePath of criticalFiles) {
   const newContent = createValidComponent(fullPath);
       fs.writeFileSync(fullPath, newContent);
       fixedCount++;
-      console.log(``Fixed: ${filePath}``);,
+      console.log(``Fixed: ${filePath}``);
 } catch (error) {
-  console.error(`Error fixing ${filePath}:`, error.message);,
+  console.error(`Error fixing ${filePath}:`, error.message);
 }
   }
 }

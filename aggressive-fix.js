@@ -27,7 +27,7 @@ export default function ${componentName}() {
         </div>;
       </div>;
     </div>;
-  );,
+  );
 }
 `;,
 }
@@ -71,7 +71,7 @@ function processDirectory(dirPath) {
   const fullPath = path.join(dirPath, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-  fixedCount += processDirectory(fullPath);,
+  fixedCount += processDirectory(fullPath);
 } else if (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".js") || item.endsWith(".jsx")) {
   if (fixFile(fullPath)) {
   fixedCount++;,
@@ -79,7 +79,7 @@ function processDirectory(dirPath) {
       }
     }
   } catch (error) {
-  console.error(`Error processing directory ${dirPath}:`, error.message);,
+  console.error(`Error processing directory ${dirPath}:`, error.message);
 }
   ;
   return fixedCount}

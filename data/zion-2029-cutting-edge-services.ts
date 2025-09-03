@@ -786,8 +786,8 @@ export const getServicesByCategory = (;
     service => service.category === category;
   )}
 export const getPopularServices = () => {;
-  return zionCuttingEdgeServices2029.filter(service => service.isPopular);,
+  return zionCuttingEdgeServices2029.filter(service => service.isPopular);
 }
 export const getNewServices = () => {;
-  return zionCuttingEdgeServices2029.filter(service => service.isNew);,
+  return zionCuttingEdgeServices2029.filter(service => service.isNew);
 }

@@ -12,7 +12,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     // Show CTA after 5 seconds
     
       setIsVisible(true) }, 5000) ;

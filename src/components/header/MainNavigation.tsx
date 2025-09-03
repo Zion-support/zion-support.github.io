@@ -375,4 +375,4 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {
       </Link>
     </nav>
   );
-} 
+}

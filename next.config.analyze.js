@@ -9,7 +9,7 @@ module.exports = {
           openAnalyzer: false,;
           reportFilename: "bundle-analysis.html";,
 });
-      );,
+      );
 }
     return config}
 }

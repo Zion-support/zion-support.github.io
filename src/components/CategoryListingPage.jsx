@@ -35,7 +35,7 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
         localStorage.setItem('category_selected_sort', selectedSort)}, [selectedSort]);
     useEffect(() => {
@@ -44,7 +44,7 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
 
         localStorage.setItem('category_selected_filter', selectedFilter)}, [selectedFilter]);
     useEffect(() => {
@@ -53,7 +53,7 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
         return () => clearTimeout(timeout)}, [searchQuery, selectedSort, selectedFilter]);

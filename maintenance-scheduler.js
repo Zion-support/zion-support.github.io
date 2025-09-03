@@ -18,11 +18,11 @@ class $1 {
       .forEach(task => {
   try {
   console.log(``Running: ${task.name}``);
-          execSync(task.command, { stdio: "inherit" });,
+          execSync(task.command, { stdio: "inherit" });
 } catch (error) {
-  console.error(`Failed: ${task.name}`, error.message);,
+  console.error(`Failed: ${task.name}`, error.message);
 }
-      });,
+      });
 }
 ;
   runWeeklyMaintenance() {
@@ -32,19 +32,19 @@ class $1 {
       .forEach(task => {
   try {
   console.log(``Running: ${task.name}``);
-          execSync(task.command, { stdio: "inherit" });,
+          execSync(task.command, { stdio: "inherit" });
 } catch (error) {
-  console.error(`Failed: ${task.name}`, error.message);,
+  console.error(`Failed: ${task.name}`, error.message);
 }
-      });,
+      });
 }
 }
 ;
 const scheduler = new MaintenanceScheduler();
 const arg = process.argv[2];
 if (arg === "daily") {
-  scheduler.runDailyMaintenance();,
+  scheduler.runDailyMaintenance();
 } else if (arg === "weekly") {
-  scheduler.runWeeklyMaintenance();,
+  scheduler.runWeeklyMaintenance();
 } else {
   console.log("Usage: node maintenance-scheduler.js [daily|weekly]")}

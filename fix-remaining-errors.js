@@ -50,7 +50,7 @@ function fixParsingErrors(filePath) {
       return true;,
 }
   } catch (error) {
-  console.error(`Error fixing ${filePath}:`, error.message);,
+  console.error(`Error fixing ${filePath}:`, error.message);
 }
   return false;,
 }
@@ -97,14 +97,14 @@ function createMinimalFiles() {
 import App from "./App";
 test("renders app", () => {
   render(<App />);
-  expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();,
+  expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
 });
 `,;
     "__tests__/App.test.tsx": `import { render, screen  } from "@testing-library/react";
 import App from "../App";
 test("renders app", () => {
   render(<App />);
-  expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();,
+  expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
 });
 `,;
     "__tests__/AccessibilityEnhancer.test.tsx": `import { render  } from "@testing-library/react";
@@ -117,22 +117,22 @@ test("renders accessibility enhancer", () => {
     "__tests__/api/team-builder-invite.test.ts": `import { describe, it, expect  } from "vitest";
 describe("Team Builder Invite API", () => {
   it("should work", () => {
-  expect(true).toBe(true);,
-});,
+  expect(true).toBe(true);
+});
 });
 `,;
     "__tests__/api/trust-score-user.test.ts": `import { describe, it, expect  } from "vitest";
 describe("Trust Score User API", () => {
   it("should work", () => {
-  expect(true).toBe(true);,
-});,
+  expect(true).toBe(true);
+});
 });
 `,;
     "__tests__/auth/login.test.ts": `import { describe, it, expect  } from "vitest";
 describe("Login", () => {
   it("should work", () => {
-  expect(true).toBe(true);,
-});,
+  expect(true).toBe(true);
+});
 });
 `,;
     "__tests__/components/WhitepaperPreviewPanel.test.tsx": `import { render  } from "@testing-library/react";
@@ -173,12 +173,12 @@ test("renders whitepaper generator page", () => {
     "__tests__/server/authController.test.js": `import { describe, it, expect  } from "vitest";
 describe("Auth Controller", () => {
   it("should work", () => {
-  expect(true).toBe(true);,
-});,
+  expect(true).toBe(true);
+});
 });
 `,;
     "api/create-checkout-session.js": `export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" });,
+  res.status(200).json({ message: "Checkout session created" });
 }
 `,;
     ".eslintrc.disabled.js": `module.exports = {
@@ -192,14 +192,14 @@ describe("Auth Controller", () => {
   // Ensure directory exists;
       const dir = path.dirname(filePath);
       if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });,
+  fs.mkdirSync(dir, { recursive: true });
 }
       ;
       fs.writeFileSync(filePath, content);
       console.log(`Created minimal file: ${filePath}`);
       createdCount++;,
 } catch (error) {
-  console.error(`Error creating ${filePath}:`, error.message);,
+  console.error(`Error creating ${filePath}:`, error.message);
 }
   }
   ;
@@ -213,8 +213,8 @@ try {
   const createdCount = createMinimalFiles();
   console.log(`Fixed ${fixedCount} files`);
   console.log(`Created ${createdCount} minimal files`);
-  console.log("Comprehensive error fixes completed!");,
+  console.log("Comprehensive error fixes completed!");
 } catch (error) {
   console.error("Error during comprehensive fixes:', error);
-  process.exit(1);,
+  process.exit(1);
 }

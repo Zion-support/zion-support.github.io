@@ -33,7 +33,7 @@ export function CollaborationPlatform() {
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
         const interval = setInterval(() => {
             setMeetingDuration(prev => prev + 1)}, 1000);
         return () => clearInterval(interval)}, []);

@@ -42,7 +42,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const savedLang = safeStorage.getItem('i18n_lang') as SupportedLanguage;
     if(savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {
       if(i18n.language !== savedLang) { // Only change if different
@@ -58,7 +58,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     setIsRTL(i18n.dir() === 'rtl');
     document.documentElement.dir = i18n.dir();
     document.documentElement.lang = currentLanguage;
@@ -76,7 +76,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   return () => {
     // Cleanup function
   };
-}, []);, []);
+}, []); []);
     const syncLanguageWithProfile = async () => {
       if(isAuthenticated && user?.id && currentLanguage) { // ensure currentLanguage is also checked
         try {

@@ -661,12 +661,12 @@ export const getSpecializedIndustryServicesByCategory = (category: string) => {;
 export const getPopularSpecializedIndustryServices = () => {;
   return revolutionarySpecializedIndustryServices2029.filter(;
     service => service.isPopular;
-  );,
+  );
 }
 export const getNewSpecializedIndustryServices = () => {;
   return revolutionarySpecializedIndustryServices2029.filter(;
     service => service.isNew;
-  );,
+  );
 }
 export const getSpecializedIndustryServicesByPriceRange = (;
   minPrice: number,;
@@ -674,5 +674,5 @@ export const getSpecializedIndustryServicesByPriceRange = (;
 ) => {;
   return revolutionarySpecializedIndustryServices2029.filter(service => {;
     const price = parseInt(service.price.replace("$", "").replace(",", ""));
-    return price >= minPrice && price <= maxPrice});,
+    return price >= minPrice && price <= maxPrice});
 }>
