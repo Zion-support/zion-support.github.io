@@ -1,23 +1,23 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class DeploymentChecker {
   constructor() {
     this.projectRoot = process.cwd()
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
-    this.ensureDirectories(),
+    this.ensureDirectories()
 }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
   log(message) {
     const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] ${message}`),
+    console.log(`[${timestamp}] ${message}`)
 }
 
   checkBuildOutput() {
@@ -27,9 +27,9 @@ class DeploymentChecker {
       buildExists: fs.existsSync(buildDir),
       staticFiles: fs.existsSync(path.join(buildDir, "static")),
       serverFiles: fs.existsSync(path.join(buildDir, "server")),
-      buildManifest: fs.existsSync(path.join(buildDir, "build-manifest.json")),
+      buildManifest: fs.existsSync(path.join(buildDir, "build-manifest.json"))
 }
-    return checks,
+    return checks
 }
 
   checkEnvironmentVariables() {
@@ -39,18 +39,18 @@ class DeploymentChecker {
     const checks = {
       envLocalExists: fs.existsSync(envFile),
       envExampleExists: fs.existsSync(envExample),
-      requiredVars: [],
+      requiredVars: []
 }
     if (checks.envLocalExists) {
       const envContent = fs.readFileSync(envFile, "utf8")
       const requiredVars = ["NEXT_PUBLIC_API_URL", "DATABASE_URL", "NEXTAUTH_SECRET"]
       checks.requiredVars = requiredVars.map(varName => ({
         name: varName,
-        present: envContent.includes(varName),
-})),
+        present: envContent.includes(varName)
+}))
 }
 
-    return checks,
+    return checks
 }
 
   checkPackageJson() {
@@ -64,9 +64,9 @@ class DeploymentChecker {
       hasLintScript: !!packageJson.scripts?.lint,
       hasTestScript: !!packageJson.scripts?.test,
       dependencies: Object.keys(packageJson.dependencies || {}),
-      devDependencies: Object.keys(packageJson.devDependencies || {}),
+      devDependencies: Object.keys(packageJson.devDependencies || {})
 }
-    return checks,
+    return checks
 }
 
   checkNetlifyConfig() {
@@ -75,15 +75,15 @@ class DeploymentChecker {
     const checks = {
       configExists: fs.existsSync(netlifyToml),
       hasBuildCommand: false,
-      hasPublishDirectory: false,
+      hasPublishDirectory: false
 }
     if (checks.configExists) {
       const configContent = fs.readFileSync(netlifyToml, "utf8")
       checks.hasBuildCommand = configContent.includes("[build]") && configContent.includes("command")
-      checks.hasPublishDirectory = configContent.includes("publish"),
+      checks.hasPublishDirectory = configContent.includes("publish")
 }
 
-    return checks,
+    return checks
 }
 
   checkGitStatus() {
@@ -94,11 +94,11 @@ class DeploymentChecker {
       return {
         hasUncommittedChanges: status.length > 0,
         currentBranch: branch,
-        uncommittedFiles: status.split("\n").filter(line => line.trim()),
+        uncommittedFiles: status.split("\n").filter(line => line.trim())
 }
     } catch (error) {
       return {
-        error: error.message,
+        error: error.message
 }
     }
   }
@@ -109,7 +109,7 @@ class DeploymentChecker {
     const checks = {
       buildSize: 0,
       staticAssets: 0,
-      hasManifest: false,
+      hasManifest: false
 }
     if (fs.existsSync(buildDir)) {
       try {
@@ -118,16 +118,16 @@ class DeploymentChecker {
         const staticDir = path.join(buildDir, "static")
         if (fs.existsSync(staticDir)) {
           const staticSize = execSync(`du -sh ${staticDir}`, { encoding: "utf8" })
-          checks.staticAssets = staticSize.split("\t")[0],
+          checks.staticAssets = staticSize.split("\t")[0]
 }
         
-        checks.hasManifest = fs.existsSync(path.join(buildDir, "build-manifest.json")),
+        checks.hasManifest = fs.existsSync(path.join(buildDir, "build-manifest.json"))
 } catch (error) {
-        checks.error = error.message,
+        checks.error = error.message
 }
     }
 
-    return checks,
+    return checks
 }
 
   async run() {
@@ -139,7 +139,7 @@ class DeploymentChecker {
       packageJson: this.checkPackageJson(),
       netlifyConfig: this.checkNetlifyConfig(),
       gitStatus: this.checkGitStatus(),
-      performanceMetrics: this.checkPerformanceMetrics(),
+      performanceMetrics: this.checkPerformanceMetrics()
 }
     // Generate report
     const reportFile = path.join(this.reportsDir, "deployment-check-report.json")
@@ -152,7 +152,7 @@ class DeploymentChecker {
     console.log(`✅ Package.json scripts: ${Object.values(results.packageJson).filter(v => typeof v === "boolean").filter(Boolean).length}/5`)
     console.log(`✅ Netlify config: ${results.netlifyConfig.configExists}`)
     console.log(`✅ Git status clean: ${!results.gitStatus.hasUncommittedChanges}`)
-    return results,
+    return results
 }
 }
 

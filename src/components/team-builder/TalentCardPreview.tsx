@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 interface TalentCardPreviewProps extends React.PropsWithChildren<{}> {
 
   talent: TalentProfile;
@@ -13,4 +10,3 @@ export
     </Card>;
   )};
 '"`
->>>>>>> main

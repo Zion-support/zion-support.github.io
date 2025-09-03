@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx
 import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {
     'Custom AI models trained on your industry data',;'
@@ -232,5 +231,3 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
   )}}'"'"
     </div>;
   )}}'""
-=======
->>>>>>> main

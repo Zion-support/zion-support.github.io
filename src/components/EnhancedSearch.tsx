@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { useNavigate  } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
  from 'react';
@@ -85,37 +82,10 @@ export function EnhancedSearch({
         event.preventDefault () ;
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ;
       } else if(event.key === 'Enter' && selectedIndex >= 0) {
-<<<<<<< HEAD
-        event.preventDefault () ;
-=======
-
-  // Handle keyboard navigation
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    
-        setSelectedIndex(-1)} else if(event.key === 'ArrowDown') {
-
-        event.preventDefault();
-        setSelectedIndex(prev => 
-          prev < results.length-1 ? prev + 1 : prev
-        )} else if(event.key === 'ArrowUp') {
-
-        event.preventDefault();
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if(event.key === 'Enter' && selectedIndex >= 0) {
-
-        event.preventDefault();
->>>>>>> main
-        if(results[selectedIndex]) {
-=======
-        event.preventDefault () ;        if(results[selectedIndex]) {
->>>>>>> main
-
-          handleResultClick(results[selectedIndex])}      }
+event.preventDefault () ;
+if(results[selectedIndex]) {
+event.preventDefault () ;        if(results[selectedIndex]) {
+handleResultClick(results[selectedIndex])}      }
     };
 
     if(isOpen) {
@@ -543,9 +513,4 @@ setFilters(prev: > ({;
       </AnimatePresence>;
     </div>;) }
 '"`
-=======
-
 ;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

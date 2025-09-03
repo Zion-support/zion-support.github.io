@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Shield,
   Database,
@@ -474,5 +473,3 @@ const AIDataGovernancePlatform: React.FC = props {}
 
 export default AIDataGovernancePlatform;'"`
 '"`'"`
-=======
->>>>>>> main

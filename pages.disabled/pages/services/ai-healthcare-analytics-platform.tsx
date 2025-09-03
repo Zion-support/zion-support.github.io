@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
 <:pages.disabled/pages/services/ai-healthcare-analytics-platform.tsx
 import React from 'react.ts';
@@ -36,7 +35,6 @@ import { Heart,
 export { function };
 export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
-  
     },;
     {;
       icon: Eye,;
@@ -44,7 +42,6 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'};
   ];
 
-  
         'On-premise options',;
         'SLA guarantees',;
         'Custom integrations';
@@ -581,5 +578,3 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       </section>;
     </div>;'"`
   )}}}}}}'"`'"`
-=======
->>>>>>> main

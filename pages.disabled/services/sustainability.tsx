@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 :pages.disabled/services/sustainability.tsx
 export default function Sustainability(...args: []):  {
 
@@ -448,5 +446,3 @@ export default function Sustainability(...args: []):  {}
 '"'"
   )}
 '""
-=======
->>>>>>> main

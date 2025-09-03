@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class ErrorMonitor {
   constructor() {
@@ -10,9 +10,9 @@ class ErrorMonitor {
     // Ensure directories exist
     [this.logDir, this.reportsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true }),
+        fs.mkdirSync(dir, { recursive: true })
 }
-    }),
+    })
 }
 
   log(level, message) {
@@ -21,7 +21,7 @@ class ErrorMonitor {
     console.log(logMessage)
     // Write to log file
     const logFile = path.join(this.logDir, "error-monitor.log")
-    fs.appendFileSync(logFile, logMessage + "\n"),
+    fs.appendFileSync(logFile, logMessage + "\n")
 }
 
   async checkTypeScriptErrors() {
@@ -30,7 +30,7 @@ class ErrorMonitor {
       const result = execSync("npx tsc --noEmit", {
         cwd: this.projectRoot,
         encoding: "utf8",
-        stdio: "pipe",
+        stdio: "pipe"
 })
       return { status: "clean", errors: [] }
     } catch (error) {
@@ -46,7 +46,7 @@ class ErrorMonitor {
       const result = execSync("npm run lint", {
         cwd: this.projectRoot,
         encoding: "utf8",
-        stdio: "pipe",
+        stdio: "pipe"
 })
       return { status: "clean", errors: [] }
     } catch (error) {
@@ -62,7 +62,7 @@ class ErrorMonitor {
       const result = execSync("npm run build", {
         cwd: this.projectRoot,
         encoding: "utf8",
-        stdio: "pipe",
+        stdio: "pipe"
 })
       return { status: "clean", errors: [] }
     } catch (error) {
@@ -78,7 +78,7 @@ class ErrorMonitor {
       const result = execSync("npm test", {
         cwd: this.projectRoot,
         encoding: "utf8",
-        stdio: "pipe",
+        stdio: "pipe"
 })
       return { status: "clean", errors: [] }
     } catch (error) {
@@ -99,11 +99,11 @@ class ErrorMonitor {
         const filePath = path.join(dir, file)
         const stat = fs.statSync(filePath)
         if (stat.isDirectory()) {
-          findLogFiles(filePath),
+          findLogFiles(filePath)
 } else if (file.endsWith(".log") || file.endsWith(".txt")) {
-          logFiles.push(filePath),
+          logFiles.push(filePath)
 }
-      }),
+      })
 }
     findLogFiles(this.logDir)
     findLogFiles(path.join(this.projectRoot, "logs"))
@@ -130,23 +130,23 @@ class ErrorMonitor {
                 file: logFile,
                 line: index + 1,
                 content: line.trim(),
-                timestamp: new Date().toISOString(),
-}),
+                timestamp: new Date().toISOString()
+})
 }
-          }),
-}),
+          })
+})
 } catch (error) {
         this.log("warn", `Could not read log file ${logFile}: ${error.message}`)
 const fs = require("fs").promises
-const path = require("$1");
-const { exec } = require("$1");
-const util = require("$1");
+const path = require("child_process");
+const { exec } = require("child_process");
+const util = require("child_process");
 const execAsync = util.promisify(exec)
 class ErrorMonitor {
   constructor() {
     this.logFile = path.join(__dirname, "../logs/error-monitor.log")
     this.reportFile = path.join(__dirname, "../logs/error-report.json")
-    this.lastCheck = new Date(),
+    this.lastCheck = new Date()
 }
 
   async log(message, level = "INFO") {
@@ -154,9 +154,9 @@ class ErrorMonitor {
     const logEntry = `[${timestamp}] [${level}] ${message}\n`
     try {
       await fs.appendFile(this.logFile, logEntry)
-      console.log(logEntry.trim()),
+      console.log(logEntry.trim())
 } catch (error) {
-      console.error("Failed to write to log file: ", error),
+      console.error("Failed to write to log file: ", error)
 }
   }
 
@@ -169,7 +169,7 @@ class ErrorMonitor {
           type: "build",
           hasErrors: true,
           output: stdout + stderr,
-          timestamp: new Date().toISOString(),,
+          timestamp: new Date().toISOString(),
 }
       }
 
@@ -177,14 +177,14 @@ class ErrorMonitor {
       return {
         type: "build",
         hasErrors: false,
-        timestamp: new Date().toISOString(),,
+        timestamp: new Date().toISOString(),
 }
     } catch (error) {await this.log(`Build check failed: ${error.message}`, "ERROR")
       return {
         type: "build",
         hasErrors: true,
         error: error.message,
-        timestamp: new Date().toISOString(),,
+        timestamp: new Date().toISOString(),
 }
     }
   }
@@ -198,7 +198,7 @@ class ErrorMonitor {
           type: "lint",
           hasErrors: true,
           output: stdout + stderr,
-          timestamp: new Date().toISOString(),,
+          timestamp: new Date().toISOString(),
 }
       }
 
@@ -206,14 +206,14 @@ class ErrorMonitor {
       return {
         type: "lint",
         hasErrors: false,
-        timestamp: new Date().toISOString(),,
+        timestamp: new Date().toISOString(),
 }
     } catch (error) {await this.log(`Lint check failed: ${error.message}`, "ERROR")
       return {
         type: "lint",
         hasErrors: true,
         error: error.message,
-        timestamp: new Date().toISOString(),,
+        timestamp: new Date().toISOString(),
 }
     }
   }
@@ -227,7 +227,7 @@ class ErrorMonitor {
           type: "typescript",
           hasErrors: true,
           output: stdout + stderr,
-          timestamp: new Date().toISOString(),,
+          timestamp: new Date().toISOString(),
 }
       }
 
@@ -235,14 +235,14 @@ class ErrorMonitor {
       return {
         type: "typescript",
         hasErrors: false,
-        timestamp: new Date().toISOString(),,
+        timestamp: new Date().toISOString(),
 }
     } catch (error) {await this.log(`TypeScript check failed: ${error.message}`, "ERROR")
       return {
         type: "typescript",
         hasErrors: true,
         error: error.message,
-        timestamp: new Date().toISOString(),,
+        timestamp: new Date().toISOString(),
 }
     }
   }
@@ -262,15 +262,15 @@ class ErrorMonitor {
           case "typescript":
             await this.log("Triggering TypeScript error fixer", "INFO")
             exec("pm2 restart syntax-fixer")
-            break,
+            break
 }
       } catch (error) {
         await this.log(Failed to trigger fix for ${errorType}: ${error.message}",
-          "ERROR"),
+          "ERROR")
 }
     }
     
-    return foundErrors,
+    return foundErrors
 }
 
   async generateErrorReport() {
@@ -285,7 +285,7 @@ class ErrorMonitor {
       summary: {
         totalErrors: 0,
         criticalIssues: 0,
-        warnings: 0,
+        warnings: 0
 }
     }
     // Calculate summary
@@ -293,7 +293,7 @@ class ErrorMonitor {
     checks.forEach(check => {
       if (check.status === "errors") {
         report.summary.totalErrors++
-        report.summary.criticalIssues++,
+        report.summary.criticalIssues++
 }
     })
     report.summary.warnings = report.logErrors.length
@@ -305,7 +305,7 @@ class ErrorMonitor {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
     this.log("info", `Error report saved to ${reportFile}`)
     this.log("info", `Summary: ${report.summary.totalIssues} total issues (${report.summary.criticalIssues} critical, ${report.summary.warnings} warnings)`)
-    return report,
+    return report
 }
 
   async run() {
@@ -315,13 +315,13 @@ class ErrorMonitor {
       // If there are critical issues, try to fix them
       if (report.summary.criticalIssues > 0) {
         this.log("warn", "Critical issues detected, attempting to fix...")
-        await this.attemptAutoFix(report),
+        await this.attemptAutoFix(report)
 }
       
-      return report,
+      return report
 } catch (error) {
       this.log("error", `Error monitoring failed: ${error.message}`)
-      throw error,
+      throw error
 }
   }
 
@@ -332,11 +332,11 @@ class ErrorMonitor {
       this.log("info", "Running syntax fixer...")
       execSync("node scripts/automation/syntax-error-fixer.cjs", {
         cwd: this.projectRoot,
-        stdio: "pipe",
+        stdio: "pipe"
 })
-      this.log("info", "Syntax fixer completed"),
+      this.log("info", "Syntax fixer completed")
 } catch (error) {
-      this.log("warn", `Syntax fixer failed: ${error.message}`),
+      this.log("warn", `Syntax fixer failed: ${error.message}`)
 }
     
     // Try to run TypeScript fixer
@@ -344,11 +344,11 @@ class ErrorMonitor {
       this.log("info", "Running TypeScript fixer...")
       execSync("node scripts/automation/typescript-error-fixer.cjs", {
         cwd: this.projectRoot,
-        stdio: "pipe",
+        stdio: "pipe"
 })
-      this.log("info", "TypeScript fixer completed"),
+      this.log("info", "TypeScript fixer completed")
 } catch (error) {
-      this.log("warn", `TypeScript fixer failed: ${error.message}`),
+      this.log("warn", `TypeScript fixer failed: ${error.message}`)
 }
   }
 }
@@ -362,12 +362,12 @@ if (require.main === module) {
       console.log(`Total Issues: ${report.summary.totalIssues}`)
       console.log(`Critical Issues: ${report.summary.criticalIssues}`)
       console.log(`Warnings: ${report.summary.warnings}`)
-      process.exit(report.summary.criticalIssues > 0 ? 1 : 0),
+      process.exit(report.summary.criticalIssues > 0 ? 1 : 0)
 })
     .catch(error => {
       console.error("Error monitoring failed: ", error)
-      process.exit(1),
-}),
+      process.exit(1)
+})
 }
 
 module.exports = ErrorMonitor
@@ -380,7 +380,7 @@ if (require.main === module) {
   // Keep process alive
   process.on("SIGINT", () => {
     monitor.log("Error monitor shutting down", "INFO')
-    process.exit(0),
-}),
+    process.exit(0)
+})
 }
 module.exports = ErrorMonitor

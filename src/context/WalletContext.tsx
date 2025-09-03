@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';
 import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
@@ -114,4 +112,3 @@ export const useWallet = (): WalletContextType => {
   }
   return context;
 };
->>>>>>> main

@@ -3,8 +3,8 @@
  * Enhanced Performance Monitor
  * Monitors application performance and provides detailed analytics
  */
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class EnhancedPerformanceMonitor {
   constructor() {
@@ -15,15 +15,15 @@ class EnhancedPerformanceMonitor {
       memoryUsage: 0,
       cpuUsage: 0,
       errorCount: 0,
-      warningCount: 0,
+      warningCount: 0
 }
-    this.startTime = Date.now(),
+    this.startTime = Date.now()
 }
 
   log(message, type = "info") {
     const timestamp = new Date().toISOString()
     const prefix = type === "error" ? "❌" : type === "success" ? "✅" : "ℹ️"
-    console.log(`[${timestamp}] ${prefix} ${message}`),
+    console.log(`[${timestamp}] ${prefix} ${message}`)
 }
 
   async monitorPerformance() {
@@ -35,10 +35,10 @@ class EnhancedPerformanceMonitor {
       await this.monitorSystemResources()
       await this.generatePerformanceReport()
       this.log("🎉 Performance monitoring completed!", "success")
-      ,
+      
 } catch (error) {
       this.log(`Performance monitoring failed: ${error.message}`, "error")
-      process.exit(1),
+      process.exit(1)
 }
   }
 
@@ -49,10 +49,10 @@ class EnhancedPerformanceMonitor {
       // Run build command
       execSync("npm run build", { stdio: "pipe" })
       this.metrics.buildTime = Date.now() - buildStart
-      this.log(`Build completed in ${this.metrics.buildTime}ms`, "success"),
+      this.log(`Build completed in ${this.metrics.buildTime}ms`, "success")
 } catch (error) {
       this.log("Build failed - skipping build performance metrics", "error")
-      this.metrics.errorCount++,
+      this.metrics.errorCount++
 }
   }
 
@@ -67,15 +67,15 @@ class EnhancedPerformanceMonitor {
           const filePath = path.join(dir, file)
           const stat = fs.statSync(filePath)
           if (stat.isDirectory()) {
-            totalSize += analyzeDir(filePath),
+            totalSize += analyzeDir(filePath)
 } else {
-            totalSize += stat.size,
+            totalSize += stat.size
 }
         })
-        return totalSize,
+        return totalSize
 }
       this.metrics.bundleSize = analyzeDir(nextDir)
-      this.log(`Bundle size: ${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)} MB`),
+      this.log(`Bundle size: ${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)} MB`)
 }
   }
 
@@ -84,19 +84,19 @@ class EnhancedPerformanceMonitor {
     try {
       // Run ESLint
       execSync("npm run lint", { stdio: "pipe" })
-      this.log("ESLint passed", "success"),
+      this.log("ESLint passed", "success")
 } catch (error) {
       this.metrics.warningCount++
-      this.log("ESLint found issues", "error"),
+      this.log("ESLint found issues", "error")
 }
 
     try {
       // Run TypeScript check
       execSync("npm run type-check", { stdio: "pipe" })
-      this.log("TypeScript check passed", "success"),
+      this.log("TypeScript check passed", "success")
 } catch (error) {
       this.metrics.errorCount++
-      this.log("TypeScript check failed", "error"),
+      this.log("TypeScript check failed", "error")
 }
   }
 
@@ -109,9 +109,9 @@ class EnhancedPerformanceMonitor {
       this.log(`Memory usage: ${this.metrics.memoryUsage.toFixed(2)} MB`)
       // Get CPU usage (simplified)
       const cpuUsage = process.cpuUsage()
-      this.metrics.cpuUsage = (cpuUsage.user + cpuUsage.system) / 1000000; // seconds,
+      this.metrics.cpuUsage = (cpuUsage.user + cpuUsage.system) / 1000000; // seconds
 } catch (error) {
-      this.log(`Could not monitor system resources: ${error.message}`, "error"),
+      this.log(`Could not monitor system resources: ${error.message}`, "error")
 }
   }
 
@@ -122,37 +122,37 @@ class EnhancedPerformanceMonitor {
       duration: Date.now() - this.startTime,
       metrics: this.metrics,
       recommendations: this.generateRecommendations(),
-      score: this.calculatePerformanceScore(),
+      score: this.calculatePerformanceScore()
 }
     const reportPath = path.join(process.cwd(), "performance-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
     this.log(`📄 Performance report saved to ${reportPath}`, "success")
-    this.log(`🎯 Performance Score: ${report.score}/100`),
+    this.log(`🎯 Performance Score: ${report.score}/100`)
 }
 
   generateRecommendations() {
     const recommendations = []
     if (this.metrics.buildTime > 60000) {
-      recommendations.push("Build time is high - consider optimizing dependencies"),
+      recommendations.push("Build time is high - consider optimizing dependencies")
 }
     
     if (this.metrics.bundleSize > 5 * 1024 * 1024) {
-      recommendations.push("Bundle size is large - implement code splitting"),
+      recommendations.push("Bundle size is large - implement code splitting")
 }
     
     if (this.metrics.errorCount > 0) {
-      recommendations.push("Fix TypeScript errors before deployment"),
+      recommendations.push("Fix TypeScript errors before deployment")
 }
     
     if (this.metrics.warningCount > 10) {
-      recommendations.push("Address ESLint warnings for better code quality"),
+      recommendations.push("Address ESLint warnings for better code quality")
 }
     
     if (this.metrics.memoryUsage > 100) {
-      recommendations.push("High memory usage - check for memory leaks"),
+      recommendations.push("High memory usage - check for memory leaks")
 }
     
-    return recommendations,
+    return recommendations
 }
 
   calculatePerformanceScore() {
@@ -163,20 +163,20 @@ class EnhancedPerformanceMonitor {
     if (this.metrics.errorCount > 0) score -= 30
     if (this.metrics.warningCount > 10) score -= 15
     if (this.metrics.memoryUsage > 100) score -= 10
-    return Math.max(0, score),
+    return Math.max(0, score)
 }
 }
 
 // Run the monitor
 if (require.main === module) {
   const monitor = new EnhancedPerformanceMonitor()
-  monitor.monitorPerformance().catch(console.error),
+  monitor.monitorPerformance().catch(console.error)
 }
 
 module.exports = EnhancedPerformanceMonitor
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")";class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd()

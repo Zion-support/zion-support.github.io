@@ -28,14 +28,10 @@ function cleanMergeConflicts(filePath) {
     let originalContent = content;
     
     // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> [^\n]*\n?/g, '$1');
-    
-    // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
-    
-    // If content changed, write it back
+    content = content.replace(/\n([\s\S]*?)\n\n[\s\S]*?\n// Remove any remaining conflict markers
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/// If content changed, write it back
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Cleaned: ${filePath}`);

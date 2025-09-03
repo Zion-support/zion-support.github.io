@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';'
 import { useParams } from 'react-router-dom';'
 import SEO from '@/components/SEO';'
@@ -92,5 +91,3 @@ export { TalentProfilePage };
 export { TalentProfilePage };
     </>);'"`
 }}}}}'"`'"`
-=======
->>>>>>> main

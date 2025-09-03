@@ -4,7 +4,7 @@
  * Intelligently generates tests, identifies coverage gaps, and automatically;
  * fixes failing tests using AI-powered analysis;
  */;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 /**;
  * Smart Testing Automation - PM2 Automation;
  * Intelligently generates tests, identifies coverage gaps, and automatically;
@@ -60,15 +60,15 @@ class $1 {
   react: [
   {
   pattern: /export\s+(?:default\s+)?function\s+([A-Z][a-zA-Z0-9]*)/g,;
-          testType: "component",;,
+          testType: "component",;
 },;
         {
   pattern: /export\s+(?:default\s+)?const\s+([A-Z][a-zA-Z0-9]*)\s*=/g,;
-          testType: "component",;,
+          testType: "component",;
 },;
         {
   pattern: /export\s+function\s+([a-z][a-zA-Z0-9]*)/g,;
-          testType: "utility",;,
+          testType: "utility",;
 },;
         {
   pattern: /export\s+const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", "testType: "utility", "}", "],;
@@ -78,17 +78,17 @@ class $1 {
       utils: [
   {
   pattern: /export\s+(?:default\s+)?function\s+([a-z][a-zA-Z0-9]*)/g,;
-          testType: "utility",;,
+          testType: "utility",;
 },;
         {
-  pattern: /export\s+(?:default\s+)?const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", "testType: "utility", "}", "],;,
+  pattern: /export\s+(?:default\s+)?const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", "testType: "utility", "}", "],;
 }
   }
 ;
   ensureLogsDirectory() {
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });,
+  fs.mkdirSync(logsDir, { recursive: true });
 }
   }
 ;
@@ -96,7 +96,7 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);,
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
 }
 ;
   async runSmartTesting() {
@@ -119,7 +119,7 @@ class $1 {
       // 5. Run new tests;
       if (newTests.length > 0) {
   const newTestResults = await this.runNewTests(newTests);
-        Object.assign(testResults, newTestResults);,
+        Object.assign(testResults, newTestResults);
 }
 ;
       // 6. Analyze test failures and auto-fix;
@@ -159,7 +159,7 @@ class $1 {
       // 5. Run new tests;
       if (newTests.length > 0) {
   const newTestResults = await this.runNewTests(newTests);
-        Object.assign(testResults, newTestResults);,
+        Object.assign(testResults, newTestResults);
 }
 ;
       // 6. Analyze test failures and auto-fix;
@@ -175,9 +175,9 @@ class $1 {
 
       // 8. Commit test improvements;
       if (generatedTests.length > 0 || fixedTests.length > 0) {
-  await this.commitTestImprovements(generatedTests, fixedTests);,
+  await this.commitTestImprovements(generatedTests, fixedTests);
 }
-    } catch (error) {  this.log(`Smart testing automation failed: ${error.message  }`, `ERROR`);,
+    } catch (error) {  this.log(`Smart testing automation failed: ${error.message  }`, `ERROR`);
 }
 ;
     return { testResults, coverageData, generatedTests }
@@ -192,7 +192,7 @@ class $1 {
       files: {},;
       components: {},;
       utilities: {},;
-      hooks: {},;,
+      hooks: {},;
 }
     try {
   // Check if Jest is configured;
@@ -207,26 +207,26 @@ class $1 {
           );
           // Parse coverage output;
           const coverageData = this.parseCoverageOutput(coverageOutput);
-          Object.assign(coverage, coverageData);,
-} catch (error) {  this.log(`Coverage analysis failed: ${error.message  }`, `WARN`);,
+          Object.assign(coverage, coverageData);
+} catch (error) {  this.log(`Coverage analysis failed: ${error.message  }`, `WARN`);
 }
       }
 ;
 
       // Analyze test files structure;
       const testStructure = this.analyzeTestStructure();
-      Object.assign(coverage, testStructure);,
-} catch (error) {  this.log(`Coverage analysis failed: ${error.message  }`, `ERROR`);,
+      Object.assign(coverage, testStructure);
+} catch (error) {  this.log(`Coverage analysis failed: ${error.message  }`, `ERROR`);
 }
 ;
-    return coverage;,
+    return coverage;
 }
 ;
   hasJestConfig() {
   const jestConfigs = [`jest.config.js`, "jest.config.ts", "jest.config.cjs"];
     return jestConfigs.some(config =>;
       fs.existsSync(path.join(this.projectRoot, config));
-    );,
+    );
 }
 ;
   parseCoverageOutput(output) {
@@ -244,10 +244,10 @@ class $1 {
   coverage.total = parseInt(coverageMatch[1]);
       coverage.covered = parseInt(coverageMatch[2]);
       coverage.uncovered = parseInt(coverageMatch[3]);
-      coverage.percentage = parseInt(coverageMatch[4]);,
+      coverage.percentage = parseInt(coverageMatch[4]);
 }
 ;
-    return coverage;,
+    return coverage;
 }
 ;
   analyzeTestStructure() {
@@ -257,7 +257,7 @@ class $1 {
       testCases: 0,;
       components: {},;
       utilities: {},;
-      hooks: {},;,
+      hooks: {},;
 }
 ;
     const testsDir = path.join(this.projectRoot, "tests");
@@ -277,11 +277,11 @@ class $1 {
         // Track what"s being tested;
         Object.assign(structure.components, testAnalysis.components);
         Object.assign(structure.utilities, testAnalysis.utilities);
-        Object.assign(structure.hooks, testAnalysis.hooks);,
+        Object.assign(structure.hooks, testAnalysis.hooks);
 }
     }
 ;
-    return structure;,
+    return structure;
 }
 ;
   analyzeTestFile(content, filePath) {
@@ -290,7 +290,7 @@ class $1 {
       cases: 0,;
       components: {},;
       utilities: {},;
-      hooks: {},;,
+      hooks: {},;
 }
 ;
     // Count test suites (describe blocks);
@@ -309,11 +309,11 @@ class $1 {
   const componentName = match.match(;
           /import\s+{?\s*([A-Z][a-zA-Z0-9]*)\s*}?\s+from/;
         )[1];
-        analysis.components[componentName] = true;,
-});,
+        analysis.components[componentName] = true;
+});
 }
 ;
-    return analysis;,
+    return analysis;
 }
 ;
   async identifyUntestedItems() {
@@ -321,12 +321,12 @@ class $1 {
   components: [],;
       utilities: [],;
       hooks: [],;
-      total: 0,;,
+      total: 0,;
 }
 ;
     const srcDir = path.join(this.projectRoot, "src");
     if (!fs.existsSync(srcDir)) {
-  return untested;,
+  return untested;
 }
 ;
     const sourceFiles = this.getAllFiles(srcDir, [".tsx", ".ts", ".jsx", ".js", "]);
@@ -355,33 +355,32 @@ class $1 {
                 file: file,;
                 type: item.type,;
                 line: item.line,;
-                exportType: item.exportType,;,
+                exportType: item.exportType,;
 });
-              untested.total++;,
+              untested.total++;
 }
           }
         }
       } catch (error) {
   this.log(Error analyzing source file ${file  }: ${error.message}`,;
-          `WARN`;,
+          `WARN`;
 } catch (error) {
   this.log(Error analyzing source file ${file}: ${error.message}",;
           "WARN";
         );
           `WARN`;
         );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     }
 ;
-    return untested;,
+    return untested;
 }
 ;
   analyzeSourceFile(content, filePath) {
   const analysis = {
   components: [],;
       utilities: [],;
-      hooks: [],;,
+      hooks: [],;
 }
     // Analyze each test pattern category;
     for (const [`category", "patterns"] of Object.entries(this.testPatterns)) {
@@ -401,18 +400,18 @@ class $1 {
             line: lineNumber,;
             exportType: pattern.pattern.source.includes("default");
               ? "default";
-              : "named",;,
-});,
+              : "named",;
+});
 }
       }
     }
 ;
-    return analysis;,
+    return analysis;
 }
 ;
   findLineNumber(content, index) {
   const lines = content.substring(0, index).split("\n");
-    return lines.length;,
+    return lines.length;
 }
 ;
   hasTestForItem(item, category) {
@@ -425,14 +424,14 @@ class $1 {
   try {
   const testContent = fs.readFileSync(testFile, "utf8");
         if (testContent.includes(item.name)) {
-  return true;,
+  return true;
 }
       } catch (error) {
-  // Continue checking other test files;,
+  // Continue checking other test files;
 }
     }
 ;
-    return false;,
+    return false;
 }
 ;
   async generateMissingTests(untestedItems) {
@@ -459,30 +458,30 @@ class $1 {
   item,;
             testFile: testFilePath,;
             category,;
-            timestamp: new Date().toISOString(),;,
+            timestamp: new Date().toISOString(),;
 });
           this.log(Generated test for ${item.name} in ${testFilePath}`,;
             `INFO`;
-          );,
+          );
 } catch (error) {
   this.log(Failed to generate test for ${item.name  }: ${error.message}`,;
             `ERROR`;
-          );,
+          );
 }
       }
     }
 ;
-    return generatedTests;,
+    return generatedTests;
 }
 ;
   generateTestContent(item, category) {
   const testTemplates = {
   component: this.getComponentTestTemplate(item),;
       utility: this.getUtilityTestTemplate(item),;
-      hook: this.getHookTestTemplate(item),;,
+      hook: this.getHookTestTemplate(item),;
 }
 ;
-    return testTemplates[item.type] || testTemplates.utility;,
+    return testTemplates[item.type] || testTemplates.utility;
 }
 ;
   getComponentTestTemplate(item) {return `import React from "react";
@@ -496,17 +495,17 @@ import { ${item.name} } from "${this.getRelativeImportPath(item.file)}";
 describe("${item.name}", () => {
   it("renders without crashing", () => {
   render(<${item.name} />);
-    expect(screen.getByTestId(`${item.name.toLowerCase()}`)).toBeInTheDocument();,
+    expect(screen.getByTestId(`${item.name.toLowerCase()}`)).toBeInTheDocument();
 });
   it(`displays correct content`, () => {
   render(<${item.name} />);
-    // Add specific content checks based on component implementation;,
+    // Add specific content checks based on component implementation;
 });
   it(`handles user interactions correctly`, () => {
   render(<${item.name} />);
-    // Add interaction tests based on component behavior;,
-});,
-});,
+    // Add interaction tests based on component behavior;
+});
+});
 }
 ;
   getUtilityTestTemplate(item) {
@@ -514,10 +513,10 @@ describe("${item.name}", () => {
 describe(`${item.name}`, () => {
   it(`should work correctly with valid input`, () => {
   // Add test cases based on function implementation;
-    expect(${item.name}()).toBeDefined();,
+    expect(${item.name}()).toBeDefined();
 });
   it(`should handle edge cases`, () => {
-  // Add edge case tests;,
+  // Add edge case tests;
 });
   it(`should handle invalid input gracefully", () => {
   getUtilityTestTemplate(item) {
@@ -526,17 +525,17 @@ describe(`${item.name}`, () => {
 describe("${item.name}", () => {
   it("should work correctly with valid input", () => {
   // Add test cases based on function implementation;
-    expect(${item.name}()).toBeDefined();,
+    expect(${item.name}()).toBeDefined();
 });
 
   it("should handle edge cases", () => {
-  // Add edge case tests;,
+  // Add edge case tests;
 });
 
   it("should handle invalid input gracefully", () => {
-  // Add error handling tests;,
-});,
-});,
+  // Add error handling tests;
+});
+});
 }
 ;
   getHookTestTemplate(item) {
@@ -545,22 +544,22 @@ import { ${item.name} } from `${this.getRelativeImportPath(item.file)}`;
 describe(`${item.name}`, () => {
   it(`should return initial state`, () => {
   const { result } = renderHook(() => ${item.name}());
-    expect(result.current).toBeDefined();,
+    expect(result.current).toBeDefined();
 });
   it(`should update state correctly`, () => {
   const { result } = renderHook(() => ${item.name}());
     act(() => {
-  // Add state update tests based on hook implementation;,
+  // Add state update tests based on hook implementation;
 });
-    // Verify state changes;,
+    // Verify state changes;
 });
   it(`should handle cleanup correctly`, () => {
   const { unmount } = renderHook(() => ${item.name}());
     ;
     unmount();
-    // Verify cleanup logic;,
-});,
-});,
+    // Verify cleanup logic;
+});
+});
 }
 ;
   getRelativeImportPath(filePath) {
@@ -576,10 +575,10 @@ describe(`${item.name}`, () => {
 
     // Handle index files;
     if (importPath.endsWith("/index")) {
-  return importPath.replace("/index", ");,
+  return importPath.replace("/index", ");
 }
 ;
-    return importPath;,
+    return importPath;
 }
 ;
   getTestFilePath(item) {
@@ -596,10 +595,10 @@ describe(`${item.name}`, () => {
     // Ensure test directory exists;
     const testDirPath = path.dirname(testFilePath);
     if (!fs.existsSync(testDirPath)) {
-  fs.mkdirSync(testDirPath, { recursive: true });,
+  fs.mkdirSync(testDirPath, { recursive: true });
 }
 ;
-    return testFilePath;,
+    return testFilePath;
 }
 ;
   async runExistingTests() {
@@ -609,7 +608,7 @@ describe(`${item.name}`, () => {
       passed: 0,;
       failed: 0,;
       errors: [],;
-      duration: 0,;,
+      duration: 0,;
 }
 ;
     try {
@@ -619,7 +618,7 @@ describe(`${item.name}`, () => {
       const testOutput = execSync("npm test -- --watchAll=false", {
   cwd: this.projectRoot,;
         stdio: `pipe`,;
-        encoding: `utf8`,;,
+        encoding: `utf8`,;
 });
       const duration = Date.now() - startTime;
 
@@ -629,7 +628,7 @@ describe(`${item.name}`, () => {
       const parsedResults = this.parseTestOutput(testOutput);
       Object.assign(results, parsedResults);
       this.log(Tests completed: ${results.passed} passed, ${results.failed} failed`;
-      );,
+      );
 } catch (error) {
   results.success = false;
       results.errors.push(error.message);
@@ -637,7 +636,7 @@ describe(`${item.name}`, () => {
       try {
   const errorOutput = error.stdout || error.stderr || ``;
         const parsedResults = this.parseTestOutput(errorOutput);
-        Object.assign(results, parsedResults);,
+        Object.assign(results, parsedResults);
 } catch (parseError) {
   this.log(`Failed to parse test output: ${parseError.message}`, `WARN`);
 
@@ -646,7 +645,7 @@ describe(`${item.name}`, () => {
       Object.assign(results, parsedResults);
 
       this.log(Tests completed: ${results.passed} passed, ${results.failed} failed";
-      );,
+      );
 } catch (error) {
   results.success = false;
       results.errors.push(error.message);
@@ -655,14 +654,14 @@ describe(`${item.name}`, () => {
       try {
   const errorOutput = error.stdout || error.stderr || ";
         const parsedResults = this.parseTestOutput(errorOutput);
-        Object.assign(results, parsedResults);,
+        Object.assign(results, parsedResults);
 } catch (parseError) {
-  this.log(`Failed to parse test output: ${parseError.message}`, "WARN");,
+  this.log(`Failed to parse test output: ${parseError.message}`, "WARN");
 }
-this.log(`Tests failed: ${error.message}`, `ERROR`);,
+this.log(`Tests failed: ${error.message}`, `ERROR`);
 }
 ;
-    return results;,
+    return results;
 }
 ;
   async runNewTests(newTests) {
@@ -672,11 +671,11 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);,
       passed: 0,;
       failed: 0,;
       errors: [],;
-      duration: 0,;,
+      duration: 0,;
 }
 ;
     if (newTests.length === 0) {
-  return results;,
+  return results;
 }
 ;
     try {
@@ -685,7 +684,7 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);,
       const testOutput = execSync("npm test -- --watchAll=false", {
   cwd: this.projectRoot,;
         stdio: `pipe`,;
-        encoding: `utf8`,;,
+        encoding: `utf8`,;
 });
       const duration = Date.now() - startTime;
 
@@ -695,27 +694,27 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);,
       const parsedResults = this.parseTestOutput(testOutput);
       Object.assign(results, parsedResults);
       this.log(New tests completed: ${results.passed} passed, ${results.failed} failed`;
-      );,
+      );
 } catch (error) {
   // Parse test results;
       const parsedResults = this.parseTestOutput(testOutput);
       Object.assign(results, parsedResults);
 
       this.log(New tests completed: ${results.passed} passed, ${results.failed} failed";
-      );,
+      );
 } catch (error) {
   results.success = false;
-      results.errors.push(error.message);this.log(`New tests failed: ${error.message  }`, `ERROR`);,
+      results.errors.push(error.message);this.log(`New tests failed: ${error.message  }`, `ERROR`);
 }
 ;
-    return results;,
+    return results;
 }
 ;
   parseTestOutput(output) {
   const results = {
   totalTests: 0,;
       passed: 0,;
-      failed: 0,;,
+      failed: 0,;
 }
     // Look for test summary in output;
     const summaryMatch = output.match(;
@@ -723,17 +722,17 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);,
     if (summaryMatch) {
   results.passed = parseInt(summaryMatch[1]);
       results.failed = parseInt(summaryMatch[2]);
-      results.totalTests = results.passed + results.failed;,
+      results.totalTests = results.passed + results.failed;
 }
 ;
-    return results;,
+    return results;
 }
 ;
   async autoFixFailingTests(testResults) {
   const fixedTests = [];
 
     if (testResults.success || testResults.failed === 0) {
-  return fixedTests;,
+  return fixedTests;
 }
 ;
     this.log(`🔧 Attempting to auto-fix failing tests...`);
@@ -748,36 +747,35 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);,
   try {
   const fixed = await this.fixTestFailure(failure);
           if (fixed) {
-  fixedTests.push(failure);,
+  fixedTests.push(failure);
 }
         } catch (error) {
   this.log(Failed to fix test failure in ${failure.testFile  }: ${error.message}`,;
-            `ERROR`;,
+            `ERROR`;
 } catch (error) {
   this.log(Failed to fix test failure in ${failure.testFile}: ${error.message}",;
             "ERROR";
           );
             `ERROR`;
           );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
       }
-    } catch (error) {  this.log(`Auto-fix process failed: ${error.message  }`, `ERROR`);,
+    } catch (error) {  this.log(`Auto-fix process failed: ${error.message  }`, `ERROR`);
 }
 ;
-    return fixedTests;,
+    return fixedTests;
 }
 ;
   async getTestFailureDetails() {
   // This would typically involve parsing Jest`s detailed output;
     // For now, we`ll return a simplified structure;
-    return [];,
+    return [];
 }
 ;
   async fixTestFailure(failure) {
   // This would involve intelligent test fixing based on failure patterns;
     // For now, we`ll return false to indicate no fixes were applied;
-    return false;,
+    return false;
 }
 ;
   async generateTestReport(;
@@ -807,13 +805,13 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);,
   async getTestFailureDetails() {
   // This would typically involve parsing Jest"s detailed output;
     // For now, we"ll return a simplified structure;
-    return [];,
+    return [];
 }
 ;
   async fixTestFailure(failure) {
   // This would involve intelligent test fixing based on failure patterns;
     // For now, we"ll return false to indicate no fixes were applied;
-    return false;,
+    return false;
 }
 ;
   async generateTestReport(;
@@ -828,14 +826,14 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);,
   testResults,;
         coverage: coverageData,;
         generatedTests: generatedTests.length,;
-        fixedTests: fixedTests.length,;,
+        fixedTests: fixedTests.length,;
 },;
       details: {
   testResults,;
         coverageData,;
         generatedTests,;
-        fixedTests,;,
-},;,
+        fixedTests,;
+},;
 }
 ;
     // Save detailed report;
@@ -845,7 +843,7 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);,
     fs.writeFileSync(this.coverageLog, JSON.stringify(coverageData, null, 2));
 
     this.log(Test report generated: ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed";
-    );,
+    );
 }
 ;
   async commitTestImprovements(generatedTests, fixedTests) {
@@ -858,8 +856,8 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);,
         stdio: `pipe`});
       this.log(Committed test improvements: ${generatedTests.length} generated, ${fixedTests.length} fixed`,;
         `INFO`;
-      );,
-} catch (error) {  this.log(`Failed to commit test improvements: ${error.message  }`, `ERROR");,
+      );
+} catch (error) {  this.log(`Failed to commit test improvements: ${error.message  }`, `ERROR");
 }
   }
 ;
@@ -875,23 +873,23 @@ this.log(`Tests failed: ${error.message}`, `ERROR`);,
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-  files.push(...this.getAllFiles(fullPath", extensions));,
+  files.push(...this.getAllFiles(fullPath", extensions));
 } else if (stat.isFile()) {
   const ext = path.extname(item);
         if (extensions.includes(ext)) {
-  files.push(fullPath);,
+  files.push(fullPath);
 }
       }
     }
 ;
-    return files;,
+    return files;
 }
 ;
   async run() {
   try {
   await this.runSmartTesting();
-      this.log(`🧪 Smart Testing Automation completed successfully`);,
-} catch (error) {  this.log(`Smart Testing Automation failed: ${error.message  }`, `ERROR`);,
+      this.log(`🧪 Smart Testing Automation completed successfully`);
+} catch (error) {  this.log(`Smart Testing Automation failed: ${error.message  }`, `ERROR`);
 }
   }
 }
@@ -901,7 +899,7 @@ if (require.main === module) {
   // Run the automation if called directly;
 if (require.main === module) {
   const tester = new SmartTestingAutomation();
-  tester.run();,
+  tester.run();
 }
 ;
 module.exports = SmartTestingAutomation

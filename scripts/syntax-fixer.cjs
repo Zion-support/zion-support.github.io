@@ -1,26 +1,24 @@
 #!/usr/bin/env node
 const fs = require("fs").promises
-const path = require("$1");
-const { exec } = require("$1");
-const util = require("$1");
+const path = require("child_process");
+const { exec } = require("child_process");
+const util = require("child_process");
 const execAsync = util.promisify(exec)
 class SyntaxFixer {
   constructor() {
     this.logFile = path.join(__dirname, "../logs/syntax-fixer.log")
     this.reportFile = path.join(__dirname, "../logs/syntax-fixes.json")
-    this.projectRoot = path.join(__dirname, ".."),
+    this.projectRoot = path.join(__dirname, "..")
 }
-
-  async log(message, level = `INFO`) {
 
   async log(message, level = "INFO") {
     const timestamp = new Date().toISOString()
     const logEntry = `[${timestamp}] [${level}] ${message}\n`
     try {
       await fs.appendFile(this.logFile, logEntry)
-      console.log(logEntry.trim()),
+      console.log(logEntry.trim())
 } catch (error) {
-      console.error(`Failed to write to log file: `, error),
+      console.error(`Failed to write to log file: `, error)
 }
   }
 
@@ -35,7 +33,7 @@ class SyntaxFixer {
       await this.log(
         `Found ${files.length} files with merge conflicts`,
         `INFO`)
-      return files,
+      return files
 } catch (error) {
       await this.log(
         `Error finding merge conflicts: ${error.message }`,
@@ -47,12 +45,12 @@ class SyntaxFixer {
       await this.log(
         `Found ${files.length} files with merge conflicts`,
         "INFO")
-      return files,
+      return files
 } catch (error) {
       await this.log(
         `Error finding merge conflicts: ${error.message}`,
         "ERROR")
-      return [],
+      return []
 }
   }
 
@@ -70,7 +68,7 @@ class SyntaxFixer {
     const syntaxPatterns = [
       {
         pattern: /const\s+\w+\s*=\s*lazy\s*\(\s*["]/,
-        replacement: "const $1 = lazy(",,
+        replacement: "const $1 = lazy(",
 },
       { pattern: /\)\s*\(\s*[""]/, replacement: ")(" },
       { pattern: /[""]\s*\(\s*$/, replacement: "(" },
@@ -78,8 +76,7 @@ class SyntaxFixer {
       { pattern: /description:\s*["]$/, replacement: "description: " },
       { pattern: /[""]$\n\s*[""]/, replacement: " },]
       { pattern: /["]$\n\s*["]/, replacement: `` },    ]
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
-    try {
+try {
       const { stdout } = await execAsync(
         `find ${this.projectRoot}/src -name *.js -o -name "*.jsx -o -name *.ts" -o -name *.tsx | head -50`)
       const files = stdout
@@ -93,16 +90,16 @@ class SyntaxFixer {
   async log(message, level = "INFO") {";    const timestamp = new Date().toISOString();";    const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     try {
       await fs.appendFile(this.logFile, logEntry)
-      console.log(logEntry.trim()),,
+      console.log(logEntry.trim()),
 } catch (error) {
       console.error("Failed to write to log file:", error);"}"}
 
   async findMergeConflicts() {
     try {
       const { stdout } = await execAsync();        `find ${this.projectRoot} -name "*.js -o -name *.jsx" -o -name *.ts -o -name *.tsx -o -name "*.json | xargs grep -l       );";`;      const files = stdout;        .trim()
-        .split("\n")";        .filter(line => line && !line.includes("node_modules"));";      await this.log();        `Found ${files.length} files with merge conflicts`,`;        "INFO"");";      return files,,
+        .split("\n")";        .filter(line => line && !line.includes("node_modules"));";      await this.log();        `Found ${files.length} files with merge conflicts`,`;        "INFO"");";      return files,
 } catch (error) {
-      await this.log();        `Error finding merge conflicts: ${error.message}`,`;        "ERROR"");";      return [],,
+      await this.log();        `Error finding merge conflicts: ${error.message}`,`;        "ERROR"");";      return [],
 }  }
 
   async findSyntaxErrors() {
@@ -110,8 +107,7 @@ class SyntaxFixer {
       {
         pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*[""]/,        replacement": "const $1 = lazy(","},);      { "pattern: /\)\s*\(\s*["]/, "replacement": ")(" },";      { pattern: /[""]\s*\(\s*$/, "replacement: "(" },";      { pattern": /^\s*[""]\s*$/, replacement: "" },";      { "pattern": /description:\s*[""]$/, "replacement: "description": " },";      { "pattern: /["]$\n\s*[""]/, "replacement: "" },"]
         pattern": /const\s+\w+\s*=\s*lazy\s*\(\s*["]/,        "replacement: "const $1 = lazy(","},);      { pattern: /\)\s*\(\s*["]/, "replacement: ")(" },";      { pattern": /["]\s*\(\s*$/, replacement: "(" },";      { pattern": /^\s*["]\s*$/, replacement": "" },";      { pattern: /description:\s*[""]$/, replacement: ""description: " },"      { pattern: /["]$\n\s*[""]/, replacement: "" },"];"
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
-    try {
+try {
       const { stdout } = await execAsync();        `find ${this.projectRoot}/src -name "*.js -o -name *.jsx -o -name *.ts" -o -name *.tsx | head -50`");`;      const files = stdout;        .trim()
         .split("\n")";        .filter(line => line);";      const problemFiles = []
       for (const filePath of files) {
@@ -123,10 +119,10 @@ class SyntaxFixer {
             content.includes(description:"") ||
             content.includes("() => (") ||
             content.includes(" import(`)) {
-            problemFiles.push(filePath),
+            problemFiles.push(filePath)
 }
         } catch (error) {
-          // Skip files that can`t be read,
+          // Skip files that can`t be read
 }
 
           // Check for common syntax issues
@@ -135,17 +131,17 @@ class SyntaxFixer {
             content.includes(description:"") ||
             content.includes("() => ("") ||
             content.includes(" import(")) {
-            problemFiles.push(filePath),
+            problemFiles.push(filePath)
 }
         } catch (error) {
-          // Skip files that can"t be read,
+          // Skip files that can"t be read
 }
       }
 
-      return problemFiles,
+      return problemFiles
 } catch (error) {
       await this.log(`Error finding syntax errors: ${error.message }`, `ERROR`)
-      return [],
+      return []
 }
   }
 
@@ -154,10 +150,10 @@ class SyntaxFixer {
       const content = await fs.readFile(filePath, `utf8`)
       // Simple merge conflict resolution - take the HEAD version
       const fixed = content
-        .replace(/        .replace(/\n[\s\S]*?        .replace(/,
+        .replace(/        .replace(/\n[\s\S]*?        .replace(/
 } catch (error) {
       await this.log(`Error finding syntax errors: ${error.message}`, "ERROR")
-      return [],
+      return []
 }
   }
 
@@ -170,28 +166,26 @@ class SyntaxFixer {
       await fs.writeFile(filePath, fixed)
         .replace(/        .replace(/\n[\s\S]*?        .replace(/
       await fs.writeFile(filePath, fixed)
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
-      await this.log(`Fixed merge conflict in ${filePath}`, `INFO`)
-      return true,
+await this.log(`Fixed merge conflict in ${filePath}`, `INFO`)
+      return true
 } catch (error) {
       await this.log(
         `Failed to fix merge conflict in ${filePath }: ${error.message}`,
-        `ERROR`,
+        `ERROR`
 } catch (error) {
       await this.log(
         `Failed to fix merge conflict in ${filePath}: ${error.message}`,
         "ERROR"
         `ERROR`
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259)
-      return false,
+return false
 }
           const content = await fs.readFile(filePath, "utf8");"";          // Check for common syntax issues
-          if();            content.includes(lazy("") ||;            content.includes("description:") ||;            content.includes("() => (") ||";            content.includes("" import(")") {";            problemFiles.push(filePath),,
+          if();            content.includes(lazy("") ||;            content.includes("description:") ||;            content.includes("() => (") ||";            content.includes("" import(")") {";            problemFiles.push(filePath),
 }
         } catch (error) {
           // Skip files that can"t be read"}"}
 
-      return problemFiles,,
+      return problemFiles,
 } catch (error) {
       await this.log(`Error finding syntax errors: ${error.message}`, "ERROR");";      return [];`}"}
   async fixMergeConflict(filePath) {
@@ -200,7 +194,7 @@ class SyntaxFixer {
       const fixed = content
         .replace(/        .replace(/\n[\s\S]*?        .replace(/
       await fs.writeFile(filePath, fixed)
-      await this.log(`Fixed merge conflict in ${filePath}`, "INFO");";      return true;`} catch (error) {";      await this.log();        `Failed to fix merge conflict in ${filePath}: ${error.message}`,`;        "ERROR"");";      return false,,
+      await this.log(`Fixed merge conflict in ${filePath}`, "INFO");";      return true;`} catch (error) {";      await this.log();        `Failed to fix merge conflict in ${filePath}: ${error.message}`,`;        "ERROR"");";      return false,
 }  }
 
   async fixSyntaxError(filePath) {
@@ -226,7 +220,7 @@ class SyntaxFixer {
         // Fix lazy import syntax
         {
           from: /const\s+(\w+)\s*=\s*lazy\s*\(\s*[""]([^"]*)/g,
-          to: "const $1 = lazy(",,
+          to: "const $1 = lazy(",
 },
         // Fix unterminated strings in JSX
         { from: /\)\s*\(\s*["]/g, to: ")(" },
@@ -242,8 +236,7 @@ class SyntaxFixer {
       for (const fix of fixes) {
         { from: /import.*;\s*;$/gm, to: match => match.replace("", "") },]
 ;      for (const fix of fixes) {
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
-        const newContent = content.replace(fix.from, fix.to)
+const newContent = content.replace(fix.from, fix.to)
         if (newContent !== content) {
           content = newContent
           changed = true}
@@ -253,26 +246,25 @@ class SyntaxFixer {
         await fs.writeFile(filePath, content)
         await this.log(`Fixed syntax errors in ${filePath}`, `INFO`)
         await this.log(`Fixed syntax errors in ${filePath}`, "INFO")
-        return true,
+        return true
 }
 
-      return false,
+      return false
 } catch (error) {
       await this.log(
         `Failed to fix syntax errors in ${filePath }: ${error.message}`,
-        `ERROR`,
+        `ERROR`
 } catch (error) {
       await this.log(
         `Failed to fix syntax errors in ${filePath}: ${error.message}`,
         "ERROR"
         `ERROR`
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259)
-      return false,
+return false
 }
         await this.log(`Fixed syntax errors in ${filePath}`, "INFO");";        return true;`}"
-      return false,,
+      return false,
 } catch (error) {
-      await this.log();        `Failed to fix syntax errors in ${filePath}: ${error.message}`,`;        "ERROR"");";      return false,,
+      await this.log();        `Failed to fix syntax errors in ${filePath}: ${error.message}`,`;        "ERROR"");";      return false,
 }  }
 
   async run() {
@@ -289,7 +281,7 @@ class SyntaxFixer {
       const results = {
         timestamp: new Date().toISOString(),
         mergeConflicts: { found: 0, fixed: 0 },
-        syntaxErrors: { found: 0, fixed: 0 },,
+        syntaxErrors: { found: 0, fixed: 0 },
 }
       await this.log("Starting syntax fixer", "INFO");";      const results = {
         "timestamp": new Date().toISOString(),;        mergeConflicts": { "found: 0, fixed": 0 },";        syntaxErrors: { "found": 0, fixed: 0 },,"}
@@ -299,7 +291,7 @@ class SyntaxFixer {
       results.mergeConflicts.found = conflictFiles.length
       for (const file of conflictFiles) {
         const success = await this.fixMergeConflict(file)
-        if (success) results.mergeConflicts.fixed++,
+        if (success) results.mergeConflicts.fixed++
 }
 
       // Fix syntax errors
@@ -307,7 +299,7 @@ class SyntaxFixer {
       results.syntaxErrors.found = syntaxFiles.length
       for (const file of syntaxFiles) {
         const success = await this.fixSyntaxError(file)
-        if (success) results.syntaxErrors.fixed++,
+        if (success) results.syntaxErrors.fixed++
 }
 
       await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2))
@@ -318,10 +310,10 @@ class SyntaxFixer {
         `INFO`)
       // If fixes were made, restart error monitor to re-check
       if (totalFixed > 0) {
-        exec(`pm2 restart error-monitor`),
+        exec(`pm2 restart error-monitor`)
 }
     } catch (error) {
-      await this.log(`Syntax fixer failed: ${error.message }`, `ERROR`),
+      await this.log(`Syntax fixer failed: ${error.message }`, `ERROR`)
 }
   }
 }
@@ -339,10 +331,10 @@ if (require.main === module) {
         "INFO")
       // If fixes were made, restart error monitor to re-check
       if (totalFixed > 0) {
-        exec("pm2 restart error-monitor"),
+        exec("pm2 restart error-monitor")
 }
     } catch (error) {
-      await this.log(`Syntax fixer failed: ${error.message}`, "ERROR"),
+      await this.log(`Syntax fixer failed: ${error.message}`, "ERROR")
 }
   }
 }
@@ -367,7 +359,7 @@ if (require.main === module) {
   // Keep process alive
   process.on("SIGINT", () => {
     fixer.log("Syntax fixer shutting down", "INFO")
-    process.exit(0),
-}),
+    process.exit(0)
+})
 }
 module.exports = SyntaxFixer

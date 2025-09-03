@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 ;
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {
@@ -32,14 +31,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         // Small delay to prevent overwhelming the browser;
         await new Promise(resolve => setTimeout(resolve, 10));
       }
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { LinkValidator } from '../utils/linkValidator';
-
-export default function Page() {
->>>>>>> main
-    }
+}
     setBrokenLinks(results);
     setLastScanTime(new Date());
     setIsScanning(false);
@@ -300,7 +292,6 @@ export default function Page() {
 };
 export default LinkMonitor;
 '"`
-=======
 import React from "react"
 export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ;"";,"});,"})"
 ;,"});,"})","});,"})"
@@ -587,4 +578,3 @@ export default LinkMonitor;"";,"});,"})"
 }"
 "
 };""
->>>>>>> main

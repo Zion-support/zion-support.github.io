@@ -1,18 +1,18 @@
 #!/usr/bin/env node
-const { execSync } = require("$1");
-const fs = require("$1");
+const { execSync } = require("child_process");
+const fs = require("child_process");
 const path = require("path")
 class AutomatedTestingSuite {
   constructor() {
     this.projectRoot = process.cwd()
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "automated-testing.log")
-    this.ensureDirectories(),
+    this.ensureDirectories()
 }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
@@ -20,7 +20,7 @@ class AutomatedTestingSuite {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] ${message}`
     console.log(logMessage)
-    fs.appendFileSync(this.logFile, logMessage + "\n"),
+    fs.appendFileSync(this.logFile, logMessage + "\n")
 }
 
   async runCommand(command, description, timeout = 300000) {
@@ -29,7 +29,7 @@ class AutomatedTestingSuite {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: "utf8",
-        timeout: timeout,,
+        timeout: timeout,
 })
       this.log(`✅ Completed: ${description}`)
       return { success: true, output: result, description }
@@ -41,27 +41,27 @@ class AutomatedTestingSuite {
 
   async runUnitTests() {
     this.log("🧪 Running unit tests...")
-    return await this.runCommand("npm run test", "Unit Tests"),
+    return await this.runCommand("npm run test", "Unit Tests")
 }
 
   async runTypeChecking() {
     this.log("🔍 Running type checking...")
-    return await this.runCommand("npm run type-check", "Type Checking"),
+    return await this.runCommand("npm run type-check", "Type Checking")
 }
 
   async runLinting() {
     this.log("🔍 Running linting...")
-    return await this.runCommand("npm run lint", "Linting"),
+    return await this.runCommand("npm run lint", "Linting")
 }
 
   async runBuildTest() {
     this.log("🏗️ Running build test...")
-    return await this.runCommand("npm run build", "Build Test"),
+    return await this.runCommand("npm run build", "Build Test")
 }
 
   async runCoverageTest() {
     this.log("📊 Running coverage test...")
-    return await this.runCommand("npm run test:coverage", "Coverage Test"),
+    return await this.runCommand("npm run test:coverage", "Coverage Test")
 }
 
   async runIntegrationTests() {
@@ -73,13 +73,13 @@ class AutomatedTestingSuite {
       return {
         success: true,
         output: "No integration tests found",
-        description: "Integration Tests",,
+        description: "Integration Tests",
 }
     }
 
     return await this.runCommand(
       "npm run test -- --testPathPattern=integration",
-      "Integration Tests"),
+      "Integration Tests")
 }
 
   async runE2ETests() {
@@ -91,11 +91,11 @@ class AutomatedTestingSuite {
       return {
         success: true,
         output: "No E2E tests found",
-        description: "E2E Tests",,
+        description: "E2E Tests",
 }
     }
 
-    return await this.runCommand("npm run test:e2e", "E2E Tests"),
+    return await this.runCommand("npm run test:e2e", "E2E Tests")
 }
 
   async runPerformanceTests() {
@@ -107,13 +107,13 @@ class AutomatedTestingSuite {
       return {
         success: true,
         output: "No performance tests found",
-        description: "Performance Tests",,
+        description: "Performance Tests",
 }
     }
 
     return await this.runCommand(
       "npm run test -- --testPathPattern=performance",
-      "Performance Tests"),
+      "Performance Tests")
 }
 
   async runAccessibilityTests() {
@@ -125,13 +125,13 @@ class AutomatedTestingSuite {
       return {
         success: true,
         output: "No accessibility tests found",
-        description: "Accessibility Tests",,
+        description: "Accessibility Tests",
 }
     }
 
     return await this.runCommand(
       "npm run test -- --testPathPattern=accessibility",
-      "Accessibility Tests"),
+      "Accessibility Tests")
 }
 
   async generateTestReport(results) {
@@ -141,17 +141,17 @@ class AutomatedTestingSuite {
       summary: {
         total: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length,,
+        failed: results.filter(r => !r.success).length,
 },
       results: results,
-      recommendations: this.generateTestRecommendations(results),,
+      recommendations: this.generateTestRecommendations(results),
 }
     const reportPath = path.join(
       this.reportsDir,
       "automated-testing-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8")
     this.log(`📊 Test report generated: ${reportPath}`)
-    return report,
+    return report
 }
 
   generateTestRecommendations(results) {
@@ -161,8 +161,8 @@ class AutomatedTestingSuite {
       recommendations.push({
         type: "error",
         message: `${failedResults.length} test suites failed`,
-        action: "Review failed tests and fix the issues",,
-}),
+        action: "Review failed tests and fix the issues",
+})
 }
 
     const successfulResults = results.filter(r => r.success)
@@ -170,8 +170,8 @@ class AutomatedTestingSuite {
       recommendations.push({
         type: "success",
         message: "All test suites passed successfully!",
-        action: "Consider adding more test coverage for edge cases",,
-}),
+        action: "Consider adding more test coverage for edge cases",
+})
 }
 
     // Check for missing test types
@@ -180,19 +180,19 @@ class AutomatedTestingSuite {
       recommendations.push({
         type: "coverage",
         message: "Unit tests are missing",
-        action: "Add unit tests for core functionality",,
-}),
+        action: "Add unit tests for core functionality",
+})
 }
 
     if (!testTypes.includes("Integration Tests")) {
       recommendations.push({
         type: "coverage",
         message: "Integration tests are missing",
-        action: "Add integration tests for component interactions",,
-}),
+        action: "Add integration tests for component interactions",
+})
 }
 
-    return recommendations,
+    return recommendations
 }
 
   async runFullTestSuite() {
@@ -216,13 +216,13 @@ class AutomatedTestingSuite {
       this.log(
         `📊 Summary: ${report.summary.successful}/${report.summary.total} successful`)
       if (report.summary.failed > 0) {
-        this.log(`⚠️  ${report.summary.failed} test suites failed`),
+        this.log(`⚠️  ${report.summary.failed} test suites failed`)
 }
 
-      return report,
+      return report
 } catch (error) {
       this.log(`❌ Fatal error in testing suite: ${error.message}`)
-      throw error,
+      throw error
 }
   }
 }
@@ -235,9 +235,9 @@ testSuite
     console.log("✅ Automated Testing Suite completed successfully!")
     console.log(
       `📊 Final Summary: ${report.summary.successful}/${report.summary.total} successful`)
-    process.exit(0),
+    process.exit(0)
 })
   .catch(error => {
     console.error("❌ Testing suite failed:", error)
-    process.exit(1),
+    process.exit(1)
 })

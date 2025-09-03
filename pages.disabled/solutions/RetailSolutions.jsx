@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'
 import { motion } from 'framer-motion';
 import { ShoppingCart, Smartphone, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Store export { function };
@@ -158,10 +157,6 @@ export default function RetailSolutions() {}
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">"
   y: 0 
 
-
-
-
-
 "
 }} transition={{ duration: 0.8 }}>""
             <div className="flex justify-center mb-6">""
@@ -228,9 +223,6 @@ export default function RetailSolutions() {}
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/solutions/RetailSolutions.jsx
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">"
@@ -276,9 +268,6 @@ export default function RetailSolutions() {}
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
 =
   delay: index * 0.1 
-
-
-
 
 "
 :pages.disabled/solutions/RetailSolutions.jsx
@@ -332,9 +321,6 @@ export default function RetailSolutions() {}
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/solutions/RetailSolutions.jsx
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">"
@@ -377,10 +363,6 @@ export default function RetailSolutions() {}
                     <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0"/>"
   x: 0 
 
-
-
-
-
 "
   x: -20;
 }} whileInView = {}
@@ -414,10 +396,6 @@ export default function RetailSolutions() {}
                 {solutions.map((solution, index) => (<div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">"
                     <h4 className="font-semibold text-cyan-400 mb-2">{solution.title}</h4>"
   x: 0 
-
-
-
-
 
 "
   x: 20;
@@ -457,9 +435,6 @@ export default function RetailSolutions() {}
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
 =
   y: 0 
-
-
-
 
 "
 :pages.disabled/solutions/RetailSolutions.jsx
@@ -507,9 +482,6 @@ export default function RetailSolutions() {}
 =
   delay: index * 0.1 
 
-
-
-
 "
 :pages.disabled/solutions/RetailSolutions.jsx
 }} viewport={{ once: true }} className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300">"
@@ -552,10 +524,6 @@ export default function RetailSolutions() {}
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>"
   y: 0 
 
-
-
-
-
 "
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>""
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -596,5 +564,3 @@ export default function RetailSolutions() {}
 }}}}'"'"
     </div>);
 }}}}'""
-=======
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from "@/components/SEO";'
 import { Shield, Database, Monitor } from 'lucide-react';
@@ -146,10 +145,6 @@ const ITSolutions = () => {}
 }}>"
   delay: 0.4 
 
-
-
-
-
 "
 }}>""
   y: 20;
@@ -203,10 +198,6 @@ const ITSolutions = () => {}
                 </div>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>"
   delay: index * 0.1 
-
-
-
-
 
 "
 }} viewport={{ once: true }}>""
@@ -274,10 +265,6 @@ const ITSolutions = () => {}
                   </div>"
   delay: index * 0.1 
 
-
-
-
-
 "
 }} viewport={{ once: true }}>""
                   <div className="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4">""
@@ -333,5 +320,3 @@ export default ITSolutions;'"
 }}'"'"
 export default ITSolutions;
 }}'""
-=======
->>>>>>> main

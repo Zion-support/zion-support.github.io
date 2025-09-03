@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 import { useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useForm, type UseFormReturn } from "react-hook-form";
@@ -210,4 +207,3 @@ const Signup = () => {
             </div>
     </>  );
 }
->>>>>>> main

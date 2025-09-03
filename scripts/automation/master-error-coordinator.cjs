@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs").promises;
 const path = require("path");
@@ -12,20 +12,20 @@ class $1 {
     this.startTime = new Date();
     this.processes = [];
     this.errors = [];
-    this.fixes = [];,
+    this.fixes = [];
 }
 ;
   async log(message) {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(`logMessage);
-    await fs.appendFile(this.logFile, logMessage + `\n`);,
+    await fs.appendFile(this.logFile, logMessage + `\n`);
 }
 ;
   async ensureDirectories() {
   const dirs = [``"automation/logs"""", """automation/reports""", """automation/backups""""];
     for (const dir of dirs) {
-  await fs.mkdir(path.join(this.projectRoot, "dir)", { recursive: true });,
+  await fs.mkdir(path.join(this.projectRoot, "dir)", { recursive: true });
 }
   }
 ;
@@ -35,7 +35,7 @@ class $1 {
   cwd: this.projectRoot,;
         encoding: "utf8",;
         stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+        ...options;
 });
       return { success: true, output: result }
     } catch (error) {
@@ -45,7 +45,7 @@ class $1 {
   const dirs = [""automation/logs"", ""automation/reports"", ""automation/backups""];
     ;
     for (const dir of dirs) {
-  await fs.mkdir(path.join(this.projectRoot, "dir)", { recursive: true });,
+  await fs.mkdir(path.join(this.projectRoot, "dir)", { recursive: true });
 }
   }
 ;
@@ -55,7 +55,7 @@ class $1 {
   cwd: this.projectRoot,;
         encoding: "utf8",;
         stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+        ...options;
 });
       return { success: true, output: result }
     } catch (error) {
@@ -69,11 +69,11 @@ class $1 {
     const status = await this.runCommand("pm2 status", { silent: true });
     if (status.success) {
   await this.log("✅ PM2 is running");
-      return true;,
+      return true;
 } else {
   await this.log("⚠️  PM2 not running, starting...");
       const startResult = await this.runCommand("pm2 start ecosystem.error-automation.config.cjs");
-      return startResult.success;,
+      return startResult.success;
 }
   }
 ;
@@ -92,28 +92,28 @@ class $1 {
   name: process.name,;
           success: result.success,;
           timestamp: new Date().toISOString(),;
-          output: result.output;,
+          output: result.output;
 });
         ;
-        if (result.success) {await this.log(`✅ ${process.name} completed successfully`);,
+        if (result.success) {await this.log(`✅ ${process.name} completed successfully`);
 } else {await this.log(`❌ ${process.name} failed`);
           this.errors.push({
   process: process.name,;
             error: result.output,;
-            timestamp: new Date().toISOString();,
-});,
+            timestamp: new Date().toISOString();
+});
 }
       } catch (error) {  await this.log(`❌ Error running ${process.name  }: ${error.message}`);
         this.errors.push({
   process: process.name,;
           error: error.message,;
-          timestamp: new Date().toISOString();,
+          timestamp: new Date().toISOString();
 } catch (error) {await this.log(`❌ Error running ${process.name}: ${error.message}`);
         this.errors.push({
   process: process.name,;
           error: error.message,;
-          timestamp: new Date().toISOString();,
-});,
+          timestamp: new Date().toISOString();
+});
 }
     }
   }
@@ -123,7 +123,7 @@ class $1 {
     const healthChecks = [`{ name: `TypeScript Check"", "command: "npm run type-check" }", "{ name: "Linting Check"", "command: "npm run lint" }", "{ name: "Build Check"", "command: "npm run build" }", "{ name: "Dependencies Check"", `command: `npm ls --depth=0` }`];
     const healthReport = {
   timestamp: new Date().toISOString(),;
-      checks: [];,
+      checks: [];
 }
     ;
     for (const check of healthChecks) {
@@ -133,36 +133,36 @@ class $1 {
         healthReport.checks.push({
   name: check.name,;
           success: result.success,;
-          timestamp: new Date().toISOString();,
+          timestamp: new Date().toISOString();
 });
         ;
-        if (result.success) {await this.log(`✅ ${check.name} passed`);,
+        if (result.success) {await this.log(`✅ ${check.name} passed`);
 } else {await this.log(`❌ ${check.name} failed`);
           this.errors.push({
   check: check.name,;
             error: result.output,;
-            timestamp: new Date().toISOString();,
-});,
+            timestamp: new Date().toISOString();
+});
 }
       } catch (error) {  await this.log(`❌ Error in ${check.name  }: ${error.message}`);
         healthReport.checks.push({
   name: check.name,;
           success: false,;
           error: error.message,;
-          timestamp: new Date().toISOString();,
-});,
+          timestamp: new Date().toISOString();
+});
 }
     }
     ;
     // Save health report;
-    const healthReportFile = path.join(this.projectRoot, ``automation/reports/health-report.json``);,
+    const healthReportFile = path.join(this.projectRoot, ``automation/reports/health-report.json``);
 } catch (error) {await this.log(`❌ Error in ${check.name}: ${error.message}`);
         healthReport.checks.push({
   name: check.name,;
           success: false,;
           error: error.message,;
-          timestamp: new Date().toISOString();,
-});,
+          timestamp: new Date().toISOString();
+});
 }
     }
     ;
@@ -170,7 +170,7 @@ class $1 {
     const healthReportFile = path.join(this.projectRoot, "automation/reports/health-report.json");
     await fs.writeFile(healthReportFile, JSON.stringify(healthReport, null, 2));
     ;
-    return healthReport;,
+    return healthReport;
 }
 ;
   async applyEmergencyFixes() {
@@ -180,15 +180,15 @@ class $1 {
   name: "Fix ESLint Config", "action: async () => {
   const eslintPath = path.join(this.projectRoot", ".eslintrc.js");const fixedConfig = `module.exports = {
   extends: [""next/core-web-vitals"", ""next/typescript""],;
-  rules: {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn";,
+  rules: {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn";
 },;
-  ignorePatterns: ["node_modules/", ".next/", "out/", "dist/"];,
+  ignorePatterns: ["node_modules/", ".next/", "out/", "dist/"];
 };`;
-          await fs.writeFile(eslintPath, "fixedConfig);,
+          await fs.writeFile(eslintPath, "fixedConfig);
 }
       }", "{
   name: "Fix Dependencies", "action: async () => {
-  await this.runCommand("npm install --legacy-peer-deps");,
+  await this.runCommand("npm install --legacy-peer-deps");
 }
       }", "{
   name: "Fix TypeScript Config", "action: async () => {
@@ -203,7 +203,7 @@ class $1 {
           tsConfig.compilerOptions.allowSyntheticDefaultImports = true;
           tsConfig.compilerOptions.esModuleInterop = true;
           tsConfig.compilerOptions.skipLibCheck = true;
-          await fs.writeFile(tsConfigPath, "JSON.stringify(tsConfig", `null`, `2));,
+          await fs.writeFile(tsConfigPath, "JSON.stringify(tsConfig", `null`, `2));
 }
       }`];
     for (const fix of emergencyFixes) {
@@ -212,14 +212,14 @@ class $1 {
         this.fixes.push({
   type: `emergency-fix`,;
           name: fix.name,;
-          timestamp: new Date().toISOString();,
-});,
+          timestamp: new Date().toISOString();
+});
 } catch (error) {  await this.log(`❌ Failed to apply ${fix.name  }: ${error.message}`);
         this.errors.push({
   fix: fix.name,;
           error: error.message,;
-          timestamp: new Date().toISOString();,
-});,
+          timestamp: new Date().toISOString();
+});
 }
     }
   }
@@ -250,13 +250,13 @@ class $1 {
         successfulProcesses: this.processes.filter(p => p.success).length,;
         failedProcesses: this.processes.filter(p => !p.success).length,;
         totalErrors: this.errors.length,;
-        totalFixes: this.fixes.length;,
+        totalFixes: this.fixes.length;
 }
     }
     ;
     await fs.writeFile(this.coordinationReportFile, JSON.stringify(report, null, 2));await this.log(`📊 Coordination report generated: ${this.coordinationReportFile}`);
     ;
-    return report;,
+    return report;
 }
 ;
   async restartFailedProcesses() {
@@ -266,10 +266,10 @@ class $1 {
     for (const process of failedProcesses) {
   try {await this.log(`🔄 Restarting ${process.name}...`);const restartResult = await this.runCommand(`pm2 restart ${process.name}`, { silent: true });
         ;
-        if (restartResult.success) {await this.log(`✅ ${process.name} restarted successfully`);,
-} else {await this.log(`❌ Failed to restart ${process.name}`);,
+        if (restartResult.success) {await this.log(`✅ ${process.name} restarted successfully`);
+} else {await this.log(`❌ Failed to restart ${process.name}`);
 }
-      } catch (error) {  await this.log(`❌ Error restarting ${process.name  }: ${error.message}`);,
+      } catch (error) {  await this.log(`❌ Error restarting ${process.name  }: ${error.message}`);
 }
     }
   }
@@ -286,7 +286,7 @@ class $1 {
       await this.checkProjectHealth();
       // Apply emergency fixes if needed;
       if (this.errors.length > 0) {
-  await this.applyEmergencyFixes();,
+  await this.applyEmergencyFixes();
 }
       ;
       // Restart failed processes;
@@ -308,7 +308,7 @@ class $1 {
       ;
       // Apply emergency fixes if needed;
       if (this.errors.length > 0) {
-  await this.applyEmergencyFixes();,
+  await this.applyEmergencyFixes();
 }
       ;
       // Restart failed processes;
@@ -319,14 +319,13 @@ class $1 {
       await this.log(`✅ Master Error Coordinator completed`);await this.log(`📈 Summary: ${report.summary.successfulProcesses}/${report.summary.totalProcesses} processes successful`);await this.log(`📈 Errors: ${report.summary.totalErrors}, Fixes: ${report.summary.totalFixes}`);
       ;
       return report;
-      ;,
+      ;
 } catch (error) {  await this.log(`❌ Master Error Coordinator failed: ${error.message  }`);
-      ;,
+      ;
 } catch (error) {await this.log(`❌ Master Error Coordinator failed: ${error.message}`);
-      throw error;,
+      throw error;
 } catch (error) {  await this.log(`❌ Master Error Coordinator failed: ${error.message  }`);
       throw error;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
   }
 }
@@ -337,11 +336,11 @@ if (require.main === module) {
   coordinator.run();
     .then(report => {
   console.log(`Master error coordinator completed successfully`);
-      process.exit(0);,
+      process.exit(0);
 });
     .catch(error => {
-  console.error(`Master error coordinator failed: `, error);      process.exit(1);,
-});,
+  console.error(`Master error coordinator failed: `, error);      process.exit(1);
+});
 }
 ;
 module.exports = MasterErrorCoordinator

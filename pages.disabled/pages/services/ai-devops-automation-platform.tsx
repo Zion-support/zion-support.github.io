@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {}
   return()
     <>
@@ -788,7 +787,6 @@
   { opacity: 0,
   y: 20
 
-            
             <motion.div;
               initial = {}
   { opacity: 0,
@@ -956,5 +954,3 @@
     </>
   )};'"`
 export default AIDevOpsAutomationPlatform;'"`'"`
-=======
->>>>>>> main

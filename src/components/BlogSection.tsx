@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-  const blogPosts = [{
+const blogPosts = [{
       id: '1',
       title: 'The Future of AI in Technology',
       excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape...',
@@ -42,11 +38,3 @@
       </div>;
     </section>;) }
 '"`
-=======
-<<<<<<< HEAD
-export function BlogSection(...args[]): {
-=======
-
->>>>>>> main
->>>>>>> main
->>>>>>> main

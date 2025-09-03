@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 
 console.log('🚀 Master Automation System')
-console.log('===========================')
+console.log('======')
 
 class MasterAutomationSystem {
   constructor() {
@@ -140,7 +140,7 @@ class MasterAutomationSystem {
 
     // Display final summary
     console.log('\n🎉 Master Automation System Complete!')
-    console.log('====================================')
+    console.log('=')
     console.log(`Total duration: ${duration} seconds`)
     console.log(`PRs processed: ${this.results.prsProcessed}`)
     console.log(`Conflicts resolved: ${this.results.conflictsResolved}`)

@@ -2,12 +2,12 @@
 /**
  * Advanced Monitoring Script
  */
-const pm2 = require("$1");
-const fs = require("$1");
+const pm2 = require("child_process");
+const fs = require("child_process");
 const path = require("path")
 class AdvancedMonitor {
   constructor() {
-    this.logPath = path.join(__dirname, "..", "logs", "monitoring.log"),
+    this.logPath = path.join(__dirname, "..", "logs", "monitoring.log")
 }
 
   async startMonitoring() {
@@ -16,13 +16,13 @@ class AdvancedMonitor {
       this.checkSystemHealth()
       this.checkPM2Processes()
       this.checkDiskSpace()
-      this.checkMemoryUsage(),
+      this.checkMemoryUsage()
 }, 30000); // Check every 30 seconds}
 
   checkSystemHealth() {
     const timestamp = new Date().toISOString()
     const logEntry = `[${timestamp}] System health check completed\n`
-    fs.appendFileSync(this.logPath, logEntry),
+    fs.appendFileSync(this.logPath, logEntry)
 }
 
   checkPM2Processes() {
@@ -33,8 +33,8 @@ class AdvancedMonitor {
       
       const timestamp = new Date().toISOString()
       const logEntry = `[${timestamp}] PM2 processes: ${list.length} running\n`
-      fs.appendFileSync(this.logPath, logEntry),
-}),
+      fs.appendFileSync(this.logPath, logEntry)
+})
 }
 
   checkDiskSpace() {
@@ -43,9 +43,9 @@ class AdvancedMonitor {
       const diskUsage = execSync("df -h /", { encoding: "utf8" })
       const timestamp = new Date().toISOString()
       const logEntry = `[${timestamp}] Disk usage: ${diskUsage}\n`
-      fs.appendFileSync(this.logPath, logEntry),
+      fs.appendFileSync(this.logPath, logEntry)
 } catch (error) {
-      console.error("Disk space check error:", error),
+      console.error("Disk space check error:", error)
 }
   }
 
@@ -55,9 +55,9 @@ class AdvancedMonitor {
       const memoryUsage = execSync("free -h", { encoding: "utf8" })
       const timestamp = new Date().toISOString()
       const logEntry = `[${timestamp}] Memory usage: ${memoryUsage}\n`
-      fs.appendFileSync(this.logPath, logEntry),
+      fs.appendFileSync(this.logPath, logEntry)
 } catch (error) {
-      console.error("Memory check error:", error),
+      console.error("Memory check error:", error)
 }
   }
 }

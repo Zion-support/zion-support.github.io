@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-const fs = require("$1");
+const fs = require("child_process");
 const path = require("path")
 class SEOOptimizer {
   constructor() {
     this.projectRoot = process.cwd()
-    this.seoEnhancements = [],
+    this.seoEnhancements = []
 }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`),
+    console.log(`[${new Date().toISOString()}] ${message}`)
 }
 
   async createRobotsTxt() {
@@ -30,9 +30,9 @@ Allow: /about/
 Allow: /contact/`
       fs.writeFileSync(path.join(this.projectRoot, "public", "robots.txt"), robotsContent)
       this.seoEnhancements.push("robots.txt created")
-      this.log("✅ robots.txt created successfully"),
+      this.log("✅ robots.txt created successfully")
 } catch (error) {
-      this.log(`❌ Failed to create robots.txt: ${error.message}`),
+      this.log(`❌ Failed to create robots.txt: ${error.message}`)
 }
   }
 
@@ -74,9 +74,9 @@ Allow: /contact/`
 </urlset>`
       fs.writeFileSync(path.join(this.projectRoot, "public", "sitemap.xml"), sitemapContent)
       this.seoEnhancements.push("sitemap.xml created")
-      this.log("✅ sitemap.xml created successfully"),
+      this.log("✅ sitemap.xml created successfully")
 } catch (error) {
-      this.log(`❌ Failed to create sitemap: ${error.message}`),
+      this.log(`❌ Failed to create sitemap: ${error.message}`)
 }
   }
 
@@ -95,22 +95,22 @@ Allow: /contact/`
           {
             src: "/icon-192x192.png",
             sizes: "192x192",
-            type: "image/png",
+            type: "image/png"
 },
           {
             src: "/icon-512x512.png",
             sizes: "512x512",
-            type: "image/png",
+            type: "image/png"
 }
-        ],
+        ]
 }
       fs.writeFileSync(
         path.join(this.projectRoot, "public", "manifest.json"),
         JSON.stringify(manifestContent, null, 2))
       this.seoEnhancements.push("manifest.json created")
-      this.log("✅ manifest.json created successfully"),
+      this.log("✅ manifest.json created successfully")
 } catch (error) {
-      this.log(`❌ Failed to create manifest: ${error.message}`),
+      this.log(`❌ Failed to create manifest: ${error.message}`)
 }
   }
 
@@ -119,7 +119,7 @@ Allow: /contact/`
     await this.createRobotsTxt()
     await this.createSitemap()
     await this.createManifest()
-    this.log(`✅ SEO optimization completed. Enhancements: ${this.seoEnhancements.join(", ")}`),
+    this.log(`✅ SEO optimization completed. Enhancements: ${this.seoEnhancements.join(", ")}`)
 }
 }
 

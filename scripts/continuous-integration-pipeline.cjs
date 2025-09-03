@@ -1,18 +1,18 @@
 #!/usr/bin/env node
-const { execSync } = require("$1");
-const fs = require("$1");
+const { execSync } = require("child_process");
+const fs = require("child_process");
 const path = require("path")
 class ContinuousIntegrationPipeline {
   constructor() {
     this.projectRoot = process.cwd()
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.logFile = path.join(this.reportsDir, "ci-pipeline.log")
-    this.ensureDirectories(),
+    this.ensureDirectories()
 }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
@@ -20,7 +20,7 @@ class ContinuousIntegrationPipeline {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] ${message}`
     console.log(logMessage)
-    fs.appendFileSync(this.logFile, logMessage + "\n"),
+    fs.appendFileSync(this.logFile, logMessage + "\n")
 }
 
   async runCommand(command, description, timeout = 300000) {
@@ -29,7 +29,7 @@ class ContinuousIntegrationPipeline {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: "utf8",
-        timeout: timeout,,
+        timeout: timeout,
 })
       this.log(`✅ Completed: ${description}`)
       return { success: true, output: result, description }
@@ -41,39 +41,39 @@ class ContinuousIntegrationPipeline {
 
   async installDependencies() {
     this.log("📦 Installing dependencies...")
-    return await this.runCommand("npm install", "Install Dependencies"),
+    return await this.runCommand("npm install", "Install Dependencies")
 }
 
   async runLinting() {
     this.log("🔍 Running linting...")
-    return await this.runCommand("npm run lint:fix", "Linting"),
+    return await this.runCommand("npm run lint:fix", "Linting")
 }
 
   async runTypeChecking() {
     this.log("🔍 Running type checking...")
-    return await this.runCommand("npm run type-check", "Type Checking"),
+    return await this.runCommand("npm run type-check", "Type Checking")
 }
 
   async runTests() {
     this.log("🧪 Running tests...")
-    return await this.runCommand("npm run test", "Tests"),
+    return await this.runCommand("npm run test", "Tests")
 }
 
   async runBuild() {
     this.log("🏗️ Running build...")
-    return await this.runCommand("npm run build", "Build"),
+    return await this.runCommand("npm run build", "Build")
 }
 
   async runSecurityAudit() {
     this.log("🔒 Running security audit...")
-    return await this.runCommand("npm audit", "Security Audit"),
+    return await this.runCommand("npm audit", "Security Audit")
 }
 
   async runPerformanceTest() {
     this.log("⚡ Running performance test...")
     return await this.runCommand(
       "npm run build && npm run start &",
-      "Performance Test"),
+      "Performance Test")
 }
 
   async runDeploymentTest() {
@@ -83,13 +83,13 @@ class ContinuousIntegrationPipeline {
     if (fs.existsSync(deployScript)) {
       return await this.runCommand(
         "bash scripts/deploy.sh --dry-run",
-        "Deployment Test"),
+        "Deployment Test")
 } else {
       this.log("⚠️  No deployment script found")
       return {
         success: true,
         output: "No deployment script found",
-        description: "Deployment Test",,
+        description: "Deployment Test",
 }
     }
   }
@@ -107,11 +107,11 @@ class ContinuousIntegrationPipeline {
         const result = await this.runCommand(
           `node ${script}`,
           `Quality Check: ${script}`)
-        results.push(result),
+        results.push(result)
 }
     }
 
-    return results,
+    return results
 }
 
   async generateCIRepor(results) {
@@ -121,15 +121,15 @@ class ContinuousIntegrationPipeline {
       summary: {
         total: results.length,
         successful: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length,,
+        failed: results.filter(r => !r.success).length,
 },
       results: results,
-      recommendations: this.generateCIRecommendations(results),,
+      recommendations: this.generateCIRecommendations(results),
 }
     const reportPath = path.join(this.reportsDir, "ci-pipeline-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2), "utf8")
     this.log(`📊 CI report generated: ${reportPath}`)
-    return report,
+    return report
 }
 
   generateCIRecommendations(results) {
@@ -139,8 +139,8 @@ class ContinuousIntegrationPipeline {
       recommendations.push({
         type: "error",
         message: `${failedResults.length} CI steps failed`,
-        action: "Review failed steps and fix the issues",,
-}),
+        action: "Review failed steps and fix the issues",
+})
 }
 
     const successfulResults = results.filter(r => r.success)
@@ -148,8 +148,8 @@ class ContinuousIntegrationPipeline {
       recommendations.push({
         type: "success",
         message: "All CI steps passed successfully!",
-        action: "Ready for deployment",,
-}),
+        action: "Ready for deployment",
+})
 }
 
     // Check for specific failed steps
@@ -158,27 +158,27 @@ class ContinuousIntegrationPipeline {
       recommendations.push({
         type: "testing",
         message: "Tests failed",
-        action: "Fix failing tests before deployment",,
-}),
+        action: "Fix failing tests before deployment",
+})
 }
 
     if (failedSteps.includes("Build")) {
       recommendations.push({
         type: "build",
         message: "Build failed",
-        action: "Fix build issues before deployment",,
-}),
+        action: "Fix build issues before deployment",
+})
 }
 
     if (failedSteps.includes("Security Audit")) {
       recommendations.push({
         type: "security",
         message: "Security audit failed",
-        action: "Address security vulnerabilities",,
-}),
+        action: "Address security vulnerabilities",
+})
 }
 
-    return recommendations,
+    return recommendations
 }
 
   async runFullPipeline() {
@@ -202,13 +202,13 @@ class ContinuousIntegrationPipeline {
       this.log(
         `📊 Summary: ${report.summary.successful}/${report.summary.total} successful`)
       if (report.summary.failed > 0) {
-        this.log(`⚠️  ${report.summary.failed} CI steps failed`),
+        this.log(`⚠️  ${report.summary.failed} CI steps failed`)
 }
 
-      return report,
+      return report
 } catch (error) {
       this.log(`❌ Fatal error in CI pipeline: ${error.message}`)
-      throw error,
+      throw error
 }
   }
 }
@@ -221,9 +221,9 @@ pipeline
     console.log("✅ Continuous Integration Pipeline completed successfully!")
     console.log(
       `📊 Final Summary: ${report.summary.successful}/${report.summary.total} successful`)
-    process.exit(0),
+    process.exit(0)
 })
   .catch(error => {
     console.error("❌ CI pipeline failed:", error)
-    process.exit(1),
+    process.exit(1)
 })

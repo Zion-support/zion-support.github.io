@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 <:pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 import React, { useState, useEffect } from 'react';
@@ -85,8 +84,7 @@ import {
 export { function };
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.tsx
 export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {
-  
-  
+
   export default function AIAutonomousResearchAssistant(...args: unknown[]): unknown {}
   Eye as EyeIcon,;
   Sparkles as SparklesIcon,;
@@ -1343,5 +1341,3 @@ export default function AIAutonomousResearchAssistant(function AIAutonomousResea
 '"`'"`
 }
 '"`
-=======
->>>>>>> main

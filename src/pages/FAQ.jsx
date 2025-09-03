@@ -45,12 +45,10 @@ import { Footer } from "@/components/Footer";        <div className="container m
         </div>
       </main>
       <Footer />
-<<<<<<< HEAD
-    </>
+</>
   );
 }
 
-
 export { CustomAccordion, FAQ };
 
 export { CustomAccordion, FAQ };
@@ -60,7 +58,3 @@ export { CustomAccordion, FAQ };
 export { CustomAccordion, FAQ };
 
 export { CustomAccordion, FAQ };
-=======
-    </>);
-}
->>>>>>> main

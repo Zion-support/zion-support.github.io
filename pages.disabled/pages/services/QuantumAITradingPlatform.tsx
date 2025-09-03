@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Atom,
   TrendingUp,
@@ -47,11 +46,6 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
   useEffect(() => {}
     setIsVisible(true)}, []);
 
-  
-  
-  
-  
-  
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">"
       {/* Futuristic Animated Background */}""
@@ -122,7 +116,6 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
         <motion.div""
           className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl"
           animate={{
-
 
         <motion.div""
           className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl""
@@ -933,5 +926,3 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
     </div>
   )}'"`
 '"`'"`
-=======
->>>>>>> main

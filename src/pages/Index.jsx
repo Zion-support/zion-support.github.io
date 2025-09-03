@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Header } from "@/components/Header";""""
 import { Footer } from "@/components/Footer";""""
 import { TrustedBySection } from "@/components/TrustedBySection";""""
@@ -117,7 +116,6 @@ import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone expor
       <Footer />
     </div>)}
 
-
 export { Index };
 
 export { Index };
@@ -127,14 +125,3 @@ export { Index };
 export { Index };
 
 export { Index };
-=======
-';
-;";";,
-}}}}";,
-}}}}const { t } = useTranslation ()  ;const;const { isRTL } = useLanguage () &apos;&apos,&apos,";
-"""""";
-;",";";,
-}}}}""";
-;"}}}}"";
-"
->>>>>>> main

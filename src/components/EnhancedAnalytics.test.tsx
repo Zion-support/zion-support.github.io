@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function EnhancedAnalytics.test() {return (
@@ -12,4 +10,3 @@ export default function EnhancedAnalytics.test() {return (
         </p>
       </div>
   );"}"
->>>>>>> main

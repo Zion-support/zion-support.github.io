@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { execSync } = require("$1");
+const { execSync } = require("child_process");
 const fs = require("fs")
 class CodeQualityChecks {
   constructor() {
@@ -20,9 +20,9 @@ class CodeQualityChecks {
       await this.checkSecurity()
       await this.checkPerformance()
       this.generateReport()
-      console.log("✅ Code quality checks completed"),
+      console.log("✅ Code quality checks completed")
 } catch (error) {
-      console.error("❌ Code quality checks failed:", error.message),
+      console.error("❌ Code quality checks failed:", error.message)
 }
   }
 
@@ -30,10 +30,10 @@ class CodeQualityChecks {
     console.log("🎨 Checking code style...")
     try {
       const result = execSync("npm run lint", { encoding: "utf8" })
-      this.addCheck("Code Style", "passed", "No style issues found"),
+      this.addCheck("Code Style", "passed", "No style issues found")
 } catch (error) {
       this.addCheck("Code Style", "failed", error.message)
-      this.results.score -= 10,
+      this.results.score -= 10
 }
   }
 
@@ -41,10 +41,10 @@ class CodeQualityChecks {
     console.log("🧮 Checking code complexity...")
     try {
       const result = execSync("npx complexity-report src/", { encoding: "utf8" })
-      this.addCheck("Complexity", "passed", "Code complexity is acceptable"),
+      this.addCheck("Complexity", "passed", "Code complexity is acceptable")
 } catch (error) {
       this.addCheck("Complexity", "warning", "High complexity detected")
-      this.results.score -= 5,
+      this.results.score -= 5
 }
   }
 
@@ -52,10 +52,10 @@ class CodeQualityChecks {
     console.log("🔄 Checking code duplication...")
     try {
       const result = execSync("npx jscpd src/", { encoding: "utf8" })
-      this.addCheck("Duplication", "passed", "No significant duplication found"),
+      this.addCheck("Duplication", "passed", "No significant duplication found")
 } catch (error) {
       this.addCheck("Duplication", "warning", "Code duplication detected")
-      this.results.score -= 5,
+      this.results.score -= 5
 }
   }
 
@@ -63,10 +63,10 @@ class CodeQualityChecks {
     console.log("🔒 Checking security...")
     try {
       const result = execSync("npm audit", { encoding: "utf8" })
-      this.addCheck("Security", "passed", "No security vulnerabilities found"),
+      this.addCheck("Security", "passed", "No security vulnerabilities found")
 } catch (error) {
       this.addCheck("Security", "failed", "Security vulnerabilities detected")
-      this.results.score -= 20,
+      this.results.score -= 20
 }
   }
 
@@ -74,16 +74,16 @@ class CodeQualityChecks {
     console.log("⚡ Checking performance...")
     try {
       const result = execSync("npm run build", { encoding: "utf8" })
-      this.addCheck("Performance", "passed", "Build completed successfully"),
+      this.addCheck("Performance", "passed", "Build completed successfully")
 } catch (error) {
       this.addCheck("Performance", "failed", "Build failed")
-      this.results.score -= 15,
+      this.results.score -= 15
 }
   }
 
   addCheck(name, status, message) {
     this.results.checks.push({ name, status, message, timestamp: new Date().toISOString() })
-    this.results.summary[status]++,
+    this.results.summary[status]++
 }
 
   generateReport() {
@@ -96,7 +96,7 @@ class CodeQualityChecks {
     console.log(`Failed: ${this.results.summary.failed}`)
     console.log(`Warnings: ${this.results.summary.warnings}`)
     console.log("=".repeat(50))
-    console.log(`📄 Report saved to: ${reportPath}`),
+    console.log(`📄 Report saved to: ${reportPath}`)
 }
 }
 

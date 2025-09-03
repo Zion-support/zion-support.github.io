@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 console.log('🧹 Final Syntax Cleanup')
-console.log('======================')
+console.log('=')
 
 class FinalSyntaxCleanup {
   constructor() {

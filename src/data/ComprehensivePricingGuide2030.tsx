@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 import React from 'react';
 let services: unknown[] = [];
-=======
-<<<<<<< HEAD
->>>>>>> main
-
 const ComprehensivePricingGuide2030: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getFilteredServices = () => {;
-<<<<<<< HEAD
-    let services: unknown[] = [];
+let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':        services = innovativeMicroSaasServices2030;
@@ -21,19 +15,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         services = comprehensiveITServices2030;
         break;'
       case 'ai': unknown;
-=======
-    let services: any[] = [];
-    switch(activeTab) {
-
-      case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
-      case 'it':
-        services = comprehensiveITServices2030;
-        break;
-      case 'ai':
->>>>>>> main
-        services = comprehensiveAIServices2030;
+services = comprehensiveAIServices2030;
         break}
 
     // Filter by price range
@@ -51,8 +33,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     return services};
 
   const getCategories = () => {;
-<<<<<<< HEAD
-    let services: unknown[] = [];
+let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':        services = innovativeMicroSaasServices2030;
@@ -61,26 +42,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         services = comprehensiveITServices2030;
         break;'
       case 'ai': unknown;
-=======
-    let services: any[] = [];
-    switch(activeTab) {
-
-      case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
-      case 'it':
-        services = comprehensiveITServices2030;
-        break;
-      case 'ai':
->>>>>>> main
-        services = comprehensiveAIServices2030;
+services = comprehensiveAIServices2030;
         break}
 
     return categories};
 
   const getPriceRange = () => {;
-<<<<<<< HEAD
-    let services: unknown[] = [];
+let services: unknown[] = [];
     
     switch (activeTab) {
       case 'microsaas':        services = innovativeMicroSaasServices2030;
@@ -89,19 +57,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         services = comprehensiveITServices2030;
         break;'
       case 'ai': unknown;
-=======
-    let services: any[] = [];
-    switch(activeTab) {
-
-      case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
-      case 'it':
-        services = comprehensiveITServices2030;
-        break;
-      case 'ai':
->>>>>>> main
-        services = comprehensiveAIServices2030;
+services = comprehensiveAIServices2030;
         break}
 
     if(activeTab = == 'it') {;
@@ -111,8 +67,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       return [min, max]}
   };
 
-<<<<<<< HEAD
-  const renderPricingCard: unknown = (service)  => {}
+const renderPricingCard: unknown = (service)  => {}
 '
     if (activeTab === 'microsaas') {}
       return (""""
@@ -120,18 +75,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           <div className="p-6">""""
             <div className="text-center mb-6">""""
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>""""
-=======
-  const renderPricingCard = (service)  => {
-
-    if(activeTab === 'microsaas') {
-
-      return ("
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">"
-          <div className="p-6">"
-            <div className="text-center mb-6">"
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>"
->>>>>>> main
-              <span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">
+<span className="px-3 py-1 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">
                 {service.pricing}
               </span>
             </div>
@@ -671,8 +615,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </>;
+</>;
   );
 };
 
@@ -687,23 +630,3 @@ export { ComprehensivePricingGuide2030 };
 export { ComprehensivePricingGuide2030 };
 
 export { ComprehensivePricingGuide2030 };
-=======
-    </>
-  )};
-
-export default ComprehensivePricingGuide2030}}}}}}}'"`
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-export default function ComprehensivePricingGuide2030() {return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="ComprehensivePricingGuide2030 - Zion Tech Group" description="Professional ComprehensivePricingGuide2030 services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">ComprehensivePricingGuide2030</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional ComprehensivePricingGuide2030 services to help your business grow.
-        </p>
-      </div>
-  );"}"
->>>>>>> main
->>>>>>> main

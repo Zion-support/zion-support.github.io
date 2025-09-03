@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 interface Service {
   category: string;
 icon: React.ComponentType<{ className?: string
@@ -149,4 +146,3 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   )};
 
 export default ServicesOverview}}}'"`
->>>>>>> main

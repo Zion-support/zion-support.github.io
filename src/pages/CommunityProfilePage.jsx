@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useParams, Link  } from 'react-router-dom';
 export default function Page() {
 ,
@@ -211,9 +210,7 @@ export default function Page() {
             </Tabs>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>)}
-
+</div>)}
 
 export { CommunityProfilePage };
 
@@ -222,8 +219,3 @@ export { CommunityProfilePage };
 export { CommunityProfilePage };
 
 export { CommunityProfilePage };
-=======
-      </div>) }
-=======
->>>>>>> main
->>>>>>> main

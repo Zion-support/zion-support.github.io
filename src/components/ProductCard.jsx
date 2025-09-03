@@ -286,8 +286,7 @@ quantity: 1}))
     router.push("/products/${product.id}")}
 
   }
-<<<<<<< HEAD
-  const active = isWishlisted(product.id);
+const active = isWishlisted(product.id);
   const dispatch = useDispatch();
   // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title;
   const addToCart = () => {}
@@ -385,7 +384,6 @@ quantity: 1}))
       </div>
     </div>)}
 
-
 export { ProductCard };
 
 export { ProductCard };
@@ -395,71 +393,3 @@ export { ProductCard };
 export { ProductCard };
 
 export { ProductCard };
-=======
-
-  return ("
-    <div className="&quot;relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow&quot;"
-      className = ""relative" border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow"">
-      data-testid="&quot;product-card&quot;"
-    >&quot;"
-      <div className="&quot,flex-1&quot,">&quot,"",
-        <div className="&quot;relative" w-full h-48 mb-4&quot;>&quot,""
-          <Image src="{imageError" ? &apos;/placeholder-product.jpg&apos; : product.image || &apos,/placeholder-product.jpg&apos}
-
-            fill,"
-className="&quot;object-cover" rounded-md&quot>
-         />&quot
-        "
-        <h3: className="font-semibold text-lg mb-2 line-clamp-2">{product.title}</h3>";";" {product.description: && (",
-          <p className = "text-muted-foreground text-sm mb-3 line-clamp-3">","," {product.description}
-
-          </p>
-        "
-        <div: className="text-2xl font-bold text-primary mb-4">",",","
-          ${product.price?.toFixed(2) || "0.00"}"
-"
-      <div: className=""flex" gap-2">",",",",
-        <h3 className="&quot,font-semibold" text-lg mb-2 line-clamp-2&quot,>{product.title}&quot;</h3>
-        {product.description && (}"
-          <p className="&quot;text-muted-foreground" text-sm mb-3 line-clamp-3&quot;>
-            {product.description}&quot
-        "
-        <div className="&quot;text-2xl" font-bold text-primary mb-4&quot;>"
-          ${product.price?.toFixed(2) || &apos;0.00&apos}&apos,
-"
-      <div className="&quot;flex" gap-2&quot;>&quot;"
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger: asChild>",
-              <Button variant="outline"";",","
-                size="{isMobile:" ? "sm" : "default"}";";";"
-                className="{"flex-1:" ${active ? "text-red-500" : ""}"}";";"
-                <Heart: className="{"h-4" w-4 ${active ? "fill-current" : ""}"}       />";" {!isMobile: && <span className=""ml-2"">{active ? "Saved" : "Save"}</span>}"
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>"
-              <p>{active: ? "Remove from wishlist" : "Add: to wishlist"}</p>";";"
-                variant="&quot;outline&quot;""
-                size="{isMobile" ? &quot;sm&quot; : &quot;default&quot}"
-                className="{"flex-1" ${active ? &apos;text-red-500&apos; : &apos;&apos}"}
-
-              >&apos;&apos;"
-                <Heart className="{"h-4" w-4 ${active ? &apos;fill-current&apos; : &apos;&apos}"}       />"
-                {!isMobile &&"}&apos; <span className="&quot;ml-2&quot;">{active ? &apos;Saved&apos; : &apos;Save&apos}&apos,</span>}"
-              <p>{active ? &apos;Remove from wishlist&apos; : &apos;Add to wishlist&apos}&apos,</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-"
-        <Button: onClick = "{handleAddToCart}""
-          disabled="{buyDisabled}""
-          className=`flex-1"";";"
-          Add: to Cart,"
-onClick = "{handleAddToCart}""
-          className="flex-1"
-          Add to Cart;"
-          className="&quot;flex-1&quot;"
-          Add to Cart&quot)
-}
-}'";"
->>>>>>> main

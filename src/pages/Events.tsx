@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link  } from 'react-router-dom';
 export default function Page(...args: any[]): any {): unknown {): unknown {}
@@ -300,7 +299,6 @@ export default function Events(...args: unknown[]): unknown {
       month: 'long',       day: 'numeric' 
     }) };
 
-
   const getCategoryIcon = (category: unknownstring)  => {
     switch (category) {
       case 'AI & ML': return Brain;
@@ -455,7 +453,6 @@ export default function Events(...args: unknown[]): unknown {
               </p>
             </motion.div>
 
-
             <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">
               {upcomingEvents.map((event, index)  => {
                 const CategoryIcon = getCategoryIcon(event.category);
@@ -574,7 +571,6 @@ export default function Events(...args: unknown[]): unknown {
                     ))}
                   </div>
                 </div>
-
 
             <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">
               {pastEvents.map((event, index)  => {
@@ -709,12 +705,3 @@ export { Events, CategoryIcon, CategoryIcon };
 export { Events, CategoryIcon, CategoryIcon };
 
 export { Page, Events, CategoryIcon, CategoryIcon, Events };
-=======
-<<<<<<< HEAD
-import React from 'react'; import { SEO } from '../components/SEO'; const Events: React.FC = () => { return(<> <SEO title="Events" description="Join Zion Tech Group at upcoming technology events and conferences." keywords="events, conferences, technology, networking" /> <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center"> <div className="text-center"> <h1 className="text-4xl font-bold text-white mb-4">Events</h1> <p className="text-gray-300">Coming soon...</p> </div> </div> </> ); }; export default Events;
-=======
-import React from "react"; const Events: React.FC = () => { return(<> <SEO title="Events description="Join" Zion Tech Group at upcoming technology events and conferences." keywords="events, conferences, technology, networking       /> <div className="min-h-screen" bg-zion-slate-dark flex items-center justify-center"> <div className="text-center> <h1 className="text-4xl" font-bold text-white mb-4">Events</h1> <p className="text-gray-300">Coming soon...</p> </div> </div> </> )})
-}
-"export default ComponentName;"
->>>>>>> main
->>>>>>> main

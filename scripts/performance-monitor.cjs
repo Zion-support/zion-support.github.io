@@ -3,8 +3,8 @@
  * Performance Monitor
  * Monitors and optimizes application performance
  */
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class PerformanceMonitor {
   constructor() {
@@ -13,15 +13,15 @@ class PerformanceMonitor {
       bundleSize: 0,
       buildTime: 0,
       pageLoadTime: 0,
-      memoryUsage: 0,
+      memoryUsage: 0
 }
-    this.optimizations = [],
+    this.optimizations = []
 }
 
   log(message, type = "info") {
     const timestamp = new Date().toISOString()
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`
-    console.log(logEntry),
+    console.log(logEntry)
 }
 
   async measureBundleSize() {
@@ -29,21 +29,21 @@ class PerformanceMonitor {
       this.log("Measuring bundle size...")
       // Check if .next directory exists
       if (fs.existsSync(".next")) {
-        const { execSync } = require("$1");
+        const { execSync } = require("child_process");
 const result = execSync("du -sh .next", { encoding: "utf8" })
         const size = result.split("\t")[0]
         this.metrics.bundleSize = size
-        this.log(`Bundle size: ${size}`, "success"),
+        this.log(`Bundle size: ${size}`, "success")
 } else {
         this.log("No build found, running build first...")
         execSync("npm run build", { cwd: this.projectRoot, stdio: "pipe" })
         const result = execSync("du -sh .next", { encoding: "utf8" })
         const size = result.split("\t")[0]
         this.metrics.bundleSize = size
-        this.log(`Bundle size: ${size}`, "success"),
+        this.log(`Bundle size: ${size}`, "success")
 }
     } catch (error) {
-      this.log(`Bundle size measurement failed: ${error.message}`, "error"),
+      this.log(`Bundle size measurement failed: ${error.message}`, "error")
 }
   }
 
@@ -54,9 +54,9 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
       execSync("npm run build", { cwd: this.projectRoot, stdio: "pipe" })
       const endTime = Date.now()
       this.metrics.buildTime = endTime - startTime
-      this.log(`Build time: ${this.metrics.buildTime}ms`, "success"),
+      this.log(`Build time: ${this.metrics.buildTime}ms`, "success")
 } catch (error) {
-      this.log(`Build time measurement failed: ${error.message}`, "error"),
+      this.log(`Build time measurement failed: ${error.message}`, "error")
 }
   }
 
@@ -69,8 +69,8 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
         this.optimizations.push({
           type: "large_files",
           files: largeFiles,
-          recommendation: "Consider code splitting or lazy loading for large files",
-}),
+          recommendation: "Consider code splitting or lazy loading for large files"
+})
 }
       
       // Check for unused dependencies
@@ -79,8 +79,8 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
         this.optimizations.push({
           type: "unused_dependencies",
           dependencies: unusedDeps,
-          recommendation: "Remove unused dependencies to reduce bundle size",
-}),
+          recommendation: "Remove unused dependencies to reduce bundle size"
+})
 }
       
       // Check for performance anti-patterns
@@ -89,13 +89,13 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
         this.optimizations.push({
           type: "anti_patterns",
           patterns: antiPatterns,
-          recommendation: "Optimize performance anti-patterns",
-}),
+          recommendation: "Optimize performance anti-patterns"
+})
 }
       
-      this.log("Performance analysis completed", "success"),
+      this.log("Performance analysis completed", "success")
 } catch (error) {
-      this.log(`Performance analysis failed: ${error.message}`, "error"),
+      this.log(`Performance analysis failed: ${error.message}`, "error")
 }
   }
 
@@ -104,11 +104,11 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
     const sourceDirs = ["src", "pages", "components"]
     for (const dir of sourceDirs) {
       if (fs.existsSync(dir)) {
-        this.findLargeFilesRecursively(dir, largeFiles),
+        this.findLargeFilesRecursively(dir, largeFiles)
 }
     }
     
-    return largeFiles.filter(file => file.size > 100000); // Files larger than 100KB,
+    return largeFiles.filter(file => file.size > 100000); // Files larger than 100KB
 }
 
   findLargeFilesRecursively(dir, largeFiles) {
@@ -117,12 +117,12 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
       const fullPath = path.join(dir, item)
       const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
-        this.findLargeFilesRecursively(fullPath, largeFiles),
+        this.findLargeFilesRecursively(fullPath, largeFiles)
 } else if (stat.isFile()) {
         largeFiles.push({
           path: fullPath,
-          size: stat.size,
-}),
+          size: stat.size
+})
 }
     }
   }
@@ -136,14 +136,14 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
       const unusedDeps = []
       for (const dep of dependencies) {
         if (!this.isDependencyUsed(dep)) {
-          unusedDeps.push(dep),
+          unusedDeps.push(dep)
 }
       }
       
-      return unusedDeps,
+      return unusedDeps
 } catch (error) {
       this.log(`Unused dependencies check failed: ${error.message}`, "error")
-      return [],
+      return []
 }
   }
 
@@ -154,13 +154,13 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
         if (fs.existsSync(dir)) {
           const result = execSync(`grep -r "${dependency}" ${dir}`, { encoding: "utf8" })
           if (result.trim()) {
-            return true,
+            return true
 }
         }
       }
-      return false,
+      return false
 } catch (error) {
-      return false,
+      return false
 }
   }
 
@@ -169,11 +169,11 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
     const sourceDirs = ["src", "pages", "components"]
     for (const dir of sourceDirs) {
       if (fs.existsSync(dir)) {
-        this.findAntiPatternsRecursively(dir, antiPatterns),
+        this.findAntiPatternsRecursively(dir, antiPatterns)
 }
     }
     
-    return antiPatterns,
+    return antiPatterns
 }
 
   findAntiPatternsRecursively(dir, antiPatterns) {
@@ -182,7 +182,7 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
       const fullPath = path.join(dir, item)
       const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
-        this.findAntiPatternsRecursively(fullPath, antiPatterns),
+        this.findAntiPatternsRecursively(fullPath, antiPatterns)
 } else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx"))) {
         const content = fs.readFileSync(fullPath, "utf8")
         // Check for common performance anti-patterns
@@ -190,16 +190,16 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
           antiPatterns.push({
             file: fullPath,
             pattern: "useEffect with empty dependency array and fetch",
-            line: content.split("\n").findIndex(line => line.includes("useEffect(() => {}, [])")),
-}),
+            line: content.split("\n").findIndex(line => line.includes("useEffect(() => {}, [])"))
+})
 }
         
         if (content.includes("console.log") && !fullPath.includes("test")) {
           antiPatterns.push({
             file: fullPath,
             pattern: "console.log in production code",
-            line: content.split("\n").findIndex(line => line.includes("console.log")),
-}),
+            line: content.split("\n").findIndex(line => line.includes("console.log"))
+})
 }
       }
     }
@@ -217,12 +217,12 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
         "Remove unused dependencies",
         "Implement proper caching strategies",
         "Use React.memo for expensive components",
-        "Optimize bundle size with webpack analysis"],
+        "Optimize bundle size with webpack analysis"]
 }
     const reportPath = path.join(this.projectRoot, "performance-monitor-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
     this.log(`Performance report saved to ${reportPath}`, "success")
-    return report,
+    return report
 }
 
   async run() {
@@ -234,10 +234,10 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
       const report = await this.generatePerformanceReport()
       this.log("Performance Monitor completed")
       this.log(`Summary: ${report.optimizations.length} optimizations found`)
-      return report,
+      return report
 } catch (error) {
       this.log(`Performance monitor failed: ${error.message}`, "error')
-      throw error,
+      throw error
 }
   }
 }
@@ -245,7 +245,7 @@ const result = execSync("du -sh .next", { encoding: "utf8" })
 // Run the performance monitor
 if (require.main === module) {
   const monitor = new PerformanceMonitor()
-  monitor.run().catch(console.error),
+  monitor.run().catch(console.error)
 }
 
 module.exports = PerformanceMonitor

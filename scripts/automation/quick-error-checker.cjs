@@ -4,7 +4,7 @@ const fs = require("fs").promises;
 const path = require(`path`);
 class $1 {
   constructor() {
-  #!/"usr/bin/env" node;
+  #!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs").promises;
 const path = require("path");
@@ -14,14 +14,14 @@ class QuickErrorChecker {
   this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, `automation/logs/quick-error-checker.log`);
     this.fixesApplied = [];
-    this.startTime = new Date();,
+    this.startTime = new Date();
 }
 ;
   async log(message) {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(`logMessage);
-    await fs.appendFile(this.logFile, logMessage + `\n`);,
+    await fs.appendFile(this.logFile, logMessage + `\n`);
 }
 ;
   async runCommand(command, options = {}) {
@@ -30,7 +30,7 @@ class QuickErrorChecker {
   cwd: this.projectRoot,;
         encoding: `utf8`,;
         stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+        ...options;
 });
       return { success: true, output: result }
     } catch (error) {
@@ -75,11 +75,11 @@ class QuickErrorChecker {
             this.fixesApplied.push({
   type: "syntax-fix",;
               file: file,;
-              timestamp: new Date().toISOString();,
-});,
+              timestamp: new Date().toISOString();
+});
 }
         }
-      } catch (error) {  await this.log(`❌ Error checking ${pattern  }: ${error.message}`);,
+      } catch (error) {  await this.log(`❌ Error checking ${pattern  }: ${error.message}`);
 }
     }
   }
@@ -119,10 +119,10 @@ class QuickErrorChecker {
           this.fixesApplied.push({
   type: "import-fix",;
             file: file,;
-            timestamp: new Date().toISOString();,
-});,
+            timestamp: new Date().toISOString();
+});
 }
-      } catch (error) {  await this.log(`❌ Error checking ${file  }: ${error.message}`);,
+      } catch (error) {  await this.log(`❌ Error checking ${file  }: ${error.message}`);
 }
     }
   }
@@ -136,9 +136,9 @@ class QuickErrorChecker {
       if (!content.includes("module.exports")) {
   await this.log("🔧 Fixing ESLint configuration...");const fixedConfig = `module.exports = {
   extends: [""next/core-web-vitals"", ""next/typescript""],;
-  rules: {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn";,
+  rules: {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn";
 },;
-  ignorePatterns: ["node_modules/", ".next/", "out/", "dist/"];,
+  ignorePatterns: ["node_modules/", ".next/", "out/", "dist/"];
 };`;
         ;
         await fs.writeFile(eslintPath, fixedConfig);
@@ -149,10 +149,10 @@ class QuickErrorChecker {
         this.fixesApplied.push({
   type: "eslint-config-fix",;
           file: ".eslintrc.js',;
-          timestamp: new Date().toISOString();,
-});,
+          timestamp: new Date().toISOString();
+});
 }
-    } catch (error) {  await this.log(`❌ Error checking ESLint config: ${error.message  }`);,
+    } catch (error) {  await this.log(`❌ Error checking ESLint config: ${error.message  }`);
 }
   }
 ;
@@ -170,13 +170,13 @@ class QuickErrorChecker {
       return {
   success: true,;
         fixesApplied: this.fixesApplied.length,;
-        duration: duration.getTime();,
+        duration: duration.getTime();
 }
-      ;,
+      ;
 } catch (error) {  await this.log(`❌ Quick Error Check failed: ${error.message  }`);
-      ;,
+      ;
 } catch (error) {await this.log(`❌ Quick Error Check failed: ${error.message}`);
-      throw error;,
+      throw error;
 }
   }
 }
@@ -187,11 +187,11 @@ if (require.main === module) {
   checker.run();
     .then(result => {
   console.log(`Quick error check completed successfully`);
-      process.exit(0);,
+      process.exit(0);
 });
     .catch(error => {
-  console.error(`Quick error check failed: `, error);      process.exit(1);,
-});,
+  console.error(`Quick error check failed: `, error);      process.exit(1);
+});
 }
 ;
 module.exports = QuickErrorChecker

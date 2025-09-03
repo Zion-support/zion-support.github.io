@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page() {
 ;
@@ -200,7 +197,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 }, []);, []);
     if(!enabled) return;
 
-
         trackEvent('performance_metrics', {
           load_time: loadTime,
           fcp: fcp,
@@ -224,7 +220,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   };
 }, []);, []);
     if(!enabled) return;
-
 
       trackEvent('session_end', {
         session_duration: sessionDuration,
@@ -526,9 +521,3 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     </>) };
 export default EnhancedAnalytics;
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

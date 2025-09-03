@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Shield,
   Lock,
@@ -62,11 +61,6 @@ const AICybersecurityPlatform: React.FC = () => {}
   useEffect(() => {}
     setIsVisible(true)}, []);
 
-  
-  
-  
-  
-  
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">"
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -586,5 +580,3 @@ const AICybersecurityPlatform: React.FC = () => {}
 
 export default AICybersecurityPlatform;'"`
 '"`'"`
-=======
->>>>>>> main

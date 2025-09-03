@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { toast } from 'sonner';
@@ -155,4 +153,3 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     </Form>
   );
 }
->>>>>>> main

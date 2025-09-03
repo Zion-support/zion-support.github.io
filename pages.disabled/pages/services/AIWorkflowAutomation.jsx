@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { motion } from 'framer-motion';'
@@ -286,9 +285,6 @@ const AIWorkflowAutomation = () => {}
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx
 }} transition={{ duration: 0.8 }} className="text-center">"
@@ -407,9 +403,6 @@ const AIWorkflowAutomation = () => {}
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
@@ -454,9 +447,6 @@ const AIWorkflowAutomation = () => {}
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mr-4">
 =
   delay: index * 0.1 
-
-
-
 
 "
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx
@@ -520,9 +510,6 @@ const AIWorkflowAutomation = () => {}
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
@@ -566,9 +553,6 @@ const AIWorkflowAutomation = () => {}
               <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
 =
   delay: index * 0.1 
-
-
-
 
 "
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx
@@ -622,9 +606,6 @@ const AIWorkflowAutomation = () => {}
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
@@ -668,9 +649,6 @@ const AIWorkflowAutomation = () => {}
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
 =
   delay: index * 0.1 
-
-
-
 
 "
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx
@@ -723,9 +701,6 @@ const AIWorkflowAutomation = () => {}
 =
   y: 0 
 
-
-
-
 "
 :pages.disabled/pages/services/AIWorkflowAutomation.jsx
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">"
@@ -771,5 +746,3 @@ export default AIWorkflowAutomation;'"
 }}}}}}}}}'"'"
 export default AIWorkflowAutomation;
 }}}}}}}}}'""
-=======
->>>>>>> main

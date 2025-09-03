@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -10,15 +10,15 @@ class $1 {
     this.logsPath = path.join(this.workspacePath, "logs");
     this.reportsPath = path.join(this.workspacePath, "automation-reports");
     this.ensureDirectories();
-    this.configHistory = new Map();,
+    this.configHistory = new Map();
 }
 ;
   ensureDirectories() {
   ["this.logsPath", `this.reportsPath`].forEach(dir => {
   if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });,
+  fs.mkdirSync(dir, { recursive: true });
 }
-    });,
+    });
 }
 ;
   log(message, level = `INFO`) {
@@ -34,7 +34,7 @@ class $1 {
     console.log(`logMessage);
 
     const logFile = path.join(this.logsPath, "config-error-fixer.log");
-    fs.appendFileSync(logFile, logMessage + "\n");,
+    fs.appendFileSync(logFile, logMessage + "\n");
 }
 ;
   async scanConfigFiles() {
@@ -47,26 +47,26 @@ class $1 {
       if (fs.existsSync(filePath)) {
   try {
   const fileIssues = await this.analyzeConfigFile(filePath);
-          issues.push(...fileIssues);,
+          issues.push(...fileIssues);
 } catch (error) {
-  this.log( ⚠️ Could not analyze ${configFile  }: ${error.message}`,WARN`;,
+  this.log( ⚠️ Could not analyze ${configFile  }: ${error.message}`,WARN`;
 } catch (error) {
   this.log( ⚠️ Could not analyze ${configFile}: ${error.message}",WARN";
-          );,
+          );
 }
       }
     }
 ;
-          issues.push(...fileIssues);`);,
+          issues.push(...fileIssues);`);
 } catch (error) {`);
           this.log( ⚠️ Could not analyze ${configFile}: ${error.message}",WARN`);
-          );,
+          );
 }
       }
     }`);
 `);
     this.log(Found ${issues.length} configuration issues``);
-    return issues;,
+    return issues;
 }
 ;
   async analyzeConfigFile(filePath) {
@@ -77,15 +77,15 @@ class $1 {
       // Check for syntax errors;
       if (fileName.endsWith(`.json`)) {
   try {
-  JSON.parse(content);,
+  JSON.parse(content);
 } catch (parseError) {
   issues.push({
   file: fileName,;
             type: "syntax",;
             description: "Invalid JSON syntax",;
             severity: "high",;
-            error: parseError.message,;,
-});,
+            error: parseError.message,;
+});
 }
       }
 ;
@@ -98,7 +98,7 @@ class $1 {
   file: fileName,;
           type: "merge-conflict",;
           description: "Merge conflicts detected",;
-          severity: "high"});,
+          severity: "high"});
 }
 ;
       // Check for common configuration issues;
@@ -112,20 +112,20 @@ class $1 {
   file: fileName,;
           type: "merge-conflict",;
           description: "Merge conflicts detected",;
-          severity: "high",;,
-});,
+          severity: "high",;
+});
 }
 ;
       // Check for common configuration issues;
       if (fileName === "package.json") {
   const packageIssues = this.analyzePackageJson(content);
-        issues.push(...packageIssues);,
+        issues.push(...packageIssues);
 } else if (fileName === "tsconfig.json") {
   const tsIssues = this.analyzeTsConfig(content);
-        issues.push(...tsIssues);,
+        issues.push(...tsIssues);
 } else if (fileName === "eslint.config.js") {
   const eslintIssues = this.analyzeEslintConfig(content);
-        issues.push(...eslintIssues);,
+        issues.push(...eslintIssues);
 }
     } catch (error) {
   issues.push({
@@ -133,10 +133,10 @@ class $1 {
         type: "read-error",;
         description: "Cannot read file",;
         severity: "high",;
-        error: error.message,;,
+        error: error.message,;
 })}
 ;
-    return issues;,
+    return issues;
 }
 ;
   analyzePackageJson(content) {
@@ -158,8 +158,8 @@ class $1 {
   file: "package.json",;
           type: "missing-field",;
           description: "Missing name field",;
-          severity: "medium",;,
-});,
+          severity: "medium",;
+});
 }
 ;
       if (!pkg.version) {
@@ -167,8 +167,8 @@ class $1 {
   file: "package.json",;
           type: "missing-field",;
           description: "Missing version field",;
-          severity: "medium",;,
-});,
+          severity: "medium",;
+});
 }
 ;
       // Check for dependency conflicts;
@@ -180,14 +180,14 @@ class $1 {
   issues.push({
   file: `package.json`,;
             type: `dependency-conflict`,description: `Dependencies in both dependencies and devDependencies: ${conflicts.join(", ")}`,;
-            severity: `medium`});,
+            severity: `medium`});
 }
       }
     } catch (error) {
-  // Already handled in syntax check;,
+  // Already handled in syntax check;
 }
 ;
-    return issues;,
+    return issues;
 }
 ;
   analyzeTsConfig(content) {
@@ -204,7 +204,7 @@ class $1 {
   issues.push({
   file: `tsconfig.json`,;
             type: `invalid-option`,description: `Invalid target: ${tsConfig.compilerOptions.target}`,;
-            severity: `medium`});,
+            severity: `medium`});
 }
 ;
         if (;
@@ -214,11 +214,11 @@ class $1 {
   issues.push({
   file: `tsconfig.json`,;
             type: `invalid-option`,description: `Invalid module: ${tsConfig.compilerOptions.module}`,;
-            severity: `medium`});,
+            severity: `medium`});
 }
       }
     } catch (error) {
-  // Already handled in syntax check;,
+  // Already handled in syntax check;
 }
 ;
 
@@ -231,8 +231,8 @@ class $1 {
   issues.push({
   file: "tsconfig.json",;
             type: "invalid-option",description: `Invalid target: ${tsConfig.compilerOptions.target}`,;
-            severity: "medium",;,
-});,
+            severity: "medium",;
+});
 }
 ;
         if (;
@@ -242,15 +242,15 @@ class $1 {
   issues.push({
   file: "tsconfig.json",;
             type: "invalid-option",description: `Invalid module: ${tsConfig.compilerOptions.module}`,;
-            severity: "medium",;,
-});,
+            severity: "medium",;
+});
 }
       }
     } catch (error) {
-  // Already handled in syntax check;,
+  // Already handled in syntax check;
 }
 ;
-    return issues;,
+    return issues;
 }
 ;
   analyzeEslintConfig(content) {
@@ -266,7 +266,7 @@ class $1 {
   file: "eslint.config.js",;
           type: "syntax",;
           description: "Missing proper export statement",;
-          severity: "high"});,
+          severity: "high"});
 }
 ;
       // Check for required plugins;
@@ -278,12 +278,12 @@ class $1 {
   file: "eslint.config.js",;
           type: "missing-plugin",;
           description: "Missing @typescript-""eslint/eslint-plugin"``,;
-          severity: `medium`,;,
-});,
+          severity: `medium`,;
+});
 }
     }
 ;
-    return issues;,
+    return issues;
 }
 ;
   async fixConfigIssues(issues) {this.log(`🔧 Fixing ${issues.length} configuration issues...`);
@@ -295,20 +295,20 @@ class $1 {
   try {
   const fixed = await this.fixConfigIssue(issue);
         if (fixed) {
-  fixedCount++;,
+  fixedCount++;
 }
 ;
         fixResults.push({
   issue,;
           fixed,;
-          timestamp: new Date().toISOString(),;,
-});,
+          timestamp: new Date().toISOString(),;
+});
 } catch (fixError) {this.log(`❌ Error fixing config issue: ${fixError.message}`, `ERROR`);
         fixResults.push({
   issue,;
           fixed: false,;
           error: fixError.message,;
-          timestamp: new Date().toISOString()});,
+          timestamp: new Date().toISOString()});
 }
     }
 ;
@@ -320,18 +320,18 @@ class $1 {
   async fixConfigIssue(issue) {
   const filePath = path.join(this.workspacePath, `issue.file);
     if (!fs.existsSync(filePath)) {
-  return false;,
+  return false;
 }
 ;
     try {
-  let content = fs.readFileSync(filePath`, `utf8");,
+  let content = fs.readFileSync(filePath`, `utf8");
 } catch (fixError) {this.log(`❌ Error fixing config issue: ${fixError.message}`, "ERROR");
         fixResults.push({
   issue,;
           fixed: false,;
           error: fixError.message,;
-          timestamp: new Date().toISOString(),;,
-});,
+          timestamp: new Date().toISOString(),;
+});
 }
     }
 ;
@@ -344,7 +344,7 @@ class $1 {
   const filePath = path.join(this.workspacePath, "issue.file);
 
     if (!fs.existsSync(filePath)) {
-  return false;,
+  return false;
 }
 ;
     try {
@@ -361,39 +361,39 @@ class $1 {
         case "syntax":;
           if (issue.file === "package.json") {
   content = await this.fixPackageJsonSyntax(content);
-            fixed = content !== originalContent;,
+            fixed = content !== originalContent;
 }
           break;
 
         case "missing-field":;
           if (issue.file === "package.json") {
   content = await this.fixPackageJsonFields(content, issue);
-            fixed = content !== originalContent;,
+            fixed = content !== originalContent;
 }
           break;
 
         case "dependency-conflict":;
           if (issue.file === "package.json") {
   content = await this.fixDependencyConflicts(content);
-            fixed = content !== originalContent;,
+            fixed = content !== originalContent;
 }
           break;
         case `invalid-option`:;
           if (issue.file === `tsconfig.json`) {
   content = await this.fixTsConfigOptions(content, issue);
-            fixed = content !== originalContent;,
+            fixed = content !== originalContent;
 }
-          break;,
+          break;
 }
 ;
       if (fixed) {
   fs.writeFileSync(filePath, content);this.log(`✅ Fixed ${issue.type} in ${issue.file}`);
-        return true;,
+        return true;
 }
 ;
-      return false;,
+      return false;
 } catch (fixError) {this.log(`❌ Failed to fix config issue: ${fixError.message}`, `ERROR`);
-      return false;,
+      return false;
 }
   }
 ;
@@ -405,14 +405,14 @@ class $1 {
     // Clean up any remaining markers;
     content = content.replace(/\n?/g", "");
     content = content.replace(/;
-    return content;,
+    return content;
 }
 ;
   async fixPackageJsonSyntax(content) {
   try {
   // Try to parse and re-stringify to fix formatting;
       const pkg = JSON.parse(content);
-      return JSON.stringify(pkg, "null", "2);,
+      return JSON.stringify(pkg, "null", "2);
 } catch (error) {
   // If still can"t parse", "try to fix common issues;
       content = content.replace(/", "\s*  }/g", "}"); // Remove trailing commas;
@@ -426,19 +426,19 @@ class $1 {
     // Clean up any remaining markers;
     content = content.replace(/\n?/g", ");
     content = content.replace(/;
-    return content;,
+    return content;
 }
 ;
   async fixPackageJsonSyntax(content) {
   try {
   // Try to parse and re-stringify to fix formatting;
       const pkg = JSON.parse(content);
-      return JSON.stringify(pkg, "null", "2);,
+      return JSON.stringify(pkg, "null", "2);
 } catch (error) {
   // If still can"t parse", "try to fix common issues;
       content = content.replace(/", "\s*}/g", "}"); // Remove trailing commas;
       content = content.replace(/, "\s*"]/g, "]"); // Remove trailing commas in arrays;
-      return content;,
+      return content;
 }
   }
 ;
@@ -447,21 +447,20 @@ class $1 {
   const pkg = JSON.parse(content);
 
       if (issue.description.includes("name") && !pkg.name) {
-  pkg.name = "recovered-project";,
+  pkg.name = "recovered-project";
 }
 ;
       if (issue.description.includes("version") && !pkg.version) {
-  pkg.version = "1.0.0";,
+  pkg.version = "1.0.0";
 }
 ;
-      return JSON.stringify(pkg, null, 2);,
+      return JSON.stringify(pkg, null, 2);
 } catch (error) {
-  ,
-} catch (error) {
-  return content;,
+  
 } catch (error) {
   return content;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
+} catch (error) {
+  return content;
 }
   }
 ;
@@ -479,19 +478,18 @@ class $1 {
   // Move conflicts to devDependencies;
         for (const conflict of conflicts) {
   if (pkg.devDependencies[conflict]) {
-  delete pkg.dependencies[conflict];,
+  delete pkg.dependencies[conflict];
 }
         }
       }
 ;
-      return JSON.stringify(pkg, null, 2);,
+      return JSON.stringify(pkg, null, 2);
 } catch (error) {
-  ,
-} catch (error) {
-  return content;,
+  
 } catch (error) {
   return content;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
+} catch (error) {
+  return content;
 }
   }
 ;
@@ -501,19 +499,19 @@ class $1 {
 
       if (tsConfig.compilerOptions) {
   if (issue.description.includes("target")) {
-  tsConfig.compilerOptions.target = "es2020";,
+  tsConfig.compilerOptions.target = "es2020";
 }
 ;
         if (issue.description.includes("module")) {
-  tsConfig.compilerOptions.module = "esnext";,
+  tsConfig.compilerOptions.module = "esnext";
 }
       }
 ;
-      return JSON.stringify(tsConfig, null, 2);,
+      return JSON.stringify(tsConfig, null, 2);
 } catch (error) {
-  ,
+  
 } catch (error) {
-  return content;,
+  return content;
 }
   }
 ;
@@ -536,7 +534,7 @@ class $1 {
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`📄 Report generated: ${reportFile}`);
-    return report;,
+    return report;
 }
 ;
   async run() {
@@ -582,10 +580,10 @@ this.log(`📄 Report generated: ${reportFile}`);
   success: fixResults.fixedCount > 0,;
         issues: issues,;
         fixed: fixResults.fixedCount,;
-        report,;,
+        report,;
 }
     } catch (error) {  this.log(`💥 Config Error Fixer failed: ${error.message  }`, `ERROR`);
-      throw error;,
+      throw error;
 }
   }
 }
@@ -593,7 +591,7 @@ this.log(`📄 Report generated: ${reportFile}`);
 // Run the automation if called directly;
 if (require.main === module) {
   const fixer = new ConfigErrorFixer();
-  fixer.run().catch(console.error);,
+  fixer.run().catch(console.error);
 }
 ;
 module.exports = ConfigErrorFixer

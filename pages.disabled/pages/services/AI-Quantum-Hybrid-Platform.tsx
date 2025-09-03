@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Brain,
   Atom,
@@ -42,10 +41,6 @@ const AIQuantumHybridPlatform: React.FC = () => {}
   useEffect(() => {}
     setIsVisible(true)}, []);
 
-  
-  
-  
-  
 :pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -535,5 +530,3 @@ const AIQuantumHybridPlatform: React.FC = () => {}
 
 export default AIQuantumHybridPlatform;'"`
 '"`'"`
-=======
->>>>>>> main

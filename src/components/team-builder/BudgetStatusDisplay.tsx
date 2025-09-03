@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 interface BudgetStatusDisplayProps extends React.PropsWithChildren<{}> {
 
   projectBriefBudget: string; // e.g., "$10,000 - $15,000", "< $20000", "Approx $30k"
@@ -123,4 +120,3 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
     </Card>;
   )};
 '"`
->>>>>>> main

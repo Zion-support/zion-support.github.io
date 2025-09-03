@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useMemo, useCallback } from 'react';
 import { useLocation  } from 'react-router-dom';
 export default function Page() {
@@ -106,5 +105,3 @@ if(typeof window !== 'null') {
 }
 export default PerformanceOptimizer;
 '"
-=======
->>>>>>> main

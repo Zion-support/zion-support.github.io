@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import SEO from "@/components/SEO";
 import { MobileAppHero } from "@/components/mobile-app/MobileAppHero";
@@ -23,7 +22,6 @@ const MobileAppPage = () => {
                                                     <AppStoreBanner />)};
 export default MobileAppPage;
 
-
 export { MobileAppPage };
 
 export { MobileAppPage };
@@ -33,12 +31,3 @@ export { MobileAppPage };
 export { MobileAppPage };
 
 export { MobileAppPage };
-=======
-<<<<<<< HEAD
-import React from 'react'; export default MobileAppPage; const MobileAppPage = () => { return((<SEO title="Zion AI Marketplace App" description="Hire top AI talent or find global IT jobs on the go.Download the Zion app now." keywords="AI freelancer app, hire tech, find IT jobs, tech marketplace app, mobile AI jobs" />) , (<MobileAppHero />) , (<AppFeatures />) , (<AppScreenshots />) , (<AppTestimonials />) , (<DownloadSection />) , (<AppStoreBanner />) ) ; }; ";"
-=======
-import React from "react")
-}
-'export default ComponentName;"
->>>>>>> main
->>>>>>> main

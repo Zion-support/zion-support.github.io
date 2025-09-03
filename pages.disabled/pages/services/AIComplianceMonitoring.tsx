@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIComplianceMonitoring.tsx
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIComplianceMonitoring() {
     'Automated compliance reporting and alerting',;'
@@ -232,5 +231,3 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
   )}}'"'"
     </div>;
   )}}'""
-=======
->>>>>>> main

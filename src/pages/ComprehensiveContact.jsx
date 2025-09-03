@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';'''
 import { Button } from '@/components/ui/button';'''
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'''
@@ -358,7 +357,6 @@ export default function ComprehensiveContact() {}
       </footer>
     </div>)}
 
-
 export { ComprehensiveContact };
 
 export { ComprehensiveContact };
@@ -368,6 +366,3 @@ export { ComprehensiveContact };
 export { ComprehensiveContact };
 
 export { ComprehensiveContact };
-=======
-import React from 'react'; export default function ComprehensiveContact () { const [formData, setFormData] = useState({ name: ", email: ", comp: ", phone: ", service: ", message: " }); const handleSubmit = (e) => { e.preventDefault () ;
->>>>>>> main

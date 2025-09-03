@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
 
  params - Function parameters
@@ -260,9 +257,3 @@ export default InnovationResearchSection;"
 export default IconComponent;
 export default IconComponent;
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

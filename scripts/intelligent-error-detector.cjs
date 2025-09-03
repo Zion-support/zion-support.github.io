@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class IntelligentErrorDetector {
   constructor() {
@@ -8,17 +8,17 @@ class IntelligentErrorDetector {
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
     this.errors = []
     this.warnings = []
-    this.suggestions = [],
+    this.suggestions = []
 }
 
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] [${level}] ${message}`),
+    console.log(`[${timestamp}] [${level}] ${message}`)
 }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
@@ -32,16 +32,16 @@ class IntelligentErrorDetector {
         issues.push({
           type: "error",
           message: "Double semicolon detected",
-          line: this.findLineNumber(content, ";"),
-}),
+          line: this.findLineNumber(content, ";")
+})
 }
 
       if (content.includes("import") && content.includes(";")) {
         issues.push({
           type: "error",
           message: "Malformed import statement",
-          line: this.findLineNumber(content, "import"),
-}),
+          line: this.findLineNumber(content, "import")
+})
 }
 
       // Check for unterminated strings
@@ -52,8 +52,8 @@ class IntelligentErrorDetector {
           issues.push({
             type: "warning",
             message: "Possible unterminated string",
-            line: this.findLineNumber(content, match[0]),
-}),
+            line: this.findLineNumber(content, match[0])
+})
 }
       }
 
@@ -70,20 +70,20 @@ class IntelligentErrorDetector {
             issues.push({
               type: "suggestion",
               message: "Consider adding semicolon",
-              line: index + 1,
-}),
+              line: index + 1
+})
 }
         }
       })
       if (issues.length > 0) {
         this.errors.push({
           file: relativePath,
-          issues: issues,
-}),
+          issues: issues
+})
 }
-,
+
 } catch (error) {
-      this.log(`Error scanning ${filePath}: ${error.message}`, "ERROR"),
+      this.log(`Error scanning ${filePath}: ${error.message}`, "ERROR")
 }
   }
 
@@ -91,10 +91,10 @@ class IntelligentErrorDetector {
     const lines = content.split("\n")
     for (let i = 0; i < lines.length; i++) {
       if (lines[i].includes(searchString)) {
-        return i + 1,
+        return i + 1
 }
     }
-    return 1,
+    return 1
 }
 
   scanDirectory(dirPath) {
@@ -104,19 +104,19 @@ class IntelligentErrorDetector {
         const fullPath = path.join(dirPath, item)
         const stat = fs.statSync(fullPath)
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-          this.scanDirectory(fullPath),
+          this.scanDirectory(fullPath)
 } else if (stat.isFile() && this.isCodeFile(item)) {
-          this.scanFile(fullPath),
+          this.scanFile(fullPath)
 }
       }
     } catch (error) {
-      this.log(`Error scanning directory ${dirPath}: ${error.message}`, "ERROR"),
+      this.log(`Error scanning directory ${dirPath}: ${error.message}`, "ERROR")
 }
   }
 
   isCodeFile(filename) {
     const extensions = [".js", ".jsx", ".ts", ".tsx", ".cjs", ".mjs"]
-    return extensions.some(ext => filename.endsWith(ext)),
+    return extensions.some(ext => filename.endsWith(ext))
 }
 
   async runLinting() {
@@ -125,9 +125,9 @@ class IntelligentErrorDetector {
       const result = execSync("npm run lint", {
         cwd: this.projectRoot, 
         encoding: "utf8",
-        stdio: "pipe",
+        stdio: "pipe"
 })
-      this.log("✅ ESLint passed", "SUCCESS"),
+      this.log("✅ ESLint passed", "SUCCESS")
 } catch (error) {
       this.log("❌ ESLint found issues", "ERROR")
       this.errors.push({
@@ -135,9 +135,9 @@ class IntelligentErrorDetector {
         issues: [{
           type: "error",
           message: "ESLint validation failed",
-          output: error.stdout || error.message,
-}],
-}),
+          output: error.stdout || error.message
+}]
+})
 }
   }
 
@@ -147,9 +147,9 @@ class IntelligentErrorDetector {
       const result = execSync("npm run type-check", {
         cwd: this.projectRoot, 
         encoding: "utf8",
-        stdio: "pipe",
+        stdio: "pipe"
 })
-      this.log("✅ TypeScript type check passed", "SUCCESS"),
+      this.log("✅ TypeScript type check passed", "SUCCESS")
 } catch (error) {
       this.log("❌ TypeScript type check found issues", "ERROR")
       this.errors.push({
@@ -157,9 +157,9 @@ class IntelligentErrorDetector {
         issues: [{
           type: "error",
           message: "TypeScript type check failed",
-          output: error.stdout || error.message,
-}],
-}),
+          output: error.stdout || error.message
+}]
+})
 }
   }
 
@@ -170,38 +170,38 @@ class IntelligentErrorDetector {
       summary: {
         totalErrors: this.errors.length,
         totalWarnings: this.warnings.length,
-        totalSuggestions: this.suggestions.length,
+        totalSuggestions: this.suggestions.length
 },
       errors: this.errors,
       warnings: this.warnings,
       suggestions: this.suggestions,
-      recommendations: this.generateRecommendations(),
+      recommendations: this.generateRecommendations()
 }
     const reportPath = path.join(this.reportsDir, "intelligent-error-detector-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
     this.log(`📄 Report saved to: ${reportPath}`, "SUCCESS")
-    return report,
+    return report
 }
 
   generateRecommendations() {
     const recommendations = []
     if (this.errors.length > 0) {
-      recommendations.push("Fix all syntax errors before proceeding"),
+      recommendations.push("Fix all syntax errors before proceeding")
 }
     
     if (this.warnings.length > 0) {
-      recommendations.push("Review and address warnings"),
+      recommendations.push("Review and address warnings")
 }
     
     if (this.suggestions.length > 0) {
-      recommendations.push("Consider implementing suggested improvements"),
+      recommendations.push("Consider implementing suggested improvements")
 }
 
     if (this.errors.length === 0 && this.warnings.length === 0) {
-      recommendations.push("Code quality looks good!"),
+      recommendations.push("Code quality looks good!")
 }
 
-    return recommendations,
+    return recommendations
 }
 
   printSummary() {
@@ -215,9 +215,9 @@ class IntelligentErrorDetector {
       this.errors.forEach(error => {
         this.log(`  📁 ${error.file}:`, "INFO")
         error.issues.forEach(issue => {
-          this.log(`    Line ${issue.line}: ${issue.message}`, "ERROR"),
-}),
-}),
+          this.log(`    Line ${issue.line}: ${issue.message}`, "ERROR")
+})
+})
 }
   }
 
@@ -236,14 +236,14 @@ class IntelligentErrorDetector {
     const report = this.generateReport()
     this.printSummary()
     this.log("🎉 Error detection completed!", "SUCCESS")
-    return report,
+    return report
 }
 }
 
 // Run the detector
 if (require.main === module) {
   const detector = new IntelligentErrorDetector()
-  detector.run().catch(console.error),
+  detector.run().catch(console.error)
 }
 
 module.exports = IntelligentErrorDetector

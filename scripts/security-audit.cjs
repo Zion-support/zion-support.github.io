@@ -1,24 +1,24 @@
 #!/usr/bin/env node
-const { execSync } = require("$1");
-const fs = require("$1");
+const { execSync } = require("child_process");
+const fs = require("child_process");
 const path = require("path")
 class SecurityAuditor {
   constructor() {
     this.projectRoot = process.cwd()
     this.reportsDir = path.join(this.projectRoot, "security-reports")
-    this.ensureDirectories(),
+    this.ensureDirectories()
 }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
+      fs.mkdirSync(this.reportsDir, { recursive: true })
 }
   }
 
   log(message, level = "info") {
     const timestamp = new Date().toISOString()
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`
-    console.log(logMessage),
+    console.log(logMessage)
 }
 
   async runNpmAudit() {
@@ -28,7 +28,7 @@ class SecurityAuditor {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: "utf8",
-        timeout: 300000,
+        timeout: 300000
 })
       
       const auditData = JSON.parse(result)
@@ -44,7 +44,7 @@ class SecurityAuditor {
       return {
         success: true, 
         output: error.stdout || error.message,
-        vulnerabilitiesFound: true ,
+        vulnerabilitiesFound: true 
 }
     }
   }
@@ -56,7 +56,7 @@ class SecurityAuditor {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: "utf8",
-        timeout: 300000,
+        timeout: 300000
 })
       
       const snykData = JSON.parse(result)
@@ -70,7 +70,7 @@ class SecurityAuditor {
       return {
         success: true, 
         output: error.stdout || error.message,
-        vulnerabilitiesFound: true ,
+        vulnerabilitiesFound: true 
 }
     }
   }
@@ -82,7 +82,7 @@ class SecurityAuditor {
       const result = execSync(command, {
         cwd: this.projectRoot,
         encoding: "utf8",
-        timeout: 300000,
+        timeout: 300000
 })
       
       const outdatedData = JSON.parse(result)
@@ -117,19 +117,19 @@ class SecurityAuditor {
             findings.push({
               file,
               matches: matches.length,
-              type: "potential_secret",
-}),
+              type: "potential_secret"
+})
 }
         }
       } catch (error) {
-        // Skip files we can"t read,
+        // Skip files we can"t read
 }
     }
     
     if (findings.length > 0) {
-      this.log(`⚠️ Found ${findings.length} potential secret exposures`, "warning"),
+      this.log(`⚠️ Found ${findings.length} potential secret exposures`, "warning")
 } else {
-      this.log("✅ No potential secrets found"),
+      this.log("✅ No potential secrets found")
 }
     
     return { success: true, findings }
@@ -147,21 +147,21 @@ class SecurityAuditor {
           const stat = fs.statSync(fullPath)
           
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-            scanDir(fullPath),
+            scanDir(fullPath)
 } else if (stat.isFile()) {
             const ext = path.extname(item)
             if (extensions.includes(ext)) {
-              files.push(fullPath),
+              files.push(fullPath)
 }
           }
         }
       } catch (error) {
-        // Skip directories we can"t read,
+        // Skip directories we can"t read
 }
     }
     
     scanDir(this.projectRoot)
-    return files,
+    return files
 }
 
   async generateReport() {
@@ -172,36 +172,36 @@ class SecurityAuditor {
         npmAudit: "completed",
         snykAudit: "completed",
         dependencyCheck: "completed",
-        secretScan: "completed",
+        secretScan: "completed"
 },
-      recommendations: this.generateRecommendations(),
+      recommendations: this.generateRecommendations()
 }
     
     const reportFile = path.join(this.reportsDir, `security-audit-report-${Date.now()}.json`)
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))
     this.log(`📄 Security report saved to: ${reportFile}`)
-    return reportFile,
+    return reportFile
 }
 
   generateRecommendations() {
     return [
       {
         type: "security",
-        message: "Review npm audit results and update vulnerable dependencies",
+        message: "Review npm audit results and update vulnerable dependencies"
 },
       {
         type: "security",
-        message: "Consider using Snyk for additional security scanning",
+        message: "Consider using Snyk for additional security scanning"
 },
       {
         type: "maintenance",
-        message: "Keep dependencies up to date",
+        message: "Keep dependencies up to date"
 },
       {
         type: "security",
-        message: "Use environment variables for sensitive configuration",
+        message: "Use environment variables for sensitive configuration"
 }
-    ],
+    ]
 }
 
   displaySummary() {
@@ -213,7 +213,7 @@ class SecurityAuditor {
     console.log("✅ Dependency Check: Completed")
     console.log("✅ Secret Scan: Completed")
     console.log("=".repeat(60))
-    console.log("📄 Reports saved to security-reports/ directory"),
+    console.log("📄 Reports saved to security-reports/ directory")
 }
 
   async run() {
@@ -243,8 +243,8 @@ class SecurityAuditor {
 if (require.main === module) {
   const auditor = new SecurityAuditor()
   auditor.run().then(result => {
-    process.exit(result.success ? 0 : 1),
-}),
+    process.exit(result.success ? 0 : 1)
+})
 }
 
 module.exports = SecurityAuditor

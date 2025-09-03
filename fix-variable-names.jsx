@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 function toCamelCase(str) {
@@ -11,10 +10,6 @@ function toCamelCase(str) {
 };
       return numberWords[match] || match})
   '0': 'Zero'
-      
-
-
-
 
 };
       return numberWords[match] || match;
@@ -110,5 +105,3 @@ export default toCamelCase;
 export default toCamelCase;
 export default toCamelCase;
 export default toCamelCase;
-=======
->>>>>>> main

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  const sitemapData = [{
+const sitemapData = [{
       title: 'Main Pages',
       links: [
         { name: 'Home', url: '/' },
@@ -88,8 +84,3 @@
       </div>;
     </div>;) }
 '"
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

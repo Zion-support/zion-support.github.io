@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
 
 export default function Page() {
@@ -49,7 +46,6 @@ export default function Page() {
   ;
 
 };
-
 
     if(numPrice < 100) return 'Low';
     if(numPrice < 1000) return 'Medium';
@@ -361,9 +357,3 @@ export default function Page() {
       </div>;
     </section>;) };
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

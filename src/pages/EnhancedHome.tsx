@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Link  } from 'react-router-dom';
 export default function Page() {
 ) ) , []) ;
@@ -385,4 +383,3 @@ const EnhancedHome: React.FC = () => {
       </div>
     </>) ;
 };
->>>>>>> main

@@ -373,7 +373,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 """
       {/* Map Section */}""""
       <section className="py-20 bg-zion-blue-dark/50">""""
@@ -420,7 +419,6 @@ export default function Contact() {
   );
 }
 
-
 export { Contact };
 
 export { Contact };
@@ -428,8 +426,3 @@ export { Contact };
 export { Contact };
 
 export { Contact };
-=======
-    </div>
-  );
-}
->>>>>>> main

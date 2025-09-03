@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-const fs = require("$1");
+const fs = require("child_process");
 const path = require("path")
 class RobustSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd()
     this.fixedFiles = []
-    this.errors = [],
+    this.errors = []
 }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`),
+    console.log(`[${new Date().toISOString()}] ${message}`)
 }
 
   fixFile(filePath) {
@@ -49,14 +49,14 @@ class RobustSyntaxFixer {
         fs.writeFileSync(filePath, content, "utf8")
         this.fixedFiles.push(filePath)
         this.log(`Fixed syntax errors in: ${filePath}`)
-        return true,
+        return true
 }
       
-      return false,
+      return false
 } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`Error fixing ${filePath}: ${error.message}`)
-      return false,
+      return false
 }
   }
 
@@ -67,7 +67,7 @@ class RobustSyntaxFixer {
     let fixedCount = 0
     for (const file of files) {
       if (this.fixFile(file)) {
-        fixedCount++,
+        fixedCount++
 }
     }
     
@@ -76,7 +76,7 @@ class RobustSyntaxFixer {
     return {
       fixedFiles: this.fixedFiles,
       errors: this.errors,
-      fixedCount,
+      fixedCount
 }
   }
 
@@ -88,19 +88,19 @@ class RobustSyntaxFixer {
         const fullPath = path.join(dir, item)
         const stat = fs.statSync(fullPath)
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-          files = files.concat(this.getAllFiles(fullPath, extensions)),
+          files = files.concat(this.getAllFiles(fullPath, extensions))
 } else if (stat.isFile()) {
           const ext = path.extname(item)
           if (extensions.includes(ext)) {
-            files.push(fullPath),
+            files.push(fullPath)
 }
         }
       }
     } catch (error) {
-      this.log(`Error reading directory ${dir}: ${error.message}`),
+      this.log(`Error reading directory ${dir}: ${error.message}`)
 }
     
-    return files,
+    return files
 }
 }
 
@@ -109,11 +109,11 @@ if (require.main === module) {
   const fixer = new RobustSyntaxFixer()
   fixer.fixAllFiles().then(result => {
     console.log("Robust syntax fixing completed: ", result)
-    process.exit(0),
+    process.exit(0)
 }).catch(error => {
     console.error("Robust syntax fixing failed: ', error)
-    process.exit(1),
-}),
+    process.exit(1)
+})
 }
 
 module.exports = RobustSyntaxFixer

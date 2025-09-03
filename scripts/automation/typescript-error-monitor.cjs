@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -11,15 +11,15 @@ class $1 {
     this.reportsPath = path.join(this.workspacePath, "automation-reports");
     this.ensureDirectories();
     this.errorHistory = new Map();
-    this.fixAttempts = new Map();,
+    this.fixAttempts = new Map();
 }
 ;
   ensureDirectories() {
   ["this.logsPath", `this.reportsPath`].forEach(dir => {
   if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });,
+  fs.mkdirSync(dir, { recursive: true });
 }
-    });,
+    });
 }
 ;
   log(message, level = `INFO`) {
@@ -35,7 +35,7 @@ class $1 {
     console.log(`logMessage);
 
     const logFile = path.join(this.logsPath, "typescript-error-monitor.log");
-    fs.appendFileSync(logFile, logMessage + "\n");,
+    fs.appendFileSync(logFile, logMessage + "\n");
 }
 ;
   async runTypeScriptCheck() {
@@ -78,8 +78,8 @@ class $1 {
             column: parseInt(match[3]),;
             code: match[4],;
             message: match[5].trim(),;
-            severity: "error",;,
-});,
+            severity: "error",;
+});
 }
       } else if (line.includes(`warning TS`)) {
   const match = line.match(;
@@ -92,25 +92,25 @@ class $1 {
             column: parseInt(match[3]),;
             code: match[4],;
             message: match[5].trim(),;
-            severity: `warning`,          });,
+            severity: `warning`,          });
 }
       }
     }
 ;
-    return errors;,
+    return errors;
 }
 ;
   async fixTypeScriptError(error) {
   const filePath = path.resolve(this.workspacePath, error.file);
     if (!fs.existsSync(filePath)) {this.log(`⚠️ File not found: ${filePath}`, `WARN`);
-      return false;,
+      return false;
 }
 ;
     try {
   let content = fs.readFileSync(filePath, `utf8`);
 
     if (!fs.existsSync(filePath)) {this.log(`⚠️ File not found: ${filePath}`, "WARN");
-      return false;,
+      return false;
 }
 ;
     try {
@@ -119,7 +119,7 @@ class $1 {
       const lineIndex = error.line - 1;
 
       if (lineIndex < 0 || lineIndex >= lines.length) {
-  return false;,
+  return false;
 }
 ;
       const originalLine = lines[lineIndex];
@@ -165,7 +165,7 @@ class $1 {
             lines,;
             lineIndex;
           );
-          fixed = fixedLine !== originalLine;,
+          fixed = fixedLine !== originalLine;
 }
 ;
       if (fixed) {
@@ -173,16 +173,16 @@ class $1 {
         fs.writeFileSync(filePath, lines.join(`\n`));
         this.log(✅ Fixed TypeScript error in ${error.file}:${error.line} (TS${error.code})`;
         );
-        return true;,
+        return true;
 }
 ;
-      return false;,
+      return false;
 } catch (fixError) {
-  this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;,
+  this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;
 } catch (fixError) {
   this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}",ERROR";
       );
-      return false;,
+      return false;
 }
   }
 ;
@@ -200,7 +200,7 @@ class $1 {
             importPath;
           );
           if (resolvedPath) {
-  fixedLine = line.replace(importPath, resolvedPath);,
+  fixedLine = line.replace(importPath, resolvedPath);
 }
         }
       }
@@ -236,16 +236,16 @@ class $1 {
             );
             if (fs.existsSync(fullPath)) {
   fixedLine = line.replace(importPath, importPath + ext);
-              break;,
+              break;
 }
           }
         }
       }
 ;
-      return fixedLine;,
+      return fixedLine;
 }
 ;
-    return line;,
+    return line;
 }
 ;
   async resolveImportPath(currentFile, importPath) {
@@ -256,11 +256,11 @@ class $1 {
       const extensions = [".ts", ".tsx", ".js", `.jsx`];
       for (const ext of extensions) {
   if (fs.existsSync(fullPath + ext)) {
-  return importPath + ext;,
+  return importPath + ext;
 }
       }
     }
-    return null;,
+    return null;
 }
 ;
   async fixPropertyError(error, lines, lineIndex) {
@@ -276,11 +276,11 @@ class $1 {
           new RegExp(`\\.${property}\\b`),.${property} as any`;
         );
 
-        return fixedLine;,
+        return fixedLine;
 }
     }
 ;
-    return line;,
+    return line;
 }
 ;
   async fixTypeMismatchError(error, lines, lineIndex) {
@@ -291,10 +291,10 @@ class $1 {
     if (line.includes("(") && line.includes(")")) {
   const fixedLine = line.replace(/\(([^)]+)\)/g, "(($1) as any)");
 
-      return fixedLine;,
+      return fixedLine;
 }
 ;
-    return line;,
+    return line;
 }
 ;
   async fixImplicitAnyError(error, lines, lineIndex) {
@@ -302,10 +302,10 @@ class $1 {
     // Add explicit any type for parameters;
     if (line.includes("function") || line.includes("=>")) {
   const fixedLine = line.replace(/(\w+)(?=\s*["", "\)"])/g, "$1: any");
-      return fixedLine;,
+      return fixedLine;
 }
 ;
-    return line;,
+    return line;
 }
 ;
   async fixTypeAssignmentError(error, lines, lineIndex) {
@@ -316,10 +316,10 @@ class $1 {
     if (line.includes("=")) {
   const fixedLine = line.replace(/=\s*([^]+);?$/, "= ($1) as any;");
 
-      return fixedLine;,
+      return fixedLine;
 }
 ;
-    return line;,
+    return line;
 }
 ;
   async fixGenericTypeScriptError(error, lines, lineIndex) {
@@ -327,13 +327,13 @@ class $1 {
     // Generic fix: add type assertion;
     if (line.trim() && !line.includes("//") && !line.includes("/*")) {
   if (line.includes(";")) {
-  return line.replace(";", ` as any;`);,
+  return line.replace(";", ` as any;`);
 } else {
-  return line + ` as any`;,
+  return line + ` as any`;
 }
     }
 ;
-    return line;,
+    return line;
 }
 ;
   async attemptFixes(errors) {this.log(`🔧 Attempting to fix ${errors.length} TypeScript errors...`);
@@ -345,19 +345,19 @@ class $1 {
   try {
   const fixed = await this.fixTypeScriptError(error);
         if (fixed) {
-  fixedCount++;,
+  fixedCount++;
 }
 ;
         fixResults.push({
   error,;
           fixed,;
-          timestamp: new Date().toISOString(),;,
+          timestamp: new Date().toISOString(),;
 });
         // Track fix attemptsconst errorKey = `${error.file}:${error.line}:${error.code}`;
         this.fixAttempts.set(;
           errorKey,;
           (this.fixAttempts.get(errorKey) || 0) + 1;
-        );,
+        );
 } catch (fixError) {
   this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`,;
           `ERROR`;
@@ -366,7 +366,7 @@ class $1 {
         this.fixAttempts.set(;
           errorKey,;
           (this.fixAttempts.get(errorKey) || 0) + 1;
-        );,
+        );
 } catch (fixError) {
   this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}",;
           "ERROR";
@@ -375,8 +375,8 @@ class $1 {
   error,;
           fixed: false,;
           error: fixError.message,;
-          timestamp: new Date().toISOString(),;,
-});,
+          timestamp: new Date().toISOString(),;
+});
 }
     }
 ;
@@ -405,7 +405,7 @@ class $1 {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
     this.log(`📄 Report generated: ${reportFile}`);
-    return report;,
+    return report;
 }
 ;
   async run() {
@@ -451,10 +451,10 @@ class $1 {
   success: fixResults.fixedCount > 0,;
         errors: checkResult.errors,;
         fixed: fixResults.fixedCount,;
-        report,;,
+        report,;
 }
     } catch (error) {  this.log(`💥 TypeScript Error Monitor failed: ${error.message  }`, `ERROR`);
-      throw error;,
+      throw error;
 }
   }
 }
@@ -462,7 +462,7 @@ class $1 {
 // Run the automation if called directly;
 if (require.main === module) {
   const monitor = new TypeScriptErrorMonitor();
-  monitor.run().catch(console.error);,
+  monitor.run().catch(console.error);
 }
 ;
 module.exports = TypeScriptErrorMonitor

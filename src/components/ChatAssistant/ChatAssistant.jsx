@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useContext } from 'react';
-<<<<<<< HEAD
 import { AuthContext } from "../../context/auth/AuthContext";
 ;
 ;
@@ -32,18 +30,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             else {}
                 setDisplayGuestMessages(storedGuestMessages)}
         }
-=======
-import { AuthContext } from '../../context/auth/AuthContext';"
-import { useDebounce } from '../../hooks/useDebounce';"
-import { useLocalStorage } from '../../hooks/useLocalStorage';"
-import { ChatMessage } from './ChatMessage';"
-import { ChatInput } from './ChatInput';"
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';"
-import { Button } from '@/components/ui/button';
-
-export default function Page() {
->>>>>>> main
-    }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);
+}, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);
     // Effect for logged-in user messages
     useEffect(() => {
   // TODO: Add dependencies if needed
@@ -191,8 +178,7 @@ export default function Page() {
         </div>
 
         {/* Input */}"
-=======
-            {contextHeader}"});,"})
+{contextHeader}"});,"})
 }
           </div>)}})
 }
@@ -221,8 +207,7 @@ export default function Page() {
   })
 }
   })"
->>>>>>> main
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
+<div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
   })
 }
   })"

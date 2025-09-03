@@ -3,7 +3,7 @@
  * Smart Build Optimizer - PM2 Automation;
  * Intelligent build optimization with performance analysis and auto-tuning;
  */;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 /**;
  * Smart Build Optimizer - PM2 Automation;
  * Intelligent build optimization with performance analysis and auto-tuning;
@@ -47,39 +47,39 @@ class $1 {
   this.optimizationStrategies = {
   vite: {build.rollupOptions.output.manualChunks":;
           "Split vendor chunks intelligently",build.rollupOptions.treeshake":;
-          "Enable tree shaking for smaller bundles",build.minify": "Use esbuild for faster minification",build.sourcemap": "Conditional source maps for production",;,
+          "Enable tree shaking for smaller bundles",build.minify": "Use esbuild for faster minification",build.sourcemap": "Conditional source maps for production",;
 },;
       typescript: {
   incremental: "Enable incremental compilation",;
         tsBuildInfoFile: "Use build info file for faster rebuilds",;
-        skipLibCheck: "Skip library checking for faster builds",;,
+        skipLibCheck: "Skip library checking for faster builds",;
 },;
       dependencies: {
   preinstall: "Use npm ci for faster installs",;
         cache: "Leverage npm cache effectively",;
-        parallel: "Install dependencies in parallel",;,
-},;,
+        parallel: "Install dependencies in parallel",;
+},;
 }
 ;
     this.performanceThresholds = {
   buildTime: 300000, // 5 minutes;
       bundleSize: 5000000, // 5MB;
       installTime: 120000, // 2 minutes;
-      rebuildTime: 60000, // 1 minute;,
+      rebuildTime: 60000, // 1 minute;
 }
   }
 ;
   ensureLogsDirectory() {
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });,
+  fs.mkdirSync(logsDir, { recursive: true });
 }
   }
 ;
   log(message, level = `INFO`) {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);,
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
 }
 ;
   async runOptimization() {
@@ -117,7 +117,7 @@ class $1 {
       currentPerformance: {},;
       optimizations: [],;
       recommendations: [],;
-      applied: [],;,
+      applied: [],;
 }
 ;
     try {
@@ -144,11 +144,11 @@ class $1 {
       await this.testOptimizations(optimization.applied);
 
       this.log(Build optimization completed: ${optimization.applied.length} optimizations applied";
-      );,
-} catch (error) {  this.log(`Build optimization failed: ${error.message  }`, `ERROR`);,
+      );
+} catch (error) {  this.log(`Build optimization failed: ${error.message  }`, `ERROR`);
 }
 ;
-    return optimization;,
+    return optimization;
 }
 ;
   async analyzeBuildPerformance() {
@@ -158,7 +158,7 @@ class $1 {
       installTime: 0,;
       rebuildTime: 0,;
       memoryUsage: 0,;
-      cpuUsage: 0,;,
+      cpuUsage: 0,;
 }
     try {
   // Measure build time;
@@ -189,11 +189,11 @@ class $1 {
       performance.cpuUsage = process.cpuUsage().user;
 
       this.log(Performance analysis: Build=${performance.buildTime}ms, Bundle=${performance.bundleSize}bytes, Install=${performance.installTime}ms";
-      );,
-} catch (error) {  this.log(`Performance analysis failed: ${error.message  }`, `WARN`);,
+      );
+} catch (error) {  this.log(`Performance analysis failed: ${error.message  }`, `WARN`);
 }
 ;
-    return performance;,
+    return performance;
 }
 ;
   async runBuild() {
@@ -203,12 +203,12 @@ class $1 {
         stdio: `pipe`});
       build.on(`close`, code => {
   if (code === 0) {
-  resolve();,
-} else {reject(new Error(`Build failed with code ${code}`));,
+  resolve();
+} else {reject(new Error(`Build failed with code ${code}`));
 }
       });
-      build.on(`error`, reject);,
-});,
+      build.on(`error`, reject);
+});
 }
 ;
   async runInstall() {
@@ -218,25 +218,25 @@ class $1 {
         stdio: `pipe`});
       install.on(`close`, code => {
   if (code === 0) {
-  build.on("error", reject);,
-});,
+  build.on("error", reject);
+});
 }
 ;
   async runInstall() {
   return new Promise((resolve, reject) => {
   const install = spawn("npm", ["install"], {
   cwd: this.projectRoot,;
-        stdio: "pipe",;,
+        stdio: "pipe",;
 });
 
       install.on("close", code => {
   if (code === 0) {
-  resolve();,
-} else {reject(new Error(`Install failed with code ${code}`));,
+  resolve();
+} else {reject(new Error(`Install failed with code ${code}`));
 }
       });
-      install.on(`error`, reject);,
-});,
+      install.on(`error`, reject);
+});
 }
 ;
   async runRebuild() {
@@ -246,20 +246,20 @@ class $1 {
         stdio: `pipe`});
       rebuild.on(`close`, code => {
   if (code === 0) {
-  resolve();,
-} else {reject(new Error(`Rebuild failed with code ${code}`));,
+  resolve();
+} else {reject(new Error(`Rebuild failed with code ${code}`));
 }
       });
-      rebuild.on(`error`, reject);,
-});,
+      rebuild.on(`error`, reject);
+});
 }
 ;
   async measureBundleSize() {
   try {
   const distPath = path.join(this.projectRoot, `dist`);
 
-      rebuild.on("error", reject);,
-});,
+      rebuild.on("error", reject);
+});
 }
 ;
   async measureBundleSize() {
@@ -272,12 +272,12 @@ class $1 {
 
       for (const file of files) {
   const stats = fs.statSync(file);
-        totalSize += stats.size;,
+        totalSize += stats.size;
 }
 ;
-      return totalSize;,
+      return totalSize;
 } catch (error) {  this.log(`Bundle size measurement failed: ${error.message  }`, `WARN`);
-      return 0;,
+      return 0;
 }
   }
 ;
@@ -287,13 +287,13 @@ class $1 {
   const fullPath = path.join(dir, `item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
-  this.getAllFilesRecursive(fullPath`, files);,
+  this.getAllFilesRecursive(fullPath`, files);
 } else {
-  files.push(fullPath);,
+  files.push(fullPath);
 }
     }
 ;
-    return files;,
+    return files;
 }
 ;
   async identifyOptimizations(performance) {
@@ -305,7 +305,7 @@ class $1 {
         priority: "HIGH",;
         description: "Build time exceeds threshold",;
         action: "Optimize Vite configuration and TypeScript settings",;
-        config: "vite.config.ts"});,
+        config: "vite.config.ts"});
 }
 ;
     // Bundle size optimizations;
@@ -315,7 +315,7 @@ class $1 {
         priority: "HIGH",;
         description: "Bundle size exceeds threshold",;
         action: "Implement code splitting and tree shaking",;
-        config: "vite.config.ts"});,
+        config: "vite.config.ts"});
 }
 ;
     // Install time optimizations;
@@ -325,7 +325,7 @@ class $1 {
         priority: "MEDIUM",;
         description: "Install time exceeds threshold",;
         action: "Optimize dependency installation",;
-        config: "package.json"});,
+        config: "package.json"});
 }
 ;
     // Rebuild time optimizations;
@@ -344,8 +344,8 @@ class $1 {
         priority: "HIGH",;
         description: "Build time exceeds threshold",;
         action: "Optimize Vite configuration and TypeScript settings",;
-        config: "vite.config.ts",;,
-});,
+        config: "vite.config.ts",;
+});
 }
 ;
     // Bundle size optimizations;
@@ -355,8 +355,8 @@ class $1 {
         priority: "HIGH",;
         description: "Bundle size exceeds threshold",;
         action: "Implement code splitting and tree shaking",;
-        config: "vite.config.ts",;,
-});,
+        config: "vite.config.ts",;
+});
 }
 ;
     // Install time optimizations;
@@ -366,8 +366,8 @@ class $1 {
         priority: "MEDIUM",;
         description: "Install time exceeds threshold",;
         action: "Optimize dependency installation",;
-        config: "package.json",;,
-});,
+        config: "package.json",;
+});
 }
 ;
     // Rebuild time optimizations;
@@ -377,11 +377,11 @@ class $1 {
         priority: "MEDIUM",;
         description: "Rebuild time exceeds threshold",;
         action: "Enable incremental compilation",;
-        config: "tsconfig.json",;,
-});,
+        config: "tsconfig.json",;
+});
 }
 ;
-    return optimizations;,
+    return optimizations;
 }
 ;
   async applyOptimizations(optimizations) {
@@ -394,14 +394,14 @@ class $1 {
   applied.push({
   ...optimization,;
             applied: true,;
-            result: result.message,;,
-});,
+            result: result.message,;
+});
 }
-      } catch (error) {  this.log(`Failed to apply optimization: ${error.message  }`, `WARN`);,
+      } catch (error) {  this.log(`Failed to apply optimization: ${error.message  }`, `WARN`);
 }
     }
 ;
-    return applied;,
+    return applied;
 }
 ;
   async applyOptimization(optimization) {
@@ -435,20 +435,20 @@ class $1 {
   output: {
   manualChunks: {
   vendor: ["react", "react-dom"],;
-          utils: ["lodash", "date-fns"];,
+          utils: ["lodash", "date-fns"];
 }
       }
     },;
     minify: "esbuild",;
     sourcemap: false,;
-    chunkSizeWarningLimit: 1000;,
+    chunkSizeWarningLimit: 1000;
 },`;
           );
 
           fs.writeFileSync(viteConfigPath, config);
           return {
   success: true,;
-            message: "Vite build configuration optimized",;,
+            message: "Vite build configuration optimized",;
 }
         }
       }
@@ -461,7 +461,7 @@ class $1 {
 ;
   async optimizeBundleSize() {
   try {
-  ,
+  
 } catch (error) {
   return { success: false, message: error.message }
     }
@@ -479,13 +479,13 @@ class $1 {
           incremental: true,;
           tsBuildInfoFile: "./"node_modules/.cache/.tsbuildinfo"",;
           skipLibCheck: true,;
-          removeComments: true,;,
+          removeComments: true,;
 }
 ;
         fs.writeFileSync(tsConfigPath, JSON.stringify(config, null, 2));
         return {
   success: true,;
-          message: "TypeScript configuration optimized for bundle size",;,
+          message: "TypeScript configuration optimized for bundle size",;
 }
       }
 ;
@@ -497,7 +497,7 @@ class $1 {
 ;
   async optimizeInstallTime() {
   try {
-  ,
+  
 } catch (error) {
   return { success: false, message: error.message }
     }
@@ -508,8 +508,7 @@ class $1 {
   // Add npm scripts for faster installs;
     try {
   // Add npm scripts for faster installs;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      const packagePath = path.join(this.projectRoot, "package.json");
+const packagePath = path.join(this.projectRoot, "package.json");
       if (fs.existsSync(packagePath)) {
   const pkg = JSON.parse(fs.readFileSync(packagePath, "utf8"));
 
@@ -530,7 +529,7 @@ class $1 {
 ;
   async optimizeRebuildTime() {
   try {
-  ,
+  
 } catch (error) {
   return { success: false, message: error.message }
     }
@@ -546,7 +545,7 @@ class $1 {
         config.compilerOptions = {
   ...config.compilerOptions,;
           incremental: true,;
-          tsBuildInfoFile: "./"node_modules/.cache/.tsbuildinfo"",;,
+          tsBuildInfoFile: "./"node_modules/.cache/.tsbuildinfo"",;
 }
 ;
         fs.writeFileSync(tsConfigPath, JSON.stringify(config, null, 2));
@@ -570,7 +569,7 @@ class $1 {
   category: "PERFORMANCE",;
         priority: "HIGH",;
         suggestion: "Consider using esbuild for faster builds",;
-        action: "Update Vite configuration to use esbuild minifier"});,
+        action: "Update Vite configuration to use esbuild minifier"});
 }
 ;
     if (;
@@ -581,7 +580,7 @@ class $1 {
   category: "BUNDLE_SIZE",;
         priority: "HIGH",;
         suggestion: "Implement dynamic imports for code splitting",;
-        action: Use React.lazy() and dynamic imports for route-based splitting",;,
+        action: Use React.lazy() and dynamic imports for route-based splitting",;
 })}
 ;
     // Development workflow recommendations;
@@ -600,8 +599,8 @@ class $1 {
   category: "PERFORMANCE",;
         priority: "HIGH",;
         suggestion: "Consider using esbuild for faster builds",;
-        action: "Update Vite configuration to use esbuild minifier",;,
-});,
+        action: "Update Vite configuration to use esbuild minifier",;
+});
 }
 ;
     if (;
@@ -612,8 +611,8 @@ class $1 {
   category: "BUNDLE_SIZE",;
         priority: "HIGH",;
         suggestion: "Implement dynamic imports for code splitting",;
-        action: Use React.lazy() and dynamic imports for route-based splitting",;,
-});,
+        action: Use React.lazy() and dynamic imports for route-based splitting",;
+});
 }
 ;
     // Development workflow recommendations;
@@ -621,10 +620,10 @@ class $1 {
   category: "WORKFLOW",;
       priority: "MEDIUM",;
       suggestion: "Use npm ci for faster, reliable installs",;
-      action: "Run npm ci instead of npm install in "CI/CD" environments",;,
+      action: "Run npm ci instead of npm install in "CI/CD" environments",;
 });
 
-    return recommendations;,
+    return recommendations;
 }
 ;
   async saveOptimizationResults(optimization) {
@@ -633,11 +632,11 @@ class $1 {
         this.optimizationsLog,;
         JSON.stringify(optimization, null, 2);
       );
-      this.log(`Optimization results saved`);,
+      this.log(`Optimization results saved`);
 } catch (error) {
   this.log(Failed to save optimization results: ${error.message  }`,;
         `ERROR`;
-      );,
+      );
 }
   }
 ;
@@ -647,10 +646,10 @@ class $1 {
   try {
   const performance = await this.analyzeBuildPerformance();
         this.log(Optimization test for ${optimization.type}: Build time = ${performance.buildTime}ms`;
-        );,
+        );
 } catch (error) {
   this.log( `Optimization test failed for ${optimization.type  }: ${error.message}`,WARN`;
-        );,
+        );
 }
     }
   }
@@ -672,12 +671,12 @@ if (require.main === module) {
     .runOptimization();
     .then(optimization => {
   console.log("Smart Build Optimization completed successfully");
-      process.exit(0);,
+      process.exit(0);
 });
     .catch(error => {
   console.error("Smart Build Optimization failed: ', error);
-      process.exit(1);,
-});,
+      process.exit(1);
+});
 }
 ;
 module.exports = SmartBuildOptimizer

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   FileText,
   Shield,
@@ -24,11 +23,6 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
 const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {}
   const [activeTab, setActiveTab] = useState('overview');
 
-  
-  
-  
-  
-  
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"
       {/* Hero Section */}""
@@ -737,5 +731,3 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {}
 
 export default AILegalDocumentAnalyzer;'"`
 '"`'"`
-=======
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';'
 import React, { useState, useCallback, useEffect } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
@@ -157,7 +156,6 @@ import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const Acces
             message: 'Accessibility settings reset to defaults',
             type: 'info',
 
-
 export { AccessibilityPanel };
 
 export { AccessibilityPanel };
@@ -167,11 +165,3 @@ export { AccessibilityPanel };
 export { AccessibilityPanel };
 
 export { AccessibilityPanel };
-=======
-<<<<<<< HEAD
-'use client';'; import React, { useState, useCallback, useEffect } from 'react';'; import { motion, AnimatePresence  } from 'framer-motion';'; import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const AccessibilityPanel = ({ enabled = true, defaultSettings = { }, onSettingsChange, className = '' }) => {}; const [isOpen, setIsOpen] = useState(false); const [settings, setSettings] = useState({}; highContrast: false,; largeText: false,; fontSize: 16,'; colorBlindMode: 'none',; reducedMotion: false,; screenReader: false,; focusIndicator: true,; keyboardNavigation: true,; ...defaultSettings; }); const [notifications, setNotifications] = useState([]);
-=======
-"use client";"; const [isOpen, setIsOpen] = useState(false); const [settings, setSettings] = useState({}; highContrast: false largeText: false fontSize: 16,"; colorBlindMode: "none" reducedMotion: false screenReader: false focusIndicator: true keyboardNavigation: true ...defaultSettings',
-  }); const [notifications, setNotifications] = useState([]); "
->>>>>>> main
->>>>>>> main

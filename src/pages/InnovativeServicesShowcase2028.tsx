@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 />
 
 export default function InnovativeServicesShowcase2028(...args: unknown[]): unknown {
@@ -503,27 +502,7 @@ export default function InnovativeServicesShowcase2028(...args: unknown[]): unkn
               Get expert consultation, custom pricing, and implementation;
               support. Our team is ready to help you choose the right solutions;
               for your business needs.
-=======
-import React from "react"
-import Head from "next/head"
-import Link from "next/link"
-const InnovativeServicesShowcase2028 = () => {
-  return (
-    <>
-      <Head>
-        <title>Innovative Services Showcase2028 - Zion Tech Group</title>
-        <meta name="description" content="Professional Innovative Services Showcase2028 services"  />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Innovative Services Showcase2028
-            </h1>
-            <p className="text-xl text-gray-600 mb-12">
-              Professional Innovative Services Showcase2028 services and solutions
->>>>>>> main
-            </p>
+</p>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
@@ -551,8 +530,7 @@ const InnovativeServicesShowcase2028 = () => {
                 Contact Us
               </Link>
             </div>
-<<<<<<< HEAD
-          </motion.div>
+</motion.div>
 """
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {microSaaSServices.map((service, index) => (
@@ -654,7 +632,6 @@ const InnovativeServicesShowcase2028 = () => {
   );
 }
 
-
 export { InnovativeServicesShowcase2028 };
 
 export { InnovativeServicesShowcase2028 };
@@ -664,9 +641,3 @@ export { InnovativeServicesShowcase2028 };
 export { InnovativeServicesShowcase2028 };
 
 export { InnovativeServicesShowcase2028 };
-=======
-    </>
-  );
-}
-export default InnovativeServicesShowcase2028
->>>>>>> main

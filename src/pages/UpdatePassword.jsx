@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useForm } from 'react - hook -form';
 export default function Page() {
 ) ;
@@ -146,8 +145,6 @@ export default function Page() {
       
     </>)}
 
-<<<<<<< HEAD
-
 export { UpdatePassword };
 
 export { UpdatePassword };
@@ -157,8 +154,3 @@ export { UpdatePassword };
 export { UpdatePassword };
 
 export { UpdatePassword };
-=======
-    </>) }
-=======
->>>>>>> main
->>>>>>> main

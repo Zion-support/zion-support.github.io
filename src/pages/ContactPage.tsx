@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -406,22 +403,3 @@ export default function ContactPage() {
     </div>
   );
 }
-=======
-import React from "react"
-import { SEO } from "@/components/SEO"
-;,"});,"})
-}
-export default function ContactPage() {return ("
-    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="ContactPage - Zion Tech Group" description="Professional ContactPage services by Zion Tech Group"  />"
-      <div className="container mx-auto px-4 py-20">"
-        <h1 className="text-4xl font-bold text-white mb-8">ContactPage</h1>"
-        <p className="text-gray-300 text-lg">
-          Professional ContactPage services to help your business grow.
-        </p>
-      </div>
-  )
-}
-}""
->>>>>>> main
->>>>>>> main

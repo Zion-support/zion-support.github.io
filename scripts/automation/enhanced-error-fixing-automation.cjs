@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 #!/usr/bin/env node;
 
 const fs = require("fs");
@@ -14,14 +14,14 @@ const CONFIG = {
   LOG_LEVEL: process.env.LOG_LEVEL || "info",;
   ENABLE_AUTO_FIX: process.env.ENABLE_AUTO_FIX !== "false",;
   ENABLE_TYPE_CHECK: process.env.ENABLE_TYPE_CHECK !== "false",;
-  ENABLE_LINT_FIX: process.env.ENABLE_LINT_FIX !== "false",;,
+  ENABLE_LINT_FIX: process.env.ENABLE_LINT_FIX !== "false",;
 }
 ;
 class $1 {
   constructor() {
   this.fixesApplied = 0;
     this.errorsFixed = [];
-    this.startTime = new Date();,
+    this.startTime = new Date();
 }
 ;
   async run() {
@@ -51,17 +51,17 @@ class $1 {
       await this.generateReport();
 
       console.log(`✅ Enhanced error fixing completed successfully! Applied ${this.fixesApplied} fixes.";
-      );,
+      );
 } catch (error) {
   console.error("❌ Enhanced error fixing failed: ", error.message);
-      await this.generateErrorReport(error);,
+      await this.generateErrorReport(error);
 }
   }
 ;
   ensureLogsDirectory() {
   const logsDir = path.join(process.cwd(), "automation", "logs");
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });,
+  fs.mkdirSync(logsDir, { recursive: true });
 }
   }
 ;
@@ -72,13 +72,13 @@ class $1 {
   // Run TypeScript compiler to get error list;
       const result = execSync("npx tsc --noEmit --pretty false", {
   encoding: "utf8",;
-        stdio: "pipe",;,
+        stdio: "pipe",;
 });
 
       // Parse errors and fix them;
       const errors = this.parseTypeScriptErrors(result);
       for (const error of errors) {
-  await this.fixTypeScriptError(error);,
+  await this.fixTypeScriptError(error);
 }
     } catch (error) {
   // TypeScript compilation failed, which is expected;
@@ -86,7 +86,7 @@ class $1 {
       const errors = this.parseTypeScriptErrors(errorOutput);
 
       for (const error of errors) {
-  await this.fixTypeScriptError(error);,
+  await this.fixTypeScriptError(error);
 }
     }
   }
@@ -102,12 +102,12 @@ class $1 {
   file: match[1].trim(),;
           line: parseInt(match[2]),;
           column: parseInt(match[3]),;
-          message: match[4].trim(),;,
-});,
+          message: match[4].trim(),;
+});
 }
     }
 ;
-    return errors;,
+    return errors;
 }
 ;
   async fixTypeScriptError(error) {
@@ -119,22 +119,22 @@ class $1 {
 
       // Apply fixes based on error message;
       if (error.message.includes("Cannot find module")) {
-  content = this.fixModuleImport(content, error);,
+  content = this.fixModuleImport(content, error);
 } else if (;
         error.message.includes("Property") &&;
         error.message.includes("does not exist");
       ) {
-  content = this.fixPropertyError(content, error);,
+  content = this.fixPropertyError(content, error);
 } else if (;
         error.message.includes("Type") &&;
         error.message.includes("is not assignable");
       ) {
-  content = this.fixTypeError(content, error);,
+  content = this.fixTypeError(content, error);
 } else if (;
         error.message.includes("Parameter") &&;
         error.message.includes("implicitly has an");
       ) {
-  content = this.fixParameterError(content, error);,
+  content = this.fixParameterError(content, error);
 }
 ;
       if (content !== fs.readFileSync(error.file, "utf8")) {
@@ -143,13 +143,13 @@ class $1 {
         this.errorsFixed.push({
   file: error.file,;
           error: error.message,;
-          fix: "TypeScript error fix",;,
-});,
+          fix: "TypeScript error fix",;
+});
 }
     } catch (err) {
   console.warn(⚠️  Could not fix TypeScript error in ${error.file}:",;
         err.message;
-      );,
+      );
 }
   }
 ;
@@ -172,7 +172,7 @@ class EnhancedErrorFixingAutomation {
     this.logFile = path.join(this.projectRoot, `error-reports`, `error-fixer-report-${Date.now()}.json`);
     // Ensure error-reports directory exists;
     if (!fs.existsSync(path.join(this.projectRoot, `error-reports`))) {
-  fs.mkdirSync(path.join(this.projectRoot, `error-reports`), { recursive: true });,
+  fs.mkdirSync(path.join(this.projectRoot, `error-reports`), { recursive: true });
 }
   }
 ;
@@ -181,7 +181,7 @@ class EnhancedErrorFixingAutomation {
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
     // Also write to log file;
-    fs.appendFileSync(this.logFile.replace(`.json`, `.log`), logMessage + "\n");,
+    fs.appendFileSync(this.logFile.replace(`.json`, `.log`), logMessage + "\n");
 }
 ;
   async runCommand(command, options = {}) {
@@ -190,7 +190,7 @@ class EnhancedErrorFixingAutomation {
   cwd: this.projectRoot,;
         encoding: "utf8",;
         stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+        ...options;
 });
       return { success: true, output: result }
     } catch (error) {
@@ -210,8 +210,8 @@ class EnhancedErrorFixingAutomation {
         this.fixesApplied.push({
   type: `eslint_config`,;
           file: config,;
-          description: `Removed old ESLint configuration file`;,
-});,
+          description: `Removed old ESLint configuration file`;
+});
 }
     }
 ;
@@ -290,11 +290,10 @@ export default [
       this.fixesApplied.push({
   type: "eslint_config",;
         file: "eslint.config.js",;
-        description: "Created ESLint flat configuration";,
-});,
+        description: "Created ESLint flat configuration";
+});
 }
     }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async fixTypeScriptErrors() {
@@ -307,7 +306,7 @@ export default [
         const match = error.match(/(.+)\((\d+),(\d+)\): error TS(\d+): (.+)/);
         if (match) {
   const [, filePath, line, column, errorCode, message] = match;
-          await this.fixTypeScriptError(filePath, parseInt(line), parseInt(column), errorCode, message);,
+          await this.fixTypeScriptError(filePath, parseInt(line), parseInt(column), errorCode, message);
 }
       }
     }
@@ -336,7 +335,7 @@ export default [
           await this.fixImplicitAny(lines, line - 1, message);
           break;
         default: // Generic fix: add type annotations where missing;
-          await this.addTypeAnnotations(lines, line - 1, message);,
+          await this.addTypeAnnotations(lines, line - 1, message);
 }
       ;
       fs.writeFileSync(filePath, lines.join(`\n`));
@@ -345,11 +344,11 @@ export default [
         file: filePath,;
         line,;
         errorCode,;
-        description: `Fixed TypeScript error: ${message}`;,
+        description: `Fixed TypeScript error: ${message}`;
 });
-      ;,
+      ;
 } catch (error) {
-  this.log(`Failed to fix TypeScript error in ${filePath  }: ${error.message}`, `error`);,
+  this.log(`Failed to fix TypeScript error in ${filePath  }: ${error.message}`, `error`);
 }
   }
 ;
@@ -366,10 +365,10 @@ export default [
           "react-dom": "react-dom",;
           "next": "next",;
           "@types/react": "@types/react",;
-          "@types/node": "@types/node";,
+          "@types/node": "@types/node";
 }
         if (moduleFixes[moduleName]) {
-  lines[lineIndex] = line.replace(moduleName, moduleFixes[moduleName]);,
+  lines[lineIndex] = line.replace(moduleName, moduleFixes[moduleName]);
 }
       }
     }
@@ -392,7 +391,7 @@ export default [
       if (propertyMatch) {
   const property = propertyMatch[1];
         // Add optional chaining;
-        lines[lineIndex] = line.replace(new RegExp(`\\.${property}\\b`), `?.${property}`);,
+        lines[lineIndex] = line.replace(new RegExp(`\\.${property}\\b`), `?.${property}`);
 }
     }
   }
@@ -403,13 +402,13 @@ export default [
     content = content.replace(/:\s*"string/g", ": string");
     content = content.replace(/:\s*"number/g", ": number");
     content = content.replace(/:\s*"boolean/g", ": boolean");
-    return content;,
+    return content;
 }
 ;
   fixParameterError(content, error) {
   // Fix parameter type errors;
     content = content.replace(/\(\s*([^)]+)\s*\)\s*=>/g, "($1: any) =>");
-    return content;,
+    return content;
 }
 ;
   async fixESLintErrors() {
@@ -420,12 +419,12 @@ export default [
     try {
   // Run ESLint with auto-fix;
       execSync("npx eslint . --fix --ext .js,.jsx,.ts,.tsx", {
-  stdio: "pipe",;,
+  stdio: "pipe",;
 });
       console.log(`"✅ ESLint auto-fix completed");
-      this.fixesApplied += 10; // Estimate;,
+      this.fixesApplied += 10; // Estimate;
 } catch (error) {
-  console.warn("⚠️  ESLint auto-fix had issues: ", error.message);,
+  console.warn("⚠️  ESLint auto-fix had issues: ", error.message);
 }
   }
 ;
@@ -453,7 +452,7 @@ export default [
       if (typeMatch) {
   const [, fromType, toType] = typeMatch;
         // Add type assertion;
-        lines[lineIndex] = line.replace(/(\w+)/, `$1 as ${toType}`);,
+        lines[lineIndex] = line.replace(/(\w+)/, `$1 as ${toType}`);
 }
     }
   }
@@ -465,7 +464,7 @@ export default [
       if (varMatch) {
   const varName = varMatch[1];
         // Prefix with underscore to indicate intentionally unused;
-        lines[lineIndex] = line.replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);,
+        lines[lineIndex] = line.replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);
 }
     }
   }
@@ -477,7 +476,7 @@ export default [
       if (paramMatch) {
   const paramName = paramMatch[1];
         // Add explicit any type;
-        lines[lineIndex] = line.replace(new RegExp(`\\b${paramName}\\b`), `${paramName}: any`);,
+        lines[lineIndex] = line.replace(new RegExp(`\\b${paramName}\\b`), `${paramName}: any`);
 }
     }
   }
@@ -487,11 +486,11 @@ export default [
     // Add basic type annotations for common patterns;
     if (line.includes(`const`) && !line.includes(`:`)) {
   if (line.includes("= []")) {
-  lines[lineIndex] = line.replace("= []", ": any[] = []");,
+  lines[lineIndex] = line.replace("= []", ": any[] = []");
 } else if (line.includes("= {}")) {
-  lines[lineIndex] = line.replace("= {}", ": any = {}");,
+  lines[lineIndex] = line.replace("= {}", ": any = {}");
 } else if (line.includes("= null")) {
-  lines[lineIndex] = line.replace("= null", ": any = null");,
+  lines[lineIndex] = line.replace("= null", ": any = null");
 }
     }
   }
@@ -499,7 +498,7 @@ export default [
   async fixMergeConflicts() {
   this.log("Fixing merge conflicts...");
     const files = glob.sync("**/*.{js,jsx,ts,tsx,json,md}", {
-  ignore: ["node_modules/**", "dist/**", "build/**", ".git/**"];,
+  ignore: ["node_modules/**", "dist/**", "build/**", ".git/**"];
 });
     for (const file of files) {
   try {
@@ -510,12 +509,12 @@ export default [
           this.fixesApplied.push({
   type: `merge_conflict`,;
             file,;
-            description: `Resolved merge conflict markers`;,
+            description: `Resolved merge conflict markers`;
 });
-          this.log(`Fixed merge conflicts in ${file}`);,
+          this.log(`Fixed merge conflicts in ${file}`);
 }
       } catch (error) {
-  this.log(`Failed to process ${file  }: ${error.message}`, `error`);,
+  this.log(`Failed to process ${file  }: ${error.message}`, `error`);
 }
     }
   }
@@ -531,12 +530,12 @@ export default [
     if (eslintResult.success) {
   this.fixesApplied.push({
   type: "eslint_auto_fix",;
-        description: "Applied ESLint auto-fixes";,
+        description: "Applied ESLint auto-fixes";
 });
-      this.log("ESLint auto-fixes applied successfully");,
+      this.log("ESLint auto-fixes applied successfully");
 } else {
   this.log("ESLint auto-fix failed, attempting manual fixes...", "warn");
-      await this.fixESLintErrorsManually();,
+      await this.fixESLintErrorsManually();
 }
   }
 ;
@@ -549,10 +548,9 @@ export default [
         const match = error.match(/(.+) line (\d+), col (\d+), (.+)/);
         if (match) {
   const [, filePath, line, column, message] = match;
-          await this.fixESLintError(filePath, parseInt(line), parseInt(column), message);,
+          await this.fixESLintError(filePath, parseInt(line), parseInt(column), message);
 }
         }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     }
   }
@@ -568,14 +566,14 @@ export default [
   const importKey = line.trim();
         if (!imports.has(importKey)) {
   imports.add(importKey);
-          newLines.push(line);,
+          newLines.push(line);
 }
       } else {
-  newLines.push(line);,
+  newLines.push(line);
 }
     }
 ;
-    return newLines.join("\n");,
+    return newLines.join("\n");
 }
 ;
   fixExportStatements(content) {
@@ -585,7 +583,7 @@ export default [
     );
     content = content.replace(/export\s+"function/g", "export function");
     content = content.replace(/export\s+"const/g", "export const");
-    return content;,
+    return content;
 }
 ;
   async fixUnusedVariables() {
@@ -608,12 +606,12 @@ export default [
 
         if (content !== originalContent) {
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;
 }
       } catch (error) {
   console.warn(⚠️  Could not fix unused variables in ${file}:",;
           error.message;
-        );,
+        );
 }
     }
   }
@@ -633,21 +631,21 @@ export default [
             .map(item => item.trim());
           const isUsed = importedItems.some(item => {
   const itemName = item.replace(/\s+as\s+.*/, ");
-            return content.includes(itemName) && !line.includes(itemName);,
+            return content.includes(itemName) && !line.includes(itemName);
 });
 
           if (isUsed) {
-  newLines.push(line);,
+  newLines.push(line);
 }
         } else {
-  newLines.push(line);,
+  newLines.push(line);
 }
       } else {
-  newLines.push(line);,
+  newLines.push(line);
 }
     }
 ;
-    return newLines.join("\n");,
+    return newLines.join("\n");
 }
 ;
   async fixConsoleStatements() {
@@ -663,17 +661,17 @@ export default [
         if (process.env.NODE_ENV === "production") {
   content = content.replace(;
             /console\.(log|warn|error|info|debug)\(/g,// console.$1(";
-          );,
+          );
 }
 ;
         if (content !== originalContent) {
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;
 }
       } catch (error) {
   console.warn( ⚠️  Could not fix console statements in ${file}:,;
           error.message;
-        );,
+        );
 }
     }
   }
@@ -697,12 +695,12 @@ export default [
 
         if (content !== originalContent) {
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;
 }
       } catch (error) {
   console.warn(⚠️  Could not fix React hooks in ${file}:",;
           error.message;
-        );,
+        );
 }
     }
   }
@@ -725,9 +723,9 @@ export default [
 
         if (content !== originalContent) {
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;
 }
-      } catch (error) {console.warn(⚠️  Could not fix JSX in ${file}:, error.message);,
+      } catch (error) {console.warn(⚠️  Could not fix JSX in ${file}:, error.message);
 }
     }
   }
@@ -758,12 +756,12 @@ export default [
 
         if (content !== originalContent) {
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;
 }
       } catch (error) {
   console.warn(⚠️  Could not fix type annotations in ${file}:",;
           error.message;
-        );,
+        );
 }
     }
   }
@@ -786,9 +784,9 @@ export default [
 
         if (content !== originalContent) {
   fs.writeFileSync(file, content);
-          this.fixesApplied++;,
+          this.fixesApplied++;
 }
-      } catch (error) {console.warn(⚠️  Could not fix interfaces in ${file}:, error.message);,
+      } catch (error) {console.warn(⚠️  Could not fix interfaces in ${file}:, error.message);
 }
     }
   }
@@ -799,9 +797,9 @@ export default [
     try {
   // Try to build the project;
       execSync("npm run build", { stdio: "pipe" });
-      console.log("✅ Build successful"`);,
+      console.log("✅ Build successful"`);
 } catch (error) {
-  console.warn("⚠️  Build failed, but continuing with other fixes");,
+  console.warn("⚠️  Build failed, but continuing with other fixes");
 }
   }
 ;
@@ -811,18 +809,18 @@ export default [
     if (CONFIG.ENABLE_TYPE_CHECK) {
   try {
   execSync("npm run type-check", { stdio: "pipe" });
-        console.log("✅ TypeScript check passed");,
+        console.log("✅ TypeScript check passed");
 } catch (error) {
-  console.warn("⚠️  TypeScript check still has issues");,
+  console.warn("⚠️  TypeScript check still has issues");
 }
     }
 ;
     if (CONFIG.ENABLE_LINT_FIX) {
   try {
   execSync("npm run lint", { stdio: "pipe" });
-        console.log("✅ ESLint check passed");,
+        console.log("✅ ESLint check passed");
 } catch (error) {
-  console.warn("⚠️  ESLint check still has issues");,
+  console.warn("⚠️  ESLint check still has issues");
 }
     }
   }
@@ -838,7 +836,7 @@ export default [
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
-  walkDir(fullPath);,
+  walkDir(fullPath);
 } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {
   files.push(fullPath);
   async fixESLintError(filePath, line, column, message) {
@@ -851,14 +849,14 @@ export default [
         const varMatch = message.match(/`(.+)` is defined but never used/);
         if (varMatch) {
   const varName = varMatch[1];
-          lines[line - 1] = lines[line - 1].replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);,
+          lines[line - 1] = lines[line - 1].replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);
 }
       } else if (message.includes(`no-console`)) {
   // Remove console statements;
-        lines[line - 1] = lines[line - 1].replace(/console\.(log|warn|error|info)\([^)]*\);?/g, ``);,
+        lines[line - 1] = lines[line - 1].replace(/console\.(log|warn|error|info)\([^)]*\);?/g, ``);
 } else if (message.includes("prefer-const")) {
   // Change let to const;
-        lines[line - 1] = lines[line - 1].replace(/\blet\b/g, "const");,
+        lines[line - 1] = lines[line - 1].replace(/\blet\b/g, "const");
 }
       ;
       fs.writeFileSync(filePath, lines.join(`\n`));
@@ -866,11 +864,11 @@ export default [
   type: `eslint_error`,;
         file: filePath,;
         line,;
-        description: `Fixed ESLint error: ${message}`;,
+        description: `Fixed ESLint error: ${message}`;
 });
-      ;,
+      ;
 } catch (error) {
-  this.log(`Failed to fix ESLint error in ${filePath  }: ${error.message}`, `error`);,
+  this.log(`Failed to fix ESLint error in ${filePath  }: ${error.message}`, `error`);
 }
   }
 ;
@@ -889,15 +887,15 @@ export default [
     ;
     for (const dep of commonDeps) {
   if (!packageJson.dependencies?.[dep] && !packageJson.devDependencies?.[dep]) {
-  missingDeps.push(dep);,
+  missingDeps.push(dep);
 }
     }
 ;
     if (fs.existsSync(srcDir)) {
-  walkDir(srcDir);,
+  walkDir(srcDir);
 }
 ;
-    return files;,
+    return files;
 }
 ;
   async generateReport() {
@@ -908,13 +906,13 @@ export default [
       errorsFixed: this.errorsFixed,;
       summary: "Enhanced error fixing automation completed",;
       status: "completed",;
-      config: CONFIG,;,
+      config: CONFIG,;
 }
 ;
     const reportPath = path.join(;
       process.cwd(),enhanced-error-fixing-report.json";
     );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath});,
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath});
 }
 ;
   async generateErrorReport(error) {
@@ -927,25 +925,25 @@ export default [
       stack: error.stack,;
       summary: "Enhanced error fixing automation failed",;
       status: "failed",;
-      config: CONFIG,;,
+      config: CONFIG,;
 }
 ;
     const reportPath = path.join(;
       process.cwd(),enhanced-error-fixing-error-report.json";
     );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Error report saved to ${reportPath}``);,
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Error report saved to ${reportPath}``);
 }
 }
 ;
 // Main execution;
 async function $1() {
   const automation = new EnhancedErrorFixingAutomation();
-  await automation.run();,
+  await automation.run();
 }
 ;
 // Run if called directly;
 if (require.main === module) {
-  main().catch(console.error);,
+  main().catch(console.error);
 }
 ;
 module.exports = EnhancedErrorFixingAutomation;
@@ -954,8 +952,8 @@ module.exports = EnhancedErrorFixingAutomation;
       await this.runCommand(`npm install --save-dev ${missingDeps.join(` `)}`);
       this.fixesApplied.push({
   type: `dependency_install`,;
-        description: `Installed missing dependencies: ${missingDeps.join(`, `)}`;,
-});,
+        description: `Installed missing dependencies: ${missingDeps.join(`, `)}`;
+});
 }
   }
 ;
@@ -970,12 +968,12 @@ module.exports = EnhancedErrorFixingAutomation;
         typescriptFixes: this.fixesApplied.filter(f => f.type === `typescript_error`).length,;
         eslintFixes: this.fixesApplied.filter(f => f.type === `eslint_error` || f.type === "eslint_auto_fix").length,;
         mergeConflictFixes: this.fixesApplied.filter(f => f.type === "merge_conflict').length,;
-        dependencyFixes: this.fixesApplied.filter(f => f.type === `dependency_install`).length;,
+        dependencyFixes: this.fixesApplied.filter(f => f.type === `dependency_install`).length;
 }
     }
     fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
     this.log(`Error fixing report saved to: ${this.logFile}`);
-    return report;,
+    return report;
 }
 ;
   async run() {
@@ -992,10 +990,10 @@ module.exports = EnhancedErrorFixingAutomation;
       this.log(`Error fixing completed! Applied ${report.summary.totalFixes} fixes.`);
       this.log(`Report: ${report.summary.typescriptFixes} TypeScript, ${report.summary.eslintFixes} ESLint, ${report.summary.mergeConflictFixes} merge conflicts, ${report.summary.dependencyFixes} dependencies`);
       return report;
-      ;,
+      ;
 } catch (error) {
   this.log(`Error fixing automation failed: ${error.message  }`, `error`);
-      throw error;,
+      throw error;
 }
   }
 }
@@ -1003,7 +1001,7 @@ module.exports = EnhancedErrorFixingAutomation;
 // Run the automation if called directly;
 if (require.main === module) {
   const automation = new EnhancedErrorFixingAutomation();
-  automation.run().catch(console.error);,
+  automation.run().catch(console.error);
 }
 ;
 module.exports = EnhancedErrorFixingAutomation

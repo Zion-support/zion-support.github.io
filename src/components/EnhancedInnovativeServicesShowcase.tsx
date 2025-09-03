@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 to - slate -800">
+return (<section className="py-20 bg-gradient - to - br from - slate - 900 to - slate -800">
       <div className="max - w-7xl mx - auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font - bold text-white mb-6">
@@ -43,8 +39,3 @@
       </div>;
     </section>;) };
 export default EnhancedInnovativeServicesShowcase;'"
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

@@ -1,5 +1,5 @@
 #!/""usr/bin/env"" node;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
@@ -13,14 +13,14 @@ class $1 {
       dependencies: { status: "pending", outdated: [], licenses: [] },;
       codeAnalysis: { status: "pending", issues: [], summary: {} },;
       secrets: { status: "pending", findings: [] },;
-      compliance: { status: "pending", checks: [] },;,
+      compliance: { status: "pending", checks: [] },;
 };    this.reportDir = path.join(process.cwd(), "security-reports");
-    this.ensureReportDirectory();,
+    this.ensureReportDirectory();
 }
 ;
   ensureReportDirectory() {
   if (!fs.existsSync(this.reportDir)) {
-  fs.mkdirSync(this.reportDir, { recursive: true });,
+  fs.mkdirSync(this.reportDir, { recursive: true });
 }
   }
 ;
@@ -30,7 +30,7 @@ class $1 {
   // Run npm audit;
       const auditOutput = execSync("npm audit --audit-level moderate --json", {
   encoding: "utf8",;
-        cwd: process.cwd(),;,
+        cwd: process.cwd(),;
 });
       const auditData = JSON.parse(auditOutput);
       this.securityResults.audit.status = `success`;
@@ -44,7 +44,7 @@ class $1 {
         low: auditData.metadata?.vulnerabilities?.low || 0,;
         moderate: auditData.metadata?.vulnerabilities?.moderate || 0,;
         high: auditData.metadata?.vulnerabilities?.high || 0,;
-        critical: auditData.metadata?.vulnerabilities?.critical || 0,;,
+        critical: auditData.metadata?.vulnerabilities?.critical || 0,;
 }
       console.log(`✅ Security audit completed. Found ${this.securityResults.audit.summary.total} vulnerabilities`;
       );
@@ -52,7 +52,7 @@ class $1 {
       fs.writeFileSync(;
         path.join(this.reportDir, `security-audit.json`),;
         JSON.stringify(auditData, null, 2);
-      );,
+      );
 } catch (error) {
   this.securityResults.audit.status = `failure";
       this.securityResults.audit.vulnerabilities = [];
@@ -61,7 +61,7 @@ class $1 {
         low: 0,;
         moderate: 0,;
         high: 0,;
-        critical: 0,;,
+        critical: 0,;
 }
       console.log("❌ Security audit failed: ", error.message)}
   }
@@ -77,7 +77,7 @@ class $1 {
   // Check for outdated packages;
       const outdatedOutput = execSync("npm outdated --json", {
   encoding: "utf8",;
-        cwd: process.cwd(),;,
+        cwd: process.cwd(),;
 });
 
       const outdatedData = JSON.parse(outdatedOutput);
@@ -85,7 +85,7 @@ class $1 {
       // Check package licenses;
       const licenseOutput = execSync("npm list --json", {
   encoding: `utf8`,;
-        cwd: process.cwd(),;,
+        cwd: process.cwd(),;
 });
 
       const licenseData = JSON.parse(licenseOutput);
@@ -105,7 +105,7 @@ class $1 {
           null,;
           2;
         );
-      );,
+      );
 } catch (error) {
   this.securityResults.dependencies.status = `failure";
 
@@ -122,17 +122,17 @@ class $1 {
         JSON.stringify(;
           {
   outdated: outdatedData,;
-            licenses: licenses,;,
+            licenses: licenses,;
 },;
           null,;
           2;
         );
-      );,
+      );
 } catch (error) {
   this.securityResults.dependencies.status = "failure";
       this.securityResults.dependencies.outdated = [];
       this.securityResults.dependencies.licenses = [];
-      console.log("❌ Dependency check failed: ", error.message);,
+      console.log("❌ Dependency check failed: ", error.message);
 }
   }
 ;
@@ -148,18 +148,18 @@ class $1 {
   name,;
             license: info.license,;
             version: info.version,;
-            level,;,
-});,
+            level,;
+});
 }
 ;
         if (info.dependencies) {
-  extractFromDeps(info.dependencies, level + 1);,
+  extractFromDeps(info.dependencies, level + 1);
 }
-      });,
+      });
 }
 ;
     extractFromDeps(packageData.dependencies);
-    return licenses;,
+    return licenses;
 }
 ;
   async runCodeAnalysis() {
@@ -170,7 +170,7 @@ class $1 {
       try {
   const lintOutput = execSync("npm run lint -- --format json", {
   encoding: "utf8",;
-          cwd: process.cwd(),;,
+          cwd: process.cwd(),;
 });
 
         const lintData = JSON.parse(lintOutput);
@@ -190,19 +190,19 @@ class $1 {
             message: issue.message,;
             rule: issue.ruleId,;
             file: issue.filePath,;
-            line: issue.line,;,
+            line: issue.line,;
 }));
-        );,
+        );
 } catch (lintError) {
-  console.log(`⚠️ Lint security check failed: `, lintError.message);,
+  console.log(`⚠️ Lint security check failed: `, lintError.message);
 }
 ;
       // Check for common security patterns;
       const securityPatterns = this.checkSecurityPatterns();
       issues.push(...securityPatterns);
-      this.securityResults.codeAnalysis.status = `success`;,
+      this.securityResults.codeAnalysis.status = `success`;
 } catch (lintError) {
-  console.log("⚠️ Lint security check failed: ", lintError.message);,
+  console.log("⚠️ Lint security check failed: ", lintError.message);
 }
 ;
       // Check for common security patterns;
@@ -215,7 +215,7 @@ class $1 {
   total: issues.length,;
         high: issues.filter(i => i.severity === 2).length,;
         medium: issues.filter(i => i.severity === 1).length,;
-        low: issues.filter(i => i.severity === 0).length,;,
+        low: issues.filter(i => i.severity === 0).length,;
 }
       console.log(✅ Code analysis completed. Found ${issues.length} security issues`;
       );
@@ -229,7 +229,7 @@ class $1 {
           null,;
           2;
         );
-      );,
+      );
 } catch (error) {
   this.securityResults.codeAnalysis.status = `failure";
       this.securityResults.codeAnalysis.issues = [];
@@ -237,7 +237,7 @@ class $1 {
   total: 0,;
         high: 0,;
         medium: 0,;
-        low: 0,;,
+        low: 0,;
 }
       console.log("❌ Code analysis failed: ", error.message)}
   }
@@ -274,11 +274,11 @@ class $1 {
               file: filePath,;
               line: content;
                 .substring(0, content.indexOf(matches[0]));
-                .split("\n").length});,
+                .split("\n").length});
 }
-        });,
+        });
 } catch (error) {
-  // Skip files that can"t be read;,
+  // Skip files that can"t be read;
 }
 ;
         // Check for dangerous patterns;
@@ -290,7 +290,7 @@ class $1 {
   pattern: /localStorage\[.*\"]\s*=/,;
             rule: "local-storage-security",;
             severity: 1,;
-            message: "localStorage assignment detected",;,
+            message: "localStorage assignment detected",;
 },;
           {
   pattern: /sessionStorage\[".*\]\s*=/", "rule: "session-storage-security", "severity: 1", "message: "sessionStorage assignment detected", "}", "];
@@ -306,12 +306,12 @@ class $1 {
               file: filePath,;
               line: content;
                 .substring(0, content.indexOf(matches[0]));
-                .split("\n").length,;,
-});,
+                .split("\n").length,;
+});
 }
-        });,
+        });
 } catch (error) {
-  // Skip files that can"t be read;,
+  // Skip files that can"t be read;
 }
     }
 ;
@@ -322,20 +322,20 @@ class $1 {
         const stat = fs.statSync(filePath);
 
         if (stat.isDirectory()) {
-  walkDir(filePath);,
+  walkDir(filePath);
 } else if (;
           file.endsWith(".js") ||;
           file.endsWith(".jsx") ||;
           file.endsWith(".ts") ||;
           file.endsWith(".tsx");
         ) {
-  checkFile(filePath);,
+  checkFile(filePath);
 }
-      });,
+      });
 }
 ;
     walkDir(srcDir);
-    return issues;,
+    return issues;
 }
 ;
   async scanForSecrets() {
@@ -345,19 +345,19 @@ class $1 {
       // Check for hardcoded secrets in source files;
       const secretPatterns = [
   {
-  pattern: /api[_-]?key\s*[:=]\s*[""][^"]{10,}["]/i,;
-          type: "API Key",;,
+  pattern: /api[_-]?key\s*[:=]\s*[""][^"]{10}["]/i,;
+          type: "API Key",;
 },;
-        { pattern: /password\s*[:=]\s*["][^"]{8,}["]/i, type: "Password" },;
-        { pattern: /secret\s*[:=]\s*["][^""]{10,}[""]/i, type: "Secret" },;
-        { pattern: /token\s*[:=]\s*["][^"]{10,}["]/i, type: "Token" },        {
+        { pattern: /password\s*[:=]\s*["][^"]{8}["]/i, type: "Password" },;
+        { pattern: /secret\s*[:=]\s*["][^""]{10}[""]/i, type: "Secret" },;
+        { pattern: /token\s*[:=]\s*["][^"]{10}["]/i, type: "Token" },        {
   pattern: /private[_-]?key\s*[:=]\s*["][^""]{10}[""]/i, "type: "Private Key"", "}", ""];
 
       // Check for hardcoded secrets in source files;
       const secretPatterns = [
   {
   pattern: /api[_-]?key\s*[:=]\s*["][^"]{10}[""]/i,;
-          type: "API Key",;,
+          type: "API Key",;
 },;
         { pattern: /password\s*[:=]\s*[""][^"]{8}["]/i, type: "Password" },;
         { pattern: /secret\s*[:=]\s*[""][^""]{10}["]/i, type: "Secret" },;
@@ -374,7 +374,7 @@ class $1 {
             const stat = fs.statSync(filePath);
 
             if (stat.isDirectory()) {
-  walkDir(filePath);,
+  walkDir(filePath);
 } else if (;
               file.endsWith(".js") ||;
               file.endsWith(".jsx") ||;
@@ -393,17 +393,17 @@ class $1 {
                       line: content;
                         .substring(0, content.indexOf(matches[0]));
                         .split("\n").length,;
-                      match: matches[0].substring(0, 50) + "...`});,
+                      match: matches[0].substring(0, 50) + "...`});
 }
-                });,
+                });
 } catch (error) {
-  // Skip files that can`t be read;,
+  // Skip files that can`t be read;
 }
             }
-          });,
+          });
 }
 ;
-        walkDir(srcDir);,
+        walkDir(srcDir);
 }
 ;
       this.securityResults.secrets.status = `success`;
@@ -417,16 +417,16 @@ class $1 {
         JSON.stringify(;
           {
   findings: findings,;
-            timestamp: new Date().toISOString(),;,
+            timestamp: new Date().toISOString(),;
 },;
           null,;
           2;
         );
-      );,
+      );
 } catch (error) {
   this.securityResults.secrets.status = "failure";
       this.securityResults.secrets.findings = [];
-      console.log("❌ Secret scan failed: ", error.message);,
+      console.log("❌ Secret scan failed: ", error.message);
 }
   }
 ;
@@ -460,18 +460,18 @@ class $1 {
   file: file,;
               csp: hasCSP,;
               xFrame: hasXFrame,;
-              xContent: hasXContent,;,
-});,
+              xContent: hasXContent,;
+});
 } catch (error) {
-  // Skip files that can"t be read;,
+  // Skip files that can"t be read;
 }
-        });,
+        });
 }
-;,
+;
 } catch (error) {
-  // Skip files that can"t be read;,
+  // Skip files that can"t be read;
 }
-        });,
+        });
 }
 ;
       // Check package.json for security scripts;
@@ -484,9 +484,9 @@ class $1 {
   type: "package-scripts`,;
             hasSecurityScript: !!scripts.security,;
             hasAuditScript: !!scripts.audit,;
-            hasLintScript: !!scripts.lint});,
+            hasLintScript: !!scripts.lint});
 } catch (error) {
-  // Skip if package.json can`t be parsed;,
+  // Skip if package.json can`t be parsed;
 }
       }
 ;
@@ -501,16 +501,16 @@ class $1 {
         JSON.stringify(;
           {
   checks: checks,;
-            timestamp: new Date().toISOString(),;,
+            timestamp: new Date().toISOString(),;
 },;
           null,;
           2;
         );
-      );,
+      );
 } catch (error) {
   this.securityResults.compliance.status = "failure";
       this.securityResults.compliance.checks = [];
-      console.log("❌ Compliance checks failed: ", error.message);,
+      console.log("❌ Compliance checks failed: ", error.message);
 }
   }
 ;
@@ -526,10 +526,10 @@ class $1 {
         highVulnerabilities: this.securityResults.audit.summary.high || 0,;
         outdatedPackages: this.securityResults.dependencies.outdated.length,;
         securityIssues: this.securityResults.codeAnalysis.summary.total || 0,;
-        potentialSecrets: this.securityResults.secrets.findings.length,;,
+        potentialSecrets: this.securityResults.secrets.findings.length,;
 },;
       results: this.securityResults,;
-      riskLevel: this.calculateRiskLevel(),;,
+      riskLevel: this.calculateRiskLevel(),;
 }
     // Save JSON report;
     fs.writeFileSync(;
@@ -555,7 +555,7 @@ class $1 {
     );
 
     console.log("📋 Security report generated successfully");
-    return report;,
+    return report;
 }
 ;
   calculateRiskLevel() {
@@ -566,7 +566,7 @@ class $1 {
     if (critical > 0 || high > 5 || secrets > 0) return "HIGH";
     if (high > 0 || this.securityResults.audit.summary.total > 10);
       return `MEDIUM`;
-    return `LOW`;,
+    return `LOW`;
 }
 ;
   generateMarkdownReport(report) {
@@ -594,13 +594,13 @@ class $1 {
 ${
   report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately;
 2. **CRITICAL**: Update packages with critical security issues;
-    : `1. ✅ No critical vulnerabilities found`;,
+    : `1. ✅ No critical vulnerabilities found`;
 }
 ;
 ${
   report.summary.highVulnerabilities > 0? 3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities;
 4. **HIGH**: Review and update high-risk packages;
-    : `2. ✅ No high-risk vulnerabilities found`;,
+    : `2. ✅ No high-risk vulnerabilities found`;
 }
 ;
 ${
@@ -610,13 +610,13 @@ ${
 ${
   report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately;
 2. **CRITICAL**: Update packages with critical security issues;
-    : "1. ✅ No critical vulnerabilities found";,
+    : "1. ✅ No critical vulnerabilities found";
 }
 ;
 ${
   report.summary.highVulnerabilities > 0? 3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities;
 4. **HIGH**: Review and update high-risk packages;
-    : "2. ✅ No high-risk vulnerabilities found";,
+    : "2. ✅ No high-risk vulnerabilities found";
 }
 ;
 ${
@@ -628,24 +628,24 @@ ${
 ${
   report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately`);
 2. **CRITICAL**: Update packages with critical security issues`);
-    : "1. ✅ No critical vulnerabilities found`);,
+    : "1. ✅ No critical vulnerabilities found`);
 }
 ;
 ${
   report.summary.highVulnerabilities > 0? 3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities;
 4. **HIGH**: Review and update high-risk packages;
-    : "2. ✅ No high-risk vulnerabilities found`);,
+    : "2. ✅ No high-risk vulnerabilities found`);
 }
 ;
 ${`);
   report.summary.potentialSecrets > 0? 5. **SECRETS**: Remove or secure ${report.summary.potentialSecrets} hardcoded secrets`);
 6. **SECRETS**: Use environment variables for sensitive data`;
-    : "3. ✅ No hardcoded secrets found";,
+    : "3. ✅ No hardcoded secrets found";
 }
 ;
 ## 📚 Recommendations;
 ## 📚 Recommendations;
-*Report generated by Enhanced Security Automation*;,
+*Report generated by Enhanced Security Automation*;
 }
 ;
   async runAllSecurityChecks(```) {
@@ -663,7 +663,7 @@ ${`);
     const report = await this.generateSecurityReport();
     console.log(``\n🛡️ Security Check Summary:`);console.log(Vulnerabilities: ${report.summary.totalVulnerabilities});console.log(Critical: ${report.summary.criticalVulnerabilities} 🔴``);console.log(`High: ${report.summary.highVulnerabilities} 🟠`);console.log(`Risk Level: ${report.riskLevel}`);
     console.log(`\n🛡️ Security Check Summary:`);console.log(Vulnerabilities: ${report.summary.totalVulnerabilities});console.log(Critical: ${report.summary.criticalVulnerabilities} 🔴``);console.log(`High: ${report.summary.highVulnerabilities} 🟠`);console.log(`Risk Level: ${report.riskLevel}`);
-    return report;,
+    return report;
 }
 }
 ;
@@ -675,9 +675,9 @@ async function main() {
   const security = new EnhancedSecurityAutomation();
 
   try {
-  await security.runAllSecurityChecks();,
+  await security.runAllSecurityChecks();
 } catch (error) {
-  console.error(`❌ Security automation failed: `, error);    process.exit(1);,
+  console.error(`❌ Security automation failed: `, error);    process.exit(1);
 }
 }
 ;

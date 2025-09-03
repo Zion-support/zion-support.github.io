@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
 <:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
@@ -265,7 +264,6 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 }}
 =
   x: 0 
-
 
   x: 0 "
   x: 0;
@@ -698,7 +696,6 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 =
   y: 0 
 
-
   y: 0 "
   y: 0;
           <div className="grid md:grid-cols-3 gap-8">
@@ -903,5 +900,3 @@ export default AIFinancialFraudDetection}}}'"`'"`
   )};
 
 export default AIFinancialFraudDetection}}}'"`
-=======
->>>>>>> main

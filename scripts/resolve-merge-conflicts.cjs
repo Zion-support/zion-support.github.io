@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("$1");
-const path = require("$1");
+const fs = require("child_process");
+const path = require("child_process");
 const { execSync } = require("child_process")
 class MergeConflictResolver {
   constructor() {
@@ -11,15 +11,15 @@ class MergeConflictResolver {
       "",
       "",
       "",
-      "      "      ""],
+      "      "      ""]
 }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`),
+    console.log(`[${new Date().toISOString()}] ${message}`)
 }
 
   hasConflictMarkers(content) {
-    return this.conflictMarkers.some(marker => content.includes(marker)),
+    return this.conflictMarkers.some(marker => content.includes(marker))
 }
 
   resolveConflict(content) {
@@ -35,7 +35,7 @@ class MergeConflictResolver {
     resolved = resolved.replace(/,\s*}/g, "}")
     resolved = resolved.replace(/,\s*]/g, "]")
     resolved = resolved.replace(/,\s*\)/g, ")")
-    return resolved,
+    return resolved
 }
 
   fixFile(filePath) {
@@ -48,15 +48,15 @@ class MergeConflictResolver {
           fs.writeFileSync(filePath, content, "utf8")
           this.fixedFiles.push(filePath)
           this.log(`✅ Resolved merge conflicts in ${filePath}`)
-          return true,
+          return true
 }
       }
       
-      return false,
+      return false
 } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error fixing ${filePath}: ${error.message}`)
-      return false,
+      return false
 }
   }
 
@@ -68,21 +68,21 @@ class MergeConflictResolver {
         const fullPath = path.join(dir, item)
         const stat = fs.statSync(fullPath)
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-          searchInDirectory(fullPath),
+          searchInDirectory(fullPath)
 } else if (stat.isFile() && (item.endsWith(".js") || item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".jsx") || item.endsWith(".cjs") || item.endsWith(".mjs"))) {
           try {
             const content = fs.readFileSync(fullPath, "utf8")
             if (this.hasConflictMarkers(content)) {
-              filesWithConflicts.push(fullPath),
+              filesWithConflicts.push(fullPath)
 }
           } catch (error) {
-            // Skip files that can"t be read,
+            // Skip files that can"t be read
 }
         }
       }
     }
     searchInDirectory(this.projectRoot)
-    return filesWithConflicts,
+    return filesWithConflicts
 }
 
   resolveAllConflicts() {
@@ -90,21 +90,21 @@ class MergeConflictResolver {
     const filesWithConflicts = this.findFilesWithConflicts()
     this.log(`Found ${filesWithConflicts.length} files with merge conflicts`)
     for (const file of filesWithConflicts) {
-      this.fixFile(file),
+      this.fixFile(file)
 }
     
     this.log(`🎉 Merge conflict resolution completed. Fixed ${this.fixedFiles.length} files.`)
     if (this.errors.length > 0) {
       this.log(`❌ ${this.errors.length} errors encountered:`)
       this.errors.forEach(err => {
-        this.log(`   - ${err.file}: ${err.error}`),
-}),
+        this.log(`   - ${err.file}: ${err.error}`)
+})
 }
     
     return {
       fixedFiles: this.fixedFiles,
       errors: this.errors,
-      totalConflicts: filesWithConflicts.length,
+      totalConflicts: filesWithConflicts.length
 }
   }
 }
@@ -112,7 +112,7 @@ class MergeConflictResolver {
 // Run the resolver
 if (require.main === module) {
   const resolver = new MergeConflictResolver()
-  resolver.resolveAllConflicts(),
+  resolver.resolveAllConflicts()
 }
 
 module.exports = MergeConflictResolver

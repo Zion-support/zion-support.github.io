@@ -3,7 +3,7 @@
  * Smart Dependency Optimizer - PM2 Automation;
  * Intelligently analyzes and optimizes project dependencies;
  */;
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 /**;
  * Smart Dependency Optimizer - PM2 Automation;
  * Intelligently analyzes and optimizes project dependencies;
@@ -29,13 +29,13 @@ class $1 {
       "dependency-usage-analysis.json";
     );
     this.ensureLogsDirectory();
-    this.loadOptimizationHistory();,
+    this.loadOptimizationHistory();
 }
 ;
   ensureLogsDirectory() {
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });,
+  fs.mkdirSync(logsDir, { recursive: true });
 }
   }
 ;
@@ -44,18 +44,18 @@ class $1 {
   try {
   this.optimizationHistory = JSON.parse(;
           fs.readFileSync(this.optimizationLog, `utf8`);
-        );,
+        );
 } catch (error) {
   this.optimizationHistory = {
   optimizations: [],;
           lastRun: null,;
-          totalSavings: 0,;,
+          totalSavings: 0,;
 }}
     } else {
   this.optimizationHistory = {
   optimizations: [],;
         lastRun: null,;
-        totalSavings: 0,;,
+        totalSavings: 0,;
 }
     }
   }
@@ -64,7 +64,7 @@ class $1 {
   fs.writeFileSync(;
       this.optimizationLog,;
       JSON.stringify(this.optimizationHistory, null, 2);
-    );,
+    );
 }
 ;
   log(message, level = `INFO`) {
@@ -72,7 +72,7 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);,
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
 }
 ;
   async runOptimization() {
@@ -116,11 +116,11 @@ class $1 {
 
       return { optimizations: appliedOpts, results, recommendations }
     } catch (error) {
-  this.log( `Smart Dependency Optimization failed: ${error.message  }`,ERROR`;,
+  this.log( `Smart Dependency Optimization failed: ${error.message  }`,ERROR`;
 } catch (error) {
   this.log( `Smart Dependency Optimization failed: ${error.message}",ERROR";
       );
-      throw error;,
+      throw error;
 }
   }
 ;
@@ -138,7 +138,7 @@ class $1 {
       );
       const dependencies = {
   ...packageJson.dependencies,;
-        ...packageJson.devDependencies,;,
+        ...packageJson.devDependencies,;
 }
       // Analyze import usage in source files;
       const sourceFiles = this.findSourceFiles();
@@ -162,19 +162,19 @@ class $1 {
             version: dependencies[dep],;
             usageCount: usage.count,;
             files: usage.files,;
-            lastUsed: usage.lastUsed,;,
+            lastUsed: usage.lastUsed,;
 }
         } else {
-  usage.unused.push(dep);,
+  usage.unused.push(dep);
 }
       });
       // Analyze usage patterns;
-      usage.usagePatterns = this.analyzeUsagePatterns(importAnalysis);,
+      usage.usagePatterns = this.analyzeUsagePatterns(importAnalysis);
 } catch (error) {
-  this.log(`Dependency usage analysis failed: ${error.message  }`, `ERROR`);,
+  this.log(`Dependency usage analysis failed: ${error.message  }`, `ERROR`);
 }
 ;
-    return usage;,
+    return usage;
 }
 ;
   findSourceFiles() {
@@ -190,11 +190,11 @@ class $1 {
   this.findFilesRecursively(;
           fullPath", [".ts", ".tsx", ".js", ".jsx"],;
           files;
-        );,
+        );
 }
     });
 
-    return files;,
+    return files;
 }
 ;
   findFilesRecursively(dir, extensions, files) {
@@ -209,11 +209,11 @@ class $1 {
         !item.startsWith(".") &&;
         item !== "node_modules";
       ) {
-  this.findFilesRecursively(fullPath, extensions, files);,
+  this.findFilesRecursively(fullPath, extensions, files);
 } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-  files.push(fullPath);,
+  files.push(fullPath);
 }
-    });,
+    });
 }
 ;
   analyzeImports(sourceFiles) {
@@ -236,36 +236,36 @@ class $1 {
   imports[packageName] = {
   count: 0,;
                     files: [],;
-                    lastUsed: new Date().toISOString(),;,
+                    lastUsed: new Date().toISOString(),;
 }
                 }
 ;
                 imports[packageName].count++;
                 if (!imports[packageName].files.includes(file)) {
-  imports[packageName].files.push(file);,
+  imports[packageName].files.push(file);
 }
-                imports[packageName].lastUsed = new Date().toISOString();,
+                imports[packageName].lastUsed = new Date().toISOString();
 }
             }
           }
-        });,
+        });
 } catch (error) {
-  // Skip files that can"t be read;,
+  // Skip files that can"t be read;
 }
       } catch (error) {
-  // Skip files that can"t be read;,
+  // Skip files that can"t be read;
 }
     });
 
-    return imports;,
+    return imports;
 }
 ;
   extractPackageName(importPath) {
   // Handle scoped packages and regular packages;
     if (importPath.startsWith(`@`)) {
-  const parts = importPath.split(`/`);return parts.length >= 2 ? `${parts[0]}/${parts[1]}` : importPath;,
+  const parts = importPath.split(`/`);return parts.length >= 2 ? `${parts[0]}/${parts[1]}` : importPath;
 } else {
-  return importPath.split(`/`)[0];,
+  return importPath.split(`/`)[0];
 }
   }
 ;
@@ -278,19 +278,19 @@ class $1 {
   usage.count += importAnalysis[pkg].count;
         usage.files.push(...importAnalysis[pkg].files);
         if (!usage.lastUsed || importAnalysis[pkg].lastUsed > usage.lastUsed) {
-  usage.lastUsed = importAnalysis[pkg].lastUsed;,
+  usage.lastUsed = importAnalysis[pkg].lastUsed;
 }
       }
     });
 
-    return usage;,
+    return usage;
 }
 ;
   analyzeUsagePatterns(importAnalysis) {
   const patterns = {
   mostUsed: [],;
       recentlyUsed: [],;
-      rarelyUsed: [],;,
+      rarelyUsed: [],;
 }
     const sortedByUsage = Object.entries(importAnalysis).sort(;
       (["", "a"], ["", "b"]) => b.count - a.count;
@@ -299,7 +299,7 @@ class $1 {
     patterns.mostUsed = sortedByUsage.slice(0, 10).map((["pkg", "data"]) => ({
   package: pkg,;
       usageCount: data.count,;
-      files: data.files.length,;,
+      files: data.files.length,;
 }));
 
     const sortedByDate = Object.entries(importAnalysis).sort(;
@@ -309,10 +309,10 @@ class $1 {
     patterns.recentlyUsed = sortedByDate.slice(0, 10).map((["pkg", "data"]) => ({
   package: pkg,;
       lastUsed: data.lastUsed,;
-      usageCount: data.count,;,
+      usageCount: data.count,;
 }));
 
-    return patterns;,
+    return patterns;
 }
 ;
   async identifyUnusedDependencies(usageAnalysis) {
@@ -331,7 +331,7 @@ class $1 {
       );
       const allDeps = {
   ...packageJson.dependencies,;
-        ...packageJson.devDependencies,;,
+        ...packageJson.devDependencies,;
 }
 ;
       Object.keys(allDeps).forEach(dep => {
@@ -346,16 +346,16 @@ class $1 {
             type: packageJson.dependencies[dep];
               ? "dependency";
               : `devDependency`,;
-            reason: `No imports found in source code`});,
+            reason: `No imports found in source code`});
 }
-      });,
+      });
 } catch (error) {
   this.log(Unused dependency identification failed: ${error.message  }`,;
         `ERROR`;
-      );,
+      );
 }
 ;
-    return unused;,
+    return unused;
 }
 ;
   isTransitiveDependency(depName) {
@@ -378,19 +378,18 @@ class $1 {
           pkg =>;
             packageLock.dependencies[pkg].requires &&;
             packageLock.dependencies[pkg].requires[depName];
-        );,
+        );
 }
     } catch (error) {
-  // Ignore errors in package-lock analysis;,
+  // Ignore errors in package-lock analysis;
 }
-;,
+;
 } catch (error) {
-  // Ignore errors in package-lock analysis;,
+  // Ignore errors in package-lock analysis;
 }
 ;
     return false;
     return false;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async analyzeDependencyConflicts() {
@@ -412,20 +411,20 @@ class $1 {
             package: duplicate.package,;
             versions: duplicate.versions,;
             severity: `MEDIUM`,;
-            suggestion: `Consider using package resolution to avoid duplicates`});,
-});,
+            suggestion: `Consider using package resolution to avoid duplicates`});
+});
 }
 ;
       // Check for peer dependency issues;
       const peerIssues = await this.checkPeerDependencies();
-      conflicts.push(...peerIssues);,
+      conflicts.push(...peerIssues);
 } catch (error) {
   this.log(Dependency conflict analysis failed: ${error.message  }`,;
         `ERROR`;
-      );,
+      );
 }
 ;
-    return conflicts;,
+    return conflicts;
 }
 ;
   findDuplicatePackages(dependencies) {
@@ -437,18 +436,18 @@ class $1 {
         const version = deps[pkg].version;
 
         if (!packageVersions[pkg]) {
-  packageVersions[pkg] = [];,
+  packageVersions[pkg] = [];
 }
 ;
         packageVersions[pkg].push({
   version,;
-          path: fullPath,;,
+          path: fullPath,;
 });
 
         if (deps[pkg].dependencies) {
-  traverse(deps[pkg].dependencies, fullPath);,
+  traverse(deps[pkg].dependencies, fullPath);
 }
-      });,
+      });
 }
 ;
     traverse(dependencies);
@@ -462,13 +461,13 @@ class $1 {
   duplicates.push({
   package: pkg,;
             versions: uniqueVersions,;
-            paths: packageVersions[pkg].map(p => p.path),;,
-});,
+            paths: packageVersions[pkg].map(p => p.path),;
+});
 }
       }
     });
 
-    return duplicates;,
+    return duplicates;
 }
 ;
   async checkPeerDependencies() {
@@ -494,16 +493,16 @@ class $1 {
   type: "MISSING_PEER_DEPENDENCY",;
               package: peerDep,;
               required: requiredVersion,;
-              severity: "HIGH",suggestion: `Install ${peerDep}@${requiredVersion} as a dependency",;,
-});,
+              severity: "HIGH",suggestion: `Install ${peerDep}@${requiredVersion} as a dependency",;
+});
 }
-        });,
+        });
 }
     } catch (error) {
-  // Ignore peer dependency check errors;,
+  // Ignore peer dependency check errors;
 }
 ;
-    return issues;,
+    return issues;
 }
 ;
   getInstalledVersion(packageName) {
@@ -511,12 +510,12 @@ class $1 {
   const packageJsonPath = path.join(;
         this.projectRoot,node_modules`,;
         packageName,;
-        `package.json`;,
+        `package.json`;
 } catch (error) {
-  // Ignore peer dependency check errors;,
+  // Ignore peer dependency check errors;
 }
 ;
-    return issues;,
+    return issues;
 }
 ;
   getInstalledVersion(packageName) {
@@ -528,18 +527,17 @@ class $1 {
       );
         `package.json`;
       );
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      if (fs.existsSync(packageJsonPath)) {
+if (fs.existsSync(packageJsonPath)) {
   const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
-        return pkg.version;,
+        return pkg.version;
 }
     } catch (error) {
-  // Ignore errors;,
+  // Ignore errors;
 }
     } catch (error) {
-  // Ignore errors;,
+  // Ignore errors;
 }
-    return null;,
+    return null;
 }
 ;
   async checkOutdatedDependencies() {
@@ -554,7 +552,7 @@ class $1 {
       );
       const dependencies = {
   ...packageJson.dependencies,;
-        ...packageJson.devDependencies,;,
+        ...packageJson.devDependencies,;
 }
       // Simulate finding outdated packages;
       Object.keys(dependencies).forEach(dep => {
@@ -565,9 +563,9 @@ class $1 {
             current: dependencies[dep],;
             latest: this.simulateLatestVersion(dependencies[dep]),;
             severity: `LOW`,;
-            suggestion: Consider updating to latest version for security and features`,;,
+            suggestion: Consider updating to latest version for security and features`,;
 })}
-      });,
+      });
 } catch (error) {
   this.log(`Outdated dependency check failed: ${error.message  }`, `ERROR`);
 
@@ -580,15 +578,15 @@ class $1 {
             current: dependencies[dep],;
             latest: this.simulateLatestVersion(dependencies[dep]),;
             severity: "LOW",;
-            suggestion: Consider updating to latest version for security and features",;,
-});,
+            suggestion: Consider updating to latest version for security and features",;
+});
 }
-      });,
+      });
 } catch (error) {
-  this.log(`Outdated dependency check failed: ${error.message}`, "ERROR");,
+  this.log(`Outdated dependency check failed: ${error.message}`, "ERROR");
 }
 ;
-    return outdated;,
+    return outdated;
 }
 ;
   simulateLatestVersion(currentVersion) {
@@ -597,7 +595,7 @@ class $1 {
     const major = parseInt(versionParts[0]);
     const minor = parseInt(versionParts[1]);
     const patch = parseInt(versionParts[2]);
-return `${major}.${minor + 1}.${patch}`;,
+return `${major}.${minor + 1}.${patch}`;
 }
 ;
   async analyzeBundleImpact() {
@@ -618,19 +616,19 @@ return `${major}.${minor + 1}.${patch}`;,
   type: "BUNDLE_SIZE",;
             severity: "MEDIUM`,;
             message: `Bundle size is large`,;
-            suggestion: Consider code splitting, tree shaking, and removing unused dependencies`,          });,
+            suggestion: Consider code splitting, tree shaking, and removing unused dependencies`,          });
 }
       }
-    } catch (error) {  this.log(`Bundle impact analysis failed: ${error.message  }`, `ERROR`);,
+    } catch (error) {  this.log(`Bundle impact analysis failed: ${error.message  }`, `ERROR`);
 }
 ;
-    return impact;,
+    return impact;
 }
 ;
   analyzeBundleSize() {
   const stats = {
   totalSize: 0,;
-      largestPackages: [],;,
+      largestPackages: [],;
 }
     try {
   const distPath = path.join(this.projectRoot, `dist`);
@@ -643,16 +641,16 @@ return `${major}.${minor + 1}.${patch}`;,
 
         files.forEach(file => {
   const fileStats = fs.statSync(file);
-          totalSize += fileStats.size;,
+          totalSize += fileStats.size;
 });
 
         stats.totalSize = totalSize;
-        stats.totalSizeMB = (totalSize / (1024 * 1024)).toFixed(2);,
+        stats.totalSizeMB = (totalSize / (1024 * 1024)).toFixed(2);
 }
-    } catch (error) {  this.log(`Bundle size analysis failed: ${error.message  }`, `ERROR`);,
+    } catch (error) {  this.log(`Bundle size analysis failed: ${error.message  }`, `ERROR`);
 }
 ;
-    return stats;,
+    return stats;
 }
 ;
   getAllFiles(dir) {
@@ -665,15 +663,15 @@ return `${major}.${minor + 1}.${patch}`;,
         const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
-  findFiles(fullPath);,
+  findFiles(fullPath);
 } else if (stat.isFile()) {
-  files.push(fullPath);,
+  files.push(fullPath);
 }
       }
     }
 ;
     findFiles(dir);
-    return files;,
+    return files;
 }
 ;
   async generateOptimizationRecommendations(;
@@ -698,7 +696,7 @@ return `${major}.${minor + 1}.${patch}`;,
         dependencies: unusedDeps,;
         priority: "HIGH",;
         impact: "REDUCE_BUNDLE_SIZE",;
-        action: Remove unused dependencies to reduce bundle size and install time",;,
+        action: Remove unused dependencies to reduce bundle size and install time",;
 })}
 ;
     // Conflict resolution recommendations;
@@ -708,7 +706,7 @@ return `${major}.${minor + 1}.${patch}`;,
         conflicts: conflicts,;
         priority: "MEDIUM",;
         impact: "IMPROVE_STABILITY",;
-        action: "Resolve dependency conflicts to improve build stability"});,
+        action: "Resolve dependency conflicts to improve build stability"});
 }
 ;
     // Update recommendations;
@@ -718,7 +716,7 @@ return `${major}.${minor + 1}.${patch}`;,
         dependencies: outdatedDeps,;
         priority: "LOW",;
         impact: "SECURITY_FEATURES",;
-        action: "Update dependencies for security patches and new features"});,
+        action: "Update dependencies for security patches and new features"});
 }
 ;
     // Bundle optimization recommendations;
@@ -737,8 +735,8 @@ return `${major}.${minor + 1}.${patch}`;,
         dependencies: unusedDeps,;
         priority: "HIGH",;
         impact: "REDUCE_BUNDLE_SIZE",;
-        action: Remove unused dependencies to reduce bundle size and install time",;,
-});,
+        action: Remove unused dependencies to reduce bundle size and install time",;
+});
 }
 ;
     // Conflict resolution recommendations;
@@ -748,8 +746,8 @@ return `${major}.${minor + 1}.${patch}`;,
         conflicts: conflicts,;
         priority: "MEDIUM",;
         impact: "IMPROVE_STABILITY",;
-        action: "Resolve dependency conflicts to improve build stability",;,
-});,
+        action: "Resolve dependency conflicts to improve build stability",;
+});
 }
 ;
     // Update recommendations;
@@ -759,8 +757,8 @@ return `${major}.${minor + 1}.${patch}`;,
         dependencies: outdatedDeps,;
         priority: "LOW",;
         impact: "SECURITY_FEATURES",;
-        action: "Update dependencies for security patches and new features",;,
-});,
+        action: "Update dependencies for security patches and new features",;
+});
 }
 ;
     // Bundle optimization recommendations;
@@ -770,11 +768,11 @@ return `${major}.${minor + 1}.${patch}`;,
         opportunities: bundleImpact.optimizationOpportunities,;
         priority: "MEDIUM",;
         impact: "IMPROVE_PERFORMANCE",;
-        action: "Optimize bundle size for better loading performance",;,
-});,
+        action: "Optimize bundle size for better loading performance",;
+});
 }
 ;
-    return recommendations;,
+    return recommendations;
 }
 ;
   async applySafeOptimizations(recommendations) {
@@ -790,21 +788,21 @@ return `${major}.${minor + 1}.${patch}`;,
   applied.push({
   type: `REMOVE_UNUSED`,;
               dependencies: removed,;
-              result: `success`,;,
-});,
+              result: `success`,;
+});
 }
         }
       }
     } catch (error) {
   this.log(Safe optimization application failed: ${error.message  }`,;
-        `ERROR`;,
+        `ERROR`;
 } catch (error) {
   this.log(Safe optimization application failed: ${error.message}",;
         "ERROR";
-      );,
+      );
 }
 ;
-    return applied;,
+    return applied;
 }
 ;
   async removeUnusedDependencies(unusedDeps) {
@@ -815,17 +813,17 @@ return `${major}.${minor + 1}.${patch}`;,
         if (dep.type === `devDependency`) {
   try {execSync(`npm uninstall ${dep.name}`, {
   cwd: this.projectRoot,;
-              stdio: `pipe`,;,
+              stdio: `pipe`,;
 });
-            removed.push(dep.name);this.log(`✅ Removed unused dev dependency: ${dep.name}`);,
-} catch (error) {  this.log(`Failed to remove ${dep.name  }: ${error.message}`, `WARN`);,
+            removed.push(dep.name);this.log(`✅ Removed unused dev dependency: ${dep.name}`);
+} catch (error) {  this.log(`Failed to remove ${dep.name  }: ${error.message}`, `WARN`);
 }
         }
       }
-    } catch (error) {  this.log(`Dependency removal failed: ${error.message  }`, `ERROR`);,
+    } catch (error) {  this.log(`Dependency removal failed: ${error.message  }`, `ERROR`);
 }
 ;
-    return removed;,
+    return removed;
 }
 ;
   async measureOptimizationResults(optimizations) {
@@ -842,7 +840,7 @@ return `${major}.${minor + 1}.${patch}`;,
         results.bundleSizeReduction = Math.max(;
           0,;
           this.optimizationHistory.totalSavings - currentSize;
-        );,
+        );
 }
 ;
       // Count removed dependencies;
@@ -856,7 +854,7 @@ return `${major}.${minor + 1}.${patch}`;,
   bundleSizeReduction: 0,;
       installTimeReduction: 0,;
       buildTimeReduction: 0,;
-      dependencyCountReduction: 0,;,
+      dependencyCountReduction: 0,;
 }
 ;
     try {
@@ -866,17 +864,17 @@ return `${major}.${minor + 1}.${patch}`;,
         results.bundleSizeReduction = Math.max(;
           0,;
           this.optimizationHistory.totalSavings - currentSize;
-        );,
+        );
 }
 ;
       // Count removed dependencies;
       results.dependencyCountReduction = optimizations;
         .filter(opt => opt.type === "REMOVE_UNUSED");
-        .reduce((total, opt) => total + opt.dependencies.length, 0);,
-} catch (error) {  this.log(`Results measurement failed: ${error.message  }`, `ERROR`);,
+        .reduce((total, opt) => total + opt.dependencies.length, 0);
+} catch (error) {  this.log(`Results measurement failed: ${error.message  }`, `ERROR`);
 }
 ;
-    return results;,
+    return results;
 }
 ;
   async updateOptimizationHistory(optimizations, results) {
@@ -885,7 +883,7 @@ return `${major}.${minor + 1}.${patch}`;,
       optimizations: optimizations,;
       results: results,;
       totalSavings: ;
-        this.optimizationHistory.totalSavings + results.bundleSizeReduction,;,
+        this.optimizationHistory.totalSavings + results.bundleSizeReduction,;
 }
 ;
     this.optimizationHistory.optimizations.push(optimization);
@@ -894,10 +892,10 @@ return `${major}.${minor + 1}.${patch}`;,
     // Keep only last 10 optimizations;
     if (this.optimizationHistory.optimizations.length > 10) {
   this.optimizationHistory.optimizations =;
-        this.optimizationHistory.optimizations.slice(-10);,
+        this.optimizationHistory.optimizations.slice(-10);
 }
 ;
-    this.saveOptimizationHistory();,
+    this.saveOptimizationHistory();
 }
 ;
   async generateOptimizationReport(optimizations, results, recommendations) {
@@ -907,12 +905,12 @@ return `${major}.${minor + 1}.${patch}`;,
   totalOptimizations: optimizations.length,;
         bundleSizeReduction: results.bundleSizeReduction,;
         dependencyCountReduction: results.dependencyCountReduction,;
-        totalSavings: this.optimizationHistory.totalSavings,;,
+        totalSavings: this.optimizationHistory.totalSavings,;
 },;
       optimizations: optimizations,;
       results: results,;
       recommendations: recommendations,;
-      history: this.optimizationHistory,;,
+      history: this.optimizationHistory,;
 }
 ;
     const reportPath = path.join(;
@@ -923,7 +921,7 @@ return `${major}.${minor + 1}.${patch}`;,
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`📊 Optimization Report generated: ${reportPath}`);
-    return report;,
+    return report;
 }
 ;
   async run() {
@@ -934,15 +932,15 @@ this.log(`✅ Smart Dependency Optimization completed successfully`);this.log(`�
       this.log(💰 Total savings: ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB`;
       );
 
-      return result;,
+      return result;
 } catch (error) {
   this.log(;
-        `❌ Smart Dependency Optimization failed: ${error.message  }`,ERROR`;,
+        `❌ Smart Dependency Optimization failed: ${error.message  }`,ERROR`;
 } catch (error) {
   this.log(;
         `❌ Smart Dependency Optimization failed: ${error.message}",ERROR';
       );
-      throw error;,
+      throw error;
 }
   }
 }
@@ -950,7 +948,7 @@ this.log(`✅ Smart Dependency Optimization completed successfully`);this.log(`�
 // Run if called directly;
 if (require.main === module) {
   const optimizer = new SmartDependencyOptimizer();
-  optimizer.run().catch(console.error);,
+  optimizer.run().catch(console.error);
 }
 ;
 module.exports = SmartDependencyOptimizer

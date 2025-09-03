@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
- * SEO function
+* SEO function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */
 function SEO({
 
 interface SEOProps {  title?: string;
-=======
-<<<<<<< HEAD
-import { Helmet  } from 'react-helmet-async';
-
-interface SEOProps {
-  title?: string;
->>>>>>> main
-  description?: string;
+description?: string;
   keywords?: string;
   image?: string;
   url?: string;
@@ -29,8 +18,7 @@ export const SEO: React.FC<SEOProps> = ({
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
-<<<<<<< HEAD
-  type = 'website',
+type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
@@ -88,14 +76,7 @@ export const SEO: React.FC<SEOProps> = ({
       </script>
     </Helmet>) }
 '"`
-=======
-  type = 'website'
-}) => {
-  return(<Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
->>>>>>> main
-      <meta name="description" content={description} />
+<meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
@@ -138,7 +119,6 @@ export const SEO: React.FC<SEOProps> = ({
             "contactType": "customer service"
           }
         })}
-=======
 import Head from "next/head"
 import React from "react"
 import { Helmet  } from "react - helmet-async", SEOProps {title?: string;description?: string
@@ -148,7 +128,7 @@ export default function Page() {
 export default function Page() {;
 
 interface SEOProps {
-<<<<<<< HEAD  title?: string;
+title?: string;
    description?: string;
    keywords?: string;
    image?: string;
@@ -416,7 +396,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
             "telephone": "+1-555-ZION-TECH","
             "contactType": "customer service"
 
-
         })}
 
       </script>
@@ -424,8 +403,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <script type = "application/ld+json">
         {JSON.stringify(structuredData)}
 
->>>>>>> main
-      </script>
+</script>
     </Helmet>
   );
 }  );"
@@ -504,14 +482,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <meta name="author" content="Zion Tech Group" /" >"
     </Head>
   )}
-<<<<<<< HEAD
-=======
-
 "
 export default SEO;"
 ""
   )}
 };";
 "
->>>>>>> main
->>>>>>> main

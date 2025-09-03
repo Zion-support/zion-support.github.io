@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 
@@ -447,5 +446,3 @@ export default function Page() {
 
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,"`
-=======
->>>>>>> main

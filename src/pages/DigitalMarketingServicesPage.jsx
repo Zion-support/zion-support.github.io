@@ -11,7 +11,6 @@ export default function DigitalMarketingServicesPage() {return ("
           Professional DigitalMarketingServicesPage services to help your business grow.
         </p>
       </div>
-<<<<<<< HEAD
 """
       {/* Category Filter */}""""
       <div className="container mx-auto px-4 py-8">""""
@@ -87,7 +86,6 @@ export default function DigitalMarketingServicesPage() {return ("
       </div>
     </div>)}
 
-
 export { MarketingServices, DigitalMarketingServicesPage };
 
 export { MarketingServices, DigitalMarketingServicesPage };
@@ -97,8 +95,3 @@ export { MarketingServices, DigitalMarketingServicesPage };
 export { MarketingServices, DigitalMarketingServicesPage };
 
 export { MarketingServices, DigitalMarketingServicesPage };
-=======
-  )
-}
-}""
->>>>>>> main

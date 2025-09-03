@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -108,20 +107,10 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
 
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
-=======
-<<<<<<< HEAD
-import { Link  } from 'react-router-dom';
- from 'react';
-export const EnhancedServicesShowcase: React.FC = () => {
-export default React.memo(/**
-import { motion  } from 'framer-motion';
->>>>>>> main
-
- params - Function parameters
+params - Function parameters
  * @returns {*} Function return value
  */
 function EnhancedServicesShowcase () {export default function EnhancedServicesShowcase() {
-=======
 import React from "react"
 ;,"});,"})"
 ,"});,"})","});,"})","});,"})","});,"})"
@@ -399,8 +388,6 @@ export const EnhancedServicesShowcase: React.FC = () => {}
     }
 
   }
->>>>>>> main
-
 const categories = []
 ;&apos,
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown ,{}  const [selectedCategory, setSelectedCategory] = useState(&apos;All&apos)&apos,
@@ -448,8 +435,7 @@ export const EnhancedServicesShowcase: React.FC = () => {",
   const containerVariants = {}, visible: { opacity: 1,
       transition: { staggerChildren: 0.1  }
 
-<<<<<<< HEAD
-  { opacity: 1,
+{ opacity: 1,
   y: 0
 
 }}
@@ -479,14 +465,6 @@ export const EnhancedServicesShowcase: React.FC = () => {",
               key={index}
               variants={itemVariants}"
               className="group relative"
-=======
-  const containerVariants = {}, visible: {,
-opacity: 1,
-      transition: {,
-staggerChildren: 0.1}"
-  Clock, CheckCircle,"
-  Search} from "lucide-react,"";"
->>>>>>> main
 "
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [], benefits: ["Reduce manual work by 70-85%,Improve efficiency by 60%,Cut operational costs by 40-50%"], color: "from-cyan-500 to-blue-600", glowColor: "cyan"}, {""
@@ -511,8 +489,7 @@ const categories = []
 
     }
 
-<<<<<<< HEAD
-                {/* Hover Glow Effect */}`
+{/* Hover Glow Effect */}`
                 <div className={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 blur-xl`}></div>;
               </div>
             </motion.div>;) ) }
@@ -713,13 +690,3 @@ const categories = []
       </div>
     </section>) };
 '"`
-=======
-  }"
-"
-const categories = []"
-"
-export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState("All')"
-  const [hoveredService, setHoveredService] = useState<string | null" >(null)""
-;""
-}}""
->>>>>>> main

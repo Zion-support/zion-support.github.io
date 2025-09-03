@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-const { execSync } = require("$1");
+const { execSync } = require("child_process");
 const fs = require("fs")
 class AutomatedDeployment {
   constructor() {
     this.projectRoot = process.cwd()
-    this.deploymentSteps = [],
+    this.deploymentSteps = []
 }
 
   async deploy() {
@@ -21,27 +21,27 @@ class AutomatedDeployment {
         console.log(`Executing: ${step.name}`)
         execSync(step.command, { cwd: this.projectRoot, stdio: "inherit" })
         this.deploymentSteps.push({ name: step.name, status: "SUCCESS" })
-        console.log(`✅ ${step.name} completed`),
+        console.log(`✅ ${step.name} completed`)
 } catch (error) {
         this.deploymentSteps.push({ name: step.name, status: "FAILED", error: error.message })
         console.log(`❌ ${step.name} failed: ${error.message}`)
-        break; // Stop deployment on failure,
+        break; // Stop deployment on failure
 }
     }
     
-    this.saveDeploymentLog(),
+    this.saveDeploymentLog()
 }
 
   saveDeploymentLog() {
     const logPath = path.join(this.projectRoot, "automation-reports", "deployment-log.json")
     fs.writeFileSync(logPath, JSON.stringify(this.deploymentSteps, null, 2))
-    console.log("📝 Deployment log saved"),
+    console.log("📝 Deployment log saved")
 }
 }
 
 if (require.main === module) {
   const deployment = new AutomatedDeployment()
-  deployment.deploy(),
+  deployment.deploy()
 }
 
 module.exports = AutomatedDeployment

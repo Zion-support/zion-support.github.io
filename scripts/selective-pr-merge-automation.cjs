@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 
 console.log('🎯 Selective PR Merge Automation System')
-console.log('======================================')
+console.log('===')
 
 class SelectivePRMergeAutomation {
   constructor() {
@@ -164,16 +164,13 @@ class SelectivePRMergeAutomation {
       // Strategy: Keep our changes (HEAD) for most conflicts
       // Remove conflict markers and keep the HEAD version
       resolvedContent = resolvedContent.replace(
-        /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g,
-        '$1'
+        /\n([\s\S]*?)\n\n([\s\S]*?)\n'$1'
       )
 
       // Handle any remaining conflict markers
-      resolvedContent = resolvedContent.replace(/<<<<<<< HEAD\n/g, '')
-      resolvedContent = resolvedContent.replace(/=======\n/g, '')
-      resolvedContent = resolvedContent.replace(/>>>>>>> [^\n]+\n/g, '')
-
-      // Write the resolved content
+      resolvedContent = resolvedContent.replace(/\n/g, '')
+      resolvedContent = resolvedContent.replace(/\n/g, '')
+      resolvedContent = resolvedContent.replace(/// Write the resolved content
       fs.writeFileSync(filePath, resolvedContent)
       this.log(`✅ Resolved conflicts in: ${filePath}`)
 
@@ -233,7 +230,7 @@ class SelectivePRMergeAutomation {
 
     // Display summary
     console.log('\n🎉 Selective PR Merge Automation Complete!')
-    console.log('=========================================')
+    console.log('======')
     console.log(`Total branches processed: ${this.processedBranches.length}`)
     console.log(`Successfully merged: ${this.mergedBranches.length}`)
     console.log(`Failed branches: ${this.failedBranches.length}`)

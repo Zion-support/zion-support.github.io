@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import SEO from "@/components/SEO";'
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
@@ -604,5 +603,3 @@ const AIServices = () => {
 export { AIServices };
 export default AIServices;'"`
 }}'"`'"`
-=======
->>>>>>> main

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  interface Stat {
+interface Stat {
     number: string;
     label: string;
     icon: LucideIcon;
@@ -49,8 +45,3 @@
     </section>) }
 export default StatsSection;
 '"
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
@@ -212,9 +209,3 @@ export default InteractiveTestimonials;"
 export default InteractiveTestimonials;
 export default InteractiveTestimonials;
 '"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

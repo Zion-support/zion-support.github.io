@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function ModernFooter() {return (
@@ -12,4 +10,3 @@ export default function ModernFooter() {return (
         </p>
       </div>
   );"}"
->>>>>>> main

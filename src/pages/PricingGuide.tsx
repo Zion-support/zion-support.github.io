@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ],;
       notIncluded[;""""
         "Advanced Analytics",""""
@@ -124,27 +123,7 @@
             <p className="text-xl text-slate-300 mb-8 max-w-4xl mx-auto">
               Transparent, competitive pricing for cutting-edge technology solutions.
               Choose the plan that fits your business needs and scale as you grow.
-=======
-import React from "react"
-import Head from "next/head"
-import Link from "next/link"
-const PricingGuide = () => {
-  return (
-    <>
-      <Head>
-        <title>Pricing Guide - Zion Tech Group</title>
-        <meta name="description" content="Professional Pricing Guide services"  />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Pricing Guide
-            </h1>
-            <p className="text-xl text-gray-600 mb-12">
-              Professional Pricing Guide services and solutions
->>>>>>> main
-            </p>
+</p>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
@@ -155,8 +134,7 @@ const PricingGuide = () => {
                   <li>• Custom Development</li>
                 </ul>
               </div>
-<<<<<<< HEAD
-            </div>
+</div>
           </div>
         </div>
 """
@@ -306,23 +284,12 @@ const PricingGuide = () => {
               <div className="bg-slate-800/30 rounded-xl p-6 border border-slate-700/50">"""
                 <h3 className="text-lg font-semibold text-white mb-3">Do you offer custom pricing?</h3>"""
                 <p className="text-slate-300">Yes, we provide custom pricing for enterprise clients and specialized requirements. Contact our sales team for a personalized quote.</p>
-=======
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Industry Expertise</li>
-                  <li>• Proven Results</li>
-                  <li>• Scalable Solutions</li>
-                  <li>• Competitive Pricing</li>
-                </ul>
->>>>>>> main
-              </div>
+</div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                 View Pricing
               </Link>
-<<<<<<< HEAD
-            </div>;
+</div>;
           </div>;
         </div>;
       </section>;
@@ -330,7 +297,6 @@ const PricingGuide = () => {
   );
 }
 
-
 export { PricingGuide };
 
 export { PricingGuide };
@@ -338,13 +304,3 @@ export { PricingGuide };
 export { PricingGuide };
 
 export { PricingGuide };
-=======
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
-                Contact Us
-              </Link>
-            </div>
-    </>
-  );
-}
-export default PricingGuide
->>>>>>> main

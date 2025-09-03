@@ -4,10 +4,7 @@ function fixMergeConflicts(filePath) {
   try {
   let content = fs.readFileSync(filePath, "utf8");
     // Remove merge conflict markers and keep the content after the last marker;
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*\n/g, "");
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]*\n/g, "");
-    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]*\n/g, "");
-    // Fix common syntax issues;
+    content = content.replace(/[\s\S]*?[\s\S]*?content = content.replace(/[\s\S]*?content = content.replace(/[\s\S]*?// Fix common syntax issues;
     content = content.replace(/},\s*}/g, "}");
     content = content.replace(/},\s*]/g, "]");
     content = content.replace(/},\s*\)/g, ")");
@@ -27,7 +24,7 @@ function findAndFixFiles(dir) {
   findAndFixFiles(filePath);,
 } else if (file.match(/\.(tsx?|jsx?)$/)) {
   const content = fs.readFileSync(filePath, "utf8");
-      if (content.includes("<<<<<<< HEAD") || content.includes("=======") || content.includes(">>>>>>>")) {
+      if (content.includes("") || content.includes("") || content.includes(">>>>>>>")) {
   fixMergeConflicts(filePath);,
 }
     }

@@ -1,16 +1,16 @@
 #!/usr/bin/env node
-const fs = require("$1");
+const fs = require("child_process");
 const path = require("path")
 class FileRestorer {
   constructor() {
     this.projectRoot = process.cwd()
     this.fixedFiles = []
-    this.errors = [],
+    this.errors = []
 }
 
   log(message) {
     const timestamp = new Date().toISOString()
-    console.log(`[${timestamp}] ${message}`),
+    console.log(`[${timestamp}] ${message}`)
 }
 
   async restoreFile(filePath) {
@@ -61,14 +61,14 @@ class FileRestorer {
         fs.writeFileSync(filePath, fixedContent, "utf8")
         this.fixedFiles.push(filePath)
         this.log(`[SUCCESS] Restored corrupted file: ${filePath}`)
-        return true,
+        return true
 }
       
-      return false,
+      return false
 } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`[ERROR] Failed to restore ${filePath}: ${error.message}`)
-      return false,
+      return false
 }
   }
 
@@ -80,7 +80,7 @@ class FileRestorer {
         const fullPath = path.join(currentDir, item)
         const stat = fs.statSync(fullPath)
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {
-          scanDir(fullPath),
+          scanDir(fullPath)
 } else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".jsx") || item.endsWith(".ts") || item.endsWith(".js"))) {
           try {
             const content = fs.readFileSync(fullPath, "utf8")
@@ -90,16 +90,16 @@ class FileRestorer {
                 content.includes("from "") && content.includes("") ||
                 content.includes("return (") ||
                 content.includes("return (,")) {
-              corruptedFiles.push(fullPath),
+              corruptedFiles.push(fullPath)
 }
           } catch (error) {
-            // Skip files that can"t be read,
+            // Skip files that can"t be read
 }
         }
       }
     }
     scanDir(dir)
-    return corruptedFiles,
+    return corruptedFiles
 }
 
   async restoreCorruptedFiles() {
@@ -109,12 +109,12 @@ class FileRestorer {
     this.log(`[INFO] Found ${corruptedFiles.length} potentially corrupted files`)
     if (corruptedFiles.length === 0) {
       this.log("[INFO] No corrupted files found")
-      return,
+      return
 }
     
     // Restore each corrupted file
     for (const filePath of corruptedFiles) {
-      await this.restoreFile(filePath),
+      await this.restoreFile(filePath)
 }
     
     // Generate report
@@ -123,23 +123,23 @@ class FileRestorer {
       summary: {
         totalFiles: corruptedFiles.length,
         fixedFiles: this.fixedFiles.length,
-        errors: this.errors.length,
+        errors: this.errors.length
 },
       fixedFiles: this.fixedFiles,
-      errors: this.errors,
+      errors: this.errors
 }
     const reportPath = path.join(this.projectRoot, "file-restoration-report.json")
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
     this.log(`[SUCCESS] File restoration completed`)
     this.log(`[INFO] Summary: ${this.fixedFiles.length} files restored, ${this.errors.length} errors`)
-    this.log(`[INFO] Report saved to ${reportPath}`),
+    this.log(`[INFO] Report saved to ${reportPath}`)
 }
 }
 
 // Main execution
 if (require.main === module) {
   const restorer = new FileRestorer()
-  restorer.restoreCorruptedFiles().catch(console.error),
+  restorer.restoreCorruptedFiles().catch(console.error)
 }
 
 module.exports = FileRestorer

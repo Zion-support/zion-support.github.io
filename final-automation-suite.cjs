@@ -24,8 +24,7 @@ class $1 {
 });
         stdio: "pipe";,
 });
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      this.log(`✅ Completed: ${description}`);
+this.log(`✅ Completed: ${description}`);
       return result;,
 } catch (error) {
   this.log(`❌ Failed: ${description} - ${error.message}`);
@@ -116,7 +115,6 @@ class CodeQualityChecker {
       const status = execSync("git status --porcelain", {
   cwd: this.projectRoot,;
         encoding: "utf8";
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 });
       if (stat.isDirectory()) {
   files.push(...this.getAllFiles(fullPath, extensions));,
@@ -227,7 +225,6 @@ class PerformanceMonitor {
   this.log("📝 Changes detected:");
         console.log(status);
         return true;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 } else {
   this.log("✅ No changes to commit");
         return false;,
@@ -259,7 +256,6 @@ monitor.monitorPerformance();
 }
 ;
     return { success: true, scriptsCreated: scripts.length }
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
 ;
   async addAllChanges() {
@@ -398,8 +394,7 @@ Enhancements: Performance, Security, SEO, Accessibility`;
         "Keep dependencies updated",;
         "Monitor performance metrics",;
         "Regular security audits";
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-      ];,
+];,
 }
     const reportPath = path.join(this.projectRoot, "automation-reports", "final-automation-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -445,7 +440,6 @@ Enhancements: Performance, Security, SEO, Accessibility`;
       await this.pushChanges();
       // Create pull request if needed;
       await this.createPullRequest();
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }
     ;
     // Generate final report;

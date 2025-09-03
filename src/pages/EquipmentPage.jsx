@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';'''
 import { Card, CardContent, CardHeader } from '@/components/ui/card';'''
 import { Button } from '@/components/ui/button';'''
@@ -158,6 +157,3 @@ export { EquipmentPage, EquipmentCard };
 export { EquipmentPage, EquipmentCard };
 
 export { EquipmentPage, EquipmentCard };
-=======
-import React from 'react'; export default EquipmentPage; const EquipmentPage = () => { const [equipment, setEquipment] = useState([]); const [loading, setLoading] = useState(true); const [filterCategory, setFilterCategory] = useState("); const [sortBy, setSortBy] = useState("newest"); const [priceRange, setPriceRange] = useState([0, 10000]); const [filterBrand, setFilterBrand] = useState("); const [filterAvailability, setFilterAvailability] = useState("); const [minRating, setMinRating] = useState(0); const [showRecommended, setShowRecommended] = useState(false); const categories = ["Servers", "Networking", "Storage", "Workstations", "Security"]; const brandOptions = ["Dell", "HP", "Cisco", "IBM", "Lenovo"]; const availabilityOptions = ["In Stock", "Low Stock", "Out of Stock"]; useEffect(() => {
->>>>>>> main

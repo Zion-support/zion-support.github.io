@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-=======
-
 "";,"});,})"
 ;,});,"})
 }
-<<<<<<< HEAD
-
 // import { useAuth } from '@/hooks/useAuth'; // Assuming an auth hook exists
 // For now, let's mock a basic useAuth hook if not available to allow component structure
 // In a real scenario, this would come from your actual auth context/hooks
@@ -208,7 +203,3 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({ productId }) => {
 };
 
 export default ProductReviews;
-=======
-;"&apos,"
->>>>>>> main
->>>>>>> main

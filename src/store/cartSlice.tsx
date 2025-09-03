@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 :src/store/cartSlice.tsx
 
 interface CartState {
@@ -78,4 +76,3 @@ const cartSlice:  createSlice({;
 export const { addItem, removeItem, updateQuantity, clearCart } = cartSlice.actions;
 export { cartSlice };
 export default cartSlice.reducer;
->>>>>>> main

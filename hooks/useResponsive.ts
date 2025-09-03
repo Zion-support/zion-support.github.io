@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 interface ResponsiveState {
@@ -45,5 +44,3 @@ const useResponsive = (): ResponsiveState => {
 };
 
 export default useResponsive;
-=======
->>>>>>> main

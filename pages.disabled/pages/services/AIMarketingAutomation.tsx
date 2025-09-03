@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIMarketingAutomation.tsx
 <:pages.disabled/pages/services/AIMarketingAutomation.tsx
 import React from 'react';
@@ -44,8 +43,6 @@ import {}
       features: ['Full AI suite',White-label options',Dedicated support',SAML/SSO',Custom integrations',Advanced reporting']};
   ];
 
-  
-  
   return()
     <>
 :pages.disabled/pages/services/AIMarketingAutomation.tsx
@@ -468,5 +465,3 @@ import {}
 ;
 export { AIMarketingAutomation };export default AIMarketingAutomation;'"`
 '"`'"`
-=======
->>>>>>> main

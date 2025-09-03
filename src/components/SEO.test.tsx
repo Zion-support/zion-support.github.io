@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function SEO.test() {return (
@@ -12,4 +10,3 @@ export default function SEO.test() {return (
         </p>
       </div>
   );"}"
->>>>>>> main

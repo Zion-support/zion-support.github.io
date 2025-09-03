@@ -6,7 +6,7 @@ import { fileURLToPath } from `url`;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(``🚀 Starting continuous front maximizer automation...`);
-#!/"usr/bin/env" node;
+#!/usr/bin/env node
 import { execSync  } from "child_process";
 import fs from "fs";
 import path from "path";
@@ -27,7 +27,7 @@ async function $1() {
     console.log(`"🏗️ Building project for front-end optimization...");
     try {
   execSync("npm run build", { stdio: "inherit" });
-      console.log("✅ Build completed"`);,
+      console.log("✅ Build completed"`);
 } catch (error) {
   console.log(`"⚠️  Build failed but continuing...");
 console.log(`🚀 Starting continuous front maximizer automation...`);
@@ -40,22 +40,22 @@ async function runFrontMaximizer() {
     console.log(``🏗️ Building project for front-end optimization...`);
     try {
   execSync(`npm run build`, { stdio: "inherit" });
-      console.log("✅ Build completed"`);,
+      console.log("✅ Build completed"`);
 } catch (error) {
   console.log(`"⚠️  Build failed but continuing...");
-      return;,
+      return;
 }
-    ;,
+    ;
 } catch (error) {
   console.log(`⚠️  Build failed but continuing...`);
-      return;,
+      return;
 }
     ;
     // Check if dist folder exists;
     const distPath = path.join(process.cwd(), "dist");
     if (!fs.existsSync(distPath)) {
   console.log("⚠️  Build verification failed: dist folder not found");
-      return;,
+      return;
 }
     ;
     // Optimize images if available;
@@ -63,44 +63,43 @@ async function runFrontMaximizer() {
     try {
   if (fs.existsSync(""scripts/optimize-images.js"")) {
   execSync("node "scripts/optimize-images.js"", { stdio: "inherit" });
-        console.log("✅ Image optimization completed");,
+        console.log("✅ Image optimization completed");
 } else {
-  console.log("ℹ️  Image optimization script not available");,
+  console.log("ℹ️  Image optimization script not available");
 }
     } catch (error) {
-  console.log("⚠️  Image optimization failed but continuing...");,
+  console.log("⚠️  Image optimization failed but continuing...");
 }
-    ;,
+    ;
 } catch (error) {
-  console.log("⚠️  Image optimization failed but continuing...");,
+  console.log("⚠️  Image optimization failed but continuing...");
 }
     ;
     // Check for unused CSS;
     console.log("🎨 Checking for unused CSS...");
     try {
   execSync("npx purgecss --css dist/**/*.css --content dist/**/*.html --output "dist/optimized"", { stdio: "inherit" });
-      console.log("✅ CSS optimization completed");,
+      console.log("✅ CSS optimization completed");
 } catch (error) {
-  console.log("ℹ️  CSS optimization not available");,
+  console.log("ℹ️  CSS optimization not available");
 }
-    ;,
+    ;
 } catch (error) {
-  console.log("ℹ️  CSS optimization not available");,
+  console.log("ℹ️  CSS optimization not available");
 }
     ;
     // Check for JavaScript bundle optimization;
     // Check for JavaScript bundle optimization;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-    console.log("📦 Checking JavaScript bundle optimization...");
+console.log("📦 Checking JavaScript bundle optimization...");
     try {
   execSync("node "scripts/analyze-bundle.js"", { stdio: "inherit" });
-      console.log("✅ Bundle analysis completed");,
+      console.log("✅ Bundle analysis completed");
 } catch (error) {
-  console.log("⚠️  Bundle analysis failed but continuing...");,
+  console.log("⚠️  Bundle analysis failed but continuing...");
 }
-    ;,
+    ;
 } catch (error) {
-  console.log("⚠️  Bundle analysis failed but continuing...");,
+  console.log("⚠️  Bundle analysis failed but continuing...");
 }
     ;
     // Check for critical CSS;
@@ -108,12 +107,12 @@ async function runFrontMaximizer() {
     try {
   if (fs.existsSync(""scripts/critical-css.js"")) {
   execSync("node "scripts/critical-css.js"", { stdio: "inherit" });
-        console.log("✅ Critical CSS extraction completed");,
+        console.log("✅ Critical CSS extraction completed");
 } else {
-  console.log("ℹ️  Critical CSS script not available");,
+  console.log("ℹ️  Critical CSS script not available");
 }
     } catch (error) {
-  console.log("⚠️  Critical CSS extraction failed but continuing...");,
+  console.log("⚠️  Critical CSS extraction failed but continuing...");
 }
     ;
     // Generate front maximizer report;
@@ -121,18 +120,17 @@ async function runFrontMaximizer() {
     const report = {
   timestamp: new Date().toISOString(),;
       summary: "Front maximizer completed",;
-      status: `completed`;,
+      status: `completed`;
 }
     const reportPath = path.join(process.cwd(), `front-maximizer-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Front maximizer report saved to ${reportPath});
     console.log(`✅ Continuous front maximizer completed successfully`);
-    ;,
-} catch (error) {
-  console.error(`❌ Continuous front maximizer failed: `, error.message);,
+    ;
 } catch (error) {
   console.error(`❌ Continuous front maximizer failed: `, error.message);
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;
-    // Don`t exit, just log the error and continue;,
+} catch (error) {
+  console.error(`❌ Continuous front maximizer failed: `, error.message);
+// Don`t exit, just log the error and continue;
 }
 }
 ;
@@ -142,9 +140,9 @@ async function runContinuous() {console.log(🚀 Starting continuous front maxim
   await runFrontMaximizer();
   // Set up continuous execution;
   setInterval(async () => {
-  ,
+  
 } catch (error) {
-  console.log("⚠️  Critical CSS extraction failed but continuing...");,
+  console.log("⚠️  Critical CSS extraction failed but continuing...");
 }
     ;
     // Generate front maximizer report;
@@ -152,17 +150,17 @@ async function runContinuous() {console.log(🚀 Starting continuous front maxim
     const report = {
   timestamp: new Date().toISOString(),;
       summary: "Front maximizer completed",;
-      status: "completed";,
+      status: "completed";
 }
     ;
     const reportPath = path.join(process.cwd(), "front-maximizer-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Front maximizer report saved to ${reportPath});
     ;
     console.log("✅ Continuous front maximizer completed successfully");
-    ;,
+    ;
 } catch (error) {
   console.error("❌ Continuous front maximizer failed: ", error.message);
-    // Don"t exit, just log the error and continue;,
+    // Don"t exit, just log the error and continue;
 }
 }
 ;
@@ -177,9 +175,8 @@ async function runContinuous() {console.log(🚀 Starting continuous front maxim
   await runFrontMaximizer();
   setInterval(async () => {
   await runFrontMaximizer();
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259;,
 }, AUTOMATION_INTERVAL);
-  console.log(✅ Continuous front maximizer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``);,
+  console.log(✅ Continuous front maximizer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``);
 }
 ;
 // Handle graceful shutdown;
@@ -189,14 +186,14 @@ process.on(`SIGINT`, () => {
 // Handle graceful shutdown;
 process.on("SIGINT", () => {
   console.log("🛑 Received SIGINT, shutting down gracefully...");
-  process.exit(0);,
+  process.exit(0);
 });
 
 process.on("SIGTERM", () => {
   console.log("🛑 Received SIGTERM, shutting down gracefully...");
-  process.exit(0);,
+  process.exit(0);
 });
 // Start the continuous front maximizer;
 runContinuous().catch(error => {
-  console.error("❌ Failed to start continuous front maximizer: ", error);  process.exit(1);,
+  console.error("❌ Failed to start continuous front maximizer: ", error);  process.exit(1);
 })

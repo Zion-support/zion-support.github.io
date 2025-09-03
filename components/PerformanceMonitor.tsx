@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react;
 
 interface PerformanceMetrics {fcp?: number;
@@ -22,7 +21,6 @@ if (typeof window === 'undefined') return;
 
     const observer = new PerformanceObserver((list) => {;const entries = list.getEntries();
 
-      
       entries.forEach((entry) => {
         switch (entry.entryType) {
 case 'paint': if (entry.name === 'first-contentful-paint') {'              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));'            }
@@ -98,32 +96,3 @@ if (value <= thresholds.good) return 'text-green-600;
 };
 
 export default PerformanceMonitor;
-=======
-fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    loadTime: null})
-}
-  const [isVisible, setIsVisible] = useState(false)
-}
-      });"""
-      fcpObserver.observe({ entryTypes: ["paint"] })
-}
-      // comment
-      const lcpObserver = new PerformanceObserver((list) => {"
-      lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] })
-}
-      // comment
-      const fidObserver = new PerformanceObserver((list) => {"
-      case "fcp":"""
-        return value <= 1800 ? "text-green-500" : value <= 3000 ? "text-yellow-500" : "text-red-500";"""
-      case "lcp":"""
-        return value <= 2500 ? "text-green-500" : value <= 4000 ? "text-yellow-500" : "text-red-500";"""
-      case "fid":"""
-        return value <= 100 ? "text-green-500" : value <= 300 ? "text-yellow-500" : "text-red-500";"""
-      case "cls":"""
-        return value <= 0.1 ? "text-green-500" : value <= 0.25 ? "text-yellow-500" : "text-red-500";""
-      default: ""'>
->>>>>>> main

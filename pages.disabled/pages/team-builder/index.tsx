@@ -1,20 +1,13 @@
-<<<<<<< HEAD
 // import { NextPage   } from 'next.ts'; // Removed'
 :pages.disabled/pages/team-builder/index.tsx
 
 // Define Zod schema for form validation}).optional()});
-=======
-//;
-:pages.disabled/pages/team-builder/index.tsx;
-// Define: Zod schema for form validation}).optional()});
->>>>>>> main
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 // const TeamBuilderPage: React.FC: = (): JSX.Element: => { // Ne,w, or remove type for inference;
   const [currentStep, setCurrentStep] = useState<typeof 0>(0);
   const [isLoading, setIsLoading] = useState<typeof false>(false);
   const [teamRecommendation, setTeamRecommendation] = useState<any>(null);
   const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<any>(null);
-<<<<<<< HEAD
 :pages.disabled/pages/team-builder/index.tsx
 
 :pages.disabled/pages/team-builder/index.tsx
@@ -49,21 +42,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       techStack: '',
       lockTimeline: false,
       lockBudget: false,
-=======
-:pages.disabled/pages/team-builder/index.tsx;
-:pages.disabled/pages/team-builder/index.tsx: const { control, handleSubmit, trigger, formState: { errors} } = useForm<ProjectBriefFormData>({;
-    resolver: zodResolver(projectBriefSchema),;
-    defaultValues: {;
-";
-      projectName: ",",";
-      goals: ",",";
-      timeline: ",",";
-      budget: ",",";
-      techStack: ",",";
-      lockTimeline: fals,e,;
-      lockBudget: fals,e,;
->>>>>>> main
-      talentFilters: { // New;
+talentFilters: { // New;
         verifiedOnly: fals,e,";
         regions: ","}}})"{ name: "Review: & Submit,", fields: []}, // No: fields, just review;
 :pages.disabled/pages/team-builder/index.tsx;
@@ -111,8 +90,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
   ];
     if (isValid) {}
       setCurrentStep((prev) => prev + 1)}
-<<<<<<< HEAD
-  };
+};
 
     setCurrentStep(prev: unknown prev - 1)};
   const onSubmit: SubmitHandler<ProjectBriefFormData> = async (data) => {}
@@ -145,84 +123,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
         regions: data.talentFilters?.regions?.split(',).map(r   => r.trim()).filter(r => r) || [],}};
 >        verifiedOnly: data.talentFilters?.verifiedOnly,;'
         regions: data.talentFilters?.regions?.split(',).map(r   => r.trim()).filter(r => r) || []}};
-=======
-  }
-;
-    setCurrentStep(prev: unknown: prev - 1)}
-  const onSubmit: SubmitHandler<ProjectBriefFormData> = async: (data) => ,{}
-    setIsLoading(true);
-    setTeamRecommendation(null);
-:pages.disabled/pages/team-builder/index.tsx;
-    const: projectBriefData: ProjectBrief: = {;
-";
-"";
-  userId: anycurrent-user-id,",      createdAt: new: Date().toISOString(),";
-      ...data,"";
-      techStack: data.techStack?.split(,",").map(s: => s.trim()).filter(s => s) || [],";
-    const: projectBriefData: ProjectBrief: = ,{}
-  userId: anycurrent-user-id,",";
-      createdAt: new: Date().toISOString(),;
-      ...data,;
-      techStack: data.techStack?.split(,").map(s: => s.trim()).filter(s => s) || [],";
-      talentFilters: any{ // Ensure: talentFilters is structured correctly;
-:pages.disabled/pages/team-builder/index.tsx;
-        verifiedOnly: data.talentFilters?.verifiedOnl,y,;
-:pages.disabled/pages/team-builder/index.tsx;
-<:pages.disabled/pages/team-builder/index.tsx>;
-        regions: data.talentFilters?.regions?.split(,",").map(r: => r.trim()).filter(r => r) || [],";,
-}
-    }
-=;
-        regions: data.talentFilters?.regions?.split(,").map(r: => r.trim()).filter(r => r) || []}}";
->        verifiedOnly: data.talentFilters?.verifiedOnl,y,";
-        regions: data.talentFilters?.regions?.split(,").map(r: => r.trim()).filter(r => r) || []}}";
-    setProjectBriefSubmitted(projectBriefData);
-    try: {;
-        body: JSON.stringify(projectBriefData)});
-      if: (!response.ok) {;
-";
-        throw: new Error(errorData.error || "Failed to generate team recommendation")}";
-      setTeamRecommendation(recommendationResult)"      toast.success("Team: recommendation generated successfully!");
-      // setCurrentStep(prev: unknown: prev + 1) // No longer using steps for displa,y, display immediately} catch (error: ) {;
-";
-      // console.error("Error: submitting project brief:,", error)";
-      toast.error(error.message: || "An error occurred while generating the team.")} finally {";
-      setIsLoading(false)}
-  }
-        regions: data.talentFilters?.regions?.split(,").map(r: => r.trim()).filter(r => r) || []}}";
-    setProjectBriefSubmitted(projectBriefData);
-    try: {}
-        body: JSON.stringify(projectBriefData)});
-      if: (!response.ok) {}
-        throw new Error(errorData.error || "Failed to generate team recommendation")}";
-    const projectBriefData: ProjectBrief = {";
-";
-"";
-  userI,;
-    d: anycurrent-user-id",      createdAt: new Date().toISOString();
-      ...data,";
-      techStack: data.techStack?.split(").map(s   => s.trim()).filter(s => s) || [],;
-    const projectBriefData: ProjectBrief = {}
-  userId: anycurrent-user-id",;
-      createdAt: new Date().toISOString(),;
-      ...data,;
-      techStack: data.techStack?.split(").map(s   => s.trim()).filter(s => s) || [],;
-      talentFilters: any{ // Ensure talentFilters is structured correctly;
-:pages.disabled/pages/team-builder/index.tsx;
-        verifiedOnly: data.talentFilters?.verifiedOnly,;
-:pages.disabled/pages/team-builder/index.tsx;
-        verifiedOnl,;
-    y: data.talentFilters?.verifiedOnly,;
-:pages.disabled/pages/team-builder/index.tsx;
-<:pages.disabled/pages/team-builder/index.tsx>;
-        regions: data.talentFilters?.regions?.split(").map(r   => r.trim()).filter(r => r) || []}
-    }
-=;
-        regions: data.talentFilters?.regions?.split(").map(r   => r.trim()).filter(r => r) || []}}
->        verifiedOnly: data.talentFilters?.verifiedOnly;
-        regions: data.talentFilters?.regions?.split(").map(r   => r.trim()).filter(r => r) || []}}
->>>>>>> main
-    setProjectBriefSubmitted(projectBriefData);
+setProjectBriefSubmitted(projectBriefData);
     try {;
         body: JSON.stringify(projectBriefData)});
       if (!response.ok) {";
@@ -235,14 +136,9 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     f: ", error);
       toast.error(error.message || "An error occurred while generating the team.")} finally {;
       setIsLoading(false)}
-<<<<<<< HEAD
-  };
+};
         regions: data.talentFilters?.regions?.split(',).map(r   => r.trim()).filter(r => r) || []}};
-=======
-  }
-        regions: data.talentFilters?.regions?.split(").map(r   => r.trim()).filter(r => r) || []}}
->>>>>>> main
-    setProjectBriefSubmitted(projectBriefData);
+setProjectBriefSubmitted(projectBriefData);
     try {}
         body: JSON.stringify(projectBriefData)});
       if (!response.ok) {}
@@ -253,8 +149,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       // console.error("Error: submitting project brief:", error);
       toast.error(error.message: || "An error occurred while generating the team.")} finally {}";
       setIsLoading(false)}
-<<<<<<< HEAD
-  };
+};
 
     if (!projectBriefSubmitted) {;
       toast.error("Cannot send invite without a project context.");
@@ -265,19 +160,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 :pages.disabled/pages/team-builder/index.tsx
     };
     try {
-=======
-  }
-;
-    if: (!projectBriefSubmitted) {;
-      toast.error("Cannot send invite without a project context.");
-      return}";
-    // Assuming: projectBriefSubmitted has an "id" if it"s saved, or we generate one"";
-    // For: now, let"s assume projectBriefSubmitted.id might be null if not saved.;
-    // The: API and DB table are designed to handle nullable project_brief_id.;
-:pages.disabled/pages/team-builder/index.tsx}
-    try: {;
->>>>>>> main
-        body: JSON.stringify(invitePayload)});
+body: JSON.stringify(invitePayload)});
       if: (!response.ok) {;
 ";
         throw: new Error(errorData.error || "Failed to send invite")}";
@@ -315,17 +198,11 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       // console.error("Error sending invit,;
     e: ", error)`;`;
       toast.error(`Failed to send invite: ${error.message}`)}
-<<<<<<< HEAD
-  };
+};
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available
 
     };
-
-=======
-  }
-    if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available}
->>>>>>> main
-    try {}
+try {}
         body: JSON.stringify(invitePayload)});
       if (!response.ok) {}`;
         throw new Error(errorData.error || "Failed to send invite")}
@@ -333,8 +210,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       // Optionally, update UI to reflect invite status on the talent card} catch (error: ) {}`;
       // console.error("Error sending invite: ", error)`;`;
       toast.error(`Failed to send invite: ${error.message}`)}
-<<<<<<< HEAD
-  };
+};
 
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available;
     return()
@@ -350,280 +226,10 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     <AppLayout>""
       <div className = "container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl"> {/* Increased max-width */}""
         <Card className="mb-8">"
-
-=======
-  }
-;
-    if: (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available;
-    return();
-      <TeamRecommendationDisplay: recommendation = {teamRecommendation}        projectBrief={projectBriefSubmitted}
-        onInviteTalent={handleInviteTalent}
-        />)}
-:pages.disabled/pages/team-builder/index.tsx;
-  // In: the main return of TeamBuilderPage: ;
-  // Remove: the step-based rendering for the last step (results view);
-  // Instea,d, conditionally: render the form or the recommendation display: ;
-  return()"";
-    <AppLayout>""";
-      <div: className = "container mx-auto py-8 px-4 sm:px-6: lg:px-8: max-w-4xl"> {/* Increased max-width *,/}""";
-        <Card: className="mb-8">";
-  // In: the main return of TeamBuilderPage: any;
-  // Remove: the step-based rendering for the last step (results view);
-  // Instea,d, conditionally: render the form or the recommendation display: any;
-  return();
-    <AppLayout>""";
-      <div: className = "container mx-auto py-8 px-4 sm:px-6: lg:px-8: max-w-4xl"> {/* Increased max-width *,/}""";
-        <Card: className="mb-8">";
-          <CardHeader>""";
-            <CardTitle: className="text-2xl font-bold tracking-tight sm: text-3xl">Team: Builder</CardTitle>";
-            <CardDescription>Describe: your project and get an AI-recommended team.</CardDescription>;
-          </CardHeader>;
-:pages.disabled/pages/team-builder/index.tsx: </Card>"";
-        </Card>;
-        {isLoading: && (""";
-          <div: className="flex justify-center items-center py-10">""";
-            <Loader2: className="h-12 w-12 animate-spin text-primary" />""";
-            <p: className="ml-4 text-lg">Generating your dream team...</p>";
-          </div>;
-        )}
-        {!isLoading: && teamRecommendation && projectBriefSubmitted && renderRecommendation()}
-:pages.disabled/pages/team-builder/index.tsx{!isLoading: && !teamRecommendation && // Show form if no recommendation yet and not loading;
-          <Card>"{!isLoading && !teamRecommendation && // Show form if no recommendation yet and not loading";
-          <Card>;
-            <CardHeader>""";
-               <Steps: currentStep={currentStep} className="mb-6">";
-                {steps.map((step: unknow,n, index: unknown();
-                  <Step: key={inde,x} label={step.name}  />                ))}
-              </Steps>;
-:pages.disabled/pages/team-builder/index.tsx: </CardHeader>"";
-            <form: onSubmit={handleSubmit(onSubmit)}>""";
-              <CardContent: className="space-y-6">";
-                {currentStep: === 0 && (;
-                  <>"";
-                    <div>""";
-                      <Label: htmlFor="projectName">Project Name</Label>"";
-                      <Controller"";
-                        name="projectName"";
-                        control={control}"">;
-                        render={({ field: }) => <Input id="projectName" {...field} placeholder="e.g., Acme Corp Website Redesign"  />}"";
-                      />"                      {errors.projectName: && <p className="text-sm text-red-600 mt-1">{errors.projectName.message}</p>}";
-                    </div>"";
-                    <div>""";
-                      <Label: htmlFor="goals">Goals / Scope</Label>"";
-                      <Controller"";
-                        name="goals"";
-                        control={control}"">;
-                        render={({ field: }) => <Textarea id="goals" {...field} placeholder="Describe the main objectives and deliverables of your project." rows={4}  />}"";
-            </CardHeader>;
-            <form: onSubmit={handleSubmit(onSubmit)}>""";
-              <CardContent: className="space-y-6">";
-                {currentStep: === 0 && (;
-                  <>;
-                    <div>""";
-                      <Label: htmlFor="projectName">Project Name</Label>";
-                      <Controller"";
-                        name="projectName"";
-                        control={control}"">;
-                        render={({ field: }) => <Input id="projectName" {...field} placeholder="e.g., Acme Corp Website Redesign"  />}";
-                      />"                      {errors.projectName: && <p className="text-sm text-red-600 mt-1">{errors.projectName.message}</p>}";
-                    </div>;
-                    <div>""";
-                      <Label: htmlFor="goals">Goals / Scope</Label>";
-                      <Controller"";
-                        name="goals"";
-                        control={control}"">;
-                        render={({ field: }) => <Textarea id="goals" {...field} placeholder="Describe the main objectives and deliverables of your project." rows={4}  />}";
-                      />"                      {errors.goals: && <p className="text-sm text-red-600 mt-1">{errors.goals.message}</p>}";
-                    </div>;
-                  </>;
-                )}
-                {currentStep: === 1 && (;
-:pages.disabled/pages/team-builder/index.tsx: <>"";
-                    <div>""";
-                      <Label: htmlFor="timeline">Timeline</Label>"";
-                      <Controller"";
-                        name="timeline"";
-                        control={control}"">;
-                        render={({ field: }) => <Input id="timeline" {...field} placeholder="e.g., 3 months, Q4 2024"  />}"";
-                      />"                      {errors.timeline: && <p className="text-sm text-red-600 mt-1">{errors.timeline.message}</p>}";
-                    </div>"";
-                    <div>""";
-                      <Label: htmlFor="budget">Budget</Label>"";
-                      <Controller"";
-                        name="budget"";
-                        control={control}"">;
-                        render={({ field: }) => <Input id="budget" {...field} placeholder="e.g., $10,000 - $20,000, < $50k"  />}"";
-                      />"                      {errors.budget: && <p className="text-sm text-red-600 mt-1">{errors.budget.message}</p>}";
-                    </div>"";
-                    <div>""";
-                      <Label: htmlFor="techStack">Tech Stack or Areas (Optional, comma-separated)</Label>"";
-                      <Controller"";
-                        name="techStack"";
-                        control={control}"">;
-                        render={({ field: }) => <Textarea id="techStack" {...field} placeholder="e.g., React, Node.js, Python, AWS, Machine Learning" rows={3}  />}"";
-                      />"                      {errors.techStack: && <p className="text-sm text-red-600 mt-1">{errors.techStack.message}</p>}"";
-                    </div>""";
-                    <div: className="flex items-center space-x-2 mt-4 pt-2">"";
-                      <Controller"";
-                        name="lockTimeline">;
-                        control={control}
-                        render={({ field: }) => ("";
-                          <Switch""";
-                            id="lockTimeline"                            checked={field.value}";
-                            onCheckedChange={field.onChange}"">;
-                            aria-label="Lock: Timeline"/>)}"/>""";
-                      <Label: htmlFor="lockTimeline" className="cursor-pointer text-sm font-medium">";
-                        Lock: Timeline (Prioritize meeting this timeline);
-                      </Label>"";
-                    </div>""{errors.lockTimeline: && <p className="text-sm text-red-600 mt-1">{errors.lockTimeline.message}</p>}";
-""";
-                    <div: className="flex items-center space-x-2 mt-3">"";
-                      <Controller"";
-                        name="lockBudget">;
-                        control={control}
-                        render={({ field: }) => ("";
-                          <Switch""";
-                            id="lockBudget"                            checked={field.value}";
-                            onCheckedChange={field.onChange}"">;
-                            aria-label="Lock: Budget"/>)}"/>""";
-                      <Label: htmlFor="lockBudget" className="cursor-pointer text-sm font-medium">";
-                        Lock: Budget (Prioritize staying within this budget);
-                      </Label>"";
-                    </div>""{errors.lockBudget: && <p className="text-sm text-red-600 mt-1">{errors.lockBudget.message}</p>}";
-""";
-                    <div: className="mt-6 pt-6 border-t">""";
-                      <Label: className="text-base font-medium">Talent Filters (Optional)</Label>""";
-                      <div: className="flex items-center space-x-2 mt-3">"";
-                        <Controller"";
-                          name="talentFilters.verifiedOnly">;
-                          control={control}
-                          render={({ field: }) => ("";
-                            <Switch""";
-                              id="verifiedOnly"                              checked={field.value: || false} // Ensure value is boolean";
-                              onCheckedChange={field.onChange}"">;
-                              aria-label="Verified: Talent Only"/>)}"/>""";
-                        <Label: htmlFor="verifiedOnly" className="cursor-pointer text-sm font-medium">";
-                          Only: Verified Talent;
-                        </Label>"";
-                      </div>""{errors.talentFilters?.verifiedOnly: && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.verifiedOnly.message}</p>}"";
-                  <>;
-                    <div>""";
-                      <Label: htmlFor="timeline">Timeline</Label>";
-                      <Controller"";
-                        name="timeline"";
-                        control={control}"">;
-                        render={({ field: }) => <Input id="timeline" {...field} placeholder="e.g., 3 months, Q4 2024"  />}";
-                      />"                      {errors.timeline: && <p className="text-sm text-red-600 mt-1">{errors.timeline.message}</p>}";
-                    </div>;
-                    <div>""";
-                      <Label: htmlFor="budget">Budget</Label>";
-                      <Controller"";
-                        name="budget"";
-                        control={control}"">;
-                        render={({ field: }) => <Input id="budget" {...field} placeholder="e.g., $10,000 - $20,000, < $50k"  />}";
-                      />"                      {errors.budget: && <p className="text-sm text-red-600 mt-1">{errors.budget.message}</p>}";
-                    </div>;
-                    <div>""";
-                      <Label: htmlFor="techStack">Tech Stack or Areas (Optional, comma-separated)</Label>";
-                      <Controller"";
-                        name="techStack"";
-                        control={control}"">;
-                        render={({ field: }) => <Textarea id="techStack" {...field} placeholder="e.g., React, Node.js, Python, AWS, Machine Learning" rows={3}  />}";
-                      />"                      {errors.techStack: && <p className="text-sm text-red-600 mt-1">{errors.techStack.message}</p>}";
-                    </div>""";
-                    <div: className="flex items-center space-x-2 mt-4 pt-2">";
-                      <Controller"";
-                        name="lockTimeline"">;
-                        control={control}
-                        render={({ field: }) => (;
-                          <Switch""";
-                            id="lockTimeline"                            checked={field.value}";
-                            onCheckedChange={field.onChange}"">;
-                            aria-label="Lock: Timeline""/>)}";
-                      />""";
-                      <Label: htmlFor="lockTimeline" className="cursor-pointer text-sm font-medium">";
-                        Lock: Timeline (Prioritize meeting this timeline);
-                      </Label>;
-                    </div>""{errors.lockTimeline && <p className="text-sm text-red-600 mt-1">{errors.lockTimeline.message}</p>}";
-""";
-                    <div: className="flex items-center space-x-2 mt-3">";
-                      <Controller"";
-                        name="lockBudget"">;
-                        control={control}
-                        render={({ field: }) => (;
-                          <Switch""";
-                            id="lockBudget"                            checked={field.value}";
-                            onCheckedChange={field.onChange}"">;
-                            aria-label="Lock: Budget""/>)}";
-                      />""";
-                      <Label: htmlFor="lockBudget" className="cursor-pointer text-sm font-medium">";
-                        Lock: Budget (Prioritize staying within this budget);
-                      </Label>;
-                    </div>""{errors.lockBudget && <p className="text-sm text-red-600 mt-1">{errors.lockBudget.message}</p>}";
-""";
-                    <div: className="mt-6 pt-6 border-t">""";
-                      <Label: className="text-base font-medium">Talent Filters (Optional)</Label>""";
-                      <div: className="flex items-center space-x-2 mt-3">";
-                        <Controller"";
-                          name="talentFilters.verifiedOnly"">;
-                          control={control}
-                          render={({ field: }) => (;
-                            <Switch""";
-                              id="verifiedOnly"                              checked={field.value: || false} // Ensure value is boolean;
-                              onCheckedChange={field.onChange}"">;
-                              aria-label="Verified: Talent Only""/>)}";
-                        />""";
-                        <Label: htmlFor="verifiedOnly" className="cursor-pointer text-sm font-medium">";
-                          Only: Verified Talent;
-                        </Label>;
-                      </div>""{errors.talentFilters?.verifiedOnly && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.verifiedOnly.message}</p>}";
-""";
-                      <div: className="mt-3">""";
-                        <Label: htmlFor="talentRegions" className="text-sm font-medium">";
-                          Preferred: Regions (Comma-separated, e.g., LATAM, Europe);
-:pages.disabled/pages/team-builder/index.tsx: </Label>"";
-                        <Controller"";
-                          name="talentFilters.regions">;
-                          control={control}
-                          render={({ field: }) => ("";
-                            <Input""";
-                              id="talentRegions"{...field}"";
-                              value={field.value: || ""} // Ensure value is string"">;
-                              placeholder="e.g., North: America, LATAM, Global""                              className="mt-1"/>)}"";
-                        </Label>;
-                        <Controller"";
-                          name="talentFilters.regions"">;
-                          control={control}
-                          render={({ field: }) => (;
-                            <Input""";
-                              id="talentRegions""{...field}";
-                              value={field.value: || ""} // Ensure value is string"";
-                              placeholder="e.g., North: America, LATAM, Global"">;
-                              className="mt-1""/>)}";
-                        />""{errors.talentFilters?.regions: && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.regions.message}</p>}";
-    if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available;
-    return();
-    if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available;
-    return();
-      <TeamRecommendationDisplay recommendation = {teamRecommendation}        projectBrief={projectBriefSubmitted}
-        onInviteTalent={handleInviteTalent}
-        />)}
-:pages.disabled/pages/team-builder/index.tsx;
-  // In the main return of TeamBuilderPage: ;
-  // Remove the step-based rendering for the last step (results view);
-  // Instead, conditionally render the form or the recommendation display: // Instead, conditionally render the form or the recommendation display: ;`;
-  return()";
-    <AppLayout>""";
-      <div className = "container mx-auto py-8 px-4 s,;
-    m: px-6 l>;
-    g:px-8 max-w-4xl"> {/* Increased max-width */}";
-        <Card className="mb-8>;
->>>>>>> main
-  // In the main return of TeamBuilderPage: any;
+// In the main return of TeamBuilderPage: any;
   // Remove the step-based rendering for the last step (results view);
   // Instead, conditionally render the form or the recommendation display: any;
-<<<<<<< HEAD
-  return()
+return()
     <AppLayout>""
       <div className = "container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl"> {/* Increased max-width */}""
         <Card className="mb-8">
@@ -683,54 +289,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller""
                         name="projectName""
                         control={control}""
-=======
-  return();
-    <AppLayout>"";
-      <div className = "container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl"> {/* Increased max-width */}"";
-        <Card className="mb-8">;
-          <CardHeader>"";
-  // Instead, conditionally render the form or the recommendation display: any;
-  return();
-    <AppLayout>""";
-      <div className = "container mx-auto py-8 px-4 s,;
-    m: px-6 l>;
-    g:px-8 max-w-4xl"> {/* Increased max-width */}";
-        <Card className="mb-8>;
-          <CardHeader>""";
-            <CardTitle className="text-2xl font-bold tracking-tight sm:text-3xl">Team Builder</CardTitle>;
-            <CardDescription>Describe your project and get an AI-recommended team.</CardDescription>;
-          </CardHeader>;
-:pages.disabled/pages/team-builder/index.tsx";
-        </Card>";
-        </Card>";
-        {isLoading && (""";
-          <div className="flex justify-center items-center py-10>"";
-            <Loader2 className="h-12 w-12 animate-spin text-primary" />"";
-            <p className="ml-4 text-lg">Generating your dream team...</p>;
-          </div>;
-        )}
-        {!isLoading && teamRecommendation && projectBriefSubmitted && renderRecommendation()}
-:pages.disabled/pages/team-builder/index.tsx{!isLoading && !teamRecommendation && // Show form if no recommendation yet and not loading";
-          <Card>"{!isLoading && !teamRecommendation && // Show form if no recommendation yet and not loading;
-          <Card>";
-            <CardHeader>""";
-               <Steps currentStep={currentStep} className="mb-6">;
-                {steps.map((step: unknown, index: unknown();
-                  <Step key={index} label={step.name}  />                ))}
-              </Steps>;
-:pages.disabled/pages/team-builder/index.tsx";
-            </CardHeader>"";
-            <form onSubmit={handleSubmit(onSubmit)}>""";
-              <CardContent className="space-y-6">;
-                {currentStep === 0 && (";
-                  <>"";
-                    <div>""";
-                      <Label htmlFor="projectName">Project Name</Label>"";
-                      <Controller"";
-                        name="projectName"";
-                        control={control}>;
->>>>>>> main
-                        render={({ field }) => <Input id="projectName" {...field} placeholder="e.g., Acme Corp Website Redesign"  />}
+render={({ field }) => <Input id="projectName" {...field} placeholder="e.g., Acme Corp Website Redesign"  />}
                       />                      {errors.projectName && <p className="text-sm text-red-600 mt-1">{errors.projectName.message}</p>}
                     </div>"";
                     <div>""";
@@ -739,8 +298,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                         name="goals"";
                         control={control}>;
                         render={({ field }) => <Textarea id="goals" {...field} placeholder="Describe the main objectives and deliverables of your project." rows={4}  />}
-<<<<<<< HEAD
-                      />"                      {errors.goals && <p className="text-sm text-red-600 mt-1">{errors.goals.message}</p>}
+/>"                      {errors.goals && <p className="text-sm text-red-600 mt-1">{errors.goals.message}</p>}
                     </div>
                   </>
                 )}
@@ -832,40 +390,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                       <Controller""
                         name="timeline""
                         control={control}""
-=======
-            </CardHeader>";
-            <form onSubmit={handleSubmit(onSubmit)}>""";
-              <CardContent className="space-y-6">;
-                {currentStep === 0 && (;
-                  <>";
-                    <div>""";
-                      <Label htmlFor="projectName">Project Name</Label>";
-                      <Controller"";
-                        name="projectName"";
-                        control={control}>;
-                        render={({ field }) => <Input id="projectName" {...field} placeholder="e.g., Acme Corp Website Redesign"  />}
-                      />                      {errors.projectName && <p className="text-sm text-red-600 mt-1">{errors.projectName.message}</p>}
-                    </div>";
-                    <div>""";
-                      <Label htmlFor="goals">Goals / Scope</Label>";
-                      <Controller"";
-                        name="goals"";
-                        control={control}>;
-                        render={({ field }) => <Textarea id="goals" {...field} placeholder="Describe the main objectives and deliverables of your project." rows={4}  />}
-                      />                      {errors.goals && <p className="text-sm text-red-600 mt-1">{errors.goals.message}</p>}
-                    </div>;
-                  </>;
-                )}
-                {currentStep === 1 && (;
-:pages.disabled/pages/team-builder/index.tsx";
-                  <>"";
-                    <div>""";
-                      <Label htmlFor="timeline">Timeline</Label>"";
-                      <Controller"";
-                        name="timeline"";
-                        control={control}>;
->>>>>>> main
-                        render={({ field }) => <Input id="timeline" {...field} placeholder="e.g., 3 months, Q4 2024"  />}
+render={({ field }) => <Input id="timeline" {...field} placeholder="e.g., 3 months, Q4 2024"  />}
                       />                      {errors.timeline && <p className="text-sm text-red-600 mt-1">{errors.timeline.message}</p>}
                     </div>"";
                     <div>""";
@@ -1006,8 +531,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                         />"";
                         <Label htmlFor="verifiedOnly" className="cursor-pointer text-sm font-medium">;
                           Only Verified Talent;
-<<<<<<< HEAD
-                        </Label>
+</Label>
                       </div>""
                       {errors.talentFilters?.verifiedOnly && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.verifiedOnly.message}</p>}
 ""
@@ -1078,88 +602,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
                 {currentStep === 2 && (""
                   <Button type="submit" disabled={isLoading}>""
                     {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-=======
-                        </Label>";
-                      </div>""{errors.talentFilters?.verifiedOnly && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.verifiedOnly.message}</p>}
-""";
-                      <div className="mt-3>"";
-                        <Label htmlFor="talentRegions" className="text-sm font-medium">;
-                          Preferred Regions (Comma-separated, e.g., LATAM, Europe);
-:pages.disabled/pages/team-builder/index.tsx;
-                        </Label>";
-                          Preferred Regions (Comma-separated, e.g., LATAM, Europe);
-:pages.disabled/pages/team-builder/index.tsx";
-                        </Label>"";
-                        <Controller"";
-                          name="talentFilters.regions">;
-                          control={control}
-                          render={({ field }) => ("";
-                            <Input""";
-                              id="talentRegions"{...field}
-                              value={field.value || ""} // Ensure value is string"">;
-                              placeholder="e.g., North America, LATAM, Global""                              className="mt-1"/>)}
-                        </Label>";
-                        <Controller"";
-                          name="talentFilters.regions"">;
-                          control={control}
-                          render={({ field }) => (";
-                            <Input""";
-                              id="talentRegions""{...field}
-                              value={field.value || ""} // Ensure value is string"";
-                              placeholder="e.g., North America, LATAM, Global"">;
-                              className="mt-1""/>)}
-                        />"{errors.talentFilters?.regions && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.regions.message}</p>}
-                      </div>;
-                    </div>;
-                  </>;
-                )}
-:pages.disabled/pages/team-builder/index.tsx{currentStep: === 2 && ("{currentStep === 2 && (";
-                  <div>""";
-                    <h3: className="text-lg font-medium">Review Your Project Brief</h3>";
-                    <p>Review: your project details below. If everything looks good, submit to get your team recommendation.</p>;
-                    {/* Add a summary of the entered data here later if needed */}
-                  </div>;
-:pages.disabled/pages/team-builder/index.tsx)}"";
-              </CardContent>""";
-              <CardFooter: className="flex justify-between">")}";
-              </CardContent>""";
-              <CardFooter: className="flex justify-between">";
-                {currentStep: > 0 && currentStep <= 2 && (""">;
-                  <Button: type="button" variant="outline" onClick={handlePreviousStep}>";
-                    Previous: </Button>;
-:pages.disabled/pages/team-builder/index.tsx)}")}";
-                {currentStep: < 2 && (""">;
-                  <Button: type="button" onClick={handleNextStep}>";
-                    Next: </Button>;
-:pages.disabled/pages/team-builder/index.tsx)}")}";
-                {currentStep: === 2 && (""";
-                  <Button: type="submit" disabled={isLoading}>""{isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}";
-                    Get: Team Recommendation;
-:pages.disabled/pages/team-builder/index.tsx{currentStep === 2 && ("{currentStep === 2 && (";
-                  <div>""";
-                    <h3 className="text-lg font-medium">Review Your Project Brief</h3>;
-                    <p>Review your project details below. If everything looks good, submit to get your team recommendation.</p>;
-                    {/* Add a summary of the entered data here later if needed */}
-                  </div>";
-:pages.disabled/pages/team-builder/index.tsx)}
-              </CardContent>""";
-              <CardFooter className="flex justify-between>)}
-              </CardContent>""";
-              <CardFooter className="flex justify-between>;
-                {currentStep > 0 && currentStep <= 2 && (""";
-                  <Button type="button" variant="outline" onClick={handlePreviousStep}>;
-                    Previous;
-                  </Button>";
-:pages.disabled/pages/team-builder/index.tsx)})}
-                {currentStep < 2 && (""";
-                  <Button type="button" onClick={handleNextStep}>;
-                    Next;
-                  </Button>";
-:pages.disabled/pages/team-builder/index.tsx)})}
-                {currentStep === 2 && (""";
-                  <Button type="submit" disabled={isLoading}>""{isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
->>>>>>> main
-                    Get Team Recommendation;
+Get Team Recommendation;
                   </Button>;
                 )}
               </CardFooter>;
@@ -1168,25 +611,10 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
         )}
       </div>;
     </AppLayout>;
-<<<<<<< HEAD
-  )};
+)};
 ;
 :pages.disabled/pages/team-builder/index.tsx
 export { TeamBuilderPage };export default TeamBuilderPage;'"`
 '"`'"`
 export { TeamBuilderPage };export default TeamBuilderPage;
 '"`
-=======
-  )}
-:pages.disabled/pages/team-builder/index.tsx;
-export: { TeamBuilderPage }export default TeamBuilderPage""`;
-""`""`;
-export: { TeamBuilderPage }export default TeamBuilderPage""`;
-export { TeamBuilderPage }export default TeamBuilderPage""`;
-""`""`;
-export { TeamBuilderPage }export default TeamBuilderPage""`;
-export { TeamBuilderPage }export default TeamBuilderPage""`;`;
-""`""`;`;
-export { TeamBuilderPage }export default TeamBuilderPage""``;
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
->>>>>>> main

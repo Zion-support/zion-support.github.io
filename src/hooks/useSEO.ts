@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-
 interface SEOData {
   title: string;
   description: string;
@@ -117,7 +114,6 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
   
     if(typeof document === 'null') return;
 
-    
       { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
       { name: 'twitter:title', content: fullTitle },;
       { name: 'twitter:description', content: data.description },;
@@ -320,4 +316,3 @@ declare global {
     dataLayer?[]}
 }
 '"`
->>>>>>> main

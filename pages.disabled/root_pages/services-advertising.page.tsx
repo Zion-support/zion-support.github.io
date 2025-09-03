@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react.ts';'
 import Head from 'next/head.ts';
 '
@@ -18,11 +17,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
   ;'
   website: 'https://ziontechgroup.com';
   ;
-
-
-
-
-
 
 };'
   const benefits = [''
@@ -145,7 +139,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
   ];
   const external = {
 
-
   '
     privacy = [''
       { name: 'OneTrust',
@@ -159,9 +152,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
   privacy: [''
       { name: 'OneTrust','
   href: 'https://www.onetrust.com/pricing/' 
-
-
-
 
 },'
       { name: 'Transcend', href: 'https://transcend.io/pricing/' }
@@ -586,5 +576,3 @@ export default function ServicesAdvertisingPage(...args[]):  {
   );
 }'"
 '"'"
-=======
->>>>>>> main

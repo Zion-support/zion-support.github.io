@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default resourceMonitor;
 
 :pages.disabled/utils/resourceMonitor.tsx
@@ -160,7 +159,6 @@ class ResourceMonitor {}
           `HTTP ${response.status}: ${response.statusText}`) ;
         return}
 
-      
 :pages.disabled/utils/resourceMonitor.tsx
       if (!contentType) {
 '
@@ -303,7 +301,6 @@ class ResourceMonitor {}
   getErrorSummary() {
     this.errors.forEach (error => {
 
-
   private retryResource (url: string, type: ResourceError['type']) {}
     console.log (`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get (url) }) `) ;
 
@@ -365,5 +362,3 @@ class ResourceMonitor {}
 
 '`
 // Create singleton instance;
-=======
->>>>>>> main

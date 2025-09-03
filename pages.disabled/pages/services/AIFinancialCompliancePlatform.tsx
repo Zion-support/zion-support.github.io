@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Shield,
   FileText,
@@ -319,13 +318,6 @@ import {}
   CloudSnow10,
   CloudSleet10} from 'lucide-react.ts';
 
-
-  
-  
-  
-  
-  
-  
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -908,5 +900,3 @@ import {}
 
 export default AIFinancialCompliancePlatform;'"`
 '"`'"`
-=======
->>>>>>> main

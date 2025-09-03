@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useEffect, useState, useCallback } from 'react'; // Added useCallback
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -131,4 +129,3 @@ export function useWallet() {
     spendTokens,
   };
 }
->>>>>>> main

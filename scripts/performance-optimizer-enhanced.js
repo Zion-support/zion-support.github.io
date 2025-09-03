@@ -2,11 +2,11 @@
 /**
  * Performance Optimization Script
  */
-const fs = require("$1");
+const fs = require("child_process");
 const path = require("path")
 class PerformanceOptimizer {
   constructor() {
-    this.projectRoot = path.resolve(__dirname, ".."),
+    this.projectRoot = path.resolve(__dirname, "..")
 }
 
   async optimize() {
@@ -14,7 +14,7 @@ class PerformanceOptimizer {
     await this.optimizeImages()
     await this.optimizeCode()
     await this.optimizeDependencies()
-    console.log("✅ Performance optimization completed!"),
+    console.log("✅ Performance optimization completed!")
 }
 
   async optimizeImages() {

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 export default function Page() {
@@ -260,4 +258,3 @@ export default function Page() {
     </div>
   );
 }
->>>>>>> main

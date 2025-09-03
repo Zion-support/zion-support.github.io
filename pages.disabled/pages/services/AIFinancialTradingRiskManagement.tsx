@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
 <:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
 import React from 'react.ts';
@@ -33,7 +32,6 @@ import { TrendingUp,
 export { function };
 export default function AIFinancialTradingRiskManagement(...args[]):  {
 
-  
     },;
     {;
       icon: Eye,;"
@@ -867,5 +865,3 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     </>
   )}'"
 '"'"
-=======
->>>>>>> main

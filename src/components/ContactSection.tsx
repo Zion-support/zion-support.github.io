@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  const contactInfo = [{
+const contactInfo = [{
       icon: Phone,
       title: "Phone",
       value: "+1 302 464 0950",
@@ -116,8 +112,3 @@ export default ContactSection;
 export default ContactSection;
 export default ContactSection;
 '"
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

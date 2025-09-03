@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
 <:pages.disabled/pages/services/ai-financial-trading-platform.tsx
@@ -720,5 +719,3 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
   )}}}}}}'"`'"`
     </div>;
   )}}}}}}'"`
-=======
->>>>>>> main

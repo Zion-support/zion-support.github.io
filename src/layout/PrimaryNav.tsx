@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-
-      // // // // // // // // console.log('PrimaryNav search submit:', query);
+// // // // // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('');
       // // // // // console.log('PrimaryNav search submit:', query);`
@@ -217,4 +214,3 @@
     </header>;
   )}
 '"`
->>>>>>> main

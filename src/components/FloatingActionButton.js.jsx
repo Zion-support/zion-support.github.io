@@ -220,11 +220,9 @@ key="{item.label}""
 
         </AnimatePresence>
       </motion.button>
-<<<<<<< HEAD
-    </div>)};
+</div>)};
 export default FloatingActionButton;
 
-
 export { FloatingActionButton };
 
 export { FloatingActionButton };
@@ -234,17 +232,3 @@ export { FloatingActionButton };
 export { FloatingActionButton };
 
 export { FloatingActionButton };
-=======
-    </div>)}
-
-export default FloatingActionButton,export { FloatingActionButton }
-;
-export { FloatingActionButton }
-;
-export { FloatingActionButton }
-;
-export { FloatingActionButton }
-
-"
-export { FloatingActionButton };"""""
->>>>>>> main

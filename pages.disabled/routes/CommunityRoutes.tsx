@@ -1,7 +1,6 @@
 
 export default function CommunityRoutes(function CommunityRoutes() {): any {}
-<<<<<<< HEAD
-  return()
+return()
     <>;""
       <Route path = "" element={<CommunityPage  />} />;
 :pages.disabled/routes/CommunityRoutes.tsx
@@ -9,18 +8,3 @@ export default function CommunityRoutes(function CommunityRoutes() {): any {}
   )}'"'"
     </>
   )}'""
-=======
-  return();
-    <>;";
-      <Route path = " element={<CommunityPage  />} />;
-:pages.disabled/routes/CommunityRoutes.tsx;
-    </>";
-
-  )}
-  "";
-
-  )}"""";
-    </>;
-  )}'"";
->>>>>>> pr-10728
->>>>>>> main

@@ -114,7 +114,7 @@ class SyntaxFixer {
         try {
           // Basic JSX syntax check
           const content = fs.readFileSync(file, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             errorCount++;
             this.log(`Merge conflict markers found in: ${file}`, 'ERROR');
           }
@@ -193,9 +193,8 @@ class SyntaxFixer {
         let fixed = false;
         
         // Remove merge conflict markers
-        if (content.includes('<<<<<<< HEAD')) {
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*\n?/g, '');
-          fixed = true;
+        if (content.includes('')) {
+          content = content.replace(/[\s\S]*?[\s\S]*?fixed = true;
         }
         
         if (fixed) {

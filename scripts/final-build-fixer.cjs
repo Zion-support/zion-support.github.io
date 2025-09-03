@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 
 console.log('🔧 Final Build Fixer')
-console.log('===================')
+console.log('=====')
 
 class FinalBuildFixer {
   constructor() {
@@ -65,7 +65,7 @@ class FinalBuildFixer {
         },
         // Fix extra closing braces in functions
         {
-          pattern: /export default function \w+\(\) \{\n  return \(\n    <>\n      <Head>/g,
+          pattern: /export default function \w+\(\) \{\n {2}return \(\n {4}<>\n {6}<Head>/g,
           replacement: 'export default function NotFound() {\n  return (\n    <>\n      <Head>'
         }
       ]

@@ -6,9 +6,7 @@ const glob = require("glob");
 class $1 {
   constructor() {
   this.projectRoot = process.cwd();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.reportFile = path.join(this.projectRoot, 'import-export-fixer-report.json');
+this.reportFile = path.join(this.projectRoot, 'import-export-fixer-report.json');
     this.fixes = [];
     this.startTime = Date.now();
   }
@@ -30,35 +28,16 @@ class $1 {
       this.log(`Error in Import/Export Fixer: ${error.message}`, 'error');
       await this.generateReport();
       process.exit(1);
-=======
-    this.automationInterval = parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default
-    this.fixesApplied = 0;
-  }
-
-  log(message) {
-    console.log(`[${new Date().toISOString()}] [ImportExportFixer] ${message}`);
-  }
-
-  async run() {
-    this.log('Starting import/export fixing automation...');
-    
-    try {
-      await this.fixImportExportIssues();
-      this.log(`Import/export fixing completed. Applied ${this.fixesApplied} fixes.`);
-    } catch (error) {
-      this.log(`Error during import/export fixing: ${error.message}`);
->>>>>>> main
-=======
-    this.automationInterval =;
+this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default;
     this.reportFile = path.join(this.projectRoot, `import-export-fixer-report.json`);
     this.fixes = [];
-    this.startTime = Date.now();,
+    this.startTime = Date.now();
 }
 ;
   log(message, level = `info`) {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);,
+    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
 }
 ;
   async run() {
@@ -66,19 +45,19 @@ class $1 {
     try {
   await this.fixImportExportIssues();
       await this.generateReport();
-      this.log(`Import/Export Fixer completed successfully!`, `success`);,
+      this.log(`Import/Export Fixer completed successfully!`, `success`);
 } catch (error) {
   this.log(`Error in Import/Export Fixer: ${error.message  }`, `error`);
     this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default;
     this.reportFile = path.join(this.projectRoot, "import-export-fixer-report.json");
     this.fixes = [];
-    this.startTime = Date.now();,
+    this.startTime = Date.now();
 }
 ;
   log(message, level = "info") {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);,
+    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
 }
 ;
   async run() {
@@ -88,17 +67,17 @@ class $1 {
   await this.fixImportExportIssues();
       await this.generateReport();
       ;
-      this.log("Import/Export Fixer completed successfully!", "success");,
+      this.log("Import/Export Fixer completed successfully!", "success");
 } catch (error) {
   this.log(`Error in Import/Export Fixer: ${error.message}`, "error");
       await this.generateReport();
       process.exit(1);
     this.automationInterval = parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default;
-    this.fixesApplied = 0;,
+    this.fixesApplied = 0;
 }
 ;
   log(message) {
-  console.log(`[${new Date().toISOString()}] [ImportExportFixer] ${message}`);,
+  console.log(`[${new Date().toISOString()}] [ImportExportFixer] ${message}`);
 }
 ;
   async run() {
@@ -107,17 +86,17 @@ class $1 {
   await this.fixImportExportIssues();
       this.log(;
         `Import/export fixing completed. Applied ${this.fixesApplied} fixes.`;
-      );,
+      );
 } catch (error) {
-  this.log(`Error during import/export fixing: ${error.message  }`);,
+  this.log(`Error during import/export fixing: ${error.message  }`);
 }
   }
 ;
   async fixImportExportIssues() {
   this.log(`Fixing import/export issues...`, `info`);
-    ;,
+    ;
 } catch (error) {
-  this.log(`Error during import/export fixing: ${error.message}`);,
+  this.log(`Error during import/export fixing: ${error.message}`);
 }
   }
 ;
@@ -163,16 +142,16 @@ class $1 {
                 newContent = newContent.replace(match[0], ;
                   match[0].replace(importPath, relativePath.startsWith(".") ? relativePath : "./" + relativePath));
                 found = true;
-                break;,
+                break;
 }
             }
             ;
             if (!found) {
   // Remove the import if file doesn"t exist;
-              newContent = newContent.replace(match[0], "");,
+              newContent = newContent.replace(match[0], "");
 }
             ;
-            modified = true;,
+            modified = true;
 }
         }
       }
@@ -192,7 +171,7 @@ class $1 {
         if (componentMatch) {
   const componentName = componentMatch[1];
           newContent += `\n\nexport default ${componentName};`;
-          modified = true;,
+          modified = true;
 }
       }
 ;
@@ -204,14 +183,14 @@ class $1 {
       while ((componentMatch = componentRegex.exec(newContent)) !== null) {
   const componentName = componentMatch[1];
         if (componentName[0] === componentName[0].toUpperCase()) {
-  components.push(componentName);,
+  components.push(componentName);
 }
       }
 ;
       if (components.length > 0 && !hasNamedExports) {
   const exportStatement = `\n\nexport { ${components.join(", ")} };`;
         newContent += exportStatement;
-        modified = true;,
+        modified = true;
 }
 ;
       if (modified) {
@@ -225,12 +204,11 @@ class $1 {
   type: "import-export",;
           file,;
           description: "Fixed import/export issues",;
-          timestamp: Date.now();,
+          timestamp: Date.now();
 });
-        this.log(`Fixed import/export issues in ${file}`, `info`);,
+        this.log(`Fixed import/export issues in ${file}`, `info`);
 }
->>>>>>> main
-    }
+}
   }
 ;
   async generateReport() {
@@ -242,14 +220,14 @@ class $1 {
       fixes: this.fixes,;
       summary: {
   totalFixes: this.fixes.length,;
-        success: true;,
+        success: true;
 }
     }
 ;
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`, `info`);
     this.log(`Total fixes: ${this.fixes.length}`, `info`);
-    this.log(`Duration: ${duration}ms`, `info`);,
+    this.log(`Duration: ${duration}ms`, `info`);
 }
 }
 ;
@@ -260,17 +238,15 @@ class $1 {
     ;
     this.log(`Report generated: ${this.reportFile}`, "info");
     this.log(`Total fixes: ${this.fixes.length}`, "info");
-    this.log(`Duration: ${duration}ms`, "info");,
+    this.log(`Duration: ${duration}ms`, "info");
 }
 }
 ;
 // Run the import/export fixer;
     this.log("Fixing import/export issues...");
 
-<<<<<<< HEAD
-  async fixImportExportIssues() {
-<<<<<<< HEAD
-    this.log('Fixing import/export issues...', 'info');
+async fixImportExportIssues() {
+this.log('Fixing import/export issues...', 'info');
     
     // Find all JavaScript and TypeScript files
     const files = glob.sync('src/**/*.{js,jsx,ts,tsx}', { cwd: this.projectRoot });
@@ -389,26 +365,7 @@ class $1 {
 }
 
 // Run the import/export fixer
-=======
-    this.log('Fixing import/export issues...');
-    
-    const files = glob.sync('**/*.{js,jsx,ts,tsx}', { 
-      ignore: ['node_modules/**', '.git/**', 'dist/**', 'build/**', 'out/**'] 
-    });
-    
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-=======
-    const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
-  ignore: ["node_modules/**", ".git/**", "dist/**", "build/**", "out/**"],;,
-});
-
-    for (const file of files) {
-  try {
-  const content = fs.readFileSync(file, "utf8");
->>>>>>> main
-        let modified = false;
+let modified = false;
         let newContent = content;
         // Fix default export issues;
         if (;
@@ -423,7 +380,7 @@ class $1 {
                 `export default ${componentName}`,;
                 `export { ${componentName} }\nexport default ${componentName}`;
               );
-              modified = true;,
+              modified = true;
 }
           }
         }
@@ -433,24 +390,18 @@ class $1 {
   // Fix React import issues;
         if (content.includes("React.") && !content.includes("import React")) {
   newContent = "import React from "react";\n" + newContent;
-          modified = true;,
+          modified = true;
 }
 ;
         if (modified) {
   fs.writeFileSync(file, newContent);
-          this.fixesApplied++;,
+          this.fixesApplied++;
 }
       } catch (error) {
-  this.log(`Error fixing import/export in ${file  }: ${error.message}`);,
+  this.log(`Error fixing import/export in ${file  }: ${error.message}`);
 }
     }
   }
 }
-<<<<<<< HEAD
-
->>>>>>> main
-=======
-;
->>>>>>> main
 const fixer = new ImportExportFixer();
 fixer.run().catch(console.error)

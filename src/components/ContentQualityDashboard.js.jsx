@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';'
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
 import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";
@@ -57,21 +56,7 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
                     content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.','''
                     metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.','''
                     images['/images/about-team.jpg'],;'''
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback } from 'react';
-import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X  } from 'lucide-react';
-export default function Page() {
-,;
-                {
-
-                    url: '/about',
-                    title: 'About Us - Zion Tech Group',
-                    content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.Discover our team of experts and our journey in the tech industry.',
-                    metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.',
-                    images['/images/about-team.jpg'],;
->>>>>>> main
-                    links['/services',/team',/contact',/mission'];
+links['/services',/team',/contact',/mission'];
                 },;
                 {
 
@@ -204,7 +189,6 @@ export default function Page() {
                   <div className="text-sm text-red-100">Need Fixes</div>
                 </div>
               </div>) }
-=======
 import React from "react"
 const ContentQualityDashboard = ({ className = " }) => { const [isOpen, setIsOpen] = useState (false) ; const [isLoading, setIsLoading] = useState (false) ; const [report, setReport] = useState (null) ; const [selectedPage, setSelectedPage] = useState (null) ; const [searchTerm, setSearchTerm] = useState (") ; const [filterStatus, setFilterStatus] = useState ("all") ; const contentAnalyzer = ContentQualityAnalyzer.getInstance () ; const analyzeAllPages = useCallback (async () => { setIsLoading (true) ; try {""";,"});,"})"
 ;,"});,"})","});,"})","});,"})"
@@ -591,9 +575,7 @@ const ContentQualityDashboardJs = () => {
             >
               Get Started,
             </a>
->>>>>>> main
-          </div>
-<<<<<<< HEAD
+</div>
 """
           {/* Content */}""""
           <div className="p-4 max-h-[600px] overflow-y-auto">""""
@@ -758,7 +740,6 @@ const ContentQualityDashboardJs = () => {
     </div>)};
 export default ContentQualityDashboard;
 
-
 export { ContentQualityDashboard };
 
 export { ContentQualityDashboard };
@@ -768,9 +749,3 @@ export { ContentQualityDashboard };
 export { ContentQualityDashboard };
 
 export { ContentQualityDashboard };
-=======
-    </div>;,
-  )}
-
-export default ContentQualityDashboardJs;""
->>>>>>> main

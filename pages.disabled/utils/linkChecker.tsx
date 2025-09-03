@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export class LinkChecker {}
 export default LinkChecker;
 :pages.disabled/utils/linkChecker.tsx
@@ -59,7 +58,6 @@ export interface PageInfo {}
 
   // Extract all links from a page
   extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {
-
 
   constructor (baseUrl: string = 'https://ziontechgroup.com') {}
     this.baseUrl = baseUrl}
@@ -260,5 +258,3 @@ export interface PageInfo {}
 }
 
 '`
-=======
->>>>>>> main

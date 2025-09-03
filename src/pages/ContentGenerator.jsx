@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useNavigate  } from 'react-router-dom';
 export default function Page() {
  = await supabase.functions.invoke('generate - content', {
@@ -264,8 +263,6 @@ export default function Page() {
       
     </>)}
 
-<<<<<<< HEAD
-
 export { ContentGenerator };
 
 export { ContentGenerator };
@@ -275,9 +272,3 @@ export { ContentGenerator };
 export { ContentGenerator };
 
 export { ContentGenerator };
-=======
-    </>) }
-=======
-import React from 'react'; export default function ContentGenerator () { const { user, isLoading } = useAuth () ; const router = useNavigate () ; const [contentType, setContentType] = useState("blog"); const [customPrompt, setCustomPrompt] = useState("); const [topic, setTopic] = useState("); const [autoPublish, setAutoPublish] = useState(false); const [includeImage, setIncludeImage] = useState(true); const [isGenerating, setIsGenerating] = useState(false); const [previewContent, setPreviewContent] = useState(null); const [testEmail, setTestEmail] = useState(");
->>>>>>> main
->>>>>>> main

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React { useState, useMemo } from "react";"
   // comment
   Brain, Cloud,
@@ -430,7 +428,6 @@ default: return <Lightbulb className="w-6 h-6"  />,,
       case "Robotics": return <Factory className="w-6 h-6" /" >;""
       case "Space Technology": return <Satellite className="w-6 h-6" /" >;""
       default: return <Lightbulb className="w-6 h-6" /" >, "
-
 
   const getStatusColor = (status: string) => {switch (status.toLowerCase()) {
   const getStatusColor = (status: string) => {"
@@ -1287,4 +1284,3 @@ export: default ComprehensiveServicesShowcase2027,
 export default ComprehensiveServicesShowcase2027,"
 export default ComprehensiveServicesShowcase2027;""
 export default ComprehensiveServicesShowcase2027,"""""
->>>>>>> main

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 export default function Page() {
@@ -319,4 +317,3 @@ export default function Page() {
   )};
 ;export { QuickAccess };
 '"`
->>>>>>> main

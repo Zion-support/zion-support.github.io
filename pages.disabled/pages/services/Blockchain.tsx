@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 export { function };
 :pages.disabled/pages/services/Blockchain.tsx
@@ -88,7 +87,6 @@ export default function Blockchain(...args[]):  {}
       description: "Build trust through verifiable and auditable processes"};
   ];
 
-  
 :pages.disabled/pages/services/Blockchain.tsx
     {;"
     {;
@@ -334,7 +332,6 @@ export default function Blockchain(...args[]):  {}
   { opacity: 0,
   y: 30
 
-
         {/* Use Cases Section */}""
         <section className="py-20">;""
           <div className="container-responsive">
@@ -444,7 +441,6 @@ export default function Blockchain(...args[]):  {}
   { opacity: 0,
   y: 30
 
-
         {/* Features Section */}""
         <section className="py-20 bg-white/5">;""
           <div className="container-responsive">
@@ -542,7 +538,6 @@ export default function Blockchain(...args[]):  {}
 
   { opacity: 0,
   y: 30
-
 
         {/* Pricing Section */}""
         <section className="py-20">;""
@@ -693,7 +688,6 @@ export default function Blockchain(...args[]):  {}
 
   { opacity: 0,
   y: 30
-
 
         {/* Benefits Section */}""
         <section className="py-20 bg-white/5">;""
@@ -855,5 +849,3 @@ export default function Blockchain(...args[]):  {}
     </div>;
   )}'"`
 '"`'"`
-=======
->>>>>>> main

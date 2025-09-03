@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  Plus,
+Plus,
   MessageCircle,
   Phone,
   Mail,
@@ -374,8 +370,3 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = t
   )};
 
 export default FloatingActionButton;
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

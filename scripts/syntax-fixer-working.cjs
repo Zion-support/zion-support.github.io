@@ -26,7 +26,7 @@ class SyntaxFixer {
         // Remove trailing semicolons after closing braces
         { pattern: /;\s*}\s*;/, replacement: '}' },
         // Fix missing semicolons after require statements
-        { pattern: /require\("[^"]+"\)\s*const/g, replacement: 'require("$1");\nconst' },
+        { pattern: /require\("[^"]+"\)\s*const/g, replacement: 'require("child_process");\nconst' },
         // Fix malformed class definitions
         { pattern: /class\s+(\w+)\s*{\s*constructor\(\)\s*{/, replacement: 'class $1 {\n  constructor() {' },
         // Fix malformed function definitions

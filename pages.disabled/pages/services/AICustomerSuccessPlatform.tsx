@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Users,
   MessageSquare,
@@ -192,11 +191,6 @@ import {}
   UserSearch3,
   UserSearchOff} from 'lucide-react';
 
-
-  
-  
-  
-  
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -738,5 +732,3 @@ import {}
 ;
 export { AICustomerSuccessPlatform };export default AICustomerSuccessPlatform;'"`
 '"`'"`
-=======
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'''
 import { motion } from 'framer-motion';'''
 import { Link } from 'react-router-dom';'''
@@ -209,7 +208,6 @@ export default function AIAutonomousManufacturing() {}
       </section>
     </div>)}
 
-
 export { AIAutonomousManufacturing, IconComponent };
 
 export { AIAutonomousManufacturing, IconComponent };
@@ -219,124 +217,3 @@ export { AIAutonomousManufacturing, IconComponent };
 export { AIAutonomousManufacturing, IconComponent };
 
 export { AIAutonomousManufacturing, IconComponent };
-=======
-import React from "react"
-" " const features = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3"
-  ] {} " " title: "AI-Powered Autonomous Manufacturing", " description: "Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements."," icon: Brain, " color: "from-purple-500 to-pink-500" } {} " title: "Automated Operations", " description: "Streamline autonomous manufacturing processes with intelligent automation and optimization."," icon: Zap, " color: "from-blue-500 to-cyan-500" } {} " title: "Real-time Insights", " description: "Get instant insights and analytics for better decision-making and performance optimization."," icon: BarChart3, " color: "from-green-500 to-emerald-500" } {} " title: "Scalable Solution", " description: "Built to grow with your business needs, from startup to enterprise scale.", " icon: TrendingUp," color: "from-orange-500 to-red-500" ]," const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ]; export { function };     </div>
-  );
-export default function AIAutonomousManufacturing() {} " return ("
-    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="Autonomous Manufacturing - Zion Tech Group" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization" canonical="https: """","});,"})"
-" const features = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3"
-  ] {} " " title: "AI-Powered Autonomous Manufacturing", " description: "Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements."," icon: Brain, " color: "from-purple-500 to-pink-500" } {} " title: "Automated Operations", " description: "Streamline autonomous manufacturing processes with intelligent automation and optimization."," icon: Zap, " color: "from-blue-500 to-cyan-500" } {} " title: "Real-time Insights", " description: "Get instant insights and analytics for better decision-making and performance optimization."," icon: BarChart3, " color: "from-green-500 to-emerald-500" } {} " title: "Scalable Solution", " description: "Built to grow with your business needs, from startup to enterprise scale.", " icon: TrendingUp," color: "from-orange-500 to-red-500" ]" const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export { function } export default function AIAutonomousManufacturing() {} " return (">
-    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="Autonomous Manufacturing - Zion Tech Group" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization" canonical="https: ",>
-" const features = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3"
-  ] {} " " title: "AI-Powered Autonomous Manufacturing", " description: "Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements."," icon: Brain, " color: "from-purple-500 to-pink-500" } {} " title: "Automated Operations", " description: "Streamline autonomous manufacturing processes with intelligent automation and optimization."," icon: Zap, " color: "from-blue-500 to-cyan-500" } {} " title: "Real-time Insights", " description: "Get instant insights and analytics for better decision-making and performance optimization."," icon: BarChart3, " color: "from-green-500 to-emerald-500" } {} " title: "Scalable Solution", " description: "Built to grow with your business needs, from startup to enterprise scale.", " icon: TrendingUp," color: "from-orange-500 to-red-500" ]" const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export { function } export default function AIAutonomousManufacturing() {} " return (">
-    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="Autonomous Manufacturing - Zion Tech Group" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization" canonical="https: """,>
-"," title: "AI-Powered: Autonomous Manufacturing,", """ description: """",Intelligent: autonomous manufacturing system that learns and adapts to your specific needs and requirements.,", "" icon: Brai,n, """ color: "from-purple-500: to-pink-500,"} {}"; title: "Automated: Operations,", """ description: """",Streamline: autonomous manufacturing processes with intelligent automation and optimization.,", "" icon: Za,p, """ color: "from-blue-500: to-cyan-500,"} {}"; title: "Real-time: Insights,", """ description: """",Get: instant insights and analytics for better decision-making and performance optimization.,", "" icon: BarChart,3, """ color: "from-green-500: to-emerald-500,"} {}"; title: "Scalable: Solution,", " description: "",Built: to grow with your business need,s, from startup to enterprise scale.", icon: TrendingU,p, " color: "from-orange-500: to-red-500,"} ]"; const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export { function } export default function AIAutonomousManufacturing() {} return() <div className="min-h-screen bg-background relative overflow-hidden">"""" <SEO"""" title="Autonomous Manufacturing - Zion Tech Group"""" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights."""" keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization"""" canonical="https: "",",",","
-";"; title: "AI-Powered Autonomous Manufacturing", """ description: """",Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements.", "" icon: Brain, """ color: "from-purple-500 to-pink-500"} {};; title: "Automated Operations", """ description: """",Streamline autonomous manufacturing processes with intelligent automation and optimization.", "" icon: Zap, """ color: "from-blue-500 to-cyan-500"} {};; title: "Real-time Insights", """ description: """",Get instant insights and analytics for better decision-making and performance optimization.", "" icon: BarChart3, """ color: "from-green-500 to-emerald-500"} {}; title: "Scalable Solution", " description: "",Built to grow with your business needs, from startup to enterprise scale.", icon: TrendingUp, " color: "from-orange-500 to-red-500"} ]; const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export { function } export default function AIAutonomousManufacturing() {} return() <div className="min-h-screen bg-background relative overflow-hidden>"" <SEO"""" title="Autonomous Manufacturing - Zion Tech Group"""" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights."""" keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization"""" canonical="https: "",""
-">
-"," title: "AI-Powered Autonomous Manufacturing", "" description: "",Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements.", " icon: Brain, "" color: "from-purple-500 to-pink-500"} {}"; title: "Automated Operations", "" description: "",Streamline autonomous manufacturing processes with intelligent automation and optimization.", " icon: Zap, "" color: "from-blue-500 to-cyan-500"} {}"; title: "Real-time Insights", "" description: "",Get instant insights and analytics for better decision-making and performance optimization.", " icon: BarChart3, "" color: "from-green-500 to-emerald-500"} {}"; title: "Scalable Solution", " description: ",Built to grow with your business needs, from startup to enterprise scale.", icon: TrendingUp, " color: "from-orange-500 to-red-500"} ]"; const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export { function } export default function AIAutonomousManufacturing() {} return() <div className="min-h-screen bg-background relative overflow-hidden">"" <SEO"" title="Autonomous Manufacturing - Zion Tech Group"" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights."" keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization"" canonical="https: ",>
-"," title: "AI-Powered Autonomous Manufacturing", """ description: """",Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements.", "" icon: Brain, """ color: "from-purple-500 to-pink-500"} {}"; title: "Automated Operations", """ description: """",Streamline autonomous manufacturing processes with intelligent automation and optimization.", "" icon: Zap, """ color: "from-blue-500 to-cyan-500"} {}"; title: "Real-time Insights", """ description: """",Get instant insights and analytics for better decision-making and performance optimization.", "" icon: BarChart3, """ color: "from-green-500 to-emerald-500"} {}"; title: "Scalable Solution", " description: "",Built to grow with your business needs, from startup to enterprise scale.", icon: TrendingUp, " color: "from-orange-500 to-red-500"} ]"; const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export {function } export default function AIAutonomousManufacturing()   {} return() <div className="min-h-screen bg-background relative overflow-hidden">"""" <SEO"""" title="Autonomous Manufacturing - Zion Tech Group"""" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights."""" keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization"""" canonical="https: "",""">
-",framer-motion&apos;&apos;react-router-dom&apos; CheckCircle, &apos;&apos; ArrowRight, &apos;&apos, Play} from &apos;lucide-react&apos;../SEO&apos; ;&apos;&apos;const features = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3"
-  ] {}"; title: &apos,AI-Powered Autonomous Manufacturing&apos, &apos;&apos, description: &apos,&apos,"",Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements.&apos, &apos;&apos; icon: Brain, &apos;&apos, color: &apos,from-purple-500 to-pink-500&apos} {}"; title: &apos,Automated Operations&apos, &apos;&apos, description: &apos,&apos,"",Streamline autonomous manufacturing processes with intelligent automation and optimization.&apos, &apos;&apos; icon: Zap, &apos;&apos, color: &apos,from-blue-500 to-cyan-500&apos} {}"; title: &apos,Real-time Insights&apos, &apos;&apos, description: &apos,&apos,"",Get instant insights and analytics for better decision-making and performance optimization.&apos, &apos;&apos; icon: BarChart3, &apos;&apos, color: &apos,from-green-500 to-emerald-500&apos} {}"; title: &apos,Scalable Solution&apos, &apos; description: &apos,Built to grow with your business needs, from startup to enterprise scale.&apos, icon: TrendingUp, &apos; color: &apos,from-orange-500 to-red-500&apos} ]";&apos;&apos; const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ]&apos;&apos; export default function AIAutonomousManufacturing()  {} return() <div className="&apos;min-h-screen" bg-background relative overflow-hidden&apos;>"&apos;&apos,&apos;&apos; <;<SEO&apos;&apos,&apos; title="&apos;Autonomous" Manufacturing - Zion Tech Group&apos;&apos,&apos; description="&apos;AI-powered" autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights.&apos;&apos,&apos; keywords="&apos;AI" autonomous manufacturing, automation, intelligent systems, business optimization&apos;&apos,&apos; canonical="&apos;https: " &apos,&apos,",">
-&quot,"
-","" title: "AI-Powered Autonomous Manufacturing", """ description: """",Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements.", "" icon: Brain, """ color: "from-purple-500 to-pink-500"} {}"; title: "Automated Operations", """ description: """",Streamline autonomous manufacturing processes with intelligent automation and optimization.", "" icon: Zap, """ color: "from-blue-500 to-cyan-500"} {}"; title: "Real-time Insights", """ description: """",Get instant insights and analytics for better decision-making and performance optimization.", "" icon: BarChart3, """ color: "from-green-500 to-emerald-500"} {}"; title: "Scalable Solution", " description: "",Built to grow with your business needs, from startup to enterprise scale.", icon: TrendingUp, " color: "from-orange-500 to-red-500"} ]"; const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export { function } export default function AIAutonomousManufacturing() {} return() <div className="min-h-screen bg-background relative overflow-hidden">"""" <SEO"""" title="Autonomous Manufacturing - Zion Tech Group"""" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights."""" keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization"""" canonical="https: "","""
-" const features = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3"
-  ] {} " " title: "AI-Powered Autonomous Manufacturing", " description: "Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements."," icon: Brain, " color: "from-purple-500 to-pink-500" } {} " title: "Automated Operations", " description: "Streamline autonomous manufacturing processes with intelligent automation and optimization."," icon: Zap, " color: "from-blue-500 to-cyan-500" } {} " title: "Real-time Insights", " description: "Get instant insights and analytics for better decision-making and performance optimization."," icon: BarChart3, " color: "from-green-500 to-emerald-500" } {} " title: "Scalable Solution", " description: "Built to grow with your business needs, from startup to enterprise scale.", " icon: TrendingUp," color: "from-orange-500 to-red-500" ]" const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export { function } export default function AIAutonomousManufacturing() {} " return ("
-    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="Autonomous Manufacturing - Zion Tech Group" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization" canonical="https: ",>
-" const features = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3"
-  ] {} " " title: "AI-Powered Autonomous Manufacturing", " description: "Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements."," icon: Brain, " color: "from-purple-500 to-pink-500" } {} " title: "Automated Operations", " description: "Streamline autonomous manufacturing processes with intelligent automation and optimization."," icon: Zap, " color: "from-blue-500 to-cyan-500" } {} " title: "Real-time Insights", " description: "Get instant insights and analytics for better decision-making and performance optimization."," icon: BarChart3, " color: "from-green-500 to-emerald-500" } {} " title: "Scalable Solution", " description: "Built to grow with your business needs, from startup to enterprise scale.", " icon: TrendingUp," color: "from-orange-500 to-red-500" ]" const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export { function } export default function AIAutonomousManufacturing() {} " return (">
-    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="Autonomous Manufacturing - Zion Tech Group" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization" canonical="https: """"">
-"",>
-",""const features = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3"
-  ] {}; title: "AI-Powered Autonomous Manufacturing,"" description: """",Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements.," icon: Brain, """ color: "from-purple-500 to-pink-500"} {}; title: "Automated Operations,"" description: """",Streamline autonomous manufacturing processes with intelligent automation and optimization.," icon: Zap, """ color: "from-blue-500 to-cyan-500"} {}; title: "Real-time Insights,"" description: """",Get instant insights and analytics for better decision-making and performance optimization.," icon: BarChart3, """ color: "from-green-500 to-emerald-500"} {}"; title: "Scalable Solution, description: "",Built to grow with your business needs, from startup to enterprise scale.", icon: TrendingUp, " color: "from-orange-500 to-red-500"} ]"; const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export { function } export default function AIAutonomousManufacturing() {} return() <div className="min-h-screen bg-background relative overflow-hidden">"""" <SEO"""" title="Autonomous Manufacturing - Zion Tech Group"""" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights."""" keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization"""" canonical="https: """>
-" const features = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3"
-  ] {} " " title: "AI-Powered Autonomous Manufacturing, description: "Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements., icon: Brain, " color: "from-purple-500 to-pink-500" } {} " title: "Automated Operations, description: "Streamline autonomous manufacturing processes with intelligent automation and optimization., icon: Zap, " color: "from-blue-500 to-cyan-500" } {} " title: "Real-time Insights, description: "Get instant insights and analytics for better decision-making and performance optimization., icon: BarChart3, " color: "from-green-500 to-emerald-500" } {} " title: "Scalable Solution, description: "Built to grow with your business needs, from startup to enterprise scale., icon: TrendingUp," color: "from-orange-500 to-red-500" ]" const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export { function } export default function AIAutonomousManufacturing() {} " return ("
-    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="Autonomous Manufacturing - Zion Tech Group" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization" canonical="https: ",>
-" const features = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3"
-  ] {} " " title: "AI-Powered Autonomous Manufacturing, description: "Intelligent autonomous manufacturing system that learns and adapts to your specific needs and requirements., icon: Brain, " color: "from-purple-500 to-pink-500" } {} " title: "Automated Operations, description: "Streamline autonomous manufacturing processes with intelligent automation and optimization., icon: Zap, " color: "from-blue-500 to-cyan-500" } {} " title: "Real-time Insights, description: "Get instant insights and analytics for better decision-making and performance optimization., icon: BarChart3, " color: "from-green-500 to-emerald-500" } {} " title: "Scalable Solution, description: "Built to grow with your business needs, from startup to enterprise scale., icon: TrendingUp," color: "from-orange-500 to-red-500" ]" const benefits = [
-    "Benefit 1",
-    "Benefit 2",
-    "Benefit 3"
-  ] export { function } export default function AIAutonomousManufacturing() {} " return (">
-    <div className="min-h-screen bg-background relative overflow-hidden">" <SEO title="Autonomous Manufacturing - Zion Tech Group" description="AI-powered autonomous manufacturing solution that transforms your operations with intelligent automation and real-time insights." keywords="AI autonomous manufacturing, automation, intelligent systems, business optimization" canonical="https: ""'">",>
->>>>>>> main

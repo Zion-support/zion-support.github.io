@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 interface PWAUpdaterProps {
   autoCheck?: boolean;
   checkInterval?: number;
@@ -248,8 +244,3 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({
     </>) };
 export default PWAUpdater;
 '"
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main
