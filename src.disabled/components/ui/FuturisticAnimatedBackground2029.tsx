@@ -2,8 +2,10 @@ import React, { useEffect, useRef } from,
   react' interface FuturisticAnimatedBackground2029Props {
    intensity?: number;
    theme?: 'cyberpunk' | 'holographic' | 'quantum} const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ intensity = 0.8, theme =,
-  cyberpunk' }) => { const canvasRef = useRef<HTMLCanvasElement>(null) const animationRef = useRef<number>() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext(
-  '2d') if (!canvas) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles: Array<{ x: number y: number vx: number vy: number size: number opacity: number color: string type:;
+  cyberpunk' }) => { const canvasRef = useRef<HTMLCanvasElement>(null) const animationRef = useRef<number>() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('
+  '2d') if (!canvas) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles: Array<{ x: number y: number vx: number vy: number size: number opacity: number colo,
+    r: string typ,
+    e:;
   'particle' |;
   'wave' |;
   'grid }> = [] const colors = { cyberpunk: [,
@@ -15,7 +17,7 @@ import React, { useEffect, useRef } from,
 ,
   #4ecdc4',
   '#45b7d1',
-  '#96ceb4'], quantum: [
+  '#96ceb4'], quantum: ['
   '#00ffff,
   '#ff00ff',
   '#ffff00',

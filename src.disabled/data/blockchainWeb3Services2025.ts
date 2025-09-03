@@ -18,5 +18,9 @@ export interface BlockchainWeb3Service {
    roi: string;
    innovationLevel: string;
    contactInfo: { phone: string;
-   email: string;
-   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [;
+   emai,
+    l: string;
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [;

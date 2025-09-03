@@ -58,7 +58,7 @@ const specificFiles = [
   'pages/NotFound.tsx',
   'pages/enhanced-home.tsx',
   'pages/index.p.tsx',
-  'pages/pricing-guide.tsx'
+  'pages/pricing-guide.tsx',
 ];
 
 console.log('🔧 Fixing remaining syntax errors in specific files...');

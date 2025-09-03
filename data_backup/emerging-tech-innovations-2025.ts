@@ -28,16 +28,21 @@ export interface EmergingTechInnovation2025 {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [;
+review,
+    s: number;export const emergingTechInnovations202,
+    5: EmergingTechInnovation2025[] = [;
   // Neuromorphic Computing{
-    id:,
+    i,
+    d:,
   neuromorphic-computing-platform',
     name: 'Neuromorphic Computing Platform,
     tagline:,
@@ -78,8 +83,10 @@ reviews: number;export const emergingTechInnovations2025: EmergingTechInnovation
     textColor:,
   text-purple-300;
   ',
-    link: 'https://ziontechgroup.com/neuromorphic-computing-platform,
-    marketPosition: 'Leading neuromorphic computing platform. Traditional AI computing: $25,000+/month. Our platform: $9,999/month with 100x better energy efficiency.,
+    link: 'http,
+    s://ziontechgroup.com/neuromorphic-computing-platform,
+    marketPosition: 'Leading neuromorphic computing platform. Traditional AI computin,
+    g: $25,000+/month. Our platform: $9,999/month with 100x better energy efficiency.,
   ,
     targetAudience: AI research institutions, Technology companies, Government agencies, Universities, Healthcare organizations, Robotics companies;
   ',
@@ -121,14 +128,16 @@ reviews: number;export const emergingTechInnovations2025: EmergingTechInnovation
   ',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Full-stack neuromorphic computing platform with hardware integration, software development, and comprehensive API access. Includes custom neural architecture development and optimization services.;
@@ -180,8 +189,10 @@ reviews: number;export const emergingTechInnovations2025: EmergingTechInnovation
     textColor:,
   text-green-300;
   ',
-    link: 'https://ziontechgroup.com/dna-computing-platform,
-    marketPosition: 'First commercial DNA computing platform. Research DNA computing: $100,000+/month. Our platform: $18,999/month with commercial applications.,
+    link: 'http,
+    s://ziontechgroup.com/dna-computing-platform,
+    marketPosition: 'First commercial DNA computing platform. Research DNA computin,
+    g: $100,000+/month. Our platform: $18,999/month with commercial applications.,
   ,
     targetAudience: Research institutions, Pharmaceutical companies, Government agencies, Technology companies, Universities, Healthcare organizations;
   ',
@@ -223,14 +234,16 @@ reviews: number;export const emergingTechInnovations2025: EmergingTechInnovation
   ',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Commercial DNA computing platform with laboratory integration, molecular programming, and comprehensive problem-solving capabilities. Includes custom DNA algorithm development and laboratory setup services.;
@@ -282,8 +295,10 @@ reviews: number;export const emergingTechInnovations2025: EmergingTechInnovation
     textColor:,
   text-yellow-400;
   ',
-    link: 'https://ziontechgroup.com/photonic-computing-platform,
-    marketPosition: 'Leading photonic computing platform. Traditional supercomputing: $50,000+/month. Our platform: $12,999/month with light-speed performance.,
+    link: 'http,
+    s://ziontechgroup.com/photonic-computing-platform,
+    marketPosition: 'Leading photonic computing platform. Traditional supercomputin,
+    g: $50,000+/month. Our platform: $12,999/month with light-speed performance.,
   ,
     targetAudience: Technology companies, Research institutions, Government agencies, Universities, AI companies, Scientific organizations;
   ',
@@ -325,14 +340,16 @@ reviews: number;export const emergingTechInnovations2025: EmergingTechInnovation
   ',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Enterprise-grade photonic computing platform with optical integration, parallel processing, and comprehensive API access. Includes custom photonic design and optimization services.;
@@ -384,8 +401,10 @@ reviews: number;export const emergingTechInnovations2025: EmergingTechInnovation
     textColor:,
   text-pink-300;
   ',
-    link: 'https://ziontechgroup.com/holographic-display-platform,
-    marketPosition: 'Leading holographic display platform. Traditional 3D displays: $15,000+/month. Our platform: $6,999/month with true holographic capabilities.,
+    link: 'http,
+    s://ziontechgroup.com/holographic-display-platform,
+    marketPosition: 'Leading holographic display platform. Traditional 3D display,
+    s: $15,000+/month. Our platform: $6,999/month with true holographic capabilities.,
   ,
     targetAudience: Entertainment companies, Educational institutions, Business organizations, Research institutions, Technology companies, Healthcare organizations;
   ',
@@ -427,14 +446,16 @@ reviews: number;export const emergingTechInnovations2025: EmergingTechInnovation
   ',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Comprehensive holographic display platform with content creation tools, streaming capabilities, and mobile support. Includes custom holographic solution development and hardware integration.;
@@ -486,8 +507,10 @@ reviews: number;export const emergingTechInnovations2025: EmergingTechInnovation
     textColor:,
   text-cyan-300;
   ',
-    link: 'https://ziontechgroup.com/quantum-internet-platform,
-    marketPosition: 'First quantum internet platform. Traditional secure networks: $40,000+/month. Our platform: $14,999/month with quantum security.,
+    link: 'http,
+    s://ziontechgroup.com/quantum-internet-platform,
+    marketPosition: 'First quantum internet platform. Traditional secure network,
+    s: $40,000+/month. Our platform: $14,999/month with quantum security.,
   ,
     targetAudience: Telecommunications companies, Government agencies, Financial institutions, Technology companies, Research institutions, Security organizations;
   ',
@@ -529,14 +552,16 @@ reviews: number;export const emergingTechInnovations2025: EmergingTechInnovation
   ',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950;
   ',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709;
   ',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Enterprise-grade quantum internet platform with network infrastructure, security protocols, and comprehensive management tools. Includes custom quantum protocol development and network integration.;

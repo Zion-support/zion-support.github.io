@@ -6,23 +6,30 @@ export interface LinkInfo {
 }
 export interface PageInfo {}
 url: string;
-  status:;
+  statu,
+    s:;
   'working' |;
   'broken' |;
   'missing' |;
-  'external'  page: string;
+  'external'  pag,
+    e: string;
   anchor?: string;
   error?: string}
   path: string;
   title: string;
-  links: LinkInfo[];
-  exists: boolean}
+  link,
+    s: LinkInfo[];
+  exist,
+    s: boolean}
   private baseUrl: string;
   private visitedUrls: Set < string> = new Set () ;
-  private brokenLinks: LinkInfo[] = [];
-  private missingPages: string[] = [];
+  private brokenLink,
+    s: LinkInfo[] = [];
+  private missingPage,
+    s: string[] = [];
 :pages.disabled/utils/linkChecker.tsx,
-  constructor (baseUrl: string = 'https://ziontechgroup.com) {
+  constructor (baseUrl: string = 'http,
+    s://ziontechgroup.com) {
     this.baseUrl = baseUrl}
   // Check if a link is internal or external;
   isInternalLink (url: string) : boolean {
@@ -32,36 +39,39 @@ url: string;
   }
   // Normalize URL to handle relative paths;
   normalizeUrl (url: string, basePage: string) : string {
-    try {
+    try {'
 ';
-      if (url.startsWith(
+      if (url.startsWith('
   'http') ) {
         return url}
   ';
       if (url.startsWith ('/;
-  ') ) {
-        return `${this.baseUrl}${url}`}';
-      if (url.startsWith(
-  '#') ) {
-`;
-        return `${this.baseUrl}${basePage}${url}`}`;
+  ') ) {'
+        return `${this.baseUrl}${url}`};
+      if (url.startsWith('
+  '#') ) {'
+`;`
+        return `${this.baseUrl}${basePage}${url}`}`;`
       return `${this.baseUrl}${basePage}/${url}`} catch {
       return url}
   }
   // Extract all links from a page;
-  extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {const links: LinkInfo[] = [];
+  extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {const link,
+    s: LinkInfo[] = [];
     // Extract href attributes from anchor tags;
     let match;
 :pages.disabled/utils/linkChecker.tsx;
     while ( (match = hrefRegex.exec (pageContent) ) !== null) {
-      if (url &&,
+      if (url &&,`
   !url.startsWith ('javascript: ') &&';
-        !url.startsWith(
+        !url.startsWith('
   'mailto:') &&;
   ';
-        !url.startsWith ('tel:) ) {
-        links.push ({
-          url: normalizedUrl,';
+        !url.startsWith ('te,
+    l:) ) {
+        links.push ({'
+          ur,
+    l: normalizedUrl,;
           status:;
   'working',
           page: pagePath,
@@ -70,39 +80,44 @@ url: string;
     }
     // Extract src attributes from img, script, and link tags;
     while ( (match = srcRegex.exec (pageContent) ) !== null) {,
-  if (url && !url.startsWith(
-  'data: ') && !url.startsWith(
-  'blob:) ) {
+  if (url && !url.startsWith('
+  'data: ') && !url.startsWith('
+  'blo,
+    b:) ) {
         links.push ({
-          url: normalizedUrl,
+          ur,
+    l: normalizedUrl,
 ,
   status: 'working,
           page: pagePath})}}
     return links}
 :pages.disabled/utils/linkChecker.tsx;
   // Check if a page exists
-  async checkPageExists (url: string: any): Promise < any> {
+  async checkPageExists (url: strin,
+    g: any): Promise < any> {
     try {
       return response.ok} catch {
       return false}
   }
   // Check all links on a page
-  async checkPageLinks (pagePath: string, pageContent: string: any): Promise < any> {
-    const checkedLinks: LinkInfo[] = [];
+  async checkPageLinks (pagePath: string, pageContent: strin,
+    g: any): Promise < any> {
+    const checkedLink,
+    s: LinkInfo[] = [];
     for (const link of links) {
       if (this.visitedUrls.has (link.url) ) {continue}
       this.visitedUrls.add (link.url) ;
 :pages.disabled/utils/linkChecker.tsx;
       if (this.isInternalLink (link.url) ) {
-        if (exists) {
+        if (exists) {'
 ';
           link.status =;
-  'working'} else {
+  'working'} else {'
   ';
           link.status = 'missing;
   ';
           this.missingPages.push (link.url) }
-      } else {
+      } else {'
 'link.status =;
   'external'}
       checkedLinks.push (link) }
@@ -127,4 +142,4 @@ url: string;
     return this.brokenLinks}
   // Get all missing pages;
   getMissingPages () : string[] {return this.missingPages}}
-'`
+'``

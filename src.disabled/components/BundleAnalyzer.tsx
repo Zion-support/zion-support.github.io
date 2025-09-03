@@ -7,17 +7,21 @@ interface BundleMetrics {
   totalSize: number;
    chunkCount: number;
    largestChunk: {
-   name: string;
-   size: number}
+   nam,
+    e: string;
+   siz,
+    e: number}
   averageChunkSize: number
-  gzipSavings: number}
+  gzipSaving,
+    s: number}
 export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
   enabled = true,
   showUI = false}) => {
   const [metrics, setMetrics] = useState<any>({
     totalSize: 0,
     chunkCount: 0,
-    largestChunk: { name: '', size: 0 },
+    largestChunk: { nam,
+    e: '', size: 0 },
     averageChunkSize: 0,
     gzipSavings: 0})
   const analyzeBundle = useCallback(() => {
@@ -30,14 +34,14 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       let totalSize = 0;
       let chunkCount = 0;
       let largestChunk = { name: unknown'', size: 0 }
-;
-      resourceEntries.forEach((entry: )  => {
+      resourceEntries.forEach((entry: )  => {'
         if (entry.name.includes('.js') || entry.name.includes('.css')) {
           const size = entry.transferSize || entry.encodedBodySize || 0;
           totalSize += size;
           chunkCount++;
           if (size > largestChunk.size) {
-            largestChunk = { name: entry.name, size }
+            largestChunk = { nam,
+    e: entry.name, size }
           }
         }
       })
@@ -48,40 +52,40 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
         chunkCount,
         largestChunk,
         averageChunkSize,
-        gzipSavings})
+        gzipSavings});
       // Log performance insights;
       console.group('🚀 Bundle Analysis');
-      console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
-      console.log(`Chunk Count: ${chunkCount}`);
-      console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024).toFixed(2)} MB)`);
-      console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024).toFixed(2)} MB`);
+      console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);`
+      console.log(`Chunk Count: ${chunkCount}`);`
+      console.log(`Largest Chunk: ${largestChunk.name} (${(largestChunk.size / 1024 / 1024).toFixed(2)} MB)`);`
+      console.log(`Average Chunk Size: ${(averageChunkSize / 1024 / 1024).toFixed(2)} MB`);`
       console.log(`Estimated Gzip Savings: ${(gzipSavings / 1024 / 1024).toFixed(2)} MB`);
       // Performance recommendations;
-      if (totalSize > 5 * 1024 * 1024) { // 5MB;
+      if (totalSize > 5 * 1024 * 1024) { // 5MB;`
         console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.')}
-      if (chunkCount > 20) {
+      if (chunkCount > 20) {'
         console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')}
       if (largestChunk.size > 2 * 1024 * 1024) { // 2MB;
         console.warn('⚠️ Largest chunk is too big. Consider splitting it further.')}
-      console.groupEnd()} catch (error) {
+      console.groupEnd()} catch (error) {'
       console.error('Bundle analysis failed:', error)}
   }, [enabled]);
   const optimizeBundle = useCallback(() => {
     if (!enabled) return;
     // Implement bundle optimization strategies;
     const optimizations: string[] = [];
-    if (metrics.totalSize > 5 * 1024 * 1024) {
+    if (metrics.totalSize > 5 * 1024 * 1024) {'
       optimizations.push('Implement code splitting for routes');
       optimizations.push('Use dynamic imports for heavy components');
       optimizations.push('Optimize third-party library imports')}
-    if (metrics.chunkCount > 20) {
+    if (metrics.chunkCount > 20) {'
       optimizations.push('Consolidate small chunks');
       optimizations.push('Use webpack chunk optimization')}
-    if (metrics.largestChunk.size > 2 * 1024 * 1024) {
+    if (metrics.largestChunk.size > 2 * 1024 * 1024) {'
       optimizations.push('Split large components');
       optimizations.push('Implement tree shaking')}
     // Apply optimizations;
-    optimizations.forEach(optimization => {
+    optimizations.forEach(optimization => {'
       console.log(`🔧 Optimization: unknown${optimization}`)})
     return optimizations}, [enabled, metrics]);
   useEffect(()  => {
@@ -93,15 +97,15 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     if (!enabled) return;
     // Run optimization analysis;
     const optimizations = optimizeBundle();
-    if (optimizations && optimizations.length > 0) {
+    if (optimizations && optimizations.length > 0) {`
       console.log('📊 Bundle optimization recommendations:', optimizations)}
   }, [enabled, optimizeBundle]);
   // Don't render UI unless explicitly requested
   if (!showUI) {
     return null}
-  return(
-    <div className='fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm'>
-      <h3 className='text-sm font-semibold text-gray-800 mb-2'>Bundle Analysis</h3>
+  return('
+    <div className='fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm>
+      <h3 className='text-sm font-semibold text-gray-800 mb-2'>Bundle Analysis</h3>'
       <div className='space-y-2 text-xs text-gray-600'>
         <div>Total Size: {(metrics.totalSize / 1024 / 1024).toFixed(2)} MB</div>
         <div>Chunks: {metrics.chunkCount}</div>

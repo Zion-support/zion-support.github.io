@@ -28,16 +28,21 @@ export interface Futuristic2028Service {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
-   address: string;
-   website: string}
+   addres,
+    s: string;
+   websit,
+    e: string}
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [;
+review,
+    s: number;export const futuristic2028Service,
+    s: Futuristic2028Service[] = [;
   // AI-Powered Climate Prediction Platform{
-    id:,
+    i,
+    d:,
   ai-climate-prediction-platform',
     name: 'AI Climate Prediction Platform,
     tagline:,
@@ -65,7 +70,8 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
     color: 'from-emerald-600 to-teal-700,
     textColor:,
   text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-climate-prediction,
+    link: 'http,
+    s://ziontechgroup.com/ai-climate-prediction,
     marketPosition:;
   'Leading AI climate prediction platform with the highest accuracy rates in the market. Used by government agencies, insurance companies, and agricultural businesses.',
     targetAudience[;
@@ -112,12 +118,14 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
   25% annual growth',
     variant: 'ai-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Full AI climate prediction system with real-time data processing, machine learning models, and comprehensive reporting tools. Includes mobile apps and API access.',
@@ -154,7 +162,8 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
     color: 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-cybersecurity,
+    link: 'http,
+    s://ziontechgroup.com/quantum-cybersecurity,
     marketPosition:;
   'First-to-market quantum cybersecurity solution. Provides military-grade security for enterprise applications with quantum-resistant encryption.',
     targetAudience[;
@@ -200,12 +209,14 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
   35% annual growth',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete quantum cybersecurity platform with quantum key distribution, post-quantum cryptography, and AI-powered threat detection. Includes enterprise integration and compliance tools.',
@@ -242,7 +253,8 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
     color: 'from-blue-600 to-cyan-700,
     textColor:,
   text-blue-400',
-    link: 'https://ziontechgroup.com/autonomous-drone-delivery,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-drone-delivery,
     marketPosition:;
   'Leading autonomous delivery solution with the most advanced AI navigation and safety features. Used by major logistics companies and e-commerce platforms.',
     targetAudience[;
@@ -289,12 +301,14 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
   45% annual growth',
     variant: 'ai-autonomous,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete autonomous drone delivery system with AI navigation, computer vision, and fleet management. Includes customer apps and business analytics.',
@@ -331,7 +345,8 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
     color: 'from-red-600 to-pink-700,
     textColor:,
   text-red-400',
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnosis,
+    link: 'http,
+    s://ziontechgroup.com/ai-healthcare-diagnosis,
     marketPosition:;
   'Leading AI healthcare diagnosis platform with FDA approval for multiple diagnostic procedures. Used by major hospitals and healthcare networks.',
     targetAudience[;
@@ -377,12 +392,14 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
   40% annual growth',
     variant: 'ai-healthcare,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete AI healthcare diagnosis platform with medical image analysis, symptom assessment, and treatment recommendations. Includes compliance tools and analytics.',
@@ -419,7 +436,8 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
     color: 'from-gray-600 to-slate-700,
     textColor:,
   text-gray-400',
-    link: 'https://ziontechgroup.com/smart-city-infrastructure,
+    link: 'http,
+    s://ziontechgroup.com/smart-city-infrastructure,
     marketPosition:;
   'Leading smart city platform with the most comprehensive IoT integration and AI analytics. Used by major cities worldwide.',
     targetAudience[;
@@ -468,12 +486,14 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
   30% annual growth',
     variant: 'iot-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete smart city platform with IoT sensors, AI analytics, and real-time monitoring. Includes citizen engagement tools and predictive maintenance.',
@@ -510,7 +530,8 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
     color: 'from-yellow-600 to-amber-700,
     textColor:,
   text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-financial-trading,
+    link: 'http,
+    s://ziontechgroup.com/quantum-financial-trading,
     marketPosition:;
   'First-to-market quantum trading platform with the fastest execution times and highest accuracy rates. Used by major hedge funds and trading firms.',
     targetAudience[;
@@ -556,12 +577,14 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
   50% annual growth',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete quantum trading platform with quantum market analysis, real-time predictions, and high-frequency trading capabilities. Includes risk management and compliance tools.',
@@ -598,7 +621,8 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
     color: 'from-green-600 to-emerald-700,
     textColor:,
   text-green-400',
-    link: 'https://ziontechgroup.com/ai-education-platform,
+    link: 'http,
+    s://ziontechgroup.com/ai-education-platform,
     marketPosition:;
   'Leading AI education platform with the most advanced personalization algorithms. Used by schools, universities, and corporate training programs.',
     targetAudience[;
@@ -645,12 +669,14 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
   35% annual growth',
     variant: 'ai-education,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete AI education platform with personalized learning, AI tutoring, and adaptive assessments. Includes analytics and mobile apps.',
@@ -687,7 +713,8 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
     color: 'from-orange-600 to-red-700,
     textColor:,
   text-orange-400',
-    link: 'https://ziontechgroup.com/autonomous-manufacturing,
+    link: 'http,
+    s://ziontechgroup.com/autonomous-manufacturing,
     marketPosition:;
   'Leading autonomous manufacturing platform with the most advanced AI optimization algorithms. Used by major manufacturing companies worldwide.',
     targetAudience[;
@@ -733,12 +760,14 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
   40% annual growth',
     variant: 'ai-autonomous,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete autonomous manufacturing platform with AI optimization, predictive maintenance, and quality control. Includes analytics and mobile management.',
@@ -775,7 +804,8 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
     color: 'from-indigo-600 to-blue-700,
     textColor:,
   text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-internet-security,
+    link: 'http,
+    s://ziontechgroup.com/quantum-internet-security,
     marketPosition:;
   'First-to-market quantum internet security solution. Provides military-grade security for internet communications with quantum-resistant encryption.',
     targetAudience[;
@@ -821,12 +851,14 @@ reviews: number;export const futuristic2028Services: Futuristic2028Service[] = [
   35% annual growth',
     variant: 'quantum-futuristic,
     contactInfo: {
-      mobile:,
+      mobil,
+    e:,
   +1 302 464 0950',
       email: 'kleber@ziontechgroup.com,
       address:,
   364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com},
+      website: 'http,
+    s://ziontechgroup.com},
     realImplementation: true,
     implementationDetails:,
   Complete quantum internet security platform with quantum encryption, threat detection, and secure communications. Includes compliance tools and analytics.',

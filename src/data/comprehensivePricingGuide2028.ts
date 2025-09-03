@@ -1,5 +1,9 @@
-export interface ComprehensivePricingGuide2028 {
+<<<<<<< HEAD
+export interface ComprehensivePricingGuide2028 {;
   id: string;
+=======
+export interface ComprehensivePricingGuide2028 {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -17,6 +21,25 @@ export interface ComprehensivePricingGuide2028 {
    marketPrice: string;
    roi: string;
    innovationLevel: string;
-   contactInfo: { phone: string;
-   email: string;
+   contactInfo: {  phone: string;
+<<<<<<< HEAD
+   emai,
+    l: string
+   websit,
+    e: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptim,
+    e: string securit,
+    y: string[]  } competitors?: string[] marketSize?: string aiCapabilities?: string[] complianceFeatures?: string[] scalabilityFeatures?: string[] pricingTiers?: { name: string price: number feature,
+    s: string[] benefit,
+    s: string[]  }[] roiAnalysis?: { shortTerm: string mediumTerm: string longTer,
+    m: string paybackPerio,
+    d: string  } marketPositioning?: { competitiveAdvantage: string uniqueValueProposition: string targetMarketSegmen,
+    t: string marketPenetratio,
+    n: string  } } export const COMPREHENSIVE_PRICING_GUIDE_2028: ComprehensivePricingGuide2028[] = [;
+=======
+   email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string aiCapabilities?: string[] complianceFeatures?: string[] scalabilityFeatures?: string[] pricingTiers?: {name: string price: number features: string[] benefits: string[]  }[] roiAnalysis?: {shortTerm: string mediumTerm: string longTerm: string paybackPeriod: string  } marketPositioning?: {competitiveAdvantage: string uniqueValueProposition: string targetMarketSegment: string marketPenetration: string  } } export const COMPREHENSIVE_PRICING_GUIDE_2028: ComprehensivePricingGuide2028[] = [;
+=======
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string aiCapabilities?: string[] complianceFeatures?: string[] scalabilityFeatures?: string[] pricingTiers?: { name: string price: number features: string[] benefits: string[]  }[] roiAnalysis?: { shortTerm: string mediumTerm: string longTerm: string paybackPeriod: string  } marketPositioning?: { competitiveAdvantage: string uniqueValueProposition: string targetMarketSegment: string marketPenetration: string  } } export const COMPREHENSIVE_PRICING_GUIDE_2028: ComprehensivePricingGuide2028[] = [;
+>>>>>>> main
+>>>>>>> main
