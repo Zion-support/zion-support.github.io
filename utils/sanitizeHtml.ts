@@ -1,22 +1,27 @@
-  sanitized = sanitized.replace(/\s*on\w+\s*=\s*[""][^""]*[""]/g, "")
-  // comment
-sanitized = sanitized.replace(/javascript:/gi, "")
-  // comment
-sanitized = sanitized.replace(/data:text\/html/gi, "")
+export function sanitizeHtml(html: string): string {
+  let sanitized = html;
+  
+  // Remove script tags
+  sanitized = sanitized.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+  
+  // Remove event handlers
+  sanitized = sanitized.replace(/\s*on\w+\s*=\s*[""][^""]*[""]/g, '');
+  
+  // Remove javascript: URLs
+  sanitized = sanitized.replace(/javascript:/gi, '');
+  
+  // Remove data:text/html
+  sanitized = sanitized.replace(/data:text\/html/gi, '');
+  
+  return sanitized;
 }
+
 export function sanitizeUrl(url: string): string {
-  // comment
-return url.replace(/javascript:/gi, "")
+  // Remove javascript: URLs
+  return url.replace(/javascript:/gi, '');
 }
+
 export function sanitizeCss(css: string): string {
-  // comment
-return css.replace(/expression\s*\(/gi, "")
+  // Remove expression() functions
+  return css.replace(/expression\s*\(/gi, '');
 }
-  // comment
-    t: URLs"
-  return url.replace(/javascrip,
-    t:/gi, "")
-}
-export function sanitizeCss(css: string): string {
-  // comment
-  return css.replace(/expression\s*\(/gi, "")

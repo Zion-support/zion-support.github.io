@@ -14,11 +14,12 @@ export const motion: Record<string, React.FC<any>> = new Proxy({}, {
 
 export const m = motion;
 
-export const AnimatePresence: React.FC<{ children?: React.ReactNode }> = ({ children }) => <>{children}</>;
+export const AnimatePresence: React.FC<{ children?: React.ReactNode }> = ({ children }) => React.createElement(React.Fragment, null, children);
 
 export function usePresence(): readonly [true, () => void] {
   return [true, () => {}] as const;
 }
 
-export default { motion, AnimatePresence, m, usePresence };
+const framerMotionStub = { motion, AnimatePresence, m, usePresence };
+export default framerMotionStub;
 
