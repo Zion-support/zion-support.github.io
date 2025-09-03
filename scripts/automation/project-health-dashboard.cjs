@@ -13,7 +13,7 @@ class ProjectHealthDashboard {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'project-health-dashboard.log'
     );
     this.dashboardDir = path.join(this.projectRoot, 'logs', 'health-dashboard');

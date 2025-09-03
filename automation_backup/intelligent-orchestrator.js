@@ -31,7 +31,7 @@ class IntelligentOrchestrator {
   }
   loadAutomationSystems() {
     const systems = [
-      { name: 'lint-monitor, path:,
+  { name: 'lint-monitor, path:,
   lint-monitor.js', status: 'available },
       {
         name:,

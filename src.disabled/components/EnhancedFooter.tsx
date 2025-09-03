@@ -8,7 +8,7 @@ import {
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const footerSections = [
-    {
+  {
       title: 'Services',
       links: [{ name: 'All Services', href: '/comprehensive-services-2025' },
         { name: 'Micro SAAS', href: '/services/micro-saas' },
@@ -49,14 +49,14 @@ const EnhancedFooter: React.FC = () => {
       ]}
   ];
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ];
   const contactInfo = [
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+  { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ]

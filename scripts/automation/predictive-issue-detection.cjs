@@ -14,19 +14,19 @@ class PredictiveIssueDetection {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'predictive-issue-detection.log'
     );
     this.patternsLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'issue-patterns.json'
     );
     this.predictionsLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'issue-predictions.json'
     );
     this.historicalDataLog = path.join(
-      this.projectRoot,logs',
+      this.projectRoot, 'logs',
       'issue-history.json'
     );
     this.ensureLogsDirectory();
@@ -1208,7 +1208,7 @@ this.log(`Generated ${recommendations.length} prevention recommendations`);
 
     // Save report to file
     const reportPath = path.join(
-      this.projectRoot,logs', `predictive-issues-${Date.now()}.json`
+      this.projectRoot, 'logs', `predictive-issues-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 this.log(`Prediction report generated: ${reportPath}`);
