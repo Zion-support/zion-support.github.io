@@ -15,9 +15,11 @@ function Header() {
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
           <Link href="/" style={{ opacity: 0.9 }}>Home</Link>
           <Link href="/services" style={{ opacity: 0.9 }}>Services</Link>
-          <a href="https://ziontechgroup.com/micro-saas" style={{ opacity: 0.9 }}>Micro SaaS</a>
-          <a href="https://ziontechgroup.com/ai-services" style={{ opacity: 0.9 }}>AI Services</a>
-          <a href="https://ziontechgroup.com/it-services" style={{ opacity: 0.9 }}>IT Services</a>
+          <Link href="/services/micro-saas" style={{ opacity: 0.9 }}>Micro SaaS</Link>
+          <Link href="/services/ai-services" style={{ opacity: 0.9 }}>AI Services</Link>
+          <Link href="/services/it-services" style={{ opacity: 0.9 }}>IT Services</Link>
+          <Link href="/about" style={{ opacity: 0.9 }}>About</Link>
+          <Link href="/pricing" style={{ opacity: 0.9 }}>Pricing</Link>
           <Link href="/contact" style={{ fontWeight: 600, background: '#22d3ee', color: '#0b1220', padding: '6px 10px', borderRadius: 8 }}>Contact</Link>
         </div>
       </nav>
@@ -36,11 +38,13 @@ function Footer() {
           <span>Address: 364 E Main St STE 1008 Middletown DE 19709</span>
         </div>
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-          <a href="https://ziontechgroup.com/services" style={{ opacity: 0.9 }}>All Services</a>
-          <a href="https://ziontechgroup.com/micro-saas" style={{ opacity: 0.9 }}>Micro SaaS</a>
-          <a href="https://ziontechgroup.com/ai-services" style={{ opacity: 0.9 }}>AI Services</a>
-          <a href="https://ziontechgroup.com/it-services" style={{ opacity: 0.9 }}>IT Services</a>
-          <a href="https://ziontechgroup.com/contact" style={{ opacity: 0.9 }}>Contact</a>
+          <Link href="/services" style={{ opacity: 0.9 }}>All Services</Link>
+          <Link href="/services/micro-saas" style={{ opacity: 0.9 }}>Micro SaaS</Link>
+          <Link href="/services/ai-services" style={{ opacity: 0.9 }}>AI Services</Link>
+          <Link href="/services/it-services" style={{ opacity: 0.9 }}>IT Services</Link>
+          <Link href="/about" style={{ opacity: 0.9 }}>About</Link>
+          <Link href="/pricing" style={{ opacity: 0.9 }}>Pricing</Link>
+          <Link href="/contact" style={{ opacity: 0.9 }}>Contact</Link>
         </div>
         <small style={{ opacity: 0.7 }}>© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</small>
       </div>
