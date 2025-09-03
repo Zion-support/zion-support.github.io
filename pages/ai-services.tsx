@@ -4,145 +4,145 @@ import Link from 'next/link';
 import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
-export default function AIServices() {;
+export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
-  const description =;
+  const description =
     'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
 
-  const aiServices = [;
-  {;
-      title: 'AI-Powered Email Responder',;
-      description: 'Automated email responses with sentiment analysis and intelligent categorization',;
-      icon: MessageSquare,;
-      features: [;
-        'Smart email categorization and prioritization,Automated response generation with personalization,Sentiment analysis and escalation triggers,Integration with CRM and helpdesk systems,Multi-language support and compliance',;
-      ],;
-      pricing: '$2,500 - $8, 000/month',;
-      delivery: '2-3 weeks',;
-      category: 'Communication AI',;,
-},;
-    {;
-      title: 'AI Content Creation Suite',;
-      description: 'Comprehensive AI-powered content generation for marketing, social media, and documentation',;
-      icon: FileText,;
-      features: [;
-        'Automated blog posts and articles,Social media content generation,Product descriptions and marketing copy,Technical documentation creation,SEO-optimized content with keyword integration',;
-      ],;
-      pricing: '$1,500 - $5, 000/month',;
-      delivery: '1-2 weeks',;
-      category: 'Content AI',;,
-},;
-    {;
-      title: 'Intelligent Document Processing',;
-      description: 'AI-powered document analysis, extraction, and processing for business automation',;
-      icon: FileText,;
-      features: [;
-        'Automated data extraction from PDFs and forms,Document classification and routing,OCR with 99%+ accuracy,Contract analysis and risk assessment,Compliance monitoring and reporting',;
-      ],;
-      pricing: '$3,000 - $12, 000/month',;
-      delivery: '3-4 weeks',;
-      category: 'Document AI',;,
-},;
-    {;
-      title: 'AI-Powered Talent Matching',;
-      description: 'Advanced recruitment platform with AI-driven candidate screening and matching',;
-      icon: Users,;
-      features: [;
-        'Resume parsing and skill extraction,Cultural fit and personality analysis,Automated interview scheduling,Bias detection and elimination,Predictive hiring success metrics',;
-      ],;
-      pricing: '$4,000 - $15,000/month',;
-      delivery: '4-6 weeks',;
-      category: 'HR AI';,
-},;
-    {;
-      title: 'Computer Vision Solutions',;
-      description: 'Image and video analysis for quality control, security, and automation',;
-      icon: Eye,;
-      features: [;
-        'Real-time object detection and recognition,Quality control and defect detection,Facial recognition and access control,Video analytics and monitoring,Custom model training and deployment',;
-      ],;
-      pricing: '$5,000 - $20,000/month',;
-      delivery: '6-8 weeks',;
-      category: 'Vision AI';,
-},;
-    {;
-      title: 'AI Chatbot & Virtual Assistant',;
-      description: 'Intelligent conversational AI for customer support and business automation',;
-      icon: Bot,;
-      features: [;
-        'Natural language understanding,Multi-channel deployment (web, mobile, voice),Integration with business systems,Sentiment analysis and escalation,Continuous learning and improvement',;
-      ],;
-      pricing: '$2,000 - $10,000/month',;
-      delivery: '2-4 weeks',;
-      category: 'Conversational AI';,
-},;
-    {;
-      title: 'Predictive Analytics Platform',;
-      description: 'AI-driven forecasting and predictive modeling for business intelligence',;
-      icon: TrendingUp,;
-      features: [;
-        'Sales forecasting and demand planning,Customer churn prediction,Financial risk assessment,Market trend analysis,Real-time dashboard and alerts',;
-      ],;
-      pricing: '$6,000 - $25, 000/month',;
-      delivery: '8-12 weeks',;
-      category: 'Analytics AI';,
-},;
-    {;
-      title: 'AI-Powered Search Engine',;
-      description: 'Intelligent search with semantic understanding and personalized results',;
-      icon: Search,;
-      features: [;
-        'Semantic search with natural language queries,Personalized search results,Auto-complete and suggestions,Multi-language support,Analytics and search optimization',;
-      ],;
-      pricing: '$3,500 - $12, 000/month',;
-      delivery: '4-6 weeks',;
-      category: 'Search AI';,
-},;
-    {;
-      title: 'AI Voice & Speech Processing',;
-      description: 'Advanced voice recognition, synthesis, and real-time translation services',;
-      icon: Mic,;
-      features: [;
-        'Real-time speech-to-text with 99% accuracy,Multi-language voice synthesis,Voice cloning and personalization,Real-time translation and interpretation,Voice biometric authentication,Audio content analysis and insights',;
-      ],;
-      pricing: '$4,000 - $15, 000/month',;
-      delivery: '5-8 weeks',;
-      category: 'Voice AI';,
-},;
-    {;
-      title: 'AI-Powered Fraud Detection',;
-      description: 'Real-time fraud prevention and risk assessment using machine learning',;
-      icon: Shield,;
-      features: [;
-        'Real-time transaction monitoring,Behavioral pattern analysis,Anomaly detection algorithms,Risk scoring and decision automation,Multi-channel fraud prevention,Compliance reporting and audit trails',;
-      ],;
-      pricing: '$5,000 - $20, 000/month',;
-      delivery: '6-10 weeks',;
-      category: 'Security AI';,
-},;
-    {;
-      title: 'AI Recommendation Engine',;
-      description: 'Personalized recommendation system for e-commerce, content, and services',;
-      icon: Star,;
-      features: [;
-        'Collaborative and content-based filtering,Real-time personalization,A/B testing and optimization,Cross-platform recommendation sync,Performance analytics and insights,Custom algorithm development',;
-      ],;
-      pricing: '$3,000 - $12, 000/month',;
-      delivery: '4-7 weeks',;
-      category: 'Recommendation AI';,
-},;
-    {;
-      title: 'AI-Powered Video Analytics',;
-      description: 'Intelligent video processing for security, marketing, and business insights',;
-      icon: Video,;
-      features: [;
-        'Real-time video object detection,Facial recognition and tracking,Emotion and sentiment analysis,Video content summarization,Automated video editing and optimization,Live streaming analytics',;
-      ],;
-      pricing: '$6,000 - $25, 000/month',;
-      delivery: '8-12 weeks',;
-      category: 'Video AI';,
-},;
-    {;
+  const aiServices = [
+  {
+      title: 'AI-Powered Email Responder',
+      description: 'Automated email responses with sentiment analysis and intelligent categorization',
+      icon: MessageSquare,
+      features: [
+        'Smart email categorization and prioritization,Automated response generation with personalization,Sentiment analysis and escalation triggers,Integration with CRM and helpdesk systems,Multi-language support and compliance',
+      ],
+      pricing: '$2,500 - $8,000/month',
+      delivery: '2-3 weeks',
+      category: 'Communication AI',
+    },
+    {
+      title: 'AI Content Creation Suite',
+      description: 'Comprehensive AI-powered content generation for marketing, social media, and documentation',
+      icon: FileText,
+      features: [
+        'Automated blog posts and articles,Social media content generation,Product descriptions and marketing copy,Technical documentation creation,SEO-optimized content with keyword integration',
+      ],
+      pricing: '$1,500 - $5,000/month',
+      delivery: '1-2 weeks',
+      category: 'Content AI',
+    },
+    {
+      title: 'Intelligent Document Processing',
+      description: 'AI-powered document analysis, extraction, and processing for business automation',
+      icon: FileText,
+      features: [
+        'Automated data extraction from PDFs and forms,Document classification and routing,OCR with 99%+ accuracy,Contract analysis and risk assessment,Compliance monitoring and reporting',
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '3-4 weeks',
+      category: 'Document AI',
+    },
+    {
+      title: 'AI-Powered Talent Matching',
+      description: 'Advanced recruitment platform with AI-driven candidate screening and matching',
+      icon: Users,
+      features: [
+        'Resume parsing and skill extraction,Cultural fit and personality analysis,Automated interview scheduling,Bias detection and elimination,Predictive hiring success metrics',
+      ],
+      pricing: '$4,000 - $15,000/month',
+      delivery: '4-6 weeks',
+      category: 'HR AI',
+    },
+    {
+      title: 'Computer Vision Solutions',
+      description: 'Image and video analysis for quality control, security, and automation',
+      icon: Eye,
+      features: [
+        'Real-time object detection and recognition,Quality control and defect detection,Facial recognition and access control,Video analytics and monitoring,Custom model training and deployment',
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '6-8 weeks',
+      category: 'Vision AI',
+    },
+    {
+      title: 'AI Chatbot & Virtual Assistant',
+      description: 'Intelligent conversational AI for customer support and business automation',
+      icon: Bot,
+      features: [
+        'Natural language understanding,Multi-channel deployment (web, mobile, voice),Integration with business systems,Sentiment analysis and escalation,Continuous learning and improvement',
+      ],
+      pricing: '$2,000 - $10,000/month',
+      delivery: '2-4 weeks',
+      category: 'Conversational AI',
+    },
+    {
+      title: 'Predictive Analytics Platform',
+      description: 'AI-driven forecasting and predictive modeling for business intelligence',
+      icon: TrendingUp,
+      features: [
+        'Sales forecasting and demand planning,Customer churn prediction,Financial risk assessment,Market trend analysis,Real-time dashboard and alerts',
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '8-12 weeks',
+      category: 'Analytics AI',
+    },
+    {
+      title: 'AI-Powered Search Engine',
+      description: 'Intelligent search with semantic understanding and personalized results',
+      icon: Search,
+      features: [
+        'Semantic search with natural language queries,Personalized search results,Auto-complete and suggestions,Multi-language support,Analytics and search optimization',
+      ],
+      pricing: '$3,500 - $12,000/month',
+      delivery: '4-6 weeks',
+      category: 'Search AI',
+    },
+    {
+      title: 'AI Voice & Speech Processing',
+      description: 'Advanced voice recognition, synthesis, and real-time translation services',
+      icon: Mic,
+      features: [
+        'Real-time speech-to-text with 99% accuracy,Multi-language voice synthesis,Voice cloning and personalization,Real-time translation and interpretation,Voice biometric authentication,Audio content analysis and insights',
+      ],
+      pricing: '$4,000 - $15,000/month',
+      delivery: '5-8 weeks',
+      category: 'Voice AI',
+    },
+    {
+      title: 'AI-Powered Fraud Detection',
+      description: 'Real-time fraud prevention and risk assessment using machine learning',
+      icon: Shield,
+      features: [
+        'Real-time transaction monitoring,Behavioral pattern analysis,Anomaly detection algorithms,Risk scoring and decision automation,Multi-channel fraud prevention,Compliance reporting and audit trails',
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '6-10 weeks',
+      category: 'Security AI',
+    },
+    {
+      title: 'AI Recommendation Engine',
+      description: 'Personalized recommendation system for e-commerce, content, and services',
+      icon: Star,
+      features: [
+        'Collaborative and content-based filtering,Real-time personalization,A/B testing and optimization,Cross-platform recommendation sync,Performance analytics and insights,Custom algorithm development',
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '4-7 weeks',
+      category: 'Recommendation AI',
+    },
+    {
+      title: 'AI-Powered Video Analytics',
+      description: 'Intelligent video processing for security, marketing, and business insights',
+      icon: Video,
+      features: [
+        'Real-time video object detection,Facial recognition and tracking,Emotion and sentiment analysis,Video content summarization,Automated video editing and optimization,Live streaming analytics',
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '8-12 weeks',
+      category: 'Video AI',
+    },
+    {
       title: 'AI Process Mining & Optimization',;
       description: 'Intelligent process analysis and optimization for business workflows',;
       icon: Settings,;
@@ -1476,7 +1476,162 @@ export default function AIServices() {;
       ],;
       pricing: '$10,000 - $50,000/month',;
       delivery: '10-20 weeks',;
-      category: 'Edge AI'}
+      category: 'Edge AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Systems',
+      description: 'Advanced autonomous vehicle technology with real-time decision making and safety optimization',
+      icon: Car,
+      features: [
+        'Real-time object detection and path planning,Advanced driver assistance systems (ADAS),Autonomous navigation and route optimization,Vehicle-to-vehicle communication protocols,Safety monitoring and emergency response,Integration with smart city infrastructure'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '16-24 weeks',
+      category: 'Autonomous Systems AI'
+    },
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Intelligent pharmaceutical research with molecular analysis and drug development optimization',
+      icon: Heart,
+      features: [
+        'Molecular structure analysis and drug design,Protein folding prediction and analysis,Clinical trial optimization and patient matching,Drug interaction prediction and safety assessment,Biomarker discovery and validation,Integration with pharmaceutical databases and research tools'
+      ],
+      pricing: '$50,000 - $200,000/month',
+      delivery: '20-32 weeks',
+      category: 'Pharmaceutical AI'
+    },
+    {
+      title: 'AI-Powered Climate Change Modeling',
+      description: 'Advanced climate prediction and environmental impact analysis with AI-driven insights',
+      icon: TreePine,
+      features: [
+        'Climate pattern prediction and modeling,Environmental impact assessment and monitoring,Carbon footprint analysis and optimization,Sustainable energy planning and optimization,Disaster prediction and risk assessment,Integration with satellite data and environmental sensors'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-20 weeks',
+      category: 'Environmental AI'
+    },
+    {
+      title: 'AI-Powered Quantum Computing Optimization',
+      description: 'Intelligent quantum algorithm development and optimization for complex computational problems',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm design and optimization,Quantum error correction and fault tolerance,Quantum machine learning model development,Quantum simulation and modeling,Integration with quantum hardware platforms,Performance optimization and benchmarking'
+      ],
+      pricing: '$30,000 - $150,000/month',
+      delivery: '16-28 weeks',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'AI-Powered Space Mission Planning',
+      description: 'Intelligent space mission design and optimization with autonomous decision making',
+      icon: Satellite,
+      features: [
+        'Mission trajectory optimization and planning,Autonomous spacecraft navigation and control,Resource allocation and management,Space debris tracking and avoidance,Planetary exploration and mapping,Integration with space agency systems and protocols'
+      ],
+      pricing: '$40,000 - $200,000/month',
+      delivery: '20-36 weeks',
+      category: 'Space AI'
+    },
+    {
+      title: 'AI-Powered Brain-Computer Interface',
+      description: 'Advanced neural interface technology with real-time brain signal processing and control',
+      icon: Brain,
+      features: [
+        'Real-time neural signal processing and interpretation,Brain-computer interface optimization,Neural pattern recognition and classification,Motor control and prosthetic device integration,Cognitive enhancement and neurofeedback,Integration with medical devices and rehabilitation systems'
+      ],
+      pricing: '$35,000 - $175,000/month',
+      delivery: '18-30 weeks',
+      category: 'Neurotechnology AI'
+    },
+    {
+      title: 'AI-Powered Synthetic Biology Platform',
+      description: 'Intelligent biological system design and optimization with automated genetic engineering',
+      icon: Heart,
+      features: [
+        'Automated genetic circuit design and optimization,Protein engineering and synthetic biology,Metabolic pathway optimization and design,Biological system modeling and simulation,Integration with laboratory automation systems,Biosecurity and safety protocol implementation'
+      ],
+      pricing: '$45,000 - $225,000/month',
+      delivery: '22-36 weeks',
+      category: 'Synthetic Biology AI'
+    },
+    {
+      title: 'AI-Powered Fusion Energy Optimization',
+      description: 'Advanced fusion reactor control and optimization with real-time plasma management',
+      icon: Zap,
+      features: [
+        'Real-time plasma control and optimization,Fusion reactor performance monitoring,Energy output optimization and management,Safety system monitoring and control,Integration with fusion research facilities,Advanced simulation and modeling capabilities'
+      ],
+      pricing: '$60,000 - $300,000/month',
+      delivery: '24-40 weeks',
+      category: 'Fusion Energy AI'
+    },
+    {
+      title: 'AI-Powered Metaverse Development Platform',
+      description: 'Intelligent virtual world creation and management with AI-driven content generation',
+      icon: Globe,
+      features: [
+        'Automated virtual world generation and design,AI-powered avatar creation and animation,Real-time virtual environment optimization,Social interaction and behavior modeling,Integration with VR/AR platforms and devices,Monetization and virtual economy management'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '12-20 weeks',
+      category: 'Metaverse AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Intelligence',
+      description: 'Advanced threat detection and response with AI-driven security analysis and automation',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis,Automated incident response and remediation,Advanced persistent threat (APT) detection,Zero-day vulnerability identification,Behavioral analysis and anomaly detection,Integration with security information and event management (SIEM) systems'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Personalized Medicine Platform',
+      description: 'Intelligent medical treatment optimization with personalized therapy recommendations',
+      icon: Heart,
+      features: [
+        'Personalized treatment plan generation,Genetic analysis and pharmacogenomics,Drug response prediction and optimization,Clinical trial matching and enrollment,Integration with electronic health records (EHR),Real-time health monitoring and intervention'
+      ],
+      pricing: '$25,000 - $125,000/month',
+      delivery: '16-28 weeks',
+      category: 'Personalized Medicine AI'
+    },
+    {
+      title: 'AI-Powered Smart City Management',
+      description: 'Intelligent urban infrastructure management with real-time optimization and automation',
+      icon: Globe,
+      features: [
+        'Traffic flow optimization and management,Energy grid optimization and demand response,Public safety monitoring and emergency response,Environmental monitoring and pollution control,Infrastructure maintenance and predictive analytics,Integration with IoT sensors and smart devices'
+      ],
+      pricing: '$30,000 - $150,000/month',
+      delivery: '18-30 weeks',
+      category: 'Smart City AI'
+    },
+    {
+      title: 'AI-Powered Financial Risk Management',
+      description: 'Advanced financial risk assessment and portfolio optimization with real-time market analysis',
+      icon: TrendingUp,
+      features: [
+        'Real-time market risk assessment and monitoring,Portfolio optimization and rebalancing,Algorithmic trading strategy development,Credit risk analysis and scoring,Regulatory compliance monitoring and reporting,Integration with financial data providers and trading platforms'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '10-18 weeks',
+      category: 'Financial AI'
+    },
+    {
+      title: 'AI-Powered Agricultural Optimization',
+      description: 'Intelligent farming and crop management with precision agriculture and yield optimization',
+      icon: TreePine,
+      features: [
+        'Precision agriculture and crop monitoring,Automated irrigation and fertilization systems,Pest and disease detection and treatment,Harvest optimization and yield prediction,Soil analysis and nutrient management,Integration with agricultural IoT devices and drones'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '8-16 weeks',
+      category: 'Agricultural AI'
+    }
   ];
   const aiTechnologies = [;
   {;

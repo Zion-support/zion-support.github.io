@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import { ;
-  Brain, ;
-  TrendingUp, ;
-  Zap, ;
-  MessageCircle, ;
-  Users, ;
-  Shield,;
-  CheckCircle,;
-  AlertCircle,;
-  Clock,;
-  Activity,;
-  Bot;,
+import { 
+  Brain, 
+  TrendingUp, 
+  Zap, 
+  MessageCircle, 
+  Users, 
+  Shield,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  Activity,
+  Bot
 } from "lucide-react";
-;
-interface AIConversation {;
+
+interface AIConversation {
   id: string;
   type: "chat" | "task" | "analysis" | "recommendation";
   title: string;
@@ -21,10 +21,10 @@ interface AIConversation {;
   status: "active" | "completed" | "archived";
   priority: "low" | "medium" | "high" | "critical";
   createdAt: string;
-  lastUpdated: string;,
+  lastUpdated: string;
 }
-;
-interface AIInsight {;
+
+interface AIInsight {
   id: string;
   title: string;
   description: string;
@@ -32,281 +32,270 @@ interface AIInsight {;
   impact: "high" | "medium" | "low";
   confidence: number;
   data: Record<string, string | number | boolean>;
-  createdAt: string;,
+  createdAt: string;
 }
-;
-interface AIFeature {;
+
+interface AIFeature {
   id: string;
   name: string;
   description: string;
   icon: React.ReactNode;
   status: "active" | "beta" | "coming-soon";
   usage: number;
-  accuracy: number;,
+  accuracy: number;
 }
-;
-const AdvancedAIAssistant: React.FC = () => {;
+
+const AdvancedAIAssistant: React.FC = () => {
   const [selectedView, setSelectedView] = useState<"overview" | "conversations" | "insights" | "features">("overview");
   const [searchQuery, setSearchQuery] = useState("");
-;
-  const aiFeatures: AIFeature[] = [;
-    {;
-      id: "1",;
-      name: "Natural Language Processing",;
-      description: "Advanced NLP for understanding complex queries and context",;
-      icon: <Brain className="w-6 h-6" />,;
-      status: "active",;
-      usage: 95,;
-      accuracy: 94;,
-},;
-    {;
-      id: "2",;
-      name: "Predictive Analytics",;
-      description: "AI-powered predictions for project outcomes and resource needs",;
-      icon: <TrendingUp className="w-6 h-6" />,;
-      status: "active",;
-      usage: 87,;
-      accuracy: 89;,
-},;
-    {;
-      id: "3",;
-      name: "Intelligent Automation",;
-      description: "Smart automation of repetitive tasks and workflows",;
-      icon: <Zap className="w-6 h-6" />,;
-      status: "active",;
-      usage: 92,;
-      accuracy: 91;,
-},;
-    {;
-      id: "4",;
-      name: "Sentiment Analysis",;
-      description: "Real-time analysis of client and team sentiment",;
-      icon: <MessageCircle className="w-6 h-6" />,;
-      status: "beta",;
-      usage: 73,;
-      accuracy: 87;,
-},;
-    {;
-      id: "5",;
-      name: "Resource Optimization",;
-      description: "AI-driven resource allocation and optimization",;
-      icon: <Users className="w-6 h-6" />,;
-      status: "active",;
-      usage: 89,;
-      accuracy: 93;,
-},;
-    {;
-      id: "6",;
-      name: "Risk Assessment",;
-      description: "Intelligent risk identification and mitigation strategies",;
-      icon: <Shield className="w-6 h-6" />,;
-      status: "beta",;
-      usage: 68,;
-      accuracy: 85;,
-}
-  ];
-;
-  const aiInsights: AIInsight[] = [;
-    {;
-      id: "1",;
-      title: "Project Timeline Optimization",;
-      description: "AI analysis suggests 15% timeline compression is possible for the E-commerce project through parallel development and resource optimization.",;
-      type: "positive",;
-      impact: "high",;
-      confidence: 0.91,;
-      data: { compression: 15, savings: "2 weeks", risk: "low" },;
-      createdAt: "2025-01-27 16:00";,
-},;
-    {;
-      id: "2",;
-      title: "Resource Allocation Warning",;
-      description: "Current resource allocation shows 23% underutilization in the Mobile App project, indicating potential efficiency improvements.",;
-      type: "warning",;
-      impact: "medium",;
-      confidence: 0.87,;
-      data: { underutilization: 23, potentialSavings: "$8,500", timeframe: "2 weeks" },;
-      createdAt: "2025-01-27 15:45";,
-},;
-    {;
-      id: "3",;
-      title: "Client Satisfaction Trend",;
-      description: "Client satisfaction scores have increased by 12% over the last quarter, with AI-powered communication contributing to 8% of this improvement.",;
-      type: "positive",;
-      impact: "high",;
-      confidence: 0.94,;
-      data: { improvement: 12, aiContribution: 8, trend: "positive" },;
-      createdAt: "2025-01-27 15:30";,
-}
-  ];
-;
-  const getInsightIcon = (type: string) => {;
-    switch (type) {;
-      case "positive":;
-        return <CheckCircle className="w-6 h-6 text-green-400" />;
-      case "warning":;
-        return <AlertCircle className="w-6 h-6 text-yellow-400" />;
-      case "critical":;
-        return <AlertCircle className="w-6 h-6 text-red-400" />;
-      default:;
-        return <Activity className="w-6 h-6 text-blue-400" />;,
-}
-  };
-;
-  return (;
-    <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">;
-      <div className="container mx-auto px-4">;
-        <div className="text-center mb-16">;
-          <h2 className="text-4xl font-bold text-white mb-4">;
-            Advanced AI Assistant;
-          </h2>;
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-            Leverage cutting-edge AI technology to optimize your business operations, ;
-            predict outcomes, and automate complex workflows.;
-          </p>;
-        </div>;
 
-        {/* Navigation Tabs */}
-        <div className="flex flex-wrap justify-center mb-8">;
-          {[;
-            { id: "overview", label: "Overview" },;
-            { id: "conversations", label: "Conversations" },;
-            { id: "insights", label: "Insights" },;
-            { id: "features", label: "Features" }
-          ].map((tab) => (;
-            <button;
-              key={tab.id}
-              onClick={() => setSelectedView(tab.id as any)}
-              className={`px-6 py-3 mx-2 mb-2 rounded-lg font-medium transition-colors ${;
-                selectedView === tab.id;
-                  ? "bg-blue-600 text-white";
-                  : "bg-gray-800 text-gray-300 hover:bg-gray-700";,
-}`}
-            >;
-              {tab.label}
-            </button>;
+  const aiFeatures: AIFeature[] = [
+    {
+      id: "1",
+      name: "Natural Language Processing",
+      description: "Advanced text analysis and understanding",
+      icon: <Brain className="w-6 h-6" />,
+      status: "active",
+      usage: 95,
+      accuracy: 98
+    },
+    {
+      id: "2",
+      name: "Predictive Analytics",
+      description: "Data-driven insights and forecasting",
+      icon: <TrendingUp className="w-6 h-6" />,
+      status: "active",
+      usage: 87,
+      accuracy: 94
+    },
+    {
+      id: "3",
+      name: "Automated Workflows",
+      description: "Intelligent process automation",
+      icon: <Zap className="w-6 h-6" />,
+      status: "beta",
+      usage: 72,
+      accuracy: 91
+    }
+  ];
+
+  const conversations: AIConversation[] = [
+    {
+      id: "1",
+      type: "chat",
+      title: "Customer Support Analysis",
+      description: "Analyzing customer feedback patterns",
+      status: "active",
+      priority: "high",
+      createdAt: "2024-01-15T10:30:00Z",
+      lastUpdated: "2024-01-15T11:45:00Z"
+    },
+    {
+      id: "2",
+      type: "analysis",
+      title: "Market Trend Report",
+      description: "Generating quarterly market insights",
+      status: "completed",
+      priority: "medium",
+      createdAt: "2024-01-14T09:15:00Z",
+      lastUpdated: "2024-01-14T16:20:00Z"
+    }
+  ];
+
+  const insights: AIInsight[] = [
+    {
+      id: "1",
+      title: "Performance Optimization Opportunity",
+      description: "System performance can be improved by 23%",
+      type: "positive",
+      impact: "high",
+      confidence: 87,
+      data: { improvement: "23%", timeframe: "2 weeks" },
+      createdAt: "2024-01-15T12:00:00Z"
+    },
+    {
+      id: "2",
+      title: "Security Alert",
+      description: "Unusual access pattern detected",
+      type: "warning",
+      impact: "medium",
+      confidence: 92,
+      data: { severity: "medium", affected: "3 users" },
+      createdAt: "2024-01-15T11:30:00Z"
+    }
+  ];
+
+  return (
+    <div className="advanced-ai-assistant bg-white rounded-lg shadow-lg p-6">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+          <Bot className="w-8 h-8 text-blue-600" />
+          Advanced AI Assistant
+        </h2>
+        <div className="flex gap-2">
+          <button
+            onClick={() => setSelectedView("overview")}
+            className={`px-4 py-2 rounded-lg text-sm font-medium ${
+              selectedView === "overview" 
+                ? "bg-blue-600 text-white" 
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            }`}
+          >
+            Overview
+          </button>
+          <button
+            onClick={() => setSelectedView("conversations")}
+            className={`px-4 py-2 rounded-lg text-sm font-medium ${
+              selectedView === "conversations" 
+                ? "bg-blue-600 text-white" 
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            }`}
+          >
+            Conversations
+          </button>
+          <button
+            onClick={() => setSelectedView("insights")}
+            className={`px-4 py-2 rounded-lg text-sm font-medium ${
+              selectedView === "insights" 
+                ? "bg-blue-600 text-white" 
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            }`}
+          >
+            Insights
+          </button>
+          <button
+            onClick={() => setSelectedView("features")}
+            className={`px-4 py-2 rounded-lg text-sm font-medium ${
+              selectedView === "features" 
+                ? "bg-blue-600 text-white" 
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            }`}
+          >
+            Features
+          </button>
+        </div>
+      </div>
+
+      {selectedView === "overview" && (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <div className="flex items-center gap-2 mb-2">
+              <MessageCircle className="w-5 h-5 text-blue-600" />
+              <h3 className="font-semibold text-gray-900">Active Conversations</h3>
+            </div>
+            <p className="text-2xl font-bold text-blue-600">{conversations.filter(c => c.status === "active").length}</p>
+          </div>
+          <div className="bg-green-50 p-4 rounded-lg">
+            <div className="flex items-center gap-2 mb-2">
+              <CheckCircle className="w-5 h-5 text-green-600" />
+              <h3 className="font-semibold text-gray-900">Completed Tasks</h3>
+            </div>
+            <p className="text-2xl font-bold text-green-600">{conversations.filter(c => c.status === "completed").length}</p>
+          </div>
+          <div className="bg-purple-50 p-4 rounded-lg">
+            <div className="flex items-center gap-2 mb-2">
+              <Activity className="w-5 h-5 text-purple-600" />
+              <h3 className="font-semibold text-gray-900">AI Features</h3>
+            </div>
+            <p className="text-2xl font-bold text-purple-600">{aiFeatures.length}</p>
+          </div>
+        </div>
+      )}
+
+      {selectedView === "conversations" && (
+        <div className="space-y-4">
+          {conversations.map((conversation) => (
+            <div key={conversation.id} className="border rounded-lg p-4 hover:bg-gray-50">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-900">{conversation.title}</h3>
+                <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                  conversation.status === "active" ? "bg-green-100 text-green-800" :
+                  conversation.status === "completed" ? "bg-blue-100 text-blue-800" :
+                  "bg-gray-100 text-gray-800"
+                }`}>
+                  {conversation.status}
+                </span>
+              </div>
+              <p className="text-gray-600 text-sm mb-2">{conversation.description}</p>
+              <div className="flex items-center gap-4 text-xs text-gray-500">
+                <span>Type: {conversation.type}</span>
+                <span>Priority: {conversation.priority}</span>
+                <span>Updated: {new Date(conversation.lastUpdated).toLocaleDateString()}</span>
+              </div>
+            </div>
           ))}
-        </div>;
+        </div>
+      )}
 
-        {/* Search Bar */}
-        <div className="max-w-md mx-auto mb-8">;
-          <input;
-            type="text";
-            placeholder="Search AI features and insights...";
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500";
-          />;
-        </div>;
+      {selectedView === "insights" && (
+        <div className="space-y-4">
+          {insights.map((insight) => (
+            <div key={insight.id} className={`border-l-4 p-4 rounded-lg ${
+              insight.type === "positive" ? "border-green-500 bg-green-50" :
+              insight.type === "warning" ? "border-yellow-500 bg-yellow-50" :
+              insight.type === "critical" ? "border-red-500 bg-red-50" :
+              "border-blue-500 bg-blue-50"
+            }`}>
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold text-gray-900">{insight.title}</h3>
+                <span className="text-sm text-gray-600">{insight.confidence}% confidence</span>
+              </div>
+              <p className="text-gray-600 text-sm mb-2">{insight.description}</p>
+              <div className="flex items-center gap-4 text-xs text-gray-500">
+                <span>Impact: {insight.impact}</span>
+                <span>Created: {new Date(insight.createdAt).toLocaleDateString()}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
-        {/* Content based on selected view */}
-        {selectedView === "overview" && (;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {aiFeatures.slice(0, 6).map((feature) => (;
-              <div key={feature.id} className="bg-gray-800 p-6 rounded-lg border border-gray-700">;
-                <div className="flex items-center mb-4">;
-                  {feature.icon}
-                  <h3 className="text-xl font-semibold text-white ml-3">;
-                    {feature.name}
-                  </h3>;
-                </div>;
-                <p className="text-gray-300 mb-4">{feature.description}</p>;
-                <div className="flex justify-between items-center">;
-                  <span className={`px-3 py-1 rounded-full text-sm ${;
-                    feature.status === "active" ;
-                      ? "bg-green-900 text-green-300";
-                      : feature.status === "beta";
-                      ? "bg-yellow-900 text-yellow-300";
-                      : "bg-gray-700 text-gray-300";,
-}`}>;
+      {selectedView === "features" && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {aiFeatures.map((feature) => (
+            <div key={feature.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="text-blue-600">{feature.icon}</div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">{feature.name}</h3>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                    feature.status === "active" ? "bg-green-100 text-green-800" :
+                    feature.status === "beta" ? "bg-yellow-100 text-yellow-800" :
+                    "bg-gray-100 text-gray-800"
+                  }`}>
                     {feature.status}
-                  </span>;
-                  <div className="text-right">;
-                    <div className="text-sm text-gray-400">Usage: {feature.usage}%</div>;
-                    <div className="text-sm text-gray-400">Accuracy: {feature.accuracy}%</div>;
-                  </div>;
-                </div>;
-              </div>;
-            ))}
-          </div>;
-        )}
-;
-        {selectedView === "insights" && (;
-          <div className="space-y-6">;
-            {aiInsights.map((insight) => (;
-              <div key={insight.id} className="bg-gray-800 p-6 rounded-lg border border-gray-700">;
-                <div className="flex items-start">;
-                  {getInsightIcon(insight.type)}
-                  <div className="ml-4 flex-1">;
-                    <h3 className="text-xl font-semibold text-white mb-2">;
-                      {insight.title}
-                    </h3>;
-                    <p className="text-gray-300 mb-4">{insight.description}</p>;
-                    <div className="flex items-center justify-between">;
-                      <div className="flex items-center space-x-4">;
-                        <span className={`px-3 py-1 rounded-full text-sm ${;
-                          insight.impact === "high" ;
-                            ? "bg-red-900 text-red-300";
-                            : insight.impact === "medium";
-                            ? "bg-yellow-900 text-yellow-300";
-                            : "bg-green-900 text-green-300";,
-}`}>;
-                          {insight.impact} impact;
-                        </span>;
-                        <span className="text-sm text-gray-400">;
-                          Confidence: {Math.round(insight.confidence * 100)}%;
-                        </span>;
-                      </div>;
-                      <span className="text-sm text-gray-500">;
-                        {insight.createdAt}
-                      </span>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            ))}
-          </div>;
-        )}
-;
-        {selectedView === "features" && (;
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {aiFeatures.map((feature) => (;
-              <div key={feature.id} className="bg-gray-800 p-6 rounded-lg border border-gray-700">;
-                <div className="flex items-center mb-4">;
-                  {feature.icon}
-                  <h3 className="text-xl font-semibold text-white ml-3">;
-                    {feature.name}
-                  </h3>;
-                </div>;
-                <p className="text-gray-300 mb-4">{feature.description}</p>;
-                <div className="space-y-2">;
-                  <div className="flex justify-between text-sm">;
-                    <span className="text-gray-400">Usage</span>;
-                    <span className="text-white">{feature.usage}%</span>;
-                  </div>;
-                  <div className="w-full bg-gray-700 rounded-full h-2">;
-                    <div ;
-                      className="bg-blue-600 h-2 rounded-full" ;
-                      style={{ width: `${feature.usage}%` }}
-                    ></div>;
-                  </div>;
-                  <div className="flex justify-between text-sm">;
-                    <span className="text-gray-400">Accuracy</span>;
-                    <span className="text-white">{feature.accuracy}%</span>;
-                  </div>;
-                  <div className="w-full bg-gray-700 rounded-full h-2">;
-                    <div ;
-                      className="bg-green-600 h-2 rounded-full" ;
-                      style={{ width: `${feature.accuracy}%` }}
-                    ></div>;
-                  </div>;
-                </div>;
-              </div>;
-            ))}
-          </div>;
-        )}
-      </div>;
-    </section>;
-  );,
+                  </span>
+                </div>
+              </div>
+              <p className="text-gray-600 text-sm mb-3">{feature.description}</p>
+              <div className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span>Usage</span>
+                  <span>{feature.usage}%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div 
+                    className="bg-blue-600 h-2 rounded-full" 
+                    style={{ width: `${feature.usage}%` }}
+                  ></div>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span>Accuracy</span>
+                  <span>{feature.accuracy}%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div 
+                    className="bg-green-600 h-2 rounded-full" 
+                    style={{ width: `${feature.accuracy}%` }}
+                  ></div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 };
-;
+
 export default AdvancedAIAssistant;

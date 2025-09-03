@@ -1345,7 +1345,173 @@ export default function ITServices() {;
       ],;
       pricing: '$30,000 - $250,000/month',;
       delivery: '20-40 weeks',;
-      category: 'Federated Learning Services'}
+      category: 'Federated Learning Services'
+    },
+    {
+      title: 'AI-Powered IT Operations Management',
+      description: 'Intelligent IT operations with automated incident response and predictive maintenance',
+      icon: Brain,
+      features: [
+        'AI-powered incident detection and automated response,Predictive maintenance and capacity planning,Intelligent root cause analysis and troubleshooting,Automated service desk and ticket routing,Performance optimization and resource allocation,Integration with ITSM and monitoring tools'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '6-12 weeks',
+      category: 'AIOps Services'
+    },
+    {
+      title: 'Zero-Trust Security Architecture',
+      description: 'Comprehensive zero-trust security implementation with identity verification and micro-segmentation',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM) implementation,Network micro-segmentation and access controls,Device trust and compliance verification,Data encryption and secure communication,Continuous security monitoring and analytics,Integration with existing security infrastructure'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '8-16 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Multi-Cloud Management Platform',
+      description: 'Unified multi-cloud management with cost optimization and governance across AWS, Azure, and GCP',
+      icon: Cloud,
+      features: [
+        'Multi-cloud resource monitoring and management,Cost optimization and budget management,Governance and compliance automation,Disaster recovery and backup orchestration,Performance monitoring and optimization,Integration with cloud-native services'
+      ],
+      pricing: '$12,000 - $60,000/month',
+      delivery: '10-18 weeks',
+      category: 'Cloud Services'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing infrastructure with low-latency processing and IoT integration',
+      icon: Network,
+      features: [
+        'Edge computing node deployment and management,Low-latency data processing and analytics,IoT device integration and management,Edge-to-cloud synchronization and optimization,Real-time decision making and automation,Integration with 5G and wireless networks'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '12-20 weeks',
+      category: 'Edge Computing Services'
+    },
+    {
+      title: 'Quantum-Safe Cryptography Implementation',
+      description: 'Post-quantum cryptography implementation to protect against future quantum computing threats',
+      icon: Lock,
+      features: [
+        'Quantum-safe algorithm implementation and migration,Cryptographic key management and rotation,Digital certificate and PKI modernization,Data encryption and secure communication,Compliance with quantum-safe standards,Integration with existing security infrastructure'
+      ],
+      pricing: '$25,000 - $125,000/month',
+      delivery: '16-28 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'AI-Powered Data Governance Platform',
+      description: 'Intelligent data governance with automated classification, lineage tracking, and compliance monitoring',
+      icon: Database,
+      features: [
+        'Automated data classification and tagging,Data lineage tracking and impact analysis,Privacy compliance and GDPR automation,Data quality monitoring and remediation,Access control and data masking,Integration with data lakes and warehouses'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Data Services'
+    },
+    {
+      title: '5G Network Infrastructure',
+      description: '5G network design, implementation, and optimization for enterprise and IoT applications',
+      icon: Network,
+      features: [
+        '5G network architecture design and planning,Network slicing and service orchestration,IoT device connectivity and management,Edge computing integration and optimization,Network performance monitoring and optimization,Integration with existing network infrastructure'
+      ],
+      pricing: '$30,000 - $150,000/month',
+      delivery: '16-28 weeks',
+      category: 'Network Services'
+    },
+    {
+      title: 'Blockchain Infrastructure Services',
+      description: 'Enterprise blockchain implementation with smart contracts and decentralized applications',
+      icon: Network,
+      features: [
+        'Blockchain network design and deployment,Smart contract development and auditing,Decentralized application (dApp) development,Consensus mechanism implementation and optimization,Integration with existing business systems,Security auditing and compliance'
+      ],
+      pricing: '$18,000 - $90,000/month',
+      delivery: '12-24 weeks',
+      category: 'Blockchain Services'
+    },
+    {
+      title: 'AI-Powered Network Security Operations Center',
+      description: 'Intelligent SOC with automated threat detection, response, and security orchestration',
+      icon: Shield,
+      features: [
+        'AI-powered threat detection and analysis,Automated incident response and remediation,Security orchestration and automation (SOAR),Threat hunting and intelligence analysis,Compliance monitoring and reporting,Integration with security tools and platforms'
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '10-18 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Hyperconverged Infrastructure (HCI)',
+      description: 'Software-defined infrastructure with integrated compute, storage, and networking',
+      icon: Server,
+      features: [
+        'HCI platform design and implementation,Software-defined storage and networking,Automated resource provisioning and scaling,Disaster recovery and backup integration,Performance monitoring and optimization,Integration with cloud and hybrid environments'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '8-16 weeks',
+      category: 'Infrastructure Services'
+    },
+    {
+      title: 'AI-Powered IT Asset Management',
+      description: 'Intelligent IT asset lifecycle management with automated discovery and optimization',
+      icon: Monitor,
+      features: [
+        'Automated asset discovery and inventory management,Asset lifecycle tracking and optimization,License compliance and cost optimization,Asset performance monitoring and analytics,Integration with procurement and financial systems,Automated asset disposal and recycling'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '4-8 weeks',
+      category: 'Asset Management Services'
+    },
+    {
+      title: 'Digital Twin Infrastructure',
+      description: 'Digital twin implementation for physical assets and processes with real-time monitoring',
+      icon: Monitor,
+      features: [
+        'Digital twin platform design and implementation,Real-time data integration and synchronization,Predictive analytics and simulation modeling,Performance monitoring and optimization,Integration with IoT sensors and systems,Visualization and dashboard development'
+      ],
+      pricing: '$25,000 - $125,000/month',
+      delivery: '16-28 weeks',
+      category: 'Digital Twin Services'
+    },
+    {
+      title: 'AI-Powered Compliance Automation',
+      description: 'Automated compliance monitoring and reporting for regulatory requirements',
+      icon: Shield,
+      features: [
+        'Automated compliance monitoring and assessment,Regulatory requirement tracking and updates,Compliance reporting and documentation,Risk assessment and mitigation,Audit trail management and evidence collection,Integration with business systems and processes'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '6-12 weeks',
+      category: 'Compliance Services'
+    },
+    {
+      title: 'Serverless Architecture Implementation',
+      description: 'Serverless computing implementation with auto-scaling and event-driven architecture',
+      icon: Cloud,
+      features: [
+        'Serverless platform design and implementation,Function-as-a-Service (FaaS) development,Event-driven architecture and microservices,API gateway and service mesh implementation,Monitoring and observability setup,Integration with cloud-native services'
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Serverless Services'
+    },
+    {
+      title: 'AI-Powered IT Service Management',
+      description: 'Intelligent ITSM with automated service delivery and user experience optimization',
+      icon: Users,
+      features: [
+        'AI-powered service desk and ticket management,Automated service provisioning and delivery,User experience monitoring and optimization,Service level agreement (SLA) management,Knowledge management and self-service portals,Integration with business applications and workflows'
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '6-12 weeks',
+      category: 'ITSM Services'
+    }
   ];
 
   const technologies = [;
