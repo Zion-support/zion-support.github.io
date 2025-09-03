@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { BarChart3, RefreshCw, X, Maximize2, Minimize2 } from 'lucide-react';
-const mockChartData = ['
-    { id: '1', name: 'Q1 Revenue', value: 1250000, category: 'Revenue', timestamp: new Date('2024-01-01') },
+import { BarChart3, RefreshCw, X, Maximize2, Minimize2  } from 'lucide-react';
+,
     { id: '2', name: 'Q2 Revenue', value: 1580000, category: 'Revenue', timestamp: new Date('2024-04-01') },
     { id: '3', name: 'Q3 Revenue', value: 1420000, category: 'Revenue', timestamp: new Date('2024-07-01') },
     { id: '4', name: 'Q4 Revenue', value: 1890000, category: 'Revenue', timestamp: new Date('2024-10-01') },
@@ -51,38 +50,23 @@ export function AdvancedDataVisualization() {
             setData(newData);
             setIsRefreshing(false)}, 1000)};
     useEffect(() => {
-        if (autoRefresh) {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+        if(autoRefresh) {
 
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
-========
-<<<<<<< HEAD
-            return () => clearInterval(interval);
-
-    }, [autoRefresh]);
-    const downloadChart = (format) => {
-        // Simulate chart download
-<<<<<<< HEAD
-        // // // console.log(`Downloading chart as ${format}`);
-=======
-        // // // // // // // console.log(`Downloading chart as ${format}`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-    };
-=======
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
             return () => clearInterval(interval)}
     }, [autoRefresh]);
     const downloadChart = (format) => {
 
         // Simulate chart download
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
         // console.log(`Downloading chart as ${format}`)};
-========
-        console.log(`Downloading chart as ${format}`)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
     const renderChart = () => {
-        switch (selectedChartType) {
+        switch(selectedChartType) {
 
             case 'bar':
                 return renderBarChart();
@@ -95,12 +79,7 @@ export function AdvancedDataVisualization() {
             case 'scatter':
                 return renderScatterChart();
             default:
-<<<<<<< HEAD
-                return renderBarChart();
-
-=======
                 return renderBarChart()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const renderBarChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value));
@@ -126,20 +105,10 @@ export function AdvancedDataVisualization() {
           <polyline fill="none" stroke={colors[0]} strokeWidth="3" points = {
 
   filteredData.map((item,`
-  index) => `${(index / (filteredData.length - 1)) * 800
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
+  index) => `${(index / (filteredData.length-1)) * 800
 '`
 },${280 - (item.value / maxValue) * 280}`).join(' ')}/>"
-========
-
-
-
-
-
-
-},${280 - (item.value / maxValue) * 280}`).join(' ')}/>
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
-          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-200"/>))}
+          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length-1)) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-200"/>))}
         </svg>"
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -163,7 +132,6 @@ export function AdvancedDataVisualization() {
 
                         borderTopColor: colors[index % colors.length],`
   transform: `rotate(${prevAngle
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
 `
 }deg)`,`
                         clipPath: `polygon(50% 50%, 50% 0%, ${50 + Math.cos((angle * Math.PI) / 180) * 50}% ${50 + Math.sin((angle * Math.PI) / 180) * 50}%)``
@@ -171,20 +139,6 @@ export function AdvancedDataVisualization() {
           <div className="absolute inset-0 flex items-center justify-center">"
             <div className="text-center">"
               <div className="text-2xl font-bold text-zion-slate">{total.toLocaleString()}</div>"
-========
-
-
-
-
-
-
-}deg)`,
-                        clipPath: `polygon(50% 50%, 50% 0%, ${50 + Math.cos((angle * Math.PI) / 180) * 50}% ${50 + Math.sin((angle * Math.PI) / 180) * 50}%)`
-                    }} title={`${item.name}: ${percentage.toFixed(1)}%`}/>)})}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-zion-slate">{total.toLocaleString()}</div>
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
               <div className="text-sm text-zion-slate-light">Total</div>
             </div>
           </div>
@@ -199,17 +153,8 @@ export function AdvancedDataVisualization() {
 `
   `M 0,
   ${280
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
 '`
-========
-
-
-
-
-
-
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
-} ${filteredData.map((item, index) => `L ${(index / (filteredData.length - 1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>
+} ${filteredData.map((item, index) => `L ${(index / (filteredData.length-1)) * 800},${280 - (item.value / maxValue) * 280}`).join(' ')} L 800,${280} Z`}/>
         </svg>"
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
@@ -220,23 +165,18 @@ export function AdvancedDataVisualization() {
         const colors = colorPalettes[selectedColorPalette];"
         return (<div className="h-80 p-6 relative">"
         <svg className="w-full h-full">"
-          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor-pointer hover:r-12 transition-all duration-200"/>))}
+          {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length-1)) * 800} cy={280 - (item.value / maxValue) * 280} r="8" fill={colors[index % colors.length]} className="cursor-pointer hover:r-12 transition-all duration-200"/>))}
         </svg>"
         <div className="absolute bottom-0 left-0 right-0 flex justify-between text-xs text-zion-slate-light">
           {filteredData.map(item => (<span key={item.id}>{item.name}</span>))}
         </div>
       </div>)};
-    if (!isOpen) {
+    if(!isOpen) {
 "
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Advanced Data Visualization">"
         <BarChart3 className="w-5 h-5"/>
-<<<<<<< HEAD
-      </button>);
-
-=======
       </button>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    if (isMinimized) {
+    if(isMinimized) {
 "
         return (<div className="fixed bottom-4 right-68 z-50">"
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">"
@@ -248,16 +188,7 @@ export function AdvancedDataVisualization() {
             </button>
           </div>
         </div>
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
       </div>)}'`
-========
-<<<<<<< HEAD
-      </div>);
-
-=======
-      </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1000px] h-[700px]'}`} ref={containerRef}>
       {/* Header */}"
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">"
@@ -280,11 +211,7 @@ export function AdvancedDataVisualization() {
           </button>
         </div>
       </div>
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
 "
-========
-
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
       <div className="flex h-full">
         {/* Sidebar Controls */}"
         <div className="w-80 border-r border-zion-slate-light p-4 overflow-y-auto">"
@@ -340,18 +267,8 @@ export function AdvancedDataVisualization() {
 
   (e) => setChartConfig(prev => ({ ...prev,
   showLegend: e.target.checked 
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
 "
 }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>"
-========
-
-
-
-
-
-
-}))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
                   <span className="text-sm text-zion-slate">Show Legend</span>
                 </label>"
                 <label className="flex items-center gap-2">"
@@ -359,18 +276,8 @@ export function AdvancedDataVisualization() {
 
   (e) => setChartConfig(prev => ({ ...prev,
   showGrid: e.target.checked 
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
 "
 }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>"
-========
-
-
-
-
-
-
-}))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
                   <span className="text-sm text-zion-slate">Show Grid</span>
                 </label>"
                 <label className="flex items-center gap-2">"
@@ -378,18 +285,8 @@ export function AdvancedDataVisualization() {
 
   (e) => setChartConfig(prev => ({ ...prev,
   animate: e.target.checked 
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
 "
 }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>"
-========
-
-
-
-
-
-
-}))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
                   <span className="text-sm text-zion-slate">Animations</span>
                 </label>"
                 <label className="flex items-center gap-2">"
@@ -399,13 +296,8 @@ export function AdvancedDataVisualization() {
               </div>
             </div>
 
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
             {/* Actions */}"
             <div className="space-y-3">"
-========
-            {/* Actions */}
-            <div className="space-y-3">
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
               <button onClick={refreshData} disabled={isRefreshing} className="w-full px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
                 {isRefreshing ? (<>"
                     <RefreshCw className="w-4 h-4 animate-spin"/>
@@ -415,13 +307,8 @@ export function AdvancedDataVisualization() {
                     Refresh Data
                   </>) }
               </button>
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
               "
               <div className="grid grid-cols-3 gap-2">'"
-========
-
-              <div className="grid grid-cols-3 gap-2">
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
                 <button onClick={() => downloadChart('png')} className="px-3 py-2 bg-zion-emerald text-white rounded-lg hover:bg-zion-emerald-light transition-colors text-xs">
                   PNG
                 </button>'"
@@ -436,15 +323,9 @@ export function AdvancedDataVisualization() {
           </div>
         </div>
 
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
         {/* Chart Display */}"
         <div className="flex-1 p-6">"
           <div className="mb-6">"
-========
-        {/* Chart Display */}
-        <div className="flex-1 p-6">
-          <div className="mb-6">
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
             <h2 className="text-2xl font-bold text-zion-slate mb-2">
               {chartTypes.find(t => t.id === selectedChartType)?.name}
             </h2>"
@@ -452,7 +333,6 @@ export function AdvancedDataVisualization() {
               {chartTypes.find(t => t.id === selectedChartType)?.description}
             </p>
           </div>
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
           "
           <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg">
             {renderChart()}
@@ -461,16 +341,6 @@ export function AdvancedDataVisualization() {
           {/* Data Summary */}"
           <div className="mt-6 grid grid-cols-3 gap-4">"
             <div className="bg-zion-cyan/10 p-4 rounded-lg border border-zion-cyan/20">"
-========
-
-          <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg">
-            {renderChart()}
-          </div>
-
-          {/* Data Summary */}
-          <div className="mt-6 grid grid-cols-3 gap-4">
-            <div className="bg-zion-cyan/10 p-4 rounded-lg border border-zion-cyan/20">
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx
               <div className="text-2xl font-bold text-zion-cyan">
                 {filteredData.length}
               </div>"
@@ -491,13 +361,5 @@ export function AdvancedDataVisualization() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div></div></div>}}}}}}
-=======
     </div>)}
-<<<<<<<< HEAD:src/components/AdvancedDataVisualization.js.jsx
 '"`
-========
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
->>>>>>>> cursor/add-new-services-and-advertise-them-971c:src/components/AdvancedDataVisualization.jsx

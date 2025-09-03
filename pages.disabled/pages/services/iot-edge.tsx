@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 export { function };export default function IoTEdge(...args: []):  {}
   return()
@@ -6,22 +7,20 @@ export { function };export default function IoTEdge(...args: []):  {}
         <title>IoT & Edge Computing - Zion Tech Group</title>
         <meta name = "description" content="Connect, monitor, and optimize your IoT devices with edge computing solutions. Real-time data processing and intelligent device management." />""
         <meta name="keywords" content="IoT, edge computing, smart devices, sensor networks, real-time processing, device management, industrial IoT" />
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
       </Helmet>"
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-=======
       </Helmet>
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
         {/* Hero Section */}""
         <section className="relative pt-32 pb-20 overflow-hidden">""
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center">""
               <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium mb-8">""
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
                 <Cpu className="w-4 h-4 mr-2"  />                IoT & Edge Computing
               </div>"
 ""
@@ -29,7 +28,6 @@ export { function };export default function IoTEdge(...args: []):  {}
                 IoT & Edge""
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"> Computing</span>
               </h1>"
-=======
                 <Cpu className="w-4 h-4 mr-2"  />                IoT & Edge Computing;
               </div>
 ""
@@ -37,12 +35,11 @@ export { function };export default function IoTEdge(...args: []):  {}
                 IoT & Edge""
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"> Computing</span>
               </h1>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
 ""
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Connect and manage your IoT ecosystem with intelligent edge computing. Process data locally,
                 reduce latency, and enable real-time decision-making across your connected devices.
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
               </p>"
 ""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -55,7 +52,6 @@ export { function };export default function IoTEdge(...args: []):  {}
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo
-=======
               </p>
 ""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -67,33 +63,28 @@ export { function };export default function IoTEdge(...args: []):  {}
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
                 </button>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
         {/* Features Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
                 Intelligent IoT Solutions"
-=======
                 Intelligent IoT Solutions;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our IoT and edge computing platform provides comprehensive device management,
                 real-time analytics, and intelligent automation capabilities.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -138,7 +129,6 @@ export { function };export default function IoTEdge(...args: []):  {}
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -177,7 +167,6 @@ export { function };export default function IoTEdge(...args: []):  {}
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
                   <p className="text-slate-300">{feature.description}</p>
@@ -186,26 +175,22 @@ export { function };export default function IoTEdge(...args: []):  {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
         {/* IoT Applications Section */}""
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
                 IoT Applications & Use Cases"
-=======
                 IoT Applications & Use Cases;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Discover how IoT and edge computing can transform different industries and operations.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -266,7 +251,6 @@ export { function };export default function IoTEdge(...args: []):  {}
                   <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>""
                   <p className="text-slate-300 mb-4">{application.description}</p>""
                   <ul className="space-y-1">"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -321,7 +305,6 @@ export { function };export default function IoTEdge(...args: []):  {}
                   <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>""
                   <p className="text-slate-300 mb-4">{application.description}</p>""
                   <ul className="space-y-1">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
                     {application.benefits.map((benefit, benefitIndex) => (""
                       <li key={benefitIndex} className="text-sm text-indigo-400 flex items-center">""
                         <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
@@ -333,38 +316,32 @@ export { function };export default function IoTEdge(...args: []):  {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
         {/* Edge Computing Benefits Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
                 Edge Computing Advantages"
-=======
                 Edge Computing Advantages;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Process data closer to the source for improved performance, reduced latency, and enhanced security.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
                 <div className="space-y-6">"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>""
                 <div className="space-y-6">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
                   {[""
                     "Reduce latency by processing data locally on edge devices",""
                     "Lower bandwidth costs by filtering and processing data at the edge",""
@@ -378,28 +355,24 @@ export { function };export default function IoTEdge(...args: []):  {}
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
               </div>"
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>""
                 <div className="space-y-4">"
-=======
               </div>
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>""
                 <div className="space-y-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
                   {[""
                     { metric: "90%", label: "Reduced Latency" },""
                     { metric: "60%", label: "Bandwidth Savings" },""
                     { metric: "99.9%", label: "Uptime Reliability" },""
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
                     { metric: "24/7", label: "Local Processing" }"
-=======
                     { metric: "24/7", label: "Local Processing" }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
                   ].map((item, index)  => (""
                     <div key={index} className="flex justify-between items-center">""
                       <span className="text-slate-300">{item.label}</span>""
@@ -411,26 +384,22 @@ export { function };export default function IoTEdge(...args: []):  {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
         {/* Technology Stack Section */}""
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
                 Advanced Technology Stack"
-=======
                 Advanced Technology Stack;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Built on cutting-edge IoT and edge computing technologies for maximum performance and reliability.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -463,7 +432,6 @@ export { function };export default function IoTEdge(...args: []):  {}
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{index + 1}</span>"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -492,7 +460,6 @@ export { function };export default function IoTEdge(...args: []):  {}
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{index + 1}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{technology.title}</h3>""
                   <p className="text-slate-300">{technology.description}</p>
@@ -501,26 +468,22 @@ export { function };export default function IoTEdge(...args: []):  {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
         {/* Implementation Process Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
                 Implementation Process"
-=======
                 Implementation Process;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our systematic approach ensures successful IoT and edge computing implementation.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -557,7 +520,6 @@ export { function };export default function IoTEdge(...args: []):  {}
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -590,7 +552,6 @@ export { function };export default function IoTEdge(...args: []):  {}
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
                   <p className="text-slate-300">{step.description}</p>
@@ -599,16 +560,14 @@ export { function };export default function IoTEdge(...args: []):  {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
         {/* CTA Section */}""
         <section className="py-20 bg-gradient-to-r from-indigo-500/10 to-purple-600/10">;""
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
               Ready to Connect Your IoT Ecosystem?"
             </h2>""
             <p className="text-xl text-slate-300 mb-8">
@@ -624,7 +583,6 @@ export { function };export default function IoTEdge(...args: []):  {}
               <Link""
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200"
-=======
               Ready to Connect Your IoT Ecosystem?
             </h2>""
             <p className="text-xl text-slate-300 mb-8">
@@ -639,7 +597,6 @@ export { function };export default function IoTEdge(...args: []):  {}
               <Link""
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
               >
                 Explore All Services;
               </Link>;
@@ -647,10 +604,10 @@ export { function };export default function IoTEdge(...args: []):  {}
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD:pages.disabled/pages/services/iot-edge.tsx
+:pages.disabled/pages/services/iot-edge.tsx
     </>"
   )}}}}}}'"'"
-=======
     </>
   )}}}}}}'""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/iot-edge.tsx
+=======
+>>>>>>> main

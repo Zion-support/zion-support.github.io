@@ -1,1 +1,19 @@
-// Added useCallback const EQUIPMENT_FILTERS = [ { label: "Servers", value: "Servers" }, { label: "Networking", value: "Networking" }, { label: "Power", value: "Power" }, { label: "Cooling", value: "Cooling" }, { label: "Storage", value: "Storage" }, { label: "Security", value: "Security" }, { label: "Management", value: "Management" }, { label: "Infrastructure", value: "Infrastructure" }, { label: "AI", value: "AI" }, { label: "Robotics", value: "Robotics" }, 
+<<<<<<< HEAD
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
+}
+export default function EquipmentPage() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="EquipmentPage - Zion Tech Group" description="Professional EquipmentPage services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">EquipmentPage</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional EquipmentPage services to help your business grow.
+        </p>
+      </div>
+  )
+}
+}""
+>>>>>>> main

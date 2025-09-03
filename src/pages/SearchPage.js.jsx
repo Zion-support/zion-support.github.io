@@ -35,3 +35,14 @@ export default function SearchPage() {
               </div>))}
           </div>)}
       </main>)}
+
+
+export { SearchPage };
+
+export { SearchPage };
+
+export { SearchPage };
+
+export { SearchPage };
+
+export { SearchPage };

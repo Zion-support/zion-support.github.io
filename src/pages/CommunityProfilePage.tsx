@@ -1,1 +1,19 @@
-// Added useNavigate // For comment input // Basic modal for review // Import the new badge // Mock user data const mockUser: CommunityUser = { id: "user1", // This will be the revieweeId name: "Alex Johnson", avatar: "https://i.pravatar.cc/150?img=3", role: "Verified Talent", reputation: 325, postCount: 14, replyCount: 47, badges: [ { id: "badge1", name: "Answer Hero", description: "Provided 10 accepted answers", icon: "Award", color: "#10B981", }, { id: "badge2", name: "Top Contributor", description: "Among the top 5% of contributors", icon: "Trophy", color: "#3b82f6", }, { id: "badge3", name: "First Post", description: "Created your first forum post", icon: "Star", color: "#6366F1", }, ], isVerified: true, isModerator: false, }; // Mock posts by this user const userPosts: ForumPost[] = [ { id: "1", title: "Best practices for AI model fine-tuning", content: "I"ve been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...", authorId: "user1", authorName: "Alex Johnson", authorAvatar: "https://i.pravatar.cc/150?img=3", authorRole: "Verified Talent", categoryId: "ai-tools", tags: ["machine-learning", "fine-tuning", "gpt"], createdAt: "2025-04-01T12:00:00Z", updatedAt: "2025-04-01T12:00:00Z", 
+<<<<<<< HEAD
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
+}
+export default function CommunityProfilePage() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="CommunityProfilePage - Zion Tech Group" description="Professional CommunityProfilePage services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">CommunityProfilePage</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional CommunityProfilePage services to help your business grow.
+        </p>
+      </div>
+  )
+}
+}""
+>>>>>>> main

@@ -1,11 +1,25 @@
-describe ('Products', () => {}
-'
-  it ('renders without crashing', () => {}
-    render (<Products  />) ;'
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-'
-  it ('displays expected content', () => {}
-    render (<Products  />) ;
-    // Add specific test assertions based on component content;
-  }) }) ;
-'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('Products', () => {}; '; it('renders without crashing', () => {}; render(<Products />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<Products />) ;
+=======
+describe("Products", () => {}; "; it("renders without crashing", () => {}; render(<Products / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<Products  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<Products /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main
+>>>>>>> main

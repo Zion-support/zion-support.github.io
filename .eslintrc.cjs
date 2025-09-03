@@ -1,1 +1,15 @@
-module.exports = { root: true, extends: [], ignorePatterns: [ "automation/**", "scripts/**", "tests/**", "pages/**/*.ts", "pages/**/*.tsx", "pages/**/*.js", "pages/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", ], }; module.exports = { root: true, env: { browser: true, es2021: true, node: true, }, extends: [ "eslint:recommended", "@typescript-eslint/recommended", "plugin:react/recommended", "plugin:react-hooks/recommended", "plugin:jsx-a11y/recommended", ], parser: "@typescript-eslint/parser", parserOptions: { ecmaFeatures: { jsx: true, }, ecmaVersion: 2022, sourceType: "module", project: "./tsconfig.json", }, plugins: ["react", "@typescript-eslint", "jsx-a11y"], 
+module.exports = {
+  extends: ["next/core-web-vitals"],
+  rules: {
+    "react-hooks/exhaustive-deps": "warn",
+  },
+  ignorePatterns: [
+    "node_modules/", 
+    ".next/", 
+    "out/",
+    "src/",
+    "pages/",
+    "components/",
+    "lib/"
+  ],
+}

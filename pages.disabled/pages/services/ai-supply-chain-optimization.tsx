@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 export { function };export default function AISupplyChainOptimization(...args: []):  {}
   return()
@@ -6,22 +7,20 @@ export { function };export default function AISupplyChainOptimization(...args: [
         <title>AI Supply Chain Optimization - Zion Tech Group</title>
         <meta name = "description" content="Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance visibility across your entire supply network." />""
         <meta name="keywords" content="AI supply chain, supply chain optimization, logistics AI, inventory management, demand forecasting, supply chain analytics" />
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
       </Helmet>"
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-=======
       </Helmet>
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
         {/* Hero Section */}""
         <section className="relative pt-32 pb-20 overflow-hidden">""
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center">""
               <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-8">""
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
                 <Truck className="w-4 h-4 mr-2"  />                Intelligent Supply Chain
               </div>"
 ""
@@ -29,7 +28,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 AI Supply Chain""
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> Optimization</span>
               </h1>"
-=======
                 <Truck className="w-4 h-4 mr-2"  />                Intelligent Supply Chain;
               </div>
 ""
@@ -37,12 +35,11 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 AI Supply Chain""
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent"> Optimization</span>
               </h1>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
 ""
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Transform your supply chain with AI-powered optimization. Reduce costs, improve efficiency,
                 and enhance visibility across your entire supply network with intelligent automation.
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
               </p>"
 ""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -55,7 +52,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo
-=======
               </p>
 ""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -67,33 +63,28 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
                 </button>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
         {/* Features Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
                 Intelligent Supply Chain Solutions"
-=======
                 Intelligent Supply Chain Solutions;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our AI platform provides comprehensive supply chain optimization tools for;
                 modern businesses seeking operational excellence.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -138,7 +129,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -177,7 +167,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
                   <p className="text-slate-300">{feature.description}</p>
@@ -186,26 +175,22 @@ export { function };export default function AISupplyChainOptimization(...args: [
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
         {/* Optimization Areas Section */}""
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
                 Supply Chain Optimization Areas"
-=======
                 Supply Chain Optimization Areas;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Comprehensive optimization across all critical supply chain functions for maximum efficiency.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -266,7 +251,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>""
                   <p className="text-slate-300 mb-4">{area.description}</p>""
                   <ul className="space-y-1">"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -321,7 +305,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>""
                   <p className="text-slate-300 mb-4">{area.description}</p>""
                   <ul className="space-y-1">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
                     {area.benefits.map((benefit, benefitIndex) => (""
                       <li key={benefitIndex} className="text-sm text-blue-400 flex items-center">""
                         <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
@@ -333,26 +316,22 @@ export { function };export default function AISupplyChainOptimization(...args: [
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
         {/* AI Capabilities Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
                 Advanced AI Capabilities"
-=======
                 Advanced AI Capabilities;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Leverage cutting-edge AI technologies for intelligent supply chain optimization.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -413,7 +392,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   <h3 className="text-xl font-semibold text-white mb-2">{capability.title}</h3>""
                   <p className="text-slate-300 mb-4">{capability.description}</p>""
                   <ul className="space-y-1">"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -468,7 +446,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
                   <h3 className="text-xl font-semibold text-white mb-2">{capability.title}</h3>""
                   <p className="text-slate-300 mb-4">{capability.description}</p>""
                   <ul className="space-y-1">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
                     {capability.features.map((feature, featureIndex) => (""
                       <li key={featureIndex} className="text-sm text-blue-400 flex items-center">""
                         <CheckCircle className="w-3 h-3 mr-2"  />                        {feature}
@@ -480,38 +457,32 @@ export { function };export default function AISupplyChainOptimization(...args: [
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
         {/* Benefits Section */}""
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
                 Supply Chain Optimization Benefits"
-=======
                 Supply Chain Optimization Benefits;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Transform your supply chain operations with measurable improvements and cost savings.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
                 <div className="space-y-6">"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>""
                 <div className="space-y-6">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
                   {[""
                     "15-25% reduction in supply chain costs",""
                     "30-40% improvement in delivery performance",""
@@ -525,28 +496,24 @@ export { function };export default function AISupplyChainOptimization(...args: [
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
               </div>"
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>""
                 <div className="space-y-4">"
-=======
               </div>
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>""
                 <div className="space-y-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
                   {[""
                     { metric: "15-25%", label: "Cost Reduction", description: "Supply chain costs" },""
                     { metric: "30-40%", label: "Delivery Performance", description: "Improvement" },""
                     { metric: "20-30%", label: "Inventory Costs", description: "Reduction" },""
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
                     { metric: "90%+", label: "Visibility", description: "Supply chain transparency" }"
-=======
                     { metric: "90%+", label: "Visibility", description: "Supply chain transparency" }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
                   ].map((item, index)  => (""
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">""
                       <div className="text-2xl font-bold text-blue-400 mb-1">{item.metric}</div>""
@@ -559,26 +526,22 @@ export { function };export default function AISupplyChainOptimization(...args: [
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
         {/* Implementation Process Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
                 Implementation Process"
-=======
                 Implementation Process;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our systematic approach ensures successful AI supply chain optimization implementation.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -615,7 +578,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -648,7 +610,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
                   <p className="text-slate-300">{step.description}</p>
@@ -657,16 +618,14 @@ export { function };export default function AISupplyChainOptimization(...args: [
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
         {/* CTA Section */}""
         <section className="py-20 bg-gradient-to-r from-blue-500/10 to-indigo-600/10">;""
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
               Ready to Optimize Your Supply Chain?"
             </h2>""
             <p className="text-xl text-slate-300 mb-8">
@@ -682,7 +641,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
               <Link""
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
-=======
               Ready to Optimize Your Supply Chain?
             </h2>""
             <p className="text-xl text-slate-300 mb-8">
@@ -697,7 +655,6 @@ export { function };export default function AISupplyChainOptimization(...args: [
               <Link""
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
               >
                 Explore All Services;
               </Link>;
@@ -705,10 +662,10 @@ export { function };export default function AISupplyChainOptimization(...args: [
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
+:pages.disabled/pages/services/ai-supply-chain-optimization.tsx
     </>"
   )}}}}}}'"'"
-=======
     </>
   )}}}}}}'""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/ai-supply-chain-optimization.tsx
+=======
+>>>>>>> main

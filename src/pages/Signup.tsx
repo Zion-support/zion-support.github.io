@@ -1,1 +1,213 @@
-import React from 'react'; export default Signup; User, Mail, Lock, Eye, EyeOff, Shield, CheckCircle, AlertCircle, ArrowRight, Zap, Brain, Cloud, Rocket, Building, Phone, Globe, Users, Star, TrendingUp, Award} from "lucide - react"; interface SignupForm { firstName: string; lastName: string; email: string; company: string; phone: string; industry: string; companySize: string; password: string; confirmPassword: string; agreeToTerms: boolean; agreeToMarketing: boolean; } const Signup: React.FC = () => { const navigate = useNavigate () ; const [formData, setFormData] = useState < SignupForm> ({ firstName: ", lastName: ", email: ", company: ", phone: ", industry: ", companySize: ", password: ", confirmPassword: ", agreeToTerms: false, agreeToMarketing: false}) ; const [showPassword, setShowPassword] = useState (false) ; const [showConfirmPassword, setShowConfirmPassword] = useState (false) ; const [isLoading, setIsLoading] = useState (false) ; const [error, setError] = useState (") ; const [success, setSuccess] = useState (") ; const industries = [ "Technology", "Healthcare", "Finance", "Manufacturing", "Retail", "Education", "Government", "Non - profit", "Other", ]; const companySizes = [ "1 - 10 employees", "11 - 50 employees", "51 - 200 employees", "201 - 500 employees", "501 - 1000 employees", "1000 + employees", ]; const handleInputChange = useCallback ( (field: keyof SignupForm, value: string | boolean) => { setFormData (prev => ({ ...prev, [field]: value}) ) ; setError (") ; }; const validateForm = () => { if (!formData.firstName || !formData.lastName || !formData.email || !formData.company || !formData.password || !formData.confirmPassword) { setError ("Please fill in all required fields") ; return false; } if (!/\S+@\S+\.\S+/.test (formData.email) ) { setError ("Please enter a valid email address") ; return false; } if (formData.password.length < 8) { setError ("Password must be at least 8 characters long") ; return false; } if (formData.password !== formData.confirmPassword) { setError ("Passwords do not match") ; return false; } if (!formData.agreeToTerms) { setError ("Please agree to the terms and conditions") ; return false; } return true; }; const handleSubmit = async (e: React.FormEvent) => { e.preventDefault () ; if (!validateForm () ) return; setIsLoading (true) ; setError (") ; try { // Simulate API call await new Promise (resolve => setTimeout (resolve, 2000) ) ; // Mock successful signup setSuccess ("Account created successfully ! Welcome to Zion Tech Group.") ; setTimeout ( () => { navigate ("/dashboard") ; }, 2000) ; } catch (err) { setError ("Failed to create account. Please try again.") ; } finally { setIsLoading (false) ; } }; const getPasswordStrength = (password: string) => { if (password.length === 0) return { score: 0, label: ", color: " }; if (password.length < 8) return { score: 1, label: "Weak", color: "text - red - 400" }; if (password.length < 12) return { score: 2, label: "Fair", color: "text - yellow - 400" }; if (password.length < 16) return { score: 3, label: "Good", color: "text - blue - 400" }; return { score: 4, label: "Strong", color: "text - green - 400" }; }; const passwordStrength = getPasswordStrength (formData.password) ; const benefits = [ { icon: <Brain className="w - 6 h - 6" />, title: "AI - Powered Solutions", description: "Access cutting - edge AI and machine learning technologies"}, { icon: <Cloud className="w - 6 h - 6" />, title: "Cloud Infrastructure", description: "Scalable cloud solutions for your business needs"}, { icon: <Shield className="w - 6 h - 6" />, title: "Enterprise Security", description: "Bank - level security and compliance standards"}, { icon: <Rocket className="w - 6 h - 6" />, title: "Digital Transformation", description: "Transform your business with modern technology"}, ]; const stats = [ { number: "500+", label: "Happy Clients" }, { number: "99.9%", label: "Uptime" }, { number: "24 / 7", label: "Support" }, { number: "50+", label: "Services" }, ]; return (<div role="button" className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 flex"> {/* Left Side - Form */} <div role="button" className="flex - 1 flex items - center justify - center px - 4 py - 12"> <div role="button" className="w - full max - w-2xl"> {/* Header */} <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text - center mb - 8" > <Link to="/" className="inline - block mb - 6"> <div role="button" className="flex items - center justify - center w - 16 h - 16 bg - gradient - to - br from - cyan - 500 to - blue - 600 rounded - 2xl mx - auto"> <Zap className="w - 8 h - 8 text - white" /> </div> </Link> <h1 className="text - 4xl font - bold text - white mb - 4"> Join Zion Tech Group </h1> <p className="text - xl text - slate - 300"> Transform your business with cutting - edge technology solutions </p> </motion.div> {/* Error / Success Messages */} {error && (<motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb - 6 p - 4 bg - red - 500 / 20 border border - red - 500 / 30 rounded - lg flex items - center gap - 3 text - red - 400" > <AlertCircle className="w - 5 h - 5" /> {error} </motion.div>) } {success && (<motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb - 6 p - 4 bg - green - 500 / 20 border border - green - 500 / 30 rounded - lg flex items - center gap - 3 text - green - 400" > <CheckCircle className="w - 5 h - 5" /> {success} </motion.div>) } {/* Signup Form */} <motion.form initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} onSubmit={handleSubmit} className="bg - white / 5 border border - slate - 600 / 30 rounded - 2xl p - 8 backdrop - blur - md" > <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 6"> <div> <label className="block text - white font - medium mb - 2"> First Name < span className="text - red - 400">*</span> </label> <div role="button" className="relative"> <User className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 w - 5 h - 5" /> <input type="text" value={formData.firstName} onChange={e => handleInputChange ("firstName", e.target.value) } className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent" placeholder="Enter your first name" required /> </div> </div> <div> <label className="block text - white font - medium mb - 2"> Last Name < span className="text - red - 400">*</span> </label> <div role="button" className="relative"> <User className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 w - 5 h - 5" /> <input type="text" value={formData.lastName} onChange={e => handleInputChange ("lastName", e.target.value) } className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent" placeholder="Enter your last name" required /> </div> </div> </div> <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 6"> <div> <label className="block text - white font - medium mb - 2"> Email Address < span className="text - red - 400">*</span> </label> <div role="button" className="relative"> <Mail className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 w - 5 h - 5" /> <input type="email" value={formData.email} onChange={e => handleInputChange ("email", e.target.value) } className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent" placeholder="Enter your email" required /> </div> </div> <div> <label className="block text - white font - medium mb - 2"> Phone Number </label> <div role="button" className="relative"> <Phone className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 w - 5 h - 5" /> <input type="tel" value={formData.phone} onChange={e => handleInputChange ("phone", e.target.value) } className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent" placeholder="Enter your phone number" /> </div> </div> </div> <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 6"> <div> <label className="block text - white font - medium mb - 2"> Company Name < span className="text - red - 400">*</span> </label> <div role="button" className="relative"> <Building className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 w - 5 h - 5" /> <input type="text" value={formData.company} onChange={e => handleInputChange ("company", e.target.value) } className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent" placeholder="Enter your company name" required /> </div> </div> <div> <label className="block text - white font - medium mb - 2"> Industry </label> <div role="button" className="relative"> <Globe className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 w - 5 h - 5" /> <select value={formData.industry} onChange={e => handleInputChange ("industry", e.target.value) } className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent" > <option value=">Select your industry</option> {industries.map (industry => (<option key={industry} value={industry}> {industry} </option>) ) } </select> </div> </div> </div> <div role="button" className="mb - 6"> <label className="block text - white font - medium mb - 2"> Company Size </label> <div role="button" className="relative"> <Users className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 w - 5 h - 5" /> <select value={formData.companySize} onChange={e => handleInputChange ("companySize", e.target.value) } className="w - full pl - 10 pr - 4 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent" > <option value=">Select company size</option> {companySizes.map (size => (<option key={size} value={size}> {size} </option>) ) } </select> </div> </div> <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 6 mb - 6"> <div> <label className="block text - white font - medium mb - 2"> Password < span className="text - red - 400">*</span> </label> <div role="button" className="relative"> <Lock className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 w - 5 h - 5" /> <input type={showPassword ? "text" : "password"} value={formData.password} onChange={e => handleInputChange ("password", e.target.value) } className="w - full pl - 10 pr - 12 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent" placeholder="Create a password" required /> <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button" onClick={ () => setShowPassword (!showPassword) } className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200" > {showPassword ? (<EyeOff className="w - 5 h - 5" />) : (<Eye className="w - 5 h - 5" />) } </button> </div> {formData.password && (<div role="button" className="mt - 2"> <div role="button" className="flex gap - 1 mb - 1"> {[1, 2, 3, 4].map (level => (<div role="button" key={level} className={`h - 1 flex - 1 rounded - full transition - all duration - 300 ${ level <= passwordStrength.score ? passwordStrength.color.replace ("text-", "bg-") : "bg - slate - 600 / 30" }`} />) ) } </div> <p className={`text - xs ${passwordStrength.color}`}> {passwordStrength.label} </p> </div>) } </div> <div> <label className="block text - white font - medium mb - 2"> Confirm Password < span className="text - red - 400">*</span> </label> <div role="button" className="relative"> <Lock className="absolute left - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 w - 5 h - 5" /> <input type={showConfirmPassword ? "text" : "password"} value={formData.confirmPassword} onChange={e => handleInputChange ("confirmPassword", e.target.value) } className="w - full pl - 10 pr - 12 py - 3 bg - white / 10 border border - slate - 600 / 30 rounded - lg text - white placeholder - slate - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent" placeholder="Confirm your password" required /> <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="button" onClick={ () => setShowConfirmPassword (!showConfirmPassword) } className="absolute right - 3 top - 1/2 transform - translate - y-1 / 2 text - slate - 400 hover:text - white transition - colors duration - 200" > {showConfirmPassword ? (<EyeOff className="w - 5 h - 5" />) : (<Eye className="w - 5 h - 5" />) } </button> </div> </div> </div> <div role="button" className="space - y-4 mb - 8"> <label className="flex items - start gap - 3 cursor - pointer"> <input type="checkbox" checked={formData.agreeToTerms} onChange={e => handleInputChange ("agreeToTerms", e.target.checked) } className="mt - 1 w - 4 h - 4 text - cyan - 500 bg - slate - 700 border - slate - 600 rounded focus:ring - cyan - 500 focus:ring - 2" required /> <span className="text - slate - 300 text - sm"> I agree to the{" "} <Link to="/terms" className="text - cyan - 400 hover:text - cyan - 300" > Terms of Service </Link>{" "} and{" "} <Link to="/privacy" className="text - cyan - 400 hover:text - cyan - 300" > Privacy Policy </Link>{" "} <span className="text - red - 400">*</span> </span> </label> <label className="flex items - start gap - 3 cursor - pointer"> <input type="checkbox" checked={formData.agreeToMarketing} onChange={e => handleInputChange ("agreeToMarketing", e.target.checked) } className="mt - 1 w - 4 h - 4 text - cyan - 500 bg - slate - 700 border - slate - 600 rounded focus:ring - cyan - 500 focus:ring - 2" /> <span className="text - slate - 300 text - sm"> I agree to receive marketing communications about Zion Tech Group services and updates </span> </label> </div> <button aria-label="Button" aria - label="Button" aria - label="Button" aria - label="Button" type="submit" disabled={isLoading} className="w - full py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - medium rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 disabled:opacity - 50 disabled:cursor - not - allowed flex items - center justify - center gap - 3 text - lg" > {isLoading ? (<> <div role="button" className="animate - spin rounded - full h - 5 w - 5 border - b-2 border - white"></div > Creating Account... </>) : (<> Create Account < ArrowRight className="w - 5 h - 5" /> </>) } </button> <div role="button" className="text - center mt - 6"> <p className="text - slate - 400"> Already have an account?{" "} <Link to="/login" className="text - cyan - 400 hover:text - cyan - 300 font - medium transition - colors duration - 200" > Sign in here </Link> </p> </div> </motion.form> </div> </div> {/* Right Side - Benefits */} <div role="button" className="hidden lg:flex flex - 1 bg - gradient - to - br from - cyan - 500 / 20 via - blue - 500 / 20 to - purple - 500 / 20 relative overflow - hidden"> <div role="button" className="absolute inset - 0 bg - gradient - to - br from - white / 5 to - white / 10"></div> <div role="button" className="relative z - 10 flex items - center justify - center p - 12"> <div role="button" className="text - center max - w-lg"> <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.4 }} className="mb - 8" > <div role="button" className="flex justify - center gap - 4 mb - 6"> <div role="button" className="w - 16 h - 16 bg - gradient - to - br from - cyan - 500 to - blue - 600 rounded - 2xl flex items - center justify - center"> <Brain className="w - 8 h - 8 text - white" /> </div> <div role="button" className="w - 16 h - 16 bg - gradient - to - br from - blue - 500 to - purple - 600 rounded - 2xl flex items - center justify - center"> <Cloud className="w - 8 h - 8 text - white" /> </div> <div role="button" className="w - 16 h - 16 bg - gradient - to - br from - purple - 500 to - pink - 600 rounded - 2xl flex items - center justify - center"> <Rocket className="w - 8 h - 8 text - white" /> </div> </div> </motion.div> <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="text - 4xl font - bold text - white mb - 6" > Why Choose Zion Tech Group? </motion.h2> <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="space - y-6 mb - 8" > {benefits.map ( (benefit, index) => (<motion.div key={benefit.title} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }} className="flex items - center gap - 4 text - left" > <div role="button" className="w - 12 h - 12 bg - gradient - to - br from - cyan - 500 to - blue - 600 rounded - xl flex items - center justify - center flex - shrink - 0"> {benefit.icon} </div> <div> <h3 className="text - lg font - semibold text - white mb - 1"> {benefit.title} </h3> <p className="text - slate - 300 text - sm"> {benefit.description} </p> </div> </motion.div>) ) } </motion.div> <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.2 }} className="grid grid - cols - 2 gap - 6" > {stats.map ( (stat, index) => (<motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }} className="text - center" > <div role="button" className="text - 3xl font - bold text - cyan - 400 mb - 1"> {stat.number} </div> <div role="button" className="text - slate - 300 text - sm">{stat.label}</div> </motion.div>) ) } </motion.div> <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.6 }} className="mt - 8 p - 6 bg - white / 10 border border - slate - 600 / 30 rounded - xl backdrop - blur - md" > <div role="button" className="flex items - center gap - 3 mb - 3"> <Award className="w - 6 h - 6 text - yellow - 400" /> <h3 className="text - lg font - semibold text - white"> Trusted by Industry Leaders </h3> </div> <p className="text - slate - 300 text - sm"> Join thousands of businesses that trust Zion Tech Group to drive their digital transformation and innovation initiatives. </p> </motion.div> </div> </div> </div> </div>) ; }; 
+<<<<<<< HEAD
+=======
+
+import { useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useForm, type UseFormReturn } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
+
+import { useAuth } from "@/hooks/useAuth";
+import { register } from "@/services/auth";
+import { toast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+
+// Form validation schema
+const signupSchema = z
+  .object({
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email"),
+    password: z.string()
+      .min(8, "Password must be at least 8 characters")
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter")
+      .regex(/[0-9]/, "Password must contain at least one number"),
+    confirmPassword: z.string(),
+    termsAccepted: z.boolean().refine(val => val === true, {
+      message: "You must accept the terms and conditions",
+    }),
+  })
+  .refine(data => data.password === data.confirmPassword, {
+    message: "Passwords do not match",
+    path: ["confirmPassword"],
+  });
+
+type SignupFormValues = z.infer<typeof signupSchema>;
+
+export default function Signup() {
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+  const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  // Track confirm password locally to prevent it from clearing on blur
+  const [confirmPasswordValue, setConfirmPasswordValue] = useState("");
+  const passwordValue = form.watch("password");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Initialize react-hook-form
+  const form = useForm({
+    resolver: zodResolver(signupSchema),
+    defaultValues: {
+      displayName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      termsAccepted: false,
+    },
+  }) as UseFormReturn<SignupFormValues>;
+
+  // Form submission handler
+  const onSubmit = async (data: SignupFormValues) => {
+    if (isSubmitting) return; // Prevent multiple submissions
+
+    setIsSubmitting(true);
+    try {
+      const { res, data: resData } = await register(
+        data.displayName,
+        data.email,
+        data.password
+      );
+
+      // Handle duplicate email error from API
+      if (res.status === 409 && resData?.code === 'EMAIL_EXISTS') {
+        form.setError('email', { message: resData.message });
+        toast.error('Email already registered – please login.');
+        return;
+      }
+
+      // Check for successful response
+      if (res.ok && resData.token && resData.user) {
+        // Successful registration
+        safeStorage.setItem('authToken', resData.token);
+        setUser(resData.user);
+        setTokens({ accessToken: resData.token, refreshToken: resData.refreshToken || null });
+
+      // Handle email verification required case
+      if (resData?.emailVerificationRequired) {
+        setShowVerificationMessage(true);
+        // Do not proceed to set session or navigate
+      } else if (resData?.session) {
+        // Set the session directly if verification is not required
+        const { error: sessionError } = await supabase.auth.setSession(resData.session);
+        if (sessionError) {
+          console.error("Error setting session:", sessionError);
+          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." });
+          toast.error(sessionError.message || "Failed to set session. Please try logging in.");
+          return;
+        }
+        // The onAuthStateChange listener in AuthProvider should now handle
+        // updating user state and navigating if necessary for other cases.
+        // For direct signup with session, we can navigate.
+        toast.success("Welcome to ZionAI 🎉");
+        navigate("/dashboard");
+      } else {
+        // This case might indicate an unexpected response from the API
+        console.error("Registration response did not include session or emailVerificationRequired flag.", resData);
+        form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
+        toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
+        // Potentially navigate to login or show a more specific error
+        return;
+      }
+
+      // Subscribe user to Mailchimp if opted in (only if registration is fully complete, not pending verification)
+      if (data.newsletterOptIn && mailchimpService && !resData?.emailVerificationRequired) {
+        try {
+          await mailchimpService.addSubscriber({
+            email: data.email,
+            mergeFields: { FNAME: data.displayName }
+          });
+          await mailchimpService.sendWelcomeEmail(data.email, 'NEW10');
+        } catch (err) {
+          console.error('Mailchimp subscription failed', err);
+          // Non-critical error, don't block user flow
+        }
+      }
+      // Toast and navigation are handled above if session is present
+      // If emailVerificationRequired, no toast/navigation here, message is shown
+    } catch (err: any) {
+      const message = err.message ?? "Registration failed";
+      form.setError("root", { message });
+      toast.error(message);
+    } finally {
+      setIsSubmitting(false);    }
+  };
+
+  const onInvalid = (errors: any) => {
+    const firstError = Object.keys(errors)[0] as keyof SignupFormValues;
+    if (firstError) {
+      form.setFocus(firstError);
+    }
+  };
+
+  // Redirect if user is already logged in and has completed profile
+  if (isAuthenticated && user?.profileComplete) {
+    return <Navigate to="/" />;
+  }
+  
+  // Redirect to onboarding if user is authenticated but hasn't completed profile
+  if (isAuthenticated && !user?.profileComplete) {
+    return <Navigate to="/onboarding" />;
+  }
+
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const Signup = () => {
+  return (
+    <>
+      <Head>
+        <title>Signup - Zion Tech Group</title>
+        <meta name="description" content="Professional Signup services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Signup
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Signup services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>  );
+}
+>>>>>>> main

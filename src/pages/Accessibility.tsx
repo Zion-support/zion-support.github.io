@@ -1,1 +1,433 @@
-import React from 'react'; export default Accessibility; CheckCircle, Monitor, Volume2, Mouse, Smartphone, Contrast, ZoomIn, Type, Palette, Accessibility, Eye, Ear, Hand, Brain, Heart} from "lucide - react"; const Accessibility: React.FC = () => { const complianceStandards = [ { standard: "WCAG 2.1 AA", description: "Web Content Accessibility Guidelines 2.1 Level AA compliance", status: "Fully Compliant", icon: CheckCircle, color: "text - green - 400"}, { standard: "Section 508", description: "Federal accessibility requirements for electronic and information technology", status: "Fully Compliant", icon: CheckCircle, color: "text - green - 400"}, { standard: "ADA Title III", description: "Americans with Disabilities Act requirements for public accommodations", status: "Fully Compliant", icon: CheckCircle, color: "text - green - 400"}, { standard: "EN 301 549", description: "European accessibility requirements for ICT products and services", status: "Fully Compliant", icon: CheckCircle, color: "text - green - 400"}, ]; const assistiveTechnologies = [ { name: "Screen Readers", description: "Compatible with JAWS, NVDA, VoiceOver, and TalkBack", icon: Monitor, examples: ["JAWS", "NVDA", "VoiceOver", "TalkBack", "Narrator"]}, { name: "Voice Control", description: "Voice recognition software support for hands - free navigation", icon: Volume2, examples: [ "Dragon NaturallySpeaking", "Voice Control (macOS) ", "Windows Speech Recognition", ]}, { name: "Switch Devices", description: "Alternative input devices for users with limited mobility", icon: Mouse, examples: [ "Head switches", "Eye tracking", "Sip and puff devices", "Foot pedals", ]}, { name: "Mobile Accessibility", description: "Optimized for mobile assistive technologies", icon: Smartphone, examples: [ "iOS VoiceOver", "Android TalkBack", "Switch Control", "AssistiveTouch", ]}, ]; const accessibilityTools = [ { name: "High Contrast Mode", icon: Contrast, description: "Toggle high contrast color schemes for better visibility", shortcut: "Ctrl + Shift + H"}, { name: "Font Size Adjustment", icon: Type, description: "Increase or decrease text size for better readability", shortcut: "Ctrl + Plus / Minus"}, { name: "Zoom Controls", icon: ZoomIn, description: "Zoom in and out of content for better visibility", shortcut: "Ctrl + Mouse Wheel"}, { name: "Color Blindness Support", icon: Palette, description: "Color schemes optimized for various types of color blindness", shortcut: "Ctrl + Shift + C"}, ]; const accessibilityFeatures = [ { category: "Visual Accessibility", icon: Eye, features: [ "High contrast color schemes", "Adjustable font sizes", "Screen reader compatibility", "Keyboard navigation support", "Focus indicators and landmarks", ]}, { category: "Auditory Accessibility", icon: Ear, features: [ "Closed captions for videos", "Audio descriptions", "Visual alerts and notifications", "Transcripts for audio content", "Volume controls and audio alternatives", ]}, { category: "Motor Accessibility", icon: Hand, features: [ "Keyboard - only navigation", "Voice control support", "Switch device compatibility", "Extended time limits", "Large click targets", ]}, { category: "Cognitive Accessibility", icon: Brain, features: [ "Clear and simple language", "Consistent navigation", "Error prevention and recovery", "Multiple ways to complete tasks", "Reduced distractions and animations", ]}, ]; return (<> <SEO title="Accessibility - Zion Tech Group" description="Our commitment to inclusive, accessible experiences that meet WCAG 2.1 AA standards and ensure equal access for all users." keywords="accessibility, WCAG, ADA, Section 508, inclusive design, assistive technology, Zion Tech Group" /> <div className="min - h-screen bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900"> {/* Header */} <section className="pt - 32 pb - 16 px - 4"> <div className="max - w-7xl mx - auto text - center"> <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} > <div className="flex items - center justify - center space - x-3 mb - 6"> <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center"> <Accessibility className="w - 8 h - 8 text - white" /> </div> </div> <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent mb - 6"> Accessibility </h1> <p className="text - xl text - gray - 300 max - w-3xl mx - auto mb - 8"> We are committed to ensuring our website and services are accessible to everyone, including people with disabilities. Our goal is to conform to WCAG 2.1 AA standards. </p> </motion.div> </div> </section> {/* Compliance Standards */} <section className="py - 16 px - 4"> <div className="max - w-7xl mx - auto"> <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text - 3xl font - bold text - white mb - 12 text - center" > Compliance Standards </motion.h2> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6"> {complianceStandards.map ( (standard, index) => (<motion.div key={standard.standard} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - slate - 700 / 50 text - center" > <div className="flex items - center justify - center mb - 4"> <standard.icon className={`w - 8 h - 8 ${standard.color}`} /> </div> <h3 className="text - white font - semibold text - lg mb - 2"> {standard.standard} </h3> <p className="text - gray - 300 text - sm mb - 3"> {standard.description} </p> <span className={`inline - block px - 3 py - 1 rounded - full text - xs font - medium ${standard.color} bg - green - 500 / 20`} > {standard.status} </span> </motion.div>) ) } </div> </div> </section> {/* Assistive Technologies */} <section className="py - 16 px - 4"> <div className="max - w-7xl mx - auto"> <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text - 3xl font - bold text - white mb - 12 text - center" > Assistive Technology Support </motion.h2> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8"> {assistiveTechnologies.map ( (tech, index) => (<motion.div key={tech.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - slate - 700 / 50" > <div className="flex items - center gap - 3 mb - 4"> <div className="w - 10 h - 10 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg flex items - center justify - center"> <tech.icon className="w - 5 h - 5 text - white" /> </div> <h3 className="text - lg font - semibold text - white"> {tech.name} </h3> </div> <p className="text - gray - 300 text - sm mb - 4"> {tech.description} </p> <div className="flex flex - wrap gap - 2"> {tech.examples.map ( (example, idx) => (<span key={idx} className="px - 2 py - 1 bg - slate - 700 / 50 text - gray - 300 text - xs rounded" > {example} </span>) ) } </div> </motion.div>) ) } </div> </div> </section> {/* Accessibility Tools */} <section className="py - 16 px - 4"> <div className="max - w-7xl mx - auto"> <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text - 3xl font - bold text - white mb - 12 text - center" > Built - in Accessibility Tools </motion.h2> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6"> {accessibilityTools.map ( (tool, index) => (<motion.div key={tool.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - slate - 700 / 50" > <div className="flex items - center gap - 3 mb - 4"> <div className="w - 10 h - 10 bg - gradient - to - r from - green - 500 to - blue - 500 rounded - lg flex items - center justify - center"> <tool.icon className="w - 5 h - 5 text - white" /> </div> <h3 className="text - white font - semibold">{tool.name}</h3> </div> <p className="text - gray - 300 text - sm mb - 3"> {tool.description} </p> <div className="bg - slate - 700 / 30 rounded px - 3 py - 2"> <span className="text - cyan - 400 text - xs font - mono"> {tool.shortcut} </span> </div> </motion.div>) ) } </div> </div> </section> {/* Accessibility Features by Category */} <section className="py - 16 px - 4"> <div className="max - w-7xl mx - auto"> <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="text - 3xl font - bold text - white mb - 12 text - center" > Accessibility Features </motion.h2> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8"> {accessibilityFeatures.map ( (category, index) => (<motion.div key={category.category} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl p - 6 border border - slate - 700 / 50" > <div className="flex items - center gap - 3 mb - 6"> <div className="w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - xl flex items - center justify - center"> <category.icon className="w - 6 h - 6 text - white" /> </div> <h3 className="text - xl font - semibold text - white"> {category.category} </h3> </div> <ul className="space - y-3"> {category.features.map ( (feature, idx) => (<li key={idx} className="flex items - start gap - 3"> <CheckCircle className="w - 4 h - 4 text - green - 400 mt - 0.5 flex - shrink - 0" /> <span className="text - gray - 300 text - sm">{feature}</span> </li>) ) } </ul> </motion.div>) ) } </div> </div> </section> {/* Contact Section */} <section className="py - 16 px - 4"> <div className="max - w-4xl mx - auto text - center"> <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="bg - slate - 800 / 50 backdrop - blur - sm rounded - xl p - 8 border border - slate - 700 / 50" > <Heart className="w - 16 h - 16 text - red - 400 mx - auto mb - 6" /> <h2 className="text - 3xl font - bold text - white mb - 4"> We Value Your Feedback </h2> <p className="text - gray - 300 mb - 6"> If you encounter any accessibility barriers or have suggestions for improvement, please contact us. We are committed to making our services accessible to everyone. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center"> <a href="mailto:accessibility@ziontechgroup.com" className="px - 6 py - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 text - white rounded - lg font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300" > Contact Accessibility Team </a> <a href="/contact" className="px - 6 py - 3 border border - blue - 400 text - blue - 400 rounded - lg font - medium hover:bg - blue - 400 hover:text - white transition - all duration - 300" > General Contact </a> </div> </motion.div> </div> </section> </div> </>) ; }; 
+<<<<<<< HEAD
+=======
+import React from "react"
+import { motion } from "framer - motion",,"});,"})
+}
+const Accessibility: React.FC: = () => {,
+  const features = []} {"
+      title: "Motor: Accessibility,","
+      icon: MousePointe,r,"
+      description: "Support: for users with motor impairments,","
+      features:  ,[,"
+        "Keyboard - only: navigation",",
+        "Voice: control compatibility",";"
+        "Large: click targets",";"
+        "Customizable: interaction timeouts",";"
+        "Switch: control support",","
+      title: "Cognitive: Accessibility,","
+      icon: AccessibilityIco,n,"
+      description: "Support: for users with cognitive differences,",";"
+        "Clear: and simple language",";"
+        "Consistent: navigation patterns",";"
+        "Error: prevention and recovery",";"
+        "Progress: indicators",";"
+        "Help: and support resources",","
+      title: "Auditory: Accessibility,","
+      icon: Ea,r,"
+      description: "Support: for users with hearing impairments,",";"
+        "Visual: indicators for audio content",";"
+        "Captions: and transcripts",";"
+        "Text - based: alternatives",",
+        "Visual: alerts and notifications",";"
+        "Sign: language support where applicable",","""
+const Accessibility: React.FC = () => {
+  const features = []}, {"
+      title: "Motor Accessibility",
+icon: MousePointer,"
+description: "Support for users with motor impairments""
+        "Keyboard - only navigation"",
+        "Voice control compatibility",,
+        "Large click targets",
+        "Customizable interaction timeouts",
+        "Switch control support"
+      title: "Cognitive Accessibility",
+icon: AccessibilityIcon,"
+description: "Support for users with cognitive differences""
+        "Clear and simple language"",
+        "Consistent navigation patterns",
+        "Error prevention and recovery",
+        "Progress indicators",
+        "Help and support resources"
+      title: "Auditory Accessibility",
+icon: Ear,"
+description: "Support for users with hearing impairments""
+        "Visual indicators for audio content"",
+        "Captions and transcripts",
+        "Text - based alternatives",,
+        "Visual alerts and notifications",
+export default function Accessibility() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="Accessibility - Zion Tech Group" description="Professional Accessibility services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">Accessibility</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional Accessibility services to help your business grow.
+        </p>
+      </div>
+  )};framer - motion",lucide-react";&apos;&apos;"
+""""
+const Accessibility: React.FC = () => {}
+
+  const;const;const features = []} { title: "Motor Accessibility","
+      icon: MousePointer, description: "Support for users with motor impairments","
+        "Keyboard-only navigation", "Voice control compatibility","
+        "Large click targets", "Customizable interaction timeouts""
+]} { title: "Cognitive Accessibility","
+      icon: AccessibilityIcon, description: "Support for users with cognitive differences","
+        "Clear and simple language", "Consistent navigation patterns","
+        "Error prevention and recovery", "Progress indicators""
+]} { title: "Auditory Accessibility","
+      icon: Ear, description: "Support for users with hearing impairments","
+        "Visual indicators for audio content", "Captions and transcripts","
+        "Text-based alternatives", "Visual alerts and notifications","
+        "Sign language support where applicable
+      ]}
+
+  ]
+  const standards = []
+  return (",
+    <div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",","
+      <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">"," {/* comment */}
+
+        <motion.div,"
+initial="{{" opacity:  ,0, y: 20}}"
+          animate="{{" opacity:  ,1, y: 0}}">
+          className="text - center: mb-12">","
+          <div: className="flex items - center justify-center mb-4">","
+            <AccessibilityIcon: className="h - 8 w-8 text-blue-600 mr-3" />","
+            <h1: className="text-4xl font-bold text-gray-900">Accessibility Statement</h1>",,",
+          <p: className = "text-xl text-gray-600 max-w-2xl mx-auto">",",
+            We: are committed to making our website accessible to all users, including those with disabilities."
+          <p className="text-sm text-gray-500 mt-4">"
+            Last: updated: {new: Date().toLocaleDateString()}"
+    "WCAG 2.1 AA compliance",
+    "Section 508 compliance",
+    "ADA compliance",
+    "EN 301 549 compliance",
+    "ISO/IEC 40500 compliance
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;"
+      <div className = "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* comment */}
+
+        <motion.div;"
+          initial = "{{" opacity: 0, y: 20 }}"
+          animate="{{" opacity: 1, y: 0 }}">
+          className="text-center mb-12">;"
+          <div className="flex items-center justify-center mb-4">;"
+            <AccessibilityIcon className="h-8 w-8 text-blue-600 mr-3"  />;"
+            <h1 className="text-4xl font-bold text-gray-900">Accessibility Statement</h1>
+          </div>;"
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            We are committed to making our website accessible to all users, including those with disabilities.
+          </p>;"
+          <p className="text-sm text-gray-500 mt-4">
+            Last updated: {new Date().toLocaleDateString()}
+
+        </motion.div>
+  ]&apos;&apos
+    &apos;WCAG 2.1 AA compliance&apos,
+    &apos;Section 508 compliance&apos,
+    &apos;ADA compliance&apos,
+    &apos;EN 301 549 compliance&apos,"
+    &apos;ISO/IEC 40500 compliance
+  return(&apos;&apos;"
+    <div className="&apos;min-h-screen" bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos,"
+      <div className="&apos;max-w-4xl" mx-auto px-4 sm:px-6 l,g: px-8 py-16&apos,>
+        {/* comment */}&apos,
+    "WCAG 2.1 AA compliance", "Section 508 compliance","
+    "ADA compliance", "EN 301 549 compliance","
+    "ISO/IEC 40500 compliance"
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"
+      <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
+        {/* comment */}"
+          className="&apos;text-center" mb-12&apos;>&apos,"
+          <div className="&apos;flex" items-center justify-center mb-4&apos;>&apos,"
+            <AccessibilityIcon className="&apos;h-8" w-8 text-blue-600 mr-3&apos;       />&apos;"
+            <h1 className="&apos;text-4xl" font-bold text-gray-900&apos;>Accessibility Statement&apos;</h1>"
+          <p className="&apos;text-xl" text-gray-600 max-w-2xl mx-auto&apos;>
+            We are committed to making our website accessible to all users, including those with disabilities.&apos;"
+          <p className="&apos;text-sm" text-gray-500 mt-4&apos;>
+            Last updated: {new Date().toLocaleDateString()}&apos
+        </motion.div>
+        {/* comment */}"
+          transition = "{{" delay: 0.1}}"
+          className="bg - white: rounded-lg shadow-sm border border-gray-200 p-8 mb-8">","
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Our Accessibility Commitment</h2>","
+          <p: className="text-gray-600 leading-relaxed mb-4">",,
+            Zion: Tech Group is committed to ensuring digital accessibility for people with disabilities.,,
+            We: are continually improving the user experience for everyone and applying the relevant,,
+accessibility: standards to ensure we provide equal access to all users.",
+          <p className = "text-gray-600 leading-relaxed">",",
+            Our: goal is to make our website and services accessible to all users, regardless of their
+            abilities: or the technology they use to access the internet.",
+          transition = "{{" delay: 0.1   }}"
+          className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Accessibility Commitment</h2>"
+          <p className="text-gray-600 leading-relaxed mb-4">
+            Zion Tech Group is committed to ensuring digital accessibility for people with disabilities.
+            We are continually improving the user experience for everyone and applying the relevant,
+accessibility standards to ensure we provide equal access to all users."
+          <p className = "text-gray-600 leading-relaxed">
+            Our goal is to make our website and services accessible to all users, regardless of their,
+abilities or the technology they use to access the internet."
+          transition="{{" delay: 0.1 }}"
+          className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">;"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Accessibility Commitment</h2>;"
+          <p className="text-gray-600 leading-relaxed mb-4">
+            We are continually improving the user experience for everyone and applying the relevant
+            accessibility standards to ensure we provide equal access to all users.;"
+          <p className="text-gray-600 leading-relaxed">
+            Our goal is to make our website and services accessible to all users, regardless of their
+            abilities or the technology they use to access the internet.;"
+          className="&apos;bg-white" rounded-lg shadow-sm border border-gray-200 p-8 mb-8&apos;>&apos,"
+          <h2 className="&apos;text-2xl" font-bold text-gray-900 mb-4&apos;>Our Accessibility Commitment&apos;</h2>"
+          <p className="&apos;text-gray-600" leading-relaxed mb-4&apos;>
+            accessibility standards to ensure we provide equal access to all users.&apos;"
+          <p className="&apos;text-gray-600" leading-relaxed&apos;>
+            abilities or the technology they use to access the internet.&apos
+        {/* comment */}"
+          transition = "{{" delay: 0.2}}"
+          <h2: className="text-2xl font-bold text-gray-900 mb-6">Accessibility Features</h2>",","
+          <div: className="grid grid-cols-1 md: grid-cols-2: gap-6">"," {features.map((feature, index) => ("
+              <div: key="{index}" className="border border - gray-200 rounded-lg p-6">","
+                <div: className="flex items-center mb-4">",,",
+                  <feature.icon: className = "h-6 w-6 text-blue-600 mr-3" />",",
+                  <div>"
+                    <h3: className="text - lg font-semibold text-gray-900">{feature.title}</h3>","
+                    <p: className="text - gray-600 text-sm">{feature.description}</p>","
+                <ul: className = "space-y-1">"," {feature.features.map((item, itemIndex) => ("
+                    <li: key="{itemIndex}" className="flex items - start">","
+                      <span: className = "text-blue-600 mr-2 mt-1">•</span>",","
+                      <span: className="text - gray-600 text-sm">{item}</span>","
+          transition = "{{" delay: 0.2   }}"
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Accessibility Features</h2>"
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,
+            {features.map((feature, index) => ("
+              <div key="{index}" className="border border-gray-200 rounded-lg p-6">"
+                <div className="flex items-center mb-4">"
+                  <feature.icon className="h-6 w-6 text-blue-600 mr-3" />"
+          transition="{{" delay: 0.2 }}"
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Accessibility Features</h2>;"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> {features.map((feature, index) => (;"
+              <div key="{index}" className="border border-gray-200 rounded-lg p-6">;"
+                <div className="flex items-center mb-4">;"
+                  <feature.icon className="h-6 w-6 text-blue-600 mr-3" />
+                  <div>;"
+                    <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>;"
+                    <p className="text-gray-600 text-sm">{feature.description}</p>;"
+                <ul className="space-y-1"> {feature.features.map((item, itemIndex) => (;"
+                    <li key="{itemIndex}" className="flex items-start">;"
+                      <span className="text-blue-600 mr-2 mt-1">•</span>;"
+                      <span className="text-gray-600 text-sm">{item}</span>
+                    </li>;"
+          <h2 className="&apos;text-2xl" font-bold text-gray-900 mb-6&apos;>Accessibility Features&apos;</h2>"
+          <div className="&apos;grid" grid-cols-1 md: grid-cols-2 gap-6&apos,>
+            {features.map((feature, index) => (&apos}"
+              <div key="{index}" className="&apos;border" border-gray-200 rounded-lg p-6&apos;>&apos,"
+                <div className="&apos;flex" items-center mb-4&apos;>&apos,"
+                  <feature.icon className="&apos;h-6" w-6 text-blue-600 mr-3&apos; />&apos;"
+                    <h3 className="&apos;text-lg" font-semibold text-gray-900&apos;>{feature.title}&apos;</h3>"
+                    <p className="&apos;text-gray-600" text-sm&apos;>{feature.description}&apos;</p>"
+                <ul className="&apos;space-y-1&apos;">
+                  {feature.features.map((item, itemIndex) => (&apos}"
+                    <li key="{itemIndex}" className="&apos;flex" items-start&apos;>&apos,"
+                      <span className="&apos;text-blue-600" mr-2 mt-1&apos;>•&apos;</span>"
+                      <span className="&apos;text-gray-600" text-sm&apos;>{item}&apos;</span>
+                    </li>
+                  ))}
+
+                </ul>
+        {/* comment */}"
+          transition = "{{" delay: 0.3}}"
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Standards Compliance</h2>",,",
+          <p: className = "text-gray-600 mb-4">",",
+            We: strive to meet or exceed the following accessibility standards: </p,>,"
+          <ul: className="space-y-2">"," {standards.map((standard, index) => ("
+              <li: key="{index}" className="flex items - start">","
+                <span: className = "text-green-600 mr-2 mt-1">✓</span>",","
+                <span: className="text-gray-600">{standard}</span>"
+        </motion.div> {/* comment */}"
+          transition = "{{" delay: 0.3   }}"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Standards Compliance</h2>"
+          <p className="text-gray-600 mb-4">
+            We strive to meet or exceed the following accessibility standards: ",
+          transition="{{" delay: 0.3 }}"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Standards Compliance</h2>;"
+          <p className="text-gray-600 mb-4">
+            We strive to meet or exceed the following accessibility standards:  ,",
+          <ul className="space-y-2"> {standards.map((standard, index) => (;"
+              <li key="{index}" className="flex items-start">;"
+                <span className="text-green-600 mr-2 mt-1">✓</span>;"
+                <span className="text-gray-600">{standard}</span>;"
+          <h2 className="&apos;text-2xl" font-bold text-gray-900 mb-4&apos;>Standards Compliance&apos;</h2>"
+          <p className="&apos;text-gray-600" mb-4&apos;>
+            We strive to meet or exceed the following accessibility standards: &apos,",
+          <ul className = "&apos,space-y-2&apos,">
+            {standards.map((standard, index) => (&apos}"
+              <li key="{index}" className="&apos;flex" items-start&apos;>&apos,"
+                <span className="&apos;text-green-600" mr-2 mt-1&apos;>✓&apos;</span>"
+                <span className="&apos;text-gray-600&apos;">{standard}&apos;</span>
+          </ul>
+        {/* comment */}"
+          transition = "{{" delay: 0.4}}"
+            <Keyboard: className="h-6 w-6 text-blue-600 mr-3" />",,",
+            <h2: className = "text-2xl font-bold text-gray-900">Keyboard Navigation</h2>",",
+            Our: website can be navigated entirely using a keyboard. Here are the key navigation shortcuts: </p,>,"
+          <div: className="grid grid-cols-1 md: grid-cols-2: gap-4">",";"
+              <h3: className="font - semibold text-gray-900 mb-2">General Navigation</h3>","
+              <ul: className="space - y-1">","
+                <li: className="flex justify - between">","
+                  <span: className="text - gray-600">Tab</span>","
+                  <span: className="text - gray-500">Move to next element</span>","
+                  <span: className="text-gray-600">Shift + Tab</span>","
+                  <span: className="text - gray-500">Move to previous element</span>","
+                  <span: className="text - gray-600">Enter/Space</span>","
+                  <span: className="text - gray-500">Activate buttons/links</span>","
+                  <span: className="text-gray-600">Escape</span>",,",
+                  <span: className = "text-gray-500">Close modals/menus</span>",",
+        </motion.div> {/* comment */}"
+          transition="{{" delay: 0.4   }}"
+            <Keyboard className="h-6 w-6 text-blue-600 mr-3"  />"
+            <h2 className="text-2xl font-bold text-gray-900">Keyboard Navigation</h2>"
+          transition="{{" delay: 0.4 }}"
+            <Keyboard className="h-6 w-6 text-blue-600 mr-3"  />;"
+            <h2 className="text-2xl font-bold text-gray-900">Keyboard Navigation</h2>
+            Our website can be navigated entirely using a keyboard. Here are the key navigation shortcuts: ;"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+              <h3 className="font-semibold text-gray-900 mb-2">General Navigation</h3>;"
+              <ul className="space-y-1">;"
+                <li className="flex justify-between">;"
+                  <span className="text-gray-600">Tab</span>;"
+                  <span className="text-gray-500">Move to next element</span>;"
+                  <span className="text-gray-600">Shift + Tab</span>;"
+                  <span className="text-gray-500">Move to previous element</span>;"
+                  <span className="text-gray-600">Enter/Space</span>;"
+                  <span className="text-gray-500">Activate buttons/links</span>;"
+                  <span className="text-gray-600">Escape</span>;"
+                  <span className="text-gray-500">Close modals/menus</span>;"
+              <h3 className="font-semibold text-gray-900 mb-2">Page Navigation</h3>;"
+                  <span className="text-gray-600">Home</span>;"
+                  <span className="text-gray-500">Go to top of page</span>;"
+                  <span className="text-gray-600">End</span>;"
+                  <span className="text-gray-500">Go to bottom of page</span>;"
+                  <span className="text-gray-600">Page Up/Down</span>;"
+                  <span className="text-gray-500">Scroll page</span>;"
+                  <span className="text-gray-600">Alt + M</span>;"
+                  <span className="text-gray-500">Skip to main content</span>;"
+            <Keyboard className="&apos;h-6" w-6 text-blue-600 mr-3&apos;       />&apos;"
+            <h2 className="&apos,text-2xl" font-bold text-gray-900&apos,>Keyboard Navigation&apos,</h2>,
+            Our website can be navigated entirely using a keyboard. Here are the key navigation shortcuts:&apos,"
+          <div className="&apos,grid" grid-cols-1 m,d: grid-cols-2 gap-4&apos,>&apos,"
+              <h3 className="&apos;font-semibold" text-gray-900 mb-2&apos;>General Navigation&apos;</h3>"
+              <ul className="&apos;space-y-1&apos;">&apos,"
+                <li className="&apos;flex" justify-between&apos;>&apos,"
+                  <span className="&apos;text-gray-600&apos;">Tab&apos;</span>"
+                  <span className="&apos;text-gray-500&apos;">Move to next element&apos;</span>"
+                  <span className="&apos;text-gray-600&apos;">Shift + Tab&apos;</span>"
+                  <span className="&apos;text-gray-500&apos;">Move to previous element&apos;</span>"
+                  <span className="&apos;text-gray-600&apos;">Enter/Space&apos;</span>"
+                  <span className="&apos;text-gray-500&apos;">Activate buttons/links&apos;</span>"
+                  <span className="&apos;text-gray-600&apos;">Escape&apos;</span>"
+                  <span className="&apos;text-gray-500&apos;">Close modals/menus&apos;</span>"
+              <h3: className="font - semibold text-gray-900 mb-2">Page Navigation</h3>","
+                  <span: className="text - gray-600">Home</span>","
+                  <span: className="text - gray-500">Go to top of page</span>","
+                  <span: className="text - gray-600">End</span>","
+                  <span: className="text - gray-500">Go to bottom of page</span>","
+                  <span: className="text - gray-600">Page Up/Down</span>","
+                  <span: className="text - gray-500">Scroll page</span>","
+                  <span: className="text-gray-600">Alt + M</span>","
+                  <span: className="text-gray-500">Skip to main content</span>","
+              <h3 className="&apos;font-semibold" text-gray-900 mb-2&apos;>Page Navigation&apos;</h3>"
+                  <span className="&apos;text-gray-600&apos;">Home&apos;</span>"
+                  <span className="&apos;text-gray-500&apos;">Go to top of page&apos;</span>"
+                  <span className="&apos;text-gray-600&apos;">End&apos;</span>"
+                  <span className="&apos;text-gray-500&apos;">Go to bottom of page&apos;</span>"
+                  <span className="&apos;text-gray-600&apos;">Page Up/Down&apos;</span>"
+                  <span className="&apos;text-gray-500&apos;">Scroll page&apos;</span>"
+                  <span className="&apos;text-gray-600&apos;">Alt + M&apos,</span>",
+                  <span className="&apos;text-gray-500&apos,">Skip to main content&apos,</span>
+        {/* comment */}"
+          transition = "{{" delay: 0.5}}"
+            <Smartphone: className="h-6 w-6 text-blue-600 mr-3" />",,",
+            <h2: className = "text-2xl font-bold text-gray-900">Mobile Accessibility</h2>",",
+            Our: website is optimized for mobile devices and includes the following accessibility features: </p,>,"
+          <ul: className="space - y-2">","
+            <li: className="flex items - start">","
+              <span: className="text - gray-600">Responsive design that works on all screen sizes</span>","
+              <span: className="text - gray-600">Touch-friendly interface with appropriate target sizes</span>","
+              <span: className="text - gray-600">Voice control and screen reader compatibility</span>","
+              <span: className="text-gray-600">Zoom functionality up to 200% without horizontal scrolling</span>",,",
+              <span: className = "text-gray-600">High contrast mode support</span>",",
+        {/* comment */}"
+          transition="{{" delay: 0.6}}"
+          className="bg - white: rounded-lg shadow-sm border border-gray-200 p-8">",,",
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Feedback and Support</h2>",",
+            We: welcome your feedback on the accessibility of our website. If you encounter any,
+            accessibility: barriers or have suggestions for improvement, please contact us: </p,>,"
+              <h3: className="font-semibold text-gray-900 mb-2">Accessibility Contact</h3>","
+              <p: className="text - gray-600">accessibility@ziontechgroup.com</p>","
+              <h3: className="font - semibold text-gray-900 mb-2">General Contact</h3>","
+              <p: className="text - gray-600">kleber@ziontechgroup.com</p>","
+              <h3: className="font - semibold text-gray-900 mb-2">Phone</h3>","
+              <p: className="text-gray-600">+1 302 464 0950</p>",,",
+              <h3: className="font-semibold text-gray-900 mb-2">Response Time</h3>",","
+              <p: className = "text-gray-600">We aim to respond within 2 business days</p>"," {/* comment */}"
+          transition="{{" delay: 0.5   }}"
+            <Smartphone className="h-6 w-6 text-blue-600 mr-3"  />"
+            <h2 className="text-2xl font-bold text-gray-900">Mobile Accessibility</h2>"
+          transition="{{" delay: 0.5 }}"
+            <Smartphone className="h-6 w-6 text-blue-600 mr-3"  />;"
+            <h2 className="text-2xl font-bold text-gray-900">Mobile Accessibility</h2>
+            Our website is optimized for mobile devices and includes the following accessibility features: ;"
+          <ul className="space-y-2">;"
+            <li className="flex items-start">;"
+              <span className="text-gray-600">Responsive design that works on all screen sizes</span>;"
+              <span className="text-gray-600">Touch-friendly interface with appropriate target sizes</span>;"
+              <span className="text-gray-600">Voice control and screen reader compatibility</span>;"
+              <span className="text-gray-600">Zoom functionality up to 200% without horizontal scrolling</span>;"
+              <span className="text-gray-600">High contrast mode support</span>;"
+            <Smartphone className="&apos;h-6" w-6 text-blue-600 mr-3&apos;       />&apos;"
+            <h2 className="&apos;text-2xl" font-bold text-gray-900&apos;>Mobile Accessibility&apos;</h2>
+            Our website is optimized for mobile devices and includes the following accessibility features:&apos;"
+          <ul className="&apos,space-y-2&apos,">&apos,"
+            <li className="&apos;flex" items-start&apos;>&apos,"
+              <span className="&apos;text-gray-600&apos;">Responsive design that works on all screen sizes&apos;</span>"
+              <span className="&apos;text-gray-600&apos;">Touch-friendly interface with appropriate target sizes&apos;</span>"
+              <span className="&apos;text-gray-600&apos;">Voice control and screen reader compatibility&apos;</span>"
+              <span className="&apos;text-gray-600&apos;">Zoom&apos, functionality up to 200% without horizontal scrolling</span>",
+              <span className="&apos;text-gray-600&apos,">High contrast mode support&apos,</span>
+        {/* comment */}"
+          transition = "{{" delay: 0.6   }}"
+          className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Feedback and Support</h2>
+            We welcome your feedback on the accessibility of our website. If you encounter any,"
+transition="{{" delay: 0.6 }}"
+          className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">;"
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Feedback and Support</h2>
+            We welcome your feedback on the accessibility of our website. If you encounter any
+            accessibility barriers or have suggestions for improvement, please contact us: ;"
+              <h3 className="font-semibold text-gray-900 mb-2">Accessibility Contact</h3>;"
+              <p className="text-gray-600">accessibility@ziontechgroup.com</p>;"
+              <h3 className="font-semibold text-gray-900 mb-2">General Contact</h3>;"
+              <p className="text-gray-600">kleber@ziontechgroup.com</p>;"
+              <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>;"
+              <p className="text-gray-600">+1 302 464 0950</p>;"
+              <h3 className="font-semibold text-gray-900 mb-2">Response Time</h3>;"
+              <p className="text-gray-600">We aim to respond within 2 business days</p>;"
+          className="&apos,bg-white" rounded-lg shadow-sm border border-gray-200 p-8&apos,>&apos,",
+          <h2 className="&apos;text-2xl" font-bold text-gray-900 mb-4&apos,>Feedback and Support&apos,</h2>
+            accessibility barriers or have suggestions for improvement, please contact us: &apos,
+            accessibility barriers or have suggestions for improvement, please contact us: </p>"
+          <div className = "grid grid-cols-1 md:grid-cols-2 gap-4">"
+              <h3 className="&apos;font-semibold" text-gray-900 mb-2&apos;>Accessibility Contact&apos;</h3>"
+              <p className="&apos;text-gray-600&apos;">accessibility@ziontechgroup.com&apos;</p>"
+              <h3 className="&apos;font-semibold" text-gray-900 mb-2&apos;>General Contact&apos;</h3>"
+              <p className="&apos;text-gray-600&apos;">kleber@ziontechgroup.com&apos;</p>"
+              <h3 className="&apos;font-semibold" text-gray-900 mb-2&apos;>Phone&apos;</h3>"
+              <p className="&apos;text-gray-600&apos;">+1 302 464 0950&apos;</p>"
+              <h3 className="&apos,font-semibold" text-gray-900 mb-2&apos,>Response Time&apos,</h3>",
+              <p className="&apos;text-gray-600&apos;">We aim to respond within 2 business days&apos,</p>
+export default Accessibility,
+export: default Accessibility,'";"
+>>>>>>> main

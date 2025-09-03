@@ -1,231 +1,54 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import {
-
-  Heart, 
-  Brain, 
-  Eye, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign, 
-  Clock, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Shield,
-  TrendingUp,
-  BarChart3,
-  Activity,
-  Stethoscope,
-  Microscope,
-  X,
-  Scan,
-  FileText,
-  Users,
-  Zap
-} from 'lucide-react';
-
-export default function AIHealthcareDiagnostics() {
-
-  const features = [
-    {
-
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Diagnosis",
-      description: "Advanced ML models analyze medical images with 96% accuracy, detecting diseases earlier than traditional methods."
-    },
-    {
-
-      icon: <Eye className="w-6 h-6" />,
-      title: "Multi-Modal Imaging",
-      description: "Support for X-rays, CT scans, MRIs, and ultrasounds with unified AI analysis platform."
-    },
-    {
-
-      icon: <Shield className="w-6 h-6" />,
-      title: "HIPAA Compliant",
-      description: "Enterprise-grade security with full HIPAA compliance and data encryption at rest and in transit."
-    },
-    {
-
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Clinical Analytics",
-      description: "Comprehensive reporting and analytics for clinical decision support and outcome tracking."
-    }
-  ];
-
-  const pricingPlans = [
-    {
-
-      name: "Clinical",
-      price: "$1,299",
-      period: "/month",
-      features: ["Up to 1,000 scans/month", "Basic AI diagnosis", "Email support", "Standard reporting"]
-    },
-    {
-
-      name: "Enterprise",
-      price: "$2,999",
-      period: "/month",
-      features: ["Unlimited scans", "Advanced AI models", "Priority support", "Custom integrations", "API access"]
-    }
-  ];
-
+<<<<<<< HEAD
+import React from 'react'; import { motion  } from 'framer-motion'; import { Brain, Heart, Shield, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, Cpu, Target, Award, BarChart3, Activity, Stethoscope, Microscope, Pill, UserCheck, TrendingUp  } from 'lucide-react'; import { SEO } from '@/components/SEO'; ; const AIHealthcareDiagnostics: React.FC = () => {; const features = [; 'AI-powered medical image analysis(X-ray, MRI, CT, ultrasound)',; 'Real-time diagnostic assistance for radiologists and physicians',; 'Predictive analytics for disease progression and treatment outcomes',; 'Automated medical report generation with clinical insights',; 'Multi-modal data fusion for comprehensive patient assessment',; 'HIPAA-compliant secure data handling and patient privacy',; 'Integration with major EHR systems(Epic, Cerner, Allscripts)',; 'Real-time clinical decision support and alerts',; 'Automated quality assurance and error detection',; 'Continuous learning from clinical outcomes and feedback'; ]; ; const benefits = [; 'Improve diagnostic accuracy by 25-40% through AI assistance',; 'Reduce radiologist workload by 30-50% with automation',; 'Accelerate diagnosis time from hours to minutes',; 'Enhance early detection of critical conditions',; 'Reduce healthcare costs through preventive care optimization'; ]; ; const pricing = [; {; plan: 'Clinic',; price: '$2,999',; period: 'month',; features: ['Up to 1,000 studies/month', 'Basic AI diagnostics', 'Standard EHR integration', 'Email support', 'Basic reporting'],; popular: false; },; {; plan: 'Hospital',; price: '$7,999',; period: 'month',; features: ['Up to 10,000 studies/month', 'Advanced AI algorithms', 'Full EHR integration', 'Priority support', 'Advanced analytics', 'Custom workflows'],; popular: true; },; {; plan: 'Health System',; price: '$19,999',; period: 'month',; features: ['Unlimited studies', 'Custom AI models', 'Multi-EHR integration', 'Dedicated support', 'White-label solution', 'On-premise deployment'],; popular: false; }; ]; ; const specialties = [; 'Radiology & Imaging',; 'Cardiology',; 'Oncology',; 'Neurology',; 'Pathology',; 'Emergency Medicine',; 'Primary Care',; 'Specialty Clinics'; ]; ; const compliance = [; 'HIPAA Compliance',; 'FDA 510(k) Clearance',; 'SOC 2 Type II',; 'ISO 13485',; 'GDPR Compliance',; 'HITECH Act Compliance'; ]; ; return (; <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-blue-100">;"";" <SEO ";"";" title="AI Healthcare Diagnostics Platform | Zion Tech Group";"";" description="Revolutionary AI-powered healthcare diagnostics platform that enhances medical imaging analysis, improves diagnostic accuracy, and accelerates patient care delivery.";"";" keywords="AI healthcare, medical diagnostics, medical imaging, AI radiology, healthcare AI, diagnostic assistance";";" />;"";" {}";"";" <section className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-teal-900 text-white">";"";" <div className="absolute inset-0 bg-black/20"></div>";"";" <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;" <motion.div;";" initial={{ opacity: 0, y: 20 }};";" animate={{ opacity: 1, y: 0 }};"";" transition={{ duration: 0.8   }}";"";" className="text-center";"";" >";"";" <div className="flex justify-center mb-6">";"";" <div className="p-3 bg-green-500/20 rounded-full">";"";" <Stethoscope className="w-8 h-8 text-green-300" />;";" </div>;"";" </div>";"";" <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-300 to-blue-300 bg-clip-text text-transparent">;";" AI Healthcare Diagnostics Platform;"";" </h1>";"";" <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-4xl mx-auto">;";" Transform healthcare delivery with AI-powered diagnostic assistance, medical image analysis, and clinical decision support;"";" </p>";"";" <div className="flex flex-col sm:flex-row gap-4 justify-center">;"";" <a";"";" href="https:
+=======
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const AIHealthcareDiagnostics = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO 
-        title="AI-Powered Healthcare Diagnostics Platform | Zion Tech Group"
-        description="Transform healthcare with AI-powered medical imaging analysis, early disease detection, and clinical decision support. 96% accuracy, HIPAA compliant, and FDA ready."
-        keywords="AI healthcare, medical imaging, diagnostics, radiology, clinical AI, medical AI"
-      />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent">
-              AI-Powered Healthcare
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Diagnostics Platform
-            </span>
-          </h1>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
-            Revolutionize medical diagnostics with our advanced AI platform. 
-            Detect diseases earlier, improve accuracy, and enhance clinical decision-making.
-          </p>
-          
-          {/* Contact Information */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 text-slate-300">
-            <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-cyan-400" />
-              <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="w-5 h-5 text-cyan-400" />
-              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="mailto:kleber@ziontechgroup.com?subject=AI Healthcare Diagnostics Demo Request"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-            >
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Request Demo
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call Now
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced Features for <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent">Modern Healthcare</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover:border-pink-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-red-500 rounded-lg flex items-center justify-center text-white mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-slate-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Healthcare <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent">Pricing</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-8">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-4xl font-bold text-pink-400">{plan.price}</span>
-                    <span className="text-slate-400">{plan.period}</span>
-                  </div>
-                </div>
-
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-pink-400 flex-shrink-0" />
-                      <span className="text-slate-300">{feature}</span>
-                    </li>
-                  ))}
+    <>
+      <Head>
+        <title>A I- Healthcare- Diagnostics - Zion Tech Group</title>
+        <meta name="description" content="Professional A I- Healthcare- Diagnostics services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              A I- Healthcare- Diagnostics
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional A I- Healthcare- Diagnostics services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
                 </ul>
-
-                <div className="text-center">
-                  <a
-                    href="mailto:kleber@ziontechgroup.com?subject=Healthcare Diagnostics Pricing Inquiry"
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-300 w-full justify-center"
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent">Healthcare</span>?
-          </h2>
-          <p className="text-xl text-slate-300 mb-8">
-            Join leading healthcare institutions using AI to improve patient outcomes and diagnostic accuracy.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="mailto:kleber@ziontechgroup.com?subject=AI Healthcare Diagnostics Demo Request"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-            >
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Request Demo
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call +1 302 464 0950
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
   );
 }
+export default AIHealthcareDiagnostics
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ;
 export { function };export default function HealthcareTech(...args: []):  {}
   return()
@@ -6,22 +7,20 @@ export { function };export default function HealthcareTech(...args: []):  {}
         <title>Healthcare Technology Solutions - Zion Tech Group</title>
         <meta name = "description" content="Transform healthcare delivery with AI-powered medical technology, patient monitoring, and digital health solutions. Improve patient outcomes and operational efficiency." />""
         <meta name="keywords" content="healthcare technology, medical AI, digital health, patient monitoring, telemedicine, healthcare analytics, medical devices" />
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
       </Helmet>"
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-=======
       </Helmet>
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
         {/* Hero Section */}""
         <section className="relative pt-32 pb-20 overflow-hidden">""
           <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-red-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center">""
               <div className="inline-flex items-center px-4 py-2 bg-pink-500/10 border border-pink-500/20 rounded-full text-pink-400 text-sm font-medium mb-8">""
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
                 <Heart className="w-4 h-4 mr-2"  />                Healthcare Technology
               </div>"
 ""
@@ -29,7 +28,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
                 Healthcare""
                 <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent"> Technology</span>
               </h1>"
-=======
                 <Heart className="w-4 h-4 mr-2"  />                Healthcare Technology;
               </div>
 ""
@@ -37,12 +35,11 @@ export { function };export default function HealthcareTech(...args: []):  {}
                 Healthcare""
                 <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent"> Technology</span>
               </h1>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
 ""
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Revolutionize healthcare delivery with cutting-edge technology solutions. AI-powered diagnostics,
                 patient monitoring, and digital health platforms for better patient outcomes.
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
               </p>"
 ""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -55,7 +52,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo
-=======
               </p>
 ""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -67,33 +63,28 @@ export { function };export default function HealthcareTech(...args: []):  {}
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
                 </button>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
         {/* Features Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
                 Advanced Healthcare Solutions"
-=======
                 Advanced Healthcare Solutions;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our healthcare technology platform provides comprehensive solutions for modern healthcare delivery,
                 from AI diagnostics to patient management systems.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -138,7 +129,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -177,7 +167,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
                   <p className="text-slate-300">{feature.description}</p>
@@ -186,26 +175,22 @@ export { function };export default function HealthcareTech(...args: []):  {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
         {/* Healthcare Applications Section */}""
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
                 Healthcare Technology Applications"
-=======
                 Healthcare Technology Applications;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Discover how our technology solutions can transform different aspects of healthcare delivery.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -266,7 +251,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>""
                   <p className="text-slate-300 mb-4">{application.description}</p>""
                   <ul className="space-y-1">"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -321,7 +305,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>""
                   <p className="text-slate-300 mb-4">{application.description}</p>""
                   <ul className="space-y-1">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
                     {application.benefits.map((benefit, benefitIndex) => (""
                       <li key={benefitIndex} className="text-sm text-pink-400 flex items-center">""
                         <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
@@ -333,39 +316,33 @@ export { function };export default function HealthcareTech(...args: []):  {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
         {/* AI in Healthcare Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
                 AI-Powered Healthcare"
-=======
                 AI-Powered Healthcare;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Leverage artificial intelligence to enhance diagnostic accuracy, improve patient outcomes,
                 and optimize healthcare operations.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
                 <div className="space-y-6">"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>""
                 <div className="space-y-6">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
                   {[""
                     "AI-powered diagnostic imaging and radiology analysis",""
                     "Predictive analytics for patient risk assessment and early intervention",""
@@ -379,28 +356,24 @@ export { function };export default function HealthcareTech(...args: []):  {}
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
               </div>"
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Healthcare Benefits</h3>""
                 <div className="space-y-4">"
-=======
               </div>
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Healthcare Benefits</h3>""
                 <div className="space-y-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
                   {[""
                     { benefit: "Improved Accuracy", metric: "95%", description: "Diagnostic accuracy" },""
                     { benefit: "Faster Results", metric: "60%", description: "Reduced wait time" },""
                     { benefit: "Cost Savings", metric: "30%", description: "Operational costs" },""
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
                     { benefit: "Better Outcomes", metric: "40%", description: "Patient outcomes" }"
-=======
                     { benefit: "Better Outcomes", metric: "40%", description: "Patient outcomes" }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
                   ].map((item, index)  => (""
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">""
                       <div className="text-2xl font-bold text-pink-400 mb-1">{item.metric}</div>""
@@ -413,26 +386,22 @@ export { function };export default function HealthcareTech(...args: []):  {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
         {/* Compliance & Security Section */}""
         <section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
                 Healthcare Compliance & Security"
-=======
                 Healthcare Compliance & Security;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Built-in compliance features ensure your healthcare technology meets all regulatory requirements.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -493,7 +462,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   <h3 className="text-xl font-semibold text-white mb-2">{compliance.title}</h3>""
                   <p className="text-slate-300 mb-4">{compliance.description}</p>""
                   <ul className="space-y-1">"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -548,7 +516,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   <h3 className="text-xl font-semibold text-white mb-2">{compliance.title}</h3>""
                   <p className="text-slate-300 mb-4">{compliance.description}</p>""
                   <ul className="space-y-1">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
                     {compliance.features.map((feature, featureIndex) => (""
                       <li key={featureIndex} className="text-sm text-pink-400 flex items-center">""
                         <CheckCircle className="w-3 h-3 mr-2"  />                        {feature}
@@ -560,26 +527,22 @@ export { function };export default function HealthcareTech(...args: []):  {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
         {/* Implementation Process Section */}""
         <section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
                 Implementation Process"
-=======
                 Implementation Process;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
               </h2>""
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our systematic approach ensures successful healthcare technology implementation.
               </p>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
             </div>"
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -616,7 +579,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>"
-=======
             </div>
 ""
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -649,7 +611,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
                   <p className="text-slate-300">{step.description}</p>
@@ -658,16 +619,14 @@ export { function };export default function HealthcareTech(...args: []):  {}
             </div>
           </div>
         </section>
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
         {/* CTA Section */}""
         <section className="py-20 bg-gradient-to-r from-pink-500/10 to-red-600/10">;""
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
               Ready to Transform Healthcare Delivery?"
             </h2>""
             <p className="text-xl text-slate-300 mb-8">
@@ -683,7 +642,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
               <Link""
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200"
-=======
               Ready to Transform Healthcare Delivery?
             </h2>""
             <p className="text-xl text-slate-300 mb-8">
@@ -698,7 +656,6 @@ export { function };export default function HealthcareTech(...args: []):  {}
               <Link""
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
               >
                 Explore All Services;
               </Link>;
@@ -706,10 +663,10 @@ export { function };export default function HealthcareTech(...args: []):  {}
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD:pages.disabled/pages/services/healthcare-tech.tsx
+:pages.disabled/pages/services/healthcare-tech.tsx
     </>"
   )}}}}}}'"'"
-=======
     </>
   )}}}}}}'""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/healthcare-tech.tsx
+=======
+>>>>>>> main

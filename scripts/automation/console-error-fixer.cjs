@@ -1,165 +1,196 @@
-#!/usr/bin/env node
+#!/""usr/bin/env"" node;
+/**;
+ * Console Error Fixer Automation;
+ * Fixes console errors and runtime issues;
+ * Runs every 15 minutes;
+ */;
+#!/"usr/bin/env" node;
+/**;
+ * Console Error Fixer Automation;
+ * Fixes console errors and runtime issues;
+ * Runs every 15 minutes;
+ */;
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+const glob = require("glob");
 
-/**
- * Console Error Fixer - Automatically detects and fixes console errors
- * Runs every 15 minutes as part of the PM2 automation ecosystem
- */
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-class ConsoleErrorFixer {
-  constructor() {
-    this.logFile = path.join(__dirname, '../../logs/console-error-fixer.log');
-    this.errorsFixed = 0;
-    this.startTime = new Date();
+class ConsoleErrorFixer {;
+  constructor() {;
+    this.projectRoot = process.cwd();
+    this.logFile = path.join(this.projectRoot, ``automation/logs/console-error-fixer.log``);
+    this.ensureLogDirectory();
+    this.fixCount = 0;,
+}
+;
+  ensureLogDirectory() {;
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {;
+      fs.mkdirSync(logDir, { recursive: true });,
+}
   }
-
-  log(message) {
+;
+  log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-    
-    // Console output
-    console.log(logMessage.trim());
-    
-    // File output
-    try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
-    }
-  }
+    fs.appendFileSync(this.logFile, logMessage);console.log(`[CONSOLE-ERROR-FIXER] ${message}`);,
+}
+;
+  fixConsoleErrors() {;
+    this.log(`Fixing console errors...`);
+    const jsFiles = glob.sync(`src/**/*.{js,jsx,ts,tsx}`, { cwd: this.projectRoot });
+    jsFiles.forEach(filePath => {;
+      try {;
+        const fullPath = path.join(this.projectRoot, `filePath);
+        let content = fs.readFileSync(fullPath`, `utf8`);
+        let modified = false;
 
-  async runLint() {
-    try {
-      this.log('🔍 Running ESLint to detect console errors...');
-      const result = execSync('npm run lint', { 
-        encoding: 'utf8',
-        cwd: path.join(__dirname, '../..'),
-        stdio: 'pipe'
-      });
-      this.log('✅ Lint completed successfully - no console errors found');
-      return { success: true, output: result };
-    } catch (error) {
-      const output = error.stdout || error.stderr || '';
-      this.log('⚠️  Lint found issues, analyzing for console errors...');
-      return { success: false, output };
-    }
-  }
+  fixConsoleErrors() {;
+    this.log("Fixing console errors...");
+    ;
+    const jsFiles = glob.sync("src/**/*.{js,jsx,ts,tsx}", { cwd: this.projectRoot });
+    ;
+    jsFiles.forEach(filePath => {;
+      try {;
+        const fullPath = path.join(this.projectRoot, "filePath);
+        let content = fs.readFileSync(fullPath", "utf8");
+        let modified = false;
 
-  async fixConsoleErrors() {
-    try {
-      this.log('🔧 Attempting to fix console errors...');
-      
-      // Run the lint command to see current errors
-      const lintResult = await this.runLint();
-      
-      if (lintResult.success) {
-        this.log('✅ No console errors to fix');
-        return true;
-      }
+        // Fix console.log statements that might cause issues;
+        const consoleLogRegex = /console\.log\s*\(\s*([^)]+)\s*\)\s*;?\s*$/gm;
+        if (consoleLogRegex.test(content)) {;
+          content = content.replace(consoleLogRegex, (match, args) => {;
+            // Ensure console.log statements are properly formattedreturn `console.log(`${args.trim()});,
+});
+          modified = true;,
+}
+;
+        // Fix undefined variable references;
+        const undefinedVarRegex = /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*undefined\s*;?\s*$/gm;
+        if (undefinedVarRegex.test(content)) {;
+`);
+        // Fix undefined variable references`);
+        const undefinedVarRegex = /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*undefined\s*;?\s*$/gm;`);
+        if (undefinedVarRegex.test(content)) {`);
+          content = content.replace(undefinedVarRegex, (match, varName) => {return ${varName} = undefined;`;,
+}`);
+          modified = true;,
+}
+;
 
-      // Look for console.error, console.warn, console.log in the output
-      const consoleErrors = this.extractConsoleErrors(lintResult.output);
-      
-      if (consoleErrors.length === 0) {
-        this.log('✅ No console errors detected in lint output');
-        return true;
-      }
-
-      this.log(`🔍 Found ${consoleErrors.length} console-related issues`);
-      
-      // Try to fix common console issues
-      for (const error of consoleErrors) {
-        if (await this.fixConsoleError(error)) {
-          this.errorsFixed++;
-        }
-      }
-
-      this.log(`✅ Fixed ${this.errorsFixed} console errors`);
-      return true;
-      
-    } catch (error) {
-      this.log(`❌ Error during console error fixing: ${error.message}`);
-      return false;
-    }
-  }
-
-  extractConsoleErrors(lintOutput) {
-    const consolePatterns = [
-      /console\.(log|warn|error|info|debug)/g,
-      /console\[/g
-    ];
-    
-    const errors = [];
-    for (const pattern of consolePatterns) {
-      const matches = lintOutput.match(pattern);
-      if (matches) {
-        errors.push(...matches);
-      }
-    }
-    
-    return [...new Set(errors)]; // Remove duplicates
-  }
-
-  async fixConsoleError(error) {
-    try {
-      // This is a simplified fixer - in a real implementation,
-      // you would have more sophisticated logic to fix specific issues
-      this.log(`🔧 Attempting to fix: ${error}`);
-      
-      // For now, just log that we're attempting to fix
-      // In a real implementation, you would:
-      // 1. Parse the error location
-      // 2. Apply appropriate fixes
-      // 3. Verify the fix works
-      
-      return true;
-    } catch (error) {
-      this.log(`❌ Failed to fix console error: ${error.message}`);
-      return false;
-    }
-  }
-
-  async run() {
-    this.log('🚀 Console Error Fixer starting...');
-    
-    try {
-      // Ensure logs directory exists
-      const logsDir = path.dirname(this.logFile);
-      if (!fs.existsSync(logsDir)) {
-        fs.mkdirSync(logsDir, { recursive: true });
-      }
-
-      // Run the main fixing logic
-      const success = await this.fixConsoleErrors();
-      
-      const endTime = new Date();
-      const duration = endTime - this.startTime;
-      
-      this.log(`🏁 Console Error Fixer completed in ${duration}ms`);
-      this.log(`📊 Summary: Fixed ${this.errorsFixed} errors`);
-      
-      if (success) {
-        this.log('✅ Console Error Fixer completed successfully');
-        process.exit(0);
-      } else {
-        this.log('⚠️  Console Error Fixer completed with warnings');
-        process.exit(1);
-      }
-      
-    } catch (error) {
-      this.log(`❌ Console Error Fixer failed: ${error.message}`);
-      process.exit(1);
-    }
+        // Fix null checks;
+        const nullCheckRegex = /([a-zA-Z_$][a-zA-Z0-9_$]*)\s*==\s*null\s*;?\s*$/gm;
+        if (nullCheckRegex.test(content)) {;
+          content = content.replace(nullCheckRegex, (match, varName) => {return `${varName} === null;`;,
+});
+          modified = true;,
+}
+;
+        if (modified) {;
+          fs.writeFileSync(fullPath, content);this.log(`Fixed console errors in ${filePath}`);
+          this.fixCount++;,
+}
+      } catch (error) {  this.log(`Error fixing ${filePath  }: ${error.message}`);,
+}
+    });,
+}
+;
+  fixRuntimeErrors() {;
+    this.log(`Fixing runtime errors...`);
+    const tsFiles = glob.sync(`src/**/*.{ts,tsx}`, { cwd: this.projectRoot });
+    tsFiles.forEach(filePath => {;
+      try {;
+        const fullPath = path.join(this.projectRoot, "filePath);
+        let content = fs.readFileSync(fullPath", "utf8");
+        let modified = false;
+        // Fix ``async/await`` issues;
+        const asyncRegex = /async\s+function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\([^)]*\)\s*{\s*([^}]*await[^}]*)\s*}/g;
+        if (asyncRegex.test(content)) {;
+          content = content.replace(asyncRegex, (match, funcName, body) => {return `async function ${funcName}() {\n  try {\n    ${body}\n  } catch (error) {  \n    console.error(`Error in ${funcName  }:`, error);\n  }\n}`;,
+});
+          modified = true;,
+}
+;
+        // Fix Promise handling;
+        const promiseRegex = /\.then\s*\(\s*([^)]+)\s*\)\s*\.catch\s*\(\s*([^)]+)\s*\)/g;
+        if (promiseRegex.test(content)) {;
+          content = content.replace(promiseRegex, (match, thenHandler, catchHandler) => {return `.then(${thenHandler}).catch(${catchHandler})`;,
+});
+          modified = true;,
+}
+;
+        if (modified) {;
+          fs.writeFileSync(fullPath, content);this.log(`Fixed runtime errors in ${filePath}`);
+          this.fixCount++;,
+}
+      } catch (error) {  this.log(`Error fixing runtime issues in ${filePath  }: ${error.message}`);,
+}
+    });,
+}
+;
+  async run() {;
+    this.log(`Starting Console Error Fixer...`);
+    try {;
+      this.fixConsoleErrors();
+      this.fixRuntimeErrors();
+      this.log(`Console Error Fixer completed. Fixed ${this.fixCount} issues.`);
+      // Generate report;
+      const report = {;
+        timestamp: new Date().toISOString(),;
+        errorsFixed: this.fixCount,;
+        status: `SUCCESS`;,
+}
+      const reportPath = path.join(this.projectRoot, ``automation/logs/console-error-fixer-report.json``);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      ;,
+} catch (error) {  this.log(`Error in Console Error Fixer: ${error.message  }`);,
+}
   }
 }
+;
+// Run the automation;
+const fixer = new ConsoleErrorFixer();
+// Handle process signals;
+process.on(`SIGINT`, () => {;
+  fixer.log(`Received SIGINT, shutting down gracefully...`);
 
-// Run the fixer if this script is executed directly
-if (require.main === module) {
-  const fixer = new ConsoleErrorFixer();
-  fixer.run();
+  async run() {;
+    this.log("Starting Console Error Fixer...");
+    ;
+    try {;
+      this.fixConsoleErrors();
+      this.fixRuntimeErrors();
+      this.log(`Console Error Fixer completed. Fixed ${this.fixCount} issues.`);
+      ;
+      // Generate report;
+      const report = {;
+        timestamp: new Date().toISOString(),;
+        errorsFixed: this.fixCount,;
+        status: "SUCCESS";,
 }
+      ;
+      const reportPath = path.join(this.projectRoot, "automation/logs/console-error-fixer-report.json");
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      ;,
+} catch (error) {this.log(`Error in Console Error Fixer: ${error.message}`);,
+}
+  }
+}
+;
+// Run the automation;
+const fixer = new ConsoleErrorFixer();
 
-module.exports = ConsoleErrorFixer;
+// Handle process signals;
+process.on("SIGINT", () => {;
+  fixer.log("Received SIGINT, shutting down gracefully...");
+  process.exit(0);,
+});
+
+process.on("SIGTERM", () => {;
+  fixer.log("Received SIGTERM, shutting down gracefully...");
+  process.exit(0);,
+});
+// Run the fixer;
+fixer.run().catch(error => {fixer.log(`Unhandled error: ${error.message}`);
+  process.exit(1);,
+})

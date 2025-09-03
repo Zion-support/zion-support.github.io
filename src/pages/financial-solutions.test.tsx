@@ -1,11 +1,25 @@
-describe ('financial - solutions', () => {}
-'
-  it ('renders without crashing', () => {}
-    render (<financial - solutions />) ;'
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-'
-  it ('displays expected content', () => {}
-    render (<financial - solutions />) ;
-    // Add specific test assertions based on component content;
-  }) }) ;
-'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('financial - solutions', () => {}; '; it('renders without crashing', () => {}; render(<financial - solutions />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<financial - solutions />) ;
+=======
+describe("financial - solutions", () => {}; "; it("renders without crashing", () => {}; render(<financial - solutions       />) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<financial - solutions       />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<financial -solutions /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main
+>>>>>>> main

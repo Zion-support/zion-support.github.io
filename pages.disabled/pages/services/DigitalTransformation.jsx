@@ -1,10 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { SEO } from '@/components/SEO';'
 import { motion } from 'framer-motion';'
 import { ArrowRight } from 'lucide-react';
 ;
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
 const DigitalTransformation = () => {
   const transformationServices = [
     {
@@ -98,7 +99,6 @@ const DigitalTransformation = () => {
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">"
-=======
 const DigitalTransformation = () => {}
   const transformationServices = []
     {}
@@ -181,12 +181,11 @@ const DigitalTransformation = () => {}
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
       <SEO""
         title="Digital Transformation - Zion Tech Group""
         description="Transform your business for the digital age with our comprehensive digital transformation services.""
         keywords="digital transformation, process automation, digital strategy, change management, performance optimization""
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
         canonical="https://ziontechgroup.com/services/digital-transformation"
       />
 "
@@ -201,7 +200,6 @@ const DigitalTransformation = () => {}
           >"
             Digital""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
-=======
         canonical="https://ziontechgroup.com/services/digital-transformation""
       />
 
@@ -216,19 +214,16 @@ const DigitalTransformation = () => {}
           >
             Digital""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
               {' '}
               Transformation;
             </span>
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
           </motion.h1>"
           <motion.p""
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-=======
           </motion.h1>
           <motion.p""
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -241,45 +236,39 @@ const DigitalTransformation = () => {}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
           >"
             <Link""
               to="/contact""
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >"
-=======
           >
             <Link""
               to="/contact""
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105""
             >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
               Start Your Transformation""
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
       {/* Services Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
               Our Transformation Capabilities"
-=======
               Our Transformation Capabilities;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               End-to-end digital transformation solutions for modern businesses;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
           </div>"
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -305,7 +294,6 @@ const DigitalTransformation = () => {}
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li"
-=======
           </div>
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -331,7 +319,6 @@ const DigitalTransformation = () => {}
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
                         key={idx}""
                         className="text-sm text-gray-300 flex items-center""
                       >""
@@ -346,26 +333,22 @@ const DigitalTransformation = () => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
       {/* Benefits Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
               Benefits of Digital Transformation"
-=======
               Benefits of Digital Transformation;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Unlock new opportunities and competitive advantages;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
           </div>"
 ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
@@ -377,7 +360,6 @@ const DigitalTransformation = () => {}
               viewport={{ once: true }}"
             >""
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-=======
           </div>
 ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -389,43 +371,38 @@ const DigitalTransformation = () => {}
               viewport={{ once: true }}
             >""
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
                 <svg""
                   className="w-8 h-8 text-white""
                   fill="none""
                   stroke="currentColor""
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
                   viewBox="0 0 24 24"
                 >"
-=======
                   viewBox="0 0 24 24""
                 >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
                   <path""
                     strokeLinecap="round""
                     strokeLinejoin="round""
                     strokeWidth={2}""
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
                     d="M13 10V3L4 14h7v7l9-11h-7z"
                   />
                 </svg>"
               </div>""
               <h3 className="text-xl font-semibold text-white mb-3">
                 Increased Efficiency"
-=======
                     d="M13 10V3L4 14h7v7l9-11h-7z""
                   />
                 </svg>
               </div>""
               <h3 className="text-xl font-semibold text-white mb-3">
                 Increased Efficiency;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
               </h3>""
               <p className="text-gray-300">
                 Streamlined processes and automated workflows;
               </p>
             </motion.div>
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
 "
             <motion.div""
               className="text-center"
@@ -435,7 +412,6 @@ const DigitalTransformation = () => {}
               viewport={{ once: true }}"
             >""
               <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-=======
 
             <motion.div""
               className="text-center""
@@ -445,43 +421,38 @@ const DigitalTransformation = () => {}
               viewport={{ once: true }}
             >""
               <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
                 <svg""
                   className="w-8 h-8 text-white""
                   fill="none""
                   stroke="currentColor""
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
                   viewBox="0 0 24 24"
                 >"
-=======
                   viewBox="0 0 24 24""
                 >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
                   <path""
                     strokeLinecap="round""
                     strokeLinejoin="round""
                     strokeWidth={2}""
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                   />
                 </svg>"
               </div>""
               <h3 className="text-xl font-semibold text-white mb-3">
                 Better Customer Experience"
-=======
                     d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z""
                   />
                 </svg>
               </div>""
               <h3 className="text-xl font-semibold text-white mb-3">
                 Better Customer Experience;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
               </h3>""
               <p className="text-gray-300">
                 Enhanced engagement and satisfaction;
               </p>
             </motion.div>
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
 "
             <motion.div""
               className="text-center"
@@ -491,7 +462,6 @@ const DigitalTransformation = () => {}
               viewport={{ once: true }}"
             >""
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-=======
 
             <motion.div""
               className="text-center""
@@ -501,37 +471,32 @@ const DigitalTransformation = () => {}
               viewport={{ once: true }}
             >""
               <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
                 <svg""
                   className="w-8 h-8 text-white""
                   fill="none""
                   stroke="currentColor""
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
                   viewBox="0 0 24 24"
                 >"
-=======
                   viewBox="0 0 24 24""
                 >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
                   <path""
                     strokeLinecap="round""
                     strokeLinejoin="round""
                     strokeWidth={2}""
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
                     d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
                   />
                 </svg>"
               </div>""
               <h3 className="text-xl font-semibold text-white mb-3">
                 Data-Driven Insights"
-=======
                     d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z""
                   />
                 </svg>
               </div>""
               <h3 className="text-xl font-semibold text-white mb-3">
                 Data-Driven Insights;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
               </h3>""
               <p className="text-gray-300">
                 Informed decision making and strategy;
@@ -540,26 +505,22 @@ const DigitalTransformation = () => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
       {/* Process Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
               Our Transformation Approach"
-=======
               Our Transformation Approach;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               A proven methodology for successful digital transformation;
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
           </div>"
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -577,7 +538,6 @@ const DigitalTransformation = () => {}
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {step.step}"
-=======
           </div>
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -595,7 +555,6 @@ const DigitalTransformation = () => {}
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {step.step}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
                 </h3>""
                 <p className="text-gray-300">{step.description}</p>
               </motion.div>
@@ -603,16 +562,14 @@ const DigitalTransformation = () => {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
       {/* CTA Section */}""
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
             Ready to Transform Your Business?"
           </h2>""
           <p className="text-xl text-gray-300 mb-8">'
@@ -623,7 +580,6 @@ const DigitalTransformation = () => {}
             to="/contact""
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
           >"
-=======
             Ready to Transform Your Business?
           </h2>""
           <p className="text-xl text-gray-300 mb-8">
@@ -634,7 +590,6 @@ const DigitalTransformation = () => {}
             to="/contact""
             className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300""
           >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
             Start Your Transformation""
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
@@ -644,10 +599,10 @@ const DigitalTransformation = () => {}
   );
 };
 
-<<<<<<< HEAD:pages.disabled/pages/services/DigitalTransformation.jsx
+:pages.disabled/pages/services/DigitalTransformation.jsx
 export default DigitalTransformation;'"
 '"'"
-=======
 export default DigitalTransformation;
 '""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/DigitalTransformation.jsx
+=======
+>>>>>>> main

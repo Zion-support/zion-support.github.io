@@ -7,8 +7,7 @@
     "workingLinks": 58,
     "successRate": "100.00%",
     "errors": 0,
-    "warnings": 0
-  },
+    "warnings": 0},
   "brokenLinks": [],
   "workingLinks": [
     {
@@ -31,8 +30,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3BS3NXGKYD1TPVWH2EF",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/",
@@ -54,8 +53,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3DKP22E8KDV7J4FW88T",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/about",
@@ -77,8 +76,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3FGSCEBM6RTNSDWK0CG",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/contact",
@@ -100,8 +99,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3GY0423T5SBCAJTB4T4",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/services",
@@ -117,10 +116,10 @@
         "netlify-vary": "query",
         "server": "Netlify",
         "strict-transport-security": "max-age=31536000",
-        "x-nf-request-id": "01K3V5A3JVY7AZN1466N8S9066"
-      },
-      "redirectLocation": "/services"
-    },
+        "x-nf-request-id": "01K3V5A3JVY7AZN1466N8S9066";
+},
+      "redirectLocation": "/services";
+},
     {
       "url": "https://ziontechgroup.com/services-overview",
       "status": 200,
@@ -141,8 +140,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3KT0D5B130F8DXB0TXP",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/ai-services",
@@ -164,8 +163,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3N81PSXZDH1YEZYE7A6",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/it-services",
@@ -187,8 +186,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3PPC3QV20VYP2A3WHRW",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/micro-saas",
@@ -210,8 +209,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3RBHAEJSYNBHS9N85BC",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/pricing",
@@ -233,8 +232,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3STF9DB4Y64A2WJB5GZ",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/pricing-guide",
@@ -256,8 +255,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3V68F2BYWQTAV6VPX0N",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/blog",
@@ -273,10 +272,10 @@
         "netlify-vary": "query",
         "server": "Netlify",
         "strict-transport-security": "max-age=31536000",
-        "x-nf-request-id": "01K3V5A3WFMPSSXF4QWRXH5QTE"
-      },
-      "redirectLocation": "/blog"
-    },
+        "x-nf-request-id": "01K3V5A3WFMPSSXF4QWRXH5QTE";
+},
+      "redirectLocation": "/blog";
+},
     {
       "url": "https://ziontechgroup.com/case-studies",
       "status": 200,
@@ -297,8 +296,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3XJTC273MAGMQYRQD5R",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/white-papers",
@@ -320,8 +319,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A3ZK8MD94K7TAT2BTVCJ",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/webinars",
@@ -343,8 +342,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A40YKCN5S85JFTYSMHSH",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/careers",
@@ -366,8 +365,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A42CK2295GK171MR42YP",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/team",
@@ -389,8 +388,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A4443VTZ4BVFSQQNJWQF",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/privacy",
@@ -412,8 +411,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A4644VP8VKM7YCJ9TS0N",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/terms",
@@ -435,8 +434,8 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A47KVJNSM786DKD0J2RE",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     },
     {
       "url": "https://ziontechgroup.com/sitemap",
@@ -458,15 +457,11 @@
         "x-content-type-options": "nosniff",
         "x-frame-options": "DENY",
         "x-nf-request-id": "01K3V5A494FZ9XNA3T69EH1E36",
-        "x-xss-protection": "1; mode=block"
-      }
+        "x-xss-protection": "1; mode=block";
+}
     }
   ],
   "errors": [],
   "warnings": [],
-  "recommendations": []
-<<<<<<< HEAD
+  "recommendations": [];
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-advertise-them-971c

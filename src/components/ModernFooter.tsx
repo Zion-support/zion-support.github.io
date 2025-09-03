@@ -1,1 +1,15 @@
-const ModernFooter: React.FC = () => { const currentYear = new Date().getFullYear(); const scrollToTop = () => { window.scrollTo({ top: 0, behavior: "smooth" }); }; const footerSections = [ { title: "Services", links: [ { label: "AI & Machine Learning", href: "#ai" }, { label: "Cybersecurity", href: "#cybersecurity" }, 
+<<<<<<< HEAD
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function ModernFooter() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="ModernFooter - Zion Tech Group" description="Professional ModernFooter services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">ModernFooter</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional ModernFooter services to help your business grow.
+        </p>
+      </div>
+  );"}"
+>>>>>>> main

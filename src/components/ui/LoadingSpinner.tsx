@@ -1,260 +1,178 @@
-import { motion } from 'framer-motion';
-import { Loader2, Zap, Brain, Cpu, Rocket } from 'lucide-react';
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'default' | 'futuristic' | 'ai' | 'tech' | 'rocket';
-  text?: string;
-  showProgress?: boolean;
-  progress?: number;
-  className?: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD import React from 'react'; import { motion  } from 'framer-motion'; interface LoadingSpinnerProps { size?: 'sm' | 'md' | 'lg' | 'xl'; color?: string; text?: string; className?: string; } export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', color = 'blue', text, className = '' }) => { const sizeClasses = { sm: 'w-4 h-4', md: 'w-8 h-8', lg: 'w-12 h-12', xl: 'w-16 h-16' }; const colorClasses = { blue: 'border-blue-500', green: 'border-green-500', purple: 'border-purple-500', red: 'border-red-500', gray: 'border-gray-500' }; return(<div className={`flex flex-col items-center justify-center ${className}`}> <motion.div className={`${sizeClasses[size]} border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}`} animate={{ rotate: 360   }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} /> {text && ( <motion.p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial={{ opacity: 0   }} animate={{ opacity: 1   }} transition={{ delay: 0.2   }} > {text} </motion.p> )} </div> ); }; export default LoadingSpinner; ======= import React from 'react'; import { motion  } from 'framer-motion'; interface LoadingSpinnerProps { size?: 'sm' | 'md' | 'lg' | 'xl'; color?: 'primary' | 'secondary' | 'white'; text?: string; fullScreen?: boolean; } export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', color = 'primary', text, fullScreen = false }) => { const sizeClasses = { sm: 'w-4 h-4', md: 'w-8 h-8', lg: 'w-12 h-12', xl: 'w-16 h-16' }; const colorClasses = { primary: 'border-cyan-500', secondary: 'border-purple-500', white: 'border-white' }; const spinner = ( <div className="flex flex-col items-center justify-center"> <motion.div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}`} animate={{ rotate: 360   }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} /> {text && ( <motion.p className="mt-4 text-gray-600 text-sm" initial={{ opacity: 0   }} animate={{ opacity: 1   }} transition={{ delay: 0.2   }} > {text} </motion.p> )} </div> ); if(fullScreen) { return(<div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3   }} > {spinner} </motion.div> </div> ); } return spinner; };
+=======
+import React from "react"
+interface LoadingSpinnerProps { size?: "sm" | "md" | "lg" | "xl"; color?: string; text?: string; className?: string} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "blue", text, className = "" }) => { const sizeClasses = {}; const colorClasses = {}; return (
+    <div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }} > {text} </motion.p> )} </div> )}; export default LoadingSpinner;" interface LoadingSpinnerProps { size?: "sm" | "md" | "lg" | "xl"; color?: "primary" | "secondary" | "white"; text?: string; fullScreen?: boolean} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "primary", text, fullScreen = false }) => { const sizeClasses = {}; const colorClasses = {}; const spinner = ( <div className="{"flex" flex-col items-center justify-center"> <motion.div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className=""mt-4" text-gray-600 text-sm"} initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }} > {text} </motion.p> )} </div> ); if(fullScreen) { return ("
+    <div className="{"fixed" inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion.div initial="{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} transition="{{" duration: 0.3 }} > {spinner} </motion.div> </div> )} return spinner}; interface LoadingSpinnerProps { size?: "sm" | "md" | "lg" | "xl"; color?: string; text?: string; className?: string} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "blue", text, className = "" }) => { const sizeClasses = {}; const colorClasses = {}; return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className=""mt-2" text-sm text-gray-600 dark:text-gray-300"} initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }} > {text} </motion.p> )} </div> )}; export default LoadingSpinner;" interface LoadingSpinnerProps { size?: "sm" | "md" | "lg" | "xl"; color?: string; text?: string; className?: string} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "blue", text, className = "" }) => { const sizeClasses = {}; const colorClasses = {}; return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className=""mt-2" text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }} > {text} </motion.p> )} </div> )}; export default LoadingSpinner;" interface LoadingSpinnerProps { size?: "sm" | "md" | "lg" | "xl"; color?: "primary" | "secondary" | "white"; text?: string; fullScreen?: boolean} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "primary", text, fullScreen = false }) => { const sizeClasses = {}; const colorClasses = {}; const spinner = ( <div className="{"flex" flex-col items-center justify-center"> <motion.div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className=""mt-4" text-gray-600 text-sm"} initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }} > {text} </motion.p> )} </div> ); if(fullScreen) { return ("
+    <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion.div initial="{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} transition="{{" duration: 0.3  }} > {spinner} </motion.div> </div> )} return spinner};"
+,"});,"})","});,"})"
+;,"});,"})"
+interface LoadingSpinnerProps {,"});,"})"
+  size?: "sm" | "md" | "lg" | "xl";,"});,"})"
+  color?: "primary" | "secondary" | "white";,"});,"})"
+  text?: string,"});,"})"
+  fullScreen?: boolean,"});,"});"
+}"});,"})"
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,"});,"})"
+  size = "md",,"});,"})"
+  color = "primary",,"});,"})"
+  text,,"});,"})"
+  fullScreen = false,,"});,"});"
+}) => {,"});,"})"
+  const sizeClasses = {});,"})"
+    sm: "w-4 h-4","});,"})"
+    md: "w-8 h-8","});,"})"
+    lg: "w-12 h-12","});,"})"
+    xl: "w-16 h-16","});,"});"
+};,"});,"})"
+  const colorClasses = {});,"})"
+    primary: "border-cyan-500","});,"})"
+    secondary: "border-purple-500","});,"})"
+    white: "border-white","});,"});"
+} as const,"});,"})"
+  const spinner = (;,"});,"})"
+    <div className="flex flex-col items-center justify-center">;,"});,"})"
+      <motion.div,"});,"})"
+        className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"}"});,"})"
+        animate="{{" rotate: 360 }}"});,"})"
+        transition="{{" duration: 1, repeat: Infinity, ease: "linear" }}"});,"})" />;,"});,"})"
+      {text && (;,"});,"})"
+        <motion.p,"});,"})"
+          className="mt-4 text-gray-600 text-sm";,"});,"})"
+          initial="{{" opacity: 0 }}"});,"})"
+          animate="{{" opacity: 1 }}"});,"})"
+          transition="{{" delay: 0.2 }}"});,"})"
+        >;,"});,"})"
+          {text}"});,"})"
+        </motion.p>;,"});,"})"
+      )}"});,"})"
+    </div>;,"});,"})"
+  );,"});,"})"
+  if (fullScreen) {,"});,"})
 }
+    return ("
+    ,"});,"})"
+      <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50">;,"});,"})"
+        <motion.div initial="{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} transition="{{" duration: 0.3 }}>;,"});,"})"
+          {spinner}"});,"})"
+        </motion.div>;,"});,"})"
+  return spinner,"});,"})"
+export default LoadingSpinner,"});,"})
+}
+   text?: string
+   className?: string} export: const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size: ,=,
+  md", color =;"
+  "blue", text, className: = ",","
+  " }) => { const sizeClasses = {} const colorClasses = {} return: ( <div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360}} transition="{{" duration:  ,1, repeat: Infinit,y, ease: "linear"}} /> {text: && ( <motion.p className="mt-2 text-sm text-gray-600 dark: text-gray-300" initial="{{" opacity: 0}} animate="{{" opacity: 1}} transition="{{" delay: 0.2}} > {text} </motion.p> )} </div> ) } export: default LoadingSpinner"
+  size?: "sm" | "md" | "lg" | "xl";","
+   className?: string: } export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size: = "md,", color = "blue", text, className = "" }) => { const sizeClasses = {} const colorClasses = {} return: (<div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360: }} transition="{{" duration:  ,1, repeat: Infinit,y, ease: "linear"}} /> {text: && ( <motion.p className="mt-2 text-sm text-gray-600 dark: text-gray-300" initial="{{" opacity: 0: }} animate="{{" opacity: 1: }} transition="{{" delay: 0.2: }} > {text} </motion.p> )} </div> ) } export default LoadingSpinner"
+   color?: "primary" | "secondary" | "white";";"
+   text?: string: fullScreen?: boolean} export: const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size: = "md,", color = "primary", text, fullScreen = false }) => { const sizeClasses = {} const colorClasses = {} const spinner = ( <div className="flex flex-col items-center justify-center"> <motion.div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"} animate="{{" rotate: 360: }} transition="{{" duration:  ,1, repeat: Infinit,y, ease: "linear"}} /> {text: && ( <motion.p className="mt-4 text-gray-600 text-sm" initial="{{" opacity: 0: }} animate="{{" opacity: 1: }} transition="{{" delay: 0.2: }} > {text} </motion.p> )} </div> ) if(fullScreen) { return ("
+    <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion.div initial="{{" opacity:  ,0, scale: 0.8}} animate="{{" opacity:  ,1, scale: 1}} transition="{{" duration: 0.3: }} > {spinner} </motion.div> </div> ) } return spinner }";"
+   className?: string} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = ",,
+  md", color =,
+  "blue", text, className = ",
+  " }) => { const sizeClasses = {} const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360   }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0   }} animate="{{" opacity: 1   }} transition="{{" delay: 0.2   }} > {text} </motion.p> )} </div> ) } export default LoadingSpinner,
+text?: string,"
+className?: string} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "blue", text, className = "" }) => { const sizeClasses = {} const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360    }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0    }} animate="{{" opacity: 1    }} transition="{{" delay: 0.2    }} > {text} </motion.p> )} </div> ) } export default LoadingSpinner,
+color?: "primary" | "secondary" | "white";"
+   fullScreen?: boolean} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "primary", text, fullScreen = false }) => { const sizeClasses = {} const colorClasses = {} const spinner = ( <div className="flex flex-col items-center justify-center"> <motion.div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"} animate="{{" rotate: 360    }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-4 text-gray-600 text-sm" initial="{{" opacity: 0    }} animate="{{" opacity: 1    }} transition="{{" delay: 0.2    }} > {text} </motion.p> )} </div> ) if(fullScreen) { return ("
+    <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion.div initial="{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} transition="{{" duration: 0.3    }} > {spinner} </motion.div> </div> ) } return spinner }
 
-const sizeClasses = {
-  sm: 'w-6 h-6',
-  md: 'w-8 h-8',
-  lg: 'w-12 h-12',
-  xl: 'w-16 h-16'
-};
+  ", purple: "border-purple-500, red:, border-red-500,
+  ", gray: "border-gray-500 } return ("
+    <div className = "{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacit,">
+    y: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }} > {text} </motion.p> )} </div> ) } export default LoadingSpinner,
+className?: string",""
+} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "blue", text, className = "" }) => { const sizeClasses = {} const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}" > <motion .div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /" > {text && ( <motion .p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacit,">
+    y: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }}" > {text} </motion.p> )} </div> ) } export default LoadingSpinner"
+  size?: "sm" | "md" | "lg" | "xl";""
+   color?: "primary" | "secondary" | "white
+   text?: string"""""
+   fullScreen?: boolean} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "primary", text, fullScreen = false }) => { const sizeClasses = {} const colorClasses = {} const spinner = ( <div className="flex flex-col items-center justify-center"> <motion .div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /" > {text && ( <motion .p className="mt-4 text-gray-600 text-sm" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }}" > {text} </motion.p> )} </div> ) if(fullScreen) { return ("
+    <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion .div initial="{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} transition="{{" duration: 0.3  }}" > {spinner} </motion.div> </div> ) } return spinner }"
+"""
+  ", lg: "w-12 h-12, xl:,
+  w-16 h-16,
+  " } const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }} > {text} </motion.p> )} </div> ) } export default LoadingSpinner
+    <div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }} > {text} </motion.p> )} </div> ) } export default LoadingSpinner"
+   fullScreen?: boolean} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "primary", text, fullScreen = false }) => { const sizeClasses = {} const colorClasses = {} const spinner = ( <div className="flex flex-col items-center justify-center"> <motion.div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-4 text-gray-600 text-sm" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }} > {text} </motion.p> )} </div> ) if(fullScreen) { return ("
+    <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion.div initial="{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} transition="{{" duration: 0.3  }} > {spinner} </motion.div> </div> ) } return spinner }
 
-const iconComponents = {
-  default: Loader2,
-  futuristic: Zap,
-  ai: Brain,
-  tech: Cpu,
-  rocket: Rocket
-};
+  " } const colorClasses = {} return ("
+    <div className = "{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }} > {text} </motion.p> )} </div> ) } export default LoadingSpinner,
+className?: string} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "blue", text, className = " }) => { const sizeClasses = {} const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }} > {text} </motion.p> )} </div> ) } export default LoadingSpinner"
+   fullScreen?: boolean} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "primary", text, fullScreen = false }) => { const sizeClasses = {} const colorClasses = {} const spinner = ( <div className="flex flex-col items-center justify-center"> <motion.div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-4 text-gray-600 text-sm" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }} > {text} </motion.p> )} </div> ) if(fullScreen) { return ("
+    <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion.div initial="{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} transition="{{" duration: 0.3  }} > {spinner} </motion.div> </div> ) } return spinner }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  variant = 'default',
-  text,
-  showProgress = false,
-  progress = 0,
-  className = ''
-}) => {
-  const IconComponent = iconComponents[variant];
-  const sizeClass = sizeClasses[size];
+  &apos;framer-motion&apos; interface LoadingSpinnerProps {
 
-  const spinnerVariants = {
-    animate: {
-      rotate: 360,
-      transition: {
-        duration: 1,
-        repeat: Infinity,
-        ease: "linear"
-      }
-    }
-  };
+  size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos; | &apos;xl
+   className?: string}&apos; export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = ,
+  md&apos, color =
+  &apos;blue&apos, text, className = 
+  &apos}) => {&apos}&apos; const sizeClasses = {}&apos; const colorClasses = {} return (&apos; <div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: &apos,linear&apos}} /> {text && (&apos} <motion.p className="&apos;mt-2" text-sm text-gray-600 dark: text-gray-300&apos, initial="{{" opacit,y: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }} > {text}&apos; </motion.p> )} </div> ) } export default LoadingSpinnerframer-motion&apos; interface LoadingSpinnerProps {"
+  size?: &apos;sm&apos; | &apos;md&apos; | &apos;lg&apos; | &apos;xl";"
+}&apos;&apos; export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = &apos,md&apos, color = &apos;blue&apos, text, className = &apos;&apos}) => {&apos}&apos; const sizeClasses = {}&apos; const colorClasses = {} return (&apos;<div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: &apos,linear&apos}} /> {text && (&apos} <motion.p className="&apos;mt-2" text-sm text-gray-600 dark: text-gray-300&apos, initial="{{" opacit,y: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }} > {text}&apos; </motion.p> )} </div> ) } export;export default LoadingSpinnerframer-motion&apos; interface LoadingSpinnerProps {"
+   color?: &apos;primary&apos; | &apos;secondary&apos; | &apos;white";"
+   fullScreen?: boolean}&apos;&apos; export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = &apos,md&apos, color = &apos;primary&apos, text, fullScreen = false }) => {&apos} const sizeClasses = {}&apos; const colorClasses = {}&apos; const spinner = ( <;<div className="&apos;flex" flex-col items-center justify-center&apos;>&apos, <motion.div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: &apos,linear&apos}} /> {text && (&apos} <motion.p className="&apos;mt-4" text-gray-600 text-sm&apos; initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }} > {text}&apos; </motion.p> )} </div> ) if(fullScreen) { return (}<div className="&apos;fixed" inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50&apos;>&apos, <motion.div initial = "{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} transition="{{" duration: 0.3  }} > {spinner} </motion.div> </div> ) } return spinner };"
+  " }) => {const sizeClasses = {} const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}> <motion.div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /> {text && ( <motion.p className="mt-2 text-sm text-gray-600 dark: text-gray-300" initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }} > {text} </motion.p> )} </div> ) } export default LoadingSpinner"
+   text?: string;""
+   className?: string} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = , md", color =,"
+  "blue", text, className = "
+  " }) => { const sizeClasses = {} const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}" > <motion .div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /" > {text && ( <motion .p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }}" > {text} </motion.p> )} </div> ) } export default LoadingSpinner"
+   text?: string;""""
+   className?: string", "","
+} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "blue", text, className = "" }) => { const sizeClasses = {} const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}"" > <motion .div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /"" > {text && ( <motion .p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }}"" > {text} </motion.p> )} </div> ) } export default LoadingSpinner"
+   color?: "primary" | "secondary" | "white";""""
+  w-8 h-8;""
+  ", lg: "w-12 h-12, xl:, w-16 h-16""
+  " } const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}" > <motion .div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /" > {text && ( <motion .p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }}" > {text} </motion.p> )} </div> ) } export default LoadingSpinnerinterface LoadingSpinnerProps {""
+   text?: string;"""
+   className?: string","","
+} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "blue", text, className = "" }) => { const sizeClasses = {} const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}"" > <motion .div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /"" > {text && ( <motion .p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }}"" > {text} </motion.p> )} </div> ) } export default LoadingSpinnerinterface LoadingSpinnerProps {"
+  size?: "sm" | "md" | "lg" | "xl,"
+color?: "primary" | "secondary" | "white""
+   text?: string"""""
+   fullScreen?: boolean} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "primary", text, fullScreen = false }) => { const sizeClasses = {} const colorClasses = {} const spinner = ( <div className="flex flex-col items-center justify-center"> <motion .div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /"" > {text && ( <motion .p className="mt-4 text-gray-600 text-sm" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }}"" > {text} </motion.p> )} </div> ) if(fullScreen) { return ("
+    <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion .div initial="{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} transition="{{" duration: 0.3  }}"" > {spinner} </motion.div> </div> ) } return spinner }""""
+""""
+  border-green-500"""
+  ", purple: "border-purple-500, red:, border-red-500"""
+  size?: "sm" | "md" | "lg" | "xl
+   color?: string,"
+className?: string", ""
+} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "blue", text, className = "" }) => { const sizeClasses = {} const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}" > <motion .div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /" > {text && ( <motion .p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }}" > {text} </motion.p> )} </div> ) } export default LoadingSpinner,
+className?: string",";"
+} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = "md", color = "blue", text, className="" }) => {const sizeClasses = {} const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}" > <motion .div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /" > {text && ( <motion .p className="mt-2 text-sm text-gray-600 dark: text-gray-300" initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }}" > {text} </motion.p> )} </div> ) } export default LoadingSpinner"
+  size?: "sm" | "md" | "lg" | "xl";"
+   text?: string"""
+   fullScreen?: boolean} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = "md", color = "primary", text, fullScreen = false }) => {const sizeClasses = {} const colorClasses = {} const spinner = ( <div className="flex flex-col items-center justify-center"> <motion .div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"} animate="{{" rotate: 360 }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /" > {text && ( <motion .p className="mt-4 text-gray-600 text-sm" initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.2 }}" > {text} </motion.p> )} </div> ) if(fullScreen) {return ("
+    <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion .div initial="{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} transition="{{" duration: 0.3 }}" > {spinner} </motion.div> </div> ) } return spinner }
 
-  const pulseVariants = {
-    animate: {
-      scale: [1, 1.1, 1],
-      opacity: [0.5, 1, 0.5],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  const rocketVariants = {
-    animate: {
-      y: [0, -10, 0],
-      rotate: [0, 5, -5, 0],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  };
-
-  const renderSpinner = () => {
-    switch (variant) {
-      case 'futuristic':
-        return (
-          <div className="relative">
-            <motion.div
-              className={`${sizeClass} border-4 border-cyan-500/30 rounded-full`}
-              variants={pulseVariants}
-              animate="animate"
-            />
-            <motion.div
-              className={`${sizeClass} border-4 border-transparent border-t-cyan-500 rounded-full absolute inset-0`}
-              variants={spinnerVariants}
-              animate="animate"
-            />
-            <motion.div
-              className={`${sizeClass} border-4 border-transparent border-r-blue-500 rounded-full absolute inset-0`}
-              variants={spinnerVariants}
-              animate="animate"
-              style={{ animationDelay: '0.2s' }}
-            />
-          </div>
-        );
-
-      case 'ai':
-        return (
-          <div className="relative">
-            <motion.div
-              className={`${sizeClass} bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center`}
-              variants={pulseVariants}
-              animate="animate"
-            >
-              <Brain className="w-1/2 h-1/2 text-white" />
-            </motion.div>
-            <motion.div
-              className="absolute inset-0 border-2 border-purple-300 rounded-full"
-              variants={pulseVariants}
-              animate="animate"
-              style={{ animationDelay: '0.5s' }}
-            />
-          </div>
-        );
-
-      case 'tech':
-        return (
-          <div className="relative">
-            <motion.div
-              className={`${sizeClass} bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center`}
-              variants={pulseVariants}
-              animate="animate"
-            >
-              <Cpu className="w-1/2 h-1/2 text-white" />
-            </motion.div>
-            <motion.div
-              className="absolute inset-0 border-2 border-blue-300 rounded-lg"
-              variants={pulseVariants}
-              animate="animate"
-              style={{ animationDelay: '0.3s' }}
-            />
-          </div>
-        );
-
-      case 'rocket':
-        return (
-          <div className="relative">
-            <motion.div
-              className={`${sizeClass} bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center`}
-              variants={rocketVariants}
-              animate="animate"
-            >
-              <Rocket className="w-1/2 h-1/2 text-white" />
-            </motion.div>
-            <motion.div
-              className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-orange-300 rounded-full"
-              variants={pulseVariants}
-              animate="animate"
-            />
-          </div>
-        );
-
-      default:
-        return (
-          <motion.div
-            className={`${sizeClass} border-2 border-gray-300 border-t-blue-600 rounded-full`}
-            variants={spinnerVariants}
-            animate="animate"
-          />
-        );
-    }
-  };
-
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">
-      <div className="relative">
-        {renderSpinner()}
-        
-        {showProgress && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-xs font-medium text-white bg-black/50 px-2 py-1 rounded">
-              {Math.round(progress)}%
-            </span>
-          </div>
-        )}
-      </div>
-
-      {text && (
-        <motion.p
-          className="mt-4 text-center text-gray-300 font-medium"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          {text}
-        </motion.p>
-      )}
-
-      {showProgress && (
-        <div className="w-32 mt-4 bg-gray-700 rounded-full h-2">
-          <motion.div
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          />
-        </div>
-      )}
-
-      <span className="sr-only">Loading...</span>
-    </div>
-  );
-};
-
-// Full-screen loading overlay
-export const LoadingOverlay: React.FC<LoadingSpinnerProps & { overlay?: boolean }> = ({
-  overlay = true,
-  ...props
-}) => {
-  if (!overlay) {
-    return <LoadingSpinner {...props} />;
-  }
-
-  return (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center">
-      <div className="bg-slate-800/90 rounded-2xl p-8 border border-slate-700/50">
-        <LoadingSpinner {...props} />
-      </div>
-    </div>
-  );
-};
-
-// Inline loading spinner for buttons and small elements
-export const InlineSpinner: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
-  size = 'sm',
-  className = ''
-}) => (
-  <LoadingSpinner
-    size={size}
-    variant="default"
-    className={`inline ${className}`}
-  />
-);
-
-// Page loading spinner with progress
-export const PageLoader: React.FC<{ progress?: number; text?: string }> = ({
-  progress = 0,
-  text = "Loading amazing content..."
-}) => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
-      <LoadingSpinner
-        size="xl"
-        variant="futuristic"
-        text={text}
-        showProgress={true}
-        progress={progress}
-      />
-      <motion.div
-        className="mt-8 text-gray-400"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        <p className="text-sm">Please wait while we prepare your experience...</p>
-      </motion.div>
-    </div>
-  </div>
-);
+""
+} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "blue", text, className = "" }) => { const sizeClasses = {} const colorClasses = {} return ("
+    <div className="{"flex" flex-col items-center justify-center ${className}"}" > <motion .div className="{"${sizeClasses[size]}" border-2 border-t-transparent rounded-full ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear" }} /" > {text && ( <motion .p className="mt-2 text-sm text-gray-600 dark:text-gray-300" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }}" > {text} </motion.p> )} </div> ) } export default LoadingSpinnerinterface LoadingSpinnerProps {""
+   fullScreen?: boolean", "";"
+} export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = "md", color = "primary", text, fullScreen = false }) => { const sizeClasses = {} const colorClasses = {} const spinner = ( <div className="flex flex-col items-center justify-center"> <motion .div className="{"${sizeClasses[size]}" border-2 border-gray-300 border-t-2 rounded-full ${colorClasses[color]}"} animate="{{" rotate: 360  }} transition="{{" duration: 1, repeat: Infinity, ease: "linear' }} /" > {text && ( <motion .p className="mt-4 text-gray-600 text-sm" initial="{{" opacity: 0  }} animate="{{" opacity: 1  }} transition="{{" delay: 0.2  }}" > {text} </motion.p> )} </div> ) if(fullScreen) { return ("
+    <div className="fixed inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-50"> <motion .div initial="{{" opacity: 0, scale: 0.8 }} animate="{{" opacity: 1, scale: 1 }} transition="{{" duration: 0.3  }}" > {spinner} </motion.div> </div> ) } return spinner }""
+;"`"""
+>>>>>>> main
+>>>>>>> main

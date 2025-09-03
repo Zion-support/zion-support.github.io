@@ -1,1 +1,19 @@
-const [selectedCategory, setSelectedCategory] = useState ("all") ; const [searchTerm, setSearchTerm] = useState (") ; const [sortBy, setSortBy] = useState ("name") ; const [expandedService, setExpandedService] = useState < any> (null) ; const filteredServices = innovativeServices2028.filter (service => { const matchesCategory = selectedCategory === "all" || serviceCategories.find (cat => cat.id === selectedCategory) ?.services.includes (service.id) ; const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) ||; service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||; service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ; return matchesCategory && matchesSearch}) ; const sortedServices = [...filteredServices].sort ( (a, b) => {; switch (sortBy) {; case "price":; return a.price - b.price; case "roi":; return parseInt (b.roi.split ("%") [0]) - parseInt (a.roi.split ("%") [0]) ; case "name":; return a.name.localeCompare (b.name) ; default:; return 0} }) ; </motion.div>; </div>; </div>; </section>; </div>;) ; } 
+<<<<<<< HEAD
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
+}
+export default function InnovativeServices2028() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="InnovativeServices2028 - Zion Tech Group" description="Professional InnovativeServices2028 services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">InnovativeServices2028</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional InnovativeServices2028 services to help your business grow.
+        </p>
+      </div>
+  )
+}
+}""
+>>>>>>> main

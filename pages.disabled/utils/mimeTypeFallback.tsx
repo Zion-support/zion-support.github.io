@@ -1,6 +1,7 @@
+<<<<<<< HEAD
 export default mimeTypeFallback;
 
-<<<<<<< HEAD:pages.disabled/utils/mimeTypeFallback.tsx
+:pages.disabled/utils/mimeTypeFallback.tsx
 interface MimeTypeMapping {
   [key: string]: string}
 
@@ -40,7 +41,6 @@ class MimeTypeFallback {
     try {
       if (!response.ok) {
 
-=======
 
 interface MimeTypeMapping {}
   [key: string]: string}
@@ -77,48 +77,41 @@ class MimeTypeFallback {}
   async checkAndFixMimeType (url: string: any): Promise < any> {}
     try {}
       if (!response.ok) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/mimeTypeFallback.tsx
         console.warn (`Resource not found: ${url}`) ;
         return false}
 
       
-<<<<<<< HEAD:pages.disabled/utils/mimeTypeFallback.tsx
+:pages.disabled/utils/mimeTypeFallback.tsx
       if (!contentType) {
 `
-=======
       if (!contentType) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/mimeTypeFallback.tsx
         console.warn (`No content - type header for: ${url}`) ;
         return false}
 
       
-<<<<<<< HEAD:pages.disabled/utils/mimeTypeFallback.tsx
+:pages.disabled/utils/mimeTypeFallback.tsx
       if (contentType.includes (expectedType) ||'
         contentType.includes ('application / octet - stream') ) {
 
         return true; // MIME type is correct or generic
-=======
       if (contentType.includes (expectedType) ||
         contentType.includes ('application / octet - stream') ) {}
         return true; // MIME type is correct or generic;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/mimeTypeFallback.tsx
       }
 `
       console.warn (`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`) ;
 
-<<<<<<< HEAD:pages.disabled/utils/mimeTypeFallback.tsx
+:pages.disabled/utils/mimeTypeFallback.tsx
       // Try to fix with fallback URL
       return await this.tryFallbackUrl (url) } catch (error) {
 `
-=======
       // Try to fix with fallback URL;
       return await this.tryFallbackUrl (url) } catch (error) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/mimeTypeFallback.tsx
       console.error (`Error checking MIME type for ${url}:`, error) ;
       return await this.tryFallbackUrl (url) }
   }
 
-<<<<<<< HEAD:pages.disabled/utils/mimeTypeFallback.tsx
+:pages.disabled/utils/mimeTypeFallback.tsx
   private async tryFallbackUrl (originalUrl: string: any): Promise < any> {
 
     if (fallbackUrl) {
@@ -130,7 +123,6 @@ class MimeTypeFallback {}
 
           if (contentType && contentType.includes (expectedType) ) {
 `
-=======
   private async tryFallbackUrl (originalUrl: string: any): Promise < any> {}
     if (fallbackUrl) {}
       console.log (`Trying fallback URL: ${fallbackUrl}`) ;
@@ -138,23 +130,20 @@ class MimeTypeFallback {}
       try {}
         if (response.ok) {}
           if (contentType && contentType.includes (expectedType) ) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/mimeTypeFallback.tsx
             console.log (`Fallback URL has correct MIME type: ${fallbackUrl}`) ;
             this.replaceResource (originalUrl, fallbackUrl) ;
             return true}
         }
-<<<<<<< HEAD:pages.disabled/utils/mimeTypeFallback.tsx
+:pages.disabled/utils/mimeTypeFallback.tsx
       } catch (error) {
 `
-=======
       } catch (error) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/mimeTypeFallback.tsx
         console.error (`Fallback URL failed: ${fallbackUrl}`, error) }
     }
 
     return false}
 
-<<<<<<< HEAD:pages.disabled/utils/mimeTypeFallback.tsx
+:pages.disabled/utils/mimeTypeFallback.tsx
   private replaceResource (originalUrl: string, fallbackUrl: string) {
 
     // Replace script tags
@@ -179,7 +168,6 @@ class MimeTypeFallback {}
           console.warn (`Critical resource has MIME type issues: ${resource}`) }
       } catch (error) {
 `
-=======
   private replaceResource (originalUrl: string, fallbackUrl: string) {}
     // Replace script tags;
     scripts.forEach (script => { (script as HTMLScriptElement) .src = fallbackUrl;
@@ -197,37 +185,32 @@ class MimeTypeFallback {}
         if (!isValid) {}
           console.warn (`Critical resource has MIME type issues: ${resource}`) }
       } catch (error) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/mimeTypeFallback.tsx
         console.error (`Error preloading resource: ${resource}`, error) }
     }
   }
 
-<<<<<<< HEAD:pages.disabled/utils/mimeTypeFallback.tsx
+:pages.disabled/utils/mimeTypeFallback.tsx
   createResourceElement (url: string,'
     type: 'script' | 'stylesheet') : HTMLElement {
 '
     if (type === 'script') {
 
-=======
   createResourceElement (url: string,
     type: 'script' | 'stylesheet') : HTMLElement {}
     if (type === 'script') {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/mimeTypeFallback.tsx
       script.src = url;
       script.async = true;'
       script.type = 'text / javascript';
-<<<<<<< HEAD:pages.disabled/utils/mimeTypeFallback.tsx
+:pages.disabled/utils/mimeTypeFallback.tsx
       return script} else {
 '
-=======
       return script} else {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/mimeTypeFallback.tsx
       link.rel = 'stylesheet';
       link.href = url;'
       link.type = 'text / css';
       return link}
   }
-<<<<<<< HEAD:pages.disabled/utils/mimeTypeFallback.tsx
+:pages.disabled/utils/mimeTypeFallback.tsx
 '
   injectResource (url: anystring, type: 'script' | 'stylesheet': any): Promise < any> {
 
@@ -247,7 +230,6 @@ class MimeTypeFallback {}
 
         document.head.appendChild (element) } else {
 
-=======
 
   injectResource (url: anystring, type: 'script' | 'stylesheet': any): Promise < any> {}
     return new Promise ( (resolve, reject) => {}
@@ -261,15 +243,14 @@ class MimeTypeFallback {}
 
       if (type === 'script') {}
         document.head.appendChild (element) } else {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/mimeTypeFallback.tsx
         document.head.appendChild (element) }
     }) }
 }
 
-<<<<<<< HEAD:pages.disabled/utils/mimeTypeFallback.tsx
+:pages.disabled/utils/mimeTypeFallback.tsx
 // Create singleton instance
 
 '`
-=======
 // Create singleton instance;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/mimeTypeFallback.tsx
+=======
+>>>>>>> main

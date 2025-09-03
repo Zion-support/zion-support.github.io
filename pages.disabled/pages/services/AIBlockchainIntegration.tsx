@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Brain,
   Shield,
@@ -19,7 +20,7 @@ import {}
   Target,
   Rocket} from 'lucide-react.ts';
 
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
 export default function AIBlockchainIntegration(...args: any[]): any {
 
   return()
@@ -29,7 +30,6 @@ export default function AIBlockchainIntegration(...args: any[]): any {
         description="Revolutionary AI-powered blockchain integration platform for secure, intelligent, and automated blockchain operations."
       />
 "
-=======
 export default function AIBlockchainIntegration(...args: any[]): any {}
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -38,14 +38,13 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
         description="Revolutionary AI-powered blockchain integration platform for secure, intelligent, and automated blockchain operations.""
       />
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
       {/* Hero Section */}""
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>"        <div className="relative max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
             transition={{ duration: 0.8 }}"
           >""
             <div className="flex items-center justify-center mb-6">""
@@ -63,7 +62,6 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-=======
             transition={{ duration: 0.8 }}
           >""
             <div className="flex items-center justify-center mb-6">""
@@ -81,21 +79,18 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
               >
                 Get Started Today;
               </motion.button>
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300"
-=======
               <motion.button;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
               >
                 Watch Demo;
               </motion.button>
@@ -103,67 +98,55 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
       {/* Features Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
             whileInView={{ opacity: 1, y: 0 }}"
-=======
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
               Revolutionary Features"
-=======
               Revolutionary Features;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Blockchain Integration platform combines cutting-edge;
               artificial intelligence with blockchain technology to deliver;
               unprecedented capabilities.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
 ""
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
                 whileInView={{ opacity: 1, y: 0 }}"
-=======
                 whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 group""
               >""
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">""
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
                   <feature.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}"
-=======
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
                 </h3>""
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
@@ -171,51 +154,41 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
       {/* Benefits Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
             whileInView={{ opacity: 1, y: 0 }}"
-=======
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
               Why Choose AI Blockchain Integration?"
-=======
               Why Choose AI Blockchain Integration?
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your blockchain operations with intelligent automation;
               and enhanced security.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
 ""
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
                 whileInView={{ opacity: 1, x: 0 }}"
-=======
                 whileInView={{ opacity: 1, x: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
                 className="flex items-start space-x-3""
               >""
@@ -225,40 +198,32 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
       {/* Pricing Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
             whileInView={{ opacity: 1, y: 0 }}"
-=======
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
               Transparent Pricing"
-=======
               Transparent Pricing;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include;
               our core AI features.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
 ""
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
             {pricing.map((plan, index) => (
@@ -267,7 +232,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
 '
                   index === 1''
@@ -275,21 +240,19 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                     : 'border-slate-600/50'``
                 } relative`}
               >"
-=======
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${}
                   index === 1'
                     ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/25''
                     : 'border-slate-600/50'`
                 } relative`}
               >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
                 {index === 1 && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
                 )}"
 ""
                 <div className="text-center mb-8">""
@@ -305,7 +268,6 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 </div>"
 ""
                 <ul className="space-y-4 mb-8">"
-=======
                 )}
 ""
                 <div className="text-center mb-8">""
@@ -321,7 +283,6 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 </div>
 ""
                 <ul className="space-y-4 mb-8">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
                   {plan.features.map((feature, featureIndex) => (""
                     <li key={featureIndex} className="flex items-center">""
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
@@ -329,7 +290,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                   ))}
                 </ul>
 
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
                 <motion.button
                   whileHover={{ scale: 1.05 }}`
                   whileTap={{ scale: 0.95 }}``
@@ -338,7 +299,6 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                     index === 1''
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:shadow-lg hover:shadow-cyan-500/25'''`
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'``
-=======
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}`
@@ -346,7 +306,6 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                     index === 1'
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:shadow-lg hover:shadow-cyan-500/25''
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'`
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
                   }`}
                 >
                   Get Started;
@@ -356,18 +315,16 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
       {/* CTA Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
             transition={{ duration: 0.8 }}"
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -382,7 +339,6 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-=======
             transition={{ duration: 0.8 }}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -397,21 +353,18 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
               >
                 Start Free Trial;
               </motion.button>
-<<<<<<< HEAD:pages.disabled/pages/services/AIBlockchainIntegration.tsx
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300"
-=======
               <motion.button;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIBlockchainIntegration.tsx
               >
                 Contact Sales;
               </motion.button>
@@ -422,3 +375,5 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
     </div>
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

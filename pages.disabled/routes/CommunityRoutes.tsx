@@ -1,12 +1,26 @@
 
 export default function CommunityRoutes(function CommunityRoutes() {): any {}
+<<<<<<< HEAD
   return()
     <>;""
       <Route path = "" element={<CommunityPage  />} />;
-<<<<<<< HEAD:pages.disabled/routes/CommunityRoutes.tsx
+:pages.disabled/routes/CommunityRoutes.tsx
     </>"
   )}'"'"
-=======
     </>
   )}'""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/routes/CommunityRoutes.tsx
+=======
+  return();
+    <>;";
+      <Route path = " element={<CommunityPage  />} />;
+:pages.disabled/routes/CommunityRoutes.tsx;
+    </>";
+
+  )}
+  "";
+
+  )}"""";
+    </>;
+  )}'"";
+>>>>>>> pr-10728
+>>>>>>> main

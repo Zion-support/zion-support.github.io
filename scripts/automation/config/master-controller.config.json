@@ -1,0 +1,92 @@
+{
+  "autoStartEnabled": true,
+  "systemMonitoringEnabled": true,
+  "crossSystemOptimizationEnabled": true,
+  "reportingEnabled": true,
+  "healthCheckInterval": 60000,
+  "reportInterval": 3600000,
+  "maxConcurrentAutomations": 5,
+  "systems": {
+    "repositoryManager": {
+      "enabled": true,
+      "priority": "high",
+      "autoStart": true,
+      "autoRestart": true,
+      "healthThreshold": 0.7
+    },
+    "developmentIntelligence": {
+      "enabled": true,
+      "priority": "medium",
+      "autoStart": true,
+      "autoRestart": true,
+      "healthThreshold": 0.6
+    },
+    "deploymentOrchestrator": {
+      "enabled": true,
+      "priority": "high",
+      "autoStart": true,
+      "autoRestart": true,
+      "healthThreshold": 0.8
+    }
+  },
+  "automationTypes": {
+    "repository_merge": {
+      "enabled": true,
+      "priority": "high",
+      "maxRetries": 3,
+      "timeout": 300000
+    },
+    "code_analysis": {
+      "enabled": true,
+      "priority": "medium",
+      "maxRetries": 2,
+      "timeout": 600000
+    },
+    "deployment": {
+      "enabled": true,
+      "priority": "high",
+      "maxRetries": 3,
+      "timeout": 900000
+    },
+    "health_check": {
+      "enabled": true,
+      "priority": "low",
+      "maxRetries": 1,
+      "timeout": 60000
+    },
+    "optimization": {
+      "enabled": true,
+      "priority": "medium",
+      "maxRetries": 2,
+      "timeout": 300000
+    }
+  },
+  "crossSystemOptimization": {
+    "enabled": true,
+    "interval": 1800000,
+    "strategies": [
+      "conflict_resolution",
+      "complexity_reduction",
+      "deployment_improvement",
+      "performance_optimization"
+    ]
+  },
+  "notifications": {
+    "enabled": true,
+    "channels": ["log", "console"],
+    "events": [
+      "system_start",
+      "system_stop",
+      "system_failure",
+      "automation_complete",
+      "automation_failure",
+      "health_alert"
+    ]
+  },
+  "logging": {
+    "level": "info",
+    "maxLogSize": "10M",
+    "maxLogFiles": 7,
+    "compress": true
+  }
+}

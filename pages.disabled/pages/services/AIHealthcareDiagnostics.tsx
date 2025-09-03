@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {}
   Brain,
   Heart,
@@ -27,7 +28,7 @@ import {}
   Thermometer,
   BrainCircuit} from 'lucide-react.ts';
 
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
 export default function AIHealthcareDiagnostics(...args: any[]): any {
 
   return (""
@@ -37,7 +38,6 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
         description="Revolutionary AI-powered healthcare diagnostics platform for accurate disease detection, medical imaging analysis, and clinical decision support."
       />
 "
-=======
 export default function AIHealthcareDiagnostics(...args: any[]): any {}
   return (""
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -46,14 +46,13 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
         description="Revolutionary AI-powered healthcare diagnostics platform for accurate disease detection, medical imaging analysis, and clinical decision support.""
       />
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
       {/* Hero Section */}""
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10"></div>"        <div className="relative max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
             transition={{ duration: 0.8 }}"
           >""
             <div className="flex items-center justify-center mb-6">""
@@ -71,7 +70,6 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
-=======
             transition={{ duration: 0.8 }}
           >""
             <div className="flex items-center justify-center mb-6">""
@@ -89,21 +87,18 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
               >
                 Schedule Demo;
               </motion.button>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300"
-=======
               <motion.button;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
               >
                 Learn More;
               </motion.button>
@@ -111,67 +106,55 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
       {/* Features Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
             whileInView={{ opacity: 1, y: 0 }}"
-=======
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               Advanced AI Diagnostic Capabilities"
-=======
               Advanced AI Diagnostic Capabilities;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI platform combines cutting-edge machine learning with;
               medical expertise to deliver unprecedented diagnostic accuracy and;
               speed.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
 ""
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                 whileInView={{ opacity: 1, y: 0 }}"
-=======
                 whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 group""
               >""
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">""
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                   <feature.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}"
-=======
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
                 </h3>""
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
@@ -179,58 +162,48 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
       {/* Diagnostic Capabilities Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
             whileInView={{ opacity: 1, y: 0 }}"
-=======
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               Specialized Diagnostic Services"
-=======
               Specialized Diagnostic Services;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive AI-powered diagnostics across all major medical;
               specialties with industry-leading accuracy rates.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
 ""
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
             {diagnosticCapabilities.map((capability, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                 whileInView={{ opacity: 1, x: 0 }}"
-=======
                 whileInView={{ opacity: 1, x: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300""
               >""
                 <div className="flex items-center mb-6">""
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">""
                     <capability.icon className="w-8 h-8 text-white" />
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                   </div>"
                   <div>""
                     <h3 className="text-2xl font-bold text-white">
@@ -239,7 +212,6 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                     <div className="flex items-center">""
                       <span className="text-green-400 font-semibold text-lg">
                         {capability.accuracy}"
-=======
                   </div>
                   <div>""
                     <h3 className="text-2xl font-bold text-white">
@@ -248,20 +220,17 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                     <div className="flex items-center">""
                       <span className="text-green-400 font-semibold text-lg">
                         {capability.accuracy}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
                       </span>""
                       <span className="text-gray-400 ml-2">accuracy</span>
                     </div>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                 </div>"
 ""
                 <ul className="space-y-3">"
-=======
                 </div>
 ""
                 <ul className="space-y-3">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
                   {capability.services.map((service, serviceIndex) => (""
                     <li key={serviceIndex} className="flex items-center">""
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{service}</span>
@@ -273,51 +242,41 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
       {/* Benefits Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
             whileInView={{ opacity: 1, y: 0 }}"
-=======
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               Transform Healthcare Delivery"
-=======
               Transform Healthcare Delivery;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI diagnostics platform delivers measurable improvements in;
               healthcare outcomes, efficiency, and cost reduction.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
 ""
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                 whileInView={{ opacity: 1, x: 0 }}"
-=======
                 whileInView={{ opacity: 1, x: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
                 className="flex items-start space-x-3""
               >""
@@ -327,51 +286,41 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
       {/* Compliance Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
             whileInView={{ opacity: 1, y: 0 }}"
-=======
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               Enterprise-Grade Security & Compliance"
-=======
               Enterprise-Grade Security & Compliance;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Built with healthcare-grade security and compliance standards to;
               protect patient data and ensure regulatory adherence.
             </p>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
           </motion.div>"
-=======
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
 ""
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
             {complianceFeatures.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                 whileInView={{ opacity: 1, y: 0 }}"
-=======
                 whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 text-center""
               >""
@@ -383,26 +332,22 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
       {/* Pricing Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
             whileInView={{ opacity: 1, y: 0 }}"
-=======
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
             transition={{ duration: 0.8 }}""
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               Flexible Pricing Plans"
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">'
@@ -410,7 +355,6 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
               plans include our core AI diagnostic capabilities.
             </p>
           </motion.div>"
-=======
               Flexible Pricing Plans;
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -418,7 +362,6 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
               plans include our core AI diagnostic capabilities.
             </p>
           </motion.div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
 ""
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
             {pricing.map((plan, index) => (
@@ -427,7 +370,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
 '
                   index === 1''
@@ -435,21 +378,19 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                     : 'border-slate-600/50'``
                 } relative`}
               >"
-=======
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${}
                   index === 1'
                     ? 'border-green-400/50 shadow-lg shadow-green-500/25''
                     : 'border-slate-600/50'`
                 } relative`}
               >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
                 {index === 1 && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                 )}"
 ""
                 <div className="text-center mb-8">""
@@ -465,7 +406,6 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 </div>"
 ""
                 <ul className="space-y-4 mb-8">"
-=======
                 )}
 ""
                 <div className="text-center mb-8">""
@@ -481,7 +421,6 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 </div>
 ""
                 <ul className="space-y-4 mb-8">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
                   {plan.features.map((feature, featureIndex) => (""
                     <li key={featureIndex} className="flex items-center">""
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
@@ -489,7 +428,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                   ))}
                 </ul>
 
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                 <motion.button
                   whileHover={{ scale: 1.05 }}`
                   whileTap={{ scale: 0.95 }}``
@@ -498,7 +437,6 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                     index === 1''
                       ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:shadow-lg hover:shadow-green-500/25'''`
                       : 'border border-green-400 text-green-400 hover:bg-green-400/10'``
-=======
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}`
@@ -506,7 +444,6 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                     index === 1'
                       ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:shadow-lg hover:shadow-green-500/25''
                       : 'border border-green-400 text-green-400 hover:bg-green-400/10'`
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
                   }`}
                 >
                   Get Started;
@@ -516,18 +453,16 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           </div>
         </div>
       </section>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
       {/* CTA Section */}""
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-blue-500/10">""
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
             transition={{ duration: 0.8 }}"
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -543,7 +478,6 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
-=======
             transition={{ duration: 0.8 }}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -559,21 +493,18 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
               >
                 Schedule Consultation;
               </motion.button>
-<<<<<<< HEAD:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300"
-=======
               <motion.button;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}""
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIHealthcareDiagnostics.tsx
               >
                 Contact Sales;
               </motion.button>
@@ -584,3 +515,5 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
     </div>
   )}'"`
 '"`'"`
+=======
+>>>>>>> main

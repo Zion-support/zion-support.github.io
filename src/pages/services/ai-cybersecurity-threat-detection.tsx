@@ -1,1 +1,0 @@
-<= icon: Users}; ]; const complianceFrameworks = [;" "SOC 2 Type II",;" "ISO 27001",;" "GDPR",;" "HIPAA",;" "PCI DSS",;" "NIST Cybersecurity Framework"; 

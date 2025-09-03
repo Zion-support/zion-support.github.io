@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';'
 import { Link } from 'react-router-dom';
 import {}
@@ -16,7 +17,7 @@ import {}
   Network,'
   Monitor} from 'lucide-react';
 
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
 export default function AIFinancialTrading() {
   const features = [
     {
@@ -88,7 +89,6 @@ export default function AIFinancialTrading() {
       features: [''
         'Custom AI models',Unlimited trades',Institutional data feeds',Dedicated account manager',White-label solution',Custom integrations',On-premise deployment',Advanced compliance',
       ],'
-=======
 export default function AIFinancialTrading() {}
   const features = []
     {}
@@ -151,11 +151,10 @@ export default function AIFinancialTrading() {}
       features: ['
         'Custom AI models',Unlimited trades',Institutional data feeds',Dedicated account manager',White-label solution',Custom integrations',On-premise deployment',Advanced compliance'
       ],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
       cta: 'Contact Sales',
       popular: false}
   ];
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
   const benefits = [
     {
 
@@ -234,7 +233,6 @@ export default function AIFinancialTrading() {}
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20">"
-=======
   const benefits = []
     {}
       icon: TrendingUp,
@@ -301,38 +299,33 @@ export default function AIFinancialTrading() {}
   ];
   return()
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
       {/* Hero Section */}""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">""
         <div className="text-center mb-16">""
           <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">""
             <TrendingUp className="w-4 h-4 mr-2" />
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
             AI-Powered Financial Technology
           </div>"
 ""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">'"
-=======
             AI-Powered Financial Technology;
           </div>
 ""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
             AI Financial{' '}""
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
               Trading;
             </span>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
           </h1>"
-=======
           </h1>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
 ""
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Revolutionize your trading with AI-powered algorithms. Execute;
             trades with precision, manage risk intelligently, and maximize;
             returns with cutting-edge financial technology.
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
           </p>"
 ""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -345,7 +338,6 @@ export default function AIFinancialTrading() {}
             <Link""
               to="/request-demo""
               className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200"
-=======
           </p>
 ""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -358,22 +350,19 @@ export default function AIFinancialTrading() {}
             <Link""
               to="/request-demo""
               className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
             >
               Request Demo;
             </Link>
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
         {/* Key Stats */}""
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">""
           <div className="text-center">""
             <div className="text-3xl font-bold text-purple-400 mb-2">25%</div>""
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
             <div className="text-gray-400">Higher Returns</div>"
           </div>""
           <div className="text-center">""
@@ -383,7 +372,6 @@ export default function AIFinancialTrading() {}
           <div className="text-center">""
             <div className="text-3xl font-bold text-purple-400 mb-2">μs</div>""
             <div className="text-gray-400">Execution Speed</div>"
-=======
             <div className="text-gray-400">Higher Returns</div>
           </div>""
           <div className="text-center">""
@@ -393,14 +381,13 @@ export default function AIFinancialTrading() {}
           <div className="text-center">""
             <div className="text-3xl font-bold text-purple-400 mb-2">μs</div>""
             <div className="text-gray-400">Execution Speed</div>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
           </div>""
           <div className="text-center">""
             <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>""
             <div className="text-gray-400">Uptime</div>
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
 "
         {/* Features Grid */}""
         <div className="mb-16">""
@@ -411,7 +398,6 @@ export default function AIFinancialTrading() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, idx) => (
               <div"
-=======
 
         {/* Features Grid */}""
         <div className="mb-16">""
@@ -422,29 +408,26 @@ export default function AIFinancialTrading() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, idx) => (
               <div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
                 key={idx}""
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300""
               >""
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}"
-=======
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
                 </h3>""
                 <p className="text-gray-400">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
 "
         {/* Trading Instruments Section */}""
         <div className="mb-16">""
@@ -455,7 +438,6 @@ export default function AIFinancialTrading() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tradingInstruments.map((instrument, idx) => (
               <div"
-=======
 
         {/* Trading Instruments Section */}""
         <div className="mb-16">""
@@ -466,49 +448,44 @@ export default function AIFinancialTrading() {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tradingInstruments.map((instrument, idx) => (
               <div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
                 key={idx}""
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300""
               >""
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
                   <instrument.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {instrument.title}"
-=======
                   <instrument.icon className="w-6 h-6 text-white" />
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {instrument.title}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
                 </h3>""
                 <p className="text-gray-400">{instrument.description}</p>
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
 "
         {/* Pricing Section */}""
         <div className="mb-16">""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Transparent Pricing Plans
           </h2>"
-=======
 
         {/* Pricing Section */}""
         <div className="mb-16">""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Transparent Pricing Plans;
           </h2>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
 ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, idx) => (
               <div;
                 key={idx}
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
 '
                   plan.popular''
@@ -516,21 +493,19 @@ export default function AIFinancialTrading() {}
                     : 'border-gray-700'``
                 }`}
               >"
-=======
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${}
                   plan.popular'
                     ? 'border-purple-500 bg-purple-500/5''
                     : 'border-gray-700'`
                 }`}
               >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
                     </span>
                   </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
                 )}"
 ""
                 <div className="text-center mb-6">""
@@ -547,7 +522,6 @@ export default function AIFinancialTrading() {}
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIdx) => (
                     <li"
-=======
                 )}
 ""
                 <div className="text-center mb-6">""
@@ -564,7 +538,6 @@ export default function AIFinancialTrading() {}
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIdx) => (
                     <li;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
                       key={featureIdx}""
                       className="flex items-center space-x-3""
                     >""
@@ -572,7 +545,7 @@ export default function AIFinancialTrading() {}
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
                 </ul>"
 ""
                 <button className="w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">"
@@ -580,7 +553,6 @@ export default function AIFinancialTrading() {}
                     <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white block">
                       {plan.cta}
                     </span>"
-=======
                 </ul>
 ""
                 <button className="w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 transform hover:scale-105">
@@ -588,7 +560,6 @@ export default function AIFinancialTrading() {}
                     <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white block">
                       {plan.cta}
                     </span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
                   ) : (""
                     <span className="border border-gray-600 text-gray-300 block hover:border-purple-500 hover:text-purple-400">
                       {plan.cta}
@@ -599,59 +570,51 @@ export default function AIFinancialTrading() {}
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
         {/* Benefits Section */}""
         <div className="mb-16">""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose AI Financial Trading?
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
           </h2>"
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, idx) => (
               <div"
-=======
           </h2>
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, idx) => (
               <div;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
                 key={idx}""
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300""
               >""
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
                   <benefit.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {benefit.title}"
-=======
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {benefit.title}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
                 </h3>""
                 <p className="text-gray-400">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
 "
-=======
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
         {/* CTA Section */}""
         <div className="text-center">""
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8">""
             <h2 className="text-3xl font-bold text-white mb-4">
-<<<<<<< HEAD:pages.disabled/pages/services/AIFinancialTrading.jsx
+:pages.disabled/pages/services/AIFinancialTrading.jsx
               Ready to Transform Your Trading?"
             </h2>""
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -668,7 +631,6 @@ export default function AIFinancialTrading() {}
               <Link""
                 to="/request-demo""
                 className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200"
-=======
               Ready to Transform Your Trading?
             </h2>""
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -685,7 +647,6 @@ export default function AIFinancialTrading() {}
               <Link""
                 to="/request-demo""
                 className="px-8 py-3 border border-purple-500 text-purple-400 font-medium rounded-lg hover:bg-purple-500/10 transition-all duration-200""
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/pages/services/AIFinancialTrading.jsx
               >
                 Schedule Demo;
               </Link>
@@ -697,3 +658,5 @@ export default function AIFinancialTrading() {}
   );
 }'"`
 '"`'"`
+=======
+>>>>>>> main

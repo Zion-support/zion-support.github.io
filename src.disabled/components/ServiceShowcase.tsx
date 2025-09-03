@@ -1,0 +1,1 @@
+import React, { useState, useMemo } from; "react""; "framer-motion""; "../data/services" const ServiceShowcase: React.FC = React.memo(() => { const [selectedCategor,y, setSelectedCategory] = useState<string>(", "all") const [sortBy, setSortBy] = useState<;"; "name" |;"; "price" |;"; "popularity">(", "popularity") "'

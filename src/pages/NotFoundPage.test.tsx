@@ -1,11 +1,25 @@
-describe ('NotFoundPage', () => {}
-'
-  it ('renders without crashing', () => {}
-    render (<NotFoundPage  />) ;'
-    expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
-'
-  it ('displays expected content', () => {}
-    render (<NotFoundPage  />) ;
-    // Add specific test assertions based on component content;
-  }) }) ;
-'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+describe('NotFoundPage', () => {}; '; it('renders without crashing', () => {}; render(<NotFoundPage />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<NotFoundPage />) ;
+=======
+describe("NotFoundPage", () => {}; "; it("renders without crashing", () => {}; render(<NotFoundPage / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<NotFoundPage  />)
+}
+    render()
+}
+    expect(screen.getByRole("main) || screen.getByText(/.*/)).toBeInTheDocument()
+}
+  })
+}
+""
+  it("displays expected content", () => {
+    render(<NotFoundPage /" >)
+}
+    // comment
+  })
+}
+  });"
+"
+});""
+>>>>>>> main
+>>>>>>> main

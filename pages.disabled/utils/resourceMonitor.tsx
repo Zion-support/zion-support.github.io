@@ -1,11 +1,10 @@
+<<<<<<< HEAD
 export default resourceMonitor;
 
-<<<<<<< HEAD:pages.disabled/utils/resourceMonitor.tsx
+:pages.disabled/utils/resourceMonitor.tsx
 interface ResourceError {
-=======
 
 interface ResourceError {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/resourceMonitor.tsx
   url: string;
   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
   error: string;
@@ -17,11 +16,9 @@ class ResourceMonitor {}
   private retryAttempts = new Map < string, number> () ;
   private maxRetries = 3;
 
-<<<<<<< HEAD:pages.disabled/utils/resourceMonitor.tsx
+:pages.disabled/utils/resourceMonitor.tsx
   start() {
-=======
   start () {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/resourceMonitor.tsx
     if (this.isMonitoring) return;
 
     this.isMonitoring = true;
@@ -31,7 +28,7 @@ class ResourceMonitor {}
 '
     console.log ('🔍 Resource Monitor started') }
 
-<<<<<<< HEAD:pages.disabled/utils/resourceMonitor.tsx
+:pages.disabled/utils/resourceMonitor.tsx
   stop() {
     this.isMonitoring = false;'
     console.log ('🔍 Resource Monitor stopped') }
@@ -45,7 +42,6 @@ class ResourceMonitor {}
 
           if (url) {
 
-=======
   stop () {}
     this.isMonitoring = false;
     console.log ('🔍 Resource Monitor stopped') }
@@ -56,7 +52,6 @@ class ResourceMonitor {}
       event => {}
         if (event.target && event.target !== window) {}
           if (url) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/resourceMonitor.tsx
             this.handleResourceError (url,
               this.getResourceType (target) ,'
               event.error?.message || 'Unknown error') }
@@ -64,7 +59,7 @@ class ResourceMonitor {}
       },
       true) ;
 
-<<<<<<< HEAD:pages.disabled/utils/resourceMonitor.tsx
+:pages.disabled/utils/resourceMonitor.tsx
     // Listen for unhandled promise rejections'
     window.addEventListener ('unhandledrejection', event => {
 
@@ -72,27 +67,23 @@ class ResourceMonitor {}
         typeof event.reason === 'string' &&'
         event.reason.includes ('MIME') ) {
 '
-=======
     // Listen for unhandled promise rejections;
     window.addEventListener ('unhandledrejection', event => {}
       if (event.reason &&
         typeof event.reason === 'string' &&
         event.reason.includes ('MIME') ) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/resourceMonitor.tsx
         this.handleResourceError ('unknown',other',
           `MIME type error: ${event.reason}`) }
     }) }
 
-<<<<<<< HEAD:pages.disabled/utils/resourceMonitor.tsx
+:pages.disabled/utils/resourceMonitor.tsx
   private setupResourceObservers() {
     // Monitor DOM changes for new resources
     if (window.MutationObserver) {
 
-=======
   private setupResourceObservers () {}
     // Monitor DOM changes for new resources;
     if (window.MutationObserver) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/resourceMonitor.tsx
               this.monitorElement (element) }
           }) }) }) ;
 
@@ -100,7 +91,7 @@ class ResourceMonitor {}
       observer.observe (document.body, { childList: true, subtree: true }) }
   }
 
-<<<<<<< HEAD:pages.disabled/utils/resourceMonitor.tsx
+:pages.disabled/utils/resourceMonitor.tsx
   private monitorElement (element: HTMLElement) {
 
     // Monitor scripts'
@@ -139,7 +130,6 @@ class ResourceMonitor {}
       if (!response.ok) {
 '
         this.handleResourceError (url,other',`
-=======
   private monitorElement (element: HTMLElement) {}
     // Monitor scripts;
     if (element.tagName === 'SCRIPT' && element.src) {}
@@ -167,12 +157,11 @@ class ResourceMonitor {}
     try {}
       if (!response.ok) {}
         this.handleResourceError (url,other',
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/resourceMonitor.tsx
           `HTTP ${response.status}: ${response.statusText}`) ;
         return}
 
       
-<<<<<<< HEAD:pages.disabled/utils/resourceMonitor.tsx
+:pages.disabled/utils/resourceMonitor.tsx
       if (!contentType) {
 '
         this.handleResourceError (url,other',No content - type header') ;
@@ -188,7 +177,6 @@ class ResourceMonitor {}
           `Incorrect MIME type: ${contentType} (expected css) `) }
     } catch (error) {
 '`
-=======
       if (!contentType) {}
         this.handleResourceError (url,other',No content - type header') ;
         return}
@@ -200,13 +188,12 @@ class ResourceMonitor {}
         this.handleResourceError (url,stylesheet',
           `Incorrect MIME type: ${contentType} (expected css) `) }
     } catch (error) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/resourceMonitor.tsx
       this.handleResourceError (url,other', `Fetch error: ${error}`) }
   }
 
   private handleResourceError (url: string,'
     type: ResourceError['type'],
-<<<<<<< HEAD:pages.disabled/utils/resourceMonitor.tsx
+:pages.disabled/utils/resourceMonitor.tsx
     error: string) {
 
     const resourceError: ResourceError = {
@@ -215,7 +202,6 @@ class ResourceMonitor {}
       type,
       error,
       timestamp: Date.now () };
-=======
     error: string) {}
     const resourceError: ResourceError = {}
       url,
@@ -223,7 +209,6 @@ class ResourceMonitor {}
       error,
       timestamp: Date.now () 
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/resourceMonitor.tsx
 
     this.errors.push (resourceError) ;'
     console.error ('🚨 Resource Error:', resourceError) ;
@@ -233,17 +218,15 @@ class ResourceMonitor {}
 
     // Report to analytics / monitoring service;
     this.reportError (resourceError) }
-<<<<<<< HEAD:pages.disabled/utils/resourceMonitor.tsx
+:pages.disabled/utils/resourceMonitor.tsx
 '
   private attemptRetry (url: string, type: ResourceError['type']) {
 
     if (attempts >= this.maxRetries) {
 `
-=======
 
   private attemptRetry (url: string, type: ResourceError['type']) {}
     if (attempts >= this.maxRetries) {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/resourceMonitor.tsx
       console.warn (`Max retry attempts reached for ${url}`) ;
       return}
 
@@ -253,7 +236,7 @@ class ResourceMonitor {}
         this.retryResource (url, type) },
       Math.pow (2, attempts) * 1000) ; // Exponential backoff;
   }
-<<<<<<< HEAD:pages.disabled/utils/resourceMonitor.tsx
+:pages.disabled/utils/resourceMonitor.tsx
 '
   private retryResource (url: string, type: ResourceError['type']) {
 `
@@ -320,7 +303,6 @@ class ResourceMonitor {}
   getErrorSummary() {
     this.errors.forEach (error => {
 
-=======
 
   private retryResource (url: string, type: ResourceError['type']) {}
     console.log (`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get (url) }) `) ;
@@ -373,16 +355,15 @@ class ResourceMonitor {}
 
   getErrorSummary () {}
     this.errors.forEach (error => {}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/resourceMonitor.tsx
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}) ;
 
     return summary}
 }
 
-<<<<<<< HEAD:pages.disabled/utils/resourceMonitor.tsx
+:pages.disabled/utils/resourceMonitor.tsx
 // Create singleton instance
 
 '`
-=======
 // Create singleton instance;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-ed0a:src/utils/resourceMonitor.tsx
+=======
+>>>>>>> main

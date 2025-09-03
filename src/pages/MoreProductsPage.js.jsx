@@ -9,3 +9,14 @@ export default function MoreProductsPage() {
   max: 2000 
 
 }}/>)}
+
+
+export { CATEGORY_FILTERS, MoreProductsPage };
+
+export { CATEGORY_FILTERS, MoreProductsPage };
+
+export { CATEGORY_FILTERS, MoreProductsPage };
+
+export { CATEGORY_FILTERS, MoreProductsPage };
+
+export { CATEGORY_FILTERS, MoreProductsPage };

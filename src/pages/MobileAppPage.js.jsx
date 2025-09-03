@@ -1,5 +1,5 @@
 import React from "react";
-import SEO from "@/components/SEO";
+import { SEO } from "@/components/SEO";
 import { MobileAppHero } from "@/components/mobile-app/MobileAppHero";
 import { AppFeatures } from "@/components/mobile-app/AppFeatures";
 import { AppScreenshots } from "@/components/mobile-app/AppScreenshots";
@@ -21,3 +21,14 @@ const MobileAppPage = () => {
                                                 ,
                                                     <AppStoreBanner />)};
 export default MobileAppPage;
+
+
+export { MobileAppPage };
+
+export { MobileAppPage };
+
+export { MobileAppPage };
+
+export { MobileAppPage };
+
+export { MobileAppPage };

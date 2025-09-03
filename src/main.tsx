@@ -1,1 +1,68 @@
-import "./index.css"; // Performance monitoring const reportWebVitals = (metric: any) => { if (process.env.NODE_ENV === "development") { // // // // console.log("Web Vitals:", metric); } // In production, you could send this to analytics }; // Main render function const renderApp = () => { const root = ReactDOM.createRoot(document.getElementById("root")!); root.render( <React.StrictMode> <Router> <HelmetProvider> <ErrorBoundary> <App /> </ErrorBoundary> </HelmetProvider> </Router> </React.StrictMode> ); }; // Initialize the application try { renderApp(); // Register service worker with error handling registerServiceWorker().catch(error => { // // // console.warn("Service worker registration failed:", error); }); // Report web vitals if available if (typeof window !== "undefined" && "PerformanceObserver" in window) { try { const observer = new PerformanceObserver(list => { for (const entry of list.getEntries()) { reportWebVitals(entry); } }); observer.observe({ entryTypes: ["navigation", "resource", "paint"] }); } catch (error) { // // // console.warn("Performance monitoring failed:", error); } } } catch (error) { // // // console.error("Failed to render application:", error); // Fallback error display const rootElement = document.getElementById("root"); if (rootElement) { rootElement.innerHTML = ` <div style=" min-height: 100vh; background: #111827; color: white; display: flex; align-items: center; justify-content: center; padding: 1rem; font-family: system-ui, -apple-system, sans-serif;" > <div style="text-align: center; max-width: 500px;"> <h1 style="font-size: 2rem; margin-bottom: 1rem;">Application Failed to Load</h1> <p style="color: #9ca3af; margin-bottom: 1.5rem;"> We"re sorry, but the application failed to initialize. Please try refreshing the page. </p> <button onclick="window.location.reload()" style=" background: #06b6d4; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 0.5rem; cursor: pointer; font-size: 1rem;" > Refresh Page </button> </div> </div> `; } } 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import App from './App.tsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <Router>
+        <App />
+      </Router>
+    </HelmetProvider>
+  </React.StrictMode>,
+) 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD import React from 'react'; import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom'; import { Provider  } from 'react-redux'; import { store } from './store'; import App from './App'; import './index.css'; ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode> <Provider store={store}> <BrowserRouter> <App /> </BrowserRouter> </Provider> </React.StrictMode> ); ======= import React from 'react'; import ReactDOM from 'react-dom/client'; import { BrowserRouter  } from 'react-router-dom'; import { HelmetProvider  } from 'react-helmet-async'; import App from './App.tsx'; import './index.css';
+=======
+import React from "react"
+ReactDOM.createRoot(document.getElementById("root")!).render(<React.StrictMode> <Provider store="{store}"> <BrowserRouter> <App  /> </BrowserRouter> </Provider> </React.StrictMode> );"
+,"});,"})","});,"})","});,"})","});,"})"
+;,"});,"})"
+ReactDOM.createRoot(document.getElementById("root")!).render(;,"});,"})"
+  <React.StrictMode>;,"});,"})"
+    <HelmetProvider>;,"});,"})"
+      <BrowserRouter>;,"});,"})"
+        <App  />;,"});,"})"
+      </BrowserRouter>;,"});,"})"
+    </HelmetProvider>;,"});,"})"
+  </React.StrictMode>;,"});,"})"
+);,"});,"})"
+  document.getElementById("root") as: HTMLElement"
+)
+}
+root.render(<App: />)"
+root.render(<App  />),
+),,
+root.render(&apos,<App  />)"
+const Main: React.FC = () => {
+  return ("
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900>"
+      <SEO title="Main" - Zion Tech Group"">
+        description="Professional Main services by Zion Tech Group,"
+keywords="main," technology, services" />"
+      <div className="container mx-auto px-4 py-20>"
+        <div className=text-center">"
+          <h1 className="text-4xl font-bold text-white mb-6>Main</h1>"
+          <p className="text-xl" text-gray-300 mb-8">
+            Professional Main services to help your business grow.
+          </p>"
+          <div className="flex justify-center>"
+            <a href=/contact" "
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover: shadow-lg transition-all duration-300"
+            >
+              Get Started,
+            </a>
+          </div>;,
+  )}
+
+export default Main;""
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
