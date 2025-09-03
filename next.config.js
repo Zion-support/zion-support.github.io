@@ -7,6 +7,7 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   // Only treat *.route.tsx/ts as pages to avoid compiling corrupted files
+  // Compile only whitelisted page files to avoid corrupted files
   pageExtensions: ['route.tsx', 'route.ts'],
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
@@ -32,4 +33,4 @@ const nextConfig = {
   }
 };
 
-module.exports = nextConfig;
+export default nextConfig;

@@ -7,14 +7,12 @@ const EnhancedNavigation: React.FC = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   const services = [
-    { name: 'AI Development', href: '/services/ai-development' },
-    { name: 'Cloud Services', href: '/services/cloud-services' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile Development', href: '/services/mobile-development' },
-    { name: 'IoT Platforms', href: '/services/iot-platforms' },
-    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Security', href: '/security' },
+    { name: 'Case Studies', href: '/case-studies' },
   ];
 
   const products = [
@@ -72,25 +70,7 @@ const EnhancedNavigation: React.FC = () => {
               </div>
             </div>
 
-            {/* Products Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center text-gray-600 hover:text-blue-600 transition-colors">
-                Products
-                <ChevronDown className="ml-1 w-4 h-4" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                {products.map((product) => (
-                  <Link
-                    key={product.name}
-                    href={product.href}
-                  >
-                    <span className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">
-                      {product.name}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
+            {/* Products section removed: routes not available */}
 
             <Link href="/about"><span className="text-gray-600 hover:text-blue-600 transition-colors">
               About
@@ -147,19 +127,7 @@ const EnhancedNavigation: React.FC = () => {
                 ))}
               </div>
               
-              <div className="space-y-2">
-                <div className="font-semibold text-gray-800 py-2">Products</div>
-                {products.map((product) => (
-                  <Link
-                    key={product.name}
-                    href={product.href}
-                  >
-                    <span className="block py-2 pl-4 text-gray-600 hover:text-blue-600">
-                      {product.name}
-                    </span>
-                  </Link>
-                ))}
-              </div>
+              {/* Products section removed: routes not available */}
               
               <Link href="/about"><span className="block py-2 text-gray-600 hover:text-blue-600">
                 About
@@ -187,6 +155,5 @@ const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 };
-;
+
 export default EnhancedNavigation;
-}
