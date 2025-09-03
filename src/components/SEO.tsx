@@ -37,7 +37,7 @@ export const SEO: React.FC<SEOProps> = ({
   };
 
   return (
-    <Helmet>
+    <Head>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -69,6 +69,6 @@ export const SEO: React.FC<SEOProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
-    </Helmet>
+    </Head>
   );
 };

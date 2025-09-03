@@ -34,6 +34,7 @@ import {
   ArrowRight,
   Calendar,
   DollarSign,
+  Play,
   X
 } from 'lucide-react';
 
@@ -57,6 +58,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: Users },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
+    { name: 'Demo', href: '/demo', icon: Play },
     { name: 'Contact', href: '/contact', icon: Phone },
     { name: 'Blog', href: '/blog', icon: FileText },
     { name: 'Careers', href: '/careers', icon: Briefcase }
@@ -66,6 +69,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   { name: 'AI Services', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Network },
     { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Lock },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Server },
     { name: 'Web Development', href: '/services/web-development', icon: Code },
     { name: 'Cloud Services', href: '/services/cloud-services', icon: Server },
     { name: 'AI Development', href: '/services/ai-development', icon: Cpu }
