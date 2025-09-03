@@ -1,1 +1,5 @@
-import React from 'react'; export const safeStorage = { export default safeStorage;
+// comment
+export const safeStorage = {}
+
+
+export default safeStorage

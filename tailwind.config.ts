@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
@@ -152,3 +153,78 @@ const config: Config = {
 };
 
 export default config;
+=======
+import type { Config } from "tailwindcss";
+export default {;
+  content: [;
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",;
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",;
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",;
+  ],;
+  darkMode: "class",;
+  theme: {;
+    extend: {;
+      colors: {;
+        // Zion Tech Group brand colors;
+        zion: {;
+          50: "#f0f9ff",;
+          100: "#e0f2fe",;
+          200: "#bae6fd",;
+          300: "#7dd3fc",;
+          400: "#38bdf8",;
+          500: "#0ea5e9",;
+          600: "#0284c7",;
+          700: "#0369a1",;
+          800: "#075985",;
+          900: "#0c4a6e",;
+          950: "#082f49",;,
+},;
+        // Extended gray palette for better contrast;
+        gray: {;
+          950: "#0a0a0a",;
+          960: "#050505",;
+          970: "#030303",;
+          980: "#020202",;
+          990: "#010101",;,
+},;
+        // Accent colors;
+        accent: {;
+          cyan: "#06b6d4",;
+          blue: "#3b82f6",;
+          purple: "#8b5cf6",;
+          pink: "#ec4899",;
+          emerald: "#10b981",;
+          amber: "#f59e0b",;
+          rose: "#f43f5e",;,
+},;,
+},;
+      animation: {;
+        "gradient": "gradient 6s ease infinite",;
+        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",;
+        "bounce-slow": "bounce 3s infinite",;
+        "spin-slow": "spin 8s linear infinite",;,
+},;
+      keyframes: {;
+        gradient: {;
+          "0%, 100%": {;
+            "background-size": "200% 200%",;
+            "background-position": "left center",;,
+},;
+          "50%": {;
+            "background-size": "200% 200%",;
+            "background-position": "right center",;,
+},;,
+},;,
+},;
+      fontFamily: {;
+        sans: ["Inter", "system-ui", "sans-serif"],;,
+},;,
+},;,
+},;
+  plugins: [;
+    require("@tailwindcss/forms"),;
+    require("@tailwindcss/typography"),;
+    require("@tailwindcss/aspect-ratio"),;
+  ],;,
+} satisfies Config
+>>>>>>> main

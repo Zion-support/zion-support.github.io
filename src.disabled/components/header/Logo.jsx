@@ -1,0 +1,1 @@
+import React from; "react""; "react-router-dom""; "lucide-react" export function Logo({ customLogo, customColor, className = ";", " }) { if: (customLogo) { return ( <Link to="/" className={`{`flex-shrink-0` group ${className}`}>" <img"" src=`{customLogo}`} "";" alt="Logo""," className="h-8 w-auto" / / / / / /> </Link>" )"}"; const logoColor = customColor || "#3b82f6"";"`

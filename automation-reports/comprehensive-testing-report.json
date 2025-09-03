@@ -1,0 +1,549 @@
+{
+  "timestamp": "2025-09-02T19:07:40.695Z",
+  "totalTests": 107,
+  "testResults": [
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AIChatAssistant.test.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AIChatbot.test.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AIChatbotSystem.test.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AICodeGenerator.test.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AccessibilityEnhancer.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AccessibilityEnhancer.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AccessibilityManager.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AccessibilityManager.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Analytics.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Analytics.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AnalyticsManager.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AnalyticsManager.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AnalyticsTracker.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/AnalyticsTracker.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ContactForm.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ContactForm.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ContactFormEnhanced.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ContactFormEnhanced.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedAnalytics.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedAnalytics.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedErrorBoundary.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedErrorBoundary.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedFooter.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedNavigation.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedPerformanceMonitor.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedPerformanceMonitor.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedSEO.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedSEO.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ErrorBoundary.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ErrorBoundary.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Footer.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Footer.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Header.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ImageOptimizer.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/InteractiveElements.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Layout.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Layout.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/LoadingSpinner.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/LoadingSpinner.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/MainLayout.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/MainSidebar.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/MainSidebar.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ModernLayout.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Navigation.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Navigation.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/OptimizedImage.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/OptimizedImage.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/PWARegistration.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/PWARegistration.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/PerformanceEnhancer.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/PerformanceEnhancer.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/PerformanceMonitor.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/PerformanceMonitor.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/PerformanceOptimizer.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/PerformanceOptimizer.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SEO.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SEO.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SEOEnhancer.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SEOEnhancer.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SEOHead.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SEOOptimizer.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SEOOptimizer.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SecurityDashboard.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SecurityDashboard.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SecurityEnhancer.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SecurityEnhancer.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SecurityHeaders.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SecurityHeaders.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ServicesSection.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ServicesSection.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/TestimonialsSection.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/TestimonialsSection.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/InteractiveElements.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/WebVitals.dynamic.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/WebVitals.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedFooter.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedNavigation.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/EnhancedSidebar2025.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Header.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/MainLayout.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ModernFooter.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ModernHeader.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ModernLayout.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/UltraAdvancedNavigation.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/ImageOptimizer.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/SEOHead.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Badge.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Button.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/Card.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/FuturisticAnimatedBackground2029.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/InteractiveNavigation.test.js",
+      "status": "generated";
+},
+    {
+      "type": "unit_test",
+      "file": "/workspace/__tests__/InteractiveStats.test.js",
+      "status": "generated";
+},
+    {
+      "type": "integration_test",
+      "file": "/workspace/__tests__/NotFound.integration.test.js",
+      "status": "generated";
+},
+    {
+      "type": "integration_test",
+      "file": "/workspace/__tests__/_app.integration.test.js",
+      "status": "generated";
+},
+    {
+      "type": "integration_test",
+      "file": "/workspace/__tests__/_document.integration.test.js",
+      "status": "generated";
+},
+    {
+      "type": "integration_test",
+      "file": "/workspace/__tests__/enhanced-home.integration.test.js",
+      "status": "generated";
+},
+    {
+      "type": "integration_test",
+      "file": "/workspace/__tests__/index.p.integration.test.js",
+      "status": "generated";
+},
+    {
+      "type": "integration_test",
+      "file": "/workspace/__tests__/index.integration.test.js",
+      "status": "generated";
+},
+    {
+      "type": "integration_test",
+      "file": "/workspace/__tests__/pricing-guide.integration.test.js",
+      "status": "generated";
+},
+    {
+      "type": "integration_test",
+      "file": "/workspace/__tests__/services.integration.test.js",
+      "status": "generated";
+},
+    {
+      "type": "integration_test",
+      "file": "/workspace/__tests__/sitemap.integration.test.js",
+      "status": "generated";
+},
+    {
+      "type": "e2e_test",
+      "file": "/workspace/__tests__/e2e.test.js",
+      "status": "generated";
+},
+    {
+      "type": "performance_test",
+      "file": "/workspace/__tests__/performance.test.js",
+      "status": "generated";
+},
+    {
+      "type": "accessibility_test",
+      "file": "/workspace/__tests__/accessibility.test.js",
+      "status": "generated";
+},
+    {
+      "type": "security_test",
+      "file": "/workspace/__tests__/security.test.js",
+      "status": "generated";
+},
+    {
+      "type": "jest_tests",
+      "status": "failed",
+      "output": "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"},
+    {
+      "type": "playwright_tests",
+      "status": "failed",
+      "output": "Command failed: npx playwright test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n";
+}
+  ],
+  "summary": {
+    "unit_tests": 92,
+    "integration_tests": 9,
+    "e2e_tests": 1,
+    "performance_tests": 1,
+    "accessibility_tests": 1,
+    "security_tests": 1,
+    "passed": 0,
+    "failed": 2}
+}
