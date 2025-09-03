@@ -1,1 +1,15 @@
-export function LanguageDetectionPopup() { const [open, setOpen] = useState(false); const { t } = useTranslation(); const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType; const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null); useEffect(() => { const hasVisited = safeStorage.getItem("zion_has_visited"); if (hasVisited) return; safeStorage.setItem("zion_has_visited", "true"); const browserLang = navigator.language.substring(0, 2) as SupportedLanguage; const isSupported = supportedLanguages.some(lang => lang.code === browserLang); if (isSupported && browserLang !== currentLanguage) { setDetectedLanguage(browserLang); setOpen(true); } }, [currentLanguage, supportedLanguages]);""
+import React from 'react';
+import {SEO } from '@/components/SEO';
+
+export default function LanguageDetectionPopup() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="LanguageDetectionPopup - Zion Tech Group" description="Professional LanguageDetectionPopup services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">LanguageDetectionPopup</h1>
+        <p className="text-gray-300 text-lg">
+          Professional LanguageDetectionPopup services to help your business grow.
+        </p>
+      </div>
+    </div>
+  );
+}

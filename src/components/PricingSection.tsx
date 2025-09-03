@@ -1,15 +1,12 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Check, 
-  Star, 
-  Zap, 
-  Shield, 
-  Users, 
-  ArrowRight,
-  Crown,
-  Rocket,
+  Check, Star, 
+  Zap, Shield, 
+  Users, ArrowRight,
+  Crown, Rocket,
   Building
 } from 'lucide-react';
 
@@ -18,63 +15,39 @@ export const PricingSection: React.FC = () => {
 
   const plans = [
     {
-      name: 'Starter',
-      icon: Rocket,
-      description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'annual' ? 299 : 349,
-      originalPrice: billingCycle === 'annual' ? 399 : 449,
-      features: [
+      name: 'Starter', icon: Rocket,
+      description: 'Perfect for small businesses and startups', price: billingCycle === 'annual' ? 299 : 349,
+      originalPrice: billingCycle === 'annual' ? 399 : 449, features: [
         'AI-powered analytics dashboard',
-        'Basic cloud infrastructure',
-        '24/7 email support',
-        'Monthly performance reports',
-        'Basic security features',
+        'Basic cloud infrastructure', '24/7 email support',
+        'Monthly performance reports', 'Basic security features',
         'Up to 5 team members'
-      ],
-      cta: 'Get Started',
-      popular: false,
-      color: 'from-blue-500 to-cyan-500'
+      ], cta: 'Get Started',
+      popular: false, color: 'from-blue-500 to-cyan-500'
     },
     {
-      name: 'Professional',
-      icon: Building,
-      description: 'Ideal for growing businesses',
-      price: billingCycle === 'annual' ? 799 : 899,
-      originalPrice: billingCycle === 'annual' ? 999 : 1099,
-      features: [
+      name: 'Professional', icon: Building,
+      description: 'Ideal for growing businesses', price: billingCycle === 'annual' ? 799 : 899,
+      originalPrice: billingCycle === 'annual' ? 999 : 1099, features: [
         'Everything in Starter',
-        'Advanced AI & ML capabilities',
-        'Custom integrations',
-        'Priority support (4hr response)',
-        'Advanced security & compliance',
-        'Up to 25 team members',
-        'Custom reporting',
+        'Advanced AI & ML capabilities', 'Custom integrations',
+        'Priority support (4hr response)', 'Advanced security & compliance',
+        'Up to 25 team members', 'Custom reporting',
         'API access'
-      ],
-      cta: 'Start Free Trial',
-      popular: true,
-      color: 'from-purple-500 to-pink-500'
+      ], cta: 'Start Free Trial',
+      popular: true, color: 'from-purple-500 to-pink-500'
     },
     {
-      name: 'Enterprise',
-      icon: Crown,
-      description: 'For large organizations with complex needs',
-      price: 'Custom',
-      originalPrice: null,
-      features: [
+      name: 'Enterprise', icon: Crown,
+      description: 'For large organizations with complex needs', price: 'Custom',
+      originalPrice: null, features: [
         'Everything in Professional',
-        'Custom AI model training',
-        'Dedicated account manager',
-        '24/7 phone & chat support',
-        'SOC 2 compliance',
-        'Unlimited team members',
-        'Custom SLA guarantees',
-        'On-premise deployment options',
-        'White-label solutions'
-      ],
-      cta: 'Contact Sales',
-      popular: false,
-      color: 'from-yellow-500 to-orange-500'
+        'Custom AI model training', 'Dedicated account manager',
+        '24/7 phone & chat support', 'SOC 2 compliance',
+        'Unlimited team members', 'Custom SLA guarantees',
+        'On-premise deployment options', 'White-label solutions'
+      ], cta: 'Contact Sales',
+      popular: false, color: 'from-yellow-500 to-orange-500'
     }
   ];
 
@@ -88,7 +61,7 @@ export const PricingSection: React.FC = () => {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-zion-purple/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,7 +71,7 @@ export const PricingSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            Simple,{' '}
+            Simple, {' '}
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Transparent Pricing
             </span>
@@ -141,7 +114,7 @@ export const PricingSection: React.FC = () => {
         </motion.div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
           {plans.map((plan, index) => {
             const IconComponent = plan.icon;
             return (
@@ -166,7 +139,7 @@ export const PricingSection: React.FC = () => {
                 )}
 
                 {/* Main Card */}
-                <div className={`relative h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${
+                <div className={`relative h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 ${
                   plan.popular ? 'border-zion-cyan/50 bg-zion-blue-light/20' : ''
                 }`}>
                   {/* Icon */}
@@ -270,5 +243,20 @@ export const PricingSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
+=======
+import React from 'react';
+import {SEO } from '@/components/SEO';
+
+export default function PricingSection() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="PricingSection - Zion Tech Group" description="Professional PricingSection services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">PricingSection</h1>
+        <p className="text-gray-300 text-lg">
+          Professional PricingSection services to help your business grow.
+        </p>
+      </div>
+    </div>
+>>>>>>> main
   );
-};
+}

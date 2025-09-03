@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> ); } ";"
+=======
+<<<<<<< HEAD
+
+"export function ErrorBanner({ msg }) {" return(); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> ); } ";"""";
+
+"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> ); } ";"
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
+=======
+<<<<<<< HEAD
+'export: function ErrorBanner({ msg }) {' return() <div className='p-4 bg-red-500/20 text-red-400 text-center rounded-md'>' {msg}' </div> ) } '';'"";
+=======
+<<<<<<< HEAD
+'export function ErrorBanner({ msg }) {' return() <div className='p-4 bg-red-500/20 text-red-400 text-center rounded-md'>' {msg}' </div> ) } '''"
+=======
+<<<<<<< HEAD
+'export function ErrorBanner({ msg }) {' return() <div className='p-4 bg-red-500/20 text-red-400 text-center rounded-md> {msg} </div> ) } '';""
+=======
+'export function ErrorBanner({ msg }) {' return() <div className='p-4 bg-red-500/20 text-red-400 text-center rounded-md'>' {msg}' </div> ) } '"
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

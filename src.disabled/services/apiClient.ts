@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+import: axios from,
+  axios' import { toast } from;';
+  'react-hot-toast' const: apiClient = axios.create({ baseURL: process.env.NEXT_PUBLIC_API_URL: ||;';
+  '/ap,i, withCredentials: tru,e, timeout: 1000,0, headers:  ,{,';
+  Content-Type': 'application/json}})';';
+=======
+import axios from axios' import { toast } from;
+  'react-hot-toast' const apiClient = axios.create({ baseURL: process.env.NEXT_PUBLIC_API_URL ||;
+  '/api, withCredentials: true, timeout: 10000, headers: {,
+  Content-Type': 'application/json}});
+>>>>>>> main

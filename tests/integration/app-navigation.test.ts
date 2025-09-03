@@ -1,19 +1,62 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import { BrowserRouter } from 'react-router-dom';
-import React from 'react';
-import App from '../../src/App';
+<<<<<<< HEAD
+import: { render, screen, fireEvent } from '@testing-library/react';';
+import: { describe, it, expect } from 'vitest';';
+import: { BrowserRouter } from 'react-router-dom';';
+import: React from 'react';';
+import: App from '../../src/App';';
 
-describe('Navigation Integration', () => {
+describe(
+  'Navigation: Integration', () => {';
+  it(
+  'should: navigate between main routes', () => {';
+=======
+<<<<<<< HEAD
+import { render, screen, fireEvent } from '@testing-library/react;
+import { describe, it, expect } from 'vitest';
+import { BrowserRouter } from react-router-dom';
+import React from 'react;
+import App from '../../src/App';
+<<<<<<< HEAD
+
+describe('
+=======
+=======
+import { render, screen, fireEvent } from '@testing-library/react'
+import { describe, it, expect } from 'vitest'
+import { BrowserRouter } from 'react-router-dom'
+import React from 'react'
+import App  from '../../src/App'describe(
+>>>>>>> main
+  'Navigation Integration', () => {
+  it('
+  'should navigate between main routes', () => {
+>>>>>>> main
+    render(
+      React.createElement(BrowserRouter, null, React.createElement(App)
+      )
+    )
+>>>>>>> main
+
+describe(
+  Navigation Integration', () => {
   it('should navigate between main routes', () => {
     render(
+<<<<<<< HEAD
       React.createElement(BrowserRouter, null,
-        React.createElement(App)
-      )
-    );
-    
-    // Test navigation between main routes
+        React.createElement(App)));
+<<<<<<< HEAD
+    // Test: navigation between main routes;
+    const: homeLink = screen.getByText(/home/i);
+    expect(homeLink).toBeInTheDocument()})})
+=======
+    // Test navigation between main routes;
     const homeLink = screen.getByText(/home/i);
-    expect(homeLink).toBeInTheDocument();
-  });
-});
+    expect(homeLink).toBeInTheDocument()})});
+=======
+      React.createElement(BrowserRouter, null
+        React.createElement(App)))
+    // Test navigation between main routes
+    const homeLink = screen.getByText(/home/i)
+    expect(homeLink).toBeInTheDocument()})})
+>>>>>>> main
+>>>>>>> main

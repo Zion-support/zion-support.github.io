@@ -1,41 +1,25 @@
 #!/bin/bash
 
-echo "Fixing merge conflicts in all source files..."
+# Find all files with merge conflicts and fix them
+echo "Fixing merge conflicts in all files..."
 
-# Find all files with merge conflicts
-files_with_conflicts=$(find src -name "*.jsx" -o -name "*.tsx" -o -name "*.js" -o -name "*.ts" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
+# Find all files with merge conflict markers
+files_with_conflicts=$(grep -r -l "<<<<<<< HEAD\|=======\|>>>>>>> " . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.log" --exclude="*.txt" --exclude="*.json" 2>/dev/null)
 
-if [ -z "$files_with_conflicts" ]; then
-    echo "No merge conflicts found."
-    exit 0
-fi
-
-echo "Found files with merge conflicts:"
-echo "$files_with_conflicts"
-echo ""
-
-# Fix each file
 for file in $files_with_conflicts; do
-    echo "Fixing: $file"
+    echo "Fixing conflicts in: $file"
     
     # Create a backup
     cp "$file" "$file.backup"
     
-    # Remove merge conflict markers and keep the better code
-    # Remove everything between <<<<<<< HEAD and =======
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    # Use sed to remove merge conflict markers and keep the HEAD version
+    sed -i '/^<<<<<<< HEAD$/,/^=======$/d' "$file"
+    sed -i '/^>>>>>>> .*$/d' "$file"
     
-    # Remove >>>>>>> main and any remaining conflict markers
-    sed -i '/>>>>>>> main/d' "$file"
-    sed -i '/<<<<<<< HEAD/d' "$file"
-    sed -i '/=======/d' "$file"
-    
-    # Remove empty lines that might be left
-    sed -i '/^[[:space:]]*$/d' "$file"
-    
-    echo "Fixed: $file"
+    # Remove any remaining conflict markers
+    sed -i '/^<<<<<<< HEAD$/d' "$file"
+    sed -i '/^=======$/d' "$file"
+    sed -i '/^>>>>>>> .*$/d' "$file"
 done
 
-echo ""
-echo "All merge conflicts have been fixed!"
-echo "Backup files have been created with .backup extension"
+echo "Merge conflicts fixed in all files."
