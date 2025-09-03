@@ -1,50 +1,37 @@
 {
-  "timestamp": "2025-09-03T16:33:37.751Z",
-  "status": "warning",
-  "checks": [
+  "timestamp": "2025-09-03T20:49:09.012Z",
+  "status": "completed",
+  "dependencyScan": {
+    "status": "error",
+    "error": "Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+  },
+  "fileScan": [
     {
-      "name": "Package Dependencies",
-      "status": "pass",
-      "message": "Dependencies analyzed",
-      "severity": "info"
+      "file": "package.json",
+      "type": "dangerous_dependency",
+      "dependency": "child_process",
+      "version": "^1.0.2",
+      "severity": "medium"
     },
     {
-      "name": "Code Analysis",
-      "status": "pass",
-      "message": "Analyzed 13 code files",
-      "severity": "info"
+      "file": "package.json",
+      "type": "dangerous_dependency",
+      "dependency": "fs",
+      "version": "^0.0.1-security",
+      "severity": "medium"
     },
     {
-      "name": "File Permissions",
-      "status": "pass",
-      "message": "File permissions checked",
-      "severity": "info"
-    },
-    {
-      "name": "Network Configuration",
-      "status": "warning",
-      "message": "Custom network configuration detected",
-      "severity": "info"
-    },
-    {
-      "name": "NPM Audit",
-      "status": "warning",
-      "message": "NPM audit not available or failed",
-      "severity": "info"
+      "file": "package.json",
+      "type": "dangerous_dependency",
+      "dependency": "fs-extra",
+      "version": "^11.3.1",
+      "severity": "medium"
     }
   ],
-  "vulnerabilities": [
-    {
-      "name": "Vulnerable Package",
-      "description": "Package vite may have known vulnerabilities",
-      "severity": "moderate",
-      "fix": "Update vite to latest version"
-    }
-  ],
-  "recommendations": [
-    "Review and fix all identified vulnerabilities",
-    "Implement regular security scanning in CI/CD pipeline",
-    "Use environment variables for sensitive configuration",
-    "Keep dependencies updated regularly"
-  ]
+  "summary": {
+    "totalIssues": 3,
+    "highSeverity": 0,
+    "mediumSeverity": 3,
+    "lowSeverity": 0
+  }
 }
