@@ -45,6 +45,10 @@ export function AppHeader() {;
     { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star, description: 'Future-ready Technology Solutions', category: 'Featured', featured: true, color: 'from-indigo-500 to-purple-500' },
     
     // AI & Machine Learning
+    { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform', icon: Brain, description: 'Transform customer data into actionable insights', category: 'AI & ML', color: 'from-purple-500 to-pink-500', featured: true },
+    { name: 'AI Workflow Automation Suite', href: '/services/ai-workflow-automation-suite', icon: Workflow, description: 'Intelligent business process automation', category: 'AI & ML', color: 'from-blue-500 to-cyan-500', featured: true },
+    { name: 'AI Social Media Manager', href: '/services/ai-social-media-manager', icon: Share2, description: 'AI-powered social media management', category: 'AI & ML', color: 'from-pink-500 to-purple-500', featured: true },
+    { name: 'Smart Document Processing', href: '/services/smart-document-processing', icon: FileText, description: 'AI-powered document processing', category: 'AI & ML', color: 'from-green-500 to-teal-500', featured: true },
     { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain, description: 'Advanced analytics & ML insights', category: 'AI & ML', color: 'from-blue-500 to-indigo-500' },
     { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield, description: 'Automated regulatory compliance', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
     { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users, description: 'Intelligent sales optimization', category: 'AI & ML', color: 'from-purple-500 to-pink-500' },
@@ -56,6 +60,7 @@ export function AppHeader() {;
     { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: BarChart3, description: 'Intelligent financial insights', category: 'AI & ML', color: 'from-green-500 to-emerald-500' },
     
     // Cloud & DevOps
+    { name: 'Quantum Cloud Infrastructure', href: '/services/quantum-cloud-infrastructure', icon: Atom, description: 'Next-generation quantum-enhanced cloud', category: 'Cloud & DevOps', color: 'from-indigo-500 to-purple-500', featured: true },
     { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure automation & scaling', category: 'Cloud & DevOps', color: 'from-blue-500 to-cyan-500' },
     { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server, description: 'Enterprise infrastructure solutions', category: 'Cloud & DevOps', color: 'from-gray-500 to-slate-500' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization', category: 'Cloud & DevOps', color: 'from-green-500 to-emerald-500' },

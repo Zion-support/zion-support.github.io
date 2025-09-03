@@ -102,6 +102,10 @@ const footerSections = [
     title: 'AI & Research Services',
     icon: Brain,
     links: [
+      { name: 'AI Customer Insights Platform', path: '/services/ai-customer-insights-platform', icon: Brain },
+      { name: 'AI Workflow Automation Suite', path: '/services/ai-workflow-automation-suite', icon: Workflow },
+      { name: 'AI Social Media Manager', path: '/services/ai-social-media-manager', icon: Share2 },
+      { name: 'Smart Document Processing', path: '/services/smart-document-processing', icon: FileText },
       { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: Brain },
       { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
       { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: TrendingUp },
@@ -133,6 +137,7 @@ const footerSections = [
     title: 'Cloud & Infrastructure',
     icon: Cloud,
     links: [
+      { name: 'Quantum Cloud Infrastructure', path: '/services/quantum-cloud-infrastructure', icon: Atom },
       { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Cloud },
       { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
       { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },

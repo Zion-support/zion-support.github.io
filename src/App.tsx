@@ -79,6 +79,13 @@ const MobileSurvey = lazy(() => import('./pages/services/MobileSurvey'));
 const AIAutonomousCodeReviewer = lazy(() => import('./pages/services/AIAutonomousCodeReviewer'));
 const ZeroTrustNetworkAccess = lazy(() => import('./pages/services/ZeroTrustNetworkAccess'));
 
+// New comprehensive services
+const AICustomerInsightsPlatform = lazy(() => import('./pages/services/ai-customer-insights-platform'));
+const AIWorkflowAutomationSuite = lazy(() => import('./pages/services/ai-workflow-automation-suite'));
+const SmartDocumentProcessing = lazy(() => import('./pages/services/smart-document-processing'));
+const AISocialMediaManager = lazy(() => import('./pages/services/ai-social-media-manager'));
+const QuantumCloudInfrastructure = lazy(() => import('./pages/services/quantum-cloud-infrastructure'));
+
 // Additional new service pages
 const AIPoweredSEO = lazy(() => import('./pages/services/AIPoweredSEO'));
 const InterviewAssessmentAI = lazy(() => import('./pages/services/InterviewAssessmentAI'));
@@ -371,6 +378,13 @@ function App() {
                     <Route path="/services/ai-predictive-maintenance" element={<AIPredictiveMaintenance />} />
                     <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
                     <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
+                    
+                    {/* New Comprehensive Service Routes */}
+                    <Route path="/services/ai-customer-insights-platform" element={<AICustomerInsightsPlatform />} />
+                    <Route path="/services/ai-workflow-automation-suite" element={<AIWorkflowAutomationSuite />} />
+                    <Route path="/services/smart-document-processing" element={<SmartDocumentProcessing />} />
+                    <Route path="/services/ai-social-media-manager" element={<AISocialMediaManager />} />
+                    <Route path="/services/quantum-cloud-infrastructure" element={<QuantumCloudInfrastructure />} />
                     
                     {/* Additional Pages */}
                     <Route path="/dashboard" element={<Dashboard />} />
