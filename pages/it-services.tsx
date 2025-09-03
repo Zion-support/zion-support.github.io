@@ -1051,6 +1051,171 @@ export default function ITServices() {
       pricing: '$5,000 - $30,000/month',
       delivery: '6-16 weeks',
       category: 'IT Compliance Services'
+    },
+    {
+      title: 'AI-Powered IT Asset Management',
+      description: 'Intelligent IT asset tracking, optimization, and lifecycle management with predictive analytics',
+      icon: Monitor,
+      features: [
+        'Automated asset discovery and inventory management,AI-powered asset optimization and cost reduction,Predictive maintenance and lifecycle planning,License compliance and software asset management,Asset performance monitoring and analytics,Integration with ITSM and procurement systems'
+      ],
+      pricing: '$2,000 - $12,000/month',
+      delivery: '3-6 weeks',
+      category: 'Asset Management Services'
+    },
+    {
+      title: 'Advanced Cybersecurity Suite',
+      description: 'Next-generation cybersecurity platform with AI threat detection and automated response',
+      icon: Shield,
+      features: [
+        'AI-powered threat detection and analysis,Automated incident response and remediation,Zero-trust network access implementation,Advanced persistent threat (APT) protection,Security orchestration and automation,Compliance monitoring and reporting'
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '6-12 weeks',
+      category: 'Advanced Security Services'
+    },
+    {
+      title: 'Hybrid Cloud Management Platform',
+      description: 'Unified management platform for hybrid and multi-cloud environments with cost optimization',
+      icon: Cloud,
+      features: [
+        'Multi-cloud resource management and optimization,Automated workload placement and scaling,Cost optimization and FinOps automation,Disaster recovery and backup orchestration,Compliance and governance across clouds,Performance monitoring and optimization'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'Cloud Management Services'
+    },
+    {
+      title: 'Intelligent Network Operations Center (NOC)',
+      description: 'AI-powered network monitoring and management with predictive analytics and automation',
+      icon: Network,
+      features: [
+        '24/7 network monitoring and management,AI-powered anomaly detection and alerting,Automated network optimization and tuning,Predictive network maintenance and capacity planning,Network performance analytics and reporting,Integration with existing network infrastructure'
+      ],
+      pricing: '$3,000 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'Network Operations Services'
+    },
+    {
+      title: 'Enterprise Data Governance Platform',
+      description: 'Comprehensive data governance solution with AI-powered data quality and compliance management',
+      icon: Database,
+      features: [
+        'Automated data discovery and classification,Data quality monitoring and remediation,Privacy compliance and data protection,Data lineage tracking and documentation,Master data management and consolidation,Integration with data lakes and warehouses'
+      ],
+      pricing: '$6,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Data Governance Services'
+    },
+    {
+      title: 'Autonomous IT Operations Platform',
+      description: 'Self-healing IT infrastructure with AI-powered automation and predictive maintenance',
+      icon: Settings,
+      features: [
+        'Self-healing infrastructure and automated remediation,Predictive maintenance and capacity planning,Automated incident detection and resolution,Performance optimization and tuning,Change management and deployment automation,Integration with existing IT tools and processes'
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '10-20 weeks',
+      category: 'Autonomous IT Services'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing platform with real-time processing and low-latency applications',
+      icon: Cpu,
+      features: [
+        'Edge computing infrastructure design and deployment,Real-time data processing and analytics,Edge AI and machine learning deployment,Content delivery network (CDN) optimization,Edge security and device management,Integration with cloud and on-premises systems'
+      ],
+      pricing: '$7,000 - $45,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge Computing Services'
+    },
+    {
+      title: 'Zero-Trust Security Architecture',
+      description: 'Comprehensive zero-trust security implementation with identity-centric access control',
+      icon: Lock,
+      features: [
+        'Identity and access management (IAM) implementation,Micro-segmentation and network isolation,Continuous authentication and authorization,Device trust and compliance verification,Data encryption and protection,Security monitoring and incident response'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '10-20 weeks',
+      category: 'Zero-Trust Services'
+    },
+    {
+      title: 'Intelligent IT Service Management (ITSM)',
+      description: 'AI-powered IT service management with automated workflows and intelligent routing',
+      icon: Users,
+      features: [
+        'AI-powered ticket routing and prioritization,Automated service request fulfillment,Knowledge management and self-service portals,Service level agreement (SLA) monitoring,Change management and approval workflows,Integration with business applications and tools'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'ITSM Services'
+    },
+    {
+      title: 'Quantum-Safe Cryptography Implementation',
+      description: 'Post-quantum cryptography solutions for future-proof security against quantum threats',
+      icon: Shield,
+      features: [
+        'Quantum-safe algorithm implementation and migration,Cryptographic key management and rotation,Quantum threat assessment and planning,Hybrid classical-quantum security solutions,Compliance with quantum-safe standards,Integration with existing security infrastructure'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum Security Services'
+    },
+    {
+      title: 'Intelligent Business Process Automation',
+      description: 'AI-powered business process automation with intelligent decision-making and optimization',
+      icon: Zap,
+      features: [
+        'Process discovery and analysis automation,Intelligent workflow design and optimization,Robotic process automation (RPA) implementation,Document processing and data extraction,Integration with business applications,Performance monitoring and continuous improvement'
+      ],
+      pricing: '$6,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Process Automation Services'
+    },
+    {
+      title: 'Advanced Threat Intelligence Platform',
+      description: 'AI-powered threat intelligence and security analytics with proactive threat hunting',
+      icon: Shield,
+      features: [
+        'Real-time threat intelligence gathering and analysis,Proactive threat hunting and investigation,Malware analysis and reverse engineering,Threat actor profiling and attribution,Security incident correlation and analysis,Integration with security tools and platforms'
+      ],
+      pricing: '$7,000 - $45,000/month',
+      delivery: '8-16 weeks',
+      category: 'Threat Intelligence Services'
+    },
+    {
+      title: 'Intelligent Data Center Management',
+      description: 'AI-powered data center operations with predictive maintenance and energy optimization',
+      icon: Server,
+      features: [
+        'Predictive maintenance and equipment monitoring,Energy efficiency optimization and cooling management,Capacity planning and resource optimization,Automated backup and disaster recovery,Environmental monitoring and compliance,Integration with data center infrastructure management (DCIM)'
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '6-12 weeks',
+      category: 'Data Center Services'
+    },
+    {
+      title: 'Autonomous Software Testing Platform',
+      description: 'AI-powered automated testing with intelligent test case generation and execution',
+      icon: Code,
+      features: [
+        'Automated test case generation and optimization,Intelligent test execution and reporting,Performance testing and load testing automation,API testing and integration testing,Visual regression testing and UI automation,Continuous testing integration with CI/CD pipelines'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Testing Services'
+    },
+    {
+      title: 'Intelligent Compliance Management System',
+      description: 'AI-powered compliance monitoring and reporting with automated risk assessment',
+      icon: Shield,
+      features: [
+        'Automated compliance monitoring and assessment,Regulatory requirement tracking and updates,Risk assessment and mitigation planning,Audit trail and documentation management,Compliance reporting and dashboard creation,Integration with business systems and processes'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-12 weeks',
+      category: 'Compliance Management Services'
     }
   ];
 

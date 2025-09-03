@@ -1258,6 +1258,116 @@ export default function AIServices() {
       pricing: '$8,000 - $35,000/month',
       delivery: '8-16 weeks',
       category: 'Environmental AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Business Operations',
+      description: 'Intelligent business process automation with self-managing workflows and decision-making',
+      icon: Settings,
+      features: [
+        'Autonomous workflow orchestration and optimization,Self-healing business processes,Intelligent decision-making algorithms,Real-time performance monitoring and adjustment,Cross-system integration and synchronization,Predictive business intelligence and forecasting'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '12-24 weeks',
+      category: 'Autonomous Business AI'
+    },
+    {
+      title: 'AI-Powered Quantum Machine Learning',
+      description: 'Advanced quantum-enhanced machine learning for complex optimization problems',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm development and optimization,Hybrid quantum-classical ML models,Quantum data processing and analysis,Quantum neural network training,Quantum optimization for business problems,Integration with existing ML infrastructure'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Quantum ML AI'
+    },
+    {
+      title: 'AI-Powered Synthetic Data Generation',
+      description: 'Intelligent synthetic data creation for training and testing without privacy concerns',
+      icon: Database,
+      features: [
+        'Privacy-preserving synthetic data generation,Realistic data pattern replication,Statistical property preservation,Multi-modal data synthesis (text, images, tabular),Bias detection and mitigation in synthetic data,Integration with ML training pipelines'
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Synthetic Data AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Code Review',
+      description: 'Intelligent code analysis and automated review system with security and quality checks',
+      icon: Code,
+      features: [
+        'Automated code quality assessment,Security vulnerability detection,Performance optimization suggestions,Code style and best practices enforcement,Automated test generation,Integration with CI/CD pipelines'
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '6-12 weeks',
+      category: 'Code Review AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Research Assistant',
+      description: 'Intelligent research automation with literature analysis and hypothesis generation',
+      icon: Search,
+      features: [
+        'Automated literature review and analysis,Hypothesis generation and testing,Research methodology optimization,Data collection and analysis automation,Citation and reference management,Research collaboration and knowledge sharing'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '10-20 weeks',
+      category: 'Research AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Customer Success',
+      description: 'Intelligent customer success management with proactive engagement and retention',
+      icon: Users,
+      features: [
+        'Predictive customer health scoring,Automated engagement and outreach,Personalized success journey mapping,Churn prediction and prevention,Success metrics tracking and optimization,Integration with CRM and support systems'
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '8-16 weeks',
+      category: 'Customer Success AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Financial Planning',
+      description: 'Intelligent financial planning and investment optimization with risk management',
+      icon: TrendingUp,
+      features: [
+        'Automated financial goal setting and tracking,Investment portfolio optimization,Risk assessment and management,Tax optimization strategies,Retirement planning and forecasting,Real-time market analysis and rebalancing'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '10-20 weeks',
+      category: 'Financial Planning AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Supply Chain Risk Management',
+      description: 'Intelligent supply chain risk assessment and mitigation with predictive analytics',
+      icon: Shield,
+      features: [
+        'Real-time risk monitoring and assessment,Supplier risk scoring and monitoring,Disruption prediction and early warning,Automated contingency planning,Supply chain resilience optimization,Integration with ERP and logistics systems'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Supply Chain Risk AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Quality Assurance',
+      description: 'Intelligent quality control and testing automation with continuous improvement',
+      icon: CheckCircle,
+      features: [
+        'Automated test case generation and execution,Quality metrics tracking and analysis,Defect prediction and prevention,Continuous quality improvement,Integration with development workflows,Real-time quality monitoring and alerting'
+      ],
+      pricing: '$7,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Quality Assurance AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Compliance Monitoring',
+      description: 'Intelligent regulatory compliance monitoring and reporting with automated remediation',
+      icon: Shield,
+      features: [
+        'Real-time compliance monitoring and assessment,Automated regulatory reporting,Compliance risk identification and mitigation,Policy enforcement and violation detection,Audit trail and documentation,Integration with business systems and processes'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '10-20 weeks',
+      category: 'Compliance AI'
     }
   ];
   const aiTechnologies = [

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
 
 export function ModernHeader() {
@@ -21,7 +21,11 @@ export function ModernHeader() {
     { name: 'Micro SaaS', href: '/micro-saas', description: 'Custom software solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity', description: 'Security and compliance' },
     { name: 'Cloud Platforms', href: '/cloud-platforms', description: 'Scalable cloud infrastructure' },
-    { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence and insights' }
+    { name: 'Data Analytics', href: '/data-analytics', description: 'Business intelligence and insights' },
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions', description: 'Web3 and decentralized applications' },
+    { name: 'IoT Solutions', href: '/iot-solutions', description: 'Internet of Things and edge computing' },
+    { name: 'Quantum Computing', href: '/quantum-computing', description: 'Quantum algorithms and optimization' },
+    { name: 'Digital Transformation', href: '/digital-transformation', description: 'Business process automation' }
   ];
 
   return (
@@ -49,8 +53,8 @@ export function ModernHeader() {
               </div>
             </div>
             <div className="hidden lg:flex items-center space-x-4">
-              <Link href="/pricing" className="hover:text-blue-200 transition-colors">Pricing</Link>
-              <Link href="/careers" className="hover:text-blue-200 transition-colors">Careers</Link>
+              <Link to="/pricing" className="hover:text-blue-200 transition-colors">Pricing</Link>
+              <Link to="/careers" className="hover:text-blue-200 transition-colors">Careers</Link>
               <Link to="/support" className="hover:text-blue-200 transition-colors">Support</Link>
             </div>
           </div>
@@ -63,7 +67,7 @@ export function ModernHeader() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center">
+              <Link to="/" className="flex items-center">
                 <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
@@ -73,7 +77,7 @@ export function ModernHeader() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Home
               </Link>
               
@@ -108,7 +112,7 @@ export function ModernHeader() {
                     </div>
                     <div className="mt-4 pt-4 border-t border-gray-200 px-6">
                       <Link
-                        href="/services"
+                        to="/services"
                         className="text-blue-600 hover:text-blue-700 font-medium"
                       >
                         View All Services →
@@ -118,16 +122,16 @@ export function ModernHeader() {
                 )}
               </div>
 
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 About
               </Link>
-              <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Case Studies
               </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Blog
               </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Contact
               </Link>
             </nav>
@@ -135,7 +139,7 @@ export function ModernHeader() {
             {/* CTA Button */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
-                href="/contact"
+                to="/contact"
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium"
               >
                 Get Started
@@ -159,7 +163,7 @@ export function ModernHeader() {
           <div className="lg:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-6 space-y-4">
               <Link
-                href="/"
+                to="/"
                 className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
                 onClick={closeMobileMenu}
               >
@@ -179,7 +183,7 @@ export function ModernHeader() {
                   </Link>
                 ))}
                 <Link
-                  href="/services"
+                  to="/services"
                   className="block pl-4 text-blue-600 hover:text-blue-700 transition-colors font-medium"
                   onClick={closeMobileMenu}
                 >
@@ -188,28 +192,28 @@ export function ModernHeader() {
               </div>
 
               <Link
-                href="/about"
+                to="/about"
                 className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
                 onClick={closeMobileMenu}
               >
                 About
               </Link>
               <Link
-                href="/case-studies"
+                to="/case-studies"
                 className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
                 onClick={closeMobileMenu}
               >
                 Case Studies
               </Link>
               <Link
-                href="/blog"
+                to="/blog"
                 className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
                 onClick={closeMobileMenu}
               >
                 Blog
               </Link>
               <Link
-                href="/contact"
+                to="/contact"
                 className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"
                 onClick={closeMobileMenu}
               >
@@ -218,7 +222,7 @@ export function ModernHeader() {
               
               <div className="pt-4 border-t border-gray-200">
                 <Link
-                  href="/contact"
+                  to="/contact"
                   className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium text-center"
                   onClick={closeMobileMenu}
                 >
