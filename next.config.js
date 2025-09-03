@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   
@@ -11,20 +10,29 @@ const nextConfig = {
   
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion', '@heroicons/react'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
     optimizeCss: true,
     scrollRestoration: true,
   },
   
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
+  
   typescript: {
     ignoreBuildErrors: process.env.NODE_ENV === 'production',
+  },
+  
+  output: 'standalone',
+  
+  // Disable static generation
+  trailingSlash: false,
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
   },
   
   images: {

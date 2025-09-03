@@ -38,9 +38,17 @@ import {
   Car,
   TreePine,
   Satellite,
-  Mic
+  Mic,
+  BookOpen,
+  CreditCard
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
+
+export async function getServerSideProps() {
+  return {
+    props: {},
+  };
+}
 
 export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';
@@ -145,6 +153,116 @@ export default function MicroSaaS() {
       pricing: '$5,000 - $20,000/month',
       delivery: '6-10 weeks',
       category: 'Analytics SaaS'
+    },
+    {
+      title: 'AI-Powered Social Media Management',
+      description: 'Intelligent social media scheduling, content creation, and analytics platform',
+      icon: Globe,
+      features: [
+        'AI-generated content and captions,Optimal posting time recommendations,Hashtag research and optimization,Social media analytics and insights,Influencer identification and outreach,Multi-platform content distribution'
+      ],
+      pricing: '$1,800 - $6,500/month',
+      delivery: '2-4 weeks',
+      category: 'Social Media SaaS'
+    },
+    {
+      title: 'Smart Inventory Management System',
+      description: 'AI-driven inventory optimization with demand forecasting and automated reordering',
+      icon: Database,
+      features: [
+        'Demand forecasting and prediction,Automated reorder point calculations,Multi-location inventory tracking,Supplier performance monitoring,Cost optimization algorithms,Real-time inventory analytics'
+      ],
+      pricing: '$3,200 - $11,000/month',
+      delivery: '4-7 weeks',
+      category: 'Inventory SaaS'
+    },
+    {
+      title: 'AI-Powered Email Marketing Platform',
+      description: 'Intelligent email marketing with personalization and automation',
+      icon: Mail,
+      features: [
+        'AI-driven email personalization,Behavioral trigger automation,A/B testing and optimization,Deliverability monitoring and improvement,Subscriber segmentation and targeting,Performance analytics and ROI tracking'
+      ],
+      pricing: '$2,200 - $8,500/month',
+      delivery: '3-5 weeks',
+      category: 'Email Marketing SaaS'
+    },
+    {
+      title: 'Smart Expense Management Tool',
+      description: 'Automated expense tracking and reimbursement platform with AI categorization',
+      icon: CreditCard,
+      features: [
+        'Receipt scanning and OCR,Automatic expense categorization,Policy compliance checking,Approval workflow automation,Integration with accounting systems,Expense analytics and reporting'
+      ],
+      pricing: '$1,500 - $5,500/month',
+      delivery: '2-4 weeks',
+      category: 'Finance SaaS'
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description: 'Intelligent e-learning platform with personalized learning paths',
+      icon: BookOpen,
+      features: [
+        'Personalized learning recommendations,Adaptive content delivery,Progress tracking and analytics,Automated assessment and grading,Collaborative learning features,Mobile learning optimization'
+      ],
+      pricing: '$4,500 - $16,000/month',
+      delivery: '6-10 weeks',
+      category: 'EdTech SaaS'
+    },
+    {
+      title: 'Smart Property Management Platform',
+      description: 'Comprehensive property management with tenant screening and maintenance automation',
+      icon: Home,
+      features: [
+        'Tenant screening and background checks,Maintenance request automation,Rent collection and payment processing,Property performance analytics,Lease management and renewals,Financial reporting and accounting'
+      ],
+      pricing: '$3,800 - $13,500/month',
+      delivery: '5-8 weeks',
+      category: 'PropTech SaaS'
+    },
+    {
+      title: 'AI-Powered Fitness Coaching App',
+      description: 'Personalized fitness and nutrition coaching with AI-driven recommendations',
+      icon: Heart,
+      features: [
+        'Personalized workout plans,AI nutrition coaching and meal planning,Progress tracking and analytics,Social features and challenges,Integration with wearables,Video exercise demonstrations'
+      ],
+      pricing: '$2,800 - $9,500/month',
+      delivery: '4-7 weeks',
+      category: 'HealthTech SaaS'
+    },
+    {
+      title: 'Smart Fleet Management System',
+      description: 'AI-driven fleet optimization with route planning and maintenance scheduling',
+      icon: Car,
+      features: [
+        'Route optimization and planning,Fuel consumption monitoring,Maintenance scheduling and alerts,Driver behavior analysis,Real-time tracking and monitoring,Cost optimization and reporting'
+      ],
+      pricing: '$5,500 - $19,000/month',
+      delivery: '7-12 weeks',
+      category: 'Fleet Management SaaS'
+    },
+    {
+      title: 'AI-Powered Customer Feedback Platform',
+      description: 'Intelligent feedback collection and analysis with sentiment insights',
+      icon: MessageSquare,
+      features: [
+        'Multi-channel feedback collection,Sentiment analysis and insights,Automated response generation,Trend analysis and reporting,Integration with CRM systems,Customer satisfaction scoring'
+      ],
+      pricing: '$2,000 - $7,500/month',
+      delivery: '3-5 weeks',
+      category: 'Feedback SaaS'
+    },
+    {
+      title: 'Smart Appointment Scheduling System',
+      description: 'AI-powered scheduling with automated optimization and conflict resolution',
+      icon: Calendar,
+      features: [
+        'Intelligent scheduling optimization,Automated conflict resolution,Multi-timezone support,Reminder and notification system,Integration with calendar apps,Analytics and reporting dashboard'
+      ],
+      pricing: '$1,200 - $4,500/month',
+      delivery: '2-3 weeks',
+      category: 'Scheduling SaaS'
     },
     {
       title: 'Workflow Automation Engine',

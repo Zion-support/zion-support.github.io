@@ -47,21 +47,30 @@ const Home = memo(() => {
       description: 'Cutting-edge artificial intelligence solutions including autonomous systems, machine learning, and intelligent automation',
       icon: Brain,
       href: '/ai-services',
-      features: ['AI-Powered Email Responder', 'Computer Vision Solutions', 'Predictive Analytics Platform', 'AI Chatbot & Virtual Assistant']
+      features: ['AI-Powered Email Responder', 'Computer Vision Solutions', 'Predictive Analytics Platform', 'AI Chatbot & Virtual Assistant'],
+      pricing: 'Starting at $2,500/month',
+      delivery: '2-8 weeks',
+      benefits: ['Increased efficiency by 40%', 'Reduced operational costs', '24/7 intelligent automation', 'Scalable AI solutions']
     },
     {
       title: 'IT Services',
       description: 'Comprehensive information technology services including cloud infrastructure, cybersecurity, and network management',
       icon: Network,
       href: '/it-services',
-      features: ['Cloud Infrastructure & Migration', 'Cybersecurity & Compliance', 'Network Infrastructure', 'IT Support & Helpdesk']
+      features: ['Cloud Infrastructure & Migration', 'Cybersecurity & Compliance', 'Network Infrastructure', 'IT Support & Helpdesk'],
+      pricing: 'Starting at $1,500/month',
+      delivery: '1-12 weeks',
+      benefits: ['99.9% uptime guarantee', '24/7 expert support', 'Enterprise-grade security', 'Scalable infrastructure']
     },
     {
       title: 'Micro SaaS',
       description: 'Scalable software as a service solutions tailored to your business needs with rapid deployment',
       icon: Cloud,
       href: '/micro-saas',
-      features: ['AI-Powered Email Responder', 'Mobile-First Survey Platform', 'Event Management Dashboard', 'Customer Support Platform']
+      features: ['AI-Powered Email Responder', 'Mobile-First Survey Platform', 'Event Management Dashboard', 'Customer Support Platform'],
+      pricing: 'Starting at $1,200/month',
+      delivery: '2-6 weeks',
+      benefits: ['Rapid deployment', 'Custom solutions', 'Scalable architecture', 'Ongoing support']
     }
   ];
 
@@ -166,6 +175,32 @@ const Home = memo(() => {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
                   <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                  
+                  {/* Pricing and Delivery */}
+                  <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-gray-700">Starting Price:</span>
+                      <span className="text-lg font-bold text-blue-600">{service.pricing}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-gray-700">Delivery Time:</span>
+                      <span className="text-sm text-gray-600">{service.delivery}</span>
+                    </div>
+                  </div>
+
+                  {/* Key Benefits */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Benefits:</h4>
+                    <ul className="space-y-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
                   <Link href={service.href} className="block">
                     <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center">
                       Learn More

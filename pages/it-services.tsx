@@ -37,6 +37,12 @@ import {
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
+export async function getServerSideProps() {
+  return {
+    props: {},
+  };
+}
+
 export default function ITServices() {
   const title = 'IT Services — Zion Tech Group';
   const description = 'Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and digital transformation solutions.';
@@ -148,9 +154,130 @@ export default function ITServices() {
       features: [
         'IoT device development and integration,Edge computing platform setup,Real-time data processing and analytics,IoT security and device management,Sensor network design and deployment,Edge AI and machine learning integration'
       ],
-      pricing: '$5,000 - $30,000/month',
-      delivery: '6-16 weeks',
+      pricing: '$6,000 - $35,000/month',
+      delivery: '8-16 weeks',
       category: 'IoT Services'
+    },
+    {
+      title: 'Enterprise Resource Planning (ERP)',
+      description: 'Comprehensive ERP implementation and customization services',
+      icon: Database,
+      features: [
+        'ERP system selection and implementation,Process mapping and optimization,Data migration and integration,Custom module development,User training and change management,Ongoing support and maintenance'
+      ],
+      pricing: '$15,000 - $150,000/month',
+      delivery: '16-40 weeks',
+      category: 'ERP Services'
+    },
+    {
+      title: 'Customer Relationship Management (CRM)',
+      description: 'CRM implementation, customization, and integration services',
+      icon: Users,
+      features: [
+        'CRM platform selection and setup,Sales pipeline optimization,Marketing automation integration,Customer data analytics and insights,Mobile CRM applications,Third-party system integration'
+      ],
+      pricing: '$5,000 - $40,000/month',
+      delivery: '6-16 weeks',
+      category: 'CRM Services'
+    },
+    {
+      title: 'Business Intelligence & Analytics',
+      description: 'Advanced BI solutions with data visualization and reporting',
+      icon: BarChart3,
+      features: [
+        'Data warehouse design and implementation,ETL/ELT pipeline development,Interactive dashboards and reports,Predictive analytics and modeling,Real-time data streaming,Self-service analytics platforms'
+      ],
+      pricing: '$8,000 - $60,000/month',
+      delivery: '10-24 weeks',
+      category: 'BI Services'
+    },
+    {
+      title: 'API Development & Integration',
+      description: 'RESTful API development and third-party system integration',
+      icon: Code,
+      features: [
+        'RESTful and GraphQL API development,API gateway setup and management,Third-party system integration,API documentation and testing,Rate limiting and security,API monitoring and analytics'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '4-12 weeks',
+      category: 'API Services'
+    },
+    {
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile application development',
+      icon: Smartphone,
+      features: [
+        'iOS and Android native development,Cross-platform app development,UI/UX design and optimization,App store deployment and management,Backend API development,App analytics and performance monitoring'
+      ],
+      pricing: '$10,000 - $80,000/month',
+      delivery: '12-32 weeks',
+      category: 'Mobile Services'
+    },
+    {
+      title: 'E-commerce Platform Development',
+      description: 'Custom e-commerce solutions with payment integration and analytics',
+      icon: Globe,
+      features: [
+        'Custom e-commerce platform development,Payment gateway integration,Inventory management systems,Order processing and fulfillment,Analytics and reporting,SEO optimization and marketing tools'
+      ],
+      pricing: '$12,000 - $100,000/month',
+      delivery: '16-40 weeks',
+      category: 'E-commerce Services'
+    },
+    {
+      title: 'Quality Assurance & Testing',
+      description: 'Comprehensive software testing and quality assurance services',
+      icon: Shield,
+      features: [
+        'Automated testing framework development,Performance and load testing,Security testing and vulnerability assessment,User acceptance testing,Test automation and CI/CD integration,Quality metrics and reporting'
+      ],
+      pricing: '$3,000 - $20,000/month',
+      delivery: '4-12 weeks',
+      category: 'QA Services'
+    },
+    {
+      title: 'IT Consulting & Strategy',
+      description: 'Strategic IT consulting and technology roadmap development',
+      icon: TrendingUp,
+      features: [
+        'IT strategy and roadmap development,Technology assessment and selection,Digital transformation planning,IT governance and compliance,Cost optimization and ROI analysis,Vendor evaluation and management'
+      ],
+      pricing: '$5,000 - $50,000/month',
+      delivery: '4-16 weeks',
+      category: 'Consulting Services'
+    },
+    {
+      title: 'Disaster Recovery & Business Continuity',
+      description: 'Comprehensive disaster recovery planning and implementation',
+      icon: Shield,
+      features: [
+        'Disaster recovery planning and testing,Backup and recovery solutions,High availability system design,Business continuity planning,Data replication and synchronization,Recovery time objective optimization'
+      ],
+      pricing: '$8,000 - $60,000/month',
+      delivery: '8-20 weeks',
+      category: 'DR Services'
+    },
+    {
+      title: 'IT Asset Management',
+      description: 'Comprehensive IT asset lifecycle management and optimization',
+      icon: Monitor,
+      features: [
+        'IT asset inventory and tracking,Software license management,Hardware lifecycle management,Asset procurement and disposal,Cost optimization and budgeting,Compliance and audit support'
+      ],
+      pricing: '$2,000 - $15,000/month',
+      delivery: '2-8 weeks',
+      category: 'Asset Management Services'
+    },
+    {
+      title: 'IT Training & Certification',
+      description: 'Comprehensive IT training programs and certification support',
+      icon: Users,
+      features: [
+        'Custom training curriculum development,Hands-on lab environments,Certification exam preparation,Technology-specific training programs,Remote and on-site training options,Training assessment and certification'
+      ],
+      pricing: '$1,500 - $12,000/month',
+      delivery: '2-8 weeks',
+      category: 'Training Services'
     },
     {
       title: 'Quantum Computing Consulting',
@@ -725,7 +852,6 @@ export default function ITServices() {
       category: 'Network Security'
     },
     {
-<<<<<<< HEAD
       title: 'AI-Powered IT Operations (AIOps)',
       description: 'Intelligent IT operations with AI-driven automation and predictive analytics',
       icon: Brain,
@@ -757,7 +883,8 @@ export default function ITServices() {
       pricing: '$15,000 - $75,000/month',
       delivery: '12-24 weeks',
       category: 'Quantum Security'
-=======
+    },
+    {
       title: 'AI-Powered IT Operations Management',
       description: 'Intelligent IT operations with AI-driven automation and predictive maintenance',
       icon: Brain,
@@ -767,31 +894,20 @@ export default function ITServices() {
       pricing: '$4,000 - $20,000/month',
       delivery: '4-8 weeks',
       category: 'AI Operations'
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
     },
     {
       title: 'Edge Computing Infrastructure',
       description: 'Distributed edge computing solutions for low-latency applications and IoT',
-<<<<<<< HEAD
       icon: Cpu,
       features: [
         'Edge computing platform design and deployment,Distributed data processing and analytics,Edge AI and machine learning deployment,5G network integration and optimization,Edge security and device management,Multi-cloud edge orchestration'
       ],
       pricing: '$6,000 - $30,000/month',
       delivery: '8-16 weeks',
-=======
-      icon: Satellite,
-      features: [
-        'Edge server deployment and management,Edge-to-cloud data synchronization,Low-latency application hosting,Edge AI and machine learning inference,Edge security and access control,Edge monitoring and analytics'
-      ],
-      pricing: '$2,500 - $12,000/month',
-      delivery: '3-6 weeks',
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
       category: 'Edge Computing'
     },
     {
       title: 'Green IT & Sustainability Solutions',
-<<<<<<< HEAD
       description: 'Environmentally conscious IT infrastructure and carbon footprint reduction',
       icon: TreePine,
       features: [
@@ -844,7 +960,9 @@ export default function ITServices() {
       pricing: '$10,000 - $50,000/month',
       delivery: '10-20 weeks',
       category: 'Threat Intelligence'
-=======
+    },
+    {
+      title: 'Green IT Solutions',
       description: 'Environmentally conscious IT solutions with carbon footprint reduction',
       icon: TreePine,
       features: [
@@ -919,7 +1037,6 @@ export default function ITServices() {
       pricing: '$4,500 - $22,000/month',
       delivery: '6-12 weeks',
       category: 'Zero Trust Security'
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
     }
   ];
 

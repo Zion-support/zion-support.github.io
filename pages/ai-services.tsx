@@ -4,6 +4,12 @@ import Link from 'next/link';
 import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine } from 'lucide-react';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
+export async function getServerSideProps() {
+  return {
+    props: {},
+  };
+}
+
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
   const description =
@@ -249,6 +255,90 @@ export default function AIServices() {
       pricing: '$10,000 - $35,000/month',
       delivery: '10-20 weeks',
       category: 'Climate AI',
+    },
+    {
+      title: 'AI-Powered Legal Document Analysis',
+      description:
+        'Intelligent legal document review, contract analysis, and compliance monitoring',
+      icon: FileText,
+      features: [
+        'Automated contract review and risk assessment,Legal precedent analysis and case law research,Compliance monitoring and regulatory updates,Document summarization and key point extraction,Legal research automation and citation analysis,Contract negotiation support and clause optimization',
+      ],
+      pricing: '$4,500 - $16,000/month',
+      delivery: '5-8 weeks',
+      category: 'Legal AI',
+    },
+    {
+      title: 'AI-Powered Healthcare Diagnostics',
+      description:
+        'Advanced medical imaging analysis and diagnostic assistance platform',
+      icon: Eye,
+      features: [
+        'Medical image analysis (X-ray, MRI, CT scans),Disease detection and early warning systems,Patient risk stratification and treatment recommendations,Medical record analysis and pattern recognition,Drug interaction checking and safety alerts,Clinical decision support and workflow optimization',
+      ],
+      pricing: '$12,000 - $45,000/month',
+      delivery: '10-18 weeks',
+      category: 'Healthcare AI',
+    },
+    {
+      title: 'AI-Powered Financial Trading System',
+      description:
+        'Intelligent algorithmic trading and portfolio management platform',
+      icon: TrendingUp,
+      features: [
+        'Real-time market analysis and trend prediction,Automated trading strategy execution,Risk management and portfolio optimization,Market sentiment analysis and news impact assessment,Backtesting and strategy validation,Compliance monitoring and regulatory reporting',
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '8-14 weeks',
+      category: 'FinTech AI',
+    },
+    {
+      title: 'AI-Powered Smart City Management',
+      description:
+        'Intelligent urban infrastructure management and optimization platform',
+      icon: Globe,
+      features: [
+        'Traffic flow optimization and congestion management,Energy consumption monitoring and optimization,Waste management and recycling optimization,Public safety monitoring and emergency response,Citizen service automation and digital governance,Environmental monitoring and pollution control',
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '12-24 weeks',
+      category: 'Smart City AI',
+    },
+    {
+      title: 'AI-Powered Agricultural Optimization',
+      description:
+        'Intelligent farming and crop management system with precision agriculture',
+      icon: TreePine,
+      features: [
+        'Crop health monitoring and disease detection,Precision irrigation and fertilizer optimization,Weather prediction and farming schedule optimization,Soil analysis and nutrient management,Pest and weed detection and control,Harvest prediction and yield optimization',
+      ],
+      pricing: '$6,000 - $22,000/month',
+      delivery: '8-16 weeks',
+      category: 'AgTech AI',
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Fleet Management',
+      description:
+        'Intelligent fleet management and autonomous vehicle coordination system',
+      icon: Car,
+      features: [
+        'Autonomous vehicle routing and coordination,Real-time traffic optimization and navigation,Fleet maintenance prediction and scheduling,Passenger demand prediction and vehicle allocation,Safety monitoring and incident prevention,Energy efficiency optimization and charging management',
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '16-32 weeks',
+      category: 'Autonomous Vehicle AI',
+    },
+    {
+      title: 'AI-Powered Space Mission Planning',
+      description:
+        'Intelligent space mission design and satellite constellation management',
+      icon: Satellite,
+      features: [
+        'Mission trajectory optimization and planning,Satellite constellation design and management,Space debris tracking and collision avoidance,Earth observation data analysis and processing,Communication network optimization,Launch window optimization and scheduling',
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Space AI',
     },
     {
       title: 'AI-Powered Quantum Computing Interface',
@@ -865,7 +955,6 @@ export default function AIServices() {
       category: 'Personalization AI'
     },
     {
-<<<<<<< HEAD
       title: 'AI-Powered Quantum Computing Simulator',
       description: 'Advanced quantum computing simulation and optimization platform for complex problem solving',
       icon: Cpu,
@@ -963,7 +1052,8 @@ export default function AIServices() {
       pricing: '$20,000 - $80,000/month',
       delivery: '16-24 weeks',
       category: 'Healthcare AI'
-=======
+    },
+    {
       title: 'AI-Powered Cybersecurity Threat Detection',
       description: 'Advanced threat detection and response system with real-time monitoring and automated incident response',
       icon: Shield,
@@ -1061,7 +1151,6 @@ export default function AIServices() {
       pricing: '$12,000 - $50,000/month',
       delivery: '16-24 weeks',
       category: 'Pharmaceutical AI'
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-68a5
     }
   ];
   const aiTechnologies = [
