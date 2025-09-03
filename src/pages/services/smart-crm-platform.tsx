@@ -1,91 +1,85 @@
 import React from 'react';
 import { ;
-  Users, ;
-  Brain, ;
-  BarChart3, ;
-  Mail, ;
-  Phone, ;
-  MapPin,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
-  Clock,;
-  Target,;
-  TrendingUp,;
-  Zap,;
-  Globe,;
-  Shield,;
-  Smartphone,;
-  Calendar,;
-  MessageSquare;,
+  Users,
+  Brain,
+  BarChart3,
+  Mail,
+  Phone,
+  MapPin,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Clock,
+  Target,
+  TrendingUp,
+  Zap,
+  Globe,
+  Shield,
+  Smartphone,
+  Calendar,
+  MessageSquare;
 } from 'lucide-react';
-;
 const SmartCRMPlatform = () => {;
   const features = [;
-    'AI-powered lead scoring',;
-    'Automated sales forecasting',;
-    'Email marketing automation',;
-    'Mobile app access',;
-    'Real-time analytics',;
-    'Custom pipeline management',;
-    'Integration with 500+ apps',;
+    'AI-powered lead scoring',
+    'Automated sales forecasting',
+    'Email marketing automation',
+    'Mobile app access',
+    'Real-time analytics',
+    'Custom pipeline management',
+    'Integration with 500+ apps',
     '24/7 customer support';
   ];
-;
   const benefits = [;
-    'Increase sales by 25%',;
-    'Improve customer retention',;
-    'Streamline sales processes',;
-    'Real-time insights & analytics',;
-    'Reduce manual data entry',;
-    'Better lead qualification',;
-    'Automated follow-ups',;
+    'Increase sales by 25%',
+    'Improve customer retention',
+    'Streamline sales processes',
+    'Real-time insights & analytics',
+    'Reduce manual data entry',
+    'Better lead qualification',
+    'Automated follow-ups',
     'Team collaboration tools';
   ];
-;
   const integrations = [;
-    'Gmail & Outlook',;
-    'Slack & Teams',;
-    'QuickBooks & Xero',;
-    'Mailchimp & HubSpot',;
-    'Zapier & Make',;
-    'Google Workspace',;
-    'Microsoft 365',;
+    'Gmail & Outlook',
+    'Slack & Teams',
+    'QuickBooks & Xero',
+    'Mailchimp & HubSpot',
+    'Zapier & Make',
+    'Google Workspace',
+    'Microsoft 365',
     'Salesforce';
   ];
-;
   const pricing = {;
     starter: {;
-      name: 'Starter',;
-      price: '$79/month',;
-      users: 'Up to 5 users',;
-      features: ['Basic CRM', 'Email integration', 'Mobile app', 'Email support'],;
-      marketPrice: '$99/month';,
-},;
+      name: 'Starter',
+      price: '$79/month',
+      users: 'Up to 5 users',
+      features: ['Basic CRM', 'Email integration', 'Mobile app', 'Email support'],
+      marketPrice: '$99/month';
+},
     professional: {;
-      name: 'Professional',;
-      price: '$149/month',;
-      users: 'Up to 15 users',;
-      features: ['Advanced CRM', 'AI lead scoring', 'Sales forecasting', 'Priority support', 'Custom fields'],;
-      marketPrice: '$199/month',;
-      popular: true;,
-},;
+      name: 'Professional',
+      price: '$149/month',
+      users: 'Up to 15 users',
+      features: ['Advanced CRM', 'AI lead scoring', 'Sales forecasting', 'Priority support', 'Custom fields'],
+      marketPrice: '$199/month',
+      popular: true;
+},
     enterprise: {;
-      name: 'Enterprise',;
-      price: '$299/month',;
-      users: 'Unlimited users',;
-      features: ['Full CRM suite', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'API access', 'White-label'],;
-      marketPrice: '$399/month';,
+      name: 'Enterprise',
+      price: '$299/month',
+      users: 'Unlimited users',
+      features: ['Full CRM suite', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'API access', 'White-label'],
+      marketPrice: '$399/month';
 }
   };
-;
   const contactInfo = {;
-    phone: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com';,
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com';
 };
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Header */}
@@ -140,7 +134,6 @@ const SmartCRMPlatform = () => {;
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Powerful CRM Features</h2>;
           <p className="text-xl text-gray-600">Everything you need to manage customer relationships effectively</p>;
         </div>;
-        ;
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {features.map((feature, index) => (;
             <div;
@@ -163,7 +156,6 @@ const SmartCRMPlatform = () => {;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Smart CRM?</h2>;
             <p className="text-xl text-gray-600">Measurable results that drive business growth</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
               <div;
@@ -188,7 +180,6 @@ const SmartCRMPlatform = () => {;
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>;
           <p className="text-xl text-gray-600">Connect with the tools you already use</p>;
         </div>;
-        ;
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
           {integrations.map((integration, index) => (;
             <div;
@@ -211,7 +202,6 @@ const SmartCRMPlatform = () => {;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>;
             <p className="text-xl text-gray-600">Choose the plan that fits your team size</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-3 gap-8">;
             {Object.entries(pricing).map(([key, plan], index) => (;
               <div;
@@ -220,7 +210,7 @@ const SmartCRMPlatform = () => {;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 relative border-2 ${;
-                  plan.popular ? 'border-green-500' : 'border-gray-200';,
+                  plan.popular ? 'border-green-500' : 'border-gray-200';
 }`}
               >;
                 {plan.popular && (;
@@ -230,7 +220,7 @@ const SmartCRMPlatform = () => {;
                     </span>;
                   </div>;
                 )}
-                ;
+
                 <div className="text-center mb-6">;
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>;
                   <div className="text-4xl font-bold text-green-600 mb-2">{plan.price}</div>;
@@ -238,7 +228,6 @@ const SmartCRMPlatform = () => {;
                   <p className="text-green-600 font-semibold">Save up to 25%</p>;
                   <p className="text-gray-600 mt-2">{plan.users}</p>;
                 </div>;
-                ;
                 <ul className="space-y-3 mb-8">;
                   {plan.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-600">;
@@ -247,13 +236,12 @@ const SmartCRMPlatform = () => {;
                     </li>;
                   ))}
                 </ul>;
-                ;
                 <a;
                   href={`tel:${contactInfo.phone}`}
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${;
                     plan.popular;
                       ? 'bg-green-600 text-white hover:bg-green-700';
-                      : 'bg-gray-200 text-gray-900 hover:bg-gray-300';,
+                      : 'bg-gray-200 text-gray-900 hover:bg-gray-300';
 }`}
                 >;
                   Get Started;
@@ -271,7 +259,6 @@ const SmartCRMPlatform = () => {;
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Sales Process?</h2>;
             <p className="text-xl text-gray-300">Contact us today for a free CRM consultation</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />;
@@ -313,7 +300,6 @@ const SmartCRMPlatform = () => {;
         </div>;
       </footer>;
     </div>;
-  );,
+  );
 };
-;
 export default SmartCRMPlatform;

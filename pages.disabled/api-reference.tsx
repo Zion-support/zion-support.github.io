@@ -1,7 +1,6 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-;
 const APIReference: NextPage = () => {;
   return (;
     <MainLayout;
@@ -15,7 +14,6 @@ const APIReference: NextPage = () => {;
         </p>;
       </div>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default APIReference;

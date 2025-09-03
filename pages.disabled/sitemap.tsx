@@ -3,71 +3,68 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
 import { Map, ExternalLink, Download } from 'lucide-react';
-;
 const Sitemap: NextPage = () => {;
   const siteStructure = [;
     {;
-      title: 'Main Pages',;
+      title: 'Main Pages',
       pages: [;
-        { name: 'Home', url: '/', description: 'Main homepage' },;
-        { name: 'About Us', url: '/about', description: 'Learn about Zion Tech Group' },;
-        { name: 'Contact', url: '/contact', description: 'Get in touch with us' },;
+        { name: 'Home', url: '/', description: 'Main homepage' },
+        { name: 'About Us', url: '/about', description: 'Learn about Zion Tech Group' },
+        { name: 'Contact', url: '/contact', description: 'Get in touch with us' },
         { name: 'Careers', url: '/careers', description: 'Join our team' }
-      ];,
-},;
+      ];
+},
     {;
-      title: 'Services',;
+      title: 'Services',
       pages: [;
-        { name: 'All Services', url: '/services', description: 'Overview of all our services' },;
-        { name: 'Micro SaaS', url: '/services/micro-saas', description: 'Micro SaaS solutions' },;
-        { name: 'IT Services', url: '/services/it-services', description: 'IT consulting and services' },;
+        { name: 'All Services', url: '/services', description: 'Overview of all our services' },
+        { name: 'Micro SaaS', url: '/services/micro-saas', description: 'Micro SaaS solutions' },
+        { name: 'IT Services', url: '/services/it-services', description: 'IT consulting and services' },
         { name: 'AI Services', url: '/services/ai-services', description: 'Artificial Intelligence solutions' }
-      ];,
-},;
+      ];
+},
     {;
-      title: 'Solutions',;
+      title: 'Solutions',
       pages: [;
-        { name: 'All Solutions', url: '/solutions', description: 'Overview of all our solutions' },;
+        { name: 'All Solutions', url: '/solutions', description: 'Overview of all our solutions' },
         { name: 'Enterprise Solutions', url: '/solutions/enterprise', description: 'Enterprise-grade solutions' }
-      ];,
-},;
+      ];
+},
     {;
-      title: 'Resources',;
+      title: 'Resources',
       pages: [;
-        { name: 'Blog', url: '/blog', description: 'Technology insights and news' },;
-        { name: 'Case Studies', url: '/case-studies', description: 'Success stories and case studies' },;
-        { name: 'Webinars', url: '/webinars', description: 'Expert-led webinars and training' },;
-        { name: 'Documentation', url: '/documentation', description: 'Technical documentation and guides' },;
-        { name: 'API Reference', url: '/api', description: 'Complete API documentation' },;
-        { name: 'Help Center', url: '/help', description: 'Support and help resources' },;
+        { name: 'Blog', url: '/blog', description: 'Technology insights and news' },
+        { name: 'Case Studies', url: '/case-studies', description: 'Success stories and case studies' },
+        { name: 'Webinars', url: '/webinars', description: 'Expert-led webinars and training' },
+        { name: 'Documentation', url: '/documentation', description: 'Technical documentation and guides' },
+        { name: 'API Reference', url: '/api', description: 'Complete API documentation' },
+        { name: 'Help Center', url: '/help', description: 'Support and help resources' },
         { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' }
-      ];,
-},;
+      ];
+},
     {;
-      title: 'Company',;
+      title: 'Company',
       pages: [;
-        { name: 'Partners', url: '/partners', description: 'Our strategic partners' },;
+        { name: 'Partners', url: '/partners', description: 'Our strategic partners' },
         { name: 'System Status', url: '/status', description: 'Real-time system status' }
-      ];,
-},;
+      ];
+},
     {;
-      title: 'Legal & Privacy',;
+      title: 'Legal & Privacy',
       pages: [;
-        { name: 'Privacy Policy', url: '/privacy', description: 'How we protect your privacy' },;
-        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },;
-        { name: 'Cookie Policy', url: '/cookies', description: 'How we use cookies' },;
-        { name: 'Data Protection', url: '/data-protection', description: 'Data protection measures' },;
+        { name: 'Privacy Policy', url: '/privacy', description: 'How we protect your privacy' },
+        { name: 'Terms of Service', url: '/terms', description: 'Terms and conditions' },
+        { name: 'Cookie Policy', url: '/cookies', description: 'How we use cookies' },
+        { name: 'Data Protection', url: '/data-protection', description: 'Data protection measures' },
         { name: 'Accessibility', url: '/accessibility', description: 'Digital accessibility commitment' }
-      ];,
+      ];
 }
   ];
-;
   const quickLinks = [;
-    { name: 'XML Sitemap', url: '/sitemap.xml', type: 'xml' },;
-    { name: 'RSS Feed', url: '/rss.xml', type: 'rss' },;
+    { name: 'XML Sitemap', url: '/sitemap.xml', type: 'xml' },
+    { name: 'RSS Feed', url: '/rss.xml', type: 'rss' },
     { name: 'Robots.txt', url: '/robots.txt', type: 'txt' }
   ];
-;
   return (;
     <MainLayout;
       title="Sitemap - Zion Tech Group";
@@ -374,7 +371,6 @@ const Sitemap: NextPage = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default SitemapPage;

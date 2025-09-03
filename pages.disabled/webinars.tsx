@@ -2,148 +2,141 @@ import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Calendar, Clock, Users, Play, ExternalLink, Filter } from 'lucide-react';
-;
 const Webinars: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = useState('All');
-;
   const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Development'];
-;
   const webinars = [;
     {;
-      id: 1,;
-      title: 'AI-Powered Business Transformation: Real-World Success Stories',;
-      description: 'Learn how leading companies are leveraging AI to drive innovation and growth. Join us for insights from industry experts and real-world case studies.',;
-      speaker: 'Dr. Sarah Johnson',;
-      speakerTitle: 'Chief AI Officer, TechCorp',;
-      date: '2025-02-15',;
-      time: '2:00 PM EST',;
-      duration: '60 minutes',;
-      category: 'AI & Machine Learning',;
-      type: 'upcoming',;
-      attendees: 0,;
-      maxAttendees: 500,;
-      image: '/webinars/ai-transformation.jpg';,
-},;
+      id: 1,
+      title: 'AI-Powered Business Transformation: Real-World Success Stories',
+      description: 'Learn how leading companies are leveraging AI to drive innovation and growth. Join us for insights from industry experts and real-world case studies.',
+      speaker: 'Dr. Sarah Johnson',
+      speakerTitle: 'Chief AI Officer, TechCorp',
+      date: '2025-02-15',
+      time: '2:00 PM EST',
+      duration: '60 minutes',
+      category: 'AI & Machine Learning',
+      type: 'upcoming',
+      attendees: 0,
+      maxAttendees: 500,
+      image: '/webinars/ai-transformation.jpg';
+},
     {;
-      id: 2,;
-      title: 'Cloud Migration Best Practices: A Complete Guide',;
-      description: 'Comprehensive guide to successful cloud migration strategies, common pitfalls to avoid, and best practices for seamless transitions.',;
-      speaker: 'Michael Chen',;
-      speakerTitle: 'Senior Cloud Architect, CloudTech Solutions',;
-      date: '2025-02-20',;
-      time: '3:00 PM EST',;
-      duration: '45 minutes',;
-      category: 'Cloud Computing',;
-      type: 'upcoming',;
-      attendees: 0,;
-      maxAttendees: 300,;
-      image: '/webinars/cloud-migration.jpg';,
-},;
+      id: 2,
+      title: 'Cloud Migration Best Practices: A Complete Guide',
+      description: 'Comprehensive guide to successful cloud migration strategies, common pitfalls to avoid, and best practices for seamless transitions.',
+      speaker: 'Michael Chen',
+      speakerTitle: 'Senior Cloud Architect, CloudTech Solutions',
+      date: '2025-02-20',
+      time: '3:00 PM EST',
+      duration: '45 minutes',
+      category: 'Cloud Computing',
+      type: 'upcoming',
+      attendees: 0,
+      maxAttendees: 300,
+      image: '/webinars/cloud-migration.jpg';
+},
     {;
-      id: 3,;
-      title: 'Cybersecurity in the Age of Remote Work',;
-      description: 'Essential security measures and best practices for protecting your organization in today\'s distributed work environment.',;
-      speaker: 'Emily Watson',;
-      speakerTitle: 'Cybersecurity Expert, SecureNet',;
-      date: '2025-02-25',;
-      time: '1:00 PM EST',;
-      duration: '50 minutes',;
-      category: 'Cybersecurity',;
-      type: 'upcoming',;
-      attendees: 0,;
-      maxAttendees: 400,;
-      image: '/webinars/cybersecurity-remote.jpg';,
-},;
+      id: 3,
+      title: 'Cybersecurity in the Age of Remote Work',
+      description: 'Essential security measures and best practices for protecting your organization in today\'s distributed work environment.',
+      speaker: 'Emily Watson',
+      speakerTitle: 'Cybersecurity Expert, SecureNet',
+      date: '2025-02-25',
+      time: '1:00 PM EST',
+      duration: '50 minutes',
+      category: 'Cybersecurity',
+      type: 'upcoming',
+      attendees: 0,
+      maxAttendees: 400,
+      image: '/webinars/cybersecurity-remote.jpg';
+},
     {;
-      id: 4,;
-      title: 'Building Scalable Microservices Architecture',;
-      description: 'Learn how to design and implement microservices that can scale with your business growth and technical requirements.',;
-      speaker: 'Alex Rodriguez',;
-      speakerTitle: 'Principal Software Engineer, MicroTech',;
-      date: '2025-01-30',;
-      time: '2:30 PM EST',;
-      duration: '55 minutes',;
-      category: 'Development',;
-      type: 'upcoming',;
-      attendees: 0,;
-      maxAttendees: 350,;
-      image: '/webinars/microservices.jpg';,
-},;
+      id: 4,
+      title: 'Building Scalable Microservices Architecture',
+      description: 'Learn how to design and implement microservices that can scale with your business growth and technical requirements.',
+      speaker: 'Alex Rodriguez',
+      speakerTitle: 'Principal Software Engineer, MicroTech',
+      date: '2025-01-30',
+      time: '2:30 PM EST',
+      duration: '55 minutes',
+      category: 'Development',
+      type: 'upcoming',
+      attendees: 0,
+      maxAttendees: 350,
+      image: '/webinars/microservices.jpg';
+},
     {;
-      id: 5,;
-      title: 'Digital Transformation: Success Stories from 2024',;
-      description: 'Real-world case studies of successful digital transformations and the key factors that led to their success.',;
-      speaker: 'David Kim',;
-      speakerTitle: 'Digital Transformation Consultant',;
-      date: '2025-01-25',;
-      time: '2:00 PM EST',;
-      duration: '60 minutes',;
-      category: 'Digital Transformation',;
-      type: 'upcoming',;
-      attendees: 0,;
-      maxAttendees: 500,;
-      image: '/webinars/digital-transformation.jpg';,
-},;
+      id: 5,
+      title: 'Digital Transformation: Success Stories from 2024',
+      description: 'Real-world case studies of successful digital transformations and the key factors that led to their success.',
+      speaker: 'David Kim',
+      speakerTitle: 'Digital Transformation Consultant',
+      date: '2025-01-25',
+      time: '2:00 PM EST',
+      duration: '60 minutes',
+      category: 'Digital Transformation',
+      type: 'upcoming',
+      attendees: 0,
+      maxAttendees: 500,
+      image: '/webinars/digital-transformation.jpg';
+},
     {;
-      id: 6,;
-      title: 'The Future of AI in Business: Trends for 2025',;
-      description: 'Explore the latest AI trends that are transforming businesses and how to prepare your organization for the AI revolution.',;
-      speaker: 'Dr. Lisa Thompson',;
-      speakerTitle: 'AI Research Director, FutureTech',;
-      date: '2025-01-20',;
-      time: '3:00 PM EST',;
-      duration: '45 minutes',;
-      category: 'AI & Machine Learning',;
-      type: 'upcoming',;
-      attendees: 0,;
-      maxAttendees: 600,;
-      image: '/webinars/ai-future.jpg';,
+      id: 6,
+      title: 'The Future of AI in Business: Trends for 2025',
+      description: 'Explore the latest AI trends that are transforming businesses and how to prepare your organization for the AI revolution.',
+      speaker: 'Dr. Lisa Thompson',
+      speakerTitle: 'AI Research Director, FutureTech',
+      date: '2025-01-20',
+      time: '3:00 PM EST',
+      duration: '45 minutes',
+      category: 'AI & Machine Learning',
+      type: 'upcoming',
+      attendees: 0,
+      maxAttendees: 600,
+      image: '/webinars/ai-future.jpg';
 }
   ];
-;
   const pastWebinars = [;
     {;
-      id: 7,;
-      title: 'Introduction to Machine Learning for Business Leaders',;
-      description: 'A comprehensive introduction to machine learning concepts and their practical applications in business.',;
-      speaker: 'Dr. John Smith',;
-      speakerTitle: 'ML Research Scientist',;
-      date: '2025-01-15',;
-      time: '2:00 PM EST',;
-      duration: '60 minutes',;
-      category: 'AI & Machine Learning',;
-      type: 'past',;
-      attendees: 450,;
-      maxAttendees: 500,;
-      recordingUrl: '/recordings/ml-intro-2025-01-15',;
-      image: '/webinars/ml-intro.jpg';,
-},;
+      id: 7,
+      title: 'Introduction to Machine Learning for Business Leaders',
+      description: 'A comprehensive introduction to machine learning concepts and their practical applications in business.',
+      speaker: 'Dr. John Smith',
+      speakerTitle: 'ML Research Scientist',
+      date: '2025-01-15',
+      time: '2:00 PM EST',
+      duration: '60 minutes',
+      category: 'AI & Machine Learning',
+      type: 'past',
+      attendees: 450,
+      maxAttendees: 500,
+      recordingUrl: '/recordings/ml-intro-2025-01-15',
+      image: '/webinars/ml-intro.jpg';
+},
     {;
-      id: 8,;
-      title: 'Cloud Security Best Practices',;
-      description: 'Essential security measures for cloud environments and how to implement them effectively.',;
-      speaker: 'Sarah Wilson',;
-      speakerTitle: 'Cloud Security Architect',;
-      date: '2025-01-10',;
-      time: '1:30 PM EST',;
-      duration: '50 minutes',;
-      category: 'Cloud Computing',;
-      type: 'past',;
-      attendees: 320,;
-      maxAttendees: 400,;
-      recordingUrl: '/recordings/cloud-security-2025-01-10',;
-      image: '/webinars/cloud-security.jpg';,
+      id: 8,
+      title: 'Cloud Security Best Practices',
+      description: 'Essential security measures for cloud environments and how to implement them effectively.',
+      speaker: 'Sarah Wilson',
+      speakerTitle: 'Cloud Security Architect',
+      date: '2025-01-10',
+      time: '1:30 PM EST',
+      duration: '50 minutes',
+      category: 'Cloud Computing',
+      type: 'past',
+      attendees: 320,
+      maxAttendees: 400,
+      recordingUrl: '/recordings/cloud-security-2025-01-10',
+      image: '/webinars/cloud-security.jpg';
 }
   ];
-;
   const filteredWebinars = webinars.filter(webinar => ;
     selectedCategory === 'All' || webinar.category === selectedCategory;
   );
-;
   const filteredPastWebinars = pastWebinars.filter(webinar => ;
     selectedCategory === 'All' || webinar.category === selectedCategory;
   );
-;
   const getCategoryColor = (category: string) => {;
     switch (category) {;
       case 'AI & Machine Learning':;
@@ -157,10 +150,9 @@ const Webinars: NextPage = () => {;
       case 'Development':;
         return 'bg-yellow-100 text-yellow-800';
       default:;
-        return 'bg-gray-100 text-gray-800';,
+        return 'bg-gray-100 text-gray-800';
 }
   };
-;
   return (;
     <MainLayout;
       title="Webinars - Zion Tech Group";
@@ -175,20 +167,18 @@ const Webinars: NextPage = () => {;
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Expert Webinars</h1>;
               <p className="text-xl text-gray-200 mb-8">;
                 Learn from industry experts and stay ahead of technology trends with our comprehensive webinar series.;
-              </p>;,
+              </p>;
 }
   ];
-;
   const categories = [;
-    'All Webinars',;
-    'Artificial Intelligence',;
-    'Quantum Computing',;
-    'Micro SaaS',;
-    'Blockchain',;
-    'Cloud Computing',;
+    'All Webinars',
+    'Artificial Intelligence',
+    'Quantum Computing',
+    'Micro SaaS',
+    'Blockchain',
+    'Cloud Computing',
     'Cybersecurity';
   ];
-;
   return (;
     <MainLayout;
       title="Webinars - Zion Tech Group";
@@ -211,7 +201,7 @@ const Webinars: NextPage = () => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >;
-            Learn from industry experts through interactive webinars covering cutting-edge technologies, ;
+            Learn from industry experts through interactive webinars covering cutting-edge technologies,
             best practices, and real-world implementation strategies.;
           </motion.p>;
         </div>;
@@ -253,7 +243,7 @@ const Webinars: NextPage = () => {;
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${;
                       selectedCategory === category;
                         ? 'bg-blue-600 text-white';
-                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200';,
+                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200';
 }`}
                   >;
                     {category}
@@ -281,16 +271,13 @@ const Webinars: NextPage = () => {;
                           Upcoming;
                         </span>;
                       </div>;
-                      ;
                       <h3 className="text-xl font-bold text-gray-900 mb-3">{webinar.title}</h3>;
                       <p className="text-gray-600 mb-4">{webinar.description}</p>;
-                      ;
                       <div className="mb-4">;
                         <h4 className="font-semibold text-gray-900 mb-1">Speaker</h4>;
                         <p className="text-gray-600">{webinar.speaker}</p>;
                         <p className="text-sm text-gray-500">{webinar.speakerTitle}</p>;
                       </div>;
-                      ;
                       <div className="grid grid-cols-2 gap-4 mb-6">;
                         <div className="flex items-center text-sm text-gray-600">;
                           <Calendar className="w-4 h-4 mr-2" />;
@@ -309,7 +296,6 @@ const Webinars: NextPage = () => {;
                           {webinar.attendees}/{webinar.maxAttendees} registered;
                         </div>;
                       </div>;
-                      ;
                       <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">;
                         Register Now;
                       </button>;
@@ -338,16 +324,13 @@ const Webinars: NextPage = () => {;
                           Past Event;
                         </span>;
                       </div>;
-                      ;
                       <h3 className="text-xl font-bold text-gray-900 mb-3">{webinar.title}</h3>;
                       <p className="text-gray-600 mb-4">{webinar.description}</p>;
-                      ;
                       <div className="mb-4">;
                         <h4 className="font-semibold text-gray-900 mb-1">Speaker</h4>;
                         <p className="text-gray-600">{webinar.speaker}</p>;
                         <p className="text-sm text-gray-500">{webinar.speakerTitle}</p>;
                       </div>;
-                      ;
                       <div className="grid grid-cols-2 gap-4 mb-6">;
                         <div className="flex items-center text-sm text-gray-600">;
                           <Calendar className="w-4 h-4 mr-2" />;
@@ -362,7 +345,6 @@ const Webinars: NextPage = () => {;
                           {webinar.attendees} attendees;
                         </div>;
                       </div>;
-                      ;
                       <button className="w-full bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">;
                         <Play className="w-4 h-4 mr-2" />;
                         Watch Recording;
@@ -448,7 +430,6 @@ const Webinars: NextPage = () => {;
                           <div className="text-sm opacity-80">Upcoming</div>;
                         </div>;
                       </div>;
-                      ;
                       <div className="p-6">;
                         <div className="flex items-center justify-between mb-3">;
                           <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">;
@@ -457,15 +438,12 @@ const Webinars: NextPage = () => {;
                           </span>;
                           <span className="text-sm text-gray-500">{webinar.level}</span>;
                         </div>;
-                        ;
                         <h2 className="text-xl font-semibold mb-3 text-gray-800">;
                           {webinar.title}
                         </h2>;
-                        ;
                         <p className="text-gray-600 mb-4 text-sm line-clamp-3">;
                           {webinar.description}
                         </p>;
-                        ;
                         <div className="mb-4">;
                           <div className="flex flex-wrap gap-1">;
                             {webinar.tags.map((tag) => (;
@@ -477,7 +455,6 @@ const Webinars: NextPage = () => {;
                             ))}
                           </div>;
                         </div>;
-                        ;
                         <div className="mb-4 space-y-2">;
                           <div className="flex items-center text-sm text-gray-600">;
                             <Users className="w-4 h-4 mr-2" />;
@@ -493,7 +470,6 @@ const Webinars: NextPage = () => {;
                             <span>{webinar.duration}</span>;
                           </div>;
                         </div>;
-                        ;
                         <div className="mb-4">;
                           <div className="flex justify-between text-sm text-gray-600 mb-1">;
                             <span>Registered: {webinar.attendees}</span>;
@@ -506,7 +482,6 @@ const Webinars: NextPage = () => {;
                             ></div>;
                           </div>;
                         </div>;
-                        ;
                         <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center">;
                           <Calendar className="w-4 h-4 mr-2" />;
                           Register Now;
@@ -536,7 +511,6 @@ const Webinars: NextPage = () => {;
                           <div className="text-sm opacity-80">Recording Available</div>;
                         </div>;
                       </div>;
-                      ;
                       <div className="p-6">;
                         <div className="flex items-center justify-between mb-3">;
                           <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">;
@@ -545,15 +519,12 @@ const Webinars: NextPage = () => {;
                           </span>;
                           <span className="text-sm text-gray-500">{webinar.level}</span>;
                         </div>;
-                        ;
                         <h2 className="text-xl font-semibold mb-3 text-gray-800">;
                           {webinar.title}
                         </h2>;
-                        ;
                         <p className="text-gray-600 mb-4 text-sm line-clamp-3">;
                           {webinar.description}
                         </p>;
-                        ;
                         <div className="mb-4">;
                           <div className="flex flex-wrap gap-1">;
                             {webinar.tags.map((tag) => (;
@@ -565,7 +536,6 @@ const Webinars: NextPage = () => {;
                             ))}
                           </div>;
                         </div>;
-                        ;
                         <div className="mb-4 space-y-2">;
                           <div className="flex items-center text-sm text-gray-600">;
                             <Users className="w-4 h-4 mr-2" />;
@@ -585,7 +555,6 @@ const Webinars: NextPage = () => {;
                             <span>{webinar.attendees} attendees</span>;
                           </div>;
                         </div>;
-                        ;
                         <div className="flex space-x-3">;
                           <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center">;
                             <Play className="w-4 h-4 mr-2" />;
@@ -635,7 +604,6 @@ const Webinars: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default Webinars;)

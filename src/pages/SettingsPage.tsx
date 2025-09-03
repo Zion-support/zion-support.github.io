@@ -45,6 +45,6 @@ const SettingsPage = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default SettingsPage

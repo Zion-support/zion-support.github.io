@@ -1,45 +1,41 @@
 import {  import { motion  } from 'framer-motion';
 export default function Page() {;
-,;
       {;
 
-        name: 'Error Rate',;
-        value: Math.random() * 2,;
-        unit: '%',;
-        trend: Math.random() > 0.5 ? 'up' : 'down',;
-        status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',;
-        icon: AlertTriangle;,
-},;
+        name: 'Error Rate',
+        value: Math.random() * 2,
+        unit: '%',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
+        icon: AlertTriangle;
+},
       {;
 
-        name: 'Response Time',;
-        value: Math.random() * 500 + 100,;
-        unit: 'ms',;
-        trend: Math.random() > 0.5 ? 'up' : 'down',;
-        status: Math.random() > 0.7 ? 'good' : 'warning',;
+        name: 'Response Time',
+        value: Math.random() * 500 + 100,
+        unit: 'ms',
+        trend: Math.random() > 0.5 ? 'up' : 'down',
+        status: Math.random() > 0.7 ? 'good' : 'warning',
         icon: Zap;
 
     ];
-;
-      'High memory usage detected on server-01',;
-      'Network latency increased by 15%',;
+      'High memory usage detected on server-01',
+      'Network latency increased by 15%',
       'Error rate spike detected in last 5 minutes';
     ];
-;
-    ;
-      'Consider implementing lazy loading for images',;
-      'Optimize database queries for better performance',;
+
+      'Consider implementing lazy loading for images',
+      'Optimize database queries for better performance',
       'Enable CDN for static assets delivery';    ];
-;
     return {;
 
-      timestamp: now,;
-      metrics,;
-      alerts,;
-      recommendations;,
+      timestamp: now,
+      metrics,
+      alerts,
+      recommendations;
 }}, []) ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
 }, []);
     if(isMonitoring) {;
 
@@ -47,27 +43,22 @@ export default function Page() {;
 
       return () => clearInterval(interval) }
   }, [isMonitoring, generateMockData]) ;
-;
     switch(status) {;
       case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400';
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400'};
-;
     switch(status) {;
       case 'good': return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20';
       case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20'};
-;
     switch(trend) {;
       case 'up': return <TrendingUp className="w-4 h-4 text-red-400"  />;'";
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400"  />;";
       default: return <Activity className="w-4 h-4 text-blue-400"  />};
-;
     setIsMonitoring(true) ;
     setPerformanceData(generateMockData () ) };
-;
     setIsMonitoring(false) };
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">";
@@ -76,13 +67,13 @@ export default function Page() {;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
           className="text-center mb-12">";
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">;
@@ -97,13 +88,13 @@ export default function Page() {;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ delay: 0.2 }}";
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">";
@@ -113,7 +104,7 @@ export default function Page() {;
               disabled={isMonitoring}
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${isMonitoring';
                   ? 'bg-gray-600 text-gray-400 cursor-not-allowed'';
-                  : 'bg-green-600 hover:bg-green-700 text-white'`;,
+                  : 'bg-green-600 hover:bg-green-700 text-white'`;
 }`}
             >";
               <Activity className="w-5 h-5"  />              Start Monitoring;
@@ -123,7 +114,7 @@ export default function Page() {;
               disabled={!isMonitoring}`;
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center gap-2 ${!isMonitoring';
                   ? 'bg-gray-600 text-gray-400 cursor-not-allowed'';
-                  : 'bg-red-600 hover:bg-red-700 text-white'`;,
+                  : 'bg-red-600 hover:bg-red-700 text-white'`;
 }`}
             >";
               <Monitor className="w-5 h-5"  />              Stop Monitoring;
@@ -145,13 +136,13 @@ export default function Page() {;
         {performanceData && (<motion.div;
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ delay: 0.3 }}";
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">;
@@ -159,13 +150,13 @@ export default function Page() {;
                 key={metric.name}
                 initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                 animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition={{ delay: 0.4 + index * 0.1 }}";
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">";
@@ -190,18 +181,18 @@ export default function Page() {;
                 </div>;
               </motion.div>) ) }
           </motion.div>) }
-;
+
         {/* Alerts and Recommendations */}
         {performanceData && (<motion.div;
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ delay: 0.5 }}";
             className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">;
@@ -235,18 +226,18 @@ export default function Page() {;
               </div>;
             </div>;
           </motion.div>) }
-;
+
         {/* Performance Chart Placeholder */}
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ delay: 0.6 }}
           className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center">;
@@ -254,7 +245,7 @@ export default function Page() {;
           <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>;
           <p className="text-gray -400">;
             {isMonitoring;
-              ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data';,
+              ? 'Real - time performance data is being collected and analyzed...'              : 'Start monitoring to view performance trends and historical data';
 }
           </p>;
           {isMonitoring && (";
@@ -267,13 +258,13 @@ export default function Page() {;
         {performanceData && (<motion.div;
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ delay: 0.7 }}";
             className="mt-8 text-center">";
@@ -287,5 +278,4 @@ export default function Page() {;
       </div>;
     </div>;) ;
 </div>};
-;
 export default PerformanceAnalytics}}}}}}}}'"`;

@@ -1,5 +1,4 @@
 import {  import { motion  } from 'framer-motion';
-;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -12,13 +11,13 @@ export function CaseStudiesSection() {;
           className="text-center mb-16";
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -38,19 +37,19 @@ export function CaseStudiesSection() {;
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25";
               initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
               whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               viewport={{ once: true }}
               transition = {;
 
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}
             >";
               <div className="flex items-center mb-6">;
@@ -96,19 +95,19 @@ export function CaseStudiesSection() {;
         <motion.div;
           className="mt-16 text-center"          initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.4;,
+  { duration: 0.6,
+  delay: 0.4;
 }}
         >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
@@ -137,7 +136,6 @@ export function CaseStudiesSection() {;
         </motion.div>;
       </div>;
     </section>;) };
-;
 export default CaseStudiesSection;";
             <span className="text-2xl">→</span>;
           </div>;

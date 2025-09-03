@@ -1,37 +1,35 @@
 import Head from "next/head";
 import React from "react";
-interface SEOProps {;
-;
-  title: string,,;
-description: string,;
-  keywords?: string,;
-  image?: string,,;
-  url?: string,;
-  type?: string,;
+interface SEOProps {
+  title: string,
+description: string,
+  keywords?: string,
+  image?: string,
+  url?: string,
+  type?: string,
   siteName?: string}
-;
-const SEO: React.FC<SEOProps> = ({,;
-  title,;
-  description,;
-  keywords,;
-  image,;
-  url,";
-  type = "website",";
-  siteName = "Zion Tech Group";,;,
-}) => {;
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const fullImage = image || "/images/og-image.jpg";
-  const fullUrl = url || "https: //ziontechgroup.com",;
-;
-const SEO: React.FC<SEOProps> = ({,;
-  title,;
-  description,;
-  keywords,;
-  image,;
+
+const SEO: React.FC<SEOProps> = ({,
+  title,
+  description,
+  keywords,
+  image,
   url,";
   type = "website",";
   siteName = "Zion Tech Group";,
-}) => {;
+}) => {
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullImage = image || "/images/og-image.jpg";
+  const fullUrl = url || "https: //ziontechgroup.com",
+const SEO: React.FC<SEOProps> = ({,
+  title,
+  description,
+  keywords,
+  image,
+  url,";
+  type = "website",";
+  siteName = "Zion Tech Group";
+}) => {
   const fullTitle = title.includes(siteName) ? title : "${title} | ${siteName}";
   const fullImage = image || "/images/og-image.jpg";
   const fullUrl = url || "https: // comment;
@@ -41,7 +39,7 @@ const SEO: React.FC<SEOProps> = ({,;
       <title>{fullTitle}</title>";
       <meta name = "description" content="{description}"  />;
       {keywords && <meta name="keywords" content="{keywords}"  />}
-;
+
       {/* comment */}
       <meta property="og:type" content="{type}"  />;
       <meta property="og:title" content="{fullTitle}"  />;
@@ -50,7 +48,7 @@ const SEO: React.FC<SEOProps> = ({,;
       <meta property="og:url" content="{fullUrl}"  />;
       <meta property="og:site_name" content="{siteName}"  />;
       {/* comment */}";
-      <meta name="twitter: card" content="summary_large_image"  />",;
+      <meta name="twitter: card" content="summary_large_image"  />",
       <meta name="twitter:title" content="{fullTitle}"  />;
       <meta name="twitter:description" content="{description}"  />;
       <meta name="twitter:image" content="{fullImage}"  />;
@@ -61,7 +59,7 @@ const SEO: React.FC<SEOProps> = ({,;
       {/* comment */}";
       <script type="application/ld+json;
         dangerouslySetInnerHTML="{{";
-          __html: JSON.stringify({",;
+          __html: JSON.stringify({",
             "@context": "https:// comment;
             "@type": "Organization",";
             "name": siteName,";
@@ -74,21 +72,21 @@ const SEO: React.FC<SEOProps> = ({,;
               "addressLocality": "Middletown",";
               "addressRegion": "DE",";
               "postalCode": "19709",";
-              "addressCountry": "US";,
+              "addressCountry": "US";
 },";
             "contactPoint": {";
               "@type": "ContactPoint",";
               "telephone": "+1-302-464-0950",";
               "contactType": "customer service",";
-              "email": "kleber@ziontechgroup.com";,
+              "email": "kleber@ziontechgroup.com";
 },";
             "sameAs": [";
               "https:// comment;
               "https: // comment;
-            ]>;,
-})>;,
+            ]>;
+})>;
 }}
-;
+
      />;
     </Head>;
   )}

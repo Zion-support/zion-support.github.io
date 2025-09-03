@@ -1,12 +1,10 @@
 
 interface CartState { items: CartItem[]}
-;
+
 const initialState: CartState = { items: [] };
-;
 function cartReducer(state: CartState, action: CartAction): CartState {;
   switch(action.type) {;
     case 'ADD_ITEM': {;
-      ;
       let items;
       if(existing) {;
         items = state.items.map(i =>;
@@ -25,53 +23,45 @@ function cartReducer(state: CartState, action: CartAction): CartState {;
     default:;
       return state}
 }
-;
+
 export function useCart(): CartContextType {;
-  ;
   if(!ctx) throw new Error('useCart must be used within a CartProvider');
   return ctx}
-;
+
 export function CartProvider({ children }: { children: React.ReactNode }) {;
   const [state, dispatch] = useReducer(cartReducer, initialState);
   const { user } = useAuth();
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
 }, []);
     if(!user) {;
-      ;
       if(stored) {;
         try {;
-          ;
           if(items.length) {;
             dispatch({ type: 'SET_ITEMS', payload: items })}
         } catch {;
-          /* ignore */;,
+          /* ignore */;
 }
       }
       return}
-;
+
     if(storedGuest) {;
       try {;
-        ;
         mergeGuestCart(items).catch(err => console.error('Cart merge failed', err));
         dispatch({ type: 'SET_ITEMS', payload: items });
         safeStorage.removeItem(GUEST_CART_KEY)} catch {;
-        /* ignore */;,
+        /* ignore */;
 }
     }
   }, [user]);
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
 }, []);
     if(!user) {;
       safeStorage.setItem(GUEST_CART_KEY, JSON.stringify(state.items))}
   }, [state.items, user]);
-;
   const value: CartContextType = {;
-    items: state.items,;
-    dispatch,;,
+    items: state.items,
+    dispatch,,
 };
-;
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>}

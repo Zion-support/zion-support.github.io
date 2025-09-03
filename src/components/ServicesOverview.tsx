@@ -1,14 +1,12 @@
 import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
-;
 export function ServicesOverview(...args[]):  {;
 
-      icon: Heart,;
-      color: 'from-zion-pink to-zion-purple',;
-      description: 'Healthcare artificial intelligence solutions',;
+      icon: Heart,
+      color: 'from-zion-pink to-zion-purple',
+      description: 'Healthcare artificial intelligence solutions',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))};
   ];
-;
   return ();
     <div className="py-20 bg-futuristic relative overflow-hidden">;
       {/* Background effects */}";
@@ -22,13 +20,13 @@ export function ServicesOverview(...args[]):  {;
           className="text-center mb-16";
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ duration: 0.6 }}
 ";
@@ -50,18 +48,18 @@ export function ServicesOverview(...args[]):  {;
               className="group";
               initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
               whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition = {;
 
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}
               whileHover={{ y: -10 }}
 ";
@@ -104,13 +102,13 @@ export function ServicesOverview(...args[]):  {;
           className="mb-16";
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ duration: 0.6 }}
 ";
@@ -125,18 +123,18 @@ export function ServicesOverview(...args[]):  {;
                 className="card-futuristic group";
                 initial = {;
 
-  { opacity: 0,;
-  x: index % 2 === 0 ? -30 : 30;,
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30;
 }}
                 whileInView = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
                 transition = {;
 
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}
                 whileHover={{ y: -5 }}
 ";
@@ -160,7 +158,7 @@ export function ServicesOverview(...args[]):  {;
                     <span className="text-zion-cyan font-medium">{service.category}</span>`;
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${service.innovationLevel === 'Cutting-edge'';
                         ? 'bg-zion-cyan/20 text-zion-cyan'';
-                        : 'bg-zion-purple/20 text-zion-purple'`;,
+                        : 'bg-zion-purple/20 text-zion-purple'`;
 }`}>;
                       {service.innovationLevel}
                     </span>;
@@ -203,10 +201,10 @@ export function ServicesOverview(...args[]):  {;
           className="text-center";
           initial = {;
 
-  { opacity: 0,;
+  { opacity: 0,
   y: 30 }}          whileInView = {;
 
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 }}          transition={{ duration: 0.8 }}
 ";
           <div className="bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 rounded-2xl p-12 border border-zion-cyan/20">";

@@ -1,5 +1,4 @@
 import { Helmet } from 'react - helmet -async';
-;
 export default function Page() {;
  | Zion Tech Group`;
   const fullUrl = canonical || `${url}${window.location.pathname}`;
@@ -20,31 +19,28 @@ export default function Page() {;
       "addressLocality": "Digital City",";
       "addressRegion": "Tech State",";
       "postalCode": "12345",";
-      "addressCountry": "US";,
+      "addressCountry": "US";
 },";
     "contactPoint": {;
 ";
       "@type": "ContactPoint",";
       "telephone": "+1-555-123-4567",";
       "contactType": "customer service","`;
-      "url": `${url}/contact`;,
+      "url": `${url}/contact`;
 },";
     "sameAs": [";
       "https://linkedin.com/company/ziontechgroup",";
       "https://twitter.com/ziontechgroup",";
-      "https://github.com/ziontechgroup";
-    ],";
+      "https://github.com/ziontechgroup" ],";
     "serviceType": [";
       "AI Solutions",";
       "Quantum Computing",";
       "Micro SAAS Services",";
       "Digital Transformation",";
-      "Technology Consulting";
-    ]";
-    "sameAs": [;";
+      "Technology Consulting" ]";
+    "sameAs": [ ";
       "https://twitter.com/ziontechgroup",";
-      "https://linkedin.com/company/ziontechgroup","      "https://facebook.com/ziontechgroup";
-    ],";
+      "https://linkedin.com/company/ziontechgroup","      "https://facebook.com/ziontechgroup" ],";
     "foundingDate": "2020",";
     "numberOfEmployees": "100+",";
     "serviceArea": "Worldwide",";
@@ -59,9 +55,9 @@ export default function Page() {;
 ";
             "@type": "Service",";
             "name": "AI Solutions",";
-            "description": "Artificial Intelligence and Machine Learning services";,
+            "description": "Artificial Intelligence and Machine Learning services";
 }
-        },;
+        },
         {;
 ";
           "@type": "Offer",";
@@ -69,9 +65,9 @@ export default function Page() {;
 ";
             "@type": "Service",";
             "name": "Cloud Computing",";
-            "description": "Cloud infrastructure and DevOps services";,
+            "description": "Cloud infrastructure and DevOps services";
 }
-        },;
+        },
         {;
 ";
           "@type": "Offer",";
@@ -79,13 +75,12 @@ export default function Page() {;
 ";
             "@type": "Service",";
             "name": "Cybersecurity",";
-            "description": "Security and compliance solutions";,
+            "description": "Security and compliance solutions";
 }
         }
-      ];,
+      ];
 }
   };
-;
     // Preload critical images;
     if(ogImage) {;
 
@@ -93,14 +88,13 @@ export default function Page() {;
       imageLink.as = 'image';
       imageLink.href = ogImage;
       document.head.appendChild(imageLink) }
-;
+
     // DNS prefetch for external domains;
-    ;
     dnsPrefetchDomains.forEach(domain => {;
 
       link.rel = 'dns-prefetch';
       link.href = domain;
-      document.head.appendChild(link)});,
+      document.head.appendChild(link)});
 }, [ogImage]);
   if(type === 'article') {;
     Object.assign(structuredData, {;
@@ -110,7 +104,7 @@ export default function Page() {;
       "author": {;
 ";
         "@type": "Person",";
-        "name": author;,
+        "name": author;
 },";
       "publisher": {;
 ";
@@ -119,7 +113,7 @@ export default function Page() {;
         "logo": {;
 ";
           "@type": "ImageObject","`;
-          "url": `${url}/images/zion-tech-group-logo.png`;,
+          "url": `${url}/images/zion-tech-group-logo.png`;
 }
       },";
       "datePublished": publishedTime,";
@@ -127,7 +121,7 @@ export default function Page() {;
       "mainEntityOfPage": {;
 ";
         "@type": "WebPage",";
-        "@id": fullUrl;,
+        "@id": fullUrl;
 }
     }) }
   return ();
@@ -138,7 +132,7 @@ export default function Page() {;
 
       {/* Canonical URL */}";
       {canonical && <link rel="canonical" href={canonical} />}
-;
+
       {/* Open Graph Meta Tags */}";
       <meta property="og:title" content={title} />";
       <meta property="og:description" content={description} />";
@@ -163,7 +157,7 @@ export default function Page() {;
 
       {/* Robots */}
       {noindex && <meta name="robots" content="noindex, nofollow" />}
-;
+
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />;
 
@@ -198,9 +192,9 @@ export default function Page() {;
       {author && <meta property="article:author" content={author} />}
       {section && <meta property="article:section" content={section} />}
       {tags.map((tag, index) => (<meta key={index} property="article:tag" content={tag} />) ) }
-    </Helmet>) ;,
+    </Helmet>) ;
 };}}}}
-;
+
       {/* Favicon */}
       <link rel="icon" type="image / x-icon" href="/favicon.ico" />;
       <link rel="apple - touch-icon" sizes="180x180" href="/apple - touch-icon.png" />;
@@ -229,5 +223,5 @@ export default function Page() {;
       {/* Performance Optimizations */}
       <meta name="format - detection" content="telephone = no" />;
       <meta name="mobile - web - app - capable" content="yes" />;
-    </Helmet>) ;,
+    </Helmet>) ;
 };

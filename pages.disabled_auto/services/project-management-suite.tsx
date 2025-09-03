@@ -3,63 +3,59 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { ArrowRight, CheckCircle, Star, Users, Calendar, BarChart3, MessageSquare, FileText } from 'lucide-react';
 import Link from 'next/link';
-;
 const ProjectManagementSuite: NextPage = () => {;
   const features = [;
     {;
-      icon: Calendar,;
-      title: 'Task Management',;
-      description: 'Create, assign, and track tasks with deadlines, priorities, and dependencies.';,
-},;
+      icon: Calendar,
+      title: 'Task Management',
+      description: 'Create, assign, and track tasks with deadlines, priorities, and dependencies.';
+},
     {;
-      icon: Users,;
-      title: 'Team Collaboration',;
-      description: 'Real-time collaboration with team members, comments, and file sharing.';,
-},;
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Real-time collaboration with team members, comments, and file sharing.';
+},
     {;
-      icon: BarChart3,;
-      title: 'Progress Tracking',;
-      description: 'Visual dashboards and reports to monitor project progress and team performance.';,
-},;
+      icon: BarChart3,
+      title: 'Progress Tracking',
+      description: 'Visual dashboards and reports to monitor project progress and team performance.';
+},
     {;
-      icon: MessageSquare,;
-      title: 'Communication Hub',;
-      description: 'Integrated messaging, video calls, and discussion threads for seamless communication.';,
+      icon: MessageSquare,
+      title: 'Communication Hub',
+      description: 'Integrated messaging, video calls, and discussion threads for seamless communication.';
 }
   ];
-;
   const modules = [;
     {;
-      title: 'Project Planning',;
-      description: 'Comprehensive project planning tools with Gantt charts, resource allocation, and timeline management.',;
-      features: ['Gantt Charts', 'Resource Planning', 'Timeline Management', 'Milestone Tracking'];,
-},;
+      title: 'Project Planning',
+      description: 'Comprehensive project planning tools with Gantt charts, resource allocation, and timeline management.',
+      features: ['Gantt Charts', 'Resource Planning', 'Timeline Management', 'Milestone Tracking'];
+},
     {;
-      title: 'Task Management',;
-      description: 'Advanced task management with kanban boards, custom workflows, and automation rules.',;
-      features: ['Kanban Boards', 'Custom Workflows', 'Task Automation', 'Priority Management'];,
-},;
+      title: 'Task Management',
+      description: 'Advanced task management with kanban boards, custom workflows, and automation rules.',
+      features: ['Kanban Boards', 'Custom Workflows', 'Task Automation', 'Priority Management'];
+},
     {;
-      title: 'Team Collaboration',;
-      description: 'Built-in collaboration tools for seamless team communication and file sharing.',;
-      features: ['Real-time Chat', 'File Sharing', 'Video Conferencing', 'Comment System'];,
-},;
+      title: 'Team Collaboration',
+      description: 'Built-in collaboration tools for seamless team communication and file sharing.',
+      features: ['Real-time Chat', 'File Sharing', 'Video Conferencing', 'Comment System'];
+},
     {;
-      title: 'Reporting & Analytics',;
-      description: 'Comprehensive reporting and analytics to track performance and make data-driven decisions.',;
-      features: ['Custom Reports', 'Performance Analytics', 'Time Tracking', 'Resource Utilization'];,
+      title: 'Reporting & Analytics',
+      description: 'Comprehensive reporting and analytics to track performance and make data-driven decisions.',
+      features: ['Custom Reports', 'Performance Analytics', 'Time Tracking', 'Resource Utilization'];
 }
   ];
-;
   const integrations = [;
-    { name: 'Slack', description: 'Integrate with Slack for notifications and updates' },;
-    { name: 'Microsoft Teams', description: 'Seamless integration with Microsoft Teams' },;
-    { name: 'Google Workspace', description: 'Connect with Google Drive, Calendar, and Gmail' },;
-    { name: 'Jira', description: 'Sync with Jira for development project management' },;
-    { name: 'Trello', description: 'Import projects from Trello boards' },;
+    { name: 'Slack', description: 'Integrate with Slack for notifications and updates' },
+    { name: 'Microsoft Teams', description: 'Seamless integration with Microsoft Teams' },
+    { name: 'Google Workspace', description: 'Connect with Google Drive, Calendar, and Gmail' },
+    { name: 'Jira', description: 'Sync with Jira for development project management' },
+    { name: 'Trello', description: 'Import projects from Trello boards' },
     { name: 'Asana', description: 'Migrate from Asana with full data preservation' }
   ];
-;
   return (;
     <MainLayout;
       title="Project Management Suite - Zion Tech Group";
@@ -74,7 +70,6 @@ const ProjectManagementSuite: NextPage = () => {;
             Streamline your projects with our comprehensive management suite. ;
             Plan, execute, and deliver projects on time with powerful collaboration tools and advanced analytics.;
           </p>;
-          ;
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">;
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">;
               Start Free Trial;
@@ -115,7 +110,6 @@ const ProjectManagementSuite: NextPage = () => {;
               Our comprehensive suite includes all the tools you need to plan, execute, and deliver successful projects.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {features.map((feature, index) => {;
               const IconComponent = feature.icon;
@@ -127,7 +121,7 @@ const ProjectManagementSuite: NextPage = () => {;
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>;
                   <p className="text-gray-600">{feature.description}</p>;
                 </div>;
-              );,
+              );
 })}
           </div>;
         </div>;
@@ -142,7 +136,6 @@ const ProjectManagementSuite: NextPage = () => {;
               Choose the modules you need or use the complete suite for maximum project management efficiency.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 gap-8">;
             {modules.map((module, index) => (;
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg">;
@@ -171,7 +164,6 @@ const ProjectManagementSuite: NextPage = () => {;
               Connect with your favorite tools and services to create a unified workflow.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {integrations.map((integration, index) => (;
               <div key={index} className="bg-gray-50 p-6 rounded-lg hover:bg-gray-100 transition-colors">;
@@ -192,7 +184,6 @@ const ProjectManagementSuite: NextPage = () => {;
               Join thousands of teams who have transformed their project management with our comprehensive solution.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-3 gap-8">;
             <div className="bg-white p-8 rounded-lg shadow-lg text-center">;
               <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">;
@@ -247,7 +238,6 @@ const ProjectManagementSuite: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default ProjectManagementSuite;

@@ -2,17 +2,16 @@ import { useState, useEffect } from 'react';
  from 'react';
 export /**;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
 function Accessibility () {;
 
-  Accessibility as AccessibilityIcon,;
-  Type,;
-  Eye,;
-  Volume2,;
-  Keyboard,;
+  Accessibility as AccessibilityIcon,
+  Type,
+  Eye,
+  Volume2,
+  Keyboard,
               {/* Header */}
   Keyboard,              {/* Header */}
               <div className="flex items-center justify-between mb-6">;
@@ -65,9 +64,9 @@ function Accessibility () {;
                     onChange={(e) => updateSetting('highContrast', e.target.checked)}
                     className="sr-only";
                   />;
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-cyan-500' : 'bg-slate-700';,
+                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-cyan-500' : 'bg-slate-700';
 }`}>;
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast ? 'translate-x-6' : 'translate-x-1';,
+                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast ? 'translate-x-6' : 'translate-x-1';
 }`} />;
                   </div>;
                 </label>;
@@ -86,9 +85,9 @@ function Accessibility () {;
                     onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                     className="sr-only";
                   />;
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-cyan-500' : 'bg-slate-700';,
+                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-cyan-500' : 'bg-slate-700';
 }`}>;
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? 'translate-x-6' : 'translate-x-1';,
+                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? 'translate-x-6' : 'translate-x-1';
 }`} />;
                   </div>;
                 </label>;
@@ -107,7 +106,7 @@ function Accessibility () {;
                       onClick={() => updateSetting('theme', theme)}
                       className={`p-2 rounded-md text-xs font-medium transition-colors ${settings.theme === theme;
                           ? 'bg-cyan-500 text-white';
-                          : 'bg-slate-800 text-gray-300 hover:bg-slate-700';,
+                          : 'bg-slate-800 text-gray-300 hover:bg-slate-700';
 }`}
                     >;
                       {theme === 'auto' && 'Auto'}
@@ -131,9 +130,9 @@ function Accessibility () {;
                     onChange={(e) => updateSetting('soundEnabled', e.target.checked)}
                     className="sr-only";
                   />;
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.soundEnabled ? 'bg-cyan-500' : 'bg-slate-700';,
+                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.soundEnabled ? 'bg-cyan-500' : 'bg-slate-700';
 }`}>;
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.soundEnabled ? 'translate-x-6' : 'translate-x-1';,
+                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.soundEnabled ? 'translate-x-6' : 'translate-x-1';
 }`} />;
                   </div>;
                 </label>;
@@ -173,5 +172,4 @@ function Accessibility () {;
       </AnimatePresence>;
     </>;
   )}
-;
-;,"});,})";
+;"});})";

@@ -1,4 +1,4 @@
-export interface Real2026Q3Addition {;
+export interface Real2026Q3Addition {
   id: string;
   name: string;
   tagline: string;
@@ -6,10 +6,10 @@ export interface Real2026Q3Addition {;
   features: string[]}
 export const real2026Q3Additions: Real2026Q3Addition[] = [;
   {;
-    id: "q3-2026-addition-1",;
-    name: "Q3 2026 Addition 1",;
-    tagline: "Third quarter 2026 addition",;
-    price: "$899",;
-    features: ["Q3 2026 features", "Latest innovations", "Advanced solutions"],;,;,
-},;
+    id: "q3-2026-addition-1",
+    name: "Q3 2026 Addition 1",
+    tagline: "Third quarter 2026 addition",
+    price: "$899",
+    features: ["Q3 2026 features", "Latest innovations", "Advanced solutions"],,,
+},
 ]

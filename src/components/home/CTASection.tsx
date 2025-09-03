@@ -1,11 +1,10 @@
-;
-const CTASection: React.FC = (): JSX.Element => {;,
-},;
+
+const CTASection: React.FC = (): JSX.Element => {;
+},
     {;
-      icon: Star,;";
-      title: "Proven Results",;";
+      icon: Star,";
+      title: "Proven Results",";
       description: "Trusted by industry leaders worldwide"};  ];
-;
   return (";
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/90 to-zion-slate-dark relative overflow-hidden" role="region" aria-labelledby="cta-heading">;
       {/* Background Elements */}";
@@ -20,13 +19,13 @@ const CTASection: React.FC = (): JSX.Element => {;,
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
             whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}";
@@ -41,18 +40,18 @@ const CTASection: React.FC = (): JSX.Element => {;,
             id="cta-heading";
             initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
             whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition = {;
 
-  { duration: 0.8,;
-  delay: 0.2;,
+  { duration: 0.8,
+  delay: 0.2;
 }}
             viewport={{ once: true }}";
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6";
@@ -63,43 +62,39 @@ const CTASection: React.FC = (): JSX.Element => {;,
           <motion.p;
             initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
             whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition = {;
 
-  { duration: 0.8,;
-  delay: 0.4;,
+  { duration: 0.8,
+  delay: 0.4;
 }}
             viewport={{ once: true }}";
             className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed mb-8";
 
             Join hundreds of companies that have already revolutionized their operations with Zion Tech Group's cutting-edge solutions.</motion.p>;
         </div>;
-;
         {/* Feature Grid */}
         <motion.div";
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12";
           initial = {;
 
-  { opacity: 0,;
+  { opacity: 0,
   y: 30 ;
-;,
 }}          whileInView = {;
 
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
-;,
 }}          transition = {;
 
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: 0.6 ;
-;,
 }}          viewport={{ once: true }}
         >;
           {features.map((feature, index (;
@@ -108,18 +103,18 @@ const CTASection: React.FC = (): JSX.Element => {;,
               className="text-center p-6 bg-zion-slate-dark/30 backdrop-blur-xl border border-zion-cyan/20 rounded-xl hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20";
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition = {;
 
-  { duration: 0.6,;
-  delay: 0.6 + index * 0.1;,
+  { duration: 0.6,
+  delay: 0.6 + index * 0.1;
 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
@@ -138,21 +133,18 @@ const CTASection: React.FC = (): JSX.Element => {;,
           className="flex flex-col sm:flex-row gap-6 justify-center items-center";
           initial = {;
 
-  { opacity: 0,;
+  { opacity: 0,
   y: 30 ;
-;,
 }}          whileInView = {;
 
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
-;,
 }}          transition = {;
 
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: 0.8 ;
-;,
 }}          viewport={{ once: true }}
-;
+
           <Link";
             to="/contact";
             className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-bold text-lg rounded-2xl hover:from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/30 focus:outline-none focus:ring-4 focus:ring-zion-cyan/30 focus:ring-offset-2 focus:ring-offset-zion-slate-dark";
@@ -176,9 +168,8 @@ const CTASection: React.FC = (): JSX.Element => {;,
           whileInView={{ opacity: 1 }}
           transition = {;
 
-  { duration: 1,;
+  { duration: 1,
   delay: 1 ;
-;,
 }}          viewport={{ once: true }}
 ";
           <p className="text-zion-slate-light text-sm mb-4">Trusted by industry leaders worldwide</p>";
@@ -192,6 +183,5 @@ const CTASection: React.FC = (): JSX.Element => {;,
       </div>;
     </section>;
   )};
-;
 export default CTASection}}'";
 )

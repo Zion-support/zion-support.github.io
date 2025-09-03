@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-;
 import fs from "fs";
 import path from "path";
 import { fileURLToPath  } from "url";
@@ -12,213 +11,203 @@ function fixNextLinks(filePath) {;
     // Add Link import if not present;
     if (content.includes("href="/") && !content.includes("import Link")) {;
   content = content.replace(;
-        /import React from "react";/,;
+        /import React from "react";/,
         `import React from "react";
 import Link from "next/link";`;
-      );,;,
+      );,
 }
-    ;
+
     // Replace <a href="/..."> with <Link href="/...">;
     content = content.replace(;
-      /<a href="(\/[^"]*)"([^>]*)>/g,;
+      /<a href="(\/[^"]*)"([^>]*)>/g,
       "<Link href="$1"$2>";
     );
     // Replace </a> with </Link>;
     content = content.replace(/<\/a>/g, "</Link>");
     fs.writeFileSync(filePath, content, "utf8");
-    console.log(`✓ Fixed Next.js links in ${filePath}`);,;,
+    console.log(`✓ Fixed Next.js links in ${filePath}`);,
 } catch (error) {;
-  console.error(`✗ Error fixing ${filePath}:`, error.message);,;,
+  console.error(`✗ Error fixing ${filePath}:`, error.message);,
 }
 }
-;
+
 // List of files that need Link fixes (based on the lint output);
-const filesToFix = [;
-  "src/pages/services/InterviewAssessmentAI.tsx",;
-  "src/pages/services/IoTEdgeComputing.jsx",;
-  "src/pages/services/IoTServices.jsx",;
-  "src/pages/services/MachineLearning.tsx",;
-  "src/pages/services/MicroSAASSolutions.jsx",;
-  "src/pages/services/MicroSAASSolutions.tsx",;
-  "src/pages/services/MicroSaaSPlatformElite.tsx",;
-  "src/pages/services/RoboticsAutomation.tsx",;
-  "src/pages/services/SecurityHeadersCSP.tsx",;
-  "src/pages/services/Transformation.jsx",;
-  "src/pages/services/WebsiteAnalytics.tsx",;
-  "src/pages/services/ZeroTrustNetworkAccess.tsx";
-];
+const filesToFix = [ "src/pages/services/InterviewAssessmentAI.tsx",
+  "src/pages/services/IoTEdgeComputing.jsx",
+  "src/pages/services/IoTServices.jsx",
+  "src/pages/services/MachineLearning.tsx",
+  "src/pages/services/MicroSAASSolutions.jsx",
+  "src/pages/services/MicroSAASSolutions.tsx",
+  "src/pages/services/MicroSaaSPlatformElite.tsx",
+  "src/pages/services/RoboticsAutomation.tsx",
+  "src/pages/services/SecurityHeadersCSP.tsx",
+  "src/pages/services/Transformation.jsx",
+  "src/pages/services/WebsiteAnalytics.tsx",
+  "src/pages/services/ZeroTrustNetworkAccess.tsx" ];
 // Fix Next.js Link issues;
 filesToFix.forEach(fixNextLinks);
 // List of remaining corrupted files that need complete replacement;
-const remainingCorruptedFiles = [;
-  "src/pages/services/ai-autonomous-business-operations-platform.tsx",;
-  "src/pages/services/ai-autonomous-code-reviewer.tsx",;
-  "src/pages/services/ai-autonomous-operations.tsx",;
-  "src/pages/services/ai-autonomous-vehicle-management-platform.tsx",;
-  "src/pages/services/ai-autonomous-vehicle-platform.tsx",;
-  "src/pages/services/ai-blockchain-supply-chain.tsx",;
-  "src/pages/services/ai-business-intelligence-platform.tsx",;
-  "src/pages/services/ai-business-intelligence.tsx",;
-  "src/pages/services/ai-business-process-automation-platform.tsx",;
-  "src/pages/services/ai-code-review-security.tsx",;
-  "src/pages/services/ai-content-creation-studio.tsx",;
-  "src/pages/services/ai-content-creation-tools.tsx",;
-  "src/pages/services/ai-content-marketing-automation.tsx",;
-  "src/pages/services/ai-customer-churn-prediction.tsx",;
-  "src/pages/services/ai-customer-experience-analytics-2025.tsx",;
-  "src/pages/services/ai-customer-experience-analytics-platform.tsx",;
-  "src/pages/services/ai-customer-experience-analytics.tsx",;
-  "src/pages/services/ai-customer-success-platform.tsx",;
-  "src/pages/services/ai-customer-support-platform.tsx",;
-  "src/pages/services/ai-cyber-threat-intelligence.tsx",;
-  "src/pages/services/ai-cybersecurity-platform.tsx",;
-  "src/pages/services/ai-cybersecurity-threat-intelligence-platform.tsx",;
-  "src/pages/services/ai-cybersecurity-threat-intelligence.tsx",;
-  "src/pages/services/ai-data-analytics-bi.tsx",;
-  "src/pages/services/ai-data-analytics-platform.tsx",;
-  "src/pages/services/ai-data-governance-platform.tsx",;
-  "src/pages/services/ai-devops-automation-platform.tsx",;
-  "src/pages/services/ai-digital-twin-platform.tsx",;
-  "src/pages/services/ai-document-processing-automation.tsx",;
-  "src/pages/services/ai-ecommerce-personalization-engine.tsx",;
-  "src/pages/services/ai-email-responder.tsx",;
-  "src/pages/services/ai-energy-management-sustainability.tsx",;
-  "src/pages/services/ai-energy-management-system.tsx",;
-  "src/pages/services/ai-enterprise-automation-platform.tsx",;
-  "src/pages/services/ai-enterprise-resource-optimizer.tsx",;
-  "src/pages/services/ai-enterprise-resource-planning.tsx",;
-  "src/pages/services/ai-financial-fraud-detection.tsx",;
-  "src/pages/services/ai-financial-risk-management-platform.tsx",;
-  "src/pages/services/ai-financial-risk-management-trading-platform.tsx",;
-  "src/pages/services/ai-financial-risk-management.tsx",;
-  "src/pages/services/ai-financial-services-platform.tsx",;
-  "src/pages/services/ai-financial-trading-platform-2025.tsx",;
-  "src/pages/services/ai-financial-trading-platform.tsx",;
-  "src/pages/services/ai-financial-trading.tsx",;
-  "src/pages/services/ai-fintech-platform.tsx",;
-  "src/pages/services/ai-fitness-coaching-platform.tsx",;
-  "src/pages/services/ai-fraud-detection-platform.tsx",;
-  "src/pages/services/ai-green-technology.tsx",;
-  "src/pages/services/ai-healthcare-analytics.tsx",;
-  "src/pages/services/ai-healthcare-diagnosis.tsx",;
-  "src/pages/services/ai-healthcare-diagnostics.tsx",;
-  "src/pages/services/ai-healthcare-predictive-analytics-2025.tsx",;
-  "src/pages/services/ai-healthcare-predictive-analytics-platform.tsx",;
-  "src/pages/services/ai-hr-platform.tsx",;
-  "src/pages/services/ai-iot-edge-computing-platform.tsx",;
-  "src/pages/services/ai-learning-management-system.tsx",;
-  "src/pages/services/ai-legal-contract-analyzer-2025.tsx",;
-  "src/pages/services/ai-legal-document-analysis.tsx",;
-  "src/pages/services/ai-legal-document-automation-platform.tsx",;
-  "src/pages/services/ai-legal-research-compliance-platform.tsx",;
-  "src/pages/services/ai-legal-tech-platform.tsx",;
-  "src/pages/services/ai-marketing-automation.tsx",;
-  "src/pages/services/ai-metaverse-platform.tsx",;
-  "src/pages/services/ai-micro-saas-platform.tsx",;
-  "src/pages/services/ai-personal-finance-advisor.tsx",;
-  "src/pages/services/ai-powered-customer-churn-predictor.tsx",;
-  "src/pages/services/ai-powered-financial-risk-management-platform.tsx",;
-  "src/pages/services/ai-powered-seo-optimization-platform.tsx",;
-  "src/pages/services/ai-powered-supply-chain-optimization-platform.tsx",;
-  "src/pages/services/ai-predictive-maintenance-platform.tsx",;
-  "src/pages/services/ai-predictive-maintenance.tsx",;
-  "src/pages/services/ai-quality-assurance.tsx",;
-  "src/pages/services/ai-quantum-computing-platform.tsx",;
-  "src/pages/services/ai-quantum-computing-solutions.tsx",;
-  "src/pages/services/ai-quantum-financial-trading-platform.tsx",;
-  "src/pages/services/ai-quantum-financial-trading.tsx",;
-  "src/pages/services/ai-quantum-hybrid-platform.tsx",;
-  "src/pages/services/ai-real-estate-analytics-platform.tsx",;
-  "src/pages/services/ai-real-estate-investment-analyzer.tsx",;
-  "src/pages/services/ai-research-discovery.tsx",;
-  "src/pages/services/ai-restaurant-management-system.tsx",;
-  "src/pages/services/ai-revenue-operations-platform.tsx",;
-  "src/pages/services/ai-sales-copilot.tsx",;
-  "src/pages/services/ai-sales-intelligence-platform.tsx",;
-  "src/pages/services/ai-sales-intelligence.tsx",;
-  "src/pages/services/ai-seo-optimizer.tsx",;
-  "src/pages/services/ai-smart-city-infrastructure-management.tsx",;
-  "src/pages/services/ai-space-technology.tsx",;
-  "src/pages/services/ai-supply-chain-intelligence-optimization-platform.tsx",;
-  "src/pages/services/ai-supply-chain-intelligence-platform.tsx",;
-  "src/pages/services/ai-supply-chain-optimization-2025.tsx",;
-  "src/pages/services/ai-supply-chain-optimization-platform.tsx",;
-  "src/pages/services/ai-supply-chain-optimization.tsx",;
-  "src/pages/services/ai-supply-chain.tsx",;
-  "src/pages/services/ai-sustainability-analytics-platform.tsx",;
-  "src/pages/services/ai-threat-intelligence-platform.tsx",;
-  "src/pages/services/ai-video-content-creation-studio.tsx",;
-  "src/pages/services/ai-workflow-automation.tsx",;
-  "src/pages/services/automated-follow-ups.tsx",;
-  "src/pages/services/blockchain-development-platform.tsx",;
-  "src/pages/services/blockchain-supply-chain-platform.tsx",;
-  "src/pages/services/cloud-infrastructure-devops.tsx",;
-  "src/pages/services/data-analytics.tsx",;
-  "src/pages/services/digital-twin-platform.tsx",;
-  "src/pages/services/edge-computing-solutions.tsx",;
-  "src/pages/services/index.tsx",;
-  "src/pages/services/iot-edge-computing-platform.tsx",;
-  "src/pages/services/it-infrastructure-management.tsx",;
-  "src/pages/services/it-infrastructure.tsx",;
-  "src/pages/services/micro-saas-products.tsx",;
-  "src/pages/services/micro-saas-solutions-comprehensive.tsx",;
-  "src/pages/services/mobile-survey-tool.tsx",;
-  "src/pages/services/quantum-ai-cybersecurity-platform.tsx",;
-  "src/pages/services/quantum-ai-cybersecurity.tsx",;
-  "src/pages/services/quantum-ai-trading-platform.tsx",;
-  "src/pages/services/quantum-computing-as-a-service.tsx",;
-  "src/pages/services/quantum-computing.tsx",;
-  "src/pages/services/quantum-machine-learning.tsx",;
-  "src/pages/services/revolutionary-services-2030.tsx",;
-  "src/pages/services/sustainability.tsx",;
-  "src/pages/services/sustainable-technology.tsx",;
-  "src/pages/services-showcase-2025.tsx",;
-  "src/pages/services.tsx";
-];
+const remainingCorruptedFiles = [ "src/pages/services/ai-autonomous-business-operations-platform.tsx",
+  "src/pages/services/ai-autonomous-code-reviewer.tsx",
+  "src/pages/services/ai-autonomous-operations.tsx",
+  "src/pages/services/ai-autonomous-vehicle-management-platform.tsx",
+  "src/pages/services/ai-autonomous-vehicle-platform.tsx",
+  "src/pages/services/ai-blockchain-supply-chain.tsx",
+  "src/pages/services/ai-business-intelligence-platform.tsx",
+  "src/pages/services/ai-business-intelligence.tsx",
+  "src/pages/services/ai-business-process-automation-platform.tsx",
+  "src/pages/services/ai-code-review-security.tsx",
+  "src/pages/services/ai-content-creation-studio.tsx",
+  "src/pages/services/ai-content-creation-tools.tsx",
+  "src/pages/services/ai-content-marketing-automation.tsx",
+  "src/pages/services/ai-customer-churn-prediction.tsx",
+  "src/pages/services/ai-customer-experience-analytics-2025.tsx",
+  "src/pages/services/ai-customer-experience-analytics-platform.tsx",
+  "src/pages/services/ai-customer-experience-analytics.tsx",
+  "src/pages/services/ai-customer-success-platform.tsx",
+  "src/pages/services/ai-customer-support-platform.tsx",
+  "src/pages/services/ai-cyber-threat-intelligence.tsx",
+  "src/pages/services/ai-cybersecurity-platform.tsx",
+  "src/pages/services/ai-cybersecurity-threat-intelligence-platform.tsx",
+  "src/pages/services/ai-cybersecurity-threat-intelligence.tsx",
+  "src/pages/services/ai-data-analytics-bi.tsx",
+  "src/pages/services/ai-data-analytics-platform.tsx",
+  "src/pages/services/ai-data-governance-platform.tsx",
+  "src/pages/services/ai-devops-automation-platform.tsx",
+  "src/pages/services/ai-digital-twin-platform.tsx",
+  "src/pages/services/ai-document-processing-automation.tsx",
+  "src/pages/services/ai-ecommerce-personalization-engine.tsx",
+  "src/pages/services/ai-email-responder.tsx",
+  "src/pages/services/ai-energy-management-sustainability.tsx",
+  "src/pages/services/ai-energy-management-system.tsx",
+  "src/pages/services/ai-enterprise-automation-platform.tsx",
+  "src/pages/services/ai-enterprise-resource-optimizer.tsx",
+  "src/pages/services/ai-enterprise-resource-planning.tsx",
+  "src/pages/services/ai-financial-fraud-detection.tsx",
+  "src/pages/services/ai-financial-risk-management-platform.tsx",
+  "src/pages/services/ai-financial-risk-management-trading-platform.tsx",
+  "src/pages/services/ai-financial-risk-management.tsx",
+  "src/pages/services/ai-financial-services-platform.tsx",
+  "src/pages/services/ai-financial-trading-platform-2025.tsx",
+  "src/pages/services/ai-financial-trading-platform.tsx",
+  "src/pages/services/ai-financial-trading.tsx",
+  "src/pages/services/ai-fintech-platform.tsx",
+  "src/pages/services/ai-fitness-coaching-platform.tsx",
+  "src/pages/services/ai-fraud-detection-platform.tsx",
+  "src/pages/services/ai-green-technology.tsx",
+  "src/pages/services/ai-healthcare-analytics.tsx",
+  "src/pages/services/ai-healthcare-diagnosis.tsx",
+  "src/pages/services/ai-healthcare-diagnostics.tsx",
+  "src/pages/services/ai-healthcare-predictive-analytics-2025.tsx",
+  "src/pages/services/ai-healthcare-predictive-analytics-platform.tsx",
+  "src/pages/services/ai-hr-platform.tsx",
+  "src/pages/services/ai-iot-edge-computing-platform.tsx",
+  "src/pages/services/ai-learning-management-system.tsx",
+  "src/pages/services/ai-legal-contract-analyzer-2025.tsx",
+  "src/pages/services/ai-legal-document-analysis.tsx",
+  "src/pages/services/ai-legal-document-automation-platform.tsx",
+  "src/pages/services/ai-legal-research-compliance-platform.tsx",
+  "src/pages/services/ai-legal-tech-platform.tsx",
+  "src/pages/services/ai-marketing-automation.tsx",
+  "src/pages/services/ai-metaverse-platform.tsx",
+  "src/pages/services/ai-micro-saas-platform.tsx",
+  "src/pages/services/ai-personal-finance-advisor.tsx",
+  "src/pages/services/ai-powered-customer-churn-predictor.tsx",
+  "src/pages/services/ai-powered-financial-risk-management-platform.tsx",
+  "src/pages/services/ai-powered-seo-optimization-platform.tsx",
+  "src/pages/services/ai-powered-supply-chain-optimization-platform.tsx",
+  "src/pages/services/ai-predictive-maintenance-platform.tsx",
+  "src/pages/services/ai-predictive-maintenance.tsx",
+  "src/pages/services/ai-quality-assurance.tsx",
+  "src/pages/services/ai-quantum-computing-platform.tsx",
+  "src/pages/services/ai-quantum-computing-solutions.tsx",
+  "src/pages/services/ai-quantum-financial-trading-platform.tsx",
+  "src/pages/services/ai-quantum-financial-trading.tsx",
+  "src/pages/services/ai-quantum-hybrid-platform.tsx",
+  "src/pages/services/ai-real-estate-analytics-platform.tsx",
+  "src/pages/services/ai-real-estate-investment-analyzer.tsx",
+  "src/pages/services/ai-research-discovery.tsx",
+  "src/pages/services/ai-restaurant-management-system.tsx",
+  "src/pages/services/ai-revenue-operations-platform.tsx",
+  "src/pages/services/ai-sales-copilot.tsx",
+  "src/pages/services/ai-sales-intelligence-platform.tsx",
+  "src/pages/services/ai-sales-intelligence.tsx",
+  "src/pages/services/ai-seo-optimizer.tsx",
+  "src/pages/services/ai-smart-city-infrastructure-management.tsx",
+  "src/pages/services/ai-space-technology.tsx",
+  "src/pages/services/ai-supply-chain-intelligence-optimization-platform.tsx",
+  "src/pages/services/ai-supply-chain-intelligence-platform.tsx",
+  "src/pages/services/ai-supply-chain-optimization-2025.tsx",
+  "src/pages/services/ai-supply-chain-optimization-platform.tsx",
+  "src/pages/services/ai-supply-chain-optimization.tsx",
+  "src/pages/services/ai-supply-chain.tsx",
+  "src/pages/services/ai-sustainability-analytics-platform.tsx",
+  "src/pages/services/ai-threat-intelligence-platform.tsx",
+  "src/pages/services/ai-video-content-creation-studio.tsx",
+  "src/pages/services/ai-workflow-automation.tsx",
+  "src/pages/services/automated-follow-ups.tsx",
+  "src/pages/services/blockchain-development-platform.tsx",
+  "src/pages/services/blockchain-supply-chain-platform.tsx",
+  "src/pages/services/cloud-infrastructure-devops.tsx",
+  "src/pages/services/data-analytics.tsx",
+  "src/pages/services/digital-twin-platform.tsx",
+  "src/pages/services/edge-computing-solutions.tsx",
+  "src/pages/services/index.tsx",
+  "src/pages/services/iot-edge-computing-platform.tsx",
+  "src/pages/services/it-infrastructure-management.tsx",
+  "src/pages/services/it-infrastructure.tsx",
+  "src/pages/services/micro-saas-products.tsx",
+  "src/pages/services/micro-saas-solutions-comprehensive.tsx",
+  "src/pages/services/mobile-survey-tool.tsx",
+  "src/pages/services/quantum-ai-cybersecurity-platform.tsx",
+  "src/pages/services/quantum-ai-cybersecurity.tsx",
+  "src/pages/services/quantum-ai-trading-platform.tsx",
+  "src/pages/services/quantum-computing-as-a-service.tsx",
+  "src/pages/services/quantum-computing.tsx",
+  "src/pages/services/quantum-machine-learning.tsx",
+  "src/pages/services/revolutionary-services-2030.tsx",
+  "src/pages/services/sustainability.tsx",
+  "src/pages/services/sustainable-technology.tsx",
+  "src/pages/services-showcase-2025.tsx",
+  "src/pages/services.tsx" ];
 // Template for a basic service page with Next.js Link;
 const servicePageTemplate = (serviceName, displayName) => `import React from "react";
 import Link from "next/link";
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3  } from "lucide-react";
 export default function ${serviceName}() {;
-  const features = [;
-  "AI-powered ${displayName.toLowerCase()} optimization",;
-    "Automated ${displayName.toLowerCase()} management",;
-    "Real-time ${displayName.toLowerCase()} analytics",;
-    "Predictive ${displayName.toLowerCase()} insights",;
-    "Custom AI models for ${displayName.toLowerCase()}",;
-    "Enterprise-grade security and compliance";
-  ];
-  const benefits = [;
-  "Improve ${displayName.toLowerCase()} performance by 50-80%",;
-    "Reduce operational costs by 35-65%",;
-    "Enhance scalability and reliability",;
-    "Optimize resource utilization",;
-    "Scale operations efficiently",;
-    "Maximize ROI and efficiency";
-  ];
-  const useCases = [;
-  "Software Development",;
-    "E-commerce & Retail",;
-    "Financial Services",;
-    "Healthcare & Life Sciences",;
-    "Media & Entertainment",;
-    "Technology & SaaS";
-  ];
+  const features = [ "AI-powered ${displayName.toLowerCase()} optimization",
+    "Automated ${displayName.toLowerCase()} management",
+    "Real-time ${displayName.toLowerCase()} analytics",
+    "Predictive ${displayName.toLowerCase()} insights",
+    "Custom AI models for ${displayName.toLowerCase()}",
+    "Enterprise-grade security and compliance" ];
+  const benefits = [ "Improve ${displayName.toLowerCase()} performance by 50-80%",
+    "Reduce operational costs by 35-65%",
+    "Enhance scalability and reliability",
+    "Optimize resource utilization",
+    "Scale operations efficiently",
+    "Maximize ROI and efficiency" ];
+  const useCases = [ "Software Development",
+    "E-commerce & Retail",
+    "Financial Services",
+    "Healthcare & Life Sciences",
+    "Media & Entertainment",
+    "Technology & SaaS" ];
   const pricing = [;
   {;
-  name: "Starter",;
-      price: "$299/mo",;
-      details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"];,;,
-},;
+  name: "Starter",
+      price: "$299/mo",
+      details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"];,
+},
     {;
-  name: "Professional",;
-      price: "$799/mo",;
-      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"];,;,
-},;
+  name: "Professional",
+      price: "$799/mo",
+      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"];,
+},
     {;
-  name: "Enterprise",;
-      price: "$1,999/mo",;
-      details: ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"];,;,
+  name: "Enterprise",
+      price: "$1,999/mo",
+      details: ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"];,
 }
   ];
   return (;
@@ -235,7 +224,6 @@ export default function ${serviceName}() {;
           </p>;
         </div>;
       </section>;
-;
       <section className="py-16 max-w-6xl mx-auto px-6">;
         <div className="grid md:grid-cols-2 gap-10">;
           <div>;
@@ -278,7 +266,6 @@ export default function ${serviceName}() {;
           </div>;
         </div>;
       </section>;
-;
       <section className="py-16 bg-gray-50">;
         <div className="max-w-6xl mx-auto px-6">;
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>;
@@ -295,7 +282,6 @@ export default function ${serviceName}() {;
           </div>;
         </div>;
       </section>;
-;
       <section className="py-16">;
         <div className="max-w-6xl mx-auto px-6">;
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Industries We Serve</h2>;
@@ -312,7 +298,6 @@ export default function ${serviceName}() {;
           </div>;
         </div>;
       </section>;
-;
       <section className="py-16 bg-indigo-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your ${displayName}?</h2>;
@@ -330,7 +315,7 @@ export default function ${serviceName}() {;
         </div>;
       </section>;
     </div>;
-  );,;,
+  );,
 }
 `;
 // Function to extract service name from file path;
@@ -340,18 +325,18 @@ function getServiceName(filePath) {;
   return fileName;
     .split(/[-_]/);
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
-    .join("");,;,
+    .join("");,
 }
-;
+
 // Function to extract display name from service name;
 function getDisplayName(serviceName) {;
   // Remove common prefixes and convert to readable format;
   return serviceName;
     .replace(/^AI/, "");
     .replace(/([A-Z])/g, " $1");
-    .trim();,;,
+    .trim();,
 }
-;
+
 // Fix remaining corrupted files;
 remainingCorruptedFiles.forEach(filePath => {;
   try {;
@@ -361,15 +346,15 @@ remainingCorruptedFiles.forEach(filePath => {;
     // Ensure directory exists;
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {;
-  fs.mkdirSync(dir, { recursive: true });,;,
+  fs.mkdirSync(dir, { recursive: true });,
 }
-    ;
+
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
-    console.log(`✓ Fixed ${filePath}`);,;,
+    console.log(`✓ Fixed ${filePath}`);,
 } catch (error) {;
-  console.error(`✗ Error fixing ${filePath}:`, error.message);,;,
+  console.error(`✗ Error fixing ${filePath}:`, error.message);,
 }
 });
 console.log("\\nFixed all remaining issues!")

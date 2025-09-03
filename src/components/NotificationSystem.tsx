@@ -1,5 +1,4 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
 export default function Page() {;
 > {;
 
@@ -9,57 +8,53 @@ export default function Page() {;
   enableVibration?: boolean;
   autoDismiss?: boolean;
   defaultDuration?: number}
-;
-interface NotificationSettings {;
+
+interface NotificationSettings {
   sound: boolean;
   vibration: boolean;
   autoDismiss: boolean;
   position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
   maxNotifications: number;
   defaultDuration: number}
-;
-export const NotificationSystem: React.FC<NotificationSystemProps> = ({;
 
-  maxNotifications = 5,;
-  position = 'top-right',;
-enableSound:  true,;
-  enableVibration = true,;
-  autoDismiss = true,;
+export const NotificationSystem: React.FC<NotificationSystemProps> = ({
+
+  maxNotifications = 5,
+  position = 'top-right',
+enableSound:  true,
+  enableVibration = true,
+  autoDismiss = true,
   defaultDuration = 5000}) => {;
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [settings, setSettings] = useState<NotificationSettings>({;
 
-    sound: enableSound,;
-    vibration: enableVibration,;
-    autoDismiss: autoDismiss,;
-    position,;
-    maxNotifications,;
-    defaultDuration;,
+    sound: enableSound,
+    vibration: enableVibration,
+    autoDismiss: autoDismiss,
+    position,
+    maxNotifications,
+    defaultDuration;
 }) ;
   const [showSettings, setShowSettings] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
-  ;
   // Initialize audio for notification sounds;
       default:';
   // Initialize audio for notification sounds      default:';
         return 'top-4 right-4'}
   };
-;
   // Update settings;
-  ;
     setSettings(prev => ({ ...prev, ...newSettings }) ) }, []) ;
   // Expose addNotification method globally for external use;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []); (window as) .addNotification = addNotification;
+    // Cleanup function;
+};
+}, []); []); (window as) .addNotification = addNotification;
     return () => {;
       delete(window as) .addNotification}}, [addNotification]) ;
-;
   return ();
     <>;
       {/* Notification Bell */}`;
@@ -94,18 +89,18 @@ enableSound:  true,;
         {showSettings && (<motion.div;
             initial = {;
 
-  { opacity: 0, scale: 0.9,;
-  y: -10;,
+  { opacity: 0, scale: 0.9,
+  y: -10;
 }}
             animate = {;
 
-  { opacity: 1, scale: 1,;
-  y: 0;,
+  { opacity: 1, scale: 1,
+  y: 0;
 }}
             exit = {;
 
-  { opacity: 0, scale: 0.9,;
-  y: -10;,
+  { opacity: 0, scale: 0.9,
+  y: -10;
 }}`;
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}
 ";
@@ -116,7 +111,7 @@ enableSound:  true,;
                 <span className="text-sm text-zion-slate">Sound</span>;
                 <button;
                   onClick={() => updateSettings({ sound: !settings.sound })}`;
-                  className={`p-2 rounded-lg transition-colors ${settings.sound ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`;,
+                  className={`p-2 rounded-lg transition-colors ${settings.sound ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`;
 }`}
 ";
                   {settings.sound ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4"  />}                </button>;
@@ -126,7 +121,7 @@ enableSound:  true,;
                 <span className="text-sm text-zion-slate">Vibration</span>;
                 <button;
                   onClick={() => updateSettings({ vibration: !settings.vibration })}`;
-                  className={`p-2 rounded-lg transition-colors ${settings.vibration ? 'bg-blue-100 text-blue-600' : 'bg-zion-slate/10 text-zion-slate'`;,
+                  className={`p-2 rounded-lg transition-colors ${settings.vibration ? 'bg-blue-100 text-blue-600' : 'bg-zion-slate/10 text-zion-slate'`;
 }`}
 ";
                   <Zap className="w-4 h-4"  />                </button>;
@@ -136,7 +131,7 @@ enableSound:  true,;
                 <span className="text-sm text-zion-slate">Auto-dismiss</span>;
                 <button;
                   onClick={() => updateSettings({ autoDismiss: !settings.autoDismiss })}`;
-                  className={`p-2 rounded-lg transition-colors ${settings.autoDismiss ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`;,
+                  className={`p-2 rounded-lg transition-colors ${settings.autoDismiss ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'`;
 }`}
 ";
                   <Clock className="w-4 h-4"  />                </button>;
@@ -168,21 +163,21 @@ enableSound:  true,;
         {isOpen && (<motion.div;
             initial = {;
 
-  { opacity: 0, scale: 0.9,;
-  y: -10;,
+  { opacity: 0, scale: 0.9,
+  y: -10;
 }}
             animate = {;
 
-  { opacity: 1, scale: 1,;
-  y: 0;,
+  { opacity: 1, scale: 1,
+  y: 0;
 }}
             exit = {;
 
-  { opacity: 0, scale: 0.9,;
-  y: -10;,
+  { opacity: 0, scale: 0.9,
+  y: -10;
 }}`;
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidden`}
-;
+
             {/* Header */}";
             <div className="flex items-center justify-between mb-4">";
               <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications</h3>;
@@ -210,25 +205,25 @@ enableSound:  true,;
                       key={notification.id}
                       initial = {;
 
-  { opacity: 0,;
-  x: 50;,
+  { opacity: 0,
+  x: 50;
 }}
                       animate = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
                       exit = {;
 
-  { opacity: 0, x: -50,;
-  height: 0;,
+  { opacity: 0, x: -50,
+  height: 0;
 }}
                       layout;
                       className = {;
 `;
-  `p-4 rounded-xl ${getNotificationStyles(notification.type,;
-  notification.priority);,
-} ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`;,
+  `p-4 rounded-xl ${getNotificationStyles(notification.type,
+  notification.priority);
+} ${!notification.read ? 'ring-2 ring-zion-cyan/20' : ''`;
 }`}
 ";
                       <div className="flex items-start space-x-3">";
@@ -238,7 +233,7 @@ enableSound:  true,;
 ";
                         <div className="flex-1 min-w-0">";
                           <div className="flex items-center justify-between">`;
-                            <h4 className={`text-sm font-medium ${notification.read ? 'text-zion-slate/70' : 'text-zion-slate-dark'`;,
+                            <h4 className={`text-sm font-medium ${notification.read ? 'text-zion-slate/70' : 'text-zion-slate-dark'`;
 }`}>;
                               {notification.title}
                             </h4>;
@@ -249,7 +244,7 @@ enableSound:  true,;
                               <X className="w-3 h-3 text-zion-slate/60"  />                            </button>;
                           </div>;
 `;
-                          <p className={`text-sm mt-1 ${notification.read ? 'text-zion-slate/60' : 'text-zion-slate'`;,
+                          <p className={`text-sm mt-1 ${notification.read ? 'text-zion-slate/60' : 'text-zion-slate'`;
 }`}>;
                             {notification.message}
                           </p>;
@@ -267,7 +262,7 @@ enableSound:  true,;
                                     markAsRead(notification.id)}}"                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors">;
                                   {notification.action.label}
                                 </button>) }
-;
+
                               {!notification.read && (;
                                 <button;
                                   onClick={() => markAsRead(notification.id)}";
@@ -286,23 +281,19 @@ enableSound:  true,;
       </AnimatePresence>;
     </>;
   )};
-;
 // Hook for using notifications in components;
 export ;
-  ;
     if((window as any).addNotification) {;
       (window as any).addNotification(notification)}
   }, []) ;
   return { addNotification }};
-;
 // Utility functions for common notification types;
 export ;
-        priority: 'medium',;,
-})};'        priority: 'medium',;
-  ;
-  ;
-  ...options;,
-}) }  },;
+        priority: 'medium',,
+})};'        priority: 'medium',
+
+  ...options;
+}) }  },
 
   warning: (title: string, message: string, options?: Partial<Notification>)  => {;
 
@@ -310,53 +301,51 @@ export ;
 
       (window as ).addNotification({;
 
-        type: 'warning',;
-        title,;
-        message,;
-        priority: 'medium',;
-        ...options;,
+        type: 'warning',
+        title,
+        message,
+        priority: 'medium',
+        ...options;
 }) }
-  },;
+  },
 
   error: (title: string, message: string, options?: Partial<Notification>) => {;
     if((window as ).addNotification) {;
 
       (window as ).addNotification({;
 
-        type: 'error',;
-        title,;
-        message,;
-        priority: 'high',;
-        ...options;,
+        type: 'error',
+        title,
+        message,
+        priority: 'high',
+        ...options;
 }) }
-  },;
+  },
 
   info: (title: string, message: string, options?: Partial<Notification>) => {;
     if((window as ).addNotification) {;
 
       (window as ).addNotification({;
 
-        type: 'info',;
-        title,;
-        message,;
-        priority: 'low',;
-        ...options;,
+        type: 'info',
+        title,
+        message,
+        priority: 'low',
+        ...options;
 }) }
-  },;
+  },
 
   achievement: (title: string, message: string, options?: Partial<Notification>) => {;
     if((window as ).addNotification) {;
 
       (window as ).addNotification({;
 
-        type: 'achievement',;
-        title,;
-        message,;
-        priority: 'high',;
-        ...options;,
+        type: 'achievement',
+        title,
+        message,
+        priority: 'high',
+        ...options;
 }) }
   }
 };
-'"`;
-
-;,"});,})";
+'"`;"});})";

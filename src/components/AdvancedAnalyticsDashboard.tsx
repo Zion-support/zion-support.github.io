@@ -1,7 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-;
-interface AnalyticsData {;
+interface AnalyticsData {
 
   id: string;
   metric: string;
@@ -12,8 +11,8 @@ interface AnalyticsData {;
   timestamp: Date;
   target?: number;
   unit?: string}
-;
-interface ChartData {;
+
+interface ChartData {
 
   labels: string[];
   datasets: {;
@@ -23,7 +22,7 @@ interface ChartData {;
     backgroundColor?: string;
     borderColor?: string;
     borderWidth?: number}[]}
-interface AdvancedAnalyticsDashboardProps {;
+interface AdvancedAnalyticsDashboardProps {
   // Add your props here;
 
   enabled?: boolean;
@@ -32,9 +31,9 @@ interface AdvancedAnalyticsDashboardProps {;
   onDataExport?: data: AnalyticsData[] void;
 export function AdvancedAnalyticsDashboard({;
 
-  enabled = true,;
-  showRealTime = true,;
-  refreshInterval = 30000,;
+  enabled = true,
+  showRealTime = true,
+  refreshInterval = 30000,
   onDataExport}: AdvancedAnalyticsDashboardProps) {;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -43,12 +42,11 @@ export function AdvancedAnalyticsDashboard({;
     '1h' | '24h' | '7d' | '30d'';
   >('24h');
   const [selectedMetrics, setSelectedMetrics] = useState<string[]>([';
-    'performance',users',revenue',;
+    'performance',users',revenue',
   ]);
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showAdvancedMetrics, setShowAdvancedMetrics] = useState(false);
-;
   // Generate sample analytics data;
 
     const newData: AnalyticsData[] = [];
@@ -58,31 +56,26 @@ export function AdvancedAnalyticsDashboard({;
 
         const change = (Math.random() - 0.5) * 20;        newData.push({;
 
-          id: `${category}-${metric}`,;
-          metric,;
-          value: Math.round(value * 100) / 100,;
-          change: Math.round(change * 100) / 100,;
-          trend: change > 2 ? 'up' : change < -2 ? 'down' : 'stable',;
-          category,;
-          timestamp: new Date(),;
-          target: Math.round(value * 1.1 * 100) / 100,;
+          id: `${category}-${metric}`,
+          metric,
+          value: Math.round(value * 100) / 100,
+          change: Math.round(change * 100) / 100,
+          trend: change > 2 ? 'up' : change < -2 ? 'down' : 'stable',
+          category,
+          timestamp: new Date(),
+          target: Math.round(value * 1.1 * 100) / 100,
           unit:';
             category === 'performance'';
               ? 'ms'';
               : category === 'revenue'';
                 ? '$'';
                 : ''})})});
-;
     setAnalyticsData(newData) }, []) ;
-;
   // Refresh data;
-  ;
     setTimeout(() => {;
       generateAnalyticsData () ;
       setIsLoading(false) }, 1000) }, [generateAnalyticsData]) ;
-;
   // Export data;
-  ;,
 } else {;
 
       a.href = url;'`;
@@ -91,18 +84,17 @@ export function AdvancedAnalyticsDashboard({;
       window.URL.revokeObjectURL(url)}
   }, [analyticsData, selectedTimeframe, onDataExport]) ;
   // Setup real - time updates;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     if(showRealTime && isOpen) {;
 
       generateAnalyticsData();
       intervalRef.current = setInterval(generateAnalyticsData, refreshInterval);
-;
       return () => {;
         if(intervalRef.current) {;
 
@@ -110,18 +102,17 @@ export function AdvancedAnalyticsDashboard({;
       }}
   }, [showRealTime, isOpen, refreshInterval, generateAnalyticsData]) ;
   // Initial data load;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     if(isOpen) {;
 
       generateAnalyticsData()}
   }, [isOpen, generateAnalyticsData]) ;
-;
   // Get trend icon and color';
 
     return ()`      <div className={`flex items-center space-x-1 ${colors[trend]}`}>;
@@ -131,7 +122,6 @@ export function AdvancedAnalyticsDashboard({;
           {change}%;
         </span>;
       </div>) };
-;
   // Get category icon;
   const getCategoryIcon = (category: string) => {;
 
@@ -143,11 +133,8 @@ export function AdvancedAnalyticsDashboard({;
       engagement: <Activity className="w-5 h-5"  />,";
       technical: <Cpu className="w-5 h-5"  />};";
     return icons[category] || <Activity className="w-5 h-5"  />};
-;
   // Filter data by selected metrics;
-  ;
   if(!enabled) return null;
-;
   return ();
     <>;
       {/* Floating Analytics Button */}
@@ -174,7 +161,7 @@ export function AdvancedAnalyticsDashboard({;
             exit={{ opacity: 0 }}
           >;
             <motion.div`;
-              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`;,
+              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'`;
 }`}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -236,7 +223,7 @@ export function AdvancedAnalyticsDashboard({;
                           onClick={() => setSelectedTimeframe(timeframe)}`;
                           className={`px-3 py-1 text-sm rounded-md transition-colors ${selectedTimeframe === timeframe';
                               ? 'bg-blue-600 text-white'';
-                              : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600'`;,
+                              : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600'`;
 }`}
                         >;
                           {timeframe}
@@ -251,7 +238,7 @@ export function AdvancedAnalyticsDashboard({;
                     </span>";
                     <div className="flex flex-wrap gap-2">;
                       {[';
-                        'performance',users',revenue',engagement',technical',;
+                        'performance',users',revenue',engagement',technical',
                       ].map(metric => (;
                         <button;
                           key={metric}
@@ -262,7 +249,7 @@ export function AdvancedAnalyticsDashboard({;
                                 : [...prev, metric];
                             )}}`                          className={`px-3 py-1 text-sm rounded-full transition-colors ${selectedMetrics.includes(metric);
                               ? 'bg-green-600 text-white'';
-                              : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'`;,
+                              : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'`;
 }`}
                         >;
                           {metric}
@@ -280,7 +267,7 @@ export function AdvancedAnalyticsDashboard({;
 
                     <button;
                       onClick={() =>;
-                        setShowAdvancedMetrics(!showAdvancedMetrics);,
+                        setShowAdvancedMetrics(!showAdvancedMetrics);
 }";
                       className="flex items-center space-x-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">";
                       <Settings className="w-4 h-4"  />;
@@ -413,7 +400,7 @@ export function AdvancedAnalyticsDashboard({;
                                         ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'';
                                         : item.trend === 'down'';
                                           ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'';
-                                          : 'bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400'`;,
+                                          : 'bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400'`;
 }`}
                                   >;
                                     {item.trend}

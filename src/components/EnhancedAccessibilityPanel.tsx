@@ -1,39 +1,37 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
 function EnhancedAccessibilityPanel () {;
 
-  Accessibility,;
-  Eye,;
-  EyeOff,;
-  Volume2,;
-  VolumeX,;
-  Type,;
-  Contrast,;
-  ZoomIn,;
-  ZoomOut,  RotateCcw,;
-  CheckCircle,;
-  AlertTriangle,;
-  XCircle,;
-  Info,;
-  Keyboard,;
-  MousePointer,;
-  Monitor,;
-  Smartphone,;
-  Tablet,;
-  Settings,;
-  X,;
-  ChevronDown,;
-  ChevronUp,;
-  Play,;
-  Pause,;
-  SkipBack,;
-  SkipForward,;
+  Accessibility,
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  Type,
+  Contrast,
+  ZoomIn,
+  ZoomOut,  RotateCcw,
+  CheckCircle,
+  AlertTriangle,
+  XCircle,
+  Info,
+  Keyboard,
+  MousePointer,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Settings,
+  X,
+  ChevronDown,
+  ChevronUp,
+  Play,
+  Pause,
+  SkipBack,
+  SkipForward,
   Volume1} from 'lucide-react';
-;
-interface AccessibilitySettings {;
+interface AccessibilitySettings {
 
   highContrast: boolean;
   largeText: boolean;
@@ -45,7 +43,7 @@ interface AccessibilitySettings {;
   lineHeight: number;
   letterSpacing: number;
   wordSpacing: number}
-interface AccessibilityIssue {;
+interface AccessibilityIssue {
   id: string;
   type: 'error' | 'warning' | 'info';
   message: string;
@@ -57,39 +55,36 @@ export function EnhancedAccessibilityPanel() {;
   const [isExpanded, setIsExpanded] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({;
 
-    highContrast: false,;
-    largeText: false,;
-    reducedMotion: false,;
-    screenReader: boolean,;
-    focusIndicator: true,;
-    colorBlindness: 'none',;
-    fontSize: 16,;
-    lineHeight: 1.5,;
-    letterSpacing: 0,;
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: boolean,
+    focusIndicator: true,
+    colorBlindness: 'none',
+    fontSize: 16,
+    lineHeight: 1.5,
+    letterSpacing: 0,
     wordSpacing: 0});
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
   const [isScanning, setIsScanning] = useState(false);
   const [currentFocus, setCurrentFocus] = useState<string>('');
   const [keyboardMode, setKeyboardMode] = useState(false);
-;
   // Apply accessibility settings;
-  ;
       setSettings(updatedSettings);
-;
       // Apply high contrast;
       if(updatedSettings.highContrast) {;
 
         document.documentElement.classList.add('high-contrast')} else {;
 
         document.documentElement.classList.remove('high-contrast')}
-;
+
       // Apply large text;
       if(updatedSettings.largeText) {;
 
         document.documentElement.style.fontSize = '18px'} else {;
 
         document.documentElement.style.fontSize = '16px'}
-;
+
       // Apply reduced motion;
       if(updatedSettings.reducedMotion) {;
         document.documentElement.style.setProperty(';
@@ -97,27 +92,26 @@ export function EnhancedAccessibilityPanel() {;
         )} else {;
 
         document.documentElement.style.removeProperty('--reduced-motion')}
-;
+
       // Apply focus indicator;
       if(updatedSettings.focusIndicator) {;
 
         document.documentElement.classList.add('focus-visible')} else {;
 
         document.documentElement.classList.remove('focus-visible')}
-;
+
       // Apply color blindness simulation;
       document.documentElement.style.setProperty(';
-        '--color-blindness',;
+        '--color-blindness',
         updatedSettings.colorBlindness;
       );
-;
       // Apply typography settings;
       document.documentElement.style.setProperty(';
-        '--font-size',;
+        '--font-size',
         `${updatedSettings.fontSize}px`;
       );
       document.documentElement.style.setProperty(';
-        '--line-height',;
+        '--line-height',
         updatedSettings.lineHeight.toString();
       );
       document.documentElement.style.setProperty(';
@@ -128,21 +122,19 @@ export function EnhancedAccessibilityPanel() {;
         '--word-spacing',`;
         `${updatedSettings.wordSpacing}px`;
       );
-;
       // Save to localStorage;
       localStorage.setItem(';
-        'accessibility-settings',;
+        'accessibility-settings',
         JSON.stringify(updatedSettings);
-      )},;
+      )},
     [settings];
   );
-;
   // Load settings from localStorage;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
 }}

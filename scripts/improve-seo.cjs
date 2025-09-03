@@ -1,10 +1,10 @@
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 function improveSEO() {
-  const pagesDir = path.join(process.cwd(), 'pages');
-  const componentsDir = path.join(process.cwd(), 'components');
+  const pagesDir = path.join(process.cwd(), 'pages')
+  const componentsDir = path.join(process.cwd(), 'components')
   
   // Add meta tags to pages
   const metaTemplate = `
@@ -27,7 +27,7 @@ export default function Page() {
       </Head>
       {/* Page content */}
     </>
-  );
+  )
 }
       `;
       
@@ -60,7 +60,7 @@ export default function Page() {
   </url>
 </urlset>`;
       
-      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent)
       
       // Generate robots.txt
       const robotsContent = `User-agent: *
@@ -68,13 +68,13 @@ Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml`;
       
-      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent)
       
-      console.log('SEO improvements completed');
+      console.log('SEO improvements completed')
     } catch (error) {
-      console.error('SEO improvement failed:', error.message);
+      console.error('SEO improvement failed:', error.message)
     }
 }
 
-improveSEO();
+improveSEO()
       

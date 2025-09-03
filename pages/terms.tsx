@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-;
 export default function Terms() {;
   return (;
     <>;
@@ -10,7 +9,6 @@ export default function Terms() {;
         <meta property="og:title" content="Terms of Service — Zion Tech Group" />;
         <meta property="og:description" content="Terms of service and usage agreement for Zion Tech Group's autonomous systems and services." />;
       </Head>;
-      ;
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
         <main className="container mx-auto px-6 py-12">;
           <section className="text-center mb-16">;
@@ -32,7 +30,7 @@ export default function Terms() {;
                 If you do not agree to abide by the above, please do not use this service.;
               </p>;
               <p className="text-white/80">;
-                These terms apply to all visitors, users, and others who access or use our autonomous systems, automation services, ;
+                These terms apply to all visitors, users, and others who access or use our autonomous systems, automation services,
                 and cloud infrastructure solutions.;
               </p>;
             </section>;
@@ -73,7 +71,7 @@ export default function Terms() {;
             <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10">;
               <h2 className="text-2xl font-bold mb-4 text-yellow-400">4. Acceptable Use</h2>;
               <p className="text-white/80 mb-4">;
-                You may not use our services for any illegal or unauthorized purpose. You must not, in the use of the service, ;
+                You may not use our services for any illegal or unauthorized purpose. You must not, in the use of the service,
                 violate any laws in your jurisdiction (including but not limited to copyright or trademark laws).;
               </p>;
               <p className="text-white/80 mb-4">You agree not to:</p>;
@@ -98,7 +96,7 @@ export default function Terms() {;
                 Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.;
               </p>;
               <p className="text-white/80">;
-                You retain ownership of any content you submit, post, or display on or through the service. By submitting content, ;
+                You retain ownership of any content you submit, post, or display on or through the service. By submitting content,
                 you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and distribute such content.;
               </p>;
             </section>;
@@ -107,7 +105,7 @@ export default function Terms() {;
             <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10">;
               <h2 className="text-2xl font-bold mb-4 text-blue-400">6. Privacy Policy</h2>;
               <p className="text-white/80 mb-4">;
-                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the service, ;
+                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the service,
                 to understand our practices.;
               </p>;
               <p className="text-white/80">;
@@ -119,14 +117,14 @@ export default function Terms() {;
             <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10">;
               <h2 className="text-2xl font-bold mb-4 text-red-400">7. Termination</h2>;
               <p className="text-white/80 mb-4">;
-                We may terminate or suspend your account and bar access to the service immediately, without prior notice or liability, ;
+                We may terminate or suspend your account and bar access to the service immediately, without prior notice or liability,
                 under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.;
               </p>;
               <p className="text-white/80 mb-4">;
                 If you wish to terminate your account, you may simply discontinue using the service.;
               </p>;
               <p className="text-white/80">;
-                All provisions of the Terms which by their nature should survive termination shall survive termination, ;
+                All provisions of the Terms which by their nature should survive termination shall survive termination,
                 including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability.;
               </p>;
             </section>;
@@ -135,8 +133,8 @@ export default function Terms() {;
             <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10">;
               <h2 className="text-2xl font-bold mb-4 text-orange-400">8. Limitation of Liability</h2>;
               <p className="text-white/80 mb-4">;
-                In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, or affiliates, ;
-                be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, ;
+                In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, or affiliates,
+                be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation,
                 loss of profits, data, use, goodwill, or other intangible losses, resulting from:;
               </p>;
               <ul className="list-disc list-inside space-y-2 text-white/80 ml-4">;
@@ -152,12 +150,12 @@ export default function Terms() {;
             <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10">;
               <h2 className="text-2xl font-bold mb-4 text-indigo-400">9. Disclaimers</h2>;
               <p className="text-white/80 mb-4">;
-                The information on this service is provided on an "as is" basis. Zion Tech Group makes no warranties, ;
-                expressed or implied, and hereby disclaims and negates all other warranties including without limitation, ;
+                The information on this service is provided on an "as is" basis. Zion Tech Group makes no warranties,
+                expressed or implied, and hereby disclaims and negates all other warranties including without limitation,
                 implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property.;
               </p>;
               <p className="text-white/80">;
-                We do not warrant that the service will be uninterrupted or error-free, that defects will be corrected, ;
+                We do not warrant that the service will be uninterrupted or error-free, that defects will be corrected,
                 or that the service or the server that makes it available are free of viruses or other harmful components.;
               </p>;
             </section>;
@@ -166,7 +164,7 @@ export default function Terms() {;
             <section className="mb-12 p-8 bg-white/5 rounded-2xl border border-white/10">;
               <h2 className="text-2xl font-bold mb-4 text-teal-400">10. Governing Law</h2>;
               <p className="text-white/80 mb-4">;
-                These Terms shall be interpreted and governed by the laws of the jurisdiction in which Zion Tech Group operates, ;
+                These Terms shall be interpreted and governed by the laws of the jurisdiction in which Zion Tech Group operates,
                 without regard to its conflict of law provisions.;
               </p>;
               <p className="text-white/80">;
@@ -220,5 +218,5 @@ export default function Terms() {;
         </main>;
       </div>;
     </>;
-  );,
+  );
 }

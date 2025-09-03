@@ -1,15 +1,15 @@
 
-interface HeroFeature {;
+interface HeroFeature {
 icon: React.ComponentType<{ className?: string}>;
   title: string;
   description: string;
   gradient: string}
-;
+
 interface HeroFeaturesProps extends React.PropsWithChildren<{}> {;
 
   features: HeroFeature[]}
-;
-const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {;
+
+const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
 
   return ();
     <motion.div;
@@ -17,7 +17,7 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {;
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.6 }}
-;
+
       {features.map((feature, index (;
         <motion.div;
           key={feature.title}";
@@ -26,24 +26,24 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {;
           aria-labelledby={`feature-${index}-title`}
           whileHover={{;
 
-            y: -8,;
-  transition: { duration: 0.3;,
+            y: -8,
+  transition: { duration: 0.3;
 }
           }}
           initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.6 + index * 0.1;,
+  { duration: 0.6,
+  delay: 0.6 + index * 0.1;
 }}
         >;
           {/* Animated background gradient */}";
@@ -76,5 +76,4 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {;
       ))};
     </motion.div>;
   )};
-;
 export default HeroFeatures}}'"`;

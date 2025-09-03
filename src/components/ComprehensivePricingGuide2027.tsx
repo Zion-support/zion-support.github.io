@@ -1,30 +1,22 @@
 import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
-;
 export default function Page() {;
     );
-;
     if(element) {;
       observer.observe(element)}
-;
+
     return () => observer.disconnect () }, []) ;
-;
   // Combine all services;
-  ;
-      source: 'innovative',;
-      category: service.category,;
-      features: service.features || [],;
-      ctaLabel: service.ctaLabel || 'Get Started',;
+      source: 'innovative',
+      category: service.category,
+      features: service.features || [],
+      ctaLabel: service.ctaLabel || 'Get Started',
       href: service.href || '/contact'}) ) ;  ];
-;
   // Filter services based on search and category;
 
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchQuery.toLowerCase());
-;
     return matchesSearch && matchesCategory && matchesPrice}) ;
-;
   // Sort services;
-  ;
     switch(sortBy) {;
       case 'name':;
         return a.title.localeCompare(b.title);
@@ -34,33 +26,26 @@ export default function Page() {;
       default:;
         return 0}
   });
-;
-  ;
+
 ';
   phone: '+1 302 464 0950',';
-    email: 'kleber@ziontechgroup.com',;  ;
-  ;
-  ;
-  ;
+    email: 'kleber@ziontechgroup.com',
+
   address: '364 E Main St STE 1008 Middletown DE 19709';
-  ;
-;,
+
 };
-;
 
     if(numPrice < 100) return 'Low';
     if(numPrice < 1000) return 'Medium';
     return 'High'};
       default: return 'text-white'}
   };
-;
-      'Robotics & Automation': Cpu,;
-      'AR/VR Solutions': Eye,;
-      'Biotech Solutions': Dna,;
-      'LegalTech Solutions': Scale,;
-      'Real Estate Tech': Home,;
+      'Robotics & Automation': Cpu,
+      'AR/VR Solutions': Eye,
+      'Biotech Solutions': Dna,
+      'LegalTech Solutions': Scale,
+      'Real Estate Tech': Home,
       'Supply Chain Solutions': Truck};    return iconMap[category] || Target};
-;
   return (";
     <section id = "comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">;
       {/* Animated Background */}";
@@ -74,13 +59,13 @@ export default function Page() {;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
           animate = {;
 
-  isVisible ? { opacity: 1,;
-  y: 0;,
+  isVisible ? { opacity: 1,
+  y: 0;
 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}";
           className="text-center mb-16";
@@ -98,7 +83,7 @@ export default function Page() {;
           </h2>;
 ";
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
-            Explore our complete portfolio of innovative services with transparent pricing,;
+            Explore our complete portfolio of innovative services with transparent pricing,
             detailed ROI analysis, and market insights to help you make informed decisions.</p>;
         </motion.div>;
 
@@ -106,18 +91,18 @@ export default function Page() {;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  isVisible ? { opacity: 1,;
-  y: 0;,
+  isVisible ? { opacity: 1,
+  y: 0;
 } : { opacity: 0, y: 20 }}
           transition = {;
 
-  { duration: 0.8,;
-  delay: 0.2;,
+  { duration: 0.8,
+  delay: 0.2;
 }}";
           className="mb-12";
 ";
@@ -180,36 +165,35 @@ export default function Page() {;
             </div>;
           </div>;
         </motion.div>;
-;
         {/* Services Grid */}
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
+  { opacity: 0,
   y: 30 }}          animate = {;
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1,
   y: 0 } : { opacity: 0, y: 30 }}          transition = {;
 
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
           {sortedServices.map((service, index) => (;
             <motion.div;
               key={`${service.source}-${service.id}`}
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  isVisible ? { opacity: 1,;
-  y: 0;,
+  isVisible ? { opacity: 1,
+  y: 0;
 } : { opacity: 0, y: 20 }}
               transition = {;
 
-  { duration: 0.6,;
-  delay: index * 0.05;,
+  { duration: 0.6,
+  delay: index * 0.05;
 }}";
               className="group relative";
 ";
@@ -248,7 +232,7 @@ export default function Page() {;
                         </span>) }
                     </div>;
                   </div>;) }
-;
+
                 {/* Pricing & Billing */}";
                 <div className="mb-4">";
                   <div className="flex items-center justify-between">`;
@@ -276,7 +260,7 @@ export default function Page() {;
                       <div className="text-gray-400 text-xs">ROI</div>;
                     </div>;
                   </div>) }
-;
+
                 {/* CTA Button */}
                 <a;
                   href={service.href}";
@@ -295,13 +279,13 @@ export default function Page() {;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
+  { opacity: 0,
   y: 30 }}          animate = {;
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1,
   y: 0 } : { opacity: 0, y: 30 }}          transition = {;
 
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: 0.6 }}"          className="text-center";
 ";
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;";

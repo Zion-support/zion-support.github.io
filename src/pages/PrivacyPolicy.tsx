@@ -45,6 +45,6 @@ const PrivacyPolicy = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default PrivacyPolicy;

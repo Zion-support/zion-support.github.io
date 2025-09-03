@@ -7,31 +7,28 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
   const [expandedService, setExpandedService] = useState<any>(null);';
 '';
   ''';
-    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Monitor, color: 'from-zion-purple to-zion-pink' },;''';
-    { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },;''';
-    { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },;''';
-    { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },;''';
-    { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },;''';
+    { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Monitor, color: 'from-zion-purple to-zion-pink' },''';
+    { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },''';
+    { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },''';
+    { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },''';
+    { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },''';
     { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' };
   ];
-;
   ';
-    { id: 'all', name: 'All Prices', range: 'All' },;';
-    { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },;';
-    { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },;';
+    { id: 'all', name: 'All Prices', range: 'All' },';
+    { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },';
+    { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },';
     { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' };
   ];
 ';
   const sortOptions: unknown = [;'';
-    { id: 'featured', name: 'Featured' },;'';
-    { id: 'price-low', name: 'Price: Low to High' },;'';
-    { id: 'price-high', name: 'Price: High to Low' },;'';
-    { id: 'innovation', name: 'Innovation Level' },;'    { id: 'roi', name: 'ROI Potential' };
+    { id: 'featured', name: 'Featured' },'';
+    { id: 'price-low', name: 'Price: Low to High' },'';
+    { id: 'price-high', name: 'Price: High to Low' },'';
+    { id: 'innovation', name: 'Innovation Level' },'    { id: 'roi', name: 'ROI Potential' };
   ];
-;
         return 0}
   }) ;
-;
     setExpandedService (expandedService === serviceId ? null : serviceId) };
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">";
@@ -46,12 +43,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion.div;
             initial = {}
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ duration: 0.8 }}";
 "";
@@ -148,9 +145,9 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
 '''`;
                   sortBy === option.id'''`'`;
                     ? 'bg-zion-cyan text-white'''`'`'`;
-                    : 'bg-white/10 text-zion-slate-300 hover:bg-white/20'````;,
+                    : 'bg-white/10 text-zion-slate-300 hover:bg-white/20'````;
 }`}
-;
+
                 {option.name}
               </button>) ) }
           </div>;
@@ -174,21 +171,21 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
               {sortedServices.map((service, index) => (<motion.div;
                   key={service.id}
                   initial = {}
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                   animate = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                   exit = {}
-  { opacity: 0,;
-  y: -20;,
+  { opacity: 0,
+  y: -20;
 }}
                   transition = {}
-  { duration: 0.5,;
+  { duration: 0.5,
   delay: index * 0.1;
-";,
+";
 }}"";
                   className="group relative"";
 "";
@@ -199,7 +196,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
                         {React.createElement(getCategoryIcon(service.category.toLowerCase()), {}
 ";
 "";
-                          className: "w-6 h-6 text-white";,
+                          className: "w-6 h-6 text-white";
 })}";
                       </div>"";
                       <div className="text-right">"";
@@ -228,7 +225,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
                           ? 'bg-red-500/20 text-red-400 border border-red-500/30''';
                           : service.innovationLevel === 'Cutting-edge''';
                           ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'''`;
-                          : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'``;,
+                          : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'``;
 }`}>;
                         {service.innovationLevel}";
                       </div>"";
@@ -271,16 +268,16 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
                     <AnimatePresence>;
                       {expandedService === service.id && (<motion.div;
                           initial = {}
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}
                           animate = {}
   { opacity: 1,';
-  height: 'auto' ;,
+  height: 'auto' ;
 }}
                           exit = {}
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}";
                           transition={{ duration: 0.3 }}"";
                           className="mt-4 pt-4 border-t border-zion-slate-600/30";
@@ -359,12 +356,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">;
           <motion.div;
             initial = {}
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}";
@@ -398,16 +395,11 @@ export default function UltimateInnovativeServices2026(...args[]):  {}
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }
-;
 
 export { UltimateInnovativeServices2026 };
-;
 export { UltimateInnovativeServices2026 };
-;
 export { UltimateInnovativeServices2026 };
-;
 export { UltimateInnovativeServices2026 };
-;
 export { UltimateInnovativeServices2026 };

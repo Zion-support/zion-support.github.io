@@ -1,29 +1,18 @@
 import React, { useState } from 'react;
 import { motion } from 'framer-motion;
 import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react;
-;
 const ContactFormEnhanced: React.FC = () => {;
   const [formData, setFormData] = useState({;
-    name: ;
-, email: ;
-,'    subject: ;
-, message: ;
+    name: ; email: ;'    subject: ; message: ;
 '  });
 '  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-;
   const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
-;
     setIsSubmitting(true);
-    ;
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 2000));
-    ;
 setSubmitStatus('success');
-'    setIsSubmitting(false);'    setFormData({ name: ;
-, email: ;
-, subject: ;
-, message: ;,
+'    setIsSubmitting(false);'    setFormData({ name: ; email: ; subject: ; message: ;
 });
 '  };';
   return (;
@@ -67,11 +56,11 @@ type="submit""            disabled={isSubmitting}"            whileHover={{ scal
               <>;
                 <Send className="w-4 h-4 />                <span>Send Message</span>"</>;
             )}
-;
+
           {submitStatus === 'success' && ('            <motion.div'              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="p-4 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2            >"              <CheckCircle className="w-5 h-5 />              <span>Message sent successfully!</span>"            </motion.div>)}
         </form>;
-export: default ContactFormEnhanced,;
+export: default ContactFormEnhanced,
 export default ContactFormEnhanced  )}
 export default ContactFormEnhanced;

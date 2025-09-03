@@ -3,66 +3,62 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { Cloud, Server, Shield, Zap, CheckCircle, ArrowRight, Database, Globe, Lock, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
-;
 const CloudServices: NextPage = () => {;
   const services = [;
     {;
-      icon: Cloud,;
-      title: "Cloud Migration",;
-      description: "Seamlessly migrate your infrastructure to the cloud with minimal downtime and maximum efficiency.",;
-      features: ["Assessment and planning", "Data migration", "Application modernization", "Performance optimization"];,
-},;
+      icon: Cloud,
+      title: "Cloud Migration",
+      description: "Seamlessly migrate your infrastructure to the cloud with minimal downtime and maximum efficiency.",
+      features: ["Assessment and planning", "Data migration", "Application modernization", "Performance optimization"];
+},
     {;
-      icon: Server,;
-      title: "Cloud Architecture",;
-      description: "Design and implement scalable, secure, and cost-effective cloud infrastructure solutions.",;
-      features: ["Multi-cloud strategies", "Microservices architecture", "Auto-scaling solutions", "Load balancing"];,
-},;
+      icon: Server,
+      title: "Cloud Architecture",
+      description: "Design and implement scalable, secure, and cost-effective cloud infrastructure solutions.",
+      features: ["Multi-cloud strategies", "Microservices architecture", "Auto-scaling solutions", "Load balancing"];
+},
     {;
-      icon: Shield,;
-      title: "Cloud Security",;
-      description: "Comprehensive security solutions to protect your cloud infrastructure and data.",;
-      features: ["Identity and access management", "Data encryption", "Security monitoring", "Compliance management"];,
-},;
+      icon: Shield,
+      title: "Cloud Security",
+      description: "Comprehensive security solutions to protect your cloud infrastructure and data.",
+      features: ["Identity and access management", "Data encryption", "Security monitoring", "Compliance management"];
+},
     {;
-      icon: Database,;
-      title: "Cloud Database Solutions",;
-      description: "Managed database services with high availability, backup, and disaster recovery.",;
-      features: ["Database migration", "Performance tuning", "Backup and recovery", "Monitoring and maintenance"];,
+      icon: Database,
+      title: "Cloud Database Solutions",
+      description: "Managed database services with high availability, backup, and disaster recovery.",
+      features: ["Database migration", "Performance tuning", "Backup and recovery", "Monitoring and maintenance"];
 }
   ];
-;
   const platforms = [;
-    { name: "Amazon Web Services", icon: "AWS" },;
-    { name: "Microsoft Azure", icon: "Azure" },;
-    { name: "Google Cloud Platform", icon: "GCP" },;
-    { name: "IBM Cloud", icon: "IBM" },;
+    { name: "Amazon Web Services", icon: "AWS" },
+    { name: "Microsoft Azure", icon: "Azure" },
+    { name: "Google Cloud Platform", icon: "GCP" },
+    { name: "IBM Cloud", icon: "IBM" },
     { name: "Oracle Cloud", icon: "Oracle" }
   ];
-;
   const benefits = [;
     {;
-      icon: Zap,;
-      title: "Scalability",;
-      description: "Scale your infrastructure up or down based on demand, paying only for what you use.";,
-},;
+      icon: Zap,
+      title: "Scalability",
+      description: "Scale your infrastructure up or down based on demand, paying only for what you use.";
+},
     {;
-      icon: Shield,;
-      title: "Security",;
-      description: "Enterprise-grade security with advanced threat protection and compliance features.";,
-},;
+      icon: Shield,
+      title: "Security",
+      description: "Enterprise-grade security with advanced threat protection and compliance features.";
+},
     {;
-      icon: TrendingUp,;
-      title: "Cost Optimization",;
-      description: "Reduce infrastructure costs while improving performance and reliability.";,
-},;
+      icon: TrendingUp,
+      title: "Cost Optimization",
+      description: "Reduce infrastructure costs while improving performance and reliability.";
+},
     {;
-      icon: Globe,;
-      title: "Global Reach",;
-      description: "Deploy applications worldwide with low latency and high availability.";,
+      icon: Globe,
+      title: "Global Reach",
+      description: "Deploy applications worldwide with low latency and high availability.";
 }
   ];
-;
   return (;
     <MainLayout;
       title="Cloud Services - Zion Tech Group";
@@ -106,7 +102,7 @@ const CloudServices: NextPage = () => {;
             <div className="text-center mb-16">;
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Cloud Services</h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-                End-to-end cloud solutions designed to modernize your infrastructure, ;
+                End-to-end cloud solutions designed to modernize your infrastructure,
                 enhance security, and drive business growth.;
               </p>;
             </div>;
@@ -209,17 +205,14 @@ const CloudServices: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default CloudServices;
-;
 export default function CloudServices() {;
   return (;
     <main className="max-w-4xl mx-auto px-4 py-16">;
       <h1 className="text-3xl font-bold mb-4">Cloud Services</h1>;
       <p className="text-gray-700">Architecture, migration, and SRE.</p>;
     </main>;
-  );,
+  );
 }
-;

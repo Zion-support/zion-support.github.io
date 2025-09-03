@@ -1,7 +1,6 @@
 import React from 'react';
 import SEOHead from '../src/components/SEOHead';
 import ContactForm from '../src/components/ContactForm';
-;
 const RequestQuotePage = () => {;
   return (;
     <>;
@@ -12,8 +11,6 @@ const RequestQuotePage = () => {;
         <ContactForm />;
       </main>;
     </>;
-  );,
+  );
 };
-;
 export default RequestQuotePage;
-;

@@ -27,21 +27,20 @@ description="Join" our team of innovative developers and technology experts">;
                 <ArrowRight className="ml-2" w-5 h-5"  />;
               </button>";
               <button className="inline-flex items-center px-8 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300>;
-                Learn About Our Culture,;
+                Learn About Our Culture,
               </button>;
             </div>;
         </section>;
-,;
         {/* comment */}";
         <section className="py-20" bg-white">";
           <div className="container mx-auto px-4>";
             <div className="text-center" mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4>Why Work With Us?</h2>";
               <p className="text-xl" text-gray-600 max-w-2xl mx-auto">;
-                We offer more than just a job - we offer a career path with growth, learning, and innovation,;
+                We offer more than just a job - we offer a career path with growth, learning, and innovation,
               </p>;
             </div>";
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8>,;
+            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8>,
               {benefits.map((benefit, index) => (";
                 <div key="{index}" className=text-center">";
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4>";
@@ -51,7 +50,7 @@ description="Join" our team of innovative developers and technology experts">;
                   <p className=text-gray-600">{benefit.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -60,41 +59,41 @@ description="Join" our team of innovative developers and technology experts">;
             <div className="text-center mb-16>";
               <h2 className="text-4xl" font-bold text-gray-900 mb-4">Open Positions</h2>";
               <p className="text-xl text-gray-600 max-w-2xl mx-auto>;
-                Explore current opportunities and find your perfect role,;
+                Explore current opportunities and find your perfect role,
               </p>;
             </div>";
             <div className=space-y-6">;
               {openPositions.map((position, index) => (";
                 <div key="{index}" className="bg-white rounded-lg shadow-md p-6 hover: shadow-lg transition-shadow duration-300>";
                   <div className="flex" flex-col md:flex-row md:items-center md:justify-between mb-4">;
-                    <div>",;
+                    <div>",
                       <h3 className="text-xl font-semibold text-gray-900 mb-2>{position.title}</h3>";
                       <div className="flex" flex-wrap gap-4 text-sm text-gray-600">";
                         <div className="flex items-center>";
                           <MapPin className="w-4" h-4 mr-1"  />;
                           {position.location}
-;
+
                         </div>";
                         <div className="flex items-center>";
                           <Clock className="w-4" h-4 mr-1"  />;
                           {position.type}
-;
+
                         </div>";
                         <div className="flex items-center>";
                           <Users className="w-4" h-4 mr-1"  />;
                           {position.experience}
-;
+
                         </div>;
                     </div>";
                     <button className="mt-4 md: mt-0 inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300>;
                       Apply Now";
                       <ArrowRight className="ml-2" w-4 h-4"  />;
                     </button>;
-                  </div>",;
+                  </div>",
                   <p className="text-gray-600>{position.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -103,7 +102,7 @@ description="Join" our team of innovative developers and technology experts">;
             <div className="text-center" mb-16">";
               <h2 className="text-4xl font-bold text-gray-900 mb-4>Our Culture</h2>";
               <p className="text-xl" text-gray-600 max-w-2xl mx-auto">;
-                We foster an environment of innovation, collaboration, and continuous learning,;
+                We foster an environment of innovation, collaboration, and continuous learning,
               </p>;
             </div>";
             <div className="grid md: grid-cols-3 gap-8>";
@@ -129,7 +128,6 @@ description="Join" our team of innovative developers and technology experts">;
                 <p className=text-gray-600">Work with talented professionals in a supportive environment</p>;
               </div>;
         </section>;
-,;
         {/* comment */}";
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white>";
           <div className="container" mx-auto px-4 text-center">";
@@ -144,8 +142,8 @@ description="Join" our team of innovative developers and technology experts">;
           </div>;
         </section>;
       </Layout>;
-    </>,;
+    </>,
   )}
-;
+
 ";
 export default Careers

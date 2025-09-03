@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-;
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -11,7 +10,7 @@ const errorFiles = new Set();
 errorLines.forEach(line => {;
   const match = line.match(/^\.\/(.+?):\d+:\d+\s+Error:/);
   if (match) {;
-  errorFiles.add(match[1]);,;,
+  errorFiles.add(match[1]);,
 }
 });
 console.log(`Found ${errorFiles.size} files with lint errors`);
@@ -23,9 +22,9 @@ function fixFile(filePath) {;
     // Fix 1: Add missing semicolons after import statements;
     if (content.includes("import {") && !content.includes("import {") + ";" && !content.includes("from "")) {;
   content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
-      modified = true;,;,
+      modified = true;,
 }
-;
+
     // Fix 2: Fix malformed import statements;
     content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^""]+)[""]\s*([^])/g, "import { $1 } from \"$2\"; $3");
     // Fix 3: Fix missing semicolons after variable declarations;
@@ -52,21 +51,21 @@ function fixFile(filePath) {;
     if (modified) {;
   fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
-      return true;,;,
+      return true;,
 }
-    ;
-    return false;,;,
+
+    return false;,
 } catch (error) {;
   console.error(`Error fixing ${filePath}:`, error.message);
-    return false;,;,
+    return false;,
 }
 }
-;
+
 // Fix each file;
 let fixedCount = 0;
 errorFiles.forEach(filePath => {;
   if (fixFile(filePath)) {;
-  fixedCount++;,;,
+  fixedCount++;,
 }
 });
 console.log(`Fixed ${fixedCount} files`);
@@ -74,7 +73,7 @@ console.log(`Fixed ${fixedCount} files`);
 console.log("\nRunning lint again to check remaining errors...");
 try {;
   execSync("npm run lint", { stdio: "inherit" });
-  console.log("All lint errors fixed!");,;,
+  console.log("All lint errors fixed!");,
 } catch (error) {;
-  console.log("Some lint errors remain. Manual review may be needed.');,;,
+  console.log("Some lint errors remain. Manual review may be needed.');,
 }))))

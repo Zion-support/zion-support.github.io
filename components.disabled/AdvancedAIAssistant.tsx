@@ -1,49 +1,48 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ;
-  Bot, ;
-  MessageCircle, ;
-  Sparkles, ;
-  Zap, ;
-  Brain, ;
-  Lightbulb, ;
-  Target, ;
-  ArrowRight, ;
-  Send, ;
-  Plus, ;
-  Edit, ;
-  Eye, ;
-  Filter, ;
-  Search, ;
-  Settings, ;
-  Download, ;
-  Upload, ;
-  RefreshCw, ;
-  MoreHorizontal,;
-  ChevronRight,;
-  ChevronDown,;
-  Star,;
-  Shield,;
-  Globe,;
-  Smartphone,;
-  Database,;
-  Cloud,;
-  Code,;
-  Rocket,;
-  Timer,;
-  Activity,;
-  FileText,;
-  BarChart3,;
-  PieChart,;
-  LineChart,;
-  CheckCircle,;
-  AlertCircle,;
-  Clock,;
-  Users,;
-  TrendingUp,;
+  Bot,
+  MessageCircle,
+  Sparkles,
+  Zap,
+  Brain,
+  Lightbulb,
+  Target,
+  ArrowRight,
+  Send,
+  Plus,
+  Edit,
+  Eye,
+  Filter,
+  Search,
+  Settings,
+  Download,
+  Upload,
+  RefreshCw,
+  MoreHorizontal,
+  ChevronRight,
+  ChevronDown,
+  Star,
+  Shield,
+  Globe,
+  Smartphone,
+  Database,
+  Cloud,
+  Code,
+  Rocket,
+  Timer,
+  Activity,
+  FileText,
+  BarChart3,
+  PieChart,
+  LineChart,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  Users,
+  TrendingUp,
   DollarSign} from 'lucide-react';
-;
-interface AIConversation {;
+interface AIConversation {
 
   id: string;
   type: 'chat' | 'task' | 'analysis' | 'recommendation';
@@ -56,10 +55,9 @@ interface AIConversation {;
   messages: AIMessage[];
   insights: AIInsight[];
   actions: AIAction[];
-;,
 }
-;
-interface AIMessage {;
+
+interface AIMessage {
 
   id: string;
   type: 'user' | 'assistant' | 'system';
@@ -67,10 +65,9 @@ interface AIMessage {;
   timestamp: string;
   confidence?: number;
   suggestions?: string[];
-;,
 }
-;
-interface AIInsight {;
+
+interface AIInsight {
 
   id: string;
   title: string;
@@ -80,10 +77,9 @@ interface AIInsight {;
   confidence: number;
   data: Record<string, string | number | boolean>;
   createdAt: string;
-;,
 }
-;
-interface AIAction {;
+
+interface AIAction {
 
   id: string;
   name: string;
@@ -93,10 +89,9 @@ interface AIAction {;
   priority: number;
   estimatedTime: number;
   createdAt: string;
-;,
 }
-;
-interface AIFeature {;
+
+interface AIFeature {
 
   id: string;
   name: string;
@@ -105,259 +100,250 @@ interface AIFeature {;
   status: 'active' | 'beta' | 'coming-soon';
   usage: number;
   accuracy: number;
-;,
 }
-;
+
 const aiConversations: AIConversation[] = [;
   {;
 
-    id: '1',;
-    type: 'chat',;
-    title: 'Project Optimization Analysis',;
+    id: '1',
+    type: 'chat',
+    title: 'Project Optimization Analysis',
     description:';
-      'AI-powered analysis of project performance and optimization recommendations',;
-    status: 'active',;
-    priority: 'high',;
-    createdAt: '2025-01-27 10:00',;
-    lastUpdated: '2025-01-27 15:30',;
+      'AI-powered analysis of project performance and optimization recommendations',
+    status: 'active',
+    priority: 'high',
+    createdAt: '2025-01-27 10:00',
+    lastUpdated: '2025-01-27 15:30',
     messages: [;
       {;
 
-        id: '1',;
-        type: 'user',;
+        id: '1',
+        type: 'user',
         content:';
-          'Analyze our current project portfolio and identify optimization opportunities',;
-        timestamp: '2025-01-27 10:00'},;
+          'Analyze our current project portfolio and identify optimization opportunities',
+        timestamp: '2025-01-27 10:00'},
       {;
 
-        id: '2',;
-        type: 'assistant',;
+        id: '2',
+        type: 'assistant',
         content:';
-          "I've analyzed your project portfolio and identified several optimization opportunities. Based on the data, I recommend focusing on resource allocation optimization and timeline compression for the E-commerce Platform project.",;
-        timestamp: '2025-01-27 10:02',;
-        confidence: 0.94,;
+          "I've analyzed your project portfolio and identified several optimization opportunities. Based on the data, I recommend focusing on resource allocation optimization and timeline compression for the E-commerce Platform project.",
+        timestamp: '2025-01-27 10:02',
+        confidence: 0.94,
         suggestions: [';
-          'Optimize team allocation',Compress timeline by 15%',Implement automated testing',;
-        ]},;
+          'Optimize team allocation',Compress timeline by 15%',Implement automated testing',
+        ]},
       {;
 
-        id: '3',;
-        type: 'user',;
+        id: '3',
+        type: 'user',
         content:';
-          'What specific actions should we take for the E-commerce project?',;
-        timestamp: '2025-01-27 15:30'},;
-    ],;
+          'What specific actions should we take for the E-commerce project?',
+        timestamp: '2025-01-27 15:30'},
+    ],
     insights: [;
       {;
 
-        id: '1',;
-        title: 'Resource Utilization Optimization',;
+        id: '1',
+        title: 'Resource Utilization Optimization',
         description:';
-          'Current resource utilization is at 78%, with potential to increase to 92% through better allocation',;
-        type: 'positive',;
-        impact: 'high',;
-        confidence: 0.91,;
-        data: { current: 78, potential: 92, improvement: 14 },;
-        createdAt: '2025-01-27 10:05'},;
-    ],;
+          'Current resource utilization is at 78%, with potential to increase to 92% through better allocation',
+        type: 'positive',
+        impact: 'high',
+        confidence: 0.91,
+        data: { current: 78, potential: 92, improvement: 14 },
+        createdAt: '2025-01-27 10:05'},
+    ],
     actions: [;
       {;
 
-        id: '1',;
-        name: 'Resource Reallocation',;
+        id: '1',
+        name: 'Resource Reallocation',
         description:';
-          'Automatically redistribute team members based on project priorities and skills',;
-        type: 'automation',;
-        status: 'pending',;
-        priority: 1,;
-        estimatedTime: 30,;
-        createdAt: '2025-01-27 10:10'},;
-    ]},;
+          'Automatically redistribute team members based on project priorities and skills',
+        type: 'automation',
+        status: 'pending',
+        priority: 1,
+        estimatedTime: 30,
+        createdAt: '2025-01-27 10:10'},
+    ]},
   {;
 
-    id: '2',;
-    type: 'task',;
-    title: 'Client Communication Automation',;
+    id: '2',
+    type: 'task',
+    title: 'Client Communication Automation',
     description:';
-      'Intelligent automation of client communication and status updates',;
-    status: 'active',;
-    priority: 'medium',;
-    createdAt: '2025-01-27 09:00',;
-    lastUpdated: '2025-01-27 14:00',;
+      'Intelligent automation of client communication and status updates',
+    status: 'active',
+    priority: 'medium',
+    createdAt: '2025-01-27 09:00',
+    lastUpdated: '2025-01-27 14:00',
     messages: [;
       {;
 
-        id: '1',;
-        type: 'user',;
-        content: 'Set up automated client communication for project milestones',;
-        timestamp: '2025-01-27 09:00'},;
+        id: '1',
+        type: 'user',
+        content: 'Set up automated client communication for project milestones',
+        timestamp: '2025-01-27 09:00'},
       {;
 
-        id: '2',;
-        type: 'assistant',;
+        id: '2',
+        type: 'assistant',
         content:'";
-          "I've configured automated client communication for all active projects. The system will now send personalized updates when milestones are reached, with smart timing based on client preferences.",;
-        timestamp: '2025-01-27 09:05',;
-        confidence: 0.97,;
+          "I've configured automated client communication for all active projects. The system will now send personalized updates when milestones are reached, with smart timing based on client preferences.",
+        timestamp: '2025-01-27 09:05',
+        confidence: 0.97,
         suggestions: [';
-          'Customize message templates',Set up escalation rules',Configure delivery preferences',;
-        ]},;
-    ],;
+          'Customize message templates',Set up escalation rules',Configure delivery preferences',
+        ]},
+    ],
     insights: [;
       {;
 
-        id: '1',;
-        title: 'Communication Efficiency',;
+        id: '1',
+        title: 'Communication Efficiency',
         description:';
-          'Automated communication reduces manual effort by 65% while improving client satisfaction',;
-        type: 'positive',;
-        impact: 'medium',;
-        confidence: 0.89,;
-        data: { effortReduction: 65, satisfactionImprovement: 23 },;
-        createdAt: '2025-01-27 09:10'},;
-    ],;
+          'Automated communication reduces manual effort by 65% while improving client satisfaction',
+        type: 'positive',
+        impact: 'medium',
+        confidence: 0.89,
+        data: { effortReduction: 65, satisfactionImprovement: 23 },
+        createdAt: '2025-01-27 09:10'},
+    ],
     actions: [;
       {;
 
-        id: '1',;
-        name: 'Template Customization',;
+        id: '1',
+        name: 'Template Customization',
         description:';
-          'Create personalized communication templates for each client',;
-        type: 'automation',;
-        status: 'executing',;
-        priority: 2,;
-        estimatedTime: 45,;
-        createdAt: '2025-01-27 09:15'},;
-    ]},;
+          'Create personalized communication templates for each client',
+        type: 'automation',
+        status: 'executing',
+        priority: 2,
+        estimatedTime: 45,
+        createdAt: '2025-01-27 09:15'},
+    ]},
 ];
-;
 const aiFeatures: AIFeature[] = [;
   {;
 
-    id: '1',;
-    name: 'Natural Language Processing',;
+    id: '1',
+    name: 'Natural Language Processing',
     description: 'Advanced NLP for understanding complex queries and context',";
-    icon: <Brain className="w-6 h-6" />,;
-    status: 'active',;
-    usage: 95,;
-    accuracy: 94},;
+    icon: <Brain className="w-6 h-6" />,
+    status: 'active',
+    usage: 95,
+    accuracy: 94},
   {;
 
-    id: '2',;
-    name: 'Predictive Analytics',;
+    id: '2',
+    name: 'Predictive Analytics',
     description:';
       'AI-powered predictions for project outcomes and resource needs',";
-    icon: <TrendingUp className="w-6 h-6" />,;
-    status: 'active',;
-    usage: 87,;
-    accuracy: 89},;
+    icon: <TrendingUp className="w-6 h-6" />,
+    status: 'active',
+    usage: 87,
+    accuracy: 89},
   {;
 
-    id: '3',;
-    name: 'Intelligent Automation',;
+    id: '3',
+    name: 'Intelligent Automation',
     description: 'Smart automation of repetitive tasks and workflows',";
-    icon: <Zap className="w-6 h-6" />,;
-    status: 'active',;
-    usage: 92,;
-    accuracy: 91},;
+    icon: <Zap className="w-6 h-6" />,
+    status: 'active',
+    usage: 92,
+    accuracy: 91},
   {;
 
-    id: '4',;
-    name: 'Sentiment Analysis',;
+    id: '4',
+    name: 'Sentiment Analysis',
     description: 'Real-time analysis of client and team sentiment',";
-    icon: <MessageCircle className="w-6 h-6" />,;
-    status: 'beta',;
-    usage: 73,;
-    accuracy: 87},;
+    icon: <MessageCircle className="w-6 h-6" />,
+    status: 'beta',
+    usage: 73,
+    accuracy: 87},
   {;
 
-    id: '5',;
-    name: 'Resource Optimization',;
+    id: '5',
+    name: 'Resource Optimization',
     description: 'AI-driven resource allocation and optimization',";
-    icon: <Users className="w-6 h-6" />,;
-    status: 'active',;
-    usage: 89,;
-    accuracy: 93},;
+    icon: <Users className="w-6 h-6" />,
+    status: 'active',
+    usage: 89,
+    accuracy: 93},
   {;
 
-    id: '6',;
-    name: 'Risk Assessment',;
+    id: '6',
+    name: 'Risk Assessment',
     description: 'Intelligent risk identification and mitigation strategies',";
-    icon: <Shield className="w-6 h-6" />,;
-    status: 'beta',;
-    usage: 68,;
-    accuracy: 85},;
+    icon: <Shield className="w-6 h-6" />,
+    status: 'beta',
+    usage: 68,
+    accuracy: 85},
 ];
-;
 const aiInsights: AIInsight[] = [;
   {;
 
-    id: '1',;
-    title: 'Project Timeline Optimization',;
+    id: '1',
+    title: 'Project Timeline Optimization',
     description:';
-      'AI analysis suggests 15% timeline compression is possible for the E-commerce project through parallel development and resource optimization.',;
-    type: 'positive',;
-    impact: 'high',;
-    confidence: 0.91,;
-    data: { compression: 15, savings: '2 weeks', risk: 'low' },;
-    createdAt: '2025-01-27 16:00'},;
+      'AI analysis suggests 15% timeline compression is possible for the E-commerce project through parallel development and resource optimization.',
+    type: 'positive',
+    impact: 'high',
+    confidence: 0.91,
+    data: { compression: 15, savings: '2 weeks', risk: 'low' },
+    createdAt: '2025-01-27 16:00'},
   {;
 
-    id: '2',;
-    title: 'Resource Allocation Warning',;
+    id: '2',
+    title: 'Resource Allocation Warning',
     description:';
-      'Current resource allocation shows 23% underutilization in the Mobile App project, indicating potential efficiency improvements.',;
-    type: 'warning',;
-    impact: 'medium',;
-    confidence: 0.87,;
+      'Current resource allocation shows 23% underutilization in the Mobile App project, indicating potential efficiency improvements.',
+    type: 'warning',
+    impact: 'medium',
+    confidence: 0.87,
     data: {;
 
-      underutilization: 23,;
-      potentialSavings: '$8,500',;
-      timeframe: '2 weeks'},;
-    createdAt: '2025-01-27 15:45'},;
+      underutilization: 23,
+      potentialSavings: '$8,500',
+      timeframe: '2 weeks'},
+    createdAt: '2025-01-27 15:45'},
   {;
 
-    id: '3',;
-    title: 'Client Satisfaction Trend',;
+    id: '3',
+    title: 'Client Satisfaction Trend',
     description:';
-      'Client satisfaction scores have increased by 12% over the last quarter, with AI-powered communication contributing to 8% of this improvement.',;
-    type: 'positive',;
-    impact: 'high',;
-    confidence: 0.94,;
-    data: { improvement: 12, aiContribution: 8, trend: 'positive' },;
-    createdAt: '2025-01-27 15:30'},;
+      'Client satisfaction scores have increased by 12% over the last quarter, with AI-powered communication contributing to 8% of this improvement.',
+    type: 'positive',
+    impact: 'high',
+    confidence: 0.94,
+    data: { improvement: 12, aiContribution: 8, trend: 'positive' },
+    createdAt: '2025-01-27 15:30'},
 ];
-;
 const statusColors = {;
 
-  active: 'from-green-500 to-emerald-500',;
-  completed: 'from-blue-500 to-cyan-500',;
+  active: 'from-green-500 to-emerald-500',
+  completed: 'from-blue-500 to-cyan-500',
   archived: 'from-gray-500 to-gray-600'};
-;
 const priorityColors = {;
 
-  low: 'bg-gray-500',;
-  medium: 'bg-yellow-500',;
-  high: 'bg-orange-500',;
+  low: 'bg-gray-500',
+  medium: 'bg-yellow-500',
+  high: 'bg-orange-500',
   critical: 'bg-red-500'};
-;
 const insightTypeColors = {;
 
-  positive: 'from-green-500 to-emerald-500',;
-  warning: 'from-yellow-500 to-orange-500',;
-  critical: 'from-red-500 to-pink-500',;
+  positive: 'from-green-500 to-emerald-500',
+  warning: 'from-yellow-500 to-orange-500',
+  critical: 'from-red-500 to-pink-500',
   info: 'from-blue-500 to-cyan-500'};
-;
 const actionStatusColors = {;
 
-  pending: 'from-gray-500 to-gray-600',;
-  executing: 'from-yellow-500 to-orange-500',;
-  completed: 'from-green-500 to-emerald-500',;
+  pending: 'from-gray-500 to-gray-600',
+  executing: 'from-yellow-500 to-orange-500',
+  completed: 'from-green-500 to-emerald-500',
   failed: 'from-red-500 to-pink-500'};
-;
 const MDiv: any = motion.div as any;
-;
 const AdvancedAIAssistant: React.FC = () => {;
 
   const [selectedView, setSelectedView] = useState<';
@@ -367,7 +353,6 @@ const AdvancedAIAssistant: React.FC = () => {;
     useState<AIConversation | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedFilter, setSelectedFilter] = useState<string>('all');
-;
   const filteredConversations = aiConversations.filter(conversation => {;
 
     const matchesSearch =;
@@ -377,18 +362,15 @@ const AdvancedAIAssistant: React.FC = () => {;
         .includes(searchQuery.toLowerCase());
     const matchesFilter =';
       selectedFilter === 'all' || conversation.type === selectedFilter;
-;
-    return matchesSearch && matchesFilter;,
+    return matchesSearch && matchesFilter;
 });
-;
   const filteredInsights = aiInsights.filter(insight => {;
 
     return();
       insight.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       insight.description.toLowerCase().includes(searchQuery.toLowerCase());
-    );,
+    );
 });
-;
   const getStatusIcon = (status: string) => {;
 
     switch (status) {;
@@ -400,10 +382,9 @@ const AdvancedAIAssistant: React.FC = () => {;
       case 'archived':";
         return <Clock className="w-4 h-4 text-gray-400" />;
       default:";
-        return <Clock className="w-4 h-4 text-gray-400" />;,
+        return <Clock className="w-4 h-4 text-gray-400" />;
 }
   };
-;
   const getInsightIcon = (type: string) => {;
 
     switch (type) {;
@@ -415,33 +396,30 @@ const AdvancedAIAssistant: React.FC = () => {;
       case 'critical':";
         return <AlertCircle className="w-6 h-6 text-white" />;
       default:";
-        return <Activity className="w-6 h-6 text-white" />;,
+        return <Activity className="w-6 h-6 text-white" />;
 }
   };
-;
   const containerVariants = {;
 
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 },
     visible: {;
 
-      opacity: 1,;
+      opacity: 1,
       transition: {;
 
-        staggerChildren: 0.1,;
+        staggerChildren: 0.1,
         delayChildren: 0.2}}};
-;
   const itemVariants = {;
 
-    hidden: { y: 30, opacity: 0 },;
+    hidden: { y: 30, opacity: 0 },
     visible: {;
 
-      y: 0,;
-      opacity: 1,;
+      y: 0,
+      opacity: 1,
       transition: {;
 
-        duration: 0.6,;
+        duration: 0.6,
         ease: 'easeOut' as const}}};
-;
   return (";
     <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">";
       <div className="container mx-auto px-4">;
@@ -548,7 +526,7 @@ const AdvancedAIAssistant: React.FC = () => {;
 
                 selectedView === view;
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25';
-                  : 'text-gray-300 hover:text-white hover:bg-white/10';,
+                  : 'text-gray-300 hover:text-white hover:bg-white/10';
 }`}
             >;
               {view === 'overview' && <Bot className="w-4 h-4 inline mr-2" />}
@@ -600,7 +578,6 @@ const AdvancedAIAssistant: React.FC = () => {;
               <Settings className="w-4 h-4" />;
               AI Settings;
             </MDiv>;
-            ;
             <button;
               className="flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">;
               <Plus className="w-4 h-4" />;
@@ -687,7 +664,7 @@ const AdvancedAIAssistant: React.FC = () => {;
               </motion.div>;
             </motion.div>;
           )}
-;
+
           {selectedView === 'insights' && (;
             <motion.div;
               key="insights";
@@ -754,7 +731,7 @@ const AdvancedAIAssistant: React.FC = () => {;
               </motion.div>;
             </motion.div>;
           )}
-;
+
           {selectedView === 'features' && (;
             <motion.div;
               key="features";
@@ -825,7 +802,6 @@ const AdvancedAIAssistant: React.FC = () => {;
         </MDiv>;
       </div>;
     </section>;
-  );,
+  );
 };
-;
 export default AdvancedAIAssistant;

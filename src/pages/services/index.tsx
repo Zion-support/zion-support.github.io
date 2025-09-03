@@ -4,48 +4,41 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 import { REAL_MICRO_SAAS_SERVICES_2025 } from "../../data/realMicroSaasServices2025";
 
 export default function Index() {;
-  const features = [;
-    "AI-powered customer churn prediction with 94% accuracy",;
-    "Real-time fraud detection and prevention",;
-    "Advanced supply chain optimization algorithms",;
-    "Healthcare diagnostics with 96% accuracy",;
-    "Intelligent content creation and marketing automation",;
-    "Predictive maintenance for industrial equipment";
-  ];
-  const benefits = [;
-    "Reduce operational costs by 25-40%",;
-    "Increase revenue through AI-driven insights",;
-    "Improve customer satisfaction and retention",;
-    "Enhance security and compliance",;
-    "Accelerate decision-making processes",;
-    "Scale operations efficiently";
-  ];
-  const useCases = [;
-    "SaaS companies reducing customer churn",;
-    "E-commerce businesses optimizing supply chains",;
-    "Healthcare providers improving diagnostics",;
-    "Financial institutions preventing fraud",;
-    "Manufacturing companies implementing predictive maintenance",;
-    "Marketing agencies scaling content creation";
-  ];
+  const features = [ "AI-powered customer churn prediction with 94% accuracy",
+    "Real-time fraud detection and prevention",
+    "Advanced supply chain optimization algorithms",
+    "Healthcare diagnostics with 96% accuracy",
+    "Intelligent content creation and marketing automation",
+    "Predictive maintenance for industrial equipment" ];
+  const benefits = [ "Reduce operational costs by 25-40%",
+    "Increase revenue through AI-driven insights",
+    "Improve customer satisfaction and retention",
+    "Enhance security and compliance",
+    "Accelerate decision-making processes",
+    "Scale operations efficiently" ];
+  const useCases = [ "SaaS companies reducing customer churn",
+    "E-commerce businesses optimizing supply chains",
+    "Healthcare providers improving diagnostics",
+    "Financial institutions preventing fraud",
+    "Manufacturing companies implementing predictive maintenance",
+    "Marketing agencies scaling content creation" ];
   const pricing = [;
     {;
-      name: "Starter",;
-      price: "$99/mo",;
-      details: ["Basic AI features", "Up to 1,000 users", "Email support", "Standard SLA"];,
-},;
+      name: "Starter",
+      price: "$99/mo",
+      details: ["Basic AI features", "Up to 1,000 users", "Email support", "Standard SLA"];
+},
     {;
-      name: "Professional",;
-      price: "$499/mo",;
-      details: ["Advanced AI features", "Up to 10,000 users", "Priority support", "99.9% SLA"];,
-},;
+      name: "Professional",
+      price: "$499/mo",
+      details: ["Advanced AI features", "Up to 10,000 users", "Priority support", "99.9% SLA"];
+},
     {;
-      name: "Enterprise",;
-      price: "$1,999/mo",;
-      details: ["Full AI suite", "Unlimited users", "24/7 support", "99.99% SLA", "Custom integrations"];,
+      name: "Enterprise",
+      price: "$1,999/mo",
+      details: ["Full AI suite", "Unlimited users", "24/7 support", "99.99% SLA", "Custom integrations"];
 }
   ];
-;
   ];
   return (;
     <div className="min-h-screen bg-white">;
@@ -103,7 +96,7 @@ export default function Index() {;
                   <span className="text-gray-700">{feature}</span>;
                 </li>;
               ))}
-;
+
             </ul>;
             <div className="mt-6 text-sm text-gray-600">;
               Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.;
@@ -126,11 +119,11 @@ export default function Index() {;
                     {tier.details.map((detail, detailIndex) => (;
                       <li key={detailIndex}>{detail}</li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
               ))}
-;
+
             </div>;
             <div className="mt-6 flex flex-wrap gap-3">;
               <Link href="/pricing" className="px-5 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors inline-flex items-center">;
@@ -157,7 +150,7 @@ export default function Index() {;
                 <p className="text-gray-600">{benefit}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       <section className="py-16">;
@@ -173,7 +166,7 @@ export default function Index() {;
                 <p className="text-gray-600">Comprehensive index solutions tailored for {industry.toLowerCase()}.</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       <section className="py-16 bg-indigo-600">;

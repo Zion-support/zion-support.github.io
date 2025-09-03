@@ -4,116 +4,110 @@ import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import SEOHead from '../src/components/SEOHead';
 import { Play, ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, Calendar, Download } from 'lucide-react';
-;
 const Demo = () => {;
   const [selectedDemo, setSelectedDemo] = useState('ai-services');
-;
   const structuredData = {;
-    "@context": "https://schema.org",;
-    "@type": "WebPage",;
-    "name": "Demo - Zion Tech Group",;
-    "url": "https://ziontechgroup.com/demo",;
-    "description": "Watch live demos of our AI services, IT solutions, and micro SaaS platforms",;
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Demo - Zion Tech Group",
+    "url": "https://ziontechgroup.com/demo",
+    "description": "Watch live demos of our AI services, IT solutions, and micro SaaS platforms",
     "publisher": {;
-      "@type": "Organization",;
-      "name": "Zion Tech Group",;
-      "url": "https://ziontechgroup.com";,
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com";
 }
   };
-;
   const demos = [;
     {;
-      id: 'ai-services',;
-      title: 'AI Services Demo',;
-      description: 'See how our AI solutions can transform your business operations',;
-      duration: '15 min',;
-      category: 'AI Services',;
+      id: 'ai-services',
+      title: 'AI Services Demo',
+      description: 'See how our AI solutions can transform your business operations',
+      duration: '15 min',
+      category: 'AI Services',
       features: [;
-        'Natural Language Processing',;
-        'Computer Vision',;
-        'Predictive Analytics',;
-        'Chatbot Integration',;
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'Chatbot Integration',
         'Document Intelligence';
-      ],;
-      videoUrl: '#',;
-      thumbnail: '/api/placeholder/600/400';,
-},;
+      ],
+      videoUrl: '#',
+      thumbnail: '/api/placeholder/600/400';
+},
     {;
-      id: 'it-services',;
-      title: 'IT Services Demo',;
-      description: 'Explore our comprehensive IT solutions and infrastructure management',;
-      duration: '20 min',;
-      category: 'IT Services',;
+      id: 'it-services',
+      title: 'IT Services Demo',
+      description: 'Explore our comprehensive IT solutions and infrastructure management',
+      duration: '20 min',
+      category: 'IT Services',
       features: [;
-        'Cloud Migration',;
-        'DevOps Automation',;
-        'Security Monitoring',;
-        'Network Management',;
+        'Cloud Migration',
+        'DevOps Automation',
+        'Security Monitoring',
+        'Network Management',
         'Data Backup & Recovery';
-      ],;
-      videoUrl: '#',;
-      thumbnail: '/api/placeholder/600/400';,
-},;
+      ],
+      videoUrl: '#',
+      thumbnail: '/api/placeholder/600/400';
+},
     {;
-      id: 'micro-saas',;
-      title: 'Micro SaaS Demo',;
-      description: 'Discover our scalable SaaS solutions and platform capabilities',;
-      duration: '25 min',;
-      category: 'Micro SaaS',;
+      id: 'micro-saas',
+      title: 'Micro SaaS Demo',
+      description: 'Discover our scalable SaaS solutions and platform capabilities',
+      duration: '25 min',
+      category: 'Micro SaaS',
       features: [;
-        'Multi-tenant Architecture',;
-        'API Management',;
-        'User Management',;
-        'Analytics Dashboard',;
+        'Multi-tenant Architecture',
+        'API Management',
+        'User Management',
+        'Analytics Dashboard',
         'Payment Integration';
-      ],;
-      videoUrl: '#',;
-      thumbnail: '/api/placeholder/600/400';,
-},;
+      ],
+      videoUrl: '#',
+      thumbnail: '/api/placeholder/600/400';
+},
     {;
-      id: 'workflow-automation',;
-      title: 'Workflow Automation',;
-      description: 'Learn how to automate your business processes with our tools',;
-      duration: '18 min',;
-      category: 'Automation',;
+      id: 'workflow-automation',
+      title: 'Workflow Automation',
+      description: 'Learn how to automate your business processes with our tools',
+      duration: '18 min',
+      category: 'Automation',
       features: [;
-        'Process Mapping',;
-        'Automation Rules',;
-        'Integration Hub',;
-        'Performance Monitoring',;
+        'Process Mapping',
+        'Automation Rules',
+        'Integration Hub',
+        'Performance Monitoring',
         'Custom Workflows';
-      ],;
-      videoUrl: '#',;
-      thumbnail: '/api/placeholder/600/400';,
+      ],
+      videoUrl: '#',
+      thumbnail: '/api/placeholder/600/400';
 }
   ];
-;
   const testimonials = [;
     {;
-      name: 'Sarah Johnson',;
-      company: 'TechCorp Inc.',;
-      role: 'CTO',;
-      content: 'The AI demo was incredible. We could see exactly how it would fit into our workflow.',;
-      rating: 5;,
-},;
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      role: 'CTO',
+      content: 'The AI demo was incredible. We could see exactly how it would fit into our workflow.',
+      rating: 5;
+},
     {;
-      name: 'Michael Chen',;
-      company: 'StartupXYZ',;
-      role: 'Founder',;
-      content: 'The micro SaaS demo showed us the scalability we needed for our growing business.',;
-      rating: 5;,
-},;
+      name: 'Michael Chen',
+      company: 'StartupXYZ',
+      role: 'Founder',
+      content: 'The micro SaaS demo showed us the scalability we needed for our growing business.',
+      rating: 5;
+},
     {;
-      name: 'Emily Rodriguez',;
-      company: 'Enterprise Solutions',;
-      role: 'IT Director',;
-      content: 'The IT services demo covered everything we needed for our digital transformation.',;
-      rating: 5;,
+      name: 'Emily Rodriguez',
+      company: 'Enterprise Solutions',
+      role: 'IT Director',
+      content: 'The IT services demo covered everything we needed for our digital transformation.',
+      rating: 5;
 }
   ];
-;
   const selectedDemoData = demos.find(demo => demo.id === selectedDemo) || demos[0];
-;
   return (;
     <>;
       <SEOHead ;
@@ -123,7 +117,6 @@ const Demo = () => {;
         structuredData={structuredData}
       />;
       <Navigation />;
-      ;
       <main className="min-h-screen bg-gray-900 text-white">;
         {/* Hero Section */}
         <section className="pt-24 pb-16 bg-gradient-to-b from-gray-900 to-gray-800">;
@@ -173,7 +166,7 @@ const Demo = () => {;
                   className={`p-6 rounded-lg border-2 transition-all duration-200 text-left ${;
                     selectedDemo === demo.id;
                       ? 'border-cyan-400 bg-cyan-400/10';
-                      : 'border-gray-700 bg-gray-800 hover:border-gray-600';,
+                      : 'border-gray-700 bg-gray-800 hover:border-gray-600';
 }`}
                 >;
                   <div className="flex items-center justify-between mb-3">;
@@ -199,10 +192,8 @@ const Demo = () => {;
                       </p>;
                     </div>;
                   </div>;
-                  ;
                   <h3 className="text-2xl font-bold mb-4">{selectedDemoData.title}</h3>;
                   <p className="text-gray-300 mb-6">{selectedDemoData.description}</p>;
-                  ;
                   <div className="space-y-3">;
                     <h4 className="font-semibold">What you'll see:</h4>;
                     {selectedDemoData.features.map((feature, index) => (;
@@ -320,7 +311,6 @@ const Demo = () => {;
 
       <Footer />;
     </>;
-  );,
+  );
 };
-;
 export default Demo;

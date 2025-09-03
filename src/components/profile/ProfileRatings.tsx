@@ -5,35 +5,29 @@ import { ReviewsList } from '@/components/reviews/ReviewsList';
 import { useReviews } from '@/hooks/useReviews';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-;
 export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
-  ;
   // Calculate rating distribution;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
 }, []);
     if(reviews.length > 0) {;
       const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-      ;
       reviews.forEach((review) => {;
         if(review.rating >= 1 && review.rating <= 5) {;
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1;,
+          distribution[review.rating] = (distribution[review.rating] || 0) + 1;
 }
       });
-      ;
-      setRatingDistribution(distribution);,
+      setRatingDistribution(distribution);
 }
   }, [reviews]);
-  ;
   // Fetch reviews when component mounts or userId/fetchUserReviews changes;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
 }, []);
-    fetchUserReviews(userId);,
+    fetchUserReviews(userId);
 }, [userId, fetchUserReviews]); // Added fetchUserReviews;
-  ;
   return (<div className="space-y-6">;
       <div className="flex flex-col md:flex-row gap-6">;
         <div className="md:w-1/3">;
@@ -43,7 +37,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             ratingDistribution={ratingDistribution}
           />;
         </div>;
-        ;
         <div className="md:w-2/3">;
           <Tabs defaultValue="all">;
             <TabsList className="mb-4">;
@@ -51,7 +44,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
               <TabsTrigger value="positive">Positive</TabsTrigger>;
               <TabsTrigger value="critical">Critical</TabsTrigger>;
             </TabsList>;
-            ;
             <TabsContent value="all">;
               <ReviewsList;
                 reviews={reviews}
@@ -59,7 +51,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
               />;
             </TabsContent>;
-            ;
             <TabsContent value="positive">;
               <ReviewsList;
                 reviews={reviews.filter((r) => r.rating >= 4)}
@@ -67,7 +58,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
               />;
             </TabsContent>;
-            ;
             <TabsContent value="critical">;
               <ReviewsList;
                 reviews={reviews.filter((r) => r.rating < 4)}
@@ -79,5 +69,5 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
         </div>;
       </div>;
     </div>;
-  );,
+  );
 }

@@ -45,6 +45,6 @@ const NewInnovativeServicesShowcase = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default NewInnovativeServicesShowcase;

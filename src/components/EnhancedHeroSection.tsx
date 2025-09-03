@@ -1,10 +1,8 @@
 import { Link  } from 'react-router-dom';
-;
 export default function Page() {;
 const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {;
 
   const [currentSlide, setCurrentSlide] = useState(0);  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-;
   const heroSlides: HeroSlide[] = [{;
 
       title: "AI-Powered Business Solutions",";
@@ -13,15 +11,15 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       image: "/images/hero-ai-solutions.jpg",";
       cta: "Explore AI Solutions",";
       path: "/services/ai-business-intelligence",";
-      features["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],;";
-      gradient: "from-zion-cyan via-zion-purple to-zion-blue",;
-      icon: Brain,;
-      stats[;";
+      features["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],";
+      gradient: "from-zion-cyan via-zion-purple to-zion-blue",
+      icon: Brain,
+      stats[ ";
         { label: "Accuracy Rate", value: "95%+", icon: Target },";
         { label: "ROI Increase", value: "450%", icon: TrendingUp },";
         { label: "Market Growth", value: "280%", icon: Rocket }
-      ];,
-},;
+      ];
+},
     {;
 ";
       title: "Comprehensive IT Services",";
@@ -30,15 +28,15 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       image: "/images/hero-it-services.jpg",";
       cta: "View Our Services",";
       path: "/services",";
-      features["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],;";
-      gradient: "from-zion-blue via-zion-cyan to-zion-purple",;
-      icon: Shield,;
-      stats[;";
+      features["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],";
+      gradient: "from-zion-blue via-zion-cyan to-zion-purple",
+      icon: Shield,
+      stats[ ";
         { label: "Uptime", value: "99.99%", icon: Target },";
         { label: "Cost Savings", value: "700%", icon: TrendingUp },";
         { label: "Response Time", value: "<5min", icon: Rocket }
-      ];,
-},;
+      ];
+},
     {;
 ";
       title: "Green IT Solutions",";
@@ -47,35 +45,31 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
       image: "/images/hero-green-it.jpg",";
       cta: "Learn More",";
       path: "/green-it",";
-      features["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],;";
-      gradient: "from-zion-cyan via-zion-blue to-zion-purple",;
-      icon: Globe,;
-      stats[;";
+      features["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],";
+      gradient: "from-zion-cyan via-zion-blue to-zion-purple",
+      icon: Globe,
+      stats[ ";
         { label: "Energy Savings", value: "60%", icon: Target },";
         { label: "Carbon Reduction", value: "75%", icon: TrendingUp },";
         { label: "Cost Reduction", value: "40%", icon: Rocket }
       ];
 
   ];
-;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     if(!isAutoPlaying) return;
-;
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length) }, 6000) ;
     return () => clearInterval(interval) }, [isAutoPlaying, heroSlides.length]) ;
-;
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;
     setIsAutoPlaying(false) };
-;
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
     setIsAutoPlaying(false) };
-            scale: [1, 1.1, 1];,
+            scale: [1, 1.1, 1];
 }}
           transition={{ duration: 20, repeat: Infinity }}
         ></motion.div>;
@@ -93,14 +87,14 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
 
   {;
 
-              y: [0, -20, 0],;
+              y: [0, -20, 0],
               opacity: [0.4, 1, 0.4]}}
             transition = {;
 
   {;
 
-              duration: 3 + i * 0.5,;
-              repeat: Infinity,;
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
               delay: i * 0.3}}
           />;
         ))}
@@ -113,13 +107,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  x: -50;,
+  { opacity: 0,
+  x: -50;
 }}
             animate = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
             transition={{ duration: 0.8 }}";
             className="text-center lg:text-left";
@@ -129,21 +123,21 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                 key={currentSlide}
                 initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                 animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 exit = {;
 
-  { opacity: 0,;
-  y: -20;,
+  { opacity: 0,
+  y: -20;
 }}
                 transition={{ duration: 0.5 }}
-;
+
                 {/* Icon and category */}
                 <motion.div";
                   className="flex items-center justify-center lg:justify-start mb-6";
@@ -177,13 +171,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                       key={feature}
                       initial = {;
 
-  { opacity: 0,;
-  x: -20;,
+  { opacity: 0,
+  x: -20;
 }}
                       animate = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
                       transition={{ delay: index * 0.1 }}";
                       className="flex items-center text-sm text-gray-300 bg-white/5 px-3 py-2 rounded-lg border border-white/10";
@@ -218,13 +212,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
+  { opacity: 0,
   x: 50 }}            animate = {;
 
-  { opacity: 1,;
+  { opacity: 1,
   x: 0 }}            transition = {;
 
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: 0.2 }}"            className="relative";
 
             {/* Main image */}";
@@ -241,13 +235,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                       className="w-24 h-24 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30";
                       animate = {;
 
-  { rotate: [0,;
-  360];,
+  { rotate: [0,
+  360];
 }}
                       transition = {;
 
-  { duration: 20,;
-  repeat: Infinity;,
+  { duration: 20,
+  repeat: Infinity;
 }}
                     >";
                       <currentSlideData.icon className="w-12 h-12 text-zion-cyan" />;
@@ -265,13 +259,13 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                   key={stat.label}
                   initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                   animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                   transition={{ delay: 0.5 + index * 0.1 }}";
                   className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-4 shadow-2xl hover:bg-white/20 transition-all duration-300";
@@ -295,10 +289,10 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 }}              animate = {;
 
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 }}
               transition={{ delay: 0.8 }}";
               className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-2xl";
@@ -332,7 +326,7 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
                 onClick={() => goToSlide(index)}`;
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide';
                     ? 'bg-zion-cyan w-8'';
-                    : 'bg-white/30 hover:bg-white/50'`;,
+                    : 'bg-white/30 hover:bg-white/50'`;
 }`}
                 whileHover={{ scale: 1.2 }}
               />) ) }
@@ -358,23 +352,23 @@ const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): a
         <motion.div;
           animate = {;
 
-  { y: [0, 10,;
-  0];,
+  { y: [0, 10,
+  0];
 }}
           transition = {;
 
-  { duration: 2,;
+  { duration: 2,
   repeat: Infinity }}"          className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer hover:border-zion-cyan transition-colors duration-300">;
           <motion.div;
             animate = {;
 
-  { y: [0, 12,;
-  0];,
+  { y: [0, 12,
+  0];
 }}
             transition = {;
 
-  { duration: 2,;
-  repeat: Infinity;,
+  { duration: 2,
+  repeat: Infinity;
 }};";
             className="w-1 h-3 bg-zion-cyan rounded-full mt-2";
           />;

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-;
-interface SearchResult {;
+interface SearchResult {
 
   id: string;
   title: string;
@@ -10,10 +9,9 @@ interface SearchResult {;
   url: string;
   tags: string[];
   relevance: number;
-;,
 }
-;
-interface SearchFilter {;
+
+interface SearchFilter {
 
   type: string[];
   tags: string[];
@@ -21,16 +19,14 @@ interface SearchFilter {;
 
     start: Date | null;
     end: Date | null;
-  ;,
-};,
+};
 }
-;
-interface SearchSuggestion {;
+
+interface SearchSuggestion {
 
   text: string;
   type: 'recent' | 'popular' | 'related';
   count?: number;
-;
 export default function AdvancedSearch() {;
 
   const [query, setQuery] = useState('');
@@ -38,96 +34,90 @@ export default function AdvancedSearch() {;
   const [results, setResults] = useState<SearchResult[]>([]);
   const [filters, setFilters] = useState<SearchFilter>({;
 
-    type: [],;
-    tags: [],;
+    type: [],
+    tags: [],
     dateRange: { start: null, end: null }
   });
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [showFilters, setShowFilters] = useState<typeof false>(false);
   const [selectedResult, setSelectedResult] = useState<number>(-1);
-;
   // Mock data - in production, this would come from your backend;
   const mockData = useMemo<SearchResult[]>(: unknown [;
     {;
 
-      id: '1',;
-      title: 'Micro SaaS Development',;
-      description: 'Custom micro SaaS solutions for specific business needs',;
-      type: 'service',;
-      url: '/services/micro-saas',;
-      tags: ['SaaS',Development',Custom'],;
-      relevance: 0.95;,
-},;
+      id: '1',
+      title: 'Micro SaaS Development',
+      description: 'Custom micro SaaS solutions for specific business needs',
+      type: 'service',
+      url: '/services/micro-saas',
+      tags: ['SaaS',Development',Custom'],
+      relevance: 0.95;
+},
     {;
 
-      id: '2',;
-      title: 'AI & Machine Learning',;
-      description: 'Cutting-edge artificial intelligence solutions',;
-      type: 'service',;
-      url: '/services/ai-ml',;
-      tags: ['AI',Machine Learning',Automation'],;
-      relevance: 0.92;,
-},;
+      id: '2',
+      title: 'AI & Machine Learning',
+      description: 'Cutting-edge artificial intelligence solutions',
+      type: 'service',
+      url: '/services/ai-ml',
+      tags: ['AI',Machine Learning',Automation'],
+      relevance: 0.92;
+},
     {;
 
-      id: '3',;
-      title: 'Cloud Infrastructure',;
-      description: 'Scalable cloud solutions for modern businesses',;
-      type: 'service',;
-      url: '/services/cloud',;
-      tags: ['Cloud',AWS',Azure',GCP'],;
-      relevance: 0.88;,
-},;
+      id: '3',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions for modern businesses',
+      type: 'service',
+      url: '/services/cloud',
+      tags: ['Cloud',AWS',Azure',GCP'],
+      relevance: 0.88;
+},
     {;
 
-      id: '4',;
-      title: 'React & Next.js',;
-      description: 'Modern frontend development technologies',;
-      type: 'technology',;
-      url: '/technologies/frontend',;
-      tags: ['React',Next.js',Frontend'],;
-      relevance: 0.85;,
-},;
+      id: '4',
+      title: 'React & Next.js',
+      description: 'Modern frontend development technologies',
+      type: 'technology',
+      url: '/technologies/frontend',
+      tags: ['React',Next.js',Frontend'],
+      relevance: 0.85;
+},
     {;
 
-      id: '5',;
-      title: 'Cybersecurity Solutions',;
-      description: 'Advanced security for digital assets',;
-      type: 'service',;
-      url: '/services/security',;
-      tags: ['Security',Cybersecurity',Protection'],;
-      relevance: 0.82;,
+      id: '5',
+      title: 'Cybersecurity Solutions',
+      description: 'Advanced security for digital assets',
+      type: 'service',
+      url: '/services/security',
+      tags: ['Security',Cybersecurity',Protection'],
+      relevance: 0.82;
 }
   ], []);
-;
   // Search suggestions;
   const searchSuggestions = useMemo<SearchSuggestion[]>(() => [';
-    { text: 'SaaS', type: 'popular', count: 45 },;
-    { text: 'AI', type: 'popular', count: 32 },;
-    { text: 'Cloud', type: 'popular', count: 28 },;
-    { text: 'Security', type: 'popular', count: 25 },;
-    { text: 'Development', type: 'popular', count: 22 },;
-    { text: 'Machine Learning', type: 'recent' },;
-    { text: 'Micro Services', type: 'recent' },;
-    { text: 'DevOps', type: 'recent' },;
-    { text: 'Blockchain', type: 'related' },;
+    { text: 'SaaS', type: 'popular', count: 45 },
+    { text: 'AI', type: 'popular', count: 32 },
+    { text: 'Cloud', type: 'popular', count: 28 },
+    { text: 'Security', type: 'popular', count: 25 },
+    { text: 'Development', type: 'popular', count: 22 },
+    { text: 'Machine Learning', type: 'recent' },
+    { text: 'Micro Services', type: 'recent' },
+    { text: 'DevOps', type: 'recent' },
+    { text: 'Blockchain', type: 'related' },
     { text: 'IoT', type: 'related' }
   ], []);
-;
   // Filter options;
   const filterOptions = {;
 
-    types: ['service',technology',page',content'],;
-    tags: ['SaaS',AI',Cloud',Security',Development',React',Next.js',AWS',Azure',GCP'];,
+    types: ['service',technology',page',content'],
+    tags: ['SaaS',AI',Cloud',Security',Development',React',Next.js',AWS',Azure',GCP'];
 };
-;
   const performSearch = useCallbackasync (: unknown {;
 
     setIsSearching(true);
-    ;
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 500));
-    ;
     // Filter and search through mock data;
     const filteredResults = mockData.filter(item => {;
 
@@ -136,28 +126,21 @@ export default function AdvancedSearch() {;
         item.description.toLowerCase().includes(word) ||;
         item.tags.some(tag => tag.toLowerCase().includes(word));
       );
-      ;
       const matchesType = filters.type.length === 0 || filters.type.includes(item.type);
       const matchesTags = filters.tags.length === 0 || ;
         filters.tags.some(filterTag => item.tags.includes(filterTag));
-      ;
-      return matchesQuery && matchesType && matchesTags;,
+      return matchesQuery && matchesType && matchesTags;
 });
-    ;
     // Sort by relevance;
     const sortedResults = filteredResults.sort(a: unknown, b: unknown b.relevance - a.relevance);
-    ;
     setResults(sortedResults);
-    ;
     // Update suggestions based on query;
     const querySuggestions = searchSuggestions;
       .filter(suggestion => suggestion.text.toLowerCase().includes(query.toLowerCase()));
       .slice(0, 5);
     setSuggestions(querySuggestions);
-    ;
-    setIsSearching(false);,
+    setIsSearching(false);
 }, [query, filters, mockData, searchSuggestions]);
-;
   // Debounced search;
   useEffect(: unknown {;
 
@@ -165,23 +148,20 @@ export default function AdvancedSearch() {;
 
       if (query.trim()) {;
 
-        performSearch();,
+        performSearch();
 } else {;
 
         setResults([]);
-        setSuggestions([]);,
+        setSuggestions([]);
 }
     }, 300);
-;
-    return : unknown clearTimeout(timer);,
+    return : unknown clearTimeout(timer);
 }, [query, filters, performSearch]);
-;
   const handleSearch = (searchQuery: string) => {;
 
     setQuery(searchQuery);
-    setSelectedResult(-1);,
+    setSelectedResult(-1);
 };
-;
   const handleKeyDown = (e: React.KeyboardEvent) => {;
 
     if (e.key === 'ArrowDown') {;
@@ -189,49 +169,46 @@ export default function AdvancedSearch() {;
       e.preventDefault();
       setSelectedResult(prev => ;
         prev < results.length - 1 ? prev + 1 : prev;
-      );,
+      );
 } else if (e.key === 'ArrowUp') {;
 
       e.preventDefault();
-      setSelectedResult(prev => prev > 0 ? prev - 1 : -1);,
+      setSelectedResult(prev => prev > 0 ? prev - 1 : -1);
 } else if (e.key === 'Enter' && selectedResult >= 0) {;
 
       e.preventDefault();
       const result = results[selectedResult];
       if (result) {;
 
-        window.location.href = result.url;,
+        window.location.href = result.url;
 }
     } else if (e.key === 'Escape') {;
 
       setQuery('');
       setResults([]);
       setSuggestions([]);
-      setSelectedResult(-1);,
+      setSelectedResult(-1);
 }
   };
-;
   const toggleFilter = (filterType: 'type' | 'tags', value: string) => {;
 
     setFilters(prev => ({;
 
-      ...prev,;
+      ...prev,
       [filterType]: prev[filterType].includes(value);
         ? prev[filterType].filter(item => item !== value);
-        : [...prev[filterType], value];,
-}));,
+        : [...prev[filterType], value];
+}));
 };
-;
   const clearFilters = (...args: unknown[]): unknown => {;
 
     setFilters({;
 
-      type: [],;
-      tags: [],;
+      type: [],
+      tags: [],
       dateRange: { start: null, end: null }
-    });,
+    });
 };
-;
   const getResultIcon = (type: string) => {;
 
     switch (type) {;
@@ -240,10 +217,9 @@ export default function AdvancedSearch() {;
       case 'technology': return '⚡';
       case 'page': return '📄';
       case 'content': return '📝';
-      default: return '🔍';,
+      default: return '🔍';
 }
   };
-;
   return();
     <div className="w-full max-w-4xl mx-auto">;
       {/* Search Input */}";
@@ -286,7 +262,7 @@ export default function AdvancedSearch() {;
 
                       suggestion.type === 'popular' ? 'bg-blue-100 text-blue-800' :';
                       suggestion.type === 'recent' ? 'bg-green-100 text-green-800' :';
-                      'bg-gray-100 text-gray-800'`;,
+                      'bg-gray-100 text-gray-800'`;
 }`}>;
                       {suggestion.type}
                     </span>;
@@ -386,7 +362,7 @@ export default function AdvancedSearch() {;
 
                   selectedResult === index';
                     ? 'border-blue-500 bg-blue-50'';
-                    : 'border-gray-200 hover:border-gray-300 hover:shadow-md'`;,
+                    : 'border-gray-200 hover:border-gray-300 hover:shadow-md'`;
 }`}
                 onClick={() => window.location.href = result.url}
               >";
@@ -434,5 +410,5 @@ export default function AdvancedSearch() {;
         </motion.div>;
       )}
     </div>;
-  );,
+  );
 }'"`}

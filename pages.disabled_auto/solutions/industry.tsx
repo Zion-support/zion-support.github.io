@@ -2,76 +2,73 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { ArrowRight, CheckCircle, Star, Zap, Users, Shield, Building, Heart, Car, ShoppingCart, GraduationCap, Factory } from 'lucide-react';
 import Link from 'next/link';
-;
 const IndustrySolutionsPage: NextPage = () => {;
   const industries = [;
     {;
-      icon: <Heart className="w-8 h-8" />,;
-      title: 'Healthcare',;
-      description: 'HIPAA-compliant solutions for patient management, telemedicine, and medical data analytics.',;
-      solutions: ['Telemedicine platforms', 'Patient management systems', 'Medical AI diagnostics', 'Health data analytics'],;
-      price: 'Starting at $15,000';,
-},;
+      icon: <Heart className="w-8 h-8" />,
+      title: 'Healthcare',
+      description: 'HIPAA-compliant solutions for patient management, telemedicine, and medical data analytics.',
+      solutions: ['Telemedicine platforms', 'Patient management systems', 'Medical AI diagnostics', 'Health data analytics'],
+      price: 'Starting at $15,000';
+},
     {;
-      icon: <Building className="w-8 h-8" />,;
-      title: 'Financial Services',;
-      description: 'Secure, compliant solutions for banking, fintech, and financial data management.',;
-      solutions: ['Digital banking platforms', 'Fraud detection systems', 'Payment processing', 'Regulatory compliance'],;
-      price: 'Starting at $25,000';,
-},;
+      icon: <Building className="w-8 h-8" />,
+      title: 'Financial Services',
+      description: 'Secure, compliant solutions for banking, fintech, and financial data management.',
+      solutions: ['Digital banking platforms', 'Fraud detection systems', 'Payment processing', 'Regulatory compliance'],
+      price: 'Starting at $25,000';
+},
     {;
-      icon: <ShoppingCart className="w-8 h-8" />,;
-      title: 'E-Commerce',;
-      description: 'Scalable e-commerce solutions with AI-powered personalization and analytics.',;
-      solutions: ['E-commerce platforms', 'AI recommendation engines', 'Inventory management', 'Customer analytics'],;
-      price: 'Starting at $10,000';,
-},;
+      icon: <ShoppingCart className="w-8 h-8" />,
+      title: 'E-Commerce',
+      description: 'Scalable e-commerce solutions with AI-powered personalization and analytics.',
+      solutions: ['E-commerce platforms', 'AI recommendation engines', 'Inventory management', 'Customer analytics'],
+      price: 'Starting at $10,000';
+},
     {;
-      icon: <GraduationCap className="w-8 h-8" />,;
-      title: 'Education',;
-      description: 'EdTech solutions for online learning, student management, and educational analytics.',;
-      solutions: ['Learning management systems', 'Student information systems', 'Educational AI tutors', 'Assessment platforms'],;
-      price: 'Starting at $12,000';,
-},;
+      icon: <GraduationCap className="w-8 h-8" />,
+      title: 'Education',
+      description: 'EdTech solutions for online learning, student management, and educational analytics.',
+      solutions: ['Learning management systems', 'Student information systems', 'Educational AI tutors', 'Assessment platforms'],
+      price: 'Starting at $12,000';
+},
     {;
-      icon: <Car className="w-8 h-8" />,;
-      title: 'Automotive',;
-      description: 'Connected vehicle solutions, fleet management, and automotive data analytics.',;
-      solutions: ['Fleet management systems', 'Connected vehicle platforms', 'Predictive maintenance', 'Driver analytics'],;
-      price: 'Starting at $20,000';,
-},;
+      icon: <Car className="w-8 h-8" />,
+      title: 'Automotive',
+      description: 'Connected vehicle solutions, fleet management, and automotive data analytics.',
+      solutions: ['Fleet management systems', 'Connected vehicle platforms', 'Predictive maintenance', 'Driver analytics'],
+      price: 'Starting at $20,000';
+},
     {;
-      icon: <Factory className="w-8 h-8" />,;
-      title: 'Manufacturing',;
-      description: 'IoT-enabled manufacturing solutions with predictive maintenance and quality control.',;
-      solutions: ['IoT monitoring systems', 'Predictive maintenance', 'Quality control AI', 'Supply chain optimization'],;
-      price: 'Starting at $18,000';,
+      icon: <Factory className="w-8 h-8" />,
+      title: 'Manufacturing',
+      description: 'IoT-enabled manufacturing solutions with predictive maintenance and quality control.',
+      solutions: ['IoT monitoring systems', 'Predictive maintenance', 'Quality control AI', 'Supply chain optimization'],
+      price: 'Starting at $18,000';
 }
   ];
-;
   const benefits = [;
     {;
-      icon: <Shield className="w-8 h-8" />,;
-      title: 'Industry Compliance',;
-      description: 'Built-in compliance with industry standards and regulations from day one.';,
-},;
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Industry Compliance',
+      description: 'Built-in compliance with industry standards and regulations from day one.';
+},
     {;
-      icon: <Zap className="w-8 h-8" />,;
-      title: 'Proven Expertise',;
-      description: 'Deep industry knowledge and proven track record across multiple sectors.';,
-},;
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Proven Expertise',
+      description: 'Deep industry knowledge and proven track record across multiple sectors.';
+},
     {;
-      icon: <Users className="w-8 h-8" />,;
-      title: 'Dedicated Teams',;
-      description: 'Specialized teams with industry-specific experience and certifications.';,
-},;
+      icon: <Users className="w-8 h-8" />,
+      title: 'Dedicated Teams',
+      description: 'Specialized teams with industry-specific experience and certifications.';
+},
     {;
-      icon: <Star className="w-8 h-8" />,;
-      title: 'Best Practices',;
-      description: 'Implementation of industry best practices and cutting-edge technologies.';,
+      icon: <Star className="w-8 h-8" />,
+      title: 'Best Practices',
+      description: 'Implementation of industry best practices and cutting-edge technologies.';
 }
   ];
-;
   return (;
     <MainLayout;
       title="Industry Solutions - Zion Tech Group";
@@ -109,7 +106,6 @@ const IndustrySolutionsPage: NextPage = () => {;
               challenges, compliance requirements, and business objectives.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {industries.map((industry, index) => (;
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">;
@@ -139,11 +135,10 @@ const IndustrySolutionsPage: NextPage = () => {;
           <div className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Industry Specialization Matters</h2>;
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Our industry-focused approach ensures that your solutions are not just technically sound, ;
+              Our industry-focused approach ensures that your solutions are not just technically sound,
               but also aligned with your sector's unique requirements and challenges.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
               <div key={index} className="text-center">;
@@ -169,7 +164,6 @@ const IndustrySolutionsPage: NextPage = () => {;
               See how we've helped organizations across different industries achieve their technology goals.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 gap-8">;
             <div className="bg-white p-8 rounded-lg shadow-lg">;
               <div className="text-4xl mb-4">🏥</div>;
@@ -181,7 +175,6 @@ const IndustrySolutionsPage: NextPage = () => {;
               </p>;
               <div className="text-purple-600 font-semibold">- Dr. Sarah Williams, Chief Medical Officer</div>;
             </div>;
-            ;
             <div className="bg-white p-8 rounded-lg shadow-lg">;
               <div className="text-4xl mb-4">🏦</div>;
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Community Credit Union</h3>;
@@ -191,7 +184,6 @@ const IndustrySolutionsPage: NextPage = () => {;
               </p>;
               <div className="text-purple-600 font-semibold">- Robert Martinez, Chief Technology Officer</div>;
             </div>;
-            ;
             <div className="bg-white p-8 rounded-lg shadow-lg">;
               <div className="text-4xl mb-4">🎓</div>;
               <h3 className="text-2xl font-bold text-gray-900 mb-4">State University System</h3>;
@@ -201,7 +193,6 @@ const IndustrySolutionsPage: NextPage = () => {;
               </p>;
               <div className="text-purple-600 font-semibold">- Dr. Jennifer Lee, Director of IT</div>;
             </div>;
-            ;
             <div className="bg-white p-8 rounded-lg shadow-lg">;
               <div className="text-4xl mb-4">🚛</div>;
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Fleet Management Company</h3>;
@@ -236,7 +227,6 @@ const IndustrySolutionsPage: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default IndustrySolutionsPage;

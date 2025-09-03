@@ -2,30 +2,27 @@ import React, { useEffect, useState, useCallback } from 'react';
 export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({;
 export default PerformanceMonitor;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     if(metrics) {;
 
       setPerformanceScore(score)}
   }, [metrics, calculatePerformanceScore]) ;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     // Show monitor after 3 seconds;
-    ;
     return () => clearTimeout(timer) }, []) ;
   if(!isVisible || !showDetails) return null;
-;
   return (;
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
       <div className="bg-white p-4 rounded-lg shadow">;
@@ -41,5 +38,5 @@ import { motion, AnimatePresence  } from 'framer-motion';
         <p className="text-2xl font-bold text-purple-600">{metrics.cpuUsage.toFixed(1)}%</p>;
       </div>;
     </div>;
-  );,
+  );
 }

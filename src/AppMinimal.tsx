@@ -9,10 +9,10 @@ export default function AppMinimal() {return (;
           Professional AppMinimal services to help your business grow.;
         </p>;
       </div>;
-  );";,;,
+  );";,
 }"        <p className="text-gray-300 text-lg">;
           Professional AppMinimal services to help your business grow.;
         </p>;
       </div>;
-  );,
+  );
 }

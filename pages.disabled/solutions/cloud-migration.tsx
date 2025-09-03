@@ -2,58 +2,55 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { ArrowRight, CheckCircle, Star, Zap, Users, Shield, Cloud, Database } from 'lucide-react';
 import Link from 'next/link';
-;
 const CloudMigrationPage: NextPage = () => {;
   const benefits = [;
     {;
-      icon: <Cloud className="w-8 h-8" />,;
-      title: 'Seamless Migration',;
-      description: 'Zero-downtime cloud migration with minimal business disruption and maximum efficiency.';,
-},;
+      icon: <Cloud className="w-8 h-8" />,
+      title: 'Seamless Migration',
+      description: 'Zero-downtime cloud migration with minimal business disruption and maximum efficiency.';
+},
     {;
-      icon: <Database className="w-8 h-8" />,;
-      title: 'Data Security',;
-      description: 'Enterprise-grade security and compliance throughout the migration process.';,
-},;
+      icon: <Database className="w-8 h-8" />,
+      title: 'Data Security',
+      description: 'Enterprise-grade security and compliance throughout the migration process.';
+},
     {;
-      icon: <Zap className="w-8 h-8" />,;
-      title: 'Cost Optimization',;
-      description: 'Reduce infrastructure costs by up to 40% with optimized cloud architecture.';,
-},;
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Cost Optimization',
+      description: 'Reduce infrastructure costs by up to 40% with optimized cloud architecture.';
+},
     {;
-      icon: <Shield className="w-8 h-8" />,;
-      title: 'Scalability',;
-      description: 'Future-proof your infrastructure with auto-scaling and flexible resources.';,
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Scalability',
+      description: 'Future-proof your infrastructure with auto-scaling and flexible resources.';
 }
   ];
-;
   const services = [;
     {;
-      title: 'Cloud Assessment & Planning',;
-      description: 'Comprehensive analysis and strategic planning for your cloud migration',;
-      price: 'From $5,000',;
-      features: ['Infrastructure assessment', 'Migration strategy', 'Cost analysis', 'Risk evaluation'];,
-},;
+      title: 'Cloud Assessment & Planning',
+      description: 'Comprehensive analysis and strategic planning for your cloud migration',
+      price: 'From $5,000',
+      features: ['Infrastructure assessment', 'Migration strategy', 'Cost analysis', 'Risk evaluation'];
+},
     {;
-      title: 'Application Migration',;
-      description: 'Seamless migration of applications to cloud platforms',;
-      price: 'From $15,000',;
-      features: ['Application analysis', 'Migration execution', 'Testing & validation', 'Performance optimization'];,
-},;
+      title: 'Application Migration',
+      description: 'Seamless migration of applications to cloud platforms',
+      price: 'From $15,000',
+      features: ['Application analysis', 'Migration execution', 'Testing & validation', 'Performance optimization'];
+},
     {;
-      title: 'Data Migration',;
-      description: 'Secure and efficient data migration to cloud storage',;
-      price: 'From $10,000',;
-      features: ['Data mapping', 'Migration planning', 'Data transfer', 'Integrity verification'];,
-},;
+      title: 'Data Migration',
+      description: 'Secure and efficient data migration to cloud storage',
+      price: 'From $10,000',
+      features: ['Data mapping', 'Migration planning', 'Data transfer', 'Integrity verification'];
+},
     {;
-      title: 'Cloud Optimization',;
-      description: 'Post-migration optimization for performance and cost',;
-      price: 'From $8,000',;
-      features: ['Performance tuning', 'Cost optimization', 'Security hardening', 'Monitoring setup'];,
+      title: 'Cloud Optimization',
+      description: 'Post-migration optimization for performance and cost',
+      price: 'From $8,000',
+      features: ['Performance tuning', 'Cost optimization', 'Security hardening', 'Monitoring setup'];
 }
   ];
-;
   return (;
     <MainLayout;
       title="Cloud Migration Solutions - Zion Tech Group";
@@ -91,7 +88,6 @@ const CloudMigrationPage: NextPage = () => {;
               We provide comprehensive cloud migration services with proven methodologies and expert support.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
               <div key={index} className="text-center group">;
@@ -115,7 +111,6 @@ const CloudMigrationPage: NextPage = () => {;
               End-to-end cloud migration services designed to minimize risk and maximize value.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 gap-8">;
             {services.map((service, index) => (;
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">;
@@ -154,7 +149,6 @@ const CloudMigrationPage: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default CloudMigrationPage;

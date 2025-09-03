@@ -5,15 +5,15 @@ export default function CustomerExperienceAI() {;
       subtitle="Unify NPS, chat, tickets, and product usage into actionable insights";
       price="from $8k";
       bullets={[;
-        'Multimodal sentiment across chat, calls, reviews, and tickets',;
-        'Journey analytics: drop-off detection and friction mapping',;
-        'Auto-generated help center content and chatbot fine-tuning',;
+        'Multimodal sentiment across chat, calls, reviews, and tickets',
+        'Journey analytics: drop-off detection and friction mapping',
+        'Auto-generated help center content and chatbot fine-tuning',
         'ROI models that tie experience improvements to revenue';
       ]}
     />;
-  );,
+  );
 }
-;
+
 function Article({ title, subtitle, price, bullets }: { title: string; subtitle: string; price: string; bullets: string[] }) {;
   return (;
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, maxWidth: 920, margin: '0 auto' }}>;
@@ -27,14 +27,13 @@ function Article({ title, subtitle, price, bullets }: { title: string; subtitle:
       </ul>;
       <ContactFooter />;
     </main>;
-  );,
+  );
 }
-;
+
 function ContactFooter() {;
   return (;
     <p>;
       Mobile: +1 302 464 0950 · Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Site: <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>;
     </p>;
-  );,
+  );
 }
-;

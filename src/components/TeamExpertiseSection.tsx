@@ -1,22 +1,20 @@
 import {  import { motion  } from 'framer-motion';
-;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
 function TeamExpertiseSection () {];
-;
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <div className="max - w-7xl mx - auto px-6">;
         <motion.div;
           className="text-center mb-16"          initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -31,22 +29,21 @@ function TeamExpertiseSection () {];
 
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.1;,
+  { duration: 0.6,
+  delay: 0.1;
 }}";
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">;
           {stats.map ( (stat, index) => {;
-            ;
             return (";
               <div key = {stat.label} className="text-center">";
                 <div className="flex justify-center mb-4">";
@@ -87,19 +84,19 @@ function TeamExpertiseSection () {];
         <motion.div;
           className="text-center mb-12"          initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.3;,
+  { duration: 0.6,
+  delay: 0.3;
 }}
         >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
@@ -122,7 +119,6 @@ function TeamExpertiseSection () {];
         </motion.div>;
       </div>;
     </section>;) };
-;
 export default TeamExpertiseSection;";
             <span className="text-2xl">→</span>;
           </div>;

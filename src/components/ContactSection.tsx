@@ -1,19 +1,19 @@
 
   const contactInfo = [{;
-      icon: Phone,;
-      title: "Phone",;
-      value: "+1 302 464 0950",;
-      link: "tel:+13024640950";,
-},;
+      icon: Phone,
+      title: "Phone",
+      value: "+1 302 464 0950",
+      link: "tel:+13024640950";
+},
     {;
-      icon: Mail,;
-      title: "Email",;
-      value: "kleber@ziontechgroup.com",;
-      link: "mailto:kleber@ziontechgroup.com";,
-},;    {;
-      icon: MapPin,;";
-      title: "Address",;";
-      value: "364 E Main St STE 1008 Middletown DE 19709",;";
+      icon: Mail,
+      title: "Email",
+      value: "kleber@ziontechgroup.com",
+      link: "mailto:kleber@ziontechgroup.com";
+},    {;
+      icon: MapPin,";
+      title: "Address",";
+      value: "364 E Main St STE 1008 Middletown DE 19709",";
       link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"};  ];
   return (";
     <section className="py-16 px-4 sm:px-6 lg:px-8">";
@@ -21,13 +21,13 @@
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";
@@ -46,18 +46,18 @@
               key={index}
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition = {;
 
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}
               viewport={{ once: true }}";
               className="text-center";
@@ -76,13 +76,13 @@
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";

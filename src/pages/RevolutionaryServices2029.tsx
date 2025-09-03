@@ -45,6 +45,6 @@ const RevolutionaryServices2029 = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default RevolutionaryServices2029;

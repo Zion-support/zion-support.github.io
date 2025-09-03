@@ -1,4 +1,4 @@
-export interface Listing {;
+export interface Listing {
   id: string;
   title: string;
   description: string;
@@ -13,7 +13,6 @@ seller: {;
     name: string;
     rating: number;
     reviews: number;
-;,
 };
   location: string;  createdAt: string;
   updatedAt: string;
@@ -32,7 +31,7 @@ export interface ProductListing extends Listing {;
     cost: number;
     method: string;
     estimatedDays: number}}
-;
+
 export interface ServiceListing extends Listing {;
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
@@ -51,14 +50,14 @@ export interface TalentListing extends Listing {;
   hourlyRate: number;
   portfolio?: string[];
   references?: string[]}
-export interface CartItem {;
+export interface CartItem {
   id: string;
   title: string;
   price: number;
   quantity: number;
   type: 'product' | 'service' | 'talent';
   image?: string}
-export interface WishlistItem {;
+export interface WishlistItem {
   id: string;
   userId: string;
   listingId: string;

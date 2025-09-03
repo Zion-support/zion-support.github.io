@@ -2,33 +2,32 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
 
-  Shield, ;
-  AlertTriangle, ;
-  CheckCircle, ;
-  XCircle, ;
-  Eye, ;
-  Lock, ;
-  Key, ;
-  Server,;
-  Network,;
-  Database,;
-  Globe,;
-  Smartphone,;
-  Monitor,;
-  Activity,;
-  TrendingUp,;
-  TrendingDown,;
-  Clock,;
-  Users,;
-  Zap,;
-  Target,;
-  BarChart3,;
-  Bug,;
-  Mail,;
-  Code';,
+  Shield,
+  AlertTriangle,
+  CheckCircle,
+  XCircle,
+  Eye,
+  Lock,
+  Key,
+  Server,
+  Network,
+  Database,
+  Globe,
+  Smartphone,
+  Monitor,
+  Activity,
+  TrendingUp,
+  TrendingDown,
+  Clock,
+  Users,
+  Zap,
+  Target,
+  BarChart3,
+  Bug,
+  Mail,
+  Code';
 } from 'lucide-react';
-;
-interface SecurityThreat {;
+interface SecurityThreat {
 
   id: string;
   type: 'malware' | 'phishing' | 'ddos' | 'brute-force' | 'sql-injection' | 'xss';
@@ -39,10 +38,9 @@ interface SecurityThreat {;
   status: 'active' | 'blocked' | 'investigating' | 'resolved';
   description: string;
   impact: string;
-;,
 }
-;
-interface SecurityMetric {;
+
+interface SecurityMetric {
 
   id: string;
   name: string;
@@ -52,120 +50,112 @@ interface SecurityMetric {;
   changeType: 'increase' | 'decrease';
   status: 'secure' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
-;,
 }
-;
-interface EnhancedSecurityDashboardProps {;
+
+interface EnhancedSecurityDashboardProps {
 
   // Add your props here;
-
-;
   title?: string;
   subtitle?: string;
   showThreats?: boolean;
   autoRefresh?: boolean;
-;
-const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({;
+const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
 
   title = "Enhanced Security Dashboard",";
-  subtitle = "Real-time threat monitoring and security analytics for comprehensive protection",;
-  showThreats = true,;
-  autoRefresh = true;,
+  subtitle = "Real-time threat monitoring and security analytics for comprehensive protection",
+  showThreats = true,
+  autoRefresh = true;
 }) => {;
 
   const [threats, setThreats] = useState<SecurityThreat[]>([;
     {;
 
-      id: '1',;
-      type: 'ddos',;
-      severity: 'high',;
-      source: '192.168.1.100',;
-      target: 'Web Server',;
-      timestamp: '2024-01-15 14:30:00',;
-      status: 'blocked',;
-      description: 'Distributed Denial of Service attack detected',;
-      impact: 'High traffic volume from multiple sources';,
-},;
+      id: '1',
+      type: 'ddos',
+      severity: 'high',
+      source: '192.168.1.100',
+      target: 'Web Server',
+      timestamp: '2024-01-15 14:30:00',
+      status: 'blocked',
+      description: 'Distributed Denial of Service attack detected',
+      impact: 'High traffic volume from multiple sources';
+},
     {;
 
-      id: '2',;
-      type: 'phishing',;
-      severity: 'medium',;
-      source: 'suspicious-email@domain.com',;
-      target: 'User Accounts',;
-      timestamp: '2024-01-15 13:45:00',;
-      status: 'investigating',;
-      description: 'Phishing attempt targeting user credentials',;
-      impact: 'Potential credential compromise';,
-},;
+      id: '2',
+      type: 'phishing',
+      severity: 'medium',
+      source: 'suspicious-email@domain.com',
+      target: 'User Accounts',
+      timestamp: '2024-01-15 13:45:00',
+      status: 'investigating',
+      description: 'Phishing attempt targeting user credentials',
+      impact: 'Potential credential compromise';
+},
     {;
 
-      id: '3',;
-      type: 'brute-force',;
-      severity: 'low',;
-      source: '203.45.67.89',;
-      target: 'SSH Service',;
-      timestamp: '2024-01-15 12:20:00',;
-      status: 'blocked',;
-      description: 'Multiple failed login attempts detected',;
-      impact: 'Account lockout protection activated';,
+      id: '3',
+      type: 'brute-force',
+      severity: 'low',
+      source: '203.45.67.89',
+      target: 'SSH Service',
+      timestamp: '2024-01-15 12:20:00',
+      status: 'blocked',
+      description: 'Multiple failed login attempts detected',
+      impact: 'Account lockout protection activated';
 }
   ]);
-;
   const [metrics, setMetrics] = useState<SecurityMetric[]>([;
     {;
 
-      id: 'threats-blocked',;
-      name: 'Threats Blocked',;
-      value: 127,;
-      unit: '',;
-      change: -15.2,;
-      changeType: 'decrease',;
-      status: 'secure',;
-      icon: Shield;,
-},;
+      id: 'threats-blocked',
+      name: 'Threats Blocked',
+      value: 127,
+      unit: '',
+      change: -15.2,
+      changeType: 'decrease',
+      status: 'secure',
+      icon: Shield;
+},
     {;
 
-      id: 'response-time',;
-      name: 'Response Time',;
-      value: 45,;
-      unit: 'ms',;
-      change: -8.5,;
-      changeType: 'decrease',;
-      status: 'secure',;
-      icon: Zap;,
-},;
+      id: 'response-time',
+      name: 'Response Time',
+      value: 45,
+      unit: 'ms',
+      change: -8.5,
+      changeType: 'decrease',
+      status: 'secure',
+      icon: Zap;
+},
     {;
 
-      id: 'vulnerabilities',;
-      name: 'Vulnerabilities',;
-      value: 3,;
-      unit: '',;
-      change: -25.0,;
-      changeType: 'decrease',;
-      status: 'warning',;
-      icon: AlertTriangle;,
-},;
+      id: 'vulnerabilities',
+      name: 'Vulnerabilities',
+      value: 3,
+      unit: '',
+      change: -25.0,
+      changeType: 'decrease',
+      status: 'warning',
+      icon: AlertTriangle;
+},
     {;
 
-      id: 'security-score',;
-      name: 'Security Score',;
-      value: 94,;
-      unit: '/100',;
-      change: 2.1,;
-      changeType: 'increase',;
-      status: 'secure',;
-      icon: CheckCircle;,
+      id: 'security-score',
+      name: 'Security Score',
+      value: 94,
+      unit: '/100',
+      change: 2.1,
+      changeType: 'increase',
+      status: 'secure',
+      icon: CheckCircle;
 }
   ]);
-;
   const [selectedThreat, setSelectedThreat] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('24h');
-;
   useEffect(: unknown {;
 
     if (!autoRefresh) return;
-;
     const interval = setInterval(: unknown {;
 
       // Simulate new threats;
@@ -174,26 +164,23 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({;
         const threatTypes = ['malware',phishing',ddos',brute-force'] as const;
         const severityLevels = ['low',medium',high'] as const;
         const targetSystems = ['Web Server',Database',API Gateway'];
-        ;
         const newThreat: SecurityThreat = {;
 
-          id: Date.now().toString(),;
-          type: threatTypes[Math.floor(Math.random() * threatTypes.length)] || 'malware',;
-          severity: severityLevels[Math.floor(Math.random() * severityLevels.length)] || 'medium',;
-          source: `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`,;
-          target: targetSystems[Math.floor(Math.random() * targetSystems.length)] || 'Web Server',;
-          timestamp: new Date().toISOString().replace('T',).substring(0, 19),;
-          status: 'active',;
-          description: 'New security threat detected',;
-          impact: 'Under investigation';,
+          id: Date.now().toString(),
+          type: threatTypes[Math.floor(Math.random() * threatTypes.length)] || 'malware',
+          severity: severityLevels[Math.floor(Math.random() * severityLevels.length)] || 'medium',
+          source: `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`,
+          target: targetSystems[Math.floor(Math.random() * targetSystems.length)] || 'Web Server',
+          timestamp: new Date().toISOString().replace('T',).substring(0, 19),
+          status: 'active',
+          description: 'New security threat detected',
+          impact: 'Under investigation';
 };
-        setThreats(prev => [newThreat, ...prev.slice(0, 9)]);,
+        setThreats(prev => [newThreat, ...prev.slice(0, 9)]);
 }
     }, 10000);
-;
-    return : unknown clearInterval(interval);,
+    return : unknown clearInterval(interval);
 }, [autoRefresh]);
-;
   const getThreatTypeIcon = (type: string) => {;
 
     switch (type) {;
@@ -205,10 +192,9 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({;
       case 'brute-force': return <Key className="w-5 h-5" />;'";
       case 'sql-injection': return <Database className="w-5 h-5" />;'";
       case 'xss': return <Code className="w-5 h-5" />;";
-      default: return <AlertTriangle className="w-5 h-5" />;,
+      default: return <AlertTriangle className="w-5 h-5" />;
 }
   };
-;
   const getSeverityColor = (severity: string) => {;
 
     switch (severity) {;
@@ -217,10 +203,9 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({;
       case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
       case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';
       case 'low': return 'text-blue-600 bg-blue-100 border-blue-200';
-      default: return 'text-gray-600 bg-gray-100 border-gray-200';,
+      default: return 'text-gray-600 bg-gray-100 border-gray-200';
 }
   };
-;
   const getStatusColor = (status: string) => {;
 
     switch (status) {;
@@ -229,10 +214,9 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({;
       case 'blocked': return 'text-green-600 bg-green-100';
       case 'investigating': return 'text-yellow-600 bg-yellow-100';
       case 'resolved': return 'text-blue-600 bg-blue-100';
-      default: return 'text-gray-600 bg-gray-100';,
+      default: return 'text-gray-600 bg-gray-100';
 }
   };
-;
   const getMetricStatusColor = (status: string) => {;
 
     switch (status) {;
@@ -240,33 +224,30 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({;
       case 'secure': return 'text-green-600 bg-green-100';
       case 'warning': return 'text-yellow-600 bg-yellow-100';
       case 'critical': return 'text-red-600 bg-red-100';
-      default: return 'text-gray-600 bg-gray-100';,
+      default: return 'text-gray-600 bg-gray-100';
 }
   };
-;
   const containerVariants = {;
 
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 },
     visible: {;
 
-      opacity: 1,;
+      opacity: 1,
       transition: {;
 
-        staggerChildren: 0.1,;
+        staggerChildren: 0.1,
         delayChildren: 0.2}}};
-;
   const itemVariants = {;
 
-    hidden: { y: 20, opacity: 0 },;
+    hidden: { y: 20, opacity: 0 },
     visible: {;
 
-      y: 0,;
-      opacity: 1,;
+      y: 0,
+      opacity: 1,
       transition: {;
 
         duration: 0.5,";
         ease: "easeOut"}}};
-;
   return (";
     <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">";
       <div className="container mx-auto px-4">;
@@ -294,7 +275,6 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({;
           {metrics.map((metric) => {;
 
             const IconComponent = metric.icon;
-            ;
             return();
               <motion.div;
                 key={metric.id}
@@ -331,14 +311,14 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({;
                   )}`;
                   <span className={`text-sm font-medium ${;
 
-                    metric.changeType === 'increase' ? 'text-green-400' : 'text-red-400'`;,
+                    metric.changeType === 'increase' ? 'text-green-400' : 'text-red-400'`;
 }`}>;
                     {Math.abs(metric.change).toFixed(1)}%;
                   </span>";
                   <span className="text-sm text-gray-500">vs last period</span>;
                 </div>;
               </motion.div>;
-            );,
+            );
 })}
         </motion.div>;
 
@@ -358,7 +338,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({;
 
                   timeRange === range';
                     ? 'bg-blue-600 text-white shadow-lg'';
-                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'`;,
+                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'`;
 }`}
               >;
                 {range}
@@ -491,7 +471,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({;
             </div>;
           </motion.div>;
         )}
-;
+
         {/* Security Summary */}
         <motion.div;
           initial={{ opacity: 0, y: 30 }}
@@ -525,7 +505,6 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({;
         </motion.div>;
       </div>;
     </section>;
-  );,
+  );
 };
-;
 export default EnhancedSecurityDashboard;'"`}

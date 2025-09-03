@@ -4,82 +4,77 @@ import MainLayout from '../../components/layout/MainLayout';
 import { TrendingUp, Users, Zap, Shield, ArrowRight, CheckCircle, Target, BarChart3 } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-;
 const DigitalTransformation: NextPage = () => {;
   const transformationAreas = [;
     {;
-      icon: TrendingUp,;
-      title: 'Business Process Automation',;
-      description: 'Streamline operations and eliminate manual processes with intelligent automation solutions.',;
-      benefits: ['Reduced operational costs', 'Improved efficiency', 'Error reduction', 'Scalable processes'];,
-},;
+      icon: TrendingUp,
+      title: 'Business Process Automation',
+      description: 'Streamline operations and eliminate manual processes with intelligent automation solutions.',
+      benefits: ['Reduced operational costs', 'Improved efficiency', 'Error reduction', 'Scalable processes'];
+},
     {;
-      icon: Users,;
-      title: 'Customer Experience Enhancement',;
-      description: 'Transform customer interactions with digital-first experiences and personalized engagement.',;
-      benefits: ['Higher customer satisfaction', 'Increased retention', 'Better insights', 'Omnichannel experience'];,
-},;
+      icon: Users,
+      title: 'Customer Experience Enhancement',
+      description: 'Transform customer interactions with digital-first experiences and personalized engagement.',
+      benefits: ['Higher customer satisfaction', 'Increased retention', 'Better insights', 'Omnichannel experience'];
+},
     {;
-      icon: Zap,;
-      title: 'Data-Driven Decision Making',;
-      description: 'Leverage advanced analytics and AI to make informed business decisions in real-time.',;
-      benefits: ['Real-time insights', 'Predictive analytics', 'Better forecasting', 'Competitive advantage'];,
-},;
+      icon: Zap,
+      title: 'Data-Driven Decision Making',
+      description: 'Leverage advanced analytics and AI to make informed business decisions in real-time.',
+      benefits: ['Real-time insights', 'Predictive analytics', 'Better forecasting', 'Competitive advantage'];
+},
     {;
-      icon: Shield,;
-      title: 'Cloud Migration & Modernization',;
-      description: 'Modernize your infrastructure with secure, scalable cloud solutions and microservices architecture.',;
-      benefits: ['Improved scalability', 'Enhanced security', 'Cost optimization', 'Future-ready infrastructure'];,
+      icon: Shield,
+      title: 'Cloud Migration & Modernization',
+      description: 'Modernize your infrastructure with secure, scalable cloud solutions and microservices architecture.',
+      benefits: ['Improved scalability', 'Enhanced security', 'Cost optimization', 'Future-ready infrastructure'];
 }
   ];
-;
   const transformationPhases = [;
     {;
-      phase: 'Assessment',;
-      title: 'Current State Analysis',;
-      description: 'Comprehensive evaluation of existing systems, processes, and digital maturity.',;
-      duration: '2-4 weeks',;
-      deliverables: ['Digital maturity assessment', 'Gap analysis', 'ROI projections', 'Strategic roadmap'];,
-},;
+      phase: 'Assessment',
+      title: 'Current State Analysis',
+      description: 'Comprehensive evaluation of existing systems, processes, and digital maturity.',
+      duration: '2-4 weeks',
+      deliverables: ['Digital maturity assessment', 'Gap analysis', 'ROI projections', 'Strategic roadmap'];
+},
     {;
-      phase: 'Strategy',;
-      title: 'Transformation Strategy',;
-      description: 'Develop a comprehensive digital transformation strategy aligned with business objectives.',;
-      duration: '3-6 weeks',;
-      deliverables: ['Digital strategy document', 'Technology roadmap', 'Change management plan', 'Success metrics'];,
-},;
+      phase: 'Strategy',
+      title: 'Transformation Strategy',
+      description: 'Develop a comprehensive digital transformation strategy aligned with business objectives.',
+      duration: '3-6 weeks',
+      deliverables: ['Digital strategy document', 'Technology roadmap', 'Change management plan', 'Success metrics'];
+},
     {;
-      phase: 'Implementation',;
-      title: 'Solution Implementation',;
-      description: 'Execute the transformation plan with agile methodologies and continuous monitoring.',;
-      duration: '3-12 months',;
-      deliverables: ['Deployed solutions', 'Process improvements', 'Staff training', 'Performance monitoring'];,
-},;
+      phase: 'Implementation',
+      title: 'Solution Implementation',
+      description: 'Execute the transformation plan with agile methodologies and continuous monitoring.',
+      duration: '3-12 months',
+      deliverables: ['Deployed solutions', 'Process improvements', 'Staff training', 'Performance monitoring'];
+},
     {;
-      phase: 'Optimization',;
-      title: 'Continuous Improvement',;
-      description: 'Monitor performance, gather feedback, and continuously optimize digital solutions.',;
-      duration: 'Ongoing',;
-      deliverables: ['Performance reports', 'Optimization recommendations', 'Future enhancements', 'Support services'];,
+      phase: 'Optimization',
+      title: 'Continuous Improvement',
+      description: 'Monitor performance, gather feedback, and continuously optimize digital solutions.',
+      duration: 'Ongoing',
+      deliverables: ['Performance reports', 'Optimization recommendations', 'Future enhancements', 'Support services'];
 }
   ];
-;
   const successMetrics = [;
-    { metric: '85%', description: 'Average cost reduction in operational processes', icon: TrendingUp },;
-    { metric: '60%', description: 'Improvement in customer satisfaction scores', icon: Users },;
-    { metric: '3x', description: 'Faster decision-making with real-time analytics', icon: Zap },;
+    { metric: '85%', description: 'Average cost reduction in operational processes', icon: TrendingUp },
+    { metric: '60%', description: 'Improvement in customer satisfaction scores', icon: Users },
+    { metric: '3x', description: 'Faster decision-making with real-time analytics', icon: Zap },
     { metric: '99.9%', description: 'System uptime and reliability improvement', icon: Shield }
   ];
-;
   const technologies = [;
-    { name: 'AI & Machine Learning', description: 'Intelligent automation and predictive analytics' },;
-    { name: 'Cloud Computing', description: 'Scalable infrastructure and platform services' },;
-    { name: 'IoT Integration', description: 'Connected devices and real-time data collection' },;
-    { name: 'Blockchain', description: 'Secure transactions and data integrity' },;
-    { name: 'Advanced Analytics', description: 'Business intelligence and data visualization' },;
+    { name: 'AI & Machine Learning', description: 'Intelligent automation and predictive analytics' },
+    { name: 'Cloud Computing', description: 'Scalable infrastructure and platform services' },
+    { name: 'IoT Integration', description: 'Connected devices and real-time data collection' },
+    { name: 'Blockchain', description: 'Secure transactions and data integrity' },
+    { name: 'Advanced Analytics', description: 'Business intelligence and data visualization' },
     { name: 'API Integration', description: 'Seamless system connectivity and data flow' }
   ];
-;
   return (;
     <MainLayout;
       title="Digital Transformation Solutions - Zion Tech Group";
@@ -102,7 +97,7 @@ const DigitalTransformation: NextPage = () => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >;
-            Transform your business for the digital age with comprehensive solutions that modernize operations, ;
+            Transform your business for the digital age with comprehensive solutions that modernize operations,
             enhance customer experiences, and drive sustainable growth.;
           </motion.p>;
           <motion.div;
@@ -329,7 +324,6 @@ const DigitalTransformation: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default DigitalTransformation;

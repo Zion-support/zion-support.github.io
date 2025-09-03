@@ -10,30 +10,24 @@ const performanceOptimizations = {;
   const img = entry.target;
           img.src = img.dataset.src;
           img.removeAttribute("data-src");
-          imageObserver.unobserve(img);,;,
+          imageObserver.unobserve(img);,
 }
-      });,;,
+      });,
 });
-;
-    images.forEach(img => imageObserver.observe(img));,;,
-},;
-;
+    images.forEach(img => imageObserver.observe(img));,
+},
   // Preload critical resources;
   preloadCriticalResources: () => {;
-  const criticalResources = [;
-  "/fonts/inter.woff2",;
-      "/css/critical.css";
-    ];
-;
+  const criticalResources = [ "/fonts/inter.woff2",
+      "/css/critical.css" ];
     criticalResources.forEach(resource => {;
   const link = document.createElement("link");
       link.rel = "preload";
       link.href = resource;
       link.as = resource.endsWith(".css") ? "style" : "font";
-      document.head.appendChild(link);,;,
-});,;,
-},;
-;
+      document.head.appendChild(link);,
+});,
+},
   // Optimize scroll performance;
   optimizeScroll: () => {;
   let ticking = false;
@@ -41,26 +35,23 @@ const performanceOptimizations = {;
   if (!ticking) {;
   requestAnimationFrame(() => {;
   // Scroll handling logic here;
-          ticking = false;,;,
+          ticking = false;,
 });
-        ticking = true;,;,
+        ticking = true;,
 }
     };
-;
-    window.addEventListener("scroll", handleScroll, { passive: true });,;,
-},;
-;
+    window.addEventListener("scroll", handleScroll, { passive: true });,
+},
   // Initialize all optimizations;
   init: () => {;
   this.lazyLoadImages();
     this.preloadCriticalResources();
-    this.optimizeScroll();,;,
+    this.optimizeScroll();,
 }
 };
-;
 // Auto-initialize when DOM is ready;
 if (document.readyState === "loading") {;
-  document.addEventListener("DOMContentLoaded", performanceOptimizations.init);,;,
+  document.addEventListener("DOMContentLoaded", performanceOptimizations.init);,
 } else {;
-  performanceOptimizations.init();,;,
+  performanceOptimizations.init();,
 }

@@ -20,41 +20,40 @@ function fixMalformedImports(content) {;
   content = content.replace(/";\s*"type/g, "";\n\ntype");
   // Fix malformed import statements with missing quotes;
   content = content.replace(/import\s+{\s*;\s*/g, "import {\n  ");
-  return content;,;,
+  return content;,
 }
-;
+
 // Function to fix specific file issues;
 function fixSpecificFileIssues(filePath, content) {;
   // Fix react-router-dom imports in Next.js files;
   if (content.includes("react-router-dom")) {;
   content = content.replace(;
-      /import\s+{\s*Link\s*}\s+from\s+"react-router-dom";/g,;
+      /import\s+{\s*Link\s*}\s+from\s+"react-router-dom";/g,
       "import Link from "next/link";";
     );
     content = content.replace(;
-      /import\s+{\s*useLocation\s*}\s+from\s+"react-router-dom";/g,;
+      /import\s+{\s*useLocation\s*}\s+from\s+"react-router-dom";/g,
       "import { useRouter  } from "next/router";";
-    );,;,
+    );,
 }
-;
-  return content;,;,
+
+  return content;,
 }
-;
+
 // List of files to fix;
-const filesToFix = [;
-  "components/AccessibilityEnhancer.tsx",;
-  "components/PerformanceOptimizer.tsx",;
-  "components/SEOEnhancer.tsx",;
-  "components/layout/Footer.tsx",;
-  `components/layout/Header.tsx`,;
+const filesToFix = [ "components/AccessibilityEnhancer.tsx",
+  "components/PerformanceOptimizer.tsx",
+  "components/SEOEnhancer.tsx",
+  "components/layout/Footer.tsx",
+  `components/layout/Header.tsx`,
 ];
 function fixFile(filePath) {;
   try {;
   if (!fs.existsSync(filePath)) {;
   console.log(`File not found: ${filePath}`);
-      return;,;,
+      return;,
 }
-;
+
     let content = fs.readFileSync(filePath, `utf8`);
     const originalContent = content;
     // Apply general fixes;
@@ -62,15 +61,15 @@ function fixFile(filePath) {;
     content = fixSpecificFileIssues(filePath, content);
     if (content !== originalContent) {;
   fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);,;,
+      console.log(`Fixed: ${filePath}`);,
 } else {;
-  console.log(`No fixes needed: ${filePath}`);,;,
+  console.log(`No fixes needed: ${filePath}`);,
 }
   } catch (error) {;
-  console.error(`Error fixing ${filePath }:`, error.message);,;,
+  console.error(`Error fixing ${filePath }:`, error.message);,
 }
 }
-;
+
 // Fix all files;
 console.log(`Starting comprehensive syntax error fixes...`);
 filesToFix.forEach(fixFile);
@@ -83,7 +82,7 @@ if (fs.existsSync(componentsDir)) {;
   const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
       if (stat.isDirectory()) {;
-  walkDir(filePath);,;,
+  walkDir(filePath);,
 } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {;
   try {;
   const content = fs.readFileSync(filePath, "utf8");
@@ -95,16 +94,16 @@ if (fs.existsSync(componentsDir)) {;
   console.log(;
               `Found additional file with syntax errors: ${filePath}`;
             );
-            fixFile(filePath);,;,
+            fixFile(filePath);,
 }
         } catch (error) {;
-  // Skip files that can`t be read;,;,
+  // Skip files that can`t be read;,
 }
       }
-    });,;,
+    });,
 }
-;
-  walkDir(componentsDir);,;,
+
+  walkDir(componentsDir);,
 }
-;
+
 console.log(`Comprehensive syntax error fixes completed!")}}

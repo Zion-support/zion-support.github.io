@@ -2,107 +2,103 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Accessibility, Eye, Volume2, MousePointer, Keyboard, Monitor, CheckCircle } from 'lucide-react';
-;
 const AccessibilityPage: NextPage = () => {;
   const accessibilityFeatures = [;
     {;
-      icon: Eye,;
-      title: 'Visual Accessibility',;
-      description: 'Features to support users with visual impairments',;
+      icon: Eye,
+      title: 'Visual Accessibility',
+      description: 'Features to support users with visual impairments',
       features: [;
-        'High contrast mode for better visibility',;
-        'Text size adjustment options',;
-        'Screen reader compatibility',;
-        'Alternative text for all images',;
-        'Color-blind friendly color schemes',;
+        'High contrast mode for better visibility',
+        'Text size adjustment options',
+        'Screen reader compatibility',
+        'Alternative text for all images',
+        'Color-blind friendly color schemes',
         'Focus indicators for keyboard navigation';
-      ];,
-},;
+      ];
+},
     {;
-      icon: Volume2,;
-      title: 'Audio Accessibility',;
-      description: 'Support for users with hearing impairments',;
+      icon: Volume2,
+      title: 'Audio Accessibility',
+      description: 'Support for users with hearing impairments',
       features: [;
-        'Closed captions for video content',;
-        'Transcripts for audio content',;
-        'Visual alerts for important notifications',;
-        'Sign language interpretation available',;
-        'Audio descriptions for visual content',;
+        'Closed captions for video content',
+        'Transcripts for audio content',
+        'Visual alerts for important notifications',
+        'Sign language interpretation available',
+        'Audio descriptions for visual content',
         'Volume control options';
-      ];,
-},;
+      ];
+},
     {;
-      icon: Keyboard,;
-      title: 'Motor Accessibility',;
-      description: 'Support for users with motor impairments',;
+      icon: Keyboard,
+      title: 'Motor Accessibility',
+      description: 'Support for users with motor impairments',
       features: [;
-        'Full keyboard navigation support',;
-        'Large click targets for easier interaction',;
-        'Voice control compatibility',;
-        'Customizable keyboard shortcuts',;
-        'Switch navigation support',;
+        'Full keyboard navigation support',
+        'Large click targets for easier interaction',
+        'Voice control compatibility',
+        'Customizable keyboard shortcuts',
+        'Switch navigation support',
         'Touch-friendly interface design';
-      ];,
-},;
+      ];
+},
     {;
-      icon: Monitor,;
-      title: 'Cognitive Accessibility',;
-      description: 'Features to support users with cognitive differences',;
+      icon: Monitor,
+      title: 'Cognitive Accessibility',
+      description: 'Features to support users with cognitive differences',
       features: [;
-        'Clear and simple language',;
-        'Consistent navigation patterns',;
-        'Progress indicators for multi-step processes',;
-        'Error prevention and clear error messages',;
-        'Help and support documentation',;
+        'Clear and simple language',
+        'Consistent navigation patterns',
+        'Progress indicators for multi-step processes',
+        'Error prevention and clear error messages',
+        'Help and support documentation',
         'Customizable interface complexity';
-      ];,
+      ];
 }
   ];
-;
   const standards = [;
     {;
-      name: 'WCAG 2.1 AA',;
-      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',;
-      status: 'Compliant',;
-      details: 'Our website meets or exceeds WCAG 2.1 AA standards for web accessibility.';,
-},;
+      name: 'WCAG 2.1 AA',
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
+      status: 'Compliant',
+      details: 'Our website meets or exceeds WCAG 2.1 AA standards for web accessibility.';
+},
     {;
-      name: 'Section 508',;
-      description: 'U.S. federal accessibility standards for electronic and information technology',;
-      status: 'Compliant',;
-      details: 'We comply with Section 508 requirements for federal accessibility standards.';,
-},;
+      name: 'Section 508',
+      description: 'U.S. federal accessibility standards for electronic and information technology',
+      status: 'Compliant',
+      details: 'We comply with Section 508 requirements for federal accessibility standards.';
+},
     {;
-      name: 'ADA Compliance',;
-      description: 'Americans with Disabilities Act compliance for digital accessibility',;
-      status: 'Compliant',;
-      details: 'Our digital services are designed to be accessible under ADA guidelines.';,
+      name: 'ADA Compliance',
+      description: 'Americans with Disabilities Act compliance for digital accessibility',
+      status: 'Compliant',
+      details: 'Our digital services are designed to be accessible under ADA guidelines.';
 }
   ];
-;
   const assistiveTechnologies = [;
     {;
-      name: 'Screen Readers',;
-      description: 'Compatible with popular screen reading software',;
-      technologies: ['NVDA', 'JAWS', 'VoiceOver', 'TalkBack'];,
-},;
+      name: 'Screen Readers',
+      description: 'Compatible with popular screen reading software',
+      technologies: ['NVDA', 'JAWS', 'VoiceOver', 'TalkBack'];
+},
     {;
-      name: 'Voice Control',;
-      description: 'Support for voice control software',;
-      technologies: ['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Voice Access (Android)'];,
-},;
+      name: 'Voice Control',
+      description: 'Support for voice control software',
+      technologies: ['Dragon NaturallySpeaking', 'Voice Control (macOS)', 'Voice Access (Android)'];
+},
     {;
-      name: 'Switch Navigation',;
-      description: 'Compatible with switch navigation devices',;
-      technologies: ['Switch Control (iOS)', 'Switch Access (Android)', 'External switch devices'];,
-},;
+      name: 'Switch Navigation',
+      description: 'Compatible with switch navigation devices',
+      technologies: ['Switch Control (iOS)', 'Switch Access (Android)', 'External switch devices'];
+},
     {;
-      name: 'Magnification',;
-      description: 'Works with screen magnification software',;
-      technologies: ['ZoomText', 'MAGic', 'Built-in browser zoom', 'OS magnification tools'];,
+      name: 'Magnification',
+      description: 'Works with screen magnification software',
+      technologies: ['ZoomText', 'MAGic', 'Built-in browser zoom', 'OS magnification tools'];
 }
   ];
-;
   return (;
     <MainLayout;
       title="Accessibility - Zion Tech Group";
@@ -116,7 +112,7 @@ const AccessibilityPage: NextPage = () => {;
               <Accessibility className="w-16 h-16 mx-auto mb-6 text-blue-400" />;
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Digital Accessibility</h1>;
               <p className="text-xl text-gray-200 mb-8">;
-                We are committed to making our digital services accessible to everyone, ;
+                We are committed to making our digital services accessible to everyone,
                 regardless of ability or the technology they use.;
               </p>;
             </div>;
@@ -249,7 +245,6 @@ const AccessibilityPage: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default AccessibilityPage;

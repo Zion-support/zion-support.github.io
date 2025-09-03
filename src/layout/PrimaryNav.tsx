@@ -6,19 +6,15 @@
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
 // Theme toggle component;
-;
   const [isDark, setIsDark] = useState<typeof false>(false);
-;
   const toggleTheme = (...args: unknown[]): unknown => {;    setIsDark(!isDark);
-    // Add theme switching logic here;,
+    // Add theme switching logic here;
 };
-;
   return ();
     <>;
       <header;
         className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md";
         role="navigation";
-        ;
         data-testid="header";
 ";
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">;
@@ -34,15 +30,14 @@
 
   (sugg) => {;
 
-                  // // // // // console.log('PrimaryNav search suggestion selected:',;
-  ;
+                  // // // // // console.log('PrimaryNav search suggestion selected:',
   sugg);
                   // Handle different suggestion types with proper navigation;
                   if(sugg.id) {;
 
                     // Product listings with IDs go to product detail page`;
                     router.push(`/marketplace/listing/${sugg.id;
-'`;,
+'`;
 }`)} else if(sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {;
 
                     // Documentation suggestions navigate directly to their path';
@@ -54,15 +49,14 @@
                     // Default: search results page with slug;`;
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
                   setQuery('');
-;
                   // Track analytics event';
                   if(typeof window !== 'null' && window.gtag) {;
 
                     window.gtag('event',search_suggestion_click', {;
 
-                      search_term: sugg.text,;
-                      suggestion_type: sugg.type,;
-                      suggestion_id: sugg.id || sugg.slug;,
+                      search_term: sugg.text,
+                      suggestion_type: sugg.type,
+                      suggestion_id: sugg.id || sugg.slug;
 })}
                 }}
                 searchSuggestions = {suggestions}
@@ -79,7 +73,7 @@
                     className="relative p-1";
                     aria-label= {;
 
-  t('nav.cart',Cart');,
+  t('nav.cart',Cart');
 }
                   >";
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary"  />;
@@ -125,7 +119,6 @@
               {isLoggedIn && <UserMenu  />}
             </div>;
           </div>;
-          ;
           {/* Mobile menu button */}
           <button;
             onClick={() => setIsOpen(!isOpen)}";
@@ -139,18 +132,18 @@
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}
               animate = {;
 
-  { opacity: 1,;
-  height: 'auto';,
+  { opacity: 1,
+  height: 'auto';
 }}
               exit = {;
 
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}
               transition={{ duration: 0.3 }}";
               className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">";
@@ -174,7 +167,7 @@
                     </div>;
                   </div>;
                 ))}
-;
+
                 <div className="pt-4 border-t border-white/10 space-y-2">;
                   <Link                    to="/solutions";
                     className="block text-gray-300 hover:text-white transition-colors duration-200";

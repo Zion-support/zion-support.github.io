@@ -1,41 +1,35 @@
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
-;
 export default function Page() {;
-,;
-  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
-  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
+  { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },
+  { id: 'it-consulting', label: 'IT Consulting', icon: Gift },
   { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
 ];
-;
-  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
-  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
+  { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },
+  { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },
   { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
       // Reset form after successful submission;
       setTimeout(() => {;
         setFormData({;
 
-          email: '',;
-          firstName: '',;
-          interests[],;
-          frequency: 'monthly';,
+          email: '',
+          firstName: '',
+          interests[],
+          frequency: 'monthly';
 });
-      // // // // // // // // console.error('Newsletter subscription error:', error);,
+      // // // // // // // // console.error('Newsletter subscription error:', error);
 }
         setStatus('idle')}, 3000)} catch(error) {;
 
       setStatus('error');      // console.error('Newsletter subscription error:', error)}
   };
-;
       setErrors(prev => ({ ...prev, interests: null }) ) }
   };
-;
     setFormData(prev => ({ ...prev, [field]: value }) ) ;
-;
     // Clear error when user starts typing;
     if(errors[field]) {;
 
-      setErrors(prev => ({ ...prev, [field]: null }));,
+      setErrors(prev => ({ ...prev, [field]: null }));
 }
   };
   if(status = == 'success') {;
@@ -44,13 +38,13 @@ export default function Page() {;
       <motion.div;
         initial = {;
 
-  { opacity: 0,;
-  scale: 0.95;,
+  { opacity: 0,
+  scale: 0.95;
 }}
         animate = {;
 
-  { opacity: 1,;
-  scale: 1;,
+  { opacity: 1,
+  scale: 1;
 }}
         className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl p-8 text-center border border-green-200 dark:border-green-800";
 ";
@@ -72,8 +66,8 @@ export default function Page() {;
           animate={{ scale: 1 }}
           transition = {;
 ";
-  { delay: 0.1, type: "spring",;
-  bounce: 0.4;,
+  { delay: 0.1, type: "spring",
+  bounce: 0.4;
 }}";
           className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4";
 ";
@@ -82,13 +76,13 @@ export default function Page() {;
         <motion.h2;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ delay: 0.2 }}";
           className="text-3xl font-bold text-slate-900 dark:text-white mb-4";
@@ -99,13 +93,13 @@ export default function Page() {;
         <motion.p;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ delay: 0.3 }}";
           className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto";
@@ -116,13 +110,13 @@ export default function Page() {;
       <motion.form;
         initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
         animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
         transition={{ delay: 0.4 }}
         onSubmit={handleSubmit}";
@@ -140,12 +134,12 @@ export default function Page() {;
               value={formData.firstName}
               onChange = {;
 
-  (e) => handleInputChange('firstName',;
-  e.target.value);,
+  (e) => handleInputChange('firstName',
+  e.target.value);
 }
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${errors.firstName';
                   ? 'border-red-300 bg-red-50 dark:bg-red-900/20'';
-                  : 'border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800'`;,
+                  : 'border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800'`;
 }`}";
               placeholder="Enter your first name";
             />;
@@ -165,12 +159,12 @@ export default function Page() {;
               value={formData.email}
               onChange = {;
 
-  (e) => handleInputChange('email',;
-  e.target.value);,
+  (e) => handleInputChange('email',
+  e.target.value);
 }`;
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${errors.email';
                   ? 'border-red-300 bg-red-50 dark:bg-red-900/20'';
-                  : 'border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800'`;,
+                  : 'border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800'`;
 }`}";
               placeholder="Enter your email address";
             />;
@@ -188,14 +182,13 @@ export default function Page() {;
           </label>;";
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
             {interests.map((interest) => {;
-;
               return ()                <motion.button;
                   key = {interest.id}";
                   type="button";
                   onClick={() => handleInterestToggle(interest.id)}`;
                   className={`p-3 rounded-lg border-2 transition-all duration-200 flex items-center gap-2 ${isSelected';
                       ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300'';
-                      : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'`;,
+                      : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'`;
 }`}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }};
@@ -221,9 +214,9 @@ export default function Page() {;
                 key={freq.value}`;
                 className={`relative flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-200 ${formData.frequency === freq.value';
                     ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20'';
-                    : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'`;,
+                    : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'`;
 }`}
-;
+
                 <input";
                   type="radio";
                   name="frequency";
@@ -231,20 +224,20 @@ export default function Page() {;
                   checked={formData.frequency === freq.value}
                   onChange = {;
 
-  (e) => handleInputChange('frequency',;
-  e.target.value);,
+  (e) => handleInputChange('frequency',
+  e.target.value);
 }";
                   className="sr-only";
                 />`;
                 <span className={`text-sm font-medium ${formData.frequency === freq.value';
                     ? 'text-blue-700 dark:text-blue-300'';
-                    : 'text-slate-700 dark:text-slate-300'`;,
+                    : 'text-slate-700 dark:text-slate-300'`;
 }`}>;
                   {freq.label}
                 </span>`;
                 <span className={`text-xs mt-1 ${formData.frequency === freq.value';
                     ? 'text-blue-600 dark:text-blue-400'';
-                    : 'text-slate-500 dark:text-slate-400'`;,
+                    : 'text-slate-500 dark:text-slate-400'`;
 }`}>;
                   {freq.description}
                 </span>;
@@ -258,11 +251,11 @@ export default function Page() {;
           disabled={status === 'loading'}`;
 className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all duration-200 flex items-center justify-center gap-2 ${status === 'loading'';
               ? 'bg-slate-400 cursor-not-allowed'';
-              : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'`;,
+              : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 shadow-lg hover:shadow-xl'`;
 }`}
           whileHover={status !== 'loading' ? { scale: 1.02 } : { /* empty */ }}
           whileTap={status !== 'loading' ? { scale: 0.98 } : { /* empty */ }}
-;
+
           {status === 'loading' ? (;
             <>";
               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>;
@@ -279,20 +272,20 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  y: 10;,
+  { opacity: 0,
+  y: 10;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
             className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg";
 ";
             <p className="text-red-700 dark:text-red-300 text-sm flex items-center gap-2">";
               <AlertCircle className="h-4 w-4"  />              Something went wrong.Please try again later.</p>;
           </motion.div>;) }
-;
+
         {/* Privacy Notice */}";
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">;
           By subscribing, you agree to receive marketing emails from Zion Tech Group.;

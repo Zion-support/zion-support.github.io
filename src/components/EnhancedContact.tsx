@@ -1,66 +1,60 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
-;
-interface ContactFormData {;
+interface ContactFormData {
   name: string;
   email: string;
   phone: string;
   comp: string;
   service: string;
-  message: string;,
+  message: string;
 }
-;
-interface ContactFormErrors {;
+
+interface ContactFormErrors {
   [key: string]: string}
-;
+
 export function EnhancedContact(...args[]):  {;
 
   const [formData, setFormData] = useState<any>({;
 
-    name: '',;
-    email: '',;
-    phone: '',;
-    comp: '',;
-    service: 'general',;
-    message: '';,
+    name: '',
+    email: '',
+    phone: '',
+    comp: '',
+    service: 'general',
+    message: '';
 }) ;
-;
   const [errors, setErrors] = useState<any> ({}) ;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-;
-    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
-    { value: 'cybersecurity', label: 'Cybersecurity' },;
-    { value: 'digital-transformation', label: 'Digital Transformation' },;
-    { value: 'consulting', label: 'IT Consulting' },;
-    { value: 'quantum-computing', label: 'Quantum Computing' },;
+    { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },
+    { value: 'cybersecurity', label: 'Cybersecurity' },
+    { value: 'digital-transformation', label: 'Digital Transformation' },
+    { value: 'consulting', label: 'IT Consulting' },
+    { value: 'quantum-computing', label: 'Quantum Computing' },
     { value: 'green-it', label: 'Green IT Solutions' };
   ];
-;
     const newErrors: ContactFormErrors = {};      // console.error('Error submitting form:', error)} finally {;
 
       setIsSubmitting(false)}
   };
-;
     {;
-      icon: Clock,;
-      title: 'Business Hours',;
-      value: 'Mon-Fri: 9AM-6PM EST',;
+      icon: Clock,
+      title: 'Business Hours',
+      value: 'Mon-Fri: 9AM-6PM EST',
       description: 'Available during these hours'};  ];
-;
   if(isSubmitted) {;
 
     return ();
       <motion.div;
         initial = {;
 
-  { opacity: 0,;
-  scale: 0.8;,
+  { opacity: 0,
+  scale: 0.8;
 }}
         animate = {;
 
-  { opacity: 1,;
-  scale: 1;,
+  { opacity: 1,
+  scale: 1;
 }}
         className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20">";
         <div className="max-w-md mx-auto text-center">;
@@ -68,8 +62,8 @@ export function EnhancedContact(...args[]):  {;
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition = {;
-  { delay: 0.2,;
-  type: "spring";,
+  { delay: 0.2,
+  type: "spring";
 }}";
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">";
             <CheckCircle className="w-10 h-10 text-white"  />          </motion.div>;
@@ -77,13 +71,13 @@ export function EnhancedContact(...args[]):  {;
           <motion.h2;
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ delay: 0.3 }}";
             className="text-3xl font-bold text-white mb-4">;
@@ -93,13 +87,13 @@ export function EnhancedContact(...args[]):  {;
           <motion.p;
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ delay: 0.4 }}";
             className="text-zion-slate-light mb-8">;
@@ -108,13 +102,13 @@ export function EnhancedContact(...args[]):  {;
           <motion.button;
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ delay: 0.5 }}
             onClick={() => setIsSubmitted(false)}";
@@ -130,13 +124,13 @@ export function EnhancedContact(...args[]):  {;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
           className="text-center mb-16">";
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
@@ -152,13 +146,13 @@ export function EnhancedContact(...args[]):  {;
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  x: -50;,
+  { opacity: 0,
+  x: -50;
 }}
             animate = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
             transition={{ delay: 0.2 }}
           >";
@@ -170,13 +164,13 @@ export function EnhancedContact(...args[]):  {;
                   key={info.title}
                   initial = {;
 
-  { opacity: 0,;
-  x: -20;,
+  { opacity: 0,
+  x: -20;
 }}
                   animate = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
                   transition={{ delay: 0.3 + index * 0.1 }}";
                   className="flex items-start space-x-4">";
@@ -195,13 +189,13 @@ export function EnhancedContact(...args[]):  {;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.6 }}";
               className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20">";
@@ -231,13 +225,13 @@ export function EnhancedContact(...args[]):  {;
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  x: 50;,
+  { opacity: 0,
+  x: 50;
 }}
             animate = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
             transition={{ delay: 0.3 }}";
             className="bg-zion-blue-light/10 rounded-xl p-8 border border-zion-blue-light/20">";
@@ -255,12 +249,12 @@ export function EnhancedContact(...args[]):  {;
                   value={formData.name}
                   onChange = {;
 
-  (e) => handleInputChange('name',;
-  e.target.value);,
+  (e) => handleInputChange('name',
+  e.target.value);
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${errors.name';
                       ? 'border-red-500 focus:ring-red-500'';
-                      : 'border-zion-slate-light focus:border-zion-cyan'`;,
+                      : 'border-zion-slate-light focus:border-zion-cyan'`;
 } text-white placeholder-zion-slate-light`}";
                   placeholder="Enter your full name";
                 />;
@@ -269,18 +263,18 @@ export function EnhancedContact(...args[]):  {;
                     <motion.p;
                       initial = {;
 
-  { opacity: 0,;
-  y: -10;,
+  { opacity: 0,
+  y: -10;
 }}
                       animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                       exit = {;
 
-  { opacity: 0,;
-  y: -10;,
+  { opacity: 0,
+  y: -10;
 }}";
                       className="text-red-400 text-sm mt-1 flex items-center">";
                       <AlertCircle className="w-4 h-4 mr-1"  />;
@@ -299,12 +293,12 @@ export function EnhancedContact(...args[]):  {;
                   value={formData.email}
                   onChange = {;
 
-  (e) => handleInputChange('email',;
-  e.target.value);,
+  (e) => handleInputChange('email',
+  e.target.value);
 }`;
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${errors.email';
                       ? 'border-red-500 focus:ring-red-500'';
-                      : 'border-zion-slate-light focus:border-zion-cyan'`;,
+                      : 'border-zion-slate-light focus:border-zion-cyan'`;
 } text-white placeholder-zion-slate-light`}";
                   placeholder="Enter your email address";
                 />;
@@ -313,18 +307,18 @@ export function EnhancedContact(...args[]):  {;
                     <motion.p;
                       initial = {;
 
-  { opacity: 0,;
-  y: -10;,
+  { opacity: 0,
+  y: -10;
 }}
                       animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                       exit = {;
 
-  { opacity: 0,;
-  y: -10;,
+  { opacity: 0,
+  y: -10;
 }}";
                       className="text-red-400 text-sm mt-1 flex items-center">";
                       <AlertCircle className="w-4 h-4 mr-1"  />;
@@ -344,8 +338,8 @@ export function EnhancedContact(...args[]):  {;
                     value={formData.phone}
                     onChange = {;
 
-  (e) => handleInputChange('phone',;
-  e.target.value);,
+  (e) => handleInputChange('phone',
+  e.target.value);
 }";
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light";
                     placeholder="Enter your phone number";
@@ -360,8 +354,8 @@ export function EnhancedContact(...args[]):  {;
                     value={formData.company}
                     onChange = {;
 
-  (e) => handleInputChange('company',;
-  e.target.value);,
+  (e) => handleInputChange('company',
+  e.target.value);
 }";
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light";
                     placeholder="Enter your comp name";
@@ -379,8 +373,8 @@ export function EnhancedContact(...args[]):  {;
                   value={formData.service}
                   onChange = {;
 
-  (e) => handleInputChange('service',;
-  e.target.value);,
+  (e) => handleInputChange('service',
+  e.target.value);
 }";
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white">;
                   {services.map(service  => (<option key={service.value} value={service.value}>;
@@ -400,12 +394,12 @@ export function EnhancedContact(...args[]):  {;
                   value={formData.message}
                   onChange = {;
 
-  (e) => handleInputChange('message',;
-  e.target.value);,
+  (e) => handleInputChange('message',
+  e.target.value);
 }`;
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${errors.message';
                       ? 'border-red-500 focus:ring-red-500'';
-                      : 'border-zion-slate-light focus:border-zion-cyan'`;,
+                      : 'border-zion-slate-light focus:border-zion-cyan'`;
 } text-white placeholder-zion-slate-light`}";
                   placeholder="Tell us about your project or inquiry...";
                 />;
@@ -414,18 +408,18 @@ export function EnhancedContact(...args[]):  {;
                     <motion.p;
                       initial = {;
 
-  { opacity: 0,;
-  y: -10;,
+  { opacity: 0,
+  y: -10;
 }}
                       animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                       exit = {;
 
-  { opacity: 0,;
-  y: -10;,
+  { opacity: 0,
+  y: -10;
 }}";
                       className="text-red-400 text-sm mt-1 flex items-center">";
                       <AlertCircle className="w-4 h-4 mr-1"  />;

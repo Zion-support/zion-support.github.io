@@ -1,123 +1,119 @@
 import React from 'react';
 import { ;
-  Calendar, ;
-  Clock, ;
-  MapPin, ;
-  Users, ;
-  Video, ;
-  ExternalLink, ;
-  ArrowRight,;
-  Star,;
-  Tag,;
-  BookOpen,;
-  Zap,;
-  Lightbulb;,
+  Calendar,
+  Clock,
+  MapPin,
+  Users,
+  Video,
+  ExternalLink,
+  ArrowRight,
+  Star,
+  Tag,
+  BookOpen,
+  Zap,
+  Lightbulb;
 } from 'lucide-react';
-;
 export default function EventsPage() {;
   const upcomingEvents = [;
     {;
-      title: "AI in Business: Future Trends & Implementation Strategies",;
-      type: "Webinar",;
-      date: "December 20, 2025",;
-      time: "2:00 PM - 3:30 PM EST",;
-      location: "Virtual Event",;
-      speaker: "Dr. Sarah Chen, CTO",;
-      description: "Join us for an insightful webinar exploring the latest AI trends and practical implementation strategies for businesses of all sizes.",;
-      attendees: "150+ registered",;
-      category: "AI & Technology",;
-      registrationUrl: "/events/ai-business-webinar-dec-20",;
-      featured: true;,
-},;
+      title: "AI in Business: Future Trends & Implementation Strategies",
+      type: "Webinar",
+      date: "December 20, 2025",
+      time: "2:00 PM - 3:30 PM EST",
+      location: "Virtual Event",
+      speaker: "Dr. Sarah Chen, CTO",
+      description: "Join us for an insightful webinar exploring the latest AI trends and practical implementation strategies for businesses of all sizes.",
+      attendees: "150+ registered",
+      category: "AI & Technology",
+      registrationUrl: "/events/ai-business-webinar-dec-20",
+      featured: true;
+},
     {;
-      title: "Cloud Cost Optimization Workshop",;
-      type: "Workshop",;
-      date: "December 22, 2025",;
-      time: "1:00 PM - 4:00 PM EST",;
-      location: "Virtual Event",;
-      speaker: "Marcus Rodriguez, COO",;
-      description: "Hands-on workshop to help you optimize your cloud spending and improve resource utilization with practical tools and strategies.",;
-      attendees: "75+ registered",;
-      category: "Cloud & Infrastructure",;
-      registrationUrl: "/events/cloud-cost-optimization-workshop",;
-      featured: true;,
-},;
+      title: "Cloud Cost Optimization Workshop",
+      type: "Workshop",
+      date: "December 22, 2025",
+      time: "1:00 PM - 4:00 PM EST",
+      location: "Virtual Event",
+      speaker: "Marcus Rodriguez, COO",
+      description: "Hands-on workshop to help you optimize your cloud spending and improve resource utilization with practical tools and strategies.",
+      attendees: "75+ registered",
+      category: "Cloud & Infrastructure",
+      registrationUrl: "/events/cloud-cost-optimization-workshop",
+      featured: true;
+},
     {;
-      title: "Cybersecurity Best Practices for 2026",;
-      type: "Webinar",;
-      date: "January 5, 2026",;
-      time: "11:00 AM - 12:30 PM EST",;
-      location: "Virtual Event",;
-      speaker: "James Kim, Cybersecurity Advisor",;
-      description: "Learn about emerging cybersecurity threats and best practices to protect your organization in 2026.",;
-      attendees: "200+ registered",;
-      category: "Cybersecurity",;
-      registrationUrl: "/events/cybersecurity-best-practices-2026";,
-},;
+      title: "Cybersecurity Best Practices for 2026",
+      type: "Webinar",
+      date: "January 5, 2026",
+      time: "11:00 AM - 12:30 PM EST",
+      location: "Virtual Event",
+      speaker: "James Kim, Cybersecurity Advisor",
+      description: "Learn about emerging cybersecurity threats and best practices to protect your organization in 2026.",
+      attendees: "200+ registered",
+      category: "Cybersecurity",
+      registrationUrl: "/events/cybersecurity-best-practices-2026";
+},
     {;
-      title: "Digital Transformation Success Stories",;
-      type: "Panel Discussion",;
-      date: "January 12, 2026",;
-      time: "3:00 PM - 4:30 PM EST",;
-      location: "Virtual Event",;
-      speaker: "Multiple Industry Experts",;
-      description: "Hear from industry leaders about their digital transformation journeys and the lessons learned along the way.",;
-      attendees: "120+ registered",;
-      category: "Digital Transformation",;
-      registrationUrl: "/events/digital-transformation-panel";,
-},;
+      title: "Digital Transformation Success Stories",
+      type: "Panel Discussion",
+      date: "January 12, 2026",
+      time: "3:00 PM - 4:30 PM EST",
+      location: "Virtual Event",
+      speaker: "Multiple Industry Experts",
+      description: "Hear from industry leaders about their digital transformation journeys and the lessons learned along the way.",
+      attendees: "120+ registered",
+      category: "Digital Transformation",
+      registrationUrl: "/events/digital-transformation-panel";
+},
     {;
-      title: "AI Ethics & Responsible Development",;
-      type: "Conference Session",;
-      date: "January 20, 2026",;
-      time: "10:00 AM - 11:30 AM EST",;
-      location: "Tech Innovation Summit, San Francisco",;
-      speaker: "Dr. Emily Watson, AI Ethics Advisor",;
-      description: "Join us at the Tech Innovation Summit to discuss the importance of ethical AI development and responsible technology practices.",;
-      attendees: "300+ expected",;
-      category: "AI Ethics",;
-      registrationUrl: "/events/ai-ethics-conference-sf";,
-},;
+      title: "AI Ethics & Responsible Development",
+      type: "Conference Session",
+      date: "January 20, 2026",
+      time: "10:00 AM - 11:30 AM EST",
+      location: "Tech Innovation Summit, San Francisco",
+      speaker: "Dr. Emily Watson, AI Ethics Advisor",
+      description: "Join us at the Tech Innovation Summit to discuss the importance of ethical AI development and responsible technology practices.",
+      attendees: "300+ expected",
+      category: "AI Ethics",
+      registrationUrl: "/events/ai-ethics-conference-sf";
+},
     {;
-      title: "Quantum Computing Applications Workshop",;
-      type: "Workshop",;
-      date: "January 25, 2026",;
-      time: "2:00 PM - 5:00 PM EST",;
-      location: "Virtual Event",;
-      speaker: "Dr. Sarah Chen, CTO",;
-      description: "Explore practical applications of quantum computing in business and research with hands-on examples and case studies.",;
-      attendees: "50+ registered",;
-      category: "Quantum Computing",;
-      registrationUrl: "/events/quantum-computing-workshop";,
+      title: "Quantum Computing Applications Workshop",
+      type: "Workshop",
+      date: "January 25, 2026",
+      time: "2:00 PM - 5:00 PM EST",
+      location: "Virtual Event",
+      speaker: "Dr. Sarah Chen, CTO",
+      description: "Explore practical applications of quantum computing in business and research with hands-on examples and case studies.",
+      attendees: "50+ registered",
+      category: "Quantum Computing",
+      registrationUrl: "/events/quantum-computing-workshop";
 }
   ];
-;
   const pastEvents = [;
     {;
-      title: "AI-Powered Customer Experience Summit",;
-      date: "November 15, 2025",;
-      attendees: "250+",;
-      highlights: ["Keynote by Kleber Santos", "Interactive AI demos", "Networking sessions"],;
-      recordingUrl: "/events/recordings/ai-customer-experience-summit";,
-},;
+      title: "AI-Powered Customer Experience Summit",
+      date: "November 15, 2025",
+      attendees: "250+",
+      highlights: ["Keynote by Kleber Santos", "Interactive AI demos", "Networking sessions"],
+      recordingUrl: "/events/recordings/ai-customer-experience-summit";
+},
     {;
-      title: "Cloud Migration Strategies Webinar",;
-      date: "November 8, 2025",;
-      attendees: "180+",;
-      highlights: ["Migration best practices", "Cost analysis tools", "Q&A session"],;
-      recordingUrl: "/events/recordings/cloud-migration-webinar";,
-},;
+      title: "Cloud Migration Strategies Webinar",
+      date: "November 8, 2025",
+      attendees: "180+",
+      highlights: ["Migration best practices", "Cost analysis tools", "Q&A session"],
+      recordingUrl: "/events/recordings/cloud-migration-webinar";
+},
     {;
-      title: "Cybersecurity Threat Intelligence Workshop",;
-      date: "October 30, 2025",;
-      attendees: "120+",;
-      highlights: ["Threat landscape analysis", "Defense strategies", "Hands-on exercises"],;
-      recordingUrl: "/events/recordings/cybersecurity-workshop";,
+      title: "Cybersecurity Threat Intelligence Workshop",
+      date: "October 30, 2025",
+      attendees: "120+",
+      highlights: ["Threat landscape analysis", "Defense strategies", "Hands-on exercises"],
+      recordingUrl: "/events/recordings/cybersecurity-workshop";
 }
   ];
-;
   const eventCategories = ["All", "Webinar", "Workshop", "Conference", "Panel Discussion", "AI & Technology", "Cloud & Infrastructure", "Cybersecurity", "Digital Transformation", "AI Ethics", "Quantum Computing"];
-;
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
       {/* Hero Section */}
@@ -162,10 +158,8 @@ export default function EventsPage() {;
                       {event.category}
                     </span>;
                   </div>;
-                  ;
                   <h3 className="text-2xl font-bold text-white mb-3">{event.title}</h3>;
                   <p className="text-zion-slate-light mb-4">{event.description}</p>;
-                  ;
                   <div className="space-y-2 mb-4">;
                     <div className="flex items-center text-sm text-zion-slate-light">;
                       <Calendar className="w-4 h-4 mr-2" />;
@@ -184,7 +178,6 @@ export default function EventsPage() {;
                       {event.speaker}
                     </div>;
                   </div>;
-                  ;
                   <a href={event.registrationUrl} className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 flex items-center justify-center">;
                     <Calendar className="w-4 h-4 mr-2" />;
                     Register Now;
@@ -220,10 +213,8 @@ export default function EventsPage() {;
                       {event.category}
                     </span>;
                   </div>;
-                  ;
                   <h3 className="text-lg font-semibold text-white mb-3">{event.title}</h3>;
                   <p className="text-zion-slate-light text-sm mb-4">{event.description}</p>;
-                  ;
                   <div className="space-y-2 mb-4 text-sm text-zion-slate-light">;
                     <div className="flex items-center">;
                       <Calendar className="w-3 h-3 mr-2" />;
@@ -238,7 +229,6 @@ export default function EventsPage() {;
                       {event.attendees}
                     </div>;
                   </div>;
-                  ;
                   <a href={event.registrationUrl} className="w-full border border-zion-cyan text-zion-cyan text-center py-2 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-sm">;
                     Register;
                   </a>;
@@ -266,7 +256,6 @@ export default function EventsPage() {;
               <div key={index} className="bg-zion-blue-dark rounded-lg border border-zion-purple/30 overflow-hidden hover:border-zion-cyan/50 transition-all duration-300">;
                 <div className="p-6">;
                   <h3 className="text-xl font-semibold text-white mb-3">{event.title}</h3>;
-                  ;
                   <div className="space-y-2 mb-4 text-sm text-zion-slate-light">;
                     <div className="flex items-center">;
                       <Calendar className="w-4 h-4 mr-2" />;
@@ -277,7 +266,6 @@ export default function EventsPage() {;
                       {event.attendees}
                     </div>;
                   </div>;
-                  ;
                   <div className="mb-4">;
                     <h4 className="text-sm font-semibold text-white mb-2">Highlights:</h4>;
                     <ul className="space-y-1">;
@@ -289,7 +277,6 @@ export default function EventsPage() {;
                       ))}
                     </ul>;
                   </div>;
-                  ;
                   <a href={event.recordingUrl} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light text-sm font-medium transition-colors">;
                     <Video className="w-4 h-4 mr-2" />;
                     Watch Recording;
@@ -349,5 +336,5 @@ export default function EventsPage() {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 } ;

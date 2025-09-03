@@ -1,160 +1,155 @@
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
-import { Brain, ;
-  Users, ;
-  Calendar, ;
-  TrendingUp, ;
-  Shield, ;
-  Zap, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Clock,;
-  Target,;
-  BarChart3,;
-  MessageSquare,;
-  FileText,;
-  GitBranch,;
-  AlertTriangle,;
-  Star,;
-  DollarSign,;
-  Globe,;
-  Smartphone,;
-  Cloud;,
+import { Brain,
+  Users,
+  Calendar,
+  TrendingUp,
+  Shield,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Target,
+  BarChart3,
+  MessageSquare,
+  FileText,
+  GitBranch,
+  AlertTriangle,
+  Star,
+  DollarSign,
+  Globe,
+  Smartphone,
+  Cloud;
 } from 'lucide-react';
-;
 export default function AIProjectManagementPlatform(...args: []):  {;
   const features = [;
     {;
-      icon: Brain,;
-      title: 'AI-Powered Task Prioritization',;
-      description: 'Intelligent algorithms automatically prioritize tasks based on deadlines, dependencies, and team capacity';,
-},;
+      icon: Brain,
+      title: 'AI-Powered Task Prioritization',
+      description: 'Intelligent algorithms automatically prioritize tasks based on deadlines, dependencies, and team capacity';
+},
     {;
-      icon: Users,;
-      title: 'Smart Team Collaboration',;
-      description: 'AI-driven team matching and workload balancing for optimal project execution';,
-},;
+      icon: Users,
+      title: 'Smart Team Collaboration',
+      description: 'AI-driven team matching and workload balancing for optimal project execution';
+},
     {;
-      icon: Calendar,;
-      title: 'Predictive Timeline Management',;
-      description: 'Machine learning models predict project delays and suggest mitigation strategies';,
-},;
+      icon: Calendar,
+      title: 'Predictive Timeline Management',
+      description: 'Machine learning models predict project delays and suggest mitigation strategies';
+},
     {;
-      icon: TrendingUp,;
-      title: 'Performance Analytics',;
-      description: 'Real-time insights into team productivity, project health, and resource utilization';,
-},;
+      icon: TrendingUp,
+      title: 'Performance Analytics',
+      description: 'Real-time insights into team productivity, project health, and resource utilization';
+},
     {;
-      icon: Shield,;
-      title: 'Risk Assessment & Mitigation',;
-      description: 'AI continuously monitors project risks and provides proactive recommendations';,
-},;
+      icon: Shield,
+      title: 'Risk Assessment & Mitigation',
+      description: 'AI continuously monitors project risks and provides proactive recommendations';
+},
     {;
-      icon: Zap,;
-      title: 'Automated Reporting',;
-      description: 'Intelligent report generation with customizable dashboards and stakeholder updates';,
+      icon: Zap,
+      title: 'Automated Reporting',
+      description: 'Intelligent report generation with customizable dashboards and stakeholder updates';
 };
   ];
-;
   const pricingPlans = [;
     {;
-      name: 'Starter',;
-      price: '$299',;
-      period: '/month',;
-      description: 'Perfect for small teams and startups',;
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
+      description: 'Perfect for small teams and startups',
       features: [;
-        'Up to 10 team members',;
-        'Basic AI task prioritization',;
-        'Standard project templates',;
-        'Email support',;
-        'Basic analytics dashboard',;
+        'Up to 10 team members',
+        'Basic AI task prioritization',
+        'Standard project templates',
+        'Email support',
+        'Basic analytics dashboard',
         'Mobile app access';
-      ],;
-      popular: false;,
-},;
+      ],
+      popular: false;
+},
     {;
-      name: 'Professional',;
-      price: '$599',;
-      period: '/month',;
-      description: 'Ideal for growing businesses',;
+      name: 'Professional',
+      price: '$599',
+      period: '/month',
+      description: 'Ideal for growing businesses',
       features: [;
-        'Up to 50 team members',;
-        'Advanced AI features',;
-        'Custom project templates',;
-        'Priority support',;
-        'Advanced analytics',;
-        'API access',;
-        'Integrations (Slack, Jira, etc.)',;
+        'Up to 50 team members',
+        'Advanced AI features',
+        'Custom project templates',
+        'Priority support',
+        'Advanced analytics',
+        'API access',
+        'Integrations (Slack, Jira, etc.)',
         'White-label options';
-      ],;
-      popular: true;,
-},;
+      ],
+      popular: true;
+},
     {;
-      name: 'Enterprise',;
-      price: '$1,299',;
-      period: '/month',;
-      description: 'For large organizations',;
+      name: 'Enterprise',
+      price: '$1,299',
+      period: '/month',
+      description: 'For large organizations',
       features: [;
-        'Unlimited team members',;
-        'Full AI suite',;
-        'Custom integrations',;
-        'Dedicated support manager',;
-        'Advanced security features',;
-        'Custom AI model training',;
-        'On-premise deployment options',;
+        'Unlimited team members',
+        'Full AI suite',
+        'Custom integrations',
+        'Dedicated support manager',
+        'Advanced security features',
+        'Custom AI model training',
+        'On-premise deployment options',
         'SLA guarantees';
-      ],;
-      popular: false;,
+      ],
+      popular: false;
 };
   ];
-;
   const benefits = [;
     {;
-      icon: Clock,;
-      title: '30% Faster Project Delivery',;
-      description: 'AI optimization reduces project timelines through intelligent resource allocation';,
-},;
+      icon: Clock,
+      title: '30% Faster Project Delivery',
+      description: 'AI optimization reduces project timelines through intelligent resource allocation';
+},
     {;
-      icon: Target,;
-      title: '95% On-Time Completion',;
-      description: 'Predictive analytics help teams meet deadlines consistently';,
-},;
+      icon: Target,
+      title: '95% On-Time Completion',
+      description: 'Predictive analytics help teams meet deadlines consistently';
+},
     {;
-      icon: BarChart3,;
-      title: '40% Cost Reduction',;
-      description: 'Eliminate waste through AI-driven efficiency improvements';,
-},;
+      icon: BarChart3,
+      title: '40% Cost Reduction',
+      description: 'Eliminate waste through AI-driven efficiency improvements';
+},
     {;
-      icon: Users,;
-      title: 'Enhanced Team Productivity',;
-      description: 'Automated workflows free up time for strategic work';,
+      icon: Users,
+      title: 'Enhanced Team Productivity',
+      description: 'Automated workflows free up time for strategic work';
 };
   ];
-;
   const useCases = [;
     {;
-      title: 'Software Development',;
-      description: 'Manage complex development cycles with AI-powered sprint planning and resource allocation',;
-      icon: GitBranch;,
-},;
+      title: 'Software Development',
+      description: 'Manage complex development cycles with AI-powered sprint planning and resource allocation',
+      icon: GitBranch;
+},
     {;
-      title: 'Marketing Campaigns',;
-      description: 'Coordinate multi-channel campaigns with intelligent timeline optimization',;
-      icon: MessageSquare;,
-},;
+      title: 'Marketing Campaigns',
+      description: 'Coordinate multi-channel campaigns with intelligent timeline optimization',
+      icon: MessageSquare;
+},
     {;
-      title: 'Construction Projects',;
-      description: 'Track progress and manage resources across multiple sites with predictive analytics',;
-      icon: Building;,
-},;
+      title: 'Construction Projects',
+      description: 'Track progress and manage resources across multiple sites with predictive analytics',
+      icon: Building;
+},
     {;
-      title: 'Event Planning',;
-      description: 'Streamline event coordination with AI-driven task management and vendor coordination',;
-      icon: Calendar;,
+      title: 'Event Planning',
+      description: 'Streamline event coordination with AI-driven task management and vendor coordination',
+      icon: Calendar;
 };
   ];
-;
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -167,27 +162,17 @@ export default function AIProjectManagementPlatform(...args: []):  {;
         <div className="max-w-7xl mx-auto text-center">;
           <motion.div;
             initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
             animate = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
-;
+
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">;
               <Brain className="w-4 h-4 mr-2" />;
               AI-Powered Project Management;
@@ -214,30 +199,19 @@ export default function AIProjectManagementPlatform(...args: []):  {;
           </motion.div>;
         </div>;
       </section>;
-;
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
             initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
             whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -256,34 +230,19 @@ export default function AIProjectManagementPlatform(...args: []):  {;
               <motion.div;
                 key={index}
                 initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
                 whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
                 transition = {;
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: index * 0.1 ;
 
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300";
@@ -304,24 +263,14 @@ export default function AIProjectManagementPlatform(...args: []):  {;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
             initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
             whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -340,34 +289,19 @@ export default function AIProjectManagementPlatform(...args: []):  {;
               <motion.div;
                 key={index}
                 initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
                 whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
                 transition = {;
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: index * 0.1 ;
 
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className="text-center";
@@ -388,24 +322,14 @@ export default function AIProjectManagementPlatform(...args: []):  {;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
             initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
             whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -424,34 +348,19 @@ export default function AIProjectManagementPlatform(...args: []):  {;
               <motion.div;
                 key={index}
                 initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 ;
 
-;
-
-;
-
-;,
 }}
                 whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   x: 0 ;
 
-;
-
-;
-
-;,
 }}
                 transition = {;
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: index * 0.1 ;
 
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700";
@@ -472,24 +381,14 @@ export default function AIProjectManagementPlatform(...args: []):  {;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
             initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
             whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -508,42 +407,27 @@ export default function AIProjectManagementPlatform(...args: []):  {;
               <motion.div;
                 key={index}
                 initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
                 whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
                 transition = {;
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: index * 0.1 ;
 
-;
-
-;
-
-;,
 }}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${;
                   plan.popular;
                     ? 'border-purple-500 ring-2 ring-purple-500/20';
-                    : 'border-gray-700';,
+                    : 'border-gray-700';
 }`}
-;
+
                 {plan.popular && (;
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">;
@@ -551,7 +435,7 @@ export default function AIProjectManagementPlatform(...args: []):  {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <p className="text-gray-300 mb-4">{plan.description}</p>;
@@ -573,7 +457,7 @@ export default function AIProjectManagementPlatform(...args: []):  {;
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
                   plan.popular;
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700';
-                    : 'bg-gray-700 text-white hover:bg-gray-600';,
+                    : 'bg-gray-700 text-white hover:bg-gray-600';
 }`}>;
                   Get Started;
                 </button>;
@@ -588,28 +472,18 @@ export default function AIProjectManagementPlatform(...args: []):  {;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
             initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
             whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-;
+
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Project Management?;
             </h2>;
@@ -633,15 +507,11 @@ export default function AIProjectManagementPlatform(...args: []):  {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }}}}}}
-;
+
 export { AIProjectManagementPlatform };
-;
 export { AIProjectManagementPlatform };
-;
 export { AIProjectManagementPlatform };
-;
 export { AIProjectManagementPlatform };
-;
 export { AIProjectManagementPlatform };

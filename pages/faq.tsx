@@ -1,6 +1,5 @@
 import React from 'react';
 import SEOHead from '../src/components/SEOHead';
-;
 const FAQPage = () => {;
   return (;
     <>;
@@ -20,8 +19,6 @@ const FAQPage = () => {;
         </section>;
       </main>;
     </>;
-  );,
+  );
 };
-;
 export default FAQPage;
-;

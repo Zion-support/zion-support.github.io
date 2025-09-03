@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-;
 const fs = require("fs");
 const path = require("path");
 // Function to check if a file is corrupted;
@@ -17,10 +16,9 @@ function isCorrupted(content) {;
     /Expression expected/,  // Expression errors;
     /Declaration or statement expected/,  // Declaration errors;
   ];
-  ;
-  return corruptionPatterns.some(pattern => pattern.test(content));,;,
+  return corruptionPatterns.some(pattern => pattern.test(content));,
 }
-;
+
 // Function to create a basic service template;
 function createServiceTemplate(filename) {;
   const serviceName = path.basename(filename, path.extname(filename));
@@ -37,7 +35,6 @@ export default function ${serviceName.replace(/\s+/g, "")}() {;
         title="${serviceName} - Zion Tech Group";
         description="Professional ${serviceName.toLowerCase()} services by Zion Tech Group";
       />;
-      ;
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion.div;
@@ -70,7 +67,6 @@ export default function ${serviceName.replace(/\s+/g, "")}() {;
           </motion.div>;
         </div>;
       </section>;
-      ;
       <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="text-center mb-16">;
@@ -81,7 +77,6 @@ export default function ${serviceName.replace(/\s+/g, "")}() {;
               We provide comprehensive ${serviceName.toLowerCase()} solutions tailored to your requirements.;
             </p>;
           </div>;
-          ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">;
               <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>;
@@ -99,11 +94,11 @@ export default function ${serviceName.replace(/\s+/g, "")}() {;
         </div>;
       </section>;
     </div>;
-  );,;,
+  );,
 }
-`;,;,
+`;,
 }
-;
+
 // Function to fix a single file;
 function fixFile(filePath) {;
   try {;
@@ -112,24 +107,24 @@ function fixFile(filePath) {;
   console.log(`Fixing corrupted file: ${filePath}`);
       const newContent = createServiceTemplate(filePath);
       fs.writeFileSync(filePath, newContent, "utf8");
-      return true;,;,
+      return true;,
 }
-    ;
-    return false;,;,
+
+    return false;,
 } catch (error) {;
   console.error(`Error processing ${filePath}:`, error.message);
-    return false;,;,
+    return false;,
 }
 }
-;
+
 // Main function;
 function $1() {;
   const servicesDir = path.join(__dirname, "src", "pages", "services");
   if (!fs.existsSync(servicesDir)) {;
   console.error("Services directory not found");
-    return;,;,
+    return;,
 }
-  ;
+
   const files = fs.readdirSync(servicesDir);
     .filter(file => file.endsWith(".tsx") || file.endsWith(".jsx"));
     .map(file => path.join(servicesDir, file));
@@ -137,14 +132,14 @@ function $1() {;
   let fixedCount = 0;
   files.forEach(file => {;
   if (fixFile(file)) {;
-  fixedCount++;,;,
+  fixedCount++;,
 }
   });
-  console.log(`Fixed ${fixedCount} corrupted files`);,;,
+  console.log(`Fixed ${fixedCount} corrupted files`);,
 }
-;
+
 if (require.main === module) {;
-  main();,;,
+  main();,
 }
-;
+
 module.exports = { fixFile, isCorrupted, createServiceTemplate })

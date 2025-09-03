@@ -2,57 +2,51 @@ import React, { useState, useEffect } from 'react';
 export default EmergingTechShowcase2025;}}
 import { Brain, import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
 export default function Page() {;
-,;
-    { id: 'Brain - Computer Interfaces', name: 'BCI', icon: Eye, color: 'from - red - 500 to - orange - 600' },;
-    { id: 'Synthetic Biology', name: 'Synthetic Biology', icon: Dna, color: 'from - emerald - 500 to - teal - 600' },;
-    { id: 'Fusion Energy', name: 'Fusion Energy', icon: Zap, color: 'from - yellow-500 to - orange - 600' },;
-    { id: 'Space Mining', name: 'Space Mining', icon: Rocket, color: 'from - indigo - 500 to - purple - 600' },;
-    { id: 'Digital Twins', name: 'Digital Twins', icon: Eye, color: 'from - cyan - 500 to - blue - 600' },;
-    { id: 'Metaverse Infrastructure', name: 'Metaverse', icon: Globe, color: 'from - pink - 500 to - rose - 600' },;
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from - gray - 500 to - slate - 600' },;
-    { id: 'Biocomputing', name: 'Biocomputing', icon: Cpu, color: 'from - lime - 500 to - green - 600' },;
-    { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from - amber - 500 to - yellow-600' },;
+    { id: 'Brain - Computer Interfaces', name: 'BCI', icon: Eye, color: 'from - red - 500 to - orange - 600' },
+    { id: 'Synthetic Biology', name: 'Synthetic Biology', icon: Dna, color: 'from - emerald - 500 to - teal - 600' },
+    { id: 'Fusion Energy', name: 'Fusion Energy', icon: Zap, color: 'from - yellow-500 to - orange - 600' },
+    { id: 'Space Mining', name: 'Space Mining', icon: Rocket, color: 'from - indigo - 500 to - purple - 600' },
+    { id: 'Digital Twins', name: 'Digital Twins', icon: Eye, color: 'from - cyan - 500 to - blue - 600' },
+    { id: 'Metaverse Infrastructure', name: 'Metaverse', icon: Globe, color: 'from - pink - 500 to - rose - 600' },
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from - gray - 500 to - slate - 600' },
+    { id: 'Biocomputing', name: 'Biocomputing', icon: Cpu, color: 'from - lime - 500 to - green - 600' },
+    { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from - amber - 500 to - yellow-600' },
     { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from - slate - 500 to - gray - 600' };
   ];
-;
     const filteredServices = selectedCategory === 'all';
     ? EMERGING_TECH_SERVICES_2025;
     : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory) ;
-;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
 }, []);
     if(autoPlay) {;
       const interval = setInterval(() => {;
-        setCurrentSlide((prev) => (prev + 1) % filteredServices.length) ;,
+        setCurrentSlide((prev) => (prev + 1) % filteredServices.length) ;
 }, 5000) ;
       return () => clearInterval(interval) ;
-;,
 }, [autoPlay, filteredServices.length]) ;
-;
   const getCategoryIcon = (category: string) => {;
     const categoryData = categories.find(cat => cat.id === category) ;
     return categoryData ? categoryData.icon : Globe};
-;
           <div  className="grid md: grid - cols - 2 lg:grid - cols - 3 gap-8">;
             {filteredServices.map((service, index) => (<motion.div;
                 key={service.id}
                 initial = {;
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                 animate = {;
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition = {;
-  { duration: 0.5,;
-  delay: index * 0.1;,
+  { duration: 0.5,
+  delay: index * 0.1;
 }}
                 whileHover={{ y: -10 }}
                 className="bg-gradient - to - br from - white / 10 to - white / 5 backdrop - blur - sm rounded-2xl p - 6 hover:shadow-2xl transition - all cursor -pointer";
                 onClick={ () => setSelectedService(service.id) }
-;
+
                 <div  className="flex items - center gap-3 mb-4">;
                   <div  className={`p - 3 rounded-xl bg-gradient - to - r ${getCategoryColor(service.category) }`}>;
                     {React.createElement(getCategoryIcon (service.category) , { className: "w-6 h-6 text-white" }) }
@@ -152,23 +146,20 @@ export default function Page() {;
             exit={{ opacity: 0 }}
             className="fixed inset - 0 bg-black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p -4";
             onClick={ () => setSelectedService(null) }
-;
+
             <motion.div;
               initial = {;
-  { scale: 0.9,;
-  opacity: 0;,
+  { scale: 0.9,
+  opacity: 0;
 }}
               animate = {;
-  { scale: 1,;
-  opacity: 1;,
+  { scale: 1,
+  opacity: 1;
 }}
               exit = {;
-  { scale: 0.9,;
+  { scale: 0.9,
   opacity: 0;
 
-;
-;
-;,
 }};
               className="bg-gradient - to - br from - slate - 800 to - slate - 900 rounded-3xl p - 8 max - w-4xl w-full max - h-[90vh] overflow-y-auto";
               onClick={ (e) => e.stopPropagation () };
@@ -176,7 +167,6 @@ export default function Page() {;
               { ( () => {;
                 const service = EMERGING_TECH_SERVICES_2025.find(s => s.id === selectedService) ;
                 if(!service) return null;
-;
                 return (<div>;
                     <div  className="flex items - center justify - between mb-6">;
                       <div  className="flex items - center gap-3">;
@@ -255,7 +245,7 @@ export default function Page() {;
                         Close;
                       </motion.button>;
                     </div>;
-                  </div>;) ;,
+                  </div>;) ;
 }) () }
             </motion.div>;
           </motion.div>) }

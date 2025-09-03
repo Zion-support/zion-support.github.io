@@ -1,7 +1,6 @@
 import React from 'react;
 import Link from 'next/link;
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react;
-;
 const EnhancedFooter = () => {;
   return (;
     <footer className="bg-gray-900 text-white">;
@@ -124,7 +123,7 @@ const EnhancedFooter = () => {;
               <p>Address: 364 E Main St STE 1008<br  />Middletown DE 19709</p>;
             </div>;
         </div>";
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">,;
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">,
           <p>&copy, 2024 Zion Tech Group. All rights reserved.</p>;
         </div>;
       </div>;
@@ -166,5 +165,5 @@ const EnhancedFooter = () => {;
         </div>;
       </div>;
     </footer>;
-  ),;
+  ),
 "'export default EnhancedFooter}

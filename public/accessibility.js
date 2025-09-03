@@ -6,11 +6,10 @@ const accessibilityEnhancements = {;
   const buttons = document.querySelectorAll("button:not([aria-label])");
     buttons.forEach(button => {;
   if (!button.getAttribute("aria-label")) {;
-  button.setAttribute("aria-label", button.textContent || "Button");,;,
+  button.setAttribute("aria-label", button.textContent || "Button");,
 }
-    });,;,
-},;
-;
+    });,
+},
   // Add keyboard navigation support;
   addKeyboardNavigation: () => {;
   const focusableElements = document.querySelectorAll("a, button, input, textarea, select");
@@ -18,12 +17,11 @@ const accessibilityEnhancements = {;
   element.addEventListener("keydown", (e) => {;
   if (e.key === "Enter" || e.key === " ") {;
   e.preventDefault();
-          element.click();,;,
+          element.click();,
 }
-      });,;,
-});,;,
-},;
-;
+      });,
+});,
+},
   // Add high contrast mode support;
   addHighContrastMode: () => {;
   const style = document.createElement("style");
@@ -32,24 +30,22 @@ const accessibilityEnhancements = {;
   * {;
   background-color: white !important;
           color: black !important;
-          border-color: black !important;,;,
+          border-color: black !important;,
 }
       }
     `;
-    document.head.appendChild(style);,;,
-},;
-;
+    document.head.appendChild(style);,
+},
   // Initialize all enhancements;
   init: () => {;
   this.addAriaLabels();
     this.addKeyboardNavigation();
-    this.addHighContrastMode();,;,
+    this.addHighContrastMode();,
 }
 };
-;
 // Auto-initialize when DOM is ready;
 if (document.readyState === "loading") {;
-  document.addEventListener("DOMContentLoaded", accessibilityEnhancements.init);,;,
+  document.addEventListener("DOMContentLoaded", accessibilityEnhancements.init);,
 } else {;
-  accessibilityEnhancements.init();,;,
+  accessibilityEnhancements.init();,
 }

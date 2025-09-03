@@ -1,27 +1,22 @@
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
-export default function Page() {;
-,";
+export default function Page() {;";
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },";
-    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },;";
-    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,;
+    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
+    { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
       transition: {;
-        duration: 0.5,;";
+        duration: 0.5,";
         ease: "easeOut"}}};
-;
   const hoverVariants = {;
   hover: {;
-      y: -8,      scale: 1.02,;
+      y: -8,      scale: 1.02,
       transition: {;
 
-        duration: 0.3,;"  ease: "easeOut";
-      ;,
+        duration: 0.3,"  ease: "easeOut";
 }}};
-;,
-};,
-};,
 };
-;
+};
+};
   return (    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">;
       {/* Background Elements */}";
       <div className="absolute inset-0 opacity-30">";
@@ -35,13 +30,13 @@ export default function Page() {;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}";
@@ -51,8 +46,8 @@ export default function Page() {;
             whileInView={{ scale: 1 }}
             transition = {;
 
-  { duration: 0.6,;
-  delay: 0.2;,
+  { duration: 0.6,
+  delay: 0.2;
 }}
             viewport={{ once: true }}";
             className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6">;
@@ -61,18 +56,18 @@ export default function Page() {;
           <motion.p;
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition = {;
 
-  { duration: 0.6,;
-  delay: 0.2;,
+  { duration: 0.6,
+  delay: 0.2;
 }}";
             className="text-lg text-gray-300 max-w-2xl mx-auto">;
             Find the perfect solution for your business needs with our organized service categories;
@@ -125,18 +120,18 @@ export default function Page() {;
                       key={feature}
                       initial = {;
 
-  { opacity: 0,;
-  x: -10;,
+  { opacity: 0,
+  x: -10;
 }}
                       whileInView = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
                       transition = {;
 
-  { duration: 0.4,;
-  delay: 0.1 + idx * 0.1;,
+  { duration: 0.4,
+  delay: 0.1 + idx * 0.1;
 }}
                       viewport={{ once: true }}";
                       className="flex items-center gap-2 text-xs text-gray-400">";
@@ -155,18 +150,18 @@ export default function Page() {;
                       key={key}
                       initial = {;
 
-  { opacity: 0,;
-  scale: 0.8;,
+  { opacity: 0,
+  scale: 0.8;
 }}
                       whileInView = {;
 
-  { opacity: 1,;
-  scale: 1;,
+  { opacity: 1,
+  scale: 1;
 }}
                       transition = {;
 
-  { duration: 0.4,;
-  delay: 0.2 + idx * 0.1;,
+  { duration: 0.4,
+  delay: 0.2 + idx * 0.1;
 }}
                       viewport={{ once: true }}";
                       className="text-center">";
@@ -224,7 +219,6 @@ export default function Page() {;
             ))}
           </div>;
         </motion.div>;
-;
         {/* CTA Section */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
@@ -256,19 +250,16 @@ export default function Page() {;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
+  { opacity: 0,
   y: 30 ;
-;,
 }}          whileInView = {;
 
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
-;,
 }}          transition = {;
 
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: 0.4 ;
-;,
 }}
           viewport={{ once: true }}
           className="text-center">;
@@ -293,7 +284,6 @@ export default function Page() {;
         </motion.div>;
       </div>;
     </section>;
-  )};
-;export { QuickAccess };
+  )};export { QuickAccess };
 '"`;
 )

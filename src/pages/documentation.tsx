@@ -45,6 +45,6 @@ const documentation = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default documentation

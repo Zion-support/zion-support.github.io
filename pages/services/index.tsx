@@ -2,7 +2,6 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-;
 const ServicesPage: NextPage = () => {;
   return (;
     <div>;
@@ -10,7 +9,6 @@ const ServicesPage: NextPage = () => {;
         <title>Services - Zion Tech Group</title>;
         <meta name="description" content="Explore our comprehensive AI micro SaaS, IT, and AI services with transparent pricing." />;
       </Head>;
-      ;
       <main style={{ fontFamily: 'system-ui, sans-serif', lineHeight: 1.5, padding: '32px', maxWidth: 1120, margin: '0 auto' }}>;
         <h1 style={{ marginTop: 0 }}>AI-Powered Micro SAAS Solutions</h1>;
         <p>Discover our comprehensive suite of AI-powered micro SaaS services, IT solutions, and AI platforms with transparent pricing and rapid deployment.</p>;
@@ -63,12 +61,12 @@ const ServicesPage: NextPage = () => {;
           <p><strong>Website:</strong> <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer">https://ziontechgroup.com</a></p>;
           <div style={{ marginTop: '16px' }}>;
             <Link href="/contact" style={{ ;
-              backgroundColor: '#007bff', ;
-              color: 'white', ;
-              padding: '12px 24px', ;
-              borderRadius: '6px', ;
-              textDecoration: 'none',;
-              display: 'inline-block';,
+              backgroundColor: '#007bff',
+              color: 'white',
+              padding: '12px 24px',
+              borderRadius: '6px',
+              textDecoration: 'none',
+              display: 'inline-block';
 }}>;
               Request a Quote;
             </Link>;
@@ -76,7 +74,6 @@ const ServicesPage: NextPage = () => {;
         </div>;
       </main>;
     </div>;
-  );,
+  );
 };
-;
 export default ServicesPage;

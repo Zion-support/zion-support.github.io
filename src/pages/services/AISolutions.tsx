@@ -1,140 +1,136 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ;
-  Brain, ;
-  Zap, ;
-  Cpu, ;
-  Database, ;
-  Network, ;
-  Smartphone, ;
-  Lock, ;
-  Code, ;
-  Server, ;
-  Chip, ;
-  Wifi, ;
-  ShieldCheck, ;
-  Bot, ;
-  Workflow, ;
-  Eye, ;
-  Sparkles, ;
-  Atom, ;
-  Leaf, ;
-  Gamepad2, ;
-  Coins, ;
-  Satellite, ;
-  Activity, ;
-  MessageCircle, ;
-  BarChart, ;
-  Users2, ;
-  Settings, ;
-  Palette, ;
-  ArrowRight, ;
-  CheckCircle, ;
-  Star, ;
-  Target,;
-  Rocket,;
-  TrendingUp,;
-  Globe,;
-  Building2,;
-  ShoppingCart;,
+  Brain,
+  Zap,
+  Cpu,
+  Database,
+  Network,
+  Smartphone,
+  Lock,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Bot,
+  Workflow,
+  Eye,
+  Sparkles,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  Activity,
+  MessageCircle,
+  BarChart,
+  Users2,
+  Settings,
+  Palette,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Target,
+  Rocket,
+  TrendingUp,
+  Globe,
+  Building2,
+  ShoppingCart;
 } from 'lucide-react';
-;
 const AISolutions: React.FC = () => {;
   const solutions = [;
     {;
-      icon: Brain,;
-      title: 'Machine Learning & AI',;
-      description: 'Advanced machine learning algorithms and AI models for predictive analytics and automation',;
-      features: ['Predictive modeling', 'Natural language processing', 'Computer vision', 'Deep learning'];,
-},;
+      icon: Brain,
+      title: 'Machine Learning & AI',
+      description: 'Advanced machine learning algorithms and AI models for predictive analytics and automation',
+      features: ['Predictive modeling', 'Natural language processing', 'Computer vision', 'Deep learning'];
+},
     {;
-      icon: Workflow,;
-      title: 'AI Workflow Automation',;
-      description: 'Streamline business processes with intelligent automation and workflow optimization',;
-      features: ['Process automation', 'Decision intelligence', 'Smart routing', 'Performance analytics'];,
-},;
+      icon: Workflow,
+      title: 'AI Workflow Automation',
+      description: 'Streamline business processes with intelligent automation and workflow optimization',
+      features: ['Process automation', 'Decision intelligence', 'Smart routing', 'Performance analytics'];
+},
     {;
-      icon: Database,;
-      title: 'Data Analytics & Insights',;
-      description: 'Transform raw data into actionable insights with AI-powered analytics',;
-      features: ['Real-time analytics', 'Predictive insights', 'Data visualization', 'Business intelligence'];,
-},;
+      icon: Database,
+      title: 'Data Analytics & Insights',
+      description: 'Transform raw data into actionable insights with AI-powered analytics',
+      features: ['Real-time analytics', 'Predictive insights', 'Data visualization', 'Business intelligence'];
+},
     {;
-      icon: Bot,;
-      title: 'Intelligent Chatbots',;
-      description: 'AI-powered conversational agents for customer service and support',;
-      features: ['Natural conversations', 'Multi-language support', 'Integration capabilities', 'Learning algorithms'];,
-},;
+      icon: Bot,
+      title: 'Intelligent Chatbots',
+      description: 'AI-powered conversational agents for customer service and support',
+      features: ['Natural conversations', 'Multi-language support', 'Integration capabilities', 'Learning algorithms'];
+},
     {;
-      icon: Eye,;
-      title: 'Computer Vision',;
-      description: 'Advanced image and video analysis for various industry applications',;
-      features: ['Object detection', 'Facial recognition', 'Quality inspection', 'Video analytics'];,
-},;
+      icon: Eye,
+      title: 'Computer Vision',
+      description: 'Advanced image and video analysis for various industry applications',
+      features: ['Object detection', 'Facial recognition', 'Quality inspection', 'Video analytics'];
+},
     {;
-      icon: Network,;
-      title: 'AI Infrastructure',;
-      description: 'Scalable AI infrastructure and cloud solutions for enterprise deployment',;
-      features: ['Cloud AI platforms', 'Edge computing', 'GPU optimization', 'Scalable architecture'];,
+      icon: Network,
+      title: 'AI Infrastructure',
+      description: 'Scalable AI infrastructure and cloud solutions for enterprise deployment',
+      features: ['Cloud AI platforms', 'Edge computing', 'GPU optimization', 'Scalable architecture'];
 }
   ];
-;
   const industries = [;
     {;
-      name: 'Healthcare',;
-      icon: Activity,;
-      description: 'AI-powered diagnostics, patient care, and medical research';,
-},;
+      name: 'Healthcare',
+      icon: Activity,
+      description: 'AI-powered diagnostics, patient care, and medical research';
+},
     {;
-      name: 'Finance',;
-      icon: Coins,;
-      description: 'Risk assessment, fraud detection, and algorithmic trading';,
-},;
+      name: 'Finance',
+      icon: Coins,
+      description: 'Risk assessment, fraud detection, and algorithmic trading';
+},
     {;
-      name: 'Manufacturing',;
-      icon: Building2,;
-      description: 'Predictive maintenance, quality control, and supply chain optimization';,
-},;
+      name: 'Manufacturing',
+      icon: Building2,
+      description: 'Predictive maintenance, quality control, and supply chain optimization';
+},
     {;
-      name: 'Retail',;
-      icon: ShoppingCart,;
-      description: 'Customer analytics, inventory management, and personalized experiences';,
-},;
+      name: 'Retail',
+      icon: ShoppingCart,
+      description: 'Customer analytics, inventory management, and personalized experiences';
+},
     {;
-      name: 'Transportation',;
-      icon: Globe,;
-      description: 'Autonomous vehicles, route optimization, and traffic management';,
-},;
+      name: 'Transportation',
+      icon: Globe,
+      description: 'Autonomous vehicles, route optimization, and traffic management';
+},
     {;
-      name: 'Energy',;
-      icon: Zap,;
-      description: 'Smart grid management, predictive maintenance, and energy optimization';,
+      name: 'Energy',
+      icon: Zap,
+      description: 'Smart grid management, predictive maintenance, and energy optimization';
 }
   ];
-;
   const benefits = [;
     {;
-      icon: TrendingUp,;
-      title: 'Increased Efficiency',;
-      description: 'Automate repetitive tasks and optimize business processes';,
-},;
+      icon: TrendingUp,
+      title: 'Increased Efficiency',
+      description: 'Automate repetitive tasks and optimize business processes';
+},
     {;
-      icon: Target,;
-      title: 'Better Decision Making',;
-      description: 'Data-driven insights for informed strategic decisions';,
-},;
+      icon: Target,
+      title: 'Better Decision Making',
+      description: 'Data-driven insights for informed strategic decisions';
+},
     {;
-      icon: Users2,;
-      title: 'Enhanced Customer Experience',;
-      description: 'Personalized interactions and improved service delivery';,
-},;
+      icon: Users2,
+      title: 'Enhanced Customer Experience',
+      description: 'Personalized interactions and improved service delivery';
+},
     {;
-      icon: Rocket,;
-      title: 'Competitive Advantage',;
-      description: 'Stay ahead with cutting-edge AI technology';,
+      icon: Rocket,
+      title: 'Competitive Advantage',
+      description: 'Stay ahead with cutting-edge AI technology';
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">;
       {/* Hero Section */}
@@ -206,7 +202,7 @@ const AISolutions: React.FC = () => {;
                     ))}
                   </ul>;
                 </div>;
-              );,
+              );
 })}
           </div>;
         </div>;
@@ -241,7 +237,7 @@ const AISolutions: React.FC = () => {;
                     {industry.description}
                   </p>;
                 </div>;
-              );,
+              );
 })}
           </div>;
         </div>;
@@ -274,7 +270,7 @@ const AISolutions: React.FC = () => {;
                     {benefit.description}
                   </p>;
                 </div>;
-              );,
+              );
 })}
           </div>;
         </div>;
@@ -305,7 +301,6 @@ const AISolutions: React.FC = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default AISolutions;

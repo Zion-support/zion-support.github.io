@@ -1,11 +1,10 @@
 import Head from "next/head";
 import React, { useState } from "react";
-const Head = dynamic(() => import("next/head"), { ssr: false });,
+const Head = dynamic(() => import("next/head"), { ssr: false });
 }
-  Mail,;
+  Mail,
   MapPin} from "lucide-react";
 export default function RequestQuote() {;
-;
   const [formData, setFormData] = useState({";
     name: ",";
     email: ",";
@@ -16,29 +15,29 @@ export default function RequestQuote() {;
     timeline: ",";
     budget: ",";
     description: ",";
-    requirements: ""});,
+    requirements: ""});
 }
-  const [isSubmitting, setIsSubmitting] = useState(false);,
+  const [isSubmitting, setIsSubmitting] = useState(false);
 }
-  const [isSubmitted, setIsSubmitted] = useState(false);,
+  const [isSubmitted, setIsSubmitted] = useState(false);
 }
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,,;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     const { name, value } = e.target;
     setFormData(prev = > ({;
-      ...prev,;
-      [name]: value}));,
+      ...prev,
+      [name]: value}));
 }
-  const handleSubmit = async (e: React.FormEvent) => {,;
-    e.preventDefault(),;
-    setIsSubmitting(true),;
+  const handleSubmit = async (e: React.FormEvent) => {,
+    e.preventDefault(),
+    setIsSubmitting(true),
     // comment;
-await new Promise(resolve => setTimeout(resolve, 2000));,
+await new Promise(resolve => setTimeout(resolve, 2000));
 }
-    setIsSubmitting(false);,
+    setIsSubmitting(false);
 }
-    setIsSubmitted(true);,
+    setIsSubmitted(true);
 }
-;
+
   const serviceTypes = [];
 
   const projectSizes = [];
@@ -94,14 +93,14 @@ initial="{{" scale: 0 }}";
               </a>";
               <a href="/;
                 className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">;
-                Back to Home,;
+                Back to Home,
               </a>;
             </div>;
           </motion.div>;
         </div>;
       </>;
     )}
-;
+
   return (;
     <>;
 <Head>;
@@ -112,24 +111,23 @@ initial="{{" scale: 0 }}";
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">;
         {/* comment */}";
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">";
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,;
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,";
 initial="{{" opacity: 0, y: 20 }}";
               animate="{{" opacity: 1, y: 0 }}";
               className="text-center">";
               <h1 className="text-4xl md: text-5xl font-bold mb-6">;
-                Request Your Quote,;
+                Request Your Quote,
               </h1>";
               <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">;
                 Get a personalized quote for your technology project. Our experts will provide you with competitive pricing and detailed project planning.;
               </p>;
             </motion.div>;
           </div>;
-,;
         {/* comment */}";
         <div className="py-16 bg-white">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {benefits.map((benefit, index) => (;
                 <motion.div,";
 key="{index}
@@ -142,26 +140,26 @@ key="{index}
                   </div>";
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">;
                     {benefit.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">;
                     {benefit.description}
-;
+
                   </p>;
                 </motion.div>;
               ))}
-;
+
             </div>;
         {/* comment */}";
         <div className="py-16">";
-          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,;
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
             <motion.div,";
 initial="{{" opacity: 0, y: 20 }}";
               animate="{{" opacity: 1, y: 0 }}";
               className="bg-white rounded-2xl shadow-2xl p-8">";
               <div className="text-center mb-8">";
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">;
-                  Tell Us About Your Project,;
+                  Tell Us About Your Project,
                 </h2>";
                 <p className="text-gray-600">";
                   Fill out the form below and we"ll get back to you with a detailed quote within 24 hours.;
@@ -198,7 +196,7 @@ value="{formData.email}
                   </div>;
                   <div>";
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">;
-                      Company Name,;
+                      Company Name,
                     </label>";
                     <input type="text;
                       id="company;
@@ -210,7 +208,7 @@ value="{formData.email}
                   </div>;
                   <div>";
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;
-                      Phone Number,;
+                      Phone Number,
                     </label>";
                     <input type="tel;
                       id="phone;
@@ -233,18 +231,18 @@ value="{formData.serviceType}
                       onChange="{handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent">";
                       <option value="">Select a service</option>;
-                      {serviceTypes.map((service) => (",;
+                      {serviceTypes.map((service) => (",
                         <option key="{service}" value="{service}">;
                           {service}
-;
+
                         </option>;
                       ))}
-;
+
                     </select>;
                   </div>;
                   <div>";
                     <label htmlFor="projectSize" className="block text-sm font-medium text-gray-700 mb-2">;
-                      Project Size,;
+                      Project Size,
                     </label>";
                     <select id="projectSize;
                       name="projectSize;
@@ -252,20 +250,20 @@ value="{formData.serviceType}
                       onChange="{handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent">";
                       <option value="">Select project size</option>;
-                      {projectSizes.map((size) => (",;
+                      {projectSizes.map((size) => (",
                         <option key="{size}" value="{size}">;
                           {size}
-;
+
                         </option>;
                       ))}
-;
+
                     </select>;
                   </div>;
 ";
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-6">;
                   <div>";
                     <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">;
-                      Timeline,;
+                      Timeline,
                     </label>";
                     <select id="timeline;
                       name="timeline"">;
@@ -273,18 +271,18 @@ value="{formData.serviceType}
                       onChange="{handleInputChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent">";
                       <option value="">Select timeline</option>;
-                      {timelines.map((time) => (",;
+                      {timelines.map((time) => (",
                         <option key="{time}" value="{time}">;
                           {time}
-;
+
                         </option>;
                       ))}
-;
+
                     </select>;
                   </div>;
                   <div>";
                     <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">;
-                      Budget Range,;
+                      Budget Range,
                     </label>";
                     <input type="text;
                       id="budget;
@@ -309,10 +307,10 @@ rows="{4}
                 </div>;
                 <div>";
                   <label htmlFor="requirements" className="block text-sm font-medium text-gray-700 mb-2">;
-                    Specific Requirements,;
+                    Specific Requirements,
                   </label>";
                   <textarea id="requirements;
-                    name="requirements",;
+                    name="requirements",
                     rows="{3}
                     value="{formData.requirements}
                     onChange="{handleInputChange}
@@ -335,7 +333,7 @@ rows="{4}
                         <ArrowRight className="ml-2 w-5 h-5"  />;
                       </>;
                     )}
-;
+
                   </button>;
                 </div>;
               </form>;
@@ -349,7 +347,7 @@ rows="{4}
                 Need Immediate Assistance?;
               </h2>";
               <p className="text-lg text-gray-600">;
-                Contact us directly for urgent projects or questions,;
+                Contact us directly for urgent projects or questions,
               </p>;
             </div>;
 ";
@@ -377,5 +375,5 @@ rows="{4}
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>";
                 <p className="text-gray-600">364 E Main St STE 1008<br  />Middletown DE 19709</p>;
               </div>;
-    </>",;
+    </>",
   )}

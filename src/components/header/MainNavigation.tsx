@@ -1,45 +1,43 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ;
-  ChevronDown, ;
-  Zap, ;
-  Brain, ;
-  Shield, ;
-  Users, ;
-  HardDrive, ;
-  TrendingUp, ;
-  Building2, ;
-  FileText, ;
-  HelpCircle, ;
-  BarChart3,;
-  Rocket,;
-  Server,;
-  Cloud,;
-  Lock,;
-  Workflow,;
-  Database,;
-  MessageCircle,;
-  CheckCircle,;
-  ArrowRight,;
-  ExternalLink,;
-  Handshake,;
-  Monitor,;
-  GraduationCap,;
-  Lightbulb,;
-  Code,;
-  Activity,;
-  Target;,
+  ChevronDown,
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  HardDrive,
+  TrendingUp,
+  Building2,
+  FileText,
+  HelpCircle,
+  BarChart3,
+  Rocket,
+  Server,
+  Cloud,
+  Lock,
+  Workflow,
+  Database,
+  MessageCircle,
+  CheckCircle,
+  ArrowRight,
+  ExternalLink,
+  Handshake,
+  Monitor,
+  GraduationCap,
+  Lightbulb,
+  Code,
+  Activity,
+  Target;
 } from 'lucide-react';
-;
-interface MainNavigationProps {;
-  className?: string;,
+interface MainNavigationProps {
+  className?: string;
 }
-;
+
 export function MainNavigation({ className = '' }: MainNavigationProps) {;
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-;
   return (;
     <nav className={`flex items-center space-x-8 ${className}`}>;
       {/* Home */}
@@ -59,7 +57,6 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
           <span>Services</span>;
           <ChevronDown className="w-3 h-3" />;
         </button>;
-        ;
         {isServicesOpen && (;
           <div ;
             onMouseEnter={() => setIsServicesOpen(true)} ;
@@ -105,7 +102,6 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                     </li>;
                   </ul>;
                 </div>;
-                ;
                 <div>;
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
                     <Shield className="w-4 h-4 mr-2" />;
@@ -177,7 +173,6 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                   </ul>;
                 </div>;
               </div>;
-              ;
               <div className="mt-4 pt-4 border-t border-zion-purple/20">;
                 <Link ;
                   to="/services" ;
@@ -201,7 +196,6 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
           <span>Solutions</span>;
           <ChevronDown className="w-3 h-3" />;
         </button>;
-        ;
         {isSolutionsOpen && (;
           <div ;
             onMouseEnter={() => setIsSolutionsOpen(true)} ;
@@ -238,7 +232,6 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                     </li>;
                   </ul>;
                 </div>;
-                ;
                 <div>;
                   <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">;
                     <HardDrive className="w-4 h-4 mr-2" />;
@@ -268,7 +261,6 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
                   </ul>;
                 </div>;
               </div>;
-              ;
               <div className="mt-4 pt-4 border-t border-zion-purple/20">;
                 <Link ;
                   to="/request-quote" ;
@@ -292,7 +284,6 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
           <span>Company</span>;
           <ChevronDown className="w-3 h-3" />;
         </button>;
-        ;
         {isCompanyOpen && (;
           <div ;
             onMouseEnter={() => setIsCompanyOpen(true)} ;
@@ -362,5 +353,5 @@ export function MainNavigation({ className = '' }: MainNavigationProps) {;
         Contact;
       </Link>;
     </nav>;
-  );,
+  );
 } ;

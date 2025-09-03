@@ -1,128 +1,125 @@
 import React from 'react';
 import Link from 'next/link';
 import { ;
-  Brain, ;
-  Shield, ;
-  TrendingUp, ;
-  Users, ;
-  Zap, ;
-  Globe, ;
-  Phone, ;
-  Mail, ;
-  MapPin,;
-  CheckCircle,;
-  Star,;
-  ArrowRight,;
-  Target,;
-  DollarSign,;
-  Clock,;
-  Award,;
-  BarChart3,;
-  Cpu,;
-  Database,;
-  Lock,;
-  Smartphone,;
-  Building,;
-  Car,;
-  Heart,;
-  FileText,;
-  Home,;
-  Briefcase,;
-  Truck,;
-  Leaf;,
+  Brain,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Target,
+  DollarSign,
+  Clock,
+  Award,
+  BarChart3,
+  Cpu,
+  Database,
+  Lock,
+  Smartphone,
+  Building,
+  Car,
+  Heart,
+  FileText,
+  Home,
+  Briefcase,
+  Truck,
+  Leaf;
 } from 'lucide-react';
 import { REAL_MICRO_SAAS_SERVICES_2025 } from '../../data/realMicroSaasServices2025';
-;
 const ComprehensiveMicroSaasShowcase: React.FC = () => {;
   const categories = [;
     {;
-      name: "AI Analytics",;
-      icon: BarChart3,;
-      color: "text-blue-600",;
-      bgColor: "bg-blue-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Analytics");,
-},;
+      name: "AI Analytics",
+      icon: BarChart3,
+      color: "text-blue-600",
+      bgColor: "bg-blue-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Analytics");
+},
     {;
-      name: "AI Security",;
-      icon: Shield,;
-      color: "text-red-600",;
-      bgColor: "bg-red-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Security");,
-},;
+      name: "AI Security",
+      icon: Shield,
+      color: "text-red-600",
+      bgColor: "bg-red-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Security");
+},
     {;
-      name: "AI Operations",;
-      icon: Cpu,;
-      color: "text-green-600",;
-      bgColor: "bg-green-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Operations");,
-},;
+      name: "AI Operations",
+      icon: Cpu,
+      color: "text-green-600",
+      bgColor: "bg-green-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Operations");
+},
     {;
-      name: "AI Healthcare",;
-      icon: Heart,;
-      color: "text-pink-600",;
-      bgColor: "bg-pink-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Healthcare");,
-},;
+      name: "AI Healthcare",
+      icon: Heart,
+      color: "text-pink-600",
+      bgColor: "bg-pink-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Healthcare");
+},
     {;
-      name: "AI Marketing",;
-      icon: Target,;
-      color: "text-purple-600",;
-      bgColor: "bg-purple-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Marketing");,
-},;
+      name: "AI Marketing",
+      icon: Target,
+      color: "text-purple-600",
+      bgColor: "bg-purple-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Marketing");
+},
     {;
-      name: "AI IoT",;
-      icon: Smartphone,;
-      color: "text-indigo-600",;
-      bgColor: "bg-indigo-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI IoT");,
-},;
+      name: "AI IoT",
+      icon: Smartphone,
+      color: "text-indigo-600",
+      bgColor: "bg-indigo-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI IoT");
+},
     {;
-      name: "AI Legal",;
-      icon: FileText,;
-      color: "text-yellow-600",;
-      bgColor: "bg-yellow-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Legal");,
-},;
+      name: "AI Legal",
+      icon: FileText,
+      color: "text-yellow-600",
+      bgColor: "bg-yellow-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Legal");
+},
     {;
-      name: "AI Fintech",;
-      icon: DollarSign,;
-      color: "text-emerald-600",;
-      bgColor: "bg-emerald-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Fintech");,
-},;
+      name: "AI Fintech",
+      icon: DollarSign,
+      color: "text-emerald-600",
+      bgColor: "bg-emerald-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Fintech");
+},
     {;
-      name: "AI E-commerce",;
-      icon: Building,;
-      color: "text-orange-600",;
-      bgColor: "bg-orange-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI E-commerce");,
-},;
+      name: "AI E-commerce",
+      icon: Building,
+      color: "text-orange-600",
+      bgColor: "bg-orange-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI E-commerce");
+},
     {;
-      name: "AI HR",;
-      icon: Users,;
-      color: "text-cyan-600",;
-      bgColor: "bg-cyan-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI HR");,
-},;
+      name: "AI HR",
+      icon: Users,
+      color: "text-cyan-600",
+      bgColor: "bg-cyan-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI HR");
+},
     {;
-      name: "AI Sustainability",;
-      icon: Leaf,;
-      color: "text-lime-600",;
-      bgColor: "bg-lime-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Sustainability");,
-},;
+      name: "AI Sustainability",
+      icon: Leaf,
+      color: "text-lime-600",
+      bgColor: "bg-lime-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Sustainability");
+},
     {;
-      name: "AI Transportation",;
-      icon: Car,;
-      color: "text-slate-600",;
-      bgColor: "bg-slate-50",;
-      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Transportation");,
+      name: "AI Transportation",
+      icon: Car,
+      color: "text-slate-600",
+      bgColor: "bg-slate-50",
+      services: REAL_MICRO_SAAS_SERVICES_2025.filter(s => s.category === "AI Transportation");
 }
   ];
-;
   const featuredServices = REAL_MICRO_SAAS_SERVICES_2025.filter(service => service.featured).slice(0, 6);
-;
   return (;
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
@@ -303,7 +300,7 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
                     </div>;
                   )}
                 </div>;
-              );,
+              );
 })}
           </div>;
         </div>;
@@ -442,7 +439,6 @@ const ComprehensiveMicroSaasShowcase: React.FC = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default ComprehensiveMicroSaasShowcase;

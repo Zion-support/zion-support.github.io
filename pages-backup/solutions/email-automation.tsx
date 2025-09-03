@@ -1,43 +1,40 @@
 import Head from "next/head";
 import React from "react";
-  Aperture,;
+  Aperture,
   Clock} from "lucide-react";
 export default function EmailAutomation() {;
-;
   const features = [];
 
-  const pricingPlans = [],;
-      popular: false},;
+  const pricingPlans = [],
+      popular: false},
     {";
       name: "Professional",";
       price: "$399",";
       period: "/month",";
-      description: "Ideal for growing businesses with advanced needs",;
-      features: [",;
+      description: "Ideal for growing businesses with advanced needs",
+      features: [",
         "Up to 50,000 emails/month",";
         "Advanced automation",";
         "A/B testing",";
         "Advanced analytics",";
         "Custom templates",";
-        "Priority support";
-      ],;
-      popular: true},;
+        "Priority support" ],
+      popular: true},
     {";
       name: "Enterprise",";
       price: "$799",";
       period: "/month",";
-      description: "For large organizations with high-volume needs",;
-      features: [",;
+      description: "For large organizations with high-volume needs",
+      features: [",
         "Unlimited emails",";
         "Custom integrations",";
         "Advanced segmentation",";
         "Dedicated IP",";
         "Custom reporting",";
         "Dedicated account manager",";
-        "24/7 phone support";
-      ],;
+        "24/7 phone support" ],
       popular: false}
-;
+
   ];
 
   return (;
@@ -55,14 +52,14 @@ export default function EmailAutomation() {;
           <div className="text-center">";
             <Badge className="mb-4 bg-blue-500 text-white">";
               <Mail className="w-4 h-4 mr-2"  />;
-              Marketing Automation,;
+              Marketing Automation,
             </Badge>";
             <h1 className="text-4xl md:text-6xl font-bold mb-6">;
               Email Automation";
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Platform</span>;
             </h1>";
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,;
-              Transform your email marketing with intelligent automation, personalized campaigns,;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
+              Transform your email marketing with intelligent automation, personalized campaigns,
               and advanced analytics. Drive engagement and boost conversions with our powerful platform.;
             </p>";
             <div className="flex flex-col sm: flex-row gap-4 justify-center">";
@@ -71,36 +68,35 @@ export default function EmailAutomation() {;
                 <ArrowRight className="ml-2 h-5 w-5"  />;
               </Button>";
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">;
-                Schedule Demo,;
+                Schedule Demo,
               </Button>;
             </div>;
       </section>;
-,;
       {/* comment */}";
       <section className="py-20 bg-gray-50">";
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
           <div className="text-center mb-16">";
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-              Powerful Email Automation Features,;
+              Powerful Email Automation Features,
             </h2>";
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">,;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
               Our platform provides everything you need to create, automate, and optimize your email marketing campaigns.;
             </p>;
           </div>;
 ";
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,;
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (";
               <Card key="{index}" className="p-6 hover: shadow-xl transition-shadow duration-300">";
                 <div className="flex items-center mb-4">";
                   <div className="p-3 bg-blue-100 rounded-lg mr-4">";
                     <feature.icon className="h-8 w-8 text-blue-600" />;
-                  </div>",;
+                  </div>",
                   <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>;
                 </div>";
                 <p className="text-gray-600">{feature.description}</p>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -108,24 +104,24 @@ export default function EmailAutomation() {;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
           <div className="text-center mb-16">";
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-              Choose Your Plan,;
+              Choose Your Plan,
             </h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
               Select the perfect plan for your email marketing needs. All plans include our core automation features.;
             </p>;
           </div>;
 ";
-          <div className="{"grid" grid-cols-1 md:grid-cols-3 gap-8">,;
+          <div className="{"grid" grid-cols-1 md:grid-cols-3 gap-8">,
             {pricingPlans.map((plan, index) => (";
               <Card key="{index}" className="{"p-8" relative ${plan.popular ? "ring-2 ring-blue-500 shadow-xl" : ""}"}>;
                 {plan.popular && (";
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2"}>";
                     <Badge className="bg-blue-500 text-white px-4 py-1">;
-                      Most Popular,;
+                      Most Popular,
                     </Badge>;
                   </div>;
                 )}
-;
+
                 ";
                 <div className="text-center mb-6">";
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>";
@@ -142,18 +138,18 @@ export default function EmailAutomation() {;
                       <span className="{"text-gray-600"">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>;
 ";
                 <Button className="{"w-full" ${plan.popular ? "bg-blue-600 hover:bg-blue-700" : ""}"}";
                   variant="{plan.popular" ? "default" : "outline'}
-;
+
                 >;
-                  Get Started,;
+                  Get Started,
                 </Button>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -162,8 +158,8 @@ export default function EmailAutomation() {;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
             Ready to Automate Your Email Marketing?;
           </h2>";
-          <p className="text-xl mb-8 max-w-2xl mx-auto">,;
-            Join thousands of businesses already using our email automation platform,;
+          <p className="text-xl mb-8 max-w-2xl mx-auto">,
+            Join thousands of businesses already using our email automation platform,
 to increase engagement and drive conversions.;
           </p>";
           <div className="flex flex-col sm: flex-row gap-4 justify-center">";
@@ -173,10 +169,10 @@ to increase engagement and drive conversions.;
             </Button>";
             <Link href="/contact">";
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">;
-                Contact Sales,;
+                Contact Sales,
               </Button>;
             </Link>;
           </div>;
       </section>;
-    </>",;
+    </>",
   )}

@@ -3,13 +3,13 @@ const { execSync } = require("child_process");
 class $1 {;
   constructor() {;
   this.metrics = {;
-  complexity: 0,;
-      maintainability: 0,;
-      testCoverage: 0,;
-      performance: 0,;,;,
+  complexity: 0,
+      maintainability: 0,
+      testCoverage: 0,
+      performance: 0,,,
 }
   }
-;
+
   async analyzeCodeQuality() {;
   try {;
   // Analyze TypeScript complexity;
@@ -17,23 +17,23 @@ class $1 {;
       this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
       console.log("Code quality analysis completed");
-      return this.metrics;,;,
+      return this.metrics;,
 } catch (error) {;
   console.error("Code quality analysis failed:", error.message);
-      return null;,;,
+      return null;,
 }
   }
-;
+
   calculateComplexity() {;
   // Simplified complexity calculation;
-    return Math.floor(Math.random() * 10) + 1;,;,
+    return Math.floor(Math.random() * 10) + 1;,
 }
-;
+
   calculateMaintainability() {;
   // Simplified maintainability calculation;
-    return Math.floor(Math.random() * 100) + 50;,;,
+    return Math.floor(Math.random() * 100) + 50;,
 }
 }
-;
+
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality()

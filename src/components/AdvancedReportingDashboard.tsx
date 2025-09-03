@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 export const AdvancedReportingDashboard: React.FC < AdvancedReportingDashboardProps> = ({;
 import { motion, AnimatePresence  } from 'framer-motion';
-;
 export default function Page() {;
 > {;
 
@@ -9,12 +8,12 @@ export default function Page() {;
   showFilters?: boolean;
   showCharts?: boolean;
   maxReports?: number}
-;
-export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({;
 
-showMetrics:  true,;
-  showFilters = true,;
-  showCharts = true,;
+export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
+
+showMetrics:  true,
+  showFilters = true,
+  showCharts = true,
   maxReports = 15}) => {;
   const [reports, setReports] = useState<ReportData[]>([]);
   const [filteredReports, setFilteredReports] = useState<ReportData[]>([]);
@@ -28,152 +27,148 @@ showMetrics:  true,;
   const [showReportDetails, setShowReportDetails] = useState(false);
   const [sortBy, setSortBy] = useState<any>('date');
   const [sortOrder, setSortOrder] = useState<any>('desc');
-;
   // Sample report data;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     const sampleReports: ReportData[] = [{;
 
-        id: '1',;
-        title: 'Q4 Financial Performance Analysis',;
-        type: 'financial',;
-        category: 'Financial Reports',;
+        id: '1',
+        title: 'Q4 Financial Performance Analysis',
+        type: 'financial',
+        category: 'Financial Reports',
         data: {;
 
-          revenue: 2500000,;
-          expenses: 1800000,;
-          profit: 700000,;
-          growth: 15.5,;
-          keyMetrics['Revenue Growth',Profit Margin',Cost Efficiency']},;
-        lastUpdated: '2024-01-15',;
-        status: 'active',;
-        priority: 'high',;
-        tags['Finance',Q4',Performance',Analysis'],;
-        description: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins',;
-        author: 'Sarah Johnson',        views: 245,;
-        downloads: 89,;
-        rating: 4.8;,
-},;
+          revenue: 2500000,
+          expenses: 1800000,
+          profit: 700000,
+          growth: 15.5,
+          keyMetrics['Revenue Growth',Profit Margin',Cost Efficiency']},
+        lastUpdated: '2024-01-15',
+        status: 'active',
+        priority: 'high',
+        tags['Finance',Q4',Performance',Analysis'],
+        description: 'Comprehensive analysis of Q4 financial performance including revenue, expenses, and profit margins',
+        author: 'Sarah Johnson',        views: 245,
+        downloads: 89,
+        rating: 4.8;
+},
       {;
 
-        id: '2',;
-        title: 'AI Services Performance Metrics',;
-        type: 'performance',;
-        category: 'Performance Reports',;
+        id: '2',
+        title: 'AI Services Performance Metrics',
+        type: 'performance',
+        category: 'Performance Reports',
         data: {;
 
-          accuracy: 94.2,;
-          responseTime: 1.8,;
-          uptime: 99.9,;
-          userSatisfaction: 4.6,;
-          keyMetrics['Accuracy',Response Time',Uptime',User Satisfaction']},;
-        lastUpdated: '2024-01-14',;
-        status: 'active',;
-        priority: 'critical',;
-        tags['AI',Performance',Metrics',Machine Learning'],;
-        description: 'Detailed performance metrics for AI services including accuracy, response time, and uptime',;
-        author: 'Michael Chen',        views: 189,;
-        downloads: 67,;
-        rating: 4.9;,
-},;
+          accuracy: 94.2,
+          responseTime: 1.8,
+          uptime: 99.9,
+          userSatisfaction: 4.6,
+          keyMetrics['Accuracy',Response Time',Uptime',User Satisfaction']},
+        lastUpdated: '2024-01-14',
+        status: 'active',
+        priority: 'critical',
+        tags['AI',Performance',Metrics',Machine Learning'],
+        description: 'Detailed performance metrics for AI services including accuracy, response time, and uptime',
+        author: 'Michael Chen',        views: 189,
+        downloads: 67,
+        rating: 4.9;
+},
       {;
 
-        id: '3',;
-        title: 'Cybersecurity Threat Assessment',;
-        type: 'security',;
-        category: 'Security Reports',;
+        id: '3',
+        title: 'Cybersecurity Threat Assessment',
+        type: 'security',
+        category: 'Security Reports',
         data: {;
 
-          threatsDetected: 156,;
-          incidentsResolved: 154,;
-          responseTime: 2.3,;
-          riskLevel: 'Medium',;
-          keyMetrics['Threats Detected',Incidents Resolved',Response Time',Risk Level']},;
-        lastUpdated: '2024-01-13',;
-        status: 'active',;
-        priority: 'high',;
-        tags['Security',Threats',Assessment',Risk Management'],;
-        description: 'Comprehensive assessment of cybersecurity threats and incident response metrics',;
-        author: 'David Kim',        views: 312,;
-        downloads: 134,;
-        rating: 4.7;,
-},;
+          threatsDetected: 156,
+          incidentsResolved: 154,
+          responseTime: 2.3,
+          riskLevel: 'Medium',
+          keyMetrics['Threats Detected',Incidents Resolved',Response Time',Risk Level']},
+        lastUpdated: '2024-01-13',
+        status: 'active',
+        priority: 'high',
+        tags['Security',Threats',Assessment',Risk Management'],
+        description: 'Comprehensive assessment of cybersecurity threats and incident response metrics',
+        author: 'David Kim',        views: 312,
+        downloads: 134,
+        rating: 4.7;
+},
       {;
 
-        id: '4',;
-        title: 'Cloud Infrastructure Utilization',;
-        type: 'operational',;
-        category: 'Operational Reports',;
+        id: '4',
+        title: 'Cloud Infrastructure Utilization',
+        type: 'operational',
+        category: 'Operational Reports',
         data: {;
 
-          cpuUtilization: 78.5,;
-          memoryUsage: 82.3,;
-          storageUsage: 65.8,;
-          networkTraffic: 45.2,;
-          keyMetrics['CPU Utilization',Memory Usage',Storage Usage',Network Traffic']},;
-        lastUpdated: '2024-01-12',;
-        status: 'active',;
-        priority: 'medium',;
-        tags['Cloud',Infrastructure',Utilization',Monitoring'],;
-        description: 'Real-time monitoring of cloud infrastructure utilization and performance metrics',;
-        author: 'Lisa Thompson',        views: 167,;
-        downloads: 56,;
-        rating: 4.5;,
-},;
+          cpuUtilization: 78.5,
+          memoryUsage: 82.3,
+          storageUsage: 65.8,
+          networkTraffic: 45.2,
+          keyMetrics['CPU Utilization',Memory Usage',Storage Usage',Network Traffic']},
+        lastUpdated: '2024-01-12',
+        status: 'active',
+        priority: 'medium',
+        tags['Cloud',Infrastructure',Utilization',Monitoring'],
+        description: 'Real-time monitoring of cloud infrastructure utilization and performance metrics',
+        author: 'Lisa Thompson',        views: 167,
+        downloads: 56,
+        rating: 4.5;
+},
       {;
 
-        id: '5',;
-        title: 'Customer Satisfaction Survey Results',;
-        type: 'customer',;
-        category: 'Customer Reports',;
+        id: '5',
+        title: 'Customer Satisfaction Survey Results',
+        type: 'customer',
+        category: 'Customer Reports',
         data: {;
 
-          overallSatisfaction: 4.6,;
-          netPromoterScore: 72,;
-          responseRate: 89.5,;
-          topConcerns['Response Time',Documentation',Support Quality'],;
-          keyMetrics['Overall Satisfaction',NPS',Response Rate',Top Concerns']},;
-        lastUpdated: '2024-01-11',;
-        status: 'active',;
-        priority: 'medium',;
-        tags['Customer',Satisfaction',Survey',NPS'],;
-        description: 'Analysis of customer satisfaction survey results and net promoter score metrics',;
-        author: 'Alex Wong',        views: 203,;
-        downloads: 78,;
+          overallSatisfaction: 4.6,
+          netPromoterScore: 72,
+          responseRate: 89.5,
+          topConcerns['Response Time',Documentation',Support Quality'],
+          keyMetrics['Overall Satisfaction',NPS',Response Rate',Top Concerns']},
+        lastUpdated: '2024-01-11',
+        status: 'active',
+        priority: 'medium',
+        tags['Customer',Satisfaction',Survey',NPS'],
+        description: 'Analysis of customer satisfaction survey results and net promoter score metrics',
+        author: 'Alex Wong',        views: 203,
+        downloads: 78,
         rating: 4.6;
 
     ];
-;
     setReports(sampleReports) ;
     setFilteredReports(sampleReports) }, []) ;
-;
   // Filter and sort reports;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     let filtered = reports;
-;
     if(selectedType !== 'all') {;
 
       filtered = filtered.filter(r => r.type === selectedType)}
-;
+
     if(selectedCategory !== 'all') {;
 
       filtered = filtered.filter(r => r.category === selectedCategory)}
-;
+
     if(selectedStatus !== 'all') {;
 
       filtered = filtered.filter(r => r.status === selectedStatus)}
-;
+
     if(searchQuery) {;
 
       filtered = filtered.filter(r =>;
@@ -186,12 +181,11 @@ showMetrics:  true,;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       )}
-;
+
     // Sort reports;
     filtered.sort((a, b) => {;
 
       let aValue: any, bValue: unknown;
-;
       switch(sortBy) {;
 
         case 'date':;
@@ -209,11 +203,8 @@ showMetrics:  true,;
         case 'priority':;
           const priorityOrder = {;
 
-  low: 1, medium: 2, high: 3,;  ;
-  ;
-  ;
-  ;
-  ;
+  low: 1, medium: 2, high: 3,
+
   critical: 4 };          aValue = priorityOrder[a.priority as keyof typeof priorityOrder];
           bValue = priorityOrder[b.priority as keyof typeof priorityOrder];
           break;
@@ -224,14 +215,13 @@ showMetrics:  true,;
         default:;
           aValue = 0;
           bValue = 0}
-;
+
       if(sortOrder = == 'asc') {;
         return aValue > bValue ? 1 : -1} else {;
 
         return aValue < bValue ? 1 : -1}
     }) ;
     setFilteredReports(filtered.slice (0, maxReports) ) }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]) ;
-;
   // Calculate report metrics;
   const reportMetrics = {;
 }}

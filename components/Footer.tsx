@@ -1,23 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
 import { ;
-  Mail, ;
-  Phone, ;
-  MapPin, ;
-  Linkedin, ;
-  Twitter, ;
-  Github, ;
-  Facebook,;
-  ArrowUp;,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Facebook,
+  ArrowUp;
 } from 'lucide-react';
-;
 const Footer: React.FC = () => {;
   const scrollToTop = () => {;
-    window.scrollTo({ top: 0, behavior: 'smooth' });,
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 };
-;
   const currentYear = new Date().getFullYear();
-;
   return (;
     <footer className="bg-black border-t border-white/10">;
       <div className="container mx-auto px-4">;
@@ -193,7 +190,6 @@ const Footer: React.FC = () => {;
         <ArrowUp className="w-6 h-6" />;
       </button>;
     </footer>;
-  );,
+  );
 };
-;
 export default Footer;

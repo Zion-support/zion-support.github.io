@@ -5,7 +5,6 @@
   ContentQualityAnalyzer.instance = new ContentQualityAnalyzer()} return ContentQualityAnalyzer.instance; }; analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {;
   // comment;
 export const contentQualityAnalyzer = {}
-;
 
 export default contentQualityAnalyzer;
 }}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
 const TransformationServices: React.FC = () => {;
   return(<>;
       <SEO title="TransformationServices - Zion Tech Group" />;
@@ -11,7 +10,6 @@ const TransformationServices: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );,
+  );
 };
-;
 export default TransformationServices;

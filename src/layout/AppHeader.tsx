@@ -1,46 +1,43 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
-;
 export function AppHeader() {;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-;
   const handleSearch = (e: React.FormEvent) => {;
     e.preventDefault();
     if (searchQuery.trim()) {;
       // Navigate to search results;
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;,
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
 }
   };
-;
   // Organized Services Categories;
   const servicesCategories = [{;
-      title: 'AI & Machine Learning',;
-      icon: Brain,;
-      color: 'from-zion-cyan to-zion-purple',;
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      color: 'from-zion-cyan to-zion-purple',
       dropdown: [;
-        { name: 'Machine Learning', href: '/ai-solutions/machine-learning', icon: Brain, color: 'from-zion-cyan to-zion-purple' },;
-        { name: 'Computer Vision', href: '/ai-solutions/computer-vision', icon: Eye, color: 'from-zion-purple to-zion-pink' },;
-        { name: 'NLP & Chatbots', href: '/ai-solutions/nlp-chatbots', icon: MessageCircle, color: 'from-zion-green to-zion-cyan' },;
-        { name: 'Predictive Analytics', href: '/ai-solutions/predictive-analytics', icon: TrendingUp, color: 'from-zion-blue to-zion-green' },;
-        { name: 'AI Consulting', href: '/ai-solutions/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },;
+        { name: 'Machine Learning', href: '/ai-solutions/machine-learning', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+        { name: 'Computer Vision', href: '/ai-solutions/computer-vision', icon: Eye, color: 'from-zion-purple to-zion-pink' },
+        { name: 'NLP & Chatbots', href: '/ai-solutions/nlp-chatbots', icon: MessageCircle, color: 'from-zion-green to-zion-cyan' },
+        { name: 'Predictive Analytics', href: '/ai-solutions/predictive-analytics', icon: TrendingUp, color: 'from-zion-blue to-zion-green' },
+        { name: 'AI Consulting', href: '/ai-solutions/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },
         { name: 'Custom AI Models', href: '/ai-solutions/custom-models', icon: Code, color: 'from-zion-orange to-zion-purple' }
-      ];,
-},;
+      ];
+},
     {;
-      name: 'Innovation Lab',;
-      href: '/innovation-lab',;
-      icon: Sparkles,;
-      color: 'from-zion-purple to-zion-pink',;
+      name: 'Innovation Lab',
+      href: '/innovation-lab',
+      icon: Sparkles,
+      color: 'from-zion-purple to-zion-pink',
       dropdown: [;
-        { name: 'Research & Development', href: '/innovation-lab/research', icon: Sparkles, color: 'from-zion-purple to-zion-pink' },;
-        { name: 'Emerging Tech', href: '/innovation-lab/emerging-tech', icon: Rocket, color: 'from-zion-purple to-zion-cyan' },;
-        { name: 'Prototyping', href: '/innovation-lab/prototyping', icon: Code, color: 'from-zion-green to-zion-cyan' },;
-        { name: 'Innovation Consulting', href: '/innovation-lab/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },;
+        { name: 'Research & Development', href: '/innovation-lab/research', icon: Sparkles, color: 'from-zion-purple to-zion-pink' },
+        { name: 'Emerging Tech', href: '/innovation-lab/emerging-tech', icon: Rocket, color: 'from-zion-purple to-zion-cyan' },
+        { name: 'Prototyping', href: '/innovation-lab/prototyping', icon: Code, color: 'from-zion-green to-zion-cyan' },
+        { name: 'Innovation Consulting', href: '/innovation-lab/consulting', icon: Users, color: 'from-zion-pink to-zion-purple' },
         { name: 'Tech Partnerships', href: '/innovation-lab/partnerships', icon: Handshake, color: 'from-zion-blue to-zion-green' }
-      ];,
+      ];
 }
   ];
         setServicesDropdownOpen(true);
@@ -74,13 +71,11 @@ export function AppHeader() {;
       setCompanyDropdownOpen(false);
       setResourcesDropdownOpen(false)}
   };
-;
   const closeAllDropdowns = (...args: unknown[]): unknown => {;
     setServicesDropdownOpen(false);    setSolutionsDropdownOpen(false);
     setCompanyDropdownOpen(false);
     setResourcesDropdownOpen(false);
     setActiveNav(null)};
-;
   return ();
     <>`;
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled;
@@ -292,7 +287,7 @@ export function AppHeader() {;
                   onFocus={() => setSearchFocused(true)}
                   onBlur={() => setSearchFocused(false)}
                   className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-200 ${;
-                    searchFocused ? 'w-80' : '';,
+                    searchFocused ? 'w-80' : '';
 }`}
                 />;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />;
@@ -348,7 +343,7 @@ export function AppHeader() {;
                         <button;
                           onClick={() => {;
                             logout();
-                            setActiveDropdown(null);,
+                            setActiveDropdown(null);
 }}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
                           <LogOut className="w-4 h-4 mr-3" />;
@@ -366,20 +361,18 @@ export function AppHeader() {;
           <div className="flex items-center space-x-4">;
             {/* Search */}
             <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [;
-    { name: 'Home', href: '/', current: true },;
-    { name: 'About', href: '/about', current: false },;
-    { name: 'Contact', href: '/contact', current: false },;
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
   ];
-;
   const services = [;
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },;
-    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },;
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },;
-    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },;
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },;
-    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },;
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },
+    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
+    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
+    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },
+    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },
   ];
-;
   return (;
     <>;
       <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">;
@@ -392,7 +385,6 @@ export function AppHeader() {;
               </h1>;
             </Link>;
           </div>;
-          ;
           {/* Desktop Navigation */}
           <nav className="hidden md:flex ml-8 space-x-8">;
             {navigation.map((item) => (;
@@ -403,7 +395,7 @@ export function AppHeader() {;
                 {item.name}
               </Link>;
             ))}
-            ;
+
             {/* Services Dropdown */}
             <div className="relative">;
               <button;
@@ -414,7 +406,6 @@ export function AppHeader() {;
                 Services;
                 <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />;
               </button>;
-              ;
               {servicesDropdownOpen && (;
                 <div ;
                   className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 border border-slate-700/50 rounded-lg shadow-xl backdrop-blur-md";
@@ -530,7 +521,7 @@ export function AppHeader() {;
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${;
                       item.current;
                         ? 'text-zion-cyan bg-zion-cyan/10';
-                        : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10';,
+                        : 'text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10';
 }`}
                   >;
                     {item.name}
@@ -560,7 +551,7 @@ export function AppHeader() {;
                   {item.name}
                 </Link>;
               ))}
-              ;
+
               {/* Mobile Services */}
               <div className="px-3 py-2">;
                 <div className="text-slate-400 text-sm font-medium mb-2">Services</div>;
@@ -673,7 +664,7 @@ export function AppHeader() {;
                     <button;
                       onClick={() => {;
                         logout();
-                        closeMobileMenu();,
+                        closeMobileMenu();
 }}
                       className="block w-full px-4 py-2 text-center text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors">;
                       Logout;
@@ -685,6 +676,6 @@ export function AppHeader() {;
           </motion.div>;
         )}
       </AnimatePresence>;
-    </header>  );,
+    </header>  );
 }
 }}})))))

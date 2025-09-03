@@ -2,74 +2,70 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { ;
-  BarChart3, Brain, Users, TrendingUp, CheckCircle, Star, ArrowRight, ;
-  Eye, MessageSquare, Target, Zap, Globe, ExternalLink, Phone, Mail, ;
-  MapPin, PieChart, LineChart, Activity, Database, Shield, Clock;,
+  BarChart3, Brain, Users, TrendingUp, CheckCircle, Star, ArrowRight,
+  Eye, MessageSquare, Target, Zap, Globe, ExternalLink, Phone, Mail,
+  MapPin, PieChart, LineChart, Activity, Database, Shield, Clock;
 } from "lucide-react";
 
 export default function AICustomerInsightsPlatform() {;
-  const features = [;
-    "Real-time Customer Analytics",;
-    "Predictive Behavior Modeling", ;
-    "Sentiment Analysis Engine",;
-    "Customer Journey Mapping",;
-    "Churn Prediction & Prevention",;
-    "Personalization Engine",;
-    "Multi-channel Data Integration",;
-    "Advanced Reporting Dashboard";
-  ];
+  const features = [ "Real-time Customer Analytics",
+    "Predictive Behavior Modeling",
+    "Sentiment Analysis Engine",
+    "Customer Journey Mapping",
+    "Churn Prediction & Prevention",
+    "Personalization Engine",
+    "Multi-channel Data Integration",
+    "Advanced Reporting Dashboard" ];
 
-  const benefits = [;
-    "Increase customer retention by 45%",;
-    "Boost revenue per customer by 35%",;
-    "Reduce churn rate by 60%",;
-    "Improve customer satisfaction by 50%",;
-    "Optimize marketing ROI by 40%",;
-    "Accelerate decision-making by 70%";
-  ];
+  const benefits = [ "Increase customer retention by 45%",
+    "Boost revenue per customer by 35%",
+    "Reduce churn rate by 60%",
+    "Improve customer satisfaction by 50%",
+    "Optimize marketing ROI by 40%",
+    "Accelerate decision-making by 70%" ];
 
   const pricing = [;
     {;
-      name: "Starter",;
-      price: "$1,999/month",;
-      details: ["Up to 10,000 customers", "Basic analytics", "Email support", "Standard integrations", "Monthly reports"];,
-},;
+      name: "Starter",
+      price: "$1,999/month",
+      details: ["Up to 10,000 customers", "Basic analytics", "Email support", "Standard integrations", "Monthly reports"];
+},
     {;
-      name: "Professional", ;
-      price: "$4,999/month",;
-      details: ["Up to 100,000 customers", "Advanced AI insights", "Priority support", "All integrations", "Real-time dashboards", "Custom models"];,
-},;
+      name: "Professional",
+      price: "$4,999/month",
+      details: ["Up to 100,000 customers", "Advanced AI insights", "Priority support", "All integrations", "Real-time dashboards", "Custom models"];
+},
     {;
-      name: "Enterprise",;
-      price: "$9,999/month", ;
-      details: ["Unlimited customers", "Full AI suite", "24/7 support", "Custom integrations", "White-label solution", "Dedicated success manager"];,
+      name: "Enterprise",
+      price: "$9,999/month",
+      details: ["Unlimited customers", "Full AI suite", "24/7 support", "Custom integrations", "White-label solution", "Dedicated success manager"];
 }
   ];
 
   const useCases = [;
     {;
-      title: "E-commerce Personalization",;
-      description: "Create personalized shopping experiences that increase conversion rates and customer lifetime value.",;
-      icon: Target;,
-},;
+      title: "E-commerce Personalization",
+      description: "Create personalized shopping experiences that increase conversion rates and customer lifetime value.",
+      icon: Target;
+},
     {;
-      title: "SaaS Customer Success",;
-      description: "Predict and prevent churn while identifying expansion opportunities for maximum growth.",;
-      icon: TrendingUp;,
-},;
+      title: "SaaS Customer Success",
+      description: "Predict and prevent churn while identifying expansion opportunities for maximum growth.",
+      icon: TrendingUp;
+},
     {;
-      title: "Retail Analytics",;
-      description: "Understand customer behavior patterns to optimize inventory, pricing, and marketing strategies.",;
-      icon: BarChart3;,
+      title: "Retail Analytics",
+      description: "Understand customer behavior patterns to optimize inventory, pricing, and marketing strategies.",
+      icon: BarChart3;
 }
   ];
 
   const industries = [;
-    { name: "E-commerce", customers: "500+", growth: "+25%" },;
-    { name: "SaaS", customers: "300+", growth: "+40%" },;
-    { name: "Retail", customers: "200+", growth: "+30%" },;
-    { name: "Healthcare", customers: "150+", growth: "+35%" },;
-    { name: "Financial Services", customers: "100+", growth: "+45%" },;
+    { name: "E-commerce", customers: "500+", growth: "+25%" },
+    { name: "SaaS", customers: "300+", growth: "+40%" },
+    { name: "Retail", customers: "200+", growth: "+30%" },
+    { name: "Healthcare", customers: "150+", growth: "+35%" },
+    { name: "Financial Services", customers: "100+", growth: "+45%" },
     { name: "Education", customers: "80+", growth: "+20%" }
   ];
 
@@ -94,7 +90,7 @@ export default function AICustomerInsightsPlatform() {;
               AI Customer Insights Platform;
             </h1>;
             <p className="text-emerald-100 text-xl max-w-3xl mx-auto mb-8">;
-              Transform customer data into actionable insights with AI-powered analytics that predict behavior, ;
+              Transform customer data into actionable insights with AI-powered analytics that predict behavior,
               prevent churn, and maximize customer lifetime value.;
             </p>;
             <div className="flex flex-wrap justify-center gap-4">;
@@ -114,7 +110,6 @@ export default function AICustomerInsightsPlatform() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Capabilities</h2>;
             <p className="text-gray-600 text-lg">Powered by machine learning and behavioral analytics</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {features.map((feature, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">;
@@ -144,7 +139,6 @@ export default function AICustomerInsightsPlatform() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Business Impact</h2>;
               <p className="text-gray-600 text-lg">Real results from our customer success stories</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {benefits.map((benefit, index) => (;
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
@@ -164,7 +158,6 @@ export default function AICustomerInsightsPlatform() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Trusted by Industry Leaders</h2>;
             <p className="text-gray-600 text-lg">Serving customers across multiple industries</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {industries.map((industry, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 text-center">;
@@ -184,7 +177,6 @@ export default function AICustomerInsightsPlatform() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>;
               <p className="text-gray-600 text-lg">Ideal solutions for different business scenarios</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-3 gap-8">;
               {useCases.map((useCase, index) => (;
                 <div key={index} className="text-center">;
@@ -206,7 +198,6 @@ export default function AICustomerInsightsPlatform() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Pricing Plans</h2>;
               <p className="text-gray-600 text-lg">Scale with your business needs</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-3 gap-8">;
               {pricing.map((tier, index) => (;
                 <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border ${tier.name === 'Professional' ? 'ring-2 ring-emerald-500 relative' : ''}`}>;
@@ -265,5 +256,5 @@ export default function AICustomerInsightsPlatform() {;
         </section>;
       </div>;
     </>;
-  );,
+  );
 }

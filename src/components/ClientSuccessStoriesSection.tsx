@@ -1,5 +1,4 @@
 import {  import { motion  } from 'framer-motion';
-;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -12,13 +11,13 @@ export function ClientSuccessStoriesSection() {;
           className="text-center mb-16";
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -33,22 +32,21 @@ export function ClientSuccessStoriesSection() {;
 
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.1;,
+  { duration: 0.6,
+  delay: 0.1;
 }}";
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">;
           {successMetrics.map ( (metric, index) => {;
-            ;
             return (";
               <div key = {metric.label} className="text-center">";
                 <div className="flex justify-center mb-4">";
@@ -73,19 +71,19 @@ export function ClientSuccessStoriesSection() {;
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25";
               initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
               whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               viewport={{ once: true }}
               transition = {;
 
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}
             >";
               <div className="flex items-center mb-6">";
@@ -154,19 +152,19 @@ export function ClientSuccessStoriesSection() {;
         <motion.div;
           className="mb-16";          initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.4;,
+  { duration: 0.6,
+  delay: 0.4;
 }}
         >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
@@ -197,19 +195,19 @@ export function ClientSuccessStoriesSection() {;
         <motion.div;
           className="text-center"          initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.6;,
+  { duration: 0.6,
+  delay: 0.6;
 }}
         >";
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">";
@@ -232,7 +230,6 @@ export function ClientSuccessStoriesSection() {;
         </motion.div>;
       </div>;
     </section>;) };
-;
 export default ClientSuccessStoriesSection;";
             <span className="text-2xl">→</span>;
           </div>;

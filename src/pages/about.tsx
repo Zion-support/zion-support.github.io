@@ -1,6 +1,5 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
 const About: React.FC = () => {;
   return(<>;
       <SEO ;
@@ -14,12 +13,11 @@ const About: React.FC = () => {;
             Zion Tech Group is a leading technology solutions provider dedicated to helping ;
             organizations transform their digital infrastructure and achieve their business goals.</p>;
           <p className="text-lg text-gray-600">;
-            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, ;
+            Our team of experts specializes in AI, cybersecurity, cloud infrastructure,
             and digital transformation services.</p>;
         </div>;
       </div>;
     </>;
-  );,
+  );
 };
-;
 export default About;

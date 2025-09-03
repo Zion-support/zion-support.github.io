@@ -2,68 +2,65 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
-;
 const Terms: NextPage = () => {;
   const lastUpdated = 'January 27, 2025';
-;
   const termsSections = [;
     {;
-      icon: CheckCircle,;
-      title: 'Acceptance of Terms',;
+      icon: CheckCircle,
+      title: 'Acceptance of Terms',
       content: [;
-        'By accessing and using Zion Tech Group services, you accept and agree to be bound by these terms',;
-        'If you do not agree to these terms, you may not use our services',;
-        'These terms apply to all users of our website and services',;
+        'By accessing and using Zion Tech Group services, you accept and agree to be bound by these terms',
+        'If you do not agree to these terms, you may not use our services',
+        'These terms apply to all users of our website and services',
         'We reserve the right to modify these terms at any time';
-      ];,
-},;
+      ];
+},
     {;
-      icon: Scale,;
-      title: 'Service Description',;
+      icon: Scale,
+      title: 'Service Description',
       content: [;
-        'Zion Tech Group provides technology solutions including AI development, cloud services, and digital transformation',;
-        'Services are provided on an "as is" basis with no warranties',;
-        'We reserve the right to modify or discontinue services at any time',;
+        'Zion Tech Group provides technology solutions including AI development, cloud services, and digital transformation',
+        'Services are provided on an "as is" basis with no warranties',
+        'We reserve the right to modify or discontinue services at any time',
         'Service availability may vary based on technical requirements and maintenance';
-      ];,
-},;
+      ];
+},
     {;
-      icon: AlertTriangle,;
-      title: 'User Responsibilities',;
+      icon: AlertTriangle,
+      title: 'User Responsibilities',
       content: [;
-        'Provide accurate and complete information when using our services',;
-        'Maintain the confidentiality of your account credentials',;
-        'Use our services in compliance with applicable laws and regulations',;
+        'Provide accurate and complete information when using our services',
+        'Maintain the confidentiality of your account credentials',
+        'Use our services in compliance with applicable laws and regulations',
         'Not engage in any activities that could harm our systems or other users';
-      ];,
-},;
+      ];
+},
     {;
-      icon: XCircle,;
-      title: 'Prohibited Uses',;
+      icon: XCircle,
+      title: 'Prohibited Uses',
       content: [;
-        'Violating any applicable laws or regulations',;
-        'Transmitting malicious code or harmful content',;
-        'Attempting to gain unauthorized access to our systems',;
+        'Violating any applicable laws or regulations',
+        'Transmitting malicious code or harmful content',
+        'Attempting to gain unauthorized access to our systems',
         'Using our services for any illegal or unauthorized purpose';
-      ];,
-},;
+      ];
+},
     {;
-      icon: Scale,;
-      title: 'Legal Compliance',;
-      description: 'Our commitment to legal compliance and adherence to applicable laws and regulations.';,
-},;
+      icon: Scale,
+      title: 'Legal Compliance',
+      description: 'Our commitment to legal compliance and adherence to applicable laws and regulations.';
+},
     {;
-      icon: Shield,;
-      title: 'Intellectual Property',;
-      description: 'Protection of intellectual property rights and proper usage of our proprietary technologies.';,
-},;
+      icon: Shield,
+      title: 'Intellectual Property',
+      description: 'Protection of intellectual property rights and proper usage of our proprietary technologies.';
+},
     {;
-      icon: AlertTriangle,;
-      title: 'Limitations',;
-      description: 'Important limitations and disclaimers regarding our services and liability.';,
+      icon: AlertTriangle,
+      title: 'Limitations',
+      description: 'Important limitations and disclaimers regarding our services and liability.';
 }
   ];
-;
   return (;
     <MainLayout;
       title="Terms of Service - Zion Tech Group";
@@ -125,7 +122,7 @@ const Terms: NextPage = () => {;
               <div className="bg-white rounded-lg shadow-lg p-8 mt-8">;
                 <h2 className="text-2xl font-bold mb-4 text-gray-900">Limitation of Liability</h2>;
                 <p className="text-gray-600 leading-relaxed mb-4">;
-                  In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, ;
+                  In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers,
                   or affiliates, be liable for any indirect, incidental, special, consequential, or punitive ;
                   damages, including without limitation, loss of profits, data, use, goodwill, or other ;
                   intangible losses, resulting from your use of our services.;
@@ -140,7 +137,7 @@ const Terms: NextPage = () => {;
               <div className="bg-white rounded-lg shadow-lg p-8 mt-8">;
                 <h2 className="text-2xl font-bold mb-4 text-gray-900">Governing Law</h2>;
                 <p className="text-gray-600 leading-relaxed">;
-                  These Terms shall be interpreted and governed by the laws of the State of Delaware, ;
+                  These Terms shall be interpreted and governed by the laws of the State of Delaware,
                   United States, without regard to its conflict of law provisions. Any disputes arising ;
                   from these Terms shall be subject to the exclusive jurisdiction of the courts in Delaware.;
                 </p>;
@@ -373,7 +370,6 @@ export default function TermsPage() {;
 
           {/* Content */}
           <div className="bg-white rounded-lg shadow-lg p-8 space-y-8">;
-            ;
             {/* Introduction */}
             <section>;
               <h2 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center">;
@@ -468,7 +464,7 @@ export default function TermsPage() {;
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Intellectual Property Rights</h2>;
               <p className="text-gray-700 leading-relaxed mb-4">;
                 The service and its original content, features, and functionality are and will remain the exclusive ;
-                property of Zion Tech Group and its licensors. The service is protected by copyright, trademark, ;
+                property of Zion Tech Group and its licensors. The service is protected by copyright, trademark,
                 and other laws.;
               </p>;
               <p className="text-gray-700 leading-relaxed">;
@@ -508,9 +504,9 @@ export default function TermsPage() {;
                 Limitation of Liability;
               </h2>;
               <p className="text-gray-700 leading-relaxed mb-4">;
-                In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, ;
-                or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, ;
-                including without limitation, loss of profits, data, use, goodwill, or other intangible losses, ;
+                In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers,
+                or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages,
+                including without limitation, loss of profits, data, use, goodwill, or other intangible losses,
                 resulting from your use of our services.;
               </p>;
             </section>;
@@ -538,7 +534,7 @@ export default function TermsPage() {;
             <section>;
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Governing Law</h2>;
               <p className="text-gray-700 leading-relaxed mb-4">;
-                These Terms shall be interpreted and governed by the laws of the State of Delaware, United States, ;
+                These Terms shall be interpreted and governed by the laws of the State of Delaware, United States,
                 without regard to its conflict of law provisions.;
               </p>;
             </section>;
@@ -569,8 +565,7 @@ export default function TermsPage() {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-  );,
+  );
 }
-;

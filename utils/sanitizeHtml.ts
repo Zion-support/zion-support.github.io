@@ -2,20 +2,20 @@
   // comment;
 sanitized = sanitized.replace(/javascript:/gi, "");
   // comment;
-sanitized = sanitized.replace(/data:text\/html/gi, "");,
+sanitized = sanitized.replace(/data:text\/html/gi, "");
 }
 export function sanitizeUrl(url: string): string {;
   // comment;
-return url.replace(/javascript:/gi, "");,
+return url.replace(/javascript:/gi, "");
 }
 export function sanitizeCss(css: string): string {;
   // comment;
-return css.replace(/expression\s*\(/gi, "");,
+return css.replace(/expression\s*\(/gi, "");
 }
   // comment;
     t: URLs";
-  return url.replace(/javascrip,;
-    t:/gi, "");,
+  return url.replace(/javascrip,
+    t:/gi, "");
 }
 export function sanitizeCss(css: string): string {;
   // comment;

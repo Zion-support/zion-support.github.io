@@ -1,6 +1,5 @@
 import {  import { motion  } from 'framer-motion';
-export default function Page() {;
-,";
+export default function Page() {;";
         { name: "Micro SAAS Solutions", href: "/micro-saas" },";
         { name: "IT Infrastructure", href: "/it-services" },";
         { name: "Emerging Technologies", href: "/emerging-tech" },";
@@ -8,12 +7,12 @@ export default function Page() {;
         { name: "Cloud Solutions", href: "/it-services/cloud" },";
         { name: "DevOps & Automation", href: "/it-services/devops" },";
         { name: "Data Management", href: "/it-services/data" }
-      ];,
-},;
+      ];
+},
     {;
 ";
-      title: "Solutions",;
-      links[;";
+      title: "Solutions",
+      links[ ";
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },";
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },";
         { name: "Edge Computing", href: "/emerging-tech/edge" },";
@@ -22,12 +21,12 @@ export default function Page() {;
         { name: "Financial AI", href: "/ai-services/financial" },";
         { name: "Green Technology", href: "/green-it" },";
         { name: "Space Technology", href: "/emerging-tech/space" }
-      ];,
-},;
+      ];
+},
     {;
 ";
-      title: "Comp",;
-      links[;";
+      title: "Comp",
+      links[ ";
         { name: "About Us", href: "/about" },";
         { name: "Our Team", href: "/about#team" },";
         { name: "Careers", href: "/careers" },";
@@ -36,26 +35,26 @@ export default function Page() {;
         { name: "Press Kit", href: "/press" },";
         { name: "Investor Relations", href: "/investors" },";
         { name: "Sustainability", href: "/sustainability" }
-      ];,
-},;
+      ];
+},
     {;
 ";
-      title: "Resources",;
-      links[;";
+      title: "Resources",
+      links[ ";
         { name: "Documentation", href: "/docs" },";
         { name: "API Reference", href: "/api" },";
         { name: "Developer Portal", href: "/developer" },";
-        { name: "Support Center", href: "/support" },;";
-        { name: "FAQ", href: "/faq" },;";
-        { name: "Contact Us", href: "/contact" },;";
-        { name: "Case Studies", href: "/case-studies" },;";
+        { name: "Support Center", href: "/support" },";
+        { name: "FAQ", href: "/faq" },";
+        { name: "Contact Us", href: "/contact" },";
+        { name: "Case Studies", href: "/case-studies" },";
         { name: "Marketplace", href: "/marketplace" };
       ]};
   ];
-  const socialLinks = [;";
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;";
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;";
-    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;"    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram };
+  const socialLinks = [ ";
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },";
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },";
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },"    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram };
   ];
   return (";
     <footer className="relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">;
@@ -84,9 +83,8 @@ export default function Page() {;
                     <p className="text-sm text-zion-slate-light">Innovation • Intelligence • Impact</p>;
                   </div>;
                 </div>;
-                ;
                 <p className="text-zion-slate-light leading-relaxed">;
-                  Leading the future of technology with cutting-edge AI services, innovative solutions, ;
+                  Leading the future of technology with cutting-edge AI services, innovative solutions,
                   and comprehensive IT services. Empowering businesses to thrive in the digital age.;
                 </p>;
 
@@ -174,7 +172,6 @@ export default function Page() {;
               <div className="text-zion-slate-light text-sm">;
                 © {new Date().getFullYear()} Zion Tech Group. All rights reserved.;
               </div>;
-              ;
               <div className="flex items-center space-x-6 text-sm">;
                 <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">;
                   Privacy Policy;
@@ -200,7 +197,6 @@ export default function Page() {;
         </motion.button>;
       </div>;
     </footer>;
-  );,
+  );
 };
-;
-;,"});,})";
+;"});})";

@@ -2,12 +2,9 @@
 
 const fs = require('fs');
 const path = require('path');
-;
 function fixSyntaxErrors(filePath) {;
   console.log(`Fixing syntax errors in: ${filePath}`);
-  ;
   let content = fs.readFileSync(filePath, 'utf8');
-  ;
   // Fix common syntax errors;
   content = content;
     // Remove extra semicolons after class declarations;
@@ -25,7 +22,7 @@ function fixSyntaxErrors(filePath) {;
     // Remove standalone semicolons;
     .replace(/^\s*;\s*$/gm, '');
     // Fix object property declarations;
-    .replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
+    .replace(/(\w+):\s*([^,}]+),/g, '$1: $2,');
     // Fix array declarations;
     .replace(/\[\s*\]\s*;/g, '[]');
     // Remove extra semicolons in function calls;
@@ -39,36 +36,32 @@ function fixSyntaxErrors(filePath) {;
       const lines = string.split('\n');
       const lineIndex = string.substring(0, offset).split('\n').length - 1;
       const line = lines[lineIndex];
-      ;
       // Don't remove semicolons from statements that should have them;
       if (line.match(/(const|let|var|return|throw|break|continue)\s/)) {;
-        return match;,
+        return match;
 }
-      ;
+
       // Don't remove semicolons from object/array literals;
       if (line.match(/[\[\{]\s*$/)) {;
-        return match;,
+        return match;
 }
-      ;
-      return match.replace(';', '');,
+
+      return match.replace(';', '');
 });
-;
   fs.writeFileSync(filePath, content);
-  console.log(`Fixed syntax errors in: ${filePath}`);,
+  console.log(`Fixed syntax errors in: ${filePath}`);
 }
-;
+
 // Fix the main automation files;
 const filesToFix = [;
-  'simple-automation-orchestrator.cjs',;
+  'simple-automation-orchestrator.cjs',
   'run-automation-suite.cjs';
 ];
-;
 filesToFix.forEach(file => {;
   if (fs.existsSync(file)) {;
-    fixSyntaxErrors(file);,
+    fixSyntaxErrors(file);
 } else {;
-    console.log(`File not found: ${file}`);,
+    console.log(`File not found: ${file}`);
 }
 });
-;
 console.log('Syntax error fixing completed!');}}}}}}

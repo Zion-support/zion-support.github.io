@@ -1,6 +1,5 @@
 import React from 'react';
 import SEOHead from '../src/components/SEOHead';
-;
 const GreenITPage = () => {;
   return (;
     <>;
@@ -10,8 +9,6 @@ const GreenITPage = () => {;
         <p className="text-gray-600">We build sustainable, energy-efficient technology solutions to reduce environmental impact.</p>;
       </main>;
     </>;
-  );,
+  );
 };
-;
 export default GreenITPage;
-;

@@ -1,5 +1,4 @@
 import {  import { motion  } from 'framer-motion';
-;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -11,13 +10,13 @@ function TechnologyStackSection () {export function TechnologyStackSection() {;
           className="text-center mb-16";
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -62,8 +61,8 @@ function TechnologyStackSection () {export function TechnologyStackSection() {;
                           viewport={{ once: true }}
                           transition = {;
 
-  { duration: 1,;
-  delay: 0.8 + techIndex * 0.1;,
+  { duration: 1,
+  delay: 0.8 + techIndex * 0.1;
 }}
                         />;
                       </div>";
@@ -80,19 +79,19 @@ function TechnologyStackSection () {export function TechnologyStackSection() {;
         <motion.div;
           className="mb-16"          initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.4;,
+  { duration: 0.6,
+  delay: 0.4;
 }}
         >";
           <h3 className="text-3xl font-bold text-white text-center mb-8">;
@@ -113,24 +112,23 @@ function TechnologyStackSection () {export function TechnologyStackSection() {;
               )})}
           </div>;
         </motion.div>;
-;
         {/* Technology Philosophy */}
         <motion.div;
           className="mb-12"          initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.8;,
+  { duration: 0.6,
+  delay: 0.8;
 }}
         >";
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">";
@@ -168,19 +166,19 @@ function TechnologyStackSection () {export function TechnologyStackSection() {;
         <motion.div;
           className="text-center"          initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 1.0;,
+  { duration: 0.6,
+  delay: 1.0;
 }}
         >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">";
@@ -203,7 +201,6 @@ function TechnologyStackSection () {export function TechnologyStackSection() {;
         </motion.div>;
       </div>;
     </section>;) };
-;
 export default TechnologyStackSection;";
             <span className="text-2xl">→</span>;
           </div>;

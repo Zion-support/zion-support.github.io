@@ -2,318 +2,314 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ;
-  Brain, ;
-  Atom, ;
-  Shield, ;
-  Cloud, ;
-  Rocket, ;
-  Zap, ;
-  BarChart3, ;
-  MessageSquare, ;
-  Settings, ;
-  Users, ;
-  TrendingUp, ;
-  Code, ;
-  Database, ;
-  Network, ;
-  Lock, ;
-  Eye, ;
-  FileText, ;
-  Globe, ;
-  Target, ;
-  Lightbulb, ;
-  Award, ;
-  Star, ;
-  ArrowRight, ;
-  CheckCircle, ;
-  Play,;
-  Building2,;
-  Cpu,;
-  CircuitBoard,;
-  Flask,;
-  TrendingDown,;
-  Heart,;
-  BookOpen,;
-  Home,;
-  Truck,;
-  Factory,;
-  Satellite,;
-  Microscope,;
-  Beaker,;
-  TestTube,;
-  Gauge,;
-  CpuIcon,;
-  Server,;
-  HardDrive,;
-  Workflow,;
-  MessageCircle,;
-  Workflow as WorkflowIcon;,
+  Brain,
+  Atom,
+  Shield,
+  Cloud,
+  Rocket,
+  Zap,
+  BarChart3,
+  MessageSquare,
+  Settings,
+  Users,
+  TrendingUp,
+  Code,
+  Database,
+  Network,
+  Lock,
+  Eye,
+  FileText,
+  Globe,
+  Target,
+  Lightbulb,
+  Award,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Play,
+  Building2,
+  Cpu,
+  CircuitBoard,
+  Flask,
+  TrendingDown,
+  Heart,
+  BookOpen,
+  Home,
+  Truck,
+  Factory,
+  Satellite,
+  Microscope,
+  Beaker,
+  TestTube,
+  Gauge,
+  CpuIcon,
+  Server,
+  HardDrive,
+  Workflow,
+  MessageCircle,
+  Workflow as WorkflowIcon;
 } from 'lucide-react';
-;
 export function ComprehensiveServicesShowcase2025() {;
   const serviceCategories = [;
     {;
-      id: 'ai-ml',;
-      title: 'AI & Machine Learning',;
-      icon: Brain,;
-      color: 'from-purple-500 to-cyan-500',;
-      description: 'Revolutionary AI solutions that transform business operations',;
+      id: 'ai-ml',
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      color: 'from-purple-500 to-cyan-500',
+      description: 'Revolutionary AI solutions that transform business operations',
       services: [;
         {;
-          name: 'AI Autonomous Business Intelligence',;
-          href: '/services/ai-autonomous-business-intelligence',;
-          icon: BarChart3,;
-          description: 'AI-powered insights generation without human intervention',;
-          price: 'From $299/month',;
-          features: ['Autonomous Data Analysis', 'Real-time Dashboards', 'Predictive Analytics'];,
-},;
+          name: 'AI Autonomous Business Intelligence',
+          href: '/services/ai-autonomous-business-intelligence',
+          icon: BarChart3,
+          description: 'AI-powered insights generation without human intervention',
+          price: 'From $299/month',
+          features: ['Autonomous Data Analysis', 'Real-time Dashboards', 'Predictive Analytics'];
+},
         {;
-          name: 'AI Cybersecurity Threat Intelligence',;
-          href: '/services/ai-cybersecurity-threat-intelligence',;
-          icon: Shield,;
-          description: 'AI-powered threat detection and response in real-time',;
-          price: 'From $499/month',;
-          features: ['AI-Powered Detection', 'Real-time Monitoring', 'Automated Response'];,
-},;
+          name: 'AI Cybersecurity Threat Intelligence',
+          href: '/services/ai-cybersecurity-threat-intelligence',
+          icon: Shield,
+          description: 'AI-powered threat detection and response in real-time',
+          price: 'From $499/month',
+          features: ['AI-Powered Detection', 'Real-time Monitoring', 'Automated Response'];
+},
         {;
-          name: 'AI Customer Support Automation',;
-          href: '/services/ai-customer-support-automation',;
-          icon: MessageSquare,;
-          description: 'Intelligent customer service with 24/7 availability',;
-          price: 'From $199/month',;
-          features: ['24/7 Support', 'Multi-language', 'Smart Routing'];,
-},;
+          name: 'AI Customer Support Automation',
+          href: '/services/ai-customer-support-automation',
+          icon: MessageSquare,
+          description: 'Intelligent customer service with 24/7 availability',
+          price: 'From $199/month',
+          features: ['24/7 Support', 'Multi-language', 'Smart Routing'];
+},
         {;
-          name: 'AI Project Management Platform',;
-          href: '/services/ai-project-management-platform',;
-          icon: Settings,;
-          description: 'AI-enhanced project planning and execution',;
-          price: 'From $399/month',;
-          features: ['Smart Scheduling', 'Risk Prediction', 'Resource Optimization'];,
-},;
+          name: 'AI Project Management Platform',
+          href: '/services/ai-project-management-platform',
+          icon: Settings,
+          description: 'AI-enhanced project planning and execution',
+          price: 'From $399/month',
+          features: ['Smart Scheduling', 'Risk Prediction', 'Resource Optimization'];
+},
         {;
-          name: 'AI Healthcare Analytics Platform',;
-          href: '/services/ai-healthcare-analytics-platform',;
-          icon: Heart,;
-          description: 'Advanced healthcare data analysis and insights',;
-          price: 'From $799/month',;
-          features: ['Patient Analytics', 'Treatment Optimization', 'Compliance Ready'];,
-},;
+          name: 'AI Healthcare Analytics Platform',
+          href: '/services/ai-healthcare-analytics-platform',
+          icon: Heart,
+          description: 'Advanced healthcare data analysis and insights',
+          price: 'From $799/month',
+          features: ['Patient Analytics', 'Treatment Optimization', 'Compliance Ready'];
+},
         {;
-          name: 'AI Legal Automation Platform',;
-          href: '/services/ai-legal-document-automation-platform',;
-          icon: FileText,;
-          description: 'Automated legal document generation and analysis',;
-          price: 'From $599/month',;
-          features: ['Document Automation', 'Legal Research', 'Compliance Check'];,
+          name: 'AI Legal Automation Platform',
+          href: '/services/ai-legal-document-automation-platform',
+          icon: FileText,
+          description: 'Automated legal document generation and analysis',
+          price: 'From $599/month',
+          features: ['Document Automation', 'Legal Research', 'Compliance Check'];
 }
-      ];,
-},;
+      ];
+},
     {;
-      id: 'quantum-computing',;
-      title: 'Quantum Computing',;
-      icon: Atom,;
-      color: 'from-blue-500 to-purple-600',;
-      description: 'Next-generation computing power for complex problem solving',;
+      id: 'quantum-computing',
+      title: 'Quantum Computing',
+      icon: Atom,
+      color: 'from-blue-500 to-purple-600',
+      description: 'Next-generation computing power for complex problem solving',
       services: [;
         {;
-          name: 'Quantum AI Hybrid Platform',;
-          href: '/services/quantum-ai-hybrid-platform',;
-          icon: Brain,;
-          description: 'Combines quantum computing with AI for breakthrough performance',;
-          price: 'From $1,999/month',;
-          features: ['Quantum Speedup', 'AI Hybrid Algorithms', 'Cloud Access'];,
-},;
+          name: 'Quantum AI Hybrid Platform',
+          href: '/services/quantum-ai-hybrid-platform',
+          icon: Brain,
+          description: 'Combines quantum computing with AI for breakthrough performance',
+          price: 'From $1,999/month',
+          features: ['Quantum Speedup', 'AI Hybrid Algorithms', 'Cloud Access'];
+},
         {;
-          name: 'Quantum AI Trading Platform',;
-          href: '/services/quantum-ai-trading-platform',;
-          icon: TrendingUp,;
-          description: 'Quantum-enhanced financial trading and analysis',;
-          price: 'From $2,499/month',;
-          features: ['Quantum Algorithms', 'Real-time Analysis', 'Risk Management'];,
-},;
+          name: 'Quantum AI Trading Platform',
+          href: '/services/quantum-ai-trading-platform',
+          icon: TrendingUp,
+          description: 'Quantum-enhanced financial trading and analysis',
+          price: 'From $2,499/month',
+          features: ['Quantum Algorithms', 'Real-time Analysis', 'Risk Management'];
+},
         {;
-          name: 'Quantum Computing as a Service',;
-          href: '/services/quantum-computing-as-a-service',;
-          icon: Cloud,;
-          description: 'Access quantum computing resources without hardware investment',;
-          price: 'From $999/month',;
-          features: ['Cloud Access', 'Multiple Qubits', 'Expert Support'];,
-},;
+          name: 'Quantum Computing as a Service',
+          href: '/services/quantum-computing-as-a-service',
+          icon: Cloud,
+          description: 'Access quantum computing resources without hardware investment',
+          price: 'From $999/month',
+          features: ['Cloud Access', 'Multiple Qubits', 'Expert Support'];
+},
         {;
-          name: 'Quantum Machine Learning',;
-          href: '/services/quantum-machine-learning',;
-          icon: Cpu,;
-          description: 'Quantum-enhanced machine learning algorithms',;
-          price: 'From $1,499/month',;
-          features: ['Quantum ML Models', 'Faster Training', 'Better Accuracy'];,
+          name: 'Quantum Machine Learning',
+          href: '/services/quantum-machine-learning',
+          icon: Cpu,
+          description: 'Quantum-enhanced machine learning algorithms',
+          price: 'From $1,499/month',
+          features: ['Quantum ML Models', 'Faster Training', 'Better Accuracy'];
 }
-      ];,
-},;
+      ];
+},
     {;
-      id: 'cybersecurity',;
-      title: 'Cybersecurity & Compliance',;
-      icon: Shield,;
-      color: 'from-red-500 to-purple-600',;
-      description: 'Enterprise-grade security solutions for modern threats',;
+      id: 'cybersecurity',
+      title: 'Cybersecurity & Compliance',
+      icon: Shield,
+      color: 'from-red-500 to-purple-600',
+      description: 'Enterprise-grade security solutions for modern threats',
       services: [;
         {;
-          name: 'AI Cybersecurity Platform',;
-          href: '/services/ai-cybersecurity-platform',;
-          icon: Shield,;
-          description: 'Comprehensive AI-powered cybersecurity protection',;
-          price: 'From $399/month',;
-          features: ['AI Detection', 'Threat Prevention', 'Compliance Ready'];,
-},;
+          name: 'AI Cybersecurity Platform',
+          href: '/services/ai-cybersecurity-platform',
+          icon: Shield,
+          description: 'Comprehensive AI-powered cybersecurity protection',
+          price: 'From $399/month',
+          features: ['AI Detection', 'Threat Prevention', 'Compliance Ready'];
+},
         {;
-          name: 'Zero Trust Network Access',;
-          href: '/services/zero-trust-network-access',;
-          icon: Lock,;
-          description: 'Modern security architecture for distributed networks',;
-          price: 'From $299/month',;
-          features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring'];,
-},;
+          name: 'Zero Trust Network Access',
+          href: '/services/zero-trust-network-access',
+          icon: Lock,
+          description: 'Modern security architecture for distributed networks',
+          price: 'From $299/month',
+          features: ['Identity Verification', 'Micro-segmentation', 'Continuous Monitoring'];
+},
         {;
-          name: 'SOC2 Compliance Automation',;
-          href: '/services/soc2-compliance-automation',;
-          icon: Award,;
-          description: 'Automated compliance management and reporting',;
-          price: 'From $599/month',;
-          features: ['Automated Audits', 'Real-time Monitoring', 'Compliance Reports'];,
+          name: 'SOC2 Compliance Automation',
+          href: '/services/soc2-compliance-automation',
+          icon: Award,
+          description: 'Automated compliance management and reporting',
+          price: 'From $599/month',
+          features: ['Automated Audits', 'Real-time Monitoring', 'Compliance Reports'];
 }
-      ];,
-},;
+      ];
+},
     {;
-      id: 'cloud-infrastructure',;
-      title: 'Cloud & Infrastructure',;
-      icon: Cloud,;
-      color: 'from-cyan-500 to-blue-600',;
-      description: 'Scalable cloud solutions and infrastructure management',;
+      id: 'cloud-infrastructure',
+      title: 'Cloud & Infrastructure',
+      icon: Cloud,
+      color: 'from-cyan-500 to-blue-600',
+      description: 'Scalable cloud solutions and infrastructure management',
       services: [;
         {;
-          name: 'Cloud DevOps',;
-          href: '/services/cloud-devops',;
-          icon: Cloud,;
-          description: 'Streamlined development and operations in the cloud',;
-          price: 'From $199/month',;
-          features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring'];,
-},;
+          name: 'Cloud DevOps',
+          href: '/services/cloud-devops',
+          icon: Cloud,
+          description: 'Streamlined development and operations in the cloud',
+          price: 'From $199/month',
+          features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring'];
+},
         {;
-          name: 'IT Infrastructure Management',;
-          href: '/services/it-infrastructure',;
-          icon: Database,;
-          description: 'Comprehensive IT infrastructure monitoring and management',;
-          price: 'From $299/month',;
-          features: ['24/7 Monitoring', 'Performance Optimization', 'Proactive Maintenance'];,
-},;
+          name: 'IT Infrastructure Management',
+          href: '/services/it-infrastructure',
+          icon: Database,
+          description: 'Comprehensive IT infrastructure monitoring and management',
+          price: 'From $299/month',
+          features: ['24/7 Monitoring', 'Performance Optimization', 'Proactive Maintenance'];
+},
         {;
-          name: 'FinOps Advisor',;
-          href: '/services/finops-advisor',;
-          icon: BarChart3,;
-          description: 'Cloud cost optimization and financial operations',;
-          price: 'From $399/month',;
-          features: ['Cost Analysis', 'Optimization Recommendations', 'Budget Management'];,
+          name: 'FinOps Advisor',
+          href: '/services/finops-advisor',
+          icon: BarChart3,
+          description: 'Cloud cost optimization and financial operations',
+          price: 'From $399/month',
+          features: ['Cost Analysis', 'Optimization Recommendations', 'Budget Management'];
 }
-      ];,
-},;
+      ];
+},
     {;
-      id: 'digital-transformation',;
-      title: 'Digital Transformation',;
-      icon: Rocket,;
-      color: 'from-green-500 to-emerald-600',;
-      description: 'Strategic digital transformation consulting and implementation',;
+      id: 'digital-transformation',
+      title: 'Digital Transformation',
+      icon: Rocket,
+      color: 'from-green-500 to-emerald-600',
+      description: 'Strategic digital transformation consulting and implementation',
       services: [;
         {;
-          name: 'Digital Twin',;
-          href: '/services/digital-twin',;
-          icon: Rocket,;
-          description: 'Digital replicas for simulation and optimization',;
-          price: 'From $1,999/month',;
-          features: ['Real-time Simulation', 'Predictive Analytics', 'Optimization'];,
-},;
+          name: 'Digital Twin',
+          href: '/services/digital-twin',
+          icon: Rocket,
+          description: 'Digital replicas for simulation and optimization',
+          price: 'From $1,999/month',
+          features: ['Real-time Simulation', 'Predictive Analytics', 'Optimization'];
+},
         {;
-          name: 'Digital Transformation',;
-          href: '/services/digital-transformation',;
-          icon: TrendingUp,;
-          description: 'End-to-end digital transformation strategy and execution',;
-          price: 'From $2,999/month',;
-          features: ['Strategy Development', 'Implementation', 'Change Management'];,
-},;
+          name: 'Digital Transformation',
+          href: '/services/digital-transformation',
+          icon: TrendingUp,
+          description: 'End-to-end digital transformation strategy and execution',
+          price: 'From $2,999/month',
+          features: ['Strategy Development', 'Implementation', 'Change Management'];
+},
         {;
-          name: 'IT Consulting',;
-          href: '/it-consulting',;
-          icon: Users,;
-          description: 'Expert IT consulting for business transformation',;
-          price: 'From $150/hour',;
-          features: ['Strategic Planning', 'Technology Selection', 'Implementation Support'];,
+          name: 'IT Consulting',
+          href: '/it-consulting',
+          icon: Users,
+          description: 'Expert IT consulting for business transformation',
+          price: 'From $150/hour',
+          features: ['Strategic Planning', 'Technology Selection', 'Implementation Support'];
 }
-      ];,
-},;
+      ];
+},
     {;
-      id: 'micro-saas',;
-      title: 'Micro SaaS Solutions',;
-      icon: Building2,;
-      color: 'from-orange-500 to-red-600',;
-      description: 'Focused software solutions for specific business needs',;
+      id: 'micro-saas',
+      title: 'Micro SaaS Solutions',
+      icon: Building2,
+      color: 'from-orange-500 to-red-600',
+      description: 'Focused software solutions for specific business needs',
       services: [;
         {;
-          name: 'Micro CRM',;
-          href: '/services/micro-crm',;
-          icon: Users,;
-          description: 'Lightweight customer relationship management',;
-          price: 'From $49/month',;
-          features: ['Contact Management', 'Sales Tracking', 'Email Integration'];,
-},;
+          name: 'Micro CRM',
+          href: '/services/micro-crm',
+          icon: Users,
+          description: 'Lightweight customer relationship management',
+          price: 'From $49/month',
+          features: ['Contact Management', 'Sales Tracking', 'Email Integration'];
+},
         {;
-          name: 'Helpdesk Platform',;
-          href: '/services/helpdesk',;
-          icon: MessageSquare,;
-          description: 'Efficient customer support and ticket management',;
-          price: 'From $79/month',;
-          features: ['Ticket Management', 'Knowledge Base', 'Customer Portal'];,
-},;
+          name: 'Helpdesk Platform',
+          href: '/services/helpdesk',
+          icon: MessageSquare,
+          description: 'Efficient customer support and ticket management',
+          price: 'From $79/month',
+          features: ['Ticket Management', 'Knowledge Base', 'Customer Portal'];
+},
         {;
-          name: 'Website Analytics',;
-          href: '/services/website-analytics',;
-          icon: BarChart3,;
-          description: 'Comprehensive website performance and user analytics',;
-          price: 'From $39/month',;
-          features: ['User Behavior', 'Performance Metrics', 'Conversion Tracking'];,
+          name: 'Website Analytics',
+          href: '/services/website-analytics',
+          icon: BarChart3,
+          description: 'Comprehensive website performance and user analytics',
+          price: 'From $39/month',
+          features: ['User Behavior', 'Performance Metrics', 'Conversion Tracking'];
 }
-      ];,
+      ];
 }
   ];
-;
   const benefits = [;
     {;
-      icon: Star,;
-      title: 'Innovation First',;
-      description: 'Cutting-edge technology solutions that keep you ahead of the competition';,
-},;
+      icon: Star,
+      title: 'Innovation First',
+      description: 'Cutting-edge technology solutions that keep you ahead of the competition';
+},
     {;
-      icon: Target,;
-      title: 'Results Driven',;
-      description: 'Measurable outcomes and ROI for all our services and solutions';,
-},;
+      icon: Target,
+      title: 'Results Driven',
+      description: 'Measurable outcomes and ROI for all our services and solutions';
+},
     {;
-      icon: Shield,;
-      title: 'Enterprise Grade',;
-      description: 'Professional solutions with enterprise-level security and reliability';,
-},;
+      icon: Shield,
+      title: 'Enterprise Grade',
+      description: 'Professional solutions with enterprise-level security and reliability';
+},
     {;
-      icon: Users,;
-      title: 'Expert Support',;
-      description: 'Dedicated support team with deep technical expertise';,
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated support team with deep technical expertise';
 }
   ];
-;
   const stats = [;
-    { number: '50+', label: 'Services & Solutions' },;
-    { number: '1000+', label: 'Happy Clients' },;
-    { number: '99.9%', label: 'Uptime SLA' },;
+    { number: '50+', label: 'Services & Solutions' },
+    { number: '1000+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime SLA' },
     { number: '24/7', label: 'Support Available' }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate-darker to-zion-slate-darkest">;
       {/* Hero Section */}
@@ -344,7 +340,7 @@ export function ComprehensiveServicesShowcase2025() {;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-2xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">;
-              Discover our comprehensive portfolio of cutting-edge AI, Quantum Computing, ;
+              Discover our comprehensive portfolio of cutting-edge AI, Quantum Computing,
               Cybersecurity, and Micro SaaS solutions designed to transform your business ;
               and drive innovation in 2025 and beyond.;
             </motion.p>;
@@ -574,7 +570,7 @@ export function ComprehensiveServicesShowcase2025() {;
         </div>;
       </footer>;
     </div>;
-  );,
+  );
 }
-;
+
 export default ComprehensiveServicesShowcase2025;

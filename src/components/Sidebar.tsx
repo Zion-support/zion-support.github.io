@@ -1,10 +1,8 @@
 import React from 'react';
-;
 type SidebarProps = {;
   isOpen: boolean;
-  onClose: () => void;,
+  onClose: () => void;
 };
-;
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {;
   if (!isOpen) return null;
   return (;
@@ -19,5 +17,5 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {;
         </nav>;
       </div>;
     </div>;
-  );,
+  );
 }

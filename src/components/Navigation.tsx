@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Brain, Menu } from 'lucide-react';
-;
 export default function Navigation() {;
   const [open, setOpen] = useState(false);
   return (;
@@ -30,5 +29,5 @@ export default function Navigation() {;
         </div>;
       )}
     </nav>;
-  );,
+  );
 }

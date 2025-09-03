@@ -1,154 +1,143 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ;
-  Shield, ;
-  Eye, ;
-  AlertTriangle, ;
-  Zap, ;
-  Lock, ;
-  Users, ;
-  Globe, ;
-  Clock, ;
-  CheckCircle, ;
-  Star, ;
-  ArrowRight, ;
-  Play, ;
-  BookOpen, ;
-  MessageCircle, ;
-  Phone, ;
-  Mail, ;
-  MapPin, ;
-  Brain, ;
-  BarChart3, ;
-  Target ;,
+  Shield,
+  Eye,
+  AlertTriangle,
+  Zap,
+  Lock,
+  Users,
+  Globe,
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Play,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  BarChart3,
+  Target ;
 } from 'lucide-react';
-;
 export default function AICybersecurityThreatIntelligencePlatform() {;
   const features = [;
     {;
-      icon: Brain,;
-      title: "AI-Powered Threat Detection",;
-      description: "Machine learning algorithms identify threats before they become attacks";,
-},;
+      icon: Brain,
+      title: "AI-Powered Threat Detection",
+      description: "Machine learning algorithms identify threats before they become attacks";
+},
     {;
-      icon: Eye,;
-      title: "Real-time Monitoring",;
-      description: "24/7 surveillance of your entire digital infrastructure";,
-},;
+      icon: Eye,
+      title: "Real-time Monitoring",
+      description: "24/7 surveillance of your entire digital infrastructure";
+},
     {;
-      icon: AlertTriangle,;
-      title: "Threat Intelligence",;
-      description: "Global threat feed with contextual analysis and risk scoring";,
-},;
+      icon: AlertTriangle,
+      title: "Threat Intelligence",
+      description: "Global threat feed with contextual analysis and risk scoring";
+},
     {;
-      icon: Zap,;
-      title: "Automated Response",;
-      description: "Instant threat mitigation and incident response automation";,
-},;
+      icon: Zap,
+      title: "Automated Response",
+      description: "Instant threat mitigation and incident response automation";
+},
     {;
-      icon: Lock,;
-      title: "Zero Trust Security",;
-      description: "Advanced authentication and access control systems";,
-},;
+      icon: Lock,
+      title: "Zero Trust Security",
+      description: "Advanced authentication and access control systems";
+},
     {;
-      icon: Users,;
-      title: "Security Operations Center",;
-      description: "Dedicated team of cybersecurity experts monitoring your systems";,
+      icon: Users,
+      title: "Security Operations Center",
+      description: "Dedicated team of cybersecurity experts monitoring your systems";
 }
   ];
-;
   const pricingPlans = [;
     {;
-      name: "Essential",;
-      price: "$499",;
-      period: "/month",;
-      description: "Perfect for small businesses",;
-      features: [;
-        "Basic threat detection",;
-        "Email security",;
-        "Firewall management",;
-        "Security reports",;
-        "Email support",;
-        "Up to 50 users";
-      ],;
-      popular: false;,
-},;
+      name: "Essential",
+      price: "$499",
+      period: "/month",
+      description: "Perfect for small businesses",
+      features: [ "Basic threat detection",
+        "Email security",
+        "Firewall management",
+        "Security reports",
+        "Email support",
+        "Up to 50 users" ],
+      popular: false;
+},
     {;
-      name: "Professional",;
-      price: "$1,299",;
-      period: "/month",;
-      description: "Ideal for growing companies",;
-      features: [;
-        "Advanced threat detection",;
-        "Real-time monitoring",;
-        "Incident response",;
-        "Vulnerability scanning",;
-        "Priority support",;
-        "Up to 200 users",;
-        "API access";
-      ],;
-      popular: true;,
-},;
+      name: "Professional",
+      price: "$1,299",
+      period: "/month",
+      description: "Ideal for growing companies",
+      features: [ "Advanced threat detection",
+        "Real-time monitoring",
+        "Incident response",
+        "Vulnerability scanning",
+        "Priority support",
+        "Up to 200 users",
+        "API access" ],
+      popular: true;
+},
     {;
-      name: "Enterprise",;
-      price: "$2,999",;
-      period: "/month",;
-      description: "For large organizations",;
-      features: [;
-        "Full threat intelligence",;
-        "Custom security policies",;
-        "Advanced analytics",;
-        "24/7 SOC support",;
-        "White-label options",;
-        "Unlimited users",;
-        "Custom integrations";
-      ],;
-      popular: false;,
+      name: "Enterprise",
+      price: "$2,999",
+      period: "/month",
+      description: "For large organizations",
+      features: [ "Full threat intelligence",
+        "Custom security policies",
+        "Advanced analytics",
+        "24/7 SOC support",
+        "White-label options",
+        "Unlimited users",
+        "Custom integrations" ],
+      popular: false;
 }
   ];
-;
   const benefits = [;
     {;
-      title: "Threat Prevention",;
-      description: "Stop attacks before they happen with predictive AI",;
-      metric: "99.9% threat prevention";,
-},;
+      title: "Threat Prevention",
+      description: "Stop attacks before they happen with predictive AI",
+      metric: "99.9% threat prevention";
+},
     {;
-      title: "Response Time",;
-      description: "Automated response reduces incident resolution time",;
-      metric: "90% faster response";,
-},;
+      title: "Response Time",
+      description: "Automated response reduces incident resolution time",
+      metric: "90% faster response";
+},
     {;
-      title: "Cost Savings",;
-      description: "Prevent costly data breaches and downtime",;
-      metric: "60% cost reduction";,
-},;
+      title: "Cost Savings",
+      description: "Prevent costly data breaches and downtime",
+      metric: "60% cost reduction";
+},
     {;
-      title: "Compliance",;
-      description: "Meet industry standards and regulatory requirements",;
-      metric: "100% compliance ready";,
+      title: "Compliance",
+      description: "Meet industry standards and regulatory requirements",
+      metric: "100% compliance ready";
 }
   ];
-;
   const securityMetrics = [;
     {;
-      metric: "10M+",;
-      label: "Threats Blocked Daily";,
-},;
+      metric: "10M+",
+      label: "Threats Blocked Daily";
+},
     {;
-      metric: "500+",;
-      label: "Enterprise Clients";,
-},;
+      metric: "500+",
+      label: "Enterprise Clients";
+},
     {;
-      metric: "24/7",;
-      label: "Security Monitoring";,
-},;
+      metric: "24/7",
+      label: "Security Monitoring";
+},
     {;
-      metric: "<1min",;
-      label: "Response Time";,
+      metric: "<1min",
+      label: "Response Time";
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">;
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">;
@@ -299,7 +288,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {;
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${;
                   plan.popular;
                     ? 'border-red-500/50 ring-2 ring-red-500/20';
-                    : 'border-gray-700';,
+                    : 'border-gray-700';
 }`}
               >;
                 {plan.popular && (;
@@ -328,7 +317,7 @@ export default function AICybersecurityThreatIntelligencePlatform() {;
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${;
                   plan.popular;
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600';
-                    : 'bg-gray-700 text-white hover:bg-gray-600';,
+                    : 'bg-gray-700 text-white hover:bg-gray-600';
 }`}>;
                   Get Protected;
                 </button>;
@@ -403,5 +392,5 @@ export default function AICybersecurityThreatIntelligencePlatform() {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }

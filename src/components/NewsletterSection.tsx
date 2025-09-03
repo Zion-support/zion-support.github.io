@@ -1,11 +1,10 @@
 
-      description: "Get exclusive access to tech trends and analysis";,
-},;    {;
-      icon: Zap,;";
-      title: "Early Access",;";
+      description: "Get exclusive access to tech trends and analysis";
+},    {;
+      icon: Zap,";
+      title: "Early Access",";
       description: "Be the first to know about beta programs and launches"};
   ];
-;
   if(isSubscribed) {;
 
     return (";
@@ -14,13 +13,13 @@
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  scale: 0.8;,
+  { opacity: 0,
+  scale: 0.8;
 }}
             animate = {;
 
-  { opacity: 1,;
-  scale: 1;,
+  { opacity: 1,
+  scale: 1;
 }}
             transition={{ duration: 0.5 }}";
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20";
@@ -47,13 +46,13 @@
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  x: -30;,
+  { opacity: 0,
+  x: -30;
 }}
             whileInView = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
             transition={{ duration: 0.6 }}
 ";
@@ -69,18 +68,18 @@
                   key={index}
                   initial = {;
 
-  { opacity: 0,;
-  x: -20;,
+  { opacity: 0,
+  x: -20;
 }}
                   whileInView = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
                   transition = {;
 
-  { duration: 0.5,;
-  delay: index * 0.1;,
+  { duration: 0.5,
+  delay: index * 0.1;
 }}";
                   className="flex items-start";
 ";
@@ -103,18 +102,18 @@
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  x: 30;,
+  { opacity: 0,
+  x: 30;
 }}
             whileInView = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
             transition = {;
 
-  { duration: 0.6,;
-  delay: 0.2;,
+  { duration: 0.6,
+  delay: 0.2;
 }}
           >";
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">";
@@ -176,5 +175,4 @@
         </div>;
       </div>;
     </section>;) };
-;
 export default NewsletterSection}}}'";

@@ -45,6 +45,6 @@ const QuantumTechnology = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default QuantumTechnology;

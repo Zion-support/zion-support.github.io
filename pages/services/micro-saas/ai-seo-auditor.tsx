@@ -5,19 +5,19 @@ export default function AISEOAuditor() {;
       subtitle="Automated technical SEO and content insights with prioritized fixes";
       price="from $199/mo";
       bullets={[;
-        'Crawls site maps and pages; flags Core Web Vitals and indexability issues',;
-        'NLP-driven content gap analysis vs. competitors with keyword clusters',;
-        'One-click Github PRs for meta, schema, and sitemap fixes',;
+        'Crawls site maps and pages; flags Core Web Vitals and indexability issues',
+        'NLP-driven content gap analysis vs. competitors with keyword clusters',
+        'One-click Github PRs for meta, schema, and sitemap fixes',
         'Weekly executive report and anomaly alerts via Slack/Email';
       ]}
       links={{;
-        website: 'https://ziontechgroup.com',;
-        contact: 'mailto:kleber@ziontechgroup.com';,
+        website: 'https://ziontechgroup.com',
+        contact: 'mailto:kleber@ziontechgroup.com';
 }}
     />;
-  );,
+  );
 }
-;
+
 function Article({ title, subtitle, price, bullets, links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {;
   return (;
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, maxWidth: 920, margin: '0 auto' }}>;
@@ -33,6 +33,5 @@ function Article({ title, subtitle, price, bullets, links }: { title: string; su
         Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> · Email: <a href={links.contact}>kleber@ziontechgroup.com</a>;
       </p>;
     </main>;
-  );,
+  );
 }
-;

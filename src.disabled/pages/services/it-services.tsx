@@ -1,6 +1,6 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1: src/pages/services/it-services.tsx;
   )}
-;
+
         <li>Infrastructure and SRE</li>;
         <li>Zero Trust and Compliance</li>;
       </ul>    </div>";
@@ -15,7 +15,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1: src/pages/services/it-servi
         <li>Zero Trust and Compliance</li>;
       </ul>;
     </div>;
-;
 const ITServices: React.FC = () => {;
   return (;
     <div className="max-w-5xl mx-auto px-4 py-12 text-white>;
@@ -27,7 +26,7 @@ const ITServices: React.FC = () => {;
         <li>Zero Trust and Compliance</li>;
       </ul>;
     </div>;
-  );,;,
+  );,
 }
-;
+
 export default ITServices;

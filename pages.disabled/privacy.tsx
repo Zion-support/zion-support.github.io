@@ -2,75 +2,72 @@ import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
-;
 const Privacy: NextPage = () => {;
   const lastUpdated = 'January 27, 2025';
-;
   const privacySections = [;
     {;
-      icon: Database,;
-      title: 'Information We Collect',;
+      icon: Database,
+      title: 'Information We Collect',
       content: [;
-        'Personal information you provide directly (name, email, phone number)',;
-        'Usage data and analytics from our website and services',;
-        'Technical information such as IP address, browser type, and device information',;
+        'Personal information you provide directly (name, email, phone number)',
+        'Usage data and analytics from our website and services',
+        'Technical information such as IP address, browser type, and device information',
         'Communication records when you contact us for support or inquiries';
-      ];,
-},;
+      ];
+},
     {;
-      icon: Eye,;
-      title: 'How We Use Your Information',;
+      icon: Eye,
+      title: 'How We Use Your Information',
       content: [;
-        'To provide and improve our technology services',;
-        'To communicate with you about our services and updates',;
-        'To process transactions and manage your account',;
+        'To provide and improve our technology services',
+        'To communicate with you about our services and updates',
+        'To process transactions and manage your account',
         'To comply with legal obligations and protect our rights';
-      ];,
-},;
+      ];
+},
     {;
-      icon: Lock,;
-      title: 'Data Security',;
+      icon: Lock,
+      title: 'Data Security',
       content: [;
-        'We implement industry-standard security measures to protect your data',;
-        'All data transmission is encrypted using SSL/TLS protocols',;
-        'Access to personal information is restricted to authorized personnel only',;
+        'We implement industry-standard security measures to protect your data',
+        'All data transmission is encrypted using SSL/TLS protocols',
+        'Access to personal information is restricted to authorized personnel only',
         'Regular security audits and updates to maintain data protection';
-      ];,
-},;
+      ];
+},
     {;
-      icon: UserCheck,;
-      title: 'Your Rights',;
+      icon: UserCheck,
+      title: 'Your Rights',
       content: [;
-        'Right to access your personal information',;
-        'Right to correct inaccurate or incomplete data',;
-        'Right to request deletion of your personal information',;
+        'Right to access your personal information',
+        'Right to correct inaccurate or incomplete data',
+        'Right to request deletion of your personal information',
         'Right to opt-out of marketing communications';
       ];
 
 const Privacy: NextPage = () => {;
   const privacyPrinciples = [;
     {;
-      icon: Shield,;
-      title: 'Data Protection',;
-      description: 'We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.';,
-},;
+      icon: Shield,
+      title: 'Data Protection',
+      description: 'We implement industry-standard security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.';
+},
     {;
-      icon: Eye,;
-      title: 'Transparency',;
-      description: 'We are transparent about what data we collect, how we use it, and with whom we share it. You have the right to know and control your data.';,
-},;
+      icon: Eye,
+      title: 'Transparency',
+      description: 'We are transparent about what data we collect, how we use it, and with whom we share it. You have the right to know and control your data.';
+},
     {;
-      icon: Lock,;
-      title: 'Data Minimization',;
-      description: 'We only collect the minimum amount of personal data necessary to provide our services and improve your experience.';,
-},;
+      icon: Lock,
+      title: 'Data Minimization',
+      description: 'We only collect the minimum amount of personal data necessary to provide our services and improve your experience.';
+},
     {;
-      icon: Database,;
-      title: 'Secure Storage',;
-      description: 'Your data is stored securely using encryption and other security measures, and we regularly review and update our security practices.';,
+      icon: Database,
+      title: 'Secure Storage',
+      description: 'Your data is stored securely using encryption and other security measures, and we regularly review and update our security practices.';
 }
   ];
-;
   return (;
     <MainLayout;
       title="Privacy Policy - Zion Tech Group";
@@ -175,7 +172,7 @@ const Privacy: NextPage = () => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >;
-            Your privacy is important to us. This policy explains how we collect, ;
+            Your privacy is important to us. This policy explains how we collect,
             use, and protect your personal information.;
           </motion.p>;
           <motion.div;
@@ -362,15 +359,14 @@ const Privacy: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Shield, Eye, Lock, Database, UserCheck, FileText } from 'lucide-react';
-;
 const Privacy: NextPage = () => {;
   const lastUpdated = "January 1, 2025";
-  );,
+  );
 }
-;
+
 }}

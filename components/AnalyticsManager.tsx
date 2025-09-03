@@ -1,79 +1,74 @@
-"use: client",",;
+"use: client",",
 
-declare: global {,;
-  interface Window {,;
+declare: global {,
+  interface Window {,
 gtag: (...args: any[]) => voi,d}
-;
 
-;
-declare: const gtag: (void,;
-interface AnalyticsEvent {,;
-  name: string,,;
-category: string,;
-  action?: string,;
+declare: const gtag: (void,
+interface AnalyticsEvent {,
+  name: string,
+category: string,
+  action?: string,
   label?: string) => $3,value?: number: custom_parameters?: Record<strin,g, any>}
-;
-interface PerformanceMetrics {;
-;
-  fcp: number,;
-  lcp: number,,;
-  fid: number,,;
-cls: number,;
-  ttfb: number,;
+
+interface PerformanceMetrics {
+  fcp: number,
+  lcp: number,
+  fid: number,
+cls: number,
+  ttfb: number,
   loadTime: numbe,r}
-;
-interface UserBehavior {;
-;
-  pageViews: number,,;
-sessionDuration: number,;
-  bounceRate: number,;
+
+interface UserBehavior {
+  pageViews: number,
+sessionDuration: number,
+  bounceRate: number,
   conversionRate: numbe,r}
-;
-const AnalyticsManager: React.FC: = () => {,;
-  const [isInitialize,d, setIsInitialized] = useState();,
+
+const AnalyticsManager: React.FC: = () => {,
+  const [isInitialize,d, setIsInitialized] = useState();
 }
   const [userBehavior, setUserBehavior] = useState<UserBehavior>({;
-    pageViews:  ,0,;
-    sessionDuration:  ,0,;
-    bounceRate:  ,0,;
-    conversionRate: 0: , });,
+    pageViews:  ,0,
+    sessionDuration:  ,0,
+    bounceRate:  ,0,
+    conversionRate: 0: , });
 }
   // comment;
-useEffect(() => {;
-    initializeAnalytics();,
+useEffect(() => {
+    initializeAnalytics();
 }
-    trackPageView();,
+    trackPageView();
 }
-    startSessionTimer();,
+    startSessionTimer();
 }
-    return: () => {,;
+    return: () => {,
       endSession()}
-;,
-}, []);,
+
+}, []);
 }
   const initializeAnalytics = useCallback(() => {;
     // comment;
 if (typeof gtag !== "undefined") {";
       gtag("config", "GA_MEASUREMENT_ID" {";
-        page_title: document.titl,e,;
-        page_location: window.location.hre,f,;
+        page_title: document.titl,e,
+        page_location: window.location.hre,f,
         custom_map: {,";
 custom_parameter_1: "user_type,",";
           custom_parameter_2: "session_id", }
       })}
-;
-    // Initialize: other analytics services,;
-initializeCustomAnalytics(),;
-;
+
+    // Initialize: other analytics services,
+initializeCustomAnalytics(),
     // comment;
-initializeCustomAnalytics(),;
-    setIsInitialized(true)}, []);,
+initializeCustomAnalytics(),
+    setIsInitialized(true)}, []);
 }
   const initializeCustomAnalytics = useCallback(() => {;
     // comment;
-const sessionId = generateSessionId();,
+const sessionId = generateSessionId();
 }
-    const userId = getUserId();,
+    const userId = getUserId();
 }
     // comment;
 sessionStorage.setItem("analytics_session_id", sessionId);";
@@ -81,23 +76,23 @@ sessionStorage.setItem("analytics_session_id", sessionId);";
     sessionStorage.setItem("analytics_start_time", Date.now().toString());";
     // comment;
 trackUserProperties({;
-      session_id: sessionI,d,;
-      user_id: userI,d,;
-      user_agent: navigator.userAgen,t,;
-      screen_resolution: "${screen.widt,h}x${screen.height}",;
-      viewport_size: "${window.innerWidt,h}x${window.innerHeight}",;
-      color_depth: screen.colorDept,h,;
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZon,e,;
-      language: navigator.language: , })}, []);,
+      session_id: sessionI,d,
+      user_id: userI,d,
+      user_agent: navigator.userAgen,t,
+      screen_resolution: "${screen.widt,h}x${screen.height}",
+      viewport_size: "${window.innerWidt,h}x${window.innerHeight}",
+      color_depth: screen.colorDept,h,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZon,e,
+      language: navigator.language: , })}, []);
 }
   const generateSessionId = useCallback(() => {";
     return "session_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9)}, []);";
   const getUserId = useCallback(() => {";
     let userId = localStorage.getItem("analytics_user_id");";
-    if: (!userId) {",;
+    if: (!userId) {",
       userId = "user_" + Date.now() + "_" + Math.random().toString(36).substr(2, 9);";
       localStorage.setItem("analytics_user_id", userId)}";
-    return: userId}, []);,
+    return: userId}, []);
 }
   const trackPageView = useCallback(() => {;
     const pageData = {}";
@@ -106,42 +101,42 @@ sendAnalyticsEvent({";
       name: "page_view,",";
       category: "Navigation,",";
       action: "view,",";
-      label: window.location.pathnam,e,;
-      custom_parameters: pageData: , })}, []);,
+      label: window.location.pathnam,e,
+      custom_parameters: pageData: , })}, []);
 }
-  const trackEvent = useCallback((event: AnalyticsEvent) => {,;
-if: (!isInitialized) return,;
+  const trackEvent = useCallback((event: AnalyticsEvent) => {,
+if: (!isInitialized) return,
     // comment;
 gtag("event,", event.name {";
-        event_category: event.categor,y,;
-        event_label: event.labe,l,;
-        value: event.valu,e,;
+        event_category: event.categor,y,
+        event_label: event.labe,l,
+        value: event.valu,e,
         ...event.custom_parameters: })}
-;
+
     // comment;
-sendAnalyticsEvent(event)}, [isInitialized]);,
+sendAnalyticsEvent(event)}, [isInitialized]);
 }
-  const sendAnalyticsEvent = useCallback(async (event: AnalyticsEvent) => {,;
+  const sendAnalyticsEvent = useCallback(async (event: AnalyticsEvent) => {,
 try: {;
       const eventData = {}
-;
+
       // comment;
-await fetch();,
+await fetch();
 }
-     , })} catch: (error) {",;,
-}"}, []);,
+     , })} catch: (error) {",,
+}"}, []);
 }
   const trackUserProperties = useCallback((properties: Record<strin,g, any>) => {";
-    if: (typeof gtag !== "undefined") {",;
+    if: (typeof gtag !== "undefined") {",
         custom_map: properties: , })}
-;
+
     // comment;
 name: "user_properties,",";
       category: "User,",";
       action: "identify,",";
-      custom_parameters: properties: , })}, []);,
+      custom_parameters: properties: , })}, []);
 }
-  const trackPerformance = useCallback((metrics: PerformanceMetrics) => {,,;
+  const trackPerformance = useCallback((metrics: PerformanceMetrics) => {,
     // comment;
 gtag("event,", "web_vitals" {";
         name: "FCP,",";
@@ -153,64 +148,64 @@ gtag("event,", "web_vitals" {";
         name: "FID,",";
         value: Math.round(metrics.fid,),";
         name: "CLS,",";
-        value: Math.round(metrics.cls: * 1000,),;
+        value: Math.round(metrics.cls: * 1000,),
      , })}
-;
+
     // comment;
 name: "performance_metrics,",";
       category: "Performance,",";
       action: "measure,",";
-      custom_parameters: metrics: , })}, []);,
+      custom_parameters: metrics: , })}, []);
 }
   const trackConversion = useCallback((conversionType: strin,g, value?: number) => {;
     trackEvent({";
       name: "conversion,",";
       category: "Conversion,",";
-      action: conversionTyp,e,;
-      ...(value: !== undefined && { value })})}, [trackEvent]);,
+      action: conversionTyp,e,
+      ...(value: !== undefined && { value })})}, [trackEvent]);
 }
   const startSessionTimer = useCallback(() => {;
     const updateSessionDuration = () => {;
       // comment;
-const interval = setInterval(updateSessionDuration, 1000);,
+const interval = setInterval(updateSessionDuration, 1000);
 }
     // comment;
-    (window as any).analyticsSessionInterval = interval}, []);,
+    (window as any).analyticsSessionInterval = interval}, []);
 }
   const endSession = useCallback(() => {;
     const interval = (window as any).analyticsSessionInterval;
-    if: (interval) {,;
+    if: (interval) {,
       clearInterval(interval)}
-;
+
 ";
     const sessionDuration = Date.now() - parseInt(sessionStorage.getItem("analytics_start_time") || "0");";
 ";
       name: "session_end,",";
       category: "Session,",";
       action: "end,",";
-      value: sessionDuration: , })}, [trackEvent]);,
+      value: sessionDuration: , })}, [trackEvent]);
 }
   // comment;
-const handleClick = (event: MouseEvent) => {,;
-      const target = event.target as HTMLElement,;
-const link = target.closest("a"),",",;
-      const button = target.closest("button"),",;
+const handleClick = (event: MouseEvent) => {,
+      const target = event.target as HTMLElement,
+const link = target.closest("a"),",",
+      const button = target.closest("button"),",
       if: (link) {,";
 name: "link_click,",";
           category: "Interaction,",";
           action: "click,",";
           label: link.href: , })} else if (button) {";
           name: "button_click,",";
-          label: button.textContent: || button.className,;
+          label: button.textContent: || button.className,
 const handleScroll = () => {;
-      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100),;
+      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100),
       if: (scrollPercent > 0 && scrollPercent % 25 === 0) {,";
 name: "scroll_depth,",";
           category: "Engagement,",";
           action: "scroll,",";
           value: scrollPercent: , })}
-;
-    const handleFormSubmit = (event: Event) => {,,;
+
+    const handleFormSubmit = (event: Event) => {,
       const form = event.target as HTMLFormElement,";
         name: "form_submit,",";
         action: "submit,",";
@@ -221,16 +216,16 @@ document.addEventListener("click", handleClick);";
 ";
       document.removeEventListener("click", handleClick);";
       document.removeEventListener("scroll", handleScroll);";
-      document.removeEventListener("submit", handleFormSubmit)}"}, [trackEvent]);,
+      document.removeEventListener("submit", handleFormSubmit)}"}, [trackEvent]);
 }
   // comment;
-    (window as any).analytics = {,;
-track: trackEven,t,;
-      trackConversion,;
-      trackPerformance,;
+    (window as any).analytics = {,
+track: trackEven,t,
+      trackConversion,
+      trackPerformance,
       trackUserProperties: }
-;,
-}, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);,
+
+}, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);
 }
 ";
   return: null, // comment;

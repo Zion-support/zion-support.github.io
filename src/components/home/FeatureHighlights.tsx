@@ -1,73 +1,67 @@
 import React from 'react';
 import { motion  } from 'framer-motion';
-;
-,;
   {;
-    icon: "⚡",;
-    title: "Lightning Fast Performance",;
-    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs";,
-},;
+    icon: "⚡",
+    title: "Lightning Fast Performance",
+    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs";
+},
   {;
-    icon: "🔒",;
-    title: "Enterprise Security",;
-    description: "Bank-level security protocols and compliance standards to protect your valuable data";,
-},;
+    icon: "🔒",
+    title: "Enterprise Security",
+    description: "Bank-level security protocols and compliance standards to protect your valuable data";
+},
   {;
-    icon: "🌐",;
-    title: "Global Scalability",;
-    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions";,
-},;
+    icon: "🌐",
+    title: "Global Scalability",
+    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions";
+},
   {;
-    icon: "🤖",;
-    title: "AI-Powered Intelligence",;
-    description: "Smart automation and predictive analytics that adapt to your business requirements";,
-},;
+    icon: "🤖",
+    title: "AI-Powered Intelligence",
+    description: "Smart automation and predictive analytics that adapt to your business requirements";
+},
   {;
-    icon: "📊",;
-    title: "Real-Time Analytics",;
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly";,
+    icon: "📊",
+    title: "Real-Time Analytics",
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly";
 };
 ];
-;,
-};,
-};,
 };
-;
+};
+};
   const itemVariants = {;
-  hidden: { opacity: 0, y: 30,;
-  scale: 0.95;,
-},;
+  hidden: { opacity: 0, y: 30,
+  scale: 0.95;
+},
     visible: {;
-      opacity: 1,;
-      y: 0,;
-      scale: 1,;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {;
-        duration: 0.6,;
-        ease: "easeOut";,
-};,
-};,
+        duration: 0.6,
+        ease: "easeOut";
 };
-;
+};
+};
   const achievementVariants = {;
-  hidden: { opacity: 0,;
-  scale: 0.8;,
-},;
+  hidden: { opacity: 0,
+  scale: 0.8;
+},
     visible: {;
-      opacity: 1,;
-      scale: 1,;
-      transition: { duration: 0.5 };,
-};,
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5 };
 };
-;
+};
   const techVariants = {;
-  hidden: { opacity: 0,;
-  x: -20;,
-},;
+  hidden: { opacity: 0,
+  x: -20;
+},
     visible: {;
-      opacity: 1,;
-      x: 0,;
-      transition: { duration: 0.5 };,
-};,
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5 };
+};
 };
 export function FeatureHighlights() {;
   return (";
@@ -76,13 +70,13 @@ export function FeatureHighlights() {;
         <motion.div          className="text-center mb-16";
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -96,7 +90,7 @@ export function FeatureHighlights() {;
           </h2>;
 ";
           <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">;
-            Experience the next generation of talent marketplace with cutting-edge AI,;
+            Experience the next generation of talent marketplace with cutting-edge AI,
             global reach, and enterprise-grade security.</p>;
         </motion.div>;
 ";
@@ -107,8 +101,8 @@ export function FeatureHighlights() {;
               variants={itemVariants}
               whileHover={{;
 
-                y: -5,;
-                scale: 1.02,;
+                y: -5,
+                scale: 1.02,
                 transition: { duration: 0.3 }
               }}";
               className="group";
@@ -143,8 +137,8 @@ export function FeatureHighlights() {;
           viewport={{ once: true }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.4;,
+  { duration: 0.6,
+  delay: 0.4;
 }}
         >";
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">;
@@ -155,7 +149,6 @@ export function FeatureHighlights() {;
       </div>;
     </section>;
   )}
-;
 
 '"`;
 )

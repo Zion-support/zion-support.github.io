@@ -7,17 +7,17 @@ function fixCommonErrors(content) {;
   let fixed = content;
   // Fix 1: Remove extra semicolons and commas in import statements;
   fixed = fixed.replace(;
-    /import\s+(\w+)\s+from\s+[""]([^""]+)[""]\s*[,]+/g,;
+    /import\s+(\w+)\s+from\s+[""]([^""]+)[""]\s*[,]+/g,
     "import $1 from "$2";";
   );
   // Fix 2: Fix malformed import statements with .ts extensions;
   fixed = fixed.replace(;
-    /import\s+(\w+)\s+from\s+[""]([^""]+)\.ts[""]\s*[,]*/g,;
+    /import\s+(\w+)\s+from\s+[""]([^""]+)\.ts[""]\s*[,]*/g,
     "import $1 from "$2";";
   );
   // Fix 3: Fix malformed export statements;
   fixed = fixed.replace(;
-    /export\s+default\s+(\w+)\s*[,]+/g,;
+    /export\s+default\s+(\w+)\s*[,]+/g,
     "export default $1;";
   );
   // Fix 4: Remove extra quotes and semicolons at the end;
@@ -26,12 +26,12 @@ function fixCommonErrors(content) {;
   fixed = fixed.replace(/return\s*\(\s*[,]+/g, "return (");
   // Fix 6: Fix malformed function declarations;
   fixed = fixed.replace(;
-    /export\s+default\s+function\s+(\w+)\([^)]*\)\s*:\s*\{[^}]*\}\s*[,]+/g,;
+    /export\s+default\s+function\s+(\w+)\([^)]*\)\s*:\s*\{[^}]*\}\s*[,]+/g,
     "export default function $1() {";
   );
-  return fixed;,;,
+  return fixed;,
 }
-;
+
 // Function to fix file extensions;
 function $1() {;
   const files = fs.readdirSync(".");
@@ -39,11 +39,11 @@ function $1() {;
   if (file.includes(".js.jsx")) {;
   const newName = file.replace(".js.jsx", `.jsx`);
       fs.renameSync(file, newName);
-      console.log(`📁 Renamed: ${file} -> ${newName}`);,;,
+      console.log(`📁 Renamed: ${file} -> ${newName}`);,
 }
-  });,;,
+  });,
 }
-;
+
 // Main execution;
 try {;
   // Fix file extensions first;
@@ -60,7 +60,7 @@ try {;
             file;
           );
         ) {;
-  processDirectory(filePath);,;,
+  processDirectory(filePath);,
 }
       } else if (;
         file.endsWith(".tsx") ||;
@@ -73,18 +73,18 @@ try {;
           const fixed = fixCommonErrors(content);
           if (fixed !== content) {;
   fs.writeFileSync(filePath, fixed, `utf8`);
-            console.log(`✅ Fixed: ${filePath}`);,;,
+            console.log(`✅ Fixed: ${filePath}`);,
 }
         } catch (error) {;
-  console.error(`❌ Error processing ${filePath }:`, error.message);,;,
+  console.error(`❌ Error processing ${filePath }:`, error.message);,
 }
       }
-    });,;,
+    });,
 }
-;
+
   processDirectory(`src`);
-  console.log("🎉 Common syntax errors fixed!");,;,
+  console.log("🎉 Common syntax errors fixed!");,
 } catch (error) {;
-  console.error("❌ Error:', error.message);,;,
+  console.error("❌ Error:', error.message);,
 }
 )

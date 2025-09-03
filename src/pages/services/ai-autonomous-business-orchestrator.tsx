@@ -2,74 +2,70 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { ;
-  Brain, Zap, Target, Users, Shield, BarChart3, CheckCircle, Star, ArrowRight, ;
-  Workflow, Building, Globe, ExternalLink, Phone, Mail, MapPin, Clock, ;
-  TrendingUp, Activity, Database, Network, Cpu, Rocket, Lightbulb;,
+  Brain, Zap, Target, Users, Shield, BarChart3, CheckCircle, Star, ArrowRight,
+  Workflow, Building, Globe, ExternalLink, Phone, Mail, MapPin, Clock,
+  TrendingUp, Activity, Database, Network, Cpu, Rocket, Lightbulb;
 } from "lucide-react";
 
 export default function AIAutonomousBusinessOrchestrator() {;
-  const features = [;
-    "Autonomous Decision Making",;
-    "Intelligent Process Automation", ;
-    "Predictive Business Analytics",;
-    "Self-Optimizing Workflows",;
-    "Real-time Performance Monitoring",;
-    "Adaptive Resource Allocation",;
-    "Automated Compliance Management",;
-    "Continuous Learning & Improvement";
-  ];
+  const features = [ "Autonomous Decision Making",
+    "Intelligent Process Automation",
+    "Predictive Business Analytics",
+    "Self-Optimizing Workflows",
+    "Real-time Performance Monitoring",
+    "Adaptive Resource Allocation",
+    "Automated Compliance Management",
+    "Continuous Learning & Improvement" ];
 
-  const benefits = [;
-    "Increase operational efficiency by 75%",;
-    "Reduce operational costs by 50%",;
-    "Improve decision-making speed by 90%",;
-    "Minimize human errors by 95%",;
-    "Optimize resource utilization by 60%",;
-    "Ensure 24/7 autonomous operations";
-  ];
+  const benefits = [ "Increase operational efficiency by 75%",
+    "Reduce operational costs by 50%",
+    "Improve decision-making speed by 90%",
+    "Minimize human errors by 95%",
+    "Optimize resource utilization by 60%",
+    "Ensure 24/7 autonomous operations" ];
 
   const pricing = [;
     {;
-      name: "Business",;
-      price: "$7,999/month",;
-      details: ["Up to 50 processes", "Basic AI automation", "Email support", "Standard analytics", "Monthly optimization"];,
-},;
+      name: "Business",
+      price: "$7,999/month",
+      details: ["Up to 50 processes", "Basic AI automation", "Email support", "Standard analytics", "Monthly optimization"];
+},
     {;
-      name: "Enterprise", ;
-      price: "$19,999/month",;
-      details: ["Up to 500 processes", "Advanced AI suite", "24/7 support", "Real-time analytics", "Weekly optimization", "Custom workflows"];,
-},;
+      name: "Enterprise",
+      price: "$19,999/month",
+      details: ["Up to 500 processes", "Advanced AI suite", "24/7 support", "Real-time analytics", "Weekly optimization", "Custom workflows"];
+},
     {;
-      name: "Global Scale",;
-      price: "$49,999/month", ;
-      details: ["Unlimited processes", "Full autonomous AI", "Dedicated support", "Predictive analytics", "Daily optimization", "White-label solution"];,
+      name: "Global Scale",
+      price: "$49,999/month",
+      details: ["Unlimited processes", "Full autonomous AI", "Dedicated support", "Predictive analytics", "Daily optimization", "White-label solution"];
 }
   ];
 
   const useCases = [;
     {;
-      title: "Manufacturing Operations",;
-      description: "Autonomous production line optimization, quality control, and predictive maintenance.",;
-      icon: Building;,
-},;
+      title: "Manufacturing Operations",
+      description: "Autonomous production line optimization, quality control, and predictive maintenance.",
+      icon: Building;
+},
     {;
-      title: "Supply Chain Management",;
-      description: "Intelligent supply chain optimization with autonomous decision-making and risk mitigation.",;
-      icon: Network;,
-},;
+      title: "Supply Chain Management",
+      description: "Intelligent supply chain optimization with autonomous decision-making and risk mitigation.",
+      icon: Network;
+},
     {;
-      title: "Customer Service",;
-      description: "AI-powered customer service automation with intelligent routing and resolution.",;
-      icon: Users;,
+      title: "Customer Service",
+      description: "AI-powered customer service automation with intelligent routing and resolution.",
+      icon: Users;
 }
   ];
 
   const capabilities = [;
-    { name: "Process Mining", description: "Discover and analyze business processes automatically" },;
-    { name: "Predictive Analytics", description: "Forecast business outcomes with 95% accuracy" },;
-    { name: "Autonomous Optimization", description: "Continuously optimize operations without human intervention" },;
-    { name: "Intelligent Automation", description: "Automate complex business processes with AI decision-making" },;
-    { name: "Real-time Adaptation", description: "Adapt to changing conditions in real-time" },;
+    { name: "Process Mining", description: "Discover and analyze business processes automatically" },
+    { name: "Predictive Analytics", description: "Forecast business outcomes with 95% accuracy" },
+    { name: "Autonomous Optimization", description: "Continuously optimize operations without human intervention" },
+    { name: "Intelligent Automation", description: "Automate complex business processes with AI decision-making" },
+    { name: "Real-time Adaptation", description: "Adapt to changing conditions in real-time" },
     { name: "Self-Healing Systems", description: "Automatically detect and resolve operational issues" }
   ];
 
@@ -114,7 +110,6 @@ export default function AIAutonomousBusinessOrchestrator() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Autonomous AI Capabilities</h2>;
             <p className="text-gray-600 text-lg">Powered by advanced machine learning and decision-making algorithms</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {features.map((feature, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">;
@@ -144,7 +139,6 @@ export default function AIAutonomousBusinessOrchestrator() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Transformative Business Impact</h2>;
               <p className="text-gray-600 text-lg">Proven results from autonomous business operations</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {benefits.map((benefit, index) => (;
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">;
@@ -164,7 +158,6 @@ export default function AIAutonomousBusinessOrchestrator() {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Capabilities</h2>;
             <p className="text-gray-600 text-lg">Comprehensive autonomous business intelligence</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {capabilities.map((capability, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 text-center">;
@@ -185,7 +178,6 @@ export default function AIAutonomousBusinessOrchestrator() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>;
               <p className="text-gray-600 text-lg">Ideal solutions for complex business operations</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-3 gap-8">;
               {useCases.map((useCase, index) => (;
                 <div key={index} className="text-center">;
@@ -207,7 +199,6 @@ export default function AIAutonomousBusinessOrchestrator() {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Pricing</h2>;
               <p className="text-gray-600 text-lg">Scale with your autonomous operations</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-3 gap-8">;
               {pricing.map((tier, index) => (;
                 <div key={index} className={`bg-white rounded-xl p-8 shadow-lg border ${tier.name === 'Enterprise' ? 'ring-2 ring-indigo-500 relative' : ''}`}>;
@@ -266,5 +257,5 @@ export default function AIAutonomousBusinessOrchestrator() {;
         </section>;
       </div>;
     </>;
-  );,
+  );
 }

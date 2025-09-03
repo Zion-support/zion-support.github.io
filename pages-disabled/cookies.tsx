@@ -21,12 +21,10 @@ const CookiePolicy: NextPage = () => {;
             <p className="text-sm text-gray-300 mt-4">Last updated: {lastUpdated}</p>;
           </div>;
         </section>;
-;
         {/* Content */}
         <section className="py-16">;
           <div className="container mx-auto px-4 max-w-4xl">;
             <div className="bg-white rounded-lg shadow-lg p-8">;
-              ;
               {/* Introduction */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -39,7 +37,6 @@ const CookiePolicy: NextPage = () => {;
                   Cookies allow a website to recognize a user"s device and remember information about their visit.;
                 </p>;
               </div>;
-;
               {/* How We Use Cookies */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -58,14 +55,12 @@ const CookiePolicy: NextPage = () => {;
                   <li>To measure the effectiveness of our marketing campaigns</li>;
                 </ul>;
               </div>;
-;
               {/* Types of Cookies */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
                   <Database className="w-6 h-6 mr-3 text-blue-600" />;
                   Types of Cookies We Use;
                 </h2>;
-                ;
                 <div className="space-y-6">;
                   <div className="border-l-4 border-blue-500 pl-6">;
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Essential Cookies</h3>;
@@ -79,7 +74,6 @@ const CookiePolicy: NextPage = () => {;
                       <li>User authentication</li>;
                     </ul>;
                   </div>;
-;
                   <div className="border-l-4 border-green-500 pl-6">;
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Performance Cookies</h3>;
                     <p className="text-gray-700 mb-2">;
@@ -92,7 +86,6 @@ const CookiePolicy: NextPage = () => {;
                       <li>Error reporting</li>;
                     </ul>;
                   </div>;
-;
                   <div className="border-l-4 border-purple-500 pl-6">;
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Functional Cookies</h3>;
                     <p className="text-gray-700 mb-2">;
@@ -105,7 +98,6 @@ const CookiePolicy: NextPage = () => {;
                       <li>User preferences</li>;
                     </ul>;
                   </div>;
-;
                   <div className="border-l-4 border-orange-500 pl-6">;
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Marketing Cookies</h3>;
                     <p className="text-gray-700 mb-2">;
@@ -120,7 +112,6 @@ const CookiePolicy: NextPage = () => {;
                   </div>;
                 </div>;
               </div>;
-;
               {/* Third-Party Cookies */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -140,7 +131,6 @@ const CookiePolicy: NextPage = () => {;
                   </p>;
                 </div>;
               </div>;
-;
               {/* Managing Cookies */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -150,7 +140,6 @@ const CookiePolicy: NextPage = () => {;
                 <p className="text-gray-700 mb-4">;
                   You have several options for managing cookies:;
                 </p>;
-                ;
                 <div className="space-y-4">;
                   <div className="bg-blue-50 p-4 rounded-lg">;
                     <h3 className="text-lg font-semibold text-blue-800 mb-2">Browser Settings</h3>;
@@ -164,14 +153,12 @@ const CookiePolicy: NextPage = () => {;
                       <li>Set preferences for specific websites</li>;
                     </ul>;
                   </div>;
-;
                   <div className="bg-green-50 p-4 rounded-lg">;
                     <h3 className="text-lg font-semibold text-green-800 mb-2">Cookie Consent</h3>;
                     <p className="text-gray-700">;
                       When you first visit our website, you'll see a cookie consent banner. You can choose which types of cookies to accept or reject.;
                     </p>;
                   </div>;
-;
                   <div className="bg-purple-50 p-4 rounded-lg">;
                     <h3 className="text-lg font-semibold text-purple-800 mb-2">Opt-Out Links</h3>;
                     <p className="text-gray-700 mb-2">;
@@ -184,7 +171,6 @@ const CookiePolicy: NextPage = () => {;
                   </div>;
                 </div>;
               </div>;
-;
               {/* Impact of Disabling Cookies */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Impact of Disabling Cookies</h2>;
@@ -199,7 +185,6 @@ const CookiePolicy: NextPage = () => {;
                   <li>We may not be able to provide you with the best possible user experience</li>;
                 </ul>;
               </div>;
-;
               {/* Updates to Policy */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Updates to This Policy</h2>;
@@ -209,7 +194,6 @@ const CookiePolicy: NextPage = () => {;
                   new Cookie Policy on this page and updating the "Last updated" date.;
                 </p>;
               </div>;
-;
               {/* Contact Information */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>;
@@ -227,6 +211,6 @@ const CookiePolicy: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,;,
+  );,
 }
 export default CookiePolicy

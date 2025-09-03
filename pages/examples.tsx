@@ -1,227 +1,212 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-;
 const Examples: React.FC = () => {;
   const [activeLanguage, setActiveLanguage] = useState('javascript');
-;
   const languages = [;
-    { id: 'javascript', name: 'JavaScript', icon: '🟨' },;
-    { id: 'python', name: 'Python', icon: '🐍' },;
-    { id: 'curl', name: 'cURL', icon: '📡' },;
-    { id: 'php', name: 'PHP', icon: '🐘' },;
-    { id: 'java', name: 'Java', icon: '☕' },;
+    { id: 'javascript', name: 'JavaScript', icon: '🟨' },
+    { id: 'python', name: 'Python', icon: '🐍' },
+    { id: 'curl', name: 'cURL', icon: '📡' },
+    { id: 'php', name: 'PHP', icon: '🐘' },
+    { id: 'java', name: 'Java', icon: '☕' },
   ];
-;
   const examples = {;
     javascript: [;
       {;
-        title: 'Get All Services',;
-        description: 'Retrieve all available AI services',;
+        title: 'Get All Services',
+        description: 'Retrieve all available AI services',
         code: `const response = await fetch('https://api.zion.ai/services', {;
   headers: {;
-    'Authorization': 'Bearer YOUR_API_KEY',;
-    'Content-Type': 'application/json';,
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json';
 }
 });
-;
 const services = await response.json();
-console.log(services);`;,
-},;
+console.log(services);`;
+},
       {;
-        title: 'Create a New Project',;
-        description: 'Create a new AI project',;
+        title: 'Create a New Project',
+        description: 'Create a new AI project',
         code: `const projectData = {;
-  name: 'AI Chatbot Integration',;
-  description: 'Integrate AI chatbot into our website',;
-  budget: 5000,;
-  timeline: '2 weeks';,
+  name: 'AI Chatbot Integration',
+  description: 'Integrate AI chatbot into our website',
+  budget: 5000,
+  timeline: '2 weeks';
 };
-;
 const response = await fetch('https://api.zion.ai/projects', {;
-  method: 'POST',;
+  method: 'POST',
   headers: {;
-    'Authorization': 'Bearer YOUR_API_KEY',;
-    'Content-Type': 'application/json';,
-},;
-  body: JSON.stringify(projectData);,
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json';
+},
+  body: JSON.stringify(projectData);
 });
-;
 const project = await response.json();
-console.log('Project created:', project);`;,
-},;
+console.log('Project created:', project);`;
+},
       {;
-        title: 'Search for Talents',;
-        description: 'Find AI talents by skills',;
+        title: 'Search for Talents',
+        description: 'Find AI talents by skills',
         code: `const searchParams = new URLSearchParams({;
-  skills: 'machine-learning,python,tensorflow',;
-  experience: '3-5',;
-  location: 'remote';,
+  skills: 'machine-learning,python,tensorflow',
+  experience: '3-5',
+  location: 'remote';
 });
-;
 const response = await fetch(\`https://api.zion.ai/talents?\${searchParams}\`, {;
   headers: {;
-    'Authorization': 'Bearer YOUR_API_KEY';,
+    'Authorization': 'Bearer YOUR_API_KEY';
 }
 });
-;
 const talents = await response.json();
-console.log('Found talents:', talents);`;,
+console.log('Found talents:', talents);`;
 }
-    ],;
+    ],
     python: [;
       {;
-        title: 'Get All Services',;
-        description: 'Retrieve all available AI services',;
+        title: 'Get All Services',
+        description: 'Retrieve all available AI services',
         code: `import requests;
 
 headers = {;
-    'Authorization': 'Bearer YOUR_API_KEY',;
-    'Content-Type': 'application/json';,
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json';
 }
-;
+
 response = requests.get('https://api.zion.ai/services', headers=headers);
 services = response.json();
-print(services)`;,
-},;
+print(services)`;
+},
       {;
-        title: 'Create a New Project',;
-        description: 'Create a new AI project',;
+        title: 'Create a New Project',
+        description: 'Create a new AI project',
         code: `import requests;
 
 project_data = {;
-    'name': 'AI Chatbot Integration',;
-    'description': 'Integrate AI chatbot into our website',;
-    'budget': 5000,;
-    'timeline': '2 weeks';,
+    'name': 'AI Chatbot Integration',
+    'description': 'Integrate AI chatbot into our website',
+    'budget': 5000,
+    'timeline': '2 weeks';
 }
-;
+
 headers = {;
-    'Authorization': 'Bearer YOUR_API_KEY',;
-    'Content-Type': 'application/json';,
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json';
 }
-;
+
 response = requests.post(;
-    'https://api.zion.ai/projects',;
-    json=project_data,;
+    'https://api.zion.ai/projects',
+    json=project_data,
     headers=headers;
 );
 
 project = response.json();
-print('Project created:', project)`;,
-},;
+print('Project created:', project)`;
+},
       {;
-        title: 'Search for Talents',;
-        description: 'Find AI talents by skills',;
+        title: 'Search for Talents',
+        description: 'Find AI talents by skills',
         code: `import requests;
 
 params = {;
-    'skills': 'machine-learning,python,tensorflow',;
-    'experience': '3-5',;
-    'location': 'remote';,
+    'skills': 'machine-learning,python,tensorflow',
+    'experience': '3-5',
+    'location': 'remote';
 }
-;
+
 headers = {;
-    'Authorization': 'Bearer YOUR_API_KEY';,
+    'Authorization': 'Bearer YOUR_API_KEY';
 }
-;
+
 response = requests.get(;
-    'https://api.zion.ai/talents',;
-    params=params,;
+    'https://api.zion.ai/talents',
+    params=params,
     headers=headers;
 );
 
 talents = response.json();
-print('Found talents:', talents)`;,
+print('Found talents:', talents)`;
 }
-    ],;
+    ],
     curl: [;
       {;
-        title: 'Get All Services',;
-        description: 'Retrieve all available AI services',;
+        title: 'Get All Services',
+        description: 'Retrieve all available AI services',
         code: `curl -X GET "https://api.zion.ai/services" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
-  -H "Content-Type: application/json"`;,
-},;
+  -H "Content-Type: application/json"`;
+},
       {;
-        title: 'Create a New Project',;
-        description: 'Create a new AI project',;
+        title: 'Create a New Project',
+        description: 'Create a new AI project',
         code: `curl -X POST "https://api.zion.ai/projects" \\;
   -H "Authorization: Bearer YOUR_API_KEY" \\;
   -H "Content-Type: application/json" \\;
   -d '{;
-    "name": "AI Chatbot Integration",;
-    "description": "Integrate AI chatbot into our website",;
-    "budget": 5000,;
-    "timeline": "2 weeks";,
-}'`;,
-},;
+    "name": "AI Chatbot Integration",
+    "description": "Integrate AI chatbot into our website",
+    "budget": 5000,
+    "timeline": "2 weeks";
+}'`;
+},
       {;
-        title: 'Search for Talents',;
-        description: 'Find AI talents by skills',;
+        title: 'Search for Talents',
+        description: 'Find AI talents by skills',
         code: `curl -X GET "https://api.zion.ai/talents?skills=machine-learning,python,tensorflow&experience=3-5&location=remote" \\;
-  -H "Authorization: Bearer YOUR_API_KEY"`;,
+  -H "Authorization: Bearer YOUR_API_KEY"`;
 }
-    ],;
+    ],
     php: [;
       {;
-        title: 'Get All Services',;
-        description: 'Retrieve all available AI services',;
+        title: 'Get All Services',
+        description: 'Retrieve all available AI services',
         code: `<?php;
 $headers = [;
-    'Authorization: Bearer YOUR_API_KEY',;
+    'Authorization: Bearer YOUR_API_KEY',
     'Content-Type: application/json';
 ];
-;
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://api.zion.ai/services');
 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-;
 $response = curl_exec($ch);
 curl_close($ch);
-;
 $services = json_decode($response, true);
 print_r($services);
-?>`;,
-},;
+?>`;
+},
       {;
-        title: 'Create a New Project',;
-        description: 'Create a new AI project',;
+        title: 'Create a New Project',
+        description: 'Create a new AI project',
         code: `<?php;
 $projectData = [;
-    'name' => 'AI Chatbot Integration',;
-    'description' => 'Integrate AI chatbot into our website',;
-    'budget' => 5000,;
+    'name' => 'AI Chatbot Integration',
+    'description' => 'Integrate AI chatbot into our website',
+    'budget' => 5000,
     'timeline' => '2 weeks';
 ];
-;
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://api.zion.ai/projects');
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($projectData));
 curl_setopt($ch, CURLOPT_HTTPHEADER, [;
-    'Authorization: Bearer YOUR_API_KEY',;
+    'Authorization: Bearer YOUR_API_KEY',
     'Content-Type: application/json';
 ]);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-;
 $response = curl_exec($ch);
 curl_close($ch);
-;
 $project = json_decode($response, true);
 echo 'Project created: ' . print_r($project, true);
-?>`;,
+?>`;
 }
-    ],;
+    ],
     java: [;
       {;
-        title: 'Get All Services',;
-        description: 'Retrieve all available AI services',;
+        title: 'Get All Services',
+        description: 'Retrieve all available AI services',
         code: `import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.URI;
-;
 HttpClient client = HttpClient.newHttpClient();
 HttpRequest request = HttpRequest.newBuilder();
     .uri(URI.create("https://api.zion.ai/services"));
@@ -229,21 +214,18 @@ HttpRequest request = HttpRequest.newBuilder();
     .header("Content-Type", "application/json");
     .GET();
     .build();
-;
-HttpResponse<String> response = client.send(request, ;
+HttpResponse<String> response = client.send(request,
     HttpResponse.BodyHandlers.ofString());
-System.out.println(response.body());`;,
-},;
+System.out.println(response.body());`;
+},
       {;
-        title: 'Create a New Project',;
-        description: 'Create a new AI project',;
+        title: 'Create a New Project',
+        description: 'Create a new AI project',
         code: `import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.URI;
-;
 String projectData = "{\\"name\\":\\"AI Chatbot Integration\\",\\"description\\":\\"Integrate AI chatbot into our website\\",\\"budget\\":5000,\\"timeline\\":\\"2 weeks\\"}";
-;
 HttpClient client = HttpClient.newHttpClient();
 HttpRequest request = HttpRequest.newBuilder();
     .uri(URI.create("https://api.zion.ai/projects"));
@@ -251,14 +233,12 @@ HttpRequest request = HttpRequest.newBuilder();
     .header("Content-Type", "application/json");
     .POST(HttpRequest.BodyPublishers.ofString(projectData));
     .build();
-;
-HttpResponse<String> response = client.send(request, ;
+HttpResponse<String> response = client.send(request,
     HttpResponse.BodyHandlers.ofString());
-System.out.println("Project created: " + response.body());`;,
+System.out.println("Project created: " + response.body());`;
 }
-    ];,
+    ];
 };
-;
   return (;
     <>;
       <Head>;
@@ -266,7 +246,6 @@ System.out.println("Project created: " + response.body());`;,
         <meta name="description" content="Code examples and integration samples for Zion AI Marketplace API" />;
         <meta name="keywords" content="code examples, API, integration, Zion AI, marketplace" />;
       </Head>;
-      ;
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">;
         {/* Header */}
         <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">;
@@ -292,7 +271,7 @@ System.out.println("Project created: " + response.body());`;,
                   className={`px-6 py-3 rounded-lg font-medium transition-colors ${;
                     activeLanguage === language.id;
                       ? 'bg-blue-600 text-white';
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600';,
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600';
 }`}
                 >;
                   <span className="mr-2">{language.icon}</span>;
@@ -308,19 +287,16 @@ System.out.println("Project created: " + response.body());`;,
           <h2 className="text-3xl font-bold text-blue-400 mb-8">;
             {languages.find(l => l.id === activeLanguage)?.name} Examples;
           </h2>;
-          ;
           <div className="space-y-8">;
             {examples[activeLanguage]?.map((example, index) => (;
               <div key={index} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
                 <h3 className="text-xl font-semibold text-white mb-2">{example.title}</h3>;
                 <p className="text-gray-300 mb-4">{example.description}</p>;
-                ;
                 <div className="bg-gray-900 rounded-lg p-4 overflow-x-auto">;
                   <pre className="text-sm text-green-400">;
                     <code>{example.code}</code>;
                   </pre>;
                 </div>;
-                ;
                 <div className="mt-4 flex gap-3">;
                   <button className="text-blue-400 hover:text-blue-300 text-sm font-medium">;
                     Copy Code;
@@ -367,7 +343,6 @@ System.out.println("Project created: " + response.body());`;,
                 View Docs →;
               </a>;
             </div>;
-            ;
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
               <div className="text-4xl mb-4">🎓</div>;
               <h3 className="text-xl font-semibold text-white mb-4">Tutorials</h3>;
@@ -378,7 +353,6 @@ System.out.println("Project created: " + response.body());`;,
                 View Tutorials →;
               </a>;
             </div>;
-            ;
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 text-center">;
               <div className="text-4xl mb-4">💬</div>;
               <h3 className="text-xl font-semibold text-white mb-4">Support</h3>;
@@ -407,7 +381,6 @@ System.out.println("Project created: " + response.body());`;,
         </footer>;
       </div>;
     </>;
-  );,
+  );
 };
-;
 export default Examples;

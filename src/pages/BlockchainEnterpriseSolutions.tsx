@@ -1,80 +1,74 @@
 id: 2,"";
     title: "Supply Chain Blockchain","";
-    description: "Transparent and traceable supply chain solutions using blockchain technology.",;
+    description: "Transparent and traceable supply chain solutions using blockchain technology.",
     icon: Package,";
-    features[;"";
+    features[ "";
       "Supply chain tracking","";
       "Product verification","";
       "Transparency","";
-      "Compliance management"";
-    ],;"";
+      "Compliance management"" ],"";
     price: "From $300,000","";
     timeline: "24-36 weeks","";
     category: "Supply Chain","";
-    technologies["Blockchain", "IoT", "Supply Chain", "Compliance"]},;  {}
+    technologies["Blockchain", "IoT", "Supply Chain", "Compliance"]},  {}
 ";
     id: 3,"";
     title: "Financial Blockchain Solutions","";
-    description: "Blockchain-based financial services and payment solutions.",;
+    description: "Blockchain-based financial services and payment solutions.",
     icon: DollarSign,";
-    features[;"";
+    features[ "";
       "Digital payments","";
       "Cross-border transfers","";
       "Asset tokenization","";
-      "Regulatory compliance"";
-    ],;"";
+      "Regulatory compliance"" ],"";
     price: "From $400,000","";
     timeline: "28-40 weeks","";
     category: "Financial","";
-    technologies["Blockchain", "Fintech", "Payments", "Compliance"]},;  {}
+    technologies["Blockchain", "Fintech", "Payments", "Compliance"]},  {}
 ";
     id: 4,"";
     title: "Identity Management Blockchain","";
-    description: "Decentralized identity management and verification systems.",;
+    description: "Decentralized identity management and verification systems.",
     icon: Shield,";
-    features[;"";
+    features[ "";
       "Digital identity","";
       "Verification","";
       "Privacy protection","";
-      "Access control"";
-    ],;"";
+      "Access control"" ],"";
     price: "From $250,000","";
     timeline: "20-32 weeks","";
     category: "Identity","";
-    technologies["Blockchain", "Identity", "Security", "Privacy"]},;  {}
+    technologies["Blockchain", "Identity", "Security", "Privacy"]},  {}
 ";
     id: 5,"";
     title: "Smart Contract Development","";
-    description: "Custom smart contract development for business automation.",;
+    description: "Custom smart contract development for business automation.",
     icon: Code,";
-    features[;"";
+    features[ "";
       "Smart contracts","";
       "Business logic","";
       "Automation","";
-      "Security audit"";
-    ],;"";
+      "Security audit"" ],"";
     price: "From $150,000","";
     timeline: "16-28 weeks","";
     category: "Smart Contracts","";
-    technologies["Smart Contracts", "Blockchain", "Automation", "Security"]},;  {}
+    technologies["Smart Contracts", "Blockchain", "Automation", "Security"]},  {}
 ";
     id: 6,"";
     title: "Blockchain Integration Services","";
-    description: "Integration services for existing enterprise systems with blockchain.",;
+    description: "Integration services for existing enterprise systems with blockchain.",
     icon: Wrench,";
-    features[;"";
+    features[ "";
       "System integration","";
       "API development","";
       "Data migration","";
-      "Legacy support"";
-    ],;"";
+      "Legacy support"" ],"";
     technologies["Integration", "APIs", "Migration", "Legacy Systems"]};"";
-    price: "From $200,000",;"";
-    timeline: "18-30 weeks",;"";
-    category: "Integration",;"";
+    price: "From $200,000","";
+    timeline: "18-30 weeks","";
+    category: "Integration","";
     technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]};
 ];
-;
 const blockchainTechnologies: unknown = [];
   {}
 ";
@@ -83,8 +77,8 @@ const blockchainTechnologies: unknown = [];
     description: "Enterprise blockchain platforms and frameworks",";
     icon: Building,"";
     useCase: "Platform Development","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical";
+},
   {}
 ";
 "";
@@ -92,8 +86,8 @@ const blockchainTechnologies: unknown = [];
     description: "Self-executing contracts with business logic",";
     icon: Code,"";
     useCase: "Business Automation","";
-    reliability: "Critical";,
-},;
+    reliability: "Critical";
+},
   {}
 ";
 "";
@@ -101,16 +95,15 @@ const blockchainTechnologies: unknown = [];
     description: "Blockchain consensus and validation protocols",";
     icon: Network,"";
     useCase: "Network Security","";
-    reliability: "High";,
+    reliability: "High";
 },";
   {;"";
-    name: "Cryptography",;"";
-    description: "Advanced cryptographic security solutions",;";
-    icon: Lock,;"";
-    useCase: "Security & Privacy",;"";
+    name: "Cryptography","";
+    description: "Advanced cryptographic security solutions",";
+    icon: Lock,"";
+    useCase: "Security & Privacy","";
     reliability: "High"};
 ];
-;
 const successStories: unknown = [];
   {}
 ";
@@ -120,8 +113,8 @@ const successStories: unknown = [];
     challenge: "Needed transparent supply chain tracking across 50+ countries","";
     solution: "Built comprehensive blockchain supply chain platform with IoT integration","";
     results: "100% supply chain transparency, 40% cost reduction, 60% efficiency improvement, better compliance","";
-    logo: "GSC";,
-},;
+    logo: "GSC";
+},
   {}
 ";
     id: 2,"";
@@ -130,79 +123,75 @@ const successStories: unknown = [];
     challenge: "Required blockchain-based cross-border payment system","";
     solution: "Implemented blockchain payment platform with smart contracts","";
     results: "80% faster payments, 70% cost reduction, 100% transparency, better compliance","";
-    logo: "DBI";,
-},;
+    logo: "DBI";
+},
   {}
 ";
     id: 3,"";
-    comp: "Healthcare Identity Solutions",;"";
-    industry: "Healthcare",;"";
-    challenge: "Needed secure patient identity management system",;"";
-    solution: "Built blockchain-based identity management platform",;"";
-    results: "100% data security, 90% faster verification, better privacy, improved compliance",;"";
+    comp: "Healthcare Identity Solutions","";
+    industry: "Healthcare","";
+    challenge: "Needed secure patient identity management system","";
+    solution: "Built blockchain-based identity management platform","";
+    results: "100% data security, 90% faster verification, better privacy, improved compliance","";
     logo: "HIS"};
 ];
-;
 ";
-    step: 4,;"";
-    title: "Testing & Deployment",;"";
-    description: "Test blockchain systems and deploy to production",;";
-    icon: Gauge,;"";
+    step: 4,"";
+    title: "Testing & Deployment","";
+    description: "Test blockchain systems and deploy to production",";
+    icon: Gauge,"";
     duration: "4-8 weeks"};
-];,
-},;  {}
+];
+},  {}
 ";
 "";
     title: "Security & Privacy","";
     description: "Advanced cryptography ensures data security and privacy protection",";
     icon: Shield,"";
-    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"]},;  {}
+    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"]},  {}
 ";
 "";
     title: "Automation & Efficiency","";
     description: "Smart contracts automate business processes and reduce manual effort",";
     icon: Zap,"";
-    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]},;
+    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]},
   {}
 ";
 "";
     examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]};"";
-    title: "Cost Reduction",;"";
-    description: "Blockchain eliminates intermediaries and reduces operational costs",;";
-    icon: TrendingUp,;"";
+    title: "Cost Reduction","";
+    description: "Blockchain eliminates intermediaries and reduces operational costs",";
+    icon: TrendingUp,"";
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]};];
-;
 const blockchainBenefits: unknown = [{}
-    title: "Transparency & Trust",;
-    description: "Blockchain provides immutable, transparent records that build trust",;
-    icon: Eye,;
-    examples["Immutable records", "Transparent transactions", "Audit trails", "Trust building"];,
-},;
+    title: "Transparency & Trust",
+    description: "Blockchain provides immutable, transparent records that build trust",
+    icon: Eye,
+    examples["Immutable records", "Transparent transactions", "Audit trails", "Trust building"];
+},
   {}
-    title: "Security & Privacy",;
-    description: "Advanced cryptography ensures data security and privacy protection",;
-    icon: Shield,;
-    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"];,
-},;
+    title: "Security & Privacy",
+    description: "Advanced cryptography ensures data security and privacy protection",
+    icon: Shield,
+    examples["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"];
+},
   {}
-    title: "Automation & Efficiency",;
-    description: "Smart contracts automate business processes and reduce manual effort",;
-    icon: Zap,;
-    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"];,
-},;
+    title: "Automation & Efficiency",
+    description: "Smart contracts automate business processes and reduce manual effort",
+    icon: Zap,
+    examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"];
+},
   {}
-    examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];,
+    examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
 };
-    title: "Cost Reduction",;
-    description: "Blockchain eliminates intermediaries and reduces operational costs",;
-    icon: TrendingUp,;
-    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];,
+    title: "Cost Reduction",
+    description: "Blockchain eliminates intermediaries and reduces operational costs",
+    icon: TrendingUp,
+    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
 };
 ];
-;
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-;
   ";
   return ("    <div className = "min-h-screen bg-futuristic">";
       {/* Hero Section */}"";
@@ -216,33 +205,33 @@ const blockchainBenefits: unknown = [{}
         <div className="container-responsive relative z-10">;
           <motion.div;
             initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
             animate = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto";
             <motion.div;
               initial = {}
-  { opacity: 0,;
-  scale: 0.8;,
+  { opacity: 0,
+  scale: 0.8;
 }}
               animate = {}
-  { opacity: 1,;
-  scale: 1;,
+  { opacity: 1,
+  scale: 1;
 }}
               transition = {}
-  { duration: 0.8,;
-  delay: 0.2;,
+  { duration: 0.8,
+  delay: 0.2;
 }}
               className="inline - flex items - center justify - center w-20 h-20 bg-gradient - to - br from - zion - cyan to - zion - purple rounded-2xl mb-8";
               <Building className="w-10 h-10 text-white" />;
             </motion.div>;
 
-";,
+";
 }}"";
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"";
 "";
@@ -280,12 +269,12 @@ const blockchainBenefits: unknown = [{}
         <div className="container-responsive">;
           <motion.div;
             initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
             whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
@@ -301,19 +290,19 @@ const blockchainBenefits: unknown = [{}
               <motion.div;
                 key={benefit.title}
                 initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
                 whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 8 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
+";
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
@@ -342,12 +331,12 @@ const blockchainBenefits: unknown = [{}
         <div className="container-responsive">;
           <motion.div;
             initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
             whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
@@ -363,19 +352,19 @@ const blockchainBenefits: unknown = [{}
               <motion.div;
                 key={technology.name}
                 initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
                 whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 text-center hover:border-zion - cyan / 40 transition - all duration -300";
-";,
+";
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"";
 "";
@@ -395,7 +384,7 @@ const blockchainBenefits: unknown = [{}
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'''''`;
                     : technology.reliability === 'High''''`'`;
                     ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'''`'`'`;
-                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;,
+                    : 'bg-green-500/20 text-green-400 border border-green-500/30'````;
 }`}>;
                   {technology.reliability} Reliability;
                 </span>;
@@ -409,12 +398,12 @@ const blockchainBenefits: unknown = [{}
         <div className="container-responsive">;
           <motion.div;
             initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
             whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
@@ -430,17 +419,17 @@ const blockchainBenefits: unknown = [{}
               <motion.div;
                 key={step.step}
                 initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
                 whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition = {}
-  { duration: 0.6,;
+  { duration: 0.6,
   delay: index * 0.1;
-";,
+";
 }}"";
                 className="text-center"";
 "";
@@ -468,12 +457,12 @@ const blockchainBenefits: unknown = [{}
         <div className="container-responsive">;
           <motion.div;
             initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
             whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
@@ -496,9 +485,9 @@ const blockchainBenefits: unknown = [{}
 '''`;
                   selectedCategory === category'''`'`;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'''`'`'`;
-                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;,
+                    : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'````;
 }`}
-;
+
                 {category}
               </button>) ) }
           </div>";
@@ -508,21 +497,21 @@ const blockchainBenefits: unknown = [{}
               <motion.div;
                 key={solution.id}
                 initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
                 whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration - 300 cursor -pointer";
                 onClick={ () => setSelectedSolution(solution) }
-;
-";,
+
+";
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";
                 onClick={() => setSelectedSolution(solution)}";
@@ -574,12 +563,12 @@ const blockchainBenefits: unknown = [{}
         <div className="container-responsive">;
           <motion.div;
             initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
             whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
             transition={{ duration: 0.8 }}"";
             className="text-center mb-16"";
@@ -595,19 +584,19 @@ const blockchainBenefits: unknown = [{}
               <motion.div;
                 key={story.id}
                 initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
                 whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}
                 className="bg-zion - blue - dark / 30 border border-zion - cyan / 20 rounded-2xl p - 6 hover:border-zion - cyan / 40 transition - all duration -300";
-";,
+";
 }}"";
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"";
 "";
@@ -651,19 +640,19 @@ const blockchainBenefits: unknown = [{}
         <div className="container-responsive">;
           <motion.div;
             initial = {}
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
             whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
             transition={{ duration: 0.8 }}"";
             className="text-center max-w-4xl mx-auto"";
 "";
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform with Blockchain?</h2>"";
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">';
-              Let's discuss how blockchain enterprise solutions can revolutionize your operations,;
+              Let's discuss how blockchain enterprise solutions can revolutionize your operations,
               improve transparency, and create competitive advantages.;
             </p>";
 "";
@@ -683,14 +672,10 @@ const blockchainBenefits: unknown = [{}
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }
-;
 
 export { BlockchainEnterpriseSolutions };
-;
 export { BlockchainEnterpriseSolutions };
-;
 export { BlockchainEnterpriseSolutions };
-;
 export { BlockchainEnterpriseSolutions };

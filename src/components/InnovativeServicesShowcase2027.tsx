@@ -1,14 +1,11 @@
 import {  import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from '../data/innovativeServices2027';
-;
-export default function Page() {;,
-},;
+export default function Page() {;
+},
       { threshold: 0.1 }
     );
-;
     if(element) {  ;
-  ;
-  ;
-  address: '364 E Main St STE 1008 Middletown DE 19709';,
+
+  address: '364 E Main St STE 1008 Middletown DE 19709';
 };
   return (";
     <section id = "innovative-services-2027" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">;
@@ -24,13 +21,13 @@ export default function Page() {;,
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
           animate = {;
 
-  isVisible ? { opacity: 1,;
-  y: 0;,
+  isVisible ? { opacity: 1,
+  y: 0;
 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8 }}";
           className="text-center mb-16";
@@ -56,18 +53,18 @@ export default function Page() {;,
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  isVisible ? { opacity: 1,;
-  y: 0;,
+  isVisible ? { opacity: 1,
+  y: 0;
 } : { opacity: 0, y: 20 }}
           transition = {;
 
-  { duration: 0.8,;
-  delay: 0.2;,
+  { duration: 0.8,
+  delay: 0.2;
 }}";
           className="mb-12";
 ";
@@ -76,19 +73,18 @@ export default function Page() {;,
               onClick={() => setSelectedCategory('All')}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === 'All'';
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'';
-                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';`;,
+                  : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';`;
 }`};
             >;
               All Categories;
             </button>;
             {serviceCategories2027.map((category) => {;
-              ;
               return ()                <button;
                   key = {category}
                   onClick={() => setSelectedCategory(category)}`;
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${selectedCategory === category';
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'';
-                      : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'`;,
+                      : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'`;
 }`};
                 >;";
                   {Icon && <Icon className="w-4 h-4"  />};
@@ -100,31 +96,31 @@ export default function Page() {;,
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
+  { opacity: 0,
   y: 30 }}          animate = {;
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1,
   y: 0 } : { opacity: 0, y: 30 }}          transition = {;
 
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: 0.4 }}"          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
           {filteredServices.map((service, index) => (;
             <motion.div;
               key={service.id}
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  isVisible ? { opacity: 1,;
-  y: 0;,
+  isVisible ? { opacity: 1,
+  y: 0;
 } : { opacity: 0, y: 20 }}
               transition = {;
 
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}";
               className="group relative";
 ";
@@ -168,7 +164,6 @@ export default function Page() {;,
                     <div className="text-gray-400 text-xs">ROI</div>;
                   </div>;
                 </div>;
-;
                 {/* Price & CTA */}";
                 <div className="flex items-center justify-between mb-4">;";
                   <div className="text-2xl font-bold text-white">{service.price}</div>;
@@ -186,18 +181,18 @@ export default function Page() {;,
                     <motion.div;
                       initial = {;
 
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}
                       animate = {;
 
-  { opacity: 1,;
-  height: 'auto';,
+  { opacity: 1,
+  height: 'auto';
 }}
                       exit = {;
 
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}
                       transition={{ duration: 0.3 }}";
                       className="overflow-hidden";
@@ -260,13 +255,13 @@ export default function Page() {;,
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
+  { opacity: 0,
   y: 30 }}          animate = {;
 
-  isVisible ? { opacity: 1,;
+  isVisible ? { opacity: 1,
   y: 0 } : { opacity: 0, y: 30 }}          transition = {;
 
-  { duration: 0.8,;
+  { duration: 0.8,
   delay: 0.6 }}"          className="text-center";
 ";
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">;";

@@ -1,12 +1,9 @@
 import React, { useState } from 'react;
 import Link from 'next/link;
 import { Menu, X, ChevronDown } from 'lucide-react;
-;
 const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
-;
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
-;
 const EnhancedNavigation = () => {;
   return (;
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
@@ -25,7 +22,6 @@ const EnhancedNavigation = () => {;
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">;
             <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors">Home</Link>;
-            ;
             {/* Services Dropdown */}
             <div className="relative group">;
               <button;
@@ -133,8 +129,7 @@ const EnhancedNavigation = () => {;
         )}
       </div>;
     </nav>;
-  );,
+  );
 };
-;
 export default EnhancedNavigation;
 }

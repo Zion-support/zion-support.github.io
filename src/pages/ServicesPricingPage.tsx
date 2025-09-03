@@ -45,6 +45,6 @@ const ServicesPricingPage = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default ServicesPricingPage;

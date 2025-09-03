@@ -3,7 +3,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-;
   const getFilteredServices = () => {;
     let services: any[] = [];
     switch(activeTab) {;
@@ -17,7 +16,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
       case 'ai':;
         services = comprehensiveAIServices2030;
         break}
-;
+
     if(searchTerm) {;
 
       services = services.filter(service => ;
@@ -25,12 +24,10 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some(tag: string tag.toLowerCase().includes(searchTerm.toLowerCase()));
       )}
-;
+
     if(selectedCategory !== 'all') {;
       services = services.filter(service => service.category === selectedCategory)};
-;
     return services};
-;
   const getCategories = () => {;
     let services: any[] = [];
     switch(activeTab) {;
@@ -44,9 +41,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
       case 'ai':;
         services = comprehensiveAIServices2030;
         break}
-;
+
     return categories};
-;
   const renderServiceCard = (service)  => {;
 
     if(activeTab === 'microsaas') {;
@@ -369,7 +365,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         </div>;
       )}
   };
-;
   return ();
     <>;
       <SEO";
@@ -468,27 +463,27 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 onClick={() => setActiveTab('microsaas')}`;
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'microsaas'';
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;,
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;
 }`}
-;
+
                 Micro SAAS Services({innovativeMicroSaasServices2030.length});
               </button>;
               <button';
                 onClick={() => setActiveTab('it')}`;
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'it'';
                     ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;,
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;
 }`}
-;
+
                 IT Services({comprehensiveITServices2030.length});
               </button>;
               <button';
                 onClick={() => setActiveTab('ai')}`;
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'ai'';
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'';
-                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;,
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'`;
 }`}
-;
+
                 AI Services({comprehensiveAIServices2030.length});
               </button>;
             </div>;
@@ -498,7 +493,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
             {getFilteredServices().map(renderServiceCard)}
           </div>;
-;
           {/* No Results */};
           {getFilteredServices().length === 0 && (;";
             <div className="text-center py-12">;";
@@ -511,7 +505,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
               </button>;
             </div>;
           )}
-;
+
           {/* Contact CTA */}";
           <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">";
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>";
@@ -536,5 +530,4 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
       </div>;
     </>;
   )};
-;
 export default ComprehensiveServicesShowcase2030}}}}}'"`;

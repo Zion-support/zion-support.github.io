@@ -4,105 +4,102 @@ import MainLayout from '../components/layout/MainLayout';
 import { Download, Calendar, User, FileText, ArrowRight, Tag } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-;
 const Whitepapers: NextPage = () => {;
   const whitepapers = [;
     {;
-      id: 1,;
-      title: 'The Future of Quantum Computing in Enterprise Applications',;
-      description: 'A comprehensive analysis of quantum computing technologies and their potential impact on enterprise software development, including practical implementation strategies and ROI considerations.',;
-      author: 'Dr. Sarah Chen',;
-      date: '2025-01-15',;
-      category: 'Quantum Computing',;
-      pages: 45,;
-      downloadCount: 1250,;
-      fileSize: '2.3 MB',;
-      image: '/whitepapers/quantum-computing-enterprise.jpg',;
-      slug: 'quantum-computing-enterprise-applications',;
-      tags: ['Quantum Computing', 'Enterprise Software', 'Future Technology'];,
-},;
+      id: 1,
+      title: 'The Future of Quantum Computing in Enterprise Applications',
+      description: 'A comprehensive analysis of quantum computing technologies and their potential impact on enterprise software development, including practical implementation strategies and ROI considerations.',
+      author: 'Dr. Sarah Chen',
+      date: '2025-01-15',
+      category: 'Quantum Computing',
+      pages: 45,
+      downloadCount: 1250,
+      fileSize: '2.3 MB',
+      image: '/whitepapers/quantum-computing-enterprise.jpg',
+      slug: 'quantum-computing-enterprise-applications',
+      tags: ['Quantum Computing', 'Enterprise Software', 'Future Technology'];
+},
     {;
-      id: 2,;
-      title: 'AI-Powered Micro SaaS: Building Profitable Niche Applications',;
-      description: 'An in-depth guide to developing and scaling micro SaaS applications using artificial intelligence, including market analysis, technical architecture, and monetization strategies.',;
-      author: 'Michael Rodriguez',;
-      date: '2025-01-12',;
-      category: 'Micro SaaS',;
-      pages: 38,;
-      downloadCount: 2100,;
-      fileSize: '1.8 MB',;
-      image: '/whitepapers/ai-micro-saas.jpg',;
-      slug: 'ai-powered-micro-saas-guide',;
-      tags: ['Micro SaaS', 'Artificial Intelligence', 'Business Strategy'];,
-},;
+      id: 2,
+      title: 'AI-Powered Micro SaaS: Building Profitable Niche Applications',
+      description: 'An in-depth guide to developing and scaling micro SaaS applications using artificial intelligence, including market analysis, technical architecture, and monetization strategies.',
+      author: 'Michael Rodriguez',
+      date: '2025-01-12',
+      category: 'Micro SaaS',
+      pages: 38,
+      downloadCount: 2100,
+      fileSize: '1.8 MB',
+      image: '/whitepapers/ai-micro-saas.jpg',
+      slug: 'ai-powered-micro-saas-guide',
+      tags: ['Micro SaaS', 'Artificial Intelligence', 'Business Strategy'];
+},
     {;
-      id: 3,;
-      title: 'Blockchain Infrastructure for Modern Enterprises',;
-      description: 'A technical deep-dive into blockchain infrastructure design, implementation best practices, and integration strategies for enterprise environments.',;
-      author: 'Alex Thompson',;
-      date: '2025-01-10',;
-      category: 'Blockchain',;
-      pages: 52,;
-      downloadCount: 1800,;
-      fileSize: '2.7 MB',;
-      image: '/whitepapers/blockchain-infrastructure.jpg',;
-      slug: 'blockchain-infrastructure-enterprises',;
-      tags: ['Blockchain', 'Infrastructure', 'Enterprise Architecture'];,
-},;
+      id: 3,
+      title: 'Blockchain Infrastructure for Modern Enterprises',
+      description: 'A technical deep-dive into blockchain infrastructure design, implementation best practices, and integration strategies for enterprise environments.',
+      author: 'Alex Thompson',
+      date: '2025-01-10',
+      category: 'Blockchain',
+      pages: 52,
+      downloadCount: 1800,
+      fileSize: '2.7 MB',
+      image: '/whitepapers/blockchain-infrastructure.jpg',
+      slug: 'blockchain-infrastructure-enterprises',
+      tags: ['Blockchain', 'Infrastructure', 'Enterprise Architecture'];
+},
     {;
-      id: 4,;
-      title: 'Cloud Migration Strategies: A Complete Implementation Guide',;
-      description: 'Comprehensive guide covering cloud migration planning, execution strategies, cost optimization, and best practices for successful digital transformation.',;
-      author: 'David Kim',;
-      date: '2025-01-08',;
-      category: 'Cloud Computing',;
-      pages: 41,;
-      downloadCount: 3200,;
-      fileSize: '2.1 MB',;
-      image: '/whitepapers/cloud-migration-strategies.jpg',;
-      slug: 'cloud-migration-implementation-guide',;
-      tags: ['Cloud Computing', 'Digital Transformation', 'Migration Strategy'];,
-},;
+      id: 4,
+      title: 'Cloud Migration Strategies: A Complete Implementation Guide',
+      description: 'Comprehensive guide covering cloud migration planning, execution strategies, cost optimization, and best practices for successful digital transformation.',
+      author: 'David Kim',
+      date: '2025-01-08',
+      category: 'Cloud Computing',
+      pages: 41,
+      downloadCount: 3200,
+      fileSize: '2.1 MB',
+      image: '/whitepapers/cloud-migration-strategies.jpg',
+      slug: 'cloud-migration-implementation-guide',
+      tags: ['Cloud Computing', 'Digital Transformation', 'Migration Strategy'];
+},
     {;
-      id: 5,;
-      title: 'Cybersecurity in the Age of AI: Threats and Defenses',;
-      description: 'Analysis of emerging cybersecurity threats in AI-driven environments and comprehensive defense strategies for modern organizations.',;
-      author: 'Lisa Park',;
-      date: '2025-01-05',;
-      category: 'Cybersecurity',;
-      pages: 36,;
-      downloadCount: 2800,;
-      fileSize: '1.9 MB',;
-      image: '/whitepapers/ai-cybersecurity-threats.jpg',;
-      slug: 'cybersecurity-age-ai-threats-defenses',;
-      tags: ['Cybersecurity', 'Artificial Intelligence', 'Threat Analysis'];,
-},;
+      id: 5,
+      title: 'Cybersecurity in the Age of AI: Threats and Defenses',
+      description: 'Analysis of emerging cybersecurity threats in AI-driven environments and comprehensive defense strategies for modern organizations.',
+      author: 'Lisa Park',
+      date: '2025-01-05',
+      category: 'Cybersecurity',
+      pages: 36,
+      downloadCount: 2800,
+      fileSize: '1.9 MB',
+      image: '/whitepapers/ai-cybersecurity-threats.jpg',
+      slug: 'cybersecurity-age-ai-threats-defenses',
+      tags: ['Cybersecurity', 'Artificial Intelligence', 'Threat Analysis'];
+},
     {;
-      id: 6,;
-      title: 'Edge Computing: Transforming Data Processing at the Source',;
-      description: 'Exploration of edge computing technologies, use cases, and implementation strategies for reducing latency and improving performance in distributed systems.',;
-      author: 'Emily Watson',;
-      date: '2025-01-03',;
-      category: 'Edge Computing',;
-      pages: 33,;
-      downloadCount: 1600,;
-      fileSize: '1.7 MB',;
-      image: '/whitepapers/edge-computing-transformation.jpg',;
-      slug: 'edge-computing-data-processing',;
-      tags: ['Edge Computing', 'Data Processing', 'Performance Optimization'];,
+      id: 6,
+      title: 'Edge Computing: Transforming Data Processing at the Source',
+      description: 'Exploration of edge computing technologies, use cases, and implementation strategies for reducing latency and improving performance in distributed systems.',
+      author: 'Emily Watson',
+      date: '2025-01-03',
+      category: 'Edge Computing',
+      pages: 33,
+      downloadCount: 1600,
+      fileSize: '1.7 MB',
+      image: '/whitepapers/edge-computing-transformation.jpg',
+      slug: 'edge-computing-data-processing',
+      tags: ['Edge Computing', 'Data Processing', 'Performance Optimization'];
 }
   ];
-;
   const categories = [;
-    'All Papers',;
-    'Quantum Computing',;
-    'Micro SaaS',;
-    'Blockchain',;
-    'Cloud Computing',;
-    'Cybersecurity',;
+    'All Papers',
+    'Quantum Computing',
+    'Micro SaaS',
+    'Blockchain',
+    'Cloud Computing',
+    'Cybersecurity',
     'Edge Computing';
   ];
-;
   return (;
     <MainLayout;
       title="Whitepapers - Zion Tech Group";
@@ -125,7 +122,7 @@ const Whitepapers: NextPage = () => {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >;
-            Access in-depth research and analysis on cutting-edge technologies, ;
+            Access in-depth research and analysis on cutting-edge technologies,
             industry trends, and implementation strategies from our expert team.;
           </motion.p>;
         </div>;
@@ -191,7 +188,6 @@ const Whitepapers: NextPage = () => {;
                         <div className="text-sm opacity-80">Whitepaper</div>;
                       </div>;
                     </div>;
-                    ;
                     <div className="p-6">;
                       <div className="flex items-center justify-between mb-3">;
                         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">;
@@ -202,17 +198,14 @@ const Whitepapers: NextPage = () => {;
                           {paper.pages} pages • {paper.fileSize}
                         </div>;
                       </div>;
-                      ;
                       <h2 className="text-xl font-semibold mb-3 text-gray-800 hover:text-blue-600 transition-colors">;
                         <Link href={`/whitepapers/${paper.slug}`}>;
                           {paper.title}
                         </Link>;
                       </h2>;
-                      ;
                       <p className="text-gray-600 mb-4 text-sm line-clamp-3">;
                         {paper.description}
                       </p>;
-                      ;
                       <div className="mb-4">;
                         <div className="flex flex-wrap gap-1">;
                           {paper.tags.map((tag) => (;
@@ -224,7 +217,6 @@ const Whitepapers: NextPage = () => {;
                           ))}
                         </div>;
                       </div>;
-                      ;
                       <div className="flex items-center justify-between mb-4">;
                         <div className="flex items-center space-x-3">;
                           <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">;
@@ -238,12 +230,10 @@ const Whitepapers: NextPage = () => {;
                             </div>;
                           </div>;
                         </div>;
-                        ;
                         <div className="text-sm text-gray-500">;
                           {paper.downloadCount.toLocaleString()} downloads;
                         </div>;
                       </div>;
-                      ;
                       <div className="flex space-x-3">;
                         <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center">;
                           <Download className="w-4 h-4 mr-2" />;
@@ -293,7 +283,6 @@ const Whitepapers: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default Whitepapers;

@@ -2,83 +2,79 @@ import React from 'react';
 import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
 import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain } from 'lucide-react';
-;
 export default function HealthcareTech(...args: []):  {;
   const features = [;
     {;
-      icon: Heart,;
-      title: 'Patient Care',;
-      description: 'AI-powered diagnostics and personalized treatment recommendations',;
-      color: 'from-red-500 to-pink-500';,
-},;
+      icon: Heart,
+      title: 'Patient Care',
+      description: 'AI-powered diagnostics and personalized treatment recommendations',
+      color: 'from-red-500 to-pink-500';
+},
     {;
-      icon: Shield,;
-      title: 'Data Security',;
-      description: 'HIPAA-compliant security with end-to-end encryption',;
-      color: 'from-blue-500 to-cyan-500';,
-},;
+      icon: Shield,
+      title: 'Data Security',
+      description: 'HIPAA-compliant security with end-to-end encryption',
+      color: 'from-blue-500 to-cyan-500';
+},
     {;
-      icon: Database,;
-      title: 'Interoperability',;
-      description: 'Seamless integration across healthcare systems and platforms',;
-      color: 'from-green-500 to-emerald-500';,
-},;
+      icon: Database,
+      title: 'Interoperability',
+      description: 'Seamless integration across healthcare systems and platforms',
+      color: 'from-green-500 to-emerald-500';
+},
     {;
-      icon: Zap,;
-      title: 'Real-time Monitoring',;
-      description: 'Continuous patient monitoring and alert systems',;
-      color: 'from-yellow-500 to-orange-500';,
-},;
+      icon: Zap,
+      title: 'Real-time Monitoring',
+      description: 'Continuous patient monitoring and alert systems',
+      color: 'from-yellow-500 to-orange-500';
+},
     {;
-      icon: Brain,;
-      title: 'AI Diagnostics',;
-      description: 'Machine learning algorithms for accurate disease detection',;
-      color: 'from-purple-500 to-pink-500';,
-},;
+      icon: Brain,
+      title: 'AI Diagnostics',
+      description: 'Machine learning algorithms for accurate disease detection',
+      color: 'from-purple-500 to-pink-500';
+},
     {;
-      icon: Activity,;
-      title: 'Predictive Analytics',;
-      description: 'Early warning systems and preventive care insights',;
-      color: 'from-indigo-500 to-purple-500';,
+      icon: Activity,
+      title: 'Predictive Analytics',
+      description: 'Early warning systems and preventive care insights',
+      color: 'from-indigo-500 to-purple-500';
 };
   ];
-;
   const services = [;
     {;
-      title: 'Healthcare AI Platform',;
-      description: 'Comprehensive AI platform for diagnostics and treatment planning',;
-      price: 'From $25,000',;
-      features: ['AI diagnostics', 'Treatment recommendations', 'Patient monitoring', 'Analytics dashboard'];,
-},;
+      title: 'Healthcare AI Platform',
+      description: 'Comprehensive AI platform for diagnostics and treatment planning',
+      price: 'From $25,000',
+      features: ['AI diagnostics', 'Treatment recommendations', 'Patient monitoring', 'Analytics dashboard'];
+},
     {;
-      title: 'Telemedicine Solutions',;
-      description: 'Secure video consultations and remote patient care',;
-      price: 'From $15,000',;
-      features: ['Video consultations', 'Patient portal', 'Prescription management', 'Insurance integration'];,
-},;
+      title: 'Telemedicine Solutions',
+      description: 'Secure video consultations and remote patient care',
+      price: 'From $15,000',
+      features: ['Video consultations', 'Patient portal', 'Prescription management', 'Insurance integration'];
+},
     {;
-      title: 'Health Data Analytics',;
-      description: 'Advanced analytics for population health and clinical insights',;
-      price: 'From $20,000',;
-      features: ['Population health', 'Clinical analytics', 'Predictive modeling', 'Reporting tools'];,
-},;
+      title: 'Health Data Analytics',
+      description: 'Advanced analytics for population health and clinical insights',
+      price: 'From $20,000',
+      features: ['Population health', 'Clinical analytics', 'Predictive modeling', 'Reporting tools'];
+},
     {;
-      title: 'Medical Device Integration',;
-      description: 'IoT integration for medical devices and wearables',;
-      price: 'From $18,000',;
-      features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems'];,
+      title: 'Medical Device Integration',
+      description: 'IoT integration for medical devices and wearables',
+      price: 'From $18,000',
+      features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems'];
 };
   ];
-;
   const applications = [;
-    { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;
-    { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;
-    { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },;
-    { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },;
-    { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;
+    { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },
+    { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },
+    { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },
+    { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },
+    { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },
     { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
   ];
-;
   return (;
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -92,24 +88,14 @@ export default function HealthcareTech(...args: []):  {;
         <div className="container mx-auto px-4 relative z-10">;
           <motion.div;
             initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
             animate = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto";
@@ -126,7 +112,7 @@ export default function HealthcareTech(...args: []):  {;
               </span>;
             </h1>;
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">;
-              Revolutionize healthcare delivery with AI-powered diagnostics, telemedicine solutions,;
+              Revolutionize healthcare delivery with AI-powered diagnostics, telemedicine solutions,
               and advanced patient care technologies. Improve outcomes and enhance patient experience.;
             </p>;
             <div className="flex flex-wrap justify-center gap-4">;
@@ -154,24 +140,14 @@ export default function HealthcareTech(...args: []):  {;
         <div className="container mx-auto px-4">;
           <motion.div;
             initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
             whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16";
@@ -180,7 +156,7 @@ export default function HealthcareTech(...args: []):  {;
               Why Choose Healthcare Technology?;
             </h2>;
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">;
-              Modern healthcare technology improves patient outcomes, reduces costs,;
+              Modern healthcare technology improves patient outcomes, reduces costs,
               and enhances the overall quality of care delivery.;
             </p>;
           </motion.div>;
@@ -190,34 +166,19 @@ export default function HealthcareTech(...args: []):  {;
               <motion.div;
                 key={feature.title}
                 initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
                 whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
                 transition = {;
-  { duration: 0.6,;
+  { duration: 0.6,
   delay: index * 0.1 ;
 
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300";
 
@@ -237,24 +198,14 @@ export default function HealthcareTech(...args: []):  {;
         <div className="container mx-auto px-4">;
           <motion.div;
             initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
             whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16";
@@ -273,34 +224,19 @@ export default function HealthcareTech(...args: []):  {;
               <motion.div;
                 key={service.title}
                 initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
                 whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
                 transition = {;
-  { duration: 0.6,;
+  { duration: 0.6,
   delay: index * 0.1 ;
 
-;
-
-;
-
-;,
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300";
 
@@ -333,24 +269,14 @@ export default function HealthcareTech(...args: []):  {;
         <div className="container mx-auto px-4">;
           <motion.div;
             initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
             whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16";
@@ -369,34 +295,19 @@ export default function HealthcareTech(...args: []):  {;
               <motion.div;
                 key={app.name}
                 initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   scale: 0.8 ;
 
-;
-
-;
-
-;,
 }}
                 whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   scale: 1 ;
 
-;
-
-;
-
-;,
 }}
                 transition = {;
-  { duration: 0.6,;
+  { duration: 0.6,
   delay: index * 0.1 ;
 
-;
-
-;
-
-;,
 }}
                 className="text-center group";
 
@@ -416,32 +327,22 @@ export default function HealthcareTech(...args: []):  {;
         <div className="container mx-auto px-4 text-center">;
           <motion.div;
             initial = {;
-  { opacity: 0,;
+  { opacity: 0,
   y: 20 ;
 
-;
-
-;
-
-;,
 }}
             whileInView = {;
-  { opacity: 1,;
+  { opacity: 1,
   y: 0 ;
 
-;
-
-;
-
-;,
 }}
             transition={{ duration: 0.6 }}
-;
+
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Healthcare?;
             </h2>;
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">;
-              Let's discuss how healthcare technology can improve patient outcomes,;
+              Let's discuss how healthcare technology can improve patient outcomes,
               streamline operations, and create a better healthcare experience for everyone.;
             </p>;
             <div className="flex flex-wrap justify-center gap-4">;
@@ -463,15 +364,11 @@ export default function HealthcareTech(...args: []):  {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }}}}
-;
+
 export { HealthcareTech };
-;
 export { HealthcareTech };
-;
 export { HealthcareTech };
-;
 export { HealthcareTech };
-;
 export { HealthcareTech };

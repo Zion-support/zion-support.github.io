@@ -1,48 +1,43 @@
 import React from "react";
-interface StructuredDataProps {;
-;
+interface StructuredDataProps {
   data: any}
-;
-export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {;
+
+export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
   return (";
     <script";
       type = "application/ld+json;
       dangerouslySetInnerHTML="{{" __html: JSON.stringify(data) }}>;
    />;
-  );,
+  );
 }
 export const OrganizationSchema = () => {";
   const organizationData = {},";
-    contactPoint: {",;
+    contactPoint: {",
       "@type": "ContactPoint",";
       contactType: "customer service",";
       url: "http,";
     s:// comment;
-    sameAs: [",;
+    sameAs: [",
       "http,";
     s:// comment;
       "https:// comment;
-    sameAs: [",;
+    sameAs: [",
       "https:// comment;
       "https: // comment;
       "https:// comment;
     "foundingDate": "2020",";
     "numberOfEmployees": "50-100",";
-    "industry": "Technology Services";,
+    "industry": "Technology Services";
 }";
     foundingDate: "2020",";
     numberOfEmployees: "50-100",";
     industry: "Technology Services"}
-;
+
 ";
   return <StructuredData data="{organizationData}"  />;
-
-;
 export const WebSiteSchema = () => {";
   const websiteData = {}",";
       "query-input": "required name=search_term_string";
-
-;,
 }";
     "@context": "https:// comment;
     "@type": "WebSite",";
@@ -50,9 +45,9 @@ export const WebSiteSchema = () => {";
     name: "Zion Tech Group",";
     url: "http,";
     s:// comment;
-    description: ",;
+    description: ",
       "Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.",";
-    potentialAction: {",;
+    potentialAction: {",
       "@type": "SearchAction",";
       target: "http,";
     s:// comment;
@@ -62,57 +57,49 @@ export const WebSiteSchema = () => {";
 
 ";
   return <StructuredData data="{websiteData}"  />;
-
-;
 export const ServiceSchema = () => {";
   const serviceData = {},";
     serviceType: "Artificial Intelligence",";
     areaServed: "Worldwide",";
-    hasOfferCatalog: {",;
+    hasOfferCatalog: {",
       "@type": "OfferCatalog",";
-      name: "AI Services",;
+      name: "AI Services",
       itemListElement: [";
-        {",;
+        {",
           "@type": "Offer",";
-          itemOffered: {",;
+          itemOffered: {",
             "@type": "Service",";
             name: "Content Creation"}},";
         {;
           "@type": "Offer",";
-          itemOffered: {",;
+          itemOffered: {",
             "@type": "Service",";
             name: "Email Automation"}},";
         {;
           "@type": "Offer",";
-          itemOffered: {",;
+          itemOffered: {",
             "@type": "Service",";
-            name: "Customer Support"}},;
+            name: "Customer Support"}},
         {";
           "@type": "Offer",";
           "itemOffered": {";
             "@type": "Service",";
             "name": "Business Intelligence";
-
-;,
 }
-;
+
       ];
-
-;,
 }
-;
+
 ";
-  return <StructuredData data="{serviceData}"  />;,
+  return <StructuredData data="{serviceData}"  />;
 }";
         {;
           "@type": "Offer",";
-          itemOffered: {",;
+          itemOffered: {",
             "@type": "Service",";
             name: "Business Intelligence"}}]}}
-;
+
 ";
   return <StructuredData data="{serviceData}"  />;
-
-;
 ";
 export default Component

@@ -2,23 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
 
-  TrendingUp, ;
-  TrendingDown, ;
-  Activity, ;
-  Zap, ;
-  Clock, ;
-  Users, ;
-  Database, ;
-  Globe,;
-  ArrowUpRight,;
-  ArrowDownRight,;
-  Target,;
-  BarChart3,;
-  LineChart,;
-  PieChart';,
+  TrendingUp,
+  TrendingDown,
+  Activity,
+  Zap,
+  Clock,
+  Users,
+  Database,
+  Globe,
+  ArrowUpRight,
+  ArrowDownRight,
+  Target,
+  BarChart3,
+  LineChart,
+  PieChart';
 } from 'lucide-react';
-;
-interface PerformanceMetric {;
+interface PerformanceMetric {
 
   id: string;
   name: string;
@@ -30,130 +29,121 @@ interface PerformanceMetric {;
   status: 'excellent' | 'good' | 'warning' | 'critical';
   icon: React.ComponentType<any>;
   description: string;
-;,
 }
-;
-interface PerformanceMetricsProps {;
+
+interface PerformanceMetricsProps {
 
   // Add your props here;
-
-;
   title?: string;
   subtitle?: string;
   showCharts?: boolean;
   autoRefresh?: boolean;
-;
-const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
+const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({
 
   title = "Real-Time Performance Metrics",";
-  subtitle = "Monitor your system's performance with live data and intelligent insights",;
-  showCharts = true,;
-  autoRefresh = true;,
+  subtitle = "Monitor your system's performance with live data and intelligent insights",
+  showCharts = true,
+  autoRefresh = true;
 }) => {;
 
   const [metrics, setMetrics] = useState<PerformanceMetric[]>([;
     {;
 
-      id: 'response-time',;
-      name: 'Response Time',;
-      value: 127,;
-      unit: 'ms',;
-      change: -12.5,;
-      changeType: 'decrease',;
-      target: 150,;
-      status: 'excellent',;
-      icon: Clock,;
-      description: 'Average API response time across all endpoints';,
-},;
+      id: 'response-time',
+      name: 'Response Time',
+      value: 127,
+      unit: 'ms',
+      change: -12.5,
+      changeType: 'decrease',
+      target: 150,
+      status: 'excellent',
+      icon: Clock,
+      description: 'Average API response time across all endpoints';
+},
     {;
 
-      id: 'throughput',;
-      name: 'Throughput',;
-      value: 15420,;
-      unit: 'req/s',;
-      change: 8.3,;
-      changeType: 'increase',;
-      target: 12000,;
-      status: 'excellent',;
-      icon: Zap,;
-      description: 'Requests processed per second';,
-},;
+      id: 'throughput',
+      name: 'Throughput',
+      value: 15420,
+      unit: 'req/s',
+      change: 8.3,
+      changeType: 'increase',
+      target: 12000,
+      status: 'excellent',
+      icon: Zap,
+      description: 'Requests processed per second';
+},
     {;
 
-      id: 'error-rate',;
-      name: 'Error Rate',;
-      value: 0.23,;
-      unit: '%',;
-      change: -15.2,;
-      changeType: 'decrease',;
-      target: 1.0,;
-      status: 'excellent',;
-      icon: Activity,;
-      description: 'Percentage of failed requests';,
-},;
+      id: 'error-rate',
+      name: 'Error Rate',
+      value: 0.23,
+      unit: '%',
+      change: -15.2,
+      changeType: 'decrease',
+      target: 1.0,
+      status: 'excellent',
+      icon: Activity,
+      description: 'Percentage of failed requests';
+},
     {;
 
-      id: 'cpu-usage',;
-      name: 'CPU Usage',;
-      value: 67.8,;
-      unit: '%',;
-      change: 5.1,;
-      changeType: 'increase',;
-      target: 80,;
-      status: 'good',;
-      icon: BarChart3,;
-      description: 'Current CPU utilization across all cores';,
-},;
+      id: 'cpu-usage',
+      name: 'CPU Usage',
+      value: 67.8,
+      unit: '%',
+      change: 5.1,
+      changeType: 'increase',
+      target: 80,
+      status: 'good',
+      icon: BarChart3,
+      description: 'Current CPU utilization across all cores';
+},
     {;
 
-      id: 'memory-usage',;
-      name: 'Memory Usage',;
-      value: 82.3,;
-      unit: '%',;
-      change: 2.8,;
-      changeType: 'increase',;
-      target: 85,;
-      status: 'warning',;
-      icon: Database,;
-      description: 'RAM utilization percentage';,
-},;
+      id: 'memory-usage',
+      name: 'Memory Usage',
+      value: 82.3,
+      unit: '%',
+      change: 2.8,
+      changeType: 'increase',
+      target: 85,
+      status: 'warning',
+      icon: Database,
+      description: 'RAM utilization percentage';
+},
     {;
 
-      id: 'active-users',;
-      name: 'Active Users',;
-      value: 1247,;
-      unit: '',;
-      change: 12.4,;
-      changeType: 'increase',;
-      target: 1000,;
-      status: 'excellent',;
-      icon: Users,;
-      description: 'Concurrent users currently online';,
+      id: 'active-users',
+      name: 'Active Users',
+      value: 1247,
+      unit: '',
+      change: 12.4,
+      changeType: 'increase',
+      target: 1000,
+      status: 'excellent',
+      icon: Users,
+      description: 'Concurrent users currently online';
 }
   ]);
-;
   const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('1h');
-;
   useEffect(: unknown {;
 
     if (!autoRefresh) return;
-;
     const interval = setInterval(: unknown {;
 
       setMetrics(prevMetrics => ;
         prevMetrics.map(metric => ({;
 
-          ...metric,;
-          value: metric.value + (Math.random() - 0.5) * metric.value * 0.1,;
-          change: metric.change + (Math.random() - 0.5) * 2;,
+          ...metric,
+          value: metric.value + (Math.random() - 0.5) * metric.value * 0.1,
+          change: metric.change + (Math.random() - 0.5) * 2;
 }));
-      );,
+      );
 }, 5000);
-;
-    return : unknown clearInterval(interval);,
+    return : unknown clearInterval(interval);
 }, [autoRefresh]);
-;
   const getStatusColor = (status: string) => {;
 
     switch (status) {;
@@ -162,43 +152,38 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
       case 'good': return 'text-blue-500 bg-blue-100';
       case 'warning': return 'text-yellow-500 bg-yellow-100';
       case 'critical': return 'text-red-500 bg-red-100';
-      default: return 'text-gray-500 bg-gray-100';,
+      default: return 'text-gray-500 bg-gray-100';
 }
   };
-;
   const getChangeIcon = (changeType: string) => {;
 
-    return changeType === 'increase' ? ArrowUpRight : ArrowDownRight;,
+    return changeType === 'increase' ? ArrowUpRight : ArrowDownRight;
 };
-;
   const getChangeColor = (changeType: string) => {;
 
-    return changeType === 'increase' ? 'text-green-600' : 'text-red-600';,
+    return changeType === 'increase' ? 'text-green-600' : 'text-red-600';
 };
-;
   const containerVariants = {;
 
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 },
     visible: {;
 
-      opacity: 1,;
+      opacity: 1,
       transition: {;
 
-        staggerChildren: 0.1,;
+        staggerChildren: 0.1,
         delayChildren: 0.2}}};
-;
   const itemVariants = {;
 
-    hidden: { y: 20, opacity: 0 },;
+    hidden: { y: 20, opacity: 0 },
     visible: {;
 
-      y: 0,;
-      opacity: 1,;
+      y: 0,
+      opacity: 1,
       transition: {;
 
         duration: 0.5,";
         ease: "easeOut"}}};
-;
   return (";
     <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">";
       <div className="container mx-auto px-4">;
@@ -232,7 +217,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
 
                   timeRange === range';
                     ? 'bg-blue-600 text-white shadow-lg'';
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'`;,
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'`;
 }`}
               >;
                 {range}
@@ -252,7 +237,6 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
 
             const IconComponent = metric.icon;
             const ChangeIcon = getChangeIcon(metric.changeType);
-            ;
             return();
               <motion.div;
                 key={metric.id}
@@ -278,7 +262,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
                   <span className="text-3xl font-bold text-gray-900">;
                     {typeof metric.value === 'number' && metric.value % 1 !== 0 ;
                       ? metric.value.toFixed(1) ;
-                      : Math.round(metric.value);,
+                      : Math.round(metric.value);
 }
                   </span>";
                   <span className="text-lg text-gray-600 mb-1">;
@@ -309,7 +293,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
                       className={`h-2 rounded-full transition-all duration-500 ${;
 
                         metric.value / metric.target > 0.9 ? 'bg-red-500' :';
-                        metric.value / metric.target > 0.7 ? 'bg-yellow-500' : 'bg-green-500'`;,
+                        metric.value / metric.target > 0.7 ? 'bg-yellow-500' : 'bg-green-500'`;
 }`}`;
                       style={{ width: `${Math.min((metric.value / metric.target) * 100, 100)}%` }}
                     />;
@@ -345,7 +329,7 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
                   )}
                 </AnimatePresence>;
               </motion.div>;
-            );,
+            );
 })}
         </motion.div>;
 
@@ -382,7 +366,6 @@ const EnhancedPerformanceMetrics: React.FC<PerformanceMetricsProps> = ({;
         </motion.div>;
       </div>;
     </section>;
-  );,
+  );
 };
-;
 export default EnhancedPerformanceMetrics;'"`}

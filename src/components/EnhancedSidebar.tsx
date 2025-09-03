@@ -1,13 +1,11 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
 export default function Page() {;
     setExpandedSections(newExpanded)};
-;
   const navigationSections = [{;
 
-      title: "Main Navigation",;
-      icon: Home,;
-      items[;";
+      title: "Main Navigation",
+      icon: Home,
+      items[ ";
         { name: "Home", href: "/", icon: Home },";
         { name: "Solutions", href: "/solutions", icon: Target },";
         { name: "Services", href: "/services", icon: Zap },";
@@ -23,18 +21,18 @@ export default function Page() {;
                 {expandedSections.has(section.title) && (<motion.div;
                     initial = {;
 
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}
                     animate = {;
 
-  { opacity: 1,;
-  height: 'auto';,
+  { opacity: 1,
+  height: 'auto';
 }}
                     exit = {;
 
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}
                     transition={{ duration: 0.3 }}";
                     className="ml-7 mt-2 space-y-1">;
@@ -42,18 +40,18 @@ export default function Page() {;
                         key={item.name}
                         initial = {;
 
-  { opacity: 0,;
-  x: -20;,
+  { opacity: 0,
+  x: -20;
 }}
                         animate = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
                         transition = {;
 
-  { duration: 0.2,;
-  delay: itemIndex * 0.05;,
+  { duration: 0.2,
+  delay: itemIndex * 0.05;
 }}
                       >";
                         <item.icon className="w-4 h-4" />;
@@ -74,18 +72,18 @@ export default function Page() {;
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg";
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition = {;
 
-  { duration: 0.5,;
-  delay: 0.5;,
+  { duration: 0.5,
+  delay: 0.5;
 }}
         >";
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>";

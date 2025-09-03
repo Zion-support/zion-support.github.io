@@ -1,35 +1,35 @@
 import React from "react";
 interface OptimizedImageProps {";
-interface OptimizedImageProps {;
+interface OptimizedImageProps {
 
-  src: string,,;
+  src: string,
 alt: string;
   width?: number;
   height?: number;
-  className?: string,;
-  priority?: boolean,;
-  quality?: number,",;
-  placeholder?: "blur" | "empty",;
-  blurDataURL?: string,;
+  className?: string,
+  priority?: boolean,
+  quality?: number,",
+  placeholder?: "blur" | "empty",
+  blurDataURL?: string,
   sizes?: string}
-;
-const OptimizedImage: React.FC<OptimizedImageProps> = ({,;
-:components/ui/OptimizedImage.tsx,;
-src,;
-  alt,;
-  width = 800,;
-  height = 600,;
-  className,;
-  priority = false,;
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({,
+:components/ui/OptimizedImage.tsx,
+src,
+  alt,
+  width = 800,
+  height = 600,
+  className,
+  priority = false,
   quality = 85,";
-  placeholder = "empty",;
+  placeholder = "empty",
   blurDataURL,";
-  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";,
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw";
 }) => {;
   return (;
-:components/disabled/ui/OptimizedImage.tsx,;
-src, alt,;
-  width = 800, height = 600,;
+:components/disabled/ui/OptimizedImage.tsx,
+src, alt,
+  width = 800, height = 600,
   className, priority = false,";
   quality = 85, placeholder = "empty",";
   blurDataURL, sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}) => {;
@@ -45,14 +45,14 @@ src, alt,;
         blurDataURL="{blurDataURL}
         sizes="{sizes}";
 :components/ui/OptimizedImage.tsx,";
-className="object-cover transition-transform duration-300 hover: scale-105"  />,;
-    </div>,,;
+className="object-cover transition-transform duration-300 hover: scale-105"  />,
+    </div>,
   )}
-;
+
 export default OptimizedImage;
 :components/disabled/ui/OptimizedImage.tsx,";
 className = "object-cover transition-transform duration-300 hover: scale-105" />;
-    </div>,;
+    </div>,
   )}
-;
+
 export default OptimizedImage"'

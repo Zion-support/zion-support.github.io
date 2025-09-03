@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MessageCircle, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-;
 const FloatingContactWidget: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
-;
   const contactOptions = [;
     {;
-      icon: <Phone className="w-5 h-5" />,;
-      label: 'Call Now',;
-      action: 'tel:+13024640950',;
-      description: '+1 302 464 0950';,
-},;
+      icon: <Phone className="w-5 h-5" />,
+      label: 'Call Now',
+      action: 'tel:+13024640950',
+      description: '+1 302 464 0950';
+},
     {;
-      icon: <Mail className="w-5 h-5" />,;
-      label: 'Email Us',;
-      action: 'mailto:kleber@ziontechgroup.com',;
-      description: 'kleber@ziontechgroup.com';,
-},;
+      icon: <Mail className="w-5 h-5" />,
+      label: 'Email Us',
+      action: 'mailto:kleber@ziontechgroup.com',
+      description: 'kleber@ziontechgroup.com';
+},
     {;
-      icon: <MessageCircle className="w-5 h-5" />,;
-      label: 'Get Quote',;
-      action: '/contact',;
-      description: 'Free consultation';,
+      icon: <MessageCircle className="w-5 h-5" />,
+      label: 'Get Quote',
+      action: '/contact',
+      description: 'Free consultation';
 }
   ];
-;
   return (;
     <>;
       {/* Floating Contact Button */}
@@ -77,7 +74,6 @@ const FloatingContactWidget: React.FC = () => {;
               <h3 className="text-lg font-bold text-gray-900">Get In Touch</h3>;
               <p className="text-sm text-gray-600">We're here to help!</p>;
             </div>;
-            ;
             <div className="space-y-3">;
               {contactOptions.map((option, index) => (;
                 <motion.a;
@@ -123,7 +119,6 @@ const FloatingContactWidget: React.FC = () => {;
         )}
       </AnimatePresence>;
     </>;
-  );,
+  );
 };
-;
 export default FloatingContactWidget;

@@ -21,12 +21,10 @@ const TermsOfService: NextPage = () => {;
             <p className="text-sm text-gray-300 mt-4">Last updated: {lastUpdated}</p>;
           </div>;
         </section>;
-;
         {/* Content */}
         <section className="py-16">;
           <div className="container mx-auto px-4 max-w-4xl">;
             <div className="bg-white rounded-lg shadow-lg p-8">;
-              ;
               {/* Introduction */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -39,7 +37,6 @@ const TermsOfService: NextPage = () => {;
                   any part of these terms, you may not access our services.;
                 </p>;
               </div>;
-;
               {/* Service Description */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -59,7 +56,6 @@ const TermsOfService: NextPage = () => {;
                   <li>Enterprise solutions and integrations</li>;
                 </ul>;
               </div>;
-;
               {/* User Responsibilities */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -77,7 +73,6 @@ const TermsOfService: NextPage = () => {;
                   <li>Not interfere with the proper functioning of our services</li>;
                 </ul>;
               </div>;
-;
               {/* Prohibited Uses */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -96,7 +91,6 @@ const TermsOfService: NextPage = () => {;
                   <li>Spamming, phishing, pharming, pretexting, spidering, crawling, or scraping</li>;
                 </ul>;
               </div>;
-;
               {/* Intellectual Property */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">;
@@ -105,7 +99,7 @@ const TermsOfService: NextPage = () => {;
                 </h2>;
                 <p className="text-gray-700 mb-4">;
                   The service and its original content, features, and functionality are and will remain the exclusive ;
-                  property of Zion Tech Group and its licensors. The service is protected by copyright, trademark, ;
+                  property of Zion Tech Group and its licensors. The service is protected by copyright, trademark,
                   and other laws. Our trademarks and trade dress may not be used in connection with any product or ;
                   service without our prior written consent.;
                 </p>;
@@ -114,7 +108,6 @@ const TermsOfService: NextPage = () => {;
                   agreements as outlined in individual service contracts.;
                 </p>;
               </div>;
-;
               {/* Payment Terms */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Payment Terms</h2>;
@@ -129,18 +122,16 @@ const TermsOfService: NextPage = () => {;
                   <li>We reserve the right to suspend services for non-payment</li>;
                 </ul>;
               </div>;
-;
               {/* Limitation of Liability */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Limitation of Liability</h2>;
                 <p className="text-gray-700 leading-relaxed">;
                   In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, or ;
-                  affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, ;
-                  including without limitation, loss of profits, data, use, goodwill, or other intangible losses, ;
+                  affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages,
+                  including without limitation, loss of profits, data, use, goodwill, or other intangible losses,
                   resulting from your use of the service.;
                 </p>;
               </div>;
-;
               {/* Disclaimer */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Disclaimer</h2>;
@@ -150,7 +141,6 @@ const TermsOfService: NextPage = () => {;
                   website and the use of this website.;
                 </p>;
               </div>;
-;
               {/* Termination */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Termination</h2>;
@@ -160,17 +150,15 @@ const TermsOfService: NextPage = () => {;
                   right to use the service will cease immediately.;
                 </p>;
               </div>;
-;
               {/* Governing Law */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Governing Law</h2>;
                 <p className="text-gray-700 leading-relaxed">;
-                  These Terms shall be interpreted and governed by the laws of the State of Delaware, United States, ;
+                  These Terms shall be interpreted and governed by the laws of the State of Delaware, United States,
                   without regard to its conflict of law provisions. Our failure to enforce any right or provision of ;
                   these Terms will not be considered a waiver of those rights.;
                 </p>;
               </div>;
-;
               {/* Changes to Terms */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Changes to Terms</h2>;
@@ -180,7 +168,6 @@ const TermsOfService: NextPage = () => {;
                   effect. What constitutes a material change will be determined at our sole discretion.;
                 </p>;
               </div>;
-;
               {/* Contact Information */}
               <div className="mb-8">;
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>;
@@ -198,6 +185,6 @@ const TermsOfService: NextPage = () => {;
         </section>;
       </div>;
     </MainLayout>;
-  );,;,
+  );,
 }
 export default TermsOfService

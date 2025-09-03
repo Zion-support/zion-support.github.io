@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-;
 const fs = require("fs");
 const path = require("path");
 // Function to check if a file is corrupted;
@@ -21,10 +20,9 @@ function isCorrupted(content) {;
     /An identifier or keyword cannot immediately follow/,  // Identifier errors;
     /function.*is not allowed as a parameter name/,  // Function parameter errors;
   ];
-  ;
-  return corruptionPatterns.some(pattern => pattern.test(content));,;,
+  return corruptionPatterns.some(pattern => pattern.test(content));,
 }
-;
+
 // Function to create a basic page template;
 function createPageTemplate(filename, isTestFile = false) {;
   const pageName = path.basename(filename, path.extname(filename));
@@ -41,17 +39,17 @@ const MockComponent = () => {;
     <div>;
       <h1>Test Component</h1>;
     </div>;
-  );,;,
+  );,
 }
 describe("${pageName}", () => {;
   it("renders without crashing", () => {;
   render(<MockComponent />);
-    expect(screen.getByText("Test Component")).toBeInTheDocument();,;,
-});,;,
+    expect(screen.getByText("Test Component")).toBeInTheDocument();,
+});,
 });
-`;,;,
+`;,
 }
-  ;
+
   return `import React from "react";
 import { motion  } from "framer-motion";
 import { SEO  } from "../components/SEO";
@@ -62,7 +60,6 @@ export default function ${pageName.replace(/\s+/g, "")}() {;
         title="${pageName} - Zion Tech Group";
         description="Professional ${pageName.toLowerCase()} services by Zion Tech Group";
       />;
-      ;
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion.div;
@@ -96,11 +93,11 @@ export default function ${pageName.replace(/\s+/g, "")}() {;
         </div>;
       </section>;
     </div>;
-  );,;,
+  );,
 }
-`;,;,
+`;,
 }
-;
+
 // Function to create a basic utility/type template;
 function createUtilityTemplate(filename) {;
   const utilityName = path.basename(filename, path.extname(filename));
@@ -110,21 +107,21 @@ function createUtilityTemplate(filename) {;
   if (filename.endsWith(".d.ts") || filename.endsWith(".d.tsx")) {;
   return `// Type definitions for ${utilityName}
 export interface ${utilityName.replace(/\s+/g, "")}Config {;
-  // Add configuration properties here;,;,
+  // Add configuration properties here;,
 }
-;
+
 export default ${utilityName.replace(/\s+/g, "")}Config;
-`;,;,
+`;,
 }
-  ;
+
   return `// ${utilityName} utility;
 export const ${utilityName.replace(/\s+/g, "").toLowerCase()} = {;
-  // Add utility functions here;,;,
+  // Add utility functions here;,
 }
 export default ${utilityName.replace(/\s+/g, "").toLowerCase()}
-`;,;,
+`;,
 }
-;
+
 // Function to fix a single file;
 function fixFile(filePath) {;
   try {;
@@ -133,24 +130,24 @@ function fixFile(filePath) {;
   console.log(`Fixing corrupted file: ${filePath}`);
       let newContent;
       if (filePath.includes(".test.") || filePath.endsWith(".test.tsx") || filePath.endsWith(".test.jsx")) {;
-  newContent = createPageTemplate(filePath, true);,;,
+  newContent = createPageTemplate(filePath, true);,
 } else if (filePath.includes("/utils/") || filePath.includes("/types/") || filePath.includes("/services/")) {;
-  newContent = createUtilityTemplate(filePath);,;,
+  newContent = createUtilityTemplate(filePath);,
 } else {;
-  newContent = createPageTemplate(filePath);,;,
+  newContent = createPageTemplate(filePath);,
 }
-      ;
+
       fs.writeFileSync(filePath, newContent, "utf8");
-      return true;,;,
+      return true;,
 }
-    ;
-    return false;,;,
+
+    return false;,
 } catch (error) {;
   console.error(`Error processing ${filePath}:`, error.message);
-    return false;,;,
+    return false;,
 }
 }
-;
+
 // Function to recursively find all files;
 function findFiles(dir, extensions = [".tsx", ".jsx", ".ts", ".js"]) {;
   let files = [];
@@ -162,40 +159,40 @@ function findFiles(dir, extensions = [".tsx", ".jsx", ".ts", ".js"]) {;
       if (stat.isDirectory()) {;
   // Skip node_modules and other common directories;
         if (!["node_modules", ".git", ".next", "dist", "build"].includes(item)) {;
-  files = files.concat(findFiles(fullPath, extensions));,;,
+  files = files.concat(findFiles(fullPath, extensions));,
 }
       } else if (extensions.some(ext => item.endsWith(ext))) {;
-  files.push(fullPath);,;,
+  files.push(fullPath);,
 }
     }
   } catch (error) {;
-  console.error(`Error reading directory ${dir}:`, error.message);,;,
+  console.error(`Error reading directory ${dir}:`, error.message);,
 }
-  ;
-  return files;,;,
+
+  return files;,
 }
-;
+
 // Main function;
 function $1() {;
   const srcDir = path.join(__dirname, "src");
   if (!fs.existsSync(srcDir)) {;
   console.error("src directory not found");
-    return;,;,
+    return;,
 }
-  ;
+
   const files = findFiles(srcDir);
   console.log(`Found ${files.length} files to check`);
   let fixedCount = 0;
   files.forEach(file => {;
   if (fixFile(file)) {;
-  fixedCount++;,;,
+  fixedCount++;,
 }
   });
-  console.log(`Fixed ${fixedCount} corrupted files`);,;,
+  console.log(`Fixed ${fixedCount} corrupted files`);,
 }
-;
+
 if (require.main === module) {;
-  main();,;,
+  main();,
 }
-;
+
 module.exports = { fixFile, isCorrupted, createPageTemplate, createUtilityTemplate })

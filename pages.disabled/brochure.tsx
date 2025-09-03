@@ -4,99 +4,95 @@ import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 import SEOHead from '../src/components/SEOHead';
 import { Download, ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail, FileText, Eye } from 'lucide-react';
-;
 const Brochure = () => {;
   const structuredData = {;
-    "@context": "https://schema.org",;
-    "@type": "WebPage",;
-    "name": "Product Brochure - Zion Tech Group",;
-    "url": "https://ziontechgroup.com/brochure",;
-    "description": "Download our comprehensive product brochure featuring AI services, IT solutions, and micro SaaS platforms",;
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Product Brochure - Zion Tech Group",
+    "url": "https://ziontechgroup.com/brochure",
+    "description": "Download our comprehensive product brochure featuring AI services, IT solutions, and micro SaaS platforms",
     "publisher": {;
-      "@type": "Organization",;
-      "name": "Zion Tech Group",;
-      "url": "https://ziontechgroup.com";,
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com";
 }
   };
-;
   const brochures = [;
     {;
-      title: 'AI Services Brochure',;
-      description: 'Comprehensive guide to our AI solutions and capabilities',;
-      pages: 24,;
-      size: '2.4 MB',;
-      format: 'PDF',;
-      category: 'AI Services',;
+      title: 'AI Services Brochure',
+      description: 'Comprehensive guide to our AI solutions and capabilities',
+      pages: 24,
+      size: '2.4 MB',
+      format: 'PDF',
+      category: 'AI Services',
       features: [;
-        'Natural Language Processing',;
-        'Computer Vision',;
-        'Predictive Analytics',;
-        'Machine Learning Models',;
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'Machine Learning Models',
         'AI Integration Services';
-      ],;
-      downloadUrl: '#',;
-      previewUrl: '#';,
-},;
+      ],
+      downloadUrl: '#',
+      previewUrl: '#';
+},
     {;
-      title: 'IT Solutions Brochure',;
-      description: 'Complete overview of our IT services and infrastructure solutions',;
-      pages: 32,;
-      size: '3.1 MB',;
-      format: 'PDF',;
-      category: 'IT Services',;
+      title: 'IT Solutions Brochure',
+      description: 'Complete overview of our IT services and infrastructure solutions',
+      pages: 32,
+      size: '3.1 MB',
+      format: 'PDF',
+      category: 'IT Services',
       features: [;
-        'Cloud Migration',;
-        'DevOps Automation',;
-        'Security Services',;
-        'Network Management',;
+        'Cloud Migration',
+        'DevOps Automation',
+        'Security Services',
+        'Network Management',
         'Data Management';
-      ],;
-      downloadUrl: '#',;
-      previewUrl: '#';,
-},;
+      ],
+      downloadUrl: '#',
+      previewUrl: '#';
+},
     {;
-      title: 'Micro SaaS Platform',;
-      description: 'Detailed information about our SaaS development and platform services',;
-      pages: 28,;
-      size: '2.8 MB',;
-      format: 'PDF',;
-      category: 'Micro SaaS',;
+      title: 'Micro SaaS Platform',
+      description: 'Detailed information about our SaaS development and platform services',
+      pages: 28,
+      size: '2.8 MB',
+      format: 'PDF',
+      category: 'Micro SaaS',
       features: [;
-        'SaaS Development',;
-        'Platform Architecture',;
-        'API Management',;
-        'User Management',;
+        'SaaS Development',
+        'Platform Architecture',
+        'API Management',
+        'User Management',
         'Analytics & Reporting';
-      ],;
-      downloadUrl: '#',;
-      previewUrl: '#';,
-},;
+      ],
+      downloadUrl: '#',
+      previewUrl: '#';
+},
     {;
-      title: 'Complete Solutions Guide',;
-      description: 'All-in-one brochure covering all our services and solutions',;
-      pages: 48,;
-      size: '4.2 MB',;
-      format: 'PDF',;
-      category: 'Complete Guide',;
+      title: 'Complete Solutions Guide',
+      description: 'All-in-one brochure covering all our services and solutions',
+      pages: 48,
+      size: '4.2 MB',
+      format: 'PDF',
+      category: 'Complete Guide',
       features: [;
-        'All AI Services',;
-        'Complete IT Solutions',;
-        'SaaS Development',;
-        'Case Studies',;
+        'All AI Services',
+        'Complete IT Solutions',
+        'SaaS Development',
+        'Case Studies',
         'Pricing Information';
-      ],;
-      downloadUrl: '#',;
-      previewUrl: '#';,
+      ],
+      downloadUrl: '#',
+      previewUrl: '#';
 }
   ];
-;
   const stats = [;
-    { number: '500+', label: 'Projects Completed' },;
-    { number: '50+', label: 'Happy Clients' },;
-    { number: '99.9%', label: 'Uptime Guarantee' },;
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' }
   ];
-;
   return (;
     <>;
       <SEOHead ;
@@ -106,7 +102,6 @@ const Brochure = () => {;
         structuredData={structuredData}
       />;
       <Navigation />;
-      ;
       <main className="min-h-screen bg-gray-900 text-white">;
         {/* Hero Section */}
         <section className="pt-24 pb-16 bg-gradient-to-b from-gray-900 to-gray-800">;
@@ -117,7 +112,7 @@ const Brochure = () => {;
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"> Brochures</span>;
               </h1>;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
-                Download our comprehensive brochures to learn more about our AI services, ;
+                Download our comprehensive brochures to learn more about our AI services,
                 IT solutions, and micro SaaS platforms. Get detailed information about our capabilities and success stories.;
               </p>;
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">;
@@ -299,7 +294,6 @@ const Brochure = () => {;
 
       <Footer />;
     </>;
-  );,
+  );
 };
-;
 export default Brochure;

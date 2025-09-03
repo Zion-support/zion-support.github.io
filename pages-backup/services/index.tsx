@@ -2,49 +2,49 @@ import React from "react";
   const stats = [];
   const benefits = [],";
       href: "/services/ai-model-development-chat",";
-      color: "blue"},;
+      color: "blue"},
     {;
       icon: Globe,";
       title: "Web Development",";
       description: "Modern, responsive web applications built with cutting-edge technologies.",";
       features: ["React/Next.js Applications", "E-commerce Solutions", "Progressive Web Apps", "API Development"],";
       href: "/services/web-application-development-chat",";
-      color: "green"},;
+      color: "green"},
     {;
       icon: Smartphone,";
       title: "Mobile Development",";
       description: "Native and cross-platform mobile applications for iOS and Android.",";
       features: ["iOS Development", "Android Development", "React Native", "Flutter Apps"],";
       href: "/services/mobile-app-development-chat",";
-      color: "purple"},;
+      color: "purple"},
     {;
       icon: Cloud,";
       title: "Cloud Solutions",";
       description: "Scalable cloud infrastructure and migration services for modern applications.",";
       features: ["AWS/Azure/GCP", "Cloud Migration", "DevOps & CI/CD", "Container Orchestration"],";
       href: "/services/cloud-migration-services-chat",";
-      color: "orange"},;
+      color: "orange"},
     {;
       icon: Shield,";
       title: "Cybersecurity",";
       description: "Comprehensive security solutions to protect your digital assets.",";
       features: ["Security Audits", "Penetration Testing", "Compliance", "Incident Response"],";
       href: "/services/network-security-chat",";
-      color: "red"},;
+      color: "red"},
     {;
       icon: BarChart3,";
       title: "Data Analytics",";
       description: "Transform your data into actionable insights with advanced analytics.",";
       features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Analytics"],";
       href: "/services/business-intelligence-chat",";
-      color: "indigo"},;
+      color: "indigo"},
     {;
       icon: Palette,";
       title: "UI/UX Design",";
       description: "User-centered design solutions that enhance user experience and engagement.",";
       features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],";
       href: "/services/ui-ux-design-chat",";
-      color: "pink"},;
+      color: "pink"},
     {;
       icon: CheckCircle,";
       title: "Quality Assurance",";
@@ -52,22 +52,22 @@ import React from "react";
       features: ["Automated Testing", "Performance Testing", "Security Testing", "User Acceptance Testing"],";
       href: "/services/quality-assurance-testing-chat",";
       color: "teal"}
-;
+
   ];
 
-  const getColorClasses = (color: string) => {,;
+  const getColorClasses = (color: string) => {,
     const colorMap: { [key: string]: string } = {";
       blue: "bg-blue-100 text-blue-600",";
       green: "bg-green-100 text-green-600",";
       purple: "bg-purple-100 text-purple-600",";
       orange: "bg-orange-100 text-orange-600",";
-      red: "bg-red-100 text-red-600",;
-      indigo: "bg-indigo-100 text-indigo-600",;
-      pink: "bg-pink-100 text-pink-600",;
-      teal: "bg-teal-100 text-teal-600"},;
-    return colorMap[color] || "bg-gray-100 text-gray-600;,
+      red: "bg-red-100 text-red-600",
+      indigo: "bg-indigo-100 text-indigo-600",
+      pink: "bg-pink-100 text-pink-600",
+      teal: "bg-teal-100 text-teal-600"},
+    return colorMap[color] || "bg-gray-100 text-gray-600;
 }
-;
+
   return (";
     <MainLayout title = "Our Services - Zion Tech Group;
       description="Comprehensive technology services including AI development, web development, mobile apps, cloud solutions, cybersecurity, and more.">;
@@ -80,44 +80,42 @@ className="text-5xl md: text-6xl font-bold mb-6 leading-tight"">;
               initial="{{" opacity: 0, y: 30 }}";
               animate="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8 }}
-;
+
             >;
-              Comprehensive Technology Solutions,;
+              Comprehensive Technology Solutions,
             </motion.h1>;
             <motion.p,";
 className="text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed"">;
               initial="{{" opacity: 0, y: 30 }}";
               animate="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8, delay: 0.2 }}
-;
+
             >;
-              From innovative Micro SaaS applications to cutting-edge AI services and enterprise IT solutions,;
+              From innovative Micro SaaS applications to cutting-edge AI services and enterprise IT solutions,
               we provide the technology foundation your business needs to thrive in the digital age.;
             </motion.p>;
-            ;
             <motion.div,";
 className="flex flex-col sm: flex-row gap-4 justify-center mb-12"">;
               initial="{{" opacity: 0, y: 30 }}";
               animate="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8, delay: 0.4 }}
-;
+
             >";
               <Link href="/contact" className="bg-blue-600 hover: bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">;
-                Get Started Today,;
+                Get Started Today,
               </Link>";
               <Link href="/solutions" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">;
-                View Solutions,;
+                View Solutions,
               </Link>;
             </motion.div>;
-,;
             {/* comment */}
-;
+
             <motion.div,";
 className="grid grid-cols-2 md: grid-cols-4 gap-8"">;
               initial="{{" opacity: 0, y: 30 }}";
               animate="{{" opacity: 1, y: 0 }}";
               transition="{{" duration: 0.8, delay: 0.6 }}
-;
+
             >;
               {stats.map((stat, index) => {;
                 const IconComponent = stat.icon;
@@ -127,18 +125,18 @@ key = "{stat.label}
                     className="text-center group;
                     whileHover="{{" scale: 1.05 }}";
                     transition="{{" duration: 0.2 }}
-;
+
                   >";
                     <div className="flex justify-center mb-2">";
                       <IconComponent className="w-8 h-8 text-blue-400 group-hover: text-purple-400 transition-colors"  />;
-                    </div>",;
+                    </div>",
                     <div className="text-3xl font-bold text-blue-400 group-hover:text-purple-400 transition-colors">{stat.number}</div>";
                     <div className="text-gray-300">{stat.label}</div>;
                   </motion.div>;
-                );,
+                );
 }
               })}
-;
+
             </motion.div>;
           </div>;
       </section>;
@@ -151,7 +149,7 @@ className="text-center mb-16;
             whileInView="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.8 }}";
             viewport="{{" once: true }}
-;
+
           >";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Service Categories</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
@@ -159,9 +157,9 @@ className="text-center mb-16;
             </p>;
           </motion.div>;
           ";
-          <div className="grid md: grid-cols-3 gap-8">,;
+          <div className="grid md: grid-cols-3 gap-8">,
             {/* comment */}
-;
+
             <motion.div,";
 className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300 group"">;
               initial="{{" opacity: 0, y: 30 }}";
@@ -169,13 +167,13 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
               transition="{{" duration: 0.8, delay: 0.1 }}";
               viewport="{{" once: true }}";
               whileHover="{{" y: -5 }}
-;
+
             >";
               <div className="text-blue-600 mb-4 group-hover: text-purple-600 transition-colors">";
                 <Zap className="w-12 h-12"  />;
               </div>";
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>";
-              <p className="text-gray-600 mb-6">,;
+              <p className="text-gray-600 mb-6">,
                 Innovative, focused software solutions that solve specific business problems with minimal overhead and maximum impact.;
               </p>";
               <div className="mb-6">";
@@ -189,16 +187,15 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
                 </ul>;
               </div>";
               <div className="mb-6">";
-                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>",;
+                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>",
                 <div className="text-lg font-semibold text-green-600">$12 - $9,999/month</div>;
               </div>";
               <Link href="/services/micro-saas" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">";
                 View All Micro SaaS <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"  />;
               </Link>;
             </motion.div>;
-,;
             {/* comment */}
-;
+
             <motion.div,";
 className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300 group"">;
               initial="{{" opacity: 0, y: 30 }}";
@@ -206,13 +203,13 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
               transition="{{" duration: 0.8, delay: 0.2 }}";
               viewport="{{" once: true }}";
               whileHover="{{" y: -5 }}
-;
+
             >";
               <div className="text-blue-600 mb-4 group-hover: text-purple-600 transition-colors">";
                 <Shield className="w-12 h-12"  />;
               </div>";
               <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>";
-              <p className="text-gray-600 mb-6">,;
+              <p className="text-gray-600 mb-6">,
                 Comprehensive IT infrastructure, cloud migration, cybersecurity, and enterprise solutions for modern businesses.;
               </p>";
               <div className="mb-6">";
@@ -226,16 +223,15 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
                 </ul>;
               </div>";
               <div className="mb-6">";
-                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>",;
+                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>",
                 <div className="text-lg font-semibold text-green-600">$2, 000 - $500,000/project</div>;
               </div>";
               <Link href="/services/it-services" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">";
                 View All IT Services <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"  />;
               </Link>;
             </motion.div>;
-,;
             {/* comment */}
-;
+
             <motion.div,";
 className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all duration-300 group"">;
               initial="{{" opacity: 0, y: 30 }}";
@@ -243,13 +239,13 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
               transition="{{" duration: 0.8, delay: 0.3 }}";
               viewport="{{" once: true }}";
               whileHover="{{" y: -5 }}
-;
+
             >";
               <div className="text-blue-600 mb-4 group-hover: text-purple-600 transition-colors">";
                 <Globe className="w-12 h-12"  />;
               </div>";
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>";
-              <p className="text-gray-600 mb-6">,;
+              <p className="text-gray-600 mb-6">,
                 Cutting-edge artificial intelligence solutions to automate processes, gain insights, and achieve competitive advantages.;
               </p>";
               <div className="mb-6">";
@@ -263,7 +259,7 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
                 </ul>;
               </div>";
               <div className="mb-6">";
-                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>",;
+                <div className="text-sm text-gray-500 mb-2">Pricing Range:</div>",
                 <div className="text-lg font-semibold text-green-600">$4,000 - $2, 000,000/project</div>;
               </div>";
               <Link href="/services/ai-services" className="text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">";
@@ -277,7 +273,6 @@ className="bg-white p-8 rounded-lg shadow-lg hover: shadow-xl transition-all dur
             </p>;
           </div>;
       </section>;
-,;
       {/* comment */}";
       <section className="py-20">";
         <div className="container mx-auto px-4">;
@@ -287,7 +282,7 @@ className="text-center mb-16;
             whileInView="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.8 }}";
             viewport="{{" once: true }}
-;
+
           >";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Services?</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
@@ -295,7 +290,7 @@ className="text-center mb-16;
             </p>;
           </motion.div>;
           ";
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,;
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
             {benefits.map((benefit, index) => (;
               <motion.div,";
 key="{benefit.title}
@@ -305,20 +300,20 @@ key="{benefit.title}
                 transition="{{" duration: 0.8, delay: index * 0.1 }}";
                 viewport="{{" once: true }}";
                 whileHover="{{" scale: 1.05 }}
-;
+
               >";
                 <div className="flex justify-center mb-4">";
                   <div className="p-4 bg-blue-100 rounded-full group-hover: bg-purple-100 transition-colors">";
-                    <div className="text-blue-600 group-hover:text-purple-600 transition-colors">,;
+                    <div className="text-blue-600 group-hover:text-purple-600 transition-colors">,
                       {benefit.icon}
-;
+
                     </div>;
                 </div>";
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>";
                 <p className="text-gray-600">{benefit.description}</p>;
               </motion.div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -341,7 +336,7 @@ key="{benefit.title}
                 <li>• Micro SaaS: $19–$299/mo per workspace</li>;
                 <li>• IT Services: $8k–$250k/project</li>;
                 <li>• AI Solutions: $10k–$2M/project</li>;
-              </ul>",;
+              </ul>",
               <p className="text-xs text-gray-500 mt-3">Pricing varies by scope, data complexity, security, and integration needs.</p>;
             </div>";
             <div className="bg-white p-6 rounded-lg shadow">";
@@ -352,7 +347,6 @@ key="{benefit.title}
               </ul>;
             </div>;
       </section>;
-,;
       {/* comment */}";
       <section className="py-20 bg-gray-50">";
         <div className="container mx-auto px-4">;
@@ -362,7 +356,7 @@ className="text-center mb-16;
             whileInView="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.8 }}";
             viewport="{{" once: true }}
-;
+
           >";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Services</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
@@ -370,7 +364,7 @@ className="text-center mb-16;
             </p>;
           </motion.div>;
           ";
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,;
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {services.slice(0, 6).map((service, index) => (;
               <motion.div,";
 key="{service.id}
@@ -380,13 +374,13 @@ key="{service.id}
                 transition="{{" duration: 0.8, delay: index * 0.1 }}";
                 viewport="{{" once: true }}";
                 whileHover="{{" y: -5 }}
-;
+
               >";
                 <div className="flex items-center mb-4">";
                   <span className="text-2xl mr-3">{service.icon}</span>";
-                  <h3 className="text-xl font-bold text-gray-900 group-hover: text-blue-600 transition-colors">,;
+                  <h3 className="text-xl font-bold text-gray-900 group-hover: text-blue-600 transition-colors">,
                     {service.name}
-;
+
                   </h3>;
                 </div>";
                 <p className="text-gray-600 mb-4 text-sm">{service.description}</p>";
@@ -397,7 +391,7 @@ key="{service.id}
             {services.map((service, index) => {;
               const IconComponent = service.icon;
               return (";
-                <div key = "{index}" className="{"bg-white" rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">",;
+                <div key = "{index}" className="{"bg-white" rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">",
                   <div className="{"w-12" h-12 rounded-lg flex items-center justify-center mb-6 ${getColorClasses(service.color)}"}>";
                     <IconComponent className=""h-6" w-6"}       />;
                   </div>;
@@ -410,10 +404,10 @@ key="{service.id}
                       <li key="{featureIndex}" className="flex items-center text-sm text-gray-600">";
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />;
                         {feature}
-;
+
                       </li>;
                     ))}
-;
+
                   </ul>;
                   ";
                   <Link href="{service.href}
@@ -421,9 +415,9 @@ key="{service.id}
                     Learn More";
                     <ArrowRight className="ml-2 h-4 w-4"  />;
                   </Link>;
-                </div>,;
+                </div>,
               )})}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -469,7 +463,6 @@ key="{service.id}
               <p className="text-gray-600">We deploy and provide ongoing support.</p>;
             </div>;
       </section>;
-,;
       {/* comment */}";
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">";
         <div className="absolute inset-0 bg-black opacity-10"></div>";
@@ -479,7 +472,7 @@ initial="{{" opacity: 0, y: 30 }}";
             whileInView="{{" opacity: 1, y: 0 }}";
             transition="{{" duration: 0.8 }}";
             viewport="{{" once: true }}
-;
+
           >";
             <h2 className="text-4xl font-bold text-white mb-6">;
               Ready to Transform Your Business?;
@@ -489,17 +482,17 @@ initial="{{" opacity: 0, y: 30 }}";
             </p>";
             <div className = "flex flex-col sm: flex-row justify-center gap-4">";
               <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">;
-                Get Started Today,;
+                Get Started Today,
               </Link>";
               <Link href="/about" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">;
-                Learn More About Us,;
+                Learn More About Us,
               </Link>;
             </div>;
           </motion.div>";
       <section className="py-20 bg-blue-600 text-white">";
         <div className="container mx-auto px-4 text-center">";
           <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>";
-          <p className="text-xl mb-8 max-w-2xl mx-auto">,;
+          <p className="text-xl mb-8 max-w-2xl mx-auto">,
             Let&apos,s discuss your project requirements and how we can help you achieve your technology goals.;
           </p>";
           <Link href="/contact" className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors inline-flex items-center">;
@@ -508,7 +501,7 @@ initial="{{" opacity: 0, y: 30 }}";
           </Link>;
         </div>;
       </section>;
-    </MainLayout>,,;
+    </MainLayout>,
   )}
-;
+
 "export default ServicesIndex))

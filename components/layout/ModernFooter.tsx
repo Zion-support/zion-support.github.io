@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
-;
 const ModernFooter: React.FC = () => {;
   return (;
     <footer className="bg-gray-900 text-white">;
@@ -11,7 +10,7 @@ const ModernFooter: React.FC = () => {;
           <div className="col-span-1 md:col-span-2">;
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>;
             <p className="text-gray-300 mb-4">;
-              Leading technology solutions provider specializing in AI, cloud computing, ;
+              Leading technology solutions provider specializing in AI, cloud computing,
               and digital transformation for modern businesses.;
             </p>;
             <div className="flex space-x-4">;
@@ -65,7 +64,6 @@ const ModernFooter: React.FC = () => {;
         </div>;
       </div>;
     </footer>;
-  );,
+  );
 };
-;
 export default ModernFooter;

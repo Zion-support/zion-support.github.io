@@ -1,7 +1,6 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {;
 ) ) , []) ;
-;
   return (<div  className="fixed inset - 0 overflow-hidden pointer - events -none" aria-hidden="true">;
       {/* Animated grid with neon effect */}
       <div  className="absolute inset - 0 bg-[linear - gradient (rgba (6,182,212,0.15) _1px,transparent_1px) ,linear - gradient(90deg,rgba (6,182,212,0.15) _1px,transparent_1px) ] bg-[size:50px_50px] animate -pulse"></div>;
@@ -11,76 +10,69 @@ export default function Page() {;
           key={particle.id}
           className="absolute w-1 h-1 bg-cyan - 400 rounded-full opacity - 80 shadow-lg shadow-cyan -400 / 50";
           animate={{;
-            x: [0, 200, 0],;
-            y: [0, -200, 0],;
-            opacity: [0.4, 1, 0.4],;
-            scale: [0.5, 1.2, 0.5],;,
+            x: [0, 200, 0],
+            y: [0, -200, 0],
+            opacity: [0.4, 1, 0.4],
+            scale: [0.5, 1.2, 0.5],,
 }}
           transition={{;
-            duration: particle.duration,;
-            repeat: Infinity,;
-            delay: particle.delay,;
-            ease: "easeInOut";,
+            duration: particle.duration,
+            repeat: Infinity,
+            delay: particle.delay,
+            ease: "easeInOut";
 }}
           style={{;
-            left: particle.left,;
-            top: particle.top,;,
+            left: particle.left,
+            top: particle.top,,
 }}
         />) ) }
-    </div>) ;,
+    </div>) ;
 }) ;
-;
 FuturisticBackground.displayName = 'FuturisticBackground';
-;
 // Enhanced hero section component;
 const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {;
   const [currentSlide, setCurrentSlide] = useState(0);
-;
   const heroSlides = useMemo(() => [{;
-      title: "AI - Powered Solutions",;
-      description: "Transform your business with cutting - edge artificial intelligence",;
-      icon: Brain,;
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"];,
-},;
+      title: "AI - Powered Solutions",
+      description: "Transform your business with cutting - edge artificial intelligence",
+      icon: Brain,
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"];
+},
     {;
-      title: "Quantum Computing",;
-      description: "Next - generation computing power for complex problem solving",;
-      icon: Atom,;
-      features: ["Quantum Algorithms", "Optimization", "Cryptography", "Simulation"];,
-},;
+      title: "Quantum Computing",
+      description: "Next - generation computing power for complex problem solving",
+      icon: Atom,
+      features: ["Quantum Algorithms", "Optimization", "Cryptography", "Simulation"];
+},
     {;
-      title: "Micro SAAS Services",;
-      description: "Scalable software solutions tailored to your needs",;
-      icon: Zap,;
-      features: ["Cloud - Native", "API - First", "Scalable Architecture", "Real - time Analytics"];,
-},;
+      title: "Micro SAAS Services",
+      description: "Scalable software solutions tailored to your needs",
+      icon: Zap,
+      features: ["Cloud - Native", "API - First", "Scalable Architecture", "Real - time Analytics"];
+},
     {;
-      title: "Digital Transformation",;
-      description: "Modernize your infrastructure for the future",;
-      icon: Rocket,;
-      features: ["Cloud Migration", "DevOps", "Security", "Compliance"];,
+      title: "Digital Transformation",
+      description: "Modernize your infrastructure for the future",
+      icon: Rocket,
+      features: ["Cloud Migration", "DevOps", "Security", "Compliance"];
 }
   ], []) ;
-;
   const nextSlide = useCallback(() => {;
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;,
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length) ;
 }, [heroSlides.length]) ;
-;
   const prevSlide = useCallback(() => {;
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;,
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length) ;
 }, [heroSlides.length]) ;
-;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     const interval = setInterval(nextSlide, 5000) ;
-    return () => clearInterval(interval) ;,
+    return () => clearInterval(interval) ;
 }, [nextSlide]) ;
-;
   return (<section className="relative min - h-screen flex items - center justify - center px-4 sm:px-6 lg:px-8 pt -20">;
       <div  className="max - w-7xl mx - auto text-center">;
         {/* Hero Content */}
@@ -98,7 +90,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
             Zion Tech Group;
           </h1>;
           <p className="text-xl md:text-2xl text-gray - 300 max - w-4xl mx - auto leading - relaxed mb-8">;
-            Leading the future of technology with cutting - edge AI solutions, quantum computing,;
+            Leading the future of technology with cutting - edge AI solutions, quantum computing,
             and innovative micro SAAS services that transform businesses worldwide.</p>;
 
           {/* CTA Buttons */}
@@ -165,7 +157,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
             <div  className="flex justify - center mt-6 space - x-2">;
               {heroSlides.map((_, index) => (<button     key={index}
                   onClick={ () => setCurrentSlide(index) }
-                  className={`w-3 h-3 rounded-full transition - colors ${index === currentSlide ? 'bg-cyan - 400' : 'bg-white / 30';,
+                  className={`w-3 h-3 rounded-full transition - colors ${index === currentSlide ? 'bg-cyan - 400' : 'bg-white / 30';
 }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />) ) }
@@ -173,39 +165,36 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           </div>;
         </motion.div>;
       </div>;
-    </section>) ;,
+    </section>) ;
 }) ;
-;
 HeroSection.displayName = 'HeroSection';
-;
 // Enhanced features section;
 const FeaturesSection = React.memo(() => {;
   const features = useMemo(() => [{;
-      icon: Brain,;
-      title: "AI & Machine Learning",;
-      description: "Advanced artificial intelligence solutions for business automation and insights",;
-      color: "from - purple - 500 to - cyan - 500";,
-},;
+      icon: Brain,
+      title: "AI & Machine Learning",
+      description: "Advanced artificial intelligence solutions for business automation and insights",
+      color: "from - purple - 500 to - cyan - 500";
+},
     {;
-      icon: Cloud,;
-      title: "Cloud & Infrastructure",;
-      description: "Scalable cloud solutions and modern infrastructure management",;
-      color: "from - blue - 500 to - cyan - 500";,
-},;
+      icon: Cloud,
+      title: "Cloud & Infrastructure",
+      description: "Scalable cloud solutions and modern infrastructure management",
+      color: "from - blue - 500 to - cyan - 500";
+},
     {;
-      icon: Shield,;
-      title: "Cybersecurity",;
-      description: "Comprehensive security solutions for modern digital threats",;
-      color: "from - red - 500 to - orange - 500";,
-},;
+      icon: Shield,
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions for modern digital threats",
+      color: "from - red - 500 to - orange - 500";
+},
     {;
-      icon: Zap,;
-      title: "Micro SAAS",;
-      description: "Custom software solutions designed for your specific needs",;
-      color: "from - yellow-500 to - orange - 500";,
+      icon: Zap,
+      title: "Micro SAAS",
+      description: "Custom software solutions designed for your specific needs",
+      color: "from - yellow-500 to - orange - 500";
 }
   ], []) ;
-;
   return (<section className="py-20 px-4 sm:px-6 lg:px-8">;
       <div  className="max - w-7xl mx -auto">;
         <motion.div;
@@ -239,19 +228,16 @@ const FeaturesSection = React.memo(() => {;
             </motion.div>) ) }
         </div>;
       </div>;
-    </section>) ;,
+    </section>) ;
 }) ;
-;
 FeaturesSection.displayName = 'FeaturesSection';
-;
 // Enhanced stats section;
 const StatsSection = React.memo(() => {;
-  const stats = useMemo(() => [{ number: "500+", label: "Projects Completed", icon: CheckCircle },;
-    { number: "50+", label: "Expert Team Members", icon: Users },;
-    { number: "99.9%", label: "Uptime Guarantee", icon: ShieldCheck },;
+  const stats = useMemo(() => [{ number: "500+", label: "Projects Completed", icon: CheckCircle },
+    { number: "50+", label: "Expert Team Members", icon: Users },
+    { number: "99.9%", label: "Uptime Guarantee", icon: ShieldCheck },
     { number: "24 / 7", label: "Support Available", icon: Clock }
   ], []) ;
-;
   return (<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient - to - r from - zion - slate - dark to - zion -slate">;
       <div  className="max - w-7xl mx -auto">;
         <div  className="grid grid - cols - 2 md:grid - cols - 4 gap-8">;
@@ -270,11 +256,9 @@ const StatsSection = React.memo(() => {;
             </motion.div>) ) }
         </div>;
       </div>;
-    </section>) ;,
+    </section>) ;
 }) ;
-;
 StatsSection.displayName = 'StatsSection';
-;
 // Enhanced CTA section;
 const CTASection = React.memo(() => {;
   return (<section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -306,39 +290,34 @@ const CTASection = React.memo(() => {;
           </div>;
         </motion.div>;
       </div>;
-    </section>) ;,
+    </section>) ;
 }) ;
-;
 CTASection.displayName = 'CTASection';
-;
 // Main EnhancedHome component;
 const EnhancedHome: React.FC = () => {;
   const [isLoaded, setIsLoaded] = useState(false);
-;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    setIsLoaded(true) ;,
+    // Cleanup function;
+};
+}, []); []);
+    setIsLoaded(true) ;
 }, []) ;
-;
   const handleGetStarted = useCallback(() => {;
     // Scroll to services section or navigate;
     const servicesSection = document.getElementById('services') ;
     if(servicesSection) {;
-      servicesSection.scrollIntoView({ behavior: 'smooth' }) ;,
+      servicesSection.scrollIntoView({ behavior: 'smooth' }) ;
 }
   }, []) ;
-;
   if(!isLoaded) {;
     return (<div  className="min - h-screen bg-zion - slate - dark flex items - center justify -center">;
         <div  className="animate - spin rounded-full h-32 w-32 border-b-2 border-cyan -400"></div>;
-      </div>) ;,
+      </div>) ;
 }
-;
+
   return (<>;
       <EnhancedSEO;
         title="Zion Tech Group - Leading AI Solutions & Technology Services";
@@ -364,5 +343,5 @@ const EnhancedHome: React.FC = () => {;
           <CTASection />;
         </LazyLoadWrapper>;
       </div>;
-    </>) ;,
+    </>) ;
 };

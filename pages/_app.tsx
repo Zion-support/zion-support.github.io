@@ -4,7 +4,6 @@ import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import '../styles/globals.css';
-;
 export default function App({ Component, pageProps }: AppProps) {;
   return (;
     <ErrorBoundary>;
@@ -19,5 +18,5 @@ export default function App({ Component, pageProps }: AppProps) {;
         </main>;
       </div>;
     </ErrorBoundary>;
-  );,
+  );
 }

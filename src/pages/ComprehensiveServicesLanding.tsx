@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
-;
 const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
   const serviceCategories: unknown = [];
     {}
       name: "AI-Powered Micro SAAS Services","";
-      description: "Cutting-edge AI solutions that transform business operations",;
+      description: "Cutting-edge AI solutions that transform business operations",
       services[;        {}
 ";
 "";
@@ -13,8 +12,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Advanced vulnerability detection with 85% accuracy improvement","";
           url: "/services/ai-code-review-security","";
           pricing: "From $49/month","";
-          icon: "🔒";,
-},;
+          icon: "🔒";
+},
         {}
 ";
 "";
@@ -22,8 +21,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Boost satisfaction by 35% with AI-driven insights","";
           url: "/services/ai-customer-experience-analytics","";
           pricing: "From $299/month","";
-          icon: "📊";,
-},;
+          icon: "📊";
+},
         {}
 ";
 "";
@@ -31,8 +30,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Reduce deployment time by 80% with intelligent automation","";
           url: "/services/ai-devops-automation-platform","";
           pricing: "From $199/month","";
-          icon: "🚀";,
-},;
+          icon: "🚀";
+},
         {}
 ";
 "";
@@ -40,15 +39,15 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Sub-millisecond processing with 90% latency reduction","";
           url: "/services/ai-iot-edge-computing-platform","";
           pricing: "From $299/month","";
-          icon: "🌐";,
+          icon: "🌐";
 }
-      ];,
-},;
+      ];
+},
     {}
 ";
 "";
       name: "Cloud & Infrastructure","";
-      description: "Scalable cloud solutions and enterprise infrastructure",;
+      description: "Scalable cloud solutions and enterprise infrastructure",
       services[;
         {}
 ";
@@ -57,8 +56,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Streamlined cloud deployment and management","";
           url: "/services/cloud-devops","";
           pricing: "Custom pricing","";
-          icon: "☁️";,
-},;
+          icon: "☁️";
+},
         {}
 ";
 "";
@@ -66,8 +65,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Enterprise-grade infrastructure solutions","";
           url: "/services/it-infrastructure","";
           pricing: "Custom pricing","";
-          icon: "🏗️";,
-},;
+          icon: "🏗️";
+},
         {}
 ";
 "";
@@ -75,15 +74,15 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Virtual representation of physical systems","";
           url: "/services/digital-twin","";
           pricing: "Custom pricing","";
-          icon: "🔄";,
+          icon: "🔄";
 }
-      ];,
-},;
+      ];
+},
     {}
 ";
 "";
       name: "Data & Analytics","";
-      description: "Transform data into actionable business intelligence",;
+      description: "Transform data into actionable business intelligence",
       services[;
         {}
 ";
@@ -92,8 +91,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Comprehensive data analysis and visualization","";
           url: "/services/data-analytics","";
           pricing: "Custom pricing","";
-          icon: "📈";,
-},;
+          icon: "📈";
+},
         {}
 ";
 "";
@@ -101,8 +100,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "AI-powered business insights and reporting","";
           url: "/services/ai-business-intelligence","";
           pricing: "Custom pricing","";
-          icon: "🧠";,
-},;
+          icon: "🧠";
+},
         {}
 ";
 "";
@@ -110,15 +109,15 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Real-time edge data processing","";
           url: "/services/iot-edge","";
           pricing: "Custom pricing","";
-          icon: "⚡";,
+          icon: "⚡";
 }
-      ];,
-},;
+      ];
+},
     {}
 ";
 "";
       name: "Security & Compliance","";
-      description: "Enterprise-grade security and regulatory compliance",;
+      description: "Enterprise-grade security and regulatory compliance",
       services[;
         {}
 ";
@@ -127,8 +126,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Modern security framework for enterprise","";
           url: "/services/zero-trust-network-architecture","";
           pricing: "Custom pricing","";
-          icon: "🛡️";,
-},;
+          icon: "🛡️";
+},
         {}
 ";
 "";
@@ -136,8 +135,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "Comprehensive security solutions","";
           url: "/services/ai-cybersecurity-suite","";
           pricing: "Custom pricing","";
-          icon: "🔐";,
-},;
+          icon: "🔐";
+},
         {}
 ";
 "";
@@ -145,12 +144,11 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           description: "AI-powered compliance management","";
           url: "/services/ai-compliance-assistant","";
           pricing: "Custom pricing","";
-          icon: "📋";,
+          icon: "📋";
 }
-      ];,
+      ];
 };
   ];
-;
   return();
     <>";
       <SEO"";
@@ -165,12 +163,12 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto text-center">;
             <motion.div;
               initial = {}
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ duration: 0.8 }}">"";
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
@@ -201,12 +199,12 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto">;
             <motion.div;
               initial = {}
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ duration: 0.8 }}";
               viewport={{ once: true }}"";
@@ -224,16 +222,16 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                 <motion.div;
                   key={category.name}
                   initial = {}
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                   whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                   transition = {}
-  { duration: 0.6,;
-  delay: categoryIndex * 0.1;,
+  { duration: 0.6,
+  delay: categoryIndex * 0.1;
 }}
                   viewport={{ once: true }}">"";
                   <div className="text-center mb-12">"";
@@ -249,16 +247,16 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
                       <motion.div;
                         key={service.title}
                         initial = {}
-  { opacity: 0,;
-  scale: 0.9;,
+  { opacity: 0,
+  scale: 0.9;
 }}
                         whileInView = {}
-  { opacity: 1,;
-  scale: 1;,
+  { opacity: 1,
+  scale: 1;
 }}
                         transition = {}
-  { duration: 0.5,;
-  delay: serviceIndex * 0.1;,
+  { duration: 0.5,
+  delay: serviceIndex * 0.1;
 }}";
                         viewport={{ once: true }}"";
                         className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"">"";
@@ -289,12 +287,12 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           <div className="max-w-7xl mx-auto">;
             <motion.div;
               initial = {}
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ duration: 0.8 }}";
               viewport={{ once: true }}"";
@@ -310,35 +308,35 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
             <div className="grid grid-cols-1 lg: unknowngrid-cols-2 gap-8">;
               {[;
                 {;
-                  title: "AI-Powered Code Review & Security Analysis",;
-                  description: "Detect vulnerabilities with 85% accuracy improvement. Support for 50+ programming languages with comprehensive security testing.",;
-                  benefits["85% vulnerability reduction", "50+ programming languages", "Real-time analysis", "Git integration"],;
-                  pricing: "$49 - $799/month",;
-                  url: "/services/ai-code-review-security",;
-                  cta: "Secure Your Code"                },;
+                  title: "AI-Powered Code Review & Security Analysis",
+                  description: "Detect vulnerabilities with 85% accuracy improvement. Support for 50+ programming languages with comprehensive security testing.",
+                  benefits["85% vulnerability reduction", "50+ programming languages", "Real-time analysis", "Git integration"],
+                  pricing: "$49 - $799/month",
+                  url: "/services/ai-code-review-security",
+                  cta: "Secure Your Code"                },
                 {}
 ";
 "";
                   title: "AI-Powered Customer Experience Analytics","";
                   description: "Transform customer insights into actionable intelligence. Boost satisfaction by 35% and reduce churn by 25%.","";
-                  benefits["35% satisfaction increase", "25% churn reduction", "Real-time insights", "Predictive analytics"],;"";
+                  benefits["35% satisfaction increase", "25% churn reduction", "Real-time insights", "Predictive analytics"],"";
                   pricing: "$299 - $1,999/month","";
                   url: "/services/ai-customer-experience-analytics","";
-                  cta: "Analyze Customer Data";,
+                  cta: "Analyze Customer Data";
 }
               ].map((service, index) => (<motion.div;
                   key={service.title}
                   initial = {}
-  { opacity: 0,;
-  x: index % 2 === 0 ? -20 : 20;,
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20;
 }}
                   whileInView = {}
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}
                   transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}";
                   viewport={{ once: true }}"";
                   className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30"">"";
@@ -383,12 +381,12 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
               initial = {}
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               whileInView = {}
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}">"";
@@ -434,15 +432,9 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {}
       </div>;
     </>;
   )};
-;
 export default ComprehensiveServicesLanding;
-;
 export { ComprehensiveServicesLanding };
-;
 export { ComprehensiveServicesLanding };
-;
 export { ComprehensiveServicesLanding };
-;
 export { ComprehensiveServicesLanding };
-;
 export { ComprehensiveServicesLanding };

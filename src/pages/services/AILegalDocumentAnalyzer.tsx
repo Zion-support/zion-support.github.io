@@ -1,110 +1,91 @@
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { FileText, ;
-  Shield, ;
-  CheckCircle, ;
-  Clock, ;
-  DollarSign, ;
-  Users, ;
-  TrendingUp, ;
-  Award,;
-  ArrowRight,;
-  Star,;
-  Zap,;
-  Brain,;
-  Lock,;
-  Globe,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink;,
+import { FileText,
+  Shield,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  Users,
+  TrendingUp,
+  Award,
+  ArrowRight,
+  Star,
+  Zap,
+  Brain,
+  Lock,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink;
 } from 'lucide-react.ts';
-;
 const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
   const [activeTab, setActiveTab] = useState('overview');
-;
-  const features = [;
-    "Contract risk assessment",;
-    "Compliance violation detection", ;
-    "Legal clause analysis",;
-    "Automated contract review",;
-    "Regulatory compliance checking",;
-    "Document comparison tools",;
-    "Legal precedent matching",;
-    "Risk scoring algorithms",;
-    "Multi-language support",;
-    "Integration with legal databases";
-  ];
-;
-  const benefits = [;
-    "Reduce legal review time by 90%",;
-    "Identify 95% of compliance risks",;
-    "Save $50K+ annually on legal fees",;
-    "Improve contract negotiation outcomes",;
-    "Ensure regulatory compliance";
-  ];
-;
-  const useCases = [;
-    "Contract review and analysis",;
-    "Regulatory compliance checking",;
-    "Legal risk assessment",;
-    "Due diligence processes",;
-    "Legal document automation";
-  ];
-;
+  const features = [ "Contract risk assessment",
+    "Compliance violation detection",
+    "Legal clause analysis",
+    "Automated contract review",
+    "Regulatory compliance checking",
+    "Document comparison tools",
+    "Legal precedent matching",
+    "Risk scoring algorithms",
+    "Multi-language support",
+    "Integration with legal databases" ];
+  const benefits = [ "Reduce legal review time by 90%",
+    "Identify 95% of compliance risks",
+    "Save $50K+ annually on legal fees",
+    "Improve contract negotiation outcomes",
+    "Ensure regulatory compliance" ];
+  const useCases = [ "Contract review and analysis",
+    "Regulatory compliance checking",
+    "Legal risk assessment",
+    "Due diligence processes",
+    "Legal document automation" ];
   const pricingPlans = [;
     {;
-      name: "Starter",;
-      price: "$1,499",;
-      period: "/month",;
-      description: "Perfect for small law firms and legal departments",;
-      features: [;
-        "Up to 100 documents/month",;
-        "Basic risk assessment",;
-        "Compliance checking",;
-        "Email support",;
-        "Standard integrations";
-      ],;
-      popular: false;,
-},;
+      name: "Starter",
+      price: "$1,499",
+      period: "/month",
+      description: "Perfect for small law firms and legal departments",
+      features: [ "Up to 100 documents/month",
+        "Basic risk assessment",
+        "Compliance checking",
+        "Email support",
+        "Standard integrations" ],
+      popular: false;
+},
     {;
-      name: "Professional",;
-      price: "$2,499",;
-      period: "/month",;
-      description: "Ideal for growing legal practices",;
-      features: [;
-        "Up to 500 documents/month",;
-        "Advanced risk assessment",;
-        "Multi-language support",;
-        "Priority support",;
-        "Advanced integrations",;
-        "Custom workflows";
-      ],;
-      popular: true;,
-},;
+      name: "Professional",
+      price: "$2,499",
+      period: "/month",
+      description: "Ideal for growing legal practices",
+      features: [ "Up to 500 documents/month",
+        "Advanced risk assessment",
+        "Multi-language support",
+        "Priority support",
+        "Advanced integrations",
+        "Custom workflows" ],
+      popular: true;
+},
     {;
-      name: "Enterprise",;
-      price: "$3,999",;
-      period: "/month",;
-      description: "For large legal organizations",;
-      features: [;
-        "Unlimited documents",;
-        "Custom AI models",;
-        "White-label solution",;
-        "Dedicated support",;
-        "Full API access",;
-        "Custom security features";
-      ],;
-      popular: false;,
+      name: "Enterprise",
+      price: "$3,999",
+      period: "/month",
+      description: "For large legal organizations",
+      features: [ "Unlimited documents",
+        "Custom AI models",
+        "White-label solution",
+        "Dedicated support",
+        "Full API access",
+        "Custom security features" ],
+      popular: false;
 }
   ];
-;
   const competitors = [;
-    { name: "Kira Systems", price: "$2,500+/month", rating: 4.2 },;
-    { name: "Luminance", price: "$3,000+/month", rating: 4.0 },;
+    { name: "Kira Systems", price: "$2,500+/month", rating: 4.2 },
+    { name: "Luminance", price: "$3,000+/month", rating: 4.0 },
     { name: "ContractPodAi", price: "$2,800+/month", rating: 4.1 }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">;
       {/* Hero Section */}
@@ -133,7 +114,6 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
               Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and optimization opportunities.;
             </p>;
-            ;
             {/* Key Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">;
               <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/30">;
@@ -185,7 +165,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                   activeTab === tab;
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white';
-                    : 'text-gray-400 hover:text-white hover:bg-gray-800';,
+                    : 'text-gray-400 hover:text-white hover:bg-gray-800';
 }`}
               >;
                 {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -250,7 +230,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               </div>;
             </motion.div>;
           )}
-;
+
           {/* Features Tab */}
           {activeTab === 'features' && (;
             <motion.div;
@@ -261,7 +241,6 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;
                 Powerful Features for Legal Professionals;
               </h2>;
-              ;
               <div className="grid grid-cols-1 md: unknowngrid-cols-2 lg:grid-cols-3 gap-8">;
                 {features.map((feature, index)  => (;
                   <motion.div;
@@ -313,7 +292,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               </div>;
             </motion.div>;
           )}
-;
+
           {/* Pricing Tab */}
           {activeTab === 'pricing' && (;
             <motion.div;
@@ -324,7 +303,6 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;
                 Transparent Pricing Plans;
               </h2>;
-              ;
               <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8">;
                 {pricingPlans.map((plan, index)  => (;
                   <motion.div;
@@ -335,7 +313,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
                     className={`relative p-8 rounded-2xl border transition-all duration-300 ${;
                       plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/50 scale-105';
-                        : 'bg-gray-800/50 border-gray-600 hover:border-cyan-500/50';,
+                        : 'bg-gray-800/50 border-gray-600 hover:border-cyan-500/50';
 }`}
                   >;
                     {plan.popular && (;
@@ -345,7 +323,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
                         </span>;
                       </div>;
                     )}
-                    ;
+
                     <div className="text-center mb-6">;
                       <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>;
                       <div className="text-4xl font-bold text-cyan-400 mb-2">;
@@ -354,7 +332,6 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
                       </div>;
                       <p className="text-gray-300">{plan.description}</p>;
                     </div>;
-                    ;
                     <ul className="space-y-3 mb-8">;
                       {plan.features.map((feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center gap-3">;
@@ -363,7 +340,6 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
                         </li>;
                       ))}
                     </ul>;
-                    ;
                     <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">;
                       Get Started;
                     </button>;
@@ -379,7 +355,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               </div>;
             </motion.div>;
           )}
-;
+
           {/* Competitors Tab */}
           {activeTab === 'competitors' && (;
             <motion.div;
@@ -390,7 +366,6 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;
                 Competitive Analysis;
               </h2>;
-              ;
               <div className="grid grid-cols-1 md: unknowngrid-cols-3 gap-8 mb-12">;
                 {competitors.map((competitor, index)  => (;
                   <div key={index} className="bg-gray-800/50 p-6 rounded-xl border border-gray-600">;
@@ -428,7 +403,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               </div>;
             </motion.div>;
           )}
-;
+
           {/* Contact Tab */}
           {activeTab === 'contact' && (;
             <motion.div;
@@ -439,7 +414,6 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
               <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;
                 Get Started Today;
               </h2>;
-              ;
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
                 <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/30">;
                   <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />;
@@ -449,7 +423,6 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
                     +1 302 464 0950;
                   </a>;
                 </div>;
-                ;
                 <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 p-6 rounded-xl border border-purple-500/30">;
                   <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />;
                   <h3 className="text-xl font-semibold mb-2">Email Us</h3>;
@@ -458,7 +431,6 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
                     kleber@ziontechgroup.com;
                   </a>;
                 </div>;
-                ;
                 <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 p-6 rounded-xl border border-green-500/30">;
                   <Globe className="w-12 h-12 text-green-400 mx-auto mb-4" />;
                   <h3 className="text-xl font-semibold mb-2">Visit Website</h3>;
@@ -489,17 +461,11 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {;
         </div>;
       </div>;
     </div>;
-  );,
+  );
 };
-;
 export default AILegalDocumentAnalyzer;
-;
 export { AILegalDocumentAnalyzer };
-;
 export { AILegalDocumentAnalyzer };
-;
 export { AILegalDocumentAnalyzer };
-;
 export { AILegalDocumentAnalyzer };
-;
 export { AILegalDocumentAnalyzer };

@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-;
 const APIDocumentation: React.FC = () => {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">;
@@ -95,22 +94,20 @@ const APIDocumentation: React.FC = () => {;
                 <h3 className="text-lg font-medium text-gray-800 mb-3">JavaScript/Node.js</h3>;
                 <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">;
 {`const axios = require('axios');
-;
 const api = axios.create({;
-  baseURL: 'https://api.zion.app/v1',;
+  baseURL: 'https://api.zion.app/v1',
   headers: {;
-    'Authorization': 'Bearer YOUR_API_KEY',;
-    'Content-Type': 'application/json';,
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json';
 }
 });
-;
 // Get content;
 const getContent = async () => {;
   try {;
     const response = await api.get('/content');
-    console.log(response.data);,
+    console.log(response.data);
 } catch (error) {;
-    console.error('Error:', error.response.data);,
+    console.error('Error:', error.response.data);
 }
 };`}
                 </pre>;
@@ -125,10 +122,10 @@ api_key = 'YOUR_API_KEY';
 base_url = 'https://api.zion.app/v1';
 
 headers = {;
-    'Authorization': f'Bearer {api_key}',;
-    'Content-Type': 'application/json';,
+    'Authorization': f'Bearer {api_key}',
+    'Content-Type': 'application/json';
 }
-;
+
 # Get content;
 response = requests.get(f'{base_url}/content', headers=headers);
 if response.status_code == 200:;
@@ -177,7 +174,6 @@ else:;
         </div>;
       </div>;
     </div>;
-  );,
+  );
 };
-;
 export default APIDocumentation;

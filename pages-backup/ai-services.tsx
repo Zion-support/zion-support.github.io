@@ -12,10 +12,9 @@ export default function AIServices() {;
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and autonomous systems." />;
       </Head>;
       <Navigation  />;
-      ;
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
         {/* comment */}
-;
+
         <section className="py-20 px-4">;
           <div className="max-w-6xl mx-auto text-center">;
             <h1 className="text-5xl font-bold text-gray-900 mb-6">;
@@ -38,13 +37,13 @@ export default function AIServices() {;
             </div>;
         </section>;
         {/* comment */}
-;
+
         <section className="py-16 px-4">;
           <div className="max-w-6xl mx-auto">;
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our AI Services</h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {/* comment */}
-;
+
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">;
                 <Brain className="w-12 h-12 text-purple-600 mb-4"  />;
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Machine Learning</h3>;
@@ -58,7 +57,7 @@ export default function AIServices() {;
                 </ul>;
               </div>;
               {/* comment */}
-;
+
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">;
                 <MessageSquare className="w-12 h-12 text-green-600 mb-4"  />;
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">NLP & Chatbots</h3>;
@@ -72,7 +71,7 @@ export default function AIServices() {;
                 </ul>;
               </div>;
               {/* comment */}
-;
+
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">;
                 <Eye className="w-12 h-12 text-blue-600 mb-4"  />;
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Computer Vision</h3>;
@@ -86,7 +85,7 @@ export default function AIServices() {;
                 </ul>;
               </div>;
               {/* comment */}
-;
+
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">;
                 <Bot className="w-12 h-12 text-red-600 mb-4"  />;
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Autonomous Systems</h3>;
@@ -100,7 +99,7 @@ export default function AIServices() {;
                 </ul>;
               </div>;
               {/* comment */}
-;
+
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">;
                 <BarChart3 className="w-12 h-12 text-yellow-600 mb-4"  />;
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Analytics</h3>;
@@ -114,7 +113,7 @@ export default function AIServices() {;
                 </ul>;
               </div>;
               {/* comment */}
-;
+
               <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow">;
                 <Shield className="w-12 h-12 text-indigo-600 mb-4"  />;
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">AI Security</h3>;
@@ -129,7 +128,7 @@ export default function AIServices() {;
               </div>;
         </section>;
         {/* comment */}
-;
+
         <section className="py-16 px-4 bg-white">;
           <div className="max-w-6xl mx-auto">;
             <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Why Choose Our AI Services?</h2>;
@@ -159,5 +158,5 @@ export default function AIServices() {;
       </div>;
       <Footer  />;
     </>;
-  );,
+  );
 }}

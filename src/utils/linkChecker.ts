@@ -1,10 +1,10 @@
-export interface LinkInfo {;
+export interface LinkInfo {
   url: string;
   status: 'working' | 'broken' | 'missing' | 'external';
   page: string;
   anchor?: string;
   error?: string}
-export interface PageInfo {;
+export interface PageInfo {
   path: string;
   title: string;
   links: LinkInfo[];
@@ -14,7 +14,6 @@ export class LinkChecker {;
   private visitedUrls: Set<string> = new Set();
   private brokenLinks: LinkInfo[] = [];
   private missingPages: string[] = [];
-;
   constructor(baseUrl: string = 'https://ziontechgroup.com') {;
 
     this.baseUrl = baseUrl}
@@ -22,11 +21,10 @@ export class LinkChecker {;
   isInternalLink(url: string): boolean {;
 
     try {;
-      ;
       return urlObj.hostname === new URL(this.baseUrl).hostname} catch {;
 
       return false}  }
-;
+
   // Normalize URL to handle relative paths;
   normalizeUrl(url: string, basePage: string): string {;
 
@@ -44,15 +42,13 @@ export class LinkChecker {;
       return `${this.baseUrl}${basePage}/${url}`} catch {;
 
       return url}  }
-;
+
   // Extract all links from a page;
   extractLinks(pageContent: string, pagePath: string): LinkInfo[] {;
 
     const links: LinkInfo[] = [];
-;
     // Extract href attributes from anchor tags';
     const hrefRegex = /href=["']([^"']+)["']/g;    let match;
-;
     while((match = hrefRegex.exec(pageContent)) !== null) {;
 
       if();
@@ -64,26 +60,25 @@ export class LinkChecker {;
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({;
 
-          url: normalizedUrl,;
-          status: 'working',;
-          page: pagePath,;
+          url: normalizedUrl,
+          status: 'working',
+          page: pagePath,
           anchor: url.startsWith('#') ? url : undefined})}
     }
-;
+
     // Extract src attributes from img, script, and link tags'";
-    ;
     while((match = srcRegex.exec(pageContent)) !== null) {;
 
       if(url && !url.startsWith('data:') && !url.startsWith('blob:')) {;
 
         const normalizedUrl = this.normalizeUrl(url, pagePath);        links.push({;
 
-          url: normalizedUrl,;
-          status: 'working',;
+          url: normalizedUrl,
+          status: 'working',
           page: pagePath})}    }
-;
+
     return links}
-;
+
   // Check if a page exists;
   async checkPageExists(url: string: any): Promise<any> {;
 
@@ -93,19 +88,17 @@ export class LinkChecker {;
 
       return false}
   }
-;
+
   // Check all links on a page;
   async checkPageLinks(pagePath: string, pageContent: string: any): Promise<any> {;
 
     const links = this.extractLinks(pageContent, pagePath);    const checkedLinks: LinkInfo[] = [];
-;
     for(const link of links) {;
 
       if(this.visitedUrls.has(link.url)) {;
 
         continue}
       this.visitedUrls.add(link.url);
-;
       if(this.isInternalLink(link.url)) {;
 
         if(exists) {;
@@ -117,14 +110,14 @@ export class LinkChecker {;
 
         link.status = 'external'}
       checkedLinks.push(link)}
-;
+
     return {;
 
-      path: pagePath,;
-      title: this.extractPageTitle(pageContent),;
-      links: checkedLinks,;
+      path: pagePath,
+      title: this.extractPageTitle(pageContent),
+      links: checkedLinks,
       exists: true}}
-;
+
   // Extract page title;
   private extractPageTitle(content: string): string {;
 
@@ -133,22 +126,22 @@ export class LinkChecker {;
   getSummary() {;
     return {;
 
-      totalLinks: anythis.visitedUrls.size,;
-      brokenLinks: this.brokenLinks.length,;
-      missingPages: this.missingPages.length,;
+      totalLinks: anythis.visitedUrls.size,
+      brokenLinks: this.brokenLinks.length,
+      missingPages: this.missingPages.length,
       externalLinks: Array.from(this.visitedUrls).filter();
         url => !this.isInternalLink(url);
       ).length}}
-;
+
   // Get all broken links;
   getBrokenLinks(): LinkInfo[] {;
 
     return this.brokenLinks}
-;
+
   // Get all missing pages;
   getMissingPages(): string[] {;
 
     return this.missingPages}}
-;
+
 export default LinkChecker;
 '"`;

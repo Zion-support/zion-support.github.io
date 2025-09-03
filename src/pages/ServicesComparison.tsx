@@ -2,57 +2,56 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ;
-  CheckCircle, ;
-  X, ;
-  Star, ;
-  TrendingUp, ;
-  Clock, ;
-  DollarSign, ;
-  Zap, ;
-  Brain, ;
-  Shield, ;
-  Cloud, ;
-  ShoppingCart,;
-  ArrowRight,;
-  Search,;
-  Filter,;
-  BarChart3,;
-  Target,;
-  Users,;
-  Settings,;
-  Rocket,;
-  Heart,;
-  Atom,;
-  MessageCircle,;
-  Search as SearchIcon,;
-  FileText,;
-  Lock,;
-  Server,;
-  Cpu,;
-  Database,;
-  Wifi,;
-  Bot,;
-  Workflow,;
-  Eye,;
-  Sparkles,;
-  Leaf,;
-  Gamepad2,;
-  Coins,;
-  Satellite,;
-  Activity,;
-  BarChart,;
-  Building2,;
-  GraduationCap,;
-  Briefcase,;
-  Globe,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ExternalLink,;
-  Award;,
+  CheckCircle,
+  X,
+  Star,
+  TrendingUp,
+  Clock,
+  DollarSign,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  ShoppingCart,
+  ArrowRight,
+  Search,
+  Filter,
+  BarChart3,
+  Target,
+  Users,
+  Settings,
+  Rocket,
+  Heart,
+  Atom,
+  MessageCircle,
+  Search as SearchIcon,
+  FileText,
+  Lock,
+  Server,
+  Cpu,
+  Database,
+  Wifi,
+  Bot,
+  Workflow,
+  Eye,
+  Sparkles,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  Activity,
+  BarChart,
+  Building2,
+  GraduationCap,
+  Briefcase,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  Award;
 } from 'lucide-react';
-;
-interface Service {;
+interface Service {
   id: string;
   title: string;
   category: string;
@@ -72,183 +71,179 @@ interface Service {;
   href: string;
   rating: number;
   complexity: 'Low' | 'Medium' | 'High';
-  scalability: 'Small' | 'Medium' | 'Enterprise';,
+  scalability: 'Small' | 'Medium' | 'Enterprise';
 }
-;
+
 export default function ServicesComparison() {;
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-;
   const services: Service[] = [;
     // AI Services;
     {;
-      id: 'ai-supply-chain',;
-      title: 'AI Supply Chain Optimization',;
-      category: 'AI Services',;
-      subcategory: 'Operations',;
-      description: 'Optimize your supply chain with AI-powered analytics and predictive modeling',;
-      price: 2500,;
-      features: ['Predictive Analytics', 'Demand Forecasting', 'Inventory Optimization', 'Route Optimization', 'Real-time Monitoring', 'Automated Alerts'],;
-      pros: ['High ROI potential', 'Real-time insights', 'Automated optimization', 'Scalable solution'],;
-      cons: ['Complex implementation', 'Requires data quality', 'Higher initial cost'],;
-      bestFor: ['Large enterprises', 'Manufacturing companies', 'Retail chains', 'Logistics providers'],;
-      estimatedDelivery: '4-6 weeks',;
-      innovationLevel: 'Advanced',;
-      marketPrice: '$3,500',;
-      roi: '300%',;
-      icon: Brain,;
-      color: 'from-purple-500 to-pink-500',;
-      href: '/services/ai-supply-chain-optimization',;
-      rating: 4.8,;
-      complexity: 'High',;
-      scalability: 'Enterprise';,
-},;
+      id: 'ai-supply-chain',
+      title: 'AI Supply Chain Optimization',
+      category: 'AI Services',
+      subcategory: 'Operations',
+      description: 'Optimize your supply chain with AI-powered analytics and predictive modeling',
+      price: 2500,
+      features: ['Predictive Analytics', 'Demand Forecasting', 'Inventory Optimization', 'Route Optimization', 'Real-time Monitoring', 'Automated Alerts'],
+      pros: ['High ROI potential', 'Real-time insights', 'Automated optimization', 'Scalable solution'],
+      cons: ['Complex implementation', 'Requires data quality', 'Higher initial cost'],
+      bestFor: ['Large enterprises', 'Manufacturing companies', 'Retail chains', 'Logistics providers'],
+      estimatedDelivery: '4-6 weeks',
+      innovationLevel: 'Advanced',
+      marketPrice: '$3,500',
+      roi: '300%',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      href: '/services/ai-supply-chain-optimization',
+      rating: 4.8,
+      complexity: 'High',
+      scalability: 'Enterprise';
+},
     {;
-      id: 'ai-cybersecurity',;
-      title: 'AI Cybersecurity Platform',;
-      category: 'AI Services',;
-      subcategory: 'Security',;
-      description: 'Advanced AI-powered cybersecurity platform for enterprise protection',;
-      price: 3500,;
-      features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Risk Assessment', 'Compliance Monitoring', 'Incident Management'],;
-      pros: ['Advanced threat detection', 'Automated response', 'Compliance ready', '24/7 monitoring'],;
-      cons: ['High cost', 'Complex setup', 'Requires expertise'],;
-      bestFor: ['Financial institutions', 'Healthcare organizations', 'Government agencies', 'Tech companies'],;
-      estimatedDelivery: '6-8 weeks',;
-      innovationLevel: 'Cutting-Edge',;
-      marketPrice: '$5,000',;
-      roi: '400%',;
-      icon: Shield,;
-      color: 'from-red-500 to-orange-500',;
-      href: '/services/ai-cybersecurity-platform',;
-      rating: 4.9,;
-      complexity: 'High',;
-      scalability: 'Enterprise';,
-},;
+      id: 'ai-cybersecurity',
+      title: 'AI Cybersecurity Platform',
+      category: 'AI Services',
+      subcategory: 'Security',
+      description: 'Advanced AI-powered cybersecurity platform for enterprise protection',
+      price: 3500,
+      features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Risk Assessment', 'Compliance Monitoring', 'Incident Management'],
+      pros: ['Advanced threat detection', 'Automated response', 'Compliance ready', '24/7 monitoring'],
+      cons: ['High cost', 'Complex setup', 'Requires expertise'],
+      bestFor: ['Financial institutions', 'Healthcare organizations', 'Government agencies', 'Tech companies'],
+      estimatedDelivery: '6-8 weeks',
+      innovationLevel: 'Cutting-Edge',
+      marketPrice: '$5,000',
+      roi: '400%',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      href: '/services/ai-cybersecurity-platform',
+      rating: 4.9,
+      complexity: 'High',
+      scalability: 'Enterprise';
+},
     {;
-      id: 'ai-healthcare',;
-      title: 'AI Healthcare Platform',;
-      category: 'AI Services',;
-      subcategory: 'Healthcare',;
-      description: 'Comprehensive healthcare technology solutions powered by AI',;
-      price: 4000,;
-      features: ['Patient Analytics', 'Diagnostic Support', 'Treatment Planning', 'Health Monitoring', 'Predictive Medicine', 'Clinical Decision Support'],;
-      pros: ['Improved patient outcomes', 'Reduced diagnostic errors', 'Efficiency gains', 'Compliance focused'],;
-      cons: ['Regulatory complexity', 'High implementation cost', 'Training requirements'],;
-      bestFor: ['Hospitals', 'Clinics', 'Research institutions', 'Health tech companies'],;
-      estimatedDelivery: '8-10 weeks',;
-      innovationLevel: 'Advanced',;
-      marketPrice: '$6,000',;
-      roi: '350%',;
-      icon: Heart,;
-      color: 'from-red-500 to-pink-500',;
-      href: '/services/ai-healthcare-platform',;
-      rating: 4.7,;
-      complexity: 'High',;
-      scalability: 'Enterprise';,
-},;
+      id: 'ai-healthcare',
+      title: 'AI Healthcare Platform',
+      category: 'AI Services',
+      subcategory: 'Healthcare',
+      description: 'Comprehensive healthcare technology solutions powered by AI',
+      price: 4000,
+      features: ['Patient Analytics', 'Diagnostic Support', 'Treatment Planning', 'Health Monitoring', 'Predictive Medicine', 'Clinical Decision Support'],
+      pros: ['Improved patient outcomes', 'Reduced diagnostic errors', 'Efficiency gains', 'Compliance focused'],
+      cons: ['Regulatory complexity', 'High implementation cost', 'Training requirements'],
+      bestFor: ['Hospitals', 'Clinics', 'Research institutions', 'Health tech companies'],
+      estimatedDelivery: '8-10 weeks',
+      innovationLevel: 'Advanced',
+      marketPrice: '$6,000',
+      roi: '350%',
+      icon: Heart,
+      color: 'from-red-500 to-pink-500',
+      href: '/services/ai-healthcare-platform',
+      rating: 4.7,
+      complexity: 'High',
+      scalability: 'Enterprise';
+},
     // IT Services;
     {;
-      id: 'cloud-devops',;
-      title: 'Cloud & DevOps Solutions',;
-      category: 'IT Services',;
-      subcategory: 'Infrastructure',;
-      description: 'Comprehensive cloud infrastructure and DevOps automation services',;
-      price: 2000,;
-      features: ['Cloud Migration', 'CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Automated Scaling', 'Cost Optimization'],;
-      pros: ['Cost effective', 'Quick implementation', 'Proven technology', 'Good ROI'],;
-      cons: ['Vendor lock-in risk', 'Security concerns', 'Requires expertise'],;
-      bestFor: ['Startups', 'Medium businesses', 'Tech companies', 'Digital agencies'],;
-      estimatedDelivery: '3-5 weeks',;
-      innovationLevel: 'Advanced',;
-      marketPrice: '$3,000',;
-      roi: '250%',;
-      icon: Cloud,;
-      color: 'from-blue-500 to-cyan-500',;
-      href: '/it-services',;
-      rating: 4.6,;
-      complexity: 'Medium',;
-      scalability: 'Medium';,
-},;
+      id: 'cloud-devops',
+      title: 'Cloud & DevOps Solutions',
+      category: 'IT Services',
+      subcategory: 'Infrastructure',
+      description: 'Comprehensive cloud infrastructure and DevOps automation services',
+      price: 2000,
+      features: ['Cloud Migration', 'CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Automated Scaling', 'Cost Optimization'],
+      pros: ['Cost effective', 'Quick implementation', 'Proven technology', 'Good ROI'],
+      cons: ['Vendor lock-in risk', 'Security concerns', 'Requires expertise'],
+      bestFor: ['Startups', 'Medium businesses', 'Tech companies', 'Digital agencies'],
+      estimatedDelivery: '3-5 weeks',
+      innovationLevel: 'Advanced',
+      marketPrice: '$3,000',
+      roi: '250%',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      href: '/it-services',
+      rating: 4.6,
+      complexity: 'Medium',
+      scalability: 'Medium';
+},
     {;
-      id: 'cybersecurity-suite',;
-      title: 'Cybersecurity Suite',;
-      category: 'IT Services',;
-      subcategory: 'Security',;
-      description: 'Complete enterprise cybersecurity and compliance solutions',;
-      price: 3000,;
-      features: ['Network Security', 'Endpoint Protection', 'Compliance Management', 'Incident Response', 'Vulnerability Assessment', 'Security Training'],;
-      pros: ['Comprehensive protection', 'Compliance ready', 'Professional support', 'Proven track record'],;
-      cons: ['Higher cost', 'Complex management', 'Ongoing maintenance'],;
-      bestFor: ['Medium enterprises', 'Financial services', 'Healthcare', 'Government contractors'],;
-      estimatedDelivery: '4-6 weeks',;
-      innovationLevel: 'Advanced',;
-      marketPrice: '$4,500',;
-      roi: '300%',;
-      icon: Shield,;
-      color: 'from-red-500 to-orange-500',;
-      href: '/it-services',;
-      rating: 4.5,;
-      complexity: 'Medium',;
-      scalability: 'Medium';,
-},;
+      id: 'cybersecurity-suite',
+      title: 'Cybersecurity Suite',
+      category: 'IT Services',
+      subcategory: 'Security',
+      description: 'Complete enterprise cybersecurity and compliance solutions',
+      price: 3000,
+      features: ['Network Security', 'Endpoint Protection', 'Compliance Management', 'Incident Response', 'Vulnerability Assessment', 'Security Training'],
+      pros: ['Comprehensive protection', 'Compliance ready', 'Professional support', 'Proven track record'],
+      cons: ['Higher cost', 'Complex management', 'Ongoing maintenance'],
+      bestFor: ['Medium enterprises', 'Financial services', 'Healthcare', 'Government contractors'],
+      estimatedDelivery: '4-6 weeks',
+      innovationLevel: 'Advanced',
+      marketPrice: '$4,500',
+      roi: '300%',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      href: '/it-services',
+      rating: 4.5,
+      complexity: 'Medium',
+      scalability: 'Medium';
+},
     // Micro SaaS;
     {;
-      id: 'ai-lead-scoring',;
-      title: 'AI Lead Scoring',;
-      category: 'Micro SaaS',;
-      subcategory: 'Sales',;
-      description: 'Intelligent lead qualification and scoring automation',;
-      price: 500,;
-      features: ['Lead Scoring', 'CRM Integration', 'Analytics Dashboard', 'Automated Workflows', 'Email Marketing', 'Performance Tracking'],;
-      pros: ['Low cost', 'Quick setup', 'Easy to use', 'Immediate ROI'],;
-      cons: ['Limited features', 'Basic AI', 'Integration limitations'],;
-      bestFor: ['Small businesses', 'Sales teams', 'Marketing agencies', 'Startups'],;
-      estimatedDelivery: '1-2 weeks',;
-      innovationLevel: 'Advanced',;
-      marketPrice: '$800',;
-      roi: '400%',;
-      icon: Target,;
-      color: 'from-green-500 to-emerald-500',;
-      href: '/micro-saas',;
-      rating: 4.4,;
-      complexity: 'Low',;
-      scalability: 'Small';,
-},;
+      id: 'ai-lead-scoring',
+      title: 'AI Lead Scoring',
+      category: 'Micro SaaS',
+      subcategory: 'Sales',
+      description: 'Intelligent lead qualification and scoring automation',
+      price: 500,
+      features: ['Lead Scoring', 'CRM Integration', 'Analytics Dashboard', 'Automated Workflows', 'Email Marketing', 'Performance Tracking'],
+      pros: ['Low cost', 'Quick setup', 'Easy to use', 'Immediate ROI'],
+      cons: ['Limited features', 'Basic AI', 'Integration limitations'],
+      bestFor: ['Small businesses', 'Sales teams', 'Marketing agencies', 'Startups'],
+      estimatedDelivery: '1-2 weeks',
+      innovationLevel: 'Advanced',
+      marketPrice: '$800',
+      roi: '400%',
+      icon: Target,
+      color: 'from-green-500 to-emerald-500',
+      href: '/micro-saas',
+      rating: 4.4,
+      complexity: 'Low',
+      scalability: 'Small';
+},
     {;
-      id: 'ai-chatbot',;
-      title: 'Website AI Chatbot',;
-      category: 'Micro SaaS',;
-      subcategory: 'Support',;
-      description: 'AI-powered customer support chatbot for websites',;
-      price: 300,;
-      features: ['24/7 Support', 'Multi-language', 'Integration APIs', 'Analytics', 'Custom Responses', 'Lead Capture'],;
-      pros: ['Very low cost', 'Instant setup', '24/7 availability', 'Easy customization'],;
-      cons: ['Limited AI capabilities', 'Basic responses', 'No human fallback'],;
-      bestFor: ['E-commerce sites', 'Small businesses', 'Service providers', 'Blogs'],;
-      estimatedDelivery: '1 week',;
-      innovationLevel: 'Advanced',;
-      marketPrice: '$500',;
-      roi: '300%',;
-      icon: MessageCircle,;
-      color: 'from-blue-500 to-cyan-500',;
-      href: '/micro-saas',;
-      rating: 4.3,;
-      complexity: 'Low',;
-      scalability: 'Small';,
+      id: 'ai-chatbot',
+      title: 'Website AI Chatbot',
+      category: 'Micro SaaS',
+      subcategory: 'Support',
+      description: 'AI-powered customer support chatbot for websites',
+      price: 300,
+      features: ['24/7 Support', 'Multi-language', 'Integration APIs', 'Analytics', 'Custom Responses', 'Lead Capture'],
+      pros: ['Very low cost', 'Instant setup', '24/7 availability', 'Easy customization'],
+      cons: ['Limited AI capabilities', 'Basic responses', 'No human fallback'],
+      bestFor: ['E-commerce sites', 'Small businesses', 'Service providers', 'Blogs'],
+      estimatedDelivery: '1 week',
+      innovationLevel: 'Advanced',
+      marketPrice: '$500',
+      roi: '300%',
+      icon: MessageCircle,
+      color: 'from-blue-500 to-cyan-500',
+      href: '/micro-saas',
+      rating: 4.3,
+      complexity: 'Low',
+      scalability: 'Small';
 }
   ];
-;
   const filteredServices = services.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;,
+    return matchesSearch && matchesCategory;
 });
-;
   const categories = [...new Set(services.map(service => service.category))];
-;
   const toggleService = (serviceId: string) => {;
     setSelectedServices(prev => ;
       prev.includes(serviceId) ;
@@ -256,17 +251,14 @@ export default function ServicesComparison() {;
         : prev.length < 4 ;
           ? [...prev, serviceId];
           : prev;
-    );,
+    );
 };
-;
   const selectedServicesData = services.filter(service => selectedServices.includes(service.id));
-;
   const contactInfo = {;
-    phone: "+1 302 464 0950",;
-    email: "kleber@ziontechgroup.com",;
-    website: "https://ziontechgroup.com";,
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    website: "https://ziontechgroup.com";
 };
-;
   return (;
     <div className="min-h-screen bg-zion-blue pt-20">;
       {/* Hero Section */}
@@ -298,7 +290,6 @@ export default function ServicesComparison() {;
             </div>;
           </motion.div>;
         </div>;
-        ;
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">;
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/20 rounded-full blur-3xl"></div>;
@@ -358,12 +349,12 @@ export default function ServicesComparison() {;
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                   className={`relative cursor-pointer transition-all duration-300 ${;
-                    isSelected ? 'ring-2 ring-zion-cyan scale-105' : 'hover:scale-105';,
+                    isSelected ? 'ring-2 ring-zion-cyan scale-105' : 'hover:scale-105';
 }`}
                   onClick={() => toggleService(service.id)}
                 >;
                   <div className={`bg-zion-blue border rounded-2xl p-6 h-full transition-all duration-300 ${;
-                    isSelected ? 'border-zion-cyan bg-zion-blue-darker' : 'border-zion-purple/30 hover:border-zion-cyan/50';,
+                    isSelected ? 'border-zion-cyan bg-zion-blue-darker' : 'border-zion-purple/30 hover:border-zion-cyan/50';
 }`}>;
                     {/* Selection Indicator */}
                     <div className="absolute top-4 right-4">;
@@ -410,7 +401,7 @@ export default function ServicesComparison() {;
                         <span className={`px-2 py-1 rounded text-xs ${;
                           service.complexity === 'Low' ? 'bg-green-500/20 text-green-400' :;
                           service.complexity === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :;
-                          'bg-red-500/20 text-red-400';,
+                          'bg-red-500/20 text-red-400';
 }`}>;
                           {service.complexity}
                         </span>;
@@ -432,7 +423,7 @@ export default function ServicesComparison() {;
                     </div>;
                   </div>;
                 </motion.div>;
-              );,
+              );
 })}
           </div>;
         </div>;
@@ -499,7 +490,7 @@ export default function ServicesComparison() {;
                           <span className={`px-3 py-1 rounded-full text-sm ${;
                             service.complexity === 'Low' ? 'bg-green-500/20 text-green-400' :;
                             service.complexity === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :;
-                            'bg-red-500/20 text-red-400';,
+                            'bg-red-500/20 text-red-400';
 }`}>;
                             {service.complexity}
                           </span>;
@@ -616,7 +607,7 @@ export default function ServicesComparison() {;
           </div>;
         </section>;
       )}
-;
+
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-purple-dark">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
@@ -648,5 +639,5 @@ export default function ServicesComparison() {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }

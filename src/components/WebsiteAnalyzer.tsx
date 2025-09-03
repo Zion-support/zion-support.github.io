@@ -2,21 +2,20 @@ import React, { useState, useEffect } from 'react';
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {;
 export default WebsiteAnalyzer;
 import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
-;
 export default function Page() {;
  catch(error) {;
 `;
           // console.error(`Error analyzing ${page}:`, error)}
-;
+
         // Add delay to prevent overwhelming the server;
         await new Promise(resolve => setTimeout (resolve, 100) ) }
-;
+
       setAnalysisResult({;
 
-        summary,;
-        pages: results,;
-        brokenLinks,;
-        missingPages;,
+        summary,
+        pages: results,
+        brokenLinks,
+        missingPages;
 }) } catch(error) {;
 
       // console.error('Analysis failed:', error)} finally {;
@@ -25,13 +24,11 @@ export default function Page() {;
       setProgress(100);
       setCurrentPage('')}
   };
-;
     a.href = url;
     a.download = 'zion-website-analysis.json';    document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url)};
-;
       case 'broken':";
         return <XCircle className="w-4 h-4 text-red-500"  />;
       case 'missing':";
@@ -41,7 +38,6 @@ export default function Page() {;
       default:";
         return <AlertTriangle className="w-4 h-4 text-gray-500"  />}
   };
-;
       case 'broken':';
         return 'text-red-600 bg-red-100';
       case 'missing':';
@@ -50,7 +46,6 @@ export default function Page() {;
         return 'text-blue-600 bg-blue-100';
       default:';
         return 'text-gray-600 bg-gray-100'}  };
-;
   return (";
     <div className="max-w-7xl mx-auto p-6 space-y-6">";
       <div className="bg-white rounded-lg shadow-lg p-6">";
@@ -100,7 +95,7 @@ export default function Page() {;
             )}
           </div>;
         )}
-;
+
         {analysisResult && (";
           <div className="space-y-6">;
             {/* Summary Cards */}";
@@ -164,7 +159,7 @@ export default function Page() {;
                     </div>) ) }
                 </div>;
               </div>) }
-;
+
             {/* Missing Pages */}
             {analysisResult.missingPages.length > 0 && (";
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">";
@@ -183,7 +178,7 @@ export default function Page() {;
                     </div>) ) }
                 </div>;
               </div>) }
-;
+
             {/* Page Analysis */}";
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">";
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">";

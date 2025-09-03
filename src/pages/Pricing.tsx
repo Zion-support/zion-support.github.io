@@ -1,25 +1,24 @@
 import {}
-  Check, ;
-  Star, ;
-  Zap, ;
-  Brain, ;
-  Cloud, ;
-  Shield, ;
-  Rocket, ;
-  ArrowRight,;
-  Users,;
-  Clock,;
-  MessageSquare,;
-  Phone,;
-  Mail,;
-  Calendar'''';,
+  Check,
+  Star,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Rocket,
+  ArrowRight,
+  Users,
+  Clock,
+  MessageSquare,
+  Phone,
+  Mail,
+  Calendar'''';
 } from 'lucide-react';
 ';
       popular: false,'';
-      icon: Rocket,;''';
+      icon: Rocket,''';
       color: 'from-orange-500 to-red-500'}
   ];
-;
   ';
 '';
   const savings: unknown = billingCycle === 'annual' ? 20 : 0;interface PricingTier {}
@@ -33,7 +32,7 @@ import {}
   icon: unknown;
   cta: string;
   ctaLink: string}
-;
+
 const pricingTiers: PricingTier[] = [];
   {}
 ';
@@ -49,8 +48,8 @@ const pricingTiers: PricingTier[] = [];
     color: 'from-blue-500 to-cyan-500','';
     icon: Zap,''';
     cta: 'Get Started',''';
-    ctaLink: '/contact';,
-},;
+    ctaLink: '/contact';
+},
   {}
 ';
 '';
@@ -66,8 +65,8 @@ const pricingTiers: PricingTier[] = [];
     color: 'from-zion-cyan to-zion-purple','';
     icon: Brain,''';
     cta: 'Start Free Trial',''';
-    ctaLink: '/contact';,
-},;
+    ctaLink: '/contact';
+},
   {}
 ';
 '';
@@ -82,10 +81,9 @@ const pricingTiers: PricingTier[] = [];
     color: 'from-purple-500 to-pink-500','';
     icon: Building,''';
     cta: 'Contact Sales',''';
-    ctaLink: '/contact';,
+    ctaLink: '/contact';
 }
 ];
-;
   return();
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
       <SEO "'";
@@ -136,6 +134,6 @@ const pricingTiers: PricingTier[] = [];
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default Pricing

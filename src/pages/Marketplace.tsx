@@ -45,6 +45,6 @@ const Marketplace = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default Marketplace;

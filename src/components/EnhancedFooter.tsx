@@ -1,5 +1,4 @@
 import React from 'react';
-;
 export const EnhancedFooter: React.FC = () => {;
   return(<footer className="bg-gray-900 text-white">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;
@@ -7,7 +6,7 @@ export const EnhancedFooter: React.FC = () => {;
           <div>;
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>;
             <p className="text-gray-400">;
-              Leading technology solutions provider specializing in AI, cybersecurity, ;
+              Leading technology solutions provider specializing in AI, cybersecurity,
               cloud infrastructure, and digital transformation services.</p>;
           </div>;
           <div>;
@@ -42,5 +41,5 @@ export const EnhancedFooter: React.FC = () => {;
         </div>;
       </div>;
     </footer>;
-  );,
+  );
 };

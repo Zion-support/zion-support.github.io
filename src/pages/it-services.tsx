@@ -2,114 +2,101 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ;
-  Server, ;
-  Cloud, ;
-  Shield, ;
-  Database, ;
-  Network, ;
-  Code, ;
-  Settings, ;
-  Users, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin;,
+  Server,
+  Cloud,
+  Shield,
+  Database,
+  Network,
+  Code,
+  Settings,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin;
 } from 'lucide-react';
-;
 const ITServices: React.FC = () => {;
   const itServiceCategories = [;
     {;
-      name: "Cloud Infrastructure & Migration",;
-      description: "Comprehensive cloud solutions and seamless migration services",;
-      icon: Cloud,;
-      count: 15,;
-      color: "from-blue-400 to-cyan-500",;
-      services: [;
-        "AWS, Azure, GCP Management",;
-        "Cloud Migration Strategy",;
-        "Infrastructure as Code",;
-        "Container Orchestration";
-      ];,
-},;
+      name: "Cloud Infrastructure & Migration",
+      description: "Comprehensive cloud solutions and seamless migration services",
+      icon: Cloud,
+      count: 15,
+      color: "from-blue-400 to-cyan-500",
+      services: [ "AWS, Azure, GCP Management",
+        "Cloud Migration Strategy",
+        "Infrastructure as Code",
+        "Container Orchestration" ];
+},
     {;
-      name: "Cybersecurity & Compliance",;
-      description: "Advanced security solutions to protect your digital assets",;
-      icon: Shield,;
-      count: 20,;
-      color: "from-red-400 to-orange-500",;
-      services: [;
-        "Security Audits & Assessments",;
-        "Penetration Testing",;
-        "Compliance Management",;
-        "Threat Detection & Response";
-      ];,
-},;
+      name: "Cybersecurity & Compliance",
+      description: "Advanced security solutions to protect your digital assets",
+      icon: Shield,
+      count: 20,
+      color: "from-red-400 to-orange-500",
+      services: [ "Security Audits & Assessments",
+        "Penetration Testing",
+        "Compliance Management",
+        "Threat Detection & Response" ];
+},
     {;
-      name: "Network & Infrastructure",;
-      description: "Robust network solutions and infrastructure management",;
-      icon: Network,;
-      count: 18,;
-      color: "from-green-400 to-emerald-500",;
-      services: [;
-        "Network Design & Implementation",;
-        "Wireless Solutions",;
-        "VPN & Remote Access",;
-        "Network Monitoring";
-      ];,
-},;
+      name: "Network & Infrastructure",
+      description: "Robust network solutions and infrastructure management",
+      icon: Network,
+      count: 18,
+      color: "from-green-400 to-emerald-500",
+      services: [ "Network Design & Implementation",
+        "Wireless Solutions",
+        "VPN & Remote Access",
+        "Network Monitoring" ];
+},
     {;
-      name: "Software Development",;
-      description: "Custom software solutions built with modern technologies",;
-      icon: Code,;
-      count: 25,;
-      color: "from-purple-400 to-pink-500",;
-      services: [;
-        "Web Application Development",;
-        "Mobile App Development",;
-        "API Development",;
-        "Legacy System Modernization";
-      ];,
+      name: "Software Development",
+      description: "Custom software solutions built with modern technologies",
+      icon: Code,
+      count: 25,
+      color: "from-purple-400 to-pink-500",
+      services: [ "Web Application Development",
+        "Mobile App Development",
+        "API Development",
+        "Legacy System Modernization" ];
 }
   ];
-;
   const featuredITServices = [;
     {;
-      title: "Quantum Cloud Infrastructure",;
-      description: "Next-generation quantum-enhanced cloud infrastructure with AI optimization, zero-trust security, and 99.99% uptime guarantee.",;
-      price: "From $5,999/month",;
-      features: ["Quantum-Enhanced Computing", "Hybrid Cloud Architecture", "AI-Optimized Resource Allocation", "Zero-Trust Security Framework", "Edge Computing Integration", "Automated Scaling"],;
-      href: "/services/quantum-cloud-infrastructure",;
-      color: "from-purple-400 to-indigo-500",;
-      popular: true,;
-      benefits: ["Reduce infrastructure costs by 60%", "Improve performance by 300%", "Achieve 99.99% uptime SLA", "Scale instantly to meet demand"];,
-},;
+      title: "Quantum Cloud Infrastructure",
+      description: "Next-generation quantum-enhanced cloud infrastructure with AI optimization, zero-trust security, and 99.99% uptime guarantee.",
+      price: "From $5,999/month",
+      features: ["Quantum-Enhanced Computing", "Hybrid Cloud Architecture", "AI-Optimized Resource Allocation", "Zero-Trust Security Framework", "Edge Computing Integration", "Automated Scaling"],
+      href: "/services/quantum-cloud-infrastructure",
+      color: "from-purple-400 to-indigo-500",
+      popular: true,
+      benefits: ["Reduce infrastructure costs by 60%", "Improve performance by 300%", "Achieve 99.99% uptime SLA", "Scale instantly to meet demand"];
+},
     {;
-      title: "Cloud Migration & Modernization",;
-      description: "End-to-end cloud migration services with modern architecture and optimization for AWS, Azure, and Google Cloud platforms.",;
-      price: "From $15,000",;
-      features: ["Cloud Strategy", "Migration Planning", "Architecture Design", "Data Migration", "Performance Optimization", "Cost Management"],;
-      href: "/services/cloud-migration",;
-      color: "from-blue-400 to-cyan-500",;
-      benefits: ["Reduce infrastructure costs by 40%", "Improve scalability and performance", "Enhance security and compliance", "Enable remote work capabilities"];,
-},;
+      title: "Cloud Migration & Modernization",
+      description: "End-to-end cloud migration services with modern architecture and optimization for AWS, Azure, and Google Cloud platforms.",
+      price: "From $15,000",
+      features: ["Cloud Strategy", "Migration Planning", "Architecture Design", "Data Migration", "Performance Optimization", "Cost Management"],
+      href: "/services/cloud-migration",
+      color: "from-blue-400 to-cyan-500",
+      benefits: ["Reduce infrastructure costs by 40%", "Improve scalability and performance", "Enhance security and compliance", "Enable remote work capabilities"];
+},
     {;
-      title: "Advanced Cybersecurity Suite",;
-      description: "Complete security solution protecting your organization from modern threats",;
-      price: "From $2,999/month",;
-      features: [;
-        "24/7 Threat Monitoring",;
-        "Automated Incident Response",;
-        "Compliance Management",;
-        "Security Training";
-      ],;
-      href: "/services/cybersecurity",;
-      color: "from-red-400 to-orange-500",;
-      popular: true,;
-      icon: Shield;,
+      title: "Advanced Cybersecurity Suite",
+      description: "Complete security solution protecting your organization from modern threats",
+      price: "From $2,999/month",
+      features: [ "24/7 Threat Monitoring",
+        "Automated Incident Response",
+        "Compliance Management",
+        "Security Training" ],
+      href: "/services/cybersecurity",
+      color: "from-red-400 to-orange-500",
+      popular: true,
+      icon: Shield;
 }
   ];
-;
   return (;
     <>;
       <Helmet>;
@@ -117,7 +104,6 @@ const ITServices: React.FC = () => {;
         <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, network solutions, software development, and managed IT services." />;
         <meta name="keywords" content="IT services, cloud migration, cybersecurity, network solutions, managed IT services, software development" />;
       </Helmet>;
-      ;
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
         {/* Hero Section */}
         <section className="relative py-20 bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white">;
@@ -163,7 +149,6 @@ const ITServices: React.FC = () => {;
                 Comprehensive IT solutions across all major technology domains;
               </p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {itServiceCategories.map((category, index) => (;
                 <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8">;
@@ -212,7 +197,6 @@ const ITServices: React.FC = () => {;
                 Our most popular and comprehensive IT solutions;
               </p>;
             </div>;
-            ;
             <div className="grid lg:grid-cols-2 gap-8">;
               {featuredITServices.map((service, index) => (;
                 <div key={index} className={`relative bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 ${service.popular ? 'ring-2 ring-cyan-500' : ''}`}>;
@@ -223,19 +207,16 @@ const ITServices: React.FC = () => {;
                       </span>;
                     </div>;
                   )}
-                  ;
+
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>;
                     <service.icon className="h-8 w-8 text-white" />;
                   </div>;
-                  ;
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">;
                     {service.title}
                   </h3>;
-                  ;
                   <p className="text-gray-600 mb-6">;
                     {service.description}
                   </p>;
-                  ;
                   <div className="mb-6">;
                     <p className="text-3xl font-bold text-gray-900 mb-2">;
                       {service.price}
@@ -249,7 +230,6 @@ const ITServices: React.FC = () => {;
                       ))}
                     </ul>;
                   </div>;
-                  ;
                   <Link ;
                     to={service.href}
                     className="w-full bg-cyan-500 hover:bg-cyan-600 text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center">;
@@ -273,7 +253,6 @@ const ITServices: React.FC = () => {;
                 Get in touch with our IT experts for a free consultation;
               </p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-3 gap-8 mb-12">;
               <div className="text-center">;
                 <Phone className="h-12 w-12 text-cyan-400 mx-auto mb-4" />;
@@ -291,7 +270,6 @@ const ITServices: React.FC = () => {;
                 <p className="text-gray-200">364 E Main St STE 1008<br />Middletown DE 19709</p>;
               </div>;
             </div>;
-            ;
             <div className="text-center">;
               <Link ;
                 to="/contact" ;
@@ -304,7 +282,6 @@ const ITServices: React.FC = () => {;
         </section>;
       </div>;
     </>;
-  );,
+  );
 };
-;
 export default ITServices;

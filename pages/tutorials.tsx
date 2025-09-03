@@ -1,112 +1,107 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-;
 const Tutorials: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
-;
   const categories = [;
-    { id: 'all', name: 'All Tutorials', icon: '📚' },;
-    { id: 'getting-started', name: 'Getting Started', icon: '🚀' },;
-    { id: 'integration', name: 'Integration', icon: '🔗' },;
-    { id: 'advanced', name: 'Advanced', icon: '⚡' },;
-    { id: 'best-practices', name: 'Best Practices', icon: '✅' },;
+    { id: 'all', name: 'All Tutorials', icon: '📚' },
+    { id: 'getting-started', name: 'Getting Started', icon: '🚀' },
+    { id: 'integration', name: 'Integration', icon: '🔗' },
+    { id: 'advanced', name: 'Advanced', icon: '⚡' },
+    { id: 'best-practices', name: 'Best Practices', icon: '✅' },
   ];
-;
   const tutorials = [;
     {;
-      id: 1,;
-      title: 'Setting Up Your First AI Project',;
-      category: 'getting-started',;
-      description: 'Learn how to create and configure your first AI project on Zion Marketplace',;
-      duration: '20 min',;
-      difficulty: 'Beginner',;
-      steps: 8,;
-      featured: true,;
-      tags: ['onboarding', 'project-setup', 'first-steps'],;,
-},;
+      id: 1,
+      title: 'Setting Up Your First AI Project',
+      category: 'getting-started',
+      description: 'Learn how to create and configure your first AI project on Zion Marketplace',
+      duration: '20 min',
+      difficulty: 'Beginner',
+      steps: 8,
+      featured: true,
+      tags: ['onboarding', 'project-setup', 'first-steps'],,
+},
     {;
-      id: 2,;
-      title: 'Integrating AI Services with Your Application',;
-      category: 'integration',;
-      description: 'Step-by-step guide to integrating AI services into your existing applications',;
-      duration: '45 min',;
-      difficulty: 'Intermediate',;
-      steps: 12,;
-      featured: true,;
-      tags: ['integration', 'api', 'webhooks'],;,
-},;
+      id: 2,
+      title: 'Integrating AI Services with Your Application',
+      category: 'integration',
+      description: 'Step-by-step guide to integrating AI services into your existing applications',
+      duration: '45 min',
+      difficulty: 'Intermediate',
+      steps: 12,
+      featured: true,
+      tags: ['integration', 'api', 'webhooks'],,
+},
     {;
-      id: 3,;
-      title: 'Building a Custom AI Workflow',;
-      category: 'advanced',;
-      description: 'Create complex AI workflows that combine multiple services and data sources',;
-      duration: '90 min',;
-      difficulty: 'Advanced',;
-      steps: 15,;
-      featured: false,;
-      tags: ['workflow', 'automation', 'advanced'],;,
-},;
+      id: 3,
+      title: 'Building a Custom AI Workflow',
+      category: 'advanced',
+      description: 'Create complex AI workflows that combine multiple services and data sources',
+      duration: '90 min',
+      difficulty: 'Advanced',
+      steps: 15,
+      featured: false,
+      tags: ['workflow', 'automation', 'advanced'],,
+},
     {;
-      id: 4,;
-      title: 'Implementing AI-Powered Search',;
-      category: 'integration',;
-      description: 'Add intelligent search capabilities to your application using our AI search API',;
-      duration: '35 min',;
-      difficulty: 'Intermediate',;
-      steps: 10,;
-      featured: false,;
-      tags: ['search', 'ai', 'implementation'],;,
-},;
+      id: 4,
+      title: 'Implementing AI-Powered Search',
+      category: 'integration',
+      description: 'Add intelligent search capabilities to your application using our AI search API',
+      duration: '35 min',
+      difficulty: 'Intermediate',
+      steps: 10,
+      featured: false,
+      tags: ['search', 'ai', 'implementation'],,
+},
     {;
-      id: 5,;
-      title: 'Securing Your AI Integration',;
-      category: 'best-practices',;
-      description: 'Best practices for securing AI integrations and protecting user data',;
-      duration: '40 min',;
-      difficulty: 'Intermediate',;
-      steps: 11,;
-      featured: true,;
-      tags: ['security', 'best-practices', 'compliance'],;,
-},;
+      id: 5,
+      title: 'Securing Your AI Integration',
+      category: 'best-practices',
+      description: 'Best practices for securing AI integrations and protecting user data',
+      duration: '40 min',
+      difficulty: 'Intermediate',
+      steps: 11,
+      featured: true,
+      tags: ['security', 'best-practices', 'compliance'],,
+},
     {;
-      id: 6,;
-      title: 'Optimizing AI Service Performance',;
-      category: 'advanced',;
-      description: 'Techniques for optimizing AI service performance and reducing costs',;
-      duration: '60 min',;
-      difficulty: 'Advanced',;
-      steps: 13,;
-      featured: false,;
-      tags: ['optimization', 'performance', 'cost'],;,
-},;
+      id: 6,
+      title: 'Optimizing AI Service Performance',
+      category: 'advanced',
+      description: 'Techniques for optimizing AI service performance and reducing costs',
+      duration: '60 min',
+      difficulty: 'Advanced',
+      steps: 13,
+      featured: false,
+      tags: ['optimization', 'performance', 'cost'],,
+},
     {;
-      id: 7,;
-      title: 'Creating AI-Powered Dashboards',;
-      category: 'integration',;
-      description: 'Build real-time dashboards that display AI insights and analytics',;
-      duration: '50 min',;
-      difficulty: 'Intermediate',;
-      steps: 14,;
-      featured: false,;
-      tags: ['dashboard', 'analytics', 'real-time'],;,
-},;
+      id: 7,
+      title: 'Creating AI-Powered Dashboards',
+      category: 'integration',
+      description: 'Build real-time dashboards that display AI insights and analytics',
+      duration: '50 min',
+      difficulty: 'Intermediate',
+      steps: 14,
+      featured: false,
+      tags: ['dashboard', 'analytics', 'real-time'],,
+},
     {;
-      id: 8,;
-      title: 'Testing and Debugging AI Integrations',;
-      category: 'best-practices',;
-      description: 'Comprehensive testing strategies for AI integrations and debugging techniques',;
-      duration: '55 min',;
-      difficulty: 'Intermediate',;
-      steps: 16,;
-      featured: false,;
-      tags: ['testing', 'debugging', 'quality'],;,
-},;
+      id: 8,
+      title: 'Testing and Debugging AI Integrations',
+      category: 'best-practices',
+      description: 'Comprehensive testing strategies for AI integrations and debugging techniques',
+      duration: '55 min',
+      difficulty: 'Intermediate',
+      steps: 16,
+      featured: false,
+      tags: ['testing', 'debugging', 'quality'],,
+},
   ];
-;
   const filteredTutorials = tutorials.filter(tutorial => ;
     activeCategory === 'all' || tutorial.category === activeCategory;
   );
-;
   return (;
     <>;
       <Head>;
@@ -114,7 +109,6 @@ const Tutorials: React.FC = () => {;
         <meta name="description" content="Step-by-step tutorials for AI integration and marketplace success" />;
         <meta name="keywords" content="tutorials, step-by-step, AI, integration, learning" />;
       </Head>;
-      ;
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">;
         {/* Header */}
         <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">;
@@ -140,7 +134,7 @@ const Tutorials: React.FC = () => {;
                   className={`px-6 py-3 rounded-lg font-medium transition-colors ${;
                     activeCategory === category.id;
                       ? 'bg-blue-600 text-white';
-                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600';,
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600';
 }`}
                 >;
                   <span className="mr-2">{category.icon}</span>;
@@ -172,7 +166,7 @@ const Tutorials: React.FC = () => {;
                   <span className={`text-xs px-2 py-1 rounded-full ${;
                     tutorial.difficulty === 'Beginner' ? 'bg-green-600 text-white' :;
                     tutorial.difficulty === 'Intermediate' ? 'bg-yellow-600 text-white' :;
-                    'bg-red-600 text-white';,
+                    'bg-red-600 text-white';
 }`}>;
                     {tutorial.difficulty}
                   </span>;
@@ -196,7 +190,6 @@ const Tutorials: React.FC = () => {;
               {filteredTutorials.length} tutorials found;
             </span>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {filteredTutorials.map((tutorial) => (;
               <article key={tutorial.id} className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30 hover:border-blue-400 transition-colors group">;
@@ -204,19 +197,16 @@ const Tutorials: React.FC = () => {;
                   <span className={`text-xs px-2 py-1 rounded-full ${;
                     tutorial.difficulty === 'Beginner' ? 'bg-green-600 text-white' :;
                     tutorial.difficulty === 'Intermediate' ? 'bg-yellow-600 text-white' :;
-                    'bg-red-600 text-white';,
+                    'bg-red-600 text-white';
 }`}>;
                     {tutorial.difficulty}
                   </span>;
                   <span className="text-xs text-gray-400">{tutorial.duration}</span>;
                 </div>;
-                ;
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors cursor-pointer">;
                   {tutorial.title}
                 </h3>;
-                ;
                 <p className="text-gray-300 text-sm mb-4">{tutorial.description}</p>;
-                ;
                 <div className="flex flex-wrap gap-2 mb-4">;
                   {tutorial.tags.map((tag, index) => (;
                     <span;
@@ -226,7 +216,6 @@ const Tutorials: React.FC = () => {;
                     </span>;
                   ))}
                 </div>;
-                ;
                 <div className="flex items-center justify-between">;
                   <span className="text-sm text-gray-400">{tutorial.steps} steps</span>;
                   <button className="text-blue-400 hover:text-blue-300 text-sm font-medium group-hover:translate-x-1 transition-transform">;
@@ -301,7 +290,6 @@ const Tutorials: React.FC = () => {;
                 Start Practice Project;
               </button>;
             </div>;
-            ;
             <div className="bg-gray-800/50 rounded-lg p-6 border border-blue-500/30">;
               <div className="text-4xl mb-4">🏆</div>;
               <h3 className="text-xl font-semibold text-white mb-4">Earn Certificates</h3>;
@@ -330,7 +318,6 @@ const Tutorials: React.FC = () => {;
         </footer>;
       </div>;
     </>;
-  );,
+  );
 };
-;
 export default Tutorials;

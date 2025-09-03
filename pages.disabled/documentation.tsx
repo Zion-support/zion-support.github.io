@@ -4,123 +4,118 @@ import MainLayout from '../components/layout/MainLayout';
 import { Book, Code, Database, Cloud, Shield, Zap, Search, Download } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-;
 const Documentation: NextPage = () => {;
   const [searchQuery, setSearchQuery] = useState('');
-;
   const docCategories = [;
     {;
-      icon: Code,;
-      title: 'API Documentation',;
-      description: 'Complete API reference and integration guides',;
+      icon: Code,
+      title: 'API Documentation',
+      description: 'Complete API reference and integration guides',
       sections: [;
-        { title: 'Getting Started', description: 'Quick start guide and authentication' },;
-        { title: 'Authentication', description: 'API keys, OAuth, and security' },;
-        { title: 'Endpoints', description: 'Complete API endpoint reference' },;
-        { title: 'SDKs & Libraries', description: 'Client libraries and code examples' },;
+        { title: 'Getting Started', description: 'Quick start guide and authentication' },
+        { title: 'Authentication', description: 'API keys, OAuth, and security' },
+        { title: 'Endpoints', description: 'Complete API endpoint reference' },
+        { title: 'SDKs & Libraries', description: 'Client libraries and code examples' },
         { title: 'Rate Limits', description: 'API usage limits and best practices' }
-      ];,
-},;
+      ];
+},
     {;
-      icon: Database,;
-      title: 'Data Management',;
-      description: 'Data handling, storage, and processing guides',;
+      icon: Database,
+      title: 'Data Management',
+      description: 'Data handling, storage, and processing guides',
       sections: [;
-        { title: 'Data Models', description: 'Schema definitions and data structures' },;
-        { title: 'Import/Export', description: 'Data migration and backup procedures' },;
-        { title: 'Data Security', description: 'Encryption and privacy protection' },;
-        { title: 'Data Validation', description: 'Input validation and error handling' },;
+        { title: 'Data Models', description: 'Schema definitions and data structures' },
+        { title: 'Import/Export', description: 'Data migration and backup procedures' },
+        { title: 'Data Security', description: 'Encryption and privacy protection' },
+        { title: 'Data Validation', description: 'Input validation and error handling' },
         { title: 'Data Analytics', description: 'Reporting and analytics features' }
-      ];,
-},;
+      ];
+},
     {;
-      icon: Cloud,;
-      title: 'Cloud Services',;
-      description: 'Cloud deployment and infrastructure guides',;
+      icon: Cloud,
+      title: 'Cloud Services',
+      description: 'Cloud deployment and infrastructure guides',
       sections: [;
-        { title: 'Deployment', description: 'Cloud deployment strategies' },;
-        { title: 'Scaling', description: 'Auto-scaling and performance optimization' },;
-        { title: 'Monitoring', description: 'System monitoring and alerting' },;
-        { title: 'Backup & Recovery', description: 'Data backup and disaster recovery' },;
+        { title: 'Deployment', description: 'Cloud deployment strategies' },
+        { title: 'Scaling', description: 'Auto-scaling and performance optimization' },
+        { title: 'Monitoring', description: 'System monitoring and alerting' },
+        { title: 'Backup & Recovery', description: 'Data backup and disaster recovery' },
         { title: 'Security', description: 'Cloud security best practices' }
-      ];,
-},;
+      ];
+},
     {;
-      icon: Shield,;
-      title: 'Security',;
-      description: 'Security implementation and best practices',;
+      icon: Shield,
+      title: 'Security',
+      description: 'Security implementation and best practices',
       sections: [;
-        { title: 'Authentication', description: 'User authentication and authorization' },;
-        { title: 'Data Protection', description: 'GDPR compliance and data privacy' },;
-        { title: 'Network Security', description: 'Firewall and network protection' },;
-        { title: 'Audit Logs', description: 'Security monitoring and logging' },;
+        { title: 'Authentication', description: 'User authentication and authorization' },
+        { title: 'Data Protection', description: 'GDPR compliance and data privacy' },
+        { title: 'Network Security', description: 'Firewall and network protection' },
+        { title: 'Audit Logs', description: 'Security monitoring and logging' },
         { title: 'Compliance', description: 'Industry compliance standards' }
-      ];,
+      ];
 }
   ];
-;
   const quickStartGuides = [;
     {;
-      title: 'Quick Start Guide',;
-      description: 'Get up and running in 5 minutes',;
-      icon: Zap,;
-      time: '5 min',;
-      difficulty: 'Beginner';,
-},;
+      title: 'Quick Start Guide',
+      description: 'Get up and running in 5 minutes',
+      icon: Zap,
+      time: '5 min',
+      difficulty: 'Beginner';
+},
     {;
-      title: 'API Integration',;
-      description: 'Integrate our API into your application',;
-      icon: Code,;
-      time: '15 min',;
-      difficulty: 'Intermediate';,
-},;
+      title: 'API Integration',
+      description: 'Integrate our API into your application',
+      icon: Code,
+      time: '15 min',
+      difficulty: 'Intermediate';
+},
     {;
-      title: 'Cloud Deployment',;
-      description: 'Deploy your application to the cloud',;
-      icon: Cloud,;
-      time: '30 min',;
-      difficulty: 'Advanced';,
-},;
+      title: 'Cloud Deployment',
+      description: 'Deploy your application to the cloud',
+      icon: Cloud,
+      time: '30 min',
+      difficulty: 'Advanced';
+},
     {;
-      title: 'Security Setup',;
-      description: 'Configure security and authentication',;
-      icon: Shield,;
-      time: '20 min',;
-      difficulty: 'Intermediate';,
+      title: 'Security Setup',
+      description: 'Configure security and authentication',
+      icon: Shield,
+      time: '20 min',
+      difficulty: 'Intermediate';
 }
   ];
-;
   const resources = [;
     {;
-      title: 'API Reference',;
-      description: 'Complete API documentation with examples',;
-      type: 'PDF',;
-      size: '2.3 MB',;
-      icon: Download;,
-},;
+      title: 'API Reference',
+      description: 'Complete API documentation with examples',
+      type: 'PDF',
+      size: '2.3 MB',
+      icon: Download;
+},
     {;
-      title: 'SDK Downloads',;
-      description: 'Client libraries for popular programming languages',;
-      type: 'ZIP',;
-      size: '15.2 MB',;
-      icon: Download;,
-},;
+      title: 'SDK Downloads',
+      description: 'Client libraries for popular programming languages',
+      type: 'ZIP',
+      size: '15.2 MB',
+      icon: Download;
+},
     {;
-      title: 'Postman Collection',;
-      description: 'Ready-to-use API collection for testing',;
-      type: 'JSON',;
-      size: '1.1 MB',;
-      icon: Download;,
-},;
+      title: 'Postman Collection',
+      description: 'Ready-to-use API collection for testing',
+      type: 'JSON',
+      size: '1.1 MB',
+      icon: Download;
+},
     {;
-      title: 'OpenAPI Specification',;
-      description: 'Machine-readable API specification',;
-      type: 'YAML',;
-      size: '0.8 MB',;
-      icon: Download;,
+      title: 'OpenAPI Specification',
+      description: 'Machine-readable API specification',
+      type: 'YAML',
+      size: '0.8 MB',
+      icon: Download;
 }
   ];
-;
   return (;
     <MainLayout;
       title="Documentation - Zion Tech Group";
@@ -137,7 +132,6 @@ const Documentation: NextPage = () => {;
                 Comprehensive guides, API references, and technical documentation to help you ;
                 integrate and use our services effectively.;
               </p>;
-              ;
               {/* Search Bar */}
               <div className="max-w-2xl mx-auto">;
                 <div className="relative">;
@@ -173,7 +167,7 @@ const Documentation: NextPage = () => {;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
                         guide.difficulty === 'Beginner' ? 'bg-green-100 text-green-800' :;
                         guide.difficulty === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' :;
-                        'bg-red-100 text-red-800';,
+                        'bg-red-100 text-red-800';
 }`}>;
                         {guide.difficulty}
                       </span>;
@@ -427,7 +421,6 @@ const Documentation: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default Documentation;

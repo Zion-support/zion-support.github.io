@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-;
 const fs = require("fs");
 const path = require("path");
 function fixFile(filePath) {;
@@ -21,14 +20,14 @@ function fixFile(filePath) {;
     if (fixedContent !== content) {;
   fs.writeFileSync(filePath, fixedContent, "utf8");
       console.log(`Fixed: ${filePath}`);
-      return true;,;,
+      return true;,
 }
   } catch (error) {;
-  console.error(`Error fixing ${filePath}:`, error.message);,;,
+  console.error(`Error fixing ${filePath}:`, error.message);,
 }
-  return false;,;,
+  return false;,
 }
-;
+
 function processDirectory(dirPath) {;
   const items = fs.readdirSync(dirPath);
   let fixedCount = 0;
@@ -37,14 +36,14 @@ function processDirectory(dirPath) {;
     const stat = fs.statSync(fullPath);
     if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js"))) {;
   if (fixFile(fullPath)) {;
-  fixedCount++;,;,
+  fixedCount++;,
 }
     }
   }
-  ;
-  return fixedCount;,;,
+
+  return fixedCount;,
 }
-;
+
 const pagesDir = path.join(process.cwd(), "pages");
 const fixedCount = processDirectory(pagesDir);
 console.log(`Fixed ${fixedCount} files in pages directory.`)}}

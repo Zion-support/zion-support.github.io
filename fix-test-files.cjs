@@ -27,17 +27,17 @@ testDirs.forEach(dir => {;
           if (content !== originalContent) {;
   fs.writeFileSync(filePath, content, "utf8");
             fixedFiles.push(filePath);
-            console.log(`✅ Fixed ${filePath}`);,;,
+            console.log(`✅ Fixed ${filePath}`);,
 }
         }
       }
-    });,;,
+    });,
 }
 });
 console.log(`✅ Fixed ${fixedFiles.length} test files`);
 if (fixedFiles.length > 0) {;
   console.log("Fixed files:");
-  fixedFiles.forEach(file => console.log(`  - ${file}`));,;,
+  fixedFiles.forEach(file => console.log(`  - ${file}`));,
 }
-;
+
 console.log("🎉 Test file fixing completed!")

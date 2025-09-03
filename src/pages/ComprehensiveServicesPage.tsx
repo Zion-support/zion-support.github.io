@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-;
 export default function ComprehensiveServicesPage() {;
   return (;
     <div className="min-h-screen bg-gray-50 py-12">;
@@ -13,7 +12,6 @@ export default function ComprehensiveServicesPage() {;
             Welcome to our comprehensiveservicespage page;
           </p>;
         </div>;
-        ;
         <div className="text-center">;
           <Link ;
             to="/contact" ;
@@ -23,5 +21,5 @@ export default function ComprehensiveServicesPage() {;
         </div>;
       </div>;
     </div>;
-  );,
+  );
 }

@@ -1,204 +1,194 @@
 import { Link  } from 'react-router-dom';
-;
 export default function ComprehensivePricingGuide2027(...args: unknown[]): unknown {;
   const serviceCategories = [;
     {;
-      name: "AI & Machine Learning Services",;
-      icon: Brain,;
-      description: "Cutting-edge AI solutions for business transformation",;
-      color: "from-zion-cyan to-zion-purple",;
+      name: "AI & Machine Learning Services",
+      icon: Brain,
+      description: "Cutting-edge AI solutions for business transformation",
+      color: "from-zion-cyan to-zion-purple",
       services: [;
         {;
-          name: "AI Workflow Orchestrator",;
-          description: "Transform business processes with AI-powered workflow automation",;
-          price: "$299",;
-          period: "/month",;
-          features: ["AI-powered process optimization", "Visual workflow designer", "Automated execution", "Performance analytics", "Up to 50 workflows", "Standard integrations"],;
-          popular: true,;
-          link: "/services/ai-workflow-orchestrator";,
-},;
+          name: "AI Workflow Orchestrator",
+          description: "Transform business processes with AI-powered workflow automation",
+          price: "$299",
+          period: "/month",
+          features: ["AI-powered process optimization", "Visual workflow designer", "Automated execution", "Performance analytics", "Up to 50 workflows", "Standard integrations"],
+          popular: true,
+          link: "/services/ai-workflow-orchestrator";
+},
         {;
-          name: "AI Data Governance Platform",;
-          description: "Secure, govern, and manage data with AI-powered compliance automation",;
-          price: "$499",;
-          period: "/month",;
-          features: ["AI-powered data discovery", "Advanced access control", "Data lineage tracking", "Compliance automation", "Up to 10TB data", "Standard compliance templates"],;
-          popular: false,;
-          link: "/services/ai-data-governance-platform";,
-},;
+          name: "AI Data Governance Platform",
+          description: "Secure, govern, and manage data with AI-powered compliance automation",
+          price: "$499",
+          period: "/month",
+          features: ["AI-powered data discovery", "Advanced access control", "Data lineage tracking", "Compliance automation", "Up to 10TB data", "Standard compliance templates"],
+          popular: false,
+          link: "/services/ai-data-governance-platform";
+},
         {;
-          name: "AI Customer Experience Analytics",;
-          description: "Transform customer insights into actionable intelligence with AI-powered analytics",;
-          price: "$399",;
-          period: "/month",;
-          features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine", "Up to 10K interactions", "Basic reporting"],;
-          popular: false,;
-          link: "/services/ai-customer-experience-analytics";,
+          name: "AI Customer Experience Analytics",
+          description: "Transform customer insights into actionable intelligence with AI-powered analytics",
+          price: "$399",
+          period: "/month",
+          features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine", "Up to 10K interactions", "Basic reporting"],
+          popular: false,
+          link: "/services/ai-customer-experience-analytics";
 }
-      ];,
-},;
+      ];
+},
     {;
-      name: "Cloud & DevOps Services",;
-      icon: Network,;
-      description: "Scalable cloud infrastructure and development operations",;
-      color: "from-zion-blue to-zion-cyan",;
+      name: "Cloud & DevOps Services",
+      icon: Network,
+      description: "Scalable cloud infrastructure and development operations",
+      color: "from-zion-blue to-zion-cyan",
       services: [;
         {;
-          name: "Cloud DevOps",;
-          description: "Infrastructure automation and scaling solutions",;
-          price: "$599",;
-          period: "/month",;
-          features: ["Infrastructure as Code", "CI/CD pipelines", "Auto-scaling", "Monitoring & alerting", "24/7 support", "Multi-cloud support"],;
-          popular: false,;
-          link: "/services/cloud-devops";,
-},;
+          name: "Cloud DevOps",
+          description: "Infrastructure automation and scaling solutions",
+          price: "$599",
+          period: "/month",
+          features: ["Infrastructure as Code", "CI/CD pipelines", "Auto-scaling", "Monitoring & alerting", "24/7 support", "Multi-cloud support"],
+          popular: false,
+          link: "/services/cloud-devops";
+},
         {;
-          name: "IT Infrastructure",;
-          description: "Enterprise-grade infrastructure solutions",;
-          price: "$799",;
-          period: "/month",;
-          features: ["Network design", "Server management", "Security implementation", "Backup & recovery", "Performance optimization", "Compliance support"],;
-          popular: false,;
-          link: "/services/it-infrastructure";,
+          name: "IT Infrastructure",
+          description: "Enterprise-grade infrastructure solutions",
+          price: "$799",
+          period: "/month",
+          features: ["Network design", "Server management", "Security implementation", "Backup & recovery", "Performance optimization", "Compliance support"],
+          popular: false,
+          link: "/services/it-infrastructure";
 }
-      ];,
-},;
+      ];
+},
     {;
-      name: "Security & Compliance Services",;
-      icon: Shield,;
-      description: "Enterprise-grade security and compliance solutions",;
-      color: "from-zion-red to-zion-orange",;
+      name: "Security & Compliance Services",
+      icon: Shield,
+      description: "Enterprise-grade security and compliance solutions",
+      color: "from-zion-red to-zion-orange",
       services: [;
         {;
-          name: "Zero Trust Network Access",;
-          description: "Modern security architecture for enterprise networks",;
-          price: "$899",;
-          period: "/month",;
-          features: ["Identity verification", "Access control", "Threat detection", "Compliance monitoring", "Real-time alerts", "Security analytics"],;
-          popular: false,;
-          link: "/services/zero-trust-network-access";,
-},;
+          name: "Zero Trust Network Access",
+          description: "Modern security architecture for enterprise networks",
+          price: "$899",
+          period: "/month",
+          features: ["Identity verification", "Access control", "Threat detection", "Compliance monitoring", "Real-time alerts", "Security analytics"],
+          popular: false,
+          link: "/services/zero-trust-network-access";
+},
         {;
-          name: "Security Headers & CSP",;
-          description: "Web security hardening and content security policies",;
-          price: "$299",;
-          period: "/month",;
-          features: ["Security headers", "Content Security Policy", "XSS protection", "HTTPS enforcement", "Security monitoring", "Compliance reporting"],;
-          popular: false,;
-          link: "/services/security-headers-csp";,
+          name: "Security Headers & CSP",
+          description: "Web security hardening and content security policies",
+          price: "$299",
+          period: "/month",
+          features: ["Security headers", "Content Security Policy", "XSS protection", "HTTPS enforcement", "Security monitoring", "Compliance reporting"],
+          popular: false,
+          link: "/services/security-headers-csp";
 }
-      ];,
-},;
+      ];
+},
     {;
-      name: "Business Process Automation",;
-              icon: WorkflowIcon,;
-      description: "Streamline operations with intelligent automation",;
-      color: "from-zion-purple to-zion-pink",;
+      name: "Business Process Automation",
+              icon: WorkflowIcon,
+      description: "Streamline operations with intelligent automation",
+      color: "from-zion-purple to-zion-pink",
       services: [;
         {;
-          name: "AI Project Management",;
-          description: "AI-driven project optimization and management",;
-          price: "$449",;
-          period: "/month",;
-          features: ["AI task prioritization", "Resource optimization", "Risk assessment", "Progress tracking", "Team collaboration", "Performance analytics"],;
-          popular: false,;
-          link: "/services/ai-project-management";,
-},;
+          name: "AI Project Management",
+          description: "AI-driven project optimization and management",
+          price: "$449",
+          period: "/month",
+          features: ["AI task prioritization", "Resource optimization", "Risk assessment", "Progress tracking", "Team collaboration", "Performance analytics"],
+          popular: false,
+          link: "/services/ai-project-management";
+},
         {;
-          name: "AI Customer Support Automation",;
-          description: "Intelligent customer support with AI automation",;
-          price: "$349",;
-          period: "/month",;
-          features: ["Chatbot integration", "Ticket routing", "Knowledge base", "Sentiment analysis", "Performance metrics", "Multi-channel support"],;
-          popular: false,;
-          link: "/services/ai-customer-support-automation";,
+          name: "AI Customer Support Automation",
+          description: "Intelligent customer support with AI automation",
+          price: "$349",
+          period: "/month",
+          features: ["Chatbot integration", "Ticket routing", "Knowledge base", "Sentiment analysis", "Performance metrics", "Multi-channel support"],
+          popular: false,
+          link: "/services/ai-customer-support-automation";
 }
-      ];,
+      ];
 }
   };
-;
   const enterprisePackages = [;
     {;
-      name: "Starter Enterprise",;
-      price: "$2,999",;
-      period: "/month",;
-      description: "Perfect for growing enterprises with comprehensive needs",;
-      features: [;
-        "Up to 5 AI services",;
-        "Custom integrations",;
-        "Priority support",;
-        "Advanced analytics",;
-        "Compliance reporting",;
-        "Training & onboarding";
-      ],;
-      popular: false;,
-},;
+      name: "Starter Enterprise",
+      price: "$2,999",
+      period: "/month",
+      description: "Perfect for growing enterprises with comprehensive needs",
+      features: [ "Up to 5 AI services",
+        "Custom integrations",
+        "Priority support",
+        "Advanced analytics",
+        "Compliance reporting",
+        "Training & onboarding" ],
+      popular: false;
+},
     {;
-      name: "Professional Enterprise",;
-      price: "$5,999",;
-      period: "/month",;
-      description: "For established enterprises requiring advanced capabilities",;
-      features: [;
-        "Up to 10 AI services",;
-        "Custom AI models",;
-        "White-label solutions",;
-        "Dedicated support team",;
-        "Advanced security",;
-        "SLA guarantees",;
-        "Custom development";
-      ],;
-      popular: true;,
-},;
+      name: "Professional Enterprise",
+      price: "$5,999",
+      period: "/month",
+      description: "For established enterprises requiring advanced capabilities",
+      features: [ "Up to 10 AI services",
+        "Custom AI models",
+        "White-label solutions",
+        "Dedicated support team",
+        "Advanced security",
+        "SLA guarantees",
+        "Custom development" ],
+      popular: true;
+},
     {;
-      name: "Ultimate Enterprise",;
-      price: "$12,999",;
-      period: "/month",;
-      description: "For large organizations with complex requirements",;
-      features: [;
-        "Unlimited AI services",;
-        "Custom AI development",;
-        "On-premise deployment",;
-        "24/7 dedicated support",;
-        "Custom integrations",;
-        "Advanced analytics",;
-        "Compliance automation",;
-        "Strategic consulting";
-      ],;
-      popular: false;,
+      name: "Ultimate Enterprise",
+      price: "$12,999",
+      period: "/month",
+      description: "For large organizations with complex requirements",
+      features: [ "Unlimited AI services",
+        "Custom AI development",
+        "On-premise deployment",
+        "24/7 dedicated support",
+        "Custom integrations",
+        "Advanced analytics",
+        "Compliance automation",
+        "Strategic consulting" ],
+      popular: false;
 }
   ];
-;
   const marketComparison = [;
     {;
-      feature: "AI Workflow Automation",;
-      zion: "$299/month",;
-      competitor1: "$599/month",;
-      competitor2: "$799/month",;
-      savings: "50-62%";,
-},;
+      feature: "AI Workflow Automation",
+      zion: "$299/month",
+      competitor1: "$599/month",
+      competitor2: "$799/month",
+      savings: "50-62%";
+},
     {;
-      feature: "Data Governance Platform",;
-      zion: "$499/month",;
-      competitor1: "$1,299/month",;
-      competitor2: "$1,999/month",;
-      savings: "61-75%";,
-},;
+      feature: "Data Governance Platform",
+      zion: "$499/month",
+      competitor1: "$1,299/month",
+      competitor2: "$1,999/month",
+      savings: "61-75%";
+},
     {;
-      feature: "Customer Experience Analytics",;
-      zion: "$399/month",;
-      competitor1: "$899/month",;
-      competitor2: "$1,299/month",;
-      savings: "56-69%";,
-},;
+      feature: "Customer Experience Analytics",
+      zion: "$399/month",
+      competitor1: "$899/month",
+      competitor2: "$1,299/month",
+      savings: "56-69%";
+},
     {;
-      feature: "Cloud DevOps",;
-      zion: "$599/month",;
-      competitor1: "$1,199/month",;
-      competitor2: "$1,599/month",;
-      savings: "50-63%";,
+      feature: "Cloud DevOps",
+      zion: "$599/month",
+      competitor1: "$1,199/month",
+      competitor2: "$1,599/month",
+      savings: "50-63%";
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">;
       {/* Futuristic Animated Background */}
@@ -258,7 +248,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                 Service Category Pricing";
               </h2>"";
               <p className="text-xl text-zion-slate-300 max-w-3xl mx-auto">;
-                Explore our comprehensive pricing across all service categories with transparent, ;
+                Explore our comprehensive pricing across all service categories with transparent,
                 competitive rates designed for businesses of all sizes.;
               </p>;
             </motion.div>;
@@ -288,7 +278,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                       viewport={{ once: true }}``;
                       className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${}
 `;
-                        service.popular ? 'border-zion-cyan/50 bg-zion-cyan/5' : 'border-zion-slate-600/50'``;,
+                        service.popular ? 'border-zion-cyan/50 bg-zion-cyan/5' : 'border-zion-slate-600/50'``;
 }`}
                     >";
                       {service.popular && ("";
@@ -323,7 +313,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
 '''`;
                             service.popular'''`'`;
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'''`'`'`;
-                              : 'bg-zion-slate-700 text-white hover:bg-zion-slate-600'````;,
+                              : 'bg-zion-slate-700 text-white hover:bg-zion-slate-600'````;
 }`}
                         >;
                           Learn More;
@@ -364,7 +354,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
 ';
                     pkg.popular '';
                       ? 'border-zion-cyan/50 bg-zion-cyan/5' ''`;
-                      : 'border-zion-slate-600/50'``;,
+                      : 'border-zion-slate-600/50'``;
 }`}
                 >";
                   {pkg.popular && ("";
@@ -373,7 +363,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
                         Most Popular;
                       </span>;
                     </div>) }
-;
+
                   <div className="text-center mb-8">;
                     <h3 className="text-2xl font - bold text-white mb-4">{pkg.name}</h3>;
                     <div className="mb-4">;
@@ -407,7 +397,7 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
 '''`;
                       pkg.popular'''`'`;
                         ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'''`'`'`;
-                        : 'bg-zion-slate-700 text-white hover:bg-zion-slate-600'````;,
+                        : 'bg-zion-slate-700 text-white hover:bg-zion-slate-600'````;
 }`}
                   >;
                     Get Started;
@@ -534,18 +524,12 @@ export default function ComprehensivePricingGuide2027(...args: unknown[]): unkno
         </section>;
       </div>;
     </div>;
-  );,
+  );
 };
-;
 export default ComprehensivePricingGuide2027;
-;
 
 export { ComprehensivePricingGuide2027 };
-;
 export { ComprehensivePricingGuide2027 };
-;
 export { ComprehensivePricingGuide2027 };
-;
 export { ComprehensivePricingGuide2027 };
-;
 export { ComprehensivePricingGuide2027 };

@@ -3,88 +3,85 @@ import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
 import { Calendar, User, ArrowRight, Search, Filter, Tag } from 'lucide-react';
-;
 
 const Blog: NextPage = () => {;
   const blogPosts = [;
     {;
-      id: 1,;
-      title: 'The Future of AI in Business: Trends for 2025',;
-      excerpt: 'Explore the latest AI trends that are transforming businesses and how Zion Tech Group is leading the way in AI implementation.',;
-      author: 'Dr. Sarah Johnson',;
-      date: '2025-01-25',;
-      category: 'AI & Machine Learning',;
-      readTime: '5 min read',;
-      image: '/blog/ai-trends-2025.jpg',;
-      featured: true;,
-},;
+      id: 1,
+      title: 'The Future of AI in Business: Trends for 2025',
+      excerpt: 'Explore the latest AI trends that are transforming businesses and how Zion Tech Group is leading the way in AI implementation.',
+      author: 'Dr. Sarah Johnson',
+      date: '2025-01-25',
+      category: 'AI & Machine Learning',
+      readTime: '5 min read',
+      image: '/blog/ai-trends-2025.jpg',
+      featured: true;
+},
     {;
-      id: 2,;
-      title: 'Cloud Migration Best Practices: A Complete Guide',;
-      excerpt: 'Learn the essential steps and strategies for successful cloud migration with real-world examples and expert insights.',;
-      author: 'Michael Chen',;
-      date: '2025-01-22',;
-      category: 'Cloud Computing',;
-      readTime: '8 min read',;
-      image: '/blog/cloud-migration-guide.jpg',;
-      featured: false;,
-},;
+      id: 2,
+      title: 'Cloud Migration Best Practices: A Complete Guide',
+      excerpt: 'Learn the essential steps and strategies for successful cloud migration with real-world examples and expert insights.',
+      author: 'Michael Chen',
+      date: '2025-01-22',
+      category: 'Cloud Computing',
+      readTime: '8 min read',
+      image: '/blog/cloud-migration-guide.jpg',
+      featured: false;
+},
     {;
-      id: 3,;
-      title: 'Building Scalable Microservices Architecture',;
-      excerpt: 'Discover how to design and implement microservices that can scale with your business growth and technical requirements.',;
-      author: 'Alex Rodriguez',;
-      date: '2025-01-20',;
-      category: 'Software Development',;
-      readTime: '6 min read',;
-      image: '/blog/microservices-architecture.jpg',;
-      featured: false;,
-},;
+      id: 3,
+      title: 'Building Scalable Microservices Architecture',
+      excerpt: 'Discover how to design and implement microservices that can scale with your business growth and technical requirements.',
+      author: 'Alex Rodriguez',
+      date: '2025-01-20',
+      category: 'Software Development',
+      readTime: '6 min read',
+      image: '/blog/microservices-architecture.jpg',
+      featured: false;
+},
     {;
-      id: 4,;
-      title: 'Cybersecurity in the Age of Remote Work',;
-      excerpt: 'Essential security measures and best practices for protecting your organization in today\'s distributed work environment.',;
-      author: 'Emily Watson',;
-      date: '2025-01-18',;
-      category: 'Cybersecurity',;
-      readTime: '7 min read',;
-      image: '/blog/cybersecurity-remote-work.jpg',;
-      featured: false;,
-},;
+      id: 4,
+      title: 'Cybersecurity in the Age of Remote Work',
+      excerpt: 'Essential security measures and best practices for protecting your organization in today\'s distributed work environment.',
+      author: 'Emily Watson',
+      date: '2025-01-18',
+      category: 'Cybersecurity',
+      readTime: '7 min read',
+      image: '/blog/cybersecurity-remote-work.jpg',
+      featured: false;
+},
     {;
-      id: 5,;
-      title: 'Digital Transformation: Success Stories from 2024',;
-      excerpt: 'Real-world case studies of successful digital transformations and the key factors that led to their success.',;
-      author: 'David Kim',;
-      date: '2025-01-15',;
-      category: 'Digital Transformation',;
-      readTime: '9 min read',;
-      image: '/blog/digital-transformation-cases.jpg',;
-      featured: false;,
-},;
+      id: 5,
+      title: 'Digital Transformation: Success Stories from 2024',
+      excerpt: 'Real-world case studies of successful digital transformations and the key factors that led to their success.',
+      author: 'David Kim',
+      date: '2025-01-15',
+      category: 'Digital Transformation',
+      readTime: '9 min read',
+      image: '/blog/digital-transformation-cases.jpg',
+      featured: false;
+},
     {;
-      id: 6,;
-      title: 'The Rise of Edge Computing: What You Need to Know',;
-      excerpt: 'Understanding edge computing technology and its impact on modern applications and infrastructure.',;
-      author: 'Lisa Thompson',;
-      date: '2025-01-12',;
-      category: 'Technology Trends',;
-      readTime: '4 min read',;
-      image: '/blog/edge-computing-rise.jpg',;
-      featured: false;,
+      id: 6,
+      title: 'The Rise of Edge Computing: What You Need to Know',
+      excerpt: 'Understanding edge computing technology and its impact on modern applications and infrastructure.',
+      author: 'Lisa Thompson',
+      date: '2025-01-12',
+      category: 'Technology Trends',
+      readTime: '4 min read',
+      image: '/blog/edge-computing-rise.jpg',
+      featured: false;
 }
   ];
-;
   const categories = [;
-    'All Posts',;
-    'AI & Machine Learning',;
-    'Cloud Computing',;
-    'Software Development',;
-    'Cybersecurity',;
-    'Digital Transformation',;
+    'All Posts',
+    'AI & Machine Learning',
+    'Cloud Computing',
+    'Software Development',
+    'Cybersecurity',
+    'Digital Transformation',
     'Technology Trends';
   ];
-;
   return (;
     <MainLayout;
       title="Blog - Zion Tech Group";
@@ -99,7 +96,6 @@ const Blog: NextPage = () => {;
               <p className="text-xl text-gray-200 mb-8">;
                 Stay ahead with the latest trends, insights, and best practices in technology from our expert team.;
               </p>;
-              ;
               {/* Search Bar */}
               <div className="max-w-md mx-auto">;
                 <div className="relative">;
@@ -128,7 +124,7 @@ const Blog: NextPage = () => {;
                       className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${;
                         index === 0;
                           ? 'bg-blue-600 text-white';
-                          : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600';,
+                          : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600';
 }`}
                     >;
                       {category}
@@ -232,7 +228,6 @@ export default function BlogPage() {;
           <motion.h1 ;
             className="text-4xl md:text-5xl font-bold mb-6";
           </p>;
-          ;
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto">;
             <div className="relative">;
@@ -293,7 +288,7 @@ export default function BlogPage() {;
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${;
                   index === 0;
                     ? 'bg-blue-600 text-white';
-                    : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600';,
+                    : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600';
 }`}
               >;
                 {category}
@@ -317,15 +312,12 @@ export default function BlogPage() {;
                     <Tag className="w-4 h-4 text-blue-600 mr-2" />;
                     <span className="text-sm text-blue-600 font-medium">{post.category}</span>;
                   </div>;
-                  ;
                   <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">;
                     {post.title}
                   </h2>;
-                  ;
                   <p className="text-gray-600 mb-4 line-clamp-3">;
                     {post.excerpt}
                   </p>;
-                  ;
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">;
                     <div className="flex items-center">;
                       <User className="w-4 h-4 mr-1" />;
@@ -336,7 +328,6 @@ export default function BlogPage() {;
                       <span>{post.date}</span>;
                     </div>;
                   </div>;
-                  ;
                   <div className="flex items-center justify-between">;
                     <span className="text-sm text-gray-500">{post.readTime}</span>;
                     <Link;
@@ -397,7 +388,7 @@ export default function BlogPage() {;
                 className={`px-6 py-3 rounded-full font-medium transition-colors ${;
                   index === 0 ;
                     ? 'bg-zion-cyan text-white' ;
-                    : 'bg-white text-gray-600 hover:bg-zion-cyan hover:text-white';,
+                    : 'bg-white text-gray-600 hover:bg-zion-cyan hover:text-white';
 }`}
               >;
                 {category}
@@ -492,7 +483,6 @@ export default function BlogPage() {;
                         <div className="text-sm opacity-80">Featured Image</div>;
                       </div>;
                     </div>;
-                    ;
                     <div className="p-6">;
                       <div className="flex items-center space-x-4 mb-3">;
                         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">;
@@ -501,17 +491,14 @@ export default function BlogPage() {;
                         </span>;
                         <span className="text-gray-500 text-sm">{post.readTime}</span>;
                       </div>;
-                      ;
                       <h2 className="text-xl font-semibold mb-3 text-gray-800 hover:text-blue-600 transition-colors">;
                         <Link href={`/blog/${post.slug}`}>;
                           {post.title}
                         </Link>;
                       </h2>;
-                      ;
                       <p className="text-gray-600 mb-4 line-clamp-3">;
                         {post.excerpt}
                       </p>;
-                      ;
                       <div className="flex items-center justify-between">;
                         <div className="flex items-center space-x-3">;
                           <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">;
@@ -525,7 +512,6 @@ export default function BlogPage() {;
                             </div>;
                           </div>;
                         </div>;
-                        ;
                         <Link;
                           href={`/blog/${post.slug}`}
                           className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors">;
@@ -580,8 +566,8 @@ export default function BlogPage() {;
         </section>;
       </div>;
     </MainLayout>;
-  );,
+  );
 }
-;
+
 export default BlogPage;
 }})))

@@ -1,19 +1,19 @@
   it(displays expected content", () => {;
     render(<EnhancedPerformanceOptimizer  />)";
-import { render, screen } from &apos;@testing - library/react",;
+import { render, screen } from &apos;@testing - library/react",
 import EnhancedPerformanceOptimizer from &apos;./EnhancedPerformanceOptimizer;
 describe(&apos;EnhancedPerformanceOptimizer&apos, () => {;
   it(&apos;renders without crashing&apos, () => {;
-    render();,
+    render();
 }
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
+    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});
 }
   it(&apos;displays expected content&apos, () => {;
-    render();,
+    render();
 }
     // comment;
     render(<EnhancedPerformanceOptimizer / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();
 })";
-";,
+";
 }}))

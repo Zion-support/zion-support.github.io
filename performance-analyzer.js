@@ -7,5 +7,5 @@ function $1() {;
   console.log("Bundle analysis would go here");
     return true}
   return false}
-;
+
 analyzeBundle()

@@ -1,157 +1,157 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
 
 class EnhancedAppImprovementAutomation {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.improvements = [];
-    this.errors = [];
-    this.startTime = Date.now();
+    this.projectRoot = process.cwd()
+    this.improvements = []
+    this.errors = []
+    this.startTime = Date.now()
   }
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
+    const timestamp = new Date().toISOString()
+    console.log(`[${timestamp}] [${level}] ${message}`)
   }
 
   async runCommand(command, description) {
     try {
-      this.log(`Running: ${description}`);
+      this.log(`Running: ${description}`)
       const result = execSync(command, { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 300000
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return result.toString();
+      })
+      this.log(`✅ ${description} completed successfully`)
+      return result.toString()
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      this.errors.push({ command, description, error: error.message });
+      this.log(`❌ ${description} failed: ${error.message}`, 'ERROR')
+      this.errors.push({ command, description, error: error.message })
       return null;
     }
   }
 
   async optimizeImages() {
-    this.log('🖼️ Optimizing images...');
+    this.log('🖼️ Optimizing images...')
     
     try {
       // Check if sharp is available for image optimization
-      const sharpAvailable = await this.runCommand('npm list sharp', 'Check Sharp availability');
+      const sharpAvailable = await this.runCommand('npm list sharp', 'Check Sharp availability')
       
       if (!sharpAvailable) {
-        await this.runCommand('npm install sharp --save', 'Install Sharp for image optimization');
+        await this.runCommand('npm install sharp --save', 'Install Sharp for image optimization')
       }
       
       // Create image optimization script
       const imageOptimizerScript = `
-const sharp = require('sharp');
-const fs = require('fs');
-const path = require('path');
+const sharp = require('sharp')
+const fs = require('fs')
+const path = require('path')
 
 async function optimizeImages() {
-  const publicDir = path.join(process.cwd(), 'public');
-  const images = [];
+  const publicDir = path.join(process.cwd(), 'public')
+  const images = []
   
   function findImages(dir) {
-    const files = fs.readdirSync(dir);
+    const files = fs.readdirSync(dir)
     files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
+      const filePath = path.join(dir, file)
+      const stat = fs.statSync(filePath)
       if (stat.isDirectory()) {
-        findImages(filePath);
+        findImages(filePath)
       } else if (/\.(jpg|jpeg|png|webp)$/i.test(file)) {
-        images.push(filePath);
+        images.push(filePath)
       }
-    });
+    })
   }
   
-  findImages(publicDir);
+  findImages(publicDir)
   
   for (const imagePath of images) {
     try {
-      const outputPath = imagePath.replace(/\\.(jpg|jpeg|png)$/i, '.webp');
+      const outputPath = imagePath.replace(/\\.(jpg|jpeg|png)$/i, '.webp')
       await sharp(imagePath)
         .webp({ quality: 80 })
-        .toFile(outputPath);
-      console.log(\`Optimized: \${imagePath} -> \${outputPath}\`);
+        .toFile(outputPath)
+      console.log(\`Optimized: \${imagePath} -> \${outputPath}\`)
     } catch (error) {
-      console.error(\`Failed to optimize \${imagePath}:\`, error.message);
+      console.error(\`Failed to optimize \${imagePath}:\`, error.message)
     }
   }
 }
 
-optimizeImages().catch(console.error);
+optimizeImages().catch(console.error)
       `;
       
-      fs.writeFileSync(path.join(this.projectRoot, 'scripts', 'optimize-images.cjs'), imageOptimizerScript);
-      await this.runCommand('node scripts/optimize-images.cjs', 'Image Optimization');
+      fs.writeFileSync(path.join(this.projectRoot, 'scripts', 'optimize-images.cjs'), imageOptimizerScript)
+      await this.runCommand('node scripts/optimize-images.cjs', 'Image Optimization')
       
-      this.improvements.push('Image optimization completed');
-      this.log('✅ Image optimization completed');
+      this.improvements.push('Image optimization completed')
+      this.log('✅ Image optimization completed')
     } catch (error) {
-      this.log(`❌ Image optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Image optimization failed: ${error.message}`, 'ERROR')
     }
   }
 
   async optimizeBundle() {
-    this.log('📦 Optimizing bundle size...');
+    this.log('📦 Optimizing bundle size...')
     
     try {
       // Analyze bundle
-      await this.runCommand('npm run build', 'Build for analysis');
+      await this.runCommand('npm run build', 'Build for analysis')
       
       // Create bundle analyzer script
       const bundleAnalyzerScript = `
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { execSync } = require('child_process')
+const fs = require('fs')
+const path = require('path')
 
 async function analyzeBundle() {
   try {
     // Install bundle analyzer if not present
     try {
-      execSync('npm list @next/bundle-analyzer', { stdio: 'pipe' });
+      execSync('npm list @next/bundle-analyzer', { stdio: 'pipe' })
     } catch {
-      execSync('npm install @next/bundle-analyzer --save-dev', { stdio: 'pipe' });
+      execSync('npm install @next/bundle-analyzer --save-dev', { stdio: 'pipe' })
     }
     
     // Run bundle analysis
-    execSync('ANALYZE=true npm run build', { stdio: 'inherit' });
+    execSync('ANALYZE=true npm run build', { stdio: 'inherit' })
     
-    console.log('Bundle analysis completed. Check .next/analyze/ for results.');
+    console.log('Bundle analysis completed. Check .next/analyze/ for results.')
   } catch (error) {
-    console.error('Bundle analysis failed:', error.message);
+    console.error('Bundle analysis failed:', error.message)
   }
 }
 
-analyzeBundle();
+analyzeBundle()
       `;
       
-      fs.writeFileSync(path.join(this.projectRoot, 'scripts', 'analyze-bundle.cjs'), bundleAnalyzerScript);
-      await this.runCommand('node scripts/analyze-bundle.cjs', 'Bundle Analysis');
+      fs.writeFileSync(path.join(this.projectRoot, 'scripts', 'analyze-bundle.cjs'), bundleAnalyzerScript)
+      await this.runCommand('node scripts/analyze-bundle.cjs', 'Bundle Analysis')
       
-      this.improvements.push('Bundle analysis completed');
-      this.log('✅ Bundle optimization completed');
+      this.improvements.push('Bundle analysis completed')
+      this.log('✅ Bundle optimization completed')
     } catch (error) {
-      this.log(`❌ Bundle optimization failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Bundle optimization failed: ${error.message}`, 'ERROR')
     }
   }
 
   async improveSEO() {
-    this.log('🔍 Improving SEO...');
+    this.log('🔍 Improving SEO...')
     
     try {
       // Create SEO improvement script
       const seoScript = `
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 function improveSEO() {
-  const pagesDir = path.join(process.cwd(), 'pages');
-  const componentsDir = path.join(process.cwd(), 'components');
+  const pagesDir = path.join(process.cwd(), 'pages')
+  const componentsDir = path.join(process.cwd(), 'components')
   
   // Add meta tags to pages
   const metaTemplate = \`
@@ -174,7 +174,7 @@ export default function Page() {
       </Head>
       {/* Page content */}
     </>
-  );
+  )
 }
       \`;
       
@@ -207,7 +207,7 @@ export default function Page() {
   </url>
 </urlset>\`;
       
-      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent);
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemapContent)
       
       // Generate robots.txt
       const robotsContent = \`User-agent: *
@@ -215,35 +215,35 @@ Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml\`;
       
-      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
+      fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent)
       
-      console.log('SEO improvements completed');
+      console.log('SEO improvements completed')
     } catch (error) {
-      console.error('SEO improvement failed:', error.message);
+      console.error('SEO improvement failed:', error.message)
     }
 }
 
-improveSEO();
+improveSEO()
       `;
       
-      fs.writeFileSync(path.join(this.projectRoot, 'scripts', 'improve-seo.cjs'), seoScript);
-      await this.runCommand('node scripts/improve-seo.cjs', 'SEO Improvements');
+      fs.writeFileSync(path.join(this.projectRoot, 'scripts', 'improve-seo.cjs'), seoScript)
+      await this.runCommand('node scripts/improve-seo.cjs', 'SEO Improvements')
       
-      this.improvements.push('SEO improvements completed');
-      this.log('✅ SEO improvements completed');
+      this.improvements.push('SEO improvements completed')
+      this.log('✅ SEO improvements completed')
     } catch (error) {
-      this.log(`❌ SEO improvements failed: ${error.message}`, 'ERROR');
+      this.log(`❌ SEO improvements failed: ${error.message}`, 'ERROR')
     }
   }
 
   async improvePerformance() {
-    this.log('⚡ Improving performance...');
+    this.log('⚡ Improving performance...')
     
     try {
       // Create performance improvement script
       const performanceScript = `
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 function improvePerformance() {
   // Create next.config.js optimizations
@@ -274,7 +274,7 @@ const nextConfig = {
             chunks: 'all',
           },
         },
-      };
+      }
     }
     return config;
   },
@@ -303,37 +303,37 @@ const nextConfig = {
           },
         ],
       },
-    ];
+    ]
   },
-};
+}
 
 module.exports = nextConfig;\`;
       
-      fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
+      fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent)
       
-      console.log('Performance improvements completed');
+      console.log('Performance improvements completed')
     } catch (error) {
-      console.error('Performance improvement failed:', error.message);
+      console.error('Performance improvement failed:', error.message)
     }
 }
 
-improvePerformance();
+improvePerformance()
       `;
       
-      fs.writeFileSync(path.join(this.projectRoot, 'scripts', 'improve-performance.cjs'), performanceScript);
-      await this.runCommand('node scripts/improve-performance.cjs', 'Performance Improvements');
+      fs.writeFileSync(path.join(this.projectRoot, 'scripts', 'improve-performance.cjs'), performanceScript)
+      await this.runCommand('node scripts/improve-performance.cjs', 'Performance Improvements')
       
-      this.improvements.push('Performance improvements completed');
-      this.log('✅ Performance improvements completed');
+      this.improvements.push('Performance improvements completed')
+      this.log('✅ Performance improvements completed')
     } catch (error) {
-      this.log(`❌ Performance improvements failed: ${error.message}`, 'ERROR');
+      this.log(`❌ Performance improvements failed: ${error.message}`, 'ERROR')
     }
   }
 
   async generateReport() {
-    this.log('📊 Generating improvement report...');
+    this.log('📊 Generating improvement report...')
     
-    const endTime = Date.now();
+    const endTime = Date.now()
     const duration = endTime - this.startTime;
     
     const report = {
@@ -346,60 +346,60 @@ improvePerformance();
         totalErrors: this.errors.length,
         successRate: this.improvements.length / (this.improvements.length + this.errors.length) * 100
       }
-    };
+    }
 
     // Save report
-    const reportPath = path.join(this.projectRoot, 'automation', 'logs', 'app-improvement-report.json');
-    fs.mkdirSync(path.dirname(reportPath), { recursive: true });
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    const reportPath = path.join(this.projectRoot, 'automation', 'logs', 'app-improvement-report.json')
+    fs.mkdirSync(path.dirname(reportPath), { recursive: true })
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
     
-    this.log(`📄 Report saved to: ${reportPath}`);
+    this.log(`📄 Report saved to: ${reportPath}`)
     return report;
   }
 
   async run() {
-    this.log('🚀 Starting Enhanced App Improvement Automation...');
+    this.log('🚀 Starting Enhanced App Improvement Automation...')
     
     try {
       // Step 1: Optimize images
-      await this.optimizeImages();
+      await this.optimizeImages()
       
       // Step 2: Optimize bundle
-      await this.optimizeBundle();
+      await this.optimizeBundle()
       
       // Step 3: Improve SEO
-      await this.improveSEO();
+      await this.improveSEO()
       
       // Step 4: Improve performance
-      await this.improvePerformance();
+      await this.improvePerformance()
       
       // Generate final report
-      const report = await this.generateReport();
+      const report = await this.generateReport()
       
-      this.log('🎉 Enhanced App Improvement Automation completed!');
-      this.log(`📊 Summary: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`);
+      this.log('🎉 Enhanced App Improvement Automation completed!')
+      this.log(`📊 Summary: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`)
       
       return report;
       
     } catch (error) {
-      this.log(`💥 Enhanced App Improvement Automation failed: ${error.message}`, 'ERROR');
-      await this.generateReport();
-      process.exit(1);
+      this.log(`💥 Enhanced App Improvement Automation failed: ${error.message}`, 'ERROR')
+      await this.generateReport()
+      process.exit(1)
     }
   }
 }
 
 // Run the automation if this script is executed directly
 if (require.main === module) {
-  const automation = new EnhancedAppImprovementAutomation();
+  const automation = new EnhancedAppImprovementAutomation()
   automation.run().then(report => {
-    console.log('\n📋 Final Report:');
-    console.log(JSON.stringify(report, null, 2));
-    process.exit(report.summary.totalErrors > 0 ? 1 : 0);
+    console.log('\n📋 Final Report:')
+    console.log(JSON.stringify(report, null, 2))
+    process.exit(report.summary.totalErrors > 0 ? 1 : 0)
   }).catch(error => {
-    console.error('💥 Automation failed:', error);
-    process.exit(1);
-  });
+    console.error('💥 Automation failed:', error)
+    process.exit(1)
+  })
 }
 
 module.exports = EnhancedAppImprovementAutomation;

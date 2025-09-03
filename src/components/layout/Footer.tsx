@@ -2,184 +2,178 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {;
 
-  Mail, ;
-  Phone, ;
-  MapPin, ;
-  Globe, ;
-  Linkedin, ;
-  Twitter, ;
-  Github,;
-  Facebook,;
-  Instagram,;
-  Zap,;
-  Brain,;
-  Server,;
-  Shield,;
-  Users,;
-  Building2,;
-  FileText,;
-  Rocket,;
-  Target,;
-  Atom,;
-  Network,;
-  Cloud,;
-  Lock,;
-  TrendingUp,;
-  Workflow,;
-  MessageCircle,;
-  Calendar,;
-  PenTool,;
-  Activity,;
-  Cpu,;
-  Wifi,;
-  Satellite,;
-  Handshake,;
-  BookOpen,;
-  Video,;
-  GraduationCap,;
-  Lightbulb,;
-  Star,;
-  HelpCircle,;
-  BarChart3,;
-  ShoppingCart,;
-  Heart,;
-  Factory,;
-  DollarSign,;
-  Briefcase,;
-  Award,;
-  ExternalLink,;
-  ArrowUp,;
-  Sparkles,;
-  CheckCircle,;
-  Monitor,;
-  Headphones,;
-  Truck,;
-  Search,;
-  Layers,;
-  Database,;
-  Home,;
-  Leaf;,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Linkedin,
+  Twitter,
+  Github,
+  Facebook,
+  Instagram,
+  Zap,
+  Brain,
+  Server,
+  Shield,
+  Users,
+  Building2,
+  FileText,
+  Rocket,
+  Target,
+  Atom,
+  Network,
+  Cloud,
+  Lock,
+  TrendingUp,
+  Workflow,
+  MessageCircle,
+  Calendar,
+  PenTool,
+  Activity,
+  Cpu,
+  Wifi,
+  Satellite,
+  Handshake,
+  BookOpen,
+  Video,
+  GraduationCap,
+  Lightbulb,
+  Star,
+  HelpCircle,
+  BarChart3,
+  ShoppingCart,
+  Heart,
+  Factory,
+  DollarSign,
+  Briefcase,
+  Award,
+  ExternalLink,
+  ArrowUp,
+  Sparkles,
+  CheckCircle,
+  Monitor,
+  Headphones,
+  Truck,
+  Search,
+  Layers,
+  Database,
+  Home,
+  Leaf;
 } from 'lucide-react';
-;
 export function Footer() {;
 
   const currentYear = new Date().getFullYear();
-;
   const footerSections = [;
     {;
 
-      title: "Pricing & Plans",;
-      icon: DollarSign,;
+      title: "Pricing & Plans",
+      icon: DollarSign,
       links: [;
-        { name: "Comprehensive Pricing 2025", href: "/comprehensive-pricing-guide-2025", icon: DollarSign },;
-        { name: "Pricing Overview", href: "/pricing", icon: BarChart3 },;
-        { name: "Get Custom Quote", href: "/contact", icon: MessageCircle },;
-      ];,
-},;
+        { name: "Comprehensive Pricing 2025", href: "/comprehensive-pricing-guide-2025", icon: DollarSign },
+        { name: "Pricing Overview", href: "/pricing", icon: BarChart3 },
+        { name: "Get Custom Quote", href: "/contact", icon: MessageCircle },
+      ];
+},
     {;
-      title: "AI & Automation Services",;
-      icon: Brain,;
+      title: "AI & Automation Services",
+      icon: Brain,
       links: [;
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },;
-        { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },;
-        { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },;
-        { name: "Enhanced Services 2025", href: "/enhanced-services-showcase-2025", icon: Star },;
-        { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-platform", icon: TrendingUp },;
-        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform", icon: Building2 },;
-        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow },;
-        { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform", icon: TrendingUp },;
-        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform", icon: Heart },;
-        { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },;
-        { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },;
-        { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: FileText },;
-        { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },;
-        { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Home },;
-        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },;
-        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", icon: Database },;
-        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", icon: Factory },;
-        { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },;
-        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },;
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
+        { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
+        { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
+        { name: "Enhanced Services 2025", href: "/enhanced-services-showcase-2025", icon: Star },
+        { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-platform", icon: TrendingUp },
+        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform", icon: Building2 },
+        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow },
+        { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform", icon: TrendingUp },
+        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform", icon: Heart },
+        { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
+        { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },
+        { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: FileText },
+        { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
+        { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Home },
+        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", icon: Database },
+        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", icon: Factory },
+        { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
-      ];,
-},;
+      ];
+},
     {;
 
-      title: "Quantum Computing",;
-      icon: Atom,;
+      title: "Quantum Computing",
+      icon: Atom,
       links: [;
-        { name: "Quantum AI Platform", href: "/services/quantum-ai-platform", icon: Brain },;
-        { name: "Quantum Trading Platform", href: "/services/quantum-ai-trading-platform", icon: TrendingUp },;
-        { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service", icon: Cloud },;
-        { name: "Quantum Machine Learning", href: "/services/quantum-machine-learning", icon: Cpu },;
+        { name: "Quantum AI Platform", href: "/services/quantum-ai-platform", icon: Brain },
+        { name: "Quantum Trading Platform", href: "/services/quantum-ai-trading-platform", icon: TrendingUp },
+        { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service", icon: Cloud },
+        { name: "Quantum Machine Learning", href: "/services/quantum-machine-learning", icon: Cpu },
         { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", icon: Network }
-      ];,
-},;
+      ];
+},
     {;
 
-      title: "IT Infrastructure",;
-      icon: Server,;
+      title: "IT Infrastructure",
+      icon: Server,
       links: [;
-        { name: "Cloud DevOps", href: "/services/cloud-devops", icon: Cloud },;
-        { name: "IT Infrastructure Management", href: "/services/it-infrastructure-management", icon: Server },;
-        { name: "Cybersecurity Solutions", href: "/services/cybersecurity", icon: Shield },;
-        { name: "Digital Transformation", href: "/services/digital-transformation", icon: Rocket },;
-        { name: "Green IT Solutions", href: "/services/green-it", icon: Leaf },;
+        { name: "Cloud DevOps", href: "/services/cloud-devops", icon: Cloud },
+        { name: "IT Infrastructure Management", href: "/services/it-infrastructure-management", icon: Server },
+        { name: "Cybersecurity Solutions", href: "/services/cybersecurity", icon: Shield },
+        { name: "Digital Transformation", href: "/services/digital-transformation", icon: Rocket },
+        { name: "Green IT Solutions", href: "/services/green-it", icon: Leaf },
         { name: "Space Technology", href: "/services/space-tech", icon: Satellite }
-      ];,
-},;
+      ];
+},
     {;
 
-      title: "Micro SAAS Solutions",;
-      icon: Building2,;
+      title: "Micro SAAS Solutions",
+      icon: Building2,
       links: [;
-        { name: "Micro CRM", href: "/services/micro-crm", icon: Users },;
-        { name: "Micro SAAS Platform", href: "/services/micro-saas-solutions", icon: Building2 },;
-        { name: "Micro SAAS Solutions Comprehensive", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },;
+        { name: "Micro CRM", href: "/services/micro-crm", icon: Users },
+        { name: "Micro SAAS Platform", href: "/services/micro-saas-solutions", icon: Building2 },
+        { name: "Micro SAAS Solutions Comprehensive", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },
         { name: "Micro SAAS Innovation Hub", href: "/micro-saas-innovation-hub-2029", icon: Sparkles }
-      ];,
+      ];
 }
   ];
-;
   const quickLinks = [;
-    { name: "About Us", href: "/about", icon: Building2 },;
-    { name: "Services", href: "/services", icon: Server },;
-    { name: "Pricing", href: "/pricing", icon: DollarSign },;
-    { name: "Contact", href: "/contact", icon: MessageCircle },;
-    { name: "Careers", href: "/careers", icon: Briefcase },;
-    { name: "Blog", href: "/blog", icon: FileText },;
-    { name: "Support", href: "/help-center", icon: HelpCircle },;
+    { name: "About Us", href: "/about", icon: Building2 },
+    { name: "Services", href: "/services", icon: Server },
+    { name: "Pricing", href: "/pricing", icon: DollarSign },
+    { name: "Contact", href: "/contact", icon: MessageCircle },
+    { name: "Careers", href: "/careers", icon: Briefcase },
+    { name: "Blog", href: "/blog", icon: FileText },
+    { name: "Support", href: "/help-center", icon: HelpCircle },
     { name: "Documentation", href: "/documentation", icon: BookOpen }
   ];
-;
   const contactInfo = [;
     {;
 
-      icon: Phone,;
-      text: "+1 302 464 0950",;
-      href: "tel:+13024640950";,
-},;
+      icon: Phone,
+      text: "+1 302 464 0950",
+      href: "tel:+13024640950";
+},
     {;
 
-      icon: Mail,;
-      text: "kleber@ziontechgroup.com",;
-      href: "mailto:kleber@ziontechgroup.com";,
-},;
+      icon: Mail,
+      text: "kleber@ziontechgroup.com",
+      href: "mailto:kleber@ziontechgroup.com";
+},
     {;
 
-      icon: MapPin,;
-      text: "364 E Main St STE 1008 Middletown DE 19709",;
-      href: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";,
+      icon: MapPin,
+      text: "364 E Main St STE 1008 Middletown DE 19709",
+      href: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";
 }
   ];
-;
   const socialLinks = [;
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github },;
-    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github },
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
   ];
-;
   return (;
     <footer className="bg-zion-slate-darker border-t border-zion-purple/20">;
       {/* Main Footer Content */}
@@ -316,7 +310,6 @@ export function Footer() {;
                 Terms of Service;
               </Link>;
             </div>;
-            ;
             <div className="flex items-center space-x-4">;
               <span className="text-sm text-gray-400">Powered by</span>;
               <div className="flex items-center space-x-2">;
@@ -336,5 +329,5 @@ export function Footer() {;
         <ArrowUp className="h-5 w-5" />;
       </button>;
     </footer>;
-  );,
+  );
 }

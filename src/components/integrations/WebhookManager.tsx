@@ -1,66 +1,57 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 export default function Page() {;
-,;
-    { value: "quote_received", label: "Quote Request Received" },;
-    { value: "milestone_approved", label: "Milestone Approved" },;
+    { value: "quote_received", label: "Quote Request Received" },
+    { value: "milestone_approved", label: "Milestone Approved" },
     { value: "talent_hired", label: "Talent Hired" }
   ];
-  ;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+  useEffect(() => {
+  // TODO: Add dependencies if needed;
 }, []);
-    fetchWebhooks();,
+    fetchWebhooks();
 }, [fetchWebhooks]); // Added fetchWebhooks;
-  ;
   const handleAddEvent = () => {;
     if(!newWebhook.selectedEvent) return;
-    ;
     if(newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {;
       toast.error("This event is already added");
-      return;,
+      return;
 }
-    ;
+
     setNewWebhook({;
-      ...newWebhook,;
-      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],;
-      selectedEvent: "" as WebhookEventType;,
-});,
+      ...newWebhook,
+      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
+      selectedEvent: "" as WebhookEventType;
+});
 };
-  ;
   const handleRemoveEvent = (event: WebhookEventType) => {;
     setNewWebhook({;
-      ...newWebhook,;
-      eventTypes: newWebhook.eventTypes.filter(e => e !== event);,
-});,
+      ...newWebhook,
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event);
+});
 };
-  ;
   const handleCreateWebhook = async () => {;
     if(!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {;
       toast.error("Please fill in all required fields");
-      return;,
+      return;
 }
-    ;
-    await createWebhook(newWebhook.name, ;
-      newWebhook.url, ;
-      newWebhook.eventTypes, ;
+
+    await createWebhook(newWebhook.name,
+      newWebhook.url,
+      newWebhook.eventTypes,
       newWebhook.secret || undefined;
     );
-    ;
     // Reset form;
     setNewWebhook({;
-      name: ",;
-      url: ",;
-      selectedEvent: "" as WebhookEventType,;
-      eventTypes: [],;
-      secret: ;,
-});,
+      name: ",
+      url: ",
+      selectedEvent: "" as WebhookEventType,
+      eventTypes: [],
+      secret: ;
+});
 };
-  ;
   const handleTestWebhook = async(webhookId: string, eventType: WebhookEventType) => {;
-    await testWebhook(webhookId, eventType);,
+    await testWebhook(webhookId, eventType);
 };
-  ;
   return (<div className="space-y-8">;
       <Card>;
         <CardHeader>;
@@ -79,7 +70,6 @@ export default function Page() {;
                 onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
               />;
             </div>;
-            ;
             <div className="space-y-2">;
               <Label htmlFor="webhook-url">URL</Label>;
               <Input ;
@@ -90,7 +80,6 @@ export default function Page() {;
               />;
             </div>;
           </div>;
-          ;
           <div className="space-y-2">;
             <Label>Events</Label>;
             <div className="flex flex-wrap gap-2 mb-2">;
@@ -124,7 +113,6 @@ export default function Page() {;
               </Button>;
             </div>;
           </div>;
-          ;
           <div className="space-y-2">;
             <Label htmlFor="webhook-secret">Secret(optional)</Label>;
             <Input ;
@@ -143,10 +131,8 @@ export default function Page() {;
           </Button>;
         </CardFooter>;
       </Card>;
-      ;
       <div>;
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>;
-        ;
         {loading ? (;
           <p>Loading webhooks...</p>;
         ) : error ? (;
@@ -209,7 +195,6 @@ export default function Page() {;
                   >;
                     <Trash className="h-4 w-4 mr-2" /> Delete;
                   </Button>;
-                  ;
                   <Select;
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
                   >;
@@ -230,7 +215,7 @@ export default function Page() {;
             ))}
           </div>;
         )}
-        ;
+
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
             <CardHeader>;
@@ -256,5 +241,5 @@ export default function Page() {;
         )}
       </div>;
     </div>;
-  );,
+  );
 }

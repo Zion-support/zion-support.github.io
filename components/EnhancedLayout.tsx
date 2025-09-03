@@ -1,38 +1,36 @@
 import Head from "next/head";
 import React, { ReactNode } from "react";
-interface EnhancedLayoutProps {;
-;
+interface EnhancedLayoutProps {
   children: ReactNode;
   title?: string;
   description?: string;
-  keywords?: string,;
-  ogImage?: string,;
-  canonical?: string,,;
-  noindex?: boolean,;
-  showPerformanceMetrics?: boolean,;
+  keywords?: string,
+  ogImage?: string,
+  canonical?: string,
+  noindex?: boolean,
+  showPerformanceMetrics?: boolean,
   showSEOAnalysis?: boolean}
-;
-export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,;
+
+export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({,
   children,";
   title = "Zion Tech Group - Leading Technology Solutions Provider",";
   description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",";
   keywords = "AI development, cloud architecture, digital transformation, technology solutions, machine learning, software development",";
-  ogImage = "https://ziontechgroup.com/og-image.jpg",;
-  canonical,;
-  noindex = false,;
-  showPerformanceMetrics = false,;
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  canonical,
+  noindex = false,
+  showPerformanceMetrics = false,
   showSEOAnalysis = false}) => {";
   const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || "https: //ziontechgroup.com",;
-;
+  const canonicalUrl = canonical || "https: //ziontechgroup.com",
 export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
   title = "Zion Tech Group - Leading Technology Solutions Provider",";
   description = "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",";
   keywords = "AI development, cloud architecture, digital transformation, technology solutions, machine learning, software development",";
   ogImage = "https:// comment;
-  canonical,;
-  noindex = false,;
-  showPerformanceMetrics = false,;
+  canonical,
+  noindex = false,
+  showPerformanceMetrics = false,
   showSEOAnalysis = false}) => {";
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group";
   const canonicalUrl = canonical || "https: // comment;
@@ -41,16 +39,15 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
     <>;
 <Head>;
         {/* comment */}
-;
+
         <title>{fullTitle}</title>;
         <meta name="description" content="{description}"  />;
         <meta name="keywords" content="{keywords}"  />";
         <meta name="viewport" content="width=device-width, initial-scale=1"  />;
         <meta name="robots" content="{noindex" ? "noindex,nofollow" : "index,follow"}       />;
-        ;
         {/* comment */}";
         {canonicalUrl && <link rel="canonical" href="{canonicalUrl}"  />}
-;
+
         {/* comment */}";
         <meta property="og:title" content="{fullTitle}"  />";
         <meta property="og:description" content="{description}"  />";
@@ -59,15 +56,13 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
         <meta property="og: type" content="website"  />";
         <meta property="og:site_name" content="Zion Tech Group"  />";
         <meta property="og:locale" content="en_US"  />;
-        ,;
         {/* comment */}";
-        <meta name="twitter: card" content="summary_large_image"  />",;
+        <meta name="twitter: card" content="summary_large_image"  />",
         <meta name="twitter:title" content="{fullTitle}"  />";
         <meta name="twitter:description" content="{description}"  />";
         <meta name="twitter:image" content="{ogImage}"  />";
         <meta name="twitter: site" content="@ziontechgroup"  />";
         <meta name="twitter:creator" content="@ziontechgroup"  />;
-        ,;
         {/* comment */}";
         <meta name="author" content="Zion Tech Group"  />";
         <meta name="publisher" content="Zion Tech Group"  />";
@@ -75,18 +70,15 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
         <meta name="language" content="en"  />";
         <meta name="revisit-after" content="7 days"  />";
         <meta name="rating" content="general"  />;
-        ;
         {/* comment */}";
         <meta name="geo.region" content="US-DE"  />";
         <meta name="geo.placename" content="Middletown"  />";
         <meta name="geo.position" content="39.4496;-75.7163"  />";
         <meta name = "ICBM" content="39.4496, -75.7163"  />;
-        ;
         {/* comment */}";
         <meta name="contact" content="kleber@ziontechgroup.com"  />";
         <meta name="phone" content="+1-302-464-0950"  />";
         <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709"  />;
-        ;
         {/* comment */}";
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"  />";
         <meta name="format-detection" content="telephone=no"  />";
@@ -95,32 +87,27 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
         <meta name="apple-mobile-web-app-capable" content="yes"  />";
         <meta name="apple-mobile-web-app-status-bar-style" content="default"  />";
         <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />;
-        ;
         {/* comment */}";
         <link rel="preconnect" href="https: // comment;
         <link rel="preconnect" href="https:// comment;
-        ,;
         {/* comment */}";
         <link rel="dns-prefetch" href="// comment;
-        ;
         {/* comment */}";
         <link rel="preload" ";
           href="/fonts/inter-var.woff2" ";
           as="font" ";
           type="font/woff2" ";
           crossOrigin="anonymous"  />;
-        ;
         {/* comment */}";
         <link rel="icon" href="/favicon.ico"  />";
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />";
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />";
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"  />";
         <link rel="manifest" href="/site.webmanifest"  />;
-        ;
         {/* comment */}";
         <script type="application/ld+json;
           dangerouslySetInnerHTML="{{";
-            __html: JSON.stringify({",;
+            __html: JSON.stringify({",
               "@context": "https:// comment;
               "@type": "Organization",";
               "name": "Zion Tech Group",";
@@ -133,13 +120,13 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
                 "addressLocality": "Middletown",";
                 "addressRegion": "DE",";
                 "postalCode": "19709",";
-                "addressCountry": "US";,
+                "addressCountry": "US";
 },";
               "contactPoint": {";
                 "@type": "ContactPoint",";
                 "telephone": "+1-302-464-0950",";
                 "contactType": "customer service",";
-                "email": "kleber@ziontechgroup.com";,
+                "email": "kleber@ziontechgroup.com";
 },";
               "sameAs": [";
                 "https:// comment;
@@ -149,29 +136,26 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
                 {";
                   "@type": "Service",";
                   "name": "AI Development",";
-                  "description": "Custom AI solutions and machine learning models";,
-},;
+                  "description": "Custom AI solutions and machine learning models";
+},
                 {";
                   "@type": "Service",";
                   "name": "Cloud Architecture",";
-                  "description": "Scalable cloud solutions and infrastructure design";,
+                  "description": "Scalable cloud solutions and infrastructure design";
 }>;
                 {";
                   "@type": "Service",";
                   "name": "Digital Transformation",";
-                  "description": "End-to-end digital transformation services";
-
-;
-              ];,
-})>;,
+                  "description": "End-to-end digital transformation services" ];
+})>;
 }}
-;
+
        />;
       </Head>;
       {/* comment */}";
       <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">;
         {children}
-;
+
       </div>;
     </>;
   )}

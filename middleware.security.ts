@@ -2,7 +2,7 @@ export function securityMiddleware(request: NextRequest) {;
   const response = NextResponse.next();
   // Apply security headers;
   securityHeaders.forEach(({ key, value }) => {;
-    response.headers.set(key, value);,;,
+    response.headers.set(key, value);,
 });
   // Apply Content Security Policy;
   const cspString = Object.entries(contentSecurityPolicy.directives);
@@ -14,9 +14,8 @@ export function securityMiddleware(request: NextRequest) {;
   response.headers.set("X-RateLimit-Remaining", "99");
   response.headers.set("X-RateLimit-Reset", new Date(Date.now() + 3600000).toISOString());
   return response}
-;
+
 export const config = {;
-  matcher: [;
-    "/((?!api|_next/static|_next/image|favicon.ico).*)",;
-  ],;,;,
+  matcher: [ "/((?!api|_next/static|_next/image|favicon.ico).*)",
+  ],,,
 }

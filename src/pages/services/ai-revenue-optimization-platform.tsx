@@ -2,58 +2,52 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { ;
-  Brain, TrendingUp, BarChart3, Target, Zap, Shield, ;
-  Users, Globe, Smartphone, Database, Cloud, Lock,;
-  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin,;
-  DollarSign, PieChart, LineChart, Activity, Clock,;
-  Award, Rocket, Lightbulb, Settings, Monitor;,
+  Brain, TrendingUp, BarChart3, Target, Zap, Shield,
+  Users, Globe, Smartphone, Database, Cloud, Lock,
+  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin,
+  DollarSign, PieChart, LineChart, Activity, Clock,
+  Award, Rocket, Lightbulb, Settings, Monitor;
 } from "lucide-react";
 
 const AIRevenueOptimizationPlatform = () => {;
-  const features = [;
-    "AI-Powered Revenue Forecasting",;
-    "Dynamic Pricing Optimization", ;
-    "Customer Lifetime Value Analysis",;
-    "Revenue Leakage Detection",;
-    "Automated A/B Testing",;
-    "Real-time Performance Analytics",;
-    "Multi-channel Revenue Tracking",;
-    "Predictive Revenue Modeling";
-  ];
+  const features = [ "AI-Powered Revenue Forecasting",
+    "Dynamic Pricing Optimization",
+    "Customer Lifetime Value Analysis",
+    "Revenue Leakage Detection",
+    "Automated A/B Testing",
+    "Real-time Performance Analytics",
+    "Multi-channel Revenue Tracking",
+    "Predictive Revenue Modeling" ];
 
-  const benefits = [;
-    "Increase revenue by 25-40% within 90 days",;
-    "Reduce revenue leakage by 60%",;
-    "Optimize pricing strategies automatically",;
-    "Improve customer retention by 35%",;
-    "Enhance cross-selling opportunities",;
-    "Minimize revenue forecasting errors by 80%";
-  ];
+  const benefits = [ "Increase revenue by 25-40% within 90 days",
+    "Reduce revenue leakage by 60%",
+    "Optimize pricing strategies automatically",
+    "Improve customer retention by 35%",
+    "Enhance cross-selling opportunities",
+    "Minimize revenue forecasting errors by 80%" ];
 
-  const useCases = [;
-    "E-commerce Revenue Optimization",;
-    "SaaS Subscription Management",;
-    "Retail Pricing Strategy",;
-    "Financial Services Revenue Growth",;
-    "Healthcare Revenue Cycle Management",;
-    "Manufacturing Revenue Analytics";
-  ];
+  const useCases = [ "E-commerce Revenue Optimization",
+    "SaaS Subscription Management",
+    "Retail Pricing Strategy",
+    "Financial Services Revenue Growth",
+    "Healthcare Revenue Cycle Management",
+    "Manufacturing Revenue Analytics" ];
 
   const pricing = [;
     {;
-      name: "Starter",;
-      price: "$2,999/month",;
-      details: ["Up to $1M ARR", "Basic AI models", "Standard analytics", "Email support", "99.5% uptime SLA"];,
-},;
+      name: "Starter",
+      price: "$2,999/month",
+      details: ["Up to $1M ARR", "Basic AI models", "Standard analytics", "Email support", "99.5% uptime SLA"];
+},
     {;
-      name: "Professional", ;
-      price: "$4,999/month",;
-      details: ["Up to $10M ARR", "Advanced AI models", "Custom analytics", "Priority support", "99.9% uptime SLA"];,
-},;
+      name: "Professional",
+      price: "$4,999/month",
+      details: ["Up to $10M ARR", "Advanced AI models", "Custom analytics", "Priority support", "99.9% uptime SLA"];
+},
     {;
-      name: "Enterprise",;
-      price: "$9,999/month", ;
-      details: ["Unlimited ARR", "Custom AI models", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"];,
+      name: "Enterprise",
+      price: "$9,999/month",
+      details: ["Unlimited ARR", "Custom AI models", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"];
 }
   ];
 
@@ -64,7 +58,6 @@ const AIRevenueOptimizationPlatform = () => {;
         <meta name="description" content="Revolutionary AI-powered revenue optimization platform that increases revenue by 25-40% through intelligent pricing, forecasting, and customer analytics." />;
         <meta name="keywords" content="AI revenue optimization, dynamic pricing, revenue forecasting, customer analytics, revenue growth" />;
       </Head>;
-      ;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-600 py-20 text-center">;
@@ -96,7 +89,6 @@ const AIRevenueOptimizationPlatform = () => {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Revenue Intelligence Features</h2>;
             <p className="text-gray-600 text-lg">Leverage cutting-edge AI to optimize every aspect of your revenue strategy</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {features.map((feature, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">;
@@ -117,7 +109,6 @@ const AIRevenueOptimizationPlatform = () => {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Revenue Growth Results</h2>;
               <p className="text-gray-600 text-lg">Join 500+ companies that have transformed their revenue with our AI platform</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>;
@@ -130,7 +121,6 @@ const AIRevenueOptimizationPlatform = () => {;
                   ))}
                 </ul>;
               </div>;
-              ;
               <div className="bg-white rounded-xl p-6 shadow-lg">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Use Cases</h3>;
                 <ul className="space-y-3">;
@@ -152,7 +142,6 @@ const AIRevenueOptimizationPlatform = () => {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Competitive Pricing Plans</h2>;
             <p className="text-gray-600 text-lg">Choose the plan that fits your revenue optimization needs</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-3 gap-8">;
             {pricing.map((tier, index) => (;
               <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Professional' ? 'border-2 border-purple-500 bg-purple-50' : 'border border-gray-200 bg-white'}`}>;
@@ -174,7 +163,7 @@ const AIRevenueOptimizationPlatform = () => {;
                 <Link href="#contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${;
                   tier.name === 'Professional' ;
                     ? 'bg-purple-600 text-white hover:bg-purple-700' ;
-                    : 'bg-gray-900 text-white hover:bg-gray-800';,
+                    : 'bg-gray-900 text-white hover:bg-gray-800';
 }`}>;
                   Get Started;
                 </Link>;
@@ -190,7 +179,6 @@ const AIRevenueOptimizationPlatform = () => {;
               <h2 className="text-3xl font-bold mb-4">Ready to Optimize Your Revenue?</h2>;
               <p className="text-gray-300 text-lg">Contact our revenue optimization experts today</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>;
@@ -209,7 +197,6 @@ const AIRevenueOptimizationPlatform = () => {;
                   </div>;
                 </div>;
               </div>;
-              ;
               <div className="bg-white rounded-xl p-6">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Request a Demo</h3>;
                 <p className="text-gray-600 mb-4">See how our AI platform can transform your revenue strategy</p>;
@@ -222,7 +209,7 @@ const AIRevenueOptimizationPlatform = () => {;
         </section>;
       </div>;
     </>;
-  );,
+  );
 }
-;
+
 export default AIRevenueOptimizationPlatform

@@ -1,90 +1,81 @@
 import React, { useState } from 'react';
 import { ;
-  Mail, ;
-  Phone, ;
-  MapPin, ;
-  Send, ;
-  CheckCircle, ;
-  AlertCircle ;,
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
+  AlertCircle ;
 } from 'lucide-react';
-;
 export const ContactForm: React.FC = () => {;
   const [formData, setFormData] = useState({;
-    firstName: '',;
-    lastName: '',;
-    email: '',;
-    company: '',;
-    phone: '',;
-    service: '',;
-    message: '',;
-    budget: '',;
-    timeline: '';,
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '',
+    budget: '',
+    timeline: '';
 });
-;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-;
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
     setFormData(prev => ({;
-      ...prev,;
-      [name]: value;,
-}));,
+      ...prev,
+      [name]: value;
+}));
 };
-;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
-    ;
     try {;
       // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({;
-        firstName: '',;
-        lastName: '',;
-        email: '',;
-        company: '',;
-        phone: '',;
-        service: '',;
-        message: '',;
-        budget: '',;
-        timeline: '';,
-});,
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: '',
+        budget: '',
+        timeline: '';
+});
 } catch (error) {;
-      setSubmitStatus('error');,
+      setSubmitStatus('error');
 } finally {;
-      setIsSubmitting(false);,
+      setIsSubmitting(false);
 }
   };
-;
   const services = [;
-    'AI Solutions',;
-    'Quantum Computing',;
-    'Cybersecurity',;
-    'Digital Transformation',;
-    'Cloud Services',;
-    'DevOps',;
-    'Machine Learning',;
+    'AI Solutions',
+    'Quantum Computing',
+    'Cybersecurity',
+    'Digital Transformation',
+    'Cloud Services',
+    'DevOps',
+    'Machine Learning',
     'Space Technology';
   ];
-;
   const budgets = [;
-    'Under $10,000',;
-    '$10,000 - $50,000',;
-    '$50,000 - $100,000',;
-    '$100,000 - $500,000',;
+    'Under $10,000',
+    '$10,000 - $50,000',
+    '$50,000 - $100,000',
+    '$100,000 - $500,000',
     'Over $500,000';
   ];
-;
   const timelines = [;
-    'ASAP',;
-    '1-3 months',;
-    '3-6 months',;
-    '6-12 months',;
+    'ASAP',
+    '1-3 months',
+    '3-6 months',
+    '6-12 months',
     '12+ months';
   ];
-;
   if (submitStatus === 'success') {;
     return (;
       <div className="text-center py-12">;
@@ -101,9 +92,9 @@ export const ContactForm: React.FC = () => {;
           Send Another Message;
         </button>;
       </div>;
-    );,
+    );
 }
-;
+
   return (;
     <div className="bg-white/10 backdrop-blur-md border border-purple-200 rounded-2xl p-8">;
       <div className="text-center mb-8">;
@@ -309,7 +300,7 @@ export const ContactForm: React.FC = () => {;
               <span>There was an error sending your message. Please try again.</span>;
             </div>;
           )}
-;
+
           <button;
             type="submit";
             disabled={isSubmitting}
@@ -329,7 +320,6 @@ export const ContactForm: React.FC = () => {;
         </form>;
       </div>;
     </div>;
-  );,
+  );
 };
-;
 export default ContactForm;

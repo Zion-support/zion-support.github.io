@@ -45,6 +45,6 @@ const ZionCuttingEdgeServices2031 = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default ZionCuttingEdgeServices2031;

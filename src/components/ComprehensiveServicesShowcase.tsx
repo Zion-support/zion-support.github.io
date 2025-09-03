@@ -1,26 +1,21 @@
 import {  import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
-;
 export default function Page() {;
 const ComprehensiveServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');  // Combine all services;
-  const allServices: Service[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,;
+  const allServices: Service[] = [...EXPANDED_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025;
   ];
   // Get unique categories';
-  ;
     return cats}, [allServices]) ;
   // Get unique innovation levels;
 
     return levels}, [allServices]);  // Filter services;
-  ;
     return allServices.filter(service => {;
-      ;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  ;
       case 'AI & Customer Experience':;
       case 'AI & Supply Chain':;
       case 'AI & Legal Tech':;
@@ -56,7 +51,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       case 'Autonomous Vehicles & Fleet Management':";
         return <Rocket className="h-6 w-6"  />;
       default:";
-        return <Star className="h-6 w-6"  />};,
+        return <Star className="h-6 w-6"  />};
 };
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}  };
   return (";
@@ -69,7 +64,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               Innovative Technology Solutions;
             </h1>";
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">;
-              Discover our comprehensive portfolio of cutting-edge micro SAAS services,;
+              Discover our comprehensive portfolio of cutting-edge micro SAAS services,
               AI solutions, and emerging technology platforms designed to transform your business.</p>";
             <div className="flex flex-wrap justify-center gap-4">;
               <Link";
@@ -170,18 +165,18 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                 key={service.id}
                 initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                 animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition = {;
 
-  { duration: 0.5,;
-  delay: index * 0.1;,
+  { duration: 0.5,
+  delay: index * 0.1;
 }}";
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100";
 

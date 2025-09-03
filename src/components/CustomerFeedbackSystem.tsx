@@ -1,166 +1,159 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
 export default function Page() {;
 > {;
 
   showStats?: boolean;
   showFilters?: boolean;
   maxFeedback?: number}
-;
-export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({;
 
-showStats:  true,;
-  showFilters = true,;
+export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
+
+showStats:  true,
+  showFilters = true,
   maxFeedback = 10}) => {;
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
   const [stats, setStats] = useState<FeedbackStats>({;
 
-    totalFeedback: 0,;
-    averageRating: 0,;
-    positivePercentage: 0,;
-    responseRate: 0,;
+    totalFeedback: 0,
+    averageRating: 0,
+    positivePercentage: 0,
+    responseRate: 0,
     topCategories[]});
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedRating, setSelectedRating] = useState<any>(0);  const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({;
 
-    rating: 0,;
-    comment: '',;
-    category: 'overall' as Feedback['category'];,
+    rating: 0,
+    comment: '',
+    category: 'overall' as Feedback['category'];
 });
-;
   // Sample feedback data;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     const sampleFeedback: Feedback[] = [{;
 
-        id: '1',;
-        customerName: 'Sarah Johnson',;
-        rating: 5,;
-        comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.',;
-        category: 'service',;
-        sentiment: 'positive',;
-        date: '2024-01-15',;
-        helpful: 24,;
-        unhelpful: 1,;
-        tags['AI',Consulting',Machine Learning'],;
-        verified: true;,
-},;
+        id: '1',
+        customerName: 'Sarah Johnson',
+        rating: 5,
+        comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.',
+        category: 'service',
+        sentiment: 'positive',
+        date: '2024-01-15',
+        helpful: 24,
+        unhelpful: 1,
+        tags['AI',Consulting',Machine Learning'],
+        verified: true;
+},
       {;
 
-        id: '2',;
-        customerName: 'Michael Chen',;
-        rating: 4,;
-        comment: 'Great cloud migration support.The team was professional and helped us transition smoothly to the cloud.Minor delays but overall excellent experience.',;
-        category: 'support',;
-        sentiment: 'positive',;
-        date: '2024-01-12',;
-        helpful: 18,;
-        unhelpful: 2,;
-        tags['Cloud',Migration',Support'],;
-        verified: true;,
-},;
+        id: '2',
+        customerName: 'Michael Chen',
+        rating: 4,
+        comment: 'Great cloud migration support.The team was professional and helped us transition smoothly to the cloud.Minor delays but overall excellent experience.',
+        category: 'support',
+        sentiment: 'positive',
+        date: '2024-01-12',
+        helpful: 18,
+        unhelpful: 2,
+        tags['Cloud',Migration',Support'],
+        verified: true;
+},
       {;
 
-        id: '3',;
-        customerName: 'Emily Rodriguez',;
-        rating: 5,;
-        comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure.ROI was achieved within 6 months.',;
-        category: 'product',;
-        sentiment: 'positive',;
-        date: '2024-01-10',;
-        helpful: 31,;
-        unhelpful: 0,;
-        tags['Digital Transformation',Infrastructure',ROI'],;
-        verified: true;,
-},;
+        id: '3',
+        customerName: 'Emily Rodriguez',
+        rating: 5,
+        comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure.ROI was achieved within 6 months.',
+        category: 'product',
+        sentiment: 'positive',
+        date: '2024-01-10',
+        helpful: 31,
+        unhelpful: 0,
+        tags['Digital Transformation',Infrastructure',ROI'],
+        verified: true;
+},
       {;
 
-        id: '4',;
-        customerName: 'David Kim',;
-        rating: 3,;
-        comment: 'Good security services but communication could be improved.The technical work was solid but project updates were infrequent.',;
-        category: 'service',;
-        sentiment: 'neutral',;
-        date: '2024-01-08',;
-        helpful: 12,;
-        unhelpful: 5,;
-        tags['Security',Communication',Project Management'],;
-        verified: true;,
-},;
+        id: '4',
+        customerName: 'David Kim',
+        rating: 3,
+        comment: 'Good security services but communication could be improved.The technical work was solid but project updates were infrequent.',
+        category: 'service',
+        sentiment: 'neutral',
+        date: '2024-01-08',
+        helpful: 12,
+        unhelpful: 5,
+        tags['Security',Communication',Project Management'],
+        verified: true;
+},
       {;
 
-        id: '5',;
-        customerName: 'Lisa Thompson',;
-        rating: 5,;
-        comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%.Highly recommend their services.',;
-        category: 'overall',;
-        sentiment: 'positive',;
-        date: '2024-01-05',;
-        helpful: 28,;
-        unhelpful: 1,;
-        tags['AI',Efficiency',Implementation'],;
+        id: '5',
+        customerName: 'Lisa Thompson',
+        rating: 5,
+        comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%.Highly recommend their services.',
+        category: 'overall',
+        sentiment: 'positive',
+        date: '2024-01-05',
+        helpful: 28,
+        unhelpful: 1,
+        tags['AI',Efficiency',Implementation'],
         verified: true;
 
     ];
-;
     setFeedback(sampleFeedback) ;
     setFilteredFeedback(sampleFeedback) }, []) ;
-;
   // Calculate stats;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     if(feedback.length > 0) {;
 
       const responseRate = 95; // Simulated response rate;
 
       const categoryCounts = feedback.reduce((acc, f) => {;        acc[f.category] = (acc[f.category] || 0) + 1;
         return acc}, {} as Record < string, any>) ;
-;
-          count,;
+          count,
           percentage: (count / totalFeedback) * 100}) ) ;
         .sort((a, b) => b.count - a.count) ;
         .slice(0, 4) ;
       setStats({;
 
-        totalFeedback,;
-        averageRating,;
-        positivePercentage,;
-        responseRate,;
-        topCategories;,
+        totalFeedback,
+        averageRating,
+        positivePercentage,
+        responseRate,
+        topCategories;
 }) }
   }, [feedback]) ;
-;
   // Filter feedback;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     let filtered = feedback;
-;
     if(selectedCategory !== 'all') {;
 
       filtered = filtered.filter(f => f.category === selectedCategory)}
-;
+
     if(selectedRating > 0) {;
 
       filtered = filtered.filter(f => f.rating === selectedRating)}
-;
+
     if(searchQuery) {;
 
       filtered = filtered.filter(f =>;
@@ -173,58 +166,46 @@ showStats:  true,;
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       )}
-;
+
     setFilteredFeedback(filtered.slice (0, maxFeedback) ) }, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]) ;
-;
   // Handle feedback submission;
-  ;
     if(newFeedback.rating === 0 || !newFeedback.comment.trim () ) return;
     const feedback: Feedback = {;
 
-  id: Date.now().toString(),;
-      customerName: 'Anonymous Customer',;
-      rating: newFeedback.rating,;
-      comment: newFeedback.comment,;
-      category: newFeedback.category,;
-      sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',;
-      date: new Date().toISOString().split('T')[0],;
-      helpful: 0,;
-      unhelpful: 0,;
-      tags: [],;
-  ;
-  ;
-  verified: false;,
+  id: Date.now().toString(),
+      customerName: 'Anonymous Customer',
+      rating: newFeedback.rating,
+      comment: newFeedback.comment,
+      category: newFeedback.category,
+      sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',
+      date: new Date().toISOString().split('T')[0],
+      helpful: 0,
+      unhelpful: 0,
+      tags: [],
+
+  verified: false;
 };
-;
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
-;
   // Handle helpful/unhelpful votes';
-  ;
         return {;
-          ...f,;
-          helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,;
+          ...f,
+          helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,
           unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
-;
       return f}) ) };
-;
   // Get sentiment color;
-  ;
     switch(sentiment) {;
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
       default: return 'text-yellow-400 bg-yellow-400/20'}  };
-;
   // Get category color;
-  ;
-  ;
-  ;
+
 ';
   'service': 'text-blue-400 bg-blue-400/20',';
       'product': 'text-green-400 bg-green-400/20',';
-      'support': 'text-purple-400 bg-purple-400/20',;  ;
+      'support': 'text-purple-400 bg-purple-400/20',
   ;';
-  'overall': 'text-zion-cyan bg-zion-cyan/20';,
+  'overall': 'text-zion-cyan bg-zion-cyan/20';
 };
     return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
   return ();
@@ -241,13 +222,13 @@ showStats:  true,;
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -258,13 +239,13 @@ showStats:  true,;
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ delay: 0.1 }}";
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -274,23 +255,22 @@ showStats:  true,;
               <div className="flex">;
                 {[1, 2, 3, 4, 5].map((star) => (;
                   <Star key={star}
-                    className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;,
+                    className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
 }`}
                    />) ) }              </div>;
             </div>";
             <div className="text-zinc-400">Average Rating</div>;
           </motion.div>;
-;
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ delay: 0.2 }}";
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -298,17 +278,16 @@ showStats:  true,;
             <div className="text-3xl font-bold text-green-400 mb-2">{stats.positivePercentage.toFixed(1)}%</div>";
             <div className="text-zinc-400">Positive Feedback</div>;
           </motion.div>;
-;
           <motion.div;
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ delay: 0.3 }}";
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -317,7 +296,7 @@ showStats:  true,;
             <div className="text-zinc-400">Response Rate</div>;
           </motion.div>;
         </div>) }
-;
+
       {/* Top Categories */}
       {showStats && (";
         <div className="mb-8">";
@@ -328,13 +307,13 @@ showStats:  true,;
                 key={category.category}
                 initial = {;
 
-  { opacity: 0,;
-  scale: 0.9;,
+  { opacity: 0,
+  scale: 0.9;
 }}
                 animate = {;
 
-  { opacity: 1,;
-  scale: 1;,
+  { opacity: 1,
+  scale: 1;
 }}
                 transition={{ delay: index * 0.1 }}";
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-center";
@@ -346,7 +325,7 @@ showStats:  true,;
             ))}
           </div>;
         </div>;) }
-;
+
       {/* Filters and Search */}
       {showFilters && (";
         <div className="flex flex-wrap items-center gap-4 mb-6">;
@@ -396,24 +375,24 @@ showStats:  true,;
             <MessageCircle className="w-4 h-4"  />;            Add Feedback;
           </button>;
         </div>) }
-;
+
       {/* Feedback Form */}
       <AnimatePresence>;
         {showFeedbackForm && (<motion.div;
             initial = {;
 
-  { height: 0,;
-  opacity: 0;,
+  { height: 0,
+  opacity: 0;
 }}
             animate = {;
 
-  { height: 'auto',;
-  opacity: 1;,
+  { height: 'auto',
+  opacity: 1;
 }}
             exit = {;
 
-  { height: 0,;
-  opacity: 0;,
+  { height: 0,
+  opacity: 0;
 }}
             transition={{ duration: 0.3 }}";
             className="mb-6 overflow-hidden";
@@ -427,13 +406,13 @@ showStats:  true,;
                   <label className="block text-sm font - medium text-zinc - 300 mb-2">Rating</label>;
                   <div  className="flex gap-2">;
                     {[1, 2, 3, 4, 5].map((star) => (<button     key={star}
-                        onClick = { () => setNewFeedback(prev => ({ ...prev,;
-  rating: star;,
+                        onClick = { () => setNewFeedback(prev => ({ ...prev,
+  rating: star;
 }))}";
                         className="p-2 hover:scale-110 transition-transform";
 
                         <Star`;
-                          className={`w-8 h-8 ${star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;,
+                          className={`w-8 h-8 ${star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
 }`}
                         />;
                       </button>;) ) }                  </div>;
@@ -444,8 +423,8 @@ showStats:  true,;
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>;
                   <select;
                     value={newFeedback.category}
-                    onChange = { (e) => setNewFeedback(prev => ({ ...prev,;
-  category: e.target.value as Feedback['category'];,
+                    onChange = { (e) => setNewFeedback(prev => ({ ...prev,
+  category: e.target.value as Feedback['category'];
 }))}";
                     className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan";
 ";
@@ -461,8 +440,8 @@ showStats:  true,;
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>;
                   <textarea;
                     value={newFeedback.comment}
-                    onChange = { (e) => setNewFeedback(prev => ({ ...prev,;
-  comment: e.target.value;,
+                    onChange = { (e) => setNewFeedback(prev => ({ ...prev,
+  comment: e.target.value;
 }))}";
                     placeholder="Share your experience with Zion Tech Group...";
                     rows={4}";
@@ -498,13 +477,13 @@ showStats:  true,;
             key={item.id}
             initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition={{ delay: index * 0.1 }}";
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300";
@@ -544,7 +523,7 @@ showStats:  true,;
                 <Star;
                   key={star}`;
                   className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${';
-                    star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;,
+                    star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`;
 }`}
                 />;
               ))}"              <span className="text-sm text-zinc-400 ml-2">{item.rating}/5</span>;
@@ -552,7 +531,6 @@ showStats:  true,;
 
             {/* Comment */}";
             <p className="text-zinc-300 mb-4 leading-relaxed">{item.comment}</p>;
-;
             {/* Tags */}
             {item.tags.length > 0 && (;";
               <div className="flex flex-wrap gap-2 mb-4">;
@@ -564,14 +542,14 @@ showStats:  true,;
                     {tag}
                   </span>) ) }
               </div>) }
-;
+
             {/* Actions */}";
             <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">";
               <div className="flex items-center gap-4">;
                 <button;
                   onClick = {;
 
-  () => handleVote(item.id,helpful');,
+  () => handleVote(item.id,helpful');
 }";
                   className="flex items-center gap-2 text-zinc-400 hover:text-green-400 transition-colors";
 ";
@@ -580,7 +558,7 @@ showStats:  true,;
                 <button;
                   onClick = {;
 
-  () => handleVote(item.id,unhelpful');,
+  () => handleVote(item.id,unhelpful');
 }";
                   className="flex items-center gap-2 text-zinc-400 hover:text-red-400 transition-colors";
 ";

@@ -1,69 +1,65 @@
 import { Link  } from 'react-router-dom';
-export default function Page() {;,
+export default function Page() {;
 }}}
 import { motion, AnimatePresence  } from 'framer-motion';
-;
 export default function Page() {;
-,;
     {;
-      id: 'ai-customer-support',;
-      name: 'AI Customer Support Automation',;
-      description: 'Automated customer service with intelligent chatbots, ticket routing, and sentiment analysis.',;
-      category: 'customer-support',;
-      features: ['Intelligent Chatbots', 'Automated Ticket Routing', 'Sentiment Analysis', '24/7 Support'],;
-      pricing: { starter: 79, professional: 199, enterprise: 399 },;
-      icon: Users,;
-      route: '/services/ai-customer-support-automation',;
-      status: 'active';,
-},;
+      id: 'ai-customer-support',
+      name: 'AI Customer Support Automation',
+      description: 'Automated customer service with intelligent chatbots, ticket routing, and sentiment analysis.',
+      category: 'customer-support',
+      features: ['Intelligent Chatbots', 'Automated Ticket Routing', 'Sentiment Analysis', '24/7 Support'],
+      pricing: { starter: 79, professional: 199, enterprise: 399 },
+      icon: Users,
+      route: '/services/ai-customer-support-automation',
+      status: 'active';
+},
     {;
-      id: 'ai-financial-analytics',;
-      name: 'AI Financial Analytics Platform',;
-      description: 'Advanced financial forecasting, risk assessment, and compliance monitoring powered by AI.',;
-      category: 'finance',;
-      features: ['Financial Forecasting', 'Risk Assessment', 'Compliance Monitoring', 'Real-time Analytics'],;
-      pricing: { starter: 149, professional: 399, enterprise: 799 },;
-      icon: TrendingUp,;
-      route: '/services/ai-financial-analytics',;
-      status: 'active';,
-},;
+      id: 'ai-financial-analytics',
+      name: 'AI Financial Analytics Platform',
+      description: 'Advanced financial forecasting, risk assessment, and compliance monitoring powered by AI.',
+      category: 'finance',
+      features: ['Financial Forecasting', 'Risk Assessment', 'Compliance Monitoring', 'Real-time Analytics'],
+      pricing: { starter: 149, professional: 399, enterprise: 799 },
+      icon: TrendingUp,
+      route: '/services/ai-financial-analytics',
+      status: 'active';
+},
     {;
-      id: 'ai-marketing-automation',;
-      name: 'AI Marketing Automation',;
-      description: 'Intelligent audience segmentation, content personalization, and multi-channel campaign orchestration.',;
-      category: 'marketing',;
-      features: ['Audience Segmentation', 'Content Personalization', 'Multi-channel Campaigns', 'ROI Optimization'],;
-      pricing: { starter: 129, professional: 349, enterprise: 699 },;
-      icon: Globe,;
-      route: '/services/ai-marketing-automation',;
-      status: 'active';,
-},;
+      id: 'ai-marketing-automation',
+      name: 'AI Marketing Automation',
+      description: 'Intelligent audience segmentation, content personalization, and multi-channel campaign orchestration.',
+      category: 'marketing',
+      features: ['Audience Segmentation', 'Content Personalization', 'Multi-channel Campaigns', 'ROI Optimization'],
+      pricing: { starter: 129, professional: 349, enterprise: 699 },
+      icon: Globe,
+      route: '/services/ai-marketing-automation',
+      status: 'active';
+},
     {;
-      id: 'ai-data-analytics',;
-      name: 'AI Data Analytics Engine',;
-      description: 'Advanced data processing, pattern recognition, and predictive modeling for business intelligence.',;
-      category: 'analytics',;
-      features: ['Data Processing', 'Pattern Recognition', 'Predictive Modeling', 'Business Intelligence'],;
-      pricing: { starter: 199, professional: 499, enterprise: 999 },;
-      icon: Database,;
-      route: '/services/ai-data-analytics',;
-      status: 'beta';,
-},;
+      id: 'ai-data-analytics',
+      name: 'AI Data Analytics Engine',
+      description: 'Advanced data processing, pattern recognition, and predictive modeling for business intelligence.',
+      category: 'analytics',
+      features: ['Data Processing', 'Pattern Recognition', 'Predictive Modeling', 'Business Intelligence'],
+      pricing: { starter: 199, professional: 499, enterprise: 999 },
+      icon: Database,
+      route: '/services/ai-data-analytics',
+      status: 'beta';
+},
     {;
-      id: 'ai-cybersecurity',;
-      name: 'AI Cybersecurity Suite',;
-      description: 'Intelligent threat detection, automated response, and proactive security monitoring.',;
-      category: 'security',;
-      features: ['Threat Detection', 'Automated Response', 'Security Monitoring', 'Incident Prevention'],;
-      pricing: { starter: 179, professional: 449, enterprise: 899 },;
-      icon: Shield,;
-      route: '/services/ai-cybersecurity',;
-      status: 'coming-soon';,
+      id: 'ai-cybersecurity',
+      name: 'AI Cybersecurity Suite',
+      description: 'Intelligent threat detection, automated response, and proactive security monitoring.',
+      category: 'security',
+      features: ['Threat Detection', 'Automated Response', 'Security Monitoring', 'Incident Prevention'],
+      pricing: { starter: 179, professional: 449, enterprise: 899 },
+      icon: Shield,
+      route: '/services/ai-cybersecurity',
+      status: 'coming-soon';
 }
   ];
-;
     return matchesCategory && matchesSearch});
-;
       case 'price':;
         return a.pricing.starter - b.pricing.starter;
       case 'popularity':;
@@ -71,7 +67,6 @@ export default function Page() {;
       default:;
         return 0}
   });
-;
       case 'beta':;
         return 'bg-yellow-100 text-yellow-800';
       case 'coming-soon':;
@@ -79,7 +74,6 @@ export default function Page() {;
       default:;
         return 'bg-gray-100 text-gray-800'}
   };
-;
       case 'beta':;
         return 'Beta';
       case 'coming-soon':;
@@ -87,18 +81,17 @@ export default function Page() {;
       default:;
         return 'Unknown'}
   };
-;
   return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 py-12">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         {/* Header */}
         <motion.div;
           initial = {;
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           className="text-center mb-16">;
           <h1 className="text-5xl md:text-7xl font - bold text-white mb-6">;
@@ -111,12 +104,12 @@ export default function Page() {;
         {/* Search and Filters */}
         <motion.div;
           initial = {;
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ delay: 0.2 }}
           className="mb-12">;
@@ -146,12 +139,12 @@ export default function Page() {;
         {/* Category Filters */}
         <motion.div;
           initial = {;
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ delay: 0.3 }}
           className="mb-12">;
@@ -160,7 +153,7 @@ export default function Page() {;
                 onClick={ () => setSelectedCategory(category.id) }
                 className={`flex items - center gap-2 px-6 py-3 rounded-full border transition - all duration - 300 ${selectedCategory === category.id;
                     ? 'bg-purple - 600 border-purple - 500 text-white';
-                    : 'bg-white / 10 border-white / 20 text-gray - 300 hover:bg-white / 20';,
+                    : 'bg-white / 10 border-white / 20 text-gray - 300 hover:bg-white / 20';
 }`}              >;
                 {categories.map(category => (;
                   <option key={category.id} value={category.id}>;
@@ -183,12 +176,12 @@ export default function Page() {;
         {/* Services Grid */}
         <motion.div;
           initial = {;
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ delay: 0.4 }}
           className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
@@ -196,16 +189,16 @@ export default function Page() {;
             {sortedServices.map((service, index) => (<motion.div;
                 key={service.id}
                 initial = {;
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                 animate = {;
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 exit = {;
-  { opacity: 0,;
-  y: -20;,
+  { opacity: 0,
+  y: -20;
 }}
                 transition={{ delay: index * 0.1 }}
                 className="group relative bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-2xl p - 6 hover:bg-white / 10 transition - all duration - 300 hover:border-purple -500 / 50">;
@@ -213,7 +206,7 @@ export default function Page() {;
                 <div  className="absolute top - 4 right -4">;
                   <span className={`px-3 py-1 rounded-full text-xs font - medium ${service.status === 'active' ? 'bg-green - 500 / 20 text-green - 400' :;
                     service.status === 'beta' ? 'bg-yellow-500 / 20 text-yellow-400' :;
-                    'bg-gray - 500 / 20 text-gray - 400';,
+                    'bg-gray - 500 / 20 text-gray - 400';
 }`}>;
                     {service.status === 'active' ? 'Active' : service.status === 'beta' ? 'Beta' : 'Coming Soon'}
                   </span>;
@@ -260,12 +253,12 @@ export default function Page() {;
         {/* Call to Action */}
         <motion.div;
           initial = {;
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           transition={{ delay: 0.6 }}
           className="text-center mt-20">;
@@ -287,5 +280,5 @@ export default function Page() {;
           </div>;
         </motion.div>;
       </div>;
-    </div>;) ;,
+    </div>;) ;
 };

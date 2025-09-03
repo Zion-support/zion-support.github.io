@@ -5,19 +5,18 @@ import React, { useState } from 'react';
 export /**;
 import { motion  } from 'framer-motion';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
 function FeaturedListingsSection () {          initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -99,19 +98,19 @@ function FeaturedListingsSection () {          initial = {;
         <motion.div;
           className="mt-16 text-center"          initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.4;,
+  { duration: 0.6,
+  delay: 0.4;
 }}
         >;
           <Link            to="/services";

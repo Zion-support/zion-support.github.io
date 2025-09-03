@@ -3,16 +3,16 @@ import path from 'node:path';
 export { defineConfig };export default defineConfig({;
   resolve: {;
     alias: {;
-      '@': path.resolve(__dirname, './src'),;
-      '@/pages': path.resolve(__dirname, './src/pages'),;,
-},;,
-},;
+      '@': path.resolve(__dirname, './src'),
+      '@/pages': path.resolve(__dirname, './src/pages'),,
+},,
+},
   test: {;
-    environment: 'jsdom',;
-    setupFiles: './tests/setup.ts',;
-    globals: true,;
+    environment: 'jsdom',
+    setupFiles: './tests/setup.ts',
+    globals: true,
     coverage: {;
-      provider: 'v8',;,
-},;,
-},;,
+      provider: 'v8',,
+},,
+},,
 });

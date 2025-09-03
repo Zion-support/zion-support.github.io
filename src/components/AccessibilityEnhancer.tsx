@@ -1,65 +1,56 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Settings } from 'lucide-react';
-;
-interface AccessibilitySettings {;
+interface AccessibilitySettings {
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
-  keyboardNavigation: boolean;,
+  keyboardNavigation: boolean;
 }
-;
-interface AccessibilityEnhancerProps {;
+
+interface AccessibilityEnhancerProps {
   enabled?: boolean;
-  showSettings?: boolean;,
+  showSettings?: boolean;
 }
-;
+
 export function AccessibilityEnhancer({ enabled = true, showSettings = true }: AccessibilityEnhancerProps) {;
   const [settings, setSettings] = useState<AccessibilitySettings>({;
-    fontSize: 16,;
-    highContrast: false,;
-    reducedMotion: false,;
-    keyboardNavigation: true;,
+    fontSize: 16,
+    highContrast: false,
+    reducedMotion: false,
+    keyboardNavigation: true;
 });
-;
   const [isVisible, setIsVisible] = useState(false);
-;
   // Apply accessibility styles;
   const applyAccessibilityStyles = useCallback((highContrast: boolean, fontSize: string, reducedMotion: boolean) => {;
     const root = document.documentElement;
-    ;
     if (highContrast) {;
       root.style.setProperty('--bg-primary', '#000000');
-      root.style.setProperty('--text-primary', '#ffffff');,
+      root.style.setProperty('--text-primary', '#ffffff');
 } else {;
       root.style.removeProperty('--bg-primary');
-      root.style.removeProperty('--text-primary');,
+      root.style.removeProperty('--text-primary');
 }
-    ;
+
     root.style.setProperty('--font-size-base', fontSize);
-    ;
     if (reducedMotion) {;
-      root.style.setProperty('--animation-duration', '0s');,
+      root.style.setProperty('--animation-duration', '0s');
 } else {;
-      root.style.removeProperty('--animation-duration');,
+      root.style.removeProperty('--animation-duration');
 }
   }, []);
-;
   // Apply settings when they change;
-  useEffect(() => {;
+  useEffect(() => {
     applyAccessibilityStyles(;
-      settings.highContrast,;
-      `${settings.fontSize}px`,;
+      settings.highContrast,
+      `${settings.fontSize}px`,
       settings.reducedMotion;
-    );,
+    );
 }, [settings, applyAccessibilityStyles]);
-;
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {;
-    setSettings(prev => ({ ...prev, [key]: value }));,
+    setSettings(prev => ({ ...prev, [key]: value }));
 };
-;
   if (!enabled) return null;
-;
   return (;
     <div className="accessibility-enhancer">;
       <AnimatePresence>;
@@ -135,7 +126,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
         </button>;
       )}
     </div>;
-  );,
+  );
 }
-;
+
 export default AccessibilityEnhancer;

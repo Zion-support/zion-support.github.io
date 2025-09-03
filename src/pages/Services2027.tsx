@@ -45,6 +45,6 @@ const Services2027 = () => {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default Services2027;

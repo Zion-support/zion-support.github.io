@@ -5,54 +5,44 @@ export default function Page() {;
   const [imageSrc, setImageSrc] = useState<any>(src);
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-;
   // Intersection Observer for lazy loading;
   // Intersection Observer for lazy loading      }) ;
-;
     observerRef.current.observe(imgRef.current) ;
-;
     return () => {;
       if(observerRef.current) {;
 
         observerRef.current.disconnect()}
     }}, [priority, lazy]) ;
-;
   // Handle image load;
-  ;
     setIsLoaded(true) ;
     onLoad?.() };
-;
   // Handle image error;
-  ;
       setHasError(false);
       setIsLoading(true)} else {;
       setHasError(true);
       setIsLoading(false);
       onError?.(new Error(`Failed to load image: any${src}`))}
   };
-;
   // Cleanup on unmount;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     return () => {;
       if(observerRef.current) {;
 
         observerRef.current.disconnect()}
     }}, []) ;
-;
   // Generate optimized src with quality parameter;
   const getOptimizedSrc = (src: anystring) => {;
     if(src.startsWith ('data:') || src.startsWith('blob:') ) {;
-      return src;,
+      return src;
 }
     // Add quality parameter for external images if possible;
     try {;
-      ;
       if(url.searchParams.has('quality')) {;
 
         return src}
@@ -61,9 +51,7 @@ export default function Page() {;
 
       return src}
   };
-;
   // Base classes;
-  ;
   // Loading skeleton;
   if(!isIntersecting) {;
     return (<div;
@@ -83,10 +71,9 @@ export default function Page() {;
           <AlertCircle className="w-12 h-12 text-gray - 400 mx - auto mb-2" />;
           <p className="text-sm text-gray - 500 dark:text-gray -400">Image failed to load</p>;
         </div>;
-      </div>) ;,
+      </div>) ;
 }}) => {;
 
     </div>;
   )}
-export default OptimizedImage;";
-;";
+export default OptimizedImage;";";

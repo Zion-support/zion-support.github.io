@@ -2,58 +2,52 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { ;
-  Cpu, Network, Zap, Globe, Server, Cloud, Database, ;
-  Shield, BarChart3, CheckCircle, ArrowRight, Star, ;
-  Phone, Mail, MapPin, Settings, Monitor, Activity,;
-  TrendingUp, Award, Rocket, Lightbulb, AlertTriangle,;
-  Smartphone, Users, Lock, Brain, Target;,
+  Cpu, Network, Zap, Globe, Server, Cloud, Database,
+  Shield, BarChart3, CheckCircle, ArrowRight, Star,
+  Phone, Mail, MapPin, Settings, Monitor, Activity,
+  TrendingUp, Award, Rocket, Lightbulb, AlertTriangle,
+  Smartphone, Users, Lock, Brain, Target;
 } from "lucide-react";
 
 const EdgeComputingOrchestrationPlatform = () => {;
-  const features = [;
-    "Distributed Edge Computing",;
-    "Real-time Data Processing", ;
-    "Intelligent Load Balancing",;
-    "Edge-to-Cloud Synchronization",;
-    "Autonomous Edge Management",;
-    "Low-Latency Computing",;
-    "Edge AI Inference",;
-    "Dynamic Resource Allocation";
-  ];
+  const features = [ "Distributed Edge Computing",
+    "Real-time Data Processing",
+    "Intelligent Load Balancing",
+    "Edge-to-Cloud Synchronization",
+    "Autonomous Edge Management",
+    "Low-Latency Computing",
+    "Edge AI Inference",
+    "Dynamic Resource Allocation" ];
 
-  const benefits = [;
-    "Reduce latency by 90%",;
-    "Improve application performance by 70%",;
-    "Lower bandwidth costs by 60%",;
-    "Enable real-time decision making",;
-    "Scale computing resources dynamically",;
-    "Ensure 99.9% uptime across edge locations";
-  ];
+  const benefits = [ "Reduce latency by 90%",
+    "Improve application performance by 70%",
+    "Lower bandwidth costs by 60%",
+    "Enable real-time decision making",
+    "Scale computing resources dynamically",
+    "Ensure 99.9% uptime across edge locations" ];
 
-  const useCases = [;
-    "IoT Data Processing",;
-    "Real-time Video Analytics",;
-    "Autonomous Vehicle Computing",;
-    "Smart City Infrastructure",;
-    "Industrial IoT Monitoring",;
-    "Edge AI Applications";
-  ];
+  const useCases = [ "IoT Data Processing",
+    "Real-time Video Analytics",
+    "Autonomous Vehicle Computing",
+    "Smart City Infrastructure",
+    "Industrial IoT Monitoring",
+    "Edge AI Applications" ];
 
   const pricing = [;
     {;
-      name: "Edge Starter",;
-      price: "$3,999/month",;
-      details: ["Up to 10 edge nodes", "Basic orchestration", "Standard monitoring", "Email support", "99.5% uptime SLA"];,
-},;
+      name: "Edge Starter",
+      price: "$3,999/month",
+      details: ["Up to 10 edge nodes", "Basic orchestration", "Standard monitoring", "Email support", "99.5% uptime SLA"];
+},
     {;
-      name: "Edge Enterprise", ;
-      price: "$7,999/month",;
-      details: ["Up to 100 edge nodes", "Advanced orchestration", "Custom monitoring", "Priority support", "99.9% uptime SLA"];,
-},;
+      name: "Edge Enterprise",
+      price: "$7,999/month",
+      details: ["Up to 100 edge nodes", "Advanced orchestration", "Custom monitoring", "Priority support", "99.9% uptime SLA"];
+},
     {;
-      name: "Edge Global",;
-      price: "$15,999/month", ;
-      details: ["Unlimited edge nodes", "Full orchestration suite", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"];,
+      name: "Edge Global",
+      price: "$15,999/month",
+      details: ["Unlimited edge nodes", "Full orchestration suite", "White-label solution", "24/7 dedicated support", "99.99% uptime SLA"];
 }
   ];
 
@@ -64,7 +58,6 @@ const EdgeComputingOrchestrationPlatform = () => {;
         <meta name="description" content="Advanced edge computing orchestration platform that reduces latency by 90% and enables real-time processing across distributed edge locations." />;
         <meta name="keywords" content="edge computing, distributed computing, real-time processing, edge orchestration, low-latency computing" />;
       </Head>;
-      ;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-green-600 via-teal-600 to-blue-600 py-20 text-center">;
@@ -96,7 +89,6 @@ const EdgeComputingOrchestrationPlatform = () => {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Edge Computing Features</h2>;
             <p className="text-gray-600 text-lg">Intelligent orchestration that optimizes computing resources across edge locations</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {features.map((feature, index) => (;
               <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">;
@@ -117,7 +109,6 @@ const EdgeComputingOrchestrationPlatform = () => {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Edge Computing Performance Results</h2>;
               <p className="text-gray-600 text-lg">Transform your applications with distributed edge computing</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>;
@@ -130,7 +121,6 @@ const EdgeComputingOrchestrationPlatform = () => {;
                   ))}
                 </ul>;
               </div>;
-              ;
               <div className="bg-white rounded-xl p-6 shadow-lg">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-6">Use Cases</h3>;
                 <ul className="space-y-3">;
@@ -152,7 +142,6 @@ const EdgeComputingOrchestrationPlatform = () => {;
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Intelligent Edge Architecture</h2>;
             <p className="text-gray-600 text-lg">Built for distributed computing and real-time processing</p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-3 gap-8">;
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">;
@@ -161,7 +150,6 @@ const EdgeComputingOrchestrationPlatform = () => {;
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Global Edge Network</h3>;
               <p className="text-gray-600">Distributed edge nodes across multiple geographic locations for optimal performance and redundancy.</p>;
             </div>;
-            ;
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">;
                 <Brain className="w-6 h-6 text-white" />;
@@ -169,7 +157,6 @@ const EdgeComputingOrchestrationPlatform = () => {;
               <h3 className="text-xl font-semibold text-gray-900 mb-3">AI-Powered Orchestration</h3>;
               <p className="text-gray-600">Intelligent resource allocation and workload distribution using machine learning algorithms.</p>;
             </div>;
-            ;
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">;
                 <Zap className="w-6 h-6 text-white" />;
@@ -187,7 +174,6 @@ const EdgeComputingOrchestrationPlatform = () => {;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Edge Computing Pricing Plans</h2>;
               <p className="text-gray-600 text-lg">Scale your edge computing infrastructure with flexible pricing</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-3 gap-8">;
               {pricing.map((tier, index) => (;
                 <div key={index} className={`rounded-xl p-6 shadow-lg ${tier.name === 'Edge Enterprise' ? 'border-2 border-green-500 bg-green-50' : 'border border-gray-200 bg-white'}`}>;
@@ -209,7 +195,7 @@ const EdgeComputingOrchestrationPlatform = () => {;
                   <Link href="#contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${;
                     tier.name === 'Edge Enterprise' ;
                       ? 'bg-green-600 text-white hover:bg-green-700' ;
-                      : 'bg-gray-900 text-white hover:bg-gray-800';,
+                      : 'bg-gray-900 text-white hover:bg-gray-800';
 }`}>;
                     Get Started;
                   </Link>;
@@ -226,7 +212,6 @@ const EdgeComputingOrchestrationPlatform = () => {;
               <h2 className="text-3xl font-bold mb-4">Ready to Deploy Edge Computing?</h2>;
               <p className="text-gray-300 text-lg">Contact our edge computing experts today</p>;
             </div>;
-            ;
             <div className="grid md:grid-cols-2 gap-8">;
               <div>;
                 <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>;
@@ -245,7 +230,6 @@ const EdgeComputingOrchestrationPlatform = () => {;
                   </div>;
                 </div>;
               </div>;
-              ;
               <div className="bg-white rounded-xl p-6">;
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">Start Your Free Trial</h3>;
                 <p className="text-gray-600 mb-4">Experience edge computing orchestration with our 14-day free trial</p>;
@@ -258,7 +242,7 @@ const EdgeComputingOrchestrationPlatform = () => {;
         </section>;
       </div>;
     </>;
-  );,
+  );
 }
-;
+
 export default EdgeComputingOrchestrationPlatform

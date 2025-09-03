@@ -1,6 +1,5 @@
 import React from 'react';
 import SEOHead from '../src/components/SEOHead';
-;
 const NewsPage = () => {;
   return (;
     <>;
@@ -10,8 +9,6 @@ const NewsPage = () => {;
         <p className="text-gray-600">Stay tuned for company announcements, product updates, and industry insights.</p>;
       </main>;
     </>;
-  );,
+  );
 };
-;
 export default NewsPage;
-;

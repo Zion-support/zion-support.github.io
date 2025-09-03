@@ -1,137 +1,132 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ;
-  Linkedin, ;
-  Twitter, ;
-  Mail, ;
-  Users, ;
-  Award, ;
-  Heart, ;
-  Lightbulb, ;
-  Target,;
-  Globe,;
-  Shield,;
-  Zap,;
-  Star;,
+  Linkedin,
+  Twitter,
+  Mail,
+  Users,
+  Award,
+  Heart,
+  Lightbulb,
+  Target,
+  Globe,
+  Shield,
+  Zap,
+  Star;
 } from 'lucide-react';
-;
 const AboutTeam = () => {;
   const leadershipTeam = [;
     {;
-      name: 'Dr. Sarah Chen',;
-      position: 'Chief Executive Officer',;
-      bio: 'Former AI researcher at Stanford with 15+ years in enterprise technology. Led three successful tech startups to acquisition.',;
-      image: '/images/team/sarah-chen.jpg',;
-      linkedin: 'https://linkedin.com/in/sarah-chen',;
-      twitter: 'https://twitter.com/sarahchen',;
-      email: 'sarah.chen@ziontechgroup.com',;
-      expertise: ['AI Strategy', 'Enterprise Technology', 'Strategic Leadership'],;
-      achievements: ['Forbes 30 Under 30', 'MIT Technology Review Innovator', '500+ Team Members Led'];,
-},;
+      name: 'Dr. Sarah Chen',
+      position: 'Chief Executive Officer',
+      bio: 'Former AI researcher at Stanford with 15+ years in enterprise technology. Led three successful tech startups to acquisition.',
+      image: '/images/team/sarah-chen.jpg',
+      linkedin: 'https://linkedin.com/in/sarah-chen',
+      twitter: 'https://twitter.com/sarahchen',
+      email: 'sarah.chen@ziontechgroup.com',
+      expertise: ['AI Strategy', 'Enterprise Technology', 'Strategic Leadership'],
+      achievements: ['Forbes 30 Under 30', 'MIT Technology Review Innovator', '500+ Team Members Led'];
+},
     {;
-      name: 'Marcus Rodriguez',;
-      position: 'Chief Technology Officer',;
-      bio: 'Ex-Google engineer specializing in scalable cloud infrastructure and AI systems. Built systems serving 100M+ users.',;
-      image: '/images/team/marcus-rodriguez.jpg',;
-      linkedin: 'https://linkedin.com/in/marcus-rodriguez',;
-      twitter: 'https://twitter.com/marcusrodriguez',;
-      email: 'marcus.rodriguez@ziontechgroup.com',;
-      expertise: ['Cloud Architecture', 'AI Systems', 'Scalable Infrastructure'],;
-      achievements: ['Google Cloud MVP', '15+ Patents', 'Led 50+ Engineering Teams'];,
-},;
+      name: 'Marcus Rodriguez',
+      position: 'Chief Technology Officer',
+      bio: 'Ex-Google engineer specializing in scalable cloud infrastructure and AI systems. Built systems serving 100M+ users.',
+      image: '/images/team/marcus-rodriguez.jpg',
+      linkedin: 'https://linkedin.com/in/marcus-rodriguez',
+      twitter: 'https://twitter.com/marcusrodriguez',
+      email: 'marcus.rodriguez@ziontechgroup.com',
+      expertise: ['Cloud Architecture', 'AI Systems', 'Scalable Infrastructure'],
+      achievements: ['Google Cloud MVP', '15+ Patents', 'Led 50+ Engineering Teams'];
+},
     {;
-      name: 'Dr. Emily Watson',;
-      position: 'Chief AI Officer',;
-      bio: 'Leading researcher in machine learning and natural language processing. Published 50+ papers in top AI conferences.',;
-      image: '/images/team/emily-watson.jpg',;
-      linkedin: 'https://linkedin.com/in/emily-watson',;
-      twitter: 'https://twitter.com/emilywatson',;
-      email: 'emily.watson@ziontechgroup.com',;
-      expertise: ['Machine Learning', 'NLP', 'AI Ethics'],;
-      achievements: ['NeurIPS Best Paper', 'MIT CSAIL Alumni', 'AI Ethics Committee Chair'];,
-},;
+      name: 'Dr. Emily Watson',
+      position: 'Chief AI Officer',
+      bio: 'Leading researcher in machine learning and natural language processing. Published 50+ papers in top AI conferences.',
+      image: '/images/team/emily-watson.jpg',
+      linkedin: 'https://linkedin.com/in/emily-watson',
+      twitter: 'https://twitter.com/emilywatson',
+      email: 'emily.watson@ziontechgroup.com',
+      expertise: ['Machine Learning', 'NLP', 'AI Ethics'],
+      achievements: ['NeurIPS Best Paper', 'MIT CSAIL Alumni', 'AI Ethics Committee Chair'];
+},
     {;
-      name: 'David Kim',;
-      position: 'Chief Financial Officer',;
-      bio: 'Former investment banker with deep expertise in tech financing and strategic partnerships. Raised $500M+ in funding.',;
-      image: '/images/team/david-kim.jpg',;
-      linkedin: 'https://linkedin.com/in/david-kim',;
-      twitter: 'https://twitter.com/davidkim',;
-      email: 'david.kim@ziontechgroup.com',;
-      expertise: ['Financial Strategy', 'Strategic Partnerships', 'Growth Financing'],;
-      achievements: ['Goldman Sachs Alumni', '500M+ Funding Raised', '15+ Strategic Partnerships'];,
+      name: 'David Kim',
+      position: 'Chief Financial Officer',
+      bio: 'Former investment banker with deep expertise in tech financing and strategic partnerships. Raised $500M+ in funding.',
+      image: '/images/team/david-kim.jpg',
+      linkedin: 'https://linkedin.com/in/david-kim',
+      twitter: 'https://twitter.com/davidkim',
+      email: 'david.kim@ziontechgroup.com',
+      expertise: ['Financial Strategy', 'Strategic Partnerships', 'Growth Financing'],
+      achievements: ['Goldman Sachs Alumni', '500M+ Funding Raised', '15+ Strategic Partnerships'];
 }
   ];
-;
   const companyValues = [;
     {;
-      icon: Heart,;
-      title: 'Human-Centered AI',;
-      description: 'We believe AI should augment human capabilities, not replace them. Every solution we build puts people first.',;
-      color: 'from-red-500 to-pink-500';,
-},;
+      icon: Heart,
+      title: 'Human-Centered AI',
+      description: 'We believe AI should augment human capabilities, not replace them. Every solution we build puts people first.',
+      color: 'from-red-500 to-pink-500';
+},
     {;
-      icon: Shield,;
-      title: 'Trust & Security',;
-      description: 'Security and privacy are foundational to everything we do. We build with enterprise-grade security standards.',;
-      color: 'from-blue-500 to-cyan-500';,
-},;
+      icon: Shield,
+      title: 'Trust & Security',
+      description: 'Security and privacy are foundational to everything we do. We build with enterprise-grade security standards.',
+      color: 'from-blue-500 to-cyan-500';
+},
     {;
-      icon: Lightbulb,;
-      title: 'Innovation First',;
-      description: 'We constantly push the boundaries of what\'s possible, exploring cutting-edge technologies to solve real problems.',;
-      color: 'from-yellow-500 to-orange-500';,
-},;
+      icon: Lightbulb,
+      title: 'Innovation First',
+      description: 'We constantly push the boundaries of what\'s possible, exploring cutting-edge technologies to solve real problems.',
+      color: 'from-yellow-500 to-orange-500';
+},
     {;
-      icon: Target,;
-      title: 'Results-Driven',;
-      description: 'We measure success by the tangible impact we create for our clients, not just the technology we build.',;
-      color: 'from-green-500 to-emerald-500';,
-},;
+      icon: Target,
+      title: 'Results-Driven',
+      description: 'We measure success by the tangible impact we create for our clients, not just the technology we build.',
+      color: 'from-green-500 to-emerald-500';
+},
     {;
-      icon: Globe,;
-      title: 'Global Impact',;
-      description: 'Our solutions serve clients worldwide, and we\'re committed to making technology accessible across all regions.',;
-      color: 'from-purple-500 to-indigo-500';,
-},;
+      icon: Globe,
+      title: 'Global Impact',
+      description: 'Our solutions serve clients worldwide, and we\'re committed to making technology accessible across all regions.',
+      color: 'from-purple-500 to-indigo-500';
+},
     {;
-      icon: Zap,;
-      title: 'Speed & Agility',;
-      description: 'We move fast, adapt quickly, and deliver solutions that keep pace with our clients\' evolving needs.',;
-      color: 'from-amber-500 to-yellow-500';,
+      icon: Zap,
+      title: 'Speed & Agility',
+      description: 'We move fast, adapt quickly, and deliver solutions that keep pace with our clients\' evolving needs.',
+      color: 'from-amber-500 to-yellow-500';
 }
   ];
-;
   const teamStats = [;
-    { number: '500+', label: 'Team Members', icon: Users },;
-    { number: '50+', label: 'Countries Served', icon: Globe },;
-    { number: '1000+', label: 'Projects Delivered', icon: Award },;
+    { number: '500+', label: 'Team Members', icon: Users },
+    { number: '50+', label: 'Countries Served', icon: Globe },
+    { number: '1000+', label: 'Projects Delivered', icon: Award },
     { number: '99.9%', label: 'Uptime SLA', icon: Star }
   ];
-;
   const cultureHighlights = [;
     {;
-      title: 'Remote-First Culture',;
-      description: 'Our team spans 25+ countries, working together seamlessly through cutting-edge collaboration tools.',;
-      icon: Globe;,
-},;
+      title: 'Remote-First Culture',
+      description: 'Our team spans 25+ countries, working together seamlessly through cutting-edge collaboration tools.',
+      icon: Globe;
+},
     {;
-      title: 'Continuous Learning',;
-      description: 'We invest heavily in our team\'s growth with unlimited learning budgets and dedicated development time.',;
-      icon: Lightbulb;,
-},;
+      title: 'Continuous Learning',
+      description: 'We invest heavily in our team\'s growth with unlimited learning budgets and dedicated development time.',
+      icon: Lightbulb;
+},
     {;
-      title: 'Diversity & Inclusion',;
-      description: 'We celebrate diverse perspectives and create an inclusive environment where everyone can thrive.',;
-      icon: Users;,
-},;
+      title: 'Diversity & Inclusion',
+      description: 'We celebrate diverse perspectives and create an inclusive environment where everyone can thrive.',
+      icon: Users;
+},
     {;
-      title: 'Work-Life Balance',;
-      description: 'We believe in sustainable productivity and support our team\'s well-being with flexible schedules.',;
-      icon: Heart;,
+      title: 'Work-Life Balance',
+      description: 'We believe in sustainable productivity and support our team\'s well-being with flexible schedules.',
+      icon: Heart;
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       {/* Hero Section */}
@@ -323,7 +318,7 @@ const AboutTeam = () => {;
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-4">Our Culture</h2>;
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
-              We're building more than a company - we're building a community of innovators, ;
+              We're building more than a company - we're building a community of innovators,
               problem-solvers, and lifelong learners.;
             </p>;
           </motion.div>;
@@ -363,7 +358,7 @@ const AboutTeam = () => {;
               Join Our Growing Team;
             </h2>;
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
-              Ready to shape the future of technology? We're always looking for passionate, ;
+              Ready to shape the future of technology? We're always looking for passionate,
               innovative minds to join our mission.;
             </p>;
             <div className="flex flex-wrap justify-center gap-4">;
@@ -382,7 +377,6 @@ const AboutTeam = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default AboutTeam;

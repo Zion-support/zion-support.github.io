@@ -2,58 +2,55 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { ArrowRight, CheckCircle, Star, Zap, Users, Shield, Link as LinkIcon, Database } from 'lucide-react';
 import Link from 'next/link';
-;
 const BlockchainSolutionsPage: NextPage = () => {;
   const benefits = [;
     {;
-      icon: <LinkIcon className="w-8 h-8" />,;
-      title: 'Decentralized Solutions',;
-      description: 'Build trustless, transparent systems that eliminate intermediaries and reduce costs.';,
-},;
+      icon: <LinkIcon className="w-8 h-8" />,
+      title: 'Decentralized Solutions',
+      description: 'Build trustless, transparent systems that eliminate intermediaries and reduce costs.';
+},
     {;
-      icon: <Database className="w-8 h-8" />,;
-      title: 'Immutable Records',;
-      description: 'Create tamper-proof records and audit trails for enhanced security and compliance.';,
-},;
+      icon: <Database className="w-8 h-8" />,
+      title: 'Immutable Records',
+      description: 'Create tamper-proof records and audit trails for enhanced security and compliance.';
+},
     {;
-      icon: <Zap className="w-8 h-8" />,;
-      title: 'Smart Contracts',;
-      description: 'Automate business processes with self-executing smart contracts for efficiency.';,
-},;
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Smart Contracts',
+      description: 'Automate business processes with self-executing smart contracts for efficiency.';
+},
     {;
-      icon: <Shield className="w-8 h-8" />,;
-      title: 'Enhanced Security',;
-      description: 'Leverage cryptographic security and consensus mechanisms for maximum protection.';,
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Enhanced Security',
+      description: 'Leverage cryptographic security and consensus mechanisms for maximum protection.';
 }
   ];
-;
   const services = [;
     {;
-      title: 'Blockchain Strategy & Consulting',;
-      description: 'Strategic planning and roadmap development for blockchain adoption',;
-      price: 'From $10,000',;
-      features: ['Blockchain assessment', 'Use case identification', 'Technology selection', 'ROI analysis'];,
-},;
+      title: 'Blockchain Strategy & Consulting',
+      description: 'Strategic planning and roadmap development for blockchain adoption',
+      price: 'From $10,000',
+      features: ['Blockchain assessment', 'Use case identification', 'Technology selection', 'ROI analysis'];
+},
     {;
-      title: 'Smart Contract Development',;
-      description: 'Custom smart contract development and deployment',;
-      price: 'From $25,000',;
-      features: ['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance & support'];,
-},;
+      title: 'Smart Contract Development',
+      description: 'Custom smart contract development and deployment',
+      price: 'From $25,000',
+      features: ['Contract design', 'Security auditing', 'Testing & deployment', 'Maintenance & support'];
+},
     {;
-      title: 'DApp Development',;
-      description: 'Decentralized application development and deployment',;
-      price: 'From $50,000',;
-      features: ['Frontend development', 'Backend integration', 'Blockchain integration', 'User interface design'];,
-},;
+      title: 'DApp Development',
+      description: 'Decentralized application development and deployment',
+      price: 'From $50,000',
+      features: ['Frontend development', 'Backend integration', 'Blockchain integration', 'User interface design'];
+},
     {;
-      title: 'Blockchain Infrastructure',;
-      description: 'Complete blockchain infrastructure setup and management',;
-      price: 'From $100,000',;
-      features: ['Network setup', 'Node management', 'Security implementation', 'Monitoring & maintenance'];,
+      title: 'Blockchain Infrastructure',
+      description: 'Complete blockchain infrastructure setup and management',
+      price: 'From $100,000',
+      features: ['Network setup', 'Node management', 'Security implementation', 'Monitoring & maintenance'];
 }
   ];
-;
   return (;
     <MainLayout;
       title="Blockchain Solutions - Zion Tech Group";
@@ -66,7 +63,7 @@ const BlockchainSolutionsPage: NextPage = () => {;
               Blockchain Solutions;
             </h1>;
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">;
-              Transform your business with cutting-edge blockchain technology. From smart contracts to DApps, ;
+              Transform your business with cutting-edge blockchain technology. From smart contracts to DApps,
               we help you leverage the power of decentralized systems for enhanced security and efficiency.;
             </p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
@@ -91,7 +88,6 @@ const BlockchainSolutionsPage: NextPage = () => {;
               We provide comprehensive blockchain solutions with deep expertise in multiple platforms and technologies.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
               <div key={index} className="text-center group">;
@@ -115,7 +111,6 @@ const BlockchainSolutionsPage: NextPage = () => {;
               End-to-end blockchain solutions designed to meet your specific business requirements.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 gap-8">;
             {services.map((service, index) => (;
               <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">;
@@ -154,7 +149,6 @@ const BlockchainSolutionsPage: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default BlockchainSolutionsPage;

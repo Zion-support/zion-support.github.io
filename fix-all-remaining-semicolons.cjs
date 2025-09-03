@@ -9,54 +9,53 @@ function fixAllRemainingSemicolons(filePath) {;
     // Comprehensive fixes for all semicolons;
     const fixes = [;
   // Fix array element semicolons;
-      { pattern: /"([^"]*);",/g, replacement: ""$1"," },;
-      { pattern: /"([^"]*);",/g, replacement: ""$1"," },;
+      { pattern: /"([^"]*);",/g, replacement: ""$1"," },
+      { pattern: /"([^"]*);",/g, replacement: ""$1"," },
       // Fix JSX attribute semicolons;
-      { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },;
-      { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },;
+      { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },
+      { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },
       // Fix JSX closing tag semicolons;
-      { pattern: /(\/>);/g, replacement: "$1" },;
-      { pattern: /(<\/[^>]+>);/g, replacement: "$1" },;
+      { pattern: /(\/>);/g, replacement: "$1" },
+      { pattern: /(<\/[^>]+>);/g, replacement: "$1" },
       // Fix JSX opening tag semicolons;
-      { pattern: /(>);/g, replacement: "$1" },;
+      { pattern: /(>);/g, replacement: "$1" },
       // Fix className semicolons;
-      { pattern: /className="([^"]*);"/g, replacement: "className="$1"" },;
-      { pattern: /className="([^"]*);"/g, replacement: "className="$1"" },;
+      { pattern: /className="([^"]*);"/g, replacement: "className="$1"" },
+      { pattern: /className="([^"]*);"/g, replacement: "className="$1"" },
       // Fix href semicolons;
-      { pattern: /href="([^"]*);"/g, replacement: "href="$1"" },;
-      { pattern: /href="([^"]*);"/g, replacement: "href="$1"" },;
+      { pattern: /href="([^"]*);"/g, replacement: "href="$1"" },
+      { pattern: /href="([^"]*);"/g, replacement: "href="$1"" },
       // Fix type semicolons;
-      { pattern: /type="([^"]*);"/g, replacement: "type="$1"" },;
-      { pattern: /type="([^"]*);"/g, replacement: "type="$1"" },;
+      { pattern: /type="([^"]*);"/g, replacement: "type="$1"" },
+      { pattern: /type="([^"]*);"/g, replacement: "type="$1"" },
       // Fix size semicolons;
-      { pattern: /size="([^"]*);"/g, replacement: "size="$1"" },;
-      { pattern: /size="([^"]*);"/g, replacement: "size="$1"" },;
+      { pattern: /size="([^"]*);"/g, replacement: "size="$1"" },
+      { pattern: /size="([^"]*);"/g, replacement: "size="$1"" },
       // Fix import statements that got corrupted;
-      { pattern: /}\s*import\s+/g, replacement: "}\n\nimport " },;
+      { pattern: /}\s*import\s+/g, replacement: "}\n\nimport " },
       // Fix any remaining semicolons in JSX;
-      { pattern: /;\s*>/g, replacement: ">" },;
-      { pattern: /;\s*\/>/g, replacement: "/>" },;
+      { pattern: /;\s*>/g, replacement: ">" },
+      { pattern: /;\s*\/>/g, replacement: "/>" },
     ];
-;
     fixes.forEach(fix => {;
   const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {;
   content = newContent;
-        modified = true;,;,
+        modified = true;,
 }
     });
     if (modified) {;
   fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed all remaining semicolons in: ${filePath}`);
-      return true;,;,
+      return true;,
 }
-    return false;,;,
+    return false;,
 } catch (error) {;
   console.error(`Error fixing ${filePath }:`, error.message);
-    return false;,;,
+    return false;,
 }
 }
-;
+
 // Function to recursively find and fix files;
 function fixFilesInDirectory(dir) {;
   const files = fs.readdirSync(dir);
@@ -69,16 +68,16 @@ function fixFilesInDirectory(dir) {;
       !file.startsWith(`.`) &&;
       file !== "node_modules";
     ) {;
-  fixedCount += fixFilesInDirectory(filePath);,;,
+  fixedCount += fixFilesInDirectory(filePath);,
 } else if (stat.isFile() && /\.(tsx|jsx)$/.test(file)) {;
   if (fixAllRemainingSemicolons(filePath)) {;
-  fixedCount++;,;,
+  fixedCount++;,
 }
     }
   });
-  return fixedCount;,;,
+  return fixedCount;,
 }
-;
+
 // Main execution;
 console.log("🔧 Fixing all remaining semicolons...");
 const fixedCount = fixFilesInDirectory(".");

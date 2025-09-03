@@ -1,6 +1,5 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
 const CaseStudies: React.FC = () => {;
   return(<>;
       <SEO title="CaseStudies - Zion Tech Group" />;
@@ -11,7 +10,6 @@ const CaseStudies: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );,
+  );
 };
-;
 export default CaseStudies;

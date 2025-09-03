@@ -2,62 +2,59 @@ import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { ArrowRight, CheckCircle, Star, Zap, Users, Shield, Rocket, DollarSign } from 'lucide-react';
 import Link from 'next/link';
-;
 const StartupSolutionsPage: NextPage = () => {;
   const solutions = [;
     {;
-      icon: <Rocket className="w-8 h-8" />,;
-      title: 'MVP Development',;
-      description: 'Fast-track your startup with our rapid MVP development services using cutting-edge technologies.',;
-      features: ['2-4 week delivery', 'Scalable architecture', 'Modern tech stack', 'User feedback integration'],;
-      price: 'Starting at $5,000';,
-},;
+      icon: <Rocket className="w-8 h-8" />,
+      title: 'MVP Development',
+      description: 'Fast-track your startup with our rapid MVP development services using cutting-edge technologies.',
+      features: ['2-4 week delivery', 'Scalable architecture', 'Modern tech stack', 'User feedback integration'],
+      price: 'Starting at $5,000';
+},
     {;
-      icon: <Zap className="w-8 h-8" />,;
-      title: 'AI-Powered Automation',;
-      description: 'Leverage AI to automate processes and reduce operational costs from day one.',;
-      features: ['Process automation', 'Cost reduction', 'Scalable AI solutions', 'Quick implementation'],;
-      price: 'Starting at $2,500';,
-},;
+      icon: <Zap className="w-8 h-8" />,
+      title: 'AI-Powered Automation',
+      description: 'Leverage AI to automate processes and reduce operational costs from day one.',
+      features: ['Process automation', 'Cost reduction', 'Scalable AI solutions', 'Quick implementation'],
+      price: 'Starting at $2,500';
+},
     {;
-      icon: <Shield className="w-8 h-8" />,;
-      title: 'Security-First Architecture',;
-      description: 'Build secure foundations with enterprise-grade security from the start.',;
-      features: ['Security by design', 'Compliance ready', 'Data protection', 'Audit trails'],;
-      price: 'Starting at $3,000';,
-},;
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Security-First Architecture',
+      description: 'Build secure foundations with enterprise-grade security from the start.',
+      features: ['Security by design', 'Compliance ready', 'Data protection', 'Audit trails'],
+      price: 'Starting at $3,000';
+},
     {;
-      icon: <Users className="w-8 h-8" />,;
-      title: 'Team Scaling Solutions',;
-      description: 'Scale your development team with our flexible staffing and consulting services.',;
-      features: ['Flexible staffing', 'Expert consultants', 'Remote teams', 'Quick onboarding'],;
-      price: 'Starting at $150/hour';,
+      icon: <Users className="w-8 h-8" />,
+      title: 'Team Scaling Solutions',
+      description: 'Scale your development team with our flexible staffing and consulting services.',
+      features: ['Flexible staffing', 'Expert consultants', 'Remote teams', 'Quick onboarding'],
+      price: 'Starting at $150/hour';
 }
   ];
-;
   const benefits = [;
     {;
-      icon: <DollarSign className="w-8 h-8" />,;
-      title: 'Cost-Effective Solutions',;
-      description: 'Get enterprise-grade solutions at startup-friendly prices with flexible payment options.';,
-},;
+      icon: <DollarSign className="w-8 h-8" />,
+      title: 'Cost-Effective Solutions',
+      description: 'Get enterprise-grade solutions at startup-friendly prices with flexible payment options.';
+},
     {;
-      icon: <Zap className="w-8 h-8" />,;
-      title: 'Rapid Deployment',;
-      description: 'Launch faster with our proven methodologies and pre-built components.';,
-},;
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Rapid Deployment',
+      description: 'Launch faster with our proven methodologies and pre-built components.';
+},
     {;
-      icon: <Shield className="w-8 h-8" />,;
-      title: 'Future-Proof Technology',;
-      description: 'Build on scalable, modern architectures that grow with your business.';,
-},;
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Future-Proof Technology',
+      description: 'Build on scalable, modern architectures that grow with your business.';
+},
     {;
-      icon: <Star className="w-8 h-8" />,;
-      title: 'Expert Guidance',;
-      description: 'Get mentorship and guidance from experienced entrepreneurs and technologists.';,
+      icon: <Star className="w-8 h-8" />,
+      title: 'Expert Guidance',
+      description: 'Get mentorship and guidance from experienced entrepreneurs and technologists.';
 }
   ];
-;
   return (;
     <MainLayout;
       title="Startup Solutions - Zion Tech Group";
@@ -95,7 +92,6 @@ const StartupSolutionsPage: NextPage = () => {;
               move fast, scale efficiently, and build products that users love.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 gap-8">;
             {solutions.map((solution, index) => (;
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">;
@@ -128,7 +124,6 @@ const StartupSolutionsPage: NextPage = () => {;
               We've helped hundreds of startups succeed with our proven approach and deep expertise.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
               <div key={index} className="text-center">;
@@ -154,7 +149,6 @@ const StartupSolutionsPage: NextPage = () => {;
               See how we've helped startups achieve their goals and scale their businesses.;
             </p>;
           </div>;
-          ;
           <div className="grid md:grid-cols-3 gap-8">;
             <div className="bg-white p-8 rounded-lg shadow-lg">;
               <div className="text-4xl mb-4">🚀</div>;
@@ -165,7 +159,6 @@ const StartupSolutionsPage: NextPage = () => {;
               </p>;
               <div className="text-green-600 font-semibold">- Sarah Johnson, CEO</div>;
             </div>;
-            ;
             <div className="bg-white p-8 rounded-lg shadow-lg">;
               <div className="text-4xl mb-4">💡</div>;
               <h3 className="text-2xl font-bold text-gray-900 mb-4">InnovateLab</h3>;
@@ -175,7 +168,6 @@ const StartupSolutionsPage: NextPage = () => {;
               </p>;
               <div className="text-green-600 font-semibold">- Michael Chen, CTO</div>;
             </div>;
-            ;
             <div className="bg-white p-8 rounded-lg shadow-lg">;
               <div className="text-4xl mb-4">📈</div>;
               <h3 className="text-2xl font-bold text-gray-900 mb-4">ScaleUp Solutions</h3>;
@@ -209,7 +201,6 @@ const StartupSolutionsPage: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default StartupSolutionsPage;

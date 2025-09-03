@@ -1,42 +1,39 @@
 import React from "react";
 export function SiteFooter() {;
-;
   const currentYear = new Date().getFullYear()";
 
-  const navSections = [];,
-},;
+  const navSections = [];
+},
     {";
-      title: "Services",;
-      links: [",;
+      title: "Services",
+      links: [",
         { label: "All Services", href: "/services" },";
         { label: "AI Services", href: "/services/ai-services" },";
         { label: "IT Services", href: "/services/it-services" },";
         { label: "Micro SaaS", href: "/services/micro-saas" },";
         { label: "Pricing", href: "/pricing" }
-;
-];,
-},;
+
+];
+},
     {";
-      title: "Resources",;
-      links: [",;
+      title: "Resources",
+      links: [",
         { label: "Blog", href: "/blog" },";
         { label: "Case Studies", href: "/case-studies" },";
         { label: "White Papers", href: "/white-papers" },";
         { label: "Webinars", href: "/webinars" },";
         { label: "Documentation", href: "/documentation" }
-;
-];,
-},;
+
+];
+},
     {";
-      title: "Legal",;
-      links: [",;
+      title: "Legal",
+      links: [",
         { label: "Privacy Policy", href: "/privacy" },";
         { label: "Terms of Service", href: "/terms" },";
         { label: "Sitemap", href: "/sitemap' }
-;
-];
 
-;
+];
 ];
 
   const social = [];
@@ -44,7 +41,7 @@ export function SiteFooter() {;
   return (;
     <footer className="bg-slate-900 text-white">";
       <div className="max-w-7xl mx-auto px-6 py-16">";
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8">,;
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8">,
           {/* comment */}";
           <div className="lg: col-span-2">";
             <div className="flex items-center space-x-3 mb-6">";
@@ -53,13 +50,13 @@ export function SiteFooter() {;
               </div>;
               <div>";
                 <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
-                  ZION,;
+                  ZION,
                 </div>";
                 <div className="text-xs text-blue-400 font-medium">TECH GROUP</div>;
               </div>;
             </div>";
-            <p className="text-gray-300 mb-6 max-w-md">,;
-              Leading technology solutions provider specializing in AI, cybersecurity,;
+            <p className="text-gray-300 mb-6 max-w-md">,
+              Leading technology solutions provider specializing in AI, cybersecurity,
               cloud infrastructure, and digital transformation services.;
             </p>";
             <div className="space-y-2 text-sm text-gray-400">;
@@ -69,7 +66,7 @@ export function SiteFooter() {;
               <div>Middletown DE 19709</div>;
             </div>;
           {/* comment */}
-;
+
           {navSections.map((section) => (";
             <div key="{section.title}">";
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>";
@@ -77,22 +74,22 @@ export function SiteFooter() {;
                 {section.links.map((link) => (";
                   <li key="{link.label}">";
                     <Link href="{link.href}
-                      className="text-gray-300 hover: text-white transition-colors">,;
+                      className="text-gray-300 hover: text-white transition-colors">,
                       {link.label}
-;
+
                     </Link>;
                   </li>;
                 ))}
-;
+
               </ul>;
             </div>;
           ))}
-;
+
         </div>;
         {/* comment */}";
         <div className="border-t border-slate-800 mt-12 pt-8">";
           <div className="flex flex-col md: flex-row justify-between items-center">";
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">,;
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">,
               © {currentYear} Zion Tech Group. All rights reserved.;
             </div>";
             <div className="flex space-x-6">;
@@ -101,12 +98,12 @@ export function SiteFooter() {;
                   href="{item.href}
                   target="_blank;
                   rel="noopener noreferrer;
-                  className="text-gray-400 hover: text-white transition-colors">,;
+                  className="text-gray-400 hover: text-white transition-colors">,
                   {item.label}
-;
+
                 </a>;
               ))}
-;
+
             </div>;
     </footer>;
   )}

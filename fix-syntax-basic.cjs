@@ -1,15 +1,12 @@
 #!/usr/bin/env node;
-;
 const fs = require("fs");
 const path = require("path");
 console.log("🔧 Fixing critical syntax errors...");
-const files = [;
-  "pages/api.tsx",;
-  "pages/careers.tsx", ;
-  "pages/case-studies.tsx",;
-  "pages/help.tsx",;
-  "pages/press.tsx";
-];
+const files = [ "pages/api.tsx",
+  "pages/careers.tsx",
+  "pages/case-studies.tsx",
+  "pages/help.tsx",
+  "pages/press.tsx" ];
 let fixedCount = 0;
 files.forEach(file => {;
   const filePath = path.join(process.cwd(), file);
@@ -26,10 +23,10 @@ files.forEach(file => {;
       if (content !== fixed) {;
   fs.writeFileSync(filePath, fixed);
         console.log(`✅ Fixed ${file}`);
-        fixedCount++;,;,
+        fixedCount++;,
 }
     } catch (error) {;
-  console.log(`❌ Error fixing ${file}: ${error.message}`);,;,
+  console.log(`❌ Error fixing ${file}: ${error.message}`);,
 }
   }
 });

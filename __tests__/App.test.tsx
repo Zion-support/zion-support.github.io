@@ -3,5 +3,5 @@ import App from '../App';
 
 test('renders app', () => {;
   render(<App />);
-  expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();,
+  expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
 })

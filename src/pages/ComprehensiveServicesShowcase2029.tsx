@@ -2,259 +2,255 @@ import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
 import { Link  } from 'react-router-dom.ts';
-import { Brain, ;
-  Zap, ;
-  Shield, ;
-  Cloud, ;
-  Database, ;
-  Network, ;
-  Cpu,;
-  CheckCircle,;
-  Star,;
-  TrendingUp,;
-  Users,;
-  Globe,;
-  Rocket,;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Atom,;
-  Code,;
-  BarChart3,;
-  Workflow,;
-  Target,;
-  Lock,;
-  Eye,;
-  Search,;
-  Filter,;
-  ExternalLink,;
-  Server;,
+import { Brain,
+  Zap,
+  Shield,
+  Cloud,
+  Database,
+  Network,
+  Cpu,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Users,
+  Globe,
+  Rocket,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Atom,
+  Code,
+  BarChart3,
+  Workflow,
+  Target,
+  Lock,
+  Eye,
+  Search,
+  Filter,
+  ExternalLink,
+  Server;
 } from 'lucide-react.ts';
-;
-;
+
 export default function ComprehensiveServicesShowcase2029(...args: unknown[]): unknown {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
   const categories = {;
-    'all': { name: 'All Services', icon: <Rocket className="w-6 h-6" />, color: 'from-cyan-500 to-blue-500' },;
-    'ai-ml': { name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6" />, color: 'from-purple-500 to-pink-500' },;
-    'quantum': { name: 'Quantum Computing', icon: <Atom className="w-6 h-6" />, color: 'from-indigo-500 to-purple-500' },;
-    'devops': { name: 'DevOps & Automation', icon: <Workflow className="w-6 h-6" />, color: 'from-blue-500 to-cyan-500' },;
-    'cybersecurity': { name: 'Cybersecurity', icon: <Shield className="w-6 h-6" />, color: 'from-red-500 to-orange-500' },;
-    'analytics': { name: 'Analytics & BI', icon: <BarChart3 className="w-6 h-6" />, color: 'from-green-500 to-emerald-500' },;
-    'cloud': { name: 'Cloud & Infrastructure', icon: <Cloud className="w-6 h-6" />, color: 'from-sky-500 to-blue-500' },;
+    'all': { name: 'All Services', icon: <Rocket className="w-6 h-6" />, color: 'from-cyan-500 to-blue-500' },
+    'ai-ml': { name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6" />, color: 'from-purple-500 to-pink-500' },
+    'quantum': { name: 'Quantum Computing', icon: <Atom className="w-6 h-6" />, color: 'from-indigo-500 to-purple-500' },
+    'devops': { name: 'DevOps & Automation', icon: <Workflow className="w-6 h-6" />, color: 'from-blue-500 to-cyan-500' },
+    'cybersecurity': { name: 'Cybersecurity', icon: <Shield className="w-6 h-6" />, color: 'from-red-500 to-orange-500' },
+    'analytics': { name: 'Analytics & BI', icon: <BarChart3 className="w-6 h-6" />, color: 'from-green-500 to-emerald-500' },
+    'cloud': { name: 'Cloud & Infrastructure', icon: <Cloud className="w-6 h-6" />, color: 'from-sky-500 to-blue-500' },
     'micro-saas': { name: 'Micro SAAS', icon: <Code className="w-6 h-6" />, color: 'from-yellow-500 to-orange-500' }  };
-;
   const services: unknown = [// AI & Machine Learning;
     {}
-      id: 'ai - quantum - hybrid',;
-      title: 'AI Quantum Hybrid Platform',;
+      id: 'ai - quantum - hybrid',
+      title: 'AI Quantum Hybrid Platform',
       description: unknown;
-        'Revolutionary AI - Quantum hybrid platform combining artificial intelligence with quantum computing for unprecedented computational power.',;
-      category: 'quantum',;
-      price: '$49,999 - $199,999',;
+        'Revolutionary AI - Quantum hybrid platform combining artificial intelligence with quantum computing for unprecedented computational power.',
+      category: 'quantum',
+      price: '$49,999 - $199,999',
       features: [];
-        'Quantum - AI Integration',;
-        'Hybrid Processing',;
-        'Advanced ML',;
+        'Quantum - AI Integration',
+        'Hybrid Processing',
+        'Advanced ML',
         'Real - time Optimization';
-      ],;
-      icon: <Atom className="w-8 h-8" />,;
-      color: 'from - purple - 500 to - pink - 500',;
-      link: '/services / ai - quantum - hybrid - platform',;
-      featured: true;,
-},;
+      ],
+      icon: <Atom className="w-8 h-8" />,
+      color: 'from - purple - 500 to - pink - 500',
+      link: '/services / ai - quantum - hybrid - platform',
+      featured: true;
+},
     {}
-      id: 'ai - devops - automation',;
-      title: 'AI DevOps Automation Platform',;
+      id: 'ai - devops - automation',
+      title: 'AI DevOps Automation Platform',
       description: unknown;
-        'AI - powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.',;
-      category: 'devops',;
-      price: '$29,999 - $119,999',;
-      features: ['AI Code Review',;
-        'Smart CI / CD',;
-        'Predictive Monitoring',;
+        'AI - powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.',
+      category: 'devops',
+      price: '$29,999 - $119,999',
+      features: ['AI Code Review',
+        'Smart CI / CD',
+        'Predictive Monitoring',
         'Auto - scaling';
-      ],;
-      icon: <Workflow className="w-8 h-8" />,;
-      color: 'from - blue - 500 to - cyan - 500',;
-      link: '/services / ai - devops - automation - platform',;
-      featured: true;,
-},;
+      ],
+      icon: <Workflow className="w-8 h-8" />,
+      color: 'from - blue - 500 to - cyan - 500',
+      link: '/services / ai - devops - automation - platform',
+      featured: true;
+},
     {}
-      id: 'ai - business - intelligence',;
-      title: 'AI Business Intelligence Analytics',;
+      id: 'ai - business - intelligence',
+      title: 'AI Business Intelligence Analytics',
       description: unknown;
-        'Revolutionary AI - powered business intelligence and analytics platform that transforms data into actionable insights.',;
-      category: 'analytics',;
-      price: '$19,999 - $79,999',;
-      features: ['Predictive Analytics',;
-        'Real - time Insights',;
-        'AI - powered Reports',;
+        'Revolutionary AI - powered business intelligence and analytics platform that transforms data into actionable insights.',
+      category: 'analytics',
+      price: '$19,999 - $79,999',
+      features: ['Predictive Analytics',
+        'Real - time Insights',
+        'AI - powered Reports',
         'Custom Dashboards';
-      ],;
-      icon: <BarChart3 className="w-8 h-8" />,;
-      color: 'from - green - 500 to - emerald - 500',;
-      link: '/services / ai - business - intelligence - analytics',;
-      featured: true;,
-},;
+      ],
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: 'from - green - 500 to - emerald - 500',
+      link: '/services / ai - business - intelligence - analytics',
+      featured: true;
+},
     {}
-      id: 'ai - workflow-orchestrator',;
-      title: 'AI Workflow Orchestrator',;
+      id: 'ai - workflow-orchestrator',
+      title: 'AI Workflow Orchestrator',
       description: unknown;
-        'Intelligent workflow automation platform that orchestrates complex business processes with AI - driven decision making.',;
-      category: 'ai - ml',;
-      price: '$24,999 - $99,999',;
-      features: ['Process Automation',;
-        'AI Decision Making',;
-        'Workflow Optimization',;
+        'Intelligent workflow automation platform that orchestrates complex business processes with AI - driven decision making.',
+      category: 'ai - ml',
+      price: '$24,999 - $99,999',
+      features: ['Process Automation',
+        'AI Decision Making',
+        'Workflow Optimization',
         'Real - time Monitoring';
-      ],;
-      icon: <Brain className="w-8 h-8" />,;
-      color: 'from - purple - 500 to - indigo - 500',;
-      link: '/services / ai - workflow-orchestrator',;
-      featured: false;,
-},;
+      ],
+      icon: <Brain className="w-8 h-8" />,
+      color: 'from - purple - 500 to - indigo - 500',
+      link: '/services / ai - workflow-orchestrator',
+      featured: false;
+},
     {}
-      id: 'ai - data - governance',;
-      title: 'AI Data Governance Platform',;
+      id: 'ai - data - governance',
+      title: 'AI Data Governance Platform',
       description: unknown;
-        'Comprehensive AI - powered data governance platform ensuring data quality, compliance, and security.',;
-      category: 'ai - ml',;
-      price: '$34,999 - $129,999',;
-      features: ['Data Quality',;
-        'Compliance Management',;
-        'AI Monitoring',;
+        'Comprehensive AI - powered data governance platform ensuring data quality, compliance, and security.',
+      category: 'ai - ml',
+      price: '$34,999 - $129,999',
+      features: ['Data Quality',
+        'Compliance Management',
+        'AI Monitoring',
         'Security Controls';
-      ],;
-      icon: <Shield className="w-8 h-8" />,;
-      color: 'from - indigo - 500 to - purple - 500',;
-      link: '/services / ai - data - governance - platform',;
-      featured: false;,
-},;
+      ],
+      icon: <Shield className="w-8 h-8" />,
+      color: 'from - indigo - 500 to - purple - 500',
+      link: '/services / ai - data - governance - platform',
+      featured: false;
+},
     {}
-      id: 'ai - customer - experience',;
-      title: 'AI Customer Experience Analytics',;
+      id: 'ai - customer - experience',
+      title: 'AI Customer Experience Analytics',
       description: unknown;
-        'Advanced AI - powered customer experience analytics platform for deep customer insights and optimization.',;
-      category: 'analytics',;
-      price: '$22,999 - $89,999',;
-      features: ['Customer Insights',;
-        'Behavior Analysis',;
-        'Predictive Modeling',;
+        'Advanced AI - powered customer experience analytics platform for deep customer insights and optimization.',
+      category: 'analytics',
+      price: '$22,999 - $89,999',
+      features: ['Customer Insights',
+        'Behavior Analysis',
+        'Predictive Modeling',
         'Experience Optimization';
-      ],;
-      icon: <Users className="w-8 h-8" />,;
-      color: 'from - pink - 500 to - rose - 500',;
-      link: '/services / ai - customer - experience - analytics',;
-      featured: false;,
-},;
+      ],
+      icon: <Users className="w-8 h-8" />,
+      color: 'from - pink - 500 to - rose - 500',
+      link: '/services / ai - customer - experience - analytics',
+      featured: false;
+},
     {}
-      id: 'ai - financial - risk',;
-      title: 'AI Financial Risk Management',;
+      id: 'ai - financial - risk',
+      title: 'AI Financial Risk Management',
       description: unknown;
-        'Intelligent financial risk management platform using AI to predict and mitigate financial risks.',;
-      category: 'ai - ml',;
-      price: '$39,999 - $149,999',;
-      features: ['Risk Assessment',;
-        'Predictive Modeling',;
-        'Real - time Monitoring',;
+        'Intelligent financial risk management platform using AI to predict and mitigate financial risks.',
+      category: 'ai - ml',
+      price: '$39,999 - $149,999',
+      features: ['Risk Assessment',
+        'Predictive Modeling',
+        'Real - time Monitoring',
         'Compliance Reporting';
-      ],;
-      icon: <TrendingUp className="w-8 h-8" />,;
-      color: 'from - emerald - 500 to - teal - 500',;
-      link: '/services / ai - financial - risk - management',;
-      featured: false;,
-},;
+      ],
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: 'from - emerald - 500 to - teal - 500',
+      link: '/services / ai - financial - risk - management',
+      featured: false;
+},
     {}
-      id: 'ai - code - review-security',;
-      title: 'AI Code Review Security Scanner',;
+      id: 'ai - code - review-security',
+      title: 'AI Code Review Security Scanner',
       description: unknown;
-        'Advanced AI - powered code review and security scanning platform for automated vulnerability detection.',;
-      category: 'cybersecurity',;
-      price: '$27,999 - $109,999',;
-      features: ['Code Analysis',;
-        'Security Scanning',;
-        'Vulnerability Detection',;
+        'Advanced AI - powered code review and security scanning platform for automated vulnerability detection.',
+      category: 'cybersecurity',
+      price: '$27,999 - $109,999',
+      features: ['Code Analysis',
+        'Security Scanning',
+        'Vulnerability Detection',
         'Automated Reviews';
-      ],;
-      icon: <Code className="w-8 h-8" />,;
-      color: 'from - red - 500 to - pink - 500',;
-      link: '/services / ai - code - review-security - scanner',;
-      featured: false;,
-},;
+      ],
+      icon: <Code className="w-8 h-8" />,
+      color: 'from - red - 500 to - pink - 500',
+      link: '/services / ai - code - review-security - scanner',
+      featured: false;
+},
     {}
-      id: 'zero - trust - network',;
-      title: 'Zero Trust Network Access',;
+      id: 'zero - trust - network',
+      title: 'Zero Trust Network Access',
       description: unknown;
-        'Modern zero - trust security architecture providing secure access to network resources.',;
-      category: 'cybersecurity',;
-      price: '$32,999 - $119,999',;
-      features: ['Zero Trust',;
-        'Identity Management',;
-        'Secure Access',;
+        'Modern zero - trust security architecture providing secure access to network resources.',
+      category: 'cybersecurity',
+      price: '$32,999 - $119,999',
+      features: ['Zero Trust',
+        'Identity Management',
+        'Secure Access',
         'Network Security';
-      ],;
-      icon: <Lock className="w-8 h-8" />,;
-      color: 'from - orange - 500 to - red - 500',;
-      link: '/services / zero - trust - network - access',;
-      featured: false;,
-},;
+      ],
+      icon: <Lock className="w-8 h-8" />,
+      color: 'from - orange - 500 to - red - 500',
+      link: '/services / zero - trust - network - access',
+      featured: false;
+},
     {}
-      id: 'cloud - devops',;
-      title: 'Cloud DevOps Solutions',;
+      id: 'cloud - devops',
+      title: 'Cloud DevOps Solutions',
       description: unknown;
-        'Comprehensive cloud DevOps solutions for modern application development and deployment.',;
-      category: 'cloud',;
-      price: '$18,999 - $79,999',;
-      features: ['Cloud Migration',;
-        'CI / CD Pipelines',;
-        'Infrastructure as Code',;
+        'Comprehensive cloud DevOps solutions for modern application development and deployment.',
+      category: 'cloud',
+      price: '$18,999 - $79,999',
+      features: ['Cloud Migration',
+        'CI / CD Pipelines',
+        'Infrastructure as Code',
         'Monitoring';
-      ],;
-      icon: <Cloud className="w-8 h-8" />,;
-      color: 'from - sky - 500 to - blue - 500',;
-      link: '/services / cloud - devops',;
-      featured: false;,
-},;
+      ],
+      icon: <Cloud className="w-8 h-8" />,
+      color: 'from - sky - 500 to - blue - 500',
+      link: '/services / cloud - devops',
+      featured: false;
+},
     {}
-      id: 'it - infrastructure',;
-      title: 'IT Infrastructure Solutions',;
+      id: 'it - infrastructure',
+      title: 'IT Infrastructure Solutions',
       description: unknown;
-        'Enterprise - grade IT infrastructure solutions for modern business operations.',;
-      category: 'cloud',;
-      price: '$25,999 - $99,999',;
-      features: ['Infrastructure Design',;
-        'Network Solutions',;
-        'Security Implementation',;
+        'Enterprise - grade IT infrastructure solutions for modern business operations.',
+      category: 'cloud',
+      price: '$25,999 - $99,999',
+      features: ['Infrastructure Design',
+        'Network Solutions',
+        'Security Implementation',
         '24 / 7 Support';
-      ],;
-      icon: <Server className="w-8 h-8" />,;
-      color: 'from - slate - 500 to - gray - 500',;
-      link: '/services / it - infrastructure',;
-      featured: false;,
-},;
+      ],
+      icon: <Server className="w-8 h-8" />,
+      color: 'from - slate - 500 to - gray - 500',
+      link: '/services / it - infrastructure',
+      featured: false;
+},
     {}
-      id: 'micro - crm',;
-      title: 'Micro CRM Platform',;
+      id: 'micro - crm',
+      title: 'Micro CRM Platform',
       description: unknown;
-        'Lightweight, scalable CRM solution designed for growing businesses and startups.',;
-      category: 'micro - saas',;
-      price: '$9,999 - $39,999',;
-      features: ['Customer Management',;
-        'Sales Tracking',;
-        'Automation',;
+        'Lightweight, scalable CRM solution designed for growing businesses and startups.',
+      category: 'micro - saas',
+      price: '$9,999 - $39,999',
+      features: ['Customer Management',
+        'Sales Tracking',
+        'Automation',
         'Analytics';
-      ],;
-      icon: <Users className="w-8 h-8" />,;
-      color: 'from - blue - 500 to - indigo - 500',;
-      link: '/services / micro - crm',;
-      featured: false;,
+      ],
+      icon: <Users className="w-8 h-8" />,
+      color: 'from - blue - 500 to - indigo - 500',
+      link: '/services / micro - crm',
+      featured: false;
 }
   ];
-;
   innovativeServices2029,';
   serviceCategories,'';
   pricingTiers,''';
@@ -265,9 +261,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
 ''';
   const [selectedCategory, setSelectedCategory] = useState('all');''';
   const [searchTerm, setSearchTerm] = useState('');
-;
     return matchesCategory && matchesSearch}) ;
-;
   return ("";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">";
       <SEO"";
@@ -342,7 +336,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
 `;
                     selectedCategory === key`'`;
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`''`;
-                      : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 text-gray-300 hover:bg-white/10 hover:border-cyan-400/40'``;,
+                      : 'bg-white/5 backdrop-blur-sm border border-cyan-400/20 text-gray-300 hover:bg-white/10 hover:border-cyan-400/40'``;
 }`}">"";
                   <div className="flex items-center space-x-2">;
                     {category.icon}
@@ -380,7 +374,7 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
                 viewport={{ once: true }}``;
                 className={`group cursor-pointer ${}
 '`;
-                  service.featured ? 'ring-2 ring-cyan-400/50' : ''``;,
+                  service.featured ? 'ring-2 ring-cyan-400/50' : ''``;
 }`}
               >";
                 <Link to={service.link}>"";
@@ -535,17 +529,11 @@ export default function ComprehensiveServicesShowcase2029(...args: unknown[]): u
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default ComprehensiveServicesShowcase2029;
-;
 export { ComprehensiveServicesShowcase2029 };
-;
 export { ComprehensiveServicesShowcase2029 };
-;
 export { ComprehensiveServicesShowcase2029 };
-;
 export { ComprehensiveServicesShowcase2029 };
-;
 export { ComprehensiveServicesShowcase2029, ComprehensiveServicesShowcase2029 };

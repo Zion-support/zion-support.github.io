@@ -1,7 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
 export default function Page() {;
-interface SEOMetrics {;
+interface SEOMetrics {
   pageSpeed: number;
   mobileFriendliness: number;
   accessibility: number;
@@ -11,126 +10,117 @@ coreWebVitals: {;
 
     lcp: number;
     fid: number;
-    cls: number;,
+    cls: number;
 }}
-;
+
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {;
 
   url?: string;
   autoAnalyze?: boolean;
   showDetails?: boolean;
   onAnalysisComplete?: (analysis: SEOAnalysis) => void}
-;
-export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({;
 
-  url,;
-autoAnalyze:  true,;
-  showDetails = false,;
+export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+
+  url,
+autoAnalyze:  true,
+  showDetails = false,
   onAnalysisComplete}) => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-;
   // Mock SEO analysis data(in real app, this would come from actual analysis);
   const mockAnalysis: SEOAnalysis = useMemo(() => ({;
 
-    score: 87,;
+    score: 87,
     issues[;
       {;
 
-        id: '1',;
-        type: 'warning',;
-        title: 'Missing Meta Description',;
-        description: 'The page is missing a meta description tag, which is important for search engine snippets.',;
-        impact: 'medium',;
-        fixable: true,;
-        category: 'content';,
-},;
+        id: '1',
+        type: 'warning',
+        title: 'Missing Meta Description',
+        description: 'The page is missing a meta description tag, which is important for search engine snippets.',
+        impact: 'medium',
+        fixable: true,
+        category: 'content';
+},
       {;
 
-        id: '2',;
-        type: 'error',;
-        title: 'Slow Page Load Time',;
-        description: 'Page load time is above the recommended 3-second threshold.',;
-        impact: 'high',;
-        fixable: true,;
-        category: 'performance';,
-},;
+        id: '2',
+        type: 'error',
+        title: 'Slow Page Load Time',
+        description: 'Page load time is above the recommended 3-second threshold.',
+        impact: 'high',
+        fixable: true,
+        category: 'performance';
+},
       {;
 
-        id: '3',;
-        type: 'info',;
-        title: 'Missing Alt Text',;
-        description: 'Some images are missing alt text, which affects accessibility.',;
-        impact: 'low',;
-        fixable: true,;
+        id: '3',
+        type: 'info',
+        title: 'Missing Alt Text',
+        description: 'Some images are missing alt text, which affects accessibility.',
+        impact: 'low',
+        fixable: true,
         category: 'accessibility';
 
-    ],;
+    ],
     suggestions[;
       {;
 
-        id: '1',;
-        title: 'Optimize Images',;
-        description: 'Compress and optimize images to improve page load speed.',;
-        priority: 'high',;
-        effort: 'medium',;
-        estimatedImpact: 15;,
-},;
+        id: '1',
+        title: 'Optimize Images',
+        description: 'Compress and optimize images to improve page load speed.',
+        priority: 'high',
+        effort: 'medium',
+        estimatedImpact: 15;
+},
       {;
 
-        id: '2',;
-        title: 'Add Schema Markup',;
-        description: 'Implement structured data to improve search engine understanding.',;
-        priority: 'medium',;
-        effort: 'low',;
-        estimatedImpact: 8;,
-},;
+        id: '2',
+        title: 'Add Schema Markup',
+        description: 'Implement structured data to improve search engine understanding.',
+        priority: 'medium',
+        effort: 'low',
+        estimatedImpact: 8;
+},
       {;
 
-        id: '3',;
-        title: 'Improve Internal Linking',;
-        description: 'Add more internal links to improve page authority distribution.',;
-        priority: 'low',;
-        effort: 'low',;
+        id: '3',
+        title: 'Improve Internal Linking',
+        description: 'Add more internal links to improve page authority distribution.',
+        priority: 'low',
+        effort: 'low',
         estimatedImpact: 5;
 
-    ],;
+    ],
     metrics: {;
 
-      pageSpeed: 78,;
-      mobileFriendliness: 92,;
-      accessibility: 85,;
-      bestPractices: 88,;
-      seoScore: 87,;
+      pageSpeed: 78,
+      mobileFriendliness: 92,
+      accessibility: 85,
+      bestPractices: 88,
+      seoScore: 87,
       coreWebVitals: {;
-        lcp: 2.8,;
-        fid: 45,;
-        cls: 0.08}},;
+        lcp: 2.8,
+        fid: 45,
+        cls: 0.08}},
     lastUpdated: new Date () }) , []) ;
-;
   // Analyze SEO;
-  ;
     setIsAnalyzing(true) ;
-;
     return analysis?.issues.filter(issue => issue.category === selectedCategory) || []}, [analysis, selectedCategory]) ;
-;
   // Filter suggestions by priority;
   const filteredSuggestions = useMemo(() => {;
     return analysis?.suggestions.sort((a, b) => {;
 
       const priorityOrder = {;
 
-  high: 3, medium: 2,;  ;
-  ;
-  ;
-  ;
-  ;
+  high: 3, medium: 2,
+
   low: 1 };
       return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]) ;
-;
   if(!analysis && !isAnalyzing) {;
 
     return ();
@@ -182,7 +172,6 @@ autoAnalyze:  true,;
           </button>;
         </div>;
       </div>;
-;
       {isAnalyzing ? (";
         <div className="text-center py-12">;";
           <div className="w-16 h-16 border-4 border-zion-cyan/20 border-t-zion-cyan rounded-full animate-spin mx-auto mb-4" />";
@@ -226,7 +215,7 @@ autoAnalyze:  true,;
           <div className="mb-8">";
             <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Core Web Vitals</h4>";
             <div className="grid grid-cols-3 gap-4">`;
-              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`;,
+              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.lcp <= 2.5 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`;
 }`}>";
                 <div className="text-center">";
                   <div className="text-2xl font-bold text-zion-slate-dark">;
@@ -239,7 +228,7 @@ autoAnalyze:  true,;
                 </div>;
               </div>;
 `;
-              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.fid <= 100 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`;,
+              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.fid <= 100 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`;
 }`}>";
                 <div className="text-center">";
                   <div className="text-2xl font-bold text-zion-slate-dark">;
@@ -252,7 +241,7 @@ autoAnalyze:  true,;
                 </div>;
               </div>;
 `;
-              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`;,
+              <div className={`p-4 rounded-lg border ${analysis.metrics.coreWebVitals.cls <= 0.1 ? 'border-green-200 bg-green-50' : 'border-yellow-200 bg-yellow-50'`;
 }`}>";
                 <div className="text-center">";
                   <div className="text-2xl font-bold text-zion-slate-dark">;
@@ -279,9 +268,9 @@ autoAnalyze:  true,;
                     onClick={() => setSelectedCategory(category)}`;
                     className={`px-3 py-1 text-xs rounded-lg transition-colors ${selectedCategory === category';
                         ? 'bg-zion-cyan text-white'';
-                        : 'bg-zion-slate/10 text-zion-slate hover:bg-zion-slate/20'`;,
+                        : 'bg-zion-slate/10 text-zion-slate hover:bg-zion-slate/20'`;
 }`}
-;
+
                     {category.charAt(0) .toUpperCase () + category.slice(1) }
                   </button>) ) }
               </div>;
@@ -293,22 +282,22 @@ autoAnalyze:  true,;
                     key={issue.id}
                     initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                     animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                     exit = {;
 
-  { opacity: 0,;
-  y: -20;,
+  { opacity: 0,
+  y: -20;
 }}`;
                     className={`p-4 rounded-lg border-l-4 ${issue.type === 'error' ? 'border-red-500 bg-red-50' :';
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :';
-                      'border-blue-500 bg-blue-50'`;,
+                      'border-blue-500 bg-blue-50'`;
 }`}
 ";
                     <div className="flex items-start space-x-3">;
@@ -347,13 +336,13 @@ autoAnalyze:  true,;
                   key={suggestion.id}
                   initial = {;
 
-  { opacity: 0,;
-  x: 20;,
+  { opacity: 0,
+  x: 20;
 }}
                   animate = {;
 
-  { opacity: 1,;
-  x: 0;,
+  { opacity: 1,
+  x: 0;
 }}";
                   className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg";
 ";
@@ -380,18 +369,18 @@ autoAnalyze:  true,;
             {showAdvanced && (<motion.div;
                 initial = {;
 
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}
                 animate = {;
 
-  { opacity: 1,;
-  height: 'auto';,
+  { opacity: 1,
+  height: 'auto';
 }}
                 exit = {;
 
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}";
                 className="border-t border-zion-slate/20 pt-6";
 ";
@@ -421,21 +410,16 @@ autoAnalyze:  true,;
       ) : null};
     </div>;
   )};
-;
 // Hook for using SEO optimization;
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
   const [isOptimizing, setIsOptimizing] = useState(false);
-;
     setIsOptimizing(true) ;    // Implement actual optimization logic here;
     await new Promise(resolve => setTimeout (resolve, 3000) ) ;
     setIsOptimizing(false) }, []) ;
-;
   return {;
 
-    analysis,;
-    isOptimizing,;
-    optimizePage;,
+    analysis,
+    isOptimizing,
+    optimizePage;
 }};
-'"`;
-
-;,"});,})";
+'"`;"});})";

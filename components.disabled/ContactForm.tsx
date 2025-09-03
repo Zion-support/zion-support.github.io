@@ -1,91 +1,81 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
-;
-interface FormData {;
+interface FormData {
   name: string;
   email: string;
   company: string;
   service: string;
-  message: string;,
+  message: string;
 }
-;
-  name: string,,;
-  email: string,,;
-company: string,;
-  service: string,;
+
+  name: string,
+  email: string,
+company: string,
+  service: string,
 const ContactForm: React.FC = () => {;
   const [formData, setFormData] = useState<FormData>({;
-    name: '',;
-    email: '',;
-    company: '',;
-    service: '',;
-    message: '';,
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: '';
 });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
-;
   const services = [;
-    'AI & Machine Learning',;
-    'Cloud & DevOps',;
-    'Cybersecurity',;
-    'Web Development',;
-    'Mobile Development',;
-    'Data Analytics',;
-    'Digital Transformation',;
-    'Other',;
+    'AI & Machine Learning',
+    'Cloud & DevOps',
+    'Cybersecurity',
+    'Web Development',
+    'Mobile Development',
+    'Data Analytics',
+    'Digital Transformation',
+    'Other',
   ];
-;
   const validateForm = (): boolean => {;
     const newErrors: Partial<FormData> = {};
-;
     if (!formData.name.trim()) {;
-      newErrors.name = 'Name is required';,
+      newErrors.name = 'Name is required';
 }
-;
+
     if (!formData.email.trim()) {;
-      newErrors.email = 'Email is required';,
+      newErrors.email = 'Email is required';
 } else if (!/\S+@\S+\.\S+/.test(formData.email)) {;
-      newErrors.email = 'Email is invalid';,
+      newErrors.email = 'Email is invalid';
 }
-;
+
     if (!formData.message.trim()) {;
-      newErrors.message = 'Message is required';,
+      newErrors.message = 'Message is required';
 }
-;
+
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;,
+    return Object.keys(newErrors).length === 0;
 };
-;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
-;
     if (!validateForm()) {;
-      return;,
+      return;
 }
-;
+
     setIsSubmitting(true);
-;
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 2000));
-;
     setIsSubmitting(false);
     setIsSubmitted(true);
-;
     // Reset form after 3 seconds;
     setTimeout(() => {;
       setIsSubmitted(false);
       setFormData({;
-        name: '',;
-        email: '',;
-        company: '',;
-        service: '',;
-        message: '';,
-});,
-}, 3000);,
+        name: '',
+        email: '',
+        company: '',
+        service: '',
+        message: '';
+});
+}, 3000);
 };
-;
   const handleChange = (;
     e: React.ChangeEvent<;
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
@@ -93,13 +83,11 @@ const ContactForm: React.FC = () => {;
   ) => {;
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-;
     // Clear error when user starts typing;
     if (errors[name as keyof FormData]) {;
-      setErrors(prev => ({ ...prev, [name]: undefined }));,
+      setErrors(prev => ({ ...prev, [name]: undefined }));
 }
   };
-;
   if (isSubmitted) {;
     return (;
       <motion.div;
@@ -114,9 +102,9 @@ const ContactForm: React.FC = () => {;
           Thank you for reaching out. We'll get back to you within 24 hours.;
         </p>;
       </motion.div>;
-    );,
+    );
 }
-;
+
   return (;
     <div className="bg-white rounded-xl shadow-xl p-8">;
       <div className="text-center mb-8">;
@@ -176,7 +164,7 @@ const ContactForm: React.FC = () => {;
                 value={formData.name}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${;
-                  errors.name ? 'border-red-500' : 'border-gray-300';,
+                  errors.name ? 'border-red-500' : 'border-gray-300';
 }`}
                 placeholder="John Doe";
               />;
@@ -198,7 +186,7 @@ const ContactForm: React.FC = () => {;
                 value={formData.email}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${;
-                  errors.email ? 'border-red-500' : 'border-gray-300';,
+                  errors.email ? 'border-red-500' : 'border-gray-300';
 }`}
                 placeholder="john@company.com";
               />;
@@ -242,7 +230,7 @@ const ContactForm: React.FC = () => {;
                 {services.map(service => (;
                   <option key={service} value={service}>{service}</option>;
                 ))}
-;
+
               </select>;
             </div>;
           </div>;
@@ -260,7 +248,7 @@ const ContactForm: React.FC = () => {;
               onChange={handleChange}
               rows={5}
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${;
-                errors.message ? 'border-red-500' : 'border-gray-300';,
+                errors.message ? 'border-red-500' : 'border-gray-300';
 }`}
               placeholder="Tell us about your project and how we can help...";
             />;
@@ -275,7 +263,7 @@ const ContactForm: React.FC = () => {;
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 ${;
-              isSubmitting ? 'opacity-50 cursor-not-allowed' : '';,
+              isSubmitting ? 'opacity-50 cursor-not-allowed' : '';
 }`}
           >;
             {isSubmitting ? (;
@@ -293,7 +281,6 @@ const ContactForm: React.FC = () => {;
         </form>;
       </div>;
     </div>;
-  );,
+  );
 };
-;
 export default ContactForm;

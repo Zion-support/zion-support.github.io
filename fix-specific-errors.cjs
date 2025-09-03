@@ -7,11 +7,11 @@ function fixFile(filePath) {;
     let originalContent = content;
     // Fix malformed function declarations;
     content = content.replace(;
-      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,;
+      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,
       "export function $1() {";
     );
     content = content.replace(;
-      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,;
+      /export function (\w+)\(\.\.\.args: \[\]\): \{/g,
       "export function $1() {";
     );
     // Fix malformed useState;
@@ -31,7 +31,7 @@ function fixFile(filePath) {;
     content = content.replace(/\(\s*(\w+)\s*:\s*string\s*\)/g, "($1: string)");
     content = content.replace(/\(\s*(\w+)\s*:\s*number\s*\)/g, "($1: number)");
     content = content.replace(;
-      /\(\s*(\w+)\s*:\s*boolean\s*\)/g,;
+      /\(\s*(\w+)\s*:\s*boolean\s*\)/g,
       "($1: boolean)";
     );
     // Fix malformed JSX;
@@ -40,16 +40,16 @@ function fixFile(filePath) {;
     if (content !== originalContent) {;
   fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
-      return true;,;,
+      return true;,
 }
-;
-    return false;,;,
+
+    return false;,
 } catch (error) {;
   console.error(`Error fixing ${filePath }:`, error.message);
-    return false;,;,
+    return false;,
 }
 }
-;
+
 function getAllFiles(dir) {;
   const files = [];
   const items = fs.readdirSync(dir);
@@ -57,15 +57,15 @@ function getAllFiles(dir) {;
   const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     if (stat.isDirectory()) {;
-  files.push(...getAllFiles(fullPath));,;,
+  files.push(...getAllFiles(fullPath));,
 } else if (item.endsWith(`.tsx`) || item.endsWith(".ts")) {;
-  files.push(fullPath);,;,
+  files.push(fullPath);,
 }
   }
-;
-  return files;,;,
+
+  return files;,
 }
-;
+
 // Main execution;
 const srcDir = path.join(process.cwd(), `src`);
 if (fs.existsSync(srcDir)) {;
@@ -73,12 +73,12 @@ if (fs.existsSync(srcDir)) {;
   let fixedCount = 0;
   for (const file of files) {;
   if (fixFile(file)) {;
-  fixedCount++;,;,
+  fixedCount++;,
 }
   }
-;
-  console.log(`\nFixed ${fixedCount} files.`);,;,
+
+  console.log(`\nFixed ${fixedCount} files.`);,
 } else {;
-  console.log(`src directory not found`);,;,
+  console.log(`src directory not found`);,
 }
 }}}}}}

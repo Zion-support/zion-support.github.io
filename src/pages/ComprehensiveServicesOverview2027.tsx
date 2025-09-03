@@ -1,20 +1,17 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {;
-;
 ];
-;
 const categories = [;
-  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;
-  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;
-  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
+  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },
+  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },
+  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
-;
 const pricingModels = [;
-  { id: 'all', name: 'All Pricing' },;
-  { id: 'monthly', name: 'Monthly' },;
-  { id: 'yearly', name: 'Yearly' },;
-  { id: 'one - time', name: 'One - time' },;
+  { id: 'all', name: 'All Pricing' },
+  { id: 'monthly', name: 'Monthly' },
+  { id: 'yearly', name: 'Yearly' },
+  { id: 'one - time', name: 'One - time' },
   { id: 'usage - based', name: 'Usage - based' };
 ];
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -24,13 +21,13 @@ const pricingModels = [;
   const [sortBy, setSortBy] = useState < any> ('rating') ;
   const [viewMode, setViewMode] = useState < any> ('grid') ;
   const [expandedService, setExpandedService] = useState < any> (null) ;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     let filtered = MICRO_SAAS_SERVICES;
     if(selectedCategory !== 'all') {;
       filtered = filtered.filter(service => service.category === selectedCategory) }
@@ -42,7 +39,7 @@ const pricingModels = [;
         service.title.toLowerCase () .includes(query) ||;
         service.description.toLowerCase () .includes(query) ||;
         service.tags.some(tag => tag.toLowerCase () .includes(query) ) ||;
-        service.subcategory?.toLowerCase () .includes(query) ;) ;,
+        service.subcategory?.toLowerCase () .includes(query) ;) ;
 }
     filtered.sort((a, b) => {;
       switch(sortBy) {;
@@ -60,12 +57,12 @@ const pricingModels = [;
     setFilteredServices(filtered) }, [selectedCategory, selectedPricing, searchQuery, sortBy]) ;
   const ServiceCard = ({ service }: { service}) => (<motion.div;
       initial = {;
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
       animate = {;
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
       transition={{ duration: 0.5 }}
       className="group relative bg-gradient - to - br from - zion - blue - dark / 50 to - zion - slate - dark / 50 border border-zion - blue - light / 20 rounded-2xl p - 6 hover:border-zion - purple / 50 transition - all duration - 500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion -purple / 20">;
@@ -134,16 +131,16 @@ const pricingModels = [;
           </div>;
           {expandedService === service.id && (<motion.div;
               initial = {;
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}
               animate = {;
-  { opacity: 1,;
-  height: 'auto';,
+  { opacity: 1,
+  height: 'auto';
 }}
               exit = {;
-  { opacity: 0,;
-  height: 0;,
+  { opacity: 0,
+  height: 0;
 }}
               className="space - y-2">;
               {service.benefits.map((benefit: string, index: number) => (<div  key={index} className="flex items - start space - x-2">;
@@ -178,7 +175,6 @@ const pricingModels = [;
         </Button>;
       </div>;
     </motion.div>;) ;
-;
   return (<div  className="min - h-screen bg-gradient - to - br from - zion - slate - dark via - zion - slate to - zion - slate -light">;
       <SEO;
         title="Comprehensive Services Overview 2027 - Zion Tech Group";
@@ -200,16 +196,16 @@ const pricingModels = [;
           </motion.h1>;
           <motion.p;
             initial = {;
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
             animate = {;
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
             transition = {;
-  { duration: 0.6,;
-  delay: 0.2;,
+  { duration: 0.6,
+  delay: 0.2;
 }}
             className="text-xl text-zion - slate - light max - w-3xl mx -auto">;
             Discover our complete portfolio of cutting - edge technology solutions, from AI - powered innovations to enterprise - grade infrastructure services.</motion.p>;
@@ -314,7 +310,7 @@ const pricingModels = [;
                   variant={selectedCategory === category.id ? 'default' : 'outline'}
                   onClick={ () => setSelectedCategory(category.id) }
                   className={selectedCategory === category.id ? 'bg-zion - cyan hover:bg-zion - cyan - light' : 'border-zion - blue - light / 20 text-zion - slate - light hover:bg-zion - blue - dark / 30'}
-;
+
                   {category.icon}
                   <span className="ml-2">{category.name}</span>;
                   <Badge variant="secondary" className="ml-2 bg-zion -purple / 80">;
@@ -328,7 +324,7 @@ const pricingModels = [;
                   variant={selectedPricing === pricing.id ? 'default' : 'outline'}
                   onClick={ () => setSelectedPricing(pricing.id) }
                   className={selectedPricing === pricing.id ? 'bg-zion - purple hover:bg-zion - purple - light' : 'border-zion - purple / 20 text-zion - slate - light hover:bg-zion - purple / 30'}
-;
+
                   {pricing.name}
                 </Button>) ) }
             </div>;
@@ -336,7 +332,7 @@ const pricingModels = [;
           {/* Services Grid */}
 <div  className: {`grid gap-8 ${viewMode === 'grid';
               ? 'grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3';
-              : 'grid - cols - 1';,
+              : 'grid - cols - 1';
 }`}>;
             {filteredServices.map((service) => (;
               <ServiceCard key={service.id} service={service} />) ) }
@@ -355,7 +351,7 @@ const pricingModels = [;
         {/* Services Grid */}
 <div  className: {`grid gap-8 ${viewMode === 'grid';
             ? 'grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3';
-            : 'grid - cols - 1';,
+            : 'grid - cols - 1';
 }`}>;
           {filteredServices.map((service) => (;
             <ServiceCard key={service.id} service={service} />) ) };
@@ -367,7 +363,7 @@ const pricingModels = [;
               onClick={ () => {;
                 setSelectedCategory('all') ;
                 setSelectedPricing('all') ;
-                setSearchQuery('') ;,
+                setSearchQuery('') ;
 }}
               className="bg-zion - cyan hover:bg-zion - cyan -light">;
               Clear Filters;
@@ -396,7 +392,7 @@ const pricingModels = [;
           </div>;
         </div>;
       </section>;
-    </div>;) ;,
+    </div>;) ;
 }
 export default function ComprehensiveServicesOverview2027() {return (";
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
@@ -407,6 +403,6 @@ export default function ComprehensiveServicesOverview2027() {return (";
           Professional ComprehensiveServicesOverview2027 services to help your business grow.;
         </p>;
       </div>;
-  );,
+  );
 }
 }

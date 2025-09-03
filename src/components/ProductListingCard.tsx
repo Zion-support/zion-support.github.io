@@ -4,25 +4,22 @@ export default function Page() {;
 `;
       router(`/request-quote?listing=${listing.id}`)}
   };
-;
   return ();
     <div;
       data-testid= "equipment-link";'`;
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
       onClick={handleViewListing};
       tabIndex={0};";
-      ;
       onKeyDown={(e) => {;
         if(e.key === 'Enter' || e.key === ' ') {;
           e.preventDefault () ;
           handleViewListing () }
       }}
-;
+
       {/* Image */}
       <div';
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
         onClick={handleViewListing} // Keep existing onClick for navigation;";
-        ;
         tabIndex={-1} // Remove from tab order as parent is focusable;
         onKeyDown={(e) => {;
           if(e.key === 'Enter' || e.key === ' ') {;
@@ -127,7 +124,6 @@ export default function Page() {;
       </div>;
     </div>;) }
 export default React.memo(ProductListingCard);
-;
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;

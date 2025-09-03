@@ -1,6 +1,5 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
 const Solutions: React.FC = () => {;
   return(<>;
       <SEO title="Solutions - Zion Tech Group" />;
@@ -11,7 +10,6 @@ const Solutions: React.FC = () => {;
         </div>;
       </div>;
     </>;
-  );,
+  );
 };
-;
 export default Solutions;

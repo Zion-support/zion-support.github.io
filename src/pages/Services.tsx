@@ -1,17 +1,14 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
 export default function Services(...args: any[]): any {): unknown {): unknown {}
   const [activeCategory, setActiveCategory] = useState(0);';
   const [searchTerm, setSearchTerm] = useState('');
-;
   const filteredServices: unknown = allServices.filter(service => {}
     const matchesSearch: unknown = service.name.toLowerCase () .includes(searchQuery.toLowerCase () ) ||;
                          service.description.toLowerCase () .includes(searchQuery.toLowerCase () ) ;
     const matchesCategory: unknown = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;,
+    return matchesSearch && matchesCategory;
 }) ;
-;
   return();
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">"";
       <div className="container mx-auto px-4 py-24 text-center text-white">"        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
@@ -204,189 +201,160 @@ export default function Services(...args: any[]): any {): unknown {): unknown {}
 export default Services;'";
 '"'";
 export { Services };
-;
 export default function Services() {;
   const services = [;
     {;
-      id: 'ai',;
-      title: "AI Solutions",;
-      description: "Transform your business with cutting-edge artificial intelligence and machine learning solutions",;
-      icon: Brain,;
-      color: "from-purple-500 to-pink-500",;
-      features: [;
-        "Machine Learning Models",;
-        "Natural Language Processing",;
-        "Computer Vision",;
-        "Predictive Analytics",;
-        "AI-Powered Automation",;
-        "Data Science Consulting";
-      ],;
-      benefits: [;
-        "Increase operational efficiency by up to 300%",;
-        "Reduce costs through intelligent automation",;
-        "Gain competitive advantage with AI insights",;
-        "Scale operations without proportional cost increase";
-      ],;
-      link: "/services/ai";,
-},;
+      id: 'ai',
+      title: "AI Solutions",
+      description: "Transform your business with cutting-edge artificial intelligence and machine learning solutions",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500",
+      features: [ "Machine Learning Models",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Predictive Analytics",
+        "AI-Powered Automation",
+        "Data Science Consulting" ],
+      benefits: [ "Increase operational efficiency by up to 300%",
+        "Reduce costs through intelligent automation",
+        "Gain competitive advantage with AI insights",
+        "Scale operations without proportional cost increase" ],
+      link: "/services/ai";
+},
     {;
-      id: 'talent',;
-      title: "Tech Talent",;
-      description: "Access world-class developers, engineers, and IT professionals for your projects",;
-      icon: Users,      color: "from-blue-500 to-cyan-500",;
-      features: [;
-        "Full-Stack Developers",;
-        "DevOps Engineers",;
-        "Data Scientists",;
-        "UI/UX Designers",;
-        "Project Managers",;
-        "QA Engineers";
-      ],;
-      benefits: [;
-        "Reduce hiring time by 70%",;
-        "Access global talent pool",;
-        "Flexible engagement models",;
-        "Proven track record of success";
-      ],;
-      link: "/talent";,
-},;
+      id: 'talent',
+      title: "Tech Talent",
+      description: "Access world-class developers, engineers, and IT professionals for your projects",
+      icon: Users,      color: "from-blue-500 to-cyan-500",
+      features: [ "Full-Stack Developers",
+        "DevOps Engineers",
+        "Data Scientists",
+        "UI/UX Designers",
+        "Project Managers",
+        "QA Engineers" ],
+      benefits: [ "Reduce hiring time by 70%",
+        "Access global talent pool",
+        "Flexible engagement models",
+        "Proven track record of success" ],
+      link: "/talent";
+},
     {;
-      id: 'equipment',;
-      title: "Equipment & Infrastructure",;
-      description: "High-performance technology infrastructure and hardware solutions for modern businesses",;
-      icon: Zap,;
-      color: "from-yellow-500 to-orange-500",;
-      features: [;
-        "Cloud Infrastructure",;
-        "High-Performance Computing",;
-        "Network Solutions",;
-        "Security Hardware",;
-        "Data Center Equipment",;
-        "IoT Devices";
-      ],;
-      benefits: [;
-        "Optimize performance and reliability",;
-        "Reduce infrastructure costs",;
-        "Scale with business growth",;
-        "Enhanced security and compliance";
-      ],;
-      link: "/equipment";,
-},;
+      id: 'equipment',
+      title: "Equipment & Infrastructure",
+      description: "High-performance technology infrastructure and hardware solutions for modern businesses",
+      icon: Zap,
+      color: "from-yellow-500 to-orange-500",
+      features: [ "Cloud Infrastructure",
+        "High-Performance Computing",
+        "Network Solutions",
+        "Security Hardware",
+        "Data Center Equipment",
+        "IoT Devices" ],
+      benefits: [ "Optimize performance and reliability",
+        "Reduce infrastructure costs",
+        "Scale with business growth",
+        "Enhanced security and compliance" ],
+      link: "/equipment";
+},
     {;
-      id: 'consulting',;
-      title: "Technology Consulting",;
-      description: "Strategic guidance for digital transformation and technology optimization",;
-      icon: TrendingUp,;
-      color: "from-green-500 to-emerald-500",;
-      features: [;
-        "Digital Strategy",;
-        "Technology Roadmap",;
-        "Process Optimization",;
-        "Change Management",;
-        "Risk Assessment",;
-        "Performance Audits";
-      ],;
-      benefits: [;
-        "Align technology with business goals",;
-        "Reduce technology risks",;
-        "Optimize IT investments",;
-        "Accelerate digital transformation";
-      ],;
-      link: "/consulting";,
-},;
+      id: 'consulting',
+      title: "Technology Consulting",
+      description: "Strategic guidance for digital transformation and technology optimization",
+      icon: TrendingUp,
+      color: "from-green-500 to-emerald-500",
+      features: [ "Digital Strategy",
+        "Technology Roadmap",
+        "Process Optimization",
+        "Change Management",
+        "Risk Assessment",
+        "Performance Audits" ],
+      benefits: [ "Align technology with business goals",
+        "Reduce technology risks",
+        "Optimize IT investments",
+        "Accelerate digital transformation" ],
+      link: "/consulting";
+},
     {;
-      id: 'cybersecurity',;
-      title: "Cybersecurity Services",;
-      description: "Comprehensive security solutions to protect your digital assets and ensure compliance",;
-      icon: Shield,;
-      color: "from-red-500 to-pink-500",;
-      features: [;
-        "Security Audits",;
-        "Penetration Testing",;
-        "SOC2 Compliance",;
-        "Incident Response",;
-        "Security Training",;
-        "Threat Intelligence";
-      ],;
-      benefits: [;
-        "Protect against cyber threats",;
-        "Achieve compliance standards",;
-        "Reduce security risks",;
-        "Build customer trust";
-      ],;
-      link: "/services/cybersecurity";,
-},;
+      id: 'cybersecurity',
+      title: "Cybersecurity Services",
+      description: "Comprehensive security solutions to protect your digital assets and ensure compliance",
+      icon: Shield,
+      color: "from-red-500 to-pink-500",
+      features: [ "Security Audits",
+        "Penetration Testing",
+        "SOC2 Compliance",
+        "Incident Response",
+        "Security Training",
+        "Threat Intelligence" ],
+      benefits: [ "Protect against cyber threats",
+        "Achieve compliance standards",
+        "Reduce security risks",
+        "Build customer trust" ],
+      link: "/services/cybersecurity";
+},
     {;
-      id: 'cloud',;
-      title: "Cloud Services",;
-      description: "Scalable cloud solutions and DevOps services for modern application development",;
-      icon: Cloud,;
-      color: "from-indigo-500 to-purple-500",;
-      features: [;
-        "Cloud Migration",;
-        "DevOps Automation",;
-        "Container Orchestration",;
-        "Serverless Architecture",;
-        "Monitoring & Logging",;
-        "Cost Optimization";
-      ],;
-      benefits: [;
-        "Reduce infrastructure costs",;
-        "Improve scalability and reliability",;
-        "Accelerate development cycles",;
-        "Enhanced disaster recovery";
-      ],;
+      id: 'cloud',
+      title: "Cloud Services",
+      description: "Scalable cloud solutions and DevOps services for modern application development",
+      icon: Cloud,
+      color: "from-indigo-500 to-purple-500",
+      features: [ "Cloud Migration",
+        "DevOps Automation",
+        "Container Orchestration",
+        "Serverless Architecture",
+        "Monitoring & Logging",
+        "Cost Optimization" ],
+      benefits: [ "Reduce infrastructure costs",
+        "Improve scalability and reliability",
+        "Accelerate development cycles",
+        "Enhanced disaster recovery" ],
       link: "/services/cloud"    }
   ];
-;
   const stats = [;
     {;
-      icon: Globe,;
-      value: "500+",;
-      label: "Projects Delivered",;
-      description: "Across 25+ countries";,
-},;
+      icon: Globe,
+      value: "500+",
+      label: "Projects Delivered",
+      description: "Across 25+ countries";
+},
     {;
-      icon: Code,;
-      value: "50+",;
-      label: "Technologies",;
-      description: "Modern tech stack";,
-},;
+      icon: Code,
+      value: "50+",
+      label: "Technologies",
+      description: "Modern tech stack";
+},
     {;
-      icon: Star,;
-      value: "99.9%",;
-      label: "Client Satisfaction",;
-      description: "Proven track record";,
-},;
+      icon: Star,
+      value: "99.9%",
+      label: "Client Satisfaction",
+      description: "Proven track record";
+},
     {;
-      icon: Lock,;
-      value: "100%",;
-      label: "Security",;
-      description: "Zero breaches";,
+      icon: Lock,
+      value: "100%",
+      label: "Security",
+      description: "Zero breaches";
 }
   ];
-;
   const containerVariants = {;
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 },
     visible: {;
-      opacity: 1,;
+      opacity: 1,
       transition: {;
-        staggerChildren: 0.1;,
+        staggerChildren: 0.1;
 }
     }
   };
-;
   const itemVariants = {;
-    hidden: { opacity: 0, y: 20 },;
+    hidden: { opacity: 0, y: 20 },
     visible: {;
-      opacity: 1,;
-      y: 0,;
+      opacity: 1,
+      y: 0,
       transition: {;
-        duration: 0.6;,
+        duration: 0.6;
 }
     }
   };
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -395,7 +363,6 @@ export default function Services() {;
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>;
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>;
         </div>;
-        ;
         <div className="container mx-auto px-4 text-center relative z-10">;
           <motion.div ;
             variants={containerVariants}
@@ -481,10 +448,8 @@ export default function Services() {;
                     <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />;
                   </Link>;
                 </div>;
-                ;
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>;
                 <p className="text-gray-400 mb-6">{service.description}</p>;
-                ;
                 {/* Features */}
                 <div className="mb-6">;
                   <h4 className="text-white font-medium mb-3">Key Features</h4>;
@@ -576,6 +541,6 @@ export default function Services() {;
               </Link>;
             </div>;
     </>;
-  );,
+  );
 }
 export default Services;

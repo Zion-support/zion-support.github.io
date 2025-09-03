@@ -1,72 +1,69 @@
 import React from 'react';
 import Head from 'next/head';
-;
 const Guides: React.FC = () => {;
   const guides = [;
     {;
-      id: 1,;
-      title: 'Getting Started with Zion AI Marketplace',;
-      category: 'Beginner',;
-      description: 'Complete beginner guide to using our AI marketplace platform',;
-      readTime: '15 min',;
-      difficulty: 'Beginner',;
-      tags: ['onboarding', 'setup', 'first-steps'],;
-      featured: true,;,
-},;
+      id: 1,
+      title: 'Getting Started with Zion AI Marketplace',
+      category: 'Beginner',
+      description: 'Complete beginner guide to using our AI marketplace platform',
+      readTime: '15 min',
+      difficulty: 'Beginner',
+      tags: ['onboarding', 'setup', 'first-steps'],
+      featured: true,,
+},
     {;
-      id: 2,;
-      title: 'Advanced AI Integration Strategies',;
-      category: 'Advanced',;
-      description: 'Deep dive into advanced techniques for AI service integration',;
-      readTime: '45 min',;
-      difficulty: 'Advanced',;
-      tags: ['integration', 'advanced', 'workflow'],;
-      featured: false,;,
-},;
+      id: 2,
+      title: 'Advanced AI Integration Strategies',
+      category: 'Advanced',
+      description: 'Deep dive into advanced techniques for AI service integration',
+      readTime: '45 min',
+      difficulty: 'Advanced',
+      tags: ['integration', 'advanced', 'workflow'],
+      featured: false,,
+},
     {;
-      id: 3,;
-      title: 'Building Scalable AI Solutions',;
-      category: 'Intermediate',;
-      description: 'Learn how to architect AI solutions that grow with your business',;
-      readTime: '30 min',;
-      difficulty: 'Intermediate',;
-      tags: ['architecture', 'scalability', 'best-practices'],;
-      featured: true,;,
-},;
+      id: 3,
+      title: 'Building Scalable AI Solutions',
+      category: 'Intermediate',
+      description: 'Learn how to architect AI solutions that grow with your business',
+      readTime: '30 min',
+      difficulty: 'Intermediate',
+      tags: ['architecture', 'scalability', 'best-practices'],
+      featured: true,,
+},
     {;
-      id: 4,;
-      title: 'AI Ethics and Responsible Development',;
-      category: 'Intermediate',;
-      description: 'Essential principles for developing ethical AI systems',;
-      readTime: '25 min',;
-      difficulty: 'Intermediate',;
-      tags: ['ethics', 'responsible-ai', 'governance'],;
-      featured: false,;,
-},;
+      id: 4,
+      title: 'AI Ethics and Responsible Development',
+      category: 'Intermediate',
+      description: 'Essential principles for developing ethical AI systems',
+      readTime: '25 min',
+      difficulty: 'Intermediate',
+      tags: ['ethics', 'responsible-ai', 'governance'],
+      featured: false,,
+},
     {;
-      id: 5,;
-      title: 'Optimizing AI Model Performance',;
-      category: 'Advanced',;
-      description: 'Practical techniques for improving AI model accuracy and efficiency',;
-      readTime: '40 min',;
-      difficulty: 'Advanced',;
-      tags: ['optimization', 'performance', 'ml'],;
-      featured: false,;,
-},;
+      id: 5,
+      title: 'Optimizing AI Model Performance',
+      category: 'Advanced',
+      description: 'Practical techniques for improving AI model accuracy and efficiency',
+      readTime: '40 min',
+      difficulty: 'Advanced',
+      tags: ['optimization', 'performance', 'ml'],
+      featured: false,,
+},
     {;
-      id: 6,;
-      title: 'Security Best Practices for AI Systems',;
-      category: 'Intermediate',;
-      description: 'Comprehensive security guide for AI marketplace implementations',;
-      readTime: '35 min',;
-      difficulty: 'Intermediate',;
-      tags: ['security', 'compliance', 'best-practices'],;
-      featured: true,;,
-},;
+      id: 6,
+      title: 'Security Best Practices for AI Systems',
+      category: 'Intermediate',
+      description: 'Comprehensive security guide for AI marketplace implementations',
+      readTime: '35 min',
+      difficulty: 'Intermediate',
+      tags: ['security', 'compliance', 'best-practices'],
+      featured: true,,
+},
   ];
-;
   const categories = ['All', 'Beginner', 'Intermediate', 'Advanced'];
-;
   return (;
     <>;
       <Head>;
@@ -74,7 +71,6 @@ const Guides: React.FC = () => {;
         <meta name="description" content="Comprehensive guides for AI integration and marketplace success" />;
         <meta name="keywords" content="guides, tutorials, AI, marketplace, learning" />;
       </Head>;
-      ;
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">;
         {/* Header */}
         <header className="bg-black/20 backdrop-blur-sm border-b border-blue-500/30">;
@@ -127,19 +123,16 @@ const Guides: React.FC = () => {;
                   <span className={`text-xs px-2 py-1 rounded-full ${;
                     guide.difficulty === 'Beginner' ? 'bg-green-600 text-white' :;
                     guide.difficulty === 'Intermediate' ? 'bg-yellow-600 text-white' :;
-                    'bg-red-600 text-white';,
+                    'bg-red-600 text-white';
 }`}>;
                     {guide.difficulty}
                   </span>;
                   <span className="text-xs text-gray-400">{guide.readTime}</span>;
                 </div>;
-                ;
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors cursor-pointer">;
                   {guide.title}
                 </h3>;
-                ;
                 <p className="text-gray-300 text-sm mb-4">{guide.description}</p>;
-                ;
                 <div className="flex flex-wrap gap-2 mb-4">;
                   {guide.tags.map((tag, index) => (;
                     <span;
@@ -149,7 +142,6 @@ const Guides: React.FC = () => {;
                     </span>;
                   ))}
                 </div>;
-                ;
                 <button className="text-blue-400 hover:text-blue-300 text-sm font-medium group-hover:translate-x-1 transition-transform">;
                   Read Guide →;
                 </button>;
@@ -202,7 +194,6 @@ const Guides: React.FC = () => {;
         </footer>;
       </div>;
     </>;
-  );,
+  );
 };
-;
 export default Guides;

@@ -1,19 +1,18 @@
 import React from 'react';
 import { ;
-  Brain, ;
-  TrendingUp, ;
-  Users, ;
-  Target, ;
-  Zap, ;
-  BarChart3, ;
-  MessageCircle, ;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Shield,;
-  Rocket;,
+  Brain,
+  TrendingUp,
+  Users,
+  Target,
+  Zap,
+  BarChart3,
+  MessageCircle,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Shield,
+  Rocket;
 } from 'lucide-react';
-;
 export default function AISalesCopilotPage() {;
   return (;
     <div className="min-h-screen bg-zion-slate-dark text-white">;
@@ -211,5 +210,5 @@ export default function AISalesCopilotPage() {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }

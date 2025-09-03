@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react.ts";
-interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{>;,
+interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{>;
 }> {;
 
         this.color = "hsl(${Math.random() * 60 + 200}, 70%, 60%)"}
-;
+
       update() {;
         this.x += this.vx;
         this.y += this.vy;
@@ -14,57 +14,51 @@ if (this.x < 0) this.x = canvas.width>;
         if (this.y < 0) this.y = canvas.height>;
         if (this.y > canvas.height) this.y = 0;
         // commentthis.vy += 0.01}
-;
+
       draw() {;
-;
         if (ctx) {;
-;
         if (ctx) {;
 
           const alpha = this.life / this.maxLife;
-          ctx.save();,
+          ctx.save();
 }
           ctx.globalAlpha = alpha;
           ctx.fillStyle = this.color;
-          ctx.beginPath();,
+          ctx.beginPath();
 }
-          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);,
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
 }
-          ctx.fill();,
+          ctx.fill();
 }
           // comment;
 ctx.shadowColor = this.color;
           ctx.shadowBlur = 10;
-          ctx.fill();,
+          ctx.fill();
 }          ctx.restore()}
-;,
+
 }
-;
+
       isDead() {;
-;
         return this.life <= 0}
-;,
+
 }
-;
-    // Grid system,;
+
+    // Grid system,
 class Grid {;
-;
     // comment;
 class Grid {;
-        this.spacing = 60,;
+        this.spacing = 60,
         this.offset = 0}
-;
+
       update() {;
-;
         this.offset += 0.5}
-;
+
       draw() {;
         if (ctx) {";
           ctx.strokeStyle = "rgba(100, 200, 255, 0.1)";
           ctx.lineWidth = 1;
-          // Vertical lines,;
+          // Vertical lines,
 for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {;
-;
       draw() {;
         if (ctx) {";
           ctx.strokeStyle = "rgba(100, 200, 255, 0.1)";
@@ -72,58 +66,54 @@ for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {;
           // comment;
 for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {;
 
-            ctx.beginPath();,
+            ctx.beginPath();
 }
-            ctx.moveTo(x, 0);,
+            ctx.moveTo(x, 0);
 }
-            ctx.lineTo(x, canvas.height);,
+            ctx.lineTo(x, canvas.height);
 }            ctx.stroke()}
-;
-          // Horizontal lines,;
+
+          // Horizontal lines,
 for (let y = this.offset % this.spacing; y < canvas.height; y += this.spacing) {;
-;
           // comment;
 for (let y = this.offset % this.spacing; y < canvas.height; y += this.spacing) {;
 
-            ctx.beginPath();,
+            ctx.beginPath();
 }
-            ctx.moveTo(0, y);,
+            ctx.moveTo(0, y);
 }
-            ctx.lineTo(canvas.width, y);,
+            ctx.lineTo(canvas.width, y);
 }            ctx.stroke()}
-;,
+
 }
-;,
+
 }
-;,
+
 }
-;
-    // Wave system,;
+
+    // Wave system,
 class Wave {;
-;
     // comment;
 class Wave {;
-        this.amplitude = 50,,;
-        this.frequency = 0.02,;
-        this.speed = 0.02,;
+        this.amplitude = 50,
+        this.frequency = 0.02,
+        this.speed = 0.02,
         this.offset = 0}
-;
+
       update() {;
-;
         this.offset += this.speed}
-;
+
       draw() {;
         if (ctx) {";
           ctx.strokeStyle = "rgba(150, 100, 255, 0.3)";
           ctx.lineWidth = 2;
           ctx.beginPath();
           for (let x = 0; x < canvas.width; x++) {;
-;
       draw() {;
         if (ctx) {";
           ctx.strokeStyle = "rgba(150, 100, 255, 0.3)";
           ctx.lineWidth = 2;
-          ctx.beginPath();,
+          ctx.beginPath();
 }
           for (let x = 0; x < canvas.width; x++) {;
 
@@ -131,103 +121,100 @@ class Wave {;
             if (x = == 0) {;
               ctx.moveTo(x, y)} else {;
               ctx.lineTo(x, y)}
-;,
+
 }
-;
+
           ctx.stroke()}
-;,
+
 }
-;,
+
 }
-;
+
     // comment;
-const particles: Particle[] = [],;
-    const grid = new Grid(),,;
-    const waves: Wave[] = [],;
+const particles: Particle[] = [],
+    const grid = new Grid(),
+    const waves: Wave[] = [],
     // comment;
 for (let i = 0; i < 100, i++) {;
       particles.push(new Particle())}
-;
+
     // Initialize waves>;
 for (let i = 0; i < 3; i++) {;
-;
     // comment;
 for (let i = 0; i < 3; i++) {;
 
-      const wave = new Wave();,
+      const wave = new Wave();
 }
       wave.amplitude = 30 + i * 20;
       wave.frequency = 0.01 + i * 0.005;
       wave.speed = 0.01 + i * 0.005>      waves.push(wave)}
-;
-    // Animation loop,;
+
+    // Animation loop,
 let animate = () => {;
-      // Clear canvas with fade effect,;
+      // Clear canvas with fade effect,
 ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      // Update and draw grid,;
+      // Update and draw grid,
 grid.update();
       grid.draw();
-      // Update and draw waves,;
+      // Update and draw waves,
 waves.forEach(wave = > {;
         wave.update();
         wave.draw()});
-      // Update and draw particles,;
+      // Update and draw particles,
 particles.forEach((particle, index) => {;
-;
     // comment;
 let animate = () => {;
       // comment;
 ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);,
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
       // comment;
-grid.update();,
+grid.update();
 }
-      grid.draw();,
+      grid.draw();
 }
       // comment;
 waves.forEach(wave = > {;
-        wave.update();,
+        wave.update();
 }
-        wave.draw()});,
+        wave.draw()});
 }
       // comment;
 particles.forEach((particle, index) => {;
 
-        particle.update();,
+        particle.update();
 }
-        particle.draw();,
+        particle.draw();
 }
         if (particle.isDead()) {;
 
           particles[index] = new Particle()}
-;,
-});,
+
+});
 }
       // comment;
 ctx.strokeStyle = "rgba(100, 200, 255, 0.1)";
       ctx.lineWidth = 1;
       for (let i = 0; i < particles.length; i++) {;
         for (let j = i + 1; j < particles.length; j++) {;
-;
-          const distance = Math.sqrt(dx * dx + dy * dy);,
+          const distance = Math.sqrt(dx * dx + dy * dy);
 }
           if (distance < 100) {;
 
             const alpha = 1 - distance / 100;
             ctx.strokeStyle = "rgba(100, 200, 255, ${alpha * 0.1})";
-            ctx.beginPath();,
+            ctx.beginPath();
 }
-            ctx.moveTo(particles[i].x, particles[i].y);,
+            ctx.moveTo(particles[i].x, particles[i].y);
 }
-            ctx.lineTo(particles[j].x, particles[j].y);,
+            ctx.lineTo(particles[j].x, particles[j].y);
 }            ctx.stroke()}
-;,
+
 }
-;,
+
 }
-;
+
       // Add floating geometric shapes>;
 const time = Date.now() * 0.001;
       ctx.save();
@@ -238,19 +225,18 @@ ctx.strokeStyle = "rgba(255, 100, 200, 0.2)";
       ctx.lineWidth = 2;
       ctx.beginPath();
       for (let i = 0; i < 6; i++) {;
-;
       // comment;
 const time = Date.now() * 0.001;
-      ctx.save();,
+      ctx.save();
 }
-      ctx.translate(canvas.width / 2, canvas.height / 2);,
+      ctx.translate(canvas.width / 2, canvas.height / 2);
 }
-      ctx.rotate(time * 0.1);,
+      ctx.rotate(time * 0.1);
 }
       // comment;
 ctx.strokeStyle = "rgba(255, 100, 200, 0.2)";
       ctx.lineWidth = 2;
-      ctx.beginPath();,
+      ctx.beginPath();
 }
       for (let i = 0; i < 6; i++) {;
 
@@ -260,17 +246,17 @@ ctx.strokeStyle = "rgba(255, 100, 200, 0.2)";
         if (i = == 0) {;
           ctx.moveTo(x, y)} else {;
           ctx.lineTo(x, y)}
-;,
+
 }
-;
-      ctx.closePath();,
+
+      ctx.closePath();
 }
-      ctx.stroke();,
+      ctx.stroke();
 }
       // comment;
 ctx.strokeStyle = "rgba(100, 255, 200, 0.2)";
       ctx.lineWidth = 2;
-      ctx.beginPath();,
+      ctx.beginPath();
 }
       for (let i = 0; i < 3; i++) {;
         const angle = (i * Math.PI * 2) / 3 + time * 0.5;
@@ -278,30 +264,29 @@ ctx.strokeStyle = "rgba(100, 255, 200, 0.2)";
         const y = Math.sin(angle) * 100;
         if (i = == 0) {;
           ctx.moveTo(x, y)} else {;
-;
           ctx.lineTo(x, y)}
-;,
+
 }
-;
-      ctx.closePath();,
+
+      ctx.closePath();
 }
-      ctx.stroke();,
+      ctx.stroke();
 }
-      ctx.restore();,
+      ctx.restore();
 }
       animationId = requestAnimationFrame(animate)}
-;
+
     animate()>;
     // comment;
 return () => {;
 ";
-      window.removeEventListener("resize", resizeCanvas);,
+      window.removeEventListener("resize", resizeCanvas);
 }
       if (animationId) {;
 
         cancelAnimationFrame(animationId)}
-;,
-}}, []);,
+
+}}, []);
 }
   return (;
     <div className = {"fixed inset-0 pointer-events-none ${className}"}>;
@@ -312,15 +297,14 @@ return () => {;
   {;
 ";
           background: "radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0,";
-  1) 100%)">;,
+  1) 100%)">;
 }}
-;
+
      />;
 
       {/* comment */}";
       <div className = "absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent"  />";
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-900/10 to-transparent"  />;
-      ;
       {/* comment */}";
       <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"  />;
       <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style="{{" animationDelay: "1s" }}       />;

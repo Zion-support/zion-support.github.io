@@ -2,61 +2,61 @@ import Head from "next/head";
 import React from "react";
 import dynamic from "next/dynamic";
 const Component = () => {;
-const Head = dynamic(() => import("next/head"), { ssr: false });,
+const Head = dynamic(() => import("next/head"), { ssr: false });
 }
-const Link = dynamic(() => import("next/link"), { ssr: false });,
+const Link = dynamic(() => import("next/link"), { ssr: false });
 }
-  Shield,;
-  Cloud} from "lucide - react",;
-const SEO = dynamic(() => import("../components/SEO"), { ssr: false });,
+  Shield,
+  Cloud} from "lucide - react",
+const SEO = dynamic(() => import("../components/SEO"), { ssr: false });
 }
 export default function Partners() {;
 
-  const partnerBenefits = [];,
+  const partnerBenefits = [];
 }, {;
       icon: Award,";
       title: "Technology Partners", description: "Integration partnerships with leading technology providers.",";
-      benefits: ["API integrations", "Technical support", "Co-marketing opportunities"];,
+      benefits: ["API integrations", "Technical support", "Co-marketing opportunities"];
 }, {;
       icon: Users,";
       title: "Channel Partners", description: "Reseller and distribution partnerships for market reach.",";
-      benefits: ["Revenue sharing", "Training programs", "Marketing support"];,
+      benefits: ["Revenue sharing", "Training programs", "Marketing support"];
 }, {;
       icon: Globe,";
       title: "Global Partners", description: "International partnerships for worldwide market presence.",";
       benefits: ["Local expertise", "Regional support", "Cultural adaptation"];
       icon: Users,";
       title: "Access to Our Network",";
-      description: ",;
-        "Connect with our extensive network of clients and partners worldwide."},;
+      description: ",
+        "Connect with our extensive network of clients and partners worldwide."},
     {;
       icon: Award,";
       title: "Certification Programs",";
-      description: ",;
-        "Get certified in our technologies and solutions with comprehensive training."},;
+      description: ",
+        "Get certified in our technologies and solutions with comprehensive training."},
     {;
       icon: Target,";
       title: "Joint Marketing",";
-      description: ",;
-        "Collaborate on marketing initiatives and co-branded campaigns."},;
+      description: ",
+        "Collaborate on marketing initiatives and co-branded campaigns."},
     {;
       icon: Zap,";
       title: "Technical Support",";
-      description: ",;
-        "Receive dedicated technical support and resources for your team."},;
+      description: ",
+        "Receive dedicated technical support and resources for your team."},
     {;
       icon: Shield,";
       title: "Revenue Sharing",";
-      description: ",;
-        "Earn competitive commissions and revenue sharing opportunities."},;
+      description: ",
+        "Earn competitive commissions and revenue sharing opportunities."},
     {;
-      icon: Globe,;
-      title: "Global Reach",;
-      description: ",,;
+      icon: Globe,
+      title: "Global Reach",
+      description: ",
         "Expand your business reach with our global partner network."}];
 ";
-      description: "Team communication and collaboration tools",;
-      logo: "Slack",;
+      description: "Team communication and collaboration tools",
+      logo: "Slack",
       tier: "Silver"}];
   const partnershipBenefits = [];
   const partnershipProcess = [];
@@ -85,20 +85,20 @@ export default function Partners() {;
             <Badge className="mb-4 bg-blue-500 text-white">;
               <Handshake className="w-4 h-4 mr-2"  />;
               Partnership Program";
-            </Badge>",;
+            </Badge>",
             <h1 className="text-4xl m,";
     d: text-6xl font-bold mb-6">";
               Partner With;
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">",;
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">",
                 {" "}
-;
-                Zion Tech Group,;
+
+                Zion Tech Group,
               </span>";
             </h1>";
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
               Join our growing partner network and unlock new opportunities for,";
 growth. Whether you&apos;re a technology company, solution";
-              provider, or channel partner, " we have programs designed to help,;
+              provider, or channel partner, " we have programs designed to help,
 you succeed.";
             </p>";
             <div className = "flex flex-col sm: flex-row gap-4 justify-center">;
@@ -108,30 +108,30 @@ you succeed.";
               </Button>";
               <Button;
                 size="lg";
-                variant="outline"",;
+                variant="outline"",
                 className="border-white text-white hove>;
     r:bg-white hove,";
     r: text-gray-900">;
-                Learn More,;
+                Learn More,
               </Button>;
       ";
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">,;
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">,
         {/* comment */}";
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">";
           <div className="container mx-auto px-4 text-center">";
             <h1 className="text-4xl md: text-5xl font-bold mb-6">Our Partners</h1>";
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">,;
-              Building the future of technology through strategic partnerships with industry leaders,;
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">,
+              Building the future of technology through strategic partnerships with industry leaders,
 and innovative companies worldwide.;
             </p>";
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">";
             <div className="text-center">";
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">;
-                Partner With Us,;
+                Partner With Us,
               </h1>";
-              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">,;
-                Join our ecosystem of innovative partners and grow your business,;
+              <p className="text-xl sm:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">,
+                Join our ecosystem of innovative partners and grow your business,
 with cutting-edge technology solutions.;
               </p>";
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">";
@@ -143,16 +143,16 @@ with cutting-edge technology solutions.;
                 </Link>";
                 <Link href="#benefits">";
                   <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg font-semibold rounded-lg transition-colors">;
-                    Learn More,;
+                    Learn More,
                   </button>;
                 </Link>;
               </div>;
         </section>;
-",;
+",
       {/* comment */}
       <section className="py-20 bg-gray-50">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;
-          <div className="text-center mb-16">",;
+          <div className="text-center mb-16">",
       {/* comment */}";
       <section className="py-20 bg-gray-50">";
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
@@ -160,15 +160,15 @@ with cutting-edge technology solutions.;
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
               Why Partner With Us?";
             </h2>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">,;
-              We provide comprehensive support and resources to help our,;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
+              We provide comprehensive support and resources to help our,
 partners succeed and grow their business.;
             </p>;
           </div>";
 
           <div className="grid grid-cols-1 m>;
     d:grid-cols-2 l,";
-    g: grid-cols-3 gap-8">,;
+    g: grid-cols-3 gap-8">,
             {partnerBenefits.map((benefit, index) => (";
               <Card key={index}
                 className="p-6 hover: shadow-xl transition-shadow duration-300;
@@ -177,40 +177,40 @@ partners succeed and grow their business.;
                   <div className="p-3 bg-blue-100 rounded-lg mr-4">;
                     <benefit.icon className="h-8 w-8 text-blue-600" />";
                   </div>;
-                  <h3 className="text-xl font-semibold text-gray-900">,;
+                  <h3 className="text-xl font-semibold text-gray-900">,
                     {benefit.title}
-;
+
                   </h3>";
                 </div>;
                 <p className="text-gray-600">{benefit.description}</p>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
 ";
       {/* comment */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;
-          <div className="text-center mb-16">",;
+          <div className="text-center mb-16">",
             <h2 className="text-3xl m,";
-    d: text-4xl font-bold text-gray-900 mb-4">,;
+    d: text-4xl font-bold text-gray-900 mb-4">,
         {/* comment */}";
         <section className="py-20 sm: py-32">";
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">;
-                Partnership Types,;
+                Partnership Types,
               </h2>";
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">;
-                Choose the partnership model that best fits your business goals,;
+                Choose the partnership model that best fits your business goals,
               </p>;
             </div>;
 ";
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,;
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">,
               {partnerTypes.map((type, index) => (";
                 <div key="{index}" className="text-center p-6 rounded-lg border border-gray-200 hover: shadow-lg transition-shadow">";
-                  <type.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />",;
+                  <type.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />",
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{type.title}</h3>";
                   <p className="text-gray-600 mb-4">{type.description}</p>";
                   <ul className="text-sm text-gray-500 space-y-1">;
@@ -223,13 +223,13 @@ partners succeed and grow their business.;
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">";
                     <type.icon className="w-8 h-8 text-white" />;
                   </div>";
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">,;
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">,
                     {type.title}
-;
+
                   </h3>";
                   <p className="text-gray-600 mb-6 text-center">;
                     {type.description}
-;
+
                   </p>";
                   <ul className="space-y-3">;
                     {type.benefits.map((benefit, benefitIndex) => (";
@@ -238,11 +238,11 @@ partners succeed and grow their business.;
                         <span className="text-gray-700">{benefit}</span>;
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
       {/* comment */}";
@@ -252,8 +252,8 @@ partners succeed and grow their business.;
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
               Partnership Programs";
             </h2>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">,;
-              Choose the partnership program that best fits your business model,;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
+              Choose the partnership program that best fits your business model,
 and goals.;
         {/* comment */}";
         <section className="py-16 bg-gray-50">";
@@ -265,23 +265,23 @@ and goals.;
               </p>;
             </div>;
             ";
-            <div className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,;
+            <div className = "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {currentPartners.map((partner, index) => (";
                 <div key="{index}" className="bg-white rounded-lg shadow-lg p-6 text-center hover: shadow-xl transition-shadow">";
-                  <div className="w-32 h-16 bg-gray-200 rounded mx-auto mb-4 flex items-center justify-center">",;
+                  <div className="w-32 h-16 bg-gray-200 rounded mx-auto mb-4 flex items-center justify-center">",
                     <span className="text-gray-500 text-sm">{partner.name}</span>";
         <section className="py-20 bg-white">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">;
-                Our Partners,;
+                Our Partners,
               </h2>";
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">;
-                Trusted by leading technology companies worldwide,;
+                Trusted by leading technology companies worldwide,
               </p>;
             </div>;
 ";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
               {currentPartners.map((partner, index) => (";
                 <div key="{index}
                   className="bg-gray-50 rounded-xl p-6 hover: shadow-lg transition-shadow">";
@@ -295,37 +295,36 @@ and goals.;
                           : partner.tier === "Gold;
                             ? "bg-gray-100 text-gray-800"">;
                             : "bg-orange-100 text-orange-800"}"}
-;
+
                     >;
                       {partner.tier}
-;
+
                     </span>;
                   </div>";
                   <h3 className=""text-xl" font-bold text-gray-900 mb-2"}>;
                     {partner.name}
-;
+
                   </h3>";
                   <p className="text-blue-600 font-semibold mb-2">;
                     {partner.category}
-;
+
                   </p>";
                   <p className="text-gray-600 text-sm">{partner.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
           </div>";
 
           <div className="grid grid-cols-1 m,";
     d: grid-cols-3 gap-8">;
         </section>;
-,;
         {/* comment */}";
         <section id="benefits" className="py-20 bg-gray-50">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">;
-                Partnership Benefits,;
+                Partnership Benefits,
               </h2>";
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">;
                 Why partner with Zion Tech Group?;
@@ -334,7 +333,7 @@ and goals.;
             ";
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">;
 ";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {partnershipBenefits.map((benefit, index) => (";
                 <div key="{index}" className="text-center">";
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";
@@ -342,12 +341,12 @@ and goals.;
                   </div>";
                   <h3 className="text-xl font-bold text-gray-900 mb-3">;
                     {benefit.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">{benefit.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -360,15 +359,14 @@ and goals.;
             <div className = "flex flex-col sm: flex-row justify-center gap-4">";
               <Link href="/contact;
                 className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">;
-                Contact Us,;
+                Contact Us,
               </Link>";
               <Link href="/partners/application;
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">;
-                Apply Now,;
+                Apply Now,
               </Link>;
             </div>;
         </section>;
-,;
         {/* comment */}";
         <section className="py-16 bg-gray-50">";
           <div className="container mx-auto px-4">";
@@ -402,36 +400,36 @@ and goals.;
                 <Link href="/partners/marketing" className="text-blue-600 font-semibold hover:text-blue-700">;
                   Get Resources →;
                 </Link>;
-              </div>,;
+              </div>,
         {/* comment */}";
         <section className="py-20 bg-white">";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
             <div className="text-center mb-16">";
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">;
-                Partnership Process,;
+                Partnership Process,
               </h2>";
               <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">;
-                How to become a partner in 4 simple steps,;
+                How to become a partner in 4 simple steps,
               </p>;
             </div>;
 ";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {partnershipProcess.map((step, index) => (";
                 <div key="{index}" className="text-center">";
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <span className="text-2xl font-bold text-white">;
                       {step.step}
-;
+
                     </span>;
                   </div>";
                   <h3 className="text-xl font-bold text-gray-900 mb-3">;
                     {step.title}
-;
+
                   </h3>";
                   <p className="text-gray-600">{step.description}</p>;
                 </div>;
               ))}
-;
+
             </div>;
         </section>;
         {/* comment */}";
@@ -440,8 +438,8 @@ and goals.;
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">;
               Ready to Partner With Us?;
             </h2>";
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,;
-              Join our partner ecosystem and unlock new opportunities for growth,;
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
+              Join our partner ecosystem and unlock new opportunities for growth,
 and innovation.;
               Join our partner ecosystem and unlock new opportunities for growth and innovation.;
             </p>";
@@ -454,16 +452,16 @@ and innovation.;
               </Link>";
               <a href="mailto:partners@ziontechgroup.com;
                 className="text-white hover:text-blue-200 transition-colors">;
-                partners@ziontechgroup.com,;
+                partners@ziontechgroup.com,
               </a>;
             </div>;
 ";
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,;
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             {partnerTypes.map((type, index) => (";
               <Card key={index}
                 className="p-8 hover: shadow-xl transition-shadow duration-300;
               >;
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">,;
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">,
                   {type.title}";
                 </h3>;
                 <p className="text-gray-600 mb-6">{type.description}</p>";
@@ -475,7 +473,7 @@ and innovation.;
                       <span className="text-gray-600">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>";
 
                 <Button className="w-full">";
@@ -484,7 +482,7 @@ and innovation.;
                 </Button>;
               </Card>;
             ))}
-;
+
           </div>;
       </section>;
 ";
@@ -494,8 +492,8 @@ and innovation.;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
             Ready to Partner With Us?";
           </h2>;
-          <p className="text-xl mb-8 max-w-2xl mx-auto">,;
-            Join our partner network today and start growing your business with,;
+          <p className="text-xl mb-8 max-w-2xl mx-auto">,
+            Join our partner network today and start growing your business with,
 Zion Tech Group. Our team is ready to help you succeed.";
           </p>;
           <div className="flex flex-col sm: flex-row gap-4 justify-center">;
@@ -509,18 +507,18 @@ Zion Tech Group. Our team is ready to help you succeed.";
             </Link>";
             <Button;
               size="lg";
-              variant="outline"",;
+              variant="outline"",
               className="border-white text-white hove>;
     r:bg-white hove,";
     r: text-blue-600">;
-              Download Partner Kit,;
+              Download Partner Kit,
             </Button>;
           </div>;
       </section>;
       </main>;
     </>;
   )}
-;
-  );,
+
+  );
 }
 }")))

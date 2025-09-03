@@ -12,20 +12,18 @@ export function UpcomingInterviewsCard() {;
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     const loadInterviews = async () => {;
       setIsLoading(true);
       try {;
         const interviews = await fetchInterviews();
         // const now = new Date(); // Not used here, can be removed if only for filtering future;
-        ;
         const upcoming = interviews;
           .filter(interview => ;
             interview.status === 'confirmed' && ;
@@ -34,17 +32,16 @@ export function UpcomingInterviewsCard() {;
           .sort((a, b) => ;
             parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime();
           );
-          .slice(0, 3); ;
-        ;
-        setUpcomingInterviews(upcoming);,
+          .slice(0, 3);
+
+        setUpcomingInterviews(upcoming);
 } catch(error) {;
-        console.error("Error loading upcoming interviews:", error);,
+        console.error("Error loading upcoming interviews:", error);
 } finally {;
-        setIsLoading(false);,
+        setIsLoading(false);
 }
     };
-;
-    loadInterviews();,
+    loadInterviews();
 }, [fetchInterviews]); // Added fetchInterviews;
 
   if(isLoading) {;
@@ -69,9 +66,9 @@ export function UpcomingInterviewsCard() {;
           </div>;
         </CardContent>;
       </Card>;
-    );,
+    );
 }
-;
+
   if(upcomingInterviews.length === 0) {;
     return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
@@ -90,9 +87,9 @@ export function UpcomingInterviewsCard() {;
           </div>;
         </CardContent>;
       </Card>;
-    );,
+    );
 }
-;
+
   return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
       <CardHeader>;
         <CardTitle className="text-lg flex items-center">;
@@ -106,12 +103,10 @@ export function UpcomingInterviewsCard() {;
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
             const formattedTime = format(interviewDate, 'h:mm a');
-            ;
             const now = new Date();
             const isStartingSoon = ;
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&;
               interviewDate.getTime() > now.getTime();
-            ;
             return (<div key={interview.id} className="flex items-center gap-3">;
                 <Avatar className="h-10 w-10 bg-zion-purple/10">;
                   {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
@@ -144,10 +139,9 @@ export function UpcomingInterviewsCard() {;
                   </div>;
                 </div>;
               </div>;
-            );,
+            );
 })}
         </div>;
-        ;
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">;
           <Button asChild size="sm" variant="outline" className="w-full">;
             <Link to="/interviews">;
@@ -157,5 +151,5 @@ export function UpcomingInterviewsCard() {;
         </div>;
       </CardContent>;
     </Card>;
-  );,
+  );
 }

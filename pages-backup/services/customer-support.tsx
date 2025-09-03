@@ -10,41 +10,40 @@ import type { NextPage } from "next";
         <div className="container mx-auto px-4">";
           <div className="max-w-4xl mx-auto text-center">";
             <h1 className="text-5xl md: text-6xl font-bold mb-6">;
-              Customer Support Platform,;
+              Customer Support Platform,
             </h1>";
-            <p className="text-xl md:text-2xl mb-8 text-gray-200">,;
-              Comprehensive customer support platform with AI chatbots, multi-channel support,;
+            <p className="text-xl md:text-2xl mb-8 text-gray-200">,
+              Comprehensive customer support platform with AI chatbots, multi-channel support,
               and advanced analytics. Improve customer satisfaction and scale your support operations.;
             </p>";
             <div className="flex flex-col sm: flex-row justify-center gap-6">";
               <Link href="/contact"><a className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">;
-                Start Free Trial,;
+                Start Free Trial,
               </a></Link>";
               <Link href="#pricing"><a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-900 px-8 py-4 rounded-lg font-semibold transition-colors">;
-                View Pricing,;
+                View Pricing,
               </a></Link>;
             </div>;
       </section>;
-,;
       {/* comment */}";
       <section className="py-20 bg-white">";
         <div className="container mx-auto px-4">";
           <div className="text-center mb-16">";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Platform Features</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Everything you need to deliver exceptional customer support,;
+              Everything you need to deliver exceptional customer support,
             </p>;
           </div>;
           ";
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,;
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (";
-              <div key="{index}" className="bg-gray-50 rounded-xl p-8 hover: shadow-lg transition-shadow">",;
+              <div key="{index}" className="bg-gray-50 rounded-xl p-8 hover: shadow-lg transition-shadow">",
                 <div className="text-4xl mb-4">{feature.icon}</div>";
                 <h3 className="text-xl font-semibold mb-4 text-gray-900">{feature.title}</h3>";
                 <p className="text-gray-600">{feature.description}</p>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -53,8 +52,8 @@ import type { NextPage } from "next";
           <div className="grid lg: grid-cols-2 gap-12 items-center">;
             <div>";
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Our Support Platform?</h2>";
-              <p className="text-xl text-gray-600 mb-8">,;
-                Our platform combines the power of AI with human expertise to deliver,;
+              <p className="text-xl text-gray-600 mb-8">,
+                Our platform combines the power of AI with human expertise to deliver,
 exceptional customer experiences while optimizing your support operations.;
               </p>";
               <ul className="space-y-4">;
@@ -66,7 +65,7 @@ exceptional customer experiences while optimizing your support operations.;
                     <span className="text-gray-700">{benefit}</span>;
                   </li>;
                 ))}
-;
+
               </ul>;
             </div>";
             <div className="bg-white rounded-xl p-8 shadow-lg">";
@@ -91,17 +90,17 @@ exceptional customer experiences while optimizing your support operations.;
           <div className="text-center mb-16">";
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Pricing Plans</h2>";
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Choose the plan that best fits your support team size and needs,;
+              Choose the plan that best fits your support team size and needs,
             </p>;
           </div>;
           ";
-          <div className="{"grid" md: grid-cols-3 gap-8 max-w-6xl mx-auto">,;
+          <div className="{"grid" md: grid-cols-3 gap-8 max-w-6xl mx-auto">,
             {pricing.map((plan, index) => (";
               <div key="{index}" className="{"bg-white" rounded-xl p-8 shadow-lg border-2 ${plan.popular ? "border-orange-500 relative" : "border-gray-200"}"}>;
                 {plan.popular && (";
                   <div className=""absolute" -top-4 left-1/2 transform -translate-x-1/2"}>";
                     <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium">;
-                      Most Popular,;
+                      Most Popular,
                     </span>;
                   </div>;
                 )}";
@@ -121,20 +120,20 @@ exceptional customer experiences while optimizing your support operations.;
                       <span className="text-gray-700">{feature}</span>;
                     </li>;
                   ))}
-;
+
                 </ul>";
                 <Link href="{"/contact"" ";
                   className="{"w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${;
                     plan.popular ";
                       ? "bg-orange-600 hover: bg-orange-700 text-white" ">;
                       : "bg-gray-100 hover:bg-gray-200 text-gray-900"}"}
-;
+
                 >;
-                  Get Started,;
+                  Get Started,
                 </Link>;
               </div>;
             ))}
-;
+
           </div>;
       </section>;
       {/* comment */}";
@@ -146,14 +145,14 @@ exceptional customer experiences while optimizing your support operations.;
           </p>";
           <div className="flex flex-col sm: flex-row justify-center gap-6">";
             <Link href="/contact"><a className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors">;
-              Start Free Trial,;
+              Start Free Trial,
             </a></Link>";
             <Link href="tel:+13024640950"><a className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
-              Call +1 302 464 0950,;
+              Call +1 302 464 0950,
             </a></Link>;
           </div>;
       </section>;
-    </Layout>;,;
+    </Layout>;
   )}
-;
+
 "export default CustomerSupport

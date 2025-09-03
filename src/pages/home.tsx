@@ -1,6 +1,5 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-;
 const Home: React.FC = () => {;
   return(<>;
       <SEO ;
@@ -14,7 +13,7 @@ const Home: React.FC = () => {;
               Zion Tech Group;
             </h1>;
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">;
-              Leading technology solutions provider specializing in AI, cybersecurity, ;
+              Leading technology solutions provider specializing in AI, cybersecurity,
               cloud infrastructure, and digital transformation services.</p>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <a ;
@@ -32,7 +31,6 @@ const Home: React.FC = () => {;
         </section>;
       </div>;
     </>;
-  );,
+  );
 };
-;
 export default Home;

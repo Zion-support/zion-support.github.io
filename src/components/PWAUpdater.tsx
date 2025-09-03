@@ -1,12 +1,12 @@
 
-interface PWAUpdaterProps {;
+interface PWAUpdaterProps {
   autoCheck?: boolean;
   checkInterval?: number;
-  showUpdatePrompt?: boolean;,
+  showUpdatePrompt?: boolean;
 }
-;
+
 const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
-  autoCheck = true,;
+  autoCheck = true,
   checkInterval = 300000, // 5 minutes;
   showUpdatePrompt = true}) => {;
 
@@ -15,14 +15,13 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
   const [updateComplete, setUpdateComplete] = useState(false);
   const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null);
   const [showPrompt, setShowPrompt] = useState(false);
-;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     // Check if service worker is supported';
     if('serviceWorker' in navigator) {;
 
@@ -33,7 +32,6 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
 
           setRegistration(reg);
           // console.log('Service Worker registered successfully:', reg);
-          ;
           // Check for updates;
           if(autoCheck) {;
 
@@ -42,7 +40,6 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
           reg.addEventListener('updatefound', () => {;
 
             // console.log('Service Worker update found');
-            ;
             if(newWorker) {;
 
               newWorker.addEventListener('statechange', () => {;
@@ -55,7 +52,6 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
                     setShowPrompt(true)}
                 }
               }) }          });
-          ;
           // Listen for controller change(update applied);
           navigator.serviceWorker.addEventListener('controllerchange', () => {;
 
@@ -63,7 +59,6 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
             setUpdateComplete(true);
             setUpdateAvailable(false);
             setUpdating(false);
-            ;
             // Hide prompt after a delay;
             setTimeout(() => {;
               setShowPrompt(false);
@@ -72,27 +67,23 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
 
           // console.error('Service Worker registration failed:', error)})}
   }, [autoCheck, showUpdatePrompt]) ;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
-    if(autoCheck && registration) {;,
+    // Cleanup function;
+};
+}, []); []);
+    if(autoCheck && registration) {;
 }, checkInterval);
-      ;
       return () => clearInterval(interval)}
   }, [autoCheck, checkInterval, registration]) ;
-;
       // console.log('Service Worker update check completed')} catch(error) {;
 
       // console.error('Service Worker update check failed:', error)}
   };
-;
     setUpdating(true) ;
     setShowPrompt(false) ;
-;
     try {;
       // Send message to service worker to skip waiting;
       if(registration.waiting) {;
@@ -104,19 +95,16 @@ const PWAUpdater: React.FC < PWAUpdaterProps> = ({;
 
       // // // // // // // // console.error('Update failed:', error);
       setIsUpdating(false);
-;
       // console.error('Failed to apply update:', error);
       setUpdating(false);
       setShowPrompt(true)}
   };
-;
     // Auto - show again after 1 hour;
     setTimeout(() => {;
       if(updateAvailable) {;
 
         setShowPrompt(true)}
     }, 3600000) };
-;
   // Don't render anything if no update is available;
   if(!updateAvailable && !updating && !updateComplete) {;
 

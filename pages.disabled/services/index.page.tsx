@@ -38,9 +38,9 @@ export default function Services() {;
         Visit our website: <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>;
       </p>;
     </main>;
-  );,
+  );
 }
-;
+
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -53,15 +53,14 @@ const ServicesPage: NextPage = () => {;
   const microSaasServices = getServicesByCategory('micro-saas');
   const itServices = getServicesByCategory('it-services');
   const aiServices = getServicesByCategory('ai-services');
-  );,
+  );
 }
-;
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import { services } from '../../utils/data/services';
 import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
-;
 const ServicesIndex: NextPage = () => {;
   return (;
     <div>;
@@ -69,7 +68,6 @@ const ServicesIndex: NextPage = () => {;
         <title>Services - Zion Tech Group</title>;
         <meta name="description" content="Explore our Micro SaaS, IT, AI, and Cloud services." />;
       </Head>;
-      ;
       <main className="container mx-auto px-4 py-12">;
         <h1 className="text-3xl font-bold mb-6">Services</h1>;
         <p className="text-gray-700 mb-10 max-w-3xl">;
@@ -100,7 +98,6 @@ const ServicesIndex: NextPage = () => {;
         </div>;
       </main>;
     </div>;
-  );,
+  );
 };
-;
 export default ServicesIndex;

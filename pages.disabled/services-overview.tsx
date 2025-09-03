@@ -4,78 +4,73 @@ import { services, getServicesByCategory } from '../data/services';
 import { ArrowRight, CheckCircle, Star, Clock, Users, Shield, Zap, TrendingUp, Award, Globe } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-;
 const ServicesOverviewPage: NextPage = () => {;
   const microSaasServices = getServicesByCategory('micro-saas');
   const itServices = getServicesByCategory('it-services');
   const aiServices = getServicesByCategory('ai-services');
-;
   const stats = [;
-    { number: '100+', label: 'Services Available', icon: Globe },;
-    { number: '500+', label: 'Projects Completed', icon: TrendingUp },;
-    { number: '50+', label: 'Happy Clients', icon: Users },;
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Award },;
-    { number: '24/7', label: 'Support Available', icon: Clock },;
-    { number: '30-60%', label: 'Cost Savings', icon: Shield },;
+    { number: '100+', label: 'Services Available', icon: Globe },
+    { number: '500+', label: 'Projects Completed', icon: TrendingUp },
+    { number: '50+', label: 'Happy Clients', icon: Users },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Award },
+    { number: '24/7', label: 'Support Available', icon: Clock },
+    { number: '30-60%', label: 'Cost Savings', icon: Shield },
   ];
-;
   const benefits = [;
     {;
-      icon: <Zap className="w-8 h-8" />,;
-      title: 'Cutting-Edge Technology',;
-      description: 'We use the latest technologies and frameworks to deliver innovative solutions that give you a competitive edge.';,
-},;
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Cutting-Edge Technology',
+      description: 'We use the latest technologies and frameworks to deliver innovative solutions that give you a competitive edge.';
+},
     {;
-      icon: <Shield className="w-8 h-8" />,;
-      title: 'Enterprise Security',;
-      description: 'Bank-level security with SOC 2 compliance, regular security audits, and advanced threat protection.';,
-},;
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with SOC 2 compliance, regular security audits, and advanced threat protection.';
+},
     {;
-      icon: <Users className="w-8 h-8" />,;
-      title: 'Expert Team',;
-      description: 'Our team consists of certified professionals with deep expertise in AI, cloud architecture, and modern development practices.';,
-},;
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Team',
+      description: 'Our team consists of certified professionals with deep expertise in AI, cloud architecture, and modern development practices.';
+},
     {;
-      icon: <Clock className="w-8 h-8" />,;
-      title: 'Fast Implementation',;
-      description: 'Quick setup and deployment to get you up and running in days, not months, with our proven methodologies.';,
-},;
+      icon: <Clock className="w-8 h-8" />,
+      title: 'Fast Implementation',
+      description: 'Quick setup and deployment to get you up and running in days, not months, with our proven methodologies.';
+},
     {;
-      icon: <TrendingUp className="w-8 h-8" />,;
-      title: 'Proven Results',;
-      description: 'Track record of successful implementations with measurable ROI improvements and client satisfaction.';,
-},;
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: 'Proven Results',
+      description: 'Track record of successful implementations with measurable ROI improvements and client satisfaction.';
+},
     {;
-      icon: <Award className="w-8 h-8" />,;
-      title: 'Quality Assurance',;
-      description: 'Comprehensive testing, code reviews, and quality assurance processes ensure reliable and maintainable solutions.';,
+      icon: <Award className="w-8 h-8" />,
+      title: 'Quality Assurance',
+      description: 'Comprehensive testing, code reviews, and quality assurance processes ensure reliable and maintainable solutions.';
 }
   ];
-;
   const pricingComparison = [;
     {;
-      category: 'Micro SaaS',;
-      ourPrice: '$12 - $1,299/month',;
-      marketPrice: '$25 - $2,500/month',;
-      savings: '30-50%',;
-      features: ['AI-powered automation', 'Real-time analytics', '24/7 support', 'Custom integrations'];,
-},;
+      category: 'Micro SaaS',
+      ourPrice: '$12 - $1,299/month',
+      marketPrice: '$25 - $2,500/month',
+      savings: '30-50%',
+      features: ['AI-powered automation', 'Real-time analytics', '24/7 support', 'Custom integrations'];
+},
     {;
-      category: 'IT Services',;
-      ourPrice: '$2,000 - $120,000',;
-      marketPrice: '$5,000 - $200,000',;
-      savings: '25-40%',;
-      features: ['Cloud migration', 'Security implementation', 'DevOps automation', 'Infrastructure optimization'];,
-},;
+      category: 'IT Services',
+      ourPrice: '$2,000 - $120,000',
+      marketPrice: '$5,000 - $200,000',
+      savings: '25-40%',
+      features: ['Cloud migration', 'Security implementation', 'DevOps automation', 'Infrastructure optimization'];
+},
     {;
-      category: 'AI Services',;
-      ourPrice: '$5,000 - $400,000',;
-      marketPrice: '$15,000 - $800,000',;
-      savings: '40-60%',;
-      features: ['Custom AI models', 'Machine learning', 'Computer vision', 'Natural language processing'];,
+      category: 'AI Services',
+      ourPrice: '$5,000 - $400,000',
+      marketPrice: '$15,000 - $800,000',
+      savings: '40-60%',
+      features: ['Custom AI models', 'Machine learning', 'Computer vision', 'Natural language processing'];
 }
   ];
-;
   return (;
     <MainLayout;
       title="Complete Services Overview - Zion Tech Group";
@@ -98,7 +93,7 @@ const ServicesOverviewPage: NextPage = () => {;
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >;
-              From innovative micro SaaS applications to enterprise-grade AI platforms, ;
+              From innovative micro SaaS applications to enterprise-grade AI platforms,
               we provide comprehensive technology solutions that drive business growth and digital transformation.;
             </motion.p>;
             <motion.div ;
@@ -271,7 +266,6 @@ const ServicesOverviewPage: NextPage = () => {;
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >;
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{category.category}</h3>;
-                ;
                 <div className="space-y-4 mb-6">;
                   <div className="flex justify-between items-center">;
                     <span className="text-gray-600">Our Pricing:</span>;
@@ -365,7 +359,7 @@ const ServicesOverviewPage: NextPage = () => {;
                 </Link>;
               </motion.div>;
             ))}
-;
+
             {/* Featured IT Services */}
             {itServices.slice(0, 3).map((service, index) => (;
               <motion.div ;
@@ -390,7 +384,7 @@ const ServicesOverviewPage: NextPage = () => {;
                 </Link>;
               </motion.div>;
             ))}
-;
+
             {/* Featured AI Services */}
             {aiServices.slice(0, 3).map((service, index) => (;
               <motion.div ;
@@ -441,7 +435,6 @@ const ServicesOverviewPage: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default ServicesOverviewPage;

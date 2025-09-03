@@ -1,233 +1,227 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ;
-  Handshake, ;
-  Award, ;
-  Users, ;
-  Globe, ;
-  TrendingUp, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Star,;
-  Shield,;
-  Cloud,;
-  Brain,;
-  Code,;
-  Database,;
-  Zap,;
-  Target,;
-  Building2,;
-  Heart,;
-  Coffee,;
-  BookOpen,;
-  Lightbulb,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  ExternalLink,;
-  Calendar,;
-  Briefcase;,
+  Handshake,
+  Award,
+  Users,
+  Globe,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Shield,
+  Cloud,
+  Brain,
+  Code,
+  Database,
+  Zap,
+  Target,
+  Building2,
+  Heart,
+  Coffee,
+  BookOpen,
+  Lightbulb,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  Calendar,
+  Briefcase;
 } from 'lucide-react';
-;
 export function PartnersPage() {;
   const partnerTypes = [;
     {;
-      title: 'Technology Partners',;
-      icon: Code,;
-      description: 'Leading technology companies that provide complementary solutions and platforms.',;
-      count: 25;,
-},;
+      title: 'Technology Partners',
+      icon: Code,
+      description: 'Leading technology companies that provide complementary solutions and platforms.',
+      count: 25;
+},
     {;
-      title: 'Solution Partners',;
-      icon: Target,;
-      description: 'System integrators and consultants who help implement our solutions.',;
-      count: 40;,
-},;
+      title: 'Solution Partners',
+      icon: Target,
+      description: 'System integrators and consultants who help implement our solutions.',
+      count: 40;
+},
     {;
-      title: 'Channel Partners',;
-      icon: Users,;
-      description: 'Resellers and distributors who help us reach new markets and customers.',;
-      count: 15;,
-},;
+      title: 'Channel Partners',
+      icon: Users,
+      description: 'Resellers and distributors who help us reach new markets and customers.',
+      count: 15;
+},
     {;
-      title: 'Strategic Partners',;
-      icon: Handshake,;
-      description: 'Long-term strategic alliances for joint product development and market expansion.',;
-      count: 8;,
+      title: 'Strategic Partners',
+      icon: Handshake,
+      description: 'Long-term strategic alliances for joint product development and market expansion.',
+      count: 8;
 }
   ];
-;
   const featuredPartners = [;
     {;
-      name: 'Microsoft',;
-      logo: '🪟',;
-      type: 'Technology Partner',;
-      description: 'Strategic partnership for Azure cloud services and enterprise solutions.',;
-      website: 'https://microsoft.com',;
-      partnership: 'Since 2020',;
-      focus: ['Azure Cloud', 'Enterprise Solutions', 'AI Services', 'Security'];,
-},;
+      name: 'Microsoft',
+      logo: '🪟',
+      type: 'Technology Partner',
+      description: 'Strategic partnership for Azure cloud services and enterprise solutions.',
+      website: 'https://microsoft.com',
+      partnership: 'Since 2020',
+      focus: ['Azure Cloud', 'Enterprise Solutions', 'AI Services', 'Security'];
+},
     {;
-      name: 'Amazon Web Services',;
-      logo: '☁️',;
-      type: 'Technology Partner',;
-      description: 'Advanced partnership for AWS cloud infrastructure and AI/ML services.',;
-      website: 'https://aws.amazon.com',;
-      partnership: 'Since 2019',;
-      focus: ['Cloud Infrastructure', 'AI/ML', 'Data Analytics', 'DevOps'];,
-},;
+      name: 'Amazon Web Services',
+      logo: '☁️',
+      type: 'Technology Partner',
+      description: 'Advanced partnership for AWS cloud infrastructure and AI/ML services.',
+      website: 'https://aws.amazon.com',
+      partnership: 'Since 2019',
+      focus: ['Cloud Infrastructure', 'AI/ML', 'Data Analytics', 'DevOps'];
+},
     {;
-      name: 'Google Cloud',;
-      logo: '🔍',;
-      type: 'Technology Partner',;
-      description: 'Collaboration on Google Cloud Platform and AI/ML solutions.',;
-      website: 'https://cloud.google.com',;
-      partnership: 'Since 2021',;
-      focus: ['Cloud Platform', 'AI/ML', 'Data Science', 'Kubernetes'];,
-},;
+      name: 'Google Cloud',
+      logo: '🔍',
+      type: 'Technology Partner',
+      description: 'Collaboration on Google Cloud Platform and AI/ML solutions.',
+      website: 'https://cloud.google.com',
+      partnership: 'Since 2021',
+      focus: ['Cloud Platform', 'AI/ML', 'Data Science', 'Kubernetes'];
+},
     {;
-      name: 'Salesforce',;
-      logo: '⚡',;
-      type: 'Technology Partner',;
-      description: 'Integration partnership for CRM and customer experience solutions.',;
-      website: 'https://salesforce.com',;
-      partnership: 'Since 2020',;
-      focus: ['CRM', 'Customer Experience', 'Sales Automation', 'Marketing Cloud'];,
-},;
+      name: 'Salesforce',
+      logo: '⚡',
+      type: 'Technology Partner',
+      description: 'Integration partnership for CRM and customer experience solutions.',
+      website: 'https://salesforce.com',
+      partnership: 'Since 2020',
+      focus: ['CRM', 'Customer Experience', 'Sales Automation', 'Marketing Cloud'];
+},
     {;
-      name: 'IBM',;
-      logo: '🔵',;
-      type: 'Strategic Partner',;
-      description: 'Strategic alliance for enterprise AI, blockchain, and hybrid cloud solutions.',;
-      website: 'https://ibm.com',;
-      partnership: 'Since 2018',;
-      focus: ['Enterprise AI', 'Blockchain', 'Hybrid Cloud', 'Watson'];,
-},;
+      name: 'IBM',
+      logo: '🔵',
+      type: 'Strategic Partner',
+      description: 'Strategic alliance for enterprise AI, blockchain, and hybrid cloud solutions.',
+      website: 'https://ibm.com',
+      partnership: 'Since 2018',
+      focus: ['Enterprise AI', 'Blockchain', 'Hybrid Cloud', 'Watson'];
+},
     {;
-      name: 'Oracle',;
-      logo: '🗄️',;
-      type: 'Technology Partner',;
-      description: 'Partnership for database solutions and enterprise applications.',;
-      website: 'https://oracle.com',;
-      partnership: 'Since 2019',;
-      focus: ['Database', 'Enterprise Applications', 'Cloud Infrastructure', 'Analytics'];,
+      name: 'Oracle',
+      logo: '🗄️',
+      type: 'Technology Partner',
+      description: 'Partnership for database solutions and enterprise applications.',
+      website: 'https://oracle.com',
+      partnership: 'Since 2019',
+      focus: ['Database', 'Enterprise Applications', 'Cloud Infrastructure', 'Analytics'];
 }
   ];
-;
   const partnerBenefits = [;
     {;
-      icon: TrendingUp,;
-      title: 'Revenue Growth',;
-      description: 'Access to new markets and revenue streams through our partner ecosystem.';,
-},;
+      icon: TrendingUp,
+      title: 'Revenue Growth',
+      description: 'Access to new markets and revenue streams through our partner ecosystem.';
+},
     {;
-      icon: Users,;
-      title: 'Expanded Reach',;
-      description: 'Leverage our global network to reach customers in new geographic markets.';,
-},;
+      icon: Users,
+      title: 'Expanded Reach',
+      description: 'Leverage our global network to reach customers in new geographic markets.';
+},
     {;
-      icon: Brain,;
-      title: 'Technical Expertise',;
-      description: 'Access to our technical expertise and co-development opportunities.';,
-},;
+      icon: Brain,
+      title: 'Technical Expertise',
+      description: 'Access to our technical expertise and co-development opportunities.';
+},
     {;
-      icon: Shield,;
-      title: 'Joint Marketing',;
-      description: 'Collaborative marketing programs and co-branded content opportunities.';,
-},;
+      icon: Shield,
+      title: 'Joint Marketing',
+      description: 'Collaborative marketing programs and co-branded content opportunities.';
+},
     {;
-      icon: Award,;
-      title: 'Certification Programs',;
-      description: 'Comprehensive training and certification programs for your team.';,
-},;
+      icon: Award,
+      title: 'Certification Programs',
+      description: 'Comprehensive training and certification programs for your team.';
+},
     {;
-      icon: Globe,;
-      title: 'Global Support',;
-      description: 'Worldwide support network and local market expertise.';,
+      icon: Globe,
+      title: 'Global Support',
+      description: 'Worldwide support network and local market expertise.';
 }
   ];
-;
   const partnershipPrograms = [;
     {;
-      name: 'Technology Partner Program',;
-      level: 'Advanced',;
-      description: 'For technology companies providing complementary solutions and platforms.',;
+      name: 'Technology Partner Program',
+      level: 'Advanced',
+      description: 'For technology companies providing complementary solutions and platforms.',
       benefits: [;
-        'Joint product development',;
-        'Technical integration support',;
-        'Co-marketing opportunities',;
-        'Revenue sharing programs',;
+        'Joint product development',
+        'Technical integration support',
+        'Co-marketing opportunities',
+        'Revenue sharing programs',
         'Dedicated partner manager';
-      ],;
+      ],
       requirements: [;
-        'Proven technology solution',;
-        'Enterprise customer base',;
-        'Technical integration capability',;
+        'Proven technology solution',
+        'Enterprise customer base',
+        'Technical integration capability',
         'Commitment to joint go-to-market';
-      ];,
-},;
+      ];
+},
     {;
-      name: 'Solution Partner Program',;
-      level: 'Professional',;
-      description: 'For system integrators, consultants, and implementation partners.',;
+      name: 'Solution Partner Program',
+      level: 'Professional',
+      description: 'For system integrators, consultants, and implementation partners.',
       benefits: [;
-        'Implementation training',;
-        'Sales enablement tools',;
-        'Marketing support',;
-        'Technical support',;
+        'Implementation training',
+        'Sales enablement tools',
+        'Marketing support',
+        'Technical support',
         'Partner portal access';
-      ],;
+      ],
       requirements: [;
-        'Implementation experience',;
-        'Certified professionals',;
-        'Customer references',;
+        'Implementation experience',
+        'Certified professionals',
+        'Customer references',
         'Business development commitment';
-      ];,
-},;
+      ];
+},
     {;
-      name: 'Channel Partner Program',;
-      level: 'Associate',;
-      description: 'For resellers and distributors helping us reach new markets.',;
+      name: 'Channel Partner Program',
+      level: 'Associate',
+      description: 'For resellers and distributors helping us reach new markets.',
       benefits: [;
-        'Competitive pricing',;
-        'Sales training',;
-        'Marketing materials',;
-        'Lead sharing',;
+        'Competitive pricing',
+        'Sales training',
+        'Marketing materials',
+        'Lead sharing',
         'Partner support';
-      ],;
+      ],
       requirements: [;
-        'Sales track record',;
-        'Market presence',;
-        'Customer relationships',;
+        'Sales track record',
+        'Market presence',
+        'Customer relationships',
         'Sales commitment';
-      ];,
+      ];
 }
   ];
-;
   const testimonials = [;
     {;
-      name: 'Jennifer Martinez',;
-      title: 'VP of Partnerships',;
-      company: 'TechCorp Solutions',;
-      content: 'Partnering with Zion Tech Group has been transformative for our business. Their technical expertise and market reach have helped us expand into new verticals and grow our revenue by 150%.',;
-      rating: 5;,
-},;
+      name: 'Jennifer Martinez',
+      title: 'VP of Partnerships',
+      company: 'TechCorp Solutions',
+      content: 'Partnering with Zion Tech Group has been transformative for our business. Their technical expertise and market reach have helped us expand into new verticals and grow our revenue by 150%.',
+      rating: 5;
+},
     {;
-      name: 'David Chen',;
-      title: 'CEO',;
-      company: 'CloudFirst Systems',;
-      content: 'The partnership with Zion Tech Group has exceeded our expectations. Their support team is exceptional, and the joint go-to-market programs have been incredibly effective.',;
-      rating: 5;,
-},;
+      name: 'David Chen',
+      title: 'CEO',
+      company: 'CloudFirst Systems',
+      content: 'The partnership with Zion Tech Group has exceeded our expectations. Their support team is exceptional, and the joint go-to-market programs have been incredibly effective.',
+      rating: 5;
+},
     {;
-      name: 'Sarah Johnson',;
-      title: 'Head of Business Development',;
-      company: 'DataFlow Analytics',;
-      content: 'Working with Zion Tech Group has opened doors to enterprise customers we never could have reached on our own. Their partnership program is world-class.',;
-      rating: 5;,
+      name: 'Sarah Johnson',
+      title: 'Head of Business Development',
+      company: 'DataFlow Analytics',
+      content: 'Working with Zion Tech Group has opened doors to enterprise customers we never could have reached on our own. Their partnership program is world-class.',
+      rating: 5;
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -238,10 +232,9 @@ export function PartnersPage() {;
               Partner with Us;
             </h1>;
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">;
-              Join our global partner ecosystem and unlock new opportunities for growth, ;
+              Join our global partner ecosystem and unlock new opportunities for growth,
               innovation, and market expansion. Together, we can deliver exceptional value to customers worldwide.;
             </p>;
-            ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link;
                 to="/contact";
@@ -311,7 +304,6 @@ export function PartnersPage() {;
                     <p className="text-xs text-zion-slate-light">{partner.partnership}</p>;
                   </div>;
                 </div>;
-                ;
                 <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">;
                   {partner.description}
                 </p>;
@@ -451,11 +443,9 @@ export function PartnersPage() {;
                     <div key={i} className="w-4 h-4 text-yellow-400 fill-current">★</div>;
                   ))}
                 </div>;
-                ;
                 <p className="text-zion-slate-light mb-4 leading-relaxed">;
                   "{testimonial.content}";
                 </p>;
-                ;
                 <div>;
                   <div className="font-semibold text-white">{testimonial.name}</div>;
                   <div className="text-sm text-zion-cyan">{testimonial.title}</div>;
@@ -479,7 +469,6 @@ export function PartnersPage() {;
                 Join our partner ecosystem and unlock new opportunities for growth and innovation. ;
                 Our partnership team is ready to help you get started.;
               </p>;
-              ;
               <div className="space-y-4">;
                 <div className="flex items-center space-x-3">;
                   <Mail className="w-5 h-5 text-zion-cyan" />;
@@ -501,7 +490,6 @@ export function PartnersPage() {;
               <p className="text-zion-slate-light mb-6">;
                 Fill out our partnership inquiry form and we'll get back to you within 24 hours.;
               </p>;
-              ;
               <div className="space-y-4">;
                 <input;
                   type="text";
@@ -558,7 +546,7 @@ export function PartnersPage() {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }
-;
+
 export default PartnersPage;

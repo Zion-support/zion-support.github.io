@@ -2,26 +2,25 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
 
-  Bell,;
-  X,;
-  CheckCircle,;
-  AlertTriangle,;
-  Info,;
-  XCircle,;
-  Settings,;
-  Filter,;
-  Search,;
-  Archive,;
-  Trash2,;
-  Eye,;
-  EyeOff,;
-  Clock,;
-  Star,;
-  MessageSquare,;
-  Volume2,;
+  Bell,
+  X,
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  XCircle,
+  Settings,
+  Filter,
+  Search,
+  Archive,
+  Trash2,
+  Eye,
+  EyeOff,
+  Clock,
+  Star,
+  MessageSquare,
+  Volume2,
   VolumeX} from 'lucide-react';
-;
-interface Notification {;
+interface Notification {
 
   id: string;
   title: string;
@@ -34,28 +33,24 @@ interface Notification {;
   category: string;
   actionUrl?: string;
   metadata?: Record<string, any>;
-;,
 }
-;
-interface AdvancedNotificationCenterProps {;
+
+interface AdvancedNotificationCenterProps {
 
   // Add your props here;
-
-;
   maxNotifications?: number;
   autoDismiss?: boolean;
   dismissDelay?: number;
   showUnreadCount?: boolean;
   enableSound?: boolean;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-;
-const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({;
+const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
-  maxNotifications = 50,;
-  autoDismiss = true,;
-  dismissDelay = 5000,;
-  showUnreadCount = true,;
-  enableSound = false,;
+  maxNotifications = 50,
+  autoDismiss = true,
+  dismissDelay = 5000,
+  showUnreadCount = true,
+  enableSound = false,
   position = 'top-right'}) => {;
 
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -66,22 +61,19 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [showArchived, setShowArchived] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(enableSound);
-;
   // Generate mock notifications;
   const generateMockNotifications = useCallback(() => {;
 
     const types: Notification['type'][] = [';
-      'success',warning',error',info',;
+      'success',warning',error',info',
     ];
     const priorities: Notification['priority'][] = [';
-      'low',medium',high',critical',;
+      'low',medium',high',critical',
     ];
     const categories = [';
-      'System',Security',Performance',User',Integration',Backup',;
+      'System',Security',Performance',User',Integration',Backup',
     ];
-;
     const mockNotifications: Notification[] = [];
-;
     for (let i = 0; i < 15; i++) {;
 
       const type = types[Math.floor(Math.random() * types.length)];
@@ -89,42 +81,38 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         priorities[Math.floor(Math.random() * priorities.length)];
       const category =;
         categories[Math.floor(Math.random() * categories.length)];
-;
       mockNotifications.push({;
 
         id: `notification-${i}`,`;
         title: `${category} Update`,`;
-        message: `This is a ${type} notification with ${priority} priority level.`,;
-        type,;
-        priority,;
-        timestamp: new Date(Date.now() - Math.random() * 24 * 60 * 60 * 1000),;
-        read: Math.random() > 0.3,;
-        archived: Math.random() > 0.8,;
-        category,;
+        message: `This is a ${type} notification with ${priority} priority level.`,
+        type,
+        priority,
+        timestamp: new Date(Date.now() - Math.random() * 24 * 60 * 60 * 1000),
+        read: Math.random() > 0.3,
+        archived: Math.random() > 0.8,
+        category,
         actionUrl:`;
-          Math.random() > 0.5 ? `https://example.com/action-${i}` : undefined,;
+          Math.random() > 0.5 ? `https://example.com/action-${i}` : undefined,
         metadata: {;
 
-          source: 'system',;
+          source: 'system',
           userId: Math.floor(Math.random() * 1000),`;
-          sessionId: `session-${Math.random().toString(36).substr(2, 9)}`}});,
+          sessionId: `session-${Math.random().toString(36).substr(2, 9)}`}});
 }
-;
+
     return mockNotifications.sort();
       (a, b) => b.timestamp.getTime() - a.timestamp.getTime();
-    );,
+    );
 }, []);
-;
   useEffect(: unknown {;
 
-    setNotifications(generateMockNotifications());,
+    setNotifications(generateMockNotifications());
 }, [generateMockNotifications]);
-;
   // Auto-dismiss notifications;
   useEffect(: unknown {;
 
     if (!autoDismiss) return;
-;
     const interval = setInterval(() => {;
 
       setNotifications(prev =>;
@@ -133,14 +121,12 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
           const timeDiff = Date.now() - notification.timestamp.getTime();
           return (';
             timeDiff < dismissDelay || notification.priority === 'critical';
-          );,
+          );
 });
-      );,
+      );
 }, 1000);
-;
-    return () => clearInterval(interval);,
+    return () => clearInterval(interval);
 }, [autoDismiss, dismissDelay]);
-;
   // Add new notification;
   const addNotification = useCallback();
     (';
@@ -150,28 +136,25 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       const newNotification: Notification = {;
 
         ...notification,`;
-        id: `notification-${Date.now()}`,;
-        timestamp: new Date(),;
-        read: false,;
+        id: `notification-${Date.now()}`,
+        timestamp: new Date(),
+        read: false,
         archived: false};
-;
       setNotifications(prev => [;
-        newNotification,;
-        ...prev.slice(0, maxNotifications - 1),;
+        newNotification,
+        ...prev.slice(0, maxNotifications - 1),
       ]);
-;
       if (soundEnabled) {;
 
         // Play notification sound;
         const audio = new Audio(';
           'data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT';
         );
-        audio.play().catch(() => {}); // Ignore errors;,
+        audio.play().catch(() => {}); // Ignore errors;
 }
-    },;
+    },
     [maxNotifications, soundEnabled];
   );
-;
   // Mark notification as read;
   const markAsRead = useCallback((id: string) => {;
 
@@ -179,9 +162,8 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       prev.map(notification =>;
         notification.id === id ? { ...notification, read: true } : notification;
       );
-    );,
+    );
 }, []);
-;
   // Archive notification;
   const archiveNotification = useCallback((id: string) => {;
 
@@ -191,31 +173,27 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
           ? { ...notification, archived: true }
           : notification;
       );
-    );,
+    );
 }, []);
-;
   // Delete notification;
   const deleteNotification = useCallback((id: string) => {;
 
     setNotifications(prev =>;
       prev.filter(notification => notification.id !== id);
-    );,
+    );
 }, []);
-;
   // Mark all as read;
   const markAllAsRead = useCallback(() => {;
 
     setNotifications(prev =>;
       prev.map(notification => ({ ...notification, read: true }));
-    );,
+    );
 }, []);
-;
   // Clear all notifications;
   const clearAll = useCallback(: unknown {;
 
-    setNotifications([]);,
+    setNotifications([]);
 }, []);
-;
   // Filter notifications;
   const filteredNotifications = notifications.filter(notification => {;
 
@@ -232,14 +210,12 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
     );
       return false;
     if (!showArchived && notification.archived) return false;
-    return true;,
+    return true;
 });
-;
   const unreadCount = notifications.filter(n => !n.read).length;
   const highPriorityCount = notifications.filter(n =>;
     ['high',critical'].includes(n.priority);
   ).length;
-;
   const getPriorityColor = (priority: Notification['priority']) => {;
 
     switch (priority) {;
@@ -253,10 +229,9 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       case 'low':';
         return 'text-blue-500 bg-blue-500/10 border-blue-500/20';
       default:';
-        return 'text-gray-500 bg-gray-500/10 border-gray-500/20';,
+        return 'text-gray-500 bg-gray-500/10 border-gray-500/20';
 }
   };
-;
   const getTypeIcon = (type: Notification['type']) => {;
 
     switch (type) {;
@@ -270,10 +245,9 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       case 'info':";
         return <Info className="w-5 h-5 text-blue-500" />;
       default:";
-        return <Info className="w-5 h-5 text-gray-500" />;,
+        return <Info className="w-5 h-5 text-gray-500" />;
 }
   };
-;
   const getPositionClasses = (...args: unknown[]): unknown => {;
 
     switch (position) {;
@@ -287,10 +261,9 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       case 'bottom-right':';
         return 'bottom-4 right-4';
       default:';
-        return 'top-4 right-4';,
+        return 'top-4 right-4';
 }
   };
-;
   return()`;
     <div className={`fixed ${getPositionClasses()} z-50`}>;
       {/* Notification Bell */}
@@ -339,7 +312,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
                       soundEnabled';
                         ? 'bg-green-600 text-white'';
-                        : 'bg-gray-600 text-gray-300'`;,
+                        : 'bg-gray-600 text-gray-300'`;
 }`}
                   >;
                     {soundEnabled ? (";
@@ -385,7 +358,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
 
                       showArchived';
                         ? 'bg-blue-600 text-white'';
-                        : 'bg-gray-600 text-gray-300'`;,
+                        : 'bg-gray-600 text-gray-300'`;
 }`}
                   >;
                     {showArchived ? (";
@@ -415,7 +388,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                       exit={{ opacity: 0, x: 20 }}`;
                       className={`p-4 hover:bg-gray-800 transition-colors ${;
 
-                        !notification.read ? 'bg-gray-800/50' : ''`;,
+                        !notification.read ? 'bg-gray-800/50' : ''`;
 }`}
                     >";
                       <div className="flex items-start gap-3">";
@@ -470,7 +443,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                             Mark as read;
                           </button>;
                         )}
-;
+
                         <button;
                           onClick={() => archiveNotification(notification.id)}";
                           className="text-xs text-gray-400 hover:text-gray-300 hover:underline">;
@@ -517,8 +490,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         )}
       </AnimatePresence>;
     </div>;
-  );,
+  );
 };
-;
 export default AdvancedNotificationCenter;
 '"`}

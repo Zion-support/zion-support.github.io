@@ -2,149 +2,138 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ;
-  Users, ;
-  CheckCircle, ;
-  Star, ;
-  TrendingUp, ;
-  ArrowLeft,;
-  Phone,;
-  Mail,;
-  Globe,;
-  Shield,;
-  BarChart3,;
-  MessageSquare,;
-  Calendar,;
-  Target,;
-  Zap,;
-  Database,;
-  Lock,;
-  Eye,;
-  Search,;
-  Filter,;
-  Download,;
-  Upload,;
-  Settings,;
-  Bell,;
-  Award;,
+  Users,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  ArrowLeft,
+  Phone,
+  Mail,
+  Globe,
+  Shield,
+  BarChart3,
+  MessageSquare,
+  Calendar,
+  Target,
+  Zap,
+  Database,
+  Lock,
+  Eye,
+  Search,
+  Filter,
+  Download,
+  Upload,
+  Settings,
+  Bell,
+  Award;
 } from 'lucide-react';
-;
 const MicroCRM = () => {;
   const contactInfo = {;
-    phone: "+1 302 464 0950",;
-    email: "kleber@ziontechgroup.com",;
-    address: "364 E Main St STE 1008, Middletown DE 19709",;
-    website: "https://ziontechgroup.com";,
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008, Middletown DE 19709",
+    website: "https://ziontechgroup.com";
 };
-;
   const features = [;
     {;
-      title: "Contact Management",;
-      description: "Organize and manage all your customer contacts with detailed profiles and interaction history",;
-      icon: Users;,
-},;
+      title: "Contact Management",
+      description: "Organize and manage all your customer contacts with detailed profiles and interaction history",
+      icon: Users;
+},
     {;
-      title: "Lead Tracking",;
-      description: "Track leads through your sales pipeline with automated scoring and qualification",;
-      icon: Target;,
-},;
+      title: "Lead Tracking",
+      description: "Track leads through your sales pipeline with automated scoring and qualification",
+      icon: Target;
+},
     {;
-      title: "Sales Pipeline",;
-      description: "Visualize and manage your sales process with customizable stages and workflows",;
-      icon: TrendingUp;,
-},;
+      title: "Sales Pipeline",
+      description: "Visualize and manage your sales process with customizable stages and workflows",
+      icon: TrendingUp;
+},
     {;
-      title: "Email Integration",;
-      description: "Seamlessly integrate with your email provider for automatic contact sync and tracking",;
-      icon: Mail;,
-},;
+      title: "Email Integration",
+      description: "Seamlessly integrate with your email provider for automatic contact sync and tracking",
+      icon: Mail;
+},
     {;
-      title: "Analytics Dashboard",;
-      description: "Get insights into your sales performance with real-time analytics and reports",;
-      icon: BarChart3;,
-},;
+      title: "Analytics Dashboard",
+      description: "Get insights into your sales performance with real-time analytics and reports",
+      icon: BarChart3;
+},
     {;
-      title: "Mobile Access",;
-      description: "Access your CRM on the go with our responsive mobile application",;
-      icon: Zap;,
+      title: "Mobile Access",
+      description: "Access your CRM on the go with our responsive mobile application",
+      icon: Zap;
 }
   ];
-;
   const pricingPlans = [;
     {;
-      name: "Starter",;
-      price: "$49",;
-      period: "/month",;
-      description: "Perfect for small businesses and startups",;
-      features: [;
-        "Up to 1,000 contacts",;
-        "Basic lead tracking",;
-        "Email integration",;
-        "Mobile app access",;
-        "Email support",;
-        "Basic reporting";
-      ],;
-      popular: false;,
-},;
+      name: "Starter",
+      price: "$49",
+      period: "/month",
+      description: "Perfect for small businesses and startups",
+      features: [ "Up to 1,000 contacts",
+        "Basic lead tracking",
+        "Email integration",
+        "Mobile app access",
+        "Email support",
+        "Basic reporting" ],
+      popular: false;
+},
     {;
-      name: "Professional",;
-      price: "$99",;
-      period: "/month",;
-      description: "Ideal for growing businesses and sales teams",;
-      features: [;
-        "Up to 10,000 contacts",;
-        "Advanced lead scoring",;
-        "Sales pipeline management",;
-        "Team collaboration",;
-        "Priority support",;
-        "Advanced analytics",;
-        "API access",;
-        "Custom fields";
-      ],;
-      popular: true;,
-},;
+      name: "Professional",
+      price: "$99",
+      period: "/month",
+      description: "Ideal for growing businesses and sales teams",
+      features: [ "Up to 10,000 contacts",
+        "Advanced lead scoring",
+        "Sales pipeline management",
+        "Team collaboration",
+        "Priority support",
+        "Advanced analytics",
+        "API access",
+        "Custom fields" ],
+      popular: true;
+},
     {;
-      name: "Enterprise",;
-      price: "$199",;
-      period: "/month",;
-      description: "For large organizations with complex sales processes",;
-      features: [;
-        "Unlimited contacts",;
-        "Custom workflows",;
-        "Advanced automation",;
-        "Dedicated account manager",;
-        "24/7 phone support",;
-        "Custom integrations",;
-        "White-label options",;
-        "Advanced security";
-      ],;
-      popular: false;,
+      name: "Enterprise",
+      price: "$199",
+      period: "/month",
+      description: "For large organizations with complex sales processes",
+      features: [ "Unlimited contacts",
+        "Custom workflows",
+        "Advanced automation",
+        "Dedicated account manager",
+        "24/7 phone support",
+        "Custom integrations",
+        "White-label options",
+        "Advanced security" ],
+      popular: false;
 }
   ];
-;
   const testimonials = [;
     {;
-      name: "David Thompson",;
-      role: "Sales Manager",;
-      company: "GrowthTech Inc",;
-      content: "The Micro CRM has streamlined our sales process completely. We've seen a 40% increase in conversion rates and our team is much more organized.",;
-      rating: 5;,
-},;
+      name: "David Thompson",
+      role: "Sales Manager",
+      company: "GrowthTech Inc",
+      content: "The Micro CRM has streamlined our sales process completely. We've seen a 40% increase in conversion rates and our team is much more organized.",
+      rating: 5;
+},
     {;
-      name: "Lisa Chen",;
-      role: "Founder",;
-      company: "StartupHub",;
-      content: "As a startup, we needed something simple but powerful. This CRM fits perfectly and has helped us scale our sales operations efficiently.",;
-      rating: 5;,
-},;
+      name: "Lisa Chen",
+      role: "Founder",
+      company: "StartupHub",
+      content: "As a startup, we needed something simple but powerful. This CRM fits perfectly and has helped us scale our sales operations efficiently.",
+      rating: 5;
+},
     {;
-      name: "Robert Martinez",;
-      role: "Business Development",;
-      company: "Innovation Labs",;
-      content: "The lead tracking and pipeline management features are game-changers. We can now track every interaction and optimize our sales process.",;
-      rating: 5;,
+      name: "Robert Martinez",
+      role: "Business Development",
+      company: "Innovation Labs",
+      content: "The lead tracking and pipeline management features are game-changers. We can now track every interaction and optimize our sales process.",
+      rating: 5;
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">;
       {/* Header */}
@@ -161,7 +150,6 @@ const MicroCRM = () => {;
               <ArrowLeft className="w-4 h-4 mr-2" />;
               Back to Services;
             </Link>;
-            ;
             <div className="text-center mb-12">;
               <div className="flex items-center justify-center mb-6">;
                 <Users className="w-16 h-16 text-purple-400 mr-4" />;
@@ -172,7 +160,6 @@ const MicroCRM = () => {;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
                 Lightweight CRM solution for small businesses with essential customer management features, lead tracking, and sales pipeline management.;
               </p>;
-              ;
               {/* Contact Info */}
               <div className="flex flex-wrap justify-center gap-6 mb-8">;
                 <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">;
@@ -265,7 +252,7 @@ const MicroCRM = () => {;
                 className={`bg-gray-800/50 border rounded-xl p-8 relative ${;
                   plan.popular ;
                     ? 'border-purple-500 shadow-lg shadow-purple-500/20' ;
-                    : 'border-gray-700';,
+                    : 'border-gray-700';
 }`}
               >;
                 {plan.popular && (;
@@ -275,7 +262,7 @@ const MicroCRM = () => {;
                     </span>;
                   </div>;
                 )}
-;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="flex items-baseline justify-center mb-4">;
@@ -299,7 +286,7 @@ const MicroCRM = () => {;
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center ${;
                     plan.popular;
                       ? 'bg-purple-500 hover:bg-purple-600 text-white';
-                      : 'bg-gray-700 hover:bg-gray-600 text-white';,
+                      : 'bg-gray-700 hover:bg-gray-600 text-white';
 }`}
                 >;
                   Get Started;
@@ -390,7 +377,6 @@ const MicroCRM = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default MicroCRM;

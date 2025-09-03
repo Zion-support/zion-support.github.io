@@ -1,35 +1,32 @@
 import React from 'react';
 import { Database, Check, ArrowRight } from 'lucide-react';
 import { SEO } from '../../components/SEO';
-;
 export default function AIIdentityManagement() {;
   const features = [;
-    'Automated identity verification and validation',;
-    'Predictive analytics for identity threats',;
-    'Smart compliance and governance monitoring',;
-    'AI-driven identity automation and orchestration',;
-    'Real-time identity analytics and insights',;
+    'Automated identity verification and validation',
+    'Predictive analytics for identity threats',
+    'Smart compliance and governance monitoring',
+    'AI-driven identity automation and orchestration',
+    'Real-time identity analytics and insights',
     'Custom AI models for identity applications';
   ];
-;
   const tiers = [;
     {;
-      name: 'Starter',;
-      price: '$299/mo',;
-      details: ['Basic identity features', 'Standard support', 'Up to 100 users'];,
-},;
+      name: 'Starter',
+      price: '$299/mo',
+      details: ['Basic identity features', 'Standard support', 'Up to 100 users'];
+},
     {;
-      name: 'Professional',;
-      price: '$999/mo',;
-      details: ['Advanced identity features', 'Priority support', 'Up to 1000 users'];,
-},;
+      name: 'Professional',
+      price: '$999/mo',
+      details: ['Advanced identity features', 'Priority support', 'Up to 1000 users'];
+},
     {;
-      name: 'Enterprise',;
-      price: '$1,999/mo',;
-      details: ['All identity features', 'Dedicated support', 'Unlimited users'];,
+      name: 'Enterprise',
+      price: '$1,999/mo',
+      details: ['All identity features', 'Dedicated support', 'Unlimited users'];
 }
   ];
-;
   return (;
     <>;
       <SEO ;
@@ -71,7 +68,6 @@ export default function AIIdentityManagement() {;
                 Built with enterprise-grade security, SOC 2 compliance, and 99.9% uptime SLA.;
               </div>;
             </div>;
-            ;
             <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">;
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">;
                 Competitive Pricing;
@@ -107,5 +103,5 @@ export default function AIIdentityManagement() {;
         </section>;
       </div>;
     </>;
-  );,
+  );
 }

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-;
-interface Notification {;
+interface Notification {
   id: string;
   title: string;
   message: string;
@@ -11,35 +10,31 @@ interface Notification {;
   archived: boolean;
   category: string;
   actionUrl?: string;
-  metadata?: Record<string, any>;,
+  metadata?: Record<string, any>;
 }
-;
-interface AdvancedNotificationCenterProps {;
+
+interface AdvancedNotificationCenterProps {
   notifications: Notification[];
   onMarkAsRead?: (id: string) => void;
   onArchive?: (id: string) => void;
-  onDelete?: (id: string) => void;,
+  onDelete?: (id: string) => void;
 }
-;
-const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({;
-  notifications,;
-  onMarkAsRead,;
-  onArchive,;
-  onDelete;,
+
+const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
+  notifications,
+  onMarkAsRead,
+  onArchive,
+  onDelete;
 }) => {;
   const [filter, setFilter] = useState<"all" | "unread" | "archived">("all");
   const [typeFilter, setTypeFilter] = useState<string>("all");
-;
   const filteredNotifications = notifications.filter(notification => {;
     const matchesFilter = filter === "all" || ;
       (filter === "unread" && !notification.read) ||;
       (filter === "archived" && notification.archived);
-    ;
     const matchesType = typeFilter === "all" || notification.type === typeFilter;
-    ;
-    return matchesFilter && matchesType;,
+    return matchesFilter && matchesType;
 });
-;
   const getTypeIcon = (type: string) => {;
     switch (type) {;
       case "success":;
@@ -51,10 +46,9 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       case "info":;
         return "ℹ️";
       default:;
-        return "📢";,
+        return "📢";
 }
   };
-;
   const getTypeColor = (type: string) => {;
     switch (type) {;
       case "success":;
@@ -66,10 +60,9 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
       case "info":;
         return "border-blue-500 bg-blue-50";
       default:;
-        return "border-gray-500 bg-gray-50";,
+        return "border-gray-500 bg-gray-50";
 }
   };
-;
   return (;
     <div className="bg-white rounded-lg shadow-lg p-6">;
       <div className="flex justify-between items-center mb-6">;
@@ -106,7 +99,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
             <div;
               key={notification.id}
               className={`border-l-4 p-4 rounded-r-lg ${getTypeColor(notification.type)} ${;
-                !notification.read ? "opacity-100" : "opacity-75";,
+                !notification.read ? "opacity-100" : "opacity-75";
 }`}
             >;
               <div className="flex items-start justify-between">;
@@ -127,7 +120,7 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
                           ? "bg-orange-200 text-orange-800";
                           : notification.priority === "medium";
                           ? "bg-yellow-200 text-yellow-800";
-                          : "bg-green-200 text-green-800";,
+                          : "bg-green-200 text-green-800";
 }`}>;
                         {notification.priority}
                       </span>;
@@ -163,7 +156,6 @@ const AdvancedNotificationCenter: React.FC<AdvancedNotificationCenterProps> = ({
         )}
       </div>;
     </div>;
-  );,
+  );
 };
-;
 export default AdvancedNotificationCenter;

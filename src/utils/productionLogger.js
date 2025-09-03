@@ -14,12 +14,12 @@
  */;
 export function logWarningToProduction(message, context = {}) {;
   if (process.env.NODE_ENV === 'development') {;
-    console.warn('[Production Logger]', message, context);,
+    console.warn('[Production Logger]', message, context);
 }
-  ;
-  // TODO: Implement actual production logging service integration;,
+
+  // TODO: Implement actual production logging service integration;
 }
-;
+
 /**;
  * Log info to production monitoring service;
  * @param {string} message - Info message;
@@ -27,8 +27,8 @@ export function logWarningToProduction(message, context = {}) {;
  */;
 export function logInfoToProduction(message, context = {}) {;
   if (process.env.NODE_ENV === 'development') {;
-    console.info('[Production Logger]', message, context);,
+    console.info('[Production Logger]', message, context);
 }
-  ;
-  // TODO: Implement actual production logging service integration;,
+
+  // TODO: Implement actual production logging service integration;
 }}

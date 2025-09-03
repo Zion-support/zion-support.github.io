@@ -4,90 +4,85 @@ import MainLayout from '../../components/layout/MainLayout';
 import { Code, Zap, Shield, Users, ArrowRight, CheckCircle, Star, Clock } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-;
 const CustomDevelopment: NextPage = () => {;
   const features = [;
     {;
-      icon: Code,;
-      title: 'Custom Software Development',;
-      description: 'Tailored software solutions built from scratch to meet your specific business requirements and workflows.',;
-      benefits: ['Scalable architecture', 'Custom functionality', 'Integration capabilities', 'Future-proof design'];,
-},;
+      icon: Code,
+      title: 'Custom Software Development',
+      description: 'Tailored software solutions built from scratch to meet your specific business requirements and workflows.',
+      benefits: ['Scalable architecture', 'Custom functionality', 'Integration capabilities', 'Future-proof design'];
+},
     {;
-      icon: Zap,;
-      title: 'Rapid Prototyping',;
-      description: 'Quick development of prototypes and MVPs to validate ideas and accelerate time-to-market.',;
-      benefits: ['Fast iteration', 'Cost-effective validation', 'User feedback integration', 'Quick pivots'];,
-},;
+      icon: Zap,
+      title: 'Rapid Prototyping',
+      description: 'Quick development of prototypes and MVPs to validate ideas and accelerate time-to-market.',
+      benefits: ['Fast iteration', 'Cost-effective validation', 'User feedback integration', 'Quick pivots'];
+},
     {;
-      icon: Shield,;
-      title: 'Enterprise Applications',;
-      description: 'Robust, secure enterprise-grade applications designed for large-scale operations and compliance.',;
-      benefits: ['High security', 'Compliance ready', 'Scalable infrastructure', '24/7 support'];,
-},;
+      icon: Shield,
+      title: 'Enterprise Applications',
+      description: 'Robust, secure enterprise-grade applications designed for large-scale operations and compliance.',
+      benefits: ['High security', 'Compliance ready', 'Scalable infrastructure', '24/7 support'];
+},
     {;
-      icon: Users,;
-      title: 'Team Augmentation',;
-      description: 'Extend your development team with our expert developers and technical specialists.',;
-      benefits: ['Expert talent', 'Flexible engagement', 'Knowledge transfer', 'Seamless integration'];,
+      icon: Users,
+      title: 'Team Augmentation',
+      description: 'Extend your development team with our expert developers and technical specialists.',
+      benefits: ['Expert talent', 'Flexible engagement', 'Knowledge transfer', 'Seamless integration'];
 }
   ];
-;
   const technologies = [;
-    { name: 'React & Next.js', category: 'Frontend' },;
-    { name: 'Node.js & Express', category: 'Backend' },;
-    { name: 'Python & Django', category: 'Backend' },;
-    { name: 'PostgreSQL & MongoDB', category: 'Database' },;
-    { name: 'AWS & Azure', category: 'Cloud' },;
-    { name: 'Docker & Kubernetes', category: 'DevOps' },;
-    { name: 'GraphQL & REST APIs', category: 'API' },;
+    { name: 'React & Next.js', category: 'Frontend' },
+    { name: 'Node.js & Express', category: 'Backend' },
+    { name: 'Python & Django', category: 'Backend' },
+    { name: 'PostgreSQL & MongoDB', category: 'Database' },
+    { name: 'AWS & Azure', category: 'Cloud' },
+    { name: 'Docker & Kubernetes', category: 'DevOps' },
+    { name: 'GraphQL & REST APIs', category: 'API' },
     { name: 'Microservices Architecture', category: 'Architecture' }
   ];
-;
   const processSteps = [;
     {;
-      step: '01',;
-      title: 'Discovery & Planning',;
-      description: 'We analyze your requirements, define project scope, and create a detailed development roadmap.',;
-      duration: '1-2 weeks';,
-},;
+      step: '01',
+      title: 'Discovery & Planning',
+      description: 'We analyze your requirements, define project scope, and create a detailed development roadmap.',
+      duration: '1-2 weeks';
+},
     {;
-      step: '02',;
-      title: 'Design & Architecture',;
-      description: 'Our team designs the system architecture, user interface, and technical specifications.',;
-      duration: '2-3 weeks';,
-},;
+      step: '02',
+      title: 'Design & Architecture',
+      description: 'Our team designs the system architecture, user interface, and technical specifications.',
+      duration: '2-3 weeks';
+},
     {;
-      step: '03',;
-      title: 'Development & Testing',;
-      description: 'Agile development process with continuous testing, code reviews, and quality assurance.',;
-      duration: '4-12 weeks';,
-},;
+      step: '03',
+      title: 'Development & Testing',
+      description: 'Agile development process with continuous testing, code reviews, and quality assurance.',
+      duration: '4-12 weeks';
+},
     {;
-      step: '04',;
-      title: 'Deployment & Support',;
-      description: 'Seamless deployment to production with ongoing maintenance and support services.',;
-      duration: 'Ongoing';,
+      step: '04',
+      title: 'Deployment & Support',
+      description: 'Seamless deployment to production with ongoing maintenance and support services.',
+      duration: 'Ongoing';
 }
   ];
-;
   const testimonials = [;
     {;
-      name: 'Sarah Johnson',;
-      company: 'TechStart Inc.',;
-      role: 'CTO',;
-      content: 'Zion Tech Group delivered an exceptional custom platform that transformed our operations. Their attention to detail and technical expertise exceeded our expectations.',;
-      rating: 5;,
-},;
+      name: 'Sarah Johnson',
+      company: 'TechStart Inc.',
+      role: 'CTO',
+      content: 'Zion Tech Group delivered an exceptional custom platform that transformed our operations. Their attention to detail and technical expertise exceeded our expectations.',
+      rating: 5;
+},
     {;
-      name: 'Michael Chen',;
-      company: 'Enterprise Solutions',;
-      role: 'VP of Engineering',;
-      content: 'The team augmentation service was seamless. Their developers integrated perfectly with our team and delivered high-quality code consistently.',;
-      rating: 5;,
+      name: 'Michael Chen',
+      company: 'Enterprise Solutions',
+      role: 'VP of Engineering',
+      content: 'The team augmentation service was seamless. Their developers integrated perfectly with our team and delivered high-quality code consistently.',
+      rating: 5;
 }
   ];
-;
   return (;
     <MainLayout;
       title="Custom Development Solutions - Zion Tech Group";
@@ -332,7 +327,6 @@ const CustomDevelopment: NextPage = () => {;
         </div>;
       </section>;
     </MainLayout>;
-  );,
+  );
 };
-;
 export default CustomDevelopment;

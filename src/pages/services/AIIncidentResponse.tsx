@@ -1,22 +1,19 @@
 import React from 'react';
 import { Shield, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Activity, BarChart3 } from 'lucide-react';
-;
 export default function AIIncidentResponse() {;
   const features = [;
-    'Automated incident detection and response',;
-    'Real-time threat analysis and mitigation',;
-    'Intelligent incident classification',;
-    'Automated response orchestration',;
-    'Advanced forensics and investigation',;
+    'Automated incident detection and response',
+    'Real-time threat analysis and mitigation',
+    'Intelligent incident classification',
+    'Automated response orchestration',
+    'Advanced forensics and investigation',
     'Compliance reporting and documentation';
   ];
-;
   const tiers = [;
-    { name: 'Starter', price: '$299/mo', details: ['Basic incident response', 'Email support', 'Up to 50 incidents/month'] },;
-    { name: 'Professional', price: '$799/mo', details: ['Advanced response', 'Priority support', 'Up to 500 incidents/month'] },;
+    { name: 'Starter', price: '$299/mo', details: ['Basic incident response', 'Email support', 'Up to 50 incidents/month'] },
+    { name: 'Professional', price: '$799/mo', details: ['Advanced response', 'Priority support', 'Up to 500 incidents/month'] },
     { name: 'Enterprise', price: '$2,499/mo', details: ['Full response suite', '24/7 support', 'Unlimited incidents', 'Custom integration'] }
   ];
-;
   return (;
     <div className="min-h-screen bg-white">;
       <section className="bg-gradient-to-br from-red-600 via-orange-600 to-yellow-600 py-20 text-center">;
@@ -73,5 +70,5 @@ export default function AIIncidentResponse() {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }

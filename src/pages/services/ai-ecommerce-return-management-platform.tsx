@@ -1,199 +1,187 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ;
-  RotateCcw, ;
-  Bot, ;
-  TrendingUp, ;
-  Users, ;
-  BarChart3, ;
-  Zap, ;
-  Shield, ;
-  CheckCircle,;
-  ArrowRight,;
-  Star,;
-  Award,;
-  Globe,;
-  Smartphone,;
-  Clock,;
-  Target,;
-  DollarSign,;
-  Eye,;
-  MousePointer,;
-  Palette,;
-  Database,;
-  Cpu,;
-  Network,;
-  Lock,;
-  Phone,;
-  MapPin,;
-  PieChart,;
-  Activity,;
-  CreditCard,;
-  UserCheck,;
-  Settings,;
-  Package,;
-  Truck,;
-  AlertTriangle,;
-  FileText,;
-  QrCode,;
-  Mail;,
+  RotateCcw,
+  Bot,
+  TrendingUp,
+  Users,
+  BarChart3,
+  Zap,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Globe,
+  Smartphone,
+  Clock,
+  Target,
+  DollarSign,
+  Eye,
+  MousePointer,
+  Palette,
+  Database,
+  Cpu,
+  Network,
+  Lock,
+  Phone,
+  MapPin,
+  PieChart,
+  Activity,
+  CreditCard,
+  UserCheck,
+  Settings,
+  Package,
+  Truck,
+  AlertTriangle,
+  FileText,
+  QrCode,
+  Mail;
 } from 'lucide-react';
-;
 const AIEcommerceReturnManagementPlatform = () => {;
   const features = [;
     {;
-      icon: <Bot className="w-6 h-6" />,;
-      title: "AI-Powered Return Prediction",;
-      description: "Machine learning algorithms predict return likelihood and reasons, enabling proactive customer service and inventory optimization.";,
-},;
+      icon: <Bot className="w-6 h-6" />,
+      title: "AI-Powered Return Prediction",
+      description: "Machine learning algorithms predict return likelihood and reasons, enabling proactive customer service and inventory optimization.";
+},
     {;
-      icon: <RotateCcw className="w-6 h-6" />,;
-      title: "Automated Return Processing",;
-      description: "Streamlined return workflows with automatic approval, label generation, and tracking updates for faster processing.";,
-},;
+      icon: <RotateCcw className="w-6 h-6" />,
+      title: "Automated Return Processing",
+      description: "Streamlined return workflows with automatic approval, label generation, and tracking updates for faster processing.";
+},
     {;
-      icon: <QrCode className="w-6 h-6" />,;
-      title: "Smart Return Labels",;
-      description: "Generate QR code return labels with automatic routing, condition assessment, and restocking instructions.";,
-},;
+      icon: <QrCode className="w-6 h-6" />,
+      title: "Smart Return Labels",
+      description: "Generate QR code return labels with automatic routing, condition assessment, and restocking instructions.";
+},
     {;
-      icon: <BarChart3 className="w-6 h-6" />,;
-      title: "Return Analytics Dashboard",;
-      description: "Comprehensive analytics on return patterns, reasons, costs, and customer satisfaction with actionable insights.";,
-},;
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Return Analytics Dashboard",
+      description: "Comprehensive analytics on return patterns, reasons, costs, and customer satisfaction with actionable insights.";
+},
     {;
-      icon: <Shield className="w-6 h-6" />,;
-      title: "Fraud Detection",;
-      description: "AI-powered fraud detection to identify suspicious return patterns and prevent abuse while maintaining customer satisfaction.";,
-},;
+      icon: <Shield className="w-6 h-6" />,
+      title: "Fraud Detection",
+      description: "AI-powered fraud detection to identify suspicious return patterns and prevent abuse while maintaining customer satisfaction.";
+},
     {;
-      icon: <Zap className="w-6 h-6" />,;
-      title: "Inventory Optimization",;
-      description: "Automated restocking decisions based on return condition, demand forecasting, and inventory levels.";,
+      icon: <Zap className="w-6 h-6" />,
+      title: "Inventory Optimization",
+      description: "Automated restocking decisions based on return condition, demand forecasting, and inventory levels.";
 }
   ];
-;
   const pricingTiers = [;
     {;
-      name: "Starter",;
-      price: "$79",;
-      period: "/month",;
-      description: "Perfect for small e-commerce stores",;
-      features: [;
-        "Up to 1,000 returns/month",;
-        "Basic return processing",;
-        "Standard analytics",;
-        "Email support",;
-        "Basic fraud detection",;
-        "Integration with 5 platforms";
-      ],;
-      cta: "Start Free Trial",;
-      popular: false;,
-},;
+      name: "Starter",
+      price: "$79",
+      period: "/month",
+      description: "Perfect for small e-commerce stores",
+      features: [ "Up to 1,000 returns/month",
+        "Basic return processing",
+        "Standard analytics",
+        "Email support",
+        "Basic fraud detection",
+        "Integration with 5 platforms" ],
+      cta: "Start Free Trial",
+      popular: false;
+},
     {;
-      name: "Professional",;
-      price: "$199",;
-      period: "/month",;
-      description: "Ideal for growing businesses",;
-      features: [;
-        "Up to 10,000 returns/month",;
-        "Advanced AI features",;
-        "Predictive analytics",;
-        "Priority support",;
-        "Advanced fraud detection",;
-        "Integration with 20+ platforms",;
-        "Custom workflows",;
-        "API access";
-      ],;
-      cta: "Start Free Trial",;
-      popular: true;,
-},;
+      name: "Professional",
+      price: "$199",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: [ "Up to 10,000 returns/month",
+        "Advanced AI features",
+        "Predictive analytics",
+        "Priority support",
+        "Advanced fraud detection",
+        "Integration with 20+ platforms",
+        "Custom workflows",
+        "API access" ],
+      cta: "Start Free Trial",
+      popular: true;
+},
     {;
-      name: "Enterprise",;
-      price: "$499",;
-      period: "/month",;
-      description: "For large e-commerce operations",;
-      features: [;
-        "Unlimited returns",;
-        "Custom AI models",;
-        "White-label options",;
-        "Dedicated account manager",;
-        "24/7 phone support",;
-        "Custom integrations",;
-        "Advanced reporting",;
-        "SLA guarantee";
-      ],;
-      cta: "Contact Sales",;
-      popular: false;,
+      name: "Enterprise",
+      price: "$499",
+      period: "/month",
+      description: "For large e-commerce operations",
+      features: [ "Unlimited returns",
+        "Custom AI models",
+        "White-label options",
+        "Dedicated account manager",
+        "24/7 phone support",
+        "Custom integrations",
+        "Advanced reporting",
+        "SLA guarantee" ],
+      cta: "Contact Sales",
+      popular: false;
 }
   ];
-;
   const benefits = [;
     {;
-      icon: <TrendingUp className="w-8 h-8 text-green-500" />,;
-      title: "60% Faster Processing",;
-      description: "Automated workflows reduce return processing time from days to hours.";,
-},;
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      title: "60% Faster Processing",
+      description: "Automated workflows reduce return processing time from days to hours.";
+},
     {;
-      icon: <DollarSign className="w-8 h-8 text-blue-500" />,;
-      title: "40% Cost Reduction",;
-      description: "Optimized return handling and inventory management reduce operational costs.";,
-},;
+      icon: <DollarSign className="w-8 h-8 text-blue-500" />,
+      title: "40% Cost Reduction",
+      description: "Optimized return handling and inventory management reduce operational costs.";
+},
     {;
-      icon: <Users className="w-8 h-8 text-purple-500" />,;
-      title: "85% Customer Satisfaction",;
-      description: "Streamlined return experience improves customer satisfaction and retention.";,
-},;
+      icon: <Users className="w-8 h-8 text-purple-500" />,
+      title: "85% Customer Satisfaction",
+      description: "Streamlined return experience improves customer satisfaction and retention.";
+},
     {;
-      icon: <Shield className="w-8 h-8 text-red-500" />,;
-      title: "90% Fraud Prevention",;
-      description: "AI-powered fraud detection prevents return abuse and protects your business.";,
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: "90% Fraud Prevention",
+      description: "AI-powered fraud detection prevents return abuse and protects your business.";
 }
   ];
-;
   const integrations = [;
-    { name: "Shopify", logo: "🛍️" },;
-    { name: "WooCommerce", logo: "🛒" },;
-    { name: "Magento", logo: "🏪" },;
-    { name: "BigCommerce", logo: "🛒" },;
-    { name: "Amazon", logo: "📦" },;
-    { name: "eBay", logo: "🏷️" },;
-    { name: "Etsy", logo: "🎨" },;
-    { name: "Walmart", logo: "🏪" },;
-    { name: "FedEx", logo: "🚚" },;
-    { name: "UPS", logo: "📦" },;
-    { name: "USPS", logo: "📮" },;
+    { name: "Shopify", logo: "🛍️" },
+    { name: "WooCommerce", logo: "🛒" },
+    { name: "Magento", logo: "🏪" },
+    { name: "BigCommerce", logo: "🛒" },
+    { name: "Amazon", logo: "📦" },
+    { name: "eBay", logo: "🏷️" },
+    { name: "Etsy", logo: "🎨" },
+    { name: "Walmart", logo: "🏪" },
+    { name: "FedEx", logo: "🚚" },
+    { name: "UPS", logo: "📦" },
+    { name: "USPS", logo: "📮" },
     { name: "DHL", logo: "🌍" }
   ];
-;
   const workflowSteps = [;
     {;
-      step: "1",;
-      title: "Return Request",;
-      description: "Customer initiates return through your website or mobile app with AI-guided reason selection.";,
-},;
+      step: "1",
+      title: "Return Request",
+      description: "Customer initiates return through your website or mobile app with AI-guided reason selection.";
+},
     {;
-      step: "2",;
-      title: "AI Assessment",;
-      description: "AI analyzes return reason, customer history, and product condition to determine approval.";,
-},;
+      step: "2",
+      title: "AI Assessment",
+      description: "AI analyzes return reason, customer history, and product condition to determine approval.";
+},
     {;
-      step: "3",;
-      title: "Label Generation",;
-      description: "Automatic return label generation with QR codes and tracking information.";,
-},;
+      step: "3",
+      title: "Label Generation",
+      description: "Automatic return label generation with QR codes and tracking information.";
+},
     {;
-      step: "4",;
-      title: "Processing",;
-      description: "Automated processing upon receipt with condition assessment and restocking decisions.";,
-},;
+      step: "4",
+      title: "Processing",
+      description: "Automated processing upon receipt with condition assessment and restocking decisions.";
+},
     {;
-      step: "5",;
-      title: "Refund/Exchange",;
-      description: "Automatic refund processing or exchange fulfillment based on return condition.";,
+      step: "5",
+      title: "Refund/Exchange",
+      description: "Automatic refund processing or exchange fulfillment based on return condition.";
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       {/* Hero Section */}
@@ -407,7 +395,7 @@ const AIEcommerceReturnManagementPlatform = () => {;
                 className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 relative ${;
                   tier.popular ;
                     ? 'border-orange-500 ring-2 ring-orange-500/20' ;
-                    : 'border-slate-700';,
+                    : 'border-slate-700';
 }`}
               >;
                 {tier.popular && (;
@@ -417,7 +405,7 @@ const AIEcommerceReturnManagementPlatform = () => {;
                     </span>;
                   </div>;
                 )}
-                ;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">;
                     {tier.name}
@@ -447,7 +435,7 @@ const AIEcommerceReturnManagementPlatform = () => {;
                 <button className={`w-full py-3 rounded-lg font-semibold transition-colors ${;
                   tier.popular;
                     ? 'bg-orange-600 hover:bg-orange-700 text-white';
-                    : 'bg-slate-700 hover:bg-slate-600 text-white';,
+                    : 'bg-slate-700 hover:bg-slate-600 text-white';
 }`}>;
                   {tier.cta}
                 </button>;
@@ -538,7 +526,6 @@ const AIEcommerceReturnManagementPlatform = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default AIEcommerceReturnManagementPlatform;

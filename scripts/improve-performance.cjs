@@ -1,6 +1,6 @@
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 function improvePerformance() {
   // Create next.config.js optimizations
@@ -31,7 +31,7 @@ const nextConfig = {
             chunks: 'all',
           },
         },
-      };
+      }
     }
     return config;
   },
@@ -60,19 +60,19 @@ const nextConfig = {
           },
         ],
       },
-    ];
+    ]
   },
-};
+}
 
 module.exports = nextConfig;`;
       
-      fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
+      fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent)
       
-      console.log('Performance improvements completed');
+      console.log('Performance improvements completed')
     } catch (error) {
-      console.error('Performance improvement failed:', error.message);
+      console.error('Performance improvement failed:', error.message)
     }
 }
 
-improvePerformance();
+improvePerformance()
       

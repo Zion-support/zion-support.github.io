@@ -1,6 +1,5 @@
 import React from 'react';
 import { Zap, Brain, TrendingUp, Shield, BarChart3, Users, CheckCircle, Star, Globe, Cpu } from 'lucide-react';
-;
 export default function QuantumFinancialTradingPlatform() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-900">;
@@ -375,5 +374,5 @@ export default function QuantumFinancialTradingPlatform() {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }

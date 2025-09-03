@@ -3,44 +3,41 @@
  * Content Generator Script;
  * Generates meaningful content for placeholder pages;
  */;
-const fs = require("$1");
-const path = require("path");
-class ContentGenerator {;
-  constructor() {;
-    this.projectRoot = path.resolve(__dirname, "..");
-    this.placeholderPages = [];
-    this.generatedContent = new Map(),;,
+const fs = require("fs")
+const path = require("path")
+class ContentGenerator {
+  constructor() {
+    this.projectRoot = path.resolve(__dirname, "..")
+    this.placeholderPages = []
+    this.generatedContent = new Map(),,
 }
-;
-  async generateContent() {;
-    console.log("🚀 Starting Content Generation...");
-    try {;
+  async generateContent() {
+    console.log("🚀 Starting Content Generation...")
+    try {
       // Read the website analysis report;
-      const reportPath = path.join(this.projectRoot, "website-analysis-report.json");
-      if (fs.existsSync(reportPath)) {;
-        const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
-        this.placeholderPages = report.placeholderPages || [],;,
+      const reportPath = path.join(this.projectRoot, "website-analysis-report.json")
+      if (fs.existsSync(reportPath)) {
+        const report = JSON.parse(fs.readFileSync(reportPath, "utf8"))
+        this.placeholderPages = report.placeholderPages || [],,
 }
-;
-      console.log(`📝 Found ${this.placeholderPages.length} placeholder pages to enhance`);
+      console.log(`📝 Found ${this.placeholderPages.length} placeholder pages to enhance`)
       // Generate content for key pages;
-      await this.generateServicePages();
-      await this.generateSolutionPages();
-      await this.generateLandingPages();
-      console.log("✅ Content generation completed successfully!");
-      this.saveReport();
-      ,;,
-} catch (error) {;
-      console.error("❌ Error generating content:", error),;,
+      await this.generateServicePages()
+      await this.generateSolutionPages()
+      await this.generateLandingPages()
+      console.log("✅ Content generation completed successfully!")
+      this.saveReport()
+      ,,
+} catch (error) {
+      console.error("❌ Error generating content:", error),,
 }
   }
-;
-  async generateServicePages() {;
-    console.log("🔧 Generating service page content...");
-    const serviceTemplates = {;
-      "ai-services": {;
-        title: "AI Services",;
-        description: "Comprehensive AI solutions for modern businesses",;
+  async generateServicePages() {
+    console.log("🔧 Generating service page content...")
+    const serviceTemplates = {
+      "ai-services": {
+        title: "AI Services",
+        description: "Comprehensive AI solutions for modern businesses",
         content: `;
 # AI Services;
 Transform your business with cutting-edge artificial intelligence solutions.;
@@ -67,11 +64,11 @@ Transform your business with cutting-edge artificial intelligence solutions.;
 - **24/7 Support**: Round-the-clock assistance;
 ## Get Started Today;
 Ready to leverage AI for your business? Contact us for a free consultation.;
-        `,;,
-},;
-      "it-services": {;
-        title: "IT Services",;
-        description: "Complete IT solutions for digital transformation",;
+        `,,
+},
+      "it-services": {
+        title: "IT Services",
+        description: "Complete IT solutions for digital transformation",
         content: `;
 # IT Services;
 Comprehensive IT services to drive your digital transformation.;
@@ -98,20 +95,19 @@ Comprehensive IT services to drive your digital transformation.;
 - **Cost-Effective**: Optimized pricing plans;
 ## Ready to Transform Your IT?;
 Contact us today for a free IT assessment.;
-        `,;,
+        `,,
 }
     }
-    for (const [serviceType, template] of Object.entries(serviceTemplates)) {;
-      this.generatedContent.set(serviceType, template),;,
+    for (const [serviceType, template] of Object.entries(serviceTemplates)) {
+      this.generatedContent.set(serviceType, template),,
 }
   }
-;
-  async generateSolutionPages() {;
-    console.log("💡 Generating solution page content...");
-    const solutionTemplates = {;
-      "enterprise": {;
-        title: "Enterprise Solutions",;
-        description: "Scalable solutions for large organizations",;
+  async generateSolutionPages() {
+    console.log("💡 Generating solution page content...")
+    const solutionTemplates = {
+      "enterprise": {
+        title: "Enterprise Solutions",
+        description: "Scalable solutions for large organizations",
         content: `;
 # Enterprise Solutions;
 Comprehensive technology solutions designed for enterprise-scale organizations.;
@@ -138,20 +134,19 @@ Comprehensive technology solutions designed for enterprise-scale organizations.;
 - **Support**: Dedicated account management;
 ## Get Your Enterprise Solution;
 Schedule a consultation with our enterprise team.;
-        `,;,
+        `,,
 }
     }
-    for (const [solutionType, template] of Object.entries(solutionTemplates)) {;
-      this.generatedContent.set(`solution-${solutionType}`, template),;,
+    for (const [solutionType, template] of Object.entries(solutionTemplates)) {
+      this.generatedContent.set(`solution-${solutionType}`, template),,
 }
   }
-;
-  async generateLandingPages() {;
-    console.log("🎯 Generating landing page content...");
-    const landingTemplates = {;
-      "home": {;
-        title: "Zion Tech Group - Technology Solutions",;
-        description: "Leading provider of AI, IT, and digital transformation services",;
+  async generateLandingPages() {
+    console.log("🎯 Generating landing page content...")
+    const landingTemplates = {
+      "home": {
+        title: "Zion Tech Group - Technology Solutions",
+        description: "Leading provider of AI, IT, and digital transformation services",
         content: `;
 # Welcome to Zion Tech Group;
 Your trusted partner for cutting-edge technology solutions.;
@@ -169,31 +164,28 @@ Modernize your business processes and systems.;
 - **Support**: 24/7 customer service;
 ## Get Started Today;
 Ready to transform your business? Contact us now.;
-        `,;,
+        `,,
 }
     }
-    for (const [pageType, template] of Object.entries(landingTemplates)) {;
-      this.generatedContent.set(pageType, template),;,
+    for (const [pageType, template] of Object.entries(landingTemplates)) {
+      this.generatedContent.set(pageType, template),,
 }
   }
-;
-  saveReport() {;
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      generatedContent: Object.fromEntries(this.generatedContent),;
-      totalPages: this.generatedContent.size,;
-      placeholderPages: this.placeholderPages.length,;,
+  saveReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      generatedContent: Object.fromEntries(this.generatedContent),
+      totalPages: this.generatedContent.size,
+      placeholderPages: this.placeholderPages.length,,
 }
-    const reportPath = path.join(this.projectRoot, "content-generation-report.json");
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📄 Report saved to: ${reportPath}`),;,
+    const reportPath = path.join(this.projectRoot, "content-generation-report.json")
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
+    console.log(`📄 Report saved to: ${reportPath}`),,
 }
 }
-;
 // Run the content generator;
-if (require.main === module) {;
-  const generator = new ContentGenerator();
-  generator.generateContent().catch(console.error),;,
+if (require.main === module) {
+  const generator = new ContentGenerator()
+  generator.generateContent().catch(console.error),,
 }
-;
 module.exports = ContentGenerator

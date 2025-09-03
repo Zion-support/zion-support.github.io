@@ -1,6 +1,5 @@
 export const safeStorage = {;
 export default safeStorage;
-;
 // In - memory storage for fallback with optimizationsconst inMemoryStore = {};
 let localStorageAvailable = null; // Cache the availability check;
 let lastAvailabilityCheck = 0;
@@ -14,108 +13,106 @@ function isLocalStorageAvailable() {;
     now-lastAvailabilityCheck < AVAILABILITY_CHECK_INTERVAL;
   ) {;
 
-    return localStorageAvailable;,
+    return localStorageAvailable;
 }
-;
+
   lastAvailabilityCheck = now;
   try {;
     if(typeof window === 'undefined') {;
 
       localStorageAvailable = false;
-      return false;,
+      return false;
 }
-;
+
     const testKey = '__localStorage_test__';
     localStorage.setItem(testKey,test');
     localStorage.removeItem(testKey);
     localStorageAvailable = true;
-    return true;,
+    return true;
 } catch {;
 
     localStorageAvailable = false;
-    return false;,
+    return false;
 }
 }
-;
+
 function safeConsoleError(message, error) {;
 
   const env = globalThis.process?.env?.NODE_ENV ?? 'production';
   // Prevent infinite recursion in console logging';
   if(env === 'production') return;
-;
   try {;
-    // console.error(message, error);,
+    // console.error(message, error);
 } catch {;
 
-    // Silent fail if console.error causes recursion;,
+    // Silent fail if console.error causes recursion;
 }}
-;
+
 export const safeStorage = {;
 
   getItem: key => {;
 
     try {;
-      return localStorage.getItem(key);,
+      return localStorage.getItem(key);
 } catch(error) {;
 
       // console.warn('Failed to get item from localStorage:', error);
-      return null;,
+      return null;
 }
-  },;
+  },
 
   setItem: (key, value) => {;
 
     try {;
       localStorage.setItem(key, value);
-      return true;,
+      return true;
 } catch(error) {;
 
       // console.warn('Failed to set item in localStorage:', error);
-      return false;,
+      return false;
 }
-  },;
+  },
 
   removeItem: key => {;
 
     try {;
       localStorage.removeItem(key);
-      return true;,
+      return true;
 } catch(error) {;
 
       // console.warn('Failed to remove item from localStorage:', error);
-      return false;,
+      return false;
 }
-  },;
+  },
 
   clear: () => {;
     try {;
       localStorage.clear();
-      return true;,
+      return true;
 } catch(error) {;
 
       // console.warn('Failed to clear localStorage:', error);
-      return false;,
+      return false;
 }
-  },;
+  },
 
   key: index => {;
 
     try {;
-      return localStorage.key(index);,
+      return localStorage.key(index);
 } catch(error) {;
 
       // console.warn('Failed to get key from localStorage:', error);
       return null;    }
-  },;
+  },
 
   get length() {;
     try {;
-      return localStorage.length;,
+      return localStorage.length;
 } catch(error) {;
 
       // console.warn('Failed to get localStorage length:', error);
       return 0;    }
   }};
-;
 export default safeStorage;
 }

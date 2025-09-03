@@ -61,7 +61,7 @@ export interface InnovativeService {}
     competitors: ['Traditional research tools',Basic AI assistants'],';
     marketSize: '$28B research and development market',';
     growthRate: '30% CAGR',';
-    implementationTime: '6-8 weeks',;
+    implementationTime: '6-8 weeks',
     trialDays: 45,';
     roi: '300% within 6 months',';
     useCases: ['';
@@ -69,14 +69,14 @@ export interface InnovativeService {}
     ],';
     technicalSpecs: ['';
       'GPT-4 integration',Advanced NLP',Machine learning algorithms',Data visualization',API integration';
-    ],;
+    ],
     useCases: [';
       'Sales forecasting and pipeline optimization',Customer churn prediction',Inventory demand forecasting',Market trend analysis',Risk assessment and mitigation';
     ],';
     targetAudience: ['Enterprise businesses',Financial services',Retail chains',Manufacturing companies'],';
     marketPrice: '$3,000 - $5,000/month',';
     roi: '300-500% within 6 months',';
-    innovationLevel: 'Cutting-edge',;
+    innovationLevel: 'Cutting-edge',
     contactInfo: {}
 ';
 '';
@@ -86,10 +86,10 @@ export interface InnovativeService {}
       address: '364 E Main St STE 1008 Middletown DE 19709'},''';
     link: 'https://ziontechgroup.com/services/ai-autonomous-research-assistant',''';
     icon: '🔬',''';
-    color: 'from-blue-600 to-indigo-700',;
-    popular: true,;
-    featured: true,;
-    new: true},;
+    color: 'from-blue-600 to-indigo-700',
+    popular: true,
+    featured: true,
+    new: true},
 
   // AI-Powered Customer Experience Platform;
   {}
@@ -119,7 +119,7 @@ export interface InnovativeService {}
     ],';
     marketSize: '$65B quantum computing market',';
     growthRate: '35% CAGR',';
-    implementationTime: '8-12 weeks',;
+    implementationTime: '8-12 weeks',
     trialDays: 30,';
     roi: '500% within 12 months',';
     useCases: ['';
@@ -127,14 +127,14 @@ export interface InnovativeService {}
     ],';
     technicalSpecs: ['';
       'Quantum processors',AI algorithms',Hybrid computing',Quantum error correction',Cloud integration';
-    ],;
+    ],
     useCases: [';
       'E-commerce customer support',SaaS user onboarding',Financial services customer care',Healthcare patient engagement',Retail customer experience';
     ],';
     targetAudience: ['E-commerce platforms',SaaS companies',Financial institutions',Healthcare providers'],';
     marketPrice: '$2,500 - $4,000/month',';
     roi: '250-400% within 8 months',';
-    innovationLevel: 'Cutting-edge',;
+    innovationLevel: 'Cutting-edge',
     contactInfo: {}
 ';
 '';
@@ -144,9 +144,9 @@ export interface InnovativeService {}
       address: '364 E Main St STE 1008 Middletown DE 19709'},''';
     link: 'https://ziontechgroup.com/services/quantum-ai-hybrid-platform',''';
     icon: '⚛️',''';
-    color: 'from-purple-600 to-violet-700',;
-    popular: true,;
-    featured: true},;
+    color: 'from-purple-600 to-violet-700',
+    popular: true,
+    featured: true},
 
   // AI-Powered Supply Chain Optimization;
   {}
@@ -176,7 +176,7 @@ export interface InnovativeService {}
     ],';
     marketSize: '$19B blockchain market',';
     growthRate: '40% CAGR',';
-    implementationTime: '10-16 weeks',;
+    implementationTime: '10-16 weeks',
     trialDays: 30,';
     roi: '250% within 8 months',';
     useCases: ['';
@@ -184,14 +184,14 @@ export interface InnovativeService {}
     ],';
     technicalSpecs: ['';
       'Ethereum compatibility',Smart contracts',Consensus algorithms',API integration',Cloud deployment';
-    ],;
+    ],
     useCases: [';
       'Manufacturing supply chains',Retail inventory management',Logistics optimization',E-commerce fulfillment',Healthcare supply chains';
     ],';
     targetAudience: ['Manufacturing companies',Retail chains',Logistics providers',E-commerce platforms'],';
     marketPrice: '$4,000 - $6,000/month',';
     roi: '400-600% within 12 months',';
-    innovationLevel: 'Cutting-edge',;
+    innovationLevel: 'Cutting-edge',
     contactInfo: {}
 ';
 '';
@@ -201,8 +201,8 @@ export interface InnovativeService {}
       address: '364 E Main St STE 1008 Middletown DE 19709'},''';
     link: 'https://ziontechgroup.com/services/blockchain-enterprise-solutions',''';
     icon: '🔗',''';
-    color: 'from-green-600 to-emerald-700',;
-    popular: true},;
+    color: 'from-green-600 to-emerald-700',
+    popular: true},
 
   // AI-Powered Cybersecurity Suite;
   {}
@@ -230,7 +230,7 @@ export interface InnovativeService {}
     competitors: ['SpaceX Starlink',OneWeb',Amazon Project Kuiper'],';
     marketSize: '$469B space economy',';
     growthRate: '8% CAGR',';
-    implementationTime: '12-20 weeks',;
+    implementationTime: '12-20 weeks',
     trialDays: 30,';
     roi: '400% within 18 months',';
     useCases: ['';
@@ -238,14 +238,14 @@ export interface InnovativeService {}
     ],';
     technicalSpecs: ['';
       'Satellite technology',IoT integration',Data analytics',Cloud computing',AI algorithms';
-    ],;
+    ],
     useCases: [';
       'Enterprise security',Financial services protection',Healthcare data security',Government cybersecurity',Critical infrastructure protection';
     ],';
     targetAudience: ['Large enterprises',Financial institutions',Healthcare organizations',Government agencies'],';
     marketPrice: '$3,500 - $5,500/month',';
     roi: '500-800% (cost of breach prevention),';
-    innovationLevel: 'Revolutionary',;
+    innovationLevel: 'Revolutionary',
     contactInfo: {}
 ';
 '';
@@ -255,8 +255,8 @@ export interface InnovativeService {}
       address: '364 E Main St STE 1008 Middletown DE 19709'},''';
     link: 'https://ziontechgroup.com/services/space-technology-solutions',''';
     icon: '🚀',''';
-    color: 'from-slate-600 to-gray-700',;
-    featured: true},;
+    color: 'from-slate-600 to-gray-700',
+    featured: true},
 
   // Quantum Computing Solutions;
   {}
@@ -284,7 +284,7 @@ export interface InnovativeService {}
     competitors: ['Siemens',GE Renewable Energy',Schneider Electric'],';
     marketSize: '$44B green technology market',';
     growthRate: '25% CAGR',';
-    implementationTime: '8-14 weeks',;
+    implementationTime: '8-14 weeks',
     trialDays: 30,';
     roi: '300% within 10 months',';
     useCases: ['';
@@ -292,14 +292,14 @@ export interface InnovativeService {}
     ],';
     technicalSpecs: ['';
       'IoT sensors',AI algorithms',Cloud platform',Mobile apps',Analytics dashboard';
-    ],;
+    ],
     useCases: [';
       'Drug discovery and development',Financial modeling',Logistics optimization',Climate modeling',Cryptography and security';
     ],';
     targetAudience: ['Pharmaceutical companies',Financial institutions',Research institutions',Government agencies'],';
     marketPrice: '$6,000 - $10,000/month',';
     roi: '200-400% (research breakthroughs),';
-    innovationLevel: 'Revolutionary',;
+    innovationLevel: 'Revolutionary',
     contactInfo: {}
 ';
 '';
@@ -309,8 +309,8 @@ export interface InnovativeService {}
       address: '364 E Main St STE 1008 Middletown DE 19709'},''';
     link: 'https://ziontechgroup.com/services/green-technology-solutions',''';
     icon: '🌱',''';
-    color: 'from-green-500 to-emerald-600',;
-    popular: true},;
+    color: 'from-green-500 to-emerald-600',
+    popular: true},
 
   // Edge Computing Platform;
   {}
@@ -338,7 +338,7 @@ export interface InnovativeService {}
     competitors: ['CrowdStrike',SentinelOne',Darktrace'],';
     marketSize: '$150B cybersecurity market',';
     growthRate: '12% CAGR',';
-    implementationTime: '6-10 weeks',;
+    implementationTime: '6-10 weeks',
     trialDays: 30,';
     roi: '400% within 6 months',';
     useCases: ['';
@@ -346,14 +346,14 @@ export interface InnovativeService {}
     ],';
     technicalSpecs: ['';
       'Machine learning',Behavioral analytics',Cloud security',API protection',Zero trust';
-    ],;
+    ],
     useCases: [';
       'IoT applications',Autonomous vehicles',Smart cities',Industrial automation',Gaming and entertainment';
     ],';
     targetAudience: ['IoT companies',Automotive manufacturers',Smart city developers',Industrial companies'],';
     marketPrice: '$2,800 - $4,500/month',';
     roi: '300-500% within 10 months',';
-    innovationLevel: 'Cutting-edge',;
+    innovationLevel: 'Cutting-edge',
     contactInfo: {}
 ';
 '';
@@ -363,9 +363,9 @@ export interface InnovativeService {}
       address: '364 E Main St STE 1008 Middletown DE 19709'},''';
     link: 'https://ziontechgroup.com/services/ai-cybersecurity-platform',''';
     icon: '🛡️',''';
-    color: 'from-red-600 to-orange-700',;
-    popular: true,;
-    featured: true},;
+    color: 'from-red-600 to-orange-700',
+    popular: true,
+    featured: true},
 
   // Blockchain Enterprise Solutions;
   {}
@@ -391,7 +391,7 @@ export interface InnovativeService {}
     competitors: ['HubSpot',Salesforce',Pipedrive'],';
     marketSize: '$40B CRM market',';
     growthRate: '15% CAGR',';
-    implementationTime: '2-4 weeks',;
+    implementationTime: '2-4 weeks',
     trialDays: 14,';
     roi: '200% within 3 months',';
     useCases: ['';
@@ -399,14 +399,14 @@ export interface InnovativeService {}
     ],';
     technicalSpecs: ['';
       'Cloud-based',Mobile responsive',API integration',Data encryption',Backup systems';
-    ],;
+    ],
     useCases: [';
       'Supply chain management',Digital identity verification',Asset tokenization',Cross-border payments',Voting systems';
     ],';
     targetAudience: ['Financial institutions',Supply chain companies',Government agencies',Healthcare organizations'],';
     marketPrice: '$4,500 - $7,000/month',';
     roi: '400-700% within 15 months',';
-    innovationLevel: 'Cutting-edge',;
+    innovationLevel: 'Cutting-edge',
     contactInfo: {}
 ';
 '';
@@ -416,8 +416,8 @@ export interface InnovativeService {}
       address: '364 E Main St STE 1008 Middletown DE 19709'},''';
     link: 'https://ziontechgroup.com/services/micro-crm-platform',''';
     icon: '👥',''';
-    color: 'from-blue-500 to-cyan-600',;
-    popular: true},;
+    color: 'from-blue-500 to-cyan-600',
+    popular: true},
 
   // AI-Powered Workflow Automation;
   {}
@@ -443,7 +443,7 @@ export interface InnovativeService {}
     competitors: ['Tableau',Power BI',Qlik'],';
     marketSize: '$25B business intelligence market',';
     growthRate: '20% CAGR',';
-    implementationTime: '8-12 weeks',;
+    implementationTime: '8-12 weeks',
     trialDays: 30,';
     roi: '350% within 8 months',';
     useCases: ['';
@@ -451,14 +451,14 @@ export interface InnovativeService {}
     ],';
     technicalSpecs: ['';
       'Big data processing',Machine learning',Real-time analytics',Cloud deployment',API integration';
-    ],;
+    ],
     useCases: [';
       'Blog content creation',Social media posts',Marketing copy',Product descriptions',Email campaigns';
     ],';
     targetAudience: ['Marketing agencies',E-commerce businesses',Content creators',Small to medium businesses'],';
     marketPrice: '$399 - $599/month',';
     roi: '400-800% within 3 months',';
-    innovationLevel: 'Established',;
+    innovationLevel: 'Established',
     contactInfo: {}
 ';
 '';
@@ -468,8 +468,8 @@ export interface InnovativeService {}
       address: '364 E Main St STE 1008 Middletown DE 19709'},''';
     link: 'https://ziontechgroup.com/services/advanced-data-analytics',''';
     icon: '📊',''';
-    color: 'from-indigo-600 to-purple-700',;
-    popular: true},;
+    color: 'from-indigo-600 to-purple-700',
+    popular: true},
 
   // Micro SaaS - AI Sales Copilot;
   {}
@@ -496,7 +496,7 @@ export interface InnovativeService {}
     competitors: ['GitLab',Jenkins',CircleCI'],';
     marketSize: '$8B DevOps market',';
     growthRate: '18% CAGR',';
-    implementationTime: '6-10 weeks',;
+    implementationTime: '6-10 weeks',
     trialDays: 30,';
     roi: '300% within 6 months',';
     useCases: ['';
@@ -504,14 +504,14 @@ export interface InnovativeService {}
     ],';
     technicalSpecs: ['';
       'Docker support',Kubernetes integration',Cloud platforms',API management',Monitoring tools';
-    ],;
+    ],
     useCases: [';
       'B2B sales teams',E-commerce businesses',Real estate agencies',Insurance companies',Financial services';
     ],';
     targetAudience: ['Sales teams',B2B companies',Real estate agencies',Financial services'],';
     marketPrice: '$499 - $799/month',';
     roi: '500-1000% within 4 months',';
-    innovationLevel: 'Cutting-edge',;
+    innovationLevel: 'Cutting-edge',
     contactInfo: {}
 ';
 '';
@@ -521,8 +521,8 @@ export interface InnovativeService {}
       address: '364 E Main St STE 1008 Middletown DE 19709'},''';
     link: 'https://ziontechgroup.com/services/cloud-devops-automation',''';
     icon: '☁️',''';
-    color: 'from-cyan-600 to-blue-700',;
-    popular: true},;
+    color: 'from-cyan-600 to-blue-700',
+    popular: true},
 
   // Micro SaaS - Smart Contract Risk Scanner;
   {}
@@ -549,7 +549,7 @@ export interface InnovativeService {}
     competitors: ['Accenture',Deloitte Digital',McKinsey Digital'],';
     marketSize: '$500B digital transformation market',';
     growthRate: '23% CAGR',';
-    implementationTime: '16-24 weeks',;
+    implementationTime: '16-24 weeks',
     trialDays: 30,';
     roi: '400% within 18 months',';
     useCases: ['';
@@ -557,14 +557,14 @@ export interface InnovativeService {}
     ],';
     technicalSpecs: ['';
       'AI integration',Cloud platforms',API management',Data analytics',Mobile solutions';
-    ],;
+    ],
     useCases: [';
       'DeFi protocols',NFT marketplaces',Token sales',Blockchain applications',Smart contract development';
     ],';
     targetAudience: ['DeFi protocols',NFT platforms',Blockchain developers',Crypto companies'],';
     marketPrice: '$299 - $499/month',';
     roi: '1000-2000% (preventing exploits),';
-    innovationLevel: 'Revolutionary',;
+    innovationLevel: 'Revolutionary',
     contactInfo: {}
 ';
 '';
@@ -574,10 +574,9 @@ export interface InnovativeService {}
       address: '364 E Main St STE 1008 Middletown DE 19709'},''';
     link: 'https://ziontechgroup.com/services/digital-transformation-suite',''';
     icon: '🔄',''';
-    color: 'from-orange-600 to-red-700',;
+    color: 'from-orange-600 to-red-700',
     featured: true}
 ];
-;
 export { innovativeServices2025 };
 export default innovativeServices2025;
 ';

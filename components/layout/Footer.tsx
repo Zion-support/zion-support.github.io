@@ -1,131 +1,124 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ;
-  Brain,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Linkedin,;
-  Twitter,;
-  Github,;
-  Youtube,;
-  Instagram,;
-  ArrowRight,;
-  Heart,;
-  Globe,;
-  Shield,;
-  Users,;
-  Award,;
-  Star,;
-  Zap,;
-  Cloud,;
-  Database,;
-  Network,;
-  Target,;
-  CheckCircle,;
-  ExternalLink;,
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,
+  Instagram,
+  ArrowRight,
+  Heart,
+  Globe,
+  Shield,
+  Users,
+  Award,
+  Star,
+  Zap,
+  Cloud,
+  Database,
+  Network,
+  Target,
+  CheckCircle,
+  ExternalLink;
 } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Badge } from '../ui/Badge';
-;
 const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
-;
   const serviceCategories = [;
     {;
-      title: "AI & Automation",;
-      icon: Brain,;
-      color: "text-blue-400",;
+      title: "AI & Automation",
+      icon: Brain,
+      color: "text-blue-400",
       services: [;
-        { name: 'AI Content Generator Pro', href: '/services/ai-content-generator' },;
-        { name: 'Social Media Scheduler Pro', href: '/services/social-media-scheduler' },;
-        { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },;
-        { name: 'Smart Invoice Management', href: '/services/invoice-management' },;
-        { name: 'Time Tracking & Productivity', href: '/services/time-tracking' },;
-        { name: 'CRM & Sales Pipeline', href: '/services/crm-sales-pipeline' },;
-        { name: 'Smart Appointment Booking', href: '/services/appointment-booking' },;
-        { name: 'Inventory & POS System', href: '/services/inventory-pos' },;
-        { name: 'Document Management', href: '/services/document-management' },;
-        { name: 'Survey & Feedback Platform', href: '/services/survey-feedback' },;
-        { name: 'Quantum Computing Simulator', href: '/services/quantum-computing-simulator' },;
-        { name: 'Blockchain NFT Marketplace', href: '/services/blockchain-nft-platform' },;
-        { name: 'IoT Device Management', href: '/services/iot-device-management' },;
-        { name: 'AR/VR Experience Builder', href: '/services/ar-vr-experience-builder' },;
-        { name: 'AI Code Assistant Pro', href: '/services/ai-code-assistant' },;
-        { name: 'Metaverse Platform Builder', href: '/services/metaverse-platform-builder' },;
-        { name: 'AI Voice Cloning Platform', href: '/services/ai-voice-cloning-platform' },;
-        { name: 'Smart Contract Auditor', href: '/services/smart-contract-auditor' },;
-        { name: 'AI Content Moderation', href: '/services/ai-content-moderation' },;
-        { name: 'Digital Twin Platform', href: '/services/digital-twin-platform' },;
-        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" },;
-        { name: "AI Customer Experience Platform", href: "/services/ai-customer-experience-platform" },;
-        { name: "AI Healthcare Diagnostics", href: "/services/ai-healthcare-diagnostics" },;
+        { name: 'AI Content Generator Pro', href: '/services/ai-content-generator' },
+        { name: 'Social Media Scheduler Pro', href: '/services/social-media-scheduler' },
+        { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
+        { name: 'Smart Invoice Management', href: '/services/invoice-management' },
+        { name: 'Time Tracking & Productivity', href: '/services/time-tracking' },
+        { name: 'CRM & Sales Pipeline', href: '/services/crm-sales-pipeline' },
+        { name: 'Smart Appointment Booking', href: '/services/appointment-booking' },
+        { name: 'Inventory & POS System', href: '/services/inventory-pos' },
+        { name: 'Document Management', href: '/services/document-management' },
+        { name: 'Survey & Feedback Platform', href: '/services/survey-feedback' },
+        { name: 'Quantum Computing Simulator', href: '/services/quantum-computing-simulator' },
+        { name: 'Blockchain NFT Marketplace', href: '/services/blockchain-nft-platform' },
+        { name: 'IoT Device Management', href: '/services/iot-device-management' },
+        { name: 'AR/VR Experience Builder', href: '/services/ar-vr-experience-builder' },
+        { name: 'AI Code Assistant Pro', href: '/services/ai-code-assistant' },
+        { name: 'Metaverse Platform Builder', href: '/services/metaverse-platform-builder' },
+        { name: 'AI Voice Cloning Platform', href: '/services/ai-voice-cloning-platform' },
+        { name: 'Smart Contract Auditor', href: '/services/smart-contract-auditor' },
+        { name: 'AI Content Moderation', href: '/services/ai-content-moderation' },
+        { name: 'Digital Twin Platform', href: '/services/digital-twin-platform' },
+        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" },
+        { name: "AI Customer Experience Platform", href: "/services/ai-customer-experience-platform" },
+        { name: "AI Healthcare Diagnostics", href: "/services/ai-healthcare-diagnostics" },
         { name: "AI Enterprise Orchestrator", href: "/services/ai-enterprise-orchestrator" }
-      ];,
-},;
+      ];
+},
     {;
-      title: "Cloud & Infrastructure",;
-      icon: Cloud,;
-      color: "text-green-400",;
+      title: "Cloud & Infrastructure",
+      icon: Cloud,
+      color: "text-green-400",
       services: [;
-        { name: 'Network Security Audit', href: '/services/network-security-audit' },;
-        { name: 'Disaster Recovery Planning', href: '/services/disaster-recovery-planning' },;
-        { name: 'Performance Monitoring', href: '/services/performance-monitoring' },;
-        { name: 'Identity & Access Management', href: '/services/iam' },;
-        { name: 'Backup & Recovery Solutions', href: '/services/backup-recovery' },;
-        { name: 'DevOps & CI/CD Pipeline', href: '/services/devops-cicd' },;
-        { name: 'Database Optimization', href: '/services/database-optimization' },;
-        { name: "Cloud Migration", href: "/services/cloud-migration" },;
-        { name: "Micro SaaS Solutions", href: "/micro-saas" },;
-        { name: "IT Services", href: "/it-services" },;
+        { name: 'Network Security Audit', href: '/services/network-security-audit' },
+        { name: 'Disaster Recovery Planning', href: '/services/disaster-recovery-planning' },
+        { name: 'Performance Monitoring', href: '/services/performance-monitoring' },
+        { name: 'Identity & Access Management', href: '/services/iam' },
+        { name: 'Backup & Recovery Solutions', href: '/services/backup-recovery' },
+        { name: 'DevOps & CI/CD Pipeline', href: '/services/devops-cicd' },
+        { name: 'Database Optimization', href: '/services/database-optimization' },
+        { name: "Cloud Migration", href: "/services/cloud-migration" },
+        { name: "Micro SaaS Solutions", href: "/micro-saas" },
+        { name: "IT Services", href: "/it-services" },
         { name: "Infrastructure Management", href: "/services/infrastructure" }
-      ];,
-},;
+      ];
+},
     {;
-      title: "Data & Analytics",;
-      icon: Database,;
-      color: "text-purple-400",;
+      title: "Data & Analytics",
+      icon: Database,
+      color: "text-purple-400",
       services: [;
-        { name: "Data Analytics", href: "/services/data-analytics" },;
-        { name: "Business Intelligence", href: "/services/business-intelligence" },;
-        { name: "Predictive Analytics", href: "/services/predictive-analytics" },;
+        { name: "Data Analytics", href: "/services/data-analytics" },
+        { name: "Business Intelligence", href: "/services/business-intelligence" },
+        { name: "Predictive Analytics", href: "/services/predictive-analytics" },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" }
-      ];,
+      ];
 }
   ];
-;
   const quickLinks = [;
-    { name: "About Us", href: "/about" },;
-    { name: "Our Team", href: "/team" },;
-    { name: "Careers", href: "/careers" },;
-    { name: "Case Studies", href: "/case-studies" },;
-    { name: "Blog", href: "/blog" },;
-    { name: "White Papers", href: "/white-papers" },;
-    { name: "Webinars", href: "/webinars" },;
+    { name: "About Us", href: "/about" },
+    { name: "Our Team", href: "/team" },
+    { name: "Careers", href: "/careers" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Blog", href: "/blog" },
+    { name: "White Papers", href: "/white-papers" },
+    { name: "Webinars", href: "/webinars" },
     { name: "Pricing", href: "/pricing" }
   ];
-;
   const legalLinks = [;
-    { name: "Privacy Policy", href: "/privacy" },;
-    { name: "Terms of Service", href: "/terms" },;
-    { name: "Cookie Policy", href: "/cookies" },;
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
     { name: "Sitemap", href: "/sitemap" }
   ];
-;
   const socialLinks = [;
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github },;
-    { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },;
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github },
+    { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
   ];
-;
   const contactInfo = {;
-    email: "contact@ziontechgroup.com",;
-    phone: "+1 (555) 123-4567",;
-    address: "123 Technology Drive, San Francisco, CA 94105";,
+    email: "contact@ziontechgroup.com",
+    phone: "+1 (555) 123-4567",
+    address: "123 Technology Drive, San Francisco, CA 94105";
 };
-;
   return (;
     <footer className="bg-slate-900 border-t border-slate-700">;
       {/* Main Footer Content */}
@@ -139,7 +132,6 @@ const Footer: React.FC = () => {;
               </div>;
               <span className="text-2xl font-bold text-white">Zion Tech Group</span>;
             </Link>;
-            ;
             <p className="text-gray-300 mb-6 leading-relaxed">;
               Leading provider of AI-powered solutions and technology services. ;
               We help businesses transform and innovate with cutting-edge artificial intelligence.;
@@ -244,30 +236,28 @@ const Footer: React.FC = () => {;
               ))}
 import React from 'react;
 import { Link } from 'react-router-dom;
-import { ;'  Brain, Mail,;
-  Phone, MapPin,;
-  Linkedin, Twitter,;
-  Github, Youtube,;
-  Instagram, ArrowRight,;
-  Heart, Globe,;
-  Shield, Users,;
-  Award, Star,;
-  Zap, Cloud,;
-  Database, Network,;
-  Target, CheckCircle,;
-  ExternalLink;,
+import { ;'  Brain, Mail,
+  Phone, MapPin,
+  Linkedin, Twitter,
+  Github, Youtube,
+  Instagram, ArrowRight,
+  Heart, Globe,
+  Shield, Users,
+  Award, Star,
+  Zap, Cloud,
+  Database, Network,
+  Target, CheckCircle,
+  ExternalLink;
 } from 'lucide-react;
 import { Button } from '../ui/Button;
 import { Badge } from '../ui/Badge;
-;
 const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
-;
   ];
   const quickLinks = [];
   const legalLinks = [];
   const socialLinks = [];
   const contactInfo = {}
-;
+
   const quickLinks = [;
     { name: "About Us", href: "/about" },"    { name: "Our Team", href: "/team" },"    { name: "Careers", href: "/careers" },"    { name: "Case Studies", href: "/case-studies" },"    { name: "Blog", href: "/blog" },"    { name: "White Papers", href: "/white-papers" },"    { name: "Webinars", href: "/webinars" },"    { name: "Pricing", href: "/pricing" }"  ];";
   const legalLinks = [;
@@ -282,17 +272,17 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
 ";
             <div className="space-y-3 mb-6">";
               <div className="flex items-center text-gray-300">";
-                <Mail className="w-4 h-4 mr-3 text-blue-400"  />",;
-                <a href="{"mailto:${contactInfo.email}"}" className="hover: text-white transition-colors">,;
+                <Mail className="w-4 h-4 mr-3 text-blue-400"  />",
+                <a href="{"mailto:${contactInfo.email}"}" className="hover: text-white transition-colors">,
                   {contactInfo.email}
-;
+
                 </a>;
               </div>";
               <div className="flex items-center text-gray-300">";
                 <Phone className="w-4 h-4 mr-3 text-blue-400"  />";
-                <a href="{"tel:${contactInfo.phone}"}" className="hover: text-white transition-colors">,;
+                <a href="{"tel:${contactInfo.phone}"}" className="hover: text-white transition-colors">,
                   {contactInfo.phone}
-;
+
                 </a>;
               </div>";
               <div className="flex items-center text-gray-300">";
@@ -311,7 +301,7 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                   <social.icon className="w-5 h-5" />;
                 </a>;
               ))}
-;
+
             <div className="space-y-3 mb-6>              <div className="flex items-center text-gray-300">"                <Mail className="w-4 h-4 mr-3 text-blue-400 />                <a href={`mailto:${contactInfo.email}} className="hover:text-white transition-colors">"                  {contactInfo.email}"                </a>              </div>;
               <div className="flex items-center text-gray-300>                <Phone className="w-4 h-4 mr-3 text-blue-400" />"                <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition-colors>                  {contactInfo.phone}"                </a>              </div>;
               <div className="flex items-center text-gray-300>                <MapPin className="w-4 h-4 mr-3 text-blue-400" />"                <span>{contactInfo.address}</span>"              </div>;
@@ -320,7 +310,7 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
           <div className="lg: col-span-2">";
             <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>";
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-              {serviceCategories.map((category) => (",;
+              {serviceCategories.map((category) => (",
                 <div key="{category.title}">";
                   <div className="flex items-center mb-4">";
                     <category.icon className="{"w-5" h-5 mr-2 ${category.color}"} />";
@@ -331,9 +321,9 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                       <li key="{service.name}">";
                         <Link to="{service.href}
                           className="text-gray-300 hover: text-white transition-colors text-sm flex items-center group">";
-                          <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,;
+                          <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity"  />,
                           {service.name}
-;
+
             {/* Social Links */}
             <div className="flex space-x-4>              {socialLinks.map((social) => ("                <a;
                   key={social.name}
@@ -373,7 +363,6 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                 <li><Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact</Link></li>;
               </ul>;
             </div>;
-            ;
             <div>;
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Resources</h4>;
               <ul className="space-y-2">;
@@ -383,7 +372,6 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                 <li><Link href="/webinars" className="text-gray-300 hover:text-blue-400 transition-colors">Webinars</Link></li>;
               </ul>;
             </div>;
-            ;
             <div>;
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Support</h4>;
               <ul className="space-y-2">;
@@ -394,7 +382,6 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                 <li><Link href="/status" className="text-gray-300 hover:text-blue-400 transition-colors">System Status</Link></li>;
               </ul>;
             </div>;
-            ;
             <div>;
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Legal</h4>;
               <ul className="space-y-2 mb-6">;
@@ -404,10 +391,8 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                 <li><Link href="/data-protection" className="text-gray-300 hover:text-blue-400 transition-colors">Data Protection</Link></li>;
                 <li><Link href="/accessibility" className="text-gray-300 hover:text-blue-400 transition-colors">Accessibility</Link></li>;
               </ul>;
-              ;
               </ul>;
             </div>;
-            ;
             <div>;
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Connect</h4>;
               <div className="flex space-x-4">;
@@ -424,7 +409,6 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                   <Instagram className="w-6 h-6" />;
                 </a>;
               </div>;
-              ;
               {/* Newsletter Signup */}
               <div className="mt-6">;
                 <h5 className="text-sm font-semibold mb-2 text-blue-400">Newsletter</h5>;
@@ -480,18 +464,18 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                         </Link>;
                       </li>;
                     ))}
-;
+
                   </ul>;
                 </div>;
               ))}
-;
+
           {/* Quick Links & Newsletter */}
 <div className="lg: col-span-1>            <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>"            <div className="grid grid-cols-2 gap-4 mb-8>              {quickLinks.map((link) => ("                <Link;
                   key={link.name}
                   to={link.href}
                   className="text-gray-300 hover: text-white transition-colors text-sm                >"                  {link.name}</Link>;
               ))}
-;
+
             </div>;
 
             {/* Newsletter Signup */}
@@ -558,7 +542,6 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                 ))}
               </div>;
             </div>;
-            ;
             <div className="flex items-center space-x-2 text-gray-400 text-sm">;
               <span>Made with</span>;
               <Heart className="w-4 h-4 text-red-500" />;
@@ -587,7 +570,6 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                 ))}
               </div>;
             </div>;
-            ;
             <div className="flex items-center space-x-2 text-gray-400 text-sm">;
               <span>Made with</span>;
               <Heart className="w-4 h-4 text-red-500" />;
@@ -616,7 +598,6 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                 ))}
               </div>;
             </div>;
-            ;
             <div className="flex items-center space-x-2 text-gray-400 text-sm">;
               <span>Made with</span>;
               <Heart className="w-4 h-4 text-red-500" />;
@@ -660,10 +641,9 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
                   placeholder="Enter your email;
                   className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 text-sm"  />";
                 <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">;
-                  Subscribe,;
+                  Subscribe,
                 </Button>;
               </div>;
-,;
       {/* comment */}";
       <div className="border-t border-slate-700 py-8">";
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
@@ -672,17 +652,15 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
               <div className="text-3xl font-bold text-white mb-2">200+</div>";
               <div className="text-gray-400 text-sm">Projects Completed</div>;
             </div>;
-            ;
 <div className="flex items-center space-x-2 text-gray-400 text-sm>              <span>Made with</span>"              <Heart className="w-4 h-4 text-red-500 />              <span>by Zion Tech Group</span>"            </div></div>;
         </div>;
       </div>;
     </footer>;
-  );,
+  );
 };
-;
                   </Link>;
                 ))}
-;
+
               </div>;
             ";
             <div className="flex items-center space-x-2 text-gray-400 text-sm">;
@@ -691,6 +669,6 @@ const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
               <span>by Zion Tech Group</span>;
             </div>;
     </footer>;
-  );,
+  );
 }
 ""export default Footer

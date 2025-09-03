@@ -2,148 +2,132 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ;
-  Rocket, ;
-  Satellite, ;
-  Globe, ;
-  Brain, ;
-  CheckCircle, ;
-  Star, ;
-  ArrowRight, ;
-  Mail, ;
-  Phone, ;
-  MapPin,;
-  Orbit,;
-  Circle,;
-  Eye,;
-  Signal,;
-  Navigation,;
-  Shield,;
-  Zap,;
-  Target,;
-  Users,;
-  Clock,;
-  Award,;
-  SatelliteDish;,
+  Rocket,
+  Satellite,
+  Globe,
+  Brain,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  Orbit,
+  Circle,
+  Eye,
+  Signal,
+  Navigation,
+  Shield,
+  Zap,
+  Target,
+  Users,
+  Clock,
+  Award,
+  SatelliteDish;
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-;
 export default function AISpaceTechnology() {;
-  const features = [;
-    "AI-powered satellite navigation systems",;
-    "Space debris tracking and collision avoidance",;
-    "Autonomous spacecraft operations",;
-    "Earth observation and climate monitoring",;
-    "Space weather forecasting",;
-    "Satellite constellation management",;
-    "Deep space exploration AI",;
-    "Space mining and resource detection";
-  ];
-;
-  const benefits = [;
-    "Enhanced satellite communication reliability",;
-    "Improved space mission success rates",;
-    "Real-time space debris monitoring",;
-    "Advanced climate change analysis",;
-    "Autonomous space exploration capabilities",;
-    "Cost-effective satellite operations",;
-    "Enhanced GPS and navigation accuracy",;
-    "Revolutionary space resource discovery";
-  ];
-;
+  const features = [ "AI-powered satellite navigation systems",
+    "Space debris tracking and collision avoidance",
+    "Autonomous spacecraft operations",
+    "Earth observation and climate monitoring",
+    "Space weather forecasting",
+    "Satellite constellation management",
+    "Deep space exploration AI",
+    "Space mining and resource detection" ];
+  const benefits = [ "Enhanced satellite communication reliability",
+    "Improved space mission success rates",
+    "Real-time space debris monitoring",
+    "Advanced climate change analysis",
+    "Autonomous space exploration capabilities",
+    "Cost-effective satellite operations",
+    "Enhanced GPS and navigation accuracy",
+    "Revolutionary space resource discovery" ];
   const pricingTiers = [;
     {;
-      name: "Space Starter",;
-      price: 1999,;
-      period: "month",;
-      description: "Basic space technology solutions for research and development",;
-      features: [;
-        "Satellite tracking and monitoring",;
-        "Basic space weather data",;
-        "Email support",;
-        "Standard API access",;
-        "Basic analytics dashboard";
-      ];,
-},;
+      name: "Space Starter",
+      price: 1999,
+      period: "month",
+      description: "Basic space technology solutions for research and development",
+      features: [ "Satellite tracking and monitoring",
+        "Basic space weather data",
+        "Email support",
+        "Standard API access",
+        "Basic analytics dashboard" ];
+},
     {;
-      name: "Space Professional",;
-      price: 5999,;
-      period: "month",;
-      description: "Advanced space technology solutions for enterprises and agencies",;
-      features: [;
-        "AI-powered satellite operations",;
-        "Advanced space debris tracking",;
-        "Priority support",;
-        "Custom AI algorithms",;
-        "Real-time monitoring",;
-        "Space consulting hours",;
-        "Performance optimization";
-      ],;
-      popular: true;,
-},;
+      name: "Space Professional",
+      price: 5999,
+      period: "month",
+      description: "Advanced space technology solutions for enterprises and agencies",
+      features: [ "AI-powered satellite operations",
+        "Advanced space debris tracking",
+        "Priority support",
+        "Custom AI algorithms",
+        "Real-time monitoring",
+        "Space consulting hours",
+        "Performance optimization" ],
+      popular: true;
+},
     {;
-      name: "Space Enterprise",;
-      price: 14999,;
-      period: "month",;
-      description: "Full-scale space technology infrastructure and operations",;
-      features: [;
-        "Dedicated space operations center",;
-        "Custom space AI solutions",;
-        "24/7 dedicated support",;
-        "White-label space platform",;
-        "Space strategy consulting",;
-        "SLA guarantees",;
-        "Dedicated space engineer",;
-        "Mission control integration";
-      ];,
+      name: "Space Enterprise",
+      price: 14999,
+      period: "month",
+      description: "Full-scale space technology infrastructure and operations",
+      features: [ "Dedicated space operations center",
+        "Custom space AI solutions",
+        "24/7 dedicated support",
+        "White-label space platform",
+        "Space strategy consulting",
+        "SLA guarantees",
+        "Dedicated space engineer",
+        "Mission control integration" ];
 }
   ];
-;
   const useCases = [;
     {;
-      title: "Satellite Communications",;
-      description: "AI-powered satellite networks for global connectivity and communication services",;
-      icon: Satellite;,
-},;
+      title: "Satellite Communications",
+      description: "AI-powered satellite networks for global connectivity and communication services",
+      icon: Satellite;
+},
     {;
-      title: "Earth Observation",;
-      description: "Climate monitoring, disaster response, and environmental analysis using space data",;
-      icon: Globe;,
-},;
+      title: "Earth Observation",
+      description: "Climate monitoring, disaster response, and environmental analysis using space data",
+      icon: Globe;
+},
     {;
-      title: "Space Exploration",;
-      description: "Autonomous spacecraft navigation and deep space mission planning",;
-      icon: Rocket;,
-},;
+      title: "Space Exploration",
+      description: "Autonomous spacecraft navigation and deep space mission planning",
+      icon: Rocket;
+},
     {;
-      title: "Space Mining",;
-      description: "AI-driven resource detection and extraction from asteroids and celestial bodies",;
-      icon: Circle;,
+      title: "Space Mining",
+      description: "AI-driven resource detection and extraction from asteroids and celestial bodies",
+      icon: Circle;
 }
   ];
-;
   const technologies = [;
     {;
-      name: "Machine Learning",;
-      description: "Advanced AI algorithms for space data analysis and prediction",;
-      icon: Brain;,
-},;
+      name: "Machine Learning",
+      description: "Advanced AI algorithms for space data analysis and prediction",
+      icon: Brain;
+},
     {;
-      name: "Computer Vision",;
-      description: "AI-powered image recognition for satellite imagery and space objects",;
-      icon: Eye;,
-},;
+      name: "Computer Vision",
+      description: "AI-powered image recognition for satellite imagery and space objects",
+      icon: Eye;
+},
     {;
-      name: "Autonomous Systems",;
-      description: "Self-governing spacecraft and satellite operations",;
-      icon: Navigation;,
-},;
+      name: "Autonomous Systems",
+      description: "Self-governing spacecraft and satellite operations",
+      icon: Navigation;
+},
     {;
-      name: "Predictive Analytics",;
-      description: "Forecasting space weather and orbital events",;
-      icon: Signal;,
+      name: "Predictive Analytics",
+      description: "Forecasting space weather and orbital events",
+      icon: Signal;
 }
   ];
-;
   return (;
     <>;
       <SEO ;
@@ -151,7 +135,6 @@ export default function AISpaceTechnology() {;
         description="Revolutionary AI-powered space technology solutions. From satellite operations to space exploration, discover the future of space technology.";
         canonical="/services/ai-space-technology";
       />;
-      ;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">;
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">;
@@ -356,7 +339,7 @@ export default function AISpaceTechnology() {;
                   className={`relative bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border rounded-xl p-8 ${;
                     tier.popular ;
                       ? 'border-blue-400 scale-105' ;
-                      : 'border-blue-500/30';,
+                      : 'border-blue-500/30';
 }`}
                 >;
                   {tier.popular && (;
@@ -366,7 +349,7 @@ export default function AISpaceTechnology() {;
                       </span>;
                     </div>;
                   )}
-                  ;
+
                   <div className="text-center mb-8">;
                     <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>;
                     <p className="text-gray-400 mb-4">{tier.description}</p>;
@@ -390,7 +373,7 @@ export default function AISpaceTechnology() {;
                     className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${;
                       tier.popular;
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white';
-                        : 'border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white';,
+                        : 'border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white';
 }`}
                   >;
                     Launch Mission;
@@ -462,5 +445,5 @@ export default function AISpaceTechnology() {;
         </section>;
       </div>;
     </>;
-  );,
+  );
 }

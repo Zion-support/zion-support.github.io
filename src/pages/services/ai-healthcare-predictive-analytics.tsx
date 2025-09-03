@@ -2,218 +2,206 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { ;
-  Heart, ;
-  Activity, ;
-  TrendingUp, ;
-  BarChart3, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Brain,;
-  Shield,;
-  Users,;
-  Lock,;
-  Eye,;
-  Download,;
-  Share2,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Zap,;
-  Target,;
-  Gauge,;
-  AlertCircle,;
-  Database,;
-  Cloud,;
-  Server,;
-  Calculator,;
-  Receipt,;
-  CreditCard,;
-  Banknote,;
-  PieChart,;
-  LineChart,;
-  Clock,;
-  Calendar,;
-  BookOpen,;
-  Scale,;
-  Gavel,;
-  Building2,;
-  Globe,;
-  Network,;
-  Stethoscope,;
-  Pill,;
-  Microscope,;
-  TestTube,;
-  Hospital,;
-  Ambulance,;
-  UserCheck,;
-  FileText,;
-  AlertTriangle,;
-  CheckSquare,;
-  Monitor,;
-  Smartphone,;
-  Tablet,;
-  Laptop;,
+  Heart,
+  Activity,
+  TrendingUp,
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Shield,
+  Users,
+  Lock,
+  Eye,
+  Download,
+  Share2,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Target,
+  Gauge,
+  AlertCircle,
+  Database,
+  Cloud,
+  Server,
+  Calculator,
+  Receipt,
+  CreditCard,
+  Banknote,
+  PieChart,
+  LineChart,
+  Clock,
+  Calendar,
+  BookOpen,
+  Scale,
+  Gavel,
+  Building2,
+  Globe,
+  Network,
+  Stethoscope,
+  Pill,
+  Microscope,
+  TestTube,
+  Hospital,
+  Ambulance,
+  UserCheck,
+  FileText,
+  AlertTriangle,
+  CheckSquare,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Laptop;
 } from 'lucide-react';
-;
 const AIHealthcarePredictiveAnalytics = () => {;
   const features = [;
     {;
-      icon: Brain,;
-      title: "AI-Powered Disease Prediction",;
-      description: "Advanced machine learning algorithms predict disease progression and patient outcomes";,
-},;
+      icon: Brain,
+      title: "AI-Powered Disease Prediction",
+      description: "Advanced machine learning algorithms predict disease progression and patient outcomes";
+},
     {;
-      icon: Activity,;
-      title: "Real-time Patient Monitoring",;
-      description: "Continuous monitoring of vital signs and health metrics with predictive alerts";,
-},;
+      icon: Activity,
+      title: "Real-time Patient Monitoring",
+      description: "Continuous monitoring of vital signs and health metrics with predictive alerts";
+},
     {;
-      icon: TrendingUp,;
-      title: "Treatment Optimization",;
-      description: "AI-driven recommendations for personalized treatment plans and medication dosages";,
-},;
+      icon: TrendingUp,
+      title: "Treatment Optimization",
+      description: "AI-driven recommendations for personalized treatment plans and medication dosages";
+},
     {;
-      icon: Shield,;
-      title: "Early Warning System",;
-      description: "Proactive alerts for potential health complications before they become critical";,
-},;
+      icon: Shield,
+      title: "Early Warning System",
+      description: "Proactive alerts for potential health complications before they become critical";
+},
     {;
-      icon: BarChart3,;
-      title: "Population Health Analytics",;
-      description: "Comprehensive insights into population health trends and risk factors";,
-},;
+      icon: BarChart3,
+      title: "Population Health Analytics",
+      description: "Comprehensive insights into population health trends and risk factors";
+},
     {;
-      icon: Users,;
-      title: "Patient Risk Stratification",;
-      description: "Automated patient risk assessment and prioritization for care management";,
+      icon: Users,
+      title: "Patient Risk Stratification",
+      description: "Automated patient risk assessment and prioritization for care management";
 }
   ];
-;
   const pricingPlans = [;
     {;
-      name: "Starter",;
-      price: "$299",;
-      period: "/month",;
-      description: "Perfect for small clinics and medical practices",;
-      features: [;
-        "Up to 1,000 patients",;
-        "Basic predictive analytics",;
-        "Standard reporting",;
-        "Email alerts",;
-        "Email support";
-      ],;
-      popular: false;,
-},;
+      name: "Starter",
+      price: "$299",
+      period: "/month",
+      description: "Perfect for small clinics and medical practices",
+      features: [ "Up to 1,000 patients",
+        "Basic predictive analytics",
+        "Standard reporting",
+        "Email alerts",
+        "Email support" ],
+      popular: false;
+},
     {;
-      name: "Professional",;
-      price: "$799",;
-      period: "/month",;
-      description: "Ideal for growing hospitals and healthcare networks",;
-      features: [;
-        "Up to 10,000 patients",;
-        "Advanced AI predictions",;
-        "Real-time monitoring",;
-        "Custom analytics",;
-        "Priority support",;
-        "API access",;
-        "Advanced reporting",;
-        "Multi-user access";
-      ],;
-      popular: true;,
-},;
+      name: "Professional",
+      price: "$799",
+      period: "/month",
+      description: "Ideal for growing hospitals and healthcare networks",
+      features: [ "Up to 10,000 patients",
+        "Advanced AI predictions",
+        "Real-time monitoring",
+        "Custom analytics",
+        "Priority support",
+        "API access",
+        "Advanced reporting",
+        "Multi-user access" ],
+      popular: true;
+},
     {;
-      name: "Enterprise",;
-      price: "$2,499",;
-      period: "/month",;
-      description: "For large healthcare systems and research institutions",;
-      features: [;
-        "Unlimited patients",;
-        "Custom AI models",;
-        "White-label solution",;
-        "Dedicated support",;
-        "Advanced analytics",;
-        "Custom integrations",;
-        "On-premise deployment",;
-        "SLA guarantees",;
-        "Custom training";
-      ],;
-      popular: false;,
+      name: "Enterprise",
+      price: "$2,499",
+      period: "/month",
+      description: "For large healthcare systems and research institutions",
+      features: [ "Unlimited patients",
+        "Custom AI models",
+        "White-label solution",
+        "Dedicated support",
+        "Advanced analytics",
+        "Custom integrations",
+        "On-premise deployment",
+        "SLA guarantees",
+        "Custom training" ],
+      popular: false;
 }
   ];
-;
   const useCases = [;
     {;
-      title: "Hospitals",;
-      description: "Predict patient outcomes and optimize resource allocation",;
-      icon: Hospital;,
-},;
+      title: "Hospitals",
+      description: "Predict patient outcomes and optimize resource allocation",
+      icon: Hospital;
+},
     {;
-      title: "Clinics",;
-      description: "Early detection and preventive care management",;
-      icon: Stethoscope;,
-},;
+      title: "Clinics",
+      description: "Early detection and preventive care management",
+      icon: Stethoscope;
+},
     {;
-      title: "Research Institutions",;
-      description: "Clinical trial optimization and research insights",;
-      icon: Microscope;,
-},;
+      title: "Research Institutions",
+      description: "Clinical trial optimization and research insights",
+      icon: Microscope;
+},
     {;
-      title: "Insurance Companies",;
-      description: "Risk assessment and claims prediction",;
-      icon: Shield;,
+      title: "Insurance Companies",
+      description: "Risk assessment and claims prediction",
+      icon: Shield;
 }
   ];
-;
   const analyticsTypes = [;
     {;
-      title: "Clinical Analytics",;
-      description: "Patient outcomes, treatment effectiveness, and clinical decision support",;
-      icon: Activity,;
-      color: "from-blue-500 to-purple-500";,
-},;
+      title: "Clinical Analytics",
+      description: "Patient outcomes, treatment effectiveness, and clinical decision support",
+      icon: Activity,
+      color: "from-blue-500 to-purple-500";
+},
     {;
-      title: "Operational Analytics",;
-      description: "Resource utilization, workflow optimization, and operational efficiency",;
-      icon: TrendingUp,;
-      color: "from-green-500 to-emerald-500";,
-},;
+      title: "Operational Analytics",
+      description: "Resource utilization, workflow optimization, and operational efficiency",
+      icon: TrendingUp,
+      color: "from-green-500 to-emerald-500";
+},
     {;
-      title: "Financial Analytics",;
-      description: "Revenue optimization, cost analysis, and financial forecasting",;
-      icon: DollarSign,;
-      color: "from-yellow-500 to-orange-500";,
-},;
+      title: "Financial Analytics",
+      description: "Revenue optimization, cost analysis, and financial forecasting",
+      icon: DollarSign,
+      color: "from-yellow-500 to-orange-500";
+},
     {;
-      title: "Population Analytics",;
-      description: "Community health trends, risk factors, and preventive care insights",;
-      icon: Users,;
-      color: "from-red-500 to-pink-500";,
+      title: "Population Analytics",
+      description: "Community health trends, risk factors, and preventive care insights",
+      icon: Users,
+      color: "from-red-500 to-pink-500";
 }
   ];
-;
   const benefits = [;
     {;
-      title: "Improve Patient Outcomes",;
-      description: "Predictive insights lead to better treatment decisions and patient care",;
-      icon: Heart;,
-},;
+      title: "Improve Patient Outcomes",
+      description: "Predictive insights lead to better treatment decisions and patient care",
+      icon: Heart;
+},
     {;
-      title: "Reduce Healthcare Costs",;
-      description: "Preventive care and early intervention reduce expensive treatments",;
-      icon: DollarSign;,
-},;
+      title: "Reduce Healthcare Costs",
+      description: "Preventive care and early intervention reduce expensive treatments",
+      icon: DollarSign;
+},
     {;
-      title: "Enhance Operational Efficiency",;
-      description: "Optimize resource allocation and streamline healthcare workflows",;
-      icon: TrendingUp;,
-},;
+      title: "Enhance Operational Efficiency",
+      description: "Optimize resource allocation and streamline healthcare workflows",
+      icon: TrendingUp;
+},
     {;
-      title: "Ensure Data Security",;
-      description: "HIPAA-compliant platform with advanced security features",;
-      icon: Lock;,
+      title: "Ensure Data Security",
+      description: "HIPAA-compliant platform with advanced security features",
+      icon: Lock;
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
       <SEO ;
@@ -237,19 +225,16 @@ const AIHealthcarePredictiveAnalytics = () => {;
               <Heart className="w-4 h-4 mr-2" />;
               AI-Powered Healthcare Analytics;
             </div>;
-            ;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               AI Healthcare;
               <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">;
                 Predictive Analytics;
               </span>;
             </h1>;
-            ;
             <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
               Transform healthcare delivery with AI-powered predictive analytics and patient monitoring. ;
               Improve patient outcomes, optimize treatments, and reduce healthcare costs through intelligent insights.;
             </p>;
-            ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <a ;
                 href="#pricing" ;
@@ -284,7 +269,6 @@ const AIHealthcarePredictiveAnalytics = () => {;
               Leverage cutting-edge AI technology to transform patient care;
             </p>;
           </motion.div>;
-          ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {features.map((feature, index) => (;
               <motion.div;
@@ -323,7 +307,6 @@ const AIHealthcarePredictiveAnalytics = () => {;
               Monitor all aspects of healthcare operations with our AI platform;
             </p>;
           </motion.div>;
-          ;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {analyticsTypes.map((type, index) => (;
               <motion.div;
@@ -362,7 +345,6 @@ const AIHealthcarePredictiveAnalytics = () => {;
               Transform your healthcare operations with AI-powered insights;
             </p>;
           </motion.div>;
-          ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
               <motion.div;
@@ -401,7 +383,6 @@ const AIHealthcarePredictiveAnalytics = () => {;
               Our platform serves diverse healthcare organizations and institutions;
             </p>;
           </motion.div>;
-          ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {useCases.map((useCase, index) => (;
               <motion.div;
@@ -440,7 +421,6 @@ const AIHealthcarePredictiveAnalytics = () => {;
               Choose the plan that fits your healthcare organization size and needs;
             </p>;
           </motion.div>;
-          ;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {pricingPlans.map((plan, index) => (;
               <motion.div;
@@ -448,7 +428,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
                 className={`relative rounded-xl p-8 ${;
                   plan.popular ;
                     ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400' ;
-                    : 'bg-slate-800/50 border border-slate-700/50';,
+                    : 'bg-slate-800/50 border border-slate-700/50';
 }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -462,7 +442,7 @@ const AIHealthcarePredictiveAnalytics = () => {;
                     </span>;
                   </div>;
                 )}
-                ;
+
                 <div className="text-center mb-8">;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>;
                   <div className="flex items-baseline justify-center">;
@@ -471,7 +451,6 @@ const AIHealthcarePredictiveAnalytics = () => {;
                   </div>;
                   <p className="text-slate-300 mt-2">{plan.description}</p>;
                 </div>;
-                ;
                 <ul className="space-y-4 mb-8">;
                   {plan.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center">;
@@ -480,13 +459,12 @@ const AIHealthcarePredictiveAnalytics = () => {;
                     </li>;
                   ))}
                 </ul>;
-                ;
                 <a ;
                   href="mailto:kleber@ziontechgroup.com?subject=AI Healthcare Predictive Analytics - {plan.name} Plan";
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${;
                     plan.popular;
                       ? 'bg-white text-blue-600 hover:bg-slate-100';
-                      : 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600';,
+                      : 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600';
 }`}
                 >;
                   Get Started;
@@ -514,7 +492,6 @@ const AIHealthcarePredictiveAnalytics = () => {;
               Contact us today to learn how AI analytics can improve patient care;
             </p>;
           </motion.div>;
-          ;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion.div ;
               className="text-center";
@@ -529,7 +506,6 @@ const AIHealthcarePredictiveAnalytics = () => {;
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>;
               <p className="text-slate-300">+1 302 464 0950</p>;
             </motion.div>;
-            ;
             <motion.div ;
               className="text-center";
               initial={{ opacity: 0, y: 20 }}
@@ -543,7 +519,6 @@ const AIHealthcarePredictiveAnalytics = () => {;
               <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>;
               <p className="text-slate-300">kleber@ziontechgroup.com</p>;
             </motion.div>;
-            ;
             <motion.div ;
               className="text-center";
               initial={{ opacity: 0, y: 20 }}
@@ -558,7 +533,6 @@ const AIHealthcarePredictiveAnalytics = () => {;
               <p className="text-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </motion.div>;
           </div>;
-          ;
           <motion.div ;
             className="text-center mt-12";
             initial={{ opacity: 0, y: 20 }}
@@ -576,17 +550,11 @@ const AIHealthcarePredictiveAnalytics = () => {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 };
-;
 export default AIHealthcarePredictiveAnalytics;
-;
 export { AIHealthcarePredictiveAnalytics };
-;
 export { AIHealthcarePredictiveAnalytics };
-;
 export { AIHealthcarePredictiveAnalytics };
-;
 export { AIHealthcarePredictiveAnalytics };
-;
 export { AIHealthcarePredictiveAnalytics };

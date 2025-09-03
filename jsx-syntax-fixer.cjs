@@ -4,13 +4,13 @@ const path = require("path");
 class $1 {;
   constructor() {;
   this.projectRoot = process.cwd();
-    this.fixedFiles = 0;,;,
+    this.fixedFiles = 0;,
 }
-;
+
   log(message) {;
-  console.log(`[${new Date().toISOString()}] ${message}`);,;,
+  console.log(`[${new Date().toISOString()}] ${message}`);,
 }
-;
+
   fixJSXSyntax(content) {;
   let fixed = content;
     // Fix missing colons in JSX attributes;
@@ -52,9 +52,9 @@ class $1 {;
     // Fix missing spaces in JSX;
     fixed = fixed.replace(/></g, "> </");
     fixed = fixed.replace(/></g, "> <");
-    return fixed;,;,
+    return fixed;,
 }
-;
+
   async fixFile(filePath) {;
   try {;
   const content = fs.readFileSync(filePath, "utf8");
@@ -62,15 +62,15 @@ class $1 {;
       if (fixedContent !== content) {;
   fs.writeFileSync(filePath, fixedContent);
         this.log(`✅ Fixed JSX syntax in: ${filePath}`);
-        return true;,;,
+        return true;,
 }
-      return false;,;,
+      return false;,
 } catch (error) {;
   this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;,;,
+      return false;,
 }
   }
-;
+
   async fixAllJSXFiles() {;
   this.log("🚀 Starting JSX syntax fixing...");
     const jsxFiles = [];
@@ -80,34 +80,34 @@ class $1 {;
   const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
         if (stat.isDirectory() && !file.startsWith(".") && file !== "node_modules") {;
-  walkDir(filePath);,;,
+  walkDir(filePath);,
 } else if (stat.isFile() && (file.endsWith(".tsx") || file.endsWith(".jsx"))) {;
-  jsxFiles.push(filePath);,;,
+  jsxFiles.push(filePath);,
 }
       }
     }
     walkDir(this.projectRoot);
     for (const file of jsxFiles) {;
   if (await this.fixFile(file)) {;
-  this.fixedFiles++;,;,
+  this.fixedFiles++;,
 }
     }
-    ;
-    this.log(`🎉 Fixed JSX syntax in ${this.fixedFiles} files`);,;,
+
+    this.log(`🎉 Fixed JSX syntax in ${this.fixedFiles} files`);,
 }
 }
-;
+
 if (require.main === module) {;
   const fixer = new JSXSyntaxFixer();
   fixer.fixAllJSXFiles();
     .then(() => {;
   console.log("✅ JSX syntax fixing completed");
-      process.exit(0);,;,
+      process.exit(0);,
 });
     .catch((error) => {;
   console.error("❌ JSX syntax fixing failed:", error.message);
-      process.exit(1);,;,
-});,;,
+      process.exit(1);,
+});,
 }
-;
+
 module.exports = JSXSyntaxFixer

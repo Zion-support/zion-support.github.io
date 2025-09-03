@@ -1,156 +1,151 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ;
-  Building2, ;
-  Shield, ;
-  Zap, ;
-  Users, ;
-  TrendingUp, ;
-  CheckCircle, ;
-  ArrowRight,;
-  Globe,;
-  Lock,;
-  Database,;
-  Cloud,;
-  Brain,;
-  Target,;
-  Award,;
-  Headphones,;
-  BarChart3,;
-  Settings,;
-  Cpu,;
-  Network,;
-  Server;,
+  Building2,
+  Shield,
+  Zap,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Globe,
+  Lock,
+  Database,
+  Cloud,
+  Brain,
+  Target,
+  Award,
+  Headphones,
+  BarChart3,
+  Settings,
+  Cpu,
+  Network,
+  Server;
 } from 'lucide-react';
-;
 export function EnterprisePage() {;
   const enterpriseSolutions = [;
     {;
-      title: 'AI-Powered Business Intelligence',;
-      icon: Brain,;
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',;
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Automated Reporting'],;
-      industries: ['Finance', 'Healthcare', 'Retail', 'Manufacturing'];,
-},;
+      title: 'AI-Powered Business Intelligence',
+      icon: Brain,
+      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
+      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Automated Reporting'],
+      industries: ['Finance', 'Healthcare', 'Retail', 'Manufacturing'];
+},
     {;
-      title: 'Enterprise Security Suite',;
-      icon: Shield,;
-      description: 'Comprehensive cybersecurity solutions to protect your organization from evolving threats.',;
-      features: ['Zero Trust Architecture', 'Threat Detection', 'Compliance Management', 'Incident Response'],;
-      industries: ['Government', 'Finance', 'Healthcare', 'Technology'];,
-},;
+      title: 'Enterprise Security Suite',
+      icon: Shield,
+      description: 'Comprehensive cybersecurity solutions to protect your organization from evolving threats.',
+      features: ['Zero Trust Architecture', 'Threat Detection', 'Compliance Management', 'Incident Response'],
+      industries: ['Government', 'Finance', 'Healthcare', 'Technology'];
+},
     {;
-      title: 'Cloud Infrastructure Management',;
-      icon: Cloud,;
-      description: 'Optimize your cloud operations with our advanced infrastructure management platform.',;
-      features: ['Multi-Cloud Support', 'Cost Optimization', 'Auto-Scaling', 'Disaster Recovery'],;
-      industries: ['Technology', 'Finance', 'E-commerce', 'Media'];,
-},;
+      title: 'Cloud Infrastructure Management',
+      icon: Cloud,
+      description: 'Optimize your cloud operations with our advanced infrastructure management platform.',
+      features: ['Multi-Cloud Support', 'Cost Optimization', 'Auto-Scaling', 'Disaster Recovery'],
+      industries: ['Technology', 'Finance', 'E-commerce', 'Media'];
+},
     {;
-      title: 'Digital Transformation Platform',;
-      icon: Zap,;
-      description: 'Accelerate your digital transformation journey with our comprehensive platform.',;
-      features: ['Process Automation', 'Legacy Modernization', 'API Management', 'Microservices'],;
-      industries: ['Manufacturing', 'Retail', 'Banking', 'Insurance'];,
+      title: 'Digital Transformation Platform',
+      icon: Zap,
+      description: 'Accelerate your digital transformation journey with our comprehensive platform.',
+      features: ['Process Automation', 'Legacy Modernization', 'API Management', 'Microservices'],
+      industries: ['Manufacturing', 'Retail', 'Banking', 'Insurance'];
 }
   ];
-;
   const enterpriseFeatures = [;
     {;
-      icon: Lock,;
-      title: 'Enterprise Security',;
-      description: 'Bank-grade security with SOC 2 compliance, encryption, and advanced threat protection.';,
-},;
+      icon: Lock,
+      title: 'Enterprise Security',
+      description: 'Bank-grade security with SOC 2 compliance, encryption, and advanced threat protection.';
+},
     {;
-      icon: Users,;
-      title: 'Dedicated Support',;
-      description: '24/7 dedicated support team with enterprise SLA guarantees and priority response.';,
-},;
+      icon: Users,
+      title: 'Dedicated Support',
+      description: '24/7 dedicated support team with enterprise SLA guarantees and priority response.';
+},
     {;
-      icon: Settings,;
-      title: 'Custom Integration',;
-      description: 'Seamless integration with your existing systems and custom development capabilities.';,
-},;
+      icon: Settings,
+      title: 'Custom Integration',
+      description: 'Seamless integration with your existing systems and custom development capabilities.';
+},
     {;
-      icon: BarChart3,;
-      title: 'Advanced Analytics',;
-      description: 'Comprehensive reporting and analytics to track performance and ROI across all solutions.';,
-},;
+      icon: BarChart3,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive reporting and analytics to track performance and ROI across all solutions.';
+},
     {;
-      icon: Globe,;
-      title: 'Global Deployment',;
-      description: 'Worldwide deployment capabilities with local data residency and compliance support.';,
-},;
+      icon: Globe,
+      title: 'Global Deployment',
+      description: 'Worldwide deployment capabilities with local data residency and compliance support.';
+},
     {;
-      icon: Award,;
-      title: 'Proven Results',;
-      description: 'Track record of successful enterprise implementations with measurable business outcomes.';,
+      icon: Award,
+      title: 'Proven Results',
+      description: 'Track record of successful enterprise implementations with measurable business outcomes.';
 }
   ];
-;
   const industries = [;
     {;
-      name: 'Financial Services',;
-      icon: TrendingUp,;
-      description: 'Secure, compliant solutions for banking, insurance, and fintech companies.',;
-      solutions: ['Risk Management', 'Fraud Detection', 'Regulatory Compliance', 'Customer Analytics'];,
-},;
+      name: 'Financial Services',
+      icon: TrendingUp,
+      description: 'Secure, compliant solutions for banking, insurance, and fintech companies.',
+      solutions: ['Risk Management', 'Fraud Detection', 'Regulatory Compliance', 'Customer Analytics'];
+},
     {;
-      name: 'Healthcare',;
-      icon: Shield,;
-      description: 'HIPAA-compliant solutions for hospitals, clinics, and healthcare providers.',;
-      solutions: ['Patient Data Management', 'Telemedicine', 'Clinical Analytics', 'Supply Chain'];,
-},;
+      name: 'Healthcare',
+      icon: Shield,
+      description: 'HIPAA-compliant solutions for hospitals, clinics, and healthcare providers.',
+      solutions: ['Patient Data Management', 'Telemedicine', 'Clinical Analytics', 'Supply Chain'];
+},
     {;
-      name: 'Manufacturing',;
-      icon: Cpu,;
-      description: 'IoT and AI solutions for smart manufacturing and industrial automation.',;
-      solutions: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'Energy Management'];,
-},;
+      name: 'Manufacturing',
+      icon: Cpu,
+      description: 'IoT and AI solutions for smart manufacturing and industrial automation.',
+      solutions: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'Energy Management'];
+},
     {;
-      name: 'Government',;
-      icon: Building2,;
-      description: 'Secure, scalable solutions for federal, state, and local government agencies.',;
-      solutions: ['Citizen Services', 'Data Analytics', 'Cybersecurity', 'Digital Transformation'];,
-},;
+      name: 'Government',
+      icon: Building2,
+      description: 'Secure, scalable solutions for federal, state, and local government agencies.',
+      solutions: ['Citizen Services', 'Data Analytics', 'Cybersecurity', 'Digital Transformation'];
+},
     {;
-      name: 'Retail & E-commerce',;
-      icon: Target,;
-      description: 'Customer-centric solutions for retail chains and online marketplaces.',;
-      solutions: ['Personalization', 'Inventory Management', 'Customer Analytics', 'Omnichannel'];,
-},;
+      name: 'Retail & E-commerce',
+      icon: Target,
+      description: 'Customer-centric solutions for retail chains and online marketplaces.',
+      solutions: ['Personalization', 'Inventory Management', 'Customer Analytics', 'Omnichannel'];
+},
     {;
-      name: 'Technology',;
-      icon: Network,;
-      description: 'Cutting-edge solutions for tech companies and software providers.',;
-      solutions: ['DevOps Automation', 'API Management', 'Microservices', 'Cloud Migration'];,
+      name: 'Technology',
+      icon: Network,
+      description: 'Cutting-edge solutions for tech companies and software providers.',
+      solutions: ['DevOps Automation', 'API Management', 'Microservices', 'Cloud Migration'];
 }
   ];
-;
   const testimonials = [;
     {;
-      name: 'Sarah Johnson',;
-      title: 'CTO, Global Finance Corp',;
-      company: 'Global Finance Corp',;
-      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving security and compliance.',;
-      rating: 5;,
-},;
+      name: 'Sarah Johnson',
+      title: 'CTO, Global Finance Corp',
+      company: 'Global Finance Corp',
+      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving security and compliance.',
+      rating: 5;
+},
     {;
-      name: 'Michael Chen',;
-      title: 'VP of Technology, HealthTech Solutions',;
-      company: 'HealthTech Solutions',;
-      content: 'The healthcare-specific solutions provided by Zion Tech Group have been instrumental in our digital transformation. Their expertise in compliance and security is unmatched.',;
-      rating: 5;,
-},;
+      name: 'Michael Chen',
+      title: 'VP of Technology, HealthTech Solutions',
+      company: 'HealthTech Solutions',
+      content: 'The healthcare-specific solutions provided by Zion Tech Group have been instrumental in our digital transformation. Their expertise in compliance and security is unmatched.',
+      rating: 5;
+},
     {;
-      name: 'Emily Rodriguez',;
-      title: 'Director of IT, Manufacturing Plus',;
-      company: 'Manufacturing Plus',;
-      content: 'Their IoT and AI solutions revolutionized our manufacturing processes. We saw a 60% improvement in efficiency and a 35% reduction in downtime.',;
-      rating: 5;,
+      name: 'Emily Rodriguez',
+      title: 'Director of IT, Manufacturing Plus',
+      company: 'Manufacturing Plus',
+      content: 'Their IoT and AI solutions revolutionized our manufacturing processes. We saw a 60% improvement in efficiency and a 35% reduction in downtime.',
+      rating: 5;
 }
   ];
-;
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -164,7 +159,6 @@ export function EnterprisePage() {;
               Transform your organization with our comprehensive enterprise-grade technology solutions. ;
               Built for scale, security, and performance.;
             </p>;
-            ;
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">;
               <Link;
                 to="/request-quote";
@@ -220,7 +214,6 @@ export function EnterprisePage() {;
                   <solution.icon className="w-12 h-12 text-zion-cyan" />;
                   <h3 className="text-2xl font-semibold text-white">{solution.title}</h3>;
                 </div>;
-                ;
                 <p className="text-zion-slate-light mb-6 leading-relaxed">;
                   {solution.description}
                 </p>;
@@ -307,7 +300,6 @@ export function EnterprisePage() {;
                   <industry.icon className="w-8 h-8 text-zion-cyan" />;
                   <h3 className="text-xl font-semibold text-white">{industry.name}</h3>;
                 </div>;
-                ;
                 <p className="text-zion-slate-light mb-4 leading-relaxed">;
                   {industry.description}
                 </p>;
@@ -348,11 +340,9 @@ export function EnterprisePage() {;
                     <div key={i} className="w-4 h-4 text-yellow-400 fill-current">★</div>;
                   ))}
                 </div>;
-                ;
                 <p className="text-zion-slate-light mb-4 leading-relaxed">;
                   "{testimonial.content}";
                 </p>;
-                ;
                 <div>;
                   <div className="font-semibold text-white">{testimonial.name}</div>;
                   <div className="text-sm text-zion-cyan">{testimonial.title}</div>;
@@ -388,7 +378,7 @@ export function EnterprisePage() {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }
-;
+
 export default EnterprisePage;

@@ -1,16 +1,15 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-;
 export default function Page() {;
-interface Comment {;
+interface Comment {
   id: string;
   author: string;
   content: string;
   timestamp: string;
   likes: number;
-  replies: Comment[];,
+  replies: Comment[];
 }
-;
-interface Message {;
+
+interface Message {
   id: string;
   sender: string;
   content: string;
@@ -19,8 +18,8 @@ interface Message {;
   attachments?: string[];
   reactions: { type: string; count: number}[];
   isRead: boolean}
-;
-interface FileItem {;
+
+interface FileItem {
   id: string;
   name: string;
   type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other';
@@ -31,9 +30,9 @@ interface FileItem {;
   tags: string[];
   sharedWith: string[];
   permissions: 'view' | 'edit' | 'admin';
-  version: string;,
+  version: string;
 }
-;
+
 interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {;
 
   showTeamMembers?: boolean;
@@ -41,13 +40,13 @@ interface TeamCollaborationToolsProps extends React.PropsWithChildren<{}> {;
   showCommunication?: boolean;
   showFileSharing?: boolean;
   maxItems?: number}
-;
-export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({;
 
-  showTeamMembers = true,;
-showProjects:  true,;
-  showCommunication = true,;
-  showFileSharing = true,;
+export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
+
+  showTeamMembers = true,
+showProjects:  true,
+  showCommunication = true,
+  showFileSharing = true,
   maxItems = 20}) => {;
   const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
@@ -60,74 +59,69 @@ showProjects:  true,;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState<any>('all');
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
-;
   // Sample data;
-  useEffect(() => {;
+  useEffect(() => {
   // TODO: Add dependencies if needed;
 
   return () => {;
-    // Cleanup function;,
-};,
-}, []);, []);
+    // Cleanup function;
+};
+}, []); []);
     const sampleFiles: FileItem[] = [{;
 
-        id: '1',;
-        name: 'AI_Platform_Architecture.pdf',;
-        type: 'document',;
-        size: 2.5,;
-        uploadedBy: 'Sarah Johnson',;
-        uploadDate: '2024-01-15',;
-        lastModified: '2024-01-15',;
-        tags['Architecture',AI',Documentation'],;
-        sharedWith['Michael Chen',Alex Wong'],;
-        permissions: 'edit',;
-        version: '1.2';,
-},;
+        id: '1',
+        name: 'AI_Platform_Architecture.pdf',
+        type: 'document',
+        size: 2.5,
+        uploadedBy: 'Sarah Johnson',
+        uploadDate: '2024-01-15',
+        lastModified: '2024-01-15',
+        tags['Architecture',AI',Documentation'],
+        sharedWith['Michael Chen',Alex Wong'],
+        permissions: 'edit',
+        version: '1.2';
+},
       {;
 
-        id: '2',;
-        name: 'Cloud_Migration_Plan.xlsx',;
-        type: 'document',;
-        size: 1.8,;
-        uploadedBy: 'Michael Chen',;
-        uploadDate: '2024-01-14',;
-        lastModified: '2024-01-14',;
-        tags['Migration',Cloud',Planning'],;
-        sharedWith['Sarah Johnson',David Kim'],;
-        permissions: 'view',;
-        version: '2.1';,
-},;
+        id: '2',
+        name: 'Cloud_Migration_Plan.xlsx',
+        type: 'document',
+        size: 1.8,
+        uploadedBy: 'Michael Chen',
+        uploadDate: '2024-01-14',
+        lastModified: '2024-01-14',
+        tags['Migration',Cloud',Planning'],
+        sharedWith['Sarah Johnson',David Kim'],
+        permissions: 'view',
+        version: '2.1';
+},
       {;
 
-        id: '3',;
-        name: 'Security_Audit_Report.docx',;
-        type: 'document',;
-        size: 3.2,;
-        uploadedBy: 'David Kim',;
-        uploadDate: '2024-01-13',;
-        lastModified: '2024-01-13',;
-        tags['Security',Audit',Report'],;
-        sharedWith['Lisa Thompson'],;
-        permissions: 'view',;
+        id: '3',
+        name: 'Security_Audit_Report.docx',
+        type: 'document',
+        size: 3.2,
+        uploadedBy: 'David Kim',
+        uploadDate: '2024-01-13',
+        lastModified: '2024-01-13',
+        tags['Security',Audit',Report'],
+        sharedWith['Lisa Thompson'],
+        permissions: 'view',
         version: '1.0';
 
     ];
-;
     setTeamMembers(sampleTeamMembers) ;
     setProjects(sampleProjects) ;
     setMessages(sampleMessages) ;
     setFiles(sampleFiles) }, []) ;
-;
   // Get status color and icon';
       default: return { color: 'text-zinc-400 bg-zinc-400/20', icon: <div className="w-2 h-2 bg-zinc-400 rounded-full"></div> }}};
   // Get project status color';
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
-;
   // Get priority color';
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
-;
   // Get file type icon";
       default: return <File className="w-5 h-5"  />}};
   // Format file size;
@@ -136,7 +130,6 @@ showProjects:  true,;
           msg.reactions.push({ type: reactionType, count: 1 })}
       }
       return msg}) ) };
-;
   return (";
     <div className="w-full max-w-7xl mx-auto p-6">;
       {/* Header */}";
@@ -158,9 +151,9 @@ showProjects:  true,;
               onClick={() => setActiveTab(tab.id as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${activeTab === tab.id';
                   ? 'bg-zion-cyan text-white'';
-                  : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'`;,
+                  : 'text-zinc-400 hover:text-white hover:bg-zinc-800/50'`;
 }`}
-;
+
               {tab.icon}
               {tab.label}
             </button>) ) }
@@ -172,13 +165,13 @@ showProjects:  true,;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
           className="space-y-6";
 
@@ -187,13 +180,13 @@ showProjects:  true,;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -204,13 +197,13 @@ showProjects:  true,;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.1 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -220,17 +213,16 @@ showProjects:  true,;
               </div>";
               <div className="text-zinc-400">Online Now</div>;
             </motion.div>;
-;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.2 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -244,13 +236,13 @@ showProjects:  true,;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.3 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -269,13 +261,13 @@ showProjects:  true,;
                 key={member.id}
                 initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                 animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition={{ delay: index * 0.1 }}";
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300";
@@ -304,12 +296,11 @@ showProjects:  true,;
                   </span>`;
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${member.availability === 'available' ? 'text-green-400 bg-green-400/20' :';
                     member.availability === 'busy' ? 'text-yellow-400 bg-yellow-400/20' :';
-                    'text-red-400 bg-red-400/20'`;,
+                    'text-red-400 bg-red-400/20'`;
 }`}>;
                     {member.availability.charAt(0) .toUpperCase () + member.availability.slice(1) }
                   </span>;
                 </div>;
-;
                 {/* Skills */}";
                 <div className="mb-4">;";
                   <h4 className="text-sm font-medium text-zinc-300 mb-2">Skills</h4>";
@@ -359,19 +350,19 @@ showProjects:  true,;
               </motion.div>) ) }
           </div>;
         </motion.div>) }
-;
+
       {/* Projects Tab */}
       {activeTab === 'projects' && showProjects && (;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
           className="space-y-6";
 
@@ -380,13 +371,13 @@ showProjects:  true,;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -397,13 +388,13 @@ showProjects:  true,;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.1 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -413,17 +404,16 @@ showProjects:  true,;
               </div>";
               <div className="text-zinc-400">Active</div>;
             </motion.div>;
-;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.2 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -437,13 +427,13 @@ showProjects:  true,;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.3 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -462,18 +452,18 @@ showProjects:  true,;
                 key={project.id}
                 initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                 animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition={{ delay: index * 0.1 }}";
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer";
                 onClick={() => handleProjectSelect(project)}
-;
+
                 {/* Project Header */}";
                 <div className="flex items-start justify-between mb-4">";
                   <div className="flex-1">";
@@ -517,14 +507,13 @@ showProjects:  true,;
                       animate={{ width: `${project.progress}%` }}
                       transition = {;
 
-  { duration: 1,;
-  delay: index * 0.1;,
+  { duration: 1,
+  delay: index * 0.1;
 }}";
                       className="h-2 bg-zion-cyan rounded-full";
                     />;
                   </div>;
                 </div>;
-;
                 {/* Project Details */}";
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">;";
                   <div className="p-3 bg-zinc-800/30 rounded-lg">";
@@ -544,7 +533,6 @@ showProjects:  true,;
                     <div className="text-white font-medium">{project.teamMembers.length} members</div>;
                   </div>;
                 </div>;
-;
                 {/* Tags */}";
                 <div className="flex flex-wrap gap-2">;
                   {project.tags.map((tag) => (;
@@ -568,19 +556,19 @@ showProjects:  true,;
             </button>;
           </div>;
         </motion.div>) }
-;
+
       {/* Communication Tab */}
       {activeTab === 'communication' && showCommunication && (;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
           className="space-y-6";
 
@@ -589,13 +577,13 @@ showProjects:  true,;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -606,13 +594,13 @@ showProjects:  true,;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.1 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -622,17 +610,16 @@ showProjects:  true,;
               </div>";
               <div className="text-zinc-400">Read</div>;
             </motion.div>;
-;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.2 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -651,16 +638,16 @@ showProjects:  true,;
                 key={message.id}
                 initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                 animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition={{ delay: index * 0.1 }}`;
-                className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 ${!message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''`;,
+                className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 ${!message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''`;
 }`}
 ";
                 <div className="flex items-start gap-4">";
@@ -687,8 +674,8 @@ showProjects:  true,;
                           key={idx}
                           onClick = {;
 
-  () => handleMessageReaction(message.id,;
-  reaction.type);,
+  () => handleMessageReaction(message.id,
+  reaction.type);
 }";
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-700/50 transition-colors";
 '";
@@ -734,19 +721,19 @@ showProjects:  true,;
             </div>;
           </div>;
         </motion.div>) }
-;
+
       {/* File Sharing Tab */}
       {activeTab === 'files' && showFileSharing && (;
         <motion.div;
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
           className="space-y-6";
 
@@ -755,13 +742,13 @@ showProjects:  true,;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
 ";
@@ -772,13 +759,13 @@ showProjects:  true,;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.1 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -788,17 +775,16 @@ showProjects:  true,;
               </div>";
               <div className="text-zinc-400">Documents</div>;
             </motion.div>;
-;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.2 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -812,13 +798,13 @@ showProjects:  true,;
             <motion.div;
               initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
               animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               transition={{ delay: 0.3 }}";
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center";
@@ -837,13 +823,13 @@ showProjects:  true,;
                 key={file.id}
                 initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
                 animate = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
                 transition={{ delay: index * 0.1 }}";
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300";

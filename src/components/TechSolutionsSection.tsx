@@ -1,5 +1,4 @@
 import {  import { motion  } from 'framer-motion';
-;
  params - Function parameters;
  * @returns {*} Function return value;
  */;
@@ -12,13 +11,13 @@ export function TechSolutionsSection() {;
           className="text-center mb-16";
           initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -27,7 +26,7 @@ export function TechSolutionsSection() {;
             Technology Solutions;
           </h2>";
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-            Comprehensive technology solutions designed to drive innovation,;
+            Comprehensive technology solutions designed to drive innovation,
             enhance security, and accelerate your digital transformation journey.</p>;
         </motion.div>;
 ";
@@ -38,19 +37,19 @@ export function TechSolutionsSection() {;
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group";
               initial = {;
 
-  { opacity: 0,;
-  y: 30;,
+  { opacity: 0,
+  y: 30;
 }}
               whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
               viewport={{ once: true }}
               transition = {;
 
-  { duration: 0.6,;
-  delay: index * 0.1;,
+  { duration: 0.6,
+  delay: index * 0.1;
 }}
             >;
               <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>";
@@ -100,19 +99,19 @@ export function TechSolutionsSection() {;
         <motion.div;
           className="mt-16 text-center"          initial = {;
 
-  { opacity: 0,;
-  y: 20;,
+  { opacity: 0,
+  y: 20;
 }}
           whileInView = {;
 
-  { opacity: 1,;
-  y: 0;,
+  { opacity: 1,
+  y: 0;
 }}
           viewport={{ once: true }}
           transition = {;
 
-  { duration: 0.6,;
-  delay: 0.4;,
+  { duration: 0.6,
+  delay: 0.4;
 }}
         >";
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">";
@@ -141,7 +140,6 @@ export function TechSolutionsSection() {;
         </motion.div>;
       </div>;
     </section>;) };
-;
 export default TechSolutionsSection;";
             <span className="text-2xl">→</span>;
           </div>;

@@ -3,9 +3,9 @@ const fs = require("fs");
 const path = require("path");
 class $1 {;
   constructor() {;
-  this.seoData = new Map();,;,
+  this.seoData = new Map();,
 }
-;
+
   async analyzeSEO() {;
   const pagesDir = path.join(__dirname, "..", "..", "pages");
     this.scanPages(pagesDir);
@@ -14,7 +14,7 @@ class $1 {;
     console.log("SEO analysis completed");
     return { issues, suggestions }
   }
-;
+
   scanPages(dir) {;
   if (!fs.existsSync(dir)) return;
     const files = fs.readdirSync(dir);
@@ -22,29 +22,29 @@ class $1 {;
   const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
       if (stat.isDirectory()) {;
-  this.scanPages(filePath);,;,
+  this.scanPages(filePath);,
 } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {;
-  this.analyzePage(filePath);,;,
+  this.analyzePage(filePath);,
 }
     }
   }
-;
+
   analyzePage(filePath) {;
   const content = fs.readFileSync(filePath, "utf8");
     const route = filePath;
       .replace(path.join(__dirname, "..", "..", "pages"), "");
       .replace(/\.[jt]sx?$/, "");
     const seoData = {;
-  hasTitle: /<title>/.test(content),;
-      hasDescription: /meta.*description/.test(content),;
-      hasKeywords: /meta.*keywords/.test(content),;
-      hasOpenGraph: /og:/i.test(content),;
-      hasTwitterCard: /twitter:/i.test(content),;
-      hasStructuredData: /application\/ld\+json/.test(content),;,;,
+  hasTitle: /<title>/.test(content),
+      hasDescription: /meta.*description/.test(content),
+      hasKeywords: /meta.*keywords/.test(content),
+      hasOpenGraph: /og:/i.test(content),
+      hasTwitterCard: /twitter:/i.test(content),
+      hasStructuredData: /application\/ld\+json/.test(content),,,
 }
-    this.seoData.set(route, seoData);,;,
+    this.seoData.set(route, seoData);,
 }
-;
+
   findSEOIssues() {;
   const issues = [];
     for (const [route, data] of this.seoData) {;
@@ -56,15 +56,15 @@ class $1 {;
         issues.push({ route, type: "missing-og", severity: "medium" });
       if (!data.hasStructuredData);
         issues.push({;
-  route,;
-          type: "missing-structured-data",;
-          severity: "low",;,;,
-});,;,
+  route,
+          type: "missing-structured-data",
+          severity: "low",,,
+});,
 }
-;
-    return issues;,;,
+
+    return issues;,
 }
-;
+
   generateSuggestions(issues) {;
   const suggestions = [];
     for (const issue of issues) {;
@@ -80,13 +80,13 @@ class $1 {;
           break;
         case `missing-structured-data`:;
           suggestions.push(`Add structured data to ${issue.route}`);
-          break;,;,
+          break;,
 }
     }
-;
-    return suggestions;,;,
+
+    return suggestions;,
 }
 }
-;
+
 const optimizer = new SEOOptimizer();
 optimizer.analyzeSEO()

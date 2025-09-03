@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-;
 // Function to fix common lint errors;
 function fixLintErrors(content) {;
   let fixed = content;
@@ -10,7 +9,7 @@ function fixLintErrors(content) {;
     return match});
   // Fix malformed imports with missing commas;
   fixed = fixed.replace(;
-    /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,;
+    /import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm,
     (match, imports) => {;
   // Check if imports have proper commas;
       if (;
@@ -19,14 +18,14 @@ function fixLintErrors(content) {;
         imports.trim().split(/\s+/).length > 1;
       ) {;
   const cleanImports = imports.trim().split(/\s+/).join(", ");
-        return match.replace(imports, cleanImports);,;,
+        return match.replace(imports, cleanImports);,
 }
       return match;
   fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*[""][^""]+[""]\s*$/gm, (match, imports) => {;
   // Check if imports have proper commas;
     if (imports && !imports.includes() && imports.trim().split(/\s+/).length > 1) {;
   const cleanImports = imports.trim().split(/\s+/).join();
-      return match.replace(imports, cleanImports);,;,
+      return match.replace(imports, cleanImports);,
 }
   );
   // Fix missing semicolons after variable declarations;
@@ -36,18 +35,18 @@ function fixLintErrors(content) {;
     return match});
   // Fix malformed JSX/TSX syntax;
   fixed = fixed.replace(;
-    /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,;
+    /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{/g,
     "export default function $1() {";
   );
   // Fix missing closing braces;
   const openBraces = (fixed.match(/\{/g) || []).length;
   const closeBraces = (fixed.match(/\}/g) || []).length;
   if (openBraces > closeBraces) {;
-  fixed += "\n}".repeat(openBraces - closeBraces);,;,
+  fixed += "\n}".repeat(openBraces - closeBraces);,
 }
-;
+
   return fixed}
-;
+
 // Main function;
 async function $1() {;
   // Get all TypeScript/JavaScript files;
@@ -63,15 +62,15 @@ async function $1() {;
       if (content !== fixed) {;
   fs.writeFileSync(file, fixed, "utf8");
         console.log(``Fixed: ${file}``);
-        fixedCount++;,;,
+        fixedCount++;,
 }
     } catch (error) {;
   console.error(`Error processing ${file}:`, error.message);
-      errorCount++;,;,
+      errorCount++;,
 }
   }
-;
-  console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``);,;,
+
+  console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``);,
 }
-;
+
 main().catch(console.error)})

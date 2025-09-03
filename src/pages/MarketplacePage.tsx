@@ -1,161 +1,156 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ;
-  Search, ;
-  Filter, ;
-  Star, ;
-  ShoppingCart, ;
-  Heart, ;
-  Eye, ;
-  Download, ;
-  Play,;
-  Users,;
-  TrendingUp,;
-  Award,;
-  Clock,;
-  Tag,;
-  ArrowRight,;
-  CheckCircle,;
-  Zap,;
-  Shield,;
-  Brain,;
-  Cloud,;
-  Database,;
-  Code,;
-  Settings,;
-  BarChart3,;
-  Globe,;
-  Lock;,
+  Search,
+  Filter,
+  Star,
+  ShoppingCart,
+  Heart,
+  Eye,
+  Download,
+  Play,
+  Users,
+  TrendingUp,
+  Award,
+  Clock,
+  Tag,
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Shield,
+  Brain,
+  Cloud,
+  Database,
+  Code,
+  Settings,
+  BarChart3,
+  Globe,
+  Lock;
 } from 'lucide-react';
-;
 export function MarketplacePage() {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-;
   const categories = [;
-    { id: 'all', name: 'All Products', icon: Globe },;
-    { id: 'ai', name: 'AI Solutions', icon: Brain },;
-    { id: 'security', name: 'Security', icon: Shield },;
-    { id: 'cloud', name: 'Cloud Services', icon: Cloud },;
-    { id: 'data', name: 'Data Analytics', icon: Database },;
-    { id: 'development', name: 'Development Tools', icon: Code },;
-    { id: 'automation', name: 'Automation', icon: Settings },;
+    { id: 'all', name: 'All Products', icon: Globe },
+    { id: 'ai', name: 'AI Solutions', icon: Brain },
+    { id: 'security', name: 'Security', icon: Shield },
+    { id: 'cloud', name: 'Cloud Services', icon: Cloud },
+    { id: 'data', name: 'Data Analytics', icon: Database },
+    { id: 'development', name: 'Development Tools', icon: Code },
+    { id: 'automation', name: 'Automation', icon: Settings },
     { id: 'analytics', name: 'Analytics', icon: BarChart3 }
   ];
-;
   const marketplaceProducts = [;
     {;
-      id: 1,;
-      title: 'AI Sales Copilot Pro',;
-      category: 'ai',;
-      description: 'Advanced AI-powered sales assistant that helps close deals faster and increase conversion rates.',;
-      price: '$299/month',;
-      originalPrice: '$399/month',;
-      rating: 4.9,;
-      reviews: 127,;
-      downloads: 2500,;
-      image: '🤖',;
-      features: ['Lead Scoring', 'Email Automation', 'CRM Integration', 'Analytics Dashboard'],;
-      tags: ['AI', 'Sales', 'CRM', 'Automation'],;
-      isFeatured: true,;
-      isNew: false,;
-      vendor: 'Zion Tech Group';,
-},;
+      id: 1,
+      title: 'AI Sales Copilot Pro',
+      category: 'ai',
+      description: 'Advanced AI-powered sales assistant that helps close deals faster and increase conversion rates.',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      rating: 4.9,
+      reviews: 127,
+      downloads: 2500,
+      image: '🤖',
+      features: ['Lead Scoring', 'Email Automation', 'CRM Integration', 'Analytics Dashboard'],
+      tags: ['AI', 'Sales', 'CRM', 'Automation'],
+      isFeatured: true,
+      isNew: false,
+      vendor: 'Zion Tech Group';
+},
     {;
-      id: 2,;
-      title: 'Enterprise Security Suite',;
-      category: 'security',;
-      description: 'Comprehensive cybersecurity solution with threat detection, compliance management, and incident response.',;
-      price: '$599/month',;
-      originalPrice: '$799/month',;
-      rating: 4.8,;
-      reviews: 89,;
-      downloads: 1800,;
-      image: '🛡️',;
-      features: ['Threat Detection', 'Compliance', 'Incident Response', 'Security Analytics'],;
-      tags: ['Security', 'Compliance', 'Threat Detection', 'Enterprise'],;
-      isFeatured: true,;
-      isNew: true,;
-      vendor: 'Zion Tech Group';,
-},;
+      id: 2,
+      title: 'Enterprise Security Suite',
+      category: 'security',
+      description: 'Comprehensive cybersecurity solution with threat detection, compliance management, and incident response.',
+      price: '$599/month',
+      originalPrice: '$799/month',
+      rating: 4.8,
+      reviews: 89,
+      downloads: 1800,
+      image: '🛡️',
+      features: ['Threat Detection', 'Compliance', 'Incident Response', 'Security Analytics'],
+      tags: ['Security', 'Compliance', 'Threat Detection', 'Enterprise'],
+      isFeatured: true,
+      isNew: true,
+      vendor: 'Zion Tech Group';
+},
     {;
-      id: 3,;
-      title: 'Cloud FinOps Optimizer',;
-      category: 'cloud',;
-      description: 'Intelligent cloud cost optimization platform that reduces spending while maintaining performance.',;
-      price: '$199/month',;
-      originalPrice: '$299/month',;
-      rating: 4.7,;
-      reviews: 156,;
-      downloads: 3200,;
-      image: '☁️',;
-      features: ['Cost Optimization', 'Resource Management', 'Automated Scaling', 'Cost Analytics'],;
-      tags: ['Cloud', 'FinOps', 'Cost Optimization', 'AWS'],;
-      isFeatured: false,;
-      isNew: false,;
-      vendor: 'Zion Tech Group';,
-},;
+      id: 3,
+      title: 'Cloud FinOps Optimizer',
+      category: 'cloud',
+      description: 'Intelligent cloud cost optimization platform that reduces spending while maintaining performance.',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      rating: 4.7,
+      reviews: 156,
+      downloads: 3200,
+      image: '☁️',
+      features: ['Cost Optimization', 'Resource Management', 'Automated Scaling', 'Cost Analytics'],
+      tags: ['Cloud', 'FinOps', 'Cost Optimization', 'AWS'],
+      isFeatured: false,
+      isNew: false,
+      vendor: 'Zion Tech Group';
+},
     {;
-      id: 4,;
-      title: 'AI Business Intelligence Platform',;
-      category: 'ai',;
-      description: 'Transform your data into actionable insights with advanced AI-powered analytics and reporting.',;
-      price: '$399/month',;
-      originalPrice: '$499/month',;
-      rating: 4.9,;
-      reviews: 203,;
-      downloads: 4100,;
-      image: '📊',;
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Data Visualization'],;
-      tags: ['AI', 'Analytics', 'Business Intelligence', 'Data'],;
-      isFeatured: true,;
-      isNew: false,;
-      vendor: 'Zion Tech Group';,
-},;
+      id: 4,
+      title: 'AI Business Intelligence Platform',
+      category: 'ai',
+      description: 'Transform your data into actionable insights with advanced AI-powered analytics and reporting.',
+      price: '$399/month',
+      originalPrice: '$499/month',
+      rating: 4.9,
+      reviews: 203,
+      downloads: 4100,
+      image: '📊',
+      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Data Visualization'],
+      tags: ['AI', 'Analytics', 'Business Intelligence', 'Data'],
+      isFeatured: true,
+      isNew: false,
+      vendor: 'Zion Tech Group';
+},
     {;
-      id: 5,;
-      title: 'DevOps Automation Toolkit',;
-      category: 'development',;
-      description: 'Complete DevOps automation solution with CI/CD pipelines, monitoring, and deployment tools.',;
-      price: '$149/month',;
-      originalPrice: '$199/month',;
-      rating: 4.6,;
-      reviews: 94,;
-      downloads: 2800,;
-      image: '⚙️',;
-      features: ['CI/CD Pipelines', 'Monitoring', 'Deployment', 'Infrastructure as Code'],;
-      tags: ['DevOps', 'CI/CD', 'Automation', 'Monitoring'],;
-      isFeatured: false,;
-      isNew: true,;
-      vendor: 'Zion Tech Group';,
-},;
+      id: 5,
+      title: 'DevOps Automation Toolkit',
+      category: 'development',
+      description: 'Complete DevOps automation solution with CI/CD pipelines, monitoring, and deployment tools.',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      rating: 4.6,
+      reviews: 94,
+      downloads: 2800,
+      image: '⚙️',
+      features: ['CI/CD Pipelines', 'Monitoring', 'Deployment', 'Infrastructure as Code'],
+      tags: ['DevOps', 'CI/CD', 'Automation', 'Monitoring'],
+      isFeatured: false,
+      isNew: true,
+      vendor: 'Zion Tech Group';
+},
     {;
-      id: 6,;
-      title: 'Customer Support AI',;
-      category: 'ai',;
-      description: 'Intelligent customer support automation with chatbots, ticket routing, and sentiment analysis.',;
-      price: '$249/month',;
-      originalPrice: '$349/month',;
-      rating: 4.8,;
-      reviews: 178,;
-      downloads: 3600,;
-      image: '💬',;
-      features: ['Chatbots', 'Ticket Routing', 'Sentiment Analysis', 'Knowledge Base'],;
-      tags: ['AI', 'Customer Support', 'Chatbots', 'Automation'],;
-      isFeatured: false,;
-      isNew: false,;
-      vendor: 'Zion Tech Group';,
+      id: 6,
+      title: 'Customer Support AI',
+      category: 'ai',
+      description: 'Intelligent customer support automation with chatbots, ticket routing, and sentiment analysis.',
+      price: '$249/month',
+      originalPrice: '$349/month',
+      rating: 4.8,
+      reviews: 178,
+      downloads: 3600,
+      image: '💬',
+      features: ['Chatbots', 'Ticket Routing', 'Sentiment Analysis', 'Knowledge Base'],
+      tags: ['AI', 'Customer Support', 'Chatbots', 'Automation'],
+      isFeatured: false,
+      isNew: false,
+      vendor: 'Zion Tech Group';
 }
   ];
-;
   const filteredProducts = marketplaceProducts.filter(product => {;
     const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
     const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;,
+    return matchesCategory && matchesSearch;
 });
-;
   return (;
     <div className="min-h-screen bg-zion-slate-dark">;
       {/* Hero Section */}
@@ -169,7 +164,6 @@ export function MarketplacePage() {;
               Discover, purchase, and deploy cutting-edge technology solutions from our curated marketplace. ;
               All products are enterprise-ready and backed by our support team.;
             </p>;
-            ;
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">;
               <div className="relative">;
@@ -218,7 +212,7 @@ export function MarketplacePage() {;
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${;
                   selectedCategory === category.id;
                     ? 'bg-zion-cyan text-white';
-                    : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-white';,
+                    : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-white';
 }`}
               >;
                 <category.icon className="w-4 h-4" />;
@@ -253,7 +247,6 @@ export function MarketplacePage() {;
                 {/* Product Image/Icon */}
                 <div className="relative p-6 bg-gradient-to-br from-zion-blue-dark to-zion-slate-darker">;
                   <div className="text-6xl text-center mb-4">{product.image}</div>;
-                  ;
                   {/* Badges */}
                   <div className="absolute top-4 left-4 flex flex-col space-y-2">;
                     {product.isFeatured && (;
@@ -295,7 +288,6 @@ export function MarketplacePage() {;
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">;
                     {product.title}
                   </h3>;
-                  ;
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">;
                     {product.description}
                   </p>;
@@ -368,7 +360,7 @@ export function MarketplacePage() {;
               <button;
                 onClick={() => {;
                   setSearchTerm('');
-                  setSelectedCategory('all');,
+                  setSelectedCategory('all');
 }}
                 className="text-zion-cyan hover:text-zion-cyan-light transition-colors">;
                 Clear filters;
@@ -448,7 +440,7 @@ export function MarketplacePage() {;
         </div>;
       </section>;
     </div>;
-  );,
+  );
 }
-;
+
 export default MarketplacePage;

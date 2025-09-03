@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 export function ModernHeader() {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);,
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 }
-  const [isServicesOpen, setIsServicesOpen] = useState(false);,
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 }
   const toggleMobileMenu = () => {;
-    setIsMobileMenuOpen(!isMobileMenuOpen);,
+    setIsMobileMenuOpen(!isMobileMenuOpen);
 }
-;
+
   const closeMobileMenu = () => {;
-    setIsMobileMenuOpen(false);,
+    setIsMobileMenuOpen(false);
 }
-    setIsServicesOpen(false);,
+    setIsServicesOpen(false);
 }
   }';
 
@@ -20,7 +20,7 @@ export function ModernHeader() {;
   return (;
     <>;
       {/* comment */}
-;
+
       <div className="bg-blue-900 text-white py-2">";
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
           <div className="flex items-center justify-between text-sm">";
@@ -28,17 +28,17 @@ export function ModernHeader() {;
               <div className="flex items-center space-x-2">";
                 <Phone className="h-4 w-4"  />";
                 <a href="tel:+13024640950" className="hover:text-blue-200 transition-colors">;
-                  +1 302 464 0950,;
+                  +1 302 464 0950,
                 </a>;
               </div>";
               <div className="flex items-center space-x-2">";
                 <Mail className="h-4 w-4"  />";
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-200 transition-colors">;
-                  kleber@ziontechgroup.com,;
+                  kleber@ziontechgroup.com,
                 </a>;
               </div>";
               <div className="hidden md:flex items-center space-x-2">";
-                <MapPin className="h-4 w-4"  />,;
+                <MapPin className="h-4 w-4"  />,
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>;
               </div>;
             </div>";
@@ -47,11 +47,10 @@ export function ModernHeader() {;
               <Link href="/careers" className="hover:text-blue-200 transition-colors">Careers</Link>";
               <Link href="/support" className="hover:text-blue-200 transition-colors">Support</Link>;
             </div>;
-,;
       {/* comment */}";
       <header className="bg-white shadow-lg sticky top-0 z-50">";
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">";
-          <div className="flex items-center justify-between h-16">,;
+          <div className="flex items-center justify-between h-16">,
             {/* comment */}";
             <div className="flex-shrink-0">";
               <Link href="/" className="flex items-center">";
@@ -64,15 +63,14 @@ export function ModernHeader() {;
             {/* comment */}";
             <nav className="hidden lg: flex items-center space-x-8">";
               <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">;
-                Home,;
+                Home,
               </Link>;
-              ,;
               {/* comment */}";
               <div className="relative">";
                 <button className="flex items-center text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                   onMouseEnter="{()" => setIsServicesOpen(true)}";
                   onMouseLeave="{()" => setIsServicesOpen(false)}
-;
+
                 >;
                   Services";
                   <ChevronDown className="ml-1 h-4 w-4"  />;
@@ -81,18 +79,18 @@ export function ModernHeader() {;
                   <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border border-gray-200 py-4;
                     onMouseEnter="{()" => setIsServicesOpen(true)}";
                     onMouseLeave="{()" => setIsServicesOpen(false)}
-;
+
                   >";
                     <div className="grid grid-cols-2 gap-4 px-6">;
                       {services.map((service) => (";
                         <Link key="{service.name}
                           href="{service.href}
-                          className="block p-3 rounded-lg hover: bg-gray-50 transition-colors">",;
+                          className="block p-3 rounded-lg hover: bg-gray-50 transition-colors">",
                           <div className="font-medium text-gray-900">{service.name}</div>";
                           <div className="text-sm text-gray-600">{service.description}</div>;
                         </Link>;
                       ))}
-;
+
                     </div>";
                     <div className="mt-4 pt-4 border-t border-gray-200 px-6">";
                       <Link href="/services;
@@ -100,56 +98,54 @@ export function ModernHeader() {;
                         View All Services →;
                       </Link>;
                     </div>;
-                  </div>,;
+                  </div>,
                 )}
-;
+
               </div>;
 ";
               <Link href="/about" className="text-gray-700 hover: text-blue-600 transition-colors font-medium">;
-                About,;
+                About,
               </Link>";
               <Link href="/solutions" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">;
-                Solutions,;
+                Solutions,
               </Link>";
               <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">;
-                Case Studies,;
+                Case Studies,
               </Link>";
               <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">;
-                Blog,;
+                Blog,
               </Link>";
               <Link href="/pricing" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">;
-                Pricing,;
+                Pricing,
               </Link>";
               <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">;
-                Contact,;
+                Contact,
               </Link>;
             </nav>;
-,;
             {/* comment */}";
             <div className="hidden lg: flex items-center space-x-4">";
               <Link href="/contact;
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">;
-                Get Started,;
+                Get Started,
               </Link>;
             </div>;
-,;
             {/* comment */}";
-            <div className="lg: hidden">",;
+            <div className="lg: hidden">",
               <button onClick="{toggleMobileMenu}
-                className="text-gray-700 hover: text-blue-600 transition-colors">",;
+                className="text-gray-700 hover: text-blue-600 transition-colors">",
                 {isMobileMenuOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
-;
+
               </button>;
             </div>;
         {/* comment */}
-;
+
         {isMobileMenuOpen && (";
           <div className="lg: hidden bg-white border-t border-gray-200">";
             <div className="px-4 py-6 space-y-4">";
               <Link href="/;
                 className="block text-gray-700 hover:text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
-                Home,;
+                Home,
               </Link>;
               ";
               <div className="space-y-2">";
@@ -160,59 +156,59 @@ export function ModernHeader() {;
                     className="block pl-4 text-gray-600 hover: text-blue-600 transition-colors"">;
                     onClick="{closeMobileMenu}">;
                     {service.name}
-;
+
                   </Link>;
                 ))}";
                 <Link href="/services;
                   className="block pl-4 text-blue-600 hover: text-blue-700 transition-colors font-medium"">;
                   onClick="{closeMobileMenu}">;
-                  View All Services,;
+                  View All Services,
                 </Link>;
               </div>;
 ";
               <Link href="/about;
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
-                About,;
+                About,
               </Link>";
               <Link href="/solutions;
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
-                Solutions,;
+                Solutions,
               </Link>";
               <Link href="/case-studies;
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
-                Case Studies,;
+                Case Studies,
               </Link>";
               <Link href="/blog;
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
-                Blog,;
+                Blog,
               </Link>";
               <Link href="/pricing;
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
-                Pricing,;
+                Pricing,
               </Link>";
               <Link href="/contact;
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
-                Contact,;
+                Contact,
               </Link>;
               ";
               <div className="pt-4 border-t border-gray-200">";
                 <Link href="/contact;
                   className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors font-medium text-center"">;
                   onClick="{closeMobileMenu}">;
-                  Get Started,;
+                  Get Started,
                 </Link>;
               </div>;
         )}
-;
+
       </header>;
     </>;
-  );";,
+  );";
 }";
 
 export default Component

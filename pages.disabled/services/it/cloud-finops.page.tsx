@@ -5,15 +5,15 @@ export default function CloudFinOps() {;
       subtitle="Cost visibility, unit economics, and automated savings for AWS/Azure/GCP";
       price="from $4k/mo";
       bullets={[;
-        'Tagging strategy and cost allocation by team and customer',;
-        'Automated rightsizing and commitment planning (SP/RI/CCA)',;
-        'Unit economics dashboard by feature and environment',;
+        'Tagging strategy and cost allocation by team and customer',
+        'Automated rightsizing and commitment planning (SP/RI/CCA)',
+        'Unit economics dashboard by feature and environment',
         'FinOps runbooks and CFO-ready monthly reporting';
       ]}
     />;
-  );,
+  );
 }
-;
+
 function Article({ title, subtitle, price, bullets }: { title: string; subtitle: string; price: string; bullets: string[] }) {;
   return (;
     <main style={{ fontFamily: 'system-ui, sans-serif', padding: 32, maxWidth: 920, margin: '0 auto' }}>;
@@ -27,14 +27,13 @@ function Article({ title, subtitle, price, bullets }: { title: string; subtitle:
       </ul>;
       <ContactFooter />;
     </main>;
-  );,
+  );
 }
-;
+
 function ContactFooter() {;
   return (;
     <p>;
       Mobile: +1 302 464 0950 · Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Site: <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer">ziontechgroup.com</a>;
     </p>;
-  );,
+  );
 }
-;
