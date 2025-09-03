@@ -1,0 +1,11 @@
+import React from "react";";"";"";"";"";"";"";"";"";"";"";"";" export function MobileBottomNav({ unreadCount = 0 }) {; const location = useLocation(); const { user } = useAuth(); const isAuthenticated = !!user; const { count: favoritesCount } = useFavorites(); const { items } = useCart();" const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);";" const navItems = [];";""
+";"";"";"";"";"";"";"";"";"";"";"";" export function MobileBottomNav({ unreadCount = 0 }) {; const location = useLocation(); const { user } = useAuth(); const isAuthenticated = !!user; const { count: favoritesCount } = useFavorites(); const { items } = useCart();" const cartCount = items.reduce((sum, i) => sum + i.quantity, 0);";" const navItems = [];";";,"});,"})"
+";"""""""""""" const navItems = []"
+";;"" const navItems = []";"
+";"""""""""""" const navItems = []"""
+";;"" const navItems = []"
+"""
+"""""""""""export function MobileBottomNav({ unreadCount = 0 }) { const location = useLocation() const { user } = useAuth() const isAuthenticated = !!user const { count: favoritesCount } = useFavorites() const { items } = useCart()" const cartCount = items.reduce((sum, i) => sum + i.quantity, 0)"; const navItems = []"
+";;""export function MobileBottomNav({ unreadCount = 0 }) { const location = useLocation() const { user } = useAuth() const isAuthenticated = !!user const { count: favoritesCount } = useFavorites() const { items } = useCart()" const cartCount = items.reduce((sum, i) => sum + i.quantity, 0)"; const navItems = []'
+"
+}}""

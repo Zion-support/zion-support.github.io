@@ -1,5 +1,1 @@
-import React from 'react.ts';
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  className?: string}
-
-}
+: src.disabled/components/ui/input.tsx; interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> { className? string} }
