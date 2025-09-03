@@ -11,7 +11,6 @@ export default function AllServices2027() {return ("
           Professional AllServices2027 services to help your business grow.
         </p>
       </div>
-<<<<<<< HEAD
 """
       {/* Stats Section */}""""
       <section className="py-16 bg-zion-blue-dark">""""
@@ -244,8 +243,3 @@ export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices20
 export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };
 
 export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };
-=======
-  )
-}
-}""
->>>>>>> main

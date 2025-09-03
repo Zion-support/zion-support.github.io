@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useState, useEffect, useCallback } from 'react'; // Added useCallback
 import { toast } from '@/hooks/use-toast';
 
@@ -207,4 +205,3 @@ export default function Page() {
     fetchReferralCode, 
   };
 }
->>>>>>> main

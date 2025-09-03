@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
 <:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
@@ -903,5 +902,3 @@ export default AIFinancialFraudDetection}}}'"`'"`
   )};
 
 export default AIFinancialFraudDetection}}}'"`
-=======
->>>>>>> main

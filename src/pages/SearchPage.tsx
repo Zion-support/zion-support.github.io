@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Link, useSearchParams  } from 'react-router-dom';
 export default function Page() {
 ,
@@ -351,28 +348,7 @@ export default function Page() {
           {/* Results Count */}
           <div  className="mb-6">
             <p className="text-slate -300">
-              {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
-=======
-import React from "react"
-import Head from "next/head"
-import Link from "next/link"
-const SearchPage = () => {
-  return (
-    <>
-      <Head>
-        <title>Search Page - Zion Tech Group</title>
-        <meta name="description" content="Professional Search Page services"  />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Search Page
-            </h1>
-            <p className="text-xl text-gray-600 mb-12">
-              Professional Search Page services and solutions
->>>>>>> main
-            </p>
+              {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}            </p>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
@@ -404,4 +380,3 @@ const SearchPage = () => {
   );
 }
 export default SearchPage
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Users,
   MessageSquare,
@@ -738,5 +737,3 @@ import {}
 ;
 export { AICustomerSuccessPlatform };export default AICustomerSuccessPlatform;'"`
 '"`'"`
-=======
->>>>>>> main

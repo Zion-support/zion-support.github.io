@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react"
 ;,"});,"})
 }
@@ -486,4 +484,3 @@ key="{method.title}""
 }
 }"
   ChevronUp, HelpCircle, CheckCircle, ArrowRight;"} from 'lucide-react""
->>>>>>> main

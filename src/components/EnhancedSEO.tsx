@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Helmet } from 'react - helmet -async';
 
 export default function Page() {
@@ -234,9 +231,3 @@ export default function Page() {
       <meta name="mobile - web - app - capable" content="yes" />
     </Helmet>) ;
 };
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

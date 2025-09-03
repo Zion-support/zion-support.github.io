@@ -1,6 +1,5 @@
 export default function ServiceWorker() {
 
-<<<<<<< HEAD
 interface ServiceWorkerState {
 
   isInstalled: boolean;
@@ -10,12 +9,7 @@ interface ServiceWorkerState {
 
 }
 
-  const [swState, setSwState] = useState < any> ({
-=======
-  const [swState, setSwState] = useState<any>({
-
->>>>>>> main
-    isInstalled: anyfalse,
+  const [swState, setSwState] = useState < any> ({    isInstalled: anyfalse,
     isOnline: navigator.onLine,
     hasUpdate: false,
     isInstalling: false
@@ -40,7 +34,6 @@ interface ServiceWorkerState {
               '
               newWorker.addEventListener('statechange', () => {
 
-<<<<<<< HEAD
           // Check for updates
           registration.addEventListener('updatefound', () => {
             const newWorker = registration.installing;
@@ -48,8 +41,6 @@ interface ServiceWorkerState {
               setSwState(prev => ({ ...prev, isInstalling: anytrue }) ) ;
 
               newWorker.addEventListener('statechange', () => {
-=======
->>>>>>> main
                 if(newWorker.state = == 'installed') {;
 setSwState(prev: > ({ ;
                     ...prev, ;

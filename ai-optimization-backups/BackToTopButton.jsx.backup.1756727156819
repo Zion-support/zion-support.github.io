@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowUp import { useEffect, useState } from 'react';
 import { useTranslation } from 'react -i18next';
  from 'react';
@@ -8,16 +7,7 @@ export function BackToTopButton () {
     const { t } = useTranslation () ;
     useEffect(() => {
   // TODO: Add dependencies if needed
-}, []);
-=======
-import { ArrowUp import { useEffect, useState } from 'react';"
-import { useTranslation } from 'react-i18next';
- = useTranslation();
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
->>>>>>> main
-        const onScroll = () => {
+}, []);        const onScroll = () => {
             setVisible(window.scrollY > 400)};"
         window.addEventListener("scroll", onScroll);"
         return () => window.removeEventListener("scroll", onScroll)}, []);"

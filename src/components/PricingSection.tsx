@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from "react"
   Crown, Rocket,
   Building} from "lucide-react"
 
-<<<<<<< HEAD
  * PricingSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
@@ -14,38 +11,6 @@ function PricingSection () {
       icon: Shield;
     };  ];
 const pricingTiers = [{
-=======
-export const PricingSection: React.FC = () => {",,
-  const [billingCycle, setBillingCycle] = useState<"monthly" | "annual">("annual")
-}
-  const plans = [], cta: "Get Started","
-      popular: false, color: "from-blue-500 to-cyan-500"},
-    {"
-      name: "Professional", icon: Building,"
-      description: "Ideal for growing businesses", price: billingCycle === "annual" ? 799 : 899,"
-      originalPrice: billingCycle === "annual" ? 999 : 1099, features: [",
-        "Everything in Starter","
-        "Advanced AI & ML capabilities", "Custom integrations","
-        "Priority support (4hr response)", "Advanced security & compliance","
-        "Up to 25 team members", "Custom reporting","
-        "API access""
-      ], cta: "Start Free Trial","
-      popular: true, color: "from-purple-500 to-pink-500"},
-    {"
-      name: "Enterprise", icon: Crown,"
-      description: "For large organizations with complex needs", price: "Custom",
-      originalPrice: null, features: [",
-        "Everything in Professional","
-        "Custom AI model training", "Dedicated account manager","
-        "24/7 phone & chat support", "SOC 2 compliance","
-        "Unlimited team members", "Custom SLA guarantees","
-        "On-premise deployment options", "White-label solutions""
-      ], cta: "Contact Sales","
-      popular: false, color: "from-yellow-500 to-orange-500"}
-
-  ]
->>>>>>> main
-
   const savings = billingCycle === "annual" ? 25 : 0
   return (
     <section className = "py-24 bg-gradient-to-b from-zion-blue to-zion-blue-light relative overflow-hidden">
@@ -58,7 +23,6 @@ export const PricingSection: React.FC = () => {",,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         {/* comment */}
 
-<<<<<<< HEAD
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <div className="max - w-7xl mx - auto px-6">
         <motion.div
@@ -75,16 +39,7 @@ export const PricingSection: React.FC = () => {",,
 
 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-=======
-        <motion.div,"
-initial="{{" opacity: 0, y: 20 }}"
-          whileInView="{{" opacity: 1, y: 0 }}"
-          viewport="{{" once: true }}"
-          transition="{{" duration: 0.8 }}"
-          className="text-center mb-16"
->>>>>>> main
-        >"
+          transition={{ duration: 0.6 }}        >"
           <h2 className="text-3xl md: text-5xl font-bold mb-6 text-white">",
             Simple, {" "}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -227,7 +182,6 @@ whileHover="{{" scale: 1.02 }}"
         </div>
         {/* comment */}
 
-<<<<<<< HEAD
         <motion.div
           className="mt-16 text-center"          initial = {
 
@@ -247,16 +201,7 @@ whileHover="{{" scale: 1.02 }}"
   { duration: 0.6,
   delay: 0.4
 
-}}
-=======
-        <motion.div,"
-initial="{{" opacity: 0, y: 20 }}"
-          whileInView="{{" opacity: 1, y: 0 }}"
-          viewport="{{" once: true }}"
-          transition="{{" duration: 0.8, delay: 0.6 }}"
-          className="text-center mt-16"
->>>>>>> main
-        >"
+}}        >"
           <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">"
             <h3 className="text-2xl font-bold text-white mb-4">
               Need a Custom Solution?
@@ -296,4 +241,3 @@ export default function PricingSection() {return ("
         </p>
       </div>
   );"}"
->>>>>>> main

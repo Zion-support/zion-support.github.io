@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'
 import { Brain, Zap, Shield, Users, Cpu, Database, Lightbulb, BarChart3, Network, Link } from 'lucide-react';
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
@@ -438,5 +437,3 @@ export default AIAutonomousEcosystem;'"
 }}}}'"'"
 export default AIAutonomousEcosystem;
 }}}}'""
-=======
->>>>>>> main

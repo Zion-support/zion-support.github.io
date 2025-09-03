@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 interface Service {
   category: string;
@@ -149,4 +147,3 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   )};
 
 export default ServicesOverview}}}'"`
->>>>>>> main

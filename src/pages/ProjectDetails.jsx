@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide - react";
 import { Link } from 'react - router - dom';'
 import { useNavigate } from 'react - router - dom';"""
@@ -549,5 +548,3 @@ export { ProjectDetailsContent, ProjectDetails };
 export { ProjectDetailsContent, ProjectDetails };
 
 export { ProjectDetailsContent, Page, ProjectDetails };
-=======
->>>>>>> main

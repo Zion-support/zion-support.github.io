@@ -1,13 +1,7 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Enhanced PM2 Automation System Startup Script
 # This script starts the complete intelligent PM2 automation ecosystem
-=======
-# PM2 Automation System Startup Script
-# This script starts the complete error monitoring and fixing automation system
->>>>>>> main
-
 set -e
 
 # Colors for output
@@ -261,7 +255,7 @@ EOF
 # Main execution
 main() {
     echo -e "${PURPLE}🚀 Starting PM2 Automation System${NC}"
-    echo "=================================================="
+    echo "="
     echo
     
     # Check prerequisites

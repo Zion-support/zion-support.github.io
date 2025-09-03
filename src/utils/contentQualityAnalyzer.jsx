@@ -117,7 +117,6 @@ export default function Page() {
 };
 
 export default ContentQualityAnalyzer;
-<<<<<<< HEAD
 }}}}}}}}}}}}}}}}
 
 export { ContentQualityAnalyzer };
@@ -129,6 +128,3 @@ export { ContentQualityAnalyzer };
 export { ContentQualityAnalyzer };
 
 export { Page, ContentQualityAnalyzer };
-=======
-}}}}}}}}}}}}}}}}'"`
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
 <:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
 import React from 'react';
@@ -1471,5 +1470,3 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 '"`'"`
   )}
 '"`
-=======
->>>>>>> main

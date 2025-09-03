@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
       // // // // // // // console.error('Newsletter subscription failed:', error) ;
     } finally {
       setIsSubmitting(false) ;
@@ -62,8 +59,3 @@
       </div>;
     </div>;) };
 '"
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useNavigate  } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
  from 'react';
@@ -8,106 +7,6 @@ import { useDebounce } from '@/hooks / useDebounce';
 import { motion, AnimatePresence  } from 'framer-motion';
 
   icon?: React.ComponentType < any>}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-interface SearchFilter {
-  type: string[];
-  category: string[];
-  tags: string[]}
-
-interface SearchSuggestion {
-  text: string;
-  type: 'recent' | 'trending' | 'ai'}
-interface EnhancedSearchProps {
-  // Add your props here
-
-  className?: string;
-  placeholder?: string;
-  onSearch?: (query: string) => void;
-  variant?: 'default' | 'futuristic' | 'minimal'}
-;
-const searchData: SearchResult[] = [// Services
-  {
-
-    id: 'ai-solutions',
-    title: 'AI Business Intelligence',
-    description: 'Transform your business with AI-powered insights and analytics',
-    url: '/services/ai-business-intelligence',
-    type: 'service',
-    category: 'AI Solutions',
-    tags: ['AI',Business Intelligence',Analytics',Machine Learning'],
-    relevance: 95
-  },
-  {
-
-    id: 'cloud-devops',
-    title: 'Cloud & DevOps Services',
-    description: 'Scalable cloud infrastructure and automated deployment solutions',
-    url: '/services/cloud-devops',
-    type: 'service',
-    category: 'Cloud & DevOps',
-    tags: ['Cloud',DevOps',Infrastructure',Automation'],
-    relevance: 90
-  },
-  {
-
-    id: 'cybersecurity',
-    title: 'AI Cybersecurity Suite',
-    description: 'Advanced AI-powered security solutions for enterprise protection',
-    url: '/services/ai-cybersecurity-suite',
-    type: 'service',
-    category: 'Cybersecurity',
-    tags: ['Security',AI',Cybersecurity',Enterprise'],
-    relevance: 88
-  },
-  // Pages
-  {
-
-    id: 'about',
-    title: 'About Zion Tech Group',
-    description: 'Learn about our mission, values, and commitment to innovation',
-    url: '/about',
-    type: 'page',
-    category: 'Company',
-    tags: ['About',Company',Mission',Values'],
-    relevance: 85
-  },
-  {
-
-    id: 'contact',
-    title: 'Contact Us',
-    description: 'Get in touch with our team for consultations and support',
-    url: '/contact',
-    type: 'page',
-    category: 'Support',
-    tags: ['Contact',Support',Consultation',Help'],
-    relevance: 80
-  },
-  // Blog posts(example)
-  {
-
-    id: 'ai-trends-2025',
-    title: 'AI Trends in 2025',
-    description: 'Discover the latest artificial intelligence trends shaping business',
-    url: '/blog/ai-trends-2025',
-    type: 'blog',
-    category: 'AI Insights',
-    tags: ['AI',Trends',2025',Business'],
-    relevance: 75
-
-];
-
-  { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },;
-  { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
-  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;
-  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
-=======
-  { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },;'
-  { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },;'
-  { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;'
-  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;'  { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 ];
 
 export function EnhancedSearch({
@@ -116,13 +15,8 @@ export function EnhancedSearch({
   placeholder = 'Search for AI services, quantum solutions...',;
   onSearch,;
   variant = 'default'}: EnhancedSearchProps) {;
-<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('');
-=======
-  const [isOpen, setIsOpen] = useState(false);'  const [query, setQuery] = useState('');
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  const [results, setResults] = useState<SearchResult[]>([]);
+  const [query, setQuery] = useState('');  const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -163,7 +57,6 @@ export function EnhancedSearch({
     category: [],
     tags: []
   }) ;
-<<<<<<< HEAD
 
   const searchRef = useRef < HTMLDivElement> (null) ;
   const inputRef = useRef < HTMLInputElement> (null) ;
@@ -183,25 +76,7 @@ export function EnhancedSearch({
         event.preventDefault () ;
         setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ;
       } else if(event.key === 'Enter' && selectedIndex >= 0) {
-        event.preventDefault () ;
-=======
-
-  // Handle keyboard navigation
-  useEffect(() => {
-    
-        setSelectedIndex(-1)} else if(event.key === 'ArrowDown') {
-
-        event.preventDefault();
-        setSelectedIndex(prev => 
-          prev < results.length-1 ? prev + 1 : prev
-        )} else if(event.key === 'ArrowUp') {
-
-        event.preventDefault();
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)} else if(event.key === 'Enter' && selectedIndex >= 0) {
-
-        event.preventDefault();
->>>>>>> main
-        if(results[selectedIndex]) {
+        event.preventDefault () ;        if(results[selectedIndex]) {
 
           handleResultClick(results[selectedIndex])}      }
     };
@@ -217,7 +92,6 @@ export function EnhancedSearch({
       setResults([]);
       return}
 
-<<<<<<< HEAD
     const searchResults = searchData
       .filter(item => {
         const matchesQuery = item.title.toLowerCase () .includes(debouncedQuery.toLowerCase () ) ||;
@@ -227,17 +101,6 @@ export function EnhancedSearch({
         const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&;
                               filters.category.length === 0 || filters.category.includes(item.category) &&;
                               filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ;
-
-=======
-    
-      .filter(item => {
-
-                           item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||;
-                           item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
-
-                              filters.category.length === 0 || filters.category.includes(item.category) &&;
-                              filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes (tag) ) ;        
->>>>>>> main
         return matchesQuery && matchesFilters}) .sort((a, b) => b.relevance - a.relevance) .slice(0, 10) ;
 
     setResults(searchResults) }, [debouncedQuery, filters]) ;
@@ -256,17 +119,10 @@ export function EnhancedSearch({
       if(searchRef.current && !searchRef.current.contains (event.target as Node) ) {;
         setIsOpen(false) ;
         setSelectedIndex(-1) ;
-<<<<<<< HEAD
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-=======
-      }    };
-'
-    document.addEventListener('mousedown', handleClickOutside);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
+    document.addEventListener('mousedown', handleClickOutside);    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -278,13 +134,8 @@ export function EnhancedSearch({
 
       // Add to recent searches;
       
-<<<<<<< HEAD
       setRecentSearches(updated);
       localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-=======
-      setRecentSearches(updated);'      localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
       // Navigate to search results or close search
       setIsOpen(false);
       setQuery('')}
@@ -361,10 +212,8 @@ setFilters(prev: > ({;
   };
 
     setResults([]);
-=======
 '
     setQuery('');    setResults([]);
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     setIsOpen(false);
     setSelectedIndex(-1)};
 

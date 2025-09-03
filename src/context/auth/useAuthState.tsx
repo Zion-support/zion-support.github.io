@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 :src/context/auth/useAuthState.tsx
 
 interface User {
@@ -81,4 +79,3 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = : unkno
     tokens,
     setTokens
   }};
->>>>>>> main

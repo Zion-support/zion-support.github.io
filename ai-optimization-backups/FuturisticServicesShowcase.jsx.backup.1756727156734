@@ -182,7 +182,6 @@ export default function Page() {
 };
 export const FuturisticServicesShowcase = () => {
 
-<<<<<<< HEAD
   const ServiceCard = ({ service, index, isVisible }) => {
     const [isHovered, setIsHovered] = useState(false);
     return (<motion.div
@@ -356,12 +355,10 @@ export const FuturisticServicesShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [visibleServices, setVisibleServices] = useState(new Set () ) ;
-  const categories = [=======
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const categories = [  const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [visibleServices, setVisibleServices] = useState(new Set());
   const categories = ['
->>>>>>> main
     'all',
     ...new Set(ADVANCED_MICRO_SERVICES.map(s => s.category)),
   ];

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useEffect, useState, useCallback } from 'react'; // Added useCallback
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
@@ -137,4 +135,3 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
     </Card>
   );
 }
->>>>>>> main

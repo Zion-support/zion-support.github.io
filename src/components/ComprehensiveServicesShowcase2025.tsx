@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 export default function Page() {
 ,;
@@ -510,9 +507,3 @@ export default function Page() {
 </div></div></div></div></div></div></div>};
 
 export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

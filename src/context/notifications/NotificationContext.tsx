@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 export default function Page() {
@@ -61,4 +59,3 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     </NotificationContext.Provider>
   );
 };
->>>>>>> main

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 export default Search;
 import { motion  } from 'framer-motion';
@@ -199,38 +196,7 @@ export default function Page() {
                   className="absolute right - 2 top - 1/2 transform - translate - y-1 / 2 bg-gradient - to - r from - blue - 500 to - purple - 500 text-white px-6 py-2 rounded-md font - semibold hover:from - blue - 600 hover:to - purple - 600 transition - all duration -300"
                 >
                   Search
-                </button>
-=======
-import React from "react"
-import Head from "next/head"
-import Link from "next/link"
-const Search = () => {
-  return (
-    <>
-      <Head>
-        <title>Search - Zion Tech Group</title>
-        <meta name="description" content="Professional Search services"  />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Search
-            </h1>
-            <p className="text-xl text-gray-600 mb-12">
-              Professional Search services and solutions
-            </p>
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Professional Solutions</li>
-                  <li>• Expert Implementation</li>
-                  <li>• 24/7 Support</li>
-                  <li>• Custom Development</li>
-                </ul>
->>>>>>> main
-              </div>
+                </button>              </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
                 <ul className="text-gray-600 space-y-2">
@@ -252,4 +218,3 @@ const Search = () => {
   );
 }
 export default Search
->>>>>>> main

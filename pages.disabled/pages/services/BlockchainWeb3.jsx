@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target const BlockchainWeb3 = () => {}
     const blockchainServices = []
@@ -524,5 +523,3 @@ export default BlockchainWeb3;'"
 }}}}'"'"
 export default BlockchainWeb3;
 }}}}'""
-=======
->>>>>>> main

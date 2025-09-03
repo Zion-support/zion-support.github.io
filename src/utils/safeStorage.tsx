@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export const safeStorage = {
 export default safeStorage;
 
@@ -121,11 +118,3 @@ export const safeStorage = {
   }};
 
 export default safeStorage;
-=======
-// comment
-export const safeStorage = {}
-
-
-export default safeStorage
->>>>>>> main
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AISolutions.tsx
 import {
 
@@ -402,5 +401,3 @@ export function AISolutions(...args: unknown[]): unknown {}
 
 export default AISolutions;
 '"`
-=======
->>>>>>> main

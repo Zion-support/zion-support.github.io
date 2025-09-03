@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 export default PerformanceOptimizer;
 import {   
@@ -79,17 +76,8 @@ export default function Page() {
     newMetrics.score = Math.max(0, score) ;
     setMetrics(newMetrics) ;
     setHistory(prev => [...prev.slice (-9) , newMetrics]) }, []) ;
-=======
-<<<<<<< HEAD
-import { useEffect } from 'react';
-
-interface PerformanceOptimizerProps { children: React.ReactNode;
-  }
->>>>>>> main
-
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
-<<<<<<< HEAD
   // TODO: Add dependencies if needed
 
   return () => {
@@ -97,22 +85,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
   };
 }, []);, []);
     if(isMonitoring) {
-=======
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalFonts = ['https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap'
-      ];
-      
-      criticalFonts.forEach(font => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'style';
-        link.href = font;
-        document.head.appendChild(link);
-      });
-    };
->>>>>>> main
-
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -155,7 +127,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     };
   }, []);
 
-<<<<<<< HEAD
   return ("
     <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">"
       <div className="flex items-center justify-between mb-6">"
@@ -315,18 +286,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
           </div>
         </div>) }
     </div>) ;};
-=======
-  return <>{children}</>;
-};
-=======
-import React from "react"
-import { useEffect } from "react"
-interface PerformanceOptimizerProps {
-  children: React.ReactNode}
-;
-export default function Page() {;
->>>>>>> main
-
 interface PerformanceOptimizerProps { children: React.ReactNode}
 
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
@@ -547,5 +506,3 @@ target.style.backgroundImage = "url (${target.dataset.src}) "              targe
   })} { rootMargin: "50px" }") ";// comment
   return <>{children}</>}""""
 "`"""
->>>>>>> main
->>>>>>> main

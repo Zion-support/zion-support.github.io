@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react;
 import Head from 'next/head;
 
@@ -16,19 +15,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 title = 'Zion Tech Group - Leading Technology Solutions Provider', description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence with measurable results.', keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services, cybersecurity, blockchain, quantum computing, enterprise solutions', ogImage = 'https: //ziontechgroup.com/og-image.jpg','  canonicalUrl = 'https: //ziontechgroup.com', structuredData,'  noindex = false, nofollow = false'}) => {
   const defaultStructuredData = {;
     "@context": "https://schema.org", "@type": "Organization","    "name": "Zion Tech Group", "url": "https://ziontechgroup.com","    "logo": "https://ziontechgroup.com/logo.png", "description": description,"    "address": {"      "@type": "PostalAddress", "streetAddress": "364 E Main St STE 1008","      "addressLocality": "Middletown", "addressRegion": "DE","      "postalCode": "19709", "addressCountry": "US""    },"    "contactPoint": {"      "@type": "ContactPoint", "telephone": "+1-302-464-0950","      "contactType": "customer service", "email": "kleber@ziontechgroup.com""    },"    "sameAs": ["      "https://www.linkedin.com/company/zion-tech-group", "https: //github.com/Zion-Technologies""    ], "foundingDate": "2020","    "numberOfEmployees": "50-100", "services": ["      "AI Development","      "Cloud Architecture", "Cybersecurity","      "Blockchain Solutions", "Micro SaaS Development","      "Enterprise IT Services", "Digital Transformation""    ], "areaServed": "Worldwide","    "knowsAbout": ["      "Artificial Intelligence", "Machine Learning","      "Cloud Computing", "Cybersecurity","      "Blockchain Technology", "Quantum Computing","      "DevOps", "Data Analytics""    ]"  };const finalStructuredData = structuredData || defaultStructuredData;
-=======
-import Head from "next/head"
-import React from "react"
-interface SEOEnhancerProps {;
-
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string}
->>>>>>> main
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",
   title = "Zion Tech Group - Leading Technology Solutions","
   description = "Zion Tech Group provides cutting-edge AI, IT, and software development services.","
@@ -39,7 +25,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",
 }) => {"
   const fullTitle = title.includes("Zion Tech Group") ? title : "${title} | Zion Tech Group"
   return (
-<<<<<<< HEAD
     <Head>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -60,31 +45,3 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({",
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />"      <meta httpEquiv="X-Frame-Options" content="DENY" />"      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />"      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />"    </Head>"  );};
 
 export default SEOEnhancer;
-=======
-<Head>
-      <title>{fullTitle}</title>
-      <meta name="description" content="{description}"  />"
-      <meta name=keywords" content="{keywords}"  />"
-      <meta name="viewport" content="width=device-width, initial-scale=1"  />"
-      <meta name="robots content="index," follow"  />"
-      <meta name="author content="Zion" Tech Group"  />"
-      <meta name="theme-color content=#3B82F6"  />
-      "
-      <meta property="og:title content="{fullTitle}"  />"
-      <meta property=og:description" content="{description}"  />"
-      <meta property="og:image content="{image}"  />"
-      <meta property=og:url" content="{url}"  />"
-      <meta property="og:type content = "{type}"  />"
-      <meta property=og: site_name" content="Zion Tech Group       />
-      "
-      <meta name=twitter:card" content="summary_large_image       />",
-      <meta name=twitter:title" content="{fullTitle}"  />"
-      <meta name="twitter:description content="{description}"  />"
-      <meta name=twitter:image" content="{image}"  />
-      "
-      <link rel="canonical" href="{url}"  />
-    </Head>
-  )
-}
-""export default SEOEnhancer
->>>>>>> main

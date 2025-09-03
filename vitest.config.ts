@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { defineConfig } from 'vitest/config';
 import path from 'node:path';
 export { defineConfig };export default defineConfig({
@@ -17,13 +16,3 @@ export { defineConfig };export default defineConfig({
     },
   },
 });
-=======
-import { defineConfig  } from "vitest/config";
-import react from "@vitejs/plugin-react";
-export default defineConfig({;
-  plugins: [react()],;
-  test: {;
-    environment: "jsdom",;,
-},;,
-})
->>>>>>> main

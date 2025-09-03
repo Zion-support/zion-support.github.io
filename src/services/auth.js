@@ -16,7 +16,6 @@ export class authService {
       throw error
     }
 
-<<<<<<< HEAD
 // Create and export a singleton instance;
 const authService = new AuthService();
 export default authService;
@@ -30,11 +29,3 @@ export { API_BASE_URL };
 export { API_BASE_URL };
 
 export { API_BASE_URL };
-=======
-  }
-
-
-
-export default new authService()
-}
->>>>>>> main

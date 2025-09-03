@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Atom,
   TrendingUp,
@@ -525,5 +524,3 @@ export default function AIQuantumComputingPlatform(function AIQuantumComputingPl
     </div>
   )}'"`
 '"`'"`
-=======
->>>>>>> main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ;
 export { function };export default function CloudDevOps(...args: []):  {}
   return()
@@ -683,5 +682,3 @@ export { function };export default function CloudDevOps(...args: []):  {}
   )}}}}}}'"'"
     </>
   )}}}}}}'""
-=======
->>>>>>> main

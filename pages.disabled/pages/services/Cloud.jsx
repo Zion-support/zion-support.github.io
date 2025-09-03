@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';'
 import { Link } from 'react-router-dom';
 :pages.disabled/pages/services/Cloud.jsx
@@ -102,5 +101,3 @@ export { CloudServices };
 
 export { CloudServices };
 }'""
-=======
->>>>>>> main

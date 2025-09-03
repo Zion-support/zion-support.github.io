@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
 <:pages.disabled/pages/services/QuantumAIPlatform.tsx
@@ -859,5 +858,3 @@ export { QuantumAIPlatform };export default QuantumAIPlatform;'"`
 '"`'"`
 export { QuantumAIPlatform };export default QuantumAIPlatform;
 '"`
-=======
->>>>>>> main

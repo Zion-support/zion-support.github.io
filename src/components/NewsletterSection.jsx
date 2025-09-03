@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 import {  import { motion  } from 'framer-motion';
@@ -249,15 +248,5 @@ export function NewsletterSection() {
           </motion.div>
         </div>
       </motion.div>
-    </section>) ;
-=======
-const benefits = [] const stats = [] export: function NewsletterSection() { const [email, setEmail] = useState(") const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (e) => { e.preventDefault()";;"
-const benefits = [] const stats = [] export function NewsletterSection() { const [email, setEmail] = useState(") const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (e) => { e.preventDefault();"
-const benefits = [] const stats = [] export function NewsletterSection() { const [email, setEmail] = useState(") const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (e) => { e.preventDefault()"
-const benefits = []&apos;&apos; const stats = []&apos; export function NewsletterSection() {} const [email, setEmail] = useState(&apos)&apos, const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const;const handleSubmit = (e) => { e.preventDefault()}"
-const benefits = [] const stats = [] export function NewsletterSection() { const [email, setEmail] = useState(") const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (e) => { e.preventDefault()""
-}}"
-const benefits = [] const stats = [] export function NewsletterSection() { const [email, setEmail] = useState(") const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (e) => { e.preventDefault()
->>>>>>> main
-}
+    </section>) ;}
 const benefits = [] const stats = [] export function NewsletterSection() { const [email, setEmail] = useState(') const [isSubscribed, setIsSubscribed] = useState(false) const [isLoading, setIsLoading] = useState(false) const [showBenefits, setShowBenefits] = useState(false) const handleSubmit = (e) => { e.preventDefault()"""

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function LoginForm() {return (
@@ -12,4 +10,3 @@ export default function LoginForm() {return (
         </p>
       </div>
   );"}"
->>>>>>> main

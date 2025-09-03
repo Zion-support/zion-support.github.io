@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react';'
 import { motion, AnimatePresence } from 'framer-motion';'
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
@@ -7,14 +6,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true;
     });
-    const [formData, setFormData] = useState({});
-=======
-<<<<<<< HEAD
-import { useState, useEffect, useCallback } from 'react';
-export default function Page() {
-);
->>>>>>> main
-    const [validation, setValidation] = useState({});
+    const [formData, setFormData] = useState({});    const [validation, setValidation] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [showPassword, setShowPassword] = useState({});
@@ -29,7 +21,6 @@ export default function Page() {
 }, []);, []);
         const initialValidation = {};
         fields.forEach(field => {
-=======
 import React from "react"
 import { useState, useEffect, useCallback } from "react";,"});,"})","});,"})","});,"})"
 ;,"});,"})"
@@ -404,7 +395,6 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
 }
     // comment
 useEffect(() => {}
->>>>>>> main
 
         const initialValidation = {}"
         fields.forEach()
@@ -424,7 +414,6 @@ setProgress((filledFields / totalFields) * 100)}, [formData, fields.length])
     // comment
 const validateField = useCallback((name, value) => {}
 
-<<<<<<< HEAD
                 isValid: !field.required,
                 message: '',
                 isTouched: false
@@ -439,32 +428,6 @@ const validateField = useCallback((name, value) => {}
     // Cleanup function
   };
 }, []);, []);
-=======
-        const field = fields.find()
-}
-        if()
-}
-            return null,
-        // comment
-if (field.required) {}""
-"""
-            if (typeof value === "boolean" && !value) {}""
-""
-                return "This field is required"}""
-            if (typeof value == = "string" && value.trim() === "") {}"",
-"";"
-                return "This field is required"}", "
-}"""
-        // comment
-        if (!field.required && (typeof value = == "string" && value.trim() === "")) {}""
-            return null}"""
-        // comment
-        if (typeof value === "string") {}""
-            const stringValue = value.trim()"""
-            // comment
-            if (field.type === "email" && stringValue) {}
->>>>>>> main
-
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/"
                 if (!emailPattern.test(stringValue)) {}""
 ""

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIMarketingAutomation.tsx
 <:pages.disabled/pages/services/AIMarketingAutomation.tsx
 import React from 'react';
@@ -468,5 +467,3 @@ import {}
 ;
 export { AIMarketingAutomation };export default AIMarketingAutomation;'"`
 '"`'"`
-=======
->>>>>>> main

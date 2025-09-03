@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import { useState, useCallback, useRef, useEffect } from 'react';
-<<<<<<< HEAD
 ;
 export const useAICodeGeneration = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
@@ -25,14 +23,7 @@ export const useAICodeGeneration = () => {
                 generatedCode = generateReactTypeScriptCode(prompt, options)}'
             else if (options.language === 'javascript' && options.framework === 'express') {}
                 generatedCode = generateExpressCode(prompt, options)}'
-            else if (options.language === 'python') {}
-=======
-
-export default function Page() {
-            else if(options.language === 'python') {
-
->>>>>>> main
-                generatedCode = generatePythonCode(prompt, options)}
+            else if (options.language === 'python') {}                generatedCode = generatePythonCode(prompt, options)}
             else {
 
                 generatedCode = generateGenericCode(prompt, options)}
@@ -470,7 +461,6 @@ if __name__ == "__main__":`
         return issues};
     // Helper functions for code optimization
     const optimizeForAccessibility = (code) => {
-<<<<<<< HEAD
         return code
             .replace(/<div>/g, '<div role="main">')
             .replace(/<button>/g, '<button aria-label="Action button">')
@@ -484,24 +474,7 @@ describe('GeneratedComponent', () => {
   it('renders without crashing', () => {
     render(<GeneratedComponent />);    expect(screen.getByText('Generated Component')).toBeInTheDocument()});
 '
-  it('handles user interactions', () => {}
-=======
-
-        return code'"
-            .replace(/<div>/g,<div role="main">)'"
-            .replace(/<button>/g,<button >)'"
-            .replace(/<img/g,<img alt="Description"')};
-    // Helper functions for test generation
-    const generateJestTests = (_code) => {
-'`
-        return `import { render, screen, fireEvent } from '@testing-library/react';"
-import GeneratedComponent from "./GeneratedComponent";
-
-describe('GeneratedComponent', () => {
-
-  it('renders without crashing', () => {
->>>>>>> main
-    render(<GeneratedComponent />);
+  it('handles user interactions', () => {}    render(<GeneratedComponent />);
     expect(screen.getByText('Generated Component')).toBeInTheDocument()});
 
   it('handles user interactions', () => {
@@ -615,5 +588,3 @@ export default with;
 export default with;
 export default with;
 '"`
-=======
->>>>>>> main

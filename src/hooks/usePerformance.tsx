@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 :src/hooks/usePerformance.tsx
 interface PerformanceMetrics {
   fcp: number | null; // First Contentful Paint
@@ -521,4 +519,3 @@ export function useAPIPerformance(...args: unknown[]): unknown {
   }}
 '`
   }}
->>>>>>> main

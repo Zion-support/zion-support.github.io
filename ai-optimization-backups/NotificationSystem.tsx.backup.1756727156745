@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 > {
@@ -41,112 +40,7 @@ enableSound:  true,;
   const [isOpen, setIsOpen] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
   
-  // Initialize audio for notification sounds
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  useEffect(() => {
-    if(settings.sound) {
-
-      audioRef.current = new Audio('/notification-sound.mp3'); // You can add a custom sound file
-      audioRef.current.volume = 0.3}}, [settings.sound]) ;
-  // Update unread count
-  useEffect(() => {
-    setUnreadCount(notifications.filter (n => !n.read) .length) }, [notifications]) ;
-
-  // Auto - dismiss notifications
-  useEffect(() => {
-    if(!settings.autoDismiss) return;
-
-    const timeouts: NodeJS.Timeout[] = [];
-
-    notifications.forEach(notification => {
-
-      if (notification.duration !== 0) {
-
-        }, notification.duration || settings.defaultDuration);
-        timeouts.push(timeout)}
-    }) ;
-    return () => {
-      timeouts.forEach(timeout => clearTimeout (timeout) ) }}, [notifications, settings.autoDismiss, settings.defaultDuration]) ;
-
-  // Play notification sound'
-        // // // // // // // // console.warn('Could not play notification sound:', error)}    }
-  }, [settings.sound]) ;
-
-  // Trigger vibration'
-        // // // // // // // // console.warn('Could not trigger vibration:', error)}    }
-  }, [settings.vibration]) ;
-
-  // Add notification'
-  
-;
-;
-
-`}-${Math.random().toString(36).substr(2, 9)}`,;
-      timestamp: new Date(),;
-      read: false,;
-      duration: notification.duration ?? settings.defaultDuration};
-
-    setNotifications(prev = > {;
-      
-      return updated.slice (0, settings.maxNotifications) }) ;
-    // Play sound and vibrate
-    playSound () ;
-    triggerVibration () }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]) ;
-
-  // Dismiss notification
-  
-    setNotifications(prev => prev.filter (n => n.id !== id) ) }, []) ;
-
-  // Mark notification as read
-  
-  }, []);
-
-  // Mark all as read
-  
-    setNotifications(prev => prev.map (n => ({ ...n, read: true }) ) ) }, []) ;
-
-  // Clear all notifications
-  
-    setNotifications([]) }, []) ;
-
-  // Get notification icon
-
-    switch(type) {
-
-      case 'success':'`
-        return <CheckCircle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-green-600' : 'text-green-500'}`}  />;
-      case 'warning':'`
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-yellow-600' : 'text-yellow-500'}`}  />;
-      case 'error':'`
-        return <AlertTriangle {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-red-600' : 'text-red-500'}`}  />;
-      case 'info':'`
-        return <Info {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-blue-600' : 'text-blue-500'}`}  />;
-      case 'achievement':'`
-        return <Star {...iconProps} className={`w-5 h-5 ${priority === 'high' ? 'text-purple-600' : 'text-purple-500'}`}  />;
-      default:"
-        return <Bell {...iconProps} className="w-5 h-5 text-zion-slate"  />}};
-  // Get notification styles'
-        return baseStyles + 'border-zion-slate bg-zion-slate/10'}
-  };
-
-  // Get position classes
-  
-    switch(settings.position) {;
-      case 'top-left':;
-        return 'top-4 left-4';
-      case 'top-right':'
-        return 'top-4 right-4';
-      case 'bottom-left':'
-<<<<<<< HEAD
-        return 'bottom-4 left-4';
-      case 'bottom-right':'
-        return 'bottom-4 right-4';
-=======
-        return 'bottom-4 left-4';'
-      case 'bottom-right':'        return 'bottom-4 right-4';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      default:'
+  // Initialize audio for notification sounds      default:'
         return 'top-4 right-4'}
   };
 
@@ -407,9 +301,7 @@ export
 // Utility functions for common notification types
 export 
         priority: 'medium',;
-=======
 })};'        priority: 'medium',;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   ;
   ;
   ...options;

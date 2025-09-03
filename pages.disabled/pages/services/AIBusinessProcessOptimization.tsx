@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {}
   Brain,
   Zap,
@@ -531,5 +530,3 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
 
 export default AIBusinessProcessOptimization;'"`
 '"`'"`
-=======
->>>>>>> main

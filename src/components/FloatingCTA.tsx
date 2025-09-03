@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
 export default function Page() {
  from 'lucide-react';
@@ -87,9 +84,3 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
     </>
   )}
 '"
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

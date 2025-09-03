@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
 export default function Page() {
 </motion.div>}
@@ -18,13 +17,6 @@ export default function Page() {
     const interval = setInterval(() => {;
       setCurrentFeature((prev) => (prev + 1) % features.length) ;
     }, 3000) ;
-=======
-  useEffect(() => {
-    setIsVisible(true) ;
-
-      setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ;
->>>>>>> main
-
     return () => clearInterval(interval)}, [features.length]);
 
     // // // // // // // // console.log('Hero CTA clicked');
