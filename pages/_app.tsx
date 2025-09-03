@@ -27,21 +27,6 @@ function Header(): any {
           textDecoration: 'none'
         }}>Zion Tech Group</Link>
         
-<<<<<<< HEAD
-        <div className="header-nav-links">
-          <Link href="/" className="header-nav-link">Home</Link>
-          <Link href="/services" className="header-nav-link">All Services</Link>
-          <Link href="/services-catalog" className="header-nav-link">Catalog</Link>
-          <Link href="/cloud-devops" className="header-nav-link">Cloud DevOps</Link>
-          <Link href="/cybersecurity" className="header-nav-link">Cybersecurity</Link>
-          <Link href="/quantum-computing" className="header-nav-link">Quantum</Link>
-          <Link href="/docs" className="header-nav-link">Docs</Link>
-          <Link href="/pricing" className="header-nav-link">Pricing</Link>
-          <div className="hidden md:block">
-            <SearchBar />
-          </div>
-          <Link href="/contact" className="header-nav-cta">Contact</Link>
-=======
         {/* Desktop Navigation */}
         <div style={{ 
           display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
@@ -83,7 +68,6 @@ function Header(): any {
             color: 'white', padding: '8px 16px', borderRadius: 8,
             transition: 'all 0.2s ease', textDecoration: 'none'
           }}>Contact</Link>
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
         </div>
 
         {/* Mobile Navigation */}
@@ -109,22 +93,6 @@ function Header(): any {
         </div>
       </nav>
       
-<<<<<<< HEAD
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
-        <div className="md:hidden mb-4">
-          <SearchBar />
-        </div>
-        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-        <Link href="/cloud-devops" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
-        <Link href="/cybersecurity" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
-        <Link href="/quantum-computing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Quantum</Link>
-        <Link href="/docs" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Docs</Link>
-        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-      </div>
-=======
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div style={{
@@ -167,7 +135,6 @@ function Header(): any {
           }} onClick={() => setMobileMenuOpen(false)}>About</Link>
         </div>
       )}
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
     </header>
   );
 }
