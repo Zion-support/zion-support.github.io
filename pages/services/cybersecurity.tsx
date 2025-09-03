@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Users, Globe, Database, Zap } from 'lucide-react';
@@ -261,3 +262,16 @@ const CybersecurityPage: NextPage = () => {
 };
 
 export default CybersecurityPage;
+=======
+import React from 'react';
+
+export default function Cybersecurity() {
+  return (
+    <main className="max-w-4xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-4">Cybersecurity</h1>
+      <p className="text-gray-700">Threat detection, response, and compliance.</p>
+    </main>
+  );
+}
+
+>>>>>>> main

@@ -1,6 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
+import PricingGuide from '../../components/PricingGuide';
 import { services, getServicesByCategory } from '../../data/services';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';
 import Link from 'next/link';
@@ -9,38 +11,22 @@ const ServicesPage: NextPage = () => {
   const microSaasServices = getServicesByCategory('micro-saas');
   const itServices = getServicesByCategory('it-services');
   const aiServices = getServicesByCategory('ai-services');
+=======
+>>>>>>> main
 
-  const stats = [
-    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap },
-    { number: '35+', label: 'IT Services', icon: Shield },
-    { number: '30+', label: 'AI Services', icon: Globe },
-    { number: '500+', label: 'Projects Completed', icon: TrendingUp },
-  ];
+const services = [
+  { name: 'AI Development', href: '/services/ai-development' },
+  { name: 'Cloud Services', href: '/services/cloud-services' },
+  { name: 'Web Development', href: '/services/web-development' },
+  { name: 'Mobile Development', href: '/services/mobile-development' },
+  { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
+  { name: 'IoT Platforms', href: '/services/iot-platforms' },
+  { name: 'Cybersecurity', href: '/services/cybersecurity' },
+];
 
-  const benefits = [
-    {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: 'Competitive Pricing',
-      description: 'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: 'Proven Results',
-      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'
-    },
-    {
-      icon: <Rocket className="w-8 h-8" />,
-      title: 'Fast Implementation',
-      description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.'
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: 'Expert Support',
-      description: '24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
-    }
-  ];
-
+export default function ServicesIndex() {
   return (
+<<<<<<< HEAD
     <MainLayout
       title="Our Services - Zion Tech Group"
       description="Comprehensive technology solutions including Micro SaaS, IT Services, and AI Services. Transform your business with our innovative solutions."
@@ -385,6 +371,9 @@ const ServicesPage: NextPage = () => {
         </div>
       </section>
 
+      {/* Pricing Guide */}
+      <PricingGuide />
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -413,7 +402,18 @@ const ServicesPage: NextPage = () => {
         </div>
       </section>
     </MainLayout>
+=======
+    <main className="max-w-4xl mx-auto px-4 py-16">
+      <h1 className="text-3xl font-bold mb-6">Services</h1>
+      <ul className="space-y-2">
+        {services.map(s => (
+          <li key={s.href}>
+            <a href={s.href} className="text-blue-600 hover:underline">{s.name}</a>
+          </li>
+        ))}
+      </ul>
+    </main>
+>>>>>>> main
   );
-};
+}
 
-export default ServicesPage;
