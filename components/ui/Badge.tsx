@@ -1,47 +1,81 @@
-import React from 'react';
-// Inline minimal cva/VariantProps to avoid external dependency during build;
-type VariantProps<T> = T extends (...args: any) => any ? Parameters<T>[0] : never;
-function cva(base: string, config: { variants?: Record<string, Record<string, string>>; defaultVariants?: Record<string, string> } = {}) {;
-  return (props: Record<string, string> = {}) => {;
-    const classes: string[] = [base];
-    const variants = config.variants ?? {};
-    for (const key of Object.keys(variants)) {;
-      const val = props[key];
-      if (val && variants[key][val]) classes.push(variants[key][val]);
-      else if (config.defaultVariants && config.defaultVariants[key]) classes.push(variants[key][config.defaultVariants[key]]);,
-}
-    return classes.join(' ');,
-};,
-}
-import { cn } from '../../lib/utils';
-;
-const badgeVariants = cva(;
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",;
-  {;
-    variants: {;
-      variant: {;
-        default:;
-          "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",;
-        secondary:;
-          "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",;
-        destructive:;
-          "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",;
-        outline: "text-foreground",;,
-},;,
-},;
-    defaultVariants: {;
-      variant: "default",;,
-},;,
-}
+import React from "react;
+import { cva, type VariantProps } from "class-variance-authority;
+import { cn } from "../../src/lib/utils;
+const badgeVariants = cva(
+  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  {
+    variants: {
+      variant: {
+        default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+        secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
+        outline: "text-foreground border-border",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
 );
-;
-export interface BadgeProps;
+export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof badgeVariants> {}
-;
-function Badge({ className, variant, ...props }: BadgeProps) {;
-  return (;
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />;
-  );,
+
+function Badge({ className, variant, ...props }: BadgeProps) {
+  return (
+    <div className={cn(badgeVariants({ variant }), className)} {...props}   />
+  );
+import React from "react"
+const badgeVariants = cva("
+  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  {
+    variants: {,
+      variant: {,"
+default: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80","
+        secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80","
+        destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80","
+        outline: "text-foreground border-border",
+      },
+    defaultVariants: {,"
+variant: "default",
+    },
+  }
+
+interface BadgeProps {
+  children: React.ReactNode;
+  variant?: "default" | "secondary" | "success" | "warning" | "error";
+  size?: "sm" | "md" | "lg";
+  className?: string;
 }
-;
-export { Badge, badgeVariants };
+
+export const Badge: React.FC<BadgeProps> = ({
+  children,
+  variant = "default",
+  size = "md",
+  className = ""
+}) => {
+  const baseClasses = "inline-flex items-center font-medium rounded-full";
+  const variantClasses = {
+    default: "bg-blue-100 text-blue-800",
+    secondary: "bg-gray-100 text-gray-800",
+    success: "bg-green-100 text-green-800",
+    warning: "bg-yellow-100 text-yellow-800",
+    error: "bg-red-100 text-red-800"
+  };
+  const sizeClasses = {
+    sm: "px-2 py-1 text-xs",
+    md: "px-2.5 py-0.5 text-sm",
+    lg: "px-3 py-1 text-base'
+  };
+  const classes = "${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}";
+  return (
+    <span className={classes}>
+      {children}
+    </span>
+  );
+};
+}
+export interface BadgeProps,
+extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof badgeVariants> {}
+
+export default Badge;

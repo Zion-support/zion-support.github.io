@@ -1,104 +1,103 @@
-export class ContentOptimizer {;
+export class ContentOptimizer {
 export default ContentOptimizer;
     if(internalLinks.length < 2) score -= 10;
-;
-    return Math.max(0, score);,
-}
-;
-  static identifyIssues(content, page, metrics) {;
+    return Math.max(0, score);
+  }
+
+  static identifyIssues(content, page, metrics) {
 
     const issues = [];
-;
-    if(metrics.wordCount < this.MIN_WORD_COUNT) {;
+    if(metrics.wordCount < this.MIN_WORD_COUNT) {
 
-      issues.push({;
+      issues.push({
 
-        type: 'word_count',;
-        severity: 'medium',;
-        message: `Content is too short.Aim for at least ${this.MIN_WORD_COUNT} words.`});,
-}
-;
-    if(metrics.headingCount < this.MIN_HEADING_COUNT) {;
+        type: "word_count",
+        severity: "medium",
+        message: "Content is too short.Aim for at least ${this.MIN_WORD_COUNT} words."});
+    }
 
-      issues.push({;
+    if(metrics.headingCount < this.MIN_HEADING_COUNT) {
 
-        type: 'heading_count',;
-        severity: 'low',`;
-        message: `Add more headings to improve content structure.`});,
-}
-;
-    if(metrics.imageCount < this.MIN_IMAGE_COUNT) {;
+      issues.push({
 
-      issues.push({;
+        type: "heading_count",
+        severity: "low","
+        message: "Add more headings to improve content structure."});
+    }
 
-        type: 'image_count',;
-        severity: 'low',`;
-        message: `Consider adding images to make content more engaging.`});,
-}
-;
-    if(metrics.linkCount < this.MIN_LINK_COUNT) {;
+    if(metrics.imageCount < this.MIN_IMAGE_COUNT) {
 
-      issues.push({;
+      issues.push({
 
-        type: 'link_count',;
-        severity: 'low',`;
-        message: `Add more internal and external links for better SEO.`});,
-}
-;
-    return issues;,
-}
-;
-  static generateSuggestions(issues, page) {;
+        type: "image_count",
+        severity: "low","
+        message: "Consider adding images to make content more engaging."});
+    }
+
+    if(metrics.linkCount < this.MIN_LINK_COUNT) {
+
+      issues.push({
+
+        type: "link_count",
+        severity: "low","
+        message: "Add more internal and external links for better SEO."});
+    }
+
+    return issues;
+  }
+
+  static generateSuggestions(issues, page) {
 
     const suggestions = [];
-;
-    issues.forEach(issue => {;
+    issues.forEach(issue => {
 
-      switch (issue.type) {;
+      switch (issue.type) {
 
-        case 'word_count':;
-          suggestions.push(';
-            'Expand your content with more detailed information, examples, or related topics.';
+        case "word_count":
+          suggestions.push("
+            "Expand your content with more detailed information, examples, or related topics."
           );
           break;
-        case 'heading_count':;
-          suggestions.push(';
-            'Break down your content into sections with descriptive headings (H2, H3).';
+        case "heading_count":
+          suggestions.push("
+            "Break down your content into sections with descriptive headings (H2, H3)."
           );
           break;
-        case 'image_count':;
-          suggestions.push(';
-            'Add relevant images, diagrams, or infographics to illustrate your points.';
+        case "image_count":
+          suggestions.push("
+            "Add relevant images, diagrams, or infographics to illustrate your points."
           );
           break;
-        case 'link_count':;
-          suggestions.push(';
-            'Include links to related pages on your site and authoritative external sources.';
+        case "link_count":
+          suggestions.push("
+            "Include links to related pages on your site and authoritative external sources."
           );
-          break;,
-}
+          break;
+      }
     });
-;
-    return suggestions;,
-}
-;
-  static optimizeContent(content, page) {;
+    return suggestions;
+  }
+
+  static optimizeContent(content, page) {
 
     const analysis = this.analyzeContent(content, page);
     const optimizedContent = content;
-;
-    // Apply optimizations based on analysis;
-    if(analysis.issues.length > 0) {;
+    // Apply optimizations based on analysis
+    if(analysis.issues.length > 0) {
 
-      // Add suggestions as comments;
-      const optimizationComments = analysis.suggestions`;
-        .map(suggestion => `<!-- TODO: ${suggestion} -->`);
-        .join('\n');`;
-      return `${optimizationComments}\n\n${optimizedContent}`;,
+      // Add suggestions as comments
+      const optimizationComments = analysis.suggestions"
+        .map(suggestion => "<!-- TODO: ${suggestion} -->")
 }
-;
-    return optimizedContent;,
-}}
-;
+        .join("
+");"
+      return "${optimizationComments}
+
+${optimizedContent}";
+    }
+
+    return optimizedContent;
+  }}
+
 export default ContentOptimizer;
-'"`
+'""

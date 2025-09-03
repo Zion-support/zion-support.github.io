@@ -1,19 +1,22 @@
-  it(displays expected content", () => {;
-    render(<CheckoutShippingOptions  />)";
-import { render, screen } from &apos;@testing - library/react",;
-import CheckoutShippingOptions from &apos;./CheckoutShippingOptions;
-describe(&apos;CheckoutShippingOptions&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+  it(displays expected content", () => {
+    render(<CheckoutShippingOptions  />)"
+import { render, screen } from &apos;@testing - library/react",
+import CheckoutShippingOptions from &apos;./CheckoutShippingOptions
+describe(&apos;CheckoutShippingOptions&apos, () => {
+  it(&apos;renders without crashing&apos, () => {
+    render()
 }
-    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+    expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()})
 }
-    // comment;
-    render(<CheckoutShippingOptions / >)";
-    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();,
-})";
-";,
-}}))
+}
+  it(&apos;displays expected content&apos, () => {
+    render()
+}
+}
+    // comment
+    render(<CheckoutShippingOptions / >)"
+    expect(screen.getByRole("main") || screen.getByText(/.*/)).toBeInTheDocument();""
+})"
+"
+}}""
