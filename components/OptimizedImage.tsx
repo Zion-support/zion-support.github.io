@@ -1,66 +1,110 @@
 <<<<<<< HEAD
-'use client, '
-  ;''''''
-  'import Image from 'next/image
-  ';'''
-  'interface OptimizedImageProps {src: string;'
-=======
-'use client'''''''import Image from 'next/image''''interface OptimizedImageProps {'
-  src: string;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+'use client;
+
+import Image from 'next/image;
+
+interface OptimizedImageProps {src: string;
   alt: string;
   width?: number;
   height?: number;
   className?: string;
-<<<<<<< HEAD
-priority?: boolean;''
-  '  quality?: number;'''
-  '  placeholder?: 'blur
-  ' | 'empty
-  ';'  blurDataURL?: string;  sizes?: string;fill?: boolean;
-=======
-priority?: boolean'''  quality?: number'''  placeholder?: 'blur' | 'empty''  blurDataURL?: string  sizes?: string;fill?: boolean;'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+priority?: boolean;
+'  quality?: number;
+'  placeholder?: 'blur' | 'empty;
+  blurDataURL?: string;'  sizes?: string;fill?: boolean;
   style?: React.CSSProperties;
   onClick?: () => void;
   onLoad?: () => void;
   onError?: () => void;
-}
+=======
 
+interface OptimizedImageProps {;
+
+  src: string,,
+alt: string
+  width?: number
+  height?: number
+  className?: string
+  blurDataURL?: string
+  sizes?: string,
+  fill?: boolean,
+  style?: React.CSSProperties,,
+  onClick?: () => void,
+  onLoad?: () => void,
+  blurDataURL,
+  sizes,
+  fill = false,
+  style,
+  onClick,
+  onLoad,
+}) => {
+  onError,
+  loading = "lazy","
+  objectFit = "cover","
+  objectPosition = "center"
+  const [isLoading, setIsLoading] = useState(true)
+>>>>>>> main
+}
+  const [hasError, setHasError] = useState(false)
+}
+  const [isInView, setIsInView] = useState(priority)
+}
+  const imageRef = useRef<HTMLDivElement>(null)
+}
+  const [isLoading, setIsLoading] = useState(true)
+}
+  const [hasError, setHasError] = useState(false)
+}
+  const [isInView, setIsInView] = useState(priority)
+}
+  const imageRef = useRef<HTMLDivElement>(null)
+}
+  // comment
+useEffect(() => {
+    if (priority) return
+    const observer = new IntersectionObserver()
+}
+      ([entry]) => {
+        if (entry.isIntersecting) {;
+
+<<<<<<< HEAD
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 src, alt,
-  width,  ,
-  ''
-  '  height, '''
-  '  className = '', priority = false, '''
-  '  quality = 75, '''
-  '  placeholder = 'empty
-  ', '  blurDataURL, sizes, '  fill = false, style, '
-  onClick, onLoad, onError}) => {
+  width, 
+'  height,
+'  className = 
+, priority = false,
+'  quality = 75, 
+'  placeholder = 'empty','  blurDataURL, sizes,'  fill = false, style,
+  onClick, onLoad,onError}) => {
 
   const [isLoading, setIsLoading] = useState(true);
+
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
+
   const imageRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (priority) return;
 
-const observer = new IntersectionObserver();([entry]) => {
+const observer = new IntersectionObserver();
+([entry]) => {
 
         if (entry.isIntersecting) {
 
           setIsInView(true);
-          observer.disconnect()
+          observer.disconnect();
+
         }
 }, {
-''''''
-  '        rootMargin: '50px, // Start loading 50px before the image comes into view'        threshold: 0.1}'
-  '    );if (imageRef.current) {'
+
+        rootMargin: '50px', // Start loading 50px before the image comes into view'        threshold: 0.1}'    );if (imageRef.current) {
 
       observer.observe(imageRef.current);
+
     }
 
     return () => observer.disconnect();
@@ -68,71 +112,60 @@ const observer = new IntersectionObserver();([entry]) => {
 
   // Handle image load
 const handleLoad = () => {;setIsLoading(false);
+
     onLoad?.();
   };
 
   // Handle image error
 const handleError = () => {;setHasError(true);
+
     setIsLoading(false);
     onError?.();
+
   };
 
   // Fallback image for errors
   if (hasError) {
 
-<<<<<<< HEAD
 return();
-      <div''
-  '        className={`flex items-center justify-center bg-gray-200 dark: bg-gray-700 text-gray-500 dark:text-gray-400 ${className}`}', '        style={{ width: fill ? '100% : width, height: fill ? '100%'
-  ' : height }}'      >
-  '        <div className="text-center">"""          <svg"""            className="mx-auto h-8 w-8 mb-2""""            fill="none""""            viewBox="0 0 24 24""""            stroke="currentColor""          >"""            <path"""              strokeLinecap="round""""              strokeLinejoin="round""""              strokeWidth={2}"""              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z""            />"""          </svg>"""          <p className="text-xs">Image failed to load</p>"        </div>"      </div>`    );}'
-=======
-return()
-      <div'''        className={`flex items-center justify-center bg-gray-200 dark: bg-gray-700 text-gray-500 dark:text-gray-400 ${className}`}'''        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}'      >'        <div className="text-center">"""          <svg"""            className="mx-auto h-8 w-8 mb-2""""            fill="none""""            viewBox="0 0 24 24""""            stroke="currentColor""          >"""            <path"""              strokeLinecap="round""""              strokeLinejoin="round""""              strokeWidth={2}"""              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z""            />"""          </svg>"""          <p className="text-xs">Image failed to load</p>"        </div>"      </div>`    );}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+
+      <div
+'        className={`flex items-center justify-center bg-gray-200 dark: bg-gray-700 text-gray-500 dark:text-gray-400 ${className}}
+'        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}'      >'        <div className="text-center>""          <svg"""            className="mx-auto h-8 w-8 mb-2""            fill="none""""            viewBox="0 0 24 24""""            stroke="currentColor""          >"""            <path"""              strokeLinecap="round""""              strokeLinejoin="round""""              strokeWidth={2}"""              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z""            />"""          </svg>"""          <p className="text-xs>Image failed to load</p>        </div>"      </div>    );}
 
   // Loading skeleton
   if (!isInView) {
 
-<<<<<<< HEAD
 return();
-      <div``        ref={imageRef}`'`'
-  '        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}', '        style={{ width: fill ? '100% : width, height: fill ? '100%'
-  ' : height }}'      />
-  '    );`  }'
-=======
-return()
-      <div``        ref={imageRef}`'`''        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}'''        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}'      />'    );`  }
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
-  return()
-    <div``      ref={imageRef}```      className={`relative ${className}`}`      style={style}
+      <div``        ref={imageRef}
+
+        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}
+'        style={{ width: fill ? '100%' : width, height: fill ? '100%' : height }}'      />'    );  }
+
+  return();
+
+    <div`      ref={imageRef}`      className={`relative ${className}`}      style={style}
       onClick={onClick}
     >
-      {/* Loading overlay */}"""      {isLoading && ("""        <div className="absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10" />"      )}"{/* Next.js Image component */}
+      {/* Loading overlay */}"""      {isLoading && ("""        <div className="absolute inset-0 bg-gray-200 dark: bg-gray-700 animate-pulse z-10 />      )}"{/* Next.js Image component */}
       <Image
         src={src}
         alt={alt}
-width={fill ? undefined : width}``        height={fill ? undefined : height}```        className={`transition-opacity duration-300 ${`, ''''
-  '`'          isLoading ?
-  'opacity-0': 'opacity-100'``        }`}'        priority={priority}`        quality={quality}placeholder={placeholder}'
+width={fill ? undefined : width}`        height={fill ? undefined : height}`        className={`transition-opacity duration-300 ${`
+
+          isLoading ? 'opacity-0' : 'opacity-100
+`
+        }`}'        priority={priority}        quality={quality}placeholder={placeholder}
         blurDataURL={blurDataURL}
         sizes={sizes}
         fill={fill}
         onLoad={handleLoad}
         onError={handleError}
-<<<<<<< HEAD
-        style={{,
-  ''''
-  '          objectFit: fill ? 'cover
-  ' : 'contain}}'      />'
-  ''
-      {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20">"""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>"        </div>"      )}</div>"
-=======
         style={{
-''''''          objectFit: fill ? 'cover' : 'contain'}}'      />'
-      {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20">"""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>"        </div>"      )}</div>"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+
+          objectFit: fill ? 'cover' : 'contain'}}'      />'
+      {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20>""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600></div>        </div>"      )}</div>
   );
 };
 
@@ -143,11 +176,24 @@ export const withImageOptimization = <P extends object>(;Component: React.Compon
   return (props: P) => (
     <Component {...props} />
   );
-<<<<<<< HEAD
+
 };
-'"`'"
-  '""export default OptimizedImage;'"`'"`""`'
+'"
+""export default OptimizedImage;'"`
+"`""`
 =======
+          setIsInView(true)
 }
-'"`'""export default OptimizedImage'"`'"`""`"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+          <svg"""
+            className = "mx-auto h-8 w-8 mb-2""""
+            fill="none""""
+            viewBox="0 0 24 24""""
+            stroke="currentColor""
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"" />""
+          </svg>"""
+          <p className="text-xs">Image failed to load</p>
+  if (!isInView) {
+
+      <div""
+        ref={imageRef}""`"'
+>>>>>>> main

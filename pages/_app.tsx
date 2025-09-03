@@ -1,13 +1,19 @@
 <<<<<<< HEAD
-import type { AppProps } from
-  'next/app';
-import
-  '../styles/globals.css';
-=======
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
 import '../styles/globals.css';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+import Layout from '../components/Layout';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
+=======
+import React from "react"
+import type { AppProps } from "next/app"
+
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
+>>>>>>> main
 }
