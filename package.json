@@ -9,41 +9,7 @@
     "start": "next start -p 3000",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
-    "clean": "rm -rf .next out dist node_modules"
-  },
-  "dependencies": {
-    "next": "14.2.15",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
-  },
-  "devDependencies": {
-    "@types/node": "20.14.12",
-    "@types/react": "18.3.5",
-    "@types/react-dom": "18.3.0",
-    "eslint": "9.9.0",
-    "eslint-config-next": "14.2.15",
-    "typescript": "5.6.2"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=10.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
-  },
-  "keywords": [
-    "nextjs",
-    "react",
-    "typescript",
-    "tailwindcss",
-    "ai",
-    "automation",
-    "zion-tech-group"
-  ],
-  "author": "Zion Tech Group",
-  "license": "MIT",
-  "scripts": {
+    "clean": "rm -rf .next out dist node_modules",
     "linkedin:test": "ts-node scripts/test-linkedin-automation.ts",
     "mcp:start": "node mcp-automation-system.js",
     "mcp:client": "node mcp-client-integration.js",
@@ -186,5 +152,24 @@
     "ts-node": "^10.9.2",
     "typescript": "4.9.5",
     "web-vitals": "^5.1.0"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zion-Holdings/zion.app.git"
+  },
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "ai",
+    "automation",
+    "zion-tech-group"
+  ],
+  "author": "Zion Tech Group",
+  "license": "MIT"
 }

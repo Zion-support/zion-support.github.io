@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ;
 const CTASection: React.FC = (): JSX.Element => {
 
@@ -208,4 +206,3 @@ const CTASection: React.FC = (): JSX.Element => {
   )};
 
 export default CTASection}}'"
->>>>>>> main

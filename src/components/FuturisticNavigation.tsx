@@ -1,22 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { MobileSidebarToggle } from './MobileSidebarToggle';
 export default function Page() {
 , [location.pathname]);
-<<<<<<< HEAD
   
-=======
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-    setActiveDropdown(null)}, [location.pathname]);
-  
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     e.preventDefault();
-=======
       e.preventDefault();
->>>>>>> main
     if(searchQuery.trim()) {
 
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
@@ -342,9 +329,5 @@ export default function Page() {
     </>
   )};
 '"`
-=======
 
 ;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

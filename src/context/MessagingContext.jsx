@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useState } from 'react';
 const MessagingProvider({ children }) {}
     const [messages, setMessages] = useState([]);
@@ -19,10 +18,3 @@ export { MessagingProvider };
 export { MessagingProvider };
 
 export { MessagingProvider };
-=======
-import React, { createContext, useContext, useState } from "react" const MessagingProvider({ children }) { const [messages, setMessages] = useState([]) const sendMessage = (content) => { const newMessage = {} setMessages(prev: => [...prev, newMessage])} const markAsRead = (id) => { setMessages(prev => prev.map(msg => msg.id === id ? { ...msg, isRead: true",,
-  } : msg))} const unreadCount = messages.filter(msg => !msg.isRead).length return (<MessagingContext.Provider value = { { messages, unreadCount, sendMessage, markAsRead}}> {children} </MessagingContext.Provider>)} export function useMessaging() { const context = useContext(MessagingContext) if (context === null) { throw new Error("useMessaging must be used within a MessagingProvider")} return context}";;";"; "
-
-  );
-export default Component
->>>>>>> main

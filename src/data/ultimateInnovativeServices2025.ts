@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 export interface UltimateInnovativeService {
   id: string;
   title: string;
@@ -54,4 +52,3 @@ export
 ];
 ;
 export const SERVICE_SUBCATEGORIES = {
->>>>>>> main

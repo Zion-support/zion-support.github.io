@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useEffect } from "react";
 import { supabase, getFromProfiles } from '../../integrations/supabase/client';
 export default function Page() {
@@ -254,4 +252,3 @@ export default function Page() {
     </AuthContext.Provider>
   );
 };
->>>>>>> main

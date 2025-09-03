@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Heart, Check, ArrowRight } from 'lucide-react';
 import { SEO } from '../../components/SEO';
-=======
-
-import React from 'react';
-import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 } from 'lucide-react';
->>>>>>> 25c5fc4aa49c5cfa195f71dbf6893948b2a88d21
 
 export default function AIHealthcare() {
   const features = [
@@ -19,7 +13,6 @@ export default function AIHealthcare() {
   ];
 
   const tiers = [
-<<<<<<< HEAD
     {
       name: 'Starter',
       price: '$299/mo',
@@ -118,96 +111,3 @@ export default function AIHealthcare() {
     </>
   );
 }
-=======
-    { name: 'Small Practice', price: '$299/mo', details: ['Up to 100 patients', 'Basic AI models', 'Email support'] },
-    { name: 'Medium Health System', price: '$999/mo', details: ['Up to 1,000 patients', 'Advanced AI models', 'Priority support'] },
-    { name: 'Large Health System', price: '$2,999/mo', details: ['Unlimited patients', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] }
-  ];
-
-  const capabilities = [
-    'Medical imaging and radiology analysis',
-    'Patient diagnosis and treatment planning',
-    'Electronic health record optimization',
-    'Drug discovery and clinical trials',
-    'Population health management',
-    'Medical research and data analysis'
-  ];
-
-  const benefits = [
-    'Improve diagnostic accuracy by 20-35%',
-    'Reduce medical errors by 30-50%',
-    'Cut administrative costs by 25-40%',
-    'Accelerate treatment decisions by 40-60%',
-    'Enhance patient outcomes and satisfaction',
-    'Scale healthcare operations efficiently'
-  ];
-
-  const industries = [
-    'Hospitals & Health Systems',
-    'Medical Practices & Clinics',
-    'Radiology & Imaging Centers',
-    'Pharmaceutical Companies',
-    'Research Institutions',
-    'Health Insurance Providers'
-  ];
-
-  return (
-    <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-br from-red-600 via-pink-600 to-rose-600 py-20 text-center">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <Heart className="w-4 h-4 mr-2" />
-            AI-Powered Healthcare Intelligence
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Healthcare Platform</h1>
-          <p className="text-pink-100 text-xl">Transform healthcare delivery with AI-powered tools that enhance diagnosis, optimize treatment, and improve patient outcomes.</p>
-        </div>
-      </section>
-
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-10">
-          <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Healthcare Features</h2>
-            <ul className="space-y-3">
-              {features.map((f) => (
-                <li key={f} className="flex items-start">
-                  <Check className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{f}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="mt-6 text-sm text-gray-600">
-              Built with enterprise-grade security, HIPAA compliance, and 99.9% uptime SLA.
-            </div>
-          </div>
-          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {tiers.map((t) => (
-                <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-red-300 transition-colors">
-                  <div className="text-lg font-semibold mb-1">{t.name}</div>
-                  <div className="text-2xl font-bold text-red-600 mb-2">{t.price}</div>
-                  <ul className="text-sm text-gray-600 space-y-1">
-                    {t.details.map((d) => (
-                      <li key={d}>{d}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href="/pricing" className="px-5 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors inline-flex items-center">
-                View Full Pricing <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-              <a href="https://calendly.com/zion-tech-group" className="px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors inline-flex items-center">
-                Schedule Demo <Phone className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
-
->>>>>>> 25c5fc4aa49c5cfa195f71dbf6893948b2a88d21

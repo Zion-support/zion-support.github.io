@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export default function Page() {
 > {
 
@@ -418,8 +415,3 @@ showHeader:  true,;
       </AnimatePresence>;
     </>;) ;
 };
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

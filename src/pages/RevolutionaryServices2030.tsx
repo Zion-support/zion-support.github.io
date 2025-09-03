@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -302,26 +301,6 @@ export default function RevolutionaryServices2030(...args: unknown[]): unknown {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Experience the future of technology with our groundbreaking AI, blockchain, cybersecurity, and emerging technology services.
               Transform your business with solutions that were once science fiction.
-=======
-import React from "react"
-import Head from "next/head"
-import Link from "next/link"
-const RevolutionaryServices2030 = () => {
-  return (
-    <>
-      <Head>
-        <title>Revolutionary Services2030 - Zion Tech Group</title>
-        <meta name="description" content="Professional Revolutionary Services2030 services"  />
-      </Head>
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Revolutionary Services2030
-            </h1>
-            <p className="text-xl text-gray-600 mb-12">
-              Professional Revolutionary Services2030 services and solutions
->>>>>>> main
             </p>
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-6 rounded-lg shadow-md">
@@ -333,7 +312,6 @@ const RevolutionaryServices2030 = () => {
                   <li>• Custom Development</li>
                 </ul>
               </div>
-<<<<<<< HEAD
             </div>
           </motion.div>
         </div>
@@ -390,16 +368,6 @@ const RevolutionaryServices2030 = () => {
                     <option value="aiScore">Sort by AI Score</option>
                   </select>
                 </div>;
-=======
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
-                <ul className="text-gray-600 space-y-2">
-                  <li>• Industry Expertise</li>
-                  <li>• Proven Results</li>
-                  <li>• Scalable Solutions</li>
-                  <li>• Competitive Pricing</li>
-                </ul>
->>>>>>> main
               </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
@@ -409,7 +377,6 @@ const RevolutionaryServices2030 = () => {
                 Contact Us
               </Link>
             </div>
-<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
@@ -427,9 +394,3 @@ export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionarySer
 export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
 
 export { RevolutionaryServices2030, ServiceCard, IconComponent, RevolutionaryServices2030, IconComponent };
-=======
-    </>
-  );
-}
-export default RevolutionaryServices2030
->>>>>>> main

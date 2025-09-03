@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { Brain, Zap, Target, CheckCircle, ArrowRight, Code, Database, Cpu, Eye, TrendingUp } from 'lucide-react';
@@ -196,14 +195,9 @@ const AIDevelopment: NextPage = () => {
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business with AI?
             </h2>
-<<<<<<< HEAD
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Let's discuss how AI can solve your business challenges and drive growth. 
               Our experts are ready to help you get started.
-=======
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss your AI goals and create a custom solution that drives innovation and growth.
->>>>>>> origin/main
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
@@ -228,7 +222,6 @@ const AIDevelopment: NextPage = () => {
 };
 
 export default AIDevelopment;
-=======
 
 export default function AIDevelopment() {
   return (
@@ -239,4 +232,3 @@ export default function AIDevelopment() {
   );
 }
 
->>>>>>> main

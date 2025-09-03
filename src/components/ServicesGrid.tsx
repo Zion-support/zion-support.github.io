@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 export default function ServicesGrid() {
 interface Service {
   title: string;
@@ -67,9 +64,3 @@ interface ServicesGridProps {
 }
 
 export default ServicesGrid;
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

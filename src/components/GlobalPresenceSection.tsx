@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
 
  params - Function parameters
@@ -229,9 +226,3 @@ export default GlobalPresenceSection;"
 export default GlobalPresenceSection;
 export default GlobalPresenceSection;
 '"
-=======
-
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main

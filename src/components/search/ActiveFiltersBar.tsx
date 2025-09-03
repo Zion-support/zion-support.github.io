@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 interface Filter {
   key: string;
@@ -20,4 +18,3 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
     </div>;
   )}
 '"
->>>>>>> main

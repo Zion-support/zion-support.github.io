@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
   return (<section className="py-20 bg-gradient - to - br from - slate - 800 to - slate -900">
       <div className="max - w-7xl mx - auto px-6">
         <div className="text-center mb-16">
@@ -74,8 +71,3 @@
       </div>;
     </section>;) };
 export default EnhancedPricingComparison;'"
-=======
-;,"});,})";
->>>>>>> pr-10728,});,"})"
->>>>>>> main
->>>>>>> main
