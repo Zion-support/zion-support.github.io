@@ -1,24 +1,28 @@
-import React from 'react
-import { createRoot, hydrateRoot } from 'react-dom/client
-import App from "./App.tsx
-import './index.css
-import { HelmetProvider } from 'react-helmet-async
-import { BrowserRouter as Router } from 'react-router-dom
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query
-import './utils/globalFetchInterceptor
+
+
+import React from 'react';
+import { createRoot, hydrateRoot } from 'react-dom/client';
+import App from "./App.tsx";
+import './index.css';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import './utils/globalFetchInterceptor';
 import './utils/consoleErrorToast';
-// Import i18n configuration"
-import './i18n
-import { LanguageProvider } from '@/context/LanguageContext
-import { LanguageDetectionPopup } from "./components/LanguageDetectionPopup
-import { WhitelabelProvider } from '@/context/WhitelabelContext
+// Import i18n configuration
+import './i18n';
+import { LanguageProvider } from '@/context/LanguageContext';
+;
+import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
-// Import auth and notification providers"
-import { AuthProvider } from "./context/auth/AuthProvider
-import { NotificationProvider } from "./context/notifications/NotificationContext";
-// Import analytics provider"
-import { AnalyticsProvider } from './context/AnalyticsContext
-import { ViewModeProvider } from './context/ViewModeContext';
+// Import auth and notification providers
+import { AuthProvider } from "./context/auth/AuthProvider.jsx";
+;
+// Import analytics provider
+
+
+;
+;
 
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
@@ -29,14 +33,16 @@ const queryClient = new QueryClient({
         },
     },
 });
-"
+
+
 const rootElement = document.getElementById('root');
+
 
 const renderApp = () => {
     const app = (
-        <React .StrictMode" >
+        <React.StrictMode>
             <HelmetProvider>
-                <QueryClientProvider client={queryClient}" >
+                <QueryClientProvider client={queryClient}>
                     <WhitelabelProvider>
                         <Router>
                             <AuthProvider>
@@ -44,14 +50,14 @@ const renderApp = () => {
                                     <AnalyticsProvider>
                                         <LanguageProvider authState={{
                                             isAuthenticated: false,
-                                            user: null,
-}}" >
+                                            user: null
+                                        }}>
                                             <ViewModeProvider>
                                                 <AppLayout>
-                                                    <App /" >
+                                                    <App />
                                                 </AppLayout>
                                             </ViewModeProvider>
-                                            <LanguageDetectionPopup /" >
+                                            <LanguageDetectionPopup />
                                         </LanguageProvider>
                                     </AnalyticsProvider>
                                 </NotificationProvider>
@@ -63,32 +69,37 @@ const renderApp = () => {
         </React.StrictMode>
     );
 
+
     if (rootElement?.hasChildNodes()) {
-        hydrateRoot(rootElement, app);,
-} else if (rootElement) {
-        createRoot(rootElement).render(app);,
-}
+        hydrateRoot(rootElement, app);
+    } else if (rootElement) {
+        createRoot(rootElement).render(app);
+    }
 };
+
 
 function displayFatalError(message) {
     if (rootElement) {
-        rootElement.innerHTML = `"
+        rootElement.innerHTML = `
+
+
             <div style="padding:20px;text-align:center;font-family:sans-serif;">
                 <h1>Application Error</h1>
-                <p>${message}</p>`
-            </div>`;,
-}
+                <p>${message}</p>
+            </div>`;
+    }
 }
 
 try {
-    renderApp();,
-} catch (error) {"
+    renderApp();
+} catch (error) {
     console.error('Global error caught in main.jsx:', error);
-    displayFatalError(error.message);,
+    displayFatalError(error.message);
 }
-"
-window.addEventListener('error', (e) => {"
+
+window.addEventListener('error', (e) => {
+
     console.error('Unhandled error:', e.error || e.message);
-    displayFatalError(e.message);,
+    displayFatalError(e.message);
 });
-"`
+

@@ -1,232 +1,50 @@
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  GraduationCap, Video, BookOpen, Users, Clock, Star, Award, Play, Download, ArrowRight
-} from 'lucide-react';
-export default function Training() {
-  const courses = [
-  {
-      id: 1, title: "AI Fundamentals",
-      description: "Learn the basics of artificial intelligence and machine learning", duration: "8 hours",
-      level: "Beginner", rating: 4.8,
-      students: 1250, price: "$199",
-      featured: true
-    }, {
-      id: 2,
-      title: "Quantum Computing Masterclass", description: "Advanced quantum computing concepts and applications",
-      duration: "12 hours", level: "Advanced",
-      rating: 4.9, students: 456,
-      price: "$399", featured: true
-    },
-    {
-      id: 3, title: "Micro SaaS Development",
-      description: "Build and launch successful micro SaaS applications", duration: "10 hours",
-      level: "Intermediate", rating: 4.7,
-      students: 892, price: "$299",
-      featured: false
-    }, {
-      id: 4,
-      title: "Cybersecurity Essentials", description: "Essential cybersecurity practices for modern applications",
-      duration: "6 hours", level: "Beginner",
-      rating: 4.6, students: 678,
-      price: "$149", featured: false
-    }
-  ];
-  const trainingTypes = [
-  {
-      title: "Online Courses", description: "Self-paced learning with video content and exercises",
-      icon: Video, count: 25,
-      color: "from-blue-500 to-cyan-500"
-    }, {
-      title: "Live Workshops",
-      description: "Interactive sessions with expert instructors", icon: Users,
-      count: 12, color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Certification Programs", description: "Comprehensive programs with industry-recognized certificates",
-      icon: Award, count: 8,
-      color: "from-purple-500 to-pink-500"
-    }, {
-      title: "Corporate Training",
-      description: "Customized training solutions for enterprise teams", icon: GraduationCap,
-      count: 15, color: "from-orange-500 to-red-500"
-    }
-  ];
+import React from "react"
+import Head from "next/head"
+import Link from "next/link"
+const Training = () => {
   return (
     <>
-      <SEO 
-        title="Training - Zion Tech Group | Technology Education & Certification"
-        description="Enhance your skills with our comprehensive training programs in AI, quantum computing, cybersecurity, and emerging technologies. Expert-led courses and certifications."
-        keywords="training, courses, certification, AI training, quantum computing, cybersecurity, education, Zion Tech Group"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Technology Training
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Master cutting-edge technologies with our comprehensive training programs. 
-                Learn from industry experts and earn recognized certifications.
-              </p>
-              <div className="flex items-center justify-center">
-                <GraduationCap className="w-16 h-16 text-blue-400" />
+      <Head>
+        <title>Training - Zion Tech Group</title>
+        <meta name="description" content="Professional Training services"  />
+      </Head>
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Training
+            </h1>
+            <p className="text-xl text-gray-600 mb-12">
+              Professional Training services and solutions
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
               </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Training Types */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Training Programs</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose from various training formats to suit your learning style and schedule
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {trainingTypes.map((type, index) => (
-                <motion.div
-                  key={type.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-xl flex items-center justify-center mb-4`}>
-                    <type.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{type.title}</h3>
-                  <p className="text-gray-300 text-sm mb-3">{type.description}</p>
-                  <div className="text-2xl font-bold text-blue-400">{type.count}+</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Courses */}
-        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Featured Courses</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our most popular and highly-rated training programs
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {courses.map((course, index) => (
-                <motion.div
-                  key={course.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        course.level === 'Beginner' ? 'bg-green-600/20 text-green-300 border border-green-400/30' :
-                        course.level === 'Intermediate' ? 'bg-yellow-600/20 text-yellow-300 border border-yellow-400/30' :
-                        'bg-red-600/20 text-red-300 border border-red-400/30'
-                      }`}>
-                        {course.level}
-                      </span>
-                      {course.featured && (
-                        <span className="px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs">
-                          Featured
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm">{course.rating}</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-white mb-2">{course.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{course.description}</p>
-
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center text-gray-400 text-sm">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {course.duration}
-                    </div>
-                    <div className="flex items-center text-gray-400 text-sm">
-                      <Users className="w-4 h-4 mr-1" />
-                      {course.students} students
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-white">{course.price}</span>
-                    <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-purple-700 transition-all duration-200">
-                      Enroll Now
-                    </button>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Advance Your Career?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals who have enhanced their skills 
-                with our industry-leading training programs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
-                >
-                  <GraduationCap className="w-5 h-5 mr-2" />
-                  Start Learning Today
-                </a>
-                <a
-                  href="/about"
-                  className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
-                >
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  Learn More
-                </a>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
               </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-</>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
   );
 }
+export default Training

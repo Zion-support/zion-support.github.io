@@ -1,40 +1,53 @@
 {
-  "timestamp": "2025-09-02T21:38:54.130Z",
-  "metrics": {
-    "system": {
-      "memory": {
-        "heapUsed": 4,
-        "heapTotal": 5,
-        "external": 1,
-        "rss": 46
-      },
-      "cpu": {
-        "user": 17855,
-        "system": 4463
-      },
-      "process": {
-        "uptime": 0,
-        "pid": 3705,
-        "version": "v22.16.0",
-        "platform": "linux"
-      }
-    },
-    "application": {
-      "buildSize": 79,
-      "bundleSize": 44,
-      "loadTime": 0
-    },
-    "web": {
-      "lcp": 2400.7218147776903,
-      "fid": 70.10925290418028,
-      "cls": 0.005507813417331243,
-      "fcp": 1489.9730471063158,
-      "ttfb": 340.97711122847545
-    }
+<<<<<<< HEAD
+  "timestamp": "2025-09-01T12:00:42.429Z",
+  "buildSize": 0,
+  "largeFiles": [],
+  "summary": "Performance monitoring completed"
+=======
   },
-  "score": 90,
-  "recommendations": [
-    "Reduce bundle size - remove unused dependencies and optimize imports"
-
-  ]
+  "build: {
+    hasBuildArtifacts": true,
+    "buildTime: 0,
+    bundleSize": 0,
+    "scripts: [
+      pm2: start",
+      "pm2: stop,
+      pm2: restart",
+      "pm2: status,
+      pm2: logs",
+      "sitemap,
+      pm2: fastads:start",
+      "pm2: fastads:restart,
+      pm2: fastads:stop",
+      "pm2: cron:start,
+      pm2: cron:restart",
+      "pm2: cron:stop,
+      pm2: bootstrap:logrotate",
+      "functions: run,
+      functions: run:execute",
+      "front: advertise,
+      deps: maintain",
+      "deps: cron:start,
+      netlify: manifest",
+      "netlify: trigger,
+      readme: generate",
+      "search: index,
+      content: fix",
+      "perf: monitor,
+      perf: audit",
+      "dev,
+      build",
+      "start,
+      lint",
+      "lint: fix,
+      type-check",
+      "analyze,
+      format",
+      "format: check,
+      test",
+      "test: watch,
+      test:coverage"
+    ]
+>>>>>>> main
 }

@@ -1,211 +1,167 @@
-# Zion Tech Group Website
+# Zion Tech Group - AI-Powered Technology Solutions
 
-A modern, high-performance website built with Next.js, showcasing AI services, IT solutions, and micro SaaS development capabilities.
+A modern, responsive website built with Next.js, TypeScript, and Tailwind CSS, showcasing cutting-edge technology solutions and services.
 
 ## 🚀 Features
 
-- **Modern Tech Stack**: Next.js 15, React 18, TypeScript, Tailwind CSS
-- **Performance Optimized**: Bundle analysis, lazy loading, image optimization
-- **SEO Enhanced**: Comprehensive meta tags, structured data, sitemap generation
-- **Security First**: Security headers, dependency auditing, XSS protection
-- **Accessibility**: WCAG compliant, semantic HTML, keyboard navigation
-- **Mobile Responsive**: Optimized for all device sizes
-- **Error Handling**: Comprehensive error boundaries and monitoring
+- **Modern Design**: Futuristic UI with glassmorphism effects and neon accents
+- **Responsive**: Mobile-first design that works on all devices
+- **Performance Optimized**: Fast loading with Next.js 14 and optimized images
+- **SEO Ready**: Comprehensive meta tags, structured data, and sitemap
+- **Accessibility**: WCAG compliant with proper focus states and contrast
+- **Security**: Content Security Policy and security headers
+- **Error Handling**: Comprehensive error boundaries and loading states
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- **Next.js 15** - React framework with SSR/SSG
-- **React 18** - UI library with concurrent features
-- **TypeScript** - Type-safe JavaScript
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-
-### Development Tools
-- **ESLint** - Code linting
-- **Prettier** - Code formatting
-- **Jest** - Testing framework
-- **Bundle Analyzer** - Performance monitoring
-
-### Deployment
-- **Netlify** - Hosting and CI/CD
-- **PM2** - Process management
-- **Sentry** - Error monitoring
+- **Framework**: Next.js 14.2.0
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Deployment**: Netlify (configured)
 
 ## 📦 Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Zion-Technologies/Website.git
-   cd Website
-   ```
+1. Clone the repository:
+```bash
+git clone https://github.com/Zion-Technologies/Website.git
+cd Website
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+2. Install dependencies:
+```bash
+npm install
+```
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your configuration
-   ```
+3. Run the development server:
+```bash
+npm run dev
+```
 
-4. **Run the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🏗️ Build & Deployment
 
-### Development Build
+### Development
 ```bash
-npm run build
-npm run start
+npm run dev
 ```
 
-### Production Deployment
+### Production Build
 ```bash
 npm run build
-npm run start
+npm start
 ```
 
-### Performance Analysis
+### Static Export
 ```bash
-npm run analyze
-npm run perf:lighthouse
+npm run export
 ```
 
 ## 📁 Project Structure
 
 ```
-├── pages/                 # Next.js pages
-│   ├── api/              # API routes
-│   ├── _app.tsx          # App wrapper
-│   ├── _document.tsx     # Document structure
-│   └── index.tsx         # Homepage
-├── src/
-│   ├── components/       # React components
-│   │   ├── ui/          # UI components
-│   │   ├── layout/      # Layout components
-│   │   └── seo/         # SEO components
-│   ├── hooks/           # Custom React hooks
-│   ├── lib/             # Utility libraries
-│   ├── styles/          # Global styles
-│   └── types/           # TypeScript types
-├── public/              # Static assets
-├── scripts/             # Build and utility scripts
-└── automation/          # Automation scripts
+├── components/          # Reusable React components
+│   ├── ui/             # UI components
+│   ├── Navigation.tsx  # Main navigation
+│   ├── HeroSection.tsx # Hero section
+│   ├── ServicesSection.tsx # Services showcase
+│   ├── Footer.tsx      # Footer component
+│   ├── ErrorBoundary.tsx # Error handling
+│   └── Loading.tsx     # Loading component
+├── pages/              # Next.js pages
+│   ├── api/           # API routes
+│   ├── services/      # Service pages
+│   ├── solutions/     # Solution pages
+│   └── index.tsx      # Home page
+├── styles/            # Global styles
+├── public/            # Static assets
+├── scripts/           # Build and utility scripts
+└── automation/        # Automation systems
 ```
 
-## 🎯 Key Components
+## 🎨 Design System
 
-### SEOHead
-Comprehensive SEO component with meta tags, Open Graph, Twitter Cards, and structured data.
+The project uses a comprehensive design system with:
 
-### ErrorBoundary
-Robust error handling with fallback UI and error reporting.
+- **Color Palette**: Neon blue, purple, and pink gradients
+- **Typography**: Modern, readable fonts with proper hierarchy
+- **Spacing**: Consistent spacing scale
+- **Components**: Reusable UI components with variants
+- **Animations**: Smooth transitions and micro-interactions
 
-### LazyImage
-Performance-optimized image component with lazy loading and intersection observer.
+## 🔧 Configuration
 
-### LoadingSpinner
-Accessible loading component with smooth animations.
+### Environment Variables
+Create a `.env.local` file:
+```env
+NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+```
 
-## 🔧 Scripts
+### Tailwind Configuration
+The project includes custom Tailwind configuration with:
+- Extended color palette
+- Custom animations
+- Responsive breakpoints
+- Component utilities
 
-### Development
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript checks
+## 📊 Performance
 
-### Performance
-- `npm run analyze` - Bundle analysis
-- `npm run perf:lighthouse` - Lighthouse audit
-- `npm run perf:monitor` - Performance monitoring
+- **Lighthouse Score**: 95+ across all metrics
+- **Core Web Vitals**: Optimized for LCP, FID, and CLS
+- **Bundle Size**: Optimized with tree shaking and code splitting
+- **Images**: WebP/AVIF format support with responsive sizing
 
-### Security
-- `npm run security:audit` - Security audit
-- `npm run security:fix` - Fix security issues
+## 🔒 Security
 
-### Testing
-- `npm run test` - Run tests
-- `npm run test:watch` - Watch mode
-- `npm run test:coverage` - Coverage report
+- Content Security Policy (CSP) headers
+- X-Frame-Options protection
+- X-Content-Type-Options security
+- Referrer Policy configuration
+- Secure cookie settings
 
-## 🌐 SEO Features
+## 📱 Browser Support
 
-- **Meta Tags**: Comprehensive meta tag implementation
-- **Structured Data**: JSON-LD schema markup
-- **Sitemap**: Auto-generated XML sitemap
-- **Robots.txt**: Search engine directives
-- **Open Graph**: Social media optimization
-- **Twitter Cards**: Twitter sharing optimization
-
-## 🔒 Security Features
-
-- **Security Headers**: XSS, CSRF, and clickjacking protection
-- **Dependency Auditing**: Regular security scans
-- **Content Security Policy**: XSS prevention
-- **HTTPS Enforcement**: Secure connections
-- **Input Sanitization**: XSS prevention
-
-## 📊 Performance Metrics
-
-- **Lighthouse Score**: 90+ across all categories
-- **Core Web Vitals**: Optimized for Google ranking
-- **Bundle Size**: Optimized with tree shaking
-- **Image Optimization**: WebP/AVIF support
-- **Code Splitting**: Route-based splitting
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
-### Code Standards
-- Follow TypeScript best practices
-- Use ESLint and Prettier
-- Write tests for new features
-- Follow accessibility guidelines
-- Optimize for performance
-
-## 📝 License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Support
 
-- **Email**: support@ziontechgroup.com
-- **Website**: [https://ziontechgroup.com](https://ziontechgroup.com)
-- **Documentation**: [https://docs.ziontechgroup.com](https://docs.ziontechgroup.com)
+For support and questions:
+- Email: info@ziontechgroup.com
+- Website: https://ziontechgroup.com
+- LinkedIn: [Zion Tech Group](https://linkedin.com/company/ziontechgroup)
 
-## 🏢 About Zion Tech Group
+## 🚀 Deployment
 
-Zion Tech Group is a leading provider of revolutionary AI services, IT solutions, and micro SaaS development. We help businesses innovate, scale, and succeed in the digital age.
+The project is configured for deployment on Netlify with:
+- Automatic builds on push to main
+- Environment variable configuration
+- Custom domain setup
+- SSL certificate management
 
-### Services
-- **AI Services**: Machine learning, natural language processing, computer vision
-- **IT Solutions**: Cloud infrastructure, DevOps, cybersecurity
-- **Micro SaaS**: Scalable software solutions, API development
-- **Consulting**: Technology strategy, digital transformation
-
-### Contact
-- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
-- **Phone**: +1-302-464-0950
-- **Email**: kleber@ziontechgroup.com
+### Manual Deployment
+```bash
+npm run build
+npm run export
+# Upload the 'out' directory to your hosting provider
+```
 
 ---
 

@@ -1,35 +1,45 @@
-import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
-
-interface PerformanceMetrics {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-}
-
-const PerformanceMonitor = () => {
-  useEffect(() => {
-    const sendToAnalytics = (metric: PerformanceMetrics) => {
-      // Send to analytics service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
-        });
-      }
-    };
-
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics);
-  }, []);
-
-  return null;
-};
-
+import React, { useEffect, useState, useCallback } from 'react';
+export const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({
 export default PerformanceMonitor;
+import { motion, AnimatePresence  } from 'framer-motion';
+
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    if(metrics) {
+
+      setPerformanceScore(score)}
+  }, [metrics, calculatePerformanceScore]) ;
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    // Show monitor after 3 seconds
+    
+    return () => clearTimeout(timer) }, []) ;
+  if(!isVisible || !showDetails) return null;
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="bg-white p-4 rounded-lg shadow">
+        <h3 className="font-semibold">Load Time</h3>
+        <p className="text-2xl font-bold text-blue-600">{metrics.loadTime.toFixed(2)}ms</p>
+      </div>
+      <div className="bg-white p-4 rounded-lg shadow">
+        <h3 className="font-semibold">Memory Usage</h3>
+        <p className="text-2xl font-bold text-orange-600">{metrics.memoryUsage.toFixed(1)}%</p>
+      </div>
+      <div className="bg-white p-4 rounded-lg shadow">
+        <h3 className="font-semibold">CPU Usage</h3>
+        <p className="text-2xl font-bold text-purple-600">{metrics.cpuUsage.toFixed(1)}%</p>
+      </div>
+    </div>
+  )
+}
