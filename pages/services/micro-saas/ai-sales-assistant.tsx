@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../../components/Layout';
+import Link from 'next/link';
 
 export default function AISalesAssistant() {
   return (
@@ -45,7 +46,7 @@ export default function AISalesAssistant() {
             Learn more: <a className="text-blue-600 underline" href="https://ziontechgroup.com/services/micro-saas" rel="noopener">Micro SaaS</a>
           </p>
         </div>
-        <a href="/request-quote" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg">Request a Demo</a>
+        <Link href="/request-quote" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg">Request a Demo</Link>
       </section>
     </Layout>
   );

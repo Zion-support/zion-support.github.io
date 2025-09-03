@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../../components/Layout';
+import Link from 'next/link';
 
 export default function AIComplianceMonitor() {
   return (
@@ -39,7 +40,7 @@ export default function AIComplianceMonitor() {
             </ul>
           </div>
         </div>
-        <a href="/request-quote" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg">Get a Quote</a>
+        <Link href="/request-quote" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg">Get a Quote</Link>
       </section>
     </Layout>
   );
