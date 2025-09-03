@@ -3,10 +3,12 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+import Sidebar from '../components/Sidebar';
 import '../styles/globals.css';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <header style={{
@@ -17,14 +19,32 @@ function Header(): any {
       <nav style={{
         maxWidth: 1400, margin: '0 auto', padding: '12px 20px', display: 'flex',
         alignItems: 'center', justifyContent: 'space-between', gap: 16}}>
-        <Link href="/" style={{ 
-          fontWeight: 800, letterSpacing: 0.3, fontSize: '1.25rem',
-          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          textDecoration: 'none'
-        }}>Zion Tech Group</Link>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <button
+            onClick={() => setSidebarOpen(true)}
+            style={{
+              background: 'none',
+              border: 'none',
+              color: 'white',
+              fontSize: '1.5rem',
+              cursor: 'pointer',
+              padding: '4px',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+            aria-label="Open sidebar"
+          >
+            ☰
+          </button>
+          <Link href="/" style={{ 
+            fontWeight: 800, letterSpacing: 0.3, fontSize: '1.25rem',
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            textDecoration: 'none'
+          }}>Zion Tech Group</Link>
+        </div>
         
         {/* Desktop Navigation */}
         <div style={{ 
@@ -83,6 +103,9 @@ function Header(): any {
           </div>
         </div>
       )}
+      
+      {/* Sidebar */}
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </header>
   );
 }
