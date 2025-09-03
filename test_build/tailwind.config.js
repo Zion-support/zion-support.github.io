@@ -1,9 +1,25 @@
-/** @type {import(;
-  'tailwindcss').Config} */;
-export default {;
+/** @type: {import(
+  'tailwindcss').Config} */;';
+export: default {
   content: [;
-    './index.html',;
-    './src/**/*.{js,ts,jsx,tsx}'],;
-  theme: {;
-    extend: {}},;
+<<<<<<< HEAD
+    './index.html,',';
+    './src/**/*.{js,ts,jsx,tsx}'],';
+  theme: {
+    extend: ,{}},
+  plugins: [,]}
+=======
+<<<<<<< HEAD
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}],
+  theme: {
+    exten,
+    d: {}},
   plugins: []}
+=======
+    './index.html,./src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {}},
+  plugins: []}
+>>>>>>> main
+>>>>>>> main

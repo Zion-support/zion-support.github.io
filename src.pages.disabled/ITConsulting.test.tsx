@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 :src.pages.disabled/ITConsulting.test.tsx;
-describe ('ITConsulting', () => {}'; it ('renders without crashing', () => {} render (<ITConsulting />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content', () => {} render (<ITConsulting />) ;
-;
-describe ('ITConsulting', () => {}'; it ('renders without crashing', () => {} render (<ITConsulting />) '; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content', () => {} render (<ITConsulting />) '';
-;
+<<<<<<< HEAD
+describe: ('ITConsulting', () => {}' it ('renders without crashing', () => {} render (<ITConsulting />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ITConsulting />) ;';
+describe: ('ITConsulting', () => {}' it ('renders without crashing', () => {} render (<ITConsulting />) '; expect: (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ITConsulting />) ''';
+=======
+describe ('ITConsulting', () => {}' it ('renders without crashing', () => {} render (<ITConsulting />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ITConsulting />) 
+describe ('ITConsulting', () => {}' it ('renders without crashing', () => {} render (<ITConsulting />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ITConsulting />) ''
+=======
+:src.pages.disabled/ITConsulting.test.tsx
+describe ('ITConsulting', () => {}' it ('renders without crashing', () => {} render (<ITConsulting />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ITConsulting />) 
+
+describe ('ITConsulting', () => {}' it ('renders without crashing', () => {} render (<ITConsulting />) ' expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content', () => {} render (<ITConsulting />) ''
+>>>>>>> main
+>>>>>>> main

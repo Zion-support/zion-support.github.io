@@ -1,71 +1,78 @@
-import React from 'react';
-import Head from 'next/head';
-import ModernNavigation from '../navigation/ModernNavigation';
-import { EnhancedFooter } from './EnhancedFooter';
-
-interface MainLayoutProps {
+<<<<<<< HEAD
+ import: Head from 'next/head' import { AccessibilityProvider, AccessibilityControls } from '../Accessibility/EnhancedAccessibilityProvider' import AdvancedPerformanceMonitor from '../Performance/AdvancedPerformanceMonitor' import EnhancedSEOOptimizer from '../SEO/EnhancedSEOOptimizer' import MobileExperienceEnhancer from '../Mobile/MobileExperienceEnhancer' import { ParticleBackground } from '../UI/InteractiveElements' interface MainLayoutProps {';';';
+  children: React.ReactNode,;,
+=======
+<<<<<<< HEAD
+ import Head from 'next/head' import { AccessibilityProvider, AccessibilityControls } from '../Accessibility/EnhancedAccessibilityProvider' import AdvancedPerformanceMonitor from '../Performance/AdvancedPerformanceMonitor' import EnhancedSEOOptimizer from '../SEO/EnhancedSEOOptimizer' import MobileExperienceEnhancer from '../Mobile/MobileExperienceEnhancer' import { ParticleBackground } from '../UI/InteractiveElements' interface MainLayoutProps { children: React.ReactNode;
+=======
+<<<<<<< HEAD
+ import Head from 'next/head' import { AccessibilityProvider, AccessibilityControls } from '../Accessibility/EnhancedAccessibilityProvider' import AdvancedPerformanceMonitor from '../Performance/AdvancedPerformanceMonitor' import EnhancedSEOOptimizer from '../SEO/EnhancedSEOOptimizer' import MobileExperienceEnhancer from '../Mobile/MobileExperienceEnhancer' import { ParticleBackground } from '../UI/InteractiveElements' interface MainLayoutProps {;
+=======
+<<<<<<< HEAD
+ import Head from 'next/head' ;
+import {AccessibilityProvider, AccessibilityControls } from '../Accessibility/EnhancedAccessibilityProvider' import AdvancedPerformanceMonitor from '../Performance/AdvancedPerformanceMonitor' import EnhancedSEOOptimizer from '../SEO/EnhancedSEOOptimizer' import MobileExperienceEnhancer from '../Mobile/MobileExperienceEnhancer' import {ParticleBackground } from '../UI/InteractiveElements' interface MainLayoutProps {;
+=======
+<<<<<<< HEAD
+ import Head from &apos;next/head&apos; import { AccessibilityProvider, AccessibilityControls } from &apos;../Accessibility/EnhancedAccessibilityProvider&apos; import AdvancedPerformanceMonitor from &apos;../Performance/AdvancedPerformanceMonitor&apos; import EnhancedSEOOptimizer from &apos;../SEO/EnhancedSEOOptimizer&apos; import MobileExperienceEnhancer from &apos;../Mobile/MobileExperienceEnhancer&apos; import { ParticleBackground } from &apos;../UI/InteractiveElements&apos; interface MainLayoutProps {
+>>>>>>> main
   children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product';
-  noindex?: boolean;
-  nofollow?: boolean;
-  canonical?: string;
+>>>>>>> main
+>>>>>>> main
+   title?: string;
+   description?: string;
+   keywords?: string;
+   image?: string;
+   url?: string;
+<<<<<<< HEAD
+   type?: 'website' | 'article' | 'product';';';';
+   noindex?: boolean;
+   nofollow?: boolean: canonical?: string} const: MainLayout: React.FC<MainLayoutProps> = ({ childre,n, title, description, keywords, image, url, type: = 'website', noindex = false, nofollow = false, canonical}) => { return ( <AccessibilityProvider> <EnhancedSEOOptimizer title={title} description={description} keywords={keywords} image={image} url={url} type={type} noindex={noindex} nofollow={nofollow} canonical={canonical} /> <MobileExperienceEnhancer> <div className='min-h-screen bg-gray-50 dark: bg-gray-900'> ,{} <ParticleBackground: particleCount={30} color='#3b82f6' /> {} <main className='relative z-10'> {children} </main> {} <AccessibilityControls /> {} {process.env.NODE_ENV === 'development' && ( <AdvancedPerformanceMonitor /> )} </div> </MobileExperienceEnhancer> </AccessibilityProvider> ) } export default MainLayout';"";";";
+=======
+   type?: &apos;website&apos; | &apos;article&apos; | &apos;product';
+   noindex?: boolean;
+<<<<<<< HEAD
+   nofollow?: boolean;
+   canonical?: string} const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description, keywords, image, url, type = 'website', noindex = false, nofollow = false, canonical}) => { return ( <AccessibilityProvider> <EnhancedSEOOptimizer title={title} description={description} keywords={keywords} image={image} url={url} type={type} noindex={noindex} nofollow={nofollow} canonical={canonical} /> <MobileExperienceEnhancer> <div className='min-h-screen bg-gray-50 dark: bg-gray-900'> {} <ParticleBackground particleCount={30} color='#3b82f6' /> {} <main className='relative z-10'> {children} </main> {} <AccessibilityControls /> {} {process.env.NODE_ENV === 'development' && ( <AdvancedPerformanceMonitor /> )} </div> </MobileExperienceEnhancer> </AccessibilityProvider> ) } export default MainLayout';"
+=======
+   nofollow?: boolean
+<<<<<<< HEAD
+   canonical?: string  } const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description, keywords, image, url, type = 'website', noindex = false, nofollow = false, canonical}) => { return ( <AccessibilityProvider> <EnhancedSEOOptimizer title={title} description={description} keywords={keywords} image={image} url={url} type={type} noindex={noindex} nofollow={nofollow} canonical={canonical} /> <MobileExperienceEnhancer> <div className='min-h-screen bg-gray-50 dark: bg-gray-900'> {} <ParticleBackground particleCount={30} color='#3b82f6' /> {} <main className='relative z-10'> {children} </main> {} <AccessibilityControls /> {} {process.env.NODE_ENV === 'development' && ( <AdvancedPerformanceMonitor /> )} </div> </MobileExperienceEnhancer> </AccessibilityProvider> ) } export default MainLayout'"'"
+=======
+   canonical?: string}&apos;&apos; const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description, keywords, image, url, type = &apos;website&apos;, noindex = false, nofollow = false, canonical}) => { return (&apos;} <AccessibilityProvider> <EnhancedSEOOptimizer title={title} description={description} keywords={keywords} image={image} url={url} type={type} noindex={noindex} nofollow={nofollow} canonical={canonical} /> <MobileExperienceEnhancer> <div className=&apos;min-h-screen bg-gray-50 dark: bg-gray-900&apos;> {}&apos; <ParticleBackground particleCount={30} color=&apos;#3b82f6&apos; /> {}&apos; <main className=&apos;relative z-10&apos;> {children}&apos; </main> {} <AccessibilityControls /> {} {process.env.NODE_ENV === &apos;development&apos; && (&apos;} <AdvancedPerformanceMonitor /> )} </div> </MobileExperienceEnhancer> </AccessibilityProvider> ) } export;export default MainLayout';&quot;&quot;"
+=======
+<<<<<<< HEAD
+ import Head from 'next/head' import { AccessibilityProvider, AccessibilityControls } from '../Accessibility/EnhancedAccessibilityProvider' import AdvancedPerformanceMonitor from '../Performance/AdvancedPerformanceMonitor' import EnhancedSEOOptimizer from '../SEO/EnhancedSEOOptimizer' import MobileExperienceEnhancer from '../Mobile/MobileExperienceEnhancer' import { ParticleBackground } from '../UI/InteractiveElements' interface MainLayoutProps {;""
+ import Head from 'next/head' import { AccessibilityProvider, AccessibilityControls } from '../Accessibility/EnhancedAccessibilityProvider' import AdvancedPerformanceMonitor from '../Performance/AdvancedPerformanceMonitor' import EnhancedSEOOptimizer from '../SEO/EnhancedSEOOptimizer' import MobileExperienceEnhancer from '../Mobile/MobileExperienceEnhancer' import { ParticleBackground } from '../UI/InteractiveElements' interface MainLayoutProps {
+=======
+ import Head from 'next/head' import { AccessibilityProvider, AccessibilityControls } from '../Accessibility/EnhancedAccessibilityProvider' import AdvancedPerformanceMonitor from '../Performance/AdvancedPerformanceMonitor' import EnhancedSEOOptimizer from '../SEO/EnhancedSEOOptimizer' import MobileExperienceEnhancer from '../Mobile/MobileExperienceEnhancer' import { ParticleBackground }  from '../UI/InteractiveElements';interface MainLayoutProps {;"
+ import Head from 'next/head' import { AccessibilityProvider, AccessibilityControls } from '../Accessibility/EnhancedAccessibilityProvider' import AdvancedPerformanceMonitor from '../Performance/AdvancedPerformanceMonitor' import EnhancedSEOOptimizer from '../SEO/EnhancedSEOOptimizer' import MobileExperienceEnhancer from '../Mobile/MobileExperienceEnhancer' import { ParticleBackground }  from '../UI/InteractiveElements';interface MainLayoutProps {
+>>>>>>> main
+  children: React.ReactNode
+   title?: string
+   description?: string
+   keywords?: string
+   image?: string
+   url?: string""
+   type?: 'website' | 'article' | 'product'
+   noindex?: boolean
+   nofollow?: boolean
+<<<<<<< HEAD
+   canonical?: string;", "
+} const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description, keywords, image, url, type = 'website', noindex = false, nofollow = false, canonical}) => { return ( <AccessibilityProvider> <EnhancedSEOOptimizer title={title} description={description} keywords={keywords} image={image} url={url} type={type} noindex={noindex} nofollow={nofollow} canonical={canonical} /" > <MobileExperienceEnhancer> <div className='min-h-screen bg-gray-50 dark: bg-gray-900'> {} <ParticleBackground particleCount={30} color='#3b82f6' /" > {} <main className='relative z-10'> {children} </main> {} <AccessibilityControls /" > {} {process.env.NODE_ENV === 'development' && ( <AdvancedPerformanceMonitor /" > )} </div> </MobileExperienceEnhancer> </AccessibilityProvider> ) } export default MainLayout';"'"
+""
 }
-
-const MainLayout: React.FC<MainLayoutProps> = ({ 
-  children, 
-  title = 'Zion Tech Group', 
-  description = 'Leading provider of revolutionary technology solutions, AI services, and cutting-edge innovations.',
-  keywords = 'AI, technology, cybersecurity, cloud, digital transformation',
-  image = '/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  noindex = false,
-  nofollow = false,
-  canonical
-}) => {
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href={canonical || url} />
-        
-        {/* Open Graph */}
-        <meta property="og:type" content={type} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
-        <meta property="og:url" content={url} />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
-        
-        {/* SEO */}
-        {noindex && <meta name="robots" content="noindex" />}
-        {nofollow && <meta name="robots" content="nofollow" />}
-        {noindex && nofollow && <meta name="robots" content="noindex, nofollow" />}
-      </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        <ModernNavigation />
-        <main className="pt-16">
-          {children}
-        </main>
-        <EnhancedFooter />
-      </div>
-    </>
-  );
-};
-
-export default MainLayout;
+=======
+<<<<<<< HEAD
+   canonical?: string} const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description, keywords, image, url, type = 'website', noindex = false, nofollow = false, canonical}) => { return ( <AccessibilityProvider> <EnhancedSEOOptimizer title={title} description={description} keywords={keywords} image={image} url={url} type={type} noindex={noindex} nofollow={nofollow} canonical={canonical} /> <MobileExperienceEnhancer> <div className='min-h-screen bg-gray-50 dark: bg-gray-900'> {} <ParticleBackground particleCount={30} color='#3b82f6' /> {} <main className='relative z-10'> {children} </main> {} <AccessibilityControls /> {} {process.env.NODE_ENV === 'development' && ( <AdvancedPerformanceMonitor /> )} </div> </MobileExperienceEnhancer> </AccessibilityProvider> ) } export default MainLayout';"'"
+=======
+   canonical?: string;",
+} const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description, keywords, image, url, type = 'website', noindex = false, nofollow = false, canonical}) => { return ( <AccessibilityProvider> <EnhancedSEOOptimizer title={title} description={description} keywords={keywords} image={image} url={url} type={type} noindex={noindex} nofollow={nofollow} canonical={canonical} /" > <MobileExperienceEnhancer> <div className='min-h-screen bg-gray-50 dark: bg-gray-900'> {} <ParticleBackground particleCount={30} color='#3b82f6' /" > {} <main className='relative z-10'> {children} </main> {} <AccessibilityControls /" > {} {process.env.NODE_ENV === 'development' && ( <AdvancedPerformanceMonitor /" > )} </div> </MobileExperienceEnhancer> </AccessibilityProvider> ) } export default MainLayout
+"
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
