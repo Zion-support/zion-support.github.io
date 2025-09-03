@@ -9,8 +9,7 @@ import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from '../data/advancedCybersecur
 const AdvancedCybersecurityServices: NextPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>(,
   all');
-  const [searchTerm, setSearchTerm] = useState(';
-  ')
+  const [searchTerm, setSearchTerm] = useState()
   const [sortBy, setSortBy] = useState<any>('innovation;
   ');
   const categories = ['
@@ -20,7 +19,8 @@ const AdvancedCybersecurityServices: NextPage = () => {
   Quantum Security', color: 'from-indigo-500 to-blue-600 },{ id: 'Network Security, name:,
   Network Security', color: 'from-green-500 to-teal-600 },{ id: 'Endpoint Security, name:,
   Endpoint Security', color: 'from-orange-500 to-red-600 },
-  const categories = [{ id: 'all, name:,
+  const categories = [
+  { id: 'all, name:,
   All Security', color: 'from-blue-500 to-purple-600 },
     { id:,
   AI Security', name: 'AI Security, color:,
@@ -60,15 +60,12 @@ const AdvancedCybersecurityServices: NextPage = () => {
   })
   default: return 'from-gray-500 to-gray-600}
   }
-;
       default: return,
   bg-gradient-to-r from-gray-500 to-gray-600;
   '}
   }
-;
       default: return '🛡️}
   }
-;
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden'>
       {/* Animated Security Background Elements */}'
@@ -203,8 +200,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
               <select;
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}';
-                className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none';
-'
+                className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none
                 <option value='innovation'>Sort by Innovation Level</option>'
                 <option value='price'>Sort by Price</option>'
                 <option value='roi'>Sort by ROI</option>
@@ -340,5 +336,4 @@ const AdvancedCybersecurityServices: NextPage = () => {
       </div>
     </div>
   )}
-;
 export default AdvancedCybersecurityServices}}}}'"`

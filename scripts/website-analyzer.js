@@ -1,10 +1,7 @@
 #!/usr/bin/env node;
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Analyze the website structure and identify issues;
@@ -12,8 +9,7 @@ function analyzeWebsite() {
   console.log(
   '🔍 Analyzing Zion Tech Group Website...\n');
   const srcDir = path.join(__dirname,
-  '..',
-  'src');
+  '..,src');
   const pagesDir = path.join(srcDir,
   'pages');
   const componentsDir = path.join(srcDir,
@@ -34,8 +30,7 @@ function analyzeWebsite() {
   // Check which pages exist;
   const existingPages = [];
   const missingPages = [];
-  function scanDirectory(dir, basePath = ';
-  ') {    const items = fs.readdirSync(dir);
+  function scanDirectory(dir, basePath = ) {    const items = fs.readdirSync(dir);
     items.forEach(item => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
@@ -53,8 +48,7 @@ function analyzeWebsite() {
   routes.forEach(route => {
     if (route ===;
   '*') return // Skip 404 route;
-    const routePath = route.replace(/^\//, ';
-  ').replace(/\//g, '-;
+    const routePath = route.replace(/^\//, ).replace(/\//g, '-;
   ');
     const hasPage = existingPages.some(page =>;
       page.includes(routePath) ||;
@@ -90,11 +84,9 @@ function analyzeWebsite() {
     routes: routes,
     missing: missingPages,
     placeholders: placeholderPages}
-;
   fs.writeFileSync(
     path.join(__dirname,
-  '..',
-  'website-analysis-report.json'),
+  '..,website-analysis-report.json'),
     JSON.stringify(report, null, 2));
   console.log(`\n📝 Analysis report saved to website-analysis-report.json`);
   return report}

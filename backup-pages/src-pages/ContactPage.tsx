@@ -33,11 +33,9 @@ lastName: ',email:,
   ',
     service: ',
 :backup-pages/src-pages/ContactPage.tsx;
-message: ';
-  '})
+message: })
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) }
-;
   const handleSubmit = async (e: anyReact.FormEvent) => {
     e.preventDefault()    setIsSubmitting(true);
     // Simulate form submission;
@@ -58,7 +56,6 @@ message: ';
   ',
         service: ',
         message: ''})}, 3000)}
-;
 if (isSubmitted) {
     return()
       <div className='min-h-screen py-8 flex items-center justify-center'>'

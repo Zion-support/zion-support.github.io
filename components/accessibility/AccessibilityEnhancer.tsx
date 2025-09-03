@@ -95,6 +95,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       document.addEventListener('keydown', handleKeyboardNavigation);
+<<<<<<< HEAD
       return () => document.removeEventListener('keydown', handleKeyboardNavigation);
     }
   }, [keyboardNavigation]);
@@ -106,13 +107,47 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           id="skip-to-content"
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50"
+=======
+      return () => document.removeEventListener('keydown', handleKeyboardNavigation)}
+  }, [keyboardNavigation])
+  return(
+    <>{skipToContent && (
+        <a;
+          id='skip-to-content'
+          href='#main-content'
+          className='sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+          onFocus={(e) => {
+            e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
+>>>>>>> main
         >
           Skip to main content
         </a>
       )}
       {children}
+<<<<<<< HEAD
     </>
   );
 };
 
 export default AccessibilityEnhancer;
+=======
+</>
+  )}
+;
+// Utility function to generate accessible IDs;
+export const generateAccessibleId = (prefix: string, text: string): string => {
+  return `${prefix}-${text.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`}
+;
+// Utility function to announce changes to screen readers;
+export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
+  const announcement = document.createElement('div');
+  announcement.setAttribute('aria-live', priority);
+  announcement.setAttribute('aria-atomic,true');
+  announcement.className = 'sr-only';
+  announcement.textContent = message;
+  document.body.appendChild(announcement);
+  setTimeout(() => {
+    document.body.removeChild(announcement)}, 1000)}
+;
+export default AccessibilityEnhancer
+>>>>>>> main

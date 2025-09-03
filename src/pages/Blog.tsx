@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
@@ -6,101 +5,64 @@ import {
   Calendar, User, ArrowRight, Tag, Clock, TrendingUp, 
   Brain, Atom, Rocket, Shield, Globe, Code 
 } from 'lucide-react';
-
 export default function Blog() {
   const blogPosts = [
-    {
-      id: 1,
-      title: "The Future of AI in Enterprise: 2025 Trends and Predictions",
-      excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.",
-      author: "Dr. Sarah Chen",
-      date: "2025-01-15",
-      readTime: "8 min read",
-      category: "AI & Machine Learning",
-      tags: ["AI", "Enterprise", "Technology"],
-      image: "/api/placeholder/600/400",
+  {
+      id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions",
+      excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen",
+      date: "2025-01-15", readTime: "8 min read",
+      category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/600/400",
       featured: true
-    },
-    {
+    }, {
       id: 2,
-      title: "Quantum Computing Breakthrough: What It Means for Your Business",
-      excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.",
-      author: "Prof. Michael Rodriguez",
-      date: "2025-01-12",
-      readTime: "12 min read",
-      category: "Quantum Computing",
-      tags: ["Quantum", "Computing", "Innovation"],
-      image: "/api/placeholder/600/400",
+      title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.",
+      author: "Prof. Michael Rodriguez", date: "2025-01-12",
+      readTime: "12 min read", category: "Quantum Computing",
+      tags: ["Quantum,Computing,Innovation"], image: "/api/placeholder/600/400",
       featured: true
-    },
-    {
+    }, {
       id: 3,
-      title: "Micro SaaS Revolution: Building Scalable Solutions",
-      excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.",
-      author: "Alex Thompson",
-      date: "2025-01-10",
-      readTime: "6 min read",
-      category: "Micro SaaS",
-      tags: ["SaaS", "Software", "Business"],
-      image: "/api/placeholder/600/400",
+      title: "Micro SaaS Revolution: Building Scalable Solutions", excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.",
+      author: "Alex Thompson", date: "2025-01-10",
+      readTime: "6 min read", category: "Micro SaaS",
+      tags: ["SaaS,Software,Business"], image: "/api/placeholder/600/400",
       featured: false
-    },
-    {
+    }, {
       id: 4,
-      title: "Cybersecurity in the Age of AI: New Threats and Solutions",
-      excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.",
-      author: "Lisa Park",
-      date: "2025-01-08",
-      readTime: "10 min read",
-      category: "Cybersecurity",
-      tags: ["Security", "AI", "Enterprise"],
-      image: "/api/placeholder/600/400",
+      title: "Cybersecurity in the Age of AI: New Threats and Solutions", excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.",
+      author: "Lisa Park", date: "2025-01-08",
+      readTime: "10 min read", category: "Cybersecurity",
+      tags: ["Security,AI,Enterprise"], image: "/api/placeholder/600/400",
       featured: false
-    },
-    {
+    }, {
       id: 5,
-      title: "Digital Transformation: A Complete Guide for 2025",
-      excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.",
-      author: "David Kumar",
-      date: "2025-01-05",
-      readTime: "15 min read",
-      category: "Digital Transformation",
-      tags: ["Digital", "Transformation", "Strategy"],
-      image: "/api/placeholder/600/400",
+      title: "Digital Transformation: A Complete Guide for 2025", excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.",
+      author: "David Kumar", date: "2025-01-05",
+      readTime: "15 min read", category: "Digital Transformation",
+      tags: ["Digital,Transformation,Strategy"], image: "/api/placeholder/600/400",
       featured: false
-    },
-    {
+    }, {
       id: 6,
-      title: "Cloud Infrastructure Best Practices for Global Enterprises",
-      excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.",
-      author: "Maria Santos",
-      date: "2025-01-03",
-      readTime: "9 min read",
-      category: "Cloud Computing",
-      tags: ["Cloud", "Infrastructure", "Enterprise"],
-      image: "/api/placeholder/600/400",
+      title: "Cloud Infrastructure Best Practices for Global Enterprises", excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.",
+      author: "Maria Santos", date: "2025-01-03",
+      readTime: "9 min read", category: "Cloud Computing",
+      tags: ["Cloud,Infrastructure,Enterprise"], image: "/api/placeholder/600/400",
       featured: false
     }
   ];
-
   const categories = [
-    { name: "AI & Machine Learning", icon: Brain, count: 15 },
-    { name: "Quantum Computing", icon: Atom, count: 8 },
-    { name: "Micro SaaS", icon: Rocket, count: 12 },
-    { name: "Cybersecurity", icon: Shield, count: 10 },
-    { name: "Digital Transformation", icon: Globe, count: 7 },
-    { name: "Cloud Computing", icon: Code, count: 9 }
+  { name: "AI & Machine Learning", icon: Brain, count: 15 }, { name: "Quantum Computing", icon: Atom, count: 8 },
+    { name: "Micro SaaS", icon: Rocket, count: 12 }, { name: "Cybersecurity", icon: Shield, count: 10 },
+    { name: "Digital Transformation", icon: Globe, count: 7 }, { name: "Cloud Computing", icon: Code, count: 9 }
   ];
-
   const featuredPosts = blogPosts.filter(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
-
   return (
     <>
       <SEO 
         title="Blog - Zion Tech Group | Technology Insights & Industry News"
-        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team."
-        keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
+        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group's expert team. 
+        keywords='technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -117,8 +79,7 @@ export default function Blog() {
                 Technology Insights
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Stay ahead of the curve with expert insights on AI, quantum computing, 
-                cybersecurity, and the latest technology trends shaping our future.
+                Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, and the latest technology trends shaping our future.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 {categories.slice(0, 4).map((category, index) => (
@@ -135,7 +96,7 @@ export default function Blog() {
         </section>
 
         <div className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 lg: grid-cols-4 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-3">
               {/* Featured Posts */}
@@ -246,7 +207,7 @@ export default function Blog() {
                             </div>
                             <Link
                               to={`/blog/${post.id}`}
-                              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                              className="flex items-center text-blue-400 hover: text-blue-300 transition-colors"
                             >
                               Read More
                               <ArrowRight className="w-4 h-4 ml-1" />
@@ -261,7 +222,7 @@ export default function Blog() {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:col-span-1">
+            <div className="lg: col-span-1">
               <div className="sticky top-8 space-y-8">
                 {/* Categories */}
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">
@@ -270,8 +231,8 @@ export default function Blog() {
                     {categories.map((category, index) => (
                       <Link
                         key={category.name}
-                        to={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="flex items-center justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-colors group"
+                        to={`/blog/category/${category.name.toLowerCase().replace(/\\s+/g, '-')}`}
+                        className="flex items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group"
                       >
                         <div className="flex items-center">
                           <category.icon className="w-5 h-5 text-blue-400 mr-3 group-hover:text-blue-300" />
@@ -293,7 +254,7 @@ export default function Blog() {
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
                       Subscribe
@@ -305,6 +266,6 @@ export default function Blog() {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }

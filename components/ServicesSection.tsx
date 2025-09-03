@@ -12,6 +12,7 @@ import {
 
 const ServicesSection: React.FC = () => {
   const services = [
+<<<<<<< HEAD
     {
       icon: Brain,
       title: 'AI Services',
@@ -19,17 +20,31 @@ const ServicesSection: React.FC = () => {
       features: ['Machine Learning Models', 'NLP Solutions', 'AI Automation', 'Predictive Analytics'],
       link: '/ai-services'
     },
+=======
+  {
+      icon: Brain,
+      title: 'AI Services',
+      description: 'Machine learning, natural language processing, and AI-powered automation solutions.',
+      features: ['Machine Learning Models,NLP Solutions,AI Automation,Predictive Analytics'],
+      link: '/ai-services'},
+>>>>>>> main
     {
       icon: Cloud,
       title: 'Cloud Services',
       description: 'Scalable cloud infrastructure and migration services for modern businesses.',
+<<<<<<< HEAD
       features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization'],
       link: '/cloud-services'
     },
+=======
+      features: ['Cloud Migration,Infrastructure Setup,DevOps Solutions,Monitoring'],
+      link: '/cloud-services'},
+>>>>>>> main
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and data.',
+<<<<<<< HEAD
       features: ['Security Audits', 'Threat Detection', 'Compliance', 'Incident Response'],
       link: '/cybersecurity'
     },
@@ -59,6 +74,32 @@ const ServicesSection: React.FC = () => {
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
+=======
+      features: ['Security Audits,Penetration Testing,Compliance,Incident Response'],
+      link: '/cybersecurity'},
+    {
+      icon: Database,
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights for better decision making.',
+      features: ['Data Visualization,Business Intelligence,ETL Processes,Reporting'],
+      link: '/data-analytics'},
+    {
+      icon: Code,
+      title: 'Custom Development',
+      description: 'Tailored software solutions built to meet your specific business requirements.',
+      features: ['Web Applications,Mobile Apps,API Development,System Integration'],
+      link: '/custom-development'},
+    {
+      icon: Smartphone,
+      title: 'Micro SaaS',
+      description: 'Lightweight, focused software solutions that solve specific business problems.',
+      features: ['Rapid Development,Cost-Effective,Scalable,User-Friendly'],
+      link: '/micro-saas'}
+  ]
+  return(
+    <section className='py-20 bg-gray-50'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+>>>>>>> main
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,6 +122,7 @@ const ServicesSection: React.FC = () => {
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
             >
+<<<<<<< HEAD
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
                   <service.icon className="w-6 h-6 text-blue-600" />
@@ -106,6 +148,33 @@ const ServicesSection: React.FC = () => {
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
+=======
+              <Card className='h-full hover:shadow-lg transition-shadow duration-300 group'>
+                <CardHeader>
+                  <div className='w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
+                    <service.icon className='h-6 w-6 text-white' />
+                  </div>
+                  <CardTitle className='text-xl'>{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className='text-gray-600 mb-4'>{service.description}</p>
+                  <ul className='space-y-2 mb-6'>
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className='flex items-center text-sm text-gray-500'>
+                        <div className='w-1.5 h-1.5 bg-blue-500 rounded-full mr-2'></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button
+                    variant='outline'
+                    className='w-full group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-colors'>
+                    Learn More
+                    <ArrowRight className='ml-2 h-4 w-4' />
+                  </Button>
+                </CardContent>
+              </Card>
+>>>>>>> main
             </motion.div>
           ))}
         </div>

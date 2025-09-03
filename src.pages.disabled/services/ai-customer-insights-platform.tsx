@@ -59,7 +59,7 @@ const AICustomerInsightsPlatform = () => {
   useEffect(() => {
     setIsVisible(true)}, [])
   const features = [
-    {
+  {
       icon: <Brain className='w-6 h-6' />,
       title: 'AI-Powered Customer Segmentation',
       description: 'Automatically segment customers using advanced machine learning algorithms based on behavior, preferences, and value.'},
@@ -84,18 +84,14 @@ const AICustomerInsightsPlatform = () => {
       title: 'Privacy-First Analytics',
       description: 'GDPR-compliant data processing with advanced privacy protection and consent management.'}
   ];
-  const pricingPlans = [{
+  const pricingPlans = [
+  {
       name: 'Starter',
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [;
-        'Up to 10,000 customers',
-        'Basic segmentation',
-        'Standard analytics',
-        'Email support',
-        'Basic integrations',
-        'Monthly reports';
+        'Up to 10,000 customers,Basic segmentation,Standard analytics,Email support,Basic integrations,Monthly reports';
       ],
       popular: false},
     {
@@ -104,13 +100,7 @@ const AICustomerInsightsPlatform = () => {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [;
-        'Up to 100,000 customers',
-        'Advanced segmentation',
-        'Predictive analytics',
-        'Priority support',
-        'Advanced integrations',
-        'Real-time insights',
-        'Custom dashboards';
+        'Up to 100,000 customers,Advanced segmentation,Predictive analytics,Priority support,Advanced integrations,Real-time insights,Custom dashboards';
       ],
       popular: true},
     {
@@ -119,18 +109,12 @@ const AICustomerInsightsPlatform = () => {
       period: '/month',
       description: 'For large organizations',
       features: [;
-        'Unlimited customers',
-        'Custom AI models',
-        'Advanced analytics',
-        'Dedicated support',
-        'Custom integrations',
-        'White-label options',
-        'SLA guarantee';
+        'Unlimited customers,Custom AI models,Advanced analytics,Dedicated support,Custom integrations,White-label options,SLA guarantee';
       ],
       popular: false}
   ]
   const capabilities = [
-    {
+  {
       title: 'Customer Segmentation',
       icon: <Users className='w-8 h-8 text-blue-500' />,
       description: 'AI-powered customer segmentation with behavioral, demographic, and psychographic analysis'},
@@ -156,7 +140,7 @@ const AICustomerInsightsPlatform = () => {
       description: 'Seamless integration with CRM, marketing, and sales platforms for unified customer view'}
   ]
   const useCases = [
-    {
+  {
       title: 'E-commerce Personalization',
       description: 'Increase conversion rates by 40% with AI-powered product recommendations and personalized shopping experiences.',
       icon: <ShoppingCart className='w-8 h-8 text-blue-500' />
@@ -210,7 +194,7 @@ const AICustomerInsightsPlatform = () => {
       <div className='bg-white shadow-sm sticky top-0 z-40'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <nav className='flex space-x-8 overflow-x-auto'>
-            {['overview', 'features', 'capabilities', 'pricing', 'use-cases', 'contact'].map((tab) => (
+            {['overview,features,capabilities,pricing,use-cases,contact'].map((tab) => (
               <button;
                 key={tab}
                 onClick={() => setActiveTab(tab)}
@@ -218,7 +202,7 @@ const AICustomerInsightsPlatform = () => {
                   activeTab === tab;
                     ? 'border-green-500 text-green-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
-              >{tab.replace('-', ' ')}
+              >{tab.replace('-, ')}
               </button>
             ))}
           </nav>
@@ -543,7 +527,7 @@ const AICustomerInsightsPlatform = () => {
                     <label className='block text-sm font-medium text-gray-700 mb-2'>
                       Message
                     </label>
-                    <textarea;
+                    <textarea
                       rows={4}
                       className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent';
                       placeholder='Tell us about your customer insights needs...'></textarea>
@@ -580,5 +564,4 @@ const AICustomerInsightsPlatform = () => {
       </div>
     </div>
   )}
-;
 export default AICustomerInsightsPlatform

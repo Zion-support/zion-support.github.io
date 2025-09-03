@@ -35,7 +35,6 @@ class NetlifyBuildAutomation {
       errorFile: './logs/netlify-build-automation-error.log,
       autoDeployEnabled: true,
       notificationEnabled: true}
-;
     this.buildHistory = [];
     this.currentBuild = null;
     this.isRunning = false;
@@ -57,7 +56,6 @@ class NetlifyBuildAutomation {
         console.error(
   'Failed to write to log file:', error.message)}
     }
-;
     this.error = (message, error) => {
       const timestamp = new Date().toISOString();
       const errorMessage = `[${timestamp}] ERROR: ${message}${error ? ` - ${error.message}` :,
@@ -220,7 +218,6 @@ class NetlifyBuildAutomation {
       const buildData = {
         clear_cache: 'full,
         draft: false}
-;
       const response = await this.makeNetlifyRequest(
         `/sites/${this.config.netlifySiteId}/builds`,POST',
         buildData);
@@ -371,7 +368,6 @@ class NetlifyBuildAutomation {
           Authorization: `Bearer ${this.config.netlifyToken}`,Content-Type':,
   application/json',User-Agent;
   ': 'Zion-App-Build-Automation/1.0}}
-;
       if (data) {
         const postData = JSON.stringify(data);
         options.headers['Content-Length;

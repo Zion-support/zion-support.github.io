@@ -1,12 +1,9 @@
 #!/usr/bin/env node;
 import { execSync } from,
   child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import fs from "fsfs';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(
   '🚀 Starting PM2 Automation Dashboard...');
@@ -125,8 +122,7 @@ class AutomationDashboard {
   '💡 Recommendations:,
   );
       health.recommendations.forEach(rec => console.log(`  ${rec}`));
-      console.log(';
-  ')}
+      console.log()}
     // Display recent logs;
     // // // console.log('📝 Recent Activity: ');
     // // // console.log('─;
@@ -182,8 +178,7 @@ class AutomationDashboard {
       })} catch (error) {
       console.log(
   '  No recent logs available')}
-    console.log(';
-  ');
+    console.log();
     console.log('Commands: ');
     console.log('  pm2 logs <process-name> - View specific process logs;
   ');
@@ -238,7 +233,6 @@ class AutomationDashboard {
         totalMemory: this.processes.reduce((sum, p) => sum + p.monit.memory, 0),
         averageCPU: this.processes.reduce((sum, p) => sum + p.monit.cpu, 0) / this.processes.length,
         totalRestarts: this.processes.reduce((sum, p) => sum + p.pm2_env.restart_time, 0)}
-;
       console.log(,
   ✅ No failed processes to restart;
   ');

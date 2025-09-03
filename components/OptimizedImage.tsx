@@ -57,7 +57,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           observer.disconnect();
         }
       },
+<<<<<<< HEAD
       { threshold: 0.1 }
+=======
+      {
+'
+
+        rootMargin: '50px', // Start loading 50px before the image comes into view
+        threshold: 0.1}
+>>>>>>> main
     );
 
     if (imgRef.current) {
@@ -102,6 +110,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         style={style}
         onClick={onClick}
       >
+<<<<<<< HEAD
         {isInView && !hasError && (
           <Image
             {...imageProps}
@@ -126,6 +135,24 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             </div>
           </div>
         )}
+=======
+        <div className="text-center">"
+          <svg""
+            className='mx-auto h-8 w-8 mb-2'
+            fill="none"""
+            viewBox="0 0 24 24"""
+            stroke="currentColor"
+          >"
+            <path""
+              strokeLinecap="round"""
+              strokeLinejoin="round""
+              strokeWidth={2}""
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />"
+          </svg>""
+          <p className="text-xs">Image failed to load</p>
+        </div>
+>>>>>>> main
       </div>
     );
   }
@@ -147,6 +174,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           }`}
         />
       )}
+<<<<<<< HEAD
       {!isLoaded && !hasError && (
         <div 
           className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
@@ -166,6 +194,38 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             </svg>
             <p className="text-sm">Failed to load image</p>
           </div>
+=======
+
+      {/* Next.js Image component */}
+      <Image
+        src={src}
+        alt={alt}
+        width={fill ? undefined : width}`
+        height={fill ? undefined : height}``
+        className={`transition-opacity duration-300 ${
+'
+''`
+          isLoading ? 'opacity-0' : 'opacity-100'``
+        }`}
+        priority={priority}
+        quality={quality}
+        placeholder={placeholder}
+        blurDataURL={blurDataURL}
+        sizes={sizes}
+        fill={fill}
+        onLoad={handleLoad}
+        onError={handleError}
+        style={{
+'
+
+          objectFit: fill ? 'cover' : 'contain'}}
+      />
+
+      {/* Loading spinner */}"
+      {isLoading && (""
+        <div className="absolute inset-0 flex items-center justify-center z-20">""
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+>>>>>>> main
         </div>
       )}
     </div>

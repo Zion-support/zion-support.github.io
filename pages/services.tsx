@@ -63,9 +63,9 @@ export default function Services() {
 				</div>
 			</section>
 			{/* Services Grid */}
-			<section className='py-24 sm:py-32'>
+			<section className='py-16 sm:py-24'>
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
-					<div className='grid gap-8 lg:grid-cols-2'>
+					<div className='grid gap-6 lg:grid-cols-2'>
 						{/* AI Autonomous Systems */}
 						<div id='ai' className='group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:border-blue-300'>
 							<div className='flex items-center gap-x-3 mb-6'>
@@ -258,7 +258,7 @@ export default function Services() {
 				</div>
 			</section>
 			{/* Expanded Service Catalog */}
-			<section className='py-24 sm:py-32 bg-white'>
+			<section className='py-16 sm:py-24 bg-white'>
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>
 					<div className='mx-auto max-w-4xl text-center mb-14'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Comprehensive Technology Solutions</h2>
@@ -268,6 +268,22 @@ export default function Services() {
 							Explore our full capabilities at{' '}
 							<a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.
 						</p>
+						<div className='mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6'>
+							<h3 className='text-lg font-semibold text-blue-900 mb-3'>Ready to Get Started?</h3>
+							<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+								<div>
+									<p className='text-blue-800 text-sm mb-2'>Contact us for a free consultation:</p>
+									<div className='space-y-1 text-sm'>
+										<p className='text-blue-700'><strong>Phone:</strong> <a href='tel:+13024640950' className='hover:underline'>+1 302 464 0950</a></p>
+										<p className='text-blue-700'><strong>Email:</strong> <a href='mailto:kleber@ziontechgroup.com' className='hover:underline'>kleber@ziontechgroup.com</a></p>
+									</div>
+								</div>
+								<div>
+									<p className='text-blue-800 text-sm mb-2'>Our office location:</p>
+									<p className='text-blue-700 text-sm'>364 E Main St STE 1008<br />Middletown DE 19709</p>
+								</div>
+							</div>
+						</div>
 						<div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
 							<div className='bg-blue-50 p-4 rounded-lg'>
 								<h3 className='font-semibold text-blue-900 mb-2'>AI & Machine Learning</h3>
@@ -285,7 +301,7 @@ export default function Services() {
 						<p className='mt-6 text-sm text-gray-500'>
 							Pricing based on market research from leading technology consultancies and enterprise software vendors. 
 							For custom enterprise solutions and volume discounts, see our{' '}
-							<Link href='/pricing-guide' className='text-blue-600 hover:text-blue-500 underline'>Enterprise Pricing Guide</Link>.
+							<Link href='/pricing' className='text-blue-600 hover:text-blue-500 underline'>Enterprise Pricing Guide</Link>.
 						</p>
 					</div>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>

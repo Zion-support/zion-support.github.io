@@ -139,5 +139,4 @@ const EnhancedFooter: React.FC = () => {
       </div>
     </footer>
   )}
-;
 export default EnhancedFooter

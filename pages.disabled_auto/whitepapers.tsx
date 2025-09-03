@@ -25,7 +25,7 @@ import Link from 'next/link';
 
 const Whitepapers: NextPage = () => {
   const whitepapers = [
-    {
+  {
 :pages.disabled_auto/whitepapers.tsx;
       id:;
   'ai-business-transformation,
@@ -51,10 +51,7 @@ const Whitepapers: NextPage = () => {
       featured: true,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
-  Machine Learning',
-  'Business Strategy',
-  'Digital Transformation',
-  'ROI Analysis']},
+  Machine Learning,Business Strategy,Digital Transformation,ROI Analysis']},
     {
       id: 'cloud-migration-strategies,
       title:,
@@ -66,10 +63,7 @@ const Whitepapers: NextPage = () => {
       category:;
   'Cloud Computing',
       topics: [;
-        'Machine Learning',
-        'Business Strategy',
-        'Digital Transformation',
-        'ROI Analysis']},
+        'Machine Learning,Business Strategy,Digital Transformation,ROI Analysis']},
     {
       id: 'cloud-migration-strategies',
       title: 'Cloud Migration Strategies for Enterprise Success',
@@ -85,10 +79,7 @@ const Whitepapers: NextPage = () => {
       featured: true,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
-  Cloud Architecture',
-  'Migration Planning',
-  'Cost Optimization',
-  'Security']},
+  Cloud Architecture,Migration Planning,Cost Optimization,Security']},
     {
       id: 'cybersecurity-framework,
       title:,
@@ -100,10 +91,7 @@ const Whitepapers: NextPage = () => {
       category:;
   'Cybersecurity',
       topics: [;
-        'Cloud Architecture',
-        'Migration Planning',
-        'Cost Optimization',
-        'Security']},
+        'Cloud Architecture,Migration Planning,Cost Optimization,Security']},
     {
       id: 'cybersecurity-framework',
       title: 'Modern Cybersecurity Framework for Digital Businesses',
@@ -119,10 +107,7 @@ const Whitepapers: NextPage = () => {
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
-  Threat Detection',
-  'Risk Management',
-  'Compliance',
-  'Incident Response']},
+  Threat Detection,Risk Management,Compliance,Incident Response']},
     {
       id: 'microservices-architecture,
       title:,
@@ -134,10 +119,7 @@ const Whitepapers: NextPage = () => {
   2024-01-05',
       category: 'Software Architecture,
       topics: [;
-        'Threat Detection',
-        'Risk Management',
-        'Compliance',
-        'Incident Response']},
+        'Threat Detection,Risk Management,Compliance,Incident Response']},
     {
       id: 'microservices-architecture',
       title: 'Microservices Architecture: Design Patterns and Best Practices',
@@ -153,10 +135,7 @@ const Whitepapers: NextPage = () => {
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
-  Service Design',
-  'API Management',
-  'Scalability',
-  'DevOps']},
+  Service Design,API Management,Scalability,DevOps']},
     {
       id: 'data-analytics-insights,
       title:,
@@ -167,7 +146,7 @@ const Whitepapers: NextPage = () => {
       date:,
   2023-12-28',
       category: 'Data Analytics,
-      topics: ['Service Design', 'API Management', 'Scalability', 'DevOps']},
+      topics: ['Service Design,API Management,Scalability,DevOps']},
     {
       id: 'data-analytics-insights',
       title:;
@@ -184,10 +163,7 @@ const Whitepapers: NextPage = () => {
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [,
-  Business Intelligence',
-  'Data Visualization',
-  'Predictive Analytics',
-  'KPIs']},
+  Business Intelligence,Data Visualization,Predictive Analytics,KPIs']},
     {
       id: 'mobile-app-development,
       title:,
@@ -199,10 +175,7 @@ const Whitepapers: NextPage = () => {
   2023-12-20',
       category: 'Mobile Development,
       topics: [;
-        'Business Intelligence',
-        'Data Visualization',
-        'Predictive Analytics',
-        'KPIs']},
+        'Business Intelligence,Data Visualization,Predictive Analytics,KPIs']},
     {
       id: 'mobile-app-development',
       title: 'Mobile App Development: Native vs Cross-Platform Strategies',
@@ -218,28 +191,13 @@ const Whitepapers: NextPage = () => {
       featured: false,
 :pages.disabled_auto/whitepapers.tsx;
       topics: [
-  'React Native',
-  'Flutter',
-  'Performance',
-  'User Experience']}
+  'React Native,Flutter,Performance,User Experience']}
   ];
   const categories = [
-  'All',
-  'Artificial Intelligence',
-  'Cloud Computing',
-  'Cybersecurity',
-  'Software Architecture',
-  'Data Analytics',
-  'Mobile Development'];
-      topics: ['React Native', 'Flutter', 'Performance', 'User Experience']}];
+  'All,Artificial Intelligence,Cloud Computing,Cybersecurity,Software Architecture,Data Analytics,Mobile Development'];
+      topics: ['React Native,Flutter,Performance,User Experience']}];
   const categories = [
-    'All',
-    'Artificial Intelligence',
-    'Cloud Computing',
-    'Cybersecurity',
-    'Software Architecture',
-    'Data Analytics',
-    'Mobile Development']
+    'All,Artificial Intelligence,Cloud Computing,Cybersecurity,Software Architecture,Data Analytics,Mobile Development']
   return (
     <MainLayout
       title='Whitepapers - Zion Tech Group';
@@ -469,5 +427,4 @@ const Whitepapers: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
 export default Whitepapers

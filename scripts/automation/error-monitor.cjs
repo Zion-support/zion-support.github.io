@@ -127,10 +127,10 @@ class ErrorMonitor {
                 relativePath: path.relative(this.projectRoot, itemPath),
                 error: error.message,
                 issues: ['read_error']
-              });
-            }
-          }
-        }
+              });`);
+            }`);
+          }`);
+        }`);
       } catch (error) {this.log('error', Error scanning directory ${dir}:, error.message`);
       }
     };

@@ -38,7 +38,6 @@ class PerformanceOptimizer {
         imageOptimization: imageOptimization,
         dependencies: dependencyAnalysis,
         recommendations: this.generateRecommendations()}
-;
       this.saveReport(report);
       this.log(
   'Performance optimization completed');

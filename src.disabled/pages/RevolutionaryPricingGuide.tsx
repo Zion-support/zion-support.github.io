@@ -4,6 +4,5 @@ import React, { useState } from;
   'lucide-react' import { SEO } from;
   '../components/SEO' import { REVOLUTIONARY_PRICING_GUIDE_2030 } from;
   '../data/revolutionaryPricingGuide2030'  export default function RevolutionaryPricingGuide() { const [activeCategory, setActiveCategory] = useState(
-  'all') const [searchTerm, setSearchTerm] = useState(';
-  ') const [priceRange, setPriceRange] = useState('all;
+  'all') const [searchTerm, setSearchTerm] = useState() const [priceRange, setPriceRange] = useState('all;
   ') ';

@@ -72,7 +72,6 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
   // Validate form data
   const validateForm = (): boolean => {
     const newErrors: Partial<ContactFormData> = {}
-;
     // Required field validation;
     if (!formData.firstName.trim()) newErrors.firstName =,
   First name is required;
@@ -102,7 +101,6 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
   'Message is required';
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0}
-;
   // Handle input changes;
   const handleInputChange = (...args: unknown[]): unknown => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -110,7 +108,6 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: undefined }))}
   }
-;
   // Handle form submission;
   const handleSubmit = async e: React.FormEvent {
     e.preventDefault();
@@ -156,7 +153,6 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
   Form submission error: , error)} finally {
       setIsSubmitting(false)}
   }
-;
   // Next step validation;
   const handleNextStep = (...args: unknown[]): unknown => {
     if (currentStep === 1) {
@@ -173,13 +169,11 @@ const EnhancedContactForm: React.FC<ContactFormProps> = {
     if (currentStep < totalSteps) {
       setCurrentStep(currentStep + 1)}
   }
-;
   // Previous step;
   const handlePrevStep = (...args: unknown[]): unknown => {
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1)}
   }
-;
   // Get step progress percentage;
   const getStepProgress = : unknown (currentStep / totalSteps) * 100;
   // Service options;

@@ -1,15 +1,18 @@
-import React from 'react';
+import React  from 'react';interface StatItem {
+  label: string
+   value: string | number
+   description?: string
+}
 
-interface StatItem {
-  label: string;
-   value: string | number;
-   description?: string}
 interface InteractiveStatsProps {
-  stats: StatItem[];
-   className?: string}
+  stats: StatItem[]
+   className?: string
+}
+
 export default function InteractiveStats({
-  stats, className = 'grid grid-cols-1 md: grid-cols-3 gap-6'}: InteractiveStatsProps) {
-  return(
+  stats, className = 'grid grid-cols-1 md: grid-cols-3 gap-6'
+}: InteractiveStatsProps) {
+  return (
     <div className={className}>
       {stats.map((stat, index) => (
         <div key={index} className='text-center p-6 bg-white rounded-lg shadow-md'>
@@ -21,4 +24,5 @@ export default function InteractiveStats({
         </div>
       ))}
     </div>
-  )}
+  )
+}

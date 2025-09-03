@@ -56,6 +56,7 @@ const PerformanceMonitor: React.FC = () => {
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
 
+<<<<<<< HEAD
         // Measure Cumulative Layout Shift (CLS)
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
@@ -68,6 +69,13 @@ const PerformanceMonitor: React.FC = () => {
           });
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
+=======
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+'
+
+          if (entry.entryType === 'first-input') {
+>>>>>>> main
 
         // Measure Time to First Byte (TTFB)
         const navigationObserver = new PerformanceObserver((list) => {
@@ -87,6 +95,7 @@ const PerformanceMonitor: React.FC = () => {
           setMetrics(prev => ({ ...prev, loadTime }));
         });
 
+<<<<<<< HEAD
         return () => {
           fcpObserver.disconnect();
           lcpObserver.disconnect();
@@ -94,6 +103,35 @@ const PerformanceMonitor: React.FC = () => {
           clsObserver.disconnect();
           navigationObserver.disconnect();
         };
+=======
+        for (const entry of list.getEntries()) {
+
+          if (!entry.hadRecentInput) {
+
+            clsValue += (entry as any).value;
+          }
+        }
+        setMetrics(prev => ({ ...prev, cls: clsValue }));'
+      });''
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      return () => {
+        fcpObserver.disconnect();
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
+'
+    // Measure Time to First Byte (TTFB)''
+    if ('performance' in window) {
+'
+
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+>>>>>>> main
       }
     };
 
@@ -101,6 +139,7 @@ const PerformanceMonitor: React.FC = () => {
     return cleanup;
   }, []);
 
+<<<<<<< HEAD
   const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
     if (value === null) return 'text-gray-400';
     if (value <= thresholds.good) return 'text-green-500';
@@ -113,6 +152,48 @@ const PerformanceMonitor: React.FC = () => {
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';
     return 'Poor';
+=======
+  const getScoreColor = (metric: string, value: number | null): string => {
+'
+
+    if (value === null) return 'text-gray-500';
+    
+    switch (metric) {
+'
+
+      case 'fcp':''
+        return value <= 1800 ? 'text-green-500' : value <= 3000 ? 'text-yellow-500' : 'text-red-500'
+      case 'lcp':''
+        return value <= 2500 ? 'text-green-500' : value <= 4000 ? 'text-yellow-500' : 'text-red-500'
+      case 'fid':''
+        return value <= 100 ? 'text-green-500' : value <= 300 ? 'text-yellow-500' : 'text-red-500'
+      case 'cls':''
+        return value <= 0.1 ? 'text-green-500' : value <= 0.25 ? 'text-yellow-500' : 'text-red-500
+      default:''
+        return 'text-gray-500';
+    }
+  };
+
+  const getScoreLabel = (metric: string, value: number | null): string => {
+'
+
+    if (value === null) return 'N/A';
+    
+    switch (metric) {
+'
+
+      case 'fcp':''
+        return value <= 1800 ? 'Good' : value <= 3000 ? 'Needs Improvement' : 'Poor'
+      case 'lcp':''
+        return value <= 2500 ? 'Good' : value <= 4000 ? 'Needs Improvement' : 'Poor'
+      case 'fid':''
+        return value <= 100 ? 'Good' : value <= 300 ? 'Needs Improvement' : 'Poor'
+      case 'cls':''
+        return value <= 0.1 ? 'Good' : value <= 0.25 ? 'Needs Improvement' : 'Poor
+      default:''
+        return 'N/A';
+    }
+>>>>>>> main
   };
 
   return (

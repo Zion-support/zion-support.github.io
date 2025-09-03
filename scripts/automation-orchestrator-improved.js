@@ -29,7 +29,7 @@ class ImprovedAutomationOrchestrator {
       console.log('🎯 Starting automation orchestration...');
       // Define automation scripts to run;
       const automationScripts = [
-        {
+  {
           name: 'Performance Monitor',
           script: 'scripts/performance-monitor-improved.js',
           description: 'Monitor system and application performance',
@@ -82,7 +82,6 @@ class ImprovedAutomationOrchestrator {
         output: result.output,
         error: null,
         critical: script.critical}
-;
       this.results.scripts.push(scriptResult);
       this.results.summary.successful++;
       console.log(`✅ ${script.name} completed successfully (${duration}ms)`)} catch (error) {
@@ -96,7 +95,6 @@ class ImprovedAutomationOrchestrator {
         output: null,
         error: error.message,
         critical: script.critical}
-;
       this.results.scripts.push(scriptResult);
       this.results.summary.failed++;
       console.log(`❌ ${script.name} failed (${duration}ms): ${error.message}`);

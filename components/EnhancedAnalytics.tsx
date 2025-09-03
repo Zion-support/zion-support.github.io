@@ -78,10 +78,104 @@ const EnhancedAnalytics: React.FC = () => {
 
   if (isLoading) {
     return (
+<<<<<<< HEAD
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 mx-auto mb-4"></div>
           <p className="text-gray-300">Loading analytics...</p>
+=======
+      <div className='flex items-center justify-center h-64'>
+        <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
+      </div>
+    )}
+  return(
+    <div className='space-y-6'>
+      <div className='flex items-center justify-between'>
+        <h1 className='text-3xl font-bold text-gray-900'>Analytics Dashboard</h1>
+        <select;
+          value={selectedTimeRange}
+          onChange={(e) => setSelectedTimeRange(e.target.value)}
+          className='px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500'
+        >
+          <option value='24h'>Last 24 hours</option>
+          <option value='7d'>Last 7 days</option>
+          <option value='30d'>Last 30 days</option>
+          <option value='90d'>Last 90 days</option>
+        </select>
+      </div>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+        <StatCard;
+          title='Page Views'
+          value={analyticsData.pageViews.toLocaleString()}
+          icon={<Eye className='w-6 h-6 text-blue-600' />}
+          change={12.5}
+          color='blue'
+        />
+        <StatCard;
+          title='Unique Visitors'
+          value={analyticsData.uniqueVisitors.toLocaleString()}
+          icon={<Users className='w-6 h-6 text-green-600' />}
+          change={8.3}
+          color='green'
+        />
+        <StatCard;
+          title='Bounce Rate'
+          value={`${analyticsData.bounceRate}%`}
+          icon={<MousePointer className='w-6 h-6 text-orange-600' />}
+          change={-2.1}
+          color='orange'
+        />
+        <StatCard;
+          title='Avg. Session Duration'
+          value={`${analyticsData.avgSessionDuration}m`}
+          icon={<Clock className='w-6 h-6 text-purple-600' />}
+          change={5.7}
+          color='purple'
+        />
+      </div>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className='bg-white rounded-xl shadow-lg p-6'>
+          <h3 className='text-lg font-semibold text-gray-900 mb-4'>Top Pages</h3>
+          <div className='space-y-3'>
+            {analyticsData.topPages.map((page, index) => (
+              <div key={index} className='flex items-center justify-between'>
+                <span className='text-gray-600'>{page.page}</span>
+                <span className='font-medium'>{page.views.toLocaleString()}</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className='bg-white rounded-xl shadow-lg p-6'>
+          <h3 className='text-lg font-semibold text-gray-900 mb-4'>Traffic Sources</h3>
+          <div className='space-y-3'>
+            {analyticsData.trafficSources.map((source, index) => (
+              <div key={index} className='flex items-center justify-between'>
+                <span className='text-gray-600'>{source.source}</span>
+                <span className='font-medium'>{source.percentage}%</span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className='bg-white rounded-xl shadow-lg p-6'>
+        <h3 className='text-lg font-semibold text-gray-900 mb-4'>Device Types</h3>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          {analyticsData.deviceTypes.map((device, index) => (
+            <div key={index} className='text-center'>
+              <div className='text-2xl font-bold text-gray-900'>{device.percentage}%</div>
+              <div className='text-sm text-gray-600'>{device.device}</div>
+            </div>
+          ))}
+>>>>>>> main
         </div>
       </div>
     );

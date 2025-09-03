@@ -116,10 +116,10 @@ const executeCommand = (command, options = {}) => {
     });
     return { success: true, output: result };
   } catch (error) {
-    return { success: false, error: error.message, output: error.stdout || '' };
-  }
-};
-
+    return { success: false, error: error.message, output: error.stdout || '' };`);
+  }`);
+};`);
+`);
 const gitCommand = (command, options = {}) => {return executeCommand(git ${command}, options`);
 };
 

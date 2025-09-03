@@ -302,6 +302,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
             </nav>
           </div>
 
+<<<<<<< HEAD
           {/* Footer */}
           <div className="p-4 border-t border-gray-200">
             <div className="flex items-center justify-center space-x-4">
@@ -326,6 +327,27 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
           </div>
         </div>
       </motion.div>
+=======
+          {/* Contact CTA */}
+          <div className="pt-6 border-t border-gray-800/50">
+            <div className="p-4 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg border border-cyan-500/30">
+              <h4 className="text-sm font-semibold text-white mb-2">Ready to Transform?</h4>
+              <p className="text-gray-300 text-xs mb-3">
+                Get in touch to discuss your revolutionary technology needs.
+              </p>
+              <Link
+                href="/contact"
+                onClick={onClose}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white text-sm font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+
+                Contact Us
+                <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>;
+          </div>;
+        </div>;
+      </motion.div>;
+>>>>>>> main
     </>
   );
 };

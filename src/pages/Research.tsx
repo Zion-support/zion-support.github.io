@@ -1,73 +1,47 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
-  Search, FileText, Users, Calendar, ArrowRight, 
-  ExternalLink, Download, Star, TrendingUp, Globe
+  Search, FileText, Users, Calendar, ArrowRight, ExternalLink, Download, Star, TrendingUp, Globe
 } from 'lucide-react';
-
 export default function Research() {
   const researchAreas = [
-    {
-      title: "Artificial Intelligence",
-      description: "Advancing AI research in machine learning, natural language processing, and computer vision",
-      publications: 45,
-      researchers: 12,
+  {
+      title: "Artificial Intelligence", description: "Advancing AI research in machine learning, natural language processing, and computer vision",
+      publications: 45, researchers: 12,
       color: "from-purple-500 to-pink-500"
-    },
-    {
+    }, {
       title: "Quantum Computing",
-      description: "Pioneering quantum algorithms and quantum machine learning applications",
-      publications: 28,
-      researchers: 8,
-      color: "from-orange-500 to-red-500"
+      description: "Pioneering quantum algorithms and quantum machine learning applications", publications: 28,
+      researchers: 8, color: "from-orange-500 to-red-500"
     },
     {
-      title: "Cybersecurity",
-      description: "Developing next-generation security solutions and threat detection systems",
-      publications: 32,
-      researchers: 10,
+      title: "Cybersecurity", description: "Developing next-generation security solutions and threat detection systems",
+      publications: 32, researchers: 10,
       color: "from-green-500 to-emerald-500"
-    },
-    {
+    }, {
       title: "Edge Computing",
-      description: "Optimizing computing at the edge for IoT and real-time applications",
-      publications: 18,
-      researchers: 6,
-      color: "from-blue-500 to-cyan-500"
+      description: "Optimizing computing at the edge for IoT and real-time applications", publications: 18,
+      researchers: 6, color: "from-blue-500 to-cyan-500"
     }
   ];
-
   const recentPublications = [
-    {
-      id: 1,
-      title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment",
-      authors: ["Dr. Sarah Chen", "Prof. Michael Rodriguez"],
-      journal: "Nature Quantum Information",
-      date: "2025-01-10",
-      citations: 23,
+  {
+      id: 1, title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment",
+      authors: ["Dr. Sarah Chen,Prof. Michael Rodriguez"], journal: "Nature Quantum Information",
+      date: "2025-01-10", citations: 23,
       featured: true
-    },
-    {
+    }, {
       id: 2,
-      title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems",
-      authors: ["Lisa Park", "David Kumar"],
-      journal: "IEEE Security & Privacy",
-      date: "2025-01-05",
-      citations: 18,
+      title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems", authors: ["Lisa Park,David Kumar"], journal: "IEEE Security & Privacy",
+      date: "2025-01-05", citations: 18,
       featured: true
-    },
-    {
+    }, {
       id: 3,
-      title: "Edge Computing Optimization for IoT Applications",
-      authors: ["Maria Santos", "Alex Thompson"],
-      journal: "ACM Computing Surveys",
-      date: "2024-12-28",
-      citations: 15,
+      title: "Edge Computing Optimization for IoT Applications", authors: ["Maria Santos,Alex Thompson"], journal: "ACM Computing Surveys",
+      date: "2024-12-28", citations: 15,
       featured: false
     }
   ];
-
   return (
     <>
       <SEO 
@@ -101,7 +75,7 @@ export default function Research() {
                   <input
                     type="text"
                     placeholder="Search research publications..."
-                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -195,12 +169,12 @@ export default function Research() {
                   <h3 className="text-xl font-bold text-white mb-2">{publication.title}</h3>
                   
                   <div className="mb-4">
-                    <p className="text-sm text-gray-400 mb-1">Authors:</p>
-                    <p className="text-blue-400">{publication.authors.join(", ")}</p>
+                    <p className="text-sm text-gray-400 mb-1">Authors: </p>
+                    <p className="text-blue-400">{publication.authors.join(,)}</p>
                   </div>
 
                   <div className="mb-4">
-                    <p className="text-sm text-gray-400 mb-1">Journal:</p>
+                    <p className="text-sm text-gray-400 mb-1">Journal: </p>
                     <p className="text-gray-300">{publication.journal}</p>
                   </div>
 
@@ -210,7 +184,7 @@ export default function Research() {
                       {new Date(publication.date).toLocaleDateString()}
                     </div>
                     <div className="flex gap-2">
-                      <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                      <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors">
                         <ExternalLink className="w-4 h-4 inline mr-1" />
                         View Paper
                       </button>
@@ -262,6 +236,6 @@ export default function Research() {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 }

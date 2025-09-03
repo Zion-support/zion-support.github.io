@@ -41,6 +41,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
       console.error('Error caught by boundary: ', error, errorInfo);
     }
 
@@ -48,6 +49,36 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
+=======
+      console.error('Error caught by boundary: ', error, errorInfo)}
+    // Send error to monitoring service;
+    this.logErrorToService(error, errorInfo);
+    // Call custom error handler;
+    this.props.onError?.(error, errorInfo)}
+  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real application, you would send this to your error monitoring service;
+    // like Sentry, LogRocket, or Bugsnag;
+    try {
+      // Example: Send to analytics;
+      if (typeof gtag !== 'undefined') {
+        gtag('event,exception', {
+          description: error.message, fatal: false})}
+      // Example: Send to custom endpoint;
+      fetch('/api/error-reporting', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          error: {
+            message: error.message, stack: error.stack,
+            name: error.name},
+          errorInfo: {
+            componentStack: errorInfo.componentStack},
+          timestamp: new Date().toISOString(), userAgent: navigator.userAgent,
+          url: window.location.href})}).catch(() => {
+        // Silently fail if error reporting fails})} catch (reportingError) {
+      // Silently fail if error reporting fails}
+>>>>>>> main
   }
 
   render() {
@@ -64,6 +95,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="flex items-center mb-4">
               <div className="flex-shrink-0">
                 <svg
+<<<<<<< HEAD
                   className="h-8 w-8 text-red-500"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -72,6 +104,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
+=======
+                  className='h-8 w-8 text-red-500'
+                  fill='none'
+                  stroke='currentColor'
+                  viewBox='0 0 24 24'>
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+>>>>>>> main
                     strokeWidth={2}
                     d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z"
                   />
@@ -124,6 +165,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               >
                 Try Again
               </button>
+<<<<<<< HEAD
+=======
+              <button
+                onClick={this.handleReload}
+                className='flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2'>
+                Reload Page
+              </button>
+            </div>
+            <div className='mt-4 text-center'>
+              <p className='text-xs text-gray-500'>
+                If this problem persists, please{' '}
+                <a
+                  href='/contact'
+                  className='text-blue-600 hover: text-blue-500'>
+                  contact support
+                </a>
+              </p>
+>>>>>>> main
             </div>
           </div>
         </div>

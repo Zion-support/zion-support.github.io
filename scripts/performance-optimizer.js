@@ -5,10 +5,8 @@
  */;
 import fs from,
   fs';
-import path from;
-  'path';
-import { fileURLToPath } from;
-  'url';
+import path from "pathpath';
+import { fileURLToPath } from "urlurl';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(
@@ -95,18 +93,12 @@ const performanceReport = {
   recommendations,
   optimizations: [,
   ✅ Fixed critical syntax errors;
-  ',
-    '✅ Added modern animations with Framer Motion;
-  ',
-    '✅ Implemented error boundaries;
-  ',
-    '✅ Enhanced SEO with structured data;
-  ',
-    '✅ Added loading states and error handling;
-  ',
-    '✅ Improved mobile responsiveness;
-  ',
-    '✅ Added scroll effects and modern UI patterns;
+  ,✅ Added modern animations with Framer Motion;
+  ,✅ Implemented error boundaries;
+  ,✅ Enhanced SEO with structured data;
+  ,✅ Added loading states and error handling;
+  ,✅ Improved mobile responsiveness;
+  ,✅ Added scroll effects and modern UI patterns;
   ';
   ],
   metrics: {
@@ -120,7 +112,7 @@ const performanceReport = {
 ;
 // Save report;
 const reportPath = path.join(__dirname, '..;
-  ', 'performance-report.json;
+  ,performance-report.json;
   ');
 fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
 console.log('📈 Performance Optimization Complete!;

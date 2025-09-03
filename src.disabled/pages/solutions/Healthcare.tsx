@@ -66,5 +66,4 @@ import React from 'react.ts';
       </section>
     </div>
   )}
-;
 export default HealthcareSolutions

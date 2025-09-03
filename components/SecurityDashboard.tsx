@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react';
-
+import React, { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react'
 interface SecurityMetrics {
+<<<<<<< HEAD
   overallScore: number;
   vulnerabilities: {
     critical: number;
@@ -16,8 +16,25 @@ interface SecurityMetrics {
 const SecurityDashboard: React.FC = () => {
   const [security, setSecurity] = useState<SecurityMetrics | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+=======
+import React, { useEffect, useState  }  from 'reactreact'
+import { motion  } from 'lucide-react';import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  }  from 'lucide-react;interface SecurityMetrics {
+  overallScore: number
+  vulnerabilities: {
+    critical: number
+    high: number
+    medium: number
+    low: number
+  }
+  lastScan: Date
+}
+>>>>>>> main
 
+const SecurityDashboard: React.FC = () => {
+  const [security, setSecurity] = useState<SecurityMetrics | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
   useEffect(() => {
+<<<<<<< HEAD
     // Simulate fetching security data
     const fetchSecurityData = async () => {
       setIsLoading(true);
@@ -53,6 +70,34 @@ const SecurityDashboard: React.FC = () => {
   };
 
   if (isLoading) {
+=======
+    // Mock security data
+    const mockData: SecurityMetrics = {
+      overallScore: Math.floor(Math.random() * 20) + 80,
+      vulnerabilities: {
+        critical: Math.floor(Math.random() * 2),
+        high: Math.floor(Math.random() * 5),
+        medium: Math.floor(Math.random() * 8),
+        low: Math.floor(Math.random() * 15)
+      },
+      lastScan: new Date()
+    }
+    setTimeout(() => {
+
+  useEffect(() => {
+    // Mock security data
+const mockData: SecurityMetrics = {
+      overallScore: Math.floor(Math.random() * 20) + 80, vulnerabilities: {
+        critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15)
+      }, lastScan: new Date()}
+
+    setTimeout(() => {
+      setSecurity(mockData)
+      setIsLoading(false)
+    }, 1000)
+  }, [])
+  if (isLoading || !security) {
+>>>>>>> main
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center">
@@ -63,6 +108,7 @@ const SecurityDashboard: React.FC = () => {
     );
   }
 
+<<<<<<< HEAD
   if (!security) {
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
@@ -73,6 +119,13 @@ const SecurityDashboard: React.FC = () => {
     );
   }
 
+=======
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-500'
+    if (score >= 70) return 'text-yellow-500'
+    return 'text-red-500'
+  }
+>>>>>>> main
   return (
     <div className="min-h-screen bg-gray-900 text-white p-6">
       <div className="max-w-7xl mx-auto">
@@ -106,6 +159,7 @@ const SecurityDashboard: React.FC = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </motion.div>
 
         {/* Vulnerability Breakdown */}
@@ -124,6 +178,27 @@ const SecurityDashboard: React.FC = () => {
               {security.vulnerabilities.critical}
             </div>
             <p className="text-sm text-gray-400">Immediate attention required</p>
+=======
+  if (isLoading || !security) {
+    return (
+<div className='flex items-center justify-center p-8'>'        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500'></div>'      </div>'    )'
+  }
+
+  const getScoreColor = (score: number): string => {
+    if (score >= 90) return 'text-green-500
+  
+   if (score >= 70) return
+  'text-yellow-500
+   return
+  'text-red-500
+ }'
+  return (
+    <div className='space-y-6'>'      <div className='flex items-center justify-between'>'        <h2 className='text-2xl font-bold text-gray-900 dark: text-white flex items-center'>'          <Shield className='w-6 h-6 mr-2 text-blue-500' />'          Security Dashboard'        </h2></div>'
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700''      >'        <div className='text-center'>'          <div className='inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 dark:bg-green-900/20'>'            <span className={`text-3xl font-bold ${getScoreColor(security.overallScore)}`}>'              {security.overallScore}`            </span>'
+>>>>>>> main
           </div>
 
           <div className="bg-gray-800 rounded-lg p-6">
@@ -225,7 +300,14 @@ const SecurityDashboard: React.FC = () => {
         </motion.div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
 
 export default SecurityDashboard;
+=======
+  )
+}
+
+export default SecurityDashboard
+>>>>>>> main

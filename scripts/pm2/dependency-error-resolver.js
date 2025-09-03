@@ -1,10 +1,8 @@
 #!/usr/bin/env node;
 import { execSync, spawn } from;
   'child_process';
-import fs from;
-  'fs';
-import path from;
-  'path';
+import fs from "fsfs';
+import path from "pathpath';
 class DependencyErrorResolver {
   constructor() {
     this.checkInterval = process.env.CHECK_INTERVAL || 600000 // 10 minutes;
@@ -40,7 +38,6 @@ class DependencyErrorResolver {
         failed: [],
         skipped: []},
       recommendations: []}
-;
     try {
       // Check for missing dependencies;
       await this.checkMissingDependencies(report);
@@ -165,8 +162,7 @@ class DependencyErrorResolver {
   async checkDependencyConflicts(report) {
     try {
       const packageJson = JSON.parse(fs.readFileSync(
-  'package.json',
-  'utf8'));
+  'package.json,utf8'));
       const conflicts = [];
       // Check for peer dependency conflicts;
       if (packageJson.peerDependencies) {
