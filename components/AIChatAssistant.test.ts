@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import AIChatAssistant from './AIChatAssistant;
 
 describe('AIChatAssistant', () => {
@@ -16,3 +17,5 @@ describe('AIChatAssistant', () => {
 // Add interaction tests based on component functionality
   });
 });
+=======
+>>>>>>> main

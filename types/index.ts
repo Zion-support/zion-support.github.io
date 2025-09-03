@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Global types for the Zion Tech Group application
 
 export interface Service {
@@ -238,6 +239,7 @@ export interface Project {
   }[];
 }
 
+<<<<<<< HEAD
 export interface User {
   id: string;
   email: string;
@@ -280,6 +282,45 @@ export interface Notification {
   id: string;
   type: 'info' | 'success' | 'warning' | 'error';
   title: string;
+=======
+// Utility types
+export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
+export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
+export type DeepPartial<T> = {
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+};
+
+// Component prop types
+export interface BaseComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  'data-testid'?: string;
+}
+
+export interface ButtonProps extends BaseComponentProps {
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
+  size?: 'sm' | 'md' | 'lg';
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+export interface InputProps extends BaseComponentProps {
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
+  error?: string;
+  disabled?: boolean;
+  required?: boolean;
+}
+
+// API types
+export interface ApiError {
+  status: number;
+>>>>>>> main
   message: string;
   timestamp: Date;
   read: boolean;
@@ -339,6 +380,7 @@ export interface Analytics {
   }[];
 }
 
+<<<<<<< HEAD
 export interface SEO {
   title: string;
   description: string;
@@ -490,3 +532,15 @@ export interface Configuration {
     endTime?: Date;
   };
 }
+=======
+// Environment types
+export interface Environment {
+  NODE_ENV: 'development' | 'production' | 'test';
+  NEXT_PUBLIC_API_URL?: string;
+  NEXT_PUBLIC_APP_URL?: string;
+  NEXT_PUBLIC_GA_ID?: string;
+  NEXT_PUBLIC_SENTRY_DSN?: string;
+}
+=======
+>>>>>>> main
+>>>>>>> main

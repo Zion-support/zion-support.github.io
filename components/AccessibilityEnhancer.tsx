@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -20,11 +21,48 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
+=======
+import React, { useEffect } from "react"
+const AccessibilityEnhancer: React.FC = () => {
+  useEffect(() => {"
+    if (typeof window !== "undefined") {,
+      // comment
+const handleKeyDown = (event: KeyboardEvent) => {"
+        if (event.key === "Tab") {",
+          document.body.classList.add("keyboard-navigation"),
+        }
 
-    // Apply initial styles
-    applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
-  }, []);
+      }
 
+      const handleMouseDown = () => {"
+        document.body.classList.remove("keyboard-navigation")
+}
+
+"
+      document.addEventListener("keydown", handleKeyDown)
+}
+      document.addEventListener("mousedown", handleMouseDown)
+}
+      // comment
+const style = document.createElement("style")
+}
+      style.textContent = "
+        .keyboard-navigation *:focus {
+          outline: 2px solid #3B82F6 !important,
+          outline-offset: 2px !important,
+      "
+      document.head.appendChild(style)
+}
+      return () => {"
+        document.removeEventListener("keydown", handleKeyDown)
+}
+        document.removeEventListener("mousedown", handleMouseDown)
+}
+>>>>>>> main
+
+    }
+
+<<<<<<< HEAD
   const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
     const root = document.documentElement;
     
@@ -128,3 +166,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 };
 
 export default AccessibilityEnhancer;
+=======
+  }, [])
+}
+  return null
+
+
+'export default AccessibilityEnhancer
+>>>>>>> main

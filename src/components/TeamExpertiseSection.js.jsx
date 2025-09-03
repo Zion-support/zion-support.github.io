@@ -1,0 +1,1 @@
+const teamMembers = [], achievements[50+ AI Projects, "15 Research Papers", AI Innovation Award 2023], rating: 4.9, projects: 45, location: San Francisco CA, linkedin "https "

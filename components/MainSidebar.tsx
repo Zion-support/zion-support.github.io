@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState              } from 'react.ts;
 import Link from 'next/link.ts;
 import { Home, Briefcase, ;'  Users, Phone, 
@@ -201,3 +202,24 @@ className = "fixed inset-0 bg-black/50 z-40 lg: hidden""          onClick={onClo
 };
 
 export default MainSidebar;
+=======
+Smartphone,
+  Settings,
+  User,
+  Bell,
+  BookOpen,
+  Award,
+  Leaf,
+} from "lucide-react.ts"
+interface SidebarProps extends React.PropsWithChildren<{}> {
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean,;
+  onClose: ()               => void}
+
+  const router = useRouter()
+}
+  const [expandedSections, setExpandedSections] = useState<any>([])
+}
+        <div className = "p-4 border-t border-zion-blue-light">"
+          <div className="mb-4 space-y-2">
+            {contactInfo.map((contact, index) => ("'
+>>>>>>> main
