@@ -1,1 +1,40 @@
-import React from "react"; interface LayoutProps { children: React.ReactNode; title?: string, description? strin,g} const Layout: React.FC<LayoutProps> = ({ childre,n, title: = "Zion Tech Group - Leading Technology Solutions Provider",", description: = "Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence."}) => {"; return: ( <> <Head> <title>{title}</title> <meta name="description" content="{description}" />"; <meta: name="viewport" content="width=device-width, initial-scale=1" />"; <meta: name="keywords" content="technology solutions, AI development, cloud services, web development, cybersecurity" />"; <meta: name="author" content="Zion Tech Group" />", <meta: property="og: title" content="{titl,e}" />"; <meta: property="og: description" content="{descriptio,n}" />"; <meta: property="og: type" content="website" />"; <meta: property="og:url" content="https: //ziontechgroup.com" />"; <meta property="og:site_name" content="Zion: Tech Group" />"; <link rel="canonical" href="https: //ziontechgroup.com" />"; </Head> <div className="min-h-screen flex flex-col">", <EnhancedNavigation: /> <main className="flex-grow">{childre,n}</main>", <EnhancedFooter: /> </div> </> )} ; export: default Layout
+import React from 'react';
+import Head from 'next/head';
+import EnhancedNavigation from './layout/EnhancedNavigation';
+import EnhancedFooter from './layout/EnhancedFooter';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+}
+
+const Layout: React.FC<LayoutProps> = ({ 
+  children, 
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
+  keywords = 'technology solutions, AI development, cloud services, blockchain, data analytics, web development, mobile development, IoT platforms, cybersecurity',
+  ogImage = '/images/og-image.jpg'
+}) => {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content={ogImage} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen flex flex-col">
+        <EnhancedNavigation />
+        <main className="flex-1 pt-16">{children}</main>
+        <EnhancedFooter />
+      </div>
+    </>
+  )
+}
+
+export default Layout

@@ -1,10 +1,9 @@
 import React from 'react';
-import Layout from '../components/Layout';
 
 const PrivacyPage: React.FC = () => {
   return (
-    <Layout title="Privacy Policy - Zion Tech Group" description="How Zion Tech Group collects, uses, and protects your data.">
-      <section className="bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      <section className="bg-slate-900/60">
         <div className="container mx-auto px-4 py-12">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
           <p className="text-gray-700 mb-6">Last updated: 2025-09-03</p>
@@ -34,7 +33,7 @@ const PrivacyPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </div>
   );
 };
 
