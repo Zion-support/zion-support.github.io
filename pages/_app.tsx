@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import SearchBar from '../components/SearchBar';
+import WebVitals from '../components/WebVitals';
 import '../styles/globals.css';
 
 function Header(): any {
@@ -41,19 +42,24 @@ function Header(): any {
         </button>
       </nav>
       
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+      <div 
+        className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}
+        role="navigation"
+        aria-label="Mobile navigation menu"
+        aria-hidden={!mobileMenuOpen}
+      >
         <div className="md:hidden mb-4">
           <SearchBar />
         </div>
-        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
-        <Link href="/cloud-devops" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
-        <Link href="/cybersecurity" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
-        <Link href="/quantum-computing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Quantum</Link>
-        <Link href="/docs" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Docs</Link>
-        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
-        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} aria-label="Navigate to home page">Home</Link>
+        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} aria-label="View all services">All Services</Link>
+        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} aria-label="Browse services catalog">Catalog</Link>
+        <Link href="/cloud-devops" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} aria-label="Learn about cloud DevOps services">Cloud DevOps</Link>
+        <Link href="/cybersecurity" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} aria-label="Explore cybersecurity solutions">Cybersecurity</Link>
+        <Link href="/quantum-computing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} aria-label="Discover quantum computing services">Quantum</Link>
+        <Link href="/docs" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} aria-label="Access documentation">Docs</Link>
+        <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)} aria-label="View pricing information">Pricing</Link>
+        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)} aria-label="Contact us">Contact</Link>
       </div>
     </header>
   );
@@ -145,6 +151,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
       <PerformanceMonitor />
+      <WebVitals />
       <Header />
       <Component {...pageProps} />
       <Footer />

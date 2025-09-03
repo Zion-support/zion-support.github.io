@@ -163,7 +163,11 @@
     "automation:security": "node automation/security-scanner.cjs",
     "build:analyze": "ANALYZE=true npm run build",
     "build:prod": "NODE_ENV=production npm run build",
-    "start:prod": "NODE_ENV=production npm start"
+    "start:prod": "NODE_ENV=production npm start",
+    "analyze:bundle": "ANALYZE=true npm run build",
+    "lighthouse": "lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html --chrome-flags=\"--headless\"",
+    "security:audit": "npm audit --audit-level=moderate",
+    "security:fix": "npm audit fix --force"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
