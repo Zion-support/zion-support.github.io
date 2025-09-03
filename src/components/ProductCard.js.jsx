@@ -64,6 +64,22 @@ export default function ProductCard(  {product, onBuy, buyDisabled = false }) {c
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
+<<<<<<< HEAD
+        )}
+      </div>
+    </div>)}
+
+
+export { ProductCard };
+
+export { ProductCard };
+
+export { ProductCard };
+
+export { ProductCard };
+
+export { ProductCard };
+=======
         </div>"
 "
         <div className = "text-left>"
@@ -123,4 +139,5 @@ export { ProductCard }
     </div>
   )}"
 "`"""
+>>>>>>> main
 >>>>>>> main

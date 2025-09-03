@@ -1,3 +1,97 @@
+<<<<<<< HEAD
+import React, { useState, useMemo } from 'react';
+export default AdvancedServiceInnovationHub;
+import { Badge } from './ui / badge';
+export default function Page() {
+ from './ui/badge';"
+import { Input } from './ui/input';
+export default function Page() {
+,
+        {
+
+            id: 'synthetic-biology',
+            title: 'Synthetic Biology Revolution',
+            description: 'Engineering of custom organisms and biological systems for industrial applications.',
+            category: 'biotech-ai',
+            impact: 'High',
+            timeline: '2025-2035',
+            adoption: 70,
+            investment: '$150B+',
+            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],;
+            technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],;
+            status: 'Growing'
+        },
+        {
+
+            id: 'brain-computer-interfaces',
+            title: 'Brain-Computer Interface Revolution',
+            description: 'Direct neural control of computers and digital systems for enhanced human capabilities.',
+            category: 'biotech-ai',
+            impact: 'High',
+            timeline: '2030-2040',
+            adoption: 40,
+            investment: '$80B+',
+            keyPlayers['Neuralink',Kernel',Medical Device Companies'],;
+            technologies['Neural Interfaces',Signal Processing',AI/ML'],;
+            status: 'Emerging'
+
+    ];
+    const filteredTrends = useMemo(() => {
+        return innovationTrends.filter(trend => {
+
+            const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                trend.description.toLowerCase().includes(searchTerm.toLowerCase());
+            return matchesCategory && matchesImpact && matchesStatus && matchesSearch})}, [selectedCategory, selectedImpact, selectedStatus, searchTerm]);
+    const getImpactColor = (impact) => {
+
+        switch(impact) {
+
+            case 'High': return 'bg-red-100 text-red-800';
+            case 'Medium': return 'bg-yellow-100 text-yellow-800';
+            case 'Low': return 'bg-green-100 text-green-800';
+            default: return 'bg-gray-100 text-gray-800'}
+    };
+    const getStatusColor = (status) => {
+
+        switch(status) {
+
+            case 'Emerging': return 'bg-blue-100 text-blue-800';
+            case 'Growing': return 'bg-green-100 text-green-800';
+            case 'Mature': return 'bg-orange-100 text-orange-800';
+            case 'Disruptive': return 'bg-purple-100 text-purple-800';
+            default: return 'bg-gray-100 text-gray-800'}
+    };
+    const getCategoryIcon = (category) => {
+
+        switch(category) {
+'"
+            case 'quantum': return <Atom className="w-5 h-5"/>;'"
+            case 'ai': return <Brain className="w-5 h-5"/>;'"
+            case 'space-tech': return <Satellite className="w-5 h-5"/>;'"
+            case 'green-tech': return <Leaf className="w-5 h-5"/>;'"
+            case 'biotech-ai': return <Dna className="w-5 h-5"/>;"
+            default: return <Cpu className="w-5 h-5"/>}
+    };
+    const categories = ['"
+        { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },"
+        { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4"/> },"
+        { id: 'ai', name: 'Artificial Intelligence', icon: <Brain className="w-4 h-4"/> },"
+        { id: 'space-tech', name: 'Space Technology', icon: <Satellite className="w-4 h-4"/> },"
+        { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4"/> },"
+        { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4"/> }
+    ];"
+    return (<div className="max-w-7xl mx-auto p-6">
+      {/* Header */}
+      <motion.div initial = {
+
+  { opacity: 0,
+  y: 20
+
+}} animate = {
+
+  { opacity: 1,
+  y: 0
+=======
 import React { useState, useMemo } from "react";""";,"});,"})","});,"})","});,"})""""";,"});,"})""""";,"});,"})""""";,"});,"})","});,"})"
 const AdvancedServiceInnovationHub = () => {}"});,"})"
 ";,"});,"})"
@@ -330,6 +424,7 @@ export default AdvancedServiceInnovationHub,"});,"});"
 }}}}}}"});,"})"
 export { AdvancedServiceInnovationHub };,"});,"})"
 const AdvancedServiceInnovationHub = () => {}
+>>>>>>> main
 
 "
 ""
@@ -1193,6 +1288,24 @@ of emerging technologies and capitalize on future opportunities.""""
               <Zap className="w-5 h-5 mr-2"  />""
               Speak with an Expert,
             </Button>
+<<<<<<< HEAD
+          </div>
+        </div>
+      </motion.div>
+    </div>)};
+export default AdvancedServiceInnovationHub;
+}}}}}}
+
+export { AdvancedServiceInnovationHub };
+
+export { AdvancedServiceInnovationHub };
+
+export { AdvancedServiceInnovationHub };
+
+export { AdvancedServiceInnovationHub };
+
+export { AdvancedServiceInnovationHub };
+=======
     </div>)}
 
 export default AdvancedServiceInnovationHub
@@ -1206,3 +1319,4 @@ import { Card, CardContent, CardHeader, CardTitle }  from "./ui/card,"
 import { Button }  from "./ui/button,"
 import { Badge }  from "./ui/badge,"
 """
+>>>>>>> main

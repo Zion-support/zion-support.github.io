@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react"
 import Link from "next/link"
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 } from "lucide-react"
@@ -139,3 +141,4 @@ export default function AiBusinessIntelligence() {
       </section>
     </div>
   ),
+>>>>>>> main

@@ -280,6 +280,22 @@ const NotFound = () => {}""
             +1 302 464 0950,
           </a>
         </motion.p>
+<<<<<<< HEAD
+      </motion.div>
+    </div>)};
+export default NotFound;
+
+
+export { NotFound };
+
+export { NotFound };
+
+export { NotFound };
+
+export { NotFound };
+
+export { NotFound };
+=======
       </motion.div>;,
     </div>)}
 
@@ -307,4 +323,5 @@ export { NotFound }
 export { NotFound }";
 """;
 "
+>>>>>>> main
 >>>>>>> main

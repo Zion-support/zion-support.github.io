@@ -1,9 +1,9 @@
 
-const fs = require("fs")
+const fs = require("$1");
 const path = require("path")
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("$1");
+const path = require("$1");
 const { execSync } = require("child_process")
 class PerformanceOptimizer {
   constructor() {
@@ -79,8 +79,8 @@ module.exports = {
     this.log("📊 Creating performance monitoring scripts...")
     try {
       const performanceScript = `
-const { execSync } = require("child_process")
-const fs = require("fs")
+const { execSync } = require("$1");
+const fs = require("$1");
 const path = require("path")
 >>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 class PerformanceMonitor {

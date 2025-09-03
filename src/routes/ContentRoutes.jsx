@@ -1,5 +1,20 @@
 import React from "react"
   );
+<<<<<<< HEAD
+};
+export default ContentRoutes;
+
+
+export { ContentRoutes };
+
+export { ContentRoutes };
+
+export { ContentRoutes };
+
+export { ContentRoutes };
+
+export { ContentRoutes };
+=======
 export default function Contentroutes() {
   return (
     <div className="min-h-screen bg-white">
@@ -11,3 +26,4 @@ export default function Contentroutes() {
       </div>
   )
 }
+>>>>>>> main

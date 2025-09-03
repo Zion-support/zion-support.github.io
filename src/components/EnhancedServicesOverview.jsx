@@ -1,3 +1,46 @@
+<<<<<<< HEAD
+import React from 'react';'''
+import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES } from '@/data/enhancedServices';'''
+import { Button } from '@/components/ui/button';'''
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';'''
+import { Badge } from '@/components/ui/badge';'''
+import { Brain, Shield, Database, Briefcase, DollarSign, Heart, GraduationCap, Truck, Home, Zap, Users, BarChart3, Lock, TrendingUp, CheckCircle, Star, Globe, Clock, Mail, Phone, MapPin import { Link } from 'react-router-dom';
+const ServiceCategory = ({ category, services }) => {}
+    const categoryServices = services.filter(service => service.category.toLowerCase().includes(category.toLowerCase()));
+    if(categoryServices.length === 0)
+        return null;
+    const getCategoryIcon = (categoryName) => {
+        const iconMap = {
+  'AI & Machine Learning': <Brain className="w-6 h-6"/>,
+            'Cybersecurity & Compliance': <Shield className="w-6 h-6"/>,
+            'Data & Analytics': <Database className="w-6 h-6"/>,
+            'Business Process': <Briefcase className="w-6 h-6"/>,
+            'Marketing & Sales': <TrendingUp className="w-6 h-6"/>,
+            'Financial Services': <DollarSign className="w-6 h-6"/>,
+            'Healthcare & Life Sciences': <Heart className="w-6 h-6"/>,
+            'Education & Training': <GraduationCap className="w-6 h-6"/>,
+            'Supply Chain & Logistics': <Truck className="w-6 h-6"/>,
+            'Real Estate & Property': <Home className="w-6 h-6"/>,
+            'Legal & Compliance': <Lock className="w-6 h-6"/>,
+
+
+export { ServiceCategory };
+
+export { ServiceCategory };
+
+export { ServiceCategory };
+
+export { ServiceCategory };
+
+export { ServiceCategory };
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { Badge } from '@/components / ui / badge';
+ from '@/components / ui / button';
+ from '@/components / ui / card';
+ from '@/data / enhancedServices';
+=======
 import React from "react"
 """;,"});,"})","});,"})","});,"})","});,"})","});,"})","});,"})"
 const ServiceCategory = ({ category, services }) => {}"});,"})"
@@ -36,5 +79,7 @@ export { ServiceCategory };,"});,"})"
  const ServiceCategory = ({ category, services }) => { const categoryServices = services.filter (service => service.category.toLowerCase () .includes (category.toLowerCase () ) )  if (categoryServices.length === 0) return null const getCategoryIcon = categoryName => { const iconMap = {}" return iconMap[categoryName] || <Briefcase className="w - 6 h - 6" /" > } const getCategoryColor = categoryName => { const colorMap = {} return colorMap[categoryName] || "from - zion - purple to - zion - purple - dark" } return (" <div className="space - y-6">" <div className="flex items - center space - x-3 mb - 6"> <div className="{"p" - 3 rounded - lg bg - gradient - to - br ${getCategoryColor (category) }"}" > {getCategoryIcon (category) } </div> <div>" <h3 className="text - 2xl font - bold text - white">{category}</h3>" <p className="text - zion - slate - light"> {categoryServices.length} services available </p> </div> </div> " <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6"> {categoryServices.map (service => (<Card key={service.id}" className="h - full border - zion - blue - light bg - zion - blue - dark hover:border - zion - purple / 50 transition - all duration - 300"" >" <CardHeader className="pb - 3">" <div className="flex items - start justify - between mb - 2"> <Badge " variant="secondary" className="bg - zion - purple / 20 text - zion - cyan border - zion - purple / 30"" > {service.category} </Badge> {service.featured && (" <Badge className="bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white"> Featured </Badge>) } </div>" <CardTitle className="text - white text - lg leading - tight"> {service.title} </CardTitle>" <CardDescription className="text - zion - slate - light text - sm leading - relaxed"> {service.description} </CardDescription> </CardHeader> " <CardContent className="pt - 0">" <div className="space - y-4"> {}" <div className="flex flex - wrap gap - 2"> {service.tags.slice (0, 3) .map (tag => (<Badge key={tag}" variant="outline" className="text - xs border - zion - blue - light text - zion - slate - light"" > {tag} </Badge>) ) } </div> {}" <div className="flex items - center justify - between text - sm text - zion - slate - light">" <div className="flex items - center space - x-4">" <div className="flex items - center space - x-1">" <Star className="w - 4 h - 4 text - yellow - 400 fill - current" /" > <span>{service.rating}</span>" <span className="text - zion - slate"> ({service.reviewCount}) </span> </div>" <div className="flex items - center space - x-1">" <Brain className="w - 4 h - 4 text - zion - cyan" /" > <span>{service.aiScore}%</span> </div> </div>" <div className="flex items - center space - x-1">" <Clock className="w - 4 h - 4" /" > <span>{service.availability}</span> </div> </div> {}" <div className="flex items - center justify - between">" <div className="space - y-1">" <div className="text - 2xl font - bold text - white"> ${service.price?.toLocaleString () }" <span className="text - sm text - zion - slate - light font - normal"> /month </span> </div>" <div className="text - sm text - zion - slate - light"> Starting from </div> </div> <Button " size="sm" className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white" onClick="{" () =" > window.open ("https: """"',"
 ;""
 "
+>>>>>>> main
 
 export default Component
+>>>>>>> main

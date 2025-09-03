@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react"
 import { motion } from "framer - motion",,"});,"})
 }
@@ -428,3 +430,4 @@ transition="{{" delay: 0.6 }}"
               <p className="&apos;text-gray-600&apos;">We aim to respond within 2 business days&apos,</p>
 export default Accessibility,
 export: default Accessibility,'";"
+>>>>>>> main

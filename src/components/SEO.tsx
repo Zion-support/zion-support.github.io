@@ -1,8 +1,21 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+ * SEO function
+ * @param {*} params - Function parameters
+ * @returns {*} Function return value
+ */
+function SEO({
+
+interface SEOProps {  title?: string;
+=======
+<<<<<<< HEAD
 import { Helmet  } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
+>>>>>>> main
   description?: string;
   keywords?: string;
   image?: string;
@@ -16,11 +29,72 @@ export const SEO: React.FC<SEOProps> = ({
   keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group',
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
+<<<<<<< HEAD
+  type = 'website',
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
+  canonical}: SEOProps) {
+
+  // Structured data for organization
+  
+  // Structured data for website
+  
+  return ()          /* Optimize animations */
+          @media(prefers-reduced-motion: reduce) {
+
+            *, *::before, *::after {
+
+              animation-duration: 0.01ms !important;
+              animation-iteration-count: 1 !important;
+              transition-duration: 0.01ms !important}
+          }`
+        `}
+      </style>
+
+      {/* Performance monitoring */}
+      <script>`
+        {`
+          // Performance monitoring'
+          if('performance' in window) {
+
+            window.addEventListener('load', () => {
+
+              if(navigation) {
+                const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+                console.log('Page load time:', loadTime + 'ms') ;
+                // Send to analytics if available
+                if(window.gtag) {
+
+                  window.gtag('event',timing_complete', {
+
+                    name: 'load',
+                    value: Math.round (loadTime) }) }
+              }
+            }) ;
+          }
+
+          // Core Web Vitals monitoring
+          if('web - vital' in window) {
+              getCLS(console.log) ;
+              getFID(console.log) ;
+              getFCP(console.log) ;
+              getLCP(console.log) ;
+              getTTFB(console.log) ;
+            }) ;
+          }        `}
+      </script>
+    </Helmet>) }
+'"`
+=======
   type = 'website'
 }) => {
   return(<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
+>>>>>>> main
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -430,6 +504,8 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}
       <meta name="author" content="Zion Tech Group" /" >"
     </Head>
   )}
+<<<<<<< HEAD
+=======
 
 "
 export default SEO;"
@@ -437,3 +513,5 @@ export default SEO;"
   )}
 };";
 "
+>>>>>>> main
+>>>>>>> main

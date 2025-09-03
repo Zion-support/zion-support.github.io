@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Route, Routes  } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { ProtectedRoute } from '../components/ProtectedRoute';
@@ -77,4 +79,5 @@ export default function Dashboardroutes() {
       </div>
   )
 }
+>>>>>>> main
 >>>>>>> main

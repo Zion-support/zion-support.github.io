@@ -65,5 +65,154 @@ const testimonials = [], image: "/api / placeholder / 100 / 100", featured: true
 ""
 "
 
+<<<<<<< HEAD
+              <select;
+                value={selectedIndustry}"""
+                onChange={e => setSelectedIndustry(e.target.value)}""""
+                className="px-4 py-2 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors duration-300"""
+              >
+                {industries.map(industry => (<option key={industry} value={industry}>
+                    {industry}
+                  </option>) ) }
+              </select>
+
+              <select;
+                value={selectedRating}"""
+                onChange={e => setSelectedRating(e.target.value)}""""
+                className="px-4 py-2 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-lg text-white focus:border-zion-cyan focus:outline-none transition-colors duration-300"""
+              >
+                {ratings.map(rating => (<option key={rating} value={rating}>
+                    {rating}
+                  </option>) ) }
+              </select>
+            </div>"""
+""""
+            <div className="text-zion-slate-light text-sm">'
+              Showing {filteredTestimonials.length} of {testimonials.length}{' '}
+              testimonials;
+            </div>
+          </div>
+        </div>
+      </section>
+"""
+      {/* Testimonials Grid */}""""
+      <section className="py-16">""""
+        <div className="container-responsive">""""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <AnimatePresence>
+              {filteredTestimonials.map((testimonial, index) => (<motion.div;
+                  key={testimonial.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}"""
+                  transition={{ duration: 0.5, delay: index * 0.1 }}""""
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105""""
+                >""""
+                  <div className="flex items-center gap-4 mb-4">
+                    <img;
+                      src={testimonial.image}"""
+                      alt={testimonial.name}""""
+                      className="w-12 h-12 rounded-full object-cover"""
+                    />"""
+                    <div>""""
+                      <h3 className="font-semibold text-white">
+                        {testimonial.name}"""
+                      </h3>""""
+                      <p className="text-sm text-zion-slate-light">
+                        {testimonial.role}"""
+                      </p>""""
+                      <p className="text-sm text-zion-cyan">
+                        {testimonial.comp}
+                      </p>
+                    </div>
+                  </div>"""
+""""
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star"""
+                        key={i}""""
+                        className="w-4 h-4 fill-yellow-400 text-yellow-400"""
+                      />
+                    ))}
+                  </div>"""
+""""
+                  <blockquote className="text-zion-slate-light mb-4 italic">""""
+                    "{testimonial.content}"""
+                  </blockquote>"""
+""""
+                  <div className="mb-4">""""
+                    <h4 className="font-medium text-white mb-2">
+                      Project: {testimonial.project}"""
+                    </h4>""""
+                    <div className="space-y-1">
+                      {testimonial.results.map((result, i) => (
+                        <div"""
+                          key={i}""""
+                          className="flex items-center gap-2 text-sm text-zion-slate-light""""
+                        >""""
+                          <CheckCircle className="w-3 h-3 text-green-400" />
+                          {result}
+                        </div>) ) }
+                    </div>
+                  </div>"""
+""""
+                  <div className="flex items-center justify-between text-xs text-zion-slate-light">""""
+                    <span className="px-2 py-1 bg-zion-blue-dark/50 rounded-full">
+                      {testimonial.industry}
+                    </span>"""
+                    {testimonial.featured && (""""
+                      <span className="px-2 py-1 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-full">
+                        Featured;
+                      </span>) }
+                  </div>
+                </motion.div>) ) }
+            </AnimatePresence>
+          </div>
+        </div>
+      </section>
+"""
+      {/* CTA Section */}""""
+      <section className="py-16 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20">""""
+        <div className="container-responsive text-center">""""
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Join Our Success Stories?"""
+          </h2>""""
+          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">'
+            Let's discuss how Zion Tech Group can transform your business with;
+            cutting-edge technology solutions."""
+          </p>""""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
+            <a""""
+              href="/contact""""
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300"""
+            >"""
+              Get Started Today""""
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>"""
+            <a""""
+              href="/services""""
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"""
+            >
+              Explore Our Services;
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+export { Testimonials };
+
+export { Testimonials };
+
+export { Testimonials };
+
+export { Testimonials };
+
+export { Testimonials };
+=======
 export default Component
+>>>>>>> main
 >>>>>>> main

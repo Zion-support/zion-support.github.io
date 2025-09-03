@@ -3,59 +3,59 @@
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
-class AppImprovementAutomation {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
     this.logFile = path.join(this.reportsDir, "app-improvement.log");
     this.ensureDirectories();,
 }
 ;
-  ensureDirectories() {;
-    if (!fs.existsSync(this.reportsDir)) {;
-      fs.mkdirSync(this.reportsDir, { recursive: true });,
+  ensureDirectories() {
+  if (!fs.existsSync(this.reportsDir)) {
+  fs.mkdirSync(this.reportsDir, { recursive: true });,
 }
   }
 ;
-  log(message) {;
-    const timestamp = new Date().toISOString();
+  log(message) {
+  const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");,
 }
 ;
-  async optimizeNextConfig() {;
-    this.log("⚙️ Optimizing Next.js configuration...");
+  async optimizeNextConfig() {
+  this.log("⚙️ Optimizing Next.js configuration...");
     const nextConfigPath = path.join(this.projectRoot, "next.config.js");
-    if (!fs.existsSync(nextConfigPath)) {;
-      this.log("❌ next.config.js not found");
+    if (!fs.existsSync(nextConfigPath)) {
+  this.log("❌ next.config.js not found");
       return { success: false, error: "next.config.js not found" }
     }
 ;
-    try {;
-      let config = fs.readFileSync(nextConfigPath, "utf8");
+    try {
+  let config = fs.readFileSync(nextConfigPath, "utf8");
       // Remove deprecated options;
       config = config.replace(/newNextLinkBehavior:\s*true,?/g, "");
       config = config.replace(/esmExternals:\s*[^,}]+[,}]?/g, "");
       // Add performance optimizations;
-      if (!config.includes("experimental:")) {;
-        config = config.replace(;
+      if (!config.includes("experimental:")) {
+  config = config.replace(;
           /(module\.exports\s*=\s*{)/,;
           "$1\n  experimental: {\n    optimizeCss: true,\n    optimizePackageImports: ["lucide-react", "framer-motion"],\n  },";
         );,
 }
 ;
       // Add compression;
-      if (!config.includes("compress:")) {;
-        config = config.replace(;
+      if (!config.includes("compress:")) {
+  config = config.replace(;
           /(module\.exports\s*=\s*{)/,;
           "$1\n  compress: true,";
         );,
 }
 ;
       // Add poweredByHeader: false for security;
-      if (!config.includes("poweredByHeader:")) {;
-        config = config.replace(;
+      if (!config.includes("poweredByHeader:")) {
+  config = config.replace(;
           /(module\.exports\s*=\s*{)/,;
           "$1\n  poweredByHeader: false,";
         );,
@@ -64,25 +64,25 @@ class AppImprovementAutomation {;
       fs.writeFileSync(nextConfigPath, config);
       this.log("✅ Next.js configuration optimized");
       return { success: true }
-    } catch (error) {;
-      this.log(`❌ Failed to optimize Next.js config: ${error.message}`);
+    } catch (error) {
+  this.log(`❌ Failed to optimize Next.js config: ${error.message}`);
       return { success: false, error: error.message }
     }
   }
 ;
-  async optimizePackageJson() {;
-    this.log("📦 Optimizing package.json...");
+  async optimizePackageJson() {
+  this.log("📦 Optimizing package.json...");
     const packageJsonPath = path.join(this.projectRoot, "package.json");
-    if (!fs.existsSync(packageJsonPath)) {;
-      this.log("❌ package.json not found");
+    if (!fs.existsSync(packageJsonPath)) {
+  this.log("❌ package.json not found");
       return { success: false, error: "package.json not found" }
     }
 ;
-    try {;
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
+    try {
+  const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
       // Add useful scripts;
-      const usefulScripts = {;
-        "dev:clean": "rm -rf .next && npm run dev",;
+      const usefulScripts = {
+  "dev:clean": "rm -rf .next && npm run dev",;
         "build:analyze": "ANALYZE=true npm run build",;
         "build:clean": "rm -rf .next && npm run build",;
         "lint:fix": "next lint --fix",;
@@ -93,17 +93,17 @@ class AppImprovementAutomation {;
 }
       packageJson.scripts = { ...packageJson.scripts, ...usefulScripts }
       // Add engines field for better compatibility;
-      if (!packageJson.engines) {;
-        packageJson.engines = {;
-          node: ">=18.0.0",;
+      if (!packageJson.engines) {
+  packageJson.engines = {
+  node: ">=18.0.0",;
           npm: ">=8.0.0",;,
 }
       }
 ;
       // Add repository info if missing;
-      if (!packageJson.repository) {;
-        packageJson.repository = {;
-          type: "git",;
+      if (!packageJson.repository) {
+  packageJson.repository = {
+  type: "git",;
           url: "git+https://github.com/your-org/your-repo.git",;,
 }
       }
@@ -111,22 +111,22 @@ class AppImprovementAutomation {;
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
       this.log("✅ package.json optimized");
       return { success: true }
-    } catch (error) {;
-      this.log(`❌ Failed to optimize package.json: ${error.message}`);
+    } catch (error) {
+  this.log(`❌ Failed to optimize package.json: ${error.message}`);
       return { success: false, error: error.message }
     }
   }
 ;
-  async createGitHooks() {;
-    this.log("🪝 Setting up Git hooks...");
+  async createGitHooks() {
+  this.log("🪝 Setting up Git hooks...");
     const gitHooksDir = path.join(this.projectRoot, ".git", "hooks");
-    if (!fs.existsSync(gitHooksDir)) {;
-      this.log("❌ Git hooks directory not found");
+    if (!fs.existsSync(gitHooksDir)) {
+  this.log("❌ Git hooks directory not found");
       return { success: false, error: "Git hooks directory not found" }
     }
 ;
-    try {;
-      // Pre-commit hook;
+    try {
+  // Pre-commit hook;
       const preCommitHook = `#!/bin/sh;
 # Pre-commit hook;
 echo "🔍 Running pre-commit checks...";
@@ -169,14 +169,14 @@ echo "✅ Pre-push checks passed";
       fs.chmodSync(prePushPath, "755");
       this.log("✅ Git hooks created");
       return { success: true }
-    } catch (error) {;
-      this.log(`❌ Failed to create Git hooks: ${error.message}`);
+    } catch (error) {
+  this.log(`❌ Failed to create Git hooks: ${error.message}`);
       return { success: false, error: error.message }
     }
   }
 ;
-  async createDockerfile() {;
-    this.log("🐳 Creating optimized Dockerfile...");
+  async createDockerfile() {
+  this.log("🐳 Creating optimized Dockerfile...");
     const dockerfilePath = path.join(this.projectRoot, "Dockerfile");
     const dockerfile = `# Use the official Node.js runtime as the base image;
 FROM node:18-alpine AS base;
@@ -227,18 +227,18 @@ ENV HOSTNAME "0.0.0.0";
 
 CMD ["node", "server.js"];
 `;
-    try {;
-      fs.writeFileSync(dockerfilePath, dockerfile);
+    try {
+  fs.writeFileSync(dockerfilePath, dockerfile);
       this.log("✅ Dockerfile created");
       return { success: true }
-    } catch (error) {;
-      this.log(`❌ Failed to create Dockerfile: ${error.message}`);
+    } catch (error) {
+  this.log(`❌ Failed to create Dockerfile: ${error.message}`);
       return { success: false, error: error.message }
     }
   }
 ;
-  async createDockerCompose() {;
-    this.log("🐳 Creating docker-compose.yml...");
+  async createDockerCompose() {
+  this.log("🐳 Creating docker-compose.yml...");
     const dockerComposePath = path.join(this.projectRoot, "docker-compose.yml");
     const dockerCompose = `version: "3.8";
 
@@ -269,30 +269,30 @@ services:;
       - app;
     restart: unless-stopped;
 `;
-    try {;
-      fs.writeFileSync(dockerComposePath, dockerCompose);
+    try {
+  fs.writeFileSync(dockerComposePath, dockerCompose);
       this.log("✅ docker-compose.yml created");
       return { success: true }
-    } catch (error) {;
-      this.log(`❌ Failed to create docker-compose.yml: ${error.message}`);
+    } catch (error) {
+  this.log(`❌ Failed to create docker-compose.yml: ${error.message}`);
       return { success: false, error: error.message }
     }
   }
 ;
-  async createNginxConfig() {;
-    this.log("🌐 Creating Nginx configuration...");
+  async createNginxConfig() {
+  this.log("🌐 Creating Nginx configuration...");
     const nginxConfigPath = path.join(this.projectRoot, "nginx.conf");
-    const nginxConfig = `events {;
-    worker_connections 1024;,
+    const nginxConfig = `events {
+  worker_connections 1024;,
 }
 ;
-http {;
-    upstream app {;
-        server app:3000;,
+http {
+  upstream app {
+  server app:3000;,
 }
 ;
-    server {;
-        listen 80;
+    server {
+  listen 80;
         server_name localhost;
         # Security headers;
         add_header X-Frame-Options "SAMEORIGIN" always;
@@ -304,8 +304,8 @@ http {;
         gzip_vary on;
         gzip_min_length 1024;
         gzip_types text/plain text/css text/xml text/javascript application/javascript application/xml+rss application/json;
-        location / {;
-            proxy_pass http://app;
+        location / {
+  proxy_pass http://app;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection "upgrade";
@@ -317,26 +317,26 @@ http {;
 }
 ;
         # Static files caching;
-        location ~* \\.(js|css|png|jpg|jpeg|gif|ico|svg)$ {;
-            proxy_pass http://app;
+        location ~* \\.(js|css|png|jpg|jpeg|gif|ico|svg)$ {
+  proxy_pass http://app;
             expires 1y;
             add_header Cache-Control "public, immutable";,
 }
     }
 }
 `;
-    try {;
-      fs.writeFileSync(nginxConfigPath, nginxConfig);
+    try {
+  fs.writeFileSync(nginxConfigPath, nginxConfig);
       this.log("✅ Nginx configuration created");
       return { success: true }
-    } catch (error) {;
-      this.log(`❌ Failed to create Nginx config: ${error.message}`);
+    } catch (error) {
+  this.log(`❌ Failed to create Nginx config: ${error.message}`);
       return { success: false, error: error.message }
     }
   }
 ;
-  async createHealthCheck() {;
-    this.log("🏥 Creating health check endpoint...");
+  async createHealthCheck() {
+  this.log("🏥 Creating health check endpoint...");
     const healthCheckPath = path.join(;
       this.projectRoot,;
       "pages",;
@@ -344,41 +344,41 @@ http {;
       "health.js";
     );
     const apiDir = path.dirname(healthCheckPath);
-    if (!fs.existsSync(apiDir)) {;
-      fs.mkdirSync(apiDir, { recursive: true });,
+    if (!fs.existsSync(apiDir)) {
+  fs.mkdirSync(apiDir, { recursive: true });,
 }
 ;
-    const healthCheck = `export default function handler(req, res) {;
-  const healthCheck = {;
-    uptime: process.uptime(),;
+    const healthCheck = `export default function handler(req, res) {
+  const healthCheck = {
+  uptime: process.uptime(),;
     message: "OK",;
     timestamp: Date.now(),;
     environment: process.env.NODE_ENV,;
     version: process.env.npm_package_version || "1.0.0";,
 }
-  try {;
-    res.status(200).json(healthCheck);,
-} catch (error) {;
-    healthCheck.message = error.message;
+  try {
+  res.status(200).json(healthCheck);,
+} catch (error) {
+  healthCheck.message = error.message;
     res.status(503).json(healthCheck);,
 }
 }
 `;
-    try {;
-      fs.writeFileSync(healthCheckPath, healthCheck);
+    try {
+  fs.writeFileSync(healthCheckPath, healthCheck);
       this.log("✅ Health check endpoint created");
       return { success: true }
-    } catch (error) {;
-      this.log(`❌ Failed to create health check: ${error.message}`);
+    } catch (error) {
+  this.log(`❌ Failed to create health check: ${error.message}`);
       return { success: false, error: error.message }
     }
   }
 ;
-  async createCIWorkflow() {;
-    this.log("🔄 Creating GitHub Actions workflow...");
+  async createCIWorkflow() {
+  this.log("🔄 Creating GitHub Actions workflow...");
     const workflowDir = path.join(this.projectRoot, ".github", "workflows");
-    if (!fs.existsSync(workflowDir)) {;
-      fs.mkdirSync(workflowDir, { recursive: true });,
+    if (!fs.existsSync(workflowDir)) {
+  fs.mkdirSync(workflowDir, { recursive: true });,
 }
 ;
     const workflowPath = path.join(workflowDir, "ci.yml");
@@ -438,20 +438,20 @@ jobs:;
     - name: Deploy to production;
       run: echo "Deploy to production server";
 `;
-    try {;
-      fs.writeFileSync(workflowPath, workflow);
+    try {
+  fs.writeFileSync(workflowPath, workflow);
       this.log("✅ GitHub Actions workflow created");
       return { success: true }
-    } catch (error) {;
-      this.log(`❌ Failed to create workflow: ${error.message}`);
+    } catch (error) {
+  this.log(`❌ Failed to create workflow: ${error.message}`);
       return { success: false, error: error.message }
     }
   }
 ;
-  async run() {;
-    this.log("🚀 Starting App Improvement Automation");
-    const results = {;
-      timestamp: new Date().toISOString(),;
+  async run() {
+  this.log("🚀 Starting App Improvement Automation");
+    const results = {
+  timestamp: new Date().toISOString(),;
       optimizations: {},;,
 }
     // Run all optimizations;

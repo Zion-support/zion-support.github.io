@@ -4,9 +4,9 @@ const { execSync, spawn } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
-class CIAutomation {;
-  constructor() {;
-    this.projectRoot = path.resolve(__dirname, "../../");
+class $1 {
+  constructor() {
+  this.projectRoot = path.resolve(__dirname, "../../");
     this.logFile = path.join(;
       this.projectRoot,ci-cd-reports",;
       "ci-automation.log";
@@ -18,24 +18,24 @@ class CIAutomation {;
     this.ensureDirectories();,
 }
 ;
-  ensureDirectories() {;
-    const dirs = [""this."projectRoot/ci-cd-reports"", ""this."projectRoot/test-reports"", ``];
-    dirs.forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
-        fs.mkdirSync(dir, { recursive: true });,
+  ensureDirectories() {
+  const dirs = [""this."projectRoot/ci-cd-reports"", ""this."projectRoot/test-reports"", ``];
+    dirs.forEach(dir => {
+  if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir, { recursive: true });,
 }
     });,
 }
 ;
-  log(message, level = `INFO`) {;
-    const timestamp = new Date().toISOString();
+  log(message, level = `INFO`) {
+  const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
     console.log(`logEntry);
     // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + `\n`);
 
-  log(message, level = "INFO") {;
-    const timestamp = new Date().toISOString();
+  log(message, level = "INFO") {
+  const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
     console.log(`logEntry);
 
@@ -43,27 +43,27 @@ class CIAutomation {;
     fs.appendFileSync(this.logFile, logEntry + "\n");,
 }
 ;
-  async runCommand(command, cwd = this.projectRoot) {;
-    // Append to log file;
+  async runCommand(command, cwd = this.projectRoot) {
+  // Append to log file;
     fs.appendFileSync(this.logFile, logEntry + "\n");`);,
 }`);
 `);
   async runCommand(command, cwd = this.projectRoot) {`);
     return new Promise((resolve, reject) => {this.log(Running command: ${command}`);
-      const child = spawn(command, [], {;
-        shell: true,;
+      const child = spawn(command, [], {
+  shell: true,;
         cwd,;
         stdio: [`pipe`, `pipe`, "pipe"]});
       let stdout = "";
       let stderr = ``;
-      child.stdout.on(`data`, data => {;
-        stdout += data.toString();this.log(`STDOUT: ${data.toString().trim()}`);,
+      child.stdout.on(`data`, data => {
+  stdout += data.toString();this.log(`STDOUT: ${data.toString().trim()}`);,
 });
-      child.stderr.on(`data`, data => {;
-        stderr += data.toString();this.log(`STDERR: ${data.toString().trim()}`);,
+      child.stderr.on(`data`, data => {
+  stderr += data.toString();this.log(`STDERR: ${data.toString().trim()}`);,
 });
-      child.on(`close`, code => {;
-        if (code === 0) {this.log(`Command completed successfully with code ${code}`);
+      child.on(`close`, code => {
+  if (code === 0) {this.log(`Command completed successfully with code ${code}`);
           resolve({ code, stdout, stderr });,
 } else {this.log(`Command failed with code ${code}`, `ERROR`);reject(new Error(`Command failed with code ${code}: ${stderr}`));,
 }
@@ -76,10 +76,10 @@ class CIAutomation {;
 });,
 }
 ;
-  async installDependencies() {;
-    this.log(`Installing dependencies...`);
-    try {;
-      await this.runCommand(`npm ci`);
+  async installDependencies() {
+  this.log(`Installing dependencies...`);
+    try {
+  await this.runCommand(`npm ci`);
       this.log(`Dependencies installed successfully`);
       return true;,
 } catch (error) {  this.log(`Failed to install dependencies: ${error.message  }`, `ERROR`);
@@ -87,16 +87,16 @@ class CIAutomation {;
 }
   }
 ;
-  async runLint() {;
-    this.log(`Running linting...`);
-    try {;
-      await this.runCommand(`npm run lint`);
+  async runLint() {
+  this.log(`Running linting...`);
+    try {
+  await this.runCommand(`npm run lint`);
       this.log(`Linting completed successfully`);
 
-  async runLint() {;
-    this.log("Running linting...");
-    try {;
-      await this.runCommand("npm run lint");
+  async runLint() {
+  this.log("Running linting...");
+    try {
+  await this.runCommand("npm run lint");
       this.log("Linting completed successfully");
       return true;,
 } catch (error) {  this.log(`Linting failed: ${error.message  }`, `ERROR`);
@@ -104,10 +104,10 @@ class CIAutomation {;
 }
   }
 ;
-  async runTypeCheck() {;
-    this.log(`Running type check...`);
-    try {;
-      await this.runCommand(`npm run type-check`);
+  async runTypeCheck() {
+  this.log(`Running type check...`);
+    try {
+  await this.runCommand(`npm run type-check`);
       this.log(`Type check completed successfully`);
       return true;,
 } catch (error) {  this.log(`Type check failed: ${error.message  }`, `ERROR`);
@@ -115,16 +115,16 @@ class CIAutomation {;
 }
   }
 ;
-  async runBuild() {;
-    this.log(`Building project...`);
-    try {;
-      await this.runCommand(`npm run build`);
+  async runBuild() {
+  this.log(`Building project...`);
+    try {
+  await this.runCommand(`npm run build`);
       this.log(`Build completed successfully`);
 
-  async runBuild() {;
-    this.log("Building project...");
-    try {;
-      await this.runCommand("npm run build");
+  async runBuild() {
+  this.log("Building project...");
+    try {
+  await this.runCommand("npm run build");
       this.log("Build completed successfully");
       return true;,
 } catch (error) {  this.log(`Build failed: ${error.message  }`, `ERROR`);
@@ -132,10 +132,10 @@ class CIAutomation {;
 }
   }
 ;
-  async runTests() {;
-    this.log(`Running tests...`);
-    try {;
-      await this.runCommand(`npm test --if-present`);
+  async runTests() {
+  this.log(`Running tests...`);
+    try {
+  await this.runCommand(`npm test --if-present`);
       this.log(`Tests completed successfully`);
       return true;,
 } catch (error) {  this.log(`Tests failed: ${error.message  }`, `WARN`);
@@ -143,11 +143,11 @@ class CIAutomation {;
 }
   }
 ;
-  async verifyBuildOutput() {;
-    this.log(`Verifying build output...`);
+  async verifyBuildOutput() {
+  this.log(`Verifying build output...`);
     const distPath = path.join(this.projectRoot, "dist");
-    if (!fs.existsSync(distPath)) {;
-      this.log(`Build output directory not found`, `ERROR`);
+    if (!fs.existsSync(distPath)) {
+  this.log(`Build output directory not found`, `ERROR`);
       return false;,
 }
 ;
@@ -165,13 +165,13 @@ class CIAutomation {;
     return true;,
 }
 ;
-  async generateReport(results) {;
-    const report = {;
-      timestamp: new Date().toISOString(),;
+  async generateReport(results) {
+  const report = {
+  timestamp: new Date().toISOString(),;
       status: results.every(r => r.success) ? `PASSED` : `FAILED`,;
       results: results,;
-      summary: {;
-        total: results.length,;
+      summary: {
+  total: results.length,;
         passed: results.filter(r => r.success).length,;
         failed: results.filter(r => !r.success).length,;,
 },    }
@@ -181,31 +181,31 @@ class CIAutomation {;
     return report;,
 }
 ;
-  async run() {;
-    this.log(`Starting CI automation...`);
+  async run() {
+  this.log(`Starting CI automation...`);
     const results = [];
     // Install dependencies;
     const depsResult = await this.installDependencies();
-    results.push({;
-      step: `install-dependencies`,;
+    results.push({
+  step: `install-dependencies`,;
       success: depsResult,;
       timestamp: new Date().toISOString(),;
 
-  async run() {;
-    this.log("Starting CI automation...");
+  async run() {
+  this.log("Starting CI automation...");
 
     const results = [];
 
     // Install dependencies;
     const depsResult = await this.installDependencies();
-    results.push({;
-      step: "install-dependencies",;
+    results.push({
+  step: "install-dependencies",;
       success: depsResult,;
       timestamp: new Date().toISOString(),;,
 });
 
-    if (!depsResult) {;
-      this.log(Skipping remaining steps due to dependency installation failure",;
+    if (!depsResult) {
+  this.log(Skipping remaining steps due to dependency installation failure",;
         "WARN";
       );
       await this.generateReport(results);
@@ -214,37 +214,37 @@ class CIAutomation {;
 ;
     // Run linting;
     const lintResult = await this.runLint();
-    results.push({;
-      step: "lint",;
+    results.push({
+  step: "lint",;
       success: lintResult,;
       timestamp: new Date().toISOString(),;,
 });
 
     // Run type check;
     const typeCheckResult = await this.runTypeCheck();
-    results.push({;
-      step: "type-check",;
+    results.push({
+  step: "type-check",;
       success: typeCheckResult,;
       timestamp: new Date().toISOString(),;,
 });
     // Run build;
     const buildResult = await this.runBuild();
-    results.push({;
-      step: "build",;
+    results.push({
+  step: "build",;
       success: buildResult,;
       timestamp: new Date().toISOString(),;,
 });
-    if (buildResult) {;
-      // Verify build output;
+    if (buildResult) {
+  // Verify build output;
       const verifyResult = await this.verifyBuildOutput();
-      results.push({;
-        step: `verify-build`,;
+      results.push({
+  step: `verify-build`,;
         success: verifyResult,;
         timestamp: new Date().toISOString()});
       // Run tests;
       const testResult = await this.runTests();
-      results.push({;
-        step: `tests`,;
+      results.push({
+  step: `tests`,;
         success: testResult,;
         timestamp: new Date().toISOString()});,
 }
@@ -252,22 +252,22 @@ class CIAutomation {;
     // Generate final report;
     const report = await this.generateReport(results);
 this.log(`CI automation completed. Status: ${report.status}`);this.log(`Passed: ${report.summary.passed}/${report.summary.total}`);
-    if (report.status === `FAILED`) {;
-      this.log(`CI automation failed. Check the report for details.`, "ERROR");
+    if (report.status === `FAILED`) {
+  this.log(`CI automation failed. Check the report for details.`, "ERROR");
 
-    if (buildResult) {;
-      // Verify build output;
+    if (buildResult) {
+  // Verify build output;
       const verifyResult = await this.verifyBuildOutput();
-      results.push({;
-        step: "verify-build",;
+      results.push({
+  step: "verify-build",;
         success: verifyResult,;
         timestamp: new Date().toISOString(),;,
 });
 
       // Run tests;
       const testResult = await this.runTests();
-      results.push({;
-        step: "tests",;
+      results.push({
+  step: "tests",;
         success: testResult,;
         timestamp: new Date().toISOString(),;,
 });,
@@ -277,18 +277,18 @@ this.log(`CI automation completed. Status: ${report.status}`);this.log(`Passed: 
     const report = await this.generateReport(results);
 this.log(`CI automation completed. Status: ${report.status}`);this.log(`Passed: ${report.summary.passed}/${report.summary.total}`);
 
-    if (report.status === "FAILED") {;
-      this.log("CI automation failed. Check the report for details.", "ERROR");
+    if (report.status === "FAILED") {
+  this.log("CI automation failed. Check the report for details.", "ERROR");
       process.exit(1);,
 }
   }
 }
 ;
 // Run the automation if this script is executed directly;
-if (require.main === module) {;
+if (require.main === module) {
   const ci = new CIAutomation();
-  ci.run().catch(error => {;
-    console.error("CI automation failed: ', error);
+  ci.run().catch(error => {
+  console.error("CI automation failed: ', error);
     process.exit(1);,
 });,
 }

@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+import { useState, useEffect, useCallback } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
+import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
+;
+export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
+    const { trackEvent, trackConversion } = useAnalytics({        enableTracking: enableAnalytics,
+        enableUserBehaviorTracking: true;
+    }) ;
+    const [formData, setFormData] = useState ({ /* empty */ }) ;
+    const [validation, setValidation] = useState ({ /* empty */ }) ;
+    const [isSubmitting, setIsSubmitting] = useState (false) ;
+    const [isSubmitted, setIsSubmitted] = useState (false) ;
+    const [showPassword, setShowPassword] = useState ({ /* empty */ }) ;
+    const [progress, setProgress] = useState (0) ;
+    // Initialize form data and validation;
+    useEffect(() => {}
+=======
+<<<<<<< HEAD
+import { useState, useEffect, useCallback } from 'react';
+export default function Page() {
+) ;
+    const [formData, setFormData] = useState({ /* empty */ });
+    const [validation, setValidation] = useState({ /* empty */ });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [showPassword, setShowPassword] = useState({ /* empty */ });
+    const [progress, setProgress] = useState(0);
+    // Initialize form data and validation
+    useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+>>>>>>> main
+        const initialValidation = {};
+        fields.forEach(field => {
+=======
 import React from "react"
 import { useState, useEffect, useCallback } from "react";,"});,"})","});,"})","});,"})"
 ;,"});,"})"
@@ -408,6 +448,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = "Contact Us", subtitle 
     const;const;const [progress, setProgress] = useState(0)
 }
     // comment    useEffect(() => {}
+>>>>>>> main
 
         const initialValidation = {}
 
@@ -426,6 +467,21 @@ isTouched: false}})
             initialData[field.name] = field.type === &apos;checkbox&apos; ? false : &apos
             initialValidation[field.name] = {}"
                 isValid: !field.required,
+<<<<<<< HEAD
+                message: '',
+                isTouched: false
+            }}) ;
+        setFormData(initialData) ;
+        setValidation(initialValidation) }, [fields]) ;
+    // Update progress based on filled fields
+    useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+=======
                 message: &apos,&apos,
                 isTouched: false}})"
 ";""
@@ -457,6 +513,7 @@ isTouched: false}})
 }
     // comment
     const validateField = useCallback((name, value) => {}
+>>>>>>> main
 
         const;const;const field = fields.find(f => f.name === name)
 }

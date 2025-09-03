@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs = require("fs")
+const fs = require("$1");
 const path = require("path")
 class FileRestorer {
   constructor() {
@@ -19,9 +19,9 @@ class FileRestorer {
       // Fix common corruption patterns
       let fixedContent = content
         // Remove extra semicolons and quotes at end of lines
-        .replace(/;;"$/gm, "")
         .replace(/;"$/gm, "")
-        .replace(/;;$/gm, "")
+        .replace(/;"$/gm, "")
+        .replace(/;$/gm, "")
         
         // Fix unterminated strings
         .replace(/from "([^"]*);$/gm, "from "$1"")
@@ -85,7 +85,7 @@ class FileRestorer {
           try {
             const content = fs.readFileSync(fullPath, "utf8")
             // Check for corruption patterns
-            if (content.includes(";;"") || 
+            if (content.includes(";"") || 
                 content.includes(""") || 
                 content.includes("from "") && content.includes("") ||
                 content.includes("return (") ||

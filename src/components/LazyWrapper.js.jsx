@@ -125,6 +125,31 @@ const timer = setTimeout(() => {}
           size="{loadingSize}""
         /" >"
       </div>
+<<<<<<< HEAD
+    );
+  }
+  return ()
+    <motion.div;
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className={className}
+    >
+      {children}
+    </motion.div>)};
+export default LazyWrapper;
+
+
+export { LazyWrapper };
+
+export { LazyWrapper };
+
+export { LazyWrapper };
+
+export { LazyWrapper };
+
+export { LazyWrapper };
+=======
     )}
 
   return()
@@ -161,4 +186,5 @@ export { LazyWrapper }
 export { LazyWrapper }";
 ;"`"";
 "
+>>>>>>> main
 >>>>>>> main

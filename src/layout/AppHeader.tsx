@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <<<<<<< HEADimport React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
@@ -15,6 +17,11 @@ export function AppHeader() {
     }
   };
 
+<<<<<<< HEAD
+  // Organized Services Categories
+  const servicesCategories = [{
+      title: 'AI & Machine Learning',
+=======
 <<<<<<< HEAD  const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
@@ -69,6 +76,7 @@ export function AppHeader() {
     {
       name: 'AI Solutions',
       href: '/ai-solutions',
+>>>>>>> main
       icon: Brain,
       color: 'from-zion-cyan to-zion-purple',
       dropdown: [
@@ -94,6 +102,79 @@ export function AppHeader() {
       ]
     }
   ];
+<<<<<<< HEAD
+        setServicesDropdownOpen(true);
+        setSolutionsDropdownOpen(false);
+        setCompanyDropdownOpen(false);
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Solutions') {
+
+        setSolutionsDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setCompanyDropdownOpen(false);
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Pricing') {
+        // Use the same dropdown state as solutions for pricing
+        setSolutionsDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setCompanyDropdownOpen(false);
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Company') {
+
+        setCompanyDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setSolutionsDropdownOpen(false);
+        setResourcesDropdownOpen(false)} else if(nav.name === 'Resources') {
+        setResourcesDropdownOpen(true);
+        setServicesDropdownOpen(false);
+        setSolutionsDropdownOpen(false);
+        setCompanyDropdownOpen(false)}
+    } else {
+
+      setActiveNav(null);
+      setServicesDropdownOpen(false);
+      setSolutionsDropdownOpen(false);
+      setCompanyDropdownOpen(false);
+      setResourcesDropdownOpen(false)}
+  };
+
+  const closeAllDropdowns = (...args: unknown[]): unknown => {
+    setServicesDropdownOpen(false);    setSolutionsDropdownOpen(false);
+    setCompanyDropdownOpen(false);
+    setResourcesDropdownOpen(false);
+    setActiveNav(null)};
+
+  return ()
+    <>`
+      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled
+          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
+          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>
+        <div className="container-responsive">"
+          <div className="flex h-20 items-center justify-between">
+            {/* Logo */}"
+            <div className="flex items-center">"
+              <Link to="/" className="flex-shrink-0 group">"
+                <div className="flex items-center space-x-3">"
+                  <div className="relative">"
+                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
+                      <Zap className="w-6 h-6 text-white"  />
+                    </div>"                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                  </div>"
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
+                    Zion Tech Group
+                  </h1>
+                </div>
+                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}            <nav className="hidden lg:flex items-center space-x-8">
+              {navigation.map((item) => ("
+                <div key={item.name} className="relative">
+                  {item.hasDropdown ? ("
+                    <div className="relative">
+                      <button
+                        onClick={() => {
+=======
 
   const quickActions = [
     { name: 'Get Quote', href: '/contact', icon: MessageCircle, color: 'from-zion-cyan to-zion-blue' },
@@ -149,6 +230,7 @@ export function AppHeader() {
                 Services
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
+>>>>>>> main
 
               <AnimatePresence>
                 {activeDropdown === 'services' && (
@@ -757,3 +839,4 @@ export function AppHeader() {
       </AnimatePresence>
     </header>  );
 }
+>>>>>>> main

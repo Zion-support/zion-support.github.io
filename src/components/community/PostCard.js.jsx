@@ -23,6 +23,22 @@ import React from "react"; "export { function };export default function PostCard
             <span>{post.likes} likes</span>
             <span>{post.views} views</span>
           </div>
+<<<<<<< HEAD
+        </div>
+      </div>
+    </div>)}
+
+
+export { PostCard };
+
+export { PostCard };
+
+export { PostCard };
+
+export { PostCard };
+
+export { PostCard };
+=======
       </div>    </div>)}
 ;
 export { PostCard }
@@ -46,3 +62,4 @@ export { PostCard }
 export { PostCard }";
 """;
 "
+>>>>>>> main

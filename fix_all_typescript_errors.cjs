@@ -2,32 +2,33 @@
 const fs = require("fs-extra");
 const path = require("path");
 const glob = require("glob");
-async function fixAllTypeScriptErrors() {;
+async function $1() {
   console.log("🔧 Fixing all TypeScript syntax errors...");
   // Find all TypeScript files;
   const files = glob.sync(`utils/**/*.{ts,tsx}`);
-  for (const file of files) {;
-    try {;
-      console.log(`Processing: ${file}`);
+  for (const file of files) {
+  try {
+  console.log(`Processing: ${file}`);
       let content = await fs.readFile(file, `utf8`);
       let modified = false;
       // Fix common syntax patterns;
-      const patterns = [;
-        // Fix malformed exports;
-        {;
-          from: /export,\s*interface,\s*(\w+)\s*{;/,;
+      const patterns = [
+  // Fix malformed exports;
+        {
+  from: /export,\s*interface,\s*(\w+)\s*{
+  /,;
           to: "export interface $1 {",;,
 },;
         { from: /export,\s*const\s+(\w+)\s*=/, to: "export const $1 =" },;
 
         // Fix malformed imports;
-        {;
-          from: /import\s+(\w+)\s+from\s+"([^"]+)";;/,;
+        {
+  from: /import\s+(\w+)\s+from\s+"([^"]+)";/,;
           to: "import $1 from "$2";",;,
 },;
 
         // Fix malformed variable declarations;
-        { from: /const\s+(\w+)\s*=\s*([^]+);;/, to: "const $1 = $2;" },;
+        { from: /const\s+(\w+)\s*=\s*([^]+);/, to: "const $1 = $2;" },;
 
         // Fix malformed function declarations;
         { from: /function\s+(\w+)\s*\(([^)]*)\)\s*{/, to: "function $1($2) {" },;
@@ -36,8 +37,8 @@ async function fixAllTypeScriptErrors() {;
         { from: /(\w+),\s*(\w+):\s*([^]+);/, to: "$1$2: $3;" },;
 
         // Fix malformed string literals;
-        { from: /"([^"]*)";;/, to: ""$1";" },;
-        { from: /"([^"]*)"";;/, to: ""$1";" },;
+        { from: /"([^"]*)";/, to: ""$1";" },;
+        { from: /"([^"]*)"";/, to: ""$1";" },;
 
         // Fix malformed type annotations;
         { from: /:\s*(\w+),\s*(\w+)/, to: ": $1$2" },;
@@ -61,32 +62,32 @@ async function fixAllTypeScriptErrors() {;
         { from: /(\w+)\s*\[([^\]]*)\]/, to: "$1[$2]" },;
 
         // Fix malformed template literals;
-        { from: /`([^`]*)`;;/, to: "`$1`;" },;
+        { from: /`([^`]*)`;/, to: "`$1`;" },;
 
         // Fix malformed regex;
-        { from: /\/([^\/]*)\/;;/, to: "/$1/;" },;
+        { from: /\/([^\/]*)\/;/, to: "/$1/;" },;
 
         // Fix malformed comments;
-        { from: /\/\/\s*([^]*);;/, to: "// $1" },;
+        { from: /\/\/\s*([^]*);/, to: "// $1" },;
 
         // Fix malformed JSX;
         { from: /<(\w+)\s+([^>]*)>/, to: "<$1 $2>" },;
         { from: /<\/(\w+)>/, to: "</$1>" },;
       ];
 
-      for (const pattern of patterns) {;
-        const newContent = content.replace(pattern.from, pattern.to);
-        if (newContent !== content) {;
-          content = newContent;
+      for (const pattern of patterns) {
+  const newContent = content.replace(pattern.from, pattern.to);
+        if (newContent !== content) {
+  content = newContent;
           modified = true;,
 }
       }
 ;
       // Fix specific patterns for different file types;
-      if (file.includes("supabase/client.ts")) {;
-        content = content;
+      if (file.includes("supabase/client.ts")) {
+  content = content;
           .replace(;
-            /import React from "rea c t";;"/,;
+            /import React from "rea c t";"/,;
             "import React from "react";";
           );
           .replace(;
@@ -99,10 +100,10 @@ async function fixAllTypeScriptErrors() {;
           );,
 }
 ;
-      if (file.includes("testing-system.ts")) {;
-        content = content;
+      if (file.includes("testing-system.ts")) {
+  content = content;
           .replace(;
-            /import React from "rea c t";;"/,;
+            /import React from "rea c t";"/,;
             "import React from "react";";
           );
           .replace(;
@@ -130,10 +131,11 @@ async function fixAllTypeScriptErrors() {;
           );,
 }
 ;
-      if (file.includes("service.ts")) {;
-        content = content;
+      if (file.includes("service.ts")) {
+  content = content;
           .replace(;
-            /export, interface, Service {;/,;
+            /export, interface, Service {
+  /,;
             "export interface Service {";
           );
           .replace(/tit, l, e: stri, n, g;/, "title: string");
@@ -151,10 +153,11 @@ async function fixAllTypeScriptErrors() {;
           );,
 }
 ;
-      if (file.includes("quoteRequests.ts")) {;
-        content = content;
+      if (file.includes("quoteRequests.ts")) {
+  content = content;
           .replace(;
-            /export, interface, QuoteRequest {;/,;
+            /export, interface, QuoteRequest {
+  /,;
             "export interface QuoteRequest {";
           );
           .replace(/service, I, d: stri, n, g;/, "serviceId: string");
@@ -168,15 +171,15 @@ async function fixAllTypeScriptErrors() {;
           );,
 }
 ;
-      if (file.includes("services.ts")) {;
-        content = content.replace(;
+      if (file.includes("services.ts")) {
+  content = content.replace(;
           /export, const serviceCategories\s*=\s*\[{ id: "clo, u d-servic e s", na, m, e: "Cloud Service s" } { id: "ai-servic e s", na, m e: "AI Service s";/,;
           "export const serviceCategories = [{ id: "cloud-services", name: "Cloud Services" }, { id: "ai-services", name: "AI Services" };";
         );,
 }
 ;
-      if (file.includes("sanitizeHtml.ts")) {;
-        content = content;
+      if (file.includes("sanitizeHtml.ts")) {
+  content = content;
           .replace(/if \(!ht, m, l\) retu, r, n ""/, "if (!html) return "";");
           .replace(;
             /sanitiz, e, d = sanitiz, e, d\.repla, c, e\(\/\\s\*on\\w\+\\s\*=\\s\*\["""\]\[^"""\]\*\["""\]\/\)/,;
@@ -184,12 +187,12 @@ async function fixAllTypeScriptErrors() {;
           );,
 }
 ;
-      if (modified) {;
-        await fs.writeFile(file, content);
+      if (modified) {
+  await fs.writeFile(file, content);
         console.log(`✅ Fixed syntax errors in: ${file}`);,
 }
-    } catch (error) { ;
-      console.error(`❌ Error processing ${file }:`, error.message);,
+    } catch (error) {
+  console.error(`❌ Error processing ${file }:`, error.message);,
 }
   }
 ;

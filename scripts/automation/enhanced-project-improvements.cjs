@@ -5,9 +5,9 @@ const path = require("path");
 const { execSync, spawn } = require("child_process");
 const glob = require("glob");
 
-class EnhancedProjectImprovements {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "logs", "project-improvements.log");
     this.improvementsFile = path.join(this.projectRoot, "logs", "improvements-applied.json");
     this.improvementsApplied = 0;
@@ -16,27 +16,27 @@ class EnhancedProjectImprovements {;
     this.ensureDirectories();,
 }
 ;
-  ensureDirectories() {;
-    const dirs = ["logs", "improvements"];
-    dirs.forEach(dir => {;
-      const dirPath = path.join(this.projectRoot, `dir);
-      if (!fs.existsSync(dirPath)) {;
-        fs.mkdirSync(dirPath`, { recursive: true });,
+  ensureDirectories() {
+  const dirs = ["logs", "improvements"];
+    dirs.forEach(dir => {
+  const dirPath = path.join(this.projectRoot, `dir);
+      if (!fs.existsSync(dirPath)) {
+  fs.mkdirSync(dirPath`, { recursive: true });,
 }
     });,
 }
 ;
-  log(message, level = `INFO`) {;
-    const timestamp = new Date().toISOString();
+  log(message, level = `INFO`) {
+  const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(`logMessage);
     fs.appendFileSync(this.logFile, logMessage + `\n`);,
 }
 ;
-  async run() {;
-    this.log(`🚀 Starting Enhanced Project Improvements...`);
-    try {;
-      // Step 1: Performance Optimizations;
+  async run() {
+  this.log(`🚀 Starting Enhanced Project Improvements...`);
+    try {
+  // Step 1: Performance Optimizations;
       await this.applyPerformanceOptimizations();
       // Step 2: Security Enhancements;
       await this.applySecurityEnhancements();
@@ -50,19 +50,19 @@ class EnhancedProjectImprovements {;
     });,
 }
 ;
-  log(message, level = "INFO") {;
-    const timestamp = new Date().toISOString();
+  log(message, level = "INFO") {
+  const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(`logMessage);
     ;
     fs.appendFileSync(this.logFile, logMessage + "\n");,
 }
 ;
-  async run() {;
-    this.log("🚀 Starting Enhanced Project Improvements...");
+  async run() {
+  this.log("🚀 Starting Enhanced Project Improvements...");
     ;
-    try {;
-      // Step 1: Performance Optimizations;
+    try {
+  // Step 1: Performance Optimizations;
       await this.applyPerformanceOptimizations();
       ;
       // Step 2: Security Enhancements;
@@ -93,12 +93,12 @@ class EnhancedProjectImprovements {;
 }
   }
 ;
-  async applyPerformanceOptimizations() {;
-    this.log(`🔧 Applying Performance Optimizations...`);
+  async applyPerformanceOptimizations() {
+  this.log(`🔧 Applying Performance Optimizations...`);
     // Optimize bundle size;
     this.log("  - Optimizing bundle size...");
-    try {;
-      execSync("npm run build", { stdio: `pipe` });
+    try {
+  execSync("npm run build", { stdio: `pipe` });
       // Step 7: Build and Deployment Optimizations;
       await this.applyBuildOptimizations();`);
       `);
@@ -108,13 +108,13 @@ class EnhancedProjectImprovements {;
 }
   }
 ;
-  async applyPerformanceOptimizations() {;
-    this.log("🔧 Applying Performance Optimizations...");
+  async applyPerformanceOptimizations() {
+  this.log("🔧 Applying Performance Optimizations...");
     ;
     // Optimize bundle size;
     this.log("  - Optimizing bundle size...");
-    try {;
-      execSync("npm run build", { stdio: "pipe" });
+    try {
+  execSync("npm run build", { stdio: "pipe" });
       this.improvementsApplied++;
       this.improvementsList.push(`Bundle size optimization`);,
 } catch (error) {  this.log(`    ⚠️ Bundle optimization failed: ${error.message  }`, `WARN`);,
@@ -123,34 +123,34 @@ class EnhancedProjectImprovements {;
     // Add performance monitoring;
     this.log(`  - Adding performance monitoring...`);const performanceMonitor = `;
 // Performance monitoring utility;
-export const performanceMonitor = {;
-  measure: (name, fn) => {;
-    const start = performance.now();
+export const performanceMonitor = {
+  measure: (name, fn) => {
+  const start = performance.now();
     const result = fn();
     const end = performance.now();
     console.log(`\\${name} took \${end - start}ms\`);
     return result;,
 },;
   ;
-  mark: (name) => {;
-    performance.mark(name);,
+  mark: (name) => {
+  performance.mark(name);,
 },;
   ;
-  measureBetween: (startMark, endMark) => {;
-    performance.measure(startMark, startMark, endMark);,
+  measureBetween: (startMark, endMark) => {
+  performance.measure(startMark, startMark, endMark);,
 }
 }
     fs.writeFileSync(path.join(this.projectRoot, ``src/utils/performanceMonitor.ts`"), performanceMonitor);    this.improvementsApplied++;
     this.improvementsList.push("Performance monitoring utility");,
 }
 ;
-  async applySecurityEnhancements() {;
-    this.log("🔒 Applying Security Enhancements...");
+  async applySecurityEnhancements() {
+  this.log("🔒 Applying Security Enhancements...");
     ;
     // Enhanced security configuration;
     const securityConfig = ";
 // Enhanced security configuration;
-export const securityConfig = {;
+export const securityConfig = {
   // Content Security Policy;
   csp: {default-src": [""self"],script-src": ["self", "unsafe-inline"],style-src": ["self", "unsafe-inline"],img-src": [""self"", "data: ", "https: "],connect-src": ["self", "https: "],font-src": ["self", "https: "],object-src": ["none"],media-src": ["self"],frame-src": [""none"];,
 },;
@@ -160,14 +160,14 @@ export const securityConfig = {;
 },;
   ;
   // Input validation;
-  validation: {;
-    sanitizeHtml: (html) => {;
-      // Basic HTML sanitization;
+  validation: {
+  sanitizeHtml: (html) => {
+  // Basic HTML sanitization;
       return html.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, ");,
 },;
     ;
-    sanitizeInput: (input) => {;
-      // Basic input sanitization;
+    sanitizeInput: (input) => {
+  // Basic input sanitization;
       return input.replace(/[<>\""]/g, ");
     // Enhanced security configuration;
     const securityConfig = ";
@@ -175,7 +175,7 @@ export const securityConfig = {;
     // Enhanced security configuration;
     const securityConfig = `);
 // Enhanced security configuration;
-export const securityConfig = {;
+export const securityConfig = {
   // Content Security Policy;
   csp: {default-src": ["self""],script-src": ["self"", ""unsafe-inline""],style-src": ["self", ""unsafe-inline""],img-src": [""self", "data: ", "https: "],connect-src": ["self"", "https: "],font-src": [""self", "https: "],object-src": ["none""],media-src": [""self""],frame-src": [""none""];,
 },;
@@ -188,14 +188,14 @@ export const securityConfig = {;
 },;
   ;
   // Input validation;
-  validation: {;
-    sanitizeHtml: (html) => {;
-      // Basic HTML sanitization;
+  validation: {
+  sanitizeHtml: (html) => {
+  // Basic HTML sanitization;
       return html.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, "");,
 },;
     ;
-    sanitizeInput: (input) => {;
-      // Basic input sanitization;
+    sanitizeInput: (input) => {
+  // Basic input sanitization;
       return input.replace(/[<>\"]/g, "")}
   }
 }
@@ -205,12 +205,12 @@ export const securityConfig = {;
     this.improvementsList.push("Enhanced security configuration");,
 }
 ;
-  async applyCodeQualityImprovements() {;
-    this.log("📝 Applying Code Quality Improvements...");
+  async applyCodeQualityImprovements() {
+  this.log("📝 Applying Code Quality Improvements...");
     // Add TypeScript strict mode configuration;
     const tsConfig = JSON.parse(fs.readFileSync(path.join(this.projectRoot, "tsconfig.json"), "utf8"));
-    tsConfig.compilerOptions = {;
-      ...tsConfig.compilerOptions,;
+    tsConfig.compilerOptions = {
+  ...tsConfig.compilerOptions,;
       strict: true,;
       noImplicitAny: true,;
       strictNullChecks: true,;
@@ -229,8 +229,8 @@ export const securityConfig = {;
     ;
     // Add TypeScript strict mode configuration;
     const tsConfig = JSON.parse(fs.readFileSync(path.join(this.projectRoot, "tsconfig.json"), "utf8"));
-    tsConfig.compilerOptions = {;
-      ...tsConfig.compilerOptions,;
+    tsConfig.compilerOptions = {
+  ...tsConfig.compilerOptions,;
       strict: true,;
       noImplicitAny: true,;
       strictNullChecks: true,;
@@ -254,7 +254,7 @@ export const securityConfig = {;
     this.improvementsList.push("TypeScript strict mode configuration");
     // Add ESLint rules for better code quality;
     const eslintConfig = ";
-module.exports = {;
+module.exports = {
   extends: ["eslint:recommended"", "plugin: ""react/recommended""", "plugin: react-""hooks/recommended"""", "plugin: @typescript-""eslint/recommended""", "plugin: ""prettier/recommended""""],;
   plugins: ["react", "@typescript-eslint", "prettier"],;
   rules: {""prettier/prettier""": "error",""react/react-in-jsx-scope""": "off",""react/prop-types""": "off",@typescript-""eslint/no-unused-vars""": "error",@typescript-""eslint/no-explicit-any""": "warn",@typescript-""eslint/explicit-function-return-type""": "warn",@typescript-""eslint/no-non-null-assertion""": "warn",prefer-const": "error",no-var": "error",object-shorthand": "error",prefer-template": "error`);,
@@ -266,34 +266,34 @@ module.exports = {;
     this.improvementsList.push("Enhanced ESLint configuration");,
 }
 ;
-  async applyUXEnhancements() {;
-    this.log("🎨 Applying User Experience Enhancements...");
+  async applyUXEnhancements() {
+  this.log("🎨 Applying User Experience Enhancements...");
     ;
     // Add loading states and error boundariesconst loadingComponent = ;
 import React from "react";
 
-interface LoadingSpinnerProps {;
+interface LoadingSpinnerProps {
   size?: "small" | "medium" | "large";
   color?: string;
   text?: string;,
 }
 ;
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ;
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = "medium", ;
   color = "#3b82f6",;
   text = "Loading...";,
-}`) => {;
-  const sizeMap = {;
-    small: "w-4 h-4",;
+}`) => {
+  const sizeMap = {
+  small: "w-4 h-4",;
     medium: "w-8 h-8",;
     large: "w-12 h-12";
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ;
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = "medium", ;
   color = "#3b82f6",`);
   text = "Loading..."`);,
-}`) => {;
-  const sizeMap = {;
-    small: "w-4 h-4",;
+}`) => {
+  const sizeMap = {
+  small: "w-4 h-4",;
     medium: `w-8 h-8`,;
     large: `w-12 h-12`;,
 }
@@ -324,32 +324,32 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ;
     // Add error boundaryconst errorBoundary = `;
 import React, { Component, ErrorInfo, ReactNode } from "react";
 
-interface Props {;
+interface Props {
   children: ReactNode;
   fallback?: ReactNode;,
 }
 ;
-interface State {;
+interface State {
   hasError: boolean;
   error?: Error;,
 }
 ;
-export class ErrorBoundary extends Component<Props, State> {;
-  public state: State = {;
-    hasError: false;,
+export class ErrorBoundary extends Component<Props, State> {
+  public state: State = {
+  hasError: false;,
 }
 ;
-  public static getDerivedStateFromError(error: Error): State {;
-    return { hasError: true, error }
+  public static getDerivedStateFromError(error: Error): State {
+  return { hasError: true, error }
   }
 ;
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
-    console.error("Uncaught error:", error, errorInfo);,
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  console.error("Uncaught error:", error, errorInfo);,
 }
 ;
-  public render() {;
-    if (this.state.hasError) {;
-      return this.props.fallback || (;
+  public render() {
+  if (this.state.hasError) {
+  return this.props.fallback || (;
         <div className=min-h-screen flex items-center justify-center bg-gray-50>;
           <div className=text-center">;
             <h1 className=text-2xl font-bold text-gray-900 mb-4>Something went wrong</h1>;
@@ -363,9 +363,9 @@ export class ErrorBoundary extends Component<Props, State> {;
           </div>;
         </div>;
 
-  public render() {;
-    if (this.state.hasError) {;
-      return this.props.fallback || (;
+  public render() {
+  if (this.state.hasError) {
+  return this.props.fallback || (;
         <div className="min-h-screen flex items-center justify-center bg-gray-50">;
           <div className=text-center>;
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>;
@@ -390,8 +390,8 @@ export class ErrorBoundary extends Component<Props, State> {;
     this.improvementsList.push("Error boundary component");,
 }
 ;
-  async applyDocumentationImprovements() {;
-    this.log("📚 Applying Documentation Improvements...");
+  async applyDocumentationImprovements() {
+  this.log("📚 Applying Documentation Improvements...");
     // Create comprehensive README;
     const readme = `# ZION TECH - Enhanced AI-Powered Platform;
 ## 🚀 Overview;
@@ -450,18 +450,18 @@ For support and questions, please contact our team or create an issue in the rep
     this.improvementsList.push("Comprehensive README documentation");,
 }
 ;
-  async applyTestingEnhancements() {;
-    this.log("🧪 Applying Testing Enhancements...");
+  async applyTestingEnhancements() {
+  this.log("🧪 Applying Testing Enhancements...");
     // Enhanced test configuration;
     const jestConfig = `;
-module.exports = {;
+module.exports = {
   testEnvironment: "jsdom",;
   setupFilesAfterEnv: ["<rootDir>/""src/setupTests.ts"""],;
   moduleNameMapping: {^@/(.*)$": "<rootDir>/src/$1",\\.(css|less|scss|sass)$": "identity-obj-proxy"},;
   collectCoverageFrom: ["src/**/*.{js", "jsx", "ts", "tsx}"", "!src/**/*.d.ts", "!""src/index.tsx"""", "!""src/serviceWorker.ts""", ""],;
-  coverageThreshold: {;
-    global: {;
-      branches: 70,;
+  coverageThreshold: {
+  global: {
+  branches: 70,;
       functions: 70,;
       lines: 70,;
       statements: 70}},;
@@ -479,7 +479,7 @@ import { render, RenderOptions  } from "@testing-";library/react"";
 import { Provider  } from "react-redux";
 import { store  } from "../store";
 
-const AllTheProviders: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
+const AllTheProviders: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (;
     <Provider store={store}>;
       {children}
@@ -500,81 +500,80 @@ export { customRender as render }
     this.improvementsList.push("Enhanced test utilities");,
 }
 ;
-  async applyBuildOptimizations() {;
-    this.log("⚡ Applying Build and Deployment Optimizations...");
+  async applyBuildOptimizations() {
+  this.log("⚡ Applying Build and Deployment Optimizations...");
     // Enhanced Next.js configuration;
     const nextConfig = `;
 /** @type {import("next").NextConfig} */;
-const nextConfig = {;
+const nextConfig = {
   reactStrictMode: true,;
   swcMinify: true,;
   compress: true,;
   poweredByHeader: false,;
   ;
   // Performance optimizations;
-  experimental: {;
-    optimizeCss: true,;
+  experimental: {
+  optimizeCss: true,;
     optimizePackageImports: ["@""mui/material""", "@""mui/icons-material"""]},;
   ;
   // Image optimization;
-  images: {;
-    domains: ["localhost"],;
+  images: {
+  domains: ["localhost"],;
     formats: ["""image/webp""", """image/avif"""]},;
   ;
   // Security headers;
-  async headers() {;
-    return ["{;
-        source: "/(.*)"", "headers: [;
-          {;
-            key: "X-Frame-Options"", "value: "DENY"", "}", "{;
-            key: "X-Content-Type-Options"", "value: "nosniff"", "}", "{;
-            key: "Referrer-Policy"", "value: "strict-origin-when-cross-origin"", "}", ""]}];,
+  async headers() {
+  return ["{
+  source: "/(.*)"", "headers: [
+  {
+  key: "X-Frame-Options"", "value: "DENY"", "}", "{
+  key: "X-Content-Type-Options"", "value: "nosniff"", "}", "{
+  key: "Referrer-Policy"", "value: "strict-origin-when-cross-origin"", "}", ""]}];,
 },;
   ;
   // Bundle analyzer;
-  webpack: (config, { dev, isServer }) => {;
-    if (!dev && !isServer) {;
-    ;
-    // Enhanced Next.js configuration;
+  webpack: (config, { dev, isServer }) => {
+  if (!dev && !isServer) {
+  // Enhanced Next.js configuration;
     const nextConfig = `;
 /** @type {import("next").NextConfig} */;
-const nextConfig = {;
+const nextConfig = {
   reactStrictMode: true,;
   swcMinify: true,;
   compress: true,;
   poweredByHeader: false,;
   ;
   // Performance optimizations;
-  experimental: {;
-    optimizeCss: true,;
+  experimental: {
+  optimizeCss: true,;
     optimizePackageImports: ["@"mui/material"", "@"mui/icons-material""],;,
 },;
   ;
   // Image optimization;
-  images: {;
-    domains: ["localhost"],;
+  images: {
+  domains: ["localhost"],;
     formats: [""image/webp"", ""image/avif""],;,
 },;
   ;
   // Security headers;
-  async headers() {;
-    return ["{;
-        source: "/(.*)", "headers: [;
-          {;
-            key: "X-Frame-Options", "value: "DENY", "}", "{;
-            key: "X-Content-Type-Options", "value: "nosniff", "}", "{;
-            key: "Referrer-Policy", "value: "strict-origin-when-cross-origin", "}", "],;,
+  async headers() {
+  return ["{
+  source: "/(.*)", "headers: [
+  {
+  key: "X-Frame-Options", "value: "DENY", "}", "{
+  key: "X-Content-Type-Options", "value: "nosniff", "}", "{
+  key: "Referrer-Policy", "value: "strict-origin-when-cross-origin", "}", "],;,
 },;
     ];,
 },;
   ;
   // Bundle analyzer;
-  webpack: (config, { dev, isServer }) => {;
-    if (!dev && !isServer) {;
-      const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+  webpack: (config, { dev, isServer }) => {
+  if (!dev && !isServer) {
+  const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
       config.plugins.push(;
-        new BundleAnalyzerPlugin({;
-          analyzerMode: "static",;
+        new BundleAnalyzerPlugin({
+  analyzerMode: "static",;
           openAnalyzer: false,;,
 });
       );,
@@ -590,9 +589,9 @@ module.exports = nextConfig;
     this.improvementsList.push(`Enhanced Next.js configuration`);,
 }
 ;
-  generateImprovementsReport() {;
-    const report = {;
-      timestamp: new Date().toISOString(),;
+  generateImprovementsReport() {
+  const report = {
+  timestamp: new Date().toISOString(),;
       totalImprovements: this.improvementsApplied,;
       improvements: this.improvementsList,summary: `Successfully applied ${this.improvementsApplied} improvements to the project.`;,
 }
@@ -606,10 +605,9 @@ module.exports = nextConfig;
 }
 ;
 // Run the improvements;
-if (require.main === module) {;
-
-// Run the improvements;
-if (require.main === module) {;
+if (require.main === module) {
+  // Run the improvements;
+if (require.main === module) {
   const improvements = new EnhancedProjectImprovements();
   improvements.run().catch(console.error);,
 }

@@ -46,6 +46,24 @@ const Header: React.FC = () => {
 
   const navigation = [
 <<<<<<< HEAD
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Resources', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+=======
+<<<<<<< HEAD
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Pricing', href: '/pricing' },
+>>>>>>> main
+    { name: 'Contact', href: '/contact' },
+=======
+<<<<<<< HEAD
     { name: 'Home', href: '/', icon: Home },
     { 
       name: 'Services', 
@@ -96,9 +114,63 @@ const Header: React.FC = () => {
       description: 'Cutting-edge AI & machine learning',
       popular: ['Quantum ML', 'Autonomous Systems', 'AI Cybersecurity', 'Drug Discovery']
     },
+>>>>>>> main
+  ];
+
+  const serviceCategories = [
+    { name: 'AI Solutions', href: '/services/ai-solutions' },
+    { name: 'Cloud & DevOps', href: '/services/cloud' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'Data & Analytics', href: '/services/data' },
+    { name: 'Micro SaaS', href: '/services/micro-saas' },
+    { name: 'Digital Transformation', href: '/services/transformation' },
+  ];
+
+  const solutionCategories = [
+    { name: 'Enterprise', href: '/solutions/enterprise' },
+    { name: 'SMB', href: '/solutions/smb' },
+    { name: 'Startup', href: '/solutions/startup' },
+  ];
+
+  const resourceCategories = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+  ];
+
+  const isActive = (path: string) => location.pathname === path;
+
+  const resourceCategories = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Documentation', href: '/documentation' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'FAQ', href: '/faq' },
   ];
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50' 
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <Brain className="w-5 h-5 text-white" />
+<<<<<<< HEAD
+=======
+=======
     <motion.header 
       className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
         isScrolled ? 'shadow-xl' : 'shadow-lg'
@@ -124,6 +196,8 @@ const Header: React.FC = () => {
             <div className="flex items-center space-x-2 text-sm">
               <MapPin className="w-4 h-4" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
+>>>>>>> main
+>>>>>>> main
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
@@ -192,6 +266,10 @@ const Header: React.FC = () => {
                   )}
                 </AnimatePresence>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 =======
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
@@ -327,6 +405,8 @@ const Header: React.FC = () => {
                 </AnimatePresence>
               </div>
 >>>>>>> main
+>>>>>>> main
+>>>>>>> main
             ))}
           </nav>
 
@@ -344,6 +424,10 @@ const Header: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -647,6 +731,8 @@ initial="{{" opacity: 0, y: 10 }}"
 >>>>>>> main
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main
+>>>>>>> main
             className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -656,6 +742,11 @@ initial="{{" opacity: 0, y: 10 }}"
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 >>>>>>> main
 
       {/* Main navigation */}
@@ -668,6 +759,22 @@ initial="{{" opacity: 0, y: 10 }}"
             </Link>
 
             {/* Desktop Navigation */}
+<<<<<<< HEAD
+            <div className="hidden lg:flex items-center space-x-6">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Home
+              </Link>
+              
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                About
+              </Link>
+=======
             <div className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
                 <Link
@@ -678,6 +785,7 @@ initial="{{" opacity: 0, y: 10 }}"
                   {item.name}
                 </Link>
               ))}
+>>>>>>> main
               
               {/* Services Dropdown */}
               <div className="relative group">
@@ -687,6 +795,21 @@ initial="{{" opacity: 0, y: 10 }}"
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
+<<<<<<< HEAD
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    {serviceCategories.map((category) => (
+                      <Link
+                        key={category.name}
+                        href={category.href}
+                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      >
+                        {category.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+=======
 <<<<<<< HEAD
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
                   <div className="p-4">
@@ -737,6 +860,7 @@ initial="{{" opacity: 0, y: 10 }}"
 className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-700 transition-colors          >"            {isMenuOpen ? <X className="w-6 h-6 /> : <Menu className=w-6 h-6" />}"          </button>"        </div></div>
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -746,6 +870,9 @@ className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-sla
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 >>>>>>> main
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -775,6 +902,8 @@ className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-sla
                         ))}
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height: 0 }}'            transition={{ duration: 0.3 }}
             className="lg:hidden bg-slate-900 border-t border-slate-700          >"            <div className="px-4 py-6 space-y-4>              {navigation.map((item) => ("                <div key={item.name}>
@@ -788,11 +917,15 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
                             <dropdownItem.icon className="w-4 h-4 />                            <span>{dropdownItem.name}</span>"                          </Link>))}
 >>>>>>> main
 >>>>>>> main
+>>>>>>> main
                       </div>
                     </div>
                   ) : (
                     <Link
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 >>>>>>> main
                       key={category.name}
                       href={category.href}
@@ -801,6 +934,11 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
                       {category.name}
                     </Link>
                   ))}
+<<<<<<< HEAD
+                </div>
+              </div>
+
+=======
 >>>>>>> main
                 </div>
 <<<<<<< HEAD
@@ -833,6 +971,7 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
                   Get Started
                 </Button>
 >>>>>>> main
+>>>>>>> main
               </div>
 
               {/* Solutions Dropdown */}
@@ -843,6 +982,23 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
+<<<<<<< HEAD
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    {solutionCategories.map((category) => (
+                      <Link
+                        key={category.name}
+                        href={category.href}
+                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      >
+                        {category.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+=======
 <<<<<<< HEAD
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
 =======
@@ -872,12 +1028,62 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
               >
                 Blog
               </Link>
+>>>>>>> main
               <Link
                 href="/case-studies"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
                 Case Studies
               </Link>
+<<<<<<< HEAD
+
+              <Link
+                href="/pricing"
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                Pricing
+              </Link>
+
+>>>>>>> main
+              {/* Resources Dropdown */}
+              <div className="relative group">
+                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                  Resources
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+<<<<<<< HEAD
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  {resourceCategories.map((category) => (
+                    <Link
+                      key={category.name}
+                      href={category.href}
+                      className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+=======
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-2">
+                    {resourceCategories.map((category) => (
+                      <Link
+                        key={category.name}
+                        href={category.href}
+                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      >
+                        {category.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+=======
               <Link
                 href="/about"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -890,6 +1096,7 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
               >
                 Careers
               </Link>
+>>>>>>> main
               <Link
                 href="/contact"
                 className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -897,6 +1104,10 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
                 Contact
               </Link>
 
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
               {/* CTA Button */}
@@ -942,6 +1153,11 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 >>>>>>> main
                 {navigation.map((item) => (
                   <Link
@@ -956,6 +1172,9 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
                 
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-4">
+<<<<<<< HEAD
+                  <div className="text-gray-700 font-medium mb-2">Services</div>
+=======
 <<<<<<< HEAD
                   <div className="text-gray-700 font-medium mb-3">Services</div>
                   {serviceCategories.map((category) => (
@@ -983,6 +1202,7 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> main
                 <Link
                   href="/"
                   className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
@@ -991,9 +1211,24 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
                   Home
                 </Link>
                 
+<<<<<<< HEAD
+                <Link
+                  href="/about"
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About
+                </Link>
+                
+                {/* Mobile Services */}
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="text-gray-700 font-medium mb-2">Services</div>
+=======
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-4">
                   <div className="text-gray-700 font-medium mb-3">Services</div>
+>>>>>>> main
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
                   {serviceCategories.map((category) => (
@@ -1001,11 +1236,17 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
                       key={category.name}
                       href={category.href}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
                       className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
 =======
 <<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
                       className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -1015,6 +1256,8 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
                   )}
                 </div>
 
+<<<<<<< HEAD
+=======
                 {/* Mobile Solutions */}
                 <div className="border-t border-gray-200 pt-4">
                   <div className="text-gray-700 font-medium mb-2">Solutions</div>
@@ -1023,6 +1266,72 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
                       key={category.name}
                       href={category.href}
                       className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+<<<<<<< HEAD
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+
+                <Link
+                  href="/case-studies"
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Case Studies
+                </Link>
+
+                <Link
+                  href="/pricing"
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Pricing
+                </Link>
+
+>>>>>>> main
+                {/* Mobile Resources */}
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="text-gray-700 font-medium mb-2">Resources</div>
+                  {resourceCategories.map((category) => (
+                    <Link
+                      key={category.name}
+                      href={category.href}
+                      className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
+
+<<<<<<< HEAD
+                {/* Mobile CTA */}
+                <Link
+                  href="/contact"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get Quote
+=======
+                <Link
+                  href="/contact"
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+>>>>>>> main
+                </Link>
+
+                {/* Mobile CTA */}
+                <Link
+                  href="/contact"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get Quote
+=======
 =======
                       className="block py-2 pl-4 text-gray-600 hover:text-blue-600 transition-colors"
 >>>>>>> main
@@ -1072,6 +1381,7 @@ animate={{ opacity: 1, height: 'auto' }}'            exit={{ opacity: 0, height:
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Blog
+>>>>>>> main
 >>>>>>> main
                 </Link>
                 <Link
@@ -1194,6 +1504,12 @@ initial="{{" opacity: 0, height: 0 }}""
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
             </div>
           </motion.div>
         )}

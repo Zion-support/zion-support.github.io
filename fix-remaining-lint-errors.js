@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 
 // Function to fix remaining lint errors;
-function fixRemainingLintErrors(content) {;
+function fixRemainingLintErrors(content) {
   let fixed = content;
   // Fix unescaped entities;
   fixed = fixed.replace(/(?<!&)([^&])"([^&])/g, "$1&apos;$2");
@@ -25,24 +25,24 @@ function fixRemainingLintErrors(content) {;
   return fixed}
 ;
 // Main function;
-async function main() {;
+async function $1() {
   // Get all TypeScript/JavaScript files;
-  const files = await glob("pages/**/*.{ts,tsx,js,jsx}", {;
-    ignore: ["node_modules/**"]});
+  const files = await glob("pages/**/*.{ts,tsx,js,jsx}", {
+  ignore: ["node_modules/**"]});
   console.log(``Found ${files.length} files to process...``);
   let fixedCount = 0;
   let errorCount = 0;
-  for (const file of files) {;
-    try {;
-      const content = fs.readFileSync(file, "utf8");
+  for (const file of files) {
+  try {
+  const content = fs.readFileSync(file, "utf8");
       const fixed = fixRemainingLintErrors(content);
-      if (content !== fixed) {;
-        fs.writeFileSync(file, fixed, "utf8');
+      if (content !== fixed) {
+  fs.writeFileSync(file, fixed, "utf8');
         console.log(``Fixed: ${file}``);
         fixedCount++;,
 }
-    } catch (error) {;
-      console.error(`Error processing ${file}:`, error.message);
+    } catch (error) {
+  console.error(`Error processing ${file}:`, error.message);
       errorCount++;,
 }
   }

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, Search, MessageCircle, Phone, Mail, HelpCircle, BookOpen, Video, Users2 } from 'lucide-react';
@@ -484,3 +486,4 @@ openItems.includes(index) ? &apos;rotate-180&apos; : &apos,&apos}`}
 };
 
 export default FAQ;
+>>>>>>> main

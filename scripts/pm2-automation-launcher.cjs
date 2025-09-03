@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("$1");
+const path = require("$1");
 const { execSync, spawn } = require("child_process")
 class PM2AutomationLauncher {
   constructor() {
@@ -416,7 +416,7 @@ if (require.main === module) {
       case "logs":";        await launcher.showLogs(subCommand);";        break
       case "monit":";        await launcher.openMonitoring();";        break
       case "report":";        await launcher.generateReport();";        break
-      case "help":";      default":;;        launcher.showHelp()
+      case "help":";      default":;        launcher.showHelp()
         break,,
 }
   } catch (error) {launcher.log(`❌ Command failed": ${error.message}`);`;    process.exit(1),,

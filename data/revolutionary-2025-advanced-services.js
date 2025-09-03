@@ -1,8 +1,8 @@
-export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
-    // ===== REVOLUTIONARY MICRO SAAS SERVICES =====;
+export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
+  // ===== REVOLUTIONARY MICRO SAAS SERVICES =====;
     // 1. AI-Powered Quantum Financial Trading Platform;
-    {;
-        id: "quantum-ai-trading-platform",;
+    {
+  id: "quantum-ai-trading-platform",;
         name: "Quantum AI Trading Platform",;
         tagline: "Quantum computing meets AI for next-generation financial trading",;
         description: "Revolutionary trading platform combining quantum computing algorithms with advanced AI to predict market movements with unprecedented accuracy. Features real-time market analysis, automated trading strategies, and quantum-resistant security.",;
@@ -10,8 +10,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         subcategory: "Financial Technology",;
         price: "$2,999",;
         period: "/month",;
-        features[;
-            "Quantum algorithm-powered market prediction",;
+        features[
+  "Quantum algorithm-powered market prediction",;
             "Real-time AI market analysis",;
             "Automated trading strategy execution",;
             "Quantum-resistant blockchain security",;
@@ -22,40 +22,40 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             "Real-time performance analytics",;
             "API access for institutional clients";
         ],;
-        benefits[;
-            "Up to 40% higher trading accuracy than traditional methods",;
+        benefits[
+  "Up to 40% higher trading accuracy than traditional methods",;
             "Real-time market prediction with 95% confidence intervals",;
             "Automated compliance and risk management",;
             "Quantum-secure transactions",;
             "Reduced trading costs by 60%",;
             "24/7 automated trading operations";
         ],;
-        useCases[;
-            "Algorithmic trading",;
+        useCases[
+  "Algorithmic trading",;
             "Portfolio management",;
             "Risk assessment",;
             "Market analysis",;
             "Compliance monitoring",;
             "Institutional trading";
         ],;
-        targetAudience[;
-            "Hedge funds",;
+        targetAudience[
+  "Hedge funds",;
             "Investment banks",;
             "Trading firms",;
             "Asset managers",;
             "Institutional investors",;
             "Quantitative analysts";
         ],;
-        technology[;
-            "Quantum Computing",;
+        technology[
+  "Quantum Computing",;
             "Machine Learning",;
             "Blockchain",;
             "Real-time Analytics",;
             "Quantum-resistant Cryptography",;
             "High-frequency Trading Systems";
         ],;
-        integrations[;
-            "Bloomberg Terminal",;
+        integrations[
+  "Bloomberg Terminal",;
             "Reuters Eikon",;
             "Trading APIs",;
             "Banking Systems",;
@@ -67,8 +67,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers Pro"],;
         marketSize: "$15.2B algorithmic trading market",;
         growthRate: "250% annual growth in quantum computing applications",;
-        contactInfo: {;
-            phone: "+1 302 464 0950",;
+        contactInfo: {
+  phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709";,
@@ -81,8 +81,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         supportLevel: "enterprise";,
 },;
     // 2. Autonomous AI Content Creation Studio;
-    {;
-        id: "autonomous-ai-content-studio",;
+    {
+  id: "autonomous-ai-content-studio",;
         name: "Autonomous AI Content Creation Studio",;
         tagline: "Fully autonomous content creation with human-level creativity",;
         description: "Next-generation content creation platform that operates autonomously to generate, edit, and distribute content across all channels. Features advanced AI models, creative automation, and multi-platform publishing.",;
@@ -90,8 +90,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         subcategory: "Content Creation & Marketing",;
         price: "$799",;
         period: "/month",;
-        features[;
-            "Autonomous content generation",;
+        features[
+  "Autonomous content generation",;
             "Multi-platform publishing automation",;
             "AI-powered creative direction",;
             "Brand voice consistency",;
@@ -102,40 +102,40 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             "Social media automation",;
             "Content calendar management";
         ],;
-        benefits[;
-            "90% reduction in content creation time",;
+        benefits[
+  "90% reduction in content creation time",;
             "Consistent brand voice across all channels",;
             "Automated SEO optimization",;
             "Multi-platform content distribution",;
             "Real-time performance tracking",;
             "Scalable content operations";
         ],;
-        useCases[;
-            "Marketing content creation",;
+        useCases[
+  "Marketing content creation",;
             "Social media management",;
             "Blog and article writing",;
             "Email marketing campaigns",;
             "Product descriptions",;
             "Brand storytelling";
         ],;
-        targetAudience[;
-            "Marketing agencies",;
+        targetAudience[
+  "Marketing agencies",;
             "E-commerce businesses",;
             "Content creators",;
             "Brand managers",;
             "Digital marketers",;
             "Small to enterprise businesses";
         ],;
-        technology[;
-            "GPT-5",;
+        technology[
+  "GPT-5",;
             "Claude 3.5 Sonnet",;
             "DALL-E 3",;
             "Natural Language Processing",;
             "Computer Vision",;
             "Machine Learning";
         ],;
-        integrations[;
-            "WordPress",;
+        integrations[
+  "WordPress",;
             "Shopify",;
             "Mailchimp",;
             "Social Media APIs",;
@@ -147,8 +147,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Jasper", "Copy.ai", "Writesonic", "ContentBot"],;
         marketSize: "$4.2B content creation market",;
         growthRate: "180% annual growth in AI content creation",;
-        contactInfo: {;
-            phone: "+1 302 464 0950",;
+        contactInfo: {
+  phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709";,
@@ -161,8 +161,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         supportLevel: "premium";,
 },;
     // 3. Quantum-Secure Healthcare Data Platform;
-    {;
-        id: "quantum-secure-healthcare-platform",;
+    {
+  id: "quantum-secure-healthcare-platform",;
         name: "Quantum-Secure Healthcare Data Platform",;
         tagline: "Unbreakable healthcare data security with quantum encryption",;
         description: "Revolutionary healthcare data platform using quantum encryption to provide unbreakable security for patient records, medical research, and healthcare operations. Features zero-trust architecture and quantum-resistant cryptography.",;
@@ -170,8 +170,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         subcategory: "Healthcare Technology",;
         price: "$1,499",;
         period: "/month",;
-        features[;
-            "Quantum-resistant encryption",;
+        features[
+  "Quantum-resistant encryption",;
             "Zero-trust security architecture",;
             "HIPAA compliance automation",;
             "Patient data anonymization",;
@@ -182,40 +182,40 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             "API security management",;
             "Compliance reporting automation";
         ],;
-        benefits[;
-            "Unbreakable quantum-resistant security",;
+        benefits[
+  "Unbreakable quantum-resistant security",;
             "100% HIPAA compliance guarantee",;
             "Real-time threat detection and response",;
             "Reduced compliance costs by 80%",;
             "Enhanced patient data privacy",;
             "Audit-ready security framework";
         ],;
-        useCases[;
-            "Electronic Health Records",;
+        useCases[
+  "Electronic Health Records",;
             "Medical research data",;
             "Telemedicine platforms",;
             "Healthcare analytics",;
             "Clinical trial management",;
             "Patient engagement systems";
         ],;
-        targetAudience[;
-            "Hospitals and clinics",;
+        targetAudience[
+  "Hospitals and clinics",;
             "Healthcare systems",;
             "Medical research institutions",;
             "Health insurance companies",;
             "Telemedicine providers",;
             "Healthcare technology companies";
         ],;
-        technology[;
-            "Quantum Cryptography",;
+        technology[
+  "Quantum Cryptography",;
             "Zero-Trust Architecture",;
             "Blockchain",;
             "AI Security",;
             "HIPAA Compliance Tools",;
             "Advanced Encryption Standards";
         ],;
-        integrations[;
-            "Epic Systems",;
+        integrations[
+  "Epic Systems",;
             "Cerner",;
             "Athenahealth",;
             "Healthcare APIs",;
@@ -227,8 +227,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Epic Systems", "Cerner", "Athenahealth"],;
         marketSize: "$28.4B healthcare IT market",;
         growthRate: "300% annual growth in quantum security applications",;
-        contactInfo: {;
-            phone: "+1 302 464 0950",;
+        contactInfo: {
+  phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709";,
@@ -242,8 +242,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
 },;
     // ===== REVOLUTIONARY IT SERVICES =====;
     // 4. Quantum Cloud Infrastructure;
-    {;
-        id: "quantum-cloud-infrastructure",;
+    {
+  id: "quantum-cloud-infrastructure",;
         name: "Quantum Cloud Infrastructure",;
         tagline: "Next-generation cloud computing with quantum processing capabilities",;
         description: "Revolutionary cloud infrastructure service that integrates quantum computing resources with traditional cloud services. Provides quantum processing power for complex computational tasks while maintaining traditional cloud reliability.",;
@@ -251,8 +251,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         subcategory: "Cloud Computing & Infrastructure",;
         price: "$5,999",;
         period: "/month",;
-        features[;
-            "Hybrid quantum-classical computing",;
+        features[
+  "Hybrid quantum-classical computing",;
             "Quantum processing units (QPUs)",;
             "Traditional cloud services integration",;
             "Quantum algorithm optimization",;
@@ -263,40 +263,40 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             "High-performance computing clusters",;
             "24/7 quantum support";
         ],;
-        benefits[;
-            "1000x faster computation for complex problems",;
+        benefits[
+  "1000x faster computation for complex problems",;
             "Hybrid quantum-classical processing",;
             "Global quantum network access",;
             "Advanced security with quantum encryption",;
             "Scalable quantum resources",;
             "Cost-effective quantum computing access";
         ],;
-        useCases[;
-            "Drug discovery and molecular modeling",;
+        useCases[
+  "Drug discovery and molecular modeling",;
             "Financial risk modeling",;
             "Climate change simulation",;
             "AI model training",;
             "Cryptographic analysis",;
             "Scientific research computing";
         ],;
-        targetAudience[;
-            "Research institutions",;
+        targetAudience[
+  "Research institutions",;
             "Pharmaceutical companies",;
             "Financial institutions",;
             "Technology companies",;
             "Government agencies",;
             "Academic institutions";
         ],;
-        technology[;
-            "Quantum Computing",;
+        technology[
+  "Quantum Computing",;
             "Cloud Infrastructure",;
             "Quantum-Classical Hybrid Systems",;
             "Advanced Networking",;
             "Quantum Security",;
             "High-Performance Computing";
         ],;
-        integrations[;
-            "AWS",;
+        integrations[
+  "AWS",;
             "Azure",;
             "Google Cloud",;
             "Kubernetes",;
@@ -308,8 +308,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["IBM Quantum", "Google Quantum AI", "Amazon Braket"],;
         marketSize: "$8.6B quantum computing market",;
         growthRate: "400% annual growth in quantum cloud services",;
-        contactInfo: {;
-            phone: "+1 302 464 0950",;
+        contactInfo: {
+  phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709";,
@@ -322,8 +322,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         supportLevel: "enterprise";,
 },;
     // 5. Autonomous Cybersecurity Operations Center;
-    {;
-        id: "autonomous-cybersecurity-soc",;
+    {
+  id: "autonomous-cybersecurity-soc",;
         name: "Autonomous Cybersecurity Operations Center",;
         tagline: "AI-powered cybersecurity that never sleeps",;
         description: "Revolutionary cybersecurity service that operates autonomously 24/7 to protect your digital assets. Features advanced AI threat detection, automated incident response, and predictive security analytics.",;
@@ -331,8 +331,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         subcategory: "Cybersecurity",;
         price: "$3,999",;
         period: "/month",;
-        features[;
-            "24/7 autonomous threat monitoring",;
+        features[
+  "24/7 autonomous threat monitoring",;
             "AI-powered threat detection",;
             "Automated incident response",;
             "Predictive security analytics",;
@@ -343,40 +343,40 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             "Security awareness training",;
             "Compliance reporting";
         ],;
-        benefits[;
-            "100% uptime security monitoring",;
+        benefits[
+  "100% uptime security monitoring",;
             "Real-time threat detection and response",;
             "Reduced security incidents by 95%",;
             "Automated compliance management",;
             "Predictive threat prevention",;
             "Cost-effective enterprise security";
         ],;
-        useCases[;
-            "Enterprise security operations",;
+        useCases[
+  "Enterprise security operations",;
             "Critical infrastructure protection",;
             "Financial services security",;
             "Healthcare data protection",;
             "Government security",;
             "Small business protection";
         ],;
-        targetAudience[;
-            "Large enterprises",;
+        targetAudience[
+  "Large enterprises",;
             "Financial institutions",;
             "Healthcare organizations",;
             "Government agencies",;
             "Critical infrastructure",;
             "Small to medium businesses";
         ],;
-        technology[;
-            "Artificial Intelligence",;
+        technology[
+  "Artificial Intelligence",;
             "Machine Learning",;
             "Behavioral Analytics",;
             "Threat Intelligence",;
             "Automation Platforms",;
             "Security Orchestration";
         ],;
-        integrations[;
-            "SIEM Systems",;
+        integrations[
+  "SIEM Systems",;
             "Firewall Management",;
             "Endpoint Protection",;
             "Identity Management",;
@@ -388,8 +388,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["CrowdStrike", "SentinelOne", "Palo Alto Networks"],;
         marketSize: "$182.3B cybersecurity market",;
         growthRate: "350% annual growth in autonomous security",;
-        contactInfo: {;
-            phone: "+1 302 464 0950",;
+        contactInfo: {
+  phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709";,
@@ -403,8 +403,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
 },;
     // ===== REVOLUTIONARY AI SOLUTIONS =====;
     // 6. Autonomous AI Research Assistant;
-    {;
-        id: "autonomous-ai-research-assistant",;
+    {
+  id: "autonomous-ai-research-assistant",;
         name: "Autonomous AI Research Assistant",;
         tagline: "AI that conducts research autonomously and generates insights",;
         description: "Revolutionary AI research platform that autonomously conducts research, analyzes data, and generates comprehensive insights. Features autonomous literature review, data analysis, and research report generation.",;
@@ -412,8 +412,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         subcategory: "Research & Analytics",;
         price: "$1,299",;
         period: "/month",;
-        features[;
-            "Autonomous literature review",;
+        features[
+  "Autonomous literature review",;
             "Data analysis automation",;
             "Research report generation",;
             "Citation management",;
@@ -424,40 +424,40 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             "Research collaboration tools",;
             "Publication assistance";
         ],;
-        benefits[;
-            "90% reduction in research time",;
+        benefits[
+  "90% reduction in research time",;
             "Comprehensive literature coverage",;
             "Automated data analysis",;
             "Real-time research updates",;
             "Multi-language research capability",;
             "Collaborative research platform";
         ],;
-        useCases[;
-            "Academic research",;
+        useCases[
+  "Academic research",;
             "Market research",;
             "Competitive analysis",;
             "Scientific research",;
             "Business intelligence",;
             "Policy research";
         ],;
-        targetAudience[;
-            "Research institutions",;
+        targetAudience[
+  "Research institutions",;
             "Universities",;
             "Businesses",;
             "Consulting firms",;
             "Government agencies",;
             "Individual researchers";
         ],;
-        technology[;
-            "GPT-5",;
+        technology[
+  "GPT-5",;
             "Claude 3.5 Sonnet",;
             "Natural Language Processing",;
             "Machine Learning",;
             "Data Analytics",;
             "Knowledge Graphs";
         ],;
-        integrations[;
-            "Research Databases",;
+        integrations[
+  "Research Databases",;
             "Academic Libraries",;
             "Data Sources",;
             "Collaboration Tools",;
@@ -469,8 +469,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Perplexity AI", "Claude", "ResearchGate"],;
         marketSize: "$2.1B research tools market",;
         growthRate: "280% annual growth in AI research tools",;
-        contactInfo: {;
-            phone: "+1 302 464 0950",;
+        contactInfo: {
+  phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709";,
@@ -483,8 +483,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         supportLevel: "premium";,
 },;
     // 7. Quantum AI Drug Discovery Platform;
-    {;
-        id: "quantum-ai-drug-discovery",;
+    {
+  id: "quantum-ai-drug-discovery",;
         name: "Quantum AI Drug Discovery Platform",;
         tagline: "Revolutionary drug discovery powered by quantum computing and AI",;
         description: "Breakthrough drug discovery platform combining quantum computing with advanced AI to accelerate pharmaceutical research. Features molecular modeling, drug interaction prediction, and clinical trial optimization.",;
@@ -492,8 +492,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         subcategory: "Healthcare & Biotechnology",;
         price: "$8,999",;
         period: "/month",;
-        features[;
-            "Quantum molecular modeling",;
+        features[
+  "Quantum molecular modeling",;
             "AI drug interaction prediction",;
             "Clinical trial optimization",;
             "Drug repurposing analysis",;
@@ -504,40 +504,40 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             "Regulatory compliance",;
             "Collaboration tools";
         ],;
-        benefits[;
-            "10x faster drug discovery process",;
+        benefits[
+  "10x faster drug discovery process",;
             "Higher accuracy in drug prediction",;
             "Reduced clinical trial costs",;
             "Improved drug safety profiles",;
             "Faster regulatory approval",;
             "Cost-effective drug development";
         ],;
-        useCases[;
-            "Pharmaceutical research",;
+        useCases[
+  "Pharmaceutical research",;
             "Drug development",;
             "Clinical trials",;
             "Drug repurposing",;
             "Toxicity studies",;
             "Regulatory submissions";
         ],;
-        targetAudience[;
-            "Pharmaceutical companies",;
+        targetAudience[
+  "Pharmaceutical companies",;
             "Biotechnology firms",;
             "Research institutions",;
             "Academic institutions",;
             "Government agencies",;
             "Contract research organizations";
         ],;
-        technology[;
-            "Quantum Computing",;
+        technology[
+  "Quantum Computing",;
             "Machine Learning",;
             "Molecular Dynamics",;
             "Bioinformatics",;
             "AI Drug Discovery",;
             "Quantum Chemistry";
         ],;
-        integrations[;
-            "Laboratory Information Systems",;
+        integrations[
+  "Laboratory Information Systems",;
             "Clinical Trial Platforms",;
             "Regulatory Databases",;
             "Scientific Literature",;
@@ -549,8 +549,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Atomwise", "Insilico Medicine", "BenevolentAI"],;
         marketSize: "$45.2B AI in drug discovery market",;
         growthRate: "500% annual growth in quantum drug discovery",;
-        contactInfo: {;
-            phone: "+1 302 464 0950",;
+        contactInfo: {
+  phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709";,
@@ -563,8 +563,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         supportLevel: "enterprise";,
 },;
     // 8. Autonomous AI Legal Assistant;
-    {;
-        id: "autonomous-ai-legal-assistant",;
+    {
+  id: "autonomous-ai-legal-assistant",;
         name: "Autonomous AI Legal Assistant",;
         tagline: "AI-powered legal research, document analysis, and case preparation",;
         description: "Revolutionary legal technology platform that autonomously conducts legal research, analyzes documents, and prepares legal cases. Features contract analysis, legal research automation, and case strategy development.",;
@@ -572,8 +572,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         subcategory: "Legal Technology",;
         price: "$2,499",;
         period: "/month",;
-        features[;
-            "Autonomous legal research",;
+        features[
+  "Autonomous legal research",;
             "Contract analysis and review",;
             "Case strategy development",;
             "Document automation",;
@@ -584,40 +584,40 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
             "Case management",;
             "Client communication tools";
         ],;
-        benefits[;
-            "80% reduction in legal research time",;
+        benefits[
+  "80% reduction in legal research time",;
             "Automated contract review",;
             "Enhanced case preparation",;
             "Reduced legal costs",;
             "Improved accuracy",;
             "24/7 legal assistance";
         ],;
-        useCases[;
-            "Contract review and analysis",;
+        useCases[
+  "Contract review and analysis",;
             "Legal research",;
             "Case preparation",;
             "Document automation",;
             "Compliance checking",;
             "Risk assessment";
         ],;
-        targetAudience[;
-            "Law firms",;
+        targetAudience[
+  "Law firms",;
             "Corporate legal departments",;
             "Legal consultants",;
             "Government agencies",;
             "Non-profit organizations",;
             "Individual lawyers";
         ],;
-        technology[;
-            "GPT-5",;
+        technology[
+  "GPT-5",;
             "Claude 3.5 Sonnet",;
             "Natural Language Processing",;
             "Document Analysis",;
             "Legal AI",;
             "Machine Learning";
         ],;
-        integrations[;
-            "Legal Research Databases",;
+        integrations[
+  "Legal Research Databases",;
             "Document Management Systems",;
             "Case Management Software",;
             "E-discovery Platforms",;
@@ -629,8 +629,8 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         competitors["Casetext", "ROSS Intelligence", "Harvey AI"],;
         marketSize: "$3.8B legal technology market",;
         growthRate: "320% annual growth in AI legal technology",;
-        contactInfo: {;
-            phone: "+1 302 464 0950",;
+        contactInfo: {
+  phone: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             website: "https://ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709";,
@@ -643,9 +643,9 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [;
         supportLevel: "premium";
 ];
 // Additional specialized service categories;
-export const SERVICE_CATEGORIES = {;
-  "Micro SAAS": [;
-        "Financial Technology",;
+export const SERVICE_CATEGORIES = {
+  "Micro SAAS": [
+  "Financial Technology",;
         "Content Creation & Marketing",;
         "Healthcare Technology",;
         "Education Technology",;
@@ -656,8 +656,8 @@ export const SERVICE_CATEGORIES = {;
         "Supply Chain Management",;
         "Real Estate Technology";
     ],;
-    "IT Services"[;
-        "Cloud Computing & Infrastructure",;
+    "IT Services"[
+  "Cloud Computing & Infrastructure",;
         "Cybersecurity",;
         "Data Analytics & Business Intelligence",;
         "Software Development",;
@@ -668,8 +668,8 @@ export const SERVICE_CATEGORIES = {;
         "Managed IT Services",;
         "Disaster Recovery";
     ],;
-    "AI Solutions"[;
-        "Research & Analytics",;
+    "AI Solutions"[
+  "Research & Analytics",;
         "Healthcare & Biotechnology",;
         "Legal Technology",;
         "Financial Services",;
@@ -682,19 +682,19 @@ export const SERVICE_CATEGORIES = {;
     ];,
 }
 // Market analysis and pricing information;
-export const MARKET_ANALYSIS = {;
+export const MARKET_ANALYSIS = {
   totalMarketSize: "$2.8T",;
     growthRate: "15.7% CAGR",;
-    keyTrends[;
-        "Quantum computing integration",;
+    keyTrends[
+  "Quantum computing integration",;
         "Autonomous AI systems",;
         "Zero-trust security",;
         "Edge computing",;
         "Sustainable technology",;
         "Digital transformation acceleration";
     ],;
-    competitiveAdvantages[;
-        "First-mover advantage in quantum-AI integration",;
+    competitiveAdvantages[
+  "First-mover advantage in quantum-AI integration",;
         "Proprietary autonomous systems",;
         "Global quantum network access",;
         "Enterprise-grade security",;

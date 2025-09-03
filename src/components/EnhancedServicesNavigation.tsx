@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 const Component = () => {
 import React from "react"
 """;,"});,"})"
@@ -450,6 +452,7 @@ export { EnhancedServicesNavigation };,"});,"})
   return: ("""",,",
     <div: className = "relative">",",
       {/* comment */}
+>>>>>>> main
 
       <button""";";"
         onClick = "{()" => setIsOpen(!isOpen)}"""","
@@ -483,6 +486,10 @@ export { EnhancedServicesNavigation };,"});,"})
           description: "90% latency reduction","",
           pricing: "From $299/month""}
 
+<<<<<<< HEAD
+        {                            key={service.title}
+                            initial = {
+=======
       ]},
     {}"
 ""
@@ -1019,6 +1026,7 @@ x: categoryIndex % 2 === 0 ? -20 : 20}}
                           <motion.div;"
                             key = "{service.title}"
                             initial = {}
+>>>>>>> main
 
   { opacity: 0>
 x: -10}}
@@ -1306,6 +1314,29 @@ Need: help choosing the right service?"""",,",
             </div>,
           </motion.div>) }
 
+<<<<<<< HEAD
+      {/* Backdrop */}
+      {isOpen && (<motion.div;
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}"""
+          exit={{ opacity: 0 }}""""
+          className="fixed inset-0 bg-black/20 z-40"""
+          onClick={() => setIsOpen(false)}
+        />
+      )};
+    </div>;
+  )};
+
+export default EnhancedServicesNavigation;
+
+export { EnhancedServicesNavigation };
+
+export { EnhancedServicesNavigation };
+
+export { EnhancedServicesNavigation };
+
+export { EnhancedServicesNavigation };
+=======
       </AnimatePresence>
       {/* comment */}
 
@@ -1361,3 +1392,4 @@ export { EnhancedServicesNavigation }"
           url: "/services/ai-code-review-security,""
           description: "85% vulnerability reduction,'
 """
+>>>>>>> main

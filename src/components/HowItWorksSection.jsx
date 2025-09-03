@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import {  import { motion, AnimatePresence  } from 'framer-motion';
+ from 'lucide-react';
+=======
 import React from 'react';
+>>>>>>> main
 
 export const HowItWorksSection = () => {
   return (

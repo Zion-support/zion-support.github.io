@@ -1,9 +1,9 @@
 const fs = require("fs");
 const path = require("path");
-function walk(dir, exts = new Set([".tsx", ".ts", ".jsx", ".js"])) {;
+function walk(dir, exts = new Set([".tsx", ".ts", ".jsx", ".js"])) {
   const files = [];
-  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {;
-    if (entry.name.startsWith(".")) continue;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+  if (entry.name.startsWith(".")) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) files.push(...walk(full, exts));
     else if (exts.has(path.extname(entry.name))) files.push(full);,
@@ -11,7 +11,7 @@ function walk(dir, exts = new Set([".tsx", ".ts", ".jsx", ".js"])) {;
   return files;,
 }
 ;
-function analyzeFile(filePath) {;
+function analyzeFile(filePath) {
   const src = fs.readFileSync(filePath, "utf8");
   const hasHead = /<Head[\s\S]*?>[\s\S]*?<\/Head>/.test(src);
   const hasOgTitle = /property=[""]og:title[""]|name=[""]og:title[""]/.test(;
@@ -26,8 +26,8 @@ function analyzeFile(filePath) {;
   if (!hasOgTitle) missing.push("og:title");
   if (!hasOgDesc) missing.push("og:description");
   if (!hasOgImage) missing.push("og:image");
-  return {;
-    file: filePath.replace(process.cwd(), ""),;
+  return {
+  file: filePath.replace(process.cwd(), ""),;
     hasHead,;
     hasOgTitle,;
     hasOgDescription: hasOgDesc,;
@@ -36,14 +36,14 @@ function analyzeFile(filePath) {;
 }
 }
 ;
-function runAudit() {;
+function $1() {
   const pagesDir = path.join(__dirname, "..", "pages");
   const files = walk(pagesDir);
   const report = files;
     .filter(f => f.endsWith(".tsx") || f.endsWith(".jsx"));
     .map(analyzeFile);
-  const summary = {;
-    generatedAt: new Date().toISOString(),;
+  const summary = {
+  generatedAt: new Date().toISOString(),;
     totalFiles: report.length,;
     compliant: report.filter(r => r.missing.length === 0).length,;
     missingAny: report.filter(r => r.missing.length > 0).length,;
@@ -60,7 +60,7 @@ function runAudit() {;
   return summary;,
 }
 ;
-if (require.main === module) {;
+if (require.main === module) {
   console.log(JSON.stringify(runAudit(), null, 2));,
 }
 ;

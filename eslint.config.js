@@ -3,21 +3,21 @@ import typescript from "@typescript-eslint/eslint-plugin";
 import typescriptParser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
-export default [;
+export default [
   js.configs.recommended,;
-  {;
-    files: ["**/*.{js,jsx,ts,tsx}"],;
-    languageOptions: {;
-      parser: typescriptParser,;
-      parserOptions: {;
-        ecmaFeatures: {;
-          jsx: true,;,
+  {
+  files: ["**/*.{js,jsx,ts,tsx}"],;
+    languageOptions: {
+  parser: typescriptParser,;
+      parserOptions: {
+  ecmaFeatures: {
+  jsx: true,;,
 },;
         ecmaVersion: 12,;
         sourceType: "module",;,
 },;
-      globals: {;
-        // Node.js globals;
+      globals: {
+  // Node.js globals;
         process: "readonly",;
         console: "readonly",;
         Buffer: "readonly",;
@@ -45,29 +45,29 @@ export default [;
         sessionStorage: "readonly",;,
 },;,
 },;
-    plugins: {;
-      "@typescript-eslint": typescript,;
+    plugins: {
+  "@typescript-eslint": typescript,;
       "react": react,;
       "react-hooks": reactHooks,;,
 },;
-    rules: {;
-      "@typescript-eslint/no-unused-vars": "warn",;
+    rules: {
+  "@typescript-eslint/no-unused-vars": "warn",;
       "@typescript-eslint/no-explicit-any": "warn",;
       "react-hooks/exhaustive-deps": "warn",;
       "react/react-in-jsx-scope": "off",;
       "no-undef": "off", // TypeScript handles this;,
 },;
-    settings: {;
-      react: {;
-        version: "detect",;,
+    settings: {
+  react: {
+  version: "detect",;,
 },;,
 },;,
 },;
-  {;
-    files: ["**/*.test.{js,jsx,ts,tsx}", "**/__tests__/**/*.{js,jsx,ts,tsx}", "**/tests/**/*.{js,jsx,ts,tsx}"],;
-    languageOptions: {;
-      globals: {;
-        describe: "readonly",;
+  {
+  files: ["**/*.test.{js,jsx,ts,tsx}", "**/__tests__/**/*.{js,jsx,ts,tsx}", "**/tests/**/*.{js,jsx,ts,tsx}"],;
+    languageOptions: {
+  globals: {
+  describe: "readonly",;
         it: "readonly",;
         test: "readonly",;
         expect: "readonly",;
@@ -80,13 +80,13 @@ export default [;
 },;,
 },;,
 },;
-  {;
-    files: ["**/*.cjs", "**/automation/**/*.js", "**/scripts/**/*.js"],;
-    languageOptions: {;
-      ecmaVersion: 2020,;
+  {
+  files: ["**/*.cjs", "**/automation/**/*.js", "**/scripts/**/*.js"],;
+    languageOptions: {
+  ecmaVersion: 2020,;
       sourceType: "script",;
-      globals: {;
-        process: "readonly",;
+      globals: {
+  process: "readonly",;
         console: "readonly",;
         Buffer: "readonly",;
         __dirname: "readonly",;
@@ -97,13 +97,13 @@ export default [;
         exports: "readonly",;,
 },;,
 },;
-    rules: {;
-      "no-undef": "off",;,
+    rules: {
+  "no-undef": "off",;,
 },;,
 },;
-  {;
-    ignores: [;
-      "node_modules/",;
+  {
+  ignores: [
+  "node_modules/",;
       ".next/",;
       "out/",;
       "dist/",;

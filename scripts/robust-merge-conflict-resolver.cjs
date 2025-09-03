@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
+const fs = require("$1");
+const path = require("$1");
 const { execSync } = require("child_process")
 // ANSI color codes for better output
 const colors = {
@@ -13,8 +13,8 @@ const colors = {
   cyan: "\x1b[36m"}
 function log(message, color = `reset`) {
 
-const fs = require("fs")
-const path = require("path")
+const fs = require("$1");
+const path = require("$1");
 const { execSync } = require("child_process")
 // ANSI color codes for better output
 const colors = {
@@ -151,9 +151,9 @@ function resolveMergeConflict(filePath) {
     content = content.replace();      /import\s+[^]*?from\s+["][^"]*[""]\s*;?\s*/g,      """);";    content = content.replace();      /export\s+[^]*?from\s+["][^"]*["]\s*;?\s*/g,"""");"
     // Remove malformed React imports
     content = content.replace();      /import\s+React[^]*?from\s+["]react[""]\s*;?\s*/g,import React from "react";\n")
-    // Strategy 3: Fix common syntax issues;;    // Remove duplicate semicolons and quotes
+    // Strategy 3: Fix common syntax issues;    // Remove duplicate semicolons and quotes
     content = content.replace(/;+/, "");";    content = content.replace(/[""]+/g, "");"";    // Remove empty lines and normalize spacing
-    content = content.replace(/\n\s*\n\s*\n/g, "\n\n");";    content = content.replace(/^\s+$/gm, "");"";    // Strategy 4": Ensure basic React component structure;;    if();      content.includes("export default") &&";      !content.includes("import React")") {";      content = import React from "react";\n\n + content}"
+    content = content.replace(/\n\s*\n\s*\n/g, "\n\n");";    content = content.replace(/^\s+$/gm, "");"";    // Strategy 4": Ensure basic React component structure;    if();      content.includes("export default") &&";      !content.includes("import React")") {";      content = import React from "react";\n\n + content}"
     if (fixed && content !== originalContent) {
       // Additional cleanup: remove any remaining corrupted content;";      content = content.replace(/[^\x00-\x7F]/g, ""); // Remove non-ASCII characters";      content = content.replace(/\s+/g, " "); // Normalize whitespace"";      fs.writeFileSync(filePath, content, "utf8");";      return true,"}
     return false} catch (error) {log(`Error processing ${filePath}: ${error.message}`, "red");    return false;`}"}

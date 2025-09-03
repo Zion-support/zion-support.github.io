@@ -3,7 +3,7 @@
  * Automation Enhancer Script
  * Enhances existing automation scripts and creates new ones
  */
-const fs = require("fs")
+const fs = require("$1");
 const path = require("path")
 class AutomationEnhancer {
   constructor() {
@@ -118,8 +118,8 @@ echo "✅ Deployment completed successfully!"
 /**
  * Advanced Monitoring Script
  */
-const pm2 = require("pm2")
-const fs = require("fs")
+const pm2 = require("$1");
+const fs = require("$1");
 const path = require("path")
 class AdvancedMonitor {
   constructor() {
@@ -197,7 +197,7 @@ monitor.startMonitoring()
 /**
  * Performance Optimization Script
  */
-const fs = require("fs")
+const fs = require("$1");
 const path = require("path")
 class PerformanceOptimizer {
   constructor() {

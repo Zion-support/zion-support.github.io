@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React from 'react';
+;
+;import { AlertCircle, RefreshCw } from 'lucide-react';
+=======
 ,"})
 }
   })
@@ -93,6 +98,7 @@ export const ProfileErrorState = ({}});,"})"
   })"
               )}"});,"})
 }
+>>>>>>> main
 export const ProfileErrorState = ({}
 
 ";""

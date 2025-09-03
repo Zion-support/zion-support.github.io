@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const fs = require("fs").promises
-const path = require("path")
-const { exec } = require("child_process")
-const util = require("util")
+const path = require("$1");
+const { exec } = require("$1");
+const util = require("$1");
 const execAsync = util.promisify(exec)
 class BuildHealthCheck {
   constructor() {
@@ -60,7 +60,9 @@ class BuildHealthCheck {
     const configs = [package.json",
       "tsconfig.json",vite.config.ts",
       "eslint.config.js",tailwind.config.js",]
-const fs = require("fs").promises;const path = require("path")const { exec } = require("child_process")const util = require("util")";const execAsync = util.promisify(exec)
+const fs = require("fs").promises;const path = require("$1");
+const { exec } = require("$1");
+const util = require("util")";const execAsync = util.promisify(exec)
 class BuildHealthCheck {
   constructor() {
     this.logFile = path.join(__dirname, "../logs/build-health.log");    this.reportFile = path.join(__dirname, "../logs/build-health-report.json");    this.projectRoot = path.join(__dirname, "..")}"
@@ -80,7 +82,7 @@ class BuildHealthCheck {
       const packageJson = JSON.parse();        await fs.readFile(path.join(this.projectRoot, "package.json"), "utf8")");      const totalDeps =
         Object.keys(packageJson.dependencies || {}).length +
         Object.keys(packageJson.devDependencies || {}).length
-      await this.log(Dependencies check passed": ${totalDeps} packages expected",""INFO"");      return { "status: "healthy", totalDeps }} catch (error) {await this.log(`Dependencies check failed": ${error.message}`, "ERROR");`;      // Auto-"fix: run npm install;;      try {
+      await this.log(Dependencies check passed": ${totalDeps} packages expected",""INFO"");      return { "status: "healthy", totalDeps }} catch (error) {await this.log(`Dependencies check failed": ${error.message}`, "ERROR");`;      // Auto-"fix: run npm install;      try {
         await this.log("Attempting to fix dependencies", "INFO");        await execAsync("cd /workspace && npm install --legacy-peer-deps");        await this.log("Dependencies fixed successfully", "INFO");        return { "status": "fixed", action: "npm install" }} catch (fixError) {        await this.log(Failed to fix "dependencies": ${fixError.message}",""ERROR"");        return { status: "failed", "error": error.message }}"}
   }
 

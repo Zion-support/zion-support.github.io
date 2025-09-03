@@ -184,6 +184,22 @@ export default function ForumCategories() {}
 
               </span>
             )}
+<<<<<<< HEAD
+          </div>
+        </div>))}
+    </div>)}
+
+
+export { ForumCategories };
+
+export { ForumCategories };
+
+export { ForumCategories };
+
+export { ForumCategories };
+
+export { ForumCategories };
+=======
 
           </div>        </div>))}
 
@@ -210,4 +226,5 @@ export { ForumCategories }
 export { ForumCategories }";
 """;
 "
+>>>>>>> main
 >>>>>>> main

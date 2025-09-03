@@ -152,12 +152,30 @@ export { UltraFuturisticBackground2034 };,"});,"})"
 export { UltraFuturisticBackground2034 };,"});,"})"
  const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = {} const selectedColors = colors[theme]";import React, { useEffect, useRef } from "react";const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => {}
 
+<<<<<<< HEAD
+    const canvasRef = useRef(null);
+    const animationRef = useRef();
+    useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
+        const canvas = canvasRef.current;
+        if(!canvas)
+            return;
+        const ctx = canvas.getContext('2d');
+        if(!ctx)
+            return;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const particles = [];
+        const colors = {
+=======
     const canvasRef = useRef(null)
 }
     const animationRef = useRef()
 }
  const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = {} const selectedColors = colors[theme]";import React, { useEffect, useRef } from "react"
 const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => {}
+>>>>>>> main
 
  const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = {} const selectedColors = colors[theme];import React, { useEffect, useRef }  from "react";const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => {}
 
@@ -307,6 +325,27 @@ for(let x = 0 x < canvas.width x += gridSize) {}
 }        return () => {}
 
             if(animationRef.current) {}
+<<<<<<< HEAD
+                cancelAnimationFrame(animationRef.current)}'
+            window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
+    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}
+  {}
+            opacity: intensity,'
+  filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
+}}/>)};
+export default UltraFuturisticBackground2034;
+
+
+export { UltraFuturisticBackground2034 };
+
+export { UltraFuturisticBackground2034 };
+
+export { UltraFuturisticBackground2034 };
+
+export { UltraFuturisticBackground2034 };
+
+export { UltraFuturisticBackground2034 };
+=======
 
                 cancelAnimationFrame(animationRef.current)}"
             window.removeEventListener("resize", handleResize)}}, [intensity, theme]);"
@@ -343,4 +382,5 @@ export { UltraFuturisticBackground2034 }
 
 export { UltraFuturisticBackground2034 }"
 """""
+>>>>>>> main
 >>>>>>> main

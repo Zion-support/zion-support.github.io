@@ -1,5 +1,15 @@
 
 export default function MobileAppRoutes(function MobileAppRoutes() {): any {}
+<<<<<<< HEAD
+  return()
+    <>;""
+      <Route path = "launch" element={<MobileLaunchPage  />} />;
+:pages.disabled/routes/MobileAppRoutes.tsx
+    </>"
+  )}'"'"
+    </>
+  )}'""
+=======
   return();
     <>;";
       <Route path = launch" element={<MobileLaunchPage  />} />;
@@ -13,3 +23,4 @@ export default function MobileAppRoutes(function MobileAppRoutes() {): any {}
     </>;
   )}'"";
 >>>>>>> pr-10728
+>>>>>>> main

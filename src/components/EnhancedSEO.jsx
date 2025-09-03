@@ -223,6 +223,42 @@ return()
       <meta name="format-detection" content="telephone=no" /" >"
       {/* comment */}"""""
       <script type="application/ld+json">
+<<<<<<< HEAD
+        {JSON.stringify(finalStructuredData)}
+      </script>
+"""
+      {/* Preconnect to external domains for performance */}""""
+      <link rel="preconnect" href="https://fonts.googleapis.com" />""""
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />""""
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+"""
+      {/* DNS Prefetch for external resources */}""""
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />""""
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+"""
+      {/* Security Headers */}""""
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />""""
+      <meta httpEquiv="X-Frame-Options" content="DENY" />""""
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />"""
+      <meta""""
+        httpEquiv="Referrer-Policy""""
+        content="strict-origin-when-cross-origin"""
+      />
+    </Helmet>
+  );
+}
+
+
+export { EnhancedSEO };
+
+export { EnhancedSEO };
+
+export { EnhancedSEO };
+
+export { EnhancedSEO };
+
+export { EnhancedSEO };
+=======
         {JSON.stringify(finalStructuredData)}"
       </script>""
       {/* comment */}"""""
@@ -246,4 +282,5 @@ export { EnhancedSEO }
 
 "
 ;""""
+>>>>>>> main
 >>>>>>> main

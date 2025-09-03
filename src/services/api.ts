@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // comment
 export class apiService {
   constructor() {
@@ -22,3 +24,4 @@ export class apiService {
 
 export default new apiService()
 }
+>>>>>>> main

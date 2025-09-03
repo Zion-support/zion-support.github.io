@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function PWAUpdater.test() {return (
@@ -10,3 +12,4 @@ export default function PWAUpdater.test() {return (
         </p>
       </div>
   );"}"
+>>>>>>> main

@@ -2,19 +2,19 @@
 
 const fs = require("fs");
 const path = require("path");
-class SimpleSyntaxFixer {;
-  constructor() {;
-    this.projectRoot = process.cwd();
+class $1 {
+  constructor() {
+  this.projectRoot = process.cwd();
     this.fixedCount = 0;,
 }
 ;
-  log(message) {;
-    console.log(`[${new Date().toISOString()}] ${message}`);,
+  log(message) {
+  console.log(`[${new Date().toISOString()}] ${message}`);,
 }
 ;
-  async fixFile(filePath) {;
-    try {;
-      const content = fs.readFileSync(filePath, "utf8");
+  async fixFile(filePath) {
+  try {
+  const content = fs.readFileSync(filePath, "utf8");
       let fixed = content;
       // Fix the specific patterns that are causing build failures;
       fixed = fixed.replace(/}"\`,/g, "}\"`");
@@ -29,33 +29,33 @@ class SimpleSyntaxFixer {;
       // Fix missing commas in arrays;
       fixed = fixed.replace(/Master\\"s degree in Computer Science or related field",\s*"/g, ;
         "Master\\"s degree in Computer Science or related field\",\n        \"");
-      if (content !== fixed) {;
-        fs.writeFileSync(filePath, fixed);
+      if (content !== fixed) {
+  fs.writeFileSync(filePath, fixed);
         this.log(`✅ Fixed ${path.basename(filePath)}`);
         this.fixedCount++;
         return true;,
 }
       return false;,
-} catch (error) {;
-      this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`);
+} catch (error) {
+  this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`);
       return false;,
 }
   }
 ;
-  async run() {;
-    this.log("🔧 Fixing critical syntax errors...");
-    const files = [;
-      "pages/api.tsx",;
+  async run() {
+  this.log("🔧 Fixing critical syntax errors...");
+    const files = [
+  "pages/api.tsx",;
       "pages/careers.tsx", ;
       "pages/case-studies.tsx",;
       "pages/help.tsx",;
       "pages/press.tsx';
     ];
 
-    for (const file of files) {;
-      const filePath = path.join(this.projectRoot, file);
-      if (fs.existsSync(filePath)) {;
-        await this.fixFile(filePath);,
+    for (const file of files) {
+  const filePath = path.join(this.projectRoot, file);
+      if (fs.existsSync(filePath)) {
+  await this.fixFile(filePath);,
 }
     }
 ;

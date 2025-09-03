@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <<<<<<< HEADimport React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -643,3 +645,4 @@ key = "{post.id}""
 </>
   ),
   )}""
+>>>>>>> main

@@ -590,6 +590,16 @@ const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.
         finally {}
 
             setIsAnalyzing(false)}
+<<<<<<< HEAD
+    }, []);
+    useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
+        // Auto-analyze SEO when component mounts
+        analyzeSEO()}, [analyzeSEO]);
+    const calculateSEOScore = (page) => {
+=======
+>>>>>>> main
 
     }, [])
 }
@@ -994,6 +1004,23 @@ a.download = "seo-optimization-report.csv
               <Download className="w-4 h-4"/" >"
               Export,
             </button>
+<<<<<<< HEAD
+          </div>
+        </div>)}
+    </div>)};
+export default SEOOptimizer;
+
+
+export { SEOOptimizer };
+
+export { SEOOptimizer };
+
+export { SEOOptimizer };
+
+export { SEOOptimizer };
+
+export { SEOOptimizer };
+=======
           </div>;,        </div>)}
 
     </div>)}
@@ -1021,4 +1048,5 @@ export { SEOOptimizer }
 
 export { SEOOptimizer }"
 """""
+>>>>>>> main
 >>>>>>> main

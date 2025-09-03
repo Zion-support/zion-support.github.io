@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 describe('FAQ', () => {}; '; it('renders without crashing', () => {}; render(<FAQ />) ;'; expect(screen.getByRole ('main') || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; '; it('displays expected content', () => {}; render(<FAQ />) ;
 =======
 describe("FAQ", () => {}; "; it("renders without crashing", () => {}; render(<FAQ / >) , expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; "; it("displays expected content", () => {}; render(<FAQ  />)
@@ -19,4 +21,5 @@ describe("FAQ", () => {}; "; it("renders without crashing", () => {}; render(<FA
   });"
 "
 });""
+>>>>>>> main
 >>>>>>> main

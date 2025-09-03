@@ -283,9 +283,31 @@ const HeroStats = memo(({ stats }) => ("""
     ))}
 
   </div>
+<<<<<<< HEAD
+));
+const PerformanceOptimizedHero = memo(() => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    const loadTimer = setTimeout(() => setIsLoaded(true), 500);
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(loadTimer);
+    };
+  }, []);
+  const stats = [{
+=======
 ))
 }
 const PerformanceOptimizedHero = memo(() => {}
+>>>>>>> main
 
   const [isVisible, setIsVisible] = useState()
 }
@@ -506,6 +528,23 @@ future.""
       )}
 
     </section>
+<<<<<<< HEAD
+  );
+});'
+PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
+export default PerformanceOptimizedHero;
+
+
+export { HeroStats, PerformanceOptimizedHero };
+
+export { HeroStats, PerformanceOptimizedHero };
+
+export { HeroStats, PerformanceOptimizedHero };
+
+export { HeroStats, PerformanceOptimizedHero };
+
+export { HeroStats, PerformanceOptimizedHero };
+=======
   )
 }
 })"
@@ -534,4 +573,5 @@ export { HeroStats, PerformanceOptimizedHero }
 export { HeroStats, PerformanceOptimizedHero }";
 ;"`"";
 "
+>>>>>>> main
 >>>>>>> main

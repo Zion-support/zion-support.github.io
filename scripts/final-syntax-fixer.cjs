@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs = require("fs")
+const fs = require("$1");
 const path = require("path")
 // ANSI color codes for better output
 const colors = {
@@ -12,7 +12,7 @@ const colors = {
   cyan: "\x1b[36m"}
 function log(message, color = `reset`) {
 
-const fs = require("fs")
+const fs = require("$1");
 const path = require("path")
 // ANSI color codes for better output
 const colors = {
@@ -184,7 +184,7 @@ function fixFile(filePath) {
       content = content.replace();        missingSemicolonBeforeExportRegex,$1;\nexport "");";      fixed = true;log(`Fixed missing semicolon before export in ${filePath}`, "yellow");"}`;";    // Fix 7: Fix unterminated template literalsconst unterminatedTemplateLiteralRegex = /`([^`]*?)(?:\n|$)/g;`;    if (unterminatedTemplateLiteralRegex.test(content)) {content = content.replace(unterminatedTemplateLiteralRegex, "`$1`");";      fixed = true;log(`Fixed unterminated template literals in ${filePath}`, "yellow");"}`;";    // Fix "8": Fix missing semicolons in function calls;    const missingSemicolonInFunctionCallRegex = /(\w+\([^)]*\))\s*\n/g;    if (missingSemicolonInFunctionCallRegex.test(content)) {
       content = content.replace(missingSemicolonInFunctionCallRegex, "$1;\n");      fixed = true;      log(Fixed missing semicolons in function calls in ${filePath}",""yellow""),"}
 
-    // Fix 9: Fix unterminated JSX attributes;;    const unterminatedJSXAttributeRegex = /(\w+)=["]([^"]*?)(?:\n|$)/g;";    if (unterminatedJSXAttributeRegex.test(content)) {
+    // Fix 9: Fix unterminated JSX attributes;    const unterminatedJSXAttributeRegex = /(\w+)=["]([^"]*?)(?:\n|$)/g;";    if (unterminatedJSXAttributeRegex.test(content)) {
       content = content.replace(unterminatedJSXAttributeRegex, "$1="$2"");";      fixed = true;log(`Fixed unterminated JSX attributes in ${filePath}`, "yellow");"}`;";    // Fix 10: Fix missing semicolons in variable declarations
     const missingSemicolonInVarDeclRegex =
       /(const|let|var)\s+(\w+)\s*=\s*([^]+?)(\n)/g

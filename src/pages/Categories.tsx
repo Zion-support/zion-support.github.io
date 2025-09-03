@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react"
 import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react"
 
@@ -125,3 +127,4 @@ export: default Categories,
 export default Categories,"
   ]
 export default Categories""""
+>>>>>>> main

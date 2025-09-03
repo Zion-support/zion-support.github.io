@@ -6,7 +6,7 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // List of all corrupted files that need to be completely rewritten;
-const corruptedFiles = [;
+const corruptedFiles = [
   // Main pages directory;
   "src/pages/InnovativeServicesShowcase2025.tsx",;
   "src/pages/InnovativeServicesShowcase2026.tsx",;
@@ -161,13 +161,13 @@ const corruptedFiles = [;
   "src/pages/services/AI-Supply-Chain-Optimization.tsx";
 ];
 // Function to create a proper React component;
-function createPageComponent(fileName) {;
+function createPageComponent(fileName) {
   const componentName = fileName.replace(/[^a-zA-Z0-9]/g, "");
   const displayName = fileName.replace(/\.tsx|\.jsx/g, "").replace(/([A-Z])/g, " $1").trim();
   return `import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-const ${componentName} = () => {;
+const ${componentName} = () => {
   return (;
     <>;
       <Head>;
@@ -225,16 +225,16 @@ export default ${componentName};`;,
 }
 ;
 // Function to fix Redux files properly;
-function fixReduxFiles() {;
-  const reduxFiles = [;
-    "src/store/hooks.ts",;
+function $1() {
+  const reduxFiles = [
+  "src/store/hooks.ts",;
     "src/store/index.ts",;
     "src/store/wishlistSlice.ts";
   ];
-  reduxFiles.forEach(filePath => {;
-    try {;
-      if (fs.existsSync(filePath)) {;
-        let content = fs.readFileSync(filePath, "utf8");
+  reduxFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
+  let content = fs.readFileSync(filePath, "utf8");
         // Fix common TypeScript syntax errors;
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]react-redux[""];/, ;
           "import { $1  } from "react-redux";");
@@ -247,47 +247,47 @@ function fixReduxFiles() {;
         fs.writeFileSync(filePath, content);
         console.log(`Fixed Redux file: ${filePath}`);,
 }
-    } catch (error) {;
-      console.error(`Error fixing Redux file ${filePath}:`, error.message);,
+    } catch (error) {
+  console.error(`Error fixing Redux file ${filePath}:`, error.message);,
 }
   });,
 }
 ;
 // Function to fix test files;
-function fixTestFiles() {;
-  const testFiles = [;
-    "src/test/App.test.tsx";
+function fixTestFiles() {
+  const testFiles = [
+  "src/test/App.test.tsx";
   ];
-  testFiles.forEach(filePath => {;
-    try {;
-      if (fs.existsSync(filePath)) {;
-        let content = fs.readFileSync(filePath, "utf8");
+  testFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
+  let content = fs.readFileSync(filePath, "utf8");
         // Fix common test syntax errors;
         content = content.replace(/import\s*{([^}]*)\s*}\s*from\s*[""]@testing-library\/react[""];/, ;
           "import { $1  } from "@testing-library/react";");
         fs.writeFileSync(filePath, content);
         console.log(`Fixed test file: ${filePath}`);,
 }
-    } catch (error) {;
-      console.error(`Error fixing test file ${filePath}:`, error.message);,
+    } catch (error) {
+  console.error(`Error fixing test file ${filePath}:`, error.message);,
 }
   });,
 }
 ;
 // Function to remove problematic files;
-function removeProblematicFiles() {;
-  const problematicFiles = [;
-    "src/pages/EnterpriseIT.js.jsx",;
+function removeProblematicFiles() {
+  const problematicFiles = [
+  "src/pages/EnterpriseIT.js.jsx",;
     "src/pages/launch/index.js.jsx";
   ];
-  problematicFiles.forEach(filePath => {;
-    try {;
-      if (fs.existsSync(filePath)) {;
-        fs.unlinkSync(filePath);
+  problematicFiles.forEach(filePath => {
+  try {
+  if (fs.existsSync(filePath)) {
+  fs.unlinkSync(filePath);
         console.log(`Removed problematic file: ${filePath}`);,
 }
-    } catch (error) {;
-      console.error(`Error removing ${filePath}:`, error.message);,
+    } catch (error) {
+  console.error(`Error removing ${filePath}:`, error.message);,
 }
   });,
 }
@@ -296,14 +296,14 @@ function removeProblematicFiles() {;
 console.log("Starting final comprehensive fix...");
 // 1. Fix corrupted files by rewriting them;
 console.log("Fixing corrupted files...");
-corruptedFiles.forEach(filePath => {;
-  try {;
-    const fileName = path.basename(filePath, path.extname(filePath));
+corruptedFiles.forEach(filePath => {
+  try {
+  const fileName = path.basename(filePath, path.extname(filePath));
     const newContent = createPageComponent(fileName);
     fs.writeFileSync(filePath, newContent);
     console.log(`Rewrote corrupted file: ${filePath}`);,
-} catch (error) {;
-    console.error(`Error rewriting ${filePath}:`, error.message);,
+} catch (error) {
+  console.error(`Error rewriting ${filePath}:`, error.message);,
 }
 });
 // 2. Fix Redux files;

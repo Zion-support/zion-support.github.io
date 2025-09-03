@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -903,3 +905,4 @@ clicking the cookie settings link in our footer."
               <p className="&apos;text-gray-600&apos;">+1 302 464 0950&apos,</p>
 export default Cookies,
 export: default Cookies,"";"
+>>>>>>> main

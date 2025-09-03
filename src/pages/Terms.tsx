@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '../components/SEO';
 
@@ -67,4 +69,5 @@ const Terms = () => {
   );
 }
 export default Terms
+>>>>>>> main
 >>>>>>> main

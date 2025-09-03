@@ -19,6 +19,19 @@ const AccordionContent = React.forwardRef(({ className, children, ...props }, re
   </AccordionPrimitive.Content>));
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+<<<<<<< HEAD
+}
+
+export { AccordionItem, AccordionTrigger, AccordionContent };
+
+export { AccordionItem, AccordionTrigger, AccordionContent };
+
+export { AccordionItem, AccordionTrigger, AccordionContent };
+
+export { AccordionItem, AccordionTrigger, AccordionContent };
+
+export { AccordionItem, AccordionTrigger, AccordionContent };
+=======
 =======
 "use client";"""
 const Accordion = AccordionPrimitive.Root;"
@@ -167,4 +180,5 @@ export {Accordion, AccordionItem, AccordionTrigger, AccordionContent }"
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent } }}}}"
 '"
+>>>>>>> main
 >>>>>>> main

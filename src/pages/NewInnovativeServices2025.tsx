@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
@@ -48,3 +50,4 @@ const NewInnovativeServices2025 = () => {
   );
 }
 export default NewInnovativeServices2025
+>>>>>>> main

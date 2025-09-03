@@ -3,7 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const scriptsDir = "scripts/intelligent";
-const scripts = [;
+const scripts = [
   "error-prevention-system.js",;
   "performance-optimizer.js",;
   "dependency-manager.js",;
@@ -14,10 +14,10 @@ const scripts = [;
   "log-analyzer.js",;
   "resource-optimizer.js";
 ];
-function fixScript(scriptName) {;
+function fixScript(scriptName) {
   const scriptPath = path.join(scriptsDir, scriptName);
-  if (!fs.existsSync(scriptPath)) {;
-    console.log(`Script not found: ${scriptPath}`);
+  if (!fs.existsSync(scriptPath)) {
+  console.log(`Script not found: ${scriptPath}`);
     return;,
 }
   ;

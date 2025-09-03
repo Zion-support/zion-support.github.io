@@ -3,8 +3,8 @@
  * Comprehensive Testing Suite
  * Runs all tests and generates comprehensive test reports
  */
-const fs = require("fs")
-const path = require("path")
+const fs = require("$1");
+const path = require("$1");
 const { execSync } = require("child_process")
 class ComprehensiveTestingSuite {
   constructor() {

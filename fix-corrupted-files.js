@@ -6,7 +6,7 @@ import { fileURLToPath  } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // List of corrupted files that need to be fixed;
-const corruptedFiles = [;
+const corruptedFiles = [
   "src/pages/services/AIHealthcareRevenueCycle.tsx",;
   "src/pages/services/AIIdentityManagement.tsx",;
   "src/pages/services/AILegalDocumentAutomation.tsx",;
@@ -81,44 +81,44 @@ const corruptedFiles = [;
 // Template for a basic service page;
 const servicePageTemplate = (serviceName, displayName) => `import React from "react";
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3  } from "lucide-react";
-export default function ${serviceName}() {;
-  const features = [;
-    "AI-powered ${displayName.toLowerCase()} optimization",;
+export default function ${serviceName}() {
+  const features = [
+  "AI-powered ${displayName.toLowerCase()} optimization",;
     "Automated ${displayName.toLowerCase()} management",;
     "Real-time ${displayName.toLowerCase()} analytics",;
     "Predictive ${displayName.toLowerCase()} insights",;
     "Custom AI models for ${displayName.toLowerCase()}",;
     "Enterprise-grade security and compliance";
   ];
-  const benefits = [;
-    "Improve ${displayName.toLowerCase()} performance by 50-80%",;
+  const benefits = [
+  "Improve ${displayName.toLowerCase()} performance by 50-80%",;
     "Reduce operational costs by 35-65%",;
     "Enhance scalability and reliability",;
     "Optimize resource utilization",;
     "Scale operations efficiently",;
     "Maximize ROI and efficiency";
   ];
-  const useCases = [;
-    "Software Development",;
+  const useCases = [
+  "Software Development",;
     "E-commerce & Retail",;
     "Financial Services",;
     "Healthcare & Life Sciences",;
     "Media & Entertainment",;
     "Technology & SaaS";
   ];
-  const pricing = [;
-    {;
-      name: "Starter",;
+  const pricing = [
+  {
+  name: "Starter",;
       price: "$299/mo",;
       details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"];,
 },;
-    {;
-      name: "Professional",;
+    {
+  name: "Professional",;
       price: "$799/mo",;
       details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"];,
 },;
-    {;
-      name: "Enterprise",;
+    {
+  name: "Enterprise",;
       price: "$1,999/mo",;
       details: ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"];,
 }
@@ -236,7 +236,7 @@ export default function ${serviceName}() {;
 }
 `;
 // Function to extract service name from file path;
-function getServiceName(filePath) {;
+function getServiceName(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   // Convert kebab-case or camelCase to PascalCase;
   return fileName;
@@ -246,7 +246,7 @@ function getServiceName(filePath) {;
 }
 ;
 // Function to extract display name from service name;
-function getDisplayName(serviceName) {;
+function getDisplayName(serviceName) {
   // Remove common prefixes and convert to readable format;
   return serviceName;
     .replace(/^AI/, "");
@@ -255,23 +255,23 @@ function getDisplayName(serviceName) {;
 }
 ;
 // Fix corrupted files;
-corruptedFiles.forEach(filePath => {;
-  try {;
-    const serviceName = getServiceName(filePath);
+corruptedFiles.forEach(filePath => {
+  try {
+  const serviceName = getServiceName(filePath);
     const displayName = getDisplayName(serviceName);
     console.log(`Fixing ${filePath}...`);
     // Ensure directory exists;
     const dir = path.dirname(filePath);
-    if (!fs.existsSync(dir)) {;
-      fs.mkdirSync(dir, { recursive: true });,
+    if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir, { recursive: true });,
 }
     ;
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
     console.log(`✓ Fixed ${filePath}`);,
-} catch (error) {;
-    console.error(`✗ Error fixing ${filePath}:`, error.message);,
+} catch (error) {
+  console.error(`✗ Error fixing ${filePath}:`, error.message);,
 }
 });
 console.log("\\nFixed all corrupted service files!")

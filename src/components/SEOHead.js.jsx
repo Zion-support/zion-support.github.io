@@ -281,6 +281,21 @@ const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & 
             })}
 
         </script>)}
+<<<<<<< HEAD
+    </Helmet>)};
+export default SEOHead;
+
+
+export { SEOHead };
+
+export { SEOHead };
+
+export { SEOHead };
+
+export { SEOHead };
+
+export { SEOHead };
+=======
 
     </Helmet>)}
 
@@ -308,4 +323,5 @@ export { SEOHead }
 export { SEOHead }";
 ;"`"";
 "
+>>>>>>> main
 >>>>>>> main

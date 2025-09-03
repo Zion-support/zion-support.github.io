@@ -26,5 +26,19 @@ import React from "react"; export function Button({ children, variant = "default
 '""
 "
 
+<<<<<<< HEAD
+
+
+export { Button };
+
+export { Button };
+
+export { Button };
+
+export { Button };
+
+export { Button };
+=======
 export default Component
+>>>>>>> main
 >>>>>>> main

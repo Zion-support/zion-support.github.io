@@ -2,13 +2,13 @@
 const fs = require("fs");
 const path = require("path");
 // Function to fix all remaining semicolons in JSX;
-function fixFinalSemicolons(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, "utf8");
+function fixFinalSemicolons(filePath) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
     // More specific fixes for remaining semicolons;
-    const fixes = [;
-      // Fix JSX attribute semicolons;
+    const fixes = [
+  // Fix JSX attribute semicolons;
       { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },;
       { pattern: /(\w+)="([^"]*);"/g, replacement: "$1="$2"" },;
       // Fix JSX closing tag semicolons;
@@ -29,27 +29,27 @@ function fixFinalSemicolons(filePath) {;
       { pattern: /}\s*import\s+/g, replacement: "}\n\nimport " },;
     ];
 
-    fixes.forEach(fix => {;
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {;
-        content = newContent;
+    fixes.forEach(fix => {
+  const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+  content = newContent;
         modified = true;,
 }
     });
-    if (modified) {;
-      fs.writeFileSync(filePath, content, `utf8`);
+    if (modified) {
+  fs.writeFileSync(filePath, content, `utf8`);
       console.log(`Fixed final semicolons in: ${filePath}`);
       return true;,
 }
     return false;,
-} catch (error) { ;
-    console.error(`Error fixing ${filePath }:`, error.message);
+} catch (error) {
+  console.error(`Error fixing ${filePath }:`, error.message);
     return false;,
 }
 }
 ;
 // Specific files that need fixing;
-const filesToFix = [;
+const filesToFix = [
   `components/SEO.tsx`,;
   "components/ui/Badge.tsx",;
   "pages/NotFound.tsx",;
@@ -58,10 +58,10 @@ const filesToFix = [;
 ];
 console.log("🔧 Fixing final semicolons...");
 let fixedCount = 0;
-filesToFix.forEach(file => {;
-  if (fs.existsSync(file)) {;
-    if (fixFinalSemicolons(file)) {;
-      fixedCount++;,
+filesToFix.forEach(file => {
+  if (fs.existsSync(file)) {
+  if (fixFinalSemicolons(file)) {
+  fixedCount++;,
 }
   }
 });

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+;
+;
+;import { MessageCircle, Calendar, Star } from 'lucide-react';
+=======
 ,"});,"})"
 ;,"});,"})"
 ;import { MessageCircle, Calendar, Star } from "lucide-react";,"});,"})"
@@ -71,6 +77,7 @@ export const HireNowCTA = ({}"});,"})"
 ;import {MessageCircle, Calendar, Star } from "lucide-react"
 
 ;import { MessageCircle, Calendar, Star } from &apos;lucide-react";&apos;&apos
+>>>>>>> main
 export const HireNowCTA = ({}
 
   hourlyRate,

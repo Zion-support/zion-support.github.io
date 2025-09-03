@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { Suspense, lazy } from 'react';
+export const LazyPricing = lazy(() => import('../pages / Pricing') ) ;
+import { LoadingSpinner } from './ui / LoadingSpinner';
+
+export default function Page() {
+export 
+=======
 import React from "react"
 import { SEO } from "@/components/SEO"
 export default function LazyLoader() {return (
@@ -10,3 +20,5 @@ export default function LazyLoader() {return (
         </p>
       </div>
   );"}"
+>>>>>>> main
+>>>>>>> main

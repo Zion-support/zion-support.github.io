@@ -1,4 +1,33 @@
 <<<<<<< HEAD
+import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
+;
+export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
+    const { trackEvent } = useAnalytics({        enableTracking: true,
+        enableUserBehaviorTracking: true;
+    });
+    const [isOpen, setIsOpen] = useState(false);'
+    const [isMinimized, setIsMinimized] = useState(false);''
+    const [messages, setMessages] = useState([]);'''
+    const [inputValue, setInputValue] = useState('');
+    const [isTyping, setIsTyping] = useState(false);
+    const messagesEndRef = useRef(null);
+    const inputRef = useRef(null);
+    // Initialize chatbot;
+    useEffect(() => {}
+        if(isOpen && messages.length === 0) {}
+            addBotMessage(welcomeMessage, {}
+'
+                intent: 'greeting',
+                confidence: 1.0,
+                suggestions: [
+                    "Tell me about your services",
+                    "How can I get a quote?",
+                    "What technologies do you use?",
+                    "Contact information"                ]
+=======
+<<<<<<< HEAD
 export const AIChatbot = ({ welcomeMessage = "Hello! I"m Zion Tech Group"s AI assistant.How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => { const { trackEvent } = useAnalytics({ ";"
 =======
 import React from "react"
@@ -363,7 +392,18 @@ useEffect(() => {"
                 intent: "greeting","
                 confidence: 1.0, suggestions: ["Tell me about your services",
     useEffect(() => {
+<<<<<<< HEAD
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+        if(isOpen && messages.length === 0) {
+
+=======
         if (isOpen && messages.length === 0) {
+>>>>>>> main
             addBotMessage(welcomeMessage, {
                 intent: &apos,greeting&apos,
                 confidence: 1.0,
@@ -386,6 +426,19 @@ useEffect(() => {"
                     "How can I get a quote?", "What technologies do you use?","
                     "Contact information"
                 ]
+<<<<<<< HEAD
+>>>>>>> main
+            })}
+    }, [isOpen, messages.length, welcomeMessage]);
+    // Auto-scroll to bottom
+    useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+=======
 })
 }
         }"
@@ -394,6 +447,7 @@ useEffect(() => {"
                     "How can I get a quote ? ,What technologies do you use?,"
                     "Contact information"]
 })}
+>>>>>>> main
 
     }, [isOpen, messages.length, welcomeMessage]);"
     // comment
@@ -601,6 +655,29 @@ return &quot;I understand you&apos;re asking about &apos;&quot; + userInput + "&
         // comment
 trackChatbotInteraction(&apos;user_input&apos, {
             messageId: userMessage.id,
+<<<<<<< HEAD
+            inputLength: input.length;
+        });'
+        // Clear input''
+        setInputValue('');
+        setIsTyping(true);
+        try {}
+            // Get AI response;
+            const response = await simulateAIProcessing(input) ;
+            // Add bot response;
+            addBotMessage(response, {}
+'
+                intent: 'response',
+                confidence: 0.9,
+                suggestions: [
+                    "Tell me more",
+                    "Get a quote",
+                    "View services",
+                    "Contact sales"                ]
+            });'
+            // Track successful interaction''
+            trackChatbotInteraction('conversation_success', {}
+=======
             inputLength: input.length})
 }
         // comment
@@ -697,6 +774,7 @@ addBotMessage(response, {
 });"
             // comment
             trackChatbotInteraction("conversation_success", {
+>>>>>>> main
                 userInput: input,
             // comment
 trackChatbotInteraction("conversation_success", {userInput: input,

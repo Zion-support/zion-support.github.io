@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
+import { Button } from './ui/Button.jsx';
+import { Input } from './ui/input';
+import { Textarea } from './ui/textarea.jsx';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';import { Checkbox } from './ui/checkbox';
+import {}
+=======
+import {  import { import { Button } from './ui / Button';
+export default function Page() {
+,
+    { value: 'talent-hiring', label: 'Talent Acquisition & Staffing' },
+    { value: 'equipment', label: 'Equipment & Hardware' },
+    { value: 'consulting', label: 'IT Consulting & Strategy' },
+    { value: 'custom-development', label: 'Custom Software Development' },
+    { value: 'other', label: 'Other Services' },
+  ];
+=======
 import React, { useState } from "react";,"});,"})","});,"})","});,"})","});,"})","});,"})"","});,"})","})"
   Mail,,"});,"})"
   Phone,,"});,"})"
@@ -404,6 +424,7 @@ export const QuoteRequestForm = () => {}"});,"})"
   CheckCircle,&apos;&apos,
   AlertCircle} from &apos;lucide-react";&apos;&apos
 export const QuoteRequestForm = () => {}
+>>>>>>> main
 
   const;const;const [formData, setFormData] = useState({}"
 
@@ -432,6 +453,7 @@ export const QuoteRequestForm = () => {}
   const budgetRanges = []";&apos;&apos
   const urgencyLevels = []&apos;&apos;"""""""""""""""""""
 ""import { Checkbox } from "./ui/checkbox"
+>>>>>>> main
   Mail,
   Phone,
   Building,"

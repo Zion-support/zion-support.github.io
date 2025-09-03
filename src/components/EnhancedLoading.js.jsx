@@ -123,6 +123,21 @@ return renderBars ()
       {text && (<motion .p className="text-sm text-gray-400 text-center" initial="{{" opacity: 0 }} animate="{{" opacity: 1 }} transition="{{" delay: 0.3 }}" >"          {text}
 
         </motion.p>)}
+<<<<<<< HEAD
+    </div>)};
+export default EnhancedLoading;
+
+
+export { EnhancedLoading };
+
+export { EnhancedLoading };
+
+export { EnhancedLoading };
+
+export { EnhancedLoading };
+
+export { EnhancedLoading };
+=======
 
     </div>)}
 
@@ -150,4 +165,5 @@ export { EnhancedLoading }
 export { EnhancedLoading }";
 ;"`"";
 "
+>>>>>>> main
 >>>>>>> main

@@ -6,10 +6,10 @@ const path = require("path");
 
 console.log(`"🛡️ Starting Enhanced Security Automation...");
 
-class EnhancedSecurityAutomation {;
-  constructor() {;
-    this.securityResults = {;
-      audit: { status: "pending", vulnerabilities: [], summary: {} },;
+class $1 {
+  constructor() {
+  this.securityResults = {
+  audit: { status: "pending", vulnerabilities: [], summary: {} },;
       dependencies: { status: "pending", outdated: [], licenses: [] },;
       codeAnalysis: { status: "pending", issues: [], summary: {} },;
       secrets: { status: "pending", findings: [] },;
@@ -18,18 +18,18 @@ class EnhancedSecurityAutomation {;
     this.ensureReportDirectory();,
 }
 ;
-  ensureReportDirectory() {;
-    if (!fs.existsSync(this.reportDir)) {;
-      fs.mkdirSync(this.reportDir, { recursive: true });,
+  ensureReportDirectory() {
+  if (!fs.existsSync(this.reportDir)) {
+  fs.mkdirSync(this.reportDir, { recursive: true });,
 }
   }
 ;
-  async runSecurityAudit() {;
-    console.log(`"🔍 Running Security Audit...");
-    try {;
-      // Run npm audit;
-      const auditOutput = execSync("npm audit --audit-level moderate --json", {;
-        encoding: "utf8",;
+  async runSecurityAudit() {
+  console.log(`"🔍 Running Security Audit...");
+    try {
+  // Run npm audit;
+      const auditOutput = execSync("npm audit --audit-level moderate --json", {
+  encoding: "utf8",;
         cwd: process.cwd(),;,
 });
       const auditData = JSON.parse(auditOutput);
@@ -39,8 +39,8 @@ class EnhancedSecurityAutomation {;
       this.securityResults.audit.status = "success";
       this.securityResults.audit.vulnerabilities =;
         auditData.vulnerabilities || [];
-      this.securityResults.audit.summary = {;
-        total: auditData.metadata?.vulnerabilities?.total || 0,;
+      this.securityResults.audit.summary = {
+  total: auditData.metadata?.vulnerabilities?.total || 0,;
         low: auditData.metadata?.vulnerabilities?.low || 0,;
         moderate: auditData.metadata?.vulnerabilities?.moderate || 0,;
         high: auditData.metadata?.vulnerabilities?.high || 0,;
@@ -53,11 +53,11 @@ class EnhancedSecurityAutomation {;
         path.join(this.reportDir, `security-audit.json`),;
         JSON.stringify(auditData, null, 2);
       );,
-} catch (error) {  ;
-      this.securityResults.audit.status = `failure";
+} catch (error) {
+  this.securityResults.audit.status = `failure";
       this.securityResults.audit.vulnerabilities = [];
-      this.securityResults.audit.summary = {;
-        total: 0,;
+      this.securityResults.audit.summary = {
+  total: 0,;
         low: 0,;
         moderate: 0,;
         high: 0,;
@@ -66,25 +66,25 @@ class EnhancedSecurityAutomation {;
       console.log("❌ Security audit failed: ", error.message)}
   }
 ;
-  async checkDependencies() {;
-    console.log("📦 Checking Dependencies...");
-    try {;
-      // Check for outdated packages;
-      const outdatedOutput = execSync("npm outdated --json", {;
-        encoding: "utf8",;
+  async checkDependencies() {
+  console.log("📦 Checking Dependencies...");
+    try {
+  // Check for outdated packages;
+      const outdatedOutput = execSync("npm outdated --json", {
+  encoding: "utf8",;
         cwd: process.cwd(),;
-    try {;
-      // Check for outdated packages;
-      const outdatedOutput = execSync("npm outdated --json", {;
-        encoding: "utf8",;
+    try {
+  // Check for outdated packages;
+      const outdatedOutput = execSync("npm outdated --json", {
+  encoding: "utf8",;
         cwd: process.cwd(),;,
 });
 
       const outdatedData = JSON.parse(outdatedOutput);
       const outdatedPackages = Object.keys(outdatedData);
       // Check package licenses;
-      const licenseOutput = execSync("npm list --json", {;
-        encoding: `utf8`,;
+      const licenseOutput = execSync("npm list --json", {
+  encoding: `utf8`,;
         cwd: process.cwd(),;,
 });
 
@@ -99,15 +99,15 @@ class EnhancedSecurityAutomation {;
       fs.writeFileSync(;
         path.join(this.reportDir, `dependency-check.json`),;
         JSON.stringify(;
-          {;
-            outdated: outdatedData,;
+          {
+  outdated: outdatedData,;
             licenses: licenses},;
           null,;
           2;
         );
       );,
-} catch (error) {  ;
-      this.securityResults.dependencies.status = `failure";
+} catch (error) {
+  this.securityResults.dependencies.status = `failure";
 
       this.securityResults.dependencies.status = "success";
       this.securityResults.dependencies.outdated = outdatedPackages;
@@ -120,40 +120,40 @@ class EnhancedSecurityAutomation {;
       fs.writeFileSync(;
         path.join(this.reportDir, "dependency-check.json"),;
         JSON.stringify(;
-          {;
-            outdated: outdatedData,;
+          {
+  outdated: outdatedData,;
             licenses: licenses,;,
 },;
           null,;
           2;
         );
       );,
-} catch (error) {;
-      this.securityResults.dependencies.status = "failure";
+} catch (error) {
+  this.securityResults.dependencies.status = "failure";
       this.securityResults.dependencies.outdated = [];
       this.securityResults.dependencies.licenses = [];
       console.log("❌ Dependency check failed: ", error.message);,
 }
   }
 ;
-  extractLicenses(packageData) {;
-    const licenses = [];
+  extractLicenses(packageData) {
+  const licenses = [];
 
-    const extractFromDeps = (deps, level = 0) => {;
-      if (!deps) return;
+    const extractFromDeps = (deps, level = 0) => {
+  if (!deps) return;
 
-      Object.entries(deps).forEach((["name", "info"]) => {;
-        if (info.license) {;
-          licenses.push({;
-            name,;
+      Object.entries(deps).forEach((["name", "info"]) => {
+  if (info.license) {
+  licenses.push({
+  name,;
             license: info.license,;
             version: info.version,;
             level,;,
 });,
 }
 ;
-        if (info.dependencies) {;
-          extractFromDeps(info.dependencies, level + 1);,
+        if (info.dependencies) {
+  extractFromDeps(info.dependencies, level + 1);,
 }
       });,
 }
@@ -162,14 +162,14 @@ class EnhancedSecurityAutomation {;
     return licenses;,
 }
 ;
-  async runCodeAnalysis() {;
-    console.log("🔍 Running Code Analysis...");
-    try {;
-      const issues = [];
+  async runCodeAnalysis() {
+  console.log("🔍 Running Code Analysis...");
+    try {
+  const issues = [];
       // Run ESLint security rules;
-      try {;
-        const lintOutput = execSync("npm run lint -- --format json", {;
-          encoding: "utf8",;
+      try {
+  const lintOutput = execSync("npm run lint -- --format json", {
+  encoding: "utf8",;
           cwd: process.cwd(),;,
 });
 
@@ -184,8 +184,8 @@ class EnhancedSecurityAutomation {;
         );
 
         issues.push(;
-          ...securityIssues.map(issue => ({;
-            type: "lint",;
+          ...securityIssues.map(issue => ({
+  type: "lint",;
             severity: issue.severity,;
             message: issue.message,;
             rule: issue.ruleId,;
@@ -193,16 +193,16 @@ class EnhancedSecurityAutomation {;
             line: issue.line,;,
 }));
         );,
-} catch (lintError) {;
-        console.log(`⚠️ Lint security check failed: `, lintError.message);,
+} catch (lintError) {
+  console.log(`⚠️ Lint security check failed: `, lintError.message);,
 }
 ;
       // Check for common security patterns;
       const securityPatterns = this.checkSecurityPatterns();
       issues.push(...securityPatterns);
       this.securityResults.codeAnalysis.status = `success`;,
-} catch (lintError) {;
-        console.log("⚠️ Lint security check failed: ", lintError.message);,
+} catch (lintError) {
+  console.log("⚠️ Lint security check failed: ", lintError.message);,
 }
 ;
       // Check for common security patterns;
@@ -211,8 +211,8 @@ class EnhancedSecurityAutomation {;
 
       this.securityResults.codeAnalysis.status = "success";
       this.securityResults.codeAnalysis.issues = issues;
-      this.securityResults.codeAnalysis.summary = {;
-        total: issues.length,;
+      this.securityResults.codeAnalysis.summary = {
+  total: issues.length,;
         high: issues.filter(i => i.severity === 2).length,;
         medium: issues.filter(i => i.severity === 1).length,;
         low: issues.filter(i => i.severity === 0).length,;,
@@ -223,18 +223,18 @@ class EnhancedSecurityAutomation {;
       fs.writeFileSync(;
         path.join(this.reportDir, `code-analysis.json`),;
         JSON.stringify(;
-          {;
-            issues: issues,;
+          {
+  issues: issues,;
             summary: this.securityResults.codeAnalysis.summary},;
           null,;
           2;
         );
       );,
-} catch (error) {  ;
-      this.securityResults.codeAnalysis.status = `failure";
+} catch (error) {
+  this.securityResults.codeAnalysis.status = `failure";
       this.securityResults.codeAnalysis.issues = [];
-      this.securityResults.codeAnalysis.summary = {;
-        total: 0,;
+      this.securityResults.codeAnalysis.summary = {
+  total: 0,;
         high: 0,;
         medium: 0,;
         low: 0,;,
@@ -242,32 +242,32 @@ class EnhancedSecurityAutomation {;
       console.log("❌ Code analysis failed: ", error.message)}
   }
 ;
-  checkSecurityPatterns() {;
-    const issues = [];
+  checkSecurityPatterns() {
+  const issues = [];
     const srcDir = path.join(process.cwd(), "src");
 
     if (!fs.existsSync(srcDir)) return issues;
 
-    const checkFile = filePath => {;
-      try {;
-        const content = fs.readFileSync(filePath, "utf8");
+    const checkFile = filePath => {
+  try {
+  const content = fs.readFileSync(filePath, "utf8");
         // Check for dangerous patterns;
-        const patterns = ["{;
-            pattern: /eval\s*\(/", "rule: "no-eval"", "severity: 2", "message: "eval() usage detected"", "}", "{;
-            pattern: /new\s+Function/", "rule: "no-new-func"", "severity: 2", "message: "new Function() usage detected"", "}", "{;
-            pattern: /innerHTML\s*=/", "rule: "no-inner-html"", "severity: 1", "message: "innerHTML assignment detected"", "}", "{;
-            pattern: /document\.write/", "rule: "no-document-write"", "severity: 1", "message: "document.write() usage detected"", "}", "{;
-            pattern: /localStorage\[.*\"]\s*=/,;
+        const patterns = ["{
+  pattern: /eval\s*\(/", "rule: "no-eval"", "severity: 2", "message: "eval() usage detected"", "}", "{
+  pattern: /new\s+Function/", "rule: "no-new-func"", "severity: 2", "message: "new Function() usage detected"", "}", "{
+  pattern: /innerHTML\s*=/", "rule: "no-inner-html"", "severity: 1", "message: "innerHTML assignment detected"", "}", "{
+  pattern: /document\.write/", "rule: "no-document-write"", "severity: 1", "message: "document.write() usage detected"", "}", "{
+  pattern: /localStorage\[.*\"]\s*=/,;
             rule: "local-storage-security",;
             severity: 1,;
             message: "localStorage assignment detected"},;
-          {;
-            pattern: /sessionStorage\[".*\]\s*=/", "rule: "session-storage-security"", "severity: 1", "message: "sessionStorage assignment detected"", "}", ""];
-        patterns.forEach(({ pattern, rule, severity, message }) => {;
-          const matches = content.match(pattern);
-          if (matches) {;
-            issues.push({;
-              type: "pattern",;
+          {
+  pattern: /sessionStorage\[".*\]\s*=/", "rule: "session-storage-security"", "severity: 1", "message: "sessionStorage assignment detected"", "}", ""];
+        patterns.forEach(({ pattern, rule, severity, message }) => {
+  const matches = content.match(pattern);
+          if (matches) {
+  issues.push({
+  type: "pattern",;
               severity: severity,;
               message: message,;
               rule: rule,;
@@ -277,29 +277,29 @@ class EnhancedSecurityAutomation {;
                 .split("\n").length});,
 }
         });,
-} catch (error) {  ;
-        // Skip files that can"t be read;,
+} catch (error) {
+  // Skip files that can"t be read;,
 }
 ;
         // Check for dangerous patterns;
-        const patterns = ["{;
-            pattern: /eval\s*\(/", "rule: "no-eval", "severity: 2", "message: "eval() usage detected", "}", "{;
-            pattern: /new\s+Function/", "rule: "no-new-func", "severity: 2", "message: "new Function() usage detected", "}", "{;
-            pattern: /innerHTML\s*=/", "rule: "no-inner-html", "severity: 1", "message: "innerHTML assignment detected", "}", "{;
-            pattern: /document\.write/", "rule: "no-document-write", "severity: 1", "message: "document.write() usage detected", "}", "{;
-            pattern: /localStorage\[.*\"]\s*=/,;
+        const patterns = ["{
+  pattern: /eval\s*\(/", "rule: "no-eval", "severity: 2", "message: "eval() usage detected", "}", "{
+  pattern: /new\s+Function/", "rule: "no-new-func", "severity: 2", "message: "new Function() usage detected", "}", "{
+  pattern: /innerHTML\s*=/", "rule: "no-inner-html", "severity: 1", "message: "innerHTML assignment detected", "}", "{
+  pattern: /document\.write/", "rule: "no-document-write", "severity: 1", "message: "document.write() usage detected", "}", "{
+  pattern: /localStorage\[.*\"]\s*=/,;
             rule: "local-storage-security",;
             severity: 1,;
             message: "localStorage assignment detected",;,
 },;
-          {;
-            pattern: /sessionStorage\[".*\]\s*=/", "rule: "session-storage-security", "severity: 1", "message: "sessionStorage assignment detected", "}", "];
+          {
+  pattern: /sessionStorage\[".*\]\s*=/", "rule: "session-storage-security", "severity: 1", "message: "sessionStorage assignment detected", "}", "];
 
-        patterns.forEach(({ pattern, rule, severity, message }) => {;
-          const matches = content.match(pattern);
-          if (matches) {;
-            issues.push({;
-              type: "pattern",;
+        patterns.forEach(({ pattern, rule, severity, message }) => {
+  const matches = content.match(pattern);
+          if (matches) {
+  issues.push({
+  type: "pattern",;
               severity: severity,;
               message: message,;
               rule: rule,;
@@ -310,26 +310,26 @@ class EnhancedSecurityAutomation {;
 });,
 }
         });,
-} catch (error) {;
-        // Skip files that can"t be read;,
+} catch (error) {
+  // Skip files that can"t be read;,
 }
     }
 ;
-    const walkDir = dir => {;
-      const files = fs.readdirSync(dir);
-      files.forEach(file => {;
-        const filePath = path.join(dir, file);
+    const walkDir = dir => {
+  const files = fs.readdirSync(dir);
+      files.forEach(file => {
+  const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
 
-        if (stat.isDirectory()) {;
-          walkDir(filePath);,
+        if (stat.isDirectory()) {
+  walkDir(filePath);,
 } else if (;
           file.endsWith(".js") ||;
           file.endsWith(".jsx") ||;
           file.endsWith(".ts") ||;
           file.endsWith(".tsx");
-        ) {;
-          checkFile(filePath);,
+        ) {
+  checkFile(filePath);,
 }
       });,
 }
@@ -338,57 +338,57 @@ class EnhancedSecurityAutomation {;
     return issues;,
 }
 ;
-  async scanForSecrets() {;
-    console.log("🔐 Scanning for Secrets...");
-    try {;
-      const findings = [];
+  async scanForSecrets() {
+  console.log("🔐 Scanning for Secrets...");
+    try {
+  const findings = [];
       // Check for hardcoded secrets in source files;
-      const secretPatterns = [;
-        {;
-          pattern: /api[_-]?key\s*[:=]\s*[""][^"]{10,}["]/i,;
+      const secretPatterns = [
+  {
+  pattern: /api[_-]?key\s*[:=]\s*[""][^"]{10,}["]/i,;
           type: "API Key",;,
 },;
         { pattern: /password\s*[:=]\s*["][^"]{8,}["]/i, type: "Password" },;
         { pattern: /secret\s*[:=]\s*["][^""]{10,}[""]/i, type: "Secret" },;
-        { pattern: /token\s*[:=]\s*["][^"]{10,}["]/i, type: "Token" },        {;
-          pattern: /private[_-]?key\s*[:=]\s*["][^""]{10}[""]/i, "type: "Private Key"", "}", ""];
+        { pattern: /token\s*[:=]\s*["][^"]{10,}["]/i, type: "Token" },        {
+  pattern: /private[_-]?key\s*[:=]\s*["][^""]{10}[""]/i, "type: "Private Key"", "}", ""];
 
       // Check for hardcoded secrets in source files;
-      const secretPatterns = [;
-        {;
-          pattern: /api[_-]?key\s*[:=]\s*["][^"]{10}[""]/i,;
+      const secretPatterns = [
+  {
+  pattern: /api[_-]?key\s*[:=]\s*["][^"]{10}[""]/i,;
           type: "API Key",;,
 },;
         { pattern: /password\s*[:=]\s*[""][^"]{8}["]/i, type: "Password" },;
         { pattern: /secret\s*[:=]\s*[""][^""]{10}["]/i, type: "Secret" },;
         { pattern: /token\s*[:=]\s*["][^""]{10}[""]/i, type: "Token" },;
-        {;
-          pattern: /private[_-]?key\s*[:=]\s*["][^"]{10}[""]/i, "type: "Private Key", "}", "];
+        {
+  pattern: /private[_-]?key\s*[:=]\s*["][^"]{10}[""]/i, "type: "Private Key", "}", "];
 
       const srcDir = path.join(process.cwd(), "src");
-      if (fs.existsSync(srcDir)) {;
-        const walkDir = dir => {;
-          const files = fs.readdirSync(dir);
-          files.forEach(file => {;
-            const filePath = path.join(dir, file);
+      if (fs.existsSync(srcDir)) {
+  const walkDir = dir => {
+  const files = fs.readdirSync(dir);
+          files.forEach(file => {
+  const filePath = path.join(dir, file);
             const stat = fs.statSync(filePath);
 
-            if (stat.isDirectory()) {;
-              walkDir(filePath);,
+            if (stat.isDirectory()) {
+  walkDir(filePath);,
 } else if (;
               file.endsWith(".js") ||;
               file.endsWith(".jsx") ||;
               file.endsWith(".ts") ||;
               file.endsWith(".tsx");
-            ) {;
-              try {;
-                const content = fs.readFileSync(filePath, "utf8");
+            ) {
+  try {
+  const content = fs.readFileSync(filePath, "utf8");
 
-                secretPatterns.forEach(({ pattern, type }) => {;
-                  const matches = content.match(pattern);
-                  if (matches) {;
-                    findings.push({;
-                      type: type,;
+                secretPatterns.forEach(({ pattern, type }) => {
+  const matches = content.match(pattern);
+                  if (matches) {
+  findings.push({
+  type: type,;
                       file: filePath,;
                       line: content;
                         .substring(0, content.indexOf(matches[0]));
@@ -396,8 +396,8 @@ class EnhancedSecurityAutomation {;
                       match: matches[0].substring(0, 50) + "...`});,
 }
                 });,
-} catch (error) {  ;
-                // Skip files that can`t be read;,
+} catch (error) {
+  // Skip files that can`t be read;,
 }
             }
           });,
@@ -415,78 +415,78 @@ class EnhancedSecurityAutomation {;
       fs.writeFileSync(;
         path.join(this.reportDir, "secret-scan.json"),;
         JSON.stringify(;
-          {;
-            findings: findings,;
+          {
+  findings: findings,;
             timestamp: new Date().toISOString(),;,
 },;
           null,;
           2;
         );
       );,
-} catch (error) {;
-      this.securityResults.secrets.status = "failure";
+} catch (error) {
+  this.securityResults.secrets.status = "failure";
       this.securityResults.secrets.findings = [];
       console.log("❌ Secret scan failed: ", error.message);,
 }
   }
 ;
-  async runComplianceChecks() {;
-    console.log("📋 Running Compliance Checks...");
-    try {;
-      const checks = [];
+  async runComplianceChecks() {
+  console.log("📋 Running Compliance Checks...");
+    try {
+  const checks = [];
       // Check for security headers in build output;
       const distDir = path.join(process.cwd(), "dist");
-      if (fs.existsSync(distDir)) {;
-        const htmlFiles = fs;
+      if (fs.existsSync(distDir)) {
+  const htmlFiles = fs;
           .readdirSync(distDir);
 
       // Check for security headers in build output;
       const distDir = path.join(process.cwd(), "dist");
-      if (fs.existsSync(distDir)) {;
-        const htmlFiles = fs;
+      if (fs.existsSync(distDir)) {
+  const htmlFiles = fs;
           .readdirSync(distDir);
           .filter(file => file.endsWith(".html"));
 
-        htmlFiles.forEach(file => {;
-          const filePath = path.join(distDir, file);
-          try {;
-            const content = fs.readFileSync(filePath, "utf8");
+        htmlFiles.forEach(file => {
+  const filePath = path.join(distDir, file);
+          try {
+  const content = fs.readFileSync(filePath, "utf8");
             // Check for security meta tags;
             const hasCSP = content.includes("Content-Security-Policy");
             const hasXFrame = content.includes("X-Frame-Options");
             const hasXContent = content.includes("X-Content-Type-Options");
 
-            checks.push({;
-              file: file,;
+            checks.push({
+  file: file,;
               csp: hasCSP,;
               xFrame: hasXFrame,;
               xContent: hasXContent,;,
 });,
-} catch (error) {  ;
-            // Skip files that can"t be read;,
+} catch (error) {
+  // Skip files that can"t be read;,
 }
         });,
 }
 ;,
-} catch (error) {;
-            // Skip files that can"t be read;,
+} catch (error) {
+  // Skip files that can"t be read;,
 }
         });,
 }
 ;
       // Check package.json for security scripts;
       const packagePath = path.join(process.cwd(), "package.json");
-      if (fs.existsSync(packagePath)) {;
-        try {;
-          const packageData = JSON.parse(fs.readFileSync(packagePath, "utf8"));
+      if (fs.existsSync(packagePath)) {
+  try {
+  const packageData = JSON.parse(fs.readFileSync(packagePath, "utf8"));
           const scripts = packageData.scripts || {}
-          checks.push({;
-            type: "package-scripts`,;
+          checks.push({
+  type: "package-scripts`,;
             hasSecurityScript: !!scripts.security,;
             hasAuditScript: !!scripts.audit,;
             hasLintScript: !!scripts.lint});,
-} catch (error) {  ;
-          // Skip if package.json can`t be parsed;,
+} catch (error) {
+  // Skip if package.json can`t be parsed;,
 }
       }
 ;
@@ -499,28 +499,28 @@ class EnhancedSecurityAutomation {;
       fs.writeFileSync(;
         path.join(this.reportDir, "compliance-checks.json"),;
         JSON.stringify(;
-          {;
-            checks: checks,;
+          {
+  checks: checks,;
             timestamp: new Date().toISOString(),;,
 },;
           null,;
           2;
         );
       );,
-} catch (error) {;
-      this.securityResults.compliance.status = "failure";
+} catch (error) {
+  this.securityResults.compliance.status = "failure";
       this.securityResults.compliance.checks = [];
       console.log("❌ Compliance checks failed: ", error.message);,
 }
   }
 ;
-  async generateSecurityReport() {;
-    console.log("📋 Generating Security Report...");
+  async generateSecurityReport() {
+  console.log("📋 Generating Security Report...");
 
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalVulnerabilities: this.securityResults.audit.summary.total || 0,;
+    const report = {
+  timestamp: new Date().toISOString(),;
+      summary: {
+  totalVulnerabilities: this.securityResults.audit.summary.total || 0,;
         criticalVulnerabilities: ;
           this.securityResults.audit.summary.critical || 0,;
         highVulnerabilities: this.securityResults.audit.summary.high || 0,;
@@ -558,8 +558,8 @@ class EnhancedSecurityAutomation {;
     return report;,
 }
 ;
-  calculateRiskLevel() {;
-    const critical = this.securityResults.audit.summary.critical || 0;
+  calculateRiskLevel() {
+  const critical = this.securityResults.audit.summary.critical || 0;
     const high = this.securityResults.audit.summary.high || 0;
     const secrets = this.securityResults.secrets.findings.length;
 
@@ -569,8 +569,8 @@ class EnhancedSecurityAutomation {;
     return `LOW`;,
 }
 ;
-  generateMarkdownReport(report) {;
-    return # Security Report - ${new Date().toLocaleDateString()}
+  generateMarkdownReport(report) {
+  return # Security Report - ${new Date().toLocaleDateString()}
 ;
 ## 🚨 Risk Level: ${report.riskLevel}
 ;
@@ -591,47 +591,47 @@ class EnhancedSecurityAutomation {;
 ;
 ## 🚨 Immediate Actions Required;
 ## 🚨 Immediate Actions Required;
-${;
+${
   report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately;
 2. **CRITICAL**: Update packages with critical security issues;
     : `1. ✅ No critical vulnerabilities found`;,
 }
 ;
-${;
+${
   report.summary.highVulnerabilities > 0? 3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities;
 4. **HIGH**: Review and update high-risk packages;
     : `2. ✅ No high-risk vulnerabilities found`;,
 }
 ;
-${;
+${
   report.summary.potentialSecrets > 0? 5. **SECRETS**: Remove or secure ${report.summary.potentialSecrets} hardcoded secrets;
 6. **SECRETS**: Use environment variables for sensitive data`;
     : `3. ✅ No hardcoded secrets found`;
-${;
+${
   report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately;
 2. **CRITICAL**: Update packages with critical security issues;
     : "1. ✅ No critical vulnerabilities found";,
 }
 ;
-${;
+${
   report.summary.highVulnerabilities > 0? 3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities;
 4. **HIGH**: Review and update high-risk packages;
     : "2. ✅ No high-risk vulnerabilities found";,
 }
 ;
-${;
+${
   report.summary.potentialSecrets > 0? 5. **SECRETS**: Remove or secure ${report.summary.potentialSecrets} hardcoded secrets;
 6. **SECRETS**: Use environment variables for sensitive data`;
     : "3. ✅ No hardcoded secrets found";
 ## 🚨 Immediate Actions Required;
 
-${;
+${
   report.summary.criticalVulnerabilities > 0? 1. **CRITICAL**: Fix ${report.summary.criticalVulnerabilities} critical vulnerabilities immediately`);
 2. **CRITICAL**: Update packages with critical security issues`);
     : "1. ✅ No critical vulnerabilities found`);,
 }
 ;
-${;
+${
   report.summary.highVulnerabilities > 0? 3. **HIGH**: Address ${report.summary.highVulnerabilities} high-risk vulnerabilities;
 4. **HIGH**: Review and update high-risk packages;
     : "2. ✅ No high-risk vulnerabilities found`);,
@@ -648,11 +648,11 @@ ${`);
 *Report generated by Enhanced Security Automation*;,
 }
 ;
-  async runAllSecurityChecks(```) {;
-    console.log(`"🚀 Starting comprehensive security checks...');
+  async runAllSecurityChecks(```) {
+  console.log(`"🚀 Starting comprehensive security checks...');
 
-  async runAllSecurityChecks(```) {;
-    console.log(``🚀 Starting comprehensive security checks...`);
+  async runAllSecurityChecks(```) {
+  console.log(``🚀 Starting comprehensive security checks...`);
     console.log(`🚀 Starting comprehensive security checks...`);
     await this.runSecurityAudit();
     await this.checkDependencies();
@@ -668,16 +668,16 @@ ${`);
 }
 ;
 // Main execution;
-async function main() {;
+async function $1() {
 
 // Main execution;
-async function main() {;
+async function main() {
   const security = new EnhancedSecurityAutomation();
 
-  try {;
-    await security.runAllSecurityChecks();,
-} catch (error) {  ;
-    console.error(`❌ Security automation failed: `, error);    process.exit(1);,
+  try {
+  await security.runAllSecurityChecks();,
+} catch (error) {
+  console.error(`❌ Security automation failed: `, error);    process.exit(1);,
 }
 }
 ;

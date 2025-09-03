@@ -4,9 +4,9 @@ const path = require("path");
 const { execSync } = require("child_process");
 console.log("🔧 Starting merge conflict resolution...");
 // Function to resolve merge conflicts in a file;
-function resolveMergeConflicts(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, "utf8");
+function resolveMergeConflicts(filePath) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
     // Remove merge conflict markers;
     content = content.replace(;
       /    );
@@ -18,8 +18,8 @@ function resolveMergeConflicts(filePath) {;
     fs.writeFileSync(filePath, content);
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;,
-} catch (error) { ;
-    console.error(;
+} catch (error) {
+  console.error(;
       `❌ Error resolving conflicts in ${filePath }:`,;
       error.message;
     );
@@ -28,20 +28,20 @@ function resolveMergeConflicts(filePath) {;
 }
 ;
 // Function to find all files with merge conflicts;
-function findFilesWithConflicts(dir) {;
+function findFilesWithConflicts(dir) {
   const files = [];
-  function searchDirectory(currentDir) {;
-    try {;
-      const items = fs.readdirSync(currentDir);
-      for (const item of items) {;
-        const fullPath = path.join(currentDir, item);
+  function searchDirectory(currentDir) {
+  try {
+  const items = fs.readdirSync(currentDir);
+      for (const item of items) {
+  const fullPath = path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
         if (;
           stat.isDirectory() &&;
           !item.startsWith(`.`) &&;
           item !== "node_modules";
-        ) {;
-          searchDirectory(fullPath);,
+        ) {
+  searchDirectory(fullPath);,
 } else if (;
           stat.isFile() &&;
           (item.endsWith(".tsx") ||;
@@ -49,21 +49,21 @@ function findFilesWithConflicts(dir) {;
             item.endsWith(".js") ||;
             item.endsWith(".jsx") ||;
             item.endsWith(".json"));
-        ) {;
-          try {;
-            const content = fs.readFileSync(fullPath, "utf8");
+        ) {
+  try {
+  const content = fs.readFileSync(fullPath, "utf8");
             if (;
               content.includes("              content.includes("") ||;
-              content.includes("            ) {;
-              files.push(fullPath);,
+              content.includes("            ) {
+  files.push(fullPath);,
 }
-          } catch (error) { ;
-            // Skip files that can"t be read;,
+          } catch (error) {
+  // Skip files that can"t be read;,
 }
         }
       }
-    } catch (error) { ;
-      // Skip directories that can"t be read;,
+    } catch (error) {
+  // Skip directories that can"t be read;,
 }
   }
 ;
@@ -72,19 +72,19 @@ function findFilesWithConflicts(dir) {;
 }
 ;
 // Main execution;
-try {;
+try {
   const conflictedFiles = findFilesWithConflicts(".");
-  if (conflictedFiles.length === 0) {;
-    console.log(`✅ No merge conflicts found!`);
+  if (conflictedFiles.length === 0) {
+  console.log(`✅ No merge conflicts found!`);
     process.exit(0);,
 }
 ;
   console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
   conflictedFiles.forEach(file => console.log(`  - ${file}`));
   let resolvedCount = 0;
-  for (const file of conflictedFiles) {;
-    if (resolveMergeConflicts(file)) {;
-      resolvedCount++;,
+  for (const file of conflictedFiles) {
+  if (resolveMergeConflicts(file)) {
+  resolvedCount++;,
 }
   }
 ;
@@ -93,15 +93,15 @@ try {;
   );
   // Try to run a build to check if everything is working;
   console.log(`\n🔨 Testing build...`);
-  try {;
-    execSync("npm run build", { stdio: "inherit" });
+  try {
+  execSync("npm run build", { stdio: "inherit" });
     console.log("✅ Build successful!");,
-} catch (error) { ;
-    console.log(;
+} catch (error) {
+  console.log(;
       "⚠️  Build failed, but conflicts were resolved. You may need to fix TypeScript errors manually.";
     );,
 }
-} catch (error) { ;
+} catch (error) {
   console.error("❌ Error during merge conflict resolution:", error.message);
   process.exit(1);,
 }

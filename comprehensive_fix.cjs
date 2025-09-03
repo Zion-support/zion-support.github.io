@@ -1,17 +1,17 @@
 const fs = require("fs");
 const path = require("path");
 // Function to create a proper Next.js page template;
-function createProperPageTemplate(pageName, isApi = false) {;
-  if (isApi) {;
-    return `import type { NextApiRequest, NextApiResponse } from "next";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+function createProperPageTemplate(pageName, isApi = false) {
+  if (isApi) {
+  return `import type { NextApiRequest, NextApiResponse } from "next";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: "API endpoint working" });,
 }`;,
 }
   ;
   return `import type { NextPage } from "next";
 import Head from `next/head`;
-const ${pageName}: NextPage = () => {;
+const ${pageName}: NextPage = () => {
   return (;
     <div>;
       <Head>;
@@ -30,11 +30,11 @@ export default ${pageName};`;,
 }
 ;
 // Function to create a proper blog page template;
-function createBlogPageTemplate(pageName) {;
+function createBlogPageTemplate(pageName) {
   return `import type { NextPage } from `next`;
 import Head from "next/head";
 import Link from `next/link`;
-const ${pageName}: NextPage = () => {;
+const ${pageName}: NextPage = () => {
   return (;
     <div>;
       <Head>;
@@ -54,11 +54,11 @@ export default ${pageName};`;,
 }
 ;
 // Function to create a proper service page template;
-function createServicePageTemplate(pageName) {;
+function createServicePageTemplate(pageName) {
   return `import type { NextPage } from `next`;
 import Head from "next/head";
 import Link from `next/link`;
-const ${pageName}: NextPage = () => {;
+const ${pageName}: NextPage = () => {
   return (;
     <div>;
       <Head>;
@@ -78,13 +78,13 @@ export default ${pageName};`;,
 }
 ;
 // Function to create a proper component template;
-function createComponentTemplate(componentName) {;
+function createComponentTemplate(componentName) {
   return `import React from `react`;
-interface ${componentName}Props {;
+interface ${componentName}Props {
   children?: React.ReactNode;,
 }
 ;
-const ${componentName}: React.FC<${componentName}Props> = ({ children }) => {;
+const ${componentName}: React.FC<${componentName}Props> = ({ children }) => {
   return (;
     <div>;
       {children}
@@ -95,45 +95,45 @@ export default ${componentName};`;,
 }
 ;
 // Function to fix a file based on its path and name;
-function fixFile(filePath) {;
-  try {;
-    const fileName = path.basename(filePath, path.extname(filePath));
+function fixFile(filePath) {
+  try {
+  const fileName = path.basename(filePath, path.extname(filePath));
     const dirName = path.dirname(filePath);
     let content = ``;
     // Determine the type of file and create appropriate content;
     let content = "";
     // Determine the type of file and create appropriate content;
-    if (filePath.includes("/api/")) {;
-      content = createProperPageTemplate(fileName, true);,
-} else if (filePath.includes("/blog/") || filePath.includes("/category/")) {;
-      content = createBlogPageTemplate(fileName);,
-} else if (filePath.includes("/services/")) {;
-      content = createServicePageTemplate(fileName);,
-} else if (filePath.includes("/components/")) {;
-      content = createComponentTemplate(fileName);,
-} else if (filePath.includes(`/pages/`)) {;
-      content = createProperPageTemplate(fileName);,
+    if (filePath.includes("/api/")) {
+  content = createProperPageTemplate(fileName, true);,
+} else if (filePath.includes("/blog/") || filePath.includes("/category/")) {
+  content = createBlogPageTemplate(fileName);,
+} else if (filePath.includes("/services/")) {
+  content = createServicePageTemplate(fileName);,
+} else if (filePath.includes("/components/")) {
+  content = createComponentTemplate(fileName);,
+} else if (filePath.includes(`/pages/`)) {
+  content = createProperPageTemplate(fileName);,
 }
     ;
     fs.writeFileSync(filePath, content);
     // Fixed: ${filePath}
     return true;,
-} catch (error) { ;
-    console.error(`Error fixing ${filePath }:`, error.message);
+} catch (error) {
+  console.error(`Error fixing ${filePath }:`, error.message);
     return false;,
 }
 }
 ;
 // Function to recursively find and fix corrupted files;
-function fixCorruptedFiles(directory) {;
+function fixCorruptedFiles(directory) {
   const files = fs.readdirSync(directory);
-  for (const file of files) {;
-    const filePath = path.join(directory, file);
+  for (const file of files) {
+  const filePath = path.join(directory, file);
     const stat = fs.statSync(filePath);
-    if (stat.isDirectory()) {;
-      fixCorruptedFiles(filePath);,
-} else if (file.endsWith(`.tsx`) || file.endsWith(".ts")) {;
-      fixFile(filePath);,
+    if (stat.isDirectory()) {
+  fixCorruptedFiles(filePath);,
+} else if (file.endsWith(`.tsx`) || file.endsWith(".ts")) {
+  fixFile(filePath);,
 }
   }
 }

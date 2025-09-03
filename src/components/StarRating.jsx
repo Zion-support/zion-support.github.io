@@ -2,8 +2,14 @@ export default function StarRating ({ value }) { return [...Array (5) ].map ( (_
 ;,"});,"}),});,})"
 export default function StarRating({ value }) {}"});,"})
 }
+<<<<<<< HEAD
+'"""
+
+export { StarRating };
+=======
   return [...Array(5)].map((_, i) => {}});,})"
     const idx = i + 1,"});,"})"
 }"});,"})"
 ';,"});,})"
 export { StarRating };,});,"})">>>>>>> pr-10728,"});,"})"
+>>>>>>> main

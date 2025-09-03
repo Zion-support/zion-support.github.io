@@ -1,7 +1,7 @@
-export const advancedAIServices2025 = [;
-    // AI-Powered Business Intelligence;
-    {;
-        id: "ai-business-intelligence",;
+export const advancedAIServices2025 = [
+  // AI-Powered Business Intelligence;
+    {
+  id: "ai-business-intelligence",;
         name: "AI-Powered Business Intelligence",;
         category: "AI & Analytics",;
         icon: "📊",;
@@ -9,8 +9,8 @@ export const advancedAIServices2025 = [;
         pricing: "Subscription-based",;
         price: 2499,;
         pricingModel: "monthly",;
-        features[;
-            "AI-powered data analysis",;
+        features[
+  "AI-powered data analysis",;
             "Predictive analytics",;
             "Automated insights",;
             "Natural language queries",;
@@ -21,16 +21,16 @@ export const advancedAIServices2025 = [;
             "Mobile app",;
             "Collaboration tools";
         ],;
-        benefits[;
-            "Faster insights",;
+        benefits[
+  "Faster insights",;
             "Predictive capabilities",;
             "Automated reporting",;
             "Better decision making",;
             "Cost savings";
         ],;
         targetAudience["Enterprises", "Data analysts", "Business users", "Executives", "Consultants"],;
-        contactInfo: {;
-            mobile: "+1 302 464 0950",;
+        contactInfo: {
+  mobile: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709",;
             website: "https://ziontechgroup.com";,
@@ -51,8 +51,8 @@ export const advancedAIServices2025 = [;
         growthRate: "30% annual growth";,
 },;
     // AI-Powered Customer Service Automation;
-    {;
-        id: "ai-customer-service-automation",;
+    {
+  id: "ai-customer-service-automation",;
         name: "AI-Powered Customer Service Automation",;
         category: "AI & Customer Experience",;
         icon: "💬",;
@@ -60,8 +60,8 @@ export const advancedAIServices2025 = [;
         pricing: "Usage-based",;
         price: 0.15,;
         pricingModel: "per interaction",;
-        features[;
-            "AI chatbot automation",;
+        features[
+  "AI chatbot automation",;
             "Natural language processing",;
             "Multi-language support",;
             "24/7 availability",;
@@ -72,16 +72,16 @@ export const advancedAIServices2025 = [;
             "Analytics dashboard",;
             "Custom integrations";
         ],;
-        benefits[;
-            "24/7 support",;
+        benefits[
+  "24/7 support",;
             "Instant responses",;
             "Cost reduction",;
             "Improved satisfaction",;
             "Scalable support";
         ],;
         targetAudience["E-commerce businesses", "SaaS companies", "Customer service teams", "Support organizations", "Enterprises"],;
-        contactInfo: {;
-            mobile: "+1 302 464 0950",;
+        contactInfo: {
+  mobile: "+1 302 464 0950",;
             email: "kleber@ziontechgroup.com",;
             address: "364 E Main St STE 1008 Middletown DE 19709",;
             website: "https://ziontechgroup.com";,
@@ -101,8 +101,8 @@ export const advancedAIServices2025 = [;
         marketSize: "$2.8B customer service automation market",;
         growthRate: "40% annual growth";
 ];
-export default {;
-    advancedInnovativeServices2025V3,;
+export default {
+  advancedInnovativeServices2025V3,;
     advancedITServices2025,;
     advancedAIServices2025;,
 }

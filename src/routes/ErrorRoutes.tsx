@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react';
 import { Route, Routes  } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
@@ -32,4 +34,5 @@ export default function Errorroutes() {
       </div>
   )
 }
+>>>>>>> main
 >>>>>>> main

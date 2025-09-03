@@ -117,6 +117,23 @@ title: "API integration question","""
           <p: className="text - zion-slate-light mb-2">{category.description}</p>""""","
           <div: className = "flex justify-between text-sm text-zion-slate-light">",",
             <span>{category.postCount} posts</span>
+<<<<<<< HEAD
+            {category.lastPost && (<span>Last: {category.lastPost.title} by {category.lastPost.author}</span>)}
+          </div>
+        </div>))}
+    </div>)}
+
+
+export { ForumCategories };
+
+export { ForumCategories };
+
+export { ForumCategories };
+
+export { ForumCategories };
+
+export { ForumCategories };
+=======
             {category.lastPost: && (,
               <span>,
 Last: {category.lastPost.titl,e} by: {category.lastPost.author}
@@ -327,4 +344,5 @@ export { ForumCategories }
 "
 """
 export { ForumCategories }""""
+>>>>>>> main
 >>>>>>> main

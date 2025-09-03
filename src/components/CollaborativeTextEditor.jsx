@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import React, { useState, useCallback, useEffect, useRef } from 'react';'
+import { motion } from 'framer-motion';'
+import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
+;
+;
+export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
+    const { trackEvent } = useAnalytics({        enableTracking: true,
+        enableUserBehaviorTracking: true;
+    });
+    const [editorState, setEditorState] = useState({}
+        content: initialContent,'
+        selection: { start: 0, end: 0, text: '' },
+=======
 import React, { useState, useCallback, useEffect, useRef } from "react";,"});,"})","});,"})","});,"})"
 ;,"});,"})"
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = "", enableAI = true, enableCollaboration = true, enableVersioning = true, className = "", onSave, onExport }) => {;,"});,"})"
@@ -479,6 +493,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     const;const;const [editorState, setEditorState] = useState({}"
         content: initialContent,
         selection: { star,t: 0, end: 0, text: &apos,&apos},
+>>>>>>> main
         version: 0,
         changes[],
         suggestions[],
@@ -948,7 +963,30 @@ ${editorState.content}"}
 
             onExport(exportContent, format)}
 
+<<<<<<< HEAD
+            // Default export behavior'
+            const blob = new Blob([exportContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;`
+            a.download = `document.${format}`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+        trackEvent('editor',content_exported', format, null, { format });
+    }, [editorState.content, onExport, trackEvent]);
+    // Handle collaboration text changes
+    useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+        const handleCollaborationTextChange = (event) => {
+=======
         else {}
+>>>>>>> main
 
 "
 ""
@@ -1047,6 +1085,18 @@ version: Math.max(prev.version, message.payload.version)}})"
     // comment
     useEffect(() => {}
 
+<<<<<<< HEAD
+            window.removeEventListener('collaborationTextChange', handleCollaborationTextChange)}}, [userId, trackEvent]);
+    // Auto-save functionality
+    useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+=======
+>>>>>>> main
         if(!enableVersioning)
 }
             return        const autoSaveInterval = setInterval(() => {}
@@ -1054,6 +1104,21 @@ version: Math.max(prev.version, message.payload.version)}})"
             if(editorState.content !== initialContent) {}
 
                 handleSave()}
+<<<<<<< HEAD
+        }, 30000); // Auto-save every 30 seconds
+        return () => clearInterval(autoSaveInterval)}, [editorState.content, initialContent, enableVersioning, handleSave]);
+    // Generate suggestions when content changes significantly
+    useEffect(() => {
+  // TODO: Add dependencies if needed
+
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
+        if(!enableAI) return;
+        const debounceTimer = setTimeout(() => {
+            if(editorState.content.length > 100) {
+=======
 
         }, 30000) // comment
         return () => clearInterval(autoSaveInterval)}, [editorState.content, initialContent, enableVersioning, handleSave])
@@ -1064,6 +1129,7 @@ version: Math.max(prev.version, message.payload.version)}})"
         if(!enableAI) return        const debounceTimer = setTimeout(() => {}
 
             if(editorState.content.length > 100) {}
+>>>>>>> main
 
                 generateAISuggestions()}
 

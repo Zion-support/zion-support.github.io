@@ -81,6 +81,19 @@ onSubmit,"
         <Button type='submit" disabled={!content.trim()}" >
           Post Reply
         </Button>
+<<<<<<< HEAD
+      </div>
+    </form>)}
+
+
+export { ReplyForm };
+
+export { ReplyForm };
+
+export { ReplyForm };
+
+export { ReplyForm };
+=======
       </div>    </form>)}
 ;
 export { ReplyForm }
@@ -90,4 +103,5 @@ export { ReplyForm }
 ";
 ;""";
 "
+>>>>>>> main
 >>>>>>> main

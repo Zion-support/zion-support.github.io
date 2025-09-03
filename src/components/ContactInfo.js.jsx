@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import { Link } from 'react - router - dom';'''
+import React from 'react';
+;
+;
+;
+import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from "lucide-react";
+export function ContactInfo() {
+    return (<section className="py-20 bg-zion-blue-dark">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Get In Touch"""
+=======
 import React from "react"
 import { Link } from "react - router - dom","";,"});,"})"
 ,"});,"})"
@@ -252,6 +266,7 @@ export function ContactInfo() {"""
       <div className="container mx-auto px-4">"""
         <div className="text-center mb-16">          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">""
             Get In Touch"""""
+>>>>>>> main
           </h2>""""
           <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
             Ready to transform your business with cutting-edge technology?

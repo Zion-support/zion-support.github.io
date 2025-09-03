@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 export interface EnhancedService2027 {
     id: string;
     title: string;
@@ -559,3 +561,4 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
         useCases: ['Healthcare AI', 'Financial modeling', 'Research collaboration', 'Privacy-preserving analytics']
     }
 ];
+>>>>>>> main

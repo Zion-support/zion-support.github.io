@@ -41,6 +41,22 @@ import React from "react"; "export default function ReplyCard({ reply className 
             )}
 
           </div>
+<<<<<<< HEAD
+        </div>
+      </div>
+    </div>)}
+
+
+export { ReplyCard };
+
+export { ReplyCard };
+
+export { ReplyCard };
+
+export { ReplyCard };
+
+export { ReplyCard };
+=======
       </div>    </div>)}
 ;
 export { ReplyCard }
@@ -53,4 +69,5 @@ export { ReplyCard }
 ;
 export { ReplyCard };";
 "
+>>>>>>> main
 >>>>>>> main

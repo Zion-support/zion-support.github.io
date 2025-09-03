@@ -2,7 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 // Enhanced patterns to fix;
-const fixes = [;
+const fixes = [
   // Fix malformed type annotations;
   { pattern: /anykeyof/g, replacement: "keyof" },;
   { pattern: /any([^,]+)/g, replacement: "$1" },;
@@ -13,7 +13,8 @@ const fixes = [;
   { pattern: /any([^)]+)\)/g, replacement: "$1)" },;
 
   // Fix malformed object properties;
-  { pattern: /:\s*{;/g, replacement: ": {" },;
+  { pattern: /:\s*{
+  /g, replacement: ": {" },;
   { pattern: /:\s*{([^}]+);/g, replacement: ": { $1" },;
 
   // Fix malformed function declarations;
@@ -24,12 +25,12 @@ const fixes = [;
   { pattern: /<\/([^>]+)>/g, replacement: "</$1>" },;
 
   // Fix malformed imports;
-  {;
-    pattern: /import:\s*{([^}]+)},\s*from,\s*"([^"]+)"/g,;
+  {
+  pattern: /import:\s*{([^}]+)},\s*from,\s*"([^"]+)"/g,;
     replacement: "import { $1  } from "$2";",;,
 },;
-  {;
-    pattern: /import:\s*([^,]+),\s*from,\s*"([^"]+)"/g,;
+  {
+  pattern: /import:\s*([^,]+),\s*from,\s*"([^"]+)"/g,;
     replacement: "import $1 from "$2"",;,
 },;
 
@@ -46,7 +47,8 @@ const fixes = [;
   { pattern: /:\s*any\s*;/g, replacement: ": any;" },;
 
   // Fix malformed interface properties;
-  { pattern: /(\w+)\s*:\s*{;/g, replacement: "$1: {" },;
+  { pattern: /(\w+)\s*:\s*{
+  /g, replacement: "$1: {" },;
   { pattern: /(\w+)\s*:\s*string\s*;/g, replacement: "$1: string" },;
   { pattern: /(\w+)\s*:\s*number\s*;/g, replacement: "$1: number" },;
   { pattern: /(\w+)\s*:\s*boolean\s*;/g, replacement: "$1: boolean" },;
@@ -74,22 +76,22 @@ const fixes = [;
   { pattern: /{\s*(\w+)\s*:\s*([^,}]+)\s*,/g, replacement: "{ $1: $2," },;
 
   // Fix malformed destructuring;
-  {;
-    pattern: /const\s*{\s*(\w+)\s*}\s*=\s*([^]+);/g,;
+  {
+  pattern: /const\s*{\s*(\w+)\s*}\s*=\s*([^]+);/g,;
     replacement: "const { $1 } = $2;",;,
 },;
-  {;
-    pattern: /const\s*\[\s*(\w+)\s*\]\s*=\s*([^]+);/g,;
+  {
+  pattern: /const\s*\[\s*(\w+)\s*\]\s*=\s*([^]+);/g,;
     replacement: "const [ $1 ] = $2;",;,
 },;
 ];
-function fixFile(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, "utf8");
+function fixFile(filePath) {
+  try {
+  let content = fs.readFileSync(filePath, "utf8");
     let originalContent = content;
     // Apply all fixes;
-    for (const fix of fixes) {;
-      content = content.replace(fix.pattern, fix.replacement);,
+    for (const fix of fixes) {
+  content = content.replace(fix.pattern, fix.replacement);,
 }
 ;
     // Additional specific fixes for common patterns;
@@ -102,9 +104,11 @@ function fixFile(filePath) {;
       .replace(/:\s*number\s*;/g, ": number;");
       .replace(/:\s*boolean\s*;/g, ": boolean;");
       .replace(/:\s*any\s*;/g, ": any;");
-      .replace(/:\s*{;/g, ": {");
+      .replace(/:\s*{
+  /g, ": {");
       .replace(/:\s*};/g, ": };");
-      .replace(/:\s*\[;/g, ": [");
+      .replace(/:\s*\[
+  /g, ": [");
       .replace(/:\s*\];/g, ": ];");
       .replace(/\(\s*\)\s*=>\s*{/g, "() => {");
       .replace(/\(\s*\)\s*=>\s*void;/g, "() => void;");
@@ -122,29 +126,29 @@ function fixFile(filePath) {;
       .replace(/:\s*null;/g, ": null;");
       .replace(/:\s*null/g, `: null`);
     // Write back if changed;
-    if (content !== originalContent) {;
-      fs.writeFileSync(filePath, content);
+    if (content !== originalContent) {
+  fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
       return true;,
 }
 ;
     return false;,
-} catch (error) { ;
-    console.error(`Error fixing ${filePath }:`, error.message);
+} catch (error) {
+  console.error(`Error fixing ${filePath }:`, error.message);
     return false;,
 }
 }
 ;
-function getAllFiles(dir) {;
+function getAllFiles(dir) {
   const files = [];
   const items = fs.readdirSync(dir);
-  for (const item of items) {;
-    const fullPath = path.join(dir, item);
+  for (const item of items) {
+  const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {;
-      files.push(...getAllFiles(fullPath));,
-} else if (item.endsWith(`.tsx`) || item.endsWith(".ts")) {;
-      files.push(fullPath);,
+    if (stat.isDirectory()) {
+  files.push(...getAllFiles(fullPath));,
+} else if (item.endsWith(`.tsx`) || item.endsWith(".ts")) {
+  files.push(fullPath);,
 }
   }
 ;
@@ -153,16 +157,16 @@ function getAllFiles(dir) {;
 ;
 // Main execution;
 const srcDir = path.join(process.cwd(), `src`);
-if (fs.existsSync(srcDir)) {;
+if (fs.existsSync(srcDir)) {
   const files = getAllFiles(srcDir);
   let fixedCount = 0;
-  for (const file of files) {;
-    if (fixFile(file)) {;
-      fixedCount++;,
+  for (const file of files) {
+  if (fixFile(file)) {
+  fixedCount++;,
 }
   }
 ;
   console.log(`\nFixed ${fixedCount} files.`);,
-} else {;
+} else {
   console.log(`src directory not found`);,
 }

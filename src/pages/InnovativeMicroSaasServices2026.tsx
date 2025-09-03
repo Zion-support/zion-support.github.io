@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react"
 const InnovativeMicroSaasServices2026: React.FC = () => {} const [searchQuery, setSearchQuery] = useState("")" const [selectedCategory, setSelectedCategory] = useState("all")
 }
@@ -30,3 +32,4 @@ const InnovativeMicroSaasServices2026: React.FC = () => {
 
 );
 export default InnovativeMicroSaasServices2026;""
+>>>>>>> main

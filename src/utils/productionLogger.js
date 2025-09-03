@@ -2,6 +2,12 @@
  * Production logging utility for error tracking and monitoring
  */
 
+<<<<<<< HEAD
+// Simple production logger utility
+  // In production, you might want to send this to a logging service
+  // For now, we'll just log to console in development'
+  if(process.env.NODE_ENV === 'development') {
+=======
 /**
  * Log error to production monitoring service
  * @param {string} message - Error message
@@ -18,6 +24,7 @@ export function logErrorToProduction(message, error) {
   // TODO: Implement actual production logging service integration
   // Example: Sentry.captureException(error);
 }
+>>>>>>> main
 
 /**
  * Log warning to production monitoring service

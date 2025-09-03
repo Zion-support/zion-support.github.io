@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // comment
 export class jobServiceService {
   constructor() {
@@ -22,3 +24,4 @@ export class jobServiceService {
 
 export default new jobServiceService()
 }
+>>>>>>> main

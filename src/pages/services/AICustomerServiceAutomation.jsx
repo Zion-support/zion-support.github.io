@@ -47,8 +47,26 @@ const AICustomerServiceAutomation = () => {
                 Contact Us
               </Link>
             </div>
+<<<<<<< HEAD
+          </div>
+        </div>
+      </div>
+    </div>)}
+
+
+export { AICustomerServiceAutomation };
+
+export { AICustomerServiceAutomation };
+
+export { AICustomerServiceAutomation };
+
+export { AICustomerServiceAutomation };
+
+export { AICustomerServiceAutomation };
+=======
     </>
   );
 }
 export default AICustomerServiceAutomation
+>>>>>>> main
 >>>>>>> main

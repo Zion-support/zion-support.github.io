@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props { children: ReactNode;
@@ -368,4 +370,5 @@ return this.props.children}"
     return this.props.children}",""
 ""
 export default ErrorBoundary;""
+>>>>>>> main
 >>>>>>> main

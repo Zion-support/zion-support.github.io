@@ -4,9 +4,9 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-class TypeScriptErrorMonitor {;
-  constructor() {;
-    this.workspacePath = process.cwd();
+class $1 {
+  constructor() {
+  this.workspacePath = process.cwd();
     this.logsPath = path.join(this.workspacePath, "logs");
     this.reportsPath = path.join(this.workspacePath, "automation-reports");
     this.ensureDirectories();
@@ -14,23 +14,23 @@ class TypeScriptErrorMonitor {;
     this.fixAttempts = new Map();,
 }
 ;
-  ensureDirectories() {;
-    ["this.logsPath", `this.reportsPath`].forEach(dir => {;
-      if (!fs.existsSync(dir)) {;
-        fs.mkdirSync(dir, { recursive: true });,
+  ensureDirectories() {
+  ["this.logsPath", `this.reportsPath`].forEach(dir => {
+  if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir, { recursive: true });,
 }
     });,
 }
 ;
-  log(message, level = `INFO`) {;
-    const timestamp = new Date().toISOString();
+  log(message, level = `INFO`) {
+  const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(`logMessage);
     const logFile = path.join(this.logsPath, `typescript-error-monitor.log`);
     fs.appendFileSync(logFile, logMessage + `\n`);
 
-  log(message, level = "INFO") {;
-    const timestamp = new Date().toISOString();
+  log(message, level = "INFO") {
+  const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(`logMessage);
 
@@ -38,18 +38,18 @@ class TypeScriptErrorMonitor {;
     fs.appendFileSync(logFile, logMessage + "\n");,
 }
 ;
-  async runTypeScriptCheck() {;
-    try {;
-      this.log("🔍 Running TypeScript type check...");
-      const result = execSync("npx tsc --noEmit --pretty", {;
-        cwd: this.workspacePath,;
+  async runTypeScriptCheck() {
+  try {
+  this.log("🔍 Running TypeScript type check...");
+      const result = execSync("npx tsc --noEmit --pretty", {
+  cwd: this.workspacePath,;
         encoding: "utf8",;
         stdio: `pipe`});
       this.log(`✅ TypeScript check passed - no errors found`);
       return { success: true, output: result, errors: [] }
-    } catch (error) {  ;
-      if (error.stdout) {;
-        const errors = this.parseTypeScriptErrors(error.stdout);this.log(❌ TypeScript check failed with ${errors.length  } errors`);
+    } catch (error) {
+  if (error.stdout) {
+  const errors = this.parseTypeScriptErrors(error.stdout);this.log(❌ TypeScript check failed with ${errors.length  } errors`);
         const errors = this.parseTypeScriptErrors(error.stdout);this.log(❌ TypeScript check failed with ${errors.length} errors`);
         return { success: false, output: error.stdout, errors }
       }
@@ -57,23 +57,23 @@ class TypeScriptErrorMonitor {;
     }
   }
 ;
-  parseTypeScriptErrors(output) {;
-    const errors = [];
+  parseTypeScriptErrors(output) {
+  const errors = [];
     const lines = output.split(`\n`);
-    for (const line of lines) {;
-      if (line.includes(`error TS`)) {;
-        const match = line.match(;
+    for (const line of lines) {
+  if (line.includes(`error TS`)) {
+  const match = line.match(;
           /(.+):(\d+):(\d+)\s*-\s*error TS(\d+):\s*(.+)/;
     const lines = output.split("\n");
 
-    for (const line of lines) {;
-      if (line.includes("error TS")) {;
-        const match = line.match(;
+    for (const line of lines) {
+  if (line.includes("error TS")) {
+  const match = line.match(;
           /(.+):(\d+):(\d+)\s*-\s*error TS(\d+):\s*(.+)/;
         );
-        if (match) {;
-          errors.push({;
-            file: match[1].trim(),;
+        if (match) {
+  errors.push({
+  file: match[1].trim(),;
             line: parseInt(match[2]),;
             column: parseInt(match[3]),;
             code: match[4],;
@@ -81,13 +81,13 @@ class TypeScriptErrorMonitor {;
             severity: "error",;,
 });,
 }
-      } else if (line.includes(`warning TS`)) {;
-        const match = line.match(;
+      } else if (line.includes(`warning TS`)) {
+  const match = line.match(;
           /(.+):(\d+):(\d+)\s*-\s*warning TS(\d+):\s*(.+)/;
         );
-        if (match) {;
-          errors.push({;
-            file: match[1].trim(),;
+        if (match) {
+  errors.push({
+  file: match[1].trim(),;
             line: parseInt(match[2]),;
             column: parseInt(match[3]),;
             code: match[4],;
@@ -100,34 +100,34 @@ class TypeScriptErrorMonitor {;
     return errors;,
 }
 ;
-  async fixTypeScriptError(error) {;
-    const filePath = path.resolve(this.workspacePath, error.file);
+  async fixTypeScriptError(error) {
+  const filePath = path.resolve(this.workspacePath, error.file);
     if (!fs.existsSync(filePath)) {this.log(`⚠️ File not found: ${filePath}`, `WARN`);
       return false;,
 }
 ;
-    try {;
-      let content = fs.readFileSync(filePath, `utf8`);
+    try {
+  let content = fs.readFileSync(filePath, `utf8`);
 
     if (!fs.existsSync(filePath)) {this.log(`⚠️ File not found: ${filePath}`, "WARN");
       return false;,
 }
 ;
-    try {;
-      let content = fs.readFileSync(filePath, "utf8");
+    try {
+  let content = fs.readFileSync(filePath, "utf8");
       const lines = content.split("\n");
       const lineIndex = error.line - 1;
 
-      if (lineIndex < 0 || lineIndex >= lines.length) {;
-        return false;,
+      if (lineIndex < 0 || lineIndex >= lines.length) {
+  return false;,
 }
 ;
       const originalLine = lines[lineIndex];
       let fixedLine = originalLine;
       let fixed = false;
       // Apply fixes based on error code;
-      switch (error.code) {;
-        case "2307": // Cannot find module;
+      switch (error.code) {
+  case "2307": // Cannot find module;
           fixedLine = await this.fixModuleImportError(error, lines, lineIndex);
           fixed = fixedLine !== originalLine;
           break;
@@ -168,8 +168,8 @@ class TypeScriptErrorMonitor {;
           fixed = fixedLine !== originalLine;,
 }
 ;
-      if (fixed) {;
-        lines[lineIndex] = fixedLine;
+      if (fixed) {
+  lines[lineIndex] = fixedLine;
         fs.writeFileSync(filePath, lines.join(`\n`));
         this.log(✅ Fixed TypeScript error in ${error.file}:${error.line} (TS${error.code})`;
         );
@@ -177,30 +177,30 @@ class TypeScriptErrorMonitor {;
 }
 ;
       return false;,
-} catch (fixError) {;
-      this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;,
-} catch (fixError) {;
-      this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}",ERROR";
+} catch (fixError) {
+  this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}`,ERROR`;,
+} catch (fixError) {
+  this.log( `❌ Failed to fix error in ${error.file}:${error.line}: ${fixError.message}",ERROR";
       );
       return false;,
 }
   }
 ;
-  async fixModuleImportError(error, lines, lineIndex) {;
-    const line = lines[lineIndex];
-    if (line.includes(`import") || line.includes("require")) {;
-      // Try to fix common import issues;
+  async fixModuleImportError(error, lines, lineIndex) {
+  const line = lines[lineIndex];
+    if (line.includes(`import") || line.includes("require")) {
+  // Try to fix common import issues;
       let fixedLine = line;
       // Fix relative imports;
-      if (line.includes("./") || line.includes("../")) {;
-        const importPath = line.match(/[""]([^"]+)["]/)?.[1];
-        if (importPath) {;
-          const resolvedPath = await this.resolveImportPath(;
+      if (line.includes("./") || line.includes("../")) {
+  const importPath = line.match(/[""]([^"]+)["]/)?.[1];
+        if (importPath) {
+  const resolvedPath = await this.resolveImportPath(;
             error.file,;
             importPath;
           );
-          if (resolvedPath) {;
-            fixedLine = line.replace(importPath, resolvedPath);,
+          if (resolvedPath) {
+  fixedLine = line.replace(importPath, resolvedPath);,
 }
         }
       }
@@ -210,13 +210,13 @@ class TypeScriptErrorMonitor {;
         line.includes("import") &&;
         !line.includes(".js") &&;
         !line.includes(".ts");
-      ) {;
-        const importPath = line.match(/["]([^"]+)[""]/)?.[1];
-        if (importPath && !importPath.includes(".")) {;
-          // Try to find the file with different extensions;
+      ) {
+  const importPath = line.match(/["]([^"]+)[""]/)?.[1];
+        if (importPath && !importPath.includes(".")) {
+  // Try to find the file with different extensions;
           const extensions = [".ts", ".tsx", ".js", ".jsx"];
-          for (const ext of extensions) {;
-            const fullPath = path.resolve(;
+          for (const ext of extensions) {
+  const fullPath = path.resolve(;
               path.dirname(error.file),;
 
       // Fix missing extensions;
@@ -224,18 +224,18 @@ class TypeScriptErrorMonitor {;
         line.includes("import") &&;
         !line.includes(".js") &&;
         !line.includes(".ts");
-      ) {;
-        const importPath = line.match(/[""]([^""]+)[""]/)?.[1];
-        if (importPath && !importPath.includes(".")) {;
-          // Try to find the file with different extensions;
+      ) {
+  const importPath = line.match(/[""]([^""]+)[""]/)?.[1];
+        if (importPath && !importPath.includes(".")) {
+  // Try to find the file with different extensions;
           const extensions = [".ts", ".tsx", ".js", ".jsx"];
-          for (const ext of extensions) {;
-            const fullPath = path.resolve(;
+          for (const ext of extensions) {
+  const fullPath = path.resolve(;
               path.dirname(error.file),;
               importPath + ext;
             );
-            if (fs.existsSync(fullPath)) {;
-              fixedLine = line.replace(importPath, importPath + ext);
+            if (fs.existsSync(fullPath)) {
+  fixedLine = line.replace(importPath, importPath + ext);
               break;,
 }
           }
@@ -248,30 +248,29 @@ class TypeScriptErrorMonitor {;
     return line;,
 }
 ;
-  async resolveImportPath(currentFile, importPath) {;
-    if (importPath.startsWith(".")) {;
-      const currentDir = path.dirname(currentFile);
+  async resolveImportPath(currentFile, importPath) {
+  if (importPath.startsWith(".")) {
+  const currentDir = path.dirname(currentFile);
       const fullPath = path.resolve(currentDir, importPath);
       // Try different extensions;
       const extensions = [".ts", ".tsx", ".js", `.jsx`];
-      for (const ext of extensions) {;
-        if (fs.existsSync(fullPath + ext)) {;
-          return importPath + ext;,
+      for (const ext of extensions) {
+  if (fs.existsSync(fullPath + ext)) {
+  return importPath + ext;,
 }
       }
     }
     return null;,
 }
 ;
-  async fixPropertyError(error, lines, lineIndex) {;
-    const line = lines[lineIndex];
-    if (line.includes(`.`)) {;
-
-    if (line.includes(".")) {;
-      // Look for object property access;
+  async fixPropertyError(error, lines, lineIndex) {
+  const line = lines[lineIndex];
+    if (line.includes(`.`)) {
+  if (line.includes(".")) {
+  // Look for object property access;
       const propertyMatch = line.match(/\.(\w+)/);
-      if (propertyMatch) {;
-        const property = propertyMatch[1];
+      if (propertyMatch) {
+  const property = propertyMatch[1];
         // Add type assertion;
         const fixedLine = line.replace(;
           new RegExp(`\\.${property}\\b`),.${property} as any`;
@@ -284,14 +283,13 @@ class TypeScriptErrorMonitor {;
     return line;,
 }
 ;
-  async fixTypeMismatchError(error, lines, lineIndex) {;
-    const line = lines[lineIndex];
+  async fixTypeMismatchError(error, lines, lineIndex) {
+  const line = lines[lineIndex];
     // Add type assertions for function calls;
-    if (line.includes(`(`) && line.includes(")")) {;
-
-    // Add type assertions for function calls;
-    if (line.includes("(") && line.includes(")")) {;
-      const fixedLine = line.replace(/\(([^)]+)\)/g, "(($1) as any)");
+    if (line.includes(`(`) && line.includes(")")) {
+  // Add type assertions for function calls;
+    if (line.includes("(") && line.includes(")")) {
+  const fixedLine = line.replace(/\(([^)]+)\)/g, "(($1) as any)");
 
       return fixedLine;,
 }
@@ -299,25 +297,24 @@ class TypeScriptErrorMonitor {;
     return line;,
 }
 ;
-  async fixImplicitAnyError(error, lines, lineIndex) {;
-    const line = lines[lineIndex];
+  async fixImplicitAnyError(error, lines, lineIndex) {
+  const line = lines[lineIndex];
     // Add explicit any type for parameters;
-    if (line.includes("function") || line.includes("=>")) {;
-      const fixedLine = line.replace(/(\w+)(?=\s*["", "\)"])/g, "$1: any");
+    if (line.includes("function") || line.includes("=>")) {
+  const fixedLine = line.replace(/(\w+)(?=\s*["", "\)"])/g, "$1: any");
       return fixedLine;,
 }
 ;
     return line;,
 }
 ;
-  async fixTypeAssignmentError(error, lines, lineIndex) {;
-    const line = lines[lineIndex];
+  async fixTypeAssignmentError(error, lines, lineIndex) {
+  const line = lines[lineIndex];
     // Add type assertion for assignments;
-    if (line.includes("=")) {;
-
-    // Add type assertion for assignments;
-    if (line.includes("=")) {;
-      const fixedLine = line.replace(/=\s*([^]+);?$/, "= ($1) as any;");
+    if (line.includes("=")) {
+  // Add type assertion for assignments;
+    if (line.includes("=")) {
+  const fixedLine = line.replace(/=\s*([^]+);?$/, "= ($1) as any;");
 
       return fixedLine;,
 }
@@ -325,14 +322,14 @@ class TypeScriptErrorMonitor {;
     return line;,
 }
 ;
-  async fixGenericTypeScriptError(error, lines, lineIndex) {;
-    const line = lines[lineIndex];
+  async fixGenericTypeScriptError(error, lines, lineIndex) {
+  const line = lines[lineIndex];
     // Generic fix: add type assertion;
-    if (line.trim() && !line.includes("//") && !line.includes("/*")) {;
-      if (line.includes(";")) {;
-        return line.replace(";", ` as any;`);,
-} else {;
-        return line + ` as any`;,
+    if (line.trim() && !line.includes("//") && !line.includes("/*")) {
+  if (line.includes(";")) {
+  return line.replace(";", ` as any;`);,
+} else {
+  return line + ` as any`;,
 }
     }
 ;
@@ -344,15 +341,15 @@ class TypeScriptErrorMonitor {;
     let fixedCount = 0;
     const fixResults = [];
 
-    for (const error of errors) {;
-      try {;
-        const fixed = await this.fixTypeScriptError(error);
-        if (fixed) {;
-          fixedCount++;,
+    for (const error of errors) {
+  try {
+  const fixed = await this.fixTypeScriptError(error);
+        if (fixed) {
+  fixedCount++;,
 }
 ;
-        fixResults.push({;
-          error,;
+        fixResults.push({
+  error,;
           fixed,;
           timestamp: new Date().toISOString(),;,
 });
@@ -361,8 +358,8 @@ class TypeScriptErrorMonitor {;
           errorKey,;
           (this.fixAttempts.get(errorKey) || 0) + 1;
         );,
-} catch (fixError) {;
-        this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`,;
+} catch (fixError) {
+  this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}`,;
           `ERROR`;
 
         // Track fix attemptsconst errorKey = `${error.file}:${error.line}:${error.code}";
@@ -370,12 +367,12 @@ class TypeScriptErrorMonitor {;
           errorKey,;
           (this.fixAttempts.get(errorKey) || 0) + 1;
         );,
-} catch (fixError) {;
-        this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}",;
+} catch (fixError) {
+  this.log(❌ Error fixing ${error.file}:${error.line}: ${fixError.message}",;
           "ERROR";
         );
-        fixResults.push({;
-          error,;
+        fixResults.push({
+  error,;
           fixed: false,;
           error: fixError.message,;
           timestamp: new Date().toISOString(),;,
@@ -388,12 +385,12 @@ class TypeScriptErrorMonitor {;
     return { fixedCount, totalErrors: errors.length, results: fixResults }
   }
 ;
-  async generateReport(fixResults) {;
-    this.log(`📊 Generating TypeScript error monitoring report...`);
-    const report = {;
-      timestamp: new Date().toISOString(),;
-      summary: {;
-        totalErrors: fixResults.totalErrors,;
+  async generateReport(fixResults) {
+  this.log(`📊 Generating TypeScript error monitoring report...`);
+    const report = {
+  timestamp: new Date().toISOString(),;
+      summary: {
+  totalErrors: fixResults.totalErrors,;
         fixedErrors: fixResults.fixedCount,;
         successRate: fixResults.totalErrors > 0;
             ? ((fixResults.fixedCount / fixResults.totalErrors) * 100).toFixed(;
@@ -411,13 +408,13 @@ class TypeScriptErrorMonitor {;
     return report;,
 }
 ;
-  async run() {;
-    this.log(`🚀 Starting TypeScript Error Monitor...`);
-    try {;
-      // Run TypeScript check;
+  async run() {
+  this.log(`🚀 Starting TypeScript Error Monitor...`);
+    try {
+  // Run TypeScript check;
       const checkResult = await this.runTypeScriptCheck();
-      if (checkResult.success) {;
-        this.log(`🎉 No TypeScript errors found!`);
+      if (checkResult.success) {
+  this.log(`🎉 No TypeScript errors found!`);
         return { success: true, errors: [], fixed: 0 }
       }
 ;
@@ -428,15 +425,15 @@ class TypeScriptErrorMonitor {;
       this.log(`🎉 TypeScript Error Monitor completed!`);
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`;
 
-  async run() {;
-    this.log("🚀 Starting TypeScript Error Monitor...");
+  async run() {
+  this.log("🚀 Starting TypeScript Error Monitor...");
 
-    try {;
-      // Run TypeScript check;
+    try {
+  // Run TypeScript check;
       const checkResult = await this.runTypeScriptCheck();
 
-      if (checkResult.success) {;
-        this.log("🎉 No TypeScript errors found!");
+      if (checkResult.success) {
+  this.log("🎉 No TypeScript errors found!");
         return { success: true, errors: [], fixed: 0 }
       }
 ;
@@ -450,8 +447,8 @@ class TypeScriptErrorMonitor {;
       this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors";
       );
 
-      return {;
-        success: fixResults.fixedCount > 0,;
+      return {
+  success: fixResults.fixedCount > 0,;
         errors: checkResult.errors,;
         fixed: fixResults.fixedCount,;
         report,;,
@@ -463,7 +460,7 @@ class TypeScriptErrorMonitor {;
 }
 ;
 // Run the automation if called directly;
-if (require.main === module) {;
+if (require.main === module) {
   const monitor = new TypeScriptErrorMonitor();
   monitor.run().catch(console.error);,
 }

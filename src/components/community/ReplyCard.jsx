@@ -20,6 +20,39 @@ import React from "react"; export default function ReplyCard({ reply, className 
               <span className="text-xs bg-green-500 text-white px-2 py-1 rounded">
                 Solution
               </span>
+<<<<<<< HEAD
+            )}"""
+          </div>""""
+          <p className="text-zion-slate-light text-sm">{reply.content}</p>""""
+          <div className="flex items-center space-x-4 mt-2 text-xs text-zion-slate-light">""""
+            <button className="hover:text-zion-cyan">
+              Like ({reply.likes})"""
+            </button>""""
+            <button className="hover:text-zion-cyan">Reply</button>
+            {canMarkAnswer && onMarkAnswer && (
+              <button"""
+                onClick={onMarkAnswer}""""
+                className="hover:text-zion-cyan text-green-500"""
+              >
+                Mark as Answer;
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>)}
+
+
+export { ReplyCard };
+
+export { ReplyCard };
+
+export { ReplyCard };
+
+export { ReplyCard };
+
+export { ReplyCard };
+=======
             )}""
           </div>"";"
           <p className="text-zion-slate-light text-sm">{reply.content}</p>"";"
@@ -66,4 +99,5 @@ import React from "react"; export default function ReplyCard({ reply, className 
               {reply.author.name}""""
             </span>""""'
 }}"""
+>>>>>>> main
 >>>>>>> main

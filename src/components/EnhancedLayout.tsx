@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
 import Head from "next/head"
 import React from "react"
 export default function EnhancedLayout() {return (
@@ -13,6 +18,7 @@ export default function EnhancedLayout() {return (
 }
 }"
 interface EnhancedLayoutProps {
+>>>>>>> main
   children: ReactNode;
   title?: string;
   description?: string;
@@ -179,6 +185,15 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
         {/* comment */}"
         <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
           {children}
+<<<<<<< HEAD
+        </main>
+      </div>;
+      ;
+      {/* Footer */};
+      <FuturisticFooter  />;
+    </div>;) };
+'"`
+=======
 
         </div>
       </SEOOptimizer>
@@ -187,3 +202,5 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,"
 );
 export default EnhancedLayout;";
 "
+>>>>>>> main
+>>>>>>> main

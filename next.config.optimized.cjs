@@ -1,8 +1,8 @@
 // Build caching configuration;
-module.exports = {;
+module.exports = {
   // Enable build caching;
-  experimental: {;
-    // Enable SWC minification;
+  experimental: {
+  // Enable SWC minification;
     swcMinify: true,;
     // Enable build worker threads;
     workerThreads: false,;
@@ -11,16 +11,16 @@ module.exports = {;
 },;
   ;
   // Webpack optimizations;
-  webpack: (config, { dev, isServer }) => {;
-    // Production optimizations;
-    if (!dev) {;
-      config.optimization = {;
-        ...config.optimization,;
-        splitChunks: {;
-          chunks: "all",;
-          cacheGroups: {;
-            vendor: {;
-              test: /[\\/]node_modules[\\/]/,;
+  webpack: (config, { dev, isServer }) => {
+  // Production optimizations;
+    if (!dev) {
+  config.optimization = {
+  ...config.optimization,;
+        splitChunks: {
+  chunks: "all",;
+          cacheGroups: {
+  vendor: {
+  test: /[\\/]node_modules[\\/]/,;
               name: "vendors",;
               chunks: "all",;,
 },;,
@@ -39,8 +39,8 @@ module.exports = {;
   trailingSlash: false,;
   ;
   // Enable image optimization;
-  images: {;
-    domains: ["ziontechgroup.com"],;
+  images: {
+  domains: ["ziontechgroup.com"],;
     formats: ["image/webp", "image/avif"],;,
 }
 }

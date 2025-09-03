@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from 'react';
 <<<<<<< HEAD
 import { SEO } from '../components/SEO';
@@ -277,4 +279,5 @@ const Privacy: React.FC = () => {
   );
 }
 export default Privacy
+>>>>>>> main
 >>>>>>> main

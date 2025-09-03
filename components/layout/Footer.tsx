@@ -34,10 +34,44 @@ const Footer: React.FC = () => {
 
   const serviceCategories = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: 'Services',
+      services: [
+        { name: 'AI Solutions', href: '/services/ai-solutions' },
+        { name: 'Cloud & DevOps', href: '/services/cloud' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Data & Analytics', href: '/services/data' },
+        { name: 'Micro SaaS', href: '/services/micro-saas' },
+        { name: 'Digital Transformation', href: '/services/transformation' },
+      ]
+    },
+    {
+      title: 'Solutions',
+      services: [
+        { name: 'Enterprise', href: '/solutions/enterprise' },
+        { name: 'SMB', href: '/solutions/smb' },
+        { name: 'Startup', href: '/solutions/startup' },
+      ]
+    },
+    {
+      title: 'Company',
+      services: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Team', href: '/team' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Pricing', href: '/pricing' },
+=======
+>>>>>>> main
       title: "AI & Automation",
       icon: Brain,
       color: "text-blue-400",
       services: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         { name: 'AI Content Generator Pro', href: '/services/ai-content-generator' },
         { name: 'Social Media Scheduler Pro', href: '/services/social-media-scheduler' },
@@ -68,10 +102,14 @@ const Footer: React.FC = () => {
         { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
         { name: 'Website Speed Optimizer', href: '/services/website-speed-optimizer' },
 =======
+>>>>>>> main
         { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" },
         { name: "AI Customer Experience Platform", href: "/services/ai-customer-experience-platform" },
         { name: "AI Healthcare Diagnostics", href: "/services/ai-healthcare-diagnostics" },
         { name: "AI Enterprise Orchestrator", href: "/services/ai-enterprise-orchestrator" }
+<<<<<<< HEAD
+=======
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
       ]
@@ -81,6 +119,8 @@ const Footer: React.FC = () => {
       icon: Cloud,
       color: "text-green-400",
       services: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         { name: 'Cloud Migration & Architecture', href: '/services/cloud-migration' },
         { name: 'Edge Computing Infrastructure', href: '/services/edge-computing-infrastructure' },
@@ -105,10 +145,14 @@ const Footer: React.FC = () => {
         { name: 'Database Optimization', href: '/services/database-optimization' },
 =======
 =======
+>>>>>>> main
         { name: "Cloud Migration", href: "/services/cloud-migration" },
         { name: "Micro SaaS Solutions", href: "/micro-saas" },
         { name: "IT Services", href: "/it-services" },
         { name: "Infrastructure Management", href: "/services/infrastructure" }
+<<<<<<< HEAD
+=======
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
       ]
@@ -118,6 +162,8 @@ const Footer: React.FC = () => {
       icon: Database,
       color: "text-purple-400",
       services: [
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
         { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning' },
         { name: 'Autonomous AI Systems', href: '/services/autonomous-ai-systems' },
@@ -143,10 +189,15 @@ const Footer: React.FC = () => {
         { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
         { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
 =======
+>>>>>>> main
         { name: "Data Analytics", href: "/services/data-analytics" },
         { name: "Business Intelligence", href: "/services/business-intelligence" },
         { name: "Predictive Analytics", href: "/services/predictive-analytics" },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" }
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
       ]
@@ -222,6 +273,44 @@ const Footer: React.FC = () => {
                 <span>{contactInfo.address}</span>
               </div>
 <<<<<<< HEAD
+            </div>
+
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-400 hover:text-white transition-colors"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+=======
+<<<<<<< HEAD
+>>>>>>> main
+            </div>
+
+            {/* Social Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-400 hover:text-white transition-colors"
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+=======
+<<<<<<< HEAD
+>>>>>>> main
             </div>
 
             {/* Social Links */}
@@ -471,6 +560,10 @@ const Footer: React.FC = () => {,
 
           {/* Services */}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
           <div className="lg:col-span-2">
             <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -498,6 +591,8 @@ const Footer: React.FC = () => {,
 =======
 <<<<<<< HEAD
 >>>>>>> main
+>>>>>>> main
+>>>>>>> main
           {serviceCategories.map((category) => (
             <div key={category.title}>
               <h3 className="text-lg font-semibold mb-4 text-blue-400">{category.title}</h3>
@@ -521,6 +616,14 @@ const Footer: React.FC = () => {,
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>
+<<<<<<< HEAD
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Company</h4>
+              <ul className="space-y-2">
+                <li><Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors">About Us</Link></li>
+                <li><Link href="/careers" className="text-gray-300 hover:text-blue-400 transition-colors">Careers</Link></li>
+                <li><Link href="/partners" className="text-gray-300 hover:text-blue-400 transition-colors">Partners</Link></li>
+                <li><Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact</Link></li>
+=======
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Quick Links</h4>
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors">About Us</Link></li>
@@ -529,8 +632,14 @@ const Footer: React.FC = () => {,
                 <li><Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
                 <li><Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors">Terms of Service</Link></li>
 =======
+<<<<<<< HEAD
+                <li><Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors">Terms of Service</Link></li>
+=======
                 <li><Link href="/careers" className="text-gray-300 hover:text-blue-400 transition-colors">Careers</Link></li>
                 <li><Link href="/help" className="text-gray-300 hover:text-blue-400 transition-colors">Help Center</Link></li>
+>>>>>>> main
+>>>>>>> main
 >>>>>>> main
               </ul>
             </div>
@@ -540,6 +649,16 @@ const Footer: React.FC = () => {,
               <ul className="space-y-2">
                 <li><Link href="/blog" className="text-gray-300 hover:text-blue-400 transition-colors">Blog</Link></li>
 <<<<<<< HEAD
+                <li><Link href="/case-studies" className="text-gray-300 hover:text-blue-400 transition-colors">Case Studies</Link></li>
+                <li><Link href="/whitepapers" className="text-gray-300 hover:text-blue-400 transition-colors">Whitepapers</Link></li>
+                <li><Link href="/webinars" className="text-gray-300 hover:text-blue-400 transition-colors">Webinars</Link></li>
+=======
+<<<<<<< HEAD
+                <li><Link href="/docs" className="text-gray-300 hover:text-blue-400 transition-colors">Documentation</Link></li>
+                <li><Link href="/case-studies" className="text-gray-300 hover:text-blue-400 transition-colors">Case Studies</Link></li>
+                <li><Link href="/pricing" className="text-gray-300 hover:text-blue-400 transition-colors">Pricing</Link></li>
+=======
+<<<<<<< HEAD
                 <li><Link href="/documentation" className="text-gray-300 hover:text-blue-400 transition-colors">Documentation</Link></li>
                 <li><Link href="/help" className="text-gray-300 hover:text-blue-400 transition-colors">Help Center</Link></li>
                 <li><Link href="/status" className="text-gray-300 hover:text-blue-400 transition-colors">System Status</Link></li>
@@ -548,10 +667,42 @@ const Footer: React.FC = () => {,
                 <li><Link href="/help" className="text-gray-300 hover:text-blue-400 transition-colors">API Reference</Link></li>
                 <li><Link href="/help" className="text-gray-300 hover:text-blue-400 transition-colors">System Status</Link></li>
 >>>>>>> main
+>>>>>>> main
+>>>>>>> main
               </ul>
             </div>
             
             <div>
+<<<<<<< HEAD
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Support</h4>
+              <ul className="space-y-2">
+                <li><Link href="/help" className="text-gray-300 hover:text-blue-400 transition-colors">Help Center</Link></li>
+                <li><Link href="/faq" className="text-gray-300 hover:text-blue-400 transition-colors">FAQ</Link></li>
+                <li><Link href="/documentation" className="text-gray-300 hover:text-blue-400 transition-colors">Documentation</Link></li>
+                <li><Link href="/api" className="text-gray-300 hover:text-blue-400 transition-colors">API Reference</Link></li>
+                <li><Link href="/status" className="text-gray-300 hover:text-blue-400 transition-colors">System Status</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Legal</h4>
+              <ul className="space-y-2 mb-6">
+                <li><Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors">Terms of Service</Link></li>
+                <li><Link href="/cookies" className="text-gray-300 hover:text-blue-400 transition-colors">Cookie Policy</Link></li>
+                <li><Link href="/data-protection" className="text-gray-300 hover:text-blue-400 transition-colors">Data Protection</Link></li>
+                <li><Link href="/accessibility" className="text-gray-300 hover:text-blue-400 transition-colors">Accessibility</Link></li>
+              </ul>
+              
+=======
+<<<<<<< HEAD
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Support</h4>
+              <ul className="space-y-2">
+                <li><Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact Us</Link></li>
+                <li><Link href="/help" className="text-gray-300 hover:text-blue-400 transition-colors">Help Center</Link></li>
+                <li><Link href="/docs" className="text-gray-300 hover:text-blue-400 transition-colors">Documentation</Link></li>
+                <li><Link href="/status" className="text-gray-300 hover:text-blue-400 transition-colors">System Status</Link></li>
+=======
 <<<<<<< HEAD
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Support</h4>
               <ul className="space-y-2">
@@ -567,10 +718,12 @@ const Footer: React.FC = () => {,
                 <li><Link href="/cookies" className="text-gray-300 hover:text-blue-400 transition-colors">Cookie Policy</Link></li>
                 <li><Link href="/help" className="text-gray-300 hover:text-blue-400 transition-colors">Support</Link></li>
 >>>>>>> main
+>>>>>>> main
               </ul>
             </div>
             
             <div>
+>>>>>>> main
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Connect</h4>
               <div className="flex space-x-4">
                 <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-blue-400 transition-colors">
@@ -600,6 +753,12 @@ const Footer: React.FC = () => {,
                   <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-r-lg transition-colors">
                     Subscribe
                   </button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> main
 >>>>>>> main
                 </div>
               ))}
@@ -693,6 +852,12 @@ const Footer: React.FC = () => {,
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
 >>>>>>> main
 >>>>>>> main
       <div className="border-t border-slate-700 py-8">
@@ -703,8 +868,26 @@ const Footer: React.FC = () => {,
               <div className="text-gray-400 text-sm">Projects Completed</div>
             </div>
 <<<<<<< HEAD
+            <div className="flex space-x-6 text-sm">
+              <Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/cookies" className="text-gray-300 hover:text-blue-400 transition-colors">
+                Cookie Policy
+              </Link>
+              <Link href="/sitemap" className="text-gray-300 hover:text-blue-400 transition-colors">
+                Sitemap
+              </Link>
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 >>>>>>> main
             <div>
               <div className="text-3xl font-bold text-white mb-2">50+</div>
@@ -718,6 +901,40 @@ const Footer: React.FC = () => {,
               <div className="text-3xl font-bold text-white mb-2">24/7</div>
               <div className="text-gray-400 text-sm">Support Available</div>
 <<<<<<< HEAD
+>>>>>>> main
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Footer */}
+      <div className="border-t border-slate-700 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center space-x-6 mb-4 md:mb-0">
+              <p className="text-gray-400 text-sm">
+                © {currentYear} Zion Tech Group. All rights reserved.
+              </p>
+              <div className="flex items-center space-x-4">
+                {legalLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-2 text-gray-400 text-sm">
+              <span>Made with</span>
+              <Heart className="w-4 h-4 text-red-500" />
+              <span>by Zion Tech Group</span>
+=======
+<<<<<<< HEAD
+>>>>>>> main
             </div>
           </div>
         </div>

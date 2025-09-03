@@ -1238,6 +1238,21 @@ const innovationTrends = []"
             </Button>
           </div>
       </motion.div>
+<<<<<<< HEAD
+    </div>)};
+export default AdvancedServiceInnovationHub;
+
+
+export { AdvancedServiceInnovationHub };
+
+export { AdvancedServiceInnovationHub };
+
+export { AdvancedServiceInnovationHub };
+
+export { AdvancedServiceInnovationHub };
+
+export { AdvancedServiceInnovationHub };
+=======
     </div>)}
 
 export default AdvancedServiceInnovationHub,export { AdvancedServiceInnovationHub }
@@ -1250,3 +1265,4 @@ export { AdvancedServiceInnovationHub }
 
 "
 export { AdvancedServiceInnovationHub }"`"""
+>>>>>>> main

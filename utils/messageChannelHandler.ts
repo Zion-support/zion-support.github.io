@@ -21,8 +21,12 @@ export const messageChannelHandler = {
     // Implementation for receiving messages
     // eslint-disable-next-line no-console
     console.log('Setting up message receiver');
+<<<<<<< HEAD
+  }
+=======
 >>>>>>> main
   },
+>>>>>>> main
 };
 =======
 >>>>>>> main

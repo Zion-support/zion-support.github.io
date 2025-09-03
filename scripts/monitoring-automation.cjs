@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-const fs = require("fs")
-const path = require("path")
-const http = require("http")
+const fs = require("$1");
+const path = require("$1");
+const http = require("$1");
 const { execSync } = require("child_process")
 class MonitoringAutomation {
   constructor() {

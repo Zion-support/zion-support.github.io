@@ -2,19 +2,19 @@
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-function fixFile(filePath) {;
-  try {;
-    const content = fs.readFileSync(filePath, "utf8");
+function fixFile(filePath) {
+  try {
+  const content = fs.readFileSync(filePath, "utf8");
     let fixed = content;
     // Fix missing semicolons after imports;
-    fixed = fixed.replace(/import\s+[^]+$/gm, (match) => {;
-      if (!match.endsWith(";")) {;
-        return match + ";";,
+    fixed = fixed.replace(/import\s+[^]+$/gm, (match) => {
+  if (!match.endsWith(";")) {
+  return match + ";";,
 }
       return match});
     // Fix broken JSX syntax;
-    fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {;
-      return match.replace(/\s+/g, " ").trim();,
+    fixed = fixed.replace(/<([^>]+)\s*>/g, (match) => {
+  return match.replace(/\s+/g, " ").trim();,
 });
     // Fix malformed arrays and objects;
     fixed = fixed.replace(/\[\s*([^\]]+)\s*\]/g, "[$1]");
@@ -22,26 +22,26 @@ function fixFile(filePath) {;
     // Fix missing commas;
     fixed = fixed.replace(/\]\s*\[/g, "], [");
     fixed = fixed.replace(/\}\s*\{/g, "}, {");
-    if (content !== fixed) {;
-      fs.writeFileSync(filePath, fixed, "utf8");
+    if (content !== fixed) {
+  fs.writeFileSync(filePath, fixed, "utf8");
       console.log(``Fixed: ${filePath}``);
       return true}
-    return false} catch (error) {;
-    console.error(`Error: ${filePath}`, error.message);
+    return false} catch (error) {
+  console.error(`Error: ${filePath}`, error.message);
     return false}
 }
 ;
-function processDirectory(dirPath) {;
+function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
-  for (const file of files) {;
-    const fullPath = path.join(dirPath, file);
+  for (const file of files) {
+  const fullPath = path.join(dirPath, file);
     const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {;
-      fixedCount += processDirectory(fullPath);,
-} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {;
-      if (fixFile(fullPath)) {;
-        fixedCount++;,
+    if (stat.isDirectory()) {
+  fixedCount += processDirectory(fullPath);,
+} else if (file.endsWith(".tsx") || file.endsWith(".ts") || file.endsWith(".jsx") || file.endsWith(".js")) {
+  if (fixFile(fullPath)) {
+  fixedCount++;,
 }
     }
   }

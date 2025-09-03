@@ -1,3 +1,70 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {  import { motion  } from 'framer-motion';
+export default function Page() {
+,"
+        { name: "Micro SAAS Solutions", href: "/micro-saas" },"
+        { name: "IT Infrastructure", href: "/it-services" },"
+        { name: "Emerging Technologies", href: "/emerging-tech" },"
+        { name: "Cybersecurity", href: "/it-services/cybersecurity" },"
+        { name: "Cloud Solutions", href: "/it-services/cloud" },"
+        { name: "DevOps & Automation", href: "/it-services/devops" },"
+        { name: "Data Management", href: "/it-services/data" }
+      ]
+    },;
+    {
+"
+      title: "Solutions",
+      links[;"
+        { name: "Quantum Computing", href: "/emerging-tech/quantum" },"
+        { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },"
+        { name: "Edge Computing", href: "/emerging-tech/edge" },"
+        { name: "IoT Solutions", href: "/emerging-tech/iot" },"
+        { name: "Healthcare AI", href: "/ai-services/healthcare" },"
+        { name: "Financial AI", href: "/ai-services/financial" },"
+        { name: "Green Technology", href: "/green-it" },"
+        { name: "Space Technology", href: "/emerging-tech/space" }
+      ]
+    },;
+    {
+"
+      title: "Comp",
+      links[;"
+        { name: "About Us", href: "/about" },"
+        { name: "Our Team", href: "/about#team" },"
+        { name: "Careers", href: "/careers" },"
+        { name: "Partners", href: "/partners" },"
+        { name: "News & Blog", href: "/blog" },"
+        { name: "Press Kit", href: "/press" },"
+        { name: "Investor Relations", href: "/investors" },"
+        { name: "Sustainability", href: "/sustainability" }
+      ]
+    },;
+    {
+"
+      title: "Resources",
+      links[;"
+        { name: "Documentation", href: "/docs" },"
+        { name: "API Reference", href: "/api" },"
+        { name: "Developer Portal", href: "/developer" },"
+        { name: "Support Center", href: "/support" },;"
+        { name: "FAQ", href: "/faq" },;"
+        { name: "Contact Us", href: "/contact" },;"
+        { name: "Case Studies", href: "/case-studies" },;"
+        { name: "Marketplace", href: "/marketplace" };
+      ]};
+  ];
+  const socialLinks = [;"
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;"
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;"
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;"    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram };
+  ];
+  return ("
+    <footer className="relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">
+      {/* Background Effects */}"
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-cyan/5 to-transparent" />"
+=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -203,6 +270,7 @@ export const FuturisticFooter: React.FC = () => {
         </div>
       </div>
 
+>>>>>>> main
       <div className="relative z-10">
         {/* Main footer content */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -351,3 +419,4 @@ export const FuturisticFooter: React.FC = () => {
 };
 
 ;,"});,})";
+>>>>>>> main

@@ -1,3 +1,94 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
+;
+export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
+    const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
+        enableTracking: true,
+        enablePerformanceTracking: true,
+        enableUserBehaviorTracking: true,
+        enableHeatmapTracking: false
+    });
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
+    const [analyticsSummary, setAnalyticsSummary] = useState(null);
+    // Auto-refresh analytics data
+    useEffect(() => {
+        if (!showRealTime)
+            return;
+        const interval = setInterval(() => {
+            updateAnalyticsSummary()}, refreshInterval);
+        return () => clearInterval(interval)}, [showRealTime, refreshInterval]);
+    // Update analytics summary
+    const updateAnalyticsSummary = () => {
+        const summary = getAnalyticsSummary();
+        if (summary) {
+            setAnalyticsSummary(summary)}
+    };
+    // Update summary when events change
+    useEffect(() => {
+        updateAnalyticsSummary()}, [events, currentSession]);
+    // Track dashboard interactions
+    const handleDashboardInteraction = (action, metadata) => {
+        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);
+    };
+    // Track conversion goal
+    const handleTrackConversion = () => {
+        trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
+    // Get events by category for chart
+    const getEventsByCategory = () => {
+        if (!analyticsSummary?.eventsByCategory)
+            return [];
+        return Object.entries(analyticsSummary.eventsByCategory).map(([category, count]) => ({
+            category,
+            count: count
+        }))};
+    // Get performance score
+    const getPerformanceScore = () => {
+        if (!performanceMetrics)
+            return 0;
+        const score = 100;
+        // Deduct points for poor performance
+        if (performanceMetrics.pageLoadTime > 3000)
+            score -= 20;
+        else if (performanceMetrics.pageLoadTime > 1000)
+            score -= 10;
+        if (performanceMetrics.firstContentfulPaint > 2000)
+            score -= 15;
+        else if (performanceMetrics.firstContentfulPaint > 1000)
+            score -= 5;
+        if (performanceMetrics.cumulativeLayoutShift > 0.1)
+            score -= 25;
+        else if (performanceMetrics.cumulativeLayoutShift > 0.05)
+            score -= 10;
+        return Math.max(0, score)};
+    // Format duration
+    const formatDuration = (seconds) => {
+        if (seconds < 60)
+            return `${seconds}s`;
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes}m ${remainingSeconds}s`};
+    // Format number with K/M suffix
+    const formatNumber = (num) => {
+        if (num >= 1000000)
+            return `${(num / 1000000).toFixed(1)}M`;
+        if (num >= 1000)
+            return `${(num / 1000).toFixed(1)}K`;
+        return num.toString()};
+    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
+=======
+import {  import { useAnalytics } from '../hooks / useAnalytics';
+export default function Page() {
+, refreshInterval);
+    return () => clearInterval(interval);
+  }, [showRealTime, refreshInterval]);
+  // Update analytics summary
+  const updateAnalyticsSummary = () => {
+    const summary = getAnalyticsSummary();
+    if(summary) {
+=======
 import React, { useState, useEffect } from "react";,"});,"})","});,"})"
 ;,"});,"})"
 export const AnalyticsDashboard = ({ className = "", showRealTime = true, refreshInterval = 5000 }) => {;,"});,"})"
@@ -429,8 +520,21 @@ export const AnalyticsDashboard = ({ className = "", showRealTime = true, refres
         const;const;const summary = getAnalyticsSummary()
 }
         if (summary) {            setAnalyticsSummary(summary)}
+>>>>>>> main
 
     }
+<<<<<<< HEAD
+  };
+  // Update summary when events change
+  useEffect(() => {
+  // TODO: Add dependencies if needed
+}, []);
+    updateAnalyticsSummary();
+  }, [events, currentSession]);
+  // Track dashboard interactions
+  const handleDashboardInteraction = (action, metadata) => {
+=======
+>>>>>>> main
 
     // comment
     useEffect(() => {
@@ -557,6 +661,7 @@ const formatDuration = () => {
               >&apos;&apos;</div>&apos;{isTracking ? &apos;Tracking&apos; : &apos;Stopped&apos}&apos,
     return ("
     <div className = "{"bg-white" dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}"}>      {/* comment */}"
+>>>>>>> main
       <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-4 text-white">""""
         <div className="flex items-center justify-between">""""
           <h3 className="text-lg font-semibold flex items-center gap-2">""""

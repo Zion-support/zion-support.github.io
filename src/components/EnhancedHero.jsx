@@ -395,6 +395,24 @@ export { EnhancedHero };,"});,"})"
       {/* comment */}"""""
       <div className="absolute top-4 right-4 z-20">""""
         <div className="text-xs text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg">
+<<<<<<< HEAD
+          <p>Use ← → keys or click to navigate</p>
+        </div>
+      </div>
+    </div>)};
+export default EnhancedHero;
+}}}}
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+=======
           <p>Use ← → keys or click to navigate</p>    </div>)}
 
 export default EnhancedHero}}}}
@@ -406,4 +424,5 @@ export { EnhancedHero }
 "
 """"
 "`""
+>>>>>>> main
 >>>>>>> main

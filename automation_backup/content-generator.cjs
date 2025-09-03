@@ -1,19 +1,19 @@
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
-class ContentGenerator {;
-  constructor() {;
-    this.templates = {;
-      blog: this.getBlogTemplate(),;
+class $1 {
+  constructor() {
+  this.templates = {
+  blog: this.getBlogTemplate(),;
       component: this.getComponentTemplate(),;
       page: this.getPageTemplate(),;,
 }
   }
 ;
-  getBlogTemplate() {;
-    return `import type { NextPage } from "next";
+  getBlogTemplate() {
+  return `import type { NextPage } from "next";
 import Head from "next/head";
-const BlogPost: NextPage = () => {;
+const BlogPost: NextPage = () => {
   return (;
     <>;
       <Head>;
@@ -32,13 +32,13 @@ const BlogPost: NextPage = () => {;
 export default BlogPost;`;,
 }
 ;
-  getComponentTemplate() {;
-    return `import React from "react";
-interface ComponentProps {;
+  getComponentTemplate() {
+  return `import React from "react";
+interface ComponentProps {
   // Add props here;,
 }
 ;
-const Component: React.FC<ComponentProps> = ({}) => {;
+const Component: React.FC<ComponentProps> = ({}) => {
   return (;
     <div className="">;
       {/* Component content */}
@@ -48,10 +48,10 @@ const Component: React.FC<ComponentProps> = ({}) => {;
 export default Component;`;,
 }
 ;
-  getPageTemplate() {;
-    return `import type { NextPage } from "next";
+  getPageTemplate() {
+  return `import type { NextPage } from "next";
 import Head from "next/head";
-const Page: NextPage = () => {;
+const Page: NextPage = () => {
   return (;
     <>;
       <Head>;
@@ -68,10 +68,10 @@ const Page: NextPage = () => {;
 export default Page;`;,
 }
 ;
-  generateContent(type, name, options = {}) {;
-    const template = this.templates[type];
-    if (!template) {;
-      console.error("Unknown content type:", type);
+  generateContent(type, name, options = {}) {
+  const template = this.templates[type];
+    if (!template) {
+  console.error("Unknown content type:", type);
       return;,
 }
 ;
@@ -87,8 +87,8 @@ export default Page;`;,
     const filePath = path.join(__dirname, "..", "..", `generated`, fileName);
     // Ensure directory exists;
     const dir = path.dirname(filePath);
-    if (!fs.existsSync(dir)) {;
-      fs.mkdirSync(dir, { recursive: true });,
+    if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir, { recursive: true });,
 }
 ;
     fs.writeFileSync(filePath, content);

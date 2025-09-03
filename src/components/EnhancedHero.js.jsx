@@ -456,6 +456,22 @@ const EnhancedHero = () => {}
         <div className="text-xs text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg">
           <p>Use ← → keys or click to navigate</p>
         </div>
+<<<<<<< HEAD
+      </div>
+    </div>)};
+export default EnhancedHero;
+
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+
+export { EnhancedHero };
+=======
     </div>)}
 
 export default EnhancedHero
@@ -482,4 +498,5 @@ export { EnhancedHero }
 export { EnhancedHero }";
 "`"";
 "
+>>>>>>> main
 >>>>>>> main

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react"
   BookOpen, Code, FileText, Video, Download,
   Search, ArrowRight, ExternalLink, Star, Users} from "lucide-react
@@ -580,3 +582,4 @@ you get the most out of our platform.
   )
 }
   )}""
+>>>>>>> main

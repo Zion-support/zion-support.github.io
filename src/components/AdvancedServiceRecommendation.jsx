@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+export default AdvancedServiceRecommendation;
+import { Badge } from './ui / badge';
+export default function Page() {
+ from './ui/badge';
+=======
 import React { useState } from "react";""";,"});,"})","});,"})","});,"})""""";,"});,"})""""";,"});,"})","});,"})"
 const AdvancedServiceRecommendation = () => {}"});,"})"
     const [clientProfile, setClientProfile] = useState({}"});,"})"
@@ -335,6 +342,7 @@ export default AdvancedServiceRecommendation,"});,"});"
 ;,"});,"})"
 export { AdvancedServiceRecommendation };,"});,"})"
 const AdvancedServiceRecommendation = () => {}
+>>>>>>> main
 
     const [clientProfile, setClientProfile] = useState()
 }
@@ -776,6 +784,38 @@ y: 0 "",">
               <option value="&apos;&apos;">Select Industry&apos;&apos;</option>"
               {industries.map(industry = > (}<option key="{industry}" value="{industry}">{industry}</option>) ) }
 
+<<<<<<< HEAD
+  { opacity: 0,
+  y: 20
+
+}} animate = {
+
+  { opacity: 1,
+  y: 0
+
+"
+}} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">"
+        <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">"
+          <Brain className="w-6 h-6 text-zion-cyan"/>
+          Tell Us About Your Business
+        </h2>
+"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>"
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
+            <select value={clientProfile.industry} onChange = {
+
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap-6">
+          <div>
+            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Industry</label>
+            <select value={clientProfile.industry} onChange = { (e) => setClientProfile(prev => ({ ...prev,
+  industry: e.target.value
+"
+}))} className="w-full p-3 border border-zion-slate-light rounded-md">"
+              <option value="">Select Industry</option>
+              {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }
+=======
+>>>>>>> main
             </select>
           &apos;&apos,&apos;&apos;"
             <label className="&apos;block" text-sm font-medium text-zion-slate-dark mb-2&apos;>Comp Size&apos;</label>
@@ -795,6 +835,104 @@ y: 0 "",">
               <option value="&apos;&apos;">Select Technology Maturity&apos,&apos,</option>"
               {technologyMaturityLevels.map(level = > (}<option key="{level}" value="{level}">{level}</option>) ) }
 
+<<<<<<< HEAD
+          <div>
+            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Company Size</label>
+            <select value={clientProfile.companySize} onChange = { (e) => setClientProfile(prev => ({ ...prev,
+  companySize: e.target.value
+"
+}))} className="w-full p-3 border border-zion-slate-light rounded-md">"
+              <option value="">Select Company Size</option>
+              {companySizes.map(size => (<option key={size} value={size}>{size}</option>) ) }
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Budget Range</label>
+            <select value={clientProfile.budget} onChange = { (e) => setClientProfile(prev => ({ ...prev,
+  budget: e.target.value
+"
+}))} className="w-full p-3 border border-zion-slate-light rounded-md">"
+              <option value="">Select Budget Range</option>
+              {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>) ) }
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Implementation Timeline</label>
+            <select value={clientProfile.timeline} onChange = { (e) => setClientProfile(prev => ({ ...prev,
+  timeline: e.target.value
+"
+}))} className="w-full p-3 border border-zion-slate-light rounded-md">"
+              <option value="">Select Timeline</option>
+              {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
+            </select>
+          </div>
+
+          <div>
+            <label className="block text-sm font - medium text-zion - slate - dark mb-2">Technology Maturity Level</label>
+            <select value={clientProfile.technologyMaturity} onChange = { (e) => setClientProfile(prev => ({ ...prev,
+  technologyMaturity: e.target.value
+"
+}))} className="w-full p-3 border border-zion-slate-light rounded-md">"
+              <option value="">Select Technology Maturity</option>
+              {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>) ) }
+            </select>
+          </div>
+        </div>
+"
+        <div className="mt-6">"
+          <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>"
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">"
+            {primaryGoals.map(goal => (<label key={goal} className="flex items-center gap-2 cursor-pointer">"
+                <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange = {
+
+  (e) => {
+
+                if(e.target.checked) {
+                    setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
+  goal]
+}) ) ;
+                }
+                else {
+
+                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}"
+            }} className="rounded text-zion-cyan"/>"
+                <span className="text-sm text-zion-slate-light">{goal}</span>
+              </label>))}
+          </div>
+        </div>
+"
+        <div className="mt-6">"
+          <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>"
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">"
+            {challenges.map(challenge => (<label key={challenge} className="flex items-center gap-2 cursor-pointer">"
+                <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange = {
+
+  (e) => {
+
+                if(e.target.checked) {
+                    setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
+  challenge]
+}) ) ;
+                }
+                else {
+
+                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}"
+            }} className="rounded text-zion-cyan"/>"
+                <span className="text-sm text-zion-slate-light">{challenge}</span>
+              </label>))}
+          </div>
+        </div>
+"
+        <div className="mt-8 text-center">"
+          <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>
+            {isAnalyzing ? (<>"
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                Analyzing Your Profile...
+              </>) : (<>"
+                <Brain className="w-5 h-5 mr-2"/>
+=======
         </div>&apos;&apos;"
         <div className="&apos;mt-6&apos;">"&apos;&apos,&apos;&apos;"
           <label className="&apos;block" text-sm font-medium text-zion-slate-dark mb-2&apos;>Primary Business Goals&apos;</label>&apos;&apos,&apos;&apos,"
@@ -867,6 +1005,7 @@ y: 0 "",">
                 Analyzing Your Profile..."",
               </>) : (<>"";"
                 <Brain className="w-5 h-5 mr-2"  />
+>>>>>>> main
                 Get AI Recommendations
               </>) }
 
@@ -1128,6 +1267,30 @@ for your business needs. Contact us today for a personalized consultation.""""
                   <Zap className="w-5 h-5 mr-2"  />""
                   Call Now,        </motion.div>)}
 
+<<<<<<< HEAD
+"""
+}>""""
+                  <Zap className="w-5 h-5 mr-2"/>
+                  Call Now;
+                </Button>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>)}
+    </div>)};
+export default AdvancedServiceRecommendation;
+}}}}}}}}}
+
+export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation };
+
+export { AdvancedServiceRecommendation };
+=======
     </div>)}
 
 export default AdvancedServiceRecommendation
@@ -1140,3 +1303,4 @@ import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from
 import { Card, CardContent, CardHeader, CardTitle }  from "./ui/card,"
 import { Button }  from './ui/button,"
 """
+>>>>>>> main

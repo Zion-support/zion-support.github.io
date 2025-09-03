@@ -5,29 +5,29 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ;
 /** @type {import("next").NextConfig} */;
-const nextConfig = {;
+const nextConfig = {
   reactStrictMode: true,;
-  experimental: {;
-    esmExternals: false;,
+  experimental: {
+  esmExternals: false;,
 },;
-  eslint: {;
-    ignoreDuringBuilds: true;,
+  eslint: {
+  ignoreDuringBuilds: true;,
 },;
-  typescript: {;
-    ignoreBuildErrors: true;,
+  typescript: {
+  ignoreBuildErrors: true;,
 },;
-  images: {;
-    domains: ["ziontechgroup.com"],;
+  images: {
+  domains: ["ziontechgroup.com"],;
     unoptimized: true;,
 },;
-  compiler: {;
-    removeConsole: process.env.NODE_ENV === "production";,
+  compiler: {
+  removeConsole: process.env.NODE_ENV === "production";,
 },;
-  webpack: config => {;
-    config.module.rules.push({;
-      test: /\.(ts|tsx)$/,;
-      exclude: [;
-        /node_modules/,;
+  webpack: config => {
+  config.module.rules.push({
+  test: /\.(ts|tsx)$/,;
+      exclude: [
+  /node_modules/,;
         /api-backup/,;
         /pages\.disabled/,;
         /backup-pages/,;
@@ -42,14 +42,14 @@ const nextConfig = {;
       ];,
 });
 ;
-    config.resolve.alias = {;
-      ...config.resolve.alias,;
+    config.resolve.alias = {
+  ...config.resolve.alias,;
       "react-router-dom": path.resolve(__dirname, "utils/next-router-shim.tsx"),;
       "react-router": path.resolve(__dirname, "utils/next-router-shim.tsx");,
 };
 ;
-    config.resolve.fallback = {;
-      ...config.resolve.fallback,;
+    config.resolve.fallback = {
+  ...config.resolve.fallback,;
       fs: false,;
       net: false,;
       tls: false;,
@@ -58,8 +58,8 @@ const nextConfig = {;
     return config;,
 },;
   pageExtensions: ["tsx", "ts", "jsx", "js"],;
-  onDemandEntries: {;
-    maxInactiveAge: 25 * 1000,;
+  onDemandEntries: {
+  maxInactiveAge: 25 * 1000,;
     pagesBufferLength: 2;,
 }
 };

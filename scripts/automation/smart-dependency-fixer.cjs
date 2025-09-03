@@ -13,20 +13,20 @@ console.log(`"📦 Starting smart dependency fixer automation...");
 // Get automation interval from environment variable (default: 2 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
-async function runSmartDependencyFixer() {;
-  try {;
-    console.log(`📦 Running smart dependency fixer at ${new Date().toISOString()}";
+async function $1() {
+  try {
+  console.log(`📦 Running smart dependency fixer at ${new Date().toISOString()}";
 console.log(`📦 Starting smart dependency fixer automation...`);
 // Get automation interval from environment variable (default: 2 hours);
 const AUTOMATION_INTERVAL =;
   parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
-async function runSmartDependencyFixer() {;
-  try {;
-    console.log(`📦 Running smart dependency fixer at ${new Date().toISOString()}`;
+async function runSmartDependencyFixer() {
+  try {
+  console.log(`📦 Running smart dependency fixer at ${new Date().toISOString()}`;
     );
 
-    const issues = {;
-      outdated: [],;
+    const issues = {
+  outdated: [],;
       vulnerabilities: [],;
       conflicts: [],;
       missing: [],;
@@ -34,31 +34,31 @@ async function runSmartDependencyFixer() {;
 }
     // Step 1: Check for outdated packages;
     console.log(``🔍 Step 1: Checking for outdated packages...`);
-    try {;
-      const outdatedOutput = execSync(`npm outdated --json`, {;
-        stdio: `pipe`,;,
+    try {
+  const outdatedOutput = execSync(`npm outdated --json`, {
+  stdio: `pipe`,;,
 }).toString();      const outdatedData = JSON.parse(outdatedOutput);
-      issues.outdated = Object.keys(outdatedData).map(pkg => ({;
-        name: pkg,;
+      issues.outdated = Object.keys(outdatedData).map(pkg => ({
+  name: pkg,;
         current: outdatedData[pkg].current,;
         latest: outdatedData[pkg].latest,;
         wanted: outdatedData[pkg].wanted,;,
 }));
       console.log(📊 Found ${issues.outdated.length} outdated packages);,
-} catch (error) {  ;
-      console.log(`✅ No outdated packages found`);,
+} catch (error) {
+  console.log(`✅ No outdated packages found`);,
 }
 ;
     // Step 2: Check for security vulnerabilities;
     console.log(`🔍 Step 2: Checking for security vulnerabilities..."`);
-    try {;
-      const auditOutput = execSync(`npm audit --json`, {;
-        stdio: `pipe`,      }).toString();
+    try {
+  const auditOutput = execSync(`npm audit --json`, {
+  stdio: `pipe`,      }).toString();
       const auditData = JSON.parse(auditOutput);
-      if (auditData.vulnerabilities) {;
-        issues.vulnerabilities = Object.keys(auditData.vulnerabilities).map(;
-          pkg => ({;
-            name: pkg,;
+      if (auditData.vulnerabilities) {
+  issues.vulnerabilities = Object.keys(auditData.vulnerabilities).map(;
+          pkg => ({
+  name: pkg,;
             severity: auditData.vulnerabilities[pkg].severity,;
             title: auditData.vulnerabilities[pkg].title,;
             via: auditData.vulnerabilities[pkg].via,;,
@@ -67,69 +67,69 @@ async function runSmartDependencyFixer() {;
         console.log(`📊 Found ${issues.vulnerabilities.length} vulnerable packages`;
         );,
 }
-    } catch (error) {  ;
-      console.log(`✅ No security vulnerabilities found`);,
+    } catch (error) {
+  console.log(`✅ No security vulnerabilities found`);,
 }
 ;
     // Step 3: Check for dependency conflicts;
     console.log(`🔍 Step 3: Checking for dependency conflicts...");
-    try {;
-      const lsOutput = execSync("npm ls --json", { stdio: "pipe" }).toString();
+    try {
+  const lsOutput = execSync("npm ls --json", { stdio: "pipe" }).toString();
       const lsData = JSON.parse(lsOutput);
-      if (lsData.problems) {;
-        issues.conflicts = lsData.problems.filter(;
+      if (lsData.problems) {
+  issues.conflicts = lsData.problems.filter(;
           problem =>;
             problem.includes("conflict") ||;
             problem.includes(`missing`) ||;
             problem.includes(`peer`);
         );console.log(📊 Found ${issues.conflicts.length} dependency conflicts);,
 }
-    } catch (error) {  ;
-      console.log(`✅ No dependency conflicts found`);,
+    } catch (error) {
+  console.log(`✅ No dependency conflicts found`);,
 }
 ;
     // Step 4: Check for missing packages;
     console.log(`🔍 Step 4: Checking for missing packages...``);
-    try {;
-      const checkOutput = execSync(`npm check --json`, {;
-        stdio: `pipe`,;
+    try {
+  const checkOutput = execSync(`npm check --json`, {
+  stdio: `pipe`,;
         console.log(`📊 Found ${issues.vulnerabilities.length} vulnerable packages";
         console.log(`📊 Found ${issues.vulnerabilities.length} vulnerable packages`);
         );,
 }
-    } catch (error) {;
-      console.log("✅ No security vulnerabilities found");,
+    } catch (error) {
+  console.log("✅ No security vulnerabilities found");,
 }
 ;
     // Step 3: Check for dependency conflicts;
     console.log("🔍 Step 3: Checking for dependency conflicts...");
-    try {;
-      const lsOutput = execSync("npm ls --json", { stdio: "pipe" }).toString();
+    try {
+  const lsOutput = execSync("npm ls --json", { stdio: "pipe" }).toString();
       const lsData = JSON.parse(lsOutput);
-      if (lsData.problems) {;
-        issues.conflicts = lsData.problems.filter(;
+      if (lsData.problems) {
+  issues.conflicts = lsData.problems.filter(;
           problem =>;
             problem.includes("conflict") ||;
             problem.includes("missing") ||;
             problem.includes("peer");
         );console.log(📊 Found ${issues.conflicts.length} dependency conflicts);,
 }
-    } catch (error) {;
-      console.log("✅ No dependency conflicts found");,
+    } catch (error) {
+  console.log("✅ No dependency conflicts found");,
 }
 ;
     // Step 4: Check for missing packages;
     console.log("🔍 Step 4: Checking for missing packages..."`);
-    try {;
-      const checkOutput = execSync("npm check --json", {;
-        stdio: "pipe",;,
+    try {
+  const checkOutput = execSync("npm check --json", {
+  stdio: "pipe",;,
 }).toString();
       const checkData = JSON.parse(checkOutput);
-      if (checkData.missing) {;
-        issues.missing = checkData.missing;console.log(`📊 Found ${issues.missing.length} missing packages);,
+      if (checkData.missing) {
+  issues.missing = checkData.missing;console.log(`📊 Found ${issues.missing.length} missing packages);,
 }
-    } catch (error) {  ;
-      console.log(`✅ No missing packages found`);,
+    } catch (error) {
+  console.log(`✅ No missing packages found`);,
 }
 ;
     // Step 5: Attempt to fix issues automatically;
@@ -138,8 +138,8 @@ async function runSmartDependencyFixer() {;
     issues.fixed = fixedIssues;
     // Step 6: Run npm install to ensure everything is properly installed;
     console.log(`🔧 Step 6: Running npm install to ensure proper installation...";,
-} catch (error) {;
-      console.log("✅ No missing packages found");,
+} catch (error) {
+  console.log("✅ No missing packages found");,
 }
 ;
     // Step 5: Attempt to fix issues automatically;
@@ -149,8 +149,8 @@ async function runSmartDependencyFixer() {;
 
     // Step 6: Run npm install to ensure everything is properly installed;
     console.log(`🔧 Step 6: Running npm install to ensure proper installation...";,
-} catch (error) {;
-      console.log("✅ No missing packages found");`);,
+} catch (error) {
+  console.log("✅ No missing packages found");`);,
 }`);
 `);
     // Step 5: Attempt to fix issues automatically`);
@@ -160,11 +160,11 @@ async function runSmartDependencyFixer() {;
     // Step 6: Run npm install to ensure everything is properly installed;
     console.log(`🔧 Step 6: Running npm install to ensure proper installation...`);
     );
-    try {;
-      execSync("npm install", { stdio: "inherit" });
+    try {
+  execSync("npm install", { stdio: "inherit" });
       console.log("✅ npm install completed successfully");,
-} catch (error) {  ;
-      console.log("⚠️  npm install failed: ", error.message);,
+} catch (error) {
+  console.log("⚠️  npm install failed: ", error.message);,
 }
 ;
     // Step 7: Verify fixes by running checks again;
@@ -172,12 +172,12 @@ async function runSmartDependencyFixer() {;
     await verifyDependencyFixes(issues);
     // Generate dependency fixer report;
     console.log("📊 Generating dependency fixer report...");
-    const report = {;
-      timestamp: new Date().toISOString(),;
+    const report = {
+  timestamp: new Date().toISOString(),;
       summary: "Smart dependency fixer completed`,;
       status: `completed`,;
-      issues: {;
-        outdated: issues.outdated.length,;
+      issues: {
+  outdated: issues.outdated.length,;
         vulnerabilities: issues.vulnerabilities.length,;
         conflicts: issues.conflicts.length,;
         missing: issues.missing.length},;
@@ -191,160 +191,163 @@ async function runSmartDependencyFixer() {;
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Dependency fixer report saved to ${reportPath});
     console.log(`✅ Smart dependency fixer completed successfully`);,
-} catch (error) {  ;
-    console.error(`❌ Smart dependency fixer failed: `, error.message);,
+} catch (error) {
+  console.error(`❌ Smart dependency fixer failed: `, error.message);,
 }
       process.cwd(),smart-dependency-fixer-report.json`);
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ Dependency fixer report saved to ${reportPath});
 
     console.log("✅ Smart dependency fixer completed successfully");,
-} catch (error) {;
-    console.error("❌ Smart dependency fixer failed: ", error.message);,
+} catch (error) {
+  console.error("❌ Smart dependency fixer failed: ", error.message);,
 }
 }
 ;
-async function autoFixDependencyIssues(issues) {;
+async function autoFixDependencyIssues(issues) {
   const fixedIssues = [];
 
   // Fix security vulnerabilities;
-  if (issues.vulnerabilities.length > 0) {;
-    console.log("🔧 Attempting to fix security vulnerabilities..."`);
-    try {;
-      execSync("npm audit fix", { stdio: "inherit" });
-      fixedIssues.push({;
-        type: "vulnerabilities",;
+  if (issues.vulnerabilities.length > 0) {
+  console.log("🔧 Attempting to fix security vulnerabilities..."`);
+    try {
+  execSync("npm audit fix", { stdio: "inherit" });
+      fixedIssues.push({
+  type: "vulnerabilities",;
         message: "Applied npm audit fix",;,
 });,
-} catch (error) {  ;
-      console.log(`"⚠️  Could not automatically fix all vulnerabilities");,
+} catch (error) {
+  console.log(`"⚠️  Could not automatically fix all vulnerabilities");,
 }
-    } catch (error) {;
-      console.log(`"⚠️  Could not automatically fix all vulnerabilities");,
-} catch (error) {;
-      console.log(`⚠️  Could not automatically fix all vulnerabilities`);,
+    } catch (error) {
+  console.log(`"⚠️  Could not automatically fix all vulnerabilities");,
+} catch (error) {
+  console.log(`⚠️  Could not automatically fix all vulnerabilities`);,
 }
   }
 ;
   // Fix outdated packages (only minor and patch updates);
-  if (issues.outdated.length > 0) {;
-    console.log("🔧 Attempting to update outdated packages...");
-    const safeUpdates = issues.outdated.filter(pkg => {;
-      const current = pkg.current.split(".");
+  if (issues.outdated.length > 0) {
+  console.log("🔧 Attempting to update outdated packages...");
+    const safeUpdates = issues.outdated.filter(pkg => {
+  const current = pkg.current.split(".");
       const latest = pkg.latest.split(".`);
       // Only update if it`s a minor or patch version update;
       return current[0] === latest[0] && current[1] === latest[1];,
 });
-    if (safeUpdates.length > 0) {;
-      try {;
-        const packages = safeUpdates.map(pkg => pkg.name).join(` `);execSync(npm update ${packages}, { stdio: `inherit` });
-        fixedIssues.push({;
-          type: `outdated`,message: Updated ${safeUpdates.length} packages safely}`);,
-} catch (error) {  ;
-        console.log(`⚠️  Could not update all outdated packages`);,
+    if (safeUpdates.length > 0) {
+  try {
+  const packages = safeUpdates.map(pkg => pkg.name).join(` `);execSync(npm update ${packages}, { stdio: `inherit` });
+        fixedIssues.push({
+  type: `outdated`,message: Updated ${safeUpdates.length} packages safely}`);,
+} catch (error) {
+  console.log(`⚠️  Could not update all outdated packages`);,
 }
     }
   }
 ;
   // Fix missing packages;
-  if (issues.missing.length > 0) {;
-    console.log(`🔧 Attempting to install missing packages...`);
-    try {;
-      execSync("npm install", { stdio: "inherit" });
-      fixedIssues.push({;
-        type: "missing",;
+  if (issues.missing.length > 0) {
+  console.log(`🔧 Attempting to install missing packages...`);
+    try {
+  execSync("npm install", { stdio: "inherit" });
+      fixedIssues.push({
+  type: "missing",;
         message: "Reinstalled all packages",;,
 });,
-} catch (error) {  ;,
-} catch (error) {;
-      console.log("⚠️  Could not install missing packages");,
+} catch (error) {
+  ,
+} catch (error) {
+  console.log("⚠️  Could not install missing packages");,
 }
   }
 ;
   // Fix peer dependency issues;
-  if (issues.conflicts.some(conflict => conflict.includes("peer"))) {;
-    console.log("🔧 Attempting to fix peer dependency issues...");
-    try {;
-      execSync("npm install --legacy-peer-deps", { stdio: "inherit" });
-      fixedIssues.push({;
-        type: "peerDependencies",;
+  if (issues.conflicts.some(conflict => conflict.includes("peer"))) {
+  console.log("🔧 Attempting to fix peer dependency issues...");
+    try {
+  execSync("npm install --legacy-peer-deps", { stdio: "inherit" });
+      fixedIssues.push({
+  type: "peerDependencies",;
         message: "Fixed peer dependency issues with legacy flag",;,
 });,
-} catch (error) {  ;,
-} catch (error) {;
-      console.log("⚠️  Could not fix peer dependency issues");,
+} catch (error) {
+  ,
+} catch (error) {
+  console.log("⚠️  Could not fix peer dependency issues");,
 }
   }
 ;
   return fixedIssues;,
 }
 ;
-async function verifyDependencyFixes(issues) {;
+async function verifyDependencyFixes(issues) {
   console.log("🔍 Verifying that dependency issues have been resolved...");
   // Check vulnerabilities again;
-  try {;
-    const auditOutput = execSync("npm audit --json", {;
-      stdio: "pipe"}).toString();
+  try {
+  const auditOutput = execSync("npm audit --json", {
+  stdio: "pipe"}).toString();
     const auditData = JSON.parse(auditOutput);
     if (;
       auditData.vulnerabilities &&;
       Object.keys(auditData.vulnerabilities).length === 0;
-    ) {;
-      console.log("✅ Security vulnerabilities resolved");,
-} else {;
-      console.log("⚠️  Some security vulnerabilities remain");,
+    ) {
+  console.log("✅ Security vulnerabilities resolved");,
+} else {
+  console.log("⚠️  Some security vulnerabilities remain");,
 }
-  } catch (error) {  ;
-    console.log("✅ No security vulnerabilities found");,
-}
-;
-  // Check for dependency conflicts again;
-  try {;,
-} catch (error) {;
-    console.log("✅ No security vulnerabilities found");,
+  } catch (error) {
+  console.log("✅ No security vulnerabilities found");,
 }
 ;
   // Check for dependency conflicts again;
-  try {;
-    const lsOutput = execSync("npm ls --json", { stdio: "pipe" }).toString();
+  try {
+  ,
+} catch (error) {
+  console.log("✅ No security vulnerabilities found");,
+}
+;
+  // Check for dependency conflicts again;
+  try {
+  const lsOutput = execSync("npm ls --json", { stdio: "pipe" }).toString();
     const lsData = JSON.parse(lsOutput);
-    if (!lsData.problems || lsData.problems.length === 0) {;
-      console.log("✅ Dependency conflicts resolved");,
-} else {;
-      console.log("⚠️  Some dependency conflicts remain");,
+    if (!lsData.problems || lsData.problems.length === 0) {
+  console.log("✅ Dependency conflicts resolved");,
+} else {
+  console.log("⚠️  Some dependency conflicts remain");,
 }
-  } catch (error) {  ;
-    console.log("✅ No dependency conflicts found");,
+  } catch (error) {
+  console.log("✅ No dependency conflicts found");,
 }
 ;
   // Check for missing packages again;
-  try {;
-    const checkOutput = execSync("npm check --json", {;
-      stdio: "pipe",    }).toString();
+  try {
+  const checkOutput = execSync("npm check --json", {
+  stdio: "pipe",    }).toString();
     const checkData = JSON.parse(checkOutput);
-    if (!checkData.missing || checkData.missing.length === 0) {;
-      console.log("✅ Missing packages resolved");,
-} else {;
-      console.log("⚠️  Some missing packages remain");,
+    if (!checkData.missing || checkData.missing.length === 0) {
+  console.log("✅ Missing packages resolved");,
+} else {
+  console.log("⚠️  Some missing packages remain");,
 }
-  } catch (error) {  ;
-    console.log("✅ No missing packages found`);,
+  } catch (error) {
+  console.log("✅ No missing packages found`);,
 }
 }
 ;
 // Main execution;
-if (require.main === module) {;
+if (require.main === module) {
   runSmartDependencyFixer();
   // Set up continuous monitoring;
   setInterval(runSmartDependencyFixer, AUTOMATION_INTERVAL);
   console.log(🔄 Smart dependency fixer will run every ${AUTOMATION_INTERVAL / 3600000} hours`;,
-} catch (error) {;
-    console.log("✅ No missing packages found");,
+} catch (error) {
+  console.log("✅ No missing packages found");,
 }
 }
 ;
 // Main execution;
-if (require.main === module) {;
+if (require.main === module) {
   runSmartDependencyFixer();
 
   // Set up continuous monitoring;

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+export default FloatingActionButton;
+import { motion, AnimatePresence  } from 'framer-motion';
+=======
 import React { useState } from "react";,"});,"})","});,"})","});,"})"
 const FloatingActionButton = ({ className = "" }) => {}"});,"})"
   const [isOpen, setIsOpen] = useState(false);,"});,"})"
@@ -98,6 +103,7 @@ const FloatingActionButton = ({ className = &apos;&apos}) => {}&apos;&apos
   const toggleMenu = () => setIsOpen(!isOpen)
 }
   const actionItems = []{}
+>>>>>>> main
 
       icon: ChatBubbleLeftRightIcon,"
       label: &apos,Live Chat&apos,"
@@ -250,9 +256,24 @@ initial="{{" opacity: 0, x: -10 }}&apos;&apos;"
               <PlusIcon className = "w-6 h-6"  />
     </div>)}
 
+<<<<<<< HEAD
+export default FloatingActionButton;
+
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+
+export { FloatingActionButton };
+=======
 export default FloatingActionButton
 export { FloatingActionButton }
 
 "
 import React { useState }  from "react,
 `""
+>>>>>>> main

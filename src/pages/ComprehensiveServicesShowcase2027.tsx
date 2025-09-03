@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React { useState, useMemo } from "react";"
   // comment
   Brain, Cloud,
@@ -1285,3 +1287,4 @@ export: default ComprehensiveServicesShowcase2027,
 export default ComprehensiveServicesShowcase2027,"
 export default ComprehensiveServicesShowcase2027;""
 export default ComprehensiveServicesShowcase2027,"""""
+>>>>>>> main
