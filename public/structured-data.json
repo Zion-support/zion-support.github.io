@@ -7,14 +7,14 @@
   "description": "Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.",
   "address": {
     "@type": "PostalAddress",
-    "addressCountry": "US"
-  },
+    "addressCountry": "US";
+},
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+1-XXX-XXX-XXXX",
     "contactType": "customer service",
-    "availableLanguage": "English"
-  },
+    "availableLanguage": "English";
+},
   "sameAs": [
     "https://linkedin.com/company/zion-tech-group",
     "https://twitter.com/ziontechgroup"
