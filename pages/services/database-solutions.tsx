@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
-import SEOHead from '../../src/components/SEO/SEOHead';
-import ErrorBoundary from '../../src/components/ErrorBoundary';
+import SEOHead from '../../components/SEOHead';
+import ErrorBoundary from '../../components/ErrorBoundary';
 import { 
   Database, 
   Server, 

@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import { Rocket, Brain, Shield, Globe, Zap, Database, CheckCircle, ArrowRight, Cpu, Network, Eye, Lock } from 'lucide-react';
-import SimpleNavigation from '../src/components/SimpleNavigation';
-import { SimpleFooter } from '../src/components/SimpleFooter';
+import SimpleNavigation from '../components/Navigation';
+import { SimpleFooter } from '../components/Footer';
 
 export default function EmergingTech() {
   const technologies = [
