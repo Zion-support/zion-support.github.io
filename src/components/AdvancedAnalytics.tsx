@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 export /**
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -408,3 +409,8 @@ function AdvancedAnalytics({
       </AnimatePresence>
     </>
   )}}}}}}}}}}}}}'"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

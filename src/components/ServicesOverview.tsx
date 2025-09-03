@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
  from 'lucide-react';
 
@@ -271,3 +272,8 @@ export function ServicesOverview(...args[]):  {
       </div>;
     </div>;) }
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

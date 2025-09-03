@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
@@ -28,3 +29,8 @@ const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabl
   return <div className="hidden" aria-hidden="true" />};
 
 export default SmartNotificationSystem;
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

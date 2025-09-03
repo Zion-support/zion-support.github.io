@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 
@@ -429,3 +430,5 @@ const stats = ["
       </div>
     </section>)}
 '"`
+=======
+>>>>>>> main

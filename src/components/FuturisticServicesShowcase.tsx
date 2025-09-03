@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 interface ServiceShowcase {
@@ -303,3 +304,8 @@ export default function FuturisticServicesShowcase(...args[]):  {
 			</div>;
 		</div>;) }
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

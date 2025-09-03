@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { DollarSign  } from 'lucide-react';
 export default function Page() {
  else {
@@ -136,3 +137,8 @@ export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

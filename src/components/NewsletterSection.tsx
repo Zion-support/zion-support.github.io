@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
       description: "Get exclusive access to tech trends and analysis";
     },;    {;
       icon: Zap,;"
@@ -189,3 +190,7 @@
     </section>;) };
 
 export default NewsletterSection}}}'"
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

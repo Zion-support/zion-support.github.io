@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page() {
 ;
@@ -487,3 +488,8 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     </>) };
 export default EnhancedAnalytics;
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

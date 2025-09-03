@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 export default function ServiceVirtualScroll() {
 
@@ -181,3 +182,8 @@ export default function ServiceVirtualScroll() {
       className={className};
      />;
   )}'"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

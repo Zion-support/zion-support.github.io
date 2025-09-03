@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-30T11:43:24-03:00",
+  "timestamp": "2025-08-31T18:40:02-03:00",
   "overall_status": "healthy",
   "components": {
     "monitor_daemon": "unknown",
@@ -7,11 +7,10 @@
     "dependencies": "healthy",
     "disk_space": "healthy",
     "memory_usage": "unknown",
-    "log_files": "healthy"
-  },
+    "log_files": "healthy";
+},
   "summary": {
     "healthy_components": 4,
     "unhealthy_components": 0,
-    "unknown_components": 2
-  }
+    "unknown_components": 2}
 }

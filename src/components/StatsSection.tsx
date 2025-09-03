@@ -1,5 +1,5 @@
-export default function StatsSection() {
 
+<<<<<<< HEAD
   interface Stat {
     number: string;
     label: string;
@@ -47,3 +47,7 @@ export default function StatsSection() {
     </section>) }
 export default StatsSection;
 '"
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

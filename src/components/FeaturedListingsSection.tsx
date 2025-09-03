@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
 import { Link  } from 'react-router-dom';
  from 'react';
@@ -129,3 +130,8 @@ function FeaturedListingsSection () {          initial = {
       </div>;
     </section>;) }
 '"
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

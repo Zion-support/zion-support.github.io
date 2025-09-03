@@ -1,6 +1,5 @@
-export 
-export default LoadingOverlay;
 
+<<<<<<< HEAD
     if(!visible) ;
         return null;
     return (<div className="fixed inset - 0 z - 50 flex items - center justify - center bg-black / 50">;
@@ -8,3 +7,7 @@ export default LoadingOverlay;
     </div>) ;
 };
 }
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

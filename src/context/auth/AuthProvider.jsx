@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";"
 import { supabase, getFromProfiles } from '../../integrations/supabase/client';"
 import { useAuthOperations } from '../../hooks/useAuthOperations';"
@@ -176,3 +177,6 @@ export default function Page() {
       {children}
     </AuthContext.Provider>)};
 '"`
+=======
+import React, { useEffect } from "react"";"""""""""'"; "
+>>>>>>> main

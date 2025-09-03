@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link, useLocation  } from 'react-router-dom';
 
 export default function Page() {
@@ -511,3 +512,8 @@ className:  '',;
       </AnimatePresence>
     </nav>
   )};'"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

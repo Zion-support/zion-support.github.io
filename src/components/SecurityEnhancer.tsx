@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
@@ -512,3 +513,8 @@ export function SecurityEnhancer() {
     </>
   )}
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

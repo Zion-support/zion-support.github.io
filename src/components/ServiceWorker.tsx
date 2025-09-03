@@ -1,5 +1,5 @@
-export default function ServiceWorker() {
 
+<<<<<<< HEAD
 interface ServiceWorkerState {
 
   isInstalled: boolean;
@@ -123,3 +123,7 @@ setSwState(prev: > ({ ;
       )};
     </AnimatePresence>;
   )}'"
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

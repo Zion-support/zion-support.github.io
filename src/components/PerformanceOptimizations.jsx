@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy, memo, useMemo, useCallback } from 'react';
 import { LoadingSpinner } from './ui / loading -spinner';
 
@@ -135,85 +136,21 @@ export function PerformanceOptimizations() {
         </h2>"
         <p className="text-zion-slate-light text-lg">
           Advanced performance features for better user experience
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+;,"});,"})
+}
+export default function PerformanceOptimizations() {return ("
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="PerformanceOptimizations - Zion Tech Group" description="Professional PerformanceOptimizations services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">PerformanceOptimizations</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional PerformanceOptimizations services to help your business grow.
+>>>>>>> main
         </p>
       </div>
-
-      {/* Memoized Data Grid */}
-      <div>"
-        <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
-          Memoized Data Grid
-        </h3>"
-        <div className="mb-4">
-          <button
-            onClick={addItem}"
-            className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-4 py-2 rounded-lg transition-colors"
-          >
-            Add Item
-          </button>
-        </div>
-        <MemoizedDataGrid data={data} onItemClick={handleItemClick} />
-      </div>
-
-      {/* Virtual Scrolling */}
-      <div>"
-        <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
-          Virtual Scrolling
-        </h3>
-        <VirtualList
-          items={Array.from({ length: 1000 }, (_, i) => ({
-
-            id: i,`
-            title: `Item ${i + 1}`,
-            value: Math.floor(Math.random() * 1000)}))}
-          itemHeight={60}
-          containerHeight={400}
-        />
-      </div>
-
-      {/* Lazy Loading */}
-      <div>"
-        <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
-          Lazy Loading
-        </h3>
-        <button
-          onClick={() => setShowExpensive(!showExpensive)}"
-          className="bg-zion-purple hover:bg-zion-purple-dark text-white px-4 py-2 rounded-lg transition-colors"
-        >
-          {showExpensive ? 'Hide' : 'Show'} Expensive Component
-        </button>
-
-        {showExpensive && (
-          <Suspense fallback={<LoadingSpinner />}>"
-            <div className="mt-4 p-4 bg-zion-slate/10 rounded-lg">
-              <LazyExpensiveComponent />
-            </div>
-          </Suspense>
-        )}
-      </div>
-
-      {/* Performance Metrics */}
-      <div>"
-        <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
-          Performance Metrics
-        </h3>"
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">"
-          <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">"
-            <div className="text-2xl font-bold text-zion-cyan">
-              {data.length}
-            </div>"
-            <div className="text-zion-slate text-sm">Total Items</div>
-          </div>"
-          <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">"
-            <div className="text-2xl font-bold text-zion-purple">1000</div>"
-            <div className="text-zion-slate text-sm">Virtual Items</div>
-          </div>"
-          <div className="p-4 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl text-center">"
-            <div className="text-2xl font-bold text-zion-blue">3.27s</div>"
-            <div className="text-zion-slate text-sm">Build Time</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  )
 }
-'"`
+}""

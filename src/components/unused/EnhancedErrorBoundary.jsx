@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion  } from 'framer-motion';
 
@@ -188,3 +189,5 @@ export default function Page() {
 export { EnhancedErrorBoundary };
 export default EnhancedErrorBoundary;
 }}}}}}}}}}}}}'"`
+=======
+>>>>>>> main

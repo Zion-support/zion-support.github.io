@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 export const WebsiteAnalyzer: React.FC = () : JSX.Element => {
 export default WebsiteAnalyzer;
@@ -220,3 +221,8 @@ export default function Page() {
       </div>
     </div>) };
 export default WebsiteAnalyzer;'"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

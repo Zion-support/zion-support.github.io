@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
@@ -309,3 +310,8 @@ const heroSlides: HeroSlide[] = [  {
     </section>) }
 export { HeroSection };
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

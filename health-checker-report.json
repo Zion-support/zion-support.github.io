@@ -1,0 +1,106 @@
+{
+  "timestamp": "2025-09-03T05:06:45.200Z",
+  "overall": "unhealthy",
+  "summary": {
+    "totalChecks": 18,
+    "passed": 16,
+    "warnings": 1,
+    "failed": 1
+  },
+  "checks": [
+    {
+      "name": "Directory: src",
+      "status": "pass",
+      "message": "Directory exists"
+    },
+    {
+      "name": "Directory: pages",
+      "status": "pass",
+      "message": "Directory exists"
+    },
+    {
+      "name": "Directory: components",
+      "status": "pass",
+      "message": "Directory exists"
+    },
+    {
+      "name": "Directory: public",
+      "status": "pass",
+      "message": "Directory exists"
+    },
+    {
+      "name": "File: package.json",
+      "status": "pass",
+      "message": "File exists"
+    },
+    {
+      "name": "File: next.config.js",
+      "status": "pass",
+      "message": "File exists"
+    },
+    {
+      "name": "File: tsconfig.json",
+      "status": "pass",
+      "message": "File exists"
+    },
+    {
+      "name": "Package.json",
+      "status": "pass",
+      "message": "Valid package.json found"
+    },
+    {
+      "name": "Dependency: next",
+      "status": "pass",
+      "message": "next is installed"
+    },
+    {
+      "name": "Dependency: react",
+      "status": "pass",
+      "message": "react is installed"
+    },
+    {
+      "name": "Dependency: react-dom",
+      "status": "pass",
+      "message": "react-dom is installed"
+    },
+    {
+      "name": "Next.js Config",
+      "status": "pass",
+      "message": "Configuration file exists and has custom settings"
+    },
+    {
+      "name": "TypeScript Config",
+      "status": "pass",
+      "message": "TypeScript configuration found"
+    },
+    {
+      "name": "ESLint Config",
+      "status": "pass",
+      "message": "ESLint configuration found"
+    },
+    {
+      "name": "Prettier Config",
+      "status": "pass",
+      "message": "Prettier configuration found"
+    },
+    {
+      "name": "Build Test",
+      "status": "fail",
+      "message": "Build failed"
+    },
+    {
+      "name": "Security Config",
+      "status": "pass",
+      "message": "Security configuration found"
+    },
+    {
+      "name": "Environment File: .env",
+      "status": "warn",
+      "message": "Environment file found - ensure it contains no sensitive data"
+    }
+  ],
+  "issues": [
+    "Build is failing - check for compilation errors"
+  ],
+  "recommendations": []
+}

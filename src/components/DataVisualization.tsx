@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
@@ -108,3 +109,8 @@ setChartData(prev:  > ({;
   // Generate line chart data
   const lineChartData = {
 '"
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

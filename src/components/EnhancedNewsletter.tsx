@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -315,3 +316,8 @@ className: {`w-full py-4 px-6 rounded-lg font-semibold text-white transition-all
       </motion.form>;
     </div>;) };
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
@@ -308,3 +309,8 @@ export default function EnhancedTestimonialsSection(...args[]):  {
       </div>;
     </section>;) }
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

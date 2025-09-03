@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medium', colorScheme = 'multi' }) => {
 
@@ -150,3 +151,5 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none ${className}`} style={{ zIndex: -1 }}/>)};
 export default FuturisticAnimatedBackground;
 }}}}}}}}}}}'`
+=======
+>>>>>>> main

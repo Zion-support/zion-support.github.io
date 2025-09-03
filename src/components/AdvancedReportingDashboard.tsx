@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 export const AdvancedReportingDashboard: React.FC < AdvancedReportingDashboardProps> = ({
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -222,3 +223,8 @@ showMetrics:  true,;
 
   // Calculate report metrics
   const reportMetrics = {
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

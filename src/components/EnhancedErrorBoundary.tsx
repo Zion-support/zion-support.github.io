@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
 
 export default function Page() {
@@ -245,3 +246,8 @@ export default function Page() {
     return this.props.children}
 }
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

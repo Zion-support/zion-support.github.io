@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
@@ -578,3 +579,8 @@ if(typeof document !== 'undefined') {
   document.head.appendChild(style) }
 export default EnhancedAccessibility;
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

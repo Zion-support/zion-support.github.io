@@ -1,5 +1,5 @@
-const Skeleton: React.FC<SkeletonProps> = ({
 
+<<<<<<< HEAD
 interface SkeletonProps extends React.PropsWithChildren<{}> {
   className?: string;
   height?: string;
@@ -139,3 +139,7 @@ export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => ("
   <LoadingSkeleton type="form" count={count}  />);
 
 export default LoadingSkeleton;'"`
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

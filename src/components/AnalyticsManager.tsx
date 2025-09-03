@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion  } from 'framer-motion';
 
  params - Function parameters
@@ -362,3 +363,8 @@ export function AnalyticsManager() {
     </motion.div>
   )}
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

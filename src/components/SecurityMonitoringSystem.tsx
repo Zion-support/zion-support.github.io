@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
@@ -633,3 +634,8 @@ export function SecurityMonitoringSystem({
     </>
   )}
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

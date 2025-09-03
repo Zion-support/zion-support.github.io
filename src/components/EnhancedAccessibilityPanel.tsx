@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
  params - Function parameters
@@ -605,3 +606,8 @@ export function EnhancedAccessibilityPanel() {
       </AnimatePresence>
     </>) }
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

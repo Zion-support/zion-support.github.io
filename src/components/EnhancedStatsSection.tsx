@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, useAnimation  } from 'framer-motion';
  from 'lucide-react';
 
@@ -308,3 +309,8 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
       </div>;
     </section>;) }
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useNavigate  } from 'react-router-dom';
 import { useNavigate  } from 'react-router-dom';
  from 'react';
@@ -482,3 +483,8 @@ setFilters(prev: > ({;
       </AnimatePresence>;
     </div>;) }
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

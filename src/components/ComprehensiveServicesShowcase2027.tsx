@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link  } from 'react-router-dom';
  from 'react';
 import { Badge } from '@/components / ui / badge';
@@ -294,3 +295,8 @@ export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

@@ -1,5 +1,5 @@
-export function ContactSection(...args[]):  {
 
+<<<<<<< HEAD
   const contactInfo = [{
       icon: Phone,
       title: "Phone",
@@ -114,3 +114,7 @@ export default ContactSection;
 export default ContactSection;
 export default ContactSection;
 '"
+=======
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

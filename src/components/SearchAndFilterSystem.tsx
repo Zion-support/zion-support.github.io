@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
@@ -371,3 +372,8 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
 
 }
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

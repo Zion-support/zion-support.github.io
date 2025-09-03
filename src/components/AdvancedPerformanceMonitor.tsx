@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-react';
 
 export default function Page() {
@@ -196,102 +197,17 @@ export default function Page() {
         >
           ×
         </button>
+=======
+import React from "react"
+import { SEO } from "@/components/SEO"
+export default function AdvancedPerformanceMonitor() {return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
+      <SEO title="AdvancedPerformanceMonitor - Zion Tech Group" description="Professional AdvancedPerformanceMonitor services by Zion Tech Group"  />"
+      <div className="container mx-auto px-4 py-20">"
+        <h1 className="text-4xl font-bold text-white mb-8">AdvancedPerformanceMonitor</h1>"
+        <p className="text-gray-300 text-lg">
+          Professional AdvancedPerformanceMonitor services to help your business grow.
+        </p>
+>>>>>>> main
       </div>
-
-      {/* Overall Score */}"
-      <div className="mb-4 p-4 bg-zion-slate/30 rounded-lg">"
-        <div className="text-center">`
-          <div className={`text-3xl font-bold ${overallScore.color}`}>
-            {overallScore.score}
-          </div>"
-          <div className="text-sm text-zion-slate-light">
-            Overall Score({overallScore.rating.replace('-',)})
-          </div>
-        </div>
-      </div>
-
-      {/* Core Web Vitals */}"
-      <div className="space-y-3">"
-        <div className="flex justify-between items-center">"
-          <span className="text-sm text-zion-slate-light">FCP</span>"
-          <div className="text-right">"
-            <div className="text-white font-mono">
-              {formatTime(metrics.fcp)}
-            </div>"
-            <div className="text-xs text-zion-slate-light">
-              {getMetricRating('fcp', metrics.fcp)}
-            </div>
-            <button
-              onClick={() => setIsVisible(false)}
-              className="p-1 hover:bg-slate-700/50 rounded-lg transition-colors duration-200"
-            >
-              <X className="w-4 h-4 text-gray-400"  />
-            </button>
-          </div>
-        </div>
-"
-        <div className="flex justify-between items-center">"
-          <span className="text-sm text-zion-slate-light">LCP</span>"
-          <div className="text-right">"
-            <div className="text-white font-mono">
-              {formatTime(metrics.lcp)}
-            </div>"
-            <div className="text-xs text-zion-slate-light">
-              {getMetricRating('lcp', metrics.lcp)}
-            </div>
-          </div>
-        </div>
-"
-        <div className="flex justify-between items-center">"
-          <span className="text-sm text-zion-slate-light">FID</span>"
-          <div className="text-right">"
-            <div className="text-white font-mono">
-              {formatTime(metrics.fid)}
-            </div>"
-            <div className="text-xs text-zion-slate-light">
-              {getMetricRating('fid', metrics.fid)}
-            </div>
-          </div>
-        </div>
-"
-        <div className="flex justify-between items-center">"
-          <span className="text-sm text-zion-slate-light">CLS</span>"
-          <div className="text-right">"
-            <div className="text-white font-mono">{formatCLS(metrics.cls)}</div>"
-            <div className="text-xs text-zion-slate-light">
-              {getMetricRating('cls', metrics.cls)}
-            </div>
-          </div>
-        </div>
-"
-        <div className="flex justify-between items-center">"
-          <span className="text-sm text-zion-slate-light">TTFB</span>"
-          <div className="text-right">"
-            <div className="text-white font-mono">
-              {formatTime(metrics.ttfb)}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Recommendations */}
-      {overallScore.rating !== 'good' && ("
-        <div className="mt-4 p-3 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">"
-          <div className="flex items-center text-yellow-400 mb-2">"
-            <AlertTriangle className="w-4 h-4 mr-2"  />"            <span className="text-sm font-medium">Recommendations</span>
-          </div>"
-          <ul className="text-xs text-yellow-300 space-y-1">
-            {metrics.lcp && metrics.lcp > 2500 && (
-              <li>• Optimize images and reduce LCP</li>
-            )}
-            {metrics.fid && metrics.fid > 100 && (
-              <li>• Reduce JavaScript bundle size</li>
-            )}
-            {metrics.cls && metrics.cls > 0.1 && (
-              <li>• Fix layout shifts and set image dimensions</li>
-            )}
-          </ul>
-        </div>) }
-    </div>) };
-export default AdvancedPerformanceMonitor;
-'"`
+  );"}"

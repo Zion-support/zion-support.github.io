@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
@@ -444,3 +445,8 @@ autoAnalyze:  true,;
     optimizePage
   }};
 '"`
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

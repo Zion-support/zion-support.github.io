@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({ children }) => {
 export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({
@@ -184,3 +185,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       </div>
     </AccessibilityContext.Provider>
   )};
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

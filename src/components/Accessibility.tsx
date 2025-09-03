@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
  from 'react';
 export /**
@@ -178,3 +179,8 @@ function Accessibility () {
       </AnimatePresence>
     </>
   )}
+=======
+
+;,"});,})";
+>>>>>>> pr-10728,});,"})"
+>>>>>>> main

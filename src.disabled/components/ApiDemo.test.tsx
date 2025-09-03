@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+describe("ApiDemo", () => { it("renders without crashing", () => { render(<ApiDemo />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<ApiDemo />) ;
+=======
+describe("ApiDemo () => { it(renders without crashing, () => { render(<ApiDemo />) ; expect(screen.getByRole (main) || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it(displays expected content", () => { render(<ApiDemo />) 
+>>>>>>> main

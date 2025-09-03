@@ -1,25 +1,7 @@
-// Interface for the existing service structure
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  contactInfo: {
+// comment
+export const serviceMapper = {}
 
+<<<<<<< HEAD
     // Interface for the existing service structure
     id: string;
     title: string;
@@ -91,3 +73,7 @@ export interface Service {
     compliance: ['SOC 2',ISO 27001'], // Default compliance
   }))}
 '"
+=======
+
+export default serviceMapper
+>>>>>>> main
