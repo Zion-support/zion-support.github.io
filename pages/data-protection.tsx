@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { Shield, AlertTriangle } from "lucide-react";
+import { Shield, AlertTriangle, Lock, Eye } from "lucide-react";
 
 const DataProtection: NextPage = () => {
   const lastUpdated = 'January 27, 2025';

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import ModernLayout from '../components/layout/ModernLayout';
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Zap, Brain, Cloud, Shield } from "lucide-react";
 import { motion } from 'framer-motion';
 
 export default function Home() {

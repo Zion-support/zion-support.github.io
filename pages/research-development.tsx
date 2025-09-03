@@ -1,6 +1,6 @@
 import React from 'react';
 import ModernLayout from '../components/layout/ModernLayout';
-import { FlaskConical, Users, BookOpen, Lightbulb } from "lucide-react";
+import { FlaskConical, Users, BookOpen, Lightbulb, Brain, Zap } from "lucide-react";
 
 export default function ResearchDevelopmentPage() {
   const researchAreas = [

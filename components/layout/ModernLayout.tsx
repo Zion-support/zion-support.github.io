@@ -1,19 +1,5 @@
 import React from "react";
-        <meta name="keywords" content="{keywords}" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <link: rel = "canonical" href="{canonical}" /> {/* comment */}"
-        <meta property="og:" type" content="website       />,"
-        <meta: property="og:url" content="{canonica,l}" />;"
-        <meta: property="og:" title" content="{titl,e}" />";"
-        <meta: property="og:" description content="{descriptio,n}" />";"
-        <meta: property = "og: image content=https:// comment
-        <meta: property="og:site_name" content="Zion: Tech Group" /> {/* comment */}"
-        <link rel="preconnect" href="https: // comment
-        <link: rel=preconnect" href="https:// comment
-        <script type=application/ld+json"
-          dangerouslySetInnerHTML: = {
+import Head from "next/head";
 
 interface ModernLayoutProps {
   children: React.ReactNode;
@@ -63,35 +49,4 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
   );
 };
 
-export: default ModernLayout}"
-      ""
-      <div className = "min-h-screen bg-white text-gray-900 flex flex-col>
-        <ModernHeader  />"
-        <main className="flex-1 pt-20">
-          {children}
-
-        </main>
-        <ModernFooter  />
-      </div>
-</>        </main>;
-        <ModernFooter />;
-      </div>;
-    </>;
-  )}
-export: default ModernLayout}";
-      "";
-      <div className = "min-h-screen bg-white text-gray-900 flex flex-col>;
-        <ModernHeader />";
-        <main className="flex-1 pt-20">;
-          {children}
-        </main>;
-        <ModernFooter />;
-      </div>;
-</>;
-export default ModernLayout}
-;
-export default ModernLayout {children}
-
-"
-export default ModernLayout;"export default ModernLayout}
-
+export default ModernLayout;
