@@ -2,96 +2,96 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, PenTool, Zap, Users, Target, BarChart3, Globe, Star, Brain, FileText, Image } from 'lucide-react';
+import { ArrowRight, CheckCircle, Calendar, Brain, Users, Target, BarChart3, Clock, Star, Zap, FileText, TrendingUp } from 'lucide-react';
 
-const AIContentGeneratorPage: NextPage = () => {
+const AIProjectManagementPage: NextPage = () => {
   const features = [
-    'AI-powered content generation for blogs, social media, and marketing',
-    'Multi-language support with 50+ languages',
-    'SEO-optimized content with keyword integration',
-    'Brand voice customization and tone matching',
-    'Content templates for different industries',
-    'Plagiarism detection and originality scoring',
-    'Content calendar and scheduling integration',
-    'Team collaboration and approval workflows'
+    'AI-powered task prioritization and scheduling',
+    'Intelligent resource allocation and workload balancing',
+    'Automated progress tracking and milestone management',
+    'Smart deadline prediction and risk assessment',
+    'Team collaboration tools with real-time updates',
+    'Customizable project templates and workflows',
+    'Advanced reporting and analytics dashboard',
+    'Integration with popular tools (Slack, Jira, Trello)'
   ];
 
   const benefits = [
-    'Increase content production by 10x',
-    'Reduce content creation costs by 70%',
-    'Improve SEO rankings with optimized content',
-    'Maintain consistent brand voice across all channels',
-    'Scale content marketing efforts efficiently'
+    'Complete projects 25% faster on average',
+    'Reduce project overruns by 40%',
+    'Improve team productivity by 35%',
+    'Better resource utilization and planning',
+    'Enhanced project visibility and control'
   ];
 
   const useCases = [
-    'Blog and article writing',
-    'Social media content creation',
-    'Email marketing campaigns',
-    'Product descriptions and copy',
-    'Technical documentation'
+    'Software development projects',
+    'Marketing campaign management',
+    'Event planning and coordination',
+    'Product launch management',
+    'Client project delivery'
   ];
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: 29,
+      name: 'Team',
+      price: 89,
       period: 'month',
-      description: 'Perfect for individual creators',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 50,000 words/month',
-        '5 content templates',
-        'Basic SEO optimization',
-        'Email support',
-        'Standard quality content',
-        '1 user account'
+        'Up to 10 team members',
+        'Unlimited projects',
+        'Basic AI features',
+        'Task management',
+        'Team collaboration',
+        'Email support'
       ]
     },
     {
       name: 'Business',
-      price: 99,
+      price: 199,
       period: 'month',
-      description: 'Ideal for small teams',
+      description: 'Ideal for growing companies',
       features: [
-        'Up to 200,000 words/month',
-        'Unlimited templates',
-        'Advanced SEO optimization',
-        'Brand voice training',
+        'Up to 50 team members',
+        'Advanced AI features',
+        'Resource management',
+        'Custom workflows',
+        'Advanced analytics',
         'Priority support',
-        'Up to 5 user accounts',
-        'Content calendar integration'
+        'API access'
       ]
     },
     {
       name: 'Enterprise',
-      price: 299,
+      price: 399,
       period: 'month',
       description: 'For large organizations',
       features: [
-        'Unlimited words',
+        'Unlimited team members',
         'Custom AI models',
         'White-label options',
-        'API access',
         'Dedicated account manager',
-        'Unlimited users',
-        'Custom integrations'
+        'Custom integrations',
+        'Advanced reporting',
+        'SLA guarantee'
       ]
     }
   ];
 
   const testimonials = [
     {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Pro",
-      role: "Content Manager",
-      content: "We've increased our content output by 800% while maintaining quality. The AI understands our brand voice perfectly.",
+      name: "Sarah Johnson",
+      company: "Tech Innovations",
+      role: "Project Manager",
+      content: "We've reduced project delivery time by 30% since implementing this AI project management tool. The predictive scheduling is game-changing.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "E-commerce Solutions",
-      role: "Marketing Director",
-      content: "The SEO optimization features have improved our search rankings significantly. ROI was achieved in the first month.",
+      name: "Michael Chen",
+      company: "Digital Agency Pro",
+      role: "Operations Director",
+      content: "The resource allocation features have optimized our team's workload perfectly. Our productivity has increased significantly.",
       rating: 5
     }
   ];
@@ -99,39 +99,39 @@ const AIContentGeneratorPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>AI Content Generator - Zion Tech Group</title>
-        <meta name="description" content="AI-powered content generation for blogs, social media, and marketing. Increase content production by 10x with intelligent writing assistance." />
-        <meta name="keywords" content="AI content generator, content creation, blog writing, social media content, SEO content, marketing copy" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-content-generator" />
+        <title>AI Project Management - Zion Tech Group</title>
+        <meta name="description" content="Intelligent project management with AI-powered scheduling, resource allocation, and progress tracking. Complete projects 25% faster." />
+        <meta name="keywords" content="AI project management, project planning, team collaboration, task management, resource allocation, project tracking" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-project-management" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 text-white py-20">
+        <section className="bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex justify-center mb-6">
-                <div className="bg-purple-600 p-4 rounded-full">
-                  <PenTool className="w-12 h-12" />
+                <div className="bg-teal-600 p-4 rounded-full">
+                  <Calendar className="w-12 h-12" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                AI Content Generator
+                AI Project Management
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
-                Transform your content marketing with AI-powered writing that's fast, engaging, and SEO-optimized. 
-                Increase content production by 10x while maintaining quality and brand consistency.
+                Intelligent project management that automates scheduling, optimizes resources, and predicts project outcomes. 
+                Complete projects 25% faster with AI-powered planning and execution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
-                  <span className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
+                  <span className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                     Start Free Trial
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </span>
                 </Link>
                 <Link href="#demo">
-                  <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
-                    Try Demo
+                  <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-teal-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
+                    Watch Demo
                   </span>
                 </Link>
               </div>
@@ -144,10 +144,10 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Writing Features
+                Smart Project Management Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Advanced AI technology that understands context, tone, and your brand voice
+                Advanced AI technology that understands project dynamics and optimizes every aspect of project delivery
               </p>
             </div>
             
@@ -167,18 +167,18 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Transform Your Content Strategy
+                Proven Project Success
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Join thousands of content creators and marketers achieving better results
+                Join thousands of teams delivering projects faster and more efficiently
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-purple-600" />
+                  <div className="bg-teal-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8 text-teal-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>
                 </div>
@@ -192,17 +192,17 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Content for Every Need
+                Perfect for Every Project Type
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From blog posts to social media, create engaging content across all platforms
+                From software development to marketing campaigns, manage any project with confidence
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-100">
-                  <FileText className="w-8 h-8 text-purple-600 mb-4" />
+                <div key={index} className="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-lg border border-teal-100">
+                  <Target className="w-8 h-8 text-teal-600 mb-4" />
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
                 </div>
               ))}
@@ -215,18 +215,18 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Affordable Content Creation
+                Flexible Team Pricing
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the plan that fits your content needs. Start free and scale as you grow.
+                Scale your project management as your team grows
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white p-8 rounded-lg shadow-lg ${index === 1 ? 'ring-2 ring-purple-500 transform scale-105' : ''}`}>
+                <div key={index} className={`bg-white p-8 rounded-lg shadow-lg ${index === 1 ? 'ring-2 ring-teal-500 transform scale-105' : ''}`}>
                   {index === 1 && (
-                    <div className="bg-purple-500 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4">
+                    <div className="bg-teal-500 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4">
                       Most Popular
                     </div>
                   )}
@@ -247,7 +247,7 @@ const AIContentGeneratorPage: NextPage = () => {
                   <Link href="/contact">
                     <span className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${
                       index === 1 
-                        ? 'bg-purple-600 hover:bg-purple-700 text-white' 
+                        ? 'bg-teal-600 hover:bg-teal-700 text-white' 
                         : 'bg-gray-200 hover:bg-gray-300 text-gray-900'
                     }`}>
                       Get Started
@@ -264,7 +264,7 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Loved by Content Creators
+                Trusted by Project Managers
               </h2>
             </div>
             
@@ -288,27 +288,27 @@ const AIContentGeneratorPage: NextPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 text-white">
+        <section className="py-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Start Creating Amazing Content Today
+              Start Managing Projects Smarter Today
             </h2>
             <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Join thousands of creators using AI to produce high-quality content faster than ever before.
+              Join thousands of teams using AI to deliver projects faster, more efficiently, and with better outcomes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <span className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
+                <span className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </span>
               </Link>
-              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-teal-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
                 Call +1 302 464 0950
               </a>
             </div>
             <div className="mt-8 text-sm text-gray-300">
-              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-purple-300">kleber@ziontechgroup.com</a></p>
+              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-teal-300">kleber@ziontechgroup.com</a></p>
               <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
             </div>
           </div>
@@ -318,4 +318,4 @@ const AIContentGeneratorPage: NextPage = () => {
   );
 };
 
-export default AIContentGeneratorPage;
+export default AIProjectManagementPage;

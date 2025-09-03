@@ -2,96 +2,96 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, PenTool, Zap, Users, Target, BarChart3, Globe, Star, Brain, FileText, Image } from 'lucide-react';
+import { ArrowRight, CheckCircle, Cloud, DollarSign, TrendingDown, BarChart3, Zap, Target, Star, Settings, AlertCircle } from 'lucide-react';
 
-const AIContentGeneratorPage: NextPage = () => {
+const CloudCostOptimizationSuitePage: NextPage = () => {
   const features = [
-    'AI-powered content generation for blogs, social media, and marketing',
-    'Multi-language support with 50+ languages',
-    'SEO-optimized content with keyword integration',
-    'Brand voice customization and tone matching',
-    'Content templates for different industries',
-    'Plagiarism detection and originality scoring',
-    'Content calendar and scheduling integration',
-    'Team collaboration and approval workflows'
+    'AI-powered cost analysis across AWS, Azure, and GCP',
+    'Automated resource optimization and rightsizing recommendations',
+    'Real-time cost monitoring and anomaly detection',
+    'Reserved instance and savings plan optimization',
+    'Multi-cloud cost allocation and chargeback',
+    'Automated scaling policies and cost controls',
+    'Custom dashboards and cost forecasting',
+    'Integration with existing cloud management tools'
   ];
 
   const benefits = [
-    'Increase content production by 10x',
-    'Reduce content creation costs by 70%',
-    'Improve SEO rankings with optimized content',
-    'Maintain consistent brand voice across all channels',
-    'Scale content marketing efforts efficiently'
+    'Reduce cloud costs by 30-50% on average',
+    'Eliminate waste through automated optimization',
+    'Improve budget predictability with forecasting',
+    'Enhance resource utilization efficiency',
+    'Achieve better ROI on cloud investments'
   ];
 
   const useCases = [
-    'Blog and article writing',
-    'Social media content creation',
-    'Email marketing campaigns',
-    'Product descriptions and copy',
-    'Technical documentation'
+    'Enterprise cloud cost management',
+    'Multi-cloud optimization',
+    'DevOps cost optimization',
+    'FinOps and cloud governance',
+    'Startup cost scaling management'
   ];
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: 29,
+      name: 'Starter',
+      price: 500,
       period: 'month',
-      description: 'Perfect for individual creators',
+      description: 'For small to medium cloud spend',
       features: [
-        'Up to 50,000 words/month',
-        '5 content templates',
-        'Basic SEO optimization',
+        'Up to $50K monthly cloud spend',
+        'Single cloud provider support',
+        'Basic cost optimization',
+        'Monthly reports',
         'Email support',
-        'Standard quality content',
-        '1 user account'
+        'Standard dashboard'
       ]
     },
     {
-      name: 'Business',
-      price: 99,
+      name: 'Professional',
+      price: 1500,
       period: 'month',
-      description: 'Ideal for small teams',
+      description: 'For growing cloud environments',
       features: [
-        'Up to 200,000 words/month',
-        'Unlimited templates',
-        'Advanced SEO optimization',
-        'Brand voice training',
+        'Up to $200K monthly cloud spend',
+        'Multi-cloud support',
+        'Advanced optimization algorithms',
+        'Real-time monitoring',
         'Priority support',
-        'Up to 5 user accounts',
-        'Content calendar integration'
+        'Custom dashboards',
+        'API access'
       ]
     },
     {
       name: 'Enterprise',
-      price: 299,
+      price: 3500,
       period: 'month',
-      description: 'For large organizations',
+      description: 'For large-scale cloud operations',
       features: [
-        'Unlimited words',
-        'Custom AI models',
-        'White-label options',
-        'API access',
+        'Unlimited cloud spend',
+        'All cloud providers',
+        'AI-powered optimization',
+        'Custom integrations',
         'Dedicated account manager',
-        'Unlimited users',
-        'Custom integrations'
+        'White-label options',
+        'Advanced analytics'
       ]
     }
   ];
 
   const testimonials = [
     {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Pro",
-      role: "Content Manager",
-      content: "We've increased our content output by 800% while maintaining quality. The AI understands our brand voice perfectly.",
+      name: "Alex Thompson",
+      company: "TechScale Inc.",
+      role: "Cloud Architect",
+      content: "We reduced our AWS costs by 45% in the first quarter. The AI recommendations are incredibly accurate and actionable.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "E-commerce Solutions",
-      role: "Marketing Director",
-      content: "The SEO optimization features have improved our search rankings significantly. ROI was achieved in the first month.",
+      name: "Maria Garcia",
+      company: "Global Retail Corp",
+      role: "FinOps Director",
+      content: "The cost forecasting and budget management features have transformed our cloud financial planning. Highly recommended.",
       rating: 5
     }
   ];
@@ -99,39 +99,39 @@ const AIContentGeneratorPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>AI Content Generator - Zion Tech Group</title>
-        <meta name="description" content="AI-powered content generation for blogs, social media, and marketing. Increase content production by 10x with intelligent writing assistance." />
-        <meta name="keywords" content="AI content generator, content creation, blog writing, social media content, SEO content, marketing copy" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-content-generator" />
+        <title>Cloud Cost Optimization Suite - Zion Tech Group</title>
+        <meta name="description" content="AI-powered cloud cost management across AWS, Azure, and GCP. Reduce costs by 30-50% with automated optimization and intelligent recommendations." />
+        <meta name="keywords" content="cloud cost optimization, AWS cost management, Azure optimization, GCP cost reduction, FinOps, cloud governance" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/cloud-cost-optimization-suite" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 text-white py-20">
+        <section className="bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex justify-center mb-6">
-                <div className="bg-purple-600 p-4 rounded-full">
-                  <PenTool className="w-12 h-12" />
+                <div className="bg-green-600 p-4 rounded-full">
+                  <Cloud className="w-12 h-12" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                AI Content Generator
+                Cloud Cost Optimization Suite
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
-                Transform your content marketing with AI-powered writing that's fast, engaging, and SEO-optimized. 
-                Increase content production by 10x while maintaining quality and brand consistency.
+                AI-powered cloud cost management across AWS, Azure, and GCP. Reduce costs by 30-50% with automated optimization, 
+                intelligent recommendations, and real-time monitoring.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
-                  <span className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
-                    Start Free Trial
+                  <span className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
+                    Start Free Analysis
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </span>
                 </Link>
                 <Link href="#demo">
-                  <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
-                    Try Demo
+                  <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
+                    View Demo
                   </span>
                 </Link>
               </div>
@@ -144,10 +144,10 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Writing Features
+                Advanced Cost Optimization Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Advanced AI technology that understands context, tone, and your brand voice
+                Comprehensive cloud cost management with AI-powered insights and automation
               </p>
             </div>
             
@@ -167,18 +167,18 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Transform Your Content Strategy
+                Proven Cost Savings
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Join thousands of content creators and marketers achieving better results
+                Join thousands of organizations saving millions on cloud costs
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-purple-600" />
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <DollarSign className="w-8 h-8 text-green-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>
                 </div>
@@ -192,17 +192,17 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Content for Every Need
+                Perfect For Every Organization
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From blog posts to social media, create engaging content across all platforms
+                From startups to enterprises, optimize your cloud costs at any scale
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-100">
-                  <FileText className="w-8 h-8 text-purple-600 mb-4" />
+                <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-lg border border-green-100">
+                  <Target className="w-8 h-8 text-green-600 mb-4" />
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
                 </div>
               ))}
@@ -215,25 +215,25 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Affordable Content Creation
+                Transparent Pricing
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the plan that fits your content needs. Start free and scale as you grow.
+                Pay for what you use. Our platform typically pays for itself within the first month.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white p-8 rounded-lg shadow-lg ${index === 1 ? 'ring-2 ring-purple-500 transform scale-105' : ''}`}>
+                <div key={index} className={`bg-white p-8 rounded-lg shadow-lg ${index === 1 ? 'ring-2 ring-green-500 transform scale-105' : ''}`}>
                   {index === 1 && (
-                    <div className="bg-purple-500 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4">
+                    <div className="bg-green-500 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4">
                       Most Popular
                     </div>
                   )}
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <p className="text-gray-600 mb-6">{plan.description}</p>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">${plan.price}</span>
+                    <span className="text-4xl font-bold text-gray-900">${plan.price.toLocaleString()}</span>
                     <span className="text-gray-600">/{plan.period}</span>
                   </div>
                   <ul className="space-y-3 mb-8">
@@ -247,7 +247,7 @@ const AIContentGeneratorPage: NextPage = () => {
                   <Link href="/contact">
                     <span className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${
                       index === 1 
-                        ? 'bg-purple-600 hover:bg-purple-700 text-white' 
+                        ? 'bg-green-600 hover:bg-green-700 text-white' 
                         : 'bg-gray-200 hover:bg-gray-300 text-gray-900'
                     }`}>
                       Get Started
@@ -264,7 +264,7 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Loved by Content Creators
+                Customer Success Stories
               </h2>
             </div>
             
@@ -288,27 +288,27 @@ const AIContentGeneratorPage: NextPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 text-white">
+        <section className="py-20 bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Start Creating Amazing Content Today
+              Start Saving on Cloud Costs Today
             </h2>
             <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Join thousands of creators using AI to produce high-quality content faster than ever before.
+              Get a free cost analysis and see how much you can save. Most customers see ROI within 30 days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <span className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
-                  Start Free Trial
+                <span className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
+                  Get Free Analysis
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </span>
               </Link>
-              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
                 Call +1 302 464 0950
               </a>
             </div>
             <div className="mt-8 text-sm text-gray-300">
-              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-purple-300">kleber@ziontechgroup.com</a></p>
+              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-green-300">kleber@ziontechgroup.com</a></p>
               <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
             </div>
           </div>
@@ -318,4 +318,4 @@ const AIContentGeneratorPage: NextPage = () => {
   );
 };
 
-export default AIContentGeneratorPage;
+export default CloudCostOptimizationSuitePage;

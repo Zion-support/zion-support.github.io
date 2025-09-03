@@ -2,96 +2,96 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, PenTool, Zap, Users, Target, BarChart3, Globe, Star, Brain, FileText, Image } from 'lucide-react';
+import { ArrowRight, CheckCircle, Mail, Zap, Users, Shield, TrendingUp, BarChart3, Clock, Star, Brain, Target } from 'lucide-react';
 
-const AIContentGeneratorPage: NextPage = () => {
+const AIAutomatedEmailFollowupPage: NextPage = () => {
   const features = [
-    'AI-powered content generation for blogs, social media, and marketing',
-    'Multi-language support with 50+ languages',
-    'SEO-optimized content with keyword integration',
-    'Brand voice customization and tone matching',
-    'Content templates for different industries',
-    'Plagiarism detection and originality scoring',
-    'Content calendar and scheduling integration',
-    'Team collaboration and approval workflows'
+    'AI-powered email sequence optimization',
+    'Personalized content generation based on recipient behavior',
+    'Optimal timing predictions using machine learning',
+    'Multi-channel follow-up automation (email, SMS, LinkedIn)',
+    'Advanced A/B testing for subject lines and content',
+    'Lead scoring and qualification automation',
+    'CRM integration with Salesforce, HubSpot, Pipedrive',
+    'Real-time performance analytics and insights'
   ];
 
   const benefits = [
-    'Increase content production by 10x',
-    'Reduce content creation costs by 70%',
-    'Improve SEO rankings with optimized content',
-    'Maintain consistent brand voice across all channels',
-    'Scale content marketing efforts efficiently'
+    'Increase email open rates by 60%',
+    'Boost conversion rates by 45%',
+    'Reduce manual follow-up time by 80%',
+    'Improve lead nurturing efficiency',
+    'Scale personalized outreach campaigns'
   ];
 
   const useCases = [
-    'Blog and article writing',
-    'Social media content creation',
-    'Email marketing campaigns',
-    'Product descriptions and copy',
-    'Technical documentation'
+    'Sales prospecting and lead nurturing',
+    'Customer onboarding sequences',
+    'Abandoned cart recovery',
+    'Event follow-up campaigns',
+    'Customer retention programs'
   ];
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: 29,
+      name: 'Starter',
+      price: 49,
       period: 'month',
-      description: 'Perfect for individual creators',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 50,000 words/month',
-        '5 content templates',
-        'Basic SEO optimization',
+        'Up to 5,000 emails/month',
+        '3 email sequences',
+        'Basic AI personalization',
         'Email support',
-        'Standard quality content',
-        '1 user account'
+        'Standard templates',
+        'Basic analytics'
       ]
     },
     {
-      name: 'Business',
-      price: 99,
+      name: 'Professional',
+      price: 149,
       period: 'month',
-      description: 'Ideal for small teams',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 200,000 words/month',
-        'Unlimited templates',
-        'Advanced SEO optimization',
-        'Brand voice training',
+        'Up to 25,000 emails/month',
+        'Unlimited email sequences',
+        'Advanced AI personalization',
+        'A/B testing',
+        'CRM integrations',
         'Priority support',
-        'Up to 5 user accounts',
-        'Content calendar integration'
+        'Advanced analytics'
       ]
     },
     {
       name: 'Enterprise',
-      price: 299,
+      price: 399,
       period: 'month',
       description: 'For large organizations',
       features: [
-        'Unlimited words',
+        'Unlimited emails',
         'Custom AI models',
+        'Multi-channel automation',
         'White-label options',
-        'API access',
         'Dedicated account manager',
-        'Unlimited users',
-        'Custom integrations'
+        'Custom integrations',
+        'Advanced reporting'
       ]
     }
   ];
 
   const testimonials = [
     {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Pro",
-      role: "Content Manager",
-      content: "We've increased our content output by 800% while maintaining quality. The AI understands our brand voice perfectly.",
+      name: "Sarah Johnson",
+      company: "TechStart Inc.",
+      role: "Sales Director",
+      content: "Our email conversion rates increased by 45% within the first month. The AI timing predictions are incredibly accurate.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "E-commerce Solutions",
-      role: "Marketing Director",
-      content: "The SEO optimization features have improved our search rankings significantly. ROI was achieved in the first month.",
+      name: "Michael Chen",
+      company: "GrowthCo",
+      role: "Marketing Manager",
+      content: "The personalized content generation saves us hours every week. Highly recommend for any sales team.",
       rating: 5
     }
   ];
@@ -99,39 +99,38 @@ const AIContentGeneratorPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>AI Content Generator - Zion Tech Group</title>
-        <meta name="description" content="AI-powered content generation for blogs, social media, and marketing. Increase content production by 10x with intelligent writing assistance." />
-        <meta name="keywords" content="AI content generator, content creation, blog writing, social media content, SEO content, marketing copy" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-content-generator" />
+        <title>AI Automated Email Follow-up - Zion Tech Group</title>
+        <meta name="description" content="Intelligent email automation with AI-powered personalization, optimal timing predictions, and advanced analytics. Boost your email campaigns by 60%." />
+        <meta name="keywords" content="AI email automation, email marketing, lead nurturing, sales automation, email personalization" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-automated-email-followup" />
       </Head>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 text-white py-20">
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex justify-center mb-6">
-                <div className="bg-purple-600 p-4 rounded-full">
-                  <PenTool className="w-12 h-12" />
+                <div className="bg-blue-600 p-4 rounded-full">
+                  <Mail className="w-12 h-12" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                AI Content Generator
+                AI Automated Email Follow-up
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-4xl mx-auto">
-                Transform your content marketing with AI-powered writing that's fast, engaging, and SEO-optimized. 
-                Increase content production by 10x while maintaining quality and brand consistency.
+                Transform your email campaigns with AI-powered personalization, optimal timing predictions, and intelligent automation that boosts conversions by 60%.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
-                  <span className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
+                  <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                     Start Free Trial
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </span>
                 </Link>
                 <Link href="#demo">
-                  <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
-                    Try Demo
+                  <span className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer">
+                    Watch Demo
                   </span>
                 </Link>
               </div>
@@ -144,10 +143,10 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Writing Features
+                Powerful AI Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Advanced AI technology that understands context, tone, and your brand voice
+                Leverage cutting-edge AI technology to create highly personalized and effective email campaigns
               </p>
             </div>
             
@@ -167,18 +166,18 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Transform Your Content Strategy
+                Proven Results
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Join thousands of content creators and marketers achieving better results
+                Join thousands of businesses that have transformed their email marketing with our AI platform
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-purple-600" />
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>
                 </div>
@@ -192,17 +191,17 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Content for Every Need
+                Perfect For
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From blog posts to social media, create engaging content across all platforms
+                Whether you're in sales, marketing, or customer success, our platform adapts to your needs
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-100">
-                  <FileText className="w-8 h-8 text-purple-600 mb-4" />
+                <div key={index} className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-100">
+                  <Target className="w-8 h-8 text-blue-600 mb-4" />
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
                 </div>
               ))}
@@ -215,18 +214,18 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Affordable Content Creation
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the plan that fits your content needs. Start free and scale as you grow.
+                Choose the plan that fits your business needs. All plans include our core AI features.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white p-8 rounded-lg shadow-lg ${index === 1 ? 'ring-2 ring-purple-500 transform scale-105' : ''}`}>
+                <div key={index} className={`bg-white p-8 rounded-lg shadow-lg ${index === 1 ? 'ring-2 ring-blue-500 transform scale-105' : ''}`}>
                   {index === 1 && (
-                    <div className="bg-purple-500 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4">
+                    <div className="bg-blue-500 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4">
                       Most Popular
                     </div>
                   )}
@@ -247,7 +246,7 @@ const AIContentGeneratorPage: NextPage = () => {
                   <Link href="/contact">
                     <span className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors cursor-pointer inline-block ${
                       index === 1 
-                        ? 'bg-purple-600 hover:bg-purple-700 text-white' 
+                        ? 'bg-blue-600 hover:bg-blue-700 text-white' 
                         : 'bg-gray-200 hover:bg-gray-300 text-gray-900'
                     }`}>
                       Get Started
@@ -264,7 +263,7 @@ const AIContentGeneratorPage: NextPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Loved by Content Creators
+                What Our Customers Say
               </h2>
             </div>
             
@@ -288,27 +287,27 @@ const AIContentGeneratorPage: NextPage = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-900 via-pink-900 to-red-900 text-white">
+        <section className="py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Start Creating Amazing Content Today
+              Ready to Transform Your Email Marketing?
             </h2>
             <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Join thousands of creators using AI to produce high-quality content faster than ever before.
+              Join thousands of businesses using AI to create more effective email campaigns. Start your free trial today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
-                <span className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
+                <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </span>
               </Link>
-              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+              <a href="tel:+13024640950" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
                 Call +1 302 464 0950
               </a>
             </div>
             <div className="mt-8 text-sm text-gray-300">
-              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-purple-300">kleber@ziontechgroup.com</a></p>
+              <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-300">kleber@ziontechgroup.com</a></p>
               <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
             </div>
           </div>
@@ -318,4 +317,4 @@ const AIContentGeneratorPage: NextPage = () => {
   );
 };
 
-export default AIContentGeneratorPage;
+export default AIAutomatedEmailFollowupPage;
