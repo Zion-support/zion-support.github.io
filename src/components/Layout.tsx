@@ -1,68 +1,28 @@
-import React, { useState } from 'react';
-import { SEO } from './SEO';
-import SimpleNavigation from './SimpleNavigation';
-import { SiteFooter } from './SiteFooter';
-import Sidebar from './Sidebar';
+<<<<<<< HEAD
 
-interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  showSidebar?: boolean;
-}
+;,"});,"})
+>>>>>>> pr-10728;,"});,"})
+=======
+<<<<<<< HEAD
+=======
+import React from 'react';
+import {SEO } from '@/components/SEO';
 
-const Layout: React.FC<LayoutProps> = ({
-  children,
-  title,
-  description,
-  keywords,
-  image,
-  url,
-  type = 'website',
-  showSidebar = false
-}) => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  return (
-    <>
-      <SEO
-        title={title}
-        description={description}
-        keywords={keywords}
-        image={image}
-        url={url}
-        type={type}
-      />
-      
-      <div className="min-h-screen flex flex-col">
-        {/* Navigation */}
-        <SimpleNavigation />
-        
-        {/* Main Content */}
-        <div className="flex flex-1">
-          {/* Sidebar */}
-          {showSidebar && (
-            <Sidebar 
-              isOpen={sidebarOpen} 
-              onClose={() => setSidebarOpen(false)} 
-            />
-          )}
-          
-          {/* Page Content */}
-          <main className={`flex-1 ${showSidebar ? 'lg:ml-80' : ''}`}>
-            {children}
-          </main>
-        </div>
-        
-        {/* Footer */}
-        <SiteFooter />
+<<<<<<< HEAD
+;
+=======
+export default function Layout() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <SEO title="Layout - Zion Tech Group" description="Professional Layout services by Zion Tech Group" />
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold text-white mb-8">Layout</h1>
+        <p className="text-gray-300 text-lg">
+          Professional Layout services to help your business grow.
+        </p>
       </div>
-    </>
+    </div>
   );
-};
-
-export default Layout;
+}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

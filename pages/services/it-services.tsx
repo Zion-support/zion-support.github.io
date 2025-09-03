@@ -1,44 +1,27 @@
-import React from,
-  react';
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../../components/layout/MainLayout';
-import { getServicesByCategory } from
-  '../../data/services';
-import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from
-  'lucide-react';
-import Link from
-  'next/link';
+import React from 'react';
+import type { NextPage } from 'next';
+import MainLayout from '../../components/layout/MainLayout';
+import { getServicesByCategory } from '../../data/services';
+import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from 'lucide-react';
+import Link from 'next/link';
 
 const ITServicesPage: NextPage = () => {
-  const itServices = getServicesByCategory(
-  'it-services);
+  const itServices = getServicesByCategory('it-services');
 
   const benefits = [
     {
-      icon: <Shield className="w-8 h-8" />,
-      title:,
-  Enterprise Security',
-      description: 'Bank-level security protocols and compliance standards to protect your business data.
-    },
-    {
+      icon: <Shield className="w-8 h-8" />, title: 'Enterprise Security',
+      description: 'Bank-level security protocols and compliance standards to protect your business data.'
+    }, {
       icon: <Zap className="w-8 h-8" />,
-      title:,
-  Performance Optimization',
-      description: 'Optimize your infrastructure for maximum performance and efficiency.
+      title: 'Performance Optimization', description: 'Optimize your infrastructure for maximum performance and efficiency.'
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title:,
-  Expert Team',
-      description: 'Experienced IT professionals with deep expertise in enterprise solutions.
-    },
-    {
+      icon: <Users className="w-8 h-8" />, title: 'Expert Team',
+      description: 'Experienced IT professionals with deep expertise in enterprise solutions.'
+    }, {
       icon: <Globe className="w-8 h-8" />,
-      title:,
-  Global Support',
-      description: '24/7 support and monitoring to ensure your systems run smoothly.
+      title: 'Global Support', description: '24/7 support and monitoring to ensure your systems run smoothly.'
     }
   ];
 
@@ -51,14 +34,13 @@ const ITServicesPage: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md: text-6xl font-bold mb-6 leading-tight">
               IT Services & Solutions
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-              Comprehensive IT services to modernize your infrastructure, enhance security, 
-              and optimize your technology operations.
+              Comprehensive IT services to modernize your infrastructure, enhance security, and optimize your technology operations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact">
                 <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                   Get Free Consultation
@@ -86,7 +68,7 @@ const ITServicesPage: NextPage = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
+              <div key={index} className="text-center p-6 rounded-lg hover: shadow-lg transition-shadow">
                 <div className="text-blue-600 mb-4 flex justify-center">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
@@ -105,9 +87,9 @@ const ITServicesPage: NextPage = () => {
               Choose from our comprehensive suite of IT services designed to transform your business infrastructure.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg: grid-cols-2 gap-8">
             {itServices.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
+              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow border border-gray-100">
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-5xl">{service.icon}</div>
                   <div className="text-right">
@@ -119,7 +101,7 @@ const ITServicesPage: NextPage = () => {
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Services Include:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">Services Include: </h4>
                   <ul className="space-y-2">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-gray-600">
@@ -131,7 +113,7 @@ const ITServicesPage: NextPage = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Use Cases:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">Use Cases: </h4>
                   <ul className="space-y-2">
                     {service.useCases.map((useCase, index) => (
                       <li key={index} className="flex items-center text-gray-600">
@@ -143,7 +125,7 @@ const ITServicesPage: NextPage = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">Technologies: </h4>
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, index) => (
                       <span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
@@ -155,7 +137,7 @@ const ITServicesPage: NextPage = () => {
 
                 <div className="flex justify-between items-center">
                   <Link href={service.link}>
-                    <span className="text-blue-600 hover:text-blue-700 font-medium cursor-pointer inline-flex items-center">
+                    <span className="text-blue-600 hover: text-blue-700 font-medium cursor-pointer inline-flex items-center">
                       Learn More
                       <ArrowRight className="ml-1 w-4 h-4" />
                     </span>
@@ -181,7 +163,7 @@ const ITServicesPage: NextPage = () => {
               We follow a proven methodology to ensure successful implementation and optimal results.
             </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Assessment</h3>
@@ -215,10 +197,10 @@ const ITServicesPage: NextPage = () => {
               Choose the service level that best fits your business needs and budget.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Basic</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-6">$2,000<span className="text-lg text-gray-500">+</span></div>
+              <div className="text-4xl font-bold text-blue-600 mb-6">$2, 000<span className="text-lg text-gray-500">+</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
@@ -238,7 +220,7 @@ const ITServicesPage: NextPage = () => {
                 </li>
               </ul>
               <Link href="/contact">
-                <span className="w-full bg-gray-600 hover:bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
+                <span className="w-full bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
                   Get Quote
                 </span>
               </Link>
@@ -273,7 +255,7 @@ const ITServicesPage: NextPage = () => {
                 </li>
               </ul>
               <Link href="/contact">
-                <span className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
+                <span className="w-full bg-blue-600 hover: bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
                   Get Quote
                 </span>
               </Link>
@@ -281,7 +263,7 @@ const ITServicesPage: NextPage = () => {
             
             <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-6">$25,000<span className="text-lg text-gray-500">+</span></div>
+              <div className="text-4xl font-bold text-blue-600 mb-6">$25, 000<span className="text-lg text-gray-500">+</span></div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-600">
                   <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
@@ -305,7 +287,7 @@ const ITServicesPage: NextPage = () => {
                 </li>
               </ul>
               <Link href="/contact">
-                <span className="w-full bg-gray-600 hover:bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
+                <span className="w-full bg-gray-600 hover: bg-gray-700 text-white py-3 rounded-lg font-medium transition-colors cursor-pointer inline-block text-center">
                   Contact Sales
                 </span>
               </Link>
@@ -319,10 +301,10 @@ const ITServicesPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your IT Infrastructure?</h2>
           <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Let's discuss how our IT services can help modernize your infrastructure 
+            Let&apos;s discuss how our IT services can help modernize your infrastructure ''
             and drive operational efficiency.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link href="/contact">
               <span className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                 Schedule Consultation

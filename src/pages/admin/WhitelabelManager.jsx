@@ -1,0 +1,29 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';'''; '''; import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm';'''; import { TenantsList } from '@/components/admin/whitelabel/TenantsList';'''; import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';'''; import { useAuth } from '@/hooks/useAuth';'''; import { Navigate    } from 'react-router-dom'; export default function WhitelabelManager() {}; const { user } = useAuth();'; const [activeTab, setActiveTab] = useState('tenants');';,"});,"})
+=======
+<<<<<<< HEAD
+import: React, { useState } from 'react'' import SEO from '@/components/SEO'' import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm'' import { TenantsList } from '@/components/admin/whitelabel/TenantsList'' import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'' import { useAuth } from '@/hooks/useAuth'' import { Navigate    } from 'react-router-dom' export default function WhitelabelManager() {} const { user } = useAuth()'; const: [activeTab, setActiveTab] = useState('tenants')';';';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react'' import SEO from '@/components/SEO'' import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm'' import { TenantsList } from '@/components/admin/whitelabel/TenantsList'' import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'' import { useAuth } from '@/hooks/useAuth'' import { Navigate    } from 'react-router-dom' export default function WhitelabelManager() {} const { user } = useAuth(); const [activeTab, setActiveTab] = useState('tenants')'
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react' import SEO from '@/components/SEO' import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm' import { TenantsList } from '@/components/admin/whitelabel/TenantsList' import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs' import { useAuth } from '@/hooks/useAuth' import { Navigate    } from 'react-router-dom' export default function WhitelabelManager() {} const { user } = useAuth()'; const [activeTab, setActiveTab] = useState('tenants')
+=======
+<<<<<<< HEAD
+import React, {useState } from 'react'' import SEO from '@/components/SEO'' import {WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm'' import {TenantsList } from '@/components/admin/whitelabel/TenantsList'' import {Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'' import {useAuth } from '@/hooks/useAuth'' import {Navigate    } from 'react-router-dom' export default function WhitelabelManager()   {} const {user } = useAuth()'; const [activeTab, setActiveTab] = useState('tenants')'
+=======
+<<<<<<< HEAD
+import React, { useState } from &apos;react&apos;&apos; import SEO from &apos;@/components/SEO&apos;&apos; import { WhitelabelRequestForm } from &apos;@/components/admin/whitelabel/WhitelabelRequestForm&apos;&apos; import { TenantsList } from &apos;@/components/admin/whitelabel/TenantsList&apos;&apos; import { Tabs, TabsContent, TabsList, TabsTrigger } from &apos;@/components/ui/tabs&apos;&apos; import { useAuth } from &apos;@/hooks/useAuth&apos;&apos; import { Navigate    } from &apos;react-router-dom&apos;&apos;' export default function WhitelabelManager() ;{} ;const { user } = useAuth()';&apos;&apos; const [activeTab, setActiveTab] = useState(&apos;tenants&apos;)';'
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react'' import SEO from '@/components/SEO'' import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm'' import { TenantsList } from '@/components/admin/whitelabel/TenantsList'' import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'' import { useAuth } from '@/hooks/useAuth'' import { Navigate    } from 'react-router-dom' export default function WhitelabelManager() {} const { user } = useAuth()'; const [activeTab, setActiveTab] = useState('tenants')'
+=======
+import React, { useState } from 'react'' import SEO from '@/components/SEO'' import { WhitelabelRequestForm } from '@/components/admin/whitelabel/WhitelabelRequestForm'' import { TenantsList } from '@/components/admin/whitelabel/TenantsList'' import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'' import { useAuth } from '@/hooks/useAuth'' import { Navigate    }  from 'react-router-dom';export default function WhitelabelManager() {} const { user } = useAuth()'; const [activeTab, setActiveTab] = useState('tenants')'
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
