@@ -5,7 +5,9 @@ describe('PrivacyPolicy', () => {}; '; it('renders without crashing', () => {}; 
 '
   it('displays expected content', () => {
     render(<PrivacyPolicy /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

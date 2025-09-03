@@ -12,4 +12,4 @@ export default function cuttingEdgeITInfrastructure2030() {return (
       </div>
     </div>
   );
-}
+}"

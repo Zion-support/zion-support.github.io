@@ -7,4 +7,4 @@ import { ProductListing } from &apos;@/types/listings';&apos;'
 ""
 import { ProductListing } from '@/types/listings
 ";
-;
+;"

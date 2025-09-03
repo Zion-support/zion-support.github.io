@@ -34,7 +34,8 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
         </button>;,"});,"})
       </div>;,"});,"})
 function App() {,"});,"})
-return (;,"});,"})
+return (
+    ,"});,"})
     <HelmetProvider>;,"});,"})
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>'        <PerformanceOptimizer>'          <SEO />";,"});,"})
           <div className="min-h-screen bg-gray-50">"            <EnhancedHeader />"            <main className="flex-1">"              <Routes>"                {/* Core Pages */}";,"});,"})
@@ -124,7 +125,8 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </div>;
 );
 function App() {
-  return (;
+  return (
+    
     <HelmetProvider>;
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>;
         <PerformanceOptimizer>;
@@ -200,11 +202,11 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 <button onClick={resetErrorBoundary} className="w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">Try again</button>
         <button onClick={() => window.location.href = '/'} className="w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors">Go home</button></div>
 const ErrorFallback = ({error, resetErrorBoundary }: {error: Error resetErrorBoundary: () => void }) => ("
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>"
-    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>"
-      <div className='text-red-400 text-6xl mb-4'>⚠️</div>"
-      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>"
-      <p className='text-gray-300 mb-6'>"
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">"
+    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">"
+      <div className="text-red-400 text-6xl mb-4">⚠️</div>"
+      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>"
+      <p className="text-gray-300 mb-6">"
 import React { Suspense, lazy } from;
   &apos;react';
 import { Routes, Route } from;
@@ -230,22 +232,23 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 // Core pages with optimized imports;
 // Error Fallback Component;
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (;
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>;
-    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>;
-      <div className='text-red-400 text-6xl mb-4'>⚠️</div>;
-      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>;
-      <p className='text-gray-300 mb-6'> {error.message ||, An unexpected error occurred. Please try again.'}';
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">;
+    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">;
+      <div className="text-red-400 text-6xl mb-4">⚠️</div>;
+      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>;
+      <p className="text-gray-300 mb-6"> {error.message ||, An unexpected error occurred. Please try again.'}';
       </p>;
-      <div className='space-y-3'>;
-<button onClick={resetErrorBoundary} className='w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors'>Try again</button>;
+      <div className="space-y-3">;
+<button onClick={resetErrorBoundary} className="w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">Try again</button>;
     </div>  </div>;
-  return(;
+  return (
+    
       <ErrorBoundary fallback={<ErrorFallback error={new Error(;
   'App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>;
           <SEO />;
-          <div className='min-h-screen bg-gray-50'>;
+          <div className="min-h-screen bg-gray-50">;
             <EnhancedHeader />;
-            <main className='flex-1'>;
+            <main className="flex-1">;
               <Routes> {/* Core Pages */}
                 <Route path='/' element={<Home />} />;
                 <Route path='/about' element={<About />} />;
@@ -267,7 +270,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
                 <Route path='/services/consulting' element={<ConsultingServices />} />{/* Legal */}
                 <Route path='/privacy' element={<Privacy />} />;
                 <Route path='/terms' element={<Terms />} />{/* 404 Fallback */}
-                <Route path='*' element={<div className='min-h-screen flex items-center justify-center'><div className='text-center'><h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1><p className='text-gray-600 mb-8'>Page not found</p><a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>Go Home</a></div></div>} />;
+                <Route path='*' element={<div className="min-h-screen flex items-center justify-center"><div className="text-center"><h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1><p className="text-gray-600 mb-8">Page not found</p><a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">Go Home</a></div></div>} />;
               </Routes>;
             </main>;
             <EnhancedFooter />;
@@ -297,17 +300,17 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 // Core pages with optimized imports;
         </button>      </div>;
   '        <PerformanceOptimizer>'          <SEO />;
-          <div className='min-h-screen bg-gray-50'>'            <EnhancedHeader />'            <main className='flex-1'>'              <Routes>'                {/* Core Pages */}
+          <div className="min-h-screen bg-gray-50">'            <EnhancedHeader />'            <main className="flex-1">'              <Routes>'                {/* Core Pages */}
                 <Route path='/' element={<Home />} />'                <Route path='/about' element={<About />} />'                <Route path='/contact' element={<Contact />} />'                <Route path='/careers' element={<Careers />} />'                <Route path='/solutions' element={<Solutions />} />'                <Route path='/research-development' element={<Solutions />} />'                <Route path='/case-studies' element={<CaseStudies />} />'                <Route path='/news' element={<News />} />'                <Route path='/events' element={<News />} />'                '                {/* Services */}
                 <Route path='/services' element={<Services />} />'                <Route path='/services/ai' element={<AIServices />} />'                <Route path='/services/cloud' element={<CloudServices />} />'                <Route path='/services/cybersecurity' element={<CybersecurityServices />} />'                <Route path='/services/infrastructure' element={<InfrastructureServices />} />'                <Route path='/services/transformation' element={<TransformationServices />} />'                <Route path='/services/consulting' element={<ConsultingServices />} />'                '                {/* Legal */}
                 <Route path='/privacy' element={<Privacy />} />'                <Route path='/terms' element={<Terms />} />'                '                {/* 404 Fallback */}';
-                <Route path='*' element={'                  <div className='min-h-screen flex items-center justify-center'>'                    <div className='text-center'>'                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices />} />';
+                <Route path='*' element={'                  <div className="min-h-screen flex items-center justify-center">'                    <div className="text-center">'                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>'                      <p className="text-gray-600 mb-8">Page not found</p>'                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices />} />';
                 <Route path='*' element={
-                  <div className='min-h-screen flex items-center justify-center'>;
-                    <div className='text-center'>;
-                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>;
-                      <p className='text-gray-600 mb-8'>Page not found</p>;
-                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>;
+                  <div className="min-h-screen flex items-center justify-center">;
+                    <div className="text-center">;
+                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>;
+                      <p className="text-gray-600 mb-8">Page not found</p>;
+                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
                         Go Home;
                       </a>;
                     </div>} />;
@@ -351,23 +354,23 @@ const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNo
 ursor/automate-test-fix-improve-and-merge-code-48f3
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void   }) => (
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>
-    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>
-      <div className='text-red-400 text-6xl mb-4'>⚠️</div>
-      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>
-      <p className='text-gray-300 mb-6'>
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">
+    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">
+      <div className="text-red-400 text-6xl mb-4">⚠️</div>
+      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+      <p className="text-gray-300 mb-6">
 // Error Fallback Component""
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (""
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>""
-    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>""
-      <div className='text-red-400 text-6xl mb-4'>⚠️</div>""
-      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>""
-      <p className='text-gray-300 mb-6'>""
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">""
+    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">""
+      <div className="text-red-400 text-6xl mb-4">⚠️</div>""
+      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>""
+      <p className="text-gray-300 mb-6">""
         {error.message ||, An unexpected error occurred. Please try again.'}
         {error.message ||, An unexpected error occurred. Please try again.'}'
       </p>""
-      <div className='space-y-3'>""
-<button onClick={resetErrorBoundary} className='w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors'>Try again</button>
+      <div className="space-y-3">""
+<button onClick={resetErrorBoundary} className="w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">Try again</button>
     </div>  </div>
 )
   return(<HelmetProvider>
@@ -378,9 +381,9 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
   'App failed to load')} resetErrorBoundary={() =" > window.location.reload()} />}>
         <PerformanceOptimizer>"
           <SEO /" >""
-          <div className='min-h-screen bg-gray-50>
+          <div className="min-h-screen bg-gray-50>
             <EnhancedHeader /" >""
-            <main className='flex-1'>
+            <main className="flex-1'>
               <Routes>'
                 {/* Core Pages */}""
                 <Route path='/' element={<Home /" >} />""
@@ -466,7 +469,7 @@ function App() {return(
   'App failed to load')} resetErrorBoundary={() ="" > window.location.reload()} />}>
         <PerformanceOptimizer>""
           <SEO /"" >""
-          <div className='min-h-screen bg-gray-50'>""
+          <div className="min-h-screen bg-gray-50">""
             <EnhancedHeader /"" >""
               <Routes>""
                 <Route path='/' element={<Home /"" >} />""
@@ -489,7 +492,7 @@ function App() {return(
                 <Route path='/services/consulting' element={<ConsultingServices /"" >} />{/* Legal */}""
                 <Route path='/privacy' element={<Privacy /"" >} />""
                 <Route path='/terms' element={<Terms /"" >} />{/* 404 Fallback */}""
-                <Route path='*' element={<div className='min-h-screen flex items-center justify-center'><div className='text-center'><h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1><p className='text-gray-600 mb-8'>Page not found</p><a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>Go Home</a></div></div>} />
+                <Route path='*' element={<div className="min-h-screen flex items-center justify-center"><div className="text-center"><h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1><p className="text-gray-600 mb-8">Page not found</p><a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">Go Home</a></div></div>} />
               </Routes>
             </main>'
             <EnhancedFooter /" >
@@ -520,18 +523,18 @@ const AIServices = createLazyComponent(() => import('./pages/AIServices'));'cons
     <HelmetProvider>"
   'App failed to load')} resetErrorBoundary={() =" > window.location.reload()} />}>""
   '        <PerformanceOptimizer>'          <SEO /" >""
-          <div className='min-h-screen bg-gray-50>            <EnhancedHeader /" >'            <main className='flex-1>              <Routes>'                {/* Core Pages */}""
+          <div className="min-h-screen bg-gray-50>            <EnhancedHeader /" >"            <main className="flex-1>              <Routes>"                {/* Core Pages */}""
                 <Route path='/' element={<Home /" >} />                <Route path='/about' element={<About /" >} />                <Route path='/contact' element={<Contact /" >} />                <Route path='/careers' element={<Careers /" >} />                <Route path='/solutions' element={<Solutions /" >} />                <Route path='/research-development' element={<Solutions /" >} />                <Route path='/case-studies' element={<CaseStudies /" >} />                <Route path='/news' element={<News /" >} />                <Route path='/events' element={<News /" >} />                '                {/* Services */}""
                 <Route path='/services' element={<Services /" >} />                <Route path='/services/ai' element={<AIServices /" >} />                <Route path='/services/cloud' element={<CloudServices /" >} />                <Route path='/services/cybersecurity' element={<CybersecurityServices /" >} />                <Route path='/services/infrastructure' element={<InfrastructureServices /" >} />                <Route path='/services/transformation' element={<TransformationServices /" >} />                <Route path='/services/consulting' element={<ConsultingServices /" >} />                '                {/* Legal */}""
                 <Route path='/privacy' element={<Privacy /" >} />                <Route path='/terms' element={<Terms /" >} />                '                {/* 404 Fallback */}
-                <Route path='*' element={'                  <div className='min-h-screen flex items-center justify-center>                    <div className='text-center>                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors>                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices /" >} />'
+                <Route path='*' element={'                  <div className="min-h-screen flex items-center justify-center>                    <div className="text-center>                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>'                      <p className="text-gray-600 mb-8">Page not found</p>'                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors>                        Go Home"                      </a></div><Route path='/services/ai' element={<AIServices /" >} />'
       <ErrorBoundary fallback={<ErrorFallback error={new Error(" 'App failed to load')} resetErrorBoundary={() =" > window.location.reload()} />}>"
   '        <PerformanceOptimizer>'          <SEO /" >"
-          <div className='min-h-screen bg-gray-50'>'            <EnhancedHeader /" >'            <main className='flex-1'>'              <Routes>'                {/* Core Pages */}"
+          <div className="min-h-screen bg-gray-50">'            <EnhancedHeader /" >'            <main className="flex-1">'              <Routes>'                {/* Core Pages */}"
                 <Route path='/' element={<Home /" >} />'                <Route path='/about' element={<About /" >} />'                <Route path='/contact' element={<Contact /" >} />'                <Route path='/careers' element={<Careers /" >} />'                <Route path='/solutions' element={<Solutions /" >} />'                <Route path='/research-development' element={<Solutions /" >} />'                <Route path='/case-studies' element={<CaseStudies /" >} />'                <Route path='/news' element={<News /" >} />'                <Route path='/events' element={<News /" >} />'                '                {/* Services */}"
                 <Route path='/services' element={<Services /" >} />'                <Route path='/services/ai' element={<AIServices /" >} />'                <Route path='/services/cloud' element={<CloudServices /" >} />'                <Route path='/services/cybersecurity' element={<CybersecurityServices /" >} />'                <Route path='/services/infrastructure' element={<InfrastructureServices /" >} />'                <Route path='/services/transformation' element={<TransformationServices /" >} />'                <Route path='/services/consulting' element={<ConsultingServices /" >} />'                '                {/* Legal */}"
                 <Route path='/privacy' element={<Privacy /" >} />'                <Route path='/terms' element={<Terms /" >} />'                '                {/* 404 Fallback */}'
-                <Route path='*' element={' <div className='min-h-screen flex items-center justify-center'>'                    <div className='text-center'>'                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices /" >} />'
+                <Route path='*' element={' <div className="min-h-screen flex items-center justify-center">'                    <div className="text-center">'                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>'                      <p className="text-gray-600 mb-8">Page not found</p>'                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices /" >} />'
                 <Route path='/services/cloud' element={<CloudServices /" >} />"
                 <Route path='/services/cybersecurity' element={<CybersecurityServices /" >} />"
                 <Route path='/services/infrastructure' element={<InfrastructureServices /" >} />"
@@ -539,11 +542,11 @@ const AIServices = createLazyComponent(() => import('./pages/AIServices'));'cons
                 <Route path='/services/consulting' element={<ConsultingServices /" >} />{/* Legal */}"
                 <Route path='/privacy' element={<Privacy /" >} />"
                 <Route path='/terms' element={<Terms /" >} />{/* 404 Fallback */}"
-                <Route path='*' element={" <div className='min-h-screen flex items-center justify-center'>"
-                    <div className='text-center'>"
-                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>"
-                      <p className='text-gray-600 mb-8'>Page not found</p>"
-                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>
+                <Route path='*' element={" <div className="min-h-screen flex items-center justify-center">"
+                    <div className="text-center">"
+                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>"
+                      <p className="text-gray-600 mb-8">Page not found</p>"
+                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
   &apos;App failed to load&apos)} resetErrorBoundary={() => window.location.reload()} />}>
   &apos;&apos;'        <PerformanceOptimizer>&apos;&apos;'          <SEO />
           <div className=&apos;min-h-screen bg-gray-50&apos;>'&apos;&apos;            <EnhancedHeader />&apos;&apos;'            <main className=&apos;flex-1&apos;>'&apos;&apos;              <Routes>&apos {/* Core Pages */}&apos;
@@ -560,17 +563,17 @@ const AIServices = createLazyComponent(() => import('./pages/AIServices'));'cons
                         Go Home&apos;&apos;
   'App failed to load')} resetErrorBoundary={() ="" > window.location.reload()} />}>""
   '        <PerformanceOptimizer>'          <SEO /"" >""
-          <div className='min-h-screen bg-gray-50'>'            <EnhancedHeader /"" >'            <main className='flex-1'>'              <Routes>'                {/* Core Pages */}""
+          <div className="min-h-screen bg-gray-50">'            <EnhancedHeader /"" >'            <main className="flex-1">'              <Routes>'                {/* Core Pages */}""
                 <Route path='/' element={<Home /"" >} />'                <Route path='/about' element={<About /"" >} />'                <Route path='/contact' element={<Contact /"" >} />'                <Route path='/careers' element={<Careers /"" >} />'                <Route path='/solutions' element={<Solutions /"" >} />'                <Route path='/research-development' element={<Solutions /"" >} />'                <Route path='/case-studies' element={<CaseStudies /"" >} />'                <Route path='/news' element={<News /"" >} />'                <Route path='/events' element={<News /"" >} />'                '                {/* Services */}""
                 <Route path='/services' element={<Services /"" >} />'                <Route path='/services/ai' element={<AIServices /"" >} />'                <Route path='/services/cloud' element={<CloudServices /"" >} />'                <Route path='/services/cybersecurity' element={<CybersecurityServices /"" >} />'                <Route path='/services/infrastructure' element={<InfrastructureServices /"" >} />'                <Route path='/services/transformation' element={<TransformationServices /"" >} />'                <Route path='/services/consulting' element={<ConsultingServices /"" >} />'                '                {/* Legal */}""
                 <Route path='/privacy' element={<Privacy /"" >} />'                <Route path='/terms' element={<Terms /"" >} />'                '                {/* 404 Fallback */}'
-                <Route path='*' element={'                  <div className='min-h-screen flex items-center justify-center'>'                    <div className='text-center'>'                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices /"" >} />'
+                <Route path='*' element={'                  <div className="min-h-screen flex items-center justify-center">'                    <div className="text-center">'                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>'                      <p className="text-gray-600 mb-8">Page not found</p>'                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices /"" >} />'
                 <Route path='*' element={""
-                  <div className='min-h-screen flex items-center justify-center'>""
-                    <div className='text-center'>""
-                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>""
-                      <p className='text-gray-600 mb-8'>Page not found</p>""
-                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
+                  <div className="min-h-screen flex items-center justify-center">""
+                    <div className="text-center">""
+                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>""
+                      <p className="text-gray-600 mb-8">Page not found</p>""
+                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                         Go Home
                       </a>
                     </div>} />
@@ -579,25 +582,25 @@ const AIServices = createLazyComponent(() => import('./pages/AIServices'));'cons
 const Home = createLazyComponent(() => import('./pages/Home'));const About = createLazyComponent(() => import('./pages/About'));const Contact = createLazyComponent(() => import('./pages/Contact'));const Careers = createLazyComponent(() => import('./pages/Careers'));const Services = createLazyComponent(() => import('./pages/Services'));const Solutions = createLazyComponent(() => import('./pages/Solutions'));const News = createLazyComponent(() => import('./pages/News'));const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));const Privacy = createLazyComponent(() => import('./pages/Privacy'));const Terms = createLazyComponent(() => import('./pages/Terms'));// Service pages';'
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));const CloudServices = createLazyComponent(() => import('./pages/CloudServices'));const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'));const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'));const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'));const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'));// Error Fallback Component';'
     y: () => void }) => ('''
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4>    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20>      <div className='text-red-400 text-6xl mb-4'>⚠️</div>'      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>'      <p className='text-gray-300 mb-6>        {error.message || 'An unexpected error occurred. Please try again.'}      </p>'      <div className='space-y-3>        <button'          onClick={resetErrorBoundary};'
-          className='w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors''        >'          Try again</button><button';'
-          onClick={() => window.location.href = '/'}          className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors''        >'          Go home'
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4>    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20>      <div className="text-red-400 text-6xl mb-4">⚠️</div>'      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>'      <p className="text-gray-300 mb-6>        {error.message || "An unexpected error occurred. Please try again.'}      </p>'      <div className="space-y-3>        <button"          onClick={resetErrorBoundary};'
+          className="w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"'        >'          Try again</button><button';'
+          onClick={() => window.location.href = '/'}          className="w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"'        >'          Go home'
 // Core pages with optimized imports;""
 const Home = createLazyComponent(() => import('./pages/Home'))';const About = createLazyComponent(() => import('./pages/About'))';const Contact = createLazyComponent(() => import('./pages/Contact'))';const Careers = createLazyComponent(() => import('./pages/Careers'))';const Services = createLazyComponent(() => import('./pages/Services'))';const Solutions = createLazyComponent(() => import('./pages/Solutions'))';const News = createLazyComponent(() => import('./pages/News'))';const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'))';const Privacy = createLazyComponent(() => import('./pages/Privacy'))';const Terms = createLazyComponent(() => import('./pages/Terms'))';// Service pages';'
 const AIServices = createLazyComponent(() => import('./pages/AIServices'))';const CloudServices = createLazyComponent(() => import('./pages/CloudServices'))';const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'))';const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'))';const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'))';const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'))';// Error Fallback Component''
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void   }) => (''
 const AIServices = createLazyComponent(() => import('./pages/AIServices'))';const CloudServices = createLazyComponent(() => import('./pages/CloudServices'))';const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'))';const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'))';const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'))';const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'))';// Error Fallback Component';'
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (''
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>'    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>'      <div className='text-red-400 text-6xl mb-4'>⚠️</div>'      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>'      <p className='text-gray-300 mb-6'>'        {error.message || 'An unexpected error occurred. Please try again.'}'      </p>'      <div className='space-y-3'>'        <button '          onClick={resetErrorBoundary}'';'
-          className='w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors''" >'          Try again</button><button ';'"
-          onClick={() =" > window.location.href = '/'}'          className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors''        >'          Go home'"
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">'    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">'      <div className="text-red-400 text-6xl mb-4">⚠️</div>'      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>'      <p className="text-gray-300 mb-6">'        {error.message || 'An unexpected error occurred. Please try again.'}'      </p>'      <div className="space-y-3">'        <button '          onClick={resetErrorBoundary}'';'
+          className="w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"'" >'          Try again</button><button ';'"
+          onClick={() =" > window.location.href = '/'}'          className="w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"'        >'          Go home'"
 // Core pages with optimized imports;
 const Home = createLazyComponent(() => import('./pages/Home'))';const About = createLazyComponent(() => import('./pages/About'))';const Contact = createLazyComponent(() => import('./pages/Contact'))';const Careers = createLazyComponent(() => import('./pages/Careers'))';const Services = createLazyComponent(() => import('./pages/Services'))';const Solutions = createLazyComponent(() => import('./pages/Solutions'))';const News = createLazyComponent(() => import('./pages/News'))';const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'))';const Privacy = createLazyComponent(() => import('./pages/Privacy'))';const Terms = createLazyComponent(() => import('./pages/Terms'))';// Service pages';
 const AIServices = createLazyComponent(() => import('./pages/AIServices'))';const CloudServices = createLazyComponent(() => import('./pages/CloudServices'))';const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'))';const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'))';const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'))';const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'))';// Error Fallback Component';
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (';
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>'    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>'      <div className='text-red-400 text-6xl mb-4'>⚠️</div>'      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>'      <p className='text-gray-300 mb-6'>'        {error.message || 'An unexpected error occurred. Please try again.'}'      </p>'      <div className='space-y-3'>'        <button'          onClick={resetErrorBoundary}';
-          className='w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors'        >'          Try again</button><button';
-          onClick={() => window.location.href = '/'}'          className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'        >'          Go home';
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">'    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">'      <div className="text-red-400 text-6xl mb-4">⚠️</div>'      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>'      <p className="text-gray-300 mb-6">'        {error.message || 'An unexpected error occurred. Please try again.'}'      </p>'      <div className="space-y-3">'        <button'          onClick={resetErrorBoundary}';
+          className="w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"        >'          Try again</button><button';
+          onClick={() => window.location.href = '/'}'          className="w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"        >'          Go home';
         </button>;
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>'        <PerformanceOptimizer>'          <SEO />";
           <div className="min-h-screen bg-gray-50">"            <EnhancedHeader />"            <main className="flex-1">"              <Routes>"                {/* Core Pages */}";
@@ -612,7 +615,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
                       <p className="text-gray-600 mb-8">Page not found</p>";
                       <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>'        <PerformanceOptimizer>'          <SEO />';
-          <div className='min-h-screen bg-gray-50'>'            <EnhancedHeader />'            <main className='flex-1'>'              <Routes>'                {/* Core Pages */}';
+          <div className="min-h-screen bg-gray-50">'            <EnhancedHeader />'            <main className="flex-1">'              <Routes>'                {/* Core Pages */}';
                 <Route path='/' element={<Home />} />'                <Route path='/about' element={<About />} />'                <Route path='/contact' element={<Contact />} />'                <Route path='/careers' element={<Careers />} />'                <Route path='/solutions' element={<Solutions />} />'                <Route path='/research-development' element={<Solutions />} />'                <Route path='/case-studies' element={<CaseStudies />} />'                <Route path='/news' element={<News />} />'                <Route path='/events' element={<News />} />'                '                {/* Services */}';
                 <Route path='/services' element={<Services />} />'                <Route path='/services/ai' element={<AIServices />} />'                <Route path='/services/cloud' element={<CloudServices />} />'                <Route path='/services/cybersecurity' element={<CybersecurityServices />} />'                <Route path='/services/infrastructure' element={<InfrastructureServices />} />'                <Route path='/services/transformation' element={<TransformationServices />} />'                <Route path='/services/consulting' element={<ConsultingServices />} />'                '                {/* Legal */}';
                 <Route path='/services/cloud' element={<CloudServices />} />';
@@ -623,10 +626,10 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
                 <Route path='/privacy' element={<Privacy />} />';
                 <Route path='/terms' element={<Terms />} />{/* 404 Fallback */}';
                 <Route path='*' element={';
-                  <div className='min-h-screen flex items-center justify-center'>';
-                    <div className='text-center'>';
-                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>';
-                      <p className='text-gray-600 mb-8'>Page not found</p>';
+                  <div className="min-h-screen flex items-center justify-center">';
+                    <div className="text-center">';
+                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>';
+                      <p className="text-gray-600 mb-8">Page not found</p>';
 ";
 const Home = createLazyComponent(() => import(&apos;./pages/Home&apos))';&apos;&apos;const About = createLazyComponent(() => import(&apos;./pages/About&apos))';&apos;&apos;const Contact = createLazyComponent(() => import(&apos;./pages/Contact&apos))';&apos;&apos;const Careers = createLazyComponent(() => import(&apos;./pages/Careers&apos))';&apos;&apos;const Services = createLazyComponent(() => import(&apos;./pages/Services&apos))';&apos;&apos;const Solutions = createLazyComponent(() => import(&apos;./pages/Solutions&apos))';&apos;&apos;const News = createLazyComponent(() => import(&apos;./pages/News&apos))';&apos;&apos;const CaseStudies = createLazyComponent(() => import(&apos;./pages/CaseStudies&apos))';&apos;&apos;const Privacy = createLazyComponent(() => import(&apos;./pages/Privacy&apos))';&apos;&apos;const Terms = createLazyComponent(() => import(&apos;./pages/Terms&apos))';// Service pages';&apos;&apos;
 const AIServices = createLazyComponent(() => import(&apos;./pages/AIServices&apos))';&apos;&apos;const CloudServices = createLazyComponent(() => import(&apos;./pages/CloudServices&apos))';&apos;&apos;const CybersecurityServices = createLazyComponent(() => import(&apos;./pages/CybersecurityServices&apos))';&apos;&apos;const InfrastructureServices = createLazyComponent(() => import(&apos;./pages/InfrastructureServices&apos))';&apos;&apos;const TransformationServices = createLazyComponent(() => import(&apos;./pages/TransformationServices&apos))';&apos;&apos;const ConsultingServices = createLazyComponent(() => import(&apos;./pages/ConsultingServices&apos))';// Error Fallback Component';&apos;&apos;
@@ -635,15 +638,15 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
           className=&apos;w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors&apos;&apos;        >&apos;          Try again&apos;&apos;</button><button';
           onClick={() => window.location.href = &apos;/&apos}&apos;          className=&apos;w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors&apos;&apos;        >&apos;          Go home&apos;&apos;'
 const ErrorFallback = ({error, resetErrorBoundary }: {error: Error resetErrorBoundary: () => void }) => (''
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>'    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>'      <div className='text-red-400 text-6xl mb-4'>⚠️</div>'      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>'      <p className='text-gray-300 mb-6'>'        {error.message || 'An unexpected error occurred. Please try again.'}'      </p>'      <div className='space-y-3'>'        <button' onClick={resetErrorBoundary}'';' className='w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors'' >'          Try again</button><button';' onClick={() => window.location.href = '/'}'          className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors''        >'          Go home'
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>'    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>'      <div className='text-red-400 text-6xl mb-4'>⚠️</div>'      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>'      <p className='text-gray-300 mb-6'>'        {error.message || 'An unexpected error occurred. Please try again.'}'      </p>'      <div className='space-y-3'>'        <button'          onClick={resetErrorBoundary}'';'
-          onClick={() => window.location.href = '/'}'          className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors''        >'          Go home'
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">'    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">'      <div className="text-red-400 text-6xl mb-4">⚠️</div>'      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>'      <p className="text-gray-300 mb-6">'        {error.message || 'An unexpected error occurred. Please try again.'}'      </p>'      <div className="space-y-3">'        <button' onClick={resetErrorBoundary}'';' className="w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"' >'          Try again</button><button';' onClick={() => window.location.href = '/'}'          className="w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"'        >'          Go home'
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">'    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">'      <div className="text-red-400 text-6xl mb-4">⚠️</div>'      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>'      <p className="text-gray-300 mb-6">'        {error.message || 'An unexpected error occurred. Please try again.'}'      </p>'      <div className="space-y-3">'        <button'          onClick={resetErrorBoundary}'';'
+          onClick={() => window.location.href = '/'}'          className="w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"'        >'          Go home'
 // Core pages with optimized imports;"
 const Home = createLazyComponent(() => import('./pages/Home'))';const About = createLazyComponent(() => import('./pages/About'))';const Contact = createLazyComponent(() => import('./pages/Contact'))';const Careers = createLazyComponent(() => import('./pages/Careers'))';const Services = createLazyComponent(() => import('./pages/Services'))';const Solutions = createLazyComponent(() => import('./pages/Solutions'))';const News = createLazyComponent(() => import('./pages/News'))';const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'))';const Privacy = createLazyComponent(() => import('./pages/Privacy'))';const Terms = createLazyComponent(() => import('./pages/Terms'))';// Service pages
 const AIServices = createLazyComponent(() => import('./pages/AIServices'))';const CloudServices = createLazyComponent(() => import('./pages/CloudServices'))';const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'))';const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'))';const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'))';const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'))';// Error Fallback Component
-  <div className='min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4'>'    <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20'>'      <div className='text-red-400 text-6xl mb-4'>⚠️</div>'      <h1 className='text-2xl font-bold text-white mb-4'>Something went wrong</h1>'      <p className='text-gray-300 mb-6'>'        {error.message || 'An unexpected error occurred. Please try again.'}'      </p>'      <div className='space-y-3'>'        <button '          onClick={resetErrorBoundary}'
-          className='w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors' >'          Try again</button><button 
-          onClick={() =" > window.location.href = '/'}'          className='w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors''        >'          Go home'
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">'    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">'      <div className="text-red-400 text-6xl mb-4">⚠️</div>'      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>'      <p className="text-gray-300 mb-6">'        {error.message || 'An unexpected error occurred. Please try again.'}'      </p>'      <div className="space-y-3">'        <button '          onClick={resetErrorBoundary}'
+          className="w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors" >'          Try again</button><button 
+          onClick={() =" > window.location.href = '/'}'          className="w-full bg-gray-700 hover: bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"'        >'          Go home'
 function App() {return (
 return (}
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>'        <PerformanceOptimizer>'          <SEO />
@@ -680,16 +683,16 @@ return (}
                       <p className=&apos;text-gray-600 mb-8&apos;>Page not found&apos;</p>&apos;&apos;'
 return (
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>'        <PerformanceOptimizer>'          <SEO />''
-          <div className='min-h-screen bg-gray-50>            <EnhancedHeader />            <main className='flex-1>              <Routes>'                {/* Core Pages */}'
+          <div className="min-h-screen bg-gray-50>            <EnhancedHeader />            <main className="flex-1>              <Routes>'                {/* Core Pages */}'
                 <Route path='/' element={<Home />} />                <Route path='/about' element={<About />} />                <Route path='/contact' element={<Contact />} />                <Route path='/careers' element={<Careers />} />                <Route path='/solutions' element={<Solutions />} />                <Route path='/research-development' element={<Solutions />} />                <Route path='/case-studies' element={<CaseStudies />} />                <Route path='/news' element={<News />} />                <Route path='/events' element={<News />} />                '                {/* Services */}'
                 <Route path='/services' element={<Services />} />                <Route path='/services/ai' element={<AIServices />} />                <Route path='/services/cloud' element={<CloudServices />} />                <Route path='/services/cybersecurity' element={<CybersecurityServices />} />                <Route path='/services/infrastructure' element={<InfrastructureServices />} />                <Route path='/services/transformation' element={<TransformationServices />} />                <Route path='/services/consulting' element={<ConsultingServices />} />                '                {/* Legal */}'
                 <Route path='/privacy' element={<Privacy />} />                <Route path='/terms' element={<Terms />} />                '                {/* 404 Fallback */}''
-                <Route path='*' element={'                  <div className='min-h-screen flex items-center justify-center>                    <div className='text-center>                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors>                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices />} />'''
-          <div className='min-h-screen bg-gray-50'>'            <EnhancedHeader />'            <main className='flex-1'>'              <Routes>'                {/* Core Pages */}''
+                <Route path='*' element={'                  <div className="min-h-screen flex items-center justify-center>                    <div className="text-center>                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>'                      <p className="text-gray-600 mb-8">Page not found</p>'                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors>                        Go Home"                      </a></div><Route path='/services/ai' element={<AIServices />} />'''
+          <div className="min-h-screen bg-gray-50">'            <EnhancedHeader />'            <main className="flex-1">'              <Routes>'                {/* Core Pages */}''
                 <Route path='/' element={<Home />} />'                <Route path='/about' element={<About />} />'                <Route path='/contact' element={<Contact />} />'                <Route path='/careers' element={<Careers />} />'                <Route path='/solutions' element={<Solutions />} />'                <Route path='/research-development' element={<Solutions />} />'                <Route path='/case-studies' element={<CaseStudies />} />'                <Route path='/news' element={<News />} />'                <Route path='/events' element={<News />} />'                '                {/* Services */}''
                 <Route path='/services' element={<Services />} />'                <Route path='/services/ai' element={<AIServices />} />'                <Route path='/services/cloud' element={<CloudServices />} />'                <Route path='/services/cybersecurity' element={<CybersecurityServices />} />'                <Route path='/services/infrastructure' element={<InfrastructureServices />} />'                <Route path='/services/transformation' element={<TransformationServices />} />'                <Route path='/services/consulting' element={<ConsultingServices />} />'                '                {/* Legal */}''
                 <Route path='/privacy' element={<Privacy />} />'                <Route path='/terms' element={<Terms />} />'                '                {/* 404 Fallback */}'''
-                <Route path='*' element={' <div className='min-h-screen flex items-center justify-center'>'                    <div className='text-center'>'                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices />} />'''
+                <Route path='*' element={' <div className="min-h-screen flex items-center justify-center">'                    <div className="text-center">'                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>'                      <p className="text-gray-600 mb-8">Page not found</p>'                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices />} />'''
                 <Route path='/services/cloud' element={<CloudServices />} />''
                 <Route path='/services/cybersecurity' element={<CybersecurityServices />} />''
                 <Route path='/services/infrastructure' element={<InfrastructureServices />} />''
@@ -698,18 +701,18 @@ return (
                 <Route path='/privacy' element={<Privacy />} />''
                 <Route path='/terms' element={<Terms />} />{/* 404 Fallback */}'
                 <Route path='*' element={';'
-                  <div className='min-h-screen flex items-center justify-center>''
-                    <div className='text-center>''
-                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'''
-                      <p className='text-gray-600 mb-8'>Page not found</p>'''
+                  <div className="min-h-screen flex items-center justify-center>"'
+                    <div className="text-center>"'
+                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>'''
+                      <p className="text-gray-600 mb-8">Page not found</p>'''
                 <Route path='/terms' element={<Terms />} />{/* 404 Fallback */}''
-                <Route path='*' element={';' <div className='min-h-screen flex items-center justify-center'>''
+                <Route path='*' element={';' <div className="min-h-screen flex items-center justify-center">''
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() =" > window.location.reload()} />}>'        <PerformanceOptimizer>'          <SEO /" >''
-          <div className='min-h-screen bg-gray-50'>'            <EnhancedHeader /" >'            <main className='flex-1'>'              <Routes>'                {/* Core Pages */}''"
+          <div className="min-h-screen bg-gray-50">'            <EnhancedHeader /" >'            <main className="flex-1">'              <Routes>'                {/* Core Pages */}''"
                 <Route path='/' element={<Home /" >} />'                <Route path='/about' element={<About /" >} />'                <Route path='/contact' element={<Contact /" >} />'                <Route path='/careers' element={<Careers /" >} />'                <Route path='/solutions' element={<Solutions /" >} />'                <Route path='/research-development' element={<Solutions /" >} />'                <Route path='/case-studies' element={<CaseStudies /" >} />'                <Route path='/news' element={<News /" >} />'                <Route path='/events' element={<News /" >} />'                '                {/* Services */}''"
                 <Route path='/services' element={<Services /" >} />'                <Route path='/services/ai' element={<AIServices /" >} />'                <Route path='/services/cloud' element={<CloudServices /" >} />'                <Route path='/services/cybersecurity' element={<CybersecurityServices /" >} />'                <Route path='/services/infrastructure' element={<InfrastructureServices /" >} />'                <Route path='/services/transformation' element={<TransformationServices /" >} />'                <Route path='/services/consulting' element={<ConsultingServices /" >} />'                '                {/* Legal */}''"
                 <Route path='/privacy' element={<Privacy /" >} />'                <Route path='/terms' element={<Terms /" >} />'                '                {/* 404 Fallback */}'''
-                <Route path='*' element={'                  <div className='min-h-screen flex items-center justify-center'>'                    <div className='text-center'>'                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices /" >} />'''"
+                <Route path='*' element={'                  <div className="min-h-screen flex items-center justify-center">'                    <div className="text-center">'                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>'                      <p className="text-gray-600 mb-8">Page not found</p>'                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices /" >} />'''"
                 <Route path='/services/cloud' element={<CloudServices /" >} />''"
                 <Route path='/services/cybersecurity' element={<CybersecurityServices /" >} />''"
                 <Route path='/services/infrastructure' element={<InfrastructureServices /" >} />''"
@@ -717,7 +720,7 @@ return (
                 <Route path='/services/consulting' element={<ConsultingServices /" >} />{/* Legal */}''"
                 <Route path='/privacy' element={<Privacy /" >} />''"
                 <Route path='/terms' element={<Terms /" >} />{/* 404 Fallback */}''"
-                <Route path='*' element={'                  <div className='min-h-screen flex items-center justify-center'>'                    <div className='text-center'>'                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>'                      <p className='text-gray-600 mb-8'>Page not found</p>'                      <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices /" >} />'''
+                <Route path='*' element={'                  <div className="min-h-screen flex items-center justify-center">'                    <div className="text-center">'                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>'                      <p className="text-gray-600 mb-8">Page not found</p>'                      <a href='/' className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">'                        Go Home'                      </a></div><Route path='/services/ai' element={<AIServices /" >} />'''
                 <Route path='/services/cloud' element={<CloudServices /" >} />''
                 <Route path='/services/cybersecurity' element={<CybersecurityServices /" >} />''
                 <Route path='/services/infrastructure' element={<InfrastructureServices /" >} />''
@@ -725,12 +728,12 @@ return (
                 <Route path='/services/consulting' element={<ConsultingServices /" >} />{/* Legal */}''
                 <Route path='/privacy' element={<Privacy /" >} />''
                 <Route path='/terms' element={<Terms /" >} />{/* 404 Fallback */}''
-                  <div className='min-h-screen flex items-center justify-center'>''
-                    <div className='text-center'>''
-                      <h1 className='text-4xl font-bold text-gray-900 mb-4'>404</h1>''
-                      <p className='text-gray-600 mb-8'>Page not found</p>'';
+                  <div className="min-h-screen flex items-center justify-center">''
+                    <div className="text-center">''
+                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>''
+                      <p className="text-gray-600 mb-8">Page not found</p>'';
 } />;
-}';;
+}';
   )}''
     </HelmetProvider>"
   )};'
@@ -740,4 +743,5 @@ return (
 }}}
   )}';
 &apos;'
+"
 "

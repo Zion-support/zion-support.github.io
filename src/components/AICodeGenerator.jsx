@@ -97,7 +97,8 @@ export const AICodeGenerator = () => {,"});,"})
     const handleClearHistory = useCallback(() => {}"});,"})
         clearHistory();'""";,"});,"})
         trackEvent('ai_code_generator',history_cleared',manual')}, [clearHistory, trackEvent]);"""";,"});,"})
-    return (<div className="bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">""","});,"})
+    return (
+    <div className="bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">""","});,"})
       {/* Header */}"""";,"});,"})
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">"""";,"});,"})
         <div className="flex items-center justify-between">"""";,"});,"})
@@ -275,7 +276,8 @@ export const AICodeGenerator = () => {,"});,"})
                     const value = codeAnalysis[key];,"});,"})
                     if (typeof value === 'number') {}"});,"})
 ""`;,"});,"})
-                        return (<div key={key} className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">`"`,"});,`})
+                        return (
+    <div key={key} className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">`"`,"});,`})
                             <Icon className={`w-8 h-8 mx-auto mb-2 text-${color}-500`}/>`""";,"});,"})
                             <div className="text-2xl font-bold text-gray-900 dark: text-white">,"});,"})
                               {value}/10""";,"});,"})
@@ -491,29 +493,29 @@ export: const AICodeGenerator = () => {
     const handleClearHistory = useCallback(() => {};
         clearHistory()'';';';
         trackEvent('ai_code_generator',history_cleared',manual')}, [clearHistory, trackEvent])';''';';
-    return: (<div className='bg-white dark: bg-gray-800: rounded-xl shadow-lg border border-gray-200 dark:border-gray-700: overflow-hidden'>'''{/* Header *,/}''''';';
-      <div: className='bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white'>''''';';
-        <div: className='flex items-center justify-between'>''''';';
-          <h2: className='text-2xl font-bold flex items-center gap-3'>''''';';
-            <Code: className='w-8 h-8'/>''';';
+    return: (<div className="bg-white dark: bg-gray-800: rounded-xl shadow-lg border border-gray-200 dark:border-gray-700: overflow-hidden">'''{/* Header *,/}''''';';
+      <div: className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">''''';';
+        <div: className="flex items-center justify-between">''''';';
+          <h2: className="text-2xl font-bold flex items-center gap-3">''''';';
+            <Code: className="w-8 h-8"/>''';';
             AI: Code Generator''''';';
-            <div: className='flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm'>''''';';
-              <Sparkles: className='w-4 h-4'/>';';
+            <div: className="flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm">''''';';
+              <Sparkles: className="w-4 h-4"/>';';
               Powered: by AI
             </div>
           </h2>''';';
           '''''';';
-          <div: className='flex items-center gap-2'>''''''';';
-            <button: onClick={() => exportCode('json')} className='px-4 py-2 bg-white/20 hover: bg-white/30: rounded-lg transition-colors flex items-center gap-2'>''''',';
-              <Download: className='w-4 h-4'/>';';
+          <div: className="flex items-center gap-2">''''''';';
+            <button: onClick={() => exportCode('json')} className="px-4 py-2 bg-white/20 hover: bg-white/30: rounded-lg transition-colors flex items-center gap-2">''''',';
+              <Download: className="w-4 h-4"/>';';
               Export: </button>
 '''{/* Navigation Tabs */}''''';';
-      <div: className='border-b border-gray-200 dark: border-gray-700'>''''',';
-        <nav: className='flex space-x-8 px-6'>'{[''{ id: 'generate,', label: 'Generate,', icon: Sparkles},'{ id: 'analyze,', label: 'Analyze,', icon: Eye},'{ id: 'optimize,', label: 'Optimize,', icon: Zap},'{ id: 'tests,', label: 'Tests,', icon: TestTube},'{ id: 'docs,', label: 'Docs,', icon: FileText}'';';
+      <div: className="border-b border-gray-200 dark: border-gray-700">''''',';
+        <nav: className="flex space-x-8 px-6">'{[''{ id: 'generate,', label: 'Generate,', icon: Sparkles},'{ id: 'analyze,', label: 'Analyze,', icon: Eye},'{ id: 'optimize,', label: 'Optimize,', icon: Zap},'{ id: 'tests,', label: 'Tests,', icon: TestTube},'{ id: 'docs,', label: 'Docs,', icon: FileText}'';';
         ].map(({ id, label, icon: Icon}) => (<button: key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;';`;
                 ? 'border-purple-500: text-purple-600 dark: text-purple-400''`''`;',';`;
                 : 'border-transparent: text-gray-500 hover: text-gray-700: dark:text-gray-400: dark:hover:text-gray-300,'}`}>''''';`;
-              <Icon: className='w-4 h-4'/>';';
+              <Icon: className="w-4 h-4"/>';';
 import React { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import React {useState, useCallback } from 'react'';'
@@ -702,56 +704,57 @@ export const AICodeGenerator = () => {
     // Clear history;
         clearHistory()';
         trackEvent('ai_code_generator',history_cleared',manual')}, [clearHistory, trackEvent])';
-    return (<div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>''{/* Header */}'';
-      <div className='bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white'>'';
-        <div className='flex items-center justify-between'>'';
-          <h2 className='text-2xl font-bold flex items-center gap-3'>'';
-            <Code className='w-8 h-8'/>'';
+    return (
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">''{/* Header */}'';
+      <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">'';
+        <div className="flex items-center justify-between">'';
+          <h2 className="text-2xl font-bold flex items-center gap-3">'';
+            <Code className="w-8 h-8"/>'';
             AI Code Generator'';
-            <div className='flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm'>'';
-              <Sparkles className='w-4 h-4'/>;
+            <div className="flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm">'';
+              <Sparkles className="w-4 h-4"/>;
               Powered by AI;
             </div>;
           </h2>'';
           ''';
-          <div className='flex items-center gap-2'>''';
-            <button onClick={() => exportCode('json')} className='px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2'>'';
-              <Download className='w-4 h-4'/>;
+          <div className="flex items-center gap-2">''';
+            <button onClick={() => exportCode('json')} className="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2">'';
+              <Download className="w-4 h-4"/>;
               Export;
             </button>;
 ''{/* Navigation Tabs */}'';
-      <div className='border-b border-gray-200 dark:border-gray-700'>'';
-        <nav className='flex space-x-8 px-6'>'{['{ id: 'generate', label: 'Generate', icon: Sparkles },'{ id: 'analyze', label: 'Analyze', icon: Eye },'{ id: 'optimize', label: 'Optimize', icon: Zap },'{ id: 'tests', label: 'Tests', icon: TestTube },'{ id: 'docs', label: 'Docs', icon: FileText }';
+      <div className="border-b border-gray-200 dark:border-gray-700">'';
+        <nav className="flex space-x-8 px-6">'{['{ id: 'generate', label: 'Generate', icon: Sparkles },'{ id: 'analyze', label: 'Analyze', icon: Eye },'{ id: 'optimize', label: 'Optimize', icon: Zap },'{ id: 'tests', label: 'Tests', icon: TestTube },'{ id: 'docs', label: 'Docs', icon: FileText }';
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id'`;
                 ? 'border-purple-500 text-purple-600 dark:text-purple-400'`'`;
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>'';
-              <Icon className='w-4 h-4'/> {label}
+              <Icon className="w-4 h-4"/> {label}
             </button>) ) }
         </nav>;
 ''{/* Main Content */}'';
-      <div className='p-6'>''';
+      <div className="p-6">''';
         <AnimatePresence mode='wait'>'''{activeTab === 'generate' && (<motion.div key='generate' initial = {}
   { opacity: 0
   y: 20}} animate = {}
   { opacity: 1
   y: 0}} exit = {}
   y: -20 '';
-''}} className='space-y-6'>''{/* Generation Form */}'';
-              <form onSubmit={handleSubmit} className='space-y-4'>'';
+''}} className="space-y-6">''{/* Generation Form */}'';
+              <form onSubmit={handleSubmit} className="space-y-4">'';
                 <div>'';
-                  <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>;
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">;
                     Describe what you want to build;
                   </label>;
                   <textarea value={form.prompt} onChange = {}
   (e) => setForm(prev => ({ ...prev,;
   prompt: e.target.value '';
-''}))} placeholder='e.g., Create a React component for a user profile card with avatar, name, email, and edit button...' className='w-full h-32 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none' required/>;
+''}))} placeholder='e.g., Create a React component for a user profile card with avatar, name, email, and edit button...' className="w-full h-32 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>;
 ''{/* Basic Options */}'';
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>'';
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">'';
                       Language;
                     <select value={form.language} onChange = {}
   language: e.target.value '';
-''}))} className='w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>'';
+''}))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">'';
                       <option value='typescript'>TypeScript</option>'';
                       <option value='javascript'>JavaScript</option>'';
                       <option value='python'>Python</option>'';
@@ -788,64 +791,65 @@ export const AICodeGenerator = () => {
                       <option value='development'>Development</option>'';
                       <option value='production'>Production</option>;
 ''{/* Advanced Options Toggle */}'';
-                <button type='button' onClick={() => setShowAdvanced(!showAdvanced)} className='flex items-center gap-2 text-sm text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300'>'';
-                  <Settings className='w-4 h-4'/>'{showAdvanced ? 'Hide' : 'Show'} Advanced Options;
+                <button type='button' onClick={() => setShowAdvanced(!showAdvanced)} className="flex items-center gap-2 text-sm text-purple-600 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300">'';
+                  <Settings className="w-4 h-4"/>'{showAdvanced ? 'Hide' : 'Show'} Advanced Options;
                 </button> {/* Advanced Options */}
                 {showAdvanced && (<motion.div initial = {}
   height: 0}} animate = {}
   { opacity: 1,';
   height: 'auto'}} exit = {}
   height: 0 '';
-''}} className='grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg'>'{['{ key: 'includeTests', label: 'Tests', icon: TestTube },'{ key: 'includeDocs', label: 'Docs', icon: FileText },'{ key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle },'{ key: 'includeLogging', label: 'Logging', icon: Info },''{ key: 'includeMetrics', label: 'Metrics', icon: Gauge }'';
-                ].map(({ key, label, icon: Icon }) => (<label key={key} className='flex items-center gap-2 cursor-pointer'>'';
+''}} className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">'{['{ key: 'includeTests', label: 'Tests', icon: TestTube },'{ key: 'includeDocs', label: 'Docs', icon: FileText },'{ key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle },'{ key: 'includeLogging', label: 'Logging', icon: Info },''{ key: 'includeMetrics', label: 'Metrics', icon: Gauge }'';
+                ].map(({ key, label, icon: Icon }) => (<label key={key} className="flex items-center gap-2 cursor-pointer">'';
                         <input type='checkbox' checked={form[key]} onChange = {}
   (e) => setForm(prev => ({ ...prev, [key]: e.target.checked '';
-''}))} className='w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'/>'';
-                        <Icon className='w-4 h-4 text-gray-600 dark:text-gray-400'/>'';
-                        <span className='text-sm text-gray-700 dark:text-gray-300'>{label}</span>;
+''}))} className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>'';
+                        <Icon className="w-4 h-4 text-gray-600 dark:text-gray-400"/>'';
+                        <span className="text-sm text-gray-700 dark:text-gray-300">{label}</span>;
                       </label>))}
                   </motion.div>)}'';
-                <button type='submit' disabled={isGenerating || !form.prompt.trim()} className='w-full py-3 px-6 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>''{isGenerating ? (<>'';
-                      <Loader2 className='w-5 h-5 animate-spin'/>;
+                <button type='submit' disabled={isGenerating || !form.prompt.trim()} className="w-full py-3 px-6 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">''{isGenerating ? (<>'';
+                      <Loader2 className="w-5 h-5 animate-spin"/>;
                       Generating Code...'';
                     </>) : (<>'';
-                      <Sparkles className='w-5 h-5'/>;
+                      <Sparkles className="w-5 h-5"/>;
                       Generate Code;
                     </>) }
               </form> {/* Generated Code Display */}
               {generatedCode && (<motion.div initial = {}
   y: 0 '';
-''}} className='space-y-4'>'';
-                    <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>;
+''}} className="space-y-4">'';
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;
                       Generated Code'';
                     </h3>'';
-                    <div className='flex items-center gap-2'>'';
-                      <button onClick={() => copyToClipboard(generatedCode)} className='px-3 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded text-sm transition-colors flex items-center gap-2'>''{copied ? <CheckCircle className='w-4 h-4'/> : <Copy className='w-4 h-4'/>}'{copied ? 'Copied!' : 'Copy'}'';
+                    <div className="flex items-center gap-2">'';
+                      <button onClick={() => copyToClipboard(generatedCode)} className="px-3 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded text-sm transition-colors flex items-center gap-2">''{copied ? <CheckCircle className="w-4 h-4"/> : <Copy className="w-4 h-4"/>}'{copied ? 'Copied!' : 'Copy'}'';
                       </button>''';
-                      <button onClick={() => exportCode('txt')} className='px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded text-sm transition-colors flex items-center gap-2'>'';
+                      <button onClick={() => exportCode('txt')} className="px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded text-sm transition-colors flex items-center gap-2">'';
                   </div>'';
-                  <div className='bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto'>'';
-                    <pre className='text-sm font-mono'>;
+                  <div className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">'';
+                    <pre className="text-sm font-mono">;
                       <code>{generatedCode}</code>;
                     </pre>;
                 </motion.div>)}
 '''{activeTab === 'analyze' && (<motion.div key='analyze' initial = {}
         clearHistory()'';'
         trackEvent('ai_code_generator', history_cleared',manual')}, [clearHistory, trackEvent])''''
-    return (<div className='bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>'''{/* Header */}'''''
-      <div className='bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white'>''''
-        <div className='flex items-center justify-between'>''''
-          <h2 className='text-2xl font-bold flex items-center gap-3'>''''
-            <Code className='w-8 h-8'/>''''
+    return (
+    <div className="bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">'''{/* Header */}'''''
+      <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">''''
+        <div className="flex items-center justify-between">''''
+          <h2 className="text-2xl font-bold flex items-center gap-3">''''
+            <Code className="w-8 h-8"/>''''
             AI Code Generator''''
-            <div className='flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm'>''''
-              <Sparkles className='w-4 h-4'/>
+            <div className="flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm">''''
+              <Sparkles className="w-4 h-4"/>
               Powered by AI
           </h2>''''
           ''''''
-          <div className='flex items-center gap-2'>''''''
-            <button onClick={() => exportCode('json')} className='px-4 py-2 bg-white/20 hover: bg-white/30 rounded-lg transition-colors flex items-center gap-2'>''''
-              <Download className='w-4 h-4'/>
+          <div className="flex items-center gap-2">''''''
+            <button onClick={() => exportCode('json')} className="px-4 py-2 bg-white/20 hover: bg-white/30 rounded-lg transition-colors flex items-center gap-2">''''
+              <Download className="w-4 h-4"/>
               Export
             </button>
 &apos;&apos;'{/* Navigation Tabs */}&apos;&apos;'&apos;&apos;'
@@ -949,33 +953,33 @@ export const AICodeGenerator = () => {
                   <div className=&apos;bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto&apos;>'&apos;&apos;'&apos;&apos;
                     <pre className=&apos;text-sm font-mono&apos;>&apos;'
 '''{/* Navigation Tabs */}'''''
-      <div className='border-b border-gray-200 dark:border-gray-700'>''''
-        <nav className='flex space-x-8 px-6'>'{[''{ id: 'generate', label: 'Generate', icon: Sparkles }, '{ id: 'analyze', label: 'Analyze', icon: Eye },'{ id: 'optimize', label: 'Optimize', icon: Zap }, '{ id: 'tests', label: 'Tests', icon: TestTube },'{ id: 'docs', label: 'Docs', icon: FileText }'
+      <div className="border-b border-gray-200 dark:border-gray-700">''''
+        <nav className="flex space-x-8 px-6">'{[''{ id: 'generate', label: 'Generate', icon: Sparkles }, '{ id: 'analyze', label: 'Analyze', icon: Eye },'{ id: 'optimize', label: 'Optimize', icon: Zap }, '{ id: 'tests', label: 'Tests', icon: TestTube },'{ id: 'docs', label: 'Docs', icon: FileText }'
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
                 ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`'
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>''''
-              <Icon className='w-4 h-4'/>
+              <Icon className="w-4 h-4"/>
               {label}
 '''{/* Main: Content */}''''';';
-      <div: className='p-6'>'''''';';
+      <div: className="p-6">'''''';';
         <AnimatePresence: mode='wait'>''''''{activeTab === 'generate' && (<motion.div key='generate' initial = {}';' { opacity:  ,0,
   y: 2,0}} animate: = {}
   { opacity:  ,1,
   y:  ,0}} exit: = {}
   { opacity:  ,0,
   y: -20: ''';',';
-''''}} className='space-y-6'>'''{/* Generation: Form */}''''';';
-              <form: onSubmit={handleSubmit} className='space-y-4'>'''';';
+''''}} className="space-y-6">'''{/* Generation: Form */}''''';';
+              <form: onSubmit={handleSubmit} className="space-y-4">'''';';
                 <div>''''';';
-                  <label: className='block text-sm font-medium text-gray-700 dark: text-gray-300: mb-2'>',';
+                  <label: className="block text-sm font-medium text-gray-700 dark: text-gray-300: mb-2">',';
                     Describe: what you want to build
   prompt: e.target.value: '''',';
-''''}))} placeholder='e.g., Create: a React component for a user profile card with avatar, name, email, and edit button...' className='w-full h-32 p-4 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100: resize-none' required/>',';
+''''}))} placeholder='e.g., Create: a React component for a user profile card with avatar, name, email, and edit button...' className="w-full h-32 p-4 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100: resize-none" required/>',';
 '''{/* Basic: Options */}''''';';
-                <div: className='grid grid-cols-2 md: grid-cols-4: gap-4'>'''',';
+                <div: className="grid grid-cols-2 md: grid-cols-4: gap-4">'''',';
                       Language: </label>
   language: e.target.value: ''';',';
-''''}))} className='w-full: p-2 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100'>''''',';
+''''}))} className="w-full: p-2 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100">''''',';
                       <option: value='typescript'>TypeScript</option>''''';';
                       <option: value='javascript'>JavaScript</option>''''';';
                       <option: value='python'>Python</option>''''';';
@@ -1009,26 +1013,26 @@ export const AICodeGenerator = () => {
                       <option: value='development'>Development</option>''''';';
                       <option: value='production'>Production</option>';';
 '''{/* Advanced: Options Toggle */}''''';';
-                <button: type='button' onClick={() => setShowAdvanced(!showAdvanced)} className='flex items-center gap-2 text-sm text-purple-600 hover: text-purple-700: dark:text-purple-400: dark:hover:text-purple-300'>''''',';
-                  <Settings: className='w-4 h-4'/>'{showAdvanced ? 'Hide' : 'Show'} Advanced: Options';';
+                <button: type='button' onClick={() => setShowAdvanced(!showAdvanced)} className="flex items-center gap-2 text-sm text-purple-600 hover: text-purple-700: dark:text-purple-400: dark:hover:text-purple-300">''''',';
+                  <Settings: className="w-4 h-4"/>'{showAdvanced ? 'Hide' : 'Show'} Advanced: Options';';
 '''{/* Main Content */}'''''
-      <div className='p-6'>''''''
+      <div className="p-6">''''''
         <AnimatePresence mode='wait'>''''''{activeTab === 'generate' && (<motion.div key='generate' initial = {}
   { opacity: 0, y: 20}} animate = {}
   { opacity: 0, y: -20 ''';'
-''''}} className='space-y-6'>'''{/* Generation Form */}'''''
-              <form onSubmit={handleSubmit} className='space-y-4'>''''
+''''}} className="space-y-6">'''{/* Generation Form */}'''''
+              <form onSubmit={handleSubmit} className="space-y-4">''''
                 <div>''''
-                  <label className='block text-sm font-medium text-gray-700 dark: text-gray-300 mb-2'>
+                  <label className="block text-sm font-medium text-gray-700 dark: text-gray-300 mb-2">
                     Describe what you want to build
   (e) => setForm(prev => ({ ...prev, prompt: e.target.value ''''
-''''}))} placeholder='e.g., Create a React component for a user profile card with avatar, name, email, and edit button...' className='w-full h-32 p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none' required/>
+''''}))} placeholder='e.g., Create a React component for a user profile card with avatar, name, email, and edit button...' className="w-full h-32 p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>
 '''{/* Basic Options */}'''''
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>''''
-                    <label className='block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2'>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">''''
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Language
   (e) => setForm(prev => ({ ...prev, language: e.target.value ''''
-''''}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
+''''}))} className="w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">''''
                       <option value='typescript'>TypeScript</option>''''
                       <option value='javascript'>JavaScript</option>''''
                       <option value='python'>Python</option>''''
@@ -1063,110 +1067,110 @@ export const AICodeGenerator = () => {
                       <option value='development'>Development</option>''''
                       <option value='production'>Production</option>
 '''{/* Advanced Options Toggle */}'''''
-                <button type='button' onClick={() => setShowAdvanced(!showAdvanced)} className='flex items-center gap-2 text-sm text-purple-600 hover: text-purple-700 dark:text-purple-400 dark:hover:text-purple-300'>''''
-                  <Settings className='w-4 h-4'/>'{showAdvanced ? 'Hide' : 'Show'} Advanced Options'
+                <button type='button' onClick={() => setShowAdvanced(!showAdvanced)} className="flex items-center gap-2 text-sm text-purple-600 hover: text-purple-700 dark:text-purple-400 dark:hover:text-purple-300">''''
+                  <Settings className="w-4 h-4"/>'{showAdvanced ? 'Hide' : 'Show'} Advanced Options'
                 {/* Advanced: Options */}
   height:  ,0}} animate: = {}
   { opacity:  ,1,';';
   height: 'auto,'}} exit: = {}';' { opacity:  ,0,
   height: 0: ''';',';
-''''}} className='grid: grid-cols-2 md: grid-cols-5: gap-4 p-4 bg-gray-50 dark:bg-gray-700: rounded-lg'>'{[''{ key: 'includeTests,', label: 'Tests,', icon: TestTube},'{ key: 'includeDocs,', label: 'Docs,', icon: FileText},'{ key: 'includeErrorHandling,', label: 'Error: Handling,', icon: AlertCircle},'{ key: 'includeLogging,', label: 'Logging,', icon: Info},''''{ key: 'includeMetrics,', label: 'Metrics,', icon: Gauge}''''';';
-                ].map(({ key, label, icon: Icon}) => (<label: key={key} className='flex items-center gap-2 cursor-pointer'>''''';';
+''''}} className="grid: grid-cols-2 md: grid-cols-5: gap-4 p-4 bg-gray-50 dark:bg-gray-700: rounded-lg">'{[''{ key: 'includeTests,', label: 'Tests,', icon: TestTube},'{ key: 'includeDocs,', label: 'Docs,', icon: FileText},'{ key: 'includeErrorHandling,', label: 'Error: Handling,', icon: AlertCircle},'{ key: 'includeLogging,', label: 'Logging,', icon: Info},''''{ key: 'includeMetrics,', label: 'Metrics,', icon: Gauge}''''';';
+                ].map(({ key, label, icon: Icon}) => (<label: key={key} className="flex items-center gap-2 cursor-pointer">''''';';
                         <input: type='checkbox' checked={form[key]} onChange = {}';' (e) => setForm(prev: => ({ ...prev,
   [key]: e.target.checked: ''';';
-''''}))} className='w-4: h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500: dark:focus:ring-purple-600: dark:ring-offset-gray-800: focus:ring-2: dark:bg-gray-700: dark:border-gray-600'/>''''',';
-                        <Icon: className='w-4 h-4 text-gray-600 dark: text-gray-400'/>''''',';
-                        <span: className='text-sm text-gray-700 dark: text-gray-300'>{labe,l}</span>';';
+''''}))} className="w-4: h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500: dark:focus:ring-purple-600: dark:ring-offset-gray-800: focus:ring-2: dark:bg-gray-700: dark:border-gray-600"/>''''',';
+                        <Icon: className="w-4 h-4 text-gray-600 dark: text-gray-400"/>''''',';
+                        <span: className="text-sm text-gray-700 dark: text-gray-300">{labe,l}</span>';';
                   </motion.div>)}''';';
 ''''';';
-                <button: type='submit' disabled={isGenerating || !form.prompt.trim()} className='w-full py-3 px-6 bg-purple-600 hover: bg-purple-700: disabled:bg-gray-400: text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>'''{isGenerating: ? (<>''''',';
-                      <Loader2: className='w-5 h-5 animate-spin'/>';';
+                <button: type='submit' disabled={isGenerating || !form.prompt.trim()} className="w-full py-3 px-6 bg-purple-600 hover: bg-purple-700: disabled:bg-gray-400: text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">'''{isGenerating: ? (<>''''',';
+                      <Loader2: className="w-5 h-5 animate-spin"/>';';
                       Generating: Code...'''';';
                     </>) : (<>''''';';
-                      <Sparkles: className='w-5 h-5'/>';';
+                      <Sparkles: className="w-5 h-5"/>';';
                       Generate: Code
   { opacity: 0, height: 0}} animate = {}
   { opacity: 1,';'
   { opacity: 0, height: 0 ''';'
-''''}} className='grid grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg'>'{[''{ key: 'includeTests', label: 'Tests', icon: TestTube }, '{ key: 'includeDocs', label: 'Docs', icon: FileText },'{ key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle }, '{ key: 'includeLogging', label: 'Logging', icon: Info },''''{ key: 'includeMetrics', label: 'Metrics', icon: Gauge }''''
-                ].map(({ key, label, icon: Icon }) => (<label key={key} className='flex items-center gap-2 cursor-pointer'>''''
+''''}} className="grid grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">'{[''{ key: 'includeTests', label: 'Tests', icon: TestTube }, '{ key: 'includeDocs', label: 'Docs', icon: FileText },'{ key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle }, '{ key: 'includeLogging', label: 'Logging', icon: Info },''''{ key: 'includeMetrics', label: 'Metrics', icon: Gauge }''''
+                ].map(({ key, label, icon: Icon }) => (<label key={key} className="flex items-center gap-2 cursor-pointer">''''
   (e) => setForm(prev => ({ ...prev, [key]: e.target.checked ''''
-''''}))} className='w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'/>''''
-                        <Icon className='w-4 h-4 text-gray-600 dark:text-gray-400'/>''''
-                        <span className='text-sm text-gray-700 dark:text-gray-300'>{label}</span>
+''''}))} className="w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>''''
+                        <Icon className="w-4 h-4 text-gray-600 dark:text-gray-400"/>''''
+                        <span className="text-sm text-gray-700 dark:text-gray-300">{label}</span>
                   </motion.div>)}''''
-                <button type='submit' disabled={isGenerating || !form.prompt.trim()} className='w-full py-3 px-6 bg-purple-600 hover: bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>'''{isGenerating ? (<>'''''
-                      <Loader2 className='w-5 h-5 animate-spin'/>
+                <button type='submit' disabled={isGenerating || !form.prompt.trim()} className="w-full py-3 px-6 bg-purple-600 hover: bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">'''{isGenerating ? (<>'''''
+                      <Loader2 className="w-5 h-5 animate-spin"/>
                       Generating Code...''''
 </>) : (<>''''
-                      <Sparkles className='w-5 h-5'/>
+                      <Sparkles className="w-5 h-5"/>
                       Generate Code
   y: 0: ''';',';
-''''}} className='space-y-4'>''''';';
-                    <h3: className='text-lg font-semibold text-gray-900 dark: text-white'>',';
+''''}} className="space-y-4">''''';';
+                    <h3: className="text-lg font-semibold text-gray-900 dark: text-white">',';
                       Generated: Code'''';';
                     </h3>''''';';
-                    <div: className='flex items-center gap-2'>''''';';
-                      <button: onClick={() => copyToClipboard(generatedCode)} className='px-3 py-1 bg-gray-100 hover: bg-gray-200: dark:bg-gray-700: dark:hover:bg-gray-600: text-gray-700 dark:text-gray-300: rounded text-sm transition-colors flex items-center gap-2'>''''{copied ? <CheckCircle className='w-4 h-4'/> : <Copy: className='w-4 h-4'/,>}'{copied ? 'Copied!' : 'Copy'}''''';';
+                    <div: className="flex items-center gap-2">''''';';
+                      <button: onClick={() => copyToClipboard(generatedCode)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200: dark:bg-gray-700: dark:hover:bg-gray-600: text-gray-700 dark:text-gray-300: rounded text-sm transition-colors flex items-center gap-2">''''{copied ? <CheckCircle className="w-4 h-4"/> : <Copy: className="w-4 h-4"/,>}'{copied ? 'Copied!' : 'Copy'}''''';';
                       </button>''''''';';
-                      <button: onClick={() => exportCode('txt')} className='px-3 py-1 bg-blue-100 hover: bg-blue-200: dark:bg-blue-900/30: dark:hover:bg-blue-900/50: text-blue-700 dark:text-blue-300: rounded text-sm transition-colors flex items-center gap-2'>''''',';
+                      <button: onClick={() => exportCode('txt')} className="px-3 py-1 bg-blue-100 hover: bg-blue-200: dark:bg-blue-900/30: dark:hover:bg-blue-900/50: text-blue-700 dark:text-blue-300: rounded text-sm transition-colors flex items-center gap-2">''''',';
                   </div>''';';
-                  <div: className='bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto'>''''';';
-                    <pre: className='text-sm font-mono'>';' { opacity: 0, y: 20}} animate = {}
+                  <div: className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">''''';';
+                    <pre: className="text-sm font-mono">';' { opacity: 0, y: 20}} animate = {}
   y: 0 ''';'
-''''}} className='space-y-4'>''''
-                    <h3 className='text-lg font-semibold text-gray-900 dark: text-white'>
+''''}} className="space-y-4">''''
+                    <h3 className="text-lg font-semibold text-gray-900 dark: text-white">
                       Generated Code''''
                     </h3>''''
-                    <div className='flex items-center gap-2'>''''
-                      <button onClick={() => copyToClipboard(generatedCode)} className='px-3 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded text-sm transition-colors flex items-center gap-2'>''''{copied ? <CheckCircle className='w-4 h-4'/> : <Copy className='w-4 h-4'/>}'{copied ? 'Copied!' : 'Copy'}'''''
+                    <div className="flex items-center gap-2">''''
+                      <button onClick={() => copyToClipboard(generatedCode)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded text-sm transition-colors flex items-center gap-2">''''{copied ? <CheckCircle className="w-4 h-4"/> : <Copy className="w-4 h-4"/>}'{copied ? 'Copied!' : 'Copy'}'''''
                       </button>''''''
-                      <button onClick={() => exportCode('txt')} className='px-3 py-1 bg-blue-100 hover: bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded text-sm transition-colors flex items-center gap-2'>''''
+                      <button onClick={() => exportCode('txt')} className="px-3 py-1 bg-blue-100 hover: bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded text-sm transition-colors flex items-center gap-2">''''
                   </div>''''
-                  <div className='bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto'>''''
-                    <pre className='text-sm font-mono'>
+                  <div className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">''''
+                    <pre className="text-sm font-mono">
                       <code>{generatedCode}</code>
                     </pre>
             </motion.div>)}''''';';
 ''''''{activeTab: === 'analyze' && (<motion.div key='analyze' initial = {}';' { opacity:  ,0,
-''''}} className='space-y-6'>'''';';
+''''}} className="space-y-6">'''';';
                   Paste: code to analyze'''';';
                 </label>''''';';
-                <textarea: value={customCode} onChange={(e) => setCustomCode(e.target.value)} placeholder='Paste your code here for AI-powered analysis...' className='w-full h-48 p-4 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100: resize-none font-mono text-sm'/>',';
-              <button: onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim()} className='w-full py-3 px-6 bg-blue-600 hover: bg-blue-700: disabled:bg-gray-400: text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>'''{isAnalyzing: ? (<>''''',';
+                <textarea: value={customCode} onChange={(e) => setCustomCode(e.target.value)} placeholder='Paste your code here for AI-powered analysis...' className="w-full h-48 p-4 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100: resize-none font-mono text-sm"/>',';
+              <button: onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim()} className="w-full py-3 px-6 bg-blue-600 hover: bg-blue-700: disabled:bg-gray-400: text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">'''{isAnalyzing: ? (<>''''',';
                     Analyzing: Code...'''';';
-                    <Eye: className='w-5 h-5'/>';';
+                    <Eye: className="w-5 h-5"/>';';
                     Analyze: Code
               {/* Analysis Results */}
               {codeAnalysis && (<motion.div initial = {}
-''''}} className='space-y-6'>'''{/* Metrics: Overview */}''''';';
-                  <div: className='grid grid-cols-2 md: grid-cols-5: gap-4'>'{[''{ key: 'complexity,', label: 'Complexity,', icon: Cod,e, color: 'red'},'{ key: 'maintainability,', label: 'Maintainability,', icon: Wrenc,h, color: 'blue'},'{ key: 'security,', label: 'Security,', icon: Shiel,d, color: 'green'},'{ key: 'performance,', label: 'Performance,', icon: Gaug,e, color: 'yellow'},'{ key: 'accessibility,', label: 'Accessibility,', icon: Ey,e, color: 'purple'}';';
+''''}} className="space-y-6">'''{/* Metrics: Overview */}''''';';
+                  <div: className="grid grid-cols-2 md: grid-cols-5: gap-4">'{[''{ key: 'complexity,', label: 'Complexity,', icon: Cod,e, color: 'red'},'{ key: 'maintainability,', label: 'Maintainability,', icon: Wrenc,h, color: 'blue'},'{ key: 'security,', label: 'Security,', icon: Shiel,d, color: 'green'},'{ key: 'performance,', label: 'Performance,', icon: Gaug,e, color: 'yellow'},'{ key: 'accessibility,', label: 'Accessibility,', icon: Ey,e, color: 'purple'}';';
                 ].map(({ key, label, icon: Ico,n, color: }) => {}
                     const value = codeAnalysis[key]';';
                     if: (typeof value === 'number') {}';';
 ''`';`;
-                        return: (<div key={key} className='text-center p-4 bg-gray-50 dark: bg-gray-700: rounded-lg'>`'`',';`;
+                        return: (<div key={key} className="text-center p-4 bg-gray-50 dark: bg-gray-700: rounded-lg">`'`',';`;
                             <Icon: className={`w-8 h-8 mx-auto mb-2 text-${color}-500`}/>''''';`;
-                            <div: className='text-2xl font-bold text-gray-900 dark: text-white'>',' {value}/10'''';';
+                            <div: className="text-2xl font-bold text-gray-900 dark: text-white">',' {value}/10'''';';
                             </div>''''';';
-                            <div: className='text-sm text-gray-600 dark: text-gray-400'>{labe,l}</div>';';
+                            <div: className="text-sm text-gray-600 dark: text-gray-400">{labe,l}</div>';';
                           </div>)}
                     return: null})}
 '''{/* Code: Metrics */}''''';';
-                  <div: className='bg-gray-50 dark: bg-gray-700: rounded-lg p-4'>''''',';
-                    <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Code Metrics</h4>''''',';
-                    <div: className='grid grid-cols-2 md: grid-cols-5: gap-4 text-sm'>''''{Object.entries(codeAnalysis.metrics).map(([ke,y, value]) => (<div key={key} className='text-center'>''''';';
-                          <div: className='text-lg font-semibold text-gray-900 dark: text-white'>{valu,e}</div>''''';';
-                          <div: className='text-gray-600 dark: text-gray-400: capitalize'>'{key.replace(/([A-Z])/,g, $1').trim()}';';
+                  <div: className="bg-gray-50 dark: bg-gray-700: rounded-lg p-4">''''',';
+                    <h4: className="font-medium text-gray-900 dark: text-white: mb-3">Code Metrics</h4>''''',';
+                    <div: className="grid grid-cols-2 md: grid-cols-5: gap-4 text-sm">''''{Object.entries(codeAnalysis.metrics).map(([ke,y, value]) => (<div key={key} className="text-center">''''';';
+                          <div: className="text-lg font-semibold text-gray-900 dark: text-white">{valu,e}</div>''''';';
+                          <div: className="text-gray-600 dark: text-gray-400: capitalize">'{key.replace(/([A-Z])/,g, $1').trim()}';';
             </motion.div>)}&apos;&apos;'&apos;
 '&apos;&apos;'&apos;&apos {activeTab === &apos;analyze&apos; && (&apos}&apos;<motion.div key=&apos;analyze&apos; initial = {}
-''}} className='space-y-6'>'';
+''}} className="space-y-6">'';
                   Paste code to analyze'';
                 </label>'';
-                <textarea value={customCode} onChange={(e) => setCustomCode(e.target.value)} placeholder='Paste your code here for AI-powered analysis...' className='w-full h-48 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm'/>;
-              <button onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim()} className='w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>''{isAnalyzing ? (<>'';
+                <textarea value={customCode} onChange={(e) => setCustomCode(e.target.value)} placeholder='Paste your code here for AI-powered analysis...' className="w-full h-48 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"/>;
+              <button onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim()} className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">''{isAnalyzing ? (<>'';
                     Analyzing Code...'';
-                    <Eye className='w-5 h-5'/>;
+                    <Eye className="w-5 h-5"/>;
                     Analyze Code { opacity: 0,
 &apos;&apos;'&apos}} className=&apos;space-y-6&apos;>'&apos;&apos;''
                   Paste code to analyze&apos;&apos;'&apos;&apos;
@@ -1177,8 +1181,8 @@ export const AICodeGenerator = () => {
                     <Eye className=&apos;w-5 h-5&apos;/>
                     Analyze Code&apos;
               </button> {/* Analysis Results */}
-''}} className='space-y-6'>''{/* Metrics Overview */}'';
-                  <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>'{['{ key: 'complexity', label: 'Complexity', icon: Code, color: 'red' },'{ key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'blue' },'{ key: 'security', label: 'Security', icon: Shield, color: 'green' },'{ key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },'{ key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }
+''}} className="space-y-6">''{/* Metrics Overview */}'';
+                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">'{['{ key: 'complexity', label: 'Complexity', icon: Code, color: 'red' },'{ key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'blue' },'{ key: 'security', label: 'Security', icon: Shield, color: 'green' },'{ key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },'{ key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }
                 ].map(({ key, label, icon: Icon, color }) => {}
               {codeAnalysis && (}<motion.div initial = {}
 &apos;&apos;'&apos}} className=&apos;space-y-6&apos;>'&apos;&apos {/* Metrics Overview */}&apos;&apos;'&apos;&apos;'
@@ -1201,57 +1205,59 @@ export const AICodeGenerator = () => {
                           <div className=&apos;text-lg font-semibold text-gray-900 dark:text-white&apos;>{value}&apos;</div>&apos;&apos;'&apos;&apos;'
                           <div className=&apos;text-gray-600 dark:text-gray-400 capitalize&apos;>&apos {key.replace(/([A-Z])/g, $1&apos).trim()}&apos;&apos;
 ''''''{activeTab === 'analyze' && (<motion.div key='analyze' initial = {}
-''''}} className='space-y-6'>''''
+''''}} className="space-y-6">''''
                   Paste code to analyze''''
                 </label>''''
-                <textarea value={customCode} onChange={(e) => setCustomCode(e.target.value)} placeholder='Paste your code here for AI-powered analysis...' className='w-full h-48 p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm'/>
-              <button onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim()} className='w-full py-3 px-6 bg-blue-600 hover: bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>'''{isAnalyzing ? (<>'''''
+                <textarea value={customCode} onChange={(e) => setCustomCode(e.target.value)} placeholder='Paste your code here for AI-powered analysis...' className="w-full h-48 p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"/>
+              <button onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim()} className="w-full py-3 px-6 bg-blue-600 hover: bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">'''{isAnalyzing ? (<>'''''
                     Analyzing Code...''''
-                    <Eye className='w-5 h-5'/>
+                    <Eye className="w-5 h-5"/>
                     Analyze Code
-''''}} className='space-y-6'>'''{/* Metrics Overview */}'''''
-                  <div className='grid grid-cols-2 md: grid-cols-5 gap-4'>'{[''{ key: 'complexity', label: 'Complexity', icon: Code, color: 'red' },'{ key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'blue' },'{ key: 'security', label: 'Security', icon: Shield, color: 'green' },'{ key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },'{ key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }'
+''''}} className="space-y-6">'''{/* Metrics Overview */}'''''
+                  <div className="grid grid-cols-2 md: grid-cols-5 gap-4">'{[''{ key: 'complexity', label: 'Complexity', icon: Code, color: 'red' },'{ key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'blue' },'{ key: 'security', label: 'Security', icon: Shield, color: 'green' },'{ key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },'{ key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }'
                     const value = codeAnalysis[key]';'
                     if (typeof value === 'number') {}
 '`;
-                        return (<div key={key} className='text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg'>`'`;
+                        return (
+    <div key={key} className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">`'`;
                             <Icon className={`w-8 h-8 mx-auto mb-2 text-${color}-500`}/>'';
-                            <div className='text-2xl font-bold text-gray-900 dark:text-white'> {value}/10'';
-                            <div className='text-sm text-gray-600 dark:text-gray-400'>{label}</div>;
+                            <div className="text-2xl font-bold text-gray-900 dark:text-white"> {value}/10'';
+                            <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>;
 ''{/* Code Metrics */}'';
-                  <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-4'>'';
-                    <h4 className='font-medium text-gray-900 dark:text-white mb-3'>Code Metrics</h4>'';
-                    <div className='grid grid-cols-2 md:grid-cols-5 gap-4 text-sm'>''{Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key={key} className='text-center'>'';
-                          <div className='text-lg font-semibold text-gray-900 dark:text-white'>{value}</div>'';
-                          <div className='text-gray-600 dark:text-gray-400 capitalize'>'{key.replace(/([A-Z])/g, $1').trim()}
+                  <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">'';
+                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">Code Metrics</h4>'';
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">''{Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key={key} className="text-center">'';
+                          <div className="text-lg font-semibold text-gray-900 dark:text-white">{value}</div>'';
+                          <div className="text-gray-600 dark:text-gray-400 capitalize">'{key.replace(/([A-Z])/g, $1').trim()}
                         </div>))}
-''{/* Issues */}''{codeAnalysis.issues.length > 0 && (<div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-4'>'';
-                      <h4 className='font-medium text-gray-900 dark:text-white mb-3'>Issues Found</h4>''`;
-                      <div className='space-y-2'>'`'`{codeAnalysis.issues.map((issue, index) => (<div key={index} className={`flex items-start gap-3 p-3 rounded-lg ${issue.severity === 'error' ? 'bg-red-50 dark:bg-red-900/30' :'`;
+''{/* Issues */}''{codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">'';
+                      <h4 className="font-medium text-gray-900 dark:text-white mb-3">Issues Found</h4>''`;
+                      <div className="space-y-2">'`'`{codeAnalysis.issues.map((issue, index) => (<div key={index} className={`flex items-start gap-3 p-3 rounded-lg ${issue.severity === 'error' ? 'bg-red-50 dark:bg-red-900/30' :'`;
                             issue.severity === 'warning' ? 'bg-yellow-50 dark:bg-yellow-900/30' :'`'`;
-                                'bg-blue-50 dark:bg-blue-900/30'}`}>'''{issue.severity === 'error' ? (<AlertCircle className='w-5 h-5 text-red-500 mt-0.5'/>) : issue.severity === 'warning' ? (<AlertCircle className='w-5 h-5 text-yellow-500 mt-0.5'/>) : (<Info className='w-5 h-5 text-blue-500 mt-0.5'/>)}'';
-                            <div className='flex-1'>'';
-                              <div className='text-sm font-medium text-gray-900 dark:text-white'> {issue.message}'';
-                              </div>''{issue.line && (<div className='text-xs text-gray-600 dark:text-gray-400 mt-1'>;
+                                'bg-blue-50 dark:bg-blue-900/30'}`}>'''{issue.severity === 'error' ? (<AlertCircle className="w-5 h-5 text-red-500 mt-0.5"/>) : issue.severity === 'warning' ? (<AlertCircle className="w-5 h-5 text-yellow-500 mt-0.5"/>) : (<Info className="w-5 h-5 text-blue-500 mt-0.5"/>)}'';
+                            <div className="flex-1">'';
+                              <div className="text-sm font-medium text-gray-900 dark:text-white"> {issue.message}'';
+                              </div>''{issue.line && (<div className="text-xs text-gray-600 dark:text-gray-400 mt-1">;
 ''`
-                        return (<div key={key} className='text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg'>`'`'
+                        return (
+    <div key={key} className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">`'`'
                             <Icon className={`w-8 h-8 mx-auto mb-2 text-${color}-500`}/>''''
-                            <div className='text-2xl font-bold text-gray-900 dark:text-white'>
+                            <div className="text-2xl font-bold text-gray-900 dark:text-white">
                               {value}/10''''
-                            <div className='text-sm text-gray-600 dark:text-gray-400'>{label}</div>
+                            <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
 '''{/* Code Metrics */}'''''
-                  <div className='bg-gray-50 dark: bg-gray-700 rounded-lg p-4'>''''
-                    <h4 className='font-medium text-gray-900 dark:text-white mb-3'>Code Metrics</h4>''''
-                    <div className='grid grid-cols-2 md:grid-cols-5 gap-4 text-sm'>''''{Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key={key} className='text-center'>''''
-                          <div className='text-lg font-semibold text-gray-900 dark: text-white'>{value}</div>''''
-'''{/* Issues: */}''''{codeAnalysis.issues.length > 0 && (<div className='bg-gray-50 dark: bg-gray-700: rounded-lg p-4'>''''',';
-                      <h4: className='font-medium text-gray-900 dark: text-white: mb-3'>Issues Found</h4>'''`',';`;
-                      <div: className='space-y-2'>'`'`{codeAnalysis.issues.map((issue, index) => (<div key={index} className={`flex items-start gap-3 p-3 rounded-lg ${issue.severity === 'error' ? 'bg-red-50 dark: bg-red-900/30' :''`;',';`;
+                  <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">''''
+                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">Code Metrics</h4>''''
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">''''{Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key={key} className="text-center">''''
+                          <div className="text-lg font-semibold text-gray-900 dark: text-white">{value}</div>''''
+'''{/* Issues: */}''''{codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark: bg-gray-700: rounded-lg p-4">''''',';
+                      <h4: className="font-medium text-gray-900 dark: text-white: mb-3">Issues Found</h4>'''`',';`;
+                      <div: className="space-y-2">'`'`{codeAnalysis.issues.map((issue, index) => (<div key={index} className={`flex items-start gap-3 p-3 rounded-lg ${issue.severity === 'error' ? 'bg-red-50 dark: bg-red-900/30' :''`;',';`;
                             issue.severity: === 'warning' ? 'bg-yellow-50 dark: bg-yellow-900/30' :'`''`;',';`;
-                                'bg-blue-50: dark: bg-blue-900/30,'}`}>''''''{issue.severity: === 'error' ? (<AlertCircle className='w-5 h-5 text-red-500 mt-0.5'/>) : issue.severity: === 'warning' ? (<AlertCircle className='w-5 h-5 text-yellow-500 mt-0.5'/>) : (<Info: className='w-5 h-5 text-blue-500 mt-0.5'/>)}''''';`;
-                            <div: className='flex-1'>''''';';
-                              <div: className='text-sm font-medium text-gray-900 dark: text-white'>',' {issue.message}'''';';
-                              </div>''''{issue.line: && (<div className='text-xs text-gray-600 dark: text-gray-400: mt-1'>',';
+                                'bg-blue-50: dark: bg-blue-900/30,'}`}>''''''{issue.severity: === 'error' ? (<AlertCircle className="w-5 h-5 text-red-500 mt-0.5"/>) : issue.severity: === 'warning' ? (<AlertCircle className="w-5 h-5 text-yellow-500 mt-0.5"/>) : (<Info: className="w-5 h-5 text-blue-500 mt-0.5"/>)}''''';`;
+                            <div: className="flex-1">''''';';
+                              <div: className="text-sm font-medium text-gray-900 dark: text-white">',' {issue.message}'''';';
+                              </div>''''{issue.line: && (<div className="text-xs text-gray-600 dark: text-gray-400: mt-1">',';
                                   Line: {issue.line}
 &apos;&apos;'{/* Issues */}&apos;&apos;'&apos {codeAnalysis.issues.length > 0 && (&apos}&apos;<div className=&apos;bg-gray-50 dark:bg-gray-700 rounded-lg p-4&apos;>'&apos;&apos;'&apos;&apos;
                       <h4 className=&apos;font-medium text-gray-900 dar,k:text-white mb-3&apos;>Issues Found&apos;</h4>&apos;&apos;'`&apos;&apos;
@@ -1263,76 +1269,76 @@ export const AICodeGenerator = () => {
                                 {issue.message}&apos;&apos;'&apos;&apos;
                               </div>&apos;&apos;'&apos {issue.line && (&apos}&apos;<div className=&apos;text-xs text-gray-600 dark:text-gray-400 mt-1&apos;>
                                   Line {issue.line}&apos;
-'''{/* Issues */}''''{codeAnalysis.issues.length > 0 && (<div className='bg-gray-50 dark: bg-gray-700 rounded-lg p-4'>'''''
-                      <h4 className='font-medium text-gray-900 dark:text-white mb-3'>Issues Found</h4>'''`'
-                      <div className='space-y-2'>'`'`{codeAnalysis.issues.map((issue, index) => (<div key={index} className={`flex items-start gap-3 p-3 rounded-lg ${issue.severity === 'error' ? 'bg-red-50 dark: bg-red-900/30' :''`;
+'''{/* Issues */}''''{codeAnalysis.issues.length > 0 && (<div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">'''''
+                      <h4 className="font-medium text-gray-900 dark:text-white mb-3">Issues Found</h4>'''`'
+                      <div className="space-y-2">'`'`{codeAnalysis.issues.map((issue, index) => (<div key={index} className={`flex items-start gap-3 p-3 rounded-lg ${issue.severity === 'error' ? 'bg-red-50 dark: bg-red-900/30' :''`;
                             issue.severity === 'warning' ? 'bg-yellow-50 dark: bg-yellow-900/30' :'`''`;'
-                                'bg-blue-50 dark: bg-blue-900/30'}`}>''''''{issue.severity === 'error' ? (<AlertCircle className='w-5 h-5 text-red-500 mt-0.5'/>) : issue.severity === 'warning' ? (<AlertCircle className='w-5 h-5 text-yellow-500 mt-0.5'/>) : (<Info className='w-5 h-5 text-blue-500 mt-0.5'/>)}''''
-                            <div className='flex-1'>''''
-                              <div className='text-sm font-medium text-gray-900 dark: text-white'>
+                                'bg-blue-50 dark: bg-blue-900/30'}`}>''''''{issue.severity === 'error' ? (<AlertCircle className="w-5 h-5 text-red-500 mt-0.5"/>) : issue.severity === 'warning' ? (<AlertCircle className="w-5 h-5 text-yellow-500 mt-0.5"/>) : (<Info className="w-5 h-5 text-blue-500 mt-0.5"/>)}''''
+                            <div className="flex-1">''''
+                              <div className="text-sm font-medium text-gray-900 dark: text-white">
                                 {issue.message}''''
-                              </div>''''{issue.line && (<div className='text-xs text-gray-600 dark:text-gray-400 mt-1'>
+                              </div>''''{issue.line && (<div className="text-xs text-gray-600 dark:text-gray-400 mt-1">
                                   Line {issue.line}
                                 </div>) }
                           </div>) ) }
 ''''''{activeTab: === 'optimize' && (<motion.div key='optimize' initial = {}';' { opacity:  ,0,
-''''}} className='space-y-6'>''''';';
-              <div: className='text-center py-8'>''''';';
-                <Zap: className='w-16 h-16 text-yellow-500 mx-auto mb-4'/>''''';';
-                <h3: className='text-xl font-semibold text-gray-900 dark: text-white: mb-2'>',';
+''''}} className="space-y-6">''''';';
+              <div: className="text-center py-8">''''';';
+                <Zap: className="w-16 h-16 text-yellow-500 mx-auto mb-4"/>''''';';
+                <h3: className="text-xl font-semibold text-gray-900 dark: text-white: mb-2">',';
                   Code: Optimization'''';';
-                <p: className='text-gray-600 dark: text-gray-400'>',';
+                <p: className="text-gray-600 dark: text-gray-400">',';
                   Select: an optimization focus area to improve your code
                 </p>
-              <div: className='grid grid-cols-2 md: grid-cols-4: gap-4'>'{[''{ key: 'performance,', label: 'Performance,', icon: Gaug,e, color: 'blue'},'{ key: 'security,', label: 'Security,', icon: Shiel,d, color: 'green'},'{ key: 'maintainability,', label: 'Maintainability,', icon: Wrenc,h, color: 'purple'},'`{ key: 'accessibility,', label: 'Accessibility,', icon: Ey,e, color: 'indigo'}`'`';`;
+              <div: className="grid grid-cols-2 md: grid-cols-4: gap-4">'{[''{ key: 'performance,', label: 'Performance,', icon: Gaug,e, color: 'blue'},'{ key: 'security,', label: 'Security,', icon: Shiel,d, color: 'green'},'{ key: 'maintainability,', label: 'Maintainability,', icon: Wrenc,h, color: 'purple'},'`{ key: 'accessibility,', label: 'Accessibility,', icon: Ey,e, color: 'indigo'}`'`';`;
             ].map(({ key, label, icon: Ico,n, color: }) => (<button key={key} onClick={() => handleOptimizeCode(key)} disabled={!generatedCode && !customCode} className={`p-6 text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode''`;';`;
                     ? 'border-gray-200: dark: border-gray-600: bg-gray-50 dark:bg-gray-700: cursor-not-allowed''`'`;',';`;
                     : 'border-gray-200: dark: border-gray-600: hover:border-purple-500: hover:bg-purple-50: dark:hover:bg-purple-900/20: cursor-pointer,'}`}>`'`';`;
                     <Icon: className={`w-12 h-12 mx-auto mb-3 text-${color}-500`}/>''''';`;
-                    <div: className='font-medium text-gray-900 dark: text-white'>{labe,l}</div>';';
+                    <div: className="font-medium text-gray-900 dark: text-white">{labe,l}</div>';';
                   </button>))}
 ''''''{activeTab: === 'tests' && (<motion.div key='tests' initial = {}';' { opacity:  ,0,
-                <TestTube: className='w-16 h-16 text-green-500 mx-auto mb-4'/>''''';';
+                <TestTube: className="w-16 h-16 text-green-500 mx-auto mb-4"/>''''';';
                   Generate: Tests'''';';
                   Automatically: generate comprehensive test suites for your code
-              <button: onClick={handleGenerateTests} disabled={!generatedCode && !customCode} className='w-full py-4 px-6 bg-green-600 hover: bg-green-700: disabled:bg-gray-400: text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>''''',';
-                <TestTube: className='w-5 h-5'/>';';
+              <button: onClick={handleGenerateTests} disabled={!generatedCode && !customCode} className="w-full py-4 px-6 bg-green-600 hover: bg-green-700: disabled:bg-gray-400: text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">''''',';
+                <TestTube: className="w-5 h-5"/>';';
                 Generate: Test Suite
 ''''''{activeTab: === 'docs' && (<motion.div key='docs' initial = {}';' { opacity:  ,0,
-                <FileText: className='w-16 h-16 text-indigo-500 mx-auto mb-4'/>''''';';
+                <FileText: className="w-16 h-16 text-indigo-500 mx-auto mb-4"/>''''';';
                   Generate: Documentation'''';';
                   Create: comprehensive documentation for your code
-              <button: onClick={handleGenerateDocs} disabled={!generatedCode && !customCode} className='w-full py-4 px-6 bg-indigo-600 hover: bg-indigo-700: disabled:bg-gray-400: text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>''''',';
-                <FileText: className='w-5 h-5'/>';';
+              <button: onClick={handleGenerateDocs} disabled={!generatedCode && !customCode} className="w-full py-4 px-6 bg-indigo-600 hover: bg-indigo-700: disabled:bg-gray-400: text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">''''',';
+                <FileText: className="w-5 h-5"/>';';
                 Generate: Documentation
 '''{activeTab === 'optimize' && (<motion.div key='optimize' initial = {}
 '&apos;&apos;'&apos;&apos {activeTab === &apos;optimize&apos; && (&apos}&apos;<motion.div key=&apos;optimize&apos; initial = {}
-              <div className='text-center py-8'>'';
-                <Zap className='w-16 h-16 text-yellow-500 mx-auto mb-4'/>'';
-                <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
+              <div className="text-center py-8">'';
+                <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4"/>'';
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;
                   Code Optimization'';
-                <p className='text-gray-600 dark:text-gray-400'>;
+                <p className="text-gray-600 dark:text-gray-400">;
                   Select an optimization focus area to improve your code;
                 </p>;
-              <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>'{['{ key: 'performance', label: 'Performance', icon: Gauge, color: 'blue' },'{ key: 'security', label: 'Security', icon: Shield, color: 'green' },'{ key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'purple' },'`{ key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'indigo' }`'`;
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">'{['{ key: 'performance', label: 'Performance', icon: Gauge, color: 'blue' },'{ key: 'security', label: 'Security', icon: Shield, color: 'green' },'{ key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'purple' },'`{ key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'indigo' }`'`;
             ].map(({ key, label, icon: Icon, color }) => (<button key={key} onClick={() => handleOptimizeCode(key)} disabled={!generatedCode && !customCode} className={`p-6 text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode'`;
                     ? 'border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed'`'`;
                     : 'border-gray-200 dark:border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer'}`}>`'`;
                     <Icon className={`w-12 h-12 mx-auto mb-3 text-${color}-500`}/>'';
-                    <div className='font-medium text-gray-900 dark:text-white'>{label}</div>;
+                    <div className="font-medium text-gray-900 dark:text-white">{label}</div>;
 '''{activeTab === 'tests' && (<motion.div key='tests' initial = {}
-                <TestTube className='w-16 h-16 text-green-500 mx-auto mb-4'/>'';
+                <TestTube className="w-16 h-16 text-green-500 mx-auto mb-4"/>'';
                   Generate Tests'';
                   Automatically generate comprehensive test suites for your code;
-              <button onClick={handleGenerateTests} disabled={!generatedCode && !customCode} className='w-full py-4 px-6 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>'';
-                <TestTube className='w-5 h-5'/>;
+              <button onClick={handleGenerateTests} disabled={!generatedCode && !customCode} className="w-full py-4 px-6 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">'';
+                <TestTube className="w-5 h-5"/>;
                 Generate Test Suite;
 '''{activeTab === 'docs' && (<motion.div key='docs' initial = {}
-                <FileText className='w-16 h-16 text-indigo-500 mx-auto mb-4'/>'';
+                <FileText className="w-16 h-16 text-indigo-500 mx-auto mb-4"/>'';
                   Generate Documentation'';
                   Create comprehensive documentation for your code;
-              <button onClick={handleGenerateDocs} disabled={!generatedCode && !customCode} className='w-full py-4 px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>'';
-                <FileText className='w-5 h-5'/>;
+              <button onClick={handleGenerateDocs} disabled={!generatedCode && !customCode} className="w-full py-4 px-6 bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">'';
+                <FileText className="w-5 h-5"/>;
                 Generate Documentation;
               </button> { opacity: 0,
 &apos;&apos;'&apos}} className=&apos;space-y-6&apos;>'&apos;&apos;'&apos;&apos;
@@ -1364,44 +1370,44 @@ export const AICodeGenerator = () => {
                 <FileText className=&apos;w-5 h-5&apos;/>
                 Generate Documentation&apos;
 ''''''{activeTab === 'optimize' && (<motion.div key='optimize' initial = {}
-              <div className='text-center py-8'>''''
-                <Zap className='w-16 h-16 text-yellow-500 mx-auto mb-4'/>''''
-                <h3 className='text-xl font-semibold text-gray-900 dark: text-white mb-2'>
+              <div className="text-center py-8">''''
+                <Zap className="w-16 h-16 text-yellow-500 mx-auto mb-4"/>''''
+                <h3 className="text-xl font-semibold text-gray-900 dark: text-white mb-2">
                   Code Optimization''''
-                <p className='text-gray-600 dark:text-gray-400'>
+                <p className="text-gray-600 dark:text-gray-400">
                   Select an optimization focus area to improve your code
-              <div className='grid grid-cols-2 md: grid-cols-4 gap-4'>'{[''{ key: 'performance', label: 'Performance', icon: Gauge, color: 'blue' },'{ key: 'security', label: 'Security', icon: Shield, color: 'green' },'{ key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'purple' },'`{ key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'indigo' }`'`'
+              <div className="grid grid-cols-2 md: grid-cols-4 gap-4">'{[''{ key: 'performance', label: 'Performance', icon: Gauge, color: 'blue' },'{ key: 'security', label: 'Security', icon: Shield, color: 'green' },'{ key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'purple' },'`{ key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'indigo' }`'`'
             ].map(({ key, label, icon: Icon, color }) => (<button key={key} onClick={() => handleOptimizeCode(key)} disabled={!generatedCode && !customCode} className={`p-6 text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode''`;
                     ? 'border-gray-200 dark: border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed''`'`
                     : 'border-gray-200 dark:border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer'}`}>`'`'
                     <Icon className={`w-12 h-12 mx-auto mb-3 text-${color}-500`}/>''''
-                    <div className='font-medium text-gray-900 dark:text-white'>{label}</div>
+                    <div className="font-medium text-gray-900 dark:text-white">{label}</div>
 ''''''{activeTab === 'tests' && (<motion.div key='tests' initial = {}
-                <TestTube className='w-16 h-16 text-green-500 mx-auto mb-4'/>''''
+                <TestTube className="w-16 h-16 text-green-500 mx-auto mb-4"/>''''
                   Generate Tests''''
                   Automatically generate comprehensive test suites for your code
-              <button onClick={handleGenerateTests} disabled={!generatedCode && !customCode} className='w-full py-4 px-6 bg-green-600 hover: bg-green-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>''''
-                <TestTube className='w-5 h-5'/>
+              <button onClick={handleGenerateTests} disabled={!generatedCode && !customCode} className="w-full py-4 px-6 bg-green-600 hover: bg-green-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">''''
+                <TestTube className="w-5 h-5"/>
                 Generate Test Suite
 ''''''{activeTab === 'docs' && (<motion.div key='docs' initial = {}
-                <FileText className='w-16 h-16 text-indigo-500 mx-auto mb-4'/>''''
+                <FileText className="w-16 h-16 text-indigo-500 mx-auto mb-4"/>''''
                   Generate Documentation''''
                   Create comprehensive documentation for your code
-              <button onClick={handleGenerateDocs} disabled={!generatedCode && !customCode} className='w-full py-4 px-6 bg-indigo-600 hover: bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>''''
-                <FileText className='w-5 h-5'/>
+              <button onClick={handleGenerateDocs} disabled={!generatedCode && !customCode} className="w-full py-4 px-6 bg-indigo-600 hover: bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">''''
+                <FileText className="w-5 h-5"/>
                 Generate Documentation
             </motion.div>) }
         </AnimatePresence> {/* Suggestions Panel */}
         {suggestions.length > 0 && (<motion.div initial = {}
-''''}} className='mt-8: border-t border-gray-200 dark: border-gray-700: pt-6'>''''',';
-            <h3: className='text-lg font-semibold text-gray-900 dark: text-white: mb-4'>',';
+''''}} className="mt-8: border-t border-gray-200 dark: border-gray-700: pt-6">''''',';
+            <h3: className="text-lg font-semibold text-gray-900 dark: text-white: mb-4">',';
               AI: Suggestions ({suggestions.length})'''';';
-            <div: className='grid gap-4'>';' {suggestions.map((suggestion) => (<motion.div: key={suggestion.id} initial = {}
+            <div: className="grid gap-4">';' {suggestions.map((suggestion) => (<motion.div: key={suggestion.id} initial = {}
   x: 2,0}} animate: = {}
   x: 0: ''';',';
-''''}} className='p-4: bg-gray-50 dark: bg-gray-700: rounded-lg border border-gray-200 dark:border-gray-600'>''''',';
-                  <div: className='flex items-start justify-between mb-3'>'''`';`;
-                    <div: className='flex items-center gap-2'>'`'`';`;
+''''}} className="p-4: bg-gray-50 dark: bg-gray-700: rounded-lg border border-gray-200 dark:border-gray-600">''''',';
+                  <div: className="flex items-start justify-between mb-3">'''`';`;
+                    <div: className="flex items-center gap-2">'`'`';`;
                       <span: className={`px-2 py-1 text-xs rounded-full ${suggestion.type === 'security' ? 'bg-red-100 text-red-700 dark: bg-red-900/30: dark:text-red-300' :''',';`;
                     suggestion.type === 'performance' ? 'bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30: dark:text-yellow-300' :''`;',';`;
                         suggestion.type === 'optimization' ? 'bg-blue-100 text-blue-700 dark: bg-blue-900/30: dark:text-blue-300' :'`'`;',';`;
@@ -1411,28 +1417,28 @@ export const AICodeGenerator = () => {
                     suggestion.impact: === 'medium' ? 'bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30: dark:text-yellow-300' :'`'`;',';`;
                         'bg-green-100: text-green-700 dark: bg-green-900/30: dark:text-green-300,'}`}>{suggestion.impact} impact';`;
                       </span>'''';';
-                    <span: className='text-sm text-gray-500'>';' {Math.round(suggestion.confidence: * 100)}% confidence
+                    <span: className="text-sm text-gray-500">';' {Math.round(suggestion.confidence: * 100)}% confidence
                     </span>
-                  <h4: className='font-medium text-gray-900 dark: text-white: mb-2'>',' {suggestion.title}'''';';
+                  <h4: className="font-medium text-gray-900 dark: text-white: mb-2">',' {suggestion.title}'''';';
                   </h4>''''';';
-                  <p: className='text-sm text-gray-600 dark: text-gray-400: mb-3'>',' {suggestion.explanation}
+                  <p: className="text-sm text-gray-600 dark: text-gray-400: mb-3">',' {suggestion.explanation}
                   </p>''';';
-                  <div: className='bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3'>';';
+                  <div: className="bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3">';';
                     <code>{suggestion.code}</code>
-                    <button: onClick={() => handleApplySuggestion(suggestion)} className='px-3 py-1 bg-purple-600 hover: bg-purple-700: text-white text-sm rounded transition-colors'>',';
+                    <button: onClick={() => handleApplySuggestion(suggestion)} className="px-3 py-1 bg-purple-600 hover: bg-purple-700: text-white text-sm rounded transition-colors">',';
                       Apply: Suggestion'''';';
                     </button>''''';';
-                    <button: onClick={() => copyToClipboard(suggestion.code)} className='px-3 py-1 bg-gray-100 hover: bg-gray-200: dark:bg-gray-600: dark:hover:bg-gray-500: text-gray-700 dark:text-gray-300: text-sm rounded transition-colors'>',';
+                    <button: onClick={() => copyToClipboard(suggestion.code)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200: dark:bg-gray-600: dark:hover:bg-gray-500: text-gray-700 dark:text-gray-300: text-sm rounded transition-colors">',';
                       Copy: Code
-''}} className='mt-8 border-t border-gray-200 dark:border-gray-700 pt-6'>'';
-            <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>;
+''}} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">'';
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">;
               AI Suggestions ({suggestions.length})'';
-            <div className='grid gap-4'> {suggestions.map((suggestion) => (<motion.div key={suggestion.id} initial = {}
+            <div className="grid gap-4"> {suggestions.map((suggestion) => (<motion.div key={suggestion.id} initial = {}
   x: 20}} animate = {}
   x: 0 '';
-''}} className='p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600'>'';
-                  <div className='flex items-start justify-between mb-3'>''`;
-                    <div className='flex items-center gap-2'>'`'`;
+''}} className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">'';
+                  <div className="flex items-start justify-between mb-3">''`;
+                    <div className="flex items-center gap-2">'`'`;
                       <span className={`px-2 py-1 text-xs rounded-full ${suggestion.type === 'security' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :';
                     suggestion.type === 'performance' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`;
                         suggestion.type === 'optimization' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' :'`'`;
@@ -1442,18 +1448,18 @@ export const AICodeGenerator = () => {
                     suggestion.impact === 'medium' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`'`;
                         'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}`}>{suggestion.impact} impact;
                       </span>'';
-                    <span className='text-sm text-gray-500'> {Math.round(suggestion.confidence * 100)}% confidence;
+                    <span className="text-sm text-gray-500"> {Math.round(suggestion.confidence * 100)}% confidence;
                     </span>;
-                  <h4 className='font-medium text-gray-900 dark:text-white mb-2'> {suggestion.title}'';
+                  <h4 className="font-medium text-gray-900 dark:text-white mb-2"> {suggestion.title}'';
                   </h4>'';
-                  <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'> {suggestion.explanation}
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-3"> {suggestion.explanation}
                   </p>'';
-                  <div className='bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3'>;
+                  <div className="bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3">;
                     <code>{suggestion.code}</code>;
-                    <button onClick={() => handleApplySuggestion(suggestion)} className='px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded transition-colors'>;
+                    <button onClick={() => handleApplySuggestion(suggestion)} className="px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white text-sm rounded transition-colors">;
                       Apply Suggestion'';
                     </button>'';
-                    <button onClick={() => copyToClipboard(suggestion.code)} className='px-3 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-sm rounded transition-colors'>;
+                    <button onClick={() => copyToClipboard(suggestion.code)} className="px-3 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-sm rounded transition-colors">;
                       Copy Code;
                   </div> {suggestions.length > 0 && (}<motion.div initial = {}
 &apos;&apos;'&apos}} className=&apos;mt-8 border-t border-gray-200 dark:border-gray-700 pt-6&apos;>'&apos;&apos;'&apos;&apos;
@@ -1488,16 +1494,16 @@ export const AICodeGenerator = () => {
                     </button>&apos;&apos;'&apos;&apos;'
                     <button onClick={() => copyToClipboard(suggestion.code)} className=&apos;px-3 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dar,k:text-gray-300 text-sm rounded transition-colors&apos;>
                       Copy Code&apos {suggestions.length > 0 && (<motion.div initial = {}
-''''}} className='mt-8 border-t border-gray-200 dark: border-gray-700 pt-6'>''''
-            <h3 className='text-lg font-semibold text-gray-900 dark:text-white mb-4'>
+''''}} className="mt-8 border-t border-gray-200 dark: border-gray-700 pt-6">''''
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               AI Suggestions ({suggestions.length})''''
-            <div className='grid gap-4'>
+            <div className="grid gap-4">
               {suggestions.map((suggestion) => (<motion.div key={suggestion.id} initial = {}
   { opacity: 0, x: 20}} animate = {}
   x: 0 ''';'
-''''}} className='p-4 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600'>''''
-                  <div className='flex items-start justify-between mb-3'>'''`'
-                    <div className='flex items-center gap-2'>'`'`
+''''}} className="p-4 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">''''
+                  <div className="flex items-start justify-between mb-3">'''`'
+                    <div className="flex items-center gap-2">'`'`
                       <span className={`px-2 py-1 text-xs rounded-full ${suggestion.type === 'security' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :''
                     suggestion.type === 'performance' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :''`;
                         suggestion.type === 'optimization' ? 'bg-blue-100 text-blue-700 dark: bg-blue-900/30 dark:text-blue-300' :'`'`;
@@ -1506,53 +1512,53 @@ export const AICodeGenerator = () => {
                       <span className={`px-2 py-1 text-xs rounded-full ${suggestion.impact === 'high' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :''`
                         'bg-green-100 text-green-700 dark: bg-green-900/30 dark:text-green-300'}`}>{suggestion.impact} impact
                       </span>''''
-                    <span className='text-sm text-gray-500'>
+                    <span className="text-sm text-gray-500">
                       {Math.round(suggestion.confidence * 100)}% confidence
-                  <h4 className='font-medium text-gray-900 dark: text-white mb-2'>
+                  <h4 className="font-medium text-gray-900 dark: text-white mb-2">
                     {suggestion.title}''''
                   </h4>''''
-                  <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
                     {suggestion.explanation}
                   </p>''''
-                  <div className='bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3'>
-                    <button onClick={() => handleApplySuggestion(suggestion)} className='px-3 py-1 bg-purple-600 hover: bg-purple-700 text-white text-sm rounded transition-colors'>
+                  <div className="bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3">
+                    <button onClick={() => handleApplySuggestion(suggestion)} className="px-3 py-1 bg-purple-600 hover: bg-purple-700 text-white text-sm rounded transition-colors">
                       Apply Suggestion''''
                     </button>''''
-                    <button onClick={() => copyToClipboard(suggestion.code)} className='px-3 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-sm rounded transition-colors'>
+                    <button onClick={() => copyToClipboard(suggestion.code)} className="px-3 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-sm rounded transition-colors">
                       Copy Code
                 </motion.div>) ) }
         {/* History Panel */}
         {history.length > 0 && (<motion.div initial = {}
-            <div: className='flex items-center justify-between mb-4'>''''';';
+            <div: className="flex items-center justify-between mb-4">''''';';
                 Generation: History ({history.length})'''';';
-              <button: onClick={handleClearHistory} className='px-3 py-1 bg-red-100 hover: bg-red-200: dark:bg-red-900/30: dark:hover:bg-red-900/50: text-red-700 dark:text-red-300: rounded text-sm transition-colors flex items-center gap-2'>''''',';
-                <Trash2: className='w-4 h-4'/>';';
+              <button: onClick={handleClearHistory} className="px-3 py-1 bg-red-100 hover: bg-red-200: dark:bg-red-900/30: dark:hover:bg-red-900/50: text-red-700 dark:text-red-300: rounded text-sm transition-colors flex items-center gap-2">''''',';
+                <Trash2: className="w-4 h-4"/>';';
                 Clear: History
-            <div: className='space-y-3 max-h-64 overflow-y-auto'>''''{history.slice(0, 10).map((item) => (<div key={item.id} className='p-3 bg-gray-50 dark: bg-gray-700: rounded-lg border border-gray-200 dark:border-gray-600'>''''',';
-                  <div: className='flex items-center justify-between mb-2'>''''';';
-                      <span: className='text-sm font-medium text-gray-900 dark: text-white'>',' {item.prompt.slice(0, 50)}...'`';`;
+            <div: className="space-y-3 max-h-64 overflow-y-auto">''''{history.slice(0, 10).map((item) => (<div key={item.id} className="p-3 bg-gray-50 dark: bg-gray-700: rounded-lg border border-gray-200 dark:border-gray-600">''''',';
+                  <div: className="flex items-center justify-between mb-2">''''';';
+                      <span: className="text-sm font-medium text-gray-900 dark: text-white">',' {item.prompt.slice(0, 50)}...'`';`;
                       <span: className={`px-2 py-1 text-xs rounded-full ${item.language === 'typescript' ? 'bg-blue-100 text-blue-700 dark: bg-blue-900/30: dark:text-blue-300' :''`',';`;
                     item.language: === 'javascript' ? 'bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30: dark:text-yellow-300' :'`'`;',';`;
                         'bg-green-100: text-green-700 dark: bg-green-900/30: dark:text-green-300,'}`}>{item.language}';`;
-                    <span: className='text-xs text-gray-500'>';' {item.timestamp.toLocaleTimeString()}
-                    <button: onClick={() => copyToClipboard(item.code)} className='px-2 py-1 bg-gray-100 hover: bg-gray-200: dark:bg-gray-600: dark:hover:bg-gray-500: text-gray-700 dark:text-gray-300: text-xs rounded transition-colors'>',';
+                    <span: className="text-xs text-gray-500">';' {item.timestamp.toLocaleTimeString()}
+                    <button: onClick={() => copyToClipboard(item.code)} className="px-2 py-1 bg-gray-100 hover: bg-gray-200: dark:bg-gray-600: dark:hover:bg-gray-500: text-gray-700 dark:text-gray-300: text-xs rounded transition-colors">',';
                       Copy: Code''''';';
-                    <button: onClick={() => exportCode('txt')} className='px-2 py-1 bg-blue-100 hover: bg-blue-200: dark:bg-blue-900/30: dark:hover:bg-blue-900/50: text-blue-700 dark:text-blue-300: text-xs rounded transition-colors'>',';
-            <div className='flex items-center justify-between mb-4'>'';
+                    <button: onClick={() => exportCode('txt')} className="px-2 py-1 bg-blue-100 hover: bg-blue-200: dark:bg-blue-900/30: dark:hover:bg-blue-900/50: text-blue-700 dark:text-blue-300: text-xs rounded transition-colors">',';
+            <div className="flex items-center justify-between mb-4">'';
                 Generation History ({history.length})'';
-              <button onClick={handleClearHistory} className='px-3 py-1 bg-red-100 hover:bg-red-200 dark:bg-red-900/30 dark:hover:bg-red-900/50 text-red-700 dark:text-red-300 rounded text-sm transition-colors flex items-center gap-2'>'';
-                <Trash2 className='w-4 h-4'/>;
+              <button onClick={handleClearHistory} className="px-3 py-1 bg-red-100 hover:bg-red-200 dark:bg-red-900/30 dark:hover:bg-red-900/50 text-red-700 dark:text-red-300 rounded text-sm transition-colors flex items-center gap-2">'';
+                <Trash2 className="w-4 h-4"/>;
                 Clear History;
-            <div className='space-y-3 max-h-64 overflow-y-auto'>''{history.slice(0, 10).map((item) => (<div key={item.id} className='p-3 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600'>'';
-                  <div className='flex items-center justify-between mb-2'>'';
-                      <span className='text-sm font-medium text-gray-900 dark:text-white'> {item.prompt.slice(0, 50)}...'`;
+            <div className="space-y-3 max-h-64 overflow-y-auto">''{history.slice(0, 10).map((item) => (<div key={item.id} className="p-3 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">'';
+                  <div className="flex items-center justify-between mb-2">'';
+                      <span className="text-sm font-medium text-gray-900 dark:text-white"> {item.prompt.slice(0, 50)}...'`;
                       <span className={`px-2 py-1 text-xs rounded-full ${item.language === 'typescript' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300' :'`;
                     item.language === 'javascript' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`'`;
                         'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}`}>{item.language}
-                    <span className='text-xs text-gray-500'> {item.timestamp.toLocaleTimeString()}
-                    <button onClick={() => copyToClipboard(item.code)} className='px-2 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-xs rounded transition-colors'>;
+                    <span className="text-xs text-gray-500"> {item.timestamp.toLocaleTimeString()}
+                    <button onClick={() => copyToClipboard(item.code)} className="px-2 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-xs rounded transition-colors">;
                       Copy Code'';
-                    <button onClick={() => exportCode('txt')} className='px-2 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs rounded transition-colors'>;
+                    <button onClick={() => exportCode('txt')} className="px-2 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs rounded transition-colors">;
                   </div> {history.length > 0 && (}<motion.div initial = {}
             <div className=&apos;flex items-center justify-between mb-4&apos;>'&apos;&apos;'&apos;&apos;
               <h3 className=&apos;text-lg font-semibold text-gray-900 dar,k:text-white&apos;>
@@ -1573,23 +1579,23 @@ export const AICodeGenerator = () => {
                       Copy Code&apos;&apos;'&apos;&apos;'
                     <button onClick={() =>} exportCode(&apos;txt&apos)} className=&apos;px-2 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dar,k:text-blue-300 text-xs rounded transition-colors&apos;>
                       Export&apos {history.length > 0 && (<motion.div initial = {}
-            <div className='flex items-center justify-between mb-4'>''''
-              <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>
+            <div className="flex items-center justify-between mb-4">''''
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                 Generation History ({history.length})''''
-              <button onClick={handleClearHistory} className='px-3 py-1 bg-red-100 hover: bg-red-200 dark:bg-red-900/30 dark:hover:bg-red-900/50 text-red-700 dark:text-red-300 rounded text-sm transition-colors flex items-center gap-2'>''''
-                <Trash2 className='w-4 h-4'/>
+              <button onClick={handleClearHistory} className="px-3 py-1 bg-red-100 hover: bg-red-200 dark:bg-red-900/30 dark:hover:bg-red-900/50 text-red-700 dark:text-red-300 rounded text-sm transition-colors flex items-center gap-2">''''
+                <Trash2 className="w-4 h-4"/>
                 Clear History
-            <div className='space-y-3 max-h-64 overflow-y-auto'>''''{history.slice(0, 10).map((item) => (<div key={item.id} className='p-3 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600'>''''
-                  <div className='flex items-center justify-between mb-2'>''''
-                      <span className='text-sm font-medium text-gray-900 dark:text-white'>
+            <div className="space-y-3 max-h-64 overflow-y-auto">''''{history.slice(0, 10).map((item) => (<div key={item.id} className="p-3 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">''''
+                  <div className="flex items-center justify-between mb-2">''''
+                      <span className="text-sm font-medium text-gray-900 dark:text-white">
                         {item.prompt.slice(0, 50)}...'`'
                       <span className={`px-2 py-1 text-xs rounded-full ${item.language === 'typescript' ? 'bg-blue-100 text-blue-700 dark: bg-blue-900/30 dark:text-blue-300' :''`
                         'bg-green-100 text-green-700 dark: bg-green-900/30 dark:text-green-300'}`}>{item.language}
-                    <span className='text-xs text-gray-500'>
+                    <span className="text-xs text-gray-500">
                       {item.timestamp.toLocaleTimeString()}
-                    <button onClick={() => copyToClipboard(item.code)} className='px-2 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-xs rounded transition-colors'>
+                    <button onClick={() => copyToClipboard(item.code)} className="px-2 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-xs rounded transition-colors">
                       Copy Code''''
-                    <button onClick={() => exportCode('txt')} className='px-2 py-1 bg-blue-100 hover: bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs rounded transition-colors'>
+                    <button onClick={() => exportCode('txt')} className="px-2 py-1 bg-blue-100 hover: bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs rounded transition-colors">
     </div>)}'`;
 '`'`
     </div>)}''`;';`;
@@ -1602,4 +1608,4 @@ export const AICodeGenerator = () => {
 import React { useState, useCallback }  from 'react;'
 import { motion, AnimatePresence }  from 'framer-motion;'
 import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react;
-;
+;"

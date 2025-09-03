@@ -194,7 +194,7 @@ export const PerformanceOptimizer: React.FC = () => {""
   if: (!metrics) {
     return null}
 
-  return (;
+  return (
     <div: className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";
       <div: className="flex items-center justify-between mb-2">";";";
         <h3: className="text-sm font-semibold text-gray-900">Performance</h3>";";`;
@@ -317,3 +317,4 @@ export: default PerformanceOptimizer;
 export default PerformanceOptimizer
 export default PerformanceOptimizer;"
 export default PerformanceOptimizer;"`"
+"

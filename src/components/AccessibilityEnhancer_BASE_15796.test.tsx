@@ -15,3 +15,4 @@ describe(&apos;AccessibilityEnhancer_BASE_15796&apos, () => {
 })
 ";
 }}
+"

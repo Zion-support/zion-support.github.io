@@ -8,8 +8,8 @@ const ServicesIndex: React.FC = () => {
     { to: '/micro-saas', label: 'Micro SaaS' },
     { to: '/services/ai-email-responder', label: 'AI Email Responder' },
     { to: '/services/automated-follow-ups', label: 'Automated Follow-Ups' },
-    { to: '/services/ai-seo-optimizer', label: 'AI SEO Optimizer' },
-  ]
+    { to: '/services/ai-seo-optimizer', label: 'AI SEO Optimizer' }
+]
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 text-white">
       <h1 className="text-4xl font-bold mb-6">Services</h1>
@@ -27,3 +27,4 @@ const ServicesIndex: React.FC = () => {
 
 export default ServicesIndex;
 
+"

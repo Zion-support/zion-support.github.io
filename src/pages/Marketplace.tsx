@@ -23,8 +23,8 @@ import { ;
   Search, Grid, List, Heart, ExternalLink} from 'lucide-react';
 ;
 export default function Marketplace() {;
-  const products = [;
-    {;
+  const products = [
+  {;
       id: 1
       name: "AI Content Generator Pro"
       description: "Advanced AI-powered content creation tool with natural language processing"
@@ -74,15 +74,16 @@ export default function Marketplace() {;
     }
   ]
 ;
-  const categories = [;
-    { name: "AI Tools", icon: Brain, count: 25, color: "from-purple-500 to-pink-500" },;
+  const categories = [
+  { name: "AI Tools", icon: Brain, count: 25, color: "from-purple-500 to-pink-500" },;
     { name: "Analytics", icon: Database, count: 18, color: "from-blue-500 to-cyan-500" },;
     { name: "Development", icon: Code, count: 32, color: "from-green-500 to-emerald-500" },;
     { name: "Security", icon: Shield, count: 15, color: "from-red-500 to-orange-500" },;
     { name: "Micro SaaS", icon: Rocket, count: 28, color: "from-indigo-500 to-blue-500" }
   ]
 ;
-  return (;
+  return (
+    
     <>;
       <SEO ;
         title="Marketplace - Zion Tech Group | Technology Solutions & Tools";
@@ -620,3 +621,4 @@ export default function Marketplace() {
 </>
   )
   )}
+"

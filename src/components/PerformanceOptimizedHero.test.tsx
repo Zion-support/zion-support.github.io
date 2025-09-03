@@ -12,4 +12,4 @@ export default function PerformanceOptimizedHero.test() {return (
       </div>
     </div>
   );
-}
+}"

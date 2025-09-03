@@ -5,7 +5,9 @@ describe('UltimateServicesShowcase2026', () => {}; '; it('renders without crashi
 '
   it('displays expected content', () => {
     render(<UltimateServicesShowcase2026 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

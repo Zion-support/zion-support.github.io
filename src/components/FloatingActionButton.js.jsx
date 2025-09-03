@@ -160,9 +160,9 @@ import {}";
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}""
-            className='absolute bottom-16 right-0 mb-2 space-y-3''''" >'"
+            className="absolute bottom-16 right-0 mb-2 space-y-3"'''" >'"
             exit={{ opacity: 0, scale: 0.8 }}"
-            className='absolute bottom-16 right-0 mb-2 space-y-3''" >
+            className="absolute bottom-16 right-0 mb-2 space-y-3"'" >
             {actionItems.map((item, index) => (
               <motion.div
                 key={item.label}
@@ -170,19 +170,19 @@ import {}";
                 animate={{ opacity: 1, x: 0 }}"`
                 exit={{ opacity: 0, x: 20 }}''''
                 transition={{ delay: index * 0.1 }}''''
-                className='flex items-center space-x-3 '>`
+                className="flex items-center space-x-3 ">`
                 <motion .button`
                   onClick={item.action}``
                   className={`${item.color} text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}`"
                   aria-label={item.label}'''" >'''''"
-                  <item .icon className='w-5 h-5' /" >"
+                  <item .icon className="w-5 h-5" /" >"
                 </motion.button>
                 <motion.span""
                   initial={{ opacity: 0, x: -10 }}''''
                   animate={{ opacity: 1, x: 0 }}''''
-                  className='bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap '>
+                  className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap ">
                   {item.label}
                 </motion.span>
               </motion.div>
@@ -192,13 +192,13 @@ import {}";
       </AnimatePresence>""
       <motion .button''''
         onClick={toggleMenu}''''
-        className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110'''
+        className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110"''
         whileHover={{ scale: 1.1 }}""
         whileTap={{ scale: 0.95 }}''
         aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}'''" >'''''"
         <AnimatePresence mode='wait'>""
           {isOpen ? (''''
-        className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110'
+        className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
         whileHover={{ scale: 1.1 }}"
         whileTap={{ scale: 0.95 }}'
         aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}'''" >''''
@@ -210,7 +210,7 @@ import {}";
               animate={{ rotate: 0, opacity: 1 }}
               exit={{ rotate: 90, opacity: 0 }}""
               transition={{ duration: 0.2 }}'''" >'''''"
-              <XMarkIcon className='w-6 h-6' /" >"
+              <XMarkIcon className="w-6 h-6" /" >"
             </motion.div>""
           ) : (''''
             <motion .div''''
@@ -219,7 +219,7 @@ import {}";
               animate={{ rotate: 0, opacity: 1 }}
               exit={{ rotate: -90, opacity: 0 }}""
               transition={{ duration: 0.2 }}'''" >'''''"
-              <PlusIcon className='w-6 h-6' /" >"
+              <PlusIcon className="w-6 h-6" /" >"
             </motion.div>
           )}
         </AnimatePresence>
@@ -236,3 +236,4 @@ export { FloatingActionButton }
 export { FloatingActionButton }
 
 export { FloatingActionButton };"`"
+"

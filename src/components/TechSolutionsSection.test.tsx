@@ -12,4 +12,4 @@ export default function TechSolutionsSection.test() {return (
       </div>
     </div>
   );
-}
+}"

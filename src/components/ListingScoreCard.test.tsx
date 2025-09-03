@@ -15,3 +15,4 @@ describe(&apos;ListingScoreCard&apos, () => {
 })
 ";
 }}
+"

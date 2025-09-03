@@ -38,8 +38,8 @@ export default function Help() {;
   const [searchQuery, setSearchQuery] = useState(');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 ;
-  const faqs = [;
-    {;
+  const faqs = [
+  {;
       id: 1
       question: "How do I get started with Zion Tech Group services?"
       answer: "Getting started is easy! Contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions for your business."
@@ -61,8 +61,8 @@ export default function Help() {;
       category: "Pricing"}
   ]
 ;
-  const helpCategories = [;
-    {;
+  const helpCategories = [
+  {;
       title: "Getting Started"
       description: "New to Zion Tech Group? Start here"
       icon: BookOpen
@@ -88,8 +88,8 @@ export default function Help() {;
       color: "from-green-500 to-emerald-500"}
   ]
 ;
-  const contactMethods = [;
-    {;
+  const contactMethods = [
+  {;
       title: "Live Chat"
       description: "Get instant help from our support team"
       icon: MessageCircle
@@ -112,7 +112,8 @@ export default function Help() {;
   const toggleFAQ = (id: number) => {;
     setExpandedFAQ(expandedFAQ === id ? null : id)};
 ;
-  return (;
+  return (
+    
     <>;
       <SEO ;
         title="Help Center - Zion Tech Group | Support & Documentation";
@@ -621,3 +622,4 @@ export default function Help() ;{}
   );
 }
   ChevronUp, HelpCircle, CheckCircle, ArrowRight;"} from 'lucide-react
+"

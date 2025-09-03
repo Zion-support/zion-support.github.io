@@ -12,4 +12,4 @@ export default function EnhancedFuturisticFooter.test() {return (
       </div>
     </div>
   );
-}
+}"

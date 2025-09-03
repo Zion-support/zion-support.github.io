@@ -61,7 +61,8 @@ export default function PrivacyPolicy() {
               </p>"
               <div className="flex items-center justify-center">"
 ;
-  return (;
+  return (
+    
         title="Privacy Policy - Zion Tech Group | Data Protection & Privacy";
         description="Learn how Zion Tech Group protects your privacy and handles your personal data. Our comprehensive privacy policy outlines our data protection practices.";
         keywords="privacy policy, data protection, privacy, GDPR, CCPA, data security, Zion Tech Group";
@@ -191,7 +192,7 @@ import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react
               animate={{ opacity: 1, y: 0 }}""
               className="text-center max-w-4xl mx-auto""" >""
               transition={{ duration: 0.8 }}"
-              className='text-center max-w-4xl mx-auto' >"
+              className="text-center max-w-4xl mx-auto" >"
                 Privacy Policy""
               </p>""
               <div className="flex items-center justify-center">""
@@ -240,7 +241,7 @@ import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react
             <motion .div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}" className="prose prose-lg prose-invert max-w-none"" >"
               whileInView={{ opacity: 1, y: 0 }}""
               className="prose prose-lg prose-invert max-w-none""" >""
-              className='prose prose-lg prose-invert max-w-none' >"
+              className="prose prose-lg prose-invert max-w-none" >"
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50">"
                 <h2 className="text-2xl font-bold text-white mb-4">Information We Collect</h2>"
                   use our services, or contact us for support.""
@@ -324,3 +325,4 @@ import { Shield, Eye, Lock, Database, Users, Globe } from 'lucide-react
   );
 }
   )}
+"

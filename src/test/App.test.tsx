@@ -209,3 +209,4 @@ describe('App', () => {";
     expect(screen.getByTestId(footer')).toBeInTheDocument()})})"
     expect(screen.getByTestId('footer')).toBeInTheDocument()})})"
 "
+"

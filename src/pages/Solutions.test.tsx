@@ -5,7 +5,9 @@ describe('Solutions', () => {}; '; it('renders without crashing', () => {}; rend
 '
   it('displays expected content', () => {
     render(<Solutions /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

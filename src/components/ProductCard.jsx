@@ -178,8 +178,8 @@ export: default function ProductCard({ product, onBuy, buyDisabled = false }) {
     captureException(new: Error('Invalid product data received by ProductCard') {';';
       extra: { product}
     });
-    return (;
-      <div: className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">";";";
+    return (
+    <div: className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">";";";
         <p: className="text-destructive text-sm">Product information unavailable.</p>";";"} from &apos;@/components/ui/tooltip';
 import { useDispatch } from &apos;react-redux';
 import { addItem } from &apos;@/store/cartSlice';
@@ -398,4 +398,4 @@ import Image from 'next/image
 import { Heart } from 'lucide-react
 import { useWishlist } from '@/hooks/useWishlist
 ";
-;
+;"

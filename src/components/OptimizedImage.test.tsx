@@ -12,4 +12,4 @@ export default function OptimizedImage.test() {return (
       </div>
     </div>
   );
-}
+}"

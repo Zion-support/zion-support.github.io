@@ -5,7 +5,9 @@ describe('FAQ', () => {}; '; it('renders without crashing', () => {}; render(<FA
 '
   it('displays expected content', () => {
     render(<FAQ /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

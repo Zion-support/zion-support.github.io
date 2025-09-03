@@ -5,7 +5,9 @@ describe('Cookies', () => {}; '; it('renders without crashing', () => {}; render
 '
   it('displays expected content', () => {
     render(<Cookies /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

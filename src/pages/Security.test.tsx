@@ -5,7 +5,9 @@ describe('Security', () => {}; '; it('renders without crashing', () => {}; rende
 '
   it('displays expected content', () => {
     render(<Security /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

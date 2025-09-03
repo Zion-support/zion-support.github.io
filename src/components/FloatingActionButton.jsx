@@ -156,20 +156,20 @@ const FloatingActionButton = ({ className = ' }) => {}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className='absolute bottom-16 right-0 mb-2 space-y-3''>{actionItems.map((item, index) => (;
+            className="absolute bottom-16 right-0 mb-2 space-y-3"'>{actionItems.map((item, index) => (;
                 key={item.label}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}'';
                 transition={{ delay: index * 0.1 }}'';
-                className='flex items-center space-x-3 '>;
+                className="flex items-center space-x-3 ">;
   return ()&apos;&apos;
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
       <AnimatePresence>
         {isOpen && (}
           <motion.div
             className=&apos;absolute bottom-16 right-0 mb-2 space-y-3&apos;&apos;'&apos;>{actionItems.map((item, index) => (&apos}&apos;
-            className='absolute bottom-16 right-0 mb-2 space-y-3''''>{actionItems.map((item, index) => ('
+            className="absolute bottom-16 right-0 mb-2 space-y-3"'''>{actionItems.map((item, index) => ('
                 exit={{ opacity: 0, x: 20 }}&apos;&apos;
                 transition={{ delay: index * 0.1 }}&apos;&apos;'';
                 className=&apos;flex items-center space-x-3 &apos;>&apos;'
@@ -187,19 +187,19 @@ const FloatingActionButton = ({ className = ' }) => {}
                   className=&apos;bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap &apos;>{item.label}&apos;&apos;
                 exit={{ opacity: 0, x: 20 }}''';'
                 transition={{ delay: index * 0.1 }}'''';
-                className='flex items-center space-x-3 '>
+                className="flex items-center space-x-3 ">
                   className={`${item.color} text-white p-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110`}
                   aria-label={item.label}''>'';
-                  <item.icon className='w-5 h-5' />;
+                  <item.icon className="w-5 h-5" />;
                 </motion.button>;
                 <motion.span;
                   initial={{ opacity: 0, x: -10 }}'';
                   animate={{ opacity: 1, x: 0 }}'';
-                  className='bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap '>{item.label}
+                  className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap ">{item.label}
                 </motion.span>;
               </motion.div>;
                   aria-label={item.label}'''>'''''
-                  <item.icon className='w-5 h-5' />
+                  <item.icon className="w-5 h-5" />
                   initial={{ opacity: 0, x: -10 }}''';'
                   animate={{ opacity: 1, x: 0 }}'''';
                 </motion.span>
@@ -208,7 +208,7 @@ const FloatingActionButton = ({ className = ' }) => {}
       </AnimatePresence>;
       <motion.button'';
         onClick={toggleMenu}'';
-        className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110'';
+        className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"';
         whileTap={{ scale: 0.95 }}';
         aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}''>'';
         <AnimatePresence mode='wait'> {isOpen ? ('';
@@ -218,12 +218,12 @@ const FloatingActionButton = ({ className = ' }) => {}
               animate={{ rotate: 0, opacity: 1 }}
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 }}''>'';
-              <XMarkIcon className='w-6 h-6' />;
+              <XMarkIcon className="w-6 h-6" />;
           ) : ('';
               key='open'';
               initial={{ rotate: 90, opacity: 0 }}
               exit={{ rotate: -90, opacity: 0 }}
-              <PlusIcon className='w-6 h-6' />;
+              <PlusIcon className="w-6 h-6" />;
       </AnimatePresence>
       <motion.button&apos;&apos;
         onClick={toggleMenu}&apos;&apos;'';
@@ -240,7 +240,7 @@ const FloatingActionButton = ({ className = ' }) => {}
               <PlusIcon className=&apos;w-6 h-6&apos; />&apos;
       <motion.button''';'
         onClick={toggleMenu}'''';
-        className='bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110''';
+        className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 transform hover:scale-110"'';
         whileTap={{ scale: 0.95 }}';'
         aria-label={isOpen ? 'Close quick actions' : 'Open quick actions'}'''>'''''
         <AnimatePresence mode='wait'>
@@ -248,10 +248,10 @@ const FloatingActionButton = ({ className = ' }) => {}
             <motion.div'''';
               key='close''';
               transition={{ duration: 0.2 }}'''>'''''
-              <XMarkIcon className='w-6 h-6' />
+              <XMarkIcon className="w-6 h-6" />
           ) : (''''
               key='open''';
-              <PlusIcon className='w-6 h-6' />
+              <PlusIcon className="w-6 h-6" />
     </div>)}
 export default FloatingActionButton;
 export { FloatingActionButton }
@@ -260,3 +260,4 @@ export { FloatingActionButton }
 
 import React { useState }  from 'react;'
 `
+"

@@ -71,4 +71,4 @@ const LazyImage: React.FC<LazyImageProps> = ({
   );
 };
 
-export default LazyImage;
+export default LazyImage;"

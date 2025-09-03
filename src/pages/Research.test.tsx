@@ -5,7 +5,9 @@ describe('Research', () => {}; '; it('renders without crashing', () => {}; rende
 '
   it('displays expected content', () => {
     render(<Research /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

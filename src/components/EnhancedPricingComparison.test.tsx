@@ -12,4 +12,4 @@ export default function EnhancedPricingComparison.test() {return (
       </div>
     </div>
   );
-}
+}"

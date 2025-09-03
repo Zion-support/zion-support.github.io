@@ -74,12 +74,12 @@ import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { ;
   Check, Star, ArrowRight, Users, Zap, Shield, ;
-  Brain, Atom, Rocket, Globe, Award,
-} from 'lucide-react';
+  Brain, Atom, Rocket, Globe, Award
+  } from 'lucide-react';
 ;
 export default function Pricing() {;
-  const pricingPlans = [;
-    {;
+  const pricingPlans = [
+  {;
       name: "Starter"
       price: "$99"
       period: "per month"
@@ -128,8 +128,8 @@ export default function Pricing() {;
       color: "from-orange-500 to-red-500"}
   ]
 ;
-  const serviceCategories = [;
-    {;
+  const serviceCategories = [
+  {;
       title: "AI Services"
       icon: Brain
       startingPrice: "$99/month"
@@ -154,7 +154,8 @@ export default function Pricing() {;
       description: "Custom software solutions and micro SaaS applications"}
   ]
 ;
-  return (;
+  return (
+    
     <>;
       <SEO ;
         title="Pricing - Zion Tech Group | Transparent Technology Solutions Pricing";
@@ -591,3 +592,4 @@ export default function Pricing() {
 </>
   )
   )}
+"

@@ -53,7 +53,7 @@ export default function OptimizedImage({;
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 ;
-  return (;
+  return (
     <div className={`relative overflow-hidden ${className}`}>;
       {isLoading && (;
         <div className=`absolute inset-0 bg-gray-200 animate-pulse`} />;
@@ -162,4 +162,4 @@ export const OptimizedImage = ({
 
 export default OptimizedImage;
 import Image from 'next/image;
-;
+;"

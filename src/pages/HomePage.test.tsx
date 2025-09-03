@@ -5,7 +5,9 @@ describe('HomePage', () => {}; '; it('renders without crashing', () => {}; rende
 '
   it('displays expected content', () => {
     render(<HomePage /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

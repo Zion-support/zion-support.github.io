@@ -5,7 +5,9 @@ describe('ComprehensivePricingShowcase2025', () => {}; '; it('renders without cr
 '
   it('displays expected content', () => {
     render(<ComprehensivePricingShowcase2025 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

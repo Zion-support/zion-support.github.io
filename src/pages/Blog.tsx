@@ -44,8 +44,8 @@ import { ;
   Brain, Atom, Rocket, Shield, Globe, Code} from 'lucide-react';
 ;
 export default function Blog() {;
-  const blogPosts = [;
-    {;
+  const blogPosts = [
+  {;
       id: 1
       title: "The Future of AI in Enterprise: 2025 Trends and Predictions"
       excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage."
@@ -113,8 +113,8 @@ export default function Blog() {;
       featured: false}
   ]
 ;
-  const categories = [;
-    { name: "AI & Machine Learning", icon: Brain, count: 15 },;
+  const categories = [
+  { name: "AI & Machine Learning", icon: Brain, count: 15 },;
     { name: "Quantum Computing", icon: Atom, count: 8 },;
     { name: "Micro SaaS", icon: Rocket, count: 12 },;
     { name: "Cybersecurity", icon: Shield, count: 10 },;
@@ -125,7 +125,8 @@ export default function Blog() {;
   const featuredPosts = blogPosts.filter(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
 ;
-  return (;
+  return (
+    
     <>;
       <SEO ;
         title="Blog - Zion Tech Group | Technology Insights & Industry News";
@@ -658,3 +659,4 @@ export default function Blog() {
 </>
   )
   )}
+"

@@ -5,7 +5,9 @@ describe('Tutorials', () => {}; '; it('renders without crashing', () => {}; rend
 '
   it('displays expected content', () => {
     render(<Tutorials /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

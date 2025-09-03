@@ -12,8 +12,8 @@ export function SiteFooter() {
         { label: 'About', href: '/about' },
         { label: 'Partners', href: '/partners' },
         { label: 'Careers', href: '/careers' },
-        { label: 'Contact', href: '/contact' },
-      ]
+        { label: 'Contact', href: '/contact' }
+]
 },
     {
       title: 'Services',
@@ -22,8 +22,8 @@ export function SiteFooter() {
         { label: 'AI Services', href: '/services/ai-services' },
         { label: 'IT Services', href: '/services/it-services' },
         { label: 'Micro SaaS', href: '/services/micro-saas' },
-        { label: 'Pricing', href: '/pricing' },
-      ]
+        { label: 'Pricing', href: '/pricing' }
+]
 },
     {
       title: 'Resources',
@@ -32,24 +32,24 @@ export function SiteFooter() {
         { label: 'Case Studies', href: '/case-studies' },
         { label: 'White Papers', href: '/white-papers' },
         { label: 'Webinars', href: '/webinars' },
-        { label: 'Documentation', href: '/documentation' },
-      ]
+        { label: 'Documentation', href: '/documentation' }
+]
 },
     {
       title: 'Legal',
       links: [
         { label: 'Privacy Policy', href: '/privacy' },
         { label: 'Terms of Service', href: '/terms' },
-        { label: 'Sitemap', href: '/sitemap' },
-      ]
-},
-  ]
+        { label: 'Sitemap', href: '/sitemap' }
+]
+}
+]
 
   const social = [
     { label: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group' },
     { label: 'Twitter', href: 'https://twitter.com/ziontechgroup' },
-    { label: 'GitHub', href: 'https://github.com/ziontechgroup' },
-  ]
+    { label: 'GitHub', href: 'https://github.com/ziontechgroup' }
+]
 
   return (
     <footer className="bg-slate-900 text-white">
@@ -126,4 +126,4 @@ export function SiteFooter() {
   );
 }
 
-export default SiteFooter;
+export default SiteFooter;"

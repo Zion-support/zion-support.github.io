@@ -12,4 +12,4 @@ export default function ProductListingCard.test() {return (
       </div>
     </div>
   );
-}
+}"

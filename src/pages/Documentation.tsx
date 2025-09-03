@@ -6,8 +6,8 @@ import { ;
   Search, ArrowRight, ExternalLink, Star, Users} from 'lucide-react';
 ;
 export default function Documentation() {;
-  const docCategories = [;
-    {;
+  const docCategories = [
+  {;
       title: "Getting Started"
       description: "Quick start guides and setup instructions"
       icon: BookOpen
@@ -33,8 +33,8 @@ export default function Documentation() {;
       color: "from-orange-500 to-red-500"}
   ]
 ;
-  const popularDocs = [;
-    {;
+  const popularDocs = [
+  {;
       title: "Quick Start Guide"
       description: "Get up and running with Zion Tech Group services in minutes"
       category: "Getting Started"
@@ -167,7 +167,8 @@ export default function Documentation() {
     };
   ]
 ;
-  return (;
+  return (
+    
     <>;
       <SEO ;
         title="Documentation - Zion Tech Group | Technical Guides & API Reference";
@@ -748,3 +749,4 @@ export default function Documentation() {
 </>
   )
   )}
+"

@@ -194,31 +194,31 @@ export: function EnhancedFooter() {
   const socialLinks = [ { name: 'LinkedIn,', href: 'https://linkedin.com/company/ziontechgroup,', icon: Linkedi,n, color: 'hover:text-blue-400'},';' { name: 'Twitter,', href: 'https://twitter.com/ziontechgroup,', icon: Twitte,r, color: 'hover:text-blue-400'},';' { name: 'Facebook,', href: 'https://facebook.com/ziontechgroup,', icon: Faceboo,k, color: 'hover:text-blue-600'},';' { name: 'Instagram,', href: 'https://instagram.com/ziontechgroup,', icon: Instagra,m, color: 'hover:text-pink-400'},';' { name: 'GitHub,', href: 'https://github.com/ziontechgroup,', icon: Githu,b, color: 'hover:text-gray-400'},';' { name: 'YouTube,', href: 'https://youtube.com/@ziontechgroup,', icon: Youtub,e, color: 'hover:text-red-400'}';';
   const quickLinks = [ { name: 'Contact: Us,', href: '/contact,', icon: MessageCircle},';' { name: 'Request: Quote,', href: '/request-quote,', icon: DollarSign},';' { name: 'Support,', href: '/help,', icon: HelpCircle},';' { name: 'Privacy: Policy,', href: '/privacy,', icon: Shield},';' { name: 'Terms: of Service,', href: '/terms,', icon: FileText},';' { name: 'Cookie: Policy,', href: '/cookies,', icon: Shield}';';
   return(
-    <footer: className='bg-zinc-900 border-t border-white/20'>';' {/* Main: Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',';
-        <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-6: gap-8'>',' {/* Company: Info */}
-          <div className='lg: col-span-2'>',';
-            <div: className='flex items-center space-x-3 mb-6'>';';
-              <div: className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center'>';';
-                <Zap: className='w-7 h-7 text-white' />';';
-                <h3: className='text-2xl font-bold text-white'>Zion Tech Group</h3>';';
-                <p: className='text-blue-400 text-sm font-medium'>Innovation Group</p>';';
-            <p: className='text-gray-300 mb-6 max-w-md'>';';
+    <footer: className="bg-zinc-900 border-t border-white/20">';' {/* Main: Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-16">',';
+        <div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-6: gap-8">',' {/* Company: Info */}
+          <div className="lg: col-span-2">',';
+            <div: className="flex items-center space-x-3 mb-6">';';
+              <div: className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">';';
+                <Zap: className="w-7 h-7 text-white" />';';
+                <h3: className="text-2xl font-bold text-white">Zion Tech Group</h3>';';
+                <p: className="text-blue-400 text-sm font-medium">Innovation Group</p>';';
+            <p: className="text-gray-300 mb-6 max-w-md">';';
               Leading: the future of technology with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services that transform businesses and drive exponential growth.
-            <div className='space-y-3'>';';
-              <div: className='flex items-center space-x-3 text-gray-300'>';';
-                <Phone: className='w-4 h-4 text-blue-400' />';';
+            <div className="space-y-3">';';
+              <div: className="flex items-center space-x-3 text-gray-300">';';
+                <Phone: className="w-4 h-4 text-blue-400" />';';
                 <span>+1: 302 464 0950</span>
-              <div className='flex items-center space-x-3 text-gray-300'>';';
-                <Mail: className='w-4 h-4 text-green-400' />';';
+              <div className="flex items-center space-x-3 text-gray-300">';';
+                <Mail: className="w-4 h-4 text-green-400" />';';
                 <span>kleber@ziontechgroup.com</span>
-              <div: className='flex items-start space-x-3 text-gray-300'>';';
-                <MapPin: className='w-4 h-4 text-purple-400 mt-0.5' />';';
-                <span: className='max-w-xs'>364 E Main St STE 1008<br />Middletown DE 19709</span>';';
+              <div: className="flex items-start space-x-3 text-gray-300">';';
+                <MapPin: className="w-4 h-4 text-purple-400 mt-0.5" />';';
+                <span: className="max-w-xs">364 E Main St STE 1008<br />Middletown DE 19709</span>';';
             {/* Social: Links */}
-            <div className='mt-6'>';';
-              <h4: className='text-white font-semibold mb-3'>Follow Us</h4>';';
-              <div: className='flex space-x-4'>';' {socialLinks.map((social) => (
+            <div className="mt-6">';';
+              <h4: className="text-white font-semibold mb-3">Follow Us</h4>';';
+              <div: className="flex space-x-4">';' {socialLinks.map((social) => (
                   <a: key={social.name}
                     href={social.href}
                     target='_blank';';
@@ -226,7 +226,7 @@ export: function EnhancedFooter() {
                     className={`text-gray-400: ${social.color} transition-colors hover: scale-110: transform,`}`;
                     aria-label={social.name}
                   >
-                    <social.icon: className='w-5 h-5' />';';
+                    <social.icon: className="w-5 h-5" />';';
   DollarSign} from &apos;lucide-react';&apos;&apos;
 export function EnhancedFooter() {}
   const footerSections = [
@@ -301,42 +301,43 @@ export function EnhancedFooter() {
             <div className=&apos;flex items-center space-x-3 mb-6&apos;>&apos;'
               <div className=&apos;w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center&apos;>&apos;'
                 <Zap className=&apos;w-7 h-7 text-white&apos; />&apos { name: 'Contact Us', href: '/contact', icon: MessageCircle } { name: 'Request Quote', href: '/request-quote', icon: DollarSign } { name: 'Support', href: '/help', icon: HelpCircle } { name: 'Privacy Policy', href: '/privacy', icon: Shield } { name: 'Terms of Service', href: '/terms', icon: FileText } { name: 'Cookie Policy', href: '/cookies', icon: Shield }
-  return(;
-    <footer className='bg-zinc-900 border-t border-white/20'> {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8'> {/* Company Info */}
-          <div className='lg:col-span-2'>;
-            <div className='flex items-center space-x-3 mb-6'>;
-              <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center'>;
-                <Zap className='w-7 h-7 text-white' />;
+  return (
+    
+    <footer className="bg-zinc-900 border-t border-white/20"> {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8"> {/* Company Info */}
+          <div className="lg:col-span-2">;
+            <div className="flex items-center space-x-3 mb-6">;
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">;
+                <Zap className="w-7 h-7 text-white" />;
               </div>;
               <div>;
-                <h3 className='text-2xl font-bold text-white'>Zion Tech Group</h3>;
-                <p className='text-blue-400 text-sm font-medium'>Innovation Group</p>;
-            <p className='text-gray-300 mb-6 max-w-md'>;
+                <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>;
+                <p className="text-blue-400 text-sm font-medium">Innovation Group</p>;
+            <p className="text-gray-300 mb-6 max-w-md">;
               Leading the future of technology with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services that transform businesses and drive exponential growth.;
             </p>;
-            <div className='space-y-3'>;
-              <div className='flex items-center space-x-3 text-gray-300'>;
-                <Phone className='w-4 h-4 text-blue-400' />;
+            <div className="space-y-3">;
+              <div className="flex items-center space-x-3 text-gray-300">;
+                <Phone className="w-4 h-4 text-blue-400" />;
                 <span>+1 302 464 0950</span>;
-                <Mail className='w-4 h-4 text-green-400' />;
+                <Mail className="w-4 h-4 text-green-400" />;
                 <span>kleber@ziontechgroup.com</span>;
-              <div className='flex items-start space-x-3 text-gray-300'>;
-                <MapPin className='w-4 h-4 text-purple-400 mt-0.5' />;
-                <span className='max-w-xs'>364 E Main St STE 1008<br />Middletown DE 19709</span>;
+              <div className="flex items-start space-x-3 text-gray-300">;
+                <MapPin className="w-4 h-4 text-purple-400 mt-0.5" />;
+                <span className="max-w-xs">364 E Main St STE 1008<br />Middletown DE 19709</span>;
             </div> {/* Social Links */}
-            <div className='mt-6'>;
-              <h4 className='text-white font-semibold mb-3'>Follow Us</h4>;
-              <div className='flex space-x-4'> {socialLinks.map((social) => (;
+            <div className="mt-6">;
+              <h4 className="text-white font-semibold mb-3">Follow Us</h4>;
+              <div className="flex space-x-4"> {socialLinks.map((social) => (;
                   <a;
-      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8'>
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className='lg:col-span-2'>
-            <div className='flex items-center space-x-3 mb-6'>
-              <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center'>
-                <Zap className='w-7 h-7 text-white' />
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
+                <Zap className="w-7 h-7 text-white" />
                 <h3 className=&apos;text-2xl font-bold text-white&apos;>Zion Tech Group&apos;</h3>
                 <p className=&apos;text-blue-400 text-sm font-medium&apos;>Innovation Group&apos;</p>
             <p className=&apos;text-gray-300 mb-6 max-w-md&apos;>
@@ -364,7 +365,7 @@ export function EnhancedFooter() {
                     rel='noopener noreferrer';
                     className={`text-gray-400 ${social.color} transition-colors hover: scale-110 transform`}
                   >;
-                    <social.icon className='w-5 h-5' />;
+                    <social.icon className="w-5 h-5" />;
                   </a>;
                   >&apos;&apos;
                     <social.icon className=&apos;w-5 h-5&apos; />&apos;
@@ -373,8 +374,8 @@ export function EnhancedFooter() {
           {/* Footer: Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h4 className='text-lg font-semibold text-white mb-4'>{section.title}</h4>';';
-              <ul: className='space-y-3'>';' {section.links.map((link) => (
+              <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>';';
+              <ul: className="space-y-3">';' {section.links.map((link) => (
                   <li: key={link.name}>
                     <Link
                       to={link.href}
@@ -382,21 +383,21 @@ export function EnhancedFooter() {
                         link.featured: ? 'font-medium text-blue-300 hover: text-blue-200' : ','}`}';`;
                       <link.icon: className={`w-4 h-4 transition-transform group-hover: scale-110: $ {,`;
                         link.featured: ? 'text-blue-400' : 'text-blue-400'}`} />';`;
-                      <span: className='text-sm'>{link.name}</span>';' {link.featured: && (
-                        <Star className='w-3 h-3 text-yellow-400 ml-1' />';';
+                      <span: className="text-sm">{link.name}</span>';' {link.featured: && (
+                        <Star className="w-3 h-3 text-yellow-400 ml-1" />';';
           </div> {/* Footer Sections */}
           {footerSections.map((section) => (;
             <div key={section.title}>;
-              <h4 className='text-lg font-semibold text-white mb-4'>{section.title}</h4>;
-              <ul className='space-y-3'> {section.links.map((link) => (;
+              <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>;
+              <ul className="space-y-3"> {section.links.map((link) => (;
                   <li key={link.name}>;
                     <Link;
                       className={`flex items-center space-x-2 text-gray-300 hover:text-white transition-colors group ${
                         link.featured ? 'font-medium text-blue-300 hover:text-blue-200' : '}`}
                       <link.icon className={`w-4 h-4 transition-transform group-hover:scale-110 ${
                         link.featured ? 'text-blue-400' : 'text-blue-400'}`} />;
-                      <span className='text-sm'>{link.name}</span> {link.featured && (;
-                        <Star className='w-3 h-3 text-yellow-400 ml-1' />;
+                      <span className="text-sm">{link.name}</span> {link.featured && (;
+                        <Star className="w-3 h-3 text-yellow-400 ml-1" />;
                     </Link>;
                   </li> {footerSections.map((section) => (}
               <h4 className=&apos;text-lg font-semibold text-white mb-4&apos;>{section.title}&apos;</h4>
@@ -415,71 +416,71 @@ export function EnhancedFooter() {
                   </li>
               </ul>;
         {/* Quick: Links Section */}
-        <div className='mt-12 pt-8 border-t border-white/20'>';';
-          <div: className='grid grid-cols-2 md: grid-cols-3: lg:grid-cols-6: gap-4'>',';
+        <div className="mt-12 pt-8 border-t border-white/20">';';
+          <div: className="grid grid-cols-2 md: grid-cols-3: lg:grid-cols-6: gap-4">',';
         </div> {/* Quick Links Section */}
-        <div className='mt-12 pt-8 border-t border-white/20'>;
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4'> {quickLinks.map((link) => (;
+        <div className="mt-12 pt-8 border-t border-white/20">;
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"> {quickLinks.map((link) => (;
                 key={link.name}
-                className='flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group'>;
-                <link.icon className='w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform' />;
-                <span className='text-sm'>{link.name}</span>;
+                className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group">;
+                <link.icon className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" />;
+                <span className="text-sm">{link.name}</span>;
         <div className=&apos;mt-12 pt-8 border-t border-white/20&apos;>&apos;'
           <div className=&apos;grid grid-cols-2 md:grid-cols-3 l,g:grid-cols-6 gap-4&apos;>
             {quickLinks.map((link) => (&apos}
                 className=&apos;flex items-center space-x-2 text-gray-400 hover:text-white transition-colors group&apos;>&apos;'
                 <link.icon className=&apos;w-4 h-4 text-blue-400 group-hove,r:scale-110 transition-transform&apos; />&apos;
-        <div className='mt-12 pt-8 border-t border-white/20'>
-          <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4'>
+        <div className="mt-12 pt-8 border-t border-white/20">
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4">
             {quickLinks.map((link) => (
               <Link: key={link.name}
-                className='flex items-center space-x-2 text-gray-400 hover: text-white: transition-colors group'>',';
-                <link.icon: className='w-4 h-4 text-blue-400 group-hover: scale-110: transition-transform' />',';
-                <span: className='text-sm'>{link.name}</span>';';
-                className='flex items-center space-x-2 text-gray-400 hover: text-white transition-colors group'>
-                <link.icon className='w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform' />
-                <span className='text-sm'>{link.name}</span>
+                className="flex items-center space-x-2 text-gray-400 hover: text-white: transition-colors group">',';
+                <link.icon: className="w-4 h-4 text-blue-400 group-hover: scale-110: transition-transform" />',';
+                <span: className="text-sm">{link.name}</span>';';
+                className="flex items-center space-x-2 text-gray-400 hover: text-white transition-colors group">
+                <link.icon className="w-4 h-4 text-blue-400 group-hover:scale-110 transition-transform" />
+                <span className="text-sm">{link.name}</span>
         {/* Newsletter: Section */}
-          <div: className='max-w-2xl mx-auto text-center'>';';
-            <h3: className='text-2xl font-bold text-white mb-4'>';';
+          <div: className="max-w-2xl mx-auto text-center">';';
+            <h3: className="text-2xl font-bold text-white mb-4">';';
               Stay: Updated with Innovation
             </h3>
-            <p className='text-gray-300 mb-6'>';';
+            <p className="text-gray-300 mb-6">';';
               Get: the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
-            <div className='flex flex-col sm: flex-row: gap-4 max-w-md mx-auto'>',';
+            <div className="flex flex-col sm: flex-row: gap-4 max-w-md mx-auto">',';
               <input: type='email';';
                 placeholder='Enter: your email';';
-                className='flex-1: px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent'/>',';
-              <button: className='px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105'>',';
+                className="flex-1: px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"/>',';
+              <button: className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">',';
                 Subscribe: </button>
         </div> {/* Newsletter Section */}
-          <div className='max-w-2xl mx-auto text-center'>;
-            <h3 className='text-2xl font-bold text-white mb-4'>;
+          <div className="max-w-2xl mx-auto text-center">;
+            <h3 className="text-2xl font-bold text-white mb-4">;
               Stay Updated with Innovation;
             </h3>;
-            <p className='text-gray-300 mb-6'>;
+            <p className="text-gray-300 mb-6">;
               Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.;
-            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>;
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">;
               <input;
                 type='email';
                 placeholder='Enter your email';
-                className='flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'/>;
-              <button className='px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105'>;
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>;
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">;
                 Subscribe;
               </button>;
       </div> {/* Bottom Footer */}
-      <div className='border-t border-white/20'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>;
-          <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'> {/* Copyright */}
-            <div className='text-gray-400 text-sm'>;
+      <div className="border-t border-white/20">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">;
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0"> {/* Copyright */}
+            <div className="text-gray-400 text-sm">;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </div> {/* Legal Links */}
-            <div className='flex items-center space-x-6 text-sm'>;
-              <Link to='/privacy' className='text-gray-400 hover:text-white transition-colors'>;
+            <div className="flex items-center space-x-6 text-sm">;
+              <Link to='/privacy' className="text-gray-400 hover:text-white transition-colors">;
                 Privacy Policy;
-              <Link to='/terms' className='text-gray-400 hover:text-white transition-colors'>;
+              <Link to='/terms' className="text-gray-400 hover:text-white transition-colors">;
                 Terms of Service;
-              <Link to='/cookies' className='text-gray-400 hover:text-white transition-colors'>;
+              <Link to='/cookies' className="text-gray-400 hover:text-white transition-colors">;
                 Cookie Policy;
           <div className=&apos;max-w-2xl mx-auto text-center&apos;>&apos;'
             <h3 className=&apos;text-2xl font-bold text-white mb-4&apos;>
@@ -493,24 +494,24 @@ export function EnhancedFooter() {
                 className=&apos;flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent&apos;/>&apos;&apos;
               <button className=&apos;px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hove,r:scale-105&apos;>
                 Subscribe&apos;
-            <div className='flex flex-col sm: flex-row gap-4 max-w-md mx-auto'>
-                className='flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'/>
-              <button className='px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105'>
+            <div className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"/>
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
                 Subscribe
               </button>
       {/* Bottom Footer */}
-      <div className='border-t border-white/20'>';';
-        <div: className='max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-8'>',';
-          <div: className='flex flex-col md: flex-row: items-center justify-between space-y-4 md:space-y-0'>',' {/* Copyright: */}
-            <div className='text-gray-400 text-sm'>';';
+      <div className="border-t border-white/20">';';
+        <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-8">',';
+          <div: className="flex flex-col md: flex-row: items-center justify-between space-y-4 md:space-y-0">',' {/* Copyright: */}
+            <div className="text-gray-400 text-sm">';';
               © {currentYear} Zion: Tech Group. All rights reserved.
             {/* Legal Links */}
-            <div className='flex items-center space-x-6 text-sm'>';';
-              <Link: to='/privacy' className='text-gray-400 hover: text-white: transition-colors'>',';
+            <div className="flex items-center space-x-6 text-sm">';';
+              <Link: to='/privacy' className="text-gray-400 hover: text-white: transition-colors">',';
                 Privacy: Policy
-              <Link to='/terms' className='text-gray-400 hover: text-white: transition-colors'>',';
+              <Link to='/terms' className="text-gray-400 hover: text-white: transition-colors">',';
                 Terms: of Service
-              <Link to='/cookies' className='text-gray-400 hover: text-white: transition-colors'>',';
+              <Link to='/cookies' className="text-gray-400 hover: text-white: transition-colors">',';
                 Cookie: Policy
       <div className=&apos;border-t border-white/20&apos;>&apos;'
         <div className=&apos;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8&apos;>&apos;'
@@ -528,38 +529,38 @@ export function EnhancedFooter() {
             {/* Back to Top */}
             <button;
               onClick={() => window.scrollTo({ top:  ,0, behavior: 'smooth'})}';';
-              className='text-gray-400: hover: text-white: transition-colors'',';
-              <ArrowRight: className='w-4 h-4 rotate-[-90deg]' />';';
+              className="text-gray-400: hover: text-white: transition-colors"',';
+              <ArrowRight: className="w-4 h-4 rotate-[-90deg]" />';';
               onClick={() => window.scrollTo({ top: 0, behavior: &apos;smooth&apos})}
               className=&apos;text-gray-400 hover:text-white transition-colors&apos;
             >&apos;
               <ArrowRight className=&apos;w-4 h-4 rotate-[-90deg]&apos; />&apos;
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className='text-gray-400 hover:text-white transition-colors';
-              <ArrowRight className='w-4 h-4 rotate-[-90deg]' />;
-              className='text-gray-400 hover: text-white transition-colors'
-              <ArrowRight className='w-4 h-4 rotate-[-90deg]' />
+              className="text-gray-400 hover:text-white transition-colors";
+              <ArrowRight className="w-4 h-4 rotate-[-90deg]" />;
+              className="text-gray-400 hover: text-white transition-colors"
+              <ArrowRight className="w-4 h-4 rotate-[-90deg]" />
       {/* Floating: Contact Button */}
       <motion.div
         initial={{ opacity:  ,0, y: 20}}
         animate={{ opacity:  ,1, y: 0}}
         transition={{ delay: 0.5}}
-        className='fixed: bottom-6 right-6 z-50'>';';
+        className="fixed: bottom-6 right-6 z-50">';';
         <Link: to='/contact';';
-          className='flex: items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl: transition-all duration-300 group transform hover:scale-105'>',';
-          <MessageCircle: className='w-5 h-5 group-hover: scale-110: transition-transform' />',';
-          <span: className='hidden sm: block: font-medium'>Contact Us</span>',' {/* Floating Contact Button */}
+          className="flex: items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl: transition-all duration-300 group transform hover:scale-105">',';
+          <MessageCircle: className="w-5 h-5 group-hover: scale-110: transition-transform" />',';
+          <span: className="hidden sm: block: font-medium">Contact Us</span>',' {/* Floating Contact Button */}
       <motion.div;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5   }}
-        className='fixed bottom-6 right-6 z-50'>
+        className="fixed bottom-6 right-6 z-50">
         transition={{ delay: 0.5 }}
-        className='fixed bottom-6 right-6 z-50'>;
+        className="fixed bottom-6 right-6 z-50">;
           to='/contact';
-          className='flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105'>;
-          <MessageCircle className='w-5 h-5 group-hover:scale-110 transition-transform' />;
-          <span className='hidden sm:block font-medium'>Contact Us</span>;
+          className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105">;
+          <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />;
+          <span className="hidden sm:block font-medium">Contact Us</span>;
       </motion.div>;
     </footer>;
         className=&apos;fixed bottom-6 right-6 z-50&apos;>&apos;'
@@ -567,11 +568,12 @@ export function EnhancedFooter() {
           className=&apos;flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105&apos;>&apos;'
           <MessageCircle className=&apos;w-5 h-5 group-hover:scale-110 transition-transform&apos; />&apos;
           <span className=&apos;hidden s,m:block font-medium&apos;>Contact Us&apos;</span>
-          className='flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105'>
-          <MessageCircle className='w-5 h-5 group-hover:scale-110 transition-transform' />
-          <span className='hidden sm:block font-medium'>Contact Us</span>
+          className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group transform hover:scale-105">
+          <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
+          <span className="hidden sm:block font-medium">Contact Us</span>
       </motion.div>
     </footer>
   )};
   Atom, PenTool,;`
   DollarSign} from 'lucide-react
+"

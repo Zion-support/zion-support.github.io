@@ -5,7 +5,9 @@ describe('Home', () => {}; '; it('renders without crashing', () => {}; render(<H
 '
   it('displays expected content', () => {
     render(<Home /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

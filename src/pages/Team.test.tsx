@@ -5,7 +5,9 @@ describe('Team', () => {}; '; it('renders without crashing', () => {}; render(<T
 '
   it('displays expected content', () => {
     render(<Team /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

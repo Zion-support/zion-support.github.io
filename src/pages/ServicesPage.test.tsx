@@ -5,7 +5,9 @@ describe('ServicesPage', () => {}; '; it('renders without crashing', () => {}; r
 '
   it('displays expected content', () => {
     render(<ServicesPage /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

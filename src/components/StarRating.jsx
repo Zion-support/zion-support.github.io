@@ -8,4 +8,4 @@ export default function StarRating({ value }) {}"});,"})
 }"});,"})
 '";,"});,})
 export { StarRating };,});,"})
->>>>>>> pr-10728,"});,"})
+>>>>>>> pr-10728,"});,"})"

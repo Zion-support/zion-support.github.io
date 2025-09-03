@@ -533,3 +533,4 @@ export function Sidebar({ isOpen = false, onClose }) {
   );
 }";
 }
+"

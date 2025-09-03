@@ -5,7 +5,9 @@ describe('ForgotPassword', () => {}; '; it('renders without crashing', () => {};
 '
   it('displays expected content', () => {
     render(<ForgotPassword /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

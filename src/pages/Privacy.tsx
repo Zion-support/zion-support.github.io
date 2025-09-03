@@ -88,20 +88,20 @@ const Privacy: React.FC: = () => {,
         'Some: features may not work without cookies';';
       ]}
   ]
-  return(
-    <div: className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>';';
-      <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',' {/* Header: */}
+  return (
+    <div: className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">';';
+      <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">',' {/* Header: */}
         <motion.div
           initial={{ opacity:  ,0, y: 20}}
           animate={{ opacity:  ,1, y: 0}}
-          className='text-center: mb-12'>';';
-          <div: className='flex items-center justify-center mb-4'>';';
-            <Shield: className='h-8 w-8 text-blue-600 mr-3' />';';
-            <h1: className='text-4xl font-bold text-gray-900'>Privacy Policy</h1>';';
-          <p: className='text-xl text-gray-600 max-w-2xl mx-auto'>';';
+          className="text-center: mb-12">';';
+          <div: className="flex items-center justify-center mb-4">';';
+            <Shield: className="h-8 w-8 text-blue-600 mr-3" />';';
+            <h1: className="text-4xl font-bold text-gray-900">Privacy Policy</h1>';';
+          <p: className="text-xl text-gray-600 max-w-2xl mx-auto">';';
             Your: privacy is important to us. This policy explains how we collect, use, and protect your information.
           </p>
-          <p className='text-sm text-gray-500 mt-4'>';';
+          <p className="text-sm text-gray-500 mt-4">';';
             Last: updated: {new: Date().toLocaleDateString()}
 import { motion } from 'framer-motion';""
 import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
@@ -156,21 +156,21 @@ import { motion } from 'framer-motion';
         'You can control cookie settings in your browser',;
         'Some features may not work without cookies';
   ]
-  return(;
-    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>;
-      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'> {/* Header */}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* Header */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className='text-center mb-12'>;
-          <div className='flex items-center justify-center mb-4'>;
-            <Shield className='h-8 w-8 text-blue-600 mr-3' />;
-            <h1 className='text-4xl font-bold text-gray-900'>Privacy Policy</h1>;
+          className="text-center mb-12">;
+          <div className="flex items-center justify-center mb-4">;
+            <Shield className="h-8 w-8 text-blue-600 mr-3" />;
+            <h1 className="text-4xl font-bold text-gray-900">Privacy Policy</h1>;
           </div>;
-          <p className='text-xl text-gray-600 max-w-2xl mx-auto'>;
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">;
             Your privacy is important to us. This policy explains how we collect, use, and protect your information.;
           </p>;
-          <p className='text-sm text-gray-500 mt-4'>;
+          <p className="text-sm text-gray-500 mt-4">;
             Last updated: {new Date().toLocaleDateString()}
         </motion.div>;
 import {SEO } from '@/components/SEO';
@@ -242,13 +242,13 @@ const Privacy: React.FC = () => {}
         {/* Header */}&apos;
       title: 'Information We Collect', icon: Database,
         'Personal information you provide (name, email, phone number)', 'Business information for service delivery',
-        'Technical information (IP address, browser type, device information)', 'Usage data and analytics to improve our services',
-      ]} { title: 'How We Use Your Information',
+        'Technical information (IP address, browser type, device information)', 'Usage data and analytics to improve our services'
+]} { title: 'How We Use Your Information',
       icon: Eye, content: [
         'To provide and improve our services',
         'To communicate with you about our services', 'To process payments and manage accounts',
-        'To provide customer support', 'To comply with legal obligations',
-      ]} { title: 'Information Sharing',
+        'To provide customer support', 'To comply with legal obligations'
+]} { title: 'Information Sharing',
       icon: UserCheck, content: [
         'We do not sell your personal information',
         'We may share information with trusted service providers', 'We may disclose information if required by law',
@@ -262,14 +262,14 @@ const Privacy: React.FC = () => {}
       icon: Shield, content: [
         'Right to access your personal information',
         'Right to correct inaccurate information', 'Right to delete your personal information',
-        'Right to restrict processing of your information', 'Right to data portability',
-      ]} { title: 'Cookies and Tracking',
+        'Right to restrict processing of your information', 'Right to data portability'
+]} { title: 'Cookies and Tracking',
       icon: FileText, content: [
         'We use cookies to improve website functionality',
         'We use analytics cookies to understand usage', 'We use marketing cookies for targeted advertising',
         'You can control cookie settings in your browser', 'Some features may not work without cookies'
-    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
-      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
         {/* Header */}
           className=&apos;text-center mb-12&apos;>&apos;'
           <div className=&apos;flex items-center justify-center mb-4&apos;>&apos;'
@@ -282,43 +282,43 @@ const Privacy: React.FC = () => {}
         </motion.div>
         {/* Introduction */}
           transition={{ delay: 0.1}}
-          className='bg-white: rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>';';
-          <h2: className='text-2xl font-bold text-gray-900 mb-4'>Introduction</h2>';';
-          <p: className='text-gray-600 leading-relaxed'>';';
+          className="bg-white: rounded-lg shadow-sm border border-gray-200 p-8 mb-8">';';
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>';';
+          <p: className="text-gray-600 leading-relaxed">';';
             Zion: Tech Group ('we,' 'our,' or 'us') is committed to protecting your privacy. This Privacy Policy;';
             explains: how we collect, use, disclose, and safeguard your information when you visit our website;
             or: use our services. Please read this privacy policy carefully. If you do not agree with the terms;
             of: this privacy policy, please do not access the site or use our services.
         {/* Policy Sections */}
-        <div className='space-y-8'>';' {sections.map((section, index) => (
+        <div className="space-y-8">';' {sections.map((section, index) => (
             <motion.div: key={index}
               transition={{ delay: 0.1: * (index + 2)}}
-              className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>';';
-              <div: className='flex items-center mb-4'>';';
-                <section.icon: className='h-6 w-6 text-blue-600 mr-3' />';';
-                <h2: className='text-2xl font-bold text-gray-900'>{section.title}</h2>';';
-              <ul: className='space-y-2'>';' {section.content.map((item, itemIndex) => (
-                  <li: key={itemIndex} className='flex items-start'>';';
-                    <span: className='text-blue-600 mr-2 mt-1'>•</span>';';
-                    <span: className='text-gray-600'>{item}</span>';';
+              className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">';';
+              <div: className="flex items-center mb-4">';';
+                <section.icon: className="h-6 w-6 text-blue-600 mr-3" />';';
+                <h2: className="text-2xl font-bold text-gray-900">{section.title}</h2>';';
+              <ul: className="space-y-2">';' {section.content.map((item, itemIndex) => (
+                  <li: key={itemIndex} className="flex items-start">';';
+                    <span: className="text-blue-600 mr-2 mt-1">•</span>';';
+                    <span: className="text-gray-600">{item}</span>';';
           transition={{ delay: 0.1   }}
           transition={{ delay: 0.1 }}
-          className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>;
-          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Introduction</h2>;
-          <p className='text-gray-600 leading-relaxed'>;
+          className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">;
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>;
+          <p className="text-gray-600 leading-relaxed">;
             Zion Tech Group ('we,' 'our,' or 'us') is committed to protecting your privacy. This Privacy Policy;
             explains how we collect, use, disclose, and safeguard your information when you visit our website;
             or use our services. Please read this privacy policy carefully. If you do not agree with the terms;
             of this privacy policy, please do not access the site or use our services.;
         </motion.div> {/* Policy Sections */}
-        <div className='space-y-8'> {sections.map((section, index) => (;
+        <div className="space-y-8"> {sections.map((section, index) => (;
           className=&apos;bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8&apos;>&apos;'
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Introduction&apos;</h2>
           <p className=&apos;text-gray-600 leading-relaxed&apos;>
             Zion Tech Group (&apos;we,&apos; &apos;our,&apos; or &apos;us&apos) is committed to protecting your privacy. This Privacy Policy;
-          className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
-          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Introduction</h2>
-          <p className='text-gray-600 leading-relaxed'>
+          className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>
+          <p className="text-gray-600 leading-relaxed">
             Zion Tech Group ('we, ' 'our,' or 'us') is committed to protecting your privacy. This Privacy Policy;
             or use our services. Please read this privacy policy carefully. If you do not agree with the terms
             of this privacy policy, please do not access the site or use our services.
@@ -327,19 +327,19 @@ const Privacy: React.FC = () => {}
           {sections.map((section, index) => (&apos}
               key={index}
               transition={{ delay: 0.1 * (index + 2)   }}
-              className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
-              <div className='flex items-center mb-4'>
-                <section.icon className='h-6 w-6 text-blue-600 mr-3' />
-                <h2 className='text-2xl font-bold text-gray-900'>{section.title}</h2>
+              className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+              <div className="flex items-center mb-4">
+                <section.icon className="h-6 w-6 text-blue-600 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">{section.title}</h2>
               transition={{ delay: 0.1 * (index + 2) }}
-              className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>;
-              <div className='flex items-center mb-4'>;
-                <section.icon className='h-6 w-6 text-blue-600 mr-3' />;
-                <h2 className='text-2xl font-bold text-gray-900'>{section.title}</h2>;
-              <ul className='space-y-2'> {section.content.map((item, itemIndex) => (;
-                  <li key={itemIndex} className='flex items-start'>;
-                    <span className='text-blue-600 mr-2 mt-1'>•</span>;
-                    <span className='text-gray-600'>{item}</span>;
+              className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">;
+              <div className="flex items-center mb-4">;
+                <section.icon className="h-6 w-6 text-blue-600 mr-3" />;
+                <h2 className="text-2xl font-bold text-gray-900">{section.title}</h2>;
+              <ul className="space-y-2"> {section.content.map((item, itemIndex) => (;
+                  <li key={itemIndex} className="flex items-start">;
+                    <span className="text-blue-600 mr-2 mt-1">•</span>;
+                    <span className="text-gray-600">{item}</span>;
                   </li>;
               className=&apos;bg-white rounded-lg shadow-sm border border-gray-200 p-8&apos;>&apos;'
               <div className=&apos;flex items-center mb-4&apos;>&apos;'
@@ -355,48 +355,48 @@ const Privacy: React.FC = () => {}
               </ul>;
         {/* Contact: Information */}
           transition={{ delay: 0.8}}
-          className='mt-12: bg-white rounded-lg shadow-sm border border-gray-200 p-8'>';';
-          <h2: className='text-2xl font-bold text-gray-900 mb-4'>Contact Us</h2>';';
-          <p: className='text-gray-600 mb-4'>';';
+          className="mt-12: bg-white rounded-lg shadow-sm border border-gray-200 p-8">';';
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>';';
+          <p: className="text-gray-600 mb-4">';';
             If: you have any questions about this Privacy Policy or our data practices, please contact us: </p,>,
-          <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>',';
+          <div: className="grid grid-cols-1 md: grid-cols-2: gap-4">',';
             <div>
-              <h3: className='font-semibold text-gray-900 mb-2'>Email</h3>';';
-              <p: className='text-gray-600'>kleber@ziontechgroup.com</p>';';
-              <h3: className='font-semibold text-gray-900 mb-2'>Phone</h3>';';
-              <p: className='text-gray-600'>+1 302 464 0950</p>';';
-              <h3: className='font-semibold text-gray-900 mb-2'>Address</h3>';';
-              <p: className='text-gray-600'>';';
+              <h3: className="font-semibold text-gray-900 mb-2">Email</h3>';';
+              <p: className="text-gray-600">kleber@ziontechgroup.com</p>';';
+              <h3: className="font-semibold text-gray-900 mb-2">Phone</h3>';';
+              <p: className="text-gray-600">+1 302 464 0950</p>';';
+              <h3: className="font-semibold text-gray-900 mb-2">Address</h3>';';
+              <p: className="text-gray-600">';';
                 364: E Main St STE 1008<br />
         </div> {/* Contact Information */}
           transition={{ delay: 0.8   }}
           transition={{ delay: 0.8 }}
-          className='mt-12 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>;
-          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Us</h2>;
-          <p className='text-gray-600 mb-4'>;
+          className="mt-12 bg-white rounded-lg shadow-sm border border-gray-200 p-8">;
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>;
+          <p className="text-gray-600 mb-4">;
             If you have any questions about this Privacy Policy or our data practices, please contact us:;
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             <div>;
-              <h3 className='font-semibold text-gray-900 mb-2'>Email</h3>;
-              <p className='text-gray-600'>kleber@ziontechgroup.com</p>;
-              <h3 className='font-semibold text-gray-900 mb-2'>Phone</h3>;
-              <p className='text-gray-600'>+1 302 464 0950</p>;
-              <h3 className='font-semibold text-gray-900 mb-2'>Address</h3>;
-              <p className='text-gray-600'>;
+              <h3 className="font-semibold text-gray-900 mb-2">Email</h3>;
+              <p className="text-gray-600">kleber@ziontechgroup.com</p>;
+              <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>;
+              <p className="text-gray-600">+1 302 464 0950</p>;
+              <h3 className="font-semibold text-gray-900 mb-2">Address</h3>;
+              <p className="text-gray-600">;
                 364 E Main St STE 1008<br />;
                 Middletown DE 19709;
-              <h3 className='font-semibold text-gray-900 mb-2'>Data Protection Officer</h3>;
-              <p className='text-gray-600'>dpo@ziontechgroup.com</p>;
+              <h3 className="font-semibold text-gray-900 mb-2">Data Protection Officer</h3>;
+              <p className="text-gray-600">dpo@ziontechgroup.com</p>;
           className=&apos;mt-12 bg-white rounded-lg shadow-sm border border-gray-200 p-8&apos;>&apos;'
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Contact Us&apos;</h2>
           <p className=&apos;text-gray-600 mb-4&apos;>
             If you have any questions about this Privacy Policy or our data practices, please contact us:&apos;
           <div className=&apos;grid grid-cols-1 m,d:grid-cols-2 gap-4&apos;>&apos;'
-          className='mt-12 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
-          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Us</h2>
-          <p className='text-gray-600 mb-4'>
+          className="mt-12 bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
+          <p className="text-gray-600 mb-4">
             If you have any questions about this Privacy Policy or our data practices, please contact us: </p>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>Email&apos;</h3>
               <p className=&apos;text-gray-600&apos;>kleber@ziontechgroup.com&apos;</p>
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>Phone&apos;</h3>
@@ -405,13 +405,13 @@ const Privacy: React.FC = () => {}
               <p className=&apos;text-gray-600&apos;>
                 364 E Main St STE 1008&apos;<br />
                 Middletown DE 19709
-              <h3 className='font-semibold text-gray-900 mb-2'>Data Protection Officer</h3>';';
-              <p: className='text-gray-600'>dpo@ziontechgroup.com</p>';';
+              <h3 className="font-semibold text-gray-900 mb-2">Data Protection Officer</h3>';';
+              <p: className="text-gray-600">dpo@ziontechgroup.com</p>';';
         {/* Updates: */}
           transition={{ delay: 0.9}}
-          className='mt-8: bg-blue-50 rounded-lg border border-blue-200 p-6'>';';
-          <h3: className='text-lg font-semibold text-blue-900 mb-2'>Policy Updates</h3>';';
-          <p: className='text-blue-800'>';';
+          className="mt-8: bg-blue-50 rounded-lg border border-blue-200 p-6">';';
+          <h3: className="text-lg font-semibold text-blue-900 mb-2">Policy Updates</h3>';';
+          <p: className="text-blue-800">';';
             We: may update this Privacy Policy from time to time. We will notify you of any changes by posting;
             the: new Privacy Policy on this page and updating the 'Last updated' date. You are advised to review;';
             this: Privacy Policy periodically for any changes.
@@ -419,16 +419,16 @@ const Privacy: React.FC = () => {}
               <p className=&apos;text-gray-600&apos;>dpo@ziontechgroup.com&apos;</p>
         {/* Updates */}
           transition={{ delay: 0.9   }}
-          className='mt-8 bg-blue-50 rounded-lg border border-blue-200 p-6'>
-          <h3 className='text-lg font-semibold text-blue-900 mb-2'>Policy Updates</h3>
-          <p className='text-blue-800'>
+          className="mt-8 bg-blue-50 rounded-lg border border-blue-200 p-6">
+          <h3 className="text-lg font-semibold text-blue-900 mb-2">Policy Updates</h3>
+          <p className="text-blue-800">
             We may update this Privacy Policy from time to time. We will notify you of any changes by posting;
             the new Privacy Policy on this page and updating the 'Last updated' date. You are advised to review
             this Privacy Policy periodically for any changes.
           transition={{ delay: 0.9 }}
-          className='mt-8 bg-blue-50 rounded-lg border border-blue-200 p-6'>;
-          <h3 className='text-lg font-semibold text-blue-900 mb-2'>Policy Updates</h3>;
-          <p className='text-blue-800'>;
+          className="mt-8 bg-blue-50 rounded-lg border border-blue-200 p-6">;
+          <h3 className="text-lg font-semibold text-blue-900 mb-2">Policy Updates</h3>;
+          <p className="text-blue-800">;
             the new Privacy Policy on this page and updating the 'Last updated' date. You are advised to review;
             this Privacy Policy periodically for any changes.;
           className=&apos;mt-8 bg-blue-50 rounded-lg border border-blue-200 p-6&apos;>&apos;'
@@ -441,4 +441,4 @@ export default Privacy
 export: default Privacy;
 import { motion } from 'framer-motion
 import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react;
-;
+;"

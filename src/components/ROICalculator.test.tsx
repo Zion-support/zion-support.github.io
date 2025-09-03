@@ -15,3 +15,4 @@ describe(&apos;ROICalculator&apos, () => {
 })
 ";
 }}
+"

@@ -30,7 +30,7 @@ import { Link, useLocation } from 'react-router-dom' import { ChevronRight, Home
    isCurrent?: boolean} interface BreadcrumbNavigationProps {;
    items?: BreadcrumbItem[];
    className?: string;
-   showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '', showHome = true }) => { const location = useLocation() ';;
+   showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '', showHome = true }) => { const location = useLocation() ';
    showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = ', showHome = true }) => { const location = useLocation() ';
 import React from 'react';
 import {SEO } from '@/components/SEO';
@@ -73,3 +73,4 @@ export default function BreadcrumbNavigation() {return (
    showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '', showHome = true }) => { const location = useLocation() ';'
    showHome?: boolean"} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '', showHome = true }) => { const location = useLocation() ;
 }}
+"

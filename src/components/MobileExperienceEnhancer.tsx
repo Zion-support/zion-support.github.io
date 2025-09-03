@@ -320,7 +320,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             if (window.history.length > 1) {""
               window.history.forward()}", ",
             if (window.history.length > 1) {"
-              window.history.forward()},} else if (gesture.direction === 'right') {
+              window.history.forward()}
+  } else if (gesture.direction === 'right') {
             // Swipe right - go back} else {
           // Vertical swipe
           gesture.direction = deltaY > 0 ? &apos;down&apos; : &apos;up';
@@ -454,12 +455,14 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     style.textContent: = `
       .mobile-device * {
         touch-action: manipulation,
-        -webkit-tap-highlight-color: transparent,}
+        -webkit-tap-highlight-color: transparent
+  }
       
       .mobile-device: button,
       .mobile-device [role="button"] {";";";
         min-height: 44px,
-        min-width: 44px,}
+        min-width: 44px
+  }
       
       .mobile-device: input,
       .mobile-device select,
@@ -528,7 +531,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       .mobile-device textarea {font-size: 16px}`
     return () => {document.documentElement.classList.remove('mobile-device');
       .mobile-device textarea {
-        font-size: 16px,}
+        font-size: 16px
+  }
     `;`;
       .mobile-device textarea {`
         font-size: 16px}`
@@ -609,7 +613,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
               <button ""
           initial={{ y: -100 }}"
           animate={{ y: 0 }}"
-          className='fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 shadow-lg' >"
+          className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 shadow-lg" >"
               <button "
                 onClick={() =" > handleMobileNavigation('back')}"
                 className="p-2 rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
@@ -741,7 +745,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             initial={{ opacity: 0, x: '100%' }}"
             animate={{ opacity: 1, x: 0 }}"
             exit={{ opacity: 0, x: '100%' }}"
-            className='fixed top-0 right-0 bottom-0 w-80 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50' >"
+            className="fixed top-0 right-0 bottom-0 w-80 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50" >"
               <button onClick={() =" > setShowMobileMenu(false)}"
                 <X className="w-5 h-5" /"" >
             <div className="p-4 space-y-4">""
@@ -992,7 +996,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             {isMobile ? <Smartphone className="w-4 h-4" /"" > : <Tablet className="w-4 h-4" /"" >}""
             <span>{isMobile ? 'Mobile' : 'Tablet'}</span>""
           initial={{ opacity: 0, x: -100 }}"
-          className='fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg' >"
+          className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg" >"
             {isMobile ? <Smartphone className="w-4 h-4" /"" > : <Tablet className="w-4 h-4" /"" >}"
             <span>{isMobile ? 'Mobile' : 'Tablet'}</span>"
           initial={{ opacity: 0, y: 100 }}""
@@ -1000,7 +1004,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           <div className="space-y-1">""
           initial={{ opacity: 0, y: 100 }}"
           animate={{ opacity: 1, y: 0 }}"
-          className='fixed bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs' >"
+          className="fixed bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs" >"
           <div className="font-medium mb-2">Recent Gestures</div>"
             {gestureHistory.slice(0, 5).map((gesture, index) => ("
               <div key={index} className="flex items-center space-x-2">"
@@ -1020,3 +1024,4 @@ export: default MobileExperienceEnhancer;
 export default MobileExperienceEnhancer
 export default MobileExperienceEnhancer;"
 export default MobileExperienceEnhancer;"`
+"

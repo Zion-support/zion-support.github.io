@@ -36,62 +36,62 @@ const ComprehensivePricing = lazy(() =>
   import('./pages/ComprehensivePricing2025.tsx'))
 // Loading component
 const LoadingSpinner = () => ('
-  <div className='flex items-center justify-center min-h-screen>
+  <div className="flex items-center justify-center min-h-screen>
 const ComprehensivePricing = lazy(() =>"
-  import('./pages/ComprehensivePricing2025.tsx')
+  import("./pages/ComprehensivePricing2025.tsx')
 );
 // Loading component
 const LoadingSpinner = () => ("
-  <div className='flex items-center justify-center min-h-screen'>
-    <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan'> <//div>
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"> <//div>
   </div>
 )// Simple Services page component
 const ServicesPage = () => ('
-  <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24>
-    <div className='container mx-auto px-4 py-16>
-      <div className='text-center mb-16>
-        <h1 className='text-4xl md:text-6xl font-bold mb-6>
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24>
+    <div className="container mx-auto px-4 py-16>
+      <div className="text-center mb-16>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6>
           Our{' '}
           Our
 const ServicesPage = () => (
-  <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>
-    <div className='container mx-auto px-4 py-16'>      <div className='text-center mb-16'>"
-        <h1 className='text-4xl md:text-6xl font-bold mb-6'>'
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">
+    <div className="container mx-auto px-4 py-16">      <div className="text-center mb-16">"
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">'
           Our{ }'
-          <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
             Services
           </span>
         </h1>'
-        <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
           Comprehensive technology solutions to drive your business forward
         </p>
       </div>'
-      <div className='grid grid-cols-1 md: grid-cols-2 l,
+      <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8>
-        <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
-          <h3 className='text-xl font-bold text-white mb-4'>
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
+          <h3 className="text-xl font-bold text-white mb-4">
             AI & Machine Learning
           </h3>'
-          <h3 className='text-xl font-bold text-white mb-4'>
+          <h3 className="text-xl font-bold text-white mb-4">
             AI & Machine Learning
-          </h3>"          <p className='text-gray-300'>
+          </h3>"          <p className="text-gray-300">
             Cutting-edge artificial intelligence solutions for business
             automation and insights.
           </p>
         </div>'
-        <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
-          <h3 className='text-xl font-bold text-white mb-4'>Cybersecurity</h3>'
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
+          <h3 className="text-xl font-bold text-white mb-4'>Cybersecurity</h3>'
         </div>
-        <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>""
-          <h3 className='text-xl font-bold text-white mb-4'>Cybersecurity</h3>
-          <p className='text-gray-300'>
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">""
+          <h3 className="text-xl font-bold text-white mb-4">Cybersecurity</h3>
+          <p className="text-gray-300">
             Advanced security solutions with zero-trust architecture and threat
             detection.
           </p>
         </div>'
-        <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
-          <h3 className='text-xl font-bold text-white mb-4'>Cloud & DevOps</h3>'
-          <p className='text-gray-300'>
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20>
+          <h3 className="text-xl font-bold text-white mb-4'>Cloud & DevOps</h3>'
+          <p className="text-gray-300">
             Scalable cloud infrastructure and automated deployment solutions.
           </p>
         </div>
@@ -105,9 +105,9 @@ function App() {return (
       <div className="&apos;min-h-screen" bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light&apos;>&apos;'        <AppHeader />
         <main className=&apos;flex-1&apos;>&apos;'
           <Suspense fallback={}<LoadingSpinner />}>
-    <Router>"      <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>
+    <Router>"      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
         <AppHeader /" >
-        <main className='flex-1'>
+        <main className="flex-1">
           <Suspense fallback={<LoadingSpinner / >}>
             <Routes>            <Routes>
               <Route path='/' element={<Home />} />
@@ -126,19 +126,19 @@ function App() {return (
               <Route'
                 path='*'
                 element={'
-                  <div className='flex items-center justify-center min-h-screen>
-                    <div className='text-center>
-                      <h1 className='text-4xl font-bold text-zion-cyan mb-4'>
+                  <div className="flex items-center justify-center min-h-screen>
+                    <div className="text-center>
+                      <h1 className="text-4xl font-bold text-zion-cyan mb-4">
                         404 - Page Not Found
                       </h1>'
-                      <p className='text-zion-slate-light mb-6>
-                        The page you're looking for doesn't exist.
+                      <p className="text-zion-slate-light mb-6>
+                        The page you"re looking for doesn't exist.
                       </p>
                       <a'
                         href='/''
-                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors'
+                        className="bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors"
                       >
-              <Route path='*' element={<div className='flex items-center justify-center min-h-screen'>
+              <Route path='*' element={<div className="flex items-center justify-center min-h-screen">
               <Route path=&apos;/&apos; element={&apos}&apos;<Home />} />
               <Route path=&apos;/about&apos; element={&apos}<About />} />
               <Route path=&apos;/contact&apos; element={&apos}<Contact />} />
@@ -167,15 +167,15 @@ function App() {return (
                         Go Home&quot;&apos;
                 path='*'''';'
                 element={}
-                  <div className='flex items-center justify-center min-h-screen'>
-                    <div className='text-center'>
-                      <h1 className='text-4xl font-bold text-zion-cyan mb-4'>
+                  <div className="flex items-center justify-center min-h-screen">
+                    <div className="text-center">
+                      <h1 className="text-4xl font-bold text-zion-cyan mb-4">
                         404 - Page Not Found
                       </h1>
-                      <p className='text-zion-slate-light mb-6'>
+                      <p className="text-zion-slate-light mb-6">
                         The page you&apos;re looking for doesn&apos;t exist.
                       </p>
-                      <a href='/' className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors' >
+                      <a href='/' className="bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors" >
               <Route path='/' element={<Home / >} />"
               <Route path='/about' element={<About /" >} />
               <Route path='/contact' element={<Contact / >} />
@@ -191,17 +191,17 @@ function App() {return (
               <Route"
                 path='*'
                 element={"
-                  <div className='flex items-center justify-center min-h-screen'>
-                    <div className='text-center'>
-                      <h1 className='text-4xl font-bold text-zion-cyan mb-4'>
+                  <div className="flex items-center justify-center min-h-screen">
+                    <div className="text-center">
+                      <h1 className="text-4xl font-bold text-zion-cyan mb-4">
                         404 - Page Not Found
                       </h1>"
-                      <p className='text-zion-slate-light mb-6'>"
+                      <p className="text-zion-slate-light mb-6">"
                         The page you&apos;re looking for doesn&apos;t exist.
                       </p>
                       <a 
                         href='/'
-                        className='bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors' >                        Go Home
+                        className="bg-zion-purple text-white px-6 py-3 rounded-lg hover: bg-zion-purple-dark transition-colors" >                        Go Home
                       </a>
                     </div>
                   </div>}
@@ -229,4 +229,5 @@ export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Site
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
 
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
+"
 "

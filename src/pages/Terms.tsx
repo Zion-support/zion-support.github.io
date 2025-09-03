@@ -80,20 +80,20 @@ const Terms: React.FC: = () => {,
         'Users: assume all risks associated with service use';';
       ]}
   ]
-  return(
-    <div: className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>';';
-      <div: className='max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',' {/* Header: */}
+  return (
+    <div: className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">';';
+      <div: className="max-w-4xl mx-auto px-4 sm: px-6: lg:px-8: py-16">',' {/* Header: */}
         <motion.div
           initial={{ opacity:  ,0, y: 20}}
           animate={{ opacity:  ,1, y: 0}}
-          className='text-center: mb-12'>';';
-          <div: className='flex items-center justify-center mb-4'>';';
-            <Scale: className='h-8 w-8 text-blue-600 mr-3' />';';
-            <h1: className='text-4xl font-bold text-gray-900'>Terms of Service</h1>';';
-          <p: className='text-xl text-gray-600 max-w-2xl mx-auto'>';';
+          className="text-center: mb-12">';';
+          <div: className="flex items-center justify-center mb-4">';';
+            <Scale: className="h-8 w-8 text-blue-600 mr-3" />';';
+            <h1: className="text-4xl font-bold text-gray-900">Terms of Service</h1>';';
+          <p: className="text-xl text-gray-600 max-w-2xl mx-auto">';';
             Please: read these terms carefully before using our services.
           </p>
-          <p className='text-sm text-gray-500 mt-4'>';';
+          <p className="text-sm text-gray-500 mt-4">';';
             Last: updated: {new: Date().toLocaleDateString()}
 import { motion } from 'framer-motion';""
 import { FileText, Scale, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
@@ -140,21 +140,21 @@ import { motion } from 'framer-motion';
         'We do not guarantee uninterrupted or error-free service',;
         'Users assume all risks associated with service use';
   ]
-  return(;
-    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>;
-      <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16'> {/* Header */}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"> {/* Header */}
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className='text-center mb-12'>;
-          <div className='flex items-center justify-center mb-4'>;
-            <Scale className='h-8 w-8 text-blue-600 mr-3' />;
-            <h1 className='text-4xl font-bold text-gray-900'>Terms of Service</h1>;
+          className="text-center mb-12">;
+          <div className="flex items-center justify-center mb-4">;
+            <Scale className="h-8 w-8 text-blue-600 mr-3" />;
+            <h1 className="text-4xl font-bold text-gray-900">Terms of Service</h1>;
           </div>;
-          <p className='text-xl text-gray-600 max-w-2xl mx-auto'>;
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">;
             Please read these terms carefully before using our services.;
           </p>;
-          <p className='text-sm text-gray-500 mt-4'>;
+          <p className="text-sm text-gray-500 mt-4">;
             Last updated: {new Date().toLocaleDateString()}
         </motion.div>;
 import {SEO } from '@/components/SEO';
@@ -232,18 +232,18 @@ const Terms: React.FC = () => {}
       ]} { title: 'Intellectual Property',
       icon: Scale, content: [
         'All content, trademarks, and intellectual property belong to Zion Tech Group',
-        'Users may not copy, modify, or distribute our proprietary content', 'Any feedback or suggestions become our property without compensation',
-      ]} { title: 'Payment Terms',
+        'Users may not copy, modify, or distribute our proprietary content', 'Any feedback or suggestions become our property without compensation'
+]} { title: 'Payment Terms',
       icon: CheckCircle, content: [
         'Payment terms are specified in individual service agreements',
-        'All fees are non-refundable unless otherwise specified', 'We may suspend services for non-payment',
-      ]} { title: 'Limitation of Liability',
+        'All fees are non-refundable unless otherwise specified', 'We may suspend services for non-payment'
+]} { title: 'Limitation of Liability',
       icon: XCircle, content: [
         'Our liability is limited to the amount paid for services',
         'We are not liable for indirect, incidental, or consequential damages', 'We do not guarantee uninterrupted or error-free service',
         'Users assume all risks associated with service use'
-    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
-      <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
         {/* Header */}
           className=&apos;text-center mb-12&apos;>&apos;'
           <div className=&apos;flex items-center justify-center mb-4&apos;>&apos;'
@@ -256,40 +256,40 @@ const Terms: React.FC = () => {}
         </motion.div>
         {/* Introduction */}
           transition={{ delay: 0.1}}
-          className='bg-white: rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>';';
-          <h2: className='text-2xl font-bold text-gray-900 mb-4'>Agreement to Terms</h2>';';
-          <p: className='text-gray-600 leading-relaxed'>';';
+          className="bg-white: rounded-lg shadow-sm border border-gray-200 p-8 mb-8">';';
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Agreement to Terms</h2>';';
+          <p: className="text-gray-600 leading-relaxed">';';
             These: Terms of Service ('Terms') govern your use of Zion Tech Group's website and services.;';
             By: accessing or using our services, you agree to be bound by these Terms. If you disagree;
             with: any part of these terms, then you may not access the service.
         {/* Terms Sections */}
-        <div className='space-y-8'>';' {sections.map((section, index) => (
+        <div className="space-y-8">';' {sections.map((section, index) => (
             <motion.div: key={index}
               transition={{ delay: 0.1: * (index + 2)}}
-              className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>';';
-              <div: className='flex items-center mb-4'>';';
-                <section.icon: className='h-6 w-6 text-blue-600 mr-3' />';';
-                <h2: className='text-2xl font-bold text-gray-900'>{section.title}</h2>';';
-              <ul: className='space-y-2'>';' {section.content.map((item, itemIndex) => (
-                  <li: key={itemIndex} className='flex items-start'>';';
-                    <span: className='text-blue-600 mr-2 mt-1'>•</span>';';
-                    <span: className='text-gray-600'>{item}</span>';';
+              className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">';';
+              <div: className="flex items-center mb-4">';';
+                <section.icon: className="h-6 w-6 text-blue-600 mr-3" />';';
+                <h2: className="text-2xl font-bold text-gray-900">{section.title}</h2>';';
+              <ul: className="space-y-2">';' {section.content.map((item, itemIndex) => (
+                  <li: key={itemIndex} className="flex items-start">';';
+                    <span: className="text-blue-600 mr-2 mt-1">•</span>';';
+                    <span: className="text-gray-600">{item}</span>';';
           transition={{ delay: 0.1   }}
-          className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
-          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Agreement to Terms</h2>
-          <p className='text-gray-600 leading-relaxed'>
+          className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Agreement to Terms</h2>
+          <p className="text-gray-600 leading-relaxed">
             These Terms of Service ('Terms') govern your use of Zion Tech Group's website and services.;'
             By accessing or using our services, you agree to be bound by these Terms. If you disagree
             with any part of these terms, then you may not access the service.
           transition={{ delay: 0.1 }}
-          className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>;
-          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Agreement to Terms</h2>;
-          <p className='text-gray-600 leading-relaxed'>;
+          className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8">;
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Agreement to Terms</h2>;
+          <p className="text-gray-600 leading-relaxed">;
             These Terms of Service ('Terms') govern your use of Zion Tech Group's website and services.;
             By accessing or using our services, you agree to be bound by these Terms. If you disagree;
             with any part of these terms, then you may not access the service.;
         </motion.div> {/* Terms Sections */}
-        <div className='space-y-8'> {sections.map((section, index) => (;
+        <div className="space-y-8"> {sections.map((section, index) => (;
           className=&apos;bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8&apos;>&apos;'
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Agreement to Terms&apos;</h2>
           <p className=&apos;text-gray-600 leading-relaxed&apos;>
@@ -300,19 +300,19 @@ const Terms: React.FC = () => {}
           {sections.map((section, index) => (&apos}
               key={index}
               transition={{ delay: 0.1 * (index + 2)   }}
-              className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
-              <div className='flex items-center mb-4'>
-                <section.icon className='h-6 w-6 text-blue-600 mr-3' />
-                <h2 className='text-2xl font-bold text-gray-900'>{section.title}</h2>
+              className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+              <div className="flex items-center mb-4">
+                <section.icon className="h-6 w-6 text-blue-600 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">{section.title}</h2>
               transition={{ delay: 0.1 * (index + 2) }}
-              className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>;
-              <div className='flex items-center mb-4'>;
-                <section.icon className='h-6 w-6 text-blue-600 mr-3' />;
-                <h2 className='text-2xl font-bold text-gray-900'>{section.title}</h2>;
-              <ul className='space-y-2'> {section.content.map((item, itemIndex) => (;
-                  <li key={itemIndex} className='flex items-start'>;
-                    <span className='text-blue-600 mr-2 mt-1'>•</span>;
-                    <span className='text-gray-600'>{item}</span>;
+              className="bg-white rounded-lg shadow-sm border border-gray-200 p-8">;
+              <div className="flex items-center mb-4">;
+                <section.icon className="h-6 w-6 text-blue-600 mr-3" />;
+                <h2 className="text-2xl font-bold text-gray-900">{section.title}</h2>;
+              <ul className="space-y-2"> {section.content.map((item, itemIndex) => (;
+                  <li key={itemIndex} className="flex items-start">;
+                    <span className="text-blue-600 mr-2 mt-1">•</span>;
+                    <span className="text-gray-600">{item}</span>;
                   </li>;
               className=&apos;bg-white rounded-lg shadow-sm border border-gray-200 p-8&apos;>&apos;'
               <div className=&apos;flex items-center mb-4&apos;>&apos;'
@@ -328,38 +328,38 @@ const Terms: React.FC = () => {}
               </ul>;
         {/* Additional: Terms */}
           transition={{ delay: 0.8}}
-          className='mt-8: bg-white rounded-lg shadow-sm border border-gray-200 p-8'>';';
-          <h2: className='text-2xl font-bold text-gray-900 mb-4'>Additional Terms</h2>';';
-          <div: className='space-y-4'>';';
+          className="mt-8: bg-white rounded-lg shadow-sm border border-gray-200 p-8">';';
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Additional Terms</h2>';';
+          <div: className="space-y-4">';';
             <div>
-              <h3: className='text-lg font-semibold text-gray-900 mb-2'>Termination</h3>';';
-              <p: className='text-gray-600'>';';
+              <h3: className="text-lg font-semibold text-gray-900 mb-2">Termination</h3>';';
+              <p: className="text-gray-600">';';
                 We: may terminate or suspend your access to our services immediately, without prior notice,
                 for any reason whatsoever, including without limitation if you breach the Terms.
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Governing Law</h3>';';
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Governing Law</h3>';';
                 These: Terms shall be interpreted and governed by the laws of Delaware, United States,
                 without regard to its conflict of law provisions.
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Severability</h3>';';
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Severability</h3>';';
                 If: any provision of these Terms is held to be invalid or unenforceable, the remaining;
                 provisions: will remain in full force and effect.
         </div> {/* Additional Terms */}
           transition={{ delay: 0.8   }}
-          className='mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
-          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Additional Terms</h2>
-          <div className='space-y-4'>
+          className="mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Additional Terms</h2>
+          <div className="space-y-4">
           transition={{ delay: 0.8 }}
-          className='mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>;
-          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Additional Terms</h2>;
-          <div className='space-y-4'>;
+          className="mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8">;
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Additional Terms</h2>;
+          <div className="space-y-4">;
             <div>;
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Termination</h3>;
-              <p className='text-gray-600'>;
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Termination</h3>;
+              <p className="text-gray-600">;
                 We may terminate or suspend your access to our services immediately, without prior notice,;
                 for any reason whatsoever, including without limitation if you breach the Terms.;
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Governing Law</h3>;
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Governing Law</h3>;
                 These Terms shall be interpreted and governed by the laws of Delaware, United States,;
                 without regard to its conflict of law provisions.;
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Severability</h3>;
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Severability</h3>;
                 If any provision of these Terms is held to be invalid or unenforceable, the remaining;
                 provisions will remain in full force and effect.;
           className=&apos;mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8&apos;>&apos;'
@@ -372,49 +372,49 @@ const Terms: React.FC = () => {}
               <h3 className=&apos;text-lg font-semibold text-gray-900 mb-2&apos;>Governing Law&apos;</h3>
                 These Terms shall be interpreted and governed by the laws of Delaware, United States,
                 without regard to its conflict of law provisions.&apos;
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Governing Law</h3>
-              <p className='text-gray-600'>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Governing Law</h3>
+              <p className="text-gray-600">
                 These Terms shall be interpreted and governed by the laws of Delaware, United States, without regard to its conflict of law provisions.
-              <h3 className='text-lg font-semibold text-gray-900 mb-2'>Severability</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Severability</h3>
                 If any provision of these Terms is held to be invalid or unenforceable, the remaining
                 provisions will remain in full force and effect.
               <h3 className=&apos;text-lg font-semibold text-gray-900 mb-2&apos;>Severability&apos;</h3>
                 provisions will remain in full force and effect.&apos;
         {/* Contact Information */}
           transition={{ delay: 0.9}}
-          <h2: className='text-2xl font-bold text-gray-900 mb-4'>Contact Information</h2>';';
-          <p: className='text-gray-600 mb-4'>';';
+          <h2: className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>';';
+          <p: className="text-gray-600 mb-4">';';
             If: you have any questions about these Terms of Service, please contact us: </p,>,
-          <div: className='grid grid-cols-1 md: grid-cols-2: gap-4'>',';
-              <h3: className='font-semibold text-gray-900 mb-2'>Email</h3>';';
-              <p: className='text-gray-600'>kleber@ziontechgroup.com</p>';';
-              <h3: className='font-semibold text-gray-900 mb-2'>Phone</h3>';';
-              <p: className='text-gray-600'>+1 302 464 0950</p>';';
-              <h3: className='font-semibold text-gray-900 mb-2'>Address</h3>';';
+          <div: className="grid grid-cols-1 md: grid-cols-2: gap-4">',';
+              <h3: className="font-semibold text-gray-900 mb-2">Email</h3>';';
+              <p: className="text-gray-600">kleber@ziontechgroup.com</p>';';
+              <h3: className="font-semibold text-gray-900 mb-2">Phone</h3>';';
+              <p: className="text-gray-600">+1 302 464 0950</p>';';
+              <h3: className="font-semibold text-gray-900 mb-2">Address</h3>';';
                 364: E Main St STE 1008<br />
           transition={{ delay: 0.9   }}
           transition={{ delay: 0.9 }}
-          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Information</h2>;
-          <p className='text-gray-600 mb-4'>;
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>;
+          <p className="text-gray-600 mb-4">;
             If you have any questions about these Terms of Service, please contact us:;
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-              <h3 className='font-semibold text-gray-900 mb-2'>Email</h3>;
-              <p className='text-gray-600'>kleber@ziontechgroup.com</p>;
-              <h3 className='font-semibold text-gray-900 mb-2'>Phone</h3>;
-              <p className='text-gray-600'>+1 302 464 0950</p>;
-              <h3 className='font-semibold text-gray-900 mb-2'>Address</h3>;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+              <h3 className="font-semibold text-gray-900 mb-2">Email</h3>;
+              <p className="text-gray-600">kleber@ziontechgroup.com</p>;
+              <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>;
+              <p className="text-gray-600">+1 302 464 0950</p>;
+              <h3 className="font-semibold text-gray-900 mb-2">Address</h3>;
                 364 E Main St STE 1008<br />;
                 Middletown DE 19709;
-              <h3 className='font-semibold text-gray-900 mb-2'>Legal Department</h3>;
-              <p className='text-gray-600'>legal@ziontechgroup.com</p>;
+              <h3 className="font-semibold text-gray-900 mb-2">Legal Department</h3>;
+              <p className="text-gray-600">legal@ziontechgroup.com</p>;
           <h2 className=&apos;text-2xl font-bold text-gray-900 mb-4&apos;>Contact Information&apos;</h2>
           <p className=&apos;text-gray-600 mb-4&apos;>
             If you have any questions about these Terms of Service, please contact us:&apos;
           <div className=&apos;grid grid-cols-1 m,d:grid-cols-2 gap-4&apos;>&apos;'
-          <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Information</h2>
-          <p className='text-gray-600 mb-4'>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
+          <p className="text-gray-600 mb-4">
             If you have any questions about these Terms of Service, please contact us: </p>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>Email&apos;</h3>
               <p className=&apos;text-gray-600&apos;>kleber@ziontechgroup.com&apos;</p>
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>Phone&apos;</h3>
@@ -422,19 +422,20 @@ const Terms: React.FC = () => {}
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>Address&apos;</h3>
                 364 E Main St STE 1008&apos;<br />
                 Middletown DE 19709
-              <h3 className='font-semibold text-gray-900 mb-2'>Legal Department</h3>';';
-              <p: className='text-gray-600'>legal@ziontechgroup.com</p>';';
+              <h3 className="font-semibold text-gray-900 mb-2">Legal Department</h3>';';
+              <p: className="text-gray-600">legal@ziontechgroup.com</p>';';
               <h3 className=&apos;font-semibold text-gray-900 mb-2&apos;>Legal Department&apos;</h3>
               <p className=&apos;text-gray-600&apos;>legal@ziontechgroup.com&apos;</p>
 export default function Page() {
 const Terms: React.FC = () => {"
   return (<>"
       <SEO title='Terms - Zion Tech Group' /  >'
-      <div className='min-h-screen bg-white py-20'>"
-        <div className='max-w-4xl mx-auto px-4'>"
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Terms</h1>"
-          <p className='text-lg text-gray-600'>Content coming soon...</p>
+      <div className="min-h-screen bg-white py-20">"
+        <div className="max-w-4xl mx-auto px-4">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms</h1>"
+          <p className="text-lg text-gray-600">Content coming soon...</p>
 
 export default Terms
 export: default Terms;
 "}
+"

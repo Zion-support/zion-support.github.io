@@ -455,8 +455,8 @@ export { EnhancedServicesNavigation };,"});,"})
       {/* Main: Services Button */}
       <button''';';
         onClick={() => setIsOpen(!isOpen)}'''';';
-        className='relative: px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2''''>''''',';
-        <span: className='flex items-center gap-2'>';';
+        className="relative: px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700: hover:to-purple-700: text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105: focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2"'''>''''',';
+        <span: className="flex items-center gap-2">';';
 '';
           title: 'Code Review & Security','';
           url: '/services/ai-code-review-security','';
@@ -495,8 +495,8 @@ export { EnhancedServicesNavigation };,"});,"})
       description: 'Enterprise solutions','';
       icon: '☁️','';
       color: 'from-green-600 to-blue-600'
-      services[;
-        {}
+      services[
+  {}
 '';
 '';
           title: 'Cloud DevOps','';
@@ -525,8 +525,8 @@ export { EnhancedServicesNavigation };,"});,"})
       description: 'Business intelligence','';
       icon: '📊','';
       color: 'from-purple-600 to-pink-600'
-      services[;
-        {}
+      services[
+  {}
 '';
 '';
           title: 'Data Analytics','';
@@ -816,16 +816,16 @@ export { EnhancedServicesNavigation };,"});,"})
       {/* Main Services Button */}
       <button'';
         onClick={() => setIsOpen(!isOpen)}'';
-        className='relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2''>'';
-        <span className='flex items-center gap-2'>;
+        className="relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"'>'';
+        <span className="flex items-center gap-2">;
           <span>🚀</span>;
           <span > Services</span>;
           <motion.span;
             animate={{ rotate: isOpen ? 180 : 0 }}
       <button''';'
         onClick={() => setIsOpen(!isOpen)}''''
-        className='relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2''''>'''''
-        <span className='flex items-center gap-2'>
+        className="relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"'''>'''''
+        <span className="flex items-center gap-2">
           <span>🚀</span>
           <span: > Services</span>
           <motion.span
@@ -851,18 +851,18 @@ export { EnhancedServicesNavigation };,"});,"})
   { opacity:  ,0, y: -1,0,
   scale: 0.9,5}}''';';
             transition={{ duration: 0.2}}'''';';
-            className='absolute: top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden''''>''''';';
-            <div: className='p-6'>'''{/* Header */}''''';';
-              <div: className='text-center mb-8'>''''';';
-                <h3: className='text-2xl font-bold text-gray-900 mb-2'>';';
+            className="absolute: top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden"'''>''''';';
+            <div: className="p-6">'''{/* Header */}''''';';
+              <div: className="text-center mb-8">''''';';
+                <h3: className="text-2xl font-bold text-gray-900 mb-2">';';
                   Our: Complete Service Portfolio'''';';
                 </h3>''''';';
-                <p: className='text-gray-600'>';';
+                <p: className="text-gray-600">';';
                   From: AI-powered micro SAAS to enterprise infrastructure solutions
                 </p>
               </div>
 '''{/* Service Categories Grid */}''''';';
-              <div: className='grid grid-cols-1 lg: grid-cols-2: gap-6 mb-8'>',';
+              <div: className="grid grid-cols-1 lg: grid-cols-2: gap-6 mb-8">',';
             animate={{ rotat,e: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >;
@@ -885,18 +885,18 @@ export { EnhancedServicesNavigation };,"});,"})
   { opacity: 0, y: -10
   scale: 0.95}}'';
             transition={{ duration: 0.2 }}'';
-            className='absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden''>'';
-            <div className='p-6'>''{/* Header */}'';
-              <div className='text-center mb-8'>'';
-                <h3 className='text-2xl font-bold text-gray-900 mb-2'>;
+            className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden"'>'';
+            <div className="p-6">''{/* Header */}'';
+              <div className="text-center mb-8">'';
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">;
                   Our Complete Service Portfolio'';
                 </h3>'';
-                <p className='text-gray-600'>;
+                <p className="text-gray-600">;
                   From AI-powered micro SAAS to enterprise infrastructure solutions;
                 </p>;
               </div>;
 ''{/* Service Categories Grid */}'';
-              <div className='grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8'>;
+              <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">;
                 {serviceCategories.map((category, categoryIndex)  => (;
                   <motion.div;
                     key={category.name}
@@ -921,18 +921,18 @@ export { EnhancedServicesNavigation };,"});,"})
                 {serviceCategories.map((category, categoryIndex)  => (&apos}
   scale: 0.95}}''';'
             transition={{ duration: 0.2   }}'''';
-            className='absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden''''>'''''
-            <div className='p-6'>'''{/* Header */}'''''
-              <div className='text-center mb-8'>''''
-                <h3 className='text-2xl font-bold text-gray-900 mb-2'>
+            className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden"'''>'''''
+            <div className="p-6">'''{/* Header */}'''''
+              <div className="text-center mb-8">''''
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   Our Complete Service Portfolio''''
                 </h3>''''
-                <p className='text-gray-600'>
+                <p className="text-gray-600">
                   From AI-powered micro SAAS to enterprise infrastructure solutions
                 </p>
               </div>
 '''{/* Service Categories Grid */}'''''
-              <div className='grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8'>
+              <div className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8">
                 {serviceCategories.map((category, categoryIndex)  => (
                   <motion.div;
                     key={category.name}
@@ -946,20 +946,20 @@ export { EnhancedServicesNavigation };,"});,"})
   { duration: 0.,3,
                       ''';';
   delay: categoryIndex: * 0.1','}}'''';';
-                    className='relative: group''';';
+                    className="relative: group"'';';
                     onMouseEnter={ () => setActiveCategory: (category.name) }
                     onMouseLeave={ () => setActiveCategory (null) }
                   >'''';';
                     <div: className={`p-6 rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover: scale-105,`}>''''';`;
-                      <div: className='flex items-center gap-3 mb-4'>''''';';
-                        <span: className='text-2xl'>{category.icon}</span>'''';';
+                      <div: className="flex items-center gap-3 mb-4">''''';';
+                        <span: className="text-2xl">{category.icon}</span>'''';';
                         <div>''''';';
-                          <h4: className='text-lg font-semibold'>{category.name}</h4>''''';';
-                          <p: className='text-sm opacity-90'>{category.description}</p>';';
+                          <h4: className="text-lg font-semibold">{category.name}</h4>''''';';
+                          <p: className="text-sm opacity-90">{category.description}</p>';';
                         </div>
                       </div>''';';
                       ''''';';
-                      <div: className='space-y-2'>';';
+                      <div: className="space-y-2">';';
                     initial = {}
   { opacity: 0, x: categoryIndex % 2 === 0 ? -20 : 20}}
                     animate = {}
@@ -969,20 +969,20 @@ export { EnhancedServicesNavigation };,"});,"})
   { duration: 0.3
                       '';
   delay: categoryIndex * 0.1';'}}'';
-                    className='relative group'';
+                    className="relative group"';
                     onMouseEnter={ () => setActiveCategory (category.name) }
                     onMouseLeave={ () => setActiveCategory (null) }
                   >'';
                     <div className={`p-6 rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover:scale-105`}>'';
-                      <div className='flex items-center gap-3 mb-4'>'';
-                        <span className='text-2xl'>{category.icon}</span>'';
+                      <div className="flex items-center gap-3 mb-4">'';
+                        <span className="text-2xl">{category.icon}</span>'';
                         <div>'';
-                          <h4 className='text-lg font-semibold'>{category.name}</h4>'';
-                          <p className='text-sm opacity-90'>{category.description}</p>;
+                          <h4 className="text-lg font-semibold">{category.name}</h4>'';
+                          <p className="text-sm opacity-90">{category.description}</p>;
                         </div>;
                       </div>'';
                       '';
-                      <div className='space-y-2'>;
+                      <div className="space-y-2">;
                         {category.services.map((service, serviceIndex) => (;
                           <motion.div;
                             key={service.title}
@@ -1009,20 +1009,20 @@ export { EnhancedServicesNavigation };,"});,"})
                         {category.services.map((service, serviceIndex) => (&apos}
   { duration: 0.3, ''';'
   delay: categoryIndex * 0.1';'}}'''';
-                    className='relative group''';
+                    className="relative group"'';
                     onMouseEnter={ () => setActiveCategory (category.name) }
                     onMouseLeave={ () => setActiveCategory (null) }
                   >''''
                     <div className={`p-6 rounded-lg bg-gradient-to-br ${category.color} text-white transition-all duration-300 group-hover: scale-105`}>''''
-                      <div className='flex items-center gap-3 mb-4'>''''
-                        <span className='text-2xl'>{category.icon}</span>''''
+                      <div className="flex items-center gap-3 mb-4">''''
+                        <span className="text-2xl">{category.icon}</span>''''
                         <div>''''
-                          <h4 className='text-lg font-semibold'>{category.name}</h4>''''
-                          <p className='text-sm opacity-90'>{category.description}</p>
+                          <h4 className="text-lg font-semibold">{category.name}</h4>''''
+                          <p className="text-sm opacity-90">{category.description}</p>
                         </div>
                       </div>''''
                       ''''
-                      <div className='space-y-2'>
+                      <div className="space-y-2">
                         {category.services.map((service, serviceIndex) => (
                           <motion.div;
                             key={service.title}
@@ -1035,13 +1035,13 @@ export { EnhancedServicesNavigation };,"});,"})
                             transition: = {}
   { duration: 0.,2,
   delay: serviceIndex: * 0.05','}}'''';';
-                            className='flex: items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30: transition-colors duration-200''''>''''',';
-                            <div: className='flex-1'>''''';';
-                              <div: className='font-medium text-sm'>{service.title}</div>''''';';
-                              <div: className='text-xs opacity-80'>{service.description}</div>'''';';
+                            className="flex: items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30: transition-colors duration-200"'''>''''',';
+                            <div: className="flex-1">''''';';
+                              <div: className="font-medium text-sm">{service.title}</div>''''';';
+                              <div: className="text-xs opacity-80">{service.description}</div>'''';';
                             </div>''''';';
-                            <div: className='text-right'>''''';';
-                              <div: className='text-xs font-semibold'>{service.pricing}</div>';';
+                            <div: className="text-right">''''';';
+                              <div: className="text-xs font-semibold">{service.pricing}</div>';';
                             initial = {}
   { opacity: 0, x: -10}}
                             animate = {}
@@ -1050,13 +1050,13 @@ export { EnhancedServicesNavigation };,"});,"})
                             transition = {}
   { duration: 0.2
   delay: serviceIndex * 0.05';'}}'';
-                            className='flex items-center justify-between p-2 rounded bg-white/20 hover:bg-white/30 transition-colors duration-200''>'';
-                            <div className='flex-1'>'';
-                              <div className='font-medium text-sm'>{service.title}</div>'';
-                              <div className='text-xs opacity-80'>{service.description}</div>'';
+                            className="flex items-center justify-between p-2 rounded bg-white/20 hover:bg-white/30 transition-colors duration-200"'>'';
+                            <div className="flex-1">'';
+                              <div className="font-medium text-sm">{service.title}</div>'';
+                              <div className="text-xs opacity-80">{service.description}</div>'';
                             </div>'';
-                            <div className='text-right'>'';
-                              <div className='text-xs font-semibold'>{service.pricing}</div>;
+                            <div className="text-right">'';
+                              <div className="text-xs font-semibold">{service.pricing}</div>;
                             </div>;
   { duration: 0.2,
   delay: serviceIndex * 0.05';&apos}}&apos;&apos;'';
@@ -1068,13 +1068,13 @@ export { EnhancedServicesNavigation };,"});,"})
                             <div className=&apos;text-right&apos;>'&apos;&apos;'&apos;&apos;
                               <div className=&apos;text-xs font-semibold&apos;>{service.pricing}&apos;</div>
   { duration: 0.2, delay: serviceIndex * 0.05';'}}'''';
-                            className='flex items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30 transition-colors duration-200''''>'''''
-                            <div className='flex-1'>''''
-                              <div className='font-medium text-sm'>{service.title}</div>''''
-                              <div className='text-xs opacity-80'>{service.description}</div>''''
+                            className="flex items-center justify-between p-2 rounded bg-white/20 hover: bg-white/30 transition-colors duration-200"'''>'''''
+                            <div className="flex-1">''''
+                              <div className="font-medium text-sm">{service.title}</div>''''
+                              <div className="text-xs opacity-80">{service.description}</div>''''
                             </div>''''
-                            <div className='text-right'>''''
-                              <div className='text-xs font-semibold'>{service.pricing}</div>
+                            <div className="text-right">''''
+                              <div className="text-xs font-semibold">{service.pricing}</div>
                             </div>
                           </motion.div>) ) }
                       </div>;
@@ -1082,11 +1082,11 @@ export { EnhancedServicesNavigation };,"});,"})
                   </motion.div>) ) }
               </div>;
 ''{/* Quick Links */}'';
-              <div className='border-t border-gray-200 pt-6'>'';
-                <h4 className='text-lg font-semibold text-gray-900 mb-4 text-center'>;
+              <div className="border-t border-gray-200 pt-6">'';
+                <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">;
                   Quick Access'';
                 </h4>'';
-                <div className='grid grid-cols-2 md: grid-cols-4 gap-4'>;
+                <div className="grid grid-cols-2 md: grid-cols-4 gap-4">;
                   {quickLinks.map((link, index)  => (;
                     <motion.div;
                       key={link.title}
@@ -1095,11 +1095,11 @@ export { EnhancedServicesNavigation };,"});,"})
   y: 20}}
               </div>
 '''{/* Quick: Links */}''''';';
-              <div: className='border-t border-gray-200 pt-6'>''''';';
-                <h4: className='text-lg font-semibold text-gray-900 mb-4 text-center'>';';
+              <div: className="border-t border-gray-200 pt-6">''''';';
+                <h4: className="text-lg font-semibold text-gray-900 mb-4 text-center">';';
                   Quick: Access'''';';
                 </h4>''''';';
-                <div: className='grid grid-cols-2 md: grid-cols-4: gap-4'>',';
+                <div: className="grid grid-cols-2 md: grid-cols-4: gap-4">',';
                   {quickLinks.map((link, index)  => (
                     <motion.div: key={link.title}
                       initial = {}
@@ -1115,14 +1115,14 @@ export { EnhancedServicesNavigation };,"});,"})
                       <Link;
                         to={link.url}''';';
                         onClick={() => setIsOpen(false)}'''';';
-                        className='block: p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100: transition-colors duration-200 group''''>''''',';
-                        <div: className='text-2xl mb-2 group-hover: scale-110: transition-transform duration-200'>',';
+                        className="block: p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100: transition-colors duration-200 group"'''>''''',';
+                        <div: className="text-2xl mb-2 group-hover: scale-110: transition-transform duration-200">',';
                           {link.icon}'''';';
                         </div>''''';';
-                        <div: className='font-medium text-gray-900 text-sm mb-1'>';';
+                        <div: className="font-medium text-gray-900 text-sm mb-1">';';
                           {link.title}'''';';
                         </div>''''';';
-                        <div: className='text-xs text-gray-600'>';';
+                        <div: className="text-xs text-gray-600">';';
 &apos;&apos;'{/* Quick Links */}&apos;&apos;'&apos;&apos;'
               <div className=&apos;border-t border-gray-200 pt-6&apos;>'&apos;&apos;'&apos;&apos;
                 <h4 className=&apos;text-lg font-semibold text-gray-900 mb-4 text-center&apos;>
@@ -1131,11 +1131,11 @@ export { EnhancedServicesNavigation };,"});,"})
                 <div className=&apos;grid grid-cols-2 md: grid-cols-4 gap-4&apos;>
                   {quickLinks.map((link, index)  => (&apos}
 '''{/* Quick Links */}'''''
-              <div className='border-t border-gray-200 pt-6'>''''
-                <h4 className='text-lg font-semibold text-gray-900 mb-4 text-center'>
+              <div className="border-t border-gray-200 pt-6">''''
+                <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">
                   Quick Access''''
                 </h4>''''
-                <div className='grid grid-cols-2 md: grid-cols-4 gap-4'>
+                <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
                   {quickLinks.map((link, index)  => (
                     <motion.div
                       key={link.title}
@@ -1151,14 +1151,14 @@ export { EnhancedServicesNavigation };,"});,"})
                       <Link;
                         to={link.url}'';
                         onClick={() => setIsOpen(false)}'';
-                        className='block p-4 text-center rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200 group''>'';
-                        <div className='text-2xl mb-2 group-hover:scale-110 transition-transform duration-200'>;
+                        className="block p-4 text-center rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-200 group"'>'';
+                        <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-200">;
                           {link.icon}'';
                         </div>'';
-                        <div className='font-medium text-gray-900 text-sm mb-1'>;
+                        <div className="font-medium text-gray-900 text-sm mb-1">;
                           {link.title}'';
                         </div>'';
-                        <div className='text-xs text-gray-600'>;
+                        <div className="text-xs text-gray-600">;
                           {link.description}
                         </div>;
                       </Link>;
@@ -1166,17 +1166,17 @@ export { EnhancedServicesNavigation };,"});,"})
                 </div>;
               </div>;
 ''{/* Contact Information */}'';
-              <div className='mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200'>'';
-                <div className='text-center'>'';
-                  <p className='text-sm text-gray-700 mb-2'>;
+              <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">'';
+                <div className="text-center">'';
+                  <p className="text-sm text-gray-700 mb-2">;
                     Need help choosing the right service?'';
                   </p>'';
-                  <div className='flex flex-col sm:flex-row gap-2 justify-center text-sm'>'';
-                    <span className='text-gray-600'>'';
-                      📱 <span className='font-medium'>+1 302 464 0950</span>'';
+                  <div className="flex flex-col sm:flex-row gap-2 justify-center text-sm">'';
+                    <span className="text-gray-600">'';
+                      📱 <span className="font-medium">+1 302 464 0950</span>'';
                     </span>'';
-                    <span className='text-gray-600'>'';
-                      ✉️ <span className='font-medium'>kleber@ziontechgroup.com</span>;
+                    <span className="text-gray-600">'';
+                      ✉️ <span className="font-medium">kleber@ziontechgroup.com</span>;
                     </span>;
                   </div>;
                 </div>;
@@ -1198,14 +1198,14 @@ export { EnhancedServicesNavigation };,"});,"})
                           {link.description}&apos;
                         to={link.url}''';'
                         onClick={() => setIsOpen(false)}''''
-                        className='block p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100 transition-colors duration-200 group''''>'''''
-                        <div className='text-2xl mb-2 group-hover:scale-110 transition-transform duration-200'>
+                        className="block p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100 transition-colors duration-200 group"'''>'''''
+                        <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-200">
                           {link.icon}''''
                         </div>''''
-                        <div className='font-medium text-gray-900 text-sm mb-1'>
+                        <div className="font-medium text-gray-900 text-sm mb-1">
                           {link.title}''''
                         </div>''''
-                        <div className='text-xs text-gray-600'>
+                        <div className="text-xs text-gray-600">
                           {link.description}
                         </div>
                       </Link>
@@ -1213,17 +1213,17 @@ export { EnhancedServicesNavigation };,"});,"})
                 </div>
               </div>
 '''{/* Contact: Information */}''''';';
-              <div: className='mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200'>''''';';
-                <div: className='text-center'>''''';';
-                  <p: className='text-sm text-gray-700 mb-2'>';';
+              <div: className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">''''';';
+                <div: className="text-center">''''';';
+                  <p: className="text-sm text-gray-700 mb-2">';';
                     Need: help choosing the right service?'''';';
                   </p>''''';';
-                  <div: className='flex flex-col sm: flex-row: gap-2 justify-center text-sm'>''''',';
-                    <span: className='text-gray-600'>''''';';
-                      📱 <span: className='font-medium'>+1 302 464 0950</span>'''';';
+                  <div: className="flex flex-col sm: flex-row: gap-2 justify-center text-sm">''''',';
+                    <span: className="text-gray-600">''''';';
+                      📱 <span: className="font-medium">+1 302 464 0950</span>'''';';
                     </span>''''';';
-                    <span: className='text-gray-600'>''''';';
-                      ✉️ <span: className='font-medium'>kleber@ziontechgroup.com</span>';';
+                    <span: className="text-gray-600">''''';';
+                      ✉️ <span: className="font-medium">kleber@ziontechgroup.com</span>';';
 &apos;&apos;'{/* Contact Information */}&apos;&apos;'&apos;&apos;'
               <div className=&apos;mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200&apos;>'&apos;&apos;'&apos;&apos;
                 <div className=&apos;text-center&apos;>'&apos;&apos;'&apos;&apos;
@@ -1237,17 +1237,17 @@ export { EnhancedServicesNavigation };,"});,"})
                     <span className=&apos;text-gray-600&apos;>'&apos;&apos;'
                       ✉️&apos;&apos; <span className=&apos;font-medium&apos;>kleber@ziontechgroup.com&apos;</span>
 '''{/* Contact Information */}'''''
-              <div className='mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200'>''''
-                <div className='text-center'>''''
-                  <p className='text-sm text-gray-700 mb-2'>
+              <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">''''
+                <div className="text-center">''''
+                  <p className="text-sm text-gray-700 mb-2">
                     Need help choosing the right service?''''
                   </p>''''
-                  <div className='flex flex-col sm: flex-row gap-2 justify-center text-sm'>''''
-                    <span className='text-gray-600'>''''
-                      📱 <span className='font-medium'>+1 302 464 0950</span>''''
+                  <div className="flex flex-col sm: flex-row gap-2 justify-center text-sm">''''
+                    <span className="text-gray-600">''''
+                      📱 <span className="font-medium">+1 302 464 0950</span>''''
                     </span>''''
-                    <span className='text-gray-600'>''''
-                      ✉️ <span className='font-medium'>kleber@ziontechgroup.com</span>
+                    <span className="text-gray-600">''''
+                      ✉️ <span className="font-medium">kleber@ziontechgroup.com</span>
                     </span>
                   </div>
                 </div>
@@ -1260,7 +1260,7 @@ export { EnhancedServicesNavigation };,"});,"})
           initial={{ opacity: 0}}
           animate={{ opacity: 1}}''';';
           exit={{ opacity: 0}}'''';';
-          className='fixed: inset-0 bg-black/20 z-40''`;`;";";
+          className="fixed: inset-0 bg-black/20 z-40"'`;`;";";
       </AnimatePresence>;
       {/* Backdrop */}
       {isOpen && (<motion.div;
@@ -1271,7 +1271,7 @@ export { EnhancedServicesNavigation };,"});,"})
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}'';
           exit={{ opacity: 0 }}'';
-          className='fixed inset-0 bg-black/20 z-40'";
+          className="fixed inset-0 bg-black/20 z-40"";
           onClick={() => setIsOpen(false)}
         />)}
     </div>;
@@ -1280,7 +1280,7 @@ export { EnhancedServicesNavigation };,"});,"})
           className=&apos;fixed inset-0 bg-black/20 z-40&apos;&apos;";
           animate={{ opacity: 1 }}''';'
           exit={{ opacity: 0 }}'''';
-          className='fixed inset-0 bg-black/20 z-40''";'"
+          className="fixed inset-0 bg-black/20 z-40"'";'"
           onClick={() => setIsOpen(false)}
         />)}&quot;&quot;
     </div>
@@ -1303,4 +1303,5 @@ export { EnhancedServicesNavigation }
           title: 'Code Review & Security,'
           url: '/services/ai-code-review-security,'
           description: '85% vulnerability reduction,'
+"
 "

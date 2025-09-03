@@ -5,7 +5,9 @@ describe('BlogPage', () => {}; '; it('renders without crashing', () => {}; rende
 '
   it('displays expected content', () => {
     render(<BlogPage /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

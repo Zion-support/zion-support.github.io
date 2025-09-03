@@ -12,4 +12,4 @@ export default function TeamCollaborationTools.test() {return (
       </div>
     </div>
   );
-}
+}"

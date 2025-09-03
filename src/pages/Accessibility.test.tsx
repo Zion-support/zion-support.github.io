@@ -5,7 +5,9 @@ describe('Accessibility', () => {}; '; it('renders without crashing', () => {}; 
 '
   it('displays expected content', () => {
     render(<Accessibility /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

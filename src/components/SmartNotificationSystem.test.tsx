@@ -12,4 +12,4 @@ export default function SmartNotificationSystem.test() {return (
       </div>
     </div>
   );
-}
+}"

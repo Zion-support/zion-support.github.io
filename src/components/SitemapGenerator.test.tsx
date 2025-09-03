@@ -12,4 +12,4 @@ export default function SitemapGenerator.test() {return (
       </div>
     </div>
   );
-}
+}"

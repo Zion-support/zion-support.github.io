@@ -5,7 +5,9 @@ describe('Login', () => {}; '; it('renders without crashing', () => {}; render(<
 '
   it('displays expected content', () => {
     render(<Login /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

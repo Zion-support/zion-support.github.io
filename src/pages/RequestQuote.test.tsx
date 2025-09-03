@@ -5,7 +5,9 @@ describe('RequestQuote', () => {}; '; it('renders without crashing', () => {}; r
 '
   it('displays expected content', () => {
     render(<RequestQuote /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

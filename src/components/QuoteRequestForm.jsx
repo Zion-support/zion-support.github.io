@@ -694,13 +694,13 @@ export const QuoteRequestForm = () => {}
 
   if(isSubmitted) {}
     return();
-      <Card className='max-w-2xl mx-auto'>'';
-        <CardContent className='p-8 text-center'>'';
-          <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4' />'';
-          <h2 className='text-2xl font-bold text-gray-900 mb-2'>;
+      <Card className="max-w-2xl mx-auto">'';
+        <CardContent className="p-8 text-center">'';
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />'';
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">;
             Quote Request Submitted!'';
           </h2>'';
-          <p className='text-gray-600 mb-6'>;
+          <p className="text-gray-600 mb-6">;
             Thank you for your interest.Our team will review your request and;
             get back to you within 24 hours.</p>;
           <Button onClick={ () => setIsSubmitted(false) }>;
@@ -710,19 +710,19 @@ export const QuoteRequestForm = () => {}
       </Card>) }
 '';
   return ('';
-    <Card className='max-w-4xl mx-auto'>'';
-      <CardHeader className='text-center'>'';
-        <CardTitle className='text-3xl font-bold'>Request a Quote</CardTitle>;
+    <Card className="max-w-4xl mx-auto">'';
+      <CardHeader className="text-center">'';
+        <CardTitle className="text-3xl font-bold">Request a Quote</CardTitle>;
         <CardDescription>';
           Tell us about your project and we'll provide you with a customized;
           quote;
         </CardDescription>'';
       </CardHeader>'';
-      <CardContent className='p-6'>'';
-        <form onSubmit={handleSubmit} className='space-y-6'>''{/* Personal Information */}'';
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'';
+      <CardContent className="p-6">'';
+        <form onSubmit={handleSubmit} className="space-y-6">''{/* Personal Information */}'';
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">'';
             <div>'';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className="block text-sm font-medium text-gray-700 mb-2">;
                 First Name *;
               </label>;
               <Input;
@@ -731,12 +731,12 @@ export const QuoteRequestForm = () => {}
                 placeholder='John'';
                 className={errors.firstName ? 'border-red-500' : '}
               />''{errors.firstName && ('';
-                <p className='text-red-500 text-sm mt-1'>{errors.firstName}</p>;
+                <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>;
               )}
             </div>;
 '';
             <div>'';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Last Name *;
               </label>;
               <Input;
@@ -745,14 +745,14 @@ export const QuoteRequestForm = () => {}
                 placeholder='Doe'';
                 className={errors.lastName ? 'border-red-500' : '}
               />''{errors.lastName && ('';
-                <p className='text-red-500 text-sm mt-1'>{errors.lastName}</p>;
+                <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>;
               )}
             </div>;
           </div>;
 ''{/* Contact Information */}'';
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'';
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">'';
             <div>'';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Email *;
               </label>'';
               <Input'';
@@ -762,12 +762,12 @@ export const QuoteRequestForm = () => {}
                 placeholder='john@company.com'';
                 className={errors.email ? 'border-red-500' : '}
               />''{errors.email && ('';
-                <p className='text-red-500 text-sm mt-1'>{errors.email}</p>;
+                <p className="text-red-500 text-sm mt-1">{errors.email}</p>;
               )}
             </div>;
 '';
             <div>'';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Phone;
               </label>;
               <Input;
@@ -779,7 +779,7 @@ export const QuoteRequestForm = () => {}
           </div>;
           {/* Company Information */}'';
           <div>'';
-            <label className='block text-sm font-medium text-gray-700 mb-2'>;
+            <label className="block text-sm font-medium text-gray-700 mb-2">;
               Company Name *;
             </label>;
             <Input;
@@ -788,13 +788,13 @@ export const QuoteRequestForm = () => {}
               placeholder='Your Company Inc.'';
               className={errors.company ? 'border-red-500' : '}
             />''{errors.company && ('';
-              <p className='text-red-500 text-sm mt-1'>{errors.company}</p>;
+              <p className="text-red-500 text-sm mt-1">{errors.company}</p>;
             )}
           </div>;
 ''{/* Project Details */}'';
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'';
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">'';
             <div>'';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Service Type *;
               </label>;
     return()&apos;&apos;
@@ -806,13 +806,13 @@ export const QuoteRequestForm = () => {}
           </h2>&apos;&apos;'&apos;&apos;'
           <p className=&apos;text-gray-600 mb-6&apos;>
     return()
-      <Card className='max-w-2xl mx-auto'>''''
-        <CardContent className='p-8 text-center'>''''
-          <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4' />''''
-          <h2 className='text-2xl font-bold text-gray-900 mb-2'>
+      <Card className="max-w-2xl mx-auto">''''
+        <CardContent className="p-8 text-center">''''
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />''''
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
             Quote Request Submitted!''''
           </h2>''''
-          <p className='text-gray-600 mb-6'>
+          <p className="text-gray-600 mb-6">
             Thank you for your interest.Our team will review your request and
             get back to you within 24 hours.&apos;</p>
           <Button onClick={ () => setIsSubmitted(false) }>
@@ -884,20 +884,20 @@ export const QuoteRequestForm = () => {}
                 Phone&apos;
 ''';'
   return (''''
-    <Card className='max-w-4xl mx-auto'>''''
-      <CardHeader className='text-center'>''''
-        <CardTitle className='text-3xl font-bold'>Request a Quote</CardTitle>
+    <Card className="max-w-4xl mx-auto">''''
+      <CardHeader className="text-center">''''
+        <CardTitle className="text-3xl font-bold">Request a Quote</CardTitle>
         <CardDescription>';'
           Tell us about your project and we'll provide you with a customized'
           Tell us about your project and we&apos;ll provide you with a customized;'
           quote
         </CardDescription>''''
       </CardHeader>''''
-      <CardContent className='p-6'>''''
-        <form onSubmit={handleSubmit} className='space-y-6'>'''{/* Personal Information */}'''''
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
+      <CardContent className="p-6">''''
+        <form onSubmit={handleSubmit} className="space-y-6">'''{/* Personal Information */}'''''
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">''''
             <div>''''
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 First Name *
               </label>
               <Input;
@@ -906,12 +906,12 @@ export const QuoteRequestForm = () => {}
                 placeholder='John'''
                 className={errors.firstName ? 'border-red-500' : ''}
               />'''{errors.firstName && ('''''
-                <p className='text-red-500 text-sm mt-1'>{errors.firstName}</p>
+                <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
               )}
             </div>
 ''''
             <div>''''
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Last Name *
               </label>
               <Input;
@@ -920,14 +920,14 @@ export const QuoteRequestForm = () => {}
                 placeholder='Doe'''
                 className={errors.lastName ? 'border-red-500' : ''}
               />'''{errors.lastName && ('''''
-                <p className='text-red-500 text-sm mt-1'>{errors.lastName}</p>
+                <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
               )}
             </div>
           </div>
 '''{/* Contact Information */}'''''
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">''''
             <div>''''
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email *
               </label>''''
               <Input'''';
@@ -937,12 +937,12 @@ export const QuoteRequestForm = () => {}
                 placeholder='john@company.com'''
                 className={errors.email ? 'border-red-500' : ''}
               />'''{errors.email && ('''''
-                <p className='text-red-500 text-sm mt-1'>{errors.email}</p>
+                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
               )}
             </div>
 ''''
             <div>''''
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Phone
               </label>
               <Input;
@@ -985,7 +985,7 @@ export const QuoteRequestForm = () => {}
                   <SelectValue placeholder=&apos;Select a service&apos; />&apos;
           {/* Company Information */}''''
           <div>''''
-            <label className='block text-sm font-medium text-gray-700 mb-2'>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
               Company Name *
             </label>
             <Input;
@@ -994,13 +994,13 @@ export const QuoteRequestForm = () => {}
               placeholder='Your Company Inc.'''
               className={errors.company ? 'border-red-500' : ''}
             />'''{errors.company && ('''''
-              <p className='text-red-500 text-sm mt-1'>{errors.company}</p>
+              <p className="text-red-500 text-sm mt-1">{errors.company}</p>
             )}
           </div>
 '''{/* Project Details */}'''''
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">''''
             <div>''''
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Service Type *
               </label>
               <Select;
@@ -1018,7 +1018,7 @@ export const QuoteRequestForm = () => {}
                     </SelectItem>) ) }
                 </SelectContent>;
               </Select>''{errors.serviceType && ('';
-                <p className='text-red-500 text-sm mt-1'>;
+                <p className="text-red-500 text-sm mt-1">;
               >''
                 <SelectTrigger'';
                   className={errors.serviceType ? 'border-red-500' : ''}'''>'''''
@@ -1048,20 +1048,20 @@ export const QuoteRequestForm = () => {}
                 <SelectTrigger>&apos;&apos;'&apos;&apos;'
                   <SelectValue placeholder=&apos;Select timeline&apos; />&apos;
               </Select>'''{errors.serviceType && ('''''
-                <p className='text-red-500 text-sm mt-1'>
+                <p className="text-red-500 text-sm mt-1">
                   {errors.serviceType}
                 </p>;
               )}
             </div>;
 '';
             <div>'';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Timeline;
               </label>;
             </div>
 ''''
             <div>''''
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Timeline
               </label>
               <Select;
@@ -1081,9 +1081,9 @@ export const QuoteRequestForm = () => {}
             </div>;
           </div>'';
 '';
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'';
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">'';
             <div>'';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Budget Range;
               </label>;
               >''''
@@ -1114,9 +1114,9 @@ export const QuoteRequestForm = () => {}
                   <SelectValue placeholder=&apos;Select budget range&apos; />&apos;
           </div>''';'
 ''''
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">''''
             <div>''''
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Budget Range
               </label>
               <Select;
@@ -1136,7 +1136,7 @@ export const QuoteRequestForm = () => {}
             </div>;
 '';
             <div>'';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Urgency Level;
               </label>;
               >''''
@@ -1162,7 +1162,7 @@ export const QuoteRequestForm = () => {}
               >&apos;&apos;
 ''''
             <div>''''
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Urgency Level
               </label>
               <Select;
@@ -1183,7 +1183,7 @@ export const QuoteRequestForm = () => {}
           </div>;
           {/* Project Description */}'';
           <div>'';
-            <label className='block text-sm font-medium text-gray-700 mb-2'>;
+            <label className="block text-sm font-medium text-gray-700 mb-2">;
               Project Description *;
             </label>;
             <Textarea;
@@ -1193,7 +1193,7 @@ export const QuoteRequestForm = () => {}
               rows={6}';
               className={errors.projectDescription ? 'border-red-500' : '}
             />''{errors.projectDescription && ('';
-              <p className='text-red-500 text-sm mt-1'>;
+              <p className="text-red-500 text-sm mt-1">;
               >
                 <SelectTrigger>
                   <SelectValue />
@@ -1243,7 +1243,7 @@ export const QuoteRequestForm = () => {}
                   <SelectItem value=&apos;both&apos;>Both&apos;</SelectItem>
           {/* Project Description */}''''
           <div>''''
-            <label className='block text-sm font-medium text-gray-700 mb-2'>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
               Project Description *
             </label>
             <Textarea;
@@ -1253,22 +1253,22 @@ export const QuoteRequestForm = () => {}
               rows={6}''
               className={errors.projectDescription ? 'border-red-500' : ''}
             />'''{errors.projectDescription && ('''''
-              <p className='text-red-500 text-sm mt-1'>
+              <p className="text-red-500 text-sm mt-1">
                 {errors.projectDescription}
               </p>;
             )}
           </div>;
 ''{/* Preferences */}'';
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>'';
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">'';
             <div>'';
-              <label className='block text-sm font-medium text-gray-700 mb-2'>;
+              <label className="block text-sm font-medium text-gray-700 mb-2">;
                 Preferred Contact Method;
               </label>;
           </div>
 '''{/* Preferences */}'''''
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">''''
             <div>''''
-              <label className='block text-sm font-medium text-gray-700 mb-2'>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
                 Preferred Contact Method
               </label>
               <Select;
@@ -1287,48 +1287,48 @@ export const QuoteRequestForm = () => {}
             </div>;
           </div>;
 ''{/* Checkboxes */}'';
-          <div className='space-y-4'>'';
-            <div className='flex items-center space-x-2'>'';
+          <div className="space-y-4">'';
+            <div className="flex items-center space-x-2">'';
               <Checkbox'';
                 id='terms'';
                 checked={formData.agreeToTerms}
                 onCheckedChange={checked =>';
                   handleChange('agreeToTerms', checked)}''/>'';
-              <label htmlFor='terms' className='text-sm text-gray-700'>'';
+              <label htmlFor='terms' className="text-sm text-gray-700">'';
                 I agree to the{' '}'';
-                <a href='/terms' className='text-blue-600 hover:underline'>';
+                <a href='/terms' className="text-blue-600 hover:underline">';
                   Terms and Conditions';
                 </a>{' '}
                 *;
               </label>;
             </div>''{errors.agreeToTerms && ('';
-              <p className='text-red-500 text-sm'>{errors.agreeToTerms}</p>;
+              <p className="text-red-500 text-sm">{errors.agreeToTerms}</p>;
             )}'';
 '';
-            <div className='flex items-center space-x-2'>'';
+            <div className="flex items-center space-x-2">'';
               <Checkbox'';
                 id='marketing'';
                 checked={formData.agreeToMarketing}
                 onCheckedChange={checked =>';
                   handleChange('agreeToMarketing', checked)}''/>'';
-              <label htmlFor='marketing' className='text-sm text-gray-700'>;
+              <label htmlFor='marketing' className="text-sm text-gray-700">;
                 I agree to receive marketing communications from Zion Tech Group;
               </label>;
             </div>;
           </div>;
 ''{/* Submit Button */}'';
-          <div className='text-center'>'';
+          <div className="text-center">'';
             <Button'';
               type='submit'';
               disabled={isSubmitting}'';
-              className='px-8 py-3 text-lg '>{isSubmitting ? ('';
+              className="px-8 py-3 text-lg ">{isSubmitting ? ('';
                 <>'';
-                  <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>;
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
                   Submitting...;
                 </>;
               ) : ('';
                 <>'';
-                  <Send className='w-5 h-5 mr-2' />;
+                  <Send className="w-5 h-5 mr-2" />;
                   Submit Quote Request;
                 </>) }
             </Button>;
@@ -1396,48 +1396,48 @@ export const QuoteRequestForm = () => {}
                   Submit Quote Request&apos;
                 </>) }
 '''{/* Checkboxes */}'''''
-          <div className='space-y-4'>''''
-            <div className='flex items-center space-x-2'>''''
+          <div className="space-y-4">''''
+            <div className="flex items-center space-x-2">''''
               <Checkbox'''';
                 id='terms''';
                 checked={formData.agreeToTerms}
                 onCheckedChange={checked =>''
                   handleChange('agreeToTerms', checked)}'''/>'''''
-              <label htmlFor='terms' className='text-sm text-gray-700'>''''
+              <label htmlFor='terms' className="text-sm text-gray-700">''''
                 I agree to the{' '}''''
-                <a href='/terms' className='text-blue-600 hover: underline'>''
+                <a href='/terms' className="text-blue-600 hover: underline">''
                   Terms and Conditions''
                 </a>{' '}
                 *
               </label>
             </div>'''{errors.agreeToTerms && ('''''
-              <p className='text-red-500 text-sm'>{errors.agreeToTerms}</p>
+              <p className="text-red-500 text-sm">{errors.agreeToTerms}</p>
             )}''''
 ''''
-            <div className='flex items-center space-x-2'>''''
+            <div className="flex items-center space-x-2">''''
               <Checkbox'''';
                 id='marketing''';
                 checked={formData.agreeToMarketing}
                 onCheckedChange={checked =>''
                   handleChange('agreeToMarketing', checked)}'''/>'''''
-              <label htmlFor='marketing' className='text-sm text-gray-700'>
+              <label htmlFor='marketing' className="text-sm text-gray-700">
                 I agree to receive marketing communications from Zion Tech Group
               </label>
             </div>
           </div>
 '''{/* Submit Button */}'''''
-          <div className='text-center'>''''
+          <div className="text-center">''''
             <Button''''
               type='submit'''';'
               disabled={isSubmitting}'''';
-              className='px-8 py-3 text-lg '>{isSubmitting ? (''''
+              className="px-8 py-3 text-lg ">{isSubmitting ? (''''
                 <>''''
-                  <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                   Submitting...
 </>
               ) : (''''
                 <>''''
-                  <Send className='w-5 h-5 mr-2' />
+                  <Send className="w-5 h-5 mr-2" />
                   Submit Quote Request
 </>) }
             </Button>
@@ -1460,4 +1460,4 @@ import { Button } from './ui/Button.jsx
 import { Input } from './ui/input
 import { Textarea } from './ui/textarea.jsx
 ";
-;
+;"

@@ -5,7 +5,9 @@ describe('Blog', () => {}; '; it('renders without crashing', () => {}; render(<B
 '
   it('displays expected content', () => {
     render(<Blog /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

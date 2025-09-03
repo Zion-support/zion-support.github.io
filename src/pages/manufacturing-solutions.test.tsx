@@ -5,7 +5,9 @@ describe('manufacturing - solutions', () => {}; '; it('renders without crashing'
 '
   it('displays expected content', () => {
     render(<manufacturing -solutions /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

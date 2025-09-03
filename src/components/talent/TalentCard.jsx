@@ -2,3 +2,4 @@ import React from 'react'; const TalentCardComponent = ({ talent, onBook, onMess
 ;
 ;
  const TalentCardComponent = memo(({ talent, onBook, onMessage, isAuthenticated}) => { const navigate = useNavigate() const handleMessage = e => { e.preventDefault() e.stopPropagation() if (onMessage) { onMessage(talent) } else { navigate(`/messages?talentId=${talent.id}`) } } const handleBook = e => { e.preventDefault() e.stopPropagation() if (onBook) { onBook(talent) } } const handleViewProfile = () => { ` navigate(`/talent/${talent.id}`) }';`'
+"

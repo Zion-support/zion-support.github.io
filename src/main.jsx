@@ -99,4 +99,4 @@ try {
 window.addEventListener('error', (e) => {""
     console.error('Unhandled error: ', e.error || e.message);
     displayFatalError(e.message);});
-"`"
+"`""

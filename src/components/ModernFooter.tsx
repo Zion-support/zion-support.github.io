@@ -12,4 +12,4 @@ export default function ModernFooter() {return (
       </div>
     </div>
   );
-}
+}"

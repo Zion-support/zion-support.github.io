@@ -5,7 +5,9 @@ describe('SpaceTech', () => {}; '; it('renders without crashing', () => {}; rend
 '
   it('displays expected content', () => {
     render(<SpaceTech /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

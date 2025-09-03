@@ -12,4 +12,4 @@ export default function ProjectDetailsFields() {return (
       </div>
     </div>
   );
-}
+}"

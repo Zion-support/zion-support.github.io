@@ -210,6 +210,8 @@ target.style.backgroundImage = `url (${target.dataset.src}) `              targe
             if (target.dataset.src) {";
 }"})} {rootMargin: '50px' }') ';// Observe lazy load elements;`
     const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {observer.disconnect () }
-target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }`},})} { rootMargin: '50px' }') ';// Observe lazy load elements;"
+target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }`}
+  })} { rootMargin: '50px' }') ';// Observe lazy load elements;"
   return <>{children}</>}"`"
 "`"
+"

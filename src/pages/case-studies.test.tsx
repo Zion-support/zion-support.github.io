@@ -5,7 +5,9 @@ describe('case - studies', () => {}; '; it('renders without crashing', () => {};
 '
   it('displays expected content', () => {
     render(<case -studies /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

@@ -5,7 +5,9 @@ describe('Products', () => {}; '; it('renders without crashing', () => {}; rende
 '
   it('displays expected content', () => {
     render(<Products /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

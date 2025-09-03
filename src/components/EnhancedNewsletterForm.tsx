@@ -12,4 +12,4 @@ export default function EnhancedNewsletterForm() {return (
       </div>
     </div>
   );
-}
+}"

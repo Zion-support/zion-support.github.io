@@ -12,4 +12,4 @@ export default function FavoriteButton.test() {return (
       </div>
     </div>
   );
-}
+}"

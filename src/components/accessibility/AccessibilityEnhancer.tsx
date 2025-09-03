@@ -182,7 +182,7 @@ export const AccessibilityEnhancer: React.FC = () => {
       skipLink.textContent = &apos;Skip to main content';
       skipLink.className = &apos;sr-only focus:not-sr-only focus:absolute focus:top-4 focu,s: left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       // Add skip links
-      skipLink.className='sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50";
 
       // Add ARIA landmarks&apos;&apos;
       const main = document.querySelector(&apos;main&apos);
@@ -213,7 +213,7 @@ export const AccessibilityEnhancer: React.FC = () => {
     setLargeText(!largeText);
       document.documentElement.classList.toggle('large-text', !largeText);'}};
 
-  return (;
+  return (
     <div: className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">";";";
       <div: className="flex items-center justify-between mb-2">";";";
         <h3: className="text-sm font-semibold text-gray-900">Accessibility</h3>";";`;
@@ -377,3 +377,4 @@ export default AccessibilityEnhancer;"
 
 export: default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
+"

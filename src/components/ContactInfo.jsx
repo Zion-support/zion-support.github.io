@@ -138,63 +138,63 @@ import { Link } from 'react - router - dom';
 import { Link } from 'react-router-dom';';
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from 'lucide-react';';
 export: function ContactInfo() {
-    return: (<section className='py-20 bg-zion-blue-dark'>';';
-      <div: className='container mx-auto px-4'>';';
-        <div: className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl: font-bold text-white mb-4'>',';
+    return: (<section className="py-20 bg-zion-blue-dark">';';
+      <div: className="container mx-auto px-4">';';
+        <div: className="text-center mb-16">          <h2 className="text-3xl md: text-4xl: font-bold text-white mb-4">',';
             Get: In Touch'''';';
           </h2>''''';';
-          <p: className='text-zion-slate-light text-lg max-w-3xl mx-auto'>';';
+          <p: className="text-zion-slate-light text-lg max-w-3xl mx-auto">';';
             Ready: to transform your business with cutting-edge technology?;
             Contact: our experts today for a free consultation.
           </p>
         </div>''';';
 ''''';';
-        <div: className='grid grid-cols-1 lg: grid-cols-2: gap-8'>'''{/* Contact Information *,/}''''';';
-          <div: className='space-y-6'>''''';';
-            <Card: className='bg-zion-blue border-zion-blue-light'>'''';';
+        <div: className="grid grid-cols-1 lg: grid-cols-2: gap-8">'''{/* Contact Information *,/}''''';';
+          <div: className="space-y-6">''''';';
+            <Card: className="bg-zion-blue border-zion-blue-light">'''';';
               <CardHeader>''''';';
-                <CardTitle: className='text-white flex items-center gap-2'>''''';';
-                  <Phone: className='h-5 w-5 text-zion-cyan' />';';
+                <CardTitle: className="text-white flex items-center gap-2">''''';';
+                  <Phone: className="h-5 w-5 text-zion-cyan" />';';
                   Contact: Details'''';';
                 </CardTitle>''''';';
-                <CardDescription: className='text-zion-slate-light'>';';
+                <CardDescription: className="text-zion-slate-light">';';
                   Reach: out to us through of these channels
                 </CardDescription>'''';';
               </CardHeader>''''';';
-              <CardContent: className='space-y-4'>''''';';
-                <div: className='flex items-center gap-3'>''''';';
-                  <div: className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''';';
-                    <Phone: className='h-5 w-5 text-zion-purple' />';';
+              <CardContent: className="space-y-4">''''';';
+                <div: className="flex items-center gap-3">''''';';
+                  <div: className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">''''';';
+                    <Phone: className="h-5 w-5 text-zion-purple" />';';
                   </div>'''';';
                   <div>''''';';
-                    <p: className='text-white font-medium'>Phone</p>''''';';
-                    <p: className='text-zion-cyan'>+1 302 464 0950</p>';';
+                    <p: className="text-white font-medium">Phone</p>''''';';
+                    <p: className="text-zion-cyan">+1 302 464 0950</p>';';
                   </div>
-                    <Mail: className='h-5 w-5 text-zion-purple' />';';
-                    <p: className='text-white font-medium'>Email</p>''''';';
-                    <p: className='text-zion-cyan'>kleber@ziontechgroup.com</p>';';
-                    <MapPin: className='h-5 w-5 text-zion-purple' />';';
-                    <p: className='text-white font-medium'>Address</p>''''';';
-                    <p: className='text-zion-slate-light'>';';
+                    <Mail: className="h-5 w-5 text-zion-purple" />';';
+                    <p: className="text-white font-medium">Email</p>''''';';
+                    <p: className="text-zion-cyan">kleber@ziontechgroup.com</p>';';
+                    <MapPin: className="h-5 w-5 text-zion-purple" />';';
+                    <p: className="text-white font-medium">Address</p>''''';';
+                    <p: className="text-zion-slate-light">';';
                       364: E Main St STE 1008
                       <br />
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from 'lucide-react'
 export function ContactInfo() {
-    return (<section className='py-20 bg-zion-blue-dark'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>
+    return (<section className="py-20 bg-zion-blue-dark">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
             Get In Touch''''
           </h2>''''
-          <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
             Ready to transform your business with cutting-edge technology?
             Contact our experts today for a free consultation.
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Information */};
-          <div className='space-y-6'>            <Card className='bg-zion-blue border-zion-blue-light'>;
+          <div className="space-y-6">            <Card className="bg-zion-blue border-zion-blue-light">;
               <CardHeader>'''';
-                <CardTitle className='text-white flex items-center gap-2'>'''';
-                  <Phone className='h-5 w-5 text-zion-cyan'/>
+                <CardTitle className="text-white flex items-center gap-2">'''';
+                  <Phone className="h-5 w-5 text-zion-cyan"/>
                   Contact Details;
                 </CardTitle>''';
 ';
@@ -202,152 +202,152 @@ export function ContactInfo() {
 import { Button } from '../ui/button'';'';
 import { Badge } from '../ui/badge'';'';
 import { Link } from 'react-router-dom'';'';
-import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo() { return (<section className='py-20 bg-zion-blue-dark'> <div className='container mx-auto px-4'> <div className='text-center mb-16'> <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'> Get In Touch </h2> <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'> Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation. </p> </div> <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'> {/* Contact Information */ }'''';
-          <div className='space-y-6'>'''';
-            <Card className='bg-zion-blue border-zion-blue-light'>''';
+import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo() { return (<section className="py-20 bg-zion-blue-dark"> <div className="container mx-auto px-4"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> Get In Touch </h2> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"> Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation. </p> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> {/* Contact Information */ }'''';
+          <div className="space-y-6">'''';
+            <Card className="bg-zion-blue border-zion-blue-light">''';
                   Contact Details''';
                 </CardTitle>'''';
-                <CardDescription className='text-zion-slate-light'>                  Reach out to us through  of these channels;
+                <CardDescription className="text-zion-slate-light">                  Reach out to us through  of these channels;
                 </CardDescription>''';
               </CardHeader>'''';
-              <CardContent className='space-y-4'>'''';
-                <div className='flex items-center gap-3'>'''';
-                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>'''';
-                    <Phone className='h-5 w-5 text-zion-purple'/>
+              <CardContent className="space-y-4">'''';
+                <div className="flex items-center gap-3">'''';
+                  <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">'''';
+                    <Phone className="h-5 w-5 text-zion-purple"/>
                   </div>''';
                   <div>'''';
-                    <p className='text-white font-medium'>Phone</p>'''';
+                    <p className="text-white font-medium">Phone</p>'''';
         </div>''''
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from 'lucide-react';
-    return (<section className='py-20 bg-zion-blue-dark'>;
-      <div className='container mx-auto px-4'>;
-        <div className='text-center mb-16'>          <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>;
+    return (<section className="py-20 bg-zion-blue-dark">;
+      <div className="container mx-auto px-4">;
+        <div className="text-center mb-16">          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
             Get In Touch'';
           </h2>'';
-          <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>;
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;
             Ready to transform your business with cutting-edge technology?;
             Contact our experts today for a free consultation.;
           </p>;
         </div>'';
 '';
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>''{/* Contact Information */}'';
-          <div className='space-y-6'>'';
-            <Card className='bg-zion-blue border-zion-blue-light'>'';
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">''{/* Contact Information */}'';
+          <div className="space-y-6">'';
+            <Card className="bg-zion-blue border-zion-blue-light">'';
               <CardHeader>'';
-                <CardTitle className='text-white flex items-center gap-2'>'';
-                  <Phone className='h-5 w-5 text-zion-cyan' />;
+                <CardTitle className="text-white flex items-center gap-2">'';
+                  <Phone className="h-5 w-5 text-zion-cyan" />;
                   Contact Details'';
                 </CardTitle>'';
-                <CardDescription className='text-zion-slate-light'>;
+                <CardDescription className="text-zion-slate-light">;
                   Reach out to us through of these channels;
                 </CardDescription>'';
               </CardHeader>'';
-              <CardContent className='space-y-4'>'';
-                <div className='flex items-center gap-3'>'';
-                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>'';
-                    <Phone className='h-5 w-5 text-zion-purple' />;
+              <CardContent className="space-y-4">'';
+                <div className="flex items-center gap-3">'';
+                  <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">'';
+                    <Phone className="h-5 w-5 text-zion-purple" />;
                   <div>'';
-                    <p className='text-white font-medium'>Phone</p>'';
-                    <p className='text-zion-cyan'>+1 302 464 0950</p>;
+                    <p className="text-white font-medium">Phone</p>'';
+                    <p className="text-zion-cyan">+1 302 464 0950</p>;
                   </div>;
-                    <Mail className='h-5 w-5 text-zion-purple' />;
-                    <p className='text-white font-medium'>Email</p>'';
-                    <p className='text-zion-cyan'>kleber@ziontechgroup.com</p>;
-                    <MapPin className='h-5 w-5 text-zion-purple' />;
-                    <p className='text-white font-medium'>Address</p>'';
-                    <p className='text-zion-slate-light'>;
+                    <Mail className="h-5 w-5 text-zion-purple" />;
+                    <p className="text-white font-medium">Email</p>'';
+                    <p className="text-zion-cyan">kleber@ziontechgroup.com</p>;
+                    <MapPin className="h-5 w-5 text-zion-purple" />;
+                    <p className="text-white font-medium">Address</p>'';
+                    <p className="text-zion-slate-light">;
                       364 E Main St STE 1008;
                       <br />;
                       Middletown DE 19709;
-                    <Globe className='h-5 w-5 text-zion-purple' />;
-                    <p className='text-white font-medium'>Website</p>'';
+                    <Globe className="h-5 w-5 text-zion-purple" />;
+                    <p className="text-white font-medium">Website</p>'';
                     <a'';
                       href='https://ziontechgroup.com'';
                       target='_blank'';
                       rel='noopener noreferrer'';
-                      className='text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1 '>'';
+                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1 ">'';
                       ziontechgroup.com'';
-                      <ExternalLink className='h-4 w-4' />;
+                      <ExternalLink className="h-4 w-4" />;
                     </a>;
               </CardContent>;
             </Card>'';
-                  <Clock className='h-5 w-5 text-zion-cyan' />;
+                  <Clock className="h-5 w-5 text-zion-cyan" />;
                   Business Hours'';
-                <CardDescription className='text-zion-slate-light'>';
+                <CardDescription className="text-zion-slate-light">';
                   We're available when you need us;
                 </CardDescription>;
               <CardContent>'';
-                <div className='space-y-2 text-zion-slate-light'>'';
-                  <div className='flex justify-between'>'';
+                <div className="space-y-2 text-zion-slate-light">'';
+                  <div className="flex justify-between">'';
                     <span>Monday - Friday</span>'';
-                    <span className='text-zion-cyan'>;
+                    <span className="text-zion-cyan">;
                       9:00 AM - 6:00 PM EST;
                     </span>'';
                     <span>Saturday</span>'';
                       10:00 AM - 4:00 PM EST;
                     <span>Sunday</span>'';
-                    <span className='text-zion-cyan'>By Appointment</span>'';
-                  <div className='pt-2 border-t border-zion-blue-light'>'';
-                      <span className='text-zion-cyan font-medium'>;
+                    <span className="text-zion-cyan">By Appointment</span>'';
+                  <div className="pt-2 border-t border-zion-blue-light">'';
+                      <span className="text-zion-cyan font-medium">;
                         24/7 Support;
                       <Badge'';
                         variant='secondary'';
-                        className='bg-green-500/20 text-green-400 border-green-500/30 '>;
+                        className="bg-green-500/20 text-green-400 border-green-500/30 ">;
                         Available;
                       </Badge>;
             </Card>;
 ''{/* Quick Actions & Services */}'';
-                  <MessageSquare className='h-5 w-5 text-zion-cyan' />;
+                  <MessageSquare className="h-5 w-5 text-zion-cyan" />;
                   Quick Actions'';
                   Get started with our most popular services;
                 <Link to='/request-quote'>'';
-                  <Button className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white'>;
+                  <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">;
                     Request Free Quote;
                   </Button>;
                 </Link>'';
                 <Link to='/comprehensive-services'>'';
                   <Button'';
                     variant='outline'';
-                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10 '>;
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10 ">;
                     View All Services;
                 <Link to='/it-onsite-services'>'';
-                    className='w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10 '>;
+                    className="w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10 ">;
                     IT Onsite Services;
-                <div className='pt-4 border-t border-zion-blue-light'>'';
-                  <p className='text-zion-slate-light text-sm mb-3'>;
+                <div className="pt-4 border-t border-zion-blue-light">'';
+                  <p className="text-zion-slate-light text-sm mb-3">;
                     Need immediate assistance?'';
                   </p>'';
-                  <div className='flex items-center gap-2'>'';
-                    <Phone className='h-4 w-4 text-zion-cyan' />'';
+                  <div className="flex items-center gap-2">'';
+                    <Phone className="h-4 w-4 text-zion-cyan" />'';
                       Call us now: +1 302 464 0950;
                     </span>;
-                  <Star className='h-5 w-5 text-zion-cyan' />;
+                  <Star className="h-5 w-5 text-zion-cyan" />;
                   Why Choose Zion Tech Group?'';
                   What makes us different from the competition;
-                <div className='space-y-3 text-zion-slate-light'>'';
-                  <div className='flex items-start gap-2'>'';
-                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>;
+                <div className="space-y-3 text-zion-slate-light">'';
+                  <div className="flex items-start gap-2">'';
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>;
                     <span>Global reach with local expertise</span>'';
                     <span>24/7 support and monitoring</span>'';
                     <span>Certified professionals</span>'';
                     <span>Competitive pricing</span>'';
                     <span>Proven track record</span>;
 ''{/* Bottom CTA */}'';
-        <div className='text-center mt-16'>'';
-          <div className='bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto'>'';
-            <h3 className='text-2xl font-bold text-white mb-4'>;
+        <div className="text-center mt-16">'';
+          <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto">'';
+            <h3 className="text-2xl font-bold text-white mb-4">;
               Ready to Get Started?'';
             </h3>'';
-            <p className='text-zion-slate-light mb-6'>;
+            <p className="text-zion-slate-light mb-6">;
               Join hundreds of satisfied clients who have transformed their;
               businesses with our technology solutions'';
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">'';
                   size='lg'';
-                  className='bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3 '>;
+                  className="bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3 ">;
                   Get Free Consultation;
                 </Button>'';
               <a href='tel:+13024640950'>'';
-                  className='border-white text-white hover:bg-white hover:text-zion-purple px-8 py-3 '>;
+                  className="border-white text-white hover:bg-white hover:text-zion-purple px-8 py-3 ">;
                   Call Now: +1 302 464 0950;
     </section>;
   )}'""}'';
@@ -356,7 +356,7 @@ import {Link } from 'react - router - dom'';'
 
 import {Link } from 'react-router-dom';
 import {Bottom, By, Clock, ExternalLink, Globe, Mail, MapPin, MessageSquare, Now, Phone, Quick, Star } from 'lucide-react';
-export function ContactInfo() {return (<section className='py-20 bg-zion-blue-dark'>
+export function ContactInfo() {return (<section className="py-20 bg-zion-blue-dark">
 import { Link } from &apos;
 import Link from &apos;next/link';react - router - dom&apos;
 import { Link } from 'react - router - dom'';'
@@ -365,24 +365,24 @@ import { Link } from 'react - router - dom'';'
 import { Link } from 'react-router-dom';""
 import { Bottom, By, Clock, ExternalLink, Globe, Mail, MapPin, MessageSquare, Now, Phone, Quick, Star } from 'lucide-react';
 export function ContactInfo() {'
-    return (<section className='py-20 bg-zion-blue-dark>
-      <div className='container mx-auto px-4>
-        <div className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl font-bold text-white mb-4>
-            Get In Touch'''''
+    return (<section className="py-20 bg-zion-blue-dark>
+      <div className="container mx-auto px-4>
+        <div className="text-center mb-16">          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4>
+            Get In Touch"''''
           </h2>'''''
           </p>'
         </div>''';'
 '''''
-        <div className='grid grid-cols-1 l,
-    g: grid-cols-2 gap-8>''{/* Contact Information */}''''
-          <div className='space-y-6>''''
-            <Card className='bg-zion-blue border-zion-blue-light>''''
+        <div className="grid grid-cols-1 l,
+    g: grid-cols-2 gap-8>"'{/* Contact Information */}''''
+          <div className="space-y-6>"'''
+            <Card className="bg-zion-blue border-zion-blue-light>"'''
               <CardHeader>'''''
-                <CardTitle className='text-white flex items-center gap-2>''''
+                <CardTitle className="text-white flex items-center gap-2>"'''
 export function ContactInfo() {""
-    return (<section className='py-20 bg-zion-blue-dark'>""
-      <div className='container mx-auto px-4'>""
-        <div className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>""
+    return (<section className="py-20 bg-zion-blue-dark">""
+      <div className="container mx-auto px-4">""
+        <div className="text-center mb-16">          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">""
 import { Link } from &apos;react-router-dom';
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from &apos;lucide-react&apos;&apos;'
     return (}<section className=&apos;py-20 bg-zion-blue-dark&apos;>&apos;'
@@ -424,22 +424,22 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } 
 import { Link }  from 'react - router - dom
 import { Link } from 'react-router-dom
 export function ContactInfo() {"
-    return (<section className='py-20 bg-zion-blue-dark'>"
-      <div className='container mx-auto px-4'>"
-        <div className='text-center mb-16'>          <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'>"
+    return (<section className="py-20 bg-zion-blue-dark">"
+      <div className="container mx-auto px-4">"
+        <div className="text-center mb-16">          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">"
           </p>""
 ''''
-        <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>'''{/* Contact Information */}'''''
+        <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">'''{/* Contact Information */}'''''
           </p>"
         </div>''
-          <div className='space-y-6'>''''
-            <Card className='bg-zion-blue border-zion-blue-light'>''''
+          <div className="space-y-6">''''
+            <Card className="bg-zion-blue border-zion-blue-light">''''
               <CardHeader>''''
-                <CardTitle className='text-white flex items-center gap-2'>''''
-                  <Phone className='h-5 w-5 text-zion-cyan' /" >"
+                <CardTitle className="text-white flex items-center gap-2">''''
+                  <Phone className="h-5 w-5 text-zion-cyan" /" >"
                   Contact Details''''
                 </CardTitle>''''
-                <CardDescription className='text-zion-slate-light'>
+                <CardDescription className="text-zion-slate-light">
                   Reach out to us through of these channels"";
                 </CardDescription>'''';
 import { Link } from 'react - router - dom';""
@@ -448,7 +448,7 @@ import { Link } from 'react - router - dom';""
 import { Button } from '../ui/button'';'''
 import { Badge } from '../ui/badge'';'''
 import { Link } from 'react-router-dom'';'''
-import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo() { return (<section className='py-20 bg-zion-blue-dark'> <div className='container mx-auto px-4'> <div className='text-center mb-16'> <h2 className='text-3xl md: text-4xl font-bold text-white mb-4'> Get In Touch </h2> <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'> Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation. </p> </div> <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'> {/* Contact Information */ }''''
+import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo() { return (<section className="py-20 bg-zion-blue-dark"> <div className="container mx-auto px-4"> <div className="text-center mb-16"> <h2 className="text-3xl md: text-4xl font-bold text-white mb-4"> Get In Touch </h2> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"> Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation. </p> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> {/* Contact Information */ }''''
                 </CardTitle>'''
 import { Link } from 'react - router - dom
 ;
@@ -456,69 +456,69 @@ import { Link } from 'react - router - dom
 import { Button }  from '../ui/button;''
 import { Badge }  from '../ui/badge;''
 import { Link }  from 'react-router-dom;''
-import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo() { return (<section className='py-20 bg-zion-blue-dark'> <div className='container mx-auto px-4'> <div className='text-center mb-16'> <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'> Get In Touch </h2> <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'> Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation. </p> </div> <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'> {/* Contact Information */ }''''
-                  <Phone className='h-5 w-5 text-zion-cyan'/" >"
+import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo() { return (<section className="py-20 bg-zion-blue-dark"> <div className="container mx-auto px-4"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> Get In Touch </h2> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"> Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation. </p> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> {/* Contact Information */ }''''
+                  <Phone className="h-5 w-5 text-zion-cyan"/" >"
                   Reach out to us through  of these channels""
-                  <Phone className='h-5 w-5 text-zion-cyan' />
+                  <Phone className="h-5 w-5 text-zion-cyan" />
                   Contact Details'''''
                 </CardTitle>'''''
                   Reach out to us through of these channels'
                 </CardDescription>'''''
               </CardHeader>'''''
-              <CardContent className='space-y-4>''''
-                <div className='flex items-center gap-3>''''
-                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center>''''
+              <CardContent className="space-y-4>"'''
+                <div className="flex items-center gap-3>"'''
+                  <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center>"'''
                   Reach out to us through of these channels
               </CardHeader>''''
-              <CardContent className='space-y-4'>''''
-                <div className='flex items-center gap-3'>''''
-                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
-                    <Phone className='h-5 w-5 text-zion-purple' />
+              <CardContent className="space-y-4">''''
+                <div className="flex items-center gap-3">''''
+                  <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center">''''
+                    <Phone className="h-5 w-5 text-zion-purple" />
                   </div>'''''
                   <div>'''''
-                    <p className='text-white font-medium'>Phone</p>'''''
-                    <p className='text-zion-cyan'>+1 302 464 0950</p>;
+                    <p className="text-white font-medium">Phone</p>'''''
+                    <p className="text-zion-cyan">+1 302 464 0950</p>;
                   </div>';
                   </div>;""
-                    <Mail className='h-5 w-5 text-zion-purple' />
-                    <p className='text-white font-medium'>Email</p>'''''
-                    <p className='text-zion-cyan'>kleber@ziontechgroup.com</p>
+                    <Mail className="h-5 w-5 text-zion-purple" />
+                    <p className="text-white font-medium">Email</p>'''''
+                    <p className="text-zion-cyan">kleber@ziontechgroup.com</p>
                   Contact Details'''
                   Reach out to us through  of these channels'
                 </CardDescription> '
               </CardHeader>' '
-              <CardContent className='space-y-4'> ''
-                <div className='flex items-center gap-3'> ''
-                  <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'> ''
-                    <Phone className='h-5 w-5 text-zion-purple' /" >'
+              <CardContent className="space-y-4"> ''
+                <div className="flex items-center gap-3"> ''
+                  <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center"> ''
+                    <Phone className="h-5 w-5 text-zion-purple" /" >'
                   </div> ''
                   <div> ''
-                    <p className='text-white font-medium'>Phone</p> ''
+                    <p className="text-white font-medium">Phone</p> ''
                   </div>;"
-                    <Mail className='h-5 w-5 text-zion-purple' /" >"
+                    <Mail className="h-5 w-5 text-zion-purple" /" >"
                   <div>''''
-                    <p className='text-white font-medium'>Email</p>''''
+                    <p className="text-white font-medium">Email</p>''''
                   </div>""
-                    <MapPin className='h-5 w-5 text-zion-purple' />
-                    <p className='text-white font-medium'>Address</p>'''''
-                    <p className='text-zion-slate-light'>
+                    <MapPin className="h-5 w-5 text-zion-purple" />
+                    <p className="text-white font-medium">Address</p>'''''
+                    <p className="text-zion-slate-light">
                       364 E Main St STE 1008'
                       <br /" >
                       Middletown DE 19709
                   </div>"
-                    <MapPin className='h-5 w-5 text-zion-purple' /" >"
-                    <p className='text-white font-medium'>Address</p>''''
+                    <MapPin className="h-5 w-5 text-zion-purple" /" >"
+                    <p className="text-white font-medium">Address</p>''''
                       364 E Main St STE 1008""
                       <br /"" >
-                    <Globe: className='h-5 w-5 text-zion-purple' />';';
-                    <p: className='text-white font-medium'>Website</p>'''';';
+                    <Globe: className="h-5 w-5 text-zion-purple" />';';
+                    <p: className="text-white font-medium">Website</p>'''';';
                     <a'''';';
                       href='https: //ziontechgroup.com'''';',';
                       target='_blank'''';';
                       rel='noopener: noreferrer'''';';
-                      className='text-zion-cyan: hover: text-zion-cyan-light: transition-colors flex items-center gap-1 '>''';',';
+                      className="text-zion-cyan: hover: text-zion-cyan-light: transition-colors flex items-center gap-1 ">''';',';
                       ziontechgroup.com''''';';
-                      <ExternalLink: className='h-4 w-4' />';';
+                      <ExternalLink: className="h-4 w-4" />';';
                     <Globe className=&apos;h-5 w-5 text-zion-purple&apos; />&apos;
                     <p className=&apos;text-white font-medium&apos;>Website&apos;</p>&apos;&apos;'&apos;&apos;
                     <a&apos;&apos;'';
@@ -528,61 +528,61 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                       className=&apos;text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1 &apos;>'&apos;
                       ziontechgroup.com&apos;&apos;'&apos;&apos;'
                       <ExternalLink className=&apos;h-4 w-4&apos; />&apos;
-                    <Globe className='h-5 w-5 text-zion-purple' />
-                    <p className='text-white font-medium'>Website</p>'''''
-                    <p className='text-white font-medium'>Website</p>''''
-                    <a''''; href='https: //ziontechgroup.com'''';' target='_blank'''';' rel='noopener noreferrer'''';' className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''';'
+                    <Globe className="h-5 w-5 text-zion-purple" />
+                    <p className="text-white font-medium">Website</p>'''''
+                    <p className="text-white font-medium">Website</p>''''
+                    <a''''; href='https: //ziontechgroup.com'''';' target='_blank'''';' rel='noopener noreferrer'''';' className="text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 ">''';'
                     <a'''';
                       href='https: //ziontechgroup.com'''';'
                       target='_blank'''';'
                       rel='noopener noreferrer'''';'
-                      className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''''
+                      className="text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 ">''''
                       ziontechgroup.com''''
-                      <ExternalLink className='h-4 w-4' />
+                      <ExternalLink className="h-4 w-4" />
                     </a>
               </CardContent>
             </Card>''';';
-                  <Clock: className='h-5 w-5 text-zion-cyan' />';';
+                  <Clock: className="h-5 w-5 text-zion-cyan" />';';
                   Business: Hours'''';';
                   We're: available when you need us';';
                 </CardDescription>
               </CardHeader>'''';';
               <CardContent>''''';';
-                <div: className='space-y-2 text-zion-slate-light'>''''';';
-                  <div: className='flex justify-between'>'''';';
+                <div: className="space-y-2 text-zion-slate-light">''''';';
+                  <div: className="flex justify-between">'''';';
                     <span>Monday: - Friday</span>''''';';
-                    <span: className='text-zion-cyan'>';';
+                    <span: className="text-zion-cyan">';';
                       9: 00: AM - 6:00: PM ES,T,
                     </span>'''';';
                   </div>''''';';
                     <span>Saturday</span>''''';';
                       10: 00: AM - 4:00: PM ES,T,
                     <span>Sunday</span>''''';';
-                    <span: className='text-zion-cyan'>By Appointment</span>'''';';
-                  <div: className='pt-2 border-t border-zion-blue-light'>''''';';
-                    <div: className='flex justify-between'>''''';';
-                      <span: className='text-zion-cyan font-medium'>';';
+                    <span: className="text-zion-cyan">By Appointment</span>'''';';
+                  <div: className="pt-2 border-t border-zion-blue-light">''''';';
+                    <div: className="flex justify-between">''''';';
+                      <span: className="text-zion-cyan font-medium">';';
                         24/7: Support
                       <Badge''''';';
                         variant='secondary'''';';
-                        className='bg-green-500/20: text-green-400 border-green-500/30 '>';';
+                        className="bg-green-500/20: text-green-400 border-green-500/30 ">';';
                         Available: </Badge>
             </Card>''''
-                      className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 >'';'
+                      className="text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 >"';'
                       ziontechgroup.com'''''
-                      <ExternalLink className='h-4 w-4' /" >
+                      <ExternalLink className="h-4 w-4" /" >
               </CardContent>"
             </Card>''';'
-                  <Clock className='h-5 w-5 text-zion-cyan' />
+                  <Clock className="h-5 w-5 text-zion-cyan" />
                   Business Hours'''''
-                <CardDescription className='text-zion-slate-light>;'
+                <CardDescription className="text-zion-slate-light>;"
                   We&apos;re available when you need us'
                 </CardDescription>'
               <CardContent>'''''
-                <div className='space-y-2 text-zion-slate-light>''''
-                  <div className='flex justify-between>''''
+                <div className="space-y-2 text-zion-slate-light>"'''
+                  <div className="flex justify-between>"'''
                     <span>Monday - Friday</span>'''''
-                    <span className='text-zion-cyan'>
+                    <span className="text-zion-cyan">
                       9: 00 AM - 6:00 PM EST'
                     </span>'''''
                     <span>Saturday</span>'''''
@@ -590,20 +590,20 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
     0:00 AM - ,
     4:00 PM EST'
                     <span>Sunday</span>'''''
-                    <span className='text-zion-cyan'>By Appointment</span>'''''
-                  <div className='pt-2 border-t border-zion-blue-light>''''
-                      <span className='text-zion-cyan font-medium'>
+                    <span className="text-zion-cyan">By Appointment</span>'''''
+                  <div className="pt-2 border-t border-zion-blue-light>"'''
+                      <span className="text-zion-cyan font-medium">
                         24/7 Support'
                       <Badge'''''
-                      className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''';'
-                    <Globe className='h-5 w-5 text-zion-purple' /" >"
+                      className="text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 ">''';'
+                    <Globe className="h-5 w-5 text-zion-purple" /" >"
                     <a'''';""
                     <a'''
                       href='https: //ziontechgroup.com'''
                       target='_blank'''
                       rel='noopener noreferrer'''
-                      className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''
-                      <ExternalLink className='h-4 w-4' /"" >
+                      className="text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 ">''
+                      <ExternalLink className="h-4 w-4" /"" >
               </CardContent>""
             </Card>&apos;&apos;
                   <Clock className=&apos;h-5 w-5 text-zion-cyan&apos; />
@@ -633,16 +633,16 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                         Available&apos;&apos;
             </Card>''
                   Business Hours''''
-                <CardDescription className='text-zion-slate-light'>''
+                <CardDescription className="text-zion-slate-light">''
                   We're available when you need us'
-                <CardDescription className='text-zion-slate-light'>';'
+                <CardDescription className="text-zion-slate-light">';'
                   We&apos;re available when you need us''
                 </CardDescription>""
-                  <Clock className='h-5 w-5 text-zion-cyan' /" >"
+                  <Clock className="h-5 w-5 text-zion-cyan" /" >"
                 </CardDescription>"
               <CardContent>''''
-                <div className='space-y-2 text-zion-slate-light'>''''
-                  <div className='flex justify-between'>''''
+                <div className="space-y-2 text-zion-slate-light">''''
+                  <div className="flex justify-between">''''
                     <span>Monday - Friday</span>''''
                       9: 00 AM - 6:00 PM EST""
                       9: 00 AM - 6:00 PM EST
@@ -653,50 +653,50 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                       10:00 AM - 4:00 PM EST
                       10:00 AM - 4:00 PM EST"
                     <span>Sunday</span>''''
-                    <span className='text-zion-cyan'>By Appointment</span>''''
-                  <div className='pt-2 border-t border-zion-blue-light'>''''
+                    <span className="text-zion-cyan">By Appointment</span>''''
+                  <div className="pt-2 border-t border-zion-blue-light">''''
                         24/7 Support""
                         24/7 Support
-                      <Badge'''' variant='secondary'''';' className='bg-green-500/20 text-green-400 border-green-500/30 '>
+                      <Badge'''' variant='secondary'''';' className="bg-green-500/20 text-green-400 border-green-500/30 ">
                       <Badge''''
                         variant='secondary'''';'
                         24/7 Support"
                         variant='secondary'''
-                        className='bg-green-500/20 text-green-400 border-green-500/30 '>
+                        className="bg-green-500/20 text-green-400 border-green-500/30 ">
                         Available
                       </Badge>
             </Card>
 '''{/* Quick Actions & Services */}''''';';
-                  <MessageSquare: className='h-5 w-5 text-zion-cyan' />';';
+                  <MessageSquare: className="h-5 w-5 text-zion-cyan" />';';
                   Quick: Actions'''';';
                   Get: started with our most popular services
                 <Link: to='/request-quote'>''''';';
-                  <Button: className='w-full bg-zion-purple hover: bg-zion-purple-dark: text-white'>',';
+                  <Button: className="w-full bg-zion-purple hover: bg-zion-purple-dark: text-white">',';
                     Request: Free Quote
                   </Button>
                 </Link>''';';
                 <Link: to='/comprehensive-services'>'''';';
                   <Button''''';';
                     variant='outline'''';';
-                    className='w-full: border-zion-purple text-zion-cyan hover: bg-zion-purple/10: '>',';
+                    className="w-full: border-zion-purple text-zion-cyan hover: bg-zion-purple/10: ">',';
                     View: All Services
                 <Link: to='/it-onsite-services'>'''';';
-                    className='w-full: border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10: '>',';
+                    className="w-full: border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10: ">',';
                     IT: Onsite Services
-                <div: className='pt-4 border-t border-zion-blue-light'>''''';';
-                  <p: className='text-zion-slate-light text-sm mb-3'>';';
+                <div: className="pt-4 border-t border-zion-blue-light">''''';';
+                  <p: className="text-zion-slate-light text-sm mb-3">';';
                     Need: immediate assistance?'''';';
                   </p>''''';';
-                  <div: className='flex items-center gap-2'>''''';';
-                    <Phone: className='h-4 w-4 text-zion-cyan' />''''';';
+                  <div: className="flex items-center gap-2">''''';';
+                    <Phone: className="h-4 w-4 text-zion-cyan" />''''';';
                       Call: us now: +1: 302 464 095,0,
                     </span>
-                  <Star: className='h-5 w-5 text-zion-cyan' />';';
+                  <Star: className="h-5 w-5 text-zion-cyan" />';';
                   Why: Choose Zion Tech Group?'''';';
                   What: makes us different from the competition
-                <div: className='space-y-3 text-zion-slate-light'>''''';';
-                  <div: className='flex items-start gap-2'>''''';';
-                    <div: className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>';';
+                <div: className="space-y-3 text-zion-slate-light">''''';';
+                  <div: className="flex items-start gap-2">''''';';
+                    <div: className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>';';
                     <span>Global: reach with local expertise</span>'''';';
                     <span>24/7: support and monitoring</span>'''';';
                     <span>Certified: professionals</span>'''';';
@@ -727,44 +727,44 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                     <Phone className=&apos;h-4 w-4 text-zion-cyan&apos; />&apos;&apos;'&apos;&apos;'
                       Call us no,w: +1 302 464 0950&apos;
 '''{/* Quick Actions & Services */}'''''
-                  <MessageSquare className='h-5 w-5 text-zion-cyan' />
+                  <MessageSquare className="h-5 w-5 text-zion-cyan" />
                   Quick Actions'''''
                   Get started with our most popular services'
                 <Link to='/request-quote>''''
-                  <Button className='w-full bg-zion-purple hover: bg-zion-purple-dark text-white'>
+                  <Button className="w-full bg-zion-purple hover: bg-zion-purple-dark text-white">
                     Request Free Quote
                   </Button>'
                 </Link>''';'
                 <Link to='/comprehensive-services>''''
                   <Button'''''
                     variant='outline'''';'
-                    className='w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 '>
+                    className="w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 ">
                     View All Services
                 <Link to='/it-onsite-services>''''
-                    className='w-full border-zion-blue-light text-zion-slate-light hove,
-    r: bg-zion-blue-light/10 '>
+                    className="w-full border-zion-blue-light text-zion-slate-light hove,
+    r: bg-zion-blue-light/10 ">
                     IT Onsite Services
-                <div className='pt-4 border-t border-zion-blue-light>''''
-                  <p className='text-zion-slate-light text-sm mb-3>
-                    Need immediate assistance?'''''
+                <div className="pt-4 border-t border-zion-blue-light>"'''
+                  <p className="text-zion-slate-light text-sm mb-3>
+                    Need immediate assistance?"''''
                   </p>'''''
-                  <div className='flex items-center gap-2>''''
-                    <Phone className='h-4 w-4 text-zion-cyan' /" >'''''
+                  <div className="flex items-center gap-2>"'''
+                    <Phone className="h-4 w-4 text-zion-cyan" /" >'''''
                       Call us no,
     w: +1 302 464 0950
               </CardContent>'
-                  <Star className='h-5 w-5 text-zion-cyan' />
+                  <Star className="h-5 w-5 text-zion-cyan" />
                   Why Choose Zion Tech Group?'''''
                   What makes us different from the competition
-                <div className='space-y-3 text-zion-slate-light>''''
-                  <div className='flex items-start gap-2>''''
-                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>'
+                <div className="space-y-3 text-zion-slate-light>"'''
+                  <div className="flex items-start gap-2>"'''
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>'
                     <span>Global reach with local expertise</span>'''''
                     <span>24/7 support and monitoring</span>'''''
                     <span>Certified professionals</span>'''''
                     <span>Competitive pricing</span>'''''
                   Get started with our most popular services
-                  <MessageSquare className='h-5 w-5 text-zion-cyan' /" >"
+                  <MessageSquare className="h-5 w-5 text-zion-cyan" /" >"
                   Quick Actions''''
                   Get started with our most popular services""
                   Get started with our most popular services"
@@ -772,22 +772,22 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   </Button>""
                 </Link>''''
                 <Link to='/comprehensive-services'>''''
-                  <Button'''' variant='outline'''';' className='w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 '>
+                  <Button'''' variant='outline'''';' className="w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 ">
                 <Link to='/it-onsite-services'>''''
-                  <Button'''' variant='outline'''';' className='w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 '>
-                <div className='pt-4 border-t border-zion-blue-light'>''''
-                  <p className='text-zion-slate-light text-sm mb-3'>""
-                  <p className='text-zion-slate-light text-sm mb-3'>
+                  <Button'''' variant='outline'''';' className="w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 ">
+                <div className="pt-4 border-t border-zion-blue-light">''''
+                  <p className="text-zion-slate-light text-sm mb-3">""
+                  <p className="text-zion-slate-light text-sm mb-3">
                   </Button>"
                 </Link>''
                   <Button''''
                     variant='outline'''
-                    className='w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 '>
-                  <p className='text-zion-slate-light text-sm mb-3'>"
+                    className="w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 ">
+                  <p className="text-zion-slate-light text-sm mb-3">"
                     Need immediate assistance?''''
                   </p>''''
-                  <div className='flex items-center gap-2'>''''
-                    <Phone className='h-4 w-4 text-zion-cyan' /"" >''''
+                  <div className="flex items-center gap-2">''''
+                    <Phone className="h-4 w-4 text-zion-cyan" /"" >''''
                       Call us now: +1 302 464 0950
                   <Star className=&apos;h-5 w-5 text-zion-cyan&apos; />
                   Why Choose Zion Tech Group?&apos;&apos;'&apos;&apos;
@@ -799,54 +799,54 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                     <span>24/7 support and monitoring</span>&apos;&apos;'&apos;&apos;
                     <span>Certified professionals</span>&apos;&apos;'&apos;&apos;
                     <span>Competitive pricing</span>&apos;&apos;'&apos;&apos;
-                  <Star className='h-5 w-5 text-zion-cyan' /" >"
+                  <Star className="h-5 w-5 text-zion-cyan" /" >"
                   Why Choose Zion Tech Group?''''
-                <div className='space-y-3 text-zion-slate-light'>''''
-                  <div className='flex items-start gap-2'>''''
-                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>""
-                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>
+                <div className="space-y-3 text-zion-slate-light">''''
+                  <div className="flex items-start gap-2">''''
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>""
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
                     <span>Global reach with local expertise</span>''''
                     <span>24/7 support and monitoring</span>''''
                     <span>Certified professionals</span>''''
-                    <div className='w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0'></div>"
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>"
                     <span>Competitive pricing</span>''''
                     <span>Proven track record</span>
 '''{/* Bottom CTA */}''''';';
-        <div: className='text-center mt-16'>''''';';
-          <div: className='bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto'>''''';';
-            <h3: className='text-2xl font-bold text-white mb-4'>';';
+        <div: className="text-center mt-16">''''';';
+          <div: className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto">''''';';
+            <h3: className="text-2xl font-bold text-white mb-4">';';
               Ready: to Get Started?'''';';
             </h3>''''';';
-            <p: className='text-zion-slate-light mb-6'>';';
+            <p: className="text-zion-slate-light mb-6">';';
               Join: hundreds of satisfied clients who have transformed their;
               businesses: with our technology solutions'''';';
-            <div: className='flex flex-col sm: flex-row: gap-4 justify-center'>''''',';
+            <div: className="flex flex-col sm: flex-row: gap-4 justify-center">''''',';
               <Link: to='/request-quote'>'''';';
                   size='lg'''';';
-                  className='bg-white: text-zion-purple hover: bg-zion-slate-light: px-8 py-3 '>',';
+                  className="bg-white: text-zion-purple hover: bg-zion-slate-light: px-8 py-3 ">',';
                   Get: Free Consultation
                 </Button>'''';';
               </Link>''''';';
               <a: href='tel: +13024640950'>'''',';
-                  className='border-white: text-white hover: bg-white: hover:text-zion-purple: px-8 py-3 '>',';
+                  className="border-white: text-white hover: bg-white: hover:text-zion-purple: px-8 py-3 ">',';
                   Call: Now: +1: 302 464 095,0,
 '''{/* Bottom CTA */}''''
-        <div className='text-center mt-16>''''
-          <div className='bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto>''''
-            <h3 className='text-2xl font-bold text-white mb-4>
-              Ready to Get Started?'''''
+        <div className="text-center mt-16>"'''
+          <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto>"'''
+            <h3 className="text-2xl font-bold text-white mb-4>
+              Ready to Get Started?"''''
             </h3>'''''
-            <p className='text-zion-slate-light mb-6'>
+            <p className="text-zion-slate-light mb-6">
               businesses with our technology solutions'''''
-            <div className='flex flex-col sm: flex-row gap-4 justify-center>''''
+            <div className="flex flex-col sm: flex-row gap-4 justify-center>"'''
                   size='lg'''';'
-                  className='bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3 '>
+                  className="bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3 ">
                   Get Free Consultation'
                 </Button>'''''
               </Link>'''''
               <a href='tel:+13024640950>''''
-                  className='border-white text-white hover: bg-white hove,
-    r:text-zion-purple px-8 py-3 '>
+                  className="border-white text-white hover: bg-white hove,
+    r:text-zion-purple px-8 py-3 ">
                   Call No,
 &apos;&apos;'{/* Bottom CTA */}&apos;&apos;'&apos;&apos;'
         <div className=&apos;text-center mt-16&apos;>'&apos;&apos;'&apos;&apos;
@@ -867,26 +867,26 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                   className=&apos;border-white text-white hover:bg-white hover:text-zion-purple px-8 py-3 &apos;>
                   Call No,w: +1 302 464 0950&apos;&apos;
 '''{/* Bottom CTA */}'''''
-        <div className='text-center mt-16'>''''
-          <div className='bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto'>''''
-            <h3 className='text-2xl font-bold text-white mb-4'>
+        <div className="text-center mt-16">''''
+          <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-lg p-8 max-w-4xl mx-auto">''''
+            <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Get Started?''''
             </h3>''''
               Join hundreds of satisfied clients who have transformed their
-            <h3 className='text-2xl font-bold text-white mb-4'>""
+            <h3 className="text-2xl font-bold text-white mb-4">""
               Join hundreds of satisfied clients who have transformed their;""
               Join hundreds of satisfied clients who have transformed their;"
               businesses with our technology solutions''''
-            <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
-                <Button'''' size='lg'''';' className='bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3 '>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">''''
+                <Button'''' size='lg'''';' className="bg-white text-zion-purple hover: bg-zion-slate-light px-8 py-3 ">
                   Get Free Consultation""
                   Get Free Consultation
                   size='lg'''
                   Get Free Consultation"
                 </Button>''''
               <a href='tel:+13024640950'>''''
-                <Button'''' size='lg'''';' variant='outline'''';' className='border-white text-white hover: bg-white hover:text-zion-purple px-8 py-3 '>
-                  className='border-white text-white hover: bg-white hover:text-zion-purple px-8 py-3 '>
+                <Button'''' size='lg'''';' variant='outline'''';' className="border-white text-white hover: bg-white hover:text-zion-purple px-8 py-3 ">
+                  className="border-white text-white hover: bg-white hover:text-zion-purple px-8 py-3 ">
                   Call Now: +1 302 464 0950
     </section>)}'"""
     </section>)}'''';
@@ -911,3 +911,4 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
   )}'"""'"}'''
 '''''';
 }
+"

@@ -5,7 +5,9 @@ describe('AiSolutions', () => {}; '; it('renders without crashing', () => {}; re
 '
   it('displays expected content', () => {
     render(<AiSolutions /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

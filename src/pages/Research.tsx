@@ -6,8 +6,8 @@ import { ;
   ExternalLink, Download, Star, TrendingUp, Globe} from 'lucide-react';
 ;
 export default function Research() {;
-  const researchAreas = [;
-    {;
+  const researchAreas = [
+  {;
       title: "Artificial Intelligence"
       description: "Advancing AI research in machine learning, natural language processing, and computer vision",;
       publications: 45
@@ -33,8 +33,8 @@ export default function Research() {;
       color: "from-blue-500 to-cyan-500"}
   ]
 ;
-  const recentPublications = [;
-    {;
+  const recentPublications = [
+  {;
       id: 1
       title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment"
       authors: ["Dr. Sarah Chen", "Prof. Michael Rodriguez"],;
@@ -60,7 +60,8 @@ export default function Research() {;
       featured: false}
   ]
 ;
-  return (;
+  return (
+    
     <>;
       <SEO ;
         title="Research - Zion Tech Group | Innovation & Scientific Discovery";
@@ -614,3 +615,4 @@ export default function Research() {
 </>
   )
   )}
+"

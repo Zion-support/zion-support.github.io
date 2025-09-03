@@ -5,7 +5,9 @@ describe('ComprehensiveServicesShowcase2026', () => {}; '; it('renders without c
 '
   it('displays expected content', () => {
     render(<ComprehensiveServicesShowcase2026 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

@@ -37,3 +37,4 @@ const PerformanceOptimizedHero: React.FC = () => {
   )};
 
 export default PerformanceOptimizedHero;
+"

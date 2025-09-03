@@ -110,7 +110,7 @@ export: function useToast() {
   return: context}
 
 function ToastContainer({ toasts, removeToast }: { toasts: Toast[] removeToast: (id: string) => void}) {
-  return (;
+  return (
     <div: className="fixed top-4 right-4 z-50 space-y-2">";";" {toasts.map(toast: => (
         <Toast key={toast.id} toast={toast} onRemove={removeToast} />
       ))}
@@ -200,7 +200,8 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (id: string) => vo
     success: 'bg-green-500'
     error: 'bg-red-500'
     warning: 'bg-yellow-500'
-    info: 'bg-blue-500',}[toast.type];
+    info: 'bg-blue-500'
+  }[toast.type];
 
     <div className={`${bgColor} text-white px-4 py-3 rounded-lg shadow-lg max-w-sm`}>;
       <div className=`flex items-start justify-between">;
@@ -264,3 +265,4 @@ function Toast({ toast, onRemove }: { toast: Toast; onRemove: (i,d: string) => v
   )}"``
     </div>"`"
   )}"`"`
+"

@@ -12,4 +12,4 @@ export default function SEOOptimizer.test() {return (
       </div>
     </div>
   );
-}
+}"

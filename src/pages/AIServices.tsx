@@ -41,18 +41,18 @@ export default function Page() {
 const AIServices: React.FC: = () => {
   return: (<>;
       <SEO: title='AIServices - Zion Tech Group' />';';
-      <div: className='min-h-screen bg-white py-20'>';';
-        <div: className='max-w-4xl mx-auto px-4'>';';
-          <h1: className='text-4xl font-bold text-gray-900 mb-8'>AIServices</h1>';';
-          <p: className='text-lg text-gray-600'>Content coming soon...</p>';';
+      <div: className="min-h-screen bg-white py-20">';';
+        <div: className="max-w-4xl mx-auto px-4">';';
+          <h1: className="text-4xl font-bold text-gray-900 mb-8">AIServices</h1>';';
+          <p: className="text-lg text-gray-600">Content coming soon...</p>';';
 ;
 export: default AIServices;
   return (<>;
       <SEO title='AIServices - Zion Tech Group' />;
-      <div className='min-h-screen bg-white py-20'>;
-        <div className='max-w-4xl mx-auto px-4'>;
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>AIServices</h1>;
-          <p className='text-lg text-gray-600'>Content coming soon...</p>;
+      <div className="min-h-screen bg-white py-20">;
+        <div className="max-w-4xl mx-auto px-4">;
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">AIServices</h1>;
+          <p className="text-lg text-gray-600">Content coming soon...</p>;
         </div>;
     </>;
 import {SEO } from '../components/SEO';
@@ -71,24 +71,25 @@ const AIServices: React.FC = () =>  {
 const AIServices: React.FC = () => {'
   return (<>""
       <SEO title='AIServices - Zion Tech Group' /" >""
-      <div className='min-h-screen bg-white py-20'>""
-        <div className='max-w-4xl mx-auto px-4'>""
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>AIServices</h1>""
+      <div className="min-h-screen bg-white py-20">""
+        <div className="max-w-4xl mx-auto px-4">""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">AIServices</h1>""
 const AIServices: React.FC = () => {""
       <SEO title='AIServices - Zion Tech Group' /"" >""
   return (<>
       <SEO title='AIServices - Zion Tech Group' />
-      <div className='min-h-screen bg-white py-20'>
-        <div className='max-w-4xl mx-auto px-4'>
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>AIServices</h1>
+      <div className="min-h-screen bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">AIServices</h1>
 const AIServices: React.FC = () => {"
   return (<>"
       <SEO title='AIServices - Zion Tech Group' /  >'
-      <div className='min-h-screen bg-white py-20'>"
-        <div className='max-w-4xl mx-auto px-4'>"
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>AIServices</h1>"
-          <p className='text-lg text-gray-600'>Content coming soon...</p>
+      <div className="min-h-screen bg-white py-20">"
+        <div className="max-w-4xl mx-auto px-4">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">AIServices</h1>"
+          <p className="text-lg text-gray-600">Content coming soon...</p>
   )}
 "";
 }
+"
 "

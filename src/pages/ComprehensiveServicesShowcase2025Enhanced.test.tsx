@@ -5,7 +5,9 @@ describe('ComprehensiveServicesShowcase2025Enhanced', () => {}; '; it('renders w
 '
   it('displays expected content', () => {
     render(<ComprehensiveServicesShowcase2025Enhanced /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

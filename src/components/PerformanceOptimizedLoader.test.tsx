@@ -12,4 +12,4 @@ export default function PerformanceOptimizedLoader.test() {return (
       </div>
     </div>
   );
-}
+}"

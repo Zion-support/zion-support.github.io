@@ -12,4 +12,4 @@ export default function CategoriesSection.test() {return (
       </div>
     </div>
   );
-}
+}"

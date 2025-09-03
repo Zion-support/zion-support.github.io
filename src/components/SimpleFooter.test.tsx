@@ -15,3 +15,4 @@ describe(&apos;SimpleFooter&apos, () => {
 })
 ";
 }}
+"

@@ -12,4 +12,4 @@ export default function TeamExpertiseSection.test() {return (
       </div>
     </div>
   );
-}
+}"

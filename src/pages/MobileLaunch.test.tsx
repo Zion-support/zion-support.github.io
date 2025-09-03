@@ -5,7 +5,9 @@ describe('MobileLaunch', () => {}; '; it('renders without crashing', () => {}; r
 '
   it('displays expected content', () => {
     render(<MobileLaunch /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

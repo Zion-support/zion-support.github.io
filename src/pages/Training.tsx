@@ -6,8 +6,8 @@ import { ;
   Star, Award, Play, Download, ArrowRight} from 'lucide-react';
 ;
 export default function Training() {;
-  const courses = [;
-    {;
+  const courses = [
+  {;
       id: 1
       title: "AI Fundamentals"
       description: "Learn the basics of artificial intelligence and machine learning"
@@ -49,8 +49,8 @@ export default function Training() {;
       featured: false}
   ]
 ;
-  const trainingTypes = [;
-    {;
+  const trainingTypes = [
+  {;
       title: "Online Courses"
       description: "Self-paced learning with video content and exercises"
       icon: Video
@@ -203,7 +203,8 @@ export default function Training() {
     };
   ]
 ;
-  return (;
+  return (
+    
     <>;
       <SEO ;
         title="Training - Zion Tech Group | Technology Education & Certification";
@@ -599,3 +600,4 @@ export default function Training() {
 </>
   )
   )}
+"

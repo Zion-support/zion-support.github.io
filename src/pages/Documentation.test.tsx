@@ -5,7 +5,9 @@ describe('Documentation', () => {}; '; it('renders without crashing', () => {}; 
 '
   it('displays expected content', () => {
     render(<Documentation /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

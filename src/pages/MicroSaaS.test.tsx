@@ -5,7 +5,9 @@ describe('MicroSaaS', () => {}; '; it('renders without crashing', () => {}; rend
 '
   it('displays expected content', () => {
     render(<MicroSaaS /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

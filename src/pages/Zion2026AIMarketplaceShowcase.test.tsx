@@ -5,7 +5,9 @@ describe('Zion2026AIMarketplaceShowcase', () => {}; '; it('renders without crash
 '
   it('displays expected content', () => {
     render(<Zion2026AIMarketplaceShowcase /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

@@ -5,7 +5,9 @@ describe('AdvancedServicesShowcase2025', () => {}; '; it('renders without crashi
 '
   it('displays expected content', () => {
     render(<AdvancedServicesShowcase2025 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

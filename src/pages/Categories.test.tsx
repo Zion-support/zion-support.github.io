@@ -5,7 +5,9 @@ describe('Categories', () => {}; '; it('renders without crashing', () => {}; ren
 '
   it('displays expected content', () => {
     render(<Categories /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

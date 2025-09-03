@@ -5,7 +5,9 @@ describe('AdvancedInnovativeServicesShowcase2026', () => {}; '; it('renders with
 '
   it('displays expected content', () => {
     render(<AdvancedInnovativeServicesShowcase2026 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

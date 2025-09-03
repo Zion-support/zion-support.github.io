@@ -1,5 +1,6 @@
 import React from 'react';
-import { Loader2, } from 'lucide-react';
+import { Loader2
+  } from 'lucide-react';
 
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg';
@@ -26,7 +27,7 @@ export default function Loading({
 
   if (fullScreen) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex items-center justify-center bg-white">
         {content}
       </div>
     );
@@ -50,9 +51,12 @@ export function SkeletonCard() {
   );
 }
 
-export function SkeletonText({ lines = 3 }: { lines?: number, }) {
-  return (<div className="animate-pulse space-y-2">
-      {Array.from({ length: lines, }).map((_, i) => (
+export function SkeletonText({ lines = 3 }: { lines?: number
+  }) {
+  return (
+    <div className="animate-pulse space-y-2">
+      {Array.from({ length: lines
+  }).map((_, i) => (
         <div key={i}
           className={`h-3 bg-gray-200 rounded ${
             i === lines - 1 ? 'w-2/3' : 'w-full';
@@ -61,4 +65,4 @@ export function SkeletonText({ lines = 3 }: { lines?: number, }) {
       ))}
     </div>
   );
-}
+}"

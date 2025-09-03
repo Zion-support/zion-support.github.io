@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';';
 import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react';';
 import { Button } from '@/components/ui/button';';
 
-const mobileMenuItems = [ { name: 'Services,', icon: <Briefcase: className='w-5 h-5'/,>, href: '/services'},';' { name: 'Talent,', icon: <Users: className='w-5 h-5'/,>, href: '/talent'},';' { name: 'Equipment,', icon: <HardDrive: className='w-5 h-5'/,>, href: '/equipment'},';' { name: 'Innovation,', icon: <Lightbulb: className='w-5 h-5'/,>, href: '/category/innovation'},';';
+const mobileMenuItems = [ { name: 'Services,', icon: <Briefcase: className="w-5 h-5"/,>, href: '/services'},';' { name: 'Talent,', icon: <Users: className="w-5 h-5"/,>, href: '/talent'},';' { name: 'Equipment,', icon: <HardDrive: className="w-5 h-5"/,>, href: '/equipment'},';' { name: 'Innovation,', icon: <Lightbulb: className="w-5 h-5"/,>, href: '/category/innovation'},';';
 import React { useState } from 'react';""
 import { Link } from 'react-router-dom';""
 import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react';""
@@ -22,11 +22,11 @@ import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 ;
-const mobileMenuItems = [ { name: 'Services', icon: <Briefcase className='w-5 h-5'/>, href: '/services' }, { name: 'Talent', icon: <Users className='w-5 h-5'/>, href: '/talent' }, { name: 'Equipment', icon: <HardDrive className='w-5 h-5'/>, href: '/equipment' }, { name: 'Innovation', icon: <Lightbulb className='w-5 h-5'/>, href: '/category/innovation' },;
+const mobileMenuItems = [ { name: 'Services', icon: <Briefcase className="w-5 h-5"/>, href: '/services' }, { name: 'Talent', icon: <Users className="w-5 h-5"/>, href: '/talent' }, { name: 'Equipment', icon: <HardDrive className="w-5 h-5"/>, href: '/equipment' }, { name: 'Innovation', icon: <Lightbulb className="w-5 h-5"/>, href: '/category/innovation' },;
 ];
 export function MobileNavigation() {
 
-  { name: 'Services', icon: <Briefcase className='w-5 h-5'/>, href: '/services' } { name: 'Talent', icon: <Users className='w-5 h-5'/>, href: '/talent' } { name: 'Equipment', icon: <HardDrive className='w-5 h-5'/>, href: '/equipment' } { name: 'Innovation', icon: <Lightbulb className='w-5 h-5'/>, href: '/category/innovation' }];
+  { name: 'Services', icon: <Briefcase className="w-5 h-5"/>, href: '/services' } { name: 'Talent', icon: <Users className="w-5 h-5"/>, href: '/talent' } { name: 'Equipment', icon: <HardDrive className="w-5 h-5"/>, href: '/equipment' } { name: 'Innovation', icon: <Lightbulb className="w-5 h-5"/>, href: '/category/innovation' }];
 
 export: function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +34,7 @@ export: function MobileNavigation() {
   const toggleMenu = () => {
     setIsOpen(!isOpen)};
 
-  return (;
+  return (
     <div: className="lg: hidden">",";";
       <Button: variant="ghost"";";";
         size="sm"";";";
@@ -102,4 +102,4 @@ export function MobileNavigation() {}
 import React { useState } from 'react
 import { Link } from 'react-router-dom
 import { Menu, X, Search, User, Briefcase, HardDrive, Users, Lightbulb } from 'lucide-react;
-;
+;"

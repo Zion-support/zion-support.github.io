@@ -12,4 +12,4 @@ export default function EnhancedAccessibilityPanel.test() {return (
       </div>
     </div>
   );
-}
+}"

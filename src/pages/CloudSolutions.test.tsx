@@ -5,7 +5,9 @@ describe('CloudSolutions', () => {}; '; it('renders without crashing', () => {};
 '
   it('displays expected content', () => {
     render(<CloudSolutions /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

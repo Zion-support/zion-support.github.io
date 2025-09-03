@@ -181,3 +181,4 @@ export interface RevolutionaryService2030 {id: string;
    marketSize: string;
    ethicalAI: string[]  }
    ethicalAI: string[]}
+"

@@ -5,7 +5,9 @@ describe('Help', () => {}; '; it('renders without crashing', () => {}; render(<H
 '
   it('displays expected content', () => {
     render(<Help /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

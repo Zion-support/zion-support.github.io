@@ -5,7 +5,9 @@ describe('SystemStatus', () => {}; '; it('renders without crashing', () => {}; r
 '
   it('displays expected content', () => {
     render(<SystemStatus /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

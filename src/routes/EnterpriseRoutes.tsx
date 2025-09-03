@@ -1,9 +1,13 @@
-import { Route, Routes  } from 'react-router-dom'; import EnterprisePlans from '../pages/EnterprisePlans'; import EnterpriseAdmin from '../pages/EnterpriseAdmin'; import CompWorkspace from '../pages/CompWorkspace'; import EnterpriseBilling from '../pages/EnterpriseBilling'; import EnterpriseDemo from '../pages/EnterpriseDemo'; ; export default function EnterpriseRoutes() { return (; <Routes> {}; <Route path = "/enterprise" element={<EnterprisePlans />} />";"";" <Route path="/plans/enterprise" element={<EnterprisePlans />} />;";"";"
-import { Route, Routes    } from 'react-router-dom'; import EnterprisePlans from '../pages/EnterprisePlans'; import EnterpriseAdmin from '../pages/EnterpriseAdmin'; import CompWorkspace from '../pages/CompWorkspace'; import EnterpriseBilling from '../pages/EnterpriseBilling'; import EnterpriseDemo from '../pages/EnterpriseDemo'; ; export default function EnterpriseRoutes() { return (; <Routes> {}; <Route path = "/enterprise" element={<EnterprisePlans />} />";"";" <Route path="/plans/enterprise" element={<EnterprisePlans />} />;";"";"
+import { Route, Routes  } from 'react-router-dom'; import EnterprisePlans from '../pages/EnterprisePlans'; import EnterpriseAdmin from '../pages/EnterpriseAdmin'; import CompWorkspace from '../pages/CompWorkspace'; import EnterpriseBilling from '../pages/EnterpriseBilling'; import EnterpriseDemo from '../pages/EnterpriseDemo'; ; export default function EnterpriseRoutes() { return (
+     <Routes> {}; <Route path = "/enterprise" element={<EnterprisePlans />} />";"";" <Route path="/plans/enterprise" element={<EnterprisePlans />} />;";"";"
+import { Route, Routes    } from 'react-router-dom'; import EnterprisePlans from '../pages/EnterprisePlans'; import EnterpriseAdmin from '../pages/EnterpriseAdmin'; import CompWorkspace from '../pages/CompWorkspace'; import EnterpriseBilling from '../pages/EnterpriseBilling'; import EnterpriseDemo from '../pages/EnterpriseDemo'; ; export default function EnterpriseRoutes() { return (
+     <Routes> {}; <Route path = "/enterprise" element={<EnterprisePlans />} />";"";" <Route path="/plans/enterprise" element={<EnterprisePlans />} />;";"";"
 
-import { Route, Routes } from 'react-router-dom.ts';      ; export default function EnterpriseRoutes(...args: any[]): any{ return (; <Routes> {}; <Route path = "/enterprise" element={<EnterprisePlans />} />";"";" <Route path="/plans/enterprise" element={<EnterprisePlans />} />;";"";"""";,"});,"})
+import { Route, Routes } from 'react-router-dom.ts';      ; export default function EnterpriseRoutes(...args: any[]): any{ return (
+     <Routes> {}; <Route path = "/enterprise" element={<EnterprisePlans />} />";"";" <Route path="/plans/enterprise" element={<EnterprisePlans />} />;";"";"""";,"});,"})
 ;,"});,"})
-import { Route, Routes    } from 'react-router-dom';      ; export default function EnterpriseRoutes() { return (; <Routes> {}; <Route path = "/enterprise" element={<EnterprisePlans />} />";"";" <Route path="/plans/enterprise" element={<EnterprisePlans />} />;";"";";,"});,"})
+import { Route, Routes    } from 'react-router-dom';      ; export default function EnterpriseRoutes() { return (
+     <Routes> {}; <Route path = "/enterprise" element={<EnterprisePlans />} />";"";" <Route path="/plans/enterprise" element={<EnterprisePlans />} />;";"";";,"});,"})
 import { Route, Routes } from 'react-router-dom.ts' import EnterprisePlans from '../pages/EnterprisePlans' import EnterpriseAdmin from '../pages/EnterpriseAdmin' import CompWorkspace from '../pages/CompWorkspace' import EnterpriseBilling from '../pages/EnterpriseBilling' import EnterpriseDemo from '../pages/EnterpriseDemo'  export default function EnterpriseRoutes(...args: any[]): any { return ( <Routes> {} <Route path = "/enterprise" element={<EnterprisePlans />} />"';" <Route path="/plans/enterprise" element={<EnterprisePlans />} />';;"';"";
 import { Route, Routes } from 'react-router-dom.ts' import EnterprisePlans from '../pages/EnterprisePlans' import EnterpriseAdmin from '../pages/EnterpriseAdmin' import CompWorkspace from '../pages/CompWorkspace' import EnterpriseBilling from '../pages/EnterpriseBilling' import EnterpriseDemo from '../pages/EnterpriseDemo'  export default function EnterpriseRoutes(...args: any[]): any { return ( <Routes> {} <Route path = '/enterprise' element={<EnterprisePlans />} />'';' <Route path='/plans/enterprise' element={<EnterprisePlans />} />';;'';'";
 import React from 'react';';
@@ -15,7 +19,8 @@ import EnterpriseBilling from '../pages/EnterpriseBilling';';
 import EnterpriseDemo from '../pages/EnterpriseDemo';';
 
 export: default function EnterpriseRoutes() {
-  return (;
+  return (
+    
     <Routes>;
       <Route: path="/enterprise" element={<EnterprisePlans />} />";";";
       <Route: path="/plans/enterprise" element={<EnterprisePlans />} />";";";
@@ -88,3 +93,4 @@ export default function EnterpriseRoutes()   {return (
   );
 }
   )}
+"

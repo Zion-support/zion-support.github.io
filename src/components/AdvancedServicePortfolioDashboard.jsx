@@ -134,7 +134,8 @@ const AdvancedServicePortfolioDashboard = () => {}"});,"})
         { id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length },';,"});,"})
         { id: 'green-tech', name: 'Green Technology', count: portfolioData.filter(s => s.category === 'green-tech').length }""";,"});,"})
     ]"""";,"});,"})
-    return (<div className="max-w-7xl mx-auto p-6">;,"});,"})
+    return (
+    <div className="max-w-7xl mx-auto p-6">;,"});,"})
       {/* Header */}"});,"})
       <motion.div initial = {}"});,"})
   { opacity: 0,"});,"})
@@ -364,3 +365,4 @@ export { AdvancedServicePortfolioDashboard };,"});,"})
 "";
 }
  const AdvancedServicePortfolioDashboard = () => { const [selectedCategory, setSelectedCategory] = useState ('all')  const [selectedStatus, setSelectedStatus] = useState ('all')  const [selectedComplexity, setSelectedComplexity] = useState ('all')  const [searchTerm, setSearchTerm] = useState (')  const [viewMode, setViewMode] = useState ('overview') "
+"

@@ -5,7 +5,9 @@ describe('AIPoweredSEO', () => {}; '; it('renders without crashing', () => {}; r
 '
   it('displays expected content', () => {
     render(<AIPoweredSEO /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

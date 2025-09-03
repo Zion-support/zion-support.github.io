@@ -5,7 +5,9 @@ describe('NewInnovativeServices2025', () => {}; '; it('renders without crashing'
 '
   it('displays expected content', () => {
     render(<NewInnovativeServices2025 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

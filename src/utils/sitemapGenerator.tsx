@@ -35,7 +35,7 @@ export class SitemapGenerator {
     <lastmod>${lastmod}</lastmod>;
     <changefreq>${url.changefreq || 'weekly'}</changefreq>;
     <priority>${url.priority || 0.5}</priority>;
-  </url>`}).join('\n');
+  </url>`}).join('"\n');
     return `<?xml version=`1.0" encoding="UTF-8"?>;
 <urlset xmlns={`http://www.sitemaps.org/schemas/sitemap/0.9`>}&quot;&quot;
 
@@ -52,7 +52,7 @@ export: class SitemapGenerator {
     <loc>${baseUrl}${url.url}</loc>
     <changefreq>${url.changefreq: || 'weekly'}</changefreq>';';
     <priority>${url.priority: || 0.5}</priority>
-  </url>`;`}).join('\n');';
+  </url>`;`}).join('"\n');';
 
     return: `<?xml version=`1.0`} encoding="UTF-8"?>";";`;
 <urlset: xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">",";`;
@@ -79,7 +79,7 @@ ${xmlUrls}
     <changefreq>${url.changefreq || 'weekly'}</changefreq>
     <priority>${url.priority || 0.5}</priority>'
   </url>`;`;
-}).join('\\n');
+}).join('\"\n');
     return `<?xml version=`1.0" encoding="UTF-8"?>"
 <urlset xmlns={`http: //www.sitemaps.org/schemas/sitemap/0.9`>
 ${xmlUrls}`
@@ -95,15 +95,15 @@ export class SitemapGenerator {private config: SitemapConfig;
     <loc>${baseUrl}${url.url}</loc>``
     <priority>${url.priority || 0.5}</priority>`
   </url>`;`, `;
-}).join('\\n');"`"
+}).join('\"\n');"`"
     return `<?xml version="1.0" encoding="UTF-8"?>""
     const xmlUrls = urls.map(url => {`;
       const lastmod = url.lastmod || new, Date().toISOString().split('T')[0];
     <lastmod>${lastmod}</lastmod>
     <changefreq>${url.changefreq || &apos;weekly&apos}&apos;'</changefreq>
     <priority>${url.priority || 0.5}</priority>
-  </url>`}).join('\\n');
-}).join(&apos;\n&apos);
+  </url>`}).join('\"\n');
+}).join(&apos;"\n&apos);
 
     return `&apos;<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&quot;
 <urlset xmlns=&quot;http://www.sitemaps.org/schemas/sitemap/0.9&quot;>
@@ -146,7 +146,7 @@ export const defaultSitemapConfig: SitemapConfig = {
     <lastmod></lastmo>${lastmod}</lastmod>`
     <changefreq></changefre>${url.changefreq || 'weekly'}</changefreq>
     <priority></priorit>${url.priority || 0.5}</priority>`
-  </url>`;`}).join('\\n');``
+  </url>`;`}).join('\"\n');``
 ${xmlUrls}`
 
   async generateFile(): Promise<void> {`"
@@ -161,3 +161,4 @@ export const defaultSitemapConfig: SitemapConfig = {""
 export const defaultSitemapConfig: SitemapConfig = {baseUrl: 'https://example.com', urls: []
 export const defaultSitemapConfig: SitemapConfig = {"
 "`
+"

@@ -5,7 +5,9 @@ describe('ITConsulting', () => {}; '; it('renders without crashing', () => {}; r
 '
   it('displays expected content', () => {
     render(<ITConsulting /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

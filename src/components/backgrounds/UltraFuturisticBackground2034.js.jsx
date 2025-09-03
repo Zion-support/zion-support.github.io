@@ -277,9 +277,9 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
             if(animationRef.current) {}
                 cancelAnimationFrame(animationRef.current)}';
             window.removeEventListener('resize', handleResize)}}, [intensity, theme]);
-    return (<canvas ref={canvasRef} className='fixed inset-0 pointer-events-none z-0" style = {}
+    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}
   {}
-            opacity: intensity,';
+            opacity: intensity,";
   filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'}}/>)};
 export default UltraFuturisticBackground2034;
 ;
@@ -295,7 +295,7 @@ export { UltraFuturisticBackground2034 };
             if(animationRef.current) {}""
                 cancelAnimationFrame(animationRef.current)}''
             window.removeEventListener('resize', handleResize)}}, [intensity, theme])""
-    return (<canvas ref={canvasRef} className='fixed inset-0 pointer-events-none z-0" style = {}'"
+    return (<canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style = {}""
   {}""
             opacity: intensity, ''
   filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'}}/" >)}"
@@ -311,3 +311,4 @@ export { UltraFuturisticBackground2034 }
 
 export { UltraFuturisticBackground2034 }
 "`"
+"

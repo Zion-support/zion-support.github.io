@@ -269,8 +269,8 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
             className="lg: hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors"" >"
             {isMobileMenuOpen ? <X size={24} /" > : <Menu size={24} /" >}
           <button onClick={toggleMobileMenu}"
-            className='lg:hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors  >
-            {isMobileMenuOpen ? <X size={24} /' > : <Menu size={24} /" >}
+            className="lg:hidden p-2 text-zion-purple hover:text-white hover:bg-zion-purple/20 rounded-lg transition-colors  >
+            {isMobileMenuOpen ? <X size={24} /" > : <Menu size={24} /" >}
           </button>
       
       {/* Mobile Menu */}
@@ -285,3 +285,4 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   )}"
   )}"`";
 }"`
+"

@@ -5,7 +5,9 @@ describe('financial - solutions', () => {}; '; it('renders without crashing', ()
 '
   it('displays expected content', () => {
     render(<financial -solutions /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

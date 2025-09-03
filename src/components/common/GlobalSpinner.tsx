@@ -12,4 +12,4 @@ export default function GlobalSpinner() {return (
       </div>
     </div>
   );
-}
+}"

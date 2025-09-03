@@ -5,7 +5,9 @@ describe('EnhancedInnovativeServicesShowcase2027', () => {}; '; it('renders with
 '
   it('displays expected content', () => {
     render(<EnhancedInnovativeServicesShowcase2027 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

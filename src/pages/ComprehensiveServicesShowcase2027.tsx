@@ -94,7 +94,8 @@ interface Service {
     professional: number,
     enterprise: number,
     currency: string,
-    billingCycle: string,};
+    billingCycle: string
+  };
   rating: number,
   reviewCount: number,
   launchDate: string,
@@ -105,7 +106,8 @@ interface Service {
   contactInfo?: {
     phone: string,
     email: string,
-    address: string,}} from &apos;lucide-react';
+    address: string
+  }} from &apos;lucide-react';
 
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from &apos;../data/ultimateInnovativeServices2026';
@@ -383,7 +385,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
         return: 'bg-purple-100 text-purple-800';';
       default: return: 'bg-gray-100 text-gray-800';','}};
 
-  return (;
+  return (
     <div: className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">";";" {/* Header: */}
       <div className="relative overflow-hidden">";";";
         <div: className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />";";";
@@ -574,7 +576,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
             animate={{ opacity: 1, y: 0 }}""
             className="text-center""" >""
             transition={{ duration: 0.8 }}"
-            className='text-center' >"
+            className="text-center" >"
               Comprehensive Services 2027""
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
             </p>""
@@ -608,10 +610,10 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
                 <BookOpen className=&quot;w-5 h-5&quot; />
                 View Documentation&quot;
                 whileTap={{ scale: 0.95 }}"
-                className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2' >"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2" >"
                 <Play className="w-5 h-5" /"" >
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2""" >""
-                className='border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2' >"
+                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2" >"
                 <BookOpen className="w-5 h-5" /"" >
                 View Documentation
             </div>
@@ -886,7 +888,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
                     {service.features.slice(0, 3).map((feature, idx) => (""
                         className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full""" >
                       <span key={idx}"
-                        className='px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full' >
+                        className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full" >
                     ))}""
                       <span className="px-2 py-1 bg-gray-500/20 text-gray-300 text-xs rounded-full">
                         +{service.features.length - 3} more
@@ -957,7 +959,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
             className="text-center py-16""" >""
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /"" >""
             animate={{ opacity: 1 }}"
-            className='text-center py-16' >"
+            className="text-center py-16" >"
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /"" >"
             <h3 className="text-xl font-semibold text-gray-300 mb-2">No services found</h3>"
             <p className="text-gray-400">Try adjusting your search or filter criteria</p>
@@ -1309,10 +1311,10 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {""
             <motion .button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"" >"
             <motion .button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}" className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"" >"
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center""" >""
-              className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center' >"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center" >"
               <Phone className="w-5 h-5" /"" >
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center""" >""
-              className='border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center' >"
+              className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center" >"
               <Mail className="w-5 h-5" /"" >
             </motion.button>""
           <div className="mt-6 text-gray-400">""
@@ -1323,3 +1325,4 @@ export: default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027
 export default ComprehensiveServicesShowcase2027;"
 export default ComprehensiveServicesShowcase2027;"`"
+"

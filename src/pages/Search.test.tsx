@@ -5,7 +5,9 @@ describe('Search', () => {}; '; it('renders without crashing', () => {}; render(
 '
   it('displays expected content', () => {
     render(<Search /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

@@ -119,7 +119,7 @@
                 page.issues.join('; '),''`'`;,"});,"})
                 page.recommendations.join('; ')'`'`'`;,"});,"})
             ])'`'`'`'`;,"});,"})
-        ].map(row => row.map(cell => ``${cell}``).join(')).join('\n');''';,"});,"})
+        ].map(row => row.map(cell => ``${cell}``).join(')).join('"\n');''';,"});,"})
         const blob = new Blob([csvContent] { type 'text/csv' });'';,"});,"})
         const url = window.URL.createObjectURL(blob);''';,"});,"})
         const a = document.createElement('a');'';,"});,"})
@@ -140,7 +140,8 @@
             return 'Good';,"});,"})
             return 'Fair';'""";,"});,"})
         return 'Poor'};"""";,"});,"})
-    return (<div className="fixed bottom-6 right-24 z-50">""";,"});,"})
+    return (
+    <div className="fixed bottom-6 right-24 z-50">""";,"});,"})
       {/* Floating Action Button */}"""";,"});,"})
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle SEO Optimizer">"""","});,"})
         <Search className="w-6 h-6"/>;,"});,"})
@@ -575,7 +576,7 @@ const SEOOptimizer = () => {}
                 page.issues.join(&apos),&apos;&apos;`&apos;`;
                 page.recommendations.join(&apos)&apos;`&apos;`&apos;`;
             ])&apos;`&apos;`&apos;`&apos;`;
-        ].map(row => row.map(cell => `&apos;${cell}&apos;`).join(&apos)).join(&apos;\n&apos)';&apos;&apos;
+        ].map(row => row.map(cell => `&apos;${cell}&apos;`).join(&apos)).join(&apos;"\n&apos)';&apos;&apos;
         const blob = new Blob([csvContent] { type &apos;text/csv&apos})';&apos;&apos;
         const url = window.URL.createObjectURL(blob)';&apos;&apos;
         const a = document.createElement(&apos;a&apos)';
@@ -597,7 +598,7 @@ const SEOOptimizer = () => {}
                 page.issues.join('), ''`'`;
                 page.recommendations.join(')'`'`'`;
             ])'`'`'`'`;
-        ].map(row => row.map(cell => `'${cell}'`).join(')).join('\n')';'
+        ].map(row => row.map(cell => `'${cell}'`).join(')).join('"\n')';'
         const blob = new Blob([csvContent] { type 'text/csv' })';'
         const url = window.URL.createObjectURL(blob)';
         const a = document.createElement('a')';'
@@ -696,80 +697,82 @@ const SEOOptimizer = () => {}
             return 'Good';
             return 'Fair';
         return 'Poor'}';
-    return (<div className='fixed bottom-6 right-24 z-50'>''{/* Floating Action Button */}'';
-      <button onClick={() => setIsOpen(!isOpen)} className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105' aria-label='Toggle SEO Optimizer'>'';
-        <Search className='w-6 h-6'/>;
+    return (
+    <div className="fixed bottom-6 right-24 z-50">''{/* Floating Action Button */}'';
+      <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label='Toggle SEO Optimizer'>'';
+        <Search className="w-6 h-6"/>;
       </button>;
-''{/* SEO Optimizer Panel */}''{isOpen && (<div className='absolute bottom-16 right-0 w-[700px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden'>''{/* Header */}'';
-          <div className='bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4'>'';
-            <div className='flex items-center justify-between'>'';
-              <h3 className='text-lg font-semibold flex items-center gap-2'>'';
-                <TrendingUp className='w-5 h-5'/>;
+''{/* SEO Optimizer Panel */}''{isOpen && (<div className="absolute bottom-16 right-0 w-[700px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">''{/* Header */}'';
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">'';
+            <div className="flex items-center justify-between">'';
+              <h3 className="text-lg font-semibold flex items-center gap-2">'';
+                <TrendingUp className="w-5 h-5"/>;
                 SEO Optimizer'';
               </h3>'';
-              <button onClick={() => setIsOpen(false)} className='text-white/80 hover:text-white transition-colors'>;
+              <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white transition-colors">;
                 ×;
             </div>;
-            ''{/* Summary Stats */}''{report && (<div className='grid grid-cols-3 gap-4 mt-3'>'';
-                <div className='text-center'>'';
-                  <div className='text-2xl font-bold'>{report.totalPages}</div>'';
-                  <div className='text-sm text-purple-100'>Pages Analyzed</div>'';
+            ''{/* Summary Stats */}''{report && (<div className="grid grid-cols-3 gap-4 mt-3">'';
+                <div className="text-center">'';
+                  <div className="text-2xl font-bold">{report.totalPages}</div>'';
+                  <div className="text-sm text-purple-100">Pages Analyzed</div>'';
                 </div>'';
-                  <div className='text-2xl font-bold'>{report.averageScore}%</div>'';
-                  <div className='text-sm text-purple-100'>Avg SEO Score</div>'';
-                  <div className='text-2xl font-bold'>{report.pagesWithIssues}</div>'';
-                  <div className='text-sm text-pink-100'>Need Optimization</div>;
+                  <div className="text-2xl font-bold">{report.averageScore}%</div>'';
+                  <div className="text-sm text-purple-100">Avg SEO Score</div>'';
+                  <div className="text-2xl font-bold">{report.pagesWithIssues}</div>'';
+                  <div className="text-sm text-pink-100">Need Optimization</div>;
 ''{/* Content */}'';
-          <div className='p-4 max-h-[500px] overflow-y-auto'>''{isAnalyzing ? (<div className='flex items-center justify-center py-8'>'';
-                <RefreshCw className='w-6 h-6 animate-spin text-purple-600'/>'';
-                <span className='ml-2 text-gray-600'>Analyzing SEO...</span>'';
-              </div>) : report ? (<div className='space-y-4'>''{/* Top Issues */}''{report.topIssues.length > 0 && (<div className='bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg'>'';
-                    <h4 className='font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2'>'';
-                      <AlertTriangle className='w-4 h-4'/>;
+          <div className="p-4 max-h-[500px] overflow-y-auto">''{isAnalyzing ? (<div className="flex items-center justify-center py-8">'';
+                <RefreshCw className="w-6 h-6 animate-spin text-purple-600"/>'';
+                <span className="ml-2 text-gray-600">Analyzing SEO...</span>'';
+              </div>) : report ? (<div className="space-y-4">''{/* Top Issues */}''{report.topIssues.length > 0 && (<div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">'';
+                    <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">'';
+                      <AlertTriangle className="w-4 h-4"/>;
                       Top SEO Issues to Address'';
                     </h4>'';
-                    <div className='space-y-1'>''{report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className='text-sm text-yellow-700 dark:text-yellow-300'>;
+                    <div className="space-y-1">''{report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 dark:text-yellow-300">;
             return 'Fair'';
         return 'Poor'}''''
-    return (<div className='fixed bottom-6 right-24 z-50'>'''{/* Floating Action Button */}'''''
-      <button onClick={() => setIsOpen(!isOpen)} className='bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105' aria-label='Toggle SEO Optimizer'>''''
-        <Search className='w-6 h-6'/>
-'''{/* SEO Optimizer Panel */}''''{isOpen && (<div className='absolute bottom-16 right-0 w-[700px] bg-white dark: bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden'>'''{/* Header */}''''
-          <div className='bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4'>''''
-            <div className='flex items-center justify-between'>''''
-              <h3 className='text-lg font-semibold flex items-center gap-2'>''''
-                <TrendingUp className='w-5 h-5'/>
+    return (
+    <div className="fixed bottom-6 right-24 z-50">'''{/* Floating Action Button */}'''''
+      <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label='Toggle SEO Optimizer'>''''
+        <Search className="w-6 h-6"/>
+'''{/* SEO Optimizer Panel */}''''{isOpen && (<div className="absolute bottom-16 right-0 w-[700px] bg-white dark: bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">'''{/* Header */}''''
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">''''
+            <div className="flex items-center justify-between">''''
+              <h3 className="text-lg font-semibold flex items-center gap-2">''''
+                <TrendingUp className="w-5 h-5"/>
                 SEO Optimizer''''
               </h3>''''
-              <button onClick={() => setIsOpen(false)} className='text-white/80 hover: text-white transition-colors'>
+              <button onClick={() => setIsOpen(false)} className="text-white/80 hover: text-white transition-colors">
                 ×
-            '''{/* Summary Stats */}''''{report && (<div className='grid grid-cols-3 gap-4 mt-3'>'''''
-                <div className='text-center'>''''
-                  <div className='text-2xl font-bold'>{report.totalPages}</div>''''
-                  <div className='text-sm text-purple-100'>Pages Analyzed</div>''''
+            '''{/* Summary Stats */}''''{report && (<div className="grid grid-cols-3 gap-4 mt-3">'''''
+                <div className="text-center">''''
+                  <div className="text-2xl font-bold">{report.totalPages}</div>''''
+                  <div className="text-sm text-purple-100">Pages Analyzed</div>''''
                 </div>''''
-                  <div className='text-2xl font-bold'>{report.averageScore}%</div>''''
-                  <div className='text-sm text-purple-100'>Avg SEO Score</div>''''
-                  <div className='text-2xl font-bold'>{report.pagesWithIssues}</div>''''
-                  <div className='text-sm text-pink-100'>Need Optimization</div>
+                  <div className="text-2xl font-bold">{report.averageScore}%</div>''''
+                  <div className="text-sm text-purple-100">Avg SEO Score</div>''''
+                  <div className="text-2xl font-bold">{report.pagesWithIssues}</div>''''
+                  <div className="text-sm text-pink-100">Need Optimization</div>
 '''{/* Content */}'''''
-          <div className='p-4 max-h-[500px] overflow-y-auto'>''''{isAnalyzing ? (<div className='flex items-center justify-center py-8'>''''
-                <RefreshCw className='w-6 h-6 animate-spin text-purple-600'/>''''
-                <span className='ml-2 text-gray-600'>Analyzing SEO...</span>''''
-              </div>) : report ? (<div className='space-y-4'>'''{/* Top Issues */}''''{report.topIssues.length > 0 && (<div className='bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg'>'''''
-                    <h4 className='font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2'>''''
-                      <AlertTriangle className='w-4 h-4'/>
+          <div className="p-4 max-h-[500px] overflow-y-auto">''''{isAnalyzing ? (<div className="flex items-center justify-center py-8">''''
+                <RefreshCw className="w-6 h-6 animate-spin text-purple-600"/>''''
+                <span className="ml-2 text-gray-600">Analyzing SEO...</span>''''
+              </div>) : report ? (<div className="space-y-4">'''{/* Top Issues */}''''{report.topIssues.length > 0 && (<div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">'''''
+                    <h4 className="font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2">''''
+                      <AlertTriangle className="w-4 h-4"/>
                       Top SEO Issues to Address''''
                     </h4>''''
-                    <div className='space-y-1'>''''{report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className='text-sm text-yellow-700 dark: text-yellow-300'>
+                    <div className="space-y-1">''''{report.topIssues.slice(0, 3).map((issue, index) => (<div key={index} className="text-sm text-yellow-700 dark: text-yellow-300">
                           • {issue}
 ''{/* Pages Analysis */}'';
-                <div className='bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden'>'';
-                  <div className='overflow-x-auto'>'';
-                    <table className='w-full'>'';
-                      <thead className='bg-gray-100 dark:bg-gray-700'>'';
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">'';
+                  <div className="overflow-x-auto">'';
+                    <table className="w-full">'';
+                      <thead className="bg-gray-100 dark:bg-gray-700">'';
                         <tr>'';
-                          <th className='px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>;
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">;
                             Page'';
                           </th>'';
                             SEO Score'';
@@ -778,50 +781,50 @@ const SEOOptimizer = () => {}
                           </th>;
                         </tr>'';
                       </thead>'';
-                      <tbody className='bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700'>''{report.pageAnalyses.map((page, index) => (<tr key={index} className='hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer' onClick={() => setSelectedPage(page)}>'';
-                            <td className='px-4 py-3'>'';
-                              <div className='text-sm font-medium text-gray-900 dark:text-white'> {page.title}'';
-                              <div className='text-xs text-gray-500 dark:text-gray-400'> {page.pageUrl}
+                      <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">''{report.pageAnalyses.map((page, index) => (<tr key={index} className="hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" onClick={() => setSelectedPage(page)}>'';
+                            <td className="px-4 py-3">'';
+                              <div className="text-sm font-medium text-gray-900 dark:text-white"> {page.title}'';
+                              <div className="text-xs text-gray-500 dark:text-gray-400"> {page.pageUrl}
                             </td>'';
-                            <td className='px-4 py-3 text-sm text-gray-900 dark:text-white'> {page.score}%'';
+                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white"> {page.score}%'';
                             </td>'`;
-                            <td className='px-4 py-3'>``;
+                            <td className="px-4 py-3">``;
                               <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getScoreColor(page.score)}`}> {getScoreText(page.score)}
                               </span>'';
-                            <td className='px-4 py-3 text-sm text-gray-900 dark:text-white'> {page.issues.length} issues;
+                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white"> {page.issues.length} issues;
                             </td>;
                           </tr>) ) }
                       </tbody>;
                     </table>;
-''{/* Page Details Modal */}''{selectedPage && (<div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>'';
-                    <div className='bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto'>'';
-                      <div className='flex items-center justify-between mb-4'>'';
-                        <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>;
+''{/* Page Details Modal */}''{selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">'';
+                    <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">'';
+                      <div className="flex items-center justify-between mb-4">'';
+                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;
                           SEO Analysis: {selectedPage.title}'';
-                        <button onClick={() => setSelectedPage(null)} className='text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'>;
-                      <div className='space-y-4'>'';
-                        <div className='grid grid-cols-2 gap-4'>'';
-                          <div className='bg-gray-50 dark:bg-gray-800 p-3 rounded-lg'>'';
-                            <div className='text-sm text-gray-500 dark:text-gray-400'>SEO Score</div>'';
-                            <div className='text-lg font-semibold text-gray-900 dark:text-white'>{selectedPage.score}%</div>'';
-                            <div className='text-sm text-gray-500 dark:text-gray-400'>Headings</div>'';
-                            <div className='text-lg font-semibold text-gray-900 dark:text-white'>{selectedPage.headings.length}</div>'';
-                            <div className='text-sm text-gray-500 dark:text-gray-400'>Images</div>'';
-                            <div className='text-lg font-semibold text-gray-900 dark:text-white'>{selectedPage.images.length}</div>'';
-                            <div className='text-sm text-gray-500 dark:text-gray-400'>Links</div>'';
-                            <div className='text-lg font-semibold text-gray-900 dark:text-white'>{selectedPage.links.length}</div>;
+                        <button onClick={() => setSelectedPage(null)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">;
+                      <div className="space-y-4">'';
+                        <div className="grid grid-cols-2 gap-4">'';
+                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">'';
+                            <div className="text-sm text-gray-500 dark:text-gray-400">SEO Score</div>'';
+                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.score}%</div>'';
+                            <div className="text-sm text-gray-500 dark:text-gray-400">Headings</div>'';
+                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.headings.length}</div>'';
+                            <div className="text-sm text-gray-500 dark:text-gray-400">Images</div>'';
+                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.images.length}</div>'';
+                            <div className="text-sm text-gray-500 dark:text-gray-400">Links</div>'';
+                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.links.length}</div>;
 ''{selectedPage.issues.length > 0 && (<div>'';
-                            <h4 className='font-medium text-red-600 dark:text-red-400 mb-2'>SEO Issues Found</h4>'';
-                            <div className='space-y-2'>''{selectedPage.issues.map((issue, index) => (<div key={index} className='flex items-start gap-2 text-sm text-red-600 dark:text-red-400'>'';
-                                  <AlertTriangle className='w-4 h-4 mt-0.5 flex-shrink-0'/>;
+                            <h4 className="font-medium text-red-600 dark:text-red-400 mb-2">SEO Issues Found</h4>'';
+                            <div className="space-y-2">''{selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark:text-red-400">'';
+                                  <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/>;
                                   <span>{issue}</span>;
 '''{/* Pages Analysis */}'''''
-                <div className='bg-gray-50 dark: bg-gray-800 rounded-lg overflow-hidden'>''''
-                  <div className='overflow-x-auto'>''''
-                    <table className='w-full'>''''
-                      <thead className='bg-gray-100 dark:bg-gray-700'>''''
+                <div className="bg-gray-50 dark: bg-gray-800 rounded-lg overflow-hidden">''''
+                  <div className="overflow-x-auto">''''
+                    <table className="w-full">''''
+                      <thead className="bg-gray-100 dark:bg-gray-700">''''
                         <tr>''''
-                          <th className='px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
+                          <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                             Page''''
                           </th>''''
                             SEO Score''''
@@ -829,19 +832,19 @@ const SEOOptimizer = () => {}
                             Issues
                         </tr>''''
                       </thead>''''
-                      <tbody className='bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700'>''''{report.pageAnalyses.map((page, index) => (<tr key={index} className='hover: bg-gray-50 dark:hover:bg-gray-700 cursor-pointer' onClick={() => setSelectedPage(page)}>''''
-                            <td className='px-4 py-3'>''''
-                              <div className='text-sm font-medium text-gray-900 dark: text-white'>
+                      <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">''''{report.pageAnalyses.map((page, index) => (<tr key={index} className="hover: bg-gray-50 dark:hover:bg-gray-700 cursor-pointer" onClick={() => setSelectedPage(page)}>''''
+                            <td className="px-4 py-3">''''
+                              <div className="text-sm font-medium text-gray-900 dark: text-white">
                                 {page.title}''''
-                              <div className='text-xs text-gray-500 dark:text-gray-400'>
+                              <div className="text-xs text-gray-500 dark:text-gray-400">
                                 {page.pageUrl}
                             </td>''''
-                            <td className='px-4 py-3 text-sm text-gray-900 dark:text-white'>
+                            <td className="px-4 py-3 text-sm text-gray-900 dark:text-white">
                               {page.score}%''''
                             </td>''`
-                            <td className='px-4 py-3'>``
+                            <td className="px-4 py-3">``
                               </span>''''
-                            <td className='px-4 py-3 text-sm text-gray-900 dark: text-white'>
+                            <td className="px-4 py-3 text-sm text-gray-900 dark: text-white">
                               {page.issues.length} issues
                             </td>
                       </tbody>
@@ -869,53 +872,53 @@ const SEOOptimizer = () => {}
                             <h4 className=&apos;font-medium text-red-600 dark:text-red-400 mb-2&apos;>SEO Issues Found&apos;</h4>&apos;&apos;'&apos;&apos;'
                             <div className=&apos;space-y-2&apos;>'&apos;&apos;'{selectedPage.issues.map((issue, index) => (&apos}&apos;<div key={index} className=&apos;flex items-start gap-2 text-sm text-red-600 dark:text-red-400&apos;>'&apos;&apos;'&apos;&apos;
                                   <AlertTriangle className=&apos;w-4 h-4 mt-0.5 flex-shrink-0&apos;/>&apos;
-'''{/* Page Details Modal */}''''{selectedPage && (<div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>'''''
-                    <div className='bg-white dark: bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto'>''''
-                      <div className='flex items-center justify-between mb-4'>''''
-                        <h3 className='text-lg font-semibold text-gray-900 dark: text-white'>
+'''{/* Page Details Modal */}''''{selectedPage && (<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">'''''
+                    <div className="bg-white dark: bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto">''''
+                      <div className="flex items-center justify-between mb-4">''''
+                        <h3 className="text-lg font-semibold text-gray-900 dark: text-white">
                           SEO Analysis: {selectedPage.title}''''
-                        <button onClick={() => setSelectedPage(null)} className='text-gray-400 hover: text-gray-600 dark:hover:text-gray-300'>
-                      <div className='space-y-4'>''''
-                        <div className='grid grid-cols-2 gap-4'>''''
-                          <div className='bg-gray-50 dark: bg-gray-800 p-3 rounded-lg'>''''
-                            <div className='text-sm text-gray-500 dark:text-gray-400'>SEO Score</div>''''
-                            <div className='text-lg font-semibold text-gray-900 dark:text-white'>{selectedPage.score}%</div>''''
-                          <div className='bg-gray-50 dark:bg-gray-800 p-3 rounded-lg'>''''
-                            <div className='text-sm text-gray-500 dark:text-gray-400'>Headings</div>''''
-                            <div className='text-lg font-semibold text-gray-900 dark:text-white'>{selectedPage.headings.length}</div>''''
-                            <div className='text-sm text-gray-500 dark:text-gray-400'>Images</div>''''
-                            <div className='text-lg font-semibold text-gray-900 dark:text-white'>{selectedPage.images.length}</div>''''
-                            <div className='text-sm text-gray-500 dark:text-gray-400'>Links</div>''''
-                            <div className='text-lg font-semibold text-gray-900 dark:text-white'>{selectedPage.links.length}</div>
+                        <button onClick={() => setSelectedPage(null)} className="text-gray-400 hover: text-gray-600 dark:hover:text-gray-300">
+                      <div className="space-y-4">''''
+                        <div className="grid grid-cols-2 gap-4">''''
+                          <div className="bg-gray-50 dark: bg-gray-800 p-3 rounded-lg">''''
+                            <div className="text-sm text-gray-500 dark:text-gray-400">SEO Score</div>''''
+                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.score}%</div>''''
+                          <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">''''
+                            <div className="text-sm text-gray-500 dark:text-gray-400">Headings</div>''''
+                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.headings.length}</div>''''
+                            <div className="text-sm text-gray-500 dark:text-gray-400">Images</div>''''
+                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.images.length}</div>''''
+                            <div className="text-sm text-gray-500 dark:text-gray-400">Links</div>''''
+                            <div className="text-lg font-semibold text-gray-900 dark:text-white">{selectedPage.links.length}</div>
 '''{selectedPage.issues.length > 0 && (<div>'''''
-                            <h4 className='font-medium text-red-600 dark:text-red-400 mb-2'>SEO Issues Found</h4>''''
-                            <div className='space-y-2'>''''{selectedPage.issues.map((issue, index) => (<div key={index} className='flex items-start gap-2 text-sm text-red-600 dark: text-red-400'>''''
-                                  <AlertTriangle className='w-4 h-4 mt-0.5 flex-shrink-0'/>
+                            <h4 className="font-medium text-red-600 dark:text-red-400 mb-2">SEO Issues Found</h4>''''
+                            <div className="space-y-2">''''{selectedPage.issues.map((issue, index) => (<div key={index} className="flex items-start gap-2 text-sm text-red-600 dark: text-red-400">''''
+                                  <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0"/>
                                   <span>{issue}</span>
 ''{selectedPage.recommendations.length > 0 && (<div>'';
-                            <h4 className='font-medium text-green-600 dark:text-green-400 mb-2'>SEO Recommendations</h4>'';
-                            <div className='space-y-2'>''{selectedPage.recommendations.map((rec, index) => (<div key={index} className='flex items-start gap-2 text-sm text-green-600 dark:text-green-400'>'';
-                                  <Zap className='w-4 h-4 mt-0.5 flex-shrink-0'/>;
+                            <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">SEO Recommendations</h4>'';
+                            <div className="space-y-2">''{selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dark:text-green-400">'';
+                                  <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"/>;
                                   <span>{rec}</span>;
 &apos;&apos;'{selectedPage.recommendations.length > 0 && (&apos}&apos;<div>&apos;&apos;'&apos;&apos;'
                             <h4 className=&apos;font-medium text-green-600 dark:text-green-400 mb-2&apos;>SEO Recommendations&apos;</h4>&apos;&apos;'&apos;&apos;'
                             <div className=&apos;space-y-2&apos;>'&apos;&apos;'{selectedPage.recommendations.map((rec, index) => (&apos}&apos;<div key={index} className=&apos;flex items-start gap-2 text-sm text-green-600 dark:text-green-400&apos;>'&apos;&apos;'&apos;&apos;
                                   <Zap className=&apos;w-4 h-4 mt-0.5 flex-shrink-0&apos;/>&apos;
 '''{selectedPage.recommendations.length > 0 && (<div>'''''
-                            <h4 className='font-medium text-green-600 dark: text-green-400 mb-2'>SEO Recommendations</h4>''''
-                            <div className='space-y-2'>''''{selectedPage.recommendations.map((rec, index) => (<div key={index} className='flex items-start gap-2 text-sm text-green-600 dark: text-green-400'>''''
-                                  <Zap className='w-4 h-4 mt-0.5 flex-shrink-0'/>
+                            <h4 className="font-medium text-green-600 dark: text-green-400 mb-2">SEO Recommendations</h4>''''
+                            <div className="space-y-2">''''{selectedPage.recommendations.map((rec, index) => (<div key={index} className="flex items-start gap-2 text-sm text-green-600 dark: text-green-400">''''
+                                  <Zap className="w-4 h-4 mt-0.5 flex-shrink-0"/>
                                   <span>{rec}</span>
                   </div>)}'';
-              </div>) : (<div className='text-center py-8 text-gray-500'>;
+              </div>) : (<div className="text-center py-8 text-gray-500">;
                 No SEO analysis data available;
 ''{/* Footer Actions */}'';
-          <div className='bg-gray-50 dark:bg-gray-800 p-3 flex gap-2'>''`;
-            <button onClick={analyzeSEO} disabled={isAnalyzing} className='flex-1 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2'>'`'`;
+          <div className="bg-gray-50 dark:bg-gray-800 p-3 flex gap-2">''`;
+            <button onClick={analyzeSEO} disabled={isAnalyzing} className="flex-1 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">'`'`;
               <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : '}`}/>'{isAnalyzing ? 'Analyzing...' : 'Analyze SEO'}'';
             </button>'';
-            <button onClick={exportSEOReport} className='px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2'>'';
-              <Download className='w-4 h-4'/>;
+            <button onClick={exportSEOReport} className="px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2">'';
+              <Download className="w-4 h-4"/>;
               Export;
                   </div>)}&apos;&apos;'&apos;&apos;'
               </div>) : (<div className=&apos;text-center py-8 text-gray-500&apos;>
@@ -929,15 +932,15 @@ const SEOOptimizer = () => {}
               <Download className=&apos;w-4 h-4&apos;/>
               Export&apos;
                   </div>)}''''
-              </div>) : (<div className='text-center py-8 text-gray-500'>
+              </div>) : (<div className="text-center py-8 text-gray-500">
                 No SEO analysis data available
 '''{/* Footer Actions */}'''''
-          <div className='bg-gray-50 dark: bg-gray-800 p-3 flex gap-2'>'''`'
-            <button onClick={analyzeSEO} disabled={isAnalyzing} className='flex-1 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2'>'`'`
+          <div className="bg-gray-50 dark: bg-gray-800 p-3 flex gap-2">'''`'
+            <button onClick={analyzeSEO} disabled={isAnalyzing} className="flex-1 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">'`'`
               <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`}/>'{isAnalyzing ? 'Analyzing...' : 'Analyze SEO'}'''
             </button>''''
-            <button onClick={exportSEOReport} className='px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2'>''''
-              <Download className='w-4 h-4'/>
+            <button onClick={exportSEOReport} className="px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2">''''
+              <Download className="w-4 h-4"/>
               Export
         </div>)}
 export default SEOOptimizer;
@@ -947,4 +950,4 @@ export { SEOOptimizer };
 
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React { useState, useEffect, useCallback }  from 'react;'
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react;
-;
+;"

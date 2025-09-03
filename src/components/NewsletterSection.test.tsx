@@ -12,4 +12,4 @@ export default function NewsletterSection.test() {return (
       </div>
     </div>
   );
-}
+}"

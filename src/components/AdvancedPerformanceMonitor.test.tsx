@@ -12,4 +12,4 @@ export default function AdvancedPerformanceMonitor.test() {return (
       </div>
     </div>
   );
-}
+}"

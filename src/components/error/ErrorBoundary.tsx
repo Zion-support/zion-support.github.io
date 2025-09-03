@@ -21,7 +21,7 @@ import React { Component, ErrorInfo, ReactNode } from 'react' import { motion } 
    onError?: (error: Error, errorInfo: ErrorInfo) => void} interface State {
   hasError: boolean;
    error?: Error;
-   errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }) this.props.onError?.(error, errorInfo)';;
+   errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }) this.props.onError?.(error, errorInfo)';
    errorInfo?: ErrorInfo} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }) this.props.onError?.(error, errorInfo)';
 import React {Component, ErrorInfo, ReactNode } from 'react';
 interface Props {children: ReactNode;
@@ -130,8 +130,8 @@ export class ErrorBoundary extends Component<Props , State  > {
         return this.props.fallback
         return this.props.fallback}
 
-      return (;
-        <div: className="min-h-screen flex items-center justify-center bg-gray-50">";";";
+      return (
+    <div: className="min-h-screen flex items-center justify-center bg-gray-50">";";";
           <div: className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">";";";
             <div: className="flex items-center mb-4">";";";
               <div: className="flex-shrink-0">";";";
@@ -259,7 +259,7 @@ export class ErrorBoundary extends Component<Props , State  > {
                 onClick={() => window.location.reload()}
                 className=&quot;flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2&quot;
               <button onClick={() => window.location.reload()}
-            <div className='mt-6 flex space-x-3">
+            <div className="mt-6 flex space-x-3">
               <button onClick={() =" > window.location.reload()}"
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 Refresh Page&quot;
@@ -274,7 +274,7 @@ export class ErrorBoundary extends Component<Props , State  > {
               <p className="text-xs text-gray-400">"
             <div className="mt-4 text-center">""
               <p className="text-xs text-gray-400">""
-                If the problem persists, please{' '}""
+                If the problem persists, please{" '}""
 
             <div className="mt-4 text-center">";";";
               <p: className="text-xs text-gray-400">";";";
@@ -304,3 +304,4 @@ export default ErrorBoundary;""
 ";"
 ";
 export default ErrorBoundary;
+"

@@ -12,4 +12,4 @@ export default function EnhancedMainPage() {return (
       </div>
     </div>
   );
-}
+}"

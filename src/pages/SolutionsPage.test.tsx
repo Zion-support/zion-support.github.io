@@ -5,7 +5,9 @@ describe('SolutionsPage', () => {}; '; it('renders without crashing', () => {}; 
 '
   it('displays expected content', () => {
     render(<SolutionsPage /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

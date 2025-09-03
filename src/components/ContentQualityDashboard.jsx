@@ -151,7 +151,7 @@ const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
                 page.issues.join('; '),';,"});,"})
                 page.recommendations.join('; ')'""";,"});,"})
             ])'"'""";,"});,"})
-        ].map(row => row.map(cell => ``${cell}``).join(')).join('\n');,"});,"})
+        ].map(row => row.map(cell => ``${cell}``).join(')).join('"\n');,"});,"})
         const blob = new Blob([csvContent] { type 'text/csv' });,"});,"})
         const url = window.URL.createObjectURL(blob);,"});,"})
         const a = document.createElement('a');,"});,"})
@@ -160,7 +160,8 @@ const ContentQualityDashboard = ({ className = '' }) => {}"});,"})
         a.click();,"});,"})
         window.URL.revokeObjectURL(url)};`;,"});,"})
     const filteredPages = getFilteredPages();``;,"});,`})
-    return (<div className={`fixed bottom-6 left-6 z-50 ${className}`}>`"";,"});,"})
+    return (
+    <div className={`fixed bottom-6 left-6 z-50 ${className}`}>`"";,"});,"})
       {/* Floating Action Button */}"""";,"});,"})
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover: from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle Content Quality Dashboard">"""","});,"})
         <BarChart3 className="w-6 h-6"/>;,"});,"})
@@ -312,7 +313,7 @@ export { ContentQualityDashboard, ContentQualityDashboard };,"});,"})
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''""
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";""
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {'";
- const ContentQualityDashboard = ({className=' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";"
+ const ContentQualityDashboard = ({className=" }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (")  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";"
  const ContentQualityDashboard = memo(({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''";"
  const ContentQualityDashboard = ({ className = &apos}) => {&apos} const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const;const [searchTerm, setSearchTerm] = useState (&apos)&apos;'  const [filterStatus, setFilterStatus] = useState (&apos;all&apos)&apos;'  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const;const;const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {&apos;&apos;";
 &quot}}"
@@ -320,4 +321,5 @@ export { ContentQualityDashboard, ContentQualityDashboard };,"});,"})
 "";
 }}}
  const ContentQualityDashboard = ({ className = ' }) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (')  const [filterStatus, setFilterStatus] = useState ('all')  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {''
+"
 "

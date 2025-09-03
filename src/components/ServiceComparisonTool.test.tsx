@@ -15,3 +15,4 @@ describe(&apos;ServiceComparisonTool&apos, () => {
 })
 ";
 }}
+"

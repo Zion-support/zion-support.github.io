@@ -213,7 +213,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ``;,"});,"})
 ```;,"});,"})
 ````;,"});,`})
-            exportContent = `# Document\n\n${editorState.content}`}`});,"})
+            exportContent = `# Document"\n\n${editorState.content}`}`});,"})
         if(onExport) {}"});,"})
             onExport(exportContent, format)}"});,"})
         else {}"});,"})
@@ -273,7 +273,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 generateAISuggestions()}"});,"});
 }, 3000);`;,"});,"})
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions]);``;,"});,`})
-    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>`"";,"});,"})
+    return (
+    <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>`"";,"});,"})
       {/* Header */}"""";,"});,"})
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"""";,"});,"})
         <div className="flex items-center justify-between">"""";,"});,"})
@@ -882,7 +883,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ``;
 ```;
 ````;&apos;&apos;
-            exportContent = `# Document\n\n${editorState.content}`}
+            exportContent = `# Document"\n\n${editorState.content}`}
         if(onExport) {}
             onExport(exportContent, format)}
         else {}
@@ -982,38 +983,39 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         }, 3000)`;
 }, 3000)`;
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])`;
-    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>''{/* Header */}'';
-      <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white'>'';
-        <div className='flex items-center justify-between'>'';
-          <h3 className='text-lg font-semibold flex items-center gap-2'>'';
-            <MessageSquare className='w-5 h-5'/>'';
-            Collaborative Text Editor''{collaboration.isConnected && (<div className='flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs'>'';
-                <div className='w-2 h-2 bg-green-400 rounded-full'></div>;
+    return (
+    <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>''{/* Header */}'';
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">'';
+        <div className="flex items-center justify-between">'';
+          <h3 className="text-lg font-semibold flex items-center gap-2">'';
+            <MessageSquare className="w-5 h-5"/>'';
+            Collaborative Text Editor''{collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">'';
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>;
                 Live;
               </div>)}
           </h3>'';
           '';
-          <div className='flex items-center gap-2'>''{/* Collaboration Status */}''{enableCollaboration && (<button onClick={() => setShowCollaborators(!showCollaborators)} className='px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2'>'';
-                <Users className='w-4 h-4'/>;
+          <div className="flex items-center gap-2">''{/* Collaboration Status */}''{enableCollaboration && (<button onClick={() => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2">'';
+                <Users className="w-4 h-4"/>;
                 {collaboration.onlineUsers.length}
               </button>) }
-            ''{/* AI Suggestions */}''{enableAI && (<button onClick={generateAISuggestions} disabled={isProcessing} className='px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50'>''{isProcessing ? (<Loader2 className='w-4 h-4 animate-spin'/>) : (<Sparkles className='w-4 h-4'/>)}
+            ''{/* AI Suggestions */}''{enableAI && (<button onClick={generateAISuggestions} disabled={isProcessing} className="px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">''{isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<Sparkles className="w-4 h-4"/>)}
                 AI;
               </button>) }
             ''{/* Save Button */}'';
-            <button onClick={handleSave} className='px-3 py-1 bg-green-500 hover:bg-green-600 rounded text-sm transition-colors flex items-center gap-2'>'';
-              <Save className='w-4 h-4'/>;
+            <button onClick={handleSave} className="px-3 py-1 bg-green-500 hover:bg-green-600 rounded text-sm transition-colors flex items-center gap-2">'';
+              <Save className="w-4 h-4"/>;
               Save;
             </button>;
           </div>;
         </div>;
       </div>;
 ''{/* Main Editor Area */}'';
-      <div className='flex h-96'>''{/* Editor */}'';
-        <div className='flex-1 p-4'>'';
-          <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder='Start typing your document...' className='w-full h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm'/>;
+      <div className="flex h-96">''{/* Editor */}'';
+        <div className="flex-1 p-4">'';
+          <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder='Start typing your document...' className="w-full h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"/>;
           ''{/* Status Bar */}'';
-          <div className='flex items-center justify-between mt-2 text-xs text-gray-500'>;
+          <div className="flex items-center justify-between mt-2 text-xs text-gray-500">;
             <span>;
               {editorState.content.length} characters, {editorState.content.split(/\s+/) .filter(Boolean) .length} words;
             </span>;
@@ -1023,44 +1025,45 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
           </div>;
         </div>;
 ''{/* Sidebar */}'';
-        <div className='w-80 border-l border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700'>''{/* AI Suggestions */}''{enableAI && showSuggestions && (<div className='p-4 border-b border-gray-200 dark:border-gray-600'>'';
-              <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>'';
-                <Sparkles className='w-4 h-4'/>;
+        <div className="w-80 border-l border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">''{/* AI Suggestions */}''{enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark:border-gray-600">'';
+              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">'';
+                <Sparkles className="w-4 h-4"/>;
                 AI Suggestions;
               </h4>'';
               '';
-              <div className='space-y-3'>;
+              <div className="space-y-3">;
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {}
   { opacity: 0
   x: 20}} animate = {}
   { opacity: 1
   x: 0 '';
-''}} className='p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500'>''`;
-                    <div className='flex items-start justify-between mb-2'>'`'`;
+''}} className="p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">''`;
+                    <div className="flex items-start justify-between mb-2">'`'`;
                       <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :'`;
                     suggestion.type === 'style' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`'`;
                         'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'}`}>{suggestion.type}'';
                       </span>'';
-                      <span className='text-xs text-gray-500'>;
+                      <span className="text-xs text-gray-500">;
                         {Math.round(suggestion.confidence * 100)}%;
                       </span>;
                     </div>'';
                     '';
-                    <p className='text-sm text-gray-700 dark:text-gray-300 mb-2'>;
+                    <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">;
                       {suggestion.reason}
                     </p>'';
                     '';
-                    <div className='text-sm font-medium text-gray-900 dark:text-white mb-2'>;
+                    <div className="text-sm font-medium text-gray-900 dark:text-white mb-2">;
                       {suggestion.text}
                     </div>'';
                     '';
-                    <button onClick={() => applySuggestion(suggestion)} className='w-full px-2 py-1 bg-blue-500 hover:bg-blue-600 text-white text-xs rounded transition-colors'>;
+                    <button onClick={() => applySuggestion(suggestion)} className="w-full px-2 py-1 bg-blue-500 hover:bg-blue-600 text-white text-xs rounded transition-colors">;
                       Apply Suggestion;
                     </button>;
                   </motion.div>))}'';
-                ''{editorState.suggestions.length === 0 && (<p className='text-sm text-gray-500 text-center py-4'>;
+                ''{editorState.suggestions.length === 0 && (<p className="text-sm text-gray-500 text-center py-4">;
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])`
-    return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k:border-gray-700 overflow-hidden ${className}`}>&apos;&apos;'{/* Header */}&apos;&apos;'&apos;&apos;'
+    return (
+    <div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k:border-gray-700 overflow-hidden ${className}`}>&apos;&apos;'{/* Header */}&apos;&apos;'&apos;&apos;'
       <div className=&apos;bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white&apos;>'&apos;&apos;'&apos;&apos;
         <div className=&apos;flex items-center justify-between&apos;>'&apos;&apos;'&apos;&apos;
           <h3 className=&apos;text-lg font-semibold flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
@@ -1082,27 +1085,28 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             <button onClick={handleSave} className=&apos;px-3 py-1 bg-green-500 hover:bg-green-600 rounded text-sm transition-colors flex items-center gap-2&apos;>'&apos;&apos;'&apos;&apos;
               <Save className=&apos;w-4 h-4&apos;/>
               Save&apos;
-    return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>'''{/* Header */}'''''
-      <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white'>''''
-        <div className='flex items-center justify-between'>''''
-          <h3 className='text-lg font-semibold flex items-center gap-2'>''''
-            <MessageSquare className='w-5 h-5'/>''''
-            Collaborative Text Editor''''{collaboration.isConnected && (<div className='flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs'>''''
-                <div className='w-2 h-2 bg-green-400 rounded-full'></div>
+    return (
+    <div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>'''{/* Header */}'''''
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">''''
+        <div className="flex items-center justify-between">''''
+          <h3 className="text-lg font-semibold flex items-center gap-2">''''
+            <MessageSquare className="w-5 h-5"/>''''
+            Collaborative Text Editor''''{collaboration.isConnected && (<div className="flex items-center gap-1 px-2 py-1 bg-green-500/20 rounded-full text-xs">''''
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 Live
               </div>)}
           </h3>''''
           ''''
-          <div className='flex items-center gap-2'>'''{/* Collaboration Status */}''''{enableCollaboration && (<button onClick={() => setShowCollaborators(!showCollaborators)} className='px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2'>'''''
-                <Users className='w-4 h-4'/>
+          <div className="flex items-center gap-2">'''{/* Collaboration Status */}''''{enableCollaboration && (<button onClick={() => setShowCollaborators(!showCollaborators)} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2">'''''
+                <Users className="w-4 h-4"/>
                 {collaboration.onlineUsers.length}
               </button>) }
-            '''{/* AI Suggestions */}''''{enableAI && (<button onClick={generateAISuggestions} disabled={isProcessing} className='px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50'>''''{isProcessing ? (<Loader2 className='w-4 h-4 animate-spin'/>) : (<Sparkles className='w-4 h-4'/>)}'
+            '''{/* AI Suggestions */}''''{enableAI && (<button onClick={generateAISuggestions} disabled={isProcessing} className="px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2 disabled:opacity-50">''''{isProcessing ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<Sparkles className="w-4 h-4"/>)}'
                 AI
               </button>) }
             '''{/* Save Button */}'''''
-            <button onClick={handleSave} className='px-3 py-1 bg-green-500 hover: bg-green-600 rounded text-sm transition-colors flex items-center gap-2'>''''
-              <Save className='w-4 h-4'/>
+            <button onClick={handleSave} className="px-3 py-1 bg-green-500 hover: bg-green-600 rounded text-sm transition-colors flex items-center gap-2">''''
+              <Save className="w-4 h-4"/>
               Save
             </button>
           </div>
@@ -1115,11 +1119,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
           &apos;&apos;'{/* Status Bar */}&apos;&apos;'&apos;&apos;'
           <div className=&apos;flex items-center justify-between mt-2 text-xs text-gray-500&apos;>&apos;'
 '''{/* Main Editor Area */}'''''
-      <div className='flex h-96'>'''{/* Editor */}'''''
-        <div className='flex-1 p-4'>''''
-          <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder='Start typing your document...' className='w-full h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm'/>
+      <div className="flex h-96">'''{/* Editor */}'''''
+        <div className="flex-1 p-4">''''
+          <textarea ref={editorRef} value={editorState.content} onChange={handleTextChange} onSelect={handleSelectionChange} onMouseMove={handleCursorMove} placeholder='Start typing your document...' className="w-full h-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm"/>
           '''{/* Status Bar */}'''''
-          <div className='flex items-center justify-between mt-2 text-xs text-gray-500'>
+          <div className="flex items-center justify-between mt-2 text-xs text-gray-500">
             <span>
               {editorState.content.length} characters, {editorState.content.split(/\s+/) .filter(Boolean) .length} words
             </span>
@@ -1189,113 +1193,113 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     <span className=&apos;text-xs text-gray-400&apos;>
                       {user.lastSeen.toLocaleTimeString()}&apos;
 '''{/* Sidebar */}'''''
-        <div className='w-80 border-l border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700'>'''{/* AI Suggestions */}''''{enableAI && showSuggestions && (<div className='p-4 border-b border-gray-200 dark:border-gray-600'>'''''
-              <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>''''
-                <Sparkles className='w-4 h-4'/>
+        <div className="w-80 border-l border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">'''{/* AI Suggestions */}''''{enableAI && showSuggestions && (<div className="p-4 border-b border-gray-200 dark:border-gray-600">'''''
+              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">''''
+                <Sparkles className="w-4 h-4"/>
                 AI Suggestions
               </h4>''''
               ''''
-              <div className='space-y-3'>
+              <div className="space-y-3">
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {}
   { opacity: 0, x: 20}} animate = {}
   { opacity: 1,
   x: 0 ''';'
-''''}} className='p-3 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500'>'''`'
-                    <div className='flex items-start justify-between mb-2'>'`'`
+''''}} className="p-3 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">'''`'
+                    <div className="flex items-start justify-between mb-2">'`'`
                       <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :''`
                     suggestion.type === 'style' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`'`;
                         'bg-blue-100 text-blue-700 dark: bg-blue-900/30 dark:text-blue-300'}`}>{suggestion.type}''''
                       </span>''''
-                      <span className='text-xs text-gray-500'>
+                      <span className="text-xs text-gray-500">
                         {Math.round(suggestion.confidence * 100)}%
                       </span>
                     </div>''''
                     ''''
-                    <p className='text-sm text-gray-700 dark: text-gray-300 mb-2'>
+                    <p className="text-sm text-gray-700 dark: text-gray-300 mb-2">
                       {suggestion.reason}
                     </p>''''
                     ''''
-                    <div className='text-sm font-medium text-gray-900 dark: text-white mb-2'>
+                    <div className="text-sm font-medium text-gray-900 dark: text-white mb-2">
                       {suggestion.text}
                     </div>''''
                     ''''
-                    <button onClick={() => applySuggestion(suggestion)} className='w-full px-2 py-1 bg-blue-500 hover: bg-blue-600 text-white text-xs rounded transition-colors'>
+                    <button onClick={() => applySuggestion(suggestion)} className="w-full px-2 py-1 bg-blue-500 hover: bg-blue-600 text-white text-xs rounded transition-colors">
                       Apply Suggestion
                     </button>
                   </motion.div>))}''''
-                ''''{editorState.suggestions.length === 0 && (<p className='text-sm text-gray-500 text-center py-4'>
+                ''''{editorState.suggestions.length === 0 && (<p className="text-sm text-gray-500 text-center py-4">
                     No suggestions yet.Start typing to get AI-powered recommendations.</p>)}
               </div>;
             </div>) }
-''{/* Collaborators */}''{enableCollaboration && showCollaborators && (<div className='p-4 border-b border-gray-200 dark:border-gray-600'>'';
-              <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>'';
-                <Users className='w-4 h-4'/>;
+''{/* Collaborators */}''{enableCollaboration && showCollaborators && (<div className="p-4 border-b border-gray-200 dark:border-gray-600">'';
+              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">'';
+                <Users className="w-4 h-4"/>;
                 Collaborators ({collaboration.onlineUsers.length});
               </h4>'';
               '';
-              <div className='space-y-2'>''{collaboration.onlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-white dark:bg-gray-600 rounded-lg'>'';
-                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}></div>'';
-                    <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>;
+              <div className="space-y-2">''{collaboration.onlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-white dark:bg-gray-600 rounded-lg">'';
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>'';
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">;
                       {user.name}'';
                     </span>'';
-                    <div className='w-2 h-2 bg-green-400 rounded-full animate-pulse'></div>;
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>;
                   </div>))}'';
-                ''{collaboration.offlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-700 rounded-lg opacity-60'>'';
-                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}></div>'';
-                    <span className='text-sm text-gray-500 dark:text-gray-400'>;
+                ''{collaboration.offlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-gray-100 dark:bg-gray-700 rounded-lg opacity-60">'';
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>'';
+                    <span className="text-sm text-gray-500 dark:text-gray-400">;
                       {user.name}'';
                     </span>'';
-                    <span className='text-xs text-gray-400'>;
+                    <span className="text-xs text-gray-400">;
                       {user.lastSeen.toLocaleTimeString()}
                     </span>;
-'''{/* Collaborators */}''''{enableCollaboration && showCollaborators && (<div className='p-4 border-b border-gray-200 dark: border-gray-600'>'''''
-              <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>''''
-                <Users className='w-4 h-4'/>
+'''{/* Collaborators */}''''{enableCollaboration && showCollaborators && (<div className="p-4 border-b border-gray-200 dark: border-gray-600">'''''
+              <h4 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">''''
+                <Users className="w-4 h-4"/>
                 Collaborators ({collaboration.onlineUsers.length})
               </h4>''''
               ''''
-              <div className='space-y-2'>''''{collaboration.onlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg'>''''
-                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}></div>''''
-                    <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>
+              <div className="space-y-2">''''{collaboration.onlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg">''''
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>''''
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                       {user.name}''''
                     </span>''''
-                    <div className='w-2 h-2 bg-green-400 rounded-full animate-pulse'></div>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   </div>))}''''
-                ''''{collaboration.offlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-gray-100 dark: bg-gray-700 rounded-lg opacity-60'>''''
-                    <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}></div>''''
-                    <span className='text-sm text-gray-500 dark:text-gray-400'>
+                ''''{collaboration.offlineUsers.map(user => (<div key={user.id} className="flex items-center gap-2 p-2 bg-gray-100 dark: bg-gray-700 rounded-lg opacity-60">''''
+                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: user.color }}></div>''''
+                    <span className="text-sm text-gray-500 dark:text-gray-400">
                       {user.name}''''
                     </span>''''
-                    <span className='text-xs text-gray-400'>
+                    <span className="text-xs text-gray-400">
                       {user.lastSeen.toLocaleTimeString()}
                     </span>
                   </div>) ) }
               </div>;
             </div>) }
 ''{/* Actions */}'';
-          <div className='p-4'>'';
-            <h4 className='font-medium text-gray-900 dark:text-white mb-3'>Actions</h4>'';
+          <div className="p-4">'';
+            <h4 className="font-medium text-gray-900 dark:text-white mb-3">Actions</h4>'';
             ''';
-            <div className='space-y-2'>''';
-              <button onClick={() => handleExport('txt')} className='w-full px-3 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>'';
-                <Download className='w-4 h-4'/>;
+            <div className="space-y-2">''';
+              <button onClick={() => handleExport('txt')} className="w-full px-3 py-2 bg-gray-500 hover:bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">'';
+                <Download className="w-4 h-4"/>;
                 Export as TXT;
               </button>'';
               ''';
-              <button onClick={() => handleExport('md')} className='w-full px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>'';
-                <Download className='w-4 h-4'/>;
+              <button onClick={() => handleExport('md')} className="w-full px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">'';
+                <Download className="w-4 h-4"/>;
                 Export as MD;
               </button>'';
               ''';
-              <button onClick={() => handleExport('html')} className='w-full px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>'';
-                <Download className='w-4 h-4'/>;
+              <button onClick={() => handleExport('html')} className="w-full px-3 py-2 bg-purple-500 hover:bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">'';
+                <Download className="w-4 h-4"/>;
                 Export as HTML;
               </button>;
             </div>;
           </div>;
         </div>;
       </div>;
-''{/* Collaboration Cursors Overlay */}''{enableCollaboration && (<div ref={collaborationRef} className='absolute inset-0 pointer-events-none' style={{ zIndex: 10 }}>;
+''{/* Collaboration Cursors Overlay */}''{enableCollaboration && (<div ref={collaborationRef} className="absolute inset-0 pointer-events-none" style={{ zIndex: 10 }}>;
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {}
   { opacity: 0
 &apos;&apos;'{/* Actions */}&apos;&apos;'&apos;&apos;'
@@ -1317,22 +1321,22 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 <Download className=&apos;w-4 h-4&apos;/>
                 Export as HTML&apos;
 '''{/* Actions */}'''''
-          <div className='p-4'>''''
-            <h4 className='font-medium text-gray-900 dark: text-white mb-3'>Actions</h4>''''
+          <div className="p-4">''''
+            <h4 className="font-medium text-gray-900 dark: text-white mb-3">Actions</h4>''''
             ''''''
-            <div className='space-y-2'>''''''
-              <button onClick={() => handleExport('txt')} className='w-full px-3 py-2 bg-gray-500 hover: bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>''''
-                <Download className='w-4 h-4'/>
+            <div className="space-y-2">''''''
+              <button onClick={() => handleExport('txt')} className="w-full px-3 py-2 bg-gray-500 hover: bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">''''
+                <Download className="w-4 h-4"/>
                 Export as TXT
               </button>''''
               ''''''
-              <button onClick={() => handleExport('md')} className='w-full px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>''''
-                <Download className='w-4 h-4'/>
+              <button onClick={() => handleExport('md')} className="w-full px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">''''
+                <Download className="w-4 h-4"/>
                 Export as MD
               </button>''''
               ''''''
-              <button onClick={() => handleExport('html')} className='w-full px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>''''
-                <Download className='w-4 h-4'/>
+              <button onClick={() => handleExport('html')} className="w-full px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2">''''
+                <Download className="w-4 h-4"/>
                 Export as HTML
               </button>
             </div>
@@ -1347,7 +1351,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
   scale: 1}} exit = {}
   { opacity: 0
   scale: 0 '';
-''}} className='absolute w-4 h-4' style = {}
+''}} className="absolute w-4 h-4" style = {}
   { opacity: 0,
   scale: 0 &apos;&apos;
 &apos;&apos;'&apos}} className=&apos;absolute w-4 h-4&apos; style = {}
@@ -1356,8 +1360,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     top: y,';
                     transform: 'translate(-50%
   -50%)';'}}>';
-              <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color }}></div>'';
-              <div className='absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap'>;
+              <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style={{ backgroundColor: user.color }}></div>'';
+              <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">;
                     transform: &apos;translate(-50%,
   -50%)';&apos}}>';&apos;&apos;''
               <div className=&apos;w-full h-full rounded-full border-2 border-white shadow-lg&apos; style={{ backgroundColor: user.color }}>&apos;</div>&apos;&apos;'&apos;&apos;'
@@ -1368,19 +1372,19 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         </div>)}
     </div>)}&apos;&apos;`;
 &apos;&apos;`&apos;&apos;`''
-'''{/* Collaboration Cursors Overlay */}''''{enableCollaboration && (<div ref={collaborationRef} className='absolute inset-0 pointer-events-none' style={{ zIndex: 10 }}>'
+'''{/* Collaboration Cursors Overlay */}''''{enableCollaboration && (<div ref={collaborationRef} className="absolute inset-0 pointer-events-none" style={{ zIndex: 10 }}>'
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {}
   { opacity: 0, scale: 0}} animate = {}
   { opacity: 1,
   scale: 1}} exit = {}
   { opacity: 0, scale: 0 ''';'
-''''}} className='absolute w-4 h-4' style = {}
+''''}} className="absolute w-4 h-4" style = {}
   {}
                     left: x, top: y,';'
                     transform: 'translate(-50%, '
   -50%)';'}}>''''
-              <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color }}></div>''''
-              <div className='absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap'>
+              <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style={{ backgroundColor: user.color }}></div>''''
+              <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
                 {user.name}
               </div>;
             </motion.div>))}
@@ -1393,3 +1397,4 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 ''`''`
 `;
 }
+"

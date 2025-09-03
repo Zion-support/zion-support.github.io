@@ -63,7 +63,8 @@ export default function TermsOfService() {
               <div className="flex items-center justify-center">""
                 <Scale className="w-16 h-16 text-blue-400" /" >
 ;
-  return (;
+  return (
+    
         title="Terms of Service - Zion Tech Group | Legal Terms & Conditions";
         description="Read Zion Tech Group's terms of service and legal conditions. Understand your rights and responsibilities when using our services.";
         keywords="terms of service, terms and conditions, legal terms, user agreement, Zion Tech Group";
@@ -146,7 +147,7 @@ import { FileText, Scale, Shield, Users, Globe } from 'lucide-react
               animate={{ opacity: 1, y: 0 }}""
               className="text-center max-w-4xl mx-auto""" >""
               transition={{ duration: 0.8 }}"
-              className='text-center max-w-4xl mx-auto' >"
+              className="text-center max-w-4xl mx-auto" >"
                 Terms of Service""
                 By using our services, you agree to be bound by these terms.""
                 <Scale className="w-16 h-16 text-blue-400" /"" >
@@ -365,3 +366,4 @@ import { FileText, Scale, Shield, Users, Globe } from 'lucide-react
   );
 }
   )}
+"

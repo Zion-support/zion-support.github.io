@@ -126,7 +126,8 @@ export default function Sitemap() {
         { name: "Privacy Policy", url: "/privacy", description: "How we protect your data" } { name: "Terms of Service", url: "/terms", description: "Terms and conditions" } { name: "Cookie Policy", url: "/cookies", description: "Cookie usage information" } { name: "FAQ", url: "/faq", description: "Frequently asked questions" } { name: "System Status", url: "/system-status", description: "Service availability" }
       ]}
   const quickLinks = [ { name: "Get Started", url: "/contact", icon: ArrowRight }, { name: "View Services", url: "/services", icon: Code }, { name: "Meet Our Team", url: "/team", icon: Users }, { name: "Read Our Blog", url: "/blog", icon: Brain }
-  return (;
+  return (
+    
     <>;
         title="Sitemap - Zion Tech Group | Complete Site Navigation";
         description="Navigate Zion Tech Group's website with our comprehensive sitemap. Find all pages, services, and resources organized by category.";
@@ -364,3 +365,4 @@ export default function Sitemap() {
 </>
   )
   )}
+"

@@ -99,7 +99,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {}"});,"})
 """;,"});,"})
 """";,"});,"})
-            return "You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}';,"});,"})
+            return "You can reach us at:"\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}';,"});,"})
         if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {}"});,"})
 """;,"});,"})
 """";,"});,"})
@@ -508,7 +508,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
             return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";
         }
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {'
-            return "You can reach us at: \\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 http,
+            return "You can reach us at: \"\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 http,
     s: //ziontechgroup.com\\n\nWhen would be the best time to call you?"}"
         if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {'
             return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";
@@ -525,7 +525,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
             return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";', ';
 }""
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {""
-            return "You can reach us at: \\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?"}""
+            return "You can reach us at: \"\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?"}""
         if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {""
             return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";}""
         if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {""
@@ -538,7 +538,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         }
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";';
 }
-        if (input.includes('contact') || input.includes('phone') || input.includes('email')) {return "You can reach us at: \\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?"}
+        if (input.includes('contact') || input.includes('phone') || input.includes('email')) {return "You can reach us at: \"\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?"}
         if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";
         }
         if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";
@@ -546,11 +546,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
             return &quot;I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";
         }
         if (input.includes(&apos;contact&apos) || input.includes(&apos;phone&apos) || input.includes(&apos;email&apos)) {
-            return &quot;You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http,s: //ziontechgroup.com\n\nWhen would be the best time to call you?";
+            return &quot;You can reach us at:"\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http,s: //ziontechgroup.com\n\nWhen would be the best time to call you?";
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {
             return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";'}
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {
-            return "You can reach us at: \n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 https: //ziontechgroup.com\n\nWhen would be the best time to call you?"}
+            return "You can reach us at: "\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 https: //ziontechgroup.com\n\nWhen would be the best time to call you?"}
         if (input.includes(&apos;technology&apos) || input.includes(&apos;tech&apos) || input.includes(&apos;stack&apos)) {
             return &quot;We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";
         }
@@ -582,7 +582,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {"
             return "I&apos;d be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.}"
         if (input.includes('contact') || input.includes('phone') || input.includes('email')) {"
-            return "You can reach us at: \\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?"}"
+            return "You can reach us at: \"\n📧 kleber@ziontechgroup.com\\n📞 +1 (302) 464-0950\\n🌐 https: //ziontechgroup.com\\n\nWhen would be the best time to call you?"}"
         if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {"
             return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";}"
         if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {"
@@ -1166,3 +1166,4 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I&apos;m Zion Tech Group&ap
 </>)};"`"
 </>)};
 </>)};"`
+"

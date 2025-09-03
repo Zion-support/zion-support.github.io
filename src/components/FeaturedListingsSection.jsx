@@ -12,4 +12,4 @@ export default function FeaturedListingsSection() {return (
       </div>
     </div>
   );
-}
+}"

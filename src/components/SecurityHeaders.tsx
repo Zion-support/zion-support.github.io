@@ -39,4 +39,4 @@ const SecurityHeaders = () => {
 
   return null};
 
-export default SecurityHeaders;
+export default SecurityHeaders;"

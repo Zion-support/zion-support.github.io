@@ -12,4 +12,4 @@ export default function LoadingSkeleton.test() {return (
       </div>
     </div>
   );
-}
+}"

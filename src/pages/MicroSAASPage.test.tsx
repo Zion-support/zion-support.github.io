@@ -5,7 +5,9 @@ describe('MicroSAASPage', () => {}; '; it('renders without crashing', () => {}; 
 '
   it('displays expected content', () => {
     render(<MicroSAASPage /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

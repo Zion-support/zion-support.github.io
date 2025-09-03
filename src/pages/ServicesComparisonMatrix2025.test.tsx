@@ -5,7 +5,9 @@ describe('ServicesComparisonMatrix2025', () => {}; '; it('renders without crashi
 '
   it('displays expected content', () => {
     render(<ServicesComparisonMatrix2025 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

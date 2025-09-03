@@ -12,4 +12,4 @@ export default function MobileExperienceEnhancer.test() {return (
       </div>
     </div>
   );
-}
+}"

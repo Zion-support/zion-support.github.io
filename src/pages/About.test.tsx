@@ -5,7 +5,9 @@ describe('About', () => {}; '; it('renders without crashing', () => {}; render(<
 '
   it('displays expected content', () => {
     render(<About /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

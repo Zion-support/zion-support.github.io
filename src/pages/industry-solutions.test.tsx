@@ -5,7 +5,9 @@ describe('industry - solutions', () => {}; '; it('renders without crashing', () 
 '
   it('displays expected content', () => {
     render(<industry -solutions /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

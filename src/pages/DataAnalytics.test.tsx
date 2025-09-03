@@ -5,7 +5,9 @@ describe('DataAnalytics', () => {}; '; it('renders without crashing', () => {}; 
 '
   it('displays expected content', () => {
     render(<DataAnalytics /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

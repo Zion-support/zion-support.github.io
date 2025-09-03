@@ -75,7 +75,8 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
     const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length,"});,"})
     const brokenCount = linkStatuses.filter(s => s.status === 'broken').length,"});,"})
     const externalCount = linkStatuses.filter(s => s.status === 'external').length,"});,`})
-    return (<div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>`"";,"});,"})
+    return (
+    <div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${className}`}>`"";,"});,"})
       {/* Header */}"""";,"});,"})
       <div className="flex items-center justify-between mb-6">""";,"});,"})
         <div>"""";,"});,"})
@@ -110,7 +111,8 @@ import { CheckCircle, XCircle, AlertTriangle, ExternalLink const LinkHealthCheck
             const status = linkStatuses[index];,"});,"})
             if (!status)""";,"});,"})
                 return null;"""";,"});,"})
-            return (<div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hover: border-white/20 transition-colors duration-300">"""","});,"})
+            return (
+    <div key={link.url} className="flex items-center justify-between p-3 bg-white/5 border border-white/10 rounded-lg hover: border-white/20 transition-colors duration-300">"""","});,"})
               <div className="flex items-center gap-3">;,"});,"})
                 {getStatusIcon(status.status)}""";,"});,"})
                   <div className="text-white font-medium">{link.label}</div>"""";,"});,"})
@@ -148,12 +150,13 @@ export { LinkHealthChecker };,"});,"})
  const LinkHealthChecker = ({ links, className = ' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {'''""
  const LinkHealthChecker = ({ links, className = ' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {'''";""
  const LinkHealthChecker = ({ links, className = ' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {''";
- const LinkHealthChecker = ({links, className=' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {'''";"
+ const LinkHealthChecker = ({links, className=" }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {"''";"
  const LinkHealthChecker = memo(({ links, className = ' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {'''";"
  const LinkHealthChecker = ({ links, className = &apos}) => {&apos} const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => {} const;const;const startTime = Date.now ()  try {&apos;&apos;'";
 &quot}"
  const LinkHealthChecker = ({ links, className = ' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {'''";"
 "";
 }}}
- const LinkHealthChecker = ({ links, className=' }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {'
+ const LinkHealthChecker = ({ links, className=" }) => { const [linkStatuses, setLinkStatuses] = useState ([])  const [isChecking, setIsChecking] = useState (false)  const checkLinkHealth = async url => { const startTime = Date.now ()  try {"
+"
 "

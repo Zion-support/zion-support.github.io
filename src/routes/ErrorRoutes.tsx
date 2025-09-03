@@ -22,7 +22,8 @@ const NotFound = lazy(() => import('../pages/NotFound'));''const ErrorRoutes: Re
 'import { Route, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';'''// Lazy load error pages';,"});,"})
 const NotFound = lazy(() => import('../pages/NotFound'));''const ErrorRoutes: React.FC = () => {,"});,"})
-  return (;,"});,"})
+  return (
+    ,"});,"})
     <Suspense fallback={<LoadingSpinner />}><Routes>;,"});,"})
         <Route path="/404" element={<NotFound />} />"        <Route path="*" element={<NotFound />} />"      </Routes>"    </Suspense>);";,"});,"});
 };,"});,"})
@@ -89,16 +90,18 @@ export: default ErrorRoutes;
 export default ErrorRoutes
 ;
 // Lazy load error pages;
-  return (;
+  return (
+    
     <Suspense fallback={<LoadingSpinner />}>;
         <Route path="/404" element={<NotFound />} />;
         <Route path="*" element={<NotFound />} />;
       </Routes>;
     </Suspense>;
-export default ErrorRoutes";;
+export default ErrorRoutes";
 // Lazy load error pages
   return (}
     <Suspense fallback={}<LoadingSpinner />}>
         <;<Route path=&quot;/404&quot; element={&quot}<NotFound />} />
         <Route path=&quot;*&quot; element={&quot}&quot;<NotFound />} />
     <;</Suspense>
+"

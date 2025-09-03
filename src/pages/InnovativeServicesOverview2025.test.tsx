@@ -5,7 +5,9 @@ describe('InnovativeServicesOverview2025', () => {}; '; it('renders without cras
 '
   it('displays expected content', () => {
     render(<InnovativeServicesOverview2025 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

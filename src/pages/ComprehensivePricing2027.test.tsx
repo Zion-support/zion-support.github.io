@@ -5,7 +5,9 @@ describe('ComprehensivePricing2027', () => {}; '; it('renders without crashing',
 '
   it('displays expected content', () => {
     render(<ComprehensivePricing2027 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

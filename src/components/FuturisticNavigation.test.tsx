@@ -12,4 +12,4 @@ export default function FuturisticNavigation.test() {return (
       </div>
     </div>
   );
-}
+}"

@@ -5,7 +5,9 @@ describe('ExpandedServicesPricingGuide2027', () => {}; '; it('renders without cr
 '
   it('displays expected content', () => {
     render(<ExpandedServicesPricingGuide2027 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

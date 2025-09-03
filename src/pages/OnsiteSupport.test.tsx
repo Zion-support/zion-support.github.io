@@ -5,7 +5,9 @@ describe('OnsiteSupport', () => {}; '; it('renders without crashing', () => {}; 
 '
   it('displays expected content', () => {
     render(<OnsiteSupport /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

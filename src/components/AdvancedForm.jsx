@@ -393,7 +393,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 import {useState, useEffect, useCallback } from 'react';"
 import {motion, AnimatePresence } from 'framer-motion';"
 import {Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
-export const AdvancedForm = ({fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className='', enableAnalytics = true, showProgressBar = true }) => {
+export const AdvancedForm = ({fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className="", enableAnalytics = true, showProgressBar = true }) => {
 import { useState, useEffect, useCallback } from 'react';"
 import { motion, AnimatePresence } from 'framer-motion';"
 export const AdvancedForm = memo(({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
@@ -716,16 +716,16 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         switch(field.type) {}
 ''''
 ''''''
-            case 'email': return <Mail className='w-4 h-4'/>''''''
-            case 'tel': return <Phone className='w-4 h-4'/>''''''
-            case 'textarea': return <MessageSquare className='w-4 h-4'/>''''''
-            case 'select': return <Building className='w-4 h-4'/>''''
+            case 'email': return <Mail className="w-4 h-4"/>''''''
+            case 'tel': return <Phone className="w-4 h-4"/>''''''
+            case 'textarea': return <MessageSquare className="w-4 h-4"/>''''''
+            case 'select': return <Building className="w-4 h-4"/>''''
 '';
 ''';
-            case 'email': return <Mail className='w-4 h-4'/>';'';
-            case 'tel': return <Phone className='w-4 h-4'/>';'';
-            case 'textarea': return <MessageSquare className='w-4 h-4'/>';'';
-            case 'select': return <Building className='w-4 h-4'/>';
+            case 'email': return <Mail className="w-4 h-4"/>';'';
+            case 'tel': return <Phone className="w-4 h-4"/>';'';
+            case 'textarea': return <MessageSquare className="w-4 h-4"/>';'';
+            case 'select': return <Building className="w-4 h-4"/>';
 &apos;&apos;'';
 &apos;&apos;'&apos;&apos;'
             case &apos;email&apos;: return&apos;&apos; <Mail className=&apos;w-4 h-4&apos;/>&apos;&apos;&apos;'
@@ -735,11 +735,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             default: return&apos;&apos; <User className=&apos;w-4 h-4&apos;/>}
 '''';
 ''''''
-            case 'email': return <Mail className='w-4 h-4'/>'';''''
-            case 'tel': return <Phone className='w-4 h-4'/>'';''''
-            case 'textarea': return <MessageSquare className='w-4 h-4'/>'';''''
-            case 'select': return <Building className='w-4 h-4'/>';'''
-            default: return <User className='w-4 h-4'/>}
+            case 'email': return <Mail className="w-4 h-4"/>'';''''
+            case 'tel': return <Phone className="w-4 h-4"/>'';''''
+            case 'textarea': return <MessageSquare className="w-4 h-4"/>'';''''
+            case 'select': return <Building className="w-4 h-4"/>';'''
+            default: return <User className="w-4 h-4"/>}
     }, []);
     // Render field;&apos;
     const renderField = useCallback((field) => {}
@@ -751,12 +751,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   y: 20}} animate = {}
   { opacity: 1
   y: 0 '';
-''}} className='space-y-2'>'';
-        <label className='block text-sm font-medium text-gray-700 dark:text-gray-300'>''{field.label}''{field.required && <span className='text-red-500 ml-1'>*</span>}
+''}} className="space-y-2">'';
+        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">''{field.label}''{field.required && <span className="text-red-500 ml-1">*</span>}
         </label>'';
 '';
-        <div className='relative'>''{/* Field Icon */}'';
-          <div className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400'>;
+        <div className="relative">''{/* Field Icon */}'';
+          <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">;
             {getFieldIcon(field)}
           </div>;
           {/* Input Field */}'{field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange = {}
@@ -778,12 +778,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
               {field.options?.map(option => (<option key={option.value} value={option.value}>;
                   {option.label}'';
                 </option>))}''';
-            </select>) : field.type === 'checkbox' ? (<div className='flex items-center space-x-3'>'';
+            </select>) : field.type === 'checkbox' ? (<div className="flex items-center space-x-3">'';
               <input type='checkbox' name={field.name} checked={fieldValue} onChange = {}
   (e) => handleFieldChange(field.name,;
   e.target.checked)'';
-''} className='w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500'/>'';
-              <span className='text-sm text-gray-600 dark:text-gray-400'>;
+''} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>'';
+              <span className="text-sm text-gray-600 dark:text-gray-400">;
                 {field.placeholder}
               </span>';
             </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange = {}
@@ -794,9 +794,9 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                         ? 'border-green-500 focus:ring-green-200''`;
                         : 'border-red-500 focus:ring-red-200'`'`;
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}
-''{/* Password Toggle */}''{isPasswordField && (<button type='button' onClick={() => togglePasswordVisibility(field.name)} className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors'>''{showPassword[field.name] ? <EyeOff className='w-4 h-4'/> : <Eye className='w-4 h-4'/>}
+''{/* Password Toggle */}''{isPasswordField && (<button type='button' onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors">''{showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}
             </button>)}
-''{/* Validation Icon */}''{fieldValidation?.isTouched && (<div className='absolute right-3 top-1/2 transform -translate-y-1/2'>''{fieldValidation.isValid ? (<CheckCircle className='w-5 h-5 text-green-500'/>) : (<AlertCircle className='w-5 h-5 text-red-500'/>)}
+''{/* Validation Icon */}''{fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">''{fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"/>) : (<AlertCircle className="w-5 h-5 text-red-500"/>)}
         const;const;const fieldValidation = validation[field.name]';&apos;&apos;
         const isPasswordField = field.name.toLowerCase().includes(&apos;password&apos)
         return (&apos;<;<motion.div key={field.name} initial = {}
@@ -865,12 +865,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   { opacity: 0, y: 20}} animate = {}
   { opacity: 1,
   y: 0 ''';'
-''''}} className='space-y-2'>''''
-        <label className='block text-sm font-medium text-gray-700 dark: text-gray-300'>'''{field.label}''''{field.required && <span className='text-red-500 ml-1'>*</span>}'
+''''}} className="space-y-2">''''
+        <label className="block text-sm font-medium text-gray-700 dark: text-gray-300">'''{field.label}''''{field.required && <span className="text-red-500 ml-1">*</span>}'
         </label>''''
 ''''
-        <div className='relative'>'''{/* Field Icon */}'''''
-          <div className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400'>
+        <div className="relative">'''{/* Field Icon */}'''''
+          <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
             {getFieldIcon(field)}
           </div>
           {/* Input Field */}'{field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange = {}'
@@ -890,11 +890,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
               {field.options?.map(option => (<option key={option.value} value={option.value}>
                   {option.label}''''
                 </option>))}''''''
-            </select>) : field.type === 'checkbox' ? (<div className='flex items-center space-x-3'>''''
+            </select>) : field.type === 'checkbox' ? (<div className="flex items-center space-x-3">''''
               <input type='checkbox' name={field.name} checked={fieldValue} onChange = {}
   (e) => handleFieldChange(field.name, e.target.checked)''''
-''''} className='w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500'/>''''
-              <span className='text-sm text-gray-600 dark:text-gray-400'>
+''''} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500"/>''''
+              <span className="text-sm text-gray-600 dark:text-gray-400">
                 {field.placeholder}
               </span>''
             </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange = {}
@@ -904,9 +904,9 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                         ? 'border-green-500 focus: ring-green-200'''`
                         : 'border-red-500 focus:ring-red-200''`'`
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}
-'''{/* Password Toggle */}''''{isPasswordField && (<button type='button' onClick={() => togglePasswordVisibility(field.name)} className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors'>''''{showPassword[field.name] ? <EyeOff className='w-4 h-4'/> : <Eye className='w-4 h-4'/>}'
+'''{/* Password Toggle */}''''{isPasswordField && (<button type='button' onClick={() => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors">''''{showPassword[field.name] ? <EyeOff className="w-4 h-4"/> : <Eye className="w-4 h-4"/>}'
             </button>)}
-'''{/* Validation Icon */}''''{fieldValidation?.isTouched && (<div className='absolute right-3 top-1/2 transform -translate-y-1/2'>''''{fieldValidation.isValid ? (<CheckCircle className='w-5 h-5 text-green-500'/>) : (<AlertCircle className='w-5 h-5 text-red-500'/>)}'
+'''{/* Validation Icon */}''''{fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">''''{fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"/>) : (<AlertCircle className="w-5 h-5 text-red-500"/>)}'
             </div>)}
         </div>;
         {/* Validation Message */}
@@ -915,11 +915,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   height: 0}} animate = {}
   { opacity: 1,';
   height: 'auto' '';
-''}} className='text-sm text-red-600 dark:text-red-400'>{fieldValidation.message}
+''}} className="text-sm text-red-600 dark:text-red-400">{fieldValidation.message}
   { opacity: 0, height: 0}} animate = {}
   { opacity: 1,';'
   height: 'auto' ''';'
-''''}} className='text-sm text-red-600 dark: text-red-400'>{fieldValidation.message}
+''''}} className="text-sm text-red-600 dark: text-red-400">{fieldValidation.message}
           </motion.p>)}
       </motion.div>)}, [formData, validation, showPassword, getFieldIcon, handleFieldChange, handleFieldBlur, togglePasswordVisibility]);
     if(isSubmitted) {}
@@ -928,12 +928,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   scale: 0.9}} animate = {}
   { opacity: 1
   scale: 1 '';
-''}} className='text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700'>'';
-        <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4'/>'';
-        <h3 className='text-2xl font-bold text-green-800 dark:text-green-200 mb-2'>;
+''}} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">'';
+        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>'';
+        <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">;
           Thank You!'';
         </h3>'';
-        <p className='text-green-600 dark:text-green-300'>';
+        <p className="text-green-600 dark:text-green-300">';
           Your message has been sent successfully. We'll get back to you soon!;
         </p>;
       </motion.div>)}
@@ -943,32 +943,32 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   { opacity: 1
   y: 0 `;
 ``}} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>''{/* Header */}'';
-      <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white'>'';
-        <h2 className='text-2xl font-bold mb-2'>{title}</h2>'';
-        <p className='text-blue-100'>{subtitle}</p>;
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">'';
+        <h2 className="text-2xl font-bold mb-2">{title}</h2>'';
+        <p className="text-blue-100">{subtitle}</p>;
       </div>;
-''{/* Progress Bar */}''{showProgressBar && (<div className='px-6 pt-4'>'';
-          <div className='flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2'>;
+''{/* Progress Bar */}''{showProgressBar && (<div className="px-6 pt-4">'';
+          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">;
             <span>Form Progress</span>;
             <span>{Math.round(progress)}%</span>'';
           </div>'`;
-          <div className='w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2'>'`'`;
-            <motion.div className='bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300' initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>;
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">'`'`;
+            <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>;
           </div>;
         </div>) }
 ''{/* Form */}'';
-      <form onSubmit={handleSubmit} className='p-6 space-y-6'>'';
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
+      <form onSubmit={handleSubmit} className="p-6 space-y-6">'';
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
           {fields.map(field => renderField(field))}
         </div>;
 '`{/* Submit Button */}'`'`;
         <motion.button type='submit' disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting'`;
             ? 'bg-gray-400 cursor-not-allowed'`'`;
             : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>''{isSubmitting ? (<>'';
-              <Loader2 className='w-5 h-5 animate-spin'/>;
+              <Loader2 className="w-5 h-5 animate-spin"/>;
               Sending...'';
             </>) : (<>'';
-              <Send className='w-5 h-5'/>;
+              <Send className="w-5 h-5"/>;
               {submitText}
             </>) }
         </motion.button>;
@@ -983,14 +983,14 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         <p className=&apos;text-green-600 dar,k:text-green-300&apos;>';
           Your message has been sent successfully. We&apos;ll get back to you soon!&apos;&apos;
   scale: 1 ''';'
-''''}} className='text-center p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700'>''''
-        <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4'/>''''
-        <h3 className='text-2xl font-bold text-green-800 dark:text-green-200 mb-2'>
+''''}} className="text-center p-8 bg-green-50 dark: bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">''''
+        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>''''
+        <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">
           Thank You!''''
         </h3>''''
-        <p className='text-green-600 dark:text-green-300'>''
+        <p className="text-green-600 dark:text-green-300">''
           Your message has been sent successfully. We'll get back to you soon!'
-        <p className='text-green-600 dark:text-green-300'>';'
+        <p className="text-green-600 dark:text-green-300">';'
           Your message has been sent successfully. We&apos;ll get back to you soon!'
         </p>
       </motion.div>)}
@@ -1046,32 +1046,32 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     </motion.div>)}&apos;&apos;`;
 &apos;&apos;`&apos;&quot;`&quot;`
 ``}} className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>'''{/* Header */}'''''
-      <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white'>''''
-        <h2 className='text-2xl font-bold mb-2'>{title}</h2>''''
-        <p className='text-blue-100'>{subtitle}</p>
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">''''
+        <h2 className="text-2xl font-bold mb-2">{title}</h2>''''
+        <p className="text-blue-100">{subtitle}</p>
       </div>
-'''{/* Progress Bar */}''''{showProgressBar && (<div className='px-6 pt-4'>'''''
-          <div className='flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2'>
+'''{/* Progress Bar */}''''{showProgressBar && (<div className="px-6 pt-4">'''''
+          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
             <span>Form Progress</span>
             <span>{Math.round(progress)}%</span>''''
           </div>''`
-          <div className='w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2'>'`'`
-            <motion.div className='bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300' initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
+          <div className="w-full bg-gray-200 dark: bg-gray-700 rounded-full h-2">'`'`
+            <motion.div className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300" initial={{ width: 0 }} animate={{ width: `${progress}%` }}/>
           </div>
         </div>) }
 '''{/* Form */}'''''
-      <form onSubmit={handleSubmit} className='p-6 space-y-6'>''''
-        <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>
+      <form onSubmit={handleSubmit} className="p-6 space-y-6">''''
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
           {fields.map(field => renderField(field))}
         </div>
 '`{/* Submit Button */}'`''`
         <motion.button type='submit' disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting''`;
             ? 'bg-gray-400 cursor-not-allowed''`'`;
             : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>'''{isSubmitting ? (<>'''''
-              <Loader2 className='w-5 h-5 animate-spin'/>
+              <Loader2 className="w-5 h-5 animate-spin"/>
               Sending...''''
 </>) : (<>''''
-              <Send className='w-5 h-5'/>
+              <Send className="w-5 h-5"/>
               {submitText}
 </>) }
         </motion.button>
@@ -1084,8 +1084,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   height: 'auto'}} exit = {}
   { opacity: 0
   height: 0 '';
-''}} className='p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg'>'';
-              <p className='text-sm text-red-600 dark:text-red-400'>;
+''}} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">'';
+              <p className="text-sm text-red-600 dark:text-red-400">;
                 Please fix the errors above before submitting the form.</p>;
             </motion.div>) }
         </AnimatePresence>;
@@ -1096,8 +1096,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   { opacity: 1,';'
   height: 'auto'}} exit = {}
   { opacity: 0, height: 0 ''';'
-''''}} className='p-3 bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg'>''''
-              <p className='text-sm text-red-600 dark:text-red-400'>
+''''}} className="p-3 bg-red-50 dark: bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">''''
+              <p className="text-sm text-red-600 dark:text-red-400">
                 Please fix the errors above before submitting the form.</p>
             </motion.div>) }
         </AnimatePresence>
@@ -1108,3 +1108,4 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 ''`'"`'"
 ";
 }
+"

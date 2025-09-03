@@ -7,21 +7,21 @@ interface SkeletonProps {;
 export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
   if (lines === 1) {
     return (
-      <div
+    <div
         className={cn('
           'animate-pulse bg-gray-200 rounded', className
 ;
 export default function Skeleton({ className, lines = 1 }: SkeletonProps) {;
   if (lines === 1) {;
-    return (;
-      <div;
+    return (
+    <div;
         className={cn(;
           'animate-pulse bg-gray-200 rounded',;
           className)}
       />;
     )}
 ;
-  return (;
+  return (
     <div className="space-y-2">;
       {Array.from({ length: lines }).map((_, i) => (;
         <div;
@@ -32,7 +32,7 @@ interface SkeletonProps {className?: string;
 
 export default function Skeleton(  {className, lines = 1 }: SkeletonProps) {if (lines === 1) {
     return (
-      <div className={cn( 'animate-pulse bg-gray-200 rounded', className )} /" >
+    <div className={cn( 'animate-pulse bg-gray-200 rounded', className )} /" >
     )}
 "
   return (""
@@ -74,7 +74,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
     </div>
   )}
     return (
-      <div className={cn(""
+    <div className={cn(""
           'animate-pulse bg-gray-200 rounded', className
         )}""
       /"" >
@@ -132,3 +132,4 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
       ))}
     </div>'
   )}"
+"

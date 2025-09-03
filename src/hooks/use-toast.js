@@ -18,11 +18,13 @@ export const useToast = () => {;
 
     // Auto remove after 5 seconds
     setTimeout(() => {
-      setToasts(prev => prev.filter(t => t.id !== id));, }, 5000);
+      setToasts(prev => prev.filter(t => t.id !== id));
+  }, 5000);
     return id}, []);
 
   const dismiss = useCallback((id) => {
-    setToasts(prev => prev.filter(t => t.id !== id));, }, []);
+    setToasts(prev => prev.filter(t => t.id !== id));
+  }, []);
   return {
     toast, dismiss,
-    toasts};};"`"
+    toasts};};"`""

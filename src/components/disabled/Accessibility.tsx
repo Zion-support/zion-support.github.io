@@ -43,7 +43,7 @@ import { motion } from &apos;framer-motion';;react.ts&apos; import { motion, Ani
    highContrast: false
    reducedMotion: false
    soundEnabled: true
-   theme: 'auto'})  useEffect(() => {';;
+   theme: 'auto'})  useEffect(() => {';
    theme: 'auto'})  useEffect(() => {';
    them,e: &apos;light&apos; | &apos;dark&apos; | &apos;auto';&apos}&apos;
    export function Accessibility(...args: any[]): any {}
@@ -57,4 +57,5 @@ import { motion } from &apos;framer-motion';;react.ts&apos; import { motion, Ani
    fontSize: anyanyanyanyanyanyanyanyany16, highContrast: false,
    theme: 'auto'})  useEffect(() => {';'
 import { useState, useEffect } from 'react.ts' import { motion, AnimatePresence } from 'framer-motion.ts' import {  Accessibility as AccessibilityIcon, Type, Eye, Volume2, Keyboard, X, Plus, Minus, Contrast, Sun, Moon, Settings }  from 'lucide-react';interface AccessibilitySettings {
+"
 "

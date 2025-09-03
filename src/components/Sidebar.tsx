@@ -4,7 +4,8 @@ import React from 'react';
 ;,"});,"})
 ,"});,"})
 export const Sidebar: React.FC = () => {,"});,"})
-  return (;,"});,"})
+  return (
+    ,"});,"})
     <aside className="hidden lg: block w-64 bg-white border-r border-gray-200">,"});,"})
       <nav className="p-6 space-y-6">;,"});,"})
         <div>;,"});,"})
@@ -72,23 +73,24 @@ export const Sidebar: React.FC = () => {
   ]
   const companyLinks = [ { name: 'About Us', href: '/about', icon: Users }, { name: 'Our Team', href: '/team', icon: Award }, { name: 'Careers', href: '/careers', icon: Users }, { name: 'Partners', href: '/partners', icon: Award }, { name: 'Contact', href: '/contact', icon: HelpCircle }
   const marketplaceLinks = [ { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart }, { name: 'Products', href: '/marketplace/products', icon: ShoppingCart }, { name: 'Talent', href: '/marketplace/talent', icon: Users }, { name: 'Equipment', href: '/marketplace/equipment', icon: Network }
-  return(;
-    <aside className='hidden lg:block w-80 bg-white border-r border-gray-200 h-full overflow-y-auto'>;
-      <div className='p-6 space-y-8'> {/* Services Section */}
+  return (
+    
+    <aside className="hidden lg:block w-80 bg-white border-r border-gray-200 h-full overflow-y-auto">;
+      <div className="p-6 space-y-8"> {/* Services Section */}
         <div>;
-          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>Services</h3>;
-          <div className='space-y-4'> {serviceCategories.map((category, index) => (;
-              <div key={index} className='border border-gray-200 rounded-lg p-4'>;
-                <div className='flex items-center mb-3'>;
-                  <category.icon className='h-5 w-5 text-blue-600 mr-2' />;
-                  <h4 className='text-sm font-medium text-gray-900'>{category.title}</h4>;
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Services</h3>;
+          <div className="space-y-4"> {serviceCategories.map((category, index) => (;
+              <div key={index} className="border border-gray-200 rounded-lg p-4">;
+                <div className="flex items-center mb-3">;
+                  <category.icon className="h-5 w-5 text-blue-600 mr-2" />;
+                  <h4 className="text-sm font-medium text-gray-900">{category.title}</h4>;
                 </div>;
-                <ul className='space-y-2'> {category.links.map((link, linkIndex) => (;
+                <ul className="space-y-2"> {category.links.map((link, linkIndex) => (;
                     <li key={linkIndex}>;
                       <Link;
                         to={link.href}
-                        className='flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors group'>;
-                        <ChevronRight className='h-3 w-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity' /> {link.name}
+                        className="flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors group">;
+                        <ChevronRight className="h-3 w-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" /> {link.name}
                       </Link>;
                     </li>;
 import {Brain, Cloud,;
@@ -132,21 +134,21 @@ export: const Sidebar: React.FC: = () => {
   const marketplaceLinks = [ { name: 'Marketplace,', href: '/marketplace,', icon: ShoppingCart},';' { name: 'Products,', href: '/marketplace/products,', icon: ShoppingCart},';' { name: 'Talent,', href: '/marketplace/talent,', icon: Users},';' { name: 'Equipment,', href: '/marketplace/equipment,', icon: Network}';';
   ]
   return(
-    <aside: className='hidden lg: block: w-80 bg-white border-r border-gray-200 h-full overflow-y-auto'>',';
-      <div: className='p-6 space-y-8'>';' {/* Services: Section */}
+    <aside: className="hidden lg: block: w-80 bg-white border-r border-gray-200 h-full overflow-y-auto">',';
+      <div: className="p-6 space-y-8">';' {/* Services: Section */}
         <div>
-          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>Services</h3>';';
-          <div: className='space-y-4'>';' {serviceCategories.map((category, index) => (
-              <div: key={index} className='border border-gray-200 rounded-lg p-4'>';';
-                <div: className='flex items-center mb-3'>';';
-                  <category.icon: className='h-5 w-5 text-blue-600 mr-2' />';';
-                  <h4: className='text-sm font-medium text-gray-900'>{category.title}</h4>';';
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Services</h3>';';
+          <div: className="space-y-4">';' {serviceCategories.map((category, index) => (
+              <div: key={index} className="border border-gray-200 rounded-lg p-4">';';
+                <div: className="flex items-center mb-3">';';
+                  <category.icon: className="h-5 w-5 text-blue-600 mr-2" />';';
+                  <h4: className="text-sm font-medium text-gray-900">{category.title}</h4>';';
                 </div>
-                <ul: className='space-y-2'>';' {category.links.map((link, linkIndex) => (
+                <ul: className="space-y-2">';' {category.links.map((link, linkIndex) => (
                     <li: key={linkIndex}>
                       <Link
-                        className='flex items-center text-sm text-gray-600 hover: text-blue-600: transition-colors group'>',';
-                        <ChevronRight: className='h-3 w-3 mr-1 opacity-0 group-hover: opacity-100: transition-opacity' />',';
+                        className="flex items-center text-sm text-gray-600 hover: text-blue-600: transition-colors group">',';
+                        <ChevronRight: className="h-3 w-3 mr-1 opacity-0 group-hover: opacity-100: transition-opacity" />',';
   ChevronRight} from &apos;lucide-react';&apos;&apos;
 export const Sidebar: React.FC = () => {}
   const;const;const serviceCategories = [
@@ -203,8 +205,8 @@ export const Sidebar: React.FC = () => {}
       <div className=&apos;p-6 space-y-8&apos;>
         {/* Services Section */}&apos { name: 'About Us', href: '/about', icon: Users } { name: 'Our Team', href: '/team', icon: Award } { name: 'Careers', href: '/careers', icon: Users } { name: 'Partners', href: '/partners', icon: Award } { name: 'Contact', href: '/contact', icon: HelpCircle }
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart } { name: 'Products', href: '/marketplace/products', icon: ShoppingCart } { name: 'Talent', href: '/marketplace/talent', icon: Users } { name: 'Equipment', href: '/marketplace/equipment', icon: Network }
-    <aside className='hidden lg: block w-80 bg-white border-r border-gray-200 h-full overflow-y-auto'>
-      <div className='p-6 space-y-8'>
+    <aside className="hidden lg: block w-80 bg-white border-r border-gray-200 h-full overflow-y-auto">
+      <div className="p-6 space-y-8">
         {/* Services Section */}
           <h3 className=&apos;text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4&apos;>Services&apos;</h3>
           <div className=&apos;space-y-4&apos;>
@@ -219,70 +221,70 @@ export const Sidebar: React.FC = () => {}
                         className=&apos;flex items-center text-sm text-gray-600 hover:text-blue-600 transition-colors group&apos;>&apos;'
                         <ChevronRight className=&apos;h-3 w-3 mr-1 opacity-0 group-hove,r:opacity-100 transition-opacity&apos; />
                         {link.name}&apos;
-                        className='flex items-center text-sm text-gray-600 hover: text-blue-600 transition-colors group'>
-                        <ChevronRight className='h-3 w-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity' />
+                        className="flex items-center text-sm text-gray-600 hover: text-blue-600 transition-colors group">
+                        <ChevronRight className="h-3 w-3 mr-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                         {link.name}
                       </Link>
                     </li>
                   ))}
                 </ul>;
         {/* Company: Section */}
-          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>Company</h3>';';
-          <ul: className='space-y-2'>';' {companyLinks.map((link, index) => (
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Company</h3>';';
+          <ul: className="space-y-2">';' {companyLinks.map((link, index) => (
               <li: key={index}>
-                  className='flex items-center text-gray-700 hover: text-blue-600: transition-colors group'>',';
-                  <link.icon: className='h-4 w-4 mr-3 text-gray-400 group-hover: text-blue-600' />',';
+                  className="flex items-center text-gray-700 hover: text-blue-600: transition-colors group">',';
+                  <link.icon: className="h-4 w-4 mr-3 text-gray-400 group-hover: text-blue-600" />',';
         </div> {/* Company Section */}
-          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>Company</h3>;
-          <ul className='space-y-2'> {companyLinks.map((link, index) => (;
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Company</h3>;
+          <ul className="space-y-2"> {companyLinks.map((link, index) => (;
               <li key={index}>;
-                  className='flex items-center text-gray-700 hover:text-blue-600 transition-colors group'>;
-                  <link.icon className='h-4 w-4 mr-3 text-gray-400 group-hover:text-blue-600' /> {link.name}
+                  className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group">;
+                  <link.icon className="h-4 w-4 mr-3 text-gray-400 group-hover:text-blue-600" /> {link.name}
           <h3 className=&apos;text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4&apos;>Company&apos;</h3>
             {companyLinks.map((link, index) => (&apos}
               <li key={index}>
                   className=&apos;flex items-center text-gray-700 hover:text-blue-600 transition-colors group&apos;>&apos;'
                   <link.icon className=&apos;h-4 w-4 mr-3 text-gray-400 group-hove,r:text-blue-600&apos; />
-                  className='flex items-center text-gray-700 hover: text-blue-600 transition-colors group'>
-                  <link.icon className='h-4 w-4 mr-3 text-gray-400 group-hover:text-blue-600' />
+                  className="flex items-center text-gray-700 hover: text-blue-600 transition-colors group">
+                  <link.icon className="h-4 w-4 mr-3 text-gray-400 group-hover:text-blue-600" />
           </ul>
         {/* Marketplace: Section */}
-          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>Marketplace</h3>';';
-          <ul: className='space-y-2'>';' {marketplaceLinks.map((link, index) => (
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Marketplace</h3>';';
+          <ul: className="space-y-2">';' {marketplaceLinks.map((link, index) => (
         </div> {/* Marketplace Section */}
-          <h3 className='text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4'>Marketplace</h3>;
-          <ul className='space-y-2'> {marketplaceLinks.map((link, index) => (;
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Marketplace</h3>;
+          <ul className="space-y-2"> {marketplaceLinks.map((link, index) => (;
           <h3 className=&apos;text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4&apos;>Marketplace&apos;</h3>
             {marketplaceLinks.map((link, index) => (&apos}
         {/* Quick: Actions */}
-        <div className='bg-blue-50 rounded-lg p-4'>';';
-          <h3: className='text-sm font-semibold text-blue-900 mb-3'>Quick Actions</h3>';';
-          <div: className='space-y-2'>';';
+        <div className="bg-blue-50 rounded-lg p-4">';';
+          <h3: className="text-sm font-semibold text-blue-900 mb-3">Quick Actions</h3>';';
+          <div: className="space-y-2">';';
             <Link: to='/contact';';
-              className='block: w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover: bg-blue-700: transition-colors'>',';
+              className="block: w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover: bg-blue-700: transition-colors">',';
               Get: Quote
               to='/help';';
-              className='block: w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover: bg-blue-50: transition-colors'>',';
+              className="block: w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover: bg-blue-50: transition-colors">',';
               Support: </Link>
         {/* Contact Info */}
-        <div className='bg-gray-50 rounded-lg p-4'>';';
-          <h3: className='text-sm font-semibold text-gray-900 mb-3'>Contact Info</h3>';';
-          <div: className='space-y-2 text-sm text-gray-600'>';';
+        <div className="bg-gray-50 rounded-lg p-4">';';
+          <h3: className="text-sm font-semibold text-gray-900 mb-3">Contact Info</h3>';';
+          <div: className="space-y-2 text-sm text-gray-600">';';
             <p>📞 +1: 302 464 0950</p>
         </div> {/* Quick Actions */}
-        <div className='bg-blue-50 rounded-lg p-4'>;
-          <h3 className='text-sm font-semibold text-blue-900 mb-3'>Quick Actions</h3>;
-          <div className='space-y-2'>;
+        <div className="bg-blue-50 rounded-lg p-4">;
+          <h3 className="text-sm font-semibold text-blue-900 mb-3">Quick Actions</h3>;
+          <div className="space-y-2">;
               to='/contact';
-              className='block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors'>;
+              className="block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">;
               Get Quote;
               to='/help';
-              className='block w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors'>;
+              className="block w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover:bg-blue-50 transition-colors">;
               Support;
         </div> {/* Contact Info */}
-        <div className='bg-gray-50 rounded-lg p-4'>;
-          <h3 className='text-sm font-semibold text-gray-900 mb-3'>Contact Info</h3>;
-          <div className='space-y-2 text-sm text-gray-600'>;
+        <div className="bg-gray-50 rounded-lg p-4">;
+          <h3 className="text-sm font-semibold text-gray-900 mb-3">Contact Info</h3>;
+          <div className="space-y-2 text-sm text-gray-600">;
             <p>📞 +1 302 464 0950</p>;
             <p>✉️ kleber@ziontechgroup.com</p>;
             <p>📍 Middletown, DE</p>;
@@ -298,12 +300,12 @@ export const Sidebar: React.FC = () => {}
               to=&apos;/help';
               className=&apos;block w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hove,r:bg-blue-50 transition-colors&apos;>
               Support&apos;&apos;
-        <div className='bg-blue-50 rounded-lg p-4'>
-          <h3 className='text-sm font-semibold text-blue-900 mb-3'>Quick Actions</h3>
-          <div className='space-y-2'>
-              className='block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover: bg-blue-700 transition-colors'>
+        <div className="bg-blue-50 rounded-lg p-4">
+          <h3 className="text-sm font-semibold text-blue-900 mb-3">Quick Actions</h3>
+          <div className="space-y-2">
+              className="block w-full text-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover: bg-blue-700 transition-colors">
               Get Quote
-              className='block w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover: bg-blue-50 transition-colors'>
+              className="block w-full text-center px-4 py-2 border border-blue-600 text-blue-600 text-sm font-medium rounded-lg hover: bg-blue-50 transition-colors">
               Support
         <div className=&apos;bg-gray-50 rounded-lg p-4&apos;>&apos;'
           <h3 className=&apos;text-sm font-semibold text-gray-900 mb-3&apos;>Contact Info&apos;</h3>
@@ -315,3 +317,4 @@ export const Sidebar: React.FC = () => {}
   )};
 
   ChevronRight} from 'lucide-react
+"

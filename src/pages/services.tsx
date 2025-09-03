@@ -269,18 +269,18 @@ export default function Page() {
 const Services: React.FC: = () => {
   return: (<>;
       <SEO: title='Services - Zion Tech Group' />';';
-      <div: className='min-h-screen bg-white py-20'>';';
-        <div: className='max-w-4xl mx-auto px-4'>';';
-          <h1: className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>';';
-          <p: className='text-lg text-gray-600'>Content coming soon...</p>';';
+      <div: className="min-h-screen bg-white py-20">';';
+        <div: className="max-w-4xl mx-auto px-4">';';
+          <h1: className="text-4xl font-bold text-gray-900 mb-8">Services</h1>';';
+          <p: className="text-lg text-gray-600">Content coming soon...</p>';';
 ;
 export: default Services;
   return (<>;
       <SEO title='Services - Zion Tech Group' />;
-      <div className='min-h-screen bg-white py-20'>;
-        <div className='max-w-4xl mx-auto px-4'>;
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>;
-          <p className='text-lg text-gray-600'>Content coming soon...</p>;
+      <div className="min-h-screen bg-white py-20">;
+        <div className="max-w-4xl mx-auto px-4">;
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>;
+          <p className="text-lg text-gray-600">Content coming soon...</p>;
         </div>;
     </>;
 import {SEO } from '../components/SEO';
@@ -299,23 +299,24 @@ const Services: React.FC = () =>  {
 const Services: React.FC = () => {'
   return (<>""
       <SEO title='Services - Zion Tech Group' /" >""
-      <div className='min-h-screen bg-white py-20'>""
-        <div className='max-w-4xl mx-auto px-4'>""
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>""
+      <div className="min-h-screen bg-white py-20">""
+        <div className="max-w-4xl mx-auto px-4">""
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>""
 const Services: React.FC = () => {""
       <SEO title='Services - Zion Tech Group' /"" >""
   return (<>
       <SEO title='Services - Zion Tech Group' />
-      <div className='min-h-screen bg-white py-20'>
-        <div className='max-w-4xl mx-auto px-4'>
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>
+      <div className="min-h-screen bg-white py-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>
 const Services: React.FC = () => {"
   return (<>"
       <SEO title='Services - Zion Tech Group' /  >'
-      <div className='min-h-screen bg-white py-20'>"
-        <div className='max-w-4xl mx-auto px-4'>"
-          <h1 className='text-4xl font-bold text-gray-900 mb-8'>Services</h1>"
-          <p className='text-lg text-gray-600'>Content coming soon...</p>
+      <div className="min-h-screen bg-white py-20">"
+        <div className="max-w-4xl mx-auto px-4">"
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>"
+          <p className="text-lg text-gray-600">Content coming soon...</p>
   )}
 ""
+"
 "

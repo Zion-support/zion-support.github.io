@@ -5,7 +5,9 @@ describe('ComprehensivePricingGuide2028', () => {}; '; it('renders without crash
 '
   it('displays expected content', () => {
     render(<ComprehensivePricingGuide2028 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

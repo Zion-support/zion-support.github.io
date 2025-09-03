@@ -164,7 +164,8 @@ const AdvancedServiceRecommendation = () => {}"});,"})
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&;,"});,"})
             clientProfile.timeline && clientProfile.technologyMaturity &&""";,"});,"})
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};"""";,"});,"})
-    return (<div className="max-w-7xl mx-auto p-6">;,"});,"})
+    return (
+    <div className="max-w-7xl mx-auto p-6">;,"});,"})
       {/* Header */}"});,"})
       <motion.div initial = {}"});,"})
   { opacity: 0,"});,"})
@@ -733,58 +734,60 @@ import { Button } from './ui/button'';'';'
             case 'Simple': return 'bg-green-100 text-green-800'';'
             clientProfile.timeline && clientProfile.technologyMaturity &&'';
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}';
-    return (<div className='max-w-7xl mx-auto p-6'>;
+    return (
+    <div className="max-w-7xl mx-auto p-6">;
             clientProfile.timeline && clientProfile.technologyMaturity &&''';'
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}''''
-    return (<div className='max-w-7xl mx-auto p-6'>
+    return (
+    <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {}
   { opacity: 0
   y: 20}} animate = {}
   { opacity: 1
   y: 0 '';
-''}} className='text-center mb-8'>'';
-        <h1 className='text-4xl font-bold text-zion-blue-dark mb-4'>;
+''}} className="text-center mb-8">'';
+        <h1 className="text-4xl font-bold text-zion-blue-dark mb-4">;
           AI-Powered Service Recommendation Engine'';
         </h1>'';
-        <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>;
+        <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.</p>;
       </motion.div> {/* Client Profile Form */}
-''}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>'';
-        <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2'>'';
-          <Brain className='w-6 h-6 text-zion-cyan'/>;
+''}} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">'';
+        <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">'';
+          <Brain className="w-6 h-6 text-zion-cyan"/>;
           Tell Us About Your Business;
         </h2>'';
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>'';
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">'';
           <div>'';
-            <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Industry</label>;
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>;
             <select value={clientProfile.industry} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev,;
   industry: e.target.value '';
-''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>'';
+''}))} className="w-full p-3 border border-zion-slate-light rounded-md">'';
               <option value='>Select Industry</option> {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }
             </select>;
           </div>;
-            <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Comp Size</label>;
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>;
             <select value={clientProfile.compSize} onChange = {}
   compSize: e.target.value '';
               <option value='>Select Comp Size</option> {compSizes.map(size => (<option key={size} value={size}>{size}</option>) ) }
-            <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Budget Range</label>;
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>;
             <select value={clientProfile.budget} onChange = {}
   budget: e.target.value '';
               <option value='>Select Budget Range</option> {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>) ) }
-            <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Implementation Timeline</label>;
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>;
             <select value={clientProfile.timeline} onChange = {}
   timeline: e.target.value '';
               <option value='>Select Timeline</option> {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
-            <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Technology Maturity Level</label>;
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>;
             <select value={clientProfile.technologyMaturity} onChange = {}
   technologyMaturity: e.target.value '';
               <option value='>Select Technology Maturity</option> {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>) ) }
         </div>'';
-        <div className='mt-6'>'';
-          <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Primary Business Goals</label>'';
-          <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>''{primaryGoals.map(goal => (<label key={goal} className='flex items-center gap-2 cursor-pointer'>'' { opacity: 0, y: 20}} animate = {}
+        <div className="mt-6">'';
+          <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>'';
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">''{primaryGoals.map(goal => (<label key={goal} className="flex items-center gap-2 cursor-pointer">'' { opacity: 0, y: 20}} animate = {}
   { opacity: 1,
   y: 0 &apos;&apos;
 &apos;&apos;'&apos}} className=&apos;text-center mb-8&apos;>'&apos;&apos;'&apos;&apos;
@@ -794,11 +797,11 @@ import { Button } from './ui/button'';'';'
         <p className=&apos;text-xl text-zion-slate-light max-w-3xl mx-auto&apos;>
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.&apos;</p>
   y: 0 ''';'
-''''}} className='text-center mb-8'>''''
-        <h1 className='text-4xl font-bold text-zion-blue-dark mb-4'>
+''''}} className="text-center mb-8">''''
+        <h1 className="text-4xl font-bold text-zion-blue-dark mb-4">
           AI-Powered Service Recommendation Engine''''
         </h1>''''
-        <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
+        <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
           Get personalized service recommendations based on your industry, goals, and requirements.Our AI analyzes your profile to suggest the perfect solutions for your business.</p>
       </motion.div>
       {/* Client Profile Form */}
@@ -840,127 +843,127 @@ import { Button } from './ui/button'';'';'
           <label className=&apos;block text-sm font-medium text-zion-slate-dark mb-2&apos;>Primary Business Goals&apos;</label>&apos;&apos;'&apos;&apos;'
           <div className=&apos;grid grid-cols-2 md:grid-cols-3 gap-2&apos;>'&apos;&apos;'{primaryGoals.map(goal => (&apos}&apos;<label key={goal} className=&apos;flex items-center gap-2 cursor-pointer&apos;>'&apos;&apos;'&apos;&apos;
                 <input type=&apos;checkbox&apos; checked={clientProfile.primaryGoals.includes(goal)} onChange = {}
-''''}} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>''''
-        <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2'>''''
-          <Brain className='w-6 h-6 text-zion-cyan'/>
+''''}} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">''''
+        <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">''''
+          <Brain className="w-6 h-6 text-zion-cyan"/>
           Tell Us About Your Business
         </h2>''''
         ''''
-        <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>''''
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">''''
           <div>''''
-            <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Industry</label>
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
   (e) => setClientProfile(prev => ({ ...prev, industry: e.target.value ''''
-''''}))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
+''''}))} className="w-full p-3 border border-zion-slate-light rounded-md">''''
               <option value=''>Select Industry</option>
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }
-            <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Comp Size</label>
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>
   (e) => setClientProfile(prev => ({ ...prev, compSize: e.target.value ''''
               <option value=''>Select Comp Size</option>
               {compSizes.map(size => (<option key={size} value={size}>{size}</option>) ) }
-            <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Budget Range</label>
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
   (e) => setClientProfile(prev => ({ ...prev, budget: e.target.value ''''
               <option value=''>Select Budget Range</option>
               {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>) ) }
-            <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Implementation Timeline</label>
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
   (e) => setClientProfile(prev => ({ ...prev, timeline: e.target.value ''''
               <option value=''>Select Timeline</option>
               {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
-            <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Technology Maturity Level</label>
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
   (e) => setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value ''''
               <option value=''>Select Technology Maturity</option>
               {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>) ) }
         </div>''''
-        <div className='mt-6'>''''
-          <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Primary Business Goals</label>''''
-          <div className='grid grid-cols-2 md: grid-cols-3 gap-2'>''''{primaryGoals.map(goal => (<label key={goal} className='flex items-center gap-2 cursor-pointer'>''''
+        <div className="mt-6">''''
+          <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>''''
+          <div className="grid grid-cols-2 md: grid-cols-3 gap-2">''''{primaryGoals.map(goal => (<label key={goal} className="flex items-center gap-2 cursor-pointer">''''
                 <input type='checkbox' checked={clientProfile.primaryGoals.includes(goal)} onChange = {}
   (e) => {}
                 if(e.target.checked) {}
                     setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,;
   goal] }) ) }
                 else {}
-                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}''}} className='rounded text-zion-cyan'/>'';
-                <span className='text-sm text-zion-slate-light'>{goal}</span>;
+                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}''}} className="rounded text-zion-cyan"/>'';
+                <span className="text-sm text-zion-slate-light">{goal}</span>;
               </label>))}
-          <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Current Challenges</label>'';
-          <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>''{challenges.map(challenge => (<label key={challenge} className='flex items-center gap-2 cursor-pointer'>'';
+          <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>'';
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-2">''{challenges.map(challenge => (<label key={challenge} className="flex items-center gap-2 cursor-pointer">'';
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}&apos;&apos;'&apos}} className=&apos;rounded text-zion-cyan&apos;/>&apos;&apos;'&apos;&apos;'
                 <span className=&apos;text-sm text-zion-slate-light&apos;>{goal}&apos;</span>
           <label className=&apos;block text-sm font-medium text-zion-slate-dark mb-2&apos;>Current Challenges&apos;</label>&apos;&apos;'&apos;&apos;'
           <div className=&apos;grid grid-cols-2 md:grid-cols-3 gap-2&apos;>'&apos;&apos;'{challenges.map(challenge => (&apos}&apos;<label key={challenge} className=&apos;flex items-center gap-2 cursor-pointer&apos;>'&apos;&apos;'&apos;&apos;
                 <input type=&apos;checkbox&apos; checked={clientProfile.challenges.includes(challenge)} onChange = {}
-                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}''''}} className='rounded text-zion-cyan'/>''''
-                <span className='text-sm text-zion-slate-light'>{goal}</span>
-          <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Current Challenges</label>''''
-          <div className='grid grid-cols-2 md: grid-cols-3 gap-2'>''''{challenges.map(challenge => (<label key={challenge} className='flex items-center gap-2 cursor-pointer'>''''
+                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}''''}} className="rounded text-zion-cyan"/>''''
+                <span className="text-sm text-zion-slate-light">{goal}</span>
+          <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>''''
+          <div className="grid grid-cols-2 md: grid-cols-3 gap-2">''''{challenges.map(challenge => (<label key={challenge} className="flex items-center gap-2 cursor-pointer">''''
                 <input type='checkbox' checked={clientProfile.challenges.includes(challenge)} onChange = {}
                     setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,;
   challenge] }) ) }
-                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}''}} className='rounded text-zion-cyan'/>'';
-                <span className='text-sm text-zion-slate-light'>{challenge}</span>;
-        <div className='mt-8 text-center'>'';
-          <Button className='bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4' onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>''{isAnalyzing ? (<>'';
-                <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>;
+                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}''}} className="rounded text-zion-cyan"/>'';
+                <span className="text-sm text-zion-slate-light">{challenge}</span>;
+        <div className="mt-8 text-center">'';
+          <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>''{isAnalyzing ? (<>'';
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
                 Analyzing Your Profile...'';
               </>) : (<>'';
-                <Brain className='w-5 h-5 mr-2'/>;
+                <Brain className="w-5 h-5 mr-2"/>;
                 Get AI Recommendations;
               </>) }
           </Button>;
       </motion.div> {/* Recommendations Results */}
       {showResults && (<motion.div initial = {}
   y: 0';'}} transition={{ delay: 0.2 }}>'';
-          <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center'>;
+          <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">;
             Your Personalized Service Recommendations;
-          <div className='space-y-6'> {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}
+          <div className="space-y-6"> {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}
   x: -20}} animate = {}
   x: 0';'}} transition={{ delay: 0.1 * index }}>'';
-                <Card className='hover:shadow-lg transition-shadow'>'';
+                <Card className="hover:shadow-lg transition-shadow">'';
                   <CardHeader>'';
-                    <div className='flex items-start justify-between'>'';
-                      <div className='flex-1'>'';
-                        <CardTitle className='text-xl text-zion-blue-dark mb-2'> {rec.service.title}'';
+                    <div className="flex items-start justify-between">'';
+                      <div className="flex-1">'';
+                        <CardTitle className="text-xl text-zion-blue-dark mb-2"> {rec.service.title}'';
                         </CardTitle>'';
-                        <p className='text-zion-slate-light mb-3'> {rec.service.description}
+                        <p className="text-zion-slate-light mb-3"> {rec.service.description}
                         </p>'';
-                        <div className='flex flex-wrap gap-2 mb-4'>;
+                        <div className="flex flex-wrap gap-2 mb-4">;
                           <Badge className={getPriorityColor(rec.priority)}>;
                             Priority: {rec.priority}
                           </Badge>;
                           <Badge className={getComplexityColor (rec.implementationComplexity) }>;
                             Complexity: {rec.implementationComplexity}'';
                           </Badge>'';
-                          <Badge className='bg-zion-cyan/10 text-zion-cyan'>;
+                          <Badge className="bg-zion-cyan/10 text-zion-cyan">;
                             Match Score: {rec.matchScore}%;
-                      <div className='text-right ml-4'>'';
-                        <div className='text-2xl font-bold text-zion-cyan mb-1'> {rec.service.price}'';
-                        <div className='text-sm text-zion-slate-light'> {rec.service.duration}
+                      <div className="text-right ml-4">'';
+                        <div className="text-2xl font-bold text-zion-cyan mb-1"> {rec.service.price}'';
+                        <div className="text-sm text-zion-slate-light"> {rec.service.duration}
                   </CardHeader>;
                   <CardContent>'';
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>'';
-                        <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>'';
-                          <Lightbulb className='w-4 h-4 text-zion-purple'/>;
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">'';
+                        <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">'';
+                          <Lightbulb className="w-4 h-4 text-zion-purple"/>;
                           Why This Service Matches'';
                         </h4>'';
-                        <ul className='space-y-2'>''{rec.reasoning.map((reason, idx) => (<li key={idx} className='text-sm text-zion-slate-light flex items-start gap-2'>'';
-                              <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 flex-shrink-0'/> {reason}
+                        <ul className="space-y-2">''{rec.reasoning.map((reason, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">'';
+                              <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"/> {reason}
                             </li>) ) }
                         </ul>;
-                          <BarChart3 className='w-4 h-4 text-zion-cyan'/>;
+                          <BarChart3 className="w-4 h-4 text-zion-cyan"/>;
                           Implementation Details'';
-                        <div className='space-y-3'>'';
-                          <div className='flex justify-between'>'';
-                            <span className='text-sm text-zion-slate-light'>Expected ROI:</span>'';
-                            <span className='text-sm font-medium text-zion-slate-dark'>{rec.expectedROI}</span>'';
-                            <span className='text-sm text-zion-slate-light'>Time to Value:</span>'';
-                            <span className='text-sm font-medium text-zion-slate-dark'>{rec.timeToValue}</span>'';
-                            <span className='text-sm text-zion-slate-light'>Category:</span>'';
-                            <Badge variant='outline' className='text-xs'> {rec.service.category.toUpperCase()}
-                        <div className='mt-4'>'';
-                          <Button className='w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark' onClick = {}
+                        <div className="space-y-3">'';
+                          <div className="flex justify-between">'';
+                            <span className="text-sm text-zion-slate-light">Expected ROI:</span>'';
+                            <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>'';
+                            <span className="text-sm text-zion-slate-light">Time to Value:</span>'';
+                            <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>'';
+                            <span className="text-sm text-zion-slate-light">Category:</span>'';
+                            <Badge variant='outline' className="text-xs"> {rec.service.category.toUpperCase()}
+                        <div className="mt-4">'';
+                          <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {}
 ' () => window.open(rec.service.link,_blank')}>'';
                             Learn More'';
-                            <ArrowRight className='w-4 h-4 ml-2'/>;
+                            <ArrowRight className="w-4 h-4 ml-2"/>;
                   </CardContent>;
                 </Card>;
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}&apos;&apos;'&apos}} className=&apos;rounded text-zion-cyan&apos;/>&apos;&apos;'&apos;&apos;'
@@ -972,14 +975,14 @@ import { Button } from './ui/button'';'';'
               </>) : (<>&apos;&apos;'&apos;&apos;'
                 <Brain className=&apos;w-5 h-5 mr-2&apos;/>
                 Get AI Recommendations&apos;
-                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}''''}} className='rounded text-zion-cyan'/>''''
-                <span className='text-sm text-zion-slate-light'>{challenge}</span>
-        <div className='mt-8 text-center'>''''
-          <Button className='bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4' onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>'''{isAnalyzing ? (<>'''''
-                <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>
+                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}''''}} className="rounded text-zion-cyan"/>''''
+                <span className="text-sm text-zion-slate-light">{challenge}</span>
+        <div className="mt-8 text-center">''''
+          <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4" onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>'''{isAnalyzing ? (<>'''''
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                 Analyzing Your Profile...''''
 </>) : (<>''''
-                <Brain className='w-5 h-5 mr-2'/>
+                <Brain className="w-5 h-5 mr-2"/>
                 Get AI Recommendations
           </Button>
       {/* Recommendations Results */}
@@ -1003,23 +1006,23 @@ import { Button } from './ui/button'';'';'
                         </p>&apos;&apos;
                         <div className=&apos;flex flex-wrap gap-2 mb-4&apos;>&apos;'
   y: 0';'}} transition={{ delay: 0.2 }}>''''
-          <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center'>
+          <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">
             Your Personalized Service Recommendations
-          <div className='space-y-6'>
+          <div className="space-y-6">
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}
   { opacity: 0, x: -20}} animate = {}
   x: 0';'}} transition={{ delay: 0.1 * index }}>''''
-                <Card className='hover:shadow-lg transition-shadow'>''''
+                <Card className="hover:shadow-lg transition-shadow">''''
                   <CardHeader>''''
-                    <div className='flex items-start justify-between'>''''
-                      <div className='flex-1'>''''
-                        <CardTitle className='text-xl text-zion-blue-dark mb-2'>
+                    <div className="flex items-start justify-between">''''
+                      <div className="flex-1">''''
+                        <CardTitle className="text-xl text-zion-blue-dark mb-2">
                           {rec.service.title}''''
                         </CardTitle>''''
-                        <p className='text-zion-slate-light mb-3'>
+                        <p className="text-zion-slate-light mb-3">
                           {rec.service.description}
                         </p>''''
-                        <div className='flex flex-wrap gap-2 mb-4'>
+                        <div className="flex flex-wrap gap-2 mb-4">
                           <Badge className={getPriorityColor(rec.priority)}>
                           </Badge>
                           <Badge className={getComplexityColor (rec.implementationComplexity) }>
@@ -1035,12 +1038,12 @@ import { Button } from './ui/button'';'';'
                           {rec.service.duration}&apos;
                             Complexity: {rec.implementationComplexity}''''
                           </Badge>''''
-                          <Badge className='bg-zion-cyan/10 text-zion-cyan'>
+                          <Badge className="bg-zion-cyan/10 text-zion-cyan">
                             Match Score: {rec.matchScore}%
-                      <div className='text-right ml-4'>''''
-                        <div className='text-2xl font-bold text-zion-cyan mb-1'>
+                      <div className="text-right ml-4">''''
+                        <div className="text-2xl font-bold text-zion-cyan mb-1">
                           {rec.service.price}''''
-                        <div className='text-sm text-zion-slate-light'>
+                        <div className="text-sm text-zion-slate-light">
                           {rec.service.duration}
                   </CardHeader>
                   <CardContent>&apos;&apos;'&apos;&apos;'
@@ -1070,53 +1073,53 @@ import { Button } from './ui/button'';'';'
                             Learn More&apos;&apos;'&apos;&apos;'
                             <ArrowRight className=&apos;w-4 h-4 ml-2&apos;/>&apos;
                   <CardContent>''''
-                    <div className='grid grid-cols-1 lg: grid-cols-2 gap-6'>''''
-                        <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>''''
-                          <Lightbulb className='w-4 h-4 text-zion-purple'/>
+                    <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">''''
+                        <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">''''
+                          <Lightbulb className="w-4 h-4 text-zion-purple"/>
                           Why This Service Matches''''
                         </h4>''''
-                        <ul className='space-y-2'>''''{rec.reasoning.map((reason, idx) => (<li key={idx} className='text-sm text-zion-slate-light flex items-start gap-2'>''''
-                              <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 flex-shrink-0'/>
+                        <ul className="space-y-2">''''{rec.reasoning.map((reason, idx) => (<li key={idx} className="text-sm text-zion-slate-light flex items-start gap-2">''''
+                              <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0"/>
                               {reason}
-                          <BarChart3 className='w-4 h-4 text-zion-cyan'/>
+                          <BarChart3 className="w-4 h-4 text-zion-cyan"/>
                           Implementation Details''''
-                        <div className='space-y-3'>''''
-                          <div className='flex justify-between'>''''
-                            <span className='text-sm text-zion-slate-light'>Expected ROI: </span>''''
-                            <span className='text-sm font-medium text-zion-slate-dark'>{rec.expectedROI}</span>''''
-                            <span className='text-sm text-zion-slate-light'>Time to Value:</span>''''
-                            <span className='text-sm font-medium text-zion-slate-dark'>{rec.timeToValue}</span>''''
-                            <span className='text-sm text-zion-slate-light'>Category:</span>''''
-                            <Badge variant='outline' className='text-xs'>
+                        <div className="space-y-3">''''
+                          <div className="flex justify-between">''''
+                            <span className="text-sm text-zion-slate-light">Expected ROI: </span>''''
+                            <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>''''
+                            <span className="text-sm text-zion-slate-light">Time to Value:</span>''''
+                            <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>''''
+                            <span className="text-sm text-zion-slate-light">Category:</span>''''
+                            <Badge variant='outline' className="text-xs">
                               {rec.service.category.toUpperCase()}
-                        <div className='mt-4'>''''
-                          <Button className='w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark' onClick = {}
+                        <div className="mt-4">''''
+                          <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover: from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {}
   () => window.open(rec.service.link, _blank')}>'''
                             Learn More''''
-                            <ArrowRight className='w-4 h-4 ml-2'/>
+                            <ArrowRight className="w-4 h-4 ml-2"/>
                   </CardContent>
                 </Card>
               </motion.div>) ) }
           </div> {/* CTA Section */}
-''}} transition={{ delay: 0.4 }} className='mt-12 text-center'>'';
-            <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>'';
-              <h3 className='text-3xl font-bold mb-4'>Ready to Get Started?</h3>'';
-              <p className='text-xl mb-6 max-w-2xl mx-auto'>;
+''}} transition={{ delay: 0.4 }} className="mt-12 text-center">'';
+            <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">'';
+              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>'';
+              <p className="text-xl mb-6 max-w-2xl mx-auto">;
                 Our expert team is ready to help you implement the perfect solution;
                 for your business needs. Contact us today for a personalized consultation.'';
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>'';
-                <Button className='bg-white text-zion-purple hover:bg-zion-slate-light' onClick = {}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">'';
+                <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {}
 ' () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',_blank');
 ''}>'';
-                  <Users className='w-5 h-5 mr-2'/>;
+                  <Users className="w-5 h-5 mr-2"/>;
                   Get Expert Consultation'';
                 </Button>'';
-                <Button variant='outline' className='border-white text-white hover:bg-white hover:text-zion-purple' onClick = {}
+                <Button variant='outline' className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {}
 ' () => window.open('tel:+13024640950',_blank');
-                  <Zap className='w-5 h-5 mr-2`/>;
+                  <Zap className="w-5 h-5 mr-2`/>;
                   Call Now;
           </motion.div> { opacity: 0, y: 20}} animate = {}
-&apos;&apos;'&apos}} transition={{ delay: 0.4 }} className=&apos;mt-12 text-center&apos;>'&apos;&apos;'&apos;&apos;
+&apos;&apos;"&apos}} transition={{ delay: 0.4 }} className=&apos;mt-12 text-center&apos;>'&apos;&apos;'&apos;&apos;
             <div className=&apos;bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white&apos;>'&apos;&apos;'&apos;&apos;
               <h3 className=&apos;text-3xl font-bold mb-4&apos;>Ready to Get Started?&apos;</h3>&apos;&apos;'&apos;&apos;'
               <p className=&apos;text-xl mb-6 max-w-2xl mx-auto&apos;>
@@ -1133,21 +1136,21 @@ import { Button } from './ui/button'';'';'
 ' () => window.open(&apos;tel: +13024640950&apos,_blank&apos);
                   <Zap className=&apos;w-5 h-5 mr-2&quot;/>
                   Call Now&quot;
-''''}} transition={{ delay: 0.4 }} className='mt-12 text-center'>''''
-            <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>''''
-              <h3 className='text-3xl font-bold mb-4'>Ready to Get Started?</h3>''''
-              <p className='text-xl mb-6 max-w-2xl mx-auto'>
+''''}} transition={{ delay: 0.4 }} className="mt-12 text-center">''''
+            <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">''''
+              <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>''''
+              <p className="text-xl mb-6 max-w-2xl mx-auto">
                 Our expert team is ready to help you implement the perfect solution
                 for your business needs. Contact us today for a personalized consultation.''''
-              <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">''''
   () => window.open('mailto: kleber@ziontechgroup.com?subject=Service Recommendation Consultation', _blank')'
 '''}>'''''
-                  <Users className='w-5 h-5 mr-2'/>
+                  <Users className="w-5 h-5 mr-2"/>
                   Get Expert Consultation''''
                 </Button>''''
-                <Button variant='outline' className='border-white text-white hover: bg-white hover:text-zion-purple' onClick = {}
+                <Button variant='outline' className="border-white text-white hover: bg-white hover:text-zion-purple" onClick = {}
   () => window.open('tel: +13024640950', _blank')'
-                  <Zap className='w-5 h-5 mr-2"/>'"
+                  <Zap className="w-5 h-5 mr-2"/>""
                   Call Now
         </motion.div>)}
     </div>)}
@@ -1161,4 +1164,5 @@ import { motion }  from 'framer-motion;'
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react;
 import { Card, CardContent, CardHeader, CardTitle }  from './ui/card;'
 import { Button }  from './ui/button;'
+"
 "

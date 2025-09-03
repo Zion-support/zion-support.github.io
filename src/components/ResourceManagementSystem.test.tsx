@@ -12,4 +12,4 @@ export default function ResourceManagementSystem.test() {return (
       </div>
     </div>
   );
-}
+}"

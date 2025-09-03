@@ -5,7 +5,9 @@ describe('TermsOfService', () => {}; '; it('renders without crashing', () => {};
 '
   it('displays expected content', () => {
     render(<TermsOfService /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

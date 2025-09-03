@@ -5,7 +5,9 @@ describe('emerging - tech', () => {}; '; it('renders without crashing', () => {}
 '
   it('displays expected content', () => {
     render(<emerging -tech /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

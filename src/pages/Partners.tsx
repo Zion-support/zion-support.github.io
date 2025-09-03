@@ -6,8 +6,8 @@ import { ;
   Star, CheckCircle, ArrowRight, ExternalLink} from 'lucide-react';
 ;
 export default function Partners() {;
-  const partners = [;
-    {;
+  const partners = [
+  {;
       id: 1
       name: "Microsoft"
       category: "Technology Partner"
@@ -63,8 +63,8 @@ export default function Partners() {;
     }
   ]
 ;
-  const partnershipTypes = [;
-    {;
+  const partnershipTypes = [
+  {;
       title: "Technology Partners"
       description: "Leading technology companies providing cutting-edge solutions"
       icon: Building
@@ -99,7 +99,8 @@ export default function Partners() {;
     "Priority access to new features and updates";
   ]
 ;
-  return (;
+  return (
+    
     <>;
       <SEO ;
         title="Partners - Zion Tech Group | Strategic Technology Partnerships";
@@ -702,3 +703,4 @@ export default function Partners() {
 </>
   )
   )}
+"

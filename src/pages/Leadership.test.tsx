@@ -5,7 +5,9 @@ describe('Leadership', () => {}; '; it('renders without crashing', () => {}; ren
 '
   it('displays expected content', () => {
     render(<Leadership /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

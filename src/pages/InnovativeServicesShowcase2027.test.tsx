@@ -5,7 +5,9 @@ describe('InnovativeServicesShowcase2027', () => {}; '; it('renders without cras
 '
   it('displays expected content', () => {
     render(<InnovativeServicesShowcase2027 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

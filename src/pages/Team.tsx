@@ -23,8 +23,8 @@ import { ;
   Star, CheckCircle, TrendingUp, Target} from 'lucide-react';
 ;
 export default function Team() {;
-  const teamMembers = [;
-    {;
+  const teamMembers = [
+  {;
       id: 1
       name: "Dr. Sarah Chen"
       role: "Chief Executive Officer"
@@ -62,14 +62,15 @@ export default function Team() {;
     }
   ]
 ;
-  const stats = [;
-    { number: "50+", label: "Team Members", icon: Users },;
+  const stats = [
+  { number: "50+", label: "Team Members", icon: Users },;
     { number: "15+", label: "Countries", icon: Globe },;
     { number: "200+", label: "Years Combined Experience", icon: Award },;
     { number: "95%", label: "Employee Satisfaction", icon: Star }
   ]
 ;
-  return (;
+  return (
+    
     <>;
       <SEO ;
         title="Our Team - Zion Tech Group | World-Class Technology Experts";
@@ -500,3 +501,4 @@ export default function Team() {
 </>
   )
   )}
+"

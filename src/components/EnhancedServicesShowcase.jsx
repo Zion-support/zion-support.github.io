@@ -38,7 +38,8 @@ const EnhancedServicesShowcase = () => {}"});,"})
             transition: { duration: 0.5 }"});,"})
 """;,"});,"});
 };"""";,"});,"})
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""";,"});,"})
+    return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""";,"});,"})
       {/* Hero Section */}"""";,"});,"})
       <section className="py-20 px-4 sm: px-6 lg:px-8">"""","});,"})
         <div className="max-w-7xl mx-auto text-center">"""";,"});,"})
@@ -244,50 +245,50 @@ import { motion } from 'framer-motion'';'
       y: 0
       transition: { duration: 0.5 }}}
   return();
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white'>''{/* Hero Section */}'';
-      <section className='py-20 px-4 sm:px-6 lg:px-8'>'';
-        <div className='max-w-7xl mx-auto text-center'>'';
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">''{/* Hero Section */}'';
+      <section className="py-20 px-4 sm:px-6 lg:px-8">'';
+        <div className="max-w-7xl mx-auto text-center">'';
           <motion.h1'';
-            className='text-4xl md:text-6xl font-bold mb-6'';
+            className="text-4xl md:text-6xl font-bold mb-6"';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >'';
             Comprehensive'';
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>'{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'{' '}
               Technology Solutions;
             </span>;
           </motion.h1>'';
           <motion.p'';
-            className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto'';
+            className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"';
             transition={{ duration: 0.6, delay: 0.2 }}
           >;
             Discover our extensive portfolio of innovative micro SAAS services,;
             enterprise IT solutions, cutting-edge AI services, and emerging;
             technology solutions designed to transform your business.</motion.p> {/* Contact Information */}'';
           <motion.div'';
-            className='bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto'';
+            className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto"';
             transition={{ duration: 0.6, delay: 0.4 }}''>'';
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>'';
-              <div className='text-center'>'';
-                <div className='text-blue-400 font-semibold'>📱 Contact</div>'';
-                <div className='text-gray-300'>+1 302 464 0950</div>'';
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">'';
+              <div className="text-center">'';
+                <div className="text-blue-400 font-semibold">📱 Contact</div>'';
+                <div className="text-gray-300">+1 302 464 0950</div>'';
               </div>'';
-                <div className='text-blue-400 font-semibold'>✉️ Email</div>'';
-                <div className='text-gray-300'>kleber@ziontechgroup.com</div>'';
-                <div className='text-blue-400 font-semibold'>🌐 Website</div>'';
-                <div className='text-gray-300'>ziontechgroup.com</div>;
+                <div className="text-blue-400 font-semibold">✉️ Email</div>'';
+                <div className="text-gray-300">kleber@ziontechgroup.com</div>'';
+                <div className="text-blue-400 font-semibold">🌐 Website</div>'';
+                <div className="text-gray-300">ziontechgroup.com</div>;
               </div>;
           </motion.div> {/* Search and Filter */}'';
-            className='flex flex-col md:flex-row gap-4 justify-center items-center mb-12'';
+            className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12"';
             transition={{ duration: 0.6, delay: 0.6 }}
             <input'';
               type='text'';
               placeholder='Search services...'';
               value={searchTerm}'';
               onChange={e => setSearchTerm(e.target.value)}'';
-              className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80''/>'';
-            <div className='flex flex-wrap gap-2'> {categories.map(category => (;
+              className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80"'/>'';
+            <div className="flex flex-wrap gap-2"> {categories.map(category => (;
     hidden: { opacit,y: 0 },
     hidden: { opacity: 0 }, visible: {}
       opacity: 1,
@@ -312,18 +313,18 @@ import { motion } from 'framer-motion'';'
             className=&apos;text-xl text-gray-300 mb-8 max-w-4xl mx-auto&apos;&apos;
     hidden: { opacity: 0, y: 20 }, visible: {}
       y: 0, transition: { duration: 0.5 }}}
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white'>'''{/* Hero Section */}'''''
-      <section className='py-20 px-4 sm: px-6 lg:px-8'>''''
-        <div className='max-w-7xl mx-auto text-center'>''''
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">'''{/* Hero Section */}'''''
+      <section className="py-20 px-4 sm: px-6 lg:px-8">''''
+        <div className="max-w-7xl mx-auto text-center">''''
           <motion.h1'''';
-            className='text-4xl md: text-6xl font-bold mb-6''';
+            className="text-4xl md: text-6xl font-bold mb-6"'';
           >''''
             Comprehensive''''
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>'{' '}'
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'{' '}'
               Technology Solutions
           </motion.h1>''''
           <motion.p''''
-            className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto''';
+            className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"'';
           >
             Discover our extensive portfolio of innovative micro SAAS services,
             enterprise IT solutions, cutting-edge AI services, and emerging
@@ -356,26 +357,26 @@ import { motion } from 'framer-motion'';'
             technology solutions designed to transform your business.</motion.p>
           {/* Contact Information */}''''
           <motion.div'''';
-            className='bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto''';
+            className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto"'';
             transition={{ duration: 0.6, delay: 0.4 }}'''>'''''
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>''''
-              <div className='text-center'>''''
-                <div className='text-blue-400 font-semibold'>📱 Contact</div>''''
-                <div className='text-gray-300'>+1 302 464 0950</div>''''
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">''''
+              <div className="text-center">''''
+                <div className="text-blue-400 font-semibold">📱 Contact</div>''''
+                <div className="text-gray-300">+1 302 464 0950</div>''''
               </div>''''
-                <div className='text-blue-400 font-semibold'>✉️ Email</div>''''
-                <div className='text-gray-300'>kleber@ziontechgroup.com</div>''''
-                <div className='text-blue-400 font-semibold'>🌐 Website</div>''''
-                <div className='text-gray-300'>ziontechgroup.com</div>
+                <div className="text-blue-400 font-semibold">✉️ Email</div>''''
+                <div className="text-gray-300">kleber@ziontechgroup.com</div>''''
+                <div className="text-blue-400 font-semibold">🌐 Website</div>''''
+                <div className="text-gray-300">ziontechgroup.com</div>
           {/* Search and Filter */}''''
-            className='flex flex-col md: flex-row gap-4 justify-center items-center mb-12''';
+            className="flex flex-col md: flex-row gap-4 justify-center items-center mb-12"'';
             <input'''';
               type='text'''';'
               placeholder='Search services...''';
               value={searchTerm}''';'
               onChange={e => setSearchTerm(e.target.value)}''''
-              className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80''''/>'''''
-            <div className='flex flex-wrap gap-2'>
+              className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80"'''/>'''''
+            <div className="flex flex-wrap gap-2">
               {categories.map(category => (
                 <button;
                   key={category.id}
@@ -384,7 +385,7 @@ import { motion } from 'framer-motion'';'
                     selectedCategory === category.id';
                       ? 'bg-blue-600 border-blue-400 text-white''`;
                       : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'``}`}''>'';
-                  <span className='mr-2'>{category.icon}</span>;
+                  <span className="mr-2">{category.icon}</span>;
                     selectedCategory === category.id&apos;
                       ? &apos;bg-blue-600 border-blue-400 text-white&apos;&apos;'`;
                       : &apos;bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hove,r:border-white/40&apos;``}`}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
@@ -392,15 +393,15 @@ import { motion } from 'framer-motion'';'
                     selectedCategory === category.id'';
                       ? 'bg-blue-600 border-blue-400 text-white'''`
                       : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'``}`}'''>'''''
-                  <span className='mr-2'>{category.icon}</span>
+                  <span className="mr-2">{category.icon}</span>
                   {category.name}
                 </button>;
               ))}
           </motion.div>;
       </section>;
 ''{/* Services Grid */}'';
-        <div className='max-w-7xl mx-auto'>'';
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'';
+        <div className="max-w-7xl mx-auto">'';
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"';
             variants={containerVariants}'';
             initial='hidden'';
             whileInView='visible'';
@@ -409,35 +410,35 @@ import { motion } from 'framer-motion'';'
               <motion.div;
                 key={service.id}'';
                 variants={itemVariants}'';
-                className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group '>''{/* Service Header */}'';
-                <div className='text-center mb-6'>`;
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">''{/* Service Header */}'';
+                <div className="text-center mb-6">`;
                   <div``;
                     className={`text-6xl mb-4 group-hover:scale-110 transition-transform duration-300`}
                   >{service.icon}'';
-                  <h3 className='text-xl font-semibold text-white mb-2'> {service.name}'';
+                  <h3 className="text-xl font-semibold text-white mb-2"> {service.name}'';
                   </h3>'';
-                  <p className='text-sm text-blue-400 font-medium'>'{service.category.replace('-').toUpperCase()}
+                  <p className="text-sm text-blue-400 font-medium">'{service.category.replace('-').toUpperCase()}
                   </p>;
 ''{/* Tagline */}'';
-                <p className='text-gray-300 text-sm mb-4 text-center'> {service.tagline}
+                <p className="text-gray-300 text-sm mb-4 text-center"> {service.tagline}
 ''{/* Pricing */}'';
-                <div className='bg-white/5 rounded-lg p-4 mb-4'>'';
-                  <h4 className='text-sm font-semibold text-green-400 mb-2'>;
+                <div className="bg-white/5 rounded-lg p-4 mb-4">'';
+                  <h4 className="text-sm font-semibold text-green-400 mb-2">;
                     Pricing'';
                   </h4>'';
-                  <div className='space-y-1 text-xs text-gray-300'>;
+                  <div className="space-y-1 text-xs text-gray-300">;
                     <div>Monthly: {service.pricing.monthly}</div>;
                     <div>Yearly: {service.pricing.yearly}</div>;
                     <div>Setup: {service.pricing.setup}</div>;
 ''{/* Key Features */}'';
-                <div className='mb-4'>'';
-                  <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
+                <div className="mb-4">'';
+                  <h4 className="text-sm font-semibold text-blue-400 mb-2">;
                     Key Features'';
-                  <ul className='space-y-1'> {service.features.slice(0, 4).map((feature, idx) => (;
+                  <ul className="space-y-1"> {service.features.slice(0, 4).map((feature, idx) => (;
                       <li'';
                         key={idx}'';
-                        className='text-xs text-gray-300 flex items-center''>'';
-                        <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2'></span>;
+                        className="text-xs text-gray-300 flex items-center"'>'';
+                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>;
       </section>
 &apos;&apos;'{/* Services Grid */}&apos;&apos;'&apos;&apos;'
         <div className=&apos;max-w-7xl mx-auto&apos;>'&apos;&apos;''
@@ -447,9 +448,9 @@ import { motion } from 'framer-motion'';'
             initial=&apos;hidden&apos;&apos;'';
             whileInView=&apos;visible&apos;&apos;
 '''{/* Services Grid */}'''''
-        <div className='max-w-7xl mx-auto'>''''
+        <div className="max-w-7xl mx-auto">''''
           <motion.div''''
-            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'''';'
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"''';'
             variants={containerVariants}'''';
             initial='hidden'''';'
             whileInView='visible''';
@@ -475,22 +476,22 @@ import { motion } from 'framer-motion'';'
                   <div className=&apos;space-y-1 text-xs text-gray-300&apos;>&apos;'
                 key={service.id}''';'
                 variants={itemVariants}'''';
-                className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 group '>'''{/* Service Header */}'''''
-                <div className='text-center mb-6'>`
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover: border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">'''{/* Service Header */}'''''
+                <div className="text-center mb-6">`
                   >{service.icon}''''
-                  <h3 className='text-xl font-semibold text-white mb-2'>
+                  <h3 className="text-xl font-semibold text-white mb-2">
                     {service.name}''''
                   </h3>''''
-                  <p className='text-sm text-blue-400 font-medium'>'{service.category.replace('-').toUpperCase()}'
+                  <p className="text-sm text-blue-400 font-medium">'{service.category.replace('-').toUpperCase()}'
 '''{/* Tagline */}'''''
-                <p className='text-gray-300 text-sm mb-4 text-center'>
+                <p className="text-gray-300 text-sm mb-4 text-center">
                   {service.tagline}
 '''{/* Pricing */}'''''
-                <div className='bg-white/5 rounded-lg p-4 mb-4'>''''
-                  <h4 className='text-sm font-semibold text-green-400 mb-2'>
+                <div className="bg-white/5 rounded-lg p-4 mb-4">''''
+                  <h4 className="text-sm font-semibold text-green-400 mb-2">
                     Pricing''''
                   </h4>''''
-                  <div className='space-y-1 text-xs text-gray-300'>
+                  <div className="space-y-1 text-xs text-gray-300">
                     <div>Monthly: {service.pricing.monthly}</div>
                     <div>Yearly: {service.pricing.yearly}</div>
                     <div>Setup: {service.pricing.setup}</div>
@@ -505,23 +506,23 @@ import { motion } from 'framer-motion'';'
                         className=&apos;text-xs text-gray-300 flex items-center&apos;&apos;'&apos;>'&apos;&apos;'&apos;&apos;
                         <span className=&apos;w-1.5 h-1.5 bg-blue-400 rounded-full mr-2&apos;>&apos;'</span>
 '''{/* Key Features */}'''''
-                <div className='mb-4'>''''
-                  <h4 className='text-sm font-semibold text-blue-400 mb-2'>
+                <div className="mb-4">''''
+                  <h4 className="text-sm font-semibold text-blue-400 mb-2">
                     Key Features''''
-                  <ul className='space-y-1'>
+                  <ul className="space-y-1">
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <li''';'
                         key={idx}'''';
-                        className='text-xs text-gray-300 flex items-center''''>'''''
-                        <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2'></span>
+                        className="text-xs text-gray-300 flex items-center"'''>'''''
+                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>
                         {feature}
                       </li>;
                   </ul>;
 ''{/* Benefits */}'';
-                  <h4 className='text-sm font-semibold text-yellow-400 mb-2'>;
+                  <h4 className="text-sm font-semibold text-yellow-400 mb-2">;
                     Key Benefits'';
-                  <ul className='space-y-1'> {service.benefits.slice(0, 3).map((benefit, idx) => (;
-                        <span className='w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2'></span>;
+                  <ul className="space-y-1"> {service.benefits.slice(0, 3).map((benefit, idx) => (;
+                        <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></span>;
                   </ul>
 &apos;&apos;'{/* Benefits */}&apos;&apos;'&apos;&apos;'
                   <h4 className=&apos;text-sm font-semibold text-yellow-400 mb-2&apos;>
@@ -529,16 +530,16 @@ import { motion } from 'framer-motion'';'
                     {service.benefits.slice(0, 3).map((benefit, idx) => (&apos}
                         <span className=&apos;w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2&apos;>&apos;'</span>
 '''{/* Benefits */}'''''
-                  <h4 className='text-sm font-semibold text-yellow-400 mb-2'>
+                  <h4 className="text-sm font-semibold text-yellow-400 mb-2">
                     Key Benefits''''
                     {service.benefits.slice(0, 3).map((benefit, idx) => (
-                        <span className='w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2'></span>
+                        <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full mr-2"></span>
                         {benefit}
 ''{/* ROI and Setup */}'';
-                <div className='bg-white/5 rounded-lg p-3 mb-4'>'';
-                  <div className='text-xs text-gray-300'>''';
-                    <div className='mb-1'>''';
-                      <span className='text-green-400 font-medium'>ROI:</span>{' '}
+                <div className="bg-white/5 rounded-lg p-3 mb-4">'';
+                  <div className="text-xs text-gray-300">''';
+                    <div className="mb-1">''';
+                      <span className="text-green-400 font-medium">ROI:</span>{' '}
 &apos;&apos;'{/* ROI and Setup */}&apos;&apos;'&apos;&apos;'
                 <div className=&apos;bg-white/5 rounded-lg p-3 mb-4&apos;>'&apos;&apos;'&apos;&apos;
                   <div className=&apos;text-xs text-gray-300&apos;>'&apos;&apos;'&apos;&apos;'
@@ -565,22 +566,22 @@ import { motion } from 'framer-motion'';'
                         strokeWidth={2}&apos;&apos;'';
                         d=&apos;M9 5l7 7-7 7&apos;&apos;'/>&apos;&apos;
 '''{/* ROI and Setup */}'''''
-                <div className='bg-white/5 rounded-lg p-3 mb-4'>''''
-                  <div className='text-xs text-gray-300'>''''''
-                    <div className='mb-1'>''''''
-                      <span className='text-green-400 font-medium'>ROI: </span>{' '}
+                <div className="bg-white/5 rounded-lg p-3 mb-4">''''
+                  <div className="text-xs text-gray-300">''''''
+                    <div className="mb-1">''''''
+                      <span className="text-green-400 font-medium">ROI: </span>{' '}
                       {service.roi}
                     <div>''';
-                      <span className='text-blue-400 font-medium'>Setup:</span>{' '}
+                      <span className="text-blue-400 font-medium">Setup:</span>{' '}
                       {service.setupTime}
 ''{/* CTA */}'';
-                <div className='text-center'>;
+                <div className="text-center">;
                   <Link'';
                     to={service.link}'';
-                    className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm '>;
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm ">;
                     Learn More'';
                     <svg'';
-                      className='ml-2 h-4 w-4'';
+                      className="ml-2 h-4 w-4"';
                       fill='none'';
                       stroke='currentColor'';
                       viewBox='0 0 24 24''>'';
@@ -592,13 +593,13 @@ import { motion } from 'framer-motion'';'
                     </svg>;
                   </Link>;
 '''{/* CTA */}'''''
-                <div className='text-center'>
+                <div className="text-center">
                   <Link''''
                     to={service.link}'''';
-                    className='inline-flex items-center text-blue-400 hover: text-blue-300 transition-colors duration-300 text-sm '>
+                    className="inline-flex items-center text-blue-400 hover: text-blue-300 transition-colors duration-300 text-sm ">
                     Learn More''''
                     <svg'''';
-                      className='ml-2 h-4 w-4'''';'
+                      className="ml-2 h-4 w-4"''';'
                       fill='none'''';'
                       stroke='currentColor'''';'
                       viewBox='0 0 24 24'''>''''
@@ -611,52 +612,52 @@ import { motion } from 'framer-motion'';'
                   </Link>
           </motion.div> {/* No Results Message */}
           {filteredServices.length === 0 && ('';
-              className='text-center py-12'';
+              className="text-center py-12"';
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}''>'';
-              <p className='text-gray-400 text-lg'>;
+              <p className="text-gray-400 text-lg">;
                 No services found matching your criteria.</p>;
                 onClick={() => {}
                   setSelectedCategory('all')';
                   setSearchTerm(')';'}}'';
-                className='mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 '>;
+                className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 ">;
                 View All Services;
 ''{/* Enhanced CTA Section */}'';
-      <section className='py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50'>'';
-        <div className='max-w-4xl mx-auto text-center'>'';
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">'';
+        <div className="max-w-4xl mx-auto text-center">'';
           <motion.h2'';
-            className='text-3xl md:text-4xl font-bold text-white mb-6'';
+            className="text-3xl md:text-4xl font-bold text-white mb-6"';
             Ready to Transform Your Business?;
           </motion.h2>'';
-            className='text-xl text-gray-300 mb-8'';
+            className="text-xl text-gray-300 mb-8"';
           >';
             Let's discuss how our innovative services can help drive your;
             success and competitive advantage;
           </motion.p>;
 '';
-            className='flex flex-col sm:flex-row gap-4 justify-center mb-8'';
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-8"';
             transition={{ duration: 0.6, delay: 0.4 }}
               to='/contact'';
-              className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 '>;
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 ">;
               Contact Us Today;
             </Link>'';
             <a'';
               href='tel:+13024640950'';
-              className='inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 '>;
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 ">;
               Call: +1 302 464 0950;
             </a>;
-            className='bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto'';
+            className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto"';
             transition={{ duration: 0.6, delay: 0.6 }}''>'';
-            <h3 className='text-lg font-semibold text-white mb-4'>;
+            <h3 className="text-lg font-semibold text-white mb-4">;
               Why Choose Zion Tech Group?'';
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300'>'';
-              <div className='flex items-center'>'';
-                <span className='text-green-400 mr-2'>✓</span>;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">'';
+              <div className="flex items-center">'';
+                <span className="text-green-400 mr-2">✓</span>;
                 Expert AI & Technology Specialists'';
                 Proven ROI & Performance Metrics'';
                 24/7 Support & Maintenance'';
                 Custom Solutions & Integration;
-            className='mt-8 text-sm text-gray-400'' {filteredServices.length === 0 && (&apos;&apos;'&apos}&apos;
+            className="mt-8 text-sm text-gray-400"' {filteredServices.length === 0 && (&apos;&apos;'&apos}&apos;
               className=&apos;text-center py-12&apos;&apos;
               animate={{ opacity: 1 }}&apos;&apos;'>&apos;&apos;'&apos;&apos;'
               <p className=&apos;text-gray-400 text-lg&apos;>
@@ -665,13 +666,13 @@ import { motion } from 'framer-motion'';'
                   setSearchTerm(&apos;&apos)';&apos}}&apos;&apos;'';
                 className=&apos;mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 &apos;>
                 View All Services&apos;&apos {filteredServices.length === 0 && (''''
-              className='text-center py-12''';
+              className="text-center py-12"'';
               animate={{ opacity: 1 }}'''>'''''
-              <p className='text-gray-400 text-lg'>
+              <p className="text-gray-400 text-lg">
                 No services found matching your criteria.</p>
                   setSelectedCategory('all')';'
                   setSearchTerm('')';'}}''''
-                className='mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 '>
+                className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 ">
                 View All Services
               </button>
 &apos;&apos;'{/* Enhanced CTA Section */}&apos;&apos;'&apos;&apos;'
@@ -709,42 +710,42 @@ import { motion } from 'framer-motion'';'
                 Proven ROI & Performance Metrics&apos;&apos;'&apos;&apos;
                 24/7 Support & Maintenance&apos;&apos;'&apos;&apos;
 '''{/* Enhanced CTA Section */}'''''
-      <section className='py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50'>''''
-        <div className='max-w-4xl mx-auto text-center'>''''
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">''''
+        <div className="max-w-4xl mx-auto text-center">''''
           <motion.h2''''
-            className='text-3xl md: text-4xl font-bold text-white mb-6''';
+            className="text-3xl md: text-4xl font-bold text-white mb-6"'';
             Ready to Transform Your Business?
           </motion.h2>''''
           <motion.p'''';
-            className='text-xl text-gray-300 mb-8''';
+            className="text-xl text-gray-300 mb-8"'';
           >';'
             Let's discuss how our innovative services can help drive your'
             Let&apos;s discuss how our innovative services can help drive your;'
             success and competitive advantage
 ''''
-            className='flex flex-col sm: flex-row gap-4 justify-center mb-8''';
+            className="flex flex-col sm: flex-row gap-4 justify-center mb-8"'';
               to='/contact'''';'
-              className='inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 '>
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover: from-blue-700 hover:to-cyan-700 transition-all duration-300 ">
               Contact Us Today
             </Link>''''
             <a''''
               href='tel:+13024640950'''';'
-              className='inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300 '>
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-300 ">
               Call: +1 302 464 0950
-            className='bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto''';
+            className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto"'';
             transition={{ duration: 0.6, delay: 0.6 }}'''>'''''
-            <h3 className='text-lg font-semibold text-white mb-4'>
+            <h3 className="text-lg font-semibold text-white mb-4">
               Why Choose Zion Tech Group?''''
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300'>''''
-              <div className='flex items-center'>''''
-                <span className='text-green-400 mr-2'>✓</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">''''
+              <div className="flex items-center">''''
+                <span className="text-green-400 mr-2">✓</span>
                 Expert AI & Technology Specialists''''
                 Proven ROI & Performance Metrics''''
                 24/7 Support & Maintenance''''
                 Custom Solutions & Integration
             className=&apos;mt-8 text-sm text-gray-400&apos;&apos;
             initial={{ opacit,y: 0 }}
-            className='mt-8 text-sm text-gray-400''';
+            className="mt-8 text-sm text-gray-400"'';
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
             <p>Email: kleber@ziontechgroup.com</p>;
@@ -752,7 +753,7 @@ import { motion } from 'framer-motion'';'
             <p>';
               Website:{' '}'';
                 href='https://ziontechgroup.com'';
-                className='text-blue-400 hover:text-blue-300 '>;
+                className="text-blue-400 hover:text-blue-300 ">;
                 https://ziontechgroup.com;
             <p>Email: kleber@ziontechgroup.com</p>
             <p>Addres,s: 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -764,7 +765,7 @@ import { motion } from 'framer-motion'';'
             <p>''
               Website: {' '}''''
                 href='https://ziontechgroup.com'''';'
-                className='text-blue-400 hover: text-blue-300 '>
+                className="text-blue-400 hover: text-blue-300 ">
                 https://ziontechgroup.com
     </div>)}
 export default EnhancedServicesShowcase;
@@ -777,3 +778,4 @@ import React { useState }  from 'react;'
 import { Link }  from 'react-router-dom;'
 import { motion }  from 'framer-motion;'
 `
+"

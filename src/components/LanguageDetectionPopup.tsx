@@ -12,4 +12,4 @@ export default function LanguageDetectionPopup() {return (
       </div>
     </div>
   );
-}
+}"

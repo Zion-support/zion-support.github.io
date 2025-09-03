@@ -5,7 +5,9 @@ describe('Contact', () => {}; '; it('renders without crashing', () => {}; render
 '
   it('displays expected content', () => {
     render(<Contact /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

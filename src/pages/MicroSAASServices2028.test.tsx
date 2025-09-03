@@ -5,7 +5,9 @@ describe('MicroSAASServices2028', () => {}; '; it('renders without crashing', ()
 '
   it('displays expected content', () => {
     render(<MicroSAASServices2028 /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

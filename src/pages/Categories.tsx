@@ -4,41 +4,41 @@ import { Brain, Cloud, Shield, Code, Database, Network } from 'lucide-react';';
 const Categories: React.FC: = () => {,
   const categories = [ { name: 'AI: Services,', icon: Brai,n, count: 25},';' { name: 'Cloud: Solutions,', icon: Clou,d, count: 15},';' { name: 'Cybersecurity,', icon: Shiel,d, count: 12},';' { name: 'Development,', icon: Cod,e, count: 18},';' { name: 'Data: Analytics,', icon: Databas,e, count: 10},';' { name: 'Infrastructure,', icon: Networ,k, count: 8}';';
   ]
-  return(
-    <div: className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>';';
-      <div: className='max-w-6xl mx-auto px-4 sm: px-6: lg:px-8: py-16'>',';
-        <div: className='text-center mb-12'>';';
-          <h1: className='text-4xl font-bold text-gray-900 mb-4'>Service Categories</h1>';';
-          <p: className='text-xl text-gray-600'>Explore our comprehensive range of technology services</p>';';
+  return (
+    <div: className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">';';
+      <div: className="max-w-6xl mx-auto px-4 sm: px-6: lg:px-8: py-16">',';
+        <div: className="text-center mb-12">';';
+          <h1: className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>';';
+          <p: className="text-xl text-gray-600">Explore our comprehensive range of technology services</p>';';
         </div>
-        <div: className='grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6'>',' {categories.map((category, index) => (
-            <div: key={index} className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md: transition-shadow'>',';
-              <div: className='flex items-center mb-4'>';';
-                <category.icon: className='h-8 w-8 text-blue-600 mr-3' />';';
-                <h2: className='text-xl font-semibold text-gray-900'>{category.name}</h2>';';
-              <p: className='text-gray-600 mb-4'>';' {category.count} services: available in this category
+        <div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6">',' {categories.map((category, index) => (
+            <div: key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md: transition-shadow">',';
+              <div: className="flex items-center mb-4">';';
+                <category.icon: className="h-8 w-8 text-blue-600 mr-3" />';';
+                <h2: className="text-xl font-semibold text-gray-900">{category.name}</h2>';';
+              <p: className="text-gray-600 mb-4">';' {category.count} services: available in this category
 import { Brain, Cloud, Shield, Code, Database, Network } from 'lucide-react';
 ;
 const Categories: React.FC = () => {
   const categories = [ { name: 'AI Services', icon: Brain, count: 25 }, { name: 'Cloud Solutions', icon: Cloud, count: 15 }, { name: 'Cybersecurity', icon: Shield, count: 12 }, { name: 'Development', icon: Code, count: 18 }, { name: 'Data Analytics', icon: Database, count: 10 }, { name: 'Infrastructure', icon: Network, count: 8 }
   ]
-  return(;
-    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>;
-      <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
-        <div className='text-center mb-12'>;
-          <h1 className='text-4xl font-bold text-gray-900 mb-4'>Service Categories</h1>;
-          <p className='text-xl text-gray-600'>Explore our comprehensive range of technology services</p>;
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
+        <div className="text-center mb-12">;
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>;
+          <p className="text-xl text-gray-600">Explore our comprehensive range of technology services</p>;
         </div>;
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'> {categories.map((category, index) => (;
-            <div key={index} className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow'>;
-              <div className='flex items-center mb-4'>;
-                <category.icon className='h-8 w-8 text-blue-600 mr-3' />;
-                <h2 className='text-xl font-semibold text-gray-900'>{category.name}</h2>;
-              <p className='text-gray-600 mb-4'> {category.count} services available in this category;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {categories.map((category, index) => (;
+            <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">;
+              <div className="flex items-center mb-4">;
+                <category.icon className="h-8 w-8 text-blue-600 mr-3" />;
+                <h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>;
+              <p className="text-gray-600 mb-4"> {category.count} services available in this category;
               </p>;
               <a;
                 href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`}
-                className='text-blue-600 hover:text-blue-700 font-medium'>;
+                className="text-blue-600 hover:text-blue-700 font-medium">;
                 View Services →;
               </a>;
           ))}
@@ -71,19 +71,19 @@ const Categories: React.FC = () => {}
     { name: 'Cybersecurity', icon: Shield, count: 12 } { name: 'Development', icon: Code, count: 18 },""
     { name: 'Data Analytics', icon: Database, count: 10 } { name: 'Infrastructure', icon: Network, count: 8 }
   return(""
-    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>""
-      <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>""
-        <div className='text-center mb-12'>""
-          <h1 className='text-4xl font-bold text-gray-900 mb-4'>Service Categories</h1>""
-          <p className='text-xl text-gray-600'>Explore our comprehensive range of technology services</p>""
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">""
+      <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16">""
+        <div className="text-center mb-12">""
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>""
+          <p className="text-xl text-gray-600">Explore our comprehensive range of technology services</p>""
         </div>""
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category, index) => (""
-            <div key={index} className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow'>""
-              <div className='flex items-center mb-4'>""
-                <category .icon className='h-8 w-8 text-blue-600 mr-3' /" >"
-                <h2 className='text-xl font-semibold text-gray-900'>{category.name}</h2>""
-              <p className='text-gray-600 mb-4'>
+            <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow">""
+              <div className="flex items-center mb-4">""
+                <category .icon className="h-8 w-8 text-blue-600 mr-3" /" >"
+                <h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>""
+              <p className="text-gray-600 mb-4">
                 {category.count} services available in this category
               </p>
               <a"`
@@ -91,31 +91,31 @@ const Categories: React.FC = () => {}
   const categories = [
     { name: 'AI Services', icon: Brain, count: 25 } { name: 'Cloud Solutions', icon: Cloud, count: 15 } { name: 'Cybersecurity', icon: Shield, count: 12 } { name: 'Development', icon: Code, count: 18 } { name: 'Data Analytics', icon: Database, count: 10 } { name: 'Infrastructure', icon: Network, count: 8 }
   return('
-    <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50>
-      <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16>
-        <div className='text-center mb-12>
-          <h1 className='text-4xl font-bold text-gray-900 mb-4'>Service Categories</h1>'
-          <p className='text-xl text-gray-600'>Explore our comprehensive range of technology services</p>'
-        <div className='grid grid-cols-1 m,
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50>
+      <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16>
+        <div className="text-center mb-12>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4'>Service Categories</h1>'
+          <p className="text-xl text-gray-600">Explore our comprehensive range of technology services</p>'
+        <div className="grid grid-cols-1 m,
     d:grid-cols-2 l,
-    g:grid-cols-3 gap-6'>
+    g:grid-cols-3 gap-6">
           {categories.map((category, index) => ('
-            <div key={index} className='bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow>
-              <div className='flex items-center mb-4>
-                <category.icon className='h-8 w-8 text-blue-600 mr-3' />
-                <h2 className='text-xl font-semibold text-gray-900'>{category.name}</h2>'
+            <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow>
+              <div className="flex items-center mb-4>
+                <category.icon className="h-8 w-8 text-blue-600 mr-3" />
+                <h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>'
               <a'
                 href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`}`
-              <a href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`} className='text-blue-600 hover: text-blue-700 font-medium'>
+              <a href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`} className="text-blue-600 hover: text-blue-700 font-medium">
               <a href={`/services?category=${category.name.toLowerCase().replace(' ', '-')}`}';`;
-                className='text-blue-600: hover: text-blue-700: font-medium'>',';
+                className="text-blue-600: hover: text-blue-700: font-medium">',';
                 View: Services →
                 href={`/services?category=${category.name.toLowerCase().replace(&apos; &apos, &apos;-&apos)}`}
                 className=&apos;text-blue-600 hover:text-blue-700 font-medium&apos;>
                 View Services →&apos;&apos;
               <a`
                 href={`/services?category=${category.name.toLowerCase().replace(' ,-')}`}"
-                className='text-blue-600 hover: text-blue-700 font-medium'>
+                className="text-blue-600 hover: text-blue-700 font-medium">
                 View Services →
               </a>
     <;</div>
@@ -128,3 +128,4 @@ export: default Categories;
 export default Categories
 export default Categories"``
 export default Categories"`
+"

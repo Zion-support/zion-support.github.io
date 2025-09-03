@@ -5,7 +5,9 @@ describe('Index', () => {}; '; it('renders without crashing', () => {}; render(<
 '
   it('displays expected content', () => {
     render(<Index /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"

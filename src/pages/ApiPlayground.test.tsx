@@ -5,7 +5,9 @@ describe('ApiPlayground', () => {}; '; it('renders without crashing', () => {}; 
 '
   it('displays expected content', () => {
     render(<ApiPlayground /" >);
-    // Add more specific tests here, });, });
+    // Add more specific tests here
+  });
+  });
 "
 });
-'
+'"
