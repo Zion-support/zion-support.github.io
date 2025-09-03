@@ -1,443 +1,235 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Search, 
-  User, 
-  Bell, 
-  Settings, 
-  LogOut, 
-  ChevronDown,
-  Globe,
-  Sun,
-  Moon,
-  Zap,
-  Brain,
-  Shield,
-  Users,
-  HardDrive,
-  TrendingUp,
-  Building2,
-  FileText,
-  HelpCircle,
-  BarChart3,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Play,
-  ChevronLeft,
-  ChevronRight,
-  Rocket,
-  Target,
-  Handshake,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Lock,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  BarChart,
-  Users2,
-  Settings as SettingsIcon,
-  Palette
-} from 'lucide-react';
-import { MainNavigation } from './header/MainNavigation';
-import { cn } from '@/lib/utils';
-
-interface HeaderProps {
-  className?: string;
+import React from "react"
+;,"});,"})
 }
+export function Header() {const router = useRouter()
+}
+export function Header() {
 
-export function Header({ className }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-
+  const router = useRouter()
+}
+  const [mobileMenuOpen, setMobileMenuOpen] = useState()"
+  const [searchQuery, setSearchQuery] = useState("")
+}
+  const [searchQuery, setSearchQuery] = useState()
+}
+  const [scrolled, setScrolled] = useState(false)
+}
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-    // You can add theme switching logic here
-  };
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
-
-  return (
-    <header 
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled 
-          ? "bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-purple/30 shadow-lg" 
-          : "bg-transparent",
-        className
-      )}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <Zap className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-xl lg:text-2xl font-bold text-white group-hover:text-zion-cyan transition-colors">
-                Zion Tech Group
-              </h1>
-              <p className="text-xs lg:text-sm text-zion-slate-light group-hover:text-zion-cyan transition-colors">
-                Innovation Group
-              </p>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:block">
-            <MainNavigation />
-          </div>
-
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
-            
-            {/* Search Button */}
-            <button
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-              aria-label="Search"
-            >
-              <Search className="w-5 h-5" />
-            </button>
-
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
-
-            {/* Notifications */}
-            <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors relative">
-              <Bell className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full"></span>
-            </button>
-
-            {/* User Menu */}
-            <div className="relative">
-              <button
-                onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                className="flex items-center space-x-2 p-2 text-zion-slate-light hover:text-zion-cyan transition-colors rounded-lg hover:bg-zion-purple/20"
-              >
-                <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center">
-                  <User className="w-4 h-4 text-white" />
-                </div>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-
-              <AnimatePresence>
-                {isUserMenuOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute right-0 mt-2 w-48 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-xl shadow-zion-purple/20 z-50"
-                  >
-                    <div className="py-2">
-                      <Link
-                        to="/dashboard"
-                        className="flex items-center space-x-3 px-4 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 transition-colors"
-                        onClick={() => setIsUserMenuOpen(false)}
-                      >
-                        <BarChart3 className="w-4 h-4" />
-                        <span>Dashboard</span>
-                      </Link>
-                      <Link
-                        to="/profile"
-                        className="flex items-center space-x-3 px-4 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 transition-colors"
-                        onClick={() => setIsUserMenuOpen(false)}
-                      >
-                        <User className="w-4 h-4" />
-                        <span>Profile</span>
-                      </Link>
-                      <Link
-                        to="/settings"
-                        className="flex items-center space-x-3 px-4 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 transition-colors"
-                        onClick={() => setIsUserMenuOpen(false)}
-                      >
-                        <Settings className="w-4 h-4" />
-                        <span>Settings</span>
-                      </Link>
-                      <div className="border-t border-zion-purple/20 my-2"></div>
-                      <button
-                        className="flex items-center space-x-3 px-4 py-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 transition-colors w-full text-left"
-                        onClick={() => {
-                          // Add logout logic here
-                          setIsUserMenuOpen(false);
-                        }}
-                      >
-                        <LogOut className="w-4 h-4" />
-                        <span>Logout</span>
-                      </button>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleMobileMenu}
-              className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-              aria-label="Toggle mobile menu"
-            >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Search Bar */}
-      <AnimatePresence>
-        {isSearchOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="bg-zion-blue-dark border-t border-zion-purple/30"
-          >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                <input
-                  type="text"
-                  placeholder="Search services, solutions, or resources..."
-                  className="w-full pl-10 pr-4 py-3 bg-zion-blue-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                />
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-zion-blue-dark border-t border-zion-purple/30"
-          >
-            <div className="px-4 py-6 space-y-6">
-              
-              {/* Mobile Navigation Links */}
-              <div className="space-y-4">
-                <Link
-                  to="/"
-                  className="block text-white hover:text-zion-cyan transition-colors text-lg font-medium"
-                  onClick={closeMobileMenu}
-                >
-                  Home
-                </Link>
-                
-                <div className="space-y-2">
-                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Services</h3>
-                  <div className="pl-4 space-y-2">
-                    <Link
-                      to="/services"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      All Services
-                    </Link>
-                    <Link
-                      to="/ai-services"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      AI Services
-                    </Link>
-                    <Link
-                      to="/it-services"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      IT Services
-                    </Link>
-                    <Link
-                      to="/micro-saas"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Micro SaaS
-                    </Link>
-                    <Link
-                      to="/solutions"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Solutions
-                    </Link>
-                    <Link
-                      to="/services/ai-compliance-copilot"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      AI Compliance Copilot
-                    </Link>
-                    <Link
-                      to="/services/cloud-devops"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Cloud & DevOps
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Resources</h3>
-                  <div className="pl-4 space-y-2">
-                    <Link
-                      to="/case-studies"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Case Studies
-                    </Link>
-                    <Link
-                      to="/white-papers"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      White Papers
-                    </Link>
-                    <Link
-                      to="/webinars"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Webinars
-                    </Link>
-                    <Link
-                      to="/blog"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Blog
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Company</h3>
-                  <div className="pl-4 space-y-2">
-                    <Link
-                      to="/about"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      About Us
-                    </Link>
-                    <Link
-                      to="/team"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Our Team
-                    </Link>
-                    <Link
-                      to="/careers"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Careers
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Contact
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Support</h3>
-                  <div className="pl-4 space-y-2">
-                    <Link
-                      to="/help"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Help Center
-                    </Link>
-                    <Link
-                      to="/faq"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      FAQ
-                    </Link>
-                    <Link
-                      to="/pricing"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Pricing
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-zion-purple/20">
-                <Link
-                  to="/request-quote"
-                  className="block w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white text-center py-3 px-6 rounded-lg font-medium hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300"
-                  onClick={closeMobileMenu}
-                >
-                  Get Quote
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
-  );
+      setScrolled(window.scrollY > 50)
 }
+    },
+    window.addEventListener()
+}
+    return () => window.removeEventListener("scroll", handleScroll)
+}
+  }, [])
+}
+  const handleSearch = async (e: React.FormEvent) => {,
+    e.preventDefault(),
+    if (searchQuery.trim()) {"
+      router.push("/search?q="${encodeURIComponent(searchQuery.trim()),")}"
+  }
+
+  const navigation = []
+  ]
+
+  return ("
+    <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
+      scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">
+}"}>""
+      <div className = ""max-w-7xl" mx-auto px-4 sm:px-6 l,"
+    g: px-8">"
+  return (",
+    <header className="{"fixed" w-full z-50 transition-all duration-300 ${ scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm" }"}>"
+      <div className=""max-w-7xl" mx-auto px-4 sm: px-6 lg:px-8">"
+    <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
+  return (<header className="{"fixed" w-full z-50 transition-all duration-300 ${">
+      scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"}"}>"
+      <div className=""max-w-7xl" mx-auto px-4 sm: px-6 lg:px-8">"
+        <div className="flex justify-between items-center py-4">",
+          {/* comment */}""
+          <div className="flex items-center">""
+            <Link href="/" className="flex items-center space-x-2">""
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">""
+                <span className="text-white font-bold text-sm">Z</span>"
+              </div>""
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+            </Link>
+          </div>
+"
+          {/* comment */}""
+          <nav className="hidden md: flex items-center space-x-8">,
+          {/* comment */}"
+          <nav className="{"hidden" md: flex items-center space-x-8">
+            {navigation.map((item) => (",
+              <Link key="{item.name}" href="{item.href}" className="{"text-sm" font-medium transition-colors ${ router.pathname === item.href ? "text-blue-600" : "text-gray-700 hover: text-blue-600" }"} >"
+              <Link key="{item.name}""
+                href="{item.href}"""
+                href="{item.href}""
+                className=""}text-gray-700" hover: text-blue-600 transition-colors font-medium""
+                className="{"text-sm" font-medium transition-colors ${
+                  router.pathname === item.href""
+                    ? "text-blue-600""">
+                    : "text-gray-700 hover:text-blue-600""}"}
+
+              >
+                {item.name}
+
+              </Link>
+            ))}
+
+          </nav>
+          {/* comment */}""
+          <div className=""hidden" md: flex items-center space-x-4">"",
+            <form onSubmit="{handleSearch}" className="relative">"
+              <input""
+                type="text"""
+                placeholder="Search...""
+                value="{searchQuery}""
+                onChange="{(e)" => setSearchQuery(e.target.value)}""
+                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focu,
+    s:ring-blue-500 focu,"
+    s: border-transparent"" />"",
+              <input type="text" placeholder="Search..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)}"
+              <input type="text""
+                placeholder="Search...""
+                value="{searchQuery}""
+                onChange="{(e)" => setSearchQuery(e.target.value)}"
+                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent""
+                className="w-64 px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />"
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />
+            </form>"
+            <a href="tel:+15551234567" className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">"
+              <Phone className="w-4 h-4"  />"
+              <span className="text-sm">Call</span>
+            </a>"
+            <a href="mailto:info@ziontechgroup.com" className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">"
+              <Mail className="w-4 h-4"  />"
+              <span className="text-sm">Email</span>
+            </a>"
+                className="w-64 px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />"
+              <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"  />"
+            </form>""
+            <div className="flex items-center space-x-2 text-sm text-gray-600">""
+              <Phone className="h-4 w-4"  />
+              <span>+1 (555) 123-4567</span>
+            </div>
+,
+          {/* comment */}"
+          <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
+          <button onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}""
+            className="md: hidden p-2 rounded-md text-gray-600 hove,
+    r:text-gray-900 hove,"
+    r: bg-gray-100""
+          >""
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"",
+            onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}
+
+          >"
+            {mobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}"
+            onClick="{()" => setMobileMenuOpen(!mobileMenuOpen)}"
+            className="md: hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+          >",
+            {mobileMenuOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
+
+          </button>
+        </div>
+        {/* comment */}"
+        {mobileMenuOpen && (""
+          <div className="md: hidden">",
+        {/* comment */}, {mobileMenuOpen && ("
+          <div className="md: hidden">"
+            <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">
+              {navigation.map((item) => (",
+                <Link key="{item.name}" href="{item.href}" className="{"block" px-3 py-2 text-base font-medium rounded-md ${ router.pathname === item.href ? "text-blue-600 bg-blue-50" : "text-gray-700 hover: text-blue-600 hover:bg-gray-50" }"} onClick="{()" => setMobileMenuOpen(false)}
+
+        {/* comment */}
+
+        {mobileMenuOpen && ("
+          <div className=""md:hidden" py-4 border-t border-gray-200"}>"
+            <nav className="flex flex-col space-y-4">
+              {navigation.map((item) => ("
+                <Link key="{item.name}""
+                  href="{item.href}"""
+                  className="{"block" px-3 py-2 text-base font-medium rounded-md ${
+                    router.pathname === item.href""
+                      ? "text-blue-600 bg-blue-50"""
+                      : "text-gray-700 hover:text-blue-600 hove,"
+    r: bg-gray-50""}"}"
+                  onClick="{()" => setMobileMenuOpen(false)}
+
+                >
+                  {item.name}
+
+                </Link>
+              ))}""
+              <div className=""px-3" py-2">""
+                <form onSubmit="{handleSearch}" className="relative">"
+                  <input""
+                    type="text"""
+                    placeholder="Search...""
+                    value="{searchQuery}""
+                    onChange="{(e)" => setSearchQuery(e.target.value)}""
+                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focu,
+    s:ring-blue-500 focu,"
+    s: border-transparent"" />"",
+                  href="{item.href}""
+                  className="text-gray-700 hover: text-blue-600 transition-colors font-medium py-2"",
+                  onClick="{()" => setMobileMenuOpen(false)}"
+        {mobileMenuOpen && (<div className="md: hidden">",
+            <div className="{"px-2" pt-2 pb-3 space-y-1 bg-white border-t">, {navigation.map((item) => (<Link key="{item.name}""
+                  href="{item.href}""
+                  className="{"block" px-3 py-2 text-base font-medium rounded-md ${
+                    router.pathname === item.href"
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-700 hover: text-blue-600 hover:bg-gray-50"}"} onClick="{()" => setMobileMenuOpen(false)}
+
+                >
+                  {item.name}
+
+                </Link>
+              ))}
+
+            </nav>"
+            <div className=""mt-4" pt-4 border-t border-gray-200`}>"
+              <form onSubmit="{handleSearch}" className="relative mb-4">"
+                <input type="text""
+                  placeholder="Search...""
+                  value="{searchQuery}""
+                  onChange="{(e)" => setSearchQuery(e.target.value)}"
+                  className="w-full px-4 py-2 pl-10 pr-4 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />"
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />
+              </form>"
+              <div className="flex space-x-4">"
+                <a href="tel:+15551234567" className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">"
+                  <Phone className="w-4 h-4"  />"
+                  <span className="text-sm">Call</span>
+                </a>"
+                <a href="mailto:info@ziontechgroup.com" className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors">"
+                  <Mail className="w-4 h-4"  />"
+                  <span className="text-sm">Email</span>
+                </a>"
+              <div className="px-3 py-2">",
+                <form onSubmit="{handleSearch}" className="relative">"
+                  <input type="text" placeholder="Search..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)}"
+                    className="w-full px-4 py-2 pl-10 text-sm border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />"
+                  <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400"  />
+                </form>"
+              </div>""
+              <div className="px-3 py-2 flex items-center space-x-2 text-sm text-gray-600">""
+                <Phone className="h-4 w-4"  />
+                <span>+1 (555) 123-4567</span>
+              </div>
+          </div>,
+        )}
+
+      </div>
+    </header>
+  )
+}
+  );"
+}"
+"
+
+export default Component
