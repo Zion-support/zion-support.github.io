@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-09-03T15:29:37.501Z",
+  "dependencies": {
+    "dependencies": 79,
+    "devDependencies": 37,
+    "peerDependencies": 0
+  },
+  "outdated": [],
+  "vulnerabilities": [],
+  "recommendations": [
+    {
+      "type": "maintenance",
+      "message": "Run dependency updates regularly",
+      "priority": "low"
+    }
+  ]
+}

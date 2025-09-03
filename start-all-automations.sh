@@ -72,52 +72,52 @@ start_automations() {
     
     # AI Code Analyzer
     log "Starting AI Code Analyzer..."
-    pm2 start scripts/automation/ai-code-analyzer.cjs --name "ai-code-analyzer" --log logs/ai-code-analyzer.log --error logs/ai-code-analyzer-error.log --out logs/ai-code-analyzer-out.log
+    pm2 start scripts/automation/ai-code-analyzer.cjs --name "ai-code-analyzer" --log logs/ai-code-analyzer.log --error logs/ai-code-analyzer-error.log
     success "AI Code Analyzer started"
     
     # Smart Performance Optimizer
     log "Starting Smart Performance Optimizer..."
-    pm2 start scripts/automation/smart-performance-optimizer.cjs --name "smart-performance-optimizer" --log logs/smart-performance-optimizer.log --error logs/smart-performance-optimizer-error.log --out logs/smart-performance-optimizer-out.log
+    pm2 start scripts/automation/smart-performance-optimizer.cjs --name "smart-performance-optimizer" --log logs/smart-performance-optimizer.log --error logs/smart-performance-optimizer-error.log smart-performance-optimizer-out.log
     success "Smart Performance Optimizer started"
     
     # Intelligent Dependency Manager
     log "Starting Intelligent Dependency Manager..."
-    pm2 start scripts/automation/intelligent-dependency-manager.cjs --name "intelligent-dependency-manager" --log logs/intelligent-dependency-manager.log --error logs/intelligent-dependency-manager-error.log --out logs/intelligent-dependency-manager-out.log
+    pm2 start scripts/automation/intelligent-dependency-manager.cjs --name "intelligent-dependency-manager" --log logs/intelligent-dependency-manager.log --error logs/intelligent-dependency-manager-error.log intelligent-dependency-manager-out.log
     success "Intelligent Dependency Manager started"
     
     # Smart Deployment Automation
     log "Starting Smart Deployment Automation..."
-    pm2 start scripts/automation/smart-deployment-automation.cjs --name "smart-deployment-automation" --log logs/smart-deployment-automation.log --error logs/smart-deployment-automation-error.log --out logs/smart-deployment-automation-out.log
+    pm2 start scripts/automation/smart-deployment-automation.cjs --name "smart-deployment-automation" --log logs/smart-deployment-automation.log --error logs/smart-deployment-automation-error.log smart-deployment-automation-out.log
     success "Smart Deployment Automation started"
     
     # Enhanced Security Automation
     log "Starting Enhanced Security Automation..."
-    pm2 start scripts/automation/enhanced-security-automation.cjs --name "enhanced-security-automation" --log logs/enhanced-security-automation.log --error logs/enhanced-security-automation-error.log --out logs/enhanced-security-automation-out.log
+    pm2 start scripts/automation/enhanced-security-automation.cjs --name "enhanced-security-automation" --log logs/enhanced-security-automation.log --error logs/enhanced-security-automation-error.log enhanced-security-automation-out.log
     success "Enhanced Security Automation started"
     
     # Project Health Monitor
     log "Starting Project Health Monitor..."
-    pm2 start scripts/automation/project-health-monitor.cjs --name "project-health-monitor" --log logs/project-health-monitor.log --error logs/project-health-monitor-error.log --out logs/project-health-monitor-out.log
+    pm2 start scripts/automation/project-health-monitor.cjs --name "project-health-monitor" --log logs/project-health-monitor.log --error logs/project-health-monitor-error.log project-health-monitor-out.log
     success "Project Health Monitor started"
     
     # PM2 Sync Automation
     log "Starting PM2 Sync Automation..."
-    pm2 start scripts/automation/pm2-sync-automation.cjs --name "pm2-sync-automation" --log logs/pm2-sync-automation.log --error logs/pm2-sync-automation-error.log --out logs/pm2-sync-automation-out.log
+    pm2 start scripts/automation/pm2-sync-automation.cjs --name "pm2-sync-automation" --log logs/pm2-sync-automation.log --error logs/pm2-sync-automation-error.log pm2-sync-automation-out.log
     success "PM2 Sync Automation started"
     
     # Link Checker Automation
     log "Starting Link Checker Automation..."
-    pm2 start scripts/automation/link-checker-automation.cjs --name "link-checker-automation" --log logs/link-checker-automation.log --error logs/link-checker-automation-error.log --out logs/link-checker-automation-out.log
+    pm2 start scripts/automation/link-checker-automation.cjs --name "link-checker-automation" --log logs/link-checker-automation.log --error logs/link-checker-automation-error.log link-checker-automation-out.log
     success "Link Checker Automation started"
     
     # TypeScript Syntax Fixer
     log "Starting TypeScript Syntax Fixer..."
-    pm2 start scripts/automation/typescript-syntax-fixer.cjs --name "typescript-syntax-fixer" --log logs/typescript-syntax-fixer.log --error logs/typescript-syntax-fixer-error.log --out logs/typescript-syntax-fixer-out.log
+    pm2 start scripts/automation/typescript-syntax-fixer.cjs --name "typescript-syntax-fixer" --log logs/typescript-syntax-fixer.log --error logs/typescript-syntax-fixer-error.log typescript-syntax-fixer-out.log
     success "TypeScript Syntax Fixer started"
     
     # Console Error Fixer
     log "Starting Console Error Fixer..."
-    pm2 start scripts/automation/console-error-fixer.cjs --name "console-error-fixer" --log logs/console-error-fixer.log --error logs/console-error-fixer-error.log --out logs/console-error-fixer-out.log
+    pm2 start scripts/automation/console-error-fixer.cjs --name "console-error-fixer" --log logs/console-error-fixer.log --error logs/console-error-fixer-error.log console-error-fixer-out.log
     success "Console Error Fixer started"
     
     success "All automation processes started successfully!"

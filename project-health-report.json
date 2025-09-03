@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-09-03T15:29:42.061Z",
+  "overallHealth": "good",
+  "metrics": {
+    "structureScore": 100,
+    "buildStatus": "not-built",
+    "testFiles": 1129,
+    "documentationLength": 4274,
+    "totalIssues": 1,
+    "criticalIssues": 0,
+    "highIssues": 0,
+    "mediumIssues": 0
+  },
+  "issues": [
+    {
+      "type": "build",
+      "message": "Project has not been built recently",
+      "severity": "low"
+    }
+  ],
+  "recommendations": []
+}
