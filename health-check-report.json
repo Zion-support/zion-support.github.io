@@ -1,41 +1,43 @@
 {
-  "timestamp": "2025-09-03T16:00:25.296Z",
-  "overall": "healthy",
-  "checks": [
-    {
-      "name": "Node Modules",
+  "timestamp": "2025-09-03T17:30:00.369Z",
+  "checks": {
+    "packageJson": {
       "status": "pass",
-      "duration": "1ms",
-      "timestamp": "2025-09-03T16:00:25.289Z"
+      "message": "package.json found"
     },
-    {
-      "name": "Project Structure",
+    "nodeModules": {
       "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.289Z"
+      "message": "node_modules found"
     },
-    {
-      "name": "System Resources",
+    "buildDirectory": {
       "status": "pass",
-      "duration": "7ms",
-      "timestamp": "2025-09-03T16:00:25.296Z"
+      "message": ".next directory found"
     },
-    {
-      "name": "Dependencies",
+    "sourceFiles": {
       "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.296Z"
+      "message": "Source files found"
     },
-    {
-      "name": "Build System",
+    "diskSpace": {
       "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.296Z"
+      "message": "Disk space available"
+    },
+    "memoryUsage": {
+      "status": "pass",
+      "message": "Memory usage: 4MB",
+      "value": 4
+    },
+    "typeScriptConfig": {
+      "status": "pass",
+      "message": "tsconfig.json found"
+    },
+    "eslintConfig": {
+      "status": "pass",
+      "message": "ESLint configuration found"
     }
-  ],
+  },
   "summary": {
-    "total": 5,
-    "passed": 5,
+    "total": 8,
+    "passed": 8,
     "failed": 0,
     "warnings": 0
   }

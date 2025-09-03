@@ -1,55 +1,30 @@
 {
-  "timestamp": "2025-09-03T16:00:25.531Z",
-  "overall": "secure",
-  "checks": [
+  "timestamp": "2025-09-03T17:05:13.316Z",
+  "vulnerabilities": [],
+  "warnings": [
     {
-      "name": "Secrets Scan",
-      "status": "pass",
-      "duration": "1ms",
-      "timestamp": "2025-09-03T16:00:25.320Z"
+      "type": "gitignore",
+      "severity": "medium",
+      "message": "Consider adding to .gitignore: *.key, *.pem, secrets/"
     },
     {
-      "name": "Dependencies",
-      "status": "pass",
-      "duration": "210ms",
-      "timestamp": "2025-09-03T16:00:25.530Z"
-    },
+      "type": "audit",
+      "severity": "low",
+      "message": "Could not run npm audit - check network connection"
+    }
+  ],
+  "recommendations": [
     {
-      "name": "File Permissions",
-      "status": "pass",
-      "duration": "1ms",
-      "timestamp": "2025-09-03T16:00:25.531Z"
-    },
-    {
-      "name": "HTTPS Configuration",
-      "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.531Z"
-    },
-    {
-      "name": "Content Security Policy",
-      "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.531Z"
-    },
-    {
-      "name": "Environment Variables",
-      "status": "pass",
-      "duration": "0ms",
-      "timestamp": "2025-09-03T16:00:25.531Z"
+      "type": "configuration",
+      "severity": "medium",
+      "message": "Consider enabling HTTPS and security headers in next.config.js"
     }
   ],
   "summary": {
-    "total": 6,
-    "passed": 6,
-    "failed": 0,
-    "warnings": 0
-  },
-  "recommendations": [
-    "Keep dependencies updated regularly",
-    "Use environment variables for sensitive data",
-    "Implement Content Security Policy",
-    "Enable HTTPS in production",
-    "Review file permissions regularly"
-  ]
+    "critical": 0,
+    "high": 0,
+    "medium": 2,
+    "low": 1,
+    "info": 0
+  }
 }
