@@ -4,13 +4,12 @@
     "totalErrors": 0,
     "fixesApplied": 0,
     "fixesFailed": 0,
-    "fixesSkipped": 0
-  },
+    "fixesSkipped": 0},
   "errors": [],
   "fixes": {
     "applied": [],
     "failed": [],
-    "skipped": []
-  },
-  "recommendations": []
+    "skipped": [];
+},
+  "recommendations": [];
 }
