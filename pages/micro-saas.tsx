@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain } from 'lucide-react';
+import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar } from 'lucide-react';
 
 export default function MicroSaaS() {
   const contact = {
@@ -868,6 +868,226 @@ export default function MicroSaaS() {
         'Improved user onboarding'
       ],
       category: 'Identity Management'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Email Responder Pro',
+      description: 'Intelligent email automation that reads, categorizes, and responds to emails with human-like accuracy and context awareness.',
+      features: [
+        'Natural language processing for email understanding',
+        'Context-aware response generation',
+        'Email categorization and priority scoring',
+        'Multi-language support and translation',
+        'Integration with CRM and business systems',
+        'Learning from user feedback and corrections'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '85% reduction in email response time',
+        '24/7 automated email handling',
+        'Improved customer satisfaction',
+        'Reduced manual email workload'
+      ],
+      category: 'Communication Automation'
+    },
+    {
+      icon: TrendingUp,
+      name: 'Mobile-First Survey & Feedback Platform',
+      description: 'Advanced mobile-optimized survey platform with real-time analytics, gamification, and multi-channel distribution.',
+      features: [
+        'Mobile-first responsive survey design',
+        'Real-time analytics and reporting',
+        'Gamification and engagement features',
+        'Multi-channel distribution (SMS, email, social)',
+        'Advanced question types and logic',
+        'Integration with business intelligence tools'
+      ],
+      pricing: '$149 – $999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '60% higher response rates',
+        'Real-time customer insights',
+        'Improved data collection efficiency',
+        'Enhanced customer engagement'
+      ],
+      category: 'Customer Research'
+    },
+    {
+      icon: Calendar,
+      name: 'Event Management & Ticketing Platform',
+      description: 'Comprehensive event management solution with ticketing, attendee management, and post-event analytics.',
+      features: [
+        'Event creation and management tools',
+        'Online ticketing and payment processing',
+        'Attendee registration and check-in',
+        'Event marketing and promotion tools',
+        'Real-time event analytics',
+        'Post-event feedback and reporting'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Streamlined event organization',
+        'Automated ticketing and payments',
+        'Enhanced attendee experience',
+        'Data-driven event optimization'
+      ],
+      category: 'Event Management'
+    },
+    {
+      icon: FileText,
+      name: 'AI Content Creation & SEO Suite',
+      description: 'Comprehensive AI-powered content creation platform with SEO optimization, plagiarism detection, and performance tracking.',
+      features: [
+        'AI-powered content generation',
+        'SEO optimization and keyword research',
+        'Plagiarism detection and originality scoring',
+        'Content performance tracking',
+        'Multi-format content creation (blogs, social, ads)',
+        'Brand voice consistency maintenance'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '10x faster content production',
+        '40% improvement in SEO rankings',
+        'Consistent brand messaging',
+        'Reduced content creation costs'
+      ],
+      category: 'Content Marketing'
+    },
+    {
+      icon: Shield,
+      name: 'Automated Email Follow-Up System',
+      description: 'Intelligent email follow-up automation with behavioral triggers, personalization, and conversion optimization.',
+      features: [
+        'Behavioral trigger automation',
+        'Personalized follow-up sequences',
+        'A/B testing for email optimization',
+        'Lead scoring and qualification',
+        'CRM integration and synchronization',
+        'Conversion tracking and analytics'
+      ],
+      pricing: '$99 – $699/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '45% increase in lead conversion',
+        'Automated nurturing sequences',
+        'Improved sales pipeline efficiency',
+        'Reduced manual follow-up work'
+      ],
+      category: 'Sales Automation'
+    },
+    {
+      icon: Users,
+      name: 'Customer Support & Helpdesk Platform',
+      description: 'Advanced customer support platform with AI chatbots, ticket management, and knowledge base automation.',
+      features: [
+        'AI-powered chatbot integration',
+        'Multi-channel ticket management',
+        'Knowledge base creation and management',
+        'Live chat and video support',
+        'Customer satisfaction tracking',
+        'Performance analytics and reporting'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '70% faster ticket resolution',
+        '24/7 automated support',
+        'Improved customer satisfaction',
+        'Reduced support team workload'
+      ],
+      category: 'Customer Support'
+    },
+    {
+      icon: BarChart3,
+      name: 'Competitor Intelligence & Price Monitor',
+      description: 'Real-time competitor monitoring with price tracking, feature analysis, and market intelligence reporting.',
+      features: [
+        'Real-time price monitoring',
+        'Competitor feature analysis',
+        'Market trend identification',
+        'Price alert notifications',
+        'Competitive intelligence reports',
+        'Strategic recommendations engine'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Competitive advantage insights',
+        'Automated market monitoring',
+        'Data-driven pricing strategies',
+        'Early market trend detection'
+      ],
+      category: 'Market Intelligence'
+    },
+    {
+      icon: Zap,
+      name: 'Smart Inventory & Supply Chain Optimizer',
+      description: 'AI-driven inventory management with demand forecasting, supplier optimization, and automated reordering.',
+      features: [
+        'Predictive demand forecasting',
+        'Automated reorder point calculation',
+        'Supplier performance monitoring',
+        'Multi-location inventory tracking',
+        'Cost optimization recommendations',
+        'Supply chain risk assessment'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '4–5 weeks',
+      benefits: [
+        '30% reduction in inventory costs',
+        'Automated supply chain optimization',
+        'Reduced stockouts and overstock',
+        'Improved supplier relationships'
+      ],
+      category: 'Supply Chain Management'
+    },
+    {
+      icon: Globe,
+      name: 'Multi-Language Website Localization',
+      description: 'AI-powered website translation and localization with cultural adaptation and SEO optimization.',
+      features: [
+        'Real-time website translation',
+        'Cultural adaptation and localization',
+        'SEO-optimized multilingual content',
+        'Automatic language detection',
+        'Multi-currency payment support',
+        'Local market optimization'
+      ],
+      pricing: '$249 – $1,599/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '400% increase in global reach',
+        'Automated content localization',
+        'Improved international SEO',
+        'Reduced translation costs'
+      ],
+      category: 'Internationalization'
+    },
+    {
+      icon: Code,
+      name: 'API Development & Management Platform',
+      description: 'Comprehensive API development platform with testing, documentation, monitoring, and monetization tools.',
+      features: [
+        'API design and development tools',
+        'Automated testing and validation',
+        'Interactive API documentation',
+        'Performance monitoring and analytics',
+        'Rate limiting and security features',
+        'API monetization and billing'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        'Faster API development cycles',
+        'Improved API reliability',
+        'Enhanced developer experience',
+        'Automated API monetization'
+      ],
+      category: 'API Development'
     }
   ];
 

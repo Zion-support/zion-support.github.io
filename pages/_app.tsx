@@ -7,6 +7,7 @@ import '../styles/globals.css';
 
 function Header(): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   return (
     <header className="header">
@@ -17,9 +18,26 @@ function Header(): any {
         
         <div className="header-nav-links">
           <Link href="/" className="header-nav-link">Home</Link>
-          <Link href="/services" className="header-nav-link">All Services</Link>
-          <Link href="/services-catalog" className="header-nav-link">Catalog</Link>
+          
+          <div 
+            className="header-nav-dropdown"
+            onMouseEnter={() => setServicesDropdownOpen(true)}
+            onMouseLeave={() => setServicesDropdownOpen(false)}
+          >
+            <span className="header-nav-link dropdown-trigger">
+              Services <span className="dropdown-arrow">▼</span>
+            </span>
+            <div className={`dropdown-menu ${servicesDropdownOpen ? 'open' : ''}`}>
+              <Link href="/services" className="dropdown-item">All Services</Link>
+              <Link href="/micro-saas" className="dropdown-item">Micro SaaS Products</Link>
+              <Link href="/ai-services" className="dropdown-item">AI Services</Link>
+              <Link href="/it-services" className="dropdown-item">IT Services</Link>
+              <Link href="/services-catalog" className="dropdown-item">Services Catalog</Link>
+            </div>
+          </div>
+          
           <Link href="/pricing" className="header-nav-link">Pricing</Link>
+          <Link href="/about" className="header-nav-link">About</Link>
           <Link href="/contact" className="header-nav-cta">Contact</Link>
         </div>
 
@@ -35,9 +53,20 @@ function Header(): any {
       
       <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
-        <Link href="/services-catalog" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+        <div className="mobile-dropdown">
+          <span className="header-nav-link mobile-dropdown-trigger" onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}>
+            Services <span className="dropdown-arrow">▼</span>
+          </span>
+          <div className={`mobile-dropdown-menu ${servicesDropdownOpen ? 'open' : ''}`}>
+            <Link href="/services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+            <Link href="/micro-saas" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Micro SaaS Products</Link>
+            <Link href="/ai-services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>AI Services</Link>
+            <Link href="/it-services" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>IT Services</Link>
+            <Link href="/services-catalog" className="dropdown-item" onClick={() => setMobileMenuOpen(false)}>Services Catalog</Link>
+          </div>
+        </div>
         <Link href="/pricing" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
         <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
       </div>
     </header>
@@ -53,56 +82,79 @@ function Footer(): any {
           <div className="footer-logo">Zion Tech Group</div>
           <p>
             Leading provider of innovative micro SaaS products, AI services, and IT solutions. 
-            Empowering businesses with cutting-edge technology.
+            Empowering businesses with cutting-edge technology and digital transformation.
           </p>
           <div className="text-sm space-y-2">
             <div>📞 <a href="tel:+13024640950" className="text-blue-300">+1 302 464 0950</a></div>
             <div>✉️ <a href="mailto:kleber@ziontechgroup.com" className="text-blue-300">kleber@ziontechgroup.com</a></div>
             <div>📍 364 E Main St STE 1008, Middletown DE 19709</div>
+            <div>🌐 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-300">ziontechgroup.com</a></div>
           </div>
         </div>
 
         {/* Services */}
         <div className="footer-section">
-          <h3>Services</h3>
+          <h3>Our Services</h3>
           <Link href="/services">All Services</Link>
+          <Link href="/micro-saas">Micro SaaS Products</Link>
+          <Link href="/ai-services">AI Services</Link>
+          <Link href="/it-services">IT Services</Link>
           <Link href="/services-catalog">Services Catalog</Link>
           <Link href="/pricing">Pricing</Link>
           <div className="text-sm mt-2 space-y-1">
-            <div>• 39+ Micro SaaS Products</div>
-            <div>• 28+ AI Services</div>
-            <div>• 35+ IT Solutions</div>
+            <div>• 50+ Micro SaaS Products</div>
+            <div>• 40+ AI Services</div>
+            <div>• 45+ IT Solutions</div>
           </div>
         </div>
 
-        {/* Quick Links */}
+        {/* Company */}
         <div className="footer-section">
-          <h3>Quick Links</h3>
+          <h3>Company</h3>
           <Link href="/">Home</Link>
+          <Link href="/about">About Us</Link>
           <Link href="/contact">Contact Us</Link>
+          <Link href="/faq">FAQ</Link>
+          <a href="https://ziontechgroup.com/blog" target="_blank" rel="noopener noreferrer">Blog</a>
+          <a href="https://ziontechgroup.com/careers" target="_blank" rel="noopener noreferrer">Careers</a>
+        </div>
+
+        {/* Legal & Support */}
+        <div className="footer-section">
+          <h3>Legal & Support</h3>
           <Link href="/privacy">Privacy Policy</Link>
           <Link href="/terms">Terms of Service</Link>
-          <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">Main Website</a>
+          <Link href="/contact">Support</Link>
+          <a href="https://ziontechgroup.com/security" target="_blank" rel="noopener noreferrer">Security</a>
+          <a href="https://ziontechgroup.com/compliance" target="_blank" rel="noopener noreferrer">Compliance</a>
         </div>
 
         {/* Contact CTA */}
         <div className="footer-section">
-          <h3>Get Started</h3>
+          <h3>Get Started Today</h3>
           <p className="text-sm">
-            Ready to transform your business with our innovative solutions?
+            Ready to transform your business with our innovative solutions? 
+            Get a free consultation and quote.
           </p>
           <div className="space-y-2">
-            <Link href="/contact" className="footer-cta-button">Request Quote</Link>
-            <a href="tel:+13024640950" className="footer-cta-secondary">Call Now</a>
+            <Link href="/contact" className="footer-cta-button">Request Free Quote</Link>
+            <a href="tel:+13024640950" className="footer-cta-secondary">Call +1 302 464 0950</a>
+            <a href="mailto:kleber@ziontechgroup.com" className="footer-cta-secondary">Email Us</a>
           </div>
         </div>
       </div>
       
       <div className="footer-bottom">
-        <small>
-          © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <a href="/privacy">Privacy Policy</a>
-        </small>
+        <div className="footer-bottom-content">
+          <small>
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          </small>
+          <div className="footer-bottom-links">
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+            <Link href="/contact">Contact</Link>
+          </div>
+        </div>
       </div>
     </footer>
   );

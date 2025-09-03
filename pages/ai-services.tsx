@@ -626,6 +626,204 @@ export default function AIServices() {
         'Automated compliance checking',
         'Better risk identification'
       ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Email Intelligence & Automation',
+      description: 'Advanced email AI that understands context, sentiment, and intent to provide intelligent responses and automation.',
+      features: [
+        'Context-aware email understanding',
+        'Sentiment analysis and mood detection',
+        'Intent classification and routing',
+        'Automated response generation',
+        'Email thread analysis and summarization',
+        'Integration with business workflows'
+      ],
+      pricing: '$1,500 – $8,000 setup',
+      perUnit: '$0.05 – $0.25 per email',
+      timeline: '4–6 weeks',
+      benefits: [
+        '90% reduction in email response time',
+        'Improved email communication quality',
+        'Automated email workflow management',
+        'Enhanced customer experience'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Driven Market Research & Competitive Intelligence',
+      description: 'Comprehensive market research automation with competitor analysis, trend prediction, and strategic insights.',
+      features: [
+        'Automated market data collection',
+        'Competitor analysis and benchmarking',
+        'Trend prediction and forecasting',
+        'Customer sentiment analysis',
+        'Market opportunity identification',
+        'Strategic recommendation engine'
+      ],
+      pricing: '$3,000 – $15,000/month',
+      perUnit: 'Custom pricing based on data volume',
+      timeline: '6–10 weeks',
+      benefits: [
+        'Real-time market intelligence',
+        'Data-driven strategic decisions',
+        'Competitive advantage insights',
+        'Automated market monitoring'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI Content Moderation & Safety Platform',
+      description: 'Advanced content moderation system with AI-powered detection of harmful content, spam, and policy violations.',
+      features: [
+        'Multi-modal content analysis (text, image, video)',
+        'Real-time content moderation',
+        'Custom policy enforcement',
+        'Context-aware decision making',
+        'Human-in-the-loop review system',
+        'Compliance and audit reporting'
+      ],
+      pricing: '$2,000 – $12,000/month',
+      perUnit: '$0.01 – $0.10 per content item',
+      timeline: '4–8 weeks',
+      benefits: [
+        '99.5% accuracy in content detection',
+        'Automated content safety enforcement',
+        'Reduced manual moderation costs',
+        'Improved platform safety'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Quality Control & Inspection',
+      description: 'Computer vision-based quality control system for manufacturing, retail, and service industries.',
+      features: [
+        'Real-time defect detection',
+        'Quality scoring and classification',
+        'Automated inspection workflows',
+        'Predictive quality analytics',
+        'Integration with production systems',
+        'Custom quality standards configuration'
+      ],
+      pricing: '$5,000 – $30,000 setup',
+      perUnit: '$0.02 – $0.15 per inspection',
+      timeline: '6–12 weeks',
+      benefits: [
+        '95% reduction in quality defects',
+        'Automated quality assurance',
+        'Improved production efficiency',
+        'Reduced inspection costs'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI Voice Analytics & Speech Intelligence',
+      description: 'Advanced voice analysis platform for customer service, sales, and communication optimization.',
+      features: [
+        'Real-time speech-to-text conversion',
+        'Sentiment analysis from voice',
+        'Speaker identification and verification',
+        'Conversation analytics and insights',
+        'Voice biometric authentication',
+        'Multi-language support'
+      ],
+      pricing: '$2,500 – $15,000 setup',
+      perUnit: '$0.10 – $0.50 per minute',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Enhanced customer service quality',
+        'Automated conversation analysis',
+        'Improved sales performance tracking',
+        'Voice-based security authentication'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI Data Pipeline & ETL Automation',
+      description: 'Intelligent data processing platform with automated ETL, data quality assurance, and real-time analytics.',
+      features: [
+        'Automated data extraction and transformation',
+        'Data quality validation and cleansing',
+        'Real-time data processing',
+        'Intelligent data mapping',
+        'Anomaly detection and alerting',
+        'Integration with cloud platforms'
+      ],
+      pricing: '$3,000 – $20,000/month',
+      perUnit: 'Custom pricing based on data volume',
+      timeline: '6–12 weeks',
+      benefits: [
+        '90% reduction in data processing time',
+        'Automated data quality assurance',
+        'Real-time data insights',
+        'Reduced data management costs'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI Cybersecurity & Threat Detection',
+      description: 'Advanced AI-powered cybersecurity platform with real-time threat detection, behavioral analysis, and automated response.',
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection',
+        'Automated incident response',
+        'Predictive security analytics',
+        'Zero-day vulnerability detection',
+        'Security orchestration and automation'
+      ],
+      pricing: '$5,000 – $50,000/month',
+      perUnit: 'Custom pricing based on infrastructure',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.9% threat detection accuracy',
+        'Automated security response',
+        'Reduced security incidents',
+        'Proactive threat prevention'
+      ]
+    },
+    {
+      icon: Code,
+      name: 'AI Code Generation & Development Assistant',
+      description: 'Intelligent code generation platform with automated testing, documentation, and deployment assistance.',
+      features: [
+        'AI-powered code generation',
+        'Automated test case creation',
+        'Code documentation generation',
+        'Bug detection and fixing suggestions',
+        'Performance optimization recommendations',
+        'Integration with development tools'
+      ],
+      pricing: '$1,000 – $8,000/month',
+      perUnit: '$0.50 – $5.00 per code generation',
+      timeline: '4–8 weeks',
+      benefits: [
+        '70% faster development cycles',
+        'Automated code quality assurance',
+        'Reduced development costs',
+        'Improved code reliability'
+      ]
+    },
+    {
+      icon: Search,
+      name: 'AI-Powered Search & Recommendation Engine',
+      description: 'Intelligent search and recommendation system with personalization, semantic understanding, and real-time optimization.',
+      features: [
+        'Semantic search and understanding',
+        'Personalized recommendations',
+        'Real-time search optimization',
+        'Multi-modal search capabilities',
+        'A/B testing for recommendations',
+        'Performance analytics and insights'
+      ],
+      pricing: '$2,000 – $15,000/month',
+      perUnit: '$0.01 – $0.10 per search/impression',
+      timeline: '6–10 weeks',
+      benefits: [
+        '40% improvement in search relevance',
+        'Increased user engagement',
+        'Automated recommendation optimization',
+        'Enhanced user experience'
+      ]
     }
   ];
 
