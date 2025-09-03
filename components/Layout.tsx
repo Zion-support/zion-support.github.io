@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import EnhancedNavigation from './layout/EnhancedNavigation';
-import EnhancedFooter from './layout/EnhancedFooter';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -52,11 +52,11 @@ const Layout: React.FC<LayoutProps> = ({
       </Head>
       
       <div className="min-h-screen flex flex-col">
-        <EnhancedNavigation />
+        <Navigation />
         <main className="flex-grow">
           {children}
         </main>
-        <EnhancedFooter />
+        <Footer />
       </div>
     </>
   );

@@ -1,36 +1,36 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import {;
-  Brain,;
-  Code,;
-  Cloud,;
-  Shield,;
-  Network,;
-  Server,;
-  BarChart3,;
-  Settings,;
-  Zap,;
-  Monitor,;
-  Search,;
-  MessageSquare,;
-  CheckCircle,;
-  ArrowRight,;
-  DollarSign;,
+import {
+  Brain,
+  Code,
+  Cloud,
+  Shield,
+  Network,
+  Server,
+  BarChart3,
+  Settings,
+  Zap,
+  Monitor,
+  Search,
+  MessageSquare,
+  CheckCircle,
+  ArrowRight,
+  DollarSign
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-;
-export default function AdditionalServices() {;
+
+export default function AdditionalServices() {
   const title = 'Expanded Services Catalog — Zion Tech Group';
   const description = 'New micro SaaS, IT, and AI solutions added to our production-ready catalog with transparent pricing and fast delivery.';
-;
-  const sections = [;
-    {;
-      id: 'micro-saas',;
-      title: 'Micro SaaS — New Products',;
-      icon: Code,;
-      color: 'orange',;
-      items: [;
+
+  const sections = [
+    {
+      id: 'micro-saas',
+      title: 'Micro SaaS — New Products',
+      icon: Code,
+      color: 'orange',
+      items: [
         {;
           name: 'Cloud Cost Guard (FinOps Assistant)',;
           blurb: 'Automated cloud cost anomaly detection, budget alerts, rightsizing, and savings recommendations.',;
