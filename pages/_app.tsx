@@ -101,7 +101,7 @@ function Footer(): any {
       <div className="footer-bottom">
         <small>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <a href="/privacy">Privacy Policy</a>
+          <Link href="/privacy">Privacy Policy</Link>
         </small>
       </div>
     </footer>
