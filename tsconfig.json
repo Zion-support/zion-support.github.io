@@ -23,8 +23,6 @@
   "include": [
     "next-env.d.ts",
     "pages/**/*",
-    "components/**/*.ts",
-    "components/**/*.tsx",
     "data/services.ts",
     "styles/**/*",
     "types/**/*",
