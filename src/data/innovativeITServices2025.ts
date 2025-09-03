@@ -1,5 +1,9 @@
-export interface InnovativeITService {
+<<<<<<< HEAD
+export interface InnovativeITService {;
   id: string;
+=======
+export interface InnovativeITService {id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -17,6 +21,10 @@ export interface InnovativeITService {
    marketPrice: string;
    roi: string;
    innovationLevel: string;
-   contactInfo: { phone: string;
-   email: string;
+   contactInfo: {  phone: string;
+   email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [;
+=======
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string } export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [;
+>>>>>>> main

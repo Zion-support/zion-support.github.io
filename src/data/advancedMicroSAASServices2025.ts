@@ -1,5 +1,13 @@
-export interface AdvancedMicroSaasService {
+<<<<<<< HEAD
+export interface AdvancedMicroSaasService {;
+=======
+<<<<<<< HEAD
+export interface AdvancedMicroSaasService {id: string;
+=======
+ export interface AdvancedMicroSaasService {
+>>>>>>> main
   id: string;
+>>>>>>> main
    title: string;
    description: string;
    category: string;
@@ -17,6 +25,11 @@ export interface AdvancedMicroSaasService {
    marketPrice: string;
    roi: string;
    innovationLevel: string;
-   contactInfo: { phone: string;
-   email: string;
-   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] } competitors?: string[] marketSize?: string}export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [;
+   contactInfo: {  phone: string;
+   email: string
+<<<<<<< HEAD
+   website: string} technicalSpecs?: {technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] } competitors?: string[] marketSize?: string}export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [;
+=======
+   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = ['
+"
+>>>>>>> main

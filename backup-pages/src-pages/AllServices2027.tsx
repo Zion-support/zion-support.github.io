@@ -4,7 +4,6 @@
         avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$]/g,).split(
   '/')[0]), 0) / services.length),
         avgRating: Math.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10}}
-;
     selectedCategory ===;
   'All' || service.category === selectedCategory);
     if (categoryId ===;
@@ -13,17 +12,14 @@
         count: INNOVATIVE_SERVICES_2027.length,
         avgPrice: Math.round (INNOVATIVE_SERVICES_2027.reduce ( (sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length) ,
         avgRating: Math.round ( (INNOVATIVE_SERVICES_2027.reduce ( (sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10}
-;
     const services = INNOVATIVE_SERVICES_2027.filter (s => s.category === categoryId)     return {
       count: services.length,
       avgPrice: Math.round (services.reduce ( (sum, s) => sum + s.price, 0) / services.length) ,
       avgRating: Math.round ( (services.reduce ( (sum, s) => sum + s.rating, 0) / services.length) * 10) / 10}}
-;
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1}}}
-;
       opacity: 1,
       transition: {
         duration: 0.5}}}
@@ -182,8 +178,7 @@
             {/* AI Services */}
             <motion.div;
               variants={itemVariants}';
-              className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light';
-';
+              className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light;
               <div className='flex items-center space-x-4 mb-6'>'
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center'>'
                   <Brain className='w-6 h-6 text-white'  />
@@ -211,8 +206,7 @@
             {/* Cybersecurity */}
             <motion.div;
               variants={itemVariants}';
-              className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light';
-';
+              className='bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light;
               <div className='flex items-center space-x-4 mb-6'>'
                 <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center'>'
                   <Shield className='w-6 h-6 text-white'  />
@@ -329,7 +323,6 @@
       </section>
     </>
   )}
-;
 // Service Card Component
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
             </a>';
@@ -340,7 +333,6 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
       </section>
     </>
   )}
-;
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     switch (category) {
@@ -391,8 +383,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             {service.features.slice(0, 2).map((feature: string, index: number)  => (
               <span;
                 key={index}';
-                className='inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300';
-';
+                className='inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300;
                 <CheckCircle className='w-3 h-3'  />                <span>{feature}</span>
               </span>) ) }
           </div>

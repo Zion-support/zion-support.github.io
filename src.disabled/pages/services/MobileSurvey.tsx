@@ -1,10 +1,11 @@
 
 export default function MobileSurvey() {
-  const features = ['Mobile-first NPS/CSAT/CES templates',';QR code and link campaigns',';AI topic clustering and sentiment',';Webhooks to CRM/Slack',';Kiosk mode for in-person feedback',';Multilingual with auto-translate';
+  const features = ['Mobile-first NPS/CSAT/CES templates,;QR code and link campaigns,;AI topic clustering and sentiment,;Webhooks to CRM/Slack,;Kiosk mode for in-person feedback,;Multilingual with auto-translate';
   ];
-  const pricing = [{ name: 'Starter', price: '$39/mo', details: ['1,000 responses', 'Email export'] },
-    { name: 'Team', price: '$99/mo', details: ['10,000 responses', 'Slack + Webhooks'] },
-    { name: 'Business', price: '$249/mo', details: ['100,000 responses', 'SSO, Custom domains'] },
+  const pricing = [
+  { name: 'Starter', price: '$39/mo', details: ['1,000 responses,Email export'] },
+    { name: 'Team', price: '$99/mo', details: ['10,000 responses,Slack + Webhooks'] },
+    { name: 'Business', price: '$249/mo', details: ['100,000 responses,SSO, Custom domains'] },
   ];
   return(
     <div className = 'min-h-screen bg-white'>

@@ -43,20 +43,12 @@ export const SEO: React.FC<SEOProps> = ({
       {/* Structured Data */}
       <script type='application/ld+json'>
         {JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Organization',
-          'name': 'Zion Tech Group',
-          'url': 'https://ziontechgroup.com',
-          'logo': 'https://ziontechgroup.com/logo.svg',
-          'description': description,
+          '@context': 'https://schema.org,@type': 'Organization,name': 'Zion Tech Group,url': 'https://ziontechgroup.com,logo': 'https://ziontechgroup.com/logo.svg,description': description,
           'sameAs': [;
-            'https://linkedin.com/company/zion-tech-group',
-            'https://twitter.com/ziontechgroup'
+            'https://linkedin.com/company/zion-tech-group,https://twitter.com/ziontechgroup'
           ],
           'contactPoint': {
-            '@type': 'ContactPoint',
-            'telephone': '+1-302-464-0950',
-            'contactType': 'customer service'}
+            '@type': 'ContactPoint,telephone': '+1-302-464-0950,contactType': 'customer service'}
         })}
       </script>
     </Helmet>

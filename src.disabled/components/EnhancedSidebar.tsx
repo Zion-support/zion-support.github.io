@@ -24,12 +24,11 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
       newExpanded.delete(section)} else {
       newExpanded.add(section)}
     setExpandedSections(newExpanded)}
-;
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => location.pathname === path
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const navigationSections = [
-    {
+  {
       id: 'main',
       title: 'Main',
       icon: Home,
@@ -112,7 +111,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
         { name: 'Sitemap', href: '/sitemap', icon: Globe, description: 'Site navigation structure' }]}
   ];
   const quickActions = [
-    { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'bg-blue-500' },
+  { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'bg-blue-500' },
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'bg-green-500' },
     { name: 'Contact Sales', href: '/contact', icon: Phone, color: 'bg-purple-500' },
     { name: 'Support Chat', href: '/chat', icon: MessageCircle, color: 'bg-orange-500' }];
@@ -122,13 +121,11 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
         ? prev.filter(id => id !== sectionId);
         : [...prev, sectionId]
     )}
-;
   const isSectionExpanded = (sectionId: string) => expandedSections.includes(sectionId);
   const isLinkActive = (href: string) => {
     if (href === '/') {
       return location.pathname === '/'}
     return location.pathname.startsWith(href)}
-;
   const filteredSections = searchQuery;
     ? navigationSections.map(section => ({
         ...section,

@@ -1,4 +1,14 @@
+<<<<<<< HEAD
 import React from 'react';
+import Link from 'next/link';
+import { Brain, Mail, Phone, MapPin, Linkedin, Twitter, Github, Youtube, Instagram, ArrowRight, Heart, Cloud, Database } from 'lucide-react';
+
+const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import {
   Brain,
@@ -19,24 +29,75 @@ import {
   Users,
   BarChart3,
   Settings,
-  Zap
+  Zap,
 } from 'lucide-react';
 import { Button } from '../ui/Button';
+=======
+import { ArrowRight, Brain, Cloud, Network, Phone, Mail, User, Heart, Info } from 'lucide-react';
+=======
+import React from 'react'
+import Link from 'next/link'
+import {   Brain, Mail,  Phone, MapPin, Linkedin, Twitter, Github, Youtube, Instagram, ArrowRight, Heart, Cloud, Database } from 'lucide-react'
+import { Button }  from '../ui/Button';const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear()
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
 
+// Common interfaces for better type safety
+interface ApiResponse<T = unknown> {
+  data: T;
+  status: number;
+  message?: string;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+}
+
+interface Service {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+}
+
+interface FormData {
+  [key: string]: string | number | boolean | File;
+}
+
+interface ComponentProps {
+  className?: string;
+  children?: React.ReactNode;
+  [key: string]: unknown;
+}
+
+
+import Link from 'next/link';
+import { Button } from '../ui/Button';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   const serviceCategories = [
+<<<<<<< HEAD
     {
       title: 'AI & Automation',
       icon: Brain,
       color: 'text-blue-400',
       services: [
         { name: 'AI Services', href: '/ai-services' },
+<<<<<<< HEAD
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'All Services', href: '/services' }
+=======
         { name: 'Machine Learning', href: '/ai-services#ml' },
         { name: 'Natural Language Processing', href: '/ai-services#nlp' },
-        { name: 'Computer Vision', href: '/ai-services#vision' }
-      ]
+        { name: 'Computer Vision', href: '/ai-services#vision' },
+      ],
     },
     {
       title: 'IT & Infrastructure',
@@ -46,8 +107,8 @@ const Footer: React.FC = () => {
         { name: 'IT Services', href: '/it-services' },
         { name: 'Cloud Migration', href: '/it-services#cloud' },
         { name: 'Cybersecurity', href: '/it-services#security' },
-        { name: 'Network Management', href: '/it-services#network' }
-      ]
+        { name: 'Network Management', href: '/it-services#network' },
+      ],
     },
     {
       title: 'Software Solutions',
@@ -57,11 +118,10 @@ const Footer: React.FC = () => {
         { name: 'Micro SaaS', href: '/micro-saas' },
         { name: 'Custom Applications', href: '/micro-saas#custom' },
         { name: 'API Development', href: '/micro-saas#api' },
-        { name: 'Integration Services', href: '/micro-saas#integration' }
-      ]
-    }
+        { name: 'Integration Services', href: '/micro-saas#integration' },
+      ],
+    },
   ];
-
   const quickLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -70,7 +130,81 @@ const Footer: React.FC = () => {
     { name: 'Blog', href: '/blog' },
     { name: 'White Papers', href: '/whitepapers' },
     { name: 'Webinars', href: '/webinars' },
-    { name: 'Pricing Guide', href: '/pricing-guide' }
+    { name: 'Pricing Guide', href: '/pricing-guide' },
+  ];
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Sitemap', href: '/sitemap' },
+  ];
+  const socialLinks = [
+<<<<<<< HEAD
+    {
+      name: 'LinkedIn',
+      href: 'https://linkedin.com/company/ziontechgroup',
+      icon: Linkedin,
+    },
+    {
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter,
+    },
+=======
+    { name: 'LinkedIn', href: 'https://linkedin.com/compunknown/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+>>>>>>> main
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
+    {
+      name: 'YouTube',
+      href: 'https://youtube.com/ziontechgroup',
+      icon: Youtube,
+    },
+    {
+      name: 'Instagram',
+      href: 'https://instagram.com/ziontechgroup',
+      icon: Instagram,
+    },
+  ];
+=======
+  {
+      title: 'AI & Automation', icon: Brain, color: 'text-blue-400', services: [
+        { name: 'AI Services', href: '/services/ai-services' }, { name: 'IT Services', href: '/services/it-services' }, { name: 'Micro SaaS', href: '/services/micro-saas' }, { name: 'All Services', href: '/services' }
+>>>>>>> main
+      ]
+    },
+    {
+      title: 'Cloud & Infrastructure',
+      icon: Cloud,
+      color: 'text-green-400',
+      services: [
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Services Overview', href: '/services' }
+      ]
+    },
+    {
+      title: 'Data & Analytics',
+      icon: Database,
+      color: 'text-purple-400',
+      services: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'Products', href: '/products' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    }
+  ];
+
+  const quickLinks = [
+<<<<<<< HEAD
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'White Papers', href: '/whitepapers' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Pricing', href: '/pricing' }
   ];
 
   const legalLinks = [
@@ -87,11 +221,25 @@ const Footer: React.FC = () => {
     { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
   ];
+=======
+  { name: 'About Us', href: '/about' }, { name: 'Our Team', href: '/team' }, { name: 'Careers', href: '/careers' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'Blog', href: '/blog' }, { name: 'White Papers', href: '/whitepapers' }, { name: 'Webinars', href: '/webinars' }, { name: 'Pricing', href: '/pricing' }
+  ]
 
+  const legalLinks = [
+  { name: 'Privacy Policy', href: '/privacy' }, { name: 'Terms of Service', href: '/terms' }, { name: 'Cookie Policy', href: '/cookies' }, { name: 'Sitemap', href: '/sitemap' }
+  ]
+
+  const socialLinks = [
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }, { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }, { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube }, { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  ]
+>>>>>>> main
+
+>>>>>>> main
   const contactInfo = {
-    email: 'kleber@ziontechgroup.com',
-    phone: '+1 302 464 0950',
-    address: '364 E Main St STE 1008, Middletown DE 19709'
+<<<<<<< HEAD
+    email: 'contact@ziontechgroup.com',
+    phone: '+1 (555) 123-4567',
+    address: '123 Technology Drive, San Francisco, CA 94105'
   };
 
   return (
@@ -100,15 +248,31 @@ const Footer: React.FC = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
           {/* Company Info */}
+=======
+    email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950',
+    address: '364 E Main St STE 1008, Middletown DE 19709',
+  };
+  return (
+    <footer className="bg-slate-900 border-t border-slate-700">
+      {/* Main Footer Content */}
+<<<<<<< HEAD
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
+=======
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
+          {/* Compunknown Info */}
+>>>>>>> main
           <div className='lg:col-span-1'>
             <Link href='/' className='flex items-center space-x-2 mb-6'>
               <div className='w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center'>
                 <Brain className='w-6 h-6 text-white' />
+<<<<<<< HEAD
               </div>
               <span className='text-2xl font-bold text-white'>Zion Tech Group</span>
             </Link>
             <p className='text-gray-300 mb-6 leading-relaxed'>
-              Leading provider of AI-powered solutions and technology services. 
+              Leading provider of AI-powered solutions and technology services.
               We help businesses transform and innovate with cutting-edge artificial intelligence.
             </p>
             <div className='space-y-3 mb-6'>
@@ -126,10 +290,52 @@ const Footer: React.FC = () => {
               </div>
               <div className='flex items-center text-gray-300'>
                 <MapPin className='w-4 h-4 mr-3 text-blue-400' />
+=======
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+>>>>>>> main
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <Link href="/" className="flex items-center space-x-2 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Brain className="w-6 h-6 text-white" />
+              </div>
+              <span className="text-2xl font-bold text-white">
+                Zion Tech Group
+              </span>
+            </Link>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              Leading provider of AI-powered solutions and technology services.
+              We help businesses transform and innovate with cutting-edge
+              artificial intelligence.
+            </p>
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-gray-300">
+                <Mail className="w-4 h-4 mr-3 text-blue-400" />
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className="hover:text-white transition-colors"
+                >
+                  {contactInfo.email}
+                </a>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Phone className="w-4 h-4 mr-3 text-blue-400" />
+                <a
+                  href={`tel:${contactInfo.phone}`}
+                  className="hover:text-white transition-colors"
+                >
+                  {contactInfo.phone}
+                </a>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <MapPin className="w-4 h-4 mr-3 text-blue-400" />
+>>>>>>> main
                 <span>{contactInfo.address}</span>
               </div>
             </div>
             {/* Social Links */}
+<<<<<<< HEAD
             <div className='flex space-x-4'>
               {socialLinks.map((social) => (
                 <a
@@ -141,12 +347,30 @@ const Footer: React.FC = () => {
                   aria-label={social.name}
                 >
                   <social.icon className='w-5 h-5' />
+=======
+            <div className="flex space-x-4">
+              {socialLinks.map(social => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+<<<<<<< HEAD
+                  className="p-2 rounded-lg bg-slate-800 hover: bg-slate-700 text-gray-400 hover:text-white transition-colors"
+=======
+                  className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-400 hover:text-white transition-colors"
+>>>>>>> main
+                  aria-label={social.name}
+                >
+                  <social.icon className="w-5 h-5" />
+>>>>>>> main
                 </a>
               ))}
             </div>
           </div>
 
           {/* Services */}
+<<<<<<< HEAD
           <div className='lg:col-span-2'>
             <h3 className='text-xl font-bold text-white mb-6'>Our Services</h3>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
@@ -164,6 +388,37 @@ const Footer: React.FC = () => {
                           className='text-gray-300 hover:text-white transition-colors text-sm flex items-center group'
                         >
                           <ArrowRight className='w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity' />
+=======
+<<<<<<< HEAD
+          <div className="lg: col-span-2">
+=======
+          <div className="lg:col-span-2">
+>>>>>>> main
+            <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {serviceCategories.map(category => (
+                <div key={category.title}>
+                  <div className="flex items-center mb-4">
+                    <category.icon
+                      className={`w-5 h-5 mr-2 ${category.color}`}
+                    />
+                    <h4 className="text-white font-semibold">
+                      {category.title}
+                    </h4>
+                  </div>
+                  <ul className="space-y-2">
+                    {category.services.map(service => (
+                      <li key={service.name}>
+                        <Link
+                          href={service.href}
+<<<<<<< HEAD
+                          className="text-gray-300 hover: text-white transition-colors text-sm flex items-center group"
+=======
+                          className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+>>>>>>> main
+                        >
+                          <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+>>>>>>> main
                           {service.name}
                         </Link>
                       </li>
@@ -174,90 +429,164 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Links & Newsletter */}
+<<<<<<< HEAD
+          {/* Quick Links */}
           <div className='lg:col-span-1'>
             <h3 className='text-xl font-bold text-white mb-6'>Quick Links</h3>
-            <div className='grid grid-cols-2 gap-4 mb-8'>
-              {quickLinks.map((link) => (
+            <div className='space-y-4'>
+              <div>
+                <h4 className='text-white font-semibold mb-3'>Company</h4>
+                <ul className='space-y-2'>
+                  {quickLinks.slice(0, 4).map((link) => (
+                    <li key={link.name}>
+                      <Link href={link.href} className='text-gray-300 hover:text-white transition-colors text-sm'>
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className='text-white font-semibold mb-3'>Resources</h4>
+                <ul className='space-y-2'>
+                  {quickLinks.slice(4).map((link) => (
+                    <li key={link.name}>
+                      <Link href={link.href} className='text-gray-300 hover:text-white transition-colors text-sm'>
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+=======
+          {/* Quick Links & Newsletter */}
+<<<<<<< HEAD
+          <div className="lg: col-span-1">
+=======
+          <div className="lg:col-span-1">
+>>>>>>> main
+            <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              {quickLinks.map(link => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className='text-gray-300 hover:text-white transition-colors text-sm'
+<<<<<<< HEAD
+                  className="text-gray-300 hover: text-white transition-colors text-sm"
+=======
+                  className="text-gray-300 hover:text-white transition-colors text-sm"
+>>>>>>> main
                 >
                   {link.name}
                 </Link>
               ))}
             </div>
             {/* Newsletter Signup */}
-            <div className='bg-slate-800 rounded-lg p-6'>
-              <h4 className='text-white font-semibold mb-3'>Stay Updated</h4>
-              <p className='text-gray-300 text-sm mb-4'>
-                Get the latest AI insights and technology trends delivered to your inbox.
+            <div className="bg-slate-800 rounded-lg p-6">
+              <h4 className="text-white font-semibold mb-3">Stay Updated</h4>
+              <p className="text-gray-300 text-sm mb-4">
+                Get the latest AI insights and technology trends delivered to
+                your inbox.
               </p>
-              <div className='space-y-3'>
+              <div className="space-y-3">
                 <input
-                  type='email'
-                  placeholder='Enter your email'
-                  className='w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm'
+                  type="email"
+                  placeholder="Enter your email"
+<<<<<<< HEAD
+                  className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+=======
+                  className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+>>>>>>> main
                 />
-                <Button size='sm' className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
+                <Button
+                  size="sm"
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+                >
                   Subscribe
                 </Button>
+>>>>>>> main
               </div>
             </div>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
+      {/* Bottom Footer */}
+      <div className='border-t border-slate-700'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+          <div className='flex flex-col md:flex-row justify-between items-center'>
+            <div className='text-gray-400 text-sm mb-4 md:mb-0'>
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className='flex space-x-6'>
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className='text-gray-400 hover:text-white transition-colors text-sm'
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+          <div className='mt-4 text-center text-gray-500 text-xs'>
+            Made with <Heart className='w-3 h-3 inline text-red-500' /> by Zion Tech Group
+=======
       {/* Stats Section */}
-      <div className='border-t border-slate-700 py-8'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'>
+      <div className="border-t border-slate-700 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className='text-3xl font-bold text-white mb-2'>500+</div>
-              <div className='text-gray-400 text-sm'>Projects Completed</div>
+              <div className="text-3xl font-bold text-white mb-2">500+</div>
+              <div className="text-gray-400 text-sm">Projects Completed</div>
             </div>
             <div>
-              <div className='text-3xl font-bold text-white mb-2'>50+</div>
-              <div className='text-gray-400 text-sm'>Happy Clients</div>
+              <div className="text-3xl font-bold text-white mb-2">50+</div>
+              <div className="text-gray-400 text-sm">Happy Clients</div>
             </div>
             <div>
-              <div className='text-3xl font-bold text-white mb-2'>99.9%</div>
-              <div className='text-gray-400 text-sm'>Uptime Guarantee</div>
+              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-gray-400 text-sm">Uptime Guarantee</div>
             </div>
             <div>
-              <div className='text-3xl font-bold text-white mb-2'>24/7</div>
-              <div className='text-gray-400 text-sm'>Support Available</div>
+              <div className="text-3xl font-bold text-white mb-2">24/7</div>
+              <div className="text-gray-400 text-sm">Support Available</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Footer */}
-      <div className='border-t border-slate-700 py-6'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex flex-col md:flex-row items-center justify-between'>
-            <div className='flex items-center space-x-6 mb-4 md:mb-0'>
-              <p className='text-gray-400 text-sm'>
+      <div className="border-t border-slate-700 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center space-x-6 mb-4 md:mb-0">
+              <p className="text-gray-400 text-sm">
                 © {currentYear} Zion Tech Group. All rights reserved.
               </p>
-              <div className='flex items-center space-x-4'>
-                {legalLinks.map((link) => (
+              <div className="flex items-center space-x-4">
+                {legalLinks.map(link => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className='text-gray-400 hover:text-white transition-colors text-sm'
+<<<<<<< HEAD
+                    className="text-gray-400 hover: text-white transition-colors text-sm"
+=======
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
+>>>>>>> main
                   >
                     {link.name}
                   </Link>
                 ))}
               </div>
             </div>
-            <div className='flex items-center space-x-2 text-gray-400 text-sm'>
+            <div className="flex items-center space-x-2 text-gray-400 text-sm">
               <span>Made with</span>
-              <Heart className='w-4 h-4 text-red-500' />
+              <Heart className="w-4 h-4 text-red-500" />
               <span>by Zion Tech Group</span>
             </div>
+>>>>>>> main
           </div>
         </div>
       </div>
@@ -265,4 +594,8 @@ const Footer: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
+=======
+export default Footer;
+>>>>>>> main

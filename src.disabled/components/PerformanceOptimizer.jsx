@@ -15,5 +15,4 @@ export const PerformanceOptimizer = ({ children }) => {
   }, [location.pathname])
   return <>{children}</>
 }
-;
 export default PerformanceOptimizer

@@ -363,5 +363,4 @@ const Careers: NextPage = () => {
       </section>
     </Layout>
   )}
-;
 export default Careers

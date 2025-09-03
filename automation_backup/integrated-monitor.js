@@ -31,7 +31,6 @@ class IntegratedMonitor {
       failedFixes: 0,
       lastFixCycle: null,
       uptime: Date.now()}
-;
   async initialize() {
     try {
       // console.log(
@@ -132,7 +131,6 @@ class IntegratedMonitor {
           failedFixes: this.stats.failedFixes,
           successRate: this.stats.totalErrors > 0 ?;
             (((this.stats.runtimeFixes + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 100}
-;
       const reportPath = path.join(this.browserMonitor.CONFIG.logDir,integrated-monitor-report.json;
   ');
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
@@ -146,7 +144,6 @@ class IntegratedMonitor {
       browserMonitorStatus: this.browserMonitor ? this.browserMonitor.isRunning : false,
       lastFixCycle: this.stats.lastFixCycle,
       uptime: Date.now() - this.stats.uptime}
-;
   async performHealthCheck() {
     try {
       // console.log(,

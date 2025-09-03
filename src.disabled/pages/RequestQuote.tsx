@@ -29,7 +29,6 @@ const RequestQuote: React.FC = () => {
       </form>
     </div>
   )}
-;
 import React from 'react';
 export default RequestQuote;
 
@@ -60,5 +59,4 @@ const RequestQuote: React.FC = () => {
         <button aria-label='Button' type='submit' className='rounded - md bg - blue - 600 px - 5 py - 2.5 text - white hover: bg - blue - 700'>Submit</button>
       </form>
     </div>) }
-;
 "

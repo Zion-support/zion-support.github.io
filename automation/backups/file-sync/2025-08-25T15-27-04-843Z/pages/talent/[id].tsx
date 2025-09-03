@@ -40,9 +40,7 @@ const TalentProfilePage: React.FC = () => {
   'll simulate a profile since we don't have the API;
         // In a real app, this would be: const res = await fetch(`/api/talent/${id}`);
             skills: [,
-  React',
-  'TypeScript',
-  'Node.js'],
+  React,TypeScript,Node.js'],
             availability_type: 'Full-time,
             social: {
               linkedin:,

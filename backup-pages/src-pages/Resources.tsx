@@ -134,7 +134,6 @@
   phone: '+1 302 464 0950,
 ,
   email: 'kleber@ziontechgroup.com,
-  ;
   address: '364 E Main St STE 1008 Middletown DE 19709;
   '}
   return();
@@ -186,8 +185,7 @@
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}';
-          className='mb-16';
-';
+          className='mb-16;
           <h2 className='text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-8 uppercase tracking-wider'>
             Featured Resources
           </h2>'
@@ -222,8 +220,7 @@
   ';
                       resource.badge === 'Featured;
   ' ? 'bg-purple-500/20 text-purple-400;
-  ' :';
-  'bg-red-500/20 text-red-400`}`}>{resource.badge}
+  ' :bg-red-500/20 text-red-400`}`}>{resource.badge}
                     </span>'
                     <ExternalLink className='w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors'  />                  </div>
                 </Link>
@@ -295,8 +292,7 @@
                         </p>
                     <Link;
                       to={resource.href}';
-                      className='block p-3 rounded-lg bg-gray-900/50 hover:bg-gray-800/70 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group';
-';
+                      className='block p-3 rounded-lg bg-gray-900/50 hover:bg-gray-800/70 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group;
                       <div className='flex items-start justify-between'>'
                         <div className='flex items-start space-x-3 flex-1'>'
                           <resource.icon className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />'
