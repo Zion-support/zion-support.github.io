@@ -1,91 +1,74 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
-// Function to fix common syntax errors;
-function fixSyntaxErrors(content) {;
-  // Remove corrupted content patterns;
-  let fixed = content;
-    // Remove malformed import statements;
-    .replace(/import React \{ useState \} from "react";\s*import \{ motion\s*\} from "framer-motion"; import \{ [^}]+ \} from "lucide-react";/g, "import React, { useState } from "react";\nimport { motion  } from "framer-motion";\nimport { Shield, TrendingUp, Brain, CheckCircle, Star, ArrowRight, Users, Target, Clock, DollarSign, Database, Zap, Globe, Activity, AlertTriangle, Eye, Lock, Download, Upload, RefreshCw, Settings, Play, Gauge, BarChart3, Cpu, Factory, Truck, HardHat, Thermometer, GaugeIcon, AlertCircle, CheckSquare, XCircle, ShieldCheck, Fingerprint, Search, Bell, FileText, CreditCard, Building, ShoppingCart  } from "lucide-react";");
-    ;
-    // Fix malformed JSX attributes;
-    .replace(/className="([^"]*)"/g, "className="$1"");
-    .replace(/className="([^"]*)"/g, "className="$1"");
-    ;
-    // Fix malformed object properties;
-    .replace(/title: "([^"]*)" description:;/g, "title: "$1",\n    description:");
-    .replace(/icon: ([^,}]+) color: "([^"]*)",/g, "icon: $1,\n    color: "$2",");
-    ;
-    // Fix malformed array syntax;
-    .replace(/\[;\s*\{/g, "[\n  {");
-    .replace(/,\s*\};\s*\]/g, "\n  }\n];");
-    ;
-    // Fix malformed function calls;
-    .replace(/return\s*\(\s*;/g, "return (\n    ");
-    .replace(/return\s*\(\s*<div/g, "return (\n    <div");
-    ;
-    // Remove corrupted patterns;
-    .replace(/; return\(\); <div[^>]*>/g, "return (\n    <div");
-    .replace(/; export default[^]*;.*$/g, ");\n\nexport default ComponentName;");
-    ;
-    // Fix malformed template literals;
-    .replace(/`\s*\{\s*activeTab === "([^"]+)" && \(\s*`/g, "{activeTab === "$1" && (");
-    .replace(/`\s*\}\s*\{\s*activeTab === "([^"]+)" && \(/g, "}\n{activeTab === "$1" && (");
-    ;
-    // Remove duplicate content;
-    .replace(/(import React[^]+;[\s\S]*?export default[^]+)\1+/g, "$1");
-    ;
-    // Clean up extra semicolons and commas;
-    .replace(/;+$/gm, ";");
-    .replace(/,\s*}/g, "\n  }");
-    .replace(/,\s*]/g, "\n]");
-    ;
-    // Fix malformed JSX closing tags;
-    .replace(/<\/div>\s*;\s*\)\s*;\s*}/g, "</div>\n  );\n};");
-    ;
-    // Remove corrupted patterns at the end;
-    .replace(/;,"\}\);,"\}\)\s*$/g, ");\n\nexport default ComponentName;");
-    .replace(/>>>>>>> pr-\d+.*$/g, "");
-    .replace(/;,"\}\);,"\}\)\s*$/g, ");\n\nexport default ComponentName;");
-  return fixed;,
+const fs = require('fs');
+const path = require('path');
+
+function fixSyntaxErrors(filePath) {
+  console.log(`Fixing syntax errors in: ${filePath}`);
+  
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Fix common syntax errors
+  content = content
+    // Remove extra semicolons after class declarations
+    .replace(/class\s+\w+\s*\{;/g, (match) => match.replace('{;', '{'))
+    // Remove extra semicolons after method declarations
+    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {')
+    // Remove extra semicolons after if/for/while statements
+    .replace(/(if|for|while|switch)\s*\([^)]*\)\s*\{;/g, '$1() {')
+    // Remove trailing commas before closing braces
+    .replace(/,(\s*[}\]])/g, '$1')
+    // Remove extra semicolons after closing braces
+    .replace(/\}(\s*;)/g, '}$1')
+    // Fix method declarations with extra semicolons
+    .replace(/(\w+)\s*\([^)]*\)\s*\{;/g, '$1() {')
+    // Remove standalone semicolons
+    .replace(/^\s*;\s*$/gm, '')
+    // Fix object property declarations
+    .replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,')
+    // Fix array declarations
+    .replace(/\[\s*\]\s*;/g, '[]')
+    // Remove extra semicolons in function calls
+    .replace(/\(\s*\)\s*;/g, '()')
+    // Fix constructor calls
+    .replace(/new\s+(\w+)\s*\(\s*\)\s*;/g, 'new $1()')
+    // Clean up multiple semicolons
+    .replace(/;+/g, ';')
+    // Remove semicolons at end of lines that shouldn't have them
+    .replace(/;\s*$/gm, (match, offset, string) => {
+      const lines = string.split('\n');
+      const lineIndex = string.substring(0, offset).split('\n').length - 1;
+      const line = lines[lineIndex];
+      
+      // Don't remove semicolons from statements that should have them
+      if (line.match(/(const|let|var|return|throw|break|continue)\s/)) {
+        return match;
+      }
+      
+      // Don't remove semicolons from object/array literals
+      if (line.match(/[\[\{]\s*$/)) {
+        return match;
+      }
+      
+      return match.replace(';', '');
+    });
+
+  fs.writeFileSync(filePath, content);
+  console.log(`Fixed syntax errors in: ${filePath}`);
 }
-;
-// Function to process a single file;
-function processFile(filePath) {;
-  try {;
-    const content = fs.readFileSync(filePath, "utf8");
-    // Skip if file is too corrupted;
-    if (content.length < 100 || content.includes(">>>>>>> pr-")) {;
-      console.log(`Skipping corrupted file: ${filePath}`);
-      return;,
-}
-    ;
-    const fixed = fixSyntaxErrors(content);
-    if (fixed !== content) {;
-      fs.writeFileSync(filePath, fixed);
-      console.log(`Fixed: ${filePath}`);,
-}
-  } catch (error) {;
-    console.error(`Error processing ${filePath}:`, error.message);,
-}
-}
-;
-// Function to recursively process directory;
-function processDirectory(dirPath) {;
-  const items = fs.readdirSync(dirPath);
-  for (const item of items) {;
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {;
-      processDirectory(fullPath);,
-} else if (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")) {;
-      processFile(fullPath);,
-}
+
+// Fix the main automation files
+const filesToFix = [
+  'simple-automation-orchestrator.cjs',
+  'run-automation-suite.cjs'
+];
+
+filesToFix.forEach(file => {
+  if (fs.existsSync(file)) {
+    fixSyntaxErrors(file);
+  } else {
+    console.log(`File not found: ${file}`);
   }
-}
-;
-// Main execution;
-console.log("Starting syntax error fixes...");
-processDirectory("./src");
-console.log("Syntax error fixes completed!')
+});
+
+console.log('Syntax error fixing completed!');
