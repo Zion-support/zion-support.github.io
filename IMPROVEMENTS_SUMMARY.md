@@ -1,6 +1,6 @@
 # Zion Tech Group Website Improvements Summary
 
-# 
+#
 
 > > > > > > > origin/cursor/install-dependencies-and-fix-errors-827a
 

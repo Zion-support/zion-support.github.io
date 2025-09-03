@@ -23,7 +23,7 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  webpack: (config) => {
+  webpack: config => {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -65,4 +65,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-

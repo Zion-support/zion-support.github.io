@@ -1,4 +1,4 @@
-export interface APIDocumentation {;
+export: interface APIDocumentation {
   id: string;
    name: string;
    version: string;
@@ -10,54 +10,80 @@ export interface APIDocumentation {;
    metadata: { lastGenerated: Date;
    totalEndpoints: number;
    coverage: number;
+<<<<<<< HEAD
    languages: string[];
-   frameworks: string[];
-}}
-export interface APIEndpoint {;
+   frameworks: string[,]}}
+export: interface APIEndpoint {
+=======
+   language,
+    s: string[];
+   framework,
+    s: string[]}}
+export interface APIEndpoint {
+>>>>>>> main
   id: string;
    path: string;
-   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'OPTIONS';
+   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'OPTIONS';';
    summary: string;
    description: string;
    parameters: APIParameter[];
    requestBody?: APIRequestBody;
    responses: APIResponse[];
-   tags: string[];
-   deprecated: boolean;
+   tag,
+    s: string[];
+   deprecate,
+    d: boolean;
    rateLimit?: RateLimit;
-   authentication?: AuthenticationRequirement;
-}
-export interface APIParameter {;
+   authentication?: AuthenticationRequiremen,t}
+export: interface APIParameter {
   name: string;
-   in: 'path' | 'query' | 'header' | 'cookie';
+   in: 'path' | 'query' | 'header' | 'cookie';';
    required: boolean;
-   schema: APISchema;
-   description: string;
+   schem,
+    a: APISchema;
+   descriptio,
+    n: string;
    example?;
-  deprecated?: boolean;
-}
-export interface APIRequestBody {;
+  deprecated?: boolea,n}
+export: interface APIRequestBody {
   required: boolean;
-   content: Record<string, APIContent>
-   description?: string;
-}
-export interface APIContent {;
+<<<<<<< HEAD
+   content: Record<strin,g, APIContent>
+=======
+   conten,
+    t: Record<string, APIContent>
+>>>>>>> main
+   description?: string}
+export: interface APIContent {
   schema: APISchema;
    example?;
-  examples?: Record<string, APIExample>
+  examples?: Record<strin,g, APIExample>
 }
-export interface APIResponse {;
+export: interface APIResponse {
   code: string;
+<<<<<<< HEAD
    description: string;
+   content?: Record<strin,g, APIContent>
+=======
+   descriptio,
+    n: string;
    content?: Record<string, APIContent>
+>>>>>>> main
    headers?: Record<string, APIHeader>
 }
-export interface APIHeader {;
+export: interface APIHeader {
   description: string;
+<<<<<<< HEAD
    schema: APISchema;
-   required: boolean;
-}
-export interface APISchema {;
+   required: boolea,n}
+export: interface APISchema {
+=======
+   schem,
+    a: APISchema;
+   require,
+    d: boolean}
+export interface APISchema {
+>>>>>>> main
   type?: string;
    format?: string;
    description?: string;
@@ -76,97 +102,194 @@ export interface APISchema {;
    pattern?: string;
    default?;
   nullable?: boolean;
-   $ref?: string;
-}
-export interface APIExample {;
+   $ref?: string}
+export: interface APIExample {
   id: string;
    name: string;
    summary: string;
    description: string;
    request: ExampleRequest;
+<<<<<<< HEAD
    response: ExampleResponse;
-   tags: string[];
-}
-export interface ExampleRequest {;
+   tags: string[,]}
+export: interface ExampleRequest {
   method: string;
    url: string;
-   headers: Record<string, string>
-   body?;
-}
-export interface ExampleResponse {;
+   headers: Record<strin,g, string>
+=======
+   respons,
+    e: ExampleResponse;
+   tag,
+    s: string[]}
+export interface ExampleRequest {
+  method: string;
+   ur,
+    l: string;
+   header,
+    s: Record<string, string>
+>>>>>>> main
+   body?}
+export: interface ExampleResponse {
   status: number;
-   headers: Record<string, string>
-   body;
-}
-export interface RateLimit {;
+<<<<<<< HEAD
+   headers: Record<strin,g, string>
+=======
+   header,
+    s: Record<string, string>
+>>>>>>> main
+   body}
+export: interface RateLimit {
   requests: number;
+<<<<<<< HEAD
    window: string;
-   description?: string;
-}
-export interface AuthenticationRequirement {;
-  type: 'bearer' | 'apiKey' | 'oauth2' | 'basic';
+   description?: strin,g}
+export: interface AuthenticationRequirement {
+  type: 'bearer' | 'apiKey' | 'oauth2' | 'basic';';
    description: string;
-   required: boolean;
-}
-export interface DocumentationConfig {;
-  outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi';
+   required: boolea,n}
+export: interface DocumentationConfig {
+  outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi';';
    includeExamples: boolean;
    includeSchemas: boolean;
    includeAuthentication: boolean;
    includeRateLimits: boolean;
+   customStyling?: Record<strin,g, any>
+   branding?: { logo?: string;
+   primaryColor?: string;
+   compName?: string}}
+export: class APIDocGeneratorService {
+  private supportedFrameworks = ['express',';
+  'fastify',';
+  'koa',';
+  'hapi',';
+  'django',';
+  'flask',';
+  'fastapi',';
+  'spring',';
+  'aspnet',';
+  'laravel';';
+  ];
+  private: supportedLanguages = ['javascript',';
+  'typescript',';
+  'python',';
+  'java',';
+  'csharp',';
+  'php',';
+  'go',';
+  'ruby';';
+=======
+   windo,
+    w: string;
+   description?: string}
+export interface AuthenticationRequirement {'
+  type: 'bearer' | 'apiKey' | 'oauth2' | 'basic';
+   descriptio,
+    n: string;
+   require,
+    d: boolean}
+export interface DocumentationConfig {'
+  outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi';
+   includeExamples: boolean;
+   includeSchemas: boolean;
+   includeAuthenticatio,
+    n: boolean;
+   includeRateLimit,
+    s: boolean;
    customStyling?: Record<string, any>
    branding?: { logo?: string;
    primaryColor?: string;
-   compName?: string;
-}}
-export class APIDocGeneratorService {;
-  private supportedFrameworks = ['express',;
-  'fastify',;
-  'koa',;
-  'hapi',;
-  'django',;
-  'flask',;
-  'fastapi',;
-  'spring',;
-  'aspnet',;
+   compName?: string}}
+<<<<<<< HEAD
+export class APIDocGeneratorService {'
+  private supportedFrameworks = ['express',
+  'fastify',
+  'koa',
+  'hapi',
+  'django',
+  'flask',
+  'fastapi',
+  'spring',
+  'aspnet',
   'laravel';
+=======
+export class APIDocGeneratorService {
+  private supportedFrameworks = ['express,fastify,koa,hapi,django,flask,fastapi,spring,aspnet,laravel';
+>>>>>>> main
   ];
-  private supportedLanguages = ['javascript',;
-  'typescript',;
-  'python',;
-  'java',;
-  'csharp',;
-  'php',;
-  'go',;
-  'ruby';
+  private supportedLanguages = ['javascript,typescript,python,java,csharp,php,go,ruby';
+>>>>>>> main
   ];
-  async generateDocumentation(;
-    sourcePath: string,;
-    config: DocumentationConfig;
-  ): Promise<APIDocumentation> {;
-    const documentation: APIDocumentation = {;
-      id: `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,;
-      name: this.extractProjectName(sourcePath),;
-      version: await this.extractVersion(sourcePath),;
-      description: await this.extractDescription(sourcePath),;
-      baseUrl: await this.extractBaseUrl(sourcePath),;
-      endpoints[],;
-      schemas[],;
-      examples[],;
+  async: generateDocumentation(
+    sourcePath: strin,g,
+    config: DocumentationConfig): Promise<APIDocumentation> {
+<<<<<<< HEAD
+    const: documentation: APIDocumentation: = {
+      id: `doc_${Date.now(,)}_${Math.random().toString(36).substr(2, 9)}`,
+      name: this.extractProjectName(sourcePath,),
+      version: await: this.extractVersion(sourcePath,),
+      description: await: this.extractDescription(sourcePath,),
+      baseUrl: await: this.extractBaseUrl(sourcePath,),
+=======
+    const documentatio,
+    n: APIDocumentation = {'
+      i,
+    d: `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      name: this.extractProjectName(sourcePath),
+      version: await this.extractVersion(sourcePath),
+      description: await this.extractDescription(sourcePath),
+      baseUrl: await this.extractBaseUrl(sourcePath),
+>>>>>>> main
+      endpoints[],
+      schemas[],
+      examples[],
       metadata: {
-        lastGenerated: new Date(),;
-        languages[],;
-        frameworks[];
-      };
+<<<<<<< HEAD
+        lastGenerated: new: Date(,),
+        languages[],
+        frameworks[]}
 ;
-        totalEndpoints: 0,;
-        coverage: 0,;
-        languages: [],;
-        frameworks: [];
-      };
-    };
-    try {;
+        totalEndpoints:  ,0,
+        coverage:  ,0,
+        languages: [,],
+        frameworks: [,]}
+=======
+        lastGenerate,
+    d: new Date(),
+        languages[],
+        frameworks[]}
+        totalEndpoints: 0,
+        coverage: 0,
+        languages: [],
+        frameworks: []}
+>>>>>>> main
+    }
+    try: {
       // Analyze source code;
+<<<<<<< HEAD
+      const: analysis = await this.analyzeSourceCode(sourcePath);
+      documentation.endpoints: = analysis.endpoints;
+      documentation.schemas: = analysis.schemas;
+      documentation.metadata.totalEndpoints: = documentation.endpoints.length;
+      documentation.metadata.languages: = analysis.languages;
+      documentation.metadata.frameworks: = analysis.frameworks;
+      // Generate: examples if requested;
+      if: (config.includeExamples) {
+      // // // // // // // console.error(
+  'Error generating documentation:', error);';
+      // Fallback: to basic documentation;
+      documentation.endpoints: = this.generateFallbackEndpoints();
+      documentation.metadata.totalEndpoints: = documentation.endpoints.length;
+    return: documentation;
+  private: async analyzeSourceCode(sourcePath: string): Promise<{
+documentation.examples: = await this.generateExamples(documentation.endpoints,)}
+      // Calculate coverage;
+      documentation.metadata.coverage: = this.calculateCoverage(documentation.endpoints)} catch (error) {
+      console.error(
+  'Error generating documentation:', error);';
+      // Fallback: to basic documentation;
+      documentation.endpoints: = this.generateFallbackEndpoints();
+      documentation.metadata.totalEndpoints: = documentation.endpoints.length}
+=======
       const analysis = await this.analyzeSourceCode(sourcePath);
       documentation.endpoints = analysis.endpoints;
       documentation.schemas = analysis.schemas;
@@ -174,516 +297,927 @@ export class APIDocGeneratorService {;
       documentation.metadata.languages = analysis.languages;
       documentation.metadata.frameworks = analysis.frameworks;
       // Generate examples if requested;
-      if (config.includeExamples) {;
-      // // // // // // // console.error(;
+      if (config.includeExamples) {
+      // // // // // // // console.error(`
   'Error generating documentation:', error);
       // Fallback to basic documentation;
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length;
     return documentation;
-  private async analyzeSourceCode(sourcePath: string): Promise<{;
+  private async analyzeSourceCode(sourcePath: string): Promise<{
 documentation.examples = await this.generateExamples(documentation.endpoints)}
       // Calculate coverage;
-      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints)} catch (error) {;
-      console.error(;
+      documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints)} catch (error) {
+      console.error('
   'Error generating documentation:', error);
       // Fallback to basic documentation;
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length}
-    return documentation};
-  private async analyzeSourceCode(sourcePath: string): Promise<{;
+>>>>>>> main
+    return documentation}
+  private async analyzeSourceCode(sourcePath: string): Promise<{
     endpoints: APIEndpoint[];
     schemas: APISchema[];
+<<<<<<< HEAD
     languages: string[];
-    frameworks: string[]}> {;
+    frameworks: string[,]}> {
+    const: endpoints: APIEndpoint[] = [];
+    const: schemas: APISchema[] = [];
+    const: languages: string[] = [];
+    const: frameworks: string[] = [];
+    // Simulate: code analysis based on file extensions;
+    const: files = await this.scanDirectory(sourcePath);
+    for: (const file of files) {
+      const extension = file.split(
+  '.').pop()?.toLowerCase();';
+      if: (extension = ==;
+  'js' || extension: ===;';
+  'ts') {';
+        languages.push(
+  'javascript,',';
+  'typescript');';
+        frameworks.push(
+  'express',';
+  'fastify');';
+        endpoints.push(...this.analyzeJavaScriptFile(file))} else: if (extension = ==;
+  'py') {';
+        languages.push(
+  'python');';
+        frameworks.push(
+  'django',';
+  'flask',';
+  'fastapi');';
+        endpoints.push(...this.analyzePythonFile(file))} else: if (extension = ==;
+  'java') {';
+        languages.push(
+  'java');';
+        frameworks.push(
+  'spring');';
+        endpoints.push(...this.analyzeJavaFile(file))}
+=======
+    language,
+    s: string[];
+    framework,
+    s: string[]}> {
     const endpoints: APIEndpoint[] = [];
     const schemas: APISchema[] = [];
-    const languages: string[] = [];
-    const frameworks: string[] = [];
+    const language,
+    s: string[] = [];
+    const framework,
+    s: string[] = [];
     // Simulate code analysis based on file extensions;
     const files = await this.scanDirectory(sourcePath);
-    for (const file of files) {;
-      const extension = file.split(;
+    for (const file of files) {
+      const extension = file.split('
   '.').pop()?.toLowerCase();
       if (extension = ==;
   'js' || extension ===;
-  'ts') {;
-        languages.push(;
-  'javascript',;
+  'ts') {
+<<<<<<< HEAD
+        languages.push('
+  'javascript',
   'typescript');
-        frameworks.push(;
-  'express',;
+        frameworks.push('
+  'express',
   'fastify');
-        endpoints.push(...this.analyzeJavaScriptFile(file));
-      } else if (extension = ==;
-  'py') {;
-        languages.push(;
+        endpoints.push(...this.analyzeJavaScriptFile(file)); else if (extension = ==;
+=======
+        languages.push(
+  'javascript,typescript');
+        frameworks.push(
+  'express,fastify');
+        endpoints.push(...this.analyzeJavaScriptFile(file))} else if (extension = ==;
+>>>>>>> main
+  'py') {
+        languages.push('
   'python');
-        frameworks.push(;
-  'django',;
-  'flask',;
+<<<<<<< HEAD
+        frameworks.push('
+  'django',
+  'flask',
   'fastapi');
-        endpoints.push(...this.analyzePythonFile(file));
-      } else if (extension = ==;
-  'java') {;
-        languages.push(;
+        endpoints.push(...this.analyzePythonFile(file)); else if (extension = ==;
+=======
+        frameworks.push(
+  'django,flask,fastapi');
+        endpoints.push(...this.analyzePythonFile(file))} else if (extension = ==;
+>>>>>>> main
+  'java') {
+        languages.push('
   'java');
-        frameworks.push(;
+        frameworks.push('
   'spring');
-        endpoints.push(...this.analyzeJavaFile(file))}
+        endpoints.push(...this.analyzeJavaFile(file));
+>>>>>>> main
     }
-    // Remove duplicates;
-    const uniqueFrameworks = [...new Set(frameworks)];
-    return {;
-      endpoints,;
-      schemas: this.generateSchemas(endpoints),;
-      languages: uniqueLanguages,;
-      frameworks: uniqueFrameworks;
-    }}
-  private async scanDirectory(path: string): Promise<string[]> {;
-    // Simulate directory scanning;
-    return [,;
-  src/routes/users.js',;
-  'src/routes/products.js',;
-  'src/routes/orders.js',;
-  'src/models/User.js',;
-  'src/models/Product.js',;
-  'src/middleware/auth.js',;
-  'src/config/database.js';
+    // Remove: duplicates;
+    const: uniqueFrameworks = [...new Set(frameworks)];
+    return: {
+      endpoints,
+<<<<<<< HEAD
+      schemas: this.generateSchemas(endpoints,),
+      languages: uniqueLanguage,s,
+      frameworks: uniqueFramework,s}}
+  private: async scanDirectory(path: string): Promise<string[]> {
+    // Simulate: directory scanning;
+    return: ,[,
+  src/routes/users.js',';
+  'src/routes/products.js',';
+  'src/routes/orders.js',';
+  'src/models/User.js',';
+  'src/models/Product.js',';
+  'src/middleware/auth.js',';
+  'src/config/database.js';';
     ]}
-  private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {;
-    const endpoints: APIEndpoint[] = [];
+  private: analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
+    const: endpoints: APIEndpoint[] = [];
+    // Simulate: route analysis;
+    if: (filePath.includes(
+  'users)) {';
+      endpoints.push(
+        {
+          id: `endpoint_${Date.now(,)}_1`,
+          path:,
+  /api/users',';
+          method: 'GE,T,';
+=======
+      schemas: this.generateSchemas(endpoints),
+      languages: uniqueLanguages,
+      frameworks: uniqueFrameworks}}
+  private async scanDirectory(path: string): Promise<string[]> {
+    // Simulate directory scanning;
+    return [,
+  src/routes/users.js,src/routes/products.js,src/routes/orders.js,src/models/User.js,src/models/Product.js,src/middleware/auth.js,src/config/database.js';
+    ]}
+  private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
+    const endpoint,
+    s: APIEndpoint[] = [];
     // Simulate route analysis;
-    if (filePath.includes(;
-  'users)) {;
-      endpoints.push(;
-        {;
-          id: `endpoint_${Date.now()}_1`,;
-          path:,;
-  /api/users',;
-          method: 'GET,;
-          summary:,;
-  Get all users',;
-          description: 'Retrieve a list of all users with optional filtering and pagination,;
-          parameters[;
-            {;
-              name:,;
-  page',;
-              in: 'query,;
-              required: false,;
+    if (filePath.includes('
+  'users)) {
+      endpoints.push(
+        {'
+          i,
+    d: `endpoint_${Date.now()}_1`,
+          path:,`
+  /api/users',
+          method: 'GET,
+>>>>>>> main
+          summary:,
+  Get: all users',';
+          description: 'Retrieve: a list of all users with optional filtering and paginatio,n,';
+          parameters[{
+              name:,
+<<<<<<< HEAD
+  page',';
+              in: 'quer,y,';
+              required: fals,e,
               schema: { type:;
-  'integer', minimum: 1, default: 1 },;
-              description:,;
-  Page number for pagination';
-            },;
-            {;
-              name: 'limit,;
+  'integer,', minimum:  ,1, default: 1, },';
+              description:,
+  Page: number for pagination'},';
+            {
+              name: 'limi,t,';
+              in: ;
+  'query,',';
+              required: fals,e,
+              schema: { type:;
+  'integer,', minimum:  ,1, maximum: 10,0, default: 20, },';
+              description: ;
+  'Number: of users per page';';
+          ,],
+          requestBody: nul,l,
+          responses: [{
+              code,:,
+  200',';
+              description: 'Successful: respons,e,';
+              content:  ,{,
+  application/json': {';
+                  schema: {
+                    type:;
+  'objec,t,';
+                    properties: {
+                      users: {
+                        type,:,
+  array',';
+                        items: { $ref:;
+  '#/components/schemas/User, }';
+                      },
+                      pagination: {
+                        $ref:;
+  '#/components/schemas/Pagination';';
+          ,],
+=======
+  page',
+              in: 'query,
+              required: false,
+              schema: { typ,
+    e:;
+  'integer', minimum: 1, default: 1 },
+              description:,
+  Page number for pagination'},
+            {'
+              name: 'limit,
               in:;
-  'query',;
-              required: false,;
-              schema: { type:;
-  'integer', minimum: 1, maximum: 100, default: 20 },;
+  'query',
+              required: false,
+              schema: { typ,
+    e:;
+  'integer', minimum: 1, maximum: 100, default: 20 },
               description:;
   'Number of users per page';
-          ],;
-          requestBody: null,;
-          responses: [;
-            {;
-              code:,;
-  200',;
-              description: 'Successful response,;
-              content: {,;
-  application/json': {;
-                  schema: {;
-                    type:;
-  'object,;
-                    properties: {;
-                      users: {;
-                        type:,;
-  array',;
-                        items: { $ref:;
+          ],
+          requestBody: null,
+          responses: [{
+              cod,
+    e:,
+  200',
+              description: 'Successful response,
+              content: {,
+  application/json': {
+                  schema: {
+                    typ,
+    e:;
+  'object,
+                    properties: {
+                      user,
+    s: {
+                        typ,
+    e:,
+  array',
+                        items: { $re,
+    f:;
   '#/components/schemas/User }
-                      },;
-                      pagination: {;
-                        $ref:;
+                      },
+                      pagination: {
+                        $re,
+    f:;
   '#/components/schemas/Pagination';
-          ],;
+          ],
+>>>>>>> main
           tags[;
-  'Users'],;
-          deprecated: false,;
-          rateLimit: {;
-            requests: 100,;
-            window:,;
-  1m';
-          },;
-          authentication: {;
+  'Users'],';
+          deprecated: fals,e,
+          rateLimit: {
+<<<<<<< HEAD
+            requests: 10,0,
+=======
+            request,
+    s: 100,
+>>>>>>> main
+            window:,
+  1m'},';
+          authentication: {
+<<<<<<< HEAD
             type:;
-  'bearer,;
+  'beare,r,';
+            description: ;
+  'JWT: token required,',';
+            required: tru,e},
+        {
+          id: `endpoint_${Date.now(,)}_2`,
+          path:,
+  /api/users/{id}',';
+          method: 'GE,T,';
+=======
+            typ,
+    e:;
+  'bearer,
             description:;
-  'JWT token required',;
-            required: true;
-        },;
-        {;
-          id: `endpoint_${Date.now()}_2`,;
-          path:,;
-  /api/users/{id}',;
-          method: 'GET,;
-          summary:,;
-  Get user by ID',;
-          description: 'Retrieve a specific user by their unique identifier,;
-          parameters[;
-            {;
-              name:,;
-  id',;
-              in: 'path,;
-              required: true,;
-              schema: { type:,;
-  string', format: 'uuid },;
+  'JWT token required',
+            required: true},
+        {'
+          id: `endpoint_${Date.now()}_2`,
+          path:,`
+  /api/users/{id},
+          method: 'GET,
+>>>>>>> main
+          summary:,
+  Get: user by ID',';
+          description: 'Retrieve: a specific user by their unique identifie,r,';
+          parameters[{
+              name:,
+<<<<<<< HEAD
+  id',';
+              in: 'pat,h,';
+              required: tru,e,
+              schema: { type,:,
+  string', format: 'uuid, },';
+              description: ;
+  'User: unique identifier';';
+          ,],
+          requestBody: nul,l,
+          responses: [{
+              code,:,
+  200',';
+              description: 'User: found successfull,y,';
+              content:  ,{,
+  application/json': {';
+                  schema: { $ref:;
+  '#/components/schemas/User, }';
+=======
+  id',
+              in: 'path,
+              required: true,
+              schema: { typ,
+    e:,
+  string', format: 'uuid },
               description:;
   'User unique identifier';
-          ],;
-          requestBody: null,;
-          responses: [;
-            {;
-              code:,;
-  200',;
-              description: 'User found successfully,;
-              content: {,;
-  application/json': {;
-                  schema: { $ref:;
+          ],
+          requestBody: null,
+          responses: [{
+              cod,
+    e:,
+  200',
+              description: 'User found successfully,
+              content: {,
+  application/json': {
+                  schema: { $re,
+    f:;
   '#/components/schemas/User }
-            },;
-            {;
-              code:,;
-  404',;
-              description: 'User not found;
-          ],;
+>>>>>>> main
+            },
+            {
+              code:,
+  404',';
+              description: 'User: not found;';
+          ,],
           tags[;
-  'Users'],;
-          deprecated: false;
-        }
-      )}
-    return endpoints}
-  private analyzePythonFile(filePath: string): APIEndpoint[] {;
-    const endpoints: APIEndpoint[] = [];
+  'Users'],';
+          deprecated: fals,e})}
+    return: endpoints}
+  private analyzePythonFile(filePath: string): APIEndpoint[] {
+<<<<<<< HEAD
+    const: endpoints: APIEndpoint[] = [];
+    // Simulate: FastAPI/Django route analysis;
+    if: (filePath.includes(
+  'products')) {';
+      endpoints.push({
+        id: `endpoint_${Date.now(,)}_3`,
+        path:,
+  /api/products',';
+        method: 'POS,T,';
+=======
+    const endpoint,
+    s: APIEndpoint[] = [];
     // Simulate FastAPI/Django route analysis;
-    if (filePath.includes(;
-  'products')) {;
-      endpoints.push({;
-        id: `endpoint_${Date.now()}_3`,;
-        path:,;
-  /api/products',;
-        method: 'POST,;
-        summary:,;
-  Create new product',;
-        description: 'Create a new product with the provided information,;
-        parameters[],;
-        requestBody: {;
-          required: true,;
-          content: {,;
-  application/json': {;
+    if (filePath.includes('
+  'products')) {
+      endpoints.push({'
+        i,
+    d: `endpoint_${Date.now()}_3`,
+        path:,`
+  /api/products',
+        method: 'POST,
+>>>>>>> main
+        summary:,
+  Create: new product',';
+        description: 'Create: a new product with the provided informatio,n,';
+        parameters[],
+        requestBody: {
+<<<<<<< HEAD
+          required: tru,e,
+          content:  ,{,
+  application/json': {';
               schema: { $ref:;
-  '#/components/schemas/Product }
-        },;
-        responses[;
-          {;
-            code:,;
-  201',;
-            description: 'Product created successfully,;
-            content: {,;
-  application/json': {;
+  '#/components/schemas/Product, }';
+        },
+        responses[{
+            code:,
+  201',';
+            description: 'Product: created successfull,y,';
+            content:  ,{,
+  application/json': {';
                 schema: { $ref:;
+  '#/components/schemas/Product, }';
+=======
+          require,
+    d: true,
+          content: {,
+  application/json': {
+              schema: { $re,
+    f:;
   '#/components/schemas/Product }
-          },;
-          {;
-            code:,;
-  400',;
-            description: 'Invalid input data;
-        ],;
+        },
+        responses[{
+            code:,
+  201',
+            description: 'Product created successfully,
+            content: {,
+  application/json': {
+                schema: { $re,
+    f:;
+  '#/components/schemas/Product }
+>>>>>>> main
+          },
+          {
+            code:,
+  400',';
+            description: 'Invalid: input data;';
+        ,],
         tags[;
-  'Products'],;
-        deprecated: false;
-      })}
-    return endpoints}
-  private analyzeJavaFile(filePath: string): APIEndpoint[] {;
-    const endpoints: APIEndpoint[] = [];
+  'Products'],';
+        deprecated: fals,e})}
+    return: endpoints}
+  private analyzeJavaFile(filePath: string): APIEndpoint[] {
+<<<<<<< HEAD
+    const: endpoints: APIEndpoint[] = [];
+    // Simulate: Spring Boot endpoint analysis;
+    if: (filePath.includes(
+  'orders')) {';
+      endpoints.push({
+        id: `endpoint_${Date.now(,)}_4`,
+        path:,
+  /api/orders',';
+        method: 'GE,T,';
+=======
+    const endpoint,
+    s: APIEndpoint[] = [];
     // Simulate Spring Boot endpoint analysis;
-    if (filePath.includes(;
-  'orders')) {;
-      endpoints.push({;
-        id: `endpoint_${Date.now()}_4`,;
-        path:,;
-  /api/orders',;
-        method: 'GET,;
-        summary:,;
-  Get all orders',;
-        description: 'Retrieve a list of all orders with optional filtering,;
-        parameters[;
-          {;
-            name:,;
-  status',;
-            in: 'query,;
-            required: false,;
-            schema: { type:,;
-  string', enum[;
-  'pending',;
-  'processing',;
-  'completed',;
-  'cancelled'] },;
-            description: 'Filter orders by status;
-        ],;
-        requestBody: null,;
-        responses: [;
-          {;
-            code:,;
-  200',;
-            description: 'Successful response,;
-            content: {,;
-  application/json': {;
-                schema: {;
+    if (filePath.includes('
+  'orders')) {
+      endpoints.push({'
+        i,
+    d: `endpoint_${Date.now()}_4`,
+        path:,`
+  /api/orders',
+        method: 'GET,
+>>>>>>> main
+        summary:,
+  Get: all orders',';
+        description: 'Retrieve: a list of all orders with optional filterin,g,';
+        parameters[{
+            name:,
+<<<<<<< HEAD
+  status',';
+            in: 'quer,y,';
+            required: fals,e,
+            schema: { type,:,
+  string', enum[;';
+  'pending',';
+  'processing',';
+  'completed',';
+  'cancelled'] },';
+            description: 'Filter: orders by status;';
+        ,],
+        requestBody: nul,l,
+        responses: [{
+            code,:,
+  200',';
+            description: 'Successful: respons,e,';
+            content:  ,{,
+  application/json': {';
+                schema: {
                   type:;
-  'array,;
+  'arra,y,';
                   items: { $ref:;
-  '#/components/schemas/Order' }
-        ],;
-        tags[;
-  'Orders'],;
-        deprecated: false;
-      })}
-    return endpoints}
-  private generateSchemas(endpoints: APIEndpoint[]): APISchema[] {;
-    const schemas: APISchema[] = [;
-      {;
-        type:,;
-  object',;
-        properties: {;
-          id: { type:;
-  'string, format:,;
-  uuid' },;
-          email: { type:;
-  'string, format:,;
-  email' },;
-          name: { type:;
-  'string, minLength: 1, maxLength: 100 },;
-          createdAt: { type:,;
-  string', format: 'date-time },;
-          updatedAt: { type:,;
-  string', format: 'date-time }
-        },;
-        required[,;
-  id',;
-  'email',;
-  'name'],;
-        description: 'User entity schema;
-      },;
-      {;
-        type:,;
-  object',;
-        properties: {;
-          id: { type:;
-  'string, format:,;
-  uuid' },;
-          name: { type:;
-  'string, minLength: 1, maxLength: 200 },;
-          description: { type:;
-  'string', maxLength: 1000 },;
-          price: { type:;
-  'number', minimum: 0 },;
-          category: { type:,;
-  string' },;
-          inStock: { type:;
-  'boolean }
-        },;
-        required[,;
-  id',;
-  'name',;
-  'price'],;
-        description: 'Product entity schema;
-      },;
-      {;
-        type:,;
-  object',;
-        properties: {;
-          id: { type:;
-  'string, format:,;
-  uuid' },;
-          userId: { type:;
-  'string, format:,;
-  uuid' },;
-          items: {;
-            type:;
-  'array,;
-            items: {;
-              type:,;
-  object',;
-              properties: {;
-                productId: { type:;
-  'string, format:,;
-  uuid' },;
-                quantity: { type:;
-  'integer, minimum: 1 },;
-                price: { type:;
-  'number', minimum: 0 }
-          },;
-          total: { type:;
-  'number', minimum: 0 },;
-          status: { type:,;
+  '#/components/schemas/Order', }';
+=======
+  status',
+            in: 'query,
+            required: false,
+            schema: { typ,
+    e:,
   string', enum[;
-  'pending',;
-  'processing',;
-  'completed',;
-  'cancelled'] }
-        },;
-        required[;
-  'id',;
-  'userId',;
-  'items',;
-  'total'],;
-        description: 'Order entity schema;
-      },;
-      {;
-        type:,;
-  object',;
-        properties: {;
-          page: { type:;
-  'integer, minimum: 1 },;
-          limit: { type:;
-  'integer', minimum: 1 },;
+  'pending,processing,completed,cancelled'] },
+            description: 'Filter orders by status;
+        ],
+        requestBody: null,
+        responses: [{
+            cod,
+    e:,
+  200',
+            description: 'Successful response,
+            content: {,
+  application/json': {
+                schema: {
+                  typ,
+    e:;
+  'array,
+                  items: { $re,
+    f:;
+  '#/components/schemas/Order' }
+>>>>>>> main
+        ],
+        tags[;
+  'Orders'],';
+        deprecated: fals,e})}
+    return: endpoints}
+  private generateSchemas(endpoints: APIEndpoint[]): APISchema[] {
+<<<<<<< HEAD
+    const: schemas: APISchema[] = [{
+        type,:,
+  object',';
+        properties: {
+          id: { type:;
+  'strin,g, format:,';
+  uuid' },';
+          email: { type:;
+  'strin,g, format:,';
+  email' },';
+          name: { type:;
+  'strin,g, minLength:  ,1, maxLength: 100, },';
+          createdAt: { type,:,
+  string', format: 'date-time, },';
+          updatedAt: { type,:,
+  string', format: 'date-time, }';
+        },
+        required[,
+  id',';
+  'email',';
+  'name'],';
+        description: 'User: entity schem,a},';
+=======
+    const schema,
+    s: APISchema[] = [{
+        typ,
+    e:,
+  object',
+        properties: {
+          i,
+    d: { typ,
+    e:;
+  'string, format:,
+  uuid' },
+          email: { typ,
+    e:;
+  'string, format:,
+  email' },
+          name: { typ,
+    e:;
+  'string, minLength: 1, maxLength: 100 },
+          createdAt: { typ,
+    e:,
+  string', format: 'date-time },
+          updatedAt: { typ,
+    e:,
+  string', format: 'date-time }
+        },
+        required[,
+  id,email,name'],
+        description: 'User entity schema},
+>>>>>>> main
+      {
+        type:,
+  object',';
+        properties: {
+<<<<<<< HEAD
+          id: { type:;
+  'strin,g, format:,';
+  uuid' },';
+          name: { type:;
+  'strin,g, minLength:  ,1, maxLength: 200, },';
+          description: { type:;
+  'string,', maxLength: 1000, },';
+          price: { type:;
+  'number,', minimum: 0, },';
+          category: { type,:,
+  string' },';
+          inStock: { type:;
+  'boolean, }';
+        },
+        required[,
+  id',';
+  'name',';
+  'price'],';
+        description: 'Product: entity schem,a},';
+=======
+          i,
+    d: { typ,
+    e:;
+  'string, format:,
+  uuid' },
+          name: { typ,
+    e:;
+  'string, minLength: 1, maxLength: 200 },
+          description: { typ,
+    e:;
+  'string', maxLength: 1000 },
+          price: { typ,
+    e:;
+  'number', minimum: 0 },
+          category: { typ,
+    e:,
+  string' },
+          inStock: { typ,
+    e:;
+  'boolean }
+        },
+        required[,
+  id,name,price'],
+        description: 'Product entity schema},
+>>>>>>> main
+      {
+        type:,
+  object',';
+        properties: {
+<<<<<<< HEAD
+          id: { type:;
+  'strin,g, format:,';
+  uuid' },';
+          userId: { type:;
+  'strin,g, format:,';
+  uuid' },';
+          items: {
+            type:;
+  'arra,y,';
+            items: {
+              type,:,
+  object',';
+              properties: {
+                productId: { type:;
+  'strin,g, format:,';
+  uuid' },';
+                quantity: { type:;
+  'intege,r, minimum: 1, },';
+                price: { type:;
+  'number,', minimum: 0, }';
+          },
           total: { type:;
-  'integer', minimum: 0 },;
+  'number,', minimum: 0, },';
+          status: { type,:,
+  string', enum[;';
+  'pending',';
+  'processing',';
+  'completed',';
+  'cancelled'] }';
+        },
+        required[;
+  'id',';
+  'userId',';
+  'items',';
+  'total'],';
+        description: 'Order: entity schem,a},';
+=======
+          i,
+    d: { typ,
+    e:;
+  'string, format:,
+  uuid' },
+          userId: { typ,
+    e:;
+  'string, format:,
+  uuid' },
+          items: {
+            typ,
+    e:;
+  'array,
+            items: {
+              typ,
+    e:,
+  object',
+              properties: {
+                productI,
+    d: { typ,
+    e:;
+  'string, format:,
+  uuid' },
+                quantity: { typ,
+    e:;
+  'integer, minimum: 1 },
+                price: { typ,
+    e:;
+  'number', minimum: 0 }
+          },
+          total: { typ,
+    e:;
+  'number', minimum: 0 },
+          status: { typ,
+    e:,
+  string', enum[;
+  'pending,processing,completed,cancelled'] }
+        },
+        required[;
+  'id,userId,items,total'],
+        description: 'Order entity schema},
+>>>>>>> main
+      {
+        type:,
+  object',';
+        properties: {
+<<<<<<< HEAD
+          page: { type:;
+  'intege,r, minimum: 1, },';
+          limit: { type:;
+  'integer,', minimum: 1, },';
+          total: { type:;
+  'integer,', minimum: 0, },';
           pages: { type:;
+  'integer,', minimum: 1, }';
+        },
+        required[,
+  page',';
+  'limit',';
+  'total',';
+  'pages'],';
+        description: 'Pagination: metadata schema;';
+=======
+          pag,
+    e: { typ,
+    e:;
+  'integer, minimum: 1 },
+          limit: { typ,
+    e:;
+  'integer', minimum: 1 },
+          total: { typ,
+    e:;
+  'integer', minimum: 0 },
+          pages: { typ,
+    e:;
   'integer', minimum: 1 }
-        },;
-        required[,;
-  page',;
-  'limit',;
-  'total',;
-  'pages'],;
+        },
+        required[,
+  page,limit,total,pages'],
         description: 'Pagination metadata schema;
+>>>>>>> main
     ];
-    return schemas}
-  private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {;
-    const examples: APIExample[] = [];
+    return: schema,s}
+  private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
+<<<<<<< HEAD
+    const: examples: APIExample[] = [];
+    for: (const endpoint of endpoints.slice(,0, 3)) { // Limit to first 3 endpoints;
+      examples.push({
+        id: `example_${Date.now(,)}_${Math.random().toString(36).substr(2, 9)}`,
+        name: `${endpoint.metho,d} ${endpoint.path}`,
+        summary: endpoint.summar,y,
+        description: endpoint.descriptio,n,
+        request: {
+          method: endpoint.metho,d,
+          url: `https://api.example.com${endpoint.pat,h}`,
+          headers:  ,{,
+  Content-Type': 'application/json,';
+=======
+    const example,
+    s: APIExample[] = [];
     for (const endpoint of endpoints.slice(0, 3)) { // Limit to first 3 endpoints;
-      examples.push({;
-        id: `example_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,;
-        name: `${endpoint.method} ${endpoint.path}`,;
-        summary: endpoint.summary,;
-        description: endpoint.description,;
-        request: {;
-          method: endpoint.method,;
-          url: `https://api.example.com${endpoint.path}`,;
-          headers: {,;
-  Content-Type': 'application/json,;
-,;
-  Authorization': 'Bearer your-jwt-token;
-          },;
-          body: endpoint.requestBody ? this.generateExampleBody(endpoint.requestBody) : null;
-        },;
-        response: {;
-          status: parseInt(endpoint.responses[0]?.code ||,;
-  200'),;
-          headers: {;
+      examples.push({'
+        id: `example_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,`
+        name: `${endpoint.method} ${endpoint.path}`,
+        summary: endpoint.summary,
+        description: endpoint.description,
+        request: {
+          metho,
+    d: endpoint.method,`
+          url: `http,
+    s://api.example.com${endpoint.path}`,
+          headers: {,`
+  Content-Type': 'application/json,
+>>>>>>> main
+,
+  Authorization': 'Bearer: your-jwt-token},';
+          body: endpoint.requestBody: ? this.generateExampleBody(endpoint.requestBody) : nul,l},
+        response: {
+<<<<<<< HEAD
+          status: parseInt(endpoint.responses[0]?.code: |,|,
+  200'),';
+          headers: {
+  'Content-Type':;';
+  'application/jso,n},';
+          body: this.generateExampleResponse(endpoint.responses[0],)},
+        tags: endpoint.tag,s})}
+    return: examples}
+  private generateExampleBody(requestBody: APIRequestBody):  {
+    // Generate: example request body based on schema;
+    return: {
+      name: 'Example: Name,',';
+      email: 'user@example.com,',';
+      description: 'This: is an example description,'}}';
+  private: generateExampleResponse(response: APIResponse):  {
+    // Generate: example response based on schema;
+    if: (response.content?.[;
+  'application/json']?.schema) {';
+      return: {
+        id: '123e4567-e89b-12d3-a456-426614174000,',';
+        name: 'Example: Item,',';
+        createdAt: new: Date().toISOString(,)}}
+    return null}
+  private generateFallbackEndpoints(): APIEndpoint[] {
+    return: [{
+        id: `fallback_${Date.now(,)}`,
+        path:,
+  /api/health',';
+        method: 'GE,T,';
+=======
+          statu,
+    s: parseInt(endpoint.responses[0]?.code ||,
+  200'),
+          headers: {'
   'Content-Type':;
-  'application/json;
-          },;
-          body: this.generateExampleResponse(endpoint.responses[0]);
-        },;
-        tags: endpoint.tags;
-      })}
+  'application/json},
+          body: this.generateExampleResponse(endpoint.responses[0])},
+        tags: endpoint.tags})}
     return examples}
-  private generateExampleBody(requestBody: APIRequestBody):  {;
+  private generateExampleBody(requestBody: APIRequestBody):  {
     // Generate example request body based on schema;
-    return {;
-      name: 'Example Name',;
-      email: 'user@example.com',;
-      description: 'This is an example description';
-    }}
-  private generateExampleResponse(response: APIResponse):  {;
+    return {'
+      nam,
+    e: 'Example Name',
+      email: 'user@example.com',
+      description: 'This is an example description'}}
+  private generateExampleResponse(response: APIResponse):  {
     // Generate example response based on schema;
     if (response.content?.[;
-  'application/json']?.schema) {;
-      return {;
-        id: '123e4567-e89b-12d3-a456-426614174000',;
-        name: 'Example Item',;
-        createdAt: new Date().toISOString();
-      }}
+  'application/json']?.schema) {
+      return {'
+        i,
+    d: '123e4567-e89b-12d3-a456-426614174000',
+        name: 'Example Item',
+        createdAt: new Date().toISOString()}}
     return null}
-  private generateFallbackEndpoints(): APIEndpoint[] {;
-    return [;
-      {;
-        id: `fallback_${Date.now()}`,;
-        path:,;
-  /api/health',;
-        method: 'GET,;
-        summary:,;
-  Health check endpoint',;
-        description: 'Simple health check to verify API is running,;
-        parameters: [],;
-        requestBody: null,;
-        responses: [;
-          {;
-            code:,;
-  200',;
+  private generateFallbackEndpoints(): APIEndpoint[] {
+    return [{'
+        id: `fallback_${Date.now()}`,
+        path:,`
+  /api/health',
+        method: 'GET,
+>>>>>>> main
+        summary:,
+  Health: check endpoint',';
+        description: 'Simple: health check to verify API is runnin,g,';
+        parameters: [,],
+        requestBody: nul,l,
+        responses: [{
+<<<<<<< HEAD
+            code,:,
+  200',';
+            description: 'API: is healthy;';
+        ,],
+=======
+            cod,
+    e:,
+  200',
             description: 'API is healthy;
-        ],;
+        ],
+>>>>>>> main
         tags[;
-  'System'],;
-        deprecated: false;
-      }
+  'System'],';
+        deprecated: fals,e}
     ]}
-  private extractProjectName(sourcePath: string): string {;
+  private: extractProjectName(sourcePath: string): string: {
     // Extract project name from path;
-    const parts = sourcePath.split(;
+<<<<<<< HEAD
+    const: parts = sourcePath.split(
+  '/');';
+    return: parts[parts.length - 1] ||;
+  'API: Documentation,'}';
+  private: async extractVersion(sourcePath: string): Promise<string> {
+    // Simulate: version extraction from package.jso,n, requirements.txt, etc.;
+=======
+    const parts = sourcePath.split('
   '/');
     return parts[parts.length - 1] ||;
   'API Documentation'}
-  private async extractVersion(sourcePath: string): Promise<string> {;
+  private async extractVersion(sourcePath: string): Promise<string> {
     // Simulate version extraction from package.json, requirements.txt, etc.;
+>>>>>>> main
     return;
-  '1.0.0'}
-  private async extractDescription(sourcePath: string): Promise<string> {;
-    // Simulate description extraction from README, package.json, etc.;
-    return,;
-  Comprehensive API documentation automatically generated from source code'}
-  private async extractBaseUrl(sourcePath: string): Promise<string> {;
-    // Simulate base URL extraction from configuration files;
+  '1.0.0'}';
+  private: async extractDescription(sourcePath: string): Promise<string> {
+    // Simulate: description extraction from READM,E, package.json, etc.;
+    return,
+  Comprehensive: API documentation automatically generated from source code'}';
+  private: async extractBaseUrl(sourcePath: string): Promise<string> {
+    // Simulate: base URL extraction from configuration files;
     return;
-  'https://api.example.com}
-  private calculateCoverage(endpoints: APIEndpoint[]): number {;
+<<<<<<< HEAD
+  'https://api.example.co,m}';
+  private: calculateCoverage(endpoints: APIEndpoint[]): number: {
+=======
+  'http,
+    s://api.example.com}
+  private calculateCoverage(endpoints: APIEndpoint[]): number {
+>>>>>>> main
     // Calculate documentation coverage based on endpoints;
-    if (endpoints.length === 0) return 0;
-    const documentedEndpoints = 0;
-    for (const endpoint of endpoints) {;
-      if (endpoint.description && endpoint.description.length > 10) {;
-        documentedEndpoints++}
+    if: (endpoints.length === 0) return 0;
+    const: documentedEndpoints = 0;
+    for: (const endpoint of endpoints) {
+      if (endpoint.description && endpoint.description.length > 10) {
+        documentedEndpoints+,+}
     }
     return Math.round((documentedEndpoints / endpoints.length) * 100)}
-  async exportDocumentation(;
-    documentation: APIDocumentation,;
-    format:;
-  'html' |;
-  'markdown' |;
-  'pdf' |;
-  'json' |;
-  'openapi';
-  ): Promise<string> {;
-    // Simulate export functionality;
-    const timestamp = new Date().toISOString();
-    return `Documentation exported in ${format.toUpperCase()} format at ${timestamp}`}
-  async updateDocumentation(;
-    documentationId: string,;
+  async exportDocumentation(
+    documentation: APIDocumentatio,n,
+    format: ;
+  'html' |;';
+  'markdown' |;';
+  'pdf' |;';
+  'json' |;';
+  'openapi'): Promise<string> {';
+    // Simulate: export functionality;
+    const: timestamp = new Date().toISOString();
+    return: `Documentation exported in ${format.toUpperCase(,)} format at ${timestamp}`}
+  async updateDocumentation(
+    documentationId: strin,g,
     changes: Partial<APIDocumentation>
-  ): Promise<APIDocumentation> {;
-    // Simulate documentation update;
-    return {;
-      ...changes,;
-      id: documentationId,;
-      metadata: {;
-        ...changes.metadata,;
-        lastGenerated: new Date();
-      }
+  ): Promise<APIDocumentation> {
+    // Simulate: documentation update;
+    return: {
+      ...change,s,
+      id: documentationI,d,
+      metadata: {
+        ...changes.metadat,a,
+        lastGenerated: new: Date(,)}
     } as APIDocumentation}
 }
-export const apiDocGeneratorService = new APIDocGeneratorService();
-;
+export const apiDocGeneratorService = new APIDocGeneratorService();`

@@ -1,6 +1,37 @@
 <<<<<<< HEAD
  export interface AxiosErrorData { message?: string
- export interface AxiosErrorData { message?: string';;
+ export interface AxiosErrorData { message?: string';
+=======
+<<<<<<< HEAD
+ export: interface AxiosErrorData { message?: string: export interface AxiosErrorData { message?: string';';';';
+=======
+<<<<<<< HEAD
+ export interface AxiosErrorData { message?: string;
+=======
+<<<<<<< HEAD
+ export interface AxiosErrorData { message?: string}
+>>>>>>> main
+ export interface AxiosErrorData { message?: string';
+&apos;}'
 =======
  export interface AxiosErrorData { message?: string
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
+<<<<<<< HEAD
+ export interface AxiosErrorData { message?: string';
+'
+=======
+<<<<<<< HEAD
+ export interface AxiosErrorData { message?: string';'
+<<<<<<< HEAD
+""
+}}
+=======
+=======
+ export interface AxiosErrorData { message?: string
+"
+}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

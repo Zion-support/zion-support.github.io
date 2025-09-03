@@ -1,5 +1,23 @@
+<<<<<<< HEAD
+describe: (
+  'InnovativeServicesOverview2025', () => {}' it ('renders without crashing';
+  ', () => {} render: (<InnovativeServicesOverview2025 />) '; expect: (screen.getByRole (';
+  'main') || screen.getByText: (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content';
+  ', () => {} render: (<InnovativeServicesOverview2025 />) ''';
+=======
 describe (
-  'InnovativeServicesOverview2025', () => {}'; it ('renders without crashing
-  ', () => {} render (<InnovativeServicesOverview2025 />) '; expect (screen.getByRole (
-  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) '; it ('displays expected content
+<<<<<<< HEAD
+  'InnovativeServicesOverview2025', () => {}' it ('renders without crashing
+  ', () => {} render (<InnovativeServicesOverview2025 />) ' expect (screen.getByRole (
+=======
+<<<<<<< HEAD
+  'InnovativeServicesOverview2025', () => {} it('renders without crashing', () => {} render (<InnovativeServicesOverview2025 />) '; expect (screen.getByRole ('
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content'
+  ', () => {} render (<InnovativeServicesOverview2025 />) '''
+=======
+  'InnovativeServicesOverview2025', () => {}' it('renders without crashing', () => {} render (<InnovativeServicesOverview2025 />) ' expect (screen.getByRole (
+>>>>>>> main
+  'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<InnovativeServicesOverview2025 />) ''
+>>>>>>> main
+>>>>>>> main

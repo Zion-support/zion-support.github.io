@@ -1,36 +1,35 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
-// Function to check if a file exists
+// Function to check if a file exists;
 function fileExists(filePath) {
   return fs.existsSync(filePath);
 }
 
-// Function to check export type
+// Function to check export type;
 function checkExportType(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const hasDefaultExport = content.includes('export default');
     const hasNamedExports = content.match(
-      /export\s+(?:function|const|class)\s+(\w+)/g
+      /export\s+(?:function|const|class)\s+(\w+)/g;
     );
 
     if (hasDefaultExport) {
       return 'default';
     } else if (hasNamedExports) {
-      // Get the first named export
+      // Get the first named export;
       const match = content.match(/export\s+(?:function|const|class)\s+(\w+)/);
       return match ? match[1] : null;
     }
     return null;
-  } catch (error) {
+  } catch (error) { 
     return null;
-  }
+   }
 }
 
-// Function to fix App.tsx imports
+// Function to fix App.tsx imports;
 function fixAppImports() {
   const appPath = path.join(process.cwd(), 'src/App.tsx');
 
@@ -41,7 +40,7 @@ function fixAppImports() {
 
   let content = fs.readFileSync(appPath, 'utf8');
 
-  // Define the pages to check
+  // Define the pages to check;
   const pages = [
     { name: 'HomePage', path: 'src/pages/HomePage.tsx' },
     { name: 'ServicesPage', path: 'src/pages/ServicesPage.tsx' },
@@ -77,30 +76,30 @@ function fixAppImports() {
     { name: 'PricingPage', path: 'src/pages/PricingPage.tsx' },
   ];
 
-  // Check each page and fix imports
+  // Check each page and fix imports;
   pages.forEach(page => {
     const filePath = path.join(process.cwd(), page.path);
 
     if (fileExists(filePath)) {
       const exportType = checkExportType(filePath);
 
-      if (exportType === 'default') {
-        // Fix to use default import
+      if (exportType === `default`) {
+        // Fix to use default import;
         const oldPattern = new RegExp(
-          `const ${page.name} = lazy\\(\\(\\) => import\\('\\.\\/pages\\/${page.name}'\\)\\.then\\(module => \\(\\{ default: module\\.${page.name} \\}\\)\\)\\);`
+          `const ${page.name} = lazy\\(\\(\\) => import\\(`\\.\\/pages\\/${page.name}`\\)\\.then\\(module => \\(\\{ default: module\\.${page.name} \\}\\)\\)\\);`
         );
-        const newImport = `const ${page.name} = lazy(() => import('./pages/${page.name}'));`;
+        const newImport = `const ${page.name} = lazy(() => import(`./pages/${page.name}`));`;
 
         if (oldPattern.test(content)) {
           content = content.replace(oldPattern, newImport);
           console.log(`Fixed ${page.name} import to use default export`);
         }
       } else if (exportType) {
-        // Fix to use named import
+        // Fix to use named import;
         const oldPattern = new RegExp(
-          `const ${page.name} = lazy\\(\\(\\) => import\\('\\.\\/pages\\/${page.name}'\\)\\.then\\(module => \\(\\{ default: module\\.${page.name} \\}\\)\\)\\);`
+          `const ${page.name} = lazy\\(\\(\\) => import\\(`\\.\\/pages\\/${page.name}`\\)\\.then\\(module => \\(\\{ default: module\\.${page.name} \\}\\)\\)\\);`
         );
-        const newImport = `const ${page.name} = lazy(() => import('./pages/${page.name}').then(module => ({ default: module.${exportType} })));`;
+        const newImport = `const ${page.name} = lazy(() => import(`./pages/${page.name}`).then(module => ({ default: module.${exportType} })));`;
 
         if (oldPattern.test(content)) {
           content = content.replace(oldPattern, newImport);
@@ -118,10 +117,10 @@ function fixAppImports() {
     }
   });
 
-  // Write the fixed content back
+  // Write the fixed content back;
   fs.writeFileSync(appPath, content);
-  console.log('App.tsx imports fixed');
+  console.log(`App.tsx imports fixed`);
 }
 
-// Run the fix
+// Run the fix;
 fixAppImports();

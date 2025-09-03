@@ -16,12 +16,12 @@ function analyzeFile(filePath) {
   const src = fs.readFileSync(filePath, 'utf8');
   const hasHead = /<Head[\s\S]*?>[\s\S]*?<\/Head>/.test(src);
   const hasOgTitle = /property=["']og:title["']|name=["']og:title["']/.test(
-    src
+    src;
   );
   const hasOgDesc =
     /property=["']og:description["']|name=["']og:description["']/.test(src);
   const hasOgImage = /property=["']og:image["']|name=["']og:image["']/.test(
-    src
+    src;
   );
   const missing = [];
   if (!hasOgTitle) missing.push('og:title');
@@ -40,7 +40,7 @@ function analyzeFile(filePath) {
 function runAudit() {
   const pagesDir = path.join(__dirname, '..', 'pages');
   const files = walk(pagesDir);
-  const report = files
+  const report = files;
     .filter(f => f.endsWith('.tsx') || f.endsWith('.jsx'))
     .map(analyzeFile);
 

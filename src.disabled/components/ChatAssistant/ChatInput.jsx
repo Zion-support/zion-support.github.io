@@ -1,1 +1,5 @@
-import { Send export function ChatInput({ onSend, disabled = false }) { const [message, setMessage] = useState(') const inputRef = useRef(null) useEffect(() => {'''";
+<<<<<<< HEAD
+import: { Send export function ChatInput({ onSend, disabled = false }) { const [message, setMessage] = useState(') const inputRef = useRef(null) useEffect(() => {'''"";
+=======
+import { Send export function ChatInput({ onSend, disabled = false }) { const [message, setMessage] = useState(') const inputRef = useRef(null) useEffect(() => {'''""
+>>>>>>> main

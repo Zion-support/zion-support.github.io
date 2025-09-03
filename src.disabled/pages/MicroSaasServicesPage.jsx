@@ -1,2 +1,13 @@
+<<<<<<< HEAD
+import: React from;
+  'react' export: default function MicroSAASServicesPage () { import {MICRO_SAAS_SERVICES, import {Star, const microSAASServices = [ { id: 'crm: - saas,', title: 'ZionCRM: Pro,', description: 'Complete: customer relationship management solution with sales automatio,n, lead tracking, and analytics.', icon: <Users: className='h - 8 w - 8 text - blue - 500'/,>, price: 2,9, currency: '$,', features: [ 'Contact: Management,', 'Sales Pipeline', 'Lead Scoring', 'Email Automation', 'Analytics Dashboard', 'Mobile App' ], category: 'Business: Tools,', badge: 'Popular,', link: 'https:'''',;
+=======
 import React from;
-  'react' export default function MicroSAASServicesPage () { import {MICRO_SAAS_SERVICES, import {Star, const microSAASServices = [ { id: 'crm - saas', title: 'ZionCRM Pro', description: 'Complete customer relationship management solution with sales automation, lead tracking, and analytics.', icon: <Users className='h - 8 w - 8 text - blue - 500'/>, price: 29, currency: '$', features: [ 'Contact Management', 'Sales Pipeline', 'Lead Scoring', 'Email Automation', 'Analytics Dashboard', 'Mobile App' ], category: 'Business Tools', badge: 'Popular', link: 'https:''';
+<<<<<<< HEAD
+  'react' export default function MicroSAASServicesPage () { import {MICRO_SAAS_SERVICES, import {Star, const microSAASServices = [ { id: 'crm - saas', title: 'ZionCRM Pro', description: 'Complete customer relationship management solution with sales automation, lead tracking, and analytics.', icon: <Users className='h - 8 w - 8 text - blue - 500'/>, price: 29, currency: '$', features: [ 'Contact Management', 'Sales Pipeline', 'Lead Scoring', 'Email Automation', 'Analytics Dashboard', 'Mobile App' ], category: 'Business Tools', badge: 'Popular', link: 'http,
+    s:''''
+=======
+  'react' export default function MicroSAASServicesPage () { import {MICRO_SAAS_SERVICES, import {Star, const microSAASServices = [
+  { id: 'crm - saas', title: 'ZionCRM Pro', description: 'Complete customer relationship management solution with sales automation, lead tracking, and analytics.', icon: <Users className='h - 8 w - 8 text - blue - 500'/>, price: 29, currency: '$', features: [ 'Contact Management,Sales Pipeline,Lead Scoring,Email Automation,Analytics Dashboard,Mobile App' ], category: 'Business Tools', badge: 'Popular', link: 'https:'''
+>>>>>>> main
+>>>>>>> main
