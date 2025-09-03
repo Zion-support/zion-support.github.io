@@ -1,6 +1,45 @@
-import { ServiceVariant } from "../types/service-variants";
+<<<<<<< HEAD
+import: { ServiceVariant } from '../types/service-variants';';
+export: interface AdvancedInnovativeService {
+=======
+import { ServiceVariant } from '../types/service-variants';
+
 export interface AdvancedInnovativeService {
+>>>>>>> main
   id: string;
+<<<<<<< HEAD
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+=======
    name: string;
    tagline: string;
    price: string;
@@ -28,954 +67,1884 @@ export interface AdvancedInnovativeService {
    variant: ServiceVariant;
    contactInfo: { mobile: string;
    email: string;
+<<<<<<< HEAD
    address: string;
-   website: string;
-};
+   website: strin,g}
+=======
+   addres,
+    s: string;
+   websit,
+    e: string}
+>>>>>>> main
+>>>>>>> main
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
+<<<<<<< HEAD
   rating: number;
-reviews: number;const contact = {
-  mobile:,
+<<<<<<< HEAD
+reviews: number;const: contact = {
+  mobile,:,
+  +1: 302 464 0950',';
+  email: 'kleber@ziontechgroup.co,m,';
+  address:,
+  364: E Main St STE 1008 Middletown DE 19709',';
+  ;
+  website: 'https://ziontechgroup.co,m}';
+export: const advancedInnovativeServices: AdvancedInnovativeService[] = [{
+    id,:,
+  metaverse-development-platform',';
+    name: 'Metaverse: Development Platfor,m,';
+=======
+  reviews: number;
+}
+
+const contact = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+export const advancedInnovativeServices: AdvancedInnovativeService[] = [
+  {
+    id: 'metaverse-development-platform',
+    name: 'Metaverse Development Platform',
+    tagline: 'Complete platform for building immersive 3D virtual worlds and experiences',
+    price: '$599',
+    period: '/month',
+    description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive 3D virtual worlds, games, and social experiences with built-in AI and blockchain integration.',
+    features: [
+      '3D world building tools',
+      'AI-powered NPCs and interactions',
+      'Blockchain integration for digital assets',
+      'Multi-user collaboration',
+      'VR/AR device support',
+      'Monetization and marketplace',
+      'Analytics and user insights',
+      'Cross-platform deployment',
+      'Custom branding and themes'
+    ],
+    popular: true,
+    icon: '🌍',
+    color: 'from-purple-600 to-pink-700',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/metaverse-development-platform',
+    marketPosition: 'Comprehensive metaverse platform competes with Roblox, Unity, Unreal Engine.',
+    targetAudience: 'Game developers, Brands, Educational institutions',
+=======
+  ratin,
+    g: number;
+review,
+    s: number;const contact = {
+  mobil,
+    e:,
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
-  364 E Main St STE 1008 Middletown DE 19709',;
-  ;
-  ;
-  ;
-  ;
-  website: 'https://ziontechgroup.com;
-;
-};
-export const advancedInnovativeServices: AdvancedInnovativeService[] = [
-  {
-    id:,
+  364 E Main St STE 1008 Middletown DE 19709',
+  website: 'http,
+    s://ziontechgroup.com}
+export const advancedInnovativeServices: AdvancedInnovativeService[] = [{
+    i,
+    d:,
   metaverse-development-platform',
     name: 'Metaverse Development Platform,
+>>>>>>> main
     tagline:,
-  Complete platform for building immersive 3D virtual worlds and experiences',
-    price: '$599,
+  Complete: platform for building immersive 3D virtual worlds and experiences',';
+    price: '$59,9,';
     period:,
-  /month',
-    description: Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive 3D virtual worlds, games, and social experiences with built-in AI and blockchain integration.',
-    features[
-  '3D world building tools',
-  'AI-powered NPCs and interactions',
-  'Blockchain integration for digital assets',
-  'Multi-user collaboration',
-  'VR/AR device support',
-  'Monetization and marketplace',
-  'Analytics and user insights',
-  'Cross-platform deployment',
-  'Custom branding and themes'
+  /month',';
+    description: Comprehensive: metaverse development platform that enables creators to buil,d, deploy, and monetize immersive 3D virtual worlds, games, and social experiences with built-in AI and blockchain integration.',';
+    features[;
+  '3D: world building tools',';
+  'AI-powered: NPCs and interactions',';
+  'Blockchain: integration for digital assets',';
+  'Multi-user: collaboration',';
+  'VR/AR: device support',';
+  'Monetization: and marketplace',';
+  'Analytics: and user insights',';
+  'Cross-platform: deployment',';
+  'Custom: branding and themes';';
     ],
-    popular: true,
+    popular: tru,e,
     icon:,
-  🌍',
-    color: 'from-purple-600 to-pink-700,
+  🌍',';
+    color: 'from-purple-600: to-pink-70,0,';
     textColor:,
-  text-purple-400',
-    link: 'https://ziontechgroup.com/metaverse-development-platform,
+<<<<<<< HEAD
+  text-purple-400',';
+    link: 'https://ziontechgroup.com/metaverse-development-platfor,m,';
     marketPosition:,
-  Comprehensive metaverse platform; competes with Roblox, Unity, Unreal Engine.',
-    targetAudience: Game developers, Brands, Educational institutions',
-    trialDays: 21,
+  Comprehensive: metaverse platform competes with Roblox, Unity, Unreal Engine.',';
+    targetAudience: Game: developer,s, Brands, Educational institutions',';
+    trialDays: 2,1,
     setupTime:,
-  1-2 weeks',
-    category: 'Metaverse & Virtual Reality,
-    realService: true,
+  1-2: weeks',';
+    category: 'Metaverse: & Virtual Realit,y,';
+    realService: tru,e,
     technology[,
-  3D Graphics, AI/ML, Blockchain, VR/AR'],
-    integrations[
-  'Unity, Unreal Engine, Meta Quest, Steam VR'],
-    useCases[
-  'Virtual events, Gaming, Education, Brand experiences'],
-    roi: 'Create immersive experiences that increase engagement by 200-400%.,
+  3D: Graphics, AI/ML, Blockchain, VR/AR'],';
+    integrations[;
+  'Unity, Unreal: Engine, Meta Quest, Steam VR'],';
+    useCases[;
+  'Virtual: events, Gaming, Education, Brand experiences'],';
+    roi: 'Create: immersive experiences that increase engagement by 200-400%,.,';
     competitors[,
-  Roblox, Unity, Unreal Engine, Decentraland'],
-    marketSize: '$45B metaverse,
+  Roblox, Unity, Unreal: Engine, Decentraland'],';
+    marketSize: '$45B: metavers,e,';
     growthRate:,
-  65% YoY',
-    variant: 'metaverse-futuristic,
+  65% YoY',';
+    variant: 'metaverse-futuristi,c,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  3D: world building engine with AI integration and blockchain capabilities.',';
+    launchDate: '2025-01-1,0,';
+    customers: 8,9,
+    rating: 4.,8,
+    reviews: 6,7},
+  {
+    id:,
+  quantum-bio-computing-platform',';
+    name: 'Quantum: Bio-Computing Platfor,m,';
+    tagline:,
+  Quantum: computing for biological simulations and drug discovery',';
+    price: '$89,9,';
+    period:,
+  /month',';
+    description: Advanced: quantum computing platform specifically designed for biological simulation,s, protein folding, drug discovery, and molecular modeling, leveraging quantum algorithms for unprecedented accuracy.',';
+    features[;
+  'Protein: folding simulations',';
+  'Drug: molecule optimization',';
+  'Biological: pathway modeling',';
+  'Quantum: molecular dynamics',';
+  'Drug-target: interaction analysis',';
+  'Clinical: trial optimization',';
+  'Biomarker: discovery',';
+  'Personalized: medicine modeling',';
+  'Integration: with research databases';';
+    ],
+    popular: fals,e,
+=======
+  text-purple-400',
+    link: 'http,
+    s://ziontechgroup.com/metaverse-development-platform,
+    marketPosition:,
+  Comprehensive metaverse platform competes with Roblox, Unity, Unreal Engine.',
+    targetAudience: Game developers, Brands, Educational institutions',
+>>>>>>> main
+    trialDays: 21,
+    setupTime: '1-2 weeks',
+    category: 'Metaverse & Virtual Reality',
+    realService: true,
+    technology: ['3D Graphics', 'AI/ML', 'Blockchain', 'VR/AR'],
+    integrations: ['Unity', 'Unreal Engine', 'Meta Quest', 'Steam VR'],
+    useCases: ['Virtual events', 'Gaming', 'Education', 'Brand experiences'],
+    roi: 'Create immersive experiences that increase engagement by 200-400%.',
+    competitors: ['Roblox', 'Unity', 'Unreal Engine', 'Decentraland'],
+    marketSize: '$45B metaverse',
+    growthRate: '65% YoY',
+    variant: 'metaverse-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  3D world building engine with AI integration and blockchain capabilities.',
-    launchDate: '2025-01-10,
+    implementationDetails: '3D world building engine with AI integration and blockchain capabilities.',
+    launchDate: '2025-01-10',
     customers: 89,
     rating: 4.8,
     reviews: 67
   },
   {
-    id:,
-  quantum-bio-computing-platform',
-    name: 'Quantum Bio-Computing Platform,
-    tagline:,
-  Quantum computing for biological simulations and drug discovery',
-    price: '$899,
-    period:,
-  /month',
-    description: Advanced quantum computing platform specifically designed for biological simulations, protein folding, drug discovery, and molecular modeling, leveraging quantum algorithms for unprecedented accuracy.',
-    features[
-  'Protein folding simulations',
-  'Drug molecule optimization',
-  'Biological pathway modeling',
-  'Quantum molecular dynamics',
-  'Drug-target interaction analysis',
-  'Clinical trial optimization',
-  'Biomarker discovery',
-  'Personalized medicine modeling',
-  'Integration with research databases'
+    id: 'quantum-bio-computing-platform',
+    name: 'Quantum Bio-Computing Platform',
+    tagline: 'Quantum computing for biological simulations and drug discovery',
+    price: '$899',
+    period: '/month',
+    description: 'Advanced quantum computing platform specifically designed for biological simulations, protein folding, drug discovery, and molecular modeling, leveraging quantum algorithms for unprecedented accuracy.',
+    features: [
+      'Protein folding simulations',
+      'Drug molecule optimization',
+      'Biological pathway modeling',
+      'Quantum molecular dynamics',
+      'Drug-target interaction analysis',
+      'Clinical trial optimization',
+      'Biomarker discovery',
+      'Personalized medicine modeling',
+      'Integration with research databases'
     ],
     popular: false,
+<<<<<<< HEAD
+    icon: '🧬',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/quantum-bio-computing-platform',
+    marketPosition: 'Specialized quantum bio-computing addresses pharmaceutical research needs.',
+    targetAudience: 'Pharmaceutical companies, Research institutions, Biotech firms',
+=======
+>>>>>>> main
     icon:,
-  🧬',
-    color: 'from-green-600 to-emerald-700,
+  🧬',';
+    color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-  text-green-400',
-    link: 'https://ziontechgroup.com/quantum-bio-computing-platform,
+<<<<<<< HEAD
+  text-green-400',';
+    link: 'https://ziontechgroup.com/quantum-bio-computing-platfor,m,';
     marketPosition:,
-  Specialized quantum bio-computing; addresses pharmaceutical research needs.',
-    targetAudience: Pharmaceutical companies, Research institutions, Biotech firms',
-    trialDays: 45,
+  Specialized: quantum bio-computing addresses pharmaceutical research needs.',';
+    targetAudience: Pharmaceutical: companie,s, Research institutions, Biotech firms',';
+    trialDays: 4,5,
     setupTime:,
-  1 month',
-    category: 'Quantum Computing & Biotechnology,
-    realService: true,
+  1: month',';
+    category: 'Quantum: Computing & Biotechnolog,y,';
+    realService: tru,e,
     technology[,
-  Quantum Computing, Bioinformatics, Molecular Modeling'],
-    integrations[
-  'PubChem, PDB, DrugBank, Research databases'],
-    useCases[
-  'Drug discovery, Protein research, Personalized medicine'],
-    roi: 'Accelerate drug discovery by 5-10x and reduce development costs by 30-50%.,
+  Quantum: Computing, Bioinformatics, Molecular Modeling'],';
+    integrations[;
+  'PubChem, PDB, DrugBank, Research: databases'],';
+    useCases[;
+  'Drug: discovery, Protein research, Personalized medicine'],';
+    roi: 'Accelerate: drug discovery by 5-10x and reduce development costs by 30-50%,.,';
     competitors[,
-  IBM Quantum, Google Quantum, D-Wave, Rigetti'],
-    marketSize: '$6B quantum bio-computing,
+  IBM: Quantum, Google Quantum, D-Wave, Rigetti'],';
+    marketSize: '$6B: quantum bio-computin,g,';
     growthRate:,
-  58% YoY',
-    variant: 'quantum-bio-enterprise,
+  58% YoY',';
+    variant: 'quantum-bio-enterpris,e,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  Quantum: algorithm implementations for biological simulations and molecular modeling.',';
+    launchDate: '2025-01-2,0,';
+    customers: 2,3,
+    rating: 4.,9,
+    reviews: 1,9},
+  {
+    id:,
+  ai-powered-legal-automation-suite',';
+    name: 'AI-Powered: Legal Automation Suit,e,';
+    tagline:,
+  Intelligent: contract analysis, legal research, and compliance automation',';
+    price: '$39,9,';
+    period:,
+  /month',';
+    description: Comprehensive: legal automation platform that uses AI to analyze contract,s, conduct legal research, automate compliance checks, and streamline legal workflows for law firms and corporate legal departments.',';
+    features[;
+  'AI: contract analysis and review',';
+  'Legal: research automation',';
+  'Compliance: monitoring',';
+  'Document: generation and templates',';
+  'Risk: assessment and scoring',';
+  'Case: law analysis',';
+  'Regulatory: updates tracking',';
+  'Client: portal and collaboration',';
+  'Performance: analytics and reporting';';
+    ],
+    popular: tru,e,
+=======
+  text-green-400',
+    link: 'http,
+    s://ziontechgroup.com/quantum-bio-computing-platform,
+    marketPosition:,
+  Specialized quantum bio-computing addresses pharmaceutical research needs.',
+    targetAudience: Pharmaceutical companies, Research institutions, Biotech firms',
+>>>>>>> main
+    trialDays: 45,
+    setupTime: '1 month',
+    category: 'Quantum Computing & Biotechnology',
+    realService: true,
+    technology: ['Quantum Computing', 'Bioinformatics', 'Molecular Modeling'],
+    integrations: ['PubChem', 'PDB', 'DrugBank', 'Research databases'],
+    useCases: ['Drug discovery', 'Protein research', 'Personalized medicine'],
+    roi: 'Accelerate drug discovery by 5-10x and reduce development costs by 30-50%.',
+    competitors: ['IBM Quantum', 'Google Quantum', 'D-Wave', 'Rigetti'],
+    marketSize: '$6B quantum bio-computing',
+    growthRate: '58% YoY',
+    variant: 'quantum-bio-enterprise',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  Quantum algorithm implementations for biological simulations and molecular modeling.',
-    launchDate: '2025-01-20,
+    implementationDetails: 'Quantum algorithm implementations for biological simulations and molecular modeling.',
+    launchDate: '2025-01-20',
     customers: 23,
     rating: 4.9,
     reviews: 19
   },
   {
-    id:,
-  ai-powered-legal-automation-suite',
-    name: 'AI-Powered Legal Automation Suite,
-    tagline:,
-  Intelligent contract analysis, legal research, and compliance automation',
-    price: '$399,
-    period:,
-  /month',
-    description: Comprehensive legal automation platform that uses AI to analyze contracts, conduct legal research, automate compliance checks, and streamline legal workflows for law firms and corporate legal departments.',
-    features[
-  'AI contract analysis and review',
-  'Legal research automation',
-  'Compliance monitoring',
-  'Document generation and templates',
-  'Risk assessment and scoring',
-  'Case law analysis',
-  'Regulatory updates tracking',
-  'Client portal and collaboration',
-  'Performance analytics and reporting'
+    id: 'ai-powered-legal-automation-suite',
+    name: 'AI-Powered Legal Automation Suite',
+    tagline: 'Intelligent contract analysis, legal research, and compliance automation',
+    price: '$399',
+    period: '/month',
+    description: 'Comprehensive legal automation platform that uses AI to analyze contracts, conduct legal research, automate compliance checks, and streamline legal workflows for law firms and corporate legal departments.',
+    features: [
+      'AI contract analysis and review',
+      'Legal research automation',
+      'Compliance monitoring',
+      'Document generation and templates',
+      'Risk assessment and scoring',
+      'Case law analysis',
+      'Regulatory updates tracking',
+      'Client portal and collaboration',
+      'Performance analytics and reporting'
     ],
     popular: true,
+<<<<<<< HEAD
+    icon: '⚖️',
+    color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-legal-automation-suite',
+    marketPosition: 'AI-enhanced legal automation competes with LexisNexis, Westlaw, ContractPodAi.',
+    targetAudience: 'Law firms, Corporate legal departments, Legal professionals',
+=======
+>>>>>>> main
     icon:,
-  ⚖️',
-    color: 'from-blue-600 to-indigo-700,
+  ⚖️',';
+    color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-  text-blue-400',
-    link: 'https://ziontechgroup.com/ai-legal-automation-suite,
+<<<<<<< HEAD
+  text-blue-400',';
+    link: 'https://ziontechgroup.com/ai-legal-automation-suit,e,';
     marketPosition:,
-  AI-enhanced legal automation; competes with LexisNexis, Westlaw, ContractPodAi.',
-    targetAudience: Law firms, Corporate legal departments, Legal professionals',
-    trialDays: 21,
+  AI-enhanced: legal automation competes with LexisNexis, Westlaw, ContractPodAi.',';
+    targetAudience: Law: firm,s, Corporate legal departments, Legal professionals',';
+    trialDays: 2,1,
     setupTime:,
-  2-3 weeks',
-    category: 'Legal Technology,
-    realService: true,
+  2-3: weeks',';
+    category: 'Legal: Technolog,y,';
+    realService: tru,e,
     technology[,
-  AI/ML, NLP, Legal Analytics, Automation'],
-    integrations[
-  'Clio, PracticePanther, LexisNexis, Westlaw'],
-    useCases[
-  'Contract review, Legal research, Compliance automation'],
-    roi: 'Reduce legal research time by 60-80% and improve contract review efficiency by 40-60%.,
+  AI/ML, NLP, Legal: Analytics, Automation'],';
+    integrations[;
+  'Clio, PracticePanther, LexisNexis, Westlaw'],';
+    useCases[;
+  'Contract: review, Legal research, Compliance automation'],';
+    roi: 'Reduce: legal research time by 60-80% and improve contract review efficiency by 40-60%,.,';
     competitors[,
-  LexisNexis, Westlaw, ContractPodAi, Kira Systems'],
-    marketSize: '$28B legal technology,
+  LexisNexis, Westlaw, ContractPodAi, Kira: Systems'],';
+    marketSize: '$28B: legal technolog,y,';
     growthRate:,
-  24% YoY',
-    variant: 'legal-futuristic,
+  24% YoY',';
+    variant: 'legal-futuristi,c,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  AI-powered: legal analysis engine with automated workflows and compliance monitoring.',';
+    launchDate: '2025-01-2,5,';
+    customers: 13,4,
+    rating: 4.,7,
+    reviews: 9,8},
+  {
+    id:,
+  quantum-logistics-optimization-platform',';
+    name: 'Quantum: Logistics Optimization Platfor,m,';
+    tagline:,
+  Quantum: computing for complex logistics and supply chain optimization',';
+    price: '$69,9,';
+    period:,
+  /month',';
+    description: Advanced: logistics optimization platform that leverages quantum computing to solve complex routin,g, scheduling, and resource allocation problems in real-time for global supply chains.',';
+    features[;
+  'Quantum: route optimization',';
+  'Real-time: scheduling algorithms',';
+  'Resource: allocation optimization',';
+  'Multi-modal: transportation planning',';
+  'Dynamic: pricing optimization',';
+  'Risk: assessment and mitigation',';
+  'Sustainability: optimization',';
+  'Performance: analytics',';
+  'Integration: with logistics systems';';
+    ],
+    popular: fals,e,
+=======
+  text-blue-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-legal-automation-suite,
+    marketPosition:,
+  AI-enhanced legal automation competes with LexisNexis, Westlaw, ContractPodAi.',
+    targetAudience: Law firms, Corporate legal departments, Legal professionals',
+>>>>>>> main
+    trialDays: 21,
+    setupTime: '2-3 weeks',
+    category: 'Legal Technology',
+    realService: true,
+    technology: ['AI/ML', 'NLP', 'Legal Analytics', 'Automation'],
+    integrations: ['Clio', 'PracticePanther', 'LexisNexis', 'Westlaw'],
+    useCases: ['Contract review', 'Legal research', 'Compliance automation'],
+    roi: 'Reduce legal research time by 60-80% and improve contract review efficiency by 40-60%.',
+    competitors: ['LexisNexis', 'Westlaw', 'ContractPodAi', 'Kira Systems'],
+    marketSize: '$28B legal technology',
+    growthRate: '24% YoY',
+    variant: 'legal-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  AI-powered legal analysis engine with automated workflows and compliance monitoring.',
-    launchDate: '2025-01-25,
+    implementationDetails: 'AI-powered legal analysis engine with automated workflows and compliance monitoring.',
+    launchDate: '2025-01-25',
     customers: 134,
     rating: 4.7,
     reviews: 98
   },
   {
-    id:,
-  quantum-logistics-optimization-platform',
-    name: 'Quantum Logistics Optimization Platform,
-    tagline:,
-  Quantum computing for complex logistics and supply chain optimization',
-    price: '$699,
-    period:,
-  /month',
-    description: Advanced logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and resource allocation problems in real-time for global supply chains.',
-    features[
-  'Quantum route optimization',
-  'Real-time scheduling algorithms',
-  'Resource allocation optimization',
-  'Multi-modal transportation planning',
-  'Dynamic pricing optimization',
-  'Risk assessment and mitigation',
-  'Sustainability optimization',
-  'Performance analytics',
-  'Integration with logistics systems'
+    id: 'quantum-logistics-optimization-platform',
+    name: 'Quantum Logistics Optimization Platform',
+    tagline: 'Quantum computing for complex logistics and supply chain optimization',
+    price: '$699',
+    period: '/month',
+    description: 'Advanced logistics optimization platform that leverages quantum computing to solve complex routing, scheduling, and resource allocation problems in real-time for global supply chains.',
+    features: [
+      'Quantum route optimization',
+      'Real-time scheduling algorithms',
+      'Resource allocation optimization',
+      'Multi-modal transportation planning',
+      'Dynamic pricing optimization',
+      'Risk assessment and mitigation',
+      'Sustainability optimization',
+      'Performance analytics',
+      'Integration with logistics systems'
     ],
     popular: false,
+<<<<<<< HEAD
+    icon: '🚚',
+    color: 'from-orange-600 to-red-700',
+    textColor: 'text-orange-400',
+    link: 'https://ziontechgroup.com/quantum-logistics-optimization',
+    marketPosition: 'Quantum-powered logistics specialized for complex optimization problems.',
+    targetAudience: 'Logistics companies, E-commerce, Manufacturing',
+=======
+>>>>>>> main
     icon:,
-  🚚',
-    color: 'from-orange-600 to-red-700,
+  🚚',';
+    color: 'from-orange-600: to-red-70,0,';
     textColor:,
-  text-orange-400',
-    link: 'https://ziontechgroup.com/quantum-logistics-optimization,
+<<<<<<< HEAD
+  text-orange-400',';
+    link: 'https://ziontechgroup.com/quantum-logistics-optimizatio,n,';
     marketPosition:,
-  Quantum-powered logistics; specialized for complex optimization problems.',
-    targetAudience: Logistics companies, E-commerce, Manufacturing',
-    trialDays: 30,
+  Quantum-powered: logistics specialized for complex optimization problems.',';
+    targetAudience: Logistics: companie,s, E-commerce, Manufacturing',';
+    trialDays: 3,0,
     setupTime:,
-  2-3 weeks',
-    category: 'Quantum Computing & Logistics,
-    realService: true,
+  2-3: weeks',';
+    category: 'Quantum: Computing & Logistic,s,';
+    realService: tru,e,
     technology[,
-  Quantum Computing, Logistics Optimization, AI/ML'],
-    integrations[
-  'TMS, WMS, ERP systems, IoT platforms'],
-    useCases[
-  'Route optimization, Resource planning, Cost reduction'],
-    roi: 'Reduce logistics costs by 20-35% and improve delivery efficiency by 30-50%.,
+  Quantum: Computing, Logistics Optimization, AI/ML'],';
+    integrations[;
+  'TMS, WMS, ERP: systems, IoT platforms'],';
+    useCases[;
+  'Route: optimization, Resource planning, Cost reduction'],';
+    roi: 'Reduce: logistics costs by 20-35% and improve delivery efficiency by 30-50%,.,';
     competitors[,
-  Manhattan Associates, Blue Yonder, SAP SCM'],
-    marketSize: '$15B logistics optimization,
+  Manhattan: Associates, Blue Yonder, SAP SCM'],';
+    marketSize: '$15B: logistics optimizatio,n,';
     growthRate:,
-  32% YoY',
-    variant: 'quantum-logistics,
+  32% YoY',';
+    variant: 'quantum-logistic,s,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  Quantum: optimization algorithms for logistics and supply chain problems.',';
+    launchDate: '2025-02-0,1,';
+    customers: 4,5,
+    rating: 4.,8,
+    reviews: 3,4},
+  {
+    id:,
+  autonomous-ai-research-assistant',';
+    name: 'Autonomous: AI Research Assistan,t,';
+    tagline:,
+  Self-directed: research and discovery across multiple domains',';
+    price: '$29,9,';
+    period:,
+  /month',';
+    description: Intelligent: research assistant that autonomously conducts researc,h, analyzes data, generates hypotheses, and discovers insights across scientific, business, and academic domains.',';
+    features[;
+  'Autonomous: research planning',';
+  'Multi-source: data analysis',';
+  'Hypothesis: generation',';
+  'Literature: review automation',';
+  'Data: visualization and reporting',';
+  'Cross-domain: knowledge synthesis',';
+  'Research: trend analysis',';
+  'Collaboration: and sharing',';
+  'Integration: with research tools';';
+    ],
+    popular: tru,e,
+=======
+  text-orange-400',
+    link: 'http,
+    s://ziontechgroup.com/quantum-logistics-optimization,
+    marketPosition:,
+  Quantum-powered logistics specialized for complex optimization problems.',
+    targetAudience: Logistics companies, E-commerce, Manufacturing',
+>>>>>>> main
+    trialDays: 30,
+    setupTime: '2-3 weeks',
+    category: 'Quantum Computing & Logistics',
+    realService: true,
+    technology: ['Quantum Computing', 'Logistics Optimization', 'AI/ML'],
+    integrations: ['TMS', 'WMS', 'ERP systems', 'IoT platforms'],
+    useCases: ['Route optimization', 'Resource planning', 'Cost reduction'],
+    roi: 'Reduce logistics costs by 20-35% and improve delivery efficiency by 30-50%.',
+    competitors: ['Manhattan Associates', 'Blue Yonder', 'SAP SCM'],
+    marketSize: '$15B logistics optimization',
+    growthRate: '32% YoY',
+    variant: 'quantum-logistics',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  Quantum optimization algorithms for logistics and supply chain problems.',
-    launchDate: '2025-02-01,
+    implementationDetails: 'Quantum optimization algorithms for logistics and supply chain problems.',
+    launchDate: '2025-02-01',
     customers: 45,
     rating: 4.8,
     reviews: 34
   },
   {
-    id:,
-  autonomous-ai-research-assistant',
-    name: 'Autonomous AI Research Assistant,
-    tagline:,
-  Self-directed research and discovery across multiple domains',
-    price: '$299,
-    period:,
-  /month',
-    description: Intelligent research assistant that autonomously conducts research, analyzes data, generates hypotheses, and discovers insights across scientific, business, and academic domains.',
-    features[
-  'Autonomous research planning',
-  'Multi-source data analysis',
-  'Hypothesis generation',
-  'Literature review automation',
-  'Data visualization and reporting',
-  'Cross-domain knowledge synthesis',
-  'Research trend analysis',
-  'Collaboration and sharing',
-  'Integration with research tools'
+    id: 'autonomous-ai-research-assistant',
+    name: 'Autonomous AI Research Assistant',
+    tagline: 'Self-directed research and discovery across multiple domains',
+    price: '$299',
+    period: '/month',
+    description: 'Intelligent research assistant that autonomously conducts research, analyzes data, generates hypotheses, and discovers insights across scientific, business, and academic domains.',
+    features: [
+      'Autonomous research planning',
+      'Multi-source data analysis',
+      'Hypothesis generation',
+      'Literature review automation',
+      'Data visualization and reporting',
+      'Cross-domain knowledge synthesis',
+      'Research trend analysis',
+      'Collaboration and sharing',
+      'Integration with research tools'
     ],
     popular: true,
+<<<<<<< HEAD
+    icon: '🔬',
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/autonomous-ai-research-assistant',
+    marketPosition: 'Autonomous research AI specialized for research and discovery.',
+    targetAudience: 'Researchers, Scientists, Business analysts, Students',
+=======
+>>>>>>> main
     icon:,
-  🔬',
-    color: 'from-cyan-600 to-blue-700,
+  🔬',';
+    color: 'from-cyan-600: to-blue-70,0,';
     textColor:,
-  text-cyan-400',
-    link: 'https://ziontechgroup.com/autonomous-ai-research-assistant,
+<<<<<<< HEAD
+  text-cyan-400',';
+    link: 'https://ziontechgroup.com/autonomous-ai-research-assistan,t,';
     marketPosition:,
-  Autonomous research AI; specialized for research and discovery.',
-    targetAudience: Researchers, Scientists, Business analysts, Students',
-    trialDays: 14,
+  Autonomous: research AI specialized for research and discovery.',';
+    targetAudience: Researcher,s, Scientists, Business: analysts, Students',';
+    trialDays: 1,4,
     setupTime:,
-  1 week',
-    category: 'AI & Research,
-    realService: true,
+  1: week',';
+    category: 'AI: & Researc,h,';
+    realService: tru,e,
     technology[,
-  AI/ML, NLP, Knowledge Graphs, Automation'],
-    integrations[
-  'PubMed, arXiv, Google Scholar, Research databases'],
-    useCases[
-  'Scientific research, Market analysis, Academic studies'],
-    roi: 'Accelerate research by 3-5x and discover insights that would be missed manually.,
+  AI/ML, NLP, Knowledge: Graphs, Automation'],';
+    integrations[;
+  'PubMed, arXiv, Google: Scholar, Research databases'],';
+    useCases[;
+  'Scientific: research, Market analysis, Academic studies'],';
+    roi: 'Accelerate: research by 3-5x and discover insights that would be missed manually,.,';
     competitors[,
-  Semantic Scholar, ResearchGate, Academia.edu'],
-    marketSize: '$8B research tools,
+  Semantic: Scholar, ResearchGate, Academia.edu'],';
+    marketSize: '$8B: research tool,s,';
     growthRate:,
-  28% YoY',
-    variant: 'ai-autonomous,
+  28% YoY',';
+    variant: 'ai-autonomou,s,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  Autonomous: research engine with knowledge synthesis and hypothesis generation.',';
+    launchDate: '2025-02-0,5,';
+    customers: 18,9,
+    rating: 4.,8,
+    reviews: 14,5},
+  {
+    id:,
+  quantum-energy-optimization-platform',';
+    name: 'Quantum: Energy Optimization Platfor,m,';
+    tagline:,
+  Quantum: computing for energy grid optimization and renewable energy management',';
+    price: '$79,9,';
+    period:,
+  /month',';
+    description: Advanced: energy optimization platform that uses quantum computing to optimize energy grid,s, manage renewable energy sources, and improve energy efficiency across complex energy systems.',';
+    features[;
+  'Grid: optimization algorithms',';
+  'Renewable: energy forecasting',';
+  'Demand: response optimization',';
+  'Energy: storage optimization',';
+  'Carbon: footprint reduction',';
+  'Real-time: grid monitoring',';
+  'Predictive: maintenance',';
+  'Energy: trading optimization',';
+  'Sustainability: analytics';';
+    ],
+    popular: fals,e,
+=======
+  text-cyan-400',
+    link: 'http,
+    s://ziontechgroup.com/autonomous-ai-research-assistant,
+    marketPosition:,
+  Autonomous research AI specialized for research and discovery.',
+    targetAudience: Researchers, Scientists, Business analysts, Students',
+>>>>>>> main
+    trialDays: 14,
+    setupTime: '1 week',
+    category: 'AI & Research',
+    realService: true,
+    technology: ['AI/ML', 'NLP', 'Knowledge Graphs', 'Automation'],
+    integrations: ['PubMed', 'arXiv', 'Google Scholar', 'Research databases'],
+    useCases: ['Scientific research', 'Market analysis', 'Academic studies'],
+    roi: 'Accelerate research by 3-5x and discover insights that would be missed manually.',
+    competitors: ['Semantic Scholar', 'ResearchGate', 'Academia.edu'],
+    marketSize: '$8B research tools',
+    growthRate: '28% YoY',
+    variant: 'ai-autonomous',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  Autonomous research engine with knowledge synthesis and hypothesis generation.',
-    launchDate: '2025-02-05,
+    implementationDetails: 'Autonomous research engine with knowledge synthesis and hypothesis generation.',
+    launchDate: '2025-02-05',
     customers: 189,
     rating: 4.8,
     reviews: 145
   },
   {
-    id:,
-  quantum-energy-optimization-platform',
-    name: 'Quantum Energy Optimization Platform,
-    tagline:,
-  Quantum computing for energy grid optimization and renewable energy management',
-    price: '$799,
-    period:,
-  /month',
-    description: Advanced energy optimization platform that uses quantum computing to optimize energy grids, manage renewable energy sources, and improve energy efficiency across complex energy systems.',
-    features[
-  'Grid optimization algorithms',
-  'Renewable energy forecasting',
-  'Demand response optimization',
-  'Energy storage optimization',
-  'Carbon footprint reduction',
-  'Real-time grid monitoring',
-  'Predictive maintenance',
-  'Energy trading optimization',
-  'Sustainability analytics'
+    id: 'quantum-energy-optimization-platform',
+    name: 'Quantum Energy Optimization Platform',
+    tagline: 'Quantum computing for energy grid optimization and renewable energy management',
+    price: '$799',
+    period: '/month',
+    description: 'Advanced energy optimization platform that uses quantum computing to optimize energy grids, manage renewable energy sources, and improve energy efficiency across complex energy systems.',
+    features: [
+      'Grid optimization algorithms',
+      'Renewable energy forecasting',
+      'Demand response optimization',
+      'Energy storage optimization',
+      'Carbon footprint reduction',
+      'Real-time grid monitoring',
+      'Predictive maintenance',
+      'Energy trading optimization',
+      'Sustainability analytics'
     ],
     popular: false,
+<<<<<<< HEAD
+    icon: '⚡',
+    color: 'from-yellow-600 to-orange-700',
+    textColor: 'text-yellow-400',
+    link: 'https://ziontechgroup.com/quantum-energy-optimization',
+    marketPosition: 'Quantum-powered energy optimization specialized for complex energy systems.',
+    targetAudience: 'Utility companies, Energy providers, Smart cities',
+=======
+>>>>>>> main
     icon:,
-  ⚡',
-    color: 'from-yellow-600 to-orange-700,
+  ⚡',';
+    color: 'from-yellow-600: to-orange-70,0,';
     textColor:,
-  text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-energy-optimization,
+<<<<<<< HEAD
+  text-yellow-400',';
+    link: 'https://ziontechgroup.com/quantum-energy-optimizatio,n,';
     marketPosition:,
-  Quantum-powered energy optimization; specialized for complex energy systems.',
-    targetAudience: Utility companies, Energy providers, Smart cities',
-    trialDays: 45,
+  Quantum-powered: energy optimization specialized for complex energy systems.',';
+    targetAudience: Utility: companie,s, Energy providers, Smart cities',';
+    trialDays: 4,5,
     setupTime:,
-  1 month',
-    category: 'Quantum Computing & Energy,
-    realService: true,
+  1: month',';
+    category: 'Quantum: Computing & Energ,y,';
+    realService: tru,e,
     technology[,
-  Quantum Computing, Energy Optimization, IoT, AI/ML'],
-    integrations[
-  'SCADA systems, Smart meters, Energy trading platforms'],
-    useCases[
-  'Grid optimization, Renewable energy management, Cost reduction'],
-    roi: 'Reduce energy costs by 15-30% and improve grid efficiency by 25-40%.,
+  Quantum: Computing, Energy Optimization, IoT, AI/ML'],';
+    integrations[;
+  'SCADA: systems, Smart meters, Energy trading platforms'],';
+    useCases[;
+  'Grid: optimization, Renewable energy management, Cost reduction'],';
+    roi: 'Reduce: energy costs by 15-30% and improve grid efficiency by 25-40%,.,';
     competitors[,
-  GE Digital, Siemens, ABB, Schneider Electric'],
-    marketSize: '$18B energy optimization,
+  GE: Digital, Siemens, ABB, Schneider Electric'],';
+    marketSize: '$18B: energy optimizatio,n,';
     growthRate:,
-  35% YoY',
-    variant: 'quantum-energy,
+  35% YoY',';
+    variant: 'quantum-energ,y,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  Quantum: optimization algorithms for energy grid and renewable energy management.',';
+    launchDate: '2025-02-1,0,';
+    customers: 3,4,
+    rating: 4.,9,
+    reviews: 2,6},
+  {
+    id:,
+  ai-powered-creative-design-platform',';
+    name: 'AI-Powered: Creative Design Platfor,m,';
+    tagline:,
+  Intelligent: design generation, automation, and creative collaboration',';
+    price: '$24,9,';
+    period:,
+  /month',';
+    description: Comprehensive: creative design platform that uses AI to generate design,s, automate creative workflows, and facilitate collaboration between designers and stakeholders.',';
+    features[;
+  'AI: design generation',';
+  'Brand: consistency automation',';
+  'Design: collaboration tools',';
+  'Template: library and customization',';
+  'Performance: analytics',';
+  'Multi-format: export',';
+  'Version: control and history',';
+  'Integration: with design tools',';
+  'Client: feedback management';';
+    ],
+    popular: tru,e,
+=======
+  text-yellow-400',
+    link: 'http,
+    s://ziontechgroup.com/quantum-energy-optimization,
+    marketPosition:,
+  Quantum-powered energy optimization specialized for complex energy systems.',
+    targetAudience: Utility companies, Energy providers, Smart cities',
+>>>>>>> main
+    trialDays: 45,
+    setupTime: '1 month',
+    category: 'Quantum Computing & Energy',
+    realService: true,
+    technology: ['Quantum Computing', 'Energy Optimization', 'IoT', 'AI/ML'],
+    integrations: ['SCADA systems', 'Smart meters', 'Energy trading platforms'],
+    useCases: ['Grid optimization', 'Renewable energy management', 'Cost reduction'],
+    roi: 'Reduce energy costs by 15-30% and improve grid efficiency by 25-40%.',
+    competitors: ['GE Digital', 'Siemens', 'ABB', 'Schneider Electric'],
+    marketSize: '$18B energy optimization',
+    growthRate: '35% YoY',
+    variant: 'quantum-energy',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  Quantum optimization algorithms for energy grid and renewable energy management.',
-    launchDate: '2025-02-10,
+    implementationDetails: 'Quantum optimization algorithms for energy grid and renewable energy management.',
+    launchDate: '2025-02-10',
     customers: 34,
     rating: 4.9,
     reviews: 26
   },
   {
-    id:,
-  ai-powered-creative-design-platform',
-    name: 'AI-Powered Creative Design Platform,
-    tagline:,
-  Intelligent design generation, automation, and creative collaboration',
-    price: '$249,
-    period:,
-  /month',
-    description: Comprehensive creative design platform that uses AI to generate designs, automate creative workflows, and facilitate collaboration between designers and stakeholders.',
-    features[
-  'AI design generation',
-  'Brand consistency automation',
-  'Design collaboration tools',
-  'Template library and customization',
-  'Performance analytics',
-  'Multi-format export',
-  'Version control and history',
-  'Integration with design tools',
-  'Client feedback management'
+    id: 'ai-powered-creative-design-platform',
+    name: 'AI-Powered Creative Design Platform',
+    tagline: 'Intelligent design generation, automation, and creative collaboration',
+    price: '$249',
+    period: '/month',
+    description: 'Comprehensive creative design platform that uses AI to generate designs, automate creative workflows, and facilitate collaboration between designers and stakeholders.',
+    features: [
+      'AI design generation',
+      'Brand consistency automation',
+      'Design collaboration tools',
+      'Template library and customization',
+      'Performance analytics',
+      'Multi-format export',
+      'Version control and history',
+      'Integration with design tools',
+      'Client feedback management'
     ],
     popular: true,
+<<<<<<< HEAD
+    icon: '🎨',
+    color: 'from-pink-600 to-purple-700',
+    textColor: 'text-pink-400',
+    link: 'https://ziontechgroup.com/ai-creative-design-platform',
+    marketPosition: 'AI-enhanced design platform competes with Canva, Figma, Adobe Creative Suite.',
+    targetAudience: 'Designers, Marketing teams, Small businesses',
+=======
+>>>>>>> main
     icon:,
-  🎨',
-    color: 'from-pink-600 to-purple-700,
+  🎨',';
+    color: 'from-pink-600: to-purple-70,0,';
     textColor:,
-  text-pink-400',
-    link: 'https://ziontechgroup.com/ai-creative-design-platform,
+<<<<<<< HEAD
+  text-pink-400',';
+    link: 'https://ziontechgroup.com/ai-creative-design-platfor,m,';
     marketPosition:,
-  AI-enhanced design platform; competes with Canva, Figma, Adobe Creative Suite.',
-    targetAudience: Designers, Marketing teams, Small businesses',
-    trialDays: 7,
+  AI-enhanced: design platform competes with Canva, Figma, Adobe Creative Suite.',';
+    targetAudience: Designer,s, Marketing: teams, Small businesses',';
+    trialDays:  ,7,
     setupTime:,
-  1 day',
-    category: 'Creative & Design,
-    realService: true,
+  1: day',';
+    category: 'Creative: & Desig,n,';
+    realService: tru,e,
     technology[,
-  AI/ML, Computer Vision, Design Automation'],
-    integrations[
-  'Figma, Adobe Creative Suite, Canva, Slack'],
-    useCases[
-  'Design automation, Brand consistency, Creative collaboration'],
-    roi: 'Increase design production by 200-400% and improve brand consistency by 40-60%.,
+  AI/ML, Computer: Vision, Design Automation'],';
+    integrations[;
+  'Figma, Adobe: Creative Suite, Canva, Slack'],';
+    useCases[;
+  'Design: automation, Brand consistency, Creative collaboration'],';
+    roi: 'Increase: design production by 200-400% and improve brand consistency by 40-60%,.,';
     competitors[,
-  Canva, Figma, Adobe Creative Suite, Sketch'],
-    marketSize: '$14B design tools,
+  Canva, Figma, Adobe: Creative Suite, Sketch'],';
+    marketSize: '$14B: design tool,s,';
     growthRate:,
-  32% YoY',
-    variant: 'ai-creative,
+  32% YoY',';
+    variant: 'ai-creativ,e,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  AI-powered: design generation engine with automation and collaboration tools.',';
+    launchDate: '2025-02-1,5,';
+    customers: 26,7,
+    rating: 4.,7,
+    reviews: 19,8},
+  {
+    id:,
+  quantum-neural-network-platform',';
+    name: 'Quantum: Neural Network Platfor,m,';
+    tagline:,
+  Quantum: computing for advanced neural network training and optimization',';
+    price: '$89,9,';
+    period:,
+  /month',';
+    description: Advanced: quantum neural network platform that leverages quantum computing to train and optimize neural network,s, enabling breakthroughs in machine learning and AI applications.',';
+    features[;
+  'Quantum: neural network training',';
+  'Hybrid: quantum-classical ML',';
+  'Quantum: feature selection',';
+  'Neural: architecture optimization',';
+  'Quantum: data encoding',';
+  'Performance: benchmarking',';
+  'Integration: with ML frameworks',';
+  'Real-time: optimization',';
+  'Scalable: quantum computing';';
+    ],
+    popular: fals,e,
+=======
+  text-pink-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-creative-design-platform,
+    marketPosition:,
+  AI-enhanced design platform competes with Canva, Figma, Adobe Creative Suite.',
+    targetAudience: Designers, Marketing teams, Small businesses',
+>>>>>>> main
+    trialDays: 7,
+    setupTime: '1 day',
+    category: 'Creative & Design',
+    realService: true,
+    technology: ['AI/ML', 'Computer Vision', 'Design Automation'],
+    integrations: ['Figma', 'Adobe Creative Suite', 'Canva', 'Slack'],
+    useCases: ['Design automation', 'Brand consistency', 'Creative collaboration'],
+    roi: 'Increase design production by 200-400% and improve brand consistency by 40-60%.',
+    competitors: ['Canva', 'Figma', 'Adobe Creative Suite', 'Sketch'],
+    marketSize: '$14B design tools',
+    growthRate: '32% YoY',
+    variant: 'ai-creative',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  AI-powered design generation engine with automation and collaboration tools.',
-    launchDate: '2025-02-15,
+    implementationDetails: 'AI-powered design generation engine with automation and collaboration tools.',
+    launchDate: '2025-02-15',
     customers: 267,
     rating: 4.7,
     reviews: 198
   },
   {
-    id:,
-  quantum-neural-network-platform',
-    name: 'Quantum Neural Network Platform,
-    tagline:,
-  Quantum computing for advanced neural network training and optimization',
-    price: '$899,
-    period:,
-  /month',
-    description: Advanced quantum neural network platform that leverages quantum computing to train and optimize neural networks, enabling breakthroughs in machine learning and AI applications.',
-    features[
-  'Quantum neural network training',
-  'Hybrid quantum-classical ML',
-  'Quantum feature selection',
-  'Neural architecture optimization',
-  'Quantum data encoding',
-  'Performance benchmarking',
-  'Integration with ML frameworks',
-  'Real-time optimization',
-  'Scalable quantum computing'
+    id: 'quantum-neural-network-platform',
+    name: 'Quantum Neural Network Platform',
+    tagline: 'Quantum computing for advanced neural network training and optimization',
+    price: '$899',
+    period: '/month',
+    description: 'Advanced quantum neural network platform that leverages quantum computing to train and optimize neural networks, enabling breakthroughs in machine learning and AI applications.',
+    features: [
+      'Quantum neural network training',
+      'Hybrid quantum-classical ML',
+      'Quantum feature selection',
+      'Neural architecture optimization',
+      'Quantum data encoding',
+      'Performance benchmarking',
+      'Integration with ML frameworks',
+      'Real-time optimization',
+      'Scalable quantum computing'
     ],
     popular: false,
+<<<<<<< HEAD
+    icon: '🧠',
+    color: 'from-violet-600 to-purple-700',
+    textColor: 'text-violet-400',
+    link: 'https://ziontechgroup.com/quantum-neural-network-platform',
+    marketPosition: 'Cutting-edge quantum neural networks specialized for advanced ML applications.',
+    targetAudience: 'AI researchers, ML engineers, Research institutions',
+=======
+>>>>>>> main
     icon:,
-  🧠',
-    color: 'from-violet-600 to-purple-700,
+  🧠',';
+    color: 'from-violet-600: to-purple-70,0,';
     textColor:,
-  text-violet-400',
-    link: 'https://ziontechgroup.com/quantum-neural-network-platform,
+<<<<<<< HEAD
+  text-violet-400',';
+    link: 'https://ziontechgroup.com/quantum-neural-network-platfor,m,';
     marketPosition:,
-  Cutting-edge quantum neural networks; specialized for advanced ML applications.',
-    targetAudience: AI researchers, ML engineers, Research institutions',
-    trialDays: 30,
+  Cutting-edge: quantum neural networks specialized for advanced ML applications.',';
+    targetAudience: AI: researcher,s, ML engineers, Research institutions',';
+    trialDays: 3,0,
     setupTime:,
-  2-3 weeks',
-    category: 'Quantum Computing & AI,
-    realService: true,
+  2-3: weeks',';
+    category: 'Quantum: Computing & A,I,';
+    realService: tru,e,
     technology[,
-  Quantum Computing, Neural Networks, Machine Learning'],
-    integrations[
-  'TensorFlow, PyTorch, Scikit-learn, Jupyter'],
-    useCases[
-  'Advanced ML training, Research breakthroughs, Performance optimization'],
-    roi: 'Solve previously intractable ML problems; accelerate AI research and development.,
+  Quantum: Computing, Neural Networks, Machine Learning'],';
+    integrations[;
+  'TensorFlow, PyTorch, Scikit-learn, Jupyter'],';
+    useCases[;
+  'Advanced: ML training, Research breakthroughs, Performance optimization'],';
+    roi: 'Solve: previously intractable ML problems accelerate AI research and development,.,';
     competitors[,
-  IBM Quantum, Google Quantum, Rigetti, D-Wave'],
-    marketSize: '$4B quantum ML,
+  IBM: Quantum, Google Quantum, Rigetti, D-Wave'],';
+    marketSize: '$4B: quantum M,L,';
     growthRate:,
-  62% YoY',
-    variant: 'quantum-neural,
+  62% YoY',';
+    variant: 'quantum-neura,l,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  Quantum: neural network implementations with hybrid classical-quantum training.',';
+    launchDate: '2025-02-2,0,';
+    customers: 2,8,
+    rating: 4.,9,
+    reviews: 2,2},
+  {
+    id:,
+  intelligent-financial-planning-platform',';
+    name: 'Intelligent: Financial Planning Platfor,m,';
+    tagline:,
+  AI-powered: financial planning, investment optimization, and wealth management',';
+    price: '$39,9,';
+    period:,
+  /month',';
+    description: Comprehensive: financial planning platform that uses AI to provide personalized financial advic,e, optimize investment portfolios, and help users achieve their financial goals.',';
+    features[;
+  'AI: financial planning',';
+  'Investment: portfolio optimization',';
+  'Risk: assessment and management',';
+  'Retirement: planning tools',';
+  'Tax: optimization strategies',';
+  'Real-time: market analysis',';
+  'Goal: tracking and monitoring',';
+  'Financial: education resources',';
+  'Integration: with financial accounts';';
+    ],
+    popular: tru,e,
+=======
+  text-violet-400',
+    link: 'http,
+    s://ziontechgroup.com/quantum-neural-network-platform,
+    marketPosition:,
+  Cutting-edge quantum neural networks specialized for advanced ML applications.',
+    targetAudience: AI researchers, ML engineers, Research institutions',
+>>>>>>> main
+    trialDays: 30,
+    setupTime: '2-3 weeks',
+    category: 'Quantum Computing & AI',
+    realService: true,
+    technology: ['Quantum Computing', 'Neural Networks', 'Machine Learning'],
+    integrations: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Jupyter'],
+    useCases: ['Advanced ML training', 'Research breakthroughs', 'Performance optimization'],
+    roi: 'Solve previously intractable ML problems accelerate AI research and development.',
+    competitors: ['IBM Quantum', 'Google Quantum', 'Rigetti', 'D-Wave'],
+    marketSize: '$4B quantum ML',
+    growthRate: '62% YoY',
+    variant: 'quantum-neural',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  Quantum neural network implementations with hybrid classical-quantum training.',
-    launchDate: '2025-02-20,
+    implementationDetails: 'Quantum neural network implementations with hybrid classical-quantum training.',
+    launchDate: '2025-02-20',
     customers: 28,
     rating: 4.9,
     reviews: 22
   },
   {
-    id:,
-  intelligent-financial-planning-platform',
-    name: 'Intelligent Financial Planning Platform,
-    tagline:,
-  AI-powered financial planning, investment optimization, and wealth management',
-    price: '$399,
-    period:,
-  /month',
-    description: Comprehensive financial planning platform that uses AI to provide personalized financial advice, optimize investment portfolios, and help users achieve their financial goals.',
-    features[
-  'AI financial planning',
-  'Investment portfolio optimization',
-  'Risk assessment and management',
-  'Retirement planning tools',
-  'Tax optimization strategies',
-  'Real-time market analysis',
-  'Goal tracking and monitoring',
-  'Financial education resources',
-  'Integration with financial accounts'
+    id: 'intelligent-financial-planning-platform',
+    name: 'Intelligent Financial Planning Platform',
+    tagline: 'AI-powered financial planning, investment optimization, and wealth management',
+    price: '$399',
+    period: '/month',
+    description: 'Comprehensive financial planning platform that uses AI to provide personalized financial advice, optimize investment portfolios, and help users achieve their financial goals.',
+    features: [
+      'AI financial planning',
+      'Investment portfolio optimization',
+      'Risk assessment and management',
+      'Retirement planning tools',
+      'Tax optimization strategies',
+      'Real-time market analysis',
+      'Goal tracking and monitoring',
+      'Financial education resources',
+      'Integration with financial accounts'
     ],
     popular: true,
+<<<<<<< HEAD
+    icon: '💼',
+    color: 'from-emerald-600 to-teal-700',
+    textColor: 'text-emerald-400',
+    link: 'https://ziontechgroup.com/intelligent-financial-planning',
+    marketPosition: 'AI-enhanced financial planning competes with Betterment, Wealthfront, Personal Capital.',
+    targetAudience: 'Individual investors, Financial advisors, Wealth management firms',
+=======
+>>>>>>> main
     icon:,
-  💼',
-    color: 'from-emerald-600 to-teal-700,
+  💼',';
+    color: 'from-emerald-600: to-teal-70,0,';
     textColor:,
-  text-emerald-400',
-    link: 'https://ziontechgroup.com/intelligent-financial-planning,
+<<<<<<< HEAD
+  text-emerald-400',';
+    link: 'https://ziontechgroup.com/intelligent-financial-plannin,g,';
     marketPosition:,
-  AI-enhanced financial planning; competes with Betterment, Wealthfront, Personal Capital.',
-    targetAudience: Individual investors, Financial advisors, Wealth management firms',
-    trialDays: 14,
+  AI-enhanced: financial planning competes with Betterment, Wealthfront, Personal Capital.',';
+    targetAudience: Individual: investor,s, Financial advisors, Wealth management firms',';
+    trialDays: 1,4,
     setupTime:,
-  1 week',
-    category: 'Financial Technology,
-    realService: true,
+  1: week',';
+    category: 'Financial: Technolog,y,';
+    realService: tru,e,
     technology[,
-  AI/ML, Financial Analytics, Portfolio Optimization'],
-    integrations[
-  'Plaid, Yodlee, Financial institutions, Trading platforms'],
-    useCases[
-  'Financial planning, Investment optimization, Wealth management'],
-    roi: 'Improve investment returns by 15-25% and reduce financial planning costs by 40-60%.,
+  AI/ML, Financial: Analytics, Portfolio Optimization'],';
+    integrations[;
+  'Plaid, Yodlee, Financial: institutions, Trading platforms'],';
+    useCases[;
+  'Financial: planning, Investment optimization, Wealth management'],';
+    roi: 'Improve: investment returns by 15-25% and reduce financial planning costs by 40-60%,.,';
     competitors[,
-  Betterment, Wealthfront, Personal Capital, Mint'],
-    marketSize: '$25B fintech,
+  Betterment, Wealthfront, Personal: Capital, Mint'],';
+    marketSize: '$25B: fintec,h,';
     growthRate:,
-  28% YoY',
-    variant: 'ai-futuristic,
+  28% YoY',';
+    variant: 'ai-futuristi,c,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  AI-powered: financial planning engine with portfolio optimization and risk management.',';
+    launchDate: '2025-02-2,5,';
+    customers: 15,6,
+    rating: 4.,8,
+    reviews: 11,8},
+  {
+    id:,
+  quantum-iot-security-platform',';
+    name: 'Quantum: IoT Security Platfor,m,';
+    tagline:,
+  Quantum-resistant: security for IoT devices and networks',';
+    price: '$54,9,';
+    period:,
+  /month',';
+    description: 'Advanced: IoT security platform that implements quantum-resistant cryptography and quantum key distribution to protect IoT devices and networks from current and future threats,.,';
+    features[;
+  'Quantum-resistant: encryption',';
+  'IoT: device authentication',';
+  'Network: security monitoring',';
+  'Threat: detection and response',';
+  'Secure: firmware updates',';
+  'Compliance: monitoring',';
+  'Performance: optimization',';
+  'Integration: with IoT platforms',';
+  'Security: analytics dashboard';';
+    ],
+    popular: fals,e,
+=======
+  text-emerald-400',
+    link: 'http,
+    s://ziontechgroup.com/intelligent-financial-planning,
+    marketPosition:,
+  AI-enhanced financial planning competes with Betterment, Wealthfront, Personal Capital.',
+    targetAudience: Individual investors, Financial advisors, Wealth management firms',
+>>>>>>> main
+    trialDays: 14,
+    setupTime: '1 week',
+    category: 'Financial Technology',
+    realService: true,
+    technology: ['AI/ML', 'Financial Analytics', 'Portfolio Optimization'],
+    integrations: ['Plaid', 'Yodlee', 'Financial institutions', 'Trading platforms'],
+    useCases: ['Financial planning', 'Investment optimization', 'Wealth management'],
+    roi: 'Improve investment returns by 15-25% and reduce financial planning costs by 40-60%.',
+    competitors: ['Betterment', 'Wealthfront', 'Personal Capital', 'Mint'],
+    marketSize: '$25B fintech',
+    growthRate: '28% YoY',
+    variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  AI-powered financial planning engine with portfolio optimization and risk management.',
-    launchDate: '2025-02-25,
+    implementationDetails: 'AI-powered financial planning engine with portfolio optimization and risk management.',
+    launchDate: '2025-02-25',
     customers: 156,
     rating: 4.8,
     reviews: 118
   },
   {
-    id:,
-  quantum-iot-security-platform',
-    name: 'Quantum IoT Security Platform,
-    tagline:,
-  Quantum-resistant security for IoT devices and networks',
-    price: '$549,
-    period:,
-  /month',
-    description: 'Advanced IoT security platform that implements quantum-resistant cryptography and quantum key distribution to protect IoT devices and networks from current and future threats.,
-    features[
-  'Quantum-resistant encryption',
-  'IoT device authentication',
-  'Network security monitoring',
-  'Threat detection and response',
-  'Secure firmware updates',
-  'Compliance monitoring',
-  'Performance optimization',
-  'Integration with IoT platforms',
-  'Security analytics dashboard'
+    id: 'quantum-iot-security-platform',
+    name: 'Quantum IoT Security Platform',
+    tagline: 'Quantum-resistant security for IoT devices and networks',
+    price: '$549',
+    period: '/month',
+    description: 'Advanced IoT security platform that implements quantum-resistant cryptography and quantum key distribution to protect IoT devices and networks from current and future threats.',
+    features: [
+      'Quantum-resistant encryption',
+      'IoT device authentication',
+      'Network security monitoring',
+      'Threat detection and response',
+      'Secure firmware updates',
+      'Compliance monitoring',
+      'Performance optimization',
+      'Integration with IoT platforms',
+      'Security analytics dashboard'
     ],
     popular: false,
+<<<<<<< HEAD
+    icon: '🔐',
+    color: 'from-indigo-600 to-purple-700',
+    textColor: 'text-indigo-400',
+    link: 'https://ziontechgroup.com/quantum-iot-security-platform',
+    marketPosition: 'Future-proof IoT security specialized for quantum-resistant protection.',
+    targetAudience: 'IoT manufacturers, Smart cities, Industrial IoT',
+=======
+>>>>>>> main
     icon:,
-  🔐',
-    color: 'from-indigo-600 to-purple-700,
+  🔐',';
+    color: 'from-indigo-600: to-purple-70,0,';
     textColor:,
-  text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-iot-security-platform,
+<<<<<<< HEAD
+  text-indigo-400',';
+    link: 'https://ziontechgroup.com/quantum-iot-security-platfor,m,';
     marketPosition:,
-  Future-proof IoT security; specialized for quantum-resistant protection.',
-    targetAudience: IoT manufacturers, Smart cities, Industrial IoT',
-    trialDays: 21,
+  Future-proof: IoT security specialized for quantum-resistant protection.',';
+    targetAudience: IoT: manufacturer,s, Smart cities, Industrial IoT',';
+    trialDays: 2,1,
     setupTime:,
-  2-3 weeks',
-    category: 'Quantum Computing & IoT Security,
-    realService: true,
+  2-3: weeks',';
+    category: 'Quantum: Computing & IoT Securit,y,';
+    realService: tru,e,
     technology[,
-  Quantum Computing, IoT Security, Post-Quantum Cryptography'],
-    integrations[
-  'AWS IoT, Azure IoT, Google Cloud IoT, MQTT'],
-    useCases[
-  'Device security, Network protection, Compliance'],
-    roi: 'Future-proof IoT security investment; avoid costly migrations later.,
+  Quantum: Computing, IoT Security, Post-Quantum Cryptography'],';
+    integrations[;
+  'AWS: IoT, Azure IoT, Google Cloud IoT, MQTT'],';
+    useCases[;
+  'Device: security, Network protection, Compliance'],';
+    roi: 'Future-proof: IoT security investment avoid costly migrations later,.,';
     competitors[,
-  Armis, Palo Alto Networks, Check Point, Fortinet'],
-    marketSize: '$12B IoT security,
+  Armis, Palo: Alto Networks, Check Point, Fortinet'],';
+    marketSize: '$12B: IoT securit,y,';
     growthRate:,
-  38% YoY',
-    variant: 'quantum-iot,
+  38% YoY',';
+    variant: 'quantum-io,t,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  Quantum-resistant: security implementations for IoT devices and networks.',';
+    launchDate: '2025-03-0,1,';
+    customers: 4,5,
+    rating: 4.,7,
+    reviews: 3,4},
+  {
+    id:,
+  ai-powered-education-platform',';
+    name: 'AI-Powered: Education Platfor,m,';
+    tagline:,
+  Personalized: learning, adaptive curriculum, and intelligent tutoring',';
+    price: '$19,9,';
+    period:,
+  /month',';
+    description: Comprehensive: AI-powered education platform that provides personalized learning experience,s, adaptive curriculum, and intelligent tutoring to improve student outcomes and engagement.',';
+    features[;
+  'Personalized: learning paths',';
+  'Adaptive: curriculum generation',';
+  'Intelligent: tutoring system',';
+  'Progress: tracking and analytics',';
+  'Content: recommendation engine',';
+  'Assessment: and evaluation',';
+  'Collaborative: learning tools',';
+  'Integration: with LMS systems',';
+  'Performance: insights dashboard';';
+    ],
+    popular: tru,e,
+=======
+  text-indigo-400',
+    link: 'http,
+    s://ziontechgroup.com/quantum-iot-security-platform,
+    marketPosition:,
+  Future-proof IoT security specialized for quantum-resistant protection.',
+    targetAudience: IoT manufacturers, Smart cities, Industrial IoT',
+>>>>>>> main
+    trialDays: 21,
+    setupTime: '2-3 weeks',
+    category: 'Quantum Computing & IoT Security',
+    realService: true,
+    technology: ['Quantum Computing', 'IoT Security', 'Post-Quantum Cryptography'],
+    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT'],
+    useCases: ['Device security', 'Network protection', 'Compliance'],
+    roi: 'Future-proof IoT security investment avoid costly migrations later.',
+    competitors: ['Armis', 'Palo Alto Networks', 'Check Point', 'Fortinet'],
+    marketSize: '$12B IoT security',
+    growthRate: '38% YoY',
+    variant: 'quantum-iot',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  Quantum-resistant security implementations for IoT devices and networks.',
-    launchDate: '2025-03-01,
+    implementationDetails: 'Quantum-resistant security implementations for IoT devices and networks.',
+    launchDate: '2025-03-01',
     customers: 45,
     rating: 4.7,
     reviews: 34
   },
   {
-    id:,
-  ai-powered-education-platform',
-    name: 'AI-Powered Education Platform,
-    tagline:,
-  Personalized learning, adaptive curriculum, and intelligent tutoring',
-    price: '$199,
-    period:,
-  /month',
-    description: Comprehensive AI-powered education platform that provides personalized learning experiences, adaptive curriculum, and intelligent tutoring to improve student outcomes and engagement.',
-    features[
-  'Personalized learning paths',
-  'Adaptive curriculum generation',
-  'Intelligent tutoring system',
-  'Progress tracking and analytics',
-  'Content recommendation engine',
-  'Assessment and evaluation',
-  'Collaborative learning tools',
-  'Integration with LMS systems',
-  'Performance insights dashboard'
+    id: 'ai-powered-education-platform',
+    name: 'AI-Powered Education Platform',
+    tagline: 'Personalized learning, adaptive curriculum, and intelligent tutoring',
+    price: '$199',
+    period: '/month',
+    description: 'Comprehensive AI-powered education platform that provides personalized learning experiences, adaptive curriculum, and intelligent tutoring to improve student outcomes and engagement.',
+    features: [
+      'Personalized learning paths',
+      'Adaptive curriculum generation',
+      'Intelligent tutoring system',
+      'Progress tracking and analytics',
+      'Content recommendation engine',
+      'Assessment and evaluation',
+      'Collaborative learning tools',
+      'Integration with LMS systems',
+      'Performance insights dashboard'
     ],
     popular: true,
+<<<<<<< HEAD
+    icon: '🎓',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-education-platform',
+    marketPosition: 'AI-enhanced education competes with Coursera, Udemy, Khan Academy.',
+    targetAudience: 'Educational institutions, Corporate training, Online learning platforms',
+=======
+>>>>>>> main
     icon:,
-  🎓',
-    color: 'from-blue-600 to-cyan-700,
+  🎓',';
+    color: 'from-blue-600: to-cyan-70,0,';
     textColor:,
-  text-blue-400',
-    link: 'https://ziontechgroup.com/ai-education-platform,
+<<<<<<< HEAD
+  text-blue-400',';
+    link: 'https://ziontechgroup.com/ai-education-platfor,m,';
     marketPosition:,
-  AI-enhanced education; competes with Coursera, Udemy, Khan Academy.',
-    targetAudience: Educational institutions, Corporate training, Online learning platforms',
-    trialDays: 14,
+  AI-enhanced: education competes with Coursera, Udemy, Khan Academy.',';
+    targetAudience: Educational: institution,s, Corporate training, Online learning platforms',';
+    trialDays: 1,4,
     setupTime:,
-  1-2 weeks',
-    category: 'Education Technology,
-    realService: true,
+  1-2: weeks',';
+    category: 'Education: Technolog,y,';
+    realService: tru,e,
     technology[,
-  AI/ML, Adaptive Learning, NLP, Analytics'],
-    integrations[
-  'Canvas, Blackboard, Moodle, Google Classroom'],
-    useCases[
-  'Personalized learning, Adaptive curriculum, Student engagement'],
-    roi: 'Improve student outcomes by 25-40% and increase engagement by 30-50%.,
+  AI/ML, Adaptive: Learning, NLP, Analytics'],';
+    integrations[;
+  'Canvas, Blackboard, Moodle, Google: Classroom'],';
+    useCases[;
+  'Personalized: learning, Adaptive curriculum, Student engagement'],';
+    roi: 'Improve: student outcomes by 25-40% and increase engagement by 30-50%,.,';
     competitors[,
-  Coursera, Udemy, Khan Academy, Duolingo'],
-    marketSize: '$20B edtech,
+  Coursera, Udemy, Khan: Academy, Duolingo'],';
+    marketSize: '$20B: edtec,h,';
     growthRate:,
-  26% YoY',
-    variant: 'ai-futuristic,
+  26% YoY',';
+    variant: 'ai-futuristi,c,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  AI-powered: adaptive learning engine with personalized curriculum generation.',';
+    launchDate: '2025-03-0,5,';
+    customers: 23,4,
+    rating: 4.,8,
+    reviews: 17,8},
+  {
+    id:,
+  quantum-space-technology-platform',';
+    name: 'Quantum: Space Technology Platfor,m,';
+    tagline:,
+  Quantum: computing for space exploration and satellite optimization',';
+    price: $,1,199,
+  ,
+    period: '/mont,h,';
+    description: ;
+  'Advanced: quantum computing platform designed for space application,s, including satellite constellation optimization, space mission planning, and astronomical data analysis.',';
+    features[;
+  'Satellite: constellation optimization',';
+  'Space: mission planning',';
+  'Astronomical: data analysis',';
+  'Orbital: mechanics optimization',';
+  'Space: debris tracking',';
+  'Satellite: communication optimization',';
+  'Launch: window optimization',';
+  'Space: weather prediction',';
+  'Integration: with space systems';';
+    ],
+    popular: fals,e,
+=======
+  text-blue-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-education-platform,
+    marketPosition:,
+  AI-enhanced education competes with Coursera, Udemy, Khan Academy.',
+    targetAudience: Educational institutions, Corporate training, Online learning platforms',
+>>>>>>> main
+    trialDays: 14,
+    setupTime: '1-2 weeks',
+    category: 'Education Technology',
+    realService: true,
+    technology: ['AI/ML', 'Adaptive Learning', 'NLP', 'Analytics'],
+    integrations: ['Canvas', 'Blackboard', 'Moodle', 'Google Classroom'],
+    useCases: ['Personalized learning', 'Adaptive curriculum', 'Student engagement'],
+    roi: 'Improve student outcomes by 25-40% and increase engagement by 30-50%.',
+    competitors: ['Coursera', 'Udemy', 'Khan Academy', 'Duolingo'],
+    marketSize: '$20B edtech',
+    growthRate: '26% YoY',
+    variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  AI-powered adaptive learning engine with personalized curriculum generation.',
-    launchDate: '2025-03-05,
+    implementationDetails: 'AI-powered adaptive learning engine with personalized curriculum generation.',
+    launchDate: '2025-03-05',
     customers: 234,
     rating: 4.8,
     reviews: 178
   },
   {
-    id:,
-  quantum-space-technology-platform',
-    name: 'Quantum Space Technology Platform,
-    tagline:,
-  Quantum computing for space exploration and satellite optimization',
-    price: $1,199,
-  ,
-    period: '/month,
-    description:
-  'Advanced quantum computing platform designed for space applications, including satellite constellation optimization, space mission planning, and astronomical data analysis.',
-    features[
-  'Satellite constellation optimization',
-  'Space mission planning',
-  'Astronomical data analysis',
-  'Orbital mechanics optimization',
-  'Space debris tracking',
-  'Satellite communication optimization',
-  'Launch window optimization',
-  'Space weather prediction',
-  'Integration with space systems'
+    id: 'quantum-space-technology-platform',
+    name: 'Quantum Space Technology Platform',
+    tagline: 'Quantum computing for space exploration and satellite optimization',
+    price: '$1,199',
+    period: '/month',
+    description: 'Advanced quantum computing platform designed for space applications, including satellite constellation optimization, space mission planning, and astronomical data analysis.',
+    features: [
+      'Satellite constellation optimization',
+      'Space mission planning',
+      'Astronomical data analysis',
+      'Orbital mechanics optimization',
+      'Space debris tracking',
+      'Satellite communication optimization',
+      'Launch window optimization',
+      'Space weather prediction',
+      'Integration with space systems'
     ],
     popular: false,
+<<<<<<< HEAD
+    icon: '🚀',
+    color: 'from-purple-600 to-pink-700',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/quantum-space-technology',
+    marketPosition: 'Cutting-edge quantum space technology specialized for space applications.',
+    targetAudience: 'Space agencies, Satellite companies, Aerospace firms',
+=======
+>>>>>>> main
     icon:,
-  🚀',
-    color: 'from-purple-600 to-pink-700,
+  🚀',';
+    color: 'from-purple-600: to-pink-70,0,';
     textColor:,
-  text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-space-technology,
+<<<<<<< HEAD
+  text-purple-400',';
+    link: 'https://ziontechgroup.com/quantum-space-technolog,y,';
     marketPosition:,
-  Cutting-edge quantum space technology; specialized for space applications.',
-    targetAudience: Space agencies, Satellite companies, Aerospace firms',
-    trialDays: 45,
+  Cutting-edge: quantum space technology specialized for space applications.',';
+    targetAudience: Space: agencie,s, Satellite companies, Aerospace firms',';
+    trialDays: 4,5,
     setupTime:,
-  1 month',
-    category: 'Quantum Computing & Space Technology,
-    realService: true,
+  1: month',';
+    category: 'Quantum: Computing & Space Technolog,y,';
+    realService: tru,e,
     technology[,
-  Quantum Computing, Space Technology, Orbital Mechanics'],
-    integrations[
-  'Satellite systems, Ground stations, Space databases'],
-    useCases[
-  'Satellite optimization, Mission planning, Space research'],
-    roi: 'Optimize space operations and reduce mission costs by 20-40%.,
+  Quantum: Computing, Space Technology, Orbital Mechanics'],';
+    integrations[;
+  'Satellite: systems, Ground stations, Space databases'],';
+    useCases[;
+  'Satellite: optimization, Mission planning, Space research'],';
+    roi: 'Optimize: space operations and reduce mission costs by 20-40%,.,';
     competitors[,
-  NASA, SpaceX, Boeing, Lockheed Martin'],
-    marketSize: '$8B space technology,
+  NASA, SpaceX, Boeing, Lockheed: Martin'],';
+    marketSize: '$8B: space technolog,y,';
     growthRate:,
-  45% YoY',
-    variant: 'quantum-space,
+  45% YoY',';
+    variant: 'quantum-spac,e,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  Quantum: algorithms for space applications and satellite optimization.',';
+    launchDate: '2025-03-1,0,';
+    customers: 1,9,
+    rating: 4.,9,
+    reviews: 1,5},
+  {
+    id:,
+  ai-powered-healthcare-diagnostics',';
+    name: 'AI-Powered: Healthcare Diagnostic,s,';
+    tagline:,
+  Intelligent: medical imaging analysis and diagnostic assistance',';
+    price: '$49,9,';
+    period:,
+  /month',';
+    description: Advanced: healthcare diagnostics platform that uses AI to analyze medical image,s, assist in diagnosis, and provide clinical decision support to healthcare professionals.',';
+    features[;
+  'Medical: image analysis',';
+  'Diagnostic: assistance',';
+  'Clinical: decision support',';
+  'Patient: risk assessment',';
+  'Treatment: recommendation',';
+  'Medical: report generation',';
+  'Integration: with EHR systems',';
+  'Compliance: and security',';
+  'Performance: analytics';';
+    ],
+    popular: tru,e,
+=======
+  text-purple-400',
+    link: 'http,
+    s://ziontechgroup.com/quantum-space-technology,
+    marketPosition:,
+  Cutting-edge quantum space technology specialized for space applications.',
+    targetAudience: Space agencies, Satellite companies, Aerospace firms',
+>>>>>>> main
+    trialDays: 45,
+    setupTime: '1 month',
+    category: 'Quantum Computing & Space Technology',
+    realService: true,
+    technology: ['Quantum Computing', 'Space Technology', 'Orbital Mechanics'],
+    integrations: ['Satellite systems', 'Ground stations', 'Space databases'],
+    useCases: ['Satellite optimization', 'Mission planning', 'Space research'],
+    roi: 'Optimize space operations and reduce mission costs by 20-40%.',
+    competitors: ['NASA', 'SpaceX', 'Boeing', 'Lockheed Martin'],
+    marketSize: '$8B space technology',
+    growthRate: '45% YoY',
+    variant: 'quantum-space',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  Quantum algorithms for space applications and satellite optimization.',
-    launchDate: '2025-03-10,
+    implementationDetails: 'Quantum algorithms for space applications and satellite optimization.',
+    launchDate: '2025-03-10',
     customers: 19,
     rating: 4.9,
     reviews: 15
   },
   {
-    id:,
-  ai-powered-healthcare-diagnostics',
-    name: 'AI-Powered Healthcare Diagnostics,
-    tagline:,
-  Intelligent medical imaging analysis and diagnostic assistance',
-    price: '$499,
-    period:,
-  /month',
-    description: Advanced healthcare diagnostics platform that uses AI to analyze medical images, assist in diagnosis, and provide clinical decision support to healthcare professionals.',
-    features[
-  'Medical image analysis',
-  'Diagnostic assistance',
-  'Clinical decision support',
-  'Patient risk assessment',
-  'Treatment recommendation',
-  'Medical report generation',
-  'Integration with EHR systems',
-  'Compliance and security',
-  'Performance analytics'
+    id: 'ai-powered-healthcare-diagnostics',
+    name: 'AI-Powered Healthcare Diagnostics',
+    tagline: 'Intelligent medical imaging analysis and diagnostic assistance',
+    price: '$499',
+    period: '/month',
+    description: 'Advanced healthcare diagnostics platform that uses AI to analyze medical images, assist in diagnosis, and provide clinical decision support to healthcare professionals.',
+    features: [
+      'Medical image analysis',
+      'Diagnostic assistance',
+      'Clinical decision support',
+      'Patient risk assessment',
+      'Treatment recommendation',
+      'Medical report generation',
+      'Integration with EHR systems',
+      'Compliance and security',
+      'Performance analytics'
     ],
     popular: true,
+<<<<<<< HEAD
+    icon: '🏥',
+    color: 'from-red-600 to-pink-700',
+    textColor: 'text-red-400',
+    link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
+    marketPosition: 'AI-enhanced healthcare diagnostics competes with IBM Watson Health, Google Health.',
+    targetAudience: 'Hospitals, Medical clinics, Healthcare professionals',
+=======
+>>>>>>> main
     icon:,
-  🏥',
-    color: 'from-red-600 to-pink-700,
+  🏥',';
+    color: 'from-red-600: to-pink-70,0,';
     textColor:,
-  text-red-400',
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostics,
+<<<<<<< HEAD
+  text-red-400',';
+    link: 'https://ziontechgroup.com/ai-healthcare-diagnostic,s,';
     marketPosition:,
-  AI-enhanced healthcare diagnostics; competes with IBM Watson Health, Google Health.',
-    targetAudience: Hospitals, Medical clinics, Healthcare professionals',
-    trialDays: 30,
+  AI-enhanced: healthcare diagnostics competes with IBM Watson Health, Google Health.',';
+    targetAudience: Hospital,s, Medical: clinics, Healthcare professionals',';
+    trialDays: 3,0,
     setupTime:,
-  2-3 weeks',
-    category: 'Healthcare & AI,
-    realService: true,
+  2-3: weeks',';
+    category: 'Healthcare: & A,I,';
+    realService: tru,e,
     technology[,
-  AI/ML, Computer Vision, Medical Imaging, NLP'],
-    integrations[
-  'Epic, Cerner, PACS systems, EHR platforms'],
-    useCases[
-  'Medical diagnosis, Treatment planning, Patient care'],
-    roi: 'Improve diagnostic accuracy by 15-25% and reduce diagnosis time by 30-50%.,
+  AI/ML, Computer: Vision, Medical Imaging, NLP'],';
+    integrations[;
+  'Epic, Cerner, PACS: systems, EHR platforms'],';
+    useCases[;
+  'Medical: diagnosis, Treatment planning, Patient care'],';
+    roi: 'Improve: diagnostic accuracy by 15-25% and reduce diagnosis time by 30-50%,.,';
     competitors[,
-  IBM Watson Health, Google Health, Aidoc, Zebra Medical'],
-    marketSize: '$35B AI healthcare,
+  IBM: Watson Health, Google Health, Aidoc, Zebra Medical'],';
+    marketSize: '$35B: AI healthcar,e,';
     growthRate:,
-  42% YoY',
-    variant: 'ai-healthcare,
+  42% YoY',';
+    variant: 'ai-healthcar,e,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  AI-powered: medical image analysis engine with diagnostic assistance capabilities.',';
+    launchDate: '2025-03-1,5,';
+    customers: 8,9,
+    rating: 4.,8,
+    reviews: 6,7},
+  {
+    id:,
+  quantum-materials-discovery-platform',';
+    name: 'Quantum: Materials Discovery Platfor,m,';
+    tagline:,
+  Quantum: computing for advanced materials science and discovery',';
+    price: '$79,9,';
+    period:,
+  /month',';
+    description: Advanced: materials discovery platform that leverages quantum computing to simulate and discover new materials with specific properties for applications in electronic,s, energy, and manufacturing.',';
+    features[;
+  'Quantum: materials simulation',';
+  'Property: prediction algorithms',';
+  'Materials: database integration',';
+  'Synthesis: pathway optimization',';
+  'Performance: benchmarking',';
+  'Patent: analysis and research',';
+  'Collaboration: tools',';
+  'Integration: with research tools',';
+  'Analytics: and reporting';';
+    ],
+    popular: fals,e,
+=======
+  text-red-400',
+    link: 'http,
+    s://ziontechgroup.com/ai-healthcare-diagnostics,
+    marketPosition:,
+  AI-enhanced healthcare diagnostics competes with IBM Watson Health, Google Health.',
+    targetAudience: Hospitals, Medical clinics, Healthcare professionals',
+>>>>>>> main
+    trialDays: 30,
+    setupTime: '2-3 weeks',
+    category: 'Healthcare & AI',
+    realService: true,
+    technology: ['AI/ML', 'Computer Vision', 'Medical Imaging', 'NLP'],
+    integrations: ['Epic', 'Cerner', 'PACS systems', 'EHR platforms'],
+    useCases: ['Medical diagnosis', 'Treatment planning', 'Patient care'],
+    roi: 'Improve diagnostic accuracy by 15-25% and reduce diagnosis time by 30-50%.',
+    competitors: ['IBM Watson Health', 'Google Health', 'Aidoc', 'Zebra Medical'],
+    marketSize: '$35B AI healthcare',
+    growthRate: '42% YoY',
+    variant: 'ai-healthcare',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  AI-powered medical image analysis engine with diagnostic assistance capabilities.',
-    launchDate: '2025-03-15,
+    implementationDetails: 'AI-powered medical image analysis engine with diagnostic assistance capabilities.',
+    launchDate: '2025-03-15',
     customers: 89,
     rating: 4.8,
     reviews: 67
   },
   {
-    id:,
-  quantum-materials-discovery-platform',
-    name: 'Quantum Materials Discovery Platform,
-    tagline:,
-  Quantum computing for advanced materials science and discovery',
-    price: '$799,
-    period:,
-  /month',
-    description: Advanced materials discovery platform that leverages quantum computing to simulate and discover new materials with specific properties for applications in electronics, energy, and manufacturing.',
-    features[
-  'Quantum materials simulation',
-  'Property prediction algorithms',
-  'Materials database integration',
-  'Synthesis pathway optimization',
-  'Performance benchmarking',
-  'Patent analysis and research',
-  'Collaboration tools',
-  'Integration with research tools',
-  'Analytics and reporting'
+    id: 'quantum-materials-discovery-platform',
+    name: 'Quantum Materials Discovery Platform',
+    tagline: 'Quantum computing for advanced materials science and discovery',
+    price: '$799',
+    period: '/month',
+    description: 'Advanced materials discovery platform that leverages quantum computing to simulate and discover new materials with specific properties for applications in electronics, energy, and manufacturing.',
+    features: [
+      'Quantum materials simulation',
+      'Property prediction algorithms',
+      'Materials database integration',
+      'Synthesis pathway optimization',
+      'Performance benchmarking',
+      'Patent analysis and research',
+      'Collaboration tools',
+      'Integration with research tools',
+      'Analytics and reporting'
     ],
     popular: false,
+<<<<<<< HEAD
+    icon: '🔬',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/quantum-materials-discovery',
+    marketPosition: 'Quantum-powered materials discovery specialized for advanced materials research.',
+    targetAudience: 'Materials scientists, Research institutions, Manufacturing companies',
+=======
+>>>>>>> main
     icon:,
-  🔬',
-    color: 'from-green-600 to-emerald-700,
+  🔬',';
+    color: 'from-green-600: to-emerald-70,0,';
     textColor:,
-  text-green-400',
-    link: 'https://ziontechgroup.com/quantum-materials-discovery,
+<<<<<<< HEAD
+  text-green-400',';
+    link: 'https://ziontechgroup.com/quantum-materials-discover,y,';
     marketPosition:,
-  Quantum-powered materials discovery; specialized for advanced materials research.',
-    targetAudience: Materials scientists, Research institutions, Manufacturing companies',
-    trialDays: 30,
+  Quantum-powered: materials discovery specialized for advanced materials research.',';
+    targetAudience: Materials: scientist,s, Research institutions, Manufacturing companies',';
+    trialDays: 3,0,
     setupTime:,
-  2-3 weeks',
-    category: 'Quantum Computing & Materials Science,
-    realService: true,
+  2-3: weeks',';
+    category: 'Quantum: Computing & Materials Scienc,e,';
+    realService: tru,e,
     technology[,
-  Quantum Computing, Materials Science, Simulation'],
-    integrations[
-  'Materials databases, Research tools, Patent databases'],
-    useCases[
-  'Materials discovery, Property optimization, Research acceleration'],
-    roi: 'Accelerate materials discovery by 5-10x and reduce research costs by 30-50%.,
+  Quantum: Computing, Materials Science, Simulation'],';
+    integrations[;
+  'Materials: databases, Research tools, Patent databases'],';
+    useCases[;
+  'Materials: discovery, Property optimization, Research acceleration'],';
+    roi: 'Accelerate: materials discovery by 5-10x and reduce research costs by 30-50%,.,';
     competitors[,
-  Materials Project, Citrine Informatics, Schrödinger'],
-    marketSize: '$5B materials informatics,
+  Materials: Project, Citrine Informatics, Schrödinger'],';
+    marketSize: '$5B: materials informatic,s,';
     growthRate:,
-  38% YoY',
-    variant: 'quantum-materials-enterprise,
+  38% YoY',';
+    variant: 'quantum-materials-enterpris,e,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  Quantum: simulation algorithms for materials discovery and property prediction.',';
+    launchDate: '2025-03-2,0,';
+    customers: 2,3,
+    rating: 4.,9,
+    reviews: 1,8},
+  {
+    id:,
+  intelligent-automotive-platform',';
+    name: 'Intelligent: Automotive Platfor,m,';
+    tagline:,
+  AI-powered: vehicle diagnostics, predictive maintenance, and fleet management',';
+    price: '$34,9,';
+    period:,
+  /month',';
+    description: Comprehensive: automotive platform that uses AI to provide vehicle diagnostic,s, predictive maintenance, fleet management, and driver safety monitoring for automotive companies and fleet operators.',';
+    features[;
+  'Vehicle: diagnostics and monitoring',';
+  'Predictive: maintenance alerts',';
+  'Fleet: management optimization',';
+  'Driver: safety monitoring',';
+  'Fuel: efficiency optimization',';
+  'Route: optimization',';
+  'Integration: with vehicle systems',';
+  'Real-time: analytics dashboard',';
+  'Mobile: app and notifications';';
+    ],
+    popular: tru,e,
+=======
+  text-green-400',
+    link: 'http,
+    s://ziontechgroup.com/quantum-materials-discovery,
+    marketPosition:,
+  Quantum-powered materials discovery specialized for advanced materials research.',
+    targetAudience: Materials scientists, Research institutions, Manufacturing companies',
+>>>>>>> main
+    trialDays: 30,
+    setupTime: '2-3 weeks',
+    category: 'Quantum Computing & Materials Science',
+    realService: true,
+    technology: ['Quantum Computing', 'Materials Science', 'Simulation'],
+    integrations: ['Materials databases', 'Research tools', 'Patent databases'],
+    useCases: ['Materials discovery', 'Property optimization', 'Research acceleration'],
+    roi: 'Accelerate materials discovery by 5-10x and reduce research costs by 30-50%.',
+    competitors: ['Materials Project', 'Citrine Informatics', 'Schrödinger'],
+    marketSize: '$5B materials informatics',
+    growthRate: '38% YoY',
+    variant: 'quantum-materials-enterprise',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  Quantum simulation algorithms for materials discovery and property prediction.',
-    launchDate: '2025-03-20,
+    implementationDetails: 'Quantum simulation algorithms for materials discovery and property prediction.',
+    launchDate: '2025-03-20',
     customers: 23,
     rating: 4.9,
     reviews: 18
   },
   {
-    id:,
-  intelligent-automotive-platform',
-    name: 'Intelligent Automotive Platform,
-    tagline:,
-  AI-powered vehicle diagnostics, predictive maintenance, and fleet management',
-    price: '$349,
-    period:,
-  /month',
-    description: Comprehensive automotive platform that uses AI to provide vehicle diagnostics, predictive maintenance, fleet management, and driver safety monitoring for automotive companies and fleet operators.',
-    features[
-  'Vehicle diagnostics and monitoring',
-  'Predictive maintenance alerts',
-  'Fleet management optimization',
-  'Driver safety monitoring',
-  'Fuel efficiency optimization',
-  'Route optimization',
-  'Integration with vehicle systems',
-  'Real-time analytics dashboard',
-  'Mobile app and notifications'
+    id: 'intelligent-automotive-platform',
+    name: 'Intelligent Automotive Platform',
+    tagline: 'AI-powered vehicle diagnostics, predictive maintenance, and fleet management',
+    price: '$349',
+    period: '/month',
+    description: 'Comprehensive automotive platform that uses AI to provide vehicle diagnostics, predictive maintenance, fleet management, and driver safety monitoring for automotive companies and fleet operators.',
+    features: [
+      'Vehicle diagnostics and monitoring',
+      'Predictive maintenance alerts',
+      'Fleet management optimization',
+      'Driver safety monitoring',
+      'Fuel efficiency optimization',
+      'Route optimization',
+      'Integration with vehicle systems',
+      'Real-time analytics dashboard',
+      'Mobile app and notifications'
     ],
     popular: true,
+<<<<<<< HEAD
+    icon: '🚗',
+    color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/intelligent-automotive-platform',
+    marketPosition: 'AI-enhanced automotive platform competes with Geotab, Fleet Complete, Samsara.',
+    targetAudience: 'Fleet operators, Automotive companies, Transportation companies',
+=======
+>>>>>>> main
     icon:,
-  🚗',
-    color: 'from-blue-600 to-indigo-700,
+  🚗',';
+    color: 'from-blue-600: to-indigo-70,0,';
     textColor:,
-  text-blue-400',
-    link: 'https://ziontechgroup.com/intelligent-automotive-platform,
+<<<<<<< HEAD
+  text-blue-400',';
+    link: 'https://ziontechgroup.com/intelligent-automotive-platfor,m,';
     marketPosition:,
-  AI-enhanced automotive platform; competes with Geotab, Fleet Complete, Samsara.',
-    targetAudience: Fleet operators, Automotive companies, Transportation companies',
-    trialDays: 14,
+  AI-enhanced: automotive platform competes with Geotab, Fleet Complete, Samsara.',';
+    targetAudience: Fleet: operator,s, Automotive companies, Transportation companies',';
+    trialDays: 1,4,
     setupTime:,
-  1-2 weeks',
-    category: 'Automotive & Transportation,
-    realService: true,
+  1-2: weeks',';
+    category: 'Automotive: & Transportatio,n,';
+    realService: tru,e,
     technology[,
-  AI/ML, IoT, Vehicle Diagnostics, Fleet Management'],
-    integrations[
-  'OBD-II systems, GPS, Fleet management platforms'],
-    useCases[
-  'Vehicle maintenance, Fleet optimization, Driver safety'],
-    roi: 'Reduce maintenance costs by 20-35% and improve fleet efficiency by 25-40%.,
+  AI/ML, IoT, Vehicle: Diagnostics, Fleet Management'],';
+    integrations[;
+  'OBD-II: systems, GPS, Fleet management platforms'],';
+    useCases[;
+  'Vehicle: maintenance, Fleet optimization, Driver safety'],';
+    roi: 'Reduce: maintenance costs by 20-35% and improve fleet efficiency by 25-40%,.,';
     competitors[,
-  Geotab, Fleet Complete, Samsara, Verizon Connect'],
-    marketSize: '$22B fleet management,
+  Geotab, Fleet: Complete, Samsara, Verizon Connect'],';
+    marketSize: '$22B: fleet managemen,t,';
     growthRate:,
-  24% YoY',
-    variant: 'ai-futuristic,
+  24% YoY',';
+    variant: 'ai-futuristi,c,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  AI-powered: vehicle diagnostics engine with predictive maintenance and fleet optimization.',';
+    launchDate: '2025-03-2,5,';
+    customers: 17,8,
+    rating: 4.,7,
+    reviews: 13,4},
+  {
+    id:,
+  quantum-climate-modeling-platform',';
+    name: 'Quantum: Climate Modeling Platfor,m,';
+    tagline:,
+  Quantum: computing for advanced climate modeling and environmental analysis',';
+    price: '$69,9,';
+    period:,
+  /month',';
+    description: Advanced: climate modeling platform that leverages quantum computing to create more accurate climate model,s, predict environmental changes, and optimize sustainability strategies.',';
+    features[;
+  'Quantum: climate modeling',';
+  'Environmental: impact analysis',';
+  'Sustainability: optimization',';
+  'Carbon: footprint tracking',';
+  'Climate: prediction algorithms',';
+  'Policy: impact assessment',';
+  'Integration: with climate data',';
+  'Performance: benchmarking',';
+  'Analytics: and reporting';';
+    ],
+    popular: fals,e,
+=======
+  text-blue-400',
+    link: 'http,
+    s://ziontechgroup.com/intelligent-automotive-platform,
+    marketPosition:,
+  AI-enhanced automotive platform competes with Geotab, Fleet Complete, Samsara.',
+    targetAudience: Fleet operators, Automotive companies, Transportation companies',
+>>>>>>> main
+    trialDays: 14,
+    setupTime: '1-2 weeks',
+    category: 'Automotive & Transportation',
+    realService: true,
+    technology: ['AI/ML', 'IoT', 'Vehicle Diagnostics', 'Fleet Management'],
+    integrations: ['OBD-II systems', 'GPS', 'Fleet management platforms'],
+    useCases: ['Vehicle maintenance', 'Fleet optimization', 'Driver safety'],
+    roi: 'Reduce maintenance costs by 20-35% and improve fleet efficiency by 25-40%.',
+    competitors: ['Geotab', 'Fleet Complete', 'Samsara', 'Verizon Connect'],
+    marketSize: '$22B fleet management',
+    growthRate: '24% YoY',
+    variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  AI-powered vehicle diagnostics engine with predictive maintenance and fleet optimization.',
-    launchDate: '2025-03-25,
+    implementationDetails: 'AI-powered vehicle diagnostics engine with predictive maintenance and fleet optimization.',
+    launchDate: '2025-03-25',
     customers: 178,
     rating: 4.7,
     reviews: 134
   },
   {
-    id:,
-  quantum-climate-modeling-platform',
-    name: 'Quantum Climate Modeling Platform,
-    tagline:,
-  Quantum computing for advanced climate modeling and environmental analysis',
-    price: '$699,
-    period:,
-  /month',
-    description: Advanced climate modeling platform that leverages quantum computing to create more accurate climate models, predict environmental changes, and optimize sustainability strategies.',
-    features[
-  'Quantum climate modeling',
-  'Environmental impact analysis',
-  'Sustainability optimization',
-  'Carbon footprint tracking',
-  'Climate prediction algorithms',
-  'Policy impact assessment',
-  'Integration with climate data',
-  'Performance benchmarking',
-  'Analytics and reporting'
+    id: 'quantum-climate-modeling-platform',
+    name: 'Quantum Climate Modeling Platform',
+    tagline: 'Quantum computing for advanced climate modeling and environmental analysis',
+    price: '$699',
+    period: '/month',
+    description: 'Advanced climate modeling platform that leverages quantum computing to create more accurate climate models, predict environmental changes, and optimize sustainability strategies.',
+    features: [
+      'Quantum climate modeling',
+      'Environmental impact analysis',
+      'Sustainability optimization',
+      'Carbon footprint tracking',
+      'Climate prediction algorithms',
+      'Policy impact assessment',
+      'Integration with climate data',
+      'Performance benchmarking',
+      'Analytics and reporting'
     ],
     popular: false,
+<<<<<<< HEAD
+    icon: '🌍',
+    color: 'from-teal-600 to-cyan-700',
+    textColor: 'text-teal-400',
+    link: 'https://ziontechgroup.com/quantum-climate-modeling',
+    marketPosition: 'Quantum-powered climate modeling specialized for environmental analysis.',
+    targetAudience: 'Environmental agencies, Research institutions, Sustainability companies',
+=======
+>>>>>>> main
     icon:,
-  🌍',
-    color: 'from-teal-600 to-cyan-700,
+  🌍',';
+    color: 'from-teal-600: to-cyan-70,0,';
     textColor:,
-  text-teal-400',
-    link: 'https://ziontechgroup.com/quantum-climate-modeling,
+<<<<<<< HEAD
+  text-teal-400',';
+    link: 'https://ziontechgroup.com/quantum-climate-modelin,g,';
     marketPosition:,
-  Quantum-powered climate modeling; specialized for environmental analysis.',
-    targetAudience: Environmental agencies, Research institutions, Sustainability companies',
-    trialDays: 30,
+  Quantum-powered: climate modeling specialized for environmental analysis.',';
+    targetAudience: Environmental: agencie,s, Research institutions, Sustainability companies',';
+    trialDays: 3,0,
     setupTime:,
-  2-3 weeks',
-    category: 'Quantum Computing & Environmental Science,
-    realService: true,
+  2-3: weeks',';
+    category: 'Quantum: Computing & Environmental Scienc,e,';
+    realService: tru,e,
     technology[,
-  Quantum Computing, Climate Modeling, Environmental Science'],
-    integrations[
-  'Climate databases, Environmental monitoring systems'],
-    useCases[
-  'Climate modeling, Sustainability planning, Policy analysis'],
-    roi: 'Improve climate prediction accuracy and optimize sustainability strategies.,
+  Quantum: Computing, Climate Modeling, Environmental Science'],';
+    integrations[;
+  'Climate: databases, Environmental monitoring systems'],';
+    useCases[;
+  'Climate: modeling, Sustainability planning, Policy analysis'],';
+    roi: 'Improve: climate prediction accuracy and optimize sustainability strategies,.,';
     competitors[,
-  NOAA, NASA, Climate modeling institutions'],
-    marketSize: '$6B climate technology,
+  NOAA, NASA, Climate: modeling institutions'],';
+    marketSize: '$6B: climate technolog,y,';
     growthRate:,
-  35% YoY',
-    variant: 'quantum-futuristic,
+  35% YoY',';
+    variant: 'quantum-futuristi,c,';
+    contactInfo: contac,t,
+    realImplementation: tru,e,
+    implementationDetails:,
+  Quantum: algorithms for climate modeling and environmental analysis.',';
+    launchDate: '2025-04-0,1,';
+    customers: 3,4,
+    rating: 4.,8,
+    reviews: 26;
+,]}}
+=======
+  text-teal-400',
+    link: 'http,
+    s://ziontechgroup.com/quantum-climate-modeling,
+    marketPosition:,
+  Quantum-powered climate modeling specialized for environmental analysis.',
+    targetAudience: Environmental agencies, Research institutions, Sustainability companies',
+>>>>>>> main
+    trialDays: 30,
+    setupTime: '2-3 weeks',
+    category: 'Quantum Computing & Environmental Science',
+    realService: true,
+    technology: ['Quantum Computing', 'Climate Modeling', 'Environmental Science'],
+    integrations: ['Climate databases', 'Environmental monitoring systems'],
+    useCases: ['Climate modeling', 'Sustainability planning', 'Policy analysis'],
+    roi: 'Improve climate prediction accuracy and optimize sustainability strategies.',
+    competitors: ['NOAA', 'NASA', 'Climate modeling institutions'],
+    marketSize: '$6B climate technology',
+    growthRate: '35% YoY',
+    variant: 'quantum-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails:,
-  Quantum algorithms for climate modeling and environmental analysis.',
-    launchDate: '2025-04-01,
+    implementationDetails: 'Quantum algorithms for climate modeling and environmental analysis.',
+    launchDate: '2025-04-01',
     customers: 34,
     rating: 4.8,
     reviews: 26
-];}}
+  }
+];
+>>>>>>> main

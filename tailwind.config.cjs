@@ -23,6 +23,13 @@ module.exports = {
 				128: "32rem",
 				"8xl": "88rem",
 				"9xl": "96rem",
+				responsive: {
+					DEFAULT: "1rem",
+					sm: "2rem",
+					lg: "4rem",
+					xl: "5rem",
+					"2xl": "6rem",
+				},
 			},
 			animation: {
 				float: "float 6s ease-in-out infinite",
@@ -219,15 +226,6 @@ module.exports = {
 				"neon-green": "0 0 20px rgba(16, 185, 129, 0.5)",
 				"neon-glow":
 					"0 0 30px rgba(0, 212, 255, 0.3), 0 0 60px rgba(0, 212, 255, 0.1)",
-			},
-			spacing: {
-				responsive: {
-					DEFAULT: "1rem",
-					sm: "2rem",
-					lg: "4rem",
-					xl: "5rem",
-					"2xl": "6rem",
-				},
 			},
 		},
 	},

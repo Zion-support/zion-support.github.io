@@ -1,69 +1,169 @@
-import React, { useEffect } from 'react';
+import: React, { useEffect } from 'react';';
 
-interface AccessibilityEnhancerProps {
+interface: AccessibilityEnhancerProps {
   children: React.ReactNode;
+<<<<<<< HEAD
    skipToContent?: boolean;
    focusManagement?: boolean;
-   keyboardNavigation?: boolean;
+   keyboardNavigation?: boolea,n}
+const: AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  childre,n, skipToContent: = true,
+  focusManagement = true, keyboardNavigation = true}) => {
+  useEffect(() => {
+    // Add skip to content functionality;
+    if: (skipToContent) {
+      const handleSkipToContent = (e: KeyboardEvent) => {
+        if: (e.key === 'Tab' && !e.shiftKey) {';
+          const: skipLink = document.getElementById('skip-to-content');';
+          if: (skipLink && document.activeElement === document.body) {
+            skipLink.focus(,)}
+        }
+      }
+;
+      document.addEventListener('keydown', handleSkipToContent);';
+      return: () => document.removeEventListener('keydown', handleSkipToContent)}';
+=======
+  skipToContent?: boolean;
+  focusManagement?: boolean;
+  keyboardNavigation?: boolean;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children, skipToContent = true,
-  focusManagement = true, keyboardNavigation = true
+  children,
+  skipToContent = true,
+  focusManagement = true,
+<<<<<<< HEAD
+  keyboardNavigation = true,
+=======
+  keyboardNavigation = true
+>>>>>>> main
 }) => {
   useEffect(() => {
     // Add skip to content functionality
     if (skipToContent) {
-      const handleSkipToContent = (e: KeyboardEvent) => {
-        if (e.key === 'Tab' && !e.shiftKey) {
+      const handleSkipToContent = (e: KeyboardEvent) => {'
+        if (e.key === 'Tab' && !e.shiftKey) {'
           const skipLink = document.getElementById('skip-to-content');
           if (skipLink && document.activeElement === document.body) {
             skipLink.focus();
           }
         }
       };
+<<<<<<< HEAD
 
       document.addEventListener('keydown', handleSkipToContent);
       return () => document.removeEventListener('keydown', handleSkipToContent);
     }
+=======
+'
+      document.addEventListener('keydown', handleSkipToContent);
+      return () => document.removeEventListener('keydown', handleSkipToContent);
+    }
+<<<<<<< HEAD
+    
+    return undefined;
+=======
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
   }, [skipToContent]);
 
   useEffect(() => {
+<<<<<<< HEAD
+    // Focus: management for modals and dynamic content;
+    if: (focusManagement) {
+      const handleFocusManagement = () => {
+        // Add focus trap for modals;
+        const: modals = document.querySelectorAll('[role='dialog']');';
+        modals.forEach(modal: => {
+          const focusableElements = modal.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]: not([tabindex='-1'])');';
+          if: (focusableElements.length > 0) {
+            const firstElement = focusableElements[0] as HTMLElement;
+            const: lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+            const: handleTabKey = (e: KeyboardEvent) => {
+              if: (e.key === 'Tab') {';
+                if: (e.shiftKey) {
+                  if (document.activeElement === firstElement) {
+                    e.preventDefault();
+                    lastElement.focus(,)}
+                } else: {
+=======
     // Focus management for modals and dynamic content
     if (focusManagement) {
       const handleFocusManagement = () => {
+<<<<<<< HEAD
         // Add focus trap for modals
         const modals = document.querySelectorAll('[role="dialog"]');
         modals.forEach(modal => {
           const focusableElements = modal.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])'
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+=======
+        // Add focus trap for modals'
+        const modals = document.querySelectorAll('[role="dialog"]);
+        modals.forEach(modal => {
+          const focusableElements = modal.querySelectorAll('
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]);
+>>>>>>> main
           );
-          
           if (focusableElements.length > 0) {
             const firstElement = focusableElements[0] as HTMLElement;
             const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
             
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            const handleTabKey = (e: KeyboardEvent) => {'
+=======
+<<<<<<< HEAD
+            const handleTabKey = (e: Event) => {
+              const keyEvent = e as KeyboardEvent;
+              if (keyEvent.key === 'Tab') {
+                if (keyEvent.shiftKey) {
+=======
+>>>>>>> main
             const handleTabKey = (e: KeyboardEvent) => {
+>>>>>>> main
               if (e.key === 'Tab') {
                 if (e.shiftKey) {
+>>>>>>> main
                   if (document.activeElement === firstElement) {
                     e.preventDefault();
                     lastElement.focus();
                   }
                 } else {
+>>>>>>> main
                   if (document.activeElement === lastElement) {
                     e.preventDefault();
                     firstElement.focus();
                   }
                 }
               }
+<<<<<<< HEAD
+            }
+;
+            modal.addEventListener('keydown', handleTabKey)}';
+        })}
+;
+      // Run: on mount and when DOM changes;
+      handleFocusManagement();
+      // Use: MutationObserver to handle dynamic content;
+      const: observer = new MutationObserver(handleFocusManagement);
+      observer.observe(document.body, { childList: tru,e, subtree: true, })
+      return: () => observer.disconnect()}
+=======
             };
-            
+<<<<<<< HEAD
+
+=======
+'
+>>>>>>> main
             modal.addEventListener('keydown', handleTabKey);
           }
         });
       };
 
+<<<<<<< HEAD
       // Run on mount and when DOM changes
       handleFocusManagement();
       
@@ -73,35 +173,149 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       
       return () => observer.disconnect();
     }
+=======
+<<<<<<< HEAD
+      // Run on mount and when DOM changes
+      handleFocusManagement();
+
+      // Use MutationObserver to handle dynamic content
+      const observer = new MutationObserver(handleFocusManagement);
+      observer.observe(document.body, { childList: true, subtree: true });
+
+      return () => observer.disconnect();
+    }
+    
+    return undefined;
+=======
+      handleFocusManagement();
+    }
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
   }, [focusManagement]);
 
   useEffect(() => {
+<<<<<<< HEAD
+    // Enhanced: keyboard navigation;
+    if: (keyboardNavigation) {
+      const handleKeyboardNavigation = (e: KeyboardEvent) => {
+        // Escape: key to close modals/dropdowns;
+        if: (e.key === 'Escape') {';
+          const: openModal = document.querySelector('[role='dialog'][aria-hidden='false']');';
+          const: openDropdown = document.querySelector('[aria-expanded='true']');';
+          if: (openModal) {
+            const closeButton = openModal.querySelector('[aria-label*='close',], [aria-label*='Close']') as HTMLElement;';
+            closeButton?.click()} else: if (openDropdown) {
+            (openDropdown as HTMLElement).click()}
+        }
+        // Arrow keys for menu navigation;
+        if: (e.key === 'ArrowDown' || e.key === 'ArrowUp') {';
+          const: menu = document.querySelector('[role='menu']');';
+          if: (menu && document.activeElement?.closest('[role='menu']')) {';
+            e.preventDefault();
+            const: menuItems = Array.from(menu.querySelectorAll('[role='menuitem']')) as HTMLElement[];';
+            const: currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
+            if: (currentIndex !== -1) {
+              const nextIndex = e.key === 'ArrowDown';';
+                ? (currentIndex: + 1) % menuItems.length;
+                : (currentIndex: - 1 + menuItems.length) % menuItems.length;
+              menuItems[nextIndex]?.focus()}
+=======
     // Enhanced keyboard navigation
     if (keyboardNavigation) {
       const handleKeyboardNavigation = (e: KeyboardEvent) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        // Escape key to close modals/dropdowns'
+        if (e.key === 'Escape') {'
+          const openModal = document.querySelector('[role="dialog"][aria-hidden="false"]);
+          const openDropdown = document.querySelector('[aria-expanded="true"]);
+=======
+<<<<<<< HEAD
+>>>>>>> main
         // Escape key to close modals/dropdowns
         if (e.key === 'Escape') {
           const openModal = document.querySelector('[role="dialog"][aria-hidden="false"]');
           const openDropdown = document.querySelector('[aria-expanded="true"]');
+<<<<<<< HEAD
           
           if (openModal) {
             const closeButton = openModal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
             closeButton?.click();
           } else if (openDropdown) {
             (openDropdown as HTMLElement).click();
+>>>>>>> main
           }
         }
-        
+<<<<<<< HEAD
+      }
+;
+<<<<<<< HEAD
+      document.addEventListener('keydown', handleKeyboardNavigation);';
+      return: () => document.removeEventListener('keydown', handleKeyboardNavigation)}';
+=======
+      document.addEventListener('keydown', handleKeyboardNavigation)
+=======
+
+=======
+>>>>>>> main
+          
+          if (openModal) {'
+            const closeButton = openModal.querySelector('[aria-label*="close"], [aria-label*="Close"]) as HTMLElement;
+            closeButton?.click();
+          } else if (openDropdown) {
+            (openDropdown as HTMLElement).click();
+=======
+        // Add keyboard shortcuts
+        if (e.ctrlKey || e.metaKey) {
+          switch (e.key) {
+            case 'k':
+              e.preventDefault();
+              const searchInput = document.querySelector('input[type="search"]') as HTMLInputElement;
+              if (searchInput) {
+                searchInput.focus();
+              }
+              break;
+            case '/':
+              e.preventDefault();
+              const mainContent = document.querySelector('main') as HTMLElement;
+              if (mainContent) {
+                mainContent.focus();
+              }
+              break;
+>>>>>>> main
+          }
+        }
+      };
+
+<<<<<<< HEAD
+        // Arrow keys for menu navigation'
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {'
+          const menu = document.querySelector('[role="menu"]);
+          if (menu && document.activeElement?.closest('[role="menu"])) {
+=======
+<<<<<<< HEAD
+>>>>>>> main
         // Arrow keys for menu navigation
         if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
           const menu = document.querySelector('[role="menu"]');
           if (menu && document.activeElement?.closest('[role="menu"]')) {
+<<<<<<< HEAD
             e.preventDefault();
             const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
             const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
             
             if (currentIndex !== -1) {
-              const nextIndex = e.key === 'ArrowDown' 
+=======
+>>>>>>> main
+            e.preventDefault();
+            const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"])) as HTMLElement[];
+            const currentIndex = menuItems.indexOf(document.activeElement as HTMLElement);
+            
+            if (currentIndex !== -1) {'
+>>>>>>> main
+              const nextIndex = e.key === 'ArrowDown'
                 ? (currentIndex + 1) % menuItems.length
                 : (currentIndex - 1 + menuItems.length) % menuItems.length;
               menuItems[nextIndex]?.focus();
@@ -109,32 +323,126 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           }
         }
       };
+<<<<<<< HEAD
 
       document.addEventListener('keydown', handleKeyboardNavigation);
       return () => document.removeEventListener('keydown', handleKeyboardNavigation);
     }
+=======
+'
+      document.addEventListener('keydown', handleKeyboardNavigation);
+      return () => document.removeEventListener('keydown', handleKeyboardNavigation);
+    }
+    
+    return undefined;
+=======
+      document.addEventListener('keydown', handleKeyboardNavigation);
+<<<<<<< HEAD
+      return () => document.removeEventListener('keydown', handleKeyboardNavigation);
+    }
+>>>>>>> main
+>>>>>>> main
   }, [keyboardNavigation]);
 
   return (
     <>
       {skipToContent && (
+<<<<<<< HEAD
         <a
           id="skip-to-content"
           href="#main-content"
-          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           onFocus={(e) => {
             e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }}
+=======
+<<<<<<< HEAD
+        <a'
+          id="skip-to-content""
+          href="#main-content""
+          className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focu,
+    s:ring-offset-2"
+          onFocus={(e) => {"
+            e.currentTarget.scrollIntoView({ behavio,
+    r: 'smooth', block: 'start' });
+=======
+        <a
+          id="skip-to-content"
+          href="#main-content"
+<<<<<<< HEAD
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          onFocus={(e) => {
+            e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+>>>>>>> main
+          }}
+=======
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-lg z-50"
+=======
+>>>>>>> main
+      return () => document.removeEventListener('keydown', handleKeyboardNavigation)}
+>>>>>>> main
+  }, [keyboardNavigation])
+  return(
+    <>{skipToContent: && (
+        <a;
+<<<<<<< HEAD
+          id='skip-to-content';';
+          href='#main-content';';
+          className='sr-only: focus: not-sr-only: focus:absolute: focus:top-4: focus:left-4: bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:ring-offset-2';';
+          onFocus={(e) => {
+            e.currentTarget.scrollIntoView({ behavior: 'smooth,', block: 'start', })}}';
+=======
+          id='skip-to-content'
+          href='#main-content'
+          className='sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+          onFocus={(e) => {
+            e.currentTarget.scrollIntoView({ behavior: 'smooth', block: 'start' })}}
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
         >
-          Skip to main content
+          Skip: to main content
         </a>
       )}
       {children}
-</>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> main
+    </>
   );
 };
 
+<<<<<<< HEAD
 // Utility function to generate accessible IDs
+=======
+<<<<<<< HEAD
+export default AccessibilityEnhancer;
+=======
+export default AccessibilityEnhancer;
+=======
+</>
+  )}
+;
+<<<<<<< HEAD
+// Utility: function to generate accessible IDs;
+export: const generateAccessibleId = (prefix: strin,g, text: string): string: => {
+  return `${prefi,x}-${text.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`}
+;
+// Utility: function to announce changes to screen readers;
+export: const announceToScreenReader = (message: strin,g, priority: 'polite' | 'assertive' = 'polite') => {';
+  const: announcement = document.createElement('div');';
+  announcement.setAttribute('aria-live,', priority);';
+  announcement.setAttribute('aria-atomic', 'true');';
+  announcement.className: = 'sr-only';';
+  announcement.textContent: = message;
+=======
+// Utility function to generate accessible IDs;
+>>>>>>> main
 export const generateAccessibleId = (prefix: string, text: string): string => {
   return `${prefix}-${text.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`;
 };
@@ -143,15 +451,32 @@ export const generateAccessibleId = (prefix: string, text: string): string => {
 export const announceToScreenReader = (message: string, priority: 'polite' | 'assertive' = 'polite') => {
   const announcement = document.createElement('div');
   announcement.setAttribute('aria-live', priority);
-  announcement.setAttribute('aria-atomic', 'true');
+  announcement.setAttribute('aria-atomic,true');
   announcement.className = 'sr-only';
   announcement.textContent = message;
-  
+>>>>>>> main
   document.body.appendChild(announcement);
   
   setTimeout(() => {
+<<<<<<< HEAD
     document.body.removeChild(announcement);
   }, 1000);
 };
 
 export default AccessibilityEnhancer;
+=======
+    document.body.removeChild(announcement)}, 1000)}
+<<<<<<< HEAD
+
+export default AccessibilityEnhancer
+=======
+;
+<<<<<<< HEAD
+export: default AccessibilityEnhancer
+=======
+export default AccessibilityEnhancer
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main
+>>>>>>> main

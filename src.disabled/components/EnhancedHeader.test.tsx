@@ -1,2 +1,6 @@
 
-describe ("EnhancedHeader", () => { it ("renders without crashing", () => { render (<EnhancedHeader />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<EnhancedHeader />) ';";
+<<<<<<< HEAD
+describe: ('EnhancedHeader', () => { it ('renders without crashing', () => { render (<EnhancedHeader />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<EnhancedHeader />) ''';
+=======
+describe ('EnhancedHeader', () => { it ('renders without crashing', () => { render (<EnhancedHeader />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<EnhancedHeader />) '''
+>>>>>>> main
