@@ -27,10 +27,18 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease'
           }}>Home</Link>
-          <Link href="/services" style={{ 
+          <Link href="/micro-saas" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease'
-          }}>All Services</Link>
+          }}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease'
+          }}>AI Services</Link>
+          <Link href="/it-services" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease'
+          }}>IT Services</Link>
           <Link href="/services-catalog" style={{ 
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease'
@@ -39,6 +47,10 @@ function Header(): any {
             padding: '8px 12px', borderRadius: 6, opacity: 0.9,
             transition: 'all 0.2s ease'
           }}>Pricing</Link>
+          <Link href="/about" style={{ 
+            padding: '8px 12px', borderRadius: 6, opacity: 0.9,
+            transition: 'all 0.2s ease'
+          }}>About</Link>
           <Link href="/contact" style={{ 
             fontWeight: 600, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
             color: 'white', padding: '8px 16px', borderRadius: 8,
@@ -47,15 +59,54 @@ function Header(): any {
         </div>
 
         {/* Mobile menu button */}
-        <button style={{
-          display: 'none',
-          '@media (max-width: 768px)': { display: 'block' },
-          background: 'none', border: 'none', color: 'white', fontSize: '1.5rem',
-          cursor: 'pointer', padding: '8px'
-        }}>
+        <button 
+          onClick={() => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu) {
+              mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+            }
+          }}
+          style={{
+            display: 'none',
+            '@media (max-width: 768px)': { display: 'block' },
+            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem',
+            cursor: 'pointer', padding: '8px'
+          }}
+        >
           ☰
         </button>
       </nav>
+      
+      {/* Mobile Menu */}
+      <div 
+        id="mobile-menu"
+        style={{
+          display: 'none',
+          background: 'rgba(11, 18, 32, 0.98)',
+          borderTop: '1px solid rgba(255,255,255,0.1)',
+          padding: '20px',
+          '@media (min-width: 769px)': { display: 'none !important' }
+        }}
+      >
+        <div style={{ display: 'grid', gap: 12 }}>
+          <Link href="/" style={{ padding: '12px 0', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none' }}>Home</Link>
+          <Link href="/micro-saas" style={{ padding: '12px 0', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none' }}>Micro SaaS</Link>
+          <Link href="/ai-services" style={{ padding: '12px 0', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none' }}>AI Services</Link>
+          <Link href="/it-services" style={{ padding: '12px 0', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none' }}>IT Services</Link>
+          <Link href="/services-catalog" style={{ padding: '12px 0', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none' }}>Catalog</Link>
+          <Link href="/pricing" style={{ padding: '12px 0', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none' }}>Pricing</Link>
+          <Link href="/about" style={{ padding: '12px 0', borderBottom: '1px solid rgba(255,255,255,0.1)', textDecoration: 'none' }}>About</Link>
+          <Link href="/contact" style={{ 
+            padding: '12px 0', 
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', 
+            textAlign: 'center',
+            borderRadius: 8,
+            textDecoration: 'none',
+            fontWeight: 600
+          }}>Contact</Link>
+        </div>
+      </div>
     </header>
   );
 }
@@ -96,13 +147,15 @@ function Footer(): any {
         <div style={{ display: 'grid', gap: 12 }}>
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none' }}>All Services</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none' }}>Micro SaaS Products</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none' }}>AI Services</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none' }}>IT Services</Link>
             <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none' }}>Services Catalog</Link>
             <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none' }}>Pricing</Link>
             <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
               <div>• 60+ Micro SaaS Products</div>
               <div>• 40+ AI Services</div>
-              <div>• 40+ IT Solutions</div>
+              <div>• 50+ IT Solutions</div>
             </div>
           </div>
         </div>
@@ -112,9 +165,11 @@ function Footer(): any {
           <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Quick Links</h3>
           <div style={{ display: 'grid', gap: 8 }}>
             <Link href="/" style={{ opacity: 0.8, textDecoration: 'none' }}>Home</Link>
+            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none' }}>About Us</Link>
             <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none' }}>Contact Us</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none' }}>FAQ</Link>
             <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none' }}>Privacy Policy</Link>
-            <a href="https://ziontechgroup.com" style={{ opacity: 0.8, textDecoration: 'none' }}>Main Website</a>
+            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none' }}>Terms of Service</Link>
           </div>
         </div>
 

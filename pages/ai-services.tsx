@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search } from 'lucide-react';
+import { Brain, Zap, Shield, Eye, Mic, TrendingUp, Database, FileText, Mail, Code, Cog, Search, Globe } from 'lucide-react';
 
 export default function AIServices() {
   const contact = {
@@ -626,6 +626,248 @@ export default function AIServices() {
         'Improved accuracy in legal analysis',
         'Automated compliance checking',
         'Better risk identification'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Autonomous Vehicle Systems',
+      description: 'Advanced AI systems for autonomous vehicles with perception, decision-making, and safety optimization.',
+      features: [
+        'Real-time object detection and tracking',
+        'Path planning and navigation',
+        'Collision avoidance systems',
+        'Traffic pattern recognition',
+        'Weather condition adaptation',
+        'Safety monitoring and alerts'
+      ],
+      pricing: '$100,000 – $1,000,000 setup',
+      perUnit: 'Custom pricing based on vehicle type',
+      timeline: '24–52 weeks',
+      benefits: [
+        '99.9% safety improvement',
+        'Reduced transportation costs',
+        'Improved traffic efficiency',
+        'Enhanced mobility solutions'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Mental Health Assistant',
+      description: 'Intelligent mental health monitoring and support with early intervention and personalized care.',
+      features: [
+        'Emotional state monitoring and analysis',
+        'Early warning system for mental health issues',
+        'Personalized therapy recommendations',
+        'Crisis intervention and support',
+        'Progress tracking and analytics',
+        'Integration with healthcare providers'
+      ],
+      pricing: '$10,000 – $80,000 setup',
+      perUnit: '$0.50 – $5.00 per session',
+      timeline: '12–24 weeks',
+      benefits: [
+        '40% improvement in mental health outcomes',
+        'Early intervention capabilities',
+        'Personalized care delivery',
+        'Reduced healthcare costs'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Climate Change Modeling',
+      description: 'Advanced climate modeling and prediction with environmental impact assessment and mitigation strategies.',
+      features: [
+        'Climate pattern analysis and prediction',
+        'Environmental impact assessment',
+        'Carbon footprint optimization',
+        'Renewable energy planning',
+        'Disaster risk prediction',
+        'Sustainability strategy development'
+      ],
+      pricing: '$20,000 – $200,000 setup',
+      perUnit: 'Custom pricing based on scope',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Accurate climate predictions',
+        'Optimized environmental strategies',
+        'Reduced carbon emissions',
+        'Better disaster preparedness'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Quantum Computing Optimization',
+      description: 'Quantum algorithm optimization and quantum machine learning for complex problem solving.',
+      features: [
+        'Quantum algorithm development',
+        'Quantum machine learning models',
+        'Optimization problem solving',
+        'Quantum error correction',
+        'Hybrid classical-quantum systems',
+        'Quantum advantage analysis'
+      ],
+      pricing: '$50,000 – $500,000 setup',
+      perUnit: 'Custom pricing based on complexity',
+      timeline: '24–52 weeks',
+      benefits: [
+        'Exponential computational speedup',
+        'Complex optimization solutions',
+        'Breakthrough problem solving',
+        'Future-ready technology adoption'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI-Powered Real-Time Translation Platform',
+      description: 'Advanced real-time translation with context awareness and cultural adaptation.',
+      features: [
+        'Real-time speech and text translation',
+        'Context-aware translation accuracy',
+        'Cultural adaptation and localization',
+        'Multi-modal translation (voice, text, image)',
+        'Industry-specific terminology',
+        'Offline translation capabilities'
+      ],
+      pricing: '$5,000 – $40,000 setup',
+      perUnit: '$0.01 – $0.10 per translation',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99% translation accuracy',
+        'Real-time communication',
+        'Cultural sensitivity',
+        'Global business expansion'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI-Powered Space Exploration Systems',
+      description: 'Intelligent systems for space exploration with autonomous navigation and scientific analysis.',
+      features: [
+        'Autonomous spacecraft navigation',
+        'Planetary surface analysis',
+        'Resource detection and mapping',
+        'Mission planning and optimization',
+        'Scientific data analysis',
+        'Communication optimization'
+      ],
+      pricing: '$100,000 – $2,000,000 setup',
+      perUnit: 'Custom pricing based on mission',
+      timeline: '32–104 weeks',
+      benefits: [
+        'Enhanced space exploration capabilities',
+        'Autonomous mission execution',
+        'Scientific discovery acceleration',
+        'Reduced mission costs'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Personalized Medicine Platform',
+      description: 'Precision medicine with AI-driven treatment personalization and drug response prediction.',
+      features: [
+        'Genomic analysis and interpretation',
+        'Personalized treatment recommendations',
+        'Drug response prediction',
+        'Disease risk assessment',
+        'Treatment outcome optimization',
+        'Clinical trial matching'
+      ],
+      pricing: '$25,000 – $200,000 setup',
+      perUnit: '$10 – $100 per analysis',
+      timeline: '16–32 weeks',
+      benefits: [
+        '50% improvement in treatment outcomes',
+        'Personalized healthcare delivery',
+        'Reduced adverse drug reactions',
+        'Better patient outcomes'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI-Powered Smart Grid Management',
+      description: 'Intelligent energy grid optimization with demand prediction and renewable integration.',
+      features: [
+        'Energy demand forecasting',
+        'Renewable energy integration',
+        'Grid stability optimization',
+        'Load balancing and distribution',
+        'Predictive maintenance',
+        'Energy storage optimization'
+      ],
+      pricing: '$30,000 – $300,000 setup',
+      perUnit: 'Custom pricing based on grid size',
+      timeline: '20–40 weeks',
+      benefits: [
+        '30% improvement in grid efficiency',
+        'Better renewable energy integration',
+        'Reduced energy waste',
+        'Enhanced grid reliability'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Biometric Security Systems',
+      description: 'Advanced biometric authentication with multi-modal recognition and anti-spoofing capabilities.',
+      features: [
+        'Multi-modal biometric recognition',
+        'Anti-spoofing and liveness detection',
+        'Behavioral biometric analysis',
+        'Continuous authentication',
+        'Privacy-preserving biometrics',
+        'Real-time threat detection'
+      ],
+      pricing: '$8,000 – $60,000 setup',
+      perUnit: '$0.01 – $0.10 per authentication',
+      timeline: '8–16 weeks',
+      benefits: [
+        '99.99% authentication accuracy',
+        'Enhanced security posture',
+        'Reduced identity fraud',
+        'Seamless user experience'
+      ]
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Ocean Intelligence Platform',
+      description: 'Marine ecosystem monitoring and oceanographic analysis with environmental protection insights.',
+      features: [
+        'Marine life monitoring and tracking',
+        'Oceanographic data analysis',
+        'Pollution detection and tracking',
+        'Climate impact assessment',
+        'Fishery management optimization',
+        'Marine conservation planning'
+      ],
+      pricing: '$15,000 – $150,000 setup',
+      perUnit: 'Custom pricing based on coverage',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Enhanced marine conservation',
+        'Improved fishery management',
+        'Better environmental monitoring',
+        'Sustainable ocean resource use'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Neuromorphic Computing Systems',
+      description: 'Brain-inspired computing with spiking neural networks and ultra-low power processing.',
+      features: [
+        'Spiking neural network implementation',
+        'Ultra-low power processing',
+        'Real-time learning and adaptation',
+        'Edge computing optimization',
+        'Neuromorphic sensor integration',
+        'Cognitive computing capabilities'
+      ],
+      pricing: '$40,000 – $400,000 setup',
+      perUnit: 'Custom pricing based on complexity',
+      timeline: '20–40 weeks',
+      benefits: [
+        '1000x power efficiency improvement',
+        'Real-time learning capabilities',
+        'Edge computing optimization',
+        'Brain-inspired intelligence'
       ]
     }
   ];
