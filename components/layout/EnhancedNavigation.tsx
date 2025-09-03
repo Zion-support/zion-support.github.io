@@ -15,6 +15,11 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Mobile Development', href: '/services/mobile-development' },
     { name: 'IoT Platforms', href: '/services/iot-platforms' },
     { name: 'Cybersecurity', href: '/services/cybersecurity' },
+    { name: 'Micro SaaS: AI Sales Assistant', href: '/services/micro-saas/ai-sales-assistant' },
+    { name: 'Micro SaaS: AI Support', href: '/services/micro-saas/ai-customer-support' },
+    { name: 'Micro SaaS: AI Compliance', href: '/services/micro-saas/ai-compliance-monitor' },
+    { name: 'Micro SaaS: AI Marketing', href: '/services/micro-saas/ai-marketing-studio' },
+    { name: 'Micro SaaS: FinOps Optimizer', href: '/services/micro-saas/ai-finops-optimizer' },
   ];
 
   const products = [
@@ -187,6 +192,5 @@ const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 };
-;
+
 export default EnhancedNavigation;
-}
