@@ -234,8 +234,10 @@ const Home: NextPage = () => {
   );
 };
 
-        {/* Services Section */}
-        <section className="py-20 bg-gray-50">;
+export default Home;
+
+/* Removed corrupted trailing JSX below */
+/*        <section className="py-20 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-16">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>;
@@ -262,10 +264,10 @@ const Home: NextPage = () => {
               ))}
             </div>;
           </div>;
-        </section>;
+        </section>;*/
 
         {/* Features Section */}
-        <section className="py-20 bg-white">;
+/*        <section className="py-20 bg-white">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-16">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>;
@@ -286,10 +288,10 @@ const Home: NextPage = () => {
               ))}
             </div>;
           </div>;
-        </section>;
+        </section>;*/
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">;
+/*        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
             <h2 className="text-3xl font-bold text-white mb-6">;
               Ready to Transform Your Business?;
@@ -306,14 +308,4 @@ const Home: NextPage = () => {
               </Link>;
             </div>;
           </div>;
-        </section>;
-      </main>;
-      ;
-      <Footer />;
-    </>;
-  );,
-});
-;
-Home.displayName = 'Home';
-;
-export default Home;
+        </section>;*/
