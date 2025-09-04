@@ -1,5 +1,12 @@
 import React, { useEffect } from 'react';
 
+// Declare PerformanceObserver for TypeScript
+declare global {
+  interface Window {
+    PerformanceObserver: typeof PerformanceObserver;
+  }
+}
+
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals

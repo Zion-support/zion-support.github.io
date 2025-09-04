@@ -1210,7 +1210,7 @@ export default function MicroSaaS() {
         'Automated attendee management',
 
         'Increased event attendance and engagement',
-        'Streamlined event operations'
+        'Streamlined event operations',
 
         'Improved event ROI tracking',
         'Enhanced attendee experience'
@@ -1252,7 +1252,7 @@ export default function MicroSaaS() {
         'Return analytics and fraud detection',
         'Integration with major e-commerce platforms',
         'Customer self-service return portal'
-
+      ],
       icon: FileText,
       name: 'AI-Powered Content Creation Suite',
       description: 'Comprehensive content generation platform with AI writing, editing, and optimization tools.',
@@ -1312,17 +1312,14 @@ export default function MicroSaaS() {
       pricing: '$199 – $1,299/month',
       timeline: '2–3 weeks',
       benefits: [
-
         '70% reduction in return processing time',
         'Automated fraud detection and prevention',
         'Improved customer satisfaction with returns',
-        'Better inventory management and restocking'
-
+        'Better inventory management and restocking',
         '60% faster return processing',
         'Automated return workflows',
         'Improved customer experience',
         'Reduced return processing costs'
-
       ],
       category: 'E-Commerce'
     },
