@@ -1352,6 +1352,534 @@ export default function MicroSaaS() {
         'Cutting-edge research capabilities'
       ],
       category: 'Quantum Computing'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Legal Document Analyzer',
+      description: 'Intelligent legal document analysis with contract review, risk assessment, and compliance checking using advanced NLP.',
+      features: [
+        'Automated contract analysis and review',
+        'Risk identification and scoring',
+        'Compliance checking against regulations',
+        'Clause extraction and comparison',
+        'Legal precedent research integration',
+        'Multi-language document support'
+      ],
+      pricing: '$599 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '80% reduction in document review time',
+        'Improved risk identification accuracy',
+        'Automated compliance checking',
+        'Enhanced legal decision-making'
+      ],
+      category: 'Legal Tech'
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Threat Intelligence Platform',
+      description: 'Real-time cybersecurity threat intelligence with automated threat hunting and incident response capabilities.',
+      features: [
+        'Real-time threat intelligence feeds',
+        'Automated threat hunting algorithms',
+        'Incident response automation',
+        'Threat actor profiling and attribution',
+        'Vulnerability assessment and scoring',
+        'Integration with SIEM and SOAR platforms'
+      ],
+      pricing: '$799 – $4,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '90% faster threat detection',
+        'Automated incident response',
+        'Proactive threat prevention',
+        'Reduced security analyst workload'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Market Research Platform',
+      description: 'Intelligent market research automation with sentiment analysis, competitor tracking, and trend prediction.',
+      features: [
+        'Automated market sentiment analysis',
+        'Competitor intelligence gathering',
+        'Trend prediction and forecasting',
+        'Customer behavior analysis',
+        'Market opportunity identification',
+        'Real-time data visualization'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% faster market insights',
+        'Data-driven business decisions',
+        'Competitive advantage identification',
+        'Automated research processes'
+      ],
+      category: 'Market Research'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Customer Success Platform',
+      description: 'Intelligent customer success management with churn prediction, health scoring, and automated engagement.',
+      features: [
+        'Customer health scoring and monitoring',
+        'Churn prediction and prevention',
+        'Automated engagement workflows',
+        'Success milestone tracking',
+        'Customer journey optimization',
+        'Integration with CRM and support tools'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '35% reduction in customer churn',
+        'Improved customer lifetime value',
+        'Automated success management',
+        'Data-driven customer insights'
+      ],
+      category: 'Customer Success'
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Website Accessibility Checker',
+      description: 'Automated web accessibility testing and remediation with WCAG compliance and inclusive design recommendations.',
+      features: [
+        'Automated WCAG compliance testing',
+        'Accessibility issue identification',
+        'Remediation recommendations',
+        'Screen reader compatibility testing',
+        'Color contrast analysis',
+        'Keyboard navigation testing'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '100% WCAG compliance achievement',
+        'Improved user experience for all users',
+        'Legal compliance protection',
+        'Automated accessibility testing'
+      ],
+      category: 'Web Accessibility'
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Patent Research Platform',
+      description: 'Intelligent patent research and analysis with prior art detection, patentability assessment, and IP strategy recommendations.',
+      features: [
+        'Automated prior art search',
+        'Patentability assessment',
+        'Patent landscape analysis',
+        'Competitor patent monitoring',
+        'IP strategy recommendations',
+        'Patent filing optimization'
+      ],
+      pricing: '$499 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '70% faster patent research',
+        'Improved patent filing success',
+        'Competitive IP intelligence',
+        'Automated patent analysis'
+      ],
+      category: 'Intellectual Property'
+    },
+    {
+      icon: Zap,
+      name: 'AI-Powered Energy Trading Platform',
+      description: 'Intelligent energy trading with real-time market analysis, price prediction, and automated trading strategies.',
+      features: [
+        'Real-time energy market analysis',
+        'Price prediction algorithms',
+        'Automated trading strategies',
+        'Risk management and hedging',
+        'Grid optimization recommendations',
+        'Renewable energy integration'
+      ],
+      pricing: '$999 – $7,999/month',
+      timeline: '6–8 weeks',
+      benefits: [
+        '25% improvement in trading profits',
+        'Automated market analysis',
+        'Reduced trading risks',
+        'Optimized energy portfolio'
+      ],
+      category: 'Energy Trading'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Drug Discovery Platform',
+      description: 'Intelligent drug discovery with molecular analysis, compound screening, and clinical trial optimization.',
+      features: [
+        'Molecular structure analysis',
+        'Compound screening and optimization',
+        'Drug-target interaction prediction',
+        'Clinical trial design optimization',
+        'Adverse effect prediction',
+        'Regulatory compliance checking'
+      ],
+      pricing: '$1,999 – $14,999/month',
+      timeline: '8–12 weeks',
+      benefits: [
+        '60% faster drug discovery',
+        'Reduced development costs',
+        'Improved success rates',
+        'Automated molecular analysis'
+      ],
+      category: 'Pharmaceutical Tech'
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Insurance Risk Assessment',
+      description: 'Intelligent insurance risk evaluation with automated underwriting, fraud detection, and claims processing.',
+      features: [
+        'Automated risk assessment',
+        'Fraud detection algorithms',
+        'Claims processing automation',
+        'Policy optimization recommendations',
+        'Customer risk profiling',
+        'Regulatory compliance monitoring'
+      ],
+      pricing: '$699 – $4,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '40% reduction in fraud losses',
+        'Faster claims processing',
+        'Improved risk accuracy',
+        'Automated underwriting'
+      ],
+      category: 'Insurance Tech'
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Supply Chain Optimizer',
+      description: 'Intelligent supply chain optimization with demand forecasting, route optimization, and inventory management.',
+      features: [
+        'Demand forecasting algorithms',
+        'Route optimization and logistics',
+        'Inventory optimization',
+        'Supplier performance analysis',
+        'Risk assessment and mitigation',
+        'Sustainability tracking'
+      ],
+      pricing: '$599 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '30% reduction in supply chain costs',
+        'Improved delivery performance',
+        'Optimized inventory levels',
+        'Enhanced supplier relationships'
+      ],
+      category: 'Supply Chain'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Mental Health Platform',
+      description: 'Intelligent mental health support with mood tracking, therapy recommendations, and crisis intervention.',
+      features: [
+        'Mood tracking and analysis',
+        'Personalized therapy recommendations',
+        'Crisis detection and intervention',
+        'Progress monitoring and reporting',
+        'Integration with healthcare providers',
+        'Privacy-compliant data handling'
+      ],
+      pricing: '$199 – $1,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        'Improved mental health outcomes',
+        'Early intervention capabilities',
+        'Personalized treatment plans',
+        'Reduced healthcare costs'
+      ],
+      category: 'Mental Health Tech'
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Carbon Footprint Tracker',
+      description: 'Intelligent carbon footprint monitoring with sustainability recommendations and ESG reporting automation.',
+      features: [
+        'Real-time carbon footprint tracking',
+        'Sustainability recommendations',
+        'ESG reporting automation',
+        'Carbon offset marketplace',
+        'Supply chain emissions tracking',
+        'Regulatory compliance monitoring'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% reduction in carbon footprint',
+        'Automated ESG reporting',
+        'Improved sustainability metrics',
+        'Regulatory compliance assurance'
+      ],
+      category: 'Sustainability Tech'
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Grant Writing Assistant',
+      description: 'Intelligent grant writing platform with proposal generation, compliance checking, and success prediction.',
+      features: [
+        'Automated proposal generation',
+        'Compliance checking and validation',
+        'Success probability prediction',
+        'Template library and customization',
+        'Deadline tracking and reminders',
+        'Collaboration and review tools'
+      ],
+      pricing: '$199 – $1,499/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '60% increase in grant success rate',
+        'Faster proposal development',
+        'Improved compliance accuracy',
+        'Automated deadline management'
+      ],
+      category: 'Grant Management'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Voice Analytics Platform',
+      description: 'Intelligent voice analysis with emotion detection, sentiment analysis, and conversation optimization.',
+      features: [
+        'Real-time emotion detection',
+        'Sentiment analysis and scoring',
+        'Conversation quality assessment',
+        'Speaker identification and verification',
+        'Call center optimization',
+        'Compliance and privacy protection'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '40% improvement in customer satisfaction',
+        'Enhanced call center performance',
+        'Automated quality monitoring',
+        'Data-driven conversation insights'
+      ],
+      category: 'Voice Analytics'
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Data Privacy Manager',
+      description: 'Intelligent data privacy management with GDPR compliance, consent tracking, and privacy impact assessment.',
+      features: [
+        'Automated GDPR compliance checking',
+        'Consent management and tracking',
+        'Privacy impact assessment',
+        'Data subject request handling',
+        'Breach detection and notification',
+        'Privacy policy generation'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '100% GDPR compliance achievement',
+        'Automated privacy management',
+        'Reduced legal risks',
+        'Improved data governance'
+      ],
+      category: 'Data Privacy'
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Real Estate Analytics',
+      description: 'Intelligent real estate market analysis with property valuation, investment recommendations, and market forecasting.',
+      features: [
+        'Automated property valuation',
+        'Market trend analysis and forecasting',
+        'Investment opportunity identification',
+        'Neighborhood analysis and scoring',
+        'Rental yield optimization',
+        'Risk assessment and mitigation'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '25% improvement in investment returns',
+        'Data-driven property decisions',
+        'Automated market analysis',
+        'Reduced investment risks'
+      ],
+      category: 'Real Estate Tech'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Employee Wellness Platform',
+      description: 'Intelligent employee wellness management with health monitoring, stress detection, and wellness recommendations.',
+      features: [
+        'Health monitoring and tracking',
+        'Stress detection and intervention',
+        'Personalized wellness recommendations',
+        'Workplace safety monitoring',
+        'Mental health support tools',
+        'Wellness program optimization'
+      ],
+      pricing: '$199 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '30% improvement in employee wellness',
+        'Reduced healthcare costs',
+        'Increased productivity',
+        'Enhanced employee satisfaction'
+      ],
+      category: 'Employee Wellness'
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Language Learning Platform',
+      description: 'Intelligent language learning with personalized curriculum, pronunciation analysis, and conversation practice.',
+      features: [
+        'Personalized learning paths',
+        'Pronunciation analysis and feedback',
+        'Conversation practice with AI',
+        'Progress tracking and analytics',
+        'Cultural context integration',
+        'Multi-language support'
+      ],
+      pricing: '$149 – $1,299/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '50% faster language acquisition',
+        'Personalized learning experience',
+        'Improved pronunciation accuracy',
+        'Enhanced cultural understanding'
+      ],
+      category: 'EdTech'
+    },
+    {
+      icon: FileText,
+      name: 'AI-Powered Scientific Research Assistant',
+      description: 'Intelligent research platform with literature analysis, hypothesis generation, and experimental design optimization.',
+      features: [
+        'Automated literature review',
+        'Hypothesis generation and testing',
+        'Experimental design optimization',
+        'Data analysis and visualization',
+        'Collaboration and sharing tools',
+        'Publication assistance'
+      ],
+      pricing: '$299 – $2,499/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '70% faster research processes',
+        'Improved research quality',
+        'Automated data analysis',
+        'Enhanced collaboration'
+      ],
+      category: 'Research Tech'
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Personal Finance Advisor',
+      description: 'Intelligent personal finance management with budgeting, investment recommendations, and financial goal tracking.',
+      features: [
+        'Automated expense categorization',
+        'Investment recommendation engine',
+        'Financial goal tracking and planning',
+        'Risk assessment and management',
+        'Tax optimization strategies',
+        'Retirement planning tools'
+      ],
+      pricing: '$99 – $799/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '35% improvement in financial health',
+        'Automated financial planning',
+        'Better investment decisions',
+        'Reduced financial stress'
+      ],
+      category: 'Personal Finance'
+    },
+    {
+      icon: Shield,
+      name: 'AI-Powered Food Safety Monitor',
+      description: 'Intelligent food safety management with contamination detection, quality monitoring, and compliance tracking.',
+      features: [
+        'Contamination detection algorithms',
+        'Quality monitoring and scoring',
+        'Compliance tracking and reporting',
+        'Supply chain traceability',
+        'Recall management automation',
+        'Regulatory compliance monitoring'
+      ],
+      pricing: '$399 – $2,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '90% reduction in food safety incidents',
+        'Automated quality monitoring',
+        'Improved compliance management',
+        'Enhanced consumer protection'
+      ],
+      category: 'Food Safety Tech'
+    },
+    {
+      icon: BarChart3,
+      name: 'AI-Powered Sports Analytics Platform',
+      description: 'Intelligent sports performance analysis with player tracking, injury prediction, and strategy optimization.',
+      features: [
+        'Player performance tracking',
+        'Injury prediction and prevention',
+        'Strategy optimization algorithms',
+        'Real-time game analysis',
+        'Scouting and recruitment tools',
+        'Fan engagement analytics'
+      ],
+      pricing: '$499 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '25% improvement in team performance',
+        'Reduced injury rates',
+        'Data-driven strategy decisions',
+        'Enhanced fan engagement'
+      ],
+      category: 'Sports Tech'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Elderly Care Platform',
+      description: 'Intelligent elderly care management with health monitoring, medication reminders, and emergency response.',
+      features: [
+        'Health monitoring and alerts',
+        'Medication reminder system',
+        'Emergency response automation',
+        'Family communication tools',
+        'Caregiver coordination',
+        'Medical record integration'
+      ],
+      pricing: '$199 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        'Improved elderly care quality',
+        'Reduced emergency incidents',
+        'Enhanced family peace of mind',
+        'Better caregiver coordination'
+      ],
+      category: 'Elderly Care Tech'
+    },
+    {
+      icon: Globe,
+      name: 'AI-Powered Smart City Platform',
+      description: 'Intelligent smart city management with traffic optimization, resource management, and citizen services.',
+      features: [
+        'Traffic flow optimization',
+        'Resource usage monitoring',
+        'Citizen service automation',
+        'Environmental monitoring',
+        'Emergency response coordination',
+        'Data-driven city planning'
+      ],
+      pricing: '$999 – $7,999/month',
+      timeline: '6–8 weeks',
+      benefits: [
+        '30% improvement in city efficiency',
+        'Reduced resource waste',
+        'Enhanced citizen services',
+        'Data-driven urban planning'
+      ],
+      category: 'Smart City Tech'
     }
   ];
 
