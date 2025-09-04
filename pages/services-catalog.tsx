@@ -8,27 +8,75 @@ export default function ServicesCatalog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [
-    { id: 1, name: 'Cloud Cost Guard (FinOps Assistant)', category: 'micro-saas', description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.', pricing: '$299–$1,499/month', rating: 4.9, delivery: '2-4 weeks', features: ['Anomaly Detection', 'Cost Optimization', 'Budget Alerts', 'Multi-Cloud Support']
+    {
+      id: 1,
+      name: 'Cloud Cost Guard (FinOps Assistant)',
+      category: 'micro-saas',
+      description: 'Anomaly detection, rightsizing, forecasting and budget guardrails across AWS/Azure/GCP.',
+      pricing: '$299–$1499/month',
+      rating: 4.9,
+      delivery: '2-4 weeks',
+      features: ['Anomaly Detection', 'Cost Optimization', 'Budget Alerts', 'Multi-Cloud Support']
     },
-    { id: 2, name: 'LLM Evaluation & Safety Suite', category: 'ai-services', description: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.', pricing: '$799–$3,500/month', rating: 4.8, delivery: '3-6 weeks', features: ['Bias Detection', 'Safety Testing', 'Prompt Optimization', 'Compliance Monitoring']
+    {
+      id: 2,
+      name: 'LLM Evaluation & Safety Suite',
+      category: 'ai-services',
+      description: 'Prompt evaluation, bias/toxicity checks, jailbreak tests and guardrail policies.',
+      pricing: '$799–$3500/month',
+      rating: 4.8,
+      delivery: '3-6 weeks',
+      features: ['Bias Detection', 'Safety Testing', 'Prompt Optimization', 'Compliance Monitoring']
     },
-    { id: 3, name: 'Customer Feedback & NPS Micro-App', category: 'micro-saas', description: 'Embed surveys, analyze sentiment and route issues to the right team automatically.', pricing: '$149–$799/month', rating: 4.7, delivery: '1-3 weeks', features: ['Survey Builder', 'Sentiment Analysis', 'Auto-Routing', 'Analytics Dashboard']
+    {
+      id: 3,
+      name: 'Customer Feedback & NPS Micro-App',
+      category: 'micro-saas',
+      description: 'Embed surveys, analyze sentiment and route issues to the right team automatically.',
+      pricing: '$149–$799/month',
+      rating: 4.7,
+      delivery: '1-3 weeks',
+      features: ['Survey Builder', 'Sentiment Analysis', 'Auto-Routing', 'Analytics Dashboard']
     },
-    { id: 4, name: 'API Rate Limiter & Analytics', category: 'micro-saas', description: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.', pricing: '$199–$999/month', rating: 4.6, delivery: '2-4 weeks', features: ['Rate Limiting', 'Usage Analytics', 'Monetization', 'Security Monitoring']
+    {
+      id: 4,
+      name: 'API Rate Limiter & Analytics',
+      category: 'micro-saas',
+      description: 'Intelligent rate limiting, usage analytics, and API monetization for SaaS platforms.',
+      pricing: '$199–$999/month',
+      rating: 4.6,
+      delivery: '2-4 weeks',
+      features: ['Rate Limiting', 'Usage Analytics', 'Monetization', 'Security Monitoring']
     },
-    { id: 5, name: 'Smart Document Processing', category: 'ai-services', description: 'AI-powered OCR, data extraction, and document workflow automation for businesses.', pricing: '$399–$1,999/month', rating: 4.8, delivery: '4-8 weeks', features: ['OCR Technology', 'Data Extraction', 'Workflow Automation', 'Integration APIs']
+    {
+      id: 5,
+      name: 'Smart Document Processing',
+      category: 'ai-services',
+      description: 'AI-powered OCR, data extraction, and document workflow automation for businesses.',
+      pricing: '$399–$1999/month',
+      rating: 4.8,
+      delivery: '4-8 weeks',
+      features: ['OCR Technology', 'Data Extraction', 'Workflow Automation', 'Integration APIs']
     },
-    { id: 6, name: 'Social Media Scheduler Pro', category: 'micro-saas', description: 'Multi-platform scheduling, content optimization, and engagement analytics.', pricing: '$99–$499/month', rating: 4.5, delivery: '1-2 weeks', features: ['Multi-Platform', 'Content Optimization', 'Analytics', 'Auto-Posting']
+    {
+      id: 6,
+      name: 'Social Media Scheduler Pro',
+      category: 'micro-saas',
+      description: 'Multi-platform scheduling, content optimization, and engagement analytics.',
+      pricing: '$99–$499/month',
+      rating: 4.5,
+      delivery: '1-2 weeks',
+      features: ['Multi-Platform', 'Content Optimization', 'Analytics', 'Auto-Posting']
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', },
-    { id: 'micro-saas', name: 'Micro SaaS', },
-    { id: 'ai-services', name: 'AI Services', },
-    { id: 'it-services', name: 'IT Services', },
-    { id: 'cloud', name: 'Cloud Solutions', },
-    { id: 'security', name: 'Cybersecurity', }
+    { id: 'all', name: 'All Services' },
+    { id: 'micro-saas', name: 'Micro SaaS' },
+    { id: 'ai-services', name: 'AI Services' },
+    { id: 'it-services', name: 'IT Services' },
+    { id: 'cloud', name: 'Cloud Solutions' },
+    { id: 'security', name: 'Cybersecurity' }
   ];
 
   const filteredServices = services.filter(service => {
@@ -50,7 +98,7 @@ export default function ServicesCatalog() {
         <meta property="og:url" content="https://ziontechgroup.com/services-catalog" />
         <meta property="og:type" content="website" />
       </Head>
-
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4 py-20">
           {/* Header */}
@@ -137,8 +185,8 @@ export default function ServicesCatalog() {
                   </div>
                 </div>
 
-                <Link 
-                  href="/contact" 
+                <Link
+                  href="/contact"
                   className="inline-flex items-center justify-center w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
                 >
                   Get Started
@@ -172,7 +220,7 @@ export default function ServicesCatalog() {
           <div className="text-center mt-16">
             <h2 className="text-3xl font-bold text-white mb-6">Need a Custom Solution?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Don&apos;t see what you&apos;re looking for? Our team can create custom solutions tailored to your specific needs.
+              Don't see what you're looking for? Our team can create custom solutions tailored to your specific needs.
             </p>
             <Link href="/contact" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Discuss Your Project

@@ -1,55 +1,30 @@
-import React from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
-import { Zap, Users, Shield, ArrowRight } from 'lucide-react';
 
 export default function ServicesOverview() {
-  const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com' 
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
+    site: 'https://ziontechgroup.com'
   };
-
-  const serviceCategories = [
-    {
-      title: 'Micro SaaS Products',
-      count: '150+',
-      description: 'Focused software solutions for specific business needs',
-      icon: <Zap className="w-8 h-8" />,
-      features: ['Quick deployment', 'Scalable architecture', 'API integrations', 'Custom branding']
-    },
-    {
-      title: 'AI Services',
-      count: '100+',
-      description: 'Artificial intelligence solutions to automate and optimize processes',
-      icon: <Users className="w-8 h-8" />,
-      features: ['Machine learning models', 'Natural language processing', 'Computer vision', 'Predictive analytics']
-    },
-    {
-      title: 'IT Services',
-      count: '100+',
-      description: 'Comprehensive IT infrastructure and support services',
-      icon: <Shield className="w-8 h-8" />,
-      features: ['Cloud migration', 'System administration', 'Security audits', 'Technical support']
-    }
-  ];
 
   return (
     <>
       <Head>
         <title>Services Overview - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive overview of Zion Tech Group's 350+ innovative services including micro SaaS products, AI services, and IT solutions." />
+        <meta name="description" content="Comprehensive overview of Zion Tech Group's 340+ innovative services including micro SaaS products, AI services, and IT solutions across multiple industries." />
         <meta name="keywords" content="services overview, micro SaaS, AI services, IT solutions, technology services, enterprise solutions" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${contact.site}/services-overview`} />
         <meta property="og:title" content="Services Overview - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive overview of Zion Tech Group's 350+ innovative services including micro SaaS products, AI services, and IT solutions." />
+        <meta property="og:description" content="Comprehensive overview of Zion Tech Group's 340+ innovative services including micro SaaS products, AI services, and IT solutions across multiple industries." />
         <meta property="og:url" content={`${contact.site}/services-overview`} />
         <meta property="og:type" content="website" />
       </Head>
-
-      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
@@ -60,7 +35,7 @@ export default function ServicesOverview() {
               Comprehensive Technology Solutions for Modern Businesses
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              Explore our complete portfolio of 350+ innovative services designed to accelerate your digital transformation and drive business growth.
+              Explore our complete portfolio of 340+ innovative services designed to accelerate your digital transformation and drive business growth.
             </p>
           </div>
         </section>
@@ -71,55 +46,120 @@ export default function ServicesOverview() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               Our Service Categories
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {serviceCategories.map((category, index) => (
-                <div key={index} className="bg-slate-800 rounded-lg p-8 hover:bg-slate-700 transition-colors">
-                  <div className="text-blue-400 mb-4">
-                    {category.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    {category.title}
-                  </h3>
-                  <p className="text-blue-400 font-semibold text-lg mb-4">
-                    {category.count} Services
-                  </p>
-                  <p className="text-slate-300 mb-6">
-                    {category.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {category.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-slate-300">
-                        <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-                    Explore Services
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">
+                <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>
+                <p className="text-slate-300 mb-6">
+                  150+ focused software solutions designed for specific business needs and workflows.
+                </p>
+                <ul className="text-slate-400 space-y-2 mb-6">
+                  <li>• AI-Powered Video Clip Maker</li>
+                  <li>• Smart Contract Analyzer</li>
+                  <li>• Cybersecurity Threat Intelligence</li>
+                  <li>• Multi-Language Website Translator</li>
+                  <li>• Predictive Inventory Optimizer</li>
+                </ul>
+                <Link
+                  href="/micro-saas"
+                  className="text-blue-400 hover:text-blue-300 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+                  aria-label="View all Micro SaaS products"
+                >
+                  View All Micro SaaS →
+                </Link>
+              </div>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Let's discuss how our services can help you achieve your technology goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a href="/schedule-demo" className="inline-flex items-center px-8 py-4 bg-transparent text-white border-2 border-white rounded-lg hover:bg-white hover:text-slate-900 transition-colors font-semibold">
-                Schedule Demo
-              </a>
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
+                <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>
+                <p className="text-slate-300 mb-6">
+                  90+ advanced artificial intelligence solutions for automation and intelligent decision-making.
+                </p>
+                <ul className="text-slate-400 space-y-2 mb-6">
+                  <li>• Autonomous AI Agents</li>
+                  <li>• AI-Powered Financial Trading</li>
+                  <li>• AI Legal Document Analysis</li>
+                  <li>• AI-Powered Voice Analytics</li>
+                  <li>• AI-Powered Search & Discovery</li>
+                </ul>
+                <Link
+                  href="/ai-services"
+                  className="text-purple-400 hover:text-purple-300 font-semibold focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+                  aria-label="View all AI services"
+                >
+                  View All AI Services →
+                </Link>
+              </div>
+
+              <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
+                <h3 className="text-2xl font-bold mb-4 text-green-400">IT Solutions</h3>
+                <p className="text-slate-300 mb-6">
+                  100+ comprehensive IT services for infrastructure, security, and digital transformation.
+                </p>
+                <ul className="text-slate-400 space-y-2 mb-6">
+                  <li>• Cloud Infrastructure Management</li>
+                  <li>• Cybersecurity Solutions</li>
+                  <li>• DevOps & Automation</li>
+                  <li>• Data Analytics & BI</li>
+                  <li>• Enterprise Integration</li>
+                </ul>
+                <Link
+                  href="/it-services"
+                  className="text-green-400 hover:text-green-300 font-semibold focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+                  aria-label="View all IT solutions"
+                >
+                  View All IT Solutions →
+                </Link>
+              </div>
+            </div>
+
+            {/* Industry Solutions */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-center mb-12">Industry Solutions</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                  { name: 'Healthcare', href: '/healthcare', color: 'text-red-400' },
+                  { name: 'Financial Services', href: '/financial', color: 'text-green-400' },
+                  { name: 'Manufacturing', href: '/manufacturing', color: 'text-blue-400' },
+                  { name: 'Retail & E-commerce', href: '/retail', color: 'text-purple-400' },
+                  { name: 'Government', href: '/government', color: 'text-yellow-400' },
+                  { name: 'Education', href: '/education', color: 'text-indigo-400' },
+                  { name: 'Startups', href: '/startup', color: 'text-pink-400' },
+                  { name: 'Enterprise', href: '/enterprise', color: 'text-cyan-400' }
+                ].map((industry) => (
+                  <Link
+                    key={industry.name}
+                    href={industry.href}
+                    className={`p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-white/20 transition-colors text-center ${industry.color} hover:text-white`}
+                    aria-label={`View ${industry.name} solutions`}
+                  >
+                    <h3 className="font-semibold">{industry.name}</h3>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="text-center bg-slate-900/60 rounded-xl border border-white/10 p-12">
+              <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
+              <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                Let our experts help you choose the right solutions for your specific needs and industry requirements.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                  aria-label="Contact us for a consultation"
+                >
+                  Get Free Consultation
+                </Link>
+                <Link
+                  href="/services-catalog"
+                  className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                  aria-label="Browse our services catalog"
+                >
+                  Browse Catalog
+                </Link>
+              </div>
             </div>
           </div>
         </section>

@@ -10,7 +10,6 @@ interface ButtonProps {
   className?: string;
   type?: 'button' | 'submit' | 'reset';
 }
-}
 
 const Button: React.FC<ButtonProps> = ({
   children,

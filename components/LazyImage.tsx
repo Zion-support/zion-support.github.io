@@ -11,7 +11,6 @@ interface LazyImageProps {
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
 }
-}
 
 export default function LazyImage({
   src,
@@ -30,14 +29,14 @@ export default function LazyImage({
   useEffect(() => {
     if (priority) return;
 
-    const observer = new (window as any).IntersectionObserver(
+    const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
         }
       },
-      { threshold: '0.1', rootMargin: '50px' }
+      { threshold: 0.1, rootMargin: '50px' }
     );
 
     if (imgRef.current) {
@@ -62,7 +61,7 @@ export default function LazyImage({
           priority={priority}
           placeholder={placeholder}
           blurDataURL={blurDataURL}
-          sizes="(max-width: '768px) 100vw', (max-width: '1200px) 50vw', 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       )}
       {!isLoaded && isInView && (

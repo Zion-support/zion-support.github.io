@@ -1,140 +1,277 @@
-import React from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
-import { CheckCircle, AlertTriangle, XCircle, Clock } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 export default function Status() {
-  const incidents = [
+  const contact = { 
+    phone: '+1 302 464 0950', 
+    email: 'kleber@ziontechgroup.com', 
+    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    site: 'https://ziontechgroup.com'
+  };
+
+  const [systemStatus, setSystemStatus] = useState({ 
+    overall: 'operational', 
+    services: [
+      { name: 'Website', status: 'operational', uptime: '99.9%' },
+      { name: 'API Services', status: 'operational', uptime: '99.8%' },
+      { name: 'Cloud Infrastructure', status: 'operational', uptime: '99.9%' },
+      { name: 'AI Services', status: 'operational', uptime: '99.7%' },
+      { name: 'Database', status: 'operational', uptime: '99.9%' },
+      { name: 'Email Services', status: 'operational', uptime: '99.8%' }
+    ],
+    lastUpdated: new Date().toISOString()
+  });
+
+  const [incidents, setIncidents] = useState([
     {
-      id: '1',
-      title: 'Scheduled Maintenance - Cloud Infrastructure',
-      status: 'resolved',
-      severity: 'minor',
-      startTime: '2025-01-25T02:00:00Z',
-      endTime: '2025-01-25T04:00:00Z',
-      description: 'Routine maintenance completed successfully. All services are now operational.'
+      id: 1,
+      title: "Scheduled Maintenance - Cloud Infrastructure",
+      status: "resolved",
+      severity: "minor",
+      startTime: "2025-01-25T02:00:00Z",
+      endTime: "2025-01-25T04:00:00Z",
+      description: "Routine maintenance completed successfully. All services restored."
     },
     {
-      id: '2',
-      title: 'API Rate Limiting Update',
-      status: 'monitoring',
-      severity: 'low',
-      startTime: '2025-01-24T10:00:00Z',
-      endTime: null,
-      description: 'Updated rate limiting policies. Monitoring for any impact on service performance.'
+      id: 2,
+      title: "API Response Time Degradation",
+      status: "resolved",
+      severity: "minor",
+      startTime: "2025-01-24T14:30:00Z",
+      endTime: "2025-01-24T15:45:00Z",
+      description: "Temporary increase in API response times. Issue resolved with infrastructure scaling."
     }
-  ];
+  ]);
 
-  const getStatusIcon = (status) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
-      case 'resolved':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
-      case 'monitoring':
-        return <Clock className="w-5 h-5 text-yellow-500" />;
-      case 'investigating':
-        return <AlertTriangle className="w-5 h-5 text-orange-500" />;
-      case 'outage':
-        return <XCircle className="w-5 h-5 text-red-500" />;
-      default:
-        return <Clock className="w-5 h-5 text-gray-500" />;
+      case 'operational': return '#10b981';
+      case 'degraded': return '#f59e0b';
+      case 'outage': return '#ef4444';
+      case 'maintenance': return '#3b82f6';
+      default: return '#6b7280';
     }
   };
 
-  const getStatusColor = (status) => {
+  const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'resolved':
-        return 'text-green-500';
-      case 'monitoring':
-        return 'text-yellow-500';
-      case 'investigating':
-        return 'text-orange-500';
-      case 'outage':
-        return 'text-red-500';
-      default:
-        return 'text-gray-500';
+      case 'operational': return '✅';
+      case 'degraded': return '⚠️';
+      case 'outage': return '❌';
+      case 'maintenance': return '🔧';
+      default: return '❓';
+    }
+  };
+
+  const getSeverityColor = (severity: string) => {
+    switch (severity) {
+      case 'critical': return '#ef4444';
+      case 'major': return '#f97316';
+      case 'minor': return '#f59e0b';
+      case 'maintenance': return '#3b82f6';
+      default: return '#6b7280';
     }
   };
 
   return (
     <>
       <Head>
-        <title>System Status - Zion Tech Group</title>
-        <meta name="description" content="Real-time system status and incident reports for Zion Tech Group services." />
+        <title>System Status - Zion Tech Group | Service Status & Uptime</title>
+        <meta name="description" content="Check the current status of Zion Tech Group services, system uptime, and any ongoing incidents or maintenance." />
+        <meta name="keywords" content="system status, service status, uptime, incidents, maintenance, monitoring" />
+        <link rel="canonical" href={`${contact.site}/status`} />
+        <meta property="og:title" content="System Status - Zion Tech Group | Service Status & Uptime" />
+        <meta property="og:description" content="Check the current status of Zion Tech Group services, system uptime, and any ongoing incidents or maintenance." />
+        <meta property="og:url" content={`${contact.site}/status`} />
+        <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-4xl mx-auto px-4 py-16">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+      <div style={{ minHeight: '100vh', background: 'white' }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto', padding: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+            <h1 style={{ 
+              fontSize: '3rem', 
+              fontWeight: 800, 
+              marginBottom: 20,
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
               System Status
             </h1>
-            <p className="text-xl text-gray-600">
-              Real-time status of our services and systems
+            <p style={{ fontSize: '1.2rem', color: '#64748b', maxWidth: 600, margin: '0 auto' }}>
+              Real-time status of all Zion Tech Group services and systems.
             </p>
           </div>
 
-          {/* Status Overview */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Current Status</h2>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="bg-green-100 rounded-full p-4 mb-4 mx-auto w-16 h-16 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">API Services</h3>
-                <p className="text-green-600 font-medium">Operational</p>
+          <div style={{ marginBottom: 60 }}>
+            <div style={{
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              borderRadius: 12,
+              padding: 30,
+              textAlign: 'center'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 15, marginBottom: 20 }}>
+                <div style={{ fontSize: '2rem' }}>{getStatusIcon(systemStatus.overall)}</div>
+                <h2 style={{ fontSize: '2rem', fontWeight: 700, color: 'white' }}>
+                  All Systems Operational
+                </h2>
               </div>
-              <div className="text-center">
-                <div className="bg-green-100 rounded-full p-4 mb-4 mx-auto w-16 h-16 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Website</h3>
-                <p className="text-green-600 font-medium">Operational</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-100 rounded-full p-4 mb-4 mx-auto w-16 h-16 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Database</h3>
-                <p className="text-green-600 font-medium">Operational</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-100 rounded-full p-4 mb-4 mx-auto w-16 h-16 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">CDN</h3>
-                <p className="text-green-600 font-medium">Operational</p>
-              </div>
+              <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '1.1rem' }}>
+                All services are running normally. Last updated: {new Date(systemStatus.lastUpdated).toLocaleString()}
+              </p>
             </div>
           </div>
 
-          {/* Recent Incidents */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Recent Incidents</h2>
-            <div className="space-y-6">
-              {incidents.map((incident) => (
-                <div key={incident.id} className="border border-gray-200 rounded-lg p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center">
-                      {getStatusIcon(incident.status)}
-                      <h3 className="text-lg font-semibold text-gray-900 ml-3">
-                        {incident.title}
+          <div style={{ marginBottom: 60 }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 30 }}>
+              Service Status
+            </h2>
+            <div style={{ display: 'grid', gap: 15 }}>
+              {systemStatus.services.map((service, index) => (
+                <div key={index} style={{
+                  background: 'white',
+                  borderRadius: 8,
+                  padding: 20,
+                  border: '1px solid #e2e8f0',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 15 }}>
+                    <div style={{ fontSize: '1.5rem' }}>{getStatusIcon(service.status)}</div>
+                    <div>
+                      <h3 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: 5 }}>
+                        {service.name}
                       </h3>
+                      <p style={{ 
+                        color: getStatusColor(service.status), 
+                        fontSize: '0.9rem',
+                        fontWeight: 600,
+                        textTransform: 'capitalize'
+                      }}>
+                        {service.status}
+                      </p>
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(incident.status)}`}>
-                      {incident.status}
-                    </span>
                   </div>
-                  <p className="text-gray-600 mb-4">{incident.description}</p>
-                  <div className="text-sm text-gray-500">
-                    <p>Started: {new Date(incident.startTime).toLocaleString()}</p>
-                    {incident.endTime && (
-                      <p>Resolved: {new Date(incident.endTime).toLocaleString()}</p>
-                    )}
+                  <div style={{ textAlign: 'right' }}>
+                    <p style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 5 }}>
+                      {service.uptime}
+                    </p>
+                    <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>
+                      Uptime
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+
+          <div style={{ marginBottom: 60 }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 30 }}>
+              Recent Incidents
+            </h2>
+            {incidents.length > 0 ? (
+              <div style={{ display: 'grid', gap: 20 }}>
+                {incidents.map((incident) => (
+                  <div key={incident.id} style={{
+                    background: 'white',
+                    borderRadius: 12,
+                    padding: 25,
+                    border: '1px solid #e2e8f0'
+                  }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 15 }}>
+                      <div>
+                        <h3 style={{ fontSize: '1.3rem', fontWeight: 700, marginBottom: 8 }}>
+                          {incident.title}
+                        </h3>
+                        <div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+                          <span style={{
+                            background: getSeverityColor(incident.severity),
+                            color: 'white',
+                            padding: '4px 12px',
+                            borderRadius: 20,
+                            fontSize: '0.8rem',
+                            fontWeight: 600,
+                            textTransform: 'capitalize'
+                          }}>
+                            {incident.severity}
+                          </span>
+                          <span style={{
+                            background: getStatusColor(incident.status),
+                            color: 'white',
+                            padding: '4px 12px',
+                            borderRadius: 20,
+                            fontSize: '0.8rem',
+                            fontWeight: 600,
+                            textTransform: 'capitalize'
+                          }}>
+                            {incident.status}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <p style={{ color: '#64748b', marginBottom: 15, lineHeight: '1.6'}}>
+                      {incident.description}
+                    </p>
+                    
+                    <div style={{ display: 'flex', gap: 20, fontSize: '0.9rem', color: '#64748b' }}>
+                      <span>
+                        <strong>Started:</strong> {new Date(incident.startTime).toLocaleString()}
+                      </span>
+                      <span>
+                        <strong>Resolved:</strong> {new Date(incident.endTime).toLocaleString()}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div style={{
+                background: 'white',
+                borderRadius: 12,
+                padding: 40,
+                border: '1px solid #e2e8f0',
+                textAlign: 'center'
+              }}>
+                <div style={{ fontSize: '3rem', marginBottom: 20 }}>✅</div>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 10 }}>
+                  No Recent Incidents
+                </h3>
+                <p style={{ color: '#94a3b8' }}>
+                  All systems have been running smoothly with no reported issues.
+                </p>
+              </div>
+            )}
+          </div>
+
+          <div style={{ 
+            background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+            borderRadius: 12,
+            padding: 30,
+            textAlign: 'center'
+          }}>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15, color: 'white' }}>
+              Subscribe to Status Updates
+            </h2>
+            <p style={{ color: 'rgba(255, 255, 255, 0.8)', marginBottom: 20 }}>
+              Get notified about service status changes and incidents via email or SMS.
+            </p>
+            <Link href="/contact" style={{
+              background: 'white',
+              color: '#667eea',
+              padding: '12px 24px',
+              textDecoration: 'none',
+              borderRadius: 8,
+              fontSize: '1rem',
+              fontWeight: 600,
+              display: 'inline-block'
+            }}>
+              Subscribe to Updates
+            </Link>
           </div>
         </div>
       </div>
