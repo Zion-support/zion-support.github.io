@@ -53,11 +53,15 @@ test_individual_processes() {
     log "Testing individual automation processes..."
     
     local processes=(
-        "ai-code-analyzer"
-        "smart-performance-optimizer"
-        "intelligent-dependency-manager"
-        "project-health-monitor"
-        "enhanced-security-automation"
+        "auto-fix"
+        "healthcheck"
+        "test-automation"
+        "security-scanner"
+        "build-optimizer"
+        "git-workflow"
+        "health-monitor"
+        "docs-generator"
+        "seo-accessibility"
     )
     
     local all_healthy=true
@@ -85,11 +89,15 @@ test_log_files() {
     log "Testing log file creation..."
     
     local log_files=(
-        "logs/ai-code-analyzer.log"
-        "logs/smart-performance-optimizer.log"
-        "logs/intelligent-dependency-manager.log"
-        "logs/project-health-monitor.log"
-        "logs/enhanced-security-automation.log"
+        "logs/pm2/auto-fix.log"
+        "logs/pm2/healthcheck.log"
+        "logs/pm2/test-automation.log"
+        "logs/pm2/security-scanner.log"
+        "logs/pm2/build-optimizer.log"
+        "logs/pm2/git-workflow.log"
+        "logs/pm2/health-monitor.log"
+        "logs/pm2/docs-generator.log"
+        "logs/pm2/seo-accessibility.log"
     )
     
     local all_logs_exist=true
@@ -130,7 +138,7 @@ test_process_monitoring() {
     log "Testing process monitoring capabilities..."
     
     # Test if we can get process info
-    if pm2 show ai-code-analyzer > /dev/null 2>&1; then
+    if pm2 show test-automation > /dev/null 2>&1; then
         success "Process monitoring is working"
         return 0
     else
@@ -144,7 +152,7 @@ test_restart_functionality() {
     log "Testing restart functionality..."
     
     # Get current restart count
-    local restart_count=$(pm2 list | grep "ai-code-analyzer" | awk '{print $4}' | head -1)
+    local restart_count=$(pm2 list | grep "test-automation" | awk '{print $4}' | head -1)
     
     if [[ "$restart_count" =~ ^[0-9]+$ ]] && [ "$restart_count" -ge 0 ]; then
         success "Restart functionality is working (restart count: $restart_count)"
