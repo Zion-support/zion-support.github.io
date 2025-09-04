@@ -49,15 +49,13 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     (supabase.single as jest.Mock).mockResolvedValue({
       data: { role: 'admin' },
       error: null
-    });
-  });
+    })});
 
   test('should return 405 if method is not POST', async () => {
     const { req, res } = createMocks({ method: 'GET' as RequestMethod });
     await handler(req as NextApiRequest, res as NextApiResponse);
     expect(res._getStatusCode()).toBe(405);
-    expect(res._getHeaders().allow).toContain('POST');
-  });
+    expect(res._getHeaders().allow).toContain('POST')});
 
   test('should return 401 if Authorization header is missing', async () => {
     const { req, res } = createMocks({
@@ -71,8 +69,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     });
     await handler(req as NextApiRequest, res as NextApiResponse);
     expect(res._getStatusCode()).toBe(401);
-    expect(res._getJSONData().message).toBe('Unauthorized: Missing or invalid token.');
-  });
+    expect(res._getJSONData().message).toBe('Unauthorized: Missing or invalid token.')});
 
   test('should return 401 if token is invalid or user not found', async () => {
     (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({
@@ -91,8 +88,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     });
     await handler(req as NextApiRequest, res as NextApiResponse);
     expect(res._getStatusCode()).toBe(401);
-    expect(res._getJSONData().message).toBe('Unauthorized: Invalid token or user not found.');
-  });
+    expect(res._getJSONData().message).toBe('Unauthorized: Invalid token or user not found.')});
 
   test('should return 403 if user role is not authorized', async () => {
     (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({
@@ -123,8 +119,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     });
     await handler(req as NextApiRequest, res as NextApiResponse);
     expect(res._getStatusCode()).toBe(403);
-    expect(res._getJSONData().message).toBe('Forbidden: Access denied. Insufficient privileges.');
-  });
+    expect(res._getJSONData().message).toBe('Forbidden: Access denied. Insufficient privileges.')});
 
   test('should return 400 if required parameters are missing', async () => {
     // Auth and role are fine for this test
@@ -149,8 +144,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     });
     await handler(req as NextApiRequest, res as NextApiResponse);
     expect(res._getStatusCode()).toBe(400);
-    expect(res._getJSONData().message).toContain('Missing required parameters');
-  });
+    expect(res._getJSONData().message).toContain('Missing required parameters')});
 
   test('should return 200 and mock deck data on successful generation', async () => {
     // Auth and role are fine
@@ -178,8 +172,7 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
     const responseData = res._getJSONData();
     expect(responseData.slides).toBeInstanceOf(Array);
     expect(responseData.slides.length).toBeGreaterThan(0);
-    expect(responseData.slides[0].title).toBeDefined();
-  });
+    expect(responseData.slides[0].title).toBeDefined()});
 
   test('should return 500 if fetching profile fails', async () => {
     (supabase.auth.getUser as jest.Mock).mockResolvedValueOnce({
@@ -209,6 +202,4 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
       }
     });
     await handler(req as NextApiRequest, res as NextApiResponse);
-    expect(res._getStatusCode()).toBe(500);
-  });
-});
+    expect(res._getStatusCode()).toBe(500)})});

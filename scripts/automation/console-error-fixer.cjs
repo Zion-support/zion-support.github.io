@@ -29,17 +29,16 @@ class ConsoleErrorFixer {
     }
 
     log(message) {
-        const timestamp = new Date().toISOString(;
-  });
+        const timestamp = new Date().toISOString(});
         const logMessage = `[${timestamp}] ${message}\;n;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message);}
+        console.log(message)}
 
     findConsoleStatements() {
         this.log('Finding console statements...');
         
         const files = this.findSourceFiles(;);
-        const consoleStatements = [;];
+        const consoleStatements = [];
         
         for (const file of files) {
             try {
@@ -47,7 +46,7 @@ class ConsoleErrorFixer {
                 const lines = content.split('\n';);
                 
                 for (let i = ;0; i < lines.length i++) {
-                    const line = lines[i;];
+                    const line = lines[i];
                     const consoleMatch = line.match(/console\.(log|warn|error|info|debug)\s*\(/;g;);
                     
                     if ( {
@@ -75,18 +74,16 @@ class ConsoleErrorFixer {
                 this.log(`Error reading file ${file}: ${error.message}`)}
         }
         
-        this.log(`Found ${consoleStatements.length} console statements`);
-  }
-        return consoleStatements;}
+        this.log(`Found ${consoleStatements.length} console statements`)}
+        return consoleStatements}
 
     findSourceFiles() {
-        const extensions = ['.js', '.jsx', '.ts', '.tsx';];
-        const files = [;];
+        const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+        const files = [];
         
         const scanDirectory = (dir) => {
             if () retu) {
-    ) retu;
-  }r;n;
+    ) retu}r;n;
             
             const items = fs.readdirSync(dir;);
             for (const item of items) {
@@ -102,18 +99,17 @@ class ConsoleErrorFixer {
                     scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {
                     files.push(fullPath)}
             }
-        };
-  }
+        }}
         
         scanDirectory(this.projectRoot);
-        return files;}
+        return files}
 
     removeConsoleStatements() {
         this.log('Removing console statements...');
         
         const files = this.findSourceFiles(;);
         let removedCount = ;0;
-        const removals = [;];
+        const removals = [];
         
         for (const file of files) {
             try {
@@ -129,8 +125,7 @@ class ConsoleErrorFixer {
                 if ( {
                     fs.writeFileSync(file, content)) {
      {
-                    fs.writeFileSync(file, content);
-  }
+                    fs.writeFileSync(file, content)}
                     removedCount++;
                     removals.push({
                         file: file,
@@ -141,14 +136,14 @@ class ConsoleErrorFixer {
         }
         
         this.log(`Removed console statements from ${removedCount} files`);
-        return { removedCount, removals ;}}
+        return { removedCount, removals }}
 
     replaceWithLogger() {
         this.log('Replacing console statements with logger...');
         
         const files = this.findSourceFiles(;);
         let replacedCount = ;0;
-        const replacements = [;];
+        const replacements = [];
         
         for (const file of files) {
             try {
@@ -169,8 +164,7 @@ class ConsoleErrorFixer {
      {
                     // Add logger import if not present
                     if (!content.includes('import') || !content.includes('logger')) {
-                        const importStatement = "import { logger } from './utils/logge;
-  }r;';\n";
+                        const importStatement = "import { logger } from './utils/logge}r;';\n";
                         content = importStatement + content}
                     
                     fs.writeFileSync(file, content);
@@ -184,7 +178,7 @@ class ConsoleErrorFixer {
         }
         
         this.log(`Replaced console statements in ${replacedCount} files`);
-        return { replacedCount, replacements ;}}
+        return { replacedCount, replacements }}
 
     createLoggerUtility() {
         this.log('Creating logger utility...');
@@ -255,14 +249,13 @@ class Logger {
         this.log('debug', message, ...args)}
 }
 
-export const logger = new Logger;
-  }(;);
+export const logger = new Logger}(;);
 `;
 
         fs.writeFileSync(loggerPath, loggerContent);
         this.log('Logger utility created');
         
-        return { status: 'success', path: loggerPath ;}}
+        return { status: 'success', path: loggerPath }}
 
     generateErrorReport() {
         this.log('Generating console error fix report...');
@@ -282,12 +275,12 @@ export const logger = new Logger;
                 loggerCreation: loggerCreation
             },
             recommendations: this.generateErrorRecommendations()
-       ; ;};
+       };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Console error fix report saved to ${this.reportFile}`);
         
-        return report;}
+        return report}
 
     generateErrorRecommendations() {
         return [;
@@ -306,7 +299,7 @@ export const logger = new Logger;
         try {
             const report = this.generateErrorReport(;);
             this.log('Console Error Fixer completed successfully');
-            return report;} catch (error) {
+            return report} catch (error) {
             this.log(`Console Error Fixer failed: ${error.message}`);
             throw error}
     }
@@ -316,8 +309,7 @@ export const logger = new Logger;
 if ( {
     const fixer = new ConsoleErrorFixer) {
      {
-    const fixer = new ConsoleErrorFixer;
-  }(;);
+    const fixer = new ConsoleErrorFixer}(;);
     fixer.run().catch(console.error)}
 
 module.exports = ConsoleErrorFixer;

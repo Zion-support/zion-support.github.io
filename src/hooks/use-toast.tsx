@@ -42,15 +42,15 @@ export function useToast(...args[]):  {
 
     toasts,
     toast,
-    dismiss,
-:src/hooks/use-toast.tsx
+    dismiss,';
+:src/hooks/use-toast.tsx';';
     dismissAll'
-  // // // // // // // // }}}
-
+  // // // // // // // // }}}';
+';';
 // Export a default toast function for backward compatibility'
 export 
-  // In a real implementation, this would dispatch to a global toast system;
-  // };
+  // In a real implementation, this would dispatch to a global toast system;';
+  // };';';
 '
     dismissAll
   // // // // // // // }}}
@@ -59,5 +59,5 @@ export
 export 
   // In a real implementation, this would dispatch to a global toast system;
   };
-
-</any>
+';
+</any>';';

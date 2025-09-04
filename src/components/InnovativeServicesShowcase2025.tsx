@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';';';
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025 } from '@/data / innovativeServices2025';
-
-export default function Page(props: any) {
+';
+export default function Page(props: any) {';';
     if(sortOrder === 'asc') {
 
       return aValue > bValue ? 1 : -1} else {
 
       return aValue < bValue ? 1 : -1}
   }) ;
-
-  const getCategoryIcon = (props: any) => {
+';
+  const getCategoryIcon = (props: any) => {';';
     if(category === 'all') return < Rocket className="w-6 h-6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ?
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> :
-      <Rocket className="w-6 h-6"  />;
-  };
+      <Rocket className="w-6 h-6"  />;';
+  };';';
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.color || 'from-gray-500 to-slate-500'};
 
     setShowModal(true)};
@@ -24,7 +24,8 @@ export default function Page(props: any) {
     setSelectedService(null) ;
   };
 
-  return (<div  className="min - h-screen futuristic -bg">
+  return (
+    <div className="min-h-screen bg-white">
       {/* Matrix Rain Background Effect */}
       <div  className="matrix -rain"></div>
 
@@ -50,9 +51,9 @@ export default function Page(props: any) {
               Revolutionary AI-powered, quantum-secure, and autonomous business solutions that transform industries and drive unprecedented growth.</p>"
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}"
-                className="futuristic-btn inline-flex items-center px-8 py-4"'
+                whileHover={{ scale: 1.05 }}';
+                whileTap={{ scale: 0.95 }}"';';
+                className="futuristic-btn inline-flex items-center px-8 py-4"'';';
                 onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
               >"
                 <Rocket className="w-5 h-5 mr-2"   />                Explore Services
@@ -120,31 +121,31 @@ export default function Page(props: any) {
                 <motion.button
                   key={category}
                   whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setSelectedCategory(category)}`
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category'
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white''
+                  whileTap={{ scale: 0.95 }}';
+                  onClick={() => setSelectedCategory(category)}`';';
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category'';';
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white''';';
                       : 'bg-gray-800/50 text-gray-300 hover: b g-gray-700/50'`
                   }`}
-                >"
-                  <div className="flex items-center gap-2">
-                    {getCategoryIcon(category)}'"
+                >"';
+                  <div className="flex items-center gap-2">';';
+                    {getCategoryIcon(category)}'"';';
                     <span className="capitalize">{category === 'all' ? 'All' : category}</span>
                   </div>
                 </motion.button>) ) }
             </div>
 
             {/* View Mode and Sort Controls */}"
-            <div className="flex gap-2">"
-              <div className="flex bg-gray-800/50 rounded-lg p-1">
-                <button'
-                  onClick={() => setViewMode('grid')}`
+            <div className="flex gap-2">"';
+              <div className="flex bg-gray-800/50 rounded-lg p-1">';';
+                <button'';';
+                  onClick={() => setViewMode('grid')}`';';
                   className={`p-2 rounded-md transition-all duration-300 ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover: tex t-white'`
                   }`}
-                >"
-                  <Grid className="w-5 h-5"   />                </button>
-                                  <button'
-                    onClick={() => setViewMode('list')}`
+                >"';
+                  <Grid className="w-5 h-5"   />                </button>';';
+                                  <button'';';
+                    onClick={() => setViewMode('list')}`';';
                     className={`p-2 rounded-md transition-all duration-300 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover: tex t-white'`
                     }`}
                   >"
@@ -153,8 +154,8 @@ export default function Page(props: any) {
 
               <select`
                 value={`${sortBy}-${sortOrder}`}
-                onChange={(e) => {
-
+                onChange={(e) => {';
+';';
                   const [newSortBy, newSortOrder] = e.target.value.split('-');
                   setSortBy(newSortBy as );
                   setSortOrder(newSortOrder as )}}"                className="px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus: outlin e-none focus: borde r-cyan-400"
@@ -169,18 +170,18 @@ export default function Page(props: any) {
             </div>
           </div>
         </div>
-
-        {/* Services Grid/List */}
+';
+        {/* Services Grid/List */}';';
         <div className={viewMode === 'grid' ? 'futuristic-grid' : 'space-y-4'}>
           <AnimatePresence>
             {sortedServices.map((service, index) => (<motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 5 0 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -50 }}
-                transition={{ duration: 0.5, delay: inde x * 0.1 }}
-                className={viewMode === 'grid' ? 'futuristic-card p-6' : 'futuristic-card p-6'}
-              >
+                exit={{ opacity: 0, y: -50 }}';
+                transition={{ duration: 0.5, delay: inde x * 0.1 }}';';
+                className={viewMode === 'grid' ? 'futuristic-card p-6' : 'futuristic-card p-6'}';
+              >';';
                 {viewMode === 'grid' ? (
                   // Grid View"
                   <div className="h-full flex flex-col">"
@@ -276,7 +277,9 @@ export default function Page(props: any) {
                         Learn More
                       </motion.button>
                     </div>
-                  </div>) }
+                      </div>
+  );
+}
               </motion.div>) ) }
           </AnimatePresence>
         </div>
@@ -287,8 +290,9 @@ export default function Page(props: any) {
             <div className="text-6xl mb-4">🔍</div>"
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>"
             <p className="text-gray-400">Try adjusting your search criteria or category filter</p>
-          </div>
-        )}
+              </div>
+  );
+}
       </div>
 
       {/* Service Details Modal */}
@@ -388,18 +392,18 @@ export default function Page(props: any) {
                       <p className="text-gray - 400 mb-4">One - time setup fee</p>
 
                       <div  className="space - y-3">                        <motion.button
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}"
-                          className="w-full futuristic-btn py-3"'`
+                          whileHover={{ scale: 1.02 }}';
+                          whileTap={{ scale: 0.98 }}"';';
+                          className="w-full futuristic-btn py-3"'`';';
                           onClick={() => window.open(`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}?subject=Inquiry about ${selectedService.title}`,_blank')}
                         >
                           Get Started
                         </motion.button>
 
                         <motion.button
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}"
-                          className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-400 hover: tex t-white transition-all duration-300"'`
+                          whileHover={{ scale: 1.02 }}';
+                          whileTap={{ scale: 0.98 }}"';';
+                          className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: b g-cyan-400 hover: tex t-white transition-all duration-300"'`';';
                           onClick={() => window.open(`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`,_blank')}
                         >
                           Call for Quote
@@ -485,21 +489,12 @@ export default function Page(props: any) {
             <p className="text-gray - 400 mb-2">{INNOVATIVE_CONTACT_INFO_2025.hours}</p>
             <p className="text-cyan - 400 font -semibold">{INNOVATIVE_CONTACT_INFO_2025.emergency}</p>          </div>
         </div>
-      </div>
-    </div>
+      </div>';
+    </div>';';
   )}'"`
 
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

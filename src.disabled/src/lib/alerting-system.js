@@ -23,7 +23,7 @@ class AlertingSystem {
         <p><strong>Message:</strong></p>
         <pre>${message}</pre>
       `
-   ; ;};
+   };
 
     try {
       await this.transporter.sendMail(mailOptions);
@@ -34,7 +34,7 @@ class AlertingSystem {
   }
 
   checkThresholds(metrics) {
-    const alerts = [;];
+    const alerts = [];
 
     // Check error rate
     if ( {
@@ -70,8 +70,7 @@ class AlertingSystem {
       })}
 
     // Check memory usage
-    const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1;
-  }];
+    const latestMemory = metrics.memoryUsage[metrics.memoryUsage.length - 1}];
     if ( { // 100MB
       alerts.push({
         type: 'memory_usage',
@@ -87,8 +86,7 @@ class AlertingSystem {
         severity: 'warning'
       })}
 
-    return alerts;
-  }}
+    return alerts}}
 }
 
 module.exports = AlertingSystem;

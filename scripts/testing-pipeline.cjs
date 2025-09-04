@@ -4,9 +4,9 @@ const fs = require("fs");
 class TestingPipeline {;
   constructor() {;
     this.results = {;
-      timestamp: new Date().toISOString(),;
-      tests: [],;
-      coverage: {},;
+      timestamp: new Date().toISOString(),
+      tests: [],
+      coverage: {},
       summary: { passed: 0, failed: 0, total: 0 }
     }
   }
@@ -19,10 +19,10 @@ class TestingPipeline {;
       await this.runE2ETests();
       await this.generateCoverageReport();
       this.generateReport();
-      console.log("✅ Testing pipeline completed"),;,
+      console.log("✅ Testing pipeline completed"),,
 } catch (error) {;
       console.error("❌ Testing pipeline failed:", error.message);
-      process.exit(1),;,
+      process.exit(1),,
 }
   }
 ;
@@ -31,12 +31,12 @@ class TestingPipeline {;
     try {;
       const result = execSync("npm run test: unit", { encoding: "utf8" });
       this.results.tests.push({ type: "unit", status: "passed", output: result });
-      this.results.summary.passed++,;,
+      this.results.summary.passed++,,
 } catch (error) {;
       this.results.tests.push({ type: "unit", status: "failed", error: error.message });
-      this.results.summary.failed++,;,
+      this.results.summary.failed++,,
 }
-    this.results.summary.total++,;,
+    this.results.summary.total++,,
 }
 ;
   async runIntegrationTests() {;
@@ -44,12 +44,12 @@ class TestingPipeline {;
     try {;
       const result = execSync("npm run test: integration", { encoding: "utf8" });
       this.results.tests.push({ type: "integration", status: "passed", output: result });
-      this.results.summary.passed++,;,
+      this.results.summary.passed++,,
 } catch (error) {;
       this.results.tests.push({ type: "integration", status: "failed", error: error.message });
-      this.results.summary.failed++,;,
+      this.results.summary.failed++,,
 }
-    this.results.summary.total++,;,
+    this.results.summary.total++,,
 }
 ;
   async runE2ETests() {;
@@ -57,12 +57,12 @@ class TestingPipeline {;
     try {;
       const result = execSync("npm run test: e2e", { encoding: "utf8" });
       this.results.tests.push({ type: "e2e", status: "passed", output: result });
-      this.results.summary.passed++,;,
+      this.results.summary.passed++,,
 } catch (error) {;
       this.results.tests.push({ type: "e2e", status: "failed", error: error.message });
-      this.results.summary.failed++,;,
+      this.results.summary.failed++,,
 }
-    this.results.summary.total++,;,
+    this.results.summary.total++,,
 }
 ;
   async generateCoverageReport() {;
@@ -84,7 +84,7 @@ class TestingPipeline {;
     console.log(`Passed: ${this.results.summary.passed}`);
     console.log(`Failed: ${this.results.summary.failed}`);
     console.log("=".repeat(50));
-    console.log(`📄 Report saved to: ${reportPath}`),;,
+    console.log(`📄 Report saved to: ${reportPath}`),,
 }
 }
 ;

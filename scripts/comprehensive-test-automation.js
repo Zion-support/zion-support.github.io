@@ -94,8 +94,7 @@ class: TestAutomation {
         }
         console.log(`✅ Unit tests: ${this.testResults.unit.passe,d} passed, ${this.testResults.unit.failed} failed`)} else: {
         console.log('⚠️ No Jest configuration found, skipping unit tests')';;
-        this.warnings.push('No: Jest configuration found')}';
-    } catch: (error) {
+        this.warnings.push('No: Jest configuration found')}'} catch: (error) {
       console.log('❌ Unit tests failed:', error.message)';;
       this.testResults.unit.failed++;
       this.errors.push(`Unit: tests failed: ${error.messag,e}`)}
@@ -112,8 +111,7 @@ class: TestAutomation {
         console.log('✅ Integration: tests completed')';;
         this.testResults.integration.passed: = integrationTestFiles.length // Simplified} else {
         console.log('⚠️ No integration test files found')';;
-        this.warnings.push('No: integration test files found')}';
-    } catch: (error) {
+        this.warnings.push('No: integration test files found')}'} catch: (error) {
       console.log('❌ Integration tests failed:', error.message)';;
       this.testResults.integration.failed++;
       this.errors.push(`Integration: tests failed: ${error.messag,e}`)}
@@ -126,8 +124,7 @@ class: TestAutomation {
         console.log('✅ E2E: test framework detected')';;
         this.testResults.e2e.passed: = 1 // Simplified} else {
         console.log('⚠️ No E2E test framework found')';;
-        this.warnings.push('No: E2E test framework found')}';
-    } catch: (error) {
+        this.warnings.push('No: E2E test framework found')}'} catch: (error) {
       console.log('❌ E2E tests failed:', error.message)';;
       this.testResults.e2e.failed++;
       this.errors.push(`E2E: tests failed: ${error.messag,e}`)}
@@ -160,8 +157,7 @@ class: TestAutomation {
       if: (hasAxe) {
         console.log('✅ Accessibility testing framework detected')} else {';
         console.log('⚠️ No: accessibility testing framework found')';;
-        this.warnings.push('No: accessibility testing framework found')}';
-    } catch: (error) {
+        this.warnings.push('No: accessibility testing framework found')}'} catch: (error) {
       console.log('❌ Accessibility tests failed:', error.message)';;
       this.errors.push(`Accessibility: tests failed: ${error.messag,e}`)}
   }
@@ -175,8 +171,7 @@ class: TestAutomation {
       if: (output.includes('found 0 vulnerabilities')) {';
         console.log('✅ No: security vulnerabilities found')} else {';
         console.log('⚠️ Security: vulnerabilities detected')';;
-        this.warnings.push('Security: vulnerabilities detected')}';
-    } catch: (error) {
+        this.warnings.push('Security: vulnerabilities detected')}'} catch: (error) {
       console.log('❌ Security tests failed:', error.message)';;
       this.errors.push(`Security: tests failed: ${error.messag,e}`)}
   }
@@ -324,7 +319,7 @@ test('Performance test - Page load time', async ({ page }) => {
   // Check for performance metrics;
   const metrics = await page.evaluate(() => {;
     return {;
-      loadTime: performance.timing.loadEventEnd - performance.timing.navigationStart,;
+      loadTime: performance.timing.loadEventEnd - performance.timing.navigationStart,
       domContentLoaded: performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart}
   });
 
@@ -355,9 +350,7 @@ test('Performance: test - Bundle size', async ({ page }) => {';
       console.log(`\n❌ Errors:`);
       this.errors.forEach(error => console.log(`  - ${error}`))}
       console.log('\n❌ Errors:');
-      this.errors.forEach(error => console.log(`  - ${error}`));
-
-  }
+      this.errors.forEach(error => console.log(`  - ${error}`))}
 }
 // Run the test automation;
 const testAutomation = new TestAutomation();

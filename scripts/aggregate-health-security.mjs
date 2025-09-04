@@ -5,10 +5,8 @@ import { execSync } from 'node:child_process';
 function run(cmd) {
   try {
     const out = execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'] }).toString();
-    return { ok: true, out };
-  } catch (e) {
-    return { ok: false, out: e.stdout?.toString() || '', err: e.stderr?.toString() || e.message };
-  }
+    return { ok: true, out }} catch (e) {
+    return { ok: false, out: e.stdout?.toString() || '', err: e.stderr?.toString() || e.message }}
 }
 
 const results = {};

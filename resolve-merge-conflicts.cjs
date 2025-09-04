@@ -17,14 +17,12 @@ function resolveMergeConflicts(filePath) {
         
         // Replace conflicts with HEAD version (first capture group)
         content = content.replace(conflictPattern, (match, headContent) => {
-            return headContent.trim();
-        });
+            return headContent.trim()});
         
         // Also handle conflicts without proper markers
         const simpleConflictPattern = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>>/g;
         content = content.replace(simpleConflictPattern, (match, headContent) => {
-            return headContent.trim();
-        });
+            return headContent.trim()});
         
         // Clean up any remaining conflict markers
         content = content.replace(/<<<<<<< HEAD\n?/g, '');
@@ -35,14 +33,11 @@ function resolveMergeConflicts(filePath) {
         if (content !== originalContent) {
             fs.writeFileSync(filePath, content, 'utf8');
             console.log(`✅ Resolved conflicts in: ${filePath}`);
-            return true;
-        }
+            return true}
         
-        return false;
-    } catch (error) {
+        return false} catch (error) {
         console.error(`❌ Error processing ${filePath}:`, error.message);
-        return false;
-    }
+        return false}
 }
 
 // Function to find all files with merge conflicts
@@ -52,11 +47,9 @@ function findFilesWithConflicts() {
             encoding: 'utf8',
             cwd: process.cwd()
         });
-        return result.trim().split('\n').filter(file => file.length > 0);
-    } catch (error) {
+        return result.trim().split('\n').filter(file => file.length > 0)} catch (error) {
         // If grep finds no matches, it returns exit code 1
-        return [];
-    }
+        return []}
 }
 
 // Main execution
@@ -66,8 +59,7 @@ function main() {
     
     if (filesWithConflicts.length === 0) {
         console.log('✅ No merge conflicts found!');
-        return;
-    }
+        return}
     
     console.log(`📁 Found ${filesWithConflicts.length} files with merge conflicts`);
     
@@ -76,10 +68,8 @@ function main() {
     
     filesWithConflicts.forEach(file => {
         if (resolveMergeConflicts(file)) {
-            resolvedCount++;
-        } else {
-            errorCount++;
-        }
+            resolvedCount++} else {
+            errorCount++}
     });
     
     console.log(`\n📊 Resolution Summary:`);
@@ -88,8 +78,7 @@ function main() {
     console.log(`📁 Total processed: ${filesWithConflicts.length} files`);
     
     if (resolvedCount > 0) {
-        console.log('\n🎉 Merge conflicts resolved! You can now run linting again.');
-    }
+        console.log('\n🎉 Merge conflicts resolved! You can now run linting again.')}
 }
 
 main();

@@ -30,14 +30,12 @@ export interface RealMarketService {
     mobile: string;
     email: string;
     address: string;
-website: string;
-  };realImplementation: boolean;
+website: string};realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;
-}
+reviews: number}
 
 export const realMarketServices: RealMarketService[] = [// AI-Powered Business Intelligence
   {

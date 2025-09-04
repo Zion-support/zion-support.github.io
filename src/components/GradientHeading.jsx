@@ -17,5 +17,4 @@ export function GradientHeading(props: any) {
     );
 }
 
-
-export default GradientHeading;
+export default GradientHeading;;;

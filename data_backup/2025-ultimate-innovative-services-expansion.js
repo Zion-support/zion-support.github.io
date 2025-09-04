@@ -815,5 +815,4 @@ specialFeatures: [,
   'SOC 2 Type II,
   'ISO 27001',
   'GDPR']];
-export default ultimateInnovativeServices2025;
-}
+export default ultimateInnovativeServices2025}

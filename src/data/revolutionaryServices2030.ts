@@ -20,21 +20,18 @@ export interface RevolutionaryService2030 {
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
   marketSize?: string;
   aiCapabilities?: string[];
   quantumFeatures?: string[];
-  blockchainFeatures?: string[];
-}
+  blockchainFeatures?: string[]}
 
 export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   // Quantum AI Trading Platform

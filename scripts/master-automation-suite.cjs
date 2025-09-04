@@ -21,20 +21,17 @@ class MasterAutomationSuite {
       summary: {}
     };
     
-    this.ensureLogDir();
-  }
+    this.ensureLogDir()}
 
   ensureLogDir() {
     if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-    }
+      fs.mkdirSync(this.logDir, { recursive: true })}
   }
 
   log(message, level = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-  }
+    console.log(logMessage)}
 
   async runPhase(phaseName, phaseScript, description) {
     this.log(`🔄 Running ${description}...`);
@@ -62,21 +59,17 @@ class MasterAutomationSuite {
       phaseResult.output = output;
       phaseResult.endTime = new Date().toISOString();
       
-      this.log(`✅ ${description} completed in ${phaseResult.duration}ms`);
-      
-    } catch (error) {
+      this.log(`✅ ${description} completed in ${phaseResult.duration}ms`)} catch (error) {
       const endTime = Date.now();
       phaseResult.duration = endTime - Date.now();
       phaseResult.status = 'failed';
       phaseResult.error = error.message;
       phaseResult.endTime = new Date().toISOString();
       
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-    }
+      this.log(`❌ ${description} failed: ${error.message}`, 'error')}
 
     this.masterResults.phases.push(phaseResult);
-    return phaseResult;
-  }
+    return phaseResult}
 
   async runMasterSuite() {
     this.log('🚀 Starting Master Automation Suite');
@@ -121,8 +114,7 @@ class MasterAutomationSuite {
       
       // Continue even if some phases fail (non-critical)
       if (result.status === 'failed') {
-        this.log(`⚠️ Phase ${phase.name} failed but continuing...`, 'warning');
-      }
+        this.log(`⚠️ Phase ${phase.name} failed but continuing...`, 'warning')}
     }
 
     this.generateMasterReport();
@@ -134,8 +126,7 @@ class MasterAutomationSuite {
     this.log(`📊 Results: ${successCount}/${totalCount} phases successful`);
     
     this.masterResults.status = successCount >= totalCount * 0.8 ? 'success' : 'partial';
-    return this.masterResults;
-  }
+    return this.masterResults}
 
   generateMasterReport() {
     const reportPath = path.join(this.logDir, `master-automation-report-${this.timestamp}.json`);
@@ -156,32 +147,26 @@ class MasterAutomationSuite {
     };
 
     fs.writeFileSync(reportPath, JSON.stringify(this.masterResults, null, 2));
-    this.log(`📄 Master automation report saved to: ${reportPath}`);
-  }
+    this.log(`📄 Master automation report saved to: ${reportPath}`)}
 
   generateMasterRecommendations() {
     const recommendations = [];
     
     const failedPhases = this.masterResults.phases.filter(p => p.status === 'failed');
     if (failedPhases.length > 0) {
-      recommendations.push('Review failed phases and address underlying issues');
-    }
+      recommendations.push('Review failed phases and address underlying issues')}
     
     if (this.masterResults.phases.every(p => p.status === 'success')) {
-      recommendations.push('All automation phases completed successfully - system is healthy');
-    }
+      recommendations.push('All automation phases completed successfully - system is healthy')}
     
     const slowPhases = this.masterResults.phases.filter(p => p.duration > 120000);
     if (slowPhases.length > 0) {
-      recommendations.push('Consider optimizing slow-running phases');
-    }
+      recommendations.push('Consider optimizing slow-running phases')}
     
     if (this.masterResults.summary.successRate >= '80%') {
-      recommendations.push('Automation suite is performing well');
-    }
+      recommendations.push('Automation suite is performing well')}
     
-    return recommendations;
-  }
+    return recommendations}
 }
 
 // Main execution
@@ -189,12 +174,9 @@ if (require.main === module) {
   const masterSuite = new MasterAutomationSuite();
   masterSuite.runMasterSuite()
     .then(results => {
-      process.exit(results.status === 'success' ? 0 : 1);
-    })
+      process.exit(results.status === 'success' ? 0 : 1)})
     .catch(error => {
       console.error('Fatal error:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = MasterAutomationSuite;

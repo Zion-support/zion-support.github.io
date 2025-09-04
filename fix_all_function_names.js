@@ -18,11 +18,8 @@ function fileName = path.basename(filePath, path.extname(filePath));
         
 
 };
+        return numberWords[digit] || `_${digit}`})};
         return numberWords[digit] || `_${digit}`});
-
-};
-        return numberWords[digit] || `_${digit}`;
-      });
     // If the function name is already valid, skip
     if (currentFunctionName === functionName) return false;
     // Replace the function name throughout the file
@@ -67,13 +64,10 @@ async function fixAllFiles() {
   const fixedCount = 0;
   for (const file of files) {
     if (fixFunctionName(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   }
-  // // // // // // // console.log(`Fixed ${fixedCount} files.`);
-}
-fixAllFiles();
-}}}}}}}}}
+  // // // // // // // console.log(`Fixed ${fixedCount} files.`)}
+fixAllFiles()}}}}}}}}}
       return true}
     return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);

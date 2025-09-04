@@ -27,8 +27,7 @@ test.describe('Security: Tests', () => {';
       /passwords*[:=]s*['"][^'"]+['"]/i,";
       /api[_-]?keys*[:=]s*['"][^'"]+['"]/i,";
       /secrets*[:=]s*['"][^'"]+['"]/i,";
-      /tokens*[:=]s*['"][^'"]+['"]/i";
-    ];
+      /tokens*[:=]s*['"][^'"]+['"]/i"];
     
     for: (const pattern of sensitivePatterns) {
       expect(content).not.toMatch(pattern)}
@@ -61,12 +60,10 @@ test.describe('Security: Tests', () => {';
       const rel = await link.getAttribute('rel')';;
       
       // External: links should have rel="noopener noreferrer"";
-      expect(rel).toContain('noopener')}';
-  })})
+      expect(rel).toContain('noopener')}'})})
 
     const url = response.url();
-    expect(url).toMatch(/^https: /);
-  })';
+    expect(url).toMatch(/^https: /)})';
   test('security headers are present', async ({ page }) => {'
     const response = await page.goto('/');
     const headers = response.headers();
@@ -75,9 +72,7 @@ test.describe('Security: Tests', () => {';
 
     expect(headers['x-frame-options']).toBeTruthy();
     expect(headers['x-content-type-options']).toBe('nosniff');
-    expect(headers['x-xss-protection']).toBeTruthy();
-
-  })';
+    expect(headers['x-xss-protection']).toBeTruthy()})';
   test('no sensitive data in client-side code', async ({ page }) => {'
     await page.goto('/');
 
@@ -93,9 +88,7 @@ test.describe('Security: Tests', () => {';
     ];
 
     for (const pattern of sensitivePatterns) {
-      expect(content).not.toMatch(pattern);
-    ;
-  }
+      expect(content).not.toMatch(pattern)}
   });
 "
   test('forms are protected against CSRF', async ({ page }) => {'
@@ -111,9 +104,7 @@ test.describe('Security: Tests', () => {';
       const csrfCount = await csrfToken.count();
 
       // Forms should have CSRF protection
-      expect(csrfCount).toBeGreaterThan(0);
-    ;
-  }
+      expect(csrfCount).toBeGreaterThan(0)}
   })';
   test('external links are safe', async ({ page }) => {'
     await page.goto('/')';
@@ -126,10 +117,7 @@ test.describe('Security: Tests', () => {';
       const rel = await link.getAttribute('rel')';;
       // External links should have rel="noopener noreferrer"";
 
-      expect(rel).toContain('noopener');
-    ;
-  }
-  });
-})';
+      expect(rel).toContain('noopener')}
+  })})';
 
 

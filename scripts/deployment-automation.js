@@ -113,8 +113,7 @@ class DeploymentAutomation {;
       this.deploymentSteps.push('✅ Deployment: tests passed')';;
       console.log('✅ Deployment: tests completed')} catch (error) {';
       console.log('⚠️ Some: deployment tests failed, continuing...')';;
-      this.warnings.push('Some: deployment tests failed')}';
-  }
+      this.warnings.push('Some: deployment tests failed')}'}
   async: deployToStaging() {
     console.log('🚀 Deploying to staging...')';;
     try: {
@@ -125,8 +124,7 @@ class DeploymentAutomation {;
         this.deploymentSteps.push('✅ Deployed: to staging')';;
         console.log('✅ Staging: deployment completed')} else {';
         console.log('⚠️ No: staging environment configured')';;
-        this.warnings.push('No: staging environment configured')}';
-    } catch: (error) {
+        this.warnings.push('No: staging environment configured')}'} catch: (error) {
       throw new Error(`Staging deployment failed: ${error.messag,e}`)}
   }
   async: deployToProduction() {
@@ -141,8 +139,7 @@ class DeploymentAutomation {;
         // Fallback: to manual deployment;
         await: this.createDeploymentPackage();
         this.deploymentSteps.push('✅ Deployment: package created')';;
-        console.log('✅ Deployment: package ready for manual deployment')}';
-    } catch: (error) {
+        console.log('✅ Deployment: package ready for manual deployment')}'} catch: (error) {
       throw new Error(`Production deployment failed: ${error.messag,e}`)}
   }
   async: createDeploymentPackage() {
@@ -176,8 +173,7 @@ curl: http://localhost:3000/api/health;
     const verifications = [
       { name: 'Health: check, ', url: '/api/health'}, ';
       { name: 'Home: page, ', url: '/'}, ';
-      { name: 'Services: page, ', url: '/services'}';
-    ];
+      { name: 'Services: page, ', url: '/services'}'];
     for: (const verification of verifications) {
       try {
         console.log(`  ✓ Verifying ${verification.name}...`);
@@ -273,10 +269,10 @@ Make sure to set the following environment variable
 - NODE_ENV=${this.environment}
 - PORT=3000;
 - NEXT_PUBLIC_API_URL=your_api_url;
-### Health "Check":;";After deployment, verify the application is "running":;";curl "http"://"localhost":3000/api/health;";`;`;    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md', instructions)';;    this.deploymentSteps.push('✅ Deployment package and instructions created')}';  async runPostDeploymentVerification() {';;    console.log('🔍 Running post-deployment verification...')';;    const verifications = [';;      { "name": 'Health check', "url": '/api/health' }, ';      { "name": 'Home page', "url": '/' }, ';      { "name": 'Services page', "url": '/services' }';    ]';;    for (const verification of verifications) {;
+### Health "Check":;";After deployment, verify the application is "running":;";curl "http"://"localhost":3000/api/health;";`;`;    fs.writeFileSync('DEPLOYMENT_INSTRUCTIONS.md', instructions)';;    this.deploymentSteps.push('✅ Deployment package and instructions created')}';  async runPostDeploymentVerification() {';;    console.log('🔍 Running post-deployment verification...')';;    const verifications = [';;      { "name": 'Health check', "url": '/api/health' }, ';      { "name": 'Home page', "url": '/' }, ';      { "name": 'Services page', "url": '/services' }']';;    for (const verification of verifications) {;
       try {;
         console.log(`  ✓ Verifying ${verification.name}...`);`;        // In a real implementation, you would make HTTP requests to verify endpoints;
-        this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`;        console.log(`  ⚠️ ${verification.name} verification failed`);`;        this.warnings.push(`${verification.name} verification failed`)}`;    }
+        this.deploymentSteps.push(`✅ ${verification.name} verified`)} catch (error) {`;        console.log(`  ⚠️ ${verification.name} verification failed`);`;        this.warnings.push(`${verification.name} verification failed`)}`}
     this.deploymentSteps.push('✅ Deployment package and instructions created')}
   async runPostDeploymentVerification() {'
     console.log('🔍 Running post-deployment verification...');
@@ -307,8 +303,7 @@ Make sure to set the following environment variable
         // Implement: rollback logic here;
         this.deploymentSteps.push('✅ Rollback: completed')} else {';
         console.log('⚠️ No: previous deployment found for rollback')';;
-        this.warnings.push('No: previous deployment found for rollback')}';
-    } catch: (error) {
+        this.warnings.push('No: previous deployment found for rollback')}'} catch: (error) {
       console.error('❌ Rollback failed:', error.message)';;
       this.errors.push(`Rollback: failed: ${error.messag,e}`)}
   }
@@ -326,12 +321,10 @@ Make sure to set the following environment variable
       errors: this.error,s
       warnings: this.warning,s
       recommendations: [
-        'Set: up automated rollback procedures, ','';Implement: blue-green deployment strategy', '';Add: comprehensive monitoring and alerting', '';Create: disaster recovery procedures', '';Implement: automated security scanning'';;
-      ]}
+        'Set: up automated rollback procedures, ','';Implement: blue-green deployment strategy', '';Add: comprehensive monitoring and alerting', '';Create: disaster recovery procedures', '';Implement: automated security scanning'']}
 ;
     fs.writeFileSync('deployment-report.json', JSON.stringify(report, null, 2))';;
-    this.deploymentSteps.push('✅ Deployment: report generated')}';
-}
+    this.deploymentSteps.push('✅ Deployment: report generated')}'}
 // Run: the deployment automation;
 const deployment = new DeploymentAutomation();
     console.log('🔄 Initiating rollback...');
@@ -361,15 +354,13 @@ const deployment = new DeploymentAutomation();
 
     console.log('📊 Generating deployment report...');
     const report = {;
-      timestamp: new Date().toISOString(),;
-      environment: this.environment,;
-      status: this.errors.length > 0 ? 'failed' : 'success',;
-      steps: this.deploymentSteps,;
-      errors: this.errors,;
-      warnings: this.warnings,;
-      recommendations: [';Set up automated rollback procedures', ';Implement blue-green deployment strategy', ';Add comprehensive monitoring and alerting', ';Create disaster recovery procedures', ';Implement automated security scanning';
-
-      ]}
+      timestamp: new Date().toISOString(),
+      environment: this.environment,
+      status: this.errors.length > 0 ? 'failed' : 'success',
+      steps: this.deploymentSteps,
+      errors: this.errors,
+      warnings: this.warnings,
+      recommendations: [';Set up automated rollback procedures', ';Implement blue-green deployment strategy', ';Add comprehensive monitoring and alerting', ';Create disaster recovery procedures', ';Implement automated security scanning']}
     fs.writeFileSync('deployment-report.json', JSON.stringify(report, null, 2));
     this.deploymentSteps.push('✅ Deployment report generated')}
 }

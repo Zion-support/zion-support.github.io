@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';'''
+import React, {useState, useEffect} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';
 import {ADVANCED_MICRO_SERVICES} from "../data/advancedMicroServices.jsx";
 const ServiceCard = (props: any) => {    const [isHovered, setIsHovered] = useState(false);
@@ -170,7 +170,8 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 }, []);, []);
         const allIndices = new Set(filteredServices.map((_, index) => index));
         setVisibleServices(allIndices)}, [filteredServices]);"
-    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">
+    return (
+    <div className="min-h-screen bg-white">
       {/* Animated Background */}"
       <div className="absolute inset-0 overflow-hidden">"
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>"
@@ -270,7 +271,5 @@ export default Component
 </motion>
 </div>
 </motion>
-</motion>
-</div>
-</div>
-</motion>
+</div>';
+</motion>;';;';

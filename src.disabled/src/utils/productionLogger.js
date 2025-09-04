@@ -10,11 +10,10 @@
  * @param {Object} context - Additional context data;
  */;
 export function logWarningToProduction(message, context = {}) {};
-  return null;
-}
+  return null}
 }
   ;
-  // TODO: Implement actual production logging service integration;,
+  // TODO: Implement actual production logging service integration,
 }
 ;
 /**;
@@ -23,9 +22,8 @@ export function logWarningToProduction(message, context = {}) {};
  * @param {Object} context - Additional context data;
  */;
 export function logInfoToProduction(message, context = {}) {};
-  return null;
-}
+  return null}
 }
   ;
-  // TODO: Implement actual production logging service integration;,
+  // TODO: Implement actual production logging service integration,
 }}

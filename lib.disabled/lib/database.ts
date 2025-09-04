@@ -15,23 +15,18 @@ class DatabaseManager {
   private config: DatabaseConfig;
 
   private constructor(config: DatabaseConfig) {
-    this.config = config;
-  }
+    this.config = config}
 
   static getInstance(config?: DatabaseConfig): DatabaseManager {
     if (!DatabaseManager.instance) {
       if (!config) {
-        throw new Error('Database configuration required for first initialization');
-      }
-      DatabaseManager.instance = new DatabaseManager(config);
-    }
-    return DatabaseManager.instance;
-  }
+        throw new Error('Database configuration required for first initialization')}
+      DatabaseManager.instance = new DatabaseManager(config)}
+    return DatabaseManager.instance}
 
   async connect(): Promise<void> {
     if (this.client && this.db) {
-      return;
-    }
+      return}
 
     try {
       this.client = new MongoClient(this.config.uri, {
@@ -45,39 +40,30 @@ class DatabaseManager {
       // await this.client.connect();
       // this.db = this.client.db(this.config.dbName);
       
-      console.log('✅ Database connected successfully');
-    } catch (error) {
+      console.log('✅ Database connected successfully')} catch (error) {
       console.error('❌ Database connection failed:', error);
-      throw error;
-    }
+      throw error}
   async disconnect(): Promise<void> {
     if (this.client) {
       await this.client.close();
       this.client = null;
       this.db = null;
-      console.log('✅ Database disconnected');
-    }
+      console.log('✅ Database disconnected')}
   getDatabase(): Db {
     if (!this.db) {
-      throw new Error('Database not connected. Call connect() first.');
-    }
-    return this.db;
-  }
+      throw new Error('Database not connected. Call connect() first.')}
+    return this.db}
 
   getCollection<T = any>(name: string): Collection<T> {
-    return this.getDatabase().collection<T>(name);
-  }
+    return this.getDatabase().collection<T>(name)}
 
   async healthCheck(): Promise<boolean> {
     try {
       if (!this.db) {
-        return false;
-      }
+        return false}
       await this.db.admin().ping();
-      return true;
-    } catch {
-      return false;
-    }
+      return true} catch {
+      return false}
 // Initialize database with environment variables
 const dbConfig: DatabaseConfig = {
   uri: process.env.MONGODB_URI || 'mongodb://localhost:27017',

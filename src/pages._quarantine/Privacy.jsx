@@ -1,7 +1,7 @@
-import React from 'react';
-// import {Header} from "@/components/header/Header";
-import {Footer} from '@/components/Footer';'''
-import {SEO} from '@/components/SEO';'''
+import React from 'react';';
+// import {Header} from "@/components/header/Header";';';
+import {Footer} from '@/components/Footer';'''';';
+import {SEO} from '@/components/SEO';'''';';
 import {GradientHeading} from '@/components/ui/GradientHeading';
 
 export default function Privacy(props: any) {}
@@ -31,10 +31,10 @@ export default function Privacy(props: any) {}
             <p>
               Zion Tech Group uses this data solely to operate and improve our;
               platform. We do not sell your personal information to third;
-              parties.
-            </p>
-            <p>'
-              If you have questions about our privacy practices, please contact''
+              parties.';
+            </p>';';
+            <p>'';';
+              If you have questions about our privacy practices, please contact''';';
               us at{' '}"""
               <a""""
                 href="mailto:support@ziontechgroup.com""""
@@ -61,5 +61,5 @@ export {Privacy};
 
 export {Privacy};
 
-</div>
-</SEO>
+</div>';
+</SEO>;';;';

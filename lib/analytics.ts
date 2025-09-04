@@ -4,16 +4,14 @@ export const trackEvent = (
   properties?: Record<string, string | number | boolean>
 ) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, properties);
-  }
+    window.gtag('event', eventName, properties)}
 };
 
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
       page_path: url,
-    });
-  }
+    })}
 };
 
 export const measurePerformance = () => {
@@ -32,17 +30,14 @@ export const measurePerformance = () => {
       firstContentfulPaint:
         performance.getEntriesByName('first-contentful-paint')[0]?.startTime ||
         0
-    };
-  }
-  return null;
-};
+    }}
+  return null};
 
 // Web Vitals tracking
 interface WebVitalMetric {
   name: string;
   value: number;
-  id: string;
-}
+  id: string}
 
 export const trackWebVitals = (metric: WebVitalMetric) => {
   if (typeof window !== 'undefined' && window.gtag) {
@@ -51,8 +46,7 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
       event_category: 'Web Vitals',
       event_label: metric.id
       non_interaction: true
-    });
-  }
+    })}
 };
 
 declare global {
@@ -61,6 +55,5 @@ declare global {
       command: string,
       targetId: string,
       config?: Record<string, unknown>
-    ) => void;
-  }
+    ) => void}
 }

@@ -55,8 +55,7 @@ filesToFix.forEach(filePath => {
     
     if (!fs.existsSync(filePath)) {
       console.log(`   ⚠️  File not found: ${filePath}`);
-      return;
-    }
+      return}
     
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
@@ -69,20 +68,16 @@ filesToFix.forEach(filePath => {
       
       if (beforeLength !== afterLength) {
         fixesApplied++;
-        console.log(`   ✅ Applied fix ${index + 1}`);
-      }
+        console.log(`   ✅ Applied fix ${index + 1}`)}
     });
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Applied ${fixesApplied} fixes to ${filePath}`);
-    } else {
-      console.log(`   ℹ️  No fixes needed for ${filePath}`);
-    }
+      console.log(`   ✅ Applied ${fixesApplied} fixes to ${filePath}`)} else {
+      console.log(`   ℹ️  No fixes needed for ${filePath}`)}
     
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`);
-  }
+    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
 });
 
 console.log('\n🎉 String quote fixes completed!');

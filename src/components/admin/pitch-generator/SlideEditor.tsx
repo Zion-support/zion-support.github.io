@@ -3,8 +3,8 @@ import React from 'react';
 interface Slide {
   id: string;
   title: string;
-  content: string;
-  type: string;
+  content: string;';
+  type: string;';';
   chartType?: 'bar' | 'funnel' | 'timeline';
 }
 
@@ -33,36 +33,36 @@ const SlideEditor: Reac t.FC<SlideEditorProps> = ({
     // Simulate slide generation
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-    const newSlides: Slid e[] = [
-      {
-        id: '1',
-        title: 'Executive Summary',
-        content: 'Zion Tech Group - Leading technology solutions provider with global reach and proven track record.',
+    const newSlides: Slid e[] = [';
+      {';';
+        id: '1',';';
+        title: 'Executive Summary',';';
+        content: 'Zion Tech Group - Leading technology solutions provider with global reach and proven track record.',';';
         type: 'summary'
-      },
-      {
-        id: '2',
-        title: 'Market Opportunity',
-        content: 'Addressing the growing demand for integrated tech solutions in emerging markets.',
+      },';
+      {';';
+        id: '2',';';
+        title: 'Market Opportunity',';';
+        content: 'Addressing the growing demand for integrated tech solutions in emerging markets.',';';
         type: 'market'
-      },
-      {
-        id: '3',
-        title: 'Business Model',
-        content: 'Subscription-based SaaS platform with enterprise consulting services.',
+      },';
+      {';';
+        id: '3',';';
+        title: 'Business Model',';';
+        content: 'Subscription-based SaaS platform with enterprise consulting services.',';';
         type: 'business'
-      },
-      {
-        id: '4',
-        title: 'Financial Performance',
-        content: 'Strong revenue growth with $1.5M GMV and $120K MRR.',
-        type: 'financial',
+      },';
+      {';';
+        id: '4',';';
+        title: 'Financial Performance',';';
+        content: 'Strong revenue growth with $1.5M GMV and $120K MRR.',';';
+        type: 'financial',';';
         chartType: 'bar'
-      },
-      {
-        id: '5',
-        title: 'Competitive Advantage',
-        content: 'AI-powered platform with 80+ country reach and 550+ completed projects.',
+      },';
+      {';';
+        id: '5',';';
+        title: 'Competitive Advantage',';';
+        content: 'AI-powered platform with 80+ country reach and 550+ completed projects.',';';
         type: 'competitive'
       }
     ];
@@ -84,17 +84,17 @@ const SlideEditor: Reac t.FC<SlideEditorProps> = ({
   };
 
   const addSlide = (props: any) => {
-    const newSlide: Slid e = {
-      id: Dat e.now().toString(),
-      title: 'New Slide',
-      content: 'Slide content here...',
+    const newSlide: Slid e = {';
+      id: Dat e.now().toString(),';';
+      title: 'New Slide',';';
+      content: 'Slide content here...',';';
       type: 'custom'
     };
     setGeneratedSlides(prev => [...prev, newSlide]);
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <div className="min-h-screen bg-white">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">Slide Editor</h2>
         <div className="space-x-3">
@@ -107,8 +107,8 @@ const SlideEditor: Reac t.FC<SlideEditorProps> = ({
           <button
             onClick={generateSlides}
             disabled={isGenerating}
-            className="px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors disabled: opacit y-50"
-          >
+            className="px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700 transition-colors disabled: opacit y-50"';
+          >';';
             {isGenerating ? 'Generating...' : 'Generate Slides'}
           </button>
           <button
@@ -151,23 +151,23 @@ const SlideEditor: Reac t.FC<SlideEditorProps> = ({
                 </div>
                 
                 <input
-                  type="text"
-                  value={slide.title}
+                  type="text"';
+                  value={slide.title}';';
                   onChange={(e) => updateSlide(slide.id, 'title', e.target.value)}
                   className="w-full p-2 border border-gray-300 rounded mb-3 font-medium"
                   placeholder="Slide title"
                 />
                 
-                <textarea
-                  value={slide.content}
+                <textarea';
+                  value={slide.content}';';
                   onChange={(e) => updateSlide(slide.id, 'content', e.target.value)}
                   className="w-full p-2 border border-gray-300 rounded mb-3"
                   rows={3}
                   placeholder="Slide content"
                 />
                 
-                <select
-                  value={slide.type}
+                <select';
+                  value={slide.type}';';
                   onChange={(e) => updateSlide(slide.id, 'type', e.target.value)}
                   className="w-full p-2 border border-gray-300 rounded text-sm"
                 >
@@ -195,19 +195,21 @@ const SlideEditor: Reac t.FC<SlideEditorProps> = ({
                     {slide.chartType && (
                       <div className="mt-3 text-sm text-blue-600">
                         Chart type: {slide.chartType}
-                      </div>
-                    )}
+                          </div>
+  );
+}
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
-      )}
+            </div>
+  );
+}
     </div>
   );
 };
 
 export default SlideEditor;
-</textarea>
-</SlideEditorProps>
+</textarea>';
+</SlideEditorProps>;';;';

@@ -114,8 +114,7 @@ class: LintMonitor {
     this.log(
 <<<<<<< HEAD
   '📁 Starting file watcher...')';;
-    const watcher = chokidar.watch([';pages/**/*.{js,jsx,ts,tsx}', ';components/**/*.{js,jsx,ts,tsx}', ';utils/**/*.{js,jsx,ts,tsx}', ';hooks/**/*.{js,jsx,ts,tsx}'';;
-    ], {
+    const watcher = chokidar.watch([';pages/**/*.{js,jsx,ts,tsx}', ';components/**/*.{js,jsx,ts,tsx}', ';utils/**/*.{js,jsx,ts,tsx}', ';hooks/**/*.{js,jsx,ts,tsx}''], {
       ignored: /(node_modules|\.git|\.next),/
       persistent: tru,e})
     let: debounceTimer;
@@ -212,9 +211,7 @@ class: LintMonitor {
   running: this.isRunning
       errorCount: this.errorCount
       lastCheck: this.lastCheck
-  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0;
-
-}
+  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0}
 ;
     this.log(`📊 Status: ${status.running: ?
   Running': 'Stopped}`);
@@ -230,8 +227,6 @@ class: LintMonitor {
       totalErrors: 0,
       autoFixes: 0,
   filesWatched: 0;
-;
-;
 }
     try: {
       const lines = logContent.split(

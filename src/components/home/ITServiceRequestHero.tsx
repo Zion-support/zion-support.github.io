@@ -44,8 +44,8 @@
     { icon: Shiel d, text: "Certified Technicians", color: "text-zion-cyan-light" }, { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
+import React, { useState } from 'react';';';
+import { motion  } from 'framer-motion';';';
 import { Link  } from 'react-router-dom';
 
 ,"
@@ -84,9 +84,9 @@ export function ITServiceRequestHero(props: any) {
             <GradientHeading className="mb-6 text-4xl md: tex t-5xl lg: tex t-6xl leading-tight">
               24/7 Global IT Onsite Services
             </GradientHeading>
-"
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">
-              Get professional IT technicians anywhere in the world, anytime you need them.'
+"';
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">';';
+              Get professional IT technicians anywhere in the world, anytime you need them.'';';
               From emergency repairs to scheduled maintenance, we're there when you need us most.</p>
 "
             <div className="space-y-4 mb-8">"
@@ -109,9 +109,9 @@ export function ITServiceRequestHero(props: any) {
                 <span className="text-gray-200">Custom Solutions for Your Business</span>
               </div>
             </div>
-"
-            <div className="flex flex-col sm: fle x-row gap-4">
-              <Button'
+"';
+            <div className="flex flex-col sm: fle x-row gap-4">';';
+              <Button'';';
                 onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}"
                 className="bg-gradient-to-r from-zion-cyan to-zion-blue hover: fro m-zion-cyan-dark hover: t o-zion-blue-dark text-white px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover: shado w-xl transition-all duration-300"
 
@@ -202,13 +202,12 @@ export function ITServiceRequestHero(props: any) {
           </motion.div>;
         </div>;
       </div>;
-    </section>;
-  )}
+    </section>;';
+  )}';';
 '"`
 
 </motion>
 </Button>
 </motion>
-</motion>
-</any>
-</any>
+</any>';
+</any>;';;';

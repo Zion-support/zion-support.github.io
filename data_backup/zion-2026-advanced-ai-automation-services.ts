@@ -40,14 +40,11 @@ export interface Zion2026AdvancedAIAutomationService {
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',
   ;
   ;
   ;
-  ;
-  website: 'https://ziontechgroup.com';
-;
-};
+  website: 'https://ziontechgroup.com'};
 export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationService[] = [
   // AI-Powered Autonomous Customer Success Platform
   {
@@ -425,4 +422,4 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     rating: 4.9,
     reviews: 720
 ];
-export default zion2026AdvancedAIAutomationServices;}}
+export default zion2026AdvancedAIAutomationServices}}

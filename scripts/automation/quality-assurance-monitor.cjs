@@ -9,13 +9,11 @@ class QualityAssuranceMonitor {
     this.projectRoot = process.cwd();
     this.automationInterval = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes
     this.issuesFound = [];
-    this.startTime = Date.now();
-  }
+    this.startTime = Date.now()}
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`);
-  }
+    console.log(`[${timestamp}] [${type.toUpperCase()}] ${message}`)}
 
   async runCommand(command, options = {}) {
     try {
@@ -25,10 +23,8 @@ class QualityAssuranceMonitor {
         stdio: options.silent ? 'pipe' : 'inherit',
         ...options
       });
-      return { success: true, output: result };
-    } catch (error) {
-      return { success: false, output: error.stdout || error.stderr || error.message };
-    }
+      return { success: true, output: result }} catch (error) {
+      return { success: false, output: error.stdout || error.stderr || error.message }}
   }
 
   async checkCodeQuality() {
@@ -42,8 +38,7 @@ class QualityAssuranceMonitor {
         severity: 'high',
         description: 'TypeScript compilation errors found',
         details: tsResult.output.substring(0, 500)
-      });
-    }
+      })}
 
     // Check ESLint errors
     const eslintResult = await this.runCommand('npx eslint src/**/*.{js,jsx,ts,tsx}', { silent: true });
@@ -53,8 +48,7 @@ class QualityAssuranceMonitor {
         severity: 'medium',
         description: 'ESLint errors found',
         details: eslintResult.output.substring(0, 500)
-      });
-    }
+      })}
 
     // Check for security vulnerabilities
     const auditResult = await this.runCommand('npm audit --audit-level=high', { silent: true });
@@ -64,12 +58,10 @@ class QualityAssuranceMonitor {
         severity: 'high',
         description: 'Security vulnerabilities found',
         details: auditResult.output.substring(0, 500)
-      });
-    }
+      })}
 
     this.log(`Quality assurance check completed. Found ${this.issuesFound.length} issues.`);
-    return this.issuesFound;
-  }
+    return this.issuesFound}
 
   async run() {
     this.log('Starting Quality Assurance Monitor...');
@@ -80,24 +72,18 @@ class QualityAssuranceMonitor {
       if (issues.length > 0) {
         this.log(`Found ${issues.length} quality issues that need attention`, 'warn');
         for (const issue of issues) {
-          this.log(`${issue.type.toUpperCase()}: ${issue.description}`, 'warn');
-        }
+          this.log(`${issue.type.toUpperCase()}: ${issue.description}`, 'warn')}
       } else {
-        this.log('No quality issues found', 'info');
-      }
+        this.log('No quality issues found', 'info')}
       
-      return { success: true, issuesFound: issues.length };
-      
-    } catch (error) {
+      return { success: true, issuesFound: issues.length }} catch (error) {
       this.log(`Error during quality check: ${error.message}`, 'error');
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 }
 
 if (require.main === module) {
   const monitor = new QualityAssuranceMonitor();
-  monitor.run().catch(console.error);
-}
+  monitor.run().catch(console.error)}
 
 module.exports = QualityAssuranceMonitor;

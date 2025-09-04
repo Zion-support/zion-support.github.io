@@ -77,7 +77,7 @@ export function DynamicListingPage(props: any) {
   };
 
   return (
-    <div className="min-h-screen bg-blue-900 py-12 px-4">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">{title}</h1>
@@ -198,9 +198,10 @@ export function DynamicListingPage(props: any) {
                 </Button>
               ))}
             </div>
-          </div>
-        )}
+              </div>
+  );
+}
       </div>
     </div>
   );
-}
+};;

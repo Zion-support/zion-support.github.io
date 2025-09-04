@@ -8,15 +8,15 @@ export const LinkMonitor = (props: any) => {
     const [lastScanTime, setLastScanTime] = useState(null);
     // Scan all links on the current page
     const scanPageLinks = async () => {
-        setIsScanning(true);
-        setScanProgress(0);
+        setIsScanning(true);';
+        setScanProgress(0);';';
         const links = Array.from(document.querySelectorAll('a[href]'));
         const results = [];
-        for (let i = 0; i < links.length; i++) {
-            const link = links[i];
+        for (let i = 0; i < links.length; i++) {';
+            const link = links[i];';';
             const href = link.getAttribute('href');
-            if (href) {
-                const result = LinkValidator.validateLink(href, window.location.pathname);
+            if (href) {';
+                const result = LinkValidator.validateLink(href, window.location.pathname);';';
                 if (result.status === 'broken') {
                     results.push(result);
                     if (autoFix) {
@@ -46,25 +46,25 @@ export const LinkMonitor = (props: any) => {
   };
   // Fix a broken link
   const fixBrokenLink = async(originalUrl, validationResult) => {
-
-    if()
-      validationResult.suggestedFix &&'
+';
+    if()';';
+      validationResult.suggestedFix &&'';';
       validationResult.suggestedFix.startsWith('Redirect to:')
-    ) {
-
+    ) {';
+';';
       const newUrl = validationResult.suggestedFix.replace('Redirect to: ',);
       // Find and update the link
       const links = document.querySelectorAll(`a[href="${originalUrl}"]`);
       links.forEach(link => {
-
-        link.href = newUrl;
-        link.setAttribute('data-fixed',true');'`
+';
+        link.href = newUrl;';';
+        link.setAttribute('data-fixed',true');'`';';
         link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);
       });
       // Add to fixed links list
-      const fix = {originalUrl,
-        newUrl,
-        type: 'redirect',
+      const fix = {originalUrl,';
+        newUrl,';';
+        type: 'redirect',';';
         reason: 'Automatically fixed broken internal link'};
       setFixedLinks(prev => [...prev, fix]);
     }
@@ -78,12 +78,12 @@ export const LinkMonitor = (props: any) => {
     setBrokenLinks([]);
   };
   // Generate redirect rules for server configuration
-  const generateRedirectRules = (props: any) => {
-    const rules = LinkValidator.generateRedirectRules();
-    const blob = new Blob([rules], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
+  const generateRedirectRules = (props: any) => {';
+    const rules = LinkValidator.generateRedirectRules();';';
+    const blob = new Blob([rules], { type: 'text/plain' });';
+    const url = URL.createObjectURL(blob);';';
+    const a = document.createElement('a');';
+    a.href = url;';';
     a.download = 'redirect-rules.txt';
     a.click();
     URL.revokeObjectURL(url);
@@ -94,12 +94,12 @@ export const LinkMonitor = (props: any) => {
 
       scanTime: lastScanTime?.toISOString(),
       totalBrokenLinks: brokenLinks.length,
-      brokenLinks: brokenLinks,
-      fixedLinks: fixedLinks};
-    const blob = new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
+      brokenLinks: brokenLinks,';
+      fixedLinks: fixedLinks};';';
+    const blob = new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'});';
+    const url = URL.createObjectURL(blob);';';
+    const a = document.createElement('a');';
+    a.href = url;';';
     a.download = 'broken-links-report.json';
     a.click();
     URL.revokeObjectURL(url);
@@ -118,8 +118,8 @@ export const LinkMonitor = (props: any) => {
           <button
             onClick={scanPageLinks}
             disabled={isScanning}"
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
+            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"';
+          >';';
             {isScanning ? 'Scanning...' : 'Scan Links'}
           </button>
           {brokenLinks.length > 0 && (
@@ -150,9 +150,9 @@ export const LinkMonitor = (props: any) => {
               style="{{{ width: `${scanProgress}}"%` }}
             ></div>
           </div>
-        </div>
-      )}
-
+            </div>
+  );
+}
       {/* Status Summary */}
       {showStatus && ("
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">"
@@ -172,17 +172,17 @@ export const LinkMonitor = (props: any) => {
               Fixed Links
             </div>
           </div>"
-          <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">"
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+          <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">"';
+            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">';';
               {lastScanTime ? lastScanTime.toLocaleTimeString() : 'Never'}
             </div>"
             <div className="text-sm text-blue-600 dark:text-blue-400">
               Last Scan
             </div>
           </div>
-        </div>
-      )}
-
+            </div>
+  );
+}
       {/* Broken Links List */}
       {brokenLinks.length > 0 && ("
         <div className="mb-6">"
@@ -202,13 +202,15 @@ export const LinkMonitor = (props: any) => {
                   {link.parentPage && ("
                     <div className="text-xs text-red-600 dark:text-red-400">
                       Found on: {link.parentPage}
-                    </div>
-                  )}
+                        </div>
+  );
+}
                   {link.suggestedFix && ("
                     <div className="text-xs text-green-600 dark:text-green-400 mt-1">
                       {link.suggestedFix}
-                    </div>
-                  )}
+                        </div>
+  );
+}
                 </div>
                 <button
                   onClick={() => fixBrokenLink(link.url, link)}"
@@ -219,9 +221,9 @@ export const LinkMonitor = (props: any) => {
               </div>
             ))}
           </div>
-        </div>
-      )}
-
+            </div>
+  );
+}
       {/* Fixed Links List */}
       {fixedLinks.length > 0 && ("
         <div className="mb-6">"
@@ -245,9 +247,9 @@ export const LinkMonitor = (props: any) => {
               </div>
             ))}
           </div>
-        </div>
-      )}
-
+            </div>
+  );
+}
       {/* Action Buttons */}"
       <div className="flex flex-wrap gap-2">
         <button
@@ -276,12 +278,13 @@ export const LinkMonitor = (props: any) => {
             <li>• Regularly monitor external links for validity</li>
             <li>• Update sitemap to exclude broken URLs</li>
           </ul>
-        </div>
-      )}
+            </div>
+  );
+}
     </div>
   );
-};
-export default LinkMonitor;
+};';
+export default LinkMonitor;';';
 '"`
 import React from "react"
 export const LinkMonitor = (props: any) => {const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ;"";,"});,"})"
@@ -561,8 +564,8 @@ export const LinkMonitor = (props: any) => {;,"});,"})"
     </div>;,"});,"})"
   );,"});,"});"
 };,"});,"})"
-export default LinkMonitor;"";,"});,"})"
-""""`;,"});,"})"
+export default LinkMonitor;"";,"});,"})"';
+""""`;,"});,"})"';';
  export const LinkMonitor = (props: any) => {const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) '
 "
 ""}"
@@ -571,9 +574,5 @@ export default LinkMonitor;"";,"});,"})"
 
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

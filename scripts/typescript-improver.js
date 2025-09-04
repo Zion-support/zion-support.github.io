@@ -56,33 +56,28 @@ const commonInterfaces = `
 interface ApiResponse<T = unknown> {
   data: T;
   status: number;
-  message?: string;
-}
+  message?: string}
 
 interface User {
   id: string;
   email: string;
   name: string;
-  role: 'admin' | 'user' | 'guest';
-}
+  role: 'admin' | 'user' | 'guest'}
 
 interface Service {
   id: string;
   name: string;
   description: string;
   price: number;
-  category: string;
-}
+  category: string}
 
 interface FormData {
-  [key: string]: string | number | boolean | File;
-}
+  [key: string]: string | number | boolean | File}
 
 interface ComponentProps {
   className?: string;
   children?: React.ReactNode;
-  [key: string]: unknown;
-}
+  [key: string]: unknown}
 `;
 
 // Improve TypeScript file
@@ -100,8 +95,7 @@ function improveTypeScriptFile(content, filePath) {
         commonInterfaces +
         '\n' +
         improved.slice(nextLineIndex);
-      changes++;
-    }
+      changes++}
   }
 
   // Replace any types with more specific types
@@ -113,8 +107,7 @@ function improveTypeScriptFile(content, filePath) {
     const matches = improved.match(regex);
     if (matches) {
       improved = improved.replace(regex, replacement);
-      changes += matches.length;
-    }
+      changes += matches.length}
   });
 
   // Add proper typing for function parameters
@@ -122,46 +115,38 @@ function improveTypeScriptFile(content, filePath) {
   const functionMatches = improved.match(functionParamRegex);
   if (functionMatches) {
     improved = improved.replace(functionParamRegex, (match, paramName) => {
-      return match.replace(`: any`, ': unknown');
-    });
-    changes += functionMatches.length;
-  }
+      return match.replace(`: any`, ': unknown')});
+    changes += functionMatches.length}
 
   // Add proper typing for arrow function parameters
   const arrowParamRegex = /\(\s*(\w+)\s*:\s*any\s*\)\s*=>/g;
   const arrowMatches = improved.match(arrowParamRegex);
   if (arrowMatches) {
     improved = improved.replace(arrowParamRegex, (match, paramName) => {
-      return match.replace(`: any`, ': unknown');
-    });
-    changes += arrowMatches.length;
-  }
+      return match.replace(`: any`, ': unknown')});
+    changes += arrowMatches.length}
 
   // Add proper typing for object destructuring
   const destructuringRegex = /\{\s*(\w+)\s*:\s*any\s*\}/g;
   const destructuringMatches = improved.match(destructuringRegex);
   if (destructuringMatches) {
     improved = improved.replace(destructuringRegex, (match, propName) => {
-      return match.replace(`: any`, ': unknown');
-    });
-    changes += destructuringMatches.length;
-  }
+      return match.replace(`: any`, ': unknown')});
+    changes += destructuringMatches.length}
 
   // Add proper typing for useState
   const useStateRegex = /useState\s*<\s*any\s*>/g;
   const useStateMatches = improved.match(useStateRegex);
   if (useStateMatches) {
     improved = improved.replace(useStateRegex, 'useState<unknown>');
-    changes += useStateMatches.length;
-  }
+    changes += useStateMatches.length}
 
   // Add proper typing for useEffect
   const useEffectRegex =
     /useEffect\s*\(\s*\(\s*\)\s*=>\s*{[^}]*},\s*\[\s*\]\s*\)/g;
   const useEffectMatches = improved.match(useEffectRegex);
   if (useEffectMatches) {
-    console.log(`⚠️  Found useEffect with empty dependencies in ${filePath}`);
-  }
+    console.log(`⚠️  Found useEffect with empty dependencies in ${filePath}`)}
 
   // Add proper typing for event handlers
   const eventHandlerRegex =
@@ -169,10 +154,8 @@ function improveTypeScriptFile(content, filePath) {
   const eventHandlerMatches = improved.match(eventHandlerRegex);
   if (eventHandlerMatches) {
     improved = improved.replace(eventHandlerRegex, (match, handlerName) => {
-      return match.replace('event: any', 'event: React.SyntheticEvent');
-    });
-    changes += eventHandlerMatches.length;
-  }
+      return match.replace('event: any', 'event: React.SyntheticEvent')});
+    changes += eventHandlerMatches.length}
 
   // Add proper typing for API calls
   const apiCallRegex =
@@ -180,13 +163,10 @@ function improveTypeScriptFile(content, filePath) {
   const apiCallMatches = improved.match(apiCallRegex);
   if (apiCallMatches) {
     improved = improved.replace(apiCallRegex, match => {
-      return match.replace('response: any', 'response: Response');
-    });
-    changes += apiCallMatches.length;
-  }
+      return match.replace('response: any', 'response: Response')});
+    changes += apiCallMatches.length}
 
-  return { content: improved, changes };
-}
+  return { content: improved, changes }}
 
 // Process individual file
 function processFile(filePath) {
@@ -199,13 +179,10 @@ function processFile(filePath) {
       totalImprovements += result.changes;
       console.log(
         `✅ Improved ${filePath} (${result.changes} type improvements)`
-      );
-    }
+      )}
 
-    filesProcessed++;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-  }
+    filesProcessed++} catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message)}
 }
 
 // Generate TypeScript improvement report
@@ -233,8 +210,7 @@ function generateTypeScriptReport() {
   );
   console.log(
     '📊 TypeScript improvement report generated: typescript-improvement-report.json'
-  );
-}
+  )}
 
 // Main improvement function
 async function main() {
@@ -265,8 +241,7 @@ async function main() {
     });
 
     for (const file of files) {
-      processFile(file);
-    }
+      processFile(file)}
   }
 
   generateTypeScriptReport();
@@ -274,8 +249,7 @@ async function main() {
   console.log(`\n📊 TypeScript Improvement Summary:`);
   console.log(`   Files processed: ${filesProcessed}`);
   console.log(`   Total type improvements: ${totalImprovements}`);
-  console.log(`\n✨ TypeScript improvements completed!`);
-}
+  console.log(`\n✨ TypeScript improvements completed!`)}
 
 // Run the script
 main().catch(console.error);

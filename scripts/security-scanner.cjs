@@ -13,14 +13,12 @@ class SecurityScanner {
       vulnerabilities: [],
       securityIssues: [],
       recommendations: []
-    };
-  }
+    }}
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
-    console.log(`[${timestamp}] ${prefix} ${message}`);
-  }
+    console.log(`[${timestamp}] ${prefix} ${message}`)}
 
   async scanDependencies() {
     this.log('📦 Scanning dependencies for vulnerabilities...');
@@ -45,14 +43,11 @@ class SecurityScanner {
             severity: vuln.severity,
             title: vuln.title,
             description: vuln.description
-          });
-        }
+          })}
       } else {
-        this.log('No vulnerabilities found in dependencies', 'success');
-      }
+        this.log('No vulnerabilities found in dependencies', 'success')}
     } catch (error) {
-      this.log(`Dependency scan failed: ${error.message}`, 'error');
-    }
+      this.log(`Dependency scan failed: ${error.message}`, 'error')}
   }
 
   async scanEnvironmentFiles() {
@@ -85,22 +80,18 @@ class SecurityScanner {
                     line: i + 1,
                     issue: 'Potential sensitive data exposure',
                     content: line.split('=')[0] + '=***'
-                  });
-                }
+                  })}
               }
             }
           }
         } catch (error) {
-          this.log(`Error reading ${envFile}: ${error.message}`, 'error');
-        }
+          this.log(`Error reading ${envFile}: ${error.message}`, 'error')}
       }
     }
     
     if (this.results.securityIssues.length > 0) {
-      this.log(`Found ${this.results.securityIssues.length} potential security issues in environment files`);
-    } else {
-      this.log('No security issues found in environment files', 'success');
-    }
+      this.log(`Found ${this.results.securityIssues.length} potential security issues in environment files`)} else {
+      this.log('No security issues found in environment files', 'success')}
   }
 
   async scanCodeForSecurityIssues() {
@@ -150,8 +141,7 @@ class SecurityScanner {
               issue,
               severity,
               count: matches.length
-            });
-          }
+            })}
         }
       } catch (error) {
         // Skip files that can't be read
@@ -159,10 +149,8 @@ class SecurityScanner {
     }
     
     if (issuesFound > 0) {
-      this.log(`Found ${issuesFound} potential security issues in code`);
-    } else {
-      this.log('No security issues found in code', 'success');
-    }
+      this.log(`Found ${issuesFound} potential security issues in code`)} else {
+      this.log('No security issues found in code', 'success')}
   }
 
   getCodeFiles() {
@@ -177,10 +165,8 @@ class SecurityScanner {
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-            scanDirectory(fullPath);
-          } else if (stat.isFile() && extensions.some(ext => file.endsWith(ext))) {
-            codeFiles.push(fullPath);
-          }
+            scanDirectory(fullPath)} else if (stat.isFile() && extensions.some(ext => file.endsWith(ext))) {
+            codeFiles.push(fullPath)}
         }
       } catch (error) {
         // Skip directories that can't be read
@@ -188,8 +174,7 @@ class SecurityScanner {
     };
     
     scanDirectory(this.projectRoot);
-    return codeFiles;
-  }
+    return codeFiles}
 
   async generateSecurityReport() {
     this.log('📊 Generating security report...');
@@ -219,8 +204,7 @@ class SecurityScanner {
     const reportPath = path.join(this.projectRoot, 'security-scan-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Security report saved to: ${reportPath}`, 'success');
-    return report;
-  }
+    return report}
 
   async runSecurityScan() {
     try {
@@ -236,24 +220,20 @@ class SecurityScanner {
       this.log(`📊 Summary: ${report.summary.totalIssues} security issues found`);
       
       if (report.summary.vulnerabilities > 0) {
-        this.log(`⚠️ ${report.summary.vulnerabilities} dependency vulnerabilities found`);
-      }
+        this.log(`⚠️ ${report.summary.vulnerabilities} dependency vulnerabilities found`)}
       
       if (report.summary.securityIssues > 0) {
-        this.log(`⚠️ ${report.summary.securityIssues} code security issues found`);
-      }
+        this.log(`⚠️ ${report.summary.securityIssues} code security issues found`)}
       
     } catch (error) {
       this.log(`❌ Security scan failed: ${error.message}`, 'error');
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 }
 
 // Run the security scanner
 if (require.main === module) {
   const scanner = new SecurityScanner();
-  scanner.runSecurityScan().catch(console.error);
-}
+  scanner.runSecurityScan().catch(console.error)}
 
 module.exports = SecurityScanner;

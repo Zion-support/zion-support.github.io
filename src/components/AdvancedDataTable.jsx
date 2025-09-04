@@ -1,12 +1,12 @@
-import {useState, useMemo, useCallback} from 'react';'
-import {motion, AnimatePresence} from 'framer-motion';'
+import {useState, useMemo, useCallback} from 'react';'';';
+import {motion, AnimatePresence} from 'framer-motion';'';';
 import {ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown} from 'lucide-react';
 import {useVirtualScroll} from "../hooks/useVirtualScroll.jsx";
 ;
-export const AdvancedDataTable = (props: any) => {
-    const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});'
-    // State management''
+export const AdvancedDataTable = (props: any) => {';
+    const { trackEvent } = useAnalytics({enableTracking: true,';';
+        enableUserBehaviorTracking: true;});'';';
+    // State management''';';
     const [searchQuery, setSearchQuery] = useState('');
     const [sortConfig, setSortConfig] = useState(null);
     const [filters, setFilters] = useState([]);
@@ -352,8 +352,9 @@ containerHeight: height - 120, // comment
 """{/* comment */}""""{enableSearch && (<div className="relative">""""","
             <Search : className = "absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"  />""""",","
             <input: type="text" placeholder="Search in all columns..." value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="w-full pl-10 pr-4 py-2 border border-gray-300 dark: border-gray-600: rounded-lg focus:outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent: bg-white dark:bg-gray-700: text-gray-900 dark:text-gray-100" />",
-          </div>)}
-
+              </div>
+  );
+}
         {/* comment */}
 
         <AnimatePresence>
@@ -505,7 +506,7 @@ containerHeight: height - 120, // comment
               <Filter className="&apos;w-4" h-4&apos;        />
               Filters&apos
             </button>"
-&apos;&apos,{/* comment */}&apos;&apos,&apos {enableSearch && (&apos}&apos;<div className="&apos;relative&apos;">"&apos;&apos,&apos;&apos;"
+&apos;&apos,{/* comment */}&apos;&apos,&apos {enableSearch && (&apos}&apos;<div className="&apos;relative&apos">"&apos;&apos,&apos;&apos;"
             <Search className="&apos;absolute" left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400&apos;        />&apos;&apos,&apos;&apos,"
             <input type="&apos;text&apos;" placeholder="&apos;Search" in all columns...&apos; value="{searchQuery}" onChange="{(e)" => setSearchQuery(e.target.value)} className="&apos;w-full" pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dar,k: text-gray-100&apos,/>&apos,
         {/* comment */}
@@ -520,7 +521,7 @@ containerHeight: height - 120, // comment
   height: 0 &apos,&apos,",
 &apos,&apos,"&apos}} className="&apos;mt-4" p-4 bg-white dark: bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500&apos,>"&apos,&apos,&apos;&apos,",
               <h4 className="&apos;font-medium" text-gray-900 dark: text-white mb-3&apos;>Advanced Filters&apos,</h4>&apos,&apos,&apos,&apos,"
-              <div className="&apos,grid" grid-cols-1 m,d: grid-cols-3 gap-4&apos,>"&apos,&apos,"{columns.filter(col => col.filterable !== false).map(column => (&apos}&apos;<div key="{String(column.key)}" className="&apos;space-y-2&apos;">"&apos;&apos,&apos;&apos;"
+              <div className="&apos,grid" grid-cols-1 m,d: grid-cols-3 gap-4&apos,>"&apos,&apos,"{columns.filter(col => col.filterable !== false).map(column => (&apos}&apos;<div key="{String(column.key)}" className="&apos;space-y-2&apos">"&apos;&apos,&apos;&apos;"
                     <label className="&apos;block" text-sm font-medium text-gray-700 dark: text-gray-300&apos,>
                       {column.header}&apos
                     <select onChange = {}>
@@ -616,7 +617,7 @@ height: "auto"}} exit = {}"
                   <span: className = "font-medium text-gray-700 dark: text-gray-300: text-sm">"," {column.header}
 
 &apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
-      <div className="&apos;overflow-hidden&apos;">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
+      <div className="&apos;overflow-hidden&apos">"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
         <div className="&apos;bg-gray-100" dark:bg-gray-700 border-b border-gray-200 dar,k: border-gray-600&apos,>"&apos,&apos,&apos;&apos,",
           <div className="&apos;flex" items-center px-4 py-3&apos;>"&apos,&apos,"{enableSelection && (&apos}&apos;<div className="&apos;w-8" mr-2&apos;>"&apos;&apos,&apos;&apos;"
                 <input type="&apos;checkbox&apos;" checked="{selectedItems.size" === paginatedData.length && paginatedData.length > 0} onChange="{(e)" => handleSelectAll(e.target.checked)} className="&apos;w-4" h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500&apos,/>&apos,
@@ -656,7 +657,7 @@ height: "auto"}} exit = {}"
             &apos;&apos,&apos {enableActions && (&apos}&apos;<div className="&apos;w-20" px-2 py-1&apos;>"&apos;&apos,&apos;&apos;"
                 <span className="&apos;font-medium" text-gray-700 dark: text-gray-300 text-sm&apos,>Actions&apos,</span>",
 &apos,&apos,"{/* comment */}&apos;&apos,&apos;&apos,"
-        <div {...containerProps} className="&apos;relative&apos;">&apos,
+        <div {...containerProps} className="&apos;relative&apos">&apos,
           <div {...listProps}>"            {virtualItems.map((item, index) => (}<motion.div key = "{String(item.id" || index)} initial = {}
 
   y: 20}} animate = {}
@@ -719,8 +720,9 @@ y: 0 "","
                       <Edit className="w-4 h-4"   />"",",
                     <button className = "p-1 text-gray-400 hover:text-red-500 transition-colors">"","
                       <Trash2 className="w-4 h-4"   />,
-                  </div>)}
-
+                      </div>
+  );
+}
               </motion.div>) ) }"
 ""{/* comment */}""{enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dark: border-gray-700 bg-gray-50 dark:bg-gray-700">"",",
           <div className = "flex items-center justify-between">"","
@@ -844,10 +846,10 @@ y: 0 "","
     const {trackEvent} = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true})"
 ";"
 ;"
-
-const page = i + 1;`
-                return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page'
-                        ? 'bg-blue-500 text-white''`
+';
+const page = i + 1;`';';
+                return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page'';';
+                        ? 'bg-blue-500 text-white''`';';
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
                     {page}
                   </button>) }) }
@@ -857,95 +859,55 @@ const page = i + 1;`
               </button>
             </div>
           </div>
-        </div>)}
-    </div>)};
+            </div>
+  );
+}';
+    </div>)};';';
 '"`
 
 </button>
-</button>
-</button>
-</button>
 </div>
 </button>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </button>
-</button>
-</div>
 </div>
 </motion>
 </div>
-</div>
-</div>
 </button>
 </div>
-</div>
-</div>
 </button>
-</button>
-</div>
-</div>
 </div>
 </motion>
 </div>
-</div>
-</div>
 </button>
-</button>
-</div>
 </div>
 </motion>
 </div>
-</div>
-</div>
 </button>
-</div>
-</div>
 </div>
 </span>
 </button>
 </div>
-</div>
-</div>
-</div>
 </span>
 </button>
-</div>
-</div>
-</div>
 </div>
 </div>
 </label>
 </div>
-</div>
 </motion>
 </div>
 </button>
-</div>
-</div>
-</div>
 </div>
 </span>
 </label>
 </div>
-</div>
 </motion>
 </div>
 </button>
 </div>
-</div>
-</div>
-</div>
 </span>
 </div>
-</div>
-</div>
 </motion>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

@@ -810,4 +810,4 @@ reviews: number;export const revolutionary2026MicroSaasServices: Revolutionary20
     customers: 1500,
     rating: 4.5,
     reviews: 750
-];}}
+]}}

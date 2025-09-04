@@ -4,24 +4,23 @@ import path from 'path';
 const baseUrl = 'https://ziontechgroup.com';
 ;
 const pages = [;
-  '',;
-  '/about',;
-  '/services',;
-  '/services/ai-development',;
-  '/services/cloud-architecture',;
-  '/services/cybersecurity',;
-  '/services/data-analytics',;
-  '/services/devops',;
-  '/services/mobile-development',;
-  '/blockchain-solutions',;
-  '/iot-platforms',;
-  '/solutions/digital-transformation',;
-  '/solutions/enterprise-solutions',;
-  '/contact',;
-  '/privacy',;
-  '/terms',;
-  '/cookies';
-];
+  '',
+  '/about',
+  '/services',
+  '/services/ai-development',
+  '/services/cloud-architecture',
+  '/services/cybersecurity',
+  '/services/data-analytics',
+  '/services/devops',
+  '/services/mobile-development',
+  '/blockchain-solutions',
+  '/iot-platforms',
+  '/solutions/digital-transformation',
+  '/solutions/enterprise-solutions',
+  '/contact',
+  '/privacy',
+  '/terms',
+  '/cookies'];
 ;
 const generateSitemap = () => {;
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
@@ -36,17 +35,17 @@ ${pages.map(page => {;
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>;
     <changefreq>${changefreq}</changefreq>;
     <priority>${priority}</priority>;
-  </url>`;,
+  </url>`,
 }).join('\n')}
 </urlset>`;
 ;
   const publicDir = path.join(process.cwd(), 'public');
   if (!fs.existsSync(publicDir)) {;
-    fs.mkdirSync(publicDir, { recursive: true });,
+    fs.mkdirSync(publicDir, { recursive: true }),
 }
 ;
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  console.log('✅ Sitemap generated successfully at public/sitemap.xml');,
+  console.log('✅ Sitemap generated successfully at public/sitemap.xml'),
 };
 ;
 generateSitemap();

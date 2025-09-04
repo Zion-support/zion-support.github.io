@@ -548,14 +548,11 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
 ];
 // Helper functions for service management
 export const getSpecializedServiceById = (id: string) => {;
-  return specializedInnovativeServices2027.find(service => service.id === id);
-};
+  return specializedInnovativeServices2027.find(service => service.id === id)};
 export const getSpecializedServicesByCategory = (category: string) => {;
-  return specializedInnovativeServices2027.filter(service => service.category === category);
-};
+  return specializedInnovativeServices2027.filter(service => service.category === category)};
 export const getSpecializedPopularServices = () => {;
-  return specializedInnovativeServices2027.filter(service => service.popular);
-};
+  return specializedInnovativeServices2027.filter(service => service.popular)};
 export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return specializedInnovativeServices2027.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -566,6 +563,5 @@ export const searchSpecializedServices = (query: string) => {;
     service.name.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
     service.category.toLowerCase().includes(lowercaseQuery);
-  );
-};
-export default specializedInnovativeServices2027;}}
+  )};
+export default specializedInnovativeServices2027}}

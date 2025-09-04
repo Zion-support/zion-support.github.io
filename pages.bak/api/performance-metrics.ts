@@ -8,13 +8,11 @@ interface PerformanceMetrics {
   ttfb?: number;
   timestamp: string;
   url: string;
-  userAgent: string;
-}
+  userAgent: string}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
+    return res.status(405).json({ message: 'Method not allowed' })}
 
   try {
     const metrics: PerformanceMetrics = req.body;
@@ -36,9 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // 2. Store in database for performance monitoring
     // 3. Set up alerts for poor performance metrics
 
-    res.status(200).json({ message: 'Performance metrics recorded successfully' });
-  } catch (error) {
+    res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) {
     console.error('Error processing performance metrics:', error);
-    res.status(500).json({ message: 'Internal server error' });
-  }
+    res.status(500).json({ message: 'Internal server error' })}
 }

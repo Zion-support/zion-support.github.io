@@ -9,12 +9,10 @@ class AutomationScriptFixer {
     this.projectRoot = process.cwd();
     this.scriptsDir = path.join(this.projectRoot, 'scripts');
     this.fixedCount = 0;
-    this.errors = [];
-  }
+    this.errors = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixMergeConflicts(filePath) {
     try {
@@ -40,13 +38,10 @@ class AutomationScriptFixer {
 
         fs.writeFileSync(filePath, fixedContent);
         this.fixedCount++;
-        return true;
-      }
-      return false;
-    } catch (error) {
+        return true}
+      return false} catch (error) {
       this.errors.push({ file: filePath, error: error.message });
-      return false;
-    }
+      return false}
   }
 
   fixSyntaxErrors(filePath) {
@@ -59,19 +54,15 @@ class AutomationScriptFixer {
         fixedContent = content.replace(
           "console.log(`Checking: ${url}');",
           'console.log(`Checking: ${url}`);'
-        );
-      }
+        )}
 
       if (fixedContent !== content) {
         fs.writeFileSync(filePath, fixedContent);
         this.fixedCount++;
-        return true;
-      }
-      return false;
-    } catch (error) {
+        return true}
+      return false} catch (error) {
       this.errors.push({ file: filePath, error: error.message });
-      return false;
-    }
+      return false}
   }
 
   getAllScriptFiles(dir) {
@@ -83,18 +74,15 @@ class AutomationScriptFixer {
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-        scriptFiles = scriptFiles.concat(this.getAllScriptFiles(fullPath));
-      } else if (
+        scriptFiles = scriptFiles.concat(this.getAllScriptFiles(fullPath))} else if (
         item.endsWith('.js') ||
         item.endsWith('.cjs') ||
         item.endsWith('.mjs')
       ) {
-        scriptFiles.push(fullPath);
-      }
+        scriptFiles.push(fullPath)}
     }
 
-    return scriptFiles;
-  }
+    return scriptFiles}
 
   async runScript(scriptPath) {
     try {
@@ -105,11 +93,9 @@ class AutomationScriptFixer {
         timeout: 60000, // 1 minute timeout
       });
       this.log(`✅ Successfully ran: ${scriptPath}`);
-      return { success: true, output: result };
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log(`❌ Failed to run: ${scriptPath} - ${error.message}`);
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async run() {
@@ -122,8 +108,7 @@ class AutomationScriptFixer {
 
       for (const scriptFile of scriptFiles) {
         this.fixMergeConflicts(scriptFile);
-        this.fixSyntaxErrors(scriptFile);
-      }
+        this.fixSyntaxErrors(scriptFile)}
 
       this.log(`✅ Fixed ${this.fixedCount} script files`);
 
@@ -145,8 +130,7 @@ class AutomationScriptFixer {
         const scriptPath = path.join(this.projectRoot, script);
         if (fs.existsSync(scriptPath)) {
           const result = await this.runScript(scriptPath);
-          results.push({ script, ...result });
-        }
+          results.push({ script, ...result })}
       }
 
       // Create a comprehensive automation report
@@ -175,13 +159,11 @@ class AutomationScriptFixer {
         `📊 Summary: ${report.summary.successfulRuns}/${report.summary.runScripts} scripts ran successfully`
       );
 
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(
         `💥 Automation Script Fixer and Runner Failed: ${error.message}`
       );
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -191,12 +173,10 @@ fixer
   .run()
   .then(report => {
     console.log('✅ Automation Script Fixer and Runner completed successfully');
-    process.exit(0);
-  })
+    process.exit(0)})
   .catch(error => {
     console.error(
       '❌ Automation Script Fixer and Runner failed:',
       error.message
     );
-    process.exit(1);
-  });
+    process.exit(1)});

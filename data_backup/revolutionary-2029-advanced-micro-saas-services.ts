@@ -30,8 +30,7 @@ export interface RevolutionaryService2029 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -378,5 +377,4 @@ export const revolutionary2029AdvancedMicroSaasServices: Revolutionary2029Advanc
     rating: 4.8,
 reviews: 280
 
-];
-}}
+]}}

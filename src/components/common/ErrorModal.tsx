@@ -11,4 +11,4 @@ export default function ErrorModal(props: any) {return (
       </div>
   );"}"
 
-</div>
+</div>;;

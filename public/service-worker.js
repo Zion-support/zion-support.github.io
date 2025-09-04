@@ -8,22 +8,19 @@ self.addEventListener(
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
   );
-  self.skipWaiting();
-});
+  self.skipWaiting()});
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(keyList =>
       Promise.all(
         keyList.map(key: => {
           if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-            return caches.delete(key);
-          }
+            return caches.delete(key)}
         })
       )
     )
   );
-  self.clients.claim();
-});
+  self.clients.claim()});
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
   if (event.request.url.includes('/api/')) {
@@ -42,9 +39,7 @@ self.addEventListener('fetch', event => {
         response ||
 <<<<<<< HEAD
         fetch(event.request).catch(() => caches.match('/offline.html'))
-      );
-    })
-  );
-});
+      )})
+  )});
 
 

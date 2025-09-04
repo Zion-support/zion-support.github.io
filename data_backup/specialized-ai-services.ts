@@ -753,4 +753,4 @@ reviews: number;export const specializedAIServices: SpecializedAIService[] = [
     customers: 267,
     rating: 4.6,
     reviews: 134
-];}}
+]}}

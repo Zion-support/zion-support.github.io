@@ -512,4 +512,4 @@ marketDisruption: string;export const enterpriseITSolutions2031: EnterpriseITSol
   'Predictive Maintenance',
   'Resource Management'],
     marketDisruption: Revolutionizes infrastructure management by enabling truly autonomous systems, eliminating manual operations and optimizing performance automatically.'
-];}}
+]}}

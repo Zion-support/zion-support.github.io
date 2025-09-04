@@ -9,19 +9,16 @@ class ConsoleLogRemover {
     this.projectRoot = process.cwd();
     this.srcDir = path.join(this.projectRoot, 'src');
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   async removeConsoleLogs() {
     this.log('🧹 Starting console.log removal from production code');
@@ -54,12 +51,10 @@ class ConsoleLogRemover {
             // If it's already wrapped in a development check, keep it
             if (beforeMatch.includes('NODE_ENV === \'development\'') || 
                 beforeMatch.includes('process.env.NODE_ENV')) {
-              return match;
-            }
+              return match}
             
             results.removed++;
-            return '';
-          }
+            return ''}
         );
 
         // Also remove console.warn, console.error, console.info in production
@@ -69,23 +64,18 @@ class ConsoleLogRemover {
             const beforeMatch = string.substring(0, offset);
             if (beforeMatch.includes('NODE_ENV === \'development\'') || 
                 beforeMatch.includes('process.env.NODE_ENV')) {
-              return match;
-            }
+              return match}
             results.removed++;
-            return '';
-          }
+            return ''}
         );
 
         if (newContent !== originalContent) {
           fs.writeFileSync(filePath, newContent, 'utf8');
-          this.log(`✅ Cleaned console statements from: ${file}`);
-        }
+          this.log(`✅ Cleaned console statements from: ${file}`)}
 
-        results.processed++;
-      } catch (error) {
+        results.processed++} catch (error) {
         results.errors.push({ file, error: error.message });
-        this.log(`❌ Error processing ${file}: ${error.message}`);
-      }
+        this.log(`❌ Error processing ${file}: ${error.message}`)}
     }
 
     // Generate report
@@ -105,8 +95,7 @@ class ConsoleLogRemover {
     this.log(`📊 Report generated: ${reportPath}`);
     this.log(`✅ Console log removal completed: ${results.removed} statements removed from ${results.processed} files`);
     
-    return report;
-  }
+    return report}
 }
 
 // Run the script
@@ -115,12 +104,9 @@ if (require.main === module) {
   remover.removeConsoleLogs()
     .then(() => {
       console.log('🎉 Console log removal completed successfully');
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch((error) => {
       console.error('❌ Console log removal failed:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = ConsoleLogRemover;

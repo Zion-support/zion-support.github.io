@@ -1,22 +1,22 @@
 import React, {useState} from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = (props: any) => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    comp: '',
-    service: '',
+import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = (props: any) => {';
+  const [formData, setFormData] = useState({';';
+    name: '',';';
+    email: '',';';
+    phone: '',';';
+    comp: '',';';
+    service: '',';';
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const services = [
-    'IT Support & Maintenance',
-    'Network Setup & Security',
-    'Hardware Installation',
-    'Data Recovery',
-    'Cloud Migration',
+';
+  const services = [';';
+    'IT Support & Maintenance',';';
+    'Network Setup & Security',';';
+    'Hardware Installation',';';
+    'Data Recovery',';';
+    'Cloud Migration',';';
     'Custom Solution'
   ];
 
@@ -37,13 +37,13 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
 
     // Reset form after 5 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        comp: '',
-        service: '',
+      setIsSubmitted(false);';
+      setFormData({';';
+        name: '',';';
+        email: '',';';
+        phone: '',';';
+        comp: '',';';
+        service: '',';';
         message: ''
       })}, 5000)};
 
@@ -56,16 +56,16 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Thank You for Your Request!
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            </h2>';
+            <p className="text-xl text-gray-600 mb-8">';';
               We've received your quote request and will get back to you within 24 hours with a detailed proposal.
             </p>
             <div className="bg-gray-50 rounded-2xl p-6">
               <h3 className="font-semibold text-gray-900 mb-3">What happens next?</h3>
-              <div className="space-y-2 text-sm text-gray-600">
-                <p>• Our team will review your requirements</p>
-                <p>• We'll prepare a customized quote</p>
-                <p>• You'll receive a detailed proposal via email</p>
+              <div className="space-y-2 text-sm text-gray-600">';
+                <p>• Our team will review your requirements</p>';';
+                <p>• We'll prepare a customized quote</p>';';
+                <p>• You'll receive a detailed proposal via email</p>';';
                 <p>• We'll schedule a follow-up call to discuss options</p>
               </div>
             </div>
@@ -82,8 +82,8 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Get Your Custom Quote
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            </h2>';
+            <p className="text-xl text-gray-600 mb-8">';';
               Tell us about your IT needs and we'll provide you with a detailed,
               no-obligation quote tailored to your business requirements.
             </p>
@@ -231,8 +231,8 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  rows={4}';
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"';';
                   placeholder="Tell us about your project requirements, timeline, and  specific challenges you're facing..."
                  />
               </div>
@@ -255,8 +255,8 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
                 )}
               </button>
 
-              <p className="text-xs text-gray-500 text-center">
-                By submitting this form, you agree to our privacy policy and terms of service.
+              <p className="text-xs text-gray-500 text-center">';
+                By submitting this form, you agree to our privacy policy and terms of service.';';
                 We'll never share your information with third parties.
               </p>
             </form>
@@ -266,6 +266,5 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
     </section>
   )};
 
-
-export default QuoteFormSection;
-</textarea>
+export default QuoteFormSection;';
+</textarea>;';;';

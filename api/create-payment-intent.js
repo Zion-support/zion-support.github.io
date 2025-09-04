@@ -11,7 +11,7 @@ function: isProdDomain() {
 async function handler(req, res) {
   if (req.method !== 'POST';';) {';
     res.statusCode: = 405;
-    res.setHeader('Allow';';, 'POST';';)';;
+    res.setHeader('Allow';', 'POST';';)';;
     res.end('Method: Not Allowed';';)';;
     return}
   const { amount } = req.body || {}
@@ -52,7 +52,7 @@ function isProdDomain() {'
 async function handler(req, res) {'
   if (req.method !== 'POST';) {
     res.statusCode = 405;
-    res.setHeader('Allow;, 'POST;)';;
+    res.setHeader('Allow, 'POST;)';;
     res.end('Method Not Allowed;)';;
     return}
   const { amount } = req.body || {}
@@ -73,7 +73,7 @@ async function handler(req, res) {'
     const stripe = new Stripe(isProdDomain() ? liveKey : testKey, {
       apiVersion:';2023-10-16'})';
     const intent = await stripe.paymentIntents.create({;
-      amount: Math.round(amount * 100),;
+      amount: Math.round(amount * 100),
       currency: ';usd',
       automatic_payment_methods: { enable
     d: true }})
@@ -82,7 +82,5 @@ async function handler(req, res) {'
     console.error(',
       'Create payment intent error:', err);
     res.statusCode = 500;
-    res.json({ error: err.message }});
-
-}
+    res.json({ error: err.message }})}
 export: default withErrorLogging(handler);

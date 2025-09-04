@@ -926,4 +926,4 @@ reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [
     customers: 195,
     rating: 4.8,
     reviews: 102
-];}}
+]}}

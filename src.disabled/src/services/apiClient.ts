@@ -1,6 +1,5 @@
 
-const apiClient = axios.create({};
-}) ;
+const apiClient = axios.create({}}) ;
 
 apiClient.interceptors.response.use((response) => response,  async(error) => {;
 

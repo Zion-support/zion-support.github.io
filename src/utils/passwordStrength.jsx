@@ -2,30 +2,30 @@ import React from 'react';
 // Password strength utility functions
 
 /**
- * Password strength levels
- */
-export const PASSWORD_STRENGTH = {VERY_WEAK: 'very-weak',
-  WEAK: 'weak',
-  MEDIUM: 'medium',
-  STRONG: 'strong',
+ * Password strength levels';
+ */';';
+export const PASSWORD_STRENGTH = {VERY_WEAK: 'very-weak',';';
+  WEAK: 'weak',';';
+  MEDIUM: 'medium',';';
+  STRONG: 'strong',';';
   VERY_STRONG: 'very-strong'};
 
 /**
- * Password strength colors
- */
-export const PASSWORD_COLORS = {[PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500',
-  [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500',
-  [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500',
-  [PASSWORD_STRENGTH.STRONG]: 'bg-blue-500',
+ * Password strength colors';
+ */';';
+export const PASSWORD_COLORS = {[PASSWORD_STRENGTH.VERY_WEAK]: 'bg-red-500',';';
+  [PASSWORD_STRENGTH.WEAK]: 'bg-orange-500',';';
+  [PASSWORD_STRENGTH.MEDIUM]: 'bg-yellow-500',';';
+  [PASSWORD_STRENGTH.STRONG]: 'bg-blue-500',';';
   [PASSWORD_STRENGTH.VERY_STRONG]: 'bg-green-500'};
 
 /**
- * Password strength labels
- */
-export const PASSWORD_LABELS = {[PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak',
-  [PASSWORD_STRENGTH.WEAK]: 'Weak',
-  [PASSWORD_STRENGTH.MEDIUM]: 'Medium',
-  [PASSWORD_STRENGTH.STRONG]: 'Strong',
+ * Password strength labels';
+ */';';
+export const PASSWORD_LABELS = {[PASSWORD_STRENGTH.VERY_WEAK]: 'Very Weak',';';
+  [PASSWORD_STRENGTH.WEAK]: 'Weak',';';
+  [PASSWORD_STRENGTH.MEDIUM]: 'Medium',';';
+  [PASSWORD_STRENGTH.STRONG]: 'Strong',';';
   [PASSWORD_STRENGTH.VERY_STRONG]: 'Very Strong'};
 
 /**
@@ -53,8 +53,8 @@ export const hasNumbers = (props: any) => {return /\d/.test(password);};
  * Check if password contains special characters
  * @param {string} password - Password to check
  * @returns {boolean} True if contains special characters
- */
-export const hasSpecialChars = (props: any) => {
+ */';
+export const hasSpecialChars = (props: any) => {';';
   return /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/.test(password);
 };
 
@@ -88,12 +88,10 @@ export const calculatePasswordScore = (props: any) => {if (!password) return 0;
   if (hasNumbers(password)) score += 6.25;
   if (hasSpecialChars(password)) score += 6.25;
 
-
   // Bonus for complexity
   const uniqueChars = new Set(password).size;
   if (uniqueChars > 8) score += 10;
   if (uniqueChars > 12) score += 10;
-
 
   return Math.min(100, Math.round(score));};
 
@@ -117,22 +115,22 @@ export const getPasswordStrength = (props: any) => {const score = calculatePassw
  */
 export const getPasswordFeedback = (props: any) => {
   const feedback = [];
-
-  if (!password) {
+';
+  if (!password) {';';
     feedback.push('Enter a password');
     return feedback;
-  }
-
-  if (password.length < 8) {feedback.push('Password should be at least 8 characters long');}
-
-  if (!hasLowercase(password)) {feedback.push('Include lowercase letters');}
-
-  if (!hasUppercase(password)) {feedback.push('Include uppercase letters');}
-
-  if (!hasNumbers(password)) {feedback.push('Include numbers');}
-
-  if (!hasSpecialChars(password)) {feedback.push('Include special characters');}
-
+  }';
+';';
+  if (password.length < 8) {feedback.push('Password should be at least 8 characters long');}';
+';';
+  if (!hasLowercase(password)) {feedback.push('Include lowercase letters');}';
+';';
+  if (!hasUppercase(password)) {feedback.push('Include uppercase letters');}';
+';';
+  if (!hasNumbers(password)) {feedback.push('Include numbers');}';
+';';
+  if (!hasSpecialChars(password)) {feedback.push('Include special characters');}';
+';';
   if (feedback.length === 0) {feedback.push('Password is strong!');}
 
   return feedback;
@@ -159,7 +157,6 @@ export const validatePassword = (props: any) => {
   };
 };
 
-
 export default {PASSWORD_STRENGTH,
   PASSWORD_COLORS,
   PASSWORD_LABELS,
@@ -172,4 +169,5 @@ export default {PASSWORD_STRENGTH,
   getPasswordStrength,
   getPasswordFeedback,
   validatePassword};
-
+';
+;';;';

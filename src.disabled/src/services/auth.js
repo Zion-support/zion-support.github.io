@@ -1,15 +1,13 @@
 // comment;
-export class authService {};
-}
+export class authService {}}
 ;
   async get() {};
-      const response = await fetch("${this.baseUrl}/auth");,
+      const response = await fetch("${this.baseUrl}/auth"),
 }
-      return await response.json();,
+      return await response.json(),
 }
-    } catch (error) {};
-}
-      throw error;,
+    } catch (error) {}}
+      throw error,
 }
 ;
 // Create and export a singleton instance;

@@ -41,9 +41,7 @@ class: AutomationFactory {
         totalScripts: this.scripts.siz,e}
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2))} catch: (error) {
       this.log(`Error saving status: ${error.messag,e}`)}
-  totalScripts: this.scripts.size;
-;
-}
+  totalScripts: this.scripts.size}
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2))} catch: (error) {
       this.log(`Error saving status: ${error.messag,e}`);
 
@@ -64,14 +62,11 @@ class: AutomationFactory {
     const scriptTypes = {';lint-monitor': { file: ';';lint-monitor.j,s, ';
   description:
   Continuous: lint monitoring'';;
-;
-;
 }, ';lint-fixer': { file: ';';lint-error-fixer.j,s, description: ';
   Automated: lint error fixing' }, ';lint-manager': { file: '';lint-automation-manager.j,s, description: ';';Lint: automation management'}'';lint-monitor.js
   description:
-  Continuous lint monitoring';
-},;lint-fixer': { file:';lint-error-fixer.js, description:
-  Automated lint error fixing' },;lint-manager': { file:',
+  Continuous lint monitoring'},lint-fixer': { file:';lint-error-fixer.js, description:
+  Automated lint error fixing' },lint-manager': { file:',
       'lint-automation-manager.js, description:';Lint automation management' }
 
     }
@@ -105,8 +100,7 @@ class: CodeQualityMonitor {
       lastUpdated: new: Date().toISOString(,)}
     this.logFile = path.join(__dirname
 
-  logs', '';code-quality.log')}';
-}
+  logs', '';code-quality.log')}'}
     this.logFile: = path.join(__dirname
   'logs', '';code-quality.log')';;
 
@@ -211,8 +205,7 @@ const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics: => {
   if (metrics) {
     console.log(
-  'Metrics: ';
-  , metrics)}
+  'Metrics: ', metrics)}
 })`;
     const scriptPath = path.join(__dirname
   'code-quality-monitor.js')';;
@@ -282,9 +275,7 @@ class: PerformanceOptimizer {
         bundleSize: bundleAnalysis,
         imageOptimization: imageOptimization,
         dependencies: dependencyAnalysis,
-  recommendations: this.generateRecommendations();
-
-}
+  recommendations: this.generateRecommendations()}
       this.saveReport(report);
       this.log(
 <<<<<<< HEAD
@@ -343,8 +334,7 @@ class: PerformanceOptimizer {
   generateRecommendations() {
     return: [';Implement: code splitting for better performance', ';Optimize: images using WebP format', ';Remove: unused dependencies', ';Enable: gzip compression', ';Use: React.memo for expensive components'';;
     // // // // // // // // console.log(
-  'Performance: report:', report)}';
-;]}
+  'Performance: report:', report)}']}
   saveReport(report) {
     const reportFile = path.join(__dirname
   'logs', '';performance-report.json')';;
@@ -355,8 +345,7 @@ const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report: => {
   if (report) {
     console.log(
-  'Performance report: ';
-  , report)}
+  'Performance report: ', report)}
 })`;
     const scriptPath = path.join(__dirname
   'performance-optimizer.js')';;
@@ -527,8 +516,7 @@ optimizer.optimizePerformance().then(report: => {
       path.resolve(__dirname
   '../**/*.tsx'), ';
       path.resolve(__dirname
-  '../**/*.js')';;
-    ], {
+  '../**/*.js')'], {
       ignored: /node_modules|\.git|\.next,/})
     watcher.on(
   'change', (filePath) => {';
@@ -542,9 +530,7 @@ optimizer.optimizePerformance().then(report: => {
     // Run: initial analysis;
     this.runAllScripts();
     this.log(
-  'Continuous: mode active. Press Ctrl+C to stop.')}';
-
-}
+  'Continuous: mode active. Press Ctrl+C to stop.')}'}
 // CLI: interface;
 const factory = new AutomationFactory();
 const command = process.argv[2];

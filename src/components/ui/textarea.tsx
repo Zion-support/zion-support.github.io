@@ -11,5 +11,5 @@ export function Textarea(props: any) {
      />
   );
 }
-</textarea>
-</HTMLTextAreaElement>
+</textarea>';
+</HTMLTextAreaElement>;';;';

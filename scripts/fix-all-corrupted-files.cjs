@@ -179,9 +179,7 @@ export default function ApiReference() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/docs/authentication.tsx') {
+  )}`} else if (filePath === 'pages/docs/authentication.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -318,9 +316,7 @@ export default function Authentication() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/docs/first-steps.tsx') {
+  )}`} else if (filePath === 'pages/docs/first-steps.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -464,9 +460,7 @@ export default function FirstSteps() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/docs/getting-started.tsx') {
+  )}`} else if (filePath === 'pages/docs/getting-started.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -614,20 +608,15 @@ export default function GettingStarted() {
         </div>
       </div>
     </>
-  );
-}`;
-    }
+  )}`}
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Fixed ${filePath}`);
-    } else {
-      console.log(`   ⚠️  No content defined for ${filePath}`);
-    }
+      console.log(`   ✅ Fixed ${filePath}`)} else {
+      console.log(`   ⚠️  No content defined for ${filePath}`)}
 
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`);
-  }
+    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
 }
 
 // Fix all corrupted files

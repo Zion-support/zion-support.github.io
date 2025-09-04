@@ -1,5 +1,5 @@
-import {useState, useEffect, useCallback} from 'react';'
-import {motion, AnimatePresence} from 'framer-motion';'
+import {useState, useEffect, useCallback} from 'react';'';';
+import {motion, AnimatePresence} from 'framer-motion';'';';
 import {Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building} from 'lucide-react';
 ;
 export const AdvancedForm = (props: any) => {
@@ -412,8 +412,8 @@ setProgress((filledFields / totalFields) * 100)}, [formData, fields.length])
 }
     // comment
 const validateField = useCallback((name, value) => {}
-
-isValid: !field.required,
+';
+isValid: !field.required,';';
                 message: '',
                 isTouched: false
             }});
@@ -663,8 +663,9 @@ const renderField = useCallback((field) => {}""
           {/* comment */}"""""
           {fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">""""              {fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"/" >) : (<AlertCircle className="w-5 h-5 text-red-500"/" >)}
 
-            </div>)}
-
+                </div>
+  );
+}
         </div>
         {/* comment */}
 
@@ -747,8 +748,8 @@ const renderField = useCallback((field) => {}""
             </motion.div>) }
 
         </AnimatePresence>"
-      </form>""""
-    </motion.div>)}"""""""
+      </form>""""';
+    </motion.div>)}"""""""';';
 """"""`'"
 "
 
@@ -759,10 +760,7 @@ export default Component
 </Send>
 </Loader2>
 </motion>
-</motion>
-</motion>
 </CheckCircle>
-</motion>
 </motion>
 </AlertCircle>
 </CheckCircle>
@@ -782,8 +780,5 @@ export default Component
 </Mail>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</textarea>
-</motion>
+</textarea>';
+</motion>;';;';

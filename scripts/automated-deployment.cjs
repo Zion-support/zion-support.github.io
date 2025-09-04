@@ -51,12 +51,11 @@ class AutomatedDeployment {
     
     // Check if there are uncommitted changes
     try {
-      const status = execSync('git status --porcelain', { encoding: 'utf8' ;};);
+      const status = execSync('git status --porcelain', { encoding: 'utf8' };);
       if () {
         console.log('⚠️ Uncommitted changes detected. Committing them...')) {
     ) {
-        console.log('⚠️ Uncommitted changes detected. Committing them...');
-  }
+        console.log('⚠️ Uncommitted changes detected. Committing them...')}
         execSync('git add .');
         execSync('git commit -m "Automated deployment commit"')}
       this.deploymentSteps.push({ step: 'uncommitted-changes', status: 'success' })} catch (error) {
@@ -98,8 +97,7 @@ class AutomatedDeployment {
     ) {
       try {
         // This would be replaced with actual staging deployment logic
-        console.log('📤 Staging deployment would happen here');
-  }
+        console.log('📤 Staging deployment would happen here')}
         this.deploymentSteps.push({ step: 'staging-deploy', status: 'success' })} catch (error) {
         console.log('⚠️ Staging deployment failed, but continuing...');
         this.deploymentSteps.push({ step: 'staging-deploy', status: 'warning', message: error.message })}
@@ -151,7 +149,7 @@ class AutomatedDeployment {
         failedSteps: this.deploymentSteps.filter(s => s.status === 'failed').length,
         skippedSteps: this.deploymentSteps.filter(s => s.status === 'skipped').length
       }
-   ; ;};
+   };
     
     // Ensure reports directory exists
     const reportsDir = 'automation-report;s;';
@@ -168,8 +166,7 @@ class AutomatedDeployment {
     fs.writeFileSync(
       path.join(reportsDir, 'automated-deployment-report.json'),
       JSON.stringify(report, null, 2)
-    );
-  }
+    )}
     
     console.log('\n📊 Deployment Report:');
     console.log(`   Total steps: ${report.summary.totalSteps}`);
@@ -181,12 +178,11 @@ class AutomatedDeployment {
     if ( {
       console.log('\n❌ Errors encountered:')) {
      {
-      console.log('\n❌ Errors encountered:');
-  }
+      console.log('\n❌ Errors encountered:')}
       this.errors.forEach((error, index) => {
-        console.log(`   ${index + 1}. ${error}`);})}
+        console.log(`   ${index + 1}. ${error}`)})}
     
-    console.log('\n🎉 Automated deployment completed!');}
+    console.log('\n🎉 Automated deployment completed!')}
 }
 
 // Run the deployment

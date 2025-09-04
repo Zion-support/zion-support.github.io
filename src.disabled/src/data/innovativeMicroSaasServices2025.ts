@@ -5,8 +5,7 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-  address: string;
-}
+  address: string}
 
 export interface MicroSaasService {
   id: number;
@@ -36,8 +35,7 @@ export interface MicroSaasService {
   technologies: string[];
   website: string;
   demoUrl?: string;
-  documentationUrl?: string;
-}
+  documentationUrl?: string}
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {

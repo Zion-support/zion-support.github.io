@@ -2,8 +2,7 @@ const fs = require('fs');
 const path = require('path');
 function content = fs.readFileSync(filePath, 'utf8');
     const filename = path.basename(filePath);
-    .join('');
-}
+    .join('')}
 function filename = path.basename(filePath);
     const validName = convertToValidVariableName(filename);
 
@@ -12,15 +11,13 @@ function filename = path.basename(filePath);
       new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g'),
       `const ${validName}: NextPage`
     ).replace(
-export default ${filename.replace('.tsx', '')};`, 'g'),;
+export default ${filename.replace('.tsx', '')};`, 'g'),
 export default ${validName};`;
     );
 
     fs.writeFileSync(filePath, fixedContent);
-    // // // // // // // console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
-  }
+    // // // // // // // console.log(`Fixed: ${filePath}`)} catch (error) {
+    // // // // // // // console.error(`Error fixing ${filePath}:`, error.message)}
     console.log(`Fixed: ${filePath}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
 }

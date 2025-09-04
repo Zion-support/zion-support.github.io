@@ -8,8 +8,7 @@ describe('EnhancedErrorBoundarydynamic', () => {
     render(<EnhancedErrorBoundarydynamic />);
     expect(
       screen.getByTestId('enhancederrorboundary.dynamic')
-    ).toBeInTheDocument();
-  });
+    ).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<EnhancedErrorBoundarydynamic />);
@@ -24,5 +23,4 @@ describe('EnhancedErrorBoundarydynamic', () => {
   test('applies correct styling', () => {
     render(<EnhancedErrorBoundarydynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

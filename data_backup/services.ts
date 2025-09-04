@@ -11,14 +11,12 @@ export interface Service {
     starter: number;
     professional: number;
     enterprise: number;
-    currency: string;
-  };
+    currency: string};
   benefits: string[];
   useCases: string[];
   technologies: string[];
   link: string;
-  icon: string;
-}
+  icon: string}
 
 export const services: Service[] = [
   // Micro SaaS Services
@@ -6585,9 +6583,7 @@ export const services: Service[] = [
 
 export const getServicesByCategory = (category: Service[
   'category]) => {
-  return services.filter(service => service.category === category);
-};
+  return services.filter(service => service.category === category)};
 
 export const getServiceById = (id: string) => {
-  return services.find(service => service.id === id);
-};
+  return services.find(service => service.id === id)};

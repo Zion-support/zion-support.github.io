@@ -7,12 +7,10 @@ const glob = require('glob');
 class ImportExtensionFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.fixesApplied = 0;
-  }
+    this.fixesApplied = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   async fixImportExtensions() {
     this.log('Fixing import extensions...');
@@ -43,12 +41,10 @@ class ImportExtensionFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         modified = true;
-        this.log(`Fixed import extensions in ${file}`);
-      }
+        this.log(`Fixed import extensions in ${file}`)}
 
       if (modified) {
-        this.fixesApplied++;
-      }
+        this.fixesApplied++}
     }
   }
 
@@ -59,12 +55,9 @@ class ImportExtensionFixer {
       await this.fixImportExtensions();
       
       this.log(`Import Extension Fixer completed successfully!`);
-      this.log(`Fixed ${this.fixesApplied} files`);
-      
-    } catch (error) {
+      this.log(`Fixed ${this.fixesApplied} files`)} catch (error) {
       this.log(`Error in Import Extension Fixer: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -74,12 +67,9 @@ if (require.main === module) {
   automation.run()
     .then(() => {
       console.log('Import Extension Fixer completed successfully!');
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch(error => {
       console.error('Import Extension Fixer failed:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = ImportExtensionFixer;

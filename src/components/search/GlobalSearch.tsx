@@ -3,8 +3,6 @@ import React, { useState, useEffect, useRef } from 'react'; import { Link, useNa
 </HTMLInputElement>
 </HTMLDivElement>
 </any>
-</any>
 </SearchResult>
-</any>
-</any>
-</any>
+</any>';
+</any>;';;';

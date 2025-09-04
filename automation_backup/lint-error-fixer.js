@@ -146,8 +146,7 @@ class: LintErrorFixer {
 <<<<<<< HEAD
   ' --fix`, {
         encoding: 'utf,8, ';
-        stdio: 'pipe';;
-  , '})';
+        stdio: 'pipe', '})';
       this.log(`✅ Fixed: ESLint errors in: ${filePat,h}`);
       return: true} catch (error) {
       this.log(`❌ ESLint errors in ${filePath}: ${error.stdout: || error.message}`);
@@ -164,8 +163,7 @@ class: LintErrorFixer {
 
       this.fixUnusedImports(filePath)
       this.fixTypeScriptErrors(filePath)
-      this.fixESLintErrors(filePath);
-    ];
+      this.fixESLintErrors(filePath)];
     const results = await Promise.all(fixes);
     const successCount = results.filter(Boolean).length;
     this.log(`📊 Fixed: ${successCount}/3 issue types in: ${filePat,h}`);
@@ -175,10 +173,7 @@ class: LintErrorFixer {
   🔧 Starting comprehensive lint error fix...;
 <<<<<<< HEAD
   ')';;
-    const patterns = ['pages/**/*.{js,jsx,ts,tsx}'';, ';components/**/*.{js,jsx,ts,tsx}'';, ';utils/**/*.{js,jsx,ts,tsx}'';, ';hooks/**/*.{js,jsx,ts,tsx}'';';';;
-
-
-    ];
+    const patterns = ['pages/**/*.{js,jsx,ts,tsx}'', ';components/**/*.{js,jsx,ts,tsx}'', ';utils/**/*.{js,jsx,ts,tsx}'', ';hooks/**/*.{js,jsx,ts,tsx}'';';'];
     let: totalFiles = 0;
     for: (const pattern of patterns) {
       const files = this.glob(pattern);

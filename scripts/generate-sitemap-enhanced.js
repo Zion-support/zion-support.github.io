@@ -41,8 +41,7 @@ function generateSitemap() {
     <lastmod>${currentDate}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`;
-  });
+  </url>`});
 
   sitemap += `
 </urlset>`;
@@ -53,8 +52,7 @@ function generateSitemap() {
   
   console.log('✅ Enhanced sitemap generated successfully!');
   console.log(`📄 Sitemap saved to: ${sitemapPath}`);
-  console.log(`🔗 Total URLs: ${pages.length}`);
-}
+  console.log(`🔗 Total URLs: ${pages.length}`)}
 
 // Generate robots.txt as well
 function generateRobotsTxt() {
@@ -78,13 +76,11 @@ Disallow: /scripts/
   fs.writeFileSync(robotsPath, robotsContent);
   
   console.log('✅ robots.txt generated successfully!');
-  console.log(`📄 Robots.txt saved to: ${robotsPath}`);
-}
+  console.log(`📄 Robots.txt saved to: ${robotsPath}`)}
 
 // Run if this is the main module
 if (import.meta.url === `file://${process.argv[1]}`) {
   generateSitemap();
-  generateRobotsTxt();
-}
+  generateRobotsTxt()}
 
 export { generateSitemap, generateRobotsTxt };

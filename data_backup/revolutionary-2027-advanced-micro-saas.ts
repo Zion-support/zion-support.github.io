@@ -485,4 +485,4 @@ reviews: number;export const revolutionary2027AdvancedMicroSaasServices: Revolut
     customers: 850,
     rating: 4.6,
     reviews: 520
-];}}
+]}}

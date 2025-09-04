@@ -6,16 +6,14 @@ import AIChatAssistant from '../components/AIChatAssistant';
 describe('AIChatAssistant Integration Tests', () => {
   beforeEach(() => {
     // Clear any previous state
-    jest.clearAllMocks();
-  });
+    jest.clearAllMocks()});
 
   it('should render the AI assistant interface', () => {
     renderWithProviders(<AIChatAssistant />);
     
     expect(screen.getByText('AI Assistant')).toBeInTheDocument();
     expect(screen.getByPlaceholderText('Type your message...')).toBeInTheDocument();
-    expect(screen.getByRole('button')).toBeInTheDocument();
-  });
+    expect(screen.getByRole('button')).toBeInTheDocument()});
 
   it('should send a message when user types and clicks send', async () => {
     renderWithProviders(<AIChatAssistant />);
@@ -27,9 +25,7 @@ describe('AIChatAssistant Integration Tests', () => {
     fireEvent.click(sendButton);
     
     await waitFor(() => {
-      expect(screen.getByText('Hello AI')).toBeInTheDocument();
-    });
-  });
+      expect(screen.getByText('Hello AI')).toBeInTheDocument()})});
 
   it('should send a message when user presses Enter', async () => {
     renderWithProviders(<AIChatAssistant />);
@@ -40,17 +36,14 @@ describe('AIChatAssistant Integration Tests', () => {
     fireEvent.keyPress(input, { key: 'Enter', code: 'Enter' });
     
     await waitFor(() => {
-      expect(screen.getByText('Hello AI')).toBeInTheDocument();
-    });
-  });
+      expect(screen.getByText('Hello AI')).toBeInTheDocument()})});
 
   it('should not send empty messages', () => {
     renderWithProviders(<AIChatAssistant />);
     
     const sendButton = screen.getByRole('button');
     
-    expect(sendButton).toBeDisabled();
-  });
+    expect(sendButton).toBeDisabled()});
 
   it('should display AI response after sending message', async () => {
     renderWithProviders(<AIChatAssistant />);
@@ -63,7 +56,4 @@ describe('AIChatAssistant Integration Tests', () => {
     
     // Wait for AI response
     await waitFor(() => {
-      expect(screen.getByText(/I understand: "Hello AI"/)).toBeInTheDocument();
-    }, { timeout: 2000 });
-  });
-});
+      expect(screen.getByText(/I understand: "Hello AI"/)).toBeInTheDocument()}, { timeout: 2000 })})});

@@ -376,4 +376,4 @@ reviews: number;export const futuristicAIServices2030: FuturisticAIService2030[]
     customers: 6,
     rating: 5.0,
     reviews: 4
-];}}
+]}}

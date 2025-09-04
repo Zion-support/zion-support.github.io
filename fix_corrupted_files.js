@@ -51,8 +51,7 @@ export default $1;");
       .trim();
     fs.writeFileSync(filePath, content);
     // // // // // // // console.log(`Fixed: ${filePath}`);
-    return true;
-  } catch (error) {
+    return true} catch (error) {
     // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
 

@@ -19,11 +19,11 @@ class CommitAndPush {
       'WARNING': '⚠️';
       'PROGRESS': '🔄'};
     
-    console.log(`${icons[type]} ${message}`);}
+    console.log(`${icons[type]} ${message}`)}
 
   generateCommitMessage() { 
     const timestamp = new Date().toISOString(;);
-    return `Automated improvements and optimizations - ${timestamp;}
+    return `Automated improvements and optimizations - ${timestamp}
 
 - Enhanced automation scripts and testing suite;
 - Improved security configurations and performance optimizations;
@@ -37,11 +37,10 @@ class CommitAndPush {
   checkGitRepository() { if () {
       this.log('Not in a git repository', 'WARNING')) {
     ) {
-      this.log('Not in a git repository', 'WARNING');
-  }
-      return false ;}
+      this.log('Not in a git repository', 'WARNING')}
+      return false }
     this.log('Git repository found', 'SUCCESS');
-    return true;}
+    return true}
 
   createGitCommands() { const commands = [
       '# Git Workflow Command;s;';
@@ -95,7 +94,7 @@ echo "✅ Git operations completed successfully";
     this.log('Created commit-and-push.sh script', 'SUCCESS')}
 
   generateSummary() { const summary={
-      timestamp: new Date().toISOStrin,g(;,;);
+      timestamp: new Date().toISOStrin,g(,);
       gitRepository: this.checkGitRepositor,y(,);
       commitMessage: this.commitMessage
       filesCreated: [

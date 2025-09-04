@@ -4,10 +4,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react'; import 
 </HTMLButtonElement>
 </HTMLDivElement>
 </any>
-</any>
-</any>
-</any>
 </string>
 </AccessibilityAnnouncement>
-</AccessibilityFeatures>
-</HTMLElement>
+</AccessibilityFeatures>';
+</HTMLElement>;';;';

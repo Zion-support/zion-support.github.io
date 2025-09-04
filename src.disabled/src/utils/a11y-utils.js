@@ -14,17 +14,14 @@ export const a11yUtils = {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             lastElement.focus();
-            e.preventDefault();
-          }
+            e.preventDefault()}
         } else {
           if (document.activeElement === lastElement) {
             firstElement.focus();
-            e.preventDefault();
-          }
+            e.preventDefault()}
         }
       }
-    });
-  },
+    })},
   
   // Screen reader announcements
   announce: (message) => {
@@ -36,7 +33,5 @@ export const a11yUtils = {
     document.body.appendChild(announcement);
     
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  }
+      document.body.removeChild(announcement)}, 1000)}
 };

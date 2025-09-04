@@ -18,13 +18,11 @@ declare module 'react' {;
 declare module 'react/jsx-runtime' {;
   export {}}
 declare namespace JSX {;
-  interface Element {;,
+  interface Element {,
 }
   interface IntrinsicElements {;
 
-    [elemName: string]: ;
-
-}}
+    [elemName: string]: }}
 
 declare module 'react-dom' {;
   export function reactDom: ;
@@ -51,7 +49,7 @@ declare module '@tanstack/react-query' {  export function useMutation<T = any>(.
 declare module 'jspdf' {;
   export class jsPDF {;
     constructor(...args: unknown[]);
-    [key: string]: ;,
+    [key: string]: ,
 }
 }
 declare module 'path' {;
@@ -65,7 +63,7 @@ declare module 'jspdf-autotable' {;
 declare module 'zod' {  export type infer<T> = ;
   const z: ;
   export { z };
-  export default z;,
+  export default z,
 }
 export default useEffect;
 export default useRef;

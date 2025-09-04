@@ -7,12 +7,10 @@ class TestFileFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedCount = 0;
-    this.errors = [];
-  }
+    this.errors = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   getAllTestFiles(dir) {
     let testFiles = [];
@@ -23,19 +21,16 @@ class TestFileFixer {
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-        testFiles = testFiles.concat(this.getAllTestFiles(fullPath));
-      } else if (
+        testFiles = testFiles.concat(this.getAllTestFiles(fullPath))} else if (
         item.endsWith('.test.tsx') ||
         item.endsWith('.test.ts') ||
         item.endsWith('.test.jsx') ||
         item.endsWith('.test.js')
       ) {
-        testFiles.push(fullPath);
-      }
+        testFiles.push(fullPath)}
     }
 
-    return testFiles;
-  }
+    return testFiles}
 
   isTestFileCorrupted(content) {
     // Check for common corruption patterns
@@ -46,8 +41,7 @@ class TestFileFixer {
       /render\(<[^>]*>\s*\)\s*'/, // render followed by quote
     ];
 
-    return corruptionPatterns.some(pattern => pattern.test(content));
-  }
+    return corruptionPatterns.some(pattern => pattern.test(content))}
 
   generateValidTestFile(filePath) {
     const fileName = path.basename(filePath);
@@ -65,16 +59,13 @@ import ${componentName} from './${componentName}';
 describe('${componentName}', () => {
   it('renders without crashing', () => {
     render(<${componentName} />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()});
 
   it('displays expected content', () => {
     render(<${componentName} />);
     // Add more specific tests here
-  });
-});
-`;
-  }
+  })});
+`}
 
   fixTestFile(filePath) {
     try {
@@ -85,15 +76,12 @@ describe('${componentName}', () => {
         const validContent = this.generateValidTestFile(filePath);
         fs.writeFileSync(filePath, validContent);
         this.fixedCount++;
-        return true;
-      }
+        return true}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       this.log(`Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   async run() {
@@ -103,24 +91,20 @@ describe('${componentName}', () => {
     this.log(`Found ${testFiles.length} test files`);
 
     for (const testFile of testFiles) {
-      this.fixTestFile(testFile);
-    }
+      this.fixTestFile(testFile)}
 
     this.log(`✅ Fixed ${this.fixedCount} test files`);
 
     if (this.errors.length > 0) {
       this.log(`❌ ${this.errors.length} errors occurred:`);
       this.errors.forEach(error => {
-        this.log(`  - ${error.file}: ${error.error}`);
-      });
-    }
+        this.log(`  - ${error.file}: ${error.error}`)})}
 
     return {
       totalFiles: testFiles.length,
       fixedFiles: this.fixedCount,
       errors: this.errors,
-    };
-  }
+    }}
 }
 
 // Run the fixer
@@ -132,9 +116,7 @@ fixer
     console.log(
       `📊 Summary: ${result.fixedFiles}/${result.totalFiles} files fixed`
     );
-    process.exit(0);
-  })
+    process.exit(0)})
   .catch(error => {
     console.error('❌ Test file fixing failed:', error.message);
-    process.exit(1);
-  });
+    process.exit(1)});

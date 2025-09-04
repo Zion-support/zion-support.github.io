@@ -37,8 +37,7 @@ function log(level, message, data = null) {
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
   
   if (data && process.env.DEBUG) {
-    console.log(JSON.stringify(data, null, 2));
-  }
+    console.log(JSON.stringify(data, null, 2))}
 }
 
 function analyzeFile(filePath) {
@@ -79,12 +78,9 @@ function analyzeFile(filePath) {
         commentRatio: commentLines / codeLines
       },
       issues: [...securityIssues, ...performanceIssues, ...maintainabilityIssues, ...testabilityIssues]
-    };
-    
-  } catch (error) {
+    }} catch (error) {
     log('warn', `Failed to analyze file ${filePath}`, error.message);
-    return null;
-  }
+    return null}
 }
 
 function analyzeComplexity(content) {
@@ -108,8 +104,7 @@ function analyzeComplexity(content) {
   controlStructures.forEach(pattern => {
     const matches = content.match(pattern);
     if (matches) {
-      complexity += matches.length;
-    }
+      complexity += matches.length}
   });
   
   // Count nested structures
@@ -121,12 +116,10 @@ function analyzeComplexity(content) {
   nestedPatterns.forEach(pattern => {
     const matches = content.match(pattern);
     if (matches) {
-      complexity += matches.length * 0.5;
-    }
+      complexity += matches.length * 0.5}
   });
   
-  return Math.round(complexity);
-}
+  return Math.round(complexity)}
 
 function analyzeSecurity(content, filePath) {
   const issues = [];
@@ -180,13 +173,10 @@ function analyzeSecurity(content, filePath) {
           recommendation,
           line: content.substring(0, content.indexOf(match)).split('\n').length,
           code: match.substring(0, 50)
-        });
-      });
-    }
+        })})}
   });
   
-  return issues;
-}
+  return issues}
 
 function analyzePerformance(content, filePath) {
   const issues = [];
@@ -228,13 +218,10 @@ function analyzePerformance(content, filePath) {
           recommendation,
           line: content.substring(0, content.indexOf(match)).split('\n').length,
           code: match.substring(0, 50)
-        });
-      });
-    }
+        })})}
   });
   
-  return issues;
-}
+  return issues}
 
 function analyzeMaintainability(content, filePath) {
   const issues = [];
@@ -282,13 +269,10 @@ function analyzeMaintainability(content, filePath) {
           recommendation,
           line: content.substring(0, content.indexOf(match)).split('\n').length,
           code: match.substring(0, 50)
-        });
-      });
-    }
+        })})}
   });
   
-  return issues;
-}
+  return issues}
 
 function analyzeTestability(content, filePath) {
   const issues = [];
@@ -330,13 +314,10 @@ function analyzeTestability(content, filePath) {
           recommendation,
           line: content.substring(0, content.indexOf(match)).split('\n').length,
           code: match.substring(0, 50)
-        });
-      });
-    }
+        })})}
   });
   
-  return issues;
-}
+  return issues}
 
 function scanDirectory(dir, extensions = ['.js', '.ts', '.jsx', '.tsx']) {
   const files = [];
@@ -350,19 +331,14 @@ function scanDirectory(dir, extensions = ['.js', '.ts', '.jsx', '.tsx']) {
         const stat = fs.statSync(itemPath);
         
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          scan(itemPath);
-        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-          files.push(itemPath);
-        }
-      });
-    } catch (error) {
-      log('warn', `Failed to scan directory ${currentDir}`, error.message);
-    }
+          scan(itemPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+          files.push(itemPath)}
+      })} catch (error) {
+      log('warn', `Failed to scan directory ${currentDir}`, error.message)}
   }
   
   scan(dir);
-  return files;
-}
+  return files}
 
 function generateRecommendations() {
   const recommendations = [];
@@ -373,32 +349,28 @@ function generateRecommendations() {
       priority: 'critical',
       message: `${critical} critical issues found`,
       action: 'Address critical issues immediately'
-    });
-  }
+    })}
   
   if (high > 0) {
     recommendations.push({
       priority: 'high',
       message: `${high} high severity issues found`,
       action: 'Address high severity issues within 24 hours'
-    });
-  }
+    })}
   
   if (medium > 0) {
     recommendations.push({
       priority: 'medium',
       message: `${medium} medium severity issues found`,
       action: 'Address medium severity issues within a week'
-    });
-  }
+    })}
   
   if (low > 0) {
     recommendations.push({
       priority: 'low',
       message: `${low} low severity issues found`,
       action: 'Address low severity issues during regular maintenance'
-    });
-  }
+    })}
   
   recommendations.push({
     priority: 'medium',
@@ -412,8 +384,7 @@ function generateRecommendations() {
     action: 'Implement peer code review process'
   });
   
-  return recommendations;
-}
+  return recommendations}
 
 function calculateQualityScore() {
   let score = 100;
@@ -428,14 +399,11 @@ function calculateQualityScore() {
   if (qualityReport.summary.totalFiles > 0) {
     const avgComplexity = qualityReport.metrics.complexity / qualityReport.summary.totalFiles;
     if (avgComplexity < 5) {
-      score += 5;
-    } else if (avgComplexity > 10) {
-      score -= 10;
-    }
+      score += 5} else if (avgComplexity > 10) {
+      score -= 10}
   }
   
-  return Math.max(0, Math.min(100, score));
-}
+  return Math.max(0, Math.min(100, score))}
 
 async function main() {
   try {
@@ -456,21 +424,18 @@ async function main() {
         
         // Update metrics
         qualityReport.metrics.complexity += analysis.metrics.complexity;
-        qualityReport.metrics.maintainability += analysis.metrics.commentRatio * 100;
-      }
+        qualityReport.metrics.maintainability += analysis.metrics.commentRatio * 100}
     });
     
     // Calculate averages
     if (qualityReport.summary.totalFiles > 0) {
       qualityReport.metrics.complexity = Math.round(qualityReport.metrics.complexity / qualityReport.summary.totalFiles);
-      qualityReport.metrics.maintainability = Math.round(qualityReport.metrics.maintainability / qualityReport.summary.totalFiles);
-    }
+      qualityReport.metrics.maintainability = Math.round(qualityReport.metrics.maintainability / qualityReport.summary.totalFiles)}
     
     // Count issues by severity
     qualityReport.issues.forEach(issue => {
       qualityReport.summary.totalIssues++;
-      qualityReport.summary[issue.severity]++;
-    });
+      qualityReport.summary[issue.severity]++});
     
     // Calculate quality score
     qualityReport.summary.qualityScore = calculateQualityScore();
@@ -493,17 +458,13 @@ async function main() {
     if (qualityReport.issues.length > 0) {
       log('warn', 'Issues found:');
       qualityReport.issues.forEach(issue => {
-        log('warn', `- [${issue.severity.toUpperCase()}] ${issue.message} (${issue.file}:${issue.line})`);
-      });
-    }
+        log('warn', `- [${issue.severity.toUpperCase()}] ${issue.message} (${issue.file}:${issue.line})`)})}
     
     if (qualityReport.recommendations.length > 0) {
       log('info', 'Quality Recommendations:');
       qualityReport.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
-        log('info', `  Action: ${rec.action}`);
-      });
-    }
+        log('info', `  Action: ${rec.action}`)})}
     
     // Save quality report
     const reportPath = path.join(process.cwd(), `comprehensive-quality-report-${qualityReport.sessionId}.json`);
@@ -514,19 +475,15 @@ async function main() {
     // Exit with appropriate status
     if (qualityReport.summary.critical > 0) {
       log('error', 'Critical quality issues found');
-      process.exit(1);
-    } else if (qualityReport.summary.high > 0) {
+      process.exit(1)} else if (qualityReport.summary.high > 0) {
       log('warn', 'High severity quality issues found');
-      process.exit(0);
-    } else {
+      process.exit(0)} else {
       log('info', 'Code quality analysis completed successfully');
-      process.exit(0);
-    }
+      process.exit(0)}
     
   } catch (error) {
     log('error', 'Fatal error in comprehensive code quality analysis', error.message);
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 main();

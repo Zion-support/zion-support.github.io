@@ -26,21 +26,17 @@ function resolveMergeConflicts(filePath) {
       .replace(/>>>>>>> [^\n]+\n?/g, '');
     
     fs.writeFileSync(filePath, resolvedContent);
-    return true;
-  } catch (error) {
+    return true} catch (error) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 function findFilesWithConflicts() {
   try {
     const result = execSync('git grep -l "<<<<<<< HEAD"', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file.length > 0);
-  } catch (error) {
+    return result.trim().split('\n').filter(file => file.length > 0)} catch (error) {
     console.log('No merge conflicts found or git not available');
-    return [];
-  }
+    return []}
 }
 
 function main() {
@@ -49,19 +45,16 @@ function main() {
   
   if (filesWithConflicts.length === 0) {
     console.log('✅ No merge conflicts found!');
-    return;
-  }
+    return}
   
   console.log(`Found ${filesWithConflicts.length} files with conflicts`);
   
   let resolvedCount = 0;
   for (const file of filesWithConflicts) {
     if (resolveMergeConflicts(file)) {
-      resolvedCount++;
-    }
+      resolvedCount++}
   }
   
-  console.log(`✅ Resolved conflicts in ${resolvedCount} files`);
-}
+  console.log(`✅ Resolved conflicts in ${resolvedCount} files`)}
 
 main();

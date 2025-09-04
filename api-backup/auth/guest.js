@@ -8,13 +8,11 @@ const supabase = createClient(supabaseUrl, serviceKey);
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).end();
-    return;
-  }
+    return}
   const { email, name = 'Guest' } = req.body || {};
   if (!email) {
     res.status(400).json({ error: 'Missing email' });
-    return;
-  }
+    return}
   const password = randomUUID();
   const { data, error } = await supabase.auth.admin.createUser({
     email
@@ -26,10 +24,8 @@ async function handler(req, res) {
     res
       .status(500)
       .json({ error: error?.message || 'Failed to create guest user' });
-    return;
-  }
-  res.status(200).json({ userId: data.user.id });
-}
+    return}
+  res.status(200).json({ userId: data.user.id })}
 export default withErrorLogging(handler);
 
 

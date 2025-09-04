@@ -7,13 +7,11 @@ class ComprehensiveSourceFixer {
   constructor() {
     this.fixes = [];
     this.errors = [];
-    this.reportFile = path.join(__dirname, 'source-fix-report.json');
-  }
+    this.reportFile = path.join(__dirname, 'source-fix-report.json')}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
-  }
+    console.log(`[${timestamp}] [${level}] ${message}`)}
 
   async fixAllSourceFiles() {
     this.log('🔧 Starting comprehensive source file fixing...');
@@ -26,11 +24,9 @@ class ComprehensiveSourceFixer {
     
     this.log(`✅ Fixed ${this.fixes.length} files`);
     if (this.errors.length > 0) {
-      this.log(`❌ ${this.errors.length} errors encountered`);
-    }
+      this.log(`❌ ${this.errors.length} errors encountered`)}
     
-    await this.generateReport();
-  }
+    await this.generateReport()}
 
   async fixDirectory(dir) {
     if (!fs.existsSync(dir)) return;
@@ -41,17 +37,14 @@ class ComprehensiveSourceFixer {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        await this.fixDirectory(fullPath);
-      } else if (this.isSourceFile(item)) {
-        await this.fixFile(fullPath);
-      }
+        await this.fixDirectory(fullPath)} else if (this.isSourceFile(item)) {
+        await this.fixFile(fullPath)}
     }
   }
 
   isSourceFile(filename) {
     return filename.endsWith('.ts') || filename.endsWith('.tsx') || 
-           filename.endsWith('.js') || filename.endsWith('.jsx');
-  }
+           filename.endsWith('.js') || filename.endsWith('.jsx')}
 
   async fixFile(filePath) {
     try {
@@ -65,12 +58,10 @@ class ComprehensiveSourceFixer {
           fixes: this.getAppliedFixes(content, fixedContent),
           timestamp: new Date().toISOString()
         });
-        this.log(`✅ Fixed: ${path.basename(filePath)}`);
-      }
+        this.log(`✅ Fixed: ${path.basename(filePath)}`)}
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message });
-      this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`, 'ERROR');
-    }
+      this.log(`❌ Error fixing ${path.basename(filePath)}: ${error.message}`, 'ERROR')}
   }
 
   fixSourceContent(content, filePath) {
@@ -85,24 +76,20 @@ class ComprehensiveSourceFixer {
     // Fix malformed imports
     fixed = fixed.replace(/import\s+{[^}]*from\s+['"][^'"]*['"];?/g, (match) => {
       if (!match.endsWith(';')) {
-        return match + ';';
-      }
-      return match;
-    });
+        return match + ';'}
+      return match});
     
     // Fix broken import statements
     fixed = fixed.replace(/import\s+.*?from\s+['"][^'"]*['"]\s*$/gm, 'export {};');
     
     // Fix malformed React imports
-    fixed = fixed.replace(/import\s+React[^;]*$/gm, 'import React from "react";');
+    fixed = fixed.replace(/import\s+React[^]*$/gm, 'import React from "react";');
     
     // Fix broken component definitions
     fixed = fixed.replace(/const\s+\w+\s*=\s*\(\s*\)\s*=>\s*\{[\s\S]*?$/gm, (match) => {
       if (!match.includes('return')) {
-        return match + '\n  return <div>Component</div>;\n};';
-      }
-      return match;
-    });
+        return match + '\n  return <div>Component</div>;\n};'}
+      return match});
     
     // Fix broken JSX
     fixed = fixed.replace(/<[^>]*$/gm, '<div>Broken JSX</div>');
@@ -113,37 +100,29 @@ class ComprehensiveSourceFixer {
     // Fix broken function declarations
     fixed = fixed.replace(/function\s+\w+\s*\([^)]*\)\s*\{[\s\S]*?$/gm, (match) => {
       if (!match.includes('return')) {
-        return match + '\n  return null;\n}';
-      }
-      return match;
-    });
+        return match + '\n  return null;\n}'}
+      return match});
     
     // Fix broken class definitions
     fixed = fixed.replace(/class\s+\w+\s*extends\s+\w+\s*\{[\s\S]*?$/gm, (match) => {
       if (!match.includes('render')) {
-        return match + '\n  render() {\n    return <div>Component</div>;\n  }\n}';
-      }
-      return match;
-    });
+        return match + '\n  render() {\n    return <div>Component</div>;\n  }\n}'}
+      return match});
     
     // Fix broken TypeScript interfaces
     fixed = fixed.replace(/interface\s+\w+\s*\{[\s\S]*?$/gm, (match) => {
       if (!match.includes('}')) {
-        return match + '\n}';
-      }
-      return match;
-    });
+        return match + '\n}'}
+      return match});
     
     // Fix broken exports
-    fixed = fixed.replace(/export\s+[^;]*$/gm, 'export {};');
+    fixed = fixed.replace(/export\s+[^]*$/gm, 'export {};');
     
     // Fix files that are completely broken
     if (this.isCompletelyBroken(fixed)) {
-      fixed = this.createMinimalWorkingFile(filePath);
-    }
+      fixed = this.createMinimalWorkingFile(filePath)}
     
-    return fixed;
-  }
+    return fixed}
 
   isCompletelyBroken(content) {
     const lines = content.split('\n');
@@ -155,8 +134,7 @@ class ComprehensiveSourceFixer {
       line.trim().startsWith('class ')
     );
     
-    return !hasValidSyntax && content.trim().length > 0;
-  }
+    return !hasValidSyntax && content.trim().length > 0}
 
   createMinimalWorkingFile(filePath) {
     const filename = path.basename(filePath);
@@ -170,46 +148,35 @@ const ${this.getComponentName(filename)} = () => {
       <h1>${this.getComponentName(filename)}</h1>
       <p>Component placeholder</p>
     </div>
-  );
-};
+  )};
 
-export default ${this.getComponentName(filename)};`;
-    } else if (filename.endsWith('.ts') || filename.endsWith('.js')) {
+export default ${this.getComponentName(filename)};`} else if (filename.endsWith('.ts') || filename.endsWith('.js')) {
       return `// ${filename} - Auto-generated placeholder
-export {};`;
-    }
+export {};`}
     
-    return 'export {};';
-  }
+    return 'export {};'}
 
   getComponentName(filename) {
     const name = filename.replace(/\.(tsx?|jsx?)$/, '');
-    return name.charAt(0).toUpperCase() + name.slice(1);
-  }
+    return name.charAt(0).toUpperCase() + name.slice(1)}
 
   getAppliedFixes(original, fixed) {
     const fixes = [];
     
     if (original !== fixed) {
       if (original.includes('<<<<<<< HEAD') && !fixed.includes('<<<<<<< HEAD')) {
-        fixes.push('removed-merge-conflicts');
-      }
+        fixes.push('removed-merge-conflicts')}
       if (original.includes('import') && !fixed.includes('import')) {
-        fixes.push('fixed-imports');
-      }
+        fixes.push('fixed-imports')}
       if (original.includes('export') && !fixed.includes('export')) {
-        fixes.push('fixed-exports');
-      }
+        fixes.push('fixed-exports')}
       if (original.includes('<') && !original.includes('</') && fixed.includes('</div>')) {
-        fixes.push('fixed-jsx');
-      }
+        fixes.push('fixed-jsx')}
       if (original.length > 100 && fixed.length < 200) {
-        fixes.push('replaced-broken-content');
-      }
+        fixes.push('replaced-broken-content')}
     }
     
-    return fixes;
-  }
+    return fixes}
 
   async generateReport() {
     const report = {
@@ -223,15 +190,12 @@ export {};`;
     };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report generated: ${this.reportFile}`);
-  }
+    this.log(`📊 Report generated: ${this.reportFile}`)}
 }
 
 // Run the fixer
 const fixer = new ComprehensiveSourceFixer();
 fixer.fixAllSourceFiles().then(() => {
-  console.log('🎉 Source file fixing completed!');
-}).catch(error => {
+  console.log('🎉 Source file fixing completed!')}).catch(error => {
   console.error('❌ Error:', error);
-  process.exit(1);
-});
+  process.exit(1)});

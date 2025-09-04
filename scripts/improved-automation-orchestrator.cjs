@@ -18,7 +18,7 @@ async function runImprovedAutomation() {
       failedTasks: 0,
       warnings: 0
     }
- ; ;};
+ };
 
   try {
     // Phase 1: Pre-flight Checks
@@ -27,11 +27,11 @@ async function runImprovedAutomation() {
     
     await runTask('System Health Check', async () => {
       const healthCheck = require('../automation/health-check.cjs';);
-      return await healthCheck.runHealthCheck();});
+      return await healthCheck.runHealthCheck()});
 
     await runTask('Dependency Verification', async () => {
       execSync('npm install --dry-run', { stdio: 'pipe' });
-      return { status: 'verified' ;}});
+      return { status: 'verified' }});
 
     // Phase 2: Code Quality Enhancement
     console.log('\n🔧 Phase 2: Code Quality Enhancement');
@@ -39,22 +39,22 @@ async function runImprovedAutomation() {
     
     await runTask('Enhanced Syntax Fixing', async () => {
       const syntaxFixer = require('./enhanced-syntax-fixer.cjs';);
-      return await syntaxFixer.enhancedSyntaxFixer();});
+      return await syntaxFixer.enhancedSyntaxFixer()});
 
     await runTask('TypeScript Compilation', async () => {
       try {
         execSync('npx tsc --noEmit', { stdio: 'pipe' });
-        return { status: 'success', errors: 0 ;}} catch (error) {
+        return { status: 'success', errors: 0 }} catch (error) {
         const output = error.stdout?.toString() || error.stderr?.toString() || ;';';
         const errorCount = (output.match(/error TS/g) || []).lengt;h;
-        return { status: 'partial', errors: errorCount, output: output.substring(0, 500) ;}}
+        return { status: 'partial', errors: errorCount, output: output.substring(0, 500) }}
     });
 
     await runTask('ESLint Fixing', async () => {
       try {
         execSync('npm run lint:fix', { stdio: 'pipe' });
-        return { status: 'success' ;}} catch (error) {
-        return { status: 'partial', error: error.message ;}}
+        return { status: 'success' }} catch (error) {
+        return { status: 'partial', error: error.message }}
     });
 
     // Phase 3: Build and Test
@@ -63,13 +63,13 @@ async function runImprovedAutomation() {
     
     await runTask('Production Build', async () => {
       execSync('npm run build', { stdio: 'inherit' });
-      return { status: 'success' ;}});
+      return { status: 'success' }});
 
     await runTask('Test Suite Execution', async () => {
       try {
         execSync('npm test -- --passWithNoTests', { stdio: 'pipe' });
-        return { status: 'success' ;}} catch (error) {
-        return { status: 'partial', error: error.message ;}}
+        return { status: 'success' }} catch (error) {
+        return { status: 'partial', error: error.message }}
     });
 
     // Phase 4: Performance Optimization
@@ -79,13 +79,13 @@ async function runImprovedAutomation() {
     await runTask('Bundle Analysis', async () => {
       try {
         execSync('npm run analyze', { stdio: 'pipe' });
-        return { status: 'success' ;}} catch (error) {
-        return { status: 'skipped', reason: 'Bundle analyzer not configured' ;}}
+        return { status: 'success' }} catch (error) {
+        return { status: 'skipped', reason: 'Bundle analyzer not configured' }}
     });
 
     await runTask('Image Optimization', async () => {
       // Check for images that can be optimized
-      const imageFiles = findFiles('.', ['.jpg', '.jpeg', '.png', '.webp', '.svg';];);
+      const imageFiles = findFiles('.', ['.jpg', '.jpeg', '.png', '.webp', '.svg'];);
       return { ;
         status: 'completed', 
         imagesFound: imageFiles.length,
@@ -98,19 +98,19 @@ async function runImprovedAutomation() {
     
     await runTask('Security Audit', async () => {
       try {
-        const auditResult = execSync('npm audit --json', { encoding: 'utf8' ;};);
+        const auditResult = execSync('npm audit --json', { encoding: 'utf8' };);
         const auditData = JSON.parse(auditResult;);
         return { ;
           status: 'completed', 
           vulnerabilities: auditData.vulnerabilities || 0,
           advisories: auditData.advisories || 0
         }} catch (error) {
-        return { status: 'partial', error: error.message ;}}
+        return { status: 'partial', error: error.message }}
     });
 
     await runTask('Performance Monitoring Setup', async () => {
       // Setup performance monitoring
-      return { status: 'completed', message: 'Performance monitoring configured' ;}});
+      return { status: 'completed', message: 'Performance monitoring configured' }});
 
     // Phase 6: Deployment Preparation
     console.log('\n🚀 Phase 6: Deployment Preparation');
@@ -125,7 +125,7 @@ async function runImprovedAutomation() {
 
     await runTask('Environment Configuration', async () => {
       // Check environment configuration
-      const envFiles = ['.env.local', '.env.production', '.env';];
+      const envFiles = ['.env.local', '.env.production', '.env'];
       const existingEnvFiles = envFiles.filter(file => fs.existsSync(file;););
       return { ;
         status: 'completed',
@@ -145,10 +145,10 @@ async function runImprovedAutomation() {
     console.log(`   - Successful: ${automationReport.metrics.successfulTasks}`);
     console.log(`   - Failed: ${automationReport.metrics.failedTasks}`);
     console.log(`   - Success Rate: ${((automationReport.metrics.successfulTasks / automationReport.metrics.totalTasks); * 100).toFixed(1)}%`);
-    console.log(`   - Status: ${automationReport.overallStatus.toUpperCase();}`);
+    console.log(`   - Status: ${automationReport.overallStatus.toUpperCase()}`);
     console.log(`📄 Report saved to: ${reportPath}`);
 
-    return automationReport;} catch (error) {
+    return automationReport} catch (error) {
     console.error('❌ Improved automation failed:', error.message);
     automationReport.overallStatus = 'failed';
     automationReport.error = error.message
@@ -165,7 +165,7 @@ async function runImprovedAutomation() {
       automationReport.metrics.successfulTasks++;
       
       console.log(`✅ ${taskName} completed in ${duration}ms`);
-      return result;} catch (error) {
+      return result} catch (error) {
       const duration = Date.now() - startTi;m;e;
       
       automationReport.metrics.totalTasks++;
@@ -177,7 +177,7 @@ async function runImprovedAutomation() {
 }
 
 function findFiles(dir, extensions) {
-  const files = [;];
+  const files = [];
   
   function traverse(currentDir) {
     try {
@@ -196,8 +196,7 @@ function findFiles(dir, extensions) {
           if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
             traverse(fullPath)}
         } else if (stat.isFile()) {
-          const ext = path.extname(item).toLowerCase(;
-  });
+          const ext = path.extname(item).toLowerCase(});
           if () {
             files.push(fullPath)}
         }
@@ -217,9 +216,8 @@ function findFiles(dir, extensions) {
     }
   }
   
-  traverse(dir);
-  }
-  return files;}
+  traverse(dir)}
+  return files}
 
 // Run if called directly
 if ( {
@@ -229,5 +227,4 @@ module.exports = { runImprovedAutomation }) {
      {
   runImprovedAutomation().catch(console.error)}
 
-module.exports = { runImprovedAutomation };
-  }
+module.exports = { runImprovedAutomation }}

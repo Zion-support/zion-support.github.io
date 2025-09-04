@@ -29,8 +29,7 @@ export interface RevolutionaryAIInnovationService2029 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
+    address: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -38,8 +37,7 @@ export interface RevolutionaryAIInnovationService2029 {
   rating: number;
   reviews: number;
   isPopular?: boolean;
-  isNew?: boolean;
-}
+  isNew?: boolean}
 export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationService2029[] =
   [
     // AI-Powered Autonomous Code Review
@@ -577,22 +575,17 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
 export const getAIServicesByCategory = (category: string) => {
   return revolutionaryAIInnovationServices2029.filter(
     service => service.category === category
-  );
-};
+  )};
 export const getPopularAIServices = () => {
   return revolutionaryAIInnovationServices2029.filter(
     service => service.isPopular
-  );
-};
+  )};
 export const getNewAIServices = () => {
-  return revolutionaryAIInnovationServices2029.filter(service => service.isNew);
-};
+  return revolutionaryAIInnovationServices2029.filter(service => service.isNew)};
 export const getAIServicesByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
   return revolutionaryAIInnovationServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));
-    return price >= minPrice && price <= maxPrice;
-  });
-};
+    return price >= minPrice && price <= maxPrice})};

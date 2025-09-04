@@ -13,8 +13,7 @@ class BatchSyntaxFixer {
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixFileContent(content) {
     // Fix the most common syntax issues
@@ -54,17 +53,13 @@ class BatchSyntaxFixer {
     const lines = content.split('\n');
     const fixedLines = lines.map(line => {
       if (line.includes("'") && (line.match(/'/g) || []).length % 2 !== 0 && !line.endsWith("'")) {
-        return line + "'";
-      }
+        return line + "'"}
       if (line.includes('"') && (line.match(/"/g) || []).length % 2 !== 0 && !line.endsWith('"')) {
-        return line + '"';
-      }
-      return line;
-    });
+        return line + '"'}
+      return line});
     content = fixedLines.join('\n');
     
-    return content;
-  }
+    return content}
 
   fixFile(filePath) {
     try {
@@ -77,15 +72,12 @@ class BatchSyntaxFixer {
         fs.writeFileSync(filePath, content, 'utf8');
         this.fixedFiles.push(filePath);
         this.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);
-        return true;
-      }
+        return true}
       
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   getAllFiles(dir, extensions) {
@@ -98,22 +90,18 @@ class BatchSyntaxFixer {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
+          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath)}
       }
     } catch (error) {
       // Skip directories that can't be read
     }
     
-    return files;
-  }
+    return files}
 
   async processBatch(files) {
     for (const file of files) {
-      this.fixFile(file);
-    }
+      this.fixFile(file)}
   }
 
   async run() {
@@ -122,8 +110,7 @@ class BatchSyntaxFixer {
     const srcDir = path.join(this.projectRoot, 'src');
     if (!fs.existsSync(srcDir)) {
       this.log('❌ src directory not found');
-      return;
-    }
+      return}
     
     const files = this.getAllFiles(srcDir, ['.tsx', '.ts', '.jsx', '.js']);
     this.log(`Found ${files.length} files to check`);
@@ -139,8 +126,7 @@ class BatchSyntaxFixer {
       await this.processBatch(batch);
       
       // Small delay between batches to prevent overwhelming the system
-      await new Promise(resolve => setTimeout(resolve, 100));
-    }
+      await new Promise(resolve => setTimeout(resolve, 100))}
     
     this.log(`🎉 Fixed ${this.fixedFiles.length} files`);
     this.log(`❌ ${this.errors.length} errors encountered`);
@@ -159,8 +145,7 @@ class BatchSyntaxFixer {
       JSON.stringify(report, null, 2)
     );
     
-    this.log('📊 Report saved to batch-syntax-fix-report.json');
-  }
+    this.log('📊 Report saved to batch-syntax-fix-report.json')}
 }
 
 // Run the fixer

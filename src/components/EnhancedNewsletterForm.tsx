@@ -11,4 +11,4 @@ export default function EnhancedNewsletterForm(props: any) {return (
       </div>
   );"}"
 
-</div>
+</div>;;

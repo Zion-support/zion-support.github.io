@@ -11,8 +11,7 @@ interface AnalyticsEvent {
   session_id: string;
   user_id: string;
   page_url: string;
-  user_agent: string;
-}
+  user_agent: string}
 
 // In-memory storage for demo purposes
 // In production, you would use a proper database
@@ -23,16 +22,14 @@ export default async function handler(
   res: NextApiRespons e
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+    return res.status(405).json({ error: 'Method not allowed' })}
 
   try {
     const event: AnalyticsEven t = req.body;
 
     // Validate required fields
     if (!event.name || !event.category || !event.timestamp) {
-      return res.status(400).json({ error: 'Missing required fields' });
-    }
+      return res.status(400).json({ error: 'Missing required fields' })}
 
     // Add to analytics data
     analyticsData.push(event);
@@ -47,11 +44,9 @@ export default async function handler(
     // Send to external analytics services
     await sendToExternalServices(event);
 
-    res.status(200).json({ success: tru e });
-  } catch (error) {
+    res.status(200).json({ success: tru e })} catch (error) {
     console.error('Analytics API Error: ', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
+    res.status(500).json({ error: 'Internal server error' })}
 }
 
 async function sendToExternalServices(event: AnalyticsEven t) {
@@ -80,8 +75,7 @@ async function sendToExternalServices(event: AnalyticsEven t) {
             ],
           }),
         }
-      );
-    }
+      )}
 
     // Mixpanel
     if (process.env.MIXPANEL_TOKEN) {
@@ -102,8 +96,7 @@ async function sendToExternalServices(event: AnalyticsEven t) {
             timestamp: even t.timestamp,
           },
         }),
-      });
-    }
+      })}
 
     // Custom webhook
     if (process.env.ANALYTICS_WEBHOOK_URL) {
@@ -113,14 +106,11 @@ async function sendToExternalServices(event: AnalyticsEven t) {
           'Content-Type': 'application/json',
         },
         body: JSO N.stringify(event),
-      });
-    }
+      })}
   } catch (error) {
-    console.error('Failed to send to external services: ', error);
-  }
+    console.error('Failed to send to external services: ', error)}
 }
 
 // Get analytics data (for admin dashboard)
 export async function getAnalyticsData() {
-  return analyticsData;
-}
+  return analyticsData}

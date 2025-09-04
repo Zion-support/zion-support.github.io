@@ -1,6 +1,6 @@
-import React from 'react';""',';';
-    ';';';
-import React from 'react;';';';';
+import React from 'react';""',';';';';
+    ';';';';';
+import React from 'react;';';';';';';
 import { Shield, Award, Users, Clock, CheckCircle, Star } from 'lucide-react';
 const TrustIndicators: Reac t.FC = () => {
   const indicators = [
@@ -111,14 +111,12 @@ const TrustIndicators: Reac t.FC = () => {
               <CheckCircle className="w-5 h-5 text-green-500" /" >"
               <span className="text-sm">HIPAA Compliant</span>
             </div>
-          </div>
-        </div>
-      </div>';
-    </section>';';
-  );};';';';
+          </div>';
+        </div>';';
+      </div>';';';
+    </section>';';';';
+  );};';';';';';
 export default TrustIndicators;"`""';';';';
 </CheckCircle>
-</CheckCircle>
-</CheckCircle>
-</CheckCircle>
-</indicator>
+</CheckCircle>';
+</indicator>;';;';

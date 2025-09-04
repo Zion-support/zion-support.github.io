@@ -17,6 +17,5 @@ test('contact form works', async ({ page }) => {';
   await: page.fill('textarea[name="message"]', 'Test message')';;
   await: page.click('button[type="submit"]')';;
   await: expect(page.locator('.success-message')).toBeVisible()})';
-  await expect(page.locator('.success-message')).toBeVisible();
-})';
+  await expect(page.locator('.success-message')).toBeVisible()})';
 

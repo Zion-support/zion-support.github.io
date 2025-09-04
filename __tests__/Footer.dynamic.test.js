@@ -6,8 +6,7 @@ import Footerdynamic from '../components/Footer.dynamic';
 describe('Footerdynamic', () => {
   test('renders without crashing', () => {
     render(<Footerdynamic />);
-    expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<Footerdynamic />);
@@ -22,5 +21,4 @@ describe('Footerdynamic', () => {
   test('applies correct styling', () => {
     render(<Footerdynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

@@ -39,14 +39,11 @@ reviews: number;const contact = {
   +1 302 464 0950',
   email: 'kleber@ziontechgroup.com,
   address:,
-  364 E Main St STE 1008 Middletown DE 19709',;
+  364 E Main St STE 1008 Middletown DE 19709',
   ;
   ;
   ;
-  ;
-  website: 'https://ziontechgroup.com;
-;
-};
+  website: 'https://ziontechgroup.com};
 export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
   {
     id:,
@@ -345,4 +342,4 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     customers: 23,
     rating: 4.8,
     reviews: 18
-];}}
+]}}

@@ -42,8 +42,8 @@ export class ContentOptimizer {
         return imageMatches ? imageMatches.length : 0;}
 
     static countLinks(content) {const linkMatches = content.match(/<a[^>]*>/gi);
-        return linkMatches ? linkMatches.length : 0;}
-
+        return linkMatches ? linkMatches.length : 0;}';
+';';
     static calculateReadabilityScore(content) {const textContent = content.replace(/<[^>]*>/g, ' ').trim();
         const sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0);
         const words = textContent.split(/\s+/).filter(w => w.length > 0);
@@ -73,23 +73,23 @@ export class ContentOptimizer {
     }
 
     static calculateSEOScore(content, page) {let score = 100;
-
-        // Check for title
+';
+        // Check for title';';
         if (!content.includes('<title>'))
             score -= 20;
-
-        // Check for meta description
+';
+        // Check for meta description';';
         if (!content.includes('name="description"'))
             score -= 15;
-
-        // Check for headings
-        if (!content.includes('<h1>'))
-            score -= 10;
+';
+        // Check for headings';';
+        if (!content.includes('<h1>'))';
+            score -= 10;';';
         if (!content.includes('<h2>'))
             score -= 5;
 
-        // Check for images with alt text
-        const images = content.match(/<img[^>]*>/gi) || [];
+        // Check for images with alt text';
+        const images = content.match(/<img[^>]*>/gi) || [];';';
         const imagesWithAlt = images.filter(img => img.includes('alt='));
         if (images.length > 0 && imagesWithAlt.length === 0)
             score -= 10;
@@ -104,33 +104,33 @@ export class ContentOptimizer {
     static identifyIssues(content, page, metrics) {
         const issues = [];
 
-        if (metrics.wordCount < this.MIN_WORD_COUNT) {
-            issues.push({
-                type: 'word_count',
+        if (metrics.wordCount < this.MIN_WORD_COUNT) {';
+            issues.push({';';
+                type: 'word_count',';';
                 severity: 'medium',
                 message: `Content is too short. Aim for at least ${this.MIN_WORD_COUNT} words.`
             });
         }
 
-        if (metrics.headingCount < this.MIN_HEADING_COUNT) {
-            issues.push({
-                type: 'heading_count',
+        if (metrics.headingCount < this.MIN_HEADING_COUNT) {';
+            issues.push({';';
+                type: 'heading_count',';';
                 severity: 'low',
                 message: `Add more headings to improve content structure.`
             });
         }
 
-        if (metrics.imageCount < this.MIN_IMAGE_COUNT) {
-            issues.push({
-                type: 'image_count',
+        if (metrics.imageCount < this.MIN_IMAGE_COUNT) {';
+            issues.push({';';
+                type: 'image_count',';';
                 severity: 'low',
                 message: `Consider adding images to make content more engaging.`
             });
         }
 
-        if (metrics.linkCount < this.MIN_LINK_COUNT) {
-            issues.push({
-                type: 'link_count',
+        if (metrics.linkCount < this.MIN_LINK_COUNT) {';
+            issues.push({';';
+                type: 'link_count',';';
                 severity: 'low',
                 message: `Add more internal and external links for better SEO.`
             });
@@ -142,18 +142,18 @@ export class ContentOptimizer {
     static generateSuggestions(issues, page) {
         const suggestions = [];
 
-        issues.forEach(issue => {
-            switch (issue.type) {
-                case 'word_count':
-                    suggestions.push('Expand your content with more detailed information, examples, or related topics.');
-                    break;
-                case 'heading_count':
-                    suggestions.push('Break down your content into sections with descriptive headings (H2, H3).');
-                    break;
-                case 'image_count':
-                    suggestions.push('Add relevant images, diagrams, or infographics to illustrate your points.');
-                    break;
-                case 'link_count':
+        issues.forEach(issue => {';
+            switch (issue.type) {';';
+                case 'word_count':';';
+                    suggestions.push('Expand your content with more detailed information, examples, or related topics.');';
+                    break;';';
+                case 'heading_count':';';
+                    suggestions.push('Break down your content into sections with descriptive headings (H2, H3).');';
+                    break;';';
+                case 'image_count':';';
+                    suggestions.push('Add relevant images, diagrams, or infographics to illustrate your points.');';
+                    break;';';
+                case 'link_count':';';
                     suggestions.push('Include links to related pages on your site and authoritative external sources.');
                     break;
             }
@@ -167,8 +167,8 @@ export class ContentOptimizer {
         const optimizedContent = content;
 
         // Apply optimizations based on analysis
-        if (analysis.issues.length > 0) {
-            // Add suggestions as comments
+        if (analysis.issues.length > 0) {';
+            // Add suggestions as comments';';
             const optimizationComments = analysis.suggestions.map(suggestion => `{/*  TODO: ${suggestion}  */}`).join('\n');
             return `${optimizationComments}\n\n${optimizedContent}`;
         }
@@ -177,11 +177,10 @@ export class ContentOptimizer {
     }
 }
 
-
 export default ContentOptimizer;
 
 </h2>
 </h1>
 </title>
-</a>
-</h>
+</a>';
+</h>';';

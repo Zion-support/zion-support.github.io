@@ -35,12 +35,9 @@ const fixes = [
         .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g, '$1: "$2$3"')
         .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g, (m, prop, value) => {
           if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) {
-            return `${prop}: "${value}"`;
-          }
-          return m;
-        });
-      return `style={{ ${fixed} }}`;
-    }
+            return `${prop}: "${value}"`}
+          return m});
+      return `style={{ ${fixed} }}`}
   },
   // Fix unterminated strings
   {
@@ -62,10 +59,8 @@ function fixFile(filePath) {
     // Apply fixes
     fixes.forEach(fix => {
       if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement);
-      } else {
-        content = content.replace(fix.pattern, fix.replacement);
-      }
+        content = content.replace(fix.pattern, fix.replacement)} else {
+        content = content.replace(fix.pattern, fix.replacement)}
     });
     
     // Additional specific fixes for common issues
@@ -75,10 +70,8 @@ function fixFile(filePath) {
       // Fix missing quotes in object properties
       .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g, (match, prop, value) => {
         if (!value.includes('"') && !value.includes("'") && !value.includes('`')) {
-          return `${prop}: "${value}"`;
-        }
-        return match;
-      })
+          return `${prop}: "${value}"`}
+        return match})
       // Fix malformed JSX
       .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g, '<$1 $2 />')
       // Fix unterminated strings in JSX
@@ -87,13 +80,10 @@ function fixFile(filePath) {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 async function main() {
@@ -110,16 +100,13 @@ async function main() {
     const files = await glob(pattern, { cwd: process.cwd() });
     for (const file of files) {
       if (fixFile(file)) {
-        totalFixed++;
-      }
+        totalFixed++}
     }
   }
   
-  console.log(`\nFixed ${totalFixed} files`);
-}
+  console.log(`\nFixed ${totalFixed} files`)}
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
+  main()}
 
 export { fixFile, fixes };

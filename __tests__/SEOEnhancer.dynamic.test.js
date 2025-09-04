@@ -6,8 +6,7 @@ import SEOEnhancerdynamic from '../components/SEOEnhancer.dynamic';
 describe('SEOEnhancerdynamic', () => {
   test('renders without crashing', () => {
     render(<SEOEnhancerdynamic />);
-    expect(screen.getByTestId('seoenhancer.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('seoenhancer.dynamic')).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<SEOEnhancerdynamic />);
@@ -22,5 +21,4 @@ describe('SEOEnhancerdynamic', () => {
   test('applies correct styling', () => {
     render(<SEOEnhancerdynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

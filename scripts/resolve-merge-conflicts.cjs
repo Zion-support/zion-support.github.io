@@ -12,8 +12,7 @@ function resolveMergeConflicts(filePath) {
   if () {
     return false) {
     ) {
-    return false;
-  }}
+    return false}}
   
   console.log(`   Resolving conflicts in ${filePath}...`);
   
@@ -27,7 +26,7 @@ function resolveMergeConflicts(filePath) {
     content = content.replace(conflictRegex, (match, headContent, incomingContent) => {
       modified = true;
       // For most cases, prefer the incoming content (our changes)
-      return incomingContent;});
+      return incomingContent});
     
     // Remove any remaining conflict markers
     content = content.replace(/<<<<<<< HEAD\n[\s\S]*?=======\n[\s\S]*?>>>>>>> [^\n]+\n/g, '');
@@ -36,14 +35,13 @@ function resolveMergeConflicts(filePath) {
     if ( {
       fs.writeFileSync(filePath, content)) {
      {
-      fs.writeFileSync(filePath, content);
-  }
+      fs.writeFileSync(filePath, content)}
       console.log(`   ✅ Resolved conflicts in ${filePath}`);
-      return true;}
+      return true}
     
-    return false;} catch (error) {
+    return false} catch (error) {
     console.error(`   ❌ Error resolving ${filePath}: ${error.message}`);
-    return false;}
+    return false}
 }
 
 // Function to resolve all merge conflicts
@@ -66,16 +64,15 @@ function resolveAllConflicts() {
       if () {
         resolvedCount++) {
     ) {
-        resolvedCount++;
-  }
+        resolvedCount++}
         // Add the resolved file
         execSync(`git add "${file}"`, { stdio: 'inherit' })}
     });
     
     console.log(`\n✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
-    return resolvedCount;} catch (error) {
+    return resolvedCount} catch (error) {
     console.error('❌ Error finding conflicted files:', error.message);
-    return 0;}
+    return 0}
 }
 
 // Main execution
@@ -88,21 +85,20 @@ async function main() {
     if ( {
       console.log('\n📝 Committing resolved conflicts...')) {
      {
-      console.log('\n📝 Committing resolved conflicts...');
-  }
+      console.log('\n📝 Committing resolved conflicts...')}
       try {
         execSync('git commit -m "resolve: merge conflicts automatically resolved"', { stdio: 'inherit' });
         console.log('✅ Successfully committed resolved conflicts');
-        return true;} catch (error) {
+        return true} catch (error) {
         console.error('❌ Failed to commit resolved conflicts:', error.message);
-        return false;}
+        return false}
     } else {
       console.log('ℹ️ No conflicts to resolve');
-      return true;}
+      return true}
     
   } catch (error) {
     console.error('❌ Merge conflict resolver failed:', error.message);
-    return false;}
+    return false}
 }
 
 main();

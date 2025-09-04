@@ -8,8 +8,8 @@ interface CheckboxProps extends React.PropsWithChildren<{}> {
   disabled?: boolean;
   className?: string}
 
-export function Checkbox(...args[]):  {
-  return (
+export function Checkbox(...args[]):  {';
+  return (';';
     <label className = {`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>;
       <input
         type="checkbox"
@@ -21,6 +21,5 @@ export function Checkbox(...args[]):  {
     </label>;
   );
 }
-
-
-export default checkbox;
+';
+export default checkbox;;';;';

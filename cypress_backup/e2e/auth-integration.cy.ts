@@ -11,16 +11,13 @@ describe('register and login flow', () => {
     // Ensure environment variables are loaded, or provide defaults for local runs if desired
     // For this refactor, we assume they are set in cypress.env.json
     if (!Cypress.env('TEST_USER_EMAIL')) {
-      throw new Error('TEST_USER_EMAIL environment variable is not set.');
-    }
+      throw new Error('TEST_USER_EMAIL environment variable is not set.')}
     if (!Cypress.env('TEST_USER_PASSWORD')) {
-      throw new Error('TEST_USER_PASSWORD environment variable is not set.');
-    }
+      throw new Error('TEST_USER_PASSWORD environment variable is not set.')}
     if (!Cypress.env('TEST_USER_DISPLAY_NAME')) {
       throw new Error(
         'TEST_USER_DISPLAY_NAME environment variable is not set.'
-      );
-    }
+      )}
   });
 
   it('registers, gets auto-logged in, and user data is available', () => {
@@ -48,15 +45,13 @@ describe('register and login flow', () => {
       expect(response.body).to.have.property('id');
       expect(response.body.email).to.eq(uniqueEmail);
       // Optionally, check for display_name if it's consistently set by your backend
-      // expect(response.body.user_metadata?.display_name).to.eq(testDisplayName);
-    });
+      // expect(response.body.user_metadata?.display_name).to.eq(testDisplayName)});
 
     // Example: Check for a known element on the dashboard page
     // cy.contains('Welcome to your Dashboard!').should('be.visible');
     // This line is commented out as we don't know the exact content of the dashboard.
     // The cy.url() and /api/users/me checks are the primary assertions for now.
-  });
-});
+  })});
 
 describe('Login Flow Tests', () => {
   beforeEach(() => {
@@ -64,19 +59,16 @@ describe('Login Flow Tests', () => {
     if (!Cypress.env('TEST_USER_EMAIL')) {
       throw new Error(
         'TEST_USER_EMAIL environment variable is not set for login tests.'
-      );
-    }
+      )}
     if (!Cypress.env('TEST_USER_PASSWORD')) {
       throw new Error(
         'TEST_USER_PASSWORD environment variable is not set for login tests.'
-      );
-    }
+      )}
     // Note: TEST_USER_DISPLAY_NAME is not strictly needed for login, but good to have consistency
     if (!Cypress.env('TEST_USER_DISPLAY_NAME')) {
       throw new Error(
         'TEST_USER_DISPLAY_NAME environment variable is not set.'
-      );
-    }
+      )}
   });
 
   it('should fail to login with invalid credentials and show error toast', () => {
@@ -97,9 +89,7 @@ describe('Login Flow Tests', () => {
       .invoke('text') // Use invoke to get text content
       .should(text => {
         // Making the assertion case-insensitive and flexible
-        expect(text.toLowerCase()).to.include('invalid login credentials');
-      });
-  });
+        expect(text.toLowerCase()).to.include('invalid login credentials')})});
 
   it('should login successfully with valid credentials and redirect', () => {
     cy.visit('/login');
@@ -121,7 +111,4 @@ describe('Login Flow Tests', () => {
       expect(response.body).to.have.property('id');
       expect(response.body.email.toLowerCase()).to.eq(
         Cypress.env('TEST_USER_EMAIL').toLowerCase()
-      );
-    });
-  });
-});
+      )})})});

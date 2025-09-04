@@ -6,8 +6,7 @@ import EnhancedSEOdynamic from '../components/EnhancedSEO.dynamic';
 describe('EnhancedSEOdynamic', () => {
   test('renders without crashing', () => {
     render(<EnhancedSEOdynamic />);
-    expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument();
-  });
+    expect(screen.getByTestId('enhancedseo.dynamic')).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<EnhancedSEOdynamic />);
@@ -22,5 +21,4 @@ describe('EnhancedSEOdynamic', () => {
   test('applies correct styling', () => {
     render(<EnhancedSEOdynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

@@ -43,12 +43,10 @@ jest.mock('@prisma/client', () => {
           super(message);
           this.code = code;
           this.meta = meta;
-          this.name = 'PrismaClientKnownRequestError';
-        }
+          this.name = 'PrismaClientKnownRequestError'}
       }
     }
-  };
-})
+  }})
 // Mock Supabase Client
 jest.mock('@/integrations/supabase/client', () => ({
   supabase: {

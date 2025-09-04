@@ -11,8 +11,7 @@ export interface Innovative2025Service {
   contactInfo: {
     mobile: string;
     email: string;
-address: string;
-  };export const innovative2025Services: Innovative2025Service[] = [
+address: string};export const innovative2025Services: Innovative2025Service[] = [
   {
     id: "ai-innovation-hub",
     name: "AI Innovation Hub",
@@ -33,4 +32,4 @@ address: string;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-];}}}
+]}}}

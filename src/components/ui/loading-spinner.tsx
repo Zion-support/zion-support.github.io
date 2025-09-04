@@ -1,44 +1,45 @@
 import { motion } from 'framer-motion';
 
-interface LoadingSpinnerProps {
-
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+interface LoadingSpinnerProps {';
+';';
+  size?: 'sm' | 'md' | 'lg' | 'xl';';';
   color?: 'cyan' | 'white' | 'blue';
   text?: string;
   showText?: boolean;
   className?: string;
 
 }
-
-const sizeClasses = {
-  sm: 'w-4 h-4',
-  md: 'w-6 h-6',
-  lg: 'w-8 h-8',
+';
+const sizeClasses = {';';
+  sm: 'w-4 h-4',';';
+  md: 'w-6 h-6',';';
+  lg: 'w-8 h-8',';';
   xl: 'w-12 h-12'
 };
-
-const colorClasses = {
-  cyan: 'border-cyan-400',
-  white: 'border-white',
+';
+const colorClasses = {';';
+  cyan: 'border-cyan-400',';';
+  white: 'border-white',';';
   blue: 'border-blue-400'
 };
 
 export default function LoadingSpinner(props: any) {
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`} role="status">
+    <div className="min-h-screen bg-white">
       <div className="relative">
         {/* Outer ring */}
-        <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div>
-export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  className = '' 
-}) => {
-  const sizeClasses = { sm: 'w-4 h-4',
-    md: 'w-8 h-8',
+        <div className={`${sizeClasses[size]} border-4 border-gray-200 rounded-full opacity-20`}></div>';
+export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({ ';';
+  size = 'md', ';';
+  className = '' ';
+}) => {';';
+  const sizeClasses = { sm: 'w-4 h-4',';';
+    md: 'w-8 h-8',';';
     lg: 'w-12 h-12'
   };
 
-  return (<div className={`flex items-center justify-center ${className}`}>
+  return (
+    <div className="min-h-screen bg-white">
       <div
         className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
         role="status"
@@ -48,14 +49,14 @@ export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({
     </div>
   );
 }
-
-// Optimized spinner for inline use
-export const InlineSpinner: Reac t.FC<{ size?: 'sm' | 'md'; className?: string }> = ({
-  size = 'sm',
+';
+// Optimized spinner for inline use';';
+export const InlineSpinner: Reac t.FC<{ size?: 'sm' | 'md'; className?: string }> = ({';';
+  size = 'sm',';';
   className = ''
 }) => (
-  <div className={`inline-flex items-center ${className}`} role="status">
-    <motion.div
+  <div className={`inline-flex items-center ${className}`} role="status">';
+    <motion.div';';
       className={`${size === 'sm' ? 'w-4 h-4' : 'w-6 h-6'} border-2 border-t-transparent border-cyan-400 rounded-full`}
       animate={{ rotate: 36 0 }}
       transition={{
@@ -72,10 +73,10 @@ export const InlineSpinner: Reac t.FC<{ size?: 'sm' | 'md'; className?: string }
 export const FullScreenLoader: Reac t.FC<{
   text?: string;
   showLogo?: boolean;
-  className?: string;
-}> = ({
-  text = 'Loading amazing experiences...',
-  showLogo = true,
+  className?: string;';
+}> = ({';';
+  text = 'Loading amazing experiences...',';
+  showLogo = true,';';
   className = ''
 }) => (
   <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>
@@ -87,8 +88,9 @@ export const FullScreenLoader: Reac t.FC<{
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-xl">
             ZION
           </div>
-        </div>
-      )}
+            </div>
+  );
+}
       <LoadingSpinner size="lg" color="cyan" text={text}  />
 </div>
   )}"""
@@ -115,8 +117,8 @@ export const LoadingSpinner: Reac t.FC<LoadingSpinnerProps> = ({size = "md", cla
 // Skeleton loading component
 export const SkeletonLoader: Reac t.FC<{
   className?: string;
-  lines?: number;
-}> = ({
+  lines?: number;';
+}> = ({';';
   className = '',
   lines = 3
 }) => (
@@ -131,10 +133,9 @@ export const SkeletonLoader: Reac t.FC<{
 );
 
 </div>
-</div>
 </LoadingSpinnerProps>
 </div>
 </motion>
 </LoadingSpinnerProps>
-</div>
-</div>
+</div>';
+</div>;';;';

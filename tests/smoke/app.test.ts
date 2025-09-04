@@ -1,5 +1,3 @@
 describe('smoke', () => {
   it('runs', () => {
-    expect(true).toBe(true);
-  });
-});
+    expect(true).toBe(true)})});

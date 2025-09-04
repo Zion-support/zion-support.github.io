@@ -25,11 +25,9 @@ function fixLayoutConflicts(content, filePath) {
     fixedContent = fixedContent.replace(/,\s*Layout/g, '');
     fixedContent = fixedContent.replace(/{\s*Layout\s*}/g, '{}');
     changes++;
-    console.log(`✅ Fixed Layout conflict in ${filePath}`);
-  }
+    console.log(`✅ Fixed Layout conflict in ${filePath}`)}
 
-  return { content: fixedContent, changes };
-}
+  return { content: fixedContent, changes }}
 
 // Process individual file
 function processFile(filePath) {
@@ -39,13 +37,10 @@ function processFile(filePath) {
 
     if (result.changes > 0) {
       fs.writeFileSync(filePath, result.content, 'utf8');
-      totalFixes += result.changes;
-    }
+      totalFixes += result.changes}
 
-    filesProcessed++;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-  }
+    filesProcessed++} catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message)}
 }
 
 // Main function
@@ -77,15 +72,13 @@ async function main() {
     });
 
     for (const file of files) {
-      processFile(file);
-    }
+      processFile(file)}
   }
 
   console.log(`\n📊 Layout Conflicts Fix Summary:`);
   console.log(`   Files processed: ${filesProcessed}`);
   console.log(`   Total fixes: ${totalFixes}`);
-  console.log(`\n✨ Layout conflicts fix completed!`);
-}
+  console.log(`\n✨ Layout conflicts fix completed!`)}
 
 // Run the script
 main().catch(console.error);

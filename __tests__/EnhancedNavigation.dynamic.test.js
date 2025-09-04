@@ -8,8 +8,7 @@ describe('EnhancedNavigationdynamic', () => {
     render(<EnhancedNavigationdynamic />);
     expect(
       screen.getByTestId('enhancednavigation.dynamic')
-    ).toBeInTheDocument();
-  });
+    ).toBeInTheDocument()});
 
   test('displays correct content', () => {
     render(<EnhancedNavigationdynamic />);
@@ -24,5 +23,4 @@ describe('EnhancedNavigationdynamic', () => {
   test('applies correct styling', () => {
     render(<EnhancedNavigationdynamic />);
     // Add styling tests if needed
-  });
-});
+  })});

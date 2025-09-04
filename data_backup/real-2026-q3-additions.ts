@@ -3,8 +3,7 @@ export interface Real2026Q3Addition {
   name: string;
   tagline: string;
   price: string;
-  features: string[];
-}
+  features: string[]}
 export const real2026Q3Additions: Real2026Q3Addition[] = [
   {
     id: 'q3-2026-addition-1',

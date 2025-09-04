@@ -1,46 +1,46 @@
-#!/usr/bin/env node;,"});,"})
-import fs from;,"});,"})
-  'fs';,"});,"})
-import path from;,"});,"})
-  'path';,"});,"})
-;,"});,"})
-function walk(dir, filelist = []) {;,"});,"})
-  const files = fs.readdirSync(dir, { withFileTypes: true });,"});,"})
-  for (const entry of files) {;,"});,"})
-    const full = path.join(dir, entry.name);,"});,"})
-    if (entry.isDirectory()) {;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-      filelist = walk(full, filelist);,"});,"})
-    } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {;,"});,"})
-      filelist.push(full);,"});,"})
-    }"});,"})
-  }"});,"})
-  return filelist;,"});,"})
-}"});,"})
-;,"});,"})
-function main() {;,"});,"})
-  const repoRoot = process.cwd();,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  const index = [];,"});,"})
-  for (const dir of srcDirs) {;,"});,"})
-    if (!fs.existsSync(dir)) continue;,"});,"})
-    for (const file of walk(dir)) {;,"});,"})
-      try {;,"});,"})
-        const rel = path.relative(repoRoot, file);,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-        index.push({ file: rel, title });,"});,"})
-      } catch {}"});,"})
-    }"});,"})
-  }"});,"})
-  const outDir = path.join(repoRoot,;,"});,"})
-  'public');,"});,"})
-  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  console.log(`✅ Search index generated: ${outPath} (${index.length} items)`);,"});,"})
-}"});,"})
-;,"});,"})
-main();,"});,"})
-;,"});,"})
+#!/usr/bin/env node,"}),"})
+import fs from,"}),"})
+  'fs',"}),"})
+import path from,"}),"})
+  'path',"}),"})
+,"}),"})
+function walk(dir, filelist = []) {,"}),"})
+  const files = fs.readdirSync(dir, { withFileTypes: true }),"}),"})
+  for (const entry of files) {,"}),"})
+    const full = path.join(dir, entry.name),"}),"})
+    if (entry.isDirectory()) {,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+      filelist = walk(full, filelist),"}),"})
+    } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {,"}),"})
+      filelist.push(full),"}),"})
+    }"}),"})
+  }"}),"})
+  return filelist,"}),"})
+}"}),"})
+,"}),"})
+function main() {,"}),"})
+  const repoRoot = process.cwd(),"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+  const index = [],"}),"})
+  for (const dir of srcDirs) {,"}),"})
+    if (!fs.existsSync(dir)) continue,"}),"})
+    for (const file of walk(dir)) {,"}),"})
+      try {,"}),"})
+        const rel = path.relative(repoRoot, file),"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+        index.push({ file: rel, title }),"}),"})
+      } catch {}"}),"})
+    }"}),"})
+  }"}),"})
+  const outDir = path.join(repoRoot,,"}),"})
+  'public'),"}),"})
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true }),"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+  console.log(`✅ Search index generated: ${outPath} (${index.length} items)`),"}),"})
+}"}),"})
+,"}),"})
+main(),"}),"})
+,"}),"})
       filelist.push(full)}
 
   }
@@ -65,8 +65,7 @@ function main() {;
         const title = titleMatch
           ? titleMatch[1] || titleMatch[2]
           : path.basename(file);
-        index.push({ file: rel, title });
-      } catch {}
+        index.push({ file: rel, title })} catch {}
     }
   }
   const outDir = path.join(repoRoot, ';public');
@@ -80,8 +79,7 @@ function main() {;
       2
     )
   );
-  console.log(`✅ Search index generated: ${outPath} (${index.length} items)`);
-}
+  console.log(`✅ Search index generated: ${outPath} (${index.length} items)`)}
 
 main();
 

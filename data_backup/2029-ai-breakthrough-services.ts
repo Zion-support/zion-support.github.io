@@ -272,4 +272,4 @@ aiCapabilities: string[];export const aiBreakthroughServices2029: AIBreakthrough
       "Empathy simulation",
       "Sentiment analysis"
     ]
-];}}
+]}}

@@ -7,13 +7,11 @@ class AdvancedSourceFixer {
   constructor() {
     this.fixes = [];
     this.errors = [];
-    this.reportFile = path.join(__dirname, 'advanced-source-fix-report.json');
-  }
+    this.reportFile = path.join(__dirname, 'advanced-source-fix-report.json')}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level}] ${message}`);
-  }
+    console.log(`[${timestamp}] [${level}] ${message}`)}
 
   async fixAllSourceFiles() {
     this.log('🔧 Starting advanced source file fixing...');
@@ -26,11 +24,9 @@ class AdvancedSourceFixer {
     
     this.log(`✅ Fixed ${this.fixes.length} files`);
     if (this.errors.length > 0) {
-      this.log(`❌ ${this.errors.length} errors encountered`);
-    }
+      this.log(`❌ ${this.errors.length} errors encountered`)}
     
-    await this.generateReport();
-  }
+    await this.generateReport()}
 
   async fixDirectory(dir) {
     if (!fs.existsSync(dir)) return;
@@ -42,10 +38,8 @@ class AdvancedSourceFixer {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        await this.fixDirectory(fullPath);
-      } else if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
-        await this.fixFile(fullPath);
-      }
+        await this.fixDirectory(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
+        await this.fixFile(fullPath)}
     }
   }
 
@@ -58,20 +52,17 @@ class AdvancedSourceFixer {
       // Fix common parsing errors
       if (this.hasParsingErrors(content)) {
         fixedContent = this.fixParsingErrors(content, filePath);
-        wasFixed = true;
-      }
+        wasFixed = true}
 
       // Fix import/export issues
       if (this.hasImportExportIssues(content)) {
         fixedContent = this.fixImportExportIssues(fixedContent, filePath);
-        wasFixed = true;
-      }
+        wasFixed = true}
 
       // Fix syntax issues
       if (this.hasSyntaxIssues(content)) {
         fixedContent = this.fixSyntaxIssues(fixedContent, filePath);
-        wasFixed = true;
-      }
+        wasFixed = true}
 
       if (wasFixed) {
         fs.writeFileSync(filePath, fixedContent);
@@ -80,16 +71,14 @@ class AdvancedSourceFixer {
           timestamp: new Date().toISOString(),
           fixes: this.getAppliedFixes(content, fixedContent)
         });
-        this.log(`Fixed: ${filePath}`);
-      }
+        this.log(`Fixed: ${filePath}`)}
     } catch (error) {
       this.errors.push({
         file: filePath,
         error: error.message,
         timestamp: new Date().toISOString()
       });
-      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
-    }
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR')}
   }
 
   hasParsingErrors(content) {
@@ -108,12 +97,10 @@ class AdvancedSourceFixer {
       /'\}' expected/
     ];
     
-    return errorPatterns.some(pattern => pattern.test(content));
-  }
+    return errorPatterns.some(pattern => pattern.test(content))}
 
   hasImportExportIssues(content) {
-    return content.includes('from') && !content.includes('import') && !content.includes('export');
-  }
+    return content.includes('from') && !content.includes('import') && !content.includes('export')}
 
   hasSyntaxIssues(content) {
     const syntaxIssues = [
@@ -124,8 +111,7 @@ class AdvancedSourceFixer {
       /let.*let.*let/
     ];
     
-    return syntaxIssues.some(pattern => pattern.test(content));
-  }
+    return syntaxIssues.some(pattern => pattern.test(content))}
 
   fixParsingErrors(content, filePath) {
     let fixed = content;
@@ -144,14 +130,13 @@ class AdvancedSourceFixer {
     fixed = fixed.replace(/let\s+let/g, 'let');
 
     // Fix missing semicolons
-    fixed = fixed.replace(/([^;}])\n/g, '$1;\n');
+    fixed = fixed.replace(/([^}])\n/g, '$1;\n');
 
     // Fix malformed JSX
     fixed = fixed.replace(/<([^>]*)\s*>/g, '<$1>');
     fixed = fixed.replace(/<\/([^>]*)\s*>/g, '</$1>');
 
-    return fixed;
-  }
+    return fixed}
 
   fixImportExportIssues(content, filePath) {
     let fixed = content;
@@ -159,8 +144,7 @@ class AdvancedSourceFixer {
     // Add missing React import for JSX files
     if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
       if (!fixed.includes('import React') && !fixed.includes('import * as React')) {
-        fixed = "import React from 'react';\n" + fixed;
-      }
+        fixed = "import React from 'react';\n" + fixed}
     }
 
     // Fix malformed imports
@@ -169,11 +153,9 @@ class AdvancedSourceFixer {
 
     // Add default export if missing
     if (!fixed.includes('export default') && !fixed.includes('export {')) {
-      fixed += '\n\nexport default {};';
-    }
+      fixed += '\n\nexport default {};'}
 
-    return fixed;
-  }
+    return fixed}
 
   fixSyntaxIssues(content, filePath) {
     let fixed = content;
@@ -196,29 +178,23 @@ class AdvancedSourceFixer {
     fixed = fixed.replace(/\(\s*,\s*\)/g, '()');
     fixed = fixed.replace(/\(\s*,\s*/g, '(');
 
-    return fixed;
-  }
+    return fixed}
 
   getAppliedFixes(original, fixed) {
     const fixes = [];
     
     if (original !== fixed) {
       if (original.length !== fixed.length) {
-        fixes.push('Content length changed');
-      }
+        fixes.push('Content length changed')}
       if (fixed.includes('import React')) {
-        fixes.push('Added React import');
-      }
+        fixes.push('Added React import')}
       if (fixed.includes('export default')) {
-        fixes.push('Added default export');
-      }
+        fixes.push('Added default export')}
       if (fixed.includes(';')) {
-        fixes.push('Added semicolons');
-      }
+        fixes.push('Added semicolons')}
     }
     
-    return fixes;
-  }
+    return fixes}
 
   async generateReport() {
     const report = {
@@ -230,8 +206,7 @@ class AdvancedSourceFixer {
     };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report generated: ${this.reportFile}`);
-  }
+    this.log(`Report generated: ${this.reportFile}`)}
 }
 
 // Run the fixer

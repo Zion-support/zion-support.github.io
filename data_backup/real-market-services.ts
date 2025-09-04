@@ -11,8 +11,7 @@ export interface RealMarketService {
   contactInfo: {
     mobile: string;
     email: string;
-address: string;
-  };export const realMarketServices: RealMarketService[] = [
+address: string};export const realMarketServices: RealMarketService[] = [
   {
     id: "market-analysis-platform",
     name: "Market Analysis Platform",
@@ -688,4 +687,4 @@ address: string;
     customers: 14,
     rating: 4.5,
     reviews: 7
-];}}}}
+]}}}}

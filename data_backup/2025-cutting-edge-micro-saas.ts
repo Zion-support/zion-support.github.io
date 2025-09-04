@@ -423,4 +423,4 @@ integrations: [
   'Financial Regulations',
   'Risk Management Standards']
 
-];}}}}}}];
+]}}}}}}];

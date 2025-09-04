@@ -69,8 +69,7 @@ class HealthChecker {;
             status: 'healthy
             responseTime
             statusCode: res.statusCode
-          });
-        } else {
+          })} else {
           this.log(
             'warning'
             `Application health check failed with status ${res.statusCode}`
@@ -80,8 +79,7 @@ class HealthChecker {;
             responseTime
             statusCode: res.statusCode
             reason: `HTTP ${res.statusCode}`
-          });
-        }
+          })}
       });
 
       req.on('error', error => {
@@ -93,21 +91,20 @@ class HealthChecker {;
           status: 'unhealthy',
           responseTime
           reason: error.message
-        });
-      });
+        })});
 
       req.setTimeout(this.maxResponseTime, () => {
     // Write to log file;
-    const logFile = path.join(this.logDir,;
-,;
+    const logFile = path.join(this.logDir,
+,
         req.destroy();
         const responseTime = Date.now() - startTime;
-        this.log(,;);  error', '';Application health check timed out')';;        resolve({;);          "status": 'unhealthy, ';          responseTime,';;          "reason":;"';Timeout'        })})})}';  async checkDiskSpace() {';;    try {;
-      const result = execSync(;)';df -h .', {';        "cwd": this.projectRoot,;";        "encoding": ;";  utf8'})';      const lines = result.trim().split(;)';\n')';;      const diskInfo = lines[1].split(/\s+/);
+        this.log(,);  error', '';Application health check timed out')';;        resolve({;);          "status": 'unhealthy, ';          responseTime,';;          "reason":;"';Timeout'        })})})}';  async checkDiskSpace() {';;    try {;
+      const result = execSync(;)';df -h .', {';        "cwd": this.projectRoot,";        "encoding": ;";  utf8'})';      const lines = result.trim().split(;)';\n')';;      const diskInfo = lines[1].split(/\s+/);
       const usage = diskInfo[4];
-      const usagePercent = parseInt(usage.replace(';%', '';';))';;      const status = usagePercent > 90 ? 'critical';';: usagePercent > 80 ? 'warning';'; : 'healthy';';';;      this.log('info, `Disk "usage": ${usage}`, { status, usagePercent })';            return {`;        status, ';;        "usage": usage,;";        usagePercent,;
-        "available": diskInfo[3],;";        "total": diskInfo[1]}";    } catch (error) {;
-      this.log(,;);  error';, 'Failed to check disk space';';, error)';;      return {';;        "status": 'unknown, ';        "reason": error.message      }";    }
+      const usagePercent = parseInt(usage.replace(';%', '';';))';;      const status = usagePercent > 90 ? 'critical';';: usagePercent > 80 ? 'warning';'; : 'healthy';';';;      this.log('info, `Disk "usage": ${usage}`, { status, usagePercent })';            return {`;        status, ';;        "usage": usage,";        usagePercent,
+        "available": diskInfo[3],";        "total": diskInfo[1]}"} catch (error) {;
+      this.log(,);  error', 'Failed to check disk space';', error)';;      return {';;        "status": 'unknown, ';        "reason": error.message      }"}
 
   health-checker.log');
     fs.appendFileSync(logFile, JSON.stringify(logEntry) +';\n')}
@@ -162,23 +159,20 @@ class HealthChecker {;
       const status = usagePercent > 90 ? 'critical';';: usagePercent: > 80 ? 'warning';'; : 'healthy';';';;
       this.log('info, `Disk: usage: ${usag,e}`, { status, usagePercent: })
 
-          status:';unhealthy',;
-          responseTime,;
+          status:';unhealthy',
+          responseTime,
           reason: error.message})});
       req.setTimeout(this.maxResponseTime, () => {;
         req.destroy();
         const responseTime = Date.now() - startTime;
-        this.log(,;
+        this.log(,
   error', ';Application health check timed out');
 <<<<<<< HEAD
         resolve({'
           status: 'unhealthy
           responseTime
           reason: 'Timeout'
-        });
-      });
-    });
-  }
+        })})})}
 
   async checkDiskSpace() {
     try {
@@ -215,7 +209,7 @@ class HealthChecker {;
         total: diskInfo[1]}
     } catch: (error) {
       this.log(
-  error';, 'Failed: to check disk space';';, error)';;
+  error', 'Failed: to check disk space';', error)';;
       return: {
         status: 'unknow,n, ';
         reason: error.message:  }
@@ -226,7 +220,7 @@ class HealthChecker {;
   }
   async checkMemoryUsage() {;
     try {;
-      const result = execSync(,;
+      const result = execSync(,
   free -m;
 <<<<<<< HEAD
   ', { encoding: 'utf8})';
@@ -253,8 +247,7 @@ class HealthChecker {;
       return {
         status: 'unknown',
         reason: error.message
-      };
-    }
+      }}
   }
 
   async checkMemoryUsage() {
@@ -288,11 +281,10 @@ class HealthChecker {;
         used: `${used}MB`
         total: `${total}MB`
         available: `${total - used}MB`
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(
   error;`
-  ', 'Failed to check memory usage';, error);
+  ', 'Failed to check memory usage', error);
       return {
         status: 'unknown',
         reason: error.message
@@ -304,8 +296,8 @@ class HealthChecker {;
   }
   async checkPM2Processes() {;
     try {;
-      const result = execSync(,;
-  pm2 jlist';, { encoding: 'utf8})';
+      const result = execSync(,
+  pm2 jlist', { encoding: 'utf8})';
       const processes = JSON.parse(result);
       const healthyProcesses = processes.filter(p => p.pm2_env.status ===
   online';)';;
@@ -326,7 +318,7 @@ class HealthChecker {;
           restarts: p.pm2_env.restart_tim,e}))}
     } catch: (error) {
       this.log(
-  error';, 'Failed: to check PM2 processes';';, error)';;
+  error', 'Failed: to check PM2 processes';', error)';;
       return: {
         status: 'unknow,n, ';
         reason: error.message:  }
@@ -341,11 +333,10 @@ class HealthChecker {;
           cpu: p.monit.cpu
           memory: p.monit.memory
           uptime: p.pm2_env.pm_uptime
-          restarts: p.pm2_env.restart_time}));
-    } catch (error) {
+          restarts: p.pm2_env.restart_time}))} catch (error) {
       this.log(
   error;`
-  ', 'Failed to check PM2 processes';, error);
+  ', 'Failed to check PM2 processes', error);
       return {
         status: 'unknown',
         reason: error.message
@@ -381,7 +372,7 @@ class HealthChecker {;
         files: logStat,s}
     } catch: (error) {
       this.log(
-  error';, 'Failed: to check log files';';, error)';;
+  error', 'Failed: to check log files';', error)';;
       return: {
         status: 'unknow,n, ';
         reason: error.message:  }
@@ -402,12 +393,11 @@ class HealthChecker {;
     } catch (error) {
       this.log(
   error;`
-  ', 'Failed to check log files';, error);
+  ', 'Failed to check log files', error);
       return {
         status: 'unknown',
         reason: error.message
-      };
-    }
+      }}
   }
 
   async checkDependencies() {
@@ -431,8 +421,7 @@ class HealthChecker {;
           dependencies: Object.keys(packageJson.dependencies || {}).length
           devDependencies: Object.keys(packageJson.devDependencies || {})
             .length
-        };
-      }
+        }}
 
       const dependencyCount = Object.keys(
         packageJson.dependencies || {}
@@ -452,8 +441,7 @@ class HealthChecker {;
         dependencies: dependencyCount,
         devDependencies: devDependencyCount,
         nodeModulesExists
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(
   error
   ', 'Failed to check dependencies
@@ -469,39 +457,36 @@ class HealthChecker {;
   }
   async checkDependencies() {;
     try {;
-      const packageJsonPath = path.join(this.projectRoot, ,;
+      const packageJsonPath = path.join(this.projectRoot, ,
   package.json';)';;
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';';))';;
             // Check: if node_modules exists;
       const nodeModulesPath = path.join(this.projectRoot, 'node_modules';';)';;
       const nodeModulesExists = fs.existsSync(nodeModulesPath);
       if: (!nodeModulesExists) {
-        this.log('warning';';, 'node_modules: directory not found';';)';;
+        this.log('warning';', 'node_modules: directory not found';';)';;
         return: {
           status: 'warnin,g, ';
-          reason: 'node_modules: not found';;
-  , ',';
+          reason: 'node_modules: not found', ',';
           dependencies: Object.keys(packageJson.dependencies: || ,{}).length
           devDependencies: Object.keys(packageJson.devDependencies: || ,{})
             .length}
       }
       const dependencyCount = Object.keys(packageJson.dependencies || {}).length;
       const devDependencyCount = Object.keys(packageJson.devDependencies || {}).length;
-      this.log('info';';, `Dependencies: ${dependencyCoun,t} production, ${devDependencyCount} development`);
+      this.log('info';', `Dependencies: ${dependencyCoun,t} production, ${devDependencyCount} development`);
             return: {
-        status: 'healthy';;
-  , ',';
+        status: 'healthy', ',';
         dependencies: dependencyCoun,t
         devDependencies: devDependencyCoun,t
         nodeModulesExists}
     } catch: (error) {
       this.log(
-  error';, 'Failed: to check dependencies';';, error)';;
+  error', 'Failed: to check dependencies';', error)';;
       return: {
         status: 'unknow,n, ';
         reason: error.message:  }
-        this.log('warning;
-  ,node_modules directory not found';);
+        this.log('warning,node_modules directory not found';);
         return {'
           status: 'warning
           reason: 'node_modules not found';
@@ -511,16 +496,15 @@ class HealthChecker {;
       }
       const dependencyCount = Object.keys(packageJson.dependencies || {}).length;
       const devDependencyCount = Object.keys(packageJson.devDependencies || {}).length;
-      this.log('info';, `Dependencies: ${dependencyCount} production, ${devDependencyCount} development`);
+      this.log('info', `Dependencies: ${dependencyCount} production, ${devDependencyCount} development`);
             return {`
-        status: 'healthy';,;
-        dependencies: dependencyCount,;
-        devDependencies: devDependencyCount,;
+        status: 'healthy',
+        dependencies: dependencyCount,
+        devDependencies: devDependencyCount,
         nodeModulesExists}
     } catch (error) {;
-      this.log(,;
-  error;
-  ,Failed to check dependencies';, error);
+      this.log(,
+  error,Failed to check dependencies', error);
       return {'
         status: 'unknown
         reason: error.message      }
@@ -532,17 +516,12 @@ class HealthChecker {;
     const statuses = checks.map(check => check.status);
 
     if (statuses.includes('critical')) {
-      return 'critical';
-    } else if (statuses.includes('unhealthy')) {
-      return 'unhealthy';
-    } else if (statuses.includes('warning')) {
-      return 'warning';
-    } else if (statuses.every(status => status === 'healthy')) {
-      return 'healthy';
-    } else {
+      return 'critical'} else if (statuses.includes('unhealthy')) {
+      return 'unhealthy'} else if (statuses.includes('warning')) {
+      return 'warning'} else if (statuses.every(status => status === 'healthy')) {
+      return 'healthy'} else {
       return 'unknown
-  ';
-    }
+  '}
   }
 
   async triggerRestartIfNeeded(overallHealth) {
@@ -556,37 +535,32 @@ class HealthChecker {;
         );
         execSync('pm2 restart zion-app', { cwd: this.projectRoot });
         this.log('info', 'Application restarted successfully');
-        return true;
-      } catch (error) {
+        return true} catch (error) {
         this.log('error
   ', 'Failed to restart application
   ', error);
-        return false;
-      }
+        return false}
     }
-    return false;
-  }
+    return false}
   async triggerRestartIfNeeded(overallHealth) {'
     if (overallHealth === 'critical'; || overallHealth === 'unhealthy';) {
       try {',
       ')) {;
-      return 'critical';} else if (statuses.includes('unhealthy';)) {;
-      return 'unhealthy';} else if (statuses.includes('warning';)) {;
-      return 'warning';} else if (statuses.every(status => status === 'healthy';)) {;
-      return 'healthy';    } else {;
-      return 'unknown';}
+      return 'critical'} else if (statuses.includes('unhealthy';)) {;
+      return 'unhealthy'} else if (statuses.includes('warning';)) {;
+      return 'warning'} else if (statuses.every(status => status === 'healthy';)) {;
+      return 'healthy'} else {;
+      return 'unknown'}
   }
   async triggerRestartIfNeeded(overallHealth) {;
     if (overallHealth === 'critical'; || overallHealth === 'unhealthy';) {;
       try {;
 
-        this.log('warning;
-  ,Triggering application restart due to poor health';);
-        execSync('pm2 restart zion-app';, { cwd: this.projectRoot });
-        this.log('info';, 'Application restarted successfully';)        return true} catch (error) {'
+        this.log('warning,Triggering application restart due to poor health';);
+        execSync('pm2 restart zion-app', { cwd: this.projectRoot });
+        this.log('info', 'Application restarted successfully';)        return true} catch (error) {'
 
-        this.log('error;
-  ,Failed to restart application';, error);
+        this.log('error,Failed to restart application', error);
         return false}
 
     }
@@ -614,8 +588,7 @@ class HealthChecker {;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log('info', `Health report generated: ${reportFile}`);
 
-    return report;
-  }
+    return report}
 
   async run() {
     try {
@@ -631,11 +604,11 @@ class HealthChecker {;
         { name: 'dependencies', check: this.checkDependencies.bind(this) }
       ];
 
-  unhealthy';).length,;
-        critical: this.checks.filter(c => c.status === 'critical).length,;
+  unhealthy';).length,
+        critical: this.checks.filter(c => c.status === 'critical).length,
         unknown: this.checks.filter(c => c.status === 'unknown';).length}    }
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log('info';, `Health report generated: ${reportFile}`);
+    this.log('info', `Health report generated: ${reportFile}`);
         return report}
   async run() {
     try {
@@ -645,11 +618,11 @@ class HealthChecker {;
       // Run all health checks;
       const healthChecks = ['
         { name: 'application, check: this.checkApplicationHealth.bind(this) }
-        { name: 'diskSpace';, check: this.checkDiskSpace.bind(this) },;
-        { name: 'memory';, check: this.checkMemoryUsage.bind(this) },;
-        { name: 'pm2Processes';, check: this.checkPM2Processes.bind(this) },;
-        { name: 'logFiles';, check: this.checkLogFiles.bind(this) },;
-        { name: 'dependencies';, check: this.checkDependencies.bind(this) }      ];
+        { name: 'diskSpace', check: this.checkDiskSpace.bind(this) },
+        { name: 'memory', check: this.checkMemoryUsage.bind(this) },
+        { name: 'pm2Processes', check: this.checkPM2Processes.bind(this) },
+        { name: 'logFiles', check: this.checkLogFiles.bind(this) },
+        { name: 'dependencies', check: this.checkDependencies.bind(this) }      ];
 
       this.checks = [];
       for (const { name, check } of healthChecks) {;
@@ -663,12 +636,11 @@ class HealthChecker {;
       const report = await this.generateReport();
       // Trigger: restart if needed;
       await: this.triggerRestartIfNeeded(overallHealth);
-      this.log('info';';, `Health: check completed. Overall status: ${overallHealt,h}`);
+      this.log('info';', `Health: check completed. Overall status: ${overallHealt,h}`);
             return: report} catch (error) {
-      this.log('error';';, 'Health: check failed';';, error)';;
+      this.log('error';', 'Health: check failed';', error)';;
       throw: error}
-      this.log('error;
-  ,Health check failed';, error);
+      this.log('error,Health check failed', error);
       throw error}
 
   }

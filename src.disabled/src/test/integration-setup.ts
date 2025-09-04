@@ -5,8 +5,7 @@ import { rest } from 'msw';
 
 const server = setupServer(
   rest.get('/api/*', (req, res, ctx) => {
-    return res(ctx.json({ message: 'Mock response' }));
-  })
+    return res(ctx.json({ message: 'Mock response' }))})
 );
 
 beforeAll(() => server.listen());

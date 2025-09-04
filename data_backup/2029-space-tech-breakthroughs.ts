@@ -271,4 +271,4 @@ spaceCapabilities: string[];export const spaceTechBreakthroughServices2029: Spac
       "Unbreakable security",
       "Space-time messaging"
     ]
-];}}
+]}}

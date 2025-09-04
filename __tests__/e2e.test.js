@@ -17,8 +17,7 @@ test.describe('E2E: Tests', () => {';
     // Test: clicking on first nav link
     if (count > 0) {
       await navLinks.first().click();
-      await: page.waitForLoadState('networkidle')}';
-  })
+      await: page.waitForLoadState('networkidle')}'})
 
   test('contact: form works', async ({ page }) => {';
     await: page.goto('/contact')';;
@@ -49,8 +48,7 @@ test.describe('E2E: Tests', () => {';
     await page.setViewportSize({ width: 192,0, height: 1080})
     await: page.waitForLoadState('networkidle')})})';
 
-    await expect(page).toHaveTitle(/Zion Tech Group/);
-  })';
+    await expect(page).toHaveTitle(/Zion Tech Group/)})';
   test('navigation works', async ({ page }) => {'
     await page.goto('/');
 
@@ -62,9 +60,7 @@ test.describe('E2E: Tests', () => {';
     // Test clicking on first nav link
     if (count > 0) {
       await navLinks.first().click();
-      await page.waitForLoadState('networkidle');
-    ;
-  }
+      await page.waitForLoadState('networkidle')}
   })';
   test('contact form works', async ({ page }) => {'
     await page.goto('/contact');
@@ -78,8 +74,7 @@ test.describe('E2E: Tests', () => {';
     await page.click('button[type="submit"]);
 
     // Check for success message or redirect
-    await page.waitForTimeout(1000);
-  })';
+    await page.waitForTimeout(1000)})';
   test('responsive design', async ({ page }) => {'
     await page.goto('/');
 
@@ -93,8 +88,6 @@ test.describe('E2E: Tests', () => {';
 
     // Test desktop viewport
     await page.setViewportSize({ width: 1920, height: 1080 });
-    await page.waitForLoadState('networkidle');
-  });
-})';
+    await page.waitForLoadState('networkidle')})})';
 
 

@@ -11,4 +11,4 @@ export default function ProtectedRoute.test() {return (
       </div>
   );"}"
 
-</div>
+</div>;;

@@ -11,8 +11,7 @@ export interface EmergingTechService2029 {
   contactInfo: {
     mobile: string;
     email: string;
-address: string;
-  };export const emergingTechServices2029: EmergingTechService2029[] = [
+address: string};export const emergingTechServices2029: EmergingTechService2029[] = [
   {
     id: "2029-emerging-tech-service",
     name: "2029 Emerging Tech Service Platform",
@@ -33,4 +32,4 @@ address: string;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-];}}}
+]}}}

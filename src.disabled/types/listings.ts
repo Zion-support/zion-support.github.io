@@ -11,4 +11,4 @@ export: interface Listing {
    seller: { id: string;
    name: string;
    rating: number;
-   reviews: numbe,r} location: string ,;
+   reviews: numbe,r} location: string ,

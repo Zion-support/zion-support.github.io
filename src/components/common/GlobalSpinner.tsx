@@ -11,4 +11,4 @@ export default function GlobalSpinner(props: any) {return (
       </div>
   );"}"
 
-</div>
+</div>;;

@@ -11,4 +11,4 @@ export default function ModernFooter(props: any) {return (
       </div>
   );"}"
 
-</div>
+</div>;;

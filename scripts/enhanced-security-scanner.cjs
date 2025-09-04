@@ -24,8 +24,7 @@ const securityReport = {
 
 function log(level, message) {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
-}
+  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)}
 
 function checkDependencies() {
   log('info', 'Checking dependencies for vulnerabilities');
@@ -42,16 +41,11 @@ function checkDependencies() {
           severity: vuln.severity,
           description: vuln.description,
           recommendation: vuln.recommendation
-        });
-      });
-    }
+        })})}
     
     securityReport.summary.totalChecks++;
-    log('info', 'Dependency security check completed');
-    
-  } catch (error) {
-    log('warn', 'Dependency audit failed', error.message);
-  }
+    log('info', 'Dependency security check completed')} catch (error) {
+    log('warn', 'Dependency audit failed', error.message)}
 }
 
 function checkSecrets() {
@@ -78,11 +72,8 @@ function checkSecrets() {
               severity: 'high',
               description: `Potential secret exposed: ${match.substring(0, 50)}...`,
               recommendation: 'Remove or move secrets to environment variables'
-            });
-          });
-        }
-      });
-    } catch (error) {
+            })})}
+      })} catch (error) {
       // Skip files that can't be read
     }
   }
@@ -95,17 +86,13 @@ function checkSecrets() {
       const stat = fs.statSync(filePath);
       
       if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-        scanDirectory(filePath);
-      } else if (stat.isFile() && /\.(js|ts|jsx|tsx|json|env)$/.test(file)) {
-        scanFile(filePath);
-      }
-    });
-  }
+        scanDirectory(filePath)} else if (stat.isFile() && /\.(js|ts|jsx|tsx|json|env)$/.test(file)) {
+        scanFile(filePath)}
+    })}
   
   scanDirectory(process.cwd());
   securityReport.summary.totalChecks++;
-  log('info', 'Secret scanning completed');
-}
+  log('info', 'Secret scanning completed')}
 
 function checkFilePermissions() {
   log('info', 'Checking file permissions');
@@ -130,16 +117,14 @@ function checkFilePermissions() {
           severity: 'medium',
           description: `File has overly permissive permissions: ${mode.toString(8)}`,
           recommendation: 'Set file permissions to 644 or more restrictive'
-        });
-      }
+        })}
     } catch (error) {
       // File doesn't exist, skip
     }
   });
   
   securityReport.summary.totalChecks++;
-  log('info', 'File permission check completed');
-}
+  log('info', 'File permission check completed')}
 
 function generateRecommendations() {
   const recommendations = [];
@@ -149,16 +134,14 @@ function generateRecommendations() {
       priority: 'critical',
       message: `${securityReport.summary.high} high severity vulnerabilities found`,
       action: 'Address high severity issues immediately'
-    });
-  }
+    })}
   
   if (securityReport.summary.medium > 0) {
     recommendations.push({
       priority: 'high',
       message: `${securityReport.summary.medium} medium severity vulnerabilities found`,
       action: 'Address medium severity issues within 48 hours'
-    });
-  }
+    })}
   
   recommendations.push({
     priority: 'medium',
@@ -172,8 +155,7 @@ function generateRecommendations() {
     action: 'Schedule monthly security reviews'
   });
   
-  return recommendations;
-}
+  return recommendations}
 
 function calculateSecurityScore() {
   let score = 100;
@@ -182,8 +164,7 @@ function calculateSecurityScore() {
   score -= securityReport.summary.medium * 10;
   score -= securityReport.summary.low * 5;
   
-  return Math.max(0, Math.min(100, score));
-}
+  return Math.max(0, Math.min(100, score))}
 
 async function main() {
   try {
@@ -196,8 +177,7 @@ async function main() {
     // Calculate summary
     securityReport.vulnerabilities.forEach(vuln => {
       securityReport.summary.vulnerabilities++;
-      securityReport.summary[vuln.severity]++;
-    });
+      securityReport.summary[vuln.severity]++});
     
     securityReport.summary.securityScore = calculateSecurityScore();
     securityReport.recommendations = generateRecommendations();
@@ -215,17 +195,13 @@ async function main() {
     if (securityReport.vulnerabilities.length > 0) {
       log('warn', 'Vulnerabilities found:');
       securityReport.vulnerabilities.forEach(vuln => {
-        log('warn', `- [${vuln.severity.toUpperCase()}] ${vuln.description}`);
-      });
-    }
+        log('warn', `- [${vuln.severity.toUpperCase()}] ${vuln.description}`)})}
     
     if (securityReport.recommendations.length > 0) {
       log('info', 'Security Recommendations:');
       securityReport.recommendations.forEach(rec => {
         log('info', `- [${rec.priority.toUpperCase()}] ${rec.message}`);
-        log('info', `  Action: ${rec.action}`);
-      });
-    }
+        log('info', `  Action: ${rec.action}`)})}
     
     // Save report
     const reportPath = path.join(process.cwd(), `enhanced-security-report-${securityReport.sessionId}.json`);
@@ -236,19 +212,15 @@ async function main() {
     // Exit with appropriate status
     if (securityReport.summary.securityScore < 50) {
       log('error', 'Security score is below 50% - immediate attention required');
-      process.exit(1);
-    } else if (securityReport.summary.securityScore < 80) {
+      process.exit(1)} else if (securityReport.summary.securityScore < 80) {
       log('warn', 'Security score is below 80% - security improvements recommended');
-      process.exit(0);
-    } else {
+      process.exit(0)} else {
       log('info', 'Security scan completed successfully');
-      process.exit(0);
-    }
+      process.exit(0)}
     
   } catch (error) {
     log('error', 'Fatal error in enhanced security scanner', error.message);
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 main();

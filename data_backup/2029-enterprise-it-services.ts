@@ -11,8 +11,7 @@ export interface EnterpriseItService2029 {
   contactInfo: {
     mobile: string;
     email: string;
-address: string;
-  };export const enterpriseITServices2029: EnterpriseItService2029[] = [
+address: string};export const enterpriseITServices2029: EnterpriseItService2029[] = [
   {
     id: "2029-enterprise-it",
     name: "2029 Enterprise IT Service Platform",
@@ -33,4 +32,4 @@ address: string;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-];}}}
+]}}}

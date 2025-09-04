@@ -9,7 +9,7 @@ function fixRemainingLintErrors(content) {
 
   // Fix Next.js link issues - replace <a> with <Link> for internal navigation;
   fixed = fixed.replace(;
-    /<a\s+href=\/([^]+)"([^>]*)>/g,;
+    /<a\s+href=\/([^]+)"([^>]*)>/g,
     "<Link href="/$1$2>";
   );
   fixed = fixed.replace(/<\/a>/g, "</Link>");
@@ -19,7 +19,7 @@ function fixRemainingLintErrors(content) {
       "import $1;\nimport Link from \"next/link\";"
     );
   if (fixed.includes("<Link") && !fixed.includes("import Link  from "next/link)) {";
-    fixed = fixed.replace(/import\s+([^]+);/, "import $1;\nimport Link from "next/link)";,
+    fixed = fixed.replace(/import\s+([^]+);/, "import $1;\nimport Link from "next/link)",
 }
 ;
   return fixed}
@@ -39,14 +39,13 @@ async function $1() {
       if (content !== fixed) {
   fs.writeFileSync(file, fixed, "utf8');
         console.log(``Fixed: ${file}``);
-        fixedCount++;,
+        fixedCount++,
 }
     } catch (error) {
   console.error(`Error processing ${file}:`, error.message);
-      errorCount++;,
+      errorCount++,
 }
   }
 ;
-  console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``);
-}
+  console.log(``\nCompleted: ${fixedCount} files fixed, ${errorCount} errors``)}
 main().catch(console.error);

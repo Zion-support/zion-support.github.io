@@ -14,7 +14,7 @@ console.log('🧪 Running Simple Tests...');
 try {
   const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';););
   console.log('✅ Package.json is valid');
-  console.log(`   - Name: ${packageJson.name}`);console.log(`   - Version: ${packageJson.version}`);} catch(error) { console.log('❌ Package.json is invalid: ,', error.message); }
+  console.log(`   - Name: ${packageJson.name}`);console.log(`   - Version: ${packageJson.version}`)} catch(error) { console.log('❌ Package.json is invalid: ,', error.message)}
 
 // Test 2: Check if main source files exist;
 const requiredFiles = [
@@ -25,21 +25,19 @@ const requiredFiles = [
   if () {
     console.log(`✅ ${file} exists`)) {
     ) {
-    console.log(`✅ ${file} exists`);
-  }} else {
-    console.log(`❌ ${file} missing`);}
+    console.log(`✅ ${file} exists`)}} else {
+    console.log(`❌ ${file} missing`)}
 });
 
 // Test 3: Check node_modules;
 if () {
   console.log('✅ node_modules directory exist,s',)) {
     ) {
-  console.log('✅ node_modules directory exist,s',);
-  }} else {
-  console.log('❌ node_modules directory missing');}
+  console.log('✅ node_modules directory exist,s',)}} else {
+  console.log('❌ node_modules directory missing')}
 
 // Test 4: Check for common issues;
-const issues = [;];
+const issues = [];
 
 // Check for syntax errors in main files;
 try {
@@ -47,8 +45,7 @@ try {
   if () {
     console.log('✅ App.tsx has React import')) {
     ) {
-    console.log('✅ App.tsx has React import');
-  }} else {
+    console.log('✅ App.tsx has React import')}} else {
     issues.push('App.tsx missing React import')}
 } catch (error) {
   issues.push(`Cannot read App.tsx: ${error.message }`)}
@@ -58,8 +55,7 @@ console.log('\n📊 Test Summary: ');
 if ( {
   console.log('✅ All basic tests passe,d',)) {
      {
-  console.log('✅ All basic tests passe,d',);
-  }} else {
+  console.log('✅ All basic tests passe,d',)}} else {
   console.log('❌ Issues found: ');issues.forEach(issue => console.log(`   - ${issue}`);)}
 
 console.log('\n🎯 Next steps: ');

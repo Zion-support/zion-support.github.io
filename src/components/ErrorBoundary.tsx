@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';';';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 
 interface Props {
@@ -27,10 +27,10 @@ class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo,
     });
-
-    // Log error to monitoring service
-    if (process.env.NODE_ENV === 'production') {
-      // In production, send to error monitoring service
+';
+    // Log error to monitoring service';';
+    if (process.env.NODE_ENV === 'production') {';
+      // In production, send to error monitoring service';';
       console.error('Error caught by boundary:', error, errorInfo);
     }
   }
@@ -54,15 +54,14 @@ class ErrorBoundary extends Component<Props, State> {
       };
 
       // You can send this to your error logging service
-      
-      
-      // Example: Send to external service
-      // fetch('/api/errors', {
-      //   method: 'POST',
+      ';
+      // Example: Send to external service';';
+      // fetch('/api/errors', {';';
+      //   method: 'POST',';';
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(errorData)
-      // });
-  } catch (logError) {
+      // });';
+  } catch (logError) {';';
       console.error('Failed to log error:', logError);
     }
   };
@@ -75,8 +74,8 @@ class ErrorBoundary extends Component<Props, State> {
       showStack: false
     });
   };
-
-  private handleGoHome = () => {
+';
+  private handleGoHome = () => {';';
     window.location.href = '/';
   };
 
@@ -93,24 +92,24 @@ URL: ${window.location.href}
 User Agent: ${navigator.userAgent}
       `.trim();
 
-      navigator.clipboard.writeText(errorText).then(() => {
-        // Show success feedback
+      navigator.clipboard.writeText(errorText).then(() => {';
+        // Show success feedback';';
         const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
-        if (button) {
-          const originalText = button.innerHTML;
-          button.innerHTML = '<CheckCircle className="w-4 h-4" /> Copied!';
+        if (button) {';
+          const originalText = button.innerHTML;';';
+          button.innerHTML = '<CheckCircle className="w-4 h-4" /> Copied!';';';
           button.classList.add('text-green-600');
-          setTimeout(() => {
-            button.innerHTML = originalText;
+          setTimeout(() => {';
+            button.innerHTML = originalText;';';
             button.classList.remove('text-green-600');
           }, 2000);
         }
-      }).catch(() => {
-        // Fallback for older browsers
+      }).catch(() => {';
+        // Fallback for older browsers';';
         const textArea = document.createElement('textarea');
         textArea.value = errorText;
-        document.body.appendChild(textArea);
-        textArea.select();
+        document.body.appendChild(textArea);';
+        textArea.select();';';
         document.execCommand('copy');
         document.body.removeChild(textArea);
       });
@@ -129,7 +128,7 @@ User Agent: ${navigator.userAgent}
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen bg-white">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
               <AlertTriangle className="w-6 h-6 text-red-600" />
@@ -138,8 +137,8 @@ User Agent: ${navigator.userAgent}
             <div className="text-center">
               <h1 className="text-xl font-semibold text-gray-900 mb-2">
                 Something went wrong
-              </h1>
-              <p className="text-gray-600 mb-6">
+              </h1>';
+              <p className="text-gray-600 mb-6">';';
                 We're sorry, but something unexpected happened. Please try refreshing the page.
               </p>
               
@@ -159,8 +158,8 @@ User Agent: ${navigator.userAgent}
                   Refresh Page
                 </button>
               </div>
-            </div>
-            
+            </div>';
+            ';';
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer text-sm font-medium text-gray-700">
@@ -182,15 +181,14 @@ User Agent: ${navigator.userAgent}
 }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 export default ErrorBoundary;
 </svg>
 </div>
 </Props>
 =======
 // Higher-order component for functional components
-export function withErrorBoundary<P extends object>(
-  Component: React.ComponentType<P>,
+export function withErrorBoundary<P extends object>(';
+  Component: React.ComponentType<P>,';';
   errorBoundaryProps?: Omit<Props, 'children'>
 ) {
   return function WrappedComponent(props: P) {
@@ -203,8 +201,8 @@ export function withErrorBoundary<P extends object>(
 }
 
 // Hook for functional components to catch errors
-export function useErrorHandler() {
-  return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {
+export function useErrorHandler() {';
+  return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {';';
     console.error('Error caught by useErrorHandler:', error, errorInfo);
     
     // You can add custom error handling logic here
@@ -219,4 +217,5 @@ export default withErrorBoundary;
 >>>>>>> origin/merge-pr-10615
 =======
 export default ErrorBoundary;
->>>>>>> origin/merge-pr-11195
+>>>>>>> origin/merge-pr-11195';
+;';;';

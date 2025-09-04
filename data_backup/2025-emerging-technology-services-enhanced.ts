@@ -376,4 +376,4 @@ reviews: number;export const emergingTechnologyServicesEnhanced2025: EmergingTec
     customers: 34,
     rating: 4.9,
     reviews: 23
-];}}
+]}}

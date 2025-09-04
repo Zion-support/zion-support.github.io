@@ -18,20 +18,16 @@ export interface MarketValidatedService {
 		mobile: string;
 		email: string;
 		address: string;
-website?: string;
-	};const contactInfo = {
+website?: string};const contactInfo = {
   mobile:,
   +1 302 464 0950',
 	email: 'kleber@ziontechgroup.com,
 	address:,
-  364 E Main St STE 1008 Middletown DE 19709',;
+  364 E Main St STE 1008 Middletown DE 19709',
   ;
   ;
   ;
-  ;
-  website: 'https://ziontechgroup.com;
-;
-};
+  website: 'https://ziontechgroup.com};
 export const marketValidatedServices: MarketValidatedService[] = [
 	// AI and Assistants
 	{
@@ -625,5 +621,4 @@ export const marketValidatedServices: MarketValidatedService[] = [
   '2 hours',
 		contactInfo
 	},
-];
-}
+]}

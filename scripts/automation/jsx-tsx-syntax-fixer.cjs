@@ -12,8 +12,7 @@ const JSX_TSX_FIX_INTERVAL = parseInt(process.env.JSX_TSX_FIX_INTERVAL) || 90000
 class JSXTSXSyntaxFixer {
   constructor() {
     this.fixesApplied = 0;
-    this.fixHistory = [];
-  }
+    this.fixHistory = []}
 
   async run() {
     try {
@@ -45,11 +44,8 @@ class JSXTSXSyntaxFixer {
       // 8. Generate report
       await this.generateReport();
       
-      console.log(`✅ JSX/TSX syntax fixer completed. Applied ${this.fixesApplied} fixes.`);
-      
-    } catch (error) {
-      console.error('❌ JSX/TSX syntax fixer failed:', error.message);
-    }
+      console.log(`✅ JSX/TSX syntax fixer completed. Applied ${this.fixesApplied} fixes.`)} catch (error) {
+      console.error('❌ JSX/TSX syntax fixer failed:', error.message)}
   }
 
   async fixJSXSyntaxErrors() {
@@ -81,10 +77,8 @@ class JSXTSXSyntaxFixer {
         content = content.replace(/\{\s*([^}]+)\s*\}/g, (match, expr) => {
           const trimmed = expr.trim();
           if (trimmed && !trimmed.includes('{') && !trimmed.includes('}')) {
-            return `{${trimmed}}`;
-          }
-          return match;
-        });
+            return `{${trimmed}}`}
+          return match});
         
         // Fix JSX spread operator
         content = content.replace(/\.\.\.\s*([a-zA-Z_$][a-zA-Z0-9_$]*)/g, '...$1');
@@ -92,12 +86,10 @@ class JSXTSXSyntaxFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed JSX syntax errors in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed JSX syntax errors in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix JSX syntax errors in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix JSX syntax errors in ${file}: ${error.message}`)}
     }
   }
 
@@ -120,12 +112,9 @@ class JSXTSXSyntaxFixer {
           const fixedLines = lines.map(line => {
             const trimmed = line.trim();
             if (trimmed && !trimmed.includes(':')) {
-              return `  ${trimmed}: any;`;
-            }
-            return line;
-          });
-          return `interface ${componentName}Props {\n${fixedLines.join('\n')}\n}`;
-        });
+              return `  ${trimmed}: any;`}
+            return line});
+          return `interface ${componentName}Props {\n${fixedLines.join('\n')}\n}`});
         
         // Fix React.FC type annotations
         content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\([^)]*\)\s*=>\s*{/g, 'const $1: React.FC = (props: any) => {');
@@ -138,10 +127,8 @@ class JSXTSXSyntaxFixer {
         // Fix useState type annotations
         content = content.replace(/useState\s*\(\s*([^)]+)\s*\)/g, (match, value) => {
           if (!value.includes('<')) {
-            return `useState<any>(${value})`;
-          }
-          return match;
-        });
+            return `useState<any>(${value})`}
+          return match});
         
         // Fix useEffect type annotations
         content = content.replace(/useEffect\s*\(\s*\(\)\s*=>\s*{/g, 'useEffect(() => {');
@@ -149,12 +136,10 @@ class JSXTSXSyntaxFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed TSX syntax errors in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed TSX syntax errors in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix TSX syntax errors in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix TSX syntax errors in ${file}: ${error.message}`)}
     }
   }
 
@@ -190,12 +175,10 @@ class JSXTSXSyntaxFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed React component syntax in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed React component syntax in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix React component syntax in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix React component syntax in ${file}: ${error.message}`)}
     }
   }
 
@@ -230,16 +213,12 @@ class JSXTSXSyntaxFixer {
           const stylePairs = styleObj.split(',').map(pair => {
             const [key, value] = pair.split(':').map(s => s.trim());
             if (key && value) {
-              return `${key}: ${value}`;
-            }
-            return null;
-          }).filter(Boolean);
+              return `${key}: ${value}`}
+            return null}).filter(Boolean);
           
           if (stylePairs.length > 0) {
-            return `style="{{${stylePairs.join('; ')}}}"`;
-          }
-          return match;
-        });
+            return `style="{{${stylePairs.join('; ')}}}"`}
+          return match});
         
         // Fix event handler attributes
         content = content.replace(/onClick\s*=\s*{([^}]+)}/g, 'onClick={$1}');
@@ -249,12 +228,10 @@ class JSXTSXSyntaxFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed JSX attribute syntax in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed JSX attribute syntax in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix JSX attribute syntax in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix JSX attribute syntax in ${file}: ${error.message}`)}
     }
   }
 
@@ -275,10 +252,8 @@ class JSXTSXSyntaxFixer {
         content = content.replace(/<(\w+)\s*([^>]*)\s*\/\s*>/g, (match, tagName, attrs) => {
           const selfClosingTags = ['img', 'input', 'br', 'hr', 'meta', 'link', 'area', 'base', 'col', 'embed', 'source', 'track', 'wbr'];
           if (selfClosingTags.includes(tagName.toLowerCase())) {
-            return `<${tagName} ${attrs} />`;
-          }
-          return match;
-        });
+            return `<${tagName} ${attrs} />`}
+          return match});
         
         // Fix missing closing tags
         const lines = content.split('\n');
@@ -294,10 +269,8 @@ class JSXTSXSyntaxFixer {
             openMatches.forEach(match => {
               const tagName = match.replace(/[<>]/g, '');
               if (!['img', 'input', 'br', 'hr', 'meta', 'link', 'area', 'base', 'col', 'embed', 'source', 'track', 'wbr'].includes(tagName.toLowerCase())) {
-                openTags.push(tagName);
-              }
-            });
-          }
+                openTags.push(tagName)}
+            })}
           
           // Find closing tags
           const closeMatches = line.match(/<\/(\w+)>/g);
@@ -306,28 +279,23 @@ class JSXTSXSyntaxFixer {
               const tagName = match.replace(/[<>\/]/g, '');
               const index = openTags.lastIndexOf(tagName);
               if (index !== -1) {
-                openTags.splice(index, 1);
-              }
-            });
-          }
+                openTags.splice(index, 1)}
+            })}
         }
         
         // Add missing closing tags
         if (openTags.length > 0) {
           const missingCloses = openTags.reverse().map(tag => `</${tag}>`).join('\n');
-          fixedLines.push(missingCloses);
-        }
+          fixedLines.push(missingCloses)}
         
         const newContent = fixedLines.join('\n');
         if (newContent !== originalContent) {
           fs.writeFileSync(file, newContent);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed JSX closing tags in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed JSX closing tags in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix JSX closing tags in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix JSX closing tags in ${file}: ${error.message}`)}
     }
   }
 
@@ -351,8 +319,7 @@ class JSXTSXSyntaxFixer {
         // Fix fragment imports
         if (content.includes('<>') || content.includes('</>')) {
           if (!content.includes("import React") && !content.includes("import { Fragment }")) {
-            content = "import React from 'react';\n" + content;
-          }
+            content = "import React from 'react';\n" + content}
         }
         
         // Fix fragment usage in return statements
@@ -361,12 +328,10 @@ class JSXTSXSyntaxFixer {
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           this.fixesApplied++;
-          console.log(`  ✅ Fixed JSX fragment syntax in ${file.replace(process.cwd(), '')}`);
-        }
+          console.log(`  ✅ Fixed JSX fragment syntax in ${file.replace(process.cwd(), '')}`)}
         
       } catch (error) {
-        console.log(`  ⚠️  Failed to fix JSX fragment syntax in ${file}: ${error.message}`);
-      }
+        console.log(`  ⚠️  Failed to fix JSX fragment syntax in ${file}: ${error.message}`)}
     }
   }
 
@@ -376,10 +341,8 @@ class JSXTSXSyntaxFixer {
     try {
       // Run TypeScript check for TSX files
       execSync('npm run type-check', { stdio: 'pipe' });
-      console.log('✅ JSX/TSX syntax validation successful');
-    } catch (error) {
-      console.log('⚠️  JSX/TSX syntax validation had issues, but fixes were applied');
-    }
+      console.log('✅ JSX/TSX syntax validation successful')} catch (error) {
+      console.log('⚠️  JSX/TSX syntax validation had issues, but fixes were applied')}
   }
 
   async generateReport() {
@@ -403,8 +366,7 @@ class JSXTSXSyntaxFixer {
     
     // Keep only last 50 entries
     if (this.fixHistory.length > 50) {
-      this.fixHistory = this.fixHistory.slice(-50);
-    }
+      this.fixHistory = this.fixHistory.slice(-50)}
   }
 
   getAllFiles(dir, extensions) {
@@ -418,16 +380,13 @@ class JSXTSXSyntaxFixer {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          traverse(fullPath);
-        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
+          traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath)}
       }
     }
     
     traverse(dir);
-    return files;
-  }
+    return files}
 }
 
 // Main execution
@@ -439,25 +398,20 @@ async function main() {
   
   // Set up continuous fixing
   setInterval(async () => {
-    await fixer.run();
-  }, JSX_TSX_FIX_INTERVAL);
+    await fixer.run()}, JSX_TSX_FIX_INTERVAL);
   
-  console.log(`🔧 JSX/TSX syntax fixer running with ${JSX_TSX_FIX_INTERVAL / 1000}s intervals`);
-}
+  console.log(`🔧 JSX/TSX syntax fixer running with ${JSX_TSX_FIX_INTERVAL / 1000}s intervals`)}
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   console.log('🔧 JSX/TSX syntax fixer shutting down...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 process.on('SIGTERM', () => {
   console.log('🔧 JSX/TSX syntax fixer shutting down...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 // Start the fixer
 main().catch(error => {
   console.error('❌ JSX/TSX syntax fixer failed to start:', error.message);
-  process.exit(1);
-});
+  process.exit(1)});

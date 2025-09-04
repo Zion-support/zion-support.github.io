@@ -517,4 +517,4 @@ integrations: ['Brokerage platforms, ,
   ', 'ISO 27001
   ', 'Financial regulations']
 
-];}}}}}}];
+]}}}}}}];

@@ -6,8 +6,7 @@ const { execSync } = require('child_process');
 
 function log(message, level = 'INFO') {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] [${level}] ${message}`);
-}
+  console.log(`[${timestamp}] [${level}] ${message}`)}
 
 function createPerformanceOptimizations() {
   log('⚡ Creating performance optimizations...');
@@ -18,8 +17,7 @@ function createPerformanceOptimizations() {
 interface PerformanceMetrics {
   loadTime: number;
   memoryUsage: number;
-  renderTime: number;
-}
+  renderTime: number}
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -34,8 +32,7 @@ const PerformanceMonitor: React.FC = () => {
     // Measure page load time
     if (window.performance.timing) {
       const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
-      setMetrics(prev => ({ ...prev, loadTime }));
-    }
+      setMetrics(prev => ({ ...prev, loadTime }))}
 
     // Measure memory usage (if available)
     if ('memory' in performance) {
@@ -43,13 +40,11 @@ const PerformanceMonitor: React.FC = () => {
       setMetrics(prev => ({ 
         ...prev, 
         memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) 
-      }));
-    }
+      }))}
 
     // Measure render time
     const endTime = performance.now();
-    setMetrics(prev => ({ ...prev, renderTime: Math.round(endTime - startTime) }));
-  }, []);
+    setMetrics(prev => ({ ...prev, renderTime: Math.round(endTime - startTime) }))}, []);
 
   return (
     <div className="bg-gray-100 p-4 rounded-lg">
@@ -69,16 +64,14 @@ const PerformanceMonitor: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default PerformanceMonitor;
 `;
 
   const performancePath = path.join(process.cwd(), 'src/components/PerformanceMonitor.tsx');
   fs.writeFileSync(performancePath, performanceMonitorContent);
-  log('Created PerformanceMonitor component');
-}
+  log('Created PerformanceMonitor component')}
 
 function createBundleAnalyzer() {
   log('📊 Creating bundle analyzer...');
@@ -89,8 +82,7 @@ interface BundleInfo {
   totalSize: number;
   jsSize: number;
   cssSize: number;
-  imageSize: number;
-}
+  imageSize: number}
 
 const BundleAnalyzer: React.FC = () => {
   const [bundleInfo, setBundleInfo] = useState<BundleInfo>({
@@ -109,19 +101,16 @@ const BundleAnalyzer: React.FC = () => {
         jsSize: 800 * 1024,      // 800KB
         cssSize: 200 * 1024,     // 200KB
         imageSize: 24 * 1024     // 24KB
-      });
-    };
+      })};
 
-    analyzeBundle();
-  }, []);
+    analyzeBundle()}, []);
 
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  };
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -153,16 +142,14 @@ const BundleAnalyzer: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default BundleAnalyzer;
 `;
 
   const bundlePath = path.join(process.cwd(), 'src/components/BundleAnalyzer.tsx');
   fs.writeFileSync(bundlePath, bundleAnalyzerContent);
-  log('Created BundleAnalyzer component');
-}
+  log('Created BundleAnalyzer component')}
 
 function main() {
   log('🚀 Starting Performance Optimizations');
@@ -170,11 +157,9 @@ function main() {
   try {
     createPerformanceOptimizations();
     createBundleAnalyzer();
-    log('✅ Performance optimizations completed successfully');
-  } catch (error) {
+    log('✅ Performance optimizations completed successfully')} catch (error) {
     log(`❌ Performance optimizations failed: ${error.message}`, 'ERROR');
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 main();
