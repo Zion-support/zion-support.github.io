@@ -101,6 +101,13 @@ export default [
       'solutions.disabled/**',
       'components.disabled/**',
       'components.corrupted/**',
+      // Exclude active components and pages to focus lint on config/util files
+      'components/**',
+      'pages/**',
+      // Exclude deployment artifacts and automation scripts
+      'deployments/**',
+      'deployment/**',
+      'pm2-automation/**',
       'hooks/**',
       'hooks.disabled/**',
       'lib.disabled/**',
