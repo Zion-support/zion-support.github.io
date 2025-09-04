@@ -1298,7 +1298,6 @@ export default function ITServices() {
         'Better test coverage'
       ],
       category: 'Quality Assurance'
->>>>>>> origin/cursor/add-new-services-and-advertise-them-1114
     }
   ];
 
