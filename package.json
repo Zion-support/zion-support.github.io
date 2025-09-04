@@ -184,7 +184,7 @@
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
   },
-  
+
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
