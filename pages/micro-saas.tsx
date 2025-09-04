@@ -1,11 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar, Headphones, RefreshCw, Video, Stethoscope, Cpu } from 'lucide-react';
-=======
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Smartphone, Calendar, Video, Package, Target } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
+import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar, Headphones, RefreshCw, Video, Stethoscope, Cpu, Smartphone, Package, Target } from 'lucide-react';
 
 export default function MicroSaaS() {
   const contact = {
@@ -1074,18 +1070,17 @@ export default function MicroSaaS() {
     {
       icon: Brain,
       name: 'AI-Powered Email Responder',
-<<<<<<< HEAD
-      description: 'Intelligent email automation that reads, analyzes, and responds to emails with human-like accuracy and context awareness.',
+      description: 'Intelligent email automation that analyzes incoming messages, generates appropriate responses, and flags important communications for human review.',
       features: [
-        'Natural language processing for email understanding',
-        'Context-aware response generation',
-        'Priority classification and urgent flagging',
-        'Multi-language support and translation',
-        'Integration with CRM and business systems',
-        'Learning from user feedback and corrections'
+        'Natural language processing for email analysis',
+        'Automated response generation with brand voice',
+        'Priority flagging and urgent message detection',
+        'Sentiment analysis and customer mood tracking',
+        'Integration with CRM and support systems',
+        'Learning from human feedback and corrections'
       ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
+      pricing: '$199 – $1,299/month',
+      timeline: '2–3 weeks',
       benefits: [
         '80% reduction in email response time',
         '24/7 automated email handling',
