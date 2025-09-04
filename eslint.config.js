@@ -164,6 +164,7 @@ export default [
 
       // Public assets/scripts
       'public/**',
+      '.venv/**',
 
       // Root-level noisy files
       'api/**',
