@@ -10,7 +10,7 @@ interface FormData {
   message: string;
 }
 
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC = (): JSX.Element => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',

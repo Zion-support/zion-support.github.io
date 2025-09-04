@@ -1,42 +1,42 @@
 {
-  "timestamp": "2025-09-04T02:05:35.069Z",
+  "timestamp": "2025-09-04T02:34:24.686Z",
   "status": "failed",
   "fixes": [
     {
       "name": "TypeScript Errors",
       "status": "warning",
-      "duration": 837,
-      "message": "Fixed 0/2 TypeScript errors",
+      "duration": 1241,
+      "message": "Fixed 0/16 TypeScript errors",
       "details": {
-        "totalErrors": 2,
+        "totalErrors": 16,
         "fixed": 0
       }
     },
     {
       "name": "ESLint Errors",
-      "status": "warning",
-      "duration": 2650,
-      "message": "Fixed 0/0 ESLint errors",
-      "details": {
-        "totalErrors": 0,
-        "fixed": 0
-      }
+      "status": "success",
+      "duration": 1918,
+      "message": "No ESLint errors found",
+      "details": null
     },
     {
       "name": "Import Errors",
       "status": "success",
-      "duration": 4,
-      "message": "Fixed import issues in 0 files",
+      "duration": 7,
+      "message": "Fixed import issues in 4 files",
       "details": {
-        "filesFixed": 0
+        "filesFixed": 4
       }
     },
     {
       "name": "Build Errors",
-      "status": "success",
-      "duration": 11601,
-      "message": "Build successful - no errors to fix",
-      "details": null
+      "status": "warning",
+      "duration": 5545,
+      "message": "Fixed 0/0 build errors",
+      "details": {
+        "totalErrors": 0,
+        "fixed": 0
+      }
     }
   ],
   "errors": [],
