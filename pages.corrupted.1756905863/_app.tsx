@@ -2,7 +2,8 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
-import PerformanceMonitor from '../src/components/PerformanceMonitor';
+// Temporarily disable PerformanceMonitor due to src being disabled
+// import PerformanceMonitor from '../src/components/PerformanceMonitor';
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -13,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>Zion Tech Group — AI, IT & Micro SaaS</title>
       </Head>
       <div className="min-h-screen flex flex-col">
-        <PerformanceMonitor />
+        {/* <PerformanceMonitor /> */}
         <main className="flex-grow">
           <Component {...pageProps} />
         </main>
