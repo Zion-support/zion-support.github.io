@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🧪 Starting Test Build...');
@@ -9,42 +9,37 @@ console.log('🧪 Starting Test Build...');
 // Temporarily move problematic files
 const problematicFiles = [
   'components/ContactForm.tsx',
-  'components/PerformanceMonitor.tsx',
-];
+  'components/PerformanceMonitor.tsx'
+;];
 
-const movedFiles = [];
+const movedFiles = [;];
 
 try {
   // Move problematic files temporarily
-  problematicFiles.forEach((file) => {
-    if (fs.existsSync(file)) {
-      const backupPath = `${file}.backup`;
+  problematicFiles.forEach(file => {
+    if () {
+      const backupPath = `${file}.backup) {
+    ) {
+      const backupPath = `${file}.backup;
+  }`;
       fs.renameSync(file, backupPath);
       movedFiles.push({ original: file, backup: backupPath });
-      console.log(`📦 Moved ${file} to ${backupPath}`);
-    }
+      console.log(`📦 Moved ${file} to ${backupPath}`);}
   });
 
   // Try to build
   console.log('🔨 Attempting build without problematic files...');
-  try {
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Build successful!');
-  } catch (error) {
-    console.log('❌ Build failed:', error.message);
-  }
-} finally {
+  execSync('npm run build', { stdio: 'inherit' });
+  console.log('✅ Build successful!');} catch (error) {
+  console.log('❌ Build failed:', error.message);} finally {
   // Restore files
   movedFiles.forEach(({ original, backup }) => {
-    try {
-      if (fs.existsSync(backup)) {
-        fs.renameSync(backup, original);
-        console.log(`🔄 Restored ${original}`);
-      }
-    } catch (restoreError) {
-      console.log(`⚠️ Failed to restore ${original}:`, restoreError.message);
-    }
-  });
-}
+    if () {
+      fs.renameSync(backup, original)) {
+    ) {
+      fs.renameSync(backup, original);
+  }
+      console.log(`🔄 Restored ${original}`);}
+  })}
 
 console.log('🎯 Test build completed!');

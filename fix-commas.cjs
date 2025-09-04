@@ -1,4 +1,4 @@
-const fs = require('fs';);
+const fs = require('fs')
 
 function fixCommas(filePath) {
   let content = fs.readFileSync(filePath, 'utf8';);

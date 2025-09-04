@@ -5,8 +5,8 @@
  * Monitors and optimizes application performance
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 class SmartPerformanceOptimizer {

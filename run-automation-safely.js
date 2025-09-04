@@ -6,8 +6,8 @@
  */
 
 const { execSync, spawn } = require('child_process');
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class SafeAutomationRunner {
   constructor() { this.logDir = path.join(__dirname, 'automation', 'logs');

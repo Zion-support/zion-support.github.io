@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
+const fs = require('fs')
 
 console.log('🔧 Fixing SearchBar type properties...');
 

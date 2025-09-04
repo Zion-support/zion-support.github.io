@@ -5,8 +5,8 @@
  * Sets up comprehensive monitoring for the application
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class MonitoringAutomation {
   constructor() {
@@ -50,8 +50,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     this.log('Created health check endpoint', 'SUCCESS')}
 
   createMetricsCollector() {
-    const metrics = `const fs = require('fs';);
-const path = require('path';);
+    const metrics = `const fs = require('fs')
+const path = require('path')
 
 class MetricsCollector {
   constructor() {
@@ -133,7 +133,7 @@ module.exports = MetricsCollector;`;
     this.log('Created metrics collector', 'SUCCESS')}
 
   createAlerting() {
-    const alerting = `const nodemailer = require('nodemailer';);
+    const alerting = `const nodemailer = require('nodemailer')
 
 class AlertingSystem {
   constructor() {

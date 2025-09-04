@@ -5,8 +5,8 @@
  * Analyzes and improves the application;
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class AppImprover {
   constructor() { this.improvements = [];
@@ -175,8 +175,8 @@ module.exports = nextConfig;`;
 
   createPerformanceScript() { const performanceScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class PerformanceOptimizer {
   constructor() {
@@ -243,7 +243,7 @@ module.exports = PerformanceOptimizer`;
   createSecurityScript() { const securityScript = `#!/usr/bin/env node
 
 const { execSync  } = require('child_process';);
-const fs = require('fs';);
+const fs = require('fs')
 
 class SecurityAuditor {
   constructor() { this.issues = [];

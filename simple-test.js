@@ -5,8 +5,8 @@
  * Basic functionality test without complex automation;
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 console.log('🧪 Running Simple Tests...');
 

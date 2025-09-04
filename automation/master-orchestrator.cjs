@@ -4,8 +4,8 @@
  * Master Automation Orchestrator
  * Coordinates all automation processes
  */
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 class MasterOrchestrator {

@@ -5,8 +5,8 @@
  * Checks for broken links and validates URLs
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const https = require('https';);
 const http = require('http';);
 const { URL } = require('url');

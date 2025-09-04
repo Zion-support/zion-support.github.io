@@ -5,8 +5,8 @@
  * Manages PM2 processes and ensures synchronization
  */
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 class PM2SyncAutomation {

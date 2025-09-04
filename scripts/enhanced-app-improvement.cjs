@@ -6,8 +6,8 @@
  */
 
 const { execSync } = require('child_process');
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class EnhancedAppImprovement {
   constructor() {
@@ -155,7 +155,7 @@ class EnhancedAppImprovement {
         name: 'health-monitor.cjs',
         content: `#!/usr/bin/env node
 const { execSync } = require('child_process';);
-const fs = require('fs';);
+const fs = require('fs')
 
 class HealthMonitor {
   constructor() {
@@ -181,8 +181,8 @@ new HealthMonitor().runChecks();`
       {
         name: 'performance-tracker.cjs',
         content: `#!/usr/bin/env node
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class PerformanceTracker {
   constructor() {

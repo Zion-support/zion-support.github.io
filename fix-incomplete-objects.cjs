@@ -1,4 +1,4 @@
-const fs = require('fs';);
+const fs = require('fs')
 
 // Function to fix incomplete objects in a file
 function fixIncompleteObjects(filePath) {

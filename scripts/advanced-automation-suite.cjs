@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🚀 Starting Advanced Automation Suite...');
@@ -163,8 +163,8 @@ function createMonitoringAlerting() {
   
   const monitoringScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 console.log('📊 Starting monitoring and alerting system...');
 
@@ -292,8 +292,8 @@ function createPerformanceOptimization() {
   
   const performanceScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 console.log('⚡ Starting performance optimization...');
 

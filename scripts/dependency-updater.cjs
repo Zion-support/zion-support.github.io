@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
+const fs = require('fs')
 const { execSync } = require('child_process');
 
 console.log('📦 Starting dependency update check...');

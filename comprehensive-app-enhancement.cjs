@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 const { execSync } = require('child_process');
 
 console.log('🚀 Starting Comprehensive App Enhancement...');
@@ -51,8 +51,8 @@ class AppEnhancement {
       // Create performance optimization script
       const perfScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
-const path = require('path';);
+const fs = require('fs')
+const path = require('path')
 
 class PerformanceEnhancer {
   constructor() {
@@ -349,7 +349,7 @@ enhancer.generateReport();
       // Create UX enhancement script
       const uxScript = `#!/usr/bin/env node
 
-const fs = require('fs';);
+const fs = require('fs')
 
 class UXEnhancer {
   constructor() {
