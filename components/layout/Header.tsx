@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> origin/merge-pr-10614
 import Link from 'next/link';
 
 export default function Header() {
@@ -16,4 +20,10 @@ export default function Header() {
       </div>
     </header>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default Header;
+>>>>>>> origin/merge-pr-10614

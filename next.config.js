@@ -4,11 +4,21 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
+<<<<<<< HEAD
   
   // Enable proper error checking
   eslint: { 
     ignoreDuringBuilds: false,
     dirs: ['pages', 'src/components', 'src/lib', 'src/hooks']
+=======
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  // Only treat *.route.tsx/ts as pages to avoid compiling corrupted files
+  // Compile only whitelisted page files to avoid corrupted files
+  pageExtensions: ['route.tsx', 'route.ts'],
+  images: {
+    domains: ["localhost", "ziontechgroup.com"],
+>>>>>>> origin/merge-pr-10614
   },
   typescript: { 
     ignoreBuildErrors: true 
@@ -88,6 +98,52 @@ const nextConfig = {
       },
     ];
   },
+<<<<<<< HEAD
+=======
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ];
+  },
+  experimental: {
+    scrollRestoration: true
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' }
+        ]
+      }
+    ];
+  }
+>>>>>>> origin/merge-pr-10614
 };
 
 export default nextConfig;
