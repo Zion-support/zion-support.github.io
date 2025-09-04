@@ -40,12 +40,12 @@ yarn add @ziontechgroup/sdk`}
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#fbbf24' }}>Basic Usage</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
+              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`import { ZionTechClient } from '@ziontechgroup/sdk';
 
 const client = new ZionTechClient({
   apiKey: 'your-api-key',
-    environment: 'production' // or 'sandbox'
+  environment: 'production' // or 'sandbox'
 });
 
 // Get all services
@@ -73,7 +73,7 @@ const quote = await client.quotes.create({
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#10b981' }}>Installation</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
+              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`pip install ziontechgroup-sdk
 
 # or
@@ -83,11 +83,11 @@ pipenv install ziontechgroup-sdk`}
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#10b981' }}>Basic Usage</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
+              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`from ziontechgroup import ZionTechClient
 
 client = ZionTechClient(
-    api_key='your-api-key'
+    api_key='your-api-key',
     environment='production'  # or 'sandbox'
 )
 
@@ -116,21 +116,21 @@ quote = client.quotes.create({
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#8b5cf6' }}>Installation</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
+              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`composer require ziontechgroup/sdk`}
               </pre>
             </div>
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8, marginBottom: 20  }}>
               <h3 style={{ fontWeight: 600, marginBottom: 12, color: '#8b5cf6' }}>Basic Usage</h3>
-              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>`
+              <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>
 {`<?php
 require_once 'vendor/autoload.php';
 
 use ZionTechGroup\\SDK\\ZionTechClient;
->
-$client = new ZionTechClient([>
-    'api_key' => 'your-api-key'
+
+$client = new ZionTechClient([
+    'api_key' => 'your-api-key',
     'environment' => 'production' // or 'sandbox'
 ]);
 
@@ -139,13 +139,13 @@ $services = $client->services()->list();
 
 // Request a quote
 $quote = $client->quotes()->create([
-    'service_id' => 'micro-saas'
+    'service_id' => 'micro-saas',
     'requirements' => [
         'users' => 100,
-        'features' => ['analytics' 'api-access']
+        'features' => ['analytics', 'api-access']
     ],
     'contact' => [
-        'name' => 'John Doe'
+        'name' => 'John Doe',
         'email' => 'john@example.com'
     ]
 ]);
@@ -158,22 +158,22 @@ $quote = $client->quotes()->create([
           <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>✨ SDK Features</h2>
             <div style={{ display: 'grid', gap: 20 }}>
-              <div style={{ padding: 20, background: 'borderRadius', 8, border: '1px solid rgba(34, 197, 94, 0.2)' }}>
+              <div style={{ padding: 20, background: 'rgba(34, 197, 94, 0.1)', borderRadius: 8, border: '1px solid rgba(34, 197, 94, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#86efac' }}>🔧 Easy Integration</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Simple, intuitive APIs that make integration straightforward and fast.</p>
               </div>
               
-              <div style={{ padding: 20, background: 'borderRadius', 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
+              <div style={{ padding: 20, background: 'rgba(59, 130, 246, 0.1)', borderRadius: 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>🛡️ Built-in Security</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Automatic authentication, request signing, and secure communication.</p>
               </div>
               
-              <div style={{ padding: 20, background: 'borderRadius', 8, border: '1px solid rgba(139, 92, 246, 0.2)' }}>
+              <div style={{ padding: 20, background: 'rgba(139, 92, 246, 0.1)', borderRadius: 8, border: '1px solid rgba(139, 92, 246, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#c4b5fd' }}>📚 Comprehensive Documentation</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Detailed documentation with examples for every method and feature.</p>
               </div>
               
-              <div style={{ padding: 20, background: 'borderRadius', 8, border: '1px solid rgba(245, 158, 11, 0.2)' }}>
+              <div style={{ padding: 20, background: 'rgba(245, 158, 11, 0.1)', borderRadius: 8, border: '1px solid rgba(245, 158, 11, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>🔄 Auto-retry & Rate Limiting</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Automatic retry logic and rate limit handling for reliable API calls.</p>
               </div>
@@ -186,7 +186,7 @@ $quote = $client->quotes()->create([
             <p style={{ opacity: '0.8', marginBottom: 20 }}>Ready to start using our SDKs? Follow these steps:</p>
             
             <div style={{ display: 'grid', gap: 16 }}>
-              <div style={{ display: 'alignItems', 'center' gap: 12, padding: 16, background: 'borderRadius', 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(255,255,255,0.05)', borderRadius: 8 }}>
                 <div style={{ fontSize: '1.5rem' }}>1️⃣</div>
                 <div>
                   <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Get Your API Key</h3>
@@ -194,7 +194,7 @@ $quote = $client->quotes()->create([
                 </div>
               </div>
               
-              <div style={{ display: 'alignItems', 'center' gap: 12, padding: 16, background: 'borderRadius', 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(255,255,255,0.05)', borderRadius: 8 }}>
                 <div style={{ fontSize: '1.5rem' }}>2️⃣</div>
                 <div>
                   <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Install the SDK</h3>
@@ -202,7 +202,7 @@ $quote = $client->quotes()->create([
                 </div>
               </div>
               
-              <div style={{ display: 'alignItems', 'center' gap: 12, padding: 16, background: 'borderRadius', 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(255,255,255,0.05)', borderRadius: 8 }}>
                 <div style={{ fontSize: '1.5rem' }}>3️⃣</div>
                 <div>
                   <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Start Building</h3>
@@ -216,19 +216,28 @@ $quote = $client->quotes()->create([
           <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 16  }}>🤝 Need Help?</h2>
             <p style={{ opacity: '0.8', marginBottom: 20 }}>Our team is here to help you get the most out of our SDKs.</p>
-            <div style={{ display: 'gap', 16, flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
               <Link href="/contact" style={{ 
-                display: 'padding', '12px 24px' 
-                background: 'color', 'white' >
-                textDecoration: 'borderRadius', 8, >
-                fontWeight: '600 >'}}>
+                display: 'inline-block',
+                padding: '12px 24px',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontWeight: '600'
+              }}>
                 Contact Support
               </Link>
               <Link href="/docs/integration-examples" style={{ 
-                display: 'padding', '12px 24px' 
-                background: 'color', 'white' >
-                textDecoration: 'borderRadius', 8, >
-                fontWeight: '600 >'}}>
+                display: 'inline-block',
+                padding: '12px 24px',
+                background: 'transparent',
+                color: 'white',
+                textDecoration: 'none',
+                borderRadius: 8,
+                border: '1px solid rgba(255,255,255,0.2)',
+                fontWeight: '600'
+              }}>
                 View Examples
               </Link>
             </div>
