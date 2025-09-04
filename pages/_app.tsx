@@ -68,12 +68,12 @@ function Header(): any {
             <Link href="/careers" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Careers</Link>
             <Link href="/contact" style={{ 
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white',
-              padding: '12px 16px',
-              textDecoration: 'none',
-              borderRadius: 6,
-              textAlign: 'center',
-              fontWeight: 600,
+              color: 'white', 
+              padding: '12px 16px', 
+              textDecoration: 'none', 
+              borderRadius: 6, 
+              textAlign: 'center', 
+              fontWeight: 600, 
               marginTop: 8
             }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
@@ -86,23 +86,23 @@ function Header(): any {
 function Footer(): any {
   return (
     <footer style={{ 
-      background: 'linear-gradient(135deg, #0b1220, #1e293b)',
-      color: 'white',
-      marginTop: 60,
+      background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
+      color: 'white', 
+      marginTop: 60, 
       borderTop: '1px solid rgba(255,255,255,0.1)'
     }}>
       <div style={{ 
-        maxWidth: 1400,
-        margin: '0 auto',
+        maxWidth: 1400, 
+        margin: '0 auto', 
         padding: '40px 20px',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-        gap: 32
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+        gap: 32 
       }}>
         {/* Company Info */}
         <div style={{ display: 'grid', gap: 12 }}>
           <div style={{ 
-            fontWeight: 800,
+            fontWeight: 800, 
             fontSize: '1.25rem',
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
             WebkitBackgroundClip: 'text',
@@ -112,25 +112,25 @@ function Footer(): any {
           <p style={{ opacity: 0.8, lineHeight: 1.6 }}>
             Transforming businesses through innovative AI, quantum computing, and cutting-edge technology solutions.
           </p>
-          <div style={{ display: 'grid', gap: 6, fontSize: '0.9rem' }}>
-            <div>📞 <a href="tel:+13024640950" style={{ color: '#93c5fd', textDecoration: 'none' }}>+1 302 464 0950</a></div>
-            <div>✉️ <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none' }}>kleber@ziontechgroup.com</a></div>
+          <div style={{ display: 'grid', gap: 6, fontSize: '0.9rem'}}>
+            <div>📞 <a href="tel:+13024640950" style={{ color: '#93c5fd', textDecoration: 'none'}}>+1 302 464 0950</a></div>
+            <div>✉️ <a href="mailto:kleber@ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none'}}>kleber@ziontechgroup.com</a></div>
             <div>📍 364 E Main St STE 1008, Middletown DE 19709</div>
-            <div>🌐 <a href="https://ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none' }}>ziontechgroup.com</a></div>
+            <div>🌐 <a href="https://ziontechgroup.com" style={{ color: '#93c5fd', textDecoration: 'none'}}>ziontechgroup.com</a></div>
           </div>
         </div>
 
         {/* Services */}
         <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Our Services</h3>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem'}}>Our Services</h3>
           <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/solutions" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Solutions</Link>
-            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>All Services</Link>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Micro SaaS Products</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI Services</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>IT Services</Link>
-            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Services Catalog</Link>
-            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Pricing</Link>
+            <Link href="/solutions" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Solutions</Link>
+            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>All Services</Link>
+            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Micro SaaS Products</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>AI Services</Link>
+            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>IT Services</Link>
+            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Services Catalog</Link>
+            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Pricing</Link>
             <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
               <div>• 150+ Micro SaaS Products</div>
               <div>• 100+ AI Services</div>
@@ -141,40 +141,40 @@ function Footer(): any {
 
         {/* Solutions */}
         <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Solutions</h3>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem'}}>Solutions</h3>
           <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/solutions" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Digital Transformation</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>AI & Machine Learning</Link>
-            <Link href="/cybersecurity" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cybersecurity</Link>
-            <Link href="/cloud-devops" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Cloud & DevOps</Link>
-            <Link href="/quantum-computing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Quantum Computing</Link>
-            <Link href="/green-it" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Green IT</Link>
-            <Link href="/research-development" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Research & Development</Link>
-            <Link href="/request-quote" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Request Quote</Link>
+            <Link href="/solutions" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Digital Transformation</Link>
+            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>AI & Machine Learning</Link>
+            <Link href="/cybersecurity" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Cybersecurity</Link>
+            <Link href="/cloud-devops" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Cloud & DevOps</Link>
+            <Link href="/quantum-computing" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Quantum Computing</Link>
+            <Link href="/green-it" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Green IT</Link>
+            <Link href="/research-development" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Research & Development</Link>
+            <Link href="/request-quote" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Request Quote</Link>
           </div>
         </div>
 
         {/* Company */}
         <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Company</h3>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem'}}>Company</h3>
           <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Home</Link>
-            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>About Us</Link>
-            <Link href="/careers" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Careers</Link>
-            <Link href="/partners" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Partners</Link>
-            <Link href="/news" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>News</Link>
-            <Link href="/blog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Blog</Link>
-            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Contact Us</Link>
-            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>FAQ</Link>
-            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Privacy Policy</Link>
-            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white' }}>Terms of Service</Link>
+            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Home</Link>
+            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>About Us</Link>
+            <Link href="/careers" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Careers</Link>
+            <Link href="/partners" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Partners</Link>
+            <Link href="/news" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>News</Link>
+            <Link href="/blog" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Blog</Link>
+            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Contact Us</Link>
+            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>FAQ</Link>
+            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Privacy Policy</Link>
+            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none', color: 'white'}}>Terms of Service</Link>
           </div>
         </div>
 
         {/* Contact CTA */}
         <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Get Started</h3>
-          <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.1rem'}}>Get Started</h3>
+          <p style={{ opacity: 0.8, fontSize: '0.9rem'}}>
             Ready to transform your business with our innovative solutions?
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -216,8 +216,8 @@ function Footer(): any {
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
-          <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
+          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none'}}>Privacy Policy</Link> | 
+          <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none'}}>Terms of Service</Link>
         </small>
       </div>
     </footer>
