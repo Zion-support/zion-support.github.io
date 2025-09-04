@@ -50,7 +50,7 @@ const ContactForm: React.FC = () => {
       });
       
       setSubmitStatus('success');
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -61,7 +61,7 @@ const ContactForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="space-y-6">
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-          Thank you for your message! We'll get back to you soon.
+          Thank you for your message! We&apos;ll get back to you soon.
         </div>
       )}
       

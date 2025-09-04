@@ -1,11 +1,18 @@
 import React, { useEffect } from 'react';
 
+// Type definitions for Performance Observer
+declare global {
+  interface Window {
+    PerformanceObserver: any;
+  }
+}
+
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor Largest Contentful Paint (LCP)
-      const observer = new PerformanceObserver((list) => {
+      const observer = new window.PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
@@ -20,7 +27,7 @@ const PerformanceMonitor: React.FC = () => {
       }
 
       // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new window.PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
             console.log('FID:', entry.processingStart - entry.startTime);
@@ -36,7 +43,7 @@ const PerformanceMonitor: React.FC = () => {
 
       // Monitor Cumulative Layout Shift (CLS)
       let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new window.PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
