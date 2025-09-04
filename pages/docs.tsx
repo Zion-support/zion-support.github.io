@@ -4,53 +4,54 @@ import Link from 'next/link';
 import { Book, FileText, Video, Download, Search, ExternalLink } from 'lucide-react';
 
 export default function Documentation() {
-  const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
-  }
+  const contact = {
+    email: 'kleber@ziontechgroup.com',
+    phone: '+1-302-464-0950',
+    site: 'https://ziontechgroup.com'
+  };
   const documentationSections = [
     {
       icon: Book,
-      title: 'Getting Started'
-      description: 'Quick start guides and tutorials to help you begin using our services.'
+      title: 'Getting Started',
+      description: 'Quick start guides and tutorials to help you begin using our services.',
       items: [
-        { name: 'Quick Start Guide' link: '/docs/getting-started' },
-        { name: 'API Overview' link: '/docs/api-overview' },
-        { name: 'Authentication' link: '/docs/authentication' },
-        { name: 'First Steps' link: '/docs/first-steps' }
+        { name: 'Quick Start Guide', link: '/docs/getting-started' },
+        { name: 'API Overview', link: '/docs/api-overview' },
+        { name: 'Authentication', link: '/docs/authentication' },
+        { name: 'First Steps', link: '/docs/first-steps' }
       ]
     },
     {
       icon: FileText,
-      title: 'API Documentation'
-      description: 'Comprehensive API reference and integration guides.'
+      title: 'API Documentation',
+      description: 'Comprehensive API reference and integration guides.',
       items: [
-        { name: 'REST API Reference' link: '/docs/api-reference' },
-        { name: 'Webhook Integration' link: '/docs/webhooks' },
-        { name: 'SDK Documentation' link: '/docs/sdk' },
-        { name: 'Rate Limits' link: '/docs/rate-limits' }
+        { name: 'REST API Reference', link: '/docs/api-reference' },
+        { name: 'Webhook Integration', link: '/docs/webhooks' },
+        { name: 'SDK Documentation', link: '/docs/sdk' },
+        { name: 'Rate Limits', link: '/docs/rate-limits' }
       ]
     },
     {
       icon: Video,
-      title: 'Tutorials & Guides'
-      description: 'Step-by-step tutorials and best practices.'
+      title: 'Tutorials & Guides',
+      description: 'Step-by-step tutorials and best practices.',
       items: [
-        { name: 'Video Tutorials' link: '/docs/video-tutorials' },
-        { name: 'Code Examples' link: '/docs/code-examples' },
-        { name: 'Best Practices' link: '/docs/best-practices' },
-        { name: 'Troubleshooting' link: '/docs/troubleshooting' }
+        { name: 'Video Tutorials', link: '/docs/video-tutorials' },
+        { name: 'Code Examples', link: '/docs/code-examples' },
+        { name: 'Best Practices', link: '/docs/best-practices' },
+        { name: 'Troubleshooting', link: '/docs/troubleshooting' }
       ]
     },
     {
       icon: Download,
-      title: 'Resources'
-      description: 'Downloadable resources and additional materials.'
+      title: 'Resources',
+      description: 'Downloadable resources and additional materials.',
       items: [
-        { name: 'White Papers' link: '/docs/white-papers' },
-        { name: 'Case Studies' link: '/docs/case-studies' },
-        { name: 'Templates' link: '/docs/templates' },
-        { name: 'Changelog' link: '/docs/changelog' }
+        { name: 'White Papers', link: '/docs/white-papers' },
+        { name: 'Case Studies', link: '/docs/case-studies' },
+        { name: 'Templates', link: '/docs/templates' },
+        { name: 'Changelog', link: '/docs/changelog' }
       ]
     }
   ];
