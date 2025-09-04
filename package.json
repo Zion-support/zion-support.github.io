@@ -51,7 +51,7 @@
     "automation:coordinator": "node automation/master-automation-coordinator.js",
     "automation:coordinator:dev": "nodemon automation/master-automation-coordinator.js",
     "automation:all": "npm run automation:master",
-    "automation:status": "node automation/check_automation_status.js",
+    "automation:status": "node automation/check_automation_status.cjs",
     "automation:restart": "node automation/restart-all-automation.js",
     "automation:enhance": "node automation/enhance-all-automation.js",
     "autonomous:start": "node automation/launch-autonomous-systems-clean.js start",
