@@ -91,7 +91,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       existingErrors.push(errorReport);
       localStorage.setItem('error_reports', JSON.stringify(existingErrors.slice(-10))); // Keep last 10
     } catch (e) {
-      console.warn('Failed to store error report locally:', e);
+      
     }
   };
 

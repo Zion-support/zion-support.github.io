@@ -93,7 +93,7 @@ class AccessibilityManager {
         this.state = { ...this.state, ...preferences };
       }
     } catch (e) {
-      console.warn('Failed to load accessibility preferences:', e);
+      
     }
   }
 
@@ -101,7 +101,7 @@ class AccessibilityManager {
     try {
       localStorage.setItem('accessibility_preferences', JSON.stringify(this.state));
     } catch (e) {
-      console.warn('Failed to save accessibility preferences:', e);
+      
     }
   }
 

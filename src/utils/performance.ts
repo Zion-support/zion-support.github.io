@@ -184,8 +184,7 @@ class PerformanceMonitor {
   private reportMetrics(): void {
     if (!this.config.enableMonitoring) return;
 
-    console.log('Performance Metrics:', {
-      loadTime: `${this.metrics.loadTime.toFixed(2)}ms`,
+    }ms`,
       renderTime: `${this.metrics.renderTime.toFixed(2)}ms`,
       memoryUsage: `${(this.metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB`,
       bundleSize: `${(this.metrics.bundleSize / 1024).toFixed(2)}KB`,

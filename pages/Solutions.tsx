@@ -25,6 +25,12 @@ export default function Solutions() {
           description: "Advanced analytics and business intelligence platform",
           price: "$499/month",
           features: ["Real-time dashboards", "Predictive analytics", "Custom reports", "Data visualization"]
+        },
+        {
+          name: "Cybersecurity Solutions",
+          description: "Comprehensive cybersecurity platform with advanced threat detection",
+          price: "$799/month",
+          features: ["24/7 threat monitoring", "Vulnerability scanning", "Incident response", "Compliance management"]
         }
       ]
     },
@@ -49,6 +55,42 @@ export default function Solutions() {
           description: "Intelligent project management and team collaboration",
           price: "$199/month",
           features: ["Smart task assignment", "Progress tracking", "Resource optimization", "Team collaboration"]
+        },
+        {
+          name: "IT Infrastructure Management",
+          description: "Complete IT infrastructure management and optimization",
+          price: "$1,299/month",
+          features: ["Network setup", "Server maintenance", "Backup solutions", "Performance monitoring"]
+        }
+      ]
+    },
+    {
+      category: "Micro SAAS Solutions",
+      description: "Affordable, AI-powered micro SAAS tools for immediate productivity gains",
+      solutions: [
+        {
+          name: "AI Invoice Generator",
+          description: "Intelligent invoice creation and payment tracking platform",
+          price: "$29/month",
+          features: ["AI-powered generation", "Payment tracking", "Client management", "Multi-currency support"]
+        },
+        {
+          name: "Smart Meeting Scheduler",
+          description: "AI-powered meeting scheduling that eliminates back-and-forth emails",
+          price: "$19/month",
+          features: ["Time optimization", "Calendar integration", "Automatic reminders", "Time zone handling"]
+        },
+        {
+          name: "Social Media Scheduler",
+          description: "AI-powered social media management with content suggestions",
+          price: "$39/month",
+          features: ["AI content suggestions", "Multi-platform posting", "Hashtag optimization", "Engagement analytics"]
+        },
+        {
+          name: "Smart Password Manager",
+          description: "Enterprise-grade password management with AI security recommendations",
+          price: "$15/month",
+          features: ["AI security tips", "Team sharing", "Breach monitoring", "Multi-factor auth"]
         }
       ]
     },
@@ -59,8 +101,8 @@ export default function Solutions() {
         {
           name: "E-commerce Solutions",
           description: "Complete e-commerce technology stack and management",
-          price: "$399/month",
-          features: ["Return management", "Inventory tracking", "Customer analytics", "Payment processing"]
+          price: "$1,899/month",
+          features: ["Custom platform", "Payment integration", "Inventory management", "Analytics"]
         },
         {
           name: "Healthcare IT",
@@ -73,6 +115,12 @@ export default function Solutions() {
           description: "Secure financial technology and analytics solutions",
           price: "$699/month",
           features: ["Financial analytics", "Risk assessment", "Compliance reporting", "Fraud detection"]
+        },
+        {
+          name: "Legal Document Analysis",
+          description: "AI-powered legal document analysis and contract review",
+          price: "$599/month",
+          features: ["Contract analysis", "Compliance monitoring", "Risk assessment", "Legal research"]
         }
       ]
     }
