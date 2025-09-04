@@ -1,7 +1,6 @@
 // Performance optimizations
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   eslint: { 
@@ -85,7 +84,12 @@ const nextConfig = {
         permanent: true,
       },
     ];
-  }
+  },
+
+  // Generate sitemap
+  async rewrites() {
+    return [];
+  },
 };
 
 export default nextConfig;
