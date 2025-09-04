@@ -150,7 +150,7 @@
     "format": "prettier --write .",
     "automation:accessibility": "node automation/accessibility-checker.cjs",
     "automation:security-audit": "node automation/security-audit.cjs",
-    "automation:code-quality": "node automation/code-quality.cjs",
+    "automation:code-quality-enhanced": "node automation/code-quality.cjs",
     "format:check": "prettier --check .",
     "test": "jest --config jest.config.ts",
     "test:smoke": "jest --config jest.config.ts",
@@ -246,7 +246,6 @@
     "react-router-dom": "^7.8.2",
     "sharp": "^0.34.3",
     "tailwind-merge": "^3.3.1",
-    
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
