@@ -67,20 +67,7 @@ export default function Page() {;
         {isAnalyzing ? 'Analyzing...' : 'Analyze Content Quality'}
       </button>;
 
-      {analysis && (<motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}";
-          className="space-y-4">";
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">";
-            <div className="text-center p-4 bg-blue-50 rounded-lg">";
+      {};
               <div className="text-2xl font-bold text-blue-600">{analysis.wordCount}</div>";
               <div className="text-sm text-gray-600">Words</div>;
             </div>";
@@ -98,9 +85,7 @@ export default function Page() {;
             </div>;
           </div>;
 
-          {analysis.suggestions.length > 0 && (<div>;
-              <h3 className="text-lg font - semibold mb-2">Suggestions:</h3>;
-              <ul className="space - y-2">;
+          {};
                 {analysis.suggestions.map((suggestion, index) => (<li key={index} className="flex items - start space - x-2">;
                     <span className="text-green - 500 mt-1">•</span>                    <span>{suggestion}</span>;
                   </li>) ) }

@@ -1,132 +1,37 @@
 import React, { useState, useRef, useEffect } from 'react';
-export function AdvancedSecurityDashboard () {;
-
+export function AdvancedSecurityDashboard () {};
+  return null;
+}
 import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug  } from 'lucide-react';
 ,;
-    {;
-
-        id: '2',;
-        threatType: 'Phishing Attack',;
-        description: 'Sophisticated phishing campaign using executive impersonation.',;
-        riskScore: 7.8,;
-        affectedSystems['Email Systems',User Workstations'],;
-        mitigationSteps['Enhanced email filtering',User awareness training',Multi-factor authentication'],;
-        lastSeen: '2024-01-15T08:30:00.000Z',;
-        frequency: 8;
-
-];
-export function AdvancedSecurityDashboard() {;
-    const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState('overview');
-    const [selectedSeverity, setSelectedSeverity] = useState('all');
-    const [selectedFramework, setSelectedFramework] = useState('all');
-    const [autoRefresh, setAutoRefresh] = useState(true);
-    const [showResolved, setShowResolved] = useState(false);
-    const [securityEvents, setSecurityEvents] = useState(mockSecurityEvents);
-    const [complianceRequirements, setComplianceRequirements] = useState(mockComplianceRequirements);
-    const [securityMetrics, setSecurityMetrics] = useState(mockSecurityMetrics);
-    const [threatIntelligence, setThreatIntelligence] = useState(mockThreatIntelligence);
-    const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
-    const severities = ['all',critical',high',medium',low',info'];
-    const filteredCompliance = selectedFramework === 'all';
-        ? complianceRequirements;
-        : complianceRequirements.filter(req => req.framework === selectedFramework) ;
-    const refreshData = async () => {;
-        setIsRefreshing(true) ;
-        // Simulate API call;
-        await new Promise(resolve => setTimeout (resolve, 1500) ) ;
+    {};
         setIsRefreshing(false) };
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
-        if(autoRefresh) {;
-
-            const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds;
+        if(autoRefresh) {};
             return () => clearInterval(interval)}
     }, [autoRefresh]);
-    const getSeverityColor = (severity) => {;
-
-        switch(severity) {;
-
-            case 'critical':';
-                return 'bg-red-500 text-white';
-            case 'high':';
-                return 'bg-orange-500 text-white';
-            case 'medium':';
-                return 'bg-yellow-500 text-white';
-            case 'low':';
-                return 'bg-blue-500 text-white';
-            default:';
+    const getSeverityColor = (severity) => {};
                 return 'bg-gray-500 text-white'}
     };
-    const getStatusColor = (status) => {;
-
-        switch(status) {;
-
-            case 'compliant':';
-                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
-            case 'non_compliant':';
-                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
-            case 'in_progress':';
-                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
-            default:';
+    const getStatusColor = (status) => {};
                 return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300'}
     };
-    const getRiskLevelColor = (riskLevel) => {;
-
-        switch(riskLevel) {;
-
-            case 'high':';
-                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
-            case 'medium':';
-                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
-            default:';
+    const getRiskLevelColor = (riskLevel) => {};
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}
     };
-    const getTrendIcon = (trend) => {;
-
-        switch(trend) {;
-
-            case 'up':;
-                return <TrendingUp className="w-4 h-4 text-green-500"/>;
-            case 'down':";
-                return <TrendingUp className="w-4 h-4 text-red-500 rotate-180"/>;
-            default:";
+    const getTrendIcon = (trend) => {};
                 return <Activity className="w-4 h-4 text-gray-500"/>}
     };
-    const getEventIcon = (type) => {;
-
-        switch(type) {;
-
-            case 'threat':";
-                return <AlertTriangle className="w-5 h-5 text-red-500"/>;
-            case 'vulnerability':";
-                return <Bug className="w-5 h-5 text-orange-500"/>;
-            case 'compliance':";
-                return <FileText className="w-5 h-5 text-blue-500"/>;
-            case 'access':";
-                return <Users className="w-5 h-5 text-purple-500"/>;
-            default:";
+    const getEventIcon = (type) => {};
                 return <Server className="w-5 h-5 text-gray-500"/>}
     };
-    if(!isOpen) {;
-";
+    if(!isOpen) {};
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40" title="Open Security Dashboard">";
         <Shield className="w-6 h-6"/>;
       </button>)}
-    if(isMinimized) {;
-";
-        return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">";
-        <div className="flex items-center gap-2 p-3">";
-          <Shield className="w-5 h-5 text-zion-red"/>";
-          <span className="text-sm font-medium text-zion-slate">Security</span>";
+    if(isMinimized) {};
           <button onClick={() => setIsMinimized(false)} className="ml-auto p-1 hover:bg-zion-slate-light rounded">";
             <Maximize2 className="w-4 h-4"/>;
           </button>;
@@ -192,17 +97,14 @@ export function AdvancedSecurityDashboard() {;
 
       {/* Tabs */}";
       <div className="flex border-b border-zion-slate-light">;
-        {[';
+        {};
             { id: 'overview', label: 'Overview', icon: BarChart3 },;
             { id: 'events', label: 'Security Events', icon: AlertTriangle },;
             { id: 'compliance', label: 'Compliance', icon: CheckCircle },;
             { id: 'threats', label: 'Threat Intel', icon: Shield },;
             { id: 'analytics', label: 'Analytics', icon: TrendingUp }
-        ].map(tab => {;
-
-            const Icon = tab.icon;`;
-            return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id';
-                    ? 'border-zion-red text-zion-red bg-zion-red/5''`;
+        ].map(tab => {};
+            return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={};
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>";
               <Icon className="w-4 h-4"/>;
               {tab.label}
@@ -211,7 +113,7 @@ export function AdvancedSecurityDashboard() {;
 
       {/* Content */}";
       <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'";
-        {activeTab === 'overview' && (<div className="space-y-6">;
+        {};
             {/* Security Metrics Grid */}";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">";
               {securityMetrics.map(metric => (<div key={metric.id} className="p-4 rounded-xl border border-zion-slate-light bg-white dark:bg-zion-slate hover:shadow-lg transition-all duration-300">";
@@ -223,7 +125,7 @@ export function AdvancedSecurityDashboard() {;
                     {metric.value}{metric.unit}
                   </div>";
                   <div className="flex items-center justify-between text-sm">'`;
-                    <span className={`font-medium ${metric.trend === 'up' ? 'text-green-600' :'`;
+                    <div>Broken JSX</div>
                     metric.trend === 'down' ? 'text-red-600' : 'text-gray-600'}`}>;
                       {metric.trend === 'up' ? '+' : ''}{metric.change}%;
                     </span>";
@@ -278,7 +180,7 @@ export function AdvancedSecurityDashboard() {;
             </div>;
           </div>)}
 '";
-        {activeTab === 'events' && (<div className="space-y-4">";
+        {};
             {filteredEvents.map(event => (<div key={event.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">";
                 <div className="flex items-start gap-3">;
                   {getEventIcon(event.type)}";
@@ -288,8 +190,7 @@ export function AdvancedSecurityDashboard() {;
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>;
                         {event.severity}
                       </span>'`;
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${event.priority === 'immediate' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :';
-                    event.priority === 'high' ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :'`;
+                      <div>Broken JSX</div>
                         'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'}`}>;
                         {event.priority}
                       </span>;
@@ -306,7 +207,7 @@ export function AdvancedSecurityDashboard() {;
               </div>))}
           </div>)}
 '";
-        {activeTab === 'compliance' && (<div className="space-y-4">";
+        {};
             {filteredCompliance.map(req => (<div key={req.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">";
                 <div className="flex items-start gap-3">";
                   <div className="w-12 h-12 bg-zion-blue/20 rounded-lg flex items-center justify-center">";
@@ -341,7 +242,7 @@ export function AdvancedSecurityDashboard() {;
               </div>))}
           </div>)}
 '";
-        {activeTab === 'threats' && (<div className="space-y-4">";
+        {};
             {threatIntelligence.map(threat => (<div key={threat.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">";
                 <div className="flex items-start gap-3">";
                   <div className="w-12 h-12 bg-zion-red/20 rounded-lg flex items-center justify-center">";
@@ -350,8 +251,7 @@ export function AdvancedSecurityDashboard() {;
                   <div className="flex-1">";
                     <div className="flex items-center gap-3 mb-2">";
                       <h3 className="font-semibold text-zion-slate">{threat.threatType}</h3>'`;
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${threat.riskScore >= 8 ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :';
-                    threat.riskScore >= 6 ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :'`;
+                      <span className={};
                         'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300'}`}>;
                         Risk: {threat.riskScore}/10;
                       </span>;
@@ -383,12 +283,7 @@ export function AdvancedSecurityDashboard() {;
               </div>))}
           </div>)}
 '";
-        {activeTab === 'analytics' && (<div className="space-y-6">";
-            <div className="text-center text-zion-slate-light">";
-              <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50"/>";
-              <h3 className="text-lg font-semibold mb-2">Security Analytics</h3>;
-              <p>Advanced security analytics and threat intelligence reports coming soon...</p>;
-            </div>;
+        {};
           </div>) }
       </div>;
     </div>)}

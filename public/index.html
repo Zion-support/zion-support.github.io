@@ -155,12 +155,55 @@
     </style>
   </head>
   <body>
+    <header>
+      <nav aria-label="Primary" style="display:flex;gap:16px;padding:12px 16px;border-bottom:1px solid #e5e7eb;background:#ffffff;position:sticky;top:0;z-index:10">
+        <a href="/" style="font-weight:600;color:#111827">Zion Tech Group</a>
+        <a href="/services" style="color:#374151">Services</a>
+        <a href="/solutions" style="color:#374151">Solutions</a>
+        <a href="/about" style="color:#374151">About</a>
+        <a href="/pricing" style="color:#374151">Pricing</a>
+        <a href="/blog" style="color:#374151">Blog</a>
+        <a href="/contact" style="margin-left:auto;color:#1d4ed8">Contact</a>
+      </nav>
+    </header>
     <div id="root">
       <!-- Loading state for better perceived performance -->
       <div class="loading">
         <div class="loading-spinner"></div>
       </div>
     </div>
+    <footer style="border-top:1px solid #e5e7eb;background:#fafafa;margin-top:48px">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:24px 16px;max-width:1100px;margin:0 auto">
+        <section>
+          <h2 style="font-size:14px;color:#6b7280;margin:0 0 8px">Company</h2>
+          <nav aria-label="Company">
+            <a href="/about" style="display:block;color:#374151">About</a>
+            <a href="/careers" style="display:block;color:#374151">Careers</a>
+            <a href="/contact" style="display:block;color:#374151">Contact</a>
+          </nav>
+        </section>
+        <section>
+          <h2 style="font-size:14px;color:#6b7280;margin:0 0 8px">Services</h2>
+          <nav aria-label="Services">
+            <a href="/services" style="display:block;color:#374151">All Services</a>
+            <a href="/services/ai-services" style="display:block;color:#374151">AI Services</a>
+            <a href="/services/it-services" style="display:block;color:#374151">IT Services</a>
+            <a href="/services/micro-saas" style="display:block;color:#374151">Micro SaaS</a>
+          </nav>
+        </section>
+        <section>
+          <h2 style="font-size:14px;color:#6b7280;margin:0 0 8px">Solutions</h2>
+          <nav aria-label="Solutions">
+            <a href="/solutions" style="display:block;color:#374151">Overview</a>
+            <a href="/solutions/enterprise" style="display:block;color:#374151">Enterprise</a>
+          </nav>
+        </section>
+      </div>
+      <div style="padding:12px 16px;border-top:1px solid #e5e7eb;color:#6b7280;text-align:center">© <span id="year"></span> Zion Tech Group</div>
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    </footer>
 
     <!-- Scripts -->
     <script type="module" src="/src/main.tsx"></script>

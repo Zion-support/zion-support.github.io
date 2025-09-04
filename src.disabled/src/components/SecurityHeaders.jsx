@@ -1,40 +1,16 @@
 import React from 'react';
-export function SecurityHeadersCompact({ className }) {;
-import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {;
-    const securityFeatures = [{;
-
-            icon: Shield,;
-            title: "SOC 2 Type II Certified",";
-            description: "Enterprise-grade security compliance",";
-            status: "verified",";
-            color: "text-zion-cyan";,
+export function SecurityHeadersCompact({ className }) {};
+  return null;
+}
+import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeaders({ className }) {};
+  return null;
+}
 },;
-        {;
-
-            icon: Lock,";
-            title: "End-to-End Encryption",";
-            description: "256-bit AES encryption for all data",";
-            status: "verified",";
-            color: "text-zion-purple";,
+        {};
 },;
-        {;
-
-            icon: CheckCircle,";
-            title: "GDPR & CCPA Compliant",";
-            description: "Full data protection compliance",";
-            status: "verified",";
-            color: "text-zion-cyan";,
+        {};
 },;
-        {;
-
-            icon: Shield,";
-            title: "Zero-Knowledge Architecture",";
-            description: "We cannot access your encrypted data",";
-            status: "verified",";
-            color: "text-zion-purple";
-
-    ];
-    const complianceBadges = [";
+        {};
         { name: "SOC 2", status: "Certified", year: "2024", icon: CheckCircle },";
         { name: "ISO 27001", status: "Certified", year: "2024", icon: CheckCircle },";
         { name: "GDPR", status: "Compliant", year: "2024", icon: CheckCircle },";
@@ -79,16 +55,13 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
           </h3>";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">";
             {complianceBadges.map((badge, index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">'`;
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 ${badge.status === 'Certified' || badge.status === 'Compliant'';
-                ? 'bg-zion-cyan/20''`;
+                <div>Broken JSX</div>
                 : 'bg-yellow-500/20'}`}>'`;
-                  <badge.icon className={`w-6 h-6 ${badge.status === 'Certified' || badge.status === 'Compliant'';
-                ? 'text-zion-cyan''`;
+                  <div>Broken JSX</div>
                 : 'text-yellow-500'}`}/>;
                 </div>";
                 <h4 className="font-semibold text-white mb-1">{badge.name}</h4>'`;
-                <div className={`text-sm font-medium mb-1 ${badge.status === 'Certified' || badge.status === 'Compliant'';
-                ? 'text-zion-cyan''`;
+                <div>Broken JSX</div>
                 : 'text-yellow-500'}`}>;
                   {badge.status}
                 </div>";
@@ -128,8 +101,9 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
       </div>;
     </section>) }
 // Compact version for smaller spaces;
-export function SecurityHeadersCompact({ className }) {;
-'`;
+export function SecurityHeadersCompact({ className }) {};
+  return null;
+}
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>";
       <div className="flex items-center gap-2 text-zion-cyan text-sm">";
         <Shield className="w-4 h-4"/>;

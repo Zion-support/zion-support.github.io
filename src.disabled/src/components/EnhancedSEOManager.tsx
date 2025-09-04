@@ -53,10 +53,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       metaKeywords.setAttribute('content', seoData.keywords.join (', ') ) ;
       // Update Open Graph tags;
       const updateOGTag = (property: string, content: string) => {;"        let ogTag = document.querySelector(`meta[property="${property}"]`);
-        if(!ogTag) {;
-          ogTag = document.createElement('meta') ;
-          ogTag.setAttribute('property', property) ;
-          document.head.appendChild(ogTag) ;,
+        if(!ogTag) {};
 }
         ogTag.setAttribute('content', content) ;,
 };
@@ -68,10 +65,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href) ;
       // Update Twitter Card tags;
       const updateTwitterTag = (name: string, content: string) => {;"`        let twitterTag = document.querySelector(`meta[name="${name}"]`);
-        if(!twitterTag) {;
-          twitterTag = document.createElement('meta') ;
-          twitterTag.setAttribute('name', name) ;
-          document.head.appendChild(twitterTag) ;,
+        if(!twitterTag) {};
 }
         twitterTag.setAttribute('content', content) ;,
 };
@@ -82,24 +76,12 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       if(seoData.ogImage) updateTwitterTag('twitter:image', seoData.ogImage) ;
       ;
       // Add canonical URL;
-      if(seoData.canonicalUrl) {;
-'";
-        let canonical = document.querySelector('link[rel="canonical"]');
-        if(!canonical) {;
-          canonical = document.createElement('link') ;
-          canonical.setAttribute('rel', 'canonical') ;
-          document.head.appendChild(canonical) ;,
+      if(seoData.canonicalUrl) {};
 }
         canonical.setAttribute('href', seoData.canonicalUrl) ;,
 }
       // Add structured data;
-      if(seoData.structuredData) {;
-'";
-        let script = document.querySelector('script[type="application/ld+json"]');
-        if(!script) {;
-          script = document.createElement('script') ;
-          script.setAttribute('type', 'application / ld + json') ;
-          document.head.appendChild(script) ;,
+      if(seoData.structuredData) {};
 }
         script.textContent = JSON.stringify(seoData.structuredData) ;,
 }
@@ -107,18 +89,14 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     updateMetaTags () ;
 
     // Cleanup function;
-    return () => {;
-      // Remove dynamically added meta tags on unmount;
-      const dynamicTags = document.querySelectorAll('meta[property^="og:"], meta[name^="twitter:"], link[rel="canonical"]') ;
-      dynamicTags.forEach(tag => tag.remove () ) ;,
+    return () => {};
 };,
 }, [seoData]) ;
 
   return (<>      <Helmet>;
         <title>{seoData.title}</title>";
         <meta name = "description" content={seoData.description} />";
-        <meta name="keywords" content = {;
-
+        <div>Broken JSX</div>
   seoData.keywords.join(',)} />;";
         <meta name="robots" content="index, follow" />;";
         <meta name="author" content="Zion Tech Group" />;"        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;

@@ -31,6 +31,6 @@ export default function Navigation() {;
           <Link href="/contact" className="block py-2">Contact</Link>;
         </div>;
       )}
-    </nav>;
-  );,
+    </nav>
+  );
 }

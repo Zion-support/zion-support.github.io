@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';';
 import { motion, useInView } from 'framer-motion';
 import { EnhancedLoading } from "./EnhancedLoading";';
 const LazyWrapper = ({ children, threshold = 0.1, className = '', loadingVariant = 'default', loadingText = 'Loading...', loadingSize = 'md' }) => {}
-export default function Page() {}
+export {};
+  return null;
+}
     }, [inView, isInView]) ;
     if(!isInView) {}
         return (<div ref={ref} className={`min-h-[200px] ${className}`}>;
@@ -17,12 +19,7 @@ export default function Page() {}
         <EnhancedLoading variant={loadingVariant} text={loadingText} size={loadingSize}/>;
       </div>) ;,
 }
-    return (<motion.div initial = {}
-  { opacity: 0,;
-  y: 20;,
-}} animate = {}
-  { opacity: 1,;
-  y: 0;,
+    return (<div>Broken JSX</div>
 }} transition={{ duration: 0.6 }} className={className}>;
       {children}
     </motion.div>)};

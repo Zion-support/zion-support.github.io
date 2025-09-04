@@ -18,6 +18,8 @@ import {}
   MapPin} from 'lucide-react';
 
 const EnhancedComprehensiveServicesShowcase = () => {}
+  return <div>Component</div>;
+};
 ';
 '';
 ''';
@@ -146,6 +148,8 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 };
 
   const closeModal = () => {}
+  return <div>Component</div>;
+};
     setSelectedService(null);,
 };
 
@@ -194,23 +198,13 @@ const EnhancedComprehensiveServicesShowcase = () => {}
           {/* Search and Filter */}"";
           <div className="max-w-2xl mx-auto mb-8">"";
             <div className="relative">";
-              <input"";
-                type="text"";
-                placeholder="Search services, features, or technologies...";
-                value={searchTerm}";
+              <div>Broken JSX</div>
                 onChange={e => setSearchTerm(e.target.value)}"";
                 className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400";
               />";
-              <svg"";
-                className="absolute right-3 top-3 h-6 w-6 text-gray-400"";
-                fill="none"";
-                stroke="currentColor"";
+              <div>Broken JSX</div>
                 viewBox="0 0 24 24">";
-                <path"";
-                  strokeLinecap="round"";
-                  strokeLinejoin="round"";
-                  strokeWidth={2}"";
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z";
+                <div>Broken JSX</div>
                 />;
               </svg>;
             </div>;
@@ -218,9 +212,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
 ";
           {/* Category Filter */}"";
           <div className="flex flex-wrap justify-center gap-4 mb-12">;
-            {serviceCategories.map(category => (;
-              <button;
-                key={category.id}
+            {};
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}
 ';
@@ -242,9 +234,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
       <section className="py-20 px-4 sm:px-6 lg:px-8">"";
         <div className="max-w-7xl mx-auto">"";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredServices.map((service, index) => (;
-              <div;
-                key={service.id}";
+            {};
                 onClick={() => handleServiceClick(service)}"";
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer"">"";
                 <div className="text-4xl mb-4">{service.icon}</div>"";
@@ -265,10 +255,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
                 </div>";
 "";
                 <div className="flex flex-wrap gap-2 mb-4">;
-                  {service.tags?.slice(0, 3).map((tag, tagIndex) => (;
-                    <span";
-                      key={tagIndex}"";
-                      className="px-2 py-1 bg-white/5 rounded text-xs text-gray-300">;
+                  {};
                       {tag}
                     </span>;
                   ))}
@@ -347,13 +334,11 @@ const EnhancedComprehensiveServicesShowcase = () => {}
             digital transformation and competitive advantage";
           </p>"";
           <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-            <a"";
-              href="mailto:kleber@ziontechgroup.com"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">;
               Get Custom Quote;
             </a>";
-            <a"";
-              href="tel:+13024640950"";
+            <div>Broken JSX</div>
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">;
               Call Us: +1 302 464 0950;
             </a>;

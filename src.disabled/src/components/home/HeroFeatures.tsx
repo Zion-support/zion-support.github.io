@@ -1,5 +1,5 @@
 
-interface HeroFeature {;
+interface HeroFeature {};
 icon: React.ComponentType<{ className?: string}>;
   title: string;
   description: string;

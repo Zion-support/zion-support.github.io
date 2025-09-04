@@ -19,11 +19,7 @@ import { AuthProvider } from "./context/auth/AuthProvider.jsx";
 // Import analytics provider;
 
 // Initialize a React Query client with global error handling;
-const queryClient = new QueryClient({;
-    defaultOptions: {;
-        queries: {;
-            retry: 1,;
-            refetchOnWindowFocus: false,;,
+const queryClient = new QueryClient({};
 },;,
 },;,
 });
@@ -38,9 +34,7 @@ const renderApp = () => {;
                             <AuthProvider>;
                                 <NotificationProvider>;
                                     <AnalyticsProvider>;
-                                        <LanguageProvider authState={{;
-                                            isAuthenticated: false,;
-                                            user: null;,
+                                        <div>Broken JSX</div>
 }}>;
                                             <ViewModeProvider>;
                                                 <AppLayout>;

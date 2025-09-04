@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { Gift import { useAuth } from '@/hooks/useAuth';
-export default function Page() {;
+export default function Page() {};
+  return null;
+}
 , { purchase: 0, post: 0, referral: 0 });
-    const handleLogout = async () => {;
-        if(signOut) {;
-
+    const handleLogout = async () => {};
             await signOut()}
-        else if(logout) {;
-
+        else if(logout) {};
             await logout()}
     };
     return (<DropdownMenu>;

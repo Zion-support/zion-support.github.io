@@ -1,8 +1,6 @@
 
       description: "Get exclusive access to tech trends and analysis";,
-},;    {;
-      icon: Zap,;";
-      title: "Early Access",;";
+},;    {};
       description: "Be the first to know about beta programs and launches"};
   ];
 
@@ -44,19 +42,7 @@
       <div className="max-w-7xl mx-auto px-6">";
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
           {/* Left Column - Content */}
-          <motion.div;
-            initial = {;
-
-  { opacity: 0,;
-  x: -30;,
-}}
-            whileInView = {;
-
-  { opacity: 1,;
-  x: 0;,
-}}
-            transition={{ duration: 0.6 }}
-";
+          <div>Broken JSX</div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
               Stay Ahead with Zion Tech Group;
             </h2>";
@@ -64,30 +50,7 @@
               Get exclusive access to the latest technology insights, service updates, and industry trends.Join thousands of professionals who trust us to keep them informed.</p>;
 ";
             <div className="space-y-4 mb-8">;
-              {benefits.map((benefit, index) => (;
-                <motion.div;
-                  key={index}
-                  initial = {;
-
-  { opacity: 0,;
-  x: -20;,
-}}
-                  whileInView = {;
-
-  { opacity: 1,;
-  x: 0;,
-}}
-                  transition = {;
-
-  { duration: 0.5,;
-  delay: index * 0.1;,
-}}";
-                  className="flex items-start";
-";
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mr-4 flex-shrink-0">";
-                    <benefit.icon className="w-6 h-6 text-white" />;
-                  </div>;
-                  <div>";
+              {};
                     <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>";
                     <p className="text-gray-400">{benefit.description}</p>;
                   </div>;
@@ -100,22 +63,7 @@
           </motion.div>;
 
           {/* Right Column - Newsletter Form */}
-          <motion.div;
-            initial = {;
-
-  { opacity: 0,;
-  x: 30;,
-}}
-            whileInView = {;
-
-  { opacity: 1,;
-  x: 0;,
-}}
-            transition = {;
-
-  { duration: 0.6,;
-  delay: 0.2;,
-}}
+          <div>Broken JSX</div>
           >";
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">";
               <div className="text-center mb-6">";
@@ -130,10 +78,7 @@
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">;
                     Email Address;
                   </label>;
-                  <input";
-                    type="email";
-                    id="email";
-                    value={email}
+                  <div>Broken JSX</div>
                     onChange={(e) => setEmail(e.target.value)}";
                     placeholder="Enter your email address";
                     className="w-full px-4 py-3 bg-slate-800 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-300";
@@ -141,12 +86,7 @@
                   />;
                 </div>;
 
-                <button";
-                  type="submit";
-                  disabled={isLoading || !email}";
-                  className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center";
-
-                  {isLoading ? (;";
+                <div>Broken JSX</div>
                     <div className="flex items-center">";
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>;
                       Subscribing...;

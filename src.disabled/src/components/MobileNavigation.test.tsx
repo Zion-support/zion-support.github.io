@@ -1,15 +1,11 @@
-  it(displays expected content", () => {;
-    render(<MobileNavigation  />)";
+  it(displays expected content", () => {};
 import { render, screen } from &apos;@testing - library/react",;
 import MobileNavigation from &apos;./MobileNavigation;
-describe(&apos;MobileNavigation&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;MobileNavigation&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<MobileNavigation / >)";

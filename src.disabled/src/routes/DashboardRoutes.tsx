@@ -16,42 +16,42 @@ const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
 const DashboardRoutes: React.FC = () => {;
   return(<Suspense fallback={<LoadingSpinner />}>;
       <Routes>;
-        <Route path="/dashboard" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <Dashboard />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/client-dashboard" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <ClientDashboard />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/talent-dashboard" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <TalentDashboard />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/creator-dashboard" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <CreatorDashboard />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/analytics" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <Analytics />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/project-milestones" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <ProjectMilestones />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/project-details" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <ProjectDetails />;
           </ProtectedRoute>;,
 } />;
-        <Route path="/project-room" element={;
+        <div>Broken JSX</div>
           <ProtectedRoute>;
             <ProjectRoom />;
           </ProtectedRoute>;,

@@ -6,13 +6,9 @@ import { motion, AnimatePresence  } from 'framer-motion';
  params - Function parameters;
  * @returns {*} Function return value;
  */;
-function Accessibility () {;
-
-  Accessibility as AccessibilityIcon,;
-  Type,;
-  Eye,;
-  Volume2,;
-  Keyboard,;
+function Accessibility () {};
+  return null;
+}
               {/* Header */}
   Keyboard,              {/* Header */}
               <div className="flex items-center justify-between mb-6">;
@@ -20,7 +16,7 @@ function Accessibility () {;
                   <AccessibilityIcon className="w-5 h-5 text-cyan-400"  />;
                   Accessibility;
                 </h2>;
-                <button;
+                <div>Broken JSX</div>
                   onClick={() => setIsOpen(false)}
                   className="text-gray-400 hover:text-white transition-colors">;
                   <X className="w-5 h-5"  />;
@@ -34,17 +30,14 @@ function Accessibility () {;
                   Font Size;
                 </label>;
                 <div className="flex items-center gap-3">;
-                  <button;
-                    onClick={decreaseFontSize}
-                    disabled={settings.fontSize <= 12}
+                  <div>Broken JSX</div>
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors">;
                     <Minus className="w-4 h-4 text-white"  />;
                   </button>;
                   <span className="text-white font-mono min-w-[3rem] text-center">;
                     {settings.fontSize}px;
                   </span>;
-                  <button;
-                    onClick={increaseFontSize}
+                  <div>Broken JSX</div>
                     disabled={settings.fontSize >= 24}
                     className="p-2 bg-slate-800 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-md transition-colors">;
                     <Plus className="w-4 h-4 text-white"  />;
@@ -59,15 +52,13 @@ function Accessibility () {;
                     <Contrast className="w-4 h-4"  />;
                     High Contrast;
                   </span>;
-                  <input;
-                    type="checkbox";
-                    checked={settings.highContrast}
+                  <div>Broken JSX</div>
                     onChange={(e) => updateSetting('highContrast', e.target.checked)}
                     className="sr-only";
                   />;
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-cyan-500' : 'bg-slate-700';,
+                  <div>Broken JSX</div>
 }`}>;
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast ? 'translate-x-6' : 'translate-x-1';,
+                    <div>Broken JSX</div>
 }`} />;
                   </div>;
                 </label>;
@@ -80,15 +71,13 @@ function Accessibility () {;
                     <Eye className="w-4 h-4"  />;
                     Reduced Motion;
                   </span>;
-                  <input;
-                    type="checkbox";
-                    checked={settings.reducedMotion}
+                  <div>Broken JSX</div>
                     onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                     className="sr-only";
                   />;
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-cyan-500' : 'bg-slate-700';,
+                  <div>Broken JSX</div>
 }`}>;
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? 'translate-x-6' : 'translate-x-1';,
+                    <div>Broken JSX</div>
 }`} />;
                   </div>;
                 </label>;
@@ -101,13 +90,9 @@ function Accessibility () {;
                   Theme;
                 </label>;
                 <div className="grid grid-cols-3 gap-2">;
-                  {(['auto', 'light', 'dark'] as const).map((theme) => (;
-                    <button;
-                      key={theme}
+                  {};
                       onClick={() => updateSetting('theme', theme)}
-                      className={`p-2 rounded-md text-xs font-medium transition-colors ${settings.theme === theme;
-                          ? 'bg-cyan-500 text-white';
-                          : 'bg-slate-800 text-gray-300 hover:bg-slate-700';,
+                      className={};
 }`}
                     >;
                       {theme === 'auto' && 'Auto'}
@@ -125,15 +110,13 @@ function Accessibility () {;
                     <Volume2 className="w-4 h-4" />;
                     Sound Effects;
                   </span>;
-                  <input;
-                    type="checkbox";
-                    checked={settings.soundEnabled}
+                  <div>Broken JSX</div>
                     onChange={(e) => updateSetting('soundEnabled', e.target.checked)}
                     className="sr-only";
                   />;
-                  <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.soundEnabled ? 'bg-cyan-500' : 'bg-slate-700';,
+                  <div>Broken JSX</div>
 }`}>;
-                    <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.soundEnabled ? 'translate-x-6' : 'translate-x-1';,
+                    <div>Broken JSX</div>
 }`} />;
                   </div>;
                 </label>;
@@ -162,8 +145,7 @@ function Accessibility () {;
               </div>;
 
               {/* Reset Button */}
-              <button;
-                onClick={resetSettings}
+              <div>Broken JSX</div>
                 className="w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium">;
                 Reset to Defaults;
               </button>;

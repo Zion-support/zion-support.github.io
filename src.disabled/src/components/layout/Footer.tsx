@@ -1,64 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {;
-
-  Mail, ;
-  Phone, ;
-  MapPin, ;
-  Globe, ;
-  Linkedin, ;
-  Twitter, ;
-  Github,;
-  Facebook,;
-  Instagram,;
-  Zap,;
-  Brain,;
-  Server,;
-  Shield,;
-  Users,;
-  Building2,;
-  FileText,;
-  Rocket,;
-  Target,;
-  Atom,;
-  Network,;
-  Cloud,;
-  Lock,;
-  TrendingUp,;
-  Workflow,;
-  MessageCircle,;
-  Calendar,;
-  PenTool,;
-  Activity,;
-  Cpu,;
-  Wifi,;
-  Satellite,;
-  Handshake,;
-  BookOpen,;
-  Video,;
-  GraduationCap,;
-  Lightbulb,;
-  Star,;
-  HelpCircle,;
-  BarChart3,;
-  ShoppingCart,;
-  Heart,;
-  Factory,;
-  DollarSign,;
-  Briefcase,;
-  Award,;
-  ExternalLink,;
-  ArrowUp,;
-  Sparkles,;
-  CheckCircle,;
-  Monitor,;
-  Headphones,;
-  Truck,;
-  Search,;
-  Layers,;
-  Database,;
-  Home,;
-  Leaf;,
+import {};
 } from 'lucide-react';
 
 export function Footer() {;
@@ -76,10 +18,7 @@ export function Footer() {;
         { name: "Get Custom Quote", href: "/contact", icon: MessageCircle },;
       ];,
 },;
-    {;
-      title: "AI & Automation Services",;
-      icon: Brain,;
-      links: [;
+    {};
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },;
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },;
         { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },;
@@ -102,11 +41,7 @@ export function Footer() {;
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
       ];,
 },;
-    {;
-
-      title: "Quantum Computing",;
-      icon: Atom,;
-      links: [;
+    {};
         { name: "Quantum AI Platform", href: "/services/quantum-ai-platform", icon: Brain },;
         { name: "Quantum Trading Platform", href: "/services/quantum-ai-trading-platform", icon: TrendingUp },;
         { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service", icon: Cloud },;
@@ -114,11 +49,7 @@ export function Footer() {;
         { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", icon: Network }
       ];,
 },;
-    {;
-
-      title: "IT Infrastructure",;
-      icon: Server,;
-      links: [;
+    {};
         { name: "Cloud DevOps", href: "/services/cloud-devops", icon: Cloud },;
         { name: "IT Infrastructure Management", href: "/services/it-infrastructure-management", icon: Server },;
         { name: "Cybersecurity Solutions", href: "/services/cybersecurity", icon: Shield },;
@@ -127,11 +58,7 @@ export function Footer() {;
         { name: "Space Technology", href: "/services/space-tech", icon: Satellite }
       ];,
 },;
-    {;
-
-      title: "Micro SAAS Solutions",;
-      icon: Building2,;
-      links: [;
+    {};
         { name: "Micro CRM", href: "/services/micro-crm", icon: Users },;
         { name: "Micro SAAS Platform", href: "/services/micro-saas-solutions", icon: Building2 },;
         { name: "Micro SAAS Solutions Comprehensive", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },;
@@ -152,23 +79,11 @@ export function Footer() {;
   ];
 
   const contactInfo = [;
-    {;
-
-      icon: Phone,;
-      text: "+1 302 464 0950",;
-      href: "tel:+13024640950";,
+    {};
 },;
-    {;
-
-      icon: Mail,;
-      text: "kleber@ziontechgroup.com",;
-      href: "mailto:kleber@ziontechgroup.com";,
+    {};
 },;
-    {;
-
-      icon: MapPin,;
-      text: "364 E Main St STE 1008 Middletown DE 19709",;
-      href: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";,
+    {};
 }
   ];
 
@@ -195,15 +110,7 @@ export function Footer() {;
               Leading the future of technology with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services.;
             </p>;
             <div className="flex space-x-4">;
-              {socialLinks.map((social) => (;
-                <a;
-                  key={social.name}
-                  href={social.href}
-                  target="_blank";
-                  rel="noopener noreferrer";
-                  className="text-gray-400 hover:text-zion-purple transition-colors">;
-                  <social.icon className="h-5 w-5" />;
-                </a>;
+              {};
               ))}
             </div>;
           </div>;
@@ -215,10 +122,9 @@ export function Footer() {;
               <span>Quick Links</span>;
             </h3>;
             <ul className="space-y-2">;
-              {quickLinks.map((link) => (;
+              {};
                 <li key={link.name}>;
-                  <Link;
-                    to={link.href}
+                  <div>Broken JSX</div>
                     className="text-gray-300 hover:text-zion-purple transition-colors text-sm flex items-center space-x-2 group">;
                     <link.icon className="h-4 w-4 group-hover:text-zion-purple" />;
                     <span>{link.name}</span>;
@@ -235,14 +141,7 @@ export function Footer() {;
               <span>Contact Us</span>;
             </h3>;
             <div className="space-y-3">;
-              {contactInfo.map((contact, index) => (;
-                <a;
-                  key={index}
-                  href={contact.href}
-                  target={contact.href.startsWith('http') ? '_blank' : '_self'}
-                  rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                  className="text-gray-300 hover:text-zion-purple transition-colors text-sm flex items-start space-x-2 group">;
-                  <contact.icon className="h-4 w-4 mt-0.5 group-hover:text-zion-purple flex-shrink-0" />;
+              {};
                   <span className="leading-relaxed">{contact.text}</span>;
                 </a>;
               ))}
@@ -259,10 +158,7 @@ export function Footer() {;
               Get the latest updates on our innovative services and technology solutions.;
             </p>;
             <div className="flex space-x-2">;
-              <input;
-                type="email";
-                placeholder="Enter your email";
-                className="flex-1 px-3 py-2 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent";
+              <div>Broken JSX</div>
               />;
               <button className="px-4 py-2 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-lg transition-colors">;
                 Subscribe;
@@ -277,17 +173,16 @@ export function Footer() {;
             Our Comprehensive Service Portfolio;
           </h3>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {footerSections.map((section) => (;
+            {};
               <div key={section.title} className="space-y-4">;
                 <h4 className="text-lg font-semibold text-white flex items-center space-x-2">;
                   <section.icon className="h-5 w-5 text-zion-purple" />;
                   <span>{section.title}</span>;
                 </h4>;
                 <ul className="space-y-2">;
-                  {section.links.slice(0, 5).map((link) => (;
+                  {};
                     <li key={link.name}>;
-                      <Link;
-                        to={link.href}
+                      <div>Broken JSX</div>
                         className="text-gray-300 hover:text-zion-purple transition-colors text-sm flex items-center space-x-2 group">;
                         <link.icon className="h-4 w-4 group-hover:text-zion-purple" />;
                         <span>{link.name}</span>;
@@ -329,7 +224,7 @@ export function Footer() {;
       </div>;
 
       {/* Back to Top Button */}
-      <button;
+      <div>Broken JSX</div>
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-6 right-6 bg-zion-purple hover:bg-zion-purple-dark text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110";
         aria-label="Back to top">;

@@ -39,8 +39,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
                     </div>;
                   </Link>;
 
-                  <Link                    to="/quote";
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white";
+                  <div>Broken JSX</div>
                     onClick={() => setIsExpanded(false)}
                   >";
                     <span className="text-xl">💰</span>;
@@ -66,12 +65,7 @@ const FloatingCTA: React.FC = () : JSX.Element => {;
 
       {/* Backdrop */}
       <AnimatePresence>;
-        {isExpanded && (;
-          <motion.div";
-            className="fixed inset-0 bg-black/20 z-40";
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+        {};
             onClick={ () => setIsExpanded(false) }
           />) }
       </AnimatePresence>;

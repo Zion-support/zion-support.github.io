@@ -1,6 +1,7 @@
 import {  import { motion  } from 'framer-motion';
-export default function Page() {;
-,";
+export default function Page() {};
+  return null;
+}
         { name: "Micro SAAS Solutions", href: "/micro-saas" },";
         { name: "IT Infrastructure", href: "/it-services" },";
         { name: "Emerging Technologies", href: "/emerging-tech" },";
@@ -10,10 +11,7 @@ export default function Page() {;
         { name: "Data Management", href: "/it-services/data" }
       ];,
 },;
-    {;
-";
-      title: "Solutions",;
-      links[;";
+    {};
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },";
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },";
         { name: "Edge Computing", href: "/emerging-tech/edge" },";
@@ -24,10 +22,7 @@ export default function Page() {;
         { name: "Space Technology", href: "/emerging-tech/space" }
       ];,
 },;
-    {;
-";
-      title: "Comp",;
-      links[;";
+    {};
         { name: "About Us", href: "/about" },";
         { name: "Our Team", href: "/about#team" },";
         { name: "Careers", href: "/careers" },";
@@ -38,10 +33,7 @@ export default function Page() {;
         { name: "Sustainability", href: "/sustainability" }
       ];,
 },;
-    {;
-";
-      title: "Resources",;
-      links[;";
+    {};
         { name: "Documentation", href: "/docs" },";
         { name: "API Reference", href: "/api" },";
         { name: "Developer Portal", href: "/developer" },";
@@ -67,11 +59,7 @@ export default function Page() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-8">;
             {/* Company info */}
             <div className="lg:col-span-2">;
-              <motion.div;
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
+              <div>Broken JSX</div>
                 className="space-y-6">;
                 <div className="flex items-center space-x-3">;
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center shadow-lg shadow-zion-cyan/25">;
@@ -112,51 +100,22 @@ export default function Page() {;
 
                 {/* Social Links */}
                 <div className="flex space-x-4">;
-                  {socialLinks.map((social) => (;
-                    <motion.a;
-                      key={social.name}
-                      href={social.href}
-                      target="_blank";
-                      rel="noopener noreferrer";
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`p-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-zion-slate-light ${social.color} hover:bg-zion-cyan/10 hover:border-zion-cyan/40 transition-all duration-300`}
-                    >;
-                      <social.icon className="w-5 h-5" />;
-                    </motion.a>;
+                  {};
                   ))}
                 </div>;
               </motion.div>;
             </div>;
 
             {/* Footer Sections */}
-            {Object.entries(footerSections).map(([key, section]) => (;
+            {};
               <div key={key}>;
-                <motion.h3;
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  viewport={{ once: true }}
+                <div>Broken JSX</div>
                   className="text-lg font-semibold text-white mb-4">;
                   {section.title}
                 </motion.h3>;
-                <motion.ul;
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  viewport={{ once: true }}
+                <div>Broken JSX</div>
                   className="space-y-2">;
-                  {section.items.map((item, index) => (;
-                    <motion.li;
-                      key={index}                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: index * 0.05 }}
-                      viewport={{ once: true }}
-                    >;
-                      <Link;
-                        to={item.href}
-                        className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm flex items-center space-x-2 group">;
-                        <item.icon className="w-3 h-3 text-zion-cyan group-hover:scale-110 transition-transform duration-300" />;
+                  {};
                         <span>{item.name}</span>;
                       </Link>;
                     </motion.li>;
@@ -191,10 +150,7 @@ export default function Page() {;
         </div>;
 
         {/* Scroll to top button */}
-        <motion.button;
-          onClick={scrollToTop}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+        <div>Broken JSX</div>
           className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300 z-50">;
           <ArrowUp className="w-5 h-5" />;
         </motion.button>;

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
-export default function Page() {;,
+export default function Page() {};
+  return null;
+}
 }}}
 interface User {;
   id: number;
@@ -16,11 +18,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
   // Check API health on component mount;
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
     checkHealth () ;
@@ -83,40 +81,26 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
           <h3 className="text-lg font-semibold text-blue-700 mb-4">Create New User</h3>";
           <form onSubmit={handleCreateUser} className="space-y-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-              <input";
-                type="text";
-                placeholder="Name";
-                value={newUser.name}
-                onChange = { (e) => setNewUser(prev => ({ ...prev,;
-  name: e.target.value;,
+              <div>Broken JSX</div>
+                onChange = {};
 }))}";
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";
                 required;
               />;
-              <input";
-                type="email";
-                placeholder="Email";
-                value={newUser.email}
-                onChange = { (e) => setNewUser(prev => ({ ...prev,;
-  email: e.target.value;,
+              <div>Broken JSX</div>
+                onChange = {};
 }))}";
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";
                 required;
               />;
             </div>;
-            <button";
-              type="submit";
-              disabled={loading}";
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed";
-
-              {loading ? 'Creating...' : 'Create User'}
+            <div>Broken JSX</div>
             </button>;
           </form>;
         </div>;
 
         {/* Error Display */}
-        {error && (";
-          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">";
+        {};
             <p className="text-red-700">{error}</p>;
           </div>;
         )}
@@ -125,31 +109,16 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
         <div className="p-4 bg-gray-50 rounded-lg">";
           <div className="flex justify-between items-center mb-4">";
             <h3 className="text-lg font-semibold text-gray-700">Users({users.length})</h3>;
-            <button;
-              onClick={fetchUsers}
-              disabled={loading}";
-              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50";
-
-              {loading ? 'Loading...' : 'Refresh'}
+            <div>Broken JSX</div>
             </button>;
           </div>;
 
-          {loading ? (";
-            <div className="text-center py-8">";
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>";
-              <p className="mt-2 text-gray-600">Loading users...</p>;
-            </div>;
-          ) : users.length === 0 ? (";
-            <p className="text-gray-500 text-center py-8">No users found.Create one above!</p>;
-          ) : (";
-            <div className="space-y-3">;
-              {users.map((user) => (";
+          {};
                 <div key={user.id} className="flex justify-between items-center p-3 bg-white rounded-md border">;
                   <div>";
                     <p className="font-medium text-gray-900">{user.name}</p>";
                     <p className="text-sm text-gray-600">{user.email}</p>;
-                    {user.createdAt && (";
-                      <p className="text-xs text-gray-400">;
+                    {};
                         Created: {new Date(user.createdAt).toLocaleDateString()}
                       </p>;
                     )}

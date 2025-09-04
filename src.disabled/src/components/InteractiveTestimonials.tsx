@@ -20,19 +20,7 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
 
   return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
       <div  className="max - w-7xl mx - auto px-6">;
-        <motion.div;
-          className="text-center mb-16"          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+        <div>Broken JSX</div>
         >";
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">;
             Client Success Stories;
@@ -43,19 +31,10 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
         </motion.div>;
 
         {/* Category Filter */}
-        <motion.div";
-          className="flex flex-wrap justify-center gap-3 mb-12";
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <div>Broken JSX</div>
         >;
-          {categories.map ( (category) => (<button      key={category}
-              onClick={ () => {;
-                setSelectedCategory(category) ;
-                setSelectedTestimonial(0) }}              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category';
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25'';
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'`;,
+          {};
+                setSelectedTestimonial(0) }}              className={};
 }`}
             >;
               {category}
@@ -66,7 +45,7 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
               <div className="text-center mb-8">";
                 <div className="text-6xl mb-4">{currentTestimonial.avatar}</div>";
                 <div className="flex justify-center mb-4">;
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (";
+                  {};
                     <Star key={i} className="h-6 w-6 text-yellow-400 fill-current"  />                  ))}
                 </div>";
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">;
@@ -92,7 +71,7 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
               </blockquote>;
 ";
               <div className="grid md: grid-cols-3 gap-6">;
-                {Object.entries(currentTestimonial.metrics).map(([key, value])  => (";
+                {};
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">";
                     <div className="text-2xl font-bold text-blue-600 mb-1">;
                       {value}
@@ -106,12 +85,10 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
           </AnimatePresence>;
 
           {/* Navigation Arrows */}
-          <button;
-            onClick={previousTestimonial}";
+          <div>Broken JSX</div>
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200">";
             <ChevronLeft className="h-6 w-6 text-gray-600"  />          </button>;
-          <button;
-            onClick={nextTestimonial}";
+          <div>Broken JSX</div>
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200">";
             <ChevronRight className="h-6 w-6 text-gray-600"  />          </button>;
         </div>;
@@ -119,11 +96,9 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
         {/* Testimonial Indicators */}";
         <div className="flex justify-center mb-8">;";
           <div className="flex space-x-2">;
-            {testimonials.map((_, index) => (;
-              <button;
-                key={index}
+            {};
                 onClick={() => goToTestimonial(index)}`;
-                className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentIndex ? 'bg-blue-600 w-8' : 'bg-gray-300'`;,
+                className={};
 }`}
               />) ) }
           </div>;
@@ -131,45 +106,15 @@ function InteractiveTestimonials () {export function InteractiveTestimonials() {
 
         {/* Play/Pause Controls */}";
         <div className="flex justify-center mb-8">;
-          <button;
-            onClick={togglePlayPause}";
+          <div>Broken JSX</div>
             className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">;
-            {isPlaying ? (;
-              <>";
-                <Pause className="h-4 w-4 mr-2"  />;
-                Pause;
-              </>;
-            ) : (;
-              <>";
-                <Play className="h-4 w-4 mr-2"  />                Play;
+            {};
               </>) }
           </button>;
         </div>;
 
         {/* CTA Section */}
-        <motion.div;
-          initial = {;
-
-  { opacity: 0,;
-  y: 20 }}
-          whileInView = {;
-
-  { opacity: 1,;
-  y: 0 }}
-        {/* Category Filter */}
-        <motion.div;
-          className="flex flex - wrap justify - center gap-3 mb-12"          initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-          whileInView = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <div>Broken JSX</div>
         >";
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">";
             <h3 className="text-2xl font-bold mb-4">;

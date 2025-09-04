@@ -133,8 +133,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 `'`;
 `'`'`;
   id: Date.now().toString(),`'`'`'`;
-                message: `${key.replace(/([A-Z])/g, $1').toLowerCase()'`'`'`;
-'`'`'`'`;,
+                message: `${};
 } ${value ? 'enabled' : 'disabled'}`,''';
                 type: 'success',;
                 timestamp: Date.now();,
@@ -208,20 +207,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
       {/* Accessibility Panel */}
       <AnimatePresence>;
-        {isOpen && (<motion.div initial = {}
-  { opacity: 0,;
-  x: 300;,
-}} animate = {}
-  { opacity: 1,;
-  x: 0;,
-}} exit = {}
-  { opacity: 0,;
-  x: 300;,
-}} transition = {}
-';
-  { type: 'spring', damping: 25,;
-  stiffness: 200 ";
-"";,
+        {};
 }} className="fixed top-0 right-0 h-full w-96 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-cyan/30 shadow-2xl z-40 overflow-y-auto">";
             {/* Header */}"";
             <div className="sticky top-0 bg-zion-blue-dark/80 backdrop-blur-sm border-b border-zion-cyan/30 p-6">"";
@@ -251,8 +237,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 {/* High Contrast */}"";
                 <div className="flex items-center justify-between">"";
                   <label className="text-white cursor-pointer flex items-center gap-2">"";
-                    <input type="checkbox" checked={settings.highContrast} onChange = {}
-';
+                    <div>Broken JSX</div>
   (e) => updateSetting('highContrast',;
   e.target.checked)";
 "";,
@@ -265,8 +250,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 {/* Large Text */}"";
                 <div className="flex items-center justify-between">"";
                   <label className="text-white cursor-pointer flex items-center gap-2">"";
-                    <input type="checkbox" checked={settings.largeText} onChange = {}
-';
+                    <div>Broken JSX</div>
   (e) => updateSetting('largeText',;
   e.target.checked)";
 "";,
@@ -295,8 +279,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 {/* Color Blind Mode */}"";
                 <div className="space-y-2">"";
                   <label className="text-white text-sm">Color Blind Mode</label>;
-                  <select value={settings.colorBlindMode} onChange = {}
-';
+                  <div>Broken JSX</div>
   (e) => updateSetting('colorBlindMode',;
   e.target.value)";
 "";,
@@ -319,8 +302,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 {/* Reduced Motion */}"";
                 <div className="flex items-center justify-between">"";
                   <label className="text-white cursor-pointer flex items-center gap-2">"";
-                    <input type="checkbox" checked={settings.reducedMotion} onChange = {}
-';
+                    <div>Broken JSX</div>
   (e) => updateSetting('reducedMotion',;
   e.target.checked)";
 "";,
@@ -333,8 +315,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 {/* Screen Reader */}"";
                 <div className="flex items-center justify-between">"";
                   <label className="text-white cursor-pointer flex items-center gap-2">"";
-                    <input type="checkbox" checked={settings.screenReader} onChange = {}
-';
+                    <div>Broken JSX</div>
   (e) => updateSetting('screenReader',;
   e.target.checked)";
 "";,
@@ -354,8 +335,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 {/* Focus Indicator */}"";
                 <div className="flex items-center justify-between">"";
                   <label className="text-white cursor-pointer flex items-center gap-2">"";
-                    <input type="checkbox" checked={settings.focusIndicator} onChange = {}
-';
+                    <div>Broken JSX</div>
   (e) => updateSetting('focusIndicator',;
   e.target.checked)";
 "";,
@@ -367,8 +347,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                 {/* Keyboard Navigation */}"";
                 <div className="flex items-center justify-between">"";
                   <label className="text-white cursor-pointer flex items-center gap-2">"";
-                    <input type="checkbox" checked={settings.keyboardNavigation} onChange = {}
-';
+                    <div>Broken JSX</div>
   (e) => updateSetting('keyboardNavigation',;
   e.target.checked)";
 "";,
@@ -391,24 +370,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
       {/* Notifications */}"";
       <div className="fixed top-6 right-6 z-50 space-y-2">;
         <AnimatePresence>;
-          {notifications.map((notification) => (<motion.div key={notification.id} initial = {}
-  { opacity: 0, x: 300,;
-  scale: 0.8;,
-}} animate = {}
-  { opacity: 1, x: 0,;
-  scale: 1;,
-}} exit = {}
-  { opacity: 0, x: 300,;
-  scale: 0.8;,
-}} transition = {}
-';
-  { type: 'spring', damping: 25,;
-  stiffness: 200 '`;
-'`'`;,
-}} className={`p-4 rounded-lg shadow-lg border-l-4 flex items-center gap-3 ${notification.type === 'success''';
-                ? 'bg-green-500/20 border-green-500 text-green-300''';
-                : notification.type === 'warning'''`;
-                    ? 'bg-yellow-500/20 border-yellow-500 text-yellow-300''`'"`;
+          {};
                     : 'bg-blue-500/20 border-blue-500 text-blue-300'}`}>'"'";
               {notification.type === 'success' && <Check className="w-5 h-5"/>}'"'";
               {notification.type === 'warning' && <AlertTriangle className="w-5 h-5"/>}'"'";

@@ -17,6 +17,8 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 }
             return,";
 function handleKeyDown(e) {}
+  return null;
+}
 ";
             if (e.key === "Escape") {}
 
@@ -115,7 +117,6 @@ try {}
     </div>)}""";
 """"""';
 ";,
-} catch (error) {;
-    console.error(error);,
+} catch (error) {};
 }
 export default Component;

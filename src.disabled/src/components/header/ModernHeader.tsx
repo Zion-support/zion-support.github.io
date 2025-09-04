@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-export function ModernHeader() {;
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);,
+export function ModernHeader() {};
+  return null;
+}
 }
   const [isServicesOpen, setIsServicesOpen] = useState(false);,
 }
-  const toggleMobileMenu = () => {;
+  const toggleMobileMenu = () => {};
+};
     setIsMobileMenuOpen(!isMobileMenuOpen);,
 }
 
@@ -125,7 +127,7 @@ export function ModernHeader() {;
 
                     </div>";
                     <div className="mt-4 pt-4 border-t border-gray-200 px-6">";
-                      <Link href="/services;
+                      <div>Broken JSX</div>
                         className="text-blue-600 hover: text-blue-700 font-medium">;
                         View All Services →;
                       </Link>;
@@ -157,7 +159,7 @@ export function ModernHeader() {;
 ,;
             {/* comment */}";
             <div className="hidden lg: flex items-center space-x-4">";
-              <Link href="/contact;
+              <div>Broken JSX</div>
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">;
                 Get Started,;
               </Link>;
@@ -165,7 +167,7 @@ export function ModernHeader() {;
 ,;
             {/* comment */}";
             <div className="lg: hidden">",;
-              <button onClick="{toggleMobileMenu}
+              <div>Broken JSX</div>
                 className="text-gray-700 hover: text-blue-600 transition-colors">",;
                 {isMobileMenuOpen ? <X className="h-6 w-6"  /> : <Menu className="h-6 w-6"  />}
 
@@ -184,55 +186,52 @@ export function ModernHeader() {;
               ";
               <div className="space-y-2">";
                 <div className="text-gray-700 font-medium">Services</div>;
-                {services.map((service) => (";
-                  <Link key="{service.name}
-                    href="{service.href}
-                    className="block pl-4 text-gray-600 hover: text-blue-600 transition-colors"">;
+                {};
                     onClick="{closeMobileMenu}">;
                     {service.name}
 
                   </Link>;
                 ))}";
-                <Link href="/services;
+                <div>Broken JSX</div>
                   className="block pl-4 text-blue-600 hover: text-blue-700 transition-colors font-medium"">;
                   onClick="{closeMobileMenu}">;
                   View All Services,;
                 </Link>;
               </div>;
 ";
-              <Link href="/about;
+              <div>Broken JSX</div>
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
                 About,;
               </Link>";
-              <Link href="/solutions;
+              <div>Broken JSX</div>
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
                 Solutions,;
               </Link>";
-              <Link href="/case-studies;
+              <div>Broken JSX</div>
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
                 Case Studies,;
               </Link>";
-              <Link href="/blog;
+              <div>Broken JSX</div>
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
                 Blog,;
               </Link>";
-              <Link href="/pricing;
+              <div>Broken JSX</div>
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
                 Pricing,;
               </Link>";
-              <Link href="/contact;
+              <div>Broken JSX</div>
                 className="block text-gray-700 hover: text-blue-600 transition-colors font-medium"">;
                 onClick="{closeMobileMenu}">;
                 Contact,;
               </Link>;
               ";
               <div className="pt-4 border-t border-gray-200">";
-                <Link href="/contact;
+                <div>Broken JSX</div>
                   className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors font-medium text-center"">;
                   onClick="{closeMobileMenu}">;
                   Get Started,;

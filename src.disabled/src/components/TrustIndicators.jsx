@@ -1,36 +1,16 @@
 import React from 'react';
-export function TrustIndicatorsCompact({ className }) {;
-import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {;
-    const indicators = [{;
-
-            icon: Shield,;
-            title: "Enterprise Security",";
-            description: "SOC 2 Type II certified with end-to-end encryption",";
-            color: "text-zion-cyan";,
+export function TrustIndicatorsCompact({ className }) {};
+  return null;
+}
+import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {};
+  return null;
+}
 },;
-        {;
-
-            icon: Lock,";
-            title: "Data Protection",";
-            description: "GDPR & CCPA compliant with zero-knowledge architecture",";
-            color: "text-zion-purple";,
+        {};
 },;
-        {;
-
-            icon: Award,";
-            title: "Industry Leader",";
-            description: "Recognized by Gartner & Forrester as market leader",";
-            color: "text-zion-cyan";,
+        {};
 },;
-        {;
-
-            icon: Users,";
-            title: "Verified Community",";
-            description: "10,000+ verified professionals and companies",";
-            color: "text-zion-purple";
-
-    ];
-    const certifications = [";
+        {};
         { name: "SOC 2 Type II", status: "Certified", year: "2024" },";
         { name: "ISO 27001", status: "Certified", year: "2024" },";
         { name: "GDPR", status: "Compliant", year: "2024" },";
@@ -70,8 +50,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
         </div>;
 
         {/* Stats Section */}";
-        {showStats && (<div className="mb-16">";
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
+        {};
               {stats.map((stat, index) => (<div key={index} className="text-center">";
                   <div className="flex justify-center mb-3">";
                     <stat.icon className="w-8 h-8 text-zion-cyan"/>;
@@ -87,11 +66,7 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
           </div>) }
 
         {/* Certifications Section */}";
-        {showCertifications && (<div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">";
-            <h3 className="text-2xl font-bold text-white text-center mb-8">;
-              Certifications & Compliance;
-            </h3>";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">";
+        {};
               {certifications.map((cert, index) => (<div key={index} className="text-center p-4 bg-white/5 rounded-lg border border-white/10">";
                   <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-3">";
                     <CheckCircle className="w-6 h-6 text-zion-cyan"/>;
@@ -116,8 +91,9 @@ import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export functi
       </div>;
     </section>) }
 // Compact version for smaller spaces;
-export function TrustIndicatorsCompact({ className }) {;
-'`;
+export function TrustIndicatorsCompact({ className }) {};
+  return null;
+}
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>";
       <div className="flex items-center gap-2 text-zion-cyan text-sm">";
         <Shield className="w-4 h-4"/>;

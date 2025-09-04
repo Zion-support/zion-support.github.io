@@ -3,68 +3,44 @@ import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {;
 ) ) }
-            catch(error) {;
-
+            catch(error) {};
                 // console.error('Failed to parse accessibility settings:', error)}
         }
     }, []) ;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;,
+    useEffect(() => {};
 }, []);
         // Apply settings to document;
         applySettings(settings);
         // Save to localStorage';
         localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
-    const applySettings = (newSettings) => {;
-
-        const root = document.documentElement;
-        // High contrast;
-        if(newSettings.highContrast) {;
-
-            root.style.setProperty('--high-contrast',1');
+    const applySettings = (newSettings) => {};
             root.classList.add('high-contrast')}
-        else {;
-
-            root.style.setProperty('--high-contrast',0');
+        else {};
             root.classList.remove('high-contrast')}
         // Font size';
         root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
         // Reduced motion;
-        if(newSettings.reducedMotion) {;
-
+        if(newSettings.reducedMotion) {};
             root.classList.add('reduced-motion')}
-        else {;
-
+        else {};
             root.style.setProperty('--reduced-motion',no-preference')}
         // Apply focus indicator;
-        if(settings.focusIndicator) {;
-
+        if(settings.focusIndicator) {};
             root.style.setProperty('--focus-visible',auto')}
-        else {;
-
+        else {};
             root.style.setProperty('--focus-visible',none')}
         // Color blindness';
         root.classList.remove('protanopia',deuteranopia',tritanopia');
-        if(newSettings.colorBlindness !== 'none') {;
-
+        if(newSettings.colorBlindness !== 'none') {};
             root.classList.add(newSettings.colorBlindness)}
         // Focus indicator;
-        if(newSettings.focusIndicator) {;
-
+        if(newSettings.focusIndicator) {};
             root.classList.add('focus-visible')}
-        else {;
-
+        else {};
             root.classList.remove('focus-visible')}
     };
-    const updateSetting = (key, value) => {;
-
+    const updateSetting = (key, value) => {};
         setSettings(prev => ({ ...prev, [key]: value }))};
-    const resetSettings = () => {;
-        const defaultSettings = {;
-
-  highContrast: false,;
-            fontSize: 100,;
-            reducedMotion: false,;
-            screenReader: false,;
-            keyboardNavigation: false,;
-            focusIndicator: true,`;
+    const resetSettings = () => {};
+};
+        const defaultSettings = {};

@@ -24,4 +24,4 @@ import React from "react";""; ; export function GradientHeading({}; children,"; 
 
 ";
 
-export default Component
+export {};

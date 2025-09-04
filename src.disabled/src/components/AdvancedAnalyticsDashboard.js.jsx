@@ -14,6 +14,8 @@ import React, { useState } from "react";""";,"});,"})","});,"})","})";
   Brain,""";,"});,"})";
   Rocket} from "lucide - react","";,"});,"})","});,"})","});,"})","});,"})";
 const AdvancedAnalyticsDashboard = () => {}"});,"})";
+  return <div>Component</div>;
+};
 ";,"});,"})";
 "";,"});,"})";
 """;,"});,"})";
@@ -138,9 +140,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
   return ("""";,"});,"})";
     <div className="max-w-7xl mx-auto p-6">;,"});,"})";
       {/* comment */}"});,"})";
-      <motion.div,"});,"})";
-        initial="{{" opacity: 0, y: 20 }}""";,"});,"})";
-        animate="{{" opacity: 1, y: 0 }}"""";,"});,"})";
+      <div>Broken JSX</div>
         className="mb-8"""";,"});,"})">"""";,"});,"})";
         <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">"","});,"})";
           <div>"""";,"});,"})";
@@ -155,10 +155,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
 """";,"});,"})";
           <div className="flex gap-2">";,"});,"})";
             {["7d",30d",90d",1y"].map(range => (;,"});,"})";
-              <Button,"});,"})";
-                key={range}""";,"});,"})";
-                variant="{timeRange" === range ? "default" : "outline"}"""";,"});,"})";
-                size="sm""";,"});,"})";
+              <div>Broken JSX</div>
                 onClick="{()" => setTimeRange(range)}"});,"})">;,"});,"})";
                 {range}"});,"})";
               </Button>;,"});,"})";
@@ -166,21 +163,15 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
           </div>;,"});,"})";
       </motion.div>;,"});,"})";
       {/* comment */}"});,"})";
-      <motion.div,"});,"})";
-        initial="{{" opacity: 0, y: 20 }}"});,"})";
-        animate="{{" opacity: 1, y: 0 }}""";,"});,"})";
-        transition="{{" delay: 0.1 }}"""";,"});,"})";
+      <div>Broken JSX</div>
         className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8"","});,"})">;,"});,"})";
         {metrics.map((metric, index) => (;,"});,"})";
-          <motion.div,"});,"})";
-            key={index}"});,"})";
-            initial="{{" opacity: 0, y: 20 }}"});,"})";
-            animate="{{" opacity: 1, y: 0 }}"});,"})";
+          <div>Broken JSX</div>
             transition="{{" delay: 0.1 * index }}""";,"});,"})">"""";,"});,"})";
             <Card className="h-full hover: shadow-lg transition-shadow">""","});,"})";
               <CardHeader className="pb-3">"""";,"});,"})";
                 <div className="flex items-center justify-between">;,"});,"})";
-                  <div,"});,"})";
+                  <div>Broken JSX</div>
                     className="{"w-12" h-12 bg-gradient-to-r ${metric.color} rounded-lg flex items-center justify-center text-white"}"});,"})">;,"});,"})";
                     {metric.icon}""";,"});,"})";
                   </div>"""";,"});,"})";
@@ -190,7 +181,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
                     ) : ("""";,"});,"})";
                       <ArrowDownRight className="w-4 h-4 text-red-500"  />;,"});,"})";
                     )}"";,"});,"})";
-                    <span"""";,"});,"})";
+                    <div>Broken JSX</div>
                       className="{"text-sm" font-medium ${metric.changeType === "increase" ? "text-green-600" : "text-red-600"}"}"});,"})">;,"});,"})";
                       {metric.change}%;,"});,"})";
                     </span>;,"});,"})";
@@ -207,10 +198,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
         ))}"});,"})";
       </motion.div>;,"});,"})";
       {/* comment */}"});,"})";
-      <motion.div,"});,"})";
-        initial="{{" opacity: 0, y: 20 }}"});,"})";
-        animate="{{" opacity: 1, y: 0 }}""";,"});,"})";
-        transition="{{" delay: 0.2 }}"""";,"});,"})";
+      <div>Broken JSX</div>
         className="mb-8""";,"});,"})">;,"});,"})";
         <Card>""";,"});,"})";
           <CardHeader>"""";,"});,"})";
@@ -246,11 +234,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
                 </thead>;,"});,"})";
                 <tbody>;,"});,"})";
                   {servicePerformance.map((service, index) => (;,"});,"})";
-                    <motion.tr,"});,"})";
-                      key={index}"});,"})";
-                      initial="{{" opacity: 0, x: -20 }}"});,"})";
-                      animate="{{" opacity: 1, x: 0 }}""";,"});,"})";
-                      transition="{{" delay: 0.1 * index }}"""";,"});,"})";
+                    <div>Broken JSX</div>
                       className="border-b border-zion-slate-light/10 hover: bg-zion-blue-light/5""","});,"})">"""";,"});,"})";
                       <td className="py-3 px-4">"""";,"});,"})";
                         <div className="font-medium text-zion-blue-dark">;,"});,"})";
@@ -260,8 +244,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
                       <td className="py-3 px-4">"""";,"});,"})";
                         <div className="flex items-center gap-2">"""";,"});,"})";
                           <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">""";,"});,"})";
-                            <div""";,"});,"})";
-                              className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full""";,"});,"})";
+                            <div>Broken JSX</div>
                               style="{{" width: "${service.performance}%" }}"});,"})"></div>""";,"});,"})";
                           </div>"""";,"});,"})";
                           <span className="text-sm font-medium">;,"});,"})";
@@ -302,10 +285,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
         </Card>;,"});,"})";
       </motion.div>;,"});,"})";
       {/* comment */}"});,"})";
-      <motion.div,"});,"})";
-        initial="{{" opacity: 0, y: 20 }}"});,"})";
-        animate="{{" opacity: 1, y: 0 }}""";,"});,"})";
-        transition="{{" delay: 0.3 }}"""";,"});,"})";
+      <div>Broken JSX</div>
         className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8"","});,"})">;,"});,"})";
         {/* comment */}"});,"})";
         <Card>""";,"});,"})";
@@ -318,14 +298,10 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
           <CardContent>"""";,"});,"})";
             <div className="space-y-3">;,"});,"})";
               {categoryDistribution.map((category, index) => (;,"});,"})";
-                <motion.div,"});,"})";
-                  key={index}"});,"})";
-                  initial="{{" opacity: 0, x: -20 }}"});,"})";
-                  animate="{{" opacity: 1, x: 0 }}""";,"});,"})";
-                  transition="{{" delay: 0.1 * index }}"""";,"});,"})";
+                <div>Broken JSX</div>
                   className="flex items-center justify-between"""";,"});,"})">"""";,"});,"})";
                   <div className="flex items-center gap-3">";,"});,"})";
-                    <div"";,"});,"})";
+                    <div>Broken JSX</div>
                       className="{"w-4" h-4 bg-gradient-to-r ${category.color} rounded-full"}""";,"});,"})"></div>"""";,"});,"})";
                     <span className="font-medium text-zion-slate-dark">;,"});,"})";
                       {category.label}"});,"})";
@@ -333,8 +309,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
                   </div>"""";,"});,"})";
                   <div className="flex items-center gap-2">"""";,"});,"})";
                     <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">";,"});,"})";
-                      <div"";,"});,"})";
-                        className="{"bg-gradient-to-r" ${category.color} h-2 rounded-full"}"";,"});,"})";
+                      <div>Broken JSX</div>
                         style="{{" width: "${category.value}%" }}"});,"})"></div>""";,"});,"})";
                     </div>"""";,"});,"})";
                     <span className="text-sm font-medium text-zion-slate-light">;,"});,"})";
@@ -395,10 +370,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
         </Card>;,"});,"})";
       </motion.div>;,"});,"})";
       {/* comment */}"});,"})";
-      <motion.div,"});,"})";
-        initial="{{" opacity: 0, y: 20 }}"});,"})";
-        animate="{{" opacity: 1, y: 0 }}""";,"});,"})";
-        transition="{{" delay: 0.4 }}"""";,"});,"})";
+      <div>Broken JSX</div>
         className="text-center"""";,"});,"})">"""";,"});,"})";
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"""";,"});,"})";
           <h3 className="text-3xl font-bold mb-4">Get Detailed Analytics</h3>"""";,"});,"})";
@@ -408,8 +380,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
             decisions.""";,"});,"})";
           </p>"""";,"});,"})";
           <div className="flex flex-col sm: flex-row gap-4 justify-center">"","});,"})";
-            <Button"""";,"});,"})";
-              className="bg-white text-zion-purple hover: bg-zion-slate-light"","});,"})";
+            <div>Broken JSX</div>
               onClick="{()" =>";,"});,"})";
                 window.open("";,"});,"})";
                   "mailto:kleber@ziontechgroup.com?subject="Analytics" Dashboard Access",_blank";,"});,"})";
@@ -418,9 +389,7 @@ const AdvancedAnalyticsDashboard = () => {}"});,"})";
               <Rocket className="w-5 h-5 mr-2"  />;,"});,"})";
               Request Access,"});,"})";
             </Button>""";,"});,"})";
-            <Button"""";,"});,"})";
-              variant="outline"""";,"});,"})";
-              className="border-white text-white hover: bg-white hover:text-zion-purple","});,"})";
+            <div>Broken JSX</div>
               onClick="{()" => window.open("tel:+13024640950",_blank")}""";,"});,"})">"""";,"});,"})";
               <Shield className="w-5 h-5 mr-2"  />;,"});,"})";
               Schedule Demo,"});,"})";
@@ -440,6 +409,8 @@ export { AdvancedAnalyticsDashboard };,"});,"})";
 ;,"});,"})";
 export { AdvancedAnalyticsDashboard };,"});,"})"";";
 const AdvancedAnalyticsDashboard = () => {}
+  return <div>Component</div>;
+};
 ;
 """;";
   const [timeRange, setTimeRange] = useState("30d")";
@@ -570,9 +541,7 @@ const metrics = []";
   return ("";
     <div className = "max-w-7xl mx-auto p-6">;
       {/* comment */}";
-      <motion .div";
-        initial="{{" opacity: 0, y: 20 }}"";
-        animate="{{" opacity: 1, y: 0 }}"";
+      <div>Broken JSX</div>
         className="mb-8""">"""";
         <div className="flex flex-col lg: flex-row lg:items-center lg:justify-between gap-4">"";
         className="mb-8"">"";
@@ -588,11 +557,7 @@ business intelligence";
           </div>""";
 """;
           <div className="flex gap-2">";
-            {["7d", 30d",90d", 1y"].map(range => (";
-              <Button ;
-                key={range}""";
-                variant="{timeRange" === range ? "default" : "outline"}""";
-                size="sm";
+            {};
                 onClick="{()" ="> setTimeRange(range)}">;
                 {range}
 ;
@@ -603,16 +568,9 @@ business intelligence";
       </motion.div>;
       {/* comment */}
 ;
-      <motion.div,";
-initial="{{" opacity: 0, y: 20 }}";
-        animate="{{" opacity: 1, y: 0 }}"";
-        transition="{{" delay: 0.1 }}"";
+      <div>Broken JSX</div>
         className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8 ">,;
-        {metrics.map((metric, index) => (;
-          <motion .div,";
-key="{index}
-            initial="{{" opacity: 0, y: 20 }}";
-            animate="{{" opacity: 1, y: 0 }}";
+        {};
             transition="{{" delay: 0.1 * index }}""">""""";
             <Card className="h-full hover: shadow-lg transition-shadow">"";
               <CardHeader className="pb-3">"";
@@ -621,12 +579,9 @@ key="{index}
                     {metric.icon}""";
                   </div>""";
                   <div className="flex items-center gap-1">""";
-                    {metric.changeType === "increase" ? ("";
-                      <ArrowUpRight className="w-4 h-4 text-green-500" /">"";
-                    ) : ("";
-                      <ArrowDownRight className="w-4 h-4 text-red-500" /">";
+                    {};
                     )}"""";
-                    <span """""";
+                    <div>Broken JSX</div>
                       className="{"text-sm" font-medium ${metric.changeType === "increase" ? "text-green-600" : "text-red-600"}"}">";
                       {metric.change}%;
                     </span>;
@@ -646,10 +601,7 @@ key="{index}
       </motion.div>;
       {/* comment */}
 ;
-      <motion.div,";
-initial="{{" opacity: 0, y: 20 }}";
-        animate="{{" opacity: 1, y: 0 }}"";
-        transition="{{" delay: 0.2 }}"";
+      <div>Broken JSX</div>
         className="mb-8 ">;
         <Card>""";
           <CardHeader>""";
@@ -684,24 +636,14 @@ initial="{{" opacity: 0, y: 20 }}";
                   </tr>;
                 </thead>;
                 <tbody>;
-                  {servicePerformance.map((service, index) => (;
-                    <motion .tr,";
-key="{index}
-                      initial="{{" opacity: 0, x: -20 }}";
-                      animate="{{" opacity: 1, x: 0 }}"";
-                      transition="{{" delay: 0.1 * index }}"";
-                      className="border-b border-zion-slate-light/10 hover: bg-zion-blue-light/5""">"""";
-                      className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5"">"";
-                      <td className="py-3 px-4">"";
-                        <div className="font-medium text-zion-blue-dark">",;
+                  {};
                           {service.name}
                         </div>""";
                       </td>""";
                       <td className="py-3 px-4">"";
                         <div className="flex items-center gap-2">"";
                           <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">""";
-                            <div """"";
-                              className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"";
+                            <div>Broken JSX</div>
                               style="{{" width: "${service.performance}%" }}""></div>""";
                           </div>"";
                           <span className="text-sm font-medium">;
@@ -745,10 +687,7 @@ key="{index}
       </motion.div>;
       {/* comment */}
 ;
-      <motion.div,";
-initial="{{" opacity: 0, y: 20 }}";
-        animate="{{" opacity: 1, y: 0 }}"";
-        transition="{{" delay: 0.3 }}"";
+      <div>Broken JSX</div>
         className="grid grid-cols-1 lg: grid-cols-2 gap-6 mb-8 ">",;
         {/* comment */}
         <Card>""";
@@ -760,16 +699,7 @@ initial="{{" opacity: 0, y: 20 }}";
           </CardHeader>""";
           <CardContent>"";
             <div className="space-y-3">;
-              {categoryDistribution.map((category, index) => (;
-                <motion .div,";
-key="{index}
-                  initial="{{" opacity: 0, x: -20 }}";
-                  animate="{{" opacity: 1, x: 0 }}"";
-                  transition="{{" delay: 0.1 * index }}"";
-                  className="flex items-center justify-between""">""""";
-                  className="flex items-center justify-between"">"""";
-                  <div className="flex items-center gap-3">;
-                    <div """";
+              {};
                       className="{"w-4" h-4 bg-gradient-to-r ${category.color} rounded-full"}""""></div>"""";
                     <span className="font-medium text-zion-slate-dark">";
                       {category.label}";
@@ -777,8 +707,7 @@ key="{index}
                   </div>"";
                   <div className="flex items-center gap-2">"""";
                     <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">";
-                      <div ";
-                        className="{"bg-gradient-to-r" ${category.color} h-2 rounded-full"}";
+                      <div>Broken JSX</div>
                         style="{{" width: "${category.value}%" }}""></div>""";
                     </div>"";
                     <span className="text-sm font-medium text-zion-slate-light">;
@@ -841,10 +770,7 @@ category,;
       </motion.div>;
       {/* comment */}
 ;
-      <motion .div,";
-initial="{{" opacity: 0, y: 20 }}";
-        animate="{{" opacity: 1, y: 0 }}"";
-        transition="{{" delay: 0.4 }}"";
+      <div>Broken JSX</div>
         className="text-center""">"""";
         className="text-center"">"";
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"";
@@ -855,20 +781,13 @@ insights to optimize your business performance and make data-driven;
             decisions.""";
           </p>""";
           <div className="flex flex-col sm: flex-row gap-4 justify-center">""";
-            <Button "";
-              className="bg-white text-zion-purple hover:bg-zion-slate-light"";
-              onClick="{()" =">";
-              className="bg-white text-zion-purple hover:bg-zion-slate-light;
-              onClick="{()" =">;
-                window.open(",,;
-                  "mailto: kleber@ziontechgroup.com?subject="Analytics" Dashboard Access", _blank;
-                )", ";,
+            <div>Broken JSX</div>
+              onClick="{};
 }""">"";
               <Rocket className = "w-5 h-5 mr-2" /">;
               Request Access;
             </Button>""";
-            <Button """;
-              variant="outline"""";
+            <div>Broken JSX</div>
               className="border-white text-white hover: bg-white hover:text-zion-purple""">;
               onClick="{()" ="> window.open("tel: +13024640950", _blank")}"";
               className="border-white text-white hover: bg-white hover:text-zion-purple",;

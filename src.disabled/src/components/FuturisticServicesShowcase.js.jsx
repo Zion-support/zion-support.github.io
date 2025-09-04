@@ -1,46 +1,23 @@
 import React, { useState, useEffect } from 'react';''';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices.jsx";
-const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, setIsHovered] = useState(false);
-    return (<motion.div initial = {}
-  { opacity: 0, y: 50,;
-  scale: 0.9;,
-}} animate = {}
-  isVisible ? { opacity: 1, y: 0,;
-  scale: 1;,
-} : {}} transition = {}
-  { duration: 0.6,;
-  delay: index * 0.1 ";
-"";,
+const ServiceCard = ({ service, index, isVisible }) => {};
 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>";
       {/* Animated Background */}"";
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>;
 
   { opacity: 0, y: 50, scale: 0.9}} animate = {}";
   isVisible ? { opacity: 1, y: 0, scale: 1} : {}} transition = {}
-  { duration: 0.6, delay: index * 0.1 """"">;
+  {};
 """"}} className="relative group" onHoverStart="{()" ="> setIsHovered(true)} onHoverEnd="{()" => setIsHovered(false)}>"";
       {/* comment */}"";
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover: blur-2xl transition-all duration-500"></div>"",;
       {/* comment */}
-      <div className="{"absolute" inset-0 rounded-2xl transition-all duration-500 ${isHovered""""";
-            ? "bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 p-[2px]"""""""";
+      <div>Broken JSX</div>
             : "bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30"}"}">""";
         <div className="relative bg-black/90 backdrop-blur-xl rounded-2xl p-6 h-full">""";
           {/* comment */}"";
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">""""            {[...Array(8)].map((_, i) => (<motion .div key="{i}" className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {}
-;
-  {}
-;
-                x[0, Math.random() * 100 - 50], y[0, Math.random() * 100 - 50], opacity[0.6, 0.2, 0.6];,
-}} transition = {}";
-  {}";
-                duration: 3 + Math.random() * 2, """;
-                repeat: Infinity,"";
-                ease: "easeInOut"}} style="{{}
-";
-
-                left: "${20 + Math.random() * 60}%", ";
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">""""            {};
                 top: "${20 + Math.random() * 60}%"}}/">))}
           </div>;
 """;
@@ -63,8 +40,7 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
               </div>;
               """;
               {/* comment */}""";
-              {service.aiScore && (<div className="relative">"";
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm">;
+              {};
                     {service.aiScore}""";
                   </div>""";
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full blur-lg opacity-50 animate-pulse"></div>"";
@@ -113,9 +89,7 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
             </div>;
 """",;
             {/* comment */}""";
-            {service.technologyStack && (<div className="mt-4 pt-4 border-t border-gray-700/50">"";
-                <h4 className="text-sm font-semibold text-purple-400 mb-2">Tech Stack</h4>"";
-                <div className="flex flex-wrap gap-1">"";
+            {};
                   {service.technologyStack.slice(0, 4).map((tech, idx) => (<span key="{idx}" className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded border border-purple-500/30">                      {tech}
 ;
                     </span>) ) }
@@ -148,7 +122,9 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
           <motion .div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" initial={false}/">";
         </div>;
     </motion.div>)}";
-export const FuturisticServicesShowcase = () => {}
+export {};
+  return <div>Component</div>;
+};
 ;
 """;";
     const [selectedCategory, setSelectedCategory] = useState("all")";
@@ -165,11 +141,7 @@ export const FuturisticServicesShowcase = () => {}
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         return matchesCategory && matchesSearch});
     // Set all services as visible initially for better UX;
-    useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+    useEffect(() => {};
 };,
 }, []);, []);
         const allIndices = new Set(filteredServices.map((_, index) => index));
@@ -178,11 +150,7 @@ export const FuturisticServicesShowcase = () => {}
       {/* Animated Background */}";
       <div className="absolute inset-0 overflow-hidden">";
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>";
-        {[...Array(20)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float" style={{;
-`;
-                left: `${Math.random() * 100}%`,`;
-                top: `${Math.random() * 100}%`,`;
-                animationDelay: `${Math.random() * 5}s`,`;
+        {};
                 animationDuration: `${3 + Math.random() * 4}s`}}/>))}
       </div>;
 ";
@@ -196,9 +164,8 @@ export const FuturisticServicesShowcase = () => {}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,;
         {/* comment */}
 ;
-        <motion.div initial = {}";
-  { opacity: 0, y: -50}} animate = {}
-  { opacity: 1, y: 0 """"">;
+        <div>Broken JSX</div>
+  {};
 """"}} transition="{{" duration: 0.8 }} className="text-center mb-16">"";
           <h1 className="text-5xl lg: text-7xl font-bold mb-6">"";
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">";
@@ -221,8 +188,7 @@ export const FuturisticServicesShowcase = () => {}
 """"",;
             {/* comment */}""""";
             <div className="flex flex-wrap justify-center gap-2">""""";
-              {categories.map((category) => (<button key="{category}" onClick="{()" ="> setSelectedCategory(category)} className="{"px-4" py-2 rounded-lg font-medium transition-all duration-300 transform hover: scale-105 ${selectedCategory === category"""";
-                ? "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30""""""",;
+              {categories.map((category) => (<button key="{category}" onClick="{()" ="> setSelectedCategory(category)} className="{};
                 : "bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20"}"}>";
                   {category === "all" ? "All Services" : category}
 ;
@@ -240,11 +206,8 @@ export const FuturisticServicesShowcase = () => {}
         </div>;
         {/* comment */}
 ;
-        <motion.div initial = {}
-;
-  { opacity: 0, y: 50}} animate = {}";
-  { opacity: 1, y: 0}} transition = {}
-  { duration: 0.8, delay: 0.5 """"">;
+        <div>Broken JSX</div>
+  {};
 """"}} className="text-center mt-20">"";
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/30">"";
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">;

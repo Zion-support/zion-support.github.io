@@ -57,6 +57,8 @@
     "automation_backup",
     "broken_files_backup",
     "contracts",
+    "data",
+    "data/**",
     "cypress",
     "temp_working",
     "supabase/functions",

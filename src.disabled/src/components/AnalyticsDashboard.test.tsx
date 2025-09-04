@@ -1,15 +1,11 @@
-  it(displays expected content", () => {;
-    render(<AnalyticsDashboard  />)";
+  it(displays expected content", () => {};
 import { render, screen } from &apos;@testing - library/react",;
 import AnalyticsDashboard from &apos;./AnalyticsDashboard;
-describe(&apos;AnalyticsDashboard&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;AnalyticsDashboard&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<AnalyticsDashboard / >)";

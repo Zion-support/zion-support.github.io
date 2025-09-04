@@ -24,8 +24,7 @@ export default function Page() {;
     setScore(newScore) ;
 
     // Show component after score calculation;
-    if(newScore > 0) {;
-
+    if(newScore > 0) {};
       setTimeout(() => setIsVisible(true), 1000)}
   }, [metrics]);
 
@@ -36,67 +35,38 @@ export default function Page() {;
     if(typeof window === 'null') return;
 
     // Performance Observer for Core Web Vitals';
-    if('PerformanceObserver' in window) {;
-
-      // First Contentful Paint;
-      try {;
-
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-          if(fcpEntry) {;
-
+    if('PerformanceObserver' in window) {};
             setMetrics(prev => ({ ...prev, fcp: Math.round(fcpEntry.startTime) }))}
         });
-        fcpObserver.observe({ entryTypes['paint'] })} catch(e) {;
-
+        fcpObserver.observe({ entryTypes['paint'] })} catch(e) {};
         // console.warn('FCP observer failed:', e)}
 
       // Largest Contentful Paint;
-      try {;
-        const lastEntry = entries[entries.length-1];
-          if(lastEntry) {;
-
+      try {};
             setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }))}
         });
-        lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch(e) {;
-
+        lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch(e) {};
         // console.warn('LCP observer failed:', e)}
 
       // First Input Delay;
-      try {;
-        const fidObserver = new PerformanceObserver((list) => {;
-
-          const entries = list.getEntries();
-          entries.forEach((entry) => {;
-
-            if(entry.processingStart && entry.processingStart > 0) {;
-
-              const fid = entry.processingStart - entry.startTime;
+      try {};
               setMetrics(prev => ({ ...prev, fid: Math.round(fid) }))}
           })});
-        fidObserver.observe({ entryTypes['first-input'] })} catch(e) {;
-
+        fidObserver.observe({ entryTypes['first-input'] })} catch(e) {};
         // console.warn('FID observer failed:', e)}
 
       // Cumulative Layout Shift;
-      try {;
-        const clsValue = 0;
-          list.getEntries().forEach((entry) => {;
-
-            if(!entry.hadRecentInput) {;
-
+      try {};
               clsValue += entry.value}
           });
           setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))});
-        clsObserver.observe({ entryTypes['layout-shift'] })} catch(e) {;
-
+        clsObserver.observe({ entryTypes['layout-shift'] })} catch(e) {};
         // console.warn('CLS observer failed:', e)}
     }
 
     // Time to First Byte(from navigation timing);
     const navigationEntry = performance.getEntriesByType('navigation')[0];
-    if(navigationEntry) {;
-
-      const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+    if(navigationEntry) {};
       setMetrics(prev => ({ ...prev, ttfb: Math.round (ttfb) }) ) }
   }, []) ;
 
@@ -115,17 +85,7 @@ export default function Page() {;
     return 'Poor'};
 
   return ();
-    <motion.div;
-      initial = {;
-
-  { opacity: 0,;
-  y: 20;,
-}}
-      animate = {;
-
-  { opacity: 1,;
-  y: 0;,
-}}
+    <div>Broken JSX</div>
       className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-zinc-700 rounded-lg p-4 text-white text-sm max-w-xs z-50">";
       <div className="flex items-center justify-between mb-3">";
         <h3 className="font-semibold text-zion-cyan">Performance</h3>;
@@ -139,39 +99,30 @@ export default function Page() {;
       </div>;
 
       <div className="space - y-1 text-xs">;
-        {metrics.fcp && (<div className="flex justify -between">;
-            <span > FCP:</span>;
+        {};
             <span className={metrics.fcp <= 1800 ? 'text-green - 400' : 'text-yellow-400'}>              {metrics.fcp}ms;
             </span>;
           </div>;
         )}
-        {metrics.lcp && (";
-          <div className="flex justify-between">;
-            <span>LCP:</span>;
+        {};
             <span className={metrics.lcp <= 2500 ? 'text-green-400' : 'text-yellow-400'}>;
               {metrics.lcp}ms;
             </span>;
           </div>;
         )}
-        {metrics.fid && (";
-          <div className="flex justify-between">;
-            <span>FID:</span>;
+        {};
             <span className={metrics.fid <= 100 ? 'text-green-400' : 'text-yellow-400'}>;
               {metrics.fid}ms;
             </span>;
           </div>;
         )}
-        {metrics.cls && (";
-          <div className="flex justify-between">;
-            <span>CLS:</span>;
+        {};
             <span className={metrics.cls <= 0.1 ? 'text-green-400' : 'text-yellow-400'}>;
               {metrics.cls}
             </span>;
           </div>;
         )}
-        {metrics.ttfb && (";
-          <div className="flex justify-between">;
-            <span>TTFB:</span>;
+        {};
             <span className={metrics.ttfb <= 800 ? 'text-green-400' : 'text-yellow-400'}>;
               {metrics.ttfb}ms;
             </span>;

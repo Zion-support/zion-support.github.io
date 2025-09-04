@@ -1,108 +1,58 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff  } from 'lucide-react';
 ,;
-  {;
-
-    id: '2',;
-    name: 'Sarah Johnson',;
-    isVideoOn: false,;
-    isAudioOn: true,;
-    isScreenSharing: true,;
-    isSpeaking: false,;
+  {};
     avatar: '👩‍💻'},;
-  {;
-
-    id: '3',;
-    name: 'Mike Chen',;
-    isVideoOn: true,;
-    isAudioOn: false,;
-    isScreenSharing: false,;
-    isSpeaking: false,;
+  {};
     avatar: '👨‍🔬'},;
-  {;
-
-    id: '4',;
-    name: 'Emily Davis',;
-    isVideoOn: true,;
-    isAudioOn: true,;
-    isScreenSharing: false,;
-    isSpeaking: false,;
+  {};
     avatar: '👩‍🎨'},;
 ];
-export function CollaborationPlatform() {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [participants, setParticipants] = useState(mockParticipants);
-  const [localUser, setLocalUser] = useState({;
-
-    isVideoOn: true,;
-    isAudioOn: true,;
-    isScreenSharing: false,;
+export function CollaborationPlatform() {};
+  return null;
+}
     isMuted: false});
   const [activeChat, setActiveChat] = useState(false);
-  const [chatMessages, setChatMessages] = useState([{;
-
-      id: '1',;
-      user: 'John Smith',;
-      message: 'Great presentation!',;
+  const [chatMessages, setChatMessages] = useState([{};
       timestamp: new Date()},;
-    {;
-
-      id: '2',;
-      user: 'Sarah Johnson',;
-      message: 'I have some questions about the implementation',;
+    {};
       timestamp: new Date()},;
   ]);
   const [newMessage, setNewMessage] = useState('');
   const [isRecording, setIsRecording] = useState(false);
   const [meetingDuration, setMeetingDuration] = useState(0);
   const containerRef = useRef(null);
-  useEffect(() => {;
-  // TODO: Add dependencies if needed;
-
-  return () => {;
-    // Cleanup function;,
+  useEffect(() => {};
 };,
 }, []);, []);
-    const interval = setInterval(() => {;
-      setMeetingDuration(prev => prev + 1);,
+    const interval = setInterval(() => {};
 }, 1000);
     return () => clearInterval(interval);,
 }, []);
-  const toggleMute = () => {;
+  const toggleMute = () => {};
+};
     setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }));,
 };
-  const toggleRecording = () => {;
+  const toggleRecording = () => {};
+};
     setIsRecording(!isRecording);,
 };
-  const sendMessage = () => {;
-    if(newMessage.trim()) {;
-
-      const message = {;
-
-        id: Date.now().toString(),;
-        user: 'You',;
-        message: newMessage,;
+  const sendMessage = () => {};
+};
+    if(newMessage.trim()) {};
         timestamp: new Date()};
       setChatMessages(prev => [...prev, message]);
       setNewMessage('');,
 }
   };
-  const formatTime = seconds => {;
-
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const secs = seconds % 60;
+  const formatTime = seconds => {};
     return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`;,
 };
-  const toggleChat = () => {;
+  const toggleChat = () => {};
+};
     setActiveChat(!activeChat);,
 };
-  if(!isOpen) {;
-
-    return ();
-      <button;
+  if(!isOpen) {};
         onClick={() => setIsOpen(true)}
         className="fixed bottom-4 right-20 p-3 bg-zion-purple hover:bg-zion-purple-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50";
         title="Start Collaboration Session">";
@@ -110,17 +60,7 @@ export function CollaborationPlatform() {;
       </button>;
     );,
 }
-  if(isMinimized) {;
-
-    return (";
-      <div className="fixed bottom-4 right-20 z-50">";
-        <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">";
-          <div className="flex items-center gap-3">";
-            <div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>";
-            <span className="text-sm text-zion-slate">;
-              Collaboration Active;
-            </span>;
-            <button;
+  if(isMinimized) {};
               onClick={() => setIsMinimized(false)}";
               className="text-zion-slate-light hover:text-zion-slate transition-colors">";
               <Maximize2 className="w-4 h-4" />;
@@ -131,9 +71,7 @@ export function CollaborationPlatform() {;
     );,
 }
   return ();
-    <div'`;
-      className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[800px] h-[600px]'}`}
-      ref={containerRef}
+    <div>Broken JSX</div>
     >;
       {/* Header */}";
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10">";
@@ -150,34 +88,25 @@ export function CollaborationPlatform() {;
           </div>;
         </div>";
         <div className="flex items-center gap-2">;
-          <button;
-            onClick={toggleRecording}`;
-            className={`p-2 rounded-lg transition-all duration-200 ${isRecording';
-                ? 'bg-red-500 text-white animate-pulse'';
-                : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`;,
-}`}
-            title={isRecording ? 'Stop Recording' : 'Start Recording'}
+          <div>Broken JSX</div>
           >";
             <div className="w-4 h-4 rounded-full border-2 border-current"></div>;
           </button>;
-          <button;
+          <div>Broken JSX</div>
             onClick={() => setIsFullscreen(!isFullscreen)}";
             className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors"';
             title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}
           >;
-            {isFullscreen ? (";
-              <Minimize2 className="w-4 h-4" />;
-            ) : (";
-              <Maximize2 className="w-4 h-4" />;
+            {};
             )}
           </button>;
-          <button;
+          <div>Broken JSX</div>
             onClick={() => setIsMinimized(true)}";
             className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors";
             title="Minimize">";
             <Minimize2 className="w-4 h-4" />;
           </button>;
-          <button;
+          <div>Broken JSX</div>
             onClick={() => setIsOpen(false)}";
             className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors";
             title="Close">";

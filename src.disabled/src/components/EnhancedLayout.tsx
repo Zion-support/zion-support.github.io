@@ -22,11 +22,9 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
   const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "");,
 }
   return (";
-    <PerformanceOptimizer enabled = "{true}" ";
-      showMetrics="{showPerformanceMetrics}
-      optimizeImages="{true}
+    <div>Broken JSX</div>
       lazyLoadThreshold="{0.1}">";
-      <SEOOptimizer autoAnalyze="{true}
+      <div>Broken JSX</div>
         showDetails="{showSEOAnalysis}">;
       >;
 <Head>;
@@ -87,20 +85,9 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
           <meta name="apple-mobile-web-app-title" content="Zion Tech Group"  />;
           ;
           {/* comment */}";
-          <link rel="preconnect" href="https: // comment;
-          <link rel="preconnect" href="https:// comment;
-          ,;
-          {/* comment */}";
-          <link rel="dns-prefetch" href="// comment;
-          ;
-          {/* comment */}";
-          <link rel="preload" ";
-            href="/fonts/inter-var.woff2" ";
-            as="font" ";
-            type="font/woff2" ";
+          <div>Broken JSX</div>
             crossOrigin="anonymous"  />";
-          <link rel="preload" ";
-            href="/images/hero-bg.jpg" ";
+          <div>Broken JSX</div>
             as="image"  />;
           ;
           {/* comment */}";
@@ -111,43 +98,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
           <link rel="manifest" href="/site.webmanifest"  />;
           ;
           {/* comment */}";
-          <script type="application/ld+json;
-            dangerouslySetInnerHTML="{{";
-              __html: JSON.stringify({",;
-                "@context": "https:// comment;
-                "@type": "Organization",";
-                "name": "Zion Tech Group",";
-                "url": "https:// comment;
-                "logo": "https:// comment;
-                "description": description,";
-                "address": {";
-                  "@type": "PostalAddress",";
-                  "streetAddress": "364 E Main St STE 1008",";
-                  "addressLocality": "Middletown",";
-                  "addressRegion": "DE",";
-                  "postalCode": "19709",";
-                  "addressCountry": "US";,
-},";
-                "contactPoint": {";
-                  "@type": "ContactPoint",";
-                  "telephone": "+1-302-464-0950",";
-                  "contactType": "customer service",";
-                  "email": "kleber@ziontechgroup.com";,
-},";
-                "sameAs": [";
-                  "https:// comment;
-                  "https: // comment;
-                ],";
-                "service": [;
-                  {";
-                    "@type": "Service",";
-                    "name": "AI Development",";
-                    "description": "Custom AI solutions and machine learning models";,
-},;
-                  {";
-                    "@type": "Service",";
-                    "name": "Cloud Architecture",";
-                    "description": "Scalable cloud solutions and infrastructure design";,
+          <div>Broken JSX</div>
 }>;
                   {";
                     "@type": "Service",";

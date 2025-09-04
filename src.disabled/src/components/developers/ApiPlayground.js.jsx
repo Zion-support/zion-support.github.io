@@ -4,8 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import CodeBlock from "./CodeBlock.jsx";
-export function ApiPlayground({ method, path, params = [] }) {;
-    const [apiKey, setApiKey] = useLocalStorage("zion_api_key", "");
+export function ApiPlayground({ method, path, params = [] }) {};
+  return null;
+}
     const [paramValues, setParamValues] = useState({});    const [body, setBody] = useState("{}");
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -30,8 +31,7 @@ export function ApiPlayground({ method, path, params = [] }) {;
   headers: {}
 `;
 ``;
-                Authorization: `Bearer ${apiKey`;
-`"`;,
+                Authorization: `Bearer ${};
 }`,"";
                 "Content-Type": "application/json"}};"";
         if (method !== "GET" && method !== "DELETE") {}
@@ -53,10 +53,7 @@ export function ApiPlayground({ method, path, params = [] }) {;
 };"";
     return (<div className="space-y-4">"";
       <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>"";
-      {params.map((p) => (<Input key={p.name} value={paramValues[p.name] || ""} onChange = {}
-  (e) => handleParamChange(p.name,;
-  e.target.value);
-";,
+      {};
 } placeholder={p.name}/>))}"";
       {method !== "GET" && method !== "DELETE" && (<Textarea value={body} onChange={(e) => setBody(e.target.value)} className="font-mono"/>)}";
       <Button onClick={sendRequest} disabled={loading}>"";

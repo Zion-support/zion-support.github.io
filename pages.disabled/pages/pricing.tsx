@@ -14,6 +14,30 @@ const PricingPage: React.FC = () => {,
           <p className="text-gray-600 mb-10 max-w-3xl">";
             We tailor solutions to your needs. Below are typical starting ranges observed in the market. Get a custom quote at any time.
           </p>
+<<<<<<< HEAD
+          <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link href="/contact" style={{ 
+              background: '#3182ce', 
+              color: 'white', 
+              padding: '12px 24px', 
+              borderRadius: '8px', 
+              textDecoration: 'none',
+              fontWeight: '600'
+            }}>
+              Get Custom Quote
+            </Link>
+            <Link href="/services-catalog" style={{ 
+              background: 'transparent', 
+              color: '#3182ce', 
+              padding: '12px 24px', 
+              borderRadius: '8px', 
+              textDecoration: 'none',
+              fontWeight: '600',
+              border: '2px solid #3182ce'
+            }}>
+              View All Services
+            </Link>
+=======
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,";
             <div className="border rounded-xl p-6 shadow-sm">";
@@ -75,6 +99,7 @@ const PricingPage: React.FC = () => {,
                 <li>Enterprise: $80,000+</li>
               </ul>
             </div>
+>>>>>>> c3407f17831351e4f4cfd0efb90f6fd048cb9536
           </div>
         </div>
       </section>

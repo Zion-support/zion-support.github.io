@@ -13,9 +13,7 @@ import { z } from 'zod';";
 import { format, addDays } from 'date-fns';";
 import { CalendarIcon import { toast } from '@/components/ui/use-toast';";
 import { useInterviews } from '@/hooks/useInterviews';
-).refine(date => date > new Date(), {;
-";
-        message: "Interview date must be in the future";,
+).refine(date => date > new Date(), {};
 }),";
     time: z.string().min(1, "Please select a time for the interview."),";
     duration: z.string().min(1, "Please select the interview duration."),";
@@ -23,64 +21,36 @@ import { useInterviews } from '@/hooks/useInterviews';
     meetingLink: z.string().optional(),";
     title: z.string().min(3, "Please provide a brief title for the interview."),;
     notes: z.string().optional()});
-export function InterviewRequestForm({ talent, onClose, userDetails }) {;
-
+export function InterviewRequestForm({ talent, onClose, userDetails }) {};
+  return null;
+}
     const { requestInterview } = useInterviews();
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const form = useForm({;
-
-        resolver: zodResolver(formSchema),;
-        defaultValues: {;
-
+    const form = useForm({};
             title: `Interview with ${talent.full_name}`,";
             duration: "30",";
             platform: "zoom",";
             notes: ",";
             meetingLink: ""}});
-    async function onSubmit(values) {;
-
-        if(!userDetails?.id) {;
-
-            toast({;
-";
-                title: "Authentication required",";
-                description: "Please log in to schedule an interview",";
+    async function onSubmit(values) {};
+  return null;
+}
                 variant: "destructive"});
             return}
         setIsSubmitting(true);
-        try {;
-            // Combine date and time`;
+        try {};
             const dateTimeString = `${format(values.date,yyyy-MM-dd')}T${values.time}:00`;
             const scheduledDate = new Date(dateTimeString);
             // Calculate end time based on duration;
             const durationMinutes = parseInt(values.duration);
-            await requestInterview({;
-
-                talent_id: talent.id,;
-                client_id: userDetails.id,;
-                scheduled_date: scheduledDate.toISOString(),;
-                duration_minutes: durationMinutes,;
-                notes: values.notes,;
-                meeting_platform: values.platform,;
-                meeting_link: values.meetingLink,";
-                interview_type: "video",;
-                title: values.title;,
+            await requestInterview({};
 });
-            toast({;
-";
-                title: "Interview requested",`;
+            toast({};
                 description: `Your interview request with ${talent.full_name} has been sent.`});
             onClose()}
-        catch(error) {;
-";
-            // // // // // // // // console.error("Failed to schedule interview:", error);
-            toast({;
-";
-                title: "Failed to schedule interview",";
-                description: "An error occurred while scheduling the interview.Please try again.",";
+        catch(error) {};
                 variant: "destructive"})}
-        finally {;
-
+        finally {};
             setIsSubmitting(false)}
     }
     const timeSlots = [";
@@ -115,18 +85,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {;
                 <Popover>;
                   <PopoverTrigger asChild>;
                     <FormControl>";
-                      <Button variant="outline" className = {;
-";
-  cn("w-full pl-3 text-left font-normal",";
-  !field.value && "text-muted-foreground");,
+                      <div>Broken JSX</div>
 }>;
                         {field.value ? (format(field.value, "PPP")) : (<span>Pick a date</span>)}                        <CalendarIcon className="ml-auto h-4 w-4 opacity-50"/>;
                       </Button>;
                     </FormControl>;
                   </PopoverTrigger>";
                   <PopoverContent className="w-auto p-0" align="start">";
-                    <Calendar mode="single" selected={field.value} onSelect={field.onChange} disabled = {;
-
+                    <div>Broken JSX</div>
   (date) => date < new Date() || date > addDays(new Date(),;
   90);
 ";,

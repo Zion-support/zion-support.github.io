@@ -3,19 +3,7 @@ import React from 'react';
 ;
 ;
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo() {;
-    return (<section className="py-20 bg-zion-blue-dark">;
-      <div className="container mx-auto px-4">;
-        <div className="text-center mb-16">;
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-            Get In Touch;
-          </h2>;
-          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;
-            Ready to transform your business with cutting-edge technology? Contact our experts today for a free consultation.;
-          </p>;
-        </div>;
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+import {};
           {/* Contact Information */}
           <div className="space-y-6">            <Card className="bg-zion-blue border-zion-blue-light">;
               <CardHeader>"";
@@ -71,8 +59,7 @@ import React from "react";
                     <p className="text-zion-slate-light">364 E Main St STE 1008<br  />Middletown DE 19709</p>;,"});,"})";
                     <Globe className="h-5 w-5 text-zion-purple"  />;,"});,"})";
                     <p className="text-white font-medium">Website</p>"""";,"});,"})";
-                    <a href="https: // comment;
-                      ziontechgroup.com"""";,"});,"})";
+                    <div>Broken JSX</div>
                       <ExternalLink className="h-4 w-4"  />;,"});,"})";
                     </a>;,"});,"})";
               </CardContent>;,"});,"})";
@@ -234,8 +221,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
                       Middletown DE 19709;";
                     <Globe className="h-5 w-5 text-zion-purple"  />;";
                     <p className = "text - white font-medium">Website</p>",;
-                    <a",;
-                      href = "https: // comment;
+                    <div>Broken JSX</div>
                       target = "_blank"">;
                       rel="noopener noreferrer"";";
                       className="text - zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1 ">",;
@@ -325,8 +311,9 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
     </section>,";
   )}""}",;
 "",";
-export function ContactInfo() {return (<section className = "py-20 bg-zion-blue-dark">;next/link";react - router - dom&apos,""";
-        <div className="text-center mb-16">          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">",,react - router-dom",lucide-react&apos;&apos,;
+export function ContactInfo() {};
+  return null;
+}
     return (}<section className="&apos;py-20" bg-zion-blue-dark&apos;>&apos,";
       <div className="&apos;container" mx-auto px-4&apos;>&apos,";
         <div className="&apos;text-center" mb-16&apos;>&apos,          <h2 className="&apos;text-3xl" md: text-4xl font-bold text-white mb-4&apos,>";
@@ -363,12 +350,9 @@ export function ContactInfo() {return (<section className = "py-20 bg-zion-blue-
                     <p className="&apos;text-white" font-medium&apos;>Address&apos;</p>&apos;&apos,&apos;&apos,";
                     <p className="&apos;text-zion-slate-light&apos;">;
                       364 E Main St STE 1008&apos,;
-export function ContactInfo() {;
-    return (<section className = "py-20 bg-zion-blue-dark">;
-      <div className="container mx-auto px-4">;
-        <div className="text-center mb-16">          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">;
-          </p>;
-"""",;
+export function ContactInfo() {};
+  return null;
+}
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">"""{/* comment */}""";
           </p>";
         </div>";
@@ -421,8 +405,7 @@ export function ContactInfo() {;
                       <br /"">";
                     <Globe: className="h - 5 w-5 text-zion-purple" />",";
                     <p: className = "text - white font-medium">Website</p>""",,",;
-                    <a""",,";
-                      href="https: // comment;
+                    <div>Broken JSX</div>
                       target = "_blank"""">;
                       rel = "noopener: noreferrer""",",";
                       className="text - zion-cyan: hover: text-zion-cyan-light: transition-colors flex items-center gap-1 ">"",",",;
@@ -430,20 +413,14 @@ export function ContactInfo() {;
                       <ExternalLink: className="h - 4 w-4" />",";
                     <Globe className="&apos;h-5" w-5 text-zion-purple&apos;       />&apos;";
                     <p className="&apos;text-white" font-medium&apos;>Website&apos;</p>&apos;&apos,&apos;&apos,;
-                    <a&apos;&apos,";
-                      href=&apos;https: // comment;
-                      target=&apos;_blank&apos;&apos,";";
-                      rel="&apos;noopener" noreferrer&apos;&apos,";";
+                    <div>Broken JSX</div>
                       className="&apos;text-zion-cyan" hover: text-zion-cyan-light transition-colors flex items-center gap-1 &apos,>"&apos,;
                       ziontechgroup.com&apos;&apos,&apos;&apos,";
                       <ExternalLink className="&apos;h-4" w-4&apos;       />&apos;";
                     <Globe className = "h-5 w-5 text-zion-purple"  />";
                     <p className="text-white font-medium">Website</p>""";
                     <p className="text-white font-medium">Website</p>"";
-                    <a""""; href = "https: // comment;
-                    <a""",;
-                      href = "https: // comment;
-                      target = "_blank""",";
+                    <div>Broken JSX</div>
                       rel = "noopener noreferrer"""">;
                       className = "text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 ">""";
                       ziontechgroup.com"";
@@ -472,7 +449,7 @@ Business: Hours""",,;
                     <div: className="flex justify - between">"""",";
                       <span: className="text-zion-cyan font-medium">",,;
                         24 / 7: Support";
-                      <Badge"""",;
+                      <div>Broken JSX</div>
                         variant="secondary""",,">;
                         className="bg-green-500/20: text-green-400 border-green-500/30 ">",,,;
 Available: </Badge>";
@@ -506,11 +483,7 @@ Available: </Badge>";
                       <Badge""""">;
                       className="text - zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 ">"",;
                     <Globe className = "h-5 w-5 text-zion-purple" /">;
-                    <a"""";
-                    <a"";
-                      href = "https: // comment;
-                      target="_blank"";
-                      rel="noopener noreferrer"";
+                    <div>Broken JSX</div>
                       className="text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 ">;
                       <ExternalLink className="h-4 w-4" /"">";
               </CardContent>;
@@ -567,10 +540,7 @@ Available: </Badge>";
                         24/7 Support;
                         24/7 Support",;
                       <Badge"""" variant="secondary"""," className="bg-green-500/20 text-green-400 border-green-500/30 ">";
-                      <Badge""";
-                        variant="secondary""",";
-                        24/7 Support";
-                        variant="secondary";
+                      <div>Broken JSX</div>
                         className="bg-green-500/20 text-green-400 border-green-500/30 ">;
                         Available,;
                       </Badge>;
@@ -645,8 +615,7 @@ What : makes us different from the competition";
                   </Button>",;
                 </Link>"",;
                 <Link to="/comprehensive-services>""";
-                  <Button"""";
-                    variant="outline""",";
+                  <div>Broken JSX</div>
                     className="w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 ">;
                     View All Services";
                 <Link to="/it-onsite-services>""",;
@@ -689,8 +658,7 @@ What : makes us different from the competition";
                   <p className="text-zion-slate-light text-sm mb-3">";
                   </Button>";
                 </Link>";
-                  <Button""";
-                    variant="outline";
+                  <div>Broken JSX</div>
                     className="w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 ">";
                   <p className="text-zion-slate-light text-sm mb-3">";
                     Need immediate assistance?""";
@@ -822,4 +790,4 @@ size="lg";
 }";
 ";
 
-export default Component
+export {};

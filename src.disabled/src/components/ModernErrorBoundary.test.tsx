@@ -1,15 +1,11 @@
-  it(displays expected content", () => {;
-    render(<ModernErrorBoundary  />)";
+  it(displays expected content", () => {};
 import { render, screen } from &apos;@testing - library/react",;
 import ModernErrorBoundary from &apos;./ModernErrorBoundary;
-describe(&apos;ModernErrorBoundary&apos, () => {;
-  it(&apos;renders without crashing&apos, () => {;
-    render();,
+describe(&apos;ModernErrorBoundary&apos, () => {};
 }
     expect(screen.getByRole(&apos;main&apos) || screen.getByText(/.*/)).toBeInTheDocument()});,
 }
-  it(&apos;displays expected content&apos, () => {;
-    render();,
+  it(&apos;displays expected content&apos, () => {};
 }
     // comment;
     render(<ModernErrorBoundary / >)";
