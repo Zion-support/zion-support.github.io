@@ -136,12 +136,13 @@ export const SEO: Reac t.FC<SEOProps> = ({
           "url": "https://ziontechgroup.com",
           "logo": "https://ziontechgroup.com/logo.svg",
           "description": description,
-          "sameAs": ["https://linkedin.com/company/zion-tech-group",
+          "sameAs": [
+            "https://linkedin.com/company/zion-tech-group",
             "https://twitter.com/ziontechgroup"
           ],
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-555-ZION-TECH",
+            "telephone": "+1-302-464-0950",
             "contactType": "customer service"
           }
         })}

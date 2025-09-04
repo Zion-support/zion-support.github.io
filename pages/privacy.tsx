@@ -9,6 +9,6 @@ export default function Privacy() {
       </div>
     </div>
   );
-}
+};
 
 export default Privacy;

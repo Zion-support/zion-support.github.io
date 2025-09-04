@@ -750,7 +750,7 @@ aria-label = "Toggle navigation>
                 )}
               </div>
             ))}
-            <a href="/contact" className="block w-full py-2 text-blue-700 font-medium">Get Started</a>
+            <a href="/services/ai" className="block w-full py-2 text-blue-700 font-medium">Explore AI</a>
           </div>
         </div>
 )}</header>

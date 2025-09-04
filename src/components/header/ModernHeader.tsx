@@ -122,7 +122,7 @@ export function ModernHeader() {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center">
+              <Link to="/" className="flex items-center">
                 <div className="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
@@ -132,7 +132,7 @@ export function ModernHeader() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Home
               </Link>
               
@@ -179,7 +179,7 @@ export function ModernHeader() {
                 )}
               </div>
 
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 About
               </Link>
               <Link href="/solutions" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
@@ -188,7 +188,7 @@ export function ModernHeader() {
               <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Case Studies
               </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+              <Link to="/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
                 Blog
               </Link>
               <Link href="/pricing" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
