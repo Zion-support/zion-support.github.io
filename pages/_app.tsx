@@ -28,13 +28,7 @@ function Header(): any {
         }}>Zion Tech Group        </Link>
         
         {/* Desktop Navigation */}
-<<<<<<< HEAD
-        <div style={{ 
-          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center'
-        } as React.CSSProperties}>
-=======
         <div className="hidden md:flex gap-1 flex-wrap items-center">
->>>>>>> 6e2972c748c24164ca3bd0b0a8c10c476a626932
           <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
           <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
           <Link href="/services-catalog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Catalog</Link>
@@ -53,14 +47,8 @@ function Header(): any {
         <button 
           className="md:hidden bg-none border-none text-white text-2xl cursor-pointer"
           style={{ 
-<<<<<<< HEAD
-            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
-            display: 'none'
-          } as React.CSSProperties}
-=======
             background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer'
           }}
->>>>>>> 6e2972c748c24164ca3bd0b0a8c10c476a626932
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
