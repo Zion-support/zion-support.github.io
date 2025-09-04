@@ -1,29 +1,28 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 
 interface Props {
-  children: ReactNode;,
+  children: ReactNode;
   fallback?: ReactNode;
 }
 
 interface State {
-  hasError: boolean;,
+  hasError: boolean;
   error?: Error;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  }
+  };
+
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error };
+  }
+
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     if (typeof console !== 'undefined') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
-  }
-
-  public componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
-    // Error logged to console in development
   }
   
   public render() {
@@ -79,4 +78,6 @@ class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+}
+
 export default ErrorBoundary;

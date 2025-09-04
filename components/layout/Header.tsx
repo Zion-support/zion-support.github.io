@@ -8,13 +8,14 @@ const Header: React.FC = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'All Services', href: '/services' },
-    { name: 'Catalog', href: '/services-catalog' },
-    { name: 'Cloud DevOps', href: '/cloud-devops' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Quantum', href: '/quantum-computing' },
+    { name: 'Services', href: '/services' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Docs', href: '/docs' },
-    { name: 'Pricing', href: '/pricing' };
+    { name: 'Contact', href: '/contact' }
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-white/10">

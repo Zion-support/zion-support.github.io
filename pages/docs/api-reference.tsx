@@ -130,7 +130,8 @@ export default function ApiReference() {
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
+          </section>
 
           {/* Quotes Endpoints */}
           <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>

@@ -1,7 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import PerformanceMonitor, { performanceMiddleware } from '../../lib/performance-monitor';
-import { dbManager } from '../../lib/database';
-import { apiCache, userCache, staticCache } from '../../lib/cache';
 
 interface SystemHealth {
   status: 'healthy' | 'degraded' | 'unhealthy';
@@ -10,13 +7,13 @@ interface SystemHealth {
     database: boolean;
     cache: boolean;
     api: boolean;
-  }
+  };
   metrics: {
     responseTime: number;
     memoryUsage: number;
     cacheHitRate: number;
     activeConnections: number;
-  }
+  };
   uptime: number;
 }
 
@@ -26,35 +23,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const startTime = Date.now();
-  
+
   try {
-    // Mock database health check
-    const dbHealth = true; // This would be a real database check
-    
-    // Check database health
-    const dbHealth = await dbManager.healthCheck();
-    
-    // Check cache health
+    // In a real implementation, replace these with live checks
+    const dbHealth = true; // Example: await dbManager.healthCheck();
+
     const cacheStats = {
-      api: apiCache.getStats(),
-      user: userCache.getStats(),
-      static: staticCache.getStats()
-    }
-    // Get performance metrics
-    const avgResponseTime = 100; // Mock value
+      api: { active: 0 },
+      user: { active: 0 },
+      static: { active: 0 }
+    };
+
+    const avgResponseTime = 100; // mock
     const memoryUsage = process.memoryUsage();
-    
-    // Calculate overall health
+
     const services = {
       database: dbHealth,
       cache: cacheStats.api.active > 0,
-      api: avgResponseTime < 1000 // Less than 1 second average response time
-    }
+      api: avgResponseTime < 1000
+    };
+
     const healthyServices = Object.values(services).filter(Boolean).length;
     const totalServices = Object.keys(services).length;
-    
+
     let status: 'healthy' | 'degraded' | 'unhealthy';
     if (healthyServices === totalServices) {
       status = 'healthy';
@@ -63,7 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } else {
       status = 'unhealthy';
     }
-    
+
     const health: SystemHealth = {
       status,
       timestamp: new Date().toISOString(),
@@ -71,21 +63,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       metrics: {
         responseTime: avgResponseTime,
         memoryUsage: memoryUsage.heapUsed,
-        cacheHitRate: 0, // This would need to be tracked separately
-        activeConnections: 0 // This would need to be tracked separately
+        cacheHitRate: 0,
+        activeConnections: 0
       },
       uptime: process.uptime()
-    }
+    };
+
     const responseTime = Date.now() - startTime;
-    
-    res.status(200).json({
-      ...health,
-      responseTime
-    });
+
+    return res.status(200).json({ ...health, responseTime });
   } catch (error) {
     console.error('Health check failed:', error);
-    
-    res.status(500).json({
+
+    return res.status(500).json({
       status: 'unhealthy',
       timestamp: new Date().toISOString(),
       error: 'Health check failed',
@@ -103,3 +93,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       uptime: process.uptime()
     });
   }
+}
