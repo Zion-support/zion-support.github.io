@@ -5,11 +5,10 @@ import { Shield, Lock, Eye, AlertTriangle, Users, Database } from 'lucide-react'
 
 export default function Cybersecurity() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: 'kleber@ziontechgroup.com',
     site: 'https://ziontechgroup.com'
   };
+  
   const services = [
     {
       icon: Shield,
@@ -132,7 +131,7 @@ export default function Cybersecurity() {
               Secure Your Business Today
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Don&apos;t wait for a security breach. Let our experts help you build a robust security posture.
+              Don't wait for a security breach. Let our experts help you build a robust security posture.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

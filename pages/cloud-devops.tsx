@@ -5,10 +5,10 @@ import { Cloud, Server, Database, Shield, Zap, Users } from 'lucide-react';
 
 export default function CloudDevOps() {
   const contact = {
-    email: 'kleber@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
+    phone: 'kleber@ziontechgroup.com',
     site: 'https://ziontechgroup.com'
   };
+  
   const services = [
     {
       icon: Cloud,
@@ -54,11 +54,11 @@ export default function CloudDevOps() {
         <title>Cloud DevOps Services - Zion Tech Group</title>
         <meta name="description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security. Transform your development workflow with Zion Tech Group." />
         <meta name="keywords" content="cloud migration, DevOps, infrastructure as code, CI/CD, cloud security, AWS, Azure, GCP" />
-        <link rel="canonical" href={`${contact.website}/cloud-devops`} />
-        <meta property="og: title" content="Cloud DevOps Services - Zion Tech Group" />
+        <link rel="canonical" href={`${contact.site}/cloud-devops`} />
+        <meta property="og:title" content="Cloud DevOps Services - Zion Tech Group" />
         <meta property="og:description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security." />
-        <meta property="og: url" content={`${contact.website}/cloud-devops`} />
-        <meta property="og: type" content="website" />
+        <meta property="og:url" content={`${contact.site}/cloud-devops`} />
+        <meta property="og:type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">
@@ -141,8 +141,8 @@ export default function CloudDevOps() {
                 Schedule Consultation
               </Link>
               <a 
-                href={`mailto:${contact.email}`}
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-blue-600 hover:text-white transition-colors"
+                href={`tel:${contact.phone}`}
+                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
               >
                 Email {contact.email}
               </a>

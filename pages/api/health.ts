@@ -37,7 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const cacheStats = {
       api: apiCache.getStats(),
       user: userCache.getStats(),
-      static: staticCache.getStats(),
+      static: staticCache.getStats()
     };
     
     // Get performance metrics
@@ -48,8 +48,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const services = {
       database: dbHealth,
       cache: cacheStats.api.active > 0,
-      api: avgResponseTime < 1000, // Less than 1 second average response time
+      api: avgResponseTime < 1000 // Less than 1 second average response time
     };
+    
     const healthyServices = Object.values(services).filter(Boolean).length;
     const totalServices = Object.keys(services).length;
     
@@ -70,15 +71,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         responseTime: avgResponseTime,
         memoryUsage: memoryUsage.heapUsed,
         cacheHitRate: 0, // This would need to be tracked separately
-        activeConnections: 0, // This would need to be tracked separately
+        activeConnections: 0 // This would need to be tracked separately
       },
-      uptime: process.uptime(),
+      uptime: process.uptime()
     };
+    
     const responseTime = Date.now() - startTime;
     
     res.status(200).json({
       ...health,
-      responseTime,
+      responseTime
     });
   } catch (error) {
     console.error('Health check failed:', error);
@@ -90,15 +92,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       services: {
         database: false,
         cache: false,
-        api: false,
+        api: false
       },
       metrics: {
         responseTime: 0,
         memoryUsage: 0,
         cacheHitRate: 0,
-        activeConnections: 0,
+        activeConnections: 0
       },
-      uptime: process.uptime(),
+      uptime: process.uptime()
     });
   }
 }

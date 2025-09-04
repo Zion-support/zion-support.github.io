@@ -52,7 +52,7 @@ const ServicesSection: React.FC = () => {
     { 
       icon: Globe, 
       title: 'IT Services', 
-      description: 'Comprehensive IT services including infrastructure, support, and digital transformation.', 
+      description: 'Comprehensive IT services including infrastructure support and digital transformation.', 
       href: '/it-services', 
       features: ['Infrastructure', 'Support', 'Digital Transformation', 'Consulting']
     }
@@ -85,12 +85,8 @@ const ServicesSection: React.FC = () => {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                {service.description}
-              </p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
 
               {/* Features */}
               <ul className="space-y-2 mb-6">
