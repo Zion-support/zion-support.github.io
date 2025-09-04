@@ -1298,7 +1298,236 @@ export default function ITServices() {
         'Better test coverage'
       ],
       category: 'Quality Assurance'
->>>>>>> origin/cursor/add-new-services-and-advertise-them-1114
+    },
+    {
+      icon: Cpu,
+      name: 'Quantum Computing Solutions',
+      description: 'Cutting-edge quantum computing services including algorithm development, quantum software, and hybrid classical-quantum solutions.',
+      features: [
+        'Quantum algorithm development',
+        'Quantum software engineering',
+        'Hybrid classical-quantum computing',
+        'Quantum cryptography implementation',
+        'Quantum simulation and modeling',
+        'Quantum hardware integration'
+      ],
+      pricing: '$200 – $500/hour',
+      projectPricing: '$25,000 – $200,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Solve complex optimization problems',
+        'Enhance cryptographic security',
+        'Accelerate scientific research',
+        'Gain competitive advantage'
+      ],
+      category: 'Quantum Computing'
+    },
+    {
+      icon: Globe,
+      name: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing solutions that bring processing power closer to data sources for ultra-low latency applications.',
+      features: [
+        'Edge node deployment and management',
+        'IoT device integration',
+        'Real-time data processing',
+        'Edge AI and machine learning',
+        '5G network optimization',
+        'Global edge network setup'
+      ],
+      pricing: '$150 – $300/hour',
+      projectPricing: '$20,000 – $100,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Reduce latency by 80-90%',
+        'Improve application performance',
+        'Enable real-time processing',
+        'Reduce bandwidth costs'
+      ],
+      category: 'Edge Computing'
+    },
+    {
+      icon: Brain,
+      name: 'AI Infrastructure & MLOps',
+      description: 'Complete AI infrastructure setup including machine learning pipelines, model deployment, and MLOps automation.',
+      features: [
+        'ML pipeline development and deployment',
+        'Model versioning and management',
+        'Automated model training and retraining',
+        'A/B testing for ML models',
+        'Model monitoring and drift detection',
+        'AI infrastructure optimization'
+      ],
+      pricing: '$120 – $250/hour',
+      projectPricing: '$15,000 – $80,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Accelerate ML model deployment',
+        'Improve model reliability',
+        'Automate ML workflows',
+        'Ensure model governance'
+      ],
+      category: 'AI & Machine Learning'
+    },
+    {
+      icon: Database,
+      name: 'Big Data & Analytics Platform',
+      description: 'Enterprise-grade big data platforms with real-time analytics, data lakes, and advanced analytics capabilities.',
+      features: [
+        'Data lake and warehouse design',
+        'Real-time streaming analytics',
+        'Data pipeline development',
+        'Advanced analytics and visualization',
+        'Data governance and security',
+        'Machine learning integration'
+      ],
+      pricing: '$100 – $200/hour',
+      projectPricing: '$20,000 – $150,000/project',
+      timeline: '6–20 weeks',
+      benefits: [
+        'Unify data across systems',
+        'Enable real-time analytics',
+        'Improve data quality',
+        'Accelerate insights delivery'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Implementation',
+      description: 'Comprehensive zero trust security architecture implementation with identity verification and micro-segmentation.',
+      features: [
+        'Zero Trust network architecture',
+        'Identity and access management',
+        'Micro-segmentation implementation',
+        'Continuous verification systems',
+        'Threat detection and response',
+        'Compliance automation'
+      ],
+      pricing: '$150 – $300/hour',
+      projectPricing: '$25,000 – $100,000/project',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Reduce security breaches by 90%',
+        'Improve compliance posture',
+        'Simplify security management',
+        'Enable secure remote work'
+      ],
+      category: 'Security'
+    },
+    {
+      icon: Smartphone,
+      name: '5G & IoT Solutions',
+      description: '5G network implementation and IoT device management solutions for smart cities and industrial applications.',
+      features: [
+        '5G network planning and deployment',
+        'IoT device management platform',
+        'Edge computing integration',
+        'Real-time data processing',
+        'Smart city solutions',
+        'Industrial IoT applications'
+      ],
+      pricing: '$120 – $250/hour',
+      projectPricing: '$30,000 – $200,000/project',
+      timeline: '8–24 weeks',
+      benefits: [
+        'Enable ultra-fast connectivity',
+        'Support massive IoT deployments',
+        'Reduce latency',
+        'Enable real-time applications'
+      ],
+      category: '5G & IoT'
+    },
+    {
+      icon: Server,
+      name: 'High-Performance Computing',
+      description: 'HPC solutions for scientific computing, simulations, and data-intensive applications requiring massive computational power.',
+      features: [
+        'HPC cluster design and deployment',
+        'GPU-accelerated computing',
+        'Distributed computing systems',
+        'Scientific computing optimization',
+        'Simulation and modeling support',
+        'Performance tuning and optimization'
+      ],
+      pricing: '$150 – $350/hour',
+      projectPricing: '$40,000 – $300,000/project',
+      timeline: '8–20 weeks',
+      benefits: [
+        'Accelerate complex computations',
+        'Enable large-scale simulations',
+        'Process massive datasets',
+        'Reduce time to insights'
+      ],
+      category: 'High-Performance Computing'
+    },
+    {
+      icon: BarChart3,
+      name: 'Blockchain & Web3 Development',
+      description: 'Comprehensive blockchain solutions including DeFi protocols, smart contracts, and Web3 applications.',
+      features: [
+        'Smart contract development',
+        'DeFi protocol implementation',
+        'NFT marketplace development',
+        'Cross-chain interoperability',
+        'Blockchain security auditing',
+        'Web3 application development'
+      ],
+      pricing: '$100 – $250/hour',
+      projectPricing: '$15,000 – $100,000/project',
+      timeline: '6–16 weeks',
+      benefits: [
+        'Enable decentralized applications',
+        'Reduce transaction costs',
+        'Improve transparency',
+        'Create new revenue streams'
+      ],
+      category: 'Blockchain & Web3'
+    },
+    {
+      icon: Wrench,
+      name: 'DevSecOps & Security Automation',
+      description: 'Integrated development, security, and operations with automated security testing and compliance.',
+      features: [
+        'Security integration in CI/CD',
+        'Automated security testing',
+        'Compliance automation',
+        'Infrastructure security',
+        'Vulnerability management',
+        'Security monitoring and alerting'
+      ],
+      pricing: '$120 – $220/hour',
+      projectPricing: '$20,000 – $80,000/project',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Integrate security into development',
+        'Automate compliance processes',
+        'Reduce security vulnerabilities',
+        'Accelerate secure deployments'
+      ],
+      category: 'DevSecOps'
+    },
+    {
+      icon: BookOpen,
+      name: 'Green IT & Sustainability',
+      description: 'Sustainable IT solutions that reduce carbon footprint through energy-efficient infrastructure and green computing practices.',
+      features: [
+        'Energy-efficient infrastructure design',
+        'Renewable energy integration',
+        'Carbon footprint monitoring',
+        'Green computing optimization',
+        'Sustainable data center solutions',
+        'Environmental reporting and compliance'
+      ],
+      pricing: '$100 – $200/hour',
+      projectPricing: '$15,000 – $75,000/project',
+      timeline: '4–12 weeks',
+      benefits: [
+        'Reduce carbon footprint by 40%',
+        'Lower energy costs',
+        'Meet sustainability goals',
+        'Improve environmental impact'
+      ],
+      category: 'Green IT'
     }
   ];
 

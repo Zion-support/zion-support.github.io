@@ -1594,6 +1594,292 @@ export default function AIServices() {
         'Competitive advantage',
         'Data-driven pricing decisions'
       ]
+    },
+    {
+      icon: Brain,
+      name: 'AI-Powered Video Clip Maker',
+      description: 'Intelligent video editing platform that automatically creates engaging short-form content from long-form videos using AI analysis.',
+      features: [
+        'AI-powered clip detection and extraction',
+        'Automatic highlight identification',
+        'Multi-platform format optimization',
+        'Voice and music enhancement',
+        'Thumbnail generation',
+        'A/B testing for clips'
+      ],
+      pricing: '$2,000 – $8,000 setup',
+      perUnit: '$0.50 – $2.00 per video',
+      timeline: '3–6 weeks',
+      benefits: [
+        'Increase video engagement by 200%',
+        'Reduce editing time by 80%',
+        'Optimize for multiple platforms',
+        'Boost social media performance'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'Smart Contract Analyzer Pro',
+      description: 'Advanced blockchain security platform that analyzes smart contracts for vulnerabilities, gas optimization, and compliance using AI.',
+      features: [
+        'Vulnerability detection (99.5% accuracy)',
+        'Gas optimization suggestions',
+        'Compliance checking',
+        'Automated testing',
+        'Security scoring',
+        'Multi-blockchain support'
+      ],
+      pricing: '$3,000 – $12,000 setup',
+      perUnit: '$0.10 – $1.00 per contract',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Prevent security vulnerabilities',
+        'Optimize gas costs by 30-50%',
+        'Ensure compliance',
+        'Reduce audit time by 70%'
+      ]
+    },
+    {
+      icon: Globe,
+      name: 'Multi-Language Website Translator',
+      description: 'AI-powered website translation platform that automatically translates and localizes websites into 100+ languages while maintaining SEO.',
+      features: [
+        '100+ language support',
+        'SEO-optimized translations',
+        'Cultural adaptation',
+        'Real-time translation',
+        'Content management integration',
+        'Quality assurance'
+      ],
+      pricing: '$1,500 – $6,000 setup',
+      perUnit: '$0.01 – $0.05 per word',
+      timeline: '2–4 weeks',
+      benefits: [
+        'Reach global audiences',
+        'Improve SEO rankings',
+        'Reduce translation costs by 60%',
+        'Maintain brand consistency'
+      ]
+    },
+    {
+      icon: BarChart3,
+      name: 'Predictive Inventory Optimizer',
+      description: 'AI-powered inventory management platform that predicts demand, optimizes stock levels, and reduces waste using machine learning.',
+      features: [
+        'Demand forecasting (95% accuracy)',
+        'Automated reorder points',
+        'Waste reduction optimization',
+        'Seasonal trend analysis',
+        'Multi-location management',
+        'Cost optimization'
+      ],
+      pricing: '$2,500 – $10,000 setup',
+      perUnit: '$0.01 – $0.05 per SKU',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Reduce inventory costs by 25%',
+        'Minimize stockouts by 90%',
+        'Decrease waste by 40%',
+        'Improve cash flow'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI-Powered Voice Analytics',
+      description: 'Advanced voice analysis platform that extracts insights from customer calls, meetings, and voice interactions using NLP and sentiment analysis.',
+      features: [
+        'Real-time voice analysis',
+        'Sentiment analysis',
+        'Call quality scoring',
+        'Automated transcription',
+        'Insight extraction',
+        'Performance metrics'
+      ],
+      pricing: '$2,000 – $8,000 setup',
+      perUnit: '$0.02 – $0.10 per minute',
+      timeline: '3–6 weeks',
+      benefits: [
+        'Improve customer satisfaction',
+        'Identify training opportunities',
+        'Optimize call center performance',
+        'Extract actionable insights'
+      ]
+    },
+    {
+      icon: Search,
+      name: 'AI-Powered Search & Discovery',
+      description: 'Intelligent search platform that provides personalized, context-aware search results using machine learning and natural language understanding.',
+      features: [
+        'Natural language search',
+        'Personalized results',
+        'Semantic understanding',
+        'Auto-complete suggestions',
+        'Search analytics',
+        'Multi-modal search'
+      ],
+      pricing: '$1,500 – $6,000 setup',
+      perUnit: '$0.001 – $0.01 per query',
+      timeline: '3–6 weeks',
+      benefits: [
+        'Improve search accuracy by 60%',
+        'Increase user engagement',
+        'Reduce search time by 50%',
+        'Enhance user experience'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'Autonomous AI Agents Platform',
+      description: 'Advanced AI agent platform that creates autonomous digital workers capable of handling complex tasks and decision-making.',
+      features: [
+        'Autonomous task execution',
+        'Decision-making capabilities',
+        'Workflow automation',
+        'Multi-agent collaboration',
+        'Learning and adaptation',
+        'Custom agent creation'
+      ],
+      pricing: '$5,000 – $25,000 setup',
+      perUnit: '$0.10 – $1.00 per task',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Automate complex workflows',
+        'Reduce operational costs by 40%',
+        'Improve decision speed',
+        'Scale operations efficiently'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI Financial Trading System',
+      description: 'Advanced algorithmic trading platform that uses AI to analyze markets, execute trades, and manage portfolios with institutional-grade performance.',
+      features: [
+        'AI market analysis',
+        'Algorithmic trading',
+        'Risk management',
+        'Portfolio optimization',
+        'Real-time execution',
+        'Performance analytics'
+      ],
+      pricing: '$10,000 – $50,000 setup',
+      perUnit: 'Custom pricing based on volume',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Improve trading performance',
+        'Reduce risk exposure',
+        'Automate trading strategies',
+        'Optimize portfolio returns'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI Legal Document Analysis',
+      description: 'Intelligent legal document analysis platform that reviews contracts, identifies risks, and provides legal insights using advanced NLP and legal AI.',
+      features: [
+        'Contract analysis',
+        'Risk identification',
+        'Legal clause extraction',
+        'Compliance checking',
+        'Document comparison',
+        'Legal insights'
+      ],
+      pricing: '$3,000 – $15,000 setup',
+      perUnit: '$0.10 – $1.00 per document',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Reduce review time by 80%',
+        'Identify hidden risks',
+        'Improve contract quality',
+        'Ensure compliance'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI Medical Image Analysis',
+      description: 'Advanced AI-powered medical image analysis platform that assists healthcare professionals with diagnosis and treatment planning.',
+      features: [
+        'Medical image analysis (96% accuracy)',
+        'Diagnosis support system',
+        'Treatment recommendations',
+        'Patient risk assessment',
+        'Clinical decision support',
+        'Integration with EMR systems'
+      ],
+      pricing: '$8,000 – $40,000 setup',
+      perUnit: '$0.50 – $5.00 per image',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Improve diagnostic accuracy',
+        'Reduce misdiagnosis rates',
+        'Accelerate treatment decisions',
+        'Enhance patient outcomes'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI Data Quality & Cleansing',
+      description: 'Intelligent data quality platform that automatically detects, cleans, and enriches data using machine learning algorithms.',
+      features: [
+        'Automated data quality assessment',
+        'Data cleansing and normalization',
+        'Duplicate detection and removal',
+        'Data enrichment and validation',
+        'Anomaly detection',
+        'Data lineage tracking'
+      ],
+      pricing: '$2,000 – $10,000 setup',
+      perUnit: '$0.001 – $0.01 per record',
+      timeline: '3–6 weeks',
+      benefits: [
+        'Improve data quality by 90%',
+        'Reduce data processing time',
+        'Ensure data consistency',
+        'Enable better analytics'
+      ]
+    },
+    {
+      icon: Users,
+      name: 'AI Customer Journey Optimization',
+      description: 'Intelligent customer journey mapping and optimization platform that uses AI to improve customer experience and conversion rates.',
+      features: [
+        'Customer journey mapping',
+        'Behavioral analysis',
+        'Personalization engine',
+        'Conversion optimization',
+        'A/B testing automation',
+        'Real-time recommendations'
+      ],
+      pricing: '$3,000 – $15,000 setup',
+      perUnit: '$0.01 – $0.10 per interaction',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Increase conversion rates by 45%',
+        'Improve customer experience',
+        'Reduce churn by 30%',
+        'Optimize marketing spend'
+      ]
+    },
+    {
+      icon: Cog,
+      name: 'AI Process Mining & Optimization',
+      description: 'Advanced process mining platform that uses AI to analyze business processes, identify bottlenecks, and suggest optimizations.',
+      features: [
+        'Process discovery and mapping',
+        'Bottleneck identification',
+        'Process optimization suggestions',
+        'Compliance monitoring',
+        'Performance analytics',
+        'Automated process improvement'
+      ],
+      pricing: '$4,000 – $20,000 setup',
+      perUnit: '$0.01 – $0.05 per process instance',
+      timeline: '6–12 weeks',
+      benefits: [
+        'Improve process efficiency by 35%',
+        'Reduce operational costs',
+        'Identify optimization opportunities',
+        'Ensure compliance'
+      ]
     }
   ];
 
