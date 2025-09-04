@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
 interface SearchResult {
@@ -16,8 +16,8 @@ const SearchBar: React.FC = () => {
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Memoized search data - in a real app, this would come from an API
-  const searchData: SearchResult[] = useMemo(() => [
+  // Mock search data - in a real app, this would come from an API
+  const searchData: SearchResult[] = [
     {
       title: 'Micro SaaS Products',
       description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
@@ -54,9 +54,9 @@ const SearchBar: React.FC = () => {
       url: '/pricing',
       type: 'page'
     }
-  ], []);
+  ];
 
-  const handleSearch = useCallback(async (searchQuery: string) => {
+  const handleSearch = async (searchQuery: string) => {
     if (!searchQuery.trim()) {
       setResults([]);
       setIsOpen(false);
@@ -76,19 +76,16 @@ const SearchBar: React.FC = () => {
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
-  }, [searchData]);
-
+  }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
     handleSearch(value);
-  };
-
+  }
   const handleResultClick = () => {
     setIsOpen(false);
     setQuery('');
-  };
-
+  }
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       setIsOpen(false);
@@ -102,7 +99,7 @@ const SearchBar: React.FC = () => {
         setIsOpen(false);
       }
     };
-
+    
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
