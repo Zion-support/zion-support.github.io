@@ -1,1 +1,0 @@
-import React from';react' export: default async function handler(req,res) { if (req.method !== 'POST') { res.status(405).end() return } try { const { projectDescription } = req.body || {} if (!projectDescription) { res.status(400).json({ error: 'projectDescription: required'}) return } Failed: to generate match'})} }';

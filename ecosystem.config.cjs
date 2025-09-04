@@ -150,6 +150,51 @@ module.exports = {
       log_file: 'logs/pm2/health-monitor.log',
       error_file: 'logs/pm2/health-monitor-error.log',
       out_file: 'logs/pm2/health-monitor-out.log',
+    },
+    {
+      name: 'error-fixer',
+      script: 'scripts/pm2/error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */2 * * *', // Every 2 hours
+      log_file: 'logs/pm2/error-fixer.log',
+      error_file: 'logs/pm2/error-fixer-error.log',
+      out_file: 'logs/pm2/error-fixer-out.log',
+    },
+    {
+      name: 'continuous-linter',
+      script: 'scripts/pm2/continuous-linter.cjs',
+      args: 'watch',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: 'logs/pm2/continuous-linter.log',
+      error_file: 'logs/pm2/continuous-linter-error.log',
+      out_file: 'logs/pm2/continuous-linter-out.log',
+    },
+    {
+      name: 'type-checker',
+      script: 'scripts/pm2/type-checker.cjs',
+      args: 'watch',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: 'logs/pm2/type-checker.log',
+      error_file: 'logs/pm2/type-checker-error.log',
+      out_file: 'logs/pm2/type-checker-out.log',
     }
   ]
 };
