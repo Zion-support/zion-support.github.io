@@ -9,12 +9,28 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
-    'no-console': 'warn',
+    'no-console': 'off',
     'react/no-unescaped-entities': 'warn',
+    'no-undef': 'off',
   },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'no-undef': 'off',
+      },
+    },
+  ],
   env: {
     browser: true,
     node: true,
     es6: true,
+    dom: true,
+  },
+  globals: {
+    KeyboardEvent: 'readonly',
+    HTMLElement: 'readonly',
+    HTMLButtonElement: 'readonly',
+    MutationObserver: 'readonly',
   },
 };
