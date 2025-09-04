@@ -5,12 +5,12 @@ const navLinks: Array<{ href: string; label: string }> = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
-  { href: '/solutions', label: 'Solutions' },
-  { href: '/micro-saas', label: 'Micro SAAS' },
+  { href: '/micro-saas', label: 'Micro SaaS' },
   { href: '/it-services', label: 'IT Services' },
-  { href: '/marketplace', label: 'Marketplace' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/careers', label: 'Careers' },
+  { href: '/services/ai-development', label: 'AI Services' },
+  { href: '/solutions', label: 'Solutions' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/news', label: 'News' },
   { href: '/contact', label: 'Contact' }
 ];
 
