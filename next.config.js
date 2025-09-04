@@ -2,7 +2,6 @@
 // Performance optimizations
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true },
@@ -72,15 +71,9 @@ const nextConfig = {
     ];
   },
   
-  // Redirects for SEO
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
+  // Generate sitemap
+  async rewrites() {
+    return [];
   },
 };
 

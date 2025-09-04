@@ -1,28 +1,71 @@
 import Link from 'next/link';
 
-export const metadata = { title: 'Services | Zion Tech Group' };
+export const metadata = { 
+  title: 'Services | Zion Tech Group',
+  description: 'Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.',
+};
 
 export default function ServicesOverviewPage() {
   return (
-    <section>
-      <h1 style={{fontSize: 26, fontWeight: 800}}>Services</h1>
-      <p style={{marginTop: 8, color: '#374151'}}>Product engineering and AI-first consulting to deliver measurable outcomes.</p>
-      <div style={{display: 'grid', gap: 16, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', marginTop: 24}}>
-        <ServiceCard href="/services/micro-saas" title="Micro SaaS" bullets={["Foundational architecture", "Billing + subscriptions", "Growth analytics"]} />
-        <ServiceCard href="/services/ai-services" title="AI Services" bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]} />
-        <ServiceCard href="/services/it-services" title="IT Services" bullets={["Cloud migration", "DevOps + SRE", "Security"]} />
+    <div className="animate-fade-in">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Product engineering and AI-first consulting to deliver measurable outcomes for your business.
+        </p>
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <ServiceCard 
+          href="/services/micro-saas" 
+          title="Micro SaaS" 
+          description="End-to-end product development with billing, auth, and analytics"
+          bullets={["Foundational architecture", "Billing + subscriptions", "Growth analytics"]}
+          icon="🚀"
+        />
+        <ServiceCard 
+          href="/services/ai-services" 
+          title="AI Services" 
+          description="LLM applications, RAG systems, and MLOps pipelines"
+          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+          icon="🤖"
+        />
+        <ServiceCard 
+          href="/services/it-services" 
+          title="IT Services" 
+          description="Cloud migration, DevOps, and security solutions"
+          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
+          icon="⚙️"
+        />
+      </div>
+
       <CTA />
-    </section>
+    </div>
   );
 }
 
-function ServiceCard({ href, title, bullets }: { href: string; title: string; bullets: string[] }) {
+function ServiceCard({ href, title, description, bullets, icon }: { 
+  href: string; 
+  title: string; 
+  description: string;
+  bullets: string[]; 
+  icon: string;
+}) {
   return (
-    <Link href={href} style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16, display: 'block'}}>
-      <h3 style={{fontWeight: 700, marginBottom: 8}}>{title}</h3>
-      <ul style={{color: '#4b5563', paddingLeft: 18}}>
-        {bullets.map((b) => (<li key={b} style={{listStyle: 'disc'}}>{b}</li>))}
+    <Link 
+      href={href} 
+      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+    >
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
+      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
+      <ul className="text-gray-600 space-y-2">
+        {bullets.map((bullet) => (
+          <li key={bullet} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span>
+            {bullet}
+          </li>
+        ))}
       </ul>
     </Link>
   );
@@ -30,10 +73,26 @@ function ServiceCard({ href, title, bullets }: { href: string; title: string; bu
 
 function CTA() {
   return (
-    <div style={{border: '1px solid #e5e7eb', borderRadius: 12, padding: 16, marginTop: 24}}>
-      <h3 style={{fontWeight: 700}}>Talk to an expert</h3>
-      <p style={{color: '#4b5563'}}>Mobile: +1 302 464 0950 · Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-      <a href="https://ziontechgroup.com" style={{display: 'inline-block', marginTop: 8, padding: '8px 12px', background: '#111827', color: '#fff', borderRadius: 8}}>Get Started</a>
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+        Talk to our experts about your project. We'll help you choose the right service 
+        and create a custom solution for your business needs.
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="tel:+13024640950" 
+          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Call +1 302 464 0950
+        </a>
+        <a 
+          href="mailto:kleber@ziontechgroup.com" 
+          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+        >
+          Email Us
+        </a>
+      </div>
     </div>
   );
 }
