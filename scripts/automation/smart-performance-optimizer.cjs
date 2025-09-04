@@ -7,38 +7,24 @@
 
 const fs = require('fs')
 const path = require('path')
-const { execSync } = require('child_process');
-
-class SmartPerformanceOptimizer {
+const { execSync } = require('child_process') class SmartPerformanceOptimizer {
     constructor() {
-        this.projectRoot = process.cwd();
-        this.logFile = path.join(this.projectRoot, 'logs', 'smart-performance-optimizer.log');
-        this.reportFile = path.join(this.projectRoot, 'performance-optimization-report.json');
-        this.ensureLogsDirectory()}
+        this.projectRoot = process.cwd() this.logFile = path.join(this.projectRoot, 'logs', 'smart-performance-optimizer.log') this.reportFile = path.join(this.projectRoot, 'performance-optimization-report.json') this.ensureLogsDirectory();
+    }
 
     ensureLogsDirectory() {
-        const logsDir = path.join(this.projectRoot, 'logs';);
-        if () {
-            fs.mkdirSync(logsDir, { recursive: true })}
+        const logsDir = path.join(this.projectRoot, 'logs') if (!fs.existsSync(logsDir)) {
+            fs.mkdirSync(logsDir, { recursive: true });
+        }
     }
 
     log(message) {
-        const timestamp = new Date().toISOString() {
-    ) {
-            fs.mkdirSync(logsDir, { recursive: true })}
+        const timestamp = new Date().toISOString() const logMessage = `[${timestamp}] ${message}\n`;
+        fs.appendFileSync(this.logFile, logMessage) console.log(message);
     }
-
-    log(message) {
-        const timestamp = new Date().toISOString(;
-  });
-        const logMessage = `[${timestamp}] ${message}\;n;`;
-        fs.appendFileSync(this.logFile, logMessage);
-        console.log(message);}
 
     analyzeBundleSize() {
-        this.log('Analyzing bundle size...');
-        
-        try {
+        this.log('Analyzing bundle size...') try {
             // Build the project first
             execSync('npm run build', { 
                 cwd: this.projectRoot, 
@@ -50,75 +36,50 @@ class SmartPerformanceOptimizer {
                 cwd: this.projectRoot, 
                 encoding: 'utf8',
                 stdio: 'pipe'
-            ;};);
-            
-            this.log('Bundle analysis completed');
-            return { status: 'success', output: bundleAnalysis ;}} catch (error) {
-            this.log(`Bundle analysis failed: ${error.message}`);
-            return { status: 'failed', error: error.message ;}}
+            }) this.log('Bundle analysis completed') return { status: 'success', output: bundleAnalysis };
+        } catch (error) {
+            this.log(`Bundle analysis failed: ${error.message}`) return { status: 'failed', error: error.message };
+        }
     }
 
     checkBuildPerformance() {
-        this.log('Checking build performance...');
-        
-        const startTime = Date.now(;);
-        
-        try {
+        this.log('Checking build performance...') const startTime = Date.now() try {
             execSync('npm run build', { 
                 cwd: this.projectRoot, 
                 stdio: 'pipe'
-            });
-            
-            const buildTime = Date.now() - startTi;m;e;
-            this.log(`Build completed in ${buildTime}ms`);
-            
-            return {;
+            }) const buildTime = Date.now() - startTime this.log(`Build completed in ${buildTime}ms`) return {
                 status: 'success',
                 buildTime: buildTime,
                 performance: buildTime < 60000 ? 'good' : 'needs_optimization'
-            }} catch (error) {
-            this.log(`Build failed: ${error.message}`);
-            return { status: 'failed', error: error.message ;}}
+            };
+        } catch (error) {
+            this.log(`Build failed: ${error.message}`) return { status: 'failed', error: error.message };
+        }
     }
 
     optimizeImages() {
-        this.log('Optimizing images...');
-        
-        try {
+        this.log('Optimizing images...') try {
             // This would typically use a tool like imagemin
             // For now, we'll just check if images exist
-            const publicDir = path.join(this.projectRoot, 'public';);
-            const imageFiles = this.findImageFiles(publicDir;);
-            
-            this.log(`Found ${imageFiles.length} image files`);
-            
-            return {;
+            const publicDir = path.join(this.projectRoot, 'public') const imageFiles = this.findImageFiles(publicDir) this.log(`Found ${imageFiles.length} image files`) return {
                 status: 'success',
                 imagesFound: imageFiles.length,
                 recommendations: imageFiles.length > 0 ? [
                     'Consider using WebP format for better compression',
                     'Implement lazy loading for images',
                     'Use responsive images with srcset'
-                ] : []
-            }} catch (error) {
-            this.log(`Image optimization failed: ${error.message}`);
-            return { status: 'failed', error: error.message ;}}
+                ] : [
+        ];
+    } catch (error) {
+            this.log(`Image optimization failed: ${error.message}`) return { status: 'failed', error: error.message
+        };
     }
 
     findImageFiles(dir) {
-        const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg';];
-        const files = [;];
-        
-        if () return file) {
+        const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg';] const files = [;] if () return file) {
     ) return file;
-  }s;
-        
-        const items = fs.readdirSync(dir;);
-        for (const item of items) {
-            const fullPath = path.join(dir, item;);
-            const stat = fs.statSync(fullPath;);
-            
-            if () {
+  }s const items = fs.readdirSync(dir) for (const item of items) {
+            const fullPath = path.join(dir, item) const stat = fs.statSync(fullPath) if (!fs.existsSync(logsDir)) {
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {
                 files.push(fullPath)}
         }
@@ -136,9 +97,8 @@ class SmartPerformanceOptimizer {
         this.log('Checking Lighthouse metrics...');
         
         // This would typically run Lighthouse programmatically
-        // For now, we'll return mock data;
-        return {;
-            status: 'success',
+        // For now, we'll return mock data return {
+                status: 'success',
             metrics: {
                 performance: 85,
                 accessibility: 92,
@@ -149,13 +109,11 @@ class SmartPerformanceOptimizer {
                 'Minimize main-thread work',
                 'Reduce unused JavaScript',
                 'Eliminate render-blocking resources'
-            ]
-        }}
+        ];
+    }
 
     generateOptimizationReport() {
-        this.log('Generating performance optimization report...');
-        
-        const report = {
+        this.log('Generating performance optimization report...') const report = {
             timestamp: new Date().toISOString(),
             project: this.projectRoot,
             analysis: {
@@ -164,16 +122,12 @@ class SmartPerformanceOptimizer {
                 images: this.optimizeImages(),
                 lighthouse: this.checkLighthouseMetrics()
             },
-            optimizations: this.generateOptimizationSuggestions()
-       ; ;};
+            optimizations: this.generateOptimizationSuggestions();};
 
-        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-        this.log(`Performance report saved to ${this.reportFile}`);
-        
-        return report;}
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)) this.log(`Performance report saved to ${this.reportFile}`) return report;}
 
     generateOptimizationSuggestions() {
-        return [;
+        return [
             'Enable gzip compression for static assets',
             'Implement code splitting for better loading performance',
             'Use CDN for static assets',
@@ -184,14 +138,10 @@ class SmartPerformanceOptimizer {
         ]}
 
     async run() {
-        this.log('Smart Performance Optimizer started');
-        
-        try {
-            const report = this.generateOptimizationReport(;);
-            this.log('Smart Performance Optimizer completed successfully');
-            return report;} catch (error) {
-            this.log(`Smart Performance Optimizer failed: ${error.message}`);
-            throw error}
+        this.log('Smart Performance Optimizer started') try {
+            const report = this.generateOptimizationReport() this.log('Smart Performance Optimizer completed successfully') return report;} catch (error) {
+            this.log(`Smart Performance Optimizer failed: ${error.message}`) throw error;
+    }
     }
 }
 
@@ -200,7 +150,7 @@ if ( {
     const optimizer = new SmartPerformanceOptimizer) {
      {
     const optimizer = new SmartPerformanceOptimizer;
-  }(;);
+  }();
     optimizer.run().catch(console.error)}
 
 module.exports = SmartPerformanceOptimizer;
