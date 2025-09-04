@@ -5,11 +5,9 @@ import { Cloud, Server, Database, Shield, Zap, Users } from 'lucide-react';
 
 export default function CloudDevOps() {
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
+    phone: 'kleber@ziontechgroup.com',
     site: 'https://ziontechgroup.com'
   };
-
   const services = [
     {
       icon: Cloud,

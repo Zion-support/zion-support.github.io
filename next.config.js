@@ -15,7 +15,7 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
@@ -28,14 +28,14 @@ const nextConfig = {
         chunks: 'all',
         cacheGroups: {
           vendor: {
-            test: /[\/]node_modules[\/]/,
+            test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             chunks: 'all',
           },
         },
-      };
+      }
     }
-    return config;
+    return config
   },
   
   // Headers for performance
@@ -51,7 +51,7 @@ const nextConfig = {
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
         ]
       }
-    ];
+    ]
   },
 };
 
