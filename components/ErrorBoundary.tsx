@@ -13,11 +13,11 @@ interface State {
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  };
-  
+  }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
+  
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error in development only
     if (process.env.NODE_ENV === 'development') {
@@ -25,7 +25,7 @@ class ErrorBoundary extends Component<Props, State> {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }
-
+  
   public render() {
     if (this.state.hasError) {
       if (this.props.fallback) {

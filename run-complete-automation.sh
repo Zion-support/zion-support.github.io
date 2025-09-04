@@ -51,7 +51,7 @@ echo "========================================"
 run_with_log "Dependency Installation" "npm install"
 
 # Health check
-run_with_log "Health Check" "node automation/health-check.cjs"
+run_with_log "Health Check" "node scripts/comprehensive-health-check.cjs"
 
 echo ""
 echo "🛠️  Phase 2: Code Quality & Fixes"

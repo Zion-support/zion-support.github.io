@@ -1563,7 +1563,6 @@ export default function MicroSaaS() {
 
   const categories = [...new Set(microSaaSServices.map(service => service.category))];
 
-export default function MicroSaaS() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
@@ -1684,7 +1683,9 @@ export default function MicroSaaS() {
             </p>
           </div>
         </div>
+        </div>
       </div>
+    </div>
     </div>
   );
 }
