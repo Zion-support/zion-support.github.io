@@ -1,47 +1,48 @@
 {
-  "timestamp": "2025-09-03T23:23:47.106Z",
-  "status": "warning",
+  "timestamp": "2025-09-04T02:05:35.815Z",
+  "duration": "1ms",
+  "overallStatus": "warning",
+  "summary": {
+    "total": 7,
+    "healthy": 6,
+    "warnings": 1,
+    "unhealthy": 0
+  },
   "checks": [
     {
+      "name": "File System",
+      "status": "healthy",
+      "details": "File system accessible"
+    },
+    {
       "name": "Node.js Version",
-      "status": "pass",
-      "value": "v22.16.0",
-      "message": "Node.js version is compatible"
+      "status": "healthy",
+      "details": "Node.js v22.16.0 (compatible)"
     },
     {
       "name": "Package.json",
-      "status": "pass",
-      "value": "ziontechgroup.com",
-      "message": "Package.json found and valid"
+      "status": "healthy",
+      "details": "Package: ziontechgroup.com v0.1.0"
     },
     {
       "name": "Dependencies",
-      "status": "pass",
-      "message": "Node modules directory exists"
+      "status": "healthy",
+      "details": "node_modules directory exists"
     },
     {
-      "name": "Next.js Config",
-      "status": "pass",
-      "message": "Next.js configuration found"
-    },
-    {
-      "name": "TypeScript Config",
-      "status": "pass",
-      "message": "TypeScript configuration found"
+      "name": "Build System",
+      "status": "healthy",
+      "details": "Next.js configuration found"
     },
     {
       "name": "Source Files",
-      "status": "pass",
-      "message": "Source directory found"
+      "status": "healthy",
+      "details": "Required directories present"
     },
     {
-      "name": "Environment Variables",
-      "status": "warn",
-      "message": "Environment file not found, but example exists"
+      "name": "Environment",
+      "status": "warning",
+      "details": "Missing environment variables: NODE_ENV"
     }
-  ],
-  "issues": [],
-  "recommendations": [
-    "Copy .env.example to .env.local and configure"
   ]
 }

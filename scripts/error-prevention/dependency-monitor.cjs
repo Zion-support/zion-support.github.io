@@ -1,191 +1,143 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
+const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const chokidar = require('chokidar');
 
 class DependencyMonitor {
   constructor() {
-    this.logFile = path.join(process.cwd(), 'automation/logs/dependency-monitor.log');
-    this.reportFile = path.join(process.cwd(), 'automation/logs/dependency-report.json');
-    this.lastCheck = null;
-    this.dependencyCount = 0;
-    this.devDependencyCount = 0;
-    this.isInstalling = false;
+    this.isRunning = false;
+    this.interval = 600000; // 10 minutes
+    this.packageJsonPath = path.join(process.cwd(), 'package.json');
   }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-
-  async checkDependencies() {
-    this.log('Checking dependencies...');
+  async start() {
+    console.log('Starting Dependency Monitor...');
+    this.isRunning = true;
     
-    try {
-      // Read package.json
-      const packageJsonPath = path.join(process.cwd(), 'package.json');
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-      
-      this.dependencyCount = Object.keys(packageJson.dependencies || {}).length;
-      this.devDependencyCount = Object.keys(packageJson.devDependencies || {}).length;
-      this.lastCheck = new Date();
-      
-      this.log(`Found ${this.dependencyCount} dependencies and ${this.devDependencyCount} dev dependencies`);
-      
-      // Check if node_modules exists and is complete
-      const nodeModulesPath = path.join(process.cwd(), 'node_modules');
-      if (!fs.existsSync(nodeModulesPath)) {
-        this.log('node_modules directory missing, installing dependencies...');
-        await this.installDependencies();
-        return;
-      }
-      
-      // Check for missing dependencies
-      await this.checkMissingDependencies();
-      
-      // Generate dependency report
-      const report = {
-        timestamp: this.lastCheck.toISOString(),
-        dependencyCount: this.dependencyCount,
-        devDependencyCount: this.devDependencyCount,
-        status: 'healthy',
-        missingDependencies: [],
-        outdatedPackages: []
-      };
-      
-      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-      
-    } catch (error) {
-      this.log(`Dependency check failed: ${error.message}`);
-    }
+    // Initial dependency check
+    await this.runDependencyCheck();
+    
+    // Set up interval for periodic checks
+    this.intervalId = setInterval(() => {
+      this.runDependencyCheck();
+    }, this.interval);
+    
+    console.log('Dependency Monitor started successfully');
   }
 
-  async checkMissingDependencies() {
+  async runDependencyCheck() {
     try {
-      this.log('Checking for missing dependencies...');
+      console.log('Running dependency check...');
       
-      // Try to require a few key dependencies to see if they're installed
-      const keyDependencies = [
-        'next',
-        'react',
-        'react-dom',
-        'eslint',
-        'typescript'
-      ];
-      
-      const missingDeps = [];
-      
-      for (const dep of keyDependencies) {
-        try {
-          require.resolve(dep);
-        } catch (error) {
-          missingDeps.push(dep);
+      // Check for outdated packages
+      const child = spawn('npm', ['outdated'], {
+        stdio: ['pipe', 'pipe', 'pipe'],
+        cwd: process.cwd()
+      });
+
+      let output = '';
+      let errorOutput = '';
+
+      child.stdout.on('data', (data) => {
+        output += data.toString();
+      });
+
+      child.stderr.on('data', (data) => {
+        errorOutput += data.toString();
+      });
+
+      child.on('close', (code) => {
+        if (code === 0) {
+          console.log('Dependency check passed ✓');
+        } else {
+          console.log('Dependency check found outdated packages ✗');
+          console.log('Output:', output);
+          
+          // Log outdated packages but don't auto-update
+          this.logOutdatedPackages(output);
         }
-      }
-      
-      if (missingDeps.length > 0) {
-        this.log(`Missing dependencies detected: ${missingDeps.join(', ')}`);
-        await this.installDependencies();
-      } else {
-        this.log('All key dependencies are present');
-      }
-      
+      });
     } catch (error) {
-      this.log(`Error checking missing dependencies: ${error.message}`);
+      console.error('Error running dependency check:', error.message);
     }
   }
 
-  async installDependencies() {
-    if (this.isInstalling) {
-      this.log('Dependency installation already in progress...');
-      return;
+  logOutdatedPackages(output) {
+    const lines = output.split('\n');
+    const outdatedPackages = lines.filter(line => 
+      line.includes('→') && !line.includes('Package')
+    );
+    
+    if (outdatedPackages.length > 0) {
+      console.log('Outdated packages found:');
+      outdatedPackages.forEach(pkg => {
+        console.log(`  ${pkg}`);
+      });
     }
-    
-    this.isInstalling = true;
-    this.log('Installing dependencies...');
-    
+  }
+
+  async checkPackageIntegrity() {
     try {
-      // Check if package-lock.json exists
-      const lockFileExists = fs.existsSync(path.join(process.cwd(), 'package-lock.json'));
+      console.log('Checking package integrity...');
       
-      if (lockFileExists) {
-        this.log('Using npm ci for faster, reliable installs...');
-        execSync('npm ci', { 
-          stdio: 'pipe',
-          timeout: 300000 // 5 minutes timeout
-        });
-      } else {
-        this.log('Using npm install...');
-        execSync('npm install', { 
-          stdio: 'pipe',
-          timeout: 300000 // 5 minutes timeout
-        });
-      }
-      
-      this.log('Dependencies installed successfully');
-      
+      const child = spawn('npm', ['ls'], {
+        stdio: ['pipe', 'pipe', 'pipe'],
+        cwd: process.cwd()
+      });
+
+      let output = '';
+      let errorOutput = '';
+
+      child.stdout.on('data', (data) => {
+        output += data.toString();
+      });
+
+      child.stderr.on('data', (data) => {
+        errorOutput += data.toString();
+      });
+
+      child.on('close', (code) => {
+        if (code === 0) {
+          console.log('Package integrity check passed ✓');
+        } else {
+          console.log('Package integrity issues found ✗');
+          console.log('Errors:', errorOutput);
+        }
+      });
     } catch (error) {
-      this.log(`Dependency installation failed: ${error.message}`);
-      
-      // Try to recover by clearing cache and retrying
-      try {
-        this.log('Clearing npm cache and retrying...');
-        execSync('npm cache clean --force', { stdio: 'pipe' });
-        execSync('rm -rf node_modules package-lock.json', { stdio: 'pipe' });
-        execSync('npm install', { 
-          stdio: 'pipe',
-          timeout: 300000
-        });
-        this.log('Dependency installation recovered successfully');
-      } catch (retryError) {
-        this.log(`Dependency installation recovery failed: ${retryError.message}`);
-      }
-    } finally {
-      this.isInstalling = false;
+      console.error('Error checking package integrity:', error.message);
     }
   }
 
-  startWatching() {
-    this.log('Starting dependency monitor...');
+  stop() {
+    console.log('Stopping Dependency Monitor...');
+    this.isRunning = false;
     
-    // Watch package.json and package-lock.json for changes
-    const watcher = chokidar.watch(['package.json', 'package-lock.json'], {
-      ignored: /(^|[\/\\])\../, // ignore dotfiles
-      persistent: true,
-      ignoreInitial: true
-    });
-
-    watcher.on('change', (filePath) => {
-      this.log(`Dependency file changed: ${filePath}`);
-      
-      // Debounce multiple changes
-      setTimeout(() => {
-        this.checkDependencies();
-      }, 2000);
-    });
-
-    watcher.on('error', (error) => {
-      this.log(`Dependency watcher error: ${error.message}`);
-    });
-
-    // Run initial check
-    setTimeout(() => this.checkDependencies(), 1000);
-
-    this.log('Dependency monitor is now watching files...');
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
     
-    // Keep the process alive
-    process.on('SIGINT', () => {
-      this.log('Shutting down dependency monitor...');
-      watcher.close();
-      process.exit(0);
-    });
+    console.log('Dependency Monitor stopped');
   }
 }
 
-// Start the monitor
-const monitor = new DependencyMonitor();
-monitor.startWatching();
+// Start the monitor if run directly
+if (require.main === module) {
+  const monitor = new DependencyMonitor();
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    monitor.stop();
+    process.exit(0);
+  });
+  
+  process.on('SIGTERM', () => {
+    monitor.stop();
+    process.exit(0);
+  });
+  
+  monitor.start().catch(console.error);
+}
+
+module.exports = DependencyMonitor;

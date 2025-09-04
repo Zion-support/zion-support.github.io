@@ -1,11 +1,20 @@
 {
-  "timestamp": "2025-09-03T23:23:48.395Z",
+  "timestamp": "2025-09-03T16:46:24.457Z",
+=======
+  "timestamp": "2025-09-03T22:18:50.420Z",
+>>>>>>> 6d79891152b (Checkpoint before follow-up message)
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
       "lines": 74,
       "issues": [],
       "complexity": 3
+    },
+    "components/ContactForm.tsx": {
+      "path": "components/ContactForm.tsx",
+      "lines": 192,
+      "issues": [],
+      "complexity": 1
     },
     "components/ErrorBoundary.tsx": {
       "path": "components/ErrorBoundary.tsx",
@@ -21,9 +30,9 @@
     },
     "components/LoadingSpinner.tsx": {
       "path": "components/LoadingSpinner.tsx",
-      "lines": 12,
+      "lines": 29,
       "issues": [],
-      "complexity": 1
+      "complexity": 2
     },
     "components/PerformanceMonitor.tsx": {
       "path": "components/PerformanceMonitor.tsx",
@@ -33,9 +42,9 @@
     },
     "components/SearchBar.tsx": {
       "path": "components/SearchBar.tsx",
-      "lines": 148,
+      "lines": 181,
       "issues": [],
-      "complexity": 1
+      "complexity": 5
     },
     "components/ThemeToggle.tsx": {
       "path": "components/ThemeToggle.tsx",
@@ -57,15 +66,19 @@
     },
     "pages/_app.tsx": {
       "path": "pages/_app.tsx",
-      "lines": 271,
+      "issues": [],
+      "complexity": 1
+=======
+      "lines": 215,
       "issues": [
         {
           "rule": "Duplicate Code",
-          "value": 21,
+          "value": 10,
           "message": "Potential duplicate code detected"
         }
       ],
       "complexity": 0
+>>>>>>> 6d79891152b (Checkpoint before follow-up message)
     },
     "pages/about.tsx": {
       "path": "pages/about.tsx",
@@ -90,7 +103,7 @@
         },
         {
           "rule": "Duplicate Code",
-          "value": 76,
+          "value": 72,
           "message": "Potential duplicate code detected"
         }
       ],
@@ -104,7 +117,7 @@
     },
     "pages/contact.tsx": {
       "path": "pages/contact.tsx",
-      "lines": 166,
+      "lines": 182,
       "issues": [],
       "complexity": 0
     },
@@ -128,13 +141,13 @@
     },
     "pages/index.tsx": {
       "path": "pages/index.tsx",
-      "lines": 197,
+      "lines": 219,
       "issues": [],
-      "complexity": 0
+      "complexity": 5
     },
     "pages/it-services.tsx": {
       "path": "pages/it-services.tsx",
-      "lines": 1439,
+      "lines": 1370,
       "issues": [
         {
           "rule": "File Length",
@@ -143,7 +156,7 @@
         },
         {
           "rule": "Duplicate Code",
-          "value": 112,
+          "value": 92,
           "message": "Potential duplicate code detected"
         }
       ],
@@ -151,7 +164,7 @@
     },
     "pages/micro-saas.tsx": {
       "path": "pages/micro-saas.tsx",
-      "lines": 1489,
+      "lines": 1401,
       "issues": [
         {
           "rule": "File Length",
@@ -160,7 +173,7 @@
         },
         {
           "rule": "Duplicate Code",
-          "value": 61,
+          "value": 57,
           "message": "Potential duplicate code detected"
         }
       ],
@@ -213,6 +226,12 @@
       "issues": [],
       "complexity": 0
     },
+    "scripts/analyze-bundle.js": {
+      "path": "scripts/analyze-bundle.js",
+      "lines": 19,
+      "issues": [],
+      "complexity": 2
+    },
     "scripts/performance-monitor.js": {
       "path": "scripts/performance-monitor.js",
       "lines": 115,
@@ -221,9 +240,12 @@
     }
   },
   "summary": {
-    "totalFiles": 26,
-    "totalLines": 8387,
-    "averageComplexity": "1.38",
+    "averageComplexity": "1.06",
+=======
+    "totalFiles": 28,
+    "totalLines": 8473,
+    "averageComplexity": "1.75",
+>>>>>>> 6d79891152b (Checkpoint before follow-up message)
     "issues": [
       {
         "file": "pages/404.tsx",
@@ -240,7 +262,7 @@
         "issues": [
           {
             "rule": "Duplicate Code",
-            "value": 21,
+            "value": 10,
             "message": "Potential duplicate code detected"
           }
         ]
@@ -265,7 +287,7 @@
           },
           {
             "rule": "Duplicate Code",
-            "value": 76,
+            "value": 72,
             "message": "Potential duplicate code detected"
           }
         ]
@@ -280,7 +302,7 @@
           },
           {
             "rule": "Duplicate Code",
-            "value": 112,
+            "value": 92,
             "message": "Potential duplicate code detected"
           }
         ]
@@ -295,7 +317,7 @@
           },
           {
             "rule": "Duplicate Code",
-            "value": 61,
+            "value": 57,
             "message": "Potential duplicate code detected"
           }
         ]
