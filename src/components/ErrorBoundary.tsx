@@ -67,14 +67,6 @@ class ErrorBoundary extends Component<Props, State> {
     }
   };
 
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      showStack: false
-    });
-  };
 
   private handleGoHome = () => {
     window.location.href = '/';

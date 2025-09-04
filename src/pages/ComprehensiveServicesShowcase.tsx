@@ -3,6 +3,14 @@ import { INNOVATIVE_SERVICES } from '../data/servicesData';
 import { IT_SERVICES } from '../data/itServicesData';
 import { AI_SERVICES } from '../data/aiServicesData';
 import { MICRO_SAAS_SERVICES } from '../data/microSaasServicesData';
+import { INNOVATIVE_AI_SERVICES_2025 } from '../data/innovativeAIServices2025';
+import { BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/blockchainWeb3Services2025';
+import { IOT_EDGE_COMPUTING_SERVICES_2025 } from '../data/iotEdgeComputingServices2025';
+import { FINTECH_SERVICES_2025 } from '../data/finTechServices2025';
+import { HEALTHCARE_TECH_SERVICES_2025 } from '../data/healthcareTechServices2025';
+import { SUSTAINABILITY_ESG_SERVICES_2025 } from '../data/sustainabilityESGServices2025';
+import { ADVANCED_CYBERSECURITY_SERVICES_2025 } from '../data/advancedCybersecurityServices2025';
+import { BUSINESS_PROCESS_AUTOMATION_SERVICES_2025 } from '../data/businessProcessAutomationServices2025';
 
 interface Service {
   id: string;
@@ -47,14 +55,28 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     ...INNOVATIVE_SERVICES.map(s => ({ ...s, serviceType: 'Innovative Services' })),
     ...IT_SERVICES.map(s => ({ ...s, serviceType: 'IT Services' })),
     ...AI_SERVICES.map(s => ({ ...s, serviceType: 'AI Services' })),
-    ...MICRO_SAAS_SERVICES.map(s => ({ ...s, serviceType: 'Micro SAAS Services' }))
+    ...MICRO_SAAS_SERVICES.map(s => ({ ...s, serviceType: 'Micro SAAS Services' })),
+    ...INNOVATIVE_AI_SERVICES_2025.map(s => ({ ...s, serviceType: 'Advanced AI Services 2025' })),
+    ...BLOCKCHAIN_WEB3_SERVICES_2025.map(s => ({ ...s, serviceType: 'Blockchain & Web3 Services' })),
+    ...IOT_EDGE_COMPUTING_SERVICES_2025.map(s => ({ ...s, serviceType: 'IoT & Edge Computing' })),
+    ...FINTECH_SERVICES_2025.map(s => ({ ...s, serviceType: 'FinTech Services' })),
+    ...HEALTHCARE_TECH_SERVICES_2025.map(s => ({ ...s, serviceType: 'Healthcare Technology' })),
+    ...SUSTAINABILITY_ESG_SERVICES_2025.map(s => ({ ...s, serviceType: 'Sustainability & ESG' })),
+    ...ADVANCED_CYBERSECURITY_SERVICES_2025.map(s => ({ ...s, serviceType: 'Advanced Cybersecurity' })),
+    ...BUSINESS_PROCESS_AUTOMATION_SERVICES_2025.map(s => ({ ...s, serviceType: 'Business Process Automation' }))
   ];
 
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
     { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Analytics')).length },
+    { id: 'Blockchain & Web3', name: 'Blockchain & Web3', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('Web3')).length },
+    { id: 'IoT & Edge Computing', name: 'IoT & Edge Computing', count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge Computing')).length },
+    { id: 'FinTech', name: 'FinTech', count: allServices.filter(s => s.category.includes('FinTech')).length },
+    { id: 'Healthcare Technology', name: 'Healthcare Technology', count: allServices.filter(s => s.category.includes('Healthcare')).length },
+    { id: 'Sustainability & ESG', name: 'Sustainability & ESG', count: allServices.filter(s => s.category.includes('Sustainability') || s.category.includes('ESG')).length },
+    { id: 'Advanced Cybersecurity', name: 'Advanced Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Security')).length },
+    { id: 'Business Process Automation', name: 'Business Process Automation', count: allServices.filter(s => s.category.includes('Automation') || s.category.includes('Process')).length },
     { id: 'Cloud Services', name: 'Cloud Services', count: allServices.filter(s => s.category.includes('Cloud')).length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cybersecurity')).length },
     { id: 'DevOps', name: 'DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },
     { id: 'Marketing', name: 'Marketing', count: allServices.filter(s => s.category.includes('Marketing') || s.category.includes('Social Media')).length },
     { id: 'Project Management', name: 'Project Management', count: allServices.filter(s => s.category.includes('Project Management')).length },

@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+<<<<<<< HEAD
 import { MainNavigation } from './header/MainNavigation';
 import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
+=======
+import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
+>>>>>>> origin/main
 
 interface HeaderProps {
   className?: string;
 }
 
+<<<<<<< HEAD
 export function Header(props: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -14,6 +19,15 @@ export function Header(props: HeaderProps) {
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const [searchQuery, setSearchQuery] = useState<string>('');
+=======
+export function Header({ className = '' }: HeaderProps) {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [searchQuery, setSearchQuery] = useState('');
+>>>>>>> origin/main
   const location = useLocation();
 
   useEffect(() => {
@@ -27,7 +41,6 @@ export function Header(props: HeaderProps) {
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
-    // You can add theme switching logic here
   };
 
   const handleSearch = (e: React.FormEvent) => {
@@ -37,6 +50,17 @@ export function Header(props: HeaderProps) {
       
     }
   };
+
+  const navigationItems = [
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' }
+  ];
 
   return (
     <header 
@@ -62,7 +86,23 @@ export function Header(props: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <MainNavigation className="hidden md:flex" />
+=======
+          <nav className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`text-gray-300 hover:text-cyan-400 transition-colors duration-200 ${
+                  location.pathname === item.href ? 'text-cyan-400' : ''
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+>>>>>>> origin/main
 
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
@@ -91,22 +131,39 @@ export function Header(props: HeaderProps) {
                 <User className="w-5 h-5" />
                 <span className="hidden sm:block">Account</span>
               </button>
-              
+
+              {/* User dropdown */}
               {isUserMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
                   <Link
+<<<<<<< HEAD
                     to="/login"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
+=======
+                    to="/dashboard"
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+>>>>>>> origin/main
                   >
-                    Sign In
+                    Dashboard
                   </Link>
                   <Link
+<<<<<<< HEAD
                     to="/register"
                     className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
                     onClick={() => setIsUserMenuOpen(false)}
+=======
+                    to="/login"
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+>>>>>>> origin/main
                   >
-                    Sign Up
+                    Login
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >
+                    Contact Support
                   </Link>
                 </div>
               )}
@@ -122,6 +179,7 @@ export function Header(props: HeaderProps) {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Search Bar */}
         {isSearchOpen && (
           <div className="pb-4">
@@ -139,10 +197,53 @@ export function Header(props: HeaderProps) {
               >
                 <Search className="w-5 h-5" />
               </button>
+=======
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-md rounded-lg mt-2">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`block px-3 py-2 text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md transition-colors duration-200 ${
+                    location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : ''
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Search overlay */}
+        {isSearchOpen && (
+          <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50 p-4">
+            <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search services, solutions, or help..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-3 pl-10 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+                <Search className="absolute left-3 top-3.5 w-4 h-4 text-gray-400" />
+                <button
+                  type="submit"
+                  className="absolute right-2 top-2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-1.5 rounded-md font-semibold transition-colors"
+                >
+                  Search
+                </button>
+              </div>
+>>>>>>> origin/main
             </form>
           </div>
         )}
       </div>
+<<<<<<< HEAD
 
       {/* Mobile Navigation Overlay */}
       {isMobileMenuOpen && (
@@ -152,6 +253,8 @@ export function Header(props: HeaderProps) {
           </div>
         </div>
       )}
+=======
+>>>>>>> origin/main
     </header>
   );
 }
