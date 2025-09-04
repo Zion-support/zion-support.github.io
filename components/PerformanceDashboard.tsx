@@ -27,7 +27,7 @@ const PerformanceDashboard: React.FC = () => {
         fid: Math.random() * 100,
         cls: Math.random() * 0.1,
         ttfb: Math.random() * 500 + 100,
-        timestamp: Date.now(),
+        timestamp: Date.now()
       };
       handleMetric(mockMetric);
     }, 5000);
