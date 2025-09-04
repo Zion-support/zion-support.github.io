@@ -1,53 +1,66 @@
-import React from "react"
-;,"});,"})framer-motion";;react
-"framer-motion
-  Smartphone,
-  Tablet,
-  Monitor,
-  Touch,
-  Gesture,
-  Swipe,
-  Pinch,
-  Rotate,
-  X,
-  Menu,
-  Home,
-  Search,
-  User,
-  Settings,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,"
-  ArrowRight} from "lucide-react"
+import React, { useEffect, useState } from 'react';
 
-import { Smartphone, Tablet, Monitor, 
-export default function Page(props: any) {
- | null>(null);
-  const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null);
-  const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
-  const [showMobileMenu, setShowMobileMenu] = useState<any>(false);
-  const [showGestureGuide, setShowGestureGuide] = useState<any>(false);
-export: const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> = ( {,
-  enabled: = true,
-  showGestures = false,
-  enableSwipeNavigation = true}) => {
-  const [isMobile, setIsMobile] = useState<any>(false)
+interface MobileExperienceEnhancerProps {
+  enabled?: boolean;
+  showGestures?: boolean;
+  enableSwipeNavigation?: boolean;
 }
-  const [isTablet, setIsTablet] = useState()
+
+export function MobileExperienceEnhancer({ 
+  enabled = true, 
+  showGestures = false, 
+  enableSwipeNavigation = true 
+}: MobileExperienceEnhancerProps) {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+  const [deviceOrientation, setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait');
+
+  useEffect(() => {
+    if (!enabled) return;
+
+    const checkDevice = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      
+      setIsMobile(width < 768);
+      setIsTablet(width >= 768 && width < 1024);
+      setDeviceOrientation(height > width ? 'portrait' : 'landscape');
+    };
+
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+    window.addEventListener('orientationchange', checkDevice);
+
+    return () => {
+      window.removeEventListener('resize', checkDevice);
+      window.removeEventListener('orientationchange', checkDevice);
+    };
+  }, [enabled]);
+
+  useEffect(() => {
+    if (!enabled) return;
+
+    // Add mobile-specific optimizations
+    if (isMobile) {
+      // Prevent zoom on input focus
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (viewport) {
+        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+      }
+
+      // Add touch-friendly styles
+      document.body.classList.add('mobile-optimized');
+    } else {
+      document.body.classList.remove('mobile-optimized');
+    }
+
+    return () => {
+      document.body.classList.remove('mobile-optimized');
+    };
+  }, [isMobile, enabled]);
+
+  return null; // This component doesn't render anything visible
 }
-  const [deviceOrientation, setDeviceOrientation] = useState<"portrait" | "landscape">("portrait")
-}
-  const [touchStart, setTouchStart] = useState<{ x: number, y: number, time: number} | null>(null)
-}
-  const [touchEnd, setTouchEnd] = useState<{ x: number, y: number, time: number} | null>(null)
-}
-  const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([])
-}
-  const [showMobileMenu, setShowMobileMenu] = useState<any>(false)
-}
-  const [showGestureGuide, setShowGestureGuide] = useState<any>(false)
-}
-  // comment
 useEffect(() => {
     const checkDevice = (props: any) => {
       const userAgent = navigator.userAgent
