@@ -21,9 +21,8 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('AdvancedErrorBoundary caught an error:', error, errorInfo);
-    
     // Report to error tracking service
     if (this.props.onError) {
       this.props.onError(error, errorInfo);

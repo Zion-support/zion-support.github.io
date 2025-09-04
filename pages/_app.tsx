@@ -5,7 +5,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 import '../styles/globals.css';
 
-function Header(): any {
+function Header(): React.JSX.Element {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -87,7 +87,7 @@ function Header(): any {
   );
 }
 
-function Footer(): any {
+function Footer(): React.JSX.Element {
   return (
     <footer style={{ 
       background: 'linear-gradient(135deg, #0b1220, #1e293b)', 

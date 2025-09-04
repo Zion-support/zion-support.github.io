@@ -84,8 +84,7 @@ export default function ApiReference() {
     "limit": 10,
     "total": 67,
     "pages": 7
-  }`
-}`}
+  }`}
                   </pre>
                 </div>
               </div>

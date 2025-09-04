@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { performanceMiddleware } from '../../lib/performance-monitor';
+// import { performanceMiddleware } from '../../lib/performance-monitor';
 import { dbManager } from '../../lib/database';
 import { apiCache, userCache, staticCache } from '../../lib/cache';
 
@@ -80,8 +80,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ...health,
       responseTime
     });
-  } catch (error) {
-    console.error('Health check failed:', error);
+  } catch {
+    // Health check failed
     
     res.status(500).json({
       status: 'unhealthy',

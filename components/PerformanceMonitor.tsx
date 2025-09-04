@@ -33,7 +33,7 @@ const PerformanceMonitor: React.FC = () => {
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support LCP
       }
 
@@ -53,11 +53,12 @@ const PerformanceMonitor: React.FC = () => {
 
       try {
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support FID
       }
 
       // Monitor Cumulative Layout Shift (CLS)
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -65,12 +66,12 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        console.log('CLS:', clsValue);
+        // CLS value tracked
       });
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support CLS
       }
 

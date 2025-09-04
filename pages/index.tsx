@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
+// import Image from 'next/image';
+// import { useState, useEffect } from 'react';
 
 export default function Home() {
   const contact = {
@@ -155,7 +155,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8">Ready to Transform Your Business?</h2>
             <p className="text-xl text-slate-300 mb-12">
-              Let's discuss how our innovative solutions can help you achieve your goals.
+              Let&apos;s discuss how our innovative solutions can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
