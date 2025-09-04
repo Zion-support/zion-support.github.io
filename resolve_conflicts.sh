@@ -1,59 +1,45 @@
 #!/bin/bash
 
-echo "Starting merge conflict resolution...
+# Script to resolve merge conflicts by keeping the newer content (after =======)
 
-# List of critical files that we want to keep our version for
-CRITICAL_FILES=(
-    src/pages/Home.tsx"
-    "src/components/layout/MainSidebar.tsx
-    src/components/SEO.tsx"
-    "src/components/PerformanceOptimizer.tsx
-    src/components/EnhancedAccessibilityEnhancer.tsx"
-)
+echo "Resolving merge conflicts in main files..."
 
-# Function to resolve conflicts for a file
+# Function to resolve conflicts in a file
 resolve_conflicts() {
-    local file="$1
+    local file="$1"
+    echo "Processing $file..."
     
-    if [[ ! -f $file" ]]; then
-        echo "File $file does not exist, skipping...
-        return
-    fi
+    # Create a temporary file
+    local temp_file="${file}.tmp"
     
-    if ! grep -q " "$file; then
-        echo No conflicts in $file, skipping..."
-        return
-    fi
+    # Process the file line by line
+    local in_conflict=false
+    local keep_content=false
     
-    echo "Resolving conflicts in $file...
-    
-    # Check if it's a critical file
-    for critical in ${CRITICAL_FILES[@]}"; do
-        if [[ "$file == $critical" ]]; then
-            echo "Keeping our version for critical file: $file
-            # Use our version (HEAD) for critical files
-            git checkout --ours $file"
-            git add "$file
-            return
+    while IFS= read -r line; do
+        if [[ "$line" =~ ^"<<<<<<<" ]]; then
+            in_conflict=true
+            keep_content=false
+        elif [[ "$line" =~ "^=======" ]]; then
+            keep_content=true
+        elif [[ "$line" =~ "^>>>>>>>" ]]; then
+            in_conflict=false
+            keep_content=false
+        elif [[ "$in_conflict" == true && "$keep_content" == true ]]; then
+            echo "$line" >> "$temp_file"
+        elif [[ "$in_conflict" == false ]]; then
+            echo "$line" >> "$temp_file"
         fi
-    done
+    done < "$file"
     
-    # For non-critical files, use the remote version (theirs)
-    echo Using remote version for: $file"
-    git checkout --theirs "$file
-    git add $file"
+    # Replace original file with resolved version
+    mv "$temp_file" "$file"
+    echo "Resolved conflicts in $file"
 }
 
-# Get all files with merge conflicts
-conflict_files=$(grep -l " -r . --include=*.tsx" --include="*.ts --include=*.js" --include="*.jsx --include=*.json" 2>/dev/null)
+# Resolve conflicts in main files
+resolve_conflicts "pages/it-services.tsx"
+resolve_conflicts "pages/ai-services.tsx"
+resolve_conflicts "pages/micro-saas.tsx"
 
-echo "Found $(echo $conflict_files | wc -l) files with conflicts"
-
-# Resolve conflicts for each file
-while IFS= read -r file; do
-    if [[ -n "$file ]]; then
-        resolve_conflicts $file"
-    fi
-done <<< "$conflict_files
-
-echo Merge conflict resolution completed!"
+echo "All merge conflicts resolved!"
