@@ -1,220 +1,198 @@
-import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowLeft, Key, Shield, Clock, Users } from 'lucide-react';
+import Head from 'next/head';
 
 export default function Authentication() {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  }
   return (
     <>
       <Head>
         <title>Authentication - Zion Tech Group Documentation</title>
-        <meta name="description" content="Learn how to authenticate with Zion Tech Group's APIs using API keys, OAuth 2.0, and JWT tokens." />
-        <link rel="canonical" href={`${contact.site}/docs/authentication`} />
+        <meta name="description" content="Learn how to authenticate with Zion Tech Group APIs using API keys and secure authentication methods." />
+        <meta name="keywords" content="authentication, API key, security, API access" />
+        <link rel="canonical" href="https://ziontechgroup.com/docs/authentication" />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          {/* Header */}
-          <div className="mb-8">
-            <Link href="/docs" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Documentation
-            </Link>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Authentication</h1>
-            <p className="text-xl text-gray-600">
-              Secure authentication methods for accessing Zion Tech Group&apos;s APIs and services.
-            </p>
-          </div>
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        <div className="max-w-4xl mx-auto px-4 py-12">
+          {/* Breadcrumb */}
+          <nav className="mb-8">
+            <Link href="/" className="text-blue-400 hover:text-blue-300">Home</Link>
+            <span className="mx-2 text-slate-400">/</span>
+            <Link href="/docs" className="text-blue-400 hover:text-blue-300">Documentation</Link>
+            <span className="mx-2 text-slate-400">/</span>
+            <span className="text-slate-300">Authentication</span>
+          </nav>
 
-          {/* Authentication Methods */}
-          <div className="space-y-8 mb-8">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <Key className="w-8 h-8 text-blue-600 mr-3" />
-                <h2 className="text-2xl font-semibold text-gray-900">API Key Authentication</h2>
-              </div>
-              <p className="text-gray-600 mb-6">
-                The simplest way to authenticate with our APIs. Include your API key in the request headers.
+          <h1 className="text-4xl font-bold mb-6">Authentication</h1>
+          <p className="text-xl text-slate-300 mb-8">
+            Secure your API access with Zion Tech Group's authentication system.
+          </p>
+
+          <div className="space-y-8">
+            {/* API Keys */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">API Keys</h2>
+              <p className="text-slate-300 mb-4">
+                API keys are the primary method for authenticating with our APIs. Each key is unique and provides access to specific services.
               </p>
               
-              <div className="bg-gray-900 rounded-lg p-4 mb-6">
-                <pre className="text-green-400 text-sm overflow-x-auto">
-{`curl -X GET "https://api.ziontechgroup.com/v1/services" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json"`}
-                </pre>
+              <div className="bg-slate-800 p-4 rounded-lg mb-4">
+                <h3 className="font-semibold mb-2">Getting Your API Key</h3>
+                <ol className="list-decimal list-inside text-slate-300 space-y-2">
+                  <li>Sign up for a Zion Tech Group account</li>
+                  <li>Navigate to your dashboard</li>
+                  <li>Go to API Keys section</li>
+                  <li>Generate a new API key</li>
+                  <li>Copy and store it securely</li>
+                </ol>
               </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Getting Your API Key</h3>
-                  <ol className="list-decimal list-inside space-y-2 text-gray-600">
-                    <li>Contact our team to request API access</li>
-                    <li>Receive your unique API key via secure email</li>
-                    <li>Store your API key securely</li>
-                    <li>Include it in all API requests</li>
-                  </ol>
+
+              <div className="bg-slate-800 p-4 rounded-lg">
+                <h3 className="font-semibold mb-2">Using Your API Key</h3>
+                <p className="text-slate-300 mb-2">Include your API key in the Authorization header:</p>
+                <code className="text-green-400 block bg-slate-900 p-2 rounded">Authorization: Bearer sk-1234567890abcdef</code>
+              </div>
+            </section>
+
+            {/* Security Best Practices */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-red-400">Security Best Practices</h2>
+              <div className="space-y-4">
+                <div className="bg-red-900/20 border border-red-500/30 p-4 rounded-lg">
+                  <h3 className="font-semibold text-red-400 mb-2">⚠️ Never expose your API key</h3>
+                  <ul className="text-slate-300 space-y-1">
+                    <li>• Don't commit API keys to version control</li>
+                    <li>• Don't include them in client-side code</li>
+                    <li>• Don't share them in public forums or chat</li>
+                  </ul>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Best Practices</h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-600">
-                    <li>Never expose API keys in client-side code</li>
-                    <li>Use environment variables for storage</li>
-                    <li>Rotate keys regularly</li>
-                    <li>Monitor API usage and access logs</li>
+                
+                <div className="bg-green-900/20 border border-green-500/30 p-4 rounded-lg">
+                  <h3 className="font-semibold text-green-400 mb-2">✅ Do these instead</h3>
+                  <ul className="text-slate-300 space-y-1">
+                    <li>• Store API keys in environment variables</li>
+                    <li>• Use server-side code for API calls</li>
+                    <li>• Rotate keys regularly</li>
+                    <li>• Monitor key usage</li>
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <Shield className="w-8 h-8 text-green-600 mr-3" />
-                <h2 className="text-2xl font-semibold text-gray-900">OAuth 2.0</h2>
-              </div>
-              <p className="text-gray-600 mb-6">
-                For applications that need to access user data or perform actions on behalf of users.
+            {/* Environment Variables */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-purple-400">Environment Variables</h2>
+              <p className="text-slate-300 mb-4">
+                Store your API key securely using environment variables:
               </p>
               
-              <div className="bg-gray-900 rounded-lg p-4 mb-6">
-                <pre className="text-green-400 text-sm overflow-x-auto">
-{`// Authorization URL
-https://auth.ziontechgroup.com/oauth/authorize?
-  client_id=YOUR_CLIENT_ID&
-  redirect_uri=YOUR_REDIRECT_URI&
-  response_type=code&
-  scope=read write
-
-// Token Exchange
-POST https://auth.ziontechgroup.com/oauth/token
-Content-Type: application/x-www-form-urlencoded
-
-grant_type=authorization_code&
-code=AUTHORIZATION_CODE&
-client_id=YOUR_CLIENT_ID&
-client_secret=YOUR_CLIENT_SECRET&
-redirect_uri=YOUR_REDIRECT_URI`}
-                </pre>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">OAuth Flow</h3>
-                  <ol className="list-decimal list-inside space-y-2 text-gray-600">
-                    <li>Redirect user to authorization URL</li>
-                    <li>User grants permission</li>
-                    <li>Receive authorization code</li>
-                    <li>Exchange code for access token</li>
-                    <li>Use access token for API calls</li>
-                  </ol>
+                  <h3 className="font-semibold mb-2">.env file</h3>
+                  <div className="bg-slate-800 p-4 rounded-lg">
+                    <code className="text-green-400">ZION_API_KEY=sk-1234567890abcdef</code>
+                  </div>
                 </div>
+                
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Scopes</h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-600">
-                    <li><code className="bg-gray-100 px-2 py-1 rounded">read</code> - Read access to resources</li>
-                    <li><code className="bg-gray-100 px-2 py-1 rounded">write</code> - Write access to resources</li>
-                    <li><code className="bg-gray-100 px-2 py-1 rounded">admin</code> - Administrative access</li>
-                    <li><code className="bg-gray-100 px-2 py-1 rounded">billing</code> - Billing information access</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+                  <h3 className="font-semibold mb-2">Node.js example</h3>
+                  <div className="bg-slate-800 p-4 rounded-lg">
+                    <pre className="text-green-400 text-sm">
+{`const apiKey = process.env.ZION_API_KEY;
 
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-6">
-                <Lock className="w-8 h-8 text-purple-600 mr-3" />
-                <h2 className="text-2xl font-semibold text-gray-900">JWT Tokens</h2>
-              </div>
-              <p className="text-gray-600 mb-6">
-                JSON Web Tokens for stateless authentication with built-in expiration and claims.
-              </p>
-              
-              <div className="bg-gray-900 rounded-lg p-4 mb-6">
-                <pre className="text-green-400 text-sm overflow-x-auto">
-{`// JWT Token Structure
-{
-  "header": {
-    "alg": "HS256",
-    "typ": "JWT"
-  },
-  "payload": {
-    "sub": "user_id",
-    "iat": 1640995200,
-    "exp": 1641081600,
-    "scope": "read write"
+const response = await fetch('https://api.ziontechgroup.com/v1/services', {
+  headers: {
+    'Authorization': \`Bearer \${apiKey}\`,
+    'Content-Type': 'application/json'
   }
-}`}
-                </pre>
+});`}
+                    </pre>
+                  </div>
+                </div>
               </div>
-              
+            </section>
+
+            {/* Key Management */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-yellow-400">Key Management</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Token Features</h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-600">
-                    <li>Self-contained with user information</li>
-                    <li>Built-in expiration handling</li>
-                    <li>Stateless authentication</li>
-                    <li>Cross-service compatibility</li>
+                  <h3 className="font-semibold text-lg mb-2">Creating Keys</h3>
+                  <ul className="text-slate-300 space-y-1">
+                    <li>• Generate keys from your dashboard</li>
+                    <li>• Set expiration dates</li>
+                    <li>• Assign specific permissions</li>
+                    <li>• Add descriptive names</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Security</h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-600">
-                    <li>HMAC SHA-256 signing</li>
-                    <li>Short expiration times</li>
-                    <li>Refresh token support</li>
-                    <li>Token revocation capability</li>
+                  <h3 className="font-semibold text-lg mb-2">Managing Keys</h3>
+                  <ul className="text-slate-300 space-y-1">
+                    <li>• Monitor usage statistics</li>
+                    <li>• Revoke compromised keys</li>
+                    <li>• Rotate keys regularly</li>
+                    <li>• Set up alerts for unusual activity</li>
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
+
+            {/* Error Responses */}
+            <section className="bg-slate-900/60 rounded-lg p-6 border border-white/10">
+              <h2 className="text-2xl font-bold mb-4 text-orange-400">Authentication Errors</h2>
+              <div className="space-y-4">
+                <div className="bg-slate-800 p-4 rounded-lg">
+                  <h3 className="font-semibold text-red-400 mb-2">401 Unauthorized</h3>
+                  <p className="text-slate-300 mb-2">Invalid or missing API key</p>
+                  <div className="bg-slate-900 p-2 rounded">
+                    <code className="text-green-400 text-sm">
+{`{
+  "error": "unauthorized",
+  "message": "Invalid API key"
+}`}
+                    </code>
+                  </div>
+                </div>
+                
+                <div className="bg-slate-800 p-4 rounded-lg">
+                  <h3 className="font-semibold text-red-400 mb-2">403 Forbidden</h3>
+                  <p className="text-slate-300 mb-2">API key doesn't have permission for this resource</p>
+                  <div className="bg-slate-900 p-2 rounded">
+                    <code className="text-green-400 text-sm">
+{`{
+  "error": "forbidden",
+  "message": "Insufficient permissions"
+}`}
+                    </code>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
 
-          {/* Rate Limiting */}
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Rate Limiting</h2>
-            <p className="text-gray-600 mb-4">
-              API requests are rate limited to ensure fair usage and system stability.
-            </p>
-            <div className="grid md:grid-cols-3 gap-4 text-sm">
-              <div className="bg-white rounded p-4">
-                <h3 className="font-semibold text-gray-900 mb-2">Free Tier</h3>
-                <p className="text-gray-600">1,000 requests/hour</p>
+          {/* Next Steps */}
+          <div className="mt-12 bg-slate-900/60 rounded-lg p-6 border border-white/10">
+            <h2 className="text-2xl font-bold mb-4">Next Steps</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Ready to start?</h3>
+                <ul className="text-slate-300 space-y-1">
+                  <li>• <Link href="/docs/first-steps" className="text-blue-400 hover:text-blue-300">First steps guide</Link></li>
+                  <li>• <Link href="/docs/code-examples" className="text-blue-400 hover:text-blue-300">Code examples</Link></li>
+                  <li>• <Link href="/docs/api-reference" className="text-blue-400 hover:text-blue-300">API reference</Link></li>
+                </ul>
               </div>
-              <div className="bg-white rounded p-4">
-                <h3 className="font-semibold text-gray-900 mb-2">Professional</h3>
-                <p className="text-gray-600">10,000 requests/hour</p>
+              <div>
+                <h3 className="font-semibold text-lg mb-2">Need help?</h3>
+                <ul className="text-slate-300 space-y-1">
+                  <li>• <Link href="/contact" className="text-blue-400 hover:text-blue-300">Contact support</Link></li>
+                  <li>• <Link href="/docs/troubleshooting" className="text-blue-400 hover:text-blue-300">Troubleshooting</Link></li>
+                  <li>• <Link href="/faq" className="text-blue-400 hover:text-blue-300">FAQ</Link></li>
+                </ul>
               </div>
-              <div className="bg-white rounded p-4">
-                <h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3>
-                <p className="text-gray-600">Unlimited requests</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Support */}
-          <div className="bg-blue-50 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Need Help with Authentication?</h2>
-            <p className="text-gray-600 mb-6">
-              Our technical team is here to help you implement secure authentication.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                Get Support
-              </Link>
-              <a href={`mailto:${contact.email}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
-                Email Technical Team
-              </a>
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 }
