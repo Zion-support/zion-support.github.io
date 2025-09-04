@@ -1,68 +1,83 @@
 {
-  "timestamp": "2025-09-04T02:34:33.425Z",
-  "status": "failed",
-  "optimizations": [
-    {
-      "name": "Image Optimization",
-      "status": "success",
-      "duration": 1,
-      "message": "Found 3 images for optimization",
-      "details": {
-        "imagesFound": 3,
-        "optimized": 0
-      }
+<<<<<<< HEAD
+  "timestamp": "2025-09-04T01:30:16.408Z",
+  "currentMetrics": {
+    "bundleSize": {
+      ".next": "43.33 MB",
+      "node_modules": "782.66 MB"
     },
-    {
-      "name": "Bundle Optimization",
-      "status": "error",
-      "duration": 5245,
-      "message": "Bundle optimization failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n./components/ContactForm.tsx:13:7\nType error: Type '() => void' is not assignable to type 'FC<{}>'.\n  Type 'void' is not assignable to type 'ReactNode | Promise<ReactNode>'.\n\n\u001b[0m \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mContactForm\u001b[39m\u001b[33m:\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39m\u001b[33mFC\u001b[39m \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mconst\u001b[39m [formData\u001b[33m,\u001b[39m setFormData] \u001b[33m=\u001b[39m useState\u001b[33m<\u001b[39m\u001b[33mFormData\u001b[39m\u001b[33m>\u001b[39m({\n \u001b[90m 15 |\u001b[39m     name\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 16 |\u001b[39m     email\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n",
-      "details": null
-    },
-    {
-      "name": "Code Splitting Analysis",
-      "status": "success",
-      "duration": 5,
-      "message": "Code splitting analysis - 0/38 pages use dynamic imports",
-      "details": {
-        "totalPages": 38,
-        "dynamicImports": 0,
-        "staticImports": 38
-      }
-    },
-    {
-      "name": "Caching Configuration",
-      "status": "success",
-      "duration": 0,
-      "message": "Caching configuration found",
-      "details": {
-        "hasCaching": true
-      }
-    },
-    {
-      "name": "SEO Optimization",
-      "status": "warning",
-      "duration": 3,
-      "message": "37/38 pages are SEO optimized",
-      "details": {
-        "totalPages": 38,
-        "optimized": 37,
-        "issues": [
-          {
-            "page": "services.tsx",
-            "missing": [
-              "Head component"
-            ]
-          }
-        ]
-      }
+    "fileCounts": {
+      ".tsx": 25,
+      ".ts": 0,
+      ".jsx": 0,
+      ".js": 0,
+      ".css": 2
     }
-  ],
-  "metrics": {},
-  "summary": {
-    "total": 5,
-    "applied": 3,
-    "skipped": 0,
-    "failed": 2
-  }
+  },
+  "optimizations": {
+    "imageOptimization": "Created OptimizedImage component with Next.js Image optimization",
+    "performanceMonitoring": "Enhanced PerformanceMonitor with Core Web Vitals tracking",
+    "bundleAnalysis": "Created bundle analyzer script",
+    "recommendations": [
+      "Implement lazy loading for components",
+      "Use dynamic imports for large pages",
+      "Optimize images with WebP/AVIF formats",
+      "Implement service worker for caching",
+      "Use CDN for static assets",
+      "Minimize JavaScript bundle size",
+      "Implement code splitting"
+    ]
+  },
+  "nextSteps": [
+    "Run bundle analyzer to identify optimization opportunities",
+    "Implement lazy loading for large components",
+    "Optimize images in public directory",
+    "Set up performance monitoring in production",
+    "Implement service worker for caching"
+=======
+  "timestamp": "2025-09-04T02:27:07.854Z",
+  "project": "/workspace",
+  "analysis": {
+    "bundleSize": {
+      "status": "failed",
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    "buildPerformance": {
+      "status": "failed",
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+    },
+    "images": {
+      "status": "success",
+      "imagesFound": 3,
+      "recommendations": [
+        "Consider using WebP format for better compression",
+        "Implement lazy loading for images",
+        "Use responsive images with srcset"
+      ]
+    },
+    "lighthouse": {
+      "status": "success",
+      "metrics": {
+        "performance": 85,
+        "accessibility": 92,
+        "bestPractices": 88,
+        "seo": 90
+      },
+      "recommendations": [
+        "Minimize main-thread work",
+        "Reduce unused JavaScript",
+        "Eliminate render-blocking resources"
+      ]
+    }
+  },
+  "optimizations": [
+    "Enable gzip compression for static assets",
+    "Implement code splitting for better loading performance",
+    "Use CDN for static assets",
+    "Optimize images and use modern formats",
+    "Implement service worker for caching",
+    "Minimize and compress CSS and JavaScript",
+    "Use lazy loading for non-critical resources"
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-2df7
+  ]
 }

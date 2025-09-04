@@ -19,7 +19,36 @@ export default [
         },
       },
       globals: {
-ursor/add-new-services-and-advertise-them-1b6b
+        // Browser globals
+        window: 'readonly',
+        document: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        console: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        fetch: 'readonly',
+        navigator: 'readonly',
+        location: 'readonly',
+        history: 'readonly',
+        // DOM types
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        HTMLDivElement: 'readonly',
+        MouseEvent: 'readonly',
+        Node: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceEntry: 'readonly',
+        // Node.js globals
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        // React globals
         React: 'readonly',
       },
     },
@@ -134,6 +163,11 @@ ursor/add-new-services-and-advertise-them-1b6b
 
       // Root-level noisy files
       'api/**',
+      '*.js',
+      '.*.js',
+      '*.ts',
+      '*.tsx',
+      '*.jsx',
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',

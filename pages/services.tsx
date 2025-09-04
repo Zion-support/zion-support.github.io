@@ -588,6 +588,36 @@ const microSaaS: Service[] = [
     name: 'AI-Powered Smart City Management',
     summary: 'Comprehensive smart city platform for traffic, utilities, and public services optimization.',
     pricing: 'Typical: $2,999–$19,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Legal Document Analyzer',
+    summary: 'Intelligent legal document analysis with contract review, risk assessment, and compliance checking.',
+    pricing: 'Typical: $599–$3,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Threat Intelligence Platform',
+    summary: 'Real-time cybersecurity threat intelligence with automated threat hunting and response.',
+    pricing: 'Typical: $1,299–$7,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Market Research Platform',
+    summary: 'Automated market research and competitive intelligence with real-time insights.',
+    pricing: 'Typical: $799–$4,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Customer Success Platform',
+    summary: 'Intelligent customer success management with predictive analytics and automated workflows.',
+    pricing: 'Typical: $499–$2,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Website Accessibility Checker',
+    summary: 'Automated website accessibility auditing and compliance monitoring with WCAG guidelines.',
+    pricing: 'Typical: $299–$1,999/month',
+    link: 'https://ziontechgroup.com/micro-saas'},
+  {
+    name: 'AI-Powered Patent Research Platform',
+    summary: 'Intelligent patent search, analysis, and intellectual property management system.',
+    pricing: 'Typical: $899–$5,999/month',
     link: 'https://ziontechgroup.com/micro-saas'}
 ];
 
@@ -1718,7 +1748,7 @@ export default function Services(): JSX.Element {
               background: 'rgba(59, 130, 246, 0.1)', padding: '12px 20px', 
               borderRadius: 12, border: '1px solid rgba(59, 130, 246, 0.2)'
             }}>
-              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>60+</div>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>80+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>Micro SaaS</div>
             </div>
             <div style={{ 

@@ -51,7 +51,7 @@ echo "========================================"
 run_with_log "Dependency Installation" "npm install"
 
 # Health check
-run_with_log "Health Check" "bash scripts/health-check.sh"
+run_with_log "Health Check" "node scripts/comprehensive-health-check.cjs"
 
 echo ""
 echo "🛠️  Phase 2: Code Quality & Fixes"
@@ -71,7 +71,7 @@ echo "🔒 Phase 3: Security & Performance"
 echo "================================="
 
 # Security scan
-run_with_log "Security Scanner" "node scripts/security-audit.cjs"
+run_with_log "Security Scanner" "node automation/security-scanner.cjs"
 
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
