@@ -62,9 +62,9 @@ export default function Home(): any {
             <p className="text-xl md:text-2xl text-slate-300 mb-8 hero-subtitle">
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
-            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              We deliver cutting-edge technology solutions with 200+ innovative micro SaaS products, 
-              150+ advanced AI services, and 150+ comprehensive IT solutions. From cloud optimization 
+            <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              We deliver cutting-edge technology solutions with 150+ micro SaaS products, 
+              100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
               to AI automation, quantum computing to blockchain solutions, we help businesses scale 
               efficiently and securely in the digital age.
             </p>
@@ -81,18 +81,18 @@ export default function Home(): any {
               </Link>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 service-card hover:bg-slate-800/60 transition-colors">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">150+</h3>
-                <p className="text-slate-300 service-description">Micro SaaS Products</p>
+            <div className={`grid md:grid-cols-3 gap-6 text-center transition-all duration-1000 delay-800 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105">
+                <h3 className="text-2xl font-bold text-blue-400 mb-2" aria-label="150 plus micro SaaS products">150+</h3>
+                <p className="text-slate-300">Micro SaaS Products</p>
               </div>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 service-card hover:bg-slate-800/60 transition-colors">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
-                <p className="text-slate-300 service-description">AI Services</p>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+                <h3 className="text-2xl font-bold text-purple-400 mb-2" aria-label="100 plus AI services">100+</h3>
+                <p className="text-slate-300">AI Services</p>
               </div>
-              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 service-card hover:bg-slate-800/60 transition-colors">
-                <h3 className="text-2xl font-bold text-green-400 mb-2">100+</h3>
-                <p className="text-slate-300 service-description">IT Solutions</p>
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
+                <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
+                <p className="text-slate-300">IT Solutions</p>
               </div>
             </div>
           </div>

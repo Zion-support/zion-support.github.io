@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-03T17:05:14.567Z",
+  "timestamp": "2025-09-03T16:46:24.457Z",
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -31,9 +31,9 @@
       "issues": [],
       "complexity": 10
     },
-    "components/SearchBar.tsx": {
-      "path": "components/SearchBar.tsx",
-      "lines": 148,
+    "pages/_app.tsx": {
+      "path": "pages/_app.tsx",
+      "lines": 334,
       "issues": [],
       "complexity": 1
     },
@@ -284,9 +284,13 @@
     }
   },
   "summary": {
-    "totalFiles": 13,
-    "totalLines": 3074,
-    "averageComplexity": "0.00",
+    "totalFiles": 16,
+<<<<<<< HEAD
+    "totalLines": 5773,
+=======
+    "totalLines": 5768,
+>>>>>>> origin/main
+    "averageComplexity": "1.06",
     "issues": [
       {
         "file": "pages/_app.tsx",
