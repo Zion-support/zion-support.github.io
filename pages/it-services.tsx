@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Layout from '../components/layout/Layout';
+import { Cloud, Shield, Database, Smartphone, Globe, Code, Server, BarChart3, Link as LinkIcon, Cpu, Wrench } from 'lucide-react';
 
 export default function ITServices(): any {
   const contact = {

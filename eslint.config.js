@@ -76,23 +76,8 @@ export default [
       'solutions.disabled/**',
       'components.disabled/**',
       'components.corrupted/**',
-      // Exclude active components and pages to focus lint on config/util files
-      'components/**',
-      'pages/**',
-      // Exclude deployment artifacts and automation scripts
-      'deployments/**',
-      'deployment/**',
-      'pm2-automation/**',
-      'hooks/**',
       'hooks.disabled/**',
       'lib.disabled/**',
-      'lib/**',
-      // App source directories currently excluded from lint due to parsing issues
-      'pages/**',
-      'components/**',
-      'deployment/**',
-      'deployments/**',
-      'pm2-automation/**',
       'lib.corrupted/**',
       'zion-os.disabled/**',
       'zion_academy/**',
@@ -107,9 +92,7 @@ export default [
       'pages.disabled_backup/**',
       'pages_backup/**',
       'supabase/**',
-      'types/**',
       'types.disabled/**',
-      'utils/**',
 
       // Tests and mocks
       '__tests__/**',
