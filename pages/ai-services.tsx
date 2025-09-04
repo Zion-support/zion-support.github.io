@@ -494,6 +494,204 @@ export default function AIServices(): any {
       ]
     },
     {
+      icon: Brain,
+      name: 'Quantum AI Computing Solutions',
+      description: 'Cutting-edge quantum machine learning for complex optimization and cryptography problems.',
+      features: [
+        'Quantum machine learning algorithms',
+        'Optimization problem solving',
+        'Quantum cryptography and security',
+        'Financial modeling and risk analysis',
+        'Drug discovery and molecular simulation',
+        'Supply chain optimization'
+      ],
+      pricing: '$25,000 – $150,000 setup',
+      perUnit: '$10.00 – $100.00 per computation',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Exponential computational speedup',
+        'Breakthrough optimization results',
+        'Advanced cryptographic security',
+        'Revolutionary problem-solving capabilities'
+      ]
+    },
+    {
+      icon: FileText,
+      name: 'AI Legal Document Analysis',
+      description: 'Intelligent contract analysis, legal research, and compliance monitoring using advanced NLP.',
+      features: [
+        'Contract clause analysis and risk assessment',
+        'Legal document summarization',
+        'Compliance monitoring and alerts',
+        'Legal research and precedent analysis',
+        'Document comparison and version control',
+        'Automated legal brief generation'
+      ],
+      pricing: '$8,000 – $40,000 setup',
+      perUnit: '$0.50 – $5.00 per document',
+      timeline: '6–12 weeks',
+      benefits: [
+        '90% reduction in document review time',
+        'Automated risk identification',
+        'Improved compliance accuracy',
+        'Enhanced legal research efficiency'
+      ]
+    },
+    {
+      icon: TrendingUp,
+      name: 'AI Financial Trading Algorithms',
+      description: 'Advanced algorithmic trading systems with machine learning for market prediction and risk management.',
+      features: [
+        'Real-time market analysis and prediction',
+        'Algorithmic trading strategy development',
+        'Risk management and portfolio optimization',
+        'Sentiment analysis from news and social media',
+        'High-frequency trading optimization',
+        'Backtesting and performance analytics'
+      ],
+      pricing: '$15,000 – $100,000 setup',
+      perUnit: '0.1% – 2% of profits',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Improved trading performance',
+        'Automated risk management',
+        '24/7 market monitoring',
+        'Data-driven trading decisions'
+      ]
+    },
+    {
+      icon: Eye,
+      name: 'AI Medical Imaging Analysis',
+      description: 'Advanced medical image analysis for diagnosis, treatment planning, and research applications.',
+      features: [
+        'Radiology image analysis and diagnosis',
+        'Pathology slide examination',
+        'Treatment response monitoring',
+        'Medical research data analysis',
+        'Clinical decision support systems',
+        'Telemedicine integration'
+      ],
+      pricing: '$20,000 – $120,000 setup',
+      perUnit: '$1.00 – $10.00 per image',
+      timeline: '12–20 weeks',
+      benefits: [
+        '95% accuracy in medical diagnosis',
+        'Faster treatment decisions',
+        'Improved patient outcomes',
+        'Enhanced medical research capabilities'
+      ]
+    },
+    {
+      icon: Database,
+      name: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, logistics optimization, and risk assessment.',
+      features: [
+        'Demand forecasting and inventory optimization',
+        'Route optimization and logistics planning',
+        'Supplier risk assessment and monitoring',
+        'Supply chain disruption prediction',
+        'Sustainability and carbon footprint tracking',
+        'Real-time supply chain visibility'
+      ],
+      pricing: '$12,000 – $80,000 setup',
+      perUnit: '$0.10 – $1.00 per transaction',
+      timeline: '8–16 weeks',
+      benefits: [
+        '30% reduction in supply chain costs',
+        'Improved demand accuracy',
+        'Enhanced risk mitigation',
+        'Optimized logistics operations'
+      ]
+    },
+    {
+      icon: Mic,
+      name: 'AI Voice Cloning & Synthesis',
+      description: 'Advanced voice synthesis technology for personalized voice assistants and content creation.',
+      features: [
+        'High-quality voice cloning from samples',
+        'Multi-language voice synthesis',
+        'Emotional tone and style adaptation',
+        'Real-time voice conversion',
+        'Voice authentication and verification',
+        'Accessibility voice solutions'
+      ],
+      pricing: '$6,000 – $35,000 setup',
+      perUnit: '$0.05 – $0.50 per minute',
+      timeline: '4–8 weeks',
+      benefits: [
+        'Natural-sounding voice synthesis',
+        'Personalized user experiences',
+        'Enhanced accessibility features',
+        'Cost-effective voice solutions'
+      ]
+    },
+    {
+      icon: Zap,
+      name: 'AI Energy Management Systems',
+      description: 'Smart energy optimization for buildings, manufacturing, and renewable energy systems.',
+      features: [
+        'Energy consumption prediction and optimization',
+        'Renewable energy integration and management',
+        'Smart grid optimization',
+        'Building energy efficiency analysis',
+        'Carbon footprint monitoring',
+        'Automated energy trading'
+      ],
+      pricing: '$10,000 – $60,000 setup',
+      perUnit: '$0.01 – $0.10 per kWh',
+      timeline: '6–12 weeks',
+      benefits: [
+        '25% reduction in energy costs',
+        'Improved sustainability metrics',
+        'Automated energy optimization',
+        'Enhanced renewable energy utilization'
+      ]
+    },
+    {
+      icon: Brain,
+      name: 'AI Drug Discovery Platform',
+      description: 'Machine learning-powered drug discovery and development for pharmaceutical research.',
+      features: [
+        'Molecular design and optimization',
+        'Drug-target interaction prediction',
+        'Clinical trial optimization',
+        'Adverse effect prediction',
+        'Drug repurposing analysis',
+        'Biomarker discovery and validation'
+      ],
+      pricing: '$50,000 – $500,000 setup',
+      perUnit: '$100.00 – $1,000.00 per compound',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Faster drug discovery process',
+        'Reduced development costs',
+        'Improved success rates',
+        'Enhanced patient safety'
+      ]
+    },
+    {
+      icon: Shield,
+      name: 'AI Regulatory Compliance Monitor',
+      description: 'Automated compliance monitoring and reporting for financial, healthcare, and data protection regulations.',
+      features: [
+        'Real-time compliance monitoring',
+        'Regulatory change detection and alerts',
+        'Automated compliance reporting',
+        'Risk assessment and mitigation',
+        'Audit trail and documentation',
+        'Multi-jurisdiction compliance support'
+      ],
+      pricing: '$8,000 – $50,000 setup',
+      perUnit: '$0.10 – $1.00 per transaction',
+      timeline: '6–12 weeks',
+      benefits: [
+        '99% compliance accuracy',
+        'Automated regulatory reporting',
+        'Reduced compliance costs',
+        'Proactive risk management'
+      ]
+    },
+    {
       icon: Mic,
       name: 'Conversational AI Platform',
       description: 'Advanced conversational AI with context awareness and multi-modal interaction.',
