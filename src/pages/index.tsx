@@ -337,4 +337,4 @@ const HomePage = () => {
   );
 };
 
-export default index;
+export default HomePage;

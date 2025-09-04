@@ -14,8 +14,8 @@ const nextConfig = {
   trailingSlash: true,
   output: 'export',
   generateBuildId: async () => 'build-' + Date.now(),
-  // Temporarily exclude default pages to allow build while we quarantine corrupted pages
-  pageExtensions: ['page.tsx'],
+  // Ensure standard Next.js page extensions are included so existing routes build
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'page.tsx'],
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
