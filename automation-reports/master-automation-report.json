@@ -1,39 +1,34 @@
 {
-  "timestamp": "2025-09-02T21:48:20.917Z",
-  "automations": [
-    {
-      "command": "node scripts/automation/advanced-error-fixer.cjs",
-      "description": "Advanced Error Fixer",
-      "success": true,
-      "output": "🔧 Starting advanced error fixing automation...\n🎯 Starting advanced error fixing automation...\n🔧 Fixing TypeScript errors...\n🔧 Running: Check TypeScript errors\n❌ Failed: Check TypeScript errors - spawnSync /bin/sh ENOBUFS\n🔧 Running: Fix ESLint errors in TypeScript files\n❌ Failed: Fix ESLint errors in TypeScript files - Command failed: npx eslint . --ext .ts,.tsx --fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n\n📦 Fixing import errors...\n🔧 Running: Fix import concatenation errors\n❌ Failed: Fix import concatenation errors - Command failed: node scripts/fix-import-errors.cjs\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/scripts/fix-import-errors.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n\n🔧 Running: Fix Next.js import issues\n❌ Failed: Fix Next.js import issues - Command failed: node scripts/fix-nextjs-imports.js\nfile:///workspace/scripts/fix-nextjs-imports.js:2\nconst fs = require(,\n                   ^\n\nSyntaxError: Unexpected token ','\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n\n🔧 Fixing syntax errors...\n🔧 Running: Fix general syntax errors\n❌ Failed: Fix general syntax errors - Command failed: node scripts/fix-syntax-errors.cjs\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/scripts/fix-syntax-errors.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n\n🔧 Running: Fix JSX syntax errors\n❌ Failed: Fix JSX syntax errors - Command failed: node scripts/fix-jsx-syntax-errors.cjs\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module '/workspace/scripts/fix-jsx-syntax-errors.cjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.16.0\n\n📊 Report generated: /workspace/automation-reports/advanced-error-fix-report.json\n✅ Advanced error fixing automation completed successfully!\n"},
-    {
-      "command": "node scripts/automation/app-improvement-automation.cjs",
-      "description": "App Improvement Automation",
-      "success": true,
-      "output": "🚀 Starting comprehensive app improvement automation...\n🎯 Starting comprehensive app improvement automation...\n📦 Optimizing bundle size...\n🔧 Running: Build application for analysis\n✅ Completed: Build application for analysis\n🔧 Running: Analyze bundle size\n❌ Failed: Analyze bundle size - Command failed: npx @next/bundle-analyzer\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error could not determine executable to run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_48_35_642Z-debug-0.log\n\n🔍 Improving SEO...\n🔧 Running: Generate sitemap\n✅ Completed: Generate sitemap\n🔧 Running: Generate search index\n❌ Failed: Generate search index - Command failed: node scripts/generate-search-index.js\nfile:///workspace/scripts/generate-search-index.js:2\nimport fs from;\n              ^\n\nSyntaxError: Unexpected token ';'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n\n⚡ Enhancing performance...\n🔧 Running: Format code for better performance\n❌ Failed: Format code for better performance - spawnSync /bin/sh ENOBUFS\n🔧 Running: Lint code for performance issues\n❌ Failed: Lint code for performance issues - Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n`next lint` is deprecated and will be removed in Next.js 16.\nFor new projects, use create-next-app to choose your preferred linter.\nFor existing projects, migrate to the ESLint CLI:\nnpx @next/codemod@canary next-lint-to-eslint-cli .\n\nInvalid Options:\n- Unknown options: useEslintrc, extensions, resolvePluginsRelativeTo, rulePaths, ignorePath, reportUnusedDisableDirectives\n- 'extensions' has been removed.\n- 'resolvePluginsRelativeTo' has been removed.\n- 'ignorePath' has been removed.\n- 'rulePaths' has been removed. Please define your rules using plugins.\n- 'reportUnusedDisableDirectives' has been removed. Please use the 'overrideConfig.linterOptions.reportUnusedDisableDirectives' option instead.\n\n📊 Report generated: /workspace/automation-reports/app-improvement-report.json\n✅ App improvement automation completed successfully!\n"},
-    {
-      "command": "node scripts/automation/performance-monitor.js",
-      "description": "Performance Monitor",
-      "success": false,
-      "error": "Command failed: node scripts/automation/performance-monitor.js\nfile:///workspace/scripts/automation/performance-monitor.js:8\n  '📊 Starting continuous performance monitoring automation...');\n                                                               ^\n\nSyntaxError: Unexpected token ')'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"},
-    {
-      "command": "node scripts/automation/security-audit.cjs",
-      "description": "Security Audit",
-      "success": false,
-      "error": "Command failed: node scripts/automation/security-audit.cjs\n/workspace/scripts/automation/security-audit.cjs:110\n\n\n\nSyntaxError: Unexpected end of input\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"},
-    {
-      "command": "npm run build",
-      "description": "Build Application",
-      "success": true,
-      "output": "\n> bolt.new.zion.app@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n   - Environments: .env\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n ✓ Compiled successfully in 3.9s\n   Collecting page data ...\n   Generating static pages (0/19) ...\n   Generating static pages (4/19) \r\n   Generating static pages (9/19) \r\n   Generating static pages (14/19) \r\n ✓ Generating static pages (19/19)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (pages)                                Size  First Load JS\n┌ ○ /                                     4.73 kB        92.7 kB\n├   /_app                                     0 B          88 kB\n├ ○ /404                                    180 B        88.2 kB\n├ ○ /about                                2.53 kB        93.5 kB\n├ ○ /ai-services                          8.35 kB        96.4 kB\n├ ○ /blog                                 2.91 kB        93.9 kB\n├ ○ /contact                              2.69 kB        90.7 kB\n├ ○ /help                                  3.5 kB        94.5 kB\n├ ○ /index.p                              1.45 kB        89.5 kB\n├ ○ /it-services                          7.96 kB          96 kB\n├ ○ /micro-saas                           8.75 kB        96.8 kB\n├ ○ /NotFound                             35.5 kB         124 kB\n├ ○ /pricing                              3.53 kB        94.5 kB\n├ ○ /privacy                              3.37 kB        94.4 kB\n├ ○ /services                             13.8 kB         102 kB\n├ ○ /services/ai-development              2.73 kB        93.7 kB\n├ ○ /services/cloud-services              2.62 kB        93.6 kB\n├ ○ /services/web-development             2.78 kB        93.8 kB\n└ ○ /terms                                3.75 kB        94.8 kB\n+ First Load JS shared by all             90.6 kB\n  ├ chunks/framework-a6e0b7e30f98059a.js  44.8 kB\n  ├ chunks/main-850da7952efed1f7.js       35.9 kB\n  └ other shared chunks (total)           9.93 kB\n\nƒ Middleware                                34 kB\n\n○  (Static)  prerendered as static content\n\n"},
-    {
-      "command": "npm run test",
-      "description": "Run Tests",
-      "success": false,
-      "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n● Validation Error: \n\n  Preset ts-jest not found.\n\n  Configuration Documentation:\n  https://jestjs.io/docs/configuration\n\n"}
-  ],
+  "timestamp": "2025-09-03T14:26:20.207Z",
+  "status": "completed",
+  "phases": {
+    "healthCheck": {
+      "status": "failed",
+      "success": false
+    },
+    "performanceMonitor": {
+      "status": "completed",
+      "success": true
+    },
+    "codeQuality": {
+      "status": "completed",
+      "success": true
+    },
+    "testRunner": {
+      "status": "failed",
+      "success": false
+    },
+    "gitOperations": {
+      "status": "failed",
+      "success": false
+    }
+  },
   "summary": {
-    "total": 6,
-    "successful": 3,
-    "failed": 3}
+    "scriptsRun": 2,
+    "testsPassed": 0,
+    "testsFailed": 0,
+    "improvementsCreated": 2,
+    "gitOperationsCompleted": 0
+  },
+  "completedAt": "2025-09-03T14:26:20.217Z"
 }

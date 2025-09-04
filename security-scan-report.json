@@ -1,47 +1,42 @@
 {
-  "timestamp": "2025-09-04T01:33:54.765Z",
-  "status": "completed",
+  "timestamp": "2025-09-03T16:32:17.031Z",
+  "status": "warning",
+  "checks": [
+    {
+      "file": "package.json",
+      "type": "dangerous_dependency",
+      "dependency": "child_process",
+      "version": "^1.0.2",
+      "severity": "medium"
+    },
+    {
+      "file": "package.json",
+      "type": "dangerous_dependency",
+      "dependency": "fs",
+      "version": "^0.0.1-security",
+      "severity": "medium"
+    },
+    {
+      "file": "package.json",
+      "type": "dangerous_dependency",
+      "dependency": "fs-extra",
+      "version": "^11.3.1",
+      "severity": "medium"
+    }
+  ],
   "vulnerabilities": [
     {
-      "name": "NPM Security Audit",
-      "status": "checked",
-      "result": {
-        "status": "vulnerabilities_found"
-      },
-      "timestamp": "2025-09-04T01:33:55.529Z"
-    },
-    {
-      "name": "Sensitive Files Check",
-      "status": "checked",
-      "result": {
-        "foundFiles": []
-      },
-      "timestamp": "2025-09-04T01:33:55.530Z"
-    },
-    {
-      "name": "Gitignore Security Check",
-      "status": "checked",
-      "result": {
-        "missingEntries": []
-      },
-      "timestamp": "2025-09-04T01:33:55.530Z"
-    },
-    {
-      "name": "Hardcoded Secrets Check",
-      "status": "checked",
-      "result": {
-        "scannedFiles": 3082,
-        "suspiciousFiles": 0
-      },
-      "timestamp": "2025-09-04T01:33:55.661Z"
+      "name": "Vulnerable Package",
+      "description": "Package vite may have known vulnerabilities",
+      "severity": "moderate",
+      "fix": "Update vite to latest version"
     }
   ],
+  "vulnerabilities": [],
   "recommendations": [
-    {
-      "type": "npm_vulnerabilities",
-      "message": "NPM vulnerabilities detected - review and fix",
-      "severity": "high"
-    }
-  ],
-  "completedAt": "2025-09-04T01:33:55.662Z"
+    "Review and fix all identified vulnerabilities",
+    "Implement regular security scanning in CI/CD pipeline",
+    "Use environment variables for sensitive configuration",
+    "Keep dependencies updated regularly"
+  ]
 }

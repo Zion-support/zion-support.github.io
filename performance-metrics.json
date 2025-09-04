@@ -1,17 +1,17 @@
 {
-  "timestamp": "2025-09-04T01:33:55.206Z",
+  "timestamp": "2025-09-03T16:31:19.468Z",
   "bundleSize": {
     ".next": {
-      "size": 28534499,
-      "sizeMB": "27.21"
+      "size": 41811549,
+      "sizeMB": "39.87"
     },
     "node_modules": {
-      "size": 0,
-      "sizeMB": "0.00"
+      "size": 819927451,
+      "sizeMB": "781.94"
     }
   },
   "fileCounts": {
-    ".tsx": 26,
+    ".tsx": 13,
     ".ts": 0,
     ".jsx": 0,
     ".js": 0,

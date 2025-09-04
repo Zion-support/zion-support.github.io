@@ -1,51 +1,49 @@
 {
-  "timestamp": "2025-09-04T01:35:00.505Z",
-  "status": "completed",
-  "checks": [
-    {
-      "name": "Package.json validation",
-      "status": "passed",
-      "result": {
-        "name": "ziontechgroup.com",
-        "version": "0.1.0"
-      },
-      "timestamp": "2025-09-04T01:35:00.505Z"
+  "timestamp": "2025-09-03T16:31:06.384Z",
+  "status": "healthy",
+  "checks": {
+    "nodeVersion": {
+      "status": "pass",
+      "value": "v22.16.0"
+    },
+    "memory": {
+      "status": "pass",
+      "value": {
+        "rss": "47MB",
+        "heapUsed": "4MB",
+        "heapTotal": "5MB"
+      }
+    },
+    "diskSpace": {
+      "status": "pass",
+      "value": "overlay         126G   15G  106G  12% /"
+    },
+    "sourceFiles": {
+      "status": "pass",
+      "value": "exists"
+    },
+    "nodeModules": {
+      "status": "pass",
+      "value": "exists"
+    },
+    "pm2Processes": {
+      "status": "pass",
+      "message": "File exists"
     },
     {
-      "name": "Dependencies check",
-      "status": "failed",
-      "error": "node_modules not found - run npm install",
-      "timestamp": "2025-09-04T01:35:00.505Z"
+      "name": "File: pages/index.tsx",
+      "status": "pass",
+      "message": "File exists"
     },
     {
-      "name": "Build directory check",
-      "status": "passed",
-      "result": {
-        "status": "no_build_directory"
-      },
-      "timestamp": "2025-09-04T01:35:00.505Z"
+      "name": "Disk Space",
+      "status": "pass",
+      "message": "Disk usage: 12%"
     },
     {
-      "name": "Disk space check",
-      "status": "passed",
-      "result": {
-        "used": "14G",
-        "available": "107G",
-        "usePercent": "12%"
-      },
-      "timestamp": "2025-09-04T01:35:00.508Z"
-    },
-    {
-      "name": "Memory check",
-      "status": "passed",
-      "result": {
-        "total": "15Gi",
-        "used": "1.6Gi",
-        "free": "791Mi",
-        "available": "6.7Mi"
-      },
-      "timestamp": "2025-09-04T01:35:00.511Z"
+      "name": "Memory Usage",
+      "status": "pass",
+      "message": "Memory usage: 8%"
     }
-  ],
-  "completedAt": "2025-09-04T01:35:00.511Z"
+  }
 }
