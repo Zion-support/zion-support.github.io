@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-04T01:31:55.703Z",
+  "timestamp": "2025-09-04T01:35:17.649Z",
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -15,9 +15,9 @@
     },
     "components/ErrorBoundary.tsx": {
       "path": "components/ErrorBoundary.tsx",
-      "lines": 69,
+      "lines": 68,
       "issues": [],
-      "complexity": 5
+      "complexity": 4
     },
     "components/Loading.tsx": {
       "path": "components/Loading.tsx",
@@ -140,7 +140,7 @@
     },
     "pages/it-services.tsx": {
       "path": "pages/it-services.tsx",
-      "lines": 1190,
+      "lines": 1223,
       "issues": [
         {
           "rule": "File Length",
@@ -234,8 +234,8 @@
   },
   "summary": {
     "totalFiles": 28,
-    "totalLines": 7958,
-    "averageComplexity": "2.04",
+    "totalLines": 7990,
+    "averageComplexity": "2.00",
     "issues": [
       {
         "file": "pages/404.tsx",

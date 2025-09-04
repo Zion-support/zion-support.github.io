@@ -1025,30 +1025,63 @@ export default function ITServices() {
     },
     {
       icon: Cpu,
-ursor/analyze-improve-and-deploy-application-d144
+      name: 'Edge Computing Solutions',
+      description: 'Distributed computing at the edge for low-latency applications',
+      features: [
+        'Edge server deployment',
+        'Real-time data processing',
+        'Reduced latency',
+        'Offline capability'
+      ],
+      category: 'Infrastructure'
     },
     {
       icon: Shield,
       name: 'Zero Trust Security Architecture',
-ursor/analyze-improve-and-deploy-application-d144
+      description: 'Comprehensive security framework with zero-trust principles',
+      features: [
+        'Identity verification',
+        'Device trust assessment',
+        'Network segmentation',
+        'Continuous monitoring'
       ],
       category: 'Security'
     },
     {
       icon: Database,
-ursor/analyze-improve-and-deploy-application-d144
+      name: 'Database Management Solutions',
+      description: 'Comprehensive database administration and optimization',
+      features: [
+        'Database design and optimization',
+        'Performance tuning',
+        'Backup and recovery',
+        'Security hardening'
       ],
-      category: 'Network Infrastructure'
+      category: 'Data Management'
     },
     {
       icon: Brain,
-ursor/analyze-improve-and-deploy-application-d144
+      name: 'AI Infrastructure Solutions',
+      description: 'Advanced AI and machine learning infrastructure',
+      features: [
+        'ML model deployment',
+        'GPU cluster management',
+        'Data pipeline automation',
+        'Model monitoring'
       ],
       category: 'AI Infrastructure'
     },
     {
       icon: Server,
-ursor/analyze-improve-and-deploy-application-d144
+      name: 'Server Management Solutions',
+      description: 'Comprehensive server administration and maintenance',
+      features: [
+        'Server provisioning',
+        'Performance monitoring',
+        'Automated maintenance',
+        'Disaster recovery'
+      ],
+      category: 'Infrastructure'
     }
   ];
 
