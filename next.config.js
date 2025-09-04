@@ -1,7 +1,7 @@
-
 // Performance optimizations
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   eslint: { 
@@ -14,7 +14,7 @@ const nextConfig = {
   trailingSlash: true,
   output: 'export',
   generateBuildId: async () => 'build-' + Date.now(),
-  
+
   // Include all page types
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   
