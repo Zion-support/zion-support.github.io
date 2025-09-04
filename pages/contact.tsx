@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
@@ -14,6 +15,11 @@ import {
   MessageCircle,
   Globe
 } from 'lucide-react'
+=======
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+>>>>>>> origin/merge-pr-11195
 
 const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
@@ -770,6 +776,7 @@ const Contact: NextPage = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </section>
 
           {/* Services Overview */}
@@ -813,3 +820,11 @@ const Contact: NextPage = () => {
 }
 
 export default ContactPage
+=======
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/merge-pr-11195

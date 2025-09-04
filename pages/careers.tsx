@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Users, MapPin, Clock, Briefcase, Heart, Zap, Brain, Shield, Cloud, Rocket } from 'lucide-react';
+>>>>>>> origin/merge-pr-11195
 
 import Head from 'next/head'
 import Link from 'next/link'
@@ -391,7 +397,11 @@ const Careers: NextPage = () => {
       </section>
     </MainLayout>
   );
+<<<<<<< HEAD
 };
 
 export default Careers;
 >>>>>>> origin/merge-pr-10614
+=======
+}
+>>>>>>> origin/merge-pr-11195

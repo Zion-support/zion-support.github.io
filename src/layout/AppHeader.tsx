@@ -10,7 +10,13 @@ import { Menu, X } from 'lucide-react';
 
 =======
 export function AppHeader() {
+<<<<<<< HEAD
   const [mobileOpen, setMobileOpen] = React.useState(false);
+=======
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+>>>>>>> origin/merge-pr-11195
 
 <<<<<<< HEAD
   const nav = [
@@ -28,6 +34,7 @@ export function AppHeader() {
     }
   };
 
+<<<<<<< HEAD
   const navigation = [
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false, hasDropdown: true },
@@ -75,12 +82,48 @@ icon: Brain,
         { name: 'Tech Partnerships', href: '/innovation-lab/partnerships', icon: Handshake, color: 'from-zion-blue to-zion-green' }
       ]
     }
+=======
+  const navigationItems = [
+    {
+      name: 'Services',
+      href: '/services',
+      icon: Zap,
+      color: 'from-cyan-500 to-blue-500',
+      dropdown: [
+        { name: 'AI & Analytics', href: '/services/ai-analytics', icon: Brain, color: 'from-cyan-500 to-purple-500' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, color: 'from-blue-500 to-cyan-500' },
+        { name: 'IoT & Edge', href: '/services/iot-edge', icon: Cpu, color: 'from-green-500 to-cyan-500' },
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket, color: 'from-purple-500 to-cyan-500' },
+        { name: 'Blockchain', href: '/services/blockchain', icon: Lock, color: 'from-orange-500 to-purple-500' },
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe, color: 'from-blue-500 to-purple-500' },
+        { name: 'Sustainability', href: '/services/sustainability', icon: Heart, color: 'from-green-500 to-blue-500' }
+      ]
+    },
+    {
+      name: 'Micro SAAS',
+      href: '/micro-saas-services',
+      icon: Code,
+      color: 'from-purple-500 to-pink-500',
+      dropdown: [
+        { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence', icon: Brain, color: 'from-cyan-500 to-blue-500' },
+        { name: 'Customer Experience', href: '/micro-saas/customer-experience', icon: Users, color: 'from-purple-500 to-pink-500' },
+        { name: 'Supply Chain', href: '/micro-saas/supply-chain', icon: Network, color: 'from-green-500 to-cyan-500' },
+        { name: 'Cybersecurity', href: '/micro-saas/cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' },
+        { name: 'IoT Edge Computing', href: '/micro-saas/iot-edge', icon: Cpu, color: 'from-green-500 to-cyan-500' }
+      ]
+    },
+    { name: 'About', href: '/about', icon: Users, color: 'from-blue-500 to-purple-500' },
+    { name: 'Blog', href: '/blog', icon: Globe, color: 'from-green-500 to-blue-500' },
+    { name: 'Contact', href: '/contact', icon: Heart, color: 'from-pink-500 to-red-500' }
+>>>>>>> origin/merge-pr-11195
   ];
 setServicesDropdownOpen(true);
         setSolutionsDropdownOpen(false);
         setCompanyDropdownOpen(false);
         setResourcesDropdownOpen(false)} else if(nav.name === 'Solutions') {
 
+<<<<<<< HEAD
         setSolutionsDropdownOpen(true);
         setServicesDropdownOpen(false);
         setCompanyDropdownOpen(false);
@@ -350,6 +393,31 @@ setServicesDropdownOpen(true);
                   className="flex items-center space-x-2 p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors"
                   aria-expanded={activeDropdown === 'user'}
                   aria-haspopup="true"
+=======
+  return (
+    <header className="bg-white dark:bg-gray-900 shadow-lg border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                <Zap className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">
+                Zion Tech Group
+              </span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.name} className="relative group">
+                <Link
+                  to={item.href}
+                  className="flex items-center space-x-1 text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-200"
+>>>>>>> origin/merge-pr-11195
                 >
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
                     <User className="w-4 h-4 text-white" />

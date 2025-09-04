@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { CheckCircle, ArrowRight, Users, Zap, Shield } from 'lucide-react';
@@ -17,14 +18,45 @@ const PricingPage: React.FC = () => {
         'Basic SEO optimization',
         'Email support',
         '3 months maintenance included'
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Check, Star, Zap, Shield, Users, Clock, ArrowRight } from 'lucide-react';
+
+export default function PricingPage() {
+  const plans = [
+    {
+      name: "Starter",
+      description: "Perfect for small businesses and startups",
+      price: "$2,999",
+      period: "/month",
+      icon: Zap,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Up to 5 users",
+        "Basic AI automation",
+        "Standard security features",
+        "Email support",
+        "Basic analytics",
+        "Monthly reports"
+>>>>>>> origin/merge-pr-11195
       ],
       popular: false
     },
     {
+<<<<<<< HEAD
       name: 'Professional',
       description: 'Ideal for growing businesses',
       price: '$5,000',
       period: 'per month',
+=======
+      name: "Professional",
+      description: "Ideal for growing businesses",
+      price: "$7,999",
+      period: "/month",
+      icon: Shield,
+      color: "from-cyan-500 to-blue-500",
+>>>>>>> origin/merge-pr-11195
       features: [
         'Advanced website development',
         'Up to 15 pages',
@@ -151,6 +183,10 @@ const PricingPage: React.FC = () => {
       </div>
     </>
   );
+<<<<<<< HEAD
 };
 
 export default PricingPage;
+=======
+}
+>>>>>>> origin/merge-pr-11195

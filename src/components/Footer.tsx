@@ -15,6 +15,7 @@ import {
 =======
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Twitter, 
@@ -593,6 +594,9 @@ export function Footer(props: any) {
   Network,
   Newspaper
 } from 'lucide-react';
+=======
+import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
+>>>>>>> origin/merge-pr-11195
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -601,6 +605,7 @@ export function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+<<<<<<< HEAD
   const footerSections = [
     {
       title: 'Company',
@@ -1372,6 +1377,8 @@ export function Footer(props: any) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+=======
+>>>>>>> origin/merge-pr-11195
   const footerSections = [
     {
       title: "Services",
@@ -1495,12 +1502,16 @@ export function Footer(props: any) {
                 <MapPin className="w-4 h-4" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
+=======
+>>>>>>> origin/merge-pr-11195
             </div>
           </div>
 
           {/* Footer Sections */}
           {footerSections.map((section) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div key={section.title} className="space-y-4">
               <h3 className="text-white font-semibold text-sm uppercase tracking-wider">
@@ -1510,6 +1521,10 @@ export function Footer(props: any) {
             <div key={section.title}>
               <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
+=======
+            <div key={section.title}>
+              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
+>>>>>>> origin/merge-pr-11195
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.name}>
@@ -1525,7 +1540,10 @@ export function Footer(props: any) {
                     >
                       <span>{link.name}</span>
                       <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
+=======
+>>>>>>> origin/merge-pr-11195
                     </Link>
                   </li>
                 ))}
@@ -1534,6 +1552,7 @@ export function Footer(props: any) {
           ))}
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Contact Information */}
         <div className="mt-12 pt-8 border-t border-gray-800">
@@ -1653,6 +1672,8 @@ export default Footer;
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38
 =======
+=======
+>>>>>>> origin/merge-pr-11195
         {/* Social Links */}
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -1704,6 +1725,7 @@ export default Footer;
       </div>
     </footer>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
 >>>>>>> merge-all-prs-20250904-105408
@@ -1738,3 +1760,6 @@ export default Footer;
 =======
 }
 >>>>>>> origin/merge-pr-11190
+=======
+}
+>>>>>>> origin/merge-pr-11195

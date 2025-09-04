@@ -182,6 +182,7 @@ User Agent: ${navigator.userAgent}
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ErrorBoundary;
 </svg>
 </div>
@@ -216,3 +217,6 @@ export function useErrorHandler() {
 
 export default withErrorBoundary;
 >>>>>>> origin/merge-pr-10615
+=======
+export default ErrorBoundary;
+>>>>>>> origin/merge-pr-11195

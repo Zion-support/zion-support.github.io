@@ -5,6 +5,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "ci:preflight": "node -e \"try{require('fs').accessSync('dist');console.log('dist exists')}catch(e){process.exit(0)}\" && echo prebuilt || echo building",
     "ci:build-test": "npm run build && npm run test:smoke",
     "dev": "next dev",
@@ -19,6 +20,16 @@
     "clean": "rm -rf .next out dist",
     "check": "npm run lint && npm run type-check && npm run test:smoke",
     "precommit": "npm run check",
+=======
+    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
+    "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
+    "prebuild": "echo 'skip prebuild health-check'",
+    "export": "rm -rf dist && NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
+    "start": "vite preview",
+    "postbuild": "echo 'Build completed successfully'",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit",
+>>>>>>> origin/merge-pr-11195
     "prepare": "echo 'Husky prepare script disabled'",
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
@@ -151,11 +162,18 @@
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
     "perf:monitor": "node scripts/performance-monitor.js",
     "perf:audit": "npm run perf:monitor",
+<<<<<<< HEAD
     "perf:lighthouse": "npx --yes lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html",
+=======
+    "perf:lighthouse": "lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html",
+    "clean": "rm -rf .next out dist",
+    "lint:fix": "eslint . --fix",
+>>>>>>> origin/merge-pr-11195
     "format": "prettier --write .",
     "automation:accessibility": "node automation/accessibility-checker.cjs",
     "automation:security-audit": "node automation/security-audit.cjs",
     "format:check": "prettier --check .",
+<<<<<<< HEAD
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs",
     "ci:full": "bash scripts/comprehensive-build-test.sh",
@@ -191,6 +209,14 @@
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
+=======
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "build:production": "NODE_ENV=production npm run build",
+    "dev:fast": "npm run dev",
+    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"
+>>>>>>> origin/merge-pr-11195
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -220,11 +246,18 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-toggle-group": "^1.0.4",
+<<<<<<< HEAD
     "@reduxjs/toolkit": "^2.8.2",
     "@stripe/stripe-js": "^7.9.0",
     "@tailwindcss/postcss": "^4.1.12",
     "@tanstack/react-query": "^5.85.5",
     "@types/mongodb": "^4.0.6",
+=======
+    "@radix-ui/react-tooltip": "^1.0.7",
+    "@reduxjs/toolkit": "^2.9.0",
+    "@supabase/supabase-js": "^2.39.0",
+    "@tanstack/react-query": "^5.85.9",
+>>>>>>> origin/merge-pr-11195
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
@@ -232,6 +265,7 @@
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
     "class-variance-authority": "^0.7.1",
+<<<<<<< HEAD
     "clsx": "^2.1.1",
     "critters": "^0.0.23",
     "cron-parser": "^5.3.0",
@@ -242,6 +276,10 @@
     "date-fns": "^2.30.0",
     "events": "^3.3.0",
     "framer-motion": "^10.16.16",
+=======
+    "cron-parser": "^5.3.0",
+    "framer-motion": "^12.23.12",
+>>>>>>> origin/merge-pr-11195
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
@@ -255,13 +293,18 @@
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
+<<<<<<< HEAD
     "postcss-preset-env": "^10.3.1",
+=======
+    "postcss": "^8.4.32",
+>>>>>>> origin/merge-pr-11195
     "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
     "react-day-picker": "^8.9.1",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
+<<<<<<< HEAD
     "react-hook-form": "^7.62.0",
     "react-hot-toast": "^2.6.0",
     "react-is": "^19.1.1",
@@ -360,6 +403,33 @@
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",
     "ts-jest": "^29.2.5",
+=======
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.8.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "@rollup/rollup-linux-x64-gnu": "^4.50.0",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^24.3.0",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.42.0",
+    "@typescript-eslint/parser": "^8.42.0",
+    "@vitejs/plugin-react": "^5.0.2",
+    "eslint": "^9.34.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "husky": "^9.1.7",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "terser": "^5.44.0",
+>>>>>>> origin/merge-pr-11195
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
     "vite": "^7.1.4"

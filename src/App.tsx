@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react';
 =======
+=======
+>>>>>>> origin/merge-pr-11195
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Header } from './src/components/Header.tsx';
@@ -45,6 +48,7 @@ const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase20
 const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
+<<<<<<< HEAD
 // Service Pages
 const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
 const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
@@ -259,5 +263,75 @@ export default function App(props: any) {
       </Router>
     </ErrorBoundary>
 >>>>>>> origin/merge-pr-10615
+=======
+const App: React.FC = () => {
+  return (
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+            <AppHeader />
+            <main className="relative">
+              <Suspense fallback={<LoadingSpinner />}>
+                <AnimatePresence mode="wait">
+                  <Routes>
+                    {/* Main Routes */}
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/team" element={<Team />} />
+                    
+                    {/* Services Routes */}
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/services-overview" element={<Services />} />
+                    
+                    {/* Pricing Routes */}
+                    <Route path="/pricing" element={<Pricing />} />
+                    
+                    {/* Content Routes */}
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
+                    <Route path="/white-papers" element={<WhitePapers />} />
+                    <Route path="/webinars" element={<Webinars />} />
+                    
+                    {/* Support Routes */}
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/help" element={<Help />} />
+                    <Route path="/support" element={<Help />} />
+                    <Route path="/search" element={<Search />} />
+                    
+                    {/* Company Routes */}
+                    <Route path="/partners" element={<Partners />} />
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/status" element={<Status />} />
+                    <Route path="/system-status" element={<Status />} />
+                    
+                    {/* Legal Routes */}
+                    <Route path="/privacy" element={<Privacy />} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/cookies" element={<Cookies />} />
+                    <Route path="/data-protection" element={<DataProtection />} />
+                    <Route path="/accessibility" element={<Accessibility />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
+                    
+                    {/* API Routes */}
+                    <Route path="/api" element={<API />} />
+                    <Route path="/api-reference" element={<API />} />
+                    <Route path="/docs" element={<Documentation />} />
+                    <Route path="/documentation" element={<Documentation />} />
+                    
+                    {/* 404 Route */}
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </AnimatePresence>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
+>>>>>>> origin/merge-pr-11195
   );
 }
