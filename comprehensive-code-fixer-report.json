@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-09-03T22:09:28.676Z",
-  "duration": "5232ms",
+  "timestamp": "2025-09-04T02:54:57.294Z",
+  "duration": "9527ms",
   "results": {
     "filesFixed": 17,
-    "eslintSuccess": false,
-    "typeCheckSuccess": true,
+    "eslintSuccess": true,
+    "typeCheckSuccess": false,
     "buildSuccess": false,
     "fixes": [
       "Fixed components/ContactForm.tsx",

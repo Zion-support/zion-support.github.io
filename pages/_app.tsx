@@ -6,12 +6,15 @@ import PerformanceMonitor from '../components/PerformanceMonitor';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import '../styles/globals.css';
 
+<<<<<<< HEAD
+function Header() {
+=======
 function Header(): any {
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header style={{
-      position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
+    <header style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(11, 18, 32, 0.95)', 
       backdropFilter: 'blur(10px)', color: 'white',
       borderBottom: '1px solid rgba(255,255,255,0.1)',
     }}>
@@ -19,11 +22,26 @@ function Header(): any {
         maxWidth: 1400, margin: '0 auto', padding: '12px 20px', display: 'flex',
         alignItems: 'center', justifyContent: 'space-between', gap: 16}}>
         <Link href="/" style={{ 
-          fontWeight: 800, letterSpacing: 0.3, fontSize: '1.25rem',
-          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+          fontWeight: 800, letterSpacing: 0.3, fontSize: '1.25rem', background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text',
+<<<<<<< HEAD
+          textDecoration: 'none',
+        }}>Zion Tech Group</Link>
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md: flex gap-2 flex-wrap items-center">,
+          <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
+          <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
+          <Link href="/services-catalog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Catalog</Link>
+          <Link href="/cloud-devops" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Cloud DevOps</Link>
+          <Link href="/cybersecurity" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Cybersecurity</Link>
+          <Link href="/quantum-computing" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Quantum</Link>
+          <Link href="/docs" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Docs</Link>
+          <Link href="/pricing" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Pricing</Link>
+          <Link href="/contact" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '8px 16px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', fontWeight: 600,
+=======
           textDecoration: 'none'
         }}>Zion Tech Group        </Link>
         
@@ -40,6 +58,7 @@ function Header(): any {
           <Link href="/contact" style={{ 
             background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
             color: 'white', padding: '8px 16px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem', fontWeight: 600
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
           }}>Contact</Link>
         </div>
 
@@ -59,13 +78,21 @@ function Header(): any {
       
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div style={{ 
-          background: 'rgba(11, 18, 32, 0.98)', 
-          borderTop: '1px solid rgba(255,255,255,0.1)',
-          padding: '20px'
+        <div style={{ background: 'rgba(11, 18, 32, 0.98)', 
+          borderTop: '1px solid rgba(255,255,255,0.1)', padding: '20px',
         }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 1400, margin: '0 auto' }}>
             <Link href="/" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Home</Link>
+<<<<<<< HEAD
+            <Link href="/services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>All Services</Link>
+            <Link href="/services-catalog" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Catalog</Link>
+            <Link href="/cloud-devops" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Cloud DevOps</Link>
+            <Link href="/cybersecurity" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Cybersecurity</Link>
+            <Link href="/quantum-computing" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Quantum</Link>
+            <Link href="/docs" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Docs</Link>
+            <Link href="/pricing" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+            <Link href="/contact" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '12px 16px', textDecoration: 'none', borderRadius: 6, textAlign: 'center', fontWeight: 600, marginTop: 8,
+=======
             <Link href="/services" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Services</Link>
             <Link href="/solutions" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
             <Link href="/about" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)' }} onClick={() => setMobileMenuOpen(false)}>About</Link>
@@ -76,6 +103,7 @@ function Header(): any {
             <Link href="/contact" style={{ 
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
               color: 'white', padding: '12px 16px', textDecoration: 'none', borderRadius: 6, textAlign: 'center', fontWeight: 600, marginTop: 8
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
             }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
         </div>
@@ -84,31 +112,28 @@ function Header(): any {
   );
 }
 
+<<<<<<< HEAD
+function Footer() {
+=======
 function Footer(): any {
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   return (
-    <footer style={{ 
-      background: 'linear-gradient(135deg, #0b1220, #1e293b)', 
-      color: 'white', 
+    <footer style={{ background: 'linear-gradient(135deg, #0b1220, #1e293b)', color: 'white', 
       marginTop: 60, 
       borderTop: '1px solid rgba(255,255,255,0.1)' 
     }}>
       <div style={{ 
-        maxWidth: 1400, 
-        margin: '0 auto', 
-        padding: '40px 20px',
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
-        gap: 32 
+        maxWidth: 1400, margin: '0 auto', padding: '40px 20px', display: 'grid', 
+        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 32 ,
       }}>
         {/* Company Info */}
         <div style={{ display: 'grid', gap: 12 }}>
           <div style={{ 
             fontWeight: 800, 
-            fontSize: '1.25rem',
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+            fontSize: '1.25rem', background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
+            backgroundClip: 'text',
           }}>Zion Tech Group</div>
           <p style={{ opacity: 0.8, lineHeight: 1.6 }}>
             Transforming businesses through innovative AI, quantum computing, and cutting-edge technology solutions.
@@ -179,41 +204,31 @@ function Footer(): any {
             Ready to transform your business with our innovative solutions?
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            <Link href="/contact" style={{ 
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white', 
-              padding: '10px 16px', 
+            <Link href="/contact" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '10px 16px', 
               borderRadius: 8,
               textAlign: 'center', 
               textDecoration: 'none', 
-              fontWeight: 600
+              fontWeight: 600,
             }}>Request Quote</Link>
-            <a href="tel:+13024640950" style={{ 
-              background: 'rgba(255,255,255,0.1)', 
-              color: 'white', 
-              padding: '10px 16px', 
+            <a href="tel:+13024640950" style={{ background: 'rgba(255,255,255,0.1)', color: 'white', padding: '10px 16px', 
               borderRadius: 8,
               textAlign: 'center', 
               textDecoration: 'none', 
-              fontWeight: 600
+              fontWeight: 600,
             }}>Call Now</a>
-            <a href="mailto:kleber@ziontechgroup.com" style={{ 
-              background: 'rgba(255,255,255,0.1)', 
-              color: 'white', 
-              padding: '10px 16px', 
+            <a href="mailto: kleber@ziontechgroup.com" style={{ background: 'rgba(255,255,255,0.1)', color: 'white', padding: '10px 16px', 
               borderRadius: 8,
               textAlign: 'center', 
               textDecoration: 'none', 
-              fontWeight: 600
+              fontWeight: 600,
             }}>Email Us</a>
           </div>
         </div>
       </div>
       
       <div style={{ 
-        borderTop: '1px solid rgba(255,255,255,0.1)', 
-        padding: '20px', 
-        textAlign: 'center' 
+        borderTop: '1px solid rgba(255,255,255,0.1)', padding: '20px', 
+        textAlign: 'center' ,
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 

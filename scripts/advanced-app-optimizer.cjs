@@ -2,191 +2,233 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+
+console.log('🚀 Starting Advanced App Optimizer...');
 
 class AdvancedAppOptimizer {
   constructor() {
-    this.projectRoot = process.cwd();
     this.optimizations = [];
-    this.errors = [];
+    this.recommendations = [];
   }
 
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
+  async optimize() {
+    console.log('📊 Analyzing app structure...');
+    
+    // Analyze bundle size
+    await this.analyzeBundleSize();
+    
+    // Optimize images
+    await this.optimizeImages();
+    
+    // Optimize CSS
+    await this.optimizeCSS();
+    
+    // Optimize JavaScript
+    await this.optimizeJavaScript();
+    
+    // Generate report
+    this.generateReport();
+  }
+
+  async analyzeBundleSize() {
+    console.log('📦 Analyzing bundle size...');
+    
+    try {
+      const { execSync } = require('child_process');
+      const result = execSync('npm run build 2>&1', { encoding: 'utf8' });
+      
+      // Extract bundle size information
+      const bundleInfo = this.extractBundleInfo(result);
+      
+      if (bundleInfo.totalSize > 1000000) { // 1MB
+        this.recommendations.push({
+          type: 'bundle-size',
+          priority: 'high',
+          message: `Bundle size is ${(bundleInfo.totalSize / 1024 / 1024).toFixed(2)}MB. Consider code splitting.`
+        });
+      }
+      
+      this.optimizations.push({
+        type: 'bundle-analysis',
+        status: 'completed',
+        details: bundleInfo
+      });
+      
+    } catch (error) {
+      console.log('⚠️ Bundle analysis failed:', error.message);
+    }
+  }
+
+  extractBundleInfo(buildOutput) {
+    const lines = buildOutput.split('\n');
+    let totalSize = 0;
+    let pageCount = 0;
+    
+    for (const line of lines) {
+      if (line.includes('First Load JS shared by all')) {
+        const match = line.match(/(\d+(?:\.\d+)?)\s*kB/);
+        if (match) {
+          totalSize += parseFloat(match[1]) * 1024;
+        }
+      }
+      if (line.includes('○') || line.includes('ƒ')) {
+        pageCount++;
+      }
+    }
+    
+    return { totalSize, pageCount };
   }
 
   async optimizeImages() {
-    this.log('🖼️ Optimizing images...');
-    try {
-      const publicDir = path.join(this.projectRoot, 'public');
-      const imageFiles = this.findImageFiles(publicDir);
-      
-      for (const imageFile of imageFiles) {
-        const optimizedPath = imageFile.replace(/(\.[^.]+)$/, '_optimized$1');
-        // In a real implementation, you would use sharp or imagemin here
-        this.log(`Optimized: ${path.basename(imageFile)}`);
-        this.optimizations.push({
-          type: 'image_optimization',
-          file: imageFile,
-          status: 'optimized'
+    console.log('🖼️ Optimizing images...');
+    
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+    const imageFiles = this.findFiles(imageExtensions);
+    
+    for (const file of imageFiles) {
+      const stats = fs.statSync(file);
+      if (stats.size > 100000) { // 100KB
+        this.recommendations.push({
+          type: 'image-optimization',
+          priority: 'medium',
+          message: `Large image detected: ${file} (${(stats.size / 1024).toFixed(2)}KB)`
         });
       }
-    } catch (error) {
-      this.log(`Image optimization failed: ${error.message}`, 'error');
-      this.errors.push({ type: 'image_optimization', error: error.message });
     }
+    
+    this.optimizations.push({
+      type: 'image-optimization',
+      status: 'completed',
+      filesAnalyzed: imageFiles.length
+    });
   }
 
-  findImageFiles(dir) {
-    const files = [];
-    const items = fs.readdirSync(dir, { withFileTypes: true });
+  async optimizeCSS() {
+    console.log('🎨 Optimizing CSS...');
     
-    for (const item of items) {
-      const fullPath = path.join(dir, item.name);
-      if (item.isDirectory()) {
-        files.push(...this.findImageFiles(fullPath));
-      } else if (/\.(jpg|jpeg|png|gif|webp)$/i.test(item.name)) {
-        files.push(fullPath);
+    const cssFiles = this.findFiles(['.css', '.scss', '.sass']);
+    let totalCssSize = 0;
+    
+    for (const file of cssFiles) {
+      const stats = fs.statSync(file);
+      totalCssSize += stats.size;
+    }
+    
+    if (totalCssSize > 50000) { // 50KB
+      this.recommendations.push({
+        type: 'css-optimization',
+        priority: 'medium',
+        message: `CSS bundle size is ${(totalCssSize / 1024).toFixed(2)}KB. Consider purging unused CSS.`
+      });
+    }
+    
+    this.optimizations.push({
+      type: 'css-optimization',
+      status: 'completed',
+      totalSize: totalCssSize
+    });
+  }
+
+  async optimizeJavaScript() {
+    console.log('⚡ Optimizing JavaScript...');
+    
+    const jsFiles = this.findFiles(['.js', '.jsx', '.ts', '.tsx']);
+    let totalJsSize = 0;
+    let componentCount = 0;
+    
+    for (const file of jsFiles) {
+      const stats = fs.statSync(file);
+      totalJsSize += stats.size;
+      
+      if (file.includes('components/')) {
+        componentCount++;
       }
     }
     
+    if (componentCount > 50) {
+      this.recommendations.push({
+        type: 'component-optimization',
+        priority: 'high',
+        message: `Large number of components (${componentCount}). Consider lazy loading.`
+      });
+    }
+    
+    this.optimizations.push({
+      type: 'javascript-optimization',
+      status: 'completed',
+      totalSize: totalJsSize,
+      componentCount
+    });
+  }
+
+  findFiles(extensions) {
+    const files = [];
+    
+    function traverse(dir) {
+      const items = fs.readdirSync(dir);
+      
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          traverse(fullPath);
+        } else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath);
+        }
+      }
+    }
+    
+    traverse('.');
     return files;
   }
 
-  async optimizeBundle() {
-    this.log('📦 Optimizing bundle...');
-    try {
-      // Analyze bundle size
-      const bundleAnalysis = execSync('npm run build', { 
-        encoding: 'utf8',
-        cwd: this.projectRoot 
-      });
-      
-      this.log('Bundle analysis completed');
-      this.optimizations.push({
-        type: 'bundle_optimization',
-        status: 'completed',
-        details: 'Bundle size analyzed and optimized'
-      });
-    } catch (error) {
-      this.log(`Bundle optimization failed: ${error.message}`, 'error');
-      this.errors.push({ type: 'bundle_optimization', error: error.message });
-    }
-  }
-
-  async optimizeCode() {
-    this.log('🔧 Optimizing code...');
-    try {
-      // Remove unused imports
-      const pagesDir = path.join(this.projectRoot, 'pages');
-      const componentsDir = path.join(this.projectRoot, 'components');
-      
-      this.optimizeDirectory(pagesDir);
-      this.optimizeDirectory(componentsDir);
-      
-      this.optimizations.push({
-        type: 'code_optimization',
-        status: 'completed',
-        details: 'Code optimized for better performance'
-      });
-    } catch (error) {
-      this.log(`Code optimization failed: ${error.message}`, 'error');
-      this.errors.push({ type: 'code_optimization', error: error.message });
-    }
-  }
-
-  optimizeDirectory(dir) {
-    if (!fs.existsSync(dir)) return;
-    
-    const files = fs.readdirSync(dir, { withFileTypes: true });
-    
-    for (const file of files) {
-      const fullPath = path.join(dir, file.name);
-      
-      if (file.isDirectory()) {
-        this.optimizeDirectory(fullPath);
-      } else if (file.name.endsWith('.tsx') || file.name.endsWith('.ts')) {
-        this.optimizeFile(fullPath);
-      }
-    }
-  }
-
-  optimizeFile(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
-      
-      // Remove console.log statements in production
-      if (content.includes('console.log')) {
-        content = content.replace(/console\.log\([^)]*\);?\s*/g, '');
-        modified = true;
-      }
-      
-      // Remove unused imports (basic detection)
-      const lines = content.split('\n');
-      const filteredLines = lines.filter(line => {
-        if (line.trim().startsWith('import ') && line.includes('{')) {
-          // Check if imported items are used
-          const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/);
-          if (importMatch) {
-            const imports = importMatch[1].split(',').map(imp => imp.trim());
-            return imports.some(imp => content.includes(imp));
-          }
-        }
-        return true;
-      });
-      
-      if (filteredLines.length !== lines.length) {
-        content = filteredLines.join('\n');
-        modified = true;
-      }
-      
-      if (modified) {
-        fs.writeFileSync(filePath, content);
-        this.log(`Optimized: ${path.basename(filePath)}`);
-      }
-    } catch (error) {
-      this.log(`Failed to optimize ${filePath}: ${error.message}`, 'error');
-    }
-  }
-
-  async generateReport() {
+  generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
       optimizations: this.optimizations,
-      errors: this.errors,
+      recommendations: this.recommendations,
       summary: {
         totalOptimizations: this.optimizations.length,
-        totalErrors: this.errors.length,
-        successRate: this.optimizations.length / (this.optimizations.length + this.errors.length) * 100
+        highPriorityRecommendations: this.recommendations.filter(r => r.priority === 'high').length,
+        mediumPriorityRecommendations: this.recommendations.filter(r => r.priority === 'medium').length,
+        lowPriorityRecommendations: this.recommendations.filter(r => r.priority === 'low').length
       }
     };
     
-    const reportPath = path.join(this.projectRoot, 'optimization-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    // Ensure reports directory exists
+    const reportsDir = 'automation-reports';
+    if (!fs.existsSync(reportsDir)) {
+      fs.mkdirSync(reportsDir, { recursive: true });
+    }
     
-    this.log(`📊 Report saved to: ${reportPath}`);
-    return report;
-  }
-
-  async start() {
-    this.log('🚀 Advanced App Optimizer starting...');
+    fs.writeFileSync(
+      path.join(reportsDir, 'advanced-app-optimizer-report.json'),
+      JSON.stringify(report, null, 2)
+    );
     
-    await this.optimizeImages();
-    await this.optimizeBundle();
-    await this.optimizeCode();
+    console.log('\n📊 Advanced App Optimizer Report:');
+    console.log(`   Total optimizations: ${report.summary.totalOptimizations}`);
+    console.log(`   High priority recommendations: ${report.summary.highPriorityRecommendations}`);
+    console.log(`   Medium priority recommendations: ${report.summary.mediumPriorityRecommendations}`);
+    console.log(`   Low priority recommendations: ${report.summary.lowPriorityRecommendations}`);
     
-    const report = await this.generateReport();
+    console.log('\n💡 Top Recommendations:');
+    this.recommendations
+      .sort((a, b) => {
+        const priorityOrder = { high: 3, medium: 2, low: 1 };
+        return priorityOrder[b.priority] - priorityOrder[a.priority];
+      })
+      .slice(0, 5)
+      .forEach((rec, index) => {
+        const icon = rec.priority === 'high' ? '🔴' : rec.priority === 'medium' ? '🟡' : '🟢';
+        console.log(`   ${index + 1}. ${icon} ${rec.message}`);
+      });
     
-    this.log('✅ Advanced App Optimizer completed!');
-    this.log(`📈 Optimizations: ${report.summary.totalOptimizations}`);
-    this.log(`❌ Errors: ${report.summary.totalErrors}`);
-    this.log(`📊 Success Rate: ${report.summary.successRate.toFixed(1)}%`);
+    console.log('\n✅ Advanced App Optimizer completed!');
   }
 }
 
 // Run the optimizer
 const optimizer = new AdvancedAppOptimizer();
-optimizer.start().catch(console.error);
+optimizer.optimize().catch(console.error);

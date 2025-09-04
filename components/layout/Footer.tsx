@@ -4,26 +4,27 @@ import Link from 'next/link';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = {
-    services: [
+  const footerLinks = { services: [
       { name: 'AI Services', href: '/ai-services' },
       { name: 'Cloud DevOps', href: '/cloud-devops' },
       { name: 'Cybersecurity', href: '/cybersecurity' },
       { name: 'Quantum Computing', href: '/quantum-computing' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-    ],
-    company: [
+      { name: 'Micro SaaS', href: '/micro-saas' }], company: [
       { name: 'About', href: '/about' },
       { name: 'Contact', href: '/contact' },
       { name: 'Pricing', href: '/pricing' },
-      { name: 'FAQ', href: '/faq' },
-    ],
-    legal: [
+      { name: 'FAQ', href: '/faq' }], legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
+<<<<<<< HEAD
+      { name: 'Documentation', href: '/docs' }],
+  };
+
+=======
       { name: 'Documentation', href: '/docs' },
     ],
   }
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

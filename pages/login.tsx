@@ -4,6 +4,12 @@ import Head from 'next/head';
 import { useState } from 'react';
 
 export default function Login() {
+<<<<<<< HEAD
+  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+  };
+
+  const [formData, setFormData] = useState({ email: '', password: '',
+=======
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -13,6 +19,7 @@ export default function Login() {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
     rememberMe: false
   });
 
@@ -48,8 +55,7 @@ export default function Login() {
             <h1 style={{ 
               fontSize: '2.5rem', 
               fontWeight: 800, 
-              marginBottom: 10,
-              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              marginBottom: 10, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
@@ -61,11 +67,8 @@ export default function Login() {
             </p>
           </div>
 
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.05)',
-            borderRadius: 12,
-            padding: 40,
-            border: '1px solid rgba(255, 255, 255, 0.1)'
+          <div style={{ background: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: 12, padding: 40, border: '1px solid rgba(255, 255, 255, 0.1)'
           }}>
             <form onSubmit={handleSubmit}>
               <div style={{ marginBottom: 20 }}>
@@ -78,13 +81,8 @@ export default function Login() {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  style={{
-                    width: '100%',
-                    padding: '12px',
-                    borderRadius: 8,
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    color: 'white',
+                  style={{ width: '100%', padding: '12px',
+                    borderRadius: 8, border: '1px solid rgba(255, 255, 255, 0.2)', background: 'rgba(255, 255, 255, 0.1)', color: 'white',
                     fontSize: '1rem'
                   }
                   placeholder="Enter your email"
@@ -101,13 +99,8 @@ export default function Login() {
                   value={formData.password}
                   onChange={handleInputChange}
                   required
-                  style={{
-                    width: '100%',
-                    padding: '12px',
-                    borderRadius: 8,
-                    border: '1px solid rgba(255, 255, 255, 0.2)',
-                    background: 'rgba(255, 255, 255, 0.1)',
-                    color: 'white',
+                  style={{ width: '100%', padding: '12px',
+                    borderRadius: 8, border: '1px solid rgba(255, 255, 255, 0.2)', background: 'rgba(255, 255, 255, 0.1)', color: 'white',
                     fontSize: '1rem'
                   }
                   placeholder="Enter your password"
@@ -125,8 +118,7 @@ export default function Login() {
                   />
                   <span style={{ fontSize: '0.9rem' }}>Remember me</span>
                 </label>
-                <Link href="/help" style={{ 
-                  color: '#3b82f6', 
+                <Link href="/help" style={{ color: '#3b82f6', 
                   textDecoration: 'none', 
                   fontSize: '0.9rem' 
                 }}>
@@ -136,17 +128,10 @@ export default function Login() {
 
               <button
                 type="submit"
-                style={{
-                  width: '100%',
-                  background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-                  color: 'white',
-                  padding: '15px',
-                  border: 'none',
+                style={{ width: '100%', background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '15px', border: 'none',
                   borderRadius: 8,
                   fontSize: '1.1rem',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  transition: 'transform 0.3s ease',
+                  fontWeight: 600, cursor: 'pointer', transition: 'transform 0.3s ease',
                   marginBottom: 20
                 }
                 onMouseEnter={(e) => {
@@ -163,8 +148,7 @@ export default function Login() {
             <div style={{ textAlign: 'center', marginTop: 20 }}>
               <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>
                 Don't have an account?{' '}
-                <Link href="/signup" style={{ 
-                  color: '#3b82f6', 
+                <Link href="/signup" style={{ color: '#3b82f6', 
                   textDecoration: 'none', 
                   fontWeight: 600 
                 }}>
@@ -179,15 +163,13 @@ export default function Login() {
               Need help accessing your account?
             </p>
             <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href={`tel:${contact.phone}`} style={{
-                color: '#3b82f6',
+              <a href={`tel:${contact.phone}`} style={{ color: '#3b82f6',
                 textDecoration: 'none',
                 fontSize: '0.9rem'
               }}>
                 📞 {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} style={{
-                color: '#3b82f6',
+              <a href={`mailto:${contact.email}`} style={{ color: '#3b82f6',
                 textDecoration: 'none',
                 fontSize: '0.9rem'
               }}>

@@ -15,9 +15,7 @@ export default function RequestQuote() {
           Get a personalized quote for our services and solutions. Our team will work with you to find the perfect solution for your needs.
         </p>
         <div style={{ marginTop: '40px', textAlign: 'center' }}>
-          <Link href="/contact" style={{
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-            color: 'white', padding: '12px 24px', textDecoration: 'none', borderRadius: 8, fontSize: '1rem', fontWeight: 600
+          <Link href="/contact" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '12px 24px', textDecoration: 'none', borderRadius: 8, fontSize: '1rem', fontWeight: 600
           }}>
             Contact Us
           </Link>

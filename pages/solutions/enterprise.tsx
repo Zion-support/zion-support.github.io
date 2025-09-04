@@ -9,43 +9,21 @@ export default function EnterpriseSolutions() {
     setIsLoaded(true);
   }, []);
 
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   }
 
   const enterpriseServices = [
-    {
-      title: "Enterprise Architecture",
-      description: "Design and implement scalable enterprise architectures",
-      features: ["Microservices Architecture", "API Gateway Design", "Service Mesh", "Event-Driven Architecture"]
+    { title: "Enterprise Architecture", description: "Design and implement scalable enterprise architectures", features: ["Microservices Architecture", "API Gateway Design", "Service Mesh", "Event-Driven Architecture"]
     },
-    {
-      title: "Digital Transformation",
-      description: "Transform your business with modern digital solutions",
-      features: ["Process Automation", "Legacy System Modernization", "Cloud Migration", "Data Analytics"]
+    { title: "Digital Transformation", description: "Transform your business with modern digital solutions", features: ["Process Automation", "Legacy System Modernization", "Cloud Migration", "Data Analytics"]
     },
-    {
-      title: "Enterprise Security",
-      description: "Comprehensive security solutions for large organizations",
-      features: ["Identity & Access Management", "Zero Trust Architecture", "Security Monitoring", "Compliance"]
+    { title: "Enterprise Security", description: "Comprehensive security solutions for large organizations", features: ["Identity & Access Management", "Zero Trust Architecture", "Security Monitoring", "Compliance"]
     },
-    {
-      title: "Enterprise Integration",
-      description: "Seamless integration of enterprise systems and applications",
-      features: ["API Management", "ESB Solutions", "Data Integration", "Workflow Automation"]
+    { title: "Enterprise Integration", description: "Seamless integration of enterprise systems and applications", features: ["API Management", "ESB Solutions", "Data Integration", "Workflow Automation"]
     },
-    {
-      title: "Enterprise Analytics",
-      description: "Advanced analytics and business intelligence solutions",
-      features: ["Big Data Analytics", "Real-time Dashboards", "Predictive Analytics", "Machine Learning"]
+    { title: "Enterprise Analytics", description: "Advanced analytics and business intelligence solutions", features: ["Big Data Analytics", "Real-time Dashboards", "Predictive Analytics", "Machine Learning"]
     },
-    {
-      title: "Enterprise Support",
-      description: "24/7 enterprise-grade support and maintenance",
-      features: ["Dedicated Support Team", "SLA Management", "Proactive Monitoring", "Incident Response"]
+    { title: "Enterprise Support", description: "24/7 enterprise-grade support and maintenance", features: ["Dedicated Support Team", "SLA Management", "Proactive Monitoring", "Incident Response"]
     }
   ];
 

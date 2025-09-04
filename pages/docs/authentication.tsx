@@ -4,12 +4,18 @@ import Link from 'next/link';
 import { ArrowLeft, Key, Shield, Lock } from 'lucide-react';
 
 export default function Authentication() {
+<<<<<<< HEAD
+  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+  };
+
+=======
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   }
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   return (
     <>
       <Head>
@@ -86,8 +92,7 @@ export default function Authentication() {
 
               <div className="bg-gray-900 rounded-lg p-4 mb-6">
                 <pre className="text-green-400 text-sm overflow-x-auto">
-{`// Authorization URL
-https://auth.ziontechgroup.com/oauth/authorize?
+{`// Authorization URL https://auth.ziontechgroup.com/oauth/authorize?
   client_id=YOUR_CLIENT_ID&
   redirect_uri=YOUR_REDIRECT_URI&
   response_type=code&

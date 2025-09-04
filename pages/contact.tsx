@@ -3,12 +3,8 @@ import Link from 'next/link';
 import ContactForm from '../components/ContactForm';
 import type { JSX } from 'react';
 
-export default function Contact(): JSX.Element {
-  const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
+export default function Contact() {
+  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
   }
   return (
     <>
@@ -140,7 +136,7 @@ export default function Contact(): JSX.Element {
                 Send Us a Message
               </h2>
               <p className="text-lg text-slate-300">
-                Fill out the form below and we&apos;ll get back to you within 24 hours
+                Fill out the form below and we'll get back to you within 24 hours
               </p>
             </div>
             <ContactForm />
@@ -154,7 +150,11 @@ export default function Contact(): JSX.Element {
               Ready to Get Started?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
+<<<<<<< HEAD
+              Choose your preferred way to contact us and let's discuss how we can help 
+=======
               Choose your preferred way to contact us and let&aposs discuss how we can help 
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
               transform your business with cutting-edge technology solutions.
             </p>
             

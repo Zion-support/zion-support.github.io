@@ -1,7 +1,10 @@
+<<<<<<< HEAD
+import React, {  Component, ErrorInfo, ReactNode  } from "react";
+=======
 import React, { Component, ReactNode } from 'react';
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
 
-interface Props {
-  children: ReactNode;
+interface Props { children: ReactNode;
   fallback?: ReactNode;
 }
 
@@ -22,7 +25,7 @@ class ErrorBoundary extends Component<Props, State> {
   public componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     // Error logged to console in development
   }
-
+  
   public render() {
     if (this.state.hasError) {
       if (this.props.fallback) {

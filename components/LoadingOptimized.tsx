@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useState, useEffect  } from "react";
 
-interface LoadingOptimizedProps {
-  children: React.ReactNode;
+interface LoadingOptimizedProps { children: React.ReactNode;
   fallback?: React.ReactNode;
   delay?: number}
 

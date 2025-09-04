@@ -1,0 +1,29 @@
+{
+  "startTime": "2025-09-03T23:36:20.767Z",
+  "checks": [
+    {
+      "file": "package.json",
+      "lastModified": "2025-09-03T21:53:14.167Z",
+      "size": 17309,
+      "status": "monitored"
+    },
+    {
+      "file": "next.config.js",
+      "lastModified": "2025-09-03T22:46:51.694Z",
+      "size": 1300,
+      "status": "monitored"
+    },
+    {
+      "file": "tsconfig.json",
+      "lastModified": "2025-09-03T21:53:14.087Z",
+      "size": 1176,
+      "status": "monitored"
+    },
+    {
+      "directory": ".next",
+      "lastModified": "2025-09-03T23:35:51.111Z",
+      "size": 4096,
+      "status": "monitored"
+    }
+  ]
+}

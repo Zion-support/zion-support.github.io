@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React, {  useState, useRef, useEffect, useCallback, useMemo  } from "react";
+import Link from 'next/link';
+
+interface SearchResult { title: string; description: string; url: string; type: 'service' | 'page' | 'category';
+=======
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
@@ -6,6 +12,7 @@ interface SearchResult {
   description: string;
   url: string;
   category: string;
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
 }
 
 const searchData: SearchResult[] = [
@@ -70,6 +77,26 @@ export default function SearchBar() {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
 
+<<<<<<< HEAD
+  // Memoized search data - in a real app, this would come from an API
+  const searchData: SearchResult[] = useMemo(() => [
+    { title: 'Micro SaaS Products', description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more', url: '/micro-saas', type: 'category'
+    },
+    { title: 'AI Services', description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more', url: '/ai-services', type: 'category'
+    },
+    { title: 'IT Services', description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more', url: '/it-services', type: 'category'
+    },
+    { title: 'Cloud Cost Guard', description: 'FinOps Assistant for anomaly detection and cost optimization', url: '/services', type: 'service'
+    },
+    { title: 'Contact Us', description: 'Get in touch with our experts for consultation and quotes', url: '/contact', type: 'page'
+    },
+    { title: 'Pricing', description: 'View our transparent pricing for all services', url: '/pricing', type: 'page'
+    }
+  ], []);
+
+  const handleSearch = useCallback(async (searchQuery: string) => {
+    if (!searchQuery.trim()) {
+=======
   useEffect(() => {
     if (query.length > 2) {
       const filtered = searchData.filter(item =>
@@ -80,6 +107,7 @@ export default function SearchBar() {
       setResults(filtered);
       setIsOpen(true);
     } else {
+>>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
       setResults([]);
       setIsOpen(false);
     }
@@ -101,8 +129,6 @@ export default function SearchBar() {
       setIsOpen(false);
       inputRef.current?.blur();
     }
-  };
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
