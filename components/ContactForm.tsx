@@ -17,7 +17,7 @@ const ContactForm: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -74,7 +74,7 @@ const ContactForm: React.FC = () => {
         company: '',
         phone: '',
         service: '',
-        message: ''
+        message: '',
       });
     } catch (error) {
       setSubmitStatus('error');
@@ -85,7 +85,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md: grid-cols-2 gap-6">,
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
             Full Name *
@@ -121,7 +121,7 @@ const ContactForm: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md: grid-cols-2 gap-6">,
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-slate-300 mb-2">
             Company

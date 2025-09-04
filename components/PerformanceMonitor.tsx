@@ -1,18 +1,19 @@
+import React from 'react';
 import { useEffect } from 'react';
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = () => {,
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Send performance data to analytics in production
-      const sendToAnalytics = (metric: string, value: number) => {
+      const sendToAnalytics = (metric: string, value: number) => {,
         if (process.env.NODE_ENV === 'production') {
           // Send to Google Analytics or other analytics service
           if (typeof gtag !== 'undefined') {
             gtag('event', 'web_vitals', {
               metric_name: metric,
               metric_value: Math.round(value),
-              metric_rating: value < 2.5 ? 'good' : value < 4 ? 'needs-improvement' : 'poor'
+              metric_rating: value < 2.5 ? 'good' : value < 4 ? 'needs-improvement' : 'poor',;
             });
           }
         }
@@ -22,7 +23,7 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             // Log LCP in development only
-            if (process.env.NODE_ENV === 'development') {
+            if (process.env.NODE_ENV === 'development') {;
               console.log('LCP:', entry.startTime);
             }
             sendToAnalytics('LCP', entry.startTime);
@@ -41,7 +42,7 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
             // Log FID in development only
-            if (process.env.NODE_ENV === 'development') {
+            if (process.env.NODE_ENV === 'development') {;
               console.log('FID:', entry.processingStart - entry.startTime);
             }
             sendToAnalytics('FID', entry.processingStart - entry.startTime);
@@ -59,7 +60,7 @@ const PerformanceMonitor: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
+          if (!(entry as any).hadRecentInput) {;
             clsValue += (entry as any).value;
           }
         }
