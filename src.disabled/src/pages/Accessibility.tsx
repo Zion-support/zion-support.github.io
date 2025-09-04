@@ -63,7 +63,7 @@ export default function Accessibility() {return (";
         </p>;
       </div>;
   )};framer - motion",lucide-react";&apos;&apos;";
-"";
+""
 const Accessibility: React.FC = () => {}
 
   const;const;const features = []} { title: "Motor Accessibility",";

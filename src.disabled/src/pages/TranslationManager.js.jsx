@@ -48,7 +48,7 @@ export default function TranslationManager() {}
 ``;
               acc[`${pre}${key}`] = obj[key];';,
 } else if (typeof obj[key] === 'object' && Object.keys(obj[key]).length === 0){ // Handle empty objects specifically if needed`;
-               acc[`${pre}${key}`] = {}; // Or some placeholder like "";,
+               acc[`${pre}${key}`] = {}; // Or some placeholder like "",
 }
             return acc;,
 }, {});,
@@ -218,60 +218,60 @@ export default function TranslationManager() {}
               {t('translation.manager_title')}
             </CardTitle>;
           </CardHeader>";
-          <CardContent>"";
+          <CardContent>""
             <div className="space-y-6">";
-              {/* Search and filter */}"";
-              <div className="flex flex-col sm:flex-row gap-4">"";
-                <div className="relative flex-1">"";
+              {/* Search and filter */}""
+              <div className="flex flex-col sm:flex-row gap-4">""
+                <div className="relative flex-1">""
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />";
                   <Input"'";
                     type="search"''";
-                    placeholder={t('translation.search_placeholder')}"";
+                    placeholder={t('translation.search_placeholder')}""
                     className="pl-8";
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
                   />;
                 </div>";
-                <Tabs"";
+                <Tabs""
                   defaultValue="translation";
                   value={selectedNamespace}";
-                  onValueChange={value => setSelectedNamespace(value)}"";
+                  onValueChange={value => setSelectedNamespace(value)}""
                   className="w-full sm:w-auto">";
-                  <TabsList>"";
-                    <TabsTrigger value="translation">General</TabsTrigger>"";
+                  <TabsList>""
+                    <TabsTrigger value="translation">General</TabsTrigger>""
                     <TabsTrigger value="admin">Admin</TabsTrigger>;
                   </TabsList>;
                 </Tabs>;
               </div>;
 ";
-              {/* Translations table */}"";
+              {/* Translations table */}""
               <div className="border rounded-md">"'";
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">'"'";
-                  <div className="p-3 font-medium">{t('translation.key')}</div>"";
+                  <div className="p-3 font-medium">{t('translation.key')}</div>""
                   <div className="p-3 font-medium">';
                     {t('translation.translations')}";
-                  </div>"";
+                  </div>""
                   <div className="hidden sm:block p-3 font-medium">';
                     {t('translation.actions')}
                   </div>;
                 </div>;
 ";
-                {filteredKeys.length === 0 ? ("";
+                {filteredKeys.length === 0 ? (""
                   <div className="p-6 text-center text-muted-foreground">';
                     {t('translation.no_results')}
                   </div>";
-                ) : ("";
+                ) : (""
                   <div className="divide-y">;
                     {filteredKeys.map(key => (;
                       <div";
-                        key={key}"";
-                        className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]"">"";
+                        key={key}""
+                        className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]"">""
                         <div className="p-3 break-words">{key}</div>";
-                        {editingKey === key ? ("";
-                          <div className="p-3">"";
+                        {editingKey === key ? (""
+                          <div className="p-3">""
                             <div className="space-y-4">;
                               {supportedLanguages.map(lang => (";
-                                <div key={lang.code}>"";
+                                <div key={lang.code}>""
                                   <div className="flex items-center gap-2 mb-1">;
                                     <span>{lang.flag}</span>';
                                     <span>{lang.name}</span>'';
@@ -295,7 +295,7 @@ export default function TranslationManager() {}
                                           e.target.value;
                                         );,
 }'";
-                                      dir={lang.code === 'ar' ? 'rtl' : 'ltr'}"";
+                                      dir={lang.code === 'ar' ? 'rtl' : 'ltr'}""
                                       className="min-h-20";
                                     />;
                                   ) : (;
@@ -318,54 +318,54 @@ export default function TranslationManager() {}
                                   )}
                                 </div>;
                               ))}";
-                            </div>"";
+                            </div>""
                             <div className="flex gap-2 mt-4">";
-                              <Button"";
+                              <Button""
                                 size="sm";
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
                                 {isSaving ? (";
-                                  <>"";
+                                  <>""
                                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />';
                                     {t('general.saving')}
                                   </>;
                                 ) : (";
-                                  <>"";
+                                  <>""
                                     <Check className="mr-2 h-4 w-4" />';
                                     {t('general.save')}
                                   </>;
                                 )}
                               </Button>";
-                              <Button"";
-                                size="sm"";
+                              <Button""
+                                size="sm""
                                 variant="outline";
                                 onClick={handleCancel}
                               >';
                                 {t('general.cancel')}
                               </Button>";
-                              <Button"";
-                                size="sm"";
+                              <Button""
+                                size="sm""
                                 variant="secondary";
                                 onClick={() => handleTranslateKey(key)}
                                 disabled={isTranslating}
                               >";
-                                {isTranslating ? ("";
+                                {isTranslating ? (""
                                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />";
-                                ) : ("";
+                                ) : (""
                                   <Globe className="mr-2 h-4 w-4" />;
                                 )}';
                                 {t('translation.auto_translate')}
                               </Button>;
                             </div>;
                           </div>";
-                        ) : ("";
-                          <div className="p-3">"";
+                        ) : (""
+                          <div className="p-3">""
                             <div className="space-y-2">;
                               {supportedLanguages.slice(0, 2).map(lang => (;
                                 <div";
-                                  key={lang.code}"";
-                                  className="flex items-start gap-2"">"";
+                                  key={lang.code}""
+                                  className="flex items-start gap-2"">""
                                   <span className="mt-0.5 flex-shrink-0">;
                                     {lang.flag}
                                   </span>'`;
@@ -378,8 +378,8 @@ export default function TranslationManager() {}
                                   </span>;
                                 </div>;
                               ))}";
-                              {getMissingLanguages(key).length > 0 && ("";
-                                <div className="flex items-center gap-2 text-sm text-zion-purple">"";
+                              {getMissingLanguages(key).length > 0 && (""
+                                <div className="flex items-center gap-2 text-sm text-zion-purple">""
                                   <AlertTriangle className="h-4 w-4" />';
                                   {t('translation.missing_languages', {}
                                     count: getMissingLanguages(key).length})}
@@ -387,11 +387,11 @@ export default function TranslationManager() {}
                               )}
                             </div>;
                           </div>";
-                        )}"";
+                        )}""
                         <div className="p-3 flex items-center justify-end">;
                           {editingKey === key ? null : (";
-                            <Button"";
-                              size="sm"";
+                            <Button""
+                              size="sm""
                               variant="outline";
                               onClick={() => handleEdit(key)}
                             >';

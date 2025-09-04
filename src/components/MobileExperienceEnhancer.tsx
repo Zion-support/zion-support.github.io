@@ -550,8 +550,8 @@ initial = "{{" y: -100 }}"
                 aria-label="Close: menu"",",",",;
                 <X: className="w-5 h-5" />",",",;
       )} {/*   */}";
-        {showMobileMenu && isMobile && ("";
-          <motion .div""";
+        {showMobileMenu && isMobile && (""
+          <motion .div"""
             initial = "{{" opacity: 0, x: "100%" }}";
             animate="{{" opacity: 1, x: 0 }}""";
             exit="{{" opacity: 0, x: "100%" }}""";
@@ -574,7 +574,7 @@ initial = "{{" y: -100 }}"
             animate="{{" opacity: 1, x: 0 }}";
             exit="{{" opacity: 0, x: &apos,100%&apos}}";
             className="&quot;fixed" top-0 right-0 bottom-0 w-80 bg-white dark: bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-xl z-50&quot,",;
-            <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 dark: border-slate-700&quot,>&quot,"";
+            <div className="&quot;flex" items-center justify-between p-4 border-b border-slate-200 dark: border-slate-700&quot,>&quot,""
               <h3 className = "&quot,text-lg" font-semibold text-slate-900 dar,k: text-white&quot,>Menu&quot,</h3>";
                 onClick="{()" => setShowMobileMenu(false)}";
                 className="&quot;p-2" rounded-lg bg-slate-100 dark: bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors&quot;";
@@ -597,20 +597,20 @@ initial = "{{" y: -100 }}"
               ";
               <a: href="/contact" className="block p-3 rounded-lg bg-slate-50 dark: bg-slate-700: hover:bg-slate-100: dark:hover:bg-slate-600: transition-colors">",";";";
                   <span: className="text-slate-900 dark: text-white">Contact</span>",";";";
-            <div className="&quot;p-4" space-y-4&quot;>&quot;"";
-              <a href="&quot;/&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;"";
+            <div className="&quot;p-4" space-y-4&quot;>&quot;""
+              <a href="&quot;/&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;""
                   <Home className="&quot;w-5" h-5 text-slate-600 dark:text-slate-400&quot; />&quot;";
                   <span className="&quot;text-slate-900" dark:text-white&quot;>Home&quot;</span>;
               ";
-              <a href="&quot;/services&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;"";
+              <a href="&quot;/services&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;""
                   <Settings className="&quot;w-5" h-5 text-slate-600 dark:text-slate-400&quot; />&quot;";
                   <span className="&quot;text-slate-900" dark:text-white&quot;>Services&quot;</span>;
               ";
-              <a href="&quot;/about&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;"";
+              <a href="&quot;/about&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot;>&quot;""
                   <User className="&quot;w-5" h-5 text-slate-600 dark:text-slate-400&quot; />&quot;";
                   <span className="&quot,text-slate-900" dark:text-white&quot,>About&quot,</span>;
               ",;
-              <a href="&quot;/contact&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot,>&quot,"";
+              <a href="&quot;/contact&quot;" className="&quot;block" p-3 rounded-lg bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors&quot,>&quot,""
                   <span className = "&quot,text-slate-900" dar,k: text-white&quot,>Contact&quot,</span>";
         {showMobileMenu && isMobile && (""";
             initial="{{" opacity: 0, x: "100%" }}""";

@@ -108,7 +108,7 @@ export default function TenantOnboarding() {}
         is_co_branded: true});,
 } catch (error) {}
 ";
-"";
+""
       // console.error("Error creating tenant:", error);';
       toast.error('Failed to create tenant', {}
         description: error.message});,
@@ -118,17 +118,17 @@ export default function TenantOnboarding() {}
   };
   return();
     <>";
-      <SEO"";
-        title="Tenant Onboarding - Zion AI Marketplace"";
+      <SEO""
+        title="Tenant Onboarding - Zion AI Marketplace""
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform.";
       />";
-"";
-      <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">"";
+""
+      <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">""
         <div className="flex flex-col space-y-6">";
-          <div>"";
+          <div>""
             <h1 className="text-3xl font-bold tracking-tight">;
               Tenant Onboarding";
-            </h1>"";
+            </h1>""
             <p className="text-muted-foreground mt-2">;
               Create a new white-label instance of Zion Hire AI for a company.;
             </p>;
@@ -142,156 +142,156 @@ export default function TenantOnboarding() {}
                 tenant.;
               </CardDescription>;
             </CardHeader>";
-            <CardContent>"";
+            <CardContent>""
               <form onSubmit={handleSubmit} className="space-y-6">;
                 <Tabs;
                   value={activeTab}";
-                  onValueChange={setActiveTab}"";
-                  className="w-full"">"";
-                  <TabsList className="mb-4 grid grid-cols-3 w-full">"";
-                    <TabsTrigger value="comp">Comp Info</TabsTrigger>"";
-                    <TabsTrigger value="branding">Branding</TabsTrigger>"";
+                  onValueChange={setActiveTab}""
+                  className="w-full"">""
+                  <TabsList className="mb-4 grid grid-cols-3 w-full">""
+                    <TabsTrigger value="comp">Comp Info</TabsTrigger>""
+                    <TabsTrigger value="branding">Branding</TabsTrigger>""
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>;
                   </TabsList>";
-"";
-                  <TabsContent value="comp" className="space-y-4">"";
-                    <div className="space-y-2">"";
+""
+                  <TabsContent value="comp" className="space-y-4">""
+                    <div className="space-y-2">""
                       <Label htmlFor="brand_name">Comp Name</Label>";
-                      <Input"";
-                        id="brand_name"";
+                      <Input""
+                        id="brand_name""
                         name="brand_name";
                         value={formData.brand_name}";
-                        onChange={handleInputChange}"";
+                        onChange={handleInputChange}""
                         placeholder="Acme Corporation";
                         required;
                       />;
                     </div>";
-"";
-                    <div className="space-y-2">"";
+""
+                    <div className="space-y-2">""
                       <Label htmlFor="industry">Industry</Label>";
-                      <Select"";
+                      <Select""
                         name="industry";
                         value={formData.industry}
                         onValueChange={value =>';
                           handleSelectChange('industry', value);,
 }
                       >";
-                        <SelectTrigger>"";
+                        <SelectTrigger>""
                           <SelectValue placeholder="Select industry" />;
                         </SelectTrigger>";
-                        <SelectContent>"";
-                          <SelectItem value="technology">Technology</SelectItem>"";
-                          <SelectItem value="healthcare">Healthcare</SelectItem>"";
-                          <SelectItem value="finance">Finance</SelectItem>"";
-                          <SelectItem value="education">Education</SelectItem>"";
-                          <SelectItem value="retail">Retail</SelectItem>"";
+                        <SelectContent>""
+                          <SelectItem value="technology">Technology</SelectItem>""
+                          <SelectItem value="healthcare">Healthcare</SelectItem>""
+                          <SelectItem value="finance">Finance</SelectItem>""
+                          <SelectItem value="education">Education</SelectItem>""
+                          <SelectItem value="retail">Retail</SelectItem>""
                           <SelectItem value="manufacturing">;
                             Manufacturing";
-                          </SelectItem>"";
+                          </SelectItem>""
                           <SelectItem value="services">;
                             Professional Services";
-                          </SelectItem>"";
+                          </SelectItem>""
                           <SelectItem value="other">Other</SelectItem>;
                         </SelectContent>;
                       </Select>;
                     </div>";
-"";
-                    <div className="space-y-2">"";
+""
+                    <div className="space-y-2">""
                       <Label htmlFor="comp_size">Comp Size</Label>";
-                      <Select"";
+                      <Select""
                         name="comp_size";
                         value={formData.comp_size}
                         onValueChange={value =>';
                           handleSelectChange('comp_size', value);,
 }
                       >";
-                        <SelectTrigger>"";
+                        <SelectTrigger>""
                           <SelectValue placeholder="Select comp size" />;
                         </SelectTrigger>";
-                        <SelectContent>"";
-                          <SelectItem value="1-10">1-10 employees</SelectItem>"";
-                          <SelectItem value="11-50">11-50 employees</SelectItem>"";
+                        <SelectContent>""
+                          <SelectItem value="1-10">1-10 employees</SelectItem>""
+                          <SelectItem value="11-50">11-50 employees</SelectItem>""
                           <SelectItem value="51-200">;
                             51-200 employees";
-                          </SelectItem>"";
+                          </SelectItem>""
                           <SelectItem value="201-500">;
                             201-500 employees";
-                          </SelectItem>"";
+                          </SelectItem>""
                           <SelectItem value="501-1000">;
                             501-1000 employees";
-                          </SelectItem>"";
+                          </SelectItem>""
                           <SelectItem value="1000+">1000+ employees</SelectItem>;
                         </SelectContent>;
                       </Select>;
                     </div>;
                   </TabsContent>";
-"";
-                  <TabsContent value="branding" className="space-y-4">"";
-                    <div className="space-y-2">"";
+""
+                  <TabsContent value="branding" className="space-y-4">""
+                    <div className="space-y-2">""
                       <Label htmlFor="logo_url">Logo URL</Label>";
-                      <Input"";
-                        id="logo_url"";
+                      <Input""
+                        id="logo_url""
                         name="logo_url";
                         value={formData.logo_url}";
-                        onChange={handleInputChange}"";
-                        placeholder="https://example.com/logo.png"";
-                      />"";
+                        onChange={handleInputChange}""
+                        placeholder="https://example.com/logo.png""
+                      />""
                       <p className="text-xs text-muted-foreground">;
                         Enter a direct URL to your logo image (SVG or PNG with;
                         transparent background recommended);
                       </p>;
                     </div>";
-"";
-                    <div className="space-y-2">"";
-                      <Label htmlFor="primary_color">Primary Brand Color</Label>"";
+""
+                    <div className="space-y-2">""
+                      <Label htmlFor="primary_color">Primary Brand Color</Label>""
                       <div className="flex items-center gap-2">";
-                        <Input"";
-                          id="primary_color"";
-                          name="primary_color"";
+                        <Input""
+                          id="primary_color""
+                          name="primary_color""
                           type="color";
                           value={formData.primary_color}";
-                          onChange={handleInputChange}"";
+                          onChange={handleInputChange}""
                           className="w-12 p-1 h-10";
                         />";
-                        <Input"";
+                        <Input""
                           name="primary_color";
                           value={formData.primary_color}";
-                          onChange={handleInputChange}"";
+                          onChange={handleInputChange}""
                           placeholder="#9b87f5";
                         />;
                       </div>;
                     </div>";
-"";
-                    <div className="space-y-2">"";
+""
+                    <div className="space-y-2">""
                       <Label htmlFor="theme_preset">Theme Preset</Label>";
-                      <Select"";
+                      <Select""
                         name="theme_preset";
                         value={formData.theme_preset}
                         onValueChange={value =>';
                           handleSelectChange('theme_preset', value);,
 }
                       >";
-                        <SelectTrigger>"";
+                        <SelectTrigger>""
                           <SelectValue placeholder="Select theme" />;
                         </SelectTrigger>";
-                        <SelectContent>"";
-                          <SelectItem value="light">Light</SelectItem>"";
-                          <SelectItem value="dark">Dark</SelectItem>"";
-                          <SelectItem value="corporate">Corporate</SelectItem>"";
-                          <SelectItem value="startup">Startup</SelectItem>"";
+                        <SelectContent>""
+                          <SelectItem value="light">Light</SelectItem>""
+                          <SelectItem value="dark">Dark</SelectItem>""
+                          <SelectItem value="corporate">Corporate</SelectItem>""
+                          <SelectItem value="startup">Startup</SelectItem>""
                           <SelectItem value="neon">Neon</SelectItem>;
                         </SelectContent>;
                       </Select>;
                     </div>";
-"";
-                    <div className="flex items-center justify-between">"";
-                      <div className="space-y-0.5">"";
-                        <Label htmlFor="is_co_branded">Co-branding</Label>"";
-                        <p className="text-xs text-muted-foreground">"";
+""
+                    <div className="flex items-center justify-between">""
+                      <div className="space-y-0.5">""
+                        <Label htmlFor="is_co_branded">Co-branding</Label>""
+                        <p className="text-xs text-muted-foreground">""
                           Show "Powered by Zion AI" in the footer and elsewhere;
                         </p>;
                       </div>";
-                      <Switch"";
+                      <Switch""
                         id="is_co_branded";
                         checked={formData.is_co_branded}
                         onCheckedChange={checked =>';
@@ -300,13 +300,13 @@ export default function TenantOnboarding() {}
                       />;
                     </div>;
                   </TabsContent>";
-"";
-                  <TabsContent value="domain" className="space-y-4">"";
-                    <div className="space-y-2">"";
-                      <Label htmlFor="subdomain">Subdomain</Label>"";
+""
+                  <TabsContent value="domain" className="space-y-4">""
+                    <div className="space-y-2">""
+                      <Label htmlFor="subdomain">Subdomain</Label>""
                       <div className="flex items-center">";
-                        <Input"";
-                          id="subdomain"";
+                        <Input""
+                          id="subdomain""
                           name="subdomain";
                           value={formData.subdomain}
                           onChange={handleInputChange}
@@ -316,29 +316,29 @@ export default function TenantOnboarding() {}
                                   .toLowerCase();
                                   .replace(/[^a-z0-9]/g,)';
                               : 'comp'";,
-}"";
-                          className="rounded-r-none"";
-                        />"";
+}""
+                          className="rounded-r-none""
+                        />""
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">;
                           .ziontechmarketplace.com;
                         </div>";
-                      </div>"";
+                      </div>""
                       <p className="text-xs text-muted-foreground">;
                         Leave blank to auto-generate from comp name;
                       </p>;
                     </div>";
-"";
-                    <div className="space-y-2">"";
+""
+                    <div className="space-y-2">""
                       <Label htmlFor="custom_domain">;
                         Custom Domain (Optional);
                       </Label>";
-                      <Input"";
-                        id="custom_domain"";
+                      <Input""
+                        id="custom_domain""
                         name="custom_domain";
                         value={formData.custom_domain}";
-                        onChange={handleInputChange}"";
-                        placeholder="hire.yourcompany.com"";
-                      />"";
+                        onChange={handleInputChange}""
+                        placeholder="hire.yourcompany.com""
+                      />""
                       <p className="text-xs text-muted-foreground">';
                         If you want to use your own domain, enter it here.'';
                         You'll need to configure DNS records.;
@@ -346,15 +346,15 @@ export default function TenantOnboarding() {}
                     </div>;
                   </TabsContent>;
                 </Tabs>";
-"";
+""
                 <div className="flex justify-end space-x-2">";
-                  <Button"";
-                    type="button"";
+                  <Button""
+                    type="button""
                     variant="outline";
                     onClick={() => window.history.back()}
                   >;
                     Cancel";
-                  </Button>"";
+                  </Button>""
                   <Button type="submit" disabled={isSubmitting}>';
                     {isSubmitting ? 'Creating...' : 'Create Tenant'}
                   </Button>;

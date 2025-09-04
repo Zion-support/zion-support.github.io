@@ -478,7 +478,7 @@ export function HomePage() {const features = [];
       </section>;
     </div>",;
   )}
-  )}""";";,
+  )}"""";,
 }"`";
 ";
 

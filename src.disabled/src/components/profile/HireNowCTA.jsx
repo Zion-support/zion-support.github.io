@@ -38,8 +38,8 @@ export {};
 };
   return();
     <Card className="bg-zion-blue-light border-zion-blue-lighter">";
-      <CardHeader>"";
-        <CardTitle className="text-white flex items-center gap-2">"";
+      <CardHeader>""
+        <CardTitle className="text-white flex items-center gap-2">""
           <MessageSquare className="h-5 w-5 text-zion-cyan" />;
           Hire {talentName}
         </CardTitle>;
@@ -48,7 +48,7 @@ export {};
         {};
                 <span>Starting at ${hourlyRate}/hour</span>;
               </div>";
-            )}"";
+            )}""
             <p className="text-zion-slate-light text-sm">;
               Ready to start your project? Send a message to discuss details and;
               get started.;
@@ -59,7 +59,7 @@ export {};
               Start Project Discussion;
             </Button>;
           </div>";
-        ) : ("";
+        ) : (""
           <form onSubmit={handleSubmit} className="space-y-4">;
             <div>";
               <div>Broken JSX</div>
@@ -69,7 +69,7 @@ export {};
               <div>Broken JSX</div>
               />;
             </div>";
-"";
+""
             <div className="grid grid-cols-2 gap-4">;
               <div>";
                 <div>Broken JSX</div>
@@ -96,7 +96,7 @@ export {};
               <div>Broken JSX</div>
               />;
             </div>";
-"";
+""
             <div className="flex gap-3">";
               <div>Broken JSX</div>
                 className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;

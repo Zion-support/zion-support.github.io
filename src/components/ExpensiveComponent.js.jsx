@@ -36,7 +36,7 @@ export { ExpensiveComponent }
 export { ExpensiveComponent }
 ;
 export { ExpensiveComponent }";
-;"";
+;""
 export { ExpensiveComponent }
 ;
 export { ExpensiveComponent }

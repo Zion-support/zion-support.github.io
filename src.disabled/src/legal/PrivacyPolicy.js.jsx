@@ -17,9 +17,9 @@ export {};
     <>;
       <div>Broken JSX</div>
       />";
-      <Header />"";
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">"";
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">"";
+      <Header />""
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">""
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">""
           <ReactMarkdown className="prose dark:prose-invert max-w-none">;
             {markdown}
           </ReactMarkdown>;
