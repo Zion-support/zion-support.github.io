@@ -1,8 +1,31 @@
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react';
+=======
+import {
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,
+  Instagram,
+  ArrowRight,
+  Heart,
+  Cloud,
+  Database,
+  Network,
+  Target,
+  CheckCircle,
+  ExternalLink
+} from 'lucide-react';
+import { Button } from '../ui/Button';
+>>>>>>> origin/merge-pr-11190
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

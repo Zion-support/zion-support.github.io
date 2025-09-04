@@ -373,6 +373,130 @@ export default function ITServices() {
       delivery: '6-14 weeks',
       category: 'Sustainability Services'
     },
+<<<<<<< HEAD
+=======
+    {
+      title: 'AI-Powered IT Operations',
+      description: 'Intelligent IT operations with AI-driven automation and optimization',
+      icon: Brain,
+      features: [
+        'AI-powered incident detection and resolution,Predictive maintenance and capacity planning,Automated root cause analysis,Intelligent ticket routing and prioritization,Performance optimization recommendations,Self-healing infrastructure capabilities'
+      ],
+      pricing: '$6,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'AI Operations'
+    },
+    {
+      title: 'Zero-Trust Security Architecture',
+      description: 'Comprehensive zero-trust security implementation and management',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM) implementation,Micro-segmentation and network isolation,Continuous security monitoring and validation,Privileged access management (PAM),Security policy automation,Threat detection and response'
+      ],
+      pricing: '$8,000 - $45,000/month',
+      delivery: '10-20 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing solutions for low-latency applications',
+      icon: Cpu,
+      features: [
+        'Edge data center design and deployment,Edge AI and machine learning integration,Content delivery network optimization,Real-time data processing at the edge,Edge security and device management,Hybrid cloud-edge architecture'
+      ],
+      pricing: '$7,000 - $40,000/month',
+      delivery: '8-18 weeks',
+      category: 'Edge Services'
+    },
+    {
+      title: 'Hyperautomation Platform',
+      description: 'End-to-end business process automation with AI and RPA',
+      icon: Settings,
+      features: [
+        'Robotic Process Automation (RPA) implementation,Intelligent document processing,Workflow automation and orchestration,AI-powered decision making,Process mining and optimization,Integration with enterprise systems'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-14 weeks',
+      category: 'Automation Services'
+    },
+    {
+      title: 'Multi-Cloud Management Platform',
+      description: 'Unified management and optimization across multiple cloud providers',
+      icon: Cloud,
+      features: [
+        'Multi-cloud cost optimization and governance,Unified monitoring and management dashboard,Cloud migration and workload placement,Disaster recovery across clouds,Compliance and security management,Performance optimization and scaling'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '10-20 weeks',
+      category: 'Cloud Services'
+    },
+    {
+      title: 'Cybersecurity Operations Center (SOC)',
+      description: '24/7 security monitoring and incident response services',
+      icon: Shield,
+      features: [
+        '24/7 security monitoring and threat detection,Incident response and forensic analysis,Security information and event management (SIEM),Threat intelligence and hunting,Compliance monitoring and reporting,Security awareness training'
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '8-16 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Digital Twin Technology',
+      description: 'Digital twin creation and management for physical assets and processes',
+      icon: Monitor,
+      features: [
+        'Digital twin modeling and simulation,Real-time data integration and synchronization,Predictive analytics and maintenance,Performance optimization and testing,Virtual commissioning and training,Integration with IoT and AI systems'
+      ],
+      pricing: '$12,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Digital Twin Services'
+    },
+    {
+      title: 'Autonomous IT Infrastructure',
+      description: 'Self-managing and self-healing IT infrastructure solutions',
+      icon: Cpu,
+      features: [
+        'Self-healing infrastructure capabilities,Automated scaling and resource allocation,Intelligent capacity planning,Predictive failure prevention,Automated patch management,Self-optimizing performance tuning'
+      ],
+      pricing: '$15,000 - $80,000/month',
+      delivery: '16-28 weeks',
+      category: 'Autonomous Services'
+    },
+    {
+      title: 'Quantum-Safe Cryptography',
+      description: 'Post-quantum cryptography implementation and migration services',
+      icon: Lock,
+      features: [
+        'Quantum-safe algorithm implementation,Cryptographic key management,Secure communication protocols,Data encryption and protection,Compliance with quantum-safe standards,Legacy system migration support'
+      ],
+      pricing: '$8,000 - $45,000/month',
+      delivery: '10-20 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Space Technology Infrastructure',
+      description: 'Ground station and satellite communication infrastructure services',
+      icon: Satellite,
+      features: [
+        'Ground station design and deployment,Satellite communication systems,Space data processing and analytics,Orbital debris monitoring,Space weather prediction systems,Satellite constellation management'
+      ],
+      pricing: '$20,000 - $150,000/month',
+      delivery: '20-40 weeks',
+      category: 'Space Services'
+    },
+    {
+      title: 'Environmental Monitoring IT',
+      description: 'IT infrastructure for environmental and climate monitoring systems',
+      icon: TreePine,
+      features: [
+        'Environmental sensor network deployment,Climate data collection and processing,Real-time environmental monitoring,Data analytics and reporting,Compliance monitoring systems,Integration with government databases'
+      ],
+      pricing: '$6,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Environmental Services'
+    },
+>>>>>>> origin/merge-pr-11190
     {
       title: 'FinTech & Payment Solutions',
       description: 'Financial technology solutions and payment system integration',

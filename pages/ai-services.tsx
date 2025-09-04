@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   Brain,
   Zap,
@@ -47,6 +48,11 @@ import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 >>>>>>> origin/merge-pr-11140
+=======
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite, Car, TreePine, Atom, Building2, FlaskConical, Sprout } from 'lucide-react';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
+>>>>>>> origin/merge-pr-11190
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
   const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.';
@@ -2009,6 +2015,185 @@ export default function AIServices() {
       pricing: '$5,000 - $18,000/month',
       delivery: '6-12 weeks',
       category: 'Market AI'
+<<<<<<< HEAD
+=======
+},
+    {
+      title: 'AI-Powered Autonomous Vehicles',
+      description: 'Advanced AI systems for autonomous vehicle navigation and safety',
+      icon: Car,
+      features: [
+        'Real-time object detection and avoidance,Path planning and navigation algorithms,Traffic pattern recognition,Weather condition adaptation,Vehicle-to-vehicle communication,Autonomous parking and valet services',
+      ],
+      pricing: '$15,000 - $50,000/month',
+      delivery: '16-24 weeks',
+      category: 'Autonomous AI'
+},
+    {
+      title: 'AI-Powered Climate & Environmental Monitoring',
+      description: 'Intelligent environmental monitoring and climate change prediction systems',
+      icon: TreePine,
+      features: [
+        'Real-time environmental data analysis,Climate change prediction models,Air quality monitoring and alerts,Carbon footprint tracking,Weather pattern analysis,Environmental impact assessment',
+      ],
+      pricing: '$8,000 - $25,000/month',
+      delivery: '10-16 weeks',
+      category: 'Environmental AI'
+},
+    {
+      title: 'AI-Powered Space Technology',
+      description: 'Advanced AI systems for space exploration and satellite operations',
+      icon: Satellite,
+      features: [
+        'Satellite orbit optimization,Space debris tracking and avoidance,Planetary surface analysis,Space weather prediction,Autonomous spacecraft navigation,Deep space communication optimization',
+      ],
+      pricing: '$20,000 - $75,000/month',
+      delivery: '20-32 weeks',
+      category: 'Space AI'
+},
+    {
+      title: 'AI-Powered Quantum Computing',
+      description: 'Quantum machine learning and quantum algorithm optimization',
+      icon: Atom,
+      features: [
+        'Quantum machine learning algorithms,Quantum optimization problems,Quantum cryptography and security,Quantum simulation and modeling,Quantum error correction,Hybrid quantum-classical computing',
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '24-40 weeks',
+      category: 'Quantum AI'
+},
+    {
+      title: 'AI-Powered Mental Health Support',
+      description: 'Intelligent mental health monitoring and therapeutic assistance',
+      icon: Heart,
+      features: [
+        'Emotional state detection and analysis,Personalized therapy recommendations,Crisis intervention and alert systems,Mood tracking and pattern analysis,Virtual therapy sessions,Medication adherence monitoring',
+      ],
+      pricing: '$6,000 - $20,000/month',
+      delivery: '8-14 weeks',
+      category: 'Healthcare AI'
+},
+    {
+      title: 'AI-Powered Smart City Management',
+      description: 'Intelligent urban planning and smart city infrastructure management',
+      icon: Building2,
+      features: [
+        'Traffic flow optimization,Energy consumption monitoring,Public safety and emergency response,Urban planning and development,Citizen service automation,Infrastructure maintenance prediction',
+      ],
+      pricing: '$12,000 - $40,000/month',
+      delivery: '14-22 weeks',
+      category: 'Smart City AI'
+},
+    {
+      title: 'AI-Powered Financial Trading',
+      description: 'Advanced algorithmic trading and financial market analysis',
+      icon: TrendingUp,
+      features: [
+        'Real-time market analysis and prediction,Automated trading algorithms,Risk management and portfolio optimization,Market sentiment analysis,High-frequency trading optimization,Regulatory compliance monitoring',
+      ],
+      pricing: '$10,000 - $35,000/month',
+      delivery: '12-18 weeks',
+      category: 'Financial AI'
+},
+    {
+      title: 'AI-Powered Drug Discovery',
+      description: 'Intelligent pharmaceutical research and drug development',
+      icon: FlaskConical,
+      features: [
+        'Molecular structure analysis and prediction,Drug interaction modeling,Clinical trial optimization,Biomarker identification,Personalized medicine development,Adverse effect prediction',
+      ],
+      pricing: '$18,000 - $60,000/month',
+      delivery: '18-28 weeks',
+      category: 'Pharmaceutical AI'
+},
+    {
+      title: 'AI-Powered Agricultural Optimization',
+      description: 'Intelligent farming and agricultural productivity enhancement',
+      icon: Sprout,
+      features: [
+        'Crop yield prediction and optimization,Soil analysis and nutrient management,Pest and disease detection,Irrigation system automation,Weather-based farming decisions,Precision agriculture implementation',
+      ],
+      pricing: '$7,000 - $22,000/month',
+      delivery: '10-16 weeks',
+      category: 'Agricultural AI'
+},
+    {
+      title: 'AI Autonomous Agents Platform',
+      description: 'Multi-agent AI system for complex task automation and decision making',
+      icon: Bot,
+      features: [
+        'Multi-agent orchestration and coordination,Autonomous task execution and decision making,Agent-to-agent communication and collaboration,Self-learning and adaptation capabilities,Integration with existing business systems,Real-time monitoring and intervention protocols',
+      ],
+      pricing: '$8,000 - $25,000/month',
+      delivery: '8-16 weeks',
+      category: 'Autonomous AI'
+},
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Intelligent pharmaceutical research with molecular analysis and drug design',
+      icon: Brain,
+      features: [
+        'Molecular structure analysis and optimization,Drug-target interaction prediction,Toxicity and side effect assessment,Clinical trial optimization and design,Patent landscape analysis,Regulatory compliance and documentation',
+      ],
+      pricing: '$15,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Pharma AI'
+},
+    {
+      title: 'AI-Powered Climate Modeling System',
+      description: 'Advanced climate prediction and environmental impact analysis platform',
+      icon: Globe,
+      features: [
+        'High-resolution climate modeling and prediction,Environmental impact assessment and monitoring,Carbon footprint tracking and optimization,Renewable energy resource optimization,Disaster risk assessment and mitigation,Sustainability reporting and compliance',
+      ],
+      pricing: '$10,000 - $35,000/month',
+      delivery: '10-20 weeks',
+      category: 'Climate AI'
+},
+    {
+      title: 'AI-Powered Quantum Computing Interface',
+      description: 'Intelligent quantum computing optimization and algorithm development',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm optimization and development,Quantum error correction and noise mitigation,Hybrid classical-quantum computing workflows,Quantum machine learning model training,Quantum simulation and modeling,Integration with existing computing infrastructure',
+      ],
+      pricing: '$20,000 - $75,000/month',
+      delivery: '16-32 weeks',
+      category: 'Quantum AI'
+},
+    {
+      title: 'AI-Powered Space Mission Planning',
+      description: 'Intelligent space mission optimization and satellite constellation management',
+      icon: Globe,
+      features: [
+        'Mission trajectory optimization and planning,Satellite constellation design and management,Space debris tracking and collision avoidance,Resource allocation and scheduling optimization,Communication network optimization,Mission risk assessment and mitigation',
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '20-40 weeks',
+      category: 'Space AI'
+},
+    {
+      title: 'AI-Powered Neuromorphic Computing',
+      description: 'Brain-inspired computing systems with spiking neural networks',
+      icon: Brain,
+      features: [
+        'Spiking neural network design and optimization,Neuromorphic chip simulation and testing,Edge AI processing and optimization,Real-time learning and adaptation,Low-power computing optimization,Integration with IoT and edge devices',
+      ],
+      pricing: '$12,000 - $40,000/month',
+      delivery: '12-24 weeks',
+      category: 'Neuromorphic AI'
+},
+    {
+      title: 'AI-Powered Synthetic Biology Platform',
+      description: 'Intelligent biological system design and optimization',
+      icon: Cpu,
+      features: [
+        'Genetic circuit design and optimization,Protein structure prediction and design,Metabolic pathway engineering,Biological system simulation and modeling,Synthetic organism design and testing,Biomanufacturing optimization',
+      ],
+      pricing: '$18,000 - $60,000/month',
+      delivery: '16-28 weeks',
+      category: 'Synthetic Biology AI'
+>>>>>>> origin/merge-pr-11190
     },
     {
       title: 'AI-Powered Autonomous Trading System',
@@ -2054,6 +2239,7 @@ export default function AIServices() {
         'Sustainability planning and recommendations',
         'Real-time environmental monitoring'
       ],
+<<<<<<< HEAD
       pricing: '$10,000 - $40,000/month',
       delivery: '12-18 weeks',
       category: 'Climate AI'
@@ -2188,6 +2374,15 @@ export default function AIServices() {
     }
   ];
 
+=======
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Environmental AI'}
+      category: 'Environmental AI'
+}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-53eb
+  ]
+>>>>>>> origin/merge-pr-11190
   const aiTechnologies = [
     { name: 'Machine Learning', icon: Brain, description: 'Custom ML models and algorithms' },
     { name: 'Natural Language Processing', icon: MessageSquare, description: 'Text analysis and generation' },
