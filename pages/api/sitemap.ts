@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 const baseUrl = 'https://ziontechgroup.com';
 
 const staticPages = [
-  '/',
+  '',
   '/services',
   '/services-catalog',
   '/micro-saas',
@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${staticPages
     .map(
-      (page) => `<url><loc>${baseUrl}${page}</loc><lastmod>${new Date().toISOString()}</lastmod><changefreq>weekly</changefreq><priority>${page === '/' ? '1.0' : '0.8'}</priority></url>`
+      (page) => `<url><loc>${baseUrl}${page}</loc><lastmod>${new Date().toISOString()}</lastmod><changefreq>weekly</changefreq><priority>${page === '' ? '1.0' : '0.8'}</priority></url>`
     )
     .join('')}
 </urlset>`;

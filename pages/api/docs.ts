@@ -45,8 +45,8 @@ class ApiDocumentationGenerator {
         description: 'API documentation for Zion Tech Group services'
       },
       servers: [{
-          url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
-          description: 'Development server'
+        url: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
+        description: 'Development server'
       }],
       paths: this.generatePaths(),
       components: {
@@ -144,9 +144,9 @@ class ApiDocumentationGenerator {
         markdown += '### Examples\n\n';
         endpoint.examples.forEach(example => {
           markdown += `#### ${example.name}\n\n`;
-          markdown += `**Request: **\n`;
+          markdown += `**Request:**\n`;
           markdown += `\`\`\`json\n${JSON.stringify(example.request, null, 2)}\n\`\`\`\n\n`;
-          markdown += `**Response: **\n`;
+          markdown += `**Response:**\n`;
           markdown += `\`\`\`json\n${JSON.stringify(example.response, null, 2)}\n\`\`\`\n\n`;
         });
       }
