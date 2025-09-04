@@ -59,8 +59,7 @@ eslint: {
 >>>>>>> origin/main:next.config.cjs
       ],
     });
-    
-    // Add fallback for problematic modules
+
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
