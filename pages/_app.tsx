@@ -28,10 +28,7 @@ function Header(): JSX.Element {
         }}>Zion Tech Group</Link>
         
         {/* Desktop Navigation */}
-        <div style={{ 
-          display: 'flex', gap: 4, flexWrap: 'wrap', alignItems: 'center',
-          '@media (max-width: 768px)': { display: 'none' }
-        }}>
+        <div className="hidden md:flex gap-1 flex-wrap items-center">
           <Link href="/" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Home</Link>
           <Link href="/services" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>All Services</Link>
           <Link href="/services-catalog" style={{ color: 'white', padding: '8px 12px', textDecoration: 'none', borderRadius: 6, fontSize: '0.9rem' }}>Catalog</Link>
@@ -48,11 +45,7 @@ function Header(): JSX.Element {
 
         {/* Mobile Menu Button */}
         <button 
-          style={{ 
-            background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
-            display: 'none',
-            '@media (max-width: 768px)': { display: 'block' }
-          }}
+          className="md:hidden bg-none border-none text-white text-2xl cursor-pointer"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
