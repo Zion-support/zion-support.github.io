@@ -1,475 +1,254 @@
-import type { NextPage } from 'next';
-import Layout from '../components/Layout';
 import Link from 'next/link';
-import { HelpCircle, Search, MessageCircle, Phone, Mail, BookOpen, Video, FileText, Users, Clock, CheckCircle } from 'lucide-react';
-
-const Help: NextPage = () => {
-<<<<<<< HEAD
-      question: "What services does Zion Tech Group offer?",;
-      answer: "We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services."}, {
-      question: "How do I get started with a project?",;
-      answer: "Contact us through our website, email, or phone to schedule a consultation. We'll discuss your requirements and provide a customized solution proposal."}, {
-      question: "What is your typical project timeline?",;
-      answer: "Project timelines vary based on complexity and scope. Simple websites may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during consultation."}, {
-      question: "Do you provide ongoing support and maintenance?",;
-      answer: "Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment."}, {
-      question: "What technologies do you work with?",;
-      answer: "We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks."}, {
-      question: "How do you ensure data security?",;
-      answer: "We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations."}
-  ]
-  const supportChannels = [ {
-      icon: Mail,;
-      title: "Email Support",;
-      description: "Get help via email with detailed responses",;
-      contact: "kleber@ziontechgroup.com",;
-      responseTime: "Within 24 hours",;
-      color: "blue"}, {
-      icon: Phone,;
-      title: "Phone Support",;
-      description: "Speak directly with our technical team",;
-      contact: "+1 (302) 464-0950",;
-      responseTime: "Mon-Fri 9AM-6PM EST",;
-      color: "green"}, {
-      icon: MessageCircle,;
-      title: "Live Chat",;
-      description: "Get instant help through our live chat",;
-      contact: "Available on website",;
-      responseTime: "Real-time",;
-      color: "purple"}
-  const resources = [ {
-      icon: BookOpen,;
-      title: "Documentation",;
-      description: "Comprehensive guides and API documentation",;
-      link: "/docs"}, {
-      icon: Video,;
-      title: "Video Tutorials",;
-      description: "Step-by-step video guides and tutorials",;
-      link: "/tutorials"}, {
-      icon: FileText,;
-      title: "Knowledge Base",;
-      description: "Searchable articles and troubleshooting guides",;
-      link: "/knowledge-base"}, {
-      icon: Users,;
-      title: "Community Forum",;
-      description: "Connect with other users and get peer support",;
-      link: "/community";
-import React { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
-import { 
-  Search, HelpCircle, 
-  MessageCircle, Phone, 
-  Mail, BookOpen, 
-  Video, FileText, 
-  ChevronDown, ChevronRight,
-  CheckCircle, ExternalLink;
-} from 'lucide-react';
+import { useState } from 'react';
 
-  const faqs = [
-    {'
-      questio,
-    n: 'What services does Zion Tech Group offer?',
-      answer:'
-        'We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services.'} {'
-      question: 'How do I get started with a project?',
-        "Contact us through our website, email, or phone to schedule a consultation. We'll discuss your requirements and provide a customized solution proposal."} {"
-      question: 'What is your typical project timeline?',
-        'Project timelines vary based on complexity and scope. Simple websites may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during consultation.'} {'
-      question: 'Do you provide ongoing support and maintenance?',
-        'Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment.'} {'
-      question: 'What technologies do you work with?',
-        'We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks.'} {'
-      question: 'How do you ensure data security?',
-        'We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.'} {
-      icon: Book, title: 'Getting Started',
-      description: 'Learn the basics and get up and running quickly', articles: [
-        'Welcome to Zion Tech Group',
-        'Setting up your account', 'Understanding our services',
-        'First steps guide'
-      ]
-} {
-      icon: FileText,
-      title: 'User Guides', description: 'Detailed guides for using our services',
-      articles: [
-        'Service management', 'Account settings',
-        'Billing and payments', 'Security best practices'
-      icon: Video,
-      title: 'Video Tutorials', description: 'Watch step-by-step video tutorials',
-        'Platform overview', 'Service configuration',
-        'Troubleshooting common issues', 'Advanced features'
-      icon: MessageCircle,
-      title: 'FAQ', description: 'Frequently asked questions and answers',
-        'General questions', 'Technical support',
-        'Billing questions', 'Service-specific FAQs'
-      question: "What services does Zion Tech Group offer?", answer: "We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services."
-      question: "How do I get started with a project?", answer: "Contact us through our website, email, or phone to schedule a consultation. We'll discuss your requirements and provide a customized solution proposal."
-      question: "What is your typical project timeline?",
-      answer: "Project timelines vary based on complexity and scope. Simple websites may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during consultation."
-      question: "Do you provide ongoing support and maintenance?", answer: "Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment."
-      question: "What technologies do you work with?",
-      answer: "We work with modern technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, blockchain platforms, and mobile development frameworks."
-      question: "How do you ensure data security?", answer: "We implement industry-standard security measures including SSL encryption, secure data storage, regular security audits, and compliance with data protection regulations.";
-}
-
-  const supportChannels = [
-    {
-      icon: Mai,l,;
-      title: "Email: Support,",";";";
-      description: "Get: help via email with detailed responses,",";";";
-      contact: "kleber@ziontechgroup.com,",";";";
-      responseTime: "Within: 24 hours,",";";";
-      color: "blue"",;,";"} {
-      icon: Phon,e,
-      title: "Phone: Support,",";";";
-      description: "Speak: directly with our technical team,",";";";
-      contact: "+1: (302) 464-0950,",";";";
-      responseTime: "Mon-Fri: 9AM-6PM EST,",";";";
-      color: "green"",;,";"} {
-      icon: MessageCircl,e,
-      title: "Live: Chat,",";";";
-      description: "Get: instant help through our live chat,",";";";
-      contact: "Available: on website,",";";";
-      responseTime: "Real-time,",";";";
-      color: "purple"",;,";"}
-
-  const resources = [
-      icon: BookOpe,n,;
-      title: "Documentation,",";";";
-      description: "Comprehensive: guides and API documentation,",";";";
-      link: "/docs"",;,";"} {
-      icon: Vide,o,
-      title: "Video: Tutorials,",";";";
-      description: "Step-by-step: video guides and tutorials,",";";";
-      link: "/tutorials"",;,";"} {
-      icon: FileTex,t,
-      title: "Knowledge: Base,",";";";
-      description: "Searchable: articles and troubleshooting guides,",";";";
-      link: "/knowledge-base"",;,";"} {
-      icon: User,s,
-      title: "Community: Forum,",";";";
-      description: "Connect: with other users and get peer support,",";";";
-      link: "/community"",;,";"}
-
-  return: (
-    <Layout;
-      title="Help: & Support - Zion Tech Group"";";";
-      description="Get: help and support for Zion Tech Group services. Find answers to common questions, contact our support team, and access helpful resources."";";";
-    >
-      {/* Hero: Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">";";";
-        <div: className="container mx-auto px-4 text-center">";";";
-          <h1: className="text-5xl md: text-6xl: font-bold mb-6">",;,";";
-            Help: &
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Support</span>";";";
-          </h1>
-          <p: className="text-xl md: text-2xl: mb-8 max-w-4xl mx-auto text-gray-200">",;,";";
-            We're: here to help you succeed. Find answers, get support, and access resources to make the most of our services.;
-      icon: Mail, title: "Email Support",
-      description: "Get help via email with detailed responses", contact: "kleber@ziontechgroup.com",
-      responseTime: "Within 24 hours", color: "blue"
-      icon: Phone, title: "Phone Support",
-      description: "Speak directly with our technical team", contact: "+1 (302) 464-0950", responseTime: "Mon-Fri 9AM-6PM EST",
-      color: "green"
-      title: "Live Chat", description: "Get instant help through our live chat",
-      contact: "Available on website", responseTime: "Real-time",
-      color: "purple"
-
-      icon: BookOpen, title: "Documentation",
-      description: "Comprehensive guides and API documentation", link: "/docs"
-      icon: Video, title: "Video Tutorials",
-      description: "Step-by-step video guides and tutorials", link: "/tutorials"
-      icon: FileText, title: "Knowledge Base",
-      description: "Searchable articles and troubleshooting guides", link: "/knowledge-base";
-} {'
-      icon: FileText, title: 'Knowledge Base',
-      description: 'Searchable articles and troubleshooting guides', link: '/knowledge-base'} {
-      icon: Users,
-      title: 'Community Forum',
-      description: 'Connect with other users and get peer support',
-      link: '/community'}]
-  return (
-    <Layout'
-      title="Help & Support - Zion Tech Group""
-      description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our support team, and access helpful resources."
-      {/* Hero Section */}"
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"
-        <div className="container mx-auto px-4 text-center">"
-          <h1 className="text-5xl md: text-6xl font-bold mb-6">
-            Help &"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">"
-              {' '}
-              Support
-            </span>
-          </h1>'
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">"
-            We're here to help you succeed. Find answers, get support, and
-            access resources to make the most of our services.
-      icon: Users, title: "Community Forum",
-      description: "Connect with other users and get peer support", link: "/community"
-  return (;
-      title="Help & Support - Zion Tech Group";
-      description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our support team, and access helpful resources.";
-    > {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
-        <div className="container mx-auto px-4 text-center">;
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">;
-            Help &;
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Support</span>;
-          </h1>;
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">;
-            We're here to help you succeed. Find answers, get support, and access resources to make the most of our services.;
-          </p>;
-        </div>;
-      </section> {/* Search Section */}
-      <section className="py-12 bg-gray-50">;
-        <div className="container mx-auto px-4">;
-          <div className="max-w-2xl mx-auto">;
-            <div className="relative">;
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-              <input;
-                type="text";
-                placeholder="Search for help articles, guides, or FAQs...";
-                className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg";
-              />;
-      </section>;
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-            Help &
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Support</span>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            We&apos;re here to help you succeed. Find answers, get support, and access resources to make the most of our services.'
-          </p>
-        </div>
-      </section>
-
-      {/* Search: Section */}
-      <section className="py-12 bg-gray-50">";";";
-        <div: className="container mx-auto px-4">";";";
-          <div: className="max-w-2xl mx-auto">";";";
-            <div: className="relative">";";";
-              <Search: className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />";";";
-              <input: type="text"";";";
-                placeholder="Search: for help articles, guides, or FAQs..."";";";
-                className="w-full: pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent: text-lg"",;,";" {/* Search Section */}
-      <section className="py-12 bg-gray-50">"
-        <div className="container mx-auto px-4">"
-          <div className="max-w-2xl mx-auto">"
-            <div className="relative">"
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input"
-                type="text""
-                placeholder="Search for help articles, guides, or FAQs...""
-                className="w-full pl-12 pr-4 py-4 border border-gray-300 rounded-lg focus: ring-2 focu,
-    s:ring-blue-500 focu,
-    s:border-transparent text-lg"
-              />
 export default function Help() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<string | null>(null) {/* Support Channels */}"
-      <section className="py-20 bg-white">"
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Get Support
-          </h2>"
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {supportChannels.map((channel, index) => (
-              <div
-                key={index}"
-                className="bg-white border border-gray-200 rounded-lg p-8 text-center hover:shadow-lg transition-shadow"
-                <div"
-                  className={`w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center bg-${channel.color}-100`}
-                  <channel.icon`
-                    className={`w-8 h-8 text-${channel.color}-600`}
-                </div>`
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {channel.title}
-                </h3>"
-                <p className="text-gray-600 mb-4">{channel.description}</p>"
-                <p className="text-lg font-medium text-gray-900 mb-2">
-                  {channel.contact}
-                </p>"
-  const faqCategories = [
-      title: 'Getting Started', icon: BookOpen {
-      title: 'Getting Started',
-      icon: BookOpen,
-      questions: [
-          question: 'How do I get started with Zion Tech Group services?', answer: 'Getting started is easy! Simply contact us through our contact form or call us directly. We\'ll schedule a free consultation to understand your needs and provide a customized solution.'
-          question: 'What services do you offer?', answer: 'We offer comprehensive technology services including AI development, IT services, web development, cloud services, and micro SaaS solutions. Visit our services page for detailed information.'
-          question: 'Do you provide free consultations?', answer: 'Yes! We offer free initial consultations to discuss your project requirements and provide recommendations. This helps us understand your needs and you understand our capabilities.'
-      title: 'Technical Support',
-      icon: HelpCircle, questions: [
-          question: 'What kind of technical support do you provide?',
-          answer: 'We provide comprehensive technical support including 24/7 monitoring, troubleshooting, maintenance, and updates. Our support team is available via phone, email, and chat.'
-          question: 'How quickly do you respond to support requests?', answer: 'We respond to critical issues within 1 hour and non-critical issues within 4 hours during business hours. Emergency support is available 24/7 for enterprise clients.'
-          question: 'Do you provide training for new systems?', answer: 'Yes, we provide comprehensive training for all systems we implement. This includes user training, administrator training, and documentation to ensure smooth adoption.'
-      title: 'Billing & Pricing',
-      icon: FileText, questions: [
-          question: 'What are your pricing models?',
-          answer: 'We offer flexible pricing models including project-based pricing, hourly rates, and retainer agreements. Pricing depends on the scope and complexity of your project.'
-          question: 'Do you offer payment plans?',
-          answer: 'Yes, we offer flexible payment plans for larger projects. We can discuss payment terms that work best for your budget and project timeline.'
-          question: 'Are there any hidden fees?', answer: 'No hidden fees! We provide transparent pricing with detailed estimates before starting any project. All costs are clearly outlined in our proposals.'
-      title: 'Project Management',
-      icon: MessageCircle, questions: [
-          question: 'How do you manage projects?',
-          answer: 'We use agile project management methodologies with regular check-ins, progress reports, and milestone reviews. You\'ll have a dedicated project manager and direct access to the development team.'
-          answer: 'Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex applications can take 3-6 months. We provide detailed timelines during the planning phase.'
-          question: 'Can I track project progress?', answer: 'Yes! We provide regular progress updates, milestone reports, and access to project management tools where you can track progress in real-time.'
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const popularArticles = [
-      title: 'How to get started with our services', category: 'Getting Started',
-      views: '1.2k views'
-      title: 'Understanding your billing and payments',
-      category: 'Billing', views: '890 views'
-      title: 'Setting up two-factor authentication', category: 'Security',
-      views: '756 views'
-      title: 'Troubleshooting common login issues',
-      category: 'Technical', views: '634 views'
-      title: 'Managing your account settings', category: 'Account',
-      views: '521 views'
-=======
-  const faqs = [
+  const categories = ['All', 'Getting Started', 'Account & Billing', 'Technical Support', 'API Documentation', 'Troubleshooting'];
+
+  const helpArticles = [
     {
-      question: "What services does Zion Tech Group offer?",
-      answer: "We offer comprehensive technology solutions including AI development, cloud services, web development, mobile development, blockchain solutions, IoT platforms, and cybersecurity services."
+      id: 1,
+      title: "Getting Started with Zion Tech Group Services",
+      category: "Getting Started",
+      description: "Learn how to set up your account and start using our services effectively.",
+      readTime: "5 min read"
     },
     {
-      question: "How do I get started with a project?",
-      answer: "Contact us through our website, email, or phone to schedule a consultation. We'll discuss your requirements and provide a customized solution proposal."
+      id: 2,
+      title: "Understanding Your Billing and Subscription",
+      category: "Account & Billing",
+      description: "Everything you need to know about billing, subscriptions, and payment methods.",
+      readTime: "3 min read"
     },
     {
-      question: "What is your typical project timeline?",
-      answer: "Project timelines vary based on complexity and scope. Simple websites may take 2-4 weeks, while complex enterprise solutions can take 3-6 months. We provide detailed timelines during consultation."
+      id: 3,
+      title: "API Integration Guide",
+      category: "API Documentation",
+      description: "Step-by-step guide to integrating our APIs into your applications.",
+      readTime: "10 min read"
     },
     {
-      question: "Do you provide ongoing support and maintenance?",
-      answer: "Yes, we offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally after deployment."
+      id: 4,
+      title: "Troubleshooting Common Issues",
+      category: "Troubleshooting",
+      description: "Solutions to the most common problems users encounter.",
+      readTime: "7 min read"
     },
     {
-      question: "What technologies do you specialize in?",
-      answer: "We specialize in modern technologies including React, Next.js, Node.js, Python, AI/ML frameworks, cloud platforms (AWS, Azure, GCP), and blockchain technologies."
+      id: 5,
+      title: "Security Best Practices",
+      category: "Technical Support",
+      description: "Essential security practices to keep your data and systems secure.",
+      readTime: "8 min read"
     },
     {
-      question: "Do you work with startups and small businesses?",
-      answer: "Absolutely! We work with businesses of all sizes, from startups to large enterprises. We offer flexible pricing and scalable solutions to meet different needs and budgets."
+      id: 6,
+      title: "Performance Optimization Tips",
+      category: "Technical Support",
+      description: "How to optimize your applications for better performance.",
+      readTime: "6 min read"
     }
   ];
->>>>>>> 8b2501468f72f02648b06a2725c17d2465cef259
 
-  const supportOptions = [
-    {
-      icon: MessageCircle,
-      title: "Live Chat Support",
-      description: "Get instant help from our support team",
-      action: "Start Chat"
-    },
-    {
-      icon: Phone,
-      title: "Phone Support",
-      description: "Call us for immediate assistance",
-      action: "Call Now"
-    },
-    {
-      icon: Mail,
-      title: "Email Support",
-      description: "Send us a detailed message",
-      action: "Send Email"
-    },
-    {
-      icon: BookOpen,
-      title: "Documentation",
-      description: "Browse our comprehensive guides",
-      action: "View Docs"
-    }
-  ];
+  const filteredArticles = helpArticles.filter(article => {
+    const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         article.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
-    <Layout title="Help & Support - Zion Tech Group" description="Get help and support for all your technology needs with Zion Tech Group.">
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="container mx-auto px-4">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              How can we help you?
-            </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Find answers to common questions or get in touch with our support team
-            </p>
-          </div>
+    <>
+      <Head>
+        <title>Help Center - Zion Tech Group | Support & Documentation</title>
+        <meta name="description" content="Get help and support for Zion Tech Group services. Find documentation, troubleshooting guides, and contact our support team." />
+        <meta name="keywords" content="help, support, documentation, troubleshooting, FAQ, customer service, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/help" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Help Center - Zion Tech Group | Support & Documentation" />
+        <meta property="og:description" content="Get help and support for Zion Tech Group services." />
+        <meta property="og:url" content="https://ziontechgroup.com/help" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Help Center - Zion Tech Group | Support & Documentation" />
+        <meta name="twitter:description" content="Get help and support for Zion Tech Group services." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+      </Head>
 
-          {/* Search */}
-          <div className="max-w-2xl mx-auto mb-12">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Search for help..."
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <header className="bg-white shadow-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center py-6">
+              <div className="flex items-center">
+                <Link href="/" className="text-2xl font-bold text-blue-600">
+                  Zion Tech Group
+                </Link>
+              </div>
+              <nav className="hidden md:flex space-x-8">
+                <Link href="/" className="text-gray-700 hover:text-blue-600">Home</Link>
+                <Link href="/services" className="text-gray-700 hover:text-blue-600">Services</Link>
+                <Link href="/about" className="text-gray-700 hover:text-blue-600">About</Link>
+                <Link href="/help" className="text-blue-600 font-medium">Help</Link>
+                <Link href="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
+              </nav>
             </div>
           </div>
+        </header>
 
-          {/* Support Options */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {supportOptions.map((option, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <option.icon className="w-8 h-8 text-blue-600 mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{option.title}</h3>
-                <p className="text-gray-600 mb-4">{option.description}</p>
-                <button className="text-blue-600 hover:text-blue-700 font-medium">
-                  {option.action}
-                </button>
-              </div>
-            ))}
-          </div>
-
-          {/* FAQ Section */}
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-              Frequently Asked Questions
-            </h2>
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md">
-                  <button className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 rounded-lg">
-                    <span className="font-semibold text-gray-900">{faq.question}</span>
-                    <ChevronDown className="w-5 h-5 text-gray-500" />
-                  </button>
-                  <div className="px-6 pb-4">
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Help Center</h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Find answers, get support, and learn how to make the most of our services.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search for help articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-6 py-4 text-gray-900 rounded-lg focus:ring-2 focus:ring-blue-300 focus:border-transparent"
+                />
+                <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                  <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Category Filter */}
+        <section className="py-8 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    selectedCategory === category
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  {category}
+                </button>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* Contact Section */}
-          <div className="max-w-4xl mx-auto mt-12 bg-blue-600 rounded-lg p-8 text-white text-center">
-            <h2 className="text-2xl font-bold mb-4">Still need help?</h2>
-            <p className="text-blue-100 mb-6">
-              Our support team is here to help you succeed. Get in touch with us today.
+        {/* Help Articles */}
+        <section className="py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredArticles.map((article) => (
+                <div key={article.id} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-blue-600">{article.category}</span>
+                    <span className="text-sm text-gray-500">{article.readTime}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{article.title}</h3>
+                  <p className="text-gray-600 mb-4">{article.description}</p>
+                  <Link
+                    href={`/help/${article.id}`}
+                    className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                  >
+                    Read Article →
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            {filteredArticles.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-gray-500 text-lg">No articles found matching your search criteria.</p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Contact Support */}
+        <section className="py-16 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?</h2>
+            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+              Can&apos;t find what you&apos;re looking for? Our support team is here to help you with any questions or issues.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors inline-block"
               >
                 Contact Support
               </Link>
-              <Link
-                href="/pricing"
-                className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                View Pricing
-              </Link>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
+                Live Chat
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-    </Layout>
-  );
-};
+        </section>
 
-export default Help;
+        {/* Footer */}
+        <footer className="bg-gray-900 text-white py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+                <p className="text-gray-400">
+                  Leading provider of innovative technology solutions and services.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Services</h4>
+                <ul className="space-y-2 text-gray-400">
+                  <li><Link href="/services" className="hover:text-white">All Services</Link></li>
+                  <li><Link href="/ai-services" className="hover:text-white">AI Services</Link></li>
+                  <li><Link href="/micro-saas" className="hover:text-white">Micro SaaS</Link></li>
+                  <li><Link href="/it-services" className="hover:text-white">IT Services</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Company</h4>
+                <ul className="space-y-2 text-gray-400">
+                  <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+                  <li><Link href="/team" className="hover:text-white">Team</Link></li>
+                  <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
+                  <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">Resources</h4>
+                <ul className="space-y-2 text-gray-400">
+                  <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+                  <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
+                  <li><Link href="/help" className="hover:text-white">Help Center</Link></li>
+                  <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
+                </ul>
+              </div>
+            </div>
+            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+              <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </>
+  );
+}

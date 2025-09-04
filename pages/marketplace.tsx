@@ -1,331 +1,360 @@
-import React from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
-import { ShoppingCart, Star, Users, TrendingUp, CheckCircle, ArrowRight, Search, Filter, Heart, Download } from 'lucide-react';
-import SimpleNavigation from '../src/components/SimpleNavigation';
-import { SimpleFooter } from '../src/components/SimpleFooter';
 
-const MarketplacePage: React.FC = () => {
-  const sections = [
-    { title: 'Products', href: '/marketplace/products', description: 'AI tools, software, and platforms.' }, { title: 'Talent', href: '/marketplace/talent', description: 'Expert contractors and fractional teams.' },
-    { title: 'Equipment', href: '/marketplace/equipment', description: 'Hardware and infrastructure.' }, { title: 'Services', href: '/marketplace/services', description: 'Professional and managed services.' }];
-
-  return (
-    <MainLayout title="Marketplace - Zion Tech Group" description="Discover products, talent, equipment, and services in our marketplace.">
-      <section className="container mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-6">Marketplace</h1>
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-          {sections.map((s) => (
-            <Link key={s.title} href={s.href} className="block border rounded-lg p-6 bg-white shadow-sm hover: shadow-md transition-shadow">
-              <div className="text-xl font-semibold">{s.title}</div>
-              <p className="text-gray-600 mt-2">{s.description}</p>
-            </Link>
-          ))}
-        </div>
-      </section>
-    </MainLayout>
 export default function Marketplace() {
-  const categories = [
-    {
-      name: 'AI Solutions',
-      count: '25+ Products',
-      description: 'Ready-to-use AI models, APIs, and automation tools',
-      icon: '🤖';
-},
-    {
-      name: 'SaaS Tools',
-      count: '40+ Products',
-      description: 'Software-as-a-Service solutions for business growth',
-      icon: '💻';
-},
-    {
-      name: 'IT Services',
-      count: '30+ Services',
-      description: 'Infrastructure, security, and technical support',
-      icon: '🔧';
-},
-    {
-      name: 'Templates',
-      count: '50+ Templates',
-      description: 'Website templates, UI kits, and design resources',
-      icon: '🎨';
-}
-  ]
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
+    site: 'https://ziontechgroup.com'
+  };
 
-  const featuredProducts = [
+  const marketplaceCategories = [
     {
-      id: 1,
-      name: 'AI Content Generator',
-      category: 'AI Solutions',
-      price: '$99/month',
+      title: "Products",
+      description: "Discover innovative technology products and solutions",
+      icon: "🛍️",
+      items: [
+        { name: "AI-Powered Analytics Platform", price: "Starting at $299/month", category: "AI & Analytics" },
+        { name: "Cloud Infrastructure Suite", price: "Starting at $199/month", category: "Cloud Computing" },
+        { name: "Cybersecurity Monitoring Tool", price: "Starting at $149/month", category: "Security" },
+        { name: "Quantum Computing Simulator", price: "Starting at $499/month", category: "Quantum Computing" }
+      ]
+    },
+    {
+      title: "Talent",
+      description: "Connect with skilled technology professionals",
+      icon: "👥",
+      items: [
+        { name: "Senior AI/ML Engineers", price: "$120-180/hour", category: "AI & Machine Learning" },
+        { name: "Cloud DevOps Specialists", price: "$100-150/hour", category: "Cloud & DevOps" },
+        { name: "Cybersecurity Experts", price: "$110-170/hour", category: "Cybersecurity" },
+        { name: "Quantum Computing Researchers", price: "$150-250/hour", category: "Quantum Computing" }
+      ]
+    },
+    {
+      title: "Equipment",
+      description: "Access cutting-edge technology equipment and hardware",
+      icon: "🔧",
+      items: [
+        { name: "High-Performance Servers", price: "Starting at $2,999", category: "Hardware" },
+        { name: "Quantum Computing Hardware", price: "Starting at $50,000", category: "Quantum Hardware" },
+        { name: "Network Security Appliances", price: "Starting at $1,999", category: "Security Hardware" },
+        { name: "Edge Computing Devices", price: "Starting at $499", category: "IoT & Edge" }
+      ]
+    },
+    {
+      title: "Services",
+      description: "Professional technology services and consulting",
+      icon: "⚙️",
+      items: [
+        { name: "Digital Transformation Consulting", price: "$200-300/hour", category: "Consulting" },
+        { name: "Cloud Migration Services", price: "$150-250/hour", category: "Cloud Services" },
+        { name: "Security Assessment & Auditing", price: "$180-280/hour", category: "Security Services" },
+        { name: "Custom Software Development", price: "$120-200/hour", category: "Development" }
+      ]
+    }
+  ];
+
+  const featuredItems = [
+    {
+      name: "AI Business Intelligence Suite",
+      description: "Comprehensive AI-powered analytics platform for enterprise decision making",
+      price: "$299/month",
+      category: "AI & Analytics",
       rating: 4.9,
-      reviews: 128,
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      image: '/products/ai-content-generator.jpg',
-      features: ['Multi-language Support', 'SEO Optimized', 'Brand Voice Training', 'API Access'];
-},
+      reviews: 127
+    },
     {
-      id: 2,
-      name: 'Cloud Infrastructure Manager',
-      category: 'IT Services',
-      price: '$299/month',
+      name: "Quantum Algorithm Development",
+      description: "Expert quantum computing research and algorithm development services",
+      price: "$200/hour",
+      category: "Quantum Computing",
       rating: 4.8,
-      reviews: 89,
-      description: 'Comprehensive cloud management solution for AWS, Azure, and Google Cloud platforms.',
-      image: '/products/cloud-manager.jpg',
-      features: ['Multi-Cloud Support', 'Cost Optimization', 'Security Monitoring', 'Auto-scaling'];
-},
+      reviews: 89
+    },
     {
-      id: 3,
-      name: 'E-commerce SaaS Platform',
-      category: 'SaaS Tools',
-      price: '$199/month',
-      rating: 4.7,
-      reviews: 156,
-      description: 'Complete e-commerce solution with inventory management, payment processing, and analytics.',
-      image: '/products/ecommerce-platform.jpg',
-      features: ['Inventory Management', 'Payment Gateway', 'Analytics Dashboard', 'Mobile App'];
-},
-    {
-      id: 4,
-      name: 'React Dashboard Template',
-      category: 'Templates',
-      price: '$49',
+      name: "Enterprise Security Platform",
+      description: "Advanced cybersecurity monitoring and threat detection system",
+      price: "$199/month",
+      category: "Cybersecurity",
       rating: 4.9,
-      reviews: 234,
-      description: 'Modern, responsive dashboard template built with React and Tailwind CSS.',
-      image: '/products/react-dashboard.jpg',
-      features: ['Responsive Design', 'Dark/Light Mode', 'Component Library', 'Documentation'];
-}
-  ]
-
-  const stats = [
-    { number: '500+', label: 'Products Available', icon: ShoppingCart },
-    { number: '10K+', label: 'Happy Customers', icon: Users },
-    { number: '4.8/5', label: 'Average Rating', icon: Star },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: TrendingUp }
-  ]
+      reviews: 156
+    }
+  ];
 
   return (
     <>
       <Head>
-        <title>Marketplace - Zion Tech Group</title>
-        <meta name="description" content="Discover and purchase AI solutions, SaaS tools, IT services, and templates from our comprehensive marketplace." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Marketplace - Zion Tech Group | Technology Products & Services</title>
+        <meta name="description" content="Explore our comprehensive marketplace of technology products, services, talent, and equipment. Find everything you need for your digital transformation journey." />
+        <meta name="keywords" content="technology marketplace, AI products, cloud services, cybersecurity tools, quantum computing, tech talent, equipment rental" />
+        <link rel="canonical" href={`${contact.site}/marketplace`} />
+        <meta property="og:title" content="Marketplace - Zion Tech Group | Technology Products & Services" />
+        <meta property="og:description" content="Explore our comprehensive marketplace of technology products, services, talent, and equipment." />
+        <meta property="og:url" content={`${contact.site}/marketplace`} />
+        <meta property="og:type" content="website" />
       </Head>
-      
-      <SimpleNavigation />
-      
-      <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-slate-50 to-indigo-50 py-20 sm:py-32">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-3xl text-center">
-              <div className="flex items-center justify-center mb-4">
-                <ShoppingCart className="h-8 w-8 text-indigo-600 mr-3" />
-                <span className="text-base font-semibold leading-7 text-indigo-600">Marketplace</span>
-              </div>
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Discover & Purchase Tech Solutions
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                Browse our curated marketplace of AI solutions, SaaS tools, IT services, and templates. 
-                Find the perfect technology solutions to accelerate your business growth and innovation.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        {/* Search & Filter */}
-        <section className="py-8 bg-white border-b border-gray-200">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search products, services, and templates..."
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                />
-              </div>
-              <div className="flex gap-2">
-                <button className="flex items-center space-x-2 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50">
-                  <Filter className="w-4 h-4" />
-                  <span>Filter</span>
-                </button>
-                <button className="flex items-center space-x-2 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50">
-                  <span>Category</span>
-                </button>
-              </div>
-            </div>
+      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+            <h1 style={{ 
+              fontSize: '3rem',
+              fontWeight: 800, 
+              marginBottom: 20,
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              Technology Marketplace
+            </h1>
+            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
+              Discover innovative products, connect with skilled professionals, and access cutting-edge technology solutions all in one place.
+            </p>
           </div>
-        </section>
 
-        {/* Stats Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg">
-                      <stat.icon className="w-8 h-8 text-white" />
+          <div style={{ marginBottom: 80 }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
+              Featured Items
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: 30 }}>
+              {featuredItems.map((item, index) => (
+                <div key={index} style={{ 
+                  background: 'rgba(255, 255, 255, 0.05)',
+                  borderRadius: 12, 
+                  padding: 30, 
+                  border: '1px solid rgba(255, 255, 255, 0.1)', 
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                  cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}>
+                  <div style={{ marginBottom: 15 }}>
+                    <span style={{
+                      background: 'rgba(255, 255, 255, 0.1)',
+                      color: 'white',
+                      padding: '6px 12px',
+                      borderRadius: 20,
+                      fontSize: '0.9rem',
+                      fontWeight: 600
+                    }}>
+                      {item.category}
+                    </span>
+                  </div>
+                  
+                  <h3 style={{ 
+                    fontSize: '1.5rem', 
+                    fontWeight: 700, 
+                    marginBottom: 15,
+                    lineHeight: '1.3'
+                  }}>
+                    {item.name}
+                  </h3>
+                  
+                  <p style={{ 
+                    color: '#94a3b8',
+                    marginBottom: 20, 
+                    lineHeight: '1.6',
+                    fontSize: '1rem'
+                  }}>
+                    {item.description}
+                  </p>
+                  
+                  <div style={{ 
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    marginBottom: 20
+                  }}>
+                    <div style={{ 
+                      fontSize: '1.5rem', 
+                      fontWeight: 700, 
+                      background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text'
+                    }}>
+                      {item.price}
                     </div>
-                  </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-                  <div className="text-gray-600">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Categories */}
-        <section className="py-16 sm:py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Browse by Category</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Explore our marketplace organized by technology categories
-              </p>
-            </div>
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {categories.map((category, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-lg p-8 text-center border border-gray-200 hover:shadow-xl transition-shadow cursor-pointer">
-                  <div className="text-4xl mb-4">{category.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{category.name}</h3>
-                  <p className="text-indigo-600 font-medium mb-3">{category.count}</p>
-                  <p className="text-gray-600 text-sm">{category.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Products */}
-        <section className="py-16 sm:py-24 bg-gray-50">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Featured Products</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Handpicked solutions that our customers love and recommend
-              </p>
-            </div>
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-              {featuredProducts.map((product) => (
-                <div key={product.id} className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow">
-                  <div className="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-                    <div className="text-white text-6xl">📦</div>
-                  </div>
-                  <div className="p-8">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">
-                        {product.category}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                      <span style={{ color: '#fbbf24' }}>⭐</span>
+                      <span style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
+                        {item.rating} ({item.reviews} reviews)
                       </span>
-                      <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm font-medium text-gray-900">{product.rating}</span>
-                        <span className="text-sm text-gray-500">({product.reviews})</span>
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
-                    <p className="text-gray-600 mb-4">{product.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {product.features.map((feature, index) => (
-                        <span key={index} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-gray-900">{product.price}</div>
-                      <div className="flex space-x-2">
-                        <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                          <Heart className="w-4 h-4" />
-                        </button>
-                        <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-                          View Details
-                        </button>
-                      </div>
                     </div>
                   </div>
+                  
+                  <Link href="/contact" style={{
+                    background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                    color: 'white',
+                    padding: '12px 24px',
+                    textDecoration: 'none',
+                    borderRadius: 6,
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    display: 'block',
+                    width: '100%',
+                    textAlign: 'center'
+                  }}>
+                    Learn More
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
-        </section>
 
-        {/* How It Works */}
-        <section className="py-16 sm:py-24">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">How It Works</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Simple steps to find and purchase the perfect solution for your needs
-              </p>
-            </div>
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">1</span>
+          <div style={{ display: 'grid', gap: 60 }}>
+            {marketplaceCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 20, marginBottom: 30 }}>
+                  <div style={{ fontSize: '3rem' }}>{category.icon}</div>
+                  <div>
+                    <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 10 }}>
+                      {category.title}
+                    </h2>
+                    <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
+                      {category.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Browse & Search</h3>
-                <p className="text-gray-600">
-                  Explore our marketplace and use filters to find products that match your requirements.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">2</span>
+                
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
+                  {category.items.map((item, itemIndex) => (
+                    <div key={itemIndex} style={{ 
+                      background: 'rgba(255, 255, 255, 0.05)',
+                      borderRadius: 12, 
+                      padding: 25, 
+                      border: '1px solid rgba(255, 255, 255, 0.1)', 
+                      transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
+                      cursor: 'pointer'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-3px)';
+                      e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}>
+                      <div style={{ marginBottom: 15 }}>
+                        <span style={{
+                          background: 'rgba(59, 130, 246, 0.2)',
+                          color: '#3b82f6',
+                          padding: '6px 12px',
+                          borderRadius: 20,
+                          fontSize: '0.9rem',
+                          fontWeight: 600
+                        }}>
+                          {item.category}
+                        </span>
+                      </div>
+                      
+                      <h3 style={{ 
+                        fontSize: '1.3rem', 
+                        fontWeight: 700, 
+                        marginBottom: 10,
+                        lineHeight: '1.3'
+                      }}>
+                        {item.name}
+                      </h3>
+                      
+                      <div style={{ 
+                        fontSize: '1.2rem', 
+                        fontWeight: 600, 
+                        background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text'
+                      }}>
+                        {item.price}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Compare & Choose</h3>
-                <p className="text-gray-600">
-                  Review product details, features, and customer ratings to make an informed decision.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">3</span>
+
+                <div className="mt-6 text-center">
+                  <Link 
+                    href="/contact"
+                    className="text-blue-600 hover:text-blue-700 font-medium"
+                  >
+                    View All {category.title} →
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Purchase & Deploy</h3>
-                <p className="text-gray-600">
-                  Complete your purchase and get instant access to your new solution with full support.
-                </p>
               </div>
+            ))}
+          </div>
+
+          <div style={{ 
+            background: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: 12,
+            padding: 40,
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            textAlign: 'center',
+            marginTop: 80
+          }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
+              Ready to Explore Our Marketplace?
+            </h2>
+            <p style={{ 
+              fontSize: '1.1rem', 
+              color: '#94a3b8', 
+              marginBottom: 30, 
+              maxWidth: 600, 
+              margin: '0 auto 30px' 
+            }}>
+              Browse our comprehensive marketplace to find the perfect technology solutions, services, and talent for your business needs.
+            </p>
+            <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link href="/contact" style={{
+                background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                color: 'white',
+                padding: '15px 30px',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontSize: '1.1rem',
+                fontWeight: 600,
+                display: 'inline-block'
+              }}>
+                Browse Marketplace
+              </Link>
+              <Link href="/request-quote" style={{
+                background: 'transparent',
+                color: 'white',
+                padding: '15px 30px',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontSize: '1.1rem',
+                fontWeight: 600, 
+                display: 'inline-block', 
+                border: '2px solid rgba(255, 255, 255, 0.3)', 
+                transition: 'border-color 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = '#3b82f6';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+              }}>
+                Get Custom Quote
+              </Link>
+              <a 
+                href={`tel:${contact.phone}`}
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Call {contact.phone}
+              </a>
             </div>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 sm:py-24 bg-gradient-to-br from-indigo-600 to-purple-600">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Find Your Perfect Solution?
-              </h2>
-              <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-                Browse our marketplace and discover technology solutions that will transform your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="#featured"
-                  className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors flex items-center justify-center space-x-2"
-                >
-                  <span>Browse Marketplace</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-indigo-600 transition-colors"
-                >
-                  Need Help Finding Something?
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <SimpleFooter />
+        </div>
+      </div>
     </>
   );
 }

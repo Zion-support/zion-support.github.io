@@ -1,1 +1,0 @@
-export: const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [;

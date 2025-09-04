@@ -7,8 +7,7 @@
     "lintWarnings": 0,
     "typeErrors": 0,
     "buildSuccess": false,
-    "corruptedFiles": 0;
-},
+    "corruptedFiles": 0},
   "details": {
     "lint": {
       "hasErrors": true,

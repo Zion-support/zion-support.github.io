@@ -1,247 +1,303 @@
-import React, { useState } from 'react';
+import React from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Lock, 
-  Mail, 
-  ArrowRight,
-  User,
-  Shield,
-  Zap,
-  Star;
-} from 'lucide-react';
+import { useState } from 'react';
 
 export default function Login() {
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown, DE 19709',
+    site: 'https://ziontechgroup.com'
+  };
+
   const [formData, setFormData] = useState({
     email: '',
-    password: '';
-});
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+    password: '',
+    rememberMe: false
+  });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value;
-}));
+      [name]: type === 'checkbox' ? checked : value
+    }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
-    setError('');
-    
-    // Simulate login process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Simulate successful login
-    window.location.href = '/dashboard';
+    // Handle login logic here
+    console.log('Login attempt:', formData);
+    alert('Login functionality will be implemented with authentication system.');
   };
-
-  const benefits = [
-    {
-      icon: User,
-      title: 'Personal Dashboard',
-      description: 'Access your personalized workspace';
-},
-    {
-      icon: Shield,
-      title: 'Secure Access',
-      description: 'Enterprise-grade security';
-},
-    {
-      icon: Zap,
-      title: 'Fast Performance',
-      description: 'Lightning-fast platform';
-},
-    {
-      icon: Star,
-      title: 'Premium Features',
-      description: 'Access to exclusive tools';
-}
-  ]
 
   return (
     <>
       <Head>
-        <title>Sign In - Zion Tech Group</title>
-        <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
+        <title>Login - Zion Tech Group | Access Your Account</title>
+        <meta name="description" content="Login to your Zion Tech Group account to access your services, manage your projects, and view your account information." />
+        <meta name="keywords" content="login, account access, user portal, authentication, sign in" />
+        <link rel="canonical" href={`${contact.site}/login`} />
+        <meta property="og:title" content="Login - Zion Tech Group | Access Your Account" />
+        <meta property="og:description" content="Login to your Zion Tech Group account to access your services, manage your projects, and view your account information." />
+        <meta property="og:url" content={`${contact.site}/login`} />
+        <meta property="og:type" content="website" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Welcome Back
-              </h1>
-              <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-                Sign in to your account to access your dashboard, projects, and exclusive resources.
-              </p>
-            </motion.div>
+      <div style={{ 
+        minHeight: '100vh', 
+        background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', 
+        color: 'white',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <div style={{ maxWidth: 400, width: '100%', padding: '20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 40 }}>
+            <h1 style={{ 
+              fontSize: '2.5rem',
+              fontWeight: 800, 
+              marginBottom: 10,
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              Welcome Back
+            </h1>
+            <p style={{ color: '#666', fontSize: '1rem' }}>
+              Sign in to your Zion Tech Group account
+            </p>
           </div>
-        </div>
 
-        {/* Benefits Section */}
-        <div className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Why Sign In?
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Access your personalized workspace and exclusive features
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.05)',
+            borderRadius: 12,
+            padding: 40,
+            border: '1px solid rgba(255, 255, 255, 0.1)'
+          }}>
+            <form onSubmit={handleSubmit}>
+              <div style={{ marginBottom: 20 }}>
+                <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                  style={{
+                    width: '100%',
+                    padding: '12px',
+                    borderRadius: 8,
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    fontSize: '1rem'
+                  }}
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div style={{ marginBottom: 20 }}>
+                <label style={{ display: 'block', marginBottom: 8, fontWeight: 600 }}>
+                  Password
+                </label>
+                <input
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleInputChange}
+                  required
+                  style={{
+                    width: '100%',
+                    padding: '12px',
+                    borderRadius: 8,
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    fontSize: '1rem'
+                  }}
+                  placeholder="Enter your password"
+                />
+              </div>
+
+              <div style={{ 
+                display: 'flex', 
+                justifyContent: 'space-between', 
+                alignItems: 'center', 
+                marginBottom: 30 
+              }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer' }}>
+                  <input
+                    type="checkbox"
+                    name="rememberMe"
+                    checked={formData.rememberMe}
+                    onChange={handleInputChange}
+                    style={{ width: 16, height: 16 }}
+                  />
+                  <span style={{ fontSize: '0.9rem' }}>Remember me</span>
+                </label>
+                <Link href="/help" style={{ 
+                  color: '#3b82f6',
+                  textDecoration: 'none',
+                  fontSize: '0.9rem'
+                }}>
+                  Forgot password?
+                </Link>
+              </div>
+
+              <button
+                type="submit"
+                style={{
+                  width: '100%',
+                  background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                  color: 'white',
+                  padding: '15px',
+                  border: 'none',
+                  borderRadius: 8,
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  transition: 'transform 0.3s ease',
+                  marginBottom: 20
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                Sign In
+              </button>
+            </form>
+
+            <div style={{ textAlign: 'center', marginTop: 20 }}>
+              <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>
+                Don't have an account?{' '}
+                <Link href="/signup" style={{ 
+                  color: '#3b82f6',
+                  textDecoration: 'none',
+                  fontWeight: '600'
+                }}>
+                  Sign up here
+                </Link>
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
-                </motion.div>
-              ))}
+            <div style={{ marginBottom: 20 }}>
+              <label style={{ 
+                display: 'block', 
+                marginBottom: 8, 
+                fontWeight: 600, 
+                color: '#333' 
+              }}>
+                Password
+              </label>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+                required
+                style={{
+                  width: '100%',
+                  padding: '12px',
+                  border: '1px solid #ddd',
+                  borderRadius: 8,
+                  fontSize: '1rem',
+                  boxSizing: 'border-box'
+                }}
+                placeholder="Enter your password"
+              />
             </div>
-          </div>
-        </div>
 
-        {/* Login Form */}
-        <div className="py-16">
-          <div className="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-white rounded-2xl shadow-2xl p-8"
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              marginBottom: 20 
+            }}>
+              <input
+                type="checkbox"
+                name="rememberMe"
+                checked={formData.rememberMe}
+                onChange={handleInputChange}
+                style={{ marginRight: 8 }}
+              />
+              <label style={{ color: '#666', fontSize: '0.9rem' }}>
+                Remember me
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              style={{
+                width: '100%',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                color: 'white',
+                padding: '12px',
+                border: 'none',
+                borderRadius: 8,
+                fontSize: '1rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                marginBottom: 20
+              }}
             >
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                  Sign In
-                </h2>
-                <p className="text-gray-600">
-                  Enter your credentials to access your account
-                </p>
-              </div>
+              Sign In
+            </button>
 
-              {error && (
-                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                  <p className="text-red-600 text-sm">{error}</p>
-                </div>
-              )}
+            <div style={{ textAlign: 'center' }}>
+              <Link href="/forgot-password" style={{ 
+                color: '#667eea', 
+                textDecoration: 'none', 
+                fontSize: '0.9rem' 
+              }}>
+                Forgot your password?
+              </Link>
+            </div>
+          </form>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
-                  </label>
-                  <div className="relative">
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
+          <div style={{ 
+            textAlign: 'center', 
+            marginTop: 20, 
+            color: '#666' 
+          }}>
+            <p>
+              Don't have an account?{' '}
+              <Link href="/register" style={{ 
+                color: '#667eea', 
+                textDecoration: 'none', 
+                fontWeight: 600 
+              }}>
+                Sign up here
+              </Link>
+            </p>
+          </div>
 
-                <div>
-                  <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-                    Password
-                  </label>
-                  <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type={showPassword ? 'text' : 'password'}
-                      id="password"
-                      name="password"
-                      required
-                      value={formData.password}
-                      onChange={handleInputChange}
-                      className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Enter your password"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                    >
-                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                    </button>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <input
-                      type="checkbox"
-                      id="remember"
-                      className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-                    />
-                    <label htmlFor="remember" className="ml-2 text-sm text-gray-600">
-                      Remember me
-                    </label>
-                  </div>
-                  <a href="/forgot-password" className="text-sm text-blue-600 hover:text-blue-500">
-                    Forgot password?
-                  </a>
-                </div>
-
-                <div>
-                  <button
-                    type="submit"
-                    disabled={isLoading}
-                    className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                  >
-                    {isLoading ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Signing in...
-                      </>
-                    ) : (
-                      <>
-                        Sign In
-                        <ArrowRight className="ml-2 w-5 h-5" />
-                      </>
-                    )}
-                  </button>
-                </div>
-              </form>
-
-              <div className="mt-8 text-center">
-                <p className="text-gray-600">
-                  Don't have an account?{' '}
-                  <a href="/register" className="text-blue-600 hover:text-blue-500 font-medium">
-                    Create one here
-                  </a>
-                </p>
-              </div>
-            </motion.div>
+          <div style={{ textAlign: 'center', marginTop: 30 }}>
+            <p style={{ color: '#94a3b8', fontSize: '0.9rem', marginBottom: 10 }}>
+              Need help accessing your account?
+            </p>
+            <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href={`tel:${contact.phone}`} style={{
+                color: '#3b82f6',
+                textDecoration: 'none',
+                fontSize: '0.9rem'
+              }}>
+                📞 {contact.phone}
+              </a>
+              <a href={`mailto:${contact.email}`} style={{
+                color: '#3b82f6',
+                textDecoration: 'none',
+                fontSize: '0.9rem'
+              }}>
+                ✉️ {contact.email}
+              </a>
+            </div>
           </div>
         </div>
       </div>

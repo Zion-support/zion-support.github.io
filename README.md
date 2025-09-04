@@ -1,296 +1,163 @@
+## Development Scripts
+
+- **dev**: Start Next.js dev server.
+- **build**: Build the app.
+- **start**: Start the production server.
+- **lint**: Run ESLint.
+- **lint:fix**: Auto-fix lint issues.
+- **test**: Run Jest tests.
+- **check**: Lint and run tests (fast sanity check).
+
+### Testing
+
+Jest is configured via `jest.config.cjs` and uses `jsdom`. A basic smoke test in `__tests__/smoke.test.ts` verifies the setup.
+
+Note: legacy tests under `tests/` are currently excluded pending cleanup.
+
 # Zion Tech Group Website
 
-A modern, high-performance website built with Next.js, showcasing AI services, IT solutions, and micro SaaS development capabilities.
+A modern, high-performance website built with Next.js, featuring AI services, micro SaaS products, and enterprise IT solutions.
 
 ## 🚀 Features
 
-## ✨ Features
+- **Modern Tech Stack**: Next.js 15, React 18, TypeScript, Tailwind CSS
+- **Performance Optimized**: Web Vitals monitoring, bundle optimization, image optimization
+- **SEO Ready**: Comprehensive meta tags, structured data, sitemap generation
+- **Accessibility**: ARIA labels, keyboard navigation, screen reader support
+- **PWA Support**: Service worker, manifest, offline functionality
+- **Security**: Content Security Policy, security headers, dependency auditing
 
-- **AI-Powered Solutions**: Advanced artificial intelligence and machine learning capabilities
-- **Cloud Infrastructure**: Scalable and secure cloud computing solutions
-- **Digital Transformation**: Complete digital transformation services
-- **Real-time Analytics**: Advanced analytics and reporting tools
-- **Security First**: Enterprise-grade security and compliance
-- **Responsive Design**: Mobile-first, responsive user interface
+## 🛠️ Tech Stack
 
-## 🛠️ Technology Stack
-
-- **Frontend**: Next.js 15, React 18, TypeScript
-- **Styling**: Tailwind CSS, Framer Motion
-- **Backend**: Node.js, Express
-- **Database**: PostgreSQL, MongoDB
-- **Cloud**: AWS, Google Cloud, Azure
-- **AI/ML**: TensorFlow, PyTorch, OpenAI
-- **Testing**: Jest, React Testing Library
-- **CI/CD**: GitHub Actions, Docker
-
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-
-### State Management
-
-- **React Hooks** - useState, useEffect for local state
-- **Context API** - For global state management
-- **React Router** - Client-side routing
-
-### Performance
-
-- **Lazy Loading** - Components loaded on demand
-- **Image Optimization** - Next.js image optimization
-- **Code Splitting** - Automatic bundle splitting
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 18+ 
-- npm or yarn
-- Git
-
-### Installation
-### Development Tools
-- **ESLint** - Code linting
-- **Prettier** - Code formatting
-- **Jest** - Testing framework
-- **Bundle Analyzer** - Performance monitoring
-
-### Deployment
-- **Netlify** - Hosting and CI/CD
-- **PM2** - Process management
-- **Sentry** - Error monitoring
+- **Framework**: Next.js 15.5.2
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI
+- **Icons**: Lucide React
+- **Analytics**: Web Vitals
+- **Deployment**: Netlify
 
 ## 📦 Installation
 
-1. Clone the repository: ```bash
-git clone https://github.com/your-org/zion-tech-group.git
-cd zion-tech-group
-```
-
-2. Install dependencies:
 ```bash
+# Clone the repository
+git clone https://github.com/Zion-Holdings/zion.app.git
+cd zion.app
+
+# Install dependencies
 npm install
-```
 
-3. Set up environment variables:
-```bash
-cp .env.example .env.local
-```
-
-4. Run the development server:
-```bash
+# Start development server
 npm run dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-## 🏗️ Build & Deployment
-
-### Development Build
-```bash
-npm run build
-npm run start
-```
-
-### Production Deployment
-```bash
-npm run build
-npm run start
-```
-
-### Header Component (`src/components/header/Header.jsx`)
-
-- Logo with Zion Tech Group branding
-- Main navigation with dropdown menus
-- Search functionality with suggestions
-- User authentication and language selection
-- Mobile-responsive design
-
-### Footer Component (`src/components/Footer.jsx`)
-
-- Company information and branding
-- Organized link sections
-- Newsletter signup
-- Social media links
-- Trust indicators and certifications
-
-### Sidebar Component (`src/components/Sidebar.jsx`)
-
-- Collapsible navigation sections
-- Service and solution categories
-- Quick access to key pages
-- Mobile-friendly overlay design
-
-### HomePage Component (`src/pages/HomePage.jsx`)
-
-- Hero section with compelling messaging
-- Feature highlights with icons
-- Statistics and social proof
-- Service preview cards
-- Testimonials and CTA sections
-
-### SEOHead
-Comprehensive SEO component with meta tags, Open Graph, Twitter Cards, and structured data.
-
-### Service Data (`src/data/marketplaceData.js`)
-
-- Search suggestions and keywords
-- Service categories and descriptions
-- Industry solutions and use cases
-- Testimonials and case studies
-
-### Page Templates
-
-- **SimplePage.jsx** - Template for various routes with dynamic content
-- **ComprehensivePricing2025.jsx** - Pricing page with plans and add-ons
-- **Sitemap.jsx** - Complete site navigation structure
-
-### LoadingSpinner
-Accessible loading component with smooth animations.
-
-### Enhanced Search Input
-
-- Real-time search suggestions
-- Recent and popular searches
-- Category-based filtering
-- Keyboard navigation support
-
-### Search Suggestions
-
-- Service-related keywords
-- Industry-specific terms
-- Technology stack references
-- Company and solution names
-
-## 📊 Analytics and SEO
-
-### SEO Features
-
-- Meta tags and descriptions
-- Structured data markup
-- Sitemap generation
-- Open Graph tags
-
-### Performance Monitoring
-
-- Lighthouse performance metrics
-- Core Web Vitals tracking
-- Page load optimization
-- Bundle size analysis
-
-## 🚀 Deployment
-
-### Build Process
-
-1. **Development**: `npm run dev` for local development
-2. **Build**: `npm run build` for production build
-3. **Start**: `npm start` for production server
-
-### Environment Variables
-
-- Configure environment variables in `.env.local`
-- Set production URLs and API endpoints
-- Configure analytics and monitoring
-
-## 📜 Available Scripts
+## 🚀 Available Scripts
 
 ### Development
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run type-check` - Run TypeScript checks
+```bash
+npm run dev          # Start development server
+npm run dev:fast     # Start with Turbo mode
+```
 
-### Performance
-- `npm run analyze` - Bundle analysis
-- `npm run perf: lighthouse` - Lighthouse audit
-- `npm run perf:monitor` - Performance monitoring
+### Building
+```bash
+npm run build        # Build for production
+npm run build:prod   # Build with production environment
+npm run analyze:bundle # Analyze bundle size
+```
+
+### Testing & Quality
+```bash
+npm run lint         # Run ESLint
+npm run lint:fix     # Fix ESLint issues
+npm run type-check   # TypeScript type checking
+npm run test         # Run tests
+npm run lighthouse   # Run Lighthouse audit
+```
 
 ### Security
-- `npm run security:audit` - Security audit
-- `npm run security:fix` - Fix security issues
-
-### Testing
-- `npm run test` - Run tests
-- `npm run test:watch` - Watch mode
-- `npm run test:coverage` - Coverage report
-
-## 🌐 SEO Features
-
-- **Meta Tags**: Comprehensive meta tag implementation
-- **Structured Data**: JSON-LD schema markup
-- **Sitemap**: Auto-generated XML sitemap
-- **Robots.txt**: Search engine directives
-- **Open Graph**: Social media optimization
-- **Twitter Cards**: Twitter sharing optimization
-
-## 🔒 Security Features
-
-- **Security Headers**: XSS, CSRF, and clickjacking protection
-- **Dependency Auditing**: Regular security scans
-- **Content Security Policy**: XSS prevention
-- **HTTPS Enforcement**: Secure connections
-- **Input Sanitization**: XSS prevention
-
-## 📊 Performance Metrics
-
-- **Lighthouse Score**: 90+ across all categories
-- **Core Web Vitals**: Optimized for Google ranking
-- **Bundle Size**: Optimized with tree shaking
-- **Image Optimization**: WebP/AVIF support
-- **Code Splitting**: Route-based splitting
+```bash
+npm run security:audit # Security audit
+npm run security:fix   # Fix security issues
+```
 
 ## 🏗️ Project Structure
 
 ```
-zion-tech-group/
-├── src/
-│   ├── components/     # React components
-│   ├── pages/         # Next.js pages
-│   ├── hooks/         # Custom React hooks
-│   ├── utils/         # Utility functions
-│   ├── types/         # TypeScript type definitions
-│   └── styles/        # Global styles
-├── public/            # Static assets
-├── scripts/           # Automation scripts
-├── __tests__/         # Test files
-└── docs/              # Documentation
+├── components/          # Reusable React components
+├── pages/              # Next.js pages
+├── public/             # Static assets
+├── styles/             # Global styles
+├── automation/         # Automation scripts
+└── scripts/            # Build and utility scripts
 ```
+
+## 🔧 Configuration
+
+### Environment Variables
+Create a `.env.local` file:
+```env
+NODE_ENV=production
+NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
+```
+
+### Next.js Configuration
+The `next.config.js` includes:
+- Security headers
+- Image optimization
+- Bundle optimization
+- Console log removal in production
+
+## 📊 Performance
+
+The website is optimized for:
+- **Core Web Vitals**: LCP, FID, CLS monitoring
+- **Bundle Size**: Tree shaking, code splitting
+- **Images**: WebP/AVIF formats, responsive images
+- **Caching**: Service worker, static generation
+
+## 🔒 Security
+
+- Content Security Policy (CSP)
+- Security headers (HSTS, X-Frame-Options, etc.)
+- Dependency auditing
+- Input sanitization
+
+## 📱 PWA Features
+
+- Service worker for offline functionality
+- Web app manifest
+- Installable on mobile devices
+- App shortcuts
+
+## 🚀 Deployment
+
+The site is deployed on Netlify with:
+- Automatic builds on git push
+- Preview deployments for PRs
+- Edge functions for dynamic content
+
+## 📈 Analytics
+
+- Web Vitals monitoring
+- Google Analytics integration
+- Performance metrics tracking
 
 ## 🤝 Contributing
 
-This is a proprietary project for Zion Tech Group. For feature requests or bug reports, please contact the development team.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and linting
+5. Submit a pull request
 
----
+## 📄 License
 
-**Zion Tech Group** - Transforming businesses through innovative technology solutions.
+MIT License - see LICENSE file for details
 
-## 📝 License
+## 📞 Contact
 
-For technical support or questions about the website: - **Email**: contact@ziontechgroup.com
-- **Documentation**: Check the `/docs` section
-- **Issues**: Use the GitHub issues page
-
-For support, email support@ziontechgroup.com or create an issue in the repository.
-
-## 🏢 About Zion Tech Group
-
-Zion Tech Group is a leading provider of revolutionary AI services, IT solutions, and micro SaaS development. We help businesses innovate, scale, and succeed in the digital age.
-
-### Services
-- **AI Services**: Machine learning, natural language processing, computer vision
-- **IT Solutions**: Cloud infrastructure, DevOps, cybersecurity
-- **Micro SaaS**: Scalable software solutions, API development
-- **Consulting**: Technology strategy, digital transformation
-
-- [Website](https://ziontechgroup.com)
-- [Documentation](https://docs.ziontechgroup.com)
-- [API Reference](https://api.ziontechgroup.com/docs)
-- [Community](https://community.ziontechgroup.com)
+- **Phone**: +1 302 464 0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
+- **Website**: https://ziontechgroup.com
