@@ -12,8 +12,14 @@ const { execSync } = require('child_process');
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation/logs/performance-monitor.log');
-    this.performanceReportFile = path.join(this.projectRoot, 'automation/logs/performance-report.json');
+    this.logFile = path.join(
+      this.projectRoot,
+      'automation/logs/performance-monitor.log'
+    );
+    this.performanceReportFile = path.join(
+      this.projectRoot,
+      'automation/logs/performance-report.json'
+    );
     this.lastCheck = null;
     this.checkInterval = 300000; // 5 minutes
     this.isRunning = false;
@@ -57,7 +63,7 @@ class PerformanceMonitor {
         checkTime,
         systemMetrics,
         buildMetrics,
-        bundleMetrics
+        bundleMetrics,
       };
 
       this.log(`Performance check completed in ${checkTime}ms`);
@@ -76,14 +82,14 @@ class PerformanceMonitor {
         uptime: process.uptime(),
         cpuUsage: process.cpuUsage(),
         nodeVersion: process.version,
-        platform: process.platform
+        platform: process.platform,
       };
 
       try {
         const diskUsage = execSync('df -h .', {
           cwd: this.projectRoot,
           encoding: 'utf8',
-          timeout: 10000
+          timeout: 10000,
         });
         metrics.diskUsage = diskUsage;
       } catch (_) {
@@ -111,7 +117,7 @@ class PerformanceMonitor {
         exists: true,
         lastModified: stats.mtime,
         size: buildSize,
-        age: Date.now() - stats.mtime.getTime()
+        age: Date.now() - stats.mtime.getTime(),
       };
     } catch (error) {
       this.log(`Failed to get build metrics: ${error.message}`);
@@ -129,7 +135,10 @@ class PerformanceMonitor {
       const hasAnalyze = packageJson.scripts && packageJson.scripts.analyze;
       return hasAnalyze
         ? { analyzerAvailable: true, script: 'npm run analyze' }
-        : { analyzerAvailable: false, recommendation: 'Consider adding bundle analyzer' };
+        : {
+            analyzerAvailable: false,
+            recommendation: 'Consider adding bundle analyzer',
+          };
     } catch (error) {
       this.log(`Failed to get bundle metrics: ${error.message}`);
       return { error: error.message };
@@ -162,7 +171,9 @@ class PerformanceMonitor {
     if (!this.lastCheck || !this.lastCheck.systemMetrics) return;
     try {
       const memory = this.lastCheck.systemMetrics.memory;
-      const memoryUsagePercent = memory.heapTotal ? (memory.heapUsed / memory.heapTotal) * 100 : 0;
+      const memoryUsagePercent = memory.heapTotal
+        ? (memory.heapUsed / memory.heapTotal) * 100
+        : 0;
       if (memoryUsagePercent > 80) {
         this.log('High memory usage detected, considering optimization...');
         await this.optimizeMemory();
@@ -196,8 +207,16 @@ class PerformanceMonitor {
 
   async optimizeBuild() {
     try {
-      execSync('npm run clean', { cwd: this.projectRoot, stdio: 'ignore', timeout: 30000 });
-      execSync('npm run build', { cwd: this.projectRoot, stdio: 'ignore', timeout: 300000 });
+      execSync('npm run clean', {
+        cwd: this.projectRoot,
+        stdio: 'ignore',
+        timeout: 30000,
+      });
+      execSync('npm run build', {
+        cwd: this.projectRoot,
+        stdio: 'ignore',
+        timeout: 300000,
+      });
       this.log('Build optimization completed');
     } catch (error) {
       this.log(`Build optimization failed: ${error.message}`);
@@ -206,9 +225,15 @@ class PerformanceMonitor {
 
   async optimizeBuildSize() {
     try {
-      const pkg = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
+      const pkg = JSON.parse(
+        fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8')
+      );
       if (pkg.scripts && pkg.scripts.analyze) {
-        execSync('npm run analyze', { cwd: this.projectRoot, stdio: 'ignore', timeout: 300000 });
+        execSync('npm run analyze', {
+          cwd: this.projectRoot,
+          stdio: 'ignore',
+          timeout: 300000,
+        });
         this.log('Bundle analysis completed');
       }
       await this.optimizeBuild();
@@ -221,10 +246,13 @@ class PerformanceMonitor {
     const report = {
       lastCheck: this.lastCheck,
       projectRoot: this.projectRoot,
-      recommendations: this.getPerformanceRecommendations()
+      recommendations: this.getPerformanceRecommendations(),
     };
     try {
-      fs.writeFileSync(this.performanceReportFile, JSON.stringify(report, null, 2));
+      fs.writeFileSync(
+        this.performanceReportFile,
+        JSON.stringify(report, null, 2)
+      );
     } catch (_) {}
   }
 
@@ -233,20 +261,29 @@ class PerformanceMonitor {
     if (!this.lastCheck) return recommendations;
     const metrics = this.lastCheck.systemMetrics;
     if (metrics && metrics.memory && metrics.memory.heapTotal) {
-      const memoryUsagePercent = (metrics.memory.heapUsed / metrics.memory.heapTotal) * 100;
+      const memoryUsagePercent =
+        (metrics.memory.heapUsed / metrics.memory.heapTotal) * 100;
       if (memoryUsagePercent > 80) {
-        recommendations.push('High memory usage detected. Consider optimizing memory usage.');
+        recommendations.push(
+          'High memory usage detected. Consider optimizing memory usage.'
+        );
       }
       if (memoryUsagePercent > 90) {
-        recommendations.push('Critical memory usage. Immediate optimization required.');
+        recommendations.push(
+          'Critical memory usage. Immediate optimization required.'
+        );
       }
     }
     if (this.lastCheck.buildMetrics && this.lastCheck.buildMetrics.exists) {
       if (this.lastCheck.buildMetrics.age > 3600000) {
-        recommendations.push('Build is stale. Consider rebuilding for optimal performance.');
+        recommendations.push(
+          'Build is stale. Consider rebuilding for optimal performance.'
+        );
       }
       if (this.lastCheck.buildMetrics.size > 100 * 1024 * 1024) {
-        recommendations.push('Large build size detected. Consider code splitting and optimization.');
+        recommendations.push(
+          'Large build size detected. Consider code splitting and optimization.'
+        );
       }
     }
     return recommendations;
@@ -258,9 +295,12 @@ class PerformanceMonitor {
         timestamp: new Date().toISOString(),
         error: error.message,
         stack: error.stack,
-        projectRoot: this.projectRoot
+        projectRoot: this.projectRoot,
       };
-      const errorFile = path.join(this.projectRoot, 'automation/logs/performance-error-report.json');
+      const errorFile = path.join(
+        this.projectRoot,
+        'automation/logs/performance-error-report.json'
+      );
       fs.writeFileSync(errorFile, JSON.stringify(errorReport, null, 2));
       this.log('Performance error reported');
     } catch (_) {}

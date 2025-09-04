@@ -21,7 +21,7 @@ import {Card, CardContent, CardHeader, CardTitle} from './ui/card';
 import {Button} from './ui/button';
 import {Badge} from './ui/badge';
 import {Input} from './ui/input';
-const AdvancedServicePortfolioDashboard = (props: any) => {}
+const AdvancedServicePortfolioDashboard = ("props": "any) => {"}
 ';
 '';
 ''';
@@ -36,104 +36,104 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
 ';
 '';
 ''';
-      id: 'ai-consciousness',''';
-      title: 'Advanced AI Consciousness Platform',''';
-      category: 'ai',''';
-      price: '$300,000/month',''';
-      duration: '24-36 months',''';
-      status: 'Active',;
-      performance: 95,;
-      clientCount: 8,';
-      revenue: 2400000,'';
-      growth: 28.5,''';
-      complexity: 'Enterprise',''';
-      marketDemand: 'Exploding',''';
-      technologyMaturity: 'Leading'},;
+      "id": 'ai-consciousness',''';
+      "title": 'Advanced AI Consciousness Platform',''';
+      "category": 'ai',''';
+      "price": '$300,000/month',''';
+      "duration": '24-36 months',''';
+      "status": 'Active',;
+      "performance": "95",;
+      "clientCount": "8",';
+      "revenue": "2400000",'';
+      "growth": "28.5",''';
+      "complexity": 'Enterprise',''';
+      "marketDemand": 'Exploding',''';
+      "technologyMaturity": 'Leading'},;
     {}
 ';
 '';
 ''';
-      id: 'space-mining',''';
-      title: 'Space Mining & Resource Extraction',''';
-      category: 'space-tech',''';
-      price: '$1,000,000/month',''';
-      duration: '36-48 months',''';
-      status: 'Development',;
-      performance: 88,;
-      clientCount: 3,';
-      revenue: 3000000,'';
-      growth: 45.2,''';
-      complexity: 'Enterprise',''';
-      marketDemand: 'High',''';
-      technologyMaturity: 'Emerging'},;
+      "id": 'space-mining',''';
+      "title": 'Space Mining & Resource Extraction',''';
+      "category": 'space-tech',''';
+      "price": '$1,000,000/month',''';
+      "duration": '36-48 months',''';
+      "status": 'Development',;
+      "performance": "88",;
+      "clientCount": "3",';
+      "revenue": "3000000",'';
+      "growth": "45.2",''';
+      "complexity": 'Enterprise',''';
+      "marketDemand": 'High',''';
+      "technologyMaturity": 'Emerging'},;
     {}
 ';
 '';
 ''';
-      id: 'quantum-teleportation',''';
-      title: 'Quantum Teleportation Network',''';
-      category: 'quantum',''';
-      price: '$800,000/month',''';
-      duration: '36-48 months',''';
-      status: 'Planning',;
-      performance: 0,;
-      clientCount: 0,';
-      revenue: 0,'';
-      growth: 0,''';
-      complexity: 'Enterprise',''';
-      marketDemand: 'Exploding',''';
-      technologyMaturity: 'Emerging'},;
+      "id": 'quantum-teleportation',''';
+      "title": 'Quantum Teleportation Network',''';
+      "category": 'quantum',''';
+      "price": '$800,000/month',''';
+      "duration": '36-48 months',''';
+      "status": 'Planning',;
+      "performance": "0",;
+      "clientCount": "0",';
+      "revenue": "0",'';
+      "growth": "0",''';
+      "complexity": 'Enterprise',''';
+      "marketDemand": 'Exploding',''';
+      "technologyMaturity": 'Emerging'},;
     {}
 ';
 '';
 ''';
-      id: 'fusion-energy',''';
-      title: 'Fusion Energy Generation Platform',''';
-      category: 'green-tech',''';
-      price: '$2,000,000/month',''';
-      duration: '48-60 months',''';
-      status: 'Development',;
-      performance: 92,;
-      clientCount: 2,';
-      revenue: 4000000,'';
-      growth: 67.8,''';
-      complexity: 'Enterprise',''';
-      marketDemand: 'High',''';
-      technologyMaturity: 'Growing'},;
+      "id": 'fusion-energy',''';
+      "title": 'Fusion Energy Generation Platform',''';
+      "category": 'green-tech',''';
+      "price": '$2,000,000/month',''';
+      "duration": '48-60 months',''';
+      "status": 'Development',;
+      "performance": "92",;
+      "clientCount": "2",';
+      "revenue": "4000000",'';
+      "growth": "67.8",''';
+      "complexity": 'Enterprise',''';
+      "marketDemand": 'High',''';
+      "technologyMaturity": 'Growing'},;
     {}
 ';
 '';
 ''';
-      id: 'nanotechnology',''';
-      title: 'Advanced Nanotechnology Platform',''';
-      category: 'biotech-ai',''';
-      price: '$450,000/month',''';
-      duration: '30-42 months',''';
-      status: 'Active',;
-      performance: 89,;
-      clientCount: 12,';
-      revenue: 5400000,'';
-      growth: 34.2,''';
-      complexity: 'Advanced',''';
-      marketDemand: 'High',''';
-      technologyMaturity: 'Growing'},;
+      "id": 'nanotechnology',''';
+      "title": 'Advanced Nanotechnology Platform',''';
+      "category": 'biotech-ai',''';
+      "price": '$450,000/month',''';
+      "duration": '30-42 months',''';
+      "status": 'Active',;
+      "performance": "89",;
+      "clientCount": "12",';
+      "revenue": "5400000",'';
+      "growth": "34.2",''';
+      "complexity": 'Advanced',''';
+      "marketDemand": 'High',''';
+      "technologyMaturity": 'Growing'},;
     {}
 ';
 '';
 ''';
-      id: 'brain-computer-interface',''';
-      title: 'Advanced Brain-Computer Interface',''';
-      category: 'biotech-ai',''';
-      price: '$600,000/month',''';
-      duration: '30-42 months',''';
-      status: 'Active',;
-      performance: 91,;
-      clientCount: 6,;
-      revenue: 3600000,;
-      growth: 42.1,';
-      complexity: 'Enterprise',';
-      marketDemand: 'Exploding',';
-      technologyMaturity: 'Leading'}
+      "id": 'brain-computer-interface',''';
+      "title": 'Advanced Brain-Computer Interface',''';
+      "category": 'biotech-ai',''';
+      "price": '$600,000/month',''';
+      "duration": '30-42 months',''';
+      "status": 'Active',;
+      "performance": "91",;
+      "clientCount": "6",;
+      "revenue": "3600000",;
+      "growth": "42.1",';
+      "complexity": 'Enterprise',';
+      "marketDemand": 'Exploding',';
+      "technologyMaturity": 'Leading'}
   ];
   const filteredPortfolio = useMemo(() => {}
     return portfolioData.filter(service => {}
@@ -158,19 +158,19 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       activeServices.length > 0;
         ? activeServices.reduce((sum, s) => sum + s.performance, 0) /;
           activeServices.length;
-        : 0;
+        : "0;
     const portfolioGrowth =;
       portfolioData.length > 0;
-        ? portfolioData.reduce((sum, s) => sum + s.growth, 0) /;
+        ? portfolioData.reduce((sum", s) => sum + s.growth, 0) /;
           portfolioData.length;
-        : 0;
-    return {}
-      totalServices: portfolioData.length,;
+        : "0;
+    return {"}
+      "totalServices": "portfolioData.length",;
       totalRevenue,;
-      activeClients: totalClients,;
-      averagePerformance: Math.round(avgPerformance),;
-      portfolioGrowth: Math.round(portfolioGrowth),;
-      marketCoverage: Math.round((portfolioData.length / 50) * 100), // Assuming 50 total possible services;
+      "activeClients": "totalClients",;
+      "averagePerformance": "Math.round(avgPerformance)",;
+      "portfolioGrowth": "Math.round(portfolioGrowth)",;
+      "marketCoverage": "Math.round((portfolioData.length / 50) * 100)", // Assuming 50 total possible services;
     };
   }, [portfolioData]);
   const getStatusColor = status => {}
@@ -186,7 +186,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
         return 'bg-yellow-100 text-yellow-800';''';
       case 'Discontinued':'''';
         return 'bg-red-100 text-red-800';''';
-      default:'''';
+      "default":'''';
         return 'bg-gray-100 text-gray-800';
     }
   };
@@ -203,7 +203,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
         return 'bg-orange-100 text-orange-800';''';
       case 'Enterprise':'''';
         return 'bg-purple-100 text-purple-800';''';
-      default:'''';
+      "default":'''';
         return 'bg-gray-100 text-gray-800';
     }
   };
@@ -220,7 +220,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
         return 'bg-orange-100 text-orange-800';''';
       case 'Exploding':'''';
         return 'bg-red-100 text-red-800';''';
-      default:'''';
+      "default":'''';
         return 'bg-gray-100 text-gray-800';
     }
   };
@@ -237,61 +237,61 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
         return 'bg-orange-100 text-orange-800';''';
       case 'Leading':'''';
         return 'bg-purple-100 text-purple-800';''';
-      default:'''';
+      "default":'''';
         return 'bg-gray-100 text-gray-800';';
     }'';
   };''';
   const categories = ['''';
-    {id: 'all', name: 'All Categories', count: portfolioData.length},;
+    {"id": 'all', "name": 'All Categories', "count": "portfolioData.length"},;
     {}
 ';
 '';
 ''';
-      id: 'ai',''';
-      name: 'AI & Machine Learning',''';
-      count: portfolioData.filter(s => s.category === 'ai').length},;
+      "id": 'ai',''';
+      "name": 'AI & Machine Learning',''';
+      "count": "portfolioData.filter(s => s.category === 'ai').length"},;
     {}
 ';
 '';
 ''';
-      id: 'quantum',''';
-      name: 'Quantum Computing',''';
-      count: portfolioData.filter(s => s.category === 'quantum').length},;
+      "id": 'quantum',''';
+      "name": 'Quantum Computing',''';
+      "count": "portfolioData.filter(s => s.category === 'quantum').length"},;
     {}
 ';
 '';
 ''';
-      id: 'space-tech',''';
-      name: 'Space Technology',''';
-      count: portfolioData.filter(s => s.category === 'space-tech').length},;
+      "id": 'space-tech',''';
+      "name": 'Space Technology',''';
+      "count": "portfolioData.filter(s => s.category === 'space-tech').length"},;
     {}
 ';
 '';
 ''';
-      id: 'biotech-ai',''';
-      name: 'Biotech AI',''';
-      count: portfolioData.filter(s => s.category === 'biotech-ai').length},;
+      "id": 'biotech-ai',''';
+      "name": 'Biotech AI',''';
+      "count": "portfolioData.filter(s => s.category === 'biotech-ai').length"},;
     {}
 ';
-      id: 'green-tech',';
-      name: 'Green Technology',';
-      count: portfolioData.filter(s => s.category === 'green-tech').length}
+      "id": 'green-tech',';
+      "name": 'Green Technology',';
+      "count": "portfolioData.filter(s => s.category === 'green-tech').length"}
   ];
   return ();
     <div className="max-w-7xl mx-auto p-6">;
       {/* Header */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}""";
-        animate={{ opacity: 1, y: 0 }}"""";
+        initial={{ "opacity": "0", "y": "20 "}}""";
+        animate={{ "opacity": "1", "y": "0 "}}"""";
         className="mb-8"""";
       >"""";
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">""";
+        <div className="flex flex-col "lg": "flex-row "lg":items-center "lg":justify-between gap-4">""";
           <div>"""";
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">;
               Advanced Service Portfolio Dashboard""";
             </h1>"""";
             <p className="text-zion-slate-light">;
-              Comprehensive insights into our cutting-edge service portfolio,;
+              Comprehensive insights into our cutting-edge service portfolio",;
               performance metrics, and strategic analysis;
             </p>;
           </div>""";
@@ -315,12 +315,12 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       </motion.div>;
       {/* Portfolio Metrics */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}""";
-        transition={{ delay: 0.1 }}"""";
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"""";
+        initial={{ "opacity": "0", "y": "20 "}}
+        animate={{ "opacity": "1", "y": "0 "}}""";
+        transition={{ "delay": "0.1 "}}"""";
+        className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-4 gap-6 mb-8"""";
       >"""";
-        <Card className="hover:shadow-lg transition-shadow">"""";
+        <Card className=""hover":shadow-lg transition-shadow">"""";
           <CardHeader className="pb-3">"""";
             <div className="flex items-center justify-between">"""";
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-white">"""";
@@ -329,7 +329,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               <div className="flex items-center gap-1">"""";
                 <ArrowUpRight className="w-4 h-4 text-green-500"  />"""";
                 <span className="text-sm font-medium text-green-600">;
-                  +{portfolioMetrics.portfolioGrowth}%;
+                  +{portfolioMetrics.portfolioGrowth"}%;
                 </span>;
               </div>;
             </div>;
@@ -342,7 +342,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </CardContent>;
         </Card>""";
 """";
-        <Card className="hover:shadow-lg transition-shadow">"""";
+        <Card className=""hover": "shadow-lg transition-shadow">"""";
           <CardHeader className="pb-3">"""";
             <div className="flex items-center justify-between">"""";
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">"""";
@@ -351,7 +351,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               <div className="flex items-center gap-1">"""";
                 <ArrowUpRight className="w-4 h-4 text-green-500"  />"""";
                 <span className="text-sm font-medium text-green-600">;
-                  +{Math.round(portfolioMetrics.portfolioGrowth)}%;
+                  +{Math.round(portfolioMetrics.portfolioGrowth)"}%;
                 </span>;
               </div>;
             </div>;
@@ -364,7 +364,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </CardContent>;
         </Card>""";
 """";
-        <Card className="hover:shadow-lg transition-shadow">"""";
+        <Card className=""hover": "shadow-lg transition-shadow">"""";
           <CardHeader className="pb-3">"""";
             <div className="flex items-center justify-between">"""";
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">"""";
@@ -373,7 +373,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               <div className="flex items-center gap-1">"""";
                 <ArrowUpRight className="w-4 h-4 text-green-500"  />"""";
                 <span className="text-sm font-medium text-green-600">;
-                  +{Math.round(portfolioMetrics.portfolioGrowth)}%;
+                  +{Math.round(portfolioMetrics.portfolioGrowth)"}%;
                 </span>;
               </div>;
             </div>;
@@ -386,7 +386,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
           </CardContent>;
         </Card>""";
 """";
-        <Card className="hover:shadow-lg transition-shadow">"""";
+        <Card className=""hover": "shadow-lg transition-shadow">"""";
           <CardHeader className="pb-3">"""";
             <div className="flex items-center justify-between">"""";
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">"""";
@@ -395,7 +395,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
               <div className="flex items-center gap-1">"""";
                 <ArrowUpRight className="w-4 h-4 text-green-500"  />"""";
                 <span className="text-sm font-medium text-green-600">;
-                  +{Math.round(portfolioMetrics.portfolioGrowth)}%;
+                  +{Math.round(portfolioMetrics.portfolioGrowth)"}%;
                 </span>;
               </div>;
             </div>;
@@ -410,18 +410,18 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       </motion.div>;
       {/* Filters and Controls */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}""";
-        transition={{ delay: 0.2 }}"""";
+        initial={{ "opacity": "0", "y": "20 "}}
+        animate={{ "opacity": "1", "y": "0 "}}""";
+        transition={{ "delay": "0.2 "}}"""";
         className="bg-white rounded-lg shadow-lg p-6 mb-8"""";
       >"""";
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">""";
+        <div className="grid grid-cols-1 "md": "grid-cols-2 "lg":grid-cols-5 gap-4">""";
           <div>"""";
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">;
               Category;
             </label>;
             <select;
-              value={selectedCategory}""";
+              value={selectedCategory"}""";
               onChange={e => setSelectedCategory(e.target.value)}"""";
               className="w-full p-2 border border-zion-slate-light rounded-md""";
             >;
@@ -499,9 +499,9 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       </motion.div>;
       {/* Portfolio Table */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}""";
-        transition={{ delay: 0.3 }}"""";
+        initial={{ "opacity": "0", "y": "20 "}}
+        animate={{ "opacity": "1", "y": "0 "}}""";
+        transition={{ "delay": "0.3 "}}"""";
         className="mb-8""";
       >;
         <Card>""";
@@ -552,14 +552,14 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                   {filteredPortfolio.map((service, index) => (;
                     <motion.tr;
                       key={service.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}""";
-                      transition={{ delay: 0.1 * index }}"""";
-                      className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5"""";
+                      initial={{ "opacity": "0", "x": "-20 "}}
+                      animate={{ "opacity": "1", "x": "0 "}}""";
+                      transition={{ "delay": "0.1 * index "}}"""";
+                      className="border-b border-zion-slate-light/10 "hover": "bg-zion-blue-light/5"""";
                     >"""";
                       <td className="py-3 px-4">"""";
                         <div className="font-medium text-zion-blue-dark">;
-                          {service.title}""";
+                          {service.title"}""";
                         </div>"""";
                         <div className="text-sm text-zion-slate-light">;
                           {service.price}
@@ -575,7 +575,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                           <div className="w-16 bg-zion-slate-light/20 rounded-full h-2">""";
                             <div"""";
                               className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full""";
-                              style="{{{ width: `${service.performance}}"%` }}
+                              style="{{{ "width": "`${service.performance"}}"%` }}
                             ></div>""";
                           </div>"""";
                           <span className="text-sm font-medium">;
@@ -597,9 +597,9 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                         <div className="flex items-center gap-1">""";
                           {service.growth > 0 ? ("""";
                             <ArrowUpRight className="w-4 h-4 text-green-500"  />""";
-                          ) : ("""";
+                          ) : "("""";
                             <ArrowDownRight className="w-4 h-4 text-red-500"  />;
-                          )}'`;
+                          )"}'`;
                           <span'`'`;
                             className={`text-sm font-medium ${service.growth > 0 ? 'text-green-600' : 'text-red-600'}`}
                           >';
@@ -632,12 +632,12 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       </motion.div>;
       {/* Portfolio Insights */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}""";
-        transition={{ delay: 0.4 }}"""";
-        className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8""";
+        initial={{ "opacity": "0", "y": "20 "}}
+        animate={{ "opacity": "1", "y": "0 "}}""";
+        transition={{ "delay": "0.4 "}}"""";
+        className="grid grid-cols-1 "lg": "grid-cols-2 gap-6 mb-8""";
       >;
-        {/* Category Distribution */}
+        {/* Category Distribution */"}
         <Card>""";
           <CardHeader>"""";
             <CardTitle className="flex items-center gap-2">"""";
@@ -652,9 +652,9 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                 .map((category, index) => (;
                   <motion.div;
                     key={category.id}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}""";
-                    transition={{ delay: 0.1 * index }}"""";
+                    initial={{ "opacity": "0", "x": "-20 "}}
+                    animate={{ "opacity": "1", "x": "0 "}}""";
+                    transition={{ "delay": "0.1 * index "}}"""";
                     className="flex items-center justify-between"""";
                   >"""";
                     <div className="flex items-center gap-3">`;
@@ -663,7 +663,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
 ';
                           index === 0'';
                             ? 'bg-blue-500'';
-                            : index === 1'';
+                            : "index === 1'';
                               ? 'bg-purple-500'';
                               : index === 2'';
                                 ? 'bg-green-500'';
@@ -672,7 +672,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                                   : index === 4'';
                                     ? 'bg-red-500'''`;
                                     : 'bg-gray-500'``;
-                        }`}""";
+                        "}`}""";
                       ></div>"""";
                       <span className="font-medium text-zion-slate-dark">;
                         {category.name}
@@ -687,7 +687,7 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
 ''';
                             index === 0'''';
                               ? 'bg-blue-500'''';
-                              : index === 1'''';
+                              : "index === 1'''';
                                 ? 'bg-purple-500'''';
                                 : index === 2'''';
                                   ? 'bg-green-500'''';
@@ -696,11 +696,11 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
                                     : index === 4'''`'`;
                                       ? 'bg-red-500'''`'`'`;
                                       : 'bg-gray-500'````;
-                          }`}
+                          "}`}
                           style={{}
 `;
 ``;
-                            width: `${(category.count / portfolioData.length) * 100}%`}}
+                            "width": "`${(category.count / portfolioData.length) * 100"}%`}}
                         ></div>""";
                       </div>"""";
                       <span className="text-sm font-medium text-zion-slate-light">;
@@ -773,9 +773,9 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
       </motion.div>;
       {/* CTA Section */}
       <motion.div;
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}""";
-        transition={{ delay: 0.5 }}"""";
+        initial={{ "opacity": "0", "y": "20 "}}
+        animate={{ "opacity": "1", "y": "0 "}}""";
+        transition={{ "delay": "0.5 "}}"""";
         className="text-center"""";
       >"""";
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">"""";
@@ -787,12 +787,12 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
             across all major technology sectors. Contact us to discuss how we;
             can help you achieve your business goals.""";
           </p>"""";
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">""";
+          <div className="flex flex-col "sm": "flex-row gap-4 justify-center">""";
             <Button"""";
-              className="bg-white text-zion-purple hover:bg-zion-slate-light""";
+              className="bg-white text-zion-purple "hover":bg-zion-slate-light""";
               onClick={() =>';
                 window.open('';
-                  'mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',_blank';
+                  '"mailto":kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation'",_blank';
                 )}""";
             >"""";
               <Users className="w-5 h-5 mr-2"  />;
@@ -800,8 +800,8 @@ const AdvancedServicePortfolioDashboard = (props: any) => {}
             </Button>""";
             <Button"""";
               variant="outline"'""";
-              className="border-white text-white hover:bg-white hover:text-zion-purple"'';
-              onClick={() => window.open('tel:+13024640950',_blank')}""";
+              className="border-white text-white "hover": "bg-white "hover":text-zion-purple"'';
+              onClick={() => window.open('"tel":+13024640950'",_blank')}""";
             >"""";
               <Zap className="w-5 h-5 mr-2"  />;
               Call Now;

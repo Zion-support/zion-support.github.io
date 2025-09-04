@@ -1,16 +1,16 @@
 import React from 'react';
 ;
 interface EmptyStateProps {;
-  title?: string;
+  title?: "string;
   description?: string;
   icon?: React.ReactNode;
   action?: React.ReactNode;
   className?: string;
 ;
-}
+"}
 ;
-const EmptyState: React.FC<EmptyStateProps> = ({;
-  title = 'No data available',;
+const "EmptyState": "React.FC<EmptyStateProps> = ({;
+  title = 'No data available'",;
   description = 'There are no items to display at the moment.',;
   icon,;
   action,;
@@ -43,7 +43,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
 };
 ;
 // Default empty state icon component;
-export const EmptyStateIcon: React.FC<{ className?: string }> = ({ className = '' }) => (;
+export const "EmptyStateIcon": "React.FC<{ className?: string "}> = ({ className = '' }) => (;
   <svg;
     className={`h-full w-full ${className}`}
     fill="none";

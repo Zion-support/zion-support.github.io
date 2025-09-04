@@ -12,8 +12,14 @@ const { execSync } = require('child_process');
 class BuildMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation/logs/build-monitor.log');
-    this.buildReportFile = path.join(this.projectRoot, 'automation/logs/build-report.json');
+    this.logFile = path.join(
+      this.projectRoot,
+      'automation/logs/build-monitor.log'
+    );
+    this.buildReportFile = path.join(
+      this.projectRoot,
+      'automation/logs/build-report.json'
+    );
     this.lastBuild = null;
     this.buildInterval = 300000; // 5 minutes
     this.isRunning = false;
@@ -43,13 +49,17 @@ class BuildMonitor {
       this.log('Starting build process...');
       const startTime = Date.now();
 
-      execSync('npm run clean', { cwd: this.projectRoot, stdio: 'ignore', timeout: 30000 });
+      execSync('npm run clean', {
+        cwd: this.projectRoot,
+        stdio: 'ignore',
+        timeout: 30000,
+      });
       this.log('Build cleaned');
 
       const buildOutput = execSync('npm run build', {
         cwd: this.projectRoot,
         encoding: 'utf8',
-        timeout: 300000
+        timeout: 300000,
       });
 
       const endTime = Date.now();
@@ -59,7 +69,7 @@ class BuildMonitor {
         timestamp: new Date().toISOString(),
         success: true,
         buildTime,
-        output: buildOutput
+        output: buildOutput,
       };
 
       this.log(`Build completed successfully in ${buildTime}ms`);
@@ -70,7 +80,7 @@ class BuildMonitor {
         timestamp: new Date().toISOString(),
         success: false,
         error: error.message,
-        output: error.stdout || error.stderr
+        output: error.stdout || error.stderr,
       };
       await this.saveBuildReport();
       await this.handleBuildFailure(error);
@@ -80,9 +90,17 @@ class BuildMonitor {
   async handleBuildFailure(error) {
     this.log('Handling build failure...');
     try {
-      execSync('npm run lint:fix', { cwd: this.projectRoot, stdio: 'ignore', timeout: 60000 });
+      execSync('npm run lint:fix', {
+        cwd: this.projectRoot,
+        stdio: 'ignore',
+        timeout: 60000,
+      });
       this.log('Applied linting fixes');
-      execSync('npm run build', { cwd: this.projectRoot, stdio: 'ignore', timeout: 300000 });
+      execSync('npm run build', {
+        cwd: this.projectRoot,
+        stdio: 'ignore',
+        timeout: 300000,
+      });
       this.log('Build fixed and completed successfully');
     } catch (fixError) {
       this.log(`Failed to fix build: ${fixError.message}`);
@@ -95,7 +113,7 @@ class BuildMonitor {
       lastBuild: this.lastBuild,
       projectRoot: this.projectRoot,
       nodeVersion: process.version,
-      platform: process.platform
+      platform: process.platform,
     };
     try {
       fs.writeFileSync(this.buildReportFile, JSON.stringify(report, null, 2));
@@ -108,9 +126,12 @@ class BuildMonitor {
         timestamp: new Date().toISOString(),
         error: error.message,
         stack: error.stack,
-        projectRoot: this.projectRoot
+        projectRoot: this.projectRoot,
       };
-      const failureFile = path.join(this.projectRoot, 'automation/logs/build-failure-report.json');
+      const failureFile = path.join(
+        this.projectRoot,
+        'automation/logs/build-failure-report.json'
+      );
       fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));
       this.log('Build failure reported');
     } catch (_) {}

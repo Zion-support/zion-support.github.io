@@ -1,12 +1,10 @@
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  className?: string
-}
-
-export function Input(props: any) {
-  return (
-    <input className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file: borde r-0 file: b g-transparent file: tex t-sm file: fon t-medium placeholder: tex t-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled: curso r-not-allowed disabled:opacity-50 ${className}`}
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {;
+  className?: "string;
+"}
+export function Input("props": "any) {;
+  return (;
+    <input className={`flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background "file": borde r-0 "file": b g-transparent "file": tex t-sm "file": fon t-medium "placeholder": tex t-muted-foreground focus-"visible":outline-none focus-"visible":ring-2 focus-"visible":ring-ring focus-"visible":ring-offset-2 "disabled": curso r-not-allowed "disabled":opacity-50 ${className"}`}
       {...props}
-      />
-  )
+      />;
+  );
 }
-

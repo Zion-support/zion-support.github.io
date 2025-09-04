@@ -1,11 +1,11 @@
 import React from 'react';
 ;
 interface PageTransitionProps {;
-  children: React.ReactNode;
+  "children": "React.ReactNode;
 ;
-}
+"}
 ;
-const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {;
+const "PageTransition": "React.FC<PageTransitionProps> = ({ children "}) => {;
   return (;
     <div className="min-h-screen">;
       {children}

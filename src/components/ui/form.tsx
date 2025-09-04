@@ -1,42 +1,42 @@
 import React from 'react';
 ;
 interface FormProps extends React.FormHTMLAttributes<HTMLFormElement> {;
-  children: React.ReactNode;
-}
+  "children": "React.ReactNode;
+"}
 ;
-export function Form(props: any) {;
+export function Form("props": "any) {;
   return (;
-    <form {...props}>;
+    <form {...props"}>;
       {children}
     </form>;
   );
 }
 ;
 interface FormItemProps {;
-  children: React.ReactNode;
+  "children": "React.ReactNode;
   className?: string;
 ;
-}
+"}
 ;
-export function FormItem(props: any) {;
+export function FormItem("props": "any) {;
   return (;
-    <div className={`space-y-2 ${className}`}>;
+    <div className={`space-y-2 ${className"}`}>;
       {children}
     </div>;
   );
 }
 ;
 interface FormLabelProps {;
-  children: React.ReactNode;
+  "children": "React.ReactNode;
   className?: string;
   htmlFor?: string;
 ;
-}
+"}
 ;
-export function FormLabel(props: any) {;
+export function FormLabel("props": "any) {;
   return (;
     <label;
-      htmlFor={htmlFor}
+      htmlFor={htmlFor"}
       className={`block text-sm font-medium ${className}`}
     >;
       {children}
@@ -45,30 +45,30 @@ export function FormLabel(props: any) {;
 }
 ;
 interface FormFieldProps {;
-  children: React.ReactNode;
+  "children": "React.ReactNode;
   className?: string;
 ;
-}
+"}
 ;
-export function FormField(props: any) {;
+export function FormField("props": "any) {;
   return (;
-    <div className={`space-y-1 ${className}`}>;
+    <div className={`space-y-1 ${className"}`}>;
       {children}
     </div>;
   );
 }
 ;
 interface FormMessageProps {;
-  children?: React.ReactNode;
+  children?: "React.ReactNode;
   className?: string;
 ;
-}
+"}
 ;
-export function FormMessage(props: any) {;
+export function FormMessage("props": "any) {;
   if (!children) return null;
 ;
   return (;
-    <p className={`text-sm text-red-600 ${className}`}>;
+    <p className={`text-sm text-red-600 ${className"}`}>;
       {children}
     </p>;
   );

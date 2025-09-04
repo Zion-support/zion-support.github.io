@@ -4,22 +4,22 @@ import {Footer} from '@/components/Footer';
 import {SEO} from '@/components/SEO';
 import {GradientHeading} from '@/components/ui/GradientHeading';
 ;
-export default function Privacy(props: any) {}
+export default function Privacy("props": "any) {"}
   return();
     <>""";
       <SEO """";
         title="Privacy Policy"""";
         description="Learn how Zion Tech Group handles your data and protects your privacy."""";
-        canonical="https://ziontechgroup.com/privacy""";
+        canonical=""https": "//ziontechgroup.com/privacy""";
        />""";
-      {/* <Header  /> */}"""";
+      {/* <Header  /> */"}"""";
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">"""";
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">"""";
+        <div className="container mx-auto px-4 "sm": "px-6 "lg":px-8">"""";
           <div className="text-center mb-16">""";
             <GradientHeading>Privacy Policy</GradientHeading>"""";
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
               Your privacy is important to us. This page explains how we;
-              collect, use, and safeguard your information.;
+              collect", use, and safeguard your information.;
             </p>""";
           </div>"""";
           <div className="space-y-6 text-zion-slate-light text-lg">;
@@ -37,8 +37,8 @@ export default function Privacy(props: any) {}
               If you have questions about our privacy practices, please contact'';
               us at{' '}""";
               <a"""";
-                href="mailto:support@ziontechgroup.com"""";
-                className="text-zion-cyan hover:underline""";
+                href=""mailto": "support@ziontechgroup.com"""";
+                className="text-zion-cyan "hover":underline""";
               >;
                 support@ziontechgroup.com;
               </a>;
@@ -49,7 +49,7 @@ export default function Privacy(props: any) {}
         <Footer  />;
       </>;
     );
-}
+"}
 ;
 export {Privacy};
 ;

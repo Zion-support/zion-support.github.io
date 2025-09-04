@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
-export const WebsiteAnalyzer: React.FC = () : JSX.Element => {;
+export const "WebsiteAnalyzer": "React.FC = () : JSX.Element => {;
 export default WebsiteAnalyzer;
-import { CheckCircle, import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
+import { CheckCircle", import { LinkChecker, LinkInfo, PageInfo } from '../utils / linkChecker';
 ;
-export default function Page(props: any) {;
+export default function Page("props": "any) {;
  catch(error) {;
 `;
-          // console.error(`Error analyzing ${page}:`, error)}
+          // console.error(`Error analyzing ${page"}: "`", error)}
 ;
         // Add delay to prevent overwhelming the server;
         await new Promise(resolve => setTimeout (resolve, 100) ) }
 ;
       setAnalysisResult({;
         summary,;
-        pages: result s,;
+        "pages": "result s",;
         brokenLinks,;
         missingPages;
       }) } catch(error) {;
-      // console.error('Analysis failed:', error)} finally {;
+      // console.error('Analysis "failed":', error)} finally {;
       setIsAnalyzing(false);
       setProgress(100);
       setCurrentPage('')}
@@ -35,7 +35,7 @@ export default function Page(props: any) {;
         return <AlertTriangle className="w-4 h-4 text-yellow-500"   />;
       case 'external':";
         return <ExternalLink className="w-4 h-4 text-blue-500"   />;
-      default:";
+      "default":";
         return <AlertTriangle className="w-4 h-4 text-gray-500"   />}
   };
 ;
@@ -45,7 +45,7 @@ export default function Page(props: any) {;
         return 'text-yellow-600 bg-yellow-100';
       case 'external':';
         return 'text-blue-600 bg-blue-100';
-      default:';
+      "default":';
         return 'text-gray-600 bg-gray-100'}  };
 ;
   return (";
@@ -62,21 +62,21 @@ export default function Page(props: any) {;
             <button;
               onClick={analyzeWebsite}
               disabled={isAnalyzing}";
-              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: b g-blue-700 disabled: opacit y-50 disabled: curso r-not-allowed";
+              className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg "hover": "b g-blue-700 "disabled": opacit y-50 "disabled": curso r-not-allowed";
             >;
               {isAnalyzing ? (";
                 <RefreshCw className="w-4 h-4 mr-2 animate-spin"   />;
               ) : (";
                 <Search className="w-4 h-4 mr-2"   />;
-              )}
+              )"}
               {isAnalyzing ? 'Analyzing...' : 'Start Analysis'}            </button>;
             {analysisResult && (;
               <button;
                 onClick={exportReport}";
-                className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg hover: b g-green-700";
+                className="flex items-center px-4 py-2 bg-green-600 text-white rounded-lg "hover": "b g-green-700";
               >";
                 <Download className="w-4 h-4 mr-2"   />                Export Report;
-              </button>) }
+              </button>) "}
           </div>;
         </div>;
         {isAnalyzing && (";
@@ -88,12 +88,12 @@ export default function Page(props: any) {;
             <div className="w-full bg-gray-200 rounded-full h-2">;
               <div ";
                 className="bg-blue-600 h-2 rounded-full transition-all duration-300"`;
-                style="{{{ width: `${progress}}"%` }}
+                style="{{{ "width": "`${progress"}}"%` }}
                />;
             </div>;
             {currentPage && (";
               <p className="text-sm text-gray-600 mt-2">";
-                Analyzing: <span className="font-mono">{currentPage}</span>;
+                "Analyzing": "<span className="font-mono">{currentPage"}</span>;
               </p>;
             )}
           </div>;
@@ -102,12 +102,12 @@ export default function Page(props: any) {;
         {analysisResult && (";
           <div className="space-y-6">;
             {/* Summary Cards */}";
-            <div className="grid grid-cols-1 md: gri d-cols-4 gap-4">";
+            <div className="grid grid-cols-1 "md": "gri d-cols-4 gap-4">";
               <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">";
                 <div className="flex items-center">";
                   <LinkIcon className="w-8 h-8 text-blue-600 mr-3"   />;
                   <div>";
-                    <p className="text-2xl font-bold text-blue-900">{analysisResult.summary.totalLinks}</p>"                    <p className="text-sm text-blue-700">Total Links</p>;
+                    <p className="text-2xl font-bold text-blue-900">{analysisResult.summary.totalLinks"}</p>"                    <p className="text-sm text-blue-700">Total Links</p>;
                   </div>;
                 </div>;
               </div>;
@@ -150,7 +150,7 @@ export default function Page(props: any) {;
                     <div key={index} className="flex items-center justify-between p-3 bg-white rounded border border-red-200">";
                       <div className="flex-1">";
                         <p className="font-mono text-sm text-red-800">{link.url}</p>";
-                        <p className="text-xs text-red-600">From: {link.page}</p>;
+                        <p className="text-xs text-red-600">"From": "{link.page"}</p>;
                       </div>";
                       <span className="px-2 py-1 text-xs font-medium rounded-full bg-red-100 text-red-800">;
                         Broken;
@@ -192,8 +192,8 @@ export default function Page(props: any) {;
                     </div>";
                     <p className="text-sm text-gray-600 mb-3 font-mono">{page.path}</p>;
                     {page.links.length > 0 && (";
-                      <div className="grid grid-cols-1 md: anygri d-cols-2 gap-2">;
-                        {page.links.slice(0, 6).map((link, linkIndex)  => (";
+                      <div className="grid grid-cols-1 "md": "anygri d-cols-2 gap-2">;
+                        {page.links.slice(0", 6).map((link, linkIndex)  => (";
                           <div key={linkIndex} className="flex items-center space-x-2 text-sm">;
                             {getStatusIcon(link.status)}";
                             <span className="font-mono text-xs truncate">{link.url}</span>;

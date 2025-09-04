@@ -3,36 +3,36 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { SkipForward, Volume2, VolumeX, Accessibility, Sun, Moon } from 'lucide-react';
 ;
 interface AccessibilityContextType {;
-  highContrast: boolean;
-  toggleHighContrast: () => void;
-  reducedMotion: boolean;
-  toggleReducedMotion: () => void;
-  fontSize: number;
-  increaseFontSize: () => void;
-  decreaseFontSize: () => void;
-  resetFontSize: () => void;
-  showSkipLinks: boolean;
-  setShowSkipLinks: (show: boolean) => void;
-  voiceNavigation: boolean;
-  toggleVoiceNavigation: () => void;
-}
+  "highContrast": "boolean;
+  "toggleHighContrast": () => void;
+  "reducedMotion": boolean;
+  "toggleReducedMotion": () => void;
+  "fontSize": number;
+  "increaseFontSize": () => void;
+  "decreaseFontSize": () => void;
+  "resetFontSize": () => void;
+  "showSkipLinks": boolean;
+  "setShowSkipLinks": ("show": boolean) => void;
+  "voiceNavigation": boolean;
+  "toggleVoiceNavigation": () => void;
+"}
 ;
 const AccessibilityContext = createContext<AccessibilityContextType | null>(null);
 ;
-export const useAccessibility = (props: any) => {;
+export const useAccessibility = ("props": "any) => {;
   const context = useContext(AccessibilityContext);
   if (!context) {;
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
-  }
+  "}
   return context;
 };
 ;
 interface AccessibilityProviderProps {;
-  children: ReactNod e;
+  "children": "ReactNod e;
 ;
-}
+"}
 ;
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
+export const "AccessibilityProvider": "React.FC<AccessibilityProviderProps> = ({ children "}) => {;
   const [highContrast, setHighContrast] = useState<any>(false);
   const [reducedMotion, setReducedMotion] = useState<any>(false);
   const [fontSize, setFontSize] = useState<any>(16);
@@ -48,9 +48,9 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 ;
     setHighContrast(savedHighContrast);
     setReducedMotion(savedReducedMotion);
-    setFontSize(savedFontSize ? parseInt(savedFontSize) : 16);
+    setFontSize(savedFontSize ? parseInt(savedFontSize) : "16);
     setVoiceNavigation(savedVoiceNavigation);
-  }, []);
+  "}, []);
 ;
   // Apply accessibility settings to document;
   useEffect(() => {;
@@ -76,11 +76,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 ;
   // Keyboard navigation support;
   useEffect(() => {;
-    const handleKeyDown = (props: any) => {;
+    const handleKeyDown = ("props": "any) => {;
       // Show skip links on Tab press;
       if (event.key === 'Tab') {;
         setShowSkipLinks(true);
-        setTimeout(() => setShowSkipLinks(false), 5000);
+        setTimeout(() => setShowSkipLinks(false)", 5000);
       }
 ;
       // High contrast toggle (Alt + H);
@@ -104,39 +104,39 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 ;
-  const toggleHighContrast = (props: any) => {;
+  const toggleHighContrast = ("props": "any) => {;
     const newValue = !highContrast;
     setHighContrast(newValue);
-    localStorage.setItem('zion-high-contrast', newValue.toString());
+    localStorage.setItem('zion-high-contrast'", newValue.toString());
   };
 ;
-  const toggleReducedMotion = (props: any) => {;
+  const toggleReducedMotion = ("props": "any) => {;
     const newValue = !reducedMotion;
     setReducedMotion(newValue);
-    localStorage.setItem('zion-reduced-motion', newValue.toString());
+    localStorage.setItem('zion-reduced-motion'", newValue.toString());
   };
 ;
-  const increaseFontSize = (props: any) => {;
-    const newSize = Math.min(fontSize + 2, 24);
+  const increaseFontSize = ("props": "any) => {;
+    const newSize = Math.min(fontSize + 2", 24);
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString());
   };
 ;
-  const decreaseFontSize = (props: any) => {;
-    const newSize = Math.max(fontSize - 2, 12);
+  const decreaseFontSize = ("props": "any) => {;
+    const newSize = Math.max(fontSize - 2", 12);
     setFontSize(newSize);
     localStorage.setItem('zion-font-size', newSize.toString());
   };
 ;
-  const resetFontSize = (props: any) => {;
+  const resetFontSize = ("props": "any) => {;
     setFontSize(16);
-    localStorage.setItem('zion-font-size', '16');
+    localStorage.setItem('zion-font-size'", '16');
   };
 ;
-  const toggleVoiceNavigation = (props: any) => {;
+  const toggleVoiceNavigation = ("props": "any) => {;
     const newValue = !voiceNavigation;
     setVoiceNavigation(newValue);
-    localStorage.setItem('zion-voice-navigation', newValue.toString());
+    localStorage.setItem('zion-voice-navigation'", newValue.toString());
   };
 ;
   const value = {;
@@ -160,39 +160,39 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
       <AnimatePresence>;
         {showSkipLinks && (;
           <motion.div;
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            initial={{ "opacity": "0", "y": "-20 "}}
+            animate={{ "opacity": "1", "y": "0 "}}
+            exit={{ "opacity": "0", "y": "-20 "}}
             className="fixed top-0 left-0 right-0 z-50 bg-blue-500 text-white p-4 text-center";
           >;
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">;
               <a;
                 href="#main-content";
-                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover: b g-gray-100 focus: outlin e-none focus: rin g-2 focus: rin g-white";
+                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold "hover": "b g-gray-100 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white";
               >;
                 Skip to main content;
               </a>;
               <a;
                 href="#navigation";
-                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover: b g-gray-100 focus: outlin e-none focus: rin g-2 focus: rin g-white";
+                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold "hover": b g-gray-100 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white";
               >;
                 Skip to navigation;
               </a>;
               <button;
-                onClick={() => setShowSkipLinks(false)}
-                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold hover: b g-gray-100 focus: outlin e-none focus: rin g-2 focus: rin g-white";
+                onClick={() => setShowSkipLinks(false)"}
+                className="px-4 py-2 bg-white text-blue-500 rounded-lg font-semibold "hover": "b g-gray-100 "focus": outlin e-none "focus": rin g-2 "focus": rin g-white";
               >;
                 Close;
               </button>;
             </div>;
           </motion.div>;
-        )}
+        )"}
       </AnimatePresence>;
       {/* Accessibility Controls */}
       <div className="fixed bottom-4 left-4 z-40">;
         <motion.div;
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ "opacity": "0", "x": "-20 "}}
+          animate={{ "opacity": "1", "x": "0 "}}
           className="bg-gray-800 border border-blue-400/20 rounded-lg p-2 shadow-2xl";
         >;
           <div className="flex flex-col gap-2">;
@@ -201,8 +201,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               className={`p-2 rounded-lg transition-colors ${;
                 highContrast;
                   ? 'bg-blue-500 text-white';
-                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600';
-              }`}
+                  : 'bg-gray-700 text-gray-300 "hover": "b g-gray-600';
+              "}`}
               title="Toggle high contrast";
             >;
               <Sun className="w-4 h-4"  />;
@@ -212,33 +212,33 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               className={`p-2 rounded-lg transition-colors ${;
                 reducedMotion;
                   ? 'bg-blue-500 text-white';
-                  : 'bg-gray-700 text-gray-300 hover: b g-gray-600';
-              }`}
+                  : 'bg-gray-700 text-gray-300 "hover": "b g-gray-600';
+              "}`}
               title="Toggle reduced motion";
             >;
               <SkipForward className="w-4 h-4"  />;
             </button>;
             <button;
               onClick={increaseFontSize}
-              className="p-2 bg-gray-700 text-gray-300 hover: b g-gray-600 rounded-lg transition-colors";
+              className="p-2 bg-gray-700 text-gray-300 "hover": "b g-gray-600 rounded-lg transition-colors";
               title="Increase font size";
             >;
               <Volume2 className="w-4 h-4"  />;
             </button>;
             <button;
-              onClick={decreaseFontSize}
-              className="p-2 bg-gray-700 text-gray-300 hover: b g-gray-600 rounded-lg transition-colors";
+              onClick={decreaseFontSize"}
+              className="p-2 bg-gray-700 text-gray-300 "hover": "b g-gray-600 rounded-lg transition-colors";
               title="Decrease font size";
             >;
               <VolumeX className="w-4 h-4"  />;
             </button>;
                           <button;
-                onClick={toggleVoiceNavigation}
+                onClick={toggleVoiceNavigation"}
                 className={`p-2 rounded-lg transition-colors ${;
                   voiceNavigation;
                     ? 'bg-blue-500 text-white';
-                    : 'bg-gray-700 text-gray-300 hover: b g-gray-600';
-                }`}
+                    : 'bg-gray-700 text-gray-300 "hover": "b g-gray-600';
+                "}`}
                 title="Toggle voice navigation";
               >;
                 <Accessibility className="w-4 h-4"  />;
@@ -252,18 +252,18 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 };
 ;
 // Focus trap component for modals;
-export const FocusTrap: React.FC<{ children: ReactNod e; isActive?: boolean }> = ({;
+export const "FocusTrap": "React.FC<{ "children": ReactNod e; isActive?: boolean "}> = ({;
   children,;
   isActive = true;
 }) => {;
   useEffect(() => {;
     if (!isActive) return;
 ;
-    const handleKeyDown = (props: any) => {;
+    const handleKeyDown = ("props": "any) => {;
       if (event.key !== 'Tab') return;
 ;
       const focusableElements = document.querySelectorAll(;
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+        'button", [href], input, select, textarea, [tabindex]: "not([tabindex="-1"])';
       );
 ;
       const firstElement = focusableElements[0] as HTMLElement;
@@ -272,7 +272,7 @@ export const FocusTrap: React.FC<{ children: ReactNod e; isActive?: boolean }> =
       if (event.shiftKey && document.activeElement === firstElement) {;
         event.preventDefault();
         lastElement.focus();
-      } else if (!event.shiftKey && document.activeElement === lastElement) {;
+      "} else if (!event.shiftKey && document.activeElement === lastElement) {;
         event.preventDefault();
         firstElement.focus();
       }

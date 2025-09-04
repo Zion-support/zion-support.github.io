@@ -12,12 +12,16 @@ class MasterOrchestrator {
     this.logFile = path.join(this.logsDir, 'master-orchestrator.log');
     this.startTime = Date.now();
     this.results = {};
-    try { fs.mkdirSync(this.logsDir, { recursive: true }); } catch {}
+    try {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    } catch {}
   }
 
   log(message, level = 'INFO') {
     const line = `[${new Date().toISOString()}] [${level}] ${message}\n`;
-    try { fs.appendFileSync(this.logFile, line); } catch {}
+    try {
+      fs.appendFileSync(this.logFile, line);
+    } catch {}
     process.stdout.write(line);
   }
 
@@ -26,7 +30,11 @@ class MasterOrchestrator {
       const out = execSync(cmd, { stdio: 'pipe', encoding: 'utf8' });
       return { success: true, output: out };
     } catch (e) {
-      return { success: false, error: e.message, output: e.stdout?.toString?.() || '' };
+      return {
+        success: false,
+        error: e.message,
+        output: e.stdout?.toString?.() || '',
+      };
     }
   }
 
@@ -40,7 +48,7 @@ class MasterOrchestrator {
       ['codeQuality', 'node automation/code-quality-monitor.cjs'],
       ['build', 'npm run build'],
       ['lint', 'npm run lint'],
-      ['typeCheck', 'npm run type-check']
+      ['typeCheck', 'npm run type-check'],
     ];
 
     for (const [name, cmd] of tasks) {
@@ -64,7 +72,12 @@ class MasterOrchestrator {
       total,
       passed,
       failed: total - passed,
-      status: passed === total ? 'HEALTHY' : passed >= Math.floor(total * 0.8) ? 'WARNING' : 'CRITICAL'
+      status:
+        passed === total
+          ? 'HEALTHY'
+          : passed >= Math.floor(total * 0.8)
+            ? 'WARNING'
+            : 'CRITICAL',
     };
 
     try {
@@ -74,7 +87,9 @@ class MasterOrchestrator {
       );
     } catch {}
 
-    this.log(`Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`);
+    this.log(
+      `Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`
+    );
     return passed === total;
   }
 }

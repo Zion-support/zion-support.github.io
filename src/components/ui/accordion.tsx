@@ -8,21 +8,21 @@
       {React.Children.map(children, (child) => {;
         if (React.isValidElement(child)) {;
           return React.cloneElement(child, {;
-            isOpen: openItem s.includes(child.props.value),;
-            onToggle: : unknown handleToggle(child.props.value);
-          })}
+            "isOpen": "openItem s.includes(child.props.value)",;
+            "onToggle": ": unknown handleToggle(child.props.value);
+          "})}
         return child})}
-export function Accordion(props: any) {;
-  const [openItems, setOpenItems] = useState<string[]>(;
-    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
+export function Accordion("props": "any) {;
+  const [openItems", setOpenItems] = useState<string[]>(;
+    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : "[defaultValue]) : [];
   );
 ;
     if (type === 'single') {;
-      setOpenItems(openItems.includes(value) ? [] : [value])} else {;
+      setOpenItems(openItems.includes(value) ? [] : [value])"} else {;
       setOpenItems(prev = > ;
         prev.includes(value) ;
           ? prev.filter(item => item !== value);
-          : [...prev, value];
+          : "[...prev", value];
       )};
 ;
   return ()`;
@@ -30,40 +30,40 @@ export function Accordion(props: any) {;
       {React.Children.map(children, (child) => {;
         if (React.isValidElement(child)) {;
           return React.cloneElement(child, {;
-            isOpen: openItem s.includes(child.props.value),;
-            onToggle: : unknown handleToggle(child.props.value);
-          });
+            "isOpen": "openItem s.includes(child.props.value)",;
+            "onToggle": ": unknown handleToggle(child.props.value);
+          "});
 ;
         return child})}
     </div>;
   )}
 ;
 interface AccordionItemProps extends React.PropsWithChildren<{}> {;
-  children: React.ReactNode;
-  value: string;
+  "children": "React.ReactNode;
+  "value": string;
   className?: string;
   isOpen?: boolean;
-  onToggle?: ()  => void}
+  onToggle?: ()  => void"}
 ;
-export function AccordionItem(props: any) {;
-  return (;`    <div className={`border-b border-gray-200 ${className}`}> {React.Children.map(children: unknow n, (child: unknow n {;
+export function AccordionItem("props": "any) {;
+  return (;`    <div className={`border-b border-gray-200 ${className"}`}> {React.Children.map("children": "unknow n", ("child": "unknow n {;
         if (React.isValidElement(child)) {;
-          return React.cloneElement(child, { isOpen, onToggle });
+          return React.cloneElement(child", { isOpen, onToggle });
 ;
         return child})}
     </div>;
   )}
 ;
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {;
-  children: React.ReactNode;
+  "children": "React.ReactNode;
   className?: string;
   isOpen?: boolean;
-  onToggle?: ()  => void}
+  onToggle?: ()  => void"}
 ;
-export function AccordionTrigger(props: any) {;
+export function AccordionTrigger("props": "any) {;
   return ();
     <button`;
-      className = {`flex w-full items-center justify-between py-4 font-medium transition-all hover: underline focus:outline-none focus: rin g-2 focus: rin g-blue-500 focus: rin g-offset-2 ${className}`}
+      className = {`flex w-full items-center justify-between py-4 font-medium transition-all "hover": underline "focus":outline-none "focus": rin g-2 "focus": rin g-blue-500 "focus": rin g-offset-2 ${className"}`}
       onClick={onToggle}
 ;
       {children}
@@ -82,23 +82,23 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;`;
     </button>;
   )}
 ;
-  children: React.ReactNode;
+  "children": "React.ReactNode;
   className?: string;
-  isOpen?: boolean}
+  isOpen?: boolean"}
 ;
-export function AccordionContent(props: any) {;
+export function AccordionContent("props": "any) {;
   if (!isOpen) return null;
 ;
   return ()`;
-    <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>;
+    <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className"}`}>;
       {children}
     </div>;
   )}
-export function AccordionContent(props: any) {;
+export function AccordionContent("props": "any) {;
   if (!isOpen) return null;
 ;
   return ()`;
-    <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}> {children};
+    <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className"}`}> {children};
     </div>;
   )}
 '`;

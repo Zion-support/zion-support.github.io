@@ -18,7 +18,7 @@ const securityChecks = [
       } catch (error) {
         console.log('⚠️ Some vulnerabilities found - check npm audit output');
       }
-    }
+    },
   },
   {
     name: 'Environment Variables Check',
@@ -26,16 +26,16 @@ const securityChecks = [
       console.log('🔐 Checking environment variables...');
       const envFiles = ['.env', '.env.local', '.env.production'];
       let foundEnvFiles = 0;
-      
+
       envFiles.forEach(envFile => {
         if (fs.existsSync(envFile)) {
           foundEnvFiles++;
           console.log(`Found ${envFile}`);
         }
       });
-      
+
       console.log(`Found ${foundEnvFiles} environment files`);
-    }
+    },
   },
   {
     name: 'API Security Check',
@@ -43,19 +43,26 @@ const securityChecks = [
       console.log('🛡️ Checking API security...');
       const apiDir = path.join(process.cwd(), 'pages', 'api');
       if (fs.existsSync(apiDir)) {
-        const apiFiles = fs.readdirSync(apiDir).filter(file => file.endsWith('.ts') || file.endsWith('.js'));
+        const apiFiles = fs
+          .readdirSync(apiDir)
+          .filter(file => file.endsWith('.ts') || file.endsWith('.js'));
         let securityIssues = 0;
-        
+
         apiFiles.forEach(file => {
           const content = fs.readFileSync(path.join(apiDir, file), 'utf8');
-          if (content.includes('process.env') && !content.includes('// Security: ')) {
+          if (
+            content.includes('process.env') &&
+            !content.includes('// Security: ')
+          ) {
             securityIssues++;
           }
         });
-        
-        console.log(`Found ${apiFiles.length} API files, ${securityIssues} potential security issues`);
+
+        console.log(
+          `Found ${apiFiles.length} API files, ${securityIssues} potential security issues`
+        );
       }
-    }
+    },
   },
   {
     name: 'Content Security Policy Check',
@@ -63,19 +70,24 @@ const securityChecks = [
       console.log('📋 Checking Content Security Policy...');
       const pagesDir = path.join(process.cwd(), 'pages');
       if (fs.existsSync(pagesDir)) {
-        const pages = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx'));
+        const pages = fs
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
         let cspFound = 0;
-        
+
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
-          if (content.includes('Content-Security-Policy') || content.includes('CSP')) {
+          if (
+            content.includes('Content-Security-Policy') ||
+            content.includes('CSP')
+          ) {
             cspFound++;
           }
         });
-        
+
         console.log(`Found CSP in ${cspFound}/${pages.length} pages`);
       }
-    }
+    },
   },
   {
     name: 'HTTPS Enforcement Check',
@@ -92,8 +104,8 @@ const securityChecks = [
       } else {
         console.log('⚠️ No Next.js config found');
       }
-    }
-  }
+    },
+  },
 ];
 
 // Run security checks
@@ -119,13 +131,13 @@ const report = {
   timestamp: new Date().toISOString(),
   checks: securityChecks.map(check => ({
     name: check.name,
-    status: 'completed'
+    status: 'completed',
   })),
   summary: {
     total: totalCount,
     successful: successCount,
-    failed: totalCount - successCount
-  }
+    failed: totalCount - successCount,
+  },
 };
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');

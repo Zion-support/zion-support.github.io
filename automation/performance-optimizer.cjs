@@ -79,10 +79,12 @@ function ensureNextConfigFlags(rootDir, report) {
           /experimental:\s*\{/,
           'experimental: {\n    optimizeCss: true,'
         );
-      } else if (original.includes('nextConfig') || original.includes('module.exports')) {
-        updated = original.replace(
-          /\{([\s\S]*?)\}/,
-          (m) => m.replace(/\}$/, ',\n  experimental: { optimizeCss: true }\n}')
+      } else if (
+        original.includes('nextConfig') ||
+        original.includes('module.exports')
+      ) {
+        updated = original.replace(/\{([\s\S]*?)\}/, m =>
+          m.replace(/\}$/, ',\n  experimental: { optimizeCss: true }\n}')
         );
       }
       if (updated !== original) {
@@ -99,7 +101,13 @@ function ensureNextConfigFlags(rootDir, report) {
 function main() {
   const root = process.cwd();
   const timestamp = Date.now();
-  const report = { timestamp, actions: [], optimizedImages: [], modifiedFiles: [], errors: [] };
+  const report = {
+    timestamp,
+    actions: [],
+    optimizedImages: [],
+    modifiedFiles: [],
+    errors: [],
+  };
 
   log('Starting Performance Optimizer...');
   ensureDir(path.join(root, 'automation-reports'));
@@ -110,9 +118,15 @@ function main() {
   // Ensure Next.js config flags
   ensureNextConfigFlags(root, report);
 
-  const outFile = path.join(root, `performance-optimizer-report-${timestamp}.json`);
+  const outFile = path.join(
+    root,
+    `performance-optimizer-report-${timestamp}.json`
+  );
   fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
-  log(`Performance optimization complete. Report: ${path.basename(outFile)}`, 'SUCCESS');
+  log(
+    `Performance optimization complete. Report: ${path.basename(outFile)}`,
+    'SUCCESS'
+  );
 }
 
 try {
@@ -121,4 +135,3 @@ try {
   log(`Performance optimizer failed: ${e.message}`, 'ERROR');
   process.exit(1);
 }
-

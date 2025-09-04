@@ -1,35 +1,35 @@
-const DropdownMenu({ children }) {
+const DropdownMenu({ children }) {;
 
     const [isOpen, setIsOpen] = useState<any>(false);
-    return (<DropdownMenuContext.Provider value = {
+    return (<DropdownMenuContext.Provider value = {;
 
-  { isOpen,
-  setIsOpen 
+  { isOpen,;
+  setIsOpen ;
 ;
 }}>;
       <div className="relative"> {children};
       </div>;
     </DropdownMenuContext.Provider>)};
-export function DropdownMenuTrigger(...args: unknow n[]): unknown {;
-    
+export function DropdownMenuTrigger(..."args": "unknow n[]): unknown {;
+    ;
     if (!context)'        throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
-    if (asChild) {
+    if (asChild) {;
 
-      </div>)}
-    return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}>
+      </div>)"}
+    return <div onClick={(: "unknown context.setIsOpen(!context.isOpen)"}>;
       {children}
     </div>)};
-export function DropdownMenuContent(...args[]): {
-        return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}> {children};
+export function DropdownMenuContent(...args[]): "{;
+        return <div onClick={(: unknown context.setIsOpen(!context.isOpen)"}> {children};
       </div>)}
-    return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}> {children};
+    return <div onClick={(: "unknown context.setIsOpen(!context.isOpen)"}> {children};
     </div>)}
-export function DropdownMenuContent(props: any) {;
-    
+export function DropdownMenuContent("props": "any) {;
+    ;
     if (!context)'        throw new Error('DropdownMenuContent must be used within DropdownMenu');
-    if (!context.isOpen)
+    if (!context.isOpen);
         return null;
-    const alignClasses = {
-'"
-</DropdownMenuContext>
-</any>
+    const alignClasses = {;
+'";
+</DropdownMenuContext>;
+</any>"

@@ -21,8 +21,8 @@ class AppMonitor {
         filesystem: this.checkFilesystem(),
         dependencies: this.checkDependencies(),
         build: this.checkBuild(),
-        tests: this.checkTests()
-      }
+        tests: this.checkTests(),
+      },
     };
     fs.writeFileSync(
       path.join(this.projectRoot, 'health-check.json'),
@@ -35,7 +35,9 @@ class AppMonitor {
     const srcDir = path.join(this.projectRoot, 'src');
     return {
       status: fs.existsSync(srcDir) ? 'ok' : 'error',
-      message: fs.existsSync(srcDir) ? 'Source directory exists' : 'Source directory missing'
+      message: fs.existsSync(srcDir)
+        ? 'Source directory exists'
+        : 'Source directory missing',
     };
   }
 
@@ -43,7 +45,9 @@ class AppMonitor {
     const packageJson = path.join(this.projectRoot, 'package.json');
     return {
       status: fs.existsSync(packageJson) ? 'ok' : 'error',
-      message: fs.existsSync(packageJson) ? 'Package.json exists' : 'Package.json missing'
+      message: fs.existsSync(packageJson)
+        ? 'Package.json exists'
+        : 'Package.json missing',
     };
   }
 
@@ -51,7 +55,9 @@ class AppMonitor {
     const buildDir = path.join(this.projectRoot, '.next');
     return {
       status: fs.existsSync(buildDir) ? 'ok' : 'warning',
-      message: fs.existsSync(buildDir) ? 'Build directory exists' : 'Build directory not found'
+      message: fs.existsSync(buildDir)
+        ? 'Build directory exists'
+        : 'Build directory not found',
     };
   }
 
@@ -59,7 +65,9 @@ class AppMonitor {
     const testDir = path.join(this.projectRoot, '__tests__');
     return {
       status: fs.existsSync(testDir) ? 'ok' : 'warning',
-      message: fs.existsSync(testDir) ? 'Test directory exists' : 'Test directory not found'
+      message: fs.existsSync(testDir)
+        ? 'Test directory exists'
+        : 'Test directory not found',
     };
   }
 }

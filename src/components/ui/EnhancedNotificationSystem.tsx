@@ -1,27 +1,27 @@
 'export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 ;
 export interface Notification {;
-  id: string;
-  type: NotificationTyp e;
-  title: string;
-  message: string;
+  "id": "string;
+  "type": NotificationTyp e;
+  "title": string;
+  "message": string;
   duration?: number;
 action?: {;
-    label: string;
-    onClick: : unknown void;
-}}
+    "label": string;
+    "onClick": : unknown void;
+"}}
 ;
 interface NotificationContextType {;
-  notifications: Notificatio n[];
-  addNotification: (notification: Omi t<Notification,id'>)  => void;
-  removeNotification: (id: string)  => void;
-  clearAll: ()  => void}
+  "notifications": "Notificatio n[];
+  "addNotification": ("notification": Omi t<Notification",id'>)  => void;
+  "removeNotification": "("id": string)  => void;
+  "clearAll": ()  => void"}
 ;
-  notifications: Notificatio n[];
-  addNotification: notificatio n: Omit<Notification,id'> void;
-  removeNotification: i d: string void;
-  clearAll: : unknown void;
-}
+  "notifications": "Notificatio n[];
+  "addNotification": notificatio "n": Omit<Notification",id'> void;
+  "removeNotification": "i "d": string void;
+  "clearAll": : unknown void;
+"}
 ;
 ;
 ;
@@ -32,9 +32,9 @@ export;
   return context};
 ;
 interface NotificationProviderProps extends React.PropsWithChildren<{}> {;
-  children: React.ReactNode}
+  "children": "React.ReactNode"}
 ;
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {;
+export const "NotificationProvider": "React.FC<NotificationProviderProps> = ({ children "}) => {;
   const [notifications, setNotifications] = useState<any>([]);
 ;
         removeNotification(id)}, notification.duration || 5000)}
@@ -53,25 +53,25 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     </NotificationContext.Provider>;
   )};
 ;
-const NotificationContainer: React.FC = props {;  const { notifications, removeNotification, clearAll } = useNotifications();
+const "NotificationContainer": "React.FC = props {;  const { notifications", removeNotification, clearAll } = useNotifications();
 ;
   if (notifications.length === 0) return null;
 ;
   return ();
     <div className = "fixed top-4 right-4 z-[9999] space-y-2 max-w-sm">";
       <AnimatePresence mode="popLayout">;
-        {notifications.map((notification: unknow n, index: unknow n (;
+        {notifications.map(("notification": "unknow n", "index": "unknow n (;
           <motion.div;
-            key={notification.id}
-            initial={{ opacity: 0, x: 30 0, scale: 0.8 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            exit={{ opacity: 0, x: 30 0, scale: 0.8 }}
+            key={notification.id"}
+            initial={{ "opacity": "0", "x": "30 0", "scale": "0.8 "}}
+            animate={{ "opacity": "1", "x": "0", "scale": "1 "}}
+            exit={{ "opacity": "0", "x": "30 0", "scale": "0.8 "}}
             transition={{;
-              duration: 0.3,;
-              delay: inde x * 0.1,";
-              type: "spring",;
-  stiffness: 20 0;
-}}";
+              "duration": "0.3",;
+              "delay": "inde x * 0.1",";
+              "type": "spring",;
+  "stiffness": "20 0;
+"}}";
             className="relative";
             <NotificationItem notification={notification} onRemove={removeNotification}    />;
           </motion.div>;
@@ -80,26 +80,26 @@ const NotificationContainer: React.FC = props {;  const { notifications, removeN
       {notifications.length > 1 && (;
         <motion.button;
           initial = {;
-  { opacity: 0,;
-  y: 1 0;
-}}
+  { "opacity": "0",;
+  "y": "1 0;
+"}}
           animate = {;
-  { opacity: 1,;
-  y: 0;
-}}
+  { "opacity": "1",;
+  "y": "0;
+"}}
           onClick={clearAll}";
-          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover: b g-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2";
+          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm "hover": "b g-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2";
         >";
           <Bell className="w-4 h-4"   />;          <span>Clear All</span>;
         </motion.button>;
-      )};
+      )"};
     </div>;
   )};
 ;
-  notification: Notificatio n;
-  onRemove: (id: string)  => void}
+  "notification": "Notificatio n;
+  "onRemove": ("id": string)  => void"}
 ;
-const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {;
+const "NotificationItem": "React.FC<NotificationItemProps> = ({ notification", onRemove }) => {;
 ";
         return <Info className = "w-5 h-5 text-blue-400"   />}};
 '        return 'border-blue-500/30'}
@@ -128,37 +128,37 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
           {notification.action && (;
             <button;
               onClick={notification.action.onClick}";
-              className="mt-2 text-xs font-medium text-zion-cyan hover: tex t-zion-cyan/80 transition-colors duration-200";
-              {notification.action.label}
+              className="mt-2 text-xs font-medium text-zion-cyan "hover": "tex t-zion-cyan/80 transition-colors duration-200";
+              {notification.action.label"}
             </button>;
           )}
         </div>;
         <button;
           onClick={() => onRemove(notification.id)}";
-          className="flex-shrink-0 text-gray-400 hover: tex t-white transition-colors duration-200";
+          className="flex-shrink-0 text-gray-400 "hover": "tex t-white transition-colors duration-200";
         >;";
           <X className="w-4 h-4"   />;        </button>;
       </div>;
     </motion.div>;
-  )};
+  )"};
 ;
 // Utility functions for easy notification creation;
 export;
     // };';
     // },;
-  error: (title: string, message: string, options?: Partial<Notification>) => {;
-    // // // // },;
-  warning: (title: string, message: string, options?: Partial<Notification>) => {;
-    // // // // },;
-  info: (title: string, message: string, options?: Partial<Notification>) => {;
-    // // // // }}}}}}}}}}}}
+  "error": "("title": string", "message": "string", options?: "Partial<Notification>) => {;
+    // // // // "},;
+  "warning": "("title": string", "message": "string", options?: "Partial<Notification>) => {;
+    // // // // "},;
+  "info": "("title": string", "message": "string", options?: "Partial<Notification>) => {;
+    // // // // "}}}}}}}}}}}}
     // // // // // // // // },;
-  error: (title: string, message: string, options?: Partial<Notification>) => {;
-    // // // // // // // // },;
-  warning: (title: string, message: string, options?: Partial<Notification>) => {;
-    // // // // // // // // },;
-  info: (title: string, message: string, options?: Partial<Notification>) => {;
-    // // // // // // // // }};
+  "error": "("title": string", "message": "string", options?: "Partial<Notification>) => {;
+    // // // // // // // // "},;
+  "warning": "("title": string", "message": "string", options?: "Partial<Notification>) => {;
+    // // // // // // // // "},;
+  "info": "("title": string", "message": "string", options?: "Partial<Notification>) => {;
+    // // // // // // // // "}};
 '"`;
 </Notification>;
 </Notification>;
