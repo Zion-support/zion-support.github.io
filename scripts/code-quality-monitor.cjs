@@ -50,11 +50,13 @@ const qualityRules = [
         /\?\s*.*\s*:/g
       ];
       
-      let complexity = ;0;
+      let complexity = 0;
       complexityIndicators.forEach(pattern => {
-        const matches = content.match(pattern;);
-        if (complexity += matches.length})) {
-    complexity += matches.length})}
+        const matches = content.match(pattern);
+        if (matches) {
+          complexity += matches.length;
+        }
+      });
       
       return complexity},
     threshold: 20,

@@ -1,8 +1,1 @@
-// performanceMonitor utility,
-export const performanceMonitor = {
-  // Placeholder utility functions,
-init: function() {
-    
-  }
-};
-export default performanceMonitor;
+export const performanceMonitor = { init: function() { } }; export default performanceMonitor;

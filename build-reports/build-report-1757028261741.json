@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-09-04T23:24:21.137Z",
+  "analysis": {
+    "build": {
+      "success": false,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnode:internal/modules/cjs/loader:1404\n  throw err;\n  ^\n\nError: Cannot find module 'glob'\nRequire stack:\n- /workspace/scripts/remove-console-logs.cjs\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)\n    at Function._load (node:internal/modules/cjs/loader:1211:37)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Module.require (node:internal/modules/cjs/loader:1487:12)\n    at require (node:internal/modules/helpers:135:16)\n    at Object.<anonymous> (/workspace/scripts/remove-console-logs.cjs:5:18)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14) {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [ '/workspace/scripts/remove-console-logs.cjs' ]\n}\n\nNode.js v22.16.0\n",
+      "buildTime": 0
+    },
+    "buildOutput": {
+      "exists": false,
+      "error": "Build output directory not found"
+    },
+    "typeScript": {
+      "errors": 0,
+      "status": "failed",
+      "output": "\n\u001b[41m                                                                               \u001b[0m\n\u001b[41m\u001b[37m                This is not the tsc command you are looking for                \u001b[0m\n\u001b[41m                                                                               \u001b[0m\n\nTo get access to the TypeScript compiler, \u001b[34mtsc\u001b[0m, from the command line either:\n\n- Use \u001b[1mnpm install typescript\u001b[0m to first add TypeScript to your project \u001b[1mbefore\u001b[0m using npx\n- Use \u001b[1myarn\u001b[0m to avoid accidentally running code from un-installed packages\n"
+    },
+    "linting": {
+      "errors": 0,
+      "status": "failed",
+      "output": "\n> ziontechgroup-site@1.0.0 lint\n> eslint . --max-warnings 1000\n\n"
+    },
+    "tests": {
+      "passed": false,
+      "status": "failed",
+      "error": "Command failed: npm test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
+    }
+  },
+  "recommendations": [
+    {
+      "type": "build_failure",
+      "priority": "high",
+      "message": "Build failed. Check build logs and fix errors.",
+      "impact": "Prevents deployment"
+    },
+    {
+      "type": "test_failures",
+      "priority": "high",
+      "message": "Tests failed. Fix failing tests before deployment.",
+      "impact": "Ensures code reliability"
+    }
+  ]
+}

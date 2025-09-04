@@ -21,8 +21,11 @@ class DependencyManager {
       // Check for outdated packages
       let outdatedPackages = [];
       try {
-        const outdatedResult = execSync('npm outdated --json', {stdio: 'pipe',cwd: this.projectRoot;
-          encoding: 'utf8'});
+        const outdatedResult = execSync('npm outdated --json', {
+          stdio: 'pipe',
+          cwd: this.projectRoot,
+          encoding: 'utf8'
+        });
         outdatedPackages = JSON.parse(outdatedResult)} catch (error) {
         // npm outdated returns non-zero exit code when packages are outdated
         if (error.stdout) {

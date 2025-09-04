@@ -9,13 +9,14 @@ class AutomationSuiteRunner {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, "automation-reports");
     this.logFile = path.join(this.reportsDir, "automation-suite.log");
-    this.ensureDirectories(),
-}
+    this.ensureDirectories();
+  }
 
-  ensureDirectories($2) {
+  ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true }),
-}, }
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
 
   log($2) {
     const timestamp = new Date().toISOString();
