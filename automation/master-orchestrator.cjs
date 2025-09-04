@@ -42,11 +42,11 @@ class MasterOrchestrator {
   async runSecurityScan() {
     this.log('Running security scan...');
     try {
-      const SecurityScanner = require('./security-scanner.cjs');
-      const scanner = new SecurityScanner();
-      const result = await scanner.runScan();
-      this.results.securityScan = { success: result, timestamp: new Date().toISOString() };
-      return result;
+      // Security scanner runs as a standalone script
+      const { execSync } = require('child_process');
+      execSync('node automation/security-scanner.cjs', { stdio: 'pipe' });
+      this.results.securityScan = { success: true, timestamp: new Date().toISOString() };
+      return true;
     } catch (error) {
       this.log(`Security scan failed: ${error.message}`, 'ERROR');
       this.results.securityScan = { success: false, error: error.message, timestamp: new Date().toISOString() };
@@ -72,11 +72,10 @@ class MasterOrchestrator {
   async runErrorPrevention() {
     this.log('Running error prevention...');
     try {
-      const ErrorPreventionSystem = require('./error-prevention-system.cjs');
-      const errorPrevention = new ErrorPreventionSystem();
-      const result = await errorPrevention.runErrorPrevention();
-      this.results.errorPrevention = { success: result, timestamp: new Date().toISOString() };
-      return result;
+      const { execSync } = require('child_process');
+      execSync('node automation/error-prevention-system.cjs', { stdio: 'pipe' });
+      this.results.errorPrevention = { success: true, timestamp: new Date().toISOString() };
+      return true;
     } catch (error) {
       this.log(`Error prevention failed: ${error.message}`, 'ERROR');
       this.results.errorPrevention = { success: false, error: error.message, timestamp: new Date().toISOString() };
@@ -87,11 +86,10 @@ class MasterOrchestrator {
   async runDependencyManager() {
     this.log('Running dependency manager...');
     try {
-      const DependencyManager = require('./dependency-manager.cjs');
-      const manager = new DependencyManager();
-      const result = await manager.runDependencyManagement();
-      this.results.dependencyManager = { success: result, timestamp: new Date().toISOString() };
-      return result;
+      const { execSync } = require('child_process');
+      execSync('node automation/dependency-manager.cjs', { stdio: 'pipe' });
+      this.results.dependencyManager = { success: true, timestamp: new Date().toISOString() };
+      return true;
     } catch (error) {
       this.log(`Dependency manager failed: ${error.message}`, 'ERROR');
       this.results.dependencyManager = { success: false, error: error.message, timestamp: new Date().toISOString() };
@@ -102,11 +100,10 @@ class MasterOrchestrator {
   async runCodeQualityMonitor() {
     this.log('Running code quality monitor...');
     try {
-      const CodeQualityMonitor = require('./code-quality-monitor.cjs');
-      const monitor = new CodeQualityMonitor();
-      const result = await monitor.runCodeQualityCheck();
-      this.results.codeQualityMonitor = { success: result, timestamp: new Date().toISOString() };
-      return result;
+      const { execSync } = require('child_process');
+      execSync('node automation/code-quality-monitor.cjs', { stdio: 'pipe' });
+      this.results.codeQualityMonitor = { success: true, timestamp: new Date().toISOString() };
+      return true;
     } catch (error) {
       this.log(`Code quality monitor failed: ${error.message}`, 'ERROR');
       this.results.codeQualityMonitor = { success: false, error: error.message, timestamp: new Date().toISOString() };
