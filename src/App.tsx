@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import Footer from './components/Footer';
@@ -41,6 +41,7 @@ const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices20
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase').then(module => ({ default: module.default })));
 const ComprehensiveNewServicesShowcase2025 = lazy(() => import('./components/ComprehensiveNewServicesShowcase2025').then(module => ({ default: module.ComprehensiveNewServicesShowcase2025 })));
+const EnhancedServicesShowcase2025 = lazy(() => import('./components/EnhancedServicesShowcase2025').then(module => ({ default: module.EnhancedServicesShowcase2025 })));
 
 // Service Pages
 const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
@@ -85,14 +86,16 @@ const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
 
 export default function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gray-50 flex">
           <Header />
-          <Sidebar />
+          <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
           
-          <main className="flex-1 lg:ml-80">
+          <main className="flex-1 lg:ml-80 min-h-screen">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -108,7 +111,8 @@ export default function App() {
                 <Route path="/search" element={<Services />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesShowcase />} />
-                <Route path="/new-services-2025" element={<ComprehensiveNewServicesShowcase2025 />} />
+                <Route path="/new-services-2025" element={<EnhancedServicesShowcase2025 />} />
+                <Route path="/comprehensive-new-services-2025" element={<ComprehensiveNewServicesShowcase2025 />} />
                 <Route path="/solutions" element={<Solutions />} />
                 <Route path="/resources" element={<Services />} />
                 <Route path="/case-studies" element={<Services />} />
