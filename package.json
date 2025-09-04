@@ -156,7 +156,7 @@
     "automation:security-audit": "node automation/security-audit.cjs",
     "format:check": "prettier --check .",
     "test": "jest --config jest.config.cjs",
-    "test:smoke": "jest --config jest.config.cjs",
+    "test:smoke": "jest --config jest.config.smoke.cjs",
     "ci:full": "bash scripts/comprehensive-build-test.sh",
     "ci:auto": "npm ci && npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
     "test:watch": "jest --watch --config jest.config.ts",
@@ -179,7 +179,8 @@
     "audit:security": "node scripts/security-audit-enhanced.cjs",
     "optimize:ux": "node scripts/ux-optimizer.cjs",
     "improve:all": "npm run optimize:performance && npm run monitor:health && npm run audit:security && npm run optimize:ux",
-    "automation:safe": "bash scripts/run-safe-automations.sh"
+    "automation:safe": "bash scripts/run-safe-automations.sh",
+    "ci:smoke": "npm run build && npm run test:smoke"
   },
   "pm2": {
     "ecosystem": "ecosystem.maintenance.cjs"
