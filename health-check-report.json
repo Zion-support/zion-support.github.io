@@ -1,10 +1,47 @@
 {
-  "timestamp": "2025-09-03T21:22:52.907Z",
-  "status": "healthy",
-  "checks": {
-    "packageJson": true,
-    "buildDir": false,
-    "dependencies": true,
-    "criticalFiles": true
-  }
+  "timestamp": "2025-09-03T23:23:47.106Z",
+  "status": "warning",
+  "checks": [
+    {
+      "name": "Node.js Version",
+      "status": "pass",
+      "value": "v22.16.0",
+      "message": "Node.js version is compatible"
+    },
+    {
+      "name": "Package.json",
+      "status": "pass",
+      "value": "ziontechgroup.com",
+      "message": "Package.json found and valid"
+    },
+    {
+      "name": "Dependencies",
+      "status": "pass",
+      "message": "Node modules directory exists"
+    },
+    {
+      "name": "Next.js Config",
+      "status": "pass",
+      "message": "Next.js configuration found"
+    },
+    {
+      "name": "TypeScript Config",
+      "status": "pass",
+      "message": "TypeScript configuration found"
+    },
+    {
+      "name": "Source Files",
+      "status": "pass",
+      "message": "Source directory found"
+    },
+    {
+      "name": "Environment Variables",
+      "status": "warn",
+      "message": "Environment file not found, but example exists"
+    }
+  ],
+  "issues": [],
+  "recommendations": [
+    "Copy .env.example to .env.local and configure"
+  ]
 }
