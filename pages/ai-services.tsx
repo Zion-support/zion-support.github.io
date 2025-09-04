@@ -871,7 +871,6 @@ export default function AIServices() {
     },
     {
       icon: Eye,
-<<<<<<< HEAD
       name: 'AI-Powered Medical Imaging Analysis',
       description: 'Advanced computer vision for medical imaging diagnosis, radiology, and pathology analysis.',
       features: [
@@ -890,31 +889,10 @@ export default function AIServices() {
         'Faster diagnostic turnaround times',
         'Reduced human error in analysis',
         'Improved patient outcomes'
-=======
-      name: 'AI-Powered Quality Assurance',
-      description: 'Intelligent quality control system that uses computer vision and machine learning to detect defects, ensure compliance, and optimize manufacturing processes.',
-      features: [
-        'Real-time defect detection and classification',
-        'Predictive quality analytics and forecasting',
-        'Automated compliance monitoring and reporting',
-        'Root cause analysis and recommendations',
-        'Integration with manufacturing systems',
-        'Custom quality metrics and thresholds'
-      ],
-      pricing: '$10,000 – $75,000 setup',
-      perUnit: '$0.01 – $0.10 per inspection',
-      timeline: '8–16 weeks',
-      benefits: [
-        '99.5% accuracy in defect detection',
-        '50% reduction in quality control costs',
-        'Real-time quality monitoring and alerts',
-        'Improved product consistency and customer satisfaction'
->>>>>>> 1735b00409ca432e079c8359c109c85b21bb1334
       ]
     },
     {
       icon: TrendingUp,
-<<<<<<< HEAD
       name: 'AI-Powered Financial Trading Algorithm',
       description: 'Sophisticated AI trading algorithms for automated investment strategies and risk management.',
       features: [
@@ -977,26 +955,6 @@ export default function AIServices() {
         'Improved accuracy in legal analysis',
         'Automated compliance monitoring',
         'Reduced legal costs and risks'
-=======
-      name: 'AI Financial Risk Management',
-      description: 'Advanced AI system for financial risk assessment, fraud detection, and regulatory compliance with real-time monitoring and predictive analytics.',
-      features: [
-        'Real-time fraud detection and prevention',
-        'Credit risk assessment and scoring',
-        'Market risk analysis and portfolio optimization',
-        'Regulatory compliance monitoring',
-        'Anomaly detection and alert systems',
-        'Automated reporting and documentation'
-      ],
-      pricing: '$15,000 – $100,000 setup',
-      perUnit: '$0.02 – $0.20 per transaction',
-      timeline: '10–20 weeks',
-      benefits: [
-        '90% reduction in false positives',
-        'Real-time risk monitoring and mitigation',
-        'Automated compliance and regulatory reporting',
-        'Improved financial decision making'
->>>>>>> 1735b00409ca432e079c8359c109c85b21bb1334
       ]
     },
     {
