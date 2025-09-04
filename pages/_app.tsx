@@ -69,12 +69,12 @@ function Header(): any {
             <Link href="/careers" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Careers</Link>
             <Link href="/contact" style={{ 
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white',
-              padding: '12px 16px',
-              textDecoration: 'none',
-              borderRadius: 6,
-              textAlign: 'center',
-              fontWeight: 600,
+              color: 'white', 
+              padding: '12px 16px', 
+              textDecoration: 'none', 
+              borderRadius: 6, 
+              textAlign: 'center', 
+              fontWeight: 600, 
               marginTop: 8
             }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
@@ -200,7 +200,7 @@ function Footer(): any {
             <a href="mailto:kleber@ziontechgroup.com" style={{
               background: 'rgba(255,255,255,0.1)',
               color: 'white',
-              padding: '10px 16px', 
+              padding: '10px 16px',
               borderRadius: 8,
               textAlign: 'center',
               textDecoration: 'none',

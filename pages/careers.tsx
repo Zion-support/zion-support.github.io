@@ -119,8 +119,8 @@ export default function Careers() {
         </p>
         <div style={{ marginTop: '2rem', textAlign: 'center' }}>
           <Link href="/" style={{
-            background: '#3b82f6',
-            color: 'white',
+            background: 'white',
+            color: '#333',
             padding: '12px 24px',
             textDecoration: 'none',
             borderRadius: 8,

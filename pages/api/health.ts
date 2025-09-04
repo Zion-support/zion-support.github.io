@@ -50,6 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       cache: cacheStats.api.active > 0,
       api: avgResponseTime < 1000 // Less than 1 second average response time
     };
+    
     const healthyServices = Object.values(services).filter(Boolean).length;
     const totalServices = Object.keys(services).length;
     

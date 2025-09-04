@@ -9,6 +9,7 @@ export default function Cybersecurity() {
     email: 'kleber@ziontechgroup.com',
     site: 'https://ziontechgroup.com'
   };
+
   const services = [
     {
       icon: Shield,
@@ -54,11 +55,11 @@ export default function Cybersecurity() {
         <title>Cybersecurity Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cybersecurity services including security assessments, threat detection, identity management, and compliance. Protect your business with Zion Tech Group." />
         <meta name="keywords" content="cybersecurity, security assessment, threat detection, identity management, compliance, penetration testing" />
-        <link rel="canonical" href={`${contact.address}/cybersecurity`} />
-        <meta property="og: title" content="Cybersecurity Services - Zion Tech Group" />
+        <link rel="canonical" href={`${contact.site}/cybersecurity`} />
+        <meta property="og:title" content="Cybersecurity Services - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive cybersecurity services including security assessments, threat detection, and compliance." />
-        <meta property="og: url" content={`${contact.address}/cybersecurity`} />
-        <meta property="og: type" content="website" />
+        <meta property="og:url" content={`${contact.site}/cybersecurity`} />
+        <meta property="og:type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">
