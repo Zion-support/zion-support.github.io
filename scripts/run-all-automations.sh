@@ -17,8 +17,8 @@ run_step() {
 # Core health and quality checks
 run_step "Health Check" npm run automation:health
 run_step "Security Scan" npm run automation:security
-run_step "Performance Monitor" node automation/performance-monitor.js
-run_step "Build Monitor" node automation/build-monitor.js
+run_step "Performance Monitor" node automation/performance-monitor.cjs
+run_step "Build Monitor" node automation/build-monitor.cjs
 run_step "Code Quality Monitor" node automation/code-quality-monitor.cjs
 
 echo "\nAll automation steps attempted. See logs above for any failures."
