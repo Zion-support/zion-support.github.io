@@ -21,6 +21,7 @@ eslint: {
     domains: [
   'ziontechgroup.com'],
     unoptimized: true,
+    formats: ['image/webp', 'image/avif']
   },
   compiler: {
 <<<<<<< HEAD:next.config.js
@@ -63,9 +64,8 @@ eslint: {
       ...config.resolve.fallback,
       fs: false,
       net: false,
-      tls: false,
+      tls: false
     };
-    
     return config;
   },
   // Try to exclude problematic directories at the Next.js level
