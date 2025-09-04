@@ -19,8 +19,7 @@ import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star ex
           {/* Contact Information */}
           <div className="space-y-6">            <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader>""""
-                <CardTitle className="text-white flex items-center gap-2">""""
-<Phone className="h-5 w-5 text-zion-cyan"/>
+                <CardTitle className="text-white flex items-center gap-2">""""                  <Phone className="h-5 w-5 text-zion-cyan"/>
                   Contact Details
                 </CardTitle>"
 import React from "react"

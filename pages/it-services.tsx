@@ -29,9 +29,11 @@ import {
   Mail,
   Phone,
   MapPin,
-  TrendingUp
+  TrendingUp,
+  Brain,
+  Target
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+
 
 export default function ITServices() {
   const title = 'IT Services — Zion Tech Group';
@@ -263,6 +265,83 @@ export default function ITServices() {
       category: 'API Services'
     },
     {
+      title: 'AI-Powered IT Operations (AIOps)',
+      description: 'Intelligent IT operations with automated incident response and predictive maintenance',
+      icon: Brain,
+      features: [
+        'Automated incident detection and response,Predictive maintenance and capacity planning,Intelligent root cause analysis,Automated remediation and self-healing,Performance optimization recommendations,Integration with existing monitoring tools'
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'AIOps Services'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation and management',
+      icon: Shield,
+      features: [
+        'Identity and access management (IAM),Network segmentation and micro-segmentation,Device trust and compliance verification,Data encryption and protection,Continuous security monitoring,Automated threat response'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Edge Computing & Fog Computing',
+      description: 'Distributed computing infrastructure for real-time processing and low latency',
+      icon: Network,
+      features: [
+        'Edge computing platform design and deployment,Fog computing architecture implementation,Real-time data processing and analytics,Edge AI and machine learning,Latency optimization and bandwidth management,Edge device management and monitoring'
+      ],
+      pricing: '$6,000 - $35,000/month',
+      delivery: '6-14 weeks',
+      category: 'Edge Computing Services'
+    },
+    {
+      title: 'Hyperconverged Infrastructure (HCI)',
+      description: 'Integrated compute, storage, and networking solutions for modern data centers',
+      icon: Server,
+      features: [
+        'HCI platform design and implementation,Storage virtualization and management,Network virtualization and SDN,Automated resource provisioning,Disaster recovery and backup solutions,Performance monitoring and optimization'
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '8-16 weeks',
+      category: 'Infrastructure Services'
+    },
+    {
+      title: 'Multi-Cloud Management & Orchestration',
+      description: 'Unified management and orchestration across multiple cloud providers',
+      icon: Cloud,
+      features: [
+        'Multi-cloud strategy and architecture,Cloud cost optimization and FinOps,Cross-cloud workload migration,Unified monitoring and management,Cloud security and compliance,Automated scaling and resource management'
+      ],
+      pricing: '$7,000 - $45,000/month',
+      delivery: '8-18 weeks',
+      category: 'Cloud Services'
+    },
+    {
+      title: 'Robotic Process Automation (RPA)',
+      description: 'Intelligent automation of repetitive business processes and workflows',
+      icon: Settings,
+      features: [
+        'Process discovery and analysis,RPA bot development and deployment,Workflow automation and optimization,Integration with existing systems,Process monitoring and analytics,Change management and training'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Automation Services'
+    },
+    {
+      title: 'Green IT & Sustainability Solutions',
+      description: 'Environmentally conscious IT solutions and carbon footprint reduction',
+      icon: TreePine,
+      features: [
+        'Energy-efficient infrastructure design,Carbon footprint assessment and reduction,Green cloud computing solutions,Sustainable hardware procurement,IT waste management and recycling,Environmental compliance and reporting'
+      ],
+      pricing: '$3,000 - $20,000/month',
+      delivery: '4-10 weeks',
+      category: 'Sustainability Services'
+    },
+    {
       title: 'Disaster Recovery & Business Continuity',
       description: 'Comprehensive disaster recovery planning and implementation',
       icon: Shiel d,
@@ -309,6 +388,182 @@ export default function ITServices() {
       pricing: '$8,000 - $60,000/month',
       delivery: '10-24 weeks',
       category: 'FinTech Services'
+    },
+    {
+      title: 'AI-Powered IT Operations (AIOps)',
+      description: 'Intelligent IT operations with machine learning and automation',
+      icon: Brain,
+      features: [
+        'Automated incident detection and resolution',
+        'Predictive maintenance and capacity planning',
+        'Intelligent root cause analysis',
+        'Automated remediation workflows',
+        'Performance optimization recommendations',
+        'Cost optimization and resource allocation'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'AIOps Services'
+    },
+    {
+      title: 'Zero-Trust Security Architecture',
+      description: 'Comprehensive zero-trust security implementation and management',
+      icon: Lock,
+      features: [
+        'Identity and access management (IAM)',
+        'Micro-segmentation and network isolation',
+        'Continuous security monitoring',
+        'Privileged access management (PAM)',
+        'Data loss prevention (DLP)',
+        'Security orchestration and automation'
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-20 weeks',
+      category: 'Security Services'
+    },
+    {
+      title: 'Hybrid Cloud Management',
+      description: 'Seamless hybrid cloud strategy and management across multiple platforms',
+      icon: Cloud,
+      features: [
+        'Multi-cloud architecture design',
+        'Cloud migration and optimization',
+        'Cost management and optimization',
+        'Disaster recovery across clouds',
+        'Security and compliance management',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '10-18 weeks',
+      category: 'Cloud Services'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Edge computing solutions for real-time processing and low-latency applications',
+      icon: Cpu,
+      features: [
+        'Edge server deployment and management',
+        'Real-time data processing',
+        'Edge AI and machine learning',
+        'Content delivery network (CDN) optimization',
+        'IoT device integration',
+        'Edge security and monitoring'
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge Computing Services'
+    },
+    {
+      title: 'Data Center Modernization',
+      description: 'Complete data center transformation and modernization services',
+      icon: Server,
+      features: [
+        'Data center assessment and planning',
+        'Infrastructure modernization',
+        'Energy efficiency optimization',
+        'Cooling and power management',
+        'Security and access control',
+        'Compliance and certification'
+      ],
+      pricing: '$25,000 - $150,000/month',
+      delivery: '16-32 weeks',
+      category: 'Data Center Services'
+    },
+    {
+      title: 'IT Service Management (ITSM)',
+      description: 'Comprehensive IT service management platform and process optimization',
+      icon: Settings,
+      features: [
+        'ITIL framework implementation',
+        'Service desk and ticketing system',
+        'Change and release management',
+        'Asset and configuration management',
+        'Service level management',
+        'Knowledge management system'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-14 weeks',
+      category: 'ITSM Services'
+    },
+    {
+      title: 'Compliance & Governance Solutions',
+      description: 'Regulatory compliance and IT governance framework implementation',
+      icon: Shield,
+      features: [
+        'SOX, GDPR, HIPAA compliance',
+        'IT governance framework design',
+        'Risk assessment and management',
+        'Audit preparation and support',
+        'Policy development and implementation',
+        'Training and awareness programs'
+      ],
+      pricing: '$8,000 - $45,000/month',
+      delivery: '8-16 weeks',
+      category: 'Compliance Services'
+    },
+    {
+      title: 'IT Asset Management',
+      description: 'Comprehensive IT asset lifecycle management and optimization',
+      icon: HardDrive,
+      features: [
+        'Asset discovery and inventory',
+        'Software license management',
+        'Hardware lifecycle management',
+        'Cost optimization and planning',
+        'Vendor management',
+        'Disposal and recycling services'
+      ],
+      pricing: '$3,000 - $20,000/month',
+      delivery: '4-10 weeks',
+      category: 'Asset Management Services'
+    },
+    {
+      title: 'Network Performance Optimization',
+      description: 'Advanced network performance monitoring and optimization services',
+      icon: Network,
+      features: [
+        'Network performance analysis',
+        'Bandwidth optimization',
+        'Quality of Service (QoS) implementation',
+        'Network troubleshooting and resolution',
+        'Performance monitoring and alerting',
+        'Capacity planning and scaling'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Network Services'
+    },
+    {
+      title: 'IT Training & Certification',
+      description: 'Comprehensive IT training programs and certification support',
+      icon: Users,
+      features: [
+        'Technical skills training',
+        'Certification exam preparation',
+        'Hands-on lab environments',
+        'Custom training curriculum',
+        'Instructor-led and self-paced options',
+        'Progress tracking and reporting'
+      ],
+      pricing: '$2,000 - $15,000/month',
+      delivery: '2-8 weeks',
+      category: 'Training Services'
+    },
+    {
+      title: 'IT Consulting & Strategy',
+      description: 'Strategic IT consulting and technology roadmap development',
+      icon: Target,
+      features: [
+        'IT strategy and roadmap development',
+        'Technology assessment and evaluation',
+        'Digital transformation planning',
+        'Vendor selection and evaluation',
+        'ROI analysis and business case development',
+        'Change management and adoption'
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '4-12 weeks',
+      category: 'Consulting Services'
     }
   ];
 
@@ -349,7 +604,7 @@ export default function ITServices() {
   ];
 
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description}  />

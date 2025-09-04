@@ -73,13 +73,13 @@ class $1 {
   cwd: this.projectRoot, ;
         stdio: `pipe`,;
 ;
-        timeout: 60000;
+        timeout: 60000;,
 });
 ;
         timeout: 60000;
-});
-this.log(`ESLint passed`);
-      return true;
+      });
+      this.log(`ESLint passed`);
+      return true;,
 } catch (error) {  this.log(`ESLint failed: ${error.message  }`, true);
       return false;
 }
@@ -276,13 +276,13 @@ this.log(`ESLint passed`);
   cwd: this.projectRoot, ;
         stdio: `pipe`,;
 ;
-        timeout: 120000;
+        timeout: 120000;,
 });
 ;
         timeout: 120000;
-});
-this.log(`Tests passed`);
-      return true;
+      });
+      this.log(`Tests passed`);
+      return true;,
 } catch (error) {  this.log(`Tests failed: ${error.message  }`, true);
       return false;
 }

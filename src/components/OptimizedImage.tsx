@@ -2,12 +2,10 @@ import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react';
 export default function Page() {
 ) => {
 
-  const [imageSrc, setImageSrc] = useState<any>(src);
-const [isLoading, setIsLoading] = useState(true);
+  const [imageSrc, setImageSrc] = useState<any>(src);  const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
-// Intersection Observer for lazy loading
-// Intersection Observer for lazy loading      }) ;
+  // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }) ;
 
     observerRef.current.observe(imgRef.current) ;
 
@@ -85,7 +83,7 @@ const [isLoading, setIsLoading] = useState(true);
         </div>
       </div>) ;
   }}) => {
-</div>
+    </div>
   )}
 export default OptimizedImage;";
 ;"

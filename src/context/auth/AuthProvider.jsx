@@ -4,9 +4,9 @@ import React, { useEffect } from "react";
 import { AuthContext } from "./AuthContext";
 import { cleanupAuthState } from "../../utils/authUtils";
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuthState } from "./useAuthState";
-import { useAuthEventHandlers } from "./useAuthEventHandlers";
-import { mapProfileToUser } from "./profileMapper";
+import { useAuthState } from "useAuthState.ts";
+import { useAuthEventHandlers } from "useAuthEventHandlers.ts";
+import { mapProfileToUser } from "profileMapper.ts";
 import { loginUser, registerUser } from "@/services/authService";
 import { safeStorage } from "@/utils/safeStorage";
 import { toast } from "@/hooks/use-toast"; // Import toast

@@ -27,17 +27,16 @@ this.reportFile = path.join(this.projectRoot, 'import-export-fixer-report.json')
     } catch (error) {
       this.log(`Error in Import/Export Fixer: ${error.message}`, 'error');
       await this.generateReport();
-      process.exit(1);
-this.automationInterval =;
+      process.exit(1);    this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default;
     this.reportFile = path.join(this.projectRoot, `import-export-fixer-report.json`);
     this.fixes = [];
-    this.startTime = Date.now();
+    this.startTime = Date.now();,
 }
 ;
   log(message, level = `info`) {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
+    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);,
 }
 ;
   async run() {
@@ -45,19 +44,19 @@ this.automationInterval =;
     try {
   await this.fixImportExportIssues();
       await this.generateReport();
-      this.log(`Import/Export Fixer completed successfully!`, `success`);
+      this.log(`Import/Export Fixer completed successfully!`, `success`);,
 } catch (error) {
   this.log(`Error in Import/Export Fixer: ${error.message  }`, `error`);
     this.automationInterval =;
       parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default;
     this.reportFile = path.join(this.projectRoot, "import-export-fixer-report.json");
     this.fixes = [];
-    this.startTime = Date.now();
+    this.startTime = Date.now();,
 }
 ;
   log(message, level = "info") {
   const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);
+    console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`);,
 }
 ;
   async run() {
@@ -67,17 +66,17 @@ this.automationInterval =;
   await this.fixImportExportIssues();
       await this.generateReport();
       ;
-      this.log("Import/Export Fixer completed successfully!", "success");
+      this.log("Import/Export Fixer completed successfully!", "success");,
 } catch (error) {
   this.log(`Error in Import/Export Fixer: ${error.message}`, "error");
       await this.generateReport();
       process.exit(1);
     this.automationInterval = parseInt(process.env.AUTOMATION_INTERVAL) || 2700000; // 45 minutes default;
-    this.fixesApplied = 0;
+    this.fixesApplied = 0;,
 }
 ;
   log(message) {
-  console.log(`[${new Date().toISOString()}] [ImportExportFixer] ${message}`);
+  console.log(`[${new Date().toISOString()}] [ImportExportFixer] ${message}`);,
 }
 ;
   async run() {
@@ -86,17 +85,17 @@ this.automationInterval =;
   await this.fixImportExportIssues();
       this.log(;
         `Import/export fixing completed. Applied ${this.fixesApplied} fixes.`;
-      );
+      );,
 } catch (error) {
-  this.log(`Error during import/export fixing: ${error.message  }`);
+  this.log(`Error during import/export fixing: ${error.message  }`);,
 }
   }
 ;
   async fixImportExportIssues() {
   this.log(`Fixing import/export issues...`, `info`);
-    ;
+    ;,
 } catch (error) {
-  this.log(`Error during import/export fixing: ${error.message}`);
+  this.log(`Error during import/export fixing: ${error.message}`);,
 }
   }
 ;
@@ -142,16 +141,16 @@ this.automationInterval =;
                 newContent = newContent.replace(match[0], ;
                   match[0].replace(importPath, relativePath.startsWith(".") ? relativePath : "./" + relativePath));
                 found = true;
-                break;
+                break;,
 }
             }
             ;
             if (!found) {
   // Remove the import if file doesn"t exist;
-              newContent = newContent.replace(match[0], "");
+              newContent = newContent.replace(match[0], "");,
 }
             ;
-            modified = true;
+            modified = true;,
 }
         }
       }
@@ -171,7 +170,7 @@ this.automationInterval =;
         if (componentMatch) {
   const componentName = componentMatch[1];
           newContent += `\n\nexport default ${componentName};`;
-          modified = true;
+          modified = true;,
 }
       }
 ;
@@ -183,14 +182,14 @@ this.automationInterval =;
       while ((componentMatch = componentRegex.exec(newContent)) !== null) {
   const componentName = componentMatch[1];
         if (componentName[0] === componentName[0].toUpperCase()) {
-  components.push(componentName);
+  components.push(componentName);,
 }
       }
 ;
       if (components.length > 0 && !hasNamedExports) {
   const exportStatement = `\n\nexport { ${components.join(", ")} };`;
         newContent += exportStatement;
-        modified = true;
+        modified = true;,
 }
 ;
       if (modified) {
@@ -204,11 +203,11 @@ this.automationInterval =;
   type: "import-export",;
           file,;
           description: "Fixed import/export issues",;
-          timestamp: Date.now();
+          timestamp: Date.now();,
 });
-        this.log(`Fixed import/export issues in ${file}`, `info`);
+        this.log(`Fixed import/export issues in ${file}`, `info`);,
 }
-}
+    }
   }
 ;
   async generateReport() {
@@ -364,8 +363,7 @@ this.log('Fixing import/export issues...', 'info');
   }
 }
 
-// Run the import/export fixer
-let modified = false;
+// Run the import/export fixer        let modified = false;
         let newContent = content;
         // Fix default export issues;
         if (;
@@ -403,5 +401,5 @@ let modified = false;
     }
   }
 }
-const fixer = new ImportExportFixer();
+
 fixer.run().catch(console.error)

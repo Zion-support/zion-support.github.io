@@ -102,12 +102,12 @@ export function LanguageSelector() {';';';
     <div className="relative" ref={menuRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}"
-        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover: text-white hove,
+        className="flex items-center space-x-2 p-2 rounded-lg text-zion-slate-light hover: text-white hove
     r:bg-zion-purple/10 transition-colors""
         aria-label="Select language"
       >"
         <Globe className="h-4 w-4" />"
-        <span className="text-sm font-medium hidden s,
+        <span className="text-sm font-medium hidden s
     m:block">
       <button onClick={() => setIsOpen(!isOpen)
       )}

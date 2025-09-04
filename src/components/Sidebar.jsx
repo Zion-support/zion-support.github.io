@@ -528,8 +528,8 @@ export function Sidebar({ isOpen = false, onClose }) {';';';
           </div>
           <button
             onClick={onClose}"
-            className="lg: hidden p-1 text-zion-slate-light hove,
-    r:text-white hove,
+            className="lg: hidden p-1 text-zion-slate-light hove
+    r:text-white hove
     r:bg-zion-purple/10 rounded"
           >"
           <button onClick={onClose} className="lg: hidden p-1 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded" >
@@ -613,7 +613,7 @@ export function Sidebar({ isOpen = false, onClose }) {';';';
                     ) : (
                       <button
                         onClick={() => toggleSection(item.name.toLowerCase());"
-                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover:text-white hove,
+                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover:text-white hove
     r:bg-zion-purple/10 transition-colors"
                       >"
                         <div className="flex items-center">"
@@ -667,6 +667,7 @@ export function Sidebar({ isOpen = false, onClose }) {';';';
   );
 }
               </div>
+>>>>>>> main
             </div>
           ))
       )}

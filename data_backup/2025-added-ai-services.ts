@@ -15,12 +15,12 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Deploys task-specific agents across email, chat, and voice that triage, resolve, and summarize tickets. Human-in-the-loop approvals for sensitive actions.',
     features[
       'Multi-channel ingestion',
-      'Action tools and approvals',
+      'Action tools and approvals'
       'Knowledge grounding with evals',
-      'Conversation memory and handoff',
+      'Conversation memory and handoff'
       'CSAT/NPS analytics',
       'PII redaction and compliance'
-    ],
+    ]
     popular: true,
     icon: '🤖',
     color: 'from-cyan-700 to-indigo-700',
@@ -47,7 +47,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 64,
     rating: 4.8,
     reviews: 38
-  },
+  }
   {
     id: 'ai-governance-and-risk-suite',
     name: 'AI Governance & Risk Suite',
@@ -57,11 +57,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Centralized policy management, dataset/model governance, automated red-team tests, and live monitoring to meet internal and regulatory standards.',
     features[
       'Policy as code',
-      'Automated evals and red-teams',
+      'Automated evals and red-teams'
       'Bias/toxicity/PII tests',
-      'Incident response playbooks',
+      'Incident response playbooks'
       'Model cards and approvals'
-    ],
+    ]
     popular: false,
     icon: '⚖️',
     color: 'from-fuchsia-600 to-rose-700',
@@ -88,7 +88,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 19,
     rating: 4.7,
     reviews: 17
-  },
+  }
   {
     id: 'marketing-content-studio',
     name: 'AI Marketing Content Studio',
@@ -98,11 +98,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Generate, review, and publish multi-channel content (blog, email, social) with brand guardrails and SEO insights.',
     features[
       'Brand style and tone controls',
-      'Briefs and outlines from keywords',
+      'Briefs and outlines from keywords'
       'SEO scoring and interlinking',
-      'Multi-channel scheduler',
+      'Multi-channel scheduler'
       'Performance analytics'
-    ],
+    ]
     popular: true,
     icon: '📝',
     color: 'from-pink-600 to-rose-700',
@@ -129,7 +129,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 73,
     rating: 4.7,
     reviews: 40
-  },
+  }
   {
     id: 'agentic-sales-engineer',
     name: 'Agentic Sales Engineer',
@@ -139,11 +139,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'An on-demand AI sales engineer that answers technical questions, drafts diagrams, and scaffolds demo projects with safe sandboxes.',
     features[
       'Docs/RFC grounding',
-      'Code and architecture snippets',
+      'Code and architecture snippets'
       'Sandboxed demo projects',
-      'Security/compliance answers with citations',
+      'Security/compliance answers with citations'
       'Handoff to human SE'
-    ],
+    ]
     popular: false,
     icon: '🧪',
     color: 'from-indigo-700 to-blue-800',
@@ -170,7 +170,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 21,
     rating: 4.6,
     reviews: 12
-  },
+  }
   {
     id: 'ai-fraud-detection-workbench',
     name: 'AI Fraud Detection Workbench',
@@ -180,11 +180,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Streaming anomaly detection with feature stores, human-in-the-loop investigations, and action playbooks.',
     features[
       'Feature store and embeddings',
-      'Streaming inference and alerts',
+      'Streaming inference and alerts'
       'Case management',
-      'Explainability and scorecards',
+      'Explainability and scorecards'
       'Auto-remediation playbooks'
-    ],
+    ]
     popular: true,
     icon: '🕵️',
     color: 'from-rose-600 to-red-700',
@@ -211,7 +211,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 11,
     rating: 4.7,
     reviews: 9
-  },
+  }
   {
     id: 'agentic-finops-optimizer',
     name: 'Agentic FinOps Optimizer',
@@ -221,11 +221,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Finds idle/overprovisioned resources, proposes savings, and executes cost actions with human approvals and rollback.',
     features[
       'Idle/overprovision detection',
-      'Savings plan recommendations',
+      'Savings plan recommendations'
       'Change tickets and approvals',
-      'Rollback and drift checks',
+      'Rollback and drift checks'
       'Savings dashboards'
-    ],
+    ]
     popular: true,
     icon: '💸',
     color: 'from-emerald-600 to-green-700',
@@ -252,7 +252,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 23,
     rating: 4.8,
     reviews: 14
-  },
+  }
   {
     id: 'r-d-tooling-copilot',
     name: 'R&D Tooling Copilot',
@@ -262,11 +262,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Private, org-tuned coding assistant grounded on repos, RFCs, and incidents with safe tool use for refactors and runbooks.',
     features[
       'Repo-aware Q&A and snippets',
-      'Refactor and test scaffolding',
+      'Refactor and test scaffolding'
       'Incident-aware suggestions',
-      'Security policies and filters',
+      'Security policies and filters'
       'IDE and chat integrations'
-    ],
+    ]
     popular: false,
     icon: '🧰',
     color: 'from-indigo-700 to-slate-800',
@@ -293,7 +293,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 17,
     rating: 4.6,
     reviews: 13
-  },
+  }
   {
     id: 'agentic-hr-recruiting-suite',
     name: 'Agentic HR Recruiting Suite',
@@ -303,11 +303,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Multi-source candidate discovery, structured screening with explainable scores, and automated scheduling with hiring manager feedback loops.',
     features[
       'Multi-site sourcing and enrichment',
-      'Structured interviews with rubrics',
+      'Structured interviews with rubrics'
       'Bias checks and score explanations',
-      'Auto scheduling and reminders',
+      'Auto scheduling and reminders'
       'Offer letter drafting'
-    ],
+    ]
     popular: true,
     icon: '🧑‍💼',
     color: 'from-emerald-600 to-teal-700',
@@ -334,7 +334,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 31,
     rating: 4.7,
     reviews: 18
-  },
+  }
   {
     id: 'agentic-ops-runbook-engine',
     name: 'Agentic Ops Runbook Engine',
@@ -344,11 +344,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Turns docs and tickets into executable, safe runbooks with approvals and automated rollback tied to SLOs and alerts.',
     features[
       'Doc-to-runbook compiler',
-      'Guardrails and approvers',
+      'Guardrails and approvers'
       'Rollback and blast-radius checks',
-      'SLO/SLA awareness',
+      'SLO/SLA awareness'
       'Post-incident summaries'
-    ],
+    ]
     popular: true,
     icon: '🛠️',
     color: 'from-indigo-700 to-slate-800',
@@ -375,7 +375,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 22,
     rating: 4.6,
     reviews: 12
-  },
+  }
   {
     id: 'agentic-revenue-forecasting-studio',
     name: 'Agentic Revenue Forecasting Studio',
@@ -385,11 +385,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Unified forecasting for pipeline, retention, and costs with what-if scenarios and plan deltas explained in plain English.',
     features[
       'Cohort-based forecasts',
-      'Scenario planner with drivers',
+      'Scenario planner with drivers'
       'Explainability and deltas',
-      'CSV/BI exports',
+      'CSV/BI exports'
       'Approval workflows'
-    ],
+    ]
     popular: false,
     icon: '📈',
     color: 'from-cyan-700 to-indigo-700',
@@ -416,7 +416,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 16,
     rating: 4.6,
     reviews: 9
-  },
+  }
   {
     id: 'agentic-supply-chain-copilot',
     name: 'Agentic Supply Chain Copilot',
@@ -426,11 +426,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Combines demand forecasting, supplier risk, and route optimization into agent actions with approvals and alerts.',
     features[
       'Demand and lead-time forecasts',
-      'Supplier risk signals',
+      'Supplier risk signals'
       'Route optimization',
-      'Exception detection',
+      'Exception detection'
       'Actionable alerts'
-    ],
+    ]
     popular: true,
     icon: '🚚',
     color: 'from-emerald-600 to-green-700',
@@ -457,7 +457,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 19,
     rating: 4.7,
     reviews: 11
-  },
+  }
   {
     id: 'agentic-sales-engineer',
     name: 'Agentic Sales Engineer',
@@ -467,11 +467,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'A tool-using agent that understands your product, answers RFP questions, creates architecture diagrams, and scaffolds demo repos for prospects.',
     features[
       'Docs + code grounding',
-      'Diagram generation',
+      'Diagram generation'
       'Demo repo scaffolding',
-      'Slack/Email handoff',
+      'Slack/Email handoff'
       'Analytics and feedback loops'
-    ],
+    ]
     popular: true,
     icon: '🧩',
     color: 'from-indigo-700 to-sky-700',
@@ -498,7 +498,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 31,
     rating: 4.7,
     reviews: 18
-  },
+  }
   {
     id: 'ai-marketing-content-studio',
     name: 'AI Marketing Content Studio',
@@ -508,11 +508,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Generates on-brand content with competitive research, SEO brief generation, editorial calendars, and publishing workflows.',
     features[
       'Brand voice tuning',
-      'Keyword and SERP analysis',
+      'Keyword and SERP analysis'
       'Content calendar planning',
-      'Editor approvals and versioning',
+      'Editor approvals and versioning'
       'Performance analytics'
-    ],
+    ]
     popular: true,
     icon: '✍️',
     color: 'from-rose-600 to-violet-700',
@@ -539,7 +539,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 76,
     rating: 4.6,
     reviews: 44
-  },
+  }
   {
     id: 'risk-and-compliance-copilot',
     name: 'Risk & Compliance Copilot',
@@ -549,11 +549,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Maps AI systems to risk frameworks, tracks controls, runs automated tests, and compiles audit packs for internal/external reviews.',
     features[
       'Control mapping to NIST/ISO/EU AI Act',
-      'Automated eval runs and reports',
+      'Automated eval runs and reports'
       'Evidence collection and storage',
-      'Findings triage and assignments',
+      'Findings triage and assignments'
       'Audit pack generation'
-    ],
+    ]
     popular: false,
     icon: '🧭',
     color: 'from-emerald-700 to-slate-700',
@@ -580,7 +580,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 19,
     rating: 4.8,
     reviews: 11
-  },
+  }
   {
     id: 'autonomous-analytics-briefs',
     name: 'Autonomous Analytics Briefs',
@@ -590,11 +590,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Connects to your warehouse and BI models to generate concise weekly briefs, anomalies, and recommended actions for business owners.',
     features[
       'KPI tracker and deltas',
-      'Anomaly detection and root-cause hints',
+      'Anomaly detection and root-cause hints'
       'Segment drilldowns',
-      'Action recommendations',
+      'Action recommendations'
       'Email/Slack delivery with charts'
-    ],
+    ]
     popular: true,
     icon: '📈',
     color: 'from-violet-700 to-indigo-700',
@@ -621,7 +621,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 25,
     rating: 4.7,
     reviews: 13
-  },
+  }
   {
     id: 'agentic-qa-and-test-writer',
     name: 'Agentic QA & Test Writer',
@@ -631,11 +631,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Code-aware agent that proposes and updates tests, fixes flaky tests, and annotates PRs with coverage and risk notes.',
     features[
       'Repo-aware reasoning',
-      'Test scaffolding and refactors',
+      'Test scaffolding and refactors'
       'Flake detection and fixes',
-      'Coverage insights on PRs',
+      'Coverage insights on PRs'
       'CI integration'
-    ],
+    ]
     popular: false,
     icon: '🧪',
     color: 'from-emerald-700 to-teal-800',
@@ -662,7 +662,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 12,
     rating: 4.6,
     reviews: 8
-  },
+  }
   {
     id: 'ai-data-contracts-assistant',
     name: 'AI Data Contracts Assistant',
@@ -672,11 +672,11 @@ export const addedAIServices2025: InnovativeAIService[] = [
     description: 'Schema and SLAs as contracts with validation, owner routing, and change management integrated with CI and catalogs.',
     features[
       'Contract templates and registry',
-      'Schema/SLI validation in CI',
+      'Schema/SLI validation in CI'
       'Owner routing and SLAs',
-      'Breaking change detection',
+      'Breaking change detection'
       'Catalog and lineage sync'
-    ],
+    ]
     popular: true,
     icon: '📜',
     color: 'from-amber-700 to-orange-700',
@@ -701,6 +701,6 @@ export const addedAIServices2025: InnovativeAIService[] = [
     implementationDetails: 'Templates + CI checks + registry + catalog',
     launchDate: '2025-06-23',
     customers: 10,
-    rating: 4.7,
+    rating: 4.7
     reviews: 6
 ]}}

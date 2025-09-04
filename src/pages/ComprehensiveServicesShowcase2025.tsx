@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
+  Cloud, 
   Shield, 
   Cloud, 
   Users, 
@@ -187,7 +188,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                       </span>
                     ))}
                   </div>
-                </div>
 
                 {/* Pricing */}
                 <div className="mb-4">
@@ -277,7 +277,13 @@ const ComprehensiveServicesShowcase2025 = () => {
                 364 E Main St STE 1008, Middletown DE 19709
               </p>
             </div>
-          </div>
+            <div className="mt-8 text-white/80">
+              <p className="mb-2">
+                <strong>Zion Tech Group</strong> | 364 E Main St STE 1008 Middletown DE 19709
+              </p>
+              <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </>

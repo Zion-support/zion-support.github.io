@@ -4,7 +4,7 @@ import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {QuoteRequestForm} from "@/components/QuoteRequestForm";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {CheckCircle, Clock, Users, Zap} from "lucide-react";
+import { CheckCircle, Clock, Users, Zap } from 'lucide-react';
 
 export default function RequestQuote
 export { RequestQuote }() {

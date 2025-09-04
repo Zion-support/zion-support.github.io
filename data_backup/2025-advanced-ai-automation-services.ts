@@ -111,7 +111,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     customers: 89,
     rating: 4.8,
     reviews: 67
-  },
+  }
   {
     id:,
   ai-predictive-maintenance-platform',
@@ -175,7 +175,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     customers: 45,
     rating: 4.7,
     reviews: 32
-  },
+  }
   {
     id:,
   ai-autonomous-marketing-optimization',
@@ -239,7 +239,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     customers: 156,
     rating: 4.9,
     reviews: 98
-  },
+  }
   {
     id:,
   ai-autonomous-financial-advisory',
@@ -302,7 +302,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     customers: 234,
     rating: 4.8,
     reviews: 145
-  },
+  }
   {
     id:,
   ai-autonomous-supply-chain-optimization',
@@ -364,7 +364,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   AI-powered supply chain optimization platform with demand forecasting, inventory management, and logistics optimization',
     launchDate: '2025-02-20,
     customers: 67,
-    rating: 4.6,
+    rating: 4.6
     reviews: 43
 ];
 export default advancedAIAutomationServices2025;}}

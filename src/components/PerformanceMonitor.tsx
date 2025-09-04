@@ -2,8 +2,8 @@ import React, { useEffect, useState, useCallback } from 'react';
 export const PerformanceMonitor: Reac t.FC < PerformanceMonitorProps> = ({
 export default PerformanceMonitor;
 import { motion, AnimatePresence  } from 'framer-motion';
-useEffect(() => {
-// TODO: Add dependencies if needed
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
 
   return () => {
     // Cleanup function
@@ -11,10 +11,9 @@ useEffect(() => {
 }, []);, []);
     if(metrics) {
 
-      setPerformanceScore(score)}
-  }, [metrics, calculatePerformanceScore]) ;
-  useEffect(() => {
-  // TODO: Add dependencies if needed
+      // Log metrics after 3 seconds
+      setTimeout(logMetrics, 3000);
+    }
 
   return () => {
     // Cleanup function

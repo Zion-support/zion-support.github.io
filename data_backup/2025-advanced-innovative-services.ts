@@ -105,9 +105,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   3D world building engine with AI integration and blockchain capabilities.',
     launchDate: '2025-01-10,
     customers: 89,
-    rating: 4.8,
+    rating: 4.8
     reviews: 67
-  },
+  }
   {
     id:,
   quantum-bio-computing-platform',
@@ -163,9 +163,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   Quantum algorithm implementations for biological simulations and molecular modeling.',
     launchDate: '2025-01-20,
     customers: 23,
-    rating: 4.9,
+    rating: 4.9
     reviews: 19
-  },
+  }
   {
     id:,
   ai-powered-legal-automation-suite',
@@ -221,9 +221,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   AI-powered legal analysis engine with automated workflows and compliance monitoring.',
     launchDate: '2025-01-25,
     customers: 134,
-    rating: 4.7,
+    rating: 4.7
     reviews: 98
-  },
+  }
   {
     id:,
   quantum-logistics-optimization-platform',
@@ -279,9 +279,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   Quantum optimization algorithms for logistics and supply chain problems.',
     launchDate: '2025-02-01,
     customers: 45,
-    rating: 4.8,
+    rating: 4.8
     reviews: 34
-  },
+  }
   {
     id:,
   autonomous-ai-research-assistant',
@@ -337,9 +337,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   Autonomous research engine with knowledge synthesis and hypothesis generation.',
     launchDate: '2025-02-05,
     customers: 189,
-    rating: 4.8,
+    rating: 4.8
     reviews: 145
-  },
+  }
   {
     id:,
   quantum-energy-optimization-platform',
@@ -395,9 +395,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   Quantum optimization algorithms for energy grid and renewable energy management.',
     launchDate: '2025-02-10,
     customers: 34,
-    rating: 4.9,
+    rating: 4.9
     reviews: 26
-  },
+  }
   {
     id:,
   ai-powered-creative-design-platform',
@@ -453,9 +453,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   AI-powered design generation engine with automation and collaboration tools.',
     launchDate: '2025-02-15,
     customers: 267,
-    rating: 4.7,
+    rating: 4.7
     reviews: 198
-  },
+  }
   {
     id:,
   quantum-neural-network-platform',
@@ -511,9 +511,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   Quantum neural network implementations with hybrid classical-quantum training.',
     launchDate: '2025-02-20,
     customers: 28,
-    rating: 4.9,
+    rating: 4.9
     reviews: 22
-  },
+  }
   {
     id:,
   intelligent-financial-planning-platform',
@@ -569,9 +569,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   AI-powered financial planning engine with portfolio optimization and risk management.',
     launchDate: '2025-02-25,
     customers: 156,
-    rating: 4.8,
+    rating: 4.8
     reviews: 118
-  },
+  }
   {
     id:,
   quantum-iot-security-platform',
@@ -627,9 +627,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   Quantum-resistant security implementations for IoT devices and networks.',
     launchDate: '2025-03-01,
     customers: 45,
-    rating: 4.7,
+    rating: 4.7
     reviews: 34
-  },
+  }
   {
     id:,
   ai-powered-education-platform',
@@ -685,9 +685,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   AI-powered adaptive learning engine with personalized curriculum generation.',
     launchDate: '2025-03-05,
     customers: 234,
-    rating: 4.8,
+    rating: 4.8
     reviews: 178
-  },
+  }
   {
     id:,
   quantum-space-technology-platform',
@@ -744,9 +744,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   Quantum algorithms for space applications and satellite optimization.',
     launchDate: '2025-03-10,
     customers: 19,
-    rating: 4.9,
+    rating: 4.9
     reviews: 15
-  },
+  }
   {
     id:,
   ai-powered-healthcare-diagnostics',
@@ -802,9 +802,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   AI-powered medical image analysis engine with diagnostic assistance capabilities.',
     launchDate: '2025-03-15,
     customers: 89,
-    rating: 4.8,
+    rating: 4.8
     reviews: 67
-  },
+  }
   {
     id:,
   quantum-materials-discovery-platform',
@@ -860,9 +860,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   Quantum simulation algorithms for materials discovery and property prediction.',
     launchDate: '2025-03-20,
     customers: 23,
-    rating: 4.9,
+    rating: 4.9
     reviews: 18
-  },
+  }
   {
     id:,
   intelligent-automotive-platform',
@@ -918,9 +918,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   AI-powered vehicle diagnostics engine with predictive maintenance and fleet optimization.',
     launchDate: '2025-03-25,
     customers: 178,
-    rating: 4.7,
+    rating: 4.7
     reviews: 134
-  },
+  }
   {
     id:,
   quantum-climate-modeling-platform',
@@ -976,6 +976,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   Quantum algorithms for climate modeling and environmental analysis.',
     launchDate: '2025-04-01,
     customers: 34,
-    rating: 4.8,
+    rating: 4.8
     reviews: 26
 ];}}

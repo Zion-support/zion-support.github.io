@@ -10,7 +10,7 @@ vi.mock(
   '@/services/apiClient', () => ({
   default: { post: vi.fn() }}))
 const mockedApi = api as unknown as { post: any }
-test(,
+test(
   shows success toast when subscription succeeds', async () => {
   mockedApi.post.mockResolvedValue({})
   render(<NewsletterForm />);

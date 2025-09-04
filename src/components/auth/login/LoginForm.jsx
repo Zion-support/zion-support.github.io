@@ -147,8 +147,8 @@ export default function Page() {
         </div>
       </form>
     </Form>
-  );
-}
+  );}
+
 export default LoginForm;
 
 export { LoginForm };

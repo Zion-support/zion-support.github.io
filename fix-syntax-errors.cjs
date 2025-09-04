@@ -50,7 +50,6 @@ function processDirectory(dirPath) {
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       processFile(filePath);
     }
-  }
 }
 
 // Start processing from the current directory

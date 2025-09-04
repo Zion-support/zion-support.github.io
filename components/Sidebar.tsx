@@ -29,9 +29,8 @@ interface SidebarProps {
   onClose: () => void;
 }
 
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const router = useRouter();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>

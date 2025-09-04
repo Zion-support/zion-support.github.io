@@ -243,7 +243,7 @@ export default function Solutions() {
                   Industries We Serve
                 </h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Our solutions are designed to work across various industries,
+                  Our solutions are designed to work across various industries
                   with deep understanding of sector-specific challenges and
                   requirements.
                 </p>

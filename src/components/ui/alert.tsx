@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface AlertProps {
   children: Reac t.ReactNode;
   className?: string;
@@ -44,3 +42,6 @@ export function AlertDescription({ children, className = '' }: AlertDescriptionP
     </div>
   );
 }
+
+
+export default alert;

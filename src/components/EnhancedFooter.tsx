@@ -67,6 +67,77 @@ import { Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, Git
   https: ''',';';
     ';';';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Mail, 
+  Smartphone, 
+  Building, 
+  MapPin, 
+  Globe, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  Youtube, 
+  ArrowRight, 
+  CheckCircle, 
+  Shield, 
+  Award, 
+  Users, 
+  Clock, 
+  Heart, 
+  Brain, 
+  Cloud, 
+  ShoppingCart, 
+  Factory, 
+  CreditCard, 
+  GraduationCap, 
+  ShoppingBag, 
+  Building2, 
+  Zap, 
+  Target, 
+  TrendingUp, 
+  Star, 
+  Lock, 
+  Eye, 
+  Code, 
+  Database, 
+  Network, 
+  Cpu, 
+  Atom, 
+  Rocket, 
+  BarChart3, 
+  MessageSquare, 
+  FileText, 
+  Settings, 
+  Gauge, 
+  Workflow, 
+  Calendar, 
+  Package, 
+  Headphones, 
+  Search, 
+  Lightbulb, 
+  Award as AwardIcon, 
+  ShieldCheck, 
+  Globe2, 
+  Leaf, 
+  Satellite, 
+  Microscope, 
+  Beaker, 
+  TestTube, 
+  Truck, 
+  Factory as FactoryIcon, 
+  Leaf as LeafIcon, 
+  Satellite as SatelliteIcon, 
+  Building as BuildingIcon, 
+  Gauge as GaugeIcon, 
+  MessageCircle, 
+  Calendar as CalendarIcon, 
+  Package as PackageIcon, 
+  CreditCard as CreditCardIcon, 
+  Globe2 as Globe2Icon, 
+  ShieldCheck as ShieldCheckIcon 
+} from 'lucide-react';
 
 export const EnhancedFooter: Reac t.FC = () => {
   return (<footer className="bg-gray-900 text-white">
@@ -78,6 +149,8 @@ export const EnhancedFooter: Reac t.FC = () => {
               Leading technology solutions provider specializing in AI, cybersecurity, 
               cloud infrastructure, and digital transformation services.</p>
           </div>
+
+          {/* Services */}
           <div>
             <h4 className="text-md font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400">
@@ -87,6 +160,8 @@ export const EnhancedFooter: Reac t.FC = () => {
               <li><a href="/services/transformation" className="hover: tex t-white">Digital Transformation</a></li>
             </ul>
           </div>
+
+          {/* Solutions */}
           <div>
             <h4 className="text-md font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-gray-400">
@@ -96,6 +171,8 @@ export const EnhancedFooter: Reac t.FC = () => {
               <li><a href="/case-studies" className="hover: tex t-white">Case Studies</a></li>
             </ul>
           </div>
+
+          {/* Quick Links */}
           <div>
             <h4 className="text-md font-semibold mb-4">Legal</h4>
             <ul className="space-y-2 text-gray-400">
@@ -105,10 +182,77 @@ export const EnhancedFooter: Reac t.FC = () => {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Zion Tech Group.All rights reserved.</p>
+      </div>
+
+      {/* Newsletter Signup */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-4 md:mb-0">
+              <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>
+              <p className="text-gray-300 text-sm">Get the latest news and updates about our services and solutions.</p>
+            </div>
+            <div className="flex w-full md:w-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 md:w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-cyan-500 text-white placeholder-gray-400"
+              />
+              <button className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 rounded-r-lg transition-colors font-semibold">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2024 Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex flex-wrap items-center space-x-6">
+              {legalLinks.map((link, index) => (
+                <Link 
+                  key={index}
+                  to={link.href}
+                  className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Trust Indicators */}
+      <div className="border-t border-gray-800 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-8 text-sm text-gray-400">
+            <div className="flex items-center">
+              <Shield className="w-4 h-4 mr-2 text-green-400" />
+              <span>Enterprise Security</span>
+            </div>
+            <div className="flex items-center">
+              <Award className="w-4 h-4 mr-2 text-yellow-400" />
+              <span>Certified Solutions</span>
+            </div>
+            <div className="flex items-center">
+              <Clock className="w-4 h-4 mr-2 text-blue-400" />
+              <span>24/7 Support</span>
+            </div>
+            <div className="flex items-center">
+              <Globe className="w-4 h-4 mr-2 text-purple-400" />
+              <span>Global Reach</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
 };
+
+export default EnhancedFooter;

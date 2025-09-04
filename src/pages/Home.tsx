@@ -288,6 +288,7 @@ import {
   Rocket
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Home: Reac t.FC = () => {
   const features = [

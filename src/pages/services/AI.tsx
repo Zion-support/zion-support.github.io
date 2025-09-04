@@ -193,7 +193,7 @@
                 </div>"
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>"
                 <p className="text-slate-400 text-sm">{tech.description}</p>
-              </div>;
+              </div>
             ))}
           </div>
         </div>
@@ -229,7 +229,7 @@
                     </li>
                   ))}
                 </ul>
-              </div>;
+              </div>
             ))}
           </div>
         </div>

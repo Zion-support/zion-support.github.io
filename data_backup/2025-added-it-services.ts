@@ -15,12 +15,12 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'End-to-end MLOps stack: feature store, CI/CD, drift detection, lineage, and cost controls. Delivered as a secure managed service in your cloud.',
     features[
       'Model registry and lineage',
-      'Data/Concept drift detection',
+      'Data/Concept drift detection'
       'Shadow and canary deploys',
-      'Feature store and embedding store',
+      'Feature store and embedding store'
       'Guardrails and evals',
       'RBAC and audit logs'
-    ],
+    ]
     popular: true,
     icon: '🛠️',
     color: 'from-slate-600 to-blue-700',
@@ -47,7 +47,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 28,
     rating: 4.9,
     reviews: 21
-  },
+  }
   {
     id: 'zero-trust-access-service',
     name: 'Zero-Trust Access Service',
@@ -57,7 +57,7 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Deploys an identity-aware proxy, device posture checks, and per-request authN/Z with strong logging and SIEM integration.',
     features[
       'mTLS and device posture',
-      'Per-route policies',
+      'Per-route policies'
       'Just-in-time access',
       'Session recording',
       'SIEM integration';
@@ -88,7 +88,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 52,
     rating: 4.8,
     reviews: 44
-  },
+  }
   {
     id: 'sre-oncall-as-a-service',
     name: 'SRE On-Call as a Service',
@@ -98,7 +98,7 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'We implement SLIs/SLOs, error budgets, and lightweight incident management. Shared on-call rotation with runbooks, automation, and postmortems.',
     features[
       'SLIs/SLOs and error budgets',
-      'Incident response and runbooks',
+      'Incident response and runbooks'
       'Auto-remediation playbooks',
       'Observability setup (logs, traces, metrics)',
       'Monthly reliability reviews'
@@ -129,7 +129,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 14,
     rating: 4.9,
     reviews: 11
-  },
+  }
   {
     id: 'data-platform-accelerator',
     name: 'Data Platform Accelerator',
@@ -139,11 +139,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Opinionated, secure data platform blueprint with ingestion, transformation, and governance. Delivered with IaC and documentation.',
     features[
       'Ingestion and CDC connectors',
-      'dbt transformations and tests',
+      'dbt transformations and tests'
       'Data catalog and lineage',
-      'Row/column-level security',
+      'Row/column-level security'
       'Cost monitoring and quotas'
-    ],
+    ]
     popular: true,
     icon: '🗄️',
     color: 'from-cyan-700 to-blue-800',
@@ -170,7 +170,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 9,
     rating: 4.8,
     reviews: 7
-  },
+  }
   {
     id: 'managed-kubernetes-platform',
     name: 'Managed Kubernetes Platform',
@@ -180,11 +180,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Hardened clusters with GitOps, autoscaling, cost controls, and golden paths. We operate, you ship.',
     features[
       'GitOps and policy as code',
-      'Cluster autoscaling and HPA/VPA',
+      'Cluster autoscaling and HPA/VPA'
       'Cost allocation and quotas',
-      'Multi-env promotions',
+      'Multi-env promotions'
       '24/7 monitoring and on-call'
-    ],
+    ]
     popular: true,
     icon: '☸️',
     color: 'from-blue-700 to-slate-800',
@@ -211,7 +211,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 7,
     rating: 4.8,
     reviews: 5
-  },
+  }
   {
     id: 'secure-data-mesh',
     name: 'Secure Data Mesh',
@@ -221,11 +221,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Blueprint and operate a governed data mesh with product SLAs, ownership, lineage, and secure access.',
     features[
       'Domain product templates',
-      'Row/column security and masking',
+      'Row/column security and masking'
       'Lineage and catalog',
-      'Quality checks and SLAs',
+      'Quality checks and SLAs'
       'Self-serve access workflows'
-    ],
+    ]
     popular: false,
     icon: '🕸️',
     color: 'from-purple-700 to-fuchsia-800',
@@ -252,7 +252,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 5,
     rating: 4.7,
     reviews: 4
-  },
+  }
   {
     id: 'enterprise-sso-and-iam-hardening',
     name: 'Enterprise SSO & IAM Hardening',
@@ -262,11 +262,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Modernize identity with SSO, SCIM, JIT, RBAC/ABAC, and device posture across apps and infra.',
     features[
       'SSO (SAML/OIDC) and SCIM',
-      'RBAC/ABAC and group mapping',
+      'RBAC/ABAC and group mapping'
       'Just-in-time access',
-      'Device posture checks',
+      'Device posture checks'
       'Audit logging and reports'
-    ],
+    ]
     popular: true,
     icon: '🔑',
     color: 'from-amber-700 to-orange-800',
@@ -293,7 +293,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 12,
     rating: 4.8,
     reviews: 8
-  },
+  }
   {
     id: 'managed-vulnerability-management',
     name: 'Managed Vulnerability Management',
@@ -303,11 +303,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Agentless and agent-based scanning across cloud and endpoints with risk-based prioritization, ticketing, and dashboards.',
     features[
       'Cloud and endpoint scanning',
-      'Risk-based scoring',
+      'Risk-based scoring'
       'Ticketing integration',
-      'SLA tracking and reports',
+      'SLA tracking and reports'
       'Executive dashboards'
-    ],
+    ]
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-rose-700',
@@ -334,7 +334,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 18,
     rating: 4.7,
     reviews: 13
-  },
+  }
   {
     id: 'managed-sase-lite',
     name: 'Managed SASE Lite',
@@ -344,11 +344,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Identity-aware proxy, DNS filtering, and basic DLP with opinionated defaults and monthly reviews.',
     features[
       'Identity-aware proxy',
-      'DNS and web filtering',
+      'DNS and web filtering'
       'Basic DLP policies',
-      'Device posture checks',
+      'Device posture checks'
       'Monthly security reviews'
-    ],
+    ]
     popular: false,
     icon: '🛰️',
     color: 'from-indigo-600 to-violet-700',
@@ -375,7 +375,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 10,
     rating: 4.6,
     reviews: 7
-  },
+  }
   {
     id: 'data-quality-observability-service',
     name: 'Data Quality Observability Service',
@@ -385,11 +385,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Monitors pipelines and datasets for health issues and notifies owners with fixes and SLAs.',
     features[
       'Freshness and volume checks',
-      'Schema drift detection',
+      'Schema drift detection'
       'Anomaly detection',
-      'Owner routing and SLAs',
+      'Owner routing and SLAs'
       'Data incident postmortems'
-    ],
+    ]
     popular: true,
     icon: '📊',
     color: 'from-cyan-700 to-blue-800',
@@ -416,7 +416,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 12,
     rating: 4.7,
     reviews: 9
-  },
+  }
   {
     id: 'cost-aware-kubernetes-hardening',
     name: 'Cost-Aware Kubernetes Hardening',
@@ -426,11 +426,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Implements policy packs, resource budgets, and guardrails that reduce both risk and spend, with dashboards for teams.',
     features[
       'Policy-as-code packs',
-      'Quotas and budgets',
+      'Quotas and budgets'
       'Admission controls',
-      'Golden templates',
+      'Golden templates'
       'Drift detection'
-    ],
+    ]
     popular: true,
     icon: '☸️',
     color: 'from-slate-700 to-black',
@@ -457,7 +457,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 8,
     rating: 4.8,
     reviews: 6
-  },
+  }
   {
     id: 'data-platform-modernization',
     name: 'Data Platform Modernization',
@@ -467,11 +467,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Design and implement a modern data stack with ingestion, transformation, governance, and observability tuned to your workloads and cost targets.',
     features[
       'Ingestion connectors and CDC',
-      'dbt transformations and tests',
+      'dbt transformations and tests'
       'Cost and performance tuning',
-      'Data contracts and lineage',
+      'Data contracts and lineage'
       'Observability and SLAs'
-    ],
+    ]
     popular: true,
     icon: '🗄️',
     color: 'from-slate-700 to-blue-700',
@@ -498,7 +498,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 17,
     rating: 4.8,
     reviews: 12
-  },
+  }
   {
     id: 'sre-and-reliability-ops',
     name: 'SRE & Reliability Ops',
@@ -508,11 +508,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Establishes reliability fundamentals: golden signals, error budgets, runbooks, and a monthly ops cadence with postmortems and tuning.',
     features[
       'SLIs/SLOs and error budgets',
-      'On-call rotations and tooling',
+      'On-call rotations and tooling'
       'Incident response and postmortems',
-      'Capacity planning and load tests',
+      'Capacity planning and load tests'
       'Cost/perf optimizations'
-    ],
+    ]
     popular: true,
     icon: '⚙️',
     color: 'from-emerald-700 to-slate-800',
@@ -539,7 +539,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 24,
     rating: 4.9,
     reviews: 19
-  },
+  }
   {
     id: 'zero-trust-email-and-endpoint',
     name: 'Zero-Trust Email & Endpoint',
@@ -549,11 +549,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Harden email and endpoints with identity-aware protections, phishing exercises, and SOC-ready logging integrated with your SIEM.',
     features[
       'DMARC/DKIM/SPF enforcement',
-      'EDR deployment and baselines',
+      'EDR deployment and baselines'
       'Phishing simulations and training',
-      'SIEM integration and alerting',
+      'SIEM integration and alerting'
       'Playbooks and tabletop drills'
-    ],
+    ]
     popular: false,
     icon: '🛡️',
     color: 'from-orange-600 to-rose-700',
@@ -580,7 +580,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 13,
     rating: 4.7,
     reviews: 10
-  },
+  }
   {
     id: 'managed-observability-platform',
     name: 'Managed Observability Platform',
@@ -590,11 +590,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'End-to-end observability with golden signals, SLO dashboards, and alert hygiene. We run the stack and partner with your teams for outcomes.',
     features[
       'Unified telemetry pipelines',
-      'SLO dashboards and burn alerts',
+      'SLO dashboards and burn alerts'
       'Runbook-driven alerting',
-      'Cost optimization of telemetry',
+      'Cost optimization of telemetry'
       'Incident collaboration'
-    ],
+    ]
     popular: true,
     icon: '📊',
     color: 'from-indigo-700 to-blue-800',
@@ -621,7 +621,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 6,
     rating: 4.8,
     reviews: 4
-  },
+  }
   {
     id: 'network-modernization-accelerator',
     name: 'Network Modernization Accelerator',
@@ -631,11 +631,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Blueprint and implement a modern, secure network fabric with SD-WAN, identity-aware access, and cloud interconnects.',
     features[
       'SD-WAN rollout',
-      'Identity-aware segmentation',
+      'Identity-aware segmentation'
       'Cloud interconnects',
-      'Observability and logs',
+      'Observability and logs'
       'Playbooks and training'
-    ],
+    ]
     popular: false,
     icon: '🌐',
     color: 'from-cyan-700 to-blue-800',
@@ -662,7 +662,7 @@ export const addedITServices2025: AdvancedITService[] = [
     customers: 4,
     rating: 4.7,
     reviews: 3
-  },
+  }
   {
     id: 'data-governance-foundation',
     name: 'Data Governance Foundation',
@@ -672,11 +672,11 @@ export const addedITServices2025: AdvancedITService[] = [
     description: 'Stand up pragmatic governance with a catalog, lineage, RBAC/ABAC, and data contracts with owners and SLAs.',
     features[
       'Data catalog and ownership',
-      'Lineage and impact analysis',
+      'Lineage and impact analysis'
       'RBAC/ABAC and masking',
-      'Data contracts and SLAs',
+      'Data contracts and SLAs'
       'Audit logs and reviews'
-    ],
+    ]
     popular: true,
     icon: '📚',
     color: 'from-emerald-700 to-teal-800',
@@ -701,6 +701,6 @@ export const addedITServices2025: AdvancedITService[] = [
     implementationDetails: 'Blueprints + policy packs + training',
     launchDate: '2025-06-23',
     customers: 3,
-    rating: 4.8,
+    rating: 4.8
     reviews: 2
 ]}}

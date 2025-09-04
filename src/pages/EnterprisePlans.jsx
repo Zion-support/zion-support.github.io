@@ -1,4 +1,3 @@
-import React from "react";
 import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero";
 import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable";
 import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures";

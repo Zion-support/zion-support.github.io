@@ -1,6 +1,5 @@
 import React from 'react';
 import { 
-  Handshake, 
   Users, 
   Star, 
   Award, 

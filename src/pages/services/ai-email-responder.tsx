@@ -50,9 +50,9 @@ const AIEmailResponder: Reac t.FC = () => {
   ]
   const benefits = [
     "Reduce email response time by 80%",
-    "Improve customer satisfaction scores",
+      "Improve customer satisfaction scores"
     "Handle 24/7 email communication",
-    "Eliminate repetitive email tasks",
+      "Eliminate repetitive email tasks"
     "Scale customer support operations",
     "Maintain consistent brand voice"
   ]
@@ -64,9 +64,9 @@ const AIEmailResponder: Reac t.FC = () => {
       description: "Perfect for small teams",
       features: [
         "Up to 1,000 emails/month",
-        "Basic AI responses",
+      "Basic AI responses"
         "Email prioritization",
-        "Standard templates",
+      "Standard templates"
         "Email support"
       ]
 },
@@ -77,9 +77,9 @@ const AIEmailResponder: Reac t.FC = () => {
       description: "Ideal for growing businesses",
       features: [
         "Up to 10,000 emails/month",
-        "Advanced AI responses",
+      "Advanced AI responses"
         "Custom templates",
-        "Analytics dashboard",
+      "Analytics dashboard"
         "Priority support",
         "Multi-language support"
       ],
@@ -91,11 +91,11 @@ const AIEmailResponder: Reac t.FC = () => {
       description: "For large organizations",
       features: [
         "Unlimited emails",
-        "Custom AI training",
+      "Custom AI training"
         "Advanced analytics",
-        "API integration",
+      "API integration"
         "Dedicated support",
-        "Custom branding",
+      "Custom branding"
         "SSO integration"
       ]
 }

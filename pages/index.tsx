@@ -19,26 +19,45 @@ const Home = memo(() => {
 
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
     "description": "Leading provider of revolutionary AI services, IT solutions, and micro SaaS development",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://ziontechgroup.com"
+    ],
+    "foundingDate": "2020",
+    "numberOfEmployees": "10-50",
+    "industry": "Technology Services",
+    "services": [
+      "AI Services",
+      "IT Solutions", 
+      "Micro SaaS Development",
+      "Cloud Infrastructure",
+      "Cybersecurity",
+      "Digital Transformation"
+    ]
   };
   const stats = [
-  { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' },
+  { number: '500+', label: 'Projects Completed' }
+    { number: '50+', label: 'Happy Clients' }
+    { number: '99.9%', label: 'Uptime Guarantee' }
+    { number: '24/7', label: 'Support Available' }
   ];
 
   const services = [
@@ -124,8 +143,8 @@ const Home = memo(() => {
                   Get Started
                 </Link>
                 <Link
-                  href="/services"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover: b g-blue-600 hover: tex t-white transition-colors"
+                  href="/services-enhanced"
+                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
                 >
                   View Services
                 </Link>
@@ -197,12 +216,43 @@ const Home = memo(() => {
                   <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
+<<<<<<< HEAD
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
+                  <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                  
+                  {/* Pricing and Delivery */}
+                  <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-sm font-medium text-gray-700">Starting Price:</span>
+                      <span className="text-lg font-bold text-blue-600">{service.pricing}</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-gray-700">Delivery Time:</span>
+                      <span className="text-sm text-gray-600">{service.delivery}</span>
+                    </div>
+                  </div>
+
+                  {/* Key Benefits */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Benefits:</h4>
+                    <ul className="space-y-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+=======
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-6 text-center">
                     {service.description}
                   </p>
+>>>>>>> main
                   <Link href={service.href} className="block">
                     <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover: b g-blue-700 transition-colors text-center flex items-center justify-center">
                       Learn More
@@ -315,6 +365,128 @@ const Home = memo(() => {
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+              <p className="text-xl text-gray-600">
+                Don't just take our word for it - hear from our satisfied clients
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-8 shadow-sm">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6">
+                  "Zion Tech Group transformed our business with their AI-powered solutions. The ROI was immediate and the support is exceptional. Highly recommended!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">JS</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">John Smith</h4>
+                    <p className="text-gray-500 text-sm">CEO, TechCorp Solutions</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6">
+                  "Their micro SaaS development team delivered exactly what we needed. The platform is scalable, secure, and user-friendly. Outstanding work!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">MJ</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Maria Johnson</h4>
+                    <p className="text-gray-500 text-sm">CTO, InnovateNow Inc</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm">
+                <div className="flex items-center mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-6">
+                  "The IT infrastructure they built for us is rock-solid. 99.9% uptime and their support team is always available. Worth every penny!"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">DW</span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">David Wilson</h4>
+                    <p className="text-gray-500 text-sm">IT Director, Global Enterprises</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+              <p className="text-xl text-gray-600">
+                Ready to start your digital transformation journey? Contact us today.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+                <div className="p-3 rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 mx-auto mb-4 w-fit">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600 mb-4">Call us for immediate assistance</p>
+                <a href="tel:+13024640950" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+                <div className="p-3 rounded-lg bg-gradient-to-r from-green-500 to-green-600 mx-auto mb-4 w-fit">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600 mb-4">Send us a message anytime</p>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow text-center">
+                <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-purple-600 mx-auto mb-4 w-fit">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600 mb-4">Visit our headquarters</p>
+                <address className="text-blue-600 font-semibold not-italic">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </address>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 text-center">
@@ -345,6 +517,5 @@ const Home = memo(() => {
   );
 });
 
-Home.displayName = 'Home';
 
 export default Home;

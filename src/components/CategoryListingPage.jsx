@@ -23,9 +23,8 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
     { label: 'All', value: 'all' },
     { label: 'Highly Rated', value: 'high-rating' },
     { label: 'Best AI Match', value: 'best-match' },
-] }) {
-"
-const [searchQuery, setSearchQuery] = useState("");
+] }) {"
+    const [searchQuery, setSearchQuery] = useState("");
     const [selectedSort, setSelectedSort] = useState(() => localStorage.getItem('category_selected_sort') || sortOptions[0].value);
     const [selectedFilter, setSelectedFilter] = useState(() => localStorage.getItem('category_selected_filter') || filterOptions[0].value);
     const [isLoading, setIsLoading] = useState(false);

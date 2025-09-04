@@ -10,7 +10,7 @@ const Services: Reac t.FC = () => {
           <p className="text-lg text-gray-600">Content coming soon...</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

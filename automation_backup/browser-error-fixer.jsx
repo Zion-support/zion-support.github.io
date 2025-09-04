@@ -248,7 +248,7 @@ class BrowserErrorFixer {
       type:;
   'insert',
       line: 1,
-      content: commonFixes[0],
+      content: commonFixes[0]
       description: `Added variable declaration for ${variableName}`}
 ;
   async fixTypeError(type, filePath) {

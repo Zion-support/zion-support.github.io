@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
+import { Link } from 'react-router-dom';import { 
   Brain, 
   Shield, 
 Zap, 
@@ -252,7 +251,6 @@ export { ServicesPage }() {
           </div>
         </div>
       </section>
-    </div>
-);
+    </div>  );
 }
 export default ServicesPage

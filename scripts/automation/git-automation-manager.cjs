@@ -385,7 +385,7 @@ class GitAutomationManager {
     return content
       .replace(/\n/g, '// HEAD version:\n')
       .replace(/\n/g, '\n// Branch version:\n')
-      .replace(/}
+      .replace(/  }
 
   categorizeChanges(status) {
     const categories = {

@@ -40,3 +40,6 @@ export function TabsContent({ children, value, className = '' }) {
         return null;
     return <div className={className}>{children}</div>;
 }
+
+
+export default tabs;

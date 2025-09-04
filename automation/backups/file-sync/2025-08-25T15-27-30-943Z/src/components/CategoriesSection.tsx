@@ -4,7 +4,7 @@ import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe 
 const categories = [{
     title: 'Services',
     description: 'On-demand IT support, consulting, development, and more',
-    icon: <Briefcase className='w-10 h-10' />,
+    icon: <Briefcase className='w-10 h-10' />
     link: '/services',
     color: 'from-purple-500 to-indigo-600',
     features['24/7 Support', 'Global Coverage', 'Certified Experts'],
@@ -12,14 +12,14 @@ const categories = [{
   {
     title: 'AI & IT Services',
     description: 'Professional IT consulting, development, and AI integration',
-    icon: <Brain className='w-10 h-10' />,
+    icon: <Brain className='w-10 h-10' />
     link: '/services',
     color: 'from-zion-purple to-zion-purple-dark',
     featured: true},
   {
     title: 'Talent Network',
     description: 'Connect with AI experts, developers, and tech specialists',
-    icon: <Users className='w-10 h-10' />,
+    icon: <Users className='w-10 h-10' />
     link: '/talent',
     color: 'from-cyan-500 to-blue-600',
     features['AI Matching', 'Verified Profiles', 'Skill Validation'],
@@ -27,7 +27,7 @@ const categories = [{
   {
     title: 'Equipment & Hardware',
     description: 'Rent or buy specialized hardware, servers, and devices',
-    icon: <HardDrive className='w-10 h-10' />,
+    icon: <HardDrive className='w-10 h-10' />
     link: '/equipment',
     color: 'from-amber-500 to-orange-600',
     features['Flexible Rental', 'Buy Options', 'Maintenance Included'],
@@ -35,7 +35,7 @@ const categories = [{
   {
     title: 'Innovation Hub',
     description: 'Discover cutting-edge solutions and tech breakthroughs',
-    icon: <Lightbulb className='w-10 h-10' />,
+    icon: <Lightbulb className='w-10 h-10' />
     link: '/category/innovation',
     color: 'from-emerald-500 to-green-600',
     features['Latest Tech', 'Research Labs', 'Startup Solutions'],
@@ -43,7 +43,7 @@ const categories = [{
   {
     title: 'AI Hiring Platform',
     description: 'AI-powered recruitment and talent acquisition tools',
-    icon: <ZapIcon className='w-10 h-10' />,
+    icon: <ZapIcon className='w-10 h-10' />
     link: '/zion-hire-ai',
     color: 'from-zion-purple to-zion-purple-dark',
     featured: true}
@@ -140,9 +140,9 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           animate = {
   { opacity: 1,
   y: 0}}
-          transition = {
-  { duration: 0.8,
-  delay: 0.6}}
+          transition: = {
+  { duration: 0.,8
+  delay: 0.,6}}
         >
           <Link
             to='/categories';

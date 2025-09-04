@@ -4,9 +4,11 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+
+console.log('🛡️ Starting error prevention monitor...');
 
 class ErrorPreventionMonitor {
   constructor() {
@@ -85,8 +87,7 @@ class ErrorPreventionMonitor {
       });
     } catch (error) {
       // Directory access error
-    }
-return false;
+    }      return false;,
 }
   }
 ;

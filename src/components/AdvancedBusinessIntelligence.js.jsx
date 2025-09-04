@@ -500,6 +500,5 @@ export function AdvancedBusinessIntelligence() {
         )}
       </div>
     </div>
-  );
-}
+  );}
 "export default ComponentName;"

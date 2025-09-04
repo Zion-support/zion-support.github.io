@@ -1,48 +1,37 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import { { SEO } } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+
 import { 
-  Truck, 
-  TrendingUp, 
-  BarChart3, 
-  Users, 
+  Workflow, 
+  Brain, 
+  Shield, 
   Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Play,
+  Users, 
+  CheckCircle, 
   ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
   Activity,
-  MapPin,
-  Shield,
-  Settings,
+  Search,
+  BookOpen,
+  Clock,
   DollarSign,
-  AlertCircle,
-  Calendar,
+  BarChart3,
+  Lock,
+  Eye,
+  FileSearch,
+  Truck,
+  Target,
+  AlertTriangle,
+  Database,
+  Network,
+  Globe,
+  Cpu,
   Package,
   Route,
   Warehouse,
-  Factory,
-  Ship,
-  Plane,
-  Store
+  Factory
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function AISupplyChainOptimization
 export { AISupplyChainOptimization }() {
@@ -203,72 +192,35 @@ export { AISupplyChainOptimization }() {
     }
   ];
 
-  const integrations = [
-    {
-      name: "ERP Systems",
-      platforms: ["SAP", "Oracle", "Microsoft Dynamics", "NetSuite"]
-    },
-    {
-      name: "WMS Systems",
-      platforms: ["Manhattan Associates", "HighJump", "Softeon", "JDA"]
-    },
-    {
-      name: "Transportation",
-      platforms: ["FedEx", "UPS", "DHL", "TMS Systems"]
-    },
-    {
-      name: "E-commerce",
-      platforms: ["Shopify", "WooCommerce", "Magento", "BigCommerce"]
-    },
-    {
-      name: "Analytics",
-      platforms: ["Tableau", "Power BI", "Google Analytics", "Custom APIs"]
-    },
-    {
-      name: "IoT & Sensors",
-      platforms: ["RFID", "GPS Tracking", "Temperature Sensors", "IoT Platforms"]
-    }
+  const benefits = [
+    'Reduce inventory costs by 30%',
+    'Improve delivery times by 40%',
+    'Lower operational costs by 25%',
+    'Enhanced supplier performance and relationships',
+    'Real-time visibility across the entire supply chain',
+    'Scalable for any business size and complexity'
   ];
 
-  const keyMetrics = [
+  const industries = [
     {
-      metric: "30%",
-      label: "Cost Reduction",
-      description: "Average reduction in supply chain costs"
+      title: 'Manufacturing',
+      description: 'Production planning and material optimization',
+      icon: Factory
     },
     {
-      metric: "50%",
-      label: "Lead Time Reduction",
-      description: "Faster delivery and reduced lead times"
+      title: 'Retail & E-commerce',
+      description: 'Inventory management and fulfillment optimization',
+      icon: Package
     },
     {
-      metric: "95%",
-      label: "Forecast Accuracy",
-      description: "AI-powered demand prediction accuracy"
+      title: 'Logistics & Transportation',
+      description: 'Route optimization and fleet management',
+      icon: Truck
     },
     {
-      metric: "40%",
-      label: "Inventory Optimization",
-      description: "Reduction in excess inventory levels"
-    }
-  ];
-
-  const optimizationAreas = [
-    {
-      category: "Demand Planning",
-      areas: ["Forecasting", "Seasonal Analysis", "Trend Prediction", "Demand Shaping"]
-    },
-    {
-      category: "Inventory Management",
-      areas: ["Stock Optimization", "Reorder Points", "Safety Stock", "ABC Analysis"]
-    },
-    {
-      category: "Transportation",
-      areas: ["Route Optimization", "Load Planning", "Carrier Selection", "Freight Optimization"]
-    },
-    {
-      category: "Supplier Management",
-      areas: ["Performance Tracking", "Risk Assessment", "Cost Analysis", "Quality Monitoring"]
+      title: 'Healthcare',
+      description: 'Medical supply chain and pharmaceutical logistics',
+      icon: Shield
     }
   ];
 
@@ -286,8 +238,8 @@ export { AISupplyChainOptimization }() {
           <motion.div
             initial={{ opacity: 0, y: 2 0 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6">
               <Truck className="w-4 h-4 mr-2"  />
@@ -299,9 +251,8 @@ export { AISupplyChainOptimization }() {
                 {' '}Optimization
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your supply chain with AI-powered optimization. 
-              Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent supply chain management.
+            <p className="text-xl md:text-2xl text-orange-100 mb-8 max-w-4xl mx-auto">
+              Transform your supply chain with AI-powered optimization, intelligent automation, and predictive insights
             </p>
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover: fro m-orange-700 hover: t o-red-700 transition-all duration-300 text-lg flex items-center justify-center">
@@ -351,14 +302,14 @@ export { AISupplyChainOptimization }() {
           <motion.div
             initial={{ opacity: 0, y: 2 0 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md: tex t-5xl font-bold text-white mb-6">
               Powerful Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI capabilities designed to revolutionize your supply chain operations and logistics management.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our AI supply chain optimization platform combines cutting-edge machine learning with logistics expertise to deliver unprecedented efficiency
             </p>
           </motion.div>
 
@@ -578,8 +529,8 @@ export { AISupplyChainOptimization }() {
             <h2 className="text-3xl md: tex t-5xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how organizations across industries leverage our AI supply chain optimization to improve efficiency.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From inventory management to logistics optimization, our AI platform handles every aspect of supply chain operations
             </p>
           </motion.div>
 
@@ -631,8 +582,8 @@ export { AISupplyChainOptimization }() {
             <h2 className="text-3xl md: tex t-5xl font-bold text-white mb-6">
               Seamless Integrations
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your existing supply chain and logistics tools for a unified optimization experience.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our AI supply chain optimization platform serves diverse industries with specialized solutions
             </p>
           </motion.div>
 
@@ -659,6 +610,46 @@ export { AISupplyChainOptimization }() {
                     </span>
                   ))}
                 </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {industry.title}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {industry.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-orange-50 to-amber-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Why Choose AI Supply Chain Optimization?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your supply chain operations with unprecedented efficiency, cost savings, and visibility
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-center space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
+                <span className="text-gray-700">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -677,9 +668,8 @@ export { AISupplyChainOptimization }() {
             <h2 className="text-3xl md: tex t-5xl font-bold text-white mb-6">
               Ready to Optimize Your Supply Chain?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using AI-powered supply chain optimization 
-              to reduce costs and improve operational efficiency.
+            <p className="text-xl text-orange-100 mb-8">
+              Join leading companies already using AI to revolutionize their supply chain operations
             </p>
             <div className="flex flex-col sm: fle x-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover: fro m-orange-700 hover: t o-red-700 transition-all duration-300 text-lg flex items-center justify-center">
@@ -696,4 +686,6 @@ export { AISupplyChainOptimization }() {
       </section>
     </div>
   );
-}
+};
+
+export default AISupplyChainOptimization;

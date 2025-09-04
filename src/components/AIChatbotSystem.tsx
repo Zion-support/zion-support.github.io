@@ -281,8 +281,8 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
                 <div className="flex-1 relative">
                   <input
-                    type="text"
-                    value={inputValue}
+                    type="text"></input>
+                    value={inputValue}></input>
                     onChange={(e) => setInputValue(e.target.value)}
                     placeholder="Ask me anything about Zion Tech Group..."
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-cyan-500 focus: borde r-transparent"
@@ -319,3 +319,6 @@ export const AIChatbotSystem: Reac t.FC<AIChatbotSystemProps> = ({
     </>
   );
 };
+
+
+export default AIChatbotSystem;

@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Twitter,
-  Linkedin,
-  Facebook,
-  Instagram,
+import Link from 'next/link';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Linkedin, 
+  Twitter, 
   Github,
   Mail,
   Phone,
@@ -13,9 +14,7 @@ import {
   Zap,
   Brain,
   Shield,
-  Users,
-  HardDrive,
-  TrendingUp,
+  Code,
   Building2,
   FileText,
   HelpCircle,
@@ -164,40 +163,30 @@ import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-r
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
   Linkedin,
   Instagram,
-  Globe,
   Twitter,
   Facebook,
   Youtube,
   Github,
-  Zap,
   Brain,
+  Code,
+  Server,
   Shield,
+  Cloud,
+  Zap,
   Users,
-  HardDrive,
-  TrendingUp,
-  Building2,
+  BarChart3,
+  Settings,
   FileText,
   HelpCircle,
-  BarChart3,
-  ArrowUp,
-  Heart,
-  Star,
-  CheckCircle,
   Award,
+  CheckCircle,
+  Star,
   Lock,
   Eye,
-  Atom,
-  Code,
-  Database,
   Network,
-  Server
-  Rocket,
-  Target,
-  Handshake,
-  Lightbulb,
+  Database,
   Cpu,
   Smartphone,
-  Server,
   Chip,
   Wifi,
   ShieldCheck,
@@ -241,7 +230,10 @@ services: [ { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-
       title: "Resources","
 links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href: "/white-papers" }, { name: "Support Center", href: "/help" }, { name: "Training", href: "/training" }, { name: "Blog", href: "/blog" }, { name: "Research", href: "/research-development" }
 
-      ]}
+export function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   ]"
   const solutions = []
@@ -253,15 +245,27 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
     { icon: Glob e, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
 ];
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const legalLinks = [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "Data Protection", href: "/data-protection" },
+    { name: "Accessibility", href: "/accessibility" }
+  ];
+
+  const socialLinks = [
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram },
+    { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }
+  ];
+
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
         <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-5 gap-8">
@@ -271,12 +275,34 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white"  />
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+              <span className="font-bold text-lg">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Leading provider of innovative AI, IT, and Micro SAAS solutions. 
-              Transforming businesses through cutting-edge technology and expert consulting.
+            <p className="text-gray-400 mb-4">
+              Leading technology solutions provider specializing in AI, cybersecurity, 
+              cloud infrastructure, and digital transformation services.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-gray-300">
+                <Phone className="w-4 h-4 mr-3 text-zion-cyan" />
+                <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition-colors">
+                  {contactInfo.phone}
+                </a>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Mail className="w-4 h-4 mr-3 text-zion-cyan" />
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
+                  {contactInfo.email}
+                </a>
+              </div>
+              <div className="flex items-start text-gray-300">
+                <MapPin className="w-4 h-4 mr-3 mt-0.5 text-zion-cyan flex-shrink-0" />
+                <span>{contactInfo.address}</span>
+              </div>
+            </div>
+
+            {/* Social Links */}
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover: tex t-blue-400 transition-colors">
                 <Linkedin className="w-5 h-5"  />
@@ -312,8 +338,7 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
                 ))}
 </ul>
             </div>
-          ))}
-        </div>
+          </div>
 
 {/* Contact Information */}
         <div className="mt-12 pt-8 border-t border-gray-800">
@@ -339,6 +364,19 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
                 <p className="text-gray-400 text-sm">San Francisco, CA</p>
               </div>
             </div>
+          </div>
+
+          {/* Resources */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link href="/docs" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Documentation</Link></li>
+              <li><Link href="/api" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">API Reference</Link></li>
+              <li><Link href="/pricing-guide" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Pricing Guide</Link></li>
+              <li><Link href="/training" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Training</Link></li>
+              <li><Link href="/support" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Support</Link></li>
+              <li><Link href="/help" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Help Center</Link></li>
+            </ul>
           </div>
         </div>
 
@@ -383,4 +421,6 @@ Cookie Policy
       </div>
 </footer>
   );
-}
+};
+
+export default Footer;

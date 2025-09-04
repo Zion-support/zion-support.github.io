@@ -9,10 +9,10 @@ import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { useNavigate } from "react-router-dom";
+import { { Link }, { useNavigate } } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
-import { Search as SearchIcon } from "lucide-react";
+import { { Menu, X, Sparkles }, { Search as SearchIcon } } from 'lucide-react';
+
 
 export function Header({ hideLogin = false, customLogo, customTheme }) {  const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
@@ -34,8 +34,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {  const 
       : undefined);
   const headerStyle = effectiveTheme;
     ? {}
-        backgroundColor: effectiveTheme.backgroundColor,
-color: effectiveTheme.textColor,
+        backgroundColor: effectiveTheme.backgroundColor,        color: effectiveTheme.textColor,
         borderColor: "${effectiveTheme.primaryColor}20"}
 
 // Handle scroll effect
