@@ -1,21 +1,5 @@
 import React, { useEffect } from 'react';
 
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-}
-
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-}
-
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -28,15 +12,50 @@ const PerformanceMonitor: React.FC = () => {
       const lastEntry = entries[entries.length - 1] as any;
       metrics.lcp = lastEntry.startTime;
       
-      if (process.env.NODE_ENV === 'development') {
-        console.log('LCP:', metrics.lcp);
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch {
+        // Fallback for browsers that don't support LCP
       }
-    });
-    
-    try {
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-    } catch (e) {
-      // Fallback for browsers that don't support LCP
+
+      // Monitor First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      });
+
+      try {
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      } catch {
+        // Fallback for browsers that don't support FID
+      }
+
+      // Monitor Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          const entryAny = entry as any;
+          if (!entryAny.hadRecentInput) {
+            clsValue += entryAny.value;
+          }
+        }
+        console.log('CLS:', clsValue);
+      });
+
+      try {
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      } catch {
+        // Fallback for browsers that don't support CLS
+      }
+
+      return () => {
+        observer.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
     }
 
     // Monitor First Input Delay (FID)
