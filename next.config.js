@@ -12,6 +12,7 @@ const nextConfig = {
     ignoreBuildErrors: true 
   },
   trailingSlash: true,
+  output: 'export',
   generateBuildId: async () => 'build-' + Date.now(),
   // Temporarily exclude default pages to allow build while we quarantine corrupted pages
   pageExtensions: ['page.tsx'],
@@ -24,6 +25,9 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production'
   },
   async headers() {
     return [
