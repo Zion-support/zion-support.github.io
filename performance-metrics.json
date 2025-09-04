@@ -1,17 +1,25 @@
 {
-  "timestamp": "2025-09-04T01:39:40.369Z",
+<<<<<<< HEAD
+  "timestamp": "2025-09-03T20:36:49.970Z",
   "bundleSize": {
     ".next": {
-      "size": 26960383,
-      "sizeMB": "25.71"
+      "size": 0,
+      "sizeMB": "0.00"
+=======
+  "timestamp": "2025-09-03T20:00:06.726Z",
+  "bundleSize": {
+    ".next": {
+      "size": 28534499,
+      "sizeMB": "27.21"
+>>>>>>> 2a05819f8ad7f9ba18431a36ff65088a0d741ce0
     },
     "node_modules": {
-      "size": 822948864,
-      "sizeMB": "784.83"
+      "size": 0,
+      "sizeMB": "0.00"
     }
   },
   "fileCounts": {
-    ".tsx": 26,
+    ".tsx": 25,
     ".ts": 0,
     ".jsx": 0,
     ".js": 0,
