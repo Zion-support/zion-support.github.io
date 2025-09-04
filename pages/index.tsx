@@ -1,8 +1,5 @@
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
-import dynamic from 'next/dynamic';
-import SEO from '../components/SEO';
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
