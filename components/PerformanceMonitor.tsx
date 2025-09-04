@@ -62,11 +62,7 @@ const PerformanceMonitor: React.FC = () => {,
           if (!(entry as any).hadRecentInput) {;
             clsValue += (entry as any).value;
           }
-        // Log CLS in development only
-        if (process.env.NODE_ENV === 'development') {
-          console.log('CLS:', clsValue);
-        }
-        sendToAnalytics('CLS', clsValue);
+        console.log('CLS:', clsValue);
       });
 
       try {
