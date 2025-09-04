@@ -1597,17 +1597,17 @@ export default function AIServices(): any {
           ))}
         </div>
 
-        <section className="mt-16 text-center">";
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>";
-          <p className="text-slate-300 mb-8 max-w-2xl mx-auto">";
-            Our AI experts are ready to help you implement cutting-edge solutions that drive real business value. 
+        <section className="mt-16 text-center">
+          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
+          <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
+            Our AI experts are ready to help you implement cutting-edge solutions that drive real business value.
             Contact us today for a free consultation and custom AI strategy.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">,";
-            <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold">,";`;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold">
               Call {contact.phone}
             </a>
-            <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold">,";`;
+            <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold">
               Email {contact.email}
             </a>
           </div>

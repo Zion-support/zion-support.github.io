@@ -27,6 +27,7 @@ const PerformanceMonitor: React.FC = () => {
               });
             }
           }
+        }
       });
       
       try {
@@ -48,6 +49,7 @@ const PerformanceMonitor: React.FC = () => {
               });
             }
           }
+        }
       });
 
       try {
@@ -60,7 +62,7 @@ const PerformanceMonitor: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new window.PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {;
+          if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
           }
         }
@@ -81,22 +83,22 @@ const PerformanceMonitor: React.FC = () => {
       }
 
       // Monitor First Contentful Paint (FCP)
-      const fcpObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-            sendToAnalytics({
-              name: 'FCP',
-              value: entry.startTime,
-              delta: entry.startTime,
-              id: entry.startTime.toString()
-            });
-          }
-        }
-      });
-
       try {
+        const fcpObserver = new window.PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'paint' && (entry as any).name === 'first-contentful-paint') {
+              if (typeof window !== 'undefined' && window.gtag) {
+                window.gtag('event', 'web_vitals', {
+                  name: 'FCP',
+                  value: Math.round((entry as any).startTime),
+                  event_category: 'Web Vitals'
+                });
+              }
+            }
+          }
+        });
         fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (e) {
+      } catch {
         // Fallback for browsers that don't support FCP
       }
 
@@ -104,7 +106,8 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-      }
+      };
+    }
   }, []);
 
   return null; // This component doesn't render anything

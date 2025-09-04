@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import PerformanceMonitor, { performanceMiddleware } from '../../lib/performance-monitor';
 import { dbManager } from '../../lib/database';
 import { apiCache, userCache, staticCache } from '../../lib/cache';
 
@@ -25,14 +24,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('Allow', ['GET']);
     return res.status(405).json({ error: 'Method not allowed' });
   }
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const startTime = Date.now();
   
   try {
-    // Mock database health check
-    const dbHealth = true; // This would be a real database check
-    
     // Check database health
     const dbHealth = await dbManager.healthCheck();
     
