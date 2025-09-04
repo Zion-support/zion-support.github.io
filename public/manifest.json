@@ -21,7 +21,49 @@
       "purpose": "maskable any"
     }
   ],
-  "categories": ["business", "productivity", "technology"],
-  "lang": "en-US",
-  "dir": "ltr"
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "short_name": "AI",
+      "description": "Explore our AI services",
+      "url": "/ai-services",
+      "icons": [
+        {
+          "src": "/icon-ai.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/icon-contact.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+      "type": "image/png"
+    }
+  ]
 }
