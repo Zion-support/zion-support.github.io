@@ -32,7 +32,12 @@ import {
   Smartphone,
   Cloud,
   Server,
-  Network
+  Network,
+  Car,
+  Rocket,
+  Heart,
+  Building,
+  Sprout
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -304,6 +309,182 @@ export default function AIServices() {
       pricing: '$5,000 - $18,000/month',
       delivery: '6-12 weeks',
       category: 'Market AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Trading System',
+      description: 'Intelligent algorithmic trading platform with real-time market analysis and risk management',
+      icon: TrendingUp,
+      features: [
+        'Real-time market data analysis and pattern recognition',
+        'Automated trading strategy execution',
+        'Risk management and portfolio optimization',
+        'Backtesting and strategy validation',
+        'Multi-asset class support (stocks, crypto, forex)',
+        'Regulatory compliance and audit trails'
+      ],
+      pricing: '$15,000 - $50,000/month',
+      delivery: '12-20 weeks',
+      category: 'FinTech AI'
+    },
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Machine learning platform for pharmaceutical research and drug development',
+      icon: Brain,
+      features: [
+        'Molecular structure analysis and prediction',
+        'Drug-target interaction modeling',
+        'Toxicity and efficacy prediction',
+        'Clinical trial optimization',
+        'Patent landscape analysis',
+        'Regulatory pathway guidance'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '16-24 weeks',
+      category: 'BioTech AI'
+    },
+    {
+      title: 'AI-Powered Climate Change Modeling',
+      description: 'Advanced climate prediction and environmental impact analysis using machine learning',
+      icon: Globe,
+      features: [
+        'Climate pattern prediction and modeling',
+        'Carbon footprint analysis and optimization',
+        'Renewable energy resource assessment',
+        'Environmental risk assessment',
+        'Sustainability planning and recommendations',
+        'Real-time environmental monitoring'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '12-18 weeks',
+      category: 'Climate AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Systems',
+      description: 'Intelligent autonomous vehicle control and navigation systems',
+      icon: Car,
+      features: [
+        'Real-time object detection and avoidance',
+        'Path planning and navigation optimization',
+        'Traffic pattern analysis and prediction',
+        'Vehicle-to-vehicle communication',
+        'Safety monitoring and emergency response',
+        'Fleet management and optimization'
+      ],
+      pricing: '$50,000 - $200,000/month',
+      delivery: '20-32 weeks',
+      category: 'Autonomous Vehicle AI'
+    },
+    {
+      title: 'AI-Powered Quantum Computing Optimization',
+      description: 'Machine learning algorithms optimized for quantum computing environments',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm optimization',
+        'Quantum error correction and mitigation',
+        'Quantum machine learning models',
+        'Hybrid classical-quantum computing',
+        'Quantum advantage analysis',
+        'Quantum circuit optimization'
+      ],
+      pricing: '$30,000 - $120,000/month',
+      delivery: '16-24 weeks',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'AI-Powered Space Mission Planning',
+      description: 'Intelligent mission planning and optimization for space exploration',
+      icon: Rocket,
+      features: [
+        'Trajectory optimization and fuel efficiency',
+        'Mission risk assessment and mitigation',
+        'Resource allocation and scheduling',
+        'Satellite constellation management',
+        'Space debris tracking and avoidance',
+        'Mission success probability modeling'
+      ],
+      pricing: '$40,000 - $150,000/month',
+      delivery: '18-28 weeks',
+      category: 'Space AI'
+    },
+    {
+      title: 'AI-Powered Personalized Medicine',
+      description: 'Precision medicine platform with AI-driven treatment recommendations',
+      icon: Heart,
+      features: [
+        'Genomic analysis and interpretation',
+        'Personalized treatment recommendations',
+        'Drug interaction and side effect prediction',
+        'Clinical trial matching',
+        'Health outcome prediction',
+        'Integration with electronic health records'
+      ],
+      pricing: '$20,000 - $80,000/month',
+      delivery: '14-22 weeks',
+      category: 'Precision Medicine AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Hunting',
+      description: 'Advanced threat detection and response using machine learning and behavioral analysis',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection',
+        'Automated incident response',
+        'Threat intelligence integration',
+        'Zero-day vulnerability detection',
+        'Security orchestration and automation'
+      ],
+      pricing: '$12,000 - $45,000/month',
+      delivery: '10-16 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Smart City Management',
+      description: 'Intelligent urban planning and management system for smart cities',
+      icon: Building,
+      features: [
+        'Traffic flow optimization and management',
+        'Energy consumption monitoring and optimization',
+        'Public safety and emergency response',
+        'Waste management optimization',
+        'Citizen service automation',
+        'Urban planning and development insights'
+      ],
+      pricing: '$25,000 - $100,000/month',
+      delivery: '16-24 weeks',
+      category: 'Smart City AI'
+    },
+    {
+      title: 'AI-Powered Agricultural Optimization',
+      description: 'Precision agriculture platform with crop monitoring and yield optimization',
+      icon: Sprout,
+      features: [
+        'Crop health monitoring and disease detection',
+        'Soil analysis and nutrient optimization',
+        'Weather prediction and irrigation management',
+        'Yield prediction and optimization',
+        'Pest and disease prevention',
+        'Supply chain and logistics optimization'
+      ],
+      pricing: '$8,000 - $30,000/month',
+      delivery: '12-18 weeks',
+      category: 'AgTech AI'
+    },
+    {
+      title: 'AI-Powered Mental Health Assistant',
+      description: 'Intelligent mental health monitoring and support platform',
+      icon: Heart,
+      features: [
+        'Emotional state monitoring and analysis',
+        'Personalized therapy recommendations',
+        'Crisis detection and intervention',
+        'Medication adherence tracking',
+        'Therapist matching and scheduling',
+        'Privacy-preserving data analysis'
+      ],
+      pricing: '$5,000 - $20,000/month',
+      delivery: '8-14 weeks',
+      category: 'Mental Health AI'
     }
   ];
 
