@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD:pages.disabled.full/it-services.tsx
 import {
   Server,
   Cloud,
@@ -44,7 +43,7 @@ export default function ITServices() {
     {
       title: 'Cloud Infrastructure & Migration',
       description: 'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',
-      icon: Clou d,
+      icon: Cloud,
       features: [
         'Multi-cloud architecture design and implementation',
         'Legacy system migration and modernization',
@@ -60,7 +59,7 @@ export default function ITServices() {
     {
       title: 'Cybersecurity & Compliance',
       description: 'Enterprise-grade security solutions and compliance management',
-      icon: Shiel d,
+      icon: Shield,
       features: [
         'Zero-trust security architecture',
         'SOC 2, GDPR, HIPAA compliance automation',
@@ -76,7 +75,7 @@ export default function ITServices() {
     {
       title: 'Network Infrastructure',
       description: 'Design, implementation, and management of enterprise networks',
-      icon: Networ k,
+      icon: Network,
       features: [
         'SD-WAN and hybrid network solutions',
         'Network security and firewall management',
@@ -92,7 +91,7 @@ export default function ITServices() {
     {
       title: 'IT Support & Helpdesk',
       description: '24/7 technical support and helpdesk services',
-      icon: User s,
+      icon: Users,
       features: [
         '24/7/365 technical support coverage',
         'Remote desktop and troubleshooting',
@@ -108,7 +107,7 @@ export default function ITServices() {
     {
       title: 'Data Management & Analytics',
       description: 'Data warehousing, analytics, and business intelligence solutions',
-      icon: Databas e,
+      icon: Database,
       features: [
         'Data warehouse design and implementation',
         'ETL/ELT pipeline development',
@@ -124,7 +123,7 @@ export default function ITServices() {
     {
       title: 'DevOps & CI/CD',
       description: 'Automated deployment pipelines and infrastructure as code',
-      icon: Setting s,
+      icon: Settings,
       features: [
         'CI/CD pipeline setup and optimization',
         'Infrastructure as Code (IaC) implementation',
@@ -140,7 +139,7 @@ export default function ITServices() {
     {
       title: 'Digital Transformation',
       description: 'End-to-end digital transformation consulting and implementation',
-      icon: Za p,
+      icon: Zap,
       features: [
         'Digital strategy and roadmap development',
         'Process automation and optimization',
@@ -156,7 +155,7 @@ export default function ITServices() {
     {
       title: 'Managed IT Services',
       description: 'Comprehensive IT management and monitoring services',
-      icon: Monito r,
+      icon: Monitor,
       features: [
         'Proactive monitoring and maintenance',
         'Patch management and updates',
@@ -172,7 +171,7 @@ export default function ITServices() {
     {
       title: 'Blockchain & Web3 Solutions',
       description: 'Blockchain development, smart contracts, and decentralized applications',
-      icon: Networ k,
+      icon: Network,
       features: [
         'Smart contract development and auditing',
         'DeFi and NFT platform development',
@@ -188,7 +187,7 @@ export default function ITServices() {
     {
       title: 'IoT & Edge Computing',
       description: 'Internet of Things solutions and edge computing infrastructure',
-      icon: Cp u,
+      icon: Cpu,
       features: [
         'IoT device development and integration',
         'Edge computing platform setup',
@@ -204,7 +203,7 @@ export default function ITServices() {
     {
       title: 'Quantum Computing Consulting',
       description: 'Quantum computing strategy, algorithm development, and implementation',
-      icon: Cp u,
+      icon: Cpu,
       features: [
         'Quantum algorithm development',
         'Quantum computing strategy consulting',
@@ -220,7 +219,7 @@ export default function ITServices() {
     {
       title: '5G & Network Modernization',
       description: '5G network implementation and legacy network modernization',
-      icon: Wif i,
+      icon: Wifi,
       features: [
         '5G network planning and deployment',
         'Network slicing and optimization',
@@ -236,7 +235,7 @@ export default function ITServices() {
     {
       title: 'AR/VR Development & Implementation',
       description: 'Augmented and virtual reality solutions for business applications',
-      icon: Monito r,
+      icon: Monitor,
       features: [
         'AR/VR application development',
         '3D modeling and animation',
@@ -252,7 +251,7 @@ export default function ITServices() {
     {
       title: 'API Management & Integration',
       description: 'Comprehensive API strategy, development, and management platform',
-      icon: Cod e,
+      icon: Code,
       features: [
         'API design and development',
         'API gateway setup and management',
@@ -345,7 +344,7 @@ export default function ITServices() {
     {
       title: 'Disaster Recovery & Business Continuity',
       description: 'Comprehensive disaster recovery planning and implementation',
-      icon: Shiel d,
+      icon: Shield,
       features: [
         'Disaster recovery strategy development',
         'Backup and replication solutions',
@@ -361,7 +360,7 @@ export default function ITServices() {
     {
       title: 'Green IT & Sustainability Solutions',
       description: 'Sustainable IT practices and carbon footprint reduction',
-      icon: Glob e,
+      icon: Globe,
       features: [
         'Energy-efficient infrastructure design',
         'Carbon footprint assessment and reduction',
@@ -374,134 +373,10 @@ export default function ITServices() {
       delivery: '6-14 weeks',
       category: 'Sustainability Services'
     },
-<<<<<<< HEAD
-=======
-    {
-      title: 'AI-Powered IT Operations',
-      description: 'Intelligent IT operations with AI-driven automation and optimization',
-      icon: Brain,
-      features: [
-        'AI-powered incident detection and resolution,Predictive maintenance and capacity planning,Automated root cause analysis,Intelligent ticket routing and prioritization,Performance optimization recommendations,Self-healing infrastructure capabilities'
-      ],
-      pricing: '$6,000 - $35,000/month',
-      delivery: '8-16 weeks',
-      category: 'AI Operations'
-    },
-    {
-      title: 'Zero-Trust Security Architecture',
-      description: 'Comprehensive zero-trust security implementation and management',
-      icon: Shield,
-      features: [
-        'Identity and access management (IAM) implementation,Micro-segmentation and network isolation,Continuous security monitoring and validation,Privileged access management (PAM),Security policy automation,Threat detection and response'
-      ],
-      pricing: '$8,000 - $45,000/month',
-      delivery: '10-20 weeks',
-      category: 'Security Services'
-    },
-    {
-      title: 'Edge Computing Infrastructure',
-      description: 'Distributed edge computing solutions for low-latency applications',
-      icon: Cpu,
-      features: [
-        'Edge data center design and deployment,Edge AI and machine learning integration,Content delivery network optimization,Real-time data processing at the edge,Edge security and device management,Hybrid cloud-edge architecture'
-      ],
-      pricing: '$7,000 - $40,000/month',
-      delivery: '8-18 weeks',
-      category: 'Edge Services'
-    },
-    {
-      title: 'Hyperautomation Platform',
-      description: 'End-to-end business process automation with AI and RPA',
-      icon: Settings,
-      features: [
-        'Robotic Process Automation (RPA) implementation,Intelligent document processing,Workflow automation and orchestration,AI-powered decision making,Process mining and optimization,Integration with enterprise systems'
-      ],
-      pricing: '$5,000 - $30,000/month',
-      delivery: '6-14 weeks',
-      category: 'Automation Services'
-    },
-    {
-      title: 'Multi-Cloud Management Platform',
-      description: 'Unified management and optimization across multiple cloud providers',
-      icon: Cloud,
-      features: [
-        'Multi-cloud cost optimization and governance,Unified monitoring and management dashboard,Cloud migration and workload placement,Disaster recovery across clouds,Compliance and security management,Performance optimization and scaling'
-      ],
-      pricing: '$8,000 - $50,000/month',
-      delivery: '10-20 weeks',
-      category: 'Cloud Services'
-    },
-    {
-      title: 'Cybersecurity Operations Center (SOC)',
-      description: '24/7 security monitoring and incident response services',
-      icon: Shield,
-      features: [
-        '24/7 security monitoring and threat detection,Incident response and forensic analysis,Security information and event management (SIEM),Threat intelligence and hunting,Compliance monitoring and reporting,Security awareness training'
-      ],
-      pricing: '$10,000 - $60,000/month',
-      delivery: '8-16 weeks',
-      category: 'Security Services'
-    },
-    {
-      title: 'Digital Twin Technology',
-      description: 'Digital twin creation and management for physical assets and processes',
-      icon: Monitor,
-      features: [
-        'Digital twin modeling and simulation,Real-time data integration and synchronization,Predictive analytics and maintenance,Performance optimization and testing,Virtual commissioning and training,Integration with IoT and AI systems'
-      ],
-      pricing: '$12,000 - $75,000/month',
-      delivery: '12-24 weeks',
-      category: 'Digital Twin Services'
-    },
-    {
-      title: 'Autonomous IT Infrastructure',
-      description: 'Self-managing and self-healing IT infrastructure solutions',
-      icon: Cpu,
-      features: [
-        'Self-healing infrastructure capabilities,Automated scaling and resource allocation,Intelligent capacity planning,Predictive failure prevention,Automated patch management,Self-optimizing performance tuning'
-      ],
-      pricing: '$15,000 - $80,000/month',
-      delivery: '16-28 weeks',
-      category: 'Autonomous Services'
-    },
-    {
-      title: 'Quantum-Safe Cryptography',
-      description: 'Post-quantum cryptography implementation and migration services',
-      icon: Lock,
-      features: [
-        'Quantum-safe algorithm implementation,Cryptographic key management,Secure communication protocols,Data encryption and protection,Compliance with quantum-safe standards,Legacy system migration support'
-      ],
-      pricing: '$8,000 - $45,000/month',
-      delivery: '10-20 weeks',
-      category: 'Security Services'
-    },
-    {
-      title: 'Space Technology Infrastructure',
-      description: 'Ground station and satellite communication infrastructure services',
-      icon: Satellite,
-      features: [
-        'Ground station design and deployment,Satellite communication systems,Space data processing and analytics,Orbital debris monitoring,Space weather prediction systems,Satellite constellation management'
-      ],
-      pricing: '$20,000 - $150,000/month',
-      delivery: '20-40 weeks',
-      category: 'Space Services'
-    },
-    {
-      title: 'Environmental Monitoring IT',
-      description: 'IT infrastructure for environmental and climate monitoring systems',
-      icon: TreePine,
-      features: [
-        'Environmental sensor network deployment,Climate data collection and processing,Real-time environmental monitoring,Data analytics and reporting,Compliance monitoring systems,Integration with government databases'
-      ],
-      pricing: '$6,000 - $35,000/month',
-      delivery: '8-16 weeks',
-      category: 'Environmental Services'
-    },
->>>>>>> origin/merge-pr-11190
     {
       title: 'FinTech & Payment Solutions',
       description: 'Financial technology solutions and payment system integration',
-      icon: Databas e,
+      icon: Database,
       features: [
         'Payment gateway integration',
         'Financial API development',
@@ -1461,41 +1336,40 @@ export default function ITServices() {
   ];
 
   const technologies = [
-    { name: 'Cloud Platforms', icon: Clou d, description: 'AWS, Azure, GCP, DigitalOcean' },
-    { name: 'Containerization', icon: Serve r, description: 'Docker, Kubernetes, OpenShift' },
-    { name: 'Security Tools', icon: Shiel d, description: 'SIEM, WAF, IAM, Encryption' },
-    { name: 'Monitoring', icon: BarChart 3, description: 'Prometheus, Grafana, ELK Stack' },
-    { name: 'Databases', icon: Databas e, description: 'PostgreSQL, MongoDB, Redis' },
-    { name: 'Networking', icon: Networ k, description: 'Cisco, Fortinet, SD-WAN' }
+    { name: 'Cloud Platforms', icon: Cloud, description: 'AWS, Azure, GCP, DigitalOcean' },
+    { name: 'Containerization', icon: Server, description: 'Docker, Kubernetes, OpenShift' },
+    { name: 'Security Tools', icon: Shield, description: 'SIEM, WAF, IAM, Encryption' },
+    { name: 'Monitoring', icon: BarChart3, description: 'Prometheus, Grafana, ELK Stack' },
+    { name: 'Databases', icon: Database, description: 'PostgreSQL, MongoDB, Redis' },
+    { name: 'Networking', icon: Network, description: 'Cisco, Fortinet, SD-WAN' }
   ];
 
   const benefits = [
     {
       title: 'Reduced Downtime',
       description: 'Proactive monitoring and maintenance',
-      icon: Cloc k,
+      icon: Clock,
       stat: '99.9%'
     },
     {
       title: 'Cost Savings',
       description: 'Optimized infrastructure and processes',
-      icon: Za p,
+      icon: Zap,
       stat: '40%'
     },
     {
       title: 'Enhanced Security',
       description: 'Enterprise-grade protection',
-      icon: Shiel d,
+      icon: Shield,
       stat: '100%'
     },
     {
       title: 'Scalability',
       description: 'Flexible and scalable solutions',
-      icon: TrendingU p,
+      icon: TrendingUp,
       stat: 'Unlimited'
     }
   ];
-=======
 import { ArrowRight, CheckCircle, Clock, Star, Users, Zap, Shield, BarChart3, Settings, Globe, Smartphone, Database, Cloud, Lock, Target, TrendingUp, MessageSquare, FileText, Calendar, CreditCard, ShoppingCart, Camera, Music, Video, Code, Search, Mail, Phone, MapPin, Server, Network, Monitor, HardDrive, Wifi, Cpu, MemoryStick, Router, Database as DatabaseIcon, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon } from 'lucide-react';
 
 export default function ITServices() {
@@ -1728,508 +1602,4 @@ export default function ITServices() {
     <>
       <Head>
         <title>{title}</title>
-<<<<<<< HEAD:pages.disabled.full/it-services.tsx
-        <meta name="description" content={description}  />
-        <meta name="viewport" content="width=device-width, initial-scale=1"  />
-        <link rel="canonical" href="https://ziontechgroup.com/it-services"  />
-      </Head>
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-20 sm: p y-32">
-        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Server className="h-12 w-12 text-green-600 mr-4"  />
-              <Award className="h-6 w-6 text-green-600 mr-2"  />
-              <span className="text-base font-semibold leading-7 text-green-600">IT Services</span>
-            </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm: tex t-6xl">
-              Information Technology Solutions
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Comprehensive IT services that keep your business running smoothly. From cloud infrastructure 
-              to cybersecurity, we provide end-to-end technology solutions.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link
-                href="/contact"
-                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: b g-green-500 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-green-600"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-4 w-4 inline"  />
-              </Link>
-              <Link
-                href="/pricing-guide"
-                className="text-sm font-semibold leading-6 text-gray-900 hover: tex t-green-600"
-              >
-                View Pricing <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-24 sm: p y-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
-              Why Choose Our IT Services?
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Proven expertise and measurable results for your technology infrastructure
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-8 sm: gri d-cols-2 lg: gri d-cols-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mx-auto mb-4">
-                  <benefit.icon className="h-8 w-8 text-green-600" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{benefit.stat}</h3>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>
-                <p className="text-gray-600">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-24 sm: p y-32 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
-              Technologies We Master
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Cutting-edge technologies powering modern IT infrastructure
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-8 sm: gri d-cols-2 lg: gri d-cols-3">
-            {technologies.map((tech, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 shadow-sm hover: shado w-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
-                    <tech.icon className="h-6 w-6 text-green-600" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 ml-4">{tech.name}</h3>
-                </div>
-                <p className="text-gray-600">{tech.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* IT Services Grid */}
-      <section className="py-24 sm: p y-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
-              Our IT Service Portfolio
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Comprehensive IT solutions tailored to your business needs. All services include implementation, 
-              training, and ongoing support. Contact us at{' '}
-              <a href="mailto: klebe r@ziontechgroup.com" className="text-green-600 hover: tex t-green-500">
-                kleber@ziontechgroup.com
-              </a>{' '}
-              or call{' '}
-              <a href="tel:+13024640950" className="text-green-600 hover: tex t-green-500">
-                +1 302 464 0950
-              </a>{' '}
-              for custom pricing.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-8 lg: gri d-cols-2">
-            {itServices.map((service, index) => (
-              <div key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shado w-lg transition-all duration-300">
-                <div className="flex items-center gap-x-3 mb-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-600 group-hover: b g-green-700 transition-colors">
-                    <service.icon className="h-7 w-7 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                    <p className="text-sm text-green-600 font-medium">{service.category}</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-x-3">
-                      <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0"  />
-                      <span className="text-sm text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500">
-                    <div className="flex items-center space-x-1">
-                      <Clock className="h-4 w-4"  />
-                      <span>{service.delivery}</span>
-                    </div>
-                    <div className="font-semibold text-green-600">{service.pricing}</div>
-                  </div>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center text-sm font-semibold text-green-600 hover: tex t-green-500 transition-colors group"
-                  >
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover: translat e-x-1 transition-transform"  />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information Section */}
-      <section className="bg-gray-50 py-16 sm: p y-24">
-        <div className="mx-auto max-w-7xl px-6 lg: p x-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm: tex t-4xl">
-              Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Let's discuss how our IT services can optimize your technology infrastructure. 
-              Get a free consultation and custom proposal.
-            </p>
-            <div className="mt-10 grid grid-cols-1 gap-8 sm: gri d-cols-3">
-              <div className="text-center">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">
-                  <Phone className="h-6 w-6 text-green-600"  />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
-                <a href="tel:+13024640950" className="text-green-600 hover: tex t-green-500">
-                  +1 302 464 0950
-                </a>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">
-                  <Mail className="h-6 w-6 text-green-600"  />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
-                <a href="mailto: klebe r@ziontechgroup.com" className="text-green-600 hover: tex t-green-500">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mx-auto mb-4">
-                  <MapPin className="h-6 w-6 text-green-600"  />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
-                <p className="text-gray-600">364 E Main St STE 1008<br  />Middletown DE 19709</p>
-              </div>
-            </div>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Link
-                href="/contact"
-                className="rounded-md bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: b g-green-500 focus-visible: outline focus-visible: outlin e-2 focus-visible: outlin e-offset-2 focus-visible: outlin e-green-600"
-              >
-                Schedule Consultation
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="text-sm font-semibold leading-6 text-gray-900 hover: tex t-green-600"
-              >
-                Call Now <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </PageTransition>
-  )
-=======
-        <meta name="description" content={description} />
-        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://ziontechgroup.com/it-services" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Navigation */}
-        <nav className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16">
-              <div className="flex items-center">
-                <Link href="/" className="text-2xl font-bold text-blue-600">
-                  Zion Tech Group
-                </Link>
-              </div>
-              <div className="flex items-center space-x-8">
-                <Link href="/ai-services" className="text-gray-700 hover:text-blue-600">AI Services</Link>
-                <Link href="/blockchain-solutions" className="text-gray-700 hover:text-blue-600">Blockchain</Link>
-                <Link href="/micro-saas-services" className="text-gray-700 hover:text-blue-600">Micro SAAS</Link>
-                <Link href="/it-services" className="text-blue-600 font-semibold">IT Services</Link>
-                <Link href="/contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                  IT Services
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-                Comprehensive IT services including cloud migration, DevOps, cybersecurity, 
-                infrastructure management, and 24/7 support to keep your business running smoothly.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="#services"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors flex items-center justify-center"
-                >
-                  Explore Services
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-                >
-                  Get Free Assessment
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">99.9%</div>
-                <div className="text-gray-600">Uptime Guarantee</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-                <div className="text-gray-600">Support Available</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-                <div className="text-gray-600">Projects Completed</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">15min</div>
-                <div className="text-gray-600">Average Response Time</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section id="services" className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Our IT Services</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive IT solutions designed to optimize your technology infrastructure, 
-                enhance security, and drive business growth with expert support and cutting-edge technology.
-              </p>
-            </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <button className="px-6 py-2 bg-blue-600 text-white rounded-lg font-semibold">
-                All Categories
-              </button>
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className="px-6 py-2 bg-white text-gray-700 rounded-lg font-semibold hover:bg-blue-50 hover:text-blue-600 border border-gray-200"
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                      <span className="text-sm text-blue-600 font-medium">{service.category}</span>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, i) => (
-                        <li key={i} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                      {service.features.length > 3 && (
-                        <li className="text-sm text-blue-600 font-medium">
-                          +{service.features.length - 3} more features
-                        </li>
-                      )}
-                    </ul>
-                  </div>
-
-                  <div className="border-t pt-4">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm text-gray-600">Our Price:</span>
-                      <span className="text-lg font-bold text-blue-600">{service.pricing}</span>
-                    </div>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm text-gray-600">Market Price:</span>
-                      <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
-                    </div>
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-sm text-gray-600">Delivery:</span>
-                      <span className="text-sm text-gray-600">{service.delivery}</span>
-                    </div>
-                    <div className="bg-green-50 p-3 rounded-lg mb-4">
-                      <p className="text-sm text-green-800 font-medium">{service.benefits}</p>
-                    </div>
-                    <Link
-                      href="/contact"
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold text-center block transition-colors"
-                    >
-                      Get Started
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We deliver exceptional IT services with unmatched expertise, reliability, and value.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
-                <p className="text-gray-600">Bank-level security with SOC 2, GDPR, and HIPAA compliance.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Support</h3>
-                <p className="text-gray-600">Round-the-clock monitoring and support with 15-minute response time.</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
-                <p className="text-gray-600">500+ successful projects with 99.9% uptime guarantee.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Get started with our IT services today and experience the power of reliable, secure, and efficient technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
-              >
-                Start Your Project
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                href="tel:+13024640950"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-              >
-                Call +1 302 464 0950
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div>
-                <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
-                <p className="text-gray-400 mb-4">
-                  Leading provider of IT services, AI solutions, and micro SAAS development.
-                </p>
-                <div className="flex space-x-4">
-                  <Phone className="w-5 h-5 text-gray-400" />
-                  <Mail className="w-5 h-5 text-gray-400" />
-                  <MapPin className="w-5 h-5 text-gray-400" />
-                </div>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold mb-4">Services</h4>
-                <ul className="space-y-2">
-                  <li><Link href="/it-services" className="text-gray-400 hover:text-white">IT Services</Link></li>
-                  <li><Link href="/ai-services" className="text-gray-400 hover:text-white">AI Services</Link></li>
-                  <li><Link href="/blockchain-solutions" className="text-gray-400 hover:text-white">Blockchain</Link></li>
-                  <li><Link href="/micro-saas-services" className="text-gray-400 hover:text-white">Micro SAAS</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-                <div className="space-y-2 text-gray-400">
-                  <p>+1 302 464 0950</p>
-                  <p>kleber@ziontechgroup.com</p>
-                  <p>364 E Main St STE 1008<br />Middletown, DE 19709</p>
-                </div>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-                <ul className="space-y-2">
-                  <li><Link href="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
-                  <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
-                  <li><Link href="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
-                  <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
-                </ul>
-              </div>
-            </div>
-            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-              <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </>
-  );
->>>>>>> cursor/add-new-services-and-advertise-them-03be:pages/it-services.tsx
 }
