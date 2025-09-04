@@ -1,5 +1,8 @@
 {
-  "timestamp": "2025-09-03T22:19:47.057Z",
+  "timestamp": "2025-09-03T16:46:24.457Z",
+=======
+  "timestamp": "2025-09-03T22:18:50.420Z",
+>>>>>>> 6d79891152b (Checkpoint before follow-up message)
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -63,16 +66,6 @@
     },
     "pages/_app.tsx": {
       "path": "pages/_app.tsx",
-<<<<<<< HEAD
-<<<<<<< HEAD
-      "lines": 118,
-=======
-<<<<<<< HEAD
-      "lines": 121,
-=======
-      "lines": 126,
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       "issues": [],
       "complexity": 1
 =======
@@ -85,7 +78,7 @@
         }
       ],
       "complexity": 0
->>>>>>> origin/cursor/test-and-fix-pm2-automations-merge-to-main-0cfb
+>>>>>>> 6d79891152b (Checkpoint before follow-up message)
     },
     "pages/about.tsx": {
       "path": "pages/about.tsx",
@@ -148,11 +141,7 @@
     },
     "pages/index.tsx": {
       "path": "pages/index.tsx",
-<<<<<<< HEAD
-      "lines": 34,
-=======
       "lines": 219,
->>>>>>> origin/cursor/test-and-fix-pm2-automations-merge-to-main-0cfb
       "issues": [],
       "complexity": 5
     },
@@ -251,23 +240,12 @@
     }
   },
   "summary": {
-<<<<<<< HEAD
-    "totalFiles": 16,
-<<<<<<< HEAD
-    "totalLines": 5598,
-=======
-<<<<<<< HEAD
-    "totalLines": 5768,
-=======
-    "totalLines": 5773,
->>>>>>> ce2f1c888fb90dd5d7d297f621bf29128aa0e6a6
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
     "averageComplexity": "1.06",
 =======
     "totalFiles": 28,
     "totalLines": 8473,
     "averageComplexity": "1.75",
->>>>>>> origin/cursor/test-and-fix-pm2-automations-merge-to-main-0cfb
+>>>>>>> 6d79891152b (Checkpoint before follow-up message)
     "issues": [
       {
         "file": "pages/404.tsx",

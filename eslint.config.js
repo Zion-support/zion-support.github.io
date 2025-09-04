@@ -19,14 +19,6 @@ export default [
         },
       },
       globals: {
-<<<<<<< HEAD
-        window: 'readonly',
-        document: 'readonly',
-        localStorage: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        PerformanceObserver: 'readonly',
-=======
         // Browser globals
         window: 'readonly',
         document: 'readonly',
@@ -57,7 +49,6 @@ export default [
         __filename: 'readonly',
         global: 'readonly',
         // React globals
->>>>>>> cursor/add-new-services-and-advertise-them-1b6b
         React: 'readonly',
       },
     },
@@ -172,6 +163,11 @@ export default [
 
       // Root-level noisy files
       'api/**',
+      '*.js',
+      '.*.js',
+      '*.ts',
+      '*.tsx',
+      '*.jsx',
       'jest.config.*',
       'fix-*.js',
       'fix-*.jsx',
