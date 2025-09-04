@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Layout from '../components/layout/Layout';
+import { Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Smartphone, Calendar, Video, Package, Target } from 'lucide-react';
 
 export default function MicroSaaS() {
   const products = [

@@ -8,9 +8,8 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            // Send to analytics
-            if ((entry as any).startTime > 2500) {
-              // LCP is slow
+            if (process.env.NODE_ENV === 'development') {
+              console.log('LCP:', entry.startTime);
             }
           }
         }
@@ -18,7 +17,7 @@ const PerformanceMonitor: React.FC = () => {
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (_e) {
+      } catch {
         // Fallback for browsers that don't support LCP
       }
 
@@ -26,11 +25,8 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            const fidEntry = entry as PerformanceEventTiming;
-            console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
-            // Send to analytics
-            if (fidEntry.processingStart - fidEntry.startTime > 100) {
-              console.warn('FID is slow:', fidEntry.processingStart - fidEntry.startTime);
+            if (process.env.NODE_ENV === 'development') {
+              console.log('FID:', entry.processingStart - entry.startTime);
             }
           }
         }
@@ -38,7 +34,7 @@ const PerformanceMonitor: React.FC = () => {
 
       try {
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (_e) {
+      } catch {
         // Fallback for browsers that don't support FID
       }
 
@@ -50,15 +46,14 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        // Send to analytics
-        if (clsValue > 0.1) {
-          // CLS is poor
+        if (process.env.NODE_ENV === 'development') {
+          console.log('CLS:', clsValue);
         }
       });
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (_e) {
+      } catch {
         // Fallback for browsers that don't support CLS
       }
 
