@@ -1,0 +1,550 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  Smartphone, 
+  BarChart3, 
+  Users, 
+  Target, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight,
+  Star,
+  TrendingUp,
+  MessageSquare,
+  Send,
+  Filter,
+  Calendar,
+  Bell,
+  Eye,
+  MousePointer,
+  FileText,
+  Image,
+  Video,
+  Link as LinkIcon,
+  Settings,
+  Shield,
+  Globe,
+  Monitor,
+  Database,
+  Cloud,
+  Lock,
+  Phone,
+  MapPin,
+  ExternalLink,
+  Play,
+  Download,
+  Upload,
+  Share2,
+  Heart,
+  Award,
+  Rocket,
+  Lightbulb,
+  Sparkles,
+  Infinity,
+  Layers,
+  Workflow,
+  MessageCircle,
+  HelpCircle,
+  BookOpen,
+  Briefcase,
+  Factory,
+  Truck,
+  Leaf,
+  PieChart,
+  LineChart,
+  BarChart,
+  DollarSign,
+  Brain,
+  Cpu,
+  Wifi,
+  Satellite,
+  Handshake,
+  BookOpen as Book,
+  Briefcase as Brief,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Leaf as LeafIcon,
+  PieChart as Pie,
+  LineChart as Line,
+  BarChart as Bar
+} from 'lucide-react';
+
+export default function MobileFirstSurveyPlatform() {
+  const features = [
+    {
+      icon: Smartphone,
+      title: "Mobile-First Design",
+      description: "Optimized for mobile devices with touch-friendly interfaces, swipe gestures, and responsive design that works perfectly on any screen size.",
+      benefits: ["95% mobile completion rate", "Touch-optimized interface", "Offline capability", "Progressive web app"]
+    },
+    {
+      icon: Brain,
+      title: "AI-Powered Question Generation",
+      description: "Automatically generate relevant survey questions using AI based on your objectives, industry, and target audience.",
+      benefits: ["Intelligent question suggestions", "Industry-specific templates", "A/B testing optimization", "Smart branching logic"]
+    },
+    {
+      icon: BarChart3,
+      title: "Real-Time Analytics Dashboard",
+      description: "Get instant insights with beautiful visualizations, sentiment analysis, and predictive analytics powered by AI.",
+      benefits: ["Real-time data visualization", "Sentiment analysis", "Predictive insights", "Custom reporting"]
+    },
+    {
+      icon: Users,
+      title: "Advanced Audience Targeting",
+      description: "Reach the right people with sophisticated targeting options including demographics, behavior, and custom segments.",
+      benefits: ["Demographic targeting", "Behavioral segmentation", "Custom audience creation", "Multi-channel distribution"]
+    },
+    {
+      icon: Zap,
+      title: "Smart Automation Workflows",
+      description: "Automate survey distribution, follow-ups, and data collection with intelligent workflows that adapt to respondent behavior.",
+      benefits: ["Automated follow-ups", "Smart reminders", "Conditional logic", "Integration triggers"]
+    },
+    {
+      icon: Shield,
+      title: "Enterprise Security & Compliance",
+      description: "Bank-level security with GDPR, CCPA, and other compliance features built-in for enterprise use.",
+      benefits: ["GDPR compliant", "SOC 2 certified", "Data encryption", "Privacy controls"]
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$49",
+      period: "/month",
+      description: "Perfect for small businesses and startups",
+      features: [
+        "Up to 1,000 responses/month",
+        "Basic survey templates",
+        "Mobile-optimized design",
+        "Basic analytics",
+        "Email support",
+        "Standard integrations"
+      ],
+      popular: false,
+      cta: "Start Free Trial"
+    },
+    {
+      name: "Professional",
+      price: "$149",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: [
+        "Up to 10,000 responses/month",
+        "AI question generation",
+        "Advanced analytics",
+        "Custom branding",
+        "Priority support",
+        "Advanced integrations",
+        "A/B testing"
+      ],
+      popular: true,
+      cta: "Start Free Trial"
+    },
+    {
+      name: "Enterprise",
+      price: "$399",
+      period: "/month",
+      description: "For large organizations",
+      features: [
+        "Unlimited responses",
+        "Full AI suite",
+        "Custom development",
+        "White-label options",
+        "Advanced reporting",
+        "Dedicated support",
+        "API access",
+        "SLA guarantee"
+      ],
+      popular: false,
+      cta: "Contact Sales"
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Jennifer Martinez",
+      company: "Retail Solutions Inc.",
+      role: "Customer Experience Manager",
+      content: "The mobile-first design increased our survey completion rates by 400%. The AI question generation saves us hours of work.",
+      rating: 5,
+      avatar: "JM"
+    },
+    {
+      name: "David Thompson",
+      company: "Healthcare Partners",
+      role: "Research Director",
+      content: "The real-time analytics and sentiment analysis provide insights we never had before. Our patient satisfaction scores improved by 60%.",
+      rating: 5,
+      avatar: "DT"
+    },
+    {
+      name: "Lisa Chen",
+      company: "Education First",
+      role: "Academic Affairs",
+      content: "The platform is incredibly intuitive. We can create and deploy surveys in minutes, and the mobile optimization is perfect for our students.",
+      rating: 5,
+      avatar: "LC"
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Customer Feedback",
+      description: "Collect real-time customer feedback with mobile-optimized surveys that capture insights at the point of experience.",
+      icon: MessageSquare,
+      results: ["400% higher completion rates", "Real-time feedback collection", "Improved customer satisfaction", "Faster response times"]
+    },
+    {
+      title: "Employee Engagement",
+      description: "Measure employee satisfaction and engagement with pulse surveys that work seamlessly on mobile devices.",
+      icon: Users,
+      results: ["85% employee participation", "Monthly engagement tracking", "Actionable insights", "Improved retention"]
+    },
+    {
+      title: "Market Research",
+      description: "Conduct comprehensive market research with AI-powered questions and advanced analytics for deeper insights.",
+      icon: Target,
+      results: ["60% faster data collection", "Higher quality responses", "Predictive analytics", "Competitive advantage"]
+    },
+    {
+      title: "Event Feedback",
+      description: "Capture event feedback instantly with QR codes and mobile surveys that attendees can complete on the spot.",
+      icon: Calendar,
+      results: ["90% response rate", "Instant feedback", "Event optimization", "Better planning"]
+    }
+  ];
+
+  const integrations = [
+    { name: "Salesforce", icon: "SF", description: "Sync survey data with your CRM" },
+    { name: "HubSpot", icon: "HS", description: "Integrate with marketing automation" },
+    { name: "Slack", icon: "SL", description: "Share results in team channels" },
+    { name: "Google Analytics", icon: "GA", description: "Track survey performance" },
+    { name: "Zapier", icon: "ZP", description: "Connect with 2000+ apps" },
+    { name: "Microsoft Teams", icon: "MT", description: "Collaborate on survey results" }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Mobile-First Survey Platform - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary mobile-first survey platform with AI-powered question generation. Increase completion rates by 400% and get real-time insights. From $49/month." />
+        <meta name="keywords" content="mobile survey platform, AI survey generation, customer feedback, market research, mobile-first design" />
+        <meta property="og:title" content="Mobile-First Survey Platform - Zion Tech Group" />
+        <meta property="og:description" content="Revolutionary mobile-first survey platform with AI-powered question generation. Increase completion rates by 400% and get real-time insights." />
+        <meta property="og:url" content="https://ziontechgroup.com/services/mobile-first-survey-platform" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/mobile-first-survey-platform" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
+        {/* Hero Section */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center max-w-4xl mx-auto mb-16">
+              <div className="flex items-center justify-center space-x-2 mb-6">
+                <Smartphone className="h-6 w-6 text-zion-purple" />
+                <span className="text-zion-purple font-semibold text-sm uppercase tracking-wider">
+                  Mobile-First Survey Platform
+                </span>
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                Mobile-First Survey
+                <span className="block bg-gradient-to-r from-zion-purple to-cyan-400 bg-clip-text text-transparent">
+                  Platform with AI
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                Increase survey completion rates by 400% with our mobile-first platform featuring 
+                AI-powered question generation and real-time analytics.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white px-8 py-4 rounded-lg font-semibold text-lg hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg"
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  <span>Start Free Trial</span>
+                </Link>
+                <Link
+                  to="#demo"
+                  className="border-2 border-zion-purple text-zion-purple px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-purple hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
+                >
+                  <Play className="h-5 w-5" />
+                  <span>Watch Demo</span>
+                </Link>
+              </div>
+
+              {/* Key Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-zion-purple mb-2">400%</div>
+                  <div className="text-sm text-gray-400">Higher Completion Rates</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
+                  <div className="text-sm text-gray-400">Mobile Optimized</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">Real-time</div>
+                  <div className="text-sm text-gray-400">Analytics</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-400 mb-2">AI-Powered</div>
+                  <div className="text-sm text-gray-400">Question Generation</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 lg:py-24 bg-zion-slate-dark/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Powerful Mobile Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our mobile-first platform is designed for the modern world, with AI-powered features 
+                that make survey creation and data collection effortless.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-slate rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 bg-gradient-to-r from-zion-purple to-cyan-400 rounded-lg mr-4">
+                      <feature.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  
+                  <div className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <div key={benefitIndex} className="text-xs text-green-400 flex items-center space-x-2">
+                        <CheckCircle className="h-3 w-3" />
+                        <span>{benefit}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Perfect for Every Use Case
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From customer feedback to market research, our platform adapts to your needs 
+                with mobile-optimized surveys that deliver results.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-slate rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-lg mr-4">
+                      <useCase.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white">{useCase.title}</h3>
+                  </div>
+                  
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                    {useCase.description}
+                  </p>
+                  
+                  <div className="space-y-2">
+                    {useCase.results.map((result, resultIndex) => (
+                      <div key={resultIndex} className="text-xs text-cyan-400 flex items-center space-x-2">
+                        <TrendingUp className="h-3 w-3" />
+                        <span>{result}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Integrations Section */}
+        <section className="py-16 lg:py-24 bg-zion-slate-dark/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Seamless Integrations
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Connect with your favorite tools and platforms to streamline your workflow 
+                and maximize the value of your survey data.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {integrations.map((integration, index) => (
+                <div key={index} className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-slate rounded-xl p-4 hover:border-zion-purple/50 transition-all duration-300 text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-cyan-400 rounded-lg flex items-center justify-center text-white font-bold mx-auto mb-3">
+                    {integration.icon}
+                  </div>
+                  <h3 className="text-white font-semibold text-sm mb-1">{integration.name}</h3>
+                  <p className="text-gray-400 text-xs">{integration.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Simple, Transparent Pricing
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that fits your business needs. All plans include our core mobile-first features.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`relative bg-zion-slate-dark/50 backdrop-blur-sm border rounded-xl p-6 ${
+                  plan.popular 
+                    ? 'border-zion-purple shadow-lg shadow-zion-purple/20' 
+                    : 'border-zion-slate hover:border-zion-purple/50'
+                } transition-all duration-300`}>
+                  {plan.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-zion-purple to-cyan-400 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center space-x-1">
+                        <Star className="h-4 w-4" />
+                        <span>Most Popular</span>
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-zion-purple">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-400 text-sm mt-2">{plan.description}</p>
+                  </div>
+                  
+                  <div className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-3">
+                        <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <Link
+                    to="/contact"
+                    className={`w-full py-3 px-4 rounded-lg font-semibold text-center transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:scale-105'
+                        : 'border-2 border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white'
+                    }`}
+                  >
+                    {plan.cta}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-16 lg:py-24 bg-zion-slate-dark/30">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                What Our Clients Say
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Join hundreds of satisfied clients who have transformed their survey collection with our mobile-first platform.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-slate rounded-xl p-6">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-cyan-400 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                      <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center mb-3">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    "{testimonial.content}"
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Survey Collection?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Start your free trial today and experience the power of mobile-first surveys with AI.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white px-8 py-4 rounded-lg font-semibold text-lg hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg"
+                >
+                  <MessageCircle className="h-5 w-5" />
+                  <span>Start Free Trial</span>
+                </Link>
+                <Link
+                  to="/contact"
+                  className="border-2 border-zion-purple text-zion-purple px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-purple hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
+                >
+                  <Phone className="h-5 w-5" />
+                  <span>Schedule Demo</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
