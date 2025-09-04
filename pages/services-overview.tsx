@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import {
   Activity,
@@ -2298,6 +2299,7 @@ export default function Services() {
           </div>
         </div>
       </section>
-    </PageTransition>
+      </PageTransition>
+    </>
   );
 }
