@@ -1,90 +1,105 @@
 module.exports = {
   apps: [
+    // Health Monitor - Essential for monitoring system health
     {
-      name: 'ziontechgroup-web',
-      script: 'npm',
-      args: 'start',
-      cwd: '/workspace',
+      name: 'health-monitor',
+      script: 'scripts/pm2/health-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '256M',
       env: {
-        NODE_ENV: 'production',
-        PORT: 3000
+        NODE_ENV: 'production'
       },
-      log_file: './logs/web.log',
-      out_file: './logs/web-out.log',
-      error_file: './logs/web-error.log',
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z'
+      cron_restart: '*/5 * * * *', // Every 5 minutes
+      log_file: 'logs/pm2/health-monitor.log',
+      error_file: 'logs/pm2/health-monitor-error.log',
+      out_file: 'logs/pm2/health-monitor-out.log',
     },
+    
+    // CI/CD Automation - For continuous integration
     {
-      name: 'automation-health-check',
-      script: 'node',
-      args: 'scripts/automation/simple-automation.cjs',
-      cwd: '/workspace',
+      name: 'ci-cd-automation',
+      script: 'scripts/pm2/ci-cd-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '*/5 * * * *',
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_TYPE: 'health-check'
+        NODE_ENV: 'production'
       },
-      log_file: './logs/health-check.log',
-      out_file: './logs/health-check-out.log',
-      error_file: './logs/health-check-error.log'
+      cron_restart: '0 */2 * * *', // Every 2 hours
+      log_file: 'logs/pm2/ci-cd-automation.log',
+      error_file: 'logs/pm2/ci-cd-automation-error.log',
+      out_file: 'logs/pm2/ci-cd-automation-out.log',
     },
+    
+    // Performance Monitor - Monitor system performance
     {
-      name: 'automation-performance-monitor',
-      script: 'node',
-      args: 'scripts/automation/simple-automation.cjs',
-      cwd: '/workspace',
+      name: 'performance-monitor',
+      script: 'scripts/pm2/performance-monitor.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '*/10 * * * *',
+      max_memory_restart: '256M',
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_TYPE: 'performance'
+        NODE_ENV: 'production'
       },
-      log_file: './logs/performance-monitor.log',
-      out_file: './logs/performance-monitor-out.log',
-      error_file: './logs/performance-monitor-error.log'
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      log_file: 'logs/pm2/performance-monitor.log',
+      error_file: 'logs/pm2/performance-monitor-error.log',
+      out_file: 'logs/pm2/performance-monitor-out.log',
     },
+    
+    // Security Audit - Regular security checks
     {
-      name: 'automation-security-scanner',
-      script: 'node',
-      args: 'scripts/automation/simple-automation.cjs',
-      cwd: '/workspace',
+      name: 'security-audit',
+      script: 'scripts/pm2/security-audit.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '*/15 * * * *',
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_TYPE: 'security'
+        NODE_ENV: 'production'
       },
-      log_file: './logs/security-scanner.log',
-      out_file: './logs/security-scanner-out.log',
-      error_file: './logs/security-scanner-error.log'
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: 'logs/pm2/security-audit.log',
+      error_file: 'logs/pm2/security-audit-error.log',
+      out_file: 'logs/pm2/security-audit-out.log',
     },
+    
+    // Quality Checks - Code quality monitoring
     {
-      name: 'automation-code-quality',
-      script: 'node',
-      args: 'scripts/automation/simple-automation.cjs',
-      cwd: '/workspace',
+      name: 'quality-checks',
+      script: 'scripts/pm2/quality-checks.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
-      cron_restart: '*/20 * * * *',
+      max_memory_restart: '512M',
       env: {
-        NODE_ENV: 'production',
-        AUTOMATION_TYPE: 'quality'
+        NODE_ENV: 'production'
       },
-      log_file: './logs/code-quality.log',
-      out_file: './logs/code-quality-out.log',
-      error_file: './logs/code-quality-error.log'
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: 'logs/pm2/quality-checks.log',
+      error_file: 'logs/pm2/quality-checks-error.log',
+      out_file: 'logs/pm2/quality-checks-out.log',
+    },
+    
+    // Dependency Updates - Monitor and update dependencies
+    {
+      name: 'dependency-updates',
+      script: 'scripts/pm2/dependency-updates.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 2 * * *', // Daily at 2 AM
+      log_file: 'logs/pm2/dependency-updates.log',
+      error_file: 'logs/pm2/dependency-updates-error.log',
+      out_file: 'logs/pm2/dependency-updates-out.log',
     }
   ]
 };
