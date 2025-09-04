@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
+import { Link } from 'react-router-dom';
 
 export default function ITServices() {
   const itServices = [
@@ -371,6 +370,213 @@ export default function ITServices() {
       ],
       marketPrice: "$1,000-1,500/month",
       savings: "Save up to $900/month"
+    },
+    {
+      name: "AI-Powered IT Operations",
+      description: "Intelligent IT operations management with AI-driven automation, predictive maintenance, and self-healing infrastructure capabilities.",
+      price: "$1,999/month",
+      features: [
+        "AI-driven automation",
+        "Predictive maintenance",
+        "Self-healing infrastructure",
+        "Intelligent incident response",
+        "Automated root cause analysis",
+        "Performance optimization",
+        "Capacity planning",
+        "Cost optimization"
+      ],
+      benefits: [
+        "Reduce operational costs by 50%",
+        "Improve system reliability by 99.9%",
+        "Minimize manual interventions",
+        "Accelerate problem resolution"
+      ],
+      marketPrice: "$3,500-5,000/month",
+      savings: "Save up to $3,000/month"
+    },
+    {
+      name: "Blockchain Integration Services",
+      description: "Complete blockchain integration and development services including smart contracts, DeFi solutions, and enterprise blockchain implementation.",
+      price: "$2,999/month",
+      features: [
+        "Smart contract development",
+        "DeFi solution implementation",
+        "Enterprise blockchain setup",
+        "Cryptocurrency integration",
+        "NFT marketplace development",
+        "Security auditing",
+        "Compliance consulting",
+        "Training and support"
+      ],
+      benefits: [
+        "Enable secure transactions",
+        "Reduce transaction costs by 80%",
+        "Improve transparency",
+        "Future-proof technology stack"
+      ],
+      marketPrice: "$5,000-8,000/month",
+      savings: "Save up to $5,000/month"
+    },
+    {
+      name: "IoT Infrastructure Management",
+      description: "Comprehensive Internet of Things infrastructure management with device monitoring, data analytics, and automated maintenance.",
+      price: "$1,799/month",
+      features: [
+        "IoT device management",
+        "Real-time monitoring",
+        "Data analytics and insights",
+        "Automated maintenance",
+        "Security management",
+        "Integration with existing systems",
+        "Scalability planning",
+        "Performance optimization"
+      ],
+      benefits: [
+        "Improve operational efficiency by 70%",
+        "Reduce maintenance costs by 60%",
+        "Enable predictive maintenance",
+        "Enhance data-driven decisions"
+      ],
+      marketPrice: "$3,000-4,500/month",
+      savings: "Save up to $2,700/month"
+    },
+    {
+      name: "Quantum Computing Readiness",
+      description: "Quantum computing preparation and integration services including algorithm development, security enhancement, and future-proofing strategies.",
+      price: "$4,999/month",
+      features: [
+        "Quantum algorithm development",
+        "Security enhancement",
+        "Future-proofing strategies",
+        "Quantum simulation",
+        "Hybrid classical-quantum systems",
+        "Research and development",
+        "Training and education",
+        "Strategic consulting"
+      ],
+      benefits: [
+        "Prepare for quantum future",
+        "Enhance security posture",
+        "Gain competitive advantage",
+        "Future-proof investments"
+      ],
+      marketPrice: "$8,000-12,000/month",
+      savings: "Save up to $7,000/month"
+    },
+    {
+      name: "Edge Computing Solutions",
+      description: "Edge computing infrastructure and management services for low-latency applications, real-time processing, and distributed computing needs.",
+      price: "$1,499/month",
+      features: [
+        "Edge infrastructure setup",
+        "Low-latency optimization",
+        "Real-time processing",
+        "Distributed computing",
+        "Data synchronization",
+        "Security management",
+        "Performance monitoring",
+        "Scalability planning"
+      ],
+      benefits: [
+        "Reduce latency by 90%",
+        "Improve application performance",
+        "Enable real-time processing",
+        "Reduce bandwidth costs"
+      ],
+      marketPrice: "$2,500-4,000/month",
+      savings: "Save up to $2,500/month"
+    },
+    {
+      name: "5G Network Implementation",
+      description: "5G network design, implementation, and optimization services for high-speed connectivity, IoT integration, and advanced applications.",
+      price: "$3,499/month",
+      features: [
+        "5G network design",
+        "Infrastructure implementation",
+        "Performance optimization",
+        "IoT integration",
+        "Security implementation",
+        "Testing and validation",
+        "Training and support",
+        "Ongoing maintenance"
+      ],
+      benefits: [
+        "Enable ultra-fast connectivity",
+        "Support massive IoT deployments",
+        "Reduce latency significantly",
+        "Future-proof network infrastructure"
+      ],
+      marketPrice: "$6,000-10,000/month",
+      savings: "Save up to $6,500/month"
+    },
+    {
+      name: "Zero Trust Security Architecture",
+      description: "Comprehensive zero trust security implementation with identity verification, micro-segmentation, and continuous monitoring.",
+      price: "$2,199/month",
+      features: [
+        "Zero trust architecture design",
+        "Identity and access management",
+        "Micro-segmentation",
+        "Continuous monitoring",
+        "Threat detection",
+        "Compliance implementation",
+        "Security training",
+        "Incident response"
+      ],
+      benefits: [
+        "Enhance security posture by 95%",
+        "Reduce breach risk by 90%",
+        "Ensure compliance requirements",
+        "Protect sensitive data"
+      ],
+      marketPrice: "$4,000-6,000/month",
+      savings: "Save up to $3,800/month"
+    },
+    {
+      name: "Green IT Solutions",
+      description: "Sustainable IT infrastructure and practices including energy optimization, carbon footprint reduction, and eco-friendly technology implementation.",
+      price: "$1,299/month",
+      features: [
+        "Energy optimization",
+        "Carbon footprint analysis",
+        "Eco-friendly hardware",
+        "Sustainable practices",
+        "Waste reduction",
+        "Renewable energy integration",
+        "Compliance reporting",
+        "Sustainability metrics"
+      ],
+      benefits: [
+        "Reduce energy costs by 40%",
+        "Improve sustainability metrics",
+        "Meet environmental regulations",
+        "Enhance brand reputation"
+      ],
+      marketPrice: "$2,200-3,500/month",
+      savings: "Save up to $2,200/month"
+    },
+    {
+      name: "AI Infrastructure Management",
+      description: "Specialized AI infrastructure management including GPU clusters, machine learning pipelines, and AI model deployment and monitoring.",
+      price: "$2,799/month",
+      features: [
+        "GPU cluster management",
+        "ML pipeline automation",
+        "Model deployment",
+        "Performance monitoring",
+        "Resource optimization",
+        "Security management",
+        "Scaling and load balancing",
+        "Cost optimization"
+      ],
+      benefits: [
+        "Optimize AI performance by 80%",
+        "Reduce AI infrastructure costs by 50%",
+        "Accelerate model deployment",
+        "Ensure AI system reliability"
+      ],
+      marketPrice: "$4,500-7,000/month",
+      savings: "Save up to $4,200/month"
     }
   ];
 
