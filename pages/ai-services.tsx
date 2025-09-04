@@ -827,28 +827,6 @@ export default function AIServices() {
     },
     {
       icon: Brain,
-      name: 'Generative AI Content Studio',
-      description: 'Advanced AI-powered content creation platform that generates high-quality text, images, videos, and audio content for marketing, education, and entertainment.',
-      features: [
-        'Multi-modal content generation (text, image, video, audio)',
-        'Brand voice and style consistency training',
-        'Content optimization for SEO and engagement',
-        'Automated content scheduling and distribution',
-        'A/B testing and performance analytics',
-        'Copyright and plagiarism detection'
-      ],
-      pricing: '$2,000 – $15,000 setup',
-      perUnit: '$0.05 – $0.50 per content piece',
-      timeline: '4–8 weeks',
-      benefits: [
-        '95% faster content production',
-        'Consistent brand messaging across all channels',
-        'Reduced content creation costs by 70%',
-        'Improved content engagement and conversion rates'
-      ]
-    },
-    {
-      icon: Brain,
       name: 'AI-Powered Drug Discovery Platform',
       description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis using deep learning.',
       features: [
@@ -866,30 +844,7 @@ export default function AIServices() {
         '60% faster drug discovery process',
         'Reduced research and development costs',
         'Improved success rates in clinical trials',
-        'Enhanced drug safety profiles'
-      ]
-    },
-    {
-      icon: Eye,
-      name: 'AI-Powered Quality Assurance',
-      description: 'Intelligent quality control system that uses computer vision and machine learning to detect defects, ensure compliance, and optimize manufacturing processes.',
-      features: [
-        'Real-time defect detection and classification',
-        'Predictive quality analytics and forecasting',
-        'Automated compliance monitoring and reporting',
-        'Root cause analysis and recommendations',
-        'Integration with manufacturing systems',
-        'Custom quality metrics and thresholds'
-      ],
-      pricing: '$10,000 – $75,000 setup',
-      perUnit: '$0.01 – $0.10 per inspection',
-      timeline: '8–16 weeks',
-      benefits: [
-        '99.5% accuracy in defect detection',
-        '50% reduction in quality control costs',
-        'Real-time quality monitoring and alerts',
-        'Improved product consistency and customer satisfaction'
-      ]
+        'Enhanced drug safety profiles'      ]
     },
     {
       icon: Eye,
@@ -910,30 +865,7 @@ export default function AIServices() {
         '95% accuracy in medical diagnosis',
         'Faster diagnostic turnaround times',
         'Reduced human error in analysis',
-        'Improved patient outcomes'
-      ]
-    },
-    {
-      icon: TrendingUp,
-      name: 'AI Financial Risk Management',
-      description: 'Advanced AI system for financial risk assessment, fraud detection, and regulatory compliance with real-time monitoring and predictive analytics.',
-      features: [
-        'Real-time fraud detection and prevention',
-        'Credit risk assessment and scoring',
-        'Market risk analysis and portfolio optimization',
-        'Regulatory compliance monitoring',
-        'Anomaly detection and alert systems',
-        'Automated reporting and documentation'
-      ],
-      pricing: '$15,000 – $100,000 setup',
-      perUnit: '$0.02 – $0.20 per transaction',
-      timeline: '10–20 weeks',
-      benefits: [
-        '90% reduction in false positives',
-        'Real-time risk monitoring and mitigation',
-        'Automated compliance and regulatory reporting',
-        'Improved financial decision making'
-      ]
+        'Improved patient outcomes'      ]
     },
     {
       icon: TrendingUp,
@@ -955,72 +887,6 @@ export default function AIServices() {
         '24/7 automated trading',
         'Reduced emotional trading decisions',
         'Advanced market analysis capabilities'
-      ]
-    },
-    {
-      icon: Mic,
-      name: 'AI Voice Analytics & Sentiment Analysis',
-      description: 'Advanced voice processing system that analyzes speech patterns, emotions, and sentiment for customer service, market research, and healthcare applications.',
-      features: [
-        'Real-time voice emotion and sentiment analysis',
-        'Speaker identification and verification',
-        'Conversation analytics and insights',
-        'Multi-language support and translation',
-        'Voice biometric authentication',
-        'Call center optimization and training'
-      ],
-      pricing: '$5,000 – $30,000 setup',
-      perUnit: '$0.01 – $0.05 per minute',
-      timeline: '6–12 weeks',
-      benefits: [
-        '85% accuracy in emotion detection',
-        'Improved customer service quality',
-        'Real-time conversation insights',
-        'Enhanced security with voice biometrics'
-      ]
-    },
-    {
-      icon: Database,
-      name: 'AI Data Intelligence Platform',
-      description: 'Comprehensive AI platform that automatically discovers, cleans, and enriches data while providing intelligent insights and recommendations.',
-      features: [
-        'Automated data discovery and cataloging',
-        'Data quality assessment and cleaning',
-        'Intelligent data enrichment and augmentation',
-        'Automated data lineage and governance',
-        'Predictive data analytics and insights',
-        'Natural language data querying'
-      ],
-      pricing: '$8,000 – $50,000 setup',
-      perUnit: '$0.10 – $1.00 per GB processed',
-      timeline: '8–16 weeks',
-      benefits: [
-        '80% reduction in data preparation time',
-        'Improved data quality and accuracy',
-        'Automated data governance and compliance',
-        'Faster insights and decision making'
-      ]
-    },
-    {
-      icon: Shield,
-      name: 'AI Cybersecurity Threat Intelligence',
-      description: 'Advanced AI-powered cybersecurity system that provides real-time threat detection, incident response, and security intelligence.',
-      features: [
-        'Real-time threat detection and analysis',
-        'Automated incident response and remediation',
-        'Behavioral analytics and anomaly detection',
-        'Threat intelligence and attribution',
-        'Security orchestration and automation',
-        'Compliance monitoring and reporting'
-      ],
-      pricing: '$12,000 – $80,000 setup',
-      perUnit: '$0.05 – $0.25 per event',
-      timeline: '10–18 weeks',
-      benefits: [
-        '95% reduction in false positive alerts',
-        'Real-time threat detection and response',
-        'Automated security incident handling',
-        'Improved security posture and compliance'
       ]
     },
     {
@@ -1064,8 +930,7 @@ export default function AIServices() {
         '90% reduction in document review time',
         'Improved accuracy in legal analysis',
         'Automated compliance monitoring',
-        'Reduced legal costs and risks'
-      ]
+        'Reduced legal costs and risks'      ]
     },
     {
       icon: Mic,
@@ -1086,8 +951,7 @@ export default function AIServices() {
         '95% translation accuracy',
         'Real-time communication support',
         'Multi-language business expansion',
-        'Enhanced global collaboration'
-      ]
+        'Enhanced global collaboration'      ]
     },
     {
       icon: Database,
@@ -1152,8 +1016,7 @@ export default function AIServices() {
         'Enhanced vehicle safety',
         'Reduced transportation costs',
         'Improved fleet efficiency',
-        'Advanced autonomous capabilities'
-      ]
+        'Advanced autonomous capabilities'      ]
     }
   ];
 

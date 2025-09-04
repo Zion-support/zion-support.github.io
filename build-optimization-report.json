@@ -1,64 +1,51 @@
 {
-  "timestamp": "2025-09-03T16:58:00.149Z",
+  "timestamp": "2025-09-04T02:11:22.701Z",
   "optimizations": [
     {
       "name": "Next.js Configuration",
       "status": "skipped",
       "message": "Next.js config already optimized",
-      "duration": 0,
+      "duration": 1,
       "impact": "none",
       "details": {}
     },
     {
       "name": "Package.json Scripts",
-      "status": "applied",
-      "message": "Added optimizations: 3 build scripts",
-      "duration": 1,
-      "impact": "medium",
-      "details": {
-        "optimizations": [
-          "3 build scripts"
-        ],
-        "scriptsAdded": 3
-      }
+      "status": "skipped",
+      "message": "package.json already optimized",
+      "duration": 0,
+      "impact": "none",
+      "details": {}
     },
     {
       "name": "Bundle Analyzer",
-      "status": "applied",
-      "message": "Bundle analyzer script created",
+      "status": "skipped",
+      "message": "Bundle analyzer already exists",
       "duration": 0,
-      "impact": "medium",
-      "details": {
-        "path": "/workspace/scripts/analyze-bundle.js"
-      }
+      "impact": "none",
+      "details": {}
     },
     {
       "name": "Tailwind Configuration",
-      "status": "applied",
-      "message": "Applied optimizations: JIT mode",
+      "status": "skipped",
+      "message": "Tailwind config already optimized",
       "duration": 1,
-      "impact": "high",
-      "details": {
-        "optimizations": [
-          "JIT mode"
-        ]
-      }
+      "impact": "none",
+      "details": {}
     },
     {
       "name": "Service Worker",
-      "status": "applied",
-      "message": "Service worker created for caching",
+      "status": "skipped",
+      "message": "Service worker already exists",
       "duration": 0,
-      "impact": "high",
-      "details": {
-        "path": "/workspace/public/sw.js"
-      }
+      "impact": "none",
+      "details": {}
     }
   ],
   "metrics": {
-    "beforeSize": 45027056,
-    "afterSize": 45027056,
+    "beforeSize": 45741243,
+    "afterSize": 45741243,
     "buildTime": 2,
-    "optimizationsApplied": 4
+    "optimizationsApplied": 0
   }
 }

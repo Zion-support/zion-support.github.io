@@ -1,65 +1,89 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
+const path = require('path');
 
-// Read the file
-let content = fs.readFileSync('pages/micro-saas.tsx', 'utf8');
+console.log('🔧 Starting comprehensive syntax error fixing...');
 
-// Fix patterns where icon: appears without proper object structure
-// Look for patterns like:
-// 'some text'
-// 
-// icon: SomeIcon,
-// and replace with:
-// 'some text'
-// ],
-// category: 'SomeCategory'
-// },
-// {
-// icon: SomeIcon,
+// Fix ContactForm.tsx
+const contactFormPath = 'components/ContactForm.tsx';
+if (fs.existsSync(contactFormPath)) {
+  let content = fs.readFileSync(contactFormPath, 'utf8');
+  
+  // Fix the function declaration and export
+  content = content.replace(
+    /(\s+);\s*}\s*export default ContactForm;/,
+    '$1;\n};\n\nexport default ContactForm;'
+  );
+  
+  fs.writeFileSync(contactFormPath, content);
+  console.log('✅ Fixed ContactForm.tsx');
+}
 
-// This regex finds the pattern and fixes it
-content = content.replace(
-  /(\s+'[^']+'\s*)\n\s*\n\s*icon:\s*([A-Za-z]+),/g,
-  (match, text, icon) => {
-    // Extract the last word from the text to determine category
-    const lastLine = text.trim();
-    let category = 'General';
-    
-    if (lastLine.includes('AI') || lastLine.includes('Machine Learning')) {
-      category = 'AI & Machine Learning';
-    } else if (lastLine.includes('Email') || lastLine.includes('Marketing')) {
-      category = 'Marketing';
-    } else if (lastLine.includes('Security') || lastLine.includes('Cybersecurity')) {
-      category = 'Security';
-    } else if (lastLine.includes('E-commerce') || lastLine.includes('Return')) {
-      category = 'E-commerce';
-    } else if (lastLine.includes('Event') || lastLine.includes('Calendar')) {
-      category = 'Event Management';
-    } else if (lastLine.includes('Video') || lastLine.includes('Content')) {
-      category = 'Content Creation';
-    } else if (lastLine.includes('Support') || lastLine.includes('Helpdesk')) {
-      category = 'Customer Support';
-    } else if (lastLine.includes('Lead') || lastLine.includes('Scoring')) {
-      category = 'Sales';
-    } else if (lastLine.includes('Healthcare') || lastLine.includes('Hospital')) {
-      category = 'Healthcare';
-    } else if (lastLine.includes('Talent') || lastLine.includes('HR')) {
-      category = 'Human Resources';
-    } else if (lastLine.includes('Workflow') || lastLine.includes('Automation')) {
-      category = 'Automation';
-    } else if (lastLine.includes('Quantum') || lastLine.includes('Computing')) {
-      category = 'Advanced Computing';
-    }
-    
-    return `${text}
-      ],
-      category: '${category}'
-    },
-    {
-      icon: ${icon},`;
-  }
-);
+// Fix ErrorBoundary.tsx
+const errorBoundaryPath = 'components/ErrorBoundary.tsx';
+if (fs.existsSync(errorBoundaryPath)) {
+  let content = fs.readFileSync(errorBoundaryPath, 'utf8');
+  
+  // Fix the static method and componentDidCatch
+  content = content.replace(
+    /public static getDerivedStateFromError\(error: Error\): State \{\s*return \{ hasError: true, error \}\s*public componentDidCatch/,
+    'public static getDerivedStateFromError(error: Error): State {\n    return { hasError: true, error };\n  }\n  \n  public componentDidCatch'
+  );
+  
+  // Fix the componentDidCatch method
+  content = content.replace(
+    /public componentDidCatch\(error: Error, errorInfo: ErrorInfo\) \{\s*console\.error\('ErrorBoundary caught an error:', error, errorInfo\);\s*\}\s*public render/,
+    'public componentDidCatch(error: Error, errorInfo: ErrorInfo) {\n    console.error(\'ErrorBoundary caught an error:\', error, errorInfo);\n  }\n  \n  public render'
+  );
+  
+  fs.writeFileSync(errorBoundaryPath, content);
+  console.log('✅ Fixed ErrorBoundary.tsx');
+}
 
-// Write the fixed content back
-fs.writeFileSync('pages/micro-saas.tsx', content);
+// Fix PerformanceMonitor.tsx
+const performanceMonitorPath = 'components/PerformanceMonitor.tsx';
+if (fs.existsSync(performanceMonitorPath)) {
+  let content = fs.readFileSync(performanceMonitorPath, 'utf8');
+  
+  // Fix the for loop in the observer
+  content = content.replace(
+    /for \(const entry of list\.getEntries\(\)\) \{\s*if \(entry\.entryType === 'largest-contentful-paint'\) \{\s*\/\/ Log LCP in development only\s*if \(process\.env\.NODE_ENV === 'development'\) \{\s*console\.log\('LCP:', entry\.startTime\);\s*\}\s*sendToAnalytics\('LCP', entry\.startTime\);\s*\}\s*\}\);/,
+    'for (const entry of list.getEntries()) {\n          if (entry.entryType === \'largest-contentful-paint\') {\n            // Log LCP in development only\n            if (process.env.NODE_ENV === \'development\') {\n              console.log(\'LCP:\', entry.startTime);\n            }\n            sendToAnalytics(\'LCP\', entry.startTime);\n          }\n        }\n      });'
+  );
+  
+  fs.writeFileSync(performanceMonitorPath, content);
+  console.log('✅ Fixed PerformanceMonitor.tsx');
+}
 
-console.log('Fixed syntax errors in micro-saas.tsx');
+// Fix index.tsx
+const indexPath = 'pages/index.tsx';
+if (fs.existsSync(indexPath)) {
+  let content = fs.readFileSync(indexPath, 'utf8');
+  
+  // Fix the dangerouslySetInnerHTML object
+  content = content.replace(
+    /"sameAs": \[contact\.site\]\s*\}\)\s*\}\s*\/>/,
+    '"sameAs": [contact.site]\n            })\n          }}\n        />'
+  );
+  
+  fs.writeFileSync(indexPath, content);
+  console.log('✅ Fixed index.tsx');
+}
+
+// Fix it-services.tsx
+const itServicesPath = 'pages/it-services.tsx';
+if (fs.existsSync(itServicesPath)) {
+  let content = fs.readFileSync(itServicesPath, 'utf8');
+  
+  // Fix the corrupted line
+  content = content.replace(
+    /icon: Cpu,\s*cursor\/analyze-improve-and-deploy-application-d144\s*},/,
+    'icon: Cpu,\n      name: \'Edge Computing Solutions\',\n      description: \'Distributed computing at the edge for low-latency applications\'\n    },'
+  );
+  
+  fs.writeFileSync(itServicesPath, content);
+  console.log('✅ Fixed it-services.tsx');
+}
+
+console.log('🎉 Syntax error fixing completed!');

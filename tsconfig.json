@@ -23,8 +23,11 @@
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
+    "pages/**/*",
     "components/**/*",
-    "pages/**/*"
+    "lib/**/*",
+    "hooks/**/*",
+    "styles/**/*"
   ],
   "exclude": [
     "node_modules",

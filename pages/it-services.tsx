@@ -1025,29 +1025,6 @@ export default function ITServices() {
     },
     {
       icon: Cpu,
-      name: 'Quantum Computing Integration',
-      description: 'Cutting-edge quantum computing solutions for complex optimization problems, cryptography, and scientific research applications.',
-      features: [
-        'Quantum algorithm development and optimization',
-        'Quantum machine learning implementation',
-        'Quantum cryptography and secure communications',
-        'Quantum simulation for research and development',
-        'Hybrid classical-quantum system integration',
-        'Quantum cloud platform access and management'
-      ],
-      pricing: '$500 – $1,000/hour',
-      projectPricing: '$50,000 – $500,000/project',
-      timeline: '8–24 weeks',
-      benefits: [
-        'Exponential computational power for complex problems',
-        'Revolutionary optimization capabilities',
-        'Future-proof technology investment',
-        'Competitive advantage in research and development'
-      ],
-      category: 'Emerging Technologies'
-    },
-    {
-      icon: Cpu,
       name: 'Quantum Computing Infrastructure',
       description: 'Quantum computing infrastructure setup, algorithm development, and quantum-classical hybrid systems.',
       features: [
@@ -1071,29 +1048,6 @@ export default function ITServices() {
     },
     {
       icon: Globe,
-      name: 'Edge Computing Infrastructure',
-      description: 'Distributed edge computing solutions that bring processing power closer to data sources for ultra-low latency applications.',
-      features: [
-        'Edge server deployment and management',
-        'Content delivery network optimization',
-        'IoT device integration and data processing',
-        'Real-time analytics and decision making',
-        'Edge security and access control',
-        'Hybrid cloud-edge architecture design'
-      ],
-      pricing: '$200 – $400/hour',
-      projectPricing: '$25,000 – $150,000/project',
-      timeline: '4–12 weeks',
-      benefits: [
-        'Sub-10ms latency for critical applications',
-        'Reduced bandwidth costs and data transfer',
-        'Improved reliability and fault tolerance',
-        'Enhanced user experience and performance'
-      ],
-      category: 'Infrastructure'
-    },
-    {
-      icon: Globe,
       name: 'Edge Computing & IoT Infrastructure',
       description: 'Distributed edge computing infrastructure with IoT device management and real-time data processing.',
       features: [
@@ -1113,53 +1067,28 @@ export default function ITServices() {
         'Scalable IoT device management',
         'Real-time decision making capabilities'
       ],
-      category: 'Edge Computing'
-    },
+      category: 'Edge Computing'    },
     {
       icon: Shield,
       name: 'Zero Trust Security Architecture',
-      description: 'Comprehensive zero trust security implementation with continuous verification, micro-segmentation, and identity-based access control.',
+      description: 'Comprehensive zero trust security implementation with identity verification and micro-segmentation.',
       features: [
-        'Identity and access management (IAM) implementation',
-        'Network micro-segmentation and isolation',
+        'Zero trust network architecture design',
+        'Identity and access management (IAM)',
+        'Micro-segmentation and network isolation',
         'Continuous security monitoring and analytics',
         'Privileged access management (PAM)',
-        'Security orchestration and automated response',
-        'Compliance and audit trail management'
+        'Security orchestration and automation'
       ],
-      pricing: '$300 – $500/hour',
-      projectPricing: '$40,000 – $200,000/project',
-      timeline: '6–16 weeks',
+      pricing: '$100,000 – $1,000,000 project',
+      projectPricing: '$10,000 – $100,000/month managed',
+      timeline: '12–24 weeks',
       benefits: [
-        'Enhanced security posture and threat protection',
-        'Reduced attack surface and lateral movement',
-        'Automated security response and remediation',
-        'Compliance with modern security standards'
-      ],
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Improved compliance and governance',
+        'Automated threat response'      ],
       category: 'Security'
-    },
-    {
-      icon: Database,
-      name: 'Data Mesh Architecture Implementation',
-      description: 'Modern data architecture that decentralizes data ownership and enables self-serve data infrastructure for large organizations.',
-      features: [
-        'Data domain modeling and ownership design',
-        'Self-serve data platform development',
-        'Data product creation and management',
-        'Federated governance and compliance',
-        'Data quality and lineage tracking',
-        'Cross-domain data sharing protocols'
-      ],
-      pricing: '$250 – $450/hour',
-      projectPricing: '$60,000 – $300,000/project',
-      timeline: '12–32 weeks',
-      benefits: [
-        'Scalable and maintainable data architecture',
-        'Improved data quality and governance',
-        'Faster time-to-insight for business users',
-        'Reduced data silos and duplication'
-      ],
-      category: 'Data Architecture'
     },
     {
       icon: Database,
@@ -1209,29 +1138,6 @@ export default function ITServices() {
     },
     {
       icon: Smartphone,
-      name: '5G Network Optimization',
-      description: 'Advanced 5G network design, optimization, and management for enterprise applications and IoT deployments.',
-      features: [
-        '5G network architecture design and planning',
-        'Network slicing and service orchestration',
-        'Edge computing integration with 5G',
-        'IoT device connectivity and management',
-        'Network performance monitoring and optimization',
-        'Private 5G network deployment'
-      ],
-      pricing: '$300 – $600/hour',
-      projectPricing: '$75,000 – $400,000/project',
-      timeline: '8–20 weeks',
-      benefits: [
-        'Ultra-low latency and high bandwidth connectivity',
-        'Massive IoT device support and management',
-        'Enhanced mobile and edge computing capabilities',
-        'Future-ready network infrastructure'
-      ],
-      category: 'Network Infrastructure'
-    },
-    {
-      icon: Smartphone,
       name: '5G Network Infrastructure & Optimization',
       description: '5G network deployment, optimization, and application development for next-generation connectivity.',
       features: [
@@ -1249,32 +1155,8 @@ export default function ITServices() {
         'Ultra-low latency connectivity',
         'Massive IoT device support',
         'Enhanced mobile broadband',
-        'Next-generation application capabilities'
-      ],
+        'Next-generation application capabilities'      ],
       category: 'Network Infrastructure'
-    },
-    {
-      icon: Brain,
-      name: 'AI Infrastructure & MLOps',
-      description: 'Complete AI infrastructure setup with machine learning operations, model deployment, and continuous learning pipelines.',
-      features: [
-        'MLOps pipeline design and implementation',
-        'Model training and deployment infrastructure',
-        'A/B testing and model versioning systems',
-        'Data pipeline automation and monitoring',
-        'Model performance monitoring and drift detection',
-        'Auto-scaling AI compute resources'
-      ],
-      pricing: '$250 – $500/hour',
-      projectPricing: '$50,000 – $250,000/project',
-      timeline: '6–16 weeks',
-      benefits: [
-        'Faster AI model development and deployment',
-        'Automated model lifecycle management',
-        'Improved model performance and reliability',
-        'Scalable AI infrastructure for growth'
-      ],
-      category: 'AI Infrastructure'
     },
     {
       icon: Brain,
@@ -1295,78 +1177,8 @@ export default function ITServices() {
         'Accelerated AI model development',
         'Automated ML operations',
         'Scalable AI infrastructure',
-        'Enhanced model performance and reliability'
-      ],
+        'Enhanced model performance and reliability'      ],
       category: 'AI Infrastructure'
-    },
-    {
-      icon: Server,
-      name: 'Serverless Architecture Migration',
-      description: 'Complete migration to serverless computing with AWS Lambda, Azure Functions, and Google Cloud Functions for cost optimization.',
-      features: [
-        'Legacy application serverless migration',
-        'Event-driven architecture design',
-        'Function optimization and performance tuning',
-        'Cost monitoring and optimization',
-        'Cold start mitigation strategies',
-        'Multi-cloud serverless deployment'
-      ],
-      pricing: '$200 – $400/hour',
-      projectPricing: '$30,000 – $150,000/project',
-      timeline: '4–12 weeks',
-      benefits: [
-        '90% reduction in infrastructure costs',
-        'Automatic scaling and high availability',
-        'Reduced operational overhead',
-        'Pay-per-use pricing model'
-      ],
-      category: 'Cloud Architecture'
-    },
-    {
-      icon: LinkIcon,
-      name: 'API Gateway & Microservices Management',
-      description: 'Enterprise API gateway implementation with microservices orchestration, rate limiting, and security management.',
-      features: [
-        'API gateway design and implementation',
-        'Microservices architecture and orchestration',
-        'API versioning and lifecycle management',
-        'Rate limiting and throttling policies',
-        'API security and authentication',
-        'Service mesh implementation and management'
-      ],
-      pricing: '$200 – $450/hour',
-      projectPricing: '$40,000 – $180,000/project',
-      timeline: '6–14 weeks',
-      benefits: [
-        'Centralized API management and governance',
-        'Improved system scalability and maintainability',
-        'Enhanced security and access control',
-        'Better developer experience and productivity'
-      ],
-      category: 'API Management'
-    },
-    {
-      icon: TestTube,
-      name: 'Chaos Engineering & Resilience Testing',
-      description: 'Proactive system resilience testing through controlled failure injection and chaos engineering practices.',
-      features: [
-        'Chaos engineering framework implementation',
-        'Failure injection and testing automation',
-        'System resilience assessment and improvement',
-        'Disaster recovery testing and validation',
-        'Performance under stress testing',
-        'Resilience monitoring and alerting'
-      ],
-      pricing: '$250 – $500/hour',
-      projectPricing: '$25,000 – $100,000/project',
-      timeline: '4–10 weeks',
-      benefits: [
-        'Improved system reliability and uptime',
-        'Proactive identification of failure points',
-        'Enhanced disaster recovery capabilities',
-        'Increased confidence in system stability'
-      ],
-      category: 'Reliability Engineering'
     },
     {
       icon: Server,
@@ -1482,6 +1294,144 @@ export default function ITServices() {
         'Advanced data processing and analysis'
       ],
       category: 'High-Performance Computing'
+    },
+    {
+      icon: Shield,
+      name: 'Zero Trust Security Architecture Implementation',
+      description: 'Comprehensive zero trust security implementation with continuous verification, micro-segmentation, and identity management.',
+      features: [
+        'Identity and access management (IAM)',
+        'Continuous security monitoring and verification',
+        'Micro-segmentation and network isolation',
+        'Threat detection and automated response',
+        'Compliance automation and reporting',
+        'Security analytics and behavioral analysis'
+      ],
+      pricing: '$15,000 – $75,000/project',
+      projectPricing: '$5,000 – $15,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Enhanced security posture with zero trust model',
+        'Reduced attack surface through micro-segmentation',
+        'Automated threat response and mitigation',
+        'Improved compliance management'
+      ],
+      category: 'Cybersecurity'
+    },
+    {
+      icon: Cloud,
+      name: 'Multi-Cloud Strategy & Migration',
+      description: 'Strategic multi-cloud implementation with workload optimization, cost management, and disaster recovery across AWS, Azure, and GCP.',
+      features: [
+        'Multi-cloud architecture design and implementation',
+        'Workload optimization and portability',
+        'Cost optimization and FinOps implementation',
+        'Disaster recovery and business continuity',
+        'Cloud governance and compliance',
+        'Performance monitoring and optimization'
+      ],
+      pricing: '$25,000 – $150,000/project',
+      projectPricing: '$8,000 – $25,000/month managed',
+      timeline: '12–24 weeks',
+      benefits: [
+        'Reduced vendor lock-in and increased flexibility',
+        'Optimized costs through multi-cloud strategies',
+        'Enhanced disaster recovery capabilities',
+        'Improved performance and reliability'
+      ],
+      category: 'Cloud & Infrastructure'
+    },
+    {
+      icon: Database,
+      name: 'Enterprise Data Platform Modernization',
+      description: 'Complete data platform transformation with real-time analytics, AI/ML integration, and advanced data governance.',
+      features: [
+        'Data lake and warehouse implementation',
+        'Real-time streaming and analytics',
+        'AI/ML model integration and deployment',
+        'Data governance and compliance frameworks',
+        'Advanced analytics and business intelligence',
+        'Data quality and lineage management'
+      ],
+      pricing: '$50,000 – $300,000/project',
+      projectPricing: '$15,000 – $50,000/month managed',
+      timeline: '16–32 weeks',
+      benefits: [
+        'Unified data platform for all business needs',
+        'Real-time insights and decision making',
+        'Enhanced data quality and governance',
+        'Scalable AI/ML capabilities'
+      ],
+      category: 'Data & Analytics'
+    },
+    {
+      icon: Code,
+      name: 'DevSecOps & CI/CD Pipeline Automation',
+      description: 'Comprehensive DevSecOps implementation with automated security scanning, compliance checking, and deployment pipelines.',
+      features: [
+        'CI/CD pipeline design and implementation',
+        'Automated security scanning and vulnerability management',
+        'Infrastructure as Code (IaC) implementation',
+        'Compliance automation and reporting',
+        'Performance monitoring and optimization',
+        'Disaster recovery and rollback capabilities'
+      ],
+      pricing: '$20,000 – $100,000/project',
+      projectPricing: '$5,000 – $20,000/month managed',
+      timeline: '8–16 weeks',
+      benefits: [
+        'Faster and more secure software delivery',
+        'Automated compliance and security checks',
+        'Reduced deployment risks and downtime',
+        'Improved development team productivity'
+      ],
+      category: 'DevOps & Automation'
+    },
+    {
+      icon: Globe,
+      name: '5G Network Infrastructure & Edge Computing',
+      description: 'Advanced 5G network implementation with edge computing capabilities for ultra-low latency applications.',
+      features: [
+        '5G network design and implementation',
+        'Edge computing infrastructure setup',
+        'Network slicing and optimization',
+        'IoT device integration and management',
+        'Real-time analytics and monitoring',
+        'Security and compliance implementation'
+      ],
+      pricing: '$100,000 – $500,000/project',
+      projectPricing: '$25,000 – $75,000/month managed',
+      timeline: '20–40 weeks',
+      benefits: [
+        'Ultra-low latency for critical applications',
+        'Enhanced IoT and edge computing capabilities',
+        'Improved network performance and reliability',
+        'Future-ready infrastructure'
+      ],
+      category: '5G & Edge Computing'
+    },
+    {
+      icon: Brain,
+      name: 'AI Infrastructure & MLOps Platform',
+      description: 'Complete AI infrastructure setup with MLOps capabilities for scalable machine learning model deployment and management.',
+      features: [
+        'AI/ML infrastructure design and implementation',
+        'MLOps pipeline automation',
+        'Model versioning and deployment management',
+        'Data pipeline and feature store setup',
+        'Model monitoring and performance tracking',
+        'GPU cluster management and optimization'
+      ],
+      pricing: '$75,000 – $400,000/project',
+      projectPricing: '$20,000 – $60,000/month managed',
+      timeline: '16–28 weeks',
+      benefits: [
+        'Scalable AI/ML model deployment',
+        'Automated model lifecycle management',
+        'Enhanced model performance and reliability',
+        'Reduced time-to-market for AI solutions'
+      ],
+      category: 'AI Infrastructure'
     }
   ];
 
