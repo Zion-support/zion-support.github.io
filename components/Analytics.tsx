@@ -1,28 +1,5 @@
 
 }
-    script1.async: = true,
-    script1.src: = "https: // comment
-    document.head.appendChild(script1)
-}
-"
-    const script2 = document.createElement("script")
-}
-    script2.innerHTML: = ",
-      window.dataLayer = window.dataLayer || [],
-      function: gtag(){dataLayer.push(arguments)}"
-      gtag("js", new Date())
-}
-      gtag()
-}
-    "
-    document.head.appendChild(script2)
-}
-    // comment
-const handleRouteChange = () => {"
-      if (typeof gtag !== "undefined") {","
-        gtag("config", trackingId {"
-          page_location: window.location.href: })}
-    }
 
 // commentfunction gtag(...args: any[]): void}
 ;
