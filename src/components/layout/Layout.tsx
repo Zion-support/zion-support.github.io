@@ -39,18 +39,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex header-nav-links" role="navigation" aria-label="Main navigation">
-            <a href="/services" className="header-nav-link" aria-label="Our Services">
-              Services
-            </a>
-            <a href="/about" className="header-nav-link" aria-label="About Us">
-              About
-            </a>
-            <a href="/contact" className="header-nav-link" aria-label="Contact Us">
-              Contact
-            </a>
-            <a href="/contact" className="header-nav-cta" aria-label="Get Started">
-              Get Started
-            </a>
+            <a href="/services" className="header-nav-link" aria-label="Our Services">Services</a>
+            <a href="/solutions" className="header-nav-link" aria-label="Solutions">Solutions</a>
+            <a href="/pricing" className="header-nav-link" aria-label="Pricing">Pricing</a>
+            <a href="/blog" className="header-nav-link" aria-label="Blog">Blog</a>
+            <a href="/about" className="header-nav-link" aria-label="About Us">About</a>
+            <a href="/contact" className="header-nav-link" aria-label="Contact Us">Contact</a>
+            <a href="/request-quote" className="header-nav-cta" aria-label="Request a Quote">Request a Quote</a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -72,34 +67,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             aria-label="Mobile navigation"
           >
             <div className="flex flex-col space-y-2">
-              <a 
-                href="/services" 
-                className="header-nav-link block py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Services
-              </a>
-              <a 
-                href="/about" 
-                className="header-nav-link block py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </a>
-              <a 
-                href="/contact" 
-                className="header-nav-link block py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </a>
-              <a 
-                href="/contact" 
-                className="header-nav-cta block py-2 text-center mt-4"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get Started
-              </a>
+              <a href="/services" className="header-nav-link block py-2" onClick={() => setIsMenuOpen(false)}>Services</a>
+              <a href="/solutions" className="header-nav-link block py-2" onClick={() => setIsMenuOpen(false)}>Solutions</a>
+              <a href="/pricing" className="header-nav-link block py-2" onClick={() => setIsMenuOpen(false)}>Pricing</a>
+              <a href="/blog" className="header-nav-link block py-2" onClick={() => setIsMenuOpen(false)}>Blog</a>
+              <a href="/about" className="header-nav-link block py-2" onClick={() => setIsMenuOpen(false)}>About</a>
+              <a href="/contact" className="header-nav-link block py-2" onClick={() => setIsMenuOpen(false)}>Contact</a>
+              <a href="/request-quote" className="header-nav-cta block py-2 text-center mt-4" onClick={() => setIsMenuOpen(false)}>Request a Quote</a>
             </div>
           </nav>
         )}
@@ -121,9 +95,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div>
               <h4 className="font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li><a href="/ai-services" className="hover:text-white transition-colors">AI Services</a></li>
-                <li><a href="/it-services" className="hover:text-white transition-colors">IT Services</a></li>
-                <li><a href="/services/cloud-services" className="hover:text-white transition-colors">Cloud Services</a></li>
+                <li><a href="/services/ai-services" className="hover:text-white transition-colors">AI Services</a></li>
+                <li><a href="/services/it-services" className="hover:text-white transition-colors">IT Services</a></li>
+                <li><a href="/services/micro-saas" className="hover:text-white transition-colors">Micro SaaS</a></li>
               </ul>
             </div>
             <div>
@@ -135,11 +109,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
+              <h4 className="font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-sm text-gray-300">
-                <li><a href="https://linkedin.com/company/ziontechgroup" className="hover:text-white transition-colors">LinkedIn</a></li>
-                <li><a href="https://twitter.com/ziontechgroup" className="hover:text-white transition-colors">Twitter</a></li>
-                <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">Email</a></li>
+                <li><a href="/faq" className="hover:text-white transition-colors">FAQ</a></li>
+                <li><a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                <li><a href="/terms" className="hover:text-white transition-colors">Terms of Service</a></li>
               </ul>
             </div>
           </div>
