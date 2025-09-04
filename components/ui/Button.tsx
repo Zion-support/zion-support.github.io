@@ -1,8 +1,1 @@
-
-
-export default Button;
-
-)""Button.displayName = "Button"
-
-export default Component
-"
+export default Button; )""Button.displayName = "Button" export default Component "

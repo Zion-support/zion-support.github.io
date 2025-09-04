@@ -1,2 +1,1 @@
-// Analytics module
 export {};

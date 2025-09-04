@@ -1,5 +1,1 @@
-export default OpenAppRedirect;'';,"});,})';';
-;,});,"})';';';
-',';';
-    ';';';
-&apos;'"';';';';
+export default OpenAppRedirect;'';,"});,})';'; ;,});,"})';';'; ',';'; ';';'; &apos;'"';';';';

@@ -1,1 +1,1 @@
-export default function BlockchainSolutions(){return (<main style={{minHeight:'40vh',padding:'4rem'}}>Blockchain Solutions overview.</main>);}
+export default function BlockchainSolutions(){return (<main style={{minHeight:'40vh',padding:'4rem'}}>Blockchain Solutions overview.</main>)}

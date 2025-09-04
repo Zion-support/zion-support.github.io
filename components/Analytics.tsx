@@ -1,4 +1,1 @@
-
-}
-
-export default Analytics;
+} export default Analytics;
