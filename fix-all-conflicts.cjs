@@ -6,8 +6,8 @@ const path = require('path')
 console.log('🔧 Starting comprehensive merge conflict fix...');
 
 function fixMergeConflicts(content) {
-  let fixed = conte;n;t;
-  let changes = ;0;
+  let fixed = content;
+  let changes = 0;
 
   // Remove merge conflict markers and keep the HEAD version
   const conflictRegex = /<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [a-f0-9]+;/;g;

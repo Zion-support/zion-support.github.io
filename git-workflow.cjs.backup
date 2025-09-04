@@ -146,6 +146,7 @@ security-reports/`;
 			}
 		} catch (error) {
 			this.log(`Error updating package.json: ${error.message}`, 'ERROR')
+		}
 	}
 
 ## Features
