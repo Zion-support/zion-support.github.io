@@ -30,7 +30,8 @@ const navigation = [
       { name: 'AI Solutions', href: '/ai-services', icon: Brain, count: '20+' },
       { name: 'IT Services', href: '/it-services', icon: Network, count: '20+' },
       { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, count: '25+' },
-      { name: 'All Services', href: '/services', icon: Globe, count: '65+' }
+      { name: 'Talent Solutions', href: '/talent', icon: Users, count: '15+' },
+      { name: 'All Services', href: '/services', icon: Globe, count: '80+' }
     ]
   },
   {
@@ -51,19 +52,33 @@ const navigation = [
     children: [
       { name: 'Documentation', href: '/docs', icon: FileText },
       { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-      { name: 'Blog', href: '/blog', icon: MessageSquare },
-      { name: 'API Reference', href: '/api-docs', icon: Settings }
+      { name: 'Tutorials', href: '/tutorials', icon: MessageSquare },
+      { name: 'Guides', href: '/guides', icon: FileText },
+      { name: 'API Reference', href: '/api-docs', icon: Settings },
+      { name: 'FAQ', href: '/faq', icon: MessageSquare }
     ]
   },
   {
-    name: 'About',
+    name: 'Company',
     href: '/about',
-    icon: Users
+    icon: Users,
+    children: [
+      { name: 'About Us', href: '/about', icon: Users },
+      { name: 'Careers', href: '/careers', icon: Users },
+      { name: 'News', href: '/news', icon: MessageSquare },
+      { name: 'Blog', href: '/blog', icon: MessageSquare }
+    ]
   },
   {
-    name: 'Contact',
-    href: '/contact',
-    icon: Phone
+    name: 'Support',
+    href: '/support',
+    icon: Phone,
+    children: [
+      { name: 'Get Support', href: '/support', icon: Phone },
+      { name: 'Contact Us', href: '/contact', icon: Phone },
+      { name: 'Documentation', href: '/docs', icon: FileText },
+      { name: 'FAQ', href: '/faq', icon: MessageSquare }
+    ]
   }
 ];
 
