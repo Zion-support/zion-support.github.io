@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+
+// Performance optimizations
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
