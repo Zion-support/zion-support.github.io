@@ -15,7 +15,7 @@ export default function ApiQuickStart() {
           <Link href="/docs" style={{ color: '#3b82f6', textDecoration: 'none', marginBottom: 20, display: 'inline-block' }}>
             ← Back to Documentation
           </Link>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             API Quick Start
           </h1>
           <p style={{ fontSize: '1.1rem', opacity: 0.8, lineHeight: 1.6 }}>
@@ -23,7 +23,7 @@ export default function ApiQuickStart() {
           </p>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+        <div style={{ display: 'grid', gap: 32 }}>
           {/* Authentication */}
           <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, border: '1px solid #e2e8f0' }}>
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 16 }}>🔐 Authentication</h2>
