@@ -170,6 +170,86 @@ export default function Contact() {
               </form>
             </div>
           </div>
+
+          {/* Services Quick Links */}
+          <div style={{
+            background: 'rgba(255,255,255,0.05)',
+            padding: 40,
+            borderRadius: 16,
+            border: '1px solid rgba(255,255,255,0.1)',
+            backdropFilter: 'blur(10px)'
+          }}>
+            <h2 style={{
+              fontSize: '1.5rem',
+              fontWeight: 700,
+              marginBottom: 24,
+              color: '#22d3ee'
+            }}>
+              Our Services
+            </h2>
+            
+            <div style={{ display: 'grid', gap: 16 }}>
+              <Link href="/services-catalog" style={{
+                display: 'block',
+                padding: 16,
+                background: 'rgba(255,255,255,0.05)',
+                borderRadius: 12,
+                textDecoration: 'none',
+                color: 'white',
+                transition: 'all 0.2s',
+                border: '1px solid rgba(255,255,255,0.1)'
+              }}>
+                <div>
+                  <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#22d3ee' }}>
+                    AI Services & Platforms
+                  </h3>
+                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>
+                    Advanced AI solutions including chatbots, computer vision, and business intelligence
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/services-catalog" style={{
+                display: 'block',
+                padding: 16,
+                background: 'rgba(255,255,255,0.05)',
+                borderRadius: 12,
+                textDecoration: 'none',
+                color: 'white',
+                transition: 'all 0.2s',
+                border: '1px solid rgba(255,255,255,0.1)'
+              }}>
+                <div>
+                  <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#22d3ee' }}>
+                    Micro SaaS Products
+                  </h3>
+                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>
+                    Ready-to-deploy SaaS solutions for email automation, surveys, and content creation
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/services-catalog" style={{
+                display: 'block',
+                padding: 16,
+                background: 'rgba(255,255,255,0.05)',
+                borderRadius: 12,
+                textDecoration: 'none',
+                color: 'white',
+                transition: 'all 0.2s',
+                border: '1px solid rgba(255,255,255,0.1)'
+              }}>
+                <div>
+                  <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#22d3ee' }}>
+                    IT & Cloud Services
+                  </h3>
+                  <p style={{ opacity: 0.8, fontSize: '0.9rem' }}>
+                    Cloud migration, DevOps, cybersecurity, and infrastructure optimization
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
 <<<<<<< HEAD
       </main>
