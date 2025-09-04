@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+//
+// Careers Page (conflicts resolved)
+//
 import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
@@ -16,11 +18,12 @@ import {
   CheckCircle,
   Star
 } from 'lucide-react'
+import { Cloud, Rocket } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-const CareersPage: Reac t.FC = () => {
+const CareersPage: React.FC = () => {
   const jobOpenings = [
     {
       id: 1,
@@ -141,37 +144,9 @@ const CareersPage: Reac t.FC = () => {
         "Professional development budget",
         "401(k) with company matching"
       ]
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Users, MapPin, Clock, Briefcase, Heart, Zap, Brain, Shield, Cloud, Rocket } from 'lucide-react';
-
-export default function CareersPage() {
-  const benefits = [
-    {
-      icon: Heart,
-      title: "Health & Wellness",
-      description: "Comprehensive health insurance, dental, vision, and wellness programs"
-    },
-    {
-      icon: Briefcase,
-      title: "Professional Development",
-      description: "Learning budget, conference attendance, and career advancement opportunities"
-    },
-    {
-      icon: Clock,
-      title: "Work-Life Balance",
-      description: "Flexible hours, remote work options, and generous PTO"
-    },
-    {
-      icon: Zap,
-      title: "Innovation Time",
-      description: "Dedicated time to explore new technologies and personal projects"
->>>>>>> merge-all-prs-20250904-105408
     }
   ]
 
-<<<<<<< HEAD
   const companyBenefits = [
     {
       icon: <DollarSign className="w-8 h-8"  />,
@@ -192,7 +167,9 @@ export default function CareersPage() {
       icon: <Shield className="w-8 h-8"  />,
       title: "Comprehensive Benefits",
       description: "Health, dental, vision insurance, 401(k) matching, and wellness programs"
-=======
+    }
+  ]
+
   const openPositions = [
     {
       title: "Senior AI/ML Engineer",
@@ -258,13 +235,11 @@ export default function CareersPage() {
       icon: Rocket,
       title: "Excellence",
       description: "We strive for excellence in every project and interaction"
->>>>>>> merge-all-prs-20250904-105408
     }
   ]
 
   return (
     <>
-<<<<<<< HEAD
       <SEO title="Careers - Zion Tech Group"
         description="Join our team of innovative developers, AI engineers, and technology experts. Explore career opportunities at Zion Tech Group."
         keywords="careers, jobs, AI engineer, developer, DevOps, cybersecurity, Zion Tech Group"
@@ -275,20 +250,20 @@ export default function CareersPage() {
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h1 className="text-4xl md: tex t-6xl font-bold mb-6">
+                <h1 className="text-4xl md:text-6xl font-bold mb-6">
                   Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Team</span>
                 </h1>
-                <p className="text-xl md: tex t-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+                <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
                   Build the future of technology with innovative AI, micro SaaS, and IT solutions
                 </p>
-                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <motion.a
                     href="#openings"
                     whileHover={{ scale: 1.05 }}
@@ -299,7 +274,7 @@ export default function CareersPage() {
                     View Open Positions
                   </motion.a>
                   <motion.a
-                    href="mailto: career s@ziontechgroup.com"
+                    href="mailto:careers@ziontechgroup.com"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
@@ -307,14 +282,6 @@ export default function CareersPage() {
                     <ArrowRight className="w-5 h-5"  />
                     Send Resume
                   </motion.a>
-=======
-      <Helmet>
-        <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore career opportunities in AI, cybersecurity, cloud, and more." />
-        <meta name="keywords" content="careers zion tech group, technology jobs, AI engineer jobs, cybersecurity careers, cloud jobs" />
-        <link rel="canonical" href="https://ziontechgroup.com/careers" />
-      </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -354,7 +321,7 @@ export default function CareersPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {companyBenefits.map((benefit, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
                     <benefit.icon className="w-6 h-6 text-white" />
@@ -462,7 +429,6 @@ export default function CareersPage() {
                     <div className="w-2 h-2 bg-cyan-500 rounded-full"></div>
                     <span className="text-gray-300">Regular team events and retreats</span>
                   </div>
->>>>>>> merge-all-prs-20250904-105408
                 </div>
               </motion.div>
             </div>
@@ -470,14 +436,14 @@ export default function CareersPage() {
 
           {/* Company Benefits */}
           <section className="py-20 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   Why Work With Us?
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -485,14 +451,14 @@ export default function CareersPage() {
                 </p>
               </motion.div>
 
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {companyBenefits.map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
-                    className="bg-white rounded-xl p-8 shadow-lg hover: shado w-xl transition-shadow duration-300 text-center"
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
                   >
                     <div className="text-blue-600 mb-4 flex justify-center">
                       {benefit.icon}
@@ -561,14 +527,14 @@ export default function CareersPage() {
 
           {/* Job Openings */}
           <section id="openings" className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   Open Positions
                 </h2>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -580,13 +546,13 @@ export default function CareersPage() {
                 {jobOpenings.map((job, index) => (
                   <motion.div
                     key={job.id}
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover: shado w-xl transition-shadow duration-300 overflow-hidden"
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                   >
                     <div className="p-8">
-                      <div className="flex flex-col lg: fle x-row lg: item s-center lg: justif y-between mb-6">
+                      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                         <div>
                           <h3 className="text-2xl font-bold text-gray-900 mb-2">
                             {job.title}
@@ -667,15 +633,15 @@ export default function CareersPage() {
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <h2 className="text-3xl md: tex t-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                   Don't See Your Role?
                 </h2>
                 <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                   We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our team.
                 </p>
-                <div className="flex flex-col sm: fle x-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <motion.a
-                    href="mailto: career s@ziontechgroup.com"
+                    href="mailto:careers@ziontechgroup.com"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2"
@@ -699,12 +665,7 @@ export default function CareersPage() {
         </main>
       </PageTransition>
     </>
-<<<<<<< HEAD
   )
 }
 
 export default CareersPage
-=======
-  );
-}
->>>>>>> merge-all-prs-20250904-105408

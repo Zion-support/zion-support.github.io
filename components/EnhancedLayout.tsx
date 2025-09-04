@@ -2,14 +2,14 @@ import Head from 'next/head';
 import React, { ReactNode } from 'react';
 
 interface EnhancedLayoutProps {
-  children: ReactNod e;
+  children: ReactNode;
   title?: string;
   description?: string;
   canonical?: string;
   noindex?: boolean;
 }
 
-const EnhancedLayout: Reac t.FC<EnhancedLayoutProps> = ({
+const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
   children,
   title = 'Zion Tech Group',
   description = 'Leading technology solutions provider',
