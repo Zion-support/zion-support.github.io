@@ -3,26 +3,25 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Fix the $2 issues first
-  content = content.replace(/\$2/g, '');
+// Function to fix remaining syntax errors
+function fixRemainingErrors(content) {
+  // Fix incomplete object properties
+  content = content.replace(/(\w+):\s*$/gm, '$1: \'\'');
   
-  // Fix missing commas in object literals - more specific patterns
-  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, key1, key2) => {
-    return `${key1}: 'value',\n    ${key2}:`;
-  });
-  
-  // Fix missing commas in style objects
-  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, key1, key2) => {
-    return `${key1}: 'value',\n    ${key2}:`;
-  });
+  // Fix missing commas in object literals
+  content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, '$1: \'value\',\n    $2:');
   
   // Fix missing semicolons after function declarations
   content = content.replace(/(\w+)\s*\(\s*\)\s*=>\s*\{[^}]*\}\s*\n\s*return/g, '$1() => {\n    // ...\n  };\n  return');
   
   // Fix missing closing braces
   content = content.replace(/(\w+)\s*\(\s*\)\s*=>\s*\{[^}]*\}\s*$/gm, '$1() => {\n    // ...\n  };');
+  
+  // Fix missing commas in arrays
+  content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n    $2');
+  
+  // Fix missing commas in function parameters
+  content = content.replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n    $2:');
   
   return content;
 }
@@ -31,7 +30,7 @@ function fixSyntaxErrors(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSyntaxErrors(content);
+    const fixedContent = fixRemainingErrors(content);
     
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
@@ -59,6 +58,6 @@ function processDirectory(dirPath) {
 }
 
 // Start processing from the current directory
-console.log('Fixing syntax errors...');
+console.log('Fixing remaining syntax errors...');
 processDirectory('.');
 console.log('Done!');
