@@ -472,7 +472,6 @@ export const enhancedServices2025: EnhancedService[] = [{
     link: '/services/ai-code-review-assistant',;
     contactInfo
   },
-  // Advanced Cybersecurity Services
   {
 
     id: 'intelligent-incident-response-platform',
