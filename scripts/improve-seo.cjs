@@ -5,7 +5,7 @@ const path = require('path');
 function improveSEO() {
   try {
     const pagesDir = path.join(process.cwd(), 'pages');
-  const componentsDir = path.join(process.cwd(), 'components');
+    const componentsDir = path.join(process.cwd(), 'components');
   
   // Add meta tags to pages
   const metaTemplate = `
@@ -75,6 +75,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
     } catch (error) {
       console.error('SEO improvement failed:', error.message);
     }
+  }
 }
 
 improveSEO();

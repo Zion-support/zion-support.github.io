@@ -1,23 +1,19 @@
 {
-  "timestamp": "2025-09-03T22:38:49.815Z",
+  "timestamp": "2025-09-04T02:11:22.701Z",
   "optimizations": [
     {
       "name": "Next.js Configuration",
-      "status": "applied",
-      "message": "Applied optimizations: experimental features",
-      "duration": 0,
-      "impact": "high",
-      "details": {
-        "optimizations": [
-          "experimental features"
-        ]
-      }
+      "status": "skipped",
+      "message": "Next.js config already optimized",
+      "duration": 1,
+      "impact": "none",
+      "details": {}
     },
     {
       "name": "Package.json Scripts",
       "status": "skipped",
       "message": "package.json already optimized",
-      "duration": 1,
+      "duration": 0,
       "impact": "none",
       "details": {}
     },
@@ -33,7 +29,7 @@
       "name": "Tailwind Configuration",
       "status": "skipped",
       "message": "Tailwind config already optimized",
-      "duration": 0,
+      "duration": 1,
       "impact": "none",
       "details": {}
     },
@@ -41,15 +37,15 @@
       "name": "Service Worker",
       "status": "skipped",
       "message": "Service worker already exists",
-      "duration": 1,
+      "duration": 0,
       "impact": "none",
       "details": {}
     }
   ],
   "metrics": {
-    "beforeSize": 28919716,
-    "afterSize": 28919716,
+    "beforeSize": 45741243,
+    "afterSize": 45741243,
     "buildTime": 2,
-    "optimizationsApplied": 1
+    "optimizationsApplied": 0
   }
 }

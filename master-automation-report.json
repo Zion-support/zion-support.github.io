@@ -1,70 +1,24 @@
 {
-  "timestamp": "2025-09-03T23:36:24.721Z",
-  "summary": {
-    "total": 8,
-    "successful": 8,
-    "failed": 0,
-    "criticalFailures": 0
-  },
-  "results": [
-    {
-      "name": "Health Check",
-      "critical": true,
-      "success": true,
-      "duration": 513,
-      "error": null
+  "timestamp": "2025-09-04T02:29:18.976Z",
+  "duration": "0s",
+  "results": {
+    "automation": {
+      "success": false,
+      "error": "require is not defined"
     },
-    {
-      "name": "Security Audit",
-      "critical": true,
-      "success": true,
-      "duration": 25,
-      "error": null
+    "testing": {
+      "success": false,
+      "error": "Cannot find module './test-suite.js'\nRequire stack:\n- /workspace/master-automation.cjs"
     },
-    {
-      "name": "Performance Monitor",
-      "critical": false,
-      "success": true,
-      "duration": 511,
-      "error": null
-    },
-    {
-      "name": "Code Quality Monitor",
-      "critical": false,
-      "success": true,
-      "duration": 39,
-      "error": null
-    },
-    {
-      "name": "Dependency Update Check",
-      "critical": false,
-      "success": true,
-      "duration": 1802,
-      "error": null
-    },
-    {
-      "name": "Analytics Collection",
-      "critical": false,
-      "success": true,
-      "duration": 21,
-      "error": null
-    },
-    {
-      "name": "Real-time Monitoring",
-      "critical": false,
-      "success": true,
-      "duration": 20,
-      "error": null
-    },
-    {
-      "name": "Performance Optimization",
-      "critical": false,
-      "success": true,
-      "duration": 3951,
-      "error": null
+    "git": {
+      "success": false,
+      "error": "require is not defined"
     }
-  ],
-  "recommendations": [
-    "All automations running successfully - consider adding more automation scripts"
-  ]
+  },
+  "summary": {
+    "automationSuccess": false,
+    "testingSuccess": false,
+    "gitSuccess": false,
+    "overallSuccess": false
+  }
 }

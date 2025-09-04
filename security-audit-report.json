@@ -1,17 +1,11 @@
 {
-  "timestamp": "2025-09-03T22:48:45.567Z",
-  "issues": [],
-  "warnings": [
-    {
-      "file": "pages/index.tsx",
-      "severity": "medium",
-      "message": "Use of innerHTML - potential XSS risk",
-      "count": 1
-    }
-  ],
-  "summary": {
-    "totalIssues": 0,
-    "totalWarnings": 1,
-    "severity": "medium"
-  }
+  "timestamp": "2025-09-04T02:49:02.021Z",
+  "score": 100,
+  "results": {
+    "packageAudit": true,
+    "environmentVariables": true,
+    "filePermissions": true,
+    "codeSecurity": true
+  },
+  "recommendations": []
 }

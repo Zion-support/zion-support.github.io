@@ -1,0 +1,172 @@
+{
+  "timestamp": "2025-09-04T02:34:43.958Z",
+  "tests": [
+    {
+      "name": "Production Build Test",
+      "status": "failed",
+      "duration": 5111,
+      "details": {
+        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ ESLint: Invalid Options: - Unknown options: useEslintrc, extensions - 'extensions' has been removed.\nFailed to compile.\n\n./components/ContactForm.tsx:13:7\nType error: Type '() => void' is not assignable to type 'FC<{}>'.\n  Type 'void' is not assignable to type 'ReactNode | Promise<ReactNode>'.\n\n\u001b[0m \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m \u001b[36mconst\u001b[39m \u001b[33mContactForm\u001b[39m\u001b[33m:\u001b[39m \u001b[33mReact\u001b[39m\u001b[33m.\u001b[39m\u001b[33mFC\u001b[39m \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m   \u001b[36mconst\u001b[39m [formData\u001b[33m,\u001b[39m setFormData] \u001b[33m=\u001b[39m useState\u001b[33m<\u001b[39m\u001b[33mFormData\u001b[39m\u001b[33m>\u001b[39m({\n \u001b[90m 15 |\u001b[39m     name\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 16 |\u001b[39m     email\u001b[33m:\u001b[39m \u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\nNext.js build worker exited with code: 1 and signal: null\n",
+        "output": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n\n   Linting and checking validity of types ...\n"
+      },
+      "timestamp": "2025-09-04T02:34:49.069Z"
+    },
+    {
+      "name": "TypeScript Type Check",
+      "status": "failed",
+      "duration": 1010,
+      "details": {
+        "error": "Command failed: npx tsc --noEmit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+        "output": "components/ContactForm.tsx(191,1): error TS1185: Merge conflict marker encountered.\ncomponents/ContactForm.tsx(193,1): error TS1185: Merge conflict marker encountered.\ncomponents/ContactForm.tsx(195,1): error TS1185: Merge conflict marker encountered.\ncomponents/ContactForm.tsx(197,28): error TS1005: '}' expected.\ncomponents/ErrorBoundary.tsx(20,1): error TS1185: Merge conflict marker encountered.\ncomponents/ErrorBoundary.tsx(22,1): error TS1185: Merge conflict marker encountered.\ncomponents/Err"
+      },
+      "timestamp": "2025-09-04T02:34:50.079Z"
+    },
+    {
+      "name": "ESLint Linting",
+      "status": "passed",
+      "duration": 1804,
+      "details": {
+        "output": "\n> ziontechgroup.com@0.1.0 lint\n> eslint .\n\n"
+      },
+      "timestamp": "2025-09-04T02:34:51.884Z"
+    },
+    {
+      "name": "Security Audit",
+      "status": "passed",
+      "duration": 628,
+      "details": {
+        "output": "🔒 Security Audit - Zion Tech Group\n===================================\n\n🛡️  Starting Security Audit...\n\n📦 Checking package vulnerabilities...\n✅ No vulnerabilities found in packages.\n\n🔐 Checking environment variables...\n⚠️  No environment files found. Consider adding .env for configuration.\n\n📁 Checking file permissions...\n✅ package.json has secure permissions: 100644\n✅ package-lock.json has secure permissions: 100644\n\n🔍 Checking code for security issues...\n✅ No obvious security issues found"
+      },
+      "timestamp": "2025-09-04T02:34:52.512Z"
+    },
+    {
+      "name": "Performance Optimization Check",
+      "status": "passed",
+      "duration": 39,
+      "details": {
+        "output": "⚡ Starting Performance Optimizer...\n✅ Performance Optimizer completed\n📊 Optimizations found: 2\n💡 Recommendations: 10\n📄 Report saved to: automation-reports/performance-optimizer-report.json\n\n📈 Recommendations by Priority:\n   🔴 High: 2\n   🟡 Medium: 7\n   🟢 Low: 1\n\n✅ Performance optimization analysis completed\n"
+      },
+      "timestamp": "2025-09-04T02:34:52.551Z"
+    },
+    {
+      "name": "System Health Check",
+      "status": "failed",
+      "duration": 23,
+      "details": {
+        "error": "Command failed: node automation/health-check.cjs\n/workspace/automation/health-check.cjs:7\n<<<<<<< HEAD\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:34:52.575Z"
+    },
+    {
+      "name": "Dependency Security Audit",
+      "status": "passed",
+      "duration": 595,
+      "details": {
+        "output": "found 0 vulnerabilities\n"
+      },
+      "timestamp": "2025-09-04T02:34:53.170Z"
+    },
+    {
+      "name": "Bundle Size Analysis",
+      "status": "passed",
+      "duration": 6578,
+      "details": {
+        "output": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n\n   Linting and checking validity of types ...\n"
+      },
+      "timestamp": "2025-09-04T02:34:59.748Z"
+    },
+    {
+      "name": "Accessibility Audit",
+      "status": "skipped",
+      "duration": 0,
+      "details": {
+        "reason": "axe-core not available"
+      },
+      "timestamp": "2025-09-04T02:35:00.917Z"
+    },
+    {
+      "name": "Link Validation",
+      "status": "failed",
+      "duration": 1019,
+      "details": {
+        "error": "Command failed: npx linkinator http://localhost:3000 --recurse\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n🏊‍♂️ crawling http://localhost:3000\n[0] http://localhost:3000/\n\n  [0] http://localhost:3000/\nERROR: Detected 1 broken links. Scanned 1 links in 0.019 seconds.\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:35:04.517Z"
+    },
+    {
+      "name": "Lighthouse Performance Audit",
+      "status": "failed",
+      "duration": 1535,
+      "details": {
+        "error": "Command failed: npx lighthouse http://localhost:3000 --output=json --output-path=./lighthouse-report.json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nRuntime error encountered: The CHROME_PATH environment variable must be set to a Chrome/Chromium executable no older than Chrome stable.\nError\n    at new LauncherError (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/utils.js:22:22)\n    at new ChromePathNotSetError (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/utils.js:28:9)\n    at Module.linux (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-finder.js:124:15)\n    at Launcher.getFirstInstallation (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:135:43)\n    at Launcher.launch (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:203:43)\n    at Module.launch (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:33:20)\n    at getDebuggableChrome (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/run.js:85:25)\n    at runLighthouse (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/run.js:204:30)\n    at begin (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/bin.js:129:10)\n    at async file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/index.js:10:1\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:35:13.418Z"
+    },
+    {
+      "name": "Code Coverage Analysis",
+      "status": "passed",
+      "duration": 1461,
+      "details": {
+        "output": "\n> ziontechgroup.com@0.1.0 test:coverage\n> jest --coverage\n\njest-haste-map: Haste module naming collision: ziontechgroup.com\n  The following files share their name; please adjust your hasteImpl:\n    * <rootDir>/package.json\n    * <rootDir>/deployment/package.json\n\n----------|---------|----------|---------|---------|-------------------\nFile      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s \n----------|---------|----------|---------|---------|-------------------\nAll files |       0"
+      },
+      "timestamp": "2025-09-04T02:35:14.879Z"
+    },
+    {
+      "name": "Unit Tests",
+      "status": "passed",
+      "duration": 927,
+      "details": {
+        "output": "jest-haste-map: Haste module naming collision: ziontechgroup.com\n  The following files share their name; please adjust your hasteImpl:\n    * <rootDir>/package.json\n    * <rootDir>/deployment/package.json\n\n"
+      },
+      "timestamp": "2025-09-04T02:35:15.806Z"
+    },
+    {
+      "name": "Integration Tests",
+      "status": "failed",
+      "duration": 81,
+      "details": {
+        "error": "Command failed: npm run test:integration\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"test:integration\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-04T02_35_15_843Z-debug-0.log\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:35:15.887Z"
+    },
+    {
+      "name": "End-to-End Tests",
+      "status": "failed",
+      "duration": 79,
+      "details": {
+        "error": "Command failed: npm run test:e2e\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"test:e2e\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-04T02_35_15_923Z-debug-0.log\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:35:15.966Z"
+    }
+  ],
+  "results": {
+    "passed": 7,
+    "failed": 7,
+    "skipped": 1,
+    "total": 15
+  },
+  "coverage": {
+    "testCoverage": 46.666666666666664,
+    "criticalTestsPassed": 1,
+    "totalCriticalTests": 3
+  },
+  "performance": {
+    "averageTestDuration": 1392.6666666666667,
+    "longestTest": {
+      "name": "Bundle Size Analysis",
+      "status": "passed",
+      "duration": 6578,
+      "details": {
+        "output": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n\n   Linting and checking validity of types ...\n"
+      },
+      "timestamp": "2025-09-04T02:34:59.748Z"
+    },
+    "totalDuration": 20890
+  },
+  "overall": "failed"
+}

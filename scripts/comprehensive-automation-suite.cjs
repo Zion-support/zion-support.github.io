@@ -33,12 +33,12 @@ async function runComprehensiveAutomation() {
   };
   
   for (const task of tasks) {
+    const taskStartTime = Date.now();
     try {
       console.log(`📋 Running: ${task.name}`);
-      const startTime = Date.now();
       
       const result = await task.fn();
-      const duration = Date.now() - startTime;
+      const duration = Date.now() - taskStartTime;
       
       phase.tasks.push({
         name: task.name,
@@ -53,7 +53,7 @@ async function runComprehensiveAutomation() {
       console.log(`✅ ${task.name} completed in ${duration}ms`);
       
     } catch (error) {
-      const duration = Date.now() - startTime;
+      const duration = Date.now() - taskStartTime;
       
       phase.tasks.push({
         name: task.name,

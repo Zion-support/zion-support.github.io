@@ -6,194 +6,273 @@ const { execSync } = require('child_process');
 
 console.log('⚡ Starting Performance Optimizer...');
 
-function optimizeImages() {
-  console.log('🖼️ Optimizing images...');
-  
-  const publicDir = path.join(process.cwd(), 'public');
-  if (!fs.existsSync(publicDir)) {
-    console.log('⚠️ Public directory not found, skipping image optimization');
-    return;
+const performanceReport = {
+  timestamp: new Date().toISOString(),
+  optimizations: [],
+  recommendations: [],
+  metrics: {},
+  overall: 'optimized'
+};
+
+function addOptimization(type, description, impact, implementation) {
+  performanceReport.optimizations.push({
+    type,
+    description,
+    impact,
+    implementation,
+    timestamp: new Date().toISOString()
+  });
+}
+
+function addRecommendation(category, description, priority) {
+  performanceReport.recommendations.push({
+    category,
+    description,
+    priority,
+    timestamp: new Date().toISOString()
+  });
+}
+
+try {
+  // Check bundle size
+  if (fs.existsSync('.next')) {
+    try {
+      const buildInfo = fs.readdirSync('.next');
+      addOptimization(
+        'build',
+        'Build directory exists - production build available',
+        'high',
+        'Use production build for optimal performance'
+      );
+    } catch (error) {
+      addRecommendation('build', 'Run production build for better performance', 'high');
+    }
   }
 
-  const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
-  const images = [];
-
-  function findImages(dir) {
-    const files = fs.readdirSync(dir);
+  // Check for large images
+  const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+  const largeImages = [];
+  
+  function findLargeImages(dir) {
+    if (!fs.existsSync(dir)) return;
+    
+    const files = fs.readdirSync(dir, { recursive: true });
     files.forEach(file => {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        findImages(filePath);
-      } else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
-        images.push(filePath);
+      if (typeof file === 'string') {
+        const ext = path.extname(file).toLowerCase();
+        if (imageExtensions.includes(ext)) {
+          const filePath = path.join(dir, file);
+          try {
+            const stats = fs.statSync(filePath);
+            if (stats.size > 500000) { // 500KB
+              largeImages.push({
+                file: filePath,
+                size: stats.size,
+                sizeKB: Math.round(stats.size / 1024)
+              });
+            }
+          } catch (error) {
+            // Skip files that can't be accessed
+          }
+        }
       }
     });
   }
 
-  findImages(publicDir);
-  
-  console.log(`📊 Found ${images.length} images to optimize`);
-  
-  // Create optimization report
-  const report = {
-    timestamp: new Date().toISOString(),
-    totalImages: images.length,
-    optimizedImages: 0,
-    skippedImages: 0,
-    errors: []
-  };
+  findLargeImages('public');
+  findLargeImages('pages');
+  findLargeImages('components');
 
-  images.forEach(imagePath => {
-    try {
-      const stats = fs.statSync(imagePath);
-      const sizeKB = (stats.size / 1024).toFixed(2);
-      
-      if (stats.size > 100 * 1024) { // Only optimize images > 100KB
-        console.log(`🔧 Optimizing: ${path.basename(imagePath)} (${sizeKB}KB)`);
-        report.optimizedImages++;
-      } else {
-        console.log(`⏭️ Skipping: ${path.basename(imagePath)} (${sizeKB}KB - already small)`);
-        report.skippedImages++;
-      }
-    } catch (error) {
-      report.errors.push({ file: imagePath, error: error.message });
-    }
-  });
-
-  fs.writeFileSync('image-optimization-report.json', JSON.stringify(report, null, 2));
-  console.log('✅ Image optimization completed');
-}
-
-function optimizeBundle() {
-  console.log('📦 Optimizing bundle...');
-  
-  try {
-    // Create bundle analyzer script
-    const bundleAnalyzer = `const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-
-module.exports = {
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.plugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: 'static',
-          openAnalyzer: false,
-          reportFilename: 'bundle-analysis.html'
-        })
+  if (largeImages.length > 0) {
+    largeImages.forEach(img => {
+      addRecommendation(
+        'images',
+        `Large image detected: ${img.file} (${img.sizeKB}KB)`,
+        'medium'
       );
-    }
-    return config;
+    });
   }
-};`;
 
-    fs.writeFileSync('bundle-analyzer.config.js', bundleAnalyzer);
-    console.log('✅ Bundle analyzer configuration created');
-    
-    // Run bundle analysis
-    execSync('npm run build', { stdio: 'inherit' });
-    console.log('✅ Bundle analysis completed');
-    
-  } catch (error) {
-    console.log('⚠️ Bundle optimization had issues:', error.message);
-  }
-}
-
-function optimizeCSS() {
-  console.log('🎨 Optimizing CSS...');
+  // Check for unused imports
+  const unusedImports = [];
+  const directories = ['pages', 'components', 'lib'];
   
-  try {
-    // Check for unused CSS
-    const cssFiles = [];
-    const srcDir = path.join(process.cwd(), 'pages');
-    
-    function findCSSFiles(dir) {
-      if (!fs.existsSync(dir)) return;
-      
-      const files = fs.readdirSync(dir);
+  directories.forEach(dir => {
+    if (fs.existsSync(dir)) {
+      const files = fs.readdirSync(dir, { recursive: true });
       files.forEach(file => {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory()) {
-          findCSSFiles(filePath);
-        } else if (file.endsWith('.css') || file.endsWith('.scss')) {
-          cssFiles.push(filePath);
+        if (typeof file === 'string' && (file.endsWith('.tsx') || file.endsWith('.ts'))) {
+          const filePath = path.join(dir, file);
+          try {
+            const content = fs.readFileSync(filePath, 'utf8');
+            const lines = content.split('\n');
+            
+            lines.forEach((line, index) => {
+              // Simple check for unused React imports
+              if (line.includes('import React') && !content.includes('React.')) {
+                unusedImports.push({
+                  file: filePath,
+                  line: index + 1,
+                  import: line.trim()
+                });
+              }
+            });
+          } catch (error) {
+            // Skip files that can't be read
+          }
         }
       });
     }
-    
-    findCSSFiles(srcDir);
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      cssFiles: cssFiles.length,
-      recommendations: [
-        'Use Tailwind CSS purging to remove unused styles',
-        'Consider using CSS modules for component-specific styles',
-        'Minify CSS in production builds',
-        'Use CSS-in-JS for dynamic styles'
-      ]
-    };
-    
-    fs.writeFileSync('css-optimization-report.json', JSON.stringify(report, null, 2));
-    console.log('✅ CSS optimization analysis completed');
-    
-  } catch (error) {
-    console.log('⚠️ CSS optimization had issues:', error.message);
-  }
-}
+  });
 
-function generatePerformanceReport() {
-  console.log('📊 Generating performance report...');
-  
-  const report = {
-    timestamp: new Date().toISOString(),
-    optimizations: {
-      images: 'Optimized large images and created optimization report',
-      bundle: 'Created bundle analyzer configuration',
-      css: 'Analyzed CSS files and provided optimization recommendations'
-    },
-    recommendations: [
-      'Implement lazy loading for images',
-      'Use Next.js Image component for automatic optimization',
-      'Enable compression in production',
-      'Implement service worker for caching',
-      'Use CDN for static assets',
-      'Optimize font loading',
-      'Implement code splitting',
-      'Use React.memo for expensive components'
-    ],
-    nextSteps: [
-      'Run bundle analysis to identify large dependencies',
-      'Implement image optimization in components',
-      'Set up performance monitoring',
-      'Configure caching strategies'
-    ]
+  if (unusedImports.length > 0) {
+    addRecommendation(
+      'imports',
+      `Found ${unusedImports.length} potentially unused imports`,
+      'low'
+    );
+  }
+
+  // Check for console.log statements in production code
+  const consoleStatements = [];
+  directories.forEach(dir => {
+    if (fs.existsSync(dir)) {
+      const files = fs.readdirSync(dir, { recursive: true });
+      files.forEach(file => {
+        if (typeof file === 'string' && (file.endsWith('.tsx') || file.endsWith('.ts'))) {
+          const filePath = path.join(dir, file);
+          try {
+            const content = fs.readFileSync(filePath, 'utf8');
+            const lines = content.split('\n');
+            
+            lines.forEach((line, index) => {
+              if (line.includes('console.log') || line.includes('console.warn') || line.includes('console.error')) {
+                consoleStatements.push({
+                  file: filePath,
+                  line: index + 1,
+                  statement: line.trim()
+                });
+              }
+            });
+          } catch (error) {
+            // Skip files that can't be read
+          }
+        }
+      });
+    }
+  });
+
+  if (consoleStatements.length > 0) {
+    addRecommendation(
+      'logging',
+      `Found ${consoleStatements.length} console statements - remove for production`,
+      'medium'
+    );
+  }
+
+  // Check Next.js configuration for performance optimizations
+  if (fs.existsSync('next.config.js')) {
+    const nextConfig = fs.readFileSync('next.config.js', 'utf8');
+    
+    if (nextConfig.includes('compress: true')) {
+      addOptimization('compression', 'Gzip compression enabled', 'high', 'Already implemented');
+    } else {
+      addRecommendation('compression', 'Enable gzip compression in Next.js config', 'high');
+    }
+    
+    if (nextConfig.includes('optimizeCss')) {
+      addOptimization('css', 'CSS optimization enabled', 'medium', 'Already implemented');
+    } else {
+      addRecommendation('css', 'Enable CSS optimization in Next.js config', 'medium');
+    }
+    
+    if (nextConfig.includes('removeConsole')) {
+      addOptimization('console', 'Console removal enabled for production', 'medium', 'Already implemented');
+    } else {
+      addRecommendation('console', 'Remove console statements in production builds', 'medium');
+    }
+  }
+
+  // Check for lazy loading opportunities
+  const lazyLoadingOpportunities = [];
+  directories.forEach(dir => {
+    if (fs.existsSync(dir)) {
+      const files = fs.readdirSync(dir, { recursive: true });
+      files.forEach(file => {
+        if (typeof file === 'string' && (file.endsWith('.tsx') || file.endsWith('.ts'))) {
+          const filePath = path.join(dir, file);
+          try {
+            const content = fs.readFileSync(filePath, 'utf8');
+            
+            // Check for large components that could be lazy loaded
+            if (content.length > 5000 && !content.includes('React.lazy') && !content.includes('dynamic')) {
+              lazyLoadingOpportunities.push({
+                file: filePath,
+                size: content.length,
+                reason: 'Large component file - consider lazy loading'
+              });
+            }
+          } catch (error) {
+            // Skip files that can't be read
+          }
+        }
+      });
+    }
+  });
+
+  if (lazyLoadingOpportunities.length > 0) {
+    addRecommendation(
+      'lazy-loading',
+      `Found ${lazyLoadingOpportunities.length} components that could benefit from lazy loading`,
+      'medium'
+    );
+  }
+
+  // Performance metrics
+  performanceReport.metrics = {
+    largeImages: largeImages.length,
+    unusedImports: unusedImports.length,
+    consoleStatements: consoleStatements.length,
+    lazyLoadingOpportunities: lazyLoadingOpportunities.length,
+    totalFiles: directories.reduce((total, dir) => {
+      if (fs.existsSync(dir)) {
+        const files = fs.readdirSync(dir, { recursive: true });
+        return total + files.filter(f => typeof f === 'string' && (f.endsWith('.tsx') || f.endsWith('.ts'))).length;
+      }
+      return total;
+    }, 0)
   };
-  
-  fs.writeFileSync('performance-optimization-report.json', JSON.stringify(report, null, 2));
-  console.log('✅ Performance report generated');
+
+  // Add general performance recommendations
+  addRecommendation('caching', 'Implement proper caching strategies', 'high');
+  addRecommendation('cdn', 'Use CDN for static assets', 'medium');
+  addRecommendation('minification', 'Ensure all assets are minified', 'high');
+  addRecommendation('bundling', 'Optimize bundle splitting', 'medium');
+  addRecommendation('preloading', 'Implement resource preloading for critical assets', 'medium');
+
+} catch (error) {
+  addRecommendation('error', `Performance optimizer error: ${error.message}`, 'high');
 }
 
-function main() {
-  try {
-    optimizeImages();
-    optimizeBundle();
-    optimizeCSS();
-    generatePerformanceReport();
-    
-    console.log('🎯 Performance optimization completed successfully!');
-    console.log('📋 Reports generated:');
-    console.log('   - image-optimization-report.json');
-    console.log('   - css-optimization-report.json');
-    console.log('   - performance-optimization-report.json');
-    
-  } catch (error) {
-    console.error('❌ Performance optimization failed:', error.message);
-    process.exit(1);
-  }
-}
+// Generate report
+const reportPath = 'automation-reports/performance-optimizer-report.json';
+fs.mkdirSync('automation-reports', { recursive: true });
+fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
 
-main();
+console.log('✅ Performance Optimizer completed');
+console.log(`📊 Optimizations found: ${performanceReport.optimizations.length}`);
+console.log(`💡 Recommendations: ${performanceReport.recommendations.length}`);
+console.log(`📄 Report saved to: ${reportPath}`);
+
+// Print summary
+const highPriority = performanceReport.recommendations.filter(r => r.priority === 'high').length;
+const mediumPriority = performanceReport.recommendations.filter(r => r.priority === 'medium').length;
+const lowPriority = performanceReport.recommendations.filter(r => r.priority === 'low').length;
+
+console.log(`\n📈 Recommendations by Priority:`);
+console.log(`   🔴 High: ${highPriority}`);
+console.log(`   🟡 Medium: ${mediumPriority}`);
+console.log(`   🟢 Low: ${lowPriority}`);
+
+console.log('\n✅ Performance optimization analysis completed');
+process.exit(0);

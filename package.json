@@ -11,8 +11,10 @@
     "export": "next export",
     "start": "next start",
     "postbuild": "echo \"Build completed\"",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "build:analyze": "ANALYZE=true npm run build",
+    "build:production": "NODE_ENV=production npm run build",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
     "type-check": "tsc --noEmit",
     "clean": "rm -rf .next out dist",
     "error-prevention:start": "node scripts/error-prevention/master-orchestrator.cjs start",
@@ -161,14 +163,18 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "analyze": "ANALYZE=true npm run build",
-    "build:production": "NODE_ENV=production npm run build",
     "dev:fast": "npm run dev -- --turbo",
     "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0",
     "automation:master": "node automation/master-orchestrator.cjs",
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
-    "automation:security": "node automation/security-scanner.cjs"
+    "automation:security": "node automation/security-scanner.cjs",
+    "automation:run": "node comprehensive-automation.js",
+    "automation:test": "node test-suite.js",
+    "automation:git": "node git-workflow.js",
+    "test:comprehensive": "node test-suite.js",
+    "performance:monitor": "node scripts/performance-monitor.js"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -288,7 +294,7 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-    "vite": "^5.4.19"
+    "vite": "^7.1.4"
   },
   "engines": {
     "node": ">=18.0.0",
