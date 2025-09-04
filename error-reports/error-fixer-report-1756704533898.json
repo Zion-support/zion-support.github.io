@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-09-01T05:28:48.895Z",
+  "duration": 0,
+  "fixesApplied": [
+    {
+      "type": "import_path",
+      "file": "src/App.tsx",
+      "description": "Fixed import path from ./components/Header to ./src/components/Header.tsx",
+      "line": 3
+    },
+    {
+      "type": "import_path",
+      "file": "src/App.tsx",
+      "description": "Fixed import path from ./components/Footer to ./src/components/Footer.tsx",
+      "line": 4
+    },
+    {
+      "type": "import_path",
+      "file": "src/App.tsx",
+      "description": "Fixed import path from ./components/Sidebar to ./src/components/Sidebar.tsx",
+      "line": 5
+    },
+    {
+      "type": "import_path",
+      "file": "src/App.tsx",
+      "description": "Fixed import path from ./components/ui/loading-spinner to ./src/components/ui/loading-spinner.tsx",
+      "line": 7
+    },
+    {
+      "type": "import_path",
+      "file": "src/App.tsx",
+      "description": "Fixed import path from ./components/PerformanceOptimizer to ./src/components/PerformanceOptimizer.tsx",
+      "line": 10
+    },
+    {
+      "type": "import_path",
+      "file": "src/App.tsx",
+      "description": "Fixed import path from ./components/EnhancedAccessibilityEnhancer to ./src/components/EnhancedAccessibilityEnhancer.tsx",
+      "line": 11
+    },
+    {
+      "type": "import_path",
+      "file": "src/App.tsx",
+      "description": "Fixed import path from ./components/MobileExperienceEnhancer to ./src/components/MobileExperienceEnhancer.tsx",
+      "line": 12
+    },
+    {
+      "type": "import_path",
+      "file": "src/main.js.jsx",
+      "description": "Fixed import path from ./context/auth/AuthProvider to ./src/context/auth/AuthProvider.jsx",
+      "line": 18
+    },
+    {
+      "type": "import_path",
+      "file": "src/main.jsx",
+      "description": "Fixed import path from ./context/auth/AuthProvider to ./src/context/auth/AuthProvider.jsx",
+      "line": 19
+    },
+    {
+      "type": "import_path",
+      "file": "src/main.tsx",
+      "description": "Fixed import path from ./App to ./src/App.tsx",
+      "line": 5
+    },
+    {
+      "type": "import_path",
+      "file": "src/main.tsx",
+      "description": "Fixed import path from ./utils/serviceWorker to ./src/utils/serviceWorker.ts",
+      "line": 7
+    },
+    {
+      "type": "import_path",
+      "file": "src/main.tsx",
+      "description": "Fixed import path from ./components/ErrorBoundary to ./src/components/ErrorBoundary.tsx",
+      "line": 8
+    }
+  ],
+  "errorsFound": [],
+  "warnings": []
+}
