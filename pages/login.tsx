@@ -66,7 +66,7 @@ export default function Login() {
             }}>
               Welcome Back
             </h1>
-            <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
+            <p style={{ color: '#666', fontSize: '1rem' }}>
               Sign in to your Zion Tech Group account
             </p>
           </div>
@@ -187,6 +187,95 @@ export default function Login() {
                 </Link>
               </p>
             </div>
+
+            <div style={{ marginBottom: 20 }}>
+              <label style={{ 
+                display: 'block', 
+                marginBottom: 8, 
+                fontWeight: 600, 
+                color: '#333' 
+              }}>
+                Password
+              </label>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+                required
+                style={{
+                  width: '100%',
+                  padding: '12px',
+                  border: '1px solid #ddd',
+                  borderRadius: 8,
+                  fontSize: '1rem',
+                  boxSizing: 'border-box'
+                }}
+                placeholder="Enter your password"
+              />
+            </div>
+
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              marginBottom: 20 
+            }}>
+              <input
+                type="checkbox"
+                name="rememberMe"
+                checked={formData.rememberMe}
+                onChange={handleInputChange}
+                style={{ marginRight: 8 }}
+              />
+              <label style={{ color: '#666', fontSize: '0.9rem' }}>
+                Remember me
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              style={{
+                width: '100%',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                color: 'white',
+                padding: '12px',
+                border: 'none',
+                borderRadius: 8,
+                fontSize: '1rem',
+                fontWeight: 600,
+                cursor: 'pointer',
+                marginBottom: 20
+              }}
+            >
+              Sign In
+            </button>
+
+            <div style={{ textAlign: 'center' }}>
+              <Link href="/forgot-password" style={{ 
+                color: '#667eea', 
+                textDecoration: 'none', 
+                fontSize: '0.9rem' 
+              }}>
+                Forgot your password?
+              </Link>
+            </div>
+          </form>
+
+          <div style={{ 
+            textAlign: 'center', 
+            marginTop: 20, 
+            color: '#666' 
+          }}>
+            <p>
+              Don't have an account?{' '}
+              <Link href="/register" style={{ 
+                color: '#667eea', 
+                textDecoration: 'none', 
+                fontWeight: 600 
+              }}>
+                Sign up here
+              </Link>
+            </p>
           </div>
 
           <div style={{ textAlign: 'center', marginTop: 30 }}>

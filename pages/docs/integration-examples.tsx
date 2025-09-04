@@ -160,9 +160,9 @@ print(result)
               <pre style={{ background: '#0f172a', padding: 16, borderRadius: 6, overflow: 'auto', fontSize: '0.9rem' }}>{`
 import { useState, useEffect } from 'react';
 
-const ServiceCatalog = () => {
+const useZionTech = (apiKey) => {
   const [services, setServices] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -190,8 +190,22 @@ const ServiceCatalog = () => {
     fetchServices();
   }, []);
 
-  if (loading) return <div>Loading services...</div>;
-  if (error) return <div>Error: {error}</div>;
+  const requestQuote = async (serviceData) => {
+    try {
+      const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
+        method: 'POST',
+        headers: {
+          'Authorization': \`Bearer \${apiKey}\`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(serviceData)
+      });
+      
+      return await response.json();
+    } catch (err) {
+      throw new Error(\`Quote request failed: \${err.message}\`);
+    }
+  };
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -279,12 +293,12 @@ class ZionTechWordPress {
 $ziontech = new ZionTechWordPress(get_option('ziontech_api_key'));
 $services = $ziontech->get_services();
 
-if ($services && $services['success']) {
-    foreach ($services['data'] as $service) {
-        echo '<div class="service-item">';
-        echo '<h3>' . esc_html($service['name']) . '</h3>';
-        echo '<p>' . esc_html($service['description']) . '</p>';
-        echo '</div>';
+class ZionTechMicroSaaS {
+    private $apiKey;
+    private $baseUrl = 'https://api.ziontechgroup.com/v1';
+    
+    public function __construct($apiKey) {
+        $this->apiKey = $apiKey;
     }
 }
 ?>

@@ -155,7 +155,7 @@ const cookieTypes = [
                     </h4>
                     <ul style={{ color: '#64748b', paddingLeft: 20 }}>
                       {cookie.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} style={{ marginBottom: 5 }}>
+                        <li key={exampleIndex} style={{ marginBottom: 5, color: '#666' }}>
                           {example}
                         </li>
                       ))}
@@ -166,7 +166,7 @@ const cookieTypes = [
                     <h4 style={{ fontSize: '1rem', fontWeight: 600, marginBottom: 10, color: '#64748b' }}>
                       Retention Period:
                     </h4>
-                    <p style={{ color: '#94a3b8' }}>
+                    <p style={{ color: '#666' }}>
                       {cookie.retention}
                     </p>
                   </div>
@@ -256,7 +256,7 @@ const cookieTypes = [
             <h2 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 15 }}>
               Questions About Our Cookie Policy?
             </h2>
-            <p style={{ color: '#94a3b8', marginBottom: 20 }}>
+            <p style={{ color: '#666', marginBottom: 20 }}>
               If you have any questions about our use of cookies or this Cookie Policy, please contact us.
             </p>
             <Link href="/contact" style={{

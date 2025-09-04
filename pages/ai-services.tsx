@@ -51,113 +51,47 @@ export default function AIServices() {
       benefits: [
         '95% accuracy in demand forecasting',
         '30% reduction in inventory costs',
-        'Early warning system for risks',
+        'Early warning system for business risks',
         'Data-driven decision making'
-      ]
-    },
-    {
-      icon: FileText,
-      name: 'GenAI Content & SEO Automation',
-      description: 'AI-powered content generation, SEO optimization, and editorial workflow automation for digital marketing.',
-      features: [
-        'High-quality content generation',
-        'SEO optimization and keyword research',
-        'Content clustering and internal linking',
-        'Editorial calendar automation',
-        'Brand voice consistency',
-        'Performance tracking and optimization'
-      ],
-      pricing: '$1,000 – $6,000/month',
-      perUnit: '$0.10 – $1.00 per article',
-      timeline: '2–4 weeks',
-      benefits: [
-        '10x faster content production',
-        '40% improvement in SEO rankings',
-        'Consistent brand messaging',
-        'Reduced content creation costs'
       ]
     },
     {
       icon: Eye,
       name: 'Computer Vision & Image Recognition',
-      description: 'Advanced computer vision solutions for object detection, facial recognition, and visual content analysis.',
+      description: 'Custom computer vision solutions for quality control, object detection, and automated visual inspection.',
       features: [
-        'Custom object detection and classification',
-        'Facial recognition and biometric authentication',
-        'OCR and document text extraction',
-        'Real-time image processing',
+        'Real-time image and video analysis',
+        'Object detection and classification',
         'Quality control and defect detection',
-        'Visual search and recommendation'
-      ],
-      pricing: '$5,000 – $25,000 setup',
-      perUnit: '$0.01 – $0.10 per image',
-      timeline: '6–12 weeks',
-      benefits: [
-        '99.5% accuracy in object detection',
-        'Automated quality control',
-        'Enhanced security with biometrics',
-        'Reduced manual inspection costs'
-      ]
-    },
-    {
-      icon: Database,
-      name: 'Natural Language Processing Engine',
-      description: 'Comprehensive NLP solutions for text analysis, sentiment detection, and language understanding.',
-      features: [
-        'Text analysis and sentiment detection',
-        'Entity extraction and classification',
-        'Language translation and localization',
-        'Document summarization',
-        'Intent recognition and classification',
-        'Custom model training and fine-tuning'
+        'Facial recognition and biometric authentication',
+        'OCR and document processing',
+        'Custom model training and deployment'
       ],
       pricing: '$3,000 – $15,000 setup',
-      perUnit: '$0.001 – $0.01 per request',
-      timeline: '4–8 weeks',
+      perUnit: '$0.01 – $0.10 per image',
+      timeline: '4–10 weeks',
       benefits: [
-        '90% accuracy in sentiment analysis',
-        'Automated document processing',
-        'Multi-language support',
-        'Real-time text understanding'
-      ]
-    },
-    {
-      icon: Shield,
-      name: 'AI-Powered Fraud Detection',
-      description: 'Real-time fraud detection and risk assessment using advanced machine learning algorithms.',
-      features: [
-        'Real-time transaction fraud scoring',
-        'Behavioral anomaly detection',
-        'Machine learning model training',
-        'Risk assessment and decision automation',
-        'Pattern recognition and analysis',
-        'Continuous learning and adaptation'
-      ],
-      pricing: '$8,000 – $40,000 setup',
-      perUnit: '$0.05 – $0.50 per transaction',
-      timeline: '8–16 weeks',
-      benefits: [
-        '99.9% fraud detection accuracy',
-        'Real-time risk assessment',
-        'Reduced false positives',
-        'Compliance with regulations'
+        '99% accuracy in quality control',
+        '50% reduction in inspection time',
+        'Automated defect detection',
+        'Scalable visual processing'
       ]
     },
     {
       icon: Mic,
-      name: 'Voice AI & Speech Recognition',
-      description: 'Advanced voice processing solutions including speech-to-text, voice synthesis, and conversational AI.',
+      name: 'Speech & Voice AI Solutions',
+      description: 'Advanced speech recognition, voice synthesis, and conversational AI for enhanced user experiences.',
       features: [
-        'High-accuracy speech-to-text conversion',
-        'Natural language understanding',
-        'Voice biometric authentication',
-        'Conversational AI and chatbots',
-        'Multi-language voice support',
-        'Real-time voice processing'
+        'Speech-to-text and text-to-speech',
+        'Voice command recognition',
+        'Multi-language support',
+        'Emotion detection in voice',
+        'Real-time transcription',
+        'Custom voice model training'
       ],
-      pricing: '$6,000 – $30,000 setup',
-      perUnit: '$0.02 – $0.20 per minute',
-      timeline: '6–10 weeks',
+      pricing: '$2,500 – $12,000 setup',
+      perUnit: '$0.05 – $0.25 per minute',
+      timeline: '3–8 weeks',
       benefits: [
         '95% accuracy in speech recognition',
         'Hands-free operation',
@@ -307,187 +241,25 @@ export default function AIServices() {
         'Emotion recognition and response',
         'Knowledge graph integration',
         'Multi-language support',
-        'Conversation analytics and optimization'
-      ],
-      pricing: '$8,000 – $40,000 setup',
-      perUnit: '$0.02 – $0.20 per interaction',
-      timeline: '6–12 weeks',
-      benefits: [
-        '95% conversation success rate',
-        'Natural human-like interactions',
-        'Improved customer satisfaction',
-        'Reduced support costs'
-      ]
-    },
-    {
-      icon: FileText,
-      name: 'Intelligent Document Intelligence',
-      description: 'Advanced document processing with understanding, extraction, and automated workflows.',
-      features: [
-        'Document understanding and classification',
-        'Intelligent data extraction',
-        'Document comparison and analysis',
-        'Automated workflow routing',
-        'Compliance checking and validation',
-        'Multi-format document support'
-      ],
-      pricing: '$4,000 – $20,000 setup',
-      perUnit: '$0.01 – $0.10 per document',
-      timeline: '4–8 weeks',
-      benefits: [
-        '98% accuracy in data extraction',
-        'Automated document processing',
-        'Improved compliance tracking',
-        'Reduced manual document handling'
-      ]
-    },
-    {
-      icon: Search,
-      name: 'Intelligent Search & Discovery Engine',
-      description: 'AI-powered search with semantic understanding, personalization, and intelligent suggestions.',
-      features: [
-        'Semantic search and understanding',
-        'Personalized search results',
-        'Intelligent query suggestions',
-        'Multi-modal search capabilities',
-        'Search analytics and optimization',
-        'Real-time search indexing'
-      ],
-      pricing: '$3,000 – $15,000 setup',
-      perUnit: '$0.001 – $0.01 per search',
-      timeline: '4–8 weeks',
-      benefits: [
-        '90% improvement in search relevance',
-        'Personalized user experience',
-        'Increased content discovery',
-        'Better user engagement'
-      ]
-    },
-    {
-      icon: Cog,
-      name: 'AI-Powered Process Optimization',
-      description: 'Intelligent process mining and optimization using AI to identify bottlenecks and improvements.',
-      features: [
-        'Process discovery and mapping',
-        'Bottleneck identification and analysis',
-        'Automated process optimization',
-        'Performance prediction and simulation',
-        'Resource allocation optimization',
-        'Continuous process improvement'
-      ],
-      pricing: '$5,000 – $25,000 setup',
-      perUnit: '$0.05 – $0.50 per process',
-      timeline: '6–10 weeks',
-      benefits: [
-        '40% improvement in process efficiency',
-        'Automated optimization recommendations',
-        'Reduced operational costs',
-        'Better resource utilization'
-      ]
-    },
-    {
-      icon: Brain,
-      name: 'AI-Powered Healthcare Diagnostics',
-      description: 'Advanced medical imaging analysis and diagnostic assistance using deep learning and computer vision.',
-      features: [
-        'Medical image analysis and interpretation',
-        'Disease detection and classification',
-        'Treatment recommendation systems',
-        'Patient risk assessment',
-        'Drug interaction analysis',
-        'Clinical decision support'
-      ],
-      pricing: '$15,000 – $100,000 setup',
-      perUnit: '$0.50 – $5.00 per analysis',
-      timeline: '12–24 weeks',
-      benefits: [
-        '95% accuracy in diagnostic assistance',
-        'Reduced diagnostic errors',
-        'Faster treatment decisions',
-        'Improved patient outcomes'
-      ]
-    },
-    {
-      icon: Shield,
-      name: 'AI-Powered Cybersecurity Threat Detection',
-      description: 'Advanced threat detection and response using machine learning and behavioral analysis.',
-      features: [
-        'Real-time threat detection and analysis',
-        'Behavioral anomaly identification',
-        'Automated incident response',
-        'Threat intelligence correlation',
-        'Zero-day attack detection',
-        'Security orchestration and automation'
-      ],
-      pricing: '$10,000 – $60,000 setup',
-      perUnit: '$0.10 – $1.00 per event',
-      timeline: '8–16 weeks',
-      benefits: [
-        '99.5% threat detection accuracy',
-        'Automated security response',
-        'Reduced false positives',
-        'Enhanced security posture'
-      ]
-    },
-    {
-      icon: TrendingUp,
-      name: 'Smart Manufacturing Quality Control',
-      description: 'AI-powered quality control and defect detection for manufacturing processes.',
-      features: [
-        'Real-time defect detection',
-        'Quality prediction and optimization',
-        'Process monitoring and control',
-        'Predictive maintenance integration',
-        'Supply chain quality tracking',
-        'Automated quality reporting'
-      ],
-      pricing: '$8,000 – $50,000 setup',
-      perUnit: '$0.01 – $0.10 per inspection',
-      timeline: '6–12 weeks',
-      benefits: [
-        '99.8% defect detection accuracy',
-        'Reduced quality control costs',
-        'Improved product quality',
-        'Automated quality processes'
-      ]
-    },
-    {
-      icon: Eye,
-      name: 'AI-Powered Smart City Solutions',
-      description: 'Intelligent urban management with traffic optimization, energy efficiency, and public safety.',
-      features: [
-        'Traffic flow optimization',
-        'Energy consumption monitoring',
-        'Public safety monitoring',
-        'Environmental quality tracking',
-        'Infrastructure maintenance prediction',
-        'Citizen service optimization'
-      ],
-      pricing: '$20,000 – $200,000 setup',
-      perUnit: 'Custom pricing based on city size',
-      timeline: '12–24 weeks',
-      benefits: [
-        '30% reduction in traffic congestion',
-        '25% improvement in energy efficiency',
-        'Enhanced public safety',
-        'Better citizen services'
+        'Real-time processing',
+        'Enhanced accessibility'
       ]
     },
     {
       icon: Database,
-      name: 'Intelligent Process Mining & Optimization',
-      description: 'AI-driven process analysis and optimization for business operations and workflows.',
+      name: 'Intelligent Data Processing',
+      description: 'AI-powered data extraction, cleaning, and analysis to transform raw data into actionable insights.',
       features: [
-        'Process discovery and mapping',
-        'Bottleneck identification and analysis',
-        'Process optimization recommendations',
-        'Compliance monitoring and reporting',
-        'Resource utilization analysis',
-        'Automated process improvement'
+        'Automated data extraction and parsing',
+        'Data cleaning and normalization',
+        'Pattern recognition and anomaly detection',
+        'Automated report generation',
+        'Data visualization and dashboards',
+        'Integration with existing systems'
       ],
-      pricing: '$5,000 – $30,000 setup',
-      perUnit: '$0.001 – $0.01 per process instance',
-      timeline: '6–12 weeks',
+      pricing: '$1,500 – $8,000 setup',
+      perUnit: '$0.01 – $0.05 per record',
+      timeline: '2–6 weeks',
       benefits: [
         '40% improvement in process efficiency',
         'Automated process optimization',
@@ -828,112 +600,190 @@ export default function AIServices() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+    <>
       <Head>
-        <title>AI Services — Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services including machine learning, computer vision, NLP, and automation solutions. Transform your business with cutting-edge AI technology." />
+        <title>AI Services - Zion Tech Group | Artificial Intelligence Solutions</title>
+        <meta name="description" content="Transform your business with our comprehensive AI services including machine learning, computer vision, natural language processing, and predictive analytics." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, computer vision, NLP, predictive analytics, AI consulting" />
         <link rel="canonical" href={`${contact.site}/ai-services`} />
+        <meta property="og:title" content="AI Services - Zion Tech Group | Artificial Intelligence Solutions" />
+        <meta property="og:description" content="Transform your business with our comprehensive AI services including machine learning, computer vision, and predictive analytics." />
+        <meta property="og:url" content={`${contact.site}/ai-services`} />
+        <meta property="og:type" content="website" />
       </Head>
 
-      <header className="py-20 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-          AI Services & Solutions
-        </h1>
-        <p className="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">
-          Transform your business with cutting-edge AI technology. From machine learning to computer vision, 
-          we deliver intelligent solutions that drive real results and measurable ROI.
-        </p>
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
-          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
-          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Quote</Link>
-        </div>
-      </header>
-
-      <main className="max-w-7xl mx-auto px-4 pb-24">
-        <div className="grid gap-8">
-          {aiServices.map((service, index) => (
-            <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover:border-blue-500/40 transition-colors">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <service.icon className="w-6 h-6" />
-                </div>
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold mb-2">{service.name}</h2>
-                  <p className="text-slate-300 text-lg">{service.description}</p>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-lg font-semibold mb-3 text-blue-400">Key Features</h3>
-                  <ul className="space-y-2 text-slate-300">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-blue-400 mt-1">•</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold mb-3 text-green-400">Business Benefits</h3>
-                  <ul className="space-y-2 text-slate-300">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">✓</span>
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <div className="flex flex-wrap items-center gap-6">
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Pricing:</span>
-                    <span className="font-semibold text-blue-400">{service.pricing}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Per Unit:</span>
-                    <span className="font-semibold text-purple-400">{service.perUnit}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Timeline:</span>
-                    <span className="font-semibold text-green-400">{service.timeline}</span>
-                  </div>
-                  <div className="ml-auto flex gap-3">
-                    <Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-sm font-semibold">
-                      Request Quote
-                    </Link>
-                    <Link href="/contact" className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold">
-                      Learn More
-                    </Link>
-                  </div>
-                </div>
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                AI Services
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Transform your business with cutting-edge artificial intelligence solutions. From machine learning to computer vision, we deliver AI that works.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/contact"
+                  className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get AI Consultation
+                </Link>
+                <Link 
+                  href="/services"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+                >
+                  View All Services
+                </Link>
               </div>
             </div>
-          ))}
-        </div>
-
-        <section className="mt-16 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
-          <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-            Our AI experts are ready to help you implement cutting-edge solutions that drive real business value. 
-            Contact us today for a free consultation and custom AI strategy.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold">
-              Call {contact.phone}
-            </a>
-            <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold">
-              Email {contact.email}
-            </a>
           </div>
         </section>
-      </main>
-    </div>
+
+        {/* AI Services Grid */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Comprehensive AI Solutions
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                From machine learning to computer vision, our AI services are designed to solve real business problems and drive measurable results.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index) => (
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+                  <div className="flex items-center mb-4">
+                    <service.icon className="w-8 h-8 text-purple-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">{service.name}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                          <span className="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-700">
+                          <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="border-t pt-4">
+                    <div className="flex justify-between items-center mb-4">
+                      <div>
+                        <p className="text-sm text-gray-600">Setup Cost</p>
+                        <p className="font-semibold text-gray-900">{service.pricing}</p>
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-600">Timeline</p>
+                        <p className="font-semibold text-gray-900">{service.timeline}</p>
+                      </div>
+                    </div>
+                    <Link
+                      href="/contact"
+                      className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-purple-700 transition-colors text-center block"
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* AI Process Section */}
+        <section className="bg-gray-50 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our AI Development Process
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We follow a proven methodology to ensure your AI solutions deliver real business value.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Search className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">1. Discovery</h3>
+                <p className="text-gray-600">We analyze your business needs and identify AI opportunities.</p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Code className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">2. Development</h3>
+                <p className="text-gray-600">We build and train custom AI models for your specific use case.</p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Cog className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">3. Integration</h3>
+                <p className="text-gray-600">We integrate AI solutions into your existing systems and workflows.</p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">4. Optimization</h3>
+                <p className="text-gray-600">We continuously monitor and optimize performance for maximum ROI.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl mb-8">
+              Let our AI experts help you identify opportunities and build solutions that drive real business value.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Schedule AI Consultation
+              </Link>
+              <a 
+                href={`tel:${contact.phone}`}
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              >
+                Call {contact.phone}
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

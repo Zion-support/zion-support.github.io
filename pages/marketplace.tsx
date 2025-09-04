@@ -86,12 +86,12 @@ export default function Marketplace() {
   return (
     <>
       <Head>
-        <title>Marketplace - Zion Tech Group | Technology Products, Services & Talent</title>
-        <meta name="description" content="Explore Zion Tech Group's marketplace for technology products, professional services, skilled talent, and cutting-edge equipment." />
-        <meta name="keywords" content="technology marketplace, AI products, cloud services, cybersecurity tools, quantum computing, tech talent, equipment" />
+        <title>Marketplace - Zion Tech Group | Technology Products & Services</title>
+        <meta name="description" content="Explore our comprehensive marketplace of technology products, services, talent, and equipment. Find everything you need for your digital transformation journey." />
+        <meta name="keywords" content="technology marketplace, AI products, cloud services, cybersecurity tools, quantum computing, tech talent, equipment rental" />
         <link rel="canonical" href={`${contact.site}/marketplace`} />
-        <meta property="og:title" content="Marketplace - Zion Tech Group | Technology Products, Services & Talent" />
-        <meta property="og:description" content="Explore Zion Tech Group's marketplace for technology products, professional services, skilled talent, and cutting-edge equipment." />
+        <meta property="og:title" content="Marketplace - Zion Tech Group | Technology Products & Services" />
+        <meta property="og:description" content="Explore our comprehensive marketplace of technology products, services, talent, and equipment." />
         <meta property="og:url" content={`${contact.site}/marketplace`} />
         <meta property="og:type" content="website" />
       </Head>
@@ -279,6 +279,15 @@ export default function Marketplace() {
                     </div>
                   ))}
                 </div>
+
+                <div className="mt-6 text-center">
+                  <Link 
+                    href="/contact"
+                    className="text-blue-600 hover:text-blue-700 font-medium"
+                  >
+                    View All {category.title} →
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -336,6 +345,12 @@ export default function Marketplace() {
               }}>
                 Get Custom Quote
               </Link>
+              <a 
+                href={`tel:${contact.phone}`}
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Call {contact.phone}
+              </a>
             </div>
           </div>
         </div>

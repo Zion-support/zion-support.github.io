@@ -1324,7 +1324,18 @@ export default function ITServices() {
     }
   ];
 
-  const categories = [...new Set(itServices.map(service => service.category))];
+  return (
+    <>
+      <Head>
+        <title>IT Services - Zion Tech Group | Cloud, Security & Development Solutions</title>
+        <meta name="description" content="Comprehensive IT services including cloud DevOps, cybersecurity, database optimization, mobile development, and web solutions. Transform your technology infrastructure." />
+        <meta name="keywords" content="IT services, cloud DevOps, cybersecurity, database optimization, mobile development, web development, API development" />
+        <link rel="canonical" href={`${contact.site}/it-services`} />
+        <meta property="og:title" content="IT Services - Zion Tech Group | Cloud, Security & Development Solutions" />
+        <meta property="og:description" content="Comprehensive IT services including cloud DevOps, cybersecurity, and development solutions." />
+        <meta property="og:url" content={`${contact.site}/it-services`} />
+        <meta property="og:type" content="website" />
+      </Head>
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">

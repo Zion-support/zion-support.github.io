@@ -54,9 +54,9 @@ export default function FAQ() {
   return (
     <>
       <Head>
-        <title>Frequently Asked Questions - Zion Tech Group</title>
-        <meta name="description" content="Find answers to common questions about Zion Tech Group's micro SaaS products, AI services, and IT solutions. Get help with pricing, implementation, and support." />
-        <meta name="keywords" content="FAQ, frequently asked questions, zion tech group, micro SaaS, AI services, IT solutions" />
+        <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
+        <meta name="description" content="Find answers to frequently asked questions about Zion Tech Group's micro SaaS products, AI services, and IT solutions. Get the information you need to make informed decisions." />
+        <meta name="keywords" content="FAQ, frequently asked questions, zion tech group, micro SaaS, AI services, IT solutions, support" />
         <link rel="canonical" href={`${contact.site}/faq`} />
       </Head>
       
@@ -80,11 +80,15 @@ export default function FAQ() {
         {/* FAQ Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
+            <div className="space-y-6">
               {faqs.map((faq, index) => (
-                <div key={index} className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
-                  <h3 className="text-xl font-bold mb-4 text-blue-400">{faq.question}</h3>
-                  <p className="text-slate-300 leading-relaxed">{faq.answer}</p>
+                <div key={index} className="bg-slate-900/60 rounded-xl border border-white/10 p-6">
+                  <h3 className="text-xl font-semibold mb-3 text-blue-400">
+                    {faq.question}
+                  </h3>
+                  <p className="text-slate-300 leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               ))}
             </div>
@@ -92,7 +96,7 @@ export default function FAQ() {
         </section>
 
         {/* Contact CTA */}
-        <section className="py-16 px-4 bg-slate-900/40">
+        <section className="py-16 px-4 bg-slate-900/60">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               Still Have Questions?

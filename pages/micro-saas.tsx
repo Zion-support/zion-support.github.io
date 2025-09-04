@@ -1069,7 +1069,18 @@ export default function MicroSaaS() {
     }
   ];
 
-  const categories = [...new Set(microSaaSServices.map(service => service.category))];
+  return (
+    <>
+      <Head>
+        <title>Micro SaaS Products - Zion Tech Group | 150+ Ready-to-Use Solutions</title>
+        <meta name="description" content="Discover our collection of 150+ micro SaaS products designed to solve specific business problems. From cloud management to AI safety, find the perfect solution for your needs." />
+        <meta name="keywords" content="micro SaaS, SaaS products, business solutions, cloud management, AI safety, document processing, API management" />
+        <link rel="canonical" href={`${contact.site}/micro-saas`} />
+        <meta property="og:title" content="Micro SaaS Products - Zion Tech Group | 150+ Ready-to-Use Solutions" />
+        <meta property="og:description" content="Discover our collection of 150+ micro SaaS products designed to solve specific business problems." />
+        <meta property="og:url" content={`${contact.site}/micro-saas`} />
+        <meta property="og:type" content="website" />
+      </Head>
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">

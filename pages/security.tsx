@@ -53,6 +53,28 @@ export default function Security() {
         "Regular penetration testing",
         "Third-party security audits"
       ]
+    },
+    {
+      title: "Incident Response",
+      description: "Comprehensive incident response procedures ensure rapid detection and mitigation of security threats",
+      icon: "🚨",
+      details: [
+        "24/7 security monitoring",
+        "Automated threat detection",
+        "Rapid incident response team",
+        "Post-incident analysis and improvement"
+      ]
+    },
+    {
+      title: "Employee Training",
+      description: "Regular security awareness training ensures all team members understand and follow security best practices",
+      icon: "👥",
+      details: [
+        "Security awareness training programs",
+        "Phishing simulation exercises",
+        "Regular security updates and briefings",
+        "Security policy compliance monitoring"
+      ]
     }
   ];
 
@@ -79,12 +101,12 @@ export default function Security() {
   return (
     <>
       <Head>
-        <title>Security - Zion Tech Group | Information Security & Data Protection</title>
-        <meta name="description" content="Learn about Zion Tech Group's comprehensive security measures, data protection policies, and compliance certifications." />
+        <title>Security - Zion Tech Group | Enterprise-Grade Security Solutions</title>
+        <meta name="description" content="Learn about Zion Tech Group's comprehensive security measures, compliance standards, and data protection practices. Your data security is our priority." />
         <meta name="keywords" content="security, data protection, encryption, compliance, SOC 2, ISO 27001, cybersecurity, privacy" />
         <link rel="canonical" href={`${contact.site}/security`} />
-        <meta property="og:title" content="Security - Zion Tech Group | Information Security & Data Protection" />
-        <meta property="og:description" content="Learn about Zion Tech Group's comprehensive security measures, data protection policies, and compliance certifications." />
+        <meta property="og:title" content="Security - Zion Tech Group | Enterprise-Grade Security Solutions" />
+        <meta property="og:description" content="Learn about Zion Tech Group's comprehensive security measures and data protection practices." />
         <meta property="og:url" content={`${contact.site}/security`} />
         <meta property="og:type" content="website" />
       </Head>
@@ -107,6 +129,7 @@ export default function Security() {
               Your data security is our top priority. We implement industry-leading security measures and maintain strict compliance with global standards.
             </p>
           </div>
+        </section>
 
           <div style={{ marginBottom: 80 }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
@@ -157,6 +180,7 @@ export default function Security() {
               ))}
             </div>
           </div>
+        </section>
 
           <div style={{ marginBottom: 80 }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
@@ -200,6 +224,7 @@ export default function Security() {
               ))}
             </div>
           </div>
+        </section>
 
           <div style={{ marginBottom: 80 }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
@@ -280,9 +305,15 @@ export default function Security() {
               }}>
                 Contact Security Team
               </Link>
+              <a 
+                href={`tel:${contact.phone}`}
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
+              >
+                Call {contact.phone}
+              </a>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );

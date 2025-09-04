@@ -49,22 +49,23 @@ export default function Contact() {
                       <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-lg text-slate-300 hover:text-white transition-colors">
                         {contact.phone}
                       </a>
-                      <p className="text-slate-400 text-sm mt-1">Available Monday-Friday, 9 AM - 6 PM EST</p>
                     </div>
-
+                    
                     <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
                       <h3 className="text-xl font-semibold mb-2 text-purple-400">Email</h3>
                       <a href={`mailto:${contact.email}`} className="text-lg text-slate-300 hover:text-white transition-colors">
                         {contact.email}
                       </a>
-                      <p className="text-slate-400 text-sm mt-1">We respond within 24 hours</p>
                     </div>
-
+                    
                     <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                      <h3 className="text-xl font-semibold mb-2 text-green-400">Address</h3>
-                      <p className="text-lg text-slate-300">{contact.address}</p>
-                      <p className="text-slate-400 text-sm mt-1">Middletown, Delaware</p>
+                      <h3 className="text-xl font-semibold mb-2 text-blue-400">Address</h3>
+                      <p className="text-lg text-slate-300">
+                        {contact.address}
+                      </p>
                     </div>
+                  </div>
+                </div>
 
                     <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
                       <h3 className="text-xl font-semibold mb-2 text-yellow-400">Website</h3>
@@ -77,7 +78,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Service Categories */}
+              {/* Contact Form */}
               <div>
                 <h2 className="text-3xl font-bold mb-8">Our Services</h2>
                 <div className="space-y-6">
@@ -164,14 +165,6 @@ export default function Contact() {
               <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
                 Send Email
               </a>
-              <Link href="/services-catalog" className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
-                View Services Catalog
-              </Link>
-            </div>
-            
-            <div className="text-slate-400">
-              <p>We offer free consultations and custom quotes for all our services.</p>
-              <p className="mt-2">Typical response time: Within 24 hours</p>
             </div>
           </div>
         </section>

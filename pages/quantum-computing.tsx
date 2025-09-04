@@ -53,8 +53,8 @@ export default function QuantumComputing() {
     <>
       <Head>
         <title>Quantum Computing Services - Zion Tech Group</title>
-        <meta name="description" content="Cutting-edge quantum computing services including algorithm development, optimization solutions, and quantum cryptography. Explore the future with Zion Tech Group." />
-        <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum cryptography, quantum machine learning" />
+        <meta name="description" content="Cutting-edge quantum computing solutions including algorithm development, optimization, cryptography, and machine learning. Transform your business with quantum technology." />
+        <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum cryptography, quantum machine learning, quantum consulting" />
         <link rel="canonical" href={`${contact.site}/quantum-computing`} />
         <meta property="og:title" content="Quantum Computing Services - Zion Tech Group" />
         <meta property="og:description" content="Cutting-edge quantum computing services including algorithm development and optimization solutions." />
@@ -71,14 +71,14 @@ export default function QuantumComputing() {
                 Quantum Computing Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Harness the power of quantum computing for optimization, cryptography, and machine learning applications.
+                Harness the power of quantum computing to solve complex problems and unlock new possibilities for your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Explore Quantum Solutions
+                  Get Started
                 </Link>
                 <Link 
                   href="/services"
@@ -96,10 +96,10 @@ export default function QuantumComputing() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Next-Generation Quantum Solutions
+                Quantum Computing Solutions
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From algorithm development to quantum cryptography, we provide cutting-edge quantum computing services to solve complex problems.
+                From algorithm development to quantum cryptography, we provide comprehensive quantum computing services to help you stay ahead of the curve.
               </p>
             </div>
 
@@ -111,14 +111,27 @@ export default function QuantumComputing() {
                     <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
                   </div>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-700">
+                          <span className="w-2 h-2 bg-purple-600 rounded-full mr-3"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <Link 
+                      href="/contact"
+                      className="text-purple-600 hover:text-purple-700 font-medium text-sm"
+                    >
+                      Learn More →
+                    </Link>
+                  </div>
                 </div>
               ))}
             </div>
@@ -129,17 +142,17 @@ export default function QuantumComputing() {
         <section className="bg-gray-50 py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Ready for the Quantum Future?
+              Ready to Explore Quantum Computing?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Explore how quantum computing can revolutionize your business operations and solve previously intractable problems.
+              Let our quantum computing experts help you identify opportunities and implement solutions that give you a competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
-                Schedule Quantum Consultation
+                Schedule Consultation
               </Link>
               <a 
                 href={`tel:${contact.phone}`}

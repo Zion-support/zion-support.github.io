@@ -67,37 +67,35 @@ export default function Terms() {
                 <li>Maintaining the confidentiality of their account credentials</li>
                 <li>All activities that occur under their account</li>
                 <li>Complying with all applicable laws and regulations</li>
-                <li>Not using the services for any unlawful or prohibited purpose</li>
+                <li>Not using our services for any unlawful or prohibited purpose</li>
               </ul>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 text-blue-400">5. Payment Terms</h2>
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">5. Intellectual Property</h2>
               <p className="text-slate-300 mb-4">
-                Payment terms vary by service. All fees are non-refundable unless otherwise specified. 
-                We reserve the right to change our pricing with 30 days notice to existing customers.
+                All content, trademarks, and intellectual property on this website are the property of Zion Tech Group 
+                or its licensors. Users may not use, reproduce, or distribute any content without written permission.
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">6. Limitation of Liability</h2>
               <p className="text-slate-300 mb-4">
-                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, 
-                damages for loss of data or profit, or due to business interruption) arising out of the use or inability 
-                to use the services, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified 
-                orally or in writing of the possibility of such damage.
+                In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use 
+                our services, including but not limited to direct, indirect, incidental, or consequential damages.
               </p>
             </section>
 
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">7. Privacy Policy</h2>
               <p className="text-slate-300 mb-4">
-                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the services.
+                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.
               </p>
             </section>
 
             <section className="mb-12">
-              <h2 className="text-2xl font-bold mb-4 text-blue-400">8. Contact Information</h2>
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">8. Changes to Terms</h2>
               <p className="text-slate-300 mb-4">
                 If you have any questions about these Terms of Service, please contact us:
               </p>
