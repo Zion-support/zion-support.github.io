@@ -13,7 +13,7 @@ const FuturisticBackground = React.memo(() => {
       top: `${Math.random () * 100}%`,
       delay: i * 0.1,
       duration: 5 + i * 0.3
-    }) ) , []) ;
+    })), []);
 
   return (<div  className="fixed inset - 0 overflow-hidden pointer - events -none" aria-hidden="true">
       {/* Animated grid with neon effect */}
@@ -74,7 +74,7 @@ const FloatingActionButton = React.memo(() => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-    }) ;
+    });
   };
 
   return (<AnimatePresence>
@@ -127,7 +127,7 @@ const FloatingActionButton = React.memo(() => {
                 </motion.div>) }
             </AnimatePresence>
 
-            {/* Main FAB */}
+            {/* Main button */}
             <motion.button
               onClick={() => setIsExpanded(!isExpanded)}
               className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
