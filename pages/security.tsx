@@ -1,6 +1,75 @@
 import Head from 'next/head';
 
 export default function Security() {
+const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
+  };
+  const securityMeasures = [
+    {
+      title: "Data Encryption",
+      description: "All data is encrypted both in transit and at rest using industry-standard encryption protocols",
+      icon: "🔐",
+      details: [
+        "AES-256 encryption for data at rest",
+        "TLS 1.3 for data in transit",
+        "End-to-end encryption for sensitive communications",
+        "Regular encryption key rotation"
+      ]
+    },
+    {
+      title: "Access Control",
+      description: "Multi-layered access control systems ensure only authorized personnel can access sensitive information",
+      icon: "🔑",
+      details: [
+        "Multi-factor authentication (MFA)",
+        "Role-based access control (RBAC)",
+        "Principle of least privilege",
+        "Regular access reviews and audits"
+      ]
+    },
+    {
+      title: "Network Security",
+      description: "Advanced network security measures protect against external threats and unauthorized access",
+      icon: "🛡️",
+      details: [
+        "Firewall protection and intrusion detection",
+        "DDoS protection and mitigation",
+        "Network segmentation and isolation",
+        "Continuous network monitoring"
+      ]
+    },
+    {
+      title: "Compliance & Auditing",
+      description: "Regular compliance audits and security assessments ensure adherence to industry standards",
+      icon: "📋",
+      details: [
+        "SOC 2 Type II compliance",
+        "ISO 27001 certification",
+        "Regular penetration testing",
+        "Third-party security audits"
+      ]
+    }
+  ];
+
+  const certifications = [
+    { name: "SOC 2 Type II", description: "Security, availability, and confidentiality controls" },
+    { name: "ISO 27001", description: "Information security management system" },
+    { name: "HIPAA Compliant", description: "Healthcare data protection standards" },
+    { name: "GDPR Compliant", description: "European data protection regulations" },
+    { name: "PCI DSS", description: "Payment card industry security standards" },
+    { name: "NIST Framework", description: "Cybersecurity framework compliance" }
+  ];
+
+  const securityFeatures = [
+    "24/7 Security Monitoring",
+    "Automated Threat Detection",
+    "Incident Response Team",
+    "Regular Security Updates",
+    "Employee Security Training",
+    "Vulnerability Management",
+    "Data Backup & Recovery",
+    "Business Continuity Planning"
+  ];
+
   return (
     <main style={{ padding: 24 }}>
       <Head>
@@ -8,10 +77,10 @@ export default function Security() {
       </Head>
 
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+        <div style={{ maxWidth: 1200, margin: '40px 20px', padding: '0 20px' }}>
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <h1 style={{ 
-              fontSize: '3rem',
+              fontSize: '3rem', 
               fontWeight: 800, 
               marginBottom: 20,
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
@@ -58,14 +127,14 @@ export default function Security() {
                         alignItems: 'center',
                         gap: 12,
                         padding: 15,
-                        background: 'rgba(59, 130, 246, 0.1)',
+                        background: 'rgba(239, 68, 68, 0.1)',
                         borderRadius: 8,
-                        border: '1px solid rgba(59, 130, 246, 0.2)'
+                        border: '1px solid rgba(239, 68, 68, 0.2)'
                       }}>
                         <div style={{
                           width: 8,
                           height: 8,
-                          background: '#3b82f6',
+                          background: '#ef4444',
                           borderRadius: '50%'
                         }} />
                         <span style={{ fontSize: '1rem' }}>{detail}</span>
@@ -88,11 +157,10 @@ export default function Security() {
                   background: 'rgba(255, 255, 255, 0.05)',
                   borderRadius: 12, 
                   padding: 25, 
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  textAlign: 'center', 
-                  transition: 'transform 0.3s ease, box-shadow 0.3s ease', 
-                  cursor: 'pointer'
-                }}
+                  border: '1px solid rgba(255, 255, 255, 0.1)'
+                }}>
+                  textAlign: 'center', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'>
+                }}>
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
                   e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
