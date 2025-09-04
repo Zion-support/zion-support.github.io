@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Menu, X, ChevronDown, Phone, Shield } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -46,7 +46,7 @@ const Navigation: React.FC = () => {
         <div className='flex justify-between items-center h-16'>
           {/* Logo */}
           <div className='flex-shrink-0'>
-            <Link to='/' className='text-white text-2xl font-bold hover:text-blue-300 transition-colors'>
+            <Link href='/' className='text-white text-2xl font-bold hover:text-blue-300 transition-colors'>
               Zion Tech Group
             </Link>
           </div>
@@ -70,7 +70,7 @@ const Navigation: React.FC = () => {
                           {item.dropdown.map((dropdownItem) => (
                             <Link
                               key={dropdownItem.name}
-                              to={dropdownItem.href}
+                              href={dropdownItem.href}
                               className='block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors'
                               onClick={() => setActiveDropdown(null)}
                             >
@@ -82,7 +82,7 @@ const Navigation: React.FC = () => {
                     </div>
                   ) : (
                     <Link
-                      to={item.href}
+                      href={item.href}
                       className='text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors'
                     >
                       {item.name}
@@ -92,7 +92,7 @@ const Navigation: React.FC = () => {
               ))}
 
               <Link
-                to="/contact"
+                href="/contact"
                 className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center"
               >
                 <Phone className="h-4 w-4 mr-2" />
@@ -131,7 +131,7 @@ const Navigation: React.FC = () => {
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
-                            to={dropdownItem.href}
+                            href={dropdownItem.href}
                             className='text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm'
                             onClick={() => {
                               setIsOpen(false);
@@ -146,7 +146,7 @@ const Navigation: React.FC = () => {
                   </div>
                 ) : (
                   <Link
-                    to={item.href}
+                    href={item.href}
                     className='text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium'
                     onClick={() => setIsOpen(false)}
                   >
