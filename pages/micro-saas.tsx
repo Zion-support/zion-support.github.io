@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Smartphone, Calendar, Video, Package, Target, Eye } from 'lucide-react';
+import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar, Headphones, RefreshCw, Video, Stethoscope, Cpu } from 'lucide-react';
 
 export default function MicroSaaS() {
   const contact = {
@@ -1070,508 +1070,288 @@ export default function MicroSaaS() {
     {
       icon: Brain,
       name: 'AI-Powered Email Responder',
-      description: 'Intelligent email automation that analyzes incoming messages, generates contextual responses, and flags critical communications for human review.',
+      description: 'Intelligent email automation that reads, analyzes, and responds to emails with human-like accuracy and context awareness.',
       features: [
         'Natural language processing for email understanding',
         'Context-aware response generation',
-        'Priority classification and flagging',
+        'Priority classification and urgent flagging',
         'Multi-language support and translation',
-        'Integration with CRM and helpdesk systems',
+        'Integration with CRM and business systems',
         'Learning from user feedback and corrections'
       ],
-      pricing: '$199 – $1,299/month',
-      timeline: '2–3 weeks',
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
       benefits: [
         '80% reduction in email response time',
-        '24/7 automated customer communication',
-        'Improved customer satisfaction scores',
-        'Reduced manual email management overhead'
+        '24/7 automated email handling',
+        'Improved customer satisfaction',
+        'Reduced manual email workload'
       ],
-      category: 'Communication Automation'
+      category: 'AI Automation'
     },
     {
-      icon: Smartphone,
-      name: 'Mobile-First Survey Platform',
-      description: 'Advanced survey creation and analytics platform optimized for mobile devices with real-time data collection and AI-powered insights.',
+      icon: Users,
+      name: 'Mobile-First Survey Tool',
+      description: 'Engaging mobile-optimized surveys with conversational UI, real-time analytics, and high completion rates.',
       features: [
-        'Drag-and-drop survey builder with mobile optimization',
+        'Mobile-first responsive design',
+        'Conversational survey interface',
         'Real-time data collection and analytics',
-        'AI-powered response analysis and sentiment detection',
-        'Multi-channel distribution (SMS, email, social media)',
-        'Advanced segmentation and targeting',
-        'Custom branding and white-label options'
+        'Adaptive questioning based on responses',
+        'Multi-channel distribution (SMS, email, web)',
+        'Advanced data visualization and reporting'
       ],
-      pricing: '$149 – $999/month',
-      timeline: '1–2 weeks',
+      pricing: '$149 – $899/month',
+      timeline: '2–3 weeks',
       benefits: [
-        '60% higher mobile response rates',
-        'Real-time customer feedback collection',
-        'AI-driven insights and recommendations',
-        'Improved customer engagement and satisfaction'
+        '60% higher completion rates',
+        'Real-time customer insights',
+        'Mobile-optimized user experience',
+        'Automated data analysis and reporting'
       ],
-      category: 'Customer Research'
+      category: 'Data Collection'
+    },
+    {
+      icon: BarChart3,
+      name: 'Niche Productivity Planner',
+      description: 'Industry-specific productivity tools with customized dashboards, workflows, and smart recommendations.',
+      features: [
+        'Industry-specific templates and workflows',
+        'Customizable dashboards and data views',
+        'Smart goal setting and progress tracking',
+        'Data-driven productivity recommendations',
+        'Integration with industry-specific tools',
+        'Team collaboration and sharing features'
+      ],
+      pricing: '$199 – $1,299/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '35% improvement in team productivity',
+        'Industry-tailored solutions',
+        'Data-driven workflow optimization',
+        'Enhanced goal achievement rates'
+      ],
+      category: 'Productivity'
     },
     {
       icon: Calendar,
-      name: 'Event Management Automation',
-      description: 'Comprehensive event planning platform with automated workflows, ticketing, and attendee management for conferences, webinars, and corporate events.',
+      name: 'Event Management Dashboard',
+      description: 'Comprehensive event planning platform with automated workflows, ticketing, and attendee management.',
       features: [
-        'Automated event registration and ticketing',
-        'Dynamic pricing and promotional campaigns',
-        'Attendee communication and engagement tools',
-        'Real-time analytics and reporting',
-        'Integration with payment processors and CRM',
+        'End-to-end event planning and management',
+        'Automated ticketing and registration',
+        'Attendee communication and updates',
+        'Real-time event analytics and insights',
+        'Integration with payment and marketing tools',
         'Mobile app for attendees and organizers'
       ],
-      pricing: '$299 – $1,999/month',
+      pricing: '$249 – $1,599/month',
       timeline: '3–4 weeks',
       benefits: [
         '50% reduction in event planning time',
         'Automated attendee management',
-        'Increased event attendance and engagement',
-        'Streamlined event operations'
+        'Improved event ROI tracking',
+        'Enhanced attendee experience'
       ],
       category: 'Event Management'
     },
     {
-      icon: Video,
-      name: 'AI Video Content Generator',
-      description: 'Automated video creation platform that transforms text, images, and data into engaging video content for marketing, training, and social media.',
+      icon: FileText,
+      name: 'AI-Powered Content Creation Suite',
+      description: 'Comprehensive content generation platform with AI writing, editing, and optimization tools.',
       features: [
-        'AI-powered script generation and voice synthesis',
-        'Automated video editing and scene transitions',
-        'Multi-format output (MP4, GIF, social media optimized)',
-        'Brand template library and customization',
-        'Bulk video generation and batch processing',
-        'Analytics and performance tracking'
+        'AI-powered content generation for multiple formats',
+        'Brand voice consistency and customization',
+        'SEO optimization and keyword integration',
+        'Content planning and editorial calendar',
+        'Multi-language content creation',
+        'Performance tracking and optimization'
       ],
       pricing: '$399 – $2,499/month',
-      timeline: '4–6 weeks',
+      timeline: '4–5 weeks',
       benefits: [
-        '90% faster video content production',
-        'Consistent brand messaging across videos',
-        'Reduced video production costs',
-        'Scalable content creation for marketing campaigns'
+        '10x faster content production',
+        'Consistent brand messaging',
+        'Improved SEO performance',
+        'Reduced content creation costs'
       ],
-      category: 'Content Creation'
+      category: 'Content Management'
     },
     {
-      icon: Package,
-      name: 'E-Commerce Return Automation',
-      description: 'Intelligent return management system that automates return requests, generates labels, tracks status, and provides analytics for e-commerce businesses.',
+      icon: Headphones,
+      name: 'Customer Support & Helpdesk Platform',
+      description: 'All-in-one customer support solution with AI chatbots, ticket management, and knowledge base.',
+      features: [
+        'AI-powered chatbots and virtual assistants',
+        'Intelligent ticket routing and prioritization',
+        'Comprehensive knowledge base management',
+        'Multi-channel support (chat, email, phone)',
+        'Customer satisfaction tracking and analytics',
+        'Integration with CRM and business tools'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '70% reduction in support response time',
+        '24/7 automated customer assistance',
+        'Improved customer satisfaction scores',
+        'Reduced support team workload'
+      ],
+      category: 'Customer Support'
+    },
+    {
+      icon: RefreshCw,
+      name: 'E-Commerce Return Management SaaS',
+      description: 'Automated return processing platform with intelligent routing, label generation, and analytics.',
       features: [
         'Automated return request processing',
-        'Dynamic return label generation',
+        'Intelligent return routing and approval',
+        'Automated return label generation',
         'Real-time return status tracking',
-        'Return analytics and fraud detection',
-        'Integration with major e-commerce platforms',
-        'Customer self-service return portal'
+        'Return analytics and insights',
+        'Integration with e-commerce platforms'
       ],
       pricing: '$199 – $1,299/month',
       timeline: '2–3 weeks',
       benefits: [
-        '70% reduction in return processing time',
-        'Automated fraud detection and prevention',
-        'Improved customer satisfaction with returns',
-        'Better inventory management and restocking'
+        '60% faster return processing',
+        'Automated return workflows',
+        'Improved customer experience',
+        'Reduced return processing costs'
       ],
       category: 'E-Commerce'
     },
     {
-      icon: Target,
-      name: 'AI-Powered Lead Scoring Engine',
-      description: 'Advanced lead qualification system that uses machine learning to score, prioritize, and route leads for maximum conversion rates.',
+      icon: Mail,
+      name: 'Automated Email Follow-up Service',
+      description: 'Intelligent email sequence automation with personalization, A/B testing, and conversion optimization.',
       features: [
-        'Machine learning-based lead scoring algorithms',
-        'Behavioral tracking and engagement analysis',
-        'Automated lead routing and assignment',
-        'Predictive analytics for conversion probability',
-        'Integration with CRM and marketing automation',
-        'Custom scoring models and rule configuration'
+        'Automated email sequence management',
+        'Personalized content and timing',
+        'A/B testing and optimization',
+        'Behavioral trigger-based emails',
+        'Conversion tracking and analytics',
+        'Integration with CRM and marketing tools'
+      ],
+      pricing: '$149 – $999/month',
+      timeline: '2–3 weeks',
+      benefits: [
+        '45% increase in email conversion rates',
+        'Automated lead nurturing',
+        'Personalized customer communication',
+        'Improved sales pipeline management'
+      ],
+      category: 'Email Marketing'
+    },
+    {
+      icon: Video,
+      name: 'AI-Powered Video Clip Maker',
+      description: 'Automated video editing platform that transforms long-form content into engaging social media clips.',
+      features: [
+        'AI-powered video clip extraction',
+        'Automatic highlight detection',
+        'Social media format optimization',
+        'Brand consistency and watermarking',
+        'Multi-platform publishing',
+        'Performance analytics and insights'
       ],
       pricing: '$299 – $1,999/month',
       timeline: '3–4 weeks',
       benefits: [
-        '45% increase in lead conversion rates',
-        'Automated lead prioritization',
-        'Improved sales team efficiency',
-        'Data-driven lead qualification'
+        '90% faster video content creation',
+        'Automated social media optimization',
+        'Increased content engagement',
+        'Reduced video production costs'
       ],
-      category: 'Sales Automation'
+      category: 'Video Marketing'
+    },
+    {
+      icon: Stethoscope,
+      name: 'Hospital Appointment Scheduler',
+      description: 'Specialized healthcare scheduling platform with patient management, medical history, and compliance features.',
+      features: [
+        'Secure patient appointment scheduling',
+        'Medical history and record integration',
+        'HIPAA-compliant data management',
+        'Automated reminders and notifications',
+        'Provider availability management',
+        'Insurance verification and billing integration'
+      ],
+      pricing: '$399 – $2,499/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '50% reduction in no-show rates',
+        'Improved patient experience',
+        'Automated compliance management',
+        'Enhanced operational efficiency'
+      ],
+      category: 'Healthcare'
+    },
+    {
+      icon: Users,
+      name: 'AI-Powered Talent Matching Platform',
+      description: 'Advanced talent acquisition platform with AI matching, skill assessment, and recruitment automation.',
+      features: [
+        'AI-powered candidate-job matching',
+        'Automated skill assessment and testing',
+        'Video interview scheduling and analysis',
+        'Candidate ranking and recommendation',
+        'Recruiter workflow automation',
+        'Analytics and performance tracking'
+      ],
+      pricing: '$499 – $3,999/month',
+      timeline: '4–6 weeks',
+      benefits: [
+        '60% reduction in time-to-hire',
+        'Improved candidate quality',
+        'Automated recruitment workflows',
+        'Enhanced hiring success rates'
+      ],
+      category: 'Recruitment'
     },
     {
       icon: Shield,
       name: 'Cybersecurity Compliance Manager',
-      description: 'Automated compliance monitoring and reporting system for GDPR, HIPAA, SOC 2, and other regulatory frameworks with real-time risk assessment.',
+      description: 'Automated compliance monitoring and reporting platform for cybersecurity standards and regulations.',
       features: [
-        'Automated compliance gap analysis',
-        'Real-time risk assessment and monitoring',
-        'Regulatory framework mapping and tracking',
-        'Automated report generation and submission',
-        'Policy management and employee training',
-        'Incident response and breach notification'
+        'Automated compliance monitoring',
+        'Real-time security posture assessment',
+        'Regulatory reporting and documentation',
+        'Risk assessment and mitigation',
+        'Audit trail and evidence collection',
+        'Integration with security tools'
       ],
-      pricing: '$499 – $3,999/month',
+      pricing: '$599 – $3,999/month',
       timeline: '4–6 weeks',
       benefits: [
-        '90% reduction in compliance audit time',
-        'Automated risk identification and mitigation',
-        'Reduced compliance violations and penalties',
-        'Streamlined regulatory reporting'
-      ],
-      category: 'Compliance'
-    },
-    {
-      icon: Zap,
-      name: 'Workflow Automation Engine',
-      description: 'No-code workflow automation platform that connects apps, automates business processes, and eliminates manual tasks across your organization.',
-      features: [
-        'Visual workflow builder with drag-and-drop interface',
-        'Pre-built connectors for 500+ applications',
-        'Conditional logic and decision trees',
-        'Real-time monitoring and error handling',
-        'Custom triggers and webhook support',
-        'Team collaboration and approval workflows'
-      ],
-      pricing: '$199 – $1,499/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '75% reduction in manual task processing',
-        'Automated business process optimization',
-        'Improved operational efficiency',
-        'Reduced human error and delays'
-      ],
-      category: 'Process Automation'
-    },
-    {
-      icon: Globe,
-      name: 'Multi-Channel Customer Engagement',
-      description: 'Unified customer communication platform that manages interactions across email, SMS, chat, social media, and voice channels with AI-powered routing.',
-      features: [
-        'Omnichannel communication management',
-        'AI-powered message routing and prioritization',
-        'Unified customer conversation history',
-        'Automated response suggestions and templates',
-        'Real-time analytics and performance tracking',
-        'Integration with existing business systems'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '60% improvement in customer response times',
-        'Unified customer experience across channels',
-        'Automated communication workflows',
-        'Better customer satisfaction and retention'
-      ],
-      category: 'Customer Engagement'
-    },
-    {
-      icon: Brain,
-      name: 'AI-Powered Voice Cloning & Synthesis',
-      description: 'Advanced voice synthesis technology for creating realistic voice clones and automated voice content.',
-      features: [
-        'High-quality voice cloning from samples',
-        'Multi-language voice synthesis',
-        'Emotion and tone control',
-        'Real-time voice conversion',
-        'Voice authentication and verification',
-        'API integration for applications'
-      ],
-      pricing: '$499 – $3,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '99% voice similarity accuracy',
-        'Automated voice content creation',
-        'Enhanced accessibility features',
-        'Reduced voice production costs'
-      ],
-      category: 'AI Voice Technology'
-    },
-    {
-      icon: Shield,
-      name: 'Blockchain Smart Contract Auditor',
-      description: 'Automated smart contract security analysis and vulnerability detection for DeFi and Web3 projects.',
-      features: [
-        'Automated smart contract scanning',
-        'Vulnerability detection and reporting',
-        'Gas optimization recommendations',
-        'Compliance checking for standards',
-        'Integration with popular blockchains',
-        'Continuous monitoring and alerts'
-      ],
-      pricing: '$399 – $2,999/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '95% vulnerability detection rate',
-        'Reduced smart contract risks',
-        'Automated security auditing',
-        'Compliance with blockchain standards'
-      ],
-      category: 'Blockchain Security'
-    },
-    {
-      icon: TrendingUp,
-      name: 'AI-Powered Carbon Footprint Tracker',
-      description: 'Real-time carbon emission tracking and sustainability reporting for businesses and individuals.',
-      features: [
-        'Real-time carbon emission monitoring',
-        'Sustainability reporting and analytics',
-        'Carbon offset recommendations',
-        'ESG compliance tracking',
-        'Supply chain emission analysis',
-        'Integration with business systems'
-      ],
-      pricing: '$199 – $1,499/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        'Automated sustainability reporting',
-        'Improved ESG compliance',
-        'Reduced carbon footprint',
-        'Enhanced corporate responsibility'
-      ],
-      category: 'Sustainability Tech'
-    },
-    {
-      icon: Eye,
-      name: 'AI-Powered Medical Image Analysis',
-      description: 'Advanced medical imaging analysis for diagnostic assistance and treatment planning.',
-      features: [
-        'Medical image analysis and interpretation',
-        'Disease detection and classification',
-        'Treatment recommendation systems',
-        'Patient risk assessment',
-        'Integration with medical systems',
-        'Compliance with healthcare regulations'
-      ],
-      pricing: '$999 – $7,999/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        '95% accuracy in medical imaging',
-        'Faster diagnosis and treatment',
-        'Reduced medical errors',
-        'Improved patient outcomes'
-      ],
-      category: 'Healthcare AI'
-    },
-    {
-      icon: Zap,
-      name: 'Quantum Computing Simulation Platform',
-      description: 'Cloud-based quantum computing simulation for research, optimization, and cryptography applications.',
-      features: [
-        'Quantum algorithm simulation',
-        'Optimization problem solving',
-        'Cryptography and security applications',
-        'Research collaboration tools',
-        'Educational quantum computing modules',
-        'API access for developers'
-      ],
-      pricing: '$299 – $2,499/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        'Access to quantum computing power',
-        'Advanced optimization capabilities',
-        'Enhanced security solutions',
-        'Research and development acceleration'
-      ],
-      category: 'Quantum Computing'
-    },
-    {
-      icon: Users,
-      name: 'AI-Powered Talent Acquisition Platform',
-      description: 'Intelligent recruitment platform with candidate matching, interview automation, and bias detection.',
-      features: [
-        'AI-powered candidate matching',
-        'Automated interview scheduling',
-        'Bias detection and mitigation',
-        'Skills assessment and testing',
-        'Cultural fit analysis',
-        'Integration with HR systems'
-      ],
-      pricing: '$399 – $2,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '60% reduction in time-to-hire',
-        'Improved candidate quality',
-        'Reduced hiring bias',
-        'Enhanced recruitment efficiency'
-      ],
-      category: 'HR Technology'
-    },
-    {
-      icon: Globe,
-      name: 'Metaverse Virtual Event Platform',
-      description: 'Immersive virtual event hosting with 3D environments, avatars, and interactive experiences.',
-      features: [
-        '3D virtual event environments',
-        'Avatar creation and customization',
-        'Interactive presentations and booths',
-        'Networking and social features',
-        'Analytics and engagement tracking',
-        'Integration with existing platforms'
-      ],
-      pricing: '$499 – $3,999/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        'Enhanced virtual event experiences',
-        'Increased attendee engagement',
-        'Global accessibility',
-        'Reduced event costs'
-      ],
-      category: 'Virtual Reality'
-    },
-    {
-      icon: Shield,
-      name: 'AI-Powered Cybersecurity Threat Hunter',
-      description: 'Advanced threat hunting platform with behavioral analysis and automated incident response.',
-      features: [
-        'Behavioral anomaly detection',
-        'Automated threat hunting',
-        'Incident response automation',
-        'Threat intelligence integration',
-        'Forensic analysis tools',
-        'Compliance reporting'
-      ],
-      pricing: '$599 – $4,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '99.5% threat detection accuracy',
-        'Automated incident response',
-        'Reduced security incidents',
-        'Enhanced security posture'
+        '90% reduction in compliance effort',
+        'Automated risk assessment',
+        'Improved security posture',
+        'Reduced compliance costs'
       ],
       category: 'Cybersecurity'
     },
     {
-      icon: Brain,
-      name: 'AI-Powered Drug Discovery Platform',
-      description: 'Machine learning platform for pharmaceutical research, drug discovery, and molecular analysis.',
+      icon: Cpu,
+      name: 'Quantum Computing Solutions Platform',
+      description: 'Access to quantum computing resources for complex optimization, cryptography, and scientific research.',
       features: [
-        'Molecular structure analysis',
-        'Drug-target interaction prediction',
-        'Side effect prediction',
-        'Clinical trial optimization',
-        'Patent analysis and research',
-        'Integration with research databases'
+        'Quantum algorithm development and testing',
+        'Optimization problem solving',
+        'Cryptographic security enhancement',
+        'Scientific research and simulation',
+        'Quantum machine learning applications',
+        'Expert consultation and support'
       ],
-      pricing: '$1,999 – $12,999/month',
+      pricing: '$999 – $9,999/month',
       timeline: '6–8 weeks',
       benefits: [
-        'Accelerated drug discovery process',
-        'Reduced research and development costs',
-        'Improved success rates',
-        'Enhanced pharmaceutical innovation'
+        'Exponential computational power',
+        'Advanced optimization capabilities',
+        'Enhanced security solutions',
+        'Cutting-edge research capabilities'
       ],
-      category: 'Pharmaceutical AI'
-    },
-    {
-      icon: TrendingUp,
-      name: 'AI-Powered Trading Algorithm Platform',
-      description: 'Advanced algorithmic trading platform with machine learning models and risk management.',
-      features: [
-        'Machine learning trading algorithms',
-        'Real-time market analysis',
-        'Risk management and portfolio optimization',
-        'Backtesting and strategy validation',
-        'Multi-asset trading support',
-        'Regulatory compliance tools'
-      ],
-      pricing: '$799 – $5,999/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        'Automated trading strategies',
-        'Enhanced market analysis',
-        'Risk reduction and management',
-        'Improved trading performance'
-      ],
-      category: 'FinTech'
-    },
-    {
-      icon: Eye,
-      name: 'AI-Powered Autonomous Vehicle Simulation',
-      description: 'Comprehensive simulation platform for autonomous vehicle testing and development.',
-      features: [
-        'Realistic driving scenario simulation',
-        'Sensor data generation and testing',
-        'Safety validation and testing',
-        'Performance optimization',
-        'Regulatory compliance testing',
-        'Integration with vehicle systems'
-      ],
-      pricing: '$1,499 – $9,999/month',
-      timeline: '6–8 weeks',
-      benefits: [
-        'Safer autonomous vehicle development',
-        'Reduced testing costs and time',
-        'Enhanced safety validation',
-        'Accelerated innovation'
-      ],
-      category: 'Autonomous Vehicles'
-    },
-    {
-      icon: Zap,
-      name: 'AI-Powered Energy Grid Optimization',
-      description: 'Smart grid management platform with predictive analytics and energy optimization.',
-      features: [
-        'Energy demand forecasting',
-        'Grid optimization algorithms',
-        'Renewable energy integration',
-        'Load balancing and management',
-        'Predictive maintenance',
-        'Real-time monitoring and control'
-      ],
-      pricing: '$999 – $7,999/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        'Improved energy efficiency',
-        'Reduced energy costs',
-        'Enhanced grid reliability',
-        'Better renewable energy integration'
-      ],
-      category: 'Energy Technology'
-    },
-    {
-      icon: Users,
-      name: 'AI-Powered Mental Health Companion',
-      description: 'Intelligent mental health support platform with mood tracking and therapeutic interventions.',
-      features: [
-        'Mood tracking and analysis',
-        'Personalized therapeutic content',
-        'Crisis intervention and alerts',
-        'Progress monitoring and reporting',
-        'Integration with healthcare providers',
-        'Privacy-focused design'
-      ],
-      pricing: '$199 – $1,499/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        'Improved mental health outcomes',
-        '24/7 mental health support',
-        'Early intervention capabilities',
-        'Reduced healthcare costs'
-      ],
-      category: 'Digital Health'
-    },
-    {
-      icon: Globe,
-      name: 'AI-Powered Smart City Management',
-      description: 'Comprehensive smart city platform for traffic, utilities, and public services optimization.',
-      features: [
-        'Traffic flow optimization',
-        'Utility management and monitoring',
-        'Public safety and emergency response',
-        'Environmental monitoring',
-        'Citizen engagement platforms',
-        'Data analytics and reporting'
-      ],
-      pricing: '$2,999 – $19,999/month',
-      timeline: '8–12 weeks',
-      benefits: [
-        'Improved city efficiency',
-        'Enhanced citizen services',
-        'Reduced operational costs',
-        'Better resource utilization'
-      ],
-      category: 'Smart Cities'
+      category: 'Quantum Computing'
     }
   ];
 
