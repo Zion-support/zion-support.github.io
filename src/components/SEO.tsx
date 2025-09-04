@@ -10,6 +10,12 @@ description?: string;
   image?: string;
   url?: string;
   type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  noindex?: boolean;
 }
 
 export const SEO: Reac t.FC<SEOProps> = ({
@@ -24,7 +30,33 @@ type = 'website',
   modifiedTime,
   section,
   tags = [],
-  canonical}: SEOProps) {
+  noindex = false,
+}) => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.svg',
+    description: description,
+    sameAs: [
+      'https://linkedin.com/company/zion-tech-group',
+      'https://twitter.com/ziontechgroup'
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '364 E Main St STE 1008',
+        addressLocality: 'Middletown',
+        addressRegion: 'DE',
+        postalCode: '19709',
+        addressCountry: 'US'
+      }
+    }
+  };
 
   // Structured data for organization
   

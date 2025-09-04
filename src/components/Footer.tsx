@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Twitter,
-  Linkedin,
-  Facebook,
-  Instagram,
+import Link from 'next/link';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Linkedin, 
+  Twitter, 
   Github,
   Mail,
   Phone,
@@ -260,6 +261,8 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
@@ -271,11 +274,11 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white"  />
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+              <span className="font-bold text-lg">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Leading provider of innovative AI, IT, and Micro SAAS solutions. 
-              Transforming businesses through cutting-edge technology and expert consulting.
+            <p className="text-gray-400 mb-4">
+              Leading technology solutions provider specializing in AI, cybersecurity, 
+              cloud infrastructure, and digital transformation services.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover: tex t-blue-400 transition-colors">
@@ -383,4 +386,6 @@ Cookie Policy
       </div>
 </footer>
   );
-}
+};
+
+export default Footer;
