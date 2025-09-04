@@ -1,6 +1,24 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+echo "[safe] Running lint, type-check, build, and smoke tests"
+npm run lint:check
+npm run type-check
+npm run build
+npm run test:smoke
+
+echo "[safe] Running selected automations"
+npm run automation:health || true
+npm run automation:security || true
+npm run automation:performance || true
+npm run optimize:performance || true
+npm run monitor:health || true
+npm run audit:security || true
+
+echo "[safe] Completed"
+#!/usr/bin/env bash
+set -euo pipefail
+
 echo "[safe] Starting safe automations"
 
 # Create logs dir if needed
