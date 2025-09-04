@@ -16,7 +16,11 @@ describe('AccessibilityEnhancer', () => {
 
   it('applies accessibility props correctly', () => {
     render(
-      <AccessibilityEnhancer role="button" aria-label="Test Button" tabIndex={0}>
+      <AccessibilityEnhancer
+        role="button"
+        aria-label="Test Button"
+        tabIndex={0}
+      >
         <span>Button Text</span>
       </AccessibilityEnhancer>
     );
@@ -41,12 +45,20 @@ describe('AccessibilityEnhancer', () => {
 
   it('applies focus styles when focusable', () => {
     render(
-      <AccessibilityEnhancer role="button" tabIndex={0} className="focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <AccessibilityEnhancer
+        role="button"
+        tabIndex={0}
+        className="focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
         <span>Focusable Element</span>
       </AccessibilityEnhancer>
     );
     const element = screen.getByRole('button');
-    expect(element).toHaveClass('focus:outline-none', 'focus:ring-2', 'focus:ring-blue-500');
+    expect(element).toHaveClass(
+      'focus:outline-none',
+      'focus:ring-2',
+      'focus:ring-blue-500'
+    );
   });
 
   it('disables focus when not focusable', () => {

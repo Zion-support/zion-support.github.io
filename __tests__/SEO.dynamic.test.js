@@ -6,7 +6,8 @@ import SEOdynamic from '../components/SEO.dynamic';
 describe('SEOdynamic', () => {
   test('renders without crashing', () => {
     render(<SEOdynamic />);
-    expect(screen.getByTestId('seo.dynamic')).toBeInTheDocument()});
+    expect(screen.getByTestId('seo.dynamic')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<SEOdynamic />);
@@ -21,4 +22,5 @@ describe('SEOdynamic', () => {
   test('applies correct styling', () => {
     render(<SEOdynamic />);
     // Add styling tests if needed
-  })});
+  });
+});

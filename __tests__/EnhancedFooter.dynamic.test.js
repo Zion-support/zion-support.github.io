@@ -6,7 +6,8 @@ import EnhancedFooterdynamic from '../components/EnhancedFooter.dynamic';
 describe('EnhancedFooterdynamic', () => {
   test('renders without crashing', () => {
     render(<EnhancedFooterdynamic />);
-    expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument()});
+    expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<EnhancedFooterdynamic />);
@@ -21,4 +22,5 @@ describe('EnhancedFooterdynamic', () => {
   test('applies correct styling', () => {
     render(<EnhancedFooterdynamic />);
     // Add styling tests if needed
-  })});
+  });
+});

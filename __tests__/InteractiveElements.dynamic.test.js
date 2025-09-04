@@ -8,7 +8,8 @@ describe('InteractiveElementsdynamic', () => {
     render(<InteractiveElementsdynamic />);
     expect(
       screen.getByTestId('interactiveelements.dynamic')
-    ).toBeInTheDocument()});
+    ).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {
     render(<InteractiveElementsdynamic />);
@@ -23,4 +24,5 @@ describe('InteractiveElementsdynamic', () => {
   test('applies correct styling', () => {
     render(<InteractiveElementsdynamic />);
     // Add styling tests if needed
-  })});
+  });
+});

@@ -32,9 +32,18 @@ class AdvancedSourceFixer {
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (
+        stat.isDirectory() &&
+        !item.startsWith('.') &&
+        item !== 'node_modules'
+      ) {
         await this.fixDirectory(fullPath);
-      } else if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
+      } else if (
+        item.endsWith('.ts') ||
+        item.endsWith('.tsx') ||
+        item.endsWith('.js') ||
+        item.endsWith('.jsx')
+      ) {
         await this.fixFile(fullPath);
       }
     }
@@ -66,7 +75,7 @@ class AdvancedSourceFixer {
         this.fixes.push({
           file: filePath,
           timestamp: new Date().toISOString(),
-          fixes: this.getAppliedFixes(content, fixedContent)
+          fixes: this.getAppliedFixes(content, fixedContent),
         });
         this.log(`Fixed: ${filePath}`);
       }
@@ -74,7 +83,7 @@ class AdvancedSourceFixer {
       this.errors.push({
         file: filePath,
         error: error.message,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       });
       this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
     }
@@ -93,13 +102,17 @@ class AdvancedSourceFixer {
       /',' expected/,
       /';' expected/,
       /'\)' expected/,
-      /'\}' expected/
+      /'\}' expected/,
     ];
     return errorPatterns.some(pattern => pattern.test(content));
   }
 
   hasImportExportIssues(content) {
-    return content.includes('from') && !content.includes('import') && !content.includes('export');
+    return (
+      content.includes('from') &&
+      !content.includes('import') &&
+      !content.includes('export')
+    );
   }
 
   hasSyntaxIssues(content) {
@@ -108,7 +121,7 @@ class AdvancedSourceFixer {
       /export.*from.*from/,
       /function.*function/,
       /const.*const.*const/,
-      /let.*let.*let/
+      /let.*let.*let/,
     ];
     return syntaxIssues.some(pattern => pattern.test(content));
   }
@@ -131,12 +144,15 @@ class AdvancedSourceFixer {
   fixImportExportIssues(content, filePath) {
     let fixed = content;
     if (filePath.endsWith('.tsx') || filePath.endsWith('.jsx')) {
-      if (!fixed.includes('import React') && !fixed.includes('import * as React')) {
+      if (
+        !fixed.includes('import React') &&
+        !fixed.includes('import * as React')
+      ) {
         fixed = "import React from 'react';\n" + fixed;
       }
     }
     fixed = fixed.replace(/import\s+{\s*}\s*from/g, 'import React from');
-    fixed = fixed.replace(/import\s+from\s+['"]/g, 'import React from \'react\'');
+    fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
     if (!fixed.includes('export default') && !fixed.includes('export {')) {
       fixed += '\n\nexport default {};';
     }
@@ -183,7 +199,7 @@ class AdvancedSourceFixer {
       totalFilesFixed: this.fixes.length,
       totalErrors: this.errors.length,
       fixes: this.fixes,
-      errors: this.errors
+      errors: this.errors,
     };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);

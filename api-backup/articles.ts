@@ -9,7 +9,8 @@ interface HelpArticle {
 }
 
 interface ErrorResponse {
-  error: string}
+  error: string;
+}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // Implementation here
