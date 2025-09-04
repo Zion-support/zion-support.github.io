@@ -1,61 +1,135 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowLeft, Play, CheckCircle, ArrowRight, Book } from 'lucide-react';
+
+const contact = {
+  email: 'support@ziontechgroup.com',
+  phone: '+1 (555) 123-4567'
+};
 
 export default function FirstSteps() {
-const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m', };
+  return (
+    <>
+      <Head>
+        <title>First Steps - Zion Tech Group</title>
+        <meta name="description" content="Get started with Zion Tech Group - your first steps towards digital transformation." />
+        <link rel="canonical" href="https://ziontechgroup.com/docs/first-steps" />
+      </Head>
+      
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+        <div style={{ marginBottom: 40 }}>
+          <Link href="/docs" style={{ color: '#3b82f6', textDecoration: 'none', marginBottom: 20, display: 'inline-block' }}>
+            ← Back to Documentation
+          </Link>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: 16, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            First Steps
+          </h1>
+          <p style={{ fontSize: '1.2rem', color: '#64748b', marginBottom: 32 }}>
+            Welcome to Zion Tech Group! Let's get you started on your digital transformation journey.
+          </p>
+        </div>
 
-  return (<><Head><title>First Steps - Zion Tech Group Documentation</title><meta name="description" content="Your first steps to getting started with Zion Tech Group's services and solutions." />"<link rel="canonical" href={`${contact.site}/docs/first-steps`} /></Head>;
-"<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"<div className="max-w-4xl mx-auto px-4 py-8">{/* Header */}"<div className="mb-8">"<Link href="/docs" className="inline-flex items-center text-blue-600 hover: text-blue-700 mb-4">"<ArrowLeft className="w-4 h-4 mr-2" />;
-              Back to Documentation</Link>"<h1 className="text-4xl font-bold text-gray-900 mb-4">First Steps</h1>"<p className="text-xl text-gray-600">;
-              A step-by-step guide to begin your journey with Zion Tech Group's innovative solutions.</p></div>{/* Welcome Sectio,n *,/}"<div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-white mb-8">"<h2 className="text-2xl font-semibold mb-4">Welcome to Zion Tech Group!</h2>"<p className="text-blue-100 mb-6">;
-              You're about to discover how our 350+ services can transform your business operations, 
-              from micro SaaS applications to AI-powered automation and comprehensive IT solutions.</p>"<div className="flex items-center">"<Play className="w-5 h-5 mr-2" />"<span className="font-medium">Let's get started on your digital transformation journey</span></div></div>{/* Step-by-Step Guide */}"<div className="space-y-8 mb-8">"<div className="bg-white rounded-lg shadow-lg p-8">"<div className="flex items-center mb-6">"<div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">"<span className="text-blue-600 font-bold text-lg">1</span></div>"<h2 className="text-2xl font-semibold text-gray-900">Assess Your Needs</h2></div>;
-              "<p className="text-gray-600 mb-6">;
-                Before diving in, let's understand what you're looking to achieve. Our services span three main categories: </p>;
-"<div className="grid md:grid-cols-3 gap-6">"<div className="border border-gray-200 rounded-lg p-6">"<h3 className="text-lg font-semibold text-gray-900 mb-3">Micro SaaS Solutions</h3>"<p className="text-gray-600 mb-4">;
-                    Specialized applications for specific business needs like cost optimization analytics, and automation.</p>"<ul className="space-y-2 text-sm text-gray-600">"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      150+ micro applications</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Quick deployment</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Pay-as-you-use pricing</li></ul>"<Link href="/micro-saas" className="inline-flex items-center text-blue-600 hover: text-blue-700 mt-4">;
-                    Explore Micro SaaS <ArrowRight className="w-4 h-4 ml-1" /></Link></div>;
-"<div className="border border-gray-200 rounded-lg p-6">"<h3 className="text-lg font-semibold text-gray-900 mb-3">AI Services</h3>"<p className="text-gray-600 mb-4">;
-                    Machine learning and AI solutions for automation prediction, and intelligent decision-making.</p>"<ul className="space-y-2 text-sm text-gray-600">"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      100+ AI solutions</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Custom model training</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Real-time processing</li></ul>"<Link href="/ai-services" className="inline-flex items-center text-blue-600 hover: text-blue-700 mt-4">;
-                    Explore AI Services <ArrowRight className="w-4 h-4 ml-1" /></Link></div>;
-"<div className="border border-gray-200 rounded-lg p-6">"<h3 className="text-lg font-semibold text-gray-900 mb-3">IT Services</h3>"<p className="text-gray-600 mb-4">;
-                    Comprehensive IT solutions including cloud migration cybersecurity, and digital transformation.</p>"<ul className="space-y-2 text-sm text-gray-600">"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      100+ IT solutions</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Enterprise-grade security</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      24/7 support</li></ul>"<Link href="/it-services" className="inline-flex items-center text-blue-600 hover: text-blue-700 mt-4">;
-                    Explore IT Services <ArrowRight className="w-4 h-4 ml-1" /></Link></div></div></div>;
-"<div className="bg-white rounded-lg shadow-lg p-8">"<div className="flex items-center mb-6">"<div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">"<span className="text-blue-600 font-bold text-lg">2</span></div>"<h2 className="text-2xl font-semibold text-gray-900">Explore Our Catalog</h2></div>;
-              "<p className="text-gray-600 mb-6">;
-                Browse our comprehensive services catalog to find the perfect solutions for your business needs.</p>;
-"<div className="bg-gray-50 rounded-lg p-6 mb-6">"<h3 className="text-lg font-semibold text-gray-900 mb-4">Popular Starting Points</h3>"<div className="grid md:grid-cols-2 gap-4">"<div className="flex items-center justify-between p-4 bg-white rounded-lg"><div>"<h4 className="font-medium text-gray-900">Cloud Cost Optimization</h4>"<p className="text-sm text-gray-600">Reduce cloud spending by up to 40%</p></div>"<Link href="/micro-saas" className="text-blue-600 hover:text-blue-700">"<ArrowRight className="w-5 h-5" /></Link></div>"<div className="flex items-center justify-between p-4 bg-white rounded-lg"><div>"<h4 className="font-medium text-gray-900">AI-Powered Analytics</h4>"<p className="text-sm text-gray-600">Get insights from your data</p></div>"<Link href="/ai-services" className="text-blue-600 hover:text-blue-700">"<ArrowRight className="w-5 h-5" /></Link></div>"<div className="flex items-center justify-between p-4 bg-white rounded-lg"><div>"<h4 className="font-medium text-gray-900">Cybersecurity Assessment</h4>"<p className="text-sm text-gray-600">Secure your digital infrastructure</p></div>"<Link href="/cybersecurity" className="text-blue-600 hover:text-blue-700">"<ArrowRight className="w-5 h-5" /></Link></div>"<div className="flex items-center justify-between p-4 bg-white rounded-lg"><div>"<h4 className="font-medium text-gray-900">DevOps Automation</h4>"<p className="text-sm text-gray-600">Streamline your development process</p></div>"<Link href="/cloud-devops" className="text-blue-600 hover:text-blue-700">"<ArrowRight className="w-5 h-5" /></Link></div></div></div>;
-"<Link href="/services-catalog" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">"<Book className="w-5 h-5 mr-2" />;
-                Browse Full Catalog</Link></div>;
-"<div className="bg-white rounded-lg shadow-lg p-8">"<div className="flex items-center mb-6">"<div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">"<span className="text-blue-600 font-bold text-lg">3</span></div>"<h2 className="text-2xl font-semibold text-gray-900">Get Your Custom Quote</h2></div>;
-              "<p className="text-gray-600 mb-6">;
-                Once you've identified the services you need contact our team for a personalized quote and implementation plan.</p>;
-"<div className="grid md: grid-cols-2 gap-6"><div>"<h3 className="text-lg font-semibold text-gray-900 mb-3">What to Include in Your Request</h3>"<ul className="space-y-2 text-gray-600">"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Specific services you're interested in</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Your current technology stack</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Timeline and budget considerations</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Expected outcomes and goals</li></ul></div><div>"<h3 className="text-lg font-semibold text-gray-900 mb-3">Our Response Includes</h3>"<ul className="space-y-2 text-gray-600">"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Detailed service recommendations</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Custom pricing and packages</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Implementation timeline</li>"<li className="flex items-center">"<CheckCircle className="w-4 h-4 text-green-500 mr-2" />;
-                      Ongoing support options</li></ul></div></div>;
-"<div className="mt-6 flex flex-col sm:flex-row gap-4">"<Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center">;
-                  Request Quote</Link>"<a href={`tel:${contact.phone}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover: bg-blue-50 transition-colors text-center">;
-                  Call {contact.phone}
-                </a></div></div></div>{/* Next Steps */}"<div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">"<h2 className="text-2xl font-semibold text-gray-900 mb-4">Ready for the Next Step?</h2>"<p className="text-gray-600 mb-6">;
-              You're now ready to explore our services and start your digital transformation journey.</p>"<div className="flex flex-col sm: flex-row gap-4 justify-center">"<Link href="/services-catalog" className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">;
-                Browse Services</Link>"<Link href="/contact" className="px-6 py-3 bg-white text-green-600 border border-green-600 rounded-lg hover:bg-green-50 transition-colors">;
-                Contact Our Team</Link></div></div></div></di,v></>;
-  );,}
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"
+        <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, marginBottom: 32 }}>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 16 }}>🎉 Welcome to Zion Tech Group</h2>
+          <p style={{ color: '#64748b', marginBottom: 20, lineHeight: 1.6 }}>
+            We're excited to have you on board! Our team is ready to help you transform your business with cutting-edge technology solutions.
+          </p>
+        </section>
+
+        <section style={{ background: '#f8fafc', padding: 32, borderRadius: 12, marginBottom: 32 }}>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 16 }}>🚀 Getting Started</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 24 }}>
+            <div style={{ background: 'white', padding: 24, borderRadius: 12, border: '1px solid #e2e8f0' }}>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: 12, color: '#1e293b' }}>1. Explore Our Services</h3>
+              <p style={{ color: '#64748b', marginBottom: 16 }}>
+                Browse our comprehensive catalog of technology services and solutions.
+              </p>
+              <Link href="/services-catalog" style={{
+                background: '#3b82f6',
+                color: 'white',
+                padding: '8px 16px',
+                borderRadius: 6,
+                textDecoration: 'none',
+                fontSize: '0.9rem',
+                fontWeight: 600,
+                display: 'inline-block'
+              }}>
+                View Services
+              </Link>
+            </div>
+            <div style={{ background: 'white', padding: 24, borderRadius: 12, border: '1px solid #e2e8f0' }}>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: 12, color: '#1e293b' }}>2. Schedule a Consultation</h3>
+              <p style={{ color: '#64748b', marginBottom: 16 }}>
+                Book a free consultation with our experts to discuss your specific needs.
+              </p>
+              <Link href="/contact" style={{
+                background: '#3b82f6',
+                color: 'white',
+                padding: '8px 16px',
+                borderRadius: 6,
+                textDecoration: 'none',
+                fontSize: '0.9rem',
+                fontWeight: 600,
+                display: 'inline-block'
+              }}>
+                Schedule Call
+              </Link>
+            </div>
+            <div style={{ background: 'white', padding: 24, borderRadius: 12, border: '1px solid #e2e8f0' }}>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 600, marginBottom: 12, color: '#1e293b' }}>3. Get Your Quote</h3>
+              <p style={{ color: '#64748b', marginBottom: 16 }}>
+                Receive a detailed proposal tailored to your business requirements.
+              </p>
+              <Link href="/contact" style={{
+                background: '#3b82f6',
+                color: 'white',
+                padding: '8px 16px',
+                borderRadius: 6,
+                textDecoration: 'none',
+                fontSize: '0.9rem',
+                fontWeight: 600,
+                display: 'inline-block'
+              }}>
+                Request Quote
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <section style={{ background: '#dcfce7', padding: 32, borderRadius: 12, textAlign: 'center', border: '1px solid #22c55e' }}>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 16, color: '#1e293b' }}>
+            Ready for the Next Step?
+          </h2>
+          <p style={{ color: '#166534', marginBottom: 24, fontSize: '1.1rem' }}>
+            You're now ready to explore our services and start your digital transformation journey.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, justifyContent: 'center' }}>
+            <Link href="/services-catalog" style={{
+              background: '#22c55e',
+              color: 'white',
+              padding: '12px 24px',
+              borderRadius: 8,
+              textDecoration: 'none',
+              fontWeight: 600,
+              display: 'inline-block'
+            }}>
+              Browse Services
+            </Link>
+            <Link href="/contact" style={{
+              background: 'white',
+              color: '#22c55e',
+              padding: '12px 24px',
+              borderRadius: 8,
+              textDecoration: 'none',
+              fontWeight: 600,
+              display: 'inline-block',
+              border: '2px solid #22c55e'
+            }}>
+              Contact Our Team
+            </Link>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
