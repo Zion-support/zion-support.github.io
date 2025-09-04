@@ -1563,43 +1563,22 @@ export default function MicroSaaS() {
 
   const categories = [...new Set(microSaaSServices.map(service => service.category))];
 
+export default function MicroSaaS() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className="min-h-screen bg-gray-50">
       <Head>
-        <title>Micro SaaS Products — Zion Tech Group</title>
-        <meta name="description" content="Ready-to-deploy micro SaaS products including cloud cost optimization, document processing, API management, and more. Transform your business with innovative solutions." />
-        <link rel="canonical" href={`${contact.site}/micro-saas`} />
+        <title>Micro SaaS - Zion Tech Group</title>
+        <meta name="description" content="Scalable micro SaaS solutions for your business" />
       </Head>
 
-      <header className="py-20 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-          Micro SaaS Products
-        </h1>
-        <p className="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">
-          Ready-to-deploy SaaS solutions that solve real business problems. From cloud cost optimization 
-          to document processing, our micro SaaS products deliver immediate value with minimal setup time.
-        </p>
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
-          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
-          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Started</Link>
-        </div>
-      </header>
-
-      <main className="max-w-7xl mx-auto px-4 pb-24">
-        {/* Category Filter */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-center">Browse by Category</h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium transition-colors"
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Micro SaaS Solutions
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Scalable software-as-a-service solutions designed for rapid growth
+          </p>
         </div>
 
         {/* Services Grid */}
@@ -1667,29 +1646,45 @@ export default function MicroSaaS() {
                   </div>
                 </div>
               </div>
+=======
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="flex items-center mb-6">
+              <Zap className="h-8 w-8 text-blue-600 mr-4" />
+              <h3 className="text-2xl font-semibold text-gray-900">
+                Rapid Development
+              </h3>
             </div>
-          ))}
-        </div>
-
-        {/* CTA Section */}
-        <section className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8">
-            <h2 className="text-3xl font-bold mb-4">Ready to Deploy Your Micro SaaS Solution?</h2>
-            <p className="text-lg mb-6 max-w-2xl mx-auto">
-              Our micro SaaS products are designed for quick deployment and immediate value. 
-              Most solutions can be up and running within 1-4 weeks.
+            <p className="text-gray-600 mb-6">
+              Fast-track your SaaS product development with our proven methodologies.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Call {contact.phone}
-              </a>
-              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                Email {contact.email}
-              </a>
-            </div>
           </div>
-        </section>
-      </main>
+
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="flex items-center mb-6">
+              <Brain className="h-8 w-8 text-blue-600 mr-4" />
+              <h3 className="text-2xl font-semibold text-gray-900">
+                AI Integration
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Enhance your SaaS with intelligent features and automation.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <div className="flex items-center mb-6">
+              <TrendingUp className="h-8 w-8 text-blue-600 mr-4" />
+              <h3 className="text-2xl font-semibold text-gray-900">
+                Growth Analytics
+              </h3>
+            </div>
+            <p className="text-gray-600 mb-6">
+              Data-driven insights to scale your SaaS business effectively.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

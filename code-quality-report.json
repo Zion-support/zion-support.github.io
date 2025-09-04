@@ -1,5 +1,8 @@
 {
-  "timestamp": "2025-09-03T21:22:51.525Z",
+  "timestamp": "2025-09-03T16:46:24.457Z",
+=======
+  "timestamp": "2025-09-03T22:18:50.420Z",
+>>>>>>> 6d79891152b (Checkpoint before follow-up message)
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -63,6 +66,9 @@
     },
     "pages/_app.tsx": {
       "path": "pages/_app.tsx",
+      "issues": [],
+      "complexity": 1
+=======
       "lines": 215,
       "issues": [
         {
@@ -72,6 +78,7 @@
         }
       ],
       "complexity": 0
+>>>>>>> 6d79891152b (Checkpoint before follow-up message)
     },
     "pages/about.tsx": {
       "path": "pages/about.tsx",
@@ -233,9 +240,12 @@
     }
   },
   "summary": {
+    "averageComplexity": "1.06",
+=======
     "totalFiles": 28,
     "totalLines": 8473,
     "averageComplexity": "1.75",
+>>>>>>> 6d79891152b (Checkpoint before follow-up message)
     "issues": [
       {
         "file": "pages/404.tsx",
