@@ -44,7 +44,7 @@ Keyboard,              {/* Header */}
                   >
                     <Minus className="w-4 h-4 text-white"  />
                   </button>
-                  <span className="text-white font-mono min-w-[3rem] text-center">
+                  <span className="flex-1 text-center text-sm font-medium text-gray-900 dark:text-white">
                     {settings.fontSize}px
                   </span>
                   <button
@@ -77,6 +77,16 @@ Keyboard,              {/* Header */}
                     }`} />
                   </div>
                 </label>
+                <button
+                  onClick={() => updateSetting('highContrast', !settings.highContrast)}
+                  className={`w-10 h-6 rounded-full transition-colors ${
+                    settings.highContrast ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-600'
+                  }`}
+                >
+                  <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
+                    settings.highContrast ? 'translate-x-4' : 'translate-x-0'
+                  }`} />
+                </button>
               </div>
 
               {/* Reduced Motion Toggle */}
@@ -98,6 +108,16 @@ Keyboard,              {/* Header */}
                     }`} />
                   </div>
                 </label>
+                <button
+                  onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
+                  className={`w-10 h-6 rounded-full transition-colors ${
+                    settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-300 dark:bg-gray-600'
+                  }`}
+                >
+                  <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
+                    settings.reducedMotion ? 'translate-x-4' : 'translate-x-0'
+                  }`} />
+                </button>
               </div>
 
               {/* Theme Selection */}
@@ -107,7 +127,11 @@ Keyboard,              {/* Header */}
                   Theme
                 </label>
                 <div className="grid grid-cols-3 gap-2">
-                  {(['auto', 'light', 'dark'] as const).map((theme) => (
+                  {[
+                    { value: 'light', icon: Sun, label: 'Light' },
+                    { value: 'dark', icon: Moon, label: 'Dark' },
+                    { value: 'auto', icon: Settings, label: 'Auto' }
+                  ].map(({ value, icon: Icon, label }) => (
                     <button
                       key={theme}
                       onClick={() => updateSetting('theme', theme)}
@@ -170,7 +194,7 @@ Keyboard,              {/* Header */}
               {/* Reset Button */}
               <button
                 onClick={resetSettings}
-                className="w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium"
+                className="w-full px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
               >
                 Reset to Defaults
               </button>
