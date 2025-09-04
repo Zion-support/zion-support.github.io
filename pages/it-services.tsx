@@ -34,7 +34,9 @@ import {
   Brain,
   Sprout,
   Eye,
-  Bot
+  Bot,
+  DollarSign,
+  FileText
 } from 'lucide-react';
 
 const itServices = [
@@ -378,6 +380,132 @@ const itServices = [
     features: ['Threat Detection', 'Intelligence Feeds', 'Incident Response', 'Threat Hunting'],
     pricing: '$30,000 - $150,000/setup',
     category: 'Threat Intelligence',
+    popular: true
+  },
+  {
+    title: 'Edge AI Computing Infrastructure',
+    description: 'Edge computing solutions with AI processing capabilities for real-time applications.',
+    icon: Cpu,
+    features: ['Edge AI Processing', 'Low Latency', 'Real-time Inference', 'Distributed Learning'],
+    pricing: '$25,000 - $150,000/project',
+    category: 'Edge AI',
+    popular: true
+  },
+  {
+    title: 'Blockchain-as-a-Service (BaaS)',
+    description: 'Managed blockchain infrastructure with smart contract deployment and monitoring.',
+    icon: Server,
+    features: ['Blockchain Networks', 'Smart Contract Deployment', 'Node Management', 'Monitoring'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'Blockchain Services',
+    popular: true
+  },
+  {
+    title: 'IoT Device Management Platform',
+    description: 'Comprehensive IoT device lifecycle management with security and monitoring.',
+    icon: Smartphone,
+    features: ['Device Provisioning', 'Firmware Management', 'Security Monitoring', 'Analytics'],
+    pricing: '$5,000 - $30,000/setup',
+    category: 'IoT Management',
+    popular: true
+  },
+  {
+    title: 'Multi-Cloud Cost Optimization',
+    description: 'Intelligent cost optimization across multiple cloud providers with automated rightsizing.',
+    icon: DollarSign,
+    features: ['Cost Analysis', 'Auto Rightsizing', 'Reserved Instances', 'Spot Instance Management'],
+    pricing: '$3,000 - $20,000/month',
+    category: 'Cloud Optimization',
+    popular: true
+  },
+  {
+    title: 'AI-Powered IT Service Desk',
+    description: 'Intelligent IT service desk with AI-powered ticket routing and resolution.',
+    icon: Bot,
+    features: ['AI Ticket Routing', 'Automated Resolution', 'Knowledge Base', 'Predictive Analytics'],
+    pricing: '$10,000 - $50,000/setup',
+    category: 'AI Service Desk',
+    popular: true
+  },
+  {
+    title: 'Quantum Computing Integration',
+    description: 'Integration services for quantum computing applications and hybrid quantum-classical systems.',
+    icon: Cpu,
+    features: ['Quantum Algorithm Development', 'Hybrid Systems', 'Quantum Simulation', 'Performance Optimization'],
+    pricing: '$50,000 - $500,000/project',
+    category: 'Quantum Computing',
+    popular: true
+  },
+  {
+    title: '5G Private Network Solutions',
+    description: 'Private 5G network deployment for enterprise applications and IoT connectivity.',
+    icon: Wifi,
+    features: ['Private 5G Core', 'Network Slicing', 'Edge Integration', 'Security Management'],
+    pricing: '$100,000 - $1,000,000/project',
+    category: '5G Private Networks',
+    popular: true
+  },
+  {
+    title: 'Hyperconverged Infrastructure (HCI)',
+    description: 'Software-defined infrastructure combining compute, storage, and networking.',
+    icon: Server,
+    features: ['Unified Management', 'Auto-scaling', 'Disaster Recovery', 'Cost Optimization'],
+    pricing: '$30,000 - $200,000/project',
+    category: 'HCI',
+    popular: true
+  },
+  {
+    title: 'AI Model Governance Platform',
+    description: 'Comprehensive AI model lifecycle management with governance and compliance.',
+    icon: Brain,
+    features: ['Model Registry', 'Version Control', 'Compliance Monitoring', 'Performance Tracking'],
+    pricing: '$15,000 - $100,000/setup',
+    category: 'AI Governance',
+    popular: true
+  },
+  {
+    title: 'Zero-Trust Network Access (ZTNA)',
+    description: 'Secure remote access solution based on zero-trust principles.',
+    icon: Lock,
+    features: ['Identity Verification', 'Device Trust', 'Application Access', 'Continuous Monitoring'],
+    pricing: '$20,000 - $120,000/setup',
+    category: 'Zero Trust',
+    popular: true
+  },
+  {
+    title: 'Data Fabric Architecture',
+    description: 'Unified data management platform with intelligent data integration and governance.',
+    icon: Database,
+    features: ['Data Integration', 'Metadata Management', 'Data Lineage', 'Self-service Analytics'],
+    pricing: '$40,000 - $300,000/project',
+    category: 'Data Fabric',
+    popular: true
+  },
+  {
+    title: 'Cloud-Native Security Platform',
+    description: 'Comprehensive security solution for cloud-native applications and containers.',
+    icon: Shield,
+    features: ['Container Security', 'Runtime Protection', 'Vulnerability Scanning', 'Compliance Monitoring'],
+    pricing: '$25,000 - $150,000/setup',
+    category: 'Cloud Security',
+    popular: true
+  },
+  {
+    title: 'Intelligent Document Processing Platform',
+    description: 'AI-powered document processing and workflow automation platform.',
+    icon: FileText,
+    features: ['OCR Processing', 'Data Extraction', 'Workflow Automation', 'Integration APIs'],
+    pricing: '$10,000 - $60,000/setup',
+    category: 'Document Processing',
+    popular: true
+  },
+  {
+    title: 'Real-Time Data Streaming Platform',
+    description: 'High-performance data streaming platform for real-time analytics and processing.',
+    icon: Network,
+    features: ['Stream Processing', 'Real-time Analytics', 'Event Sourcing', 'Scalable Architecture'],
+    pricing: '$20,000 - $120,000/setup',
+    category: 'Data Streaming',
     popular: true
   }
 ];

@@ -198,9 +198,9 @@ export default function HomePage() {
             >
               <h3 className="text-xl font-bold text-gray-900 mb-4">🚀 Innovation Focus</h3>
               <ul className="text-gray-600 space-y-2">
-                <li>• 50+ cutting-edge services</li>
-                <li>• AI, Blockchain, IoT expertise</li>
-                <li>• Quantum computing solutions</li>
+                <li>• 100+ cutting-edge services</li>
+                <li>• AI, Blockchain, IoT, Edge Computing expertise</li>
+                <li>• Quantum computing & 5G solutions</li>
                 <li>• Future-ready technology stack</li>
               </ul>
             </motion.div>

@@ -41,7 +41,8 @@ import {
   Sprout,
   Mail,
   ShoppingCart,
-  BookOpen
+  BookOpen,
+  Package
 } from 'lucide-react';
 
 const aiServices = [
@@ -378,6 +379,132 @@ const aiServices = [
     features: ['Failure Prediction', 'Maintenance Scheduling', 'Performance Optimization', 'Cost Reduction'],
     pricing: '$15,000 - $100,000/setup',
     category: 'Industrial AI',
+    popular: true
+  },
+  {
+    title: 'Large Language Model (LLM) Integration Platform',
+    description: 'Enterprise-grade LLM integration with custom fine-tuning and deployment capabilities.',
+    icon: Brain,
+    features: ['Custom Fine-tuning', 'API Management', 'Cost Optimization', 'Security Controls'],
+    pricing: '$2,000 - $15,000/month',
+    category: 'LLM Services',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Code Generation Assistant',
+    description: 'Advanced AI code generation with context awareness and best practices enforcement.',
+    icon: Code,
+    features: ['Code Generation', 'Bug Fixing', 'Documentation', 'Testing'],
+    pricing: '$500 - $3,000/month',
+    category: 'Developer AI',
+    popular: true
+  },
+  {
+    title: 'AI Computer Vision for Manufacturing',
+    description: 'Advanced computer vision solutions for quality control and process optimization.',
+    icon: Eye,
+    features: ['Defect Detection', 'Quality Control', 'Process Monitoring', 'Real-time Alerts'],
+    pricing: '$10,000 - $75,000/setup',
+    category: 'Computer Vision',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Voice Cloning & Synthesis',
+    description: 'High-quality voice cloning and text-to-speech with emotional expression.',
+    icon: Mic,
+    features: ['Voice Cloning', 'Emotional Synthesis', 'Multi-language Support', 'Real-time Processing'],
+    pricing: '$1,000 - $8,000/month',
+    category: 'Voice AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Data Labeling Platform',
+    description: 'Automated data labeling and annotation for machine learning model training.',
+    icon: Target,
+    features: ['Auto Labeling', 'Quality Assurance', 'Human-in-the-loop', 'Multi-modal Support'],
+    pricing: '$0.10 - $1.00 per label',
+    category: 'Data Services',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Customer Onboarding',
+    description: 'Intelligent customer onboarding with personalized experiences and automation.',
+    icon: Users,
+    features: ['Personalized Flows', 'Document Processing', 'Risk Assessment', 'Automated Approvals'],
+    pricing: '$2,000 - $12,000/setup',
+    category: 'Customer Experience',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Inventory Optimization',
+    description: 'Smart inventory management with demand forecasting and automated reordering.',
+    icon: Package,
+    features: ['Demand Forecasting', 'Stock Optimization', 'Supplier Integration', 'Cost Reduction'],
+    pricing: '$1,500 - $10,000/month',
+    category: 'Supply Chain AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Content Moderation',
+    description: 'Advanced content moderation using AI for text, images, and video content.',
+    icon: Shield,
+    features: ['Multi-modal Detection', 'Custom Rules', 'Real-time Processing', 'Human Review'],
+    pricing: '$0.01 - $0.05 per piece',
+    category: 'Content Safety',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Sales Forecasting',
+    description: 'Intelligent sales forecasting with market analysis and trend prediction.',
+    icon: TrendingUp,
+    features: ['Sales Prediction', 'Market Analysis', 'Lead Scoring', 'Revenue Optimization'],
+    pricing: '$1,000 - $8,000/month',
+    category: 'Sales AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Medical Imaging Analysis',
+    description: 'Advanced medical imaging analysis with AI-powered diagnosis assistance.',
+    icon: Eye,
+    features: ['Image Analysis', 'Diagnosis Support', 'Report Generation', 'Integration APIs'],
+    pricing: '$5,000 - $50,000/setup',
+    category: 'Medical AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Email Intelligence',
+    description: 'Smart email management with automated responses and priority classification.',
+    icon: Mail,
+    features: ['Auto Responses', 'Priority Classification', 'Sentiment Analysis', 'Spam Detection'],
+    pricing: '$200 - $1,500/month',
+    category: 'Communication AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Process Mining',
+    description: 'Intelligent process analysis and optimization using AI and machine learning.',
+    icon: Network,
+    features: ['Process Discovery', 'Bottleneck Analysis', 'Optimization Suggestions', 'Compliance Monitoring'],
+    pricing: '$3,000 - $20,000/setup',
+    category: 'Process Intelligence',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Knowledge Management',
+    description: 'Intelligent knowledge base with automated content organization and search.',
+    icon: BookOpen,
+    features: ['Auto Categorization', 'Smart Search', 'Content Generation', 'Expert System'],
+    pricing: '$1,000 - $8,000/month',
+    category: 'Knowledge AI',
+    popular: true
+  },
+  {
+    title: 'AI-Powered Real Estate Valuation',
+    description: 'Automated property valuation using AI and market data analysis.',
+    icon: Building,
+    features: ['Property Analysis', 'Market Comparison', 'Price Prediction', 'Investment Insights'],
+    pricing: '$500 - $3,000/month',
+    category: 'Real Estate AI',
     popular: true
   }
 ];
