@@ -97,10 +97,10 @@ export default function Marketplace() {
       </Head>
 
       <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+        <div style={{ maxWidth: 1200, margin: '40px 20px', padding: '0 20px' }}>
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <h1 style={{ 
-              fontSize: '3rem',
+              fontSize: '3rem', 
               fontWeight: 800, 
               marginBottom: 20,
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
@@ -136,12 +136,13 @@ export default function Marketplace() {
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
-                }}>
+                }}
+              >
                   <div style={{ marginBottom: 15 }}>
                     <span style={{
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      color: 'white',
-                      padding: '6px 12px',
+                      background: 'white',
+                      color: '#3b82f6',
+                      padding: '8px 16px',
                       borderRadius: 20,
                       fontSize: '0.9rem',
                       fontWeight: 600
@@ -150,18 +151,13 @@ export default function Marketplace() {
                     </span>
                   </div>
                   
-                  <h3 style={{ 
-                    fontSize: '1.5rem', 
-                    fontWeight: 700, 
-                    marginBottom: 15,
-                    lineHeight: '1.3'
-                  }}>
+                  <h3 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 15, lineHeight: '1.3' }}>
                     {item.name}
                   </h3>
                   
                   <p style={{ 
                     color: '#94a3b8',
-                    marginBottom: 20, 
+                    marginBottom: 20,
                     lineHeight: '1.6',
                     fontSize: '1rem'
                   }}>

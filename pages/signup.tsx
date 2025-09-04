@@ -62,12 +62,7 @@ export default function Signup() {
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ 
-        minHeight: '100vh', 
-        background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', 
-        color: 'white',
-        padding: '40px 20px'
-      }}>
+      <div style={{ minHeight: '100vh', background: 'white', padding: '40px 20px' }}>
         <div style={{ maxWidth: 500, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: 40 }}>
             <h1 style={{ 

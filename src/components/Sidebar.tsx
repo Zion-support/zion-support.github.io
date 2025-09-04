@@ -1,24 +1,21 @@
 import React from 'react';
-import Link from 'next/link';
+import { NavLink } from 'react-router-dom';
 
-export function Sidebar() {
+const linkBase = 'block px-3 py-2 rounded-md text-sm font-medium';
+
+export default function Sidebar() {
   return (
-    <aside style={{ padding: 16, borderRight: '1px solid #e2e8f0', minWidth: 220 }}>
-      <nav>
-        <h4 style={{ marginTop: 0 }}>Explore</h4>
-        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 8 }}>
-          <li><Link href="/solutions">Solutions</Link></li>
-          <li><Link href="/ai-services">AI & Analytics</Link></li>
-          <li><Link href="/cybersecurity">Cybersecurity</Link></li>
-          <li><Link href="/cloud-devops">Cloud & DevOps</Link></li>
-          <li><Link href="/micro-saas">Micro SaaS</Link></li>
-          <li><Link href="/marketplace">Marketplace</Link></li>
-          <li><Link href="/green-it">Green IT</Link></li>
-        </ul>
-      </nav>
+    <aside className="w-full md:w-60 shrink-0 border-r border-gray-200 bg-white">
+      <div className="p-4">
+        <h3 className="text-sm font-semibold text-gray-700 mb-3">Explore</h3>
+        <nav className="space-y-1">
+          <NavLink to="/services" className={({isActive}) => `${linkBase} ${isActive ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-50'}`}>All Services</NavLink>
+          <NavLink to="/solutions" className={({isActive}) => `${linkBase} ${isActive ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-50'}`}>Solutions</NavLink>
+          <NavLink to="/pricing" className={({isActive}) => `${linkBase} ${isActive ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-50'}`}>Pricing</NavLink>
+          <NavLink to="/contact" className={({isActive}) => `${linkBase} ${isActive ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-50'}`}>Contact</NavLink>
+        </nav>
+      </div>
     </aside>
   );
 }
-
-export default Sidebar;
 

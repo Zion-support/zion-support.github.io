@@ -4,12 +4,9 @@
   command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+## Removed SPA-style redirect to preserve Next.js routing on Netlify
 
 [[headers]]
   for = "/*"

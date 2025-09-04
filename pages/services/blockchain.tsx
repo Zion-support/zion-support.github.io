@@ -2,153 +2,138 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Blockchain() {
+  const contact = { 
+    phone: '+1 302 464 0950', 
+    email: 'kleber@ziontechgroup.com', 
+    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    site: 'https://ziontechgroup.com' 
+  };
+
   return (
     <>
       <Head>
-        <title>Blockchain Services - Zion Tech Group | Secure Decentralized Solutions</title>
-        <meta name="description" content="Leverage blockchain technology for secure, transparent, and decentralized solutions. Smart contracts, DeFi, NFTs, and enterprise blockchain development." />
-        <meta name="keywords" content="blockchain, smart contracts, DeFi, NFTs, cryptocurrency, decentralized applications, enterprise blockchain" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/blockchain" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
-        {/* Open Graph */}
-        <meta property="og:title" content="Blockchain Services - Zion Tech Group | Secure Decentralized Solutions" />
-        <meta property="og:description" content="Leverage blockchain technology for secure, transparent, and decentralized solutions." />
-        <meta property="og:url" content="https://ziontechgroup.com/services/blockchain" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Blockchain Services - Zion Tech Group | Secure Decentralized Solutions" />
-        <meta name="twitter:description" content="Leverage blockchain technology for secure, transparent, and decentralized solutions." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+        <title>Blockchain Services - Zion Tech Group</title>
+        <meta name="description" content="Secure blockchain solutions and decentralized applications for modern businesses." />
+        <link rel="canonical" href={`${contact.site}/services/blockchain`} />
       </Head>
-      
-      <div className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <header className="bg-white shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center py-6">
-              <div className="flex items-center">
-                <Link href="/" className="text-2xl font-bold text-blue-600">
-                  Zion Tech Group
-                </Link>
-              </div>
-              <nav className="hidden md:flex space-x-8">
-                <Link href="/" className="text-gray-700 hover:text-blue-600">Home</Link>
-                <Link href="/services" className="text-gray-700 hover:text-blue-600">Services</Link>
-                <Link href="/about" className="text-gray-700 hover:text-blue-600">About</Link>
-                <Link href="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
-              </nav>
-            </div>
-          </div>
-        </header>
 
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <div style={{ 
+        minHeight: '100vh', 
+        background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', 
+        color: 'white' 
+      }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
+          <div style={{ textAlign: 'center', marginBottom: 60 }}>
+            <h1 style={{ 
+              fontSize: '3rem', 
+              fontWeight: 800, 
+              marginBottom: 20,
+              background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>
               Blockchain Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Build secure, transparent, and decentralized solutions with our comprehensive blockchain development services.
+            <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: 600, margin: '0 auto' }}>
+              Secure Decentralized Solutions for the Future
             </p>
           </div>
-        </section>
 
-        {/* Services Overview */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Blockchain Solutions
-              </h2>
-              <p className="text-xl text-gray-600">
-                Comprehensive blockchain development services for modern businesses.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-4xl mb-4">🔗</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Smart Contracts</h3>
-                <p className="text-gray-600">Automated, self-executing contracts with built-in business logic and security.</p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-4xl mb-4">🏦</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">DeFi Solutions</h3>
-                <p className="text-gray-600">Decentralized finance applications for lending, trading, and yield farming.</p>
-              </div>
-              
-              <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-4xl mb-4">🎨</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">NFT Platforms</h3>
-                <p className="text-gray-600">Non-fungible token marketplaces and digital asset management systems.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          <div style={{ 
+            background: 'rgba(255, 255, 255, 0.05)', 
+            borderRadius: 12, 
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            padding: 40,
+            marginBottom: 40
+          }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20, textAlign: 'center' }}>
               Ready to Build on the Blockchain?
             </h2>
-            <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let our blockchain experts help you create secure, decentralized solutions.
+            <p style={{ color: '#94a3b8', marginBottom: 30, textAlign: 'center', maxWidth: 600, margin: '0 auto 30px' }}>
+              Let our blockchain experts help you create secure decentralized solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+            <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <button style={{
+                background: 'white',
+                color: '#3b82f6',
+                padding: '12px 24px',
+                borderRadius: 8,
+                border: 'none',
+                fontSize: '1rem',
+                fontWeight: 600,
+                cursor: 'pointer'
+              }}>
                 Get Started
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-colors">
+              <button style={{
+                background: 'transparent',
+                color: 'white',
+                padding: '12px 24px',
+                borderRadius: 8,
+                border: '2px solid white',
+                fontSize: '1rem',
+                fontWeight: 600,
+                cursor: 'pointer'
+              }}>
                 Learn More
               </button>
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <footer style={{ 
+          background: '#1f2937', 
+          color: 'white', 
+          padding: '48px 0',
+          marginTop: 60
+        }}>
+          <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 20px' }}>
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
+              gap: 32,
+              marginBottom: 32
+            }}>
               <div>
-                <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-                <p className="text-gray-400">
+                <h3 style={{ fontSize: '1.125rem', fontWeight: 600, marginBottom: 16 }}>Zion Tech Group</h3>
+                <p style={{ color: '#9ca3af' }}>
                   Leading provider of innovative technology solutions and services.
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold mb-4">Services</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/services" className="hover:text-white">All Services</Link></li>
-                  <li><Link href="/ai-services" className="hover:text-white">AI Services</Link></li>
-                  <li><Link href="/micro-saas" className="hover:text-white">Micro SaaS</Link></li>
-                  <li><Link href="/it-services" className="hover:text-white">IT Services</Link></li>
+                <h4 style={{ fontWeight: 600, marginBottom: 16 }}>Services</h4>
+                <ul style={{ listStyle: 'none', padding: 0, color: '#9ca3af' }}>
+                  <li style={{ marginBottom: 8 }}><Link href="/services" style={{ color: '#9ca3af', textDecoration: 'none' }}>All Services</Link></li>
+                  <li style={{ marginBottom: 8 }}><Link href="/ai-services" style={{ color: '#9ca3af', textDecoration: 'none' }}>AI Services</Link></li>
+                  <li style={{ marginBottom: 8 }}><Link href="/micro-saas" style={{ color: '#9ca3af', textDecoration: 'none' }}>Micro SaaS</Link></li>
+                  <li style={{ marginBottom: 8 }}><Link href="/it-services" style={{ color: '#9ca3af', textDecoration: 'none' }}>IT Services</Link></li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-4">Company</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/about" className="hover:text-white">About Us</Link></li>
-                  <li><Link href="/team" className="hover:text-white">Team</Link></li>
-                  <li><Link href="/careers" className="hover:text-white">Careers</Link></li>
-                  <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
+                <h4 style={{ fontWeight: 600, marginBottom: 16 }}>Company</h4>
+                <ul style={{ listStyle: 'none', padding: 0, color: '#9ca3af' }}>
+                  <li style={{ marginBottom: 8 }}><Link href="/about" style={{ color: '#9ca3af', textDecoration: 'none' }}>About Us</Link></li>
+                  <li style={{ marginBottom: 8 }}><Link href="/team" style={{ color: '#9ca3af', textDecoration: 'none' }}>Team</Link></li>
+                  <li style={{ marginBottom: 8 }}><Link href="/careers" style={{ color: '#9ca3af', textDecoration: 'none' }}>Careers</Link></li>
+                  <li style={{ marginBottom: 8 }}><Link href="/contact" style={{ color: '#9ca3af', textDecoration: 'none' }}>Contact</Link></li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-4">Resources</h4>
-                <ul className="space-y-2 text-gray-400">
-                  <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-                  <li><Link href="/docs" className="hover:text-white">Documentation</Link></li>
-                  <li><Link href="/faq" className="hover:text-white">FAQ</Link></li>
-                  <li><Link href="/help" className="hover:text-white">Help Center</Link></li>
+                <h4 style={{ fontWeight: 600, marginBottom: 16 }}>Resources</h4>
+                <ul style={{ listStyle: 'none', padding: 0, color: '#9ca3af' }}>
+                  <li style={{ marginBottom: 8 }}><Link href="/blog" style={{ color: '#9ca3af', textDecoration: 'none' }}>Blog</Link></li>
+                  <li style={{ marginBottom: 8 }}><Link href="/docs" style={{ color: '#9ca3af', textDecoration: 'none' }}>Documentation</Link></li>
+                  <li style={{ marginBottom: 8 }}><Link href="/faq" style={{ color: '#9ca3af', textDecoration: 'none' }}>FAQ</Link></li>
+                  <li style={{ marginBottom: 8 }}><Link href="/help" style={{ color: '#9ca3af', textDecoration: 'none' }}>Help Center</Link></li>
                 </ul>
               </div>
             </div>
-            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <div style={{ 
+              borderTop: '1px solid #374151', 
+              paddingTop: 32, 
+              textAlign: 'center', 
+              color: '#9ca3af' 
+            }}>
               <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
             </div>
           </div>

@@ -393,7 +393,7 @@ func main() {
             <p style={{ opacity: '0.8', marginBottom: 20 }}>Ready to start using our SDKs? Follow these steps:</p>
             
             <div style={{ display: 'grid', gap: 16 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(255,255,255,0.05)', borderRadius: 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(59, 130, 246, 0.1)', borderRadius: 8 }}>
                 <div style={{ fontSize: '1.5rem' }}>1️⃣</div>
                 <div>
                   <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Get Your API Key</h3>
@@ -401,7 +401,7 @@ func main() {
                 </div>
               </div>
               
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(255,255,255,0.05)', borderRadius: 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(59, 130, 246, 0.1)', borderRadius: 8 }}>
                 <div style={{ fontSize: '1.5rem' }}>2️⃣</div>
                 <div>
                   <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Install the SDK</h3>
@@ -409,7 +409,7 @@ func main() {
                 </div>
               </div>
               
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(255,255,255,0.05)', borderRadius: 8 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 16, background: 'rgba(59, 130, 246, 0.1)', borderRadius: 8 }}>
                 <div style={{ fontSize: '1.5rem' }}>3️⃣</div>
                 <div>
                   <h3 style={{ fontWeight: 600, marginBottom: 4 }}>Start Building</h3>
@@ -427,11 +427,11 @@ func main() {
               <Link href="/contact" style={{ 
                 display: 'inline-block',
                 padding: '12px 24px',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
                 color: 'white',
                 textDecoration: 'none',
                 borderRadius: 8,
-                fontWeight: '600'
+                fontWeight: 600
               }}>
                 Contact Support
               </Link>
@@ -442,8 +442,8 @@ func main() {
                 color: 'white',
                 textDecoration: 'none',
                 borderRadius: 8,
-                border: '1px solid rgba(255,255,255,0.2)',
-                fontWeight: '600'
+                border: '2px solid rgba(255, 255, 255, 0.3)',
+                fontWeight: 600
               }}>
                 View Examples
               </Link>
