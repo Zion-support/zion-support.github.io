@@ -1308,7 +1308,6 @@ export default function MicroSaaS() {
         'No-code automation capabilities'
       ],
       category: 'Workflow Automation'
->>>>>>> origin/cursor/add-new-services-and-advertise-them-1114
     }
   ];
 
