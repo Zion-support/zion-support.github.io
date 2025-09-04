@@ -374,7 +374,7 @@ class SyntaxErrorFixer {
   }
 
   fixUnterminatedStrings(content, fixes) {
-    let fixed = content;
+    const fixed = content;
     
     // Fix single quotes
     const singleQuoteMatches = fixed.match(/'[^']*$/gm);
@@ -413,7 +413,7 @@ class SyntaxErrorFixer {
   }
 
   fixUnterminatedComments(content, fixes) {
-    let fixed = content;
+    const fixed = content;
     
     // Find lines with unterminated block comments
     const lines = fixed.split('\n');
@@ -442,7 +442,7 @@ class SyntaxErrorFixer {
   }
 
   fixMissingSemicolons(content, fixes) {
-    let fixed = content;
+    const fixed = content;
     
     // Fix missing semicolons after statements
     const lines = fixed.split('\n');

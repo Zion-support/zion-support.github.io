@@ -7,24 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "prebuild": "echo \"Starting build...\"",
-<<<<<<< HEAD
     "export": "vite build",
     "start": "vite preview --port 4173",
     "postbuild": "echo \"Build completed\"",
-    "lint": "echo 'Linting skipped - ESLint configuration needs fixing'",
-    "lint:fix": "echo 'Linting skipped - ESLint configuration needs fixing'",
+    "lint": "eslint automation --ext .ts,.tsx,.js,.jsx --max-warnings 0 --no-error-on-unmatched-pattern",
+    "lint:fix": "eslint automation --ext .ts,.tsx,.js,.jsx --fix --no-error-on-unmatched-pattern",
     "type-check": "tsc --noEmit",
-=======
-    "export": "next export",
-    "start": "next start",
-    "postbuild": "echo \"Build completed\"",
-    "lint": "eslint . --fix -f junit -o eslint-report.xml",
-    "lint:fix": "eslint . --fix",
-    "check": "npm run lint && npm test",
-    "precommit": "npm run check",
-    "type-check": "tsc --noEmit -p tsconfig.ci.json",
->>>>>>> merge-all-prs-20250904-105408
     "clean": "rm -rf .next out dist",
+    "check": "npm run lint && npm run type-check && npm run test:smoke",
+    "precommit": "npm run check",
     "prepare": "echo 'Husky prepare script disabled'",
     "autonomous": "node automation/launch-enhanced-autonomous-system.js",
     "autonomous:dev": "nodemon automation/launch-enhanced-autonomous-system.js",
@@ -158,20 +149,11 @@
     "perf:monitor": "node scripts/performance-monitor.js",
     "perf:audit": "npm run perf:monitor",
     "perf:lighthouse": "lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merge-all-prs-20250904-105408
     "format": "prettier --write .",
     "automation:accessibility": "node automation/accessibility-checker.cjs",
     "automation:security-audit": "node automation/security-audit.cjs",
-    "automation:code-quality-legacy": "node automation/code-quality.cjs",
     "format:check": "prettier --check .",
-<<<<<<< HEAD
-    "test": "jest --config jest.config.cjs",
-=======
     "test": "jest --config jest.config.ts",
->>>>>>> merge-all-prs-20250904-105408
     "test:smoke": "jest --config jest.config.ts",
     "ci:full": "bash scripts/comprehensive-build-test.sh",
     "ci:auto": "npm ci && npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
@@ -186,48 +168,23 @@
     "automation:performance": "node automation/performance-optimizer.cjs",
     "automation:seo": "node automation/seo-optimizer.cjs",
     "automation:health": "node automation/health-check.cjs",
-    "automation:security": "node automation/security-scanner.cjs"
-<<<<<<< HEAD
+    "automation:security": "node automation/security-scanner.cjs",
+    "optimize:performance": "node scripts/performance-optimizer.cjs",
+    "monitor:health": "node scripts/health-monitor-enhanced.cjs",
+    "audit:security": "node scripts/security-audit-enhanced.cjs",
+    "optimize:ux": "node scripts/ux-optimizer.cjs",
+    "improve:all": "npm run optimize:performance && npm run monitor:health && npm run audit:security && npm run optimize:ux"
+  },
+  "pm2": {
+    "ecosystem": "ecosystem.maintenance.cjs"
   },
   "dependencies": {
-    "class-variance-authority": "^0.7.1",
-<<<<<<< HEAD
-    "clsx": "^2.1.1",
-    "framer-motion": "^10.16.4",
-    "i18next": "^25.4.2",
-    "lucide-react": "^0.294.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^15.7.3",
-    "react-router-dom": "^6.20.0",
-    "tailwind-merge": "^3.3.1"
-=======
-=======
-=======
-    "clean": "rm -rf .next out dist",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "build:production": "NODE_ENV=production npm run build",
-    "dev:fast": "npm run dev",
-    "lint:check": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0"
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
-  },
-  "dependencies": {
-    "@google-analytics/data": "^5.2.0",
-    "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
-<<<<<<< HEAD
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
-=======
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -253,8 +210,6 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-toggle-group": "^1.0.4",
-    "@radix-ui/react-tooltip": "^1.0.7",
-<<<<<<< HEAD
     "@reduxjs/toolkit": "^2.8.2",
     "@stripe/stripe-js": "^2.3.0",
     "@supabase/ssr": "^0.6.1",
@@ -263,33 +218,20 @@
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.85.5",
+    "@types/mongodb": "^4.0.6",
+    "@types/react": "17.0.88",
     "@types/react-datepicker": "^6.2.0",
     "@types/react-dom": "17.0.26",
-=======
-    "@reduxjs/toolkit": "^2.9.0",
-    "@supabase/supabase-js": "^2.39.0",
-    "@tanstack/react-query": "^5.85.9",
-    "@types/react-datepicker": "^6.2.0",
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "cheerio": "^1.1.2",
     "chokidar": "^4.0.3",
     "class-variance-authority": "^0.7.1",
-<<<<<<< HEAD
->>>>>>> merge-all-prs-20250904-105408
     "clsx": "^2.0.0",
     "critters": "^0.0.23",
     "cron-parser": "^5.3.0",
     "events": "^3.3.0",
     "framer-motion": "^10.16.16",
-<<<<<<< HEAD
-=======
-=======
-    "cron-parser": "^5.3.0",
-    "framer-motion": "^12.23.12",
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
->>>>>>> merge-all-prs-20250904-105408
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
     "glob": "^11.0.3",
@@ -301,34 +243,20 @@
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
-<<<<<<< HEAD
     "postcss-preset-env": "^10.3.1",
-    "prettier": "^3.0.3",
-=======
-    "postcss": "^8.4.32",
-<<<<<<< HEAD
-    "postcss-preset-env": "^10.3.1",
-    "prettier": "^3.0.3",
-=======
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
->>>>>>> merge-all-prs-20250904-105408
     "react": "^18.3.1",
-    "react-datepicker": "^8.4.0",
     "react-dom": "^18.3.1",
     "react-error-boundary": "^6.0.0",
     "react-helmet-async": "^2.0.5",
-<<<<<<< HEAD
+    "react-hook-form": "^7.62.0",
+    "react-hot-toast": "^2.6.0",
+    "react-is": "^19.1.1",
     "react-router-dom": "^7.8.2",
-=======
-<<<<<<< HEAD
->>>>>>> merge-all-prs-20250904-105408
     "sharp": "^0.34.3",
     "tailwind-merge": "^3.3.1",
-    
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0",
     "web-vitals": "^5.1.0"
-<<<<<<< HEAD
   },
   "optionalDependencies": {
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
@@ -336,32 +264,15 @@
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1"
->>>>>>> origin/main
   },
   "devDependencies": {
     "@babel/plugin-transform-class-properties": "^7.27.1",
     "@babel/preset-env": "^7.28.3",
     "@babel/preset-react": "^7.27.1",
     "@babel/preset-typescript": "^7.27.1",
-<<<<<<< HEAD
     "@esbuild/linux-x64": "^0.25.9",
-=======
->>>>>>> origin/main
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^8.57.1",
-=======
-=======
-    "react-redux": "^9.2.0",
-    "react-router-dom": "^6.8.0",
-    "tailwind-merge": "^3.3.1",
-    "tailwindcss-animate": "^1.0.7",
-    "uuid": "^11.1.0"
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.34.0",
-<<<<<<< HEAD
->>>>>>> merge-all-prs-20250904-105408
     "@netlify/plugin-nextjs": "^5.12.1",
     "@next/bundle-analyzer": "^13.5.6",
     "@next/eslint-plugin-next": "^14.2.32",
@@ -378,8 +289,8 @@
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
-    "esbuild": "0.25.9",
     "autoprefixer": "^10.4.16",
+    "esbuild": "0.25.9",
     "eslint": "^9.34.0",
     "eslint-config-next": "^14.2.32",
     "eslint-formatter-junit": "^8.40.0",
@@ -399,36 +310,8 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
-<<<<<<< HEAD
-    "typescript": "^5.9.2",
-    "vite": "^7.1.4",
-    "@vitejs/plugin-react": "^5.0.2"
-=======
-    "typescript": "5.9.2",
-    "vite": "^5.4.19"
-=======
-    "@rollup/rollup-linux-x64-gnu": "^4.50.0",
-    "@testing-library/jest-dom": "^6.6.4",
-    "@testing-library/react": "^16.3.0",
-    "@types/node": "^24.3.0",
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.1",
-    "@typescript-eslint/eslint-plugin": "^8.42.0",
-    "@typescript-eslint/parser": "^8.42.0",
-    "@vitejs/plugin-react": "^5.0.2",
-    "eslint": "^9.34.0",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "husky": "^9.1.7",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.4.0",
-    "terser": "^5.44.0",
-    "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
     "vite": "^7.1.4"
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
->>>>>>> merge-all-prs-20250904-105408
   },
   "engines": {
     "node": ">=18.0.0",

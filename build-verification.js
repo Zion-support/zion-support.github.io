@@ -1,6 +1,6 @@
-/* eslint-disable no-console, no-undef, no-unused-vars */ // Build Verification Script;
+  // Build Verification Script;
 // This script checks if our components can be imported without syntax errors;
-/* eslint-disable no-console, no-undef, no-unused-vars */ console.log(
+/* eslint-disable no-undef */ console.log(
   '🔍 Starting build verification...'
 );
 try {
