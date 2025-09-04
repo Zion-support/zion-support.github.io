@@ -654,6 +654,5 @@ export function AdvancedPerformanceMonitor() {
         )}
       </div>
     </div>
-  );
-}
+  );}
 "export default ComponentName;"

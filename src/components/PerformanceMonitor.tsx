@@ -2,8 +2,8 @@ import React, { useEffect, useState, useCallback } from 'react';
 export const PerformanceMonitor: Reac t.FC < PerformanceMonitorProps> = ({
 export default PerformanceMonitor;
 import { motion, AnimatePresence  } from 'framer-motion';
-useEffect(() => {
-// TODO: Add dependencies if needed
+  useEffect(() => {
+  // TODO: Add dependencies if needed
 
   return () => {
     // Cleanup function

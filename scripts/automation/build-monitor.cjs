@@ -24,8 +24,7 @@ class BuildMonitor {
 
   ensureDirectories() {
     if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-}
+      fs.mkdirSync(this.logDir, { recursive: true });    }
   }
 ;
   async checkBuildHealth() {
@@ -302,8 +301,7 @@ setupSignalHandlers() {
         // Wait before retrying
         await new Promise(resolve => setTimeout(resolve, 60000)); // 1 minute
       }
-    }
-}
+    }  }
 
   shutdown() {
     this.log('info', 'Shutting down Build Monitor...');

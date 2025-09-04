@@ -238,6 +238,93 @@ const MainSidebar: Reac t.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </Link>
             ))}
           </div>
+        )}
+      </div>
+    );
+  };
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-y-0 left-0 z-50 w-80 bg-gray-900 border-r border-gray-800 overflow-y-auto">
+      <div className="flex flex-col h-full">
+        {/* Header */}
+        <div className="flex items-center justify-between p-6 border-b border-gray-800">
+          <div className="flex items-center space-x-3">
+            <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <h2 className="text-lg font-bold text-white">Zion Tech</h2>
+              <p className="text-xs text-gray-400">Navigation</p>
+            </div>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-2 text-gray-400 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Main Navigation */}
+        <div className="flex-1 p-6">
+          <div className="space-y-6">
+            {/* Main Pages */}
+            <div className="space-y-1">
+              <h3 className="px-3 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                Main Pages
+              </h3>
+              {navigation.main.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={onClose}
+                  className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${
+                    isActive(item.href)
+                      ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan'
+                      : 'text-gray-400 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  <item.icon className="w-4 h-4 flex-shrink-0" />
+                  <span className="font-medium">{item.name}</span>
+                </Link>
+              ))}
+            </div>
+
+            {/* Services */}
+            {renderNavigationSection('Services', navigation.services, 'services')}
+
+            {/* Solutions */}
+            {renderNavigationSection('Solutions', navigation.solutions, 'solutions')}
+
+            {/* Resources */}
+            {renderNavigationSection('Resources', navigation.resources, 'resources')}
+
+            {/* Company */}
+            {renderNavigationSection('Company', navigation.company, 'company')}
+          </div>
+        </div>
+
+        {/* Quick Actions */}
+        <div className="p-6 border-t border-gray-800">
+          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+            Quick Actions
+          </h3>
+          <div className="grid grid-cols-2 gap-2">
+            {quickActions.map((action) => (
+              <Link
+                key={action.name}
+                href={action.href}
+                onClick={onClose}
+                className={`p-3 rounded-lg bg-gradient-to-r ${action.color} text-white text-center hover:shadow-lg transition-all duration-200 transform hover:scale-105`}
+              >
+                <action.icon className="w-4 h-4 mx-auto mb-1" />
+                <div className="text-xs font-medium">{action.name}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
 
           {/* Services Section */}
           {renderNavSection('Services', navigation.services, 'services')}

@@ -85,8 +85,7 @@ class ErrorPreventionMonitor {
       });
     } catch (error) {
       // Directory access error
-    }
-return false;
+    }      return false;,
 }
   }
 ;

@@ -5,7 +5,7 @@ import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   const handleSearch = (e: Reac t.FormEvent) => {
     e.preventDefault();

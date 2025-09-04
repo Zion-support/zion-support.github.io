@@ -34,8 +34,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {  const 
       : undefined);
   const headerStyle = effectiveTheme;
     ? {}
-        backgroundColor: effectiveTheme.backgroundColor,
-color: effectiveTheme.textColor,
+        backgroundColor: effectiveTheme.backgroundColor,        color: effectiveTheme.textColor,
         borderColor: "${effectiveTheme.primaryColor}20"}
 
 // Handle scroll effect

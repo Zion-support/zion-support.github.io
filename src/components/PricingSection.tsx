@@ -2,7 +2,7 @@ import React, { useState } from "react"
   Crown, Rocket,
   Building} from "lucide-react"
 
-* PricingSection function
+ * PricingSection function
  * @param {*} params - Function parameters
  * @returns {*} Function return value
  */

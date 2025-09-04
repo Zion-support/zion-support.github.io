@@ -9,8 +9,7 @@
  * - Smart conflict resolution
  * - Repository health monitoring
  * - Automated merging strategies
- * - Code quality gates
-*/
+ * - Code quality gates */
 
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
@@ -713,8 +712,7 @@ Examples:
     }
 }
 
-module.exports = IntelligentRepositoryManager;
-if (result.success) {log(`Resolved conflict in ${file} using default strategy`);
+module.exports = IntelligentRepositoryManager;            if (result.success) {log(`Resolved conflict in ${file} using default strategy`);,
 }
           } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);
 }
@@ -1286,7 +1284,8 @@ const cleanupOldBranches = () => {
       const resolvedContent = content
         .replace(/\n/g, '')
         .replace(/\n/g, '')
-        .replace(/// Write resolved content
+        .replace(/      
+      // Write resolved content
       fs.writeFileSync(file, resolvedContent);
       
       this.log(`Resolved conflict in file: ${file}`);
@@ -1322,8 +1321,7 @@ const cleanupOldBranches = () => {
       this.log(`Error starting Intelligent Repository Manager: ${error.message}`, 'error');
       throw error;
     }
-  }
-}
+  }}
 // Main execution loop;
 const main = async () => {
   log(`Intelligent Repository Manager started`);

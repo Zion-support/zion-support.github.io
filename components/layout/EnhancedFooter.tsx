@@ -16,7 +16,7 @@ const EnhancedFooter = () => {
             </ul>
           </div>
 
-          {/* Company & Contact */}
+          {/* Company */}
           <div>
 
               </div>
@@ -41,7 +41,6 @@ const EnhancedFooter = () => {
 
           </div>
         </div>
-      </div>
 
       {/* Bottom Footer */}"<div className="border-t border-gray-700 py-6>        <div className="container mx-auto px-4">"          <div className="flex flex-col md: fle x-row justify-between items-center>            <p className="text-gray-300 text-sm">"              &copy; 2024 Zion Tech Group. All rights reserved."            </p>"            <div className="flex space-x-6 mt-4 md: m t-0>              <Link href="/privacy" className="text-gray-300 hover: tex t-white text-sm transition-colors>                Privacy Policy"              </Link>"              <Link href="/terms" className="text-gray-300 hover: tex t-white text-sm transition-colors>                Terms of Service"              </Link>"              <Link href="/sitemap" className="text-gray-300 hover: tex t-white text-sm transition-colors>                Sitemap"              </Link></div>
           </div>

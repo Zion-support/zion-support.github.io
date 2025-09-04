@@ -16,57 +16,39 @@ logo: '🏢',
         },
         {
           name: 'Amazon Web Services',
-          logo: '☁️',
-          description: 'Cloud computing and AI services',
-          tier: 'Platinum'
+          logo: '/partners/aws.png',
+          description: 'Cloud infrastructure and AI services',
+          category: 'Cloud & AI'
         },
         {
           name: 'Google Cloud',
-          logo: '🔍',
-          description: 'AI/ML platforms and data analytics',
-          tier: 'Gold'
-        },
-        {
-          name: 'IBM',
-          logo: '💼',
-          description: 'Enterprise AI and blockchain solutions',
-          tier: 'Gold'
+          logo: '/partners/google-cloud.png',
+          description: 'Machine learning and data analytics platforms',
+          category: 'AI & Analytics'
         }
       ]
     },
     {
       title: 'Solution Partners',
-      description: 'Specialized partners that enhance our service offerings',
+      description: 'Specialized solution providers that enhance our service offerings',
       partners: [
         {
           name: 'Salesforce',
-          logo: '📊',
+          logo: '/partners/salesforce.png',
           description: 'CRM and customer experience solutions',
-          tier: 'Silver'
-        },
-        {
-          name: 'Oracle',
-          logo: '🗄️',
-          description: 'Database and enterprise applications',
-          tier: 'Silver'
-        },
-        {
-          name: 'SAP',
-          logo: '📈',
-          description: 'Enterprise resource planning solutions',
-          tier: 'Silver'
+          category: 'CRM & CX'
         },
         {
           name: 'ServiceNow',
-          logo: '⚙️',
+          logo: '/partners/servicenow.png',
           description: 'IT service management and automation',
-          tier: 'Silver'
+          category: 'ITSM & Automation'
         }
       ]
     }
   ];
 
-  const benefits = [
+  const partnershipTypes = [
     {
       icon: Awar d,
       title: 'Certified Expertise',
@@ -89,36 +71,26 @@ logo: '🏢',
     }
   ];
 
-  const partnershipTiers = [
-    {
-      name: 'Platinum',
-      color: 'bg-gray-800',
-      textColor: 'text-white',
-      description: 'Strategic technology partners with deep integration and joint go-to-market initiatives.'
-    },
-    {
-      name: 'Gold',
-      color: 'bg-yellow-500',
-      textColor: 'text-white',
-      description: 'Key technology partners with significant collaboration and joint solution development.'
-    },
-    {
-      name: 'Silver',
-      color: 'bg-gray-400',
-      textColor: 'text-white',
-      description: 'Valued partners with proven track record of successful project delivery.'
-}
-  ];
-
   return (
-<MainLayout
-      title="Partners - Zion Tech Group"
-      description="Learn about Zion Tech Group's strategic partnerships with leading technology companies and how we deliver integrated solutions."
-      keywords="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
+    <MainLayout>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Our Partners
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              Building the future of technology through strategic partnerships
+              that drive business success and innovation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Categories */}
+      {partnerCategories.map((category, index) => (
+        <section key={index} className={`py-20 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <Handshake className="w-16 h-16 mx-auto mb-6 text-blue-400"  />
@@ -179,11 +151,13 @@ logo: '🏢',
                       </div>
                     ))}
                   </div>
+                  <p className="text-gray-600">{partner.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
+      ))}
 
         {/* Partnership Tiers */}
         <section className="py-16 bg-white">
@@ -206,10 +180,13 @@ logo: '🏢',
           
           <div className="grid md: gri d-cols-3 gap-8">
             {partnershipTypes.map((type, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-4">{type.title}</h3>
-                <p className="text-gray-600 mb-6">{type.description}</p>
-                <ul className="space-y-2">
+              <div key={index} className="text-center p-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600">
+                  {type.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{type.title}</h3>
+                <p className="text-gray-600 mb-4">{type.description}</p>
+                <ul className="text-sm text-gray-500 space-y-1">
                   {type.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"  />

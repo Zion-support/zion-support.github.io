@@ -495,9 +495,8 @@ class ComprehensiveErrorFixer {
 
 // Run the error fixer
 const errorFixer = new ComprehensiveErrorFixer();
-errorFixer.run().catch(console.error);
-;
-      this.log("No critical dependency issues detected", "SUCCESS");
+errorFixer.run().catch(console.error);      ;
+      this.log("No critical dependency issues detected", "SUCCESS");,
 } catch (error) {
   const output = error.stdout || error.stderr || "";
       const lines = output.split("\n").filter(line => line.trim());
