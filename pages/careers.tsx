@@ -1,9 +1,11 @@
+
 import Head from 'next/head'
 import Link from 'next/link'
 
 export default function Careers() {
   return (
     <>
+
       <Head>
         <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join Zion Tech Group and help build the future of AI, Micro SaaS, and IT solutions." />
@@ -20,4 +22,5 @@ export default function Careers() {
     </>
   )
 }
+
 

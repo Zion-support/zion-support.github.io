@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { ArrowRight, Users, Award, Shield, CheckCircle } from 'lucide-react'
 import Layout from '../components/Layout'
 
-export default function BlockchainSolutions() {
+function BlockchainSolutions() {
   return (
     <>
 <Head>
@@ -34,6 +34,7 @@ export default function BlockchainSolutions() {
             </div>
           </div>
         </section>
+
 
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -114,4 +115,5 @@ export default function BlockchainSolutions() {
       </Layout>
     </>
   )
+
 }

@@ -16,10 +16,10 @@ import {
   CheckCircle
 } from 'lucide-react'
 
-const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
-const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
+const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false })
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false })
 
-const DemoPage: Reac t.FC = () => {
+const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-services')
   
   const demos = [
@@ -95,9 +95,9 @@ const DemoPage: Reac t.FC = () => {
         <main className="min-h-screen bg-white">
           {/* Hero Section */}
           <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 2 0 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"

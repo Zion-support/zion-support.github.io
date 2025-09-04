@@ -203,6 +203,7 @@ const CloudDevOpsPage: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
+
                     className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
                   >
                     <div className="p-8">
@@ -279,6 +280,7 @@ const CloudDevOpsPage: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
+
                     className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
                   >
                     <h3 className="text-lg font-bold text-gray-900 mb-2">
@@ -295,7 +297,7 @@ const CloudDevOpsPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="py-20">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
