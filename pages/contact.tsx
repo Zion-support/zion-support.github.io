@@ -273,13 +273,6 @@ const ContactPage: React.FC = () => {
                     Send Message
                   </motion.button>
                 </motion.form>
-=======
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Contact Zion Tech Group for AI, cybersecurity, cloud, and technology solutions. Get expert consultation and support for your business needs." />
-        <meta name="keywords" content="contact zion tech group, technology consultation, AI services, cybersecurity support" />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -503,8 +496,5 @@ const ContactPage: React.FC = () => {
     </>
   )
 }
-<<<<<<< HEAD
 
 export default ContactPage
-=======
->>>>>>> merge-all-prs-20250904-105408

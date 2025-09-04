@@ -154,14 +154,14 @@ const DashboardPage: React.FC = () => {
 
           {/* Stats Grid */}
           <section className="py-8">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-6">
                 {stats.map((stat, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="bg-white rounded-xl shadow-lg p-6"
                   >
                     <div className="flex items-center justify-between">
@@ -182,12 +182,12 @@ const DashboardPage: React.FC = () => {
 
           {/* Main Content */}
           <section className="pb-8">
-            <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg: gri d-cols-3 gap-8">
                 {/* Recent Projects */}
-                <div className="lg: co l-span-2">
+                <div className="lg:col-span-2">
                   <motion.div
-                    initial={{ opacity: 0, y: 2 0 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="bg-white rounded-xl shadow-lg p-6"
@@ -199,7 +199,7 @@ const DashboardPage: React.FC = () => {
                           key={project.id}
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.6, delay: inde x * 0.1 }}
+                          transition={{ duration: 0.6, delay: index * 0.1 }}
                           className="border border-gray-200 rounded-lg p-4 hover: shado w-md transition-shadow"
                         >
                           <div className="flex items-center justify-between mb-2">

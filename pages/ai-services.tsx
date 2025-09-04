@@ -297,7 +297,7 @@ export default function AIServices() {
     {
       title: 'AI-Powered Market Research',
       description: 'Intelligent market analysis and competitive intelligence platform',
-      icon: BarChart 3,
+      icon: BarChart3,
       features: [
         'Automated market trend analysis',
         'Competitor monitoring and analysis',
@@ -507,19 +507,19 @@ export default function AIServices() {
     {
       title: 'Cost Reduction',
       description: 'Reduce operational costs through automation',
-      icon: TrendingU p,
+      icon: TrendingUp,
       stat: '60%'
     },
     {
       title: 'Enhanced Accuracy',
       description: 'Minimize human errors with AI precision',
-      icon: Targe t,
+      icon: Target,
       stat: '95%'
     },
     {
       title: '24/7 Availability',
       description: 'Round-the-clock AI-powered services',
-      icon: Cloc k,
+      icon: Clock,
       stat: '99.9%'
     }
   ];
