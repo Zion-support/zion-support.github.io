@@ -1,74 +1,57 @@
-import React from 'react';'
-const Card = (props: any) => {}
-  return()
-    <div;
-      className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
+import React from 'react';
+
+const Card = ({ className, children, ...props }) => {
+  return (
+    <div
+      className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className || ''}`}
+      {...props}
     >
       {children}
     </div>
   );
-};'
-const CardHeader = (props: any) => {}
-`
-``
-```
-  return()````
-    <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
+};
+
+const CardHeader = ({ className, children, ...props }) => {
+  return (
+    <div className={`flex flex-col space-y-1.5 p-6 ${className || ''}`} {...props}>
       {children}
     </div>
   );
-};'
-const CardTitle = (props: any) => {}
-  return()`
-    <h3``
-      className={`text-2xl font-semibold leading-none tracking-tight ${className}`}
+};
+
+const CardTitle = ({ className, children, ...props }) => {
+  return (
+    <h3
+      className={`text-2xl font-semibold leading-none tracking-tight ${className || ''}`}
+      {...props}
     >
       {children}
     </h3>
   );
-};'
-const CardDescription = (props: any) => {}
-`
-  return()``
-    <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>
-  );
-};'
-const CardContent = (props: any) => {}
-`
-``
-  return <div className={`p-6 pt-0 ${className}`}>{children}</div>;
-};'
-const CardFooter = (props: any) => {}
-`
-``
-```
-  return()````
-    <div className={`flex items-center p-6 pt-0 ${className}`}>{children}</div>
+};
+
+const CardDescription = ({ className, children, ...props }) => {
+  return (
+    <p className={`text-sm text-muted-foreground ${className || ''}`} {...props}>
+      {children}
+    </p>
   );
 };
-const CardDescription = (props: any) => {
-    return (<p className={`text-sm text-muted-foreground ${className}`}>
+
+const CardContent = ({ className, children, ...props }) => {
+  return (
+    <div className={`p-6 pt-0 ${className || ''}`} {...props}>
       {children}
-    </p>);
+    </div>
+  );
 };
-const CardContent = (props: any) => {
-    return (<div className={`p-6 pt-0 ${className}`}>
+
+const CardFooter = ({ className, children, ...props }) => {
+  return (
+    <div className={`flex items-center p-6 pt-0 ${className || ''}`} {...props}>
       {children}
-    </div>);
+    </div>
+  );
 };
-const CardFooter = (props: any) => {
-    return (<div className={`flex items-center p-6 pt-0 ${className}`}>
-      {children}
-    </div>);
-};
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
-
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };

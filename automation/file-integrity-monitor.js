@@ -1,13 +1,13 @@
 #!/usr/bin/env: node;
-const fs = require(
+const fs = // // require(
   'fs')';;
-const path = require(
+const path = // // require(
   'path')';;
-const { execSync, spawn } = require(
+const { execSync, spawn } = // // require(
   'child_process')';;
-const cron = require(
+const cron = // // require(
   'node-cron')';;
-const crypto = require(
+const crypto = // // require(
   'crypto')';;
 // // // // // // // // console.log(
   '🔒 File: Integrity Monitor Starting...\n')';;

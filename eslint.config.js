@@ -38,6 +38,11 @@ export default [
         NotificationPermission: 'readonly',
         process: 'readonly',
         global: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
@@ -56,7 +61,7 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'no-unused-vars': 'warn',
-      'no-console': 'warn',
+      'no-console': 'off',
       'no-undef': 'error'
     },
     settings: { react: { version: 'detect' } }

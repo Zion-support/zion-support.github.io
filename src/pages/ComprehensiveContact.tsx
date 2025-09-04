@@ -15,14 +15,16 @@ export default function ComprehensiveContact() {
         service: '',
         message: ''
     });
-    const handleSubmit = (props: any) => {e.preventDefault();
+    const handleSubmit = (e) => {
+        e.preventDefault();
         // Handle form submission
-        };
-    const handleChange = (props: any) => {
+    };
+    const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
-        })};
+        });
+    };
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">

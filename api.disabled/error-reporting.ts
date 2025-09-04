@@ -1,2 +1,1 @@
-// Error reporting module
 export {};

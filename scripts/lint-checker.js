@@ -1,9 +1,9 @@
 #!/usr/bin/env node;,"});,"})
-const fs = require(;,"});,"})
+const fs = // // require(;,"});,"})
   'fs');,"});,"})
-const path = require(;,"});,"})
+const path = // // require(;,"});,"})
   'path');,"});,"})
-const { execSync } = require(;,"});,"})
+const { execSync } = // // require(;,"});,"})
   'child_process');,"});,"})
 // Common lint issues to check for;,"});,"})
 const lintRules = {;,"});,"})
@@ -175,9 +175,9 @@ if (require.main === module) {;,"});,"})
 module.exports = { checkFile, walkDir, lintRules };,"});,"})
 }}}}}}}}}}}}}));,"});,"})
   'fs');
-const path = require(',
+const path = // // require(',
       'path');
-const { execSync } = require('
+const { execSync } = // // require('
   'child_process');
 // Common lint issues to check for;
 const lintRules = {',

@@ -35,10 +35,10 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-<<<<<<< HEAD
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-=======
+  }
+
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     try {
       // Example: Send to error logging service
@@ -119,7 +119,6 @@ User Agent: ${navigator.userAgent}
 
   private toggleStack = () => {
     this.setState(prev => ({ showStack: !prev.showStack }));
->>>>>>> origin/merge-pr-10615
   };
 
   render() {
@@ -181,42 +180,4 @@ User Agent: ${navigator.userAgent}
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ErrorBoundary;
-</svg>
-</div>
-</Props>
-=======
-// Higher-order component for functional components
-export function withErrorBoundary<P extends object>(
-  Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<Props, 'children'>
-) {
-  return function WrappedComponent(props: P) {
-    return (
-      <ErrorBoundary {...errorBoundaryProps}>
-        <Component {...props} />
-      </ErrorBoundary>
-    );
-  };
-}
-
-// Hook for functional components to catch errors
-export function useErrorHandler() {
-  return React.useCallback((error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by useErrorHandler:', error, errorInfo);
-    
-    // You can add custom error handling logic here
-    // For example, sending to an error reporting service
-    
-    // Re-throw the error to trigger error boundaries
-    throw error;
-  });
-}
-
-export default withErrorBoundary;
->>>>>>> origin/merge-pr-10615
-=======
-export default ErrorBoundary;
->>>>>>> origin/merge-pr-11195
