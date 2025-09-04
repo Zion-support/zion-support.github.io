@@ -51,7 +51,7 @@ function Header(): any {
             background: 'none', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer',
             display: 'none',
             '@media (max-width: 768px)': { display: 'block' } as any
-          }}
+          }
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle mobile menu"
           aria-expanded={mobileMenuOpen}
