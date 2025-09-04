@@ -31,7 +31,7 @@ const fixes = [
     pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,
     replacement: (match, content) => {
       // Fix common style object issues
-      let fixed = content
+      const fixed = content
         .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g, '$1: "$2$3"')
         .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g, (m, prop, value) => {
           if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) {
@@ -57,7 +57,7 @@ const fixes = [
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     
     // Apply fixes
     fixes.forEach(fix => {

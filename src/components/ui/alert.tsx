@@ -1,16 +1,18 @@
+import React from 'react';
+
 interface AlertProps {
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   className?: string;
   variant?: 'default' | 'destructive';
 }
 
 interface AlertTitleProps {
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   className?: string;
 }
 
 interface AlertDescriptionProps {
-  children: Reac t.ReactNode;
+  children: React.ReactNode;
   className?: string;
 }
 
@@ -44,4 +46,4 @@ export function AlertDescription({ children, className = '' }: AlertDescriptionP
 }
 
 
-export default alert;
+export default Alert;

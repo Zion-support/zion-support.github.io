@@ -338,19 +338,19 @@ export interface BaseComponentProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export interface InputProps extends BaseComponentProps {
-  type?:
-    | 'text'
-    | 'email'
-    | 'password'
-    | 'tel'
-    | 'url'
-    | 'number';
+// InputProps should not extend BaseComponentProps due to incompatible 'type'
+export interface InputProps {
+  className?: string;
+  children?: React.ReactNode;
+  id?: string;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: () => void;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
   placeholder?: string;
   value?: string;
   onChange?: (value: string) => void;
   error?: string;
-  disabled?: boolean;
   required?: boolean;
 }
 

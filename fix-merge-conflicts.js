@@ -40,7 +40,7 @@ function fixMergeConflicts(filePath) {
       }
       
       // Fix common syntax issues
-      let cleanedLine = line
+      const cleanedLine = line
         .replace(/,,+/g, ',')
         .replace(/;;+/g, ';')
         .replace(/\{\s*,/g, '{')

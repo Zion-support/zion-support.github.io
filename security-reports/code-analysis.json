@@ -5,42 +5,70 @@
       "severity": 1,
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
-      "file": "/workspace/src/components/SecurityEnhancer.tsx",
-      "line": 152
+      "file": "/workspace/src/components/unused/BrokenLinkFixer.jsx",
+      "line": 185
     },
     {
       "type": "pattern",
       "severity": 1,
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
-      "file": "/workspace/src/components/unused/BrokenLinkFixer.jsx",
-      "line": 153    },
+      "file": "/workspace/src/components/unused/ContentQualityEnhancer.jsx",
+      "line": 260
+    },
+    {
+      "type": "pattern",
+      "severity": 2,
+      "message": "eval() usage detected",
+      "rule": "no-eval",
+      "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
+      "line": 459
+    },
     {
       "type": "pattern",
       "severity": 1,
-      "message": "innerHTML assignment detected",
-      "rule": "no-inner-html",
-      "file": "/workspace/src/components/unused/BrokenLinkFixer.jsx",
-      "line": 153
-    },    {
+      "message": "document.write() usage detected",
+      "rule": "no-document-write",
+      "file": "/workspace/src/hooks/useAICodeGeneration.js.jsx",
+      "line": 398
+    },
+    {
       "type": "pattern",
-      "severity": 1,
-      "message": "innerHTML assignment detected",
-      "rule": "no-inner-html",
-      "file": "/workspace/src/components/unused/ContentQualityEnhancer.jsx",
-      "line": 248
-    },    {
+      "severity": 2,
+      "message": "eval() usage detected",
+      "rule": "no-eval",
+      "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
+      "line": 459
+    },
+    {
       "type": "pattern",
       "severity": 1,
       "message": "document.write() usage detected",
       "rule": "no-document-write",
       "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
-      "line": 543
-    }  ],
+      "line": 398
+    },
+    {
+      "type": "pattern",
+      "severity": 1,
+      "message": "innerHTML assignment detected",
+      "rule": "no-inner-html",
+      "file": "/workspace/src/main.js.jsx",
+      "line": 48
+    },
+    {
+      "type": "pattern",
+      "severity": 1,
+      "message": "innerHTML assignment detected",
+      "rule": "no-inner-html",
+      "file": "/workspace/src/main.jsx",
+      "line": 69
+    }
+  ],
   "summary": {
-    "total": 4,
-    "high": 0,
-    "medium": 4,
+    "total": 8,
+    "high": 2,
+    "medium": 6,
     "low": 0
   }
 }

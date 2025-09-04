@@ -10,7 +10,7 @@ class TestAutomation {
   console.error("Tests failed:", error.message);
 }
   }
-;
+
   runCoverage() {
   try {
   console.log("Running test coverage...");
@@ -21,7 +21,7 @@ class TestAutomation {
 }
   }
 }
-;
+
 const testAutomation = new TestAutomation();
 const arg = process.argv[2];
 if (arg === "coverage") {

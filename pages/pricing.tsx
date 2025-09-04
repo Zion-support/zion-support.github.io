@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
@@ -16,6 +17,11 @@ import {
   Database,
   Cloud
 } from 'lucide-react'
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Check, Star, Zap, Shield, Users, Clock, ArrowRight } from 'lucide-react';
+>>>>>>> merge-all-prs-20250904-105408
 
 const SEO = dynamic(() => import('../src/components/SEO'), { ssr: fals e })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: fals e })
@@ -362,6 +368,7 @@ return ("
                         ? 'bg-blue-600 text-white hover: b g-blue-700''
                         : 'bg-gray-900 text-white hover: b g-gray-800'
                   </Link>
+<<<<<<< HEAD
 ,
         {/*   */}`"
         <section className="`py-20" bg-gray-50">""
@@ -740,3 +747,80 @@ export default Pricing;"
 export default Pricing
 "
 ,
+=======
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Add-on Services Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Additional Services</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Enhance your solution with our specialized services and custom development options.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {addOnServices.map((service, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className="text-cyan-400 font-semibold">{service.price}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+              <p className="text-xl text-gray-300">
+                Get answers to common questions about our pricing and services.
+              </p>
+            </div>
+            <div className="space-y-6">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">
+                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-300">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to discuss your needs and get a customized quote for your project.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+              >
+                Get a Custom Quote
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-base font-medium rounded-md text-cyan-400 bg-transparent hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+>>>>>>> merge-all-prs-20250904-105408
