@@ -889,7 +889,6 @@ export default function AIServices() {
         '50% reduction in quality control costs',
         'Real-time quality monitoring and alerts',
         'Improved product consistency and customer satisfaction'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ]
     },
     {
