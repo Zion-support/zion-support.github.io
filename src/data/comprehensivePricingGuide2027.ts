@@ -642,15 +642,15 @@
     integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "CRM Systems", "ERP Systems"]
   }
 ];
-export;
-export;
-export '
-export const pricingCategories2027: unknow n = [;''
-  'Metaverse Solutions',;''
-  'Web3 Solutions',;''
-  'Sustainable Tech',;''
-  'NeuroTech Solutions',;'  'Fusion Energy Solutions';
-];
-export const pricingSubcategories2027: unknow n = {}
-'"""
-'"'"""
+export;';
+export;';';
+export '';';
+export const pricingCategories2027: unknow n = [;''';';
+  'Metaverse Solutions',''';';
+  'Web3 Solutions',''';';
+  'Sustainable Tech',''';';
+  'NeuroTech Solutions','  'Fusion Energy Solutions'];';
+export const pricingSubcategories2027: unknow n = {}';';
+'"""';';
+'"'"""';
+';';

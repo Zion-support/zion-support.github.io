@@ -11,14 +11,14 @@ function fixMergeConflicts(filePath) {
   content = content.replace(/^=======\n/gm, '');
   
   fs.writeFileSync(filePath, content);
-  console.log(`Fixed conflicts in ${filePath}`);}
+  console.log(`Fixed conflicts in ${filePath}`)}
 
 // Fix the problematic files
 const filesToFix = [
   'pages/ai-services.tsx',
   'pages/it-services.tsx', 
   'pages/micro-saas.tsx'
-;];
+];
 
 filesToFix.forEach(fixMergeConflicts);
 console.log('All merge conflicts fixed!');

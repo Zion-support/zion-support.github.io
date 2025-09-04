@@ -16,7 +16,7 @@ const deployment = {
     successful: 0,
     failed: 0
   }
-;};
+};
 
 function runDeploymentStep(name, command, critical = false) {
   console.log(`\n📋 Running: ${name}`);
@@ -29,14 +29,14 @@ function runDeploymentStep(name, command, critical = false) {
     critical,
     startTime: new Date().toISOString(),
     status: 'running'
- ; ;};
+ };
   
   try {
     const output = execSync(command, { 
       encoding: 'utf8', 
       stdio: 'pipe',
       timeout: 300000 // 5 minutes timeout
-    ;};);
+    };);
     
     const endTime = Date.now(;);
     const duration = endTime - startTi;m;e;
@@ -49,7 +49,7 @@ function runDeploymentStep(name, command, critical = false) {
     deployment.metrics.totalSteps++;
     deployment.metrics.successful++;
     
-    console.log(`✅ ${name} completed in ${duration}ms`);} catch (error) {
+    console.log(`✅ ${name} completed in ${duration}ms`)} catch (error) {
     const endTime = Date.now(;);
     const duration = endTime - startTi;m;e;
     
@@ -67,13 +67,12 @@ function runDeploymentStep(name, command, critical = false) {
     if ( {
       console.log('💥 Critical step failed. Stopping deployment.')) {
      {
-      console.log('💥 Critical step failed. Stopping deployment.');
-  }
+      console.log('💥 Critical step failed. Stopping deployment.')}
       deployment.status = 'failed';
-      return false;}
+      return false}
   }
   
-  return true;}
+  return true}
 
 // Pre-deployment checks
 console.log('\n🔍 Phase 1: Pre-deployment Checks');
@@ -159,9 +158,8 @@ console.log(`📄 Report saved to: ${reportPath}`);
 if ( {
   console.log('\n🎊 Deployment successful! All systems operational.')) {
      {
-  console.log('\n🎊 Deployment successful! All systems operational.');
-  }} else {
-  console.log('\n⚠️  Deployment completed with issues. Please review the report.');}
+  console.log('\n🎊 Deployment successful! All systems operational.')}} else {
+  console.log('\n⚠️  Deployment completed with issues. Please review the report.')}
 
 // Create deployment summary
 const summary = {
@@ -172,8 +170,7 @@ const summary = {
   failed: deployment.metrics.failed,
   successRate: `${((deployment.metrics.successful / deployment.metrics.totalSteps) * 100).toFixed(1)}%`,
   criticalFailures: deployment.steps.filter(step => step.critical && step.status === 'failed').length,
-  duration: deployment.steps.reduce((total, step) => total + (step.duration || 0), 0);
-;};
+  duration: deployment.steps.reduce((total, step) => total + (step.duration || 0), 0)};
 
 fs.writeFileSync('deployment-summary.json', JSON.stringify(summary, null, 2));
 console.log('📋 Deployment summary saved to: deployment-summary.json');

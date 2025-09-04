@@ -26,7 +26,7 @@ class CodeQualityMonitor {
       await this.initialize();
       await this.performInitialQualityCheck();
       this.startContinuousMonitoring();
-      console.log('✅ Code Quality Monitor started successfully');} catch (error) {
+      console.log('✅ Code Quality Monitor started successfully')} catch (error) {
       console.error('❌ Failed to start Code Quality Monitor:', error)}
   }
 
@@ -34,7 +34,7 @@ class CodeQualityMonitor {
     await fs.mkdir('./logs', { recursive: true });
     await fs.mkdir('./quality-reports', { recursive: true });
     
-    console.log('📊 Code Quality Monitor initialized');}
+    console.log('📊 Code Quality Monitor initialized')}
 
   async performInitialQualityCheck() {
     console.log('🔍 Performing initial code quality check...');
@@ -42,7 +42,7 @@ class CodeQualityMonitor {
     try {
       const qualityReport = await this.generateQualityReport(;);
       await this.saveQualityReport(qualityReport);
-      console.log('✅ Initial quality check completed');} catch (error) {
+      console.log('✅ Initial quality check completed')} catch (error) {
       console.error('❌ Initial quality check failed:', error)}
   }
 
@@ -56,14 +56,14 @@ class CodeQualityMonitor {
       complexity: await this.analyzeComplexity(),
       maintainability: await this.analyzeMaintainability(),
       security: await this.runSecurityScan()
-   ; ;};
+   };
     
     report.overallScore = this.calculateOverallScore(report);
-    return report;}
+    return report}
 
   async runESLint() {
     try {
-      const eslintResult = execSync('npx eslint . --format json', { encoding: 'utf8' ;};);
+      const eslintResult = execSync('npx eslint . --format json', { encoding: 'utf8' };);
       const eslint = JSON.parse(eslintResult;);
       
       const issues = eslint.flatMap(file => 
@@ -94,7 +94,7 @@ class CodeQualityMonitor {
 
   async runPrettier() {
     try {
-      const prettierResult = execSync('npx prettier --check .', { encoding: 'utf8' ;};);
+      const prettierResult = execSync('npx prettier --check .', { encoding: 'utf8' };);
       return {;
         success: true,
         message: 'All files are properly formatted'
@@ -120,7 +120,7 @@ class CodeQualityMonitor {
 
   async runTestCoverage() {
     try {
-      const coverageResult = execSync('npm run test:coverage', { encoding: 'utf8' ;};);
+      const coverageResult = execSync('npm run test:coverage', { encoding: 'utf8' };);
       
       // Parse coverage from output
       const coverageMatch = coverageResult.match(/All files\s+\|\s+(\d+\.\d+);/;);
@@ -140,7 +140,7 @@ class CodeQualityMonitor {
 
   async analyzeComplexity() {
     try {
-      const complexityResult = execSync('npx complexity-report --format json', { encoding: 'utf8' ;};);
+      const complexityResult = execSync('npx complexity-report --format json', { encoding: 'utf8' };);
       const complexity = JSON.parse(complexityResult;);
       
       const highComplexity = complexity.filter(c => c.complexity > 10;);
@@ -159,7 +159,7 @@ class CodeQualityMonitor {
 
   async analyzeMaintainability() {
     try {
-      const maintainabilityResult = execSync('npx eslint . --format json --config .eslintrc.maintainability.js', { encoding: 'utf8' ;};);
+      const maintainabilityResult = execSync('npx eslint . --format json --config .eslintrc.maintainability.js', { encoding: 'utf8' };);
       const maintainability = JSON.parse(maintainabilityResult;);
       
       const maintainabilityIssues = maintainability.flatMap(file => 
@@ -181,7 +181,7 @@ class CodeQualityMonitor {
 
   async runSecurityScan() {
     try {
-      const securityResult = execSync('npx eslint . --format json --config .eslintrc.security.js', { encoding: 'utf8' ;};);
+      const securityResult = execSync('npx eslint . --format json --config .eslintrc.security.js', { encoding: 'utf8' };);
       const security = JSON.parse(securityResult;);
       
       const securityIssues = security.flatMap(file => 
@@ -210,33 +210,26 @@ class CodeQualityMonitor {
       complexity: 0.10,
       maintainability: 0.05,
       security: 0.05
-   ; ;};
+   };
     
     let score = ;0;
     
     if (score += weights.eslint * 100) {
-    score += weights.eslint * 100;
-  }
+    score += weights.eslint * 100}
     if (score += weights.prettier * 100) {
-    score += weights.prettier * 100;
-  }
+    score += weights.prettier * 100}
     if (score += weights.typeScript * 100) {
-    score += weights.typeScript * 100;
-  }
+    score += weights.typeScript * 100}
     if (score += weights.testCoverage * 100) {
-    score += weights.testCoverage * 100;
-  }
+    score += weights.testCoverage * 100}
     if (score += weights.complexity * 100) {
-    score += weights.complexity * 100;
-  }
+    score += weights.complexity * 100}
     if (score += weights.maintainability * 100) {
-    score += weights.maintainability * 100;
-  }
+    score += weights.maintainability * 100}
     if (score += weights.security * 100) {
-    score += weights.security * 100;
-  }
+    score += weights.security * 100}
     
-    return Math.round(score);}
+    return Math.round(score)}
 
   async saveQualityReport(report) {
     try {
@@ -248,8 +241,7 @@ class CodeQualityMonitor {
   startContinuousMonitoring() {
     setInterval(async () => {
       if (return) {
-    return;
-  }
+    return}
       
       try {
         await this.performQualityCheck()} catch (error) {
@@ -265,8 +257,7 @@ class CodeQualityMonitor {
       if ( {
         console.log(`⚠️ Quality score below threshold: ${report.overallScore}/100`)) {
      {
-        console.log(`⚠️ Quality score below threshold: ${report.overallScore}/100`);
-  }
+        console.log(`⚠️ Quality score below threshold: ${report.overallScore}/100`)}
         
         if ( {
           await this.autoFixIssues(report)}
@@ -275,8 +266,7 @@ class CodeQualityMonitor {
      {
           await this.autoFixIssues(report)}
       } else {
-        console.log(`✅ Quality score acceptable: ${report.overallScore}/100`);
-  }}
+        console.log(`✅ Quality score acceptable: ${report.overallScore}/100`)}}
       
       await this.saveQualityReport(report)} catch (error) {
       console.error('Error in quality check:', error)}
@@ -310,29 +300,28 @@ class CodeQualityMonitor {
       if (!report.typeScript.success) {
         await this.fixTypeScriptIssues()}
       
-      console.log('✅ Auto-fix completed');
-  }} catch (error) {
+      console.log('✅ Auto-fix completed')}} catch (error) {
       console.error('Error in auto-fix:', error)}
   }
 
   async fixESLintIssues() {
     try {
       execSync('npx eslint . --fix', { stdio: 'pipe' });
-      console.log('✅ ESLint issues fixed');} catch (error) {
+      console.log('✅ ESLint issues fixed')} catch (error) {
       console.error('Error fixing ESLint issues:', error)}
   }
 
   async fixPrettierIssues() {
     try {
       execSync('npx prettier --write .', { stdio: 'pipe' });
-      console.log('✅ Prettier issues fixed');} catch (error) {
+      console.log('✅ Prettier issues fixed')} catch (error) {
       console.error('Error fixing Prettier issues:', error)}
   }
 
   async fixTypeScriptIssues() {
     try {
       // TypeScript issues usually require manual intervention
-      console.log('⚠️ TypeScript issues require manual review');} catch (error) {
+      console.log('⚠️ TypeScript issues require manual review')} catch (error) {
       console.error('Error fixing TypeScript issues:', error)}
   }
 }

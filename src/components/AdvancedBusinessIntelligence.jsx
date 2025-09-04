@@ -1,54 +1,54 @@
 import React, {useState, useRef, useEffect} from 'react';
-export function AdvancedBusinessIntelligence(props: any) {
-
-        actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
-import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';
-        id: 'model-1',
-        name: 'Customer Lifetime Value Predictor',
-        accuracy: 94.2,
-        lastTrained: '2024-01-10T00:00:00.000Z',
-        status: 'active',
-        predictions: 15420,
-        category: 'Customer Analytics'
-    },
-    {id: 'model-2',
-        name: 'Revenue Forecasting Model',
-        accuracy: 89.7,
-        lastTrained: '2024-01-08T00:00:00.000Z',
-        status: 'active',
-        predictions: 2847500,
+export function AdvancedBusinessIntelligence(props: any) {';
+';';
+        actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']';';
+import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity  } from 'lucide-react';';';
+        id: 'model-1',';';
+        name: 'Customer Lifetime Value Predictor',';
+        accuracy: 94.2,';';
+        lastTrained: '2024-01-10T00:00:00.000Z',';';
+        status: 'active',';
+        predictions: 15420,';';
+        category: 'Customer Analytics'';
+    },';';
+    {id: 'model-2',';';
+        name: 'Revenue Forecasting Model',';
+        accuracy: 89.7,';';
+        lastTrained: '2024-01-08T00:00:00.000Z',';';
+        status: 'active',';
+        predictions: 2847500,';';
         category: 'Financial Analytics'},
-    {
-
-        id: 'model-3',
-        name: 'Churn Prediction Model',
-        accuracy: 91.5,
-        lastTrained: '2024-01-12T00:00:00.000Z',
-        status: 'training',
-        predictions: 15420,
+    {';
+';';
+        id: 'model-3',';';
+        name: 'Churn Prediction Model',';
+        accuracy: 91.5,';';
+        lastTrained: '2024-01-12T00:00:00.000Z',';';
+        status: 'training',';
+        predictions: 15420,';';
         category: 'Customer Analytics'
 
 ];
 export function AdvancedBusinessIntelligence(props: any) {
     const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState('overview');
-    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [isMinimized, setIsMinimized] = useState(false);';
+    const [isFullscreen, setIsFullscreen] = useState(false);';';
+    const [activeTab, setActiveTab] = useState('overview');';';
+    const [selectedCategory, setSelectedCategory] = useState('all');';';
     const [timeRange, setTimeRange] = useState('30d');
     const [autoRefresh, setAutoRefresh] = useState(true);
     const [showPredictions, setShowPredictions] = useState(true);
     const [data, setData] = useState(mockMetrics);
     const [insights, setInsights] = useState(mockInsights);
-    const [models, setModels] = useState(mockModels);
-    const [isRefreshing, setIsRefreshing] = useState(false);
-    const categories = ['all',Financial',Customer',Operations',Growth'];
-    const timeRanges = ['
-        { value: '7d', label: '7 Days' },
-        {value: '30d', label: '30 Days'},
-        {value: '90d', label: '90 Days'},
-        {value: '1y', label: '1 Year'}
-    ];
+    const [models, setModels] = useState(mockModels);';
+    const [isRefreshing, setIsRefreshing] = useState(false);';';
+    const categories = ['all',Financial',Customer',Operations',Growth'];';';
+    const timeRanges = ['';';
+        { value: '7d', label: '7 Days' },';';
+        {value: '30d', label: '30 Days'},';';
+        {value: '90d', label: '90 Days'},';';
+        {value: '1y', label: '1 Year'}';
+    ];';';
     const filteredMetrics = selectedCategory === 'all'
         ? data
         : data.filter(metric => metric.category === selectedCategory) ;
@@ -68,10 +68,10 @@ export function AdvancedBusinessIntelligence(props: any) {
     }, [autoRefresh]);
     const getTrendIcon = (props: any) => {
 
-        switch(trend) {
-
-            case 'up':
-                return <TrendingUp className="w-4 h-4 text-green-500" />;
+        switch(trend) {';
+';';
+            case 'up':';
+                return <TrendingUp className="w-4 h-4 text-green-500" />;';';
             case 'down':"
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
             default:"
@@ -79,44 +79,44 @@ export function AdvancedBusinessIntelligence(props: any) {
     };
     const getPriorityColor = (props: any) => {
 
-        switch(priority) {
-
-            case 'high':'
-                return 'border-red-500 bg-red-50 dark:bg-red-900/20';
-            case 'medium':'
-                return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';
-            default:'
+        switch(priority) {';
+';';
+            case 'high':'';';
+                return 'border-red-500 bg-red-50 dark:bg-red-900/20';';';
+            case 'medium':'';';
+                return 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20';';';
+            default:'';';
                 return 'border-green-500 bg-green-50 dark:bg-green-900/20'}
     };
     const getInsightIcon = (props: any) => {
 
-        switch(type) {
-
-            case 'prediction':"
-                return <Brain className="w-5 h-5 text-blue-500" />;
-            case 'anomaly':"
-                return <AlertTriangle className="w-5 h-5 text-red-500" />;
-            case 'opportunity':"
-                return <Target className="w-5 h-5 text-green-500" />;
+        switch(type) {';
+';';
+            case 'prediction':"';
+                return <Brain className="w-5 h-5 text-blue-500" />;';';
+            case 'anomaly':"';
+                return <AlertTriangle className="w-5 h-5 text-red-500" />;';';
+            case 'opportunity':"';
+                return <Target className="w-5 h-5 text-green-500" />;';';
             case 'risk':"
                 return <AlertTriangle className="w-5 h-5 text-orange-500" />;
             default:"
                 return <Zap className="w-5 h-5 text-purple-500" />}
     };
-    const formatValue = (props: any) => {
-
-        if(unit === 'USD') {
-
-            return new Intl.NumberFormat('en-US', {
-
-                style: 'currency',
+    const formatValue = (props: any) => {';
+';';
+        if(unit === 'USD') {';
+';';
+            return new Intl.NumberFormat('en-US', {';
+';';
+                style: 'currency',';';
                 currency: 'USD',
                 minimumFractionDigits: 0,
-                maximumFractionDigits: 0
-            }).format(value)}
+                maximumFractionDigits: 0';
+            }).format(value)}';';
         if(unit === '%') {
-
-            return `${value.toFixed(1)}%`}
+';
+            return `${value.toFixed(1)}%`}';';
         return new Intl.NumberFormat('en-US').format(value)};
     if(!isOpen) {
 "
@@ -131,10 +131,11 @@ export function AdvancedBusinessIntelligence(props: any) {
           <span className="text-sm font-medium text-zion-slate">BI Dashboard</span>"
           <button onClick={() => setIsMinimized(false)} className="ml-auto p-1 hover:bg-zion-slate-light rounded">"
             <Maximize2 className="w-4 h-4" />
-          </button>
-        </div>
-      </div>)}'`
-    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1200px] h-[800px]'}`} ref={containerRef}>
+          </button>';
+        </div>';';
+      </div>)}'`';
+    return (
+    <div className="min-h-screen bg-white">
       {/* Header */}"
       <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-4 flex items-center justify-between">"
         <div className="flex items-center gap-3">"
@@ -142,10 +143,10 @@ export function AdvancedBusinessIntelligence(props: any) {
           <div>"
             <h2 className="text-lg font-bold">Advanced Business Intelligence</h2>"
             <p className="text-sm opacity-90">AI-Powered Insights & Analytics</p>
-          </div>
-        </div>"
-        <div className="flex items-center gap-2">'`
-          <button onClick={() => setAutoRefresh(!autoRefresh)} className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`} title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}>'`
+          </div>';
+        </div>"';';
+        <div className="flex items-center gap-2">'`';';
+          <button onClick={() => setAutoRefresh(!autoRefresh)} className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`} title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}>'`';';
             <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`} />
           </button>"
           <button onClick={() => setIsMinimized(true)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">"
@@ -164,17 +165,17 @@ export function AdvancedBusinessIntelligence(props: any) {
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">"
         <div className="flex items-center justify-between">"
           <div className="flex items-center gap-4">"
-            <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate">
-              {categories.map(category => (<option key={category} value={category}>
+            <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate">';
+              {categories.map(category => (<option key={category} value={category}>';';
                   {category === 'all' ? 'All Categories' : category}
                 </option>))}
             </select>"
             <select value={timeRange} onChange={(e) => setTimeRange(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate">
               {timeRanges.map(range => (<option key={range.value} value={range.value}>
                   {range.label}
-                </option>))}
-            </select>"
-            <button onClick={refreshData} disabled={isRefreshing} className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors disabled:opacity-50 flex items-center gap-2">'`
+                </option>))}';
+            </select>"';';
+            <button onClick={refreshData} disabled={isRefreshing} className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors disabled:opacity-50 flex items-center gap-2">'`';';
               <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
               Refresh
             </button>
@@ -192,26 +193,26 @@ export function AdvancedBusinessIntelligence(props: any) {
         </div>
       </div>
 
-      {/* Tabs */}"
-      <div className="flex border-b border-zion-slate-light">
-        {['
-            { id: 'overview', label: 'Overview', icon: BarChart3 },
-            {id: 'insights', label: 'AI Insights', icon: Brain},
-            {id: 'models', label: 'ML Models', icon: Zap},
+      {/* Tabs */}"';
+      <div className="flex border-b border-zion-slate-light">';';
+        {['';';
+            { id: 'overview', label: 'Overview', icon: BarChart3 },';';
+            {id: 'insights', label: 'AI Insights', icon: Brain},';';
+            {id: 'models', label: 'ML Models', icon: Zap},';';
             {id: 'analytics', label: 'Analytics', icon: TrendingUp}
         ].map(tab => {
-
-            const Icon = tab.icon;`
-            return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id'
-                    ? 'border-zion-purple text-zion-purple bg-zion-purple/5''`
+';
+            const Icon = tab.icon;`';';
+            return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id'';';
+                    ? 'border-zion-purple text-zion-purple bg-zion-purple/5''`';';
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>"
               <Icon className="w-4 h-4" />
               {tab.label}
             </button>) }) }
       </div>
-
-      {/* Content */}"
-      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'"
+';
+      {/* Content */}"';';
+      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">'"';';
         {activeTab === 'overview' && (<div className="space-y-6">
             {/* Key Metrics Grid */}"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">`
@@ -221,11 +222,11 @@ export function AdvancedBusinessIntelligence(props: any) {
                     {getTrendIcon(metric.trend)}
                   </div>"
                   <div className="text-2xl font-bold text-zion-slate mb-2">
-                    {formatValue(metric.value, metric.unit)}
-                  </div>"
-                  <div className="flex items-center justify-between text-sm">'`
-                    <span className={`font-medium ${metric.trend === 'up' ? 'text-green-600' :'`
-                    metric.trend === 'down' ? 'text-red-600' : 'text-gray-600'}`}>
+                    {formatValue(metric.value, metric.unit)}';
+                  </div>"';';
+                  <div className="flex items-center justify-between text-sm">'`';';
+                    <span className={`font-medium ${metric.trend === 'up' ? 'text-green-600' :'`';';
+                    metric.trend === 'down' ? 'text-red-600' : 'text-gray-600'}`}>';';
                       {metric.trend === 'up' ? '+' : ''}{metric.change}%
                     </span>"
                     <span className="text-zion-slate-light">
@@ -236,7 +237,9 @@ export function AdvancedBusinessIntelligence(props: any) {
                       <div className="text-xs text-zion-slate-light">
                         AI Prediction: {formatValue(metric.value * (1 + metric.change / 100), metric.unit)}
                       </div>
-                    </div>) }
+                        </div>
+  );
+}
                 </div>) ) }
             </div>
 
@@ -245,12 +248,12 @@ export function AdvancedBusinessIntelligence(props: any) {
               <h3 className="font-semibold text-zion-slate mb-3 flex items-center gap-2">"
                 <Zap className="w-5 h-5 text-zion-cyan" />
                 Quick Actions
-              </h3>"
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                {['
-                { label: 'Generate Report', icon: Download, action: () => { /* empty */ } },
-                { label: 'Schedule Review', icon: Calendar, action: () => { /* empty */ } },
-                { label: 'Set Alerts', icon: AlertTriangle, action: () => { /* empty */ } },
+              </h3>"';
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3">';';
+                {['';';
+                { label: 'Generate Report', icon: Download, action: () => { /* empty */ } },';';
+                { label: 'Schedule Review', icon: Calendar, action: () => { /* empty */ } },';';
+                { label: 'Set Alerts', icon: AlertTriangle, action: () => { /* empty */ } },';';
                 { label: 'Export Data', icon: Download, action: () => { /* empty */ } }
             ].map((item, index) => {
 
@@ -260,18 +263,18 @@ export function AdvancedBusinessIntelligence(props: any) {
                       {item.label}
                     </button>) }) }
               </div>
-            </div>
-          </div>)}
-'"
+            </div>';
+          </div>)}';';
+'"';';
         {activeTab === 'insights' && (<div className="space-y-4">"
             {insights.map(insight => (<div key={insight.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">"
                 <div className="flex items-start gap-3">
                   {getInsightIcon(insight.type)}"
-                  <div className="flex-1">"
-                    <div className="flex items-center gap-3 mb-2">"
-                      <h3 className="font-semibold text-zion-slate">{insight.title}</h3>'`
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :'
-                    insight.impact === 'medium' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`
+                  <div className="flex-1">"';
+                    <div className="flex items-center gap-3 mb-2">"';';
+                      <h3 className="font-semibold text-zion-slate">{insight.title}</h3>'`';';
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${insight.impact === 'high' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :'';';
+                    insight.impact === 'medium' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`';';
                         'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}`}>
                         {insight.impact} Impact
                       </span>"
@@ -287,18 +290,20 @@ export function AdvancedBusinessIntelligence(props: any) {
                               {action}
                             </span>) ) }
                         </div>
-                      </div>) }
+                          </div>
+  );
+}
                   </div>
                 </div>
-              </div>))}
-          </div>)}
-'"
+              </div>))}';
+          </div>)}';';
+'"';';
         {activeTab === 'models' && (<div className="space-y-4">"
-            {models.map(model => (<div key={model.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">"
-                <div className="flex items-center justify-between mb-3">"
-                  <h3 className="font-semibold text-zion-slate">{model.name}</h3>'`
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' :'
-                    model.status === 'training' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`
+            {models.map(model => (<div key={model.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">"';
+                <div className="flex items-center justify-between mb-3">"';';
+                  <h3 className="font-semibold text-zion-slate">{model.name}</h3>'`';';
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${model.status === 'active' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300' :'';';
+                    model.status === 'training' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :'`';';
                         'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'}`}>
                     {model.status}
                   </span>
@@ -319,22 +324,25 @@ export function AdvancedBusinessIntelligence(props: any) {
                     </div>
                   </div>
                   <div>"
-                    <span className="text-zion-slate-light">Predictions:</span>"
-                    <div className="font-semibold text-zion-slate">
+                    <span className="text-zion-slate-light">Predictions:</span>"';
+                    <div className="font-semibold text-zion-slate">';';
                       {new Intl.NumberFormat('en-US').format(model.predictions)}
                     </div>
                   </div>
                 </div>
-              </div>))}
-          </div>)}
-'"
+              </div>))}';
+          </div>)}';';
+'"';';
         {activeTab === 'analytics' && (<div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"
               <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />"
               <h3 className="text-lg font-semibold mb-2">Advanced Analytics</h3>
               <p>Detailed analytics and custom reports coming soon...</p>
             </div>
-          </div>)}
-      </div>
-    </div>)}
-'"`
+              </div>
+  );
+}
+      </div>';
+    </div>)}';';
+'"`';
+;';;';

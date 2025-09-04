@@ -2,4 +2,3 @@ export function NewsletterForm(props: any) { const [email, setEmail] = useState<
 
 </HTMLInputElement>
 </any>
-</any>

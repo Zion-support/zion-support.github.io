@@ -1,28 +1,28 @@
-import React from 'react';
+import React from 'react';';';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page(props: any) {
       // Apply large text
-      if(updatedSettings.largeText) {
-
-        document.documentElement.classList.add('large-text')} else {
-
+      if(updatedSettings.largeText) {';
+';';
+        document.documentElement.classList.add('large-text')} else {';
+';';
         document.documentElement.classList.remove('large-text')}
 
       // Apply reduced motion
-      if(updatedSettings.reducedMotion) {
-
-        document.documentElement.classList.add('reduced-motion')} else {
-
+      if(updatedSettings.reducedMotion) {';
+';';
+        document.documentElement.classList.add('reduced-motion')} else {';
+';';
         document.documentElement.classList.remove('reduced-motion')}
-
-    // Color blindness simulation
-    if(newSettings.colorBlindness !== 'none') {
-      root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {
+';
+    // Color blindness simulation';';
+    if(newSettings.colorBlindness !== 'none') {';
+      root.classList.add(`color-blind-${newSettings.colorBlindness}`)} else {';';
       root.classList.remove('color-blind-protanopia',color-blind-deuteranopia',color-blind-tritanopia')}
-
-      // Store settings in localStorage
-      localStorage.setItem('
+';
+      // Store settings in localStorage';';
+      localStorage.setItem('';';
         'accessibility-settings',
         JSON.stringify(updatedSettings)
       )},
@@ -39,9 +39,9 @@ export default function Page(props: any) {
       setSettings(parsedSettings);
       applySettings(parsedSettings)}
   }, [enabled, applySettings]);
-  // Screen reader announcements
-
-    announcement.setAttribute('aria-live',polite');
+  // Screen reader announcements';
+';';
+    announcement.setAttribute('aria-live',polite');';';
     announcement.setAttribute('aria-atomic',true');
     announcement.className="sr-only";
     announcement.textContent = message;
@@ -57,35 +57,35 @@ export default function Page(props: any) {
 }, []);
     if(!enabled || !settings.keyboardNavigation) return;
 
-      switch(event.key) {
-
-        case 'ArrowDown':'
+      switch(event.key) {';
+';';
+        case 'ArrowDown':'';';
         case 'ArrowRight':
           event.preventDefault();
           
-          (focusableElements[nextIndex] as HTMLElement)?.focus();
-          break;
-        case 'ArrowUp':'
+          (focusableElements[nextIndex] as HTMLElement)?.focus();';
+          break;';';
+        case 'ArrowUp':'';';
         case 'ArrowLeft':
           event.preventDefault();
           
           (focusableElements[prevIndex] as HTMLElement)?.focus();
-          break;
-            currentIndex <= 0 ? focusableElements.length-1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();
-          break;'
+          break;';
+            currentIndex <= 0 ? focusableElements.length-1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();';';
+          break;'';';
         case 'Home':
           event.preventDefault();
-          (focusableElements[0] as HTMLElement)?.focus();
-          break;
+          (focusableElements[0] as HTMLElement)?.focus();';
+          break;';';
         case 'End':
           event.preventDefault();
           (
             focusableElements[focusableElements.length-1] as HTMLElement
           )?.focus();
           break}
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
+    };';
+';';
+    document.addEventListener('keydown', handleKeyDown);';';
     return () => document.removeEventListener('keydown', handleKeyDown)}, [settings.keyboardNavigation]);
 
   // Enhanced focus management
@@ -95,29 +95,29 @@ export default function Page(props: any) {
     
       setCurrentFocus(target) ;
 
-      if(settings.focusIndicator) {
-
-        target.style.outline = '3px solid #3b82f6';
+      if(settings.focusIndicator) {';
+';';
+        target.style.outline = '3px solid #3b82f6';';';
         target.style.outlineOffset = '2px'}
     };
 
-      if(settings.focusIndicator) {
-
-        target.style.outline = '';
+      if(settings.focusIndicator) {';
+';';
+        target.style.outline = '';';';
         target.style.outlineOffset = '';
       }
-    };
-
+    };';
+';';
     document.addEventListener('focusin', handleFocusChange);    document.addEventListener('focusout', handleFocusOut);
 
-    return () => {
-
-      document.removeEventListener('focusin', handleFocusChange);
+    return () => {';
+';';
+      document.removeEventListener('focusin', handleFocusChange);';';
       document.removeEventListener('focusout', handleFocusOut)}}, [settings.focusIndicator]) ;
 
-  // Screen reader announcements
-  
-        announcement.setAttribute('aria-live',polite');
+  // Screen reader announcements';
+  ';';
+        announcement.setAttribute('aria-live',polite');';';
         announcement.setAttribute('aria-atomic',true');
         announcement.className="sr-only";
         announcement.textContent = message;
@@ -131,17 +131,17 @@ export default function Page(props: any) {
 
   // Toggle settings
   
-      applySettings({ [key]: newValue });
-
+      applySettings({ [key]: newValue });';
+';';
       if(key === 'highContrast') {
-
-        announceToScreenReader()
-          newValue'
-            ? 'High contrast mode enabled''
-            : 'High contrast mode disabled'
-        )} else if(key === 'largeText') {
-
-        announceToScreenReader('
+';
+        announceToScreenReader()';';
+          newValue'';';
+            ? 'High contrast mode enabled''';';
+            : 'High contrast mode disabled'';';
+        )} else if(key === 'largeText') {';
+';';
+        announceToScreenReader('';';
           newValue ? 'Large text mode enabled' : 'Large text mode disabled'
         )}
     },
@@ -203,17 +203,17 @@ export default function Page(props: any) {
                   <div className="flex items-center space-x-2">"
                     <Contrast className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
                     <span className="text-sm text-slate-700 dark: tex t-slate-300">
-                      High Contrast
-                    </span>                  </div>
-                  <button'
-                    onClick={() => toggleSetting('highContrast')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-blue-600' : 'bg-slate-300'`
-                    }`}'`
+                      High Contrast';
+                    </span>                  </div>';';
+                  <button'';';
+                    onClick={() => toggleSetting('highContrast')}`';';
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.highContrast ? 'bg-blue-600' : 'bg-slate-300'`';';
+                    }`}'`';';
                     aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast mode`}
-                  >
-                    <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast'
-                          ? 'translate-x-6''
+                  >';
+                    <span`';';
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.highContrast'';';
+                          ? 'translate-x-6''';';
                           : 'translate-x-1'`
                       }`}
                     />
@@ -224,15 +224,15 @@ export default function Page(props: any) {
                   <div className="flex items-center space-x-2">"
                     <Type className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
                     <span className="text-sm text-slate-700 dark: tex t-slate-300">
-                      Large Text
-                    </span>                  </div>
-                  <button'
-                    onClick={() => toggleSetting('largeText')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.largeText ? 'bg-blue-600' : 'bg-slate-300'`
-                    }`}'`
+                      Large Text';
+                    </span>                  </div>';';
+                  <button'';';
+                    onClick={() => toggleSetting('largeText')}`';';
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.largeText ? 'bg-blue-600' : 'bg-slate-300'`';';
+                    }`}'`';';
                     aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text mode`}
-                  >
-                    <span`
+                  >';
+                    <span`';';
                       className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.largeText ? 'translate-x-6' : 'translate-x-1'`
                       }`}
                     />
@@ -243,17 +243,17 @@ export default function Page(props: any) {
                   <div className="flex items-center space-x-2">"
                     <Eye className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
                     <span className="text-sm text-slate-700 dark: tex t-slate-300">
-                      Focus Indicator
-                    </span>                  </div>
-                  <button'
-                    onClick={() => toggleSetting('focusIndicator')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.focusIndicator ? 'bg-blue-600' : 'bg-slate-300'`
-                    }`}'`
+                      Focus Indicator';
+                    </span>                  </div>';';
+                  <button'';';
+                    onClick={() => toggleSetting('focusIndicator')}`';';
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.focusIndicator ? 'bg-blue-600' : 'bg-slate-300'`';';
+                    }`}'`';';
                     aria-label={`${settings.focusIndicator ? 'Disable' : 'Enable'} focus indicator`}
-                  >
-                    <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator'
-                          ? 'translate-x-6''
+                  >';
+                    <span`';';
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.focusIndicator'';';
+                          ? 'translate-x-6''';';
                           : 'translate-x-1'`
                       }`}
                     />
@@ -271,19 +271,19 @@ export default function Page(props: any) {
                   <div className="flex items-center space-x-2">"
                     <Keyboard className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
                     <span className="text-sm text-slate-700 dark: tex t-slate-300">
-                      Keyboard Navigation
-                    </span>                  </div>
-                  <button'
-                    onClick={() => toggleSetting('keyboardNavigation')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.keyboardNavigation'
-                        ? 'bg-blue-600''
-                        : 'bg-slate-300'`
-                    }`}'`
+                      Keyboard Navigation';
+                    </span>                  </div>';';
+                  <button'';';
+                    onClick={() => toggleSetting('keyboardNavigation')}`';';
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.keyboardNavigation'';';
+                        ? 'bg-blue-600''';';
+                        : 'bg-slate-300'`';';
+                    }`}'`';';
                     aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}
-                  >
-                    <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.keyboardNavigation'
-                          ? 'translate-x-6''
+                  >';
+                    <span`';';
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.keyboardNavigation'';';
+                          ? 'translate-x-6''';';
                           : 'translate-x-1'`
                       }`}
                     />
@@ -294,17 +294,17 @@ export default function Page(props: any) {
                   <div className="flex items-center space-x-2">"
                     <MousePointer className="w-4 h-4 text-slate-600 dark: tex t-slate-400"   />"
                     <span className="text-sm text-slate-700 dark: tex t-slate-300">
-                      Reduced Motion
-                    </span>                  </div>
-                  <button'
-                    onClick={() => toggleSetting('reducedMotion')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-blue-600' : 'bg-slate-300'`
-                    }`}'`
+                      Reduced Motion';
+                    </span>                  </div>';';
+                  <button'';';
+                    onClick={() => toggleSetting('reducedMotion')}`';';
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.reducedMotion ? 'bg-blue-600' : 'bg-slate-300'`';';
+                    }`}'`';';
                     aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
-                  >
-                    <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion'
-                          ? 'translate-x-6''
+                  >';
+                    <span`';';
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion'';';
+                          ? 'translate-x-6''';';
                           : 'translate-x-1'`
                       }`}
                     />
@@ -328,15 +328,15 @@ export default function Page(props: any) {
                 <div className="flex items-center justify-between">"
                   <span className="text-sm text-slate-700 dark: tex t-slate-300">
                     {settings.zoomLevel}%
-                  </span>"
-                  <div className="flex items-center space-x-2">
-                    <button'
+                  </span>"';
+                  <div className="flex items-center space-x-2">';';
+                    <button'';';
                       onClick={() => adjustZoom('out')}"
                       className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors"
                       
-                    >"
-                      <ZoomOut className="w-4 h-4"   />                    </button>
-                    <button'
+                    >"';
+                      <ZoomOut className="w-4 h-4"   />                    </button>';';
+                    <button'';';
                       onClick={() => adjustZoom('in')}"
                       className="p-2 rounded-lg bg-slate-100 dark: b g-slate-700 hover: b g-slate-200 dark: hove r:bg-slate-600 transition-colors"
                       
@@ -358,12 +358,13 @@ export default function Page(props: any) {
                       {accessibilityIssues.length > 3 && (
                         <div className="text-white/60 text-xs text-center">
                           +{accessibilityIssues.length-3} more issues
-                        </div>
-                      )}
+                            </div>
+  );
+}
                     </div>
-                  </div>
-                )}
-
+                      </div>
+  );
+}
                 <button
                   onClick={runAccessibilityAudit}
                   className="w-full bg-zion-purple/20 hover: b g-zion-purple/30 text-zion-purple text-sm py-2 rounded-lg transition-colors"
@@ -383,17 +384,17 @@ export default function Page(props: any) {
                     <Volume2 className="w-4 h-4 text-slate-600 dark: tex t-slate-400"  />"
                     <span className="text-sm text-slate-700 dark: tex t-slate-300">
                       Enhanced Support
-                    </span>
-                  </div>
-                  <button'
-                    onClick={() => toggleSetting('screenReader')}`
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'`
-                    }`}'`
+                    </span>';
+                  </div>';';
+                  <button'';';
+                    onClick={() => toggleSetting('screenReader')}`';';
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.screenReader ? 'bg-blue-600' : 'bg-slate-300'`';';
+                    }`}'`';';
                     aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} enhanced screen reader support`}
-                  >
-                    <span`
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.screenReader'
-                          ? 'translate-x-6''
+                  >';
+                    <span`';';
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.screenReader'';';
+                          ? 'translate-x-6''';';
                           : 'translate-x-1'`
                       }`}
                     />
@@ -407,13 +408,15 @@ export default function Page(props: any) {
                 <div className="p-3 bg-blue-50 dark: b g-blue-900/20 rounded-lg border border-blue-200 dark: borde r-blue-800">"
                   <h4 className="text-sm font-semibold text-blue-700 dark: tex t-blue-300 mb-2">
                     Current Focus
-                  </h4>"
-                  <p className="text-xs text-blue-600 dark: tex t-blue-400">
-                    {currentFocus.tagName.toLowerCase()}:{' '}
-                    {currentFocus.textContent?.substring(0, 50) ||'
+                  </h4>"';
+                  <p className="text-xs text-blue-600 dark: tex t-blue-400">';';
+                    {currentFocus.tagName.toLowerCase()}:{' '}';';
+                    {currentFocus.textContent?.substring(0, 50) ||'';';
                       'No text content'}
                   </p>
-                </div>) }
+                    </div>
+  );
+}
             </div>
           </motion.div>
         )}
@@ -447,15 +450,11 @@ export default function Page(props: any) {
           transition-duration: 0.01ms !important}`      `}</style>
     </>
   )};
-
-export default EnhancedAccessibilityEnhancer;
+';
+export default EnhancedAccessibilityEnhancer;';';
 '"`
 
 </span>
 </span>
-</span>
-</span>
-</span>
-</span>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

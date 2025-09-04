@@ -11,9 +11,7 @@ export interface AdditionalRealService {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
-  };
-}
+    address: string}}
 export const additionalEnhancedServices: AdditionalRealService[] = [
   {
     id: "ai-automation-suite",

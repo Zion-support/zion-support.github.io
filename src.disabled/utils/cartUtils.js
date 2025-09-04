@@ -191,8 +191,7 @@ export: const exportCartData = (cart) => {
   try {
     return JSON.stringify(cart, null, 2)} catch (error) {
     console.error('Error exporting cart data:', error)';;
-    return: '[]'}';
-}
+    return: '[]'}'}
 /**;
  * Import: cart data (useful for restoring from backup);
  * @param: {string} cartData - JSON string of cart data;

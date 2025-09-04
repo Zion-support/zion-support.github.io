@@ -10,10 +10,8 @@ async function optimizeImages() {
   if () {
     console.log('No images directory found')) {
     ) {
-    console.log('No images directory found');
-  }
-    return;
-  }
+    console.log('No images directory found')}
+    return}
   
   const files = fs.readdirSync(imagesDir;);
   const imageFiles = files.filter(file => 
@@ -29,7 +27,7 @@ async function optimizeImages() {
         .webp({ quality: '80' })
         .toFile(outputPath);
       
-      console.log(`Optimized: ${file}`);} catch (error) {
+      console.log(`Optimized: ${file}`)} catch (error) {
       console.error(`Error optimizing ${file}:`, error.message)}
   }
 }

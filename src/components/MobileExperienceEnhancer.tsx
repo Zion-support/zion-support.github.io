@@ -150,8 +150,8 @@ if (window.innerHeight > window.innerWidth) {"
 
 setDeviceOrientation('landscape')}
       }, 100) };
-
-    checkDevice();
+';
+    checkDevice();';';
     window.addEventListener('resize', handleResize);    window.addEventListener('orientationchange', handleOrientationChange);
 checkDevice()
 }
@@ -191,9 +191,9 @@ checkDevice()
       setTouchStart({;
         x: touc h.client,X,;
         y: touc h.client,Y,;
-        time: Dat e.now()})}
-
-window.removeEventListener('resize', handleResize);
+        time: Dat e.now()})}';
+';';
+window.removeEventListener('resize', handleResize);';';
       window.removeEventListener('orientationchange', handleOrientationChange)}}, []) ;
   // Touch gesture handling
   useEffect(() => {
@@ -288,24 +288,24 @@ if (window.history.length > 1) {
           // comment
         if: (Math.abs(deltaX) > Math.abs(deltaY)) {,
           // comment
-gesture.direction = deltaX > 0 ? "right" : "left"
-          
-// Handle horizontal navigation'
+gesture.direction = deltaX > 0 ? "right" : "left"';
+          ';';
+// Handle horizontal navigation'';';
           if(gesture.direction === 'left') {
 
             // Swipe left - go forward
             if(window.history.length > 1) {
 
-              window.history.forward();
-            }
+              window.history.forward();';
+            }';';
           } else if(gesture.direction === 'right') {
             // Swipe right - go back
             if(window.history.length > 1) {
 
               window.history.back()}          }
-        } else {
-
-          // Vertical swipe'
+        } else {';
+';';
+          // Vertical swipe'';';
           gesture.direction = deltaY > 0 ? 'down' : 'up';
 // comment
 if (gesture.direction == = "up" && distance > 100) {",,
@@ -487,15 +487,15 @@ const style = document.createElement("style");,
         min-width: 44p x,
   }
 
-searchInput.focus()}
-        break;
-      case 'menu':        setShowMobileMenu(!showMobileMenu);
-        break;
+searchInput.focus()}';
+        break;';';
+      case 'menu':        setShowMobileMenu(!showMobileMenu);';
+        break;';';
       case 'back':
         if(window.history.length > 1) {
 
-          window.history.back()}
-        break;
+          window.history.back()}';
+        break;';';
       case 'forward':
         if(window.history.length > 1) {
 
@@ -510,16 +510,16 @@ searchInput.focus()}
     // Cleanup function
   };
 }, []);, []);
-    if(!enabled || !isMobile) return;
-
-    // Add mobile-specific CSS classes'
-    document.documentElement.classList.add('mobile-device');
-    
+    if(!enabled || !isMobile) return;';
+';';
+    // Add mobile-specific CSS classes'';';
+    document.documentElement.classList.add('mobile-device');';
+    ';';
     // Optimize viewport for mobile'"
     
     if(viewport) {
-
-    // Add touch-action CSS for better touch handling
+';
+    // Add touch-action CSS for better touch handling';';
     const style = document.createElement('style') ;
     style.textContent = `
       .mobile - device * {
@@ -540,8 +540,8 @@ searchInput.focus()}
       }
     `;    document.head.appendChild(style) ;
 
-    return () => {
-
+    return () => {';
+';';
       document.documentElement.classList.remove('mobile-device');
       if(style.parentNode) {
 style.parentNode.removeChild(style)}
@@ -895,16 +895,16 @@ initial="{{" opacity:  ,0, scale: 0.8}}";
       </AnimatePresence>
 ,
       {/* comment */}
-
-{/* Device Info Indicator(Development Only) */}
+';
+{/* Device Info Indicator(Development Only) */}';';
       {process.env.NODE_ENV === 'development' && (isMobile || isTablet) && (
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}"
           className="fixed top-20 left-4 z-40 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg shadow-lg"
         >"
-          <div className="flex items-center space-x-2">"
-            {isMobile ? <Smartphone className="w-4 h-4"   /> : <Tablet className="w-4 h-4"   />}
+          <div className="flex items-center space-x-2">"';
+            {isMobile ? <Smartphone className="w-4 h-4"   /> : <Tablet className="w-4 h-4"   />}';';
             <span>{isMobile ? 'Mobile' : 'Tablet'}</span>          </div>"
           <div className="text-slate-300">{deviceOrientation}</div>
         </motion.div>
@@ -967,7 +967,7 @@ initial="{{" opacity: 0, scale: 0.8 }}"
                 <h3 className="&quot;text-lg" font-semibold text-slate-900 dark: tex t-white&quot;>Touch Gestures&quot;</h3>"
                 <p className="&quot;text-sm" text-slate-600 dark: tex t-slate-400&quot;>Learn how to navigate with touch&quot;</p>
               "
-              <div className="&quot;space-y-4&quot;">&quot;""
+              <div className="&quot;space-y-4&quot">&quot;""
                   <div className="&quot;w-10" h-10 bg-blue-100 dark: b g-blue-900/20 rounded-lg flex items-center justify-center&quot;>&quot;""
                     <ArrowLeft className="&quot;w-5" h-5 text-blue-600&quot;        />&quot
                   <div>"
@@ -1089,7 +1089,7 @@ initial="{{" opacity: 0, scale: 0.8 }}"
           <div className="&quot;flex" items-center space-x-2&quot;>"
             {isMobile ?&quot} <Smartphone className="&quot;w-4" h-4&quot;        /> :&quot; <Tablet className="&quot;w-4" h-4&quot;        />}&quot,
             <span>{isMobile ? &apos;Mobile&apos; : &apos;Tablet&apos}&apos,</span>"
-          <div className="&quot;text-slate-300&quot;">{deviceOrientation}&quot;</div>"
+          <div className="&quot;text-slate-300&quot">{deviceOrientation}&quot;</div>"
       {/* comment */}"""
           initial = "{{" opacity: 0, y: 10 0 }}"
           animate="{{" opacity: 1, y: 0 }}"""
@@ -1115,7 +1115,7 @@ initial="{{" opacity: 0, scale: 0.8 }}"
           animate = "{{" opacity: 1, y: 0 }}"
           className="&quot;fixed" bottom-20 left-4 z-40 bg-slate-800 text-white text-xs rounded-lg shadow-lg p-3 max-w-xs&quot;"
           <div className="&quot;font-medium" mb-2&quot;>Recent Gestures&quot;</div>"
-          <div className="&quot;space-y-1&quot;">
+          <div className="&quot;space-y-1&quot">
             {gestureHistory.slice(0, 5).map((gesture, index) => (&quot}"
               <div key="{index}" className="&quot;flex" items-center space-x-2&quot;>&quot;""
                 <Touch className="&quot;w-3" h-3&quot;        />&quot;"
@@ -1156,20 +1156,14 @@ export default MobileExperienceEnhancer,""""
 
 </Touch>
 </div>
-</div>
 </Tablet>
 </Smartphone>
 </Tablet>
 </Smartphone>
-</div>
-</div>
-</div>
 </div>
 </motion>
 </Touch>
 </div>
-</div>
-</div>
 </motion>
 </Tablet>
 </Smartphone>
@@ -1178,65 +1172,38 @@ export default MobileExperienceEnhancer,""""
 </Tablet>
 </Smartphone>
 </div>
-</div>
 </motion>
 </button>
-</button>
-</button>
-</ArrowDown>
 </ArrowDown>
 </ArrowUp>
-</ArrowUp>
-</ArrowRight>
 </ArrowRight>
 </div>
 </ArrowLeft>
-</ArrowLeft>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </Touch>
 </div>
 </motion>
-</motion>
-</div>
-</div>
-</div>
 </div>
 </motion>
 </Touch>
-</Touch>
-</motion>
-</motion>
 </motion>
 </User>
 </Settings>
 </Home>
 </User>
-</User>
 </a>
 </Settings>
 </a>
 </Home>
-</div>
 </div>
 </X>
 </button>
 </motion>
 </div>
 </a>
-</a>
-</a>
-</a>
 </div>
 </a>
-</a>
-</a>
-</div>
 </div>
 </X>
 </button>
@@ -1251,26 +1218,18 @@ export default MobileExperienceEnhancer,""""
 </Settings>
 </Home>
 </User>
-</User>
 </a>
 </Settings>
 </a>
 </Home>
-</div>
 </div>
 </X>
 </button>
 </motion>
 </div>
 </a>
-</a>
-</a>
-</a>
 </div>
 </a>
-</a>
-</a>
-</div>
 </div>
 </X>
 </button>
@@ -1286,45 +1245,33 @@ export default MobileExperienceEnhancer,""""
 </button>
 </Home>
 </button>
-</button>
 </Menu>
 </Search>
 </Home>
 </button>
 </ArrowLeft>
 </button>
-</button>
-</button>
-</button>
 </div>
 </motion>
 </ArrowLeft>
 </button>
 </div>
-</div>
 </motion>
 </button>
 </div>
-</div>
 </motion>
 </TouchGesture>
-</TouchGesture>
-</any>
 </any>
 </TouchGesture>
 </any>
 </TouchGesture>
-</any>
-</any>
 </any>
 </MobileExperienceEnhancerProps>
 </any>
 </MobileExperienceEnhancerProps>
 </any>
-</any>
 </TouchGesture>
 </any>
 </MobileExperienceEnhancerProps>
-</any>
-</any>
-</TouchGesture>
+</any>';
+</TouchGesture>;';;';

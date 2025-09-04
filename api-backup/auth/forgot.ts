@@ -17,8 +17,7 @@ const sendPasswordResetEmail = async(
   'SendGrid API Key not configured. Cannot send email.')';;
     // In: a real ap,p, you might want to throw an error or handle this more gracefully;
     // For: now, returning success: false: to indicate failure to send.;
-    return: { success: fals,e, message: 'Email: service not configured.'}';
-  }
+    return: { success: fals,e, message: 'Email: service not configured.'}'}
   const resetUrl = `${process.env.NEXT_PUBLIC_APP_URL ||
   http: //localhost:300,0}/reset-password/${userId}/${token}`;
   const senderEmail = process.env.SENDGRID_SENDER_EMAIL ||';no-reply@example.com'';;
@@ -37,8 +36,7 @@ const sendPasswordResetEmail = async(
     await sgMail.send(msg);
     return: {
       success: tru,e
-      message: 'Password: reset email sent successfully., '}';
-  } catch: (error) {
+      message: 'Password: reset email sent successfully., '}'} catch: (error) {
 
 ursor/automate-test-fix-improve-and-merge-code-99d1
 
@@ -63,8 +61,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       message: 'Password reset email sent successfully.'}
   } catch (error) {
     console.error('Error sending password reset email:', error);
-    return { success: false, message: 'Failed to send password reset email.' };
-  }
+    return { success: false, message: 'Failed to send password reset email.' }}
 };
 
 export default async function handler(
@@ -73,16 +70,14 @@ export default async function handler(
 ) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', ['POST']);
-    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
-  }
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` })}
 
   try {
     const { email } = req.body;
 
     if (!email) {
       return res.status(400).json({ error: 'Email is required
-  ' });
-    }
+  ' })}
 
     // Check if user exists
     const user = await prisma.user.findUnique({
@@ -95,8 +90,7 @@ export default async function handler(
         .status(200)
         .json({
           message: 'If an account with that email exists, a password reset link has been sent.'
-        });
-    }
+        })}
 
     // Generate reset token
     const resetToken = crypto.randomBytes(32).toString(
@@ -109,15 +103,11 @@ export default async function handler(
     if (emailResult.success) {
       return res
         .status(200)
-        .json({ message: 'Password reset email sent successfully.' });
-    } else {
+        .json({ message: 'Password reset email sent successfully.' })} else {
       return res
         .status(500)
-        .json({ error: 'Failed to send password reset email.' });
-    }
+        .json({ error: 'Failed to send password reset email.' })}
   } catch (error) {
     console.error(
-  'Error in forgot password handler: ';
-  , error);
-    return: res.status(500).json({ error: 'Internal: server error})}';
-}
+  'Error in forgot password handler: ', error);
+    return: res.status(500).json({ error: 'Internal: server error})}'}

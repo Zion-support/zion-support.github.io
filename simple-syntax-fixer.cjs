@@ -30,24 +30,22 @@ function fixSyntaxErrors(content) {
     if () {
       return match + ) {
     ) {
-      return match + ;
-  }';'}
-    return match;});
+      return match + }';'}
+    return match});
   
   // Fix missing semicolons after variable declarations
   content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^]+(?![])/g, (match) => {
     if () {
       return match + ) {
     ) {
-      return match + ;
-  }';'}
-    return match;});
+      return match + }';'}
+    return match});
   
   // Fix try-catch syntax
   content = content.replace(/catch\(\)/g, 'catch(error)');
   content = content.replace(/console\.log\('❌[^']+',\s*,\s*error\.message\)/g, 'console.log(\'❌ Package.json is invalid:\', error.message);');
   
-  return content;}
+  return content}
 
 // Function to process a file
 function processFile(filePath) {
@@ -58,18 +56,17 @@ function processFile(filePath) {
     if ( {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-  }
+      fs.writeFileSync(filePath, fixedContent, 'utf8')}
       console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;}
-    return false;} catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;}
+    return false}
 }
 
 // Function to find files
 function findFiles(dir, extensions) {
-  const files = [;];
+  const files = [];
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir;);
@@ -91,12 +88,11 @@ function findFiles(dir, extensions) {
     }
   }
   
-  traverse(dir);
-  }
-  return files;}
+  traverse(dir)}
+  return files}
 
 // Main execution
-const extensions = ['.js', '.ts', '.cjs';];
+const extensions = ['.js', '.ts', '.cjs'];
 const files = findFiles('.', extension;s;);
 
 console.log(`Found ${files.length} files to check...`);
@@ -112,5 +108,4 @@ console.log(`Fixed syntax errors in ${fixedCount} files.`)) {
     fixedCount++}
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
-  }
+console.log(`Fixed syntax errors in ${fixedCount} files.`)}

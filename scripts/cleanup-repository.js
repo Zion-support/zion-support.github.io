@@ -111,52 +111,42 @@ function shouldKeepFile(filePath) {
   // Check if file matches keep patterns
   for (const pattern of KEEP_PATTERNS) {
     if (glob.minimatch(filePath, pattern)) {
-      return true;
-    }
+      return true}
   }
 
-  return false;
-}
+  return false}
 
 function shouldRemoveFile(filePath) {
   // Don't remove files that should be kept
   if (shouldKeepFile(filePath)) {
-    return false;
-  }
+    return false}
 
   // Check if file matches cleanup patterns
   for (const pattern of CLEANUP_PATTERNS) {
     if (glob.minimatch(filePath, pattern)) {
-      return true;
-    }
+      return true}
   }
 
-  return false;
-}
+  return false}
 
 function removeFile(filePath) {
   try {
     const stats = fs.statSync(filePath);
     if (stats.isDirectory()) {
       fs.rmSync(filePath, { recursive: true, force: true });
-      console.log(`🗂️  Removed directory: ${filePath}`);
-    } else {
+      console.log(`🗂️  Removed directory: ${filePath}`)} else {
       fs.unlinkSync(filePath);
-      console.log(`📄 Removed file: ${filePath}`);
-    }
+      console.log(`📄 Removed file: ${filePath}`)}
 
-    return true;
-  } catch (error) {
+    return true} catch (error) {
     console.error(`❌ Error removing ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 function cleanScripts() {
   const scriptsDir = 'scripts';
   if (!fs.existsSync(scriptsDir)) {
-    return;
-  }
+    return}
 
   const scriptFiles = glob.sync('scripts/**/*', { nodir: true });
   let cleanedCount = 0;
@@ -171,13 +161,11 @@ function cleanScripts() {
       file.includes('targeted-')
     ) {
       if (removeFile(file)) {
-        cleanedCount++;
-      }
+        cleanedCount++}
     }
   }
 
-  console.log(`🧹 Cleaned ${cleanedCount} temporary script files`);
-}
+  console.log(`🧹 Cleaned ${cleanedCount} temporary script files`)}
 
 function cleanRootFiles() {
   const rootFiles = glob.sync('*', { nodir: true });
@@ -221,13 +209,11 @@ function cleanRootFiles() {
       file.endsWith('.sh')
     ) {
       if (removeFile(file)) {
-        cleanedCount++;
-      }
+        cleanedCount++}
     }
   }
 
-  console.log(`🧹 Cleaned ${cleanedCount} temporary root files`);
-}
+  console.log(`🧹 Cleaned ${cleanedCount} temporary root files`)}
 
 function cleanReportFiles() {
   const reportFiles = glob.sync('**/*-report.json', { nodir: true });
@@ -240,13 +226,11 @@ function cleanReportFiles() {
       !file.includes('security-audit-report.json')
     ) {
       if (removeFile(file)) {
-        cleanedCount++;
-      }
+        cleanedCount++}
     }
   }
 
-  console.log(`🧹 Cleaned ${cleanedCount} temporary report files`);
-}
+  console.log(`🧹 Cleaned ${cleanedCount} temporary report files`)}
 
 function main() {
   console.log('🧹 Starting repository cleanup...');
@@ -263,8 +247,7 @@ function main() {
     for (const file of files) {
       if (shouldRemoveFile(file)) {
         if (removeFile(file)) {
-          totalRemoved++;
-        }
+          totalRemoved++}
       }
     }
   }
@@ -276,7 +259,6 @@ function main() {
   console.log('   1. Run: npm install');
   console.log('   2. Run: npm run build');
   console.log('   3. Test the application');
-  console.log('   4. Commit the changes');
-}
+  console.log('   4. Commit the changes')}
 
 main();

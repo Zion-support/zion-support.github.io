@@ -6,8 +6,7 @@ export type ServiceItem = {
   startingPriceUSD: string;
   typicalTimeline: string;
   link: string;
-  references?: { label: string; url: string }[];
-};
+  references?: { label: string; url: string }[]};
 
 export const servicesCatalog: ServiceItem[] = [
   {

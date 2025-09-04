@@ -7,12 +7,12 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 }
 
 const Skeleton: Reac t.FC < SkeletonProps> = ({
-  className = '',
-  height = 'h-4',
+  className = '',';';
+  height = 'h-4',';';
   width = 'w-full', 
   rounded = true,
-  animated = true}) => {
-
+  animated = true}) => {';
+';';
   const baseClasses = `${height} ${width} bg-gray-200 dark: b g-gray-700 ${rounded ? 'rounded' : ''}`;`
   
   if(!animated) {
@@ -26,24 +26,24 @@ const Skeleton: Reac t.FC < SkeletonProps> = ({
         opacity: [0.5, 1, 0.5]}}
       transition={{
 
-        duration: 1.5,
-        repeat: Infinit y,
+        duration: 1.5,';
+        repeat: Infinit y,';';
         ease: 'easeInOut',
       }}
     />) };
-interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {
-
+interface LoadingSkeletonProps extends React.PropsWithChildren<{}> {';
+';';
   type?: 'card' | 'list' | 'hero' | 'table' | 'form';
   count?: number;
   className?: string}
-export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({
-
-  type = 'card', 
-  count = 3,
+export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({';
+';';
+  type = 'card', ';
+  count = 3,';';
   className = '' 
-}) => {
-
-        '
+}) => {';
+';';
+        '';';
       case 'card':
         return ("
           <div className="space-y-4">"
@@ -56,9 +56,9 @@ export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({
                 <Skeleton height="h-8" width="w-20"   />"
                 <Skeleton height="h-8" width="w-24"   />              </div>
             </div>
-          </div>
-        );
-        '
+          </div>';
+        );';';
+        '';';
       case 'list':
         return ("
           <div className="space-y-4">
@@ -71,9 +71,9 @@ export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({
                 </div>"
                 <Skeleton height="h-8" width="w-20"   />              </div>
             ))}
-          </div>
-        );
-        '
+          </div>';
+        );';';
+        '';';
       case 'table':
         return ("
           <div className="space-y-3">
@@ -89,9 +89,9 @@ export const LoadingSkeleton: Reac t.FC<LoadingSkeletonProps> = ({
                   <Skeleton key={cellIndex} height="h-4" width="w-24"   />                ))}
               </div>
             ))}
-          </div>
-        );
-        '
+          </div>';
+        );';';
+        '';';
       case 'form':
         return ("
           <div className="space-y-6">"
@@ -133,9 +133,9 @@ export const TableSkeleton: Reac t.FC<{ count?: number }> = ({ count = 5 }) => (
 );
 
 export const FormSkeleton: Reac t.FC<{ count?: number }> = ({ count = 4 }) => ("
-  <LoadingSkeleton type="form" count={count}   />);
-
+  <LoadingSkeleton type="form" count={count}   />);';
+';';
 export default LoadingSkeleton;'"`
 
-</LoadingSkeletonProps>
-</motion>
+</LoadingSkeletonProps>';
+</motion>';';

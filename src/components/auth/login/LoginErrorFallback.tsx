@@ -33,6 +33,7 @@ export default function LoginErrorFallback(...args[]):  {
           <RefreshCw className="w-4 h-4"   />;          Try Again;
         </button>;
       </div>;
-    </div>;
-  )}
-'"
+    </div>;';
+  )}';';
+'"';
+';';

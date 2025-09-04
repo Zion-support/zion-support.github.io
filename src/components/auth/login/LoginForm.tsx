@@ -11,4 +11,4 @@ export default function LoginForm(props: any) {return (
       </div>
   );"}"
 
-</div>
+</div>;;

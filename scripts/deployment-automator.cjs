@@ -28,16 +28,12 @@ deploymentSteps.forEach(step => {
     try {
         console.log(`📋 ${step.name}...`);
         execSync(step.command, { stdio: 'inherit' });
-        console.log(`✅ ${step.name} completed`);
-    } catch (error) {
+        console.log(`✅ ${step.name} completed`)} catch (error) {
         console.error(`❌ ${step.name} failed:`, error.message);
-        allPassed = false;
-    }
+        allPassed = false}
 });
 
 if (allPassed) {
-    console.log('🎉 All deployment checks passed! Ready for deployment.');
-} else {
+    console.log('🎉 All deployment checks passed! Ready for deployment.')} else {
     console.log('⚠️  Some deployment checks failed. Please fix issues before deploying.');
-    process.exit(1);
-}
+    process.exit(1)}

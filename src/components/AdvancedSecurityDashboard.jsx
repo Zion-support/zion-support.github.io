@@ -1,29 +1,29 @@
-import React, {useState, useRef, useEffect} from 'react';
-import {Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug} from 'lucide-react';
-const mockThreatIntelligence = [
-    {id: '1',
-        threatType: 'Ransomware Campaign',
-        description: 'Active ransomware campaign targeting healthcare organizations in the region.',
-        riskScore: 9.2,
-        affectedSystems: ['Windows Servers', 'File Shares', 'Backup Systems'],
-        mitigationSteps: ['Update endpoint protection', 'Enable advanced threat protection', 'Review backup procedures'],
-        lastSeen: '2024-01-15T09:00:00.000Z',
-        frequency: 15},
-    {id: '2',
-        threatType: 'Phishing Attack',
-        description: 'Sophisticated phishing campaign using executive impersonation.',
-        riskScore: 7.8,
-        affectedSystems: ['Email Systems', 'User Workstations'],
-        mitigationSteps: ['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],
+import React, {useState, useRef, useEffect} from 'react';';';
+import {Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug} from 'lucide-react';';
+const mockThreatIntelligence = [';';
+    {id: '1',';';
+        threatType: 'Ransomware Campaign',';';
+        description: 'Active ransomware campaign targeting healthcare organizations in the region.',';
+        riskScore: 9.2,';';
+        affectedSystems: ['Windows Servers', 'File Shares', 'Backup Systems'],';';
+        mitigationSteps: ['Update endpoint protection', 'Enable advanced threat protection', 'Review backup procedures'],';';
+        lastSeen: '2024-01-15T09:00:00.000Z',';
+        frequency: 15},';';
+    {id: '2',';';
+        threatType: 'Phishing Attack',';';
+        description: 'Sophisticated phishing campaign using executive impersonation.',';
+        riskScore: 7.8,';';
+        affectedSystems: ['Email Systems', 'User Workstations'],';';
+        mitigationSteps: ['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'],';';
         lastSeen: '2024-01-15T08:30:00.000Z',
         frequency: 8}
 ];
 export function AdvancedSecurityDashboard(props: any) {
     const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
-    const [isFullscreen, setIsFullscreen] = useState(false);
-    const [activeTab, setActiveTab] = useState('overview');
-    const [selectedSeverity, setSelectedSeverity] = useState('all');
+    const [isMinimized, setIsMinimized] = useState(false);';
+    const [isFullscreen, setIsFullscreen] = useState(false);';';
+    const [activeTab, setActiveTab] = useState('overview');';';
+    const [selectedSeverity, setSelectedSeverity] = useState('all');';';
     const [selectedFramework, setSelectedFramework] = useState('all');
     const [autoRefresh, setAutoRefresh] = useState(true);
     const [showResolved, setShowResolved] = useState(false);
@@ -31,9 +31,9 @@ export function AdvancedSecurityDashboard(props: any) {
     const [complianceRequirements, setComplianceRequirements] = useState(mockComplianceRequirements);
     const [securityMetrics, setSecurityMetrics] = useState(mockSecurityMetrics);
     const [threatIntelligence, setThreatIntelligence] = useState(mockThreatIntelligence);
-    const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
-    const severities = ['all', 'critical', 'high', 'medium', 'low', 'info'];
+    const [isRefreshing, setIsRefreshing] = useState(false);';
+    const containerRef = useRef(null);';';
+    const severities = ['all', 'critical', 'high', 'medium', 'low', 'info'];';';
     const filteredCompliance = selectedFramework === 'all'
         ? complianceRequirements
         : complianceRequirements.filter(req => req.framework === selectedFramework);
@@ -47,56 +47,56 @@ export function AdvancedSecurityDashboard(props: any) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
             return () => clearInterval(interval)}
     }, [autoRefresh]);
-    const getSeverityColor = (props: any) => {
-        switch (severity) {
-            case 'critical':
-                return 'bg-red-500 text-white';
-            case 'high':
-                return 'bg-orange-500 text-white';
-            case 'medium':
-                return 'bg-yellow-500 text-white';
-            case 'low':
-                return 'bg-blue-500 text-white';
-            default:
+    const getSeverityColor = (props: any) => {';
+        switch (severity) {';';
+            case 'critical':';';
+                return 'bg-red-500 text-white';';';
+            case 'high':';';
+                return 'bg-orange-500 text-white';';';
+            case 'medium':';';
+                return 'bg-yellow-500 text-white';';';
+            case 'low':';';
+                return 'bg-blue-500 text-white';';
+            default:';';
                 return 'bg-gray-500 text-white'}
     };
-    const getStatusColor = (props: any) => {
-        switch (status) {
-            case 'compliant':
-                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';
-            case 'non_compliant':
-                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
-            case 'in_progress':
-                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
-            default:
+    const getStatusColor = (props: any) => {';
+        switch (status) {';';
+            case 'compliant':';';
+                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300';';';
+            case 'non_compliant':';';
+                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';';';
+            case 'in_progress':';';
+                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';';
+            default:';';
                 return 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300'}
     };
-    const getRiskLevelColor = (props: any) => {
-        switch (riskLevel) {
-            case 'high':
-                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';
-            case 'medium':
-                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';
-            default:
+    const getRiskLevelColor = (props: any) => {';
+        switch (riskLevel) {';';
+            case 'high':';';
+                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300';';';
+            case 'medium':';';
+                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300';';
+            default:';';
                 return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300'}
     };
-    const getTrendIcon = (props: any) => {
-        switch (trend) {
-            case 'up':
-                return <TrendingUp className="w-4 h-4 text-green-500" />;
+    const getTrendIcon = (props: any) => {';
+        switch (trend) {';';
+            case 'up':';
+                return <TrendingUp className="w-4 h-4 text-green-500" />;';';
             case 'down':
                 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
             default:
                 return <Activity className="w-4 h-4 text-gray-500" />}
     };
-    const getEventIcon = (props: any) => {
-        switch (type) {
-            case 'threat':
-                return <AlertTriangle className="w-5 h-5 text-red-500" />;
-            case 'vulnerability':
-                return <Bug className="w-5 h-5 text-orange-500" />;
-            case 'compliance':
-                return <FileText className="w-5 h-5 text-blue-500" />;
+    const getEventIcon = (props: any) => {';
+        switch (type) {';';
+            case 'threat':';
+                return <AlertTriangle className="w-5 h-5 text-red-500" />;';';
+            case 'vulnerability':';
+                return <Bug className="w-5 h-5 text-orange-500" />;';';
+            case 'compliance':';
+                return <FileText className="w-5 h-5 text-blue-500" />;';';
             case 'access':
                 return <Users className="w-5 h-5 text-purple-500" />;
             default:
@@ -107,16 +107,18 @@ export function AdvancedSecurityDashboard(props: any) {
         <Shield className="w-6 h-6" />
       </button>)}
     if (isMinimized) {
-        return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">
+        return (
+    <div className="min-h-screen bg-white">
         <div className="flex items-center gap-2 p-3">
           <Shield className="w-5 h-5 text-zion-red" />
           <span className="text-sm font-medium text-zion-slate">Security</span>
           <button onClick={() => setIsMinimized(false)} className="ml-auto p-1 hover:bg-zion-slate-light rounded">
             <Maximize2 className="w-4 h-4" />
           </button>
-        </div>
-      </div>)}
-    return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
+        </div>';
+      </div>)}';
+    return (
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -125,9 +127,9 @@ export function AdvancedSecurityDashboard(props: any) {
             <h2 className="text-lg font-bold">Advanced Security & Compliance Dashboard</h2>
             <p className="text-sm opacity-90">Real-time Threat Monitoring & Compliance Tracking</p>
           </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <button onClick={() => setAutoRefresh(!autoRefresh)} className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`} title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}>
+        </div>';
+        <div className="flex items-center gap-2">';';
+          <button onClick={() => setAutoRefresh(!autoRefresh)} className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`} title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}>';';
             <RefreshCw className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`} />
           </button>
           <button onClick={() => setIsMinimized(true)} className="p-2 hover:bg-white/10 rounded-lg transition-colors">
@@ -146,17 +148,17 @@ export function AdvancedSecurityDashboard(props: any) {
       <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <select value={selectedSeverity} onChange={(e) => setSelectedSeverity(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate">
-              {severities.map(severity => (<option key={severity} value={severity}>
+            <select value={selectedSeverity} onChange={(e) => setSelectedSeverity(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate">';
+              {severities.map(severity => (<option key={severity} value={severity}>';';
                   {severity === 'all' ? 'All Severities' : severity.charAt(0).toUpperCase() + severity.slice(1)}
                 </option>))}
             </select>
-            <select value={selectedFramework} onChange={(e) => setSelectedFramework(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate">
-              {frameworks.map(framework => (<option key={framework} value={framework}>
+            <select value={selectedFramework} onChange={(e) => setSelectedFramework(e.target.value)} className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dark:bg-zion-slate text-zion-slate">';
+              {frameworks.map(framework => (<option key={framework} value={framework}>';';
                   {framework === 'all' ? 'All Frameworks' : framework}
                 </option>))}
-            </select>
-            <button onClick={refreshData} disabled={isRefreshing} className="px-4 py-2 bg-zion-red text-white rounded-lg hover:bg-zion-red/90 transition-colors disabled:opacity-50 flex items-center gap-2">
+            </select>';
+            <button onClick={refreshData} disabled={isRefreshing} className="px-4 py-2 bg-zion-red text-white rounded-lg hover:bg-zion-red/90 transition-colors disabled:opacity-50 flex items-center gap-2">';';
               <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
               Refresh
             </button>
@@ -175,25 +177,25 @@ export function AdvancedSecurityDashboard(props: any) {
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-zion-slate-light">
-        {[
-            { id: 'overview', label: 'Overview', icon: BarChart3 },
-            {id: 'events', label: 'Security Events', icon: AlertTriangle},
-            {id: 'compliance', label: 'Compliance', icon: CheckCircle},
-            {id: 'threats', label: 'Threat Intel', icon: Shield},
+      <div className="flex border-b border-zion-slate-light">';
+        {[';';
+            { id: 'overview', label: 'Overview', icon: BarChart3 },';';
+            {id: 'events', label: 'Security Events', icon: AlertTriangle},';';
+            {id: 'compliance', label: 'Compliance', icon: CheckCircle},';';
+            {id: 'threats', label: 'Threat Intel', icon: Shield},';';
             {id: 'analytics', label: 'Analytics', icon: TrendingUp}
         ].map(tab => {
-            const Icon = tab.icon;
-            return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id
-                    ? 'border-zion-red text-zion-red bg-zion-red/5'
+            const Icon = tab.icon;';
+            return (<button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${activeTab === tab.id';';
+                    ? 'border-zion-red text-zion-red bg-zion-red/5'';';
                     : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'}`}>
               <Icon className="w-4 h-4" />
               {tab.label}
             </button>)})}
       </div>
 
-      {/* Content */}
-      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">
+      {/* Content */}';
+      <div className="p-6 overflow-y-auto h-[calc(100%-200px)]">';';
         {activeTab === 'overview' && (<div className="space-y-6">
             {/* Security Metrics Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -204,10 +206,10 @@ export function AdvancedSecurityDashboard(props: any) {
                   </div>
                   <div className="text-2xl font-bold text-zion-slate mb-2">
                     {metric.value}{metric.unit}
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className={`font-medium ${metric.trend === 'up' ? 'text-green-600' :
-                    metric.trend === 'down' ? 'text-red-600' : 'text-gray-600'}`}>
+                  </div>';
+                  <div className="flex items-center justify-between text-sm">';';
+                    <span className={`font-medium ${metric.trend === 'up' ? 'text-green-600' :';';
+                    metric.trend === 'down' ? 'text-red-600' : 'text-gray-600'}`}>';';
                       {metric.trend === 'up' ? '+' : ''}{metric.change}%
                     </span>
                     <span className="text-zion-slate-light">
@@ -251,16 +253,18 @@ export function AdvancedSecurityDashboard(props: any) {
                       <div className="flex-1">
                         <h4 className="font-medium text-zion-slate text-sm">{req.requirement}</h4>
                         <p className="text-xs text-zion-slate-light">{req.framework}</p>
-                      </div>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
+                      </div>';
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>';';
                         {req.status.replace('_', ' ')}
                       </span>
                     </div>))}
                 </div>
               </div>
             </div>
-          </div>)}
-
+              </div>
+  );
+}';
+';';
         {activeTab === 'events' && (<div className="space-y-4">
             {filteredEvents.map(event => (<div key={event.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -269,17 +273,17 @@ export function AdvancedSecurityDashboard(props: any) {
                     <div className="flex items-center gap-3 mb-2">
                       <h3 className="font-semibold text-zion-slate">{event.title}</h3>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severity)}`}>
-                        {event.severity}
-                      </span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${event.priority === 'immediate' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
-                    event.priority === 'high' ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :
+                        {event.severity}';
+                      </span>';';
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${event.priority === 'immediate' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :';';
+                    event.priority === 'high' ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :';';
                         'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'}`}>
                         {event.priority}
                       </span>
                     </div>
                     <p className="text-zion-slate-light mb-3">{event.description}</p>
-                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">
-                      <span>Source: {event.source}</span>
+                    <div className="flex items-center gap-4 text-sm text-zion-slate-light">';
+                      <span>Source: {event.source}</span>';';
                       <span>Status: {event.status.replace('_', ' ')}</span>
                       {event.assignedTo && <span>Assigned: {event.assignedTo}</span>}
                       <span>Time: {new Date(event.timestamp).toLocaleString()}</span>
@@ -287,8 +291,10 @@ export function AdvancedSecurityDashboard(props: any) {
                   </div>
                 </div>
               </div>))}
-          </div>)}
-
+              </div>
+  );
+}';
+';';
         {activeTab === 'compliance' && (<div className="space-y-4">
             {filteredCompliance.map(req => (<div key={req.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -297,8 +303,8 @@ export function AdvancedSecurityDashboard(props: any) {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>
+                      <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>';
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>';';
                         {req.status.replace('_', ' ')}
                       </span>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLevel)}`}>
@@ -322,8 +328,10 @@ export function AdvancedSecurityDashboard(props: any) {
                   </div>
                 </div>
               </div>))}
-          </div>)}
-
+              </div>
+  );
+}';
+';';
         {activeTab === 'threats' && (<div className="space-y-4">
             {threatIntelligence.map(threat => (<div key={threat.id} className="p-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl hover:shadow-lg transition-shadow">
                 <div className="flex items-start gap-3">
@@ -331,10 +339,10 @@ export function AdvancedSecurityDashboard(props: any) {
                     <Shield className="w-6 h-6 text-zion-red" />
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-semibold text-zion-slate">{threat.threatType}</h3>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${threat.riskScore >= 8 ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
-                    threat.riskScore >= 6 ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :
+                    <div className="flex items-center gap-3 mb-2">';
+                      <h3 className="font-semibold text-zion-slate">{threat.threatType}</h3>';';
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${threat.riskScore >= 8 ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :';';
+                    threat.riskScore >= 6 ? 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300' :';';
                         'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300'}`}>
                         Risk: {threat.riskScore}/10
                       </span>
@@ -364,17 +372,21 @@ export function AdvancedSecurityDashboard(props: any) {
                   </div>
                 </div>
               </div>))}
-          </div>)}
-
+              </div>
+  );
+}';
+';';
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="text-center text-zion-slate-light">
               <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />
               <h3 className="text-lg font-semibold mb-2">Security Analytics</h3>
               <p>Advanced security analytics and threat intelligence reports coming soon...</p>
             </div>
-          </div>)}
+              </div>
+  );
+}
       </div>
-    </div>)}
-
-
-export default AdvancedSecurityDashboard;
+        </div>
+  );
+}';
+export default AdvancedSecurityDashboard;;';;';

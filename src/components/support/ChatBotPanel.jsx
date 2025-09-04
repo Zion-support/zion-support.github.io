@@ -7,7 +7,6 @@ import {cn} from "@/lib/utils";
 import {apiClient} from "@/utils/apiClient";
 import { Loader2, Send import { useEffect, useRef, useState } from "react";
 ;
-;
 // Define suggested quick replies
 const QUICK_REPLIES = [
     {id: "hire", text: "How do I hire?"},
@@ -88,8 +87,8 @@ sender: "bot",
             // // // // // // // // console.error("Error in AI chat:", error);
             toast({
 "
-                variant: "destructive","
-                title: "Communication Error","
+                variant: "destructive","';
+                title: "Communication Error","';';
                 description: "We're having trouble connecting to our support service."});
             setFailedAttempts((prev) => prev + 1);
             if(failedAttempts >= 2) {suggestEscalation()}
@@ -114,8 +113,8 @@ sender: "bot",
             if(!response.ok) {
 
                 return {
-
-                    success: false,"
+';
+                    success: false,"';';
                     message: "I'm having trouble connecting to my knowledge base right now."
                 }}
             const data = await response.json();
@@ -125,15 +124,15 @@ sender: "bot",
 "
             // // // // // // // // console.error("Error in AI chat:", error);
             return {
-
-                success: false,"
+';
+                success: false,"';';
                 message: "I'm experiencing technical difficulties.Please try again later."
             }}
     };
     const suggestEscalation = (props: any) => {
         const escalationMessage = {
-`
-            id: `bot-escalation-${Date.now()}`,"
+`';
+            id: `bot-escalation-${Date.now()}`,"';';
             content: "I'm having trouble understanding your request.Would you like to speak with a human support agent or send an email to our support team?","
             sender: "bot",
             timestamp: new Date()};
@@ -155,15 +154,15 @@ sender: "bot",
     const handleEscalateToLiveAgent = (props: any) => {
         setMessages((prev) => [...prev,
             {
-`
-                id: `user-${Date.now()}`,"
+`';
+                id: `user-${Date.now()}`,"';';
                 content: "I'd like to speak with a human agent","
                 sender: "user",
                 timestamp: new Date()
             },
             {
-`
-                id: `bot-${Date.now()}`,"
+`';
+                id: `bot-${Date.now()}`,"';';
                 content: "I'm connecting you with a support agent.Please note that our support hours are Monday to Friday, 9AM to 6PM EST.If you're messaging outside these hours, a team member will follow up with you as soon as possible.","
                 sender: "bot",
                 timestamp: new Date()
@@ -176,8 +175,8 @@ sender: "bot",
     const handleEmailSupport = (props: any) => {
         setMessages((prev) => [...prev,
             {
-`
-                id: `user-${Date.now()}`,"
+`';
+                id: `user-${Date.now()}`,"';';
                 content: "I'd like to email support","
                 sender: "user",
                 timestamp: new Date()
@@ -197,7 +196,9 @@ sender: "bot",
 "
           {isLoading && (<div className="flex items-center justify-center py-2">"
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
-            </div>)}
+                </div>
+  );
+}
         </div>
       </ScrollArea>
 "
@@ -213,7 +214,9 @@ sender: "bot",
           <div className="flex flex-wrap gap-2">
             {QUICK_REPLIES.map((reply) => (<QuickReplyButton key={reply.id} text={reply.text} onClick={() => handleQuickReply(reply.text)}/>))}
           </div>
-        </div>)}
+            </div>
+  );
+}
 "
       {failedAttempts >= 3 && (<div className="px-4 py-3 border-t border-zion-purple/10">
           <p className = {
@@ -232,8 +235,9 @@ sender: "bot",
               Email Support
             </Button>
           </div>
-        </div>)}
-
+            </div>
+  );
+}
       <div className={cn("p-4 border-t",  theme === "dark" ? "border-zion-blue-light" : "border-gray-200")}>
         <form onSubmit={(e) => {
 
@@ -247,8 +251,8 @@ sender: "bot",
           <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">            <Send className="h-4 w-4" />
           </Button>
         </form>
-      </div>
-    </div>)}
+      </div>';
+    </div>)}';';
 '"`
-
-</QuickReplyButton>
+';
+</QuickReplyButton>;';;';

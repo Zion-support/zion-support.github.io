@@ -4,8 +4,7 @@ interface BundleInfo {
   totalSize: number;
   jsSize: number;
   cssSize: number;
-  imageSize: number;
-}
+  imageSize: number}
 
 const BundleAnalyzer: React.FC = () => {
   const [bundleInfo, setBundleInfo] = useState<BundleInfo>({
@@ -24,19 +23,16 @@ const BundleAnalyzer: React.FC = () => {
         jsSize: 800 * 1024,      // 800KB
         cssSize: 200 * 1024,     // 200KB
         imageSize: 24 * 1024     // 24KB
-      });
-    };
+      })};
 
-    analyzeBundle();
-  }, []);
+    analyzeBundle()}, []);
 
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  };
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -68,7 +64,6 @@ const BundleAnalyzer: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default BundleAnalyzer;

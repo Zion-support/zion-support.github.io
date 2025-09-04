@@ -1,7 +1,6 @@
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
-  receiveMessage: (callback: (message: unknown) => void) => void;
-};
+  receiveMessage: (callback: (message: unknown) => void) => void};
 
 export const messageChannelHandler: MessageHandler = {
   sendMessage: (_message) => {

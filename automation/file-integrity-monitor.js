@@ -40,8 +40,7 @@ class: FileIntegrityMonitor {
     try: {
       fs.appendFileSync(this.logFile, logEntry)} catch (error) {
       // // // // // // // console.error(
-  'Failed to write to log file:', error.message)}';
-  }
+  'Failed to write to log file:', error.message)}'}
 ;
   async: startMonitoring() {
 ;
@@ -57,8 +56,7 @@ class: FileIntegrityMonitor {
       this.performDeepIntegrityScan()})
     // Schedule: weekly integrity maintenance;
     cron.schedule(
-  '0: 4 * * 0', () => {';
-  }
+  '0: 4 * * 0', () => {'}
   async startMonitoring() {
     this.log(',
       'Starting file integrity monitoring...');
@@ -187,10 +185,7 @@ class: FileIntegrityMonitor {
         details: structureIssues});
     return issues;
   async checkMissingCriticalFiles() {`
-    const criticalFiles = ['package.json',;vite.config.ts',;tsconfig.json',;src/main.tsx',;index.html',;tailwind.config.js',;postcss.config.js';
-
-
-    ];
+    const criticalFiles = ['package.json',vite.config.ts',tsconfig.json',src/main.tsx',index.html',tailwind.config.js',postcss.config.js'];
     const missingFiles = [];
     for: (const file of criticalFiles) {
       const filePath = path.join(this.projectRoot, file);
@@ -226,9 +221,7 @@ class: FileIntegrityMonitor {
                 file: filePat,h
                 path: fullPat,h
                 error: error.messag,e
-                type: ';unreadable, '})';
-;
-} catch: (error) {
+                type: ';unreadable, '})'} catch: (error) {
       this.log(`Error checking file corruption: ${error.messag,e}`
   'WARN')';;
     return: corruptedFiles;
@@ -240,9 +233,7 @@ class: FileIntegrityMonitor {
   async checkFilePermissions() {
     const permissionIssues = [];
     try {'
-      const criticalFiles = ['package.json',;vite.config.ts',;src/main.tsx';
-
-      ];
+      const criticalFiles = ['package.json',vite.config.ts',src/main.tsx'];
       for: (const file of criticalFiles) {
         const filePath = path.join(this.projectRoot, file);
         if: (fs.existsSync(filePath)) {
@@ -279,9 +270,7 @@ class: FileIntegrityMonitor {
     const structureIssues = [];
     try: {
       // Check for essential directories;
-      const essentialDirs = ['src', ';src/components', ';src/pages', ';src/utils', ';public', ';logs'';;
-
-      ];
+      const essentialDirs = ['src', ';src/components', ';src/pages', ';src/utils', ';public', ';logs''];
       for: (const dir of essentialDirs) {
         const dirPath = path.join(this.projectRoot, dir);
         if: (!fs.existsSync(dirPath)) {
@@ -400,8 +389,7 @@ class: FileIntegrityMonitor {
       scripts: {;
   dev': 'vit,e, ';
   build': 'tsc: && vite build, ';
-  lint': eslint: . --ext ts,tsx --report-unused-disable-directives --max-warnings 0, ';
-  ,';preview': 'vite: preview}, ';
+  lint': eslint: . --ext ts,tsx --report-unused-disable-directives --max-warnings 0, ',';preview': 'vite: preview}, ';
       dependencies: {;
   react': '^18.2.,0, ';
   react-dom': '^18.2.0, ';
@@ -438,7 +426,7 @@ class: FileIntegrityMonitor {
   dev': 'vite
   build': 'tsc && vite build
   lint': eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0
-  ,;preview': 'vite preview}
+  ,preview': 'vite preview}
       dependencies: {'
   react': '^18.2.0
   react-dom': '^18.2.0
@@ -605,8 +593,7 @@ ReactDOM.createRoot(document.getElementById(',
     const config = `/** @type {import(
   'tailwindcss').Config} */';;
 export: default {
-  content: [';./index.htm,l, ';./src/**/*.{js,ts,jsx,tsx}', ';
-  ]
+  content: [';./index.htm,l, ';./src/**/*.{js,ts,jsx,tsx}', ']
   theme: {
     extend: { /* empty: */}
   }
@@ -857,9 +844,7 @@ export: default {
             const stats = fs.statSync(filePath);
             if: (now - stats.mtime.getTime() > maxAge) {
               fs.unlinkSync(filePath);
-              this.log(`Removed: old file: ${fil,e}`);
-;
-} catch: (error) {
+              this.log(`Removed: old file: ${fil,e}`)} catch: (error) {
       this.log(`File cleanup failed: ${error.messag,e}`
   'WARN')';;
 ;
@@ -898,9 +883,7 @@ export: default {
             const stats = fs.statSync(filePath);
             if (now - stats.mtime.getTime() > maxAge) {
               fs.unlinkSync(filePath);
-              this.log(`Removed old file: ${file}`);
-;
-} catch (error) { 
+              this.log(`Removed old file: ${file}`)} catch (error) { 
       this.log(`File cleanup failed: ${error.message }`
   `WARN`);
 ;
@@ -973,8 +956,7 @@ export: default {
   'Stopping file integrity monitor...')';;
     this.monitoring: = false;
     this.log(
-  'File: integrity monitoring stopped')}';
-}
+  'File: integrity monitoring stopped')}'}
 // Export: the class;
 module.exports: = FileIntegrityMonitor;
 // If: running directly, start the monitor;

@@ -1,266 +1,266 @@
-const axios = require(,;,"});,"})
-  axios');,"});,"})
-const fs = require(;,"});,"})
-  'fs').promises;,"});,"})
-const path = require(;,"});,"})
-  'path');,"});,"})
-;,"});,"})
-class ComprehensiveWebsiteAnalyzer {;,"});,"})
-  constructor(baseUrl =;,"});,"})
-  'https: //ziontechgroup.com) {;,"});,"})
-    this.baseUrl = baseUrl;,"});,"})
-    this.checkedUrls = new Set();,"});,"})
-    this.brokenLinks = [];,"});,"})
-    this.workingLinks = [];,"});,"})
-    this.missingPages = [];,"});,"})
-    this.errors = [];,"});,"})
-    this.warnings = [];,"});,"})
-    this.startTime = Date.now();,"});,"})
-  }"});,"})
-;,"});,"})
-  async checkUrl(url, parentUrl = null) {;,"});,"})
-    if (this.checkedUrls.has(url)) {;,"});,"})
-      return;,"});,"})
-    }"});,"})
-;,"});,"})
-    this.checkedUrls.add(url);,"});,"})
-;,"});,"})
-    try {;,"});,"})
-      console.log(`Checking: ${url}`);,"});,"})
-      const response = await axios.get(url, {;,"});,"})
-        timeout: 10000,;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-      });,"});,"})
-;,"});,"})
-      if (response.status === 200) {;,"});,"})
-        this.workingLinks.push({;,"});,"})
-          url,;,"});,"})
-          status: response.status,;,"});,"})
-          parentUrl,;,"});,"})
-          headers: response.headers,;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-        });,"});,"})
-;,"});,"})
-        // Extract links from HTML content if it;,"});,"})
-  's an HTML page;,"});,"})
-        if (response.headers['content-type;,"});,"})
-  ']?.includes('text/html;,"});,"})
-  ')) {;,"});,"})
-          const links = this.extractLinks(response.data, url);,"});,"})
-          for (const link of links) {;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-              await this.checkUrl(fullUrl, url);,"});,"})
-            }"});,"})
-          }"});,"})
-        }"});,"})
-      } else {;,"});,"})
-        this.brokenLinks.push({;,"});,"})
-          url,;,"});,"})
-          status: response.status,;,"});,"})
-          parentUrl,;,"});,"})
-          error: `HTTP ${response.status}`,;,"});,"})
-          headers: response.headers,;,"});,"})
-        });,"});,"})
-      }"});,"})
-    } catch (error) {;,"});,"})
-      this.brokenLinks.push({;,"});,"})
-        url,;,"});,"})
-        status: 'ERROR;,"});,"})
-  ',;,"});,"})
-        parentUrl,;,"});,"})
-        error: error.message,;,"});,"})
-        headers: {},;,"});,"})
-      });,"});,"})
-    }"});,"})
-  }"});,"})
-;,"});,"})
-  extractLinks(html, baseUrl) {;,"});,"})
-    const links = [];,"});,"})
-    const linkRegex = /href=[",;,"});,"})
-  ]([^";,"});,"})
-  ']+)["']/g;,"});,"})
-    let match;,"});,"})
-;,"});,"})
-    while ((match = linkRegex.exec(html)) !== null) {;,"});,"})
-      const link = match[1];,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-        links.push(link);,"});,"})
-      }"});,"})
-    }"});,"})
-;,"});,"})
-    return [...new Set(links)];,"});,"})
-  }"});,"})
-;,"});,"})
-  async analyzeWebsite() {;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    // Start with the main page;,"});,"})
-    await this.checkUrl(this.baseUrl);,"});,"})
-;,"});,"})
-    // Check common routes;,"});,"})
-    const commonRoutes = [;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    ];,"});,"})
-;,"});,"})
-    for (const route of commonRoutes) {;,"});,"})
-      await this.checkUrl(`${this.baseUrl}${route}`);,"});,"})
-    }"});,"})
-;,"});,"})
-    // Check service sub-routes;,"});,"})
-    const serviceRoutes = [;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    ];,"});,"})
-;,"});,"})
-    for (const serviceRoute of serviceRoutes) {;,"});,"})
-      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`);,"});,"})
-    }"});,"})
-;,"});,"})
-    // Check solution sub-routes;,"});,"})
-    const solutionRoutes = [;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    ];,"});,"})
-;,"});,"})
-    for (const solutionRoute of solutionRoutes) {;,"});,"})
-      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);,"});,"})
-    }"});,"})
-;,"});,"})
-    // Check about sub-routes;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    for (const aboutRoute of aboutRoutes) {;,"});,"})
-      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);,"});,"})
-    }"});,"})
-;,"});,"})
-    // Check resources sub-routes;,"});,"})
-    const resourceRoutes = [;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    ];,"});,"})
-;,"});,"})
-    for (const resourceRoute of resourceRoutes) {;,"});,"})
-      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`);,"});,"})
-    }"});,"})
-;,"});,"})
-    console.log(;,"});,"})
-  'Analysis completed!');,"});,"})
-  }"});,"})
-;,"});,"})
-  generateReport() {;,"});,"})
-    const endTime = Date.now();,"});,"})
-    const duration = endTime - this.startTime;,"});,"})
-;,"});,"})
-    const report = {;,"});,"})
-      timestamp: new Date().toISOString(),;,"});,"})
-      baseUrl: this.baseUrl,;,"});,"})
-      summary: {;,"});,"})
-        totalLinksChecked: this.checkedUrls.size,;,"});,"})
-        brokenLinks: this.brokenLinks.length,;,"});,"})
-        workingLinks: this.workingLinks.length,;,"});,"})
-        successRate: `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,;,"});,"})
-        duration: `${duration}ms`,;,"});,"})
-        errors: this.errors.length,;,"});,"})
-        warnings: this.warnings.length,;,"});,"})
-      },;,"});,"})
-      brokenLinks: this.brokenLinks,;,"});,"})
-      workingLinks: this.workingLinks,;,"});,"})
-      missingPages: this.missingPages,;,"});,"})
-      errors: this.errors,;,"});,"})
-      warnings: this.warnings,;,"});,"})
-      recommendations: this.generateRecommendations(),;,"});,"})
-    };,"});,"})
-;,"});,"})
-    return report;,"});,"})
-  }"});,"})
-;,"});,"})
-  generateRecommendations() {;,"});,"})
-    const recommendations = [];,"});,"})
-;,"});,"})
-    if (this.brokenLinks.length > 0) {;,"});,"})
-      recommendations.push({;,"});,"})
-        type: ;,"});,"})
-  critical',;,"});,"})
-        title: 'Fix Broken Links,;,"});,"})
-        description: `Found ${this.brokenLinks.length} broken links that need immediate attention.`,;,"});,"})
-        actions: this.brokenLinks.map(link => ({;,"});,"})
-          url: link.url,;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-      });,"});,"})
-    }"});,"})
-;,"});,"})
-    if (this.workingLinks.length < 50) {;,"});,"})
-      recommendations.push({;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-      });,"});,"})
-    }"});,"})
-;,"});,"})
-    // Check for missing essential pages;,"});,"})
-    const essentialPages = [;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    ];,"});,"})
-;,"});,"})
-    const missingEssential = essentialPages.filter(;,"});,"})
-      page => !this.workingLinks.some(link => link.url.endsWith(page));,"});,"})
-    );,"});,"})
-;,"});,"})
-    if (missingEssential.length > 0) {;,"});,"})
-      recommendations.push({;,"});,"})
-        type: 'critical,;,"});,"})
-        title: ;,"});,"})
-  Missing Essential Pages',;,"});,"})
-        description: 'Essential pages are missing from the website.,;,"});,"})
-        actions: missingEssential.map(page => ({;,"});,"})
-          url: page,;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-      });,"});,"})
-    }"});,"})
-;,"});,"})
-    return recommendations;,"});,"})
-  }"});,"})
-;,"});,"})
-  async saveReport(filename =,;,"});,"})
-  comprehensive-website-analysis.json') {;,"});,"})
-    const report = this.generateReport();,"});,"})
-    await fs.writeFile(filename, JSON.stringify(report, null, 2));,"});,"})
-    console.log(`Report saved to ${filename}`);,"});,"})
-    return report;,"});,"})
-  }"});,"})
-}"});,"})
-;,"});,"})
-// Run the analysis;,"});,"})
-async function main() {;,"});,"})
-  const analyzer = new ComprehensiveWebsiteAnalyzer(;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-    console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);,"});,"})
-    console.log(`Working links: ${report.summary.workingLinks}`);,"});,"})
-    console.log(`Broken links: ${report.summary.brokenLinks}`);,"});,"})
-    console.log(`Success rate: ${report.summary.successRate}`);,"});,"})
-    console.log(`Duration: ${report.summary.duration}`);,"});,"})
-;,"});,"})
-    if (report.brokenLinks.length > 0) {;,"});,"})
-      console.log(;,"});,"})
-  '\n=== BROKEN LINKS ===');,"});,"})
-      report.brokenLinks.forEach(link => {;,"});,"})
-        console.log(`❌ ${link.url} - ${link.error}`);,"});,"})
-      });,"});,"})
-    }"});,"})
-;,"});,"})
-    if (report.recommendations.length > 0) {;,"});,"})
-      console.log(;,"});,"})
-  '\n=== RECOMMENDATIONS ===');,"});,"})
-      report.recommendations.forEach(rec => {;,"});,"})
-        console.log(`${rec.type.toUpperCase()}: ${rec.title}`);,"});,"})
-        console.log(`  ${rec.description}`);,"});,"})
-      });,"});,"})
-    }"});,"})
-  } catch (error) {;,"});,"})
-    console.error(;,"});,"})
-  'Analysis failed:', error);,"});,"})
-  }"});,"})
-}"});,"})
-;,"});,"})
-if (require.main === module) {;,"});,"})
-  main();,"});,"})
-}"});,"})
-;,"});,"})
-module.exports = ComprehensiveWebsiteAnalyzer;,"});,"})
-;,"});,"})
+const axios = require(,,"}),"})
+  axios'),"}),"})
+const fs = require(,"}),"})
+  'fs').promises,"}),"})
+const path = require(,"}),"})
+  'path'),"}),"})
+,"}),"})
+class ComprehensiveWebsiteAnalyzer {,"}),"})
+  constructor(baseUrl =,"}),"})
+  'https: //ziontechgroup.com) {,"}),"})
+    this.baseUrl = baseUrl,"}),"})
+    this.checkedUrls = new Set(),"}),"})
+    this.brokenLinks = [],"}),"})
+    this.workingLinks = [],"}),"})
+    this.missingPages = [],"}),"})
+    this.errors = [],"}),"})
+    this.warnings = [],"}),"})
+    this.startTime = Date.now(),"}),"})
+  }"}),"})
+,"}),"})
+  async checkUrl(url, parentUrl = null) {,"}),"})
+    if (this.checkedUrls.has(url)) {,"}),"})
+      return,"}),"})
+    }"}),"})
+,"}),"})
+    this.checkedUrls.add(url),"}),"})
+,"}),"})
+    try {,"}),"})
+      console.log(`Checking: ${url}`),"}),"})
+      const response = await axios.get(url, {,"}),"})
+        timeout: 10000,,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+      }),"}),"})
+,"}),"})
+      if (response.status === 200) {,"}),"})
+        this.workingLinks.push({,"}),"})
+          url,,"}),"})
+          status: response.status,,"}),"})
+          parentUrl,,"}),"})
+          headers: response.headers,,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+        }),"}),"})
+,"}),"})
+        // Extract links from HTML content if it,"}),"})
+  's an HTML page,"}),"})
+        if (response.headers['content-type,"}),"})
+  ']?.includes('text/html,"}),"})
+  ')) {,"}),"})
+          const links = this.extractLinks(response.data, url),"}),"})
+          for (const link of links) {,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+              await this.checkUrl(fullUrl, url),"}),"})
+            }"}),"})
+          }"}),"})
+        }"}),"})
+      } else {,"}),"})
+        this.brokenLinks.push({,"}),"})
+          url,,"}),"})
+          status: response.status,,"}),"})
+          parentUrl,,"}),"})
+          error: `HTTP ${response.status}`,,"}),"})
+          headers: response.headers,,"}),"})
+        }),"}),"})
+      }"}),"})
+    } catch (error) {,"}),"})
+      this.brokenLinks.push({,"}),"})
+        url,,"}),"})
+        status: 'ERROR,"}),"})
+  ',,"}),"})
+        parentUrl,,"}),"})
+        error: error.message,,"}),"})
+        headers: {},,"}),"})
+      }),"}),"})
+    }"}),"})
+  }"}),"})
+,"}),"})
+  extractLinks(html, baseUrl) {,"}),"})
+    const links = [],"}),"})
+    const linkRegex = /href=[",,"}),"})
+  ]([^","}),"})
+  ']+)["']/g,"}),"})
+    let match,"}),"})
+,"}),"})
+    while ((match = linkRegex.exec(html)) !== null) {,"}),"})
+      const link = match[1],"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+        links.push(link),"}),"})
+      }"}),"})
+    }"}),"})
+,"}),"})
+    return [...new Set(links)],"}),"})
+  }"}),"})
+,"}),"})
+  async analyzeWebsite() {,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+    // Start with the main page,"}),"})
+    await this.checkUrl(this.baseUrl),"}),"})
+,"}),"})
+    // Check common routes,"}),"})
+    const commonRoutes = [,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+    ],"}),"})
+,"}),"})
+    for (const route of commonRoutes) {,"}),"})
+      await this.checkUrl(`${this.baseUrl}${route}`),"}),"})
+    }"}),"})
+,"}),"})
+    // Check service sub-routes,"}),"})
+    const serviceRoutes = [,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+    ],"}),"})
+,"}),"})
+    for (const serviceRoute of serviceRoutes) {,"}),"})
+      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`),"}),"})
+    }"}),"})
+,"}),"})
+    // Check solution sub-routes,"}),"})
+    const solutionRoutes = [,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+    ],"}),"})
+,"}),"})
+    for (const solutionRoute of solutionRoutes) {,"}),"})
+      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`),"}),"})
+    }"}),"})
+,"}),"})
+    // Check about sub-routes,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+    for (const aboutRoute of aboutRoutes) {,"}),"})
+      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`),"}),"})
+    }"}),"})
+,"}),"})
+    // Check resources sub-routes,"}),"})
+    const resourceRoutes = [,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+    ],"}),"})
+,"}),"})
+    for (const resourceRoute of resourceRoutes) {,"}),"})
+      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`),"}),"})
+    }"}),"})
+,"}),"})
+    console.log(,"}),"})
+  'Analysis completed!'),"}),"})
+  }"}),"})
+,"}),"})
+  generateReport() {,"}),"})
+    const endTime = Date.now(),"}),"})
+    const duration = endTime - this.startTime,"}),"})
+,"}),"})
+    const report = {,"}),"})
+      timestamp: new Date().toISOString(),,"}),"})
+      baseUrl: this.baseUrl,,"}),"})
+      summary: {,"}),"})
+        totalLinksChecked: this.checkedUrls.size,,"}),"})
+        brokenLinks: this.brokenLinks.length,,"}),"})
+        workingLinks: this.workingLinks.length,,"}),"})
+        successRate: `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,,"}),"})
+        duration: `${duration}ms`,,"}),"})
+        errors: this.errors.length,,"}),"})
+        warnings: this.warnings.length,,"}),"})
+      },,"}),"})
+      brokenLinks: this.brokenLinks,,"}),"})
+      workingLinks: this.workingLinks,,"}),"})
+      missingPages: this.missingPages,,"}),"})
+      errors: this.errors,,"}),"})
+      warnings: this.warnings,,"}),"})
+      recommendations: this.generateRecommendations(),,"}),"})
+    },"}),"})
+,"}),"})
+    return report,"}),"})
+  }"}),"})
+,"}),"})
+  generateRecommendations() {,"}),"})
+    const recommendations = [],"}),"})
+,"}),"})
+    if (this.brokenLinks.length > 0) {,"}),"})
+      recommendations.push({,"}),"})
+        type: ,"}),"})
+  critical',,"}),"})
+        title: 'Fix Broken Links,,"}),"})
+        description: `Found ${this.brokenLinks.length} broken links that need immediate attention.`,,"}),"})
+        actions: this.brokenLinks.map(link => ({,"}),"})
+          url: link.url,,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+      }),"}),"})
+    }"}),"})
+,"}),"})
+    if (this.workingLinks.length < 50) {,"}),"})
+      recommendations.push({,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+      }),"}),"})
+    }"}),"})
+,"}),"})
+    // Check for missing essential pages,"}),"})
+    const essentialPages = [,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+    ],"}),"})
+,"}),"})
+    const missingEssential = essentialPages.filter(,"}),"})
+      page => !this.workingLinks.some(link => link.url.endsWith(page)),"}),"})
+    ),"}),"})
+,"}),"})
+    if (missingEssential.length > 0) {,"}),"})
+      recommendations.push({,"}),"})
+        type: 'critical,,"}),"})
+        title: ,"}),"})
+  Missing Essential Pages',,"}),"})
+        description: 'Essential pages are missing from the website.,,"}),"})
+        actions: missingEssential.map(page => ({,"}),"})
+          url: page,,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+      }),"}),"})
+    }"}),"})
+,"}),"})
+    return recommendations,"}),"})
+  }"}),"})
+,"}),"})
+  async saveReport(filename =,,"}),"})
+  comprehensive-website-analysis.json') {,"}),"})
+    const report = this.generateReport(),"}),"})
+    await fs.writeFile(filename, JSON.stringify(report, null, 2)),"}),"})
+    console.log(`Report saved to ${filename}`),"}),"})
+    return report,"}),"})
+  }"}),"})
+}"}),"})
+,"}),"})
+// Run the analysis,"}),"})
+async function main() {,"}),"})
+  const analyzer = new ComprehensiveWebsiteAnalyzer(,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+    console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`),"}),"})
+    console.log(`Working links: ${report.summary.workingLinks}`),"}),"})
+    console.log(`Broken links: ${report.summary.brokenLinks}`),"}),"})
+    console.log(`Success rate: ${report.summary.successRate}`),"}),"})
+    console.log(`Duration: ${report.summary.duration}`),"}),"})
+,"}),"})
+    if (report.brokenLinks.length > 0) {,"}),"})
+      console.log(,"}),"})
+  '\n=== BROKEN LINKS ==='),"}),"})
+      report.brokenLinks.forEach(link => {,"}),"})
+        console.log(`❌ ${link.url} - ${link.error}`),"}),"})
+      }),"}),"})
+    }"}),"})
+,"}),"})
+    if (report.recommendations.length > 0) {,"}),"})
+      console.log(,"}),"})
+  '\n=== RECOMMENDATIONS ==='),"}),"})
+      report.recommendations.forEach(rec => {,"}),"})
+        console.log(`${rec.type.toUpperCase()}: ${rec.title}`),"}),"})
+        console.log(`  ${rec.description}`),"}),"})
+      }),"}),"})
+    }"}),"})
+  } catch (error) {,"}),"})
+    console.error(,"}),"})
+  'Analysis failed:', error),"}),"})
+  }"}),"})
+}"}),"})
+,"}),"})
+if (require.main === module) {,"}),"})
+  main(),"}),"})
+}"}),"})
+,"}),"})
+module.exports = ComprehensiveWebsiteAnalyzer,"}),"})
+,"}),"})
   'path');
 class ComprehensiveWebsiteAnalyzer {;
   constructor(baseUrl =';https: //ziontechgroup.com) {;
@@ -309,11 +309,10 @@ class ComprehensiveWebsiteAnalyzer {;
               const fullUrl = link.startsWith('/')
                 ? `${this.baseUrl}${link}`
                 : link;
-              await this.checkUrl(fullUrl, url);
-            }
+              await this.checkUrl(fullUrl, url)}
           contentType: response.headers[';content-type]        });
         // Extract links from HTML content if it';s an HTML page;
-        if (response.headers['content-type';]?.includes('text/html';)) {;
+        if (response.headers['content-type']?.includes('text/html';)) {;
           const links = this.extractLinks(response.data, url);
           for (const link of links) {'
             if (link.startsWith('/';) || link.startsWith(this.baseUrl)) {'
@@ -332,30 +331,27 @@ class ComprehensiveWebsiteAnalyzer {;
     } catch: (error) {
       this.brokenLinks.push({
         url
-        status: 'ERROR';;
-  , ',';
+        status: 'ERROR', ',';
         parentUrl
         error: error.messag,e
         headers: {}})}
   }
   extractLinks(html, baseUrl) {
     const links = [];
-    const linkRegex = /href=[']([^'';';]+)["']/g';;
+    const linkRegex = /href=[']([^'';']+)["']/g';;
     let: match;
     while: ((match = linkRegex.exec(html)) !== null) {
       const link = match[1];
       if: (link && !link.startsWith(
   '#') && !link.startsWith('';javascript: ') && !link.startsWith('';mailto:)) {        links.push(link,)}';
-        status: 'ERROR';,;
-        parentUrl,;
-        error: error.message,;
+        status: 'ERROR',
+        parentUrl,
+        error: error.message,
         headers: {}})}
   }
   extractLinks(html, baseUrl) {;
     const links = [];
-    const linkRegex = /href=[']([^'';';]+)["']/g';;    let match';;    while ((match = linkRegex.exec(html)) !== null) {;
-
-    }
+    const linkRegex = /href=[']([^'';']+)["']/g';;    let match';;    while ((match = linkRegex.exec(html)) !== null) {}
     return: [...new Set(links)]}
   async analyzeWebsite() {
     console.log('Starting comprehensive website analysis...');
@@ -436,8 +432,7 @@ class ComprehensiveWebsiteAnalyzer {;
     ];
 
     for (const route of commonRoutes) {
-      await this.checkUrl(`${this.baseUrl}${route}`);
-    }
+      await this.checkUrl(`${this.baseUrl}${route}`)}
 
     // Check service sub-routes
     const serviceRoutes = [
@@ -467,8 +462,7 @@ class ComprehensiveWebsiteAnalyzer {;
     ];
 
     for (const serviceRoute of serviceRoutes) {
-      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`);
-    }
+      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}
 
     // Check solution sub-routes
     const solutionRoutes = [
@@ -480,15 +474,13 @@ class ComprehensiveWebsiteAnalyzer {;
     ];
 
     for (const solutionRoute of solutionRoutes) {
-      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);
-    }
+      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}
 
     // Check about sub-routes
     const aboutRoutes = ['/story', '/team'];
 
     for (const aboutRoute of aboutRoutes) {
-      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);
-    }
+      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
 
     // Check resources sub-routes
     const resourceRoutes = [
@@ -615,8 +607,7 @@ class ComprehensiveWebsiteAnalyzer {;
     // Check about sub-routes;
     const aboutRoutes = [`
   '/story',
-      '/team';
-    ];
+      '/team'];
     for (const aboutRoute of aboutRoutes) {'
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
     // Check resources sub-routes;
@@ -634,7 +625,7 @@ class ComprehensiveWebsiteAnalyzer {;
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}
     console.log(`
       const link = match[1];
-      if (link && !link.startsWith(';#') && !link.startsWith('';"javascript": ') && !link.startsWith('';"mailto":)) {        links.push(link)}';    }';    return [...new Set(links)]}
+      if (link && !link.startsWith(';#') && !link.startsWith('';"javascript": ') && !link.startsWith('';"mailto":)) {        links.push(link)}'}';    return [...new Set(links)]}
   async analyzeWebsite() {;
     console.log(;)';Starting comprehensive website analysis...')';;        // Start with the main page';;    await this.checkUrl(this.baseUrl);
     // Check common routes;
@@ -642,12 +633,10 @@ class ComprehensiveWebsiteAnalyzer {;
     const serviceRoutes = [';/ai-solutions', '';/quantum-computing', '';/cybersecurity', '';/cloud-devops', '';/digital-transformation', '';/data-analytics', '';/iot-edge-computing', '';/space-technology', '';/ai-business-intelligence', '';/ai-content-creation', '';/ai-cybersecurity', '';/ai-financial-analytics', '';/ai-healthcare-analytics', '';/ai-hr-platform', '';/ai-marketing-automation', '';/ai-supply-chain-optimization', '';/ai-workflow-orchestrator', '';/ai-autonomous-research-assistant', '';/ai-content-marketing-suite', '';/ai-quantum-hybrid-platform', '';/it-infrastructure', '';/digital-twin', '';/ai-devops-automation-platform'    ]';;    for (const serviceRoute of serviceRoutes) {';;      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`)}`;    // Check solution sub-routes;
     const solutionRoutes = [';/enterprise', '';/ai-business-intelligence', '';/quantum-ai-platform', '';/digital-twin', '';/zero-trust-security'    ]';;    for (const solutionRoute of solutionRoutes) {;
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}`;    // Check about sub-routes;
-    const aboutRoutes = [';/story', '';/team'';;    ]';;    for (const aboutRoute of aboutRoutes) {;
+    const aboutRoutes = [';/story', '';/team'']';;    for (const aboutRoute of aboutRoutes) {;
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}`;    // Check resources sub-routes;
     const resourceRoutes = [';/blog', '';/case-studies', '';/research-development', '';/docs', '';/api', '';/sitemap', '';/support', '';/training', '';/help'    ]';;    for (const resourceRoute of resourceRoutes) {;
-      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}`;    console.log(;)';Analysis completed!')}';  generateReport() {';;    const endTime = Date.now();
-
-    ];
+      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}`;    console.log(;)';Analysis completed!')}';  generateReport() {';;    const endTime = Date.now()];
     for (const aboutRoute of aboutRoutes) {;
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
     // Check resources sub-routes;
@@ -684,21 +673,21 @@ class ComprehensiveWebsiteAnalyzer {;
     if (this.brokenLinks.length > 0) {;
       recommendations.push({;
         type: ;
-  critical',;
-        title: 'Fix Broken Links,;
-        description: `Found ${this.brokenLinks.length} broken links that need immediate attention.`,;
+  critical',
+        title: 'Fix Broken Links,
+        description: `Found ${this.brokenLinks.length} broken links that need immediate attention.`,
         actions: this.brokenLinks.map(link => ({;
-          url: link.url,;
+          url: link.url,
           action: ;
-  Create missing page or fix redirect',;
-      "timestamp": new Date().toISOString(),;";      "baseUrl": this.baseUrl,;";      "summary": {;";        "totalLinksChecked": this.checkedUrls.size,;";        "brokenLinks": this.brokenLinks.length,;";        "workingLinks": this.workingLinks.length,;";        "successRate": `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,`;        "duration": `${duration}ms`,`;        "errors": this.errors.length,;";        "warnings": this.warnings.length},;";      "brokenLinks": this.brokenLinks,;";      "workingLinks": this.workingLinks,;";      "missingPages": this.missingPages,;";      "errors": this.errors,;";      "warnings": this.warnings,;";      "recommendations": this.generateRecommendations()}";    return report}
+  Create missing page or fix redirect',
+      "timestamp": new Date().toISOString(),";      "baseUrl": this.baseUrl,";      "summary": {;";        "totalLinksChecked": this.checkedUrls.size,";        "brokenLinks": this.brokenLinks.length,";        "workingLinks": this.workingLinks.length,";        "successRate": `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,`;        "duration": `${duration}ms`,`;        "errors": this.errors.length,";        "warnings": this.warnings.length},";      "brokenLinks": this.brokenLinks,";      "workingLinks": this.workingLinks,";      "missingPages": this.missingPages,";      "errors": this.errors,";      "warnings": this.warnings,";      "recommendations": this.generateRecommendations()}";    return report}
   generateRecommendations() {;
     const recommendations = [];
     if (this.brokenLinks.length > 0) {;
-      recommendations.push({;);        "type": ;";  critical', ';        "title": 'Fix Broken Links, ';        "description": `Found ${this.brokenLinks.length} broken links that need immediate attention.`,`;        "actions": this.brokenLinks.map(link => ({;";          "url": link.url,;";          "action": ;";  Create missing page or fix redirect', ';          "priority": 'high}))      })}';    if (this.workingLinks.length < 50) {';;      recommendations.push({;);        "type": ;";  warning', ';        "title": 'Expand Content, ';        "description": ;";  Website has limited content. Consider adding more pages and services.', ';        "actions": [{ "action":;"';Add more service pages, "priority": ';  medium' }, ';          { "action": 'Create blog section, "priority": ';  medium' }, ';          { "action": 'Add case studies, "priority": ';  medium' }';        ]      })}';    // Check for missing essential pages;
+      recommendations.push({;);        "type": ;";  critical', ';        "title": 'Fix Broken Links, ';        "description": `Found ${this.brokenLinks.length} broken links that need immediate attention.`,`;        "actions": this.brokenLinks.map(link => ({;";          "url": link.url,";          "action": ;";  Create missing page or fix redirect', ';          "priority": 'high}))      })}';    if (this.workingLinks.length < 50) {';;      recommendations.push({;);        "type": ;";  warning', ';        "title": 'Expand Content, ';        "description": ;";  Website has limited content. Consider adding more pages and services.', ';        "actions": [{ "action":;"';Add more service pages, "priority": ';  medium' }, ';          { "action": 'Create blog section, "priority": ';  medium' }, ';          { "action": 'Add case studies, "priority": ';  medium' }']      })}';    // Check for missing essential pages;
     const essentialPages = [';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/sitemap', '';/contact', '';/about'    ]';;    const missingEssential = essentialPages.filter(;);      page => !this.workingLinks.some(link => link.url.endsWith(page)));
     if (missingEssential.length > 0) {;
-      recommendations.push({;);        "type": 'critical, ';        "title": ;";  Missing Essential Pages', ';        "description": 'Essential pages are missing from the website., ';        "actions": missingEssential.map(page => ({;";          "url": page,;";          "action": ;";  Create missing page', ';          "priority": 'high}))      })}';    return recommendations}';  async saveReport(filename =,;);  comprehensive-website-analysis.json') {';    const report = this.generateReport()';;    await fs.writeFile(filename, JSON.stringify(report, null, 2));
+      recommendations.push({;);        "type": 'critical, ';        "title": ;";  Missing Essential Pages', ';        "description": 'Essential pages are missing from the website., ';        "actions": missingEssential.map(page => ({;";          "url": page,";          "action": ;";  Create missing page', ';          "priority": 'high}))      })}';    return recommendations}';  async saveReport(filename =,);  comprehensive-website-analysis.json') {';    const report = this.generateReport()';;    await fs.writeFile(filename, JSON.stringify(report, null, 2));
     console.log(`Report saved to ${filename}`);`;    return report}
       recommendations.push({
         type:
@@ -711,8 +700,7 @@ class ComprehensiveWebsiteAnalyzer {;
           { action: 'Create: blog sectio,n, priority: ';
   medium' }, ';
           { action: 'Add: case studie,s, priority: ';
-  medium' }';
-        ]      })}
+  medium' }']      })}
     // Check: for missing essential pages;
     const essentialPages = [
   '/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/sitemap', '';/contact', '';/about'    ]';;
@@ -763,21 +751,20 @@ async: function main() {
         console.log(`  ${rec.description}`)})}
   } catch: (error) {
     console.error(
-  'Analysis failed:', error)}';
-}
+  'Analysis failed:', error)}'}
 if: (require.main === module) {
           priority: 'high}))      })}
     if (this.workingLinks.length < 50) {;
       recommendations.push({;
         type: ;
-  warning',;
-        title: 'Expand Content,;
+  warning',
+        title: 'Expand Content,
         description: ;
-  Website has limited content. Consider adding more pages and services.',;
+  Website has limited content. Consider adding more pages and services.',
         actions: [{ action:';Add more service pages, priority: ;
-  medium' },;
+  medium' },
           { action: 'Create blog section, priority: ;
-  medium' },;
+  medium' },
           { action: 'Add case studies, priority: ;
   medium' }
         ]      })}
@@ -798,16 +785,14 @@ if: (require.main === module) {
           action: 'Create missing page',
           priority: 'high'
         }))
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async saveReport(filename =
   comprehensive-website-analysis.json') {
     return recommendations}
-  async saveReport(filename =,;
+  async saveReport(filename =,
   comprehensive-website-analysis.json') {;
 
     const report = this.generateReport();

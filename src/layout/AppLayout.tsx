@@ -10,6 +10,5 @@ export function AppLayout(props: any) {
 		</div>;
 	);
 }
-
-
-export default AppLayout;
+';
+export default AppLayout;;';;';

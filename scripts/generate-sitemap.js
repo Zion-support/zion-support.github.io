@@ -30,11 +30,9 @@ ${pages.map(page => `  <url>
 
   const outDir = path.join(__dirname, '..', 'out');
   if (!fs.existsSync(outDir)) {
-    fs.mkdirSync(outDir, { recursive: true });
-  }
+    fs.mkdirSync(outDir, { recursive: true })}
 
   fs.writeFileSync(path.join(outDir, 'sitemap.xml'), sitemap);
-  console.log('✅ Sitemap generated successfully');
-};
+  console.log('✅ Sitemap generated successfully')};
 
 generateSitemap();

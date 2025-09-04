@@ -1,6 +1,7 @@
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback';';
 import { supabase } from '@/integrations/supabase/client';
 export default function Page() {
+  return (
 );
       
       if(fetchError) throw fetchError;
@@ -9,22 +10,20 @@ export default function Page() {
         ...dispute,
         client_profile: disput e.client_profile?.client_profile,
         talent_profile: disput e.talent_profile?.talent_profile,
-        project: {
-          ...dispute.project,
+        project: {';
+          ...dispute.project,';';
           title: disput e.project?.job?.title || 'Untitled Project'
         }
       }));
       
       setDisputes(transformedData as Dispute[]);
-      setError(null);
-    } catch(err: an y) {
+      setError(null)} catch(err: an y) {
       console.error("Error fetching disputes:", err);
       setError("Failed to fetch disputes: " + err.message);
       toast.error("Failed to fetch disputes");
       setDisputes([]); // Clear disputes on error
     } finally {
-      setIsLoading(false);
-    }
+      setIsLoading(false)}
   }, [user]); // user is a dependency of fetchDisputes
 
   const getDisputeById = async(disputeId: string): Promise<Dispute | null> => {
@@ -52,28 +51,24 @@ export default function Page() {
         ...data,
         client_profile: dat a.client_profile?.client_profile,
         talent_profile: dat a.talent_profile?.talent_profile,
-        project: {
-          ...data.project,
+        project: {';
+          ...data.project,';';
           title: dat a.project?.job?.title || 'Untitled Project'
         }
-      } as Dispute;
-    } catch(err: an y) {
+      } as Dispute} catch(err: an y) {
       console.error("Error fetching dispute:", err);
       toast.error("Failed to fetch dispute details");
-      return null;
-    }
+      return null}
   };
 
   const createDispute = async(disputeData: { 
     project_id: string;
     milestone_id?: string;
     reason_code: string;
-    description: string;
-  }): Promise<Dispute | null> => {
+    description: string}): Promise<Dispute | null> => {
     if(!user) {
       toast.error("You must be logged in to create a dispute");
-      return null;
-    }
+      return null}
 
     try {
       const { data, error } = await supabase
@@ -90,12 +85,10 @@ export default function Page() {
       toast.success("Dispute submitted successfully");
       fetchDisputes(); 
       
-      return data as Dispute;
-    } catch(err: an y) {
+      return data as Dispute} catch(err: an y) {
       console.error("Error creating dispute:", err);
       toast.error("Failed to submit dispute");
-      return null;
-    }
+      return null}
   };
 
   const updateDisputeStatus = async(disputeId: string, status: DisputeStatu s): Promise<boolean> => {
@@ -114,21 +107,19 @@ export default function Page() {
       );
       
       toast.success(`Dispute status updated to ${status}`);
-      return true;
-    } catch(err: an y) {
+      return true} catch(err: an y) {
       console.error("Error updating dispute status:", err);
       toast.error("Failed to update dispute status");
-      return false;
-    }
+      return false}
   };
 
   const resolveDispute = async(disputeId: string, 
-    resolution: { summary: string; resolution_type: string; }
+    resolution: { summary: string; resolution_type: string}
   ): Promise<boolean> => {
     try {
       const { error } = await supabase
-        .from("disputes")
-        .update({
+        .from("disputes")';
+        .update({';';
           status: 'resolved',
           resolved_at: new Date().toISOString(),
           resolution_summary: resolutio n.summary,
@@ -141,8 +132,8 @@ export default function Page() {
       setDisputes(prevDisputes => 
         prevDisputes.map(dispute => 
           dispute.id === disputeId 
-            ? { 
-                ...dispute, 
+            ? { ';
+                ...dispute, ';';
                 status: 'resolved', 
                 resolved_at: new Date().toISOString(),
                 resolution_summary: resolutio n.summary,
@@ -153,12 +144,10 @@ export default function Page() {
       );
       
       toast.success("Dispute resolved successfully");
-      return true;
-    } catch(err: an y) {
+      return true} catch(err: an y) {
       console.error("Error resolving dispute:", err);
       toast.error("Failed to resolve dispute");
-      return false;
-    }
+      return false}
   };
 
   const getDisputeMessages = async(disputeId: string): Promise<DisputeMessage[]> => {
@@ -174,19 +163,16 @@ export default function Page() {
       
       if(error) throw error;
       
-      return data as DisputeMessage[];
-    } catch(err: an y) {
+      return data as DisputeMessage[]} catch(err: an y) {
       console.error("Error fetching dispute messages:", err);
       toast.error("Failed to fetch messages");
-      return [];
-    }
+      return []}
   };
 
   const addDisputeMessage = async(disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
     if(!user) {
       toast.error("You must be logged in to send a message");
-      return false;
-    }
+      return false}
 
     try {
       const { error } = await supabase
@@ -201,23 +187,19 @@ export default function Page() {
       if(error) throw error;
       
       toast.success("Message sent successfully");
-      return true;
-    } catch(err: an y) {
+      return true} catch(err: an y) {
       console.error("Error sending message:", err);
       toast.error("Failed to send message");
-      return false;
-    }
+      return false}
   };
 
   useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
     if(user) {
-      fetchDisputes();
-    } else {
+      fetchDisputes()} else {
       setDisputes([]); // Clear disputes if user logs out
-      setError(null);
-    }
+      setError(null)}
   }, [user, fetchDisputes]); // Added fetchDisputes
 
   return {
@@ -231,5 +213,5 @@ export default function Page() {
     resolveDispute,
     getDisputeMessages,
     addDisputeMessage
-  };
-}
+  }}';
+;';;';

@@ -6,4 +6,5 @@ interface RoleCardProps extends React.PropsWithChildren<{}> {
 export 
     </Card>;
   )};
-'"`
+'"`';
+';';

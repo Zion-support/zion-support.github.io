@@ -43,8 +43,7 @@ function optimizeNextConfig() {
   const configPath = 'next.config.js';
   if (!fs.existsSync(configPath)) {
     console.log('❌ next.config.js not found');
-    return false;
-  }
+    return false}
 
   let config = fs.readFileSync(configPath, 'utf8');
   // Add performance optimizations
@@ -133,15 +132,13 @@ function optimizeNextConfig() {
   );
   fs.writeFileSync(configPath, config);
   console.log('✅ Next.js config optimized for performance');
-  return true;
-}
+  return true}
 
 function optimizePackageJson() {
   const packagePath = 'package.json';
   if (!fs.existsSync(packagePath)) {
     console.log('❌ package.json not found');
-    return false;
-  }
+    return false}
 
   const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
   // Add performance scripts
@@ -161,20 +158,17 @@ function optimizePackageJson() {
   };
   for (const [dep, version] of Object.entries(perfDeps)) {
     if (!packageJson.devDependencies[dep]) {
-      packageJson.devDependencies[dep] = version;
-    }
+      packageJson.devDependencies[dep] = version}
   }
 
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
   console.log('✅ package.json optimized for performance');
-  return true;
-}
+  return true}
 
 function createPerformanceComponents() {
   const componentsDir = 'components/performance';
   if (!fs.existsSync(componentsDir)) {
-    fs.mkdirSync(componentsDir, { recursive: true });
-  }
+    fs.mkdirSync(componentsDir, { recursive: true })}
 
   // Create optimized image component
   const optimizedImageComponent = `import React from 'react'
@@ -246,36 +240,31 @@ export default LazyComponent
     lazyLoadingComponent
   );
   console.log('✅ Performance components created');
-  return true;
-}
+  return true}
 
 function optimizeImages() {
   const publicDir = 'public';
   if (!fs.existsSync(publicDir)) {
     console.log('❌ public directory not found');
-    return false;
-  }
+    return false}
 
   // Create images directory structure
   const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
   for (const dir of imageDirs) {
     const fullPath = path.join(publicDir, dir);
     if (!fs.existsSync(fullPath)) {
-      fs.mkdirSync(fullPath, { recursive: true });
-    }
+      fs.mkdirSync(fullPath, { recursive: true })}
   }
 
   // Create .gitkeep files
   for (const dir of imageDirs) {
     const gitkeepPath = path.join(publicDir, dir, '.gitkeep');
     if (!fs.existsSync(gitkeepPath)) {
-      fs.writeFileSync(gitkeepPath, '');
-    }
+      fs.writeFileSync(gitkeepPath, '')}
   }
 
   console.log('✅ Image directories optimized');
-  return true;
-}
+  return true}
 
 function main() {
   console.log('🚀 Starting performance optimization...');
@@ -289,11 +278,9 @@ function main() {
   for (const optimization of optimizations) {
     try {
       if (optimization.fn()) {
-        successCount++;
-      }
+        successCount++}
     } catch (error) {
-      console.error(`❌ Error in ${optimization.name}:`, error.message);
-    }
+      console.error(`❌ Error in ${optimization.name}:`, error.message)}
   }
 
   console.log(`\n📊 Optimization Summary:`);
@@ -301,10 +288,8 @@ function main() {
   console.log(`   Successful: ${successCount}`);
   console.log(`   Failed: ${optimizations.length - successCount}`);
   if (successCount === optimizations.length) {
-    console.log('\n✨ All performance optimizations completed successfully!');
-  } else {
-    console.log('\n⚠️  Some optimizations failed. Check the logs above.');
-  }
+    console.log('\n✨ All performance optimizations completed successfully!')} else {
+    console.log('\n⚠️  Some optimizations failed. Check the logs above.')}
 }
 
 main();

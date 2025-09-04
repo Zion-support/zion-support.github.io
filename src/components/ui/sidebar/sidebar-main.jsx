@@ -6,12 +6,12 @@ import {cn} from "@/lib/utils";
 export const Sidebar = React.forwardRef((props, ref) => {
     const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
     if (props.collapsible === "none") {
-        return (<div className = {  cn("flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
-  props.className)
-
-} ref={ref} {...props}>
+        return (
+    <div className="min-h-screen bg-white">
         {props.children}
-      </div>)}
+          </div>
+  );
+}
     if (isMobile) {}
 """
         return (<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>""""
@@ -23,7 +23,8 @@ export const Sidebar = React.forwardRef((props, ref) => {
           <div className="flex h-full w-full flex-col">{props.children}</div>
         </SheetContent>"""
       </Sheet>)}""""
-    return (<div ref={ref} className="group peer hidden md:block text-sidebar-foreground" data-state={state} data-collapsible={state === "collapsed" ? props.collapsible : ""} data-variant={props.variant} data-side={props.side}>
+    return (
+    <div className="min-h-screen bg-white">
       {/* This is what handles the sidebar gap on desktop */}
       <div className = {}
 """
@@ -80,4 +81,4 @@ SidebarInset.displayName = "SidebarInset";"""
 
 </main>
 </button>
-</div>
+</div>;;

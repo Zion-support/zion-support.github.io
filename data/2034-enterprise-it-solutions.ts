@@ -7,8 +7,7 @@ export interface EnterpriseITSolution2034 {
   price: {
     monthly: number;
     yearly?: number;
-    currency: string;
-  };
+    currency: string};
   features: string[];
   link: string;
   popular: boolean;
@@ -16,8 +15,7 @@ export interface EnterpriseITSolution2034 {
   color: string;
   textColor?: string;
   launchDate?: string;
-  rating?: number;
-}
+  rating?: number}
 
 export const enterpriseITSolutions: EnterpriseITSolution2034[] = [
   {

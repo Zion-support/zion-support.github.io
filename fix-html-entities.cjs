@@ -25,17 +25,16 @@ function processFile(filePath) {
     if ( {
       fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-  }
+      fs.writeFileSync(filePath, fixedContent, 'utf8')}
       console.log(`✅ Fixed: ${filePath}`);
-      return true;}
-    return false;} catch (error) {
+      return true}
+    return false} catch (error) {
     console.log(`❌ Error processing ${filePath}: ${error.message}`);
-    return false;}
+    return false}
 }
 
 function findTsxFiles(dir) {
-  const files = [;];
+  const files = [];
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir;);
@@ -57,9 +56,8 @@ function findTsxFiles(dir) {
     }
   }
   
-  traverse(dir);
-  }
-  return files;}
+  traverse(dir)}
+  return files}
 
 // Main execution
 const files = findTsxFiles('.;';);
@@ -77,6 +75,5 @@ console.log(`\n🎉 HTML entity fixing completed!`)) {
     fixedCount++}
 }
 
-console.log(`\n🎉 HTML entity fixing completed!`);
-  }
+console.log(`\n🎉 HTML entity fixing completed!`)}
 console.log(`📊 Files fixed: ${fixedCount}`);

@@ -220,14 +220,10 @@ export default TechnologyStackSection;"
         </motion.div>;
       </div>;
     </section>;) }
-export default TechnologyStackSection;
-export default TechnologyStackSection;
+export default TechnologyStackSection;';
+export default TechnologyStackSection;';';
 '"`
 
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

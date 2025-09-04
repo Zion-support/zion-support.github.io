@@ -1,6 +1,6 @@
 export function Select(props: any) {
   return (
-    <div className={`relative ${className}`}>
+    <div className="min-h-screen bg-white">
       {children}
     </div>
   );
@@ -23,11 +23,7 @@ export function SelectValue(props: any) {
 
 export function SelectContent(props: any) {
   return (
-    <div className={`
-      absolute top-full left-0 right-0 z-50 mt-1 rounded-md border
-      border-white/20 bg-slate-800/90 backdrop-blur-sm
-      shadow-lg ${className}
-    `}>
+    <div className="min-h-screen bg-white">
       {children}
     </div>
   );
@@ -35,17 +31,10 @@ export function SelectContent(props: any) {
 
 export function SelectItem(props: any) {
   return (
-    <div className={`
-      relative flex w-full cursor-pointer select-none items-center
-      rounded-sm px-3 py-2 text-sm text-white outline-none
-      hover:bg-slate-700/50 focus:bg-slate-700/50
-      focus:text-white transition-colors
-      ${className}
-    `} data-value={value} {...props}>
+    <div className="min-h-screen bg-white">
       {children}
     </div>
   );
 }
-
-
-export default select;
+';
+export default select;';';

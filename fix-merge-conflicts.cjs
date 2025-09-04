@@ -9,9 +9,9 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/},\s*]/g, "]");
     content = content.replace(/},\s*\)/g, ")");
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);,
+    console.log(`Fixed: ${filePath}`),
 } catch (error) {
-  console.error(`Error fixing ${filePath}:`, error.message);,
+  console.error(`Error fixing ${filePath}:`, error.message),
 }
 }
 ;
@@ -21,11 +21,11 @@ function findAndFixFiles(dir) {
   const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     if (stat.isDirectory() && !file.includes("node_modules") && !file.includes(".git")) {
-  findAndFixFiles(filePath);,
+  findAndFixFiles(filePath),
 } else if (file.match(/\.(tsx?|jsx?)$/)) {
   const content = fs.readFileSync(filePath, "utf8");
       if (content.includes("") || content.includes("") || content.includes(">>>>>>>")) {
-  fixMergeConflicts(filePath);,
+  fixMergeConflicts(filePath),
 }
     }
   }

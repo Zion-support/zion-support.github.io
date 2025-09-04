@@ -14,8 +14,7 @@ class ErrorRecoveryManager {
       recoveredIssues: 0,
       failedRecoveries: 0,
       filesProcessed: 0
-    };
-  }
+    }}
 
   async run() {
     try {
@@ -34,25 +33,19 @@ class ErrorRecoveryManager {
           if (recoveryResult.success) {
             this.recoveries.push(recoveryResult);
             this.stats.recoveredIssues++;
-            console.log(`✅ Recovered: ${issue.message}`);
-          } else {
+            console.log(`✅ Recovered: ${issue.message}`)} else {
             this.stats.failedRecoveries++;
-            console.log(`⚠️ Could not recover: ${issue.message}`);
-          }
+            console.log(`⚠️ Could not recover: ${issue.message}`)}
         } catch (error) {
           console.error(`❌ Error applying recovery: ${error.message}`);
-          this.stats.failedRecoveries++;
-        }
+          this.stats.failedRecoveries++}
       }
       
       // Generate report
       this.generateReport();
       
-      console.log(`✅ Error recovery manager completed. Recovered ${this.stats.recoveredIssues}/${this.stats.totalIssues} issues`);
-      
-    } catch (error) {
-      console.error('❌ Error recovery manager failed:', error.message);
-    }
+      console.log(`✅ Error recovery manager completed. Recovered ${this.stats.recoveredIssues}/${this.stats.totalIssues} issues`)} catch (error) {
+      console.error('❌ Error recovery manager failed:', error.message)}
   }
 
   async checkForRecoveryIssues() {
@@ -64,44 +57,37 @@ class ErrorRecoveryManager {
     issues.push(...await this.checkForCorruptedFiles());
     issues.push(...await this.checkForSystemIssues());
     
-    return issues;
-  }
+    return issues}
 
   async checkForBrokenBuilds() {
     const issues = [];
     
     try {
       // Try to run build
-      execSync('npm run build', { stdio: 'pipe' });
-    } catch (error) {
+      execSync('npm run build', { stdio: 'pipe' })} catch (error) {
       issues.push({
         type: 'broken-build',
         message: 'Build is broken and needs recovery',
         severity: 'high',
         details: error.message
-      });
-    }
+      })}
     
-    return issues;
-  }
+    return issues}
 
   async checkForFailedTests() {
     const issues = [];
     
     try {
       // Try to run tests
-      execSync('npm test', { stdio: 'pipe' });
-    } catch (error) {
+      execSync('npm test', { stdio: 'pipe' })} catch (error) {
       issues.push({
         type: 'failed-tests',
         message: 'Tests are failing and need recovery',
         severity: 'medium',
         details: error.message
-      });
-    }
+      })}
     
-    return issues;
-  }
+    return issues}
 
   async checkForCorruptedFiles() {
     const issues = [];
@@ -121,8 +107,7 @@ class ErrorRecoveryManager {
               severity: 'high',
               file: file,
               details: 'File contains invalid content'
-            });
-          }
+            })}
         } catch (error) {
           issues.push({
             type: 'unreadable-file',
@@ -130,13 +115,11 @@ class ErrorRecoveryManager {
             severity: 'high',
             file: file,
             details: error.message
-          });
-        }
+          })}
       }
     }
     
-    return issues;
-  }
+    return issues}
 
   isFileCorrupted(content) {
     // Check for common corruption patterns
@@ -149,8 +132,7 @@ class ErrorRecoveryManager {
       /Exception:/, // Contains exception messages
     ];
     
-    return corruptionPatterns.some(pattern => pattern.test(content));
-  }
+    return corruptionPatterns.some(pattern => pattern.test(content))}
 
   async checkForSystemIssues() {
     const issues = [];
@@ -164,21 +146,18 @@ class ErrorRecoveryManager {
           message: 'node_modules directory is missing',
           severity: 'high',
           details: 'Dependencies need to be reinstalled'
-        });
-      }
+        })}
       
       // Check if package-lock.json is corrupted
       if (fs.existsSync('package-lock.json')) {
         try {
-          JSON.parse(fs.readFileSync('package-lock.json', 'utf8'));
-        } catch (error) {
+          JSON.parse(fs.readFileSync('package-lock.json', 'utf8'))} catch (error) {
           issues.push({
             type: 'corrupted-lockfile',
             message: 'package-lock.json is corrupted',
             severity: 'medium',
             details: 'Lock file needs to be regenerated'
-          });
-        }
+          })}
       }
       
     } catch (error) {
@@ -187,11 +166,9 @@ class ErrorRecoveryManager {
         message: 'System-level error detected',
         severity: 'high',
         details: error.message
-      });
-    }
+      })}
     
-    return issues;
-  }
+    return issues}
 
   async applyRecovery(issue) {
     const { type, message, severity, file, details } = issue;
@@ -213,11 +190,9 @@ class ErrorRecoveryManager {
         case 'system-error':
           return await this.recoverSystemError(issue);
         default:
-          return { success: false, reason: 'Unknown issue type' };
-      }
+          return { success: false, reason: 'Unknown issue type' }}
     } catch (error) {
-      return { success: false, reason: error.message };
-    }
+      return { success: false, reason: error.message }}
   }
 
   async recoverBrokenBuild(issue) {
@@ -231,10 +206,8 @@ class ErrorRecoveryManager {
         type: 'broken-build', 
         action: 'Cleaned and rebuilt project',
         details: 'Build cache cleared and project rebuilt'
-      };
-    } catch (error) {
-      return { success: false, reason: 'Failed to recover broken build' };
-    }
+      }} catch (error) {
+      return { success: false, reason: 'Failed to recover broken build' }}
   }
 
   async recoverFailedTests(issue) {
@@ -249,10 +222,8 @@ class ErrorRecoveryManager {
         type: 'failed-tests', 
         action: 'Reinstalled dependencies and ran tests',
         details: 'Dependencies reinstalled and tests passed'
-      };
-    } catch (error) {
-      return { success: false, reason: 'Failed to recover failed tests' };
-    }
+      }} catch (error) {
+      return { success: false, reason: 'Failed to recover failed tests' }}
   }
 
   async recoverCorruptedFile(issue) {
@@ -268,8 +239,7 @@ class ErrorRecoveryManager {
           action: 'Restored from backup',
           file: file,
           details: 'File restored from backup'
-        };
-      }
+        }}
       
       // Try to restore from git
       try {
@@ -280,8 +250,7 @@ class ErrorRecoveryManager {
           action: 'Restored from git',
           file: file,
           details: 'File restored from git'
-        };
-      } catch (gitError) {
+        }} catch (gitError) {
         // If git restore fails, try to fix the content
         const content = fs.readFileSync(file, 'utf8');
         const fixedContent = this.fixCorruptedContent(content);
@@ -293,11 +262,9 @@ class ErrorRecoveryManager {
           action: 'Fixed corrupted content',
           file: file,
           details: 'Corrupted content fixed'
-        };
-      }
+        }}
     } catch (error) {
-      return { success: false, reason: 'Failed to recover corrupted file' };
-    }
+      return { success: false, reason: 'Failed to recover corrupted file' }}
   }
 
   fixCorruptedContent(content) {
@@ -313,8 +280,7 @@ class ErrorRecoveryManager {
     // Remove empty lines
     fixedContent = fixedContent.replace(/^\s*$/gm, '');
     
-    return fixedContent;
-  }
+    return fixedContent}
 
   async recoverUnreadableFile(issue) {
     const { file } = issue;
@@ -329,10 +295,8 @@ class ErrorRecoveryManager {
         action: 'Restored from git',
         file: file,
         details: 'File restored from git'
-      };
-    } catch (error) {
-      return { success: false, reason: 'Failed to recover unreadable file' };
-    }
+      }} catch (error) {
+      return { success: false, reason: 'Failed to recover unreadable file' }}
   }
 
   async recoverMissingDependencies(issue) {
@@ -345,10 +309,8 @@ class ErrorRecoveryManager {
         type: 'missing-dependencies', 
         action: 'Reinstalled dependencies',
         details: 'Dependencies reinstalled successfully'
-      };
-    } catch (error) {
-      return { success: false, reason: 'Failed to recover missing dependencies' };
-    }
+      }} catch (error) {
+      return { success: false, reason: 'Failed to recover missing dependencies' }}
   }
 
   async recoverCorruptedLockfile(issue) {
@@ -362,10 +324,8 @@ class ErrorRecoveryManager {
         type: 'corrupted-lockfile', 
         action: 'Regenerated lock file',
         details: 'Lock file regenerated successfully'
-      };
-    } catch (error) {
-      return { success: false, reason: 'Failed to recover corrupted lock file' };
-    }
+      }} catch (error) {
+      return { success: false, reason: 'Failed to recover corrupted lock file' }}
   }
 
   async recoverSystemError(issue) {
@@ -378,10 +338,8 @@ class ErrorRecoveryManager {
         type: 'system-error', 
         action: 'System restarted',
         details: 'System recovered successfully'
-      };
-    } catch (error) {
-      return { success: false, reason: 'Failed to recover system error' };
-    }
+      }} catch (error) {
+      return { success: false, reason: 'Failed to recover system error' }}
   }
 
   glob(pattern) {
@@ -389,8 +347,7 @@ class ErrorRecoveryManager {
     return glob.sync(pattern, { 
       ignore: ['node_modules/**', '.next/**', 'out/**', 'dist/**'],
       absolute: true 
-    });
-  }
+    })}
 
   generateReport() {
     const report = {
@@ -410,8 +367,7 @@ class ErrorRecoveryManager {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     console.log(`📊 Error recovery manager report saved to: ${reportPath}`);
-    return report;
-  }
+    return report}
 }
 
 // Main execution
@@ -422,17 +378,13 @@ async function main() {
     await manager.run();
     
     // Exit with appropriate code
-    process.exit(manager.stats.failedRecoveries > 0 ? 1 : 0);
-    
-  } catch (error) {
+    process.exit(manager.stats.failedRecoveries > 0 ? 1 : 0)} catch (error) {
     console.error('❌ Error recovery manager failed:', error.message);
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 // Run if called directly
 if (require.main === module) {
-  main();
-}
+  main()}
 
 module.exports = { ErrorRecoveryManager };

@@ -3,7 +3,4 @@ export function HomepagePromotion(props: any) { const featuredServices = [{ id: 
 </a>
 </motion>
 </div>
-</div>
-</div>
-</div>
 </section>

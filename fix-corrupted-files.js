@@ -7,120 +7,116 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // List of corrupted files that need to be fixed;
 const corruptedFiles = [
-  "src/pages/services/AIHealthcareRevenueCycle.tsx",;
-  "src/pages/services/AIIdentityManagement.tsx",;
-  "src/pages/services/AILegalDocumentAutomation.tsx",;
-  "src/pages/services/AIIncidentResponse.tsx",;
-  "src/pages/services/AIInsurance.tsx",;
-  "src/pages/services/AIInternetOfThings.tsx",;
-  "src/pages/services/AIKafka.tsx",;
-  "src/pages/services/AIKubernetes.tsx",;
-  "src/pages/services/AILegalTech.tsx",;
-  "src/pages/services/AIManufacturing.tsx",;
-  "src/pages/services/AIManufacturingQualityControl.tsx",;
-  "src/pages/services/AIMarketingAutomation.tsx",;
-  "src/pages/services/AIMentalHealthSupportPlatform.tsx",;
-  "src/pages/services/AIMetaverse.tsx",;
-  "src/pages/services/AIMicroservices.tsx",;
-  "src/pages/services/AIMongoDB.tsx",;
-  "src/pages/services/AIMySQL.tsx",;
-  "src/pages/services/AINetworkSecurity.tsx",;
-  "src/pages/services/AIPenetrationTesting.tsx",;
-  "src/pages/services/AIPostgreSQL.tsx",;
-  "src/pages/services/AIPoweredSEO.tsx",;
-  "src/pages/services/AIPredictiveAnalytics.tsx",;
-  "src/pages/services/AIPredictiveAnalyticsPlatform.tsx",;
-  "src/pages/services/AIPredictiveMaintenance.tsx",;
-  "src/pages/services/AIProductivitySuite.tsx",;
-  "src/pages/services/AIProjectManagement.tsx",;
-  "src/pages/services/AIProjectManagementAssistant.tsx",;
-  "src/pages/services/AIPrometheus.tsx",;
-  "src/pages/services/AIQuantumComputing.tsx",;
-  "src/pages/services/AIQuantumComputingSolutions.tsx",;
-  "src/pages/services/AIQuantumMachineLearning.tsx",;
-  "src/pages/services/AIRealEstate.tsx",;
-  "src/pages/services/AIRealTimeBusinessIntelligence.tsx",;
-  "src/pages/services/AIRedis.tsx",;
-  "src/pages/services/AIRetail.tsx",;
-  "src/pages/services/AISEOOptimizer.tsx",;
-  "src/pages/services/AISecurityAnalytics.tsx",;
-  "src/pages/services/AISecurityAssessment.tsx",;
-  "src/pages/services/AISecurityAuditing.tsx",;
-  "src/pages/services/AISecurityAutomation.tsx",;
-  "src/pages/services/AISecurityAwareness.tsx",;
-  "src/pages/services/AISecurityCompliance.tsx",;
-  "src/pages/services/AISecurityConsulting.tsx",;
-  "src/pages/services/AISecurityForensics.tsx",;
-  "src/pages/services/AISecurityGovernance.tsx",;
-  "src/pages/services/AISecurityImplementation.tsx",;
-  "src/pages/services/AISecurityIntelligence.tsx",;
-  "src/pages/services/AISecurityMaintenance.tsx",;
-  "src/pages/services/AISecurityMonitoring.tsx",;
-  "src/pages/services/AISecurityOperations.tsx",;
-  "src/pages/services/AISecurityOrchestration.tsx",;
-  "src/pages/services/AISecurityRiskManagement.tsx",;
-  "src/pages/services/AISecuritySupport.tsx",;
-  "src/pages/services/AISecurityTesting.tsx",;
-  "src/pages/services/AISecurityTraining.tsx",;
-  "src/pages/services/AIServerless.tsx",;
-  "src/pages/services/AIServices.tsx",;
-  "src/pages/services/AISmartCityInfrastructure.tsx",;
-  "src/pages/services/AISmartCityPlatform.tsx",;
-  "src/pages/services/AISports.tsx",;
-  "src/pages/services/AISupplyChainOptimizationPlatform.tsx",;
-  "src/pages/services/AISustainableTechnology.tsx",;
-  "src/pages/services/AITerraform.tsx",;
-  "src/pages/services/AITransportation.tsx",;
-  "src/pages/services/AITravel.tsx",;
-  "src/pages/services/AIVideoAnalytics.tsx",;
-  "src/pages/services/AIVirtualReality.tsx",;
-  "src/pages/services/AIVulnerabilityManagement.tsx",;
-  "src/pages/services/AIWorkflowAutomation.jsx",;
-  "src/pages/services/AIWorkflowAutomation.tsx";
-];
+  "src/pages/services/AIHealthcareRevenueCycle.tsx",
+  "src/pages/services/AIIdentityManagement.tsx",
+  "src/pages/services/AILegalDocumentAutomation.tsx",
+  "src/pages/services/AIIncidentResponse.tsx",
+  "src/pages/services/AIInsurance.tsx",
+  "src/pages/services/AIInternetOfThings.tsx",
+  "src/pages/services/AIKafka.tsx",
+  "src/pages/services/AIKubernetes.tsx",
+  "src/pages/services/AILegalTech.tsx",
+  "src/pages/services/AIManufacturing.tsx",
+  "src/pages/services/AIManufacturingQualityControl.tsx",
+  "src/pages/services/AIMarketingAutomation.tsx",
+  "src/pages/services/AIMentalHealthSupportPlatform.tsx",
+  "src/pages/services/AIMetaverse.tsx",
+  "src/pages/services/AIMicroservices.tsx",
+  "src/pages/services/AIMongoDB.tsx",
+  "src/pages/services/AIMySQL.tsx",
+  "src/pages/services/AINetworkSecurity.tsx",
+  "src/pages/services/AIPenetrationTesting.tsx",
+  "src/pages/services/AIPostgreSQL.tsx",
+  "src/pages/services/AIPoweredSEO.tsx",
+  "src/pages/services/AIPredictiveAnalytics.tsx",
+  "src/pages/services/AIPredictiveAnalyticsPlatform.tsx",
+  "src/pages/services/AIPredictiveMaintenance.tsx",
+  "src/pages/services/AIProductivitySuite.tsx",
+  "src/pages/services/AIProjectManagement.tsx",
+  "src/pages/services/AIProjectManagementAssistant.tsx",
+  "src/pages/services/AIPrometheus.tsx",
+  "src/pages/services/AIQuantumComputing.tsx",
+  "src/pages/services/AIQuantumComputingSolutions.tsx",
+  "src/pages/services/AIQuantumMachineLearning.tsx",
+  "src/pages/services/AIRealEstate.tsx",
+  "src/pages/services/AIRealTimeBusinessIntelligence.tsx",
+  "src/pages/services/AIRedis.tsx",
+  "src/pages/services/AIRetail.tsx",
+  "src/pages/services/AISEOOptimizer.tsx",
+  "src/pages/services/AISecurityAnalytics.tsx",
+  "src/pages/services/AISecurityAssessment.tsx",
+  "src/pages/services/AISecurityAuditing.tsx",
+  "src/pages/services/AISecurityAutomation.tsx",
+  "src/pages/services/AISecurityAwareness.tsx",
+  "src/pages/services/AISecurityCompliance.tsx",
+  "src/pages/services/AISecurityConsulting.tsx",
+  "src/pages/services/AISecurityForensics.tsx",
+  "src/pages/services/AISecurityGovernance.tsx",
+  "src/pages/services/AISecurityImplementation.tsx",
+  "src/pages/services/AISecurityIntelligence.tsx",
+  "src/pages/services/AISecurityMaintenance.tsx",
+  "src/pages/services/AISecurityMonitoring.tsx",
+  "src/pages/services/AISecurityOperations.tsx",
+  "src/pages/services/AISecurityOrchestration.tsx",
+  "src/pages/services/AISecurityRiskManagement.tsx",
+  "src/pages/services/AISecuritySupport.tsx",
+  "src/pages/services/AISecurityTesting.tsx",
+  "src/pages/services/AISecurityTraining.tsx",
+  "src/pages/services/AIServerless.tsx",
+  "src/pages/services/AIServices.tsx",
+  "src/pages/services/AISmartCityInfrastructure.tsx",
+  "src/pages/services/AISmartCityPlatform.tsx",
+  "src/pages/services/AISports.tsx",
+  "src/pages/services/AISupplyChainOptimizationPlatform.tsx",
+  "src/pages/services/AISustainableTechnology.tsx",
+  "src/pages/services/AITerraform.tsx",
+  "src/pages/services/AITransportation.tsx",
+  "src/pages/services/AITravel.tsx",
+  "src/pages/services/AIVideoAnalytics.tsx",
+  "src/pages/services/AIVirtualReality.tsx",
+  "src/pages/services/AIVulnerabilityManagement.tsx",
+  "src/pages/services/AIWorkflowAutomation.jsx",
+  "src/pages/services/AIWorkflowAutomation.tsx"];
 // Template for a basic service page;
 const servicePageTemplate = (serviceName, displayName) => `import React from "react";
 import { Database, Check, Phone, Mail, ArrowRight, Target, Zap } from "lucide-react";
 export default function ${serviceName}() {
   const features = [
-  "AI-powered ${displayName.toLowerCase()} optimization",;
-    "Automated ${displayName.toLowerCase()} management",;
-    "Real-time ${displayName.toLowerCase()} analytics",;
-    "Predictive ${displayName.toLowerCase()} insights",;
-    "Custom AI models for ${displayName.toLowerCase()}",;
-    "Enterprise-grade security and compliance";
-  ];
+  "AI-powered ${displayName.toLowerCase()} optimization",
+    "Automated ${displayName.toLowerCase()} management",
+    "Real-time ${displayName.toLowerCase()} analytics",
+    "Predictive ${displayName.toLowerCase()} insights",
+    "Custom AI models for ${displayName.toLowerCase()}",
+    "Enterprise-grade security and compliance"];
   const benefits = [
-  "Improve ${displayName.toLowerCase()} performance by 50-80%",;
-    "Reduce operational costs by 35-65%",;
-    "Enhance scalability and reliability",;
-    "Optimize resource utilization",;
-    "Scale operations efficiently",;
-    "Maximize ROI and efficiency";
-  ];
+  "Improve ${displayName.toLowerCase()} performance by 50-80%",
+    "Reduce operational costs by 35-65%",
+    "Enhance scalability and reliability",
+    "Optimize resource utilization",
+    "Scale operations efficiently",
+    "Maximize ROI and efficiency"];
   const useCases = [
-  "Software Development",;
-    "E-commerce & Retail",;
-    "Financial Services",;
-    "Healthcare & Life Sciences",;
-    "Media & Entertainment",;
-    "Technology & SaaS";
-  ];
+  "Software Development",
+    "E-commerce & Retail",
+    "Financial Services",
+    "Healthcare & Life Sciences",
+    "Media & Entertainment",
+    "Technology & SaaS"];
   const pricing = [
   {
-  name: "Starter",;
-      price: "$299/mo",;
-      details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"];,
-},;
+  name: "Starter",
+      price: "$299/mo",
+      details: ["Up to 10 users", "Basic features", "Email support", "Standard SLA"],
+},
     {
-  name: "Professional",;
-      price: "$799/mo",;
-      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"];,
-},;
+  name: "Professional",
+      price: "$799/mo",
+      details: ["Up to 50 users", "Advanced features", "Priority support", "99.9% SLA"],
+},
     {
-  name: "Enterprise",;
-      price: "$1,999/mo",;
-      details: ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"];,
+  name: "Enterprise",
+      price: "$1,999/mo",
+      details: ["Unlimited users", "Custom AI models", "Full ${displayName.toLowerCase()} suite", "24/7 dedicated support"],
 }
   ];
   return (;
@@ -232,8 +228,7 @@ export default function ${serviceName}() {
         </div>;
       </section>;
     </div>;
-  );
-}
+  )}
 `;
 // Function to extract service name from file path;
 function getServiceName(filePath) {
@@ -242,8 +237,7 @@ function getServiceName(filePath) {
   return fileName;
     .split(/[-_]/);
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase());
-    .join("");
-}
+    .join("")}
 ;
 // Function to extract display name from service name;
 function getDisplayName(serviceName) {
@@ -251,8 +245,7 @@ function getDisplayName(serviceName) {
   return serviceName;
     .replace(/^AI/, "");
     .replace(/([A-Z])/g, " $1");
-    .trim();
-}
+    .trim()}
 ;
 // Fix corrupted files;
 corruptedFiles.forEach(filePath => {
@@ -263,15 +256,12 @@ corruptedFiles.forEach(filePath => {
     // Ensure directory exists;
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });
-}
+  fs.mkdirSync(dir, { recursive: true })}
     ;
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
-    console.log(`✓ Fixed ${filePath}`);
-} catch (error) {
-  console.error(`✗ Error fixing ${filePath}:`, error.message);
-}
+    console.log(`✓ Fixed ${filePath}`)} catch (error) {
+  console.error(`✗ Error fixing ${filePath}:`, error.message)}
 });
 console.log("\\nFixed all corrupted service files!")

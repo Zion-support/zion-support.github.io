@@ -5,8 +5,7 @@ const path = require('path');
 
 function log(message, level = 'INFO') {
   const timestamp = new Date().toISOString();
-  console.log(`[${timestamp}] [${level}] ${message}`);
-}
+  console.log(`[${timestamp}] [${level}] ${message}`)}
 
 function createSecurityComponents() {
   log('🔒 Creating security components...');
@@ -18,8 +17,7 @@ import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 interface SecurityCheck {
   name: string;
   status: 'pass' | 'warn' | 'fail';
-  message: string;
-}
+  message: string}
 
 const SecurityAudit: React.FC = () => {
   const [checks, setChecks] = useState<SecurityCheck[]>([]);
@@ -53,11 +51,9 @@ const SecurityAudit: React.FC = () => {
       ];
 
       setChecks(securityChecks);
-      setIsLoading(false);
-    };
+      setIsLoading(false)};
 
-    performSecurityChecks();
-  }, []);
+    performSecurityChecks()}, []);
 
   const getStatusIcon = (status: string) => {
     switch (status) {
@@ -68,8 +64,7 @@ const SecurityAudit: React.FC = () => {
       case 'fail':
         return <XCircle className="w-5 h-5 text-red-500" />;
       default:
-        return null;
-    }
+        return null}
   };
 
   const getStatusColor = (status: string) => {
@@ -81,8 +76,7 @@ const SecurityAudit: React.FC = () => {
       case 'fail':
         return 'bg-red-50 border-red-200';
       default:
-        return 'bg-gray-50 border-gray-200';
-    }
+        return 'bg-gray-50 border-gray-200'}
   };
 
   if (isLoading) {
@@ -93,8 +87,7 @@ const SecurityAudit: React.FC = () => {
           <span>Running security audit...</span>
         </div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="bg-gray-100 p-4 rounded-lg">
@@ -120,16 +113,14 @@ const SecurityAudit: React.FC = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )};
 
 export default SecurityAudit;
 `;
 
   const securityPath = path.join(process.cwd(), 'src/components/SecurityAudit.tsx');
   fs.writeFileSync(securityPath, securityAuditContent);
-  log('Created SecurityAudit component');
-}
+  log('Created SecurityAudit component')}
 
 function createSecurityConfig() {
   log('🛡️ Creating security configuration...');
@@ -181,12 +172,10 @@ export default securityConfig;
   // Create config directory if it doesn't exist
   const configDir = path.dirname(configPath);
   if (!fs.existsSync(configDir)) {
-    fs.mkdirSync(configDir, { recursive: true });
-  }
+    fs.mkdirSync(configDir, { recursive: true })}
   
   fs.writeFileSync(configPath, securityConfigContent);
-  log('Created security configuration');
-}
+  log('Created security configuration')}
 
 function main() {
   log('🛡️ Starting Security Enhancements');
@@ -194,11 +183,9 @@ function main() {
   try {
     createSecurityComponents();
     createSecurityConfig();
-    log('✅ Security enhancements completed successfully');
-  } catch (error) {
+    log('✅ Security enhancements completed successfully')} catch (error) {
     log(`❌ Security enhancements failed: ${error.message}`, 'ERROR');
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 main();

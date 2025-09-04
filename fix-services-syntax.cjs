@@ -4,12 +4,10 @@ const fs = require('fs');
 
 class ServicesSyntaxFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixServicesFile() {
     try {
@@ -47,11 +45,9 @@ class ServicesSyntaxFixer {
       fs.writeFileSync(filePath, content, 'utf8');
       this.log('✅ Fixed syntax errors in data/services.ts');
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Error fixing services file: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 }
 
@@ -59,7 +55,6 @@ class ServicesSyntaxFixer {
 if (require.main === module) {
   const fixer = new ServicesSyntaxFixer();
   const success = fixer.fixServicesFile();
-  process.exit(success ? 0 : 1);
-}
+  process.exit(success ? 0 : 1)}
 
 module.exports = ServicesSyntaxFixer;

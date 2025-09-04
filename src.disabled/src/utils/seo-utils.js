@@ -28,8 +28,7 @@ export const seoUtils = {
         description: description,
         images: [image],
       },
-    };
-  },
+    }},
   
   // Generate structured data
   generateStructuredData: (type, data) => {
@@ -37,6 +36,5 @@ export const seoUtils = {
       '@context': 'https://schema.org',
       '@type': type,
       ...data
-    };
-  }
+    }}
 };

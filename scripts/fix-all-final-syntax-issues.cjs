@@ -73,8 +73,7 @@ export default function IntegrationExamples() {
 {\`class ZionTechAPI {
   constructor(apiKey, baseURL = 'https://api.ziontechgroup.com/v1') {
     this.apiKey = apiKey;
-    this.baseURL = baseURL;
-  }
+    this.baseURL = baseURL}
 
   async getServices() {
     try {
@@ -86,14 +85,11 @@ export default function IntegrationExamples() {
       });
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`);
-      }
+        throw new Error(\`HTTP error! status: \${response.status}\`)}
       
-      return await response.json();
-    } catch (error) {
+      return await response.json()} catch (error) {
       console.error('Error fetching services:', error);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -125,9 +121,7 @@ console.log(services);\`}
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/sitemap.tsx') {
+  )}`} else if (filePath === 'pages/sitemap.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -234,9 +228,7 @@ export default function Sitemap() {
         </div>
       </main>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/solutions/enterprise.tsx') {
+  )}`} else if (filePath === 'pages/solutions/enterprise.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -348,9 +340,7 @@ export default function EnterpriseSolutions() {
         </section>
       </main>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/status.tsx') {
+  )}`} else if (filePath === 'pages/status.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import { CheckCircle, AlertTriangle, XCircle, Clock } from 'lucide-react';
@@ -388,8 +378,7 @@ export default function Status() {
       case 'outage':
         return <XCircle className="w-5 h-5 text-red-500" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />;
-    }
+        return <Clock className="w-5 h-5 text-gray-500" />}
   };
 
   const getStatusColor = (status) => {
@@ -403,8 +392,7 @@ export default function Status() {
       case 'outage':
         return 'text-red-500';
       default:
-        return 'text-gray-500';
-    }
+        return 'text-gray-500'}
   };
 
   return (
@@ -492,9 +480,7 @@ export default function Status() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/team.tsx') {
+  )}`} else if (filePath === 'pages/team.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -635,20 +621,15 @@ export default function Team() {
         </div>
       </div>
     </>
-  );
-}`;
-    }
+  )}`}
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Fixed ${filePath}`);
-    } else {
-      console.log(`   ⚠️  No content defined for ${filePath}`);
-    }
+      console.log(`   ✅ Fixed ${filePath}`)} else {
+      console.log(`   ⚠️  No content defined for ${filePath}`)}
 
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`);
-  }
+    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
 }
 
 // Fix all problematic files

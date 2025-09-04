@@ -32,18 +32,15 @@ constructor() {
             'bugfix': 'merge',
             'hotfix': 'rebase',
             'enhancement': 'squash'
-        };
-    }
+        }}
 
     loadConfig() {
         const configPath = path.join(this.projectRoot, 'scripts', 'automation', 'repo-manager.config.json');
         try {
             if (fs.existsSync(configPath)) {
-                return JSON.parse(fs.readFileSync(configPath, 'utf8'));
-            }
+                return JSON.parse(fs.readFileSync(configPath, 'utf8'))}
         } catch (error) {
-            this.log('Error loading config, using defaults', 'error');
-        }
+            this.log('Error loading config, using defaults', 'error')}
 
         return {
             autoMerge: true,
@@ -58,8 +55,7 @@ constructor() {
                 requireLinting: true,
                 requireSecurityScan: true
             }
-        };
-    }
+        }}
 
     log(message, level = 'info') {
         const timestamp = new Date().toISOString();
@@ -70,10 +66,8 @@ constructor() {
         
         // File logging
         try {
-            fs.appendFileSync(this.logFile, logEntry);
-        } catch (error) {
-            console.error('Failed to write to log file:', error.message);
-        }
+            fs.appendFileSync(this.logFile, logEntry)} catch (error) {
+            console.error('Failed to write to log file:', error.message)}
     }
 
     async executeCommand(command, options = {}) {
@@ -89,35 +83,25 @@ constructor() {
 
             if (options.silent) {
                 child.stdout.on('data', (data) => {
-                    stdout += data.toString();
-                });
+                    stdout += data.toString()});
                 child.stderr.on('data', (data) => {
-                    stderr += data.toString();
-                });
-            }
+                    stderr += data.toString()})}
 
             child.on('close', (code) => {
                 if (code === 0) {
-                    resolve(stdout);
-                } else {
-                    reject(new Error(`Command failed with code ${code}: ${stderr}`));
-                }
+                    resolve(stdout)} else {
+                    reject(new Error(`Command failed with code ${code}: ${stderr}`))}
             });
 
             child.on('error', (error) => {
-                reject(error);
-            });
-        });
-    }
+                reject(error)})})}
 
     async getCurrentBranch() {
         try {
             const result = await this.executeCommand('git', { args: ['branch', '--show-current'], silent: true });
-            return result.trim();
-        } catch (error) {
+            return result.trim()} catch (error) {
             this.log(`Failed to get current branch: ${error.message}`, 'error');
-            return null;
-        }
+            return null}
     }
 
     async getBranchInfo() {
@@ -129,11 +113,9 @@ constructor() {
                 remote: branches.split('\n').filter(b => b.trim()),
                 local: localBranches.split('\n').filter(b => b.trim()),
                 current: await this.getCurrentBranch()
-            };
-        } catch (error) {
+            }} catch (error) {
             this.log(`Failed to get branch info: ${error.message}`, 'error');
-            return { remote: [], local: [], current: null };
-        }
+            return { remote: [], local: [], current: null }}
     }
 
     async analyzeBranchHealth(branchName) {
@@ -157,11 +139,9 @@ constructor() {
                 testCoverage: testCoverage,
                 security: security,
                 healthScore: this.calculateHealthScore(conflicts, quality, testCoverage, security)
-            };
-        } catch (error) {
+            }} catch (error) {
             this.log(`Failed to analyze branch health for ${branchName}: ${error.message}`, 'error');
-            return { branch: branchName, healthScore: 0, error: error.message };
-        }
+            return { branch: branchName, healthScore: 0, error: error.message }}
     }
 
     async checkMergeConflicts(branchName) {
@@ -189,8 +169,7 @@ constructor() {
                 hasConflicts: hasConflicts,
                 conflictFiles: hasConflicts ? this.extractConflictFiles(status) : [],
                 severity: hasConflicts ? 'high' : 'none'
-            };
-        } catch (error) {
+            }} catch (error) {
             // If merge fails, there are likely conflicts
             await this.executeCommand('git', { args: ['merge', '--abort'], silent: true });
             await this.executeCommand('git', { args: ['checkout', branchName], silent: true });
@@ -200,16 +179,14 @@ constructor() {
                 conflictFiles: [],
                 severity: 'high',
                 error: error.message
-            };
-        }
+            }}
     }
 
     extractConflictFiles(status) {
         const lines = status.split('\n').filter(line => line.trim());
         return lines
             .filter(line => line.includes('UU') || line.includes('AA'))
-            .map(line => line.split(' ').pop());
-    }
+            .map(line => line.split(' ').pop())}
 
     async assessCodeQuality(branchName) {
         try {
@@ -227,11 +204,9 @@ constructor() {
                 typescript: this.parseTypeScriptOutput(tscResult),
                 complexity: complexity,
                 overall: 'good' // Simplified for now
-            };
-        } catch (error) {
+            }} catch (error) {
             this.log(`Failed to assess code quality: ${error.message}`, 'error');
-            return { overall: 'unknown', error: error.message };
-        }
+            return { overall: 'unknown', error: error.message }}
     }
 
     parseESLintOutput(output) {
@@ -245,8 +220,7 @@ constructor() {
             warnings: warnings,
             total: errors + warnings,
             severity: errors > 0 ? 'high' : warnings > 0 ? 'medium' : 'low'
-        };
-    }
+        }}
 
     parseTypeScriptOutput(output) {
         // Parse TypeScript compiler output
@@ -256,8 +230,7 @@ constructor() {
         return {
             errors: errors,
             severity: errors > 0 ? 'high' : 'low'
-        };
-    }
+        }}
 
     async analyzeCodeComplexity() {
         try {
@@ -270,10 +243,8 @@ constructor() {
                 fileCount: fileCount,
                 estimatedComplexity: fileCount * 0.5, // Simplified metric
                 riskLevel: fileCount > 100 ? 'medium' : 'low'
-            };
-        } catch (error) {
-            return { fileCount: 0, estimatedComplexity: 0, riskLevel: 'unknown' };
-        }
+            }} catch (error) {
+            return { fileCount: 0, estimatedComplexity: 0, riskLevel: 'unknown' }}
     }
 
     async getTestCoverage(branchName) {
@@ -289,11 +260,9 @@ constructor() {
                 percentage: coverage,
                 status: coverage >= 80 ? 'good' : coverage >= 60 ? 'fair' : 'poor',
                 threshold: 80
-            };
-        } catch (error) {
+            }} catch (error) {
             this.log(`Failed to get test coverage: ${error.message}`, 'error');
-            return { percentage: 0, status: 'unknown', threshold: 80 };
-        }
+            return { percentage: 0, status: 'unknown', threshold: 80 }}
     }
 
     async checkSecurityVulnerabilities(branchName) {
@@ -306,11 +275,9 @@ constructor() {
                 vulnerabilities: audit.metadata.vulnerabilities,
                 riskLevel: this.calculateSecurityRisk(audit.metadata.vulnerabilities),
                 recommendations: this.extractSecurityRecommendations(audit)
-            };
-        } catch (error) {
+            }} catch (error) {
             this.log(`Failed to check security vulnerabilities: ${error.message}`, 'error');
-            return { vulnerabilities: {}, riskLevel: 'unknown', recommendations: [] };
-        }
+            return { vulnerabilities: {}, riskLevel: 'unknown', recommendations: [] }}
     }
 
     calculateSecurityRisk(vulnerabilities) {
@@ -318,46 +285,38 @@ constructor() {
         if (vulnerabilities.high > 0) return 'high';
         if (vulnerabilities.moderate > 0) return 'medium';
         if (vulnerabilities.low > 0) return 'low';
-        return 'none';
-    }
+        return 'none'}
 
     extractSecurityRecommendations(audit) {
         const recommendations = [];
         if (audit.advisories) {
             Object.values(audit.advisories).forEach(advisory => {
                 if (advisory.recommendation) {
-                    recommendations.push(advisory.recommendation);
-                }
-            });
-        }
-        return recommendations;
-    }
+                    recommendations.push(advisory.recommendation)}
+            })}
+        return recommendations}
 
     calculateHealthScore(conflicts, quality, testCoverage, security) {
         let score = 100;
         
         // Deduct points for conflicts
         if (conflicts.hasConflicts) {
-            score -= 30;
-        }
+            score -= 30}
         
         // Deduct points for quality issues
         if (quality.eslint && quality.eslint.errors > 0) {
-            score -= quality.eslint.errors * 2;
-        }
+            score -= quality.eslint.errors * 2}
         
         // Deduct points for low test coverage
         if (testCoverage.percentage < testCoverage.threshold) {
-            score -= (testCoverage.threshold - testCoverage.percentage);
-        }
+            score -= (testCoverage.threshold - testCoverage.percentage)}
         
         // Deduct points for security issues
         if (security.riskLevel === 'critical') score -= 25;
         else if (security.riskLevel === 'high') score -= 15;
         else if (security.riskLevel === 'medium') score -= 10;
         
-        return Math.max(0, Math.min(100, score));
-    }
+        return Math.max(0, Math.min(100, score))}
 
     async createIntelligentPR(branchName, title, description) {
         try {
@@ -369,8 +328,7 @@ constructor() {
             // Check if branch is ready for PR
             if (health.healthScore < 70) {
                 this.log(`Branch ${branchName} has low health score (${health.healthScore}). Fixing issues...`, 'warning');
-                await this.autoFixBranchIssues(branchName, health);
-            }
+                await this.autoFixBranchIssues(branchName, health)}
             
             // Create PR with intelligent description
             const prDescription = this.generatePRDescription(health, description);
@@ -382,12 +340,9 @@ constructor() {
             });
             
             this.log(`PR created successfully: ${prResult}`, 'success');
-            return { success: true, prUrl: prResult, health: health };
-            
-        } catch (error) {
+            return { success: true, prUrl: prResult, health: health }} catch (error) {
             this.log(`Failed to create PR: ${error.message}`, 'error');
-            return { success: false, error: error.message };
-        }
+            return { success: false, error: error.message }}
     }
 
     async autoFixBranchIssues(branchName, health) {
@@ -396,29 +351,23 @@ constructor() {
             
             // Fix ESLint issues
             if (health.quality.eslint && health.quality.eslint.errors > 0) {
-                await this.executeCommand('npm', { args: ['run', 'lint:fix'], silent: true });
-            }
+                await this.executeCommand('npm', { args: ['run', 'lint:fix'], silent: true })}
             
             // Fix TypeScript issues
             if (health.quality.typescript && health.quality.typescript.errors > 0) {
-                await this.executeCommand('npx', { args: ['tsc', '--noEmit'], silent: true });
-            }
+                await this.executeCommand('npx', { args: ['tsc', '--noEmit'], silent: true })}
             
             // Fix security vulnerabilities
             if (health.security.riskLevel !== 'none') {
-                await this.executeCommand('npm', { args: ['audit', 'fix'], silent: true });
-            }
+                await this.executeCommand('npm', { args: ['audit', 'fix'], silent: true })}
             
             // Commit fixes
             await this.executeCommand('git', { args: ['add', '.'], silent: true });
             await this.executeCommand('git', { args: ['commit', '-m', 'Auto-fix: Resolved quality and security issues'], silent: true });
             await this.executeCommand('git', { args: ['push', 'origin', branchName], silent: true });
             
-            this.log(`Auto-fixes completed for branch: ${branchName}`, 'success');
-            
-        } catch (error) {
-            this.log(`Failed to auto-fix issues: ${error.message}`, 'error');
-        }
+            this.log(`Auto-fixes completed for branch: ${branchName}`, 'success')} catch (error) {
+            this.log(`Failed to auto-fix issues: ${error.message}`, 'error')}
     }
 
     generatePRDescription(health, baseDescription) {
@@ -447,8 +396,7 @@ This PR has been automatically analyzed and optimized for quality and security.
 - [ ] Ready for code review
 
 ---
-*Generated by Intelligent Repository Manager*`;
-    }
+*Generated by Intelligent Repository Manager*`}
 
     async intelligentMerge(branchName, strategy = 'auto') {
         try {
@@ -456,14 +404,12 @@ This PR has been automatically analyzed and optimized for quality and security.
             
             // Determine merge strategy based on branch type
             if (strategy === 'auto') {
-                strategy = this.determineMergeStrategy(branchName);
-            }
+                strategy = this.determineMergeStrategy(branchName)}
             
             // Final health check before merge
             const health = await this.analyzeBranchHealth(branchName);
             if (health.healthScore < 80) {
-                throw new Error(`Branch health score too low (${health.healthScore}) for merge`);
-            }
+                throw new Error(`Branch health score too low (${health.healthScore}) for merge`)}
             
             // Switch to main branch
             await this.executeCommand('git', { args: ['checkout', 'main'], silent: true });
@@ -480,34 +426,27 @@ This PR has been automatically analyzed and optimized for quality and security.
                 case 'merge':
                 default:
                     await this.executeCommand('git', { args: ['merge', '--no-ff', `origin/${branchName}`], silent: true });
-                    break;
-            }
+                    break}
             
             // Push to main
             await this.executeCommand('git', { args: ['push', 'origin', 'main'], silent: true });
             
             // Clean up branch
             if (this.config.autoCleanup) {
-                await this.cleanupBranch(branchName);
-            }
+                await this.cleanupBranch(branchName)}
             
             this.log(`Successfully merged ${branchName} using ${strategy} strategy`, 'success');
-            return { success: true, strategy: strategy };
-            
-        } catch (error) {
+            return { success: true, strategy: strategy }} catch (error) {
             this.log(`Failed to merge branch ${branchName}: ${error.message}`, 'error');
-            return { success: false, error: error.message };
-        }
+            return { success: false, error: error.message }}
     }
 
     determineMergeStrategy(branchName) {
         for (const [type, pattern] of Object.entries(this.branchPatterns)) {
             if (pattern.test(branchName)) {
-                return this.mergeStrategies[type] || 'merge';
-            }
+                return this.mergeStrategies[type] || 'merge'}
         }
-        return 'merge';
-    }
+        return 'merge'}
 
     async cleanupBranch(branchName) {
         try {
@@ -517,10 +456,8 @@ This PR has been automatically analyzed and optimized for quality and security.
             // Delete local branch
             await this.executeCommand('git', { args: ['branch', '-D', branchName], silent: true });
             
-            this.log(`Cleaned up branch: ${branchName}`, 'info');
-        } catch (error) {
-            this.log(`Failed to cleanup branch ${branchName}: ${error.message}`, 'warning');
-        }
+            this.log(`Cleaned up branch: ${branchName}`, 'info')} catch (error) {
+            this.log(`Failed to cleanup branch ${branchName}: ${error.message}`, 'warning')}
     }
 
     async monitorRepositoryHealth() {
@@ -545,8 +482,7 @@ This PR has been automatically analyzed and optimized for quality and security.
                     const health = await this.analyzeBranchHealth(cleanBranch);
                     healthReport.branches.push(health);
                     totalHealth += health.healthScore;
-                    branchCount++;
-                }
+                    branchCount++}
             }
             
             // Calculate overall health
@@ -561,38 +497,30 @@ This PR has been automatically analyzed and optimized for quality and security.
             
             this.log(`Repository health monitoring completed. Overall health: ${healthReport.overallHealth}/100`, 'info');
             
-            return healthReport;
-            
-        } catch (error) {
+            return healthReport} catch (error) {
             this.log(`Failed to monitor repository health: ${error.message}`, 'error');
-            return null;
-        }
+            return null}
     }
 
     generateHealthRecommendations(healthReport) {
         const recommendations = [];
         
         if (healthReport.overallHealth < 70) {
-            recommendations.push('🔴 Critical: Repository health is poor. Review and fix issues immediately.');
-        }
+            recommendations.push('🔴 Critical: Repository health is poor. Review and fix issues immediately.')}
         
         if (healthReport.overallHealth < 85) {
-            recommendations.push('🟡 Warning: Repository health needs improvement. Address quality issues.');
-        }
+            recommendations.push('🟡 Warning: Repository health needs improvement. Address quality issues.')}
         
         // Branch-specific recommendations
         healthReport.branches.forEach(branch => {
             if (branch.healthScore < 60) {
-                recommendations.push(`⚠️ Branch ${branch.branch} has critical issues and should be fixed or deleted.`);
-            }
+                recommendations.push(`⚠️ Branch ${branch.branch} has critical issues and should be fixed or deleted.`)}
         });
         
         if (recommendations.length === 0) {
-            recommendations.push('✅ Repository is in excellent health! Keep up the good work.');
-        }
+            recommendations.push('✅ Repository is in excellent health! Keep up the good work.')}
         
-        return recommendations;
-    }
+        return recommendations}
 
     async startMonitoring() {
         this.log('Intelligent Repository Manager started');
@@ -602,13 +530,11 @@ This PR has been automatically analyzed and optimized for quality and security.
         
         // Set up periodic monitoring
         setInterval(async () => {
-            await this.monitorRepositoryHealth();
-        }, 30 * 60 * 1000); // Every 30 minutes
+            await this.monitorRepositoryHealth()}, 30 * 60 * 1000); // Every 30 minutes
         
         // Set up branch cleanup
         setInterval(async () => {
-            await this.cleanupStaleBranches();
-        }, 60 * 60 * 1000); // Every hour
+            await this.cleanupStaleBranches()}, 60 * 60 * 1000); // Every hour
     }
 
     async cleanupStaleBranches() {
@@ -623,13 +549,11 @@ This PR has been automatically analyzed and optimized for quality and security.
                     const daysSinceLastCommit = (Date.now() - lastCommit) / (24 * 60 * 60 * 1000);
                     
                     if (daysSinceLastCommit > 7) {
-                        this.log(`Branch ${cleanBranch} is stale (${Math.round(daysSinceLastCommit)} days old). Consider cleanup.`, 'warning');
-                    }
+                        this.log(`Branch ${cleanBranch} is stale (${Math.round(daysSinceLastCommit)} days old). Consider cleanup.`, 'warning')}
                 }
             }
         } catch (error) {
-            this.log(`Failed to cleanup stale branches: ${error.message}`, 'error');
-        }
+            this.log(`Failed to cleanup stale branches: ${error.message}`, 'error')}
     }
 
     async getLastCommitDate(branchName) {
@@ -640,8 +564,7 @@ This PR has been automatically analyzed and optimized for quality and security.
             });
             return parseInt(result.trim()) * 1000; // Convert to milliseconds
         } catch (error) {
-            return Date.now();
-        }
+            return Date.now()}
     }
 }
 
@@ -660,15 +583,13 @@ if (require.main === module) {
         case 'health':
             manager.monitorRepositoryHealth().then(report => {
                 console.log(JSON.stringify(report, null, 2));
-                process.exit(0);
-            });
+                process.exit(0)});
             break;
         case 'analyze':
             const branch = args[1] || 'current';
             manager.analyzeBranchHealth(branch).then(health => {
                 console.log(JSON.stringify(health, null, 2));
-                process.exit(0);
-            });
+                process.exit(0)});
             break;
         case 'pr':
             const branchName = args[1];
@@ -676,16 +597,14 @@ if (require.main === module) {
             const description = args[3] || 'Created by Intelligent Repository Manager';
             manager.createIntelligentPR(branchName, title, description).then(result => {
                 console.log(JSON.stringify(result, null, 2));
-                process.exit(0);
-            });
+                process.exit(0)});
             break;
         case 'merge':
             const mergeBranch = args[1];
             const strategy = args[2] || 'auto';
             manager.intelligentMerge(mergeBranch, strategy).then(result => {
                 console.log(JSON.stringify(result, null, 2));
-                process.exit(0);
-            });
+                process.exit(0)});
             break;
         default:
             console.log(`
@@ -708,45 +627,34 @@ Examples:
   node intelligent-repository-manager.cjs pr feature/new-feature "New Feature" "Description"
   node intelligent-repository-manager.cjs merge feature/new-feature
             `);
-            process.exit(1);
-    }
+            process.exit(1)}
 }
 
-module.exports = IntelligentRepositoryManager;            if (result.success) {log(`Resolved conflict in ${file} using default strategy`);,
+module.exports = IntelligentRepositoryManager;            if (result.success) {log(`Resolved conflict in ${file} using default strategy`),
 }
-          } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`);
-}
+          } catch (error) {  log(`Failed to resolve conflict in ${file  }: ${error}`, `ERROR`)}
         }
-      });
-},;
-    ;
+      })},
     aggressive: () => {
   // Always use `ours` strategy;
-      conflictedFiles.forEach(file => {gitCommand(`checkout --ours ${file}`, { silent: true });log(`Resolved conflict in ${file} using aggressive strategy`);
-});
-},;
-    ;
+      conflictedFiles.forEach(file => {gitCommand(`checkout --ours ${file}`, { silent: true });log(`Resolved conflict in ${file} using aggressive strategy`)})},
     conservative: () => {
   // Always use `theirs` strategy;
-      conflictedFiles.forEach(file => {gitCommand(`checkout --theirs ${file}`, { silent: true });log(`Resolved conflict in ${file} using conservative strategy`)});
-}
+      conflictedFiles.forEach(file => {gitCommand(`checkout --theirs ${file}`, { silent: true });log(`Resolved conflict in ${file} using conservative strategy`)})}
   }
   ;
   const strategy = resolutionStrategies[CONFIG.CONFLICT_RESOLUTION_MODE] || resolutionStrategies.intelligent;
-  strategy();
-}
+  strategy()}
 ;
 const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${branchName}`);
   ;
   // Checkout main branchlet result = gitCommand(`checkout ${CONFIG.MAIN_BRANCH}`, { silent: true });
   if (!result.success) {log(`Failed to checkout ${CONFIG.MAIN_BRANCH}: ${result.error}`, `ERROR`);
-    return false;
-}
+    return false}
   ;
   // Pull latest changesresult = gitCommand(`pull origin ${CONFIG.MAIN_BRANCH}`, { silent: true });
   if (!result.success) {log(`Failed to pull latest changes: ${result.error}`, `ERROR`);
-    return false;
-}
+    return false}
   ;
   // Attempt mergeresult = gitCommand(`merge --no-edit origin/${branchName}`, { silent: true });
   if (result.success) {log(`Successfully merged ${branchName} into ${CONFIG.MAIN_BRANCH}`);
@@ -756,10 +664,8 @@ const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${br
       ;
       // Clean up merged branchgitCommand(`push origin --delete ${branchName}`, { silent: true });log(`Deleted remote branch: ${branchName}`);
       ;
-      return true;
-} else {log(`Failed to push merged changes: ${pushResult.error}`, `ERROR`);
-      return false;
-}
+      return true} else {log(`Failed to push merged changes: ${pushResult.error}`, `ERROR`);
+      return false}
   } else {
   // Handle merge conflictslog(`Merge conflict detected for branch: ${branchName}`);
     // Get conflicted files;
@@ -778,13 +684,10 @@ const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${br
             ;
             // Clean up merged branchgitCommand(`push origin --delete ${branchName}`, { silent: true });log(`Deleted remote branch: ${branchName}`);
             ;
-            return true;
-} else {log(`Failed to push conflict resolution: ${pushResult.error}`, `ERROR`);
-            return false;
-}
+            return true} else {log(`Failed to push conflict resolution: ${pushResult.error}`, `ERROR`);
+            return false}
         } else {log(`Failed to commit conflict resolution: ${commitResult.error}`, `ERROR`);
-          return false;
-}
+          return false}
       }
     }
     ;
@@ -793,8 +696,7 @@ const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${br
     ;
     // Abort merge if we get here;
     gitCommand("merge --abort", { silent: true });log(`Aborted merge for branch: ${branchName}`);
-    return false;
-}
+    return false}
 }
 ;
 const intelligentBranchAnalysis = (branches) => {log(`Analyzing ${branches.length} branches for intelligent merging`);
@@ -803,16 +705,14 @@ const intelligentBranchAnalysis = (branches) => {log(`Analyzing ${branches.lengt
   const info = getBranchInfo(branch);
     const priority = calculateBranchPriority(branch, info);
     return {
-  branch,;
-      ...info,;
-      priority,;
-      mergeable: info.commits > 0 && info.files.length > 0;
-}
+  branch,
+      ...info,
+      priority,
+      mergeable: info.commits > 0 && info.files.length > 0}
   });
   ;
   // Sort by priority (highest first);
-  return branchAnalysis.sort((a, b) => b.priority - a.priority);
-}
+  return branchAnalysis.sort((a, b) => b.priority - a.priority)}
 ;
 const calculateBranchPriority = (branch, info) => {
   let priority = 0;
@@ -832,23 +732,17 @@ const calculateBranchPriority = (branch, info) => {
   priority += docFiles * 1;       // Documentation is lower priority;
   // Priority based on branch name patterns;
   if (branch.includes("hotfix") || branch.includes("critical")) {
-  priority += 100;
-} else if (branch.includes(`feature`)) {
-  priority += 50;
-} else if (branch.includes(`bugfix`)) {
-  priority += 75;
-}
+  priority += 100} else if (branch.includes(`feature`)) {
+  priority += 50} else if (branch.includes(`bugfix`)) {
+  priority += 75}
   ;
   // Priority based on age (newer branches get higher priority);
   const branchAge = getBranchAge(branch);
   if (branchAge < 24) { // Less than 24 hours;
-    priority += 25;
-} else if (branchAge < 168) { // Less than 1 week;
-    priority += 15;
-}
+    priority += 25} else if (branchAge < 168) { // Less than 1 week;
+    priority += 15}
   ;
-  return priority;
-}
+  return priority}
 ;
 const getBranchAge = (branchName) => {const result = gitCommand(`log -1 --format=%ct origin/${branchName}`, { silent: true });
   if (!result.success) return 999; // Default to old if can`t determine;
@@ -858,39 +752,33 @@ const getBranchAge = (branchName) => {const result = gitCommand(`log -1 --format
   const now = Math.floor(Date.now() / 1000);
   const ageInHours = (now - commitTime) / 3600;
   ;
-  return ageInHours;
-}
+  return ageInHours}
 const executeIntelligentMerging = async () => {
   if (!CONFIG.AUTO_MERGE_ENABLED) {
   log(`Auto-merge is disabled. Skipping intelligent merging.`);
-    return;
-}
+    return}
   ;
   log(`Starting intelligent repository management cycle");
   // Check if we"re in a git repository;
   if (!isGitRepository()) {
   log(`Not in a git repository. Exiting.`, `ERROR`);
-    return;
-}
+    return}
   ;
   // Get current branch;
   const currentBranch = getCurrentBranch();
-  if (currentBranch !== CONFIG.MAIN_BRANCH) {log(`Not on main branch (currently on ${currentBranch}). Switching to main.`);gitCommand(`checkout ${CONFIG.MAIN_BRANCH}`, { silent: true });
-}
+  if (currentBranch !== CONFIG.MAIN_BRANCH) {log(`Not on main branch (currently on ${currentBranch}). Switching to main.`);gitCommand(`checkout ${CONFIG.MAIN_BRANCH}`, { silent: true })}
   ;
   // Fetch latest changes;
   log(`Fetching latest changes from remote`);
   const fetchResult = gitCommand(`fetch origin`, { silent: true });
   if (!fetchResult.success) {log(`Failed to fetch from remote: ${fetchResult.error}`, `ERROR`);
-    return;
-}
+    return}
   ;
   // Get cursor branches;
   const cursorBranches = getCursorBranches();
   if (cursorBranches.length === 0) {
   log(`No cursor branches found. Nothing to merge.`);
-    return;
-}
+    return}
   log(`Found ${cursorBranches.length} cursor branches to analyze`);
   // Analyze branches intelligently;
   const branchAnalysis = intelligentBranchAnalysis(cursorBranches);
@@ -898,30 +786,26 @@ const executeIntelligentMerging = async () => {
   const mergeableBranches = branchAnalysis.filter(branch => branch.mergeable);
   if (mergeableBranches.length === 0) {
   log(`No mergeable branches found.`);
-    return;
-}
+    return}
   log(`Found ${mergeableBranches.length} mergeable branches`);
   // Create backup before merging;
   const backupBranch = createBackupBranch();
   if (!backupBranch) {
   log(`Failed to create backup branch. Aborting merge cycle.`, `ERROR`);
-    return;
-}
+    return}
   ;
   ;
   // Fetch latest changes;
   log("Fetching latest changes from remote");
   const fetchResult = gitCommand("fetch origin", { silent: true });
   if (!fetchResult.success) {log(`Failed to fetch from remote: ${fetchResult.error}`, "ERROR");
-    return;
-}
+    return}
   ;
   // Get cursor branches;
   const cursorBranches = getCursorBranches();
   if (cursorBranches.length === 0) {
   log("No cursor branches found. Nothing to merge.");
-    return;
-}
+    return}
   log(`Found ${cursorBranches.length} cursor branches to analyze`);
   ;
   // Analyze branches intelligently;
@@ -932,16 +816,14 @@ const executeIntelligentMerging = async () => {
   ;
   if (mergeableBranches.length === 0) {
   log("No mergeable branches found.");
-    return;
-}
+    return}
   log(`Found ${mergeableBranches.length} mergeable branches`);
   ;
   // Create backup before merging;
   const backupBranch = createBackupBranch();
   if (!backupBranch) {
   log("Failed to create backup branch. Aborting merge cycle.", "ERROR");
-    return;
-}
+    return}
   ;
   // Process branches in priority order;
   let successCount = 0;
@@ -952,89 +834,71 @@ const executeIntelligentMerging = async () => {
     try {
   const success = await mergeBranch(branchInfo.branch);
       if (success) {
-  successCount++;log(`Successfully merged branch: ${branchInfo.branch}`);
-} else {
-  failureCount++;log(`Failed to merge branch: ${branchInfo.branch}`, `ERROR`);
-}
+  successCount++;log(`Successfully merged branch: ${branchInfo.branch}`)} else {
+  failureCount++;log(`Failed to merge branch: ${branchInfo.branch}`, `ERROR`)}
     } catch (error) {
-  failureCount++;log(`Error processing branch ${branchInfo.branch  }: ${error.message}`, `ERROR`);
-}
-    ;
-} else {
-  failureCount++;log(`Failed to merge branch: ${branchInfo.branch}`, "ERROR");
-}
+  failureCount++;log(`Error processing branch ${branchInfo.branch  }: ${error.message}`, `ERROR`)}
+    } else {
+  failureCount++;log(`Failed to merge branch: ${branchInfo.branch}`, "ERROR")}
     } catch (error) {
-  failureCount++;log(`Error processing branch ${branchInfo.branch}: ${error.message}`, "ERROR");
-}
+  failureCount++;log(`Error processing branch ${branchInfo.branch}: ${error.message}`, "ERROR")}
     ;
     // Small delay between merges;
     // Small delay between merges;
-await new Promise(resolve => setTimeout(resolve, 1000));
-}
+await new Promise(resolve => setTimeout(resolve, 1000))}
   ;
   // Summarylog(`Merge cycle completed. Success: ${successCount}, Failures: ${failureCount}`);
   ;
-  if (successCount > 0) {log(`Successfully merged ${successCount} branches. Backup available at: ${backupBranch}`);
-}
+  if (successCount > 0) {log(`Successfully merged ${successCount} branches. Backup available at: ${backupBranch}`)}
   ;
-  if (failureCount > 0) {log(`${failureCount} branches failed to merge. Check logs for details.`, `WARN`);
-}
+  if (failureCount > 0) {log(`${failureCount} branches failed to merge. Check logs for details.`, `WARN`)}
 }
 const monitorRepositoryHealth = () => {
   log(`Monitoring repository health`);
   const healthMetrics = {
-  timestamp: new Date().toISOString(),;
-    currentBranch: getCurrentBranch(),;
-    remoteBranches: getRemoteBranches().length,;
-    cursorBranches: getCursorBranches().length,;
-    backupBranches: getRemoteBranches().filter(b => b.startsWith(CONFIG.BACKUP_BRANCH_PREFIX)).length,;
-    mergeBranches: getRemoteBranches().filter(b => b.startsWith(CONFIG.MERGE_BRANCH_PREFIX)).length;
-}
+  timestamp: new Date().toISOString(),
+    currentBranch: getCurrentBranch(),
+    remoteBranches: getRemoteBranches().length,
+    cursorBranches: getCursorBranches().length,
+    backupBranches: getRemoteBranches().filter(b => b.startsWith(CONFIG.BACKUP_BRANCH_PREFIX)).length,
+    mergeBranches: getRemoteBranches().filter(b => b.startsWith(CONFIG.MERGE_BRANCH_PREFIX)).length}
   // Check for potential issues;
   const issues = [];
   if (healthMetrics.cursorBranches > 50) {
-  issues.push(`High number of cursor branches - consider cleanup`);
-}
+  issues.push(`High number of cursor branches - consider cleanup`)}
   ;
   if (healthMetrics.backupBranches > 20) {
   issues.push(`High number of backup branches - consider cleanup`);
   ;
-  if (failureCount > 0) {log(`${failureCount} branches failed to merge. Check logs for details.`, "WARN");
-}
+  if (failureCount > 0) {log(`${failureCount} branches failed to merge. Check logs for details.`, "WARN")}
 }
 ;
 const monitorRepositoryHealth = () => {
   log("Monitoring repository health");
   ;
   const healthMetrics = {
-  timestamp: new Date().toISOString(),;
-    currentBranch: getCurrentBranch(),;
-    remoteBranches: getRemoteBranches().length,;
-    cursorBranches: getCursorBranches().length,;
-    backupBranches: getRemoteBranches().filter(b => b.startsWith(CONFIG.BACKUP_BRANCH_PREFIX)).length,;
-    mergeBranches: getRemoteBranches().filter(b => b.startsWith(CONFIG.MERGE_BRANCH_PREFIX)).length;
-}
+  timestamp: new Date().toISOString(),
+    currentBranch: getCurrentBranch(),
+    remoteBranches: getRemoteBranches().length,
+    cursorBranches: getCursorBranches().length,
+    backupBranches: getRemoteBranches().filter(b => b.startsWith(CONFIG.BACKUP_BRANCH_PREFIX)).length,
+    mergeBranches: getRemoteBranches().filter(b => b.startsWith(CONFIG.MERGE_BRANCH_PREFIX)).length}
   ;
   // Check for potential issues;
   const issues = [];
   ;
   if (healthMetrics.cursorBranches > 50) {
-  issues.push("High number of cursor branches - consider cleanup");
-}
+  issues.push("High number of cursor branches - consider cleanup")}
   ;
   if (healthMetrics.backupBranches > 20) {
-  issues.push("High number of backup branches - consider cleanup");
-}
+  issues.push("High number of backup branches - consider cleanup")}
   ;
-  if (healthMetrics.currentBranch !== CONFIG.MAIN_BRANCH) {issues.push(`Not on main branch (${healthMetrics.currentBranch})`);
-}
+  if (healthMetrics.currentBranch !== CONFIG.MAIN_BRANCH) {issues.push(`Not on main branch (${healthMetrics.currentBranch})`)}
   ;
   // Log health metricslog(`Repository Health Metrics: ${JSON.stringify(healthMetrics, null, 2)}`);
-  if (issues.length > 0) {log(`Repository Health Issues: ${issues.join("; ")}`, `WARN`);
-}
+  if (issues.length > 0) {log(`Repository Health Issues: ${issues.join("; ")}`, `WARN`)}
   ;
-  return healthMetrics;
-}
+  return healthMetrics}
 const cleanupOldBranches = () => {
   log(`Cleaning up old branches`);
 
@@ -1055,16 +919,12 @@ const cleanupOldBranches = () => {
       if (branchAgeMs > oneWeekAgo) {log(`Cleaning up old branch: ${branch} (age: ${branchAge.toFixed(1)} hours)`);
         const deleteResult = gitCommand(`push origin --delete ${branch}`, { silent: true });
         if (deleteResult.success) {
-  cleanedCount++;log(`Successfully deleted old branch: ${branch}`);
-} else {log(`Failed to delete old branch ${branch}: ${deleteResult.error}`, `ERROR`);
-}
+  cleanedCount++;log(`Successfully deleted old branch: ${branch}`)} else {log(`Failed to delete old branch ${branch}: ${deleteResult.error}`, `ERROR`)}
 }
 
-      return analysisResults;
-    } catch (error) {
+      return analysisResults} catch (error) {
       this.log(`Error analyzing pull requests: ${error.message}`, 'error');
-      return [];
-    }
+      return []}
 }
 
   async analyzeBranch(branchName) {
@@ -1092,21 +952,17 @@ const cleanupOldBranches = () => {
         complexity,
         mergeable: !hasConflicts && complexity.score <= this.config.conflictThreshold,
         priority: this.calculatePriority(complexity, parseInt(commitCount))
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Error analyzing branch ${branchName}: ${error.message}`, 'error');
-      return { branchName, error: error.message };
-    }
+      return { branchName, error: error.message }}
   }
 
   async checkForConflicts(branchName, baseBranch) {
     try {
       // Try to merge without actually merging
       await this.executeCommand(`git merge-tree $(git merge-base origin/${baseBranch} origin/${branchName}) origin/${baseBranch} origin/${branchName}`);
-      return false;
-    } catch (error) {
-      return true;
-    }
+      return false} catch (error) {
+      return true}
   }
 
   analyzeComplexity(changedFiles, commitCount) {
@@ -1117,13 +973,11 @@ const cleanupOldBranches = () => {
     for (const file of changedFiles) {
       if (file.includes('package.json') || file.includes('yarn.lock')) {
         score += 3; // Dependency changes are critical
-        criticalFiles++;
-      } else if (file.includes('src/') || file.includes('components/')) {
+        criticalFiles++} else if (file.includes('src/') || file.includes('components/')) {
         score += 1; // Source code changes
       } else if (file.includes('config/') || file.includes('.env')) {
         score += 2; // Configuration changes
-        criticalFiles++;
-      } else if (file.includes('test/') || file.includes('__tests__/')) {
+        criticalFiles++} else if (file.includes('test/') || file.includes('__tests__/')) {
         score += 0.5; // Test changes are less critical
       }
     }
@@ -1135,8 +989,7 @@ const cleanupOldBranches = () => {
       score: Math.round(score * 10) / 10,
       criticalFiles,
       riskLevel: score > 5 ? 'HIGH' : score > 3 ? 'MEDIUM' : 'LOW'
-    };
-  }
+    }}
 
   calculatePriority(complexity, commitCount) {
     let priority = 0;
@@ -1149,11 +1002,9 @@ const cleanupOldBranches = () => {
     
     // Critical files increase priority
     if (complexity.criticalFiles > 0) {
-      priority += complexity.criticalFiles * 1.5;
-    }
+      priority += complexity.criticalFiles * 1.5}
     
-    return Math.round(priority * 10) / 10;
-  }
+    return Math.round(priority * 10) / 10}
 
   async intelligentMerge() {
     try {
@@ -1163,8 +1014,7 @@ const cleanupOldBranches = () => {
       
       if (analysisResults.length === 0) {
         this.log('No branches to analyze');
-        return;
-      }
+        return}
       
       // Sort by priority (highest first)
       analysisResults.sort((a, b) => (b.priority || 0) - (a.priority || 0));
@@ -1174,20 +1024,15 @@ const cleanupOldBranches = () => {
       const batches = [];
       
       for (let i = 0; i < analysisResults.length; i += batchSize) {
-        batches.push(analysisResults.slice(i, i + batchSize));
-      }
+        batches.push(analysisResults.slice(i, i + batchSize))}
       
       for (const batch of batches) {
         await this.processMergeBatch(batch);
         // Wait between batches to avoid overwhelming the system
-        await this.sleep(2000);
-      }
+        await this.sleep(2000)}
       
-      this.log('Intelligent merge process completed');
-      
-    } catch (error) {
-      this.log(`Error in intelligent merge: ${error.message}`, 'error');
-    }
+      this.log('Intelligent merge process completed')} catch (error) {
+      this.log(`Error in intelligent merge: ${error.message}`, 'error')}
   }
 
   async processMergeBatch(branches) {
@@ -1195,13 +1040,10 @@ const cleanupOldBranches = () => {
       if (branch.mergeable) {
         try {
           await this.mergeBranch(branch.branchName);
-          this.log(`Successfully merged branch: ${branch.branchName}`);
-        } catch (error) {
-          this.log(`Failed to merge branch ${branch.branchName}: ${error.message}`, 'error');
-        }
+          this.log(`Successfully merged branch: ${branch.branchName}`)} catch (error) {
+          this.log(`Failed to merge branch ${branch.branchName}: ${error.message}`, 'error')}
       } else {
-        this.log(`Branch ${branch.branchName} is not mergeable (complexity: ${branch.complexity.score}, conflicts: ${branch.hasConflicts})`);
-      }
+        this.log(`Branch ${branch.branchName} is not mergeable (complexity: ${branch.complexity.score}, conflicts: ${branch.hasConflicts})`)}
     }
   }
 
@@ -1224,21 +1066,16 @@ const cleanupOldBranches = () => {
       // Clean up the feature branch
       if (this.config.branchCleanupEnabled) {
         await this.executeCommand(`git push origin --delete ${branch}`);
-        this.log(`Deleted feature branch: ${branch}`);
-      }
+        this.log(`Deleted feature branch: ${branch}`)}
       
-      this.log(`Successfully merged and cleaned up branch: ${branch}`);
-      
-    } catch (error) {
+      this.log(`Successfully merged and cleaned up branch: ${branch}`)} catch (error) {
       this.log(`Error merging branch ${branch}: ${error.message}`, 'error');
       
       // Try to resolve conflicts
       if (error.message.includes('conflict')) {
-        await this.resolveConflicts();
-      }
+        await this.resolveConflicts()}
       
-      throw error;
-    }
+      throw error}
   }
 
   async resolveConflicts() {
@@ -1250,14 +1087,12 @@ const cleanupOldBranches = () => {
       
       if (conflictedFiles.length === 0) {
         this.log('No conflicts to resolve');
-        return;
-      }
+        return}
       
       this.log(`Found ${conflictedFiles.length} conflicted files`);
       
       for (const file of conflictedFiles.split('\n').filter(f => f.trim())) {
-        await this.resolveFileConflict(file);
-      }
+        await this.resolveFileConflict(file)}
       
       // Add resolved files
       await this.executeCommand('git add .');
@@ -1265,12 +1100,9 @@ const cleanupOldBranches = () => {
       // Complete the merge
       await this.executeCommand('git commit -m "Resolve merge conflicts automatically"');
       
-      this.log('Successfully resolved all conflicts');
-      
-    } catch (error) {
+      this.log('Successfully resolved all conflicts')} catch (error) {
       this.log(`Error resolving conflicts: ${error.message}`, 'error');
-      throw error;
-    }
+      throw error}
   }
 
   async resolveFileConflict(file) {
@@ -1288,16 +1120,12 @@ const cleanupOldBranches = () => {
       // Write resolved content
       fs.writeFileSync(file, resolvedContent);
       
-      this.log(`Resolved conflict in file: ${file}`);
-      
-    } catch (error) {
-      this.log(`Error resolving conflict in file ${file}: ${error.message}`, 'error');
-    }
+      this.log(`Resolved conflict in file: ${file}`)} catch (error) {
+      this.log(`Error resolving conflict in file ${file}: ${error.message}`, 'error')}
   }
 
   async sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+    return new Promise(resolve => setTimeout(resolve, ms))}
 
   async start() {
     this.log('Starting Intelligent Repository Manager...');
@@ -1309,18 +1137,13 @@ const cleanupOldBranches = () => {
       // Start monitoring loop
       setInterval(async () => {
         try {
-          await this.intelligentMerge();
-        } catch (error) {
-          this.log(`Error in monitoring loop: ${error.message}`, 'error');
-        }
+          await this.intelligentMerge()} catch (error) {
+          this.log(`Error in monitoring loop: ${error.message}`, 'error')}
       }, this.config.healthCheckInterval);
       
-      this.log('Intelligent Repository Manager started successfully');
-      
-    } catch (error) {
+      this.log('Intelligent Repository Manager started successfully')} catch (error) {
       this.log(`Error starting Intelligent Repository Manager: ${error.message}`, 'error');
-      throw error;
-    }
+      throw error}
   }}
 // Main execution loop;
 const main = async () => {
@@ -1334,29 +1157,22 @@ const main = async () => {
     const cleanedCount = cleanupOldBranches();
     // Generate summary report;
     const summary = {
-  timestamp: new Date().toISOString(),;
-      healthMetrics,;
-      cleanedBranches: cleanedCount,;
-      status: `completed`;
-}
-    log(`Repository management cycle completed successfully: ${JSON.stringify(summary, null, 2)}`);
-    ;
-} catch (error) {  log(`Repository management cycle failed: ${error.message  }`, `ERROR`);log(`Stack trace: ${error.stack}`, `ERROR`);
-}
+  timestamp: new Date().toISOString(),
+      healthMetrics,
+      cleanedBranches: cleanedCount,
+      status: `completed`}
+    log(`Repository management cycle completed successfully: ${JSON.stringify(summary, null, 2)}`)} catch (error) {  log(`Repository management cycle failed: ${error.message  }`, `ERROR`);log(`Stack trace: ${error.stack}`, `ERROR`)}
 }
 // Handle process signals;
 process.on(`SIGINT`, () => {
   log("Received SIGINT. Shutting down gracefully...");
-  process.exit(0);
-});
+  process.exit(0)});
 
 // Start the manager if run directly
 if (require.main === module) {
   const manager = new IntelligentRepositoryManager();
   manager.start().catch(error => {
     console.error('Failed to start Intelligent Repository Manager:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 module.exports = IntelligentRepositoryManager;

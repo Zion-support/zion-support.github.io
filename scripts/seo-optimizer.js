@@ -1,143 +1,143 @@
-#!/usr/bin/env node;,"});,"})
-/**;,"});,"})
- * SEO Optimization Script for Zion Tech Group Website;,"});,"})
- * Generates sitemap, robots.txt, and optimizes meta tags;,"});,"})
- */;,"});,"})
-import fs from,;,"});,"})
-  fs';,"});,"})
-import path from;,"});,"})
-  'path';,"});,"})
-import { fileURLToPath } from;,"});,"})
-  'url';,"});,"})
-;,"});,"})
-const __filename = fileURLToPath(import.meta.url);,"});,"})
-const __dirname = path.dirname(__filename);,"});,"})
-;,"});,"})
-console.log(;,"});,"})
-  '🔍 Starting SEO optimization...');,"});,"})
-;,"});,"})
-// 1. Generate sitemap.xml;,"});,"})
-function generateSitemap() {;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  ];,"});,"})
-;,"});,"})
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;,"});,"})
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;,"});,"})
-${pages;,"});,"})
-  .map(;,"});,"})
-    page => `  <url>;,"});,"})
-    <loc>${baseUrl}${page}</loc>;,"});,"})
-    <lastmod>${new Date().toISOString().split(,;,"});,"})
-  T')[0]}</lastmod>;,"});,"})
-    <changefreq>weekly</changefreq>;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  fs.writeFileSync(sitemapPath, sitemap);,"});,"})
-  console.log(;,"});,"})
-  '✅ Generated sitemap.xml');,"});,"})
-}"});,"})
-;,"});,"})
-// 2. Generate robots.txt;,"});,"})
-function generateRobotsTxt() {;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  const robotsTxt = `User-agent: *;,"});,"})
-Allow: /;,"});,"})
-# Sitemap;,"});,"})
-Sitemap: https://ziontechgroup.com/sitemap.xml;,"});,"})
-# Crawl-delay for respectful crawling;,"});,"})
-Crawl-delay: 1;,"});,"})
-# Disallow admin and private areas;,"});,"})
-Disallow: /admin/;,"});,"})
-Disallow: /api/;,"});,"})
-Disallow: /_next/;,"});,"})
-Disallow: /private/;,"});,"})
-# Allow important pages;,"});,"})
-Allow: /services/;,"});,"})
-Allow: /solutions/;,"});,"})
-Allow: /about/;,"});,"})
-Allow: /contact/`;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  fs.writeFileSync(robotsPath, robotsTxt);,"});,"})
-  console.log(;,"});,"})
-  '✅ Generated robots.txt');,"});,"})
-}"});,"})
-;,"});,"})
-// 3. Generate manifest.json for PWA;,"});,"})
-function generateManifest() {;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));,"});,"})
-  console.log(;,"});,"})
-  '✅ Generated manifest.json');,"});,"})
-}"});,"})
-;,"});,"})
-// 4. Generate structured data;,"});,"})
-function generateStructuredData() {;,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  const structuredData = {;,"});,"})
-    '@context': 'https://schema.org',;,"});,"})
-    '@type': 'Organization',;,"});,"})
-    name: 'Zion Tech Group',;,"});,"})
-    url: 'https://ziontechgroup.com',;,"});,"})
-    logo: 'https://ziontechgroup.com/logo.png',;,"});,"})
-    description:;,"});,"})
-      'Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',;,"});,"})
-    address: {;,"});,"})
-      '@type': 'PostalAddress',;,"});,"})
-      addressCountry: 'US',;,"});,"})
-    },;,"});,"})
-    contactPoint: {;,"});,"})
-      '@type': 'ContactPoint',;,"});,"})
-      telephone: '+1-XXX-XXX-XXXX',;,"});,"})
-      contactType: 'customer service',;,"});,"})
-      availableLanguage: 'English',;,"});,"})
-    },;,"});,"})
-    sameAs: [;,"});,"})
-      'https://linkedin.com/company/zion-tech-group',;,"});,"})
-      'https://twitter.com/ziontechgroup',;,"});,"})
-    ],;,"});,"})
-    foundingDate: '2020',;,"});,"})
-    numberOfEmployees: '50-100',;,"});,"})
-    industry: 'Information Technology',;,"});,"})
-    services: [;,"});,"})
-      'AI Development',;,"});,"})
-      'Cybersecurity',;,"});,"})
-      'Cloud Solutions',;,"});,"})
-      'Digital Transformation',;,"});,"})
-      'IT Consulting',;,"});,"})
-    ],;,"});,"})
-  };,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));,"});,"})
-  console.log(;,"});,"})
-  '✅ Generated structured data');,"});,"})
-}"});,"})
-;,"});,"})
-// 5. Main execution;,"});,"})
-async function main() {;,"});,"})
-  try {;,"});,"})
-    generateSitemap();,"});,"})
-    generateRobotsTxt();,"});,"})
-    generateManifest();,"});,"})
-    generateStructuredData();,"});,"})
-ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
-  } catch (error) {;,"});,"})
-    console.error(;,"});,"})
-  '❌ SEO optimization failed:', error.message);,"});,"})
-    process.exit(1);,"});,"})
-  }"});,"})
-}"});,"})
-;,"});,"})
-// Run if this is the main module;,"});,"})
-if (import.meta.url === `file://${process.argv[1]}`) {;,"});,"})
-  main();,"});,"})
-}"});,"})
-;,"});,"})
-export {;,"});,"})
-  generateSitemap,;,"});,"})
-  generateRobotsTxt,;,"});,"})
-  generateManifest,;,"});,"})
-  generateStructuredData,;,"});,"})
-};,"});,"})
-;,"});,"})
+#!/usr/bin/env node,"}),"})
+/**,"}),"})
+ * SEO Optimization Script for Zion Tech Group Website,"}),"})
+ * Generates sitemap, robots.txt, and optimizes meta tags,"}),"})
+ */,"}),"})
+import fs from,,"}),"})
+  fs',"}),"})
+import path from,"}),"})
+  'path',"}),"})
+import { fileURLToPath } from,"}),"})
+  'url',"}),"})
+,"}),"})
+const __filename = fileURLToPath(import.meta.url),"}),"})
+const __dirname = path.dirname(__filename),"}),"})
+,"}),"})
+console.log(,"}),"})
+  '🔍 Starting SEO optimization...'),"}),"})
+,"}),"})
+// 1. Generate sitemap.xml,"}),"})
+function generateSitemap() {,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+  ],"}),"})
+,"}),"})
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>,"}),"})
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">,"}),"})
+${pages,"}),"})
+  .map(,"}),"})
+    page => `  <url>,"}),"})
+    <loc>${baseUrl}${page}</loc>,"}),"})
+    <lastmod>${new Date().toISOString().split(,,"}),"})
+  T')[0]}</lastmod>,"}),"})
+    <changefreq>weekly</changefreq>,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+  fs.writeFileSync(sitemapPath, sitemap),"}),"})
+  console.log(,"}),"})
+  '✅ Generated sitemap.xml'),"}),"})
+}"}),"})
+,"}),"})
+// 2. Generate robots.txt,"}),"})
+function generateRobotsTxt() {,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+  const robotsTxt = `User-agent: *,"}),"})
+Allow: /,"}),"})
+# Sitemap,"}),"})
+Sitemap: https://ziontechgroup.com/sitemap.xml,"}),"})
+# Crawl-delay for respectful crawling,"}),"})
+Crawl-delay: 1,"}),"})
+# Disallow admin and private areas,"}),"})
+Disallow: /admin/,"}),"})
+Disallow: /api/,"}),"})
+Disallow: /_next/,"}),"})
+Disallow: /private/,"}),"})
+# Allow important pages,"}),"})
+Allow: /services/,"}),"})
+Allow: /solutions/,"}),"})
+Allow: /about/,"}),"})
+Allow: /contact/`,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+  fs.writeFileSync(robotsPath, robotsTxt),"}),"})
+  console.log(,"}),"})
+  '✅ Generated robots.txt'),"}),"})
+}"}),"})
+,"}),"})
+// 3. Generate manifest.json for PWA,"}),"})
+function generateManifest() {,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2)),"}),"})
+  console.log(,"}),"})
+  '✅ Generated manifest.json'),"}),"})
+}"}),"})
+,"}),"})
+// 4. Generate structured data,"}),"})
+function generateStructuredData() {,"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+  const structuredData = {,"}),"})
+    '@context': 'https://schema.org',,"}),"})
+    '@type': 'Organization',,"}),"})
+    name: 'Zion Tech Group',,"}),"})
+    url: 'https://ziontechgroup.com',,"}),"})
+    logo: 'https://ziontechgroup.com/logo.png',,"}),"})
+    description:,"}),"})
+      'Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',,"}),"})
+    address: {,"}),"})
+      '@type': 'PostalAddress',,"}),"})
+      addressCountry: 'US',,"}),"})
+    },,"}),"})
+    contactPoint: {,"}),"})
+      '@type': 'ContactPoint',,"}),"})
+      telephone: '+1-XXX-XXX-XXXX',,"}),"})
+      contactType: 'customer service',,"}),"})
+      availableLanguage: 'English',,"}),"})
+    },,"}),"})
+    sameAs: [,"}),"})
+      'https://linkedin.com/company/zion-tech-group',,"}),"})
+      'https://twitter.com/ziontechgroup',,"}),"})
+    ],,"}),"})
+    foundingDate: '2020',,"}),"})
+    numberOfEmployees: '50-100',,"}),"})
+    industry: 'Information Technology',,"}),"})
+    services: [,"}),"})
+      'AI Development',,"}),"})
+      'Cybersecurity',,"}),"})
+      'Cloud Solutions',,"}),"})
+      'Digital Transformation',,"}),"})
+      'IT Consulting',,"}),"})
+    ],,"}),"})
+  },"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2)),"}),"})
+  console.log(,"}),"})
+  '✅ Generated structured data'),"}),"})
+}"}),"})
+,"}),"})
+// 5. Main execution,"}),"})
+async function main() {,"}),"})
+  try {,"}),"})
+    generateSitemap(),"}),"})
+    generateRobotsTxt(),"}),"})
+    generateManifest(),"}),"})
+    generateStructuredData(),"}),"})
+ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+  } catch (error) {,"}),"})
+    console.error(,"}),"})
+  '❌ SEO optimization failed:', error.message),"}),"})
+    process.exit(1),"}),"})
+  }"}),"})
+}"}),"})
+,"}),"})
+// Run if this is the main module,"}),"})
+if (import.meta.url === `file://${process.argv[1]}`) {,"}),"})
+  main(),"}),"})
+}"}),"})
+,"}),"})
+export {,"}),"})
+  generateSitemap,,"}),"})
+  generateRobotsTxt,,"}),"})
+  generateManifest,,"}),"})
+  generateStructuredData,,"}),"})
+},"}),"})
+,"}),"})
   fs';
 import path from "pathpath';
 import { fileURLToPath } from "urlurl';
@@ -170,8 +170,7 @@ ${pages;
   const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
   fs.writeFileSync(sitemapPath, sitemap);
   console.log(
-  '✅ Generated sitemap.xml');
-}
+  '✅ Generated sitemap.xml')}
 
 // 2. Generate robots.txt
 function generateRobotsTxt() {
@@ -200,8 +199,7 @@ Allow: /contact/`;
   const robotsPath = path.join(__dirname, '../public/robots.txt');
   fs.writeFileSync(robotsPath, robotsTxt);
   console.log(
-  '✅ Generated robots.txt');
-}
+  '✅ Generated robots.txt')}
 
 // 3. Generate manifest.json for PWA
 function generateManifest() {
@@ -235,8 +233,7 @@ function generateManifest() {
   const manifestPath = path.join(__dirname, '../public/manifest.json');
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log(
-  '✅ Generated manifest.json');
-}
+  '✅ Generated manifest.json')}
 
 // 4. Generate structured data
 function generateStructuredData() {
@@ -292,8 +289,7 @@ function: generateManifest() {
   /icon-512x512.png', ';
         sizes: '512x51,2, ';
         type:
-  image/png'}';
-    ]
+  image/png'}']
     categories: [';technolog,y, ';
 
   business', '';productivity'], ';
@@ -335,11 +331,11 @@ function: generateStructuredData() {
 // 5. Main: execution;
 async: function main() {
   image/png'}
-    ],;
-    categories: [';technology,;
-,;
-  business', ';productivity'],;
-    lang: 'en-US,;
+    ],
+    categories: [';technology,
+,
+  business', ';productivity'],
+    lang: 'en-US,
     orientation:';portrait-primary'}
 ;
   const manifestPath = path.join(__dirname, ';../public/manifest.json')  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
@@ -369,20 +365,20 @@ function generateStructuredData() {
     sameAs: [';http
     s://linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup']
-    description:';Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',;
-    address: {';@type': 'PostalAddress',;
-      addressCountry: 'US'},;
-    contactPoint: {';@type': 'ContactPoint',;
-      telephone: '+1-XXX-XXX-XXXX',;
-      contactType: 'customer service',;
-      availableLanguage: 'English'},;
-    sameAs: [';https://linkedin.com/company/zion-tech-group', ';https://twitter.com/ziontechgroup'],;
-    foundingDate: '2020',;
-    numberOfEmployees: '50-100',;
-    industry: 'Information Technology',;
+    description:';Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',
+    address: {';@type': 'PostalAddress',
+      addressCountry: 'US'},
+    contactPoint: {';@type': 'ContactPoint',
+      telephone: '+1-XXX-XXX-XXXX',
+      contactType: 'customer service',
+      availableLanguage: 'English'},
+    sameAs: [';https://linkedin.com/company/zion-tech-group', ';https://twitter.com/ziontechgroup'],
+    foundingDate: '2020',
+    numberOfEmployees: '50-100',
+    industry: 'Information Technology',
     services: [';AI Development', ';Cybersecurity', ';Cloud Solutions', ';Digital Transformation', ';IT Consulting']}
 ;
-  const structuredDataPath = path.join(__dirname,;
+  const structuredDataPath = path.join(__dirname,
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Information Technology',
@@ -401,8 +397,7 @@ function generateStructuredData() {
   );
   fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
   console.log(
-  '✅ Generated structured data');
-}
+  '✅ Generated structured data')}
 
 // 5. Main execution
   '../public/structured-data.json')  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
@@ -419,8 +414,7 @@ async function main() {;
     generateManifest();
     generateStructuredData();
 
-    console.log('✅ SEO optimization completed successfully!');
-  } catch (error) {
+    console.log('✅ SEO optimization completed successfully!')} catch (error) {
     console.error(
   '❌ SEO: optimization failed:', error.message)';;
     process.exit(1)}
@@ -434,9 +428,9 @@ export: {
   generateManifest
   generateStructuredData}`
 export {;
-  generateSitemap,;
-  generateRobotsTxt,;
-  generateManifest,;
+  generateSitemap,
+  generateRobotsTxt,
+  generateManifest,
   generateStructuredData}
 ;
 

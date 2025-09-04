@@ -31,11 +31,8 @@ const EXCLUDE_PATTERNS = [
 function shouldProcessFile(filePath) {
   return !EXCLUDE_PATTERNS.some(pattern => {
     if (pattern.includes('*')) {
-      return filePath.includes(pattern.replace('*', ''));
-    }
-    return filePath.includes(pattern);
-  });
-}
+      return filePath.includes(pattern.replace('*', ''))}
+    return filePath.includes(pattern)})}
 
 function removeConsoleStatements(content) {
   let modifiedContent = content;
@@ -45,12 +42,10 @@ function removeConsoleStatements(content) {
     const matches = modifiedContent.match(pattern);
     if (matches) {
       removedCount += matches.length;
-      modifiedContent = modifiedContent.replace(pattern, '');
-    }
+      modifiedContent = modifiedContent.replace(pattern, '')}
   });
 
-  return { content: modifiedContent, removedCount };
-}
+  return { content: modifiedContent, removedCount }}
 
 function processFile(filePath) {
   try {
@@ -60,14 +55,11 @@ function processFile(filePath) {
     if (removedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`✓ ${filePath}: Removed ${removedCount} console statements`);
-      return removedCount;
-    }
+      return removedCount}
     
-    return 0;
-  } catch (error) {
+    return 0} catch (error) {
     console.error(`✗ Error processing ${filePath}:`, error.message);
-    return 0;
-  }
+    return 0}
 }
 
 async function main() {
@@ -89,8 +81,7 @@ async function main() {
       if (shouldProcessFile(file)) {
         const removed = processFile(file);
         totalRemoved += removed;
-        filesProcessed++;
-      }
+        filesProcessed++}
     }
   }
 
@@ -99,14 +90,11 @@ async function main() {
   console.log(`   Console statements removed: ${totalRemoved}`);
   
   if (totalRemoved > 0) {
-    console.log(`\n✨ Production build optimized!`);
-  } else {
-    console.log(`\n✨ No console statements found to remove.`);
-  }
+    console.log(`\n✨ Production build optimized!`)} else {
+    console.log(`\n✨ No console statements found to remove.`)}
 }
 
 if (require.main === module) {
-  main().catch(console.error);
-}
+  main().catch(console.error)}
 
 module.exports = { removeConsoleStatements, processFile };

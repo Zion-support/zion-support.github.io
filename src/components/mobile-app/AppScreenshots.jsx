@@ -41,6 +41,5 @@ export const AppScreenshots = (props: any) => {
         </div>
       </div>
     </section>)};
-
-
-export default AppScreenshots;
+';
+export default AppScreenshots;;';;';

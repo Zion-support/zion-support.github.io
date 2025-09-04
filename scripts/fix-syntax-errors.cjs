@@ -16,7 +16,7 @@ class SyntaxErrorFixer {
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString(;);
-    console.log(`[${timestamp}] [${level}] ${message}`);}
+    console.log(`[${timestamp}] [${level}] ${message}`)}
 
   async fixSyntaxErrors() {
     this.log('🔧 Starting syntax error fixing...');
@@ -37,10 +37,10 @@ class SyntaxErrorFixer {
       this.fixes++;
       
       this.log(`✅ Syntax fixing completed successfully. Applied ${this.fixes} fixes.`);
-      return { success: true, fixes: this.fixes ;}} catch (error) {
+      return { success: true, fixes: this.fixes }} catch (error) {
       this.log(`❌ Syntax fixing failed: ${error.message}`, 'ERROR');
       this.errors.push(error.message);
-      return { success: false, error: error.message, fixes: this.fixes ;}}
+      return { success: false, error: error.message, fixes: this.fixes }}
   }
 
   async generateReport() {
@@ -49,7 +49,7 @@ class SyntaxErrorFixer {
       fixes: this.fixes,
       errors: this.errors,
       success: this.errors.length === 0
-   ; ;};
+   };
 
     const reportPath = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fix-report.json';);
     const logDir = path.dirname(reportPath;);
@@ -61,11 +61,10 @@ class SyntaxErrorFixer {
     ) {
       fs.mkdirSync(logDir, { recursive: true })}
     
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  }
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
     this.log(`📄 Report saved to: ${reportPath}`);
     
-    return report;}
+    return report}
 
   async run() {
     try {
@@ -81,8 +80,7 @@ class SyntaxErrorFixer {
         this.log('🎉 Syntax error fixing completed successfully!')} else {
         this.log('⚠️ Syntax error fixing completed with some issues')}
       
-      return report;
-  }} catch (error) {
+      return report}} catch (error) {
       this.log(`💥 Syntax error fixing failed: ${error.message}`, 'ERROR');
       throw error}
   }
@@ -92,8 +90,7 @@ class SyntaxErrorFixer {
 if ( {
   const fixer = new SyntaxErrorFixer) {
      {
-  const fixer = new SyntaxErrorFixer;
-  }(;);
+  const fixer = new SyntaxErrorFixer}(;);
   fixer.run().catch(console.error)}
 
 module.exports = SyntaxErrorFixer;

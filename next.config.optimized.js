@@ -34,8 +34,6 @@ module.exports = withBundleAnalyzer({
             enforce: true,
           },
         },
-      };
-    }
-    return config;
-  },
+      }}
+    return config},
 });

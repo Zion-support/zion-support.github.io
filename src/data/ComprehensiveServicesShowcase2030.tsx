@@ -1,19 +1,19 @@
-import React from 'react';
-const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
-  const [searchTerm, setSearchTerm] = useState<any>('');
+import React from 'react';';
+const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;';';
+  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');';';
+  const [searchTerm, setSearchTerm] = useState<any>('');';';
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   const getFilteredServices = (props: any) => {;
     let services: an y[] = [];
-    switch(activeTab) {
-
+    switch(activeTab) {';
+';';
       case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
+        services = innovativeMicroSaasServices2030;';
+        break;';';
       case 'it':
-        services = comprehensiveITServices2030;
-        break;
+        services = comprehensiveITServices2030;';
+        break;';';
       case 'ai':
         services = comprehensiveAIServices2030;
         break}
@@ -24,8 +24,8 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some(tag: string tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      )}
-
+      )}';
+';';
     if(selectedCategory !== 'all') {
       services = services.filter(service => service.category === selectedCategory)};
 ;
@@ -33,22 +33,22 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
 
   const getCategories = (props: any) => {;
     let services: an y[] = [];
-    switch(activeTab) {
-
+    switch(activeTab) {';
+';';
       case 'microsaas':
-        services = innovativeMicroSaasServices2030;
-        break;
+        services = innovativeMicroSaasServices2030;';
+        break;';';
       case 'it':
-        services = comprehensiveITServices2030;
-        break;
+        services = comprehensiveITServices2030;';
+        break;';';
       case 'ai':
         services = comprehensiveAIServices2030;
         break}
 
     return categories};
 
-  const renderServiceCard = (props: any) => {
-
+  const renderServiceCard = (props: any) => {';
+';';
     if(activeTab === 'microsaas') {
 
       return ("
@@ -151,8 +151,8 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
                   Learn More
                 </a>;              </div>;
             </div>;
-          </div>;
-        </div>;
+          </div>;';
+        </div>;';';
       )} else if(activeTab = == 'it') {
 
       return ("
@@ -386,8 +386,8 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
             <div className="text-center max-w-4xl mx-auto">"
               <h1 className="text-5xl md: tex t-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Comprehensive Services Showcase 2030
-              </h1>"
-              <p className="text-xl md: tex t-2xl text-gray-200 mb-8">
+              </h1>"';
+              <p className="text-xl md: tex t-2xl text-gray-200 mb-8">';';
                 Discover Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.Real solutions with proven ROI, competitive pricing, and market-leading innovation.</p>"
               <div className="flex flex-wrap justify-center gap-4 text-sm">"
                 <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
@@ -462,30 +462,30 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
           </div>
 
           {/* Service Tabs */}"
-          <div className="mb-8">"
-            <div className="flex flex-wrap gap-2 justify-center">
-              <button'
-                onClick={() => setActiveTab('microsaas')}`
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'microsaas''
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg''
+          <div className="mb-8">"';
+            <div className="flex flex-wrap gap-2 justify-center">';';
+              <button'';';
+                onClick={() => setActiveTab('microsaas')}`';';
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'microsaas''';';
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg''';';
                     : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`
                 }`}
 
-                Micro SAAS Services({innovativeMicroSaasServices2030.length})
-              </button>
-              <button'
-                onClick={() => setActiveTab('it')}`
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'it''
-                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg''
+                Micro SAAS Services({innovativeMicroSaasServices2030.length})';
+              </button>';';
+              <button'';';
+                onClick={() => setActiveTab('it')}`';';
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'it''';';
+                    ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg''';';
                     : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`
                 }`}
 
-                IT Services({comprehensiveITServices2030.length})
-              </button>
-              <button'
-                onClick={() => setActiveTab('ai')}`
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'ai''
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg''
+                IT Services({comprehensiveITServices2030.length})';
+              </button>';';
+              <button'';';
+                onClick={() => setActiveTab('ai')}`';';
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${activeTab === 'ai''';';
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg''';';
                     : 'bg-white text-gray-700 hover: b g-gray-50 border border-gray-200'`
                 }`}
 
@@ -500,16 +500,16 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
  {/* No Results */} {getFilteredServices().length === 0 && (;"
             <div className="text-center py-12">;"
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
-              <button;
-                onClick={() => {;
-                  setSearchTerm('');
+              <button;';
+                onClick={() => {;';';
+                  setSearchTerm('');';';
                   setSelectedCategory('all')}}"                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: b g-blue-700 transition-colors"
               >
                 Clear Filters
               </button>
-            </div>
-          )}
-
+                </div>
+  );
+}
           {/* Contact CTA */}"
           <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">"
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>"
@@ -533,10 +533,10 @@ const ComprehensiveServicesShowcase2030: Reac t.FC = () => {;
         </div>;
       </div>;
     </>
-  )};
-
+  )};';
+';';
 export default ComprehensiveServicesShowcase2030}}}}}'"`
 
 </SEO>
-</any>
-</any>
+</any>';
+</any>;';;';

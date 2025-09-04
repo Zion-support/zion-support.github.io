@@ -17,15 +17,15 @@ class $1 {
   constructor() {
   this.projectRoot = process.cwd();
     this.logFile = path.join(;
-      this.projectRoot,logs",;
+      this.projectRoot,logs",
       "advanced-performance-monitor.log";
     );
     this.performanceLog = path.join(;
-      this.projectRoot,logs",;
+      this.projectRoot,logs",
       "performance-metrics.json";
     );
     this.alertsLog = path.join(;
-      this.projectRoot,logs",;
+      this.projectRoot,logs",
       "performance-alerts.json";
     );
     this.ensureLogsDirectory();
@@ -38,71 +38,63 @@ class $1 {
       disk: 90, // 90% disk usage;
       buildTime: 300000, // 5 minutes;
       bundleSize: 10000000, // 10MB;
-      responseTime: 2000, // 2 seconds;
-}
+      responseTime: 2000, // 2 seconds}
 ;
     this.performanceHistory = [];
     this.alertHistory = [];
     this.autoFixEnabled = true;
     // Performance optimization strategies;
     this.optimizationStrategies = {
-  memory: ["Force garbage collection"", "Restart PM2 processes", "Clear build cache"", "Optimize bundle size", ""],;
-      cpu: ["Reduce concurrent processes"", "Optimize build configuration", "Enable incremental compilation"", "Use worker threads", ""],;
-      disk: ["Clean up temporary files"", "Remove old build artifacts", "Optimize log rotation"", "Clear npm cache", ``],;
+  memory: ["Force garbage collection"", "Restart PM2 processes", "Clear build cache"", "Optimize bundle size", ""],
+      cpu: ["Reduce concurrent processes"", "Optimize build configuration", "Enable incremental compilation"", "Use worker threads", ""],
+      disk: ["Clean up temporary files"", "Remove old build artifacts", "Optimize log rotation"", "Clear npm cache", ``],
 }
   }
 ;
   ensureLogsDirectory() {
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });
-}
+  fs.mkdirSync(logsDir, { recursive: true })}
   }
 ;
   log(message, level = `INFO`) {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
-}
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`)}
 ;
   async startMonitoring() {
   this.log(`Starting advanced performance monitoring...`);
     // Start continuous monitoring;
     this.monitoringInterval = setInterval(async () => {
-  await this.collectMetrics();
-}, this.monitoringInterval);
+  await this.collectMetrics()}, this.monitoringInterval);
     // Initial metrics collection;
     await this.collectMetrics();
-    this.log(`Performance monitoring started successfully`);
-}
+    this.log(`Performance monitoring started successfully`)}
 ;
   async collectMetrics() {
   const metrics = {
-  timestamp: new Date().toISOString(),;
-      system: await this.collectSystemMetrics(),;
-      application: await this.collectApplicationMetrics(),;
-      build: await this.collectBuildMetrics(),;
-      network: await this.collectNetworkMetrics(),;
+  timestamp: new Date().toISOString(),
+      system: await this.collectSystemMetrics(),
+      application: await this.collectApplicationMetrics(),
+      build: await this.collectBuildMetrics(),
+      network: await this.collectNetworkMetrics(),
 }
     // Store metrics in history;
     this.performanceHistory.push(metrics);
     // Keep only last 100 entries;
     if (this.performanceHistory.length > 100) {
-  this.performanceHistory.shift();
-}
+  this.performanceHistory.shift()}
 ;
     // Analyze metrics for issues;
     const issues = await this.analyzeMetrics(metrics);
     // Generate alerts for critical issues;
     if (issues.length > 0) {
-  await this.generateAlerts(issues);
-}
+  await this.generateAlerts(issues)}
 ;
     // Auto-fix critical issues if enabled;
     if (this.autoFixEnabled) {
-  await this.autoFixCriticalIssues(issues);
-}
+  await this.autoFixCriticalIssues(issues)}
 ;
 
     // Store metrics in history;
@@ -110,48 +102,44 @@ class $1 {
 
     // Keep only last 100 entries;
     if (this.performanceHistory.length > 100) {
-  this.performanceHistory.shift();
-}
+  this.performanceHistory.shift()}
 ;
     // Analyze metrics for issues;
     const issues = await this.analyzeMetrics(metrics);
 
     // Generate alerts for critical issues;
     if (issues.length > 0) {
-  await this.generateAlerts(issues);
-}
+  await this.generateAlerts(issues)}
 ;
     // Auto-fix critical issues if enabled;
     if (this.autoFixEnabled) {
-  await this.autoFixCriticalIssues(issues);
-}
+  await this.autoFixCriticalIssues(issues)}
 ;
     // Save metrics;
     await this.saveMetrics(metrics);
 
-    return metrics;
-}
+    return metrics}
 ;
   async collectSystemMetrics() {
   const metrics = {
   cpu: {
-  usage: 0,;
-        load: 0,;
-        cores: os.cpus().length,;
-},;
+  usage: 0,
+        load: 0,
+        cores: os.cpus().length,
+},
       memory: {
-  total: os.totalmem(),;
-        free: os.freemem(),;
-        used: 0,;
-        usage: 0,;
-},;
+  total: os.totalmem(),
+        free: os.freemem(),
+        used: 0,
+        usage: 0,
+},
       disk: {
-  total: 0,;
-        free: 0,;
-        used: 0,;
-        usage: 0,;
-},;
-      uptime: os.uptime(),;
+  total: 0,
+        free: 0,
+        used: 0,
+        usage: 0,
+},
+      uptime: os.uptime(),
 }
     try {
   // CPU usage;
@@ -163,26 +151,24 @@ class $1 {
       // Disk usage;
       const diskStats = await this.getDiskUsage();
       metrics.disk = { ...metrics.disk, ...diskStats }
-    } catch (error) {  this.log(`Failed to collect system metrics: ${error.message  }`, `WARN`);
-}
+    } catch (error) {  this.log(`Failed to collect system metrics: ${error.message  }`, `WARN`)}
 ;
-    return metrics;
-}
+    return metrics}
 ;
   async collectApplicationMetrics() {
   const metrics = {
   pm2: {
-  processes: 0,;
-        memory: 0,;
-        cpu: 0,;
-        status: `unknown`},;
+  processes: 0,
+        memory: 0,
+        cpu: 0,
+        status: `unknown`},
       node: {
-  version: process.version,;
-        memory: process.memoryUsage(),;
-        uptime: process.uptime()},;
+  version: process.version,
+        memory: process.memoryUsage(),
+        uptime: process.uptime()},
       build: {
-  lastBuildTime: 0,;
-        lastBuildSize: 0,;
+  lastBuildTime: 0,
+        lastBuildSize: 0,
         buildCount: 0}}
     try {
   // PM2 metrics;
@@ -192,27 +178,27 @@ class $1 {
       const buildMetrics = await this.getBuildMetrics();
       metrics.build = { ...metrics.build, ...buildMetrics }
     } catch (error) {
-  this.log(Failed to collect application metrics: ${error.message  }`,;
+  this.log(Failed to collect application metrics: ${error.message  }`,
         `WARN`;
 
   async collectApplicationMetrics() {
   const metrics = {
   pm2: {
-  processes: 0,;
-        memory: 0,;
-        cpu: 0,;
-        status: "unknown",;
-},;
+  processes: 0,
+        memory: 0,
+        cpu: 0,
+        status: "unknown",
+},
       node: {
-  version: process.version,;
-        memory: process.memoryUsage(),;
-        uptime: process.uptime(),;
-},;
+  version: process.version,
+        memory: process.memoryUsage(),
+        uptime: process.uptime(),
+},
       build: {
-  lastBuildTime: 0,;
-        lastBuildSize: 0,;
-        buildCount: 0,;
-},;
+  lastBuildTime: 0,
+        lastBuildSize: 0,
+        buildCount: 0,
+},
 }
 ;
     try {
@@ -224,24 +210,22 @@ class $1 {
       const buildMetrics = await this.getBuildMetrics();
       metrics.build = { ...metrics.build, ...buildMetrics }
     } catch (error) {
-  this.log(Failed to collect application metrics: ${error.message}",;
+  this.log(Failed to collect application metrics: ${error.message}",
         "WARN";
-      );
-}
+      )}
 ;
-    return metrics;
-}
+    return metrics}
 ;
   async collectBuildMetrics() {
   const metrics = {
-  buildTime: 0,;
-      bundleSize: 0,;
-      dependencies: 0,;
+  buildTime: 0,
+      bundleSize: 0,
+      dependencies: 0,
       optimization: {
-  treeShaking: false,;
-        codeSplitting: false,;
-        minification: true,;
-},;
+  treeShaking: false,
+        codeSplitting: false,
+        minification: true,
+},
 }
     try {
   // Check build configuration;
@@ -250,54 +234,47 @@ class $1 {
       // Measure bundle size;
       metrics.bundleSize = await this.measureBundleSize();
       // Count dependencies;
-      metrics.dependencies = await this.countDependencies();
-} catch (error) {  this.log(`Failed to collect build metrics: ${error.message  }`, `WARN`);
-}
+      metrics.dependencies = await this.countDependencies()} catch (error) {  this.log(`Failed to collect build metrics: ${error.message  }`, `WARN`)}
 ;
-    return metrics;
-}
+    return metrics}
 ;
   async collectNetworkMetrics() {
   const metrics = {
-  responseTime: 0,;
-      throughput: 0,;
-      connections: 0,;
-      errors: 0,;
+  responseTime: 0,
+      throughput: 0,
+      connections: 0,
+      errors: 0,
 }
     try {
   // This would typically involve monitoring actual network requests;
       // For now, we`ll use placeholder values;
       metrics.responseTime = Math.random() * 1000; // Simulated response time;
-      metrics.throughput = Math.random() * 1000000; // Simulated throughput;
-} catch (error) {  this.log(`Failed to collect network metrics: ${error.message  }`, `WARN`);
+      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {  this.log(`Failed to collect network metrics: ${error.message  }`, `WARN`);
 
     try {
   // This would typically involve monitoring actual network requests;
       // For now, we"ll use placeholder values;
       metrics.responseTime = Math.random() * 1000; // Simulated response time;
-      metrics.throughput = Math.random() * 1000000; // Simulated throughput;
-} catch (error) {this.log(`Failed to collect network metrics: ${error.message}`, "WARN");
-}
+      metrics.throughput = Math.random() * 1000000; // Simulated throughput} catch (error) {this.log(`Failed to collect network metrics: ${error.message}`, "WARN")}
 ;
-    return metrics;
-}
+    return metrics}
 ;
   async getDiskUsage() {
   try {
   const result = execSync(`df -h .`, {
-  cwd: this.projectRoot,;
-        encoding: "utf8",;
-        stdio: "pipe",;
+  cwd: this.projectRoot,
+        encoding: "utf8",
+        stdio: "pipe",
 });
 
       const lines = result.split("\n");
       const data = lines[1].split(/\s+/);
 
       return {
-  total: this.parseSize(data[1]),;
-        used: this.parseSize(data[2]),;
-        free: this.parseSize(data[3]),;
-        usage: parseInt(data[4].replace("%", ")),;
+  total: this.parseSize(data[1]),
+        used: this.parseSize(data[2]),
+        free: this.parseSize(data[3]),
+        usage: parseInt(data[4].replace("%", ")),
 }
     } catch (error) {
   return { total: 0, used: 0, free: 0, usage: 0   }
@@ -310,17 +287,15 @@ class $1 {
   const units = { K: 1024, M: 1024 * 1024, G: 1024 * 1024 * 1024 }
     const match = sizeStr.match(/^(\d+(?:\.\d+)?)([KMGT])/);
     if (match) {
-  return Math.round(parseFloat(match[1]) * units[match[2]]);
-}
-    return 0;
-}
+  return Math.round(parseFloat(match[1]) * units[match[2]])}
+    return 0}
 ;
   async getPM2Status() {
   try {
   const result = execSync("pm2 jlist", {
-  cwd: this.projectRoot,;
-        encoding: "utf8",;
-        stdio: "pipe",;
+  cwd: this.projectRoot,
+        encoding: "utf8",
+        stdio: "pipe",
 });
 
       const processes = JSON.parse(result);
@@ -329,14 +304,13 @@ class $1 {
 
       processes.forEach(proc => {
   totalMemory += proc.monit.memory || 0;
-        totalCPU += proc.monit.cpu || 0;
-});
+        totalCPU += proc.monit.cpu || 0});
 
       return {
-  processes: processes.length,;
-        memory: totalMemory,;
-        cpu: totalCPU,;
-        status: "running",;
+  processes: processes.length,
+        memory: totalMemory,
+        cpu: totalCPU,
+        status: "running",
 }
     } catch (error) {
   return { processes: 0, memory: 0, cpu: 0, status: "error"   }
@@ -346,33 +320,32 @@ class $1 {
   async getBuildMetrics() {
   try {
   const buildLogPath = path.join(;
-        this.projectRoot,logs",;
+        this.projectRoot,logs",
         "build-performance.json";
   async getBuildMetrics() {
   try {
   const buildLogPath = path.join(;
-        this.projectRoot,logs",;
+        this.projectRoot,logs",
         `build-performance.json`;
       );
       if (fs.existsSync(buildLogPath)) {
   const buildData = JSON.parse(fs.readFileSync(buildLogPath, `utf8`));
         return {
-  lastBuildTime: buildData.currentPerformance?.buildTime || 0,;
-          lastBuildSize: buildData.currentPerformance?.bundleSize || 0,;
-          buildCount: this.performanceHistory.filter(m => m.build).length,;
-        this.projectRoot, "logs",;
+  lastBuildTime: buildData.currentPerformance?.buildTime || 0,
+          lastBuildSize: buildData.currentPerformance?.bundleSize || 0,
+          buildCount: this.performanceHistory.filter(m => m.build).length,
+        this.projectRoot, "logs",
         "build-performance.json";
       );
       if (fs.existsSync(buildLogPath)) {
   const buildData = JSON.parse(fs.readFileSync(buildLogPath, "utf8"));
         return {
-  lastBuildTime: buildData.currentPerformance?.buildTime || 0,;
-          lastBuildSize: buildData.currentPerformance?.bundleSize || 0,;
-          buildCount: this.performanceHistory.filter(m => m.build).length,;
+  lastBuildTime: buildData.currentPerformance?.buildTime || 0,
+          lastBuildSize: buildData.currentPerformance?.bundleSize || 0,
+          buildCount: this.performanceHistory.filter(m => m.build).length,
 }
       }
-    } catch (error) {  this.log(`Failed to get build metrics: ${error.message  }`, `WARN`);
-}
+    } catch (error) {  this.log(`Failed to get build metrics: ${error.message  }`, `WARN`)}
 ;
     return { lastBuildTime: 0, lastBuildSize: 0, buildCount: 0 }
   }
@@ -383,13 +356,12 @@ class $1 {
       if (fs.existsSync(viteConfigPath)) {
   const config = fs.readFileSync(viteConfigPath, "utf8");
         return {
-  treeShaking: config.includes("treeshake"),;
-          codeSplitting: config.includes(`manualChunks`),;
-          minification: config.includes(`minify`),;
+  treeShaking: config.includes("treeshake"),
+          codeSplitting: config.includes(`manualChunks`),
+          minification: config.includes(`minify`),
 }
       }
-    } catch (error) {  this.log(`Failed to check Vite config: ${error.message  }`, `WARN`);
-}
+    } catch (error) {  this.log(`Failed to check Vite config: ${error.message  }`, `WARN`)}
 ;
     return { treeShaking: false, codeSplitting: false, minification: true }
   }
@@ -408,17 +380,13 @@ class $1 {
 
       for (const file of files) {
   const stats = fs.statSync(file);
-        totalSize += stats.size;
-}
+        totalSize += stats.size}
 ;
-      return totalSize;
-} catch (error) {
+      return totalSize} catch (error) {
   
 } catch (error) {
-  return 0;
-} catch (error) {
-  return 0;
-}
+  return 0} catch (error) {
+  return 0}
   }
 ;
   async countDependencies() {
@@ -429,23 +397,18 @@ class $1 {
         return (;
           Object.keys(pkg.dependencies || {}).length +;
           Object.keys(pkg.devDependencies || {}).length;
-        );
-}
+        )}
     } catch (error) {
-  return 0;
-}
+  return 0}
 ;
         return (;
           Object.keys(pkg.dependencies || {}).length +;
           Object.keys(pkg.devDependencies || {}).length;
-        );
-}
+        )}
     } catch (error) {
-  return 0;
-}
+  return 0}
 ;
-    return 0;
-}
+    return 0}
 ;
   getAllFilesRecursive(dir, files = []) {
   const items = fs.readdirSync(dir);
@@ -455,92 +418,81 @@ class $1 {
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-  this.getAllFilesRecursive(fullPath", files);
-} else {
-  files.push(fullPath);
-}
+  this.getAllFilesRecursive(fullPath", files)} else {
+  files.push(fullPath)}
     }
 ;
-    return files;
-}
+    return files}
 ;
   async analyzeMetrics(metrics) {
   const issues = [];
     // System performance issues;
     if (metrics.system.cpu.usage > this.alertThresholds.cpu) {
   issues.push({
-  type: `CPU_HIGH`,;
-        severity: `HIGH`,description: `CPU usage is ${metrics.system.cpu.usage.toFixed(1)}%`,;
-        threshold: this.alertThresholds.cpu,;
-        current: metrics.system.cpu.usage,;
-        category: `SYSTEM`});
-}
+  type: `CPU_HIGH`,
+        severity: `HIGH`,description: `CPU usage is ${metrics.system.cpu.usage.toFixed(1)}%`,
+        threshold: this.alertThresholds.cpu,
+        current: metrics.system.cpu.usage,
+        category: `SYSTEM`})}
 ;
     if (metrics.system.memory.usage > this.alertThresholds.memory) {
   issues.push({
-  type: `MEMORY_HIGH`,;
-        severity: `HIGH`,description: `Memory usage is ${metrics.system.memory.usage.toFixed(1)}%`,;
-        threshold: this.alertThresholds.memory,;
-        current: metrics.system.memory.usage,;
-        category: `SYSTEM`});
-}
+  type: `MEMORY_HIGH`,
+        severity: `HIGH`,description: `Memory usage is ${metrics.system.memory.usage.toFixed(1)}%`,
+        threshold: this.alertThresholds.memory,
+        current: metrics.system.memory.usage,
+        category: `SYSTEM`})}
 ;
     if (metrics.system.disk.usage > this.alertThresholds.disk) {
   issues.push({
-  type: `DISK_HIGH`,;
-        severity: `CRITICAL`,description: `Disk usage is ${metrics.system.disk.usage.toFixed(1)}%`,;
-        threshold: this.alertThresholds.disk,;
-        current: metrics.system.disk.usage,;
-        category: `SYSTEM`});
-}
+  type: `DISK_HIGH`,
+        severity: `CRITICAL`,description: `Disk usage is ${metrics.system.disk.usage.toFixed(1)}%`,
+        threshold: this.alertThresholds.disk,
+        current: metrics.system.disk.usage,
+        category: `SYSTEM`})}
 ;
     // Application performance issues;
     if (;
       metrics.application.build.lastBuildTime > this.alertThresholds.buildTime;
     ) {
   issues.push({
-  type: `BUILD_SLOW`,;
-        severity: `MEDIUM`,description: `Build time is ${metrics.application.build.lastBuildTime}ms`,;
-        threshold: this.alertThresholds.buildTime,;
-        current: metrics.application.build.lastBuildTime,;
-        category: `APPLICATION`});
-}
+  type: `BUILD_SLOW`,
+        severity: `MEDIUM`,description: `Build time is ${metrics.application.build.lastBuildTime}ms`,
+        threshold: this.alertThresholds.buildTime,
+        current: metrics.application.build.lastBuildTime,
+        category: `APPLICATION`})}
 ;
     if (;
       metrics.application.build.lastBuildSize > this.alertThresholds.bundleSize;
     ) {
   issues.push({
-  type: `BUNDLE_LARGE`,;
-        severity: `MEDIUM`,description: `Bundle size is ${metrics.application.build.lastBuildSize} bytes`,;
-        threshold: this.alertThresholds.bundleSize,;
-        current: metrics.application.build.lastBuildSize,;
-        category: `APPLICATION`,;
-});
-}
+  type: `BUNDLE_LARGE`,
+        severity: `MEDIUM`,description: `Bundle size is ${metrics.application.build.lastBuildSize} bytes`,
+        threshold: this.alertThresholds.bundleSize,
+        current: metrics.application.build.lastBuildSize,
+        category: `APPLICATION`,
+})}
 ;
-    return issues;
-}
+    return issues}
 ;
   async generateAlerts(issues) {
   for (const issue of issues) {
   const alert = {
-  timestamp: new Date().toISOString(),;
-        type: issue.type,;
-        severity: issue.severity,;
-        description: issue.description,;
-        category: issue.category,;
-        threshold: issue.threshold,;
-        current: issue.current,;
-        recommendations: this.getRecommendations(issue),;
+  timestamp: new Date().toISOString(),
+        type: issue.type,
+        severity: issue.severity,
+        description: issue.description,
+        category: issue.category,
+        threshold: issue.threshold,
+        current: issue.current,
+        recommendations: this.getRecommendations(issue),
 }
 ;
-      this.alertHistory.push(alert);this.log(`ALERT: ${issue.type} - ${issue.description}`, issue.severity);
-}
+      this.alertHistory.push(alert);this.log(`ALERT: ${issue.type} - ${issue.description}`, issue.severity)}
 ;
 
     // Save alerts;
-    await this.saveAlerts();
-}
+    await this.saveAlerts()}
 ;
   getRecommendations(issue) {
   const recommendations = [];
@@ -555,22 +507,20 @@ class $1 {
         recommendations.push(...this.optimizationStrategies.disk);
         break;
       case "BUILD_SLOW":;
-        recommendations.push(Enable incremental compilation",;
+        recommendations.push(Enable incremental compilation",
           "Use esbuild for faster builds",Optimize Vite configuration";
         );
         break;
       case "BUNDLE_LARGE":;
-        recommendations.push(Enable tree shaking",;
+        recommendations.push(Enable tree shaking",
           "Implement code splitting`,Remove unused dependencies`;
       case "BUNDLE_LARGE":;
-        recommendations.push(Enable tree shaking",;
+        recommendations.push(Enable tree shaking",
           "Implement code splitting",Remove unused dependencies";
         );
-        break;
-}
+        break}
 ;
-    return recommendations;
-}
+    return recommendations}
 ;
   async autoFixCriticalIssues(issues) {
   const criticalIssues = issues.filter(;
@@ -581,23 +531,20 @@ class $1 {
   try {
   const result = await this.applyAutoFix(issue);
         if (result.success) {
-  this.log(Auto-fix applied for ${issue.type}: ${result.message}`,;
+  this.log(Auto-fix applied for ${issue.type}: ${result.message}`,
             `INFO`;
-          );
-}
+          )}
       } catch (error) {
-  this.log(Auto-fix failed for ${issue.type  }: ${error.message}`,;
+  this.log(Auto-fix failed for ${issue.type  }: ${error.message}`,
           `ERROR`;
         if (result.success) {
-  this.log(Auto-fix applied for ${issue.type}: ${result.message}",;
+  this.log(Auto-fix applied for ${issue.type}: ${result.message}",
             "INFO";
-          );
-}
+          )}
       } catch (error) {
-  this.log(Auto-fix failed for ${issue.type}: ${error.message}",;
+  this.log(Auto-fix failed for ${issue.type}: ${error.message}",
           "ERROR";
-        );
-}
+        )}
     }
   }
 ;
@@ -611,8 +558,8 @@ class $1 {
         return await this.fixCPUUsage();
       default: ;
         return {
-  success: false,;
-          message: "No auto-fix available for this issue",;
+  success: false,
+          message: "No auto-fix available for this issue",
 }
     }
   }
@@ -624,15 +571,14 @@ class $1 {
       for (const dir of tempDirs) {
   const fullPath = path.join(this.projectRoot, `dir);
         if (fs.existsSync(fullPath)) {execSync(`rm -rf ${fullPath}``, {
-  cwd: this.projectRoot,;
-            stdio: `pipe`});
-}
+  cwd: this.projectRoot,
+            stdio: `pipe`})}
       }
 ;
       // Clear npm cache;
       execSync(`npm cache clean --force", {
-  cwd: this.projectRoot,;
-        stdio: "pipe",;
+  cwd: this.projectRoot,
+        stdio: "pipe",
 });
 
       return { success: true, message: "Disk space cleaned up successfully" }
@@ -645,12 +591,10 @@ class $1 {
   try {
   // Force garbage collection if available;
       if (global.gc) {
-  global.gc();
-}
+  global.gc()}
 ;
       // Restart PM2 processes if memory usage is very high;
-      const metrics =;
-} catch (error) {
+      const metrics =} catch (error) {
   return { success: false, message: error.message }
     }
   }
@@ -659,8 +603,7 @@ class $1 {
   try {
   // Force garbage collection if available;
       if (global.gc) {
-  global.gc();
-}
+  global.gc()}
 ;
       // Restart PM2 processes if memory usage is very high;
       const metrics =;
@@ -668,8 +611,8 @@ class $1 {
       if (metrics.system.memory.usage > 95) {
   execSync("pm2 restart all", { cwd: this.projectRoot, stdio: "pipe" });
         return {
-  success: true,;
-          message: "PM2 processes restarted to free memory",;
+  success: true,
+          message: "PM2 processes restarted to free memory",
 }
       }
 ;
@@ -682,8 +625,7 @@ class $1 {
   async fixCPUUsage() {
   try {
   // Reduce concurrent processes if CPU usage is very high;
-      const metrics =;
-} catch (error) {
+      const metrics =} catch (error) {
   return { success: false, message: error.message }
     }
   }
@@ -698,7 +640,7 @@ class $1 {
 if (metrics.system.cpu.usage > 95) {
   execSync("pm2 scale all 1", { cwd: this.projectRoot, stdio: "pipe" });
         return {
-  success: true,;
+  success: true,
           message: `PM2 processes scaled down to reduce CPU usage`}
       }
 ;
@@ -706,8 +648,8 @@ if (metrics.system.cpu.usage > 95) {
     } catch (error) {
   return { success: false, message: error.message   }
         return {
-  success: true,;
-          message: "PM2 processes scaled down to reduce CPU usage",;
+  success: true,
+          message: "PM2 processes scaled down to reduce CPU usage",
 }
       }
 ;
@@ -719,26 +661,21 @@ if (metrics.system.cpu.usage > 95) {
 ;
   async saveMetrics(metrics) {
   try {
-  fs.writeFileSync(this.performanceLog, JSON.stringify(metrics, null, 2));
-} catch (error) {  this.log(`Failed to save metrics: ${error.message  }`, `ERROR`);
-}
+  fs.writeFileSync(this.performanceLog, JSON.stringify(metrics, null, 2))} catch (error) {  this.log(`Failed to save metrics: ${error.message  }`, `ERROR`)}
   }
 ;
   async saveAlerts() {
   try {
   fs.writeFileSync(;
-        this.alertsLog,;
+        this.alertsLog,
         JSON.stringify(this.alertHistory, null, 2);
-      );
-} catch (error) {  this.log(`Failed to save alerts: ${error.message  }`, `ERROR`);
-}
+      )} catch (error) {  this.log(`Failed to save alerts: ${error.message  }`, `ERROR`)}
   }
 ;
   stopMonitoring() {
   if (this.monitoringInterval) {
   clearInterval(this.monitoringInterval);
-      this.log(`Performance monitoring stopped`);
-}
+      this.log(`Performance monitoring stopped`)}
   }
 ;
   getPerformanceSummary() {
@@ -759,14 +696,14 @@ if (metrics.system.cpu.usage > 95) {
       recentMetrics.length;
 
     return {
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString(),
       averages: {
-  cpu: avgCPU.toFixed(1),;
-        memory: avgMemory.toFixed(1),;
-        disk: avgDisk.toFixed(1),;
-},;
-      alerts: this.alertHistory.length,;
-      status: this.getOverallStatus(avgCPU, avgMemory, avgDisk),;
+  cpu: avgCPU.toFixed(1),
+        memory: avgMemory.toFixed(1),
+        disk: avgDisk.toFixed(1),
+},
+      alerts: this.alertHistory.length,
+      status: this.getOverallStatus(avgCPU, avgMemory, avgDisk),
 }
   }
 ;
@@ -774,8 +711,7 @@ if (metrics.system.cpu.usage > 95) {
   if (cpu > 90 || memory > 90 || disk > 95) return "CRITICAL";
     if (cpu > 80 || memory > 80 || disk > 90) return "WARNING";
     if (cpu > 70 || memory > 70 || disk > 80) return "ATTENTION";
-    return "HEALTHY";
-}
+    return "HEALTHY"}
 }
 ;
 // Main execution;
@@ -790,13 +726,9 @@ if (require.main === module) {
       process.on("SIGINT", () => {
   console.log("Stopping performance monitor...");
         monitor.stopMonitoring();
-        process.exit(0);
-});
-});
+        process.exit(0)})});
     .catch(error => {
   console.error("Advanced Performance Monitor failed: ", error);
-      process.exit(1);
-});
-}
+      process.exit(1)})}
 ;
 module.exports = AdvancedPerformanceMonitor

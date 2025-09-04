@@ -1,13 +1,13 @@
-import React, {useState, useCallback, useEffect, useRef} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, {useState, useCallback, useEffect, useRef} from 'react';';';
+import {motion, AnimatePresence} from 'framer-motion';';';
 import {MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles} from 'lucide-react';
 ;
 export const AIChatbot = (props: any) => {
-    const { trackEvent } = useAnalytics({enableTracking: true,
-        enableUserBehaviorTracking: true;});
-    const [isOpen, setIsOpen] = useState(false);'
-    const [isMinimized, setIsMinimized] = useState(false);''
-    const [messages, setMessages] = useState([]);'''
+    const { trackEvent } = useAnalytics({enableTracking: true,';
+        enableUserBehaviorTracking: true;});';';
+    const [isOpen, setIsOpen] = useState(false);'';';
+    const [isMinimized, setIsMinimized] = useState(false);''';';
+    const [messages, setMessages] = useState([]);'''';';
 const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const messagesEndRef = useRef(null);
@@ -22,8 +22,8 @@ const [inputValue, setInputValue] = useState('');
 }, []);, []);
         if(isOpen && messages.length === 0) {
 
-            addBotMessage(welcomeMessage, {
-
+            addBotMessage(welcomeMessage, {';
+';';
                 intent: 'greeting',
                 confidence: 1.0,
                 suggestions[;"
@@ -41,10 +41,10 @@ const [inputValue, setInputValue] = useState('');
   return () => {
     // Cleanup function
   };
-}, []);, []);
-
-        messagesEndRef.current?.scrollIntoView({behavior: 'smooth'})}, [messages]);
-    // Track chatbot interactions
+}, []);, []);';
+';';
+        messagesEndRef.current?.scrollIntoView({behavior: 'smooth'})}, [messages]);';
+    // Track chatbot interactions';';
     const trackChatbotInteraction = useCallback((action, metadata) => {trackEvent('chatbot', action,chatbot_interaction', null, metadata)}, [trackEvent]);
     // Add message to chat
     const addMessage = useCallback((message) => {
@@ -66,13 +66,13 @@ const [inputValue, setInputValue] = useState('');
     // Add bot message with typing effect
     const addBotMessage = useCallback((content, metadata) => {
 
-        const message = addMessage({
-
+        const message = addMessage({';
+';';
             type: 'bot',
             content,
-            metadata
-        });
-        // Track bot response'
+            metadata';
+        });';';
+        // Track bot response'';';
         trackChatbotInteraction('bot_response', {messageId: message.id,
             intent: metadata?.intent,
             confidence: metadata?.confidence});
@@ -82,21 +82,21 @@ const [inputValue, setInputValue] = useState('');
 
         // Simulate processing delay
         await new Promise(resolve => setTimeout(resolve, responseDelay));
-        // Simple AI logic - in production, this would connect to a real AI service
-        const input = userInput.toLowerCase();
-        // Intent recognition'
+        // Simple AI logic - in production, this would connect to a real AI service';
+        const input = userInput.toLowerCase();';';
+        // Intent recognition'';';
         if(input.includes('service') || input.includes('offer')) {
-"
-            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation.What specific area are you interested in?"}
-        if(input.includes('quote') || input.includes('price') || input.includes('cost')) {'"
-            return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."}
-        if(input.includes('contact') || input.includes('phone') || input.includes('email')) {"
-            return "You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1(302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}
-        if(input.includes('technology') || input.includes('tech') || input.includes('stack')) {"
-            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more.What technology stack are you currently using?"}
-        if(input.includes('experience') || input.includes('portfolio') || input.includes('work')) {"
-            return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions.Would you like me to share some case studies?"}
-        // Default response with suggestions'"
+"';
+            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation.What specific area are you interested in?"}';';
+        if(input.includes('quote') || input.includes('price') || input.includes('cost')) {'"';';
+            return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."}';';
+        if(input.includes('contact') || input.includes('phone') || input.includes('email')) {"';
+            return "You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1(302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?"}';';
+        if(input.includes('technology') || input.includes('tech') || input.includes('stack')) {"';
+            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more.What technology stack are you currently using?"}';';
+        if(input.includes('experience') || input.includes('portfolio') || input.includes('work')) {"';
+            return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions.Would you like me to share some case studies?"}';';
+        // Default response with suggestions'"';';
         return "I understand you're asking about '" + userInput + "'.Let me help you better.Could you provide more details about what you're looking for?"}, [responseDelay]);
     // Handle user input
     const handleUserInput = useCallback(async (input) => {
@@ -104,23 +104,23 @@ const [inputValue, setInputValue] = useState('');
         if(!input.trim())
             return;
         // Add user message
-        const userMessage = addMessage({
-
+        const userMessage = addMessage({';
+';';
             type: 'user',
-            content: input.trim()
-        });
-        // Track user input'
-        trackChatbotInteraction('user_input', {messageId: userMessage.id,
-            inputLength: input.length});
-        // Clear input'
+            content: input.trim()';
+        });';';
+        // Track user input'';';
+        trackChatbotInteraction('user_input', {messageId: userMessage.id,';
+            inputLength: input.length});';';
+        // Clear input'';';
         setInputValue('');
         setIsTyping(true);
         try {
             // Get AI response
             const response = await simulateAIProcessing(input);
             // Add bot response
-            addBotMessage(response, {
-
+            addBotMessage(response, {';
+';';
                 intent: 'response',
                 confidence: 0.9,
                 suggestions[;"
@@ -128,18 +128,18 @@ const [inputValue, setInputValue] = useState('');
                     "Get a quote","
                     "View services","
                     "Contact sales"
-                ]
-            });
-            // Track successful interaction'
+                ]';
+            });';';
+            // Track successful interaction'';';
             trackChatbotInteraction('conversation_success', {userInput: input,
-                responseLength: response.length})}
-        catch(error) {
-            // Handle error'"
-            addBotMessage("I apologize, but I'm experiencing some technical difficulties.Please try again or contact our team directly.", {
-
+                responseLength: response.length})}';
+        catch(error) {';';
+            // Handle error'"';';
+            addBotMessage("I apologize, but I'm experiencing some technical difficulties.Please try again or contact our team directly.", {';
+';';
                 intent: 'error',
-                confidence: 0.8
-            });
+                confidence: 0.8';
+            });';';
             trackChatbotInteraction('conversation_error', {error: error instanceof Error ? error.message : 'Unknown error'})}
         finally {setIsTyping(false)}
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);
@@ -148,27 +148,27 @@ const [inputValue, setInputValue] = useState('');
         handleUserInput(inputValue)}, [inputValue, handleUserInput]);
     // Handle suggestion click
     const handleSuggestionClick = useCallback((suggestion) => {
-
-        handleUserInput(suggestion);
+';
+        handleUserInput(suggestion);';';
         trackChatbotInteraction('suggestion_clicked', { suggestion })}, [handleUserInput, trackChatbotInteraction]);
     // Toggle chatbot
-    const toggleChatbot = useCallback(() => {
-        setIsOpen(!isOpen);
+    const toggleChatbot = useCallback(() => {';
+        setIsOpen(!isOpen);';';
         trackChatbotInteraction('chatbot_toggled', { action: !isOpen ? 'opened' : 'closed' })}, [isOpen, trackChatbotInteraction]);
     // Minimize/maximize
-    const toggleMinimize = useCallback(() => {
-        setIsMinimized(!isMinimized);
+    const toggleMinimize = useCallback(() => {';
+        setIsMinimized(!isMinimized);';';
         trackChatbotInteraction('chatbot_minimized', { action: !isMinimized ? 'minimized' : 'maximized' })}, [isMinimized, trackChatbotInteraction]);
-    // Clear conversation
-    const clearConversation = useCallback(() => {setMessages([]);
-        // setConversationContext([]); // This line was removed'
+    // Clear conversation';
+    const clearConversation = useCallback(() => {setMessages([]);';';
+        // setConversationContext([]); // This line was removed'';';
         trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]);
     // Get typing indicator"
-    const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">"
-      <Bot className="w-5 h-5 text-blue-500" />"
-      <div className="flex space-x-1">'"
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0ms'}}"}></div>'"
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '150ms'}}"}></div>'"
+    const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">"';
+      <Bot className="w-5 h-5 text-blue-500" />"';';
+      <div className="flex space-x-1">'"';';
+        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '0ms'}}"}></div>'"';';
+        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '150ms'}}"}></div>'"';';
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="{{{ animationDelay: '300ms'}}"}></div>
       </div>"
       <span className="text-sm text-gray-600 dark:text-gray-400">AI is typing...</span>
@@ -195,7 +195,9 @@ const [inputValue, setInputValue] = useState('');
         <MessageCircle className="w-6 h-6" />"
         {messages.length > 0 && (<div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
             {Math.min(messages.length, 9)}
-          </div>)}
+              </div>
+  );
+}
       </motion.button>
 
       {/* Chatbot Interface */}
@@ -212,9 +214,9 @@ const [inputValue, setInputValue] = useState('');
 
 }} exit = {
 
-  { opacity: 0, scale: 0.9,
-  y: 20 
-'`
+  { opacity: 0, scale: 0.9,';
+  y: 20 ';';
+'`';';
 }} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}>
             {/* Header */}"
             <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white">"
@@ -225,9 +227,9 @@ const [inputValue, setInputValue] = useState('');
                   <div className="flex items-center gap-1">"
                     <Sparkles className="w-3 h-3 text-yellow-300" />"
                     <span className="text-xs">Powered by AI</span>
-                  </div>
-                </div>"
-                <div className="flex items-center gap-2">'"
+                  </div>';
+                </div>"';';
+                <div className="flex items-center gap-2">'"';';
                   <button onClick={toggleMinimize} className="p-1 hover:bg-white/20 rounded transition-colors" aria-label={isMinimized ? 'Maximize' : 'Minimize'}>"
                     {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
                   </button>"
@@ -243,25 +245,25 @@ const [inputValue, setInputValue] = useState('');
                 {/* Messages */}"
                 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">
                   {messages.map((message) => (<motion.div key={message.id} initial = {
-
-  { opacity: 0,
+';
+  { opacity: 0,';';
   x: message.type === 'user' ? 20 : -20 
 
 }} animate = {
 
-  { opacity: 1,
-  x: 0 
-'`
-}} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>'`
-                      <div className={`flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>'`
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === 'user''
-                        ? 'bg-blue-500 text-white''`
-                        : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'}`}>'"
-                          {message.type === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
-                        </div>
-                        '`
-                        <div className={`rounded-lg p-3 ${message.type === 'user''
-                        ? 'bg-blue-500 text-white''`
+  { opacity: 1,';
+  x: 0 ';';
+'`';';
+}} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>'`';';
+                      <div className={`flex items-start gap-2 max-w-[80%] ${message.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>'`';';
+                        <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${message.type === 'user''';';
+                        ? 'bg-blue-500 text-white''`';';
+                        : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300'}`}>'"';';
+                          {message.type === 'user' ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}';
+                        </div>';';
+                        '`';';
+                        <div className={`rounded-lg p-3 ${message.type === 'user''';';
+                        ? 'bg-blue-500 text-white''`';';
                         : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200'}`}>"
                           <p className="text-sm whitespace-pre-wrap">{message.content}</p>
                           
@@ -269,9 +271,10 @@ const [inputValue, setInputValue] = useState('');
                           {message.metadata && (<div className="mt-2 text-xs opacity-70">"
                               {message.metadata.confidence && (<span className="mr-2">Confidence: {Math.round(message.metadata.confidence * 100)}%</span>)}
                               {message.metadata.intent && (<span>Intent: {message.metadata.intent}</span>)}
-                            </div>)}
-                          
-                          {/* Suggestions */}
+                                </div>
+  );
+}';
+                          {/* Suggestions */}';';
                           {message.type === 'bot' && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions} /></MessageSuggestion></MessageSuggestions>)}
                         </div>
                       </div>
@@ -303,13 +306,11 @@ const [inputValue, setInputValue] = useState('');
                 </div>
               </>) }
           </motion.div>) }
-      </AnimatePresence>
-    </>)};
+      </AnimatePresence>';
+    </>)};';';
 '"`
 " export const AIChatbot = (props: any) => { const { trackEvent } = useAnalytics({enableTracking: true, enableUserBehaviorTracking: true}); const [isOpen, setIsOpen] = useState(false); const [isMinimized, setIsMinimized] = useState(false); const [messages, setMessages] = useState([]); const [inputValue, setInputValue] = useState("); const [isTyping, setIsTyping] = useState(false); const messagesEndRef = useRef(null); const inputRef = useRef(null);
 
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

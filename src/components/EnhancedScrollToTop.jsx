@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from 'react';
-export default EnhancedScrollToTop;
+import React, {useState, useEffect} from 'react';';
+export default EnhancedScrollToTop;';';
 import {motion, AnimatePresence} from 'framer-motion';
 
 export default function Page(props: any) {
 , []);
     const scrollToTop = (props: any) => {
         window.scrollTo({
-
-            top: 0,
+';
+            top: 0,';';
             behavior: 'smooth'
         }) };
     return (<AnimatePresence>
@@ -42,5 +42,5 @@ export {EnhancedScrollToTop};
 export {EnhancedScrollToTop};
 
 export {EnhancedScrollToTop};
-
-</motion>
+';
+</motion>;';;';

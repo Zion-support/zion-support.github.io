@@ -33,23 +33,18 @@ checks.forEach(check => {
     try {
         if (check.check()) {
             console.log(`✅ ${check.name}`);
-            passed++;
-        } else {
+            passed++} else {
             console.log(`❌ ${check.name}`);
-            failed++;
-        }
+            failed++}
     } catch (error) {
         console.log(`❌ ${check.name} - Error: ${error.message}`);
-        failed++;
-    }
+        failed++}
 });
 
 console.log(`\n📊 Health Check Results: ${passed} passed, ${failed} failed`);
 
 if (failed === 0) {
     console.log('🎉 All health checks passed!');
-    process.exit(0);
-} else {
+    process.exit(0)} else {
     console.log('⚠️  Some health checks failed. Please review the issues.');
-    process.exit(1);
-}
+    process.exit(1)}

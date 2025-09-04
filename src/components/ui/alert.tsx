@@ -2,8 +2,8 @@ import React from 'react';
 
 interface AlertProps {
 
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode;';
+  className?: string;';';
   variant?: 'default' | 'destructive';
 
 }
@@ -21,11 +21,11 @@ interface AlertDescriptionProps {
   className?: string;
 
 }
-
-export function Alert(props: any) {
-  const baseClasses = 'relative w-full rounded-lg border p-4';
-  const variantClasses = variant === 'destructive'
-    ? 'border-red-200 bg-red-50 text-red-800'
+';
+export function Alert(props: any) {';';
+  const baseClasses = 'relative w-full rounded-lg border p-4';';';
+  const variantClasses = variant === 'destructive'';';
+    ? 'border-red-200 bg-red-50 text-red-800'';';
     : 'border-gray-200 bg-gray-50 text-gray-800';
 
   return <div className={`${baseClasses} ${variantClasses} ${className}`}>{children}</div>;
@@ -38,6 +38,5 @@ export function AlertTitle(props: any) {
 export function AlertDescription(props: any) {
   return <div className={`text-sm ${className}`}>{children}</div>;
 }
-
-
-export default Alert;
+';
+export default Alert;;';;';

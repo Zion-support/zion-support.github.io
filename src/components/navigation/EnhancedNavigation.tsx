@@ -280,8 +280,9 @@ const EnhancedNavigation = (props: any) => {
                             </Link>
                           ))}
                         </div>
-                      </div>
-                    )}
+                          </div>
+  );
+}
                   </div>
                 ) : (
                   <Link
@@ -367,8 +368,9 @@ const EnhancedNavigation = (props: any) => {
                               <span>{dropdownItem.name}</span>
                             </Link>
                           ))}
-                        </div>
-                      )}
+                            </div>
+  );
+}
                     </div>
                   ) : (
                     <Link
@@ -394,15 +396,15 @@ const EnhancedNavigation = (props: any) => {
               </Link>
             </div>
           </div>
-        </div>
-      )}
+            </div>
+  );
+}
     </nav>
   )
 }
 
 export default EnhancedNavigation
 </ChevronDown>
-</ChevronDown>
 </string>
 </any>
-</any>
+</any>;;

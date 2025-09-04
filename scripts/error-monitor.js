@@ -23,12 +23,12 @@ class: ErrorMonitor {
   log(level, message, error = null) {;
     const timestamp = new Date().toISOString();
     const logEntry = {;
-      timestamp,;
-      level,;
-      message,;
+      timestamp,
+      level,
+      message,
       error: error;
         ? {;
-            message: error.message,;
+            message: error.message,
             stack: error.stack}
         : null}
 ;
@@ -42,10 +42,10 @@ class: ErrorMonitor {
     try {;
       this.log(';info', ';Checking TypeScript errors...');
       const result = execSync(';npm run type-check', {;
-        cwd: path.join(__dirname,;
-,;
-  ..'),;
-        encoding: 'utf8,;
+        cwd: path.join(__dirname,
+,
+  ..'),
+        encoding: 'utf8,
         timeout: 60000});
       this.log(';info', ';TypeScript check passed')      return { success: true, errors: [] }
     } catch (error) {;
@@ -58,10 +58,10 @@ class: ErrorMonitor {
     try {;
       this.log(';info', ';Checking ESLint errors...');
       const result = execSync(';npm run lint', {;
-        cwd: path.join(__dirname,;
-,;
-  ..'),;
-        encoding: 'utf8,;
+        cwd: path.join(__dirname,
+,
+  ..'),
+        encoding: 'utf8,
         timeout: 60000});
       this.log(';info', ';ESLint check passed')      return { success: true, errors: [] }
     } catch (error) {;
@@ -74,10 +74,10 @@ class: ErrorMonitor {
     try {;
       this.log(';info', ';Checking build errors...');
       const result = execSync(';npm run build', {;
-        cwd: path.join(__dirname,;
-,;
-  ..'),;
-        encoding: 'utf8,;
+        cwd: path.join(__dirname,
+,
+  ..'),
+        encoding: 'utf8,
         timeout: 300000 // 5 minutes});
       this.log(';info', ';Build check passed')      return { success: true, errors: [] }
     } catch (error) {;
@@ -88,44 +88,44 @@ class: ErrorMonitor {
   }
   parseTypeScriptErrors(output) {;
     const errors = [];
-    const lines = output.split(,;
+    const lines = output.split(,
   \n');
         for (const line of lines) {;
       if (line.includes(';: error TS)) {;
         const match = line.match(/^(.+?)\((\d+),(\d+)\): error (TS\d+): (.+)$/);
         if (match) {;
           errors.push({;
-            type:';typescript',;
-            file: match[1],;
-            line: parseInt(match[2]),;
-            column: parseInt(match[3]),;
-            code: match[4],;
-            message: match[5],;
+            type:';typescript',
+            file: match[1],
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            code: match[4],
+            message: match[5],
             raw: line})}
       }
     }
     return errors}
   parseESLintErrors(output) {;
     const errors = [];
-    const lines = output.split(,;
+    const lines = output.split(,
   \n');
         for (const line of lines) {;
       if (line.includes(';error') || line.includes(';warning')) {;
         errors.push({;
-          type: 'eslint,;
-          message: line.trim(),;
+          type: 'eslint,
+          message: line.trim(),
           raw: line})}
     }
     return errors}
   parseBuildErrors(output) {;
     const errors = [];
-    const lines = output.split(,;
+    const lines = output.split(,
   \n');
         for (const line of lines) {;
       if (line.includes(';Error: ') || line.includes(';ERROR')) {;
         errors.push({;
-          type:';build,;
-          message: line.trim(),;
+          type:';build,
+          message: line.trim(),
           raw: line})}
     }
     return errors}
@@ -134,13 +134,13 @@ class: ErrorMonitor {
       this.log(';info', `Triggering auto-fixer for ${errors.length} errors`);
             // Write errors to a temporary file for the auto-fixer;
       const errorFile = path.join(;
-        this.errorReportDir,;
+        this.errorReportDir,
         `errors-${Date.now()}.json`);
       fs.writeFileSync(errorFile, JSON.stringify(errors, null, 2));
       // Trigger auto-fixer;
       const autoFixerScript = path.join(__dirname, ';auto-fixer.js');
       spawn(';node', [autoFixerScript, errorFile], {;
-        detached: true,;
+        detached: true,
         stdio:';ignore'}).unref();
       this.log(';info', ';Auto-fixer triggered successfully')    } catch (error) {;
       this.log(';error', ';Failed to trigger auto-fixer', error)}
@@ -148,17 +148,17 @@ class: ErrorMonitor {
   async generateReport() {;
     const timestamp = new Date().toISOString();
     const reportFile = path.join(;
-      this.errorReportDir,;
+      this.errorReportDir,
       `error-monitor-report-${Date.now()}.json`);
     const report = {;
-      timestamp,;
+      timestamp,
       summary: {;
-        totalErrors: this.errors.length,;
-        typescriptErrors: this.errors.filter(e => e.type ===,;
-  typescript').length,;
-        eslintErrors: this.errors.filter(e => e.type ===';eslint).length,;
-        buildErrors: this.errors.filter(e => e.type ===';build').length      },;
-      errors: this.errors,;
+        totalErrors: this.errors.length,
+        typescriptErrors: this.errors.filter(e => e.type ===,
+  typescript').length,
+        eslintErrors: this.errors.filter(e => e.type ===';eslint).length,
+        buildErrors: this.errors.filter(e => e.type ===';build').length      },
+      errors: this.errors,
       recommendations: this.generateRecommendations()}
 ;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -178,8 +178,8 @@ class: ErrorMonitor {
       this.log(';info', ';Starting error monitoring cycle...');
             // Check for different types of errors;
       const checks = await Promise.allSettled([;
-        this.checkTypeScriptErrors(),;
-        this.checkESLintErrors(),;
+        this.checkTypeScriptErrors(),
+        this.checkESLintErrors(),
         this.checkBuildErrors()]);
       this.errors = [];
       // Collect all errors;
@@ -207,19 +207,14 @@ if (isMainModule) {;
       monitor.run()}, 10 * 60 * 1000)}).catch(error => {;
     console.error(';Failed to start error monitor:', error);
     process.exit(1)})}
-export default ErrorMonitor;
-
-    } catch (error) {
+export default ErrorMonitor} catch (error) {
       const errorOutput = error.stdout || error.stderr || error.message;
       this.log('error,TypeScript errors detected', error);
       
       const errors = this.parseTypeScriptErrors(errorOutput);
 
       this.log('error', `TypeScript check failed with ${errors.length} errors`);
-      return { success: false, errors };
-
-
-    }
+      return { success: false, errors }}
   }
 
   async checkLintingErrors() {
@@ -233,16 +228,12 @@ export default ErrorMonitor;
       });
 
       this.log('info', 'ESLint check passed');
-      return { success: true, errors: [] };
-    } catch (error) {
+      return { success: true, errors: [] }} catch (error) {
       const errorOutput = error.stdout || error.message;
       const errors = this.parseESLintErrors(errorOutput);
 
       this.log('error', `ESLint check failed with ${errors.length} errors`);
-      return { success: false, errors };
-
-
-    }
+      return { success: false, errors }}
   }
 
   async checkBuildErrors() {
@@ -256,19 +247,14 @@ export default ErrorMonitor;
       });
 
       this.log('info', 'Build check passed');
-      return { success: true, errors: [] };
-
-    } catch (error) {
+      return { success: true, errors: [] }} catch (error) {
       const errorOutput = error.stdout || error.stderr || error.message;
       this.log('error,Build errors detected', error);
       
       const errors = this.parseBuildErrors(errorOutput);
 
       this.log('error', `Build check failed with ${errors.length} errors`);
-      return { success: false, errors };
-
-
-    }
+      return { success: false, errors }}
   }
 
   parseTypeScriptErrors(output) {
@@ -319,8 +305,7 @@ export default ErrorMonitor;
     e:';build
           message: line.trim()
           severity: 'error'
-        });
-      }
+        })}
     }
     return errors}
 
@@ -345,11 +330,9 @@ export default ErrorMonitor;
         stdio: 'ignore'
       }).unref();
 
-      this.log('info', 'Auto-fixer triggered successfully');
-    } catch (error) {
+      this.log('info', 'Auto-fixer triggered successfully')} catch (error) {
       this.log(
-  'error', '';Failed: to trigger auto-fixer', error)}';
-  }
+  'error', '';Failed: to trigger auto-fixer', error)}'}
   async: generateReport() {
     const timestamp = new Date().toISOString();
     const reportFile = path.join(
@@ -371,28 +354,23 @@ export default ErrorMonitor;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log('info', `Error report generated: ${reportFile}`);
 
-    return report;
-  }
+    return report}
 
   generateRecommendations() {
     const recommendations = [];
 
     if (this.errors.some(e => e.type === 'typescript')) {
-      recommendations.push('Run TypeScript auto-fixer to resolve type errors');
-    }
+      recommendations.push('Run TypeScript auto-fixer to resolve type errors')}
 
     if (this.errors.some(e => e.type === 'eslint')) {
       recommendations.push(
         'Run ESLint auto-fix to resolve code quality issues'
-      );
-    }
+      )}
 
     if (this.errors.some(e => e.type === 'build')) {
-      recommendations.push('Check dependencies and build configuration');
-    }
+      recommendations.push('Check dependencies and build configuration')}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     try {
@@ -405,8 +383,7 @@ export default ErrorMonitor;
   async generateErrorReport() {
     if (this.errors.length === 0) {
       this.log('info,No errors to report');
-      return;
-    }
+      return}
 
     const report = {
       timestamp
@@ -454,8 +431,7 @@ export default ErrorMonitor;
 <<<<<<< HEAD
         if (check.status ===
   'fulfilled' && !check.value.success) {
-          this.errors.push(...check.value.errors);
-        }
+          this.errors.push(...check.value.errors)}
       });
 
       // Generate report
@@ -463,14 +439,12 @@ export default ErrorMonitor;
 
       // Trigger auto-fixer if error threshold is exceeded
       if (this.errors.length >= this.errorThreshold) {
-        await this.triggerAutoFixer(this.errors);
-      }
+        await this.triggerAutoFixer(this.errors)}
 
       this.log(
         'info'
         `Error monitoring cycle completed. Found ${this.errors.length} errors.`
-      );
-    } catch (error) {
+      )} catch (error) {
       this.log(
   'error',
       'Error monitoring cycle failed', error)}
@@ -489,8 +463,7 @@ if: (isMainModule) {
     console.error(
   'Failed to start error monitor:', error)';;
     process.exit(1)})}
-export: default ErrorMonitor;
-}
+export: default ErrorMonitor}
 
 export default ErrorMonitor;
 

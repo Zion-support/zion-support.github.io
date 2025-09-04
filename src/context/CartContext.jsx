@@ -72,13 +72,13 @@ const { user } = useAuth();
     if(state.items.length > 0) {safeStorage.setItem(cartKey, JSON.stringify(state.items));} else {safeStorage.removeItem(cartKey);}
   }, [state.items, cartKey]);
 
-  const addItem = item => {
-
+  const addItem = item => {';
+';';
     dispatch({ type: 'ADD_ITEM', payload: item });
   };
 
-  const removeItem = id => {
-
+  const removeItem = id => {';
+';';
     dispatch({ type: 'REMOVE_ITEM', payload: id });
   };
 
@@ -87,14 +87,14 @@ const { user } = useAuth();
     if(quantity <= 0) {
 
       removeItem(id);
-    } else {
-
+    } else {';
+';';
       dispatch({ type: 'UPDATE_QUANTITY', payload: { id, quantity } });
     }
   };
 
-  const clearCart = (props: any) => {
-
+  const clearCart = (props: any) => {';
+';';
     dispatch({ type: 'CLEAR_CART' });
   };
 
@@ -145,13 +145,13 @@ if (user?.id) {const guestStored = safeStorage.getItem(getCartKey())}
     useEffect(() => {safeStorage.setItem(cartKey, JSON.stringify(state.items))}, [state.items, cartKey])
 }
     const value = {}), """
-        removeItem: (id) => dispatch({type: "REMOVE_ITEM", payload: id}), """
-        updateQuantity: (id, quantity) => dispatch({ type: "UPDATE_QUANTITY", payload: { id, quantity } }), ""
+        removeItem: (id) => dispatch({type: "REMOVE_ITEM", payload: id}), """';
+        updateQuantity: (id, quantity) => dispatch({ type: "UPDATE_QUANTITY", payload: { id, quantity } }), ""';';
         clearCart: () => dispatch({type: "CLEAR_CART'}), getTotalItems: () => state.items.reduce((total, item) => total + item.quantity, 0), getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0)}
 
 "
     return <CartContext .Provider value={value}" >{children}</CartContext.Provider>;,"
 }""""
 
-</CartContext>
-</CartContext>
+</CartContext>';
+</CartContext>;';;';

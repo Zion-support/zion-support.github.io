@@ -8,8 +8,7 @@ class CodeQualityChecker {
     this.results = {
       timestamp: new Date().toISOString(),
       checks: []
-    };
-  }
+    }}
 
   async checkCodeQuality() {
     console.log('🔍 Running code quality checks...');
@@ -27,26 +26,22 @@ class CodeQualityChecker {
           name: check.name,
           status: 'passed'
         });
-        console.log(`✅ ${check.name}: Passed`);
-      } catch (error) {
+        console.log(`✅ ${check.name}: Passed`)} catch (error) {
         this.results.checks.push({
           name: check.name,
           status: 'failed',
           error: error.message
         });
-        console.log(`❌ ${check.name}: Failed`);
-      }
+        console.log(`❌ ${check.name}: Failed`)}
     }
 
     const reportPath = path.join(process.cwd(), 'code-quality-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log('📄 Code quality report saved');
-  }
+    console.log('📄 Code quality report saved')}
 }
 
 if (require.main === module) {
   const checker = new CodeQualityChecker();
-  checker.checkCodeQuality().catch(console.error);
-}
+  checker.checkCodeQuality().catch(console.error)}
 
 module.exports = CodeQualityChecker;

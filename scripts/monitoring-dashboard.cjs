@@ -21,20 +21,17 @@ class MonitoringDashboard {
       alerts: []
     };
     
-    this.ensureLogDir();
-  }
+    this.ensureLogDir()}
 
   ensureLogDir() {
     if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: true });
-    }
+      fs.mkdirSync(this.logDir, { recursive: true })}
   }
 
   log(message, level = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-  }
+    console.log(logMessage)}
 
   getSystemMetrics() {
     try {
@@ -61,8 +58,7 @@ class MonitoringDashboard {
         memoryUsage: memoryPercent,
         cpuLoad: cpuLoad,
         timestamp: new Date().toISOString()
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Error getting system metrics: ${error.message}`, 'error');
       return {
         diskUsage: 0,
@@ -70,8 +66,7 @@ class MonitoringDashboard {
         cpuLoad: 0,
         timestamp: new Date().toISOString(),
         error: error.message
-      };
-    }
+      }}
   }
 
   getApplicationMetrics() {
@@ -92,8 +87,7 @@ class MonitoringDashboard {
         version: packageJson.version,
         sourceFiles,
         timestamp: new Date().toISOString()
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Error getting application metrics: ${error.message}`, 'error');
       return {
         buildExists: false,
@@ -102,26 +96,21 @@ class MonitoringDashboard {
         sourceFiles: 0,
         timestamp: new Date().toISOString(),
         error: error.message
-      };
-    }
+      }}
   }
 
   getDirectorySize(dirPath) {
     try {
       const output = execSync(`du -sb ${dirPath} 2>/dev/null || echo 0`, { encoding: 'utf8' });
-      return parseInt(output.split('\t')[0]) || 0;
-    } catch {
-      return 0;
-    }
+      return parseInt(output.split('\t')[0]) || 0} catch {
+      return 0}
   }
 
   countSourceFiles() {
     try {
       const output = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | grep -v node_modules | grep -v .next | wc -l', { encoding: 'utf8' });
-      return parseInt(output.trim()) || 0;
-    } catch {
-      return 0;
-    }
+      return parseInt(output.trim()) || 0} catch {
+      return 0}
   }
 
   getPerformanceMetrics() {
@@ -130,8 +119,7 @@ class MonitoringDashboard {
       let buildTime = 0;
       if (fs.existsSync('.next')) {
         const stats = fs.statSync('.next');
-        buildTime = Date.now() - stats.mtime.getTime();
-      }
+        buildTime = Date.now() - stats.mtime.getTime()}
 
       // Check for recent automation reports
       const reports = this.getRecentReports();
@@ -141,8 +129,7 @@ class MonitoringDashboard {
         recentReports: reports.length,
         lastBuild: fs.existsSync('.next') ? fs.statSync('.next').mtime.toISOString() : null,
         timestamp: new Date().toISOString()
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Error getting performance metrics: ${error.message}`, 'error');
       return {
         buildTime: 0,
@@ -150,8 +137,7 @@ class MonitoringDashboard {
         lastBuild: null,
         timestamp: new Date().toISOString(),
         error: error.message
-      };
-    }
+      }}
   }
 
   getRecentReports() {
@@ -165,11 +151,8 @@ class MonitoringDashboard {
       return files.filter(file => {
         const filePath = path.join(this.logDir, file);
         const stats = fs.statSync(filePath);
-        return stats.mtime.getTime() > oneHourAgo;
-      });
-    } catch {
-      return [];
-    }
+        return stats.mtime.getTime() > oneHourAgo})} catch {
+      return []}
   }
 
   checkAlerts() {
@@ -181,8 +164,7 @@ class MonitoringDashboard {
         type: 'warning',
         message: `High disk usage: ${this.monitoringData.system.diskUsage}%`,
         timestamp: new Date().toISOString()
-      });
-    }
+      })}
     
     // Memory usage alert
     if (this.monitoringData.system.memoryUsage > 80) {
@@ -190,8 +172,7 @@ class MonitoringDashboard {
         type: 'warning',
         message: `High memory usage: ${this.monitoringData.system.memoryUsage}%`,
         timestamp: new Date().toISOString()
-      });
-    }
+      })}
     
     // CPU load alert
     if (this.monitoringData.system.cpuLoad > 2.0) {
@@ -199,8 +180,7 @@ class MonitoringDashboard {
         type: 'warning',
         message: `High CPU load: ${this.monitoringData.system.cpuLoad}`,
         timestamp: new Date().toISOString()
-      });
-    }
+      })}
     
     // Build size alert
     if (this.monitoringData.application.buildSize > 100) {
@@ -208,11 +188,9 @@ class MonitoringDashboard {
         type: 'info',
         message: `Large build size: ${this.monitoringData.application.buildSize}MB`,
         timestamp: new Date().toISOString()
-      });
-    }
+      })}
     
-    return alerts;
-  }
+    return alerts}
 
   async runMonitoring() {
     this.log('📊 Starting Monitoring Dashboard');
@@ -232,8 +210,7 @@ class MonitoringDashboard {
     
     this.log('🏁 Monitoring Dashboard completed');
     
-    return this.monitoringData;
-  }
+    return this.monitoringData}
 
   displayDashboard() {
     console.log('\n📊 MONITORING DASHBOARD');
@@ -259,14 +236,10 @@ class MonitoringDashboard {
       console.log('\n🚨 ALERTS:');
       this.monitoringData.alerts.forEach(alert => {
         const icon = alert.type === 'warning' ? '⚠️' : 'ℹ️';
-        console.log(`   ${icon} ${alert.message}`);
-      });
-    } else {
-      console.log('\n✅ No alerts');
-    }
+        console.log(`   ${icon} ${alert.message}`)})} else {
+      console.log('\n✅ No alerts')}
     
-    console.log('\n');
-  }
+    console.log('\n')}
 
   generateMonitoringReport() {
     const reportPath = path.join(this.logDir, `monitoring-dashboard-${this.timestamp}.json`);
@@ -284,34 +257,27 @@ class MonitoringDashboard {
     };
 
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📄 Monitoring report saved to: ${reportPath}`);
-  }
+    this.log(`📄 Monitoring report saved to: ${reportPath}`)}
 
   generateMonitoringRecommendations() {
     const recommendations = [];
     
     if (this.monitoringData.system.diskUsage > 80) {
-      recommendations.push('Consider cleaning up disk space');
-    }
+      recommendations.push('Consider cleaning up disk space')}
     
     if (this.monitoringData.system.memoryUsage > 80) {
-      recommendations.push('Monitor memory usage and consider optimization');
-    }
+      recommendations.push('Monitor memory usage and consider optimization')}
     
     if (!this.monitoringData.application.buildExists) {
-      recommendations.push('Run build process to create application bundle');
-    }
+      recommendations.push('Run build process to create application bundle')}
     
     if (this.monitoringData.application.buildSize > 100) {
-      recommendations.push('Consider optimizing bundle size');
-    }
+      recommendations.push('Consider optimizing bundle size')}
     
     if (this.monitoringData.alerts.length === 0) {
-      recommendations.push('System is running optimally');
-    }
+      recommendations.push('System is running optimally')}
     
-    return recommendations;
-  }
+    return recommendations}
 }
 
 // Main execution
@@ -319,12 +285,9 @@ if (require.main === module) {
   const dashboard = new MonitoringDashboard();
   dashboard.runMonitoring()
     .then(results => {
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch(error => {
       console.error('Fatal error:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = MonitoringDashboard;

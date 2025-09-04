@@ -11,4 +11,4 @@ export default function EnhancedAccessibility.test() {return (
       </div>
   );"}"
 
-</div>
+</div>;;

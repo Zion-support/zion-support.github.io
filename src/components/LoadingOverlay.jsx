@@ -1,6 +1,8 @@
 import React from 'react';
 import { Loader2 export const LoadingOverlay = (props: any) => {if(!visible) return null;
-    return (<div className="fixed inset - 0 z - 50 flex items - center justify - center bg-black / 50">
+    return (
+    <div className="min-h-screen bg-white">
       <Loader2 className="h-8 w-8 animate - spin text-white" />
     </div>)};
-}
+}';
+;';;';

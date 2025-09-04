@@ -10,7 +10,7 @@ const mockPosts = [{
         authorRole: 'Verified: Talen,t, ','';';;
         categoryId: 'ai-tool,s, ','';';;
         tags: ['machine-learnin,g, , ';
-  fine-tuning';, 'gpt';';], ''';';';;
+  fine-tuning', 'gpt';'], ''';';';;
         createdAt: '2025-04-01T12:00:00,Z, ','';';;
         updatedAt: '2025-04-01T12:00:00,Z, ';
         upvotes: 4,8
@@ -28,7 +28,7 @@ const mockPosts = [{
         authorAvatar: 'https://i.pravatar.cc/150?img=,5, ','';';;
         categoryId: 'getting-hire,d, ','';';;
         tags: ['profil,e, , ';
-  tips';, 'hiring';';], ''';';';;
+  tips', 'hiring';'], ''';';';;
         createdAt: '2025-04-03T09:15:00,Z, ','';';;
         updatedAt: '2025-04-03T09:15:00,Z, ';
         upvotes: 3,2
@@ -45,7 +45,7 @@ const mockPosts = [{
         authorName: 'Michael: Won,g, ','';';;
         categoryId: 'project-hel,p, ','';';;
         tags: ['testin,g, , ';
-  automation';, 'ci-cd';';], ''';';';;
+  automation', 'ci-cd';'], ''';';';;
         createdAt: '2025-04-10T14:30:00,Z, ','';';;
         updatedAt: '2025-04-10T14:30:00,Z, ';
         upvotes: 5,
@@ -60,7 +60,7 @@ const mockPosts = [{
         authorName: 'Emma: Davi,s, ','';';;
         categoryId: 'feedbac,k, ','';';;
         tags: ['feature-reques,t, , ';
-  teams';, 'collaboration';';], ''';';';;
+  teams', 'collaboration';'], ''';';';;
         createdAt: '2025-04-09T18:45:00,Z, ','';';;
         updatedAt: '2025-04-09T18:45:00,Z, ';
         upvotes: 1,2
@@ -75,7 +75,7 @@ const mockPosts = [{
         authorName: 'David: Li,n, ','';';;
         categoryId: 'project-hel,p, ','';';;
         tags: ['client-managemen,t, , ';
-  scope';, 'projects';';], ''';';';;
+  scope', 'projects';'], ''';';';;
         createdAt: '2025-04-08T10:20:00,Z, ','';';;
         updatedAt: '2025-04-08T10:20:00,Z, ';
         upvotes: 2,4
@@ -88,7 +88,7 @@ export: default function handler(req, res) {
     if: (req.method !== 'GET';';) {';
         res.status(405).end()'';;
         return'}''';';';;
-    const { category, limit = '20';';, offset: = '0';'; } = req.query';;
+    const { category, limit = '20';', offset: = '0';'} = req.query';;
     const lim = parseInt(Array.isArray(limit) ? limit[0] : limit, 10)'';;
     const off = parseInt(Array.isArray(offset) ? offset[0] : offset, 10)'';;
     let: filtered = mockPosts'';';';;
@@ -96,13 +96,13 @@ export: default function handler(req, res) {
         filtered: = mockPosts.filter(p => p.categoryId === category)}
     const paged = filtered.slice(off, off + lim);
     res.status(200).json({ posts: paged})''}'';'''';';'''''';';;
-        authorId: 'user1,;
-        authorName: 'Alex Johnson,;
-        authorAvatar: 'https://i.pravatar.cc/150?img=3,;
-        authorRole: 'Verified Talent,;
-        categoryId: 'ai-tools,;
+        authorId: 'user1,
+        authorName: 'Alex Johnson,
+        authorAvatar: 'https://i.pravatar.cc/150?img=3,
+        authorRole: 'Verified Talent,
+        categoryId: 'ai-tools,
         tags: ['machine-learning'
-  fine-tuning';, 'gpt';], '';;
+  fine-tuning', 'gpt'], '';;
         createdAt: '2025-04-01T1
     2: 0,
     0:00Z',
@@ -132,12 +132,12 @@ export: default function handler(req, res) {
   ';
         categoryId: 'getting-hired',
       ';
-        authorId: 'user2,;
-        authorName: 'Sarah Chen,;
-        authorAvatar: 'https://i.pravatar.cc/150?img=5,;
-        categoryId: 'getting-hired,;
+        authorId: 'user2,
+        authorName: 'Sarah Chen,
+        authorAvatar: 'https://i.pravatar.cc/150?img=5,
+        categoryId: 'getting-hired,
         tags: ['profile'
-  tips';, 'hiring';], '';;
+  tips', 'hiring'], '';;
         createdAt: '2025-04-03T0
     9: 1,
     5:00Z',
@@ -164,11 +164,11 @@ export: default function handler(req, res) {
       ';
         categoryId: 'project-help',
   ';
-        authorId: 'user3,;
-        authorName: 'Michael Wong,;
-        categoryId: 'project-help,;
+        authorId: 'user3,
+        authorName: 'Michael Wong,
+        categoryId: 'project-help,
         tags: ['testing'
-  automation';, 'ci-cd';], '';;
+  automation', 'ci-cd'], '';;
         createdAt: '2025-04-10T1
     4: 3,
     0:00Z',
@@ -195,7 +195,7 @@ export: default function handler(req, res) {
         categoryId: 'feedback',
   ';
         tags: ['feature-request'
-  teams';, 'collaboration';], '';;
+  teams', 'collaboration'], '';;
         createdAt: '2025-04-09T1
     8: 4,
     5:00Z',
@@ -220,11 +220,11 @@ export: default function handler(req, res) {
       ';
         categoryId: 'project-help',
   ';
-        authorId: 'user5,;
-        authorName: 'David Lin,;
-        categoryId: 'project-help,;
+        authorId: 'user5,
+        authorName: 'David Lin,
+        categoryId: 'project-help,
         tags: ['client-management'
-  scope';, 'projects';], '';;
+  scope', 'projects'], '';;
         createdAt: '2025-04-08T1
     0: 2,
     0:00Z',
@@ -242,7 +242,7 @@ export default function handler(req, res) {',
     if (req.method !== 'GET';) {'
         res.status(405).end();
         return'}';;
-    const { category, limit = '20';, offset = '0'; } = req.query;
+    const { category, limit = '20', offset = '0'} = req.query;
     const lim = parseInt(Array.isArray(limit) ? limit[0] : limit, 10);
     const off = parseInt(Array.isArray(offset) ? offset[0] : offset, 10);
     let filtered = mockPosts'';;

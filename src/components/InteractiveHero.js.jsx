@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';';';
 import {motion} from 'framer-motion';
 
 export default function Page(props: any) {]}) => {
@@ -14,11 +14,11 @@ export default function Page(props: any) {]}) => {
   };
 }, []);, []);
         const handleMouseMove = (props: any) => {
-
-            setMousePosition({ x: e.clientX, y: e.clientY })};
+';
+            setMousePosition({ x: e.clientX, y: e.clientY })};';';
         window.addEventListener('mousemove', handleMouseMove);
-        // Auto-rotate stats
-        const interval = setInterval(() => {setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);
+        // Auto-rotate stats';
+        const interval = setInterval(() => {setActiveStat((prev) => (prev + 1) % stats.length)}, 3000);';';
         return () => {window.removeEventListener('mousemove', handleMouseMove);
             clearInterval(interval)}}, [stats.length]);
     const containerVariants = {
@@ -128,8 +128,8 @@ export default function Page(props: any) {]}) => {
       {/* Interactive Grid */}"
       <div className="absolute inset-0 opacity-30">"
         <div className="absolute inset-0" style="{{{
-
-            backgroundImage: `
+';
+            backgroundImage: `';';
             linear-gradient(rgba(59; backgroundSize: '50px 50px'}}"} />
       </div>
 
@@ -148,15 +148,15 @@ export default function Page(props: any) {]}) => {
             </motion.span>
             {subtitle}
           </motion.div>
-
-          {/* Title */}"
-          <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>'"
+';
+          {/* Title */}"';';
+          <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>'"';';
             {title.split(' ').map((word, index) => (<motion.span key={index} className="inline-block mr-4" whileHover={{ scale: 1.05 }} transition = {
 "
   { type: "spring",
-  stiffness: 300 
-
-}}>'"
+  stiffness: 300 ';
+';';
+}}>'"';';
                 {word === 'Zion' ? (<span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                     {word}
                   </span>) : (word) }
@@ -188,9 +188,9 @@ export default function Page(props: any) {]}) => {
             </motion.div>
           </motion.div>
 
-          {/* Interactive Stats */}"
-          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">"
-            {stats.map((stat, index) => (<motion.div key={index} className="text-center group cursor-pointer" whileHover={{ scale: 1.1 }} onClick={() => setActiveStat(index)}>'"`
+          {/* Interactive Stats */}"';
+          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">"';';
+            {stats.map((stat, index) => (<motion.div key={index} className="text-center group cursor-pointer" whileHover={{ scale: 1.1 }} onClick={() => setActiveStat(index)}>'"`';';
                 <motion.div className={`text-4xl md:text-5xl font-bold ${stat.color} mb-2 transition-all duration-300 ${activeStat === index ? 'scale-110' : 'scale-100'}`} variants={floatingVariants} animate="animate">
                   {stat.value}
                 </motion.div>"
@@ -257,27 +257,14 @@ export default function Page(props: any) {]}) => {
   damping: 30
 
 }} />
-    </section>)};
-export default InteractiveHero;
+    </section>)};';
+export default InteractiveHero;';';
 '"`
 
 </motion>
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
 </div>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

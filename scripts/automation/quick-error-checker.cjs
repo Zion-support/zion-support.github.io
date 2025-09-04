@@ -14,24 +14,21 @@ class QuickErrorChecker {
   this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, `automation/logs/quick-error-checker.log`);
     this.fixesApplied = [];
-    this.startTime = new Date();
-}
+    this.startTime = new Date()}
 ;
   async log(message) {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(`logMessage);
-    await fs.appendFile(this.logFile, logMessage + `\n`);
-}
+    await fs.appendFile(this.logFile, logMessage + `\n`)}
 ;
   async runCommand(command, options = {}) {
   try {
   const result = execSync(command, {
-  cwd: this.projectRoot,;
-        encoding: `utf8`,;
-        stdio: options.silent ? "pipe" : "inherit",;
-        ...options;
-});
+  cwd: this.projectRoot,
+        encoding: `utf8`,
+        stdio: options.silent ? "pipe" : "inherit",
+        ...options});
       return { success: true, output: result }
     } catch (error) {
   return { success: false, output: error.stdout || error.stderr || error.message   }
@@ -47,8 +44,7 @@ class QuickErrorChecker {
     const jsFiles = [""automation/browser-error-fixer.js"", ""scripts/automation/"*.cjs", ""scripts/automation/"*.js";
     `);
     // Check for common syntax errors in JS files`);
-    const jsFiles = ["""automation/browser-error-fixer.js"""", """scripts/automation/""*.cjs", """scripts/automation/""*.js`);
-    ];
+    const jsFiles = ["""automation/browser-error-fixer.js"""", """scripts/automation/""*.cjs", """scripts/automation/""*.js`)];
     ;
     for (const pattern of jsFiles) {
   try {
@@ -63,8 +59,8 @@ class QuickErrorChecker {
               .replace(/(\w+:\s*\[[^\]]*\])\s*\n\s*(\w+:)/g, `$1,\n  $2`);
             await fs.writeFile(filePath, fixedContent);
             this.fixesApplied.push({
-  type: `syntax-fix`,;
-              file: file,;
+  type: `syntax-fix`,
+              file: file,
               timestamp: new Date().toISOString();
           if (content.includes("}\n  }") || content.includes("]\n  }")) {await this.log(🔧 Fixing syntax in ${file}`);
             let fixedContent = content;
@@ -73,14 +69,11 @@ class QuickErrorChecker {
             ;
             await fs.writeFile(filePath, fixedContent);
             this.fixesApplied.push({
-  type: "syntax-fix",;
-              file: file,;
-              timestamp: new Date().toISOString();
-});
-}
+  type: "syntax-fix",
+              file: file,
+              timestamp: new Date().toISOString()})}
         }
-      } catch (error) {  await this.log(`❌ Error checking ${pattern  }: ${error.message}`);
-}
+      } catch (error) {  await this.log(`❌ Error checking ${pattern  }: ${error.message}`)}
     }
   }
 ;
@@ -97,8 +90,8 @@ class QuickErrorChecker {
           const fixedContent = import React from `react`;\n + content;
           await fs.writeFile(filePath, fixedContent);
           this.fixesApplied.push({
-  type: `import-fix`,;
-            file: file,;
+  type: `import-fix`,
+            file: file,
             timestamp: new Date().toISOString();
 
   async checkImportErrors() {
@@ -117,13 +110,10 @@ class QuickErrorChecker {
           const fixedContent = "import React from "react";\n" + content;
           await fs.writeFile(filePath, fixedContent);
           this.fixesApplied.push({
-  type: "import-fix",;
-            file: file,;
-            timestamp: new Date().toISOString();
-});
-}
-      } catch (error) {  await this.log(`❌ Error checking ${file  }: ${error.message}`);
-}
+  type: "import-fix",
+            file: file,
+            timestamp: new Date().toISOString()})}
+      } catch (error) {  await this.log(`❌ Error checking ${file  }: ${error.message}`)}
     }
   }
 ;
@@ -135,25 +125,20 @@ class QuickErrorChecker {
       ;
       if (!content.includes("module.exports")) {
   await this.log("🔧 Fixing ESLint configuration...");const fixedConfig = `module.exports = {
-  extends: [""next/core-web-vitals"", ""next/typescript""],;
-  rules: {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn";
-},;
-  ignorePatterns: ["node_modules/", ".next/", "out/", "dist/"];
-};`;
+  extends: [""next/core-web-vitals"", ""next/typescript""],
+  rules: {@typescript-"eslint/no-unused-vars"": "warn",@typescript-"eslint/no-explicit-any"": "warn","react/react-in-jsx-scope"": "off","react/prop-types"": "off",no-console": "warn"},
+  ignorePatterns: ["node_modules/", ".next/", "out/", "dist/"]};`;
         ;
         await fs.writeFile(eslintPath, fixedConfig);
         this.fixesApplied.push({
-  type: `eslint-config-fix`,;
-          file: `.eslintrc.js`,;
+  type: `eslint-config-fix`,
+          file: `.eslintrc.js`,
           timestamp: new Date().toISOString();
         this.fixesApplied.push({
-  type: "eslint-config-fix",;
-          file: ".eslintrc.js',;
-          timestamp: new Date().toISOString();
-});
-}
-    } catch (error) {  await this.log(`❌ Error checking ESLint config: ${error.message  }`);
-}
+  type: "eslint-config-fix",
+          file: ".eslintrc.js',
+          timestamp: new Date().toISOString()})}
+    } catch (error) {  await this.log(`❌ Error checking ESLint config: ${error.message  }`)}
   }
 ;
   async run() {
@@ -168,16 +153,11 @@ class QuickErrorChecker {
       await this.log(`✅ Quick Error Check completed in ${duration.getTime()}ms`);await this.log(`📈 Fixes applied: ${this.fixesApplied.length}`);
       ;
       return {
-  success: true,;
-        fixesApplied: this.fixesApplied.length,;
-        duration: duration.getTime();
-}
-      ;
-} catch (error) {  await this.log(`❌ Quick Error Check failed: ${error.message  }`);
-      ;
-} catch (error) {await this.log(`❌ Quick Error Check failed: ${error.message}`);
-      throw error;
-}
+  success: true,
+        fixesApplied: this.fixesApplied.length,
+        duration: duration.getTime()}
+      } catch (error) {  await this.log(`❌ Quick Error Check failed: ${error.message  }`)} catch (error) {await this.log(`❌ Quick Error Check failed: ${error.message}`);
+      throw error}
   }
 }
 ;
@@ -187,11 +167,8 @@ if (require.main === module) {
   checker.run();
     .then(result => {
   console.log(`Quick error check completed successfully`);
-      process.exit(0);
-});
+      process.exit(0)});
     .catch(error => {
-  console.error(`Quick error check failed: `, error);      process.exit(1);
-});
-}
+  console.error(`Quick error check failed: `, error);      process.exit(1)})}
 ;
 module.exports = QuickErrorChecker

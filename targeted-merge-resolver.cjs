@@ -7,12 +7,10 @@ class TargetedMergeResolver {
   constructor() {
     this.projectRoot = process.cwd();
     this.resolvedFiles = [];
-    this.errors = [];
-  }
+    this.errors = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   async resolveMergeConflicts() {
     this.log('🔧 Resolving Merge Conflicts');
@@ -24,17 +22,14 @@ class TargetedMergeResolver {
       for (const file of files) {
         if (this.hasMergeConflicts(file)) {
           if (this.resolveFileConflicts(file)) {
-            this.resolvedFiles.push(file);
-          }
+            this.resolvedFiles.push(file)}
         }
       }
       
       this.log(`✅ Resolved conflicts in ${this.resolvedFiles.length} files`);
-      return this.resolvedFiles;
-    } catch (error) {
+      return this.resolvedFiles} catch (error) {
       this.log(`❌ Error resolving merge conflicts: ${error.message}`);
-      return [];
-    }
+      return []}
   }
 
   getAllFiles(dir, extensions) {
@@ -47,27 +42,22 @@ class TargetedMergeResolver {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
+          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath)}
       }
     } catch (error) {
       // Skip directories that can't be read
     }
     
-    return files;
-  }
+    return files}
 
   hasMergeConflicts(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return content.includes('<<<<<<< HEAD') || 
              content.includes('=======') || 
-             content.includes('>>>>>>> ');
-    } catch (error) {
-      return false;
-    }
+             content.includes('>>>>>>> ')} catch (error) {
+      return false}
   }
 
   resolveFileConflicts(filePath) {
@@ -86,15 +76,12 @@ class TargetedMergeResolver {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(`✅ Resolved conflicts in: ${path.relative(this.projectRoot, filePath)}`);
-        return true;
-      }
+        return true}
       
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       this.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   async run() {
@@ -103,10 +90,8 @@ class TargetedMergeResolver {
     const resolvedFiles = await this.resolveMergeConflicts();
     
     if (resolvedFiles.length > 0) {
-      this.log(`📝 ${resolvedFiles.length} files resolved, ready for commit`);
-    } else {
-      this.log('✅ No merge conflicts found');
-    }
+      this.log(`📝 ${resolvedFiles.length} files resolved, ready for commit`)} else {
+      this.log('✅ No merge conflicts found')}
     
     // Generate report
     const report = {
@@ -121,8 +106,7 @@ class TargetedMergeResolver {
       JSON.stringify(report, null, 2)
     );
     
-    this.log('📊 Report saved to merge-resolution-report.json');
-  }
+    this.log('📊 Report saved to merge-resolution-report.json')}
 }
 
 // Run the resolver

@@ -4,8 +4,8 @@ import {
   Eye,
   Type,
   Volume2,
-  Keyboard,
-  Settings
+  Keyboard,';
+  Settings';';
 } from 'lucide-react';
 
 interface AccessibilitySettings {
@@ -57,31 +57,31 @@ export function AccessibilityEnhancer(props: any) {
     // Apply letter spacing
     root.style.letterSpacing = `${settings.letterSpacing}px`;
 
-    // Apply high contrast
-    if (settings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
+    // Apply high contrast';
+    if (settings.highContrast) {';';
+      root.classList.add('high-contrast');';
+    } else {';';
       root.classList.remove('high-contrast');
     }
 
-    // Apply large text
-    if (settings.largeText) {
-      root.classList.add('large-text');
-    } else {
+    // Apply large text';
+    if (settings.largeText) {';';
+      root.classList.add('large-text');';
+    } else {';';
       root.classList.remove('large-text');
     }
 
-    // Apply reduced motion
-    if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
+    // Apply reduced motion';
+    if (settings.reducedMotion) {';';
+      root.classList.add('reduced-motion');';
+    } else {';';
       root.classList.remove('reduced-motion');
     }
 
-    // Apply high saturation
-    if (settings.highSaturation) {
-      root.classList.add('high-saturation');
-    } else {
+    // Apply high saturation';
+    if (settings.highSaturation) {';';
+      root.classList.add('high-saturation');';
+    } else {';';
       root.classList.remove('high-saturation');
     }
   }, [settings, enabled]);
@@ -92,10 +92,10 @@ export function AccessibilityEnhancer(props: any) {
 
     const handleKeyDown = (props: any) => {
       const target = event.target as HTMLElement;
-      
-      // Tab navigation enhancement
-      if (event.key === 'Tab') {
-        const focusableElements = document.querySelectorAll(
+      ';
+      // Tab navigation enhancement';';
+      if (event.key === 'Tab') {';
+        const focusableElements = document.querySelectorAll(';';
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
         
@@ -110,19 +110,19 @@ export function AccessibilityEnhancer(props: any) {
           firstElement.focus();
         }
       }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
+    };';
+';';
+    document.addEventListener('keydown', handleKeyDown);';';
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [settings.keyboardNavigation, enabled]);
 
   // Screen reader announcements
   const announceToScreenReader = (props: any) => {
-    if (!settings.screenReader) return;
-
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
+    if (!settings.screenReader) return;';
+';';
+    const announcement = document.createElement('div');';';
+    announcement.setAttribute('aria-live', 'polite');';';
+    announcement.setAttribute('aria-atomic', 'true');';';
     announcement.className = 'sr-only';
     announcement.textContent = message;
     
@@ -135,16 +135,16 @@ export function AccessibilityEnhancer(props: any) {
 
   // Add accessibility attributes to interactive elements
   useEffect(() => {
-    if (!enabled) return;
-
+    if (!enabled) return;';
+';';
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     
     interactiveElements.forEach((element) => {
       const el = element as HTMLElement;
-      
-      // Add focus indicators
-      if (!el.hasAttribute('data-accessibility-enhanced')) {
-        el.setAttribute('data-accessibility-enhanced', 'true');
+      ';
+      // Add focus indicators';';
+      if (!el.hasAttribute('data-accessibility-enhanced')) {';';
+        el.setAttribute('data-accessibility-enhanced', 'true');';';
         el.classList.add('focus-visible: outlin e-2', 'focus-visible: outlin e-blue-500', 'focus-visible: outlin e-offset-2');
       }
     });
@@ -192,14 +192,14 @@ export function AccessibilityEnhancer(props: any) {
               <label className="block text-sm font-medium text-gray-700 dark: tex t-gray-300 mb-2">
                 Font Size: {settings.fontSize}px
               </label>
-              <div className="flex items-center gap-2">
-                <button
+              <div className="flex items-center gap-2">';
+                <button';';
                   onClick={() => updateSetting('fontSize', Math.max(settings.fontSize - 2, 12))}
                   className="px-3 py-1 bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
                 >
                   A-
-                </button>
-                <button
+                </button>';
+                <button';';
                   onClick={() => updateSetting('fontSize', Math.min(settings.fontSize + 2, 24))}
                   className="px-3 py-1 bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
                 >
@@ -212,8 +212,8 @@ export function AccessibilityEnhancer(props: any) {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"
-                  checked={settings.highContrast}
+                  type="checkbox"';
+                  checked={settings.highContrast}';';
                   onChange={(e) => updateSetting('highContrast', e.target.checked)}
                   className="mr-2"
                 />
@@ -225,8 +225,8 @@ export function AccessibilityEnhancer(props: any) {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"
-                  checked={settings.largeText}
+                  type="checkbox"';
+                  checked={settings.largeText}';';
                   onChange={(e) => updateSetting('largeText', e.target.checked)}
                   className="mr-2"
                 />
@@ -238,8 +238,8 @@ export function AccessibilityEnhancer(props: any) {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"
-                  checked={settings.reducedMotion}
+                  type="checkbox"';
+                  checked={settings.reducedMotion}';';
                   onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                   className="mr-2"
                 />
@@ -251,8 +251,8 @@ export function AccessibilityEnhancer(props: any) {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"
-                  checked={settings.keyboardNavigation}
+                  type="checkbox"';
+                  checked={settings.keyboardNavigation}';';
                   onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}
                   className="mr-2"
                 />
@@ -264,8 +264,8 @@ export function AccessibilityEnhancer(props: any) {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"
-                  checked={settings.screenReader}
+                  type="checkbox"';
+                  checked={settings.screenReader}';';
                   onChange={(e) => updateSetting('screenReader', e.target.checked)}
                   className="mr-2"
                 />
@@ -273,13 +273,13 @@ export function AccessibilityEnhancer(props: any) {
               </label>
             </div>
           </div>
-        </div>
-      )}
+            </div>
+  );
+}
     </>
   );
 }
 
-
 export default AccessibilityEnhancer;
-</any>
-</AccessibilitySettings>
+</any>';
+</AccessibilitySettings>;';;';

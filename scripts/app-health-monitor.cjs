@@ -8,19 +8,16 @@ class AppHealthMonitor {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'health-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   async checkBuildHealth() {
     this.log('🔍 Checking build health...');
@@ -31,11 +28,9 @@ class AppHealthMonitor {
         timeout: 300000
       });
       this.log('✅ Build health: PASSED');
-      return { status: 'healthy', output: result };
-    } catch (error) {
+      return { status: 'healthy', output: result }} catch (error) {
       this.log('❌ Build health: FAILED');
-      return { status: 'unhealthy', error: error.message };
-    }
+      return { status: 'unhealthy', error: error.message }}
   }
 
   async checkDependencies() {
@@ -47,11 +42,9 @@ class AppHealthMonitor {
         timeout: 60000
       });
       this.log('✅ Dependencies: SECURE');
-      return { status: 'secure', output: result };
-    } catch (error) {
+      return { status: 'secure', output: result }} catch (error) {
       this.log('⚠️ Dependencies: VULNERABILITIES FOUND');
-      return { status: 'vulnerable', error: error.message };
-    }
+      return { status: 'vulnerable', error: error.message }}
   }
 
   async checkCodeQuality() {
@@ -69,11 +62,9 @@ class AppHealthMonitor {
       if (consoleResult.trim()) {
         const count = consoleResult.split('\n').length - 1;
         issues.push({ type: 'console_logs', count, severity: 'warning' });
-        this.log(`⚠️ Found ${count} console.log statements`);
-      }
+        this.log(`⚠️ Found ${count} console.log statements`)}
     } catch (error) {
-      this.log(`❌ Console log check failed: ${error.message}`);
-    }
+      this.log(`❌ Console log check failed: ${error.message}`)}
 
     // Check for TODO comments
     try {
@@ -86,14 +77,11 @@ class AppHealthMonitor {
       if (todoResult.trim()) {
         const count = todoResult.split('\n').length - 1;
         issues.push({ type: 'todos', count, severity: 'info' });
-        this.log(`📝 Found ${count} TODO/FIXME comments`);
-      }
+        this.log(`📝 Found ${count} TODO/FIXME comments`)}
     } catch (error) {
-      this.log(`❌ TODO check failed: ${error.message}`);
-    }
+      this.log(`❌ TODO check failed: ${error.message}`)}
 
-    return { status: issues.length === 0 ? 'excellent' : 'good', issues };
-  }
+    return { status: issues.length === 0 ? 'excellent' : 'good', issues }}
 
   async checkPerformance() {
     this.log('⚡ Checking performance...');
@@ -111,11 +99,9 @@ class AppHealthMonitor {
       return {
         status: buildTime < 120000 ? 'excellent' : buildTime < 300000 ? 'good' : 'needs_optimization',
         buildTime
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Performance check failed: ${error.message}`);
-      return { status: 'failed', error: error.message };
-    }
+      return { status: 'failed', error: error.message }}
   }
 
   async generateHealthReport() {
@@ -154,8 +140,7 @@ class AppHealthMonitor {
     this.log(`📄 Health report generated: ${reportFile}`);
     this.log(`🏥 Overall Health Score: ${report.overallScore}/100 (${report.healthStatus})`);
     
-    return report;
-  }
+    return report}
 
   async run() {
     this.log('🏥 Starting App Health Monitor...');
@@ -167,11 +152,9 @@ class AppHealthMonitor {
       this.log(`📊 Overall Score: ${report.overallScore}/100`);
       this.log(`🏥 Health Status: ${report.healthStatus}`);
       
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(`💥 Health monitoring failed: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -183,12 +166,9 @@ if (require.main === module) {
       console.log('\n🎉 App Health Monitor completed successfully!');
       console.log(`📊 Overall Health Score: ${report.overallScore}/100`);
       console.log(`🏥 Health Status: ${report.healthStatus}`);
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch((error) => {
       console.error('\n💥 App Health Monitor failed:', error.message);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = AppHealthMonitor;

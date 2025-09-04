@@ -2,9 +2,5 @@ import React from 'react'; const ServiceCard = (props: any) => { const cardVaria
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

@@ -19,15 +19,15 @@ showStats: tru e,;
     totalFeedback: 0,
     averageRating: 0,
     positivePercentage: 0,
-    responseRate: 0,
-    topCategories[]});
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+    responseRate: 0,';
+    topCategories[]});';';
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');';';
   const [selectedRating, setSelectedRating] = useState<any>(0);  const [searchQuery, setSearchQuery] = useState<any>('');
   const [showFeedbackForm, setShowFeedbackForm] = useState<any>(false);
   const [newFeedback, setNewFeedback] = useState<any>({
-
-    rating: 0,
-    comment: '',
+';
+    rating: 0,';';
+    comment: '',';';
     category: 'overall' as Feedback['category']
   });
 
@@ -39,73 +39,73 @@ showStats: tru e,;
     // Cleanup function
   };
 }, []);, []);
-    const sampleFeedback: Feedbac k[] = [{
-
-        id: '1',
-        customerName: 'Sarah Johnson',
-        rating: 5,
-        comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.',
-        category: 'service',
-        sentiment: 'positive',
+    const sampleFeedback: Feedbac k[] = [{';
+';';
+        id: '1',';';
+        customerName: 'Sarah Johnson',';
+        rating: 5,';';
+        comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations.Their expertise in machine learning helped us optimize our processes significantly.',';';
+        category: 'service',';';
+        sentiment: 'positive',';';
         date: '2024-01-15',
-        helpful: 2 4,
-        unhelpful: 1,
+        helpful: 2 4,';
+        unhelpful: 1,';';
         tags['AI',Consulting',Machine Learning'],;
         verified: tru e
       },
-      {
-
-        id: '2',
-        customerName: 'Michael Chen',
-        rating: 4,
-        comment: 'Great cloud migration support.The team was professional and helped us transition smoothly to the cloud.Minor delays but overall excellent experience.',
-        category: 'support',
-        sentiment: 'positive',
+      {';
+';';
+        id: '2',';';
+        customerName: 'Michael Chen',';
+        rating: 4,';';
+        comment: 'Great cloud migration support.The team was professional and helped us transition smoothly to the cloud.Minor delays but overall excellent experience.',';';
+        category: 'support',';';
+        sentiment: 'positive',';';
         date: '2024-01-12',
-        helpful: 1 8,
-        unhelpful: 2,
+        helpful: 1 8,';
+        unhelpful: 2,';';
         tags['Cloud',Migration',Support'],;
         verified: tru e
       },
-      {
-
-        id: '3',
-        customerName: 'Emily Rodriguez',
-        rating: 5,
-        comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure.ROI was achieved within 6 months.',
-        category: 'product',
-        sentiment: 'positive',
+      {';
+';';
+        id: '3',';';
+        customerName: 'Emily Rodriguez',';
+        rating: 5,';';
+        comment: 'Outstanding digital transformation project! Zion Tech Group helped us modernize our entire infrastructure.ROI was achieved within 6 months.',';';
+        category: 'product',';';
+        sentiment: 'positive',';';
         date: '2024-01-10',
-        helpful: 3 1,
-        unhelpful: 0,
+        helpful: 3 1,';
+        unhelpful: 0,';';
         tags['Digital Transformation',Infrastructure',ROI'],;
         verified: tru e
       },
-      {
-
-        id: '4',
-        customerName: 'David Kim',
-        rating: 3,
-        comment: 'Good security services but communication could be improved.The technical work was solid but project updates were infrequent.',
-        category: 'service',
-        sentiment: 'neutral',
+      {';
+';';
+        id: '4',';';
+        customerName: 'David Kim',';
+        rating: 3,';';
+        comment: 'Good security services but communication could be improved.The technical work was solid but project updates were infrequent.',';';
+        category: 'service',';';
+        sentiment: 'neutral',';';
         date: '2024-01-08',
-        helpful: 1 2,
-        unhelpful: 5,
+        helpful: 1 2,';
+        unhelpful: 5,';';
         tags['Security',Communication',Project Management'],;
         verified: tru e
       },
-      {
-
-        id: '5',
-        customerName: 'Lisa Thompson',
-        rating: 5,
-        comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%.Highly recommend their services.',
-        category: 'overall',
-        sentiment: 'positive',
+      {';
+';';
+        id: '5',';';
+        customerName: 'Lisa Thompson',';
+        rating: 5,';';
+        comment: 'Amazing team! They helped us implement AI solutions that increased our efficiency by 40%.Highly recommend their services.',';';
+        category: 'overall',';';
+        sentiment: 'positive',';';
         date: '2024-01-05',
-        helpful: 2 8,
-        unhelpful: 1,
+        helpful: 2 8,';
+        unhelpful: 1,';';
         tags['AI',Efficiency',Implementation'],;
         verified: tru e
 
@@ -151,8 +151,8 @@ showStats: tru e,;
     // Cleanup function
   };
 }, []);, []);
-    let filtered = feedback;
-
+    let filtered = feedback;';
+';';
     if(selectedCategory !== 'all') {
 
       filtered = filtered.filter(f => f.category === selectedCategory)}
@@ -180,52 +180,51 @@ showStats: tru e,;
   
     if(newFeedback.rating === 0 || !newFeedback.comment.trim () ) return;
     const feedback: Feedbac k = {
-
-  id: Dat e.now().toString(),
+';
+  id: Dat e.now().toString(),';';
       customerName: 'Anonymous Customer',
       rating: newFeedbac k.rating,
-      comment: newFeedbac k.comment,
-      category: newFeedbac k.category,
-      sentiment: newFeedbac k.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',
+      comment: newFeedbac k.comment,';
+      category: newFeedbac k.category,';';
+      sentiment: newFeedbac k.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',';';
       date: new Date().toISOString().split('T')[0],
       helpful: 0,
       unhelpful: 0,
       tags: [],;
   ;
-  ;
   verified: fals e;
-    };
-
+    };';
+';';
     setFeedback(prev  => [feedback, ...prev]);    setNewFeedback({ rating: 0, comment: '', category: 'overall' });
-    setShowFeedbackForm(false)};
-
+    setShowFeedbackForm(false)};';
+';';
   // Handle helpful/unhelpful votes'
   
-        return {;
-          ...f,;
-          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;
+        return {;';
+          ...f,;';';
+          helpful: typ e === 'helpful' ? f.helpful + 1 : f.helpful,;';';
           unhelpful: typ e === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful};
 
       return f}) ) };
 
   // Get sentiment color
-  
-    switch(sentiment) {;
-      case 'positive': return 'text-green-400 bg-green-400/20';
-      case 'negative': return 'text-red-400 bg-red-400/20';
+  ';
+    switch(sentiment) {;';';
+      case 'positive': return 'text-green-400 bg-green-400/20';';';
+      case 'negative': return 'text-red-400 bg-red-400/20';';';
       default: retur n 'text-yellow-400 bg-yellow-400/20'}  };
 
   // Get category color
   
-  ;
-  ;
-'
-  'service': 'text-blue-400 bg-blue-400/20','
-      'product': 'text-green-400 bg-green-400/20','
-      'support': 'text-purple-400 bg-purple-400/20',;  ;
-  ;'
-  'overall': 'text-zion-cyan bg-zion-cyan/20';
-    };
+  ;';
+  ;';';
+'';';
+  'service': 'text-blue-400 bg-blue-400/20','';';
+      'product': 'text-green-400 bg-green-400/20','';';
+      'support': 'text-purple-400 bg-purple-400/20',;  ;';';
+  ;'';';
+  'overall': 'text-zion-cyan bg-zion-cyan/20';';
+    };';';
     return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
   return ()
     <div className="w-full max-w-6xl mx-auto p-6">
@@ -276,8 +275,8 @@ showStats: tru e,;
             <div className="flex items-center justify-center gap-2 mb-2">"
               <div className="text-3xl font-bold text-white">{stats.averageRating.toFixed(1)}</div>"
               <div className="flex">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star}
+                {[1, 2, 3, 4, 5].map((star) => (';
+                  <Star key={star}';';
                     className={`w-5 h-5 ${star <= stats.averageRating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                     }`}
                     />) ) }              </div>
@@ -324,8 +323,9 @@ showStats: tru e,;
             <div className="text-3xl font-bold text-zion-cyan mb-2">{stats.responseRate}%</div>"
             <div className="text-zinc-400">Response Rate</div>
           </motion.div>
-        </div>) }
-
+            </div>
+  );
+}
       {/* Top Categories */}
       {showStats && ("
         <div className="mb-8">"
@@ -405,8 +405,9 @@ showStats: tru e,;
 "
             <MessageCircle className="w-4 h-4"   />;            Add Feedback;
           </button>
-        </div>) }
-
+            </div>
+  );
+}
       {/* Feedback Form */}
       <AnimatePresence>
         {showFeedbackForm && (<motion.div
@@ -416,8 +417,8 @@ showStats: tru e,;
   opacity: 0
 
 }}
-            animate = {
-
+            animate = {';
+';';
   { height: 'auto',
   opacity: 1
 
@@ -444,8 +445,8 @@ showStats: tru e,;
   rating: sta r
 }))}"
                         className="p-2 hover: scal e-110 transition-transform"
-
-                        <Star`
+';
+                        <Star`';';
                           className={`w-8 h-8 ${star <= newFeedback.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                           }`}
                         />
@@ -456,8 +457,8 @@ showStats: tru e,;
                 <div>"
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>
                   <select
-                    value={newFeedback.category}
-                    onChange={ (e) => setNewFeedback(prev => ({ ...prev,
+                    value={newFeedback.category}';
+                    onChange={ (e) => setNewFeedback(prev => ({ ...prev,';';
   category: e.target.value as Feedback['category']
 }))}"
                     className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
@@ -552,9 +553,9 @@ showStats: tru e,;
             </div>
 
             {/* Rating */}"
-            <div className="flex items-center gap-2 mb-3"> {[1, 2, 3, 4, 5].map((star) => (;
-                <Star key={star}`
-                  className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${'
+            <div className="flex items-center gap-2 mb-3"> {[1, 2, 3, 4, 5].map((star) => (;';
+                <Star key={star}`';';
+                  className={`w-5 h-5 ${                  key={star}`                  className={`w-5 h-5 ${'';';
                     star <= item.rating ? 'text-yellow-400 fill-current' : 'text-zinc-600'`
                   }`}
                  />
@@ -572,14 +573,15 @@ showStats: tru e,;
 
                     {tag}
                   </span>) ) }
-              </div>) }
-
+                  </div>
+  );
+}
             {/* Actions */}"
             <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">"
               <div className="flex items-center gap-4">
                 <button
-                  onClick={
-
+                  onClick={';
+';';
   () => handleVote(item.id,helpful')
 
 }"
@@ -588,8 +590,8 @@ showStats: tru e,;
                   <ThumbsUp className="w-4 h-4"   />"                  <span className="text-sm">{item.helpful}</span>
                 </button>
                 <button
-                  onClick={
-
+                  onClick={';
+';';
   () => handleVote(item.id,unhelpful')
 
 }"
@@ -625,8 +627,8 @@ showStats: tru e,;
           >
             Add Feedback;
           </button>;
-        </motion.div>;) };
-    </div>;) };
+        </motion.div>;) };';
+    </div>;) };';';
 '"`
 
 </motion>
@@ -635,18 +637,10 @@ showStats: tru e,;
 </textarea>
 </Star>
 </motion>
-</motion>
-</motion>
-</motion>
 </Star>
 </motion>
-</motion>
-</any>
-</any>
-</any>
 </any>
 </any>
 </FeedbackStats>
-</Feedback>
-</Feedback>
-</CustomerFeedbackSystemProps>
+</Feedback>';
+</CustomerFeedbackSystemProps>;';;';

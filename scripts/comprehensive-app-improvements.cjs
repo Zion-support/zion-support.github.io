@@ -226,6 +226,7 @@ try {
 } catch (error) {
   console.log('❌ Smoke tests failed:', error.message);
 }
+}
 
 // 6. Summary
 console.log('\n📊 Improvement Summary:');

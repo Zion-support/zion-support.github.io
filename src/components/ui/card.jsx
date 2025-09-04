@@ -5,8 +5,8 @@ const Card = (props: any) => {}
       className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}
     >
       {children}
-    </div>
-  );
+    </div>';
+  );';';
 };'
 const CardHeader = (props: any) => {}
 `
@@ -15,8 +15,8 @@ const CardHeader = (props: any) => {}
   return()````
     <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
       {children}
-    </div>
-  );
+    </div>';
+  );';';
 };'
 const CardTitle = (props: any) => {}
   return()`
@@ -24,19 +24,19 @@ const CardTitle = (props: any) => {}
       className={`text-2xl font-semibold leading-none tracking-tight ${className}`}
     >
       {children}
-    </h3>
-  );
+    </h3>';
+  );';';
 };'
 const CardDescription = (props: any) => {}
 `
   return()``
-    <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>
-  );
+    <p className={`text-sm text-muted-foreground ${className}`}>{children}</p>';
+  );';';
 };'
 const CardContent = (props: any) => {}
 `
-``
-  return <div className={`p-6 pt-0 ${className}`}>{children}</div>;
+``';
+  return <div className={`p-6 pt-0 ${className}`}>{children}</div>;';';
 };'
 const CardFooter = (props: any) => {}
 `
@@ -52,12 +52,14 @@ const CardDescription = (props: any) => {
     </p>);
 };
 const CardContent = (props: any) => {
-    return (<div className={`p-6 pt-0 ${className}`}>
+    return (
+    <div className="min-h-screen bg-white">
       {children}
     </div>);
 };
 const CardFooter = (props: any) => {
-    return (<div className={`flex items-center p-6 pt-0 ${className}`}>
+    return (
+    <div className="min-h-screen bg-white">
       {children}
     </div>);
 };
@@ -71,4 +73,5 @@ export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
 export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter};
 
-export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};
+export {Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, CardDescription, CardContent, CardFooter};';
+;';;';

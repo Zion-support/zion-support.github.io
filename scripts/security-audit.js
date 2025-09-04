@@ -15,14 +15,10 @@ try {
   if (auditData.vulnerabilities && Object.keys(auditData.vulnerabilities).length > 0) {
     console.log('⚠️  Security vulnerabilities found:');
     Object.entries(auditData.vulnerabilities).forEach(([pkg, vuln]) => {
-      console.log(`   - ${pkg}: ${vuln.severity} - ${vuln.title}`);
-    });
-  } else {
-    console.log('✅ No security vulnerabilities found in dependencies');
-  }
+      console.log(`   - ${pkg}: ${vuln.severity} - ${vuln.title}`)})} else {
+    console.log('✅ No security vulnerabilities found in dependencies')}
 } catch (error) {
-  console.log('❌ Failed to run npm audit:', error.message);
-}
+  console.log('❌ Failed to run npm audit:', error.message)}
 
 // Check for sensitive data in files
 console.log('\n🔍 Scanning for sensitive data...');
@@ -42,8 +38,7 @@ const scanDirectory = (dir, results = []) => {
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      scanDirectory(filePath, results);
-    } else if (stat.isFile() && /\.(js|ts|tsx|jsx|json|env)$/.test(file)) {
+      scanDirectory(filePath, results)} else if (stat.isFile() && /\.(js|ts|tsx|jsx|json|env)$/.test(file)) {
       try {
         const content = fs.readFileSync(filePath, 'utf8');
         sensitivePatterns.forEach(pattern => {
@@ -52,17 +47,14 @@ const scanDirectory = (dir, results = []) => {
             results.push({
               file: filePath,
               matches: matches
-            });
-          }
-        });
-      } catch (error) {
+            })}
+        })} catch (error) {
         // Skip files that can't be read
       }
     }
   });
   
-  return results;
-};
+  return results};
 
 const sensitiveResults = scanDirectory('.');
 if (sensitiveResults.length > 0) {
@@ -70,12 +62,8 @@ if (sensitiveResults.length > 0) {
   sensitiveResults.forEach(result => {
     console.log(`   - ${result.file}`);
     result.matches.forEach(match => {
-      console.log(`     ${match.substring(0, 50)}...`);
-    });
-  });
-} else {
-  console.log('✅ No sensitive data patterns found');
-}
+      console.log(`     ${match.substring(0, 50)}...`)})})} else {
+  console.log('✅ No sensitive data patterns found')}
 
 // Check for outdated dependencies
 console.log('\n📅 Checking for outdated dependencies...');
@@ -86,14 +74,10 @@ try {
   if (Object.keys(outdatedData).length > 0) {
     console.log('⚠️  Outdated dependencies found:');
     Object.entries(outdatedData).forEach(([pkg, info]) => {
-      console.log(`   - ${pkg}: ${info.current} → ${info.latest}`);
-    });
-  } else {
-    console.log('✅ All dependencies are up to date');
-  }
+      console.log(`   - ${pkg}: ${info.current} → ${info.latest}`)})} else {
+    console.log('✅ All dependencies are up to date')}
 } catch (error) {
-  console.log('✅ All dependencies are up to date');
-}
+  console.log('✅ All dependencies are up to date')}
 
 // Generate security report
 const securityReport = {

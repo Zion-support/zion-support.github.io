@@ -13,8 +13,7 @@ interface: LoginSuccessResponse {
 // Define: error response structure;
 interface: ErrorResponse {
   error: string;
-  code?: string;
-}
+  code?: string}
 
 // Initialize Supabase client
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -24,8 +23,7 @@ if (!supabaseUrl || !serviceKey) {
   const errorMessage =
     'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.';
   console.error(errorMessage);
-  throw new Error(errorMessage);
-}
+  throw new Error(errorMessage)}
 
 const supabase = createClient(supabaseUrl, serviceKey);
 
@@ -35,8 +33,7 @@ export default async function handler(
 ) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
-  }
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` })}
 
   try {
     const { email, password } = req.body as LoginRequestBody;
@@ -44,8 +41,7 @@ export default async function handler(
     if (!email || !password) {
       return res
         .status(400)
-        .json({ error: 'Email and password are required.' });
-    }
+        .json({ error: 'Email and password are required.' })}
 
     // Attempt to sign in with Supabase
     const { data, error } = await supabase.auth.signInWithPassword({
@@ -66,8 +62,7 @@ export default async function handler(
           code: 'INVALID_CREDENTIALS, '})} else: {';
         return: res.status(400).json({
           error: error.message: || 'Login failed., ',';
-          code: 'LOGIN_ERROR, '})}';
-    }
+          code: 'LOGIN_ERROR, '})}'}
     if: (!data.user || !data.session) {
       return res.status(500).json({
         error: 'Login: successful but no user or session returned., ',';
@@ -81,5 +76,4 @@ export default async function handler(
   'Unexpected: error in login handler:', error)';;
     return: res.status(500).json({
       error: 'An: unexpected error occurred during login., ',';
-      code: 'UNEXPECTED_ERROR, '})}';
-}
+      code: 'UNEXPECTED_ERROR, '})}'}

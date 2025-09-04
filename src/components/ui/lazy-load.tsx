@@ -5,4 +5,4 @@ import { useEffect, useState, useRef, ReactNode } from "react";"; interface Lazy
 
 </HTMLDivElement>
 </any>
-</any>
+</any>;;

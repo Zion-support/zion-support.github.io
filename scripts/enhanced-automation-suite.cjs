@@ -14,14 +14,12 @@ class EnhancedAutomationSuite {
       success: [],
       errors: [],
       warnings: []
-    };
-  }
+    }}
 
   log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const prefix = type === 'error' ? '❌' : type === 'success' ? '✅' : 'ℹ️';
-    console.log(`[${timestamp}] ${prefix} ${message}`);
-  }
+    console.log(`[${timestamp}] ${prefix} ${message}`)}
 
   async runCommand(command, description, options = {}) {
     try {
@@ -34,12 +32,10 @@ class EnhancedAutomationSuite {
       });
       this.results.success.push(`${description} completed successfully`);
       this.log(`${description} completed successfully`, 'success');
-      return { success: true, output: result };
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.results.errors.push(`${description} failed: ${error.message}`);
       this.log(`${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async checkDependencies() {
@@ -48,19 +44,16 @@ class EnhancedAutomationSuite {
     // Check if node_modules exists
     if (!fs.existsSync(path.join(this.projectRoot, 'node_modules'))) {
       this.log('Installing dependencies...');
-      await this.runCommand('npm install', 'Dependency Installation');
-    }
+      await this.runCommand('npm install', 'Dependency Installation')}
     
     // Check critical packages
     const criticalPackages = ['react', 'next', 'typescript'];
     for (const pkg of criticalPackages) {
       try {
         require.resolve(pkg);
-        this.log(`✅ ${pkg} is available`);
-      } catch (error) {
+        this.log(`✅ ${pkg} is available`)} catch (error) {
         this.log(`⚠️ ${pkg} not found - may need installation`, 'warning');
-        this.results.warnings.push(`${pkg} package not found`);
-      }
+        this.results.warnings.push(`${pkg} package not found`)}
     }
   }
 
@@ -74,8 +67,7 @@ class EnhancedAutomationSuite {
     ];
 
     for (const { cmd, desc } of lintCommands) {
-      await this.runCommand(cmd, desc, { stdio: 'pipe' });
-    }
+      await this.runCommand(cmd, desc, { stdio: 'pipe' })}
   }
 
   async runBuild() {
@@ -101,17 +93,14 @@ class EnhancedAutomationSuite {
     // Check if Jest is available
     try {
       require.resolve('jest');
-      await this.runCommand('npx jest', 'Jest Tests');
-    } catch (error) {
+      await this.runCommand('npx jest', 'Jest Tests')} catch (error) {
       this.log('Jest not found, skipping tests', 'warning');
-      this.results.warnings.push('Jest not available for testing');
-    }
+      this.results.warnings.push('Jest not available for testing')}
   }
 
   async runSecurityAudit() {
     this.log('🔒 Running security audit...');
-    await this.runCommand('npm audit --audit-level=moderate', 'Security Audit');
-  }
+    await this.runCommand('npm audit --audit-level=moderate', 'Security Audit')}
 
   async generateReport() {
     this.log('📊 Generating automation report...');
@@ -138,8 +127,7 @@ class EnhancedAutomationSuite {
     const reportPath = path.join(this.projectRoot, 'enhanced-automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportPath}`, 'success');
-    return report;
-  }
+    return report}
 
   async runAll() {
     try {
@@ -157,24 +145,20 @@ class EnhancedAutomationSuite {
       this.log(`📊 Summary: ${report.summary.successful}/${report.summary.total} operations successful`);
       
       if (report.summary.errors > 0) {
-        this.log(`⚠️ ${report.summary.errors} operations failed - check the report for details`);
-      }
+        this.log(`⚠️ ${report.summary.errors} operations failed - check the report for details`)}
       
       if (report.summary.warnings > 0) {
-        this.log(`⚠️ ${report.summary.warnings} warnings - review recommendations`);
-      }
+        this.log(`⚠️ ${report.summary.warnings} warnings - review recommendations`)}
       
     } catch (error) {
       this.log(`❌ Enhanced automation suite failed: ${error.message}`, 'error');
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 }
 
 // Run the automation suite
 if (require.main === module) {
   const suite = new EnhancedAutomationSuite();
-  suite.runAll().catch(console.error);
-}
+  suite.runAll().catch(console.error)}
 
 module.exports = EnhancedAutomationSuite;

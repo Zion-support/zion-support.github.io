@@ -16,7 +16,7 @@ class CICDAutomation {
     this.ensureDirectories()}
 
   ensureDirectories() {
-    const dirs = ['logs', 'reports';];
+    const dirs = ['logs', 'reports'];
     dirs.forEach(dir => {
       const dirPath = path.join(__dirname, dir;);
       if () {
@@ -30,9 +30,8 @@ class CICDAutomation {
     })}
 
   log(message) {
-    const timestamp = new Date().toISOString(;
-  });
-    const logMessage = `[${timestamp}] ${message;};`;
+    const timestamp = new Date().toISOString(});
+    const logMessage = `[${timestamp}] ${message};`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n')}
 
@@ -43,28 +42,28 @@ class CICDAutomation {
         encoding: 'utf8', 
         cwd: process.cwd(),
         stdio: 'pipe'
-      ;};);
+      };);
       this.log(`✅ Success: ${description}`);
-      return { success: true, output ;}} catch (error) {
+      return { success: true, output }} catch (error) {
       this.log(`❌ Error: ${description} - ${error.message}`);
-      return { success: false, error: error.message, output: error.stdout || error.stderr ;}}
+      return { success: false, error: error.message, output: error.stdout || error.stderr }}
   }
 
   async runTests() {
     this.log('🧪 Running test suite...');
-    return await this.runCommand('npm test', 'Running tests');}
+    return await this.runCommand('npm test', 'Running tests')}
 
   async runLinting() {
     this.log('🔍 Running linting...');
-    return await this.runCommand('npm run lint', 'Running linting');}
+    return await this.runCommand('npm run lint', 'Running linting')}
 
   async buildApplication() {
     this.log('🏗️ Building application...');
-    return await this.runCommand('npm run build', 'Building application');}
+    return await this.runCommand('npm run build', 'Building application')}
 
   async installDependencies() {
     this.log('📦 Installing dependencies...');
-    return await this.runCommand('npm ci', 'Installing dependencies');}
+    return await this.runCommand('npm ci', 'Installing dependencies')}
 
   generateReport(results) {
     const report = {
@@ -76,15 +75,15 @@ class CICDAutomation {
         passed: results.filter(r => r.success).length,
         failed: results.filter(r => !r.success).length
       }
-   ; ;};
+   };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    return report;}
+    return report}
 
   async run() {
     this.log('🚀 Starting CI/CD Automation Pipeline');
     
-    const results = [;];
+    const results = [];
     
     // Install dependencies
     const installResult = await this.installDependencies(;);
@@ -95,8 +94,7 @@ class CICDAutomation {
       const testResult = await this.runTests() {
      {
       // Run tests
-      const testResult = await this.runTests(;
-  });
+      const testResult = await this.runTests(});
       results.push({ step: 'test', ...testResult });
       
       // Run linting
@@ -110,15 +108,14 @@ class CICDAutomation {
     const report = this.generateReport(results;);
     this.log(`📊 CI/CD Pipeline completed with status: ${report.status}`);
     
-    return report;}
+    return report}
 }
 
 // Run if called directly
 if ( {
   const automation = new CICDAutomation) {
      {
-  const automation = new CICDAutomation;
-  }(;);
+  const automation = new CICDAutomation}(;);
   automation.run().catch(error => {
     console.error('CI/CD Automation failed:', error);
     process.exit(1)})}

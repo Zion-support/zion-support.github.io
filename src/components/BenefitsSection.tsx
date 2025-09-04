@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-export /**
-export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}
+export /**';
+export default BenefitsSection;}}}}</motion.div></motion.div></motion.div>}';';
 import { GradientHeading } from './ui / GradientHeading';
 export default function Page(props: any) {
 ,
@@ -30,4 +30,5 @@ export default function Page(props: any) {
       "Competitive pricing","
       "Bulk discount options","
       "Transparent cost structure"
-    ]
+    ]';
+;';;';

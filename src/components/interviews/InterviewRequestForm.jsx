@@ -1,17 +1,17 @@
 import React, {useState} from "react";"
-import {Button} from '@/components/ui/button';"
-import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';"
-import {Input} from '@/components/ui/input';"
-import {Textarea} from '@/components/ui/textarea';"
-import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from '@/components/ui/select';"
-import {Calendar} from '@/components/ui/calendar';"
-import {Popover, PopoverTrigger, PopoverContent} from '@/components/ui/popover';"
-import {cn} from '@/lib/utils';"
-import {zodResolver} from '@hookform/resolvers/zod';"
-import {useForm} from 'react-hook-form';"
-import {z} from 'zod';"
-import {format, addDays} from 'date-fns';"
-import { CalendarIcon import { toast } from '@/components/ui/use-toast';"
+import {Button} from '@/components/ui/button';"';';
+import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';"';';
+import {Input} from '@/components/ui/input';"';';
+import {Textarea} from '@/components/ui/textarea';"';';
+import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from '@/components/ui/select';"';';
+import {Calendar} from '@/components/ui/calendar';"';';
+import {Popover, PopoverTrigger, PopoverContent} from '@/components/ui/popover';"';';
+import {cn} from '@/lib/utils';"';';
+import {zodResolver} from '@hookform/resolvers/zod';"';';
+import {useForm} from 'react-hook-form';"';';
+import {z} from 'zod';"';';
+import {format, addDays} from 'date-fns';"';';
+import { CalendarIcon import { toast } from '@/components/ui/use-toast';"';';
 import {useInterviews} from '@/hooks/useInterviews';
 ).refine(date => date > new Date(), {"
         message: "Interview date must be in the future"}),"
@@ -46,8 +46,8 @@ export function InterviewRequestForm(props: any) {
                 variant: "destructive"});
             return}
         setIsSubmitting(true);
-        try {
-            // Combine date and time`
+        try {';
+            // Combine date and time`';';
             const dateTimeString = `${format(values.date,yyyy-MM-dd')}T${values.time}:00`;
             const scheduledDate = new Date(dateTimeString);
             // Calculate end time based on duration
@@ -178,20 +178,20 @@ export function InterviewRequestForm(props: any) {
                   </SelectContent>
                 </Select>
                 <FormMessage  />
-              </FormItem>)}/>
-        </div>
-'"
-        {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>
-                <FormLabel>Meeting Link(Optional)</FormLabel>
-                <FormControl>'`
+              </FormItem>)}/>';
+        </div>';';
+'"';';
+        {form.watch('platform') !== 'in-app' && (<FormField control={form.control} name="meetingLink" render={({ field }) => (<FormItem>';
+                <FormLabel>Meeting Link(Optional)</FormLabel>';';
+                <FormControl>'`';';
                   <Input placeholder={`Add your ${form.watch('platform')} link here`} {...field}  />
                 </FormControl>
                 <FormMessage  />
               </FormItem>)}/>)}
 "
-        <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>
-              <FormLabel>Notes(Optional)</FormLabel>
-              <FormControl>'"
+        <FormField control={form.control} name="notes" render={({ field }) => (<FormItem>';
+              <FormLabel>Notes(Optional)</FormLabel>';';
+              <FormControl>'"';';
                 <Textarea placeholder="Share what you'd like to discuss in this interview" className="h-20" {...field} />
               </FormControl>
               <FormMessage  />
@@ -205,15 +205,12 @@ export function InterviewRequestForm(props: any) {
             {isSubmitting ? "Scheduling..." : "Schedule Interview"}
           </Button>
         </div>
-      </form>
-    </Form>)}
+      </form>';
+    </Form>)}';';
 '"`
 
 </FormField>
 </FormField>
-</FormField>
-</FormField>
-</FormField>
 </Calendar>
-</FormField>
-</FormField>
+</FormField>';
+</FormField>;';;';

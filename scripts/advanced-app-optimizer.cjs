@@ -21,8 +21,7 @@ class AdvancedAppOptimizer {
       bundle: {},
       seo: {},
       security: {}
-    };
-  }
+    }}
 
   log(message, type = 'INFO') {
     const icons = {
@@ -32,8 +31,7 @@ class AdvancedAppOptimizer {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     };
-    console.log(`${icons[type]} ${message}`);
-  }
+    console.log(`${icons[type]} ${message}`)}
 
   async optimizeBundle() {
     this.log('📦 Optimizing bundle size...', 'PROGRESS');
@@ -76,10 +74,8 @@ module.exports = withBundleAnalyzer({
             enforce: true,
           },
         },
-      };
-    }
-    return config;
-  },
+      }}
+    return config},
 });
 `;
 
@@ -90,19 +86,16 @@ module.exports = withBundleAnalyzer({
       const dynamicImportHelper = `
 // Dynamic import helper for code splitting
 export const dynamicImport = (importFn) => {
-  return React.lazy(importFn);
-};
+  return React.lazy(importFn)};
 
 // Route-based code splitting
 export const createLazyComponent = (componentPath) => {
-  return dynamicImport(() => import(componentPath));
-};
+  return dynamicImport(() => import(componentPath))};
 
 // Preload critical components
 export const preloadComponent = (importFn) => {
   if (typeof window !== 'undefined') {
-    importFn();
-  }
+    importFn()}
 };
 `;
 
@@ -110,11 +103,9 @@ export const preloadComponent = (importFn) => {
       this.optimizations.push('Dynamic import helper created');
       
       this.log('✅ Bundle optimization completed', 'SUCCESS');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Bundle optimization failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async optimizeImages() {
@@ -133,8 +124,7 @@ interface OptimizedImageProps {
   height?: number;
   priority?: boolean;
   className?: string;
-  quality?: number;
-}
+  quality?: number}
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -158,8 +148,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
     />
-  );
-};
+  )};
 
 export default OptimizedImage;
 `;
@@ -168,11 +157,9 @@ export default OptimizedImage;
       this.optimizations.push('Optimized image component created');
       
       this.log('✅ Image optimization completed', 'SUCCESS');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Image optimization failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async optimizeSEO() {
@@ -189,8 +176,7 @@ interface SEOProps {
   keywords?: string;
   image?: string;
   url?: string;
-  type?: string;
-}
+  type?: string}
 
 export const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced Technology Solutions',
@@ -240,8 +226,7 @@ export const SEO: React.FC<SEOProps> = ({
         }}
       />
     </Head>
-  );
-};
+  )};
 
 export default SEO;
 `;
@@ -282,8 +267,7 @@ const generateSitemap = () => {
 </urlset>\`;
 
   fs.writeFileSync('public/sitemap.xml', sitemap);
-  console.log('Sitemap generated successfully');
-};
+  console.log('Sitemap generated successfully')};
 
 generateSitemap();
 `;
@@ -292,11 +276,9 @@ generateSitemap();
       this.optimizations.push('Sitemap generator created');
       
       this.log('✅ SEO optimization completed', 'SUCCESS');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ SEO optimization failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async optimizePerformance() {
@@ -315,12 +297,10 @@ export const usePerformanceMonitor = () => {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
-        console.log('LCP:', lastEntry.startTime);
-      });
+        console.log('LCP:', lastEntry.startTime)});
       
       try {
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (e) {
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })} catch (e) {
         // Fallback for browsers that don't support LCP
       }
 
@@ -330,14 +310,12 @@ export const usePerformanceMonitor = () => {
           if (entry.entryType === 'first-input') {
             const fidEntry = entry as PerformanceEventTiming;
             const fid = fidEntry.processingStart - fidEntry.startTime;
-            console.log('FID:', fid);
-          }
+            console.log('FID:', fid)}
         }
       });
 
       try {
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (e) {
+        fidObserver.observe({ entryTypes: ['first-input'] })} catch (e) {
         // Fallback for browsers that don't support FID
       }
 
@@ -346,20 +324,16 @@ export const usePerformanceMonitor = () => {
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
+            clsValue += entry.value}
         }
-        console.log('CLS:', clsValue);
-      });
+        console.log('CLS:', clsValue)});
 
       try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (e) {
+        clsObserver.observe({ entryTypes: ['layout-shift'] })} catch (e) {
         // Fallback for browsers that don't support CLS
       }
     }
-  }, []);
-};
+  }, [])};
 
 export default usePerformanceMonitor;
 `;
@@ -381,32 +355,26 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
-  );
-});
+  )});
 
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
         if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
+          return response}
+        return fetch(event.request)}
     )
-  );
-});
+  )});
 `;
 
       fs.writeFileSync('public/sw.js', serviceWorker);
       this.optimizations.push('Service worker created');
       
       this.log('✅ Performance optimization completed', 'SUCCESS');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Performance optimization failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async generateReport() {
@@ -424,8 +392,7 @@ self.addEventListener('fetch', (event) => {
     };
 
     fs.writeFileSync('advanced-app-optimization-report.json', JSON.stringify(this.report, null, 2));
-    this.log('📊 Advanced App Optimization Report Generated', 'SUCCESS');
-  }
+    this.log('📊 Advanced App Optimization Report Generated', 'SUCCESS')}
 
   async run() {
     this.log('🚀 Starting Advanced App Optimization...', 'PROGRESS');
@@ -441,11 +408,9 @@ self.addEventListener('fetch', (event) => {
       this.log('🎉 Advanced App Optimization completed successfully!', 'SUCCESS');
       this.log(`📊 Total optimizations: ${this.optimizations.length}`, 'INFO');
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Advanced App Optimization failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 }
 
@@ -453,11 +418,8 @@ self.addEventListener('fetch', (event) => {
 if (require.main === module) {
   const optimizer = new AdvancedAppOptimizer();
   optimizer.run().then(success => {
-    process.exit(success ? 0 : 1);
-  }).catch(error => {
+    process.exit(success ? 0 : 1)}).catch(error => {
     console.error('Advanced App Optimization failed:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 module.exports = AdvancedAppOptimizer;

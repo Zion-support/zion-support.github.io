@@ -11,4 +11,4 @@ export default function EnhancedMainPage(props: any) {return (
       </div>
   );"}"
 
-</div>
+</div>;;
