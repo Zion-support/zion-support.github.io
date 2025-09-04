@@ -12,32 +12,32 @@ const { execSync } = require('child_process');
 class AutomationRunner {
   constructor() {
     this.results = {
-      tests: { passe,d:,0, failed:  0 errors: [], },;
-      builds: { success: false errors: [], },;
-      linting: { success: false errors: [], },;
-      security: { issue,s: [,], fixed: 0, },;
-      improvements: [], };
+      tests: { passe,d:,0, failed:  0 errors: []},
+      builds: { success: false errors: []},
+      linting: { success: false errors: []},
+      security: { issue,s: [], fixed: 0},
+      improvements: []};
     this.startTime = Date.now()}
 
   log() { const timestamp = new Date().toISOString()const prefix={
-      'INFO': 'ℹ️',;
-      'SUCCESS': '✅',;
-      'ERROR': '❌',;
-      'WARNING': '⚠️',;
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
       'PROGRESS': '🔄'}[type] || 'ℹ️';
     
     console.log(`${prefix} [${timestamp}] ${message}`)}
 
   async runCommand(command, description, timeout = 30000) {
-    this.log(`Running: ${description}`, 'PROGRESS');
+    this.log(`Running: ${description }`, 'PROGRESS');
     try {
       const result = execSync(command, { 
         encoding: 'utf8', 
-        stdio: 'pipe',;
+        stdio: 'pipe',
         timeout: timeout;
-        cwd: process.cw,d(), })this.log(`${description} completed successfully`, 'SUCCESS');
-      return { success: true output: result }} catch() { this.log(`${description } failed: ${error.message}`, 'ERROR');
-      return { success: false error: error.message output: error.stdout || error.stderr }}
+        cwd: process.cw,d()})this.log(`${description} completed successfully`, 'SUCCESS');
+      return { success: true output: result  }} catch() { this.log(`${description } failed: ${error.message }`, 'ERROR');
+      return { success: false error: error.message output: error.stdout || error.stderr  }}
   }
 
   async runTests() { this.log('Starting test suite...', 'PROGRESS');
@@ -104,7 +104,7 @@ const path = require('path')class PerformanceMonitor {
       bundleSize:  0;
       loadTime:  0;
       memoryUsage:  0;
-      timestamp: new Date().toISOStrin,g(), }}
+      timestamp: new Date().toISOStrin,g()}}
 
   async measureBundleSize() { try {
       const buildDir = path.join(process.cwd(), '.next');
@@ -120,7 +120,7 @@ const path = require('path')class PerformanceMonitor {
   generateReport() { const report = {
       timestamp: this.metrics.timestamp;
       metrics: this.metrics;
-      recommendations: this.generateRecommendation,s(), };
+      recommendations: this.generateRecommendation,s()};
 
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -155,41 +155,41 @@ class HealthChecker {
 
   checkFileExists() { const exists = fs.existsSync(filePath)this.checks.push({
       name: description;
-      status: exists ? 'PASS' : 'FAIL',;
-      details: exists ? 'File exists' : 'File missin,g', });
+      status: exists ? 'PASS' : 'FAIL',
+      details: exists ? 'File exists' : 'File missin,g'});
     return exists}
 
   checkPackageJson() { try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'))this.checks.push({
-        name: 'Package.json validation',;
-        status: 'PASS',;
-        details: \`Valid package.json (version: \${packageJson.version })\`});
+        name: 'Package.json validation',
+        status: 'PASS',
+        details: \`Valid package.json (version: \${packageJson.version  })\`});
       return true} catch (error) {
       this.checks.push({
-        name: 'Package.json validation',;
-        status: 'FAIL',;
-        details: \`Invalid package.json: \${error.message}\`});
+        name: 'Package.json validation',
+        status: 'FAIL',
+        details: \`Invalid package.json: \${error.message }\`});
       return false}
   }
 
   checkNodeModules() { const exists = fs.existsSync('node_modules')this.checks.push({
-      name: 'Node modules',;
-      status: exists ? 'PASS' : 'FAIL',;
-      details: exists ? 'Dependencies installed' : 'Run npm instal,l', });
+      name: 'Node modules',
+      status: exists ? 'PASS' : 'FAIL',
+      details: exists ? 'Dependencies installed' : 'Run npm instal,l'});
     return exists}
 
   generateReport() { const passed = this.checks.filter(c => c.status === 'PASS').length;
     const total = this.checks.lengthconst report = {
-      timestamp: new Date().toISOStrin,g(,),;
+      timestamp: new Date().toISOStrin,g(),
       summary: {
         total;
-        passed,;
+        passed,
         failed: total - passed;
-        healthScore: Math.round((passed / tota,l) * 100), },;
-      checks: this.checks };
+        healthScore: Math.round((passed / tota,l) * 100)},
+      checks: this.checks  };
 
     const reportPath = path.join(process.cwd(), 'health-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))console.log(\`Health Check Report: \${passed}/\${total} checks passed (\${report.summary.healthScore}%)\`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))console.log(\`Health Check Report: \${passed }/\${total} checks passed (\${report.summary.healthScore}%)\`);
     return report}
 }
 
@@ -215,14 +215,14 @@ const path = require('path');
 class AutomatedTester {
   constructor() {
     this.results = {
-      unit: { passe,d:,0, failed: 0, },;
-      integration: { passe,d:,0, failed: 0, },;
-      e2e: { passe,d:,0, failed: 0, }
+      unit: { passe,d:,0, failed: 0},
+      integration: { passe,d:,0, failed: 0},
+      e2e: { passe,d:,0, failed: 0}
     }}
 
   async runUnitTests() {
     try {
-      execSync('npm test -- --passWithNoTests', { stdio: 'pip,e', });
+      execSync('npm test -- --passWithNoTests', { stdio: 'pip,e'});
       this.results.unit.passed++;
       console.log('✅ Unit tests passed')} catch() { this.results.unit.failed++;
       console.log('❌ Unit tests failed: ,', error.message) }
@@ -230,7 +230,7 @@ class AutomatedTester {
 
   async runTypeCheck() {
     try {
-      execSync('npm run type-check', { stdio: 'pip,e', });
+      execSync('npm run type-check', { stdio: 'pip,e'});
       this.results.unit.passed++;
       console.log('✅ TypeScript type check passed')} catch() { this.results.unit.failed++;
       console.log('❌ TypeScript type check failed: ,', error.message) }
@@ -238,18 +238,18 @@ class AutomatedTester {
 
   async runLintCheck() {
     try {
-      execSync('npm run lint: check', { stdio: 'pip,e', });
+      execSync('npm run lint: check', { stdio: 'pip,e'});
       this.results.unit.passed++;
       console.log('✅ Linting passed')} catch() { this.results.unit.failed++;
       console.log('❌ Linting failed: ,', error.message) }
   }
 
   generateReport() { const report={
-      timestamp: new Date().toISOStrin,g(,),;
+      timestamp: new Date().toISOStrin,g(),
       results: this.results;
       summary: {
-        totalTests: Object.values(this.results).reduce((sum cat) => sum + cat.passed + cat.failed, 0),;
-        totalPassed: Object.values(this.results).reduce((sum cat) => sum + cat.passed, 0),;
+        totalTests: Object.values(this.results).reduce((sum cat) => sum + cat.passed + cat.failed, 0),
+        totalPassed: Object.values(this.results).reduce((sum cat) => sum + cat.passed, 0),
         totalFailed: Object.values(this.results).reduce((sum cat) => sum + cat.failed, 0)}
     };
 
@@ -279,13 +279,13 @@ module.exports = AutomatedTester`;
       await this.createImprovements();
       
       this.generateFinalReport() } catch (error) {
-      this.log(`Automation failed: ${error.message}`, 'ERROR');
+      this.log(`Automation failed: ${error.message }`, 'ERROR');
       process.exit(1)}
   }
 
   generateFinalReport() { const duration = Date.now() - this.startTimeconst report = {
-      timestamp: new Date().toISOStrin,g(,),;
-      duration: `${Math.round(duratio,n / 1000,)}s`,;
+      timestamp: new Date().toISOStrin,g(),
+      duration: `${Math.round(duratio,n / 1000)}s`,
       results: this.results;
       summary: {
         testsPassed: this.results.tests.passed;
@@ -293,13 +293,13 @@ module.exports = AutomatedTester`;
         buildSuccess: this.results.builds.success;
         lintingSuccess: this.results.linting.success;
         securityIssuesFixed: this.results.security.fixed;
-        improvementsCreated: this.results.improvements.length }
+        improvementsCreated: this.results.improvements.length  }
     };
 
     const reportPath = path.join(process.cwd(), 'automation-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
-    this.log('📊 Final Report Generated', 'SUCCESS')this.log(`✅ Tests Passed: ${report.summary.testsPassed}`)this.log(`❌ Tests Failed: ${report.summary.testsFailed}`)this.log(`🏗️ Build Success: ${report.summary.buildSuccess}`)this.log(`🔍 Linting Success: ${report.summary.lintingSuccess}`)this.log(`🔒 Security Issues Fixed: ${report.summary.securityIssuesFixed}`)this.log(`🚀 Improvements Created: ${report.summary.improvementsCreated}`)}
+    this.log('📊 Final Report Generated', 'SUCCESS')this.log(`✅ Tests Passed: ${report.summary.testsPassed }`)this.log(`❌ Tests Failed: ${report.summary.testsFailed }`)this.log(`🏗️ Build Success: ${report.summary.buildSuccess }`)this.log(`🔍 Linting Success: ${report.summary.lintingSuccess }`)this.log(`🔒 Security Issues Fixed: ${report.summary.securityIssuesFixed }`)this.log(`🚀 Improvements Created: ${report.summary.improvementsCreated }`)}
 }
 
 // Run the automation;

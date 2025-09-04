@@ -2,9 +2,9 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function ServicesOverview() {
-const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m', };
+const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m'};
 
-  return (<><Head><title>Services Overview - Zion Tech Group</title><meta name="description" content="Comprehensive overview of Zion Tech Group's 340+ innovative services including micro SaaS products, AI services, and IT solutions across multiple industries." />"<meta name="keywords" content="services overview, micro SaaS, AI services, IT solutions, technology services, enterprise solutions" />"<meta name="viewport" content="width=device-width, initial-scale=1" />"<meta name="robots" content="index, follow" />"<link rel="canonical" href={`${contact.site}/services-overview`} />"<meta property="og: title" content="Services Overview - Zion Tech Group" />"<meta property="og:description" content="Comprehensive overview of Zion Tech Group's 340+ innovative services including micro SaaS products AI services, and IT solutions across multiple industries." />"<meta property="og: url" content={`${contact.site}/services-overview`} />"<meta property="og: type" content="website" /></Head>;
+  return (<><Head><title>Services Overview - Zion Tech Group</title><meta name="description" content="Comprehensive overview of Zion Tech Group's 340+ innovative services including micro SaaS products, AI services, and IT solutions across multiple industries." />"<meta name="keywords" content="services overview, micro SaaS, AI services, IT solutions, technology services, enterprise solutions" />"<meta name="viewport" content="width=device-width, initial-scale=1" />"<meta name="robots" content="index, follow" />"<link rel="canonical" href={`${contact.site}/services-overview`} />"<meta property="og: title" content="Services Overview - Zion Tech Group" />"<meta property="og:description" content="Comprehensive overview of Zion Tech Group's 340+ innovative services including micro SaaS products AI services, and IT solutions across multiple industries." />"<meta property="og: url" content={`${contact.site }/services-overview`} />"<meta property="og: type" content="website" /></Head>;
       "<main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">{/* Hero Sectio,n *,/}"<section className="py-20 px-4 text-center">"<div className="max-w-4xl mx-auto">"<h1 className="text-4xl md: text-5xl font-extrabold tracking-tight mb-6">;
               Services Overview</h1>"<p className="text-xl text-slate-300 mb-8">;
               Comprehensive Technology Solutions for Modern Businesses</p>"<p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">;
@@ -27,11 +27,11 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
                   href="/it-services" ";
                   className="text-green-400 hover: text-green-300 font-semibold focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"";
                   aria-label="View all IT solutions">;
-                  View All IT Solutions →</Link></div></div>{/* Industry Solution,s *,/}"<div className="mb-16">"<h2 className="text-3xl font-bold text-center mb-12">Industry Solutions</h2>"<div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">{[{ name: 'Healthcare' href: '/healthcare' color: 'text-re,d-400', },{ name: 'Financial Services' href: '/financial' color: 'text-gree,n-400', },{ name: 'Manufacturing' href: '/manufacturing' color: 'text-blu,e-400', },{ name: 'Retail & E-commerce' href: '/retail' color: 'text-purpl,e-400', },{ name: 'Government' href: '/government' color: 'text-yello,w-400', },{ name: 'Education' href: '/education' color: 'text-indig,o-400', },{ name: 'Startups' href: '/startup' color: 'text-pin,k-400', },{ name: 'Enterprise' href: '/enterprise' color: 'text-cya,n-400', }
+                  View All IT Solutions →</Link></div></div>{/* Industry Solution,s *,/}"<div className="mb-16">"<h2 className="text-3xl font-bold text-center mb-12">Industry Solutions</h2>"<div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">{[{ name: 'Healthcare' href: '/healthcare' color: 'text-re,d-400'},{ name: 'Financial Services' href: '/financial' color: 'text-gree,n-400'},{ name: 'Manufacturing' href: '/manufacturing' color: 'text-blu,e-400'},{ name: 'Retail & E-commerce' href: '/retail' color: 'text-purpl,e-400'},{ name: 'Government' href: '/government' color: 'text-yello,w-400'},{ name: 'Education' href: '/education' color: 'text-indig,o-400'},{ name: 'Startups' href: '/startup' color: 'text-pin,k-400'},{ name: 'Enterprise' href: '/enterprise' color: 'text-cya,n-400'}
                 ].map((industry) => (<Link;
                     key={industry.name}
                     href={industry.href}
-                    className={`p-6 bg-slate-900/60 rounded-lg border border-white/10 hover: border-white/20 transition-colors text-center ${industry.color} hover: text-white`}
+                    className={`p-6 bg-slate-900/60 rounded-lg border border-white/10 hover: border-white/20 transition-colors text-center ${industry.color } hover: text-white` }
                     aria-label={`View ${industry.name} solutions`}
                   >"<h3 className="font-semibold">{industry.name}</h3></Link>;
                 ))}
@@ -44,6 +44,6 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
                   href="/services-catalog" ";
                   className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900"";
                   aria-label="Browse our services catalog">;
-                  Browse Catalog</Link></div></div></div></section></mai,n></>;
-  );,}
+                  Browse Catalog</Link></div></div></div></section></mai,n></>
+  )}
 </div></div></div></div></div></div></div></div>"

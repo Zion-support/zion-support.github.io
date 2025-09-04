@@ -11,12 +11,12 @@ const performanceChecks = {
   bundleAnalysis: false;
   lighthouseScore: false;
   loadTime: false;
-  memoryUsage: false}
+  memoryUsage: false }
 try {
   // Check build size;
   if (fs.existsSync('.next')) {
-    const buildSize = execSync('du -sh .next', { encoding: 'ut,f8', }).trim();
-    console.log(`✅ Build size: ${buildSize}`);
+    const buildSize = execSync('du -sh .next', { encoding: 'ut,f8'}).trim();
+    console.log(`✅ Build size: ${buildSize }`);
     
     // Check if build size is reasonable (less than 50MB);
     const sizeInMB = parseInt(buildSize.split('\t')[0]);
@@ -29,21 +29,21 @@ try {
 try {
   // Bundle analysis;
   console.log('📋 Analyzing bundle...');
-  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { encoding: 'ut,f8', });
+  const bundleInfo = execSync('npx next-bundle-analyzer .next/static/chunks', { encoding: 'ut,f8'});
   console.log('✅ Bundle analysis completed');
   performanceChecks.bundleAnalysis = true} catch() { console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)') }
 
 try {
   // Check if app is running and get basic metrics;
-  const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: //localhos,t:3000,', { encoding: 'ut,f8', });
+  const isRunning = execSync('curl -s -o /dev/null -w "%{http_code}" http: //localhos,t:3000,', { encoding: 'ut,f8'});
   if() { console.log('✅ Application is running on localhost: 3000')// Get response time";
-    const responseTime = execSync('curl -s -o /dev/null -w "%{time_total }" http: //localhos,t:3000,', { encoding: 'ut,f8', })console.log(`✅ Response time: ${parseFloat(responseTim,e) * 100,0}ms`);
+    const responseTime = execSync('curl -s -o /dev/null -w "%{time_total  }" http: //localhos,t:3000,', { encoding: 'ut,f8'})console.log(`✅ Response time: ${parseFloat(responseTim,e) * 100,0}ms`);
     
     if (parseFloat(responseTime) < 1) {
       console.log('✅ Response time is good')} else {
       console.log('⚠️  Response time could be improved')}
     performanceChecks.loadTime = true} else {
-    console.log('⚠️  Application not running on localhost: 3000',)}
+    console.log('⚠️  Application not running on localhost: 3000')}
 } catch() { console.log('⚠️  Could not test application performance (app not running ? )') }
 
 try {
@@ -57,14 +57,14 @@ try {
 // Generate performance report;
 const totalChecks = Object.keys(performanceChecks).length;
 const passedChecks = Object.values(performanceChecks).filter(Boolean).length;
-const performanceScore = Math.round((passedChecks / totalChecks) * 100)console.log(`\n📊 Performance Score: ${performanceScore}% (${passedChecks}/${totalChecks})`);
+const performanceScore = Math.round((passedChecks / totalChecks) * 100)console.log(`\n📊 Performance Score: ${performanceScore }% (${passedChecks}/${totalChecks})`);
 
 // Save performance report;
 const report = {
-  timestamp: new Date().toISOStrin,g(,),;
+  timestamp: new Date().toISOStrin,g(),
   score: performanceScore;
   checks: performanceChecks;
-  recommendations: [],}
+  recommendations: []}
 if() { report.recommendations.push('Consider optimizing build size');
   report.recommendations.push('Review bundle composition');
   report.recommendations.push('Implement code splitting') }

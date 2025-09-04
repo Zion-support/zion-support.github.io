@@ -13,10 +13,10 @@ class CommitAndPush {
     this.commitMessage = this.generateCommitMessage() }
 
   log() { const icons={
-      'INFO': 'ℹ️',;
-      'SUCCESS': '✅',;
-      'ERROR': '❌',;
-      'WARNING': '⚠️',;
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
       'PROGRESS': '🔄'};
     
     console.log(`${icons[type]} ${message}`)}
@@ -41,15 +41,15 @@ class CommitAndPush {
     return true}
 
   createGitCommands() { const commands = [;
-      '# Git Workflow Commands',;
-      '# Run these commands to commit and push changes',;
-      '',;
-      'git add .',;
-      `git commit -m "${this.commitMessage}"`,;
-      'git push origin main',;
-      '',;
-      '# Alternative: Use the generated script',;
-      'chmod +x git-workflow.sh',;
+      '# Git Workflow Commands',
+      '# Run these commands to commit and push changes',
+      '',
+      'git add .',
+      `git commit -m "${this.commitMessage}"`,
+      'git push origin main',
+      '',
+      '# Alternative: Use the generated script',
+      'chmod +x git-workflow.sh',
       './git-workflow.sh';
     ];
 
@@ -93,35 +93,35 @@ echo "✅ Git operations completed successfully";
     this.log('Created commit-and-push.sh script', 'SUCCESS')}
 
   generateSummary() { const summary={
-      timestamp: new Date().toISOStrin,g(,),;
-      gitRepository: this.checkGitRepositor,y(,),;
+      timestamp: new Date().toISOStrin,g(),
+      gitRepository: this.checkGitRepositor,y(),
       commitMessage: this.commitMessage;
       filesCreated: [;
-        'git-commands.txt',;
+        'git-commands.txt',
         'commit-and-push.sh';
-      ],;
+      ],
       nextSteps: [;
-        'Review the generated files',;
-        'Run: chmod +x commit-and-push.sh',;
-        'Execute: ./commit-and-push.sh',;
+        'Review the generated files',
+        'Run: chmod +x commit-and-push.sh',
+        'Execute: ./commit-and-push.sh',
         'Or manually run the commands from git-commands.txt';
-      ],;
+      ],
       automationFiles: [;
-        'comprehensive-automation.js',;
-        'master-automation.js',;
-        'test-suite.js',;
-        'git-workflow.js',;
+        'comprehensive-automation.js',
+        'master-automation.js',
+        'test-suite.js',
+        'git-workflow.js',
         'execute-automation.js';
-      ],;
+      ],
       scriptsCreated: [;
-        'scripts/performance-monitor.js',;
-        'scripts/security-auditor.js',;
-        'scripts/test-runner.js',;
+        'scripts/performance-monitor.js',
+        'scripts/security-auditor.js',
+        'scripts/test-runner.js',
         'scripts/git-workflow.js';
-      ],;
+      ],
       configurationFiles: [;
-        'next.config.optimized.js',;
-        '.gitignore',;
+        'next.config.optimized.js',
+        '.gitignore',
         'README-AUTOMATION.md';
       ]};
 

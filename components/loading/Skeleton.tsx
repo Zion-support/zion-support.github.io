@@ -15,11 +15,11 @@ export const Skeleton: React.FC<SkeletonProps> = ({
 }) => {
   return (
     <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
+      {Array.from({ length: lines  }).map((_, index) => (
         <div
           key={index}
           className="bg-gray-300 rounded"
-          style={{ width, height: lines > 1 ? height : height }}
+          style={{ width, height: lines > 1 ? height : height  }}
         />
       ))}
     </div>
@@ -42,15 +42,15 @@ export const CardSkeleton: React.FC = () => (
   </div>
 );
 
-export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number  }> = ({ 
   rows = 5, 
   columns = 4 
 }) => (
   <div className="animate-pulse">
     <div className="space-y-3">
-      {Array.from({ length: rows }).map((_, rowIndex) => (
+      {Array.from({ length: rows  }).map((_, rowIndex) => (
         <div key={rowIndex} className="flex space-x-4">
-          {Array.from({ length: columns }).map((_, colIndex) => (
+          {Array.from({ length: columns  }).map((_, colIndex) => (
             <div
               key={colIndex}
               className="h-4 bg-gray-300 rounded flex-1"
@@ -62,12 +62,12 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
   </div>
 );
 
-export const Spinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
+export const Spinner: React.FC<{ size?: 'sm' | 'md' | 'lg'  }> = ({ size = 'md' }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
-  }
+   }
   return (
     <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`} />
   );

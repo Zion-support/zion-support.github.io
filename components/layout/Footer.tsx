@@ -5,25 +5,24 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = { services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'Cloud DevOps', href: '/cloud-devops' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Quantum Computing', href: '/quantum-computing' },
-      { name: 'Micro SaaS', href: '/micro-saas' }], company: [
-      { name: 'About', href: '/about' },
-      { name: 'Contact', href: '/contact' },
-      { name: 'Pricing', href: '/pricing' },
-      { name: 'FAQ', href: '/faq' }], legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Documentation', href: '/docs' }
-    ],
-  };
+      { name: 'AI Services', href: '/ai-services'  },
+      { name: 'Cloud DevOps', href: '/cloud-devops'  },
+      { name: 'Cybersecurity', href: '/cybersecurity'  },
+      { name: 'Quantum Computing', href: '/quantum-computing'  },
+      { name: 'Micro SaaS', href: '/micro-saas'  }], company: [
+      { name: 'About', href: '/about'  },
+      { name: 'Contact', href: '/contact'  },
+      { name: 'Pricing', href: '/pricing'  },
+      { name: 'FAQ', href: '/faq'  }], legal: [
+      { name: 'Privacy Policy', href: '/privacy'  },
+      { name: 'Terms of Service', href: '/terms'  },
+      { name: 'Documentation', href: '/docs'  }
+    ]};
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
+          {/* Company Info */ }
           <div className="lg:col-span-1">
             <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
               Zion Tech Group
@@ -39,13 +38,13 @@ const Footer: React.FC = () => {
                 Middletown, DE 19709
               </p>
               <p className="text-sm text-gray-400 mt-2">
-                <strong>Phone:</strong> +1 302 464 0950<br />
+                <strong>Phone: </strong> +1 302 464 0950<br />
                 <strong>Email:</strong> kleber@ziontechgroup.com
               </p>
             </div>
           </div>
 
-          {/* Services */}
+          {/* Services */ }
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -53,9 +52,9 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-gray-300 hover: text-white transition-colors text-sm"
                   >
-                    {link.name}
+                    {link.name }
                   </Link>
                 </li>
               ))}
@@ -70,9 +69,9 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-gray-300 hover: text-white transition-colors text-sm"
                   >
-                    {link.name}
+                    {link.name }
                   </Link>
                 </li>
               ))}
@@ -87,9 +86,9 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link 
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                    className="text-gray-300 hover: text-white transition-colors text-sm"
                   >
-                    {link.name}
+                    {link.name }
                   </Link>
                 </li>
               ))}
@@ -98,9 +97,9 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md: flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
+              © {currentYear } Zion Tech Group. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0">
               <p className="text-gray-400 text-sm">

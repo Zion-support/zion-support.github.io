@@ -4,17 +4,17 @@ import { Button } from './Button';
 
 interface Props { children: ReactNode;
   fallback?: ReactNode;
-}
+ }
 
 interface State {
   hasError: boolean;
   error?: Error;
-}
+ }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  }
+   }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
@@ -25,7 +25,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined });
+    this.setState({ hasError: false, error: undefined  });
   }
   public render() {
     if (this.state.hasError) {

@@ -4,8 +4,8 @@ import Link from 'next/link';
 export default function Terms() {
   const contact ={
     phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
-  }
+    address: site, 'https: //ziontechgroup.com'
+   }
   return (
     <>
       <Head>
@@ -17,13 +17,13 @@ export default function Terms() {
       
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         <div className="max-w-4xl mx-auto py-20 px-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
+          <h1 className="text-4xl md: text-5xl font-extrabold tracking-tight mb-8">
             Terms of Service
           </h1>
           
           <div className="prose prose-invert max-w-none">
             <p className="text-lg text-slate-300 mb-8">
-              Last updated: {new Date().toLocaleDateString()}
+              Last updated: {new Date().toLocaleDateString() }
             </p>
 
             <section className="mb-12">
@@ -99,13 +99,13 @@ Permission is granted to temporarily download one copy of Zion Tech Group's serv
                 If you have any questions about these Terms of Service, please contact us: </p>
               <div className="bg-slate-900/60 p-6 rounded-lg border border-white/10">
                 <p className="text-slate-300 mb-2">
-                  <strong>Phone:</strong> <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-blue-400 hover: text-blue-300">{contact.phone}</a>
+                  <strong>Phone:</strong> <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-blue-400 hover: text-blue-300">{contact.phone }</a>
                 </p>
                 <p className="text-slate-300 mb-2">
-                  <strong>Email: </strong> <a href={`mailto:${contact.email}`} className="text-blue-400 hover: text-blue-300">{contact.email}</a>
+                  <strong>Email: </strong> <a href={`mailto:${contact.email }`} className="text-blue-400 hover: text-blue-300">{contact.email }</a>
                 </p>
                 <p className="text-slate-300">
-                  <strong>Address: </strong> {contact.address}
+                  <strong>Address: </strong> {contact.address }
                 </p>
               </div>
             </section>
@@ -119,4 +119,4 @@ Permission is granted to temporarily download one copy of Zion Tech Group's serv
         </div>
       </main>
     </>
-  )}
+  ) }

@@ -8,7 +8,7 @@ interface FormData {
   phone: string;
   service: string;
   message: string;
-}
+ }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  });
+   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -46,7 +46,7 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      });
+       });
     } catch {
       setSubmitStatus('error');
     } finally {
@@ -65,7 +65,7 @@ const ContactForm: React.FC = () => {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
+            value={formData.name }
             onChange={handleInputChange}
             required
             className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -82,7 +82,7 @@ const ContactForm: React.FC = () => {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
+            value={formData.email }
             onChange={handleInputChange}
             required
             className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -101,7 +101,7 @@ const ContactForm: React.FC = () => {
             type="text"
             id="company"
             name="company"
-            value={formData.company}
+            value={formData.company }
             onChange={handleInputChange}
             className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Your company name"
@@ -116,7 +116,7 @@ const ContactForm: React.FC = () => {
             type="tel"
             id="phone"
             name="phone"
-            value={formData.phone}
+            value={formData.phone }
             onChange={handleInputChange}
             className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="+1 (555) 123-4567"
@@ -131,7 +131,7 @@ const ContactForm: React.FC = () => {
         <select
           id="service"
           name="service"
-          value={formData.service}
+          value={formData.service }
           onChange={handleInputChange}
           className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
@@ -151,11 +151,11 @@ const ContactForm: React.FC = () => {
         <textarea
           id="message"
           name="message"
-          value={formData.message}
+          value={formData.message }
           onChange={handleInputChange}
           required
           rows={5}
-          className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
+          className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical"
           placeholder="Tell us about your project requirements..."
           aria-describedby="message-error"
         />
@@ -165,7 +165,7 @@ const ContactForm: React.FC = () => {
         <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
           Thank you for your message! We&apos;ll get back to you within 24 hours.
         </div>
-      )}
+      ) }
 
       {submitStatus === 'error' && (
         <div className="p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-300" role="alert">
@@ -176,7 +176,7 @@ const ContactForm: React.FC = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full px-8 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded-lg font-semibold text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+        className="w-full px-8 py-3 bg-blue-600 hover: bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed rounded-lg font-semibold text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
         aria-describedby="submit-status"
       >
         {isSubmitting ? (
@@ -186,7 +186,7 @@ const ContactForm: React.FC = () => {
           </div>
         ) : (
           'Send Message'
-        )}
+        ) }
       </button>
     </form>
   );

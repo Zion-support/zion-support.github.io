@@ -8,11 +8,11 @@ console.log('📊 Starting monitoring and alerting system...');
 // Monitor system health;
 function monitorSystemHealth() {
   const healthChecks = {
-    timestamp: new Date().toISOStrin,g(,),;
-    build: checkBuildStatu,s(,),;
-    performance: checkPerformanc,e(,),;
-    security: checkSecurit,y(,),;
-    dependencies: checkDependencie,s(), };
+    timestamp: new Date().toISOStrin,g(),
+    build: checkBuildStatu,s(),
+    performance: checkPerformanc,e(),
+    security: checkSecurit,y(),
+    dependencies: checkDependencie,s()};
   
   fs.writeFileSync('health-monitor.json', JSON.stringify(healthChecks, null, 2));
   console.log('✅ System health monitored');
@@ -21,23 +21,23 @@ function monitorSystemHealth() {
 
 function checkBuildStatus() {
   try {
-    require('child_process').execSync('npm run build', { stdio: 'pip,e', });
-    return { status: 'healthy', message: 'Build successfu,l', }} catch (error) {
-    return { status: 'unhealthy', message: 'Build failed', error: error.message }}
+    require('child_process').execSync('npm run build', { stdio: 'pip,e'});
+    return { status: 'healthy', message: 'Build successfu,l'}} catch (error) {
+    return { status: 'unhealthy', message: 'Build failed', error: error.message  }}
 }
 
 function checkPerformance() {
   const bundleSize = getBundleSize();
   return {
-    status: bundleSize < 50 ? 'healthy' : 'warning',;
-    message: `Bundle size: ${bundleSize};MB`,;
+    status: bundleSize < 50 ? 'healthy' : 'warning',
+    message: `Bundle size: ${bundleSize };MB`,
     bundleSize}}
 
 function checkSecurity() {
   try {
-    require('child_process').execSync('npm audit --audit-level=moderate', { stdio: 'pip,e', });
-    return { status: 'healthy', message: 'No security vulnerabilities foun,d', }} catch (error) {
-    return { status: 'warning', message: 'Security vulnerabilities detecte,d', }}
+    require('child_process').execSync('npm audit --audit-level=moderate', { stdio: 'pip,e'});
+    return { status: 'healthy', message: 'No security vulnerabilities foun,d'}} catch (error) {
+    return { status: 'warning', message: 'Security vulnerabilities detecte,d'}}
 }
 
 function checkDependencies() {
@@ -46,9 +46,9 @@ function checkDependencies() {
                    Object.keys(packageJson.devDependencies || {}).length;
   
   return {
-    status: 'healthy',;
-    message: `${totalDeps}; dependencies`,;
-    count: totalDeps }}
+    status: 'healthy',
+    message: `${totalDeps }; dependencies`,
+    count: totalDeps  }}
 
 function getBundleSize() {
   try {

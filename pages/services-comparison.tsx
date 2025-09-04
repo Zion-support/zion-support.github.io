@@ -2,32 +2,32 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function ServicesComparison() {
-const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m', };
+const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m'};
   const serviceCategories = [{
       name: 'Micro SaaS Products';
       count: '150+';
       description: 'Focused software solutions for specific business needs';
-      features: ['Quick deployment' 'Scalable architecture' 'API integrations' 'Custom brandin,g',],;
+      features: ['Quick deployment' 'Scalable architecture' 'API integrations' 'Custom brandin,g'],
       pricing: 'Starting at $29/month';
       href: '/micro-saas';
-      color: 'blu,e', },{
+      color: 'blu,e'},{
       name: 'AI Services';
       count: '90+';
       description: 'Advanced artificial intelligence and automation solutions';
-      features: ['Machine learning models' 'Natural language processing' 'Computer vision' 'Predictive analytic,s',],;
+      features: ['Machine learning models' 'Natural language processing' 'Computer vision' 'Predictive analytic,s'],
       pricing: 'Starting at $99/month';
       href: '/ai-services';
-      color: 'purpl,e', },{
+      color: 'purpl,e'},{
       name: 'IT Solutions';
       count: '100+';
       description: 'Comprehensive IT services and infrastructure solutions';
-      features: ['Cloud management' 'Security solutions' 'DevOps automation' 'Data analytic,s',],;
+      features: ['Cloud management' 'Security solutions' 'DevOps automation' 'Data analytic,s'],
       pricing: 'Starting at $199/month';
       href: '/it-services';
-      color: 'gree,n', }
+      color: 'gree,n'}
   ];
 
-  return (<><Head><title>Services Comparison - Zion Tech Group</title><meta name="description" content="Compare Zion Tech Group's service categories: Micro SaaS Products AI Services, and IT Solutions. Find the right technology solutions for your business needs." />"<meta name="keywords" content="services comparison, micro SaaS vs AI services, IT solutions comparison, technology services, business solutions" />"<meta name="viewport" content="width=device-width, initial-scale=1" />"<meta name="robots" content="index, follow" />"<link rel="canonical" href={`${contact.site}/services-comparison`} />"<meta property="og: title" content="Services Comparison - Zion Tech Group" />"<meta property="og:description" content="Compare Zion Tech Group's service categories: Micro SaaS Products AI Services, and IT Solutions. Find the right technology solutions for your business needs." />"<meta property="og: url" content={`${contact.site}/services-comparison`} />"<meta property="og: type" content="website" /></Head>;
+  return (<><Head><title>Services Comparison - Zion Tech Group</title><meta name="description" content="Compare Zion Tech Group's service categories: Micro SaaS Products AI Services, and IT Solutions. Find the right technology solutions for your business needs." />"<meta name="keywords" content="services comparison, micro SaaS vs AI services, IT solutions comparison, technology services, business solutions" />"<meta name="viewport" content="width=device-width, initial-scale=1" />"<meta name="robots" content="index, follow" />"<link rel="canonical" href={`${contact.site}/services-comparison`} />"<meta property="og: title" content="Services Comparison - Zion Tech Group" />"<meta property="og:description" content="Compare Zion Tech Group's service categories: Micro SaaS Products AI Services, and IT Solutions. Find the right technology solutions for your business needs." />"<meta property="og: url" content={`${contact.site }/services-comparison`} />"<meta property="og: type" content="website" /></Head>;
       "<main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white" role="main">{/* Hero Sectio,n *,/}"<section className="py-20 px-4 text-center">"<div className="max-w-4xl mx-auto">"<h1 className="text-4xl md: text-5xl font-extrabold tracking-tight mb-6">;
               Services Comparison</h1>"<p className="text-xl text-slate-300 mb-8">;
               Choose the Right Technology Solutions for Your Business</p>"<p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">;
@@ -47,7 +47,7 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
                     ))}
                   </tr><tr>"<td className="p-6 font-semibold text-slate-300">Action</td>{serviceCategories.map((service) => ("<td key={service.name} className="p-6 text-center"><Link;
                           href={service.href}
-                          className={`inline-block px-6 py-2 bg-${service.color}-600 hover: bg-${service.color}-700 rounded-lg font-semibold transition-colors focus: outline-none focus:ring-2 focus:ring-${service.color}-500 focus: ring-offset-2 focus:ring-offset-slat,e-900,`}
+                          className={`inline-block px-6 py-2 bg-${service.color}-600 hover: bg-${service.color }-700 rounded-lg font-semibold transition-colors focus: outline-none focus:ring-2 focus:ring-${service.color }-500 focus: ring-offset-2 focus:ring-offset-slat,e-900,`}
                           aria-label={`Learn more about ${service.name}`}
                         >;
                           Learn More</Link></td>;
@@ -67,6 +67,6 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
                 href="/services-overview" ";
                 className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900"";
                 aria-label="View services overview">;
-                View Services Overview</Link></div></div></section></mai,n></>;
-  );,}
+                View Services Overview</Link></div></div></section></mai,n></>
+  )}
 </div></div></div></div></div></div></div></div>"

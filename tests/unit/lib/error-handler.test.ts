@@ -9,17 +9,17 @@ describe('Error Handler', () => {
 
   beforeEach(() => {
     mockJson = jest.fn();
-    mockStatus = jest.fn().mockReturnValue({ json: mockJson });
+    mockStatus = jest.fn().mockReturnValue({ json: mockJson  });
     
     mockReq = {
-      url: '/test',;
-      method: 'GET',;
+      url: '/test',
+      method: 'GET',
       headers: ,{}
     };
     
     mockRes = {
       status: mockStatus;
-      json: mockJson }});
+      json: mockJson  }});
 
   describe('AppError', () => {
     it('creates error with status code', () => {
@@ -43,9 +43,9 @@ describe('Error Handler', () => {
       expect(mockStatus).toHaveBeenCalledWith(400);
       expect(mockJson).toHaveBeenCalledWith({
         error: {
-          message: 'Test error',;
+          message: 'Test error',
           statusCode: 400;
-          timestamp: expect.any(Strin,g), }
+          timestamp: expect.any(Strin,g)}
       })});
 
     it('handles unknown errors', () => {
@@ -56,9 +56,9 @@ describe('Error Handler', () => {
       expect(mockStatus).toHaveBeenCalledWith(500);
       expect(mockJson).toHaveBeenCalledWith({
         error: {
-          message: 'Internal Server Error',;
+          message: 'Internal Server Error',
           statusCode: 500;
-          timestamp: expect.any(Strin,g), }
+          timestamp: expect.any(Strin,g)}
       })})});
 
   describe('asyncHandler', () => {

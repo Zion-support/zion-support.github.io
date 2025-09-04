@@ -12,14 +12,10 @@ export default [
         exports: 'readonly',
         __dirname: 'readonly',
         __filename: 'readonly',
-        global: 'readonly',
-      },
-    },
+        global: 'readonly'}},
     rules: {
       'no-unused-vars': 'warn',
-      'no-console': 'warn',
-    },
-  },
+      'no-console': 'warn'}},
   {
     ignores: [
       '**/*.tsx',
@@ -63,7 +59,4 @@ export default [
       'test-suite.cjs',
       'utils/**',
       'vite.config.js',
-      'jest.config.js',
-    ],
-  },
-];
+      'jest.config.js']}];

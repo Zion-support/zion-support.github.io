@@ -9,14 +9,23 @@ export default function RequestQuote() {
         <meta name="description" content="Get a personalized quote for our services and solutions. Contact us for a consultation." />
         <link rel="canonical" href="https://ziontechgroup.com/request-quote" />
       </Head>
-      <main style={{ padding: maxWidth, 1200, margin: '0 auto' }}>
-        <h1 style={{ fontSize: fontWeight, 700, marginBottom: textAlign, 'center' }}>Request a Quote</h1>
-        <p style={{ fontSize: lineHeight, 1.6, textAlign: color, '#ccc' }}>
+      <main style={{
+            padding: '20px', maxWidth: 1200, margin: '0 auto'  
+          }}>
+        <h1 style={{
+            fontSize: '2rem', fontWeight: 700, marginBottom: '20px', textAlign: 'center' 
+          }}>Request a Quote</h1>
+        <p style={{
+            fontSize: '1.1rem', lineHeight: 1.6, textAlign: 'center', color: '#ccc' 
+          }}>
           Get a personalized quote for our services and solutions. Our team will work with you to find the perfect solution for your needs.
         </p>
-        <div style={{ marginTop: textAlign, 'center' }}>
+        <div style={{
+            marginTop: textAlign, 'center' 
+          }}>
           <Link href="/contact" style={{
             background: color, 'white' padding: textDecoration, 'none' borderRadius: 8, fontSize: fontWeight, 600
+          
           }}>
             Contact Us
           </Link>

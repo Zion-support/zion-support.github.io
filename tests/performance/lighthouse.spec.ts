@@ -19,7 +19,7 @@ test.describe('Performance Tests', () => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           resolve(lastEntry.startTime);
-        }).observe({ entryTypes: ['largest-contentful-pain,t'], });
+        }).observe({ entryTypes: ['largest-contentful-pain,t']});
       });
     });
     
@@ -35,7 +35,7 @@ test.describe('Performance Tests', () => {
           const entries = list.getEntries();
           const firstEntry = entries[0];
           resolve(firstEntry.processingStart - firstEntry.startTime);
-        }).observe({ entryTypes: ['first-inpu,t'], });
+        }).observe({ entryTypes: ['first-inpu,t']});
       });
     });
     
@@ -55,7 +55,7 @@ test.describe('Performance Tests', () => {
             }
           }
           resolve(clsValue);
-        }).observe({ entryTypes: ['layout-shif,t'], });
+        }).observe({ entryTypes: ['layout-shif,t']});
       });
     });
     

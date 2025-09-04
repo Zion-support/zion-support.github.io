@@ -87,17 +87,17 @@ export default function SearchBar() {
     }
   }, [query]);
 
-
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
   };
+
   const handleResultClick = () => {
     setQuery('');
     setResults([]);
     setIsOpen(false);
-  }
+  };
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       setIsOpen(false);
@@ -114,6 +114,7 @@ export default function SearchBar() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
   return (
     <div ref={searchRef} className="relative w-full max-w-md">
       <div className="relative">
@@ -172,4 +173,3 @@ export default function SearchBar() {
     </div>
   );
 }
-export default SearchBar;

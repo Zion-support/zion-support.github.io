@@ -30,17 +30,17 @@ function fixSyntaxErrors(filePath) {
     let modified = false;
     
     // Fix missing semicolons after return statements;
-    content = content.replace(/return \{([^}]+)\}(?!;)/g, (match, p1) => {
-      if (!p1.includes(';')) {
+    content = content.replace(/return \{([^}]+)\}(?!)/g, (match, p1) => {
+      if (!p1.includes('')) {
         modified = true;
-        return `return {${p1};};`;
+        return `return {${p1}};`;
       }
       return match;
     });
     
     // Fix missing commas in object literals and style objects;
-    content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
-      if (!value.trim().endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith(';')) {
+    content = content.replace(/(\w+):\s*([^}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
+      if (!value.trim().endsWith(',') && !value.trim().endsWith('}') && !value.trim().endsWith('')) {
         modified = true;
         return `${key}: ${value.trim()},`;
       }
@@ -48,7 +48,7 @@ function fixSyntaxErrors(filePath) {
     });
     
     // Fix missing commas in style, objects specifically;
-    content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
+    content = content.replace(/(\w+):\s*([^}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
       if (key.includes('style') || key.includes('Style') || key.includes('Style')) {
         if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) {
           modified = true;
@@ -151,8 +151,8 @@ function fixSyntaxErrors(filePath) {
     }
     
     // Fix missing semicolons at end of statements;
-    content = content.replace(/([^;}])\n/g, (match, p1) => {
-      if (p1.trim() && !p1.trim().endsWith(';') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {
+    content = content.replace(/([^}])\n/g, (match, p1) => {
+      if (p1.trim() && !p1.trim().endsWith('') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {
         modified = true;
         return `${p1};\n`;
       }

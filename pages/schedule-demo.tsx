@@ -12,20 +12,12 @@ export default function ScheduleDemo() {
     company: '';
     phone: '';
     message: '';
-    servic,e: '', });
+    servic,e: ''});
 
-  const timeSlots = [;
-    '9: 00 AM' '10:00 AM' '11:00 AM' '12:00 PM';
-    '1:00 PM' '2:00 PM' '3:00 PM' '4:00 PM' '5:00 PM';
+  const timeSlots = ['9: 00 AM' '10:00 AM' '11:00 AM' '12:00 PM''1:00 PM' '2:00 PM' '3:00 PM' '4:00 PM' '5:00 PM';
   ];
 
-  const services = [;
-    'AI Services';
-    'Micro SaaS Solutions';
-    'Cloud Migration';
-    'Cybersecurity';
-    'Digital Transformation';
-    'Custom Development';
+  const services = ['AI Services''Micro SaaS Solutions''Cloud Migration''Cybersecurity''Digital Transformation''Custom Development';
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -41,36 +33,36 @@ export default function ScheduleDemo() {
               "<form onSubmit={handleSubmit} className="space-y-6">"<div className="grid md: grid-cols-2 gap-4"><div>"<label className="block text-white font-medium mb-2">Full Name *</label><input";
                       type="text";
                       required;
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      value={formData.name }
+                      onChange={(e) => setFormData({...formData, name: e.target.value })}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400"";
                       placeholder="John Doe";
                     /></div><div>"<label className="block text-white font-medium mb-2">Email Address *</label><input";
                       type="email";
                       required;
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      value={formData.email }
+                      onChange={(e) => setFormData({...formData, email: e.target.value })}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400"";
                       placeholder="john@company.com";
                     /></div></div>;
 "<div className="grid md:grid-cols-2 gap-4"><div>"<label className="block text-white font-medium mb-2">Company *</label><input";
                       type="text";
                       required;
-                      value={formData.company}
-                      onChange={(e) => setFormData({...formData, company: e.target.value})}
+                      value={formData.company }
+                      onChange={(e) => setFormData({...formData, company: e.target.value })}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400"";
                       placeholder="Your Company";
                     /></div><div>"<label className="block text-white font-medium mb-2">Phone Number</label><input";
                       type="tel";
-                      value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                      value={formData.phone }
+                      onChange={(e) => setFormData({...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400"";
                       placeholder="+1 (555) 123-4567";
                     /></div></div><div>"<label className="block text-white font-medium mb-2">Service Interest *</label><select;
                     required;
-                    value={formData.service}
-                    onChange={(e) => setFormData({...formData, service: e.target.value})}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-blue-400">"<option value="" className="bg-slate-800">Select a service</option>{services.map((service) => ("<option key={service} value={service} className="bg-slate-800">{service}</option>;
+                    value={formData.service }
+                    onChange={(e) => setFormData({...formData, service: e.target.value })}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-blue-400">"<option value="" className="bg-slate-800">Select a service</option>{services.map((service) => ("<option key={service } value={service} className="bg-slate-800">{service}</option>;
                     ))}
                   </select></div><div>"<label className="block text-white font-medium mb-2">Preferred Date *</label><input";
                     type="date";
@@ -81,13 +73,13 @@ export default function ScheduleDemo() {
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-blue-400";
                   /></div><div>"<label className="block text-white font-medium mb-2">Preferred Time *</label><select;
                     required;
-                    value={selectedTime}
+                    value={selectedTime }
                     onChange={(e) => setSelectedTime(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-blue-400">"<option value="" className="bg-slate-800">Select a time</option>{timeSlots.map((time) => ("<option key={time} value={time} className="bg-slate-800">{time}</option>;
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:border-blue-400">"<option value="" className="bg-slate-800">Select a time</option>{timeSlots.map((time) => ("<option key={time } value={time} className="bg-slate-800">{time}</option>;
                     ))}
                   </select></div><div>"<label className="block text-white font-medium mb-2">Additional Message</label><textarea;
                     value={formData.message}
-                    onChange={(e) => setFormData({...formData, message: e.target.value})}
+                    onChange={(e) => setFormData({...formData, message: e.target.value })}
                     rows={4}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400"";
                     placeholder="Tell us about your specific needs or questions...";
@@ -97,6 +89,6 @@ export default function ScheduleDemo() {
                   Schedule Demo"<ArrowRight className="w-5 h-5 ml-2" /></button></form></div></div>{/* Contact Inf,o *,/}"<div className="text-center mt-16">"<h3 className="text-xl font-semibold text-white mb-4">Need Immediate Assistance?</h3>"<p className="text-gray-300 mb-6">;
               Contact us directly for urgent inquiries or technical support.</p>"<div className="flex flex-col sm: flex-row gap-4 justify-center">"<a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300 transition-colors">;
                 kleber@ziontechgroup.com</a>"<span className="text-gray-500 hidden sm:block">•</span>"<a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300 transition-colors">;
-                +1 (302) 464-0950</a></div></div></div></di,v></>;
-  );,}
+                +1 (302) 464-0950</a></div></div></div></di,v></>
+  )}
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"

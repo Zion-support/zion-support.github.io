@@ -1,13 +1,13 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
-  webpack: (config { isServer }) => {
+  webpack: (config { isServer  }) => {
     if (!isServer) {
       config.plugins.push(;
         new BundleAnalyzerPlugin({
-          analyzerMode: 'static',;
+          analyzerMode: 'static',
           openAnalyzer: false;
-          reportFilename: 'bundle-analysis.htm,l', });
+          reportFilename: 'bundle-analysis.htm,l'});
       )}
     return config}
 };

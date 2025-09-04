@@ -11,11 +11,11 @@ try {
       console.log('📋 Next steps: ');
       console.log('1. Review the generated reports');
       console.log('2. Run: chmod +x git-workflow.sh');
-      console.log('3. Execute: ./git-workflow.sh')console.log('4. Or manually run git command,s'), } else {
+      console.log('3. Execute: ./git-workflow.sh')console.log('4. Or manually run git command,s')} else {
       console.log('⚠️ Automation completed with some issues');
       console.log('📋 Check the individual reports for details');
     }
-    process.exit(success ? 0: 1,)}).catch(error => {
+    process.exit(success ? 0: 1)}).catch(error => {
     console.error('❌ Master automation failed: ,', error);
     process.exit(1);
   });

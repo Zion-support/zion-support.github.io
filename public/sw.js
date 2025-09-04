@@ -1,16 +1,16 @@
 // Comprehensive service worker for caching and offline support;
 const CACHE_NAME = 'zion-tech-group-v2';
 const urlsToCache = [;
-  '/',;
-  '/services',;
-  '/contact',;
-  '/pricing',;
-  '/about',;
-  '/ai-services',;
-  '/it-services',;
-  '/micro-saas',;
-  '/_next/static/',;
-  '/favicon.ico',;
+  '/',
+  '/services',
+  '/contact',
+  '/pricing',
+  '/about',
+  '/ai-services',
+  '/it-services',
+  '/micro-saas',
+  '/_next/static/',
+  '/favicon.ico',
   '/manifest.json';
 ];
 

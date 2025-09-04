@@ -3,30 +3,14 @@ import Head from 'next/head';
 // import Image from 'next/image';
 
 export default function Home() {
-const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m', };
-  return (<><Head><title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title><meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />"<meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, quantum computing, blockchain, edge computing, 5G, IoT, MLOps, DevSecOps" />"<link rel="canonical" href={contact.site} />"<meta property="og: title" content="Zion Tech Group - Innovative Micro SaaS AI & IT Solutions" />"<meta property="og: description" content="Leading provider of micro SaaS products AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />"<meta property="og: url" content={contact.site} />"<meta property="og: type" content="website" />"<meta name="twitter:card" content="summary_large_image" />"<meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS AI & IT Solutions" />"<meta name="twitter: description" content="Leading provider of micro SaaS products AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." /><script";
+const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m'};
+  return (<><Head><title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title><meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />"<meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, quantum computing, blockchain, edge computing, 5G, IoT, MLOps, DevSecOps" />"<link rel="canonical" href={contact.site} />"<meta property="og: title" content="Zion Tech Group - Innovative Micro SaaS AI & IT Solutions" />"<meta property="og: description" content="Leading provider of micro SaaS products AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />"<meta property="og: url" content={contact.site } />"<meta property="og: type" content="website" />"<meta name="twitter:card" content="summary_large_image" />"<meta name="twitter:title" content="Zion Tech Group - Innovative Micro SaaS AI & IT Solutions" />"<meta name="twitter: description" content="Leading provider of micro SaaS products AI services, and IT solutions. 340+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." /><script";
           type="application/ld+json";
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",";
-              "@type": "Organization",";
-              "name": "Zion Tech Group",";
-              "url": contact.site,";
-              "logo": `${contact.site}/favicon.svg`,";
-              "description": "Leading provider of micro SaaS products, AI services, and IT solutions",";
-              "address": {
-                "@type": "PostalAddress",";
-                "streetAddress": "364 E Main St STE 1008",";
-                "addressLocality": "Middletown",";
-                "addressRegion": "DE",";
-                "postalCode": "19709",";
-                "addressCountry": "US"},";
-              "contactPoint": {
-                "@type": "ContactPoint",";
-                "telephone": contact.phone,";
-                "contactType": "customer service",";
-                "email": contact.email},";
-              "sameAs": [contact.site]})}
+              "@context": "https://schema.org",""@type": "Organization",""name": "Zion Tech Group",""url": contact.site,""logo": `${contact.site}/favicon.svg`,""description": "Leading provider of micro SaaS products, AI services, and IT solutions",""address": {
+                "@type": "PostalAddress",""streetAddress": "364 E Main St STE 1008",""addressLocality": "Middletown",""addressRegion": "DE",""postalCode": "19709",""addressCountry": "US"},""contactPoint": {
+                "@type": "ContactPoint",""telephone": contact.phone,""contactType": "customer service",""email": contact.email},""sameAs": [contact.site]})}
         }
         /></Head>;
       "<main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">{/* Hero Section */}"<section className="py-20 px-4 text-center">"<div className="max-w-4xl mx-auto">"<h1 className="text-5xl md: text-6xl font-extrabold tracking-tight mb-6">;
@@ -56,12 +40,12 @@ const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', 
               Get in touch with our experts to discuss your project requirements and discover 
               how our innovative solutions can drive your business forward.</p>;
             "<div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">"<a href={`tel:${contact.phone.replace(/[^\,d+]/,g,'')}`} className="px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold transition-colors">;
-                Call {contact.phone}
-              </a>"<a href={`mailto: ${contact.email}`} className="px-6 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">;
-                Email {contact.email}
+                Call {contact.phone }
+              </a>"<a href={`mailto: ${contact.email }`} className="px-6 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold transition-colors">;
+                Email {contact.email }
               </a>"<Link href="/contact" className="px-6 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
                 Contact Form</Link></div>;
-            "<div className="text-slate-400"><p>{contact.address}</p>"<p className="mt-2">Visit us at <a href={contact.site} className="text-blue-400 hover: text-blue-300">{contact.site}</a></p></div></div></section></main></>;
+            "<div className="text-slate-400"><p>{contact.address }</p>"<p className="mt-2">Visit us at <a href={contact.site} className="text-blue-400 hover: text-blue-300">{contact.site }</a></p></div></div></section></main></>
   )}
 
 </div></div></div></div></div></div></div></div></div></div>"

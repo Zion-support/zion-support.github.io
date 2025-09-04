@@ -5,18 +5,18 @@ interface Props {
   fallback?: ReactNode;
   // eslint-disable-next-line no-unused-vars
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+ }
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-}
+ }
 
 class AdvancedErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  }
+   }
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
@@ -32,7 +32,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined  });
   };
   public render() {
     if (this.state.hasError) {
@@ -51,13 +51,13 @@ class AdvancedErrorBoundary extends Component<Props, State> {
             <div className="space-y-3">
               <button
                 onClick={this.handleRetry}
-                className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                className="w-full px-4 py-2 bg-blue-600 hover: bg-blue-700 text-white rounded-lg transition-colors"
               >
                 Try Again
               </button>
               <button
-                onClick={() => window.location.reload()}
-                className="w-full px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors"
+                onClick={() => window.location.reload() }
+                className="w-full px-4 py-2 bg-gray-600 hover: bg-gray-700 text-white rounded-lg transition-colors"
               >
                 Reload Page
               </button>
@@ -66,7 +66,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
               <details className="mt-4 text-left">
                 <summary className="text-gray-400 cursor-pointer">Error Details</summary>
                 <pre className="mt-2 text-xs text-red-400 bg-slate-900 p-2 rounded overflow-auto">
-                  {this.state.error.toString()}
+                  {this.state.error.toString() }
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>

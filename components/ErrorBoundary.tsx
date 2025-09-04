@@ -3,19 +3,19 @@ import React, { Component, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-}
+ }
 
 interface State {
   hasError: boolean;
   error?: Error;
-}
+ }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
-  }
+   }
   public static getDerivedStateFromError(): State {
-    return { hasError: true };
+    return { hasError: true  };
   }
 
   public componentDidCatch() {
@@ -41,13 +41,13 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="space-y-3">
               <button
                 onClick={() => window.location.reload()}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                className="w-full bg-blue-600 hover: bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Refresh Page
               </button>
               <button
-                onClick={() => window.location.href = '/'}
-                className="w-full bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                onClick={() => window.location.href = '/' }
+                className="w-full bg-slate-800 hover: bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 Go Home
               </button>
@@ -56,7 +56,7 @@ class ErrorBoundary extends Component<Props, State> {
               <details className="mt-6 text-left">
                 <summary className="text-slate-400 cursor-pointer">Error Details</summary>
                 <pre className="mt-2 text-xs text-red-400 bg-slate-800 p-3 rounded overflow-auto">
-                  {this.state.error.stack}
+                  {this.state.error.stack }
                 </pre>
               </details>
             )}

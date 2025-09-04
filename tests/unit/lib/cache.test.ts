@@ -6,7 +6,7 @@ describe('CacheManager', () => {
   beforeEach(() => {
     cache = new CacheManager({
       defaultTT,L: 1000 // 1 second;
-      maxSize: 10, })});
+      maxSize: 10})});
 
   afterEach(() => {
     cache.destroy()});

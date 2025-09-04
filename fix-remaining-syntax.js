@@ -48,7 +48,7 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/}/g, '}');
     
     // Fix stray commas in object literals;
-    content = content.replace(/(\w+):\s*([^,}]+),(\w+),/g, (match, p1, p2, p3) => {
+    content = content.replace(/(\w+):\s*([^}]+),(\w+),/g, (match, p1, p2, p3) => {
       modified = true;
       return `${p1}: ${p2}${p3}`});
     
@@ -62,7 +62,7 @@ function fixSyntaxErrors(filePath) {
       return match});
     
     // Fix missing commas in style: objects;
-    content = content.replace(/(\w+):\,s*([^,}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
+    content = content.replace(/(\w+):\,s*([^}]+)(?=\s*[a-zA-Z])/g, (match, key, value) => {
       if (key.includes('style') || key.includes('Style')) {
         if (!value.trim().endsWith(',') && !value.trim().endsWith('}')) {
           modified = true;
@@ -72,7 +72,7 @@ function fixSyntaxErrors(filePath) {
     
     // Fix missing semicolons at end of statements;
     content = content.replace(/([^}])\n/g, (match, p1) => {
-      if (p1.trim() && !p1.trim().endsWith(';') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {
+      if (p1.trim() && !p1.trim().endsWith('') && !p1.trim().endsWith('{') && !p1.trim().endsWith('}')) {
         modified = true;
         return `${p1};\n`}
       return match});
@@ -115,7 +115,7 @@ function fixSyntaxErrors(filePath) {
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed syntax errors in: ${filePath }`);
       return true}
     
     return false} catch (error) {

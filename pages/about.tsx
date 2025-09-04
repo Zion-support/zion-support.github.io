@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function About() {
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  }
+   }
   return (
     <>
       <Head>
@@ -90,7 +90,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* Values */}
+        {/* Values */ }
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md: text-4xl font-bold text-center mb-12">
@@ -148,4 +148,4 @@ export default function About() {
         </section>
       </main>
     </>
-  )}
+  ) }

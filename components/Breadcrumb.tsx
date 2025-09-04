@@ -4,13 +4,13 @@ import { useRouter } from 'next/router';
 interface BreadcrumbItem {
   label: string;
   href?: string;
-}
+ }
 
 export default function Breadcrumb() {
   const router = useRouter();
   const pathSegments = router.asPath.split('/').filter(segment => segment !== '');
   const breadcrumbs: BreadcrumbItem[] = [
-    { label: 'Home', href: '/' }
+    { label: 'Home', href: '/'  }
   ];
 
   // Build breadcrumbs from path segments
@@ -28,7 +28,7 @@ export default function Breadcrumb() {
     breadcrumbs.push({
       label,
       href: isLast ? undefined : currentPath
-    });
+     });
   });
 
   // Don't show breadcrumbs on home page
@@ -55,9 +55,9 @@ export default function Breadcrumb() {
               {item.href ? (
                 <Link
                   href={item.href}
-                  className="text-slate-300 hover:text-white transition-colors"
+                  className="text-slate-300 hover: text-white transition-colors"
                 >
-                  {item.label}
+                  {item.label }
                 </Link>
               ) : (
                 <span className="text-white font-medium" aria-current="page">

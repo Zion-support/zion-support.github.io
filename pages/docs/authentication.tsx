@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowLeft, Key, Shield, Lock, User } from 'lucide-react';
 
 export default function Authentication() {
-const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m', };
+const contact = { phone: '+1 302 464 0950,', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown D,E 19709,', site: 'https://ziontechgroup.co,m'};
 
   return (<><Head><title>Authentication - Zion Tech Group Documentation</title><meta name="description" content="Learn how to authenticate with Zion Tech Group's APIs using API keys, OAuth 2.0, and JWT tokens." />"<link rel="canonical" href={`${contact.site}/docs/authentication`} /></Head>;
 "<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"<div className="max-w-4xl mx-auto px-4 py-8">{/* Header */}"<div className="mb-8">"<Link href="/docs" className="inline-flex items-center text-blue-600 hover: text-blue-700 mb-4">"<ArrowLeft className="w-4 h-4 mr-2" />;
@@ -34,7 +34,7 @@ grant_type=authorization_code&;
 code=AUTHORIZATION_CODE&;
 client_id=YOUR_CLIENT_ID&;
 client_secret=YOUR_CLIENT_SECRET&;
-redirect_uri=YOUR_REDIRECT_URI`}
+redirect_uri=YOUR_REDIRECT_URI` }
                 </pre></div>;
 "<div className="grid md: grid-cols-2 gap-6"><div>"<h3 className="text-lg font-semibold text-gray-900 mb-3">OAuth Flow</h3>"<ol className="list-decimal list-inside space-y-2 text-gray-600"><li>Redirect user to authorization URL</li><li>User grants permission</li><li>Receive authorization code</li><li>Exchange code for access token</li><li>Use access token for API calls</li></ol></div><div>"<h3 className="text-lg font-semibold text-gray-900 mb-3">Scopes</h3>"<ul className="list-disc list-inside space-y-2 text-gray-600">"<li><code className="bg-gray-100 px-2 py-1 rounded">read</code> - Read access to resources</li>"<li><code className="bg-gray-100 px-2 py-1 rounded">write</code> - Write access to resources</li>"<li><code className="bg-gray-100 px-2 py-1 rounded">admin</code> - Administrative access</li>"<li><code className="bg-gray-100 px-2 py-1 rounded">billing</code> - Billing information access</li></ul></div></div></div>;
 "<div className="bg-white rounded-lg shadow-lg p-8">"<div className="flex items-center mb-6">"<Lock className="w-8 h-8 text-purple-600 mr-3" />"<h2 className="text-2xl font-semibold text-gray-900">JWT Tokens</h2></div>;
@@ -42,19 +42,14 @@ redirect_uri=YOUR_REDIRECT_URI`}
                 JSON Web Tokens for stateless authentication with built-in expiration and claims.</p>;
 "<div className="bg-gray-900 rounded-lg p-4 mb-6">"<pre className="text-green-400 text-sm overflow-x-auto">{`// JWT Token Structure{
   "header": {
-    "alg": "HS256"";
-    "typ": "JW,T", },";
-  "payload": {
-    "sub": "user_id"";
-    "iat": 1640995200,";
-    "exp": 1641081600,";
-    "scope": "read write"}
+    "alg": "HS256"""typ": "JW,T"},""payload": {
+    "sub": "user_id"""iat": 1640995200,""exp": 1641081600,""scope": "read write"}
 }`}
                 </pre></div>;
 "<div className="grid md: grid-cols-2 gap-6"><div>"<h3 className="text-lg font-semibold text-gray-900 mb-3">Token Features</h3>"<ul className="list-disc list-inside space-y-2 text-gray-600"><li>Self-contained with user information</li><li>Built-in expiration handling</li><li>Stateless authentication</li><li>Cross-service compatibility</li></ul></div><div>"<h3 className="text-lg font-semibold text-gray-900 mb-3">Security</h3>"<ul className="list-disc list-inside space-y-2 text-gray-600"><li>HMAC SHA-256 signing</li><li>Short expiration times</li><li>Refresh token support</li><li>Token revocation capability</li></ul></div></div></div></div>{/* Rate Limitin,g *,/}"<div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">"<h2 className="text-xl font-semibold text-gray-900 mb-4">Rate Limiting</h2>"<p className="text-gray-600 mb-4">;
               API requests are rate limited to ensure fair usage and system stability.</p>"<div className="grid md: grid-cols-3 gap-4 text-sm">"<div className="bg-white rounded p-4">"<h3 className="font-semibold text-gray-900 mb-2">Free Tier</h3>"<p className="text-gra,y-600">,1,000 requests/hour</p></div>"<div className="bg-white rounded p-4">"<h3 className="font-semibold text-gray-900 mb-2">Professional</h3>"<p className="text-gray-600">10,000 requests/hour</p></div>"<div className="bg-white rounded p-4">"<h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3>"<p className="text-gray-600">Unlimited requests</p></div></div></div>{/* Support */}"<div className="bg-blue-50 rounded-lg p-8 text-center">"<h2 className="text-2xl font-semibold text-gray-900 mb-4">Need Help with Authentication?</h2>"<p className="text-gray-600 mb-6">;
               Our technical team is here to help you implement secure authentication.</p>"<div className="flex flex-col sm: flex-row gap-4 justify-center">"<Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">;
-                Get Support</Link>"<a href={`mailto:${contact.email}`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover: bg-blue-50 transition-colors">;
-                Email Technical Team</a></div></div></div></di,v></>;
-  );,}
+                Get Support</Link>"<a href={`mailto:${contact.email }`} className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover: bg-blue-50 transition-colors">;
+                Email Technical Team</a></div></div></div></di,v></>
+  )}
 </div></div></div></div></div>"

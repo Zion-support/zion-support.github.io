@@ -3,12 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true  },
+  typescript: { ignoreBuildErrors: true  },
   trailingSlash: true,
   generateBuildId: async () => {
     return 'build-' + Date.now();
-  },
+   },
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
   images: {
@@ -19,15 +19,15 @@ const nextConfig = {
   },
   experimental: {
     scrollRestoration: true
-  },
+   },
   async headers() {
     return [{
         source: '/(.*)',
         headers: [
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'DENY' },
-          { key: 'X-XSS-Protection', value: '1; mode=block' },
-          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' }
+          { key: 'X-Content-Type-Options', value: 'nosniff'  },
+          { key: 'X-Frame-Options', value: 'DENY'  },
+          { key: 'X-XSS-Protection', value: '1; mode=block'  },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin'  }
         ]
       }
     ];

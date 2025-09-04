@@ -6,45 +6,45 @@ import { Atom, Cpu, Zap, Lock, Brain, Target } from 'lucide-react';
 export default function QuantumComputing() {
   const contact ={
     phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
-  }
+    address: site, 'https: //ziontechgroup.com'
+   }
   const services = [
     {
       icon: Atom,
       title: 'Quantum Algorithm Development'
       description: 'Custom quantum algorithms for optimization, simulation, and machine learning applications.'
       features: ['Quantum optimization' 'Quantum simulation' 'Quantum ML' 'Algorithm design']
-    },
+     },
     {
       icon: Cpu,
       title: 'Quantum Computing Infrastructure'
       description: 'Access to quantum computing resources and cloud-based quantum development platforms.'
       features: ['Cloud quantum access' 'Quantum simulators' 'Hardware integration' 'Development tools']
-    },
+     },
     {
       icon: Zap,
       title: 'Quantum Optimization Solutions'
       description: 'Solve complex optimization problems using quantum annealing and variational algorithms.'
       features: ['Supply chain optimization' 'Portfolio optimization' 'Scheduling problems' 'Resource allocation']
-    },
+     },
     {
       icon: Lock,
       title: 'Quantum Cryptography'
       description: 'Next-generation security solutions using quantum key distribution and post-quantum cryptography.'
       features: ['Quantum key distribution' 'Post-quantum crypto' 'Quantum random numbers' 'Secure communications']
-    },
+     },
     {
       icon: Brain,
       title: 'Quantum Machine Learning'
       description: 'Advanced ML models leveraging quantum computing for enhanced pattern recognition and data analysis.'
       features: ['Quantum neural networks' 'Quantum feature maps' 'Quantum clustering' 'Quantum classification']
-    },
+     },
     {
       icon: Target,
       title: 'Quantum Consulting & Training'
       description: 'Expert guidance and training to help your team understand and implement quantum solutions.'
       features: ['Quantum strategy' 'Team training' 'Implementation guidance' 'Technology assessment']
-    }
+     }
   ];
 
   return (
@@ -56,12 +56,12 @@ export default function QuantumComputing() {
         <link rel="canonical" href={`${contact.site}/quantum-computing`} />
         <meta property="og: title" content="Quantum Computing Services - Zion Tech Group" />
         <meta property="og:description" content="Cutting-edge quantum computing services including algorithm development and optimization solutions." />
-        <meta property="og:url" content={`${contact.site}/quantum-computing`} />
+        <meta property="og:url" content={`${contact.site }/quantum-computing`} />
         <meta property="og: type" content="website" />
       </Head>
 
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
+        {/* Hero Section */ }
         <section className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center">
@@ -89,7 +89,7 @@ export default function QuantumComputing() {
           </div>
         </section>
 
-        {/* Services Grid */}
+        {/* Services Grid */ }
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -106,7 +106,7 @@ export default function QuantumComputing() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow border border-gray-100">
                   <div className="flex items-center mb-4">
                     <service.icon className="w-8 h-8 text-purple-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title }</h3>
                   </div>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <ul className="space-y-2">
@@ -140,10 +140,10 @@ export default function QuantumComputing() {
                 Schedule Quantum Consultation
               </Link>
               <a 
-                href={`tel:${contact.phone}`}
+                href={`tel:${contact.phone }`}
                 className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-purple-600 hover:text-white transition-colors"
               >
-                Call {contact.phone}
+                Call {contact.phone }
               </a>
             </div>
           </div>

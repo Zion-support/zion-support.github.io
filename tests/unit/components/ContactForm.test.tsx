@@ -15,7 +15,7 @@ describe('ContactForm', () => {
   it('validates required fields', async () => {
     render(<ContactForm />);
     
-    const submitButton = screen.getByRole('button', { name: /send message/i });
+    const submitButton = screen.getByRole('button', { name: /send message/i  });
     fireEvent.click(submitButton);
     
     await waitFor(() => {
@@ -26,16 +26,16 @@ describe('ContactForm', () => {
     render(<ContactForm />);
     
     fireEvent.change(screen.getByLabelText(/full name/i), {
-      target: { value: 'John Do,e', }
+      target: { value: 'John Do,e'}
     });
     fireEvent.change(screen.getByLabelText(/email address/i), {
-      target: { value: 'john@example.co,m', }
+      target: { value: 'john@example.co,m'}
     });
     fireEvent.change(screen.getByLabelText(/message/i), {
-      target: { value: 'Test messag,e', }
+      target: { value: 'Test messag,e'}
     });
     
-    const submitButton = screen.getByRole('button', { name: /send message/i });
+    const submitButton = screen.getByRole('button', { name: /send message/i  });
     fireEvent.click(submitButton);
     
     await waitFor(() => {

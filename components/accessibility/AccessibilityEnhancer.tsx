@@ -9,7 +9,7 @@ export const useKeyboardNavigation = () => {
         const main = document.querySelector('main');
         if (main) {
           (main as HTMLElement).focus();
-        }
+         }
       }
     };
     document.addEventListener('keydown', handleKeyDown);
@@ -40,7 +40,7 @@ interface AccessibleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEle
   size?: 'sm' | 'md' | 'lg';
   loading?: boolean;
   children: React.ReactNode;
-}
+ }
 
 export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
   variant = 'primary',
@@ -57,12 +57,12 @@ export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
     primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500',
     secondary: 'bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500',
     danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-red-500'
-  }
+   }
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
     lg: 'px-6 py-3 text-lg'
-  }
+   }
   return (
     <button
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
@@ -85,7 +85,7 @@ export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
 interface FocusTrapProps {
   children: React.ReactNode;
   active: boolean;
-}
+ }
 
 export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
   useEffect(() => {
@@ -103,7 +103,7 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
         if (document.activeElement === firstFocusableElement) {
           lastFocusableElement.focus();
           e.preventDefault();
-        }
+         }
       } else {
         if (document.activeElement === lastFocusableElement) {
           firstFocusableElement.focus();
@@ -117,5 +117,5 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ children, active }) => {
     return () => document.removeEventListener('keydown', handleTabKey);
   }, [active]);
 
-  return <>{children}</>;
+  return <>{children}</>
 }

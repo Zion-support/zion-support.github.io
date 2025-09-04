@@ -8,24 +8,28 @@ function fixSyntaxErrors(filePath) {
 
     // Fix common syntax errors
     const fixes = [
-      // Fix semicolon-comma patterns
-      { pattern: /;,/g, replacement: ';' },
-      { pattern: /,;/g, replacement: ',' },
-      { pattern: /;}/g, replacement: '}' },
-      { pattern: /;\)/g, replacement: ')' },
-      { pattern: /;\]/g, replacement: ']' },
+      // Fix malformed style objects
+      { pattern: /style=\{\{\s*([^}]+)\s*\}\}/g, replacement: (match, styleContent) => {
+        // Fix missing commas in style objects
+        const fixed = styleContent.replace(/(\w+):\s*([^,}]+)\s+(\w+):/g, '$1: $2,\n            $3:');
+        return `style={{\n            ${fixed}\n          }}`;
+      }},
       
-      // Fix missing commas in object properties
-      { pattern: /(\w+)\s*:\s*([^,}]+)\s*}/g, replacement: '$1: $2 }' },
+      // Fix malformed variable names
+      { pattern: /\bmaxWidth\b/g, replacement: 'maxWidth' },
+      { pattern: /\bfontWeight\b/g, replacement: 'fontWeight' },
+      { pattern: /\btextAlign\b/g, replacement: 'textAlign' },
+      { pattern: /\blineHeight\b/g, replacement: 'lineHeight' },
+      { pattern: /\bcolor\b/g, replacement: 'color' },
       
-      // Fix malformed type definitions
-      { pattern: /(\w+)\s*:\s*(\w+)\s*;,\s*}/g, replacement: '$1: $2; }' },
-      
-      // Fix malformed array/object syntax
-      { pattern: /\[\s*,/g, replacement: '[' },
+      // Fix malformed arrays
+      { pattern: /const\s+(\w+)\s*=\s*\[\s*;\s*/g, replacement: 'const $1 = [' },
+      { pattern: /\[\s*,\s*/g, replacement: '[' },
       { pattern: /,\s*\]/g, replacement: ']' },
-      { pattern: /{\s*,/g, replacement: '{' },
-      { pattern: /,\s*}/g, replacement: '}' },
+      
+      // Fix malformed objects
+      { pattern: /\{\s*,/g, replacement: '{' },
+      { pattern: /,\s*\}/g, replacement: '}' },
       
       // Fix malformed function parameters
       { pattern: /\(\s*,\s*/g, replacement: '(' },
@@ -43,6 +47,11 @@ function fixSyntaxErrors(filePath) {
       // Fix malformed string concatenation
       { pattern: /"\s*;\s*"/g, replacement: '""' },
       { pattern: /'\s*;\s*'/g, replacement: "''" },
+      
+      // Fix specific patterns
+      { pattern: /padding:\s*maxWidth,\s*1200,\s*margin:\s*'0 auto'/g, replacement: "padding: '20px', maxWidth: 1200, margin: '0 auto'" },
+      { pattern: /fontSize:\s*fontWeight,\s*700,\s*marginBottom:\s*textAlign,\s*'center'/g, replacement: "fontSize: '2rem', fontWeight: 700, marginBottom: '20px', textAlign: 'center'" },
+      { pattern: /fontSize:\s*lineHeight,\s*1\.6,\s*textAlign:\s*color,\s*'#ccc'/g, replacement: "fontSize: '1.1rem', lineHeight: 1.6, textAlign: 'center', color: '#ccc'" },
     ];
 
     fixes.forEach(fix => {
@@ -64,7 +73,7 @@ function fixSyntaxErrors(filePath) {
   }
 }
 
-// Get all TypeScript/JavaScript files
+// Get all TypeScript/JavaScript files in pages directory
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let files = [];
   const items = fs.readdirSync(dir);
@@ -84,12 +93,12 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 }
 
 // Main execution
-const files = getAllFiles('.');
+const pagesFiles = getAllFiles('./pages');
 let fixedCount = 0;
 
-console.log('Starting syntax error fixes...');
+console.log('Starting comprehensive syntax error fixes...');
 
-files.forEach(file => {
+pagesFiles.forEach(file => {
   if (fixSyntaxErrors(file)) {
     fixedCount++;
   }

@@ -15,7 +15,7 @@ const PerformanceMonitor: React.FC = () => {
       });
       
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+        observer.observe({ entryTypes: ['largest-contentful-paint']  });
       } catch {
         // Fallback for browsers that don't support LCP
       }
@@ -25,13 +25,13 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
             // eslint-disable-next-line no-console
-            console.log('FID:', (entry as PerformanceEntry & { processingStart: number }).processingStart - entry.startTime);
+            console.log('FID:', (entry as PerformanceEntry & { processingStart: number  }).processingStart - entry.startTime);
           }
         }
       });
 
       try {
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        fidObserver.observe({ entryTypes: ['first-input']  });
       } catch {
         // Fallback for browsers that don't support FID
       }
@@ -40,8 +40,8 @@ const PerformanceMonitor: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {
-            clsValue += (entry as PerformanceEntry & { value: number }).value;
+          if (!(entry as PerformanceEntry & { hadRecentInput: boolean  }).hadRecentInput) {
+            clsValue += (entry as PerformanceEntry & { value: number  }).value;
           }
         }
         // eslint-disable-next-line no-console
@@ -49,7 +49,7 @@ const PerformanceMonitor: React.FC = () => {
       });
 
       try {
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
+        clsObserver.observe({ entryTypes: ['layout-shift']  });
       } catch {
         // Fallback for browsers that don't support CLS
       }

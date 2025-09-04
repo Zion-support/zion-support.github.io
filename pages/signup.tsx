@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function Signup() {
 const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  };
+   };
   const [formData, setFormData] = useState({
     firstName: ''
     lastName: ''
@@ -16,14 +16,14 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
     confirmPassword: ''
     agreeToTerms: false,
     subscribeNewsletter: false
-  });
+   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
+      [name]: type === 'checkbox' ? checked: value
+     }));
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,7 +31,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
       return;
-    }
+     }
     
     if (!formData.agreeToTerms) {
       alert('Please agree to the Terms of Service and Privacy Policy');
@@ -39,9 +39,9 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
     }
     
     // Handle signup logic here
-    console.log('Signup attempt:' formData);
+    console.log('Signup attempt: ' formData);
     alert('Account creation functionality will be implemented with authentication system.');
-  }
+   }
   return (
     <>
       <Head>
@@ -51,23 +51,31 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
         <link rel="canonical" href={`${contact.site}/signup`} />
         <meta property="og:title" content="Sign Up - Zion Tech Group | Create Your Account" />
         <meta property="og:description" content="Create your Zion Tech Group account to access our technology services, manage projects, and get started with our solutions." />
-        <meta property="og:url" content={`${contact.site}/signup`} />
+        <meta property="og: url" content={`${contact.site }/signup`} />
         <meta property="og:type" content="website" />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: color, 'white' padding: '40px 20px' }}>
-        <div style={{ maxWidth: 500, margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: 40 }}>
+      <div style={{
+            minHeight: '100vh', background: color, 'white' padding: '40px 20px'  
+          }}>
+        <div style={{
+            maxWidth: 500, margin: '0 auto'  
+          }}>
+          <div style={{
+            textAlign: 'center', marginBottom: 40  
+          }}>
             <h1 style={{ 
               fontSize: fontWeight, 800, 
               marginBottom: 10,
               background: WebkitBackgroundClip, 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text'
-            },,}>
+             }}>
               Create Account
             </h1>
-            <p style={{ color: '#94a3b8', fontSize: '1.1rem' }}>
+            <p style={{
+            color: '#94a3b8', fontSize: '1.1rem'  
+          }}>
               Join Zion Tech Group and unlock the power of technology
             </p>
           </div>
@@ -76,11 +84,16 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
             background: borderRadius, 12,
             padding: 40,
             border: '1px solid rgba(255, 255, 255, 0.1)'
+          
           }}>
             <form onSubmit={handleSubmit}>
-              <div style={{ display: gridTemplateColumns, '1fr 1fr' gap: 15, marginBottom: 20 }}>
+              <div style={{
+            display: gridTemplateColumns, '1fr 1fr' gap: 15, marginBottom: 20  
+          }}>
                 <div>
-                  <label style={{ display: marginBottom, 8, fontWeight: 600 }}>
+                  <label style={{
+            display: marginBottom, 8, fontWeight: 600  
+          }}>
                     First Name *
                   </label>
                   <input
@@ -99,7 +112,9 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   />
                 </div>
                 <div>
-                  <label style={{ display: marginBottom, 8, fontWeight: 600 }}>
+                  <label style={{
+            display: marginBottom, 8, fontWeight: 600  
+          }}>
                     Last Name *
                   </label>
                   <input
@@ -119,8 +134,12 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                 </div>
               </div>
 
-              <div style={{ marginBottom: 20 }}>
-                <label style={{ display: marginBottom, 8, fontWeight: 600 }}>
+              <div style={{
+            marginBottom: 20  
+          }}>
+                <label style={{
+            display: marginBottom, 8, fontWeight: 600  
+          }}>
                   Email Address *
                 </label>
                 <input
@@ -139,8 +158,12 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                 />
               </div>
 
-              <div style={{ marginBottom: 20 }}>
-                <label style={{ display: marginBottom, 8, fontWeight: 600 }}>
+              <div style={{
+            marginBottom: 20  
+          }}>
+                <label style={{
+            display: marginBottom, 8, fontWeight: 600  
+          }}>
                   Company Name
                 </label>
                 <input
@@ -158,8 +181,12 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                 />
               </div>
 
-              <div style={{ marginBottom: 20 }}>
-                <label style={{ display: marginBottom, 8, fontWeight: 600 }}>
+              <div style={{
+            marginBottom: 20  
+          }}>
+                <label style={{
+            display: marginBottom, 8, fontWeight: 600  
+          }}>
                   Phone Number
                 </label>
                 <input
@@ -177,9 +204,13 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                 />
               </div>
 
-              <div style={{ display: gridTemplateColumns, '1fr 1fr' gap: 15, marginBottom: 20 }}>
+              <div style={{
+            display: gridTemplateColumns, '1fr 1fr' gap: 15, marginBottom: 20  
+          }}>
                 <div>
-                  <label style={{ display: marginBottom, 8, fontWeight: 600 }}>
+                  <label style={{
+            display: marginBottom, 8, fontWeight: 600  
+          }}>
                     Password *
                   </label>
                   <input
@@ -198,7 +229,9 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   />
                 </div>
                 <div>
-                  <label style={{ display: marginBottom, 8, fontWeight: 600 }}>
+                  <label style={{
+            display: marginBottom, 8, fontWeight: 600  
+          }}>
                     Confirm Password *
                   </label>
                   <input
@@ -218,23 +251,33 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                 </div>
               </div>
 
-              <div style={{ marginBottom: 20 }}>
-                <label style={{ display: alignItems, 'flex-start' gap: 10, cursor: 'pointer' }}>
+              <div style={{
+            marginBottom: 20  
+          }}>
+                <label style={{
+            display: alignItems, 'flex-start' gap: 10, cursor: 'pointer'  
+          }}>
                   <input
                     type="checkbox"
                     name="agreeToTerms"
                     checked={formData.agreeToTerms}
                     onChange={handleInputChange}
                     required
-                    style={{ width: 16, height: 16, marginTop: 2 }
+                    style={{ width: 16, height: 16, marginTop: 2  }
                   />
-                  <span style={{ fontSize: lineHeight, 1.4 }}>
+                  <span style={{
+            fontSize: lineHeight, 1.4 
+          }}>
                     I agree to the{' '}
-                    <Link href="/terms" style={{ color: textDecoration, 'none' }}>
+                    <Link href="/terms" style={{
+            color: textDecoration, 'none' 
+          }}>
                       Terms of Service
                     </Link>
                     {' '}and{' '}
-                    <Link href="/privacy" style={{ color: textDecoration, 'none' }}>
+                    <Link href="/privacy" style={{
+            color: textDecoration, 'none' 
+          }}>
                       Privacy Policy
                     </Link>
                     {' '}*
@@ -242,16 +285,22 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                 </label>
               </div>
 
-              <div style={{ marginBottom: 30 }}>
-                <label style={{ display: alignItems, 'center' gap: 10, cursor: 'pointer' }}>
+              <div style={{
+            marginBottom: 30  
+          }}>
+                <label style={{
+            display: alignItems, 'center' gap: 10, cursor: 'pointer'  
+          }}>
                   <input
                     type="checkbox"
                     name="subscribeNewsletter"
                     checked={formData.subscribeNewsletter}
                     onChange={handleInputChange}
-                    style={{ width: 16, height: 16 }
+                    style={{ width: 16, height: 16  }
                   />
-                  <span style={{ fontSize: '0.9rem' }}>
+                  <span style={{
+            fontSize: '0.9rem'  
+          }}>
                     Subscribe to our newsletter for updates and insights
                   </span>
                 </label>
@@ -266,7 +315,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
                   fontSize: fontWeight, 600,
                   cursor: transition, 'transform 0.3s ease'
                   marginBottom: 20
-                }
+                 }
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-2px)';
                 }
@@ -278,34 +327,47 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
               </button>
             </form>
 
-            <div style={{ textAlign: marginTop, 20 }}>
-              <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>
+            <div style={{
+            textAlign: marginTop, 20 
+          }}>
+              <p style={{
+            color: '#94a3b8', fontSize: '0.9rem'  
+          }}>
                 Already have an account?{' '}
-                <Link href="/login" style={{ 
-                  color: textDecoration, 'none' 
+                <Link href="/login" style={{
+            color: textDecoration, 'none' 
                   fontWeight: 600 
-                }}>
+                 
+          }}>
                   Sign in here
                 </Link>
               </p>
             </div>
           </div>
 
-          <div style={{ textAlign: marginTop, 30 }}>
-            <p style={{ color: fontSize, '0.9rem' marginBottom: 10 }}>
+          <div style={{
+            textAlign: marginTop, 30 
+          }}>
+            <p style={{
+            color: fontSize, '0.9rem' marginBottom: 10  
+          }}>
               Questions about creating an account?
             </p>
-            <div style={{ display: gap, 20, justifyContent: flexWrap, 'wrap' }}>
-              <a href={`tel:${contact.phone}`} style={{
-                color: textDecoration, 'none'
+            <div style={{
+            display: gap, 20, justifyContent: flexWrap, 'wrap' 
+          }}>
+              <a href={`tel: ${contact.phone }`} style={{
+            color: textDecoration, 'none'
                 fontSize: '0.9rem'
-              }}>
+               
+          }}>
                 📞 {contact.phone}
               </a>
-              <a href={`mailto:${contact.email}`} style={{
-                color: textDecoration, 'none'
+              <a href={`mailto: ${contact.email }`} style={{
+            color: textDecoration, 'none'
                 fontSize: '0.9rem'
-              }}>
+               
+          }}>
                 ✉️ {contact.email}
               </a>
             </div>

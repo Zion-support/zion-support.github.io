@@ -9,7 +9,7 @@ export default function AIServices() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
+   };
   const aiServices = [
     {
       icon: Brain,
@@ -1042,8 +1042,8 @@ export default function AIServices() {
           we deliver intelligent solutions that drive real results and measurable ROI.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
-          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
+          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover: bg-blue-700">Call {contact.phone }</a>
+          <a href={`mailto: ${contact.email }`} className="px-5 py-2 rounded bg-purple-600 hover: bg-purple-700">Email {contact.email }</a>
           <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Quote</Link>
         </div>
       </header>
@@ -1051,13 +1051,13 @@ export default function AIServices() {
       <main className="max-w-7xl mx-auto px-4 pb-24">
         <div className="grid gap-8">
           {aiServices.map((service, index) => (
-            <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover:border-blue-500/40 transition-colors">
+            <div key={index} className="rounded-xl border border-white/10 bg-slate-900/60 p-8 hover: border-blue-500/40 transition-colors">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <service.icon className="w-6 h-6" />
                 </div>
                 <div className="flex-1">
-                  <h2 className="text-2xl font-bold mb-2">{service.name}</h2>
+                  <h2 className="text-2xl font-bold mb-2">{service.name }</h2>
                   <p className="text-slate-300 text-lg">{service.description}</p>
                 </div>
               </div>
@@ -1091,19 +1091,19 @@ export default function AIServices() {
               <div className="mt-6 pt-6 border-t border-white/10">
                 <div className="flex flex-wrap items-center gap-6">
                   <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Pricing:</span>
-                    <span className="font-semibold text-blue-400">{service.pricing}</span>
+                    <span className="text-slate-400">Pricing: </span>
+                    <span className="font-semibold text-blue-400">{service.pricing }</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Per Unit:</span>
-                    <span className="font-semibold text-purple-400">{service.perUnit}</span>
+                    <span className="text-slate-400">Per Unit: </span>
+                    <span className="font-semibold text-purple-400">{service.perUnit }</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-slate-400">Timeline:</span>
-                    <span className="font-semibold text-green-400">{service.timeline}</span>
+                    <span className="text-slate-400">Timeline: </span>
+                    <span className="font-semibold text-green-400">{service.timeline }</span>
                   </div>
                   <div className="ml-auto flex gap-3">
-                    <Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-sm font-semibold">
+                    <Link href="/contact" className="px-4 py-2 rounded bg-blue-600 hover: bg-blue-700 text-sm font-semibold">
                       Request Quote
                     </Link>
                     <Link href="/contact" className="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-semibold">
@@ -1113,7 +1113,7 @@ export default function AIServices() {
                 </div>
               </div>
             </div>
-          ))}
+          )) }
         </div>
 
         <section className="mt-16 text-center">
@@ -1123,11 +1123,11 @@ export default function AIServices() {
             Contact us today for a free consultation and custom AI strategy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold">
-              Call {contact.phone}
+            <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-semibold">
+              Call {contact.phone }
             </a>
-            <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold">
-              Email {contact.email}
+            <a href={`mailto: ${contact.email }`} className="px-8 py-3 bg-purple-600 hover: bg-purple-700 rounded-lg font-semibold">
+              Email {contact.email }
             </a>
           </div>
         </section>

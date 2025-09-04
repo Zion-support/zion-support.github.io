@@ -4,46 +4,48 @@ import Link from 'next/link';
 import { Cloud, Server, Database, Shield, Zap, Users } from 'lucide-react';
 
 export default function CloudDevOps() {
-  const contact ={
-    phone: email, 'kleber@ziontechgroup.com'
-    address: site, 'https://ziontechgroup.com'
-  }
+  const contact = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: 'https://ziontechgroup.com'
+  };
+
   const services = [
     {
       icon: Cloud,
-      title: 'Cloud Migration & Strategy'
-      description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized cost structures.'
-      features: ['Multi-cloud strategy' 'Cost optimization' 'Security compliance' 'Performance monitoring']
+      title: 'Cloud Migration & Strategy',
+      description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized cost structures.',
+      features: ['Multi-cloud strategy', 'Cost optimization', 'Security compliance', 'Performance monitoring']
     },
     {
       icon: Server,
-      title: 'Infrastructure as Code'
-      description: 'Automated infrastructure provisioning and management using Terraform, Ansible, and CloudFormation.'
-      features: ['Terraform automation' 'Ansible playbooks' 'CloudFormation templates' 'GitOps workflows']
+      title: 'Infrastructure as Code',
+      description: 'Automated infrastructure deployment using Terraform, CloudFormation, and Kubernetes.',
+      features: ['Terraform automation', 'Kubernetes orchestration', 'CI/CD pipelines', 'Infrastructure monitoring']
     },
     {
       icon: Database,
-      title: 'Database Management'
-      description: 'High-performance database solutions with automated backups, scaling, and optimization.'
-      features: ['Database migration' 'Performance tuning' 'Automated backups' 'High availability']
+      title: 'Database Management',
+      description: 'Comprehensive database solutions including migration, optimization, and backup strategies.',
+      features: ['Database migration', 'Performance tuning', 'Backup & recovery', 'Security hardening']
     },
     {
       icon: Shield,
-      title: 'DevSecOps & Security'
-      description: 'Integrated security practices throughout the development lifecycle with automated compliance.'
-      features: ['Security scanning' 'Compliance automation' 'Vulnerability management' 'Access controls']
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security implementation and compliance management across cloud environments.',
+      features: ['Security audits', 'Compliance frameworks', 'Access management', 'Threat detection']
     },
     {
       icon: Zap,
-      title: 'CI/CD Pipeline Automation'
-      description: 'Streamlined deployment pipelines with automated testing, quality gates, and rollback capabilities.'
-      features: ['Automated testing' 'Quality gates' 'Blue-green deployments' 'Rollback automation']
+      title: 'Performance Optimization',
+      description: 'Advanced monitoring and optimization to ensure peak performance and cost efficiency.',
+      features: ['Performance monitoring', 'Cost optimization', 'Auto-scaling', 'Load balancing']
     },
     {
       icon: Users,
-      title: 'Team Training & Support'
-      description: 'Comprehensive training programs to upskill your team in modern DevOps practices and tools.'
-      features: ['Hands-on training' 'Best practices' 'Tool certification' 'Ongoing support']
+      title: 'DevOps Consulting',
+      description: 'Expert guidance on DevOps best practices, team training, and process optimization.',
+      features: ['Process optimization', 'Team training', 'Tool selection', 'Best practices']
     }
   ];
 
@@ -51,37 +53,27 @@ export default function CloudDevOps() {
     <>
       <Head>
         <title>Cloud DevOps Services - Zion Tech Group</title>
-        <meta name="description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security. Transform your development workflow with Zion Tech Group." />
-        <meta name="keywords" content="cloud migration, DevOps, infrastructure as code, CI/CD, cloud security, AWS, Azure, GCP" />
-        <link rel="canonical" href={`${contact.site}/cloud-devops`} />
-        <meta property="og: title" content="Cloud DevOps Services - Zion Tech Group" />
-        <meta property="og:description" content="Expert cloud DevOps services including migration, infrastructure automation, CI/CD pipelines, and security." />
-        <meta property="og: url" content={`${contact.site}/cloud-devops`} />
-        <meta property="og: type" content="website" />
+        <meta name="description" content="Comprehensive cloud DevOps services including migration, infrastructure as code, and performance optimization." />
+        <link rel="canonical" href="https://ziontechgroup.com/cloud-devops" />
       </Head>
-
-      <div className="min-h-screen bg-white">
+      
+      <main className="min-h-screen bg-slate-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
                 Cloud DevOps Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Accelerate your digital transformation with expert cloud migration, infrastructure automation, and DevOps practices.
+              <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your infrastructure with our comprehensive cloud DevOps solutions. 
+                From migration to optimization, we've got you covered.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
                   Get Started
                 </Link>
-                <Link 
-                  href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-                >
+                <Link href="/services" className="border border-white/20 text-white hover:bg-white/10 px-8 py-3 rounded-lg font-medium transition-colors">
                   View All Services
                 </Link>
               </div>
@@ -89,30 +81,34 @@ export default function CloudDevOps() {
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        {/* Services Section */}
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Comprehensive DevOps Solutions
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+                Our Cloud DevOps Solutions
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                From cloud migration to continuous deployment, we provide end-to-end DevOps services to modernize your infrastructure.
+                Comprehensive cloud infrastructure and DevOps services designed to accelerate your digital transformation.
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-shadow border border-gray-100">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                <div key={index} className="bg-white rounded-2xl border border-gray-200 p-8 hover:border-blue-300 hover:shadow-xl transition-all duration-300">
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl mb-6">
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-500">
+                        <span className="text-green-500 mr-2">✓</span>
                         {feature}
                       </li>
                     ))}
@@ -124,31 +120,25 @@ export default function CloudDevOps() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gray-50 py-20">
-          <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your DevOps?
+        <section className="bg-blue-600 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Infrastructure?
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Let our experts help you build a robust, scalable, and secure cloud infrastructure.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Schedule Consultation
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors">
+                Get Free Consultation
               </Link>
-              <a 
-                href={`tel:${contact.phone}`}
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-blue-600 hover:text-white transition-colors"
-              >
-                Call {contact.phone}
-              </a>
+              <Link href="/pricing" className="border border-white/20 text-white hover:bg-white/10 px-8 py-3 rounded-lg font-medium transition-colors">
+                View Pricing
+              </Link>
             </div>
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 }
