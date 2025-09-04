@@ -1,37 +1,18 @@
 {
-  "timestamp": "2025-09-04T02:55:57.106Z",
-  "currentMetrics": {
-    "bundleSize": {
-      ".next": "43.33 MB",
-      "node_modules": "782.66 MB"
-    },
-    "fileCounts": {
-      ".tsx": 25,
-      ".ts": 0,
-      ".jsx": 0,
-      ".js": 0,
-      ".css": 2
-    }
-  },
-  "optimizations": {
-    "imageOptimization": "Created OptimizedImage component with Next.js Image optimization",
-    "performanceMonitoring": "Enhanced PerformanceMonitor with Core Web Vitals tracking",
-    "bundleAnalysis": "Created bundle analyzer script",
-    "recommendations": [
-      "Implement lazy loading for components",
-      "Use dynamic imports for large pages",
-      "Optimize images with WebP/AVIF formats",
-      "Implement service worker for caching",
-      "Use CDN for static assets",
-      "Minimize JavaScript bundle size",
-      "Implement code splitting"
-    ]
-  },
-  "nextSteps": [
-    "Run bundle analyzer to identify optimization opportunities",
-    "Implement lazy loading for large components",
-    "Optimize images in public directory",
-    "Set up performance monitoring in production",
-    "Implement service worker for caching"
-  ]
+  "timestamp": "2025-09-04T02:05:38.241Z",
+  "largeFiles": 30,
+  "recommendations": [
+    "Implement code splitting for better loading performance",
+    "Optimize images using Next.js Image component",
+    "Enable compression in Next.js configuration",
+    "Use dynamic imports for heavy components",
+    "Implement proper caching strategies",
+    "Minimize bundle size by removing unused code",
+    "Use WebP/AVIF image formats",
+    "Implement lazy loading for below-the-fold content"
+  ],
+  "metrics": {
+    "buildSize": "Check .next directory size",
+    "bundleAnalysis": "Run npm run analyze for detailed bundle analysis"
+  }
 }

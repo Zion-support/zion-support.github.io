@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-
+import SEOHead from '../components/SEOHead';
 import '../styles/globals.css';
 
 function Header(): React.JSX.Element {
@@ -200,8 +200,12 @@ function Footer(): React.JSX.Element {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ErrorBoundary>
+      <SEOHead />
+      <PerformanceMonitor />
       <Header />
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
       <Footer />
     </ErrorBoundary>
   );

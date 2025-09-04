@@ -14,10 +14,25 @@ class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
   }
-  public static getDerivedStateFromError(): State {
-    return { hasError: true }
-  public componentDidCatch() {
-    // Error logging can be implemented here if needed
+  
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      // You can integrate with services like Sentry, LogRocket, etc.
+      try {
+        // Example: Send to analytics or monitoring service
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'exception', {
+            description: error.message,
+            fatal: false,
+          });
+        }
+      } catch (reportingError) {
+        console.error('Failed to report error:', reportingError);
+      }
+    }
   }
 
   public componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
