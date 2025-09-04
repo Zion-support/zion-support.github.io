@@ -1,120 +1,117 @@
 #!/usr/bin/env node
 
-const { execSync, spawn } = require('child_process');
+const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-const chokidar = require('chokidar');
 
 class LinterWatcher {
   constructor() {
     this.isRunning = false;
-    this.debounceTimer = null;
-    this.logFile = path.join(process.cwd(), 'automation/logs/linter-watcher.log');
-    this.errorCount = 0;
-    this.lastRun = null;
+    this.watchPaths = ['components', 'pages', 'scripts'];
+    this.interval = 30000; // 30 seconds
   }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(logMessage.trim());
-    fs.appendFileSync(this.logFile, logMessage);
-  }
-
-  async runLinter() {
-    if (this.isRunning) {
-      this.log('Linter already running, skipping...');
-      return;
-    }
-
+  async start() {
+    console.log('Starting Linter Watcher...');
     this.isRunning = true;
-    this.log('Running ESLint check...');
+    
+    // Initial lint check
+    await this.runLint();
+    
+    // Set up interval for periodic checks
+    this.intervalId = setInterval(() => {
+      this.runLint();
+    }, this.interval);
+    
+    console.log('Linter Watcher started successfully');
+  }
 
+  async runLint() {
     try {
-      const result = execSync('npm run lint', { 
-        encoding: 'utf8',
-        stdio: 'pipe',
-        timeout: 30000
+      console.log('Running lint check...');
+      
+      const child = spawn('npm', ['run', 'lint'], {
+        stdio: ['pipe', 'pipe', 'pipe'],
+        cwd: process.cwd()
       });
-      
-      this.log('ESLint check passed successfully');
-      this.errorCount = 0;
-      this.lastRun = new Date();
-      
-      // If there were previous errors, log the fix
-      if (this.errorCount === 0) {
-        this.log('All linting errors have been resolved!');
-      }
-      
-    } catch (error) {
-      this.errorCount++;
-      this.log(`ESLint found issues (attempt ${this.errorCount}):`);
-      this.log(error.stdout || error.message);
-      
-      // Try to auto-fix if possible
-      if (this.errorCount <= 3) {
-        this.log('Attempting to auto-fix linting issues...');
-        try {
-          execSync('npm run lint:fix', { 
-            encoding: 'utf8',
-            stdio: 'pipe',
-            timeout: 30000
-          });
-          this.log('Auto-fix completed successfully');
-        } catch (fixError) {
-          this.log('Auto-fix failed: ' + (fixError.stdout || fixError.message));
+
+      let output = '';
+      let errorOutput = '';
+
+      child.stdout.on('data', (data) => {
+        output += data.toString();
+      });
+
+      child.stderr.on('data', (data) => {
+        errorOutput += data.toString();
+      });
+
+      child.on('close', (code) => {
+        if (code === 0) {
+          console.log('Lint check passed ✓');
+        } else {
+          console.log('Lint check failed ✗');
+          console.log('Output:', output);
+          console.log('Errors:', errorOutput);
+          
+          // Attempt to auto-fix
+          this.attemptAutoFix();
         }
-      }
-    } finally {
-      this.isRunning = false;
+      });
+    } catch (error) {
+      console.error('Error running lint:', error.message);
     }
   }
 
-  startWatching() {
-    this.log('Starting linter watcher...');
-    
-    const watcher = chokidar.watch(['components/**/*.{ts,tsx,js,jsx}', 'pages/**/*.{ts,tsx,js,jsx}'], {
-      ignored: /(^|[\/\\])\../, // ignore dotfiles
-      persistent: true,
-      ignoreInitial: true
-    });
-
-    watcher.on('change', (filePath) => {
-      this.log(`File changed: ${filePath}`);
+  async attemptAutoFix() {
+    try {
+      console.log('Attempting to auto-fix linting issues...');
       
-      // Debounce multiple changes
-      if (this.debounceTimer) {
-        clearTimeout(this.debounceTimer);
-      }
-      
-      this.debounceTimer = setTimeout(() => {
-        this.runLinter();
-      }, 2000); // Wait 2 seconds after last change
-    });
+      const child = spawn('npm', ['run', 'lint:fix'], {
+        stdio: 'inherit',
+        cwd: process.cwd()
+      });
 
-    watcher.on('add', (filePath) => {
-      this.log(`File added: ${filePath}`);
-      setTimeout(() => this.runLinter(), 1000);
-    });
+      child.on('close', (code) => {
+        if (code === 0) {
+          console.log('Auto-fix completed ✓');
+        } else {
+          console.log('Auto-fix failed ✗');
+        }
+      });
+    } catch (error) {
+      console.error('Error running auto-fix:', error.message);
+    }
+  }
 
-    watcher.on('error', (error) => {
-      this.log(`Watcher error: ${error.message}`);
-    });
-
-    // Run initial lint check
-    setTimeout(() => this.runLinter(), 1000);
-
-    this.log('Linter watcher is now monitoring files...');
+  stop() {
+    console.log('Stopping Linter Watcher...');
+    this.isRunning = false;
     
-    // Keep the process alive
-    process.on('SIGINT', () => {
-      this.log('Shutting down linter watcher...');
-      watcher.close();
-      process.exit(0);
-    });
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+    }
+    
+    console.log('Linter Watcher stopped');
   }
 }
 
-// Start the watcher
-const watcher = new LinterWatcher();
-watcher.startWatching();
+// Start the watcher if run directly
+if (require.main === module) {
+  const watcher = new LinterWatcher();
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    watcher.stop();
+    process.exit(0);
+  });
+  
+  process.on('SIGTERM', () => {
+    watcher.stop();
+    process.exit(0);
+  });
+  
+  watcher.start().catch(console.error);
+}
+
+module.exports = LinterWatcher;
