@@ -26,8 +26,6 @@ class PerformanceMonitor {
     if (this.metrics.length > 1000) {
       this.metrics = this.metrics.slice(-1000);
     }
-  }
-
   getMetrics(): PerformanceMetrics[] {
     return [...this.metrics];
   }
@@ -47,8 +45,6 @@ class PerformanceMonitor {
     const latest = this.metrics[this.metrics.length - 1];
     return latest ? latest.memoryUsage : 0;
   }
-}
-
 export const performanceMiddleware = (req: NextApiRequest, res: NextApiResponse, next: Function) => {
   const startTime = Date.now();
   const startMemory = process.memoryUsage().heapUsed;
@@ -68,6 +64,5 @@ export const performanceMiddleware = (req: NextApiRequest, res: NextApiResponse,
   });
 
   next();
-};
-
+}
 export default PerformanceMonitor;
