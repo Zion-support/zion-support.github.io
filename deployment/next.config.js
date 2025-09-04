@@ -21,8 +21,7 @@ const nextConfig = {
     scrollRestoration: true
   },
   async headers() {
-    return [
-      {
+    return [{
         source: '/(.*)',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },

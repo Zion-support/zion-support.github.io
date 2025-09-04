@@ -81,10 +81,9 @@ class ApiDocumentationGenerator {
             } : undefined
           };
           return acc;
-        }, {} as any)
+        }, {})
       };
     });
-
     return paths;
   }
 
