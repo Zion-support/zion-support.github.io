@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+const fs = // // require('fs');
+const path = // // require('path');
+const glob = // // require('glob');
 
 class PerformanceOptimizer {
   constructor() {
@@ -139,8 +139,8 @@ class PerformanceOptimizer {
     
     const monitoringScript = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = // // require('fs');
+const path = // // require('path');
 
 class PerformanceMonitor {
   constructor() {

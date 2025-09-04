@@ -5,9 +5,9 @@
  * Monitors for security vulnerabilities and performs security audits
  */
 
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process');
+const fs = // // require('fs')
+const path = // // require('path')
+const { execSync } = // // require('child_process');
 
 class SecurityScanner {
   constructor() {

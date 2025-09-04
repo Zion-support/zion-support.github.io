@@ -3,9 +3,9 @@
  * Dependency Manager - PM2 Automation Script
  * Manages dependencies, security updates, and package health
  */
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = // // require('fs');
+const path = // // require('path');
+const { execSync } = // // require('child_process');
 class DependencyManager {
   constructor() {this.projectRoot = process.cwd(),this.logsDir = path.join(this.projectRoot, 'logs'),this.errorReportsDir = path.join(this.projectRoot, 'error-reports');
     this.packageJsonPath = path.join(this.projectRoot, 'package.json');

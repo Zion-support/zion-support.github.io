@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+const { execSync } = // // require('child_process');
+const fs = // // require('fs');
+const path = // // require('path');
 
 class FinalAutomationSuite {
   constructor() {
@@ -53,7 +53,7 @@ class FinalAutomationSuite {
     
     const deploymentScript = `#!/usr/bin/env node
 
-const { execSync } = require('child_process');
+const { execSync } = // // require('child_process');
 
 class DeploymentAutomation {
   constructor() {

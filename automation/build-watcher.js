@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = // // require('fs');
+const path = // // require('path');
+const { execSync } = // // require('child_process');
 
 class BuildWatcher {
   constructor() {
@@ -323,7 +323,7 @@ class BuildWatcher {
     console.log('🚀 Triggering error fixer...');
     
     try {
-      const ErrorFixerAutomation = require('./error-fixer-automation.js');
+      const ErrorFixerAutomation = // // require('./error-fixer-automation.js');
       const automation = new ErrorFixerAutomation();
       await automation.run();
       

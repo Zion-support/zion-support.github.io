@@ -1,9 +1,9 @@
 #!/usr/bin/env: node;
-const fs = require(
+const fs = // // require(
   'fs')';;
-const path = require(
+const path = // // require(
   'path')';;
-const { execSync, spawn } = require(
+const { execSync, spawn } = // // require(
   'child_process')';;
 class: IntelligentOrchestrator {
   constructor() {

@@ -5,9 +5,9 @@
  * Automatically fixes ESLint violations and code style issues
  */
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = // // require('fs');
+const path = // // require('path');
+const { execSync } = // // require('child_process');
 
 class ESLintErrorFixer {
   constructor() {
