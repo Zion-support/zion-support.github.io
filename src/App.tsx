@@ -1,45 +1,28 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import {
-  AuthRoutes,
-  DashboardRoutes,
-  MarketplaceRoutes,
-  TalentRoutes,
-  AdminRoutes,
-  MobileAppRoutes,
-  ContentRoutes,
-  ErrorRoutes,
-  EnterpriseRoutes,
-  CommunityRoutes,
-  DeveloperRoutes
-} from './routes';
-import Home from './pages/Home';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
+import Layout from './components/layout/Layout';
+import LoadingSpinner from './components/ui/loading-spinner';
+import '../styles/globals.css';
 
-const App: React.FC = () => {
+function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider defaultTheme="dark">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/auth/*" element={<AuthRoutes />} />
-        <Route path="/dashboard/*" element={<DashboardRoutes />} />
-        <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-        <Route path="/talent/*" element={<TalentRoutes />} />
-        <Route path="/admin/*" element={<AdminRoutes />} />
-        <Route path="/mobile/*" element={<MobileAppRoutes />} />
-        <Route path="/content/*" element={<ContentRoutes />} />
-        <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-        <Route path="/community/*" element={<CommunityRoutes />} />
-        <Route path="/developers/*" element={<DeveloperRoutes />} />
-        <Route path="*" element={<ErrorRoutes />} />
-      </Routes>
-      <Toaster />
-      <SonnerToaster position="top-right" />
-    </ThemeProvider>
+    <HelmetProvider>
+      <ErrorBoundary fallback={<div>Something went wrong</div>}>
+        <Head>
+          <title>Zion Tech Group - Advanced Technology Solutions</title>
+          <meta name="description" content="Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services." />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
-};
+}
 
 export default App;

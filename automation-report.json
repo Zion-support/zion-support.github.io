@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-09-03T11:28:29.211Z",
+  "duration": 24157,
+  "summary": {
+    "total": 5,
+    "successful": 0,
+    "errors": 5,
+    "warnings": 0
+  },
+  "results": {
+    "success": [],
+    "errors": [
+      "ESLint Check failed: Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+      "TypeScript Check failed: spawnSync /bin/sh ENOBUFS",
+      "Next.js Build failed: Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nwarn  - You have enabled experimental feature (scrollRestoration) in next.config.js.\nwarn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.\n\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nwarn  - Attempted to load @next/swc-linux-x64-gnu, but it was not installed\nwarn  - Attempted to load @next/swc-linux-x64-gnux32, but it was not installed\nwarn  - Attempted to load @next/swc-linux-x64-musl, but it was not installed\nFailed to compile.\n\n./node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs\nAttempted import error: 'useId' is not exported from 'react' (imported as 'useId').\n\nImport trace for requested module:\n./node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs\n./node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs\n./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs\n./node_modules/framer-motion/dist/es/index.mjs\n\n./node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs\nAttempted import error: 'useInsertionEffect' is not exported from 'react' (imported as 'useInsertionEffect').\n\nImport trace for requested module:\n./node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs\n./node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs\n./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs\n./node_modules/framer-motion/dist/es/index.mjs\n\n./node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs\nAttempted import error: 'useId' is not exported from 'react' (imported as 'useId').\n\nImport trace for requested module:\n./node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs\n./node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs\n./node_modules/framer-motion/dist/es/index.mjs\n\n./node_modules/framer-motion/dist/es/components/AnimatePresence/use-presence.mjs\nAttempted import error: 'useId' is not exported from 'react' (imported as 'useId').\n\nImport trace for requested module:\n./node_modules/framer-motion/dist/es/components/AnimatePresence/use-presence.mjs\n./node_modules/framer-motion/dist/es/index.mjs\n\n./node_modules/framer-motion/dist/es/motion/utils/use-visual-element.mjs\nAttempted import error: 'useInsertionEffect' is not exported from 'react' (imported as 'useInsertionEffect').\n\nImport trace for requested module:\n./node_modules/framer-motion/dist/es/motion/utils/use-visual-element.mjs\n./node_modules/framer-motion/dist/es/motion/index.mjs\n./node_modules/framer-motion/dist/es/render/components/create-proxy.mjs\n./node_modules/framer-motion/dist/es/render/components/m/proxy.mjs\n./node_modules/framer-motion/dist/es/index.mjs\n\n\n> Build failed because of webpack errors\n",
+      "Jest Tests failed: Command failed: npm test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n",
+      "Security Audit failed: Command failed: npm audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    ],
+    "warnings": []
+  },
+  "recommendations": [
+    "Review and fix any failed operations",
+    "Run automation suite regularly",
+    "Monitor application performance",
+    "Keep dependencies updated"
+  ]
+}

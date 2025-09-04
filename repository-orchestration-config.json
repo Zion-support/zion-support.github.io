@@ -1,0 +1,20 @@
+{
+  "autoMerge": true,
+  "conflictResolution": "intelligent",
+  "branchCleanup": true,
+  "healthMonitoring": true,
+  "autoPush": true,
+  "mergeStrategy": "smart",
+  "branchProtection": true,
+  "staleBranchThreshold": 30,
+  "healthThreshold": 80,
+  "maxConcurrentOperations": 3,
+  "backupBeforeOperations": true,
+  "notificationChannels": ["log", "file"],
+  "branchNaming": {
+    "feature": "feature/",
+    "hotfix": "hotfix/",
+    "release": "release/",
+    "develop": "develop"
+  }
+}

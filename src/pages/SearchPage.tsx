@@ -1,65 +1,34 @@
 
-import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { SearchSuggestion } from "@/types/search";
-import { useAISearch } from "@/hooks/useAISearch";
-import { AppLayout } from "@/components/layout/AppLayout";
-
-export default function SearchPage() {
-  const [params] = useSearchParams();
-  const navigate = useNavigate();
-  const initial = params.get("q") || "";
-  const [query, setQuery] = useState(initial);
-  const { results, loading, search } = useAISearch();
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
-
-  useEffect(() => {
-    if (initial) {
-      search(initial);
-    }
-  }, [initial]);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    navigate(`/search?q=${encodeURIComponent(query)}`);
-    search(query);
-  };
-
-  return (
-    <AppLayout>
-      <main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
-          <EnhancedSearchInput
-            value={query}
-            onChange={setQuery}
-            searchSuggestions={suggestions}
-            placeholder="Search talent, jobs, and projects..."
-          />
-        </form>
-
-        {loading && <p className="text-zion-slate-light">Searching...</p>}
-        {!loading && results.length === 0 && (
-          <p className="text-zion-slate-light">No results found.</p>
-        )}
-        {!loading && results.length > 0 && (
-          <div className="space-y-4">
-            {results.map((r) => (
-              <div
-                key={`${r.type}-${r.id}`}
-                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-              >
-                <p className="text-xs uppercase text-zion-slate-light mb-1">
-                  {r.type}
-                </p>
-                <h3 className="text-lg font-bold text-white">{r.title}</h3>
-                <p className="text-zion-slate-light">{r.description}</p>
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
               </div>
-            ))}
-          </div>
-        )}
-      </main>
-    </AppLayout>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
   );
 }
+export default SearchPage
+

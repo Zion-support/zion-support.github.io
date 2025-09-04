@@ -1,0 +1,60 @@
+import NextLink from 'next/link'
+
+export default function Footer() {
+  return (
+    <footer className="ztg-footer">
+      <div className="ztg-container">
+        <div className="ztg-footer-grid">
+          <div>
+            <h4>Contact</h4>
+            <p>Mobile: +1 302 464 0950</p>
+            <p>
+              E-mail: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
+            </p>
+            <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li>
+                <NextLink href="/about">About</NextLink>
+              </li>
+              <li>
+                <NextLink href="/services">Services</NextLink>
+              </li>
+              <li>
+                <NextLink href="/solutions">Solutions</NextLink>
+              </li>
+              <li>
+                <NextLink href="/pricing">Pricing</NextLink>
+              </li>
+              <li>
+                <NextLink href="/contact">Contact</NextLink>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Resources</h4>
+            <ul>
+              <li>
+                <NextLink href="/blog">Blog</NextLink>
+              </li>
+              <li>
+                <NextLink href="/webinars">Webinars</NextLink>
+              </li>
+              <li>
+                <NextLink href="/white-papers">White Papers</NextLink>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/company/zion-holdings" target="_blank" rel="noopener noreferrer">
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="ztg-footer-bottom">© {new Date().getFullYear()} Zion Tech Group</div>
+      </div>
+    </footer>
+  )
+}

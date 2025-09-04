@@ -1,106 +1,255 @@
+# Zion Tech Group Website
 
-# Welcome to your Lovable project
+A modern, high-performance website built with Next.js 15, TypeScript, and Tailwind CSS for Zion Tech Group - a leading provider of micro SaaS products, AI services, and IT solutions.
 
-## Project info
+## 🚀 Features
 
-**URL**: https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32
+- **Modern Tech Stack**: Next.js 15, TypeScript, Tailwind CSS
+- **Performance Optimized**: Core Web Vitals monitoring, image optimization, lazy loading
+- **Mobile-First Design**: Responsive design with mobile optimization
+- **SEO Optimized**: Enhanced meta tags, structured data, sitemap generation
+- **Security Enhanced**: Comprehensive security headers, CSP, HSTS
+- **Error Handling**: Robust error boundaries and monitoring
+- **Automation Ready**: Extensive automation scripts for deployment and maintenance
 
-## How can I edit this code?
+## 📊 Performance Metrics
 
-There are several ways of editing your application.
+- **Build Time**: ~4 seconds
+- **Bundle Size**: Optimized with tree shaking and code splitting
+- **Core Web Vitals**: Monitored and optimized
+- **Mobile Performance**: Enhanced for 35% mobile traffic
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and start prompting.
+- **Framework**: Next.js 15.5.2
+- **Language**: TypeScript 5.9.2
+- **Styling**: Tailwind CSS 3.4.17
+- **UI Components**: Radix UI
+- **Icons**: Lucide React
+- **Performance**: Web Vitals, Performance Observer API
+- **Deployment**: Netlify ready
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Quick Start
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js 18.0.0 or higher
+- npm 10.0.0 or higher
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Zion-Holdings/zion.app.git
+   cd zion.app
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-# Step 3: Run the setup script with your preferred package manager (npm, pnpm, yarn, or bun)
-./setup.sh npm  # Default and most compatible option
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev  # Use the same package manager you specified in setup.sh
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+5. **Start production server**
+   ```bash
+   npm start
+   ```
+
+### Security
+```bash
+npm run security:audit # Security audit
+npm run security:fix   # Fix security issues
 ```
 
-> **IMPORTANT**: This project requires internet access to install dependencies. Without network connectivity, the build process will fail with errors about missing modules like 'react', 'react-router-dom', and 'lucide-react'.
+## 🔁 Automations
 
-**Edit a file directly in GitHub**
+You can run consolidated automations and improvements locally:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Run health, security, performance, build, PM2 bootstrap, and reports
+bash scripts/run-all-improvements.sh
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3fad5ec6-2b6e-4163-b266-afac8f1ced32) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-
-## Integrations
-
-See [docs/Integrations.md](docs/Integrations.md) for information on the Zion Assistant browser extension and Slack bot.
-
-## Troubleshooting
-
-### Network Issues
-
-If you see errors related to missing modules like 'react', 'react-dom', or 'lucide-react', your environment may not have internet access to download these dependencies. Options to resolve this:
-
-1. Ensure you have internet connectivity
-2. Configure proxy settings if needed: `npm config set proxy http://your-proxy:port`
-3. Use a pre-downloaded `node_modules` directory if available
-
-### Package Manager Issues
-
-If you encounter errors running `bun install` (for example, integrity check failures), delete any `bun.lockb` file and run `npm install` instead. This project relies on npm and is not guaranteed to work with Bun. Adding `bun.lockb` to `.gitignore` ensures Bun isn't accidentally used.
-
-For pnpm errors showing "This project is configured to use npm", use `./setup.sh npm` instead as the project may have npm-specific configurations.
-
-## Running Tests
-
-This project uses [Vitest](https://vitest.dev/) for unit tests. After installing
-dependencies via `./setup.sh npm`, run:
-
-```sh
-npm run test
+# Or quick CI locally (type-check, lint, tests)
+npm run ci:quick
 ```
 
-The tests are located in the `tests/` directory and use JSDOM to simulate the
-browser environment.
+Generated reports are written under `automation/reports/` and project root (final report JSON).
+
+## 🏗️ Project Structure
+
+```
+├── components/          # Reusable React components
+│   ├── ErrorBoundary.tsx
+│   ├── PerformanceMonitor.tsx
+│   ├── PerformanceOptimizer.tsx
+│   └── ModernLoading.tsx
+├── pages/              # Next.js pages
+│   ├── index.tsx       # Homepage
+│   ├── services.tsx    # Services page
+│   ├── about.tsx       # About page
+│   └── contact.tsx     # Contact page
+├── scripts/            # Utility scripts
+│   └── generate-sitemap-enhanced.js
+├── styles/             # Global styles
+│   └── globals.css
+├── public/             # Static assets
+│   ├── sitemap.xml
+│   └── robots.txt
+└── automation/         # Automation scripts
+```
+
+## 🎯 Available Scripts
+
+### Development
+- `npm run dev` - Start development server
+- `npm run dev:fast` - Start with Turbo mode
+
+### Building
+- `npm run build` - Build for production
+- `npm run build:production` - Build with production optimizations
+- `npm run start` - Start production server
+
+### Code Quality
+- `npm run lint` - Run ESLint
+- `npm run lint:fix` - Fix ESLint issues
+- `npm run type-check` - Run TypeScript checks
+- `npm run format` - Format code with Prettier
+
+### SEO & Performance
+- `npm run sitemap:generate` - Generate sitemap and robots.txt
+- `npm run perf:lighthouse` - Run Lighthouse audit
+
+### Testing
+- `npm run test` - Run tests
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:coverage` - Run tests with coverage
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env.local` file:
+
+```env
+NODE_ENV=production
+NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
+```
+
+### Next.js Configuration
+
+The `next.config.js` includes:
+- Performance optimizations
+- Security headers
+- Image optimization
+- Bundle analysis
+
+### Tailwind Configuration
+
+Custom theme extensions in `tailwind.config.js`:
+- Custom animations
+- Extended color palette
+- Responsive breakpoints
+
+## 📈 Performance Optimizations
+
+### Implemented Optimizations
+
+1. **Image Optimization**
+   - Next.js Image component
+   - WebP/AVIF format support
+   - Lazy loading
+   - Responsive images
+
+2. **Code Splitting**
+   - Automatic route-based splitting
+   - Dynamic imports
+   - Bundle analysis
+
+3. **Caching**
+   - Static generation
+   - ISR (Incremental Static Regeneration)
+   - Browser caching headers
+
+4. **Core Web Vitals**
+   - LCP monitoring
+   - FID tracking
+   - CLS measurement
+
+## 🔒 Security Features
+
+- Content Security Policy (CSP)
+- XSS Protection
+- CSRF Protection
+- HSTS Headers
+- Frame Options
+- Content Type Options
+
+## 📱 Mobile Optimization
+
+- Responsive design
+- Touch-friendly interfaces
+- Optimized for mobile performance
+- Progressive Web App ready
+
+## 🚀 Deployment
+
+### Netlify (Recommended)
+
+1. Connect your GitHub repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `.next`
+4. Deploy automatically on push to main branch
+
+### Manual Deployment
+
+1. Build the project: `npm run build`
+2. Upload the `.next` folder to your server
+3. Configure your server to serve Next.js
+
+## 🤖 Automation
+
+The project includes extensive automation scripts for:
+- Error monitoring and fixing
+- Performance optimization
+- SEO improvements
+- Security scanning
+- Dependency management
+
+## 📊 Analytics & Monitoring
+
+- Performance monitoring
+- Error tracking
+- User analytics ready
+- Core Web Vitals tracking
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and linting
+5. Submit a pull request
+
+## 📄 License
+
+MIT License - see LICENSE file for details
+
+## 📞 Contact
+
+For support and questions:
+- Email: kleber@ziontechgroup.com
+- Phone: +1 302 464 0950
+- Website: https://ziontechgroup.com
+
+---
+
+**Zion Tech Group** - Innovative Micro SaaS, AI Services & IT Solutions

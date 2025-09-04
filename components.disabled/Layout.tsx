@@ -1,0 +1,63 @@
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+import EnhancedNavigation from './layout/EnhancedNavigation';
+import EnhancedFooter from './layout/EnhancedFooter';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+}
+
+const Layout: React.FC<LayoutProps> = ({ 
+  children, 
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',
+  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
+  keywords = 'technology solutions, AI development, cloud services, blockchain, data analytics, web development, mobile development, IoT platforms, cybersecurity',
+  ogImage = '/images/og-image.jpg'
+}) => {
+=======
+
+interface LayoutProps {
+  title: string;
+  description: string;
+  children: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
+>>>>>>> ff1c4aa73e82ebe1054c042ee0885413d93984f2
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+<<<<<<< HEAD
+        <meta name="keywords" content={keywords} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:image" content={ogImage} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div className="min-h-screen flex flex-col">
+        <EnhancedNavigation />
+        <main className="flex-1 pt-16">{children}</main>
+        <EnhancedFooter />
+      </div>
+    </>
+  )
+}
+
+export default Layout
+=======
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      {children}
+    </>
+  );
+};
+
+export default Layout;
+>>>>>>> ff1c4aa73e82ebe1054c042ee0885413d93984f2

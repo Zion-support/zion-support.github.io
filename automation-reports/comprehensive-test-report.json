@@ -1,0 +1,172 @@
+{
+  "timestamp": "2025-09-04T02:53:08.268Z",
+  "tests": [
+    {
+      "name": "Production Build Test",
+      "status": "failed",
+      "duration": 5361,
+      "details": {
+        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./components/ContactForm.tsx\nError:   \u001b[31mx\u001b[0m 'import', and 'export' cannot be used outside of module code\n     ,-[\u001b[36;1;4m/workspace/components/ContactForm.tsx\u001b[0m:220:1]\n \u001b[2m217\u001b[0m |     </form>\n \u001b[2m218\u001b[0m |   );\n \u001b[2m219\u001b[0m | }\n \u001b[2m220\u001b[0m | export default ContactForm;\n     : \u001b[35;1m^^^^^^\u001b[0m\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./components/ContactForm.tsx\n./pages/contact.tsx\n\n./pages/_app.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got ','\n    ,-[\u001b[36;1;4m/workspace/pages/_app.tsx\u001b[0m:48:1]\n \u001b[2m45\u001b[0m | \n \u001b[2m46\u001b[0m |         {/* Mobile Menu Button */}\n \u001b[2m47\u001b[0m |         <button \n \u001b[2m48\u001b[0m |           className=\"md: hidden bg-none border-none text-white text-2xl cursor-pointer\",\n    : \u001b[35;1m                                                                                       ^\u001b[0m\n \u001b[2m49\u001b[0m |           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}\n \u001b[2m50\u001b[0m |           aria-label=\"Toggle mobile menu\"\n \u001b[2m51\u001b[0m |           aria-expanded={mobileMenuOpen}\n    `----\n\nCaused by:\n    Syntax Error\n\n./pages/help.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'onMouseEnter'\n     ,-[\u001b[36;1;4m/workspace/pages/help.tsx\u001b[0m:165:1]\n \u001b[2m162\u001b[0m |                         transition: 'transform 0.3s ease, box-shadow 0.3s ease',\n \u001b[2m163\u001b[0m |                         cursor: 'pointer'\n \u001b[2m164\u001b[0m |                       }\n \u001b[2m165\u001b[0m |                       onMouseEnter={(e) => {\n     : \u001b[35;1m                      ^^^^^^^^^^^^\u001b[0m\n \u001b[2m166\u001b[0m |                         e.currentTarget.style.transform = 'translateY(-3px)';\n \u001b[2m167\u001b[0m |                         e.currentTarget.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';\n \u001b[2m168\u001b[0m |                       }\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/help.tsx\n\n./pages/index.tsx\nError:   \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:53:1]\n \u001b[2m50\u001b[0m |               \"sameAs\": [contact.site]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n    : \u001b[35;1m         ^\u001b[0m\n \u001b[2m54\u001b[0m |       </Head>\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m      ^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Unterminated regexp literal\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m       ^^^^^^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n  \u001b[31mx\u001b[0m Expression expected\n    ,-[\u001b[36;1;4m/workspace/pages/index.tsx\u001b[0m:54:1]\n \u001b[2m51\u001b[0m |             })\n \u001b[2m52\u001b[0m |           }\n \u001b[2m53\u001b[0m |         />\n \u001b[2m54\u001b[0m |       </Head>\n    : \u001b[35;1m        ^^^^^\u001b[0m\n \u001b[2m55\u001b[0m |       \n \u001b[2m56\u001b[0m |       <main className=\"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white\">\n \u001b[2m57\u001b[0m |         {/* Hero Section */}\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/index.tsx\n\n./pages/login.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'placeholder'\n    ,-[\u001b[36;1;4m/workspace/pages/login.tsx\u001b[0m:89:1]\n \u001b[2m86\u001b[0m |                     color: 'white',\n \u001b[2m87\u001b[0m |                     fontSize: '1rem'\n \u001b[2m88\u001b[0m |                   }\n \u001b[2m89\u001b[0m |                   placeholder=\"Enter your email\"\n    : \u001b[35;1m                  ^^^^^^^^^^^\u001b[0m\n \u001b[2m90\u001b[0m |                 />\n \u001b[2m91\u001b[0m |               </div>\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/login.tsx\n\n\n> Build failed because of webpack errors\n",
+        "output": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n"
+      },
+      "timestamp": "2025-09-04T02:53:13.629Z"
+    },
+    {
+      "name": "TypeScript Type Check",
+      "status": "failed",
+      "duration": 1444,
+      "details": {
+        "error": "Command failed: npx tsc --noEmit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n",
+        "output": "components/ContactForm.tsx(220,28): error TS1005: '}' expected.\ncomponents/ErrorBoundary.tsx(19,3): error TS1128: Declaration or statement expected.\ncomponents/ErrorBoundary.tsx(68,1): error TS1434: Unexpected keyword or identifier.\ncomponents/ErrorBoundary.tsx(68,8): error TS1434: Unexpected keyword or identifier.\ncomponents/ErrorBoundary.tsx(68,30): error TS1005: '}' expected.\ncomponents/PerformanceMonitor.tsx(28,8): error TS1128: Declaration or statement expected.\ncomponents/PerformanceMonito"
+      },
+      "timestamp": "2025-09-04T02:53:15.074Z"
+    },
+    {
+      "name": "ESLint Linting",
+      "status": "passed",
+      "duration": 2038,
+      "details": {
+        "output": "\n> ziontechgroup.com@0.1.0 lint\n> eslint .\n\n"
+      },
+      "timestamp": "2025-09-04T02:53:17.112Z"
+    },
+    {
+      "name": "Security Audit",
+      "status": "passed",
+      "duration": 719,
+      "details": {
+        "output": "🔒 Security Audit - Zion Tech Group\n===================================\n\n🛡️  Starting Security Audit...\n\n📦 Checking package vulnerabilities...\n✅ No vulnerabilities found in packages.\n\n🔐 Checking environment variables...\n⚠️  No environment files found. Consider adding .env for configuration.\n\n📁 Checking file permissions...\n✅ package.json has secure permissions: 100644\n✅ package-lock.json has secure permissions: 100644\n\n🔍 Checking code for security issues...\n✅ No obvious security issues found"
+      },
+      "timestamp": "2025-09-04T02:53:17.831Z"
+    },
+    {
+      "name": "Performance Optimization Check",
+      "status": "passed",
+      "duration": 69,
+      "details": {
+        "output": "⚡ Starting Performance Optimizer...\n✅ Performance Optimizer completed\n📊 Optimizations found: 2\n💡 Recommendations: 10\n📄 Report saved to: automation-reports/performance-optimizer-report.json\n\n📈 Recommendations by Priority:\n   🔴 High: 2\n   🟡 Medium: 7\n   🟢 Low: 1\n\n✅ Performance optimization analysis completed\n"
+      },
+      "timestamp": "2025-09-04T02:53:17.901Z"
+    },
+    {
+      "name": "System Health Check",
+      "status": "failed",
+      "duration": 20,
+      "details": {
+        "error": "Command failed: node automation/health-check.cjs\n/workspace/automation/health-check.cjs:7\n<<<<<<< HEAD\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:53:17.921Z"
+    },
+    {
+      "name": "Dependency Security Audit",
+      "status": "passed",
+      "duration": 641,
+      "details": {
+        "output": "found 0 vulnerabilities\n"
+      },
+      "timestamp": "2025-09-04T02:53:18.562Z"
+    },
+    {
+      "name": "Bundle Size Analysis",
+      "status": "passed",
+      "duration": 6707,
+      "details": {
+        "output": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n"
+      },
+      "timestamp": "2025-09-04T02:53:25.270Z"
+    },
+    {
+      "name": "Accessibility Audit",
+      "status": "skipped",
+      "duration": 0,
+      "details": {
+        "reason": "axe-core not available"
+      },
+      "timestamp": "2025-09-04T02:53:25.941Z"
+    },
+    {
+      "name": "Link Validation",
+      "status": "failed",
+      "duration": 948,
+      "details": {
+        "error": "Command failed: npx linkinator http://localhost:3000 --recurse\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n🏊‍♂️ crawling http://localhost:3000\n[0] http://localhost:3000/\n\n  [0] http://localhost:3000/\nERROR: Detected 1 broken links. Scanned 1 links in 0.011 seconds.\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:53:29.137Z"
+    },
+    {
+      "name": "Lighthouse Performance Audit",
+      "status": "failed",
+      "duration": 1650,
+      "details": {
+        "error": "Command failed: npx lighthouse http://localhost:3000 --output=json --output-path=./lighthouse-report.json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nRuntime error encountered: The CHROME_PATH environment variable must be set to a Chrome/Chromium executable no older than Chrome stable.\nError\n    at new LauncherError (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/utils.js:22:22)\n    at new ChromePathNotSetError (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/utils.js:28:9)\n    at Module.linux (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-finder.js:124:15)\n    at Launcher.getFirstInstallation (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:135:43)\n    at Launcher.launch (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:203:43)\n    at Module.launch (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/chrome-launcher/dist/chrome-launcher.js:33:20)\n    at getDebuggableChrome (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/run.js:85:25)\n    at runLighthouse (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/run.js:204:30)\n    at begin (file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/bin.js:129:10)\n    at async file:///home/ubuntu/.npm/_npx/0f94ee7615faf582/node_modules/lighthouse/cli/index.js:10:1\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:53:39.276Z"
+    },
+    {
+      "name": "Code Coverage Analysis",
+      "status": "passed",
+      "duration": 2046,
+      "details": {
+        "output": "\n> ziontechgroup.com@0.1.0 test:coverage\n> jest --coverage\n\njest-haste-map: Haste module naming collision: ziontechgroup.com\n  The following files share their name; please adjust your hasteImpl:\n    * <rootDir>/package.json\n    * <rootDir>/deployment/package.json\n\n----------|---------|----------|---------|---------|-------------------\nFile      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s \n----------|---------|----------|---------|---------|-------------------\nAll files |       0"
+      },
+      "timestamp": "2025-09-04T02:53:41.322Z"
+    },
+    {
+      "name": "Unit Tests",
+      "status": "passed",
+      "duration": 1895,
+      "details": {
+        "output": "jest-haste-map: Haste module naming collision: ziontechgroup.com\n  The following files share their name; please adjust your hasteImpl:\n    * <rootDir>/package.json\n    * <rootDir>/deployment/package.json\n\n"
+      },
+      "timestamp": "2025-09-04T02:53:43.217Z"
+    },
+    {
+      "name": "Integration Tests",
+      "status": "failed",
+      "duration": 163,
+      "details": {
+        "error": "Command failed: npm run test:integration\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"test:integration\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-04T02_53_43_307Z-debug-0.log\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:53:43.380Z"
+    },
+    {
+      "name": "End-to-End Tests",
+      "status": "failed",
+      "duration": 130,
+      "details": {
+        "error": "Command failed: npm run test:e2e\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"test:e2e\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-04T02_53_43_455Z-debug-0.log\n",
+        "output": null
+      },
+      "timestamp": "2025-09-04T02:53:43.510Z"
+    }
+  ],
+  "results": {
+    "passed": 7,
+    "failed": 7,
+    "skipped": 1,
+    "total": 15
+  },
+  "coverage": {
+    "testCoverage": 46.666666666666664,
+    "criticalTestsPassed": 1,
+    "totalCriticalTests": 3
+  },
+  "performance": {
+    "averageTestDuration": 1588.7333333333333,
+    "longestTest": {
+      "name": "Bundle Size Analysis",
+      "status": "passed",
+      "duration": 6707,
+      "details": {
+        "output": "\n> ziontechgroup.com@0.1.0 prebuild\n> echo \"Starting build...\"\n\nStarting build...\n\n> ziontechgroup.com@0.1.0 build\n> next build\n\n   ▲ Next.js 15.5.2\n\n   Skipping validation of types\n   Skipping linting\n   Creating an optimized production build ...\n"
+      },
+      "timestamp": "2025-09-04T02:53:25.270Z"
+    },
+    "totalDuration": 23831
+  },
+  "overall": "failed"
+}

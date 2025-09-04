@@ -1,26 +1,62 @@
 
-import { supabase } from '@/integrations/supabase/client';
 
-export async function rewardOnboarding(userId: string) {
-  await fetch('/functions/v1/token-manager/earn', {
+export async function rewardOnboarding(
+  userId: string,
+  action: string,
+  amount: number
+): Promise<any> {
+  await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' }),
+    body: JSON.stringify({ userId, action, amount })
   });
 }
 
-export async function rewardReferral(userId: string) {
-  await fetch('/functions/v1/token-manager/earn', {
+export async function earnTokensForPurchase(
+  userId: string,
+  purchaseAmount: number,
+  purchaseType: string
+): Promise<any> {
+  await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' }),
+    body: JSON.stringify({
+      userId,
+      action: 'purchase',
+      amount: purchaseAmount,
+      purchaseType
+    })
   });
 }
 
-export async function rewardFiveStarReview(userId: string) {
-  await fetch('/functions/v1/token-manager/earn', {
+export async function earnTokensForReferral(
+  userId: string,
+  referredUserId: string
+): Promise<any> {
+  await apiClient('/functions/v1/token-manager/earn', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' }),
+    body: JSON.stringify({
+      userId,
+      action: 'referral',
+      referredUserId,
+      amount: 100
+    })
   });
 }
+
+export async function earnTokensForAction(
+  userId: string,
+  action: string,
+  amount: number
+): Promise<any> {
+  await apiClient('/functions/v1/token-manager/earn', {
+    method: 'POST',
+    body: JSON.stringify({ userId, action, amount })
+  });
+}
+
+export default earnTokensForAction;
+
+// comment
+export const tokenRewards = {}
+
+export default tokenRewards
+

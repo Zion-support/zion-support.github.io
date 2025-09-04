@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+## Removed SPA-style redirect to preserve Next.js routing on Netlify
+
+[build.environment]
+  NODE_VERSION = "18"

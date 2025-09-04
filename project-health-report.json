@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-09-04T02:42:38.002Z",
+  "project": "/workspace",
+  "health": {
+    "overall": {
+      "score": 115,
+      "status": "excellent",
+      "maxScore": 100
+    },
+    "structure": {
+      "required": {
+        "package.json": true,
+        "next.config.js": true,
+        "tsconfig.json": true,
+        "tailwind.config.js": true
+      },
+      "optional": {
+        "README.md": true,
+        ".gitignore": true,
+        ".env.example": true,
+        "Dockerfile": true,
+        "docker-compose.yml": true
+      },
+      "score": 65
+    },
+    "codeQuality": {
+      "status": "success",
+      "linting": "passed",
+      "score": 20
+    },
+    "typeScript": {
+      "status": "warning",
+      "typeCheck": "failed",
+      "score": 0,
+      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    },
+    "build": {
+      "status": "success",
+      "build": "passed",
+      "score": 20
+    },
+    "dependencies": {
+      "status": "success",
+      "totalDependencies": 116,
+      "outdatedCount": 15,
+      "score": 0
+    },
+    "security": {
+      "status": "warning",
+      "score": 10,
+      "error": "Command failed: npm audit --json\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
+    }
+  },
+  "recommendations": [
+    "Implement automated testing",
+    "Set up continuous integration",
+    "Regularly monitor project health"
+  ]
+}

@@ -1,70 +1,56 @@
 
-import { createContext, useContext, useEffect, useState } from "react"
+    const root = window.document.documentElement;
 
-type Theme = "dark" | "light" | "system"
+    const updateTheme = () => {;
+      let effectiveTheme: 'light' | 'dark';
 
-type ThemeProviderProps = {
-  children: React.ReactNode
-  defaultTheme?: Theme
-}
+      if(theme = == 'system') {;
+        effectiveTheme = window.matchMedia(' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
+      } else {
+        effectiveTheme = theme;
+      }
 
-type ThemeProviderState = {
-  theme: Theme
-  setTheme: (theme: Theme) => void
-}
+      setIsDark(effectiveTheme === 'dark') ;
+      if(effectiveTheme = == 'dark') {;
+        root.classList.add('dark');
+        root.classList.remove('light')} else {
 
-const initialState: ThemeProviderState = {
-  theme: "system",
-  setTheme: () => null,
-}
+        root.classList.add('light');
+        root.classList.remove('dark')}
+    };
 
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
-
-export function ThemeProvider({
-  children,
-  defaultTheme = "system",
-}: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem("theme") as Theme) || defaultTheme
-  )
+    updateTheme () ;
+    if(theme = == 'system') {;
+      
+      mediaQuery.addEventListener('change', updateTheme);
+      return ()  => mediaQuery.removeEventListener('change', updateTheme)}
+    if(theme = == 'system') {;'
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');'
+      mediaQuery.addEventListener('change', updateTheme);'      return ()  => mediaQuery.removeEventListener('change', updateTheme)}
+  }, [theme]);
 
   useEffect(() => {
-    const root = window.document.documentElement
-    root.classList.remove("light", "dark")
+  // TODO: Add dependencies if needed
 
-    if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-        .matches
-        ? "dark"
-        : "light"
+  return () => {
+    // Cleanup function
+  };
+}, []);, []);
 
-      root.classList.add(systemTheme)
-      return
-    }
-
-    root.classList.add(theme)
-  }, [theme])
+    localStorage.setItem('theme', theme)}, [theme]);
 
   const value = {
-    theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem("theme", theme)
-      setTheme(theme)
-    },
-  }
 
-  return (
-    <ThemeProviderContext.Provider value={value}>
-      {children}
-    </ThemeProviderContext.Provider>
-  )
-}
+  theme,
+    setTheme,
+    isDark,;  ;
+  ;
+  ;
+  ;
+  ;
+  };
+  return ()
+    <ThemeContext.Provider value = {value}>;
+      {children};
+    </ThemeContext.Provider>;) };
 
-export const useTheme = () => {
-  const context = useContext(ThemeProviderContext)
-
-  if (context === undefined)
-    throw new Error("useTheme must be used within a ThemeProvider")
-
-  return context
-}

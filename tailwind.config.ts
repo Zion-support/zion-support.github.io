@@ -1,122 +1,98 @@
-import { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
-import plugin from "tailwindcss/plugin";
-import animatePlugin from "tailwindcss-animate";
+
 
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: 'class',
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx,js,jsx}',
+    './index.html',
+    './node_modules/tw-elements/dist/js/**/*.js'
   ],
-  safelist: ['border-border'],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+        // Zion Tech Group brand colors
+        zion: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+          950: '#082f49',
         },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+        // Extended gray palette for better contrast
+        gray: {
+          950: '#0a0a0a',
+          960: '#050505',
+          970: '#030303',
+          980: '#020202',
+          990: '#010101',
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
+        // Accent colors
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        // Custom Zion colors
-        "zion-blue": {
-          DEFAULT: "#0F172A",
-          light: "#1E293B",
-          dark: "#0B1120",
-        },
-        "zion-purple": {
-          DEFAULT: "#8B5CF6",
-          light: "#A78BFA",
-          dark: "#7C3AED",
-        },
-        "zion-cyan": {
-          DEFAULT: "#06B6D4",
-          light: "#22D3EE",
-          dark: "#0891B2",
-        },
-        "zion-slate": {
-          DEFAULT: "#94A3B8",
-          light: "#CBD5E1",
-          dark: "#64748B",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
+          cyan: '#06b6d4',
+          blue: '#3b82f6',
+          purple: '#8b5cf6',
+          pink: '#ec4899',
+          emerald: '#10b981',
+          amber: '#f59e0b',
+          rose: '#f43f5e',
+        }
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        'gradient': 'gradient 6s ease infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 3s infinite',
+        'spin-slow': 'spin 8s linear infinite',
       },
-    },
+      keyframes: {
+        gradient: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
+        }
+      },
+      fontFamily: {
+        sans: [
+          'Inter',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'Noto Sans',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji',
+        ],
+        heading: [
+          'var(--font-poppins), Poppins',
+          ...defaultTheme.fontFamily.sans
+
+      }
+    }
   },
   plugins: [
-    animatePlugin,
-    plugin(function({ addUtilities }) {
-      const newUtilities = {
-        '.rtl': {
-          direction: 'rtl',
-          textAlign: 'right',
-        },
-        '.ltr': {
-          direction: 'ltr',
-          textAlign: 'left',
-        },
-      };
-      addUtilities(newUtilities);
-    }),
-  ],
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio')
+  ]
 };
 
-export default config;
