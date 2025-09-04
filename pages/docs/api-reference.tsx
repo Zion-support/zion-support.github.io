@@ -84,7 +84,7 @@ export default function ApiReference() {
     "limit": 10,
     "total": 67,
     "pages": 7
-  }`
+  }
 }`}
                   </pre>
                 </div>
@@ -107,18 +107,18 @@ export default function ApiReference() {
 {`{
   "success": true,
   "data": {
-    "id": "micro-saas"
-    "name": "Micro SaaS Products"
-    "description": "Ready-to-use software solutions for specific business needs"
-    "category": "software"
-    "features": ["Cloud-based" "Scalable" "API-first"],
+    "id": "micro-saas",
+    "name": "Micro SaaS Products",
+    "description": "Ready-to-use software solutions for specific business needs",
+    "category": "software",
+    "features": ["Cloud-based", "Scalable", "API-first"],
     "pricing": {
-      "type": "custom"
+      "type": "custom",
       "starting_from": "$99/month"
     },
-    "documentation": "/docs/micro-saas"
+    "documentation": "/docs/micro-saas",
     "endpoints": ["/v1/micro-saas"]
-  }`
+  }
 }`}
                   </pre>
                 </div>
@@ -138,20 +138,20 @@ export default function ApiReference() {
                 <h4 style={{ fontWeight: 600, marginBottom: 8, color: '#fbbf24' }}>Request Body</h4>
                 <pre style={{ background: '#0f172a', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem' }}>`
 {`{
-  "service_id": "micro-saas"
+  "service_id": "micro-saas",
   "requirements": {
     "users": 100,
-    "features": ["analytics" "api-access"],
+    "features": ["analytics", "api-access"],
     "timeline": "3 months"
   },
   "contact": {
-    "name": "John Doe"
-    "email": "john@example.com"
-    "company": "Example Corp"
+    "name": "John Doe",
+    "email": "john@example.com",
+    "company": "Example Corp",
     "phone": "+1-555-0123"
   },
-  "budget_range": "1000-5000"
-  "additional_notes": "Looking for a custom solution..."`
+  "budget_range": "1000-5000",
+  "additional_notes": "Looking for a custom solution..."
 }`}
                 </pre>
               </div>
@@ -162,15 +162,15 @@ export default function ApiReference() {
 {`{
   "success": true,
   "data": {
-    "quote_id": "qt_123456789"
-    "status": "pending"
-    "estimated_timeline": "2-3 business days"
+    "quote_id": "qt_123456789",
+    "status": "pending",
+    "estimated_timeline": "2-3 business days",
     "next_steps": [
-      "Our team will review your requirements"
-      "We'll prepare a detailed proposal"
+      "Our team will review your requirements",
+      "We'll prepare a detailed proposal",
       "Schedule a consultation call"
     ]
-  }`
+  }
 }`}
                 </pre>
               </div>
@@ -215,7 +215,7 @@ export default function ApiReference() {
             <p style={{ opacity: '0.8', marginBottom: 20 }}>API requests are rate limited to ensure fair usage and system stability.</p>
             
             <div style={{ background: '#1e293b', padding: 20, borderRadius: 8 }}>
-              <div style={{ display: 'gridTemplateColumns', 'repeat(auto-fit, minmax(200px, 1fr))' gap: 16 }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16 }}>
                 <div>
                   <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>Free Tier</h3>
                   <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>100 requests/hour</p>
@@ -235,4 +235,4 @@ export default function ApiReference() {
       </div>
     </>
   );
-}`
+}

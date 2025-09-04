@@ -6,7 +6,7 @@ const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', a
   };
   const securityMeasures = [
     {
-      title: "Data Encryption"
+      title: "Data Encryption",
       description: "All data is encrypted both in transit and at rest using industry-standard encryption protocols"
       icon: "🔐"
       details: [

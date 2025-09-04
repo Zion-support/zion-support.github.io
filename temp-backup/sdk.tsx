@@ -34,7 +34,6 @@ export default function SDK() {
 {`npm install @ziontechgroup/sdk
 
 # or
-`
 yarn add @ziontechgroup/sdk`}
               </pre>
             </div>
@@ -62,7 +61,7 @@ const quote = await client.quotes.create({
   contact: {
     name: 'John Doe',
     email: 'john@example.com'
-  }`
+  }
 });`}
               </pre>
             </div>
@@ -78,7 +77,6 @@ const quote = await client.quotes.create({
 {`pip install ziontechgroup-sdk
 
 # or
-`
 pipenv install ziontechgroup-sdk`}
               </pre>
             </div>
@@ -106,8 +104,8 @@ quote = client.quotes.create({
     'contact': {
         'name': 'John Doe'
         'email': 'john@example.com'
-    }`
-})`}
+    }
+});`}
               </pre>
             </div>
           </section>
@@ -150,7 +148,7 @@ $quote = $client->quotes()->create([
         'name' => 'John Doe'
         'email' => 'john@example.com'
     ]
-]);`
+]);
 ?>`}
               </pre>
             </div>
@@ -160,17 +158,17 @@ $quote = $client->quotes()->create([
           <section style={{ background: '#1e293b', padding: 32, borderRadius: 12, border: '1px solid rgba(255,255,255,0.1)'  }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 24  }}>✨ SDK Features</h2>
             <div style={{ display: 'grid', gap: 20 }}>
-              <div style={{ padding: 20, background: 'borderRadius', 8, border: '1px solid rgba(34, 197, 94, 0.2)' }}>
+              <div style={{ padding: 20, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(34, 197, 94, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#86efac' }}>🔧 Easy Integration</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Simple, intuitive APIs that make integration straightforward and fast.</p>
               </div>
               
-              <div style={{ padding: 20, background: 'borderRadius', 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
+              <div style={{ padding: 20, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(59, 130, 246, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#93c5fd' }}>🛡️ Built-in Security</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Automatic authentication, request signing, and secure communication.</p>
               </div>
               
-              <div style={{ padding: 20, background: 'borderRadius', 8, border: '1px solid rgba(139, 92, 246, 0.2)' }}>
+              <div style={{ padding: 20, background: '#1e293b', borderRadius: 8, border: '1px solid rgba(139, 92, 246, 0.2)' }}>
                 <h3 style={{ fontWeight: 600, marginBottom: 8, color: '#c4b5fd' }}>📚 Comprehensive Documentation</h3>
                 <p style={{ opacity: '0.8', fontSize: '0.9rem' }}>Detailed documentation with examples for every method and feature.</p>
               </div>
@@ -239,4 +237,4 @@ $quote = $client->quotes()->create([
       </div>
     </>
   );
-}`
+}
