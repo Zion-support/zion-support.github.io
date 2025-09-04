@@ -288,8 +288,8 @@ setServicesDropdownOpen(true);
             </div>
           </nav>
 
-          {/* Right side - Search, User, Mobile menu */}
-          <div className="flex items-center space-x-4">
+          {/* Search and Actions */}
+          <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
             <div className="relative hidden md: bloc k">
               <form onSubmit={handleSearch} className="relative">
@@ -521,7 +521,6 @@ setServicesDropdownOpen(true);
             </button>
           </div>
         </div>
-      </div>
 
       {/* Mobile Navigation */}
       <AnimatePresence>
@@ -551,7 +550,7 @@ setServicesDropdownOpen(true);
                   <Link
                     key={item.name}
                     to={item.href}
-                    onClick={closeMobileMenu}
+                    onClick={() => setMobileMenuOpen(false)}
                     className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                       item.current
                         ? 'text-zion-cyan bg-zion-cyan/10'
@@ -561,7 +560,23 @@ setServicesDropdownOpen(true);
                     {item.name}
                   </Link>
                 ))}
-              </nav>
+                
+                {/* Mobile Services */}
+                <div className="px-3 py-2">
+                  <div className="text-sm font-medium text-zion-slate-light mb-2">Services</div>
+                  <div className="space-y-1">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block px-3 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
 
             {/* User Menu */}
             <button className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
@@ -605,8 +620,9 @@ setServicesDropdownOpen(true);
                       to={service.href}
                       className="block text-slate-300 hover: tex t-cyan-400 px-3 py-2 text-sm transition-colors duration-200"
                       onClick={() => setMobileMenuOpen(false)}
+                      className={`block w-full text-center px-4 py-2 bg-gradient-to-r ${action.color} text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium`}
                     >
-                      {service.name}
+                      {action.name}
                     </Link>
                   ))}
                 </div>

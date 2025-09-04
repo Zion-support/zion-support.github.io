@@ -163,12 +163,10 @@ import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-r
 ursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
   Linkedin,
   Instagram,
-  Globe,
   Twitter,
   Facebook,
   Youtube,
   Github,
-  Zap,
   Brain,
   Code,
   Server,
@@ -340,8 +338,7 @@ export function Footer() {
                 ))}
 </ul>
             </div>
-          ))}
-        </div>
+          </div>
 
 {/* Contact Information */}
         <div className="mt-12 pt-8 border-t border-gray-800">
