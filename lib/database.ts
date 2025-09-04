@@ -29,7 +29,7 @@ class DatabaseManager {
   }
 
   async connect(): Promise<void> {
-    if (this.client && this.client.topology?.isConnected()) {
+    if (this.client && this.db) {
       return;
     }
 

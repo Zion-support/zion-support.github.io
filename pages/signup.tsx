@@ -104,7 +104,7 @@ export default function Signup() {
                       background: 'rgba(255, 255, 255, 0.1)',
                       color: 'white',
                       fontSize: '1rem'
-                    }
+                    }}
                     placeholder="First name"
                   />
                 </div>
@@ -126,7 +126,7 @@ export default function Signup() {
                       background: 'rgba(255, 255, 255, 0.1)',
                       color: 'white',
                       fontSize: '1rem'
-                    }
+                    }}
                     placeholder="Last name"
                   />
                 </div>
@@ -150,7 +150,7 @@ export default function Signup() {
                     background: 'rgba(255, 255, 255, 0.1)',
                     color: 'white',
                     fontSize: '1rem'
-                  }
+                  }}
                   placeholder="Enter your email"
                 />
               </div>
@@ -172,7 +172,7 @@ export default function Signup() {
                     background: 'rgba(255, 255, 255, 0.1)',
                     color: 'white',
                     fontSize: '1rem'
-                  }
+                  }}
                   placeholder="Your company name"
                 />
               </div>
@@ -194,7 +194,7 @@ export default function Signup() {
                     background: 'rgba(255, 255, 255, 0.1)',
                     color: 'white',
                     fontSize: '1rem'
-                  }
+                  }}
                   placeholder="+1 (555) 123-4567"
                 />
               </div>
@@ -218,7 +218,7 @@ export default function Signup() {
                       background: 'rgba(255, 255, 255, 0.1)',
                       color: 'white',
                       fontSize: '1rem'
-                    }
+                    }}
                     placeholder="Create password"
                   />
                 </div>
@@ -240,7 +240,7 @@ export default function Signup() {
                       background: 'rgba(255, 255, 255, 0.1)',
                       color: 'white',
                       fontSize: '1rem'
-                    }
+                    }}
                     placeholder="Confirm password"
                   />
                 </div>
@@ -254,7 +254,7 @@ export default function Signup() {
                     checked={formData.agreeToTerms}
                     onChange={handleInputChange}
                     required
-                    style={{ width: 16, height: 16, marginTop: 2 }
+                    style={{ width: 16, height: 16, marginTop: 2 }}
                   />
                   <span style={{ fontSize: '0.9rem', lineHeight: 1.4 }}>
                     I agree to the{' '}

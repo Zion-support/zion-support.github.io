@@ -17,7 +17,9 @@ class ErrorBoundary extends Component<Props, State> {
     hasError: false
   }
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return { hasError: true, error };
+  }
+  
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
@@ -43,7 +45,7 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -79,4 +81,6 @@ class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+}
+
 export default ErrorBoundary;

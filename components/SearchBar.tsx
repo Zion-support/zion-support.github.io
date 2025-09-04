@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 interface SearchResult {
@@ -69,6 +69,8 @@ export default function SearchBar() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (query.length > 2) {
@@ -88,7 +90,6 @@ export default function SearchBar() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    handleSearch(value);
   };
   const handleResultClick = () => {
     setQuery('');
@@ -101,6 +102,8 @@ export default function SearchBar() {
       setIsOpen(false);
       inputRef.current?.blur();
     }
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
@@ -111,13 +114,15 @@ export default function SearchBar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
   return (
-    <div className="relative w-full max-w-md">
+    <div ref={searchRef} className="relative w-full max-w-md">
       <div className="relative">
         <input
+          ref={inputRef}
           type="text"
           placeholder="Search services..."
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
           className="w-full px-4 py-2 pl-10 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
         <svg
@@ -165,6 +170,4 @@ export default function SearchBar() {
       )}
     </div>
   );
-};
-
-export default SearchBar;
+}

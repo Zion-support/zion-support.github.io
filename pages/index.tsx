@@ -8,7 +8,31 @@ export default function Home() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  }
+  };
+
+  const structuredData = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": contact.site,
+    "logo": `${contact.site}/favicon.svg`,
+    "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": contact.phone,
+      "contactType": "customer service",
+      "email": contact.email
+    },
+    "sameAs": [contact.site]
+  });
   return (
     <>
       <Head>
@@ -26,30 +50,8 @@ export default function Home() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": contact.site,
-              "logo": `${contact.site}/favicon.svg`,
-              "description": "Leading provider of micro SaaS products, AI services, and IT solutions",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": contact.phone,
-                "contactType": "customer service",
-                "email": contact.email
-              },
-              "sameAs": [contact.site]
-            })
-          }
+            __html: structuredData
+          }}
         />
       </Head>
       
@@ -57,7 +59,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md: text-6xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
               Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-8">

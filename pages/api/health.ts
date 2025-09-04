@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { performanceMiddleware, PerformanceMonitor } from '../../lib/performance-monitor';
+import PerformanceMonitor, { performanceMiddleware } from '../../lib/performance-monitor';
 import { dbManager } from '../../lib/database';
 import { apiCache, userCache, staticCache } from '../../lib/cache';
 

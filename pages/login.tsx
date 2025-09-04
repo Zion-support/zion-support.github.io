@@ -86,7 +86,7 @@ export default function Login() {
                     background: 'rgba(255, 255, 255, 0.1)',
                     color: 'white',
                     fontSize: '1rem'
-                  }
+                  }}
                   placeholder="Enter your email"
                 />
               </div>
@@ -109,7 +109,7 @@ export default function Login() {
                     background: 'rgba(255, 255, 255, 0.1)',
                     color: 'white',
                     fontSize: '1rem'
-                  }
+                  }}
                   placeholder="Enter your password"
                 />
               </div>
@@ -121,7 +121,7 @@ export default function Login() {
                     name="rememberMe"
                     checked={formData.rememberMe}
                     onChange={handleInputChange}
-                    style={{ width: 16, height: 16 }
+                    style={{ width: 16, height: 16 }}
                   />
                   <span style={{ fontSize: '0.9rem' }}>Remember me</span>
                 </label>
@@ -148,13 +148,13 @@ export default function Login() {
                   cursor: 'pointer',
                   transition: 'transform 0.3s ease',
                   marginBottom: 20
-                }
+                }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-2px)';
-                }
+                }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                }
+                }}
               >
                 Sign In
               </button>

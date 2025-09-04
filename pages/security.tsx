@@ -171,11 +171,11 @@ export default function Security() {
                   textAlign: 'center',
                   transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                   cursor: 'pointer'
-                }
+                }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-5px)';
                   e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-                }
+                }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = 'none';
@@ -264,10 +264,10 @@ export default function Security() {
                 display: 'inline-block',
                 border: '2px solid #ef4444',
                 transition: 'background-color 0.3s ease'
-              }
+              }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.background = 'rgba(239, 68, 68, 0.1)';
-              }
+              }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = 'transparent';
               }}>
