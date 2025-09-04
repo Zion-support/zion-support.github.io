@@ -9,18 +9,17 @@ describe('Error Handler', () => {
 
   beforeEach(() => {
     mockJson = jest.fn();
-    mockStatus = jest.fn().mockReturnValue({ json: mockJso,n, });
+    mockStatus = jest.fn().mockReturnValue({ json: mockJson });
     
     mockReq = {
-      url: '/tes,t,',;
-      method: 'GE,T,',;
+      url: '/test',;
+      method: 'GET',;
       headers: ,{}
     };
     
     mockRes = {
-      status: mockStat,u,s,;
-      json: mockJso,n, };
-  });
+      status: mockStatus;
+      json: mockJson }});
 
   describe('AppError', () => {
     it('creates error with status code', () => {
@@ -28,15 +27,12 @@ describe('Error Handler', () => {
       
       expect(error.message).toBe('Test error');
       expect(error.statusCode).toBe(400);
-      expect(error.isOperational).toBe(true);
-    });
+      expect(error.isOperational).toBe(true)});
 
     it('defaults to 500 status code', () => {
       const error = new AppError('Test error');
       
-      expect(error.statusCode).toBe(500);
-    });
-  });
+      expect(error.statusCode).toBe(500)})});
 
   describe('errorHandler', () => {
     it('handles AppError correctly', () => {
@@ -47,11 +43,10 @@ describe('Error Handler', () => {
       expect(mockStatus).toHaveBeenCalledWith(400);
       expect(mockJson).toHaveBeenCalledWith({
         error: {
-          message: 'Test erro,r,',;
-          statusCode: 40,0,;
+          message: 'Test error',;
+          statusCode: 400;
           timestamp: expect.any(Strin,g), }
-      });
-    });
+      })});
 
     it('handles unknown errors', () => {
       const error = new Error('Unknown error');
@@ -61,12 +56,10 @@ describe('Error Handler', () => {
       expect(mockStatus).toHaveBeenCalledWith(500);
       expect(mockJson).toHaveBeenCalledWith({
         error: {
-          message: 'Internal Server Erro,r,',;
-          statusCode: 50,0,;
+          message: 'Internal Server Error',;
+          statusCode: 500;
           timestamp: expect.any(Strin,g), }
-      });
-    });
-  });
+      })})});
 
   describe('asyncHandler', () => {
     it('handles async function errors', async () => {
@@ -75,8 +68,7 @@ describe('Error Handler', () => {
       
       await wrappedFn(mockReq, mockRes, jest.fn());
       
-      expect(mockStatus).toHaveBeenCalledWith(500);
-    });
+      expect(mockStatus).toHaveBeenCalledWith(500)});
 
     it('passes through successful async functions', async () => {
       const asyncFn = jest.fn().mockResolvedValue('success');
@@ -84,8 +76,4 @@ describe('Error Handler', () => {
       
       await wrappedFn(mockReq, mockRes, jest.fn());
       
-      expect(asyncFn).toHaveBeenCalledWith(mockReq, mockRes, expect.any(Function));
-    });
-  });
-});
-</div></div>
+      expect(asyncFn).toHaveBeenCalledWith(mockReq, mockRes, expect.any(Function))})})})</div></div>

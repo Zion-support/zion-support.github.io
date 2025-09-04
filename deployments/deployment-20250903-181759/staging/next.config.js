@@ -1,38 +1,37 @@
-/** @type {import('next').NextConfig} */;
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: tr,u,e,;
-  compress: tr,u,e,;
-  poweredByHeader: fal,s,e,;
-  eslint: { ignoreDuringBuilds: tru,e, },;
-  typescript: { ignoreBuildErrors: tru,e, },;
-  trailingSlash: tr,u,e,;
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  trailingSlash: true,
   generateBuildId: async () => {
-    return 'build-' + Date.no,w(), },;
-  // Ensure standard Next.js page extensions are recognized alongside any custom route files;
-  pageExtensions: ['ts,x,', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],;
+    return 'build-' + Date.now();
+  },
+  // Ensure standard Next.js page extensions are recognized alongside any custom route files
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
   images: {
-    domains: ["localhos,t,", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],;
-    formats: ['image/web,p,', 'image/avif'],;
-    deviceSizes: [64,0, 750, 828, 1080, 1200, 1920, 2048, 3840],;
-    imageSizes: [1,6, 32, 48, 64, 96, 128, 256, 384];
-  },;
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
   experimental: {
-    scrollRestoration: tru,e, },;
+    scrollRestoration: true
+  },
   async headers() {
-    return [;
-      {
-        source: '/(.*),',;
-        headers: [;
-          { key: 'X-Content-Type-Option,s,', value: 'nosnif,f', },;
-          { key: 'X-Frame-Option,s,', value: 'DEN,Y', },;
-          { key: 'X-XSS-Protectio,n,', value: '1mode=bloc,k', },;
-          { key: 'Referrer-Polic,y,', value: 'origin-when-cross-origi,n', }
-        ];
+    return [{
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' }
+        ]
       }
     ];
   }
 };
 
 export default nextConfig;
-
-"

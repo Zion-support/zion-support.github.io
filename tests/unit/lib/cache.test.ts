@@ -5,41 +5,33 @@ describe('CacheManager', () => {
 
   beforeEach(() => {
     cache = new CacheManager({
-      defaultTT,L: 100,0, // 1 second;
-      maxSize: 10, });
-  });
+      defaultTT,L: 1000 // 1 second;
+      maxSize: 10, })});
 
   afterEach(() => {
-    cache.destroy();
-  });
+    cache.destroy()});
 
   it('sets and gets values', () => {
     cache.set('key1', 'value1');
-    expect(cache.get('key1')).toBe('value1');
-  });
+    expect(cache.get('key1')).toBe('value1')});
 
   it('returns null for non-existent keys', () => {
-    expect(cache.get('nonexistent')).toBeNull();
-  });
+    expect(cache.get('nonexistent')).toBeNull()});
 
   it('expires values after TTL', (done) => {
     cache.set('key1', 'value1', 100); // 100ms TTL;
     
     setTimeout(() => {
       expect(cache.get('key1')).toBeNull();
-      done();
-    }, 150);
-  });
+      done()}, 150)});
 
   it('respects max size limit', () => {
     for (let i = 0; i < 15; i++) {
-      cache.set(`key${i}`, `value${i}`);
-    }
+      cache.set(`key${i}`, `value${i}`)}
     
     expect(cache.size()).toBe(10);
     expect(cache.get('key0')).toBeNull(); // Should be evicted;
-    expect(cache.get('key14')).toBe('value14'); // Should still exist;
-  });
+    expect(cache.get('key14')).toBe('value14'); // Should still exist});
 
   it('tracks cache statistics', () => {
     cache.set('key1', 'value1');
@@ -48,8 +40,7 @@ describe('CacheManager', () => {
     const stats = cache.getStats();
     expect(stats.total).toBe(2);
     expect(stats.active).toBe(2);
-    expect(stats.expired).toBe(0);
-  });
+    expect(stats.expired).toBe(0)});
 
   it('clears all values', () => {
     cache.set('key1', 'value1');
@@ -59,7 +50,4 @@ describe('CacheManager', () => {
     
     expect(cache.size()).toBe(0);
     expect(cache.get('key1')).toBeNull();
-    expect(cache.get('key2')).toBeNull();
-  });
-});
-</div></div>
+    expect(cache.get('key2')).toBeNull()})})</div></div>

@@ -11,25 +11,15 @@ export const useKeyboardNavigation = () => {
           (main as HTMLElement).focu,s();, }
     }
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-}
+    return () => document.removeEventListener('keydown', handleKeyDown)}, [])}
 // Component for skip links;
-export const SkipLinks: React.FC = () => (;
-  <div className="sr-only focus-within:not-sr-only">;
-    <a";
+export const SkipLinks: React.FC = () => (<div className="sr-only focus-within:not-sr-only"><a";
       href="#main-content"";
-      className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500";
-    >;
-      Skip to main content;
-    </a>;
-    <a";
+      className="absolute top-0 left-0 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500">;
+      Skip to main content</a><a";
       href="#navigation"";
-      className="absolute top-0 left-20 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500";
-    >;
-      Skip to navigation;
-    </a>;
-  </div>;
+      className="absolute top-0 left-20 bg-blue-600 text-white px-4 py-2 rounded-br-lg focus:outline-none focus:ring-2 focus:ring-blue-500">;
+      Skip to navigation</a></div>;
 );
 
 // Enhanced button component with accessibility;
@@ -37,18 +27,16 @@ interface AccessibleButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEle
   variant?: 'primary' | 'secondary' | 'danger';
   size?: 'sm' | 'md' | 'lg';
   loading?: boolean;
-  children: React.ReactNod,e;,;
-}
+  children: React.ReactNod,e;,}
 
 export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
-  variant = 'primar,y,',;
+  variant = 'primary',;
   size = 'md',;
   loading = false,;
   children,;
   className = '',;
   disabled,;
-  ...props;
-}) => {
+  ...props}) => {
   const baseClasses = 'font-medium rounded-lg transition-colors focus: outline-none focus:ring-2 focus:ring-offset-2';
   
   const variantClasses = {
@@ -56,34 +44,27 @@ export const AccessibleButton: React.FC<AccessibleButtonProps> = ({
     secondary: 'bg-gray-600 hover:bg-gray-700 text-white focus:ring-gra,y-500,',;
     danger: 'bg-red-600 hover:bg-red-700 text-white focus:ring-re,d-500', }
   const sizeClasses = {
-    sm: 'px-3 py-1.5 text-s,m,',;
-    md: 'px-4 py-2 text-bas,e,',;
+    sm: 'px-3 py-1.5 text-sm',;
+    md: 'px-4 py-2 text-base',;
     lg: 'px-6 py-3 text-l,g', }
-  return (;
-    <button;
+  return (<button;
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
       disabled={disabled || loading}
       aria-disabled={disabled || loading}
       {...props}
-    >;
-      {loading ? (";
-        <span className="flex items-center">";
-          <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2" />;
-          Loading...;
-        </span>;
+    >{loading ? ("<span className="flex items-center">"<div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2" />;
+          Loading...</span>;
       ) : (;
         children;
       )}
     </button>;
-  );
-}
+  )}
 // Focus trap component;
 interface FocusTrapProps {
   children: React.ReactNode;
-  active: boolea,n;,;
-}
+  active: boolea,n;,}
 
-export const FocusTrap: React.FC<FocusTrapProps> = ({ childr,e,n, active }) => {
+export const FocusTrap: React.FC<FocusTrapProps> = ({ children active }) => {
   useEffect(() => {
     if (!active) return;
 ";
@@ -102,16 +83,13 @@ export const FocusTrap: React.FC<FocusTrapProps> = ({ childr,e,n, active }) => {
       } else {
         if (document.activeElement === lastFocusableElement) {
           firstFocusableElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()}
     }
     document.addEventListener('keydown', handleTabKey);
     firstFocusableElement?.focus();
 
-    return () => document.removeEventListener('keydown', handleTabKey);
-  }, [active]);
+    return () => document.removeEventListener('keydown', handleTabKey)}, [active]);
 
-  return <>{children}</>;
-}
+  return <>{children}</>}
 }}
 </div></div></div></div>"

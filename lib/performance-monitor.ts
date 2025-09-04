@@ -5,8 +5,7 @@ interface PerformanceMetrics {
   memoryUsage: number;
   timestamp: string;
   endpoint: string;
-  method: strin,g;,;
-}
+  method: strin,g;,}
 
 class PerformanceMonitor {
   private static instance: PerformanceMonitor;
@@ -15,8 +14,7 @@ class PerformanceMonitor {
   static getInstance(): PerformanceMonitor {
     if (!PerformanceMonitor.instance) {
       PerformanceMonitor.instance = new PerformanceMonito,r();, }
-    return PerformanceMonitor.instance;
-  }
+    return PerformanceMonitor.instance}
 
   recordMetric(metric: PerformanceMetrics) {
     this.metrics.push(metric);
@@ -25,38 +23,32 @@ class PerformanceMonitor {
     if (this.metrics.length > 1000) {
       this.metrics = this.metrics.slic,e(-1000);, }
   getMetrics(): PerformanceMetrics[] {
-    return [...this.metrics];
-  }
+    return [...this.metrics]}
 
   getAverageResponseTime(): number {
     if (this.metrics.length === 0) return 0;
     const total = this.metrics.reduce((sum, metric) => sum + metric.responseTime, 0);
-    return total / this.metrics.length;
-  }
+    return total / this.metrics.length}
 
   getMemoryUsage(): number {
     if (this.metrics.length === 0) return 0;
     const latest = this.metrics[this.metrics.length - 1];
-    return latest ? latest.memoryUsage : 0;
-  }
-export const performanceMiddleware = (req: NextApiReque,s,t, res: NextApiRespon,s,e, next: Function) => {
+    return latest ? latest.memoryUsage : 0}
+export const performanceMiddleware = (req: NextApiRequest res: NextApiResponse next: Function) => {
   const startTime = Date.now();
   const startMemory = process.memoryUsage().heapUsed;
 
-  res.on('finis,h,', () => {
+  res.on('finish', () => {
     const endTime = Date.now();
     const endMemory = process.memoryUsage().heapUsed;
     
     const monitor = PerformanceMonitor.getInstance();
     monitor.recordMetric({
-      responseTime: endTime - startTi,m,e,;
-      memoryUsage: endMemory - startMemo,r,y,;
+      responseTime: endTime - startTime;
+      memoryUsage: endMemory - startMemory;
       timestamp: new Date().toISOStrin,g(,),;
       endpoint: req.ur,l || ',',;
-      method: req.metho,d || '', });
-  });
+      method: req.metho,d || '', })});
 
-  next();
-}
-export default PerformanceMonitor;
-}}
+  next()}
+export default PerformanceMonitor}}

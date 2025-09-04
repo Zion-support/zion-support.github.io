@@ -17,26 +17,20 @@ jest.mock('next/router', () => ({
       events: {
         on: jest.f,n(,),;
         off: jest.f,n(,),;
-        emit: jest.f,n(,),;
-      },;
-    };
-  },;
-}));
+        emit: jest.f,n(,),},}},}));
 
 // Mock window.matchMedia;
 Object.defineProperty(window, 'matchMedia', {
-  writable: tr,u,e,;
+  writable: true;
   value: jest.fn().mockImplementation(query => ({
-    matches: fal,s,e,;
-    media: que,r,y,;
-    onchange: nu,l,l,;
+    matches: false;
+    media: query;
+    onchange: null;
     addListener: jest.f,n(,),;
     removeListener: jest.f,n(,),;
     addEventListener: jest.f,n(,),;
     removeEventListener: jest.f,n(,),;
-    dispatchEvent: jest.f,n(,),;
-  })),;
-});
+    dispatchEvent: jest.f,n(,),})),});
 
 // Mock IntersectionObserver;
 global.IntersectionObserver = class IntersectionObserver {

@@ -7,8 +7,7 @@ interface LazyImageProps { src: string; alt: string;
   className?: string;
   priority?: boolean;
   placeholder?: 'blur' | 'empty';
-  blurDataURL?: strin,g;,;
-}
+  blurDataURL?: strin,g;,}
 
 export default function LazyImage({
   src,;
@@ -18,8 +17,7 @@ export default function LazyImage({
   className = '',;
   priority = false,;
   placeholder = 'empty',;
-  blurDataURL;
-}: LazyImageProps) {
+  blurDataURL}: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const imgRef = useRef<HTMLDivElement>(null);
@@ -31,42 +29,32 @@ export default function LazyImage({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect();
-        }
-      },;
-      { threshold: 0.,1,;
+          observer.disconnect()}
+      },{ threshold: 0.1;
         rootMargin: '50p,x', }
     );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+      observer.observe(imgRef.current)}
 
-    return () => observer.disconnect();
-  }, [priority]);
+    return () => observer.disconnect()}, [priority]);
 
-  return (;
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>;
-      {isInView && (;
-        <Image;
+  return (<div ref={imgRef} className={`relative overflow-hidden ${className}`}>{isInView && (<Image;
           src={src}
           alt={alt}
           width={width}
           height={height}
           className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0';
-          }`}
+            isLoaded ? 'opacity-100' : 'opacity-0'}`}
           onLoad={() => setIsLoaded(true)}
           priority={priority}
           placeholder={placeholder}
           blurDataURL={blurDataURL}
-          sizes="(max-width: 768px) 100,v,w, (max-width: 1200px) 50,v,w, 33vw";
+          sizes="(max-width: 768px) 100vw (max-width: 1200px) 50vw 33vw";
         />;
       )}
-      {!isLoaded && isInView && (";
-        <div className="absolute inset-0 bg-slate-200 animate-pulse rounded" />;
+      {!isLoaded && isInView && ("<div className="absolute inset-0 bg-slate-200 animate-pulse rounded" />;
       )}
     </div>;
-  );
-}
+  )}
 </div></div></div>"

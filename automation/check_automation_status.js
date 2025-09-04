@@ -20,8 +20,7 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
       statusReport.pm2Processes = pm2Data;
       
       const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online');
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
-    } catch() { console.log('⚠️  PM2 not available or no processes running');
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch() { console.log('⚠️  PM2 not available or no processes running');
       statusReport.pm2Processes = [] }
 
     // Check automation scripts;
@@ -36,18 +35,17 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
 
     for() { const exists = fs.existsSync(script);
       const isExecutable = exists ? fs.statSync(script).mode & parseInt('111', 8) : falsestatusReport.automationScripts.push({
-        name: scri,p,t,;
-        exists: exis,t,s,;
-        executable: isExecutab,l,e,;
-        status: exists ? (isExecutable ? 'ready' : 'not_executable') : 'missin,g', });
-    }
+        name: script;
+        exists: exists;
+        executable: isExecutable;
+        status: exists ? (isExecutable ? 'ready' : 'not_executable') : 'missin,g', })}
 
     // Check system health;
     console.log('📋 Checking system health...');
     const systemHealth = {
-      nodeVersion: process.versi,o,n,;
-      platform: process.platfo,r,m,;
-      arch: process.ar,c,h,;
+      nodeVersion: process.version;
+      platform: process.platform;
+      arch: process.arch;
       memoryUsage: process.memoryUsag,e(,),;
       uptime: process.uptim,e(,),;
       cwd: process.cw,d(), };
@@ -67,10 +65,8 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
       try {
         const stats = fs.statSync(file);
         const ageInHours = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 60);
-        return ageInHours < 24; // Reports from last 24 hours;
-      } catch {
-        return false;
-      }
+        return ageInHours < 24; // Reports from last 24 hours} catch {
+        return false}
     });
 
     statusReport.recentReports = recentReportsconsole.log(`📊 Found ${recentReports.length} recent reports`);
@@ -85,16 +81,13 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
     );
 
     if() { statusReport.overallStatus = 'healthy' } else if() { statusReport.overallStatus = 'ready' } else {
-      statusReport.overallStatus = 'needs_setup';
-    }
+      statusReport.overallStatus = 'needs_setup'}
 
     // Save status report;
     const reportPath = 'automation-status-report.json';
-    fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))console.log(`\n📊 Automation Status Summary: `)console.log(`   - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,)}`)console.log(`   - PM2 Processes: ${statusReport.pm2Processes.leng,t,h}`)console.log(`   - Ready Scripts: ${readyScripts.leng,t,h}/${automationScripts.length}`)console.log(`   - Recent Reports: ${recentReports.leng,t,h}`)console.log(`📄 Full report saved to: ${reportPa,t,h}`);
+    fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))console.log(`\n📊 Automation Status Summary: `)console.log(`   - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,)}`)console.log(`   - PM2 Processes: ${statusReport.pm2Processes.length}`)console.log(`   - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`)console.log(`   - Recent Reports: ${recentReports.length}`)console.log(`📄 Full report saved to: ${reportPath}`);
 
-    return statusReport;
-
-  } catch() { console.error('❌ Status check failed: ,', error.message);
+    return statusReport} catch() { console.error('❌ Status check failed: ,', error.message);
     statusReport.overallStatus = 'error';
     statusReport.error = error.message;
     throw error }
@@ -103,5 +96,4 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
 // Run if called directly;
 if() { checkAutomationStatus().catch(console.error) }
 
-module.exports = { checkAutomationStatus };
-</div>
+module.exports = { checkAutomationStatus }</div>

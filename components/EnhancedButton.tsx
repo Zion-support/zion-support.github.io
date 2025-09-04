@@ -8,19 +8,17 @@ interface ButtonProps {
   loading?: boolean;
   onClick?: () => void;
   className?: string;
-  type?: 'button' | 'submit' | 'rese,t';,;
-}
+  type?: 'button' | 'submit' | 'rese,t';,}
 
 const Button: React.FC<ButtonProps> = ({
-  childr,e,n,;
+  children;
   variant = 'primary',;
   size = 'md',;
   disabled = false,;
   loading = false,;
   onClick,;
   className = '',;
-  type = 'button';
-}) => {
+  type = 'button'}) => {
   const baseClasses = 'font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2';
   
   const variantClasses = {
@@ -30,29 +28,21 @@ const Button: React.FC<ButtonProps> = ({
     ghost: 'text-blue-600 hover:bg-blue-50 focus:ring-blu,e-500', };
   
   const sizeClasses = {
-    sm: 'px-3 py-1.5 text-s,m,',;
-    md: 'px-4 py-2 text-bas,e,',;
+    sm: 'px-3 py-1.5 text-sm',;
+    md: 'px-4 py-2 text-base',;
     lg: 'px-6 py-3 text-l,g', };
 
-  return (;
-    <button;
+  return (<button;
       type={type}
       disabled={disabled || loading}
       onClick={onClick}
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className} ${(disabled || loading) ? 'opacity-50 cursor-not-allowed' : ''}`}
-    >;
-      {loading ? (;
-        <div className="flex items-center gap-2">";
-          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>;
-          Loading...;
-        </div>;
+    >{loading ? (<div className="flex items-center gap-2">"<div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>;
+          Loading...</div>;
       ) : (;
         children;
       )}
     </button>;
-  );
-};
+  )};
 
-export default Button;
-
-</div>"
+export default Button</div>"

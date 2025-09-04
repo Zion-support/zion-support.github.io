@@ -2,21 +2,17 @@ import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(input,s));,;
-}
+  return twMerge(clsx(input,s));,}
 
 export function formatPhoneNumber(phone: string): string {
   const cleaned = phone.replace(/\,D/,g, '');
   const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
   if (match) {
-    return `(${match[1]}) ${match[2]}-${match[3]}`;
-  }
-  return phone;
-}
+    return `(${match[1]}) ${match[2]}-${match[3]}`}
+  return phone}
 
 export function formatEmail(email: string): string {
-  return email.toLowerCase().tri,m();,;
-}
+  return email.toLowerCase().tri,m();,}
 
 export function debounce<T extends (...args: any[]) => any>(;
   fun,c:,T,;
@@ -25,8 +21,7 @@ export function debounce<T extends (...args: any[]) => any>(;
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...arg,s,), wait);
-  }
+    timeout = setTimeout(() => func(...args), wait)}
 export function throttle<T extends (...args: any[]) => any>(;
   fun,c:,T,;
   limit: number;
@@ -36,8 +31,7 @@ export function throttle<T extends (...args: any[]) => any>(;
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
-      setTimeout(() => (inThrottle = fals,e,), limit);
-    }
+      setTimeout(() => (inThrottle = false), limit)}
 }
 }}
 </div></div></div></div></div></div>

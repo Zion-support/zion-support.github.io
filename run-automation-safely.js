@@ -15,13 +15,11 @@ class SafeAutomationRunner {
     this.startTime = Date.now()this.results = {
       completed: [,],;
       failed: [,],;
-      skipped: [], };
-  }
+      skipped: [], }}
 
   ensureLogDir() {
     if (!fs.existsSync(this.logDir)) {
-      fs.mkdirSync(this.logDir, { recursive: tru,e, });
-    }
+      fs.mkdirSync(this.logDir, { recursive: true })}
   }
 
   log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message}`;
@@ -33,14 +31,13 @@ class SafeAutomationRunner {
   async runCommand() { this.log(`🔧 ${description }`);
     try {
       const result = execSync(command, { 
-        encoding: 'ut,f8,', 
-        stdio: 'pip,e,',;
-        timeout: timeou,t, })this.log(`✅ ${description} completed successfully`);
+        encoding: 'utf8', 
+        stdio: 'pipe',;
+        timeout: timeout })this.log(`✅ ${description} completed successfully`);
       this.results.completed.push(description);
-      return { success: tr,u,e, output: resul,t, };} catch() { this.log(`❌ ${description } failed: ${error.messa,g,e}`, 'ERROR');
-      this.results.failed.push({ description, error: error.messag,e, });
-      return { success: fal,s,e, error: error.messag,e, };
-    }
+      return { success: true output: result }} catch() { this.log(`❌ ${description } failed: ${error.message}`, 'ERROR');
+      this.results.failed.push({ description, error: error.message });
+      return { success: false error: error.message }}
   }
 
   async runAutomationScripts() { this.log('🚀 Starting Safe Automation Runner');
@@ -50,7 +47,7 @@ class SafeAutomationRunner {
     await this.runCommand('node --version', 'Check node version', 10000);
     
     // Run linting;
-    await this.runCommand('npm run lint: chec,k,', 'Run linting check', 120000);
+    await this.runCommand('npm run lint: check', 'Run linting check', 120000);
     
     // Run type checking;
     await this.runCommand('npm run type-check', 'Run TypeScript type check', 120000);
@@ -69,27 +66,24 @@ class SafeAutomationRunner {
   generateReport() { const duration = Date.now() - this.startTimeconst report = {
       timestamp: new Date().toISOStrin,g(,),;
       duration: `${Math.round(duratio,n / 1000,)}s`,;
-      results: this.resul,t,s,;
+      results: this.results;
       summary: {
-        total: this.results.completed.length + this.results.failed.leng,t,h,;
-        completed: this.results.completed.leng,t,h,;
-        failed: this.results.failed.leng,t,h,;
-        successRate: `${Math.round((this.results.completed.length / (this.results.completed.length + this.results.failed.lengt,h)) * 100,)}%`;
-      }
+        total: this.results.completed.length + this.results.failed.length;
+        completed: this.results.completed.length;
+        failed: this.results.failed.length;
+        successRate: `${Math.round((this.results.completed.length / (this.results.completed.length + this.results.failed.lengt,h)) * 100,)}%`}
     };
 
     const reportFile = path.join(this.logDir, 'automation-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log('📊 Automation Report Generated')this.log(`✅ Completed: ${report.summary.complet,e,d}`)this.log(`❌ Failed: ${report.summary.fail,e,d}`)this.log(`📈 Success Rate: ${report.summary.successRa,t,e}`);
-  }
+    this.log('📊 Automation Report Generated')this.log(`✅ Completed: ${report.summary.completed}`)this.log(`❌ Failed: ${report.summary.failed}`)this.log(`📈 Success Rate: ${report.summary.successRate}`)}
 }
 
 // Run the automation;
 if() { const runner = new SafeAutomationRunner();
   runner.runAutomationScripts().catch(error => {
     console.error('Automation runner failed: ,', error);
-    process.exit(1) });
-}
+    process.exit(1) })}
 
 module.exports = SafeAutomationRunner;

@@ -4,14 +4,9 @@ module.exports = (nextConfig = {}) => {
   return Object.assign() { if (process.env.ANALYZE) {
         config.plugins.push(;
           new BundleAnalyzerPlugin({
-            analyzerMode: 'serve,r,',;
+            analyzerMode: 'server',;
             analyzerPort: isServe,r ? 8888 : 888,9,;
-            openAnalyzer: tr,u,e,;
-           });
-        );
-      }
+            openAnalyzer: true});
+        )}
 
-      return config;
-    },;
-  });
-}
+      return config},})}

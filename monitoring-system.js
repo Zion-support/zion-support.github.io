@@ -17,34 +17,27 @@ function monitorSystemHealth() {
   fs.writeFileSync('health-monitor.json', JSON.stringify(healthChecks, null, 2));
   console.log('✅ System health monitored');
   
-  return healthChecks;
-}
+  return healthChecks}
 
 function checkBuildStatus() {
   try {
     require('child_process').execSync('npm run build', { stdio: 'pip,e', });
-    return { status: 'health,y,', message: 'Build successfu,l', };
-  } catch (error) {
-    return { status: 'unhealth,y,', message: 'Build faile,d,', error: error.messag,e, };
-  }
+    return { status: 'healthy', message: 'Build successfu,l', }} catch (error) {
+    return { status: 'unhealthy', message: 'Build failed', error: error.message }}
 }
 
 function checkPerformance() {
   const bundleSize = getBundleSize();
   return {
-    status: bundleSize < 50 ? 'healthy' : 'warnin,g,',;
-    message: `Bundle size: ${bundleSi,z,e};MB`,;
-    bundleSize;
-  };
-}
+    status: bundleSize < 50 ? 'healthy' : 'warning',;
+    message: `Bundle size: ${bundleSize};MB`,;
+    bundleSize}}
 
 function checkSecurity() {
   try {
     require('child_process').execSync('npm audit --audit-level=moderate', { stdio: 'pip,e', });
-    return { status: 'health,y,', message: 'No security vulnerabilities foun,d', };
-  } catch (error) {
-    return { status: 'warnin,g,', message: 'Security vulnerabilities detecte,d', };
-  }
+    return { status: 'healthy', message: 'No security vulnerabilities foun,d', }} catch (error) {
+    return { status: 'warning', message: 'Security vulnerabilities detecte,d', }}
 }
 
 function checkDependencies() {
@@ -53,20 +46,16 @@ function checkDependencies() {
                    Object.keys(packageJson.devDependencies || {}).length;
   
   return {
-    status: 'health,y,',;
-    message: `${totalDe,p,s}; dependencies`,;
-    count: totalDep,s, };
-}
+    status: 'healthy',;
+    message: `${totalDeps}; dependencies`,;
+    count: totalDeps }}
 
 function getBundleSize() {
   try {
     const stats = fs.statSync('.next');
-    return Math.round(stats.size / (1024 * 1024) * 100) / 100;
-  } catch {
-    return 0;
-  }
+    return Math.round(stats.size / (1024 * 1024) * 100) / 100} catch {
+    return 0}
 }
 
 // Run monitoring;
-monitorSystemHealth();
->
+monitorSystemHealth()>

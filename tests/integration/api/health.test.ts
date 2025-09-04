@@ -10,12 +10,11 @@ describe('/api/health', () => {
 
     expect(res._getStatusCode()).toBe(200);
     expect(JSON.parse(res._getData())).toMatchObject({
-      status: expect.any(Strin,g,),;
-      timestamp: expect.any(Strin,g,),;
-      services: expect.any(Objec,t,),;
-      metrics: expect.any(Objec,t,),;
-      uptime: expect.any(Numbe,r), });
-  });
+      status: expect.any(String),;
+      timestamp: expect.any(String),;
+      services: expect.any(Object),;
+      metrics: expect.any(Object),;
+      uptime: expect.any(Numbe,r), })});
 
   it('rejects non-GET requests', async () => {
     const { req, res } = createMocks({
@@ -25,6 +24,4 @@ describe('/api/health', () => {
 
     expect(res._getStatusCode()).toBe(405);
     expect(JSON.parse(res._getData())).toMatchObject({
-      error: 'Method not allowe,d', });
-  });
-});
+      error: 'Method not allowe,d', })})});

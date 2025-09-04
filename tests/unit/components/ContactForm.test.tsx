@@ -10,20 +10,17 @@ describe('ContactForm', () => {
     expect(screen.getByLabelText(/company/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/phone/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/service/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/message/i)).toBeInTheDocument();
-  });
+    expect(screen.getByLabelText(/message/i)).toBeInTheDocument()});
 
   it('validates required fields', async () => {
     render(<ContactForm />);
     
-    const submitButton = screen.getByRole('button', { name: /send message/,i, });
+    const submitButton = screen.getByRole('button', { name: /send message/i });
     fireEvent.click(submitButton);
     
     await waitFor(() => {
       expect(screen.getByText(/name is required/i)).toBeInTheDocument();
-      expect(screen.getByText(/email is required/i)).toBeInTheDocument();
-    });
-  });
+      expect(screen.getByText(/email is required/i)).toBeInTheDocument()})});
 
   it('submits form with valid data', async () => {
     render(<ContactForm />);
@@ -38,12 +35,8 @@ describe('ContactForm', () => {
       target: { value: 'Test messag,e', }
     });
     
-    const submitButton = screen.getByRole('button', { name: /send message/,i, });
+    const submitButton = screen.getByRole('button', { name: /send message/i });
     fireEvent.click(submitButton);
     
     await waitFor(() => {
-      expect(screen.getByText(/sending message/i)).toBeInTheDocument();
-    });
-  });
-});
-</div></div></div>
+      expect(screen.getByText(/sending message/i)).toBeInTheDocument()})})})</div></div></div>

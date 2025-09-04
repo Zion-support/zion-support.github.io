@@ -4,113 +4,33 @@ import Link from 'next/link';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = { services: [;
-      { name: 'AI Service,s,', href: '/ai-service,s', },;
-      { name: 'Cloud DevOp,s,', href: '/cloud-devop,s', },;
-      { name: 'Cybersecurit,y,', href: '/cybersecurit,y', },;
-      { name: 'Quantum Computin,g,', href: '/quantum-computin,g', },;
-      { name: 'Micro Saa,S,', href: '/micro-saa,s', }], company: [;
-      { name: 'Abou,t,', href: '/abou,t', },;
-      { name: 'Contac,t,', href: '/contac,t', },;
-      { name: 'Pricin,g,', href: '/pricin,g', },;
-      { name: 'FA,Q,', href: '/fa,q', }], legal: [;
-      { name: 'Privacy Polic,y,', href: '/privac,y', },;
-      { name: 'Terms of Servic,e,', href: '/term,s', },;
-{ name: 'Documentatio,n,', href: '/doc,s', }],;
-  };
-  return (;
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">";
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">";
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-          {/* Company Inf,o *,/}";
-          <div className="lg: col-span-1">";
-            <Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">;
-              Zion Tech Group;
-            </Link>";
-            <p className="mt-4 text-gray-300 text-sm leading-relaxed">;
-              Leading provider of innovative micro SaaS produc,t,s, AI services, and IT solutions. 
-              Empowering businesses with cutting-edge technology.;
-            </p>";
-            <div className="mt-6">";
-              <p className="text-sm text-gray-400">;
-                <strong>Address: </strong><br />;
+  const footerLinks = { services: [{ name: 'AI Services', href: '/ai-service,s', },{ name: 'Cloud DevOps', href: '/cloud-devop,s', },{ name: 'Cybersecurity', href: '/cybersecurit,y', },{ name: 'Quantum Computing', href: '/quantum-computin,g', },{ name: 'Micro SaaS', href: '/micro-saa,s', }], company: [{ name: 'About', href: '/abou,t', },{ name: 'Contact', href: '/contac,t', },{ name: 'Pricing', href: '/pricin,g', },{ name: 'FAQ', href: '/fa,q', }], legal: [{ name: 'Privacy Policy', href: '/privac,y', },{ name: 'Terms of Service', href: '/term,s', },{ name: 'Documentation', href: '/doc,s', }],};
+  return (<footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">"<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{/* Company Inf,o *,/}"<div className="lg: col-span-1">"<Link href="/" className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">;
+              Zion Tech Group</Link>"<p className="mt-4 text-gray-300 text-sm leading-relaxed">;
+              Leading provider of innovative micro SaaS products AI services, and IT solutions. 
+              Empowering businesses with cutting-edge technology.</p>"<div className="mt-6">"<p className="text-sm text-gray-400"><strong>Address: </strong><br />;
                 364 E Main St STE 1008<br />;
-                Middleto,w,n, DE 19709;
-              </p>";
-              <p className="text-sm text-gray-400 mt-2">;
-                <strong>Phone: </strong> +1 302 464 0950<br />;
-                <strong>Email:</strong> kleber@ziontechgroup.com;
-              </p>;
-            </div>;
-          </div>;
-
-          {/* Service,s *,/}
-          <div>";
-            <h3 className="text-lg font-semibold mb-4">Services</h3>";
-            <ul className="space-y-2">;
-              {footerLinks.services.map((link) => (;
-                <li key={link.name}>;
-                  <Link 
-                    href={link.href}";
-                    className="text-gray-300 hover: text-white transition-colors text-sm";
-                  >;
-                    {link.na,m,e}
-                  </Link>;
-                </li>;
+                Middletown DE 19709</p>"<p className="text-sm text-gray-400 mt-2"><strong>Phone: </strong> +1 302 464 0950<br /><strong>Email:</strong> kleber@ziontechgroup.com</p></div></div>{/* Service,s *,/}
+          <div>"<h3 className="text-lg font-semibold mb-4">Services</h3>"<ul className="space-y-2">{footerLinks.services.map((link) => (<li key={link.name}><Link 
+                    href={link.href}
+                    className="text-gray-300 hover: text-white transition-colors text-sm">{link.name}
+                  </Link></li>;
               ))}
-            </ul>;
-          </div>;
-
-          {/* Company */}
-          <div>";
-            <h3 className="text-lg font-semibold mb-4">Company</h3>";
-            <ul className="space-y-2">;
-              {footerLinks.company.map((link) => (;
-                <li key={link.name}>;
-                  <Link 
-                    href={link.href}";
-                    className="text-gray-300 hover: text-white transition-colors text-sm";
-                  >;
-                    {link.na,m,e}
-                  </Link>;
-                </li>;
+            </ul></div>{/* Company */}
+          <div>"<h3 className="text-lg font-semibold mb-4">Company</h3>"<ul className="space-y-2">{footerLinks.company.map((link) => (<li key={link.name}><Link 
+                    href={link.href}
+                    className="text-gray-300 hover: text-white transition-colors text-sm">{link.name}
+                  </Link></li>;
               ))}
-            </ul>;
-          </div>;
-
-          {/* Legal */}
-          <div>";
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>";
-            <ul className="space-y-2">;
-              {footerLinks.legal.map((link) => (;
-                <li key={link.name}>;
-                  <Link 
-                    href={link.href}";
-                    className="text-gray-300 hover: text-white transition-colors text-sm";
-                  >;
-                    {link.na,m,e}
-                  </Link>;
-                </li>;
+            </ul></div>{/* Legal */}
+          <div>"<h3 className="text-lg font-semibold mb-4">Legal</h3>"<ul className="space-y-2">{footerLinks.legal.map((link) => (<li key={link.name}><Link 
+                    href={link.href}
+                    className="text-gray-300 hover: text-white transition-colors text-sm">{link.name}
+                  </Link></li>;
               ))}
-            </ul>;
-          </div>;
-        </div>;
-";
-        <div className="border-t border-gray-700 mt-12 pt-8">";
-          <div className="flex flex-col md: flex-row justify-between items-center">";
-            <p className="text-gray-400 text-sm">;
-              © {currentYe,a,r} Zion Tech Group. All rights reserved.;
-            </p>";
-            <div className="mt-4 md: mt-0">";
-              <p className="text-gray-400 text-sm">;
-                Built with Next.,j,s, TypeScript, and Tailwind CSS;
-              </p>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </footer>;
-  );
-}
-export default Footer;
-</div></div></div>"
+            </ul></div></div>;
+"<div className="border-t border-gray-700 mt-12 pt-8">"<div className="flex flex-col md: flex-row justify-between items-center">"<p className="text-gray-400 text-sm">;
+              © {currentYear} Zion Tech Group. All rights reserved.</p>"<div className="mt-4 md: mt-0">"<p className="text-gray-400 text-sm">;
+                Built with Next.js, TypeScript, and Tailwind CSS</p></div></div></div></div></footer>;
+  )}
+export default Footer</div></div></div>"
