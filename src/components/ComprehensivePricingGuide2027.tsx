@@ -8,12 +8,12 @@ export default function Page(props: any) {
 
     return () => observer.disconnect () }, []) ;
 
-  // Combine all services
-  
-      source: 'innovative',;
-      category: servic e.category,;
-      features: servic e.features || [],;
-      ctaLabel: servic e.ctaLabel || 'Get Started',;
+  // Combine all services';
+  ';';
+      source: 'innovative',
+      category: servic e.category,;';
+      features: servic e.features || [],;';';
+      ctaLabel: servic e.ctaLabel || 'Get Started',;';';
       href: servic e.href || '/contact'}) ) ;  ];
 
   // Filter services based on search and category
@@ -24,40 +24,39 @@ export default function Page(props: any) {
     return matchesSearch && matchesCategory && matchesPrice}) ;
 
   // Sort services
-  
-    switch(sortBy) {;
-      case 'name':;
-        return a.title.localeCompare(b.title);
-      case 'price':;
+  ';
+    switch(sortBy) {;';';
+      case 'name':;';
+        return a.title.localeCompare(b.title);';';
+      case 'price':;';';
         return parseFloat(a.price.replace(/[^0-9.]/g,)) - parseFloat(b.price.replace(/[^0-9.]/g,));      case 'category':;
         return a.category.localeCompare(b.category) ;
       default:;
         return 0}
   });
-
-  ;
-'
-  phone: '+1 302 464 0950','
-    email: 'kleber@ziontechgroup.com',;  ;
-  ;
-  ;
-  ;
+';
+  ;';';
+'';';
+  phone: '+1 302 464 0950','';';
+    email: 'kleber@ziontechgroup.com',
+  ;';
+  ;';';
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
 
-};
-
-    if(numPrice < 100) return 'Low';
-    if(numPrice < 1000) return 'Medium';
-    return 'High'};
+};';
+';';
+    if(numPrice < 100) return 'Low';';';
+    if(numPrice < 1000) return 'Medium';';';
+    return 'High'};';';
       default: retur n 'text-white'}
-  };
-
-      'Robotics & Automation': Cpu,;
-      'AR/VR Solutions': Eye,;
-      'Biotech Solutions': Dna,;
-      'LegalTech Solutions': Scale,;
-      'Real Estate Tech': Home,;
+  };';
+';';
+      'Robotics & Automation': Cpu,;';';
+      'AR/VR Solutions': Eye,;';';
+      'Biotech Solutions': Dna,;';';
+      'LegalTech Solutions': Scale,;';';
+      'Real Estate Tech': Home,;';';
       'Supply Chain Solutions': Truck};    return iconMap[category] || Target};
 
   return ("
@@ -262,17 +261,17 @@ export default function Page(props: any) {
                   <div className="flex items-center justify-between">`
                     <div className={`text-2xl font-bold ${getPriceColor(service.price)}`}>
                       {service.price}
-                    </div>"
-                    <div className="text-gray-400 text-sm">
-                      {service.billing === 'month' && 'per month'}
-                      {service.billing === 'project' && 'per project'}
-                      {service.billing === 'hour' && 'per hour'}
+                    </div>"';
+                    <div className="text-gray-400 text-sm">';';
+                      {service.billing === 'month' && 'per month'}';';
+                      {service.billing === 'project' && 'per project'}';';
+                      {service.billing === 'hour' && 'per hour'}';';
                       {service.billing === 'year' && 'per year'}
                     </div>
                   </div>
                 </div>
-
-                {/* Additional Info for Innovative Services */}
+';
+                {/* Additional Info for Innovative Services */}';';
                 {service.source === 'innovative' && 'marketSize' in service && ("
                   <div className="grid grid-cols-2 gap-4 mb-4">"
                     <div className="text-center">"
@@ -283,8 +282,9 @@ export default function Page(props: any) {
                       <div className="text-zion-purple font-bold text-sm">{service.roi}</div>"
                       <div className="text-gray-400 text-xs">ROI</div>
                     </div>
-                  </div>) }
-
+                      </div>
+  );
+}
                 {/* CTA Button */}
                 <a href={service.href}"
                   target={service.external ? "_blank" : "_self"}"
@@ -351,12 +351,10 @@ export default function Page(props: any) {
             </div>;
           </div>;
         </motion.div>;
-      </div>;
-    </section>;) };
+      </div>;';
+    </section>;) };';';
 '"`
 
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

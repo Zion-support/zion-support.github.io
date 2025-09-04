@@ -184,8 +184,7 @@ export default function handler(req: NextApiReques t, res: NextApiRespons e) {
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>${changefreq}</changefreq>
       <priority>${priority}</priority>
-    </url>`;
-    })
+    </url>`})
     .join('')}
 </urlset>`;
 
@@ -193,5 +192,4 @@ export default function handler(req: NextApiReques t, res: NextApiRespons e) {
   'Content-Type', 'text/xml');
   res.setHeader(
   'Cache-Control', 'public, max-age=86400, s-maxage=86400');
-  res.status(200).send(sitemap);
-}
+  res.status(200).send(sitemap)}

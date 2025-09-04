@@ -5,7 +5,7 @@ export default function Page() {;
 );
       ;
       if(status) {;
-        query = query.eq("status", status);,
+        query = query.eq("status", status),
 }
       ;
       const { data, error: fetchError } = await query;
@@ -13,10 +13,8 @@ export default function Page() {;
       if(fetchError) throw fetchError;
       ;
       setJobs(data as Job[] || []); // Ensure data is not null;
-      setError(null);,
-} catch(err: unknown) {};
-} finally {};
-}
+      setError(null),
+} catch(err: unknown) {}} finally {}}
   }, [clientId, status]); // Dependencies for fetchJobs;
 
   const updateJobStatus = async(jobId: string, newStatus: JobStatus) => {};
@@ -30,9 +28,8 @@ export default function Page() {;
       ;
       setJobs(prevJobs => prevJobs.map(job => job.id === jobId ? {...job, status: newStatus} : job));
       toast.success("Job status updated successfully");
-      return true;,
-} catch(err: unknown) {};
-}
+      return true,
+} catch(err: unknown) {}}
   };
   ;
   const deleteJob = async(jobId: string) => {};
@@ -46,16 +43,13 @@ export default function Page() {;
       ;
       setJobs(prevJobs => prevJobs.filter(job => job.id !== jobId));
       toast.success("Job deleted successfully");
-      return true;,
-} catch(err: unknown) {};
-}
+      return true,
+} catch(err: unknown) {}}
   };
   ;
-  useEffect(() => {};
-}, []);
-    fetchJobs();,
+  useEffect(() => {}}, []);
+    fetchJobs(),
 }, [fetchJobs]); // Changed dependencies to just fetchJobs;
   ;
-  return {};
-};,
+  return {}},
 };

@@ -1,5 +1,5 @@
-import React from 'react';
-;
+import React from 'react';';
+;';';
 ;import {AlertCircle, RefreshCw} from 'lucide-react';
 export const ProfileErrorState = (props: any) => {}"
   return();    <div className = "max-w-4xl mx-auto px-4 py-8>""""
@@ -15,7 +15,7 @@ export const ProfileErrorState = (props: any) => {}"
         </CardHeader>"""""
         <CardContent className="text-center>""""
           <div className="space-y-4>"""
-            <p className="text-sm text-gray-500>;"
+            <p className="text-sm text-gray-500>"
               contact support if the problem persists."
   return()""
     <div className = "max-w-4xl mx-auto px-4 py-8">"""""
@@ -35,8 +35,8 @@ export const ProfileErrorState = (props: any) => {}"
 """""";";"
   )}&apos;&quot}&apos,
 &apos;&apos,&apos,&quot;"
-&quot;""
-  )}"";""
+&quot;""';
+  )}"";""';';
 }"";"'"
 
 </AlertCircle>
@@ -45,5 +45,5 @@ export const ProfileErrorState = (props: any) => {}"
 </p>
 </div>
 </CardContent>
-</Card>
-</div>
+</Card>';
+</div>;';;';

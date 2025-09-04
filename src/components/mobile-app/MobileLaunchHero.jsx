@@ -1,5 +1,5 @@
 export const MobileLaunchHero = (props: any) => {return (
-    <div className="py-16 bg-gradient-to-br from-blue-900 to-purple-900 text-white">
+    <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
           Zion Mobile App

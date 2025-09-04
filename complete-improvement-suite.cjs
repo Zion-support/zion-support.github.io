@@ -14,18 +14,15 @@ class CompleteImprovementSuite {
       syntaxErrors: { fixed: 0, failed: 0 },
       prsProcessed: { merged: 0, failed: 0 },
       improvements: { applied: 0, failed: 0 }
-    };
-  }
+    }}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   async runCommand(command, description, timeout = 60000) {
     this.log(`🚀 Starting: ${description}`);
@@ -36,11 +33,9 @@ class CompleteImprovementSuite {
         timeout: timeout
       });
       this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result };
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async resolveMergeConflicts() {
@@ -53,18 +48,15 @@ class CompleteImprovementSuite {
       for (const file of files) {
         if (this.hasMergeConflicts(file)) {
           if (this.resolveFileConflicts(file)) {
-            resolvedCount++;
-          }
+            resolvedCount++}
         }
       }
       
       this.results.mergeConflicts.resolved = resolvedCount;
       this.log(`✅ Resolved merge conflicts in ${resolvedCount} files`);
-      return resolvedCount;
-    } catch (error) {
+      return resolvedCount} catch (error) {
       this.log(`❌ Error resolving merge conflicts: ${error.message}`);
-      return 0;
-    }
+      return 0}
   }
 
   async fixSyntaxErrors() {
@@ -76,17 +68,14 @@ class CompleteImprovementSuite {
       
       for (const file of files.slice(0, 100)) { // Limit to first 100 files
         if (this.fixFileSyntax(file)) {
-          fixedCount++;
-        }
+          fixedCount++}
       }
       
       this.results.syntaxErrors.fixed = fixedCount;
       this.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-      return fixedCount;
-    } catch (error) {
+      return fixedCount} catch (error) {
       this.log(`❌ Error fixing syntax errors: ${error.message}`);
-      return 0;
-    }
+      return 0}
   }
 
   async applyImprovements() {
@@ -117,15 +106,12 @@ class CompleteImprovementSuite {
       try {
         improvement.action();
         appliedCount++;
-        this.log(`✅ Applied: ${improvement.name}`);
-      } catch (error) {
-        this.log(`❌ Failed to apply: ${improvement.name} - ${error.message}`);
-      }
+        this.log(`✅ Applied: ${improvement.name}`)} catch (error) {
+        this.log(`❌ Failed to apply: ${improvement.name} - ${error.message}`)}
     }
     
     this.results.improvements.applied = appliedCount;
-    return appliedCount;
-  }
+    return appliedCount}
 
   async commitAndPush() {
     this.log('🔧 Phase 4: Committing and Pushing Changes');
@@ -144,12 +130,10 @@ class CompleteImprovementSuite {
     for (const command of commands) {
       const result = await this.runCommand(command.cmd, command.desc);
       if (result.success) {
-        successCount++;
-      }
+        successCount++}
     }
     
-    return successCount === commands.length;
-  }
+    return successCount === commands.length}
 
   getAllFiles(dir, extensions) {
     let files = [];
@@ -161,27 +145,22 @@ class CompleteImprovementSuite {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
+          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath)}
       }
     } catch (error) {
       // Skip directories that can't be read
     }
     
-    return files;
-  }
+    return files}
 
   hasMergeConflicts(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return content.includes('<<<<<<< HEAD') || 
              content.includes('=======') || 
-             content.includes('>>>>>>> ');
-    } catch (error) {
-      return false;
-    }
+             content.includes('>>>>>>> ')} catch (error) {
+      return false}
   }
 
   resolveFileConflicts(filePath) {
@@ -200,14 +179,11 @@ class CompleteImprovementSuite {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(`✅ Resolved conflicts in: ${path.relative(this.projectRoot, filePath)}`);
-        return true;
-      }
+        return true}
       
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   fixFileSyntax(filePath) {
@@ -223,14 +199,11 @@ class CompleteImprovementSuite {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(`✅ Fixed syntax in: ${path.relative(this.projectRoot, filePath)}`);
-        return true;
-      }
+        return true}
       
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`❌ Error fixing syntax in ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   createPerformanceConfig() {
@@ -256,8 +229,7 @@ class CompleteImprovementSuite {
     fs.writeFileSync(
       path.join(this.projectRoot, 'performance-optimization.json'),
       JSON.stringify(config, null, 2)
-    );
-  }
+    )}
 
   createSecurityConfig() {
     const config = {
@@ -278,8 +250,7 @@ class CompleteImprovementSuite {
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-enhancement.json'),
       JSON.stringify(config, null, 2)
-    );
-  }
+    )}
 
   createMonitoringConfig() {
     const config = {
@@ -302,8 +273,7 @@ class CompleteImprovementSuite {
     fs.writeFileSync(
       path.join(this.projectRoot, 'monitoring-config.json'),
       JSON.stringify(config, null, 2)
-    );
-  }
+    )}
 
   createBuildOptimization() {
     const config = {
@@ -332,8 +302,7 @@ class CompleteImprovementSuite {
     fs.writeFileSync(
       path.join(this.projectRoot, 'build-optimization.json'),
       JSON.stringify(config, null, 2)
-    );
-  }
+    )}
 
   async run() {
     this.log('🎯 Starting Complete Improvement Suite');
@@ -372,8 +341,7 @@ class CompleteImprovementSuite {
     this.log(`   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`);
     this.log(`   - Syntax errors fixed: ${finalReport.summary.totalSyntaxErrorsFixed}`);
     this.log(`   - Improvements applied: ${finalReport.summary.totalImprovementsApplied}`);
-    this.log(`   - Push successful: ${finalReport.summary.pushSuccessful}`);
-  }
+    this.log(`   - Push successful: ${finalReport.summary.pushSuccessful}`)}
 }
 
 // Run the complete improvement suite

@@ -172,5 +172,5 @@ export const EnhancedLayout: Reac t.FC<EnhancedLayoutProps> = ({ children,"
 
 </script>
 </SEOOptimizer>
-</PerformanceOptimizer>
-</EnhancedLayoutProps>
+</PerformanceOptimizer>';
+</EnhancedLayoutProps>';';

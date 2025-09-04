@@ -3,11 +3,3 @@ const globalStats = [{icon: <Globe className="w-6 h-6"  />, value: "25+", label:
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

@@ -24,8 +24,7 @@ class AdvancedCache<T = any> {
       ...config
     }
     // Start cleanup interval
-    setInterval(() => this.cleanup(), this.config.cleanupInterval);
-  }
+    setInterval(() => this.cleanup(), this.config.cleanupInterval)}
 
   set(key: string, data: T, ttl?: number): void {
     const item: CacheItem<T> = {
@@ -36,43 +35,34 @@ class AdvancedCache<T = any> {
     // Remove oldest items if cache is full
     if (this.cache.size >= this.config.maxSize) {
       const firstKey = this.cache.keys().next().value;
-      this.cache.delete(firstKey);
-    }
+      this.cache.delete(firstKey)}
 
-    this.cache.set(key, item);
-  }
+    this.cache.set(key, item)}
 
   get(key: string): T | null {
     const item = this.cache.get(key);
     
     if (!item) {
-      return null;
-    }
+      return null}
 
     // Check if item has expired
     if (Date.now() - item.timestamp > item.ttl) {
       this.cache.delete(key);
-      return null;
-    }
+      return null}
 
-    return item.data;
-  }
+    return item.data}
 
   has(key: string): boolean {
-    return this.get(key) !== null;
-  }
+    return this.get(key) !== null}
 
   delete(key: string): boolean {
-    return this.cache.delete(key);
-  }
+    return this.cache.delete(key)}
 
   clear(): void {
-    this.cache.clear();
-  }
+    this.cache.clear()}
 
   size(): number {
-    return this.cache.size;
-  }
+    return this.cache.size}
 
   private cleanup(): void {
     const now = Date.now();
@@ -80,8 +70,7 @@ class AdvancedCache<T = any> {
   m
 ] of this.cache.entries()) {
       if (now - item.timestamp > item.ttl) {
-        this.cache.delete(key);
-      }
+        this.cache.delete(key)}
   // Get cache statistics
   getStats() {
     const now = Date.now();
@@ -90,10 +79,8 @@ class AdvancedCache<T = any> {
 
     for (const item of this.cache.values()) {
       if (now - item.timestamp > item.ttl) {
-        expired++;
-      } else {
-        active++;
-      }
+        expired++} else {
+        active++}
     return {
       total: 'this.cache.size',
       active,
@@ -122,20 +109,16 @@ export const useCache = <T>(key: string, fetcher: () => Promise<T>, ttl?: number
     try {
       const result = await fetcher();
       globalCache.set(key, result, ttl);
-      setData(result);
-    } catch (err) {
-      setError(err as Error);
-    } finally {
-      setLoading(false);
-    }
+      setData(result)} catch (err) {
+      setError(err as Error)} finally {
+      setLoading(false)}
   }, [key, fetcher, tt,
   l
 ]);
 
   React.useEffect(() => {
     if (!data && !loading) {
-      fetchData();
-    }
+      fetchData()}
   }, [data, loading, fetchDat,
   a
 ]);

@@ -9,15 +9,13 @@ class ComprehensiveTestSuite {
     this.projectRoot = process.cwd();
     this.testResults = [];
     this.errors = [];
-    this.logFile = path.join(this.projectRoot, 'test-suite-log.txt');
-  }
+    this.logFile = path.join(this.projectRoot, 'test-suite-log.txt')}
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
 
   async runCommand(command, description, timeout = 60000) {
     this.log(`🚀 ${description}`);
@@ -29,13 +27,11 @@ class ComprehensiveTestSuite {
       });
       this.testResults.push({ test: description, status: 'passed', output: result });
       this.log(`✅ ${description} passed`);
-      return { success: true, output: result };
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.testResults.push({ test: description, status: 'failed', error: error.message });
       this.errors.push({ test: description, error: error.message });
       this.log(`❌ ${description} failed: ${error.message}`);
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async testSyntaxValidation() {
@@ -48,8 +44,7 @@ class ComprehensiveTestSuite {
     ];
 
     for (const test of syntaxTests) {
-      await this.runCommand(test.command, test.description);
-    }
+      await this.runCommand(test.command, test.description)}
   }
 
   async testDependencies() {
@@ -61,8 +56,7 @@ class ComprehensiveTestSuite {
     ];
 
     for (const test of dependencyTests) {
-      await this.runCommand(test.command, test.description);
-    }
+      await this.runCommand(test.command, test.description)}
   }
 
   async testBuildProcess() {
@@ -74,8 +68,7 @@ class ComprehensiveTestSuite {
     ];
 
     for (const test of buildTests) {
-      await this.runCommand(test.command, test.description, test.timeout);
-    }
+      await this.runCommand(test.command, test.description, test.timeout)}
   }
 
   async testLinting() {
@@ -86,8 +79,7 @@ class ComprehensiveTestSuite {
     ];
 
     for (const test of lintTests) {
-      await this.runCommand(test.command, test.description);
-    }
+      await this.runCommand(test.command, test.description)}
   }
 
   async testAutomationScripts() {
@@ -100,8 +92,7 @@ class ComprehensiveTestSuite {
     ];
 
     for (const test of automationTests) {
-      await this.runCommand(test.command, test.description);
-    }
+      await this.runCommand(test.command, test.description)}
   }
 
   async testFileIntegrity() {
@@ -120,12 +111,10 @@ class ComprehensiveTestSuite {
       const filePath = path.join(this.projectRoot, file);
       if (fs.existsSync(filePath)) {
         this.testResults.push({ test: `File exists: ${file}`, status: 'passed' });
-        this.log(`✅ File exists: ${file}`);
-      } else {
+        this.log(`✅ File exists: ${file}`)} else {
         this.testResults.push({ test: `File exists: ${file}`, status: 'failed' });
         this.errors.push({ test: `File exists: ${file}`, error: 'File not found' });
-        this.log(`❌ File missing: ${file}`);
-      }
+        this.log(`❌ File missing: ${file}`)}
     }
   }
 
@@ -148,8 +137,7 @@ class ComprehensiveTestSuite {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Test report saved to ${reportPath}`);
     
-    return report;
-  }
+    return report}
 
   async run() {
     this.log('🚀 Starting Comprehensive Test Suite');
@@ -167,17 +155,14 @@ class ComprehensiveTestSuite {
     this.log(`📊 Results: ${report.summary.passedTests}/${report.summary.totalTests} tests passed (${report.summary.successRate})`);
     
     if (report.summary.failedTests > 0) {
-      this.log(`❌ ${report.summary.failedTests} tests failed`);
-    }
+      this.log(`❌ ${report.summary.failedTests} tests failed`)}
     
-    return report;
-  }
+    return report}
 }
 
 // Run the test suite if this file is executed directly
 if (require.main === module) {
   const testSuite = new ComprehensiveTestSuite();
-  testSuite.run().catch(console.error);
-}
+  testSuite.run().catch(console.error)}
 
 module.exports = ComprehensiveTestSuite;

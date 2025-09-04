@@ -38,7 +38,7 @@ class AIHealthMonitor {
     // Start AI analysis
     this.startAIAnalysis();
     
-    console.log('✅ AI Health Monitor started successfully');}
+    console.log('✅ AI Health Monitor started successfully')}
 
   async initializeMonitoring() {
     try {
@@ -51,7 +51,7 @@ class AIHealthMonitor {
       // Setup alert handlers
       this.setupAlertHandlers();
       
-      console.log('📊 Monitoring initialized');} catch (error) {
+      console.log('📊 Monitoring initialized')} catch (error) {
       console.error('❌ Failed to initialize monitoring:', error)}
   }
 
@@ -68,14 +68,14 @@ class AIHealthMonitor {
       processes: await this.getProcessMetrics(),
       network: await this.getNetworkMetrics(),
       disk: await this.getDiskMetrics()
-   ; ;};
+   };
 
     this.metrics.system = metrics;
     await this.saveMetrics(metrics)}
 
   async getProcessMetrics() {
     try {
-      const pm2List = execSync('pm2 jlist', { encoding: 'utf8' ;};);
+      const pm2List = execSync('pm2 jlist', { encoding: 'utf8' };);
       const processes = JSON.parse(pm2List;);
       
       return processes.map(proc => ({;
@@ -88,13 +88,13 @@ class AIHealthMonitor {
         restarts: proc.pm2_env.restart_time
       }))} catch (error) {
       console.error('Error getting process metrics:', error);
-      return [];}
+      return []}
   }
 
   async getNetworkMetrics() {
     try {
       const networkInterfaces = os.networkInterfaces(;);
-      const metrics = ;{;};
+      const metrics = ;{};
       
       for (const [name, interfaces] of Object.entries(networkInterfaces)) {
         metrics[name] = interfaces.map(iface => ({
@@ -103,14 +103,14 @@ class AIHealthMonitor {
           internal: iface.internal
         }))}
       
-      return metrics;} catch (error) {
+      return metrics} catch (error) {
       console.error('Error getting network metrics:', error);
-      return {;}}
+      return {}}
   }
 
   async getDiskMetrics() {
     try {
-      const diskUsage = execSync('df -h', { encoding: 'utf8' ;};);
+      const diskUsage = execSync('df -h', { encoding: 'utf8' };);
       const lines = diskUsage.split('\n').slice(1;);
       
       return lines.map(line => {;
@@ -124,14 +124,13 @@ class AIHealthMonitor {
           mounted: parts[5]
         }}).filter(disk => disk.filesystem)} catch (error) {
       console.error('Error getting disk metrics:', error);
-      return [];}
+      return []}
   }
 
   startContinuousMonitoring() {
     setInterval(async () => {
       if (return) {
-    return;
-  }
+    return}
       
       try {
         await this.collectMetrics();
@@ -169,8 +168,7 @@ class AIHealthMonitor {
     })}
 
   async getCPUUsage() {
-    return new Promise((resolve) => {;
-  }
+    return new Promise((resolve) => {}
       const startMeasure = process.cpuUsage(;);
       setTimeout(() => {
         const endMeasure = process.cpuUsage(startMeasure;);
@@ -201,20 +199,19 @@ class AIHealthMonitor {
       anomalies: await this.detectAnomalies(),
       predictions: await this.predictIssues(),
       recommendations: await this.generateRecommendations()
-   ; ;};
+   };
 
     await this.saveAnalysis(analysis);
-    return analysis;}
+    return analysis}
 
   async analyzeTrends() {
-    const trends = ;{;};
+    const trends = ;{};
     
     // CPU trend analysis
     if ( {
       const recentCPU = this.metrics.cpu.slice(-5).map(m => m.usage) {
      {
-      const recentCPU = this.metrics.cpu.slice(-5).map(m => m.usage;
-  });
+      const recentCPU = this.metrics.cpu.slice(-5).map(m => m.usage});
       const avgCPU = recentCPU.reduce((a, b) => a + b, 0) / recentCPU.lengt;h;
       trends.cpu = {
         average: avgCPU,
@@ -226,8 +223,7 @@ class AIHealthMonitor {
     if ( {
       const recentMemory = this.metrics.memory.slice(-5).map(m => m.usagePercent) {
      {
-      const recentMemory = this.metrics.memory.slice(-5).map(m => m.usagePercent;
-  });
+      const recentMemory = this.metrics.memory.slice(-5).map(m => m.usagePercent});
       const avgMemory = recentMemory.reduce((a, b) => a + b, 0) / recentMemory.lengt;h;
       trends.memory = {
         average: avgMemory,
@@ -235,34 +231,30 @@ class AIHealthMonitor {
         status: avgMemory > this.thresholds.memory ? 'warning' : 'normal'
       }}
     
-    return trends;}
+    return trends}
 
   calculateTrend(values) {
     if (return 'stable) {
-    return 'stable;
-  }';
+    return 'stable}';
     
-    const first = values[0;];
-    const last = values[values.length - 1;];
+    const first = values[0];
+    const last = values[values.length - 1];
     const change = ((last - first) / first) * 1;0;0;
     
     if (return 'increasing) {
-    return 'increasing;
-  }';
+    return 'increasing}';
     if (return 'decreasing) {
-    return 'decreasing;
-  }';
-    return 'stable';}
+    return 'decreasing}';
+    return 'stable'}
 
   async detectAnomalies() {
-    const anomalies = [;];
+    const anomalies = [];
     
     // Detect CPU spikes
     if ( {
       const recentCPU = this.metrics.cpu.slice(-3).map(m => m.usage) {
      {
-      const recentCPU = this.metrics.cpu.slice(-3).map(m => m.usage;
-  });
+      const recentCPU = this.metrics.cpu.slice(-3).map(m => m.usage});
       const avgCPU = recentCPU.reduce((a, b) => a + b, 0) / recentCPU.lengt;h;
       
       if ( {
@@ -290,8 +282,7 @@ class AIHealthMonitor {
     
     // Detect memory leaks
     if (this.metrics.memory.length > 10) {
-      const memoryValues = this.metrics.memory.slice(-10).map(m => m.usagePercent;
-  });
+      const memoryValues = this.metrics.memory.slice(-10).map(m => m.usagePercent});
       const trend = this.calculateTrend(memoryValues;);
       
       if ( {
@@ -315,18 +306,16 @@ class AIHealthMonitor {
         })}
     }
     
-    return anomalies;
-  }}
+    return anomalies}}
 
   async predictIssues() {
-    const predictions = [;];
+    const predictions = [];
     
     // Predict potential crashes based on memory trend
     if ( {
       const memoryTrend = this.analyzeTrends().memor) {
      {
-      const memoryTrend = this.analyzeTrends().memor;
-  }y;
+      const memoryTrend = this.analyzeTrends().memor}y;
       if ( {
         predictions.push({
           type: 'potential_crash',
@@ -346,11 +335,10 @@ class AIHealthMonitor {
         })}
     }
     
-    return predictions;
-  }}
+    return predictions}}
 
   async generateRecommendations() {
-    const recommendations = [;];
+    const recommendations = [];
     const trends = await this.analyzeTrends(;);
     
     // CPU recommendations
@@ -389,14 +377,13 @@ class AIHealthMonitor {
         impact: 'Prevent memory leaks and improve stability'
       })}
     
-    return recommendations;
-  }}
+    return recommendations}}
 
   async checkThresholds() {
     const currentMetrics = {
       cpu: this.metrics.cpu[this.metrics.cpu.length - 1]?.usage || 0,
       memory: this.metrics.memory[this.metrics.memory.length - 1]?.usagePercent || 0
-   ; ;};
+   };
     
     // Check CPU threshold
     if ( {
@@ -444,8 +431,7 @@ class AIHealthMonitor {
       timestamp: new Date().toISOString(),
       data,
       resolved: false
-   ;
-  } ;};
+   } };
     
     this.alerts.push(alert);
     
@@ -455,7 +441,7 @@ class AIHealthMonitor {
     // Save alert
     await this.saveAlert(alert);
     
-    console.log(`🚨 Alert triggered: ${type}`, data);}
+    console.log(`🚨 Alert triggered: ${type}`, data)}
 
   async executeRecoveryAction(type, data) {
     try {
@@ -467,7 +453,7 @@ class AIHealthMonitor {
           await this.optimizeMemory();
           break;
         default:
-          console.log(`No recovery action defined for ${type}`);}
+          console.log(`No recovery action defined for ${type}`)}
     } catch (error) {
       console.error(`Failed to execute recovery action for ${type}:`, error)}
   }
@@ -482,7 +468,7 @@ class AIHealthMonitor {
       
       for (const proc of highCPUProcesses) {
         execSync(`pm2 restart ${proc.name}`, { stdio: 'pipe' });
-        console.log(`Restarted ${proc.name} due to high CPU usage`);}
+        console.log(`Restarted ${proc.name} due to high CPU usage`)}
     } catch (error) {
       console.error('Error optimizing CPU:', error)}
   }
@@ -494,9 +480,8 @@ class AIHealthMonitor {
     if ( {
       global.gc()) {
      {
-      global.gc();
-  }
-      console.log('Forced garbage collection');}
+      global.gc()}
+      console.log('Forced garbage collection')}
     
     // Restart processes with high memory usage
     try {
@@ -505,7 +490,7 @@ class AIHealthMonitor {
       
       for (const proc of highMemoryProcesses) {
         execSync(`pm2 restart ${proc.name}`, { stdio: 'pipe' });
-        console.log(`Restarted ${proc.name} due to high memory usage`);}
+        console.log(`Restarted ${proc.name} due to high memory usage`)}
     } catch (error) {
       console.error('Error optimizing memory:', error)}
   }
@@ -538,7 +523,7 @@ class AIHealthMonitor {
   async saveAlert(alert) {
     try {
       const filename = `./logs/health-alerts-${new Date().toISOString().split('T')[0]}.json;`;
-      let alerts = [;];
+      let alerts = [];
       
       try {
         const existing = await fs.readFile(filename, 'utf8';);
@@ -554,8 +539,7 @@ class AIHealthMonitor {
   startAIAnalysis() {
     setInterval(async () => {
       if (return) {
-    return;
-  }
+    return}
       
       try {
         const analysis = await this.analyzeMetrics(;);

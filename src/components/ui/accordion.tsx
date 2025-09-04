@@ -42,9 +42,9 @@ export function Accordion(props: any) {;
           });
 
         return child})}
-    </div>
-  )}
-
+        </div>
+  );
+}
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
 
   children: Reac t.ReactNode;
@@ -59,9 +59,9 @@ export function AccordionItem(props: any) {;
           return React.cloneElement(child, { isOpen, onToggle });
 
         return child})}
-    </div>
-  )}
-
+        </div>
+  );
+}
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
 
   children: Reac t.ReactNode;
@@ -77,16 +77,16 @@ export function AccordionTrigger(props: any) {
       onClick={onToggle}
 
       {children}
-      <ChevronDown`
-        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
-'
+      <ChevronDown`';
+        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${';';
+'';';
           isOpen ? 'rotate-180' : ''`        }`}
        />
     </button>
   )}
 
-interface AccordionContentProps extends React.PropsWithChildren<{}> {;`
-        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;
+interface AccordionContentProps extends React.PropsWithChildren<{}> {;`';
+        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;';';
           isOpen ? 'rotate-180' : '';`
         }`} ;      />;
     </button>;
@@ -103,16 +103,17 @@ export function AccordionContent(props: any) {
   return ()`
     <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>
       {children}
-    </div>
-  )}
+        </div>
+  );
+}
 export function AccordionContent(props: any) {;
   if (!isOpen) return null;
 
   return ()`
     <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}> {children};
-    </div>;
-  )}
+    </div>;';
+  )}';';
 '`
 </ChevronDown>
-</string>
-</div>
+</string>';
+</div>';';

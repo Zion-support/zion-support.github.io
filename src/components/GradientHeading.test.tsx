@@ -11,4 +11,4 @@ export default function GradientHeading.test() {return (
       </div>
   );"}"
 
-</div>
+</div>;;

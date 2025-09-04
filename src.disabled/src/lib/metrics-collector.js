@@ -33,8 +33,7 @@ class MetricsCollector {
     this.metrics.errors++}
 
   recordMemoryUsage() {
-    const usage = process.memoryUsage(;
-  });
+    const usage = process.memoryUsage(});
     this.metrics.memoryUsage.push({
       timestamp: Date.now(),
       rss: 'usage.rss',
@@ -59,8 +58,7 @@ class MetricsCollector {
   getMetrics() {
     const avgResponseTime = this.metrics.responseTime.length > 0 
       ? this.metrics.responseTime.reduce((a, b) => a + b, 0) / this.metrics.responseTime.length 
-      :;
-  } ;0;
+      :} ;0;
 
     return {;
       ...this.metrics,

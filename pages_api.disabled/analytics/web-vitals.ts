@@ -8,8 +8,7 @@ interface WebVitalsData {
   delta: number;
   timestamp: number;
   url: string;
-  userAgent: string;
-}
+  userAgent: string}
 
 export default async function handler(
   req: NextApiReques t, res: NextApiRespons e
@@ -40,9 +39,7 @@ export default async function handler(
     res.status(200).json({ 
       success: tru e, message: 'Web vitals data received',
       metric: dat a.name, value: dat a.value 
-    });
-
-  } catch (error) {
+    })} catch (error) {
     console.error(
   'Error processing web vitals:, '
   , error);

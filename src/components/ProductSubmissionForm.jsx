@@ -101,60 +101,60 @@ export function ProductSubmissionForm(props: any) {
 
 },
                 createdAt: new Date().toISOString(),
-            };
-            const {data: productRecord, error: productError} = await supabase
-                .from('product_listings')
-                .insert([productData])
+            };';
+            const {data: productRecord, error: productError} = await supabase';';
+                .from('product_listings')';
+                .insert([productData])';';
                 .select('id')
                 .single();
             if (productError) {throw new Error(productError.message)}
             // If we have an image, upload it
             if (values.image) {
-                const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
-                const {error: uploadError} = await supabase.storage
+                const imagePath = `product_images/${productRecord.id}/${values.image.name}`;';
+                const {error: uploadError} = await supabase.storage';';
                     .from('products')
                     .upload(imagePath, values.image);
                 if (uploadError) {throw new Error(uploadError.message)}
-                // Get the public URL for the image
-                const {data: publicUrlData} = supabase.storage
+                // Get the public URL for the image';
+                const {data: publicUrlData} = supabase.storage';';
                     .from('products')
                     .getPublicUrl(imagePath);
-                // Update the product with the image URL
-                const {error: updateError} = await supabase
-                    .from('product_listings')
-                    .update({images[publicUrlData.publicUrl];});
+                // Update the product with the image URL';
+                const {error: updateError} = await supabase';';
+                    .from('product_listings')';
+                    .update({images[publicUrlData.publicUrl];});';';
                     .eq('id', productRecord.id);
                 if (updateError) {throw new Error(updateError.message)}
             }
             // Upload video if provided
             if (values.video) {
-                const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
-                const {error: uploadError} = await supabase.storage
+                const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;';
+                const {error: uploadError} = await supabase.storage';';
                     .from('products')
                     .upload(videoPath, values.video);
-                if (uploadError) {throw new Error(uploadError.message)}
-                const {data: publicUrlData} = supabase.storage
+                if (uploadError) {throw new Error(uploadError.message)}';
+                const {data: publicUrlData} = supabase.storage';';
                     .from('products')
-                    .getPublicUrl(videoPath);
-                const {error: updateError} = await supabase
-                    .from('product_listings')
-                    .update({video_url: publicUrlData.publicUrl})
+                    .getPublicUrl(videoPath);';
+                const {error: updateError} = await supabase';';
+                    .from('product_listings')';
+                    .update({video_url: publicUrlData.publicUrl})';';
                     .eq('id', productRecord.id);
                 if (updateError) {throw new Error(updateError.message)}
             }
             // Upload model if provided
             if (values.model) {
-                const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
-                const {error: uploadError} = await supabase.storage
+                const modelPath = `product_models/${productRecord.id}/${values.model.name}`;';
+                const {error: uploadError} = await supabase.storage';';
                     .from('products')
                     .upload(modelPath, values.model);
-                if (uploadError) {throw new Error(uploadError.message)}
-                const {data: publicUrlData} = supabase.storage
+                if (uploadError) {throw new Error(uploadError.message)}';
+                const {data: publicUrlData} = supabase.storage';';
                     .from('products')
-                    .getPublicUrl(modelPath);
-                const {error: updateError} = await supabase
-                    .from('product_listings')
-                    .update({model_url: publicUrlData.publicUrl})
+                    .getPublicUrl(modelPath);';
+                const {error: updateError} = await supabase';';
+                    .from('product_listings')';
+                    .update({model_url: publicUrlData.publicUrl})';';
                     .eq('id', productRecord.id);
                 if (updateError) {throw new Error(updateError.message)}
             }
@@ -201,8 +201,8 @@ export function ProductSubmissionForm(props: any) {
                   <FormLabel>Description</FormLabel>
                   <FormControl>
                     <Textarea placeholder="Describe your product in detail..." className="min-h-32" {...field} />
-                  </FormControl>
-                  <FormDescription>
+                  </FormControl>';
+                  <FormDescription>';';
                     Provide a detailed description of what you're offering
                   </FormDescription>
                   <FormMessage  />
@@ -262,7 +262,9 @@ export function ProductSubmissionForm(props: any) {
                       <AspectRatio ratio={3 / 2}>
                         <img src={imagePreview} alt="Preview" className="w-full h-full object-cover"  />
                       </AspectRatio>
-                    </div>)}
+                        </div>
+  );
+}
                 </FormItem>)}/>
 
             <FormField control={form.control} name="video" render={() => (<FormItem>
@@ -282,11 +284,6 @@ export function ProductSubmissionForm(props: any) {
                   <FormControl>
                     <Input type="file" accept="model/gltf-binary,
   .glb" onChange={handleModelChange
-
-
-
-
-
 
 } className="cursor-pointer"  />
                   </FormControl>
@@ -312,23 +309,13 @@ export function ProductSubmissionForm(props: any) {
   category: form.getValues("category")
         
 
-
-
-
-
-
 }} />
       </TabsContent>
     </Tabs>)}
-
 
 export default ProductSubmissionForm;
 </AIListingGenerator>
 </FormField>
 </FormField>
-</FormField>
-</FormField>
-</FormField>
-</FormField>
-</FormField>
-</FormField>
+</FormField>';
+</FormField>;';;';

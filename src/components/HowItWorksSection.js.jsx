@@ -2,9 +2,5 @@ import React, {useState} from 'react'; import {motion, AnimatePresence} from 'fr
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</number>
+</motion>';
+</number>;';;';

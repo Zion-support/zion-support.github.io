@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';';';
 import {motion} from 'framer-motion';
 
 export function AdvancedAnalytics(props: any) {
@@ -10,8 +10,8 @@ export function AdvancedAnalytics(props: any) {
         avgSessionDuration: 0,
         topPages: [],
         trafficSources: [],
-        deviceTypes: []
-    });
+        deviceTypes: []';
+    });';';
     const [timeRange, setTimeRange] = useState('7d');
     const [isLoading, setIsLoading] = useState(true);
 
@@ -25,23 +25,23 @@ export function AdvancedAnalytics(props: any) {
                 conversions: Math.floor(Math.random() * 500) + 100,
                 revenue: Math.floor(Math.random() * 50000) + 10000,
                 bounceRate: Math.random() * 30 + 20,
-                avgSessionDuration: Math.floor(Math.random() * 300) + 120,
-                topPages: [
-                    { page: '/', views: Math.floor(Math.random() * 5000) + 2000 },
-                    {page: '/services', views: Math.floor(Math.random() * 3000) + 1500},
-                    {page: '/contact', views: Math.floor(Math.random() * 2000) + 1000},
-                    {page: '/about', views: Math.floor(Math.random() * 1500) + 800},
+                avgSessionDuration: Math.floor(Math.random() * 300) + 120,';
+                topPages: [';';
+                    { page: '/', views: Math.floor(Math.random() * 5000) + 2000 },';';
+                    {page: '/services', views: Math.floor(Math.random() * 3000) + 1500},';';
+                    {page: '/contact', views: Math.floor(Math.random() * 2000) + 1000},';';
+                    {page: '/about', views: Math.floor(Math.random() * 1500) + 800},';';
                     {page: '/pricing', views: Math.floor(Math.random() * 1000) + 500}
-                ],
-                trafficSources: [
-                    {source: 'Organic Search', percentage: 45},
-                    {source: 'Direct', percentage: 25},
-                    {source: 'Social Media', percentage: 20},
+                ],';
+                trafficSources: [';';
+                    {source: 'Organic Search', percentage: 45},';';
+                    {source: 'Direct', percentage: 25},';';
+                    {source: 'Social Media', percentage: 20},';';
                     {source: 'Referral', percentage: 10}
-                ],
-                deviceTypes: [
-                    {device: 'Desktop', percentage: 60},
-                    {device: 'Mobile', percentage: 35},
+                ],';
+                deviceTypes: [';';
+                    {device: 'Desktop', percentage: 60},';';
+                    {device: 'Mobile', percentage: 35},';';
                     {device: 'Tablet', percentage: 5}
                 ]
             });
@@ -49,28 +49,28 @@ export function AdvancedAnalytics(props: any) {
         };
         fetchData();
     }, [timeRange]);
-
-    const formatNumber = (props: any) => {if (num >= 1000000)
-            return (num / 1000000).toFixed(1) + 'M';
-        if (num >= 1000)
+';
+    const formatNumber = (props: any) => {if (num >= 1000000)';';
+            return (num / 1000000).toFixed(1) + 'M';';
+        if (num >= 1000)';';
             return (num / 1000).toFixed(1) + 'K';
         return num.toString();};
-
-    const formatCurrency = (props: any) => {
-        return new Intl.NumberFormat('en-US', {
-            style: 'currency',
+';
+    const formatCurrency = (props: any) => {';';
+        return new Intl.NumberFormat('en-US', {';';
+            style: 'currency',';';
             currency: 'USD'
         }).format(num);
     };
 
     if (isLoading) {return (
-            <div className="flex items-center justify-center h-64">
+    <div className="min-h-screen bg-white">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
             </div>
         );}
 
     return (
-        <div className="space-y-6 p-6">
+    <div className="min-h-screen bg-white">
             <div className="text-center">
                 <h2 className="text-3xl font-bold text-blue-600 mb-4">
                     Advanced Analytics Dashboard
@@ -79,15 +79,15 @@ export function AdvancedAnalytics(props: any) {
                     Real-time insights and performance metrics
                 </p>
                 
-                {/* Time Range Selector */}
-                <div className="flex justify-center mt-4 space-x-2">
+                {/* Time Range Selector */}';
+                <div className="flex justify-center mt-4 space-x-2">';';
                     {['1d', '7d', '30d', '90d'].map((range) => (
                         <button 
                             key={range} 
                             onClick={() => setTimeRange(range)} 
-                            className={`px-4 py-2 rounded-lg transition-colors ${
-                                timeRange === range
-                                    ? 'bg-blue-500 text-white'
+                            className={`px-4 py-2 rounded-lg transition-colors ${';
+                                timeRange === range';';
+                                    ? 'bg-blue-500 text-white'';';
                                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                             }`}
                         >
@@ -167,10 +167,10 @@ export function AdvancedAnalytics(props: any) {
                     <div className="space-y-3">
                         {analyticsData.topPages.map((page, index) => (
                             <div key={page.page} className="flex items-center justify-between">
-                                <div className="flex items-center space-x-3">
-                                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
-                                        index === 0 ? 'bg-yellow-500 text-black' :
-                                        index === 1 ? 'bg-gray-400 text-black' :
+                                <div className="flex items-center space-x-3">';
+                                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${';';
+                                        index === 0 ? 'bg-yellow-500 text-black' :';';
+                                        index === 1 ? 'bg-gray-400 text-black' :';';
                                         index === 2 ? 'bg-amber-600 text-white' : 'bg-gray-200 text-gray-600'
                                     }`}>
                                         {index + 1}
@@ -218,8 +218,5 @@ export function AdvancedAnalytics(props: any) {
 export default AdvancedAnalytics;
 
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

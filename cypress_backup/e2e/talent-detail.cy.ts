@@ -12,6 +12,4 @@ describe('talent detail page', () => {
 
     cy.visit('/talent/t-123');
     cy.wait('@getTalent');
-    cy.get('[data-testid="talent-name"]').should('contain', 'Cypress Talent');
-  });
-});
+    cy.get('[data-testid="talent-name"]').should('contain', 'Cypress Talent')})});

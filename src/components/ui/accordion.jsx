@@ -31,6 +31,5 @@ export {AccordionItem, AccordionTrigger, AccordionContent};
 
 export {AccordionItem, AccordionTrigger, AccordionContent};
 
-</AccordionPrimitive>
-</AccordionPrimitive>
-</AccordionPrimitive>
+</AccordionPrimitive>';
+</AccordionPrimitive>;';;';

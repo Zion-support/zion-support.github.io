@@ -2,5 +2,5 @@ import React from 'react'; " import { Brain, Zap, Shield, Globe, Rocket, Star, A
 
 </h2>
 </motion>
-</div>
-</section>
+</div>';
+</section>;';;';

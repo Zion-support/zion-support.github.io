@@ -8,6 +8,6 @@ describe('Example Test Suite', () => {
     expect(str.toLowerCase()).toBe('hello world')});
   
   it('should handle array operations', () => {
-    const arr = [1, 2, 3;];
+    const arr = [1, 2, 3];
     expect(arr.length).toBe(3);
     expect(arr.includes(2)).toBe(true)})});

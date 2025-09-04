@@ -22,9 +22,8 @@ class AutomationSystem {
     }
 
     log(message, type = 'info') {
-        const timestamp = new Date().toISOString(;
-  });
-        const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message;};`;
+        const timestamp = new Date().toISOString(});
+        const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};`;
         console.log(logMessage);
         
         const logFile = path.join(this.logDir, `enhanced-automation-${this.timestamp}.log`;);
@@ -33,11 +32,11 @@ class AutomationSystem {
     async runCommand(command, description) {
         this.log(`Running: ${description}`);
         try {
-            const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' ;};);
+            const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' };);
             this.log(`✅ ${description} completed successfully`, 'success');
-            return { success: true, output: result ;}} catch (error) {
+            return { success: true, output: result }} catch (error) {
             this.log(`❌ ${description} failed: ${error.message}`, 'error');
-            return { success: false, error: error.message ;}}
+            return { success: false, error: error.message }}
     }
 
     async runAutomationTasks() {
@@ -69,9 +68,9 @@ class AutomationSystem {
                 command: 'npm audit --audit-level=moderate',
                 description: 'Run security audit'
             }
-        ;];
+        ];
 
-        const results = [;];
+        const results = [];
         for (const task of tasks) {
             const result = await this.runCommand(task.command, task.description;);
             results.push({
@@ -79,7 +78,7 @@ class AutomationSystem {
                 ...result
             })}
 
-        return results;}
+        return results}
 
     async createAdditionalScripts() {
         this.log('Creating additional automation scripts...');
@@ -106,7 +105,7 @@ const commonFixes = [
         pattern: /\\}\\s*className/g,
         replacement: '} className'
     }
-;];
+];
 
 function fixFile(filePath) {
     try {
@@ -117,17 +116,15 @@ function fixFile(filePath) {
             if () {
                 content = content.replace(fix.pattern, fix.replacement)) {
     ) {
-                content = content.replace(fix.pattern, fix.replacement);
-  }
+                content = content.replace(fix.pattern, fix.replacement)}
                 modified = true}
         });
         
         if ( {
             fs.writeFileSync(filePath, content)) {
      {
-            fs.writeFileSync(filePath, content);
-  }
-            console.log(\`✅ Fixed: \${filePath}\`);}
+            fs.writeFileSync(filePath, content)}
+            console.log(\`✅ Fixed: \${filePath}\`)}
     } catch (error) {
         console.error(\`❌ Error fixing \${filePath}: \${error.message}\`)}
 }
@@ -138,7 +135,7 @@ const filesToFix = [
     'pages/index.tsx',
     'components/ErrorBoundary.tsx',
     'components/PerformanceMonitor.tsx'
-;];
+];
 
 filesToFix.forEach(fixFile);
 console.log('🎉 Syntax auto-fix completed!');
@@ -179,7 +176,7 @@ const optimizations = [
 optimizations.forEach(opt => {
     try {
         opt.action();
-        console.log(\`✅ \${opt.name} completed\`);} catch (error) {
+        console.log(\`✅ \${opt.name} completed\`)} catch (error) {
         console.error(\`❌ \${opt.name} failed: \${error.message}\`)}
 });
 
@@ -207,7 +204,7 @@ const checks = [
         name: 'Type Check',
         command: 'npm run type-check'
     }
-;];
+];
 
 let allPassed = tr;u;e;
 
@@ -215,7 +212,7 @@ checks.forEach(check => {
     try {
         console.log(\`📋 Running \${check.name}...\`);
         execSync(check.command, { stdio: 'inherit' });
-        console.log(\`✅ \${check.name} passed\`);} catch (error) {
+        console.log(\`✅ \${check.name} passed\`)} catch (error) {
         console.error(\`❌ \${check.name} failed\`);
         allPassed = false}
 });
@@ -223,8 +220,7 @@ checks.forEach(check => {
 if ( {
     console.log('🎉 All deployment checks passed! Ready for deployment.')) {
      {
-    console.log('🎉 All deployment checks passed! Ready for deployment.');
-  }} else {
+    console.log('🎉 All deployment checks passed! Ready for deployment.')}} else {
     console.log('⚠️ Some deployment checks failed. Please fix issues before deploying.');
     process.exit(1)}
 `
@@ -247,13 +243,13 @@ if ( {
                 failed: results.filter(r => !r.success).length
             },
             results: results
-       ; ;};
+       };
 
         const reportPath = path.join(this.logDir, `automation-report-${this.timestamp}.json`;);
         fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
         
         this.log(`Report generated: ${reportPath}`);
-        return report;}
+        return report}
 
     async run() {
         try {
@@ -271,7 +267,7 @@ if ( {
             this.log('Enhanced Automation System completed successfully');
             this.log(`Summary: ${report.summary.passed}/${report.summary.total} tasks passed`);
             
-            return report;} catch (error) {
+            return report} catch (error) {
             this.log(`System error: ${error.message}`, 'error');
             throw error}
     }

@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import { Star  } from 'lucide-react';
-import { ReviewStats } from '@/components/reviews/ReviewStats';
-import { ReviewsList } from '@/components/reviews/ReviewsList';
-import { useReviews } from '@/hooks/useReviews';
-import { Button } from '@/components/ui/button';
+import { useState, useEffect } from 'react';';';
+import { Star  } from 'lucide-react';';';
+import { ReviewStats } from '@/components/reviews/ReviewStats';';';
+import { ReviewsList } from '@/components/reviews/ReviewsList';';';
+import { useReviews } from '@/hooks/useReviews';';';
+import { Button } from '@/components/ui/button';';';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export function ProfileRatings(props: any) {
@@ -34,7 +34,8 @@ export function ProfileRatings(props: any) {
     fetchUserReviews(userId);
   }, [userId, fetchUserReviews]); // Added fetchUserReviews
   
-  return (<div className="space-y-6">
+  return (
+    <div className="min-h-screen bg-white">
       <div className="flex flex-col md: fle x-row gap-6">
         <div className="md:w-1/3">
           <ReviewStats averageRating={averageRating}
@@ -81,9 +82,6 @@ export function ProfileRatings(props: any) {
 }
 
 </ReviewsList>
-</ReviewsList>
-</ReviewsList>
 </ReviewStats>
-</number>
-</number>
-</Record>
+</number>';
+</Record>;';;';

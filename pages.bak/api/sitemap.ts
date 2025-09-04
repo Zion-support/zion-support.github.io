@@ -1,8 +1,7 @@
 import { GetServerSideProps } from 'next';
 
 const Sitemap = () => {
-  return null;
-};
+  return null};
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const baseUrl = 'https://ziontechgroup.com';
@@ -37,8 +36,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
               <changefreq>weekly</changefreq>
               <priority>${page === '' ? '1.0' : '0.8'}</priority>
             </url>
-          `;
-        })
+          `})
         .join('')}
     </urlset>
   `;
@@ -49,7 +47,6 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
 
   return {
     props: {},
-  };
-};
+  }};
 
 export default Sitemap;

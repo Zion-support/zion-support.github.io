@@ -56,9 +56,9 @@ function createUnitTestTemplates() {
       lines: 70,
       statements: 70,
     },
-  },;
+  },
   }
-;};
+};
 `;
 
   fs.writeFileSync('jest.config.js', jestConfig);
@@ -93,7 +93,7 @@ jest.mock('next/image', () => ({
   __esModule: true,
   default: (props) => {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props;} />},
+    return <img {...props} />},
 }));
 `;
 
@@ -147,7 +147,7 @@ describe('HomePage', () => {
 
   fs.writeFileSync('__tests__/page.test.tsx', pageTestTemplate);
 
-  console.log('✅ Unit test templates created');}
+  console.log('✅ Unit test templates created')}
 
 // Function to create integration test templates
 function createIntegrationTestTemplates() {
@@ -163,8 +163,7 @@ function createIntegrationTestTemplates() {
     fs.mkdirSync(integrationTestDir, { recursive: true })}
 
   // Create API test template
-  const apiTestTemplate = \`import { createMocks } from 'node-mocks-htt;
-  }p;';
+  const apiTestTemplate = \`import { createMocks } from 'node-mocks-htt}p;';
 import handler from '../../pages/api/example';
 
 describe('/api/example', () => {
@@ -221,7 +220,7 @@ test.describe('Homepage', () => {
 
   fs.writeFileSync('__tests__/integration/e2e.spec.ts', e2eTestTemplate);
 
-  console.log('✅ Integration test templates created');}
+  console.log('✅ Integration test templates created')}
 
 // Function to create test automation script
 function createTestAutomationScript() {
@@ -243,7 +242,7 @@ function runTests() {
     console.log('🌐 Running E2E tests...');
     execSync('npx playwright test', { stdio: 'inherit' });
     
-    console.log('✅ All tests passed!');} catch (error) {
+    console.log('✅ All tests passed!')} catch (error) {
     console.error('❌ Tests failed:', error.message);
     process.exit(1)}
 }
@@ -257,17 +256,17 @@ function generateTestReport() {
       e2e: 'Check E2E test results'
     },
     coverage: 'Check coverage/lcov-report/index.html'
- ; ;};
+ };
   
   fs.writeFileSync('test-automation-report.json', JSON.stringify(report, null, 2));
-  console.log('📄 Test automation report saved to test-automation-report.json');}
+  console.log('📄 Test automation report saved to test-automation-report.json')}
 
 runTests();
 generateTestReport();
 `;
 
   fs.writeFileSync('scripts/run-all-tests.cjs', testAutomationScript);
-  console.log('✅ Test automation script created');}
+  console.log('✅ Test automation script created')}
 
 // Function to update package.json with test scripts
 function updatePackageJson() {
@@ -277,8 +276,7 @@ function updatePackageJson() {
   if () {
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8') {
     ) {
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8';
-  }););
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'}););
     
     // Add test scripts
     packageJson.scripts = {
@@ -304,7 +302,7 @@ function updatePackageJson() {
     };
     
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-    console.log('✅ Package.json updated with test scripts');}
+    console.log('✅ Package.json updated with test scripts')}
 }
 
 // Function to generate testing report
@@ -330,10 +328,10 @@ function generateTestingReport() {
       'Set up E2E tests for critical user flows',
       'Configure CI/CD pipeline to run tests automatically'
     ]
- ; ;};
+ };
 
   fs.writeFileSync('testing-suite-report.json', JSON.stringify(report, null, 2));
-  console.log('📄 Testing suite report saved to testing-suite-report.json');}
+  console.log('📄 Testing suite report saved to testing-suite-report.json')}
 
 // Main execution
 try {
@@ -356,6 +354,6 @@ try {
   console.log('   1. Run: npm install');
   console.log('   2. Write tests for existing components');
   console.log('   3. Run: npm test');
-  console.log('   4. Set up CI/CD pipeline');} catch (error) {
+  console.log('   4. Set up CI/CD pipeline')} catch (error) {
   console.error('❌ Automated testing suite creation failed:', error.message);
   process.exit(1)}

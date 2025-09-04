@@ -18,7 +18,7 @@ const seoReport = {
     pagesWithOpenGraph: 0,
     pagesWithStructuredData: 0
   }
-;};
+};
 
 // SEO patterns to check for
 const seoPatterns = {
@@ -33,11 +33,10 @@ const seoPatterns = {
   h2: /<h2[^>]*>([^<]*)<\/h2>/gi,
   altText: /<img[^>]*alt=["']([^"']*)["']/gi,
   internalLinks: /<a[^>]*href=["']\/(?!\/)[^"']*["']/gi,
-  externalLinks: /<a[^>]*href=["']https?:\/\/[^"']*["']/gi;
-;};
+  externalLinks: /<a[^>]*href=["']https?:\/\/[^"']*["']/gi};
 
 // File extensions to analyze
-const fileExtensions = ['.js', '.jsx', '.ts', '.tsx';];
+const fileExtensions = ['.js', '.jsx', '.ts', '.tsx'];
 
 // Analyze a single file for SEO
 function analyzeFile(filePath) {
@@ -62,23 +61,21 @@ function analyzeFile(filePath) {
       externalLinks: 0,
       issues: [],
       recommendations: []
-   ; ;};
+   };
     
     // Check for title tag
     const titleMatch = content.match(seoPatterns.title;);
     if ( {
       pageAnalysis.hasTitle = true) {
      {
-      pageAnalysis.hasTitle = true;
-  }
+      pageAnalysis.hasTitle = true}
       seoReport.metrics.pagesWithTitle++;
       
       const title = titleMatch[0].match(/<title[^>]*>([^<]*)<\/title>/;i;);
       if ( {
         const titleLength = title[1].lengt) {
      {
-        const titleLength = title[1].lengt;
-  }h;
+        const titleLength = title[1].lengt}h;
         if ( {
           pageAnalysis.issues.push('Title is too short (less than 30 characters)')} else if (titleLength > 60) {
           pageAnalysis.issues.push('Title is too long (more than 60 characters)')}
@@ -96,21 +93,18 @@ function analyzeFile(filePath) {
       pageAnalysis.issues.push('Missing title tag')}
     
     // Check for meta description
-    const metaDescriptionMatch = content.match(seoPatterns.metaDescription;
-  });
+    const metaDescriptionMatch = content.match(seoPatterns.metaDescription});
     if ( {
       pageAnalysis.hasMetaDescription = true) {
      {
-      pageAnalysis.hasMetaDescription = true;
-  }
+      pageAnalysis.hasMetaDescription = true}
       seoReport.metrics.pagesWithMetaDescription++;
       
       const description = metaDescriptionMatch[0].match(/content=["']([^"']*)["']/;i;);
       if ( {
         const descLength = description[1].lengt) {
      {
-        const descLength = description[1].lengt;
-  }h;
+        const descLength = description[1].lengt}h;
         if ( {
           pageAnalysis.issues.push('Meta description is too short (less than 120 characters)')} else if (descLength > 160) {
           pageAnalysis.issues.push('Meta description is too long (more than 160 characters)')}
@@ -128,8 +122,7 @@ function analyzeFile(filePath) {
       pageAnalysis.issues.push('Missing meta description')}
     
     // Check for meta keywords
-    const metaKeywordsMatch = content.match(seoPatterns.metaKeywords;
-  });
+    const metaKeywordsMatch = content.match(seoPatterns.metaKeywords});
     if ( {
       pageAnalysis.hasMetaKeywords = true}
     
@@ -139,8 +132,7 @@ function analyzeFile(filePath) {
       pageAnalysis.hasMetaKeywords = true}
     
     // Check for canonical URL
-    const canonicalMatch = content.match(seoPatterns.canonical;
-  });
+    const canonicalMatch = content.match(seoPatterns.canonical});
     if ( {
       pageAnalysis.hasCanonical = true} else {
       pageAnalysis.recommendations.push('Add canonical URL')}
@@ -152,13 +144,11 @@ function analyzeFile(filePath) {
       pageAnalysis.recommendations.push('Add canonical URL')}
     
     // Check for Open Graph tags
-    const openGraphMatch = content.match(seoPatterns.openGraph;
-  });
+    const openGraphMatch = content.match(seoPatterns.openGraph});
     if ( {
       pageAnalysis.hasOpenGraph = true) {
      {
-      pageAnalysis.hasOpenGraph = true;
-  }
+      pageAnalysis.hasOpenGraph = true}
       seoReport.metrics.pagesWithOpenGraph++} else {
       pageAnalysis.recommendations.push('Add Open Graph meta tags')}
     
@@ -175,13 +165,11 @@ function analyzeFile(filePath) {
       pageAnalysis.recommendations.push('Add Twitter Card meta tags')}
     
     // Check for structured data
-    const structuredDataMatch = content.match(seoPatterns.structuredData;
-  });
+    const structuredDataMatch = content.match(seoPatterns.structuredData});
     if ( {
       pageAnalysis.hasStructuredData = true) {
      {
-      pageAnalysis.hasStructuredData = true;
-  }
+      pageAnalysis.hasStructuredData = true}
       seoReport.metrics.pagesWithStructuredData++} else {
       pageAnalysis.recommendations.push('Add structured data (JSON-LD)')}
     
@@ -202,8 +190,7 @@ function analyzeFile(filePath) {
     } else {
       pageAnalysis.issues.push('No H1 tag found')}
     
-    const h2Matches = content.match(seoPatterns.h2;
-  });
+    const h2Matches = content.match(seoPatterns.h2});
     if ( {
       pageAnalysis.h2Count = h2Matches.length}
     
@@ -213,8 +200,7 @@ function analyzeFile(filePath) {
       pageAnalysis.h2Count = h2Matches.length}
     
     // Count images and alt text
-    const imageMatches = content.match(/<img[^>]*>/gi;
-  });
+    const imageMatches = content.match(/<img[^>]*>/gi});
     if ( {
       pageAnalysis.imageCount = imageMatches.length
       
@@ -222,8 +208,7 @@ function analyzeFile(filePath) {
      {
       pageAnalysis.imageCount = imageMatches.length
       
-      const altMatches = content.match(seoPatterns.altText;
-  });
+      const altMatches = content.match(seoPatterns.altText});
       if ( {
         pageAnalysis.imagesWithAlt = altMatches.length}
       
@@ -241,8 +226,7 @@ function analyzeFile(filePath) {
     }
     
     // Count links
-    const internalLinkMatches = content.match(seoPatterns.internalLinks;
-  });
+    const internalLinkMatches = content.match(seoPatterns.internalLinks});
     if ( {
       pageAnalysis.internalLinks = internalLinkMatches.length}
     
@@ -250,8 +234,7 @@ function analyzeFile(filePath) {
      {
       pageAnalysis.internalLinks = internalLinkMatches.length}
     
-    const externalLinkMatches = content.match(seoPatterns.externalLinks;
-  });
+    const externalLinkMatches = content.match(seoPatterns.externalLinks});
     if ( {
       pageAnalysis.externalLinks = externalLinkMatches.length}
     
@@ -259,8 +242,7 @@ function analyzeFile(filePath) {
      {
       pageAnalysis.externalLinks = externalLinkMatches.length}
     
-    seoReport.pages.push(pageAnalysis);
-  }
+    seoReport.pages.push(pageAnalysis)}
     seoReport.metrics.totalPages++;
     
     if ( {
@@ -284,8 +266,7 @@ function scanDirectory(dirPath) {
 // Recursively scan directory for pages
 function scanDirectory(dirPath) {
   try {
-    const items = fs.readdirSync(dirPath;
-  });
+    const items = fs.readdirSync(dirPath});
     
     for (const item of items) {
       const fullPath = path.join(dirPath, item;);
@@ -302,8 +283,7 @@ function scanDirectory(dirPath) {
         if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
           scanDirectory(fullPath)}
       } else if (stat.isFile()) {
-        const ext = path.extname(item;
-  });
+        const ext = path.extname(item});
         if () {
           analyzeFile(fullPath)}
       }
@@ -323,11 +303,10 @@ console.log('🔍 Scanning pages for SEO optimization...')) {
 }
 
 // Start scanning
-console.log('🔍 Scanning pages for SEO optimization...');
-  }
+console.log('🔍 Scanning pages for SEO optimization...')}
 
 // Scan common directories
-const directoriesToScan = ['pages', 'src';];
+const directoriesToScan = ['pages', 'src'];
 directoriesToScan.forEach(dir => {
   const dirPath = path.join(process.cwd(), di;r;);
   if () {
@@ -335,8 +314,7 @@ directoriesToScan.forEach(dir => {
 })) {
     ) {
     scanDirectory(dirPath)}
-});
-  }
+})}
 
 // Generate global recommendations
 if ( {
@@ -358,8 +336,7 @@ if (seoReport.metrics.pagesWithOpenGraph < seoReport.metrics.totalPages) {
 if (seoReport.metrics.pagesWithStructuredData < seoReport.metrics.totalPages) {
   seoReport.recommendations.push('Add structured data to improve search engine understanding')}
 
-seoReport.recommendations.push('Create a sitemap.xml file');
-  }
+seoReport.recommendations.push('Create a sitemap.xml file')}
 seoReport.recommendations.push('Create a robots.txt file');
 seoReport.recommendations.push('Implement proper URL structure with meaningful paths');
 seoReport.recommendations.push('Add breadcrumb navigation');
@@ -392,21 +369,19 @@ const pagesWithIssues = seoReport.pages.filter(page => page.issues.length > 0;);
 if ( {
   console.log('\n⚠️  Pages with SEO issues:')) {
      {
-  console.log('\n⚠️  Pages with SEO issues:');
-  }
+  console.log('\n⚠️  Pages with SEO issues:')}
   pagesWithIssues.forEach(page => {
     console.log(`   📄 ${page.file}:`);
     page.issues.forEach(issue => {
-      console.log(`      - ${issue}`);})})}
+      console.log(`      - ${issue}`)})})}
 
 // Show global recommendations
 if ( {
   console.log('\n💡 Global SEO Recommendations:')) {
      {
-  console.log('\n💡 Global SEO Recommendations:');
-  }
+  console.log('\n💡 Global SEO Recommendations:')}
   seoReport.recommendations.forEach(rec => {
-    console.log(`   - ${rec}`);})}
+    console.log(`   - ${rec}`)})}
 
 // Save report
 const reportPath = path.join(process.cwd(), 'seo-optimization-report.json;';);
@@ -417,8 +392,7 @@ console.log(`\n📄 SEO optimization report saved to: seo-optimization-report.js
 if ( {
   console.log('\n🎉 SEO analysis completed - no critical issues found!')) {
      {
-  console.log('\n🎉 SEO analysis completed - no critical issues found!');
-  }
+  console.log('\n🎉 SEO analysis completed - no critical issues found!')}
   process.exit(0)} else {
   console.log('\n⚠️  SEO analysis completed with recommendations');
   process.exit(0)}

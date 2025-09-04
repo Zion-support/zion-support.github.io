@@ -2,14 +2,11 @@ import React from 'react';
 
 function Skeleton(props: any) {
   return (
-    <div className={`animate-pulse rounded-md bg-gray-200 ${className}`}
-      {...props}
-     />
+    <div className="min-h-screen bg-white">
   );
 }
 
 export {Skeleton};
 
-
-export default skeleton;
-</div>
+export default skeleton;';
+</div>;';;';

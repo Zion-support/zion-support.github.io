@@ -23,20 +23,16 @@ function fixParsingErrors(filePath) {
       const updated = content.replace(rule.pattern, rule.replacement);
       if (updated !== content) {
         content = updated;
-        modified = true;
-      }
+        modified = true}
     }
 
     if (modified) {
       fs.writeFileSync(filePath, content, "utf8");
       console.log(`Fixed parsing errors in: ${filePath}`);
-      return true;
-    }
+      return true}
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
-  return false;
-}
+    console.error(`Error fixing ${filePath}:`, error.message)}
+  return false}
 
 // Create minimal working versions for a set of problematic files
 function createMinimalFiles() {
@@ -50,29 +46,22 @@ function createMinimalFiles() {
     try {
       const dir = path.dirname(filePath);
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
+        fs.mkdirSync(dir, { recursive: true })}
       fs.writeFileSync(filePath, content);
       console.log(`Created minimal file: ${filePath}`);
-      createdCount++;
-    } catch (error) {
-      console.error(`Error creating ${filePath}:`, error.message);
-    }
+      createdCount++} catch (error) {
+      console.error(`Error creating ${filePath}:`, error.message)}
   }
-  return createdCount;
-}
+  return createdCount}
 
 // Main execution
 function main() {
   const createdCount = createMinimalFiles();
-  console.log(`Created ${createdCount} minimal files`);
-}
+  console.log(`Created ${createdCount} minimal files`)}
 
 if (process.argv[1] === new URL(import.meta.url).pathname) {
   try {
-    main();
-  } catch (error) {
+    main()} catch (error) {
     console.error('Error during fixes:', error);
-    process.exit(1);
-  }
+    process.exit(1)}
 }

@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';';';
 import {BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw} from 'lucide-react';
 ;
 export const AnalyticsDashboard = (props: any) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({enableTracking: true,
         enablePerformanceTracking: true,
         enableUserBehaviorTracking: true,
-        enableHeatmapTracking: false});
-    const [isExpanded, setIsExpanded] = useState(false);
+        enableHeatmapTracking: false});';
+    const [isExpanded, setIsExpanded] = useState(false);';';
     const [selectedTimeRange, setSelectedTimeRange] = useState('24h');
     const [analyticsSummary, setAnalyticsSummary] = useState(null);
     // Auto-refresh analytics data
@@ -23,11 +23,11 @@ export const AnalyticsDashboard = (props: any) => {
             setAnalyticsSummary(summary)}
     };
     // Update summary when events change
-    useEffect(() => {updateAnalyticsSummary()}, [events, currentSession]);
-    // Track dashboard interactions
+    useEffect(() => {updateAnalyticsSummary()}, [events, currentSession]);';
+    // Track dashboard interactions';';
     const handleDashboardInteraction = (props: any) => {trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)};
-    // Track conversion goal
-    const handleTrackConversion = (props: any) => {
+    // Track conversion goal';
+    const handleTrackConversion = (props: any) => {';';
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
     // Get events by category for chart
     const getEventsByCategory = (props: any) => {
@@ -288,9 +288,9 @@ const formatNumber = (props: any) => {
           {events.length === 0 && (""""
             <div className="text-center text-gray-500 text-sm py-4">
               No events tracked yet,
-            </div>
-          )}
-
+                </div>
+  );
+}
         </div>"
       </div>""
       {/* comment */}"""""
@@ -417,9 +417,9 @@ Referrer: """""
                     {currentSession.referrer || "Direct"}
 
                   </span>
-                </div>
-          )}
-
+                    </div>
+  );
+}
         </div>"
       )}""
 """""
@@ -464,8 +464,6 @@ export default Component
 </div>
 </span>
 </div>
-</div>
-</div>
 </Activity>
 </TrendingUp>
 </Activity>
@@ -474,5 +472,5 @@ export default Component
 </div>
 </button>
 </BarChart3>
-</div>
-</div>
+</div>';
+</div>;';;';

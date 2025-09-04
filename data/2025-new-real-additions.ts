@@ -11,8 +11,7 @@ export interface AddedRealService2025 {
   icon: string;
   color: string;
   launchDate: string;
-  rating: number;
-}
+  rating: number}
 
 export const addedRealServices2025: AddedRealService2025[] = [
   {

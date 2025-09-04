@@ -11,4 +11,4 @@ export default function PWAUpdater.test() {return (
       </div>
   );"}"
 
-</div>
+</div>;;

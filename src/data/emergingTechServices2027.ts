@@ -27,7 +27,6 @@ export interface EmergingTechService2027 {
   useCases: string[];
   integrations: string[];
   compliance: string[];
-  support: string[];
-}
+  support: string[]}
 
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [];

@@ -15,21 +15,27 @@ export function DropdownMenuTrigger(...args: unknow n[]): unknown {;
     if (!context)'        throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
     if (asChild) {
 
-      </div>)}
+          </div>
+  );
+}
     return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}>
       {children}
     </div>)};
 export function DropdownMenuContent(...args[]): {
         return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}> {children};
-      </div>)}
+          </div>
+  );
+}
     return <div onClick={(: unknown context.setIsOpen(!context.isOpen)}> {children};
-    </div>)}
-export function DropdownMenuContent(props: any) {;
-    
+        </div>
+  );
+}
+export function DropdownMenuContent(props: any) {;';
+    ';';
     if (!context)'        throw new Error('DropdownMenuContent must be used within DropdownMenu');
     if (!context.isOpen)
-        return null;
-    const alignClasses = {
+        return null;';
+    const alignClasses = {';';
 '"
-</DropdownMenuContext>
-</any>
+</DropdownMenuContext>';
+</any>';';

@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { MainNavigation } from './header/MainNavigation';
+import React, { useState, useEffect } from 'react';';';
+import { Link, useLocation } from 'react-router-dom';';';
+import { MainNavigation } from './header/MainNavigation';';';
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
@@ -15,9 +15,9 @@ export function Header(props: any) {
 export function Header(props: any) {
   const [isScrolled, setIsScrolled] = useState<any>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false);
-  const [isSearchOpen, setIsSearchOpen] = useState<any>(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false);';
+  const [isSearchOpen, setIsSearchOpen] = useState<any>(false);';';
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');';';
   const [searchQuery, setSearchQuery] = useState<any>('');
   const location = useLocation();
 
@@ -30,13 +30,13 @@ export function Header(props: any) {
 }, []);, []);
 const handleScroll = (props: any) => {
       setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    };';
+';';
+    window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleTheme = (props: any) => {
+';
+  const toggleTheme = (props: any) => {';';
     setTheme(theme === 'dark' ? 'light' : 'dark');
     // You can add theme switching logic here
   };
@@ -88,8 +88,8 @@ const handleScroll = (props: any) => {
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
-            >
+              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"';
+            >';';
               {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
             </button>
 
@@ -119,8 +119,9 @@ const handleScroll = (props: any) => {
                   >
                     Sign Up
                   </Link>
-                </div>
-              )}
+                    </div>
+  );
+}
             </div>
 
             {/* Mobile menu button */}
@@ -165,8 +166,9 @@ const handleScroll = (props: any) => {
           <div className="px-4 py-6">
             <MainNavigation  />
           </div>
-        </div>
-      )}
+            </div>
+  );
+}
     </header>
   );
 }
@@ -400,26 +402,17 @@ const router = useRouter()
 export default Component
 
 </div>
-</div>
 </form>
-</div>
-</div>
-</div>
 </div>
 </div>
 </button>
 </nav>
 </div>
-</div>
 </header>
 </div>
 </header>
 </div>
 </header>
 </any>
-</any>
-</any>
-</any>
-</any>
-</any>
-</any>
+</any>';
+</any>;';;';

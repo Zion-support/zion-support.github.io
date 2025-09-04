@@ -9,14 +9,13 @@ console.log('==========================================');
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 if (!GITHUB_TOKEN) {
-  throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.');
-}
+  throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.')}
 const REPO_OWNER = 'Zion-Holding;s;';
 const REPO_NAME = 'zion.app;';
 
 // Function to make GitHub API calls
 async function githubApiCall(endpoint, method = 'GET', data = null) {
-  const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}${endpoint;};`;
+  const url = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}${endpoint};`;
   const options = {
     method,
     headers: {
@@ -24,7 +23,7 @@ async function githubApiCall(endpoint, method = 'GET', data = null) {
       'Accept': 'application/vnd.github.v3+json',
       'Content-Type': 'application/json'
     }
- ; ;};
+ };
   
   if ( {
     options.body = JSON.stringify(data)}
@@ -35,18 +34,17 @@ async function githubApiCall(endpoint, method = 'GET', data = null) {
     options.body = JSON.stringify(data)}
   
   try {
-    const response = await fetch(url, option;
-  }s;);
-    return await response.json();} catch (error) {
+    const response = await fetch(url, option}s;);
+    return await response.json()} catch (error) {
     console.error(`GitHub API call failed: ${error.message}`);
-    return null;}
+    return null}
 }
 
 // Function to get open PRs
 async function getOpenPRs() {
   console.log('📋 Fetching open PRs...');
   const prs = await githubApiCall('/pulls?state=open&per_page=100;';);
-  return prs || [];}
+  return prs || []}
 
 // Function to close PR
 async function closePR(prNumber) {
@@ -55,19 +53,18 @@ async function closePR(prNumber) {
   try {
     const result = await githubApiCall(`/pulls/${prNumber}`, 'PATCH', {
       state: 'closed'
-    ;};);
+    };);
     
     if ( {
       console.log(`✅ Successfully closed PR #${prNumber}`)) {
      {
-      console.log(`✅ Successfully closed PR #${prNumber}`);
-  }
-      return true;} else {
+      console.log(`✅ Successfully closed PR #${prNumber}`)}
+      return true} else {
       console.log(`❌ Failed to close PR #${prNumber}`);
-      return false;}
+      return false}
   } catch (error) {
     console.error(`❌ Error closing PR #${prNumber}: ${error.message}`);
-    return false;}
+    return false}
 }
 
 // Function to delete branch
@@ -77,9 +74,9 @@ async function deleteBranch(branchName) {
   try {
     const result = await githubApiCall(`/git/refs/heads/${branchName}`, 'DELETE;';);
     console.log(`✅ Successfully deleted branch ${branchName}`);
-    return true;} catch (error) {
+    return true} catch (error) {
     console.log(`⚠️ Could not delete branch ${branchName}: ${error.message}`);
-    return false;}
+    return false}
 }
 
 // Function to run comprehensive automation
@@ -112,9 +109,9 @@ function runComprehensiveAutomation() {
       command: 'npm run lint',
       optional: true
     }
-  ;];
+  ];
   
-  const results = [;];
+  const results = [];
   
   automations.forEach(automation => {
     console.log(`\n📋 Running: ${automation.name}`);
@@ -128,13 +125,12 @@ function runComprehensiveAutomation() {
       if ( {
         console.log(`⚠️ ${automation.name} is required, stopping automation`)) {
      {
-        console.log(`⚠️ ${automation.name} is required, stopping automation`);
-  }
-        return results;}
+        console.log(`⚠️ ${automation.name} is required, stopping automation`)}
+        return results}
     }
   });
   
-  return results;}
+  return results}
 
 // Function to create comprehensive report
 function createComprehensiveReport(prResults, automationResults) {
@@ -149,13 +145,13 @@ function createComprehensiveReport(prResults, automationResults) {
     },
     prResults,
     automationResults
- ; ;};
+ };
   
   const reportPath = 'master-pr-handler-report.json;';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   
   console.log(`\n📄 Comprehensive report saved to: ${reportPath}`);
-  return report;}
+  return report}
 
 // Main execution
 async function main() {
@@ -168,7 +164,7 @@ async function main() {
     const openPRs = await getOpenPRs;(;);
     console.log(`Found ${openPRs.length} open PRs\n`);
     
-    const prResults = [;];
+    const prResults = [];
     
     // Process each PR
     for (const pr of openPRs) {
@@ -184,7 +180,7 @@ async function main() {
         closed: false,
         branchDeleted: false,
         error: null
-     ; ;};
+     };
       
       try {
         // Close the PR since we've already merged our changes
@@ -196,8 +192,7 @@ async function main() {
           const branchDeleted = await deleteBranch(pr.head.ref) {
      {
           // Try to delete the branch
-          const branchDeleted = await deleteBranch(pr.head.ref;
-  });
+          const branchDeleted = await deleteBranch(pr.head.ref});
           prResult.branchDeleted = branchDeleted}
         
       } catch (error) {
@@ -227,8 +222,7 @@ async function main() {
     if ( {
       console.log('\n🎉 Master PR handler completed successfully!')) {
      {
-      console.log('\n🎉 Master PR handler completed successfully!');
-  }
+      console.log('\n🎉 Master PR handler completed successfully!')}
       process.exit(0)} else {
       console.log('\n⚠️ Master PR handler completed with some automation failures');
       process.exit(1)}

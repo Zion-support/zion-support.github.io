@@ -40,18 +40,16 @@ class AdvancedPerformanceOptimizer {
       if ( {
         this.results.summary.applied++) {
      {
-        this.results.summary.applied++;
-  }
-        console.log(`✅ ${name}: ${result.message || 'Applied'}`);} else if ( {
+        this.results.summary.applied++}
+        console.log(`✅ ${name}: ${result.message || 'Applied'}`)} else if ( {
         this.results.summary.skipped++) {
      {
-        this.results.summary.skipped++;
-  }
-        console.log(`⏭️  ${name}: ${result.message || 'Skipped'}`);} else {
+        this.results.summary.skipped++}
+        console.log(`⏭️  ${name}: ${result.message || 'Skipped'}`)} else {
         this.results.summary.failed++;
-        console.log(`❌ ${name}: ${result.message || 'Failed'}`);}
+        console.log(`❌ ${name}: ${result.message || 'Failed'}`)}
       
-      return result;} catch (error) {
+      return result} catch (error) {
       const duration = Date.now() - sta;r;t;
       this.results.optimizations.push({
         name,
@@ -64,7 +62,7 @@ class AdvancedPerformanceOptimizer {
       this.results.summary.total++;
       this.results.summary.failed++;
       console.log(`❌ ${name}: ${error.message}`);
-      return { status: 'error', message: error.message ;}}
+      return { status: 'error', message: error.message }}
   }
 
   async optimizeImages() {
@@ -72,11 +70,10 @@ class AdvancedPerformanceOptimizer {
     if () {
       return { status: 'skipped', message: 'No public directory found' ) {
     ) {
-      return { status: 'skipped', message: 'No public directory found' ;
-  }}}
+      return { status: 'skipped', message: 'No public directory found' }}}
 
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg';];
-    const images = [;];
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+    const images = [];
     
     const findImages = (dir) => {
       const files = fs.readdirSync(dir;);
@@ -93,23 +90,21 @@ class AdvancedPerformanceOptimizer {
           findImages(filePath)} else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
           images.push(filePath)}
       }
-    };
-  }
+    }}
     
     findImages(publicDir);
     
     if ( {
       return { status: 'skipped', message: 'No images found to optimize' ) {
      {
-      return { status: 'skipped', message: 'No images found to optimize' ;
-  }}}
+      return { status: 'skipped', message: 'No images found to optimize' }}}
 
     // Create optimized versions (simplified - in real implementation, use sharp or imagemin)
     const optimizedCount = ;0;
     for (const image of images) {
       // Here you would implement actual image optimization
       // For now, we'll just log the images found
-      console.log(`   Found image: ${path.relative(this.projectRoot, image);}`)}
+      console.log(`   Found image: ${path.relative(this.projectRoot, image)}`)}
 
     return {;
       status: 'success',
@@ -130,13 +125,11 @@ class AdvancedPerformanceOptimizer {
       if () {
         const buildManifest = path.join(nextDir, 'build-manifest.json') {
     ) {
-        const buildManifest = path.join(nextDir, 'build-manifest.json';
-  });
+        const buildManifest = path.join(nextDir, 'build-manifest.json'});
         if () {
           const manifest = JSON.parse(fs.readFileSync(buildManifest, 'utf8') {
     ) {
-          const manifest = JSON.parse(fs.readFileSync(buildManifest, 'utf8';
-  }););
+          const manifest = JSON.parse(fs.readFileSync(buildManifest, 'utf8'}););
           const totalSize = this.calculateBundleSize(nextDir;);
           
           return {;
@@ -150,8 +143,8 @@ class AdvancedPerformanceOptimizer {
           }}
       }
 
-      return { status: 'success', message: 'Bundle build completed' ;}} catch (error) {
-      return { status: 'error', message: `Bundle optimization failed: ${error.message;}` }}
+      return { status: 'success', message: 'Bundle build completed' }} catch (error) {
+      return { status: 'error', message: `Bundle optimization failed: ${error.message}` }}
   }
 
   calculateBundleSize(dir) {
@@ -172,19 +165,17 @@ class AdvancedPerformanceOptimizer {
           calculateDirSize(filePath)} else {
           totalSize += stat.size}
       }
-    };
-  }
+    }}
     
     calculateDirSize(dir);
-    return totalSize;}
+    return totalSize}
 
   async optimizeCodeSplitting() {
     const pagesDir = path.join(this.projectRoot, 'pages';);
     if () {
       return { status: 'skipped', message: 'No pages directory found' ) {
     ) {
-      return { status: 'skipped', message: 'No pages directory found' ;
-  }}}
+      return { status: 'skipped', message: 'No pages directory found' }}}
 
     const pages = fs.readdirSync(pagesDir)
       .filter(file => file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx'))
@@ -205,8 +196,7 @@ class AdvancedPerformanceOptimizer {
         dynamicImports++}
     }
 
-    return {;
-  }
+    return {}
       status: 'success',
       message: `Code splitting analysis - ${dynamicImports}/${pages.length} pages use dynamic imports`,
       details: { 
@@ -232,8 +222,7 @@ class AdvancedPerformanceOptimizer {
       configPath = nextConfigMjsPath}
 
     if (!configPath) {
-      return { status: 'skipped', message: 'No Next.js config found' ;
-  }}}
+      return { status: 'skipped', message: 'No Next.js config found' }}}
 
     const configContent = fs.readFileSync(configPath, 'utf8';);
     
@@ -253,15 +242,14 @@ class AdvancedPerformanceOptimizer {
     if () {
       return { status: 'skipped', message: 'No pages directory found' ) {
     ) {
-      return { status: 'skipped', message: 'No pages directory found' ;
-  }}}
+      return { status: 'skipped', message: 'No pages directory found' }}}
 
     const pages = fs.readdirSync(pagesDir)
       .filter(file => file.endsWith('.js') || file.endsWith('.jsx') || file.endsWith('.ts') || file.endsWith('.tsx'))
       .filter(file => !file.startsWith('_';););
 
     let seoOptimized = ;0;
-    const seoIssues = [;];
+    const seoIssues = [];
 
     for (const page of pages) {
       const pagePath = path.join(pagesDir, page;);
@@ -296,8 +284,7 @@ class AdvancedPerformanceOptimizer {
         })}
     }
 
-    return {;
-  }
+    return {}
       status: seoIssues.length === 0 ? 'success' : 'warning',
       message: `${seoOptimized}/${pages.length} pages are SEO optimized`,
       details: { 
@@ -332,8 +319,7 @@ class AdvancedPerformanceOptimizer {
     if ( {
       console.log('\n⚠️  Performance optimization completed with some failures')) {
      {
-      console.log('\n⚠️  Performance optimization completed with some failures');
-  }
+      console.log('\n⚠️  Performance optimization completed with some failures')}
       process.exit(1)} else {
       console.log('\n✅ Performance optimization completed successfully');
       process.exit(0)}
@@ -344,8 +330,7 @@ class AdvancedPerformanceOptimizer {
 if ( {
   const optimizer = new AdvancedPerformanceOptimizer) {
      {
-  const optimizer = new AdvancedPerformanceOptimizer;
-  }(;);
+  const optimizer = new AdvancedPerformanceOptimizer}(;);
   optimizer.run().catch(error => {
     console.error('Performance optimization failed:', error);
     process.exit(1)})}

@@ -9,22 +9,22 @@ interface EmptyStateProps {
   className?: string;
 
 }
-
-const EmptyState: Reac t.FC<EmptyStateProps> = ({
-  title = 'No data available',
+';
+const EmptyState: Reac t.FC<EmptyStateProps> = ({';';
+  title = 'No data available',';';
   description = 'There are no items to display at the moment.',
-  icon,
-  action,
+  icon,';
+  action,';';
   className = ''
 }) => {
   return (
-    <div className={`text-center py-12 px-4 ${className}`}>
+    <div className="min-h-screen bg-white">
       {icon && (
         <div className="mx-auto h-12 w-12 text-gray-400 mb-4">
           {icon}
-        </div>
-      )}
-      
+            </div>
+  );
+}
       <h3 className="text-lg font-medium text-gray-900 mb-2">
         {title}
       </h3>
@@ -38,13 +38,14 @@ const EmptyState: Reac t.FC<EmptyStateProps> = ({
       {action && (
         <div className="flex justify-center">
           {action}
-        </div>
-      )}
+            </div>
+  );
+}
     </div>
   );
 };
-
-// Default empty state icon component
+';
+// Default empty state icon component';';
 export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
     className={`h-full w-full ${className}`}
@@ -62,5 +63,5 @@ export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = 
 );
 
 export default EmptyState;
-</path>
-</EmptyStateProps>
+</path>';
+</EmptyStateProps>;';;';

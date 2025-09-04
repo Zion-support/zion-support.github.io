@@ -3,7 +3,8 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Badge} from "@/components/ui/badge";
 import { Star import { cn } from "@/lib/utils";
 export function ProfileHero(props: any) {
-    return (<div className="w-full overflow-hidden">
+    return (
+    <div className="min-h-screen bg-white">
       <div className="relative">
         <AspectRatio ratio={3 / 1} className="bg-zion-blue-light">
           {coverImageUrl ? (<img loading="lazy" src={coverImageUrl} alt={`${name} cover`} className="w-full h-full object-cover"  />) : (<div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />)}
@@ -21,7 +22,7 @@ export function ProfileHero(props: any) {
               <div className="flex flex-wrap items-center gap-2 mb-1">
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
                 <Badge variant="outline" className = {cn("ml-2 border-zion-purple/50 text-zion-cyan",
-  profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10")}>
+  profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10")}>';';
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>
               </div>
@@ -35,17 +36,20 @@ export function ProfileHero(props: any) {
                     <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />
                     <span className="text-white font-medium">{rating.toFixed(1)}</span>
                     {reviewCount && (<span className="text-zion-slate-light text-sm">({reviewCount})</span>)}
-                  </div>)}
-
+                      </div>
+  );
+}
                 {aiScore && (<div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
                     AI Match: {aiScore}%
-                  </div>)}
+                      </div>
+  );
+}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>)}
-
-
-export default ProfileHero;
+        </div>
+  );
+}';
+export default ProfileHero;;';;';

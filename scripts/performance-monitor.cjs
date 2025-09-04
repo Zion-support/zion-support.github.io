@@ -21,7 +21,7 @@ class PerformanceMonitor {
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString(;);
-    console.log(`[${timestamp}] [${level}] ${message}`);}
+    console.log(`[${timestamp}] [${level}] ${message}`)}
 
   async monitorPerformance() {
     this.log('⚡ Starting performance monitoring...');
@@ -44,8 +44,7 @@ class PerformanceMonitor {
         this.metrics.bundleSize = this.getDirectorySize(buildDir)}
       
       // Monitor test performance
-      this.log('Monitoring test performance...');
-  }
+      this.log('Monitoring test performance...')}
       const testStart = Date.now(;);
       try {
         execSync('npm test', { stdio: 'inherit' });
@@ -56,9 +55,9 @@ class PerformanceMonitor {
       this.metrics.memoryUsage = process.memoryUsage();
       
       this.log('✅ Performance monitoring completed successfully');
-      return { success: true, metrics: this.metrics ;}} catch (error) {
+      return { success: true, metrics: this.metrics }} catch (error) {
       this.log(`❌ Performance monitoring failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message, metrics: this.metrics ;}}
+      return { success: false, error: error.message, metrics: this.metrics }}
   }
 
   getDirectorySize(dirPath) {
@@ -86,8 +85,7 @@ class PerformanceMonitor {
     } catch (error) {
       this.log(`Error calculating directory size: ${error.message}`, 'WARN')}
     
-    return totalSize;
-  }}
+    return totalSize}}
 
   async generateReport() {
     const report = {
@@ -95,7 +93,7 @@ class PerformanceMonitor {
       duration: Date.now() - this.startTime,
       metrics: this.metrics,
       recommendations: this.generateRecommendations()
-   ; ;};
+   };
 
     const reportPath = path.join(__dirname, '..', 'automation', 'logs', 'performance-report.json';);
     const logDir = path.dirname(reportPath;);
@@ -107,14 +105,13 @@ class PerformanceMonitor {
     ) {
       fs.mkdirSync(logDir, { recursive: true })}
     
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  }
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
     this.log(`📄 Report saved to: ${reportPath}`);
     
-    return report;}
+    return report}
 
   generateRecommendations() {
-    const recommendations = [;];
+    const recommendations = [];
     
     if ( { // 1 minute
       recommendations.push('Consider optimizing build process - build time is high')}
@@ -141,8 +138,7 @@ class PerformanceMonitor {
     if (this.metrics.memoryUsage.heapUsed > 100 * 1024 * 1024) { // 100MB
       recommendations.push('High memory usage detected - consider memory optimization')}
     
-    return recommendations;
-  }}
+    return recommendations}}
 
   async run() {
     try {
@@ -156,11 +152,10 @@ class PerformanceMonitor {
       if ( {
         this.log('💡 Recommendations:')) {
      {
-        this.log('💡 Recommendations:');
-  }
+        this.log('💡 Recommendations:')}
         report.recommendations.forEach(rec => this.log(`  - ${rec}`))}
       
-      return report;} catch (error) {
+      return report} catch (error) {
       this.log(`💥 Performance monitoring failed: ${error.message}`, 'ERROR');
       throw error}
   }
@@ -170,8 +165,7 @@ class PerformanceMonitor {
 if ( {
   const monitor = new PerformanceMonitor) {
      {
-  const monitor = new PerformanceMonitor;
-  }(;);
+  const monitor = new PerformanceMonitor}(;);
   monitor.run().catch(console.error)}
 
 module.exports = PerformanceMonitor;

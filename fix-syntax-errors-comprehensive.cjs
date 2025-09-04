@@ -8,12 +8,10 @@ class SyntaxErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
-    this.errors = [];
-  }
+    this.errors = []}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   getAllFiles(dir, extensions) {
     let files = [];
@@ -24,14 +22,11 @@ class SyntaxErrorFixer {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        files = files.concat(this.getAllFiles(fullPath, extensions));
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+        files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)}
     }
     
-    return files;
-  }
+    return files}
 
   fixImportStatements(content) {
     // Fix malformed import statements
@@ -41,8 +36,7 @@ class SyntaxErrorFixer {
     // Fix missing semicolons after imports
     content = content.replace(/import\s*{[^}]+}\s*from\s*['"][^'"]+['"](?!\s*;)/g, '$&;');
     
-    return content;
-  }
+    return content}
 
   fixStringConcatenation(content) {
     // Fix malformed string concatenation with semicolons
@@ -53,8 +47,7 @@ class SyntaxErrorFixer {
     content = content.replace(/\[\s*['"]\s*;\s*([^'"]*)\s*['"]\s*\]/g, '[\'$1\']');
     content = content.replace(/\[\s*['"]\s*([^'"]*)\s*;\s*['"]\s*\]/g, '[\'$1\']');
     
-    return content;
-  }
+    return content}
 
   fixObjectSyntax(content) {
     // Fix object property syntax
@@ -62,8 +55,7 @@ class SyntaxErrorFixer {
     content = content.replace(/:\s*['"]\s*;\s*([^'"]*)\s*['"]\s*,/g, ': \'$1\',');
     content = content.replace(/:\s*['"]\s*;\s*([^'"]*)\s*['"]\s*}/g, ': \'$1\' }');
     
-    return content;
-  }
+    return content}
 
   fixJSXSyntax(content) {
     // Fix JSX attribute syntax
@@ -71,8 +63,7 @@ class SyntaxErrorFixer {
     content = content.replace(/href\s*=\s*['"]\s*;\s*([^'"]*)\s*['"]/g, 'href=\'$1\'');
     content = content.replace(/title\s*=\s*['"]\s*;\s*([^'"]*)\s*['"]/g, 'title=\'$1\'');
     
-    return content;
-  }
+    return content}
 
   fixUnterminatedStrings(content) {
     // Fix unterminated string literals
@@ -89,22 +80,18 @@ class SyntaxErrorFixer {
       if (singleQuotes % 2 !== 0 && !line.includes('//')) {
         // Try to fix unterminated single quotes
         if (line.includes("'") && !line.endsWith("'")) {
-          line = line + "'";
-        }
+          line = line + "'"}
       }
       
       if (doubleQuotes % 2 !== 0 && !line.includes('//')) {
         // Try to fix unterminated double quotes
         if (line.includes('"') && !line.endsWith('"')) {
-          line = line + '"';
-        }
+          line = line + '"'}
       }
       
-      fixedLines.push(line);
-    }
+      fixedLines.push(line)}
     
-    return fixedLines.join('\n');
-  }
+    return fixedLines.join('\n')}
 
   fixFile(filePath) {
     try {
@@ -129,15 +116,12 @@ class SyntaxErrorFixer {
         fs.writeFileSync(filePath, content, 'utf8');
         this.fixedFiles.push(filePath);
         this.log(`✅ Fixed: ${filePath}`);
-        return true;
-      }
+        return true}
       
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.errors.push({ file: filePath, error: error.message });
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   async run() {
@@ -146,8 +130,7 @@ class SyntaxErrorFixer {
     const srcDir = path.join(this.projectRoot, 'src');
     if (!fs.existsSync(srcDir)) {
       this.log('❌ src directory not found');
-      return;
-    }
+      return}
     
     const files = this.getAllFiles(srcDir, ['.tsx', '.ts', '.jsx', '.js']);
     this.log(`Found ${files.length} files to check`);
@@ -155,8 +138,7 @@ class SyntaxErrorFixer {
     let fixedCount = 0;
     for (const file of files) {
       if (this.fixFile(file)) {
-        fixedCount++;
-      }
+        fixedCount++}
     }
     
     this.log(`🎉 Fixed ${fixedCount} files`);
@@ -176,8 +158,7 @@ class SyntaxErrorFixer {
       JSON.stringify(report, null, 2)
     );
     
-    this.log('📊 Report saved to syntax-fix-report.json');
-  }
+    this.log('📊 Report saved to syntax-fix-report.json')}
 }
 
 // Run the fixer

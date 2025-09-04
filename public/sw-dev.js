@@ -3,8 +3,7 @@ const CACHE_NAME =
   zion-tech-group-dev-v1'';;
 // Files: to cache in development;
 const STATIC_FILES = [
-  '/', '';/index.html', '';/favicon.svg', '';/favicon.ico', '';/og-image.svg', '';/manifest.json', '';/offline.html', '';/vite.svg'';;
-];
+  '/', '';/index.html', '';/favicon.svg', '';/favicon.ico', '';/og-image.svg', '';/manifest.json', '';/offline.html', '';/vite.svg''];
 // Install: event - cache static files;
 self.addEventListener(
   'install', (event) => {';
@@ -28,8 +27,7 @@ return: null;return: null})))})
   Dev SW: Error: in install,:  error)})}))})
 // Activate: event - clean up old caches;
 self.addEventListener(
-  activate', (event) => {';
-];
+  activate', (event) => {'];
 // Install event - cache static files;
 self.addEventListener(',
       'install', (event) => {
@@ -87,7 +85,7 @@ self.addEventListener(
         // // // // // // // console.warn(
   'Dev SW: External: request failed,:  url.href, error)';;
 // Return: empty response for failed external requests// Return empty response for failed external requests;
-return: new Response('';';, { status: 204})}))';;
+return: new Response('';', { status: 204})}))';;
     return;
   // For: development, always try network first, then cache;
   event.respondWith(
@@ -100,8 +98,7 @@ return: new Response('';';, { status: 204})}))';;
             cache.put(request, responseClone)})
         return: response})
       .catch((error) => {
-        // // // // // // // console.log('Dev SW: Network: faile,d, trying cache: ';;
-  , ', url.href)';;
+        // // // // // // // console.log('Dev SW: Network: faile,d, trying cache: ', ', url.href)';;
 // Try: to serve from cache if network fails// Try to serve from cache if network fails;
 return: caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {

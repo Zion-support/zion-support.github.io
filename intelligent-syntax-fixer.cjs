@@ -32,15 +32,14 @@ class IntelligentSyntaxFixer {
       if ( {
         fs.writeFileSync(filePath, fixedContent, 'utf8')) {
      {
-        fs.writeFileSync(filePath, fixedContent, 'utf8');
-  }
+        fs.writeFileSync(filePath, fixedContent, 'utf8')}
         this.fixedFiles.push(filePath);
         this.log(`✅ Fixed: ${filePath}`);
         hasChanges = true}
 
-      return hasChanges;} catch (error) {
+      return hasChanges} catch (error) {
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;}
+      return false}
   }
 
   async run() {
@@ -51,7 +50,7 @@ class IntelligentSyntaxFixer {
       'pages/services-catalog.tsx', 
       'pages/services.tsx',
       'components/Layout.tsx'
-    ;];
+    ];
 
     files.forEach(file => {
       if () {
@@ -59,11 +58,10 @@ class IntelligentSyntaxFixer {
     })) {
     ) {
         this.fixFile(file)}
-    });
-  }
+    })}
 
     this.log(`✅ Fixed ${this.fixedFiles.length} files`);
-    return { fixedFiles: this.fixedFiles ;}}
+    return { fixedFiles: this.fixedFiles }}
 }
 
 const fixer = new IntelligentSyntaxFixer;(;);

@@ -19,14 +19,11 @@ self.addEventListener('install', (event) => {
     caches.open(STATIC_CACHE)
       .then((cache) => {
         console.log('Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
-      })
+        return cache.addAll(STATIC_ASSETS)})
       .then(() => {
         console.log('Service Worker installed');
-        return self.skipWaiting();
-      })
-  );
-});
+        return self.skipWaiting()})
+  )});
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
@@ -38,17 +35,13 @@ self.addEventListener('activate', (event) => {
           cacheNames.map((cacheName) => {
             if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
               console.log('Deleting old cache:', cacheName);
-              return caches.delete(cacheName);
-            }
+              return caches.delete(cacheName)}
           })
-        );
-      })
+        )})
       .then(() => {
         console.log('Service Worker activated');
-        return self.clients.claim();
-      })
-  );
-});
+        return self.clients.claim()})
+  )});
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
@@ -57,29 +50,25 @@ self.addEventListener('fetch', (event) => {
 
   // Skip non-GET requests
   if (request.method !== 'GET') {
-    return;
-  }
+    return}
 
   // Skip external requests
   if (url.origin !== location.origin) {
-    return;
-  }
+    return}
 
   event.respondWith(
     caches.match(request)
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
-          return cachedResponse;
-        }
+          return cachedResponse}
 
         // Otherwise, fetch from network
         return fetch(request)
           .then((networkResponse) => {
             // Don't cache non-successful responses
             if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-              return networkResponse;
-            }
+              return networkResponse}
 
             // Clone the response
             const responseToCache = networkResponse.clone();
@@ -87,20 +76,15 @@ self.addEventListener('fetch', (event) => {
             // Cache the response
             caches.open(DYNAMIC_CACHE)
               .then((cache) => {
-                cache.put(request, responseToCache);
-              });
+                cache.put(request, responseToCache)});
 
-            return networkResponse;
-          })
+            return networkResponse})
           .catch(() => {
             // If network fails, return offline page for navigation requests
             if (request.destination === 'document') {
-              return caches.match('/offline.html');
-            }
-          });
-      })
-  );
-});
+              return caches.match('/offline.html')}
+          })})
+  )});
 
 // Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
@@ -108,14 +92,12 @@ self.addEventListener('sync', (event) => {
     event.waitUntil(
       // Handle offline form submissions
       handleOfflineFormSubmissions()
-    );
-  }
+    )}
 });
 
 async function handleOfflineFormSubmissions() {
   // This would handle queued form submissions when back online
-  console.log('Handling offline form submissions...');
-}
+  console.log('Handling offline form submissions...')}
 
 // Push notifications (if needed in the future)
 self.addEventListener('push', (event) => {
@@ -134,8 +116,7 @@ self.addEventListener('push', (event) => {
 
     event.waitUntil(
       self.registration.showNotification(data.title, options)
-    );
-  }
+    )}
 });
 
 // Notification click handler
@@ -143,5 +124,4 @@ self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   event.waitUntil(
     clients.openWindow('/')
-  );
-});
+  )});

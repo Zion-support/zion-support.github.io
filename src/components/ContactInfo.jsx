@@ -1,7 +1,5 @@
 import React from 'react';
 ;
-;
-;
 import {Link} from "react-router-dom";
 import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star export function ContactInfo(props: any) {
     return (<section className="py-20 bg-zion-blue-dark">
@@ -164,8 +162,8 @@ Contact: our experts today for a free consultation.
                 <CardTitle className="text-white flex items-center gap-2">"""";"
                   <Phone className = "h-5 w-5 text-zion-cyan"   />
                   Contact Details,
-                </CardTitle>"""
-import {Link} from "react - router - dom";
+                </CardTitle>"""';
+import {Link} from "react - router - dom";';';
 import React from 'react';"""
 ;""""
 import {Button} from "../ui/button";""""
@@ -336,31 +334,31 @@ export function ContactInfo(props: any) {return (<section className = "py-20 bg-
         </div>&apos;&apos,",
 &apos;&apos,&apos;&apos,"
         <div className="&apos,grid" grid-cols-1 l,g: grid-cols-2 gap-8&apos,>"&apos,&apos {/* comment */}&apos;&apos,&apos;&apos,"
-          <div className="&apos;space-y-6&apos;">"&apos;&apos,&apos;&apos;"
+          <div className="&apos;space-y-6&apos">"&apos;&apos,&apos;&apos;"
             <Card className="&apos;bg-zion-blue" border-zion-blue-light&apos;>"&apos;&apos,""
               <CardHeader>&apos;&apos,&apos;&apos,"
                 <CardTitle className="&apos;text-white" flex items-center gap-2&apos;>"&apos;&apos,&apos;&apos;"
                   <Phone className="&apos;h-5" w-5 text-zion-cyan&apos;        />"
                   Contact Details&apos;&apos,&apos;&apos,
                 </CardTitle>&apos;&apos,&apos;&apos,"
-                <CardDescription className="&apos;text-zion-slate-light&apos;">
+                <CardDescription className="&apos;text-zion-slate-light&apos">
                   Reach out to us through of these channels&apos,
                 </CardDescription>&apos;&apos,&apos;&apos,
               </CardHeader>&apos;&apos,&apos;&apos,"
-              <CardContent className="&apos;space-y-4&apos;">"&apos;&apos,&apos;&apos;"
+              <CardContent className="&apos;space-y-4&apos">"&apos;&apos,&apos;&apos;"
                 <div className="&apos;flex" items-center gap-3&apos;>"&apos;&apos,&apos;&apos;"
                   <div className="&apos;w-10" h-10 bg-zion-purple/20 rounded-full flex items-center justify-center&apos;>"&apos;&apos,&apos;&apos;"
                     <Phone className="&apos;h-5" w-5 text-zion-purple&apos;        />&apos,
                   </div>&apos;&apos,&apos;&apos,
                   <div>&apos;&apos,&apos;&apos,"
                     <p className="&apos;text-white" font-medium&apos;>Phone&apos;</p>&apos;&apos,&apos;&apos,"
-                    <p className="&apos;text-zion-cyan&apos;">+1 302 464 0950&apos;</p>"
+                    <p className="&apos;text-zion-cyan&apos">+1 302 464 0950&apos;</p>"
                     <Mail className="&apos;h-5" w-5 text-zion-purple&apos;        />&apos;"
                     <p className="&apos;text-white" font-medium&apos;>Email&apos;</p>&apos;&apos,&apos;&apos,"
-                    <p className="&apos;text-zion-cyan&apos;">kleber@ziontechgroup.com&apos;</p>"
+                    <p className="&apos;text-zion-cyan&apos">kleber@ziontechgroup.com&apos;</p>"
                     <MapPin className="&apos;h-5" w-5 text-zion-purple&apos;        />&apos;"
                     <p className="&apos;text-white" font-medium&apos;>Address&apos;</p>&apos;&apos,&apos;&apos,"
-                    <p className="&apos;text-zion-slate-light&apos;">
+                    <p className="&apos;text-zion-slate-light&apos">
                       364 E Main St STE 1008&apos,
 export function ContactInfo(props: any) {""
     return (<section className = "py-20 bg-zion-blue-dark">""
@@ -516,21 +514,21 @@ Available: </Badge>"
             </Card>&apos;&apos;"
                   <Clock className="&apos;h-5" w-5 text-zion-cyan&apos,        />"
                   Business Hours&apos,&apos,&apos;&apos;"
-                <CardDescription className="&apos;text-zion-slate-light&apos;">
+                <CardDescription className="&apos;text-zion-slate-light&apos">
                   We&apos;re available when you need us&apos;&apos,
               </CardHeader>&apos;&apos,&apos;&apos,
               <CardContent>&apos;&apos,&apos;&apos,"
                 <div className="&apos;space-y-2" text-zion-slate-light&apos;>"&apos;&apos,&apos;&apos;"
                   <div className="&apos;flex" justify-between&apos;>"&apos;&apos,""
                     <span>Monday - Friday</span>&apos;&apos,&apos;&apos,",
-                    <span className="&apos;text-zion-cyan&apos;">,
+                    <span className="&apos;text-zion-cyan&apos">,
 9: 00 AM - 6:00 PM EST&apos,
                     </span>&apos;&apos,&apos;&apos,
                   </div>&apos;&apos,&apos;&apos,"",
                     <span>Saturday</span>&apos;&apos,&apos,&apos,"
                       10:00 AM - ,4: 00 PM EST&apos,
                     <span>Sunday</span>&apos;&apos,&apos;&apos,"
-                    <span className="&apos;text-zion-cyan&apos;">By Appointment&apos;</span>&apos;&apos,&apos;&apos;"
+                    <span className="&apos;text-zion-cyan&apos">By Appointment&apos;</span>&apos;&apos,&apos;&apos;"
                   <div className="&apos;pt-2" border-t border-zion-blue-light&apos;>"&apos;&apos,&apos;&apos;"
                     <div className="&apos;flex" justify-between&apos;>"&apos;&apos,&apos;&apos;"
                       <span className="&apos;text-zion-cyan" font-medium&apos;>
@@ -815,8 +813,8 @@ size="lg"""
   )}""""
 }""""
 }"""";"
-    </section>""
-  )}""""}""""
+    </section>""';
+  )}""""}""""';';
 """"'
 }"
 "
@@ -828,85 +826,54 @@ export default Component
 </div>
 </h3>
 </div>
+</a>
+</div>
+</p>
 </div>
 </a>
 </div>
 </p>
 </div>
-</div>
 </a>
 </div>
 </p>
-</div>
-</div>
-</a>
-</div>
-</p>
-</div>
-</div>
-</div>
 </div>
 </Star>
 </div>
-</div>
 </Phone>
 </div>
-</p>
 </p>
 </div>
 </MessageSquare>
 </div>
-</div>
 </Phone>
 </div>
-</div>
-</div>
-</div>
 </Button>
-</div>
-</div>
-</div>
 </div>
 </Button>
 </Badge>
-</div>
-</div>
 </div>
 </Clock>
 </Badge>
-</div>
-</div>
 </div>
 </CardContent>
 </CardDescription>
 </ExternalLink>
 </a>
-</a>
 </Globe>
 </Badge>
-</div>
-</div>
 </div>
 </ExternalLink>
 </span>
 </div>
-</div>
-</div>
-</a>
-</a>
 </a>
 </MapPin>
 </p>
 </Mail>
 </Phone>
-</Phone>
 </h2>
 </div>
-</div>
-</div>
 </CardContent>
-</div>
-</div>
 </div>
 </h2>
 </div>
@@ -916,47 +883,21 @@ export default Component
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </CardContent>
 </p>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
 </CardContent>
-</div>
-</div>
-</div>
 </div>
 </div>
 </Button>
 </a>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </Button>
-</Button>
-</div>
-</div>
 </div>
 </CardContent>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

@@ -30,8 +30,7 @@ class FinalAutomationReport {
         build: {}
       },
       recommendations: []
-    };
-  }
+    }}
 
   log(message, type = 'INFO') {
     const icons = {
@@ -41,8 +40,7 @@ class FinalAutomationReport {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     };
-    console.log(`${icons[type]} ${message}`);
-  }
+    console.log(`${icons[type]} ${message}`)}
 
   async generateReport() {
     this.log('📊 Generating Final Automation Report...', 'PROGRESS');
@@ -70,14 +68,11 @@ class FinalAutomationReport {
           totalAutomations++;
           
           if (report.summary && report.summary.status === 'completed') {
-            successfulAutomations++;
-          } else {
-            failedAutomations++;
-          }
+            successfulAutomations++} else {
+            failedAutomations++}
         }
       } catch (error) {
-        this.log(`Warning: Could not read ${reportFile}`, 'WARNING');
-      }
+        this.log(`Warning: Could not read ${reportFile}`, 'WARNING')}
     }
 
     // Generate comprehensive summary
@@ -196,8 +191,7 @@ class FinalAutomationReport {
     this.log(`📈 Success Rate: ${this.report.summary.successRate}%`, 'INFO');
     this.log(`🔧 Total Improvements: ${this.report.summary.improvements.length}`, 'INFO');
     this.log(`⚡ Total Optimizations: ${this.report.summary.optimizations.length}`, 'INFO');
-    this.log(`📝 New Scripts Created: ${this.report.summary.newScripts.length}`, 'INFO');
-  }
+    this.log(`📝 New Scripts Created: ${this.report.summary.newScripts.length}`, 'INFO')}
 
   async run() {
     this.log('🚀 Starting Final Automation Report Generation...', 'PROGRESS');
@@ -207,11 +201,9 @@ class FinalAutomationReport {
       
       this.log('🎉 Final Automation Report completed successfully!', 'SUCCESS');
       
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.log(`❌ Final Automation Report failed: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 }
 
@@ -219,11 +211,8 @@ class FinalAutomationReport {
 if (require.main === module) {
   const reportGenerator = new FinalAutomationReport();
   reportGenerator.run().then(success => {
-    process.exit(success ? 0 : 1);
-  }).catch(error => {
+    process.exit(success ? 0 : 1)}).catch(error => {
     console.error('Final Automation Report failed:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 module.exports = FinalAutomationReport;

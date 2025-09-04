@@ -6,12 +6,10 @@ const path = require('path');
 class QuickSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.fixedCount = 0;
-  }
+    this.fixedCount = 0}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   fixFile(filePath) {
     try {
@@ -54,27 +52,21 @@ class QuickSyntaxFixer {
       const lines = content.split('\n');
       const fixedLines = lines.map(line => {
         if (line.includes("'") && (line.match(/'/g) || []).length % 2 !== 0 && !line.endsWith("'")) {
-          return line + "'";
-        }
+          return line + "'"}
         if (line.includes('"') && (line.match(/"/g) || []).length % 2 !== 0 && !line.endsWith('"')) {
-          return line + '"';
-        }
-        return line;
-      });
+          return line + '"'}
+        return line});
       content = fixedLines.join('\n');
       
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.fixedCount++;
         this.log(`✅ Fixed: ${path.relative(this.projectRoot, filePath)}`);
-        return true;
-      }
+        return true}
       
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`❌ Error fixing ${filePath}: ${error.message}`);
-      return false;
-    }
+      return false}
   }
 
   getAllFiles(dir, extensions) {
@@ -87,17 +79,14 @@ class QuickSyntaxFixer {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
-        } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
+          files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath)}
       }
     } catch (error) {
       // Skip directories that can't be read
     }
     
-    return files;
-  }
+    return files}
 
   async run() {
     this.log('🔧 Starting Quick Syntax Fix');
@@ -105,8 +94,7 @@ class QuickSyntaxFixer {
     const srcDir = path.join(this.projectRoot, 'src');
     if (!fs.existsSync(srcDir)) {
       this.log('❌ src directory not found');
-      return;
-    }
+      return}
     
     const files = this.getAllFiles(srcDir, ['.tsx', '.ts', '.jsx', '.js']);
     this.log(`Found ${files.length} files to check`);
@@ -118,12 +106,10 @@ class QuickSyntaxFixer {
       this.log(`Processing batch ${Math.floor(i/batchSize) + 1}/${Math.ceil(files.length/batchSize)}`);
       
       for (const file of batch) {
-        this.fixFile(file);
-      }
+        this.fixFile(file)}
     }
     
-    this.log(`🎉 Fixed ${this.fixedCount} files`);
-  }
+    this.log(`🎉 Fixed ${this.fixedCount} files`)}
 }
 
 // Run the fixer

@@ -11,8 +11,7 @@ export interface CuttingEdgeAIService2034 {
   icon: string;
   color: string;
   launchDate?: string;
-  rating?: number;
-}
+  rating?: number}
 
 export const cuttingEdgeAIServices: CuttingEdgeAIService2034[] = [
   {

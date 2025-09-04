@@ -1,16 +1,15 @@
-import { useNavigate  } from 'react-router-dom';
-import { useNavigate  } from 'react-router-dom';
- from 'react';
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { useDebounce } from '@/hooks / useDebounce';
- from 'framer-motion';
+import { useNavigate  } from 'react-router-dom';';';
+ from 'react';';';
+import React, { useState, useEffect, useRef, useCallback } from 'react';';';
+import { useDebounce } from '@/hooks / useDebounce';';';
+ from 'framer-motion';';';
 import { motion, AnimatePresence  } from 'framer-motion';
 
   icon?: React.ComponentType < any>}
 ];
 
-export function EnhancedSearch(props: any) {;
-  const [isOpen, setIsOpen] = useState<any>(false);
+export function EnhancedSearch(props: any) {;';
+  const [isOpen, setIsOpen] = useState<any>(false);';';
   const [query, setQuery] = useState<any>('');  const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState<any>(false);
@@ -23,18 +22,18 @@ export function EnhancedSearch(props: any) {;
   }) ;
   const [showFilters, setShowFilters] = useState<any>(false);
   const [recentSearches, setRecentSearches] = useState < string[]> ([]) ;
-
-// Mock suggestions
-const mockSuggestions: SearchSuggestio n[] = ['
-  { text: 'AI compliance assistant', type: 'recent' },
-  { text: 'Quantum machine learning', type: 'trending' },
-  { text: 'Digital transformation consulting', type: 'ai' },
+';
+// Mock suggestions';';
+const mockSuggestions: SearchSuggestio n[] = ['';';
+  { text: 'AI compliance assistant', type: 'recent' },';';
+  { text: 'Quantum machine learning', type: 'trending' },';';
+  { text: 'Digital transformation consulting', type: 'ai' },';';
   { text: 'Cloud DevOps automation', type: 'trending' }
 ];
 
 export function EnhancedSearch(props: any) {
-
-  const [isOpen, setIsOpen] = useState<any>(false);
+';
+  const [isOpen, setIsOpen] = useState<any>(false);';';
   const [query, setQuery] = useState<any>('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
@@ -58,18 +57,18 @@ export function EnhancedSearch(props: any) {
   return () => {
     // Cleanup function
   };
-}, []);, []);
-    const handleKeyDown = (props: any) => {
+}, []);, []);';
+    const handleKeyDown = (props: any) => {';';
       if(event.key === 'Escape') {
-        setIsOpen(false) ;
-        setSelectedIndex(-1) ;
+        setIsOpen(false) ;';
+        setSelectedIndex(-1) ;';';
       } else if(event.key === 'ArrowDown') {
         event.preventDefault () ;
-        setSelectedIndex(prev =>
-          prev < results.length-1 ? prev + 1 : prev) ;
+        setSelectedIndex(prev =>';
+          prev < results.length-1 ? prev + 1 : prev) ;';';
       } else if(event.key === 'ArrowUp') {
-        event.preventDefault () ;
-        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ;
+        event.preventDefault () ;';
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1) ;';';
       } else if(event.key === 'Enter' && selectedIndex >= 0) {
 event.preventDefault () ;
 if(results[selectedIndex]) {
@@ -77,9 +76,9 @@ event.preventDefault () ;        if(results[selectedIndex]) {
 handleResultClick(results[selectedIndex])}      }
     };
 
-    if(isOpen) {
-
-      document.addEventListener('keydown', handleKeyDown)}
+    if(isOpen) {';
+';';
+      document.addEventListener('keydown', handleKeyDown)}';';
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex]);
   // Search functionality
   useEffect(() => {
@@ -116,8 +115,8 @@ handleResultClick(results[selectedIndex])}      }
   };
 }, []);, []);
     
-        setRecentSearches(JSON.parse (saved) ) } catch(error) {
-
+        setRecentSearches(JSON.parse (saved) ) } catch(error) {';
+';';
         // console.error('Failed to parse recent searches:', error)}    }
   }, []) ;
 
@@ -134,8 +133,8 @@ handleResultClick(results[selectedIndex])}      }
         setIsOpen(false) ;
         setSelectedIndex(-1) ;
       }
-    };
-
+    };';
+';';
     document.addEventListener('mousedown', handleClickOutside);    return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
 
   // Handle keyboard navigation
@@ -147,17 +146,17 @@ handleResultClick(results[selectedIndex])}      }
   };
 }, []);, []);
         inputRef.current?.focus () }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
+    };';
+';';
+    document.addEventListener('keydown', handleKeyDown);';';
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
       // Add to recent searches;
-      
-      setRecentSearches(updated);
+      ';
+      setRecentSearches(updated);';';
       localStorage.setItem('zion-recent-searches', JSON.stringify(updated));
-      // Navigate to search results or close search
-      setIsOpen(false);
+      // Navigate to search results or close search';
+      setIsOpen(false);';';
       setQuery('')}
   }, [recentSearches]);
 
@@ -165,33 +164,33 @@ handleResultClick(results[selectedIndex])}      }
     router(result.url) ;
     const handleKeyDown = (props: any) => {;      if(!isOpen) return;
 
-      switch(event.key) {
-
+      switch(event.key) {';
+';';
         case 'ArrowDown':
           event.preventDefault();
           setSelectedIndex(prev = > ;
             prev < results.length-1 ? prev + 1 : prev;
-          );
-          break;
+          );';
+          break;';';
         case 'ArrowUp':;
           event.preventDefault();
-          setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
-          break;
+          setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);';
+          break;';';
         case 'Enter':;
           event.preventDefault () ;
           if(selectedIndex >= 0 && results[selectedIndex]) {
 
             handleResultClick(results[selectedIndex])} else if(query.trim()) {
 
-            handleSearch()}
-          break;
+            handleSearch()}';
+          break;';';
         case 'Escape':;
           setIsOpen(false) ;
           setSelectedIndex(-1) ;
           break}
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
+    };';
+';';
+    document.addEventListener('keydown', handleKeyDown);';';
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, results, selectedIndex, query]);
 
     if(!query.trim () ) return;
@@ -208,8 +207,8 @@ handleResultClick(results[selectedIndex])}      }
       const matchesFilters = (filters.type.length === 0 || filters.type.includes(result.type) ) &&; (filters.category.length === 0 || filters.category.includes(result.category) ) &&; (filters.tags.length === 0 || filters.tags.some(tag => result.tags.includes (tag) ) ) ;
 
       return matchesQuery && matchesFilters}) ;
-
-    setIsOpen(false);
+';
+    setIsOpen(false);';';
     setQuery('')};
 
     onSearch?.(suggestion.text)};
@@ -223,23 +222,23 @@ setFilters(prev: > ({;
         : [...prev[filterType], value]}) ) };
 
     setFilters({ type: [], category: [], tags: [] }) };
-
-    switch(type) {;
-      case 'service': return <Code className="h-4 w-4"   />;'"
-      case 'page': return <Globe className="h-4 w-4"   />;'"
-      case 'blog': return <TrendingUp className="h-4 w-4"   />;'"
+';
+    switch(type) {;';';
+      case 'service': return <Code className="h-4 w-4"   />;'"';';
+      case 'page': return <Globe className="h-4 w-4"   />;'"';';
+      case 'blog': return <TrendingUp className="h-4 w-4"   />;'"';';
       case 'case-study': return <Building className="h-4 w-4"   />}
   };
-
-    setResults([]);
-'
+';
+    setResults([]);';';
+'';';
     setQuery('');    setResults([]);
     setIsOpen(false);
-    setSelectedIndex(-1)};
-
-      case 'minimal':'
-        return 'bg-white dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700';
-      default:'
+    setSelectedIndex(-1)};';
+';';
+      case 'minimal':'';';
+        return 'bg-white dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700';';';
+      default:'';';
         return 'bg-white dark: b g-gray-800 border border-gray-200 dark: borde r-gray-700 shadow-lg'}
   };
 
@@ -265,13 +264,13 @@ setFilters(prev: > ({;
           )}
         </div>;"
       default: retur n <Search className="h-4 w-4"   />};
-
-    switch(variant) {;
-      case 'futuristic':;
-        return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 hover: borde r-purple-500/40 focus-within: borde r-purple-500 focus-within: rin g-2 focus-within: rin g-purple-500/20';
-      case 'minimal':'
-        return 'bg-gray-100 border border-gray-200 hover: borde r-gray-300 focus-within: borde r-blue-500 focus-within: rin g-2 focus-within: rin g-blue-500/20';
-      default:'
+';
+    switch(variant) {;';';
+      case 'futuristic':;';';
+        return 'bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 hover: borde r-purple-500/40 focus-within: borde r-purple-500 focus-within: rin g-2 focus-within: rin g-purple-500/20';';';
+      case 'minimal':'';';
+        return 'bg-gray-100 border border-gray-200 hover: borde r-gray-300 focus-within: borde r-blue-500 focus-within: rin g-2 focus-within: rin g-blue-500/20';';';
+      default:'';';
         return 'bg-white border border-gray-300 hover: borde r-gray-400 focus-within: borde r-blue-500 focus-within: rin g-2 focus-within: rin g-blue-500/20'}  };
 
   return ()`
@@ -286,9 +285,9 @@ setFilters(prev: > ({;
           onFocus={() => setIsOpen(true)}
           placeholder={placeholder}"
           className="w-full pl-12 pr-12 py-3 bg-transparent border-none outline-none text-gray-900 placeholder-gray-500"
-        />
-        {query && (
-          <button'
+        />';
+        {query && (';';
+          <button'';';
             onClick={() => setQuery('')}"
             className="absolute right-4 p-1 text-gray-400 hover: tex t-gray-600 transition-colors"
           >"
@@ -344,8 +343,8 @@ setFilters(prev: > ({;
   opacity: 0
 
 }}
-                  animate = {
-
+                  animate = {';
+';';
   { height: 'auto',
   opacity: 1
 
@@ -361,19 +360,19 @@ setFilters(prev: > ({;
                   <div className="p-4 space-y-4">
                     {/* Type Filters */}
                     <div>"
-                      <h4 className="text-sm font-medium text-gray-900 mb-2">Type</h4>"
-                      <div className="flex flex-wrap gap-2">
+                      <h4 className="text-sm font-medium text-gray-900 mb-2">Type</h4>"';
+                      <div className="flex flex-wrap gap-2">';';
                         {['service',page',blog',case-study'].map(type => (
                           <button
                             key={type}
-                            onClick={
-
+                            onClick={';
+';';
   () => toggleFilter('type',
   type)
 
-}`
-                            className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.type.includes(type)
-                                ? 'bg-blue-500 text-white''
+}`';
+                            className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.type.includes(type)';';
+                                ? 'bg-blue-500 text-white''';';
                                 : 'bg-gray-100 text-gray-600 hover: b g-gray-200'`
                             }`}
                           >
@@ -389,14 +388,14 @@ setFilters(prev: > ({;
                         {categories.map(category => (
                           <button
                             key={category.id}
-                            onClick={
-
+                            onClick={';
+';';
   () => toggleFilter('category',
   category.name)
 
-}`
-                            className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.category.includes(category.name)
-                                ? 'bg-blue-500 text-white''
+}`';
+                            className={`px-3 py-1 text-xs rounded-full transition-colors ${filters.category.includes(category.name)';';
+                                ? 'bg-blue-500 text-white''';';
                                 : 'bg-gray-100 text-gray-600 hover: b g-gray-200'`
                             }`}
                           >
@@ -456,8 +455,8 @@ setFilters(prev: > ({;
                 <div className="p-4 space-y-2">
                   {results.map((result, index) => (
                     <button
-                      key={result.id}
-                      onClick={() => handleResultClick(result)}`
+                      key={result.id}';
+                      onClick={() => handleResultClick(result)}`';';
                       className={`w-full text-left p-3 hover: b g-gray-50 rounded-lg transition-colors group ${index === selectedIndex ? 'bg-blue-50' : ''`
                       }`}
                     >"
@@ -493,30 +492,26 @@ setFilters(prev: > ({;
                   <p className="text-gray-600">
                     Try adjusting your search terms or filters
                   </p>
-                </div>) }
+                    </div>
+  );
+}
             </div>;
           </motion.div>;) };
-      </AnimatePresence>;
-    </div>;) }
+      </AnimatePresence>;';
+    </div>;) }';';
 '"`
 ;,"});,})";
 
 </motion>
-</motion>
-</div>
 </div>
 </SearchFilter>
-</any>
 </any>
 </SearchSuggestion>
 </SearchResult>
 </any>
-</any>
-</any>
 </SearchFilter>
-</any>
 </any>
 </SearchSuggestion>
 </SearchResult>
-</any>
-</any>
+</any>';
+</any>;';;';

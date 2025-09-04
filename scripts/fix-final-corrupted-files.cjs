@@ -73,8 +73,7 @@ export default function IntegrationExamples() {
 {\`class ZionTechAPI {
   constructor(apiKey, baseURL = 'https://api.ziontechgroup.com/v1') {
     this.apiKey = apiKey;
-    this.baseURL = baseURL;
-  }
+    this.baseURL = baseURL}
 
   async getServices() {
     try {
@@ -86,14 +85,11 @@ export default function IntegrationExamples() {
       });
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`);
-      }
+        throw new Error(\`HTTP error! status: \${response.status}\`)}
       
-      return await response.json();
-    } catch (error) {
+      return await response.json()} catch (error) {
       console.error('Error fetching services:', error);
-      throw error;
-    }
+      throw error}
   }
 
   async submitContact(data) {
@@ -107,11 +103,9 @@ export default function IntegrationExamples() {
         body: JSON.stringify(data)
       });
       
-      return await response.json();
-    } catch (error) {
+      return await response.json()} catch (error) {
       console.error('Error submitting contact:', error);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -143,9 +137,7 @@ console.log(services);\`}
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/marketplace.tsx') {
+  )}`} else if (filePath === 'pages/marketplace.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -264,9 +256,7 @@ export default function Marketplace() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/privacy.tsx') {
+  )}`} else if (filePath === 'pages/privacy.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 
@@ -317,12 +307,10 @@ const PrivacyPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
+  )};
 
 export default PrivacyPage;
-`;
-    } else if (filePath === 'pages/request-quote.tsx') {
+`} else if (filePath === 'pages/request-quote.tsx') {
       content = `import React, { useState } from 'react';
 import Head from 'next/head';
 import { Send, CheckCircle } from 'lucide-react';
@@ -357,15 +345,13 @@ export default function RequestQuote() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Quote request submitted:', formData);
-    setIsSubmitted(true);
-  };
+    setIsSubmitted(true)};
 
   if (isSubmitted) {
     return (
@@ -393,8 +379,7 @@ export default function RequestQuote() {
           </div>
         </div>
       </>
-    );
-  }
+    )}
 
   return (
     <>
@@ -589,9 +574,7 @@ export default function RequestQuote() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/schedule-demo.tsx') {
+  )}`} else if (filePath === 'pages/schedule-demo.tsx') {
       content = `import React, { useState } from 'react';
 import Head from 'next/head';
 import { Calendar, Clock, CheckCircle } from 'lucide-react';
@@ -618,15 +601,13 @@ export default function ScheduleDemo() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Demo scheduled:', { ...formData, selectedDate, selectedTime });
-    setIsSubmitted(true);
-  };
+    setIsSubmitted(true)};
 
   if (isSubmitted) {
     return (
@@ -654,8 +635,7 @@ export default function ScheduleDemo() {
           </div>
         </div>
       </>
-    );
-  }
+    )}
 
   return (
     <>
@@ -823,20 +803,15 @@ export default function ScheduleDemo() {
         </div>
       </div>
     </>
-  );
-}`;
-    }
+  )}`}
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Fixed ${filePath}`);
-    } else {
-      console.log(`   ⚠️  No content defined for ${filePath}`);
-    }
+      console.log(`   ✅ Fixed ${filePath}`)} else {
+      console.log(`   ⚠️  No content defined for ${filePath}`)}
 
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`);
-  }
+    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
 }
 
 // Fix all corrupted files

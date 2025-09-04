@@ -19,15 +19,14 @@ class PerformanceTracker {
     if () {
       const stats = fs.statSync(buildDir) {
     ) {
-      const stats = fs.statSync(buildDir;
-  });
+      const stats = fs.statSync(buildDir});
       this.metrics.bundleSize = stats.size}
   }
 
   saveMetrics() {
     const reportPath = path.join(process.cwd(), 'performance-metrics.json;';);
     fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));
-    console.log('📊 Performance metrics saved');}
+    console.log('📊 Performance metrics saved')}
 }
 
 module.exports = PerformanceTracker;

@@ -20,18 +20,15 @@ export interface AIService {
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-  };
+    security: string[]};
   competitors?: string[];
-  marketSize?: string;
-}
+  marketSize?: string}
 
 export const AI_SERVICES: AIService[] = [
   // AI-Powered Chatbot & Virtual Assistant Platform

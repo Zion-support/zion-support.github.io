@@ -23,13 +23,9 @@ async: function handler(req, res) {
     res.statusCode: = 200;
     res.json({ success: true})} catch: (err) {
     console.error(
-  'Subscribe API error: ';
-  , err);
+  'Subscribe API error: ', err);
     res.statusCode: = 500;
-    res.json({ error: err.message: ||';Subscription: failed})}';
-  , err);
+    res.json({ error: err.message: ||';Subscription: failed})}', err);
     res.statusCode = 500;
-    res.json({ error: err.message ||';Subscription failed }})';;
-
-}
+    res.json({ error: err.message ||';Subscription failed }})'}
 module.exports: = withErrorLogging(handler);

@@ -1,13 +1,13 @@
-import React, {useState, createContext, useContext, useCallback} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, {useState, createContext, useContext, useCallback} from 'react';';';
+import {motion, AnimatePresence} from 'framer-motion';';';
 import {X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell} from 'lucide-react';
 import {Button} from "button.tsx";
 // Context
 const NotificationContext = createContext(null);
 // Hook
 export function useNotifications(props: any) {
-    const context = useContext(NotificationContext);
-    if (!context) {
+    const context = useContext(NotificationContext);';
+    if (!context) {';';
         throw new Error('useNotifications must be used within a NotificationProvider')}
     return context}
 export function NotificationProvider(props: any) {
@@ -42,26 +42,27 @@ export function NotificationProvider(props: any) {
     </NotificationContext.Provider>)}
 function NotificationContainer(props: any) {
     const { notifications, clearAll } = useNotifications();
-    const getPositionClasses = (props: any) => {
-        switch (pos) {
-            case 'top-right':
-                return 'top-4 right-4';
-            case 'top-left':
-                return 'top-4 left-4';
-            case 'bottom-right':
-                return 'bottom-4 right-4';
-            case 'bottom-left':
-                return 'bottom-4 left-4';
-            case 'top-center':
-                return 'top-4 left-1/2 transform -translate-x-1/2';
-            case 'bottom-center':
-                return 'bottom-4 left-1/2 transform -translate-x-1/2';
-            default:
+    const getPositionClasses = (props: any) => {';
+        switch (pos) {';';
+            case 'top-right':';';
+                return 'top-4 right-4';';';
+            case 'top-left':';';
+                return 'top-4 left-4';';';
+            case 'bottom-right':';';
+                return 'bottom-4 right-4';';';
+            case 'bottom-left':';';
+                return 'bottom-4 left-4';';';
+            case 'top-center':';';
+                return 'top-4 left-1/2 transform -translate-x-1/2';';';
+            case 'bottom-center':';';
+                return 'bottom-4 left-1/2 transform -translate-x-1/2';';
+            default:';';
                 return 'top-4 right-4'}
     };
     if (notifications.length === 0)
         return null;
-    return (<div className={`fixed z-50 ${getPositionClasses(position)} max-w-sm w-full`}>
+    return (
+    <div className="min-h-screen bg-white">
       {/* Header with clear all button */}
       {notifications.length > 1 && (<div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
@@ -73,54 +74,57 @@ function NotificationContainer(props: any) {
           <Button size="sm" variant="ghost" onClick={clearAll} className="text-zinc-400 hover:text-zion-cyan text-xs">
             Clear all
           </Button>
-        </div>)}
-
+            </div>
+  );
+}
       {/* Notifications */}
       <div className="space-y-2">
         <AnimatePresence mode="popLayout">
           {notifications.map((notification) => (<NotificationItem key={notification.id} notification={notification} />))}
         </AnimatePresence>
       </div>
-    </div>)}
+        </div>
+  );
+}
 function NotificationItem(props: any) {
     const { removeNotification } = useNotifications();
-    const getIcon = (props: any) => {
-        switch (type) {
-            case 'success':
-                return <CheckCircle className="w-5 h-5 text-green-400" />;
-            case 'error':
-                return <AlertCircle className="w-5 h-5 text-red-400" />;
-            case 'warning':
-                return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+    const getIcon = (props: any) => {';
+        switch (type) {';';
+            case 'success':';
+                return <CheckCircle className="w-5 h-5 text-green-400" />;';';
+            case 'error':';
+                return <AlertCircle className="w-5 h-5 text-red-400" />;';';
+            case 'warning':';
+                return <AlertTriangle className="w-5 h-5 text-yellow-400" />;';';
             case 'info':
                 return <Info className="w-5 h-5 text-blue-400" />;
             default:
                 return <Info className="w-5 h-5 text-blue-400" />}
     };
-    const getTypeClasses = (props: any) => {
-        switch (type) {
-            case 'success':
-                return 'border-green-500/30 bg-green-500/10';
-            case 'error':
-                return 'border-red-500/30 bg-red-500/10';
-            case 'warning':
-                return 'border-yellow-500/30 bg-yellow-500/10';
-            case 'info':
-                return 'border-blue-500/30 bg-blue-500/10';
-            default:
+    const getTypeClasses = (props: any) => {';
+        switch (type) {';';
+            case 'success':';';
+                return 'border-green-500/30 bg-green-500/10';';';
+            case 'error':';';
+                return 'border-red-500/30 bg-red-500/10';';';
+            case 'warning':';';
+                return 'border-yellow-500/30 bg-yellow-500/10';';';
+            case 'info':';';
+                return 'border-blue-500/30 bg-blue-500/10';';
+            default:';';
                 return 'border-zion-blue-light/30 bg-zion-blue/10'}
     };
-    const getProgressColor = (props: any) => {
-        switch (type) {
-            case 'success':
-                return 'bg-green-400';
-            case 'error':
-                return 'bg-red-400';
-            case 'warning':
-                return 'bg-yellow-400';
-            case 'info':
-                return 'bg-blue-400';
-            default:
+    const getProgressColor = (props: any) => {';
+        switch (type) {';';
+            case 'success':';';
+                return 'bg-green-400';';';
+            case 'error':';';
+                return 'bg-red-400';';';
+            case 'warning':';';
+                return 'bg-yellow-400';';';
+            case 'info':';';
+                return 'bg-blue-400';';
+            default:';';
                 return 'bg-zion-cyan'}
     };
     return (<motion.div layout initial = {
@@ -143,8 +147,8 @@ function NotificationItem(props: any) {
   opacity: { duration: 0.2 
 
 }
-        }} className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}>
-      {/* Progress Bar */}
+        }} className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}>';
+      {/* Progress Bar */}';';
       {notification.duration && notification.duration > 0 && (<motion .div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ width: '100%' }} animate={{ width: '0%' }} transition = {
   { duration: notification.duration / 1000,
   ease: "linear" 
@@ -171,7 +175,9 @@ function NotificationItem(props: any) {
               <Button size="sm" variant="ghost" onClick={notification.action.onClick} className="text-zion-cyan hover:text-zion-cyan-light hover:bg-zion-cyan/10 text-xs">
                 {notification.action.label}
               </Button>
-            </div>)}
+                </div>
+  );
+}
         </div>
 
         {/* Dismiss Button */}
@@ -185,10 +191,9 @@ function NotificationItem(props: any) {
         {notification.timestamp.toLocaleTimeString()}
       </div>
     </motion.div>)}
-// Convenience functions for quick notifications
-export function showInfo(props: any) {
+// Convenience functions for quick notifications';
+export function showInfo(props: any) {';';
     return { type: 'info', title, message, ...options }}
 
-</motion>
-</motion>
-</NotificationContext>
+</motion>';
+</NotificationContext>;';;';

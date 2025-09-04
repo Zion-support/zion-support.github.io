@@ -1,6 +1,5 @@
 import React from "react";
   );
 export default function Authslice() {};
-  return null;
-}
+  return null}
 }

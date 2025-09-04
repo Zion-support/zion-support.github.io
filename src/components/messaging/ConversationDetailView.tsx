@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';';';
 import { format } from 'date-fns';
 
 export default function Page(props: any) {
@@ -9,21 +9,22 @@ export default function Page(props: any) {
 }, []);
     scrollToBottom();
   }, [activeMessages]);
-
-  const scrollToBottom = (props: any) => {
+';
+  const scrollToBottom = (props: any) => {';';
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
   
   const handleSendMessage = async(e: Reac t.FormEvent) => {
     e.preventDefault();
     if(!messageText.trim() || !activeConversation) return;
-    
-    await sendMessage(activeConversation.id, messageText);
+    ';
+    await sendMessage(activeConversation.id, messageText);';';
     setMessageText('');
   };
   
   if(!activeConversation) {
-    return (<div className="flex-1 flex flex-col items-center justify-center p-8">
+    return (
+    <div className="min-h-screen bg-white">
         <MessageSquare className="h-16 w-16 text-zion-purple/40 mb-4"  />
         <h3 className="text-xl font-medium text-white mb-2">No Conversation Selected</h3>
         <p className="text-zion-slate text-center max-w-md">
@@ -33,8 +34,8 @@ export default function Page(props: any) {
   }
   
   const groupedMessages: { date: string; messages: an y[] }[] = [];
-  
-  activeMessages.forEach(message => {
+  ';
+  activeMessages.forEach(message => {';';
     const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
     const existingGroup = groupedMessages.find(group => group.date === messageDate);
     
@@ -51,7 +52,8 @@ export default function Page(props: any) {
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description);
 
-  return (<div className="flex-1 flex flex-col h-full">
+  return (
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
@@ -66,10 +68,10 @@ export default function Page(props: any) {
           <div>
             <div className="font-medium text-white">
               {activeConversation.other_user.name}
-            </div>
-            <div className="text-xs text-zion-slate">
-              {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
-               activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
+            </div>';
+            <div className="text-xs text-zion-slate">';';
+              {activeConversation.other_user.user_type === 'talent' ? 'Talent' : ';';
+               activeConversation.other_user.user_type === 'employer' ? 'Employer' : ';';
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
@@ -87,12 +89,13 @@ export default function Page(props: any) {
                     className="object-cover"
                     />
                 </AspectRatio>
-              </div>
-            )}
-            <div>
-              <div className="font-medium text-white mb-1">
-                {activeConversation.context_type === 'job' ? 'Regarding Job:' :
-                 activeConversation.context_type === 'talent' ? 'Regarding Talent:' :
+                  </div>
+  );
+}
+            <div>';
+              <div className="font-medium text-white mb-1">';';
+                {activeConversation.context_type === 'job' ? 'Regarding Job:' :';';
+                 activeConversation.context_type === 'talent' ? 'Regarding Talent:' :';';
                  'Regarding:'}
               </div>
               <div className="text-zion-cyan font-medium">
@@ -101,13 +104,14 @@ export default function Page(props: any) {
               {activeConversation.context_data.description && (
                 <div className="text-xs text-zion-slate mt-1 line-clamp-2">
                   {activeConversation.context_data.description}
-                </div>
-              )}
+                    </div>
+  );
+}
             </div>
           </div>
-        </div>
-      )}
-      
+            </div>
+  );
+}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {groupedMessages.length === 0 ? (
           <div className="text-center text-zion-slate py-12">
@@ -152,5 +156,5 @@ export default function Page(props: any) {
 }
 
 </textarea>
-</MessageBubble>
-</AvatarImage>
+</MessageBubble>';
+</AvatarImage>;';;';

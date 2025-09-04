@@ -19,6 +19,5 @@ module.exports = {
           reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',
         })
       )}
-    return config;
-  }},
+    return config}},
 };

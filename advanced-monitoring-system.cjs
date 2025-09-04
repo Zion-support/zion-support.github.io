@@ -40,9 +40,9 @@ class AdvancedMonitoringSystem {
           timestamp: new Date().toISOString()
         })});
       
-      return this.metrics;} catch (error) {
+      return this.metrics} catch (error) {
       console.error('Error collecting metrics:', error);
-      return null;}
+      return null}
   }
 
   async generateReport() {
@@ -51,13 +51,13 @@ class AdvancedMonitoringSystem {
       timestamp: new Date().toISOString(),
       metrics,
       recommendations: this.generateRecommendations(metrics)
-   ; ;};
+   };
     
     fs.writeFileSync('monitoring-report.json', JSON.stringify(report, null, 2));
-    return report;}
+    return report}
 
   generateRecommendations(metrics) {
-    const recommendations = [;];
+    const recommendations = [];
     
     if ( { // 100MB
       recommendations.push({
@@ -88,12 +88,11 @@ class AdvancedMonitoringSystem {
         message: 'High error rate detected. Review error logs.'
       })}
     
-    return recommendations;
-  }}
+    return recommendations}}
 }
 
 // Run monitoring
 const monitor = new AdvancedMonitoringSystem;(;);
 monitor.generateReport().then(report => {
-  console.log('📊 Monitoring report generated:', report);}).catch(error => {
+  console.log('📊 Monitoring report generated:', report)}).catch(error => {
   console.error('❌ Monitoring failed:', error)});

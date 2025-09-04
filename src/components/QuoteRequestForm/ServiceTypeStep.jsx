@@ -26,37 +26,35 @@ export function ServiceTypeStep(props: any) {
             const maxRetries = 3;
             for (let attempt = 0; attempt < maxRetries; attempt++) {
                 try {
-                    const response = await fetch(url);
-                    if (!response.ok)
+                    const response = await fetch(url);';
+                    if (!response.ok)';';
                         throw new Error('Failed to fetch');
                     const data = await response.json();
-                    const parsed = listingsSchema.safeParse(data);
-                    if (!parsed.success)
+                    const parsed = listingsSchema.safeParse(data);';
+                    if (!parsed.success)';';
                         throw new Error('Invalid response');
                     setListings(parsed.data);
-                    setError(null);
-                    setLoading(false);
+                    setError(null);';
+                    setLoading(false);';';
                             // // // // // // // console.error('Failed to load services:', err);
                         }
                         else {
                             captureException(err);
-
-                        setListings([]);
+';
+                        setListings([]);';';
                         setError('Failed to load services');
                         setLoading(false);
 
                     else {
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
 
-
-
                     return}
-                catch (err) {
-                    if (attempt === maxRetries - 1) {
-                        if (process.env.NODE_ENV === 'development') {
+                catch (err) {';
+                    if (attempt === maxRetries - 1) {';';
+                        if (process.env.NODE_ENV === 'development') {';';
                             console.error('Failed to load services:', err)}
-                        else {captureException(err)}
-                        setListings([]);
+                        else {captureException(err)}';
+                        setListings([]);';';
                         setError('Failed to load services');
                         setLoading(false)}
                     else {await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))}
@@ -81,7 +79,8 @@ export function ServiceTypeStep(props: any) {
             return true;
         return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.category.toLowerCase().includes(searchQuery.toLowerCase())});
-    return (<div className="space-y-6">
+    return (
+    <div className="min-h-screen bg-white">
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -116,21 +115,24 @@ export function ServiceTypeStep(props: any) {
             <Input placeholder={`Search ${formData.serviceType}...`} value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"/>
           </div>
 
-          {error && (<div className="text-center text-red-400 text-sm">{error}</div>)}
-
+          {error && (<div className="text-center text-red-400 text-sm">{error}    </div>
+  );
+}
           <div className="grid grid-cols-1 gap-4 mt-4">
             {loading ? (<>
-                <Skeleton className="h-[120px] w-full" />
-                <Skeleton className="h-[120px] w-full" />
                 <Skeleton className="h-[120px] w-full" />
               </>) : filteredListings.length > 0 ? (filteredListings.map((item) => (<div key={item.id} onClick={() => handleItemSelect(item)} className={`cursor-pointer transition-all ${formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""}`}>
                   <ListingScoreCard title={item.title} category={item.category} aiScore={Math.floor(Math.random() * 30) + 70} rating={Math.floor(Math.random() * 2) + 3} reviewCount={Math.floor(Math.random() * 50) + 10} image={item.image} description="Sample listing description" />
                 </div>))) : (<div className="text-center py-8 text-zion-slate-light">
                 No items found. Please try a different search.
-              </div>)}
+                  </div>
+  );
+}
           </div>
-        </div>)}
-    </div>)}
-
-
-export default ServiceTypeStep;
+            </div>
+  );
+}
+        </div>
+  );
+}';
+export default ServiceTypeStep;;';;';

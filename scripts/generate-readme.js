@@ -9,23 +9,18 @@ function main() {
 
   let content = '';
   try {
-    content = fs.readFileSync(readmePath, 'utf8');
-  } catch (err) {
+    content = fs.readFileSync(readmePath, 'utf8')} catch (err) {
     // If README doesn't exist, create a basic one
-    content = '# Project\n\n';
-  }
+    content = '# Project\n\n'}
 
   const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`;
   if (!content.includes('Automation summary:')) {
-    content += footer;
-  } else {
+    content += footer} else {
     // replace existing footer
-    content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m, footer);
-  }
+    content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m, footer)}
 
   fs.writeFileSync(readmePath, content, 'utf8');
-  console.log('✅ README updated');
-}
+  console.log('✅ README updated')}
 
 main();
 

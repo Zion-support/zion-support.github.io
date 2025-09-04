@@ -69,8 +69,7 @@ fixes.forEach(({ file, search, replace }) => {
     
     if (!fs.existsSync(filePath)) {
       console.log(`⚠️  File not found: ${file}`);
-      return;
-    }
+      return}
     
     let content = fs.readFileSync(filePath, 'utf8');
     
@@ -78,13 +77,11 @@ fixes.forEach(({ file, search, replace }) => {
       content = content.replace(search, replace);
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed issue in ${file}`);
-      fixedCount++;
-    }
+      fixedCount++}
     
   } catch (error) {
     console.error(`❌ Error fixing ${file}:`, error.message);
-    errorCount++;
-  }
+    errorCount++}
 });
 
 console.log(`\n🎉 Final syntax error fixing complete!`);

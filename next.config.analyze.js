@@ -5,11 +5,10 @@ module.exports = {
   if (!isServer) {
   config.plugins.push(;
         new BundleAnalyzerPlugin({
-  analyzerMode: "static",;
-          openAnalyzer: false,;
-          reportFilename: "bundle-analysis.html";,
+  analyzerMode: "static",
+          openAnalyzer: false,
+          reportFilename: "bundle-analysis.html",
 });
-      );
-}
+      )}
     return config}
 }

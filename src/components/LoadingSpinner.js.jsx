@@ -167,6 +167,5 @@ export {LoadingSpinner};
 </circle>
 </svg>
 </div>
-</div>
 </path>
-</circle>
+</circle>;;

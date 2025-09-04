@@ -10,8 +10,7 @@ const deployment = {
   timestamp: new Date().toISOString(),
   steps: [],
   environment: process.env.NODE_ENV || 'development',
-  status: 'pending';
-;};
+  status: 'pending'};
 
 // Function to run deployment step with error handling
 async function runDeploymentStep(name, fn) {
@@ -25,7 +24,7 @@ async function runDeploymentStep(name, fn) {
       timestamp: new Date().toISOString()
     });
     console.log(`✅ ${name} completed successfully`);
-    return result;} catch (error) {
+    return result} catch (error) {
     deployment.steps.push({
       name,
       status: 'error',
@@ -48,8 +47,7 @@ await runDeploymentStep('Pre-deployment Health Check', async () => {
     throw new Error('No build found. Run npm run build first.')}
   
   // Check package.json
-  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8';
-  }););
+  const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'}););
   if ( {
     throw new Error('No start script found in package.json')}
   
@@ -59,8 +57,7 @@ await runDeploymentStep('Pre-deployment Health Check', async () => {
     throw new Error('No start script found in package.json')}
   
   // Check environment variables
-  const envFile = deployment.environment === 'production' ? '.env.production' : '.env.local;
-  }';
+  const envFile = deployment.environment === 'production' ? '.env.production' : '.env.local}';
   const hasEnvFile = fs.existsSync(envFile) || fs.existsSync('.env';);
   
   return {;
@@ -76,7 +73,7 @@ await runDeploymentStep('Environment Configuration', async () => {
     NODE_ENV: deployment.environment,
     PORT: process.env.PORT || 3000,
     HOST: process.env.HOST || '0.0.0.0'
- ; ;};
+ };
   
   // Create or update .env file
   const envContent = Object.entries(envConfig)
@@ -85,7 +82,7 @@ await runDeploymentStep('Environment Configuration', async () => {
   
   fs.writeFileSync('.env.deployment', envContent);
   
-  return envConfig;});
+  return envConfig});
 
 // 3. Dependency Verification
 await runDeploymentStep('Dependency Verification', async () => {
@@ -93,8 +90,7 @@ await runDeploymentStep('Dependency Verification', async () => {
   if () {
     console.log('   📦 Installing dependencies...')) {
     ) {
-    console.log('   📦 Installing dependencies...');
-  }
+    console.log('   📦 Installing dependencies...')}
     execSync('npm install --production', { stdio: 'inherit' })}
   
   // Check for security vulnerabilities
@@ -102,10 +98,10 @@ await runDeploymentStep('Dependency Verification', async () => {
     const auditResult = execSync('npm audit --audit-level=high', { 
       encoding: 'utf8', 
       stdio: 'pipe' 
-    ;};);
-    return { dependenciesInstalled: true, securityAudit: 'passed' ;}} catch (error) {
+    };);
+    return { dependenciesInstalled: true, securityAudit: 'passed' }} catch (error) {
     console.log('   ⚠️  Security vulnerabilities found, but continuing deployment');
-    return { dependenciesInstalled: true, securityAudit: 'warnings' ;}}
+    return { dependenciesInstalled: true, securityAudit: 'warnings' }}
 });
 
 // 4. Build Optimization
@@ -114,12 +110,11 @@ await runDeploymentStep('Build Optimization', async () => {
   if () {
     console.log('   🏗️  Running production build...')) {
     ) {
-    console.log('   🏗️  Running production build...');
-  }
+    console.log('   🏗️  Running production build...')}
     execSync('npm run build', { stdio: 'inherit' })}
   
   // Check build size
-  const buildStats = execSync('du -sh .next', { encoding: 'utf8' ;};);
+  const buildStats = execSync('du -sh .next', { encoding: 'utf8' };);
   const buildSize = buildStats.trim(;);
   
   // Check for build artifacts
@@ -179,14 +174,13 @@ await runDeploymentStep('PM2 Process Management', async () => {
             PORT: 3000
           }
         }]
-     ;
-  } ;};
+     } };
       
       fs.writeFileSync('ecosystem.basic.cjs', `module.exports = ${JSON.stringify(basicConfig, null, 2)};`);
       execSync('pm2 start ecosystem.basic.cjs', { stdio: 'inherit' })}
     
     // Show PM2 status
-    const pm2Status = execSync('pm2 status', { encoding: 'utf8' ;};);
+    const pm2Status = execSync('pm2 status', { encoding: 'utf8' };);
     
     return {;
       pm2Installed: true,
@@ -210,7 +204,7 @@ await runDeploymentStep('Health Check and Monitoring', async () => {
     const healthCheck = execSync('curl -f http://localhost:3000 || echo "Health check failed"', { 
       encoding: 'utf8',
       timeout: 10000
-    ;};);
+    };);
     
     return {;
       applicationResponding: !healthCheck.includes('Health check failed'),
@@ -229,16 +223,16 @@ await runDeploymentStep('Post-deployment Verification', async () => {
     logsDirectory: fs.existsSync('logs'),
     pm2Processes: false,
     applicationStatus: 'unknown'
- ; ;};
+ };
   
   // Check PM2 processes
   try {
-    const pm2List = execSync('pm2 list --json', { encoding: 'utf8' ;};);
+    const pm2List = execSync('pm2 list --json', { encoding: 'utf8' };);
     const processes = JSON.parse(pm2List;);
     verification.pm2Processes = processes.length > 0} catch (error) {
     verification.pm2Processes = false}
   
-  return verification;});
+  return verification});
 
 // Update deployment status
 deployment.status = 'success';
@@ -260,13 +254,12 @@ console.log(`   - Total steps: ${totalSteps}`);
 console.log(`   - Successful: ${successfulSteps}`);
 console.log(`   - Failed: ${failedSteps}`);
 console.log(`   - Environment: ${deployment.environment}`);
-console.log(`   - Status: ${deployment.status.toUpperCase();}`);
+console.log(`   - Status: ${deployment.status.toUpperCase()}`);
 
 if ( {
   console.log('🎉 Deployment completed successfully!')) {
      {
-  console.log('🎉 Deployment completed successfully!');
-  }
+  console.log('🎉 Deployment completed successfully!')}
   console.log('🌐 Application should be running on http://localhost:3000');
   process.exit(0)} else {
   console.log('⚠️  Deployment completed with some issues');

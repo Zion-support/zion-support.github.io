@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react';';';
 import { Link } from 'react-router-dom';
 import { 
   ChevronDown, 
@@ -27,8 +27,8 @@ Rocket,
   GraduationCap,
   Lightbulb,
   Code,
-  Activity,
-  Target
+  Activity,';
+  Target';';
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -193,8 +193,9 @@ AI Solutions
                 </Link>
               </div>
             </div>
-</div>
-        )}
+    </div>
+  );
+}
       </div>
 
       {/* Solutions Dropdown */}
@@ -286,8 +287,9 @@ onMouseLeave={() => setIsSolutionsOpen(false)}
                 </Link>
               </div>
 </div>
-          </div>
-        )}
+              </div>
+  );
+}
       </div>
 
       {/* Company Dropdown */}
@@ -347,8 +349,9 @@ onMouseLeave={() => setIsCompanyOpen(false)}
                 </li>
               </ul>
 </div>
-          </div>
-        )}
+              </div>
+  );
+}
       </div>
 
 {/* Resources */}
@@ -378,11 +381,9 @@ onMouseLeave={() => setIsCompanyOpen(false)}
   );
 }
 
-
 export default MainNavigation;
 </li>
 </ul>
 </div>
-</any>
-</any>
-</any>
+</any>';
+</any>;';;';

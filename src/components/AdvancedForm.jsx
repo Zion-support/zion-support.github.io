@@ -1,5 +1,5 @@
-import {useState, useEffect, useCallback} from 'react';'
-import {motion, AnimatePresence} from 'framer-motion';'
+import {useState, useEffect, useCallback} from 'react';'';';
+import {motion, AnimatePresence} from 'framer-motion';'';';
 import {Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building} from 'lucide-react';
 ;
 export const AdvancedForm = (props: any) => {
@@ -438,8 +438,8 @@ isTouched: false}})
 &apos
 &apos;&apos
             initialData[field.name] = field.type === &apos;checkbox&apos; ? false : &apos
-            initialValidation[field.name] = {}"
-                isValid: !field.required,
+            initialValidation[field.name] = {}"';
+                isValid: !field.required,';';
 message: '',
                 isTouched: false
             }}) ;
@@ -874,12 +874,12 @@ y: 0 "",">
 
   {opacity: 1,>
   y: 0 &apos,&apos,",
-&apos,&apos,"&apos}} className="&apos;space-y-2&apos;">"&apos;&apos,&apos;&apos;"
+&apos,&apos,"&apos}} className="&apos;space-y-2&apos">"&apos;&apos,&apos;&apos;"
         <label className="&apos;block" text-sm font-medium text-gray-700 dark: text-gray-300&apos,>"&apos,&apos,{field.label}&apos;&apos,&apos;{field.required &&"}&apos; <span className="&apos;text-red-500" ml-1&apos;>*&apos;</span>}
 
         </label>&apos;&apos,
 &apos;&apos,&apos;&apos,"
-        <div className="&apos;relative&apos;">"&apos;&apos;{/* comment */}&apos;&apos,&apos;&apos,"
+        <div className="&apos;relative&apos">"&apos;&apos;{/* comment */}&apos;&apos,&apos;&apos,"
           <div className="&apos;absolute" left-3 top-1/2 transform -translate-y-1/2 text-gray-400&apos;>
             {getFieldIcon(field)}&apos
           </div>"
@@ -925,8 +925,9 @@ y: 0 "",">
 &apos;&apos,{/* comment */}&apos;&apos,&apos;{isPasswordField && (&apos}&apos;<button type="&apos;button&apos;" onClick="{()" => togglePasswordVisibility(field.name)} className="&apos;absolute" right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors&apos,>"&apos,&apos,"{showPassword[field.name] ?&apos}&apos; <EyeOff className="&apos;w-4" h-4&apos;        /> :&apos; <Eye className="&apos;w-4" h-4&apos;        />}&apos
             </button>)}"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;{fieldValidation?.isTouched && (&apos}&apos;<div className="&apos;absolute" right-3 top-1/2 transform -translate-y-1/2&apos;>"&apos;&apos,{fieldValidation.isValid ? (&apos}&apos;<CheckCircle className="&apos;w-5" h-5 text-green-500&apos;        />) : (&apos;<AlertCircle className="&apos;w-5" h-5 text-red-500&apos;        />)}&apos
-            </div>)}
-
+                </div>
+  );
+}
         </div>
         {/* comment */}
 
@@ -987,8 +988,9 @@ y: 0 "",">
 """{/* comment */}""""{isPasswordField && (<button type="button" onClick="{()" => togglePasswordVisibility(field.name)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors">""""{showPassword[field.name] ? <EyeOff className="w-4 h-4"   /> : <Eye className="w-4 h-4"   />}"
             </button>)}"
 """{/* comment */}""""{fieldValidation?.isTouched && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">""""{fieldValidation.isValid ? (<CheckCircle className="w-5 h-5 text-green-500"   />) : (<AlertCircle className="w-5 h-5 text-red-500"   />)}"
-            </div>)}
-
+                </div>
+  );
+}
         </div>
         {/* comment */}
 
@@ -1098,7 +1100,7 @@ y: 0 ",">
 ""}} className="{"bg-white" dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar,k:border-gray-700 overflow-hidden ${className}"}>&apos;&apos,{/* comment */}&apos;&apos,&apos;&apos,"
       <div className="&apos;bg-gradient-to-r" from-blue-500 to-purple-500 p-6 text-white&apos;>"&apos;&apos,&apos;&apos;"
         <h2 className="&apos;text-2xl" font-bold mb-2&apos;>{title}&apos;</h2>&apos;&apos,&apos;&apos,"
-        <p className="&apos;text-blue-100&apos;">{subtitle}&apos;</p>
+        <p className="&apos;text-blue-100&apos">{subtitle}&apos;</p>
       </div>"
 &apos;&apos,{/* comment */}&apos;&apos,&apos;{showProgressBar && (&apos}&apos;<div className="&apos;px-6" pt-4&apos;>"&apos;&apos,&apos;&apos;"
           <div className="&apos;flex" items-center justify-between text-sm text-gray-600 dark: text-gray-400 mb-2&apos,>&apos,"
@@ -1215,8 +1217,8 @@ height: 0 "",">
         </AnimatePresence>
       </form>"
     </motion.div>)}""""
-"""""""
-    </motion.div>)}""";"
+"""""""';
+    </motion.div>)}""";"';';
 """""'""
 "
 }"
@@ -1227,17 +1229,9 @@ export default Component
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
 </p>
-</p>
-</motion>
-</motion>
-</motion>
 </motion>
 </textarea>
-</motion>
 </motion>
 </textarea>
 </motion>
@@ -1246,9 +1240,5 @@ export default Component
 </div>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</textarea>
-</motion>
+</textarea>';
+</motion>;';;';

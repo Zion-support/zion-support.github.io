@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState } from 'react';';';
 import { Link, useLocation } from 'react-router-dom';
 import {
   Home,
@@ -14,8 +14,8 @@ import {
   HelpCircle,
   BarChart3,
   Settings,
-  ChevronRight,
-  ChevronDown
+  ChevronRight,';
+  ChevronDown';';
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -24,8 +24,8 @@ interface SidebarProps {
   onClose?: () => void;
 
 }
-
-export default function Sidebar(props: any) {
+';
+export default function Sidebar(props: any) {';';
   const [expandedSections, setExpandedSections] = useState<string[]>(['Services']);
   const location = useLocation();
 
@@ -39,99 +39,99 @@ export default function Sidebar(props: any) {
 
   const isActive = (path: string) => location.pathname === path;
 
-  const sidebarItems = [
-    {
-      name: 'Home',
-      href: '/',
-      icon: Hom e,
+  const sidebarItems = [';
+    {';';
+      name: 'Home',';';
+      href: '/',';
+      icon: Hom e,';';
       type: 'link'
-    },
-    {
-      name: 'Services',
+    },';
+    {';';
+      name: 'Services',';';
       type: 'section',
-      icon: Za p,
-      items: [
-        { name: 'AI & Automation', href: '/services/ai', icon: Brai n },
-        { name: 'Cloud & DevOps', href: '/services/cloud', icon: HardDriv e },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shiel d },
-        { name: 'Digital Transformation', href: '/services/digital', icon: TrendingU p },
-        { name: 'IT Consulting', href: '/services/consulting', icon: User s },
+      icon: Za p,';
+      items: [';';
+        { name: 'AI & Automation', href: '/services/ai', icon: Brai n },';';
+        { name: 'Cloud & DevOps', href: '/services/cloud', icon: HardDriv e },';';
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shiel d },';';
+        { name: 'Digital Transformation', href: '/services/digital', icon: TrendingU p },';';
+        { name: 'IT Consulting', href: '/services/consulting', icon: User s },';';
         { name: 'Micro SAAS', href: '/services/micro-saas', icon: Building 2 }
       ]
-    },
-    {
-      name: 'Solutions',
+    },';
+    {';';
+      name: 'Solutions',';';
       type: 'section',
-      icon: Brai n,
-      items: [
-        { name: 'Enterprise', href: '/solutions/enterprise', icon: Building 2 },
-        { name: 'Healthcare', href: '/solutions/healthcare', icon: User s },
-        { name: 'Financial Services', href: '/solutions/financial', icon: TrendingU p },
-        { name: 'Government', href: '/solutions/government', icon: Shiel d },
-        { name: 'Manufacturing', href: '/solutions/manufacturing', icon: HardDriv e },
+      icon: Brai n,';
+      items: [';';
+        { name: 'Enterprise', href: '/solutions/enterprise', icon: Building 2 },';';
+        { name: 'Healthcare', href: '/solutions/healthcare', icon: User s },';';
+        { name: 'Financial Services', href: '/solutions/financial', icon: TrendingU p },';';
+        { name: 'Government', href: '/solutions/government', icon: Shiel d },';';
+        { name: 'Manufacturing', href: '/solutions/manufacturing', icon: HardDriv e },';';
         { name: 'Retail', href: '/solutions/retail', icon: BarChart 3 }
       ]
-    },
-    {
-      name: 'Company',
+    },';
+    {';';
+      name: 'Company',';';
       type: 'section',
-      icon: Building 2,
-      items: [
-        { name: 'About Us', href: '/about', icon: User s },
-        { name: 'Leadership', href: '/about#team', icon: User s },
-        { name: 'Careers', href: '/careers', icon: User s },
-        { name: 'Partners', href: '/partners', icon: User s },
+      icon: Building 2,';
+      items: [';';
+        { name: 'About Us', href: '/about', icon: User s },';';
+        { name: 'Leadership', href: '/about#team', icon: User s },';';
+        { name: 'Careers', href: '/careers', icon: User s },';';
+        { name: 'Partners', href: '/partners', icon: User s },';';
         { name: 'Press', href: '/press', icon: FileTex t }
       ]
-    },
-    {
-      name: 'Resources',
+    },';
+    {';';
+      name: 'Resources',';';
       type: 'section',
-      icon: FileTex t,
-      items: [
-        { name: 'Blog', href: '/blog', icon: FileTex t },
-        { name: 'Case Studies', href: '/case-studies', icon: FileTex t },
-        { name: 'White Papers', href: '/white-papers', icon: FileTex t },
-        { name: 'Webinars', href: '/webinars', icon: FileTex t },
-        { name: 'Documentation', href: '/docs', icon: FileTex t },
+      icon: FileTex t,';
+      items: [';';
+        { name: 'Blog', href: '/blog', icon: FileTex t },';';
+        { name: 'Case Studies', href: '/case-studies', icon: FileTex t },';';
+        { name: 'White Papers', href: '/white-papers', icon: FileTex t },';';
+        { name: 'Webinars', href: '/webinars', icon: FileTex t },';';
+        { name: 'Documentation', href: '/docs', icon: FileTex t },';';
         { name: 'API Reference', href: '/api', icon: FileTex t }
       ]
-    },
-    {
-      name: 'Support',
+    },';
+    {';';
+      name: 'Support',';';
       type: 'section',
-      icon: HelpCircl e,
-      items: [
-        { name: 'Help Center', href: '/help', icon: HelpCircl e },
-        { name: 'Contact Support', href: '/contact', icon: User s },
-        { name: 'Training', href: '/training', icon: FileTex t },
-        { name: 'Community', href: '/community', icon: User s },
+      icon: HelpCircl e,';
+      items: [';';
+        { name: 'Help Center', href: '/help', icon: HelpCircl e },';';
+        { name: 'Contact Support', href: '/contact', icon: User s },';';
+        { name: 'Training', href: '/training', icon: FileTex t },';';
+        { name: 'Community', href: '/community', icon: User s },';';
         { name: 'System Status', href: '/status', icon: BarChart 3 }
       ]
-    },
-    {
-      name: 'Pricing',
-      href: '/pricing',
-      icon: BarChart 3,
+    },';
+    {';';
+      name: 'Pricing',';';
+      href: '/pricing',';
+      icon: BarChart 3,';';
       type: 'link'
-    },
-    {
-      name: 'Contact',
-      href: '/contact',
-      icon: User s,
+    },';
+    {';';
+      name: 'Contact',';';
+      href: '/contact',';
+      icon: User s,';';
       type: 'link'
     }
   ];
-
-  const renderSidebarItem = (props: any) => {
+';
+  const renderSidebarItem = (props: any) => {';';
     if (item.type === 'link') {
       return (
         <Link
           key={item.name}
           to={item.href}
-          className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
-            isActive(item.href)
-              ? 'bg-blue-600/20 text-blue-400 border border-blue-600/30'
+          className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${';
+            isActive(item.href)';';
+              ? 'bg-blue-600/20 text-blue-400 border border-blue-600/30'';';
               : 'text-gray-300 hover: tex t-white hover: b g-gray-800/50'
           }`}
           onClick={onClose}
@@ -140,13 +140,13 @@ export default function Sidebar(props: any) {
           <span className="font-medium">{item.name}</span>
         </Link>
       );
-    }
-
+    }';
+';';
     if (item.type === 'section') {
       const isExpanded = expandedSections.includes(item.name);
       
       return (
-        <div key={item.name} className="space-y-2">
+    <div className="min-h-screen bg-white">
           <button
             onClick={() => toggleSection(item.name)}
             className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-300 hover: tex t-white hover: b g-gray-800/50 rounded-lg transition-colors"
@@ -168,9 +168,9 @@ export default function Sidebar(props: any) {
                 <Link
                   key={subItem.name}
                   to={subItem.href}
-                  className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${
-                    isActive(subItem.href)
-                      ? 'text-blue-400 bg-blue-600/10'
+                  className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${';
+                    isActive(subItem.href)';';
+                      ? 'text-blue-400 bg-blue-600/10'';';
                       : 'text-gray-400 hover: tex t-white hover: b g-gray-800/30'
                   }`}
                   onClick={onClose}
@@ -179,8 +179,9 @@ export default function Sidebar(props: any) {
                   <span>{subItem.name}</span>
                 </Link>
               ))}
-            </div>
-          )}
+                </div>
+  );
+}
         </div>
       );
     }
@@ -188,8 +189,8 @@ export default function Sidebar(props: any) {
     return null;
   };
 
-  return (
-    <aside className={`bg-gray-900 text-white w-64 min-h-screen transition-transform duration-300 ${
+  return (';
+    <aside className={`bg-gray-900 text-white w-64 min-h-screen transition-transform duration-300 ${';';
       isOpen ? 'translate-x-0' : '-translate-x-full'
     }`}>
       {/* Sidebar Header */}
@@ -240,10 +241,10 @@ export default function Sidebar(props: any) {
       </div>
     </aside>
   );
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+=======';
+<<<<<<< HEAD';';
+import React, { useState } from 'react';';';
+import { Link, useLocation } from 'react-router-dom';';';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ChevronRight, 
@@ -289,8 +290,8 @@ import {
   Mail,
   Video,
   Satellite,
-  TestTube,
-  Code
+  TestTube,';
+  Code';';
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -301,8 +302,8 @@ interface SidebarProps {
 
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const location = useLocation();
+export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {';
+  const location = useLocation();';';
   const [expandedSections, setExpandedSections] = useState<string[]>(['2026 Services']);
 
   const toggleSection = (props: any) => {
@@ -313,158 +314,158 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
-  const navigationSections = [
-    {
-      title: 'Main Navigation',
-      items: [
-        { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Users },
-        { name: 'Contact', href: '/contact', icon: MessageCircle },
-        { name: 'Blog', href: '/blog', icon: BookOpen },
-        { name: 'FAQ', href: '/faq', icon: HelpCircle },
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'Careers', href: '/careers', icon: Briefcase },
-        { name: 'Partners', href: '/partners', icon: Users },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  const navigationSections = [';
+    {';';
+      title: 'Main Navigation',';
+      items: [';';
+        { name: 'Home', href: '/', icon: Home },';';
+        { name: 'About', href: '/about', icon: Users },';';
+        { name: 'Contact', href: '/contact', icon: MessageCircle },';';
+        { name: 'Blog', href: '/blog', icon: BookOpen },';';
+        { name: 'FAQ', href: '/faq', icon: HelpCircle },';';
+        { name: 'Help Center', href: '/help', icon: HelpCircle },';';
+        { name: 'Careers', href: '/careers', icon: Briefcase },';';
+        { name: 'Partners', href: '/partners', icon: Users },';';
+        { name: 'News', href: '/news', icon: Newspaper },';';
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },';';
+        { name: 'Pricing', href: '/pricing', icon: DollarSign },';';
         { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart }
       ]
-    },
-    {
+    },';
+    {';';
       title: 'Featured Services',
-      featured: true,
-      items: [
-        { name: '2026 Services Overview', href: '/ultimate-services-showcase-2026', icon: Star, featured: true },
-        { name: '2027 Services Overview', href: '/comprehensive-services-showcase-2027', icon: Star, featured: true },
-        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star, featured: true },
-        { name: 'AI Solutions Hub', href: '/ai-solutions', icon: Brain, featured: true },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform', icon: Shield },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
-        { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: PenTool },
-        { name: 'AI HR Platform', href: '/services/ai-hr-platform', icon: Users },
-        { name: 'Sustainable Technology', href: '/services/sustainable-technology', icon: Leaf },
-        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', icon: TrendingUp },
+      featured: true,';
+      items: [';';
+        { name: '2026 Services Overview', href: '/ultimate-services-showcase-2026', icon: Star, featured: true },';';
+        { name: '2027 Services Overview', href: '/comprehensive-services-showcase-2027', icon: Star, featured: true },';';
+        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Star, featured: true },';';
+        { name: 'AI Solutions Hub', href: '/ai-solutions', icon: Brain, featured: true },';';
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },';';
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform', icon: Shield },';';
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },';';
+        { name: 'AI Content Creation', href: '/services/ai-content-creation', icon: PenTool },';';
+        { name: 'AI HR Platform', href: '/services/ai-hr-platform', icon: Users },';';
+        { name: 'Sustainable Technology', href: '/services/sustainable-technology', icon: Leaf },';';
+        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', icon: TrendingUp },';';
         { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Brain },
       ]
-    },
-    {
-      title: 'AI & Machine Learning',
-      items: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },
-        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: TrendingUp },
-        { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users },
-        { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: PenTool },
-        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle },
-        { name: 'AI Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Rocket },
-        { name: 'AI Project Manager', href: '/services/ai-project-management', icon: Settings },
-        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow },
-        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },
-        { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: TrendingUp },
-        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
-        { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation', icon: FileText },
-        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart },
-        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', icon: DollarSign },
+    },';
+    {';';
+      title: 'AI & Machine Learning',';
+      items: [';';
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: Brain },';';
+        { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', icon: Shield },';';
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },';';
+        { name: 'AI-Powered SEO', href: '/services/ai-seo', icon: TrendingUp },';';
+        { name: 'Interview Assessment AI', href: '/services/interview-assessment', icon: Users },';';
+        { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', icon: PenTool },';';
+        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle },';';
+        { name: 'AI Data Analytics', href: '/services/data-analytics', icon: BarChart3 },';';
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: Rocket },';';
+        { name: 'AI Project Manager', href: '/services/ai-project-management', icon: Settings },';';
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation', icon: Workflow },';';
+        { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', icon: DollarSign },';';
+        { name: 'AI Autonomous Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain },';';
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', icon: TrendingUp },';';
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },';';
+        { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation', icon: FileText },';';
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', icon: Heart },';';
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', icon: DollarSign },';';
         { name: 'AI Content Creation Suite', href: '/services/ai-content-creation-suite', icon: PenTool },
       ]
-    },
-    {
-      title: 'Cloud & Infrastructure',
-      items: [
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign },
-        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3 },
-        { name: 'IT Consulting', href: '/it-consulting', icon: Cpu },
-        { name: 'Onsite IT Services', href: '/it-onsite-services', icon: Server },
-        { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-        { name: 'Healthcare Solutions', href: '/healthcare-solutions', icon: Heart },
-        { name: 'Government Solutions', href: '/government-solutions', icon: Building },
-        { name: 'Manufacturing Solutions', href: '/manufacturing-solutions', icon: Truck },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },
+    },';
+    {';';
+      title: 'Cloud & Infrastructure',';
+      items: [';';
+        { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud },';';
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Server },';';
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign },';';
+        { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', icon: BarChart3 },';';
+        { name: 'IT Consulting', href: '/it-consulting', icon: Cpu },';';
+        { name: 'Onsite IT Services', href: '/it-onsite-services', icon: Server },';';
+        { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },';';
+        { name: 'Healthcare Solutions', href: '/healthcare-solutions', icon: Heart },';';
+        { name: 'Government Solutions', href: '/government-solutions', icon: Building },';';
+        { name: 'Manufacturing Solutions', href: '/manufacturing-solutions', icon: Truck },';';
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Zap },';';
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
       ]
-    },
-    {
-      title: 'Cybersecurity & Privacy',
-      items: [
-        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield },
-        { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },
-        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield },
-        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },
-        { name: 'AI Autonomous Forensics', href: '/ai-autonomous-forensics', icon: Shield },
-        { name: 'AI Autonomous Threat Intelligence', href: '/ai-autonomous-threat-intelligence', icon: Shield },
-        { name: 'AI Autonomous Mobile Security', href: '/ai-autonomous-mobile-security', icon: Smartphone },
+    },';
+    {';';
+      title: 'Cybersecurity & Privacy',';
+      items: [';';
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield },';';
+        { name: 'Security Headers & CSP', href: '/services/security-headers-csp', icon: Lock },';';
+        { name: 'DSR Privacy Portal', href: '/services/dsr-portal', icon: Shield },';';
+        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', icon: Lock },';';
+        { name: 'AI Autonomous Forensics', href: '/ai-autonomous-forensics', icon: Shield },';';
+        { name: 'AI Autonomous Threat Intelligence', href: '/ai-autonomous-threat-intelligence', icon: Shield },';';
+        { name: 'AI Autonomous Mobile Security', href: '/ai-autonomous-mobile-security', icon: Smartphone },';';
         { name: 'AI Autonomous Governance', href: '/ai-autonomous-governance', icon: Shield },
       ]
-    },
-    {
-      title: 'Micro SaaS Solutions',
-      items: [
-        { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart },
-        { name: 'Micro CRM', href: '/services/micro-crm', icon: Users },
-        { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle },
-        { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },
-        { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle },
-        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },
-        { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone },
-        { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail },
-        { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: Video },
-        { name: 'Returns Management', href: '/services/returns-management', icon: Truck },
-        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', icon: Mail },
-        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: MessageCircle },
-        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield },
-        { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: PenTool },
+    },';
+    {';';
+      title: 'Micro SaaS Solutions',';
+      items: [';';
+        { name: 'Micro SaaS Platform', href: '/micro-saas', icon: ShoppingCart },';';
+        { name: 'Micro CRM', href: '/services/micro-crm', icon: Users },';';
+        { name: 'Helpdesk Platform', href: '/services/helpdesk', icon: MessageCircle },';';
+        { name: 'Website Analytics', href: '/services/website-analytics', icon: BarChart3 },';';
+        { name: 'IT Helpdesk', href: '/services/it-helpdesk', icon: HelpCircle },';';
+        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', icon: TrendingUp },';';
+        { name: 'Mobile Survey', href: '/services/mobile-survey', icon: Smartphone },';';
+        { name: 'Email Sequencer', href: '/services/email-sequencer', icon: Mail },';';
+        { name: 'Podcast Transcription', href: '/services/podcast-transcription', icon: Video },';';
+        { name: 'Returns Management', href: '/services/returns-management', icon: Truck },';';
+        { name: 'AI Auto Email Responder', href: '/services/ai-auto-email-responder', icon: Mail },';';
+        { name: 'Customer Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: MessageCircle },';';
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield },';';
+        { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: PenTool },';';
         { name: 'AI Autonomous Code Reviewer', href: '/services/ai-autonomous-code-reviewer', icon: Code },
       ]
-    },
-    {
-      title: 'Emerging Technologies',
-      items: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },
-        { name: 'Space Technology', href: '/space-tech', icon: Satellite },
-        { name: 'Green IT Solutions', href: '/green-it', icon: Leaf },
-        { name: 'Sustainable Technology', href: '/services/sustainable-technology', icon: Leaf },
-        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', icon: TrendingUp },
-        { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Brain },
-        { name: 'AI Autonomous Scientific Researcher', href: '/ai-autonomous-scientific-researcher', icon: Brain },
+    },';
+    {';';
+      title: 'Emerging Technologies',';
+      items: [';';
+        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },';';
+        { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', icon: Atom },';';
+        { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', icon: Network },';';
+        { name: 'Digital Twin', href: '/services/digital-twin', icon: Eye },';';
+        { name: 'Space Technology', href: '/space-tech', icon: Satellite },';';
+        { name: 'Green IT Solutions', href: '/green-it', icon: Leaf },';';
+        { name: 'Sustainable Technology', href: '/services/sustainable-technology', icon: Leaf },';';
+        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', icon: TrendingUp },';';
+        { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', icon: Brain },';';
+        { name: 'AI Autonomous Scientific Researcher', href: '/ai-autonomous-scientific-researcher', icon: Brain },';';
         { name: 'AI Autonomous Prediction', href: '/ai-autonomous-prediction', icon: TrendingUp },
       ]
-    },
-    {
-      title: 'Industry Solutions',
-      items: [
-        { name: 'Healthcare Solutions', href: '/healthcare-solutions', icon: Heart },
-        { name: 'Government Solutions', href: '/government-solutions', icon: Building },
-        { name: 'Manufacturing Solutions', href: '/manufacturing-solutions', icon: Truck },
-        { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-        { name: 'Industry Solutions', href: '/industry-solutions', icon: Building },
-        { name: 'Infrastructure Solutions', href: '/infrastructure', icon: Server },
+    },';
+    {';';
+      title: 'Industry Solutions',';
+      items: [';';
+        { name: 'Healthcare Solutions', href: '/healthcare-solutions', icon: Heart },';';
+        { name: 'Government Solutions', href: '/government-solutions', icon: Building },';';
+        { name: 'Manufacturing Solutions', href: '/manufacturing-solutions', icon: Truck },';';
+        { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },';';
+        { name: 'Industry Solutions', href: '/industry-solutions', icon: Building },';';
+        { name: 'Infrastructure Solutions', href: '/infrastructure', icon: Server },';';
         { name: 'Research & Development', href: '/research-development', icon: TestTube },
       ]
-    },
-    {
-      title: 'Support & Resources',
-      items: [
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'FAQ', href: '/faq', icon: HelpCircle },
-        { name: 'Documentation', href: '/docs', icon: FileText },
-        { name: 'API Reference', href: '/api', icon: Code },
-        { name: 'Community', href: '/community', icon: Users },
-        { name: 'Blog', href: '/blog', icon: BookOpen },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'Pricing', href: '/pricing', icon: DollarSign },
-        { name: 'Contact Support', href: '/contact', icon: MessageCircle },
-        { name: 'How It Works', href: '/how-it-works', icon: HelpCircle },
+    },';
+    {';';
+      title: 'Support & Resources',';
+      items: [';';
+        { name: 'Help Center', href: '/help', icon: HelpCircle },';';
+        { name: 'FAQ', href: '/faq', icon: HelpCircle },';';
+        { name: 'Documentation', href: '/docs', icon: FileText },';';
+        { name: 'API Reference', href: '/api', icon: Code },';';
+        { name: 'Community', href: '/community', icon: Users },';';
+        { name: 'Blog', href: '/blog', icon: BookOpen },';';
+        { name: 'News', href: '/news', icon: Newspaper },';';
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },';';
+        { name: 'Pricing', href: '/pricing', icon: DollarSign },';';
+        { name: 'Contact Support', href: '/contact', icon: MessageCircle },';';
+        { name: 'How It Works', href: '/how-it-works', icon: HelpCircle },';';
         { name: 'Get Started', href: '/get-started', icon: Rocket },
       ]
     }
@@ -485,11 +486,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
           />
           
-          {/* Sidebar */}
-          <motion.div
-            initial={{ x: '-100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
+          {/* Sidebar */}';
+          <motion.div';';
+            initial={{ x: '-100%' }}';
+            animate={{ x: 0 }}';';
+            exit={{ x: '-100%' }}';';
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed left-0 top-0 h-full w-80 bg-slate-900/95 backdrop-blur-xl border-r border-cyan-400/20 z-50 overflow-y-auto"
           >
@@ -517,20 +518,20 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <div key={section.title} className="space-y-1">
                   <button
                     onClick={() => toggleSection(section.title)}
-                    className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-all duration-200 ${
-                      expandedSections.includes(section.title)
-                        ? 'bg-slate-800/50 text-white'
+                    className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-all duration-200 ${';
+                      expandedSections.includes(section.title)';';
+                        ? 'bg-slate-800/50 text-white'';';
                         : 'text-slate-300 hover:text-white hover:bg-slate-800/30'
                     }`}
                   >
-                    <div className="flex items-center space-x-3">
-                      {section.featured && <Star className="w-4 h-4 text-yellow-400" />}
+                    <div className="flex items-center space-x-3">';
+                      {section.featured && <Star className="w-4 h-4 text-yellow-400" />}';';
                       <span className={`font-medium ${section.featured ? 'text-cyan-300' : ''}`}>
                         {section.title}
                       </span>
                     </div>
-                    <ChevronRight 
-                      className={`w-4 h-4 transition-transform duration-200 ${
+                    <ChevronRight ';
+                      className={`w-4 h-4 transition-transform duration-200 ${';';
                         expandedSections.includes(section.title) ? 'rotate-90' : ''
                       }`} 
                     />
@@ -538,8 +539,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   
                   <AnimatePresence>
                     {expandedSections.includes(section.title) && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
+                      <motion.div';
+                        initial={{ opacity: 0, height: 0 }}';';
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
@@ -550,13 +551,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                             key={item.name}
                             to={item.href}
                             onClick={onClose}
-                            className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 group ${
-                              isActive(item.href)
-                                ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30'
+                            className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 group ${';
+                              isActive(item.href)';';
+                                ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/30'';';
                                 : 'text-slate-400 hover:text-white hover:bg-slate-800/30'
                             }`}
-                          >
-                            <item.icon className={`w-4 h-4 ${
+                          >';
+                            <item.icon className={`w-4 h-4 ${';';
                               isActive(item.href) ? 'text-cyan-400' : 'text-slate-500 group-hover:text-slate-300'
                             }`} />
                             <span className="text-sm">{item.name}</span>
@@ -588,10 +589,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       )}
     </AnimatePresence>
   );
-};
-=======
-import React from 'react';
-import Link from 'next/link';
+};';
+=======';';
+import React from 'react';';';
+import Link from 'next/link';';';
 import { X, Brain, Zap, Shield, Code, Users, FileText, Phone, Mail, ArrowRight } from 'lucide-react';
 
 type SidebarProps = {
@@ -601,23 +602,23 @@ type SidebarProps = {
 
 export default function Sidebar(props: any) {
   if (!isOpen) return null;
-
-  const quickLinks = [
-    { name: 'AI Services', href: '/services/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/services/it-services', icon: Zap },
-    { name: 'Micro SaaS', href: '/services/micro-saas', icon: Code },
-    { name: 'Cybersecurity', href: '/services/it/cybersecurity', icon: Shield },
-    { name: 'About Us', href: '/about', icon: Users },
+';
+  const quickLinks = [';';
+    { name: 'AI Services', href: '/services/ai-services', icon: Brain },';';
+    { name: 'IT Services', href: '/services/it-services', icon: Zap },';';
+    { name: 'Micro SaaS', href: '/services/micro-saas', icon: Code },';';
+    { name: 'Cybersecurity', href: '/services/it/cybersecurity', icon: Shield },';';
+    { name: 'About Us', href: '/about', icon: Users },';';
     { name: 'Case Studies', href: '/case-studies', icon: FileText }
   ];
-
-  const contactInfo = [
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+';
+  const contactInfo = [';';
+    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },';';
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' }
   ];
 
   return (
-    <div className="fixed inset-0 z-50" role="dialog" aria-modal="true">
+    <div className="min-h-screen bg-white">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
       <div className="absolute right-0 top-0 h-full w-96 bg-white shadow-xl overflow-y-auto">
         {/* Header */}
@@ -678,8 +679,8 @@ export default function Sidebar(props: any) {
         {/* CTA Section */}
         <div className="p-6 border-t">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-4 text-white">
-            <h4 className="font-semibold mb-2">Ready to Get Started?</h4>
-            <p className="text-sm text-blue-100 mb-4">
+            <h4 className="font-semibold mb-2">Ready to Get Started?</h4>';
+            <p className="text-sm text-blue-100 mb-4">';';
               Let's discuss how we can help transform your business with cutting-edge technology.
             </p>
             <div className="space-y-2">
@@ -710,7 +711,6 @@ export default function Sidebar(props: any) {
 </motion>
 </ChevronRight>
 </motion>
-</motion>
 </string>
-</SidebarProps>
-</string>
+</SidebarProps>';
+</string>;';;';

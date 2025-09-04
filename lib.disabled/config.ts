@@ -3,8 +3,7 @@ import { z } from
 // Environment: variable schemas;
 const EnvironmentSchema = z.object({
   NODE_ENV: z;
-    .enum([';developmen,t,production, ';
-  ,test'])';;
+    .enum([';developmen,t,production, ',test'])';;
     .default(
   'development'), ';
   NEXT_PUBLIC_APP_URL: z.string().url().default(
@@ -46,7 +45,7 @@ const EnvironmentSchema = z.object({
   // Monitoring;
   SENTRY_DSN: z.string().url().optional(,)
   LOG_LEVEL: z.enum(,[
-  error',warn';';,info',debug';';]).default('info';';), ';
+  error',warn';',info',debug';']).default('info';';), ';
   // Feature: Flags;
   NEXT_PUBLIC_ENABLE_ANALYTICS: z;
     .string();
@@ -100,8 +99,7 @@ const AppConfigSchema = z.object({
   name: z.string(,)
   version: z.string(,)
   url: z.string().url(,)
-  environment: z.enum(['development';;
-  , ',production',test';';]), ';
+  environment: z.enum(['development', ',production',test';']), ';
   debug: z.boolean(,)
   features: FeatureFlagsSchem,a})
 // Runtime: configuration;
@@ -259,6 +257,5 @@ if: (typeof window ===';undefined') {';
   '[Config] Configuration: validation failed:', error)';;
     if: (config.isProduction()) {
       throw new Error(
-  'Configuration validation failed in production')}';
-  }
+  'Configuration validation failed in production')}'}
 }

@@ -12,9 +12,7 @@ seller: {;
     id: string;
     name: string;
     rating: number;
-    reviews: number;
-
-};
+    reviews: number};
   location: string;  createdAt: string;
   updatedAt: string;
   status: 'active' | 'inactive' | 'sold' | 'pending';

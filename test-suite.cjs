@@ -22,9 +22,9 @@ class TestSuite {
       'SUCCESS': '✅',
       'ERROR': '❌',
       'WARNING': '⚠️'
-   ; ;};
+   };
     
-    console.log(`${icons[type]} ${message}`);}
+    console.log(`${icons[type]} ${message}`)}
 
   test(name, testFn) { 
     try {
@@ -32,8 +32,7 @@ class TestSuite {
       if ( {
         this.results.passed++) {
      {
-        this.results.passed++;
-  }
+        this.results.passed++}
         this.results.tests.push({ name, status: 'PASS' });
         this.log(`${name} - PASSED`, 'SUCCESS')} else {
         this.results.failed++;
@@ -47,15 +46,14 @@ class TestSuite {
 
   testFileExists(filePath, description) { 
     this.test(`${description} - File exists`, () => {
-      return fs.existsSync(filePath);})}
+      return fs.existsSync(filePath)})}
 
   testFileContent(filePath, description, validator) { 
     this.test(`${description} - File content valid`, () => {
       if () return fals) {
-    ) return fals;
-  }e;
+    ) return fals}e;
       const content = fs.readFileSync(filePath, 'utf8';);
-      return validator(content);})}
+      return validator(content)})}
 
   testPackageJson() { 
     this.testFileExists('package.json', 'Package.json');
@@ -63,27 +61,27 @@ class TestSuite {
     this.testFileContent('package.json', 'Package.json valid JSON', (content) => {
       try {
         const pkg = JSON.parse(content;);
-        return pkg.name && pkg.version && pkg.scripts;} catch {
-        return false;}
+        return pkg.name && pkg.version && pkg.scripts} catch {
+        return false}
     });
 
     this.testFileContent('package.json', 'Package.json has required scripts', (content) => {
       const pkg = JSON.parse(content;);
-      const requiredScripts = ['build', 'dev', 'start';];
-      return requiredScripts.every(script => pkg.scripts[script]);})}
+      const requiredScripts = ['build', 'dev', 'start'];
+      return requiredScripts.every(script => pkg.scripts[script])})}
 
   testNextConfig() { 
     this.testFileExists('next.config.js', 'Next.js config');
     
     this.testFileContent('next.config.js', 'Next.js config valid', (content) => {
-      return content.includes('nextConfig') && (content.includes('module.exports') || content.includes('export default'));})}
+      return content.includes('nextConfig') && (content.includes('module.exports') || content.includes('export default'))})}
 
   testAppStructure() {
-    const requiredDirs = ['src', 'public';];
+    const requiredDirs = ['src', 'public'];
     requiredDirs.forEach(dir => {
       this.testFileExists(dir, `Directory: ${dir}`)});
 
-    const requiredFiles = ['src/App.tsx', 'src/main.tsx';];
+    const requiredFiles = ['src/App.tsx', 'src/main.tsx'];
     requiredFiles.forEach(file => {
       this.testFileExists(file, `File: ${file}`)})}
 
@@ -93,7 +91,7 @@ class TestSuite {
       'scripts/security-auditor.js',
       'scripts/test-runner.js',
       'scripts/git-workflow.js'
-    ;];
+    ];
     scripts.forEach(script => {
       this.testFileExists(script, `Script: ${script}`)})}
 
@@ -102,7 +100,7 @@ class TestSuite {
       'comprehensive-automation.cjs',
       'master-automation.cjs',
       'test-suite.cjs'
-    ;];
+    ];
     automationFiles.forEach(file => {
       this.testFileExists(file, `Automation file: ${file}`)})}
 
@@ -116,7 +114,7 @@ class TestSuite {
         successRate: parseFloat(successRate)
       },
       tests: this.results.tests
-   ; ;};
+   };
 
     fs.writeFileSync('test-suite-report.json', JSON.stringify(report, null, 2));
     
@@ -125,7 +123,7 @@ class TestSuite {
     this.log(`❌ Failed: ${report.summary.failed}`, 'ERROR');
     this.log(`📈 Success Rate: ${report.summary.successRate}%`, 'INFO');
     
-    return report;}
+    return report}
 
   async run() { 
     this.log('🧪 Starting Comprehensive Test Suite...', 'INFO');
@@ -141,11 +139,10 @@ class TestSuite {
     if ( {
       this.log('🎉 All tests passed!', 'SUCCESS')) {
      {
-      this.log('🎉 All tests passed!', 'SUCCESS');
-  }
-      return true;} else {
+      this.log('🎉 All tests passed!', 'SUCCESS')}
+      return true} else {
       this.log(`⚠️ ${report.summary.failed} tests failed`, 'WARNING');
-      return false;}
+      return false}
   }
 }
 
@@ -153,8 +150,7 @@ class TestSuite {
 if ( { 
   const testSuite = new TestSuite) {
      { 
-  const testSuite = new TestSuite;
-  }(;);
+  const testSuite = new TestSuite}(;);
   testSuite.run().then(success => {
     process.exit(success ? 0 : 1)}).catch(error => {
     console.error('Test suite failed:', error);

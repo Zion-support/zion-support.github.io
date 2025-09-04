@@ -1,18 +1,18 @@
-import React, {useRef} from 'react';
-import {motion, useScroll, useTransform} from 'framer-motion';
-import {ArrowRight, Sparkles, Star, Zap, Shield, Users, Clock, Target, TrendingUp, Award} from 'lucide-react';
-import {Button} from '@/components/ui/button';"
-import {GradientHeading} from '@/components/GradientHeading';"
-import {Link} from 'react-router-dom';"
-import {useTranslation} from 'react-i18next';"
-import {motion, useScroll, useTransform} from 'framer-motion';"
-import {ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield} from 'lucide-react';"
-import {useRef} from 'react';
-import {useTranslation} from 'react -i18next';
- from 'react';
-import {Button} from '@/components / ui / button';
-import {GradientHeading} from '@/components / GradientHeading';
- from 'framer-motion';
+import React, {useRef} from 'react';';';
+import {motion, useScroll, useTransform} from 'framer-motion';';';
+import {ArrowRight, Sparkles, Star, Zap, Shield, Users, Clock, Target, TrendingUp, Award} from 'lucide-react';';';
+import {Button} from '@/components/ui/button';"';';
+import {GradientHeading} from '@/components/GradientHeading';"';';
+import {Link} from 'react-router-dom';"';';
+import {useTranslation} from 'react-i18next';"';';
+import {motion, useScroll, useTransform} from 'framer-motion';"';';
+import {ArrowRight, Sparkles, Zap, Users, Star, TrendingUp, Shield} from 'lucide-react';"';';
+import {useRef} from 'react';';';
+import {useTranslation} from 'react -i18next';';';
+ from 'react';';';
+import {Button} from '@/components / ui / button';';';
+import {GradientHeading} from '@/components / GradientHeading';';';
+ from 'framer-motion';';';
 import {motion, useScroll, useTransform} from 'framer-motion';
 
  = useTranslation () ;
@@ -214,16 +214,23 @@ const stats = ["
                     </motion.div>
                 </motion.div>
             </motion.div>
-        </section>) ;
-}
+        </section>) ;';
+}';';
 '"
 
 </motion>
 </motion>
 </motion>
 </motion>
+</ArrowRight>
 </motion>
+</ArrowRight>
 </motion>
+</Users>
+</motion>
+</Zap>
+</motion>
+</Sparkles>
 </motion>
 </motion>
 </motion>
@@ -234,7 +241,6 @@ const stats = ["
 </ArrowRight>
 </motion>
 </ArrowRight>
-</motion>
 </motion>
 </Users>
 </motion>
@@ -255,21 +261,9 @@ const stats = ["
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
 </ArrowRight>
 </motion>
 </ArrowRight>
-</motion>
 </motion>
 </Users>
 </motion>
@@ -283,58 +277,9 @@ const stats = ["
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
 </ArrowRight>
 </motion>
 </ArrowRight>
-</motion>
 </motion>
 </Users>
 </motion>
@@ -345,50 +290,5 @@ const stats = ["
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</ArrowRight>
-</motion>
-</ArrowRight>
-</motion>
-</motion>
-</Users>
-</motion>
-</Zap>
-</motion>
-</Sparkles>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';
