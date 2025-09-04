@@ -2,7 +2,6 @@
 // Performance optimizations
 const nextConfig = {
   reactStrictMode: false,
-  swcMinify: true,
   compress: true,
   poweredByHeader: false,
   eslint: { 
@@ -15,7 +14,7 @@ const nextConfig = {
   trailingSlash: true,
   generateBuildId: async () => 'build-' + Date.now(),
   // Ensure standard Next.js page extensions are recognized alongside any custom route files
-  pageExtensions: ['tsx', 'jsx'],
+  pageExtensions: ['page.tsx', 'page.jsx'],
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],

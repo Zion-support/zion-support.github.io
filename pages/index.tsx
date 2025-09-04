@@ -1,3 +1,29 @@
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
+
+export default function Home(): JSX.Element {
+  return (
+    <>
+      <Head>
+        <title>Zion Tech Group — AI, Cybersecurity, Cloud</title>
+        <meta name="description" content="Zion Tech Group provides AI, cybersecurity, cloud and digital transformation services." />
+        <link rel="canonical" href="https://ziontechgroup.com/" />
+      </Head>
+      <section>
+        <h1 style={{ fontSize: 28, fontWeight: 800, marginBottom: 8 }}>Zion Tech Group</h1>
+        <p style={{ color: '#444', marginBottom: 16 }}>
+          Technology solutions in AI, cybersecurity, cloud, and digital transformation.
+        </p>
+        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+          <Link href="/services" style={{ padding: '10px 14px', background: '#111', color: '#fff' }}>Explore Services</Link>
+          <Link href="/contact" style={{ padding: '10px 14px', border: '1px solid #111', color: '#111' }}>Contact Us</Link>
+        </div>
+      </section>
+    </>
+  );
+}
+
 import React, { useState, useCallback, memo } from 'react';
 import Link from 'next/link';
 import Navigation from '../src/components/Navigation';
