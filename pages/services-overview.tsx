@@ -8,9 +8,9 @@ export default function ServicesOverview() {
 
 =======
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
 >>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
@@ -122,14 +122,14 @@ export default function ServicesOverview() {
               <h2 className="text-3xl font-bold text-center mb-12">Industry Solutions</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { name: 'Healthcare', href: '/healthcare', color: 'text-red-400' },
-                  { name: 'Financial Services', href: '/financial', color: 'text-green-400' },
-                  { name: 'Manufacturing', href: '/manufacturing', color: 'text-blue-400' },
-                  { name: 'Retail & E-commerce', href: '/retail', color: 'text-purple-400' },
-                  { name: 'Government', href: '/government', color: 'text-yellow-400' },
-                  { name: 'Education', href: '/education', color: 'text-indigo-400' },
-                  { name: 'Startups', href: '/startup', color: 'text-pink-400' },
-                  { name: 'Enterprise', href: '/enterprise', color: 'text-cyan-400' }
+                  { name: 'Healthcare' href: '/healthcare' color: 'text-red-400' },
+                  { name: 'Financial Services' href: '/financial' color: 'text-green-400' },
+                  { name: 'Manufacturing' href: '/manufacturing' color: 'text-blue-400' },
+                  { name: 'Retail & E-commerce' href: '/retail' color: 'text-purple-400' },
+                  { name: 'Government' href: '/government' color: 'text-yellow-400' },
+                  { name: 'Education' href: '/education' color: 'text-indigo-400' },
+                  { name: 'Startups' href: '/startup' color: 'text-pink-400' },
+                  { name: 'Enterprise' href: '/enterprise' color: 'text-cyan-400' }
                 ].map((industry) => (
                   <Link
                     key={industry.name}

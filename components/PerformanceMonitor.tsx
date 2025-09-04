@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = (): JSX.Element => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -8,16 +8,14 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            // Log LCP for debugging in development
-            if (process.env.NODE_ENV === 'development') {
-              console.log('LCP:', entry.startTime);
-            }
+            console.log('LCP:', entry.startTime);
           }
+      }
       });
       
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch {
+      } catch (e) {
         // Fallback for browsers that don't support LCP
       }
 
@@ -25,16 +23,14 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            const fidEntry = entry as PerformanceEntry & { processingStart: number };
-            if (process.env.NODE_ENV === 'development') {
-              console.log('FID:', fidEntry.processingStart - entry.startTime);
-            }
+            console.log('FID:', (entry as any).processingStart - entry.startTime);
           }
+      }
       });
 
       try {
         fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch {
+      } catch (e) {
         // Fallback for browsers that don't support FID
       }
 
@@ -42,19 +38,15 @@ const PerformanceMonitor: React.FC = () => {
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
-          if (!layoutShiftEntry.hadRecentInput) {
-            clsValue += layoutShiftEntry.value;
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
           }
-        }
-        if (process.env.NODE_ENV === 'development') {
-          console.log('CLS:', clsValue);
-        }
+        console.log('CLS:', clsValue);
       });
 
       try {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch {
+      } catch (e) {
         // Fallback for browsers that don't support CLS
       }
 

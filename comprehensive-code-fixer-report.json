@@ -1,9 +1,9 @@
 {
-  "timestamp": "2025-09-04T02:54:57.294Z",
-  "duration": "9527ms",
+  "timestamp": "2025-09-04T02:59:50.538Z",
+  "duration": "7702ms",
   "results": {
     "filesFixed": 17,
-    "eslintSuccess": true,
+    "eslintSuccess": false,
     "typeCheckSuccess": false,
     "buildSuccess": false,
     "fixes": [
@@ -28,6 +28,6 @@
   },
   "summary": {
     "totalSteps": 4,
-    "successfulSteps": 1
+    "successfulSteps": 0
   }
 }

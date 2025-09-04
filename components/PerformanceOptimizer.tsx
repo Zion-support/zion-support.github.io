@@ -32,7 +32,7 @@ export default function PerformanceOptimizer() {
       });
 
       images.forEach((img) => imageObserver.observe(img));
-    };
+    }
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
@@ -40,18 +40,15 @@ export default function PerformanceOptimizer() {
     // Cleanup
     return () => {
       // Cleanup if needed
-    };
+    }
   }, []);
 
   return null; // This component doesn't render anything
 }
 
 // Web Vitals monitoring
-export const reportWebVitals = (metric: { name: string; value: number; delta: number; id: string }) => {
+export const reportWebVitals = (metric: any) => {
   if (process.env.NODE_ENV === 'production') {
     // Send to analytics service
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', metric);
-    }
+    console.log('Web Vital:', metric);
   }
-};

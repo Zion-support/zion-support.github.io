@@ -2,73 +2,55 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export default function Team() {
-<<<<<<< HEAD
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  };
-
-  const teamMembers = [
-    { name: "Dr. Sarah Chen", position: "Chief Technology Officer", department: "AI & Machine Learning", bio: "Leading AI research and development with 15+ years of experience in machine learning and quantum computing.", expertise: ["AI Research", "Machine Learning", "Quantum Computing", "Data Science"], image: "👩‍💼"
-    },
-    { name: "Michael Rodriguez", position: "Head of Cloud Operations", department: "Cloud & DevOps", bio: "Expert in cloud architecture and DevOps practices, specializing in scalable infrastructure solutions.", expertise: ["Cloud Architecture", "DevOps", "Infrastructure", "Automation"], image: "👨‍💻"
-    },
-    { name: "Dr. Lisa Wang", position: "Cybersecurity Director", department: "Cybersecurity", bio: "Cybersecurity expert with extensive experience in threat detection and enterprise security solutions.", expertise: ["Cybersecurity", "Threat Detection", "Risk Assessment", "Compliance"], image: "👩‍🔬"
-    },
-    { name: "Alex Thompson", position: "Quantum Computing Lead", department: "Research & Development", bio: "Pioneering quantum computing research and developing practical applications for business use cases.", expertise: ["Quantum Computing", "Algorithm Development", "Research", "Innovation"], image: "👨‍🔬"
-    },
-    { name: "Maria Garcia", position: "Product Development Manager", department: "Micro SaaS", bio: "Leading the development of innovative micro SaaS products that solve real business problems.", expertise: ["Product Development", "SaaS Architecture", "User Experience", "Agile Development"], image: "👩‍💼"
-    },
-    { name: "James Wilson", position: "Digital Transformation Consultant", department: "IT Services", bio: "Helping organizations modernize their technology infrastructure and business processes.", expertise: ["Digital Transformation", "Process Optimization", "Change Management", "Technology Consulting"], image: "👨‍💼"
-=======
   const teamMembers = [
     {
-      name: "Dr. Sarah Johnson",
+      name: "Dr. Sarah Johnson"
       position: "Chief Executive Officer",
       bio: "Visionary leader with 15+ years in technology innovation and business strategy.",
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
-    },
+    },,,
     {
-      name: "Michael Chen",
-      position: "Chief Technology Officer",
-      bio: "AI and quantum computing expert with extensive experience in cutting-edge technologies.",
+      name: "Michael Chen"
+      position: "Chief Technology Officer"
+      bio: "AI and quantum computing expert with extensive experience in cutting-edge technologies."
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
-    },
+    },,,
     {
-      name: "Dr. Emily Rodriguez",
-      position: "Head of AI Research",
-      bio: "Leading researcher in machine learning and artificial intelligence applications.",
+      name: "Dr. Emily Rodriguez"
+      position: "Head of AI Research"
+      bio: "Leading researcher in machine learning and artificial intelligence applications."
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
-    },
+    },,,
     {
-      name: "David Kim",
-      position: "VP of Engineering",
-      bio: "Full-stack development expert specializing in scalable micro SaaS architectures.",
+      name: "David Kim"
+      position: "VP of Engineering"
+      bio: "Full-stack development expert specializing in scalable micro SaaS architectures."
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
-    },
+    },,,
     {
-      name: "Lisa Thompson",
-      position: "Head of Cybersecurity",
-      bio: "Cybersecurity specialist with expertise in threat detection and incident response.",
+      name: "Lisa Thompson"
+      position: "Head of Cybersecurity"
+      bio: "Cybersecurity specialist with expertise in threat detection and incident response."
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
-    },
+    },,,
     {
-      name: "James Wilson",
-      position: "VP of Cloud Operations",
-      bio: "DevOps and cloud infrastructure expert with focus on automation and scalability.",
+      name: "James Wilson"
+      position: "VP of Cloud Operations"
+      bio: "DevOps and cloud infrastructure expert with focus on automation and scalability."
       image: "/api/placeholder/300/300",
       linkedin: "#",
       twitter: "#"
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
-    }
+    },,
   ];
 
   return (
@@ -95,20 +77,6 @@ export default function Team() {
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
       </Head>
 
-<<<<<<< HEAD
-      <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #0b1220 0%, #1a1f3a 100%)', color: 'white' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
-          <div style={{ textAlign: 'center', marginBottom: 60 }}>
-            <h1 style={{ 
-              fontSize: '3rem', 
-              fontWeight: 800, 
-              marginBottom: 20, background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
-            }}>
-              Our Team
-=======
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <header className="bg-white shadow-sm">
@@ -135,7 +103,6 @@ export default function Team() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Meet Our Expert Team
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
               Talented professionals dedicated to pushing the boundaries of technology and innovation.
@@ -157,54 +124,6 @@ export default function Team() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
-<<<<<<< HEAD
-                <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12, padding: 30, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-5px)';
-                  e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}>
-                  <div style={{ textAlign: 'center', marginBottom: 20 }}>
-                    <div style={{ fontSize: '4rem', marginBottom: 15 }}>{member.image}</div>
-                    <h3 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: 5 }}>
-                      {member.name}
-                    </h3>
-                    <p style={{ color: '#3b82f6', 
-                      fontSize: '1.1rem', 
-                      fontWeight: 600, 
-                      marginBottom: 5 
-                    }}>
-                      {member.position}
-                    </p>
-                    <p style={{ color: '#94a3b8', fontSize: '1rem' }}>
-                      {member.department}
-                    </p>
-                  </div>
-                  
-                  <p style={{ color: '#94a3b8', 
-                    marginBottom: 20, 
-                    lineHeight: 1.6,
-                    fontSize: '1rem'
-                  }}>
-                    {member.bio}
-                  </p>
-                  
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                    {member.expertise.map((skill, skillIndex) => (
-                      <span key={skillIndex} style={{ background: 'rgba(59, 130, 246, 0.2)', color: '#3b82f6', padding: '4px 12px',
-                        borderRadius: 20,
-                        fontSize: '0.8rem',
-                        fontWeight: 600
-                      }}>
-                        {skill}
-                      </span>
-                    ))}
-=======
                 <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
                   <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-gray-500 text-sm">Photo</span>
@@ -223,7 +142,6 @@ export default function Team() {
                         <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
                       </svg>
                     </a>
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
                   </div>
                 </div>
               ))}
@@ -231,85 +149,15 @@ export default function Team() {
           </div>
         </section>
 
-<<<<<<< HEAD
-          <div style={{ marginBottom: 80 }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
-              Departments
-            </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 25 }}>
-              {departments.map((dept, index) => (
-                <div key={index} style={{ background: 'rgba(255, 255, 255, 0.05)',
-                  borderRadius: 12, padding: 25, border: '1px solid rgba(255, 255, 255, 0.1)', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'pointer'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-3px)';
-                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 15 }}>
-                    <h3 style={{ fontSize: '1.3rem', fontWeight: 700 }}>
-                      {dept.name}
-                    </h3>
-                    <div style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '6px 12px',
-                      borderRadius: 20,
-                      fontSize: '0.9rem',
-                      fontWeight: 600
-                    }}>
-                      {dept.count}
-                    </div>
-                  </div>
-                  <p style={{ color: '#94a3b8', fontSize: '1rem' }}>
-                    {dept.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div style={{ background: 'rgba(255, 255, 255, 0.05)',
-            borderRadius: 12, padding: 40, border: '1px solid rgba(255, 255, 255, 0.1)',
-            textAlign: 'center'
-          }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
-=======
         {/* Join Our Team */}
         <section className="py-16 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
               Join Our Team
             </h2>
             <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
               We're always looking for talented individuals who share our passion for innovation and technology.
             </p>
-<<<<<<< HEAD
-            <div style={{ display: 'flex', gap: 20, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Link href="/careers" style={{ background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', color: 'white', padding: '15px 30px',
-                textDecoration: 'none',
-                borderRadius: 8,
-                fontSize: '1.1rem',
-                fontWeight: 600, display: 'inline-block'
-              }}>
-                View Open Positions
-              </Link>
-              <Link href="/contact" style={{ background: 'transparent', color: 'white', padding: '15px 30px',
-                textDecoration: 'none',
-                borderRadius: 8,
-                fontSize: '1.1rem',
-                fontWeight: 600, display: 'inline-block', border: '2px solid rgba(255, 255, 255, 0.3)', transition: 'border-color 0.3s ease'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#3b82f6';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
-              }}>
-                Contact Us
-              </Link>
-=======
             <Link
               href="/careers"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors inline-block"
@@ -359,7 +207,6 @@ export default function Team() {
             </div>
             <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
               <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
             </div>
           </div>
         </footer>

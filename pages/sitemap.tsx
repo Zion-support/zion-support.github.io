@@ -3,49 +3,43 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Sitemap() {
-<<<<<<< HEAD
-  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709', site: 'https://ziontechgroup.com'
-  };
-
-=======
   const contact = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    phone: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com'
   }
->>>>>>> 2449664315b75e5ee00d8e23bc10e38e9ae3ef15
   const pages = [
-    { href: '/', title: 'Home', description: 'Main homepage with company overview and services' },
-    { href: '/about', title: 'About Us', description: 'Learn about Zion Tech Group and our mission' },
-    { href: '/careers', title: 'Careers', description: 'Join our team and explore career opportunities' },
-    { href: '/contact', title: 'Contact', description: 'Get in touch with our team' },
-    { href: '/pricing', title: 'Pricing', description: 'View our service pricing and plans' },
-    { href: '/blog', title: 'Blog', description: 'Latest insights and technology trends' },
-    { href: '/faq', title: 'FAQ', description: 'Frequently asked questions' },
-    { href: '/privacy', title: 'Privacy Policy', description: 'Our privacy policy and data protection' },
-    { href: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' },
-    { href: '/schedule-demo', title: 'Schedule Demo', description: 'Book a personalized demo of our solutions' },
-    { href: '/enterprise', title: 'Enterprise Solutions', description: 'Enterprise-grade technology solutions' }];
+    { href: '/' title: 'Home' description: 'Main homepage with company overview and services' },
+    { href: '/about' title: 'About Us' description: 'Learn about Zion Tech Group and our mission' },
+    { href: '/careers' title: 'Careers' description: 'Join our team and explore career opportunities' },
+    { href: '/contact' title: 'Contact' description: 'Get in touch with our team' },
+    { href: '/pricing' title: 'Pricing' description: 'View our service pricing and plans' },
+    { href: '/blog' title: 'Blog' description: 'Latest insights and technology trends' },
+    { href: '/faq' title: 'FAQ' description: 'Frequently asked questions' },
+    { href: '/privacy' title: 'Privacy Policy' description: 'Our privacy policy and data protection' },
+    { href: '/terms' title: 'Terms of Service' description: 'Terms and conditions for our services' },
+    { href: '/schedule-demo' title: 'Schedule Demo' description: 'Book a personalized demo of our solutions' },
+    { href: '/enterprise' title: 'Enterprise Solutions' description: 'Enterprise-grade technology solutions' }];
 
   const services = [
-    { href: '/services', title: 'All Services', description: 'Complete overview of all our services' },
-    { href: '/services-overview', title: 'Services Overview', description: 'Comprehensive overview of our technology services' },
-    { href: '/services-catalog', title: 'Services Catalog', description: 'Detailed catalog of all services' },
-    { href: '/services-comparison', title: 'Services Comparison', description: 'Compare our services side-by-side' },
-    { href: '/micro-saas', title: 'Micro SaaS Products', description: '150+ innovative micro SaaS solutions' },
-    { href: '/ai-services', title: 'AI Services', description: '100+ AI-powered services and solutions' },
-    { href: '/it-services', title: 'IT Services', description: '100+ comprehensive IT solutions' },
-    { href: '/cloud-devops', title: 'Cloud & DevOps', description: 'Cloud computing and DevOps solutions' },
-    { href: '/cybersecurity', title: 'Cybersecurity', description: 'Security solutions and consulting' },
-    { href: '/quantum-computing', title: 'Quantum Computing', description: 'Quantum computing consulting and solutions' }];
+    { href: '/services' title: 'All Services' description: 'Complete overview of all our services' },
+    { href: '/services-overview' title: 'Services Overview' description: 'Comprehensive overview of our technology services' },
+    { href: '/services-catalog' title: 'Services Catalog' description: 'Detailed catalog of all services' },
+    { href: '/services-comparison' title: 'Services Comparison' description: 'Compare our services side-by-side' },
+    { href: '/micro-saas' title: 'Micro SaaS Products' description: '150+ innovative micro SaaS solutions' },
+    { href: '/ai-services' title: 'AI Services' description: '100+ AI-powered services and solutions' },
+    { href: '/it-services' title: 'IT Services' description: '100+ comprehensive IT solutions' },
+    { href: '/cloud-devops' title: 'Cloud & DevOps' description: 'Cloud computing and DevOps solutions' },
+    { href: '/cybersecurity' title: 'Cybersecurity' description: 'Security solutions and consulting' },
+    { href: '/quantum-computing' title: 'Quantum Computing' description: 'Quantum computing consulting and solutions' }];
 
   const documentation = [
-    { href: '/docs', title: 'Documentation', description: 'Main documentation hub' },
-    { href: '/docs/getting-started', title: 'Getting Started', description: 'Quick start guide for new users' },
-    { href: '/docs/api-overview', title: 'API Overview', description: 'API documentation and reference' },
-    { href: '/docs/authentication', title: 'Authentication', description: 'Authentication and security guide' },
-    { href: '/docs/first-steps', title: 'First Steps', description: 'Initial setup and configuration' }];
+    { href: '/docs' title: 'Documentation' description: 'Main documentation hub' },
+    { href: '/docs/getting-started' title: 'Getting Started' description: 'Quick start guide for new users' },
+    { href: '/docs/api-overview' title: 'API Overview' description: 'API documentation and reference' },
+    { href: '/docs/authentication' title: 'Authentication' description: 'Authentication and security guide' },
+    { href: '/docs/first-steps' title: 'First Steps' description: 'Initial setup and configuration' }];
 
   return (
     <>
