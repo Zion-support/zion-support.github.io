@@ -42,42 +42,13 @@ function Header(): any {
           textDecoration: 'none'
         }}>Zion Tech Group</Link>
         
-        {/* Desktop Navigation */}
-        <div style={{ 
-          display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center',
-          '@media (max-width: 768px)': { display: 'none' }
-        }}>
-          {navigationItems.map((item) => (
-            <div key={item.href} style={{ position: 'relative' }}>
-              <Link href={item.href} style={{ 
-                padding: '8px 12px', borderRadius: 6, opacity: 0.9,
-                transition: 'all 0.2s ease', textDecoration: 'none',
-                display: 'flex', alignItems: 'center', gap: 4
-              }}>
-                {item.label}
-                {item.submenu && <span style={{ fontSize: '0.8rem' }}>▼</span>}
-              </Link>
-              {item.submenu && (
-                <div style={{
-                  position: 'absolute', top: '100%', left: 0, 
-                  background: 'rgba(11, 18, 32, 0.98)', 
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  borderRadius: 8, padding: '8px 0', minWidth: 200,
-                  display: 'none', zIndex: 1000
-                }}>
-                  {item.submenu.map((subItem) => (
-                    <Link key={subItem.href} href={subItem.href} style={{
-                      display: 'block', padding: '8px 16px', 
-                      textDecoration: 'none', opacity: 0.9,
-                      transition: 'all 0.2s ease'
-                    }}>
-                      {subItem.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+        <div className="header-nav-links">
+          <Link href="/" className="header-nav-link">Home</Link>
+          <Link href="/solutions" className="header-nav-link">Solutions</Link>
+          <Link href="/services" className="header-nav-link">Services</Link>
+          <Link href="/about" className="header-nav-link">About</Link>
+          <Link href="/careers" className="header-nav-link">Careers</Link>
+          <Link href="/contact" className="header-nav-cta">Contact</Link>
         </div>
 
         {/* Mobile menu button */}
@@ -93,42 +64,15 @@ function Header(): any {
           ☰
         </button>
       </nav>
-
-      {/* Mobile Navigation Menu */}
-      {isMobileMenuOpen && (
-        <div style={{
-          display: 'block',
-          '@media (min-width: 769px)': { display: 'none' },
-          background: 'rgba(11, 18, 32, 0.98)', 
-          borderTop: '1px solid rgba(255,255,255,0.1)',
-          padding: '16px 20px'
-        }}>
-          {navigationItems.map((item) => (
-            <div key={item.href}>
-              <Link href={item.href} style={{
-                display: 'block', padding: '12px 0', 
-                textDecoration: 'none', opacity: 0.9,
-                borderBottom: '1px solid rgba(255,255,255,0.1)'
-              }}>
-                {item.label}
-              </Link>
-              {item.submenu && (
-                <div style={{ paddingLeft: '16px' }}>
-                  {item.submenu.map((subItem) => (
-                    <Link key={subItem.href} href={subItem.href} style={{
-                      display: 'block', padding: '8px 0', 
-                      textDecoration: 'none', opacity: 0.7,
-                      fontSize: '0.9rem'
-                    }}>
-                      {subItem.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      )}
+      
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
+        <Link href="/" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+        <Link href="/solutions" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
+        <Link href="/services" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+        <Link href="/about" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>About</Link>
+        <Link href="/careers" className="header-nav-link" onClick={() => setMobileMenuOpen(false)}>Careers</Link>
+        <Link href="/contact" className="header-nav-cta" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+      </div>
     </header>
   );
 }
@@ -166,44 +110,43 @@ function Footer(): JSX.Element {
           </div>
         </div>
 
+        {/* Solutions */}
+        <div className="footer-section">
+          <h3>Solutions</h3>
+          <Link href="/solutions">All Solutions</Link>
+          <Link href="/micro-saas">Micro SaaS</Link>
+          <Link href="/ai-services">AI Services</Link>
+          <Link href="/it-services">IT Services</Link>
+          <Link href="/enterprise">Enterprise</Link>
+          <div className="text-sm mt-2 space-y-1">
+            <div>• 120+ Micro SaaS Products</div>
+            <div>• 80+ AI Services</div>
+            <div>• 80+ IT Solutions</div>
+          </div>
+        </div>
+
         {/* Services */}
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Services</h3>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/services" style={{ opacity: 0.8, textDecoration: 'none' }}>All Services</Link>
-            <Link href="/micro-saas" style={{ opacity: 0.8, textDecoration: 'none' }}>Micro SaaS Products</Link>
-            <Link href="/ai-services" style={{ opacity: 0.8, textDecoration: 'none' }}>AI Services</Link>
-            <Link href="/it-services" style={{ opacity: 0.8, textDecoration: 'none' }}>IT Services</Link>
-            <Link href="/services-catalog" style={{ opacity: 0.8, textDecoration: 'none' }}>Services Catalog</Link>
-            <Link href="/pricing" style={{ opacity: 0.8, textDecoration: 'none' }}>Pricing</Link>
+        <div className="footer-section">
+          <h3>Services</h3>
+          <Link href="/services">All Services</Link>
+          <Link href="/services-catalog">Services Catalog</Link>
+          <Link href="/pricing">Pricing</Link>
+          <Link href="/faq">FAQ</Link>
+          <div className="text-sm mt-2 space-y-1">
+            <div>• Custom Development</div>
+            <div>• Consulting Services</div>
+            <div>• 24/7 Support</div>
           </div>
         </div>
 
         {/* Company */}
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Company</h3>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/" style={{ opacity: 0.8, textDecoration: 'none' }}>Home</Link>
-            <Link href="/about" style={{ opacity: 0.8, textDecoration: 'none' }}>About Us</Link>
-            <Link href="/contact" style={{ opacity: 0.8, textDecoration: 'none' }}>Contact Us</Link>
-            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none' }}>FAQ</Link>
-            <div style={{ opacity: 0.8, fontSize: '0.9rem', marginTop: 8 }}>
-              <div>• 60+ Micro SaaS Products</div>
-              <div>• 40+ AI Services</div>
-              <div>• 40+ IT Solutions</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Legal & Support */}
-        <div style={{ display: 'grid', gap: 12 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.1rem' }}>Legal & Support</h3>
-          <div style={{ display: 'grid', gap: 8 }}>
-            <Link href="/privacy" style={{ opacity: 0.8, textDecoration: 'none' }}>Privacy Policy</Link>
-            <Link href="/terms" style={{ opacity: 0.8, textDecoration: 'none' }}>Terms of Service</Link>
-            <Link href="/faq" style={{ opacity: 0.8, textDecoration: 'none' }}>Support</Link>
-            <a href="mailto:kleber@ziontechgroup.com" style={{ opacity: 0.8, textDecoration: 'none' }}>Support Email</a>
-          </div>
+        <div className="footer-section">
+          <h3>Company</h3>
+          <Link href="/about">About Us</Link>
+          <Link href="/careers">Careers</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/terms">Terms of Service</Link>
         </div>
 
         {/* Contact CTA */}
@@ -239,8 +182,8 @@ function Footer(): JSX.Element {
       }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-          <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Privacy Policy</Link> | 
-          <Link href="/terms" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none' }}>Terms of Service</Link>
+          <Link href="/privacy">Privacy Policy</Link> | 
+          <Link href="/terms">Terms of Service</Link>
         </small>
       </div>
     </footer>
