@@ -72,6 +72,7 @@ module.exports = nextConfig;`;
     } catch (error) {
       console.error('Performance improvement failed:', error.message);
     }
+  }
 }
 
 improvePerformance();

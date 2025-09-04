@@ -1,14 +1,14 @@
 {
-  "timestamp": "2025-09-03T16:58:04.929Z",
+  "timestamp": "2025-09-04T02:08:49.767Z",
   "tests": [
     {
       "name": "Build Test",
       "status": "passed",
       "message": "Application builds successfully",
-      "duration": 10940,
+      "duration": 11623,
       "details": {
         "buildOutput": [
-          "  └ other shared chunks (total)           12.1 kB",
+          "  └ other shared chunks (total)           14.6 kB",
           "",
           "○  (Static)  prerendered as static content",
           "",
@@ -25,7 +25,7 @@
       "name": "TypeScript Check",
       "status": "passed",
       "message": "TypeScript type checking passed",
-      "duration": 759,
+      "duration": 746,
       "details": {
         "output": "\n> ziontechgroup.com@0.1.0 type-check\n> tsc --noEmit\n\n"
       }
@@ -34,23 +34,29 @@
       "name": "ESLint Check",
       "status": "passed",
       "message": "ESLint completed (check output for warnings)",
-      "duration": 194,
+      "duration": 192,
       "details": {
-        "output": "\n> ziontechgroup.com@0.1.0 lint\n> eslint components pages --ext .ts,.tsx,.js,.jsx\n\n"
+        "output": "\n> ziontechgroup.com@0.1.0 lint\n> eslint components pages --no-ignore\n\n"
       }
     },
     {
       "name": "Pages Validation",
       "status": "passed",
-      "message": "13/13 pages have valid exports",
-      "duration": 1,
+      "message": "18/18 pages have valid exports",
+      "duration": 2,
       "details": {
         "pages": [
+          {
+            "page": "404.tsx",
+            "hasExport": true,
+            "hasImports": true,
+            "size": 2402
+          },
           {
             "page": "_app.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 4539
+            "size": 11610
           },
           {
             "page": "about.tsx",
@@ -62,13 +68,31 @@
             "page": "ai-services.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 28282
+            "size": 43430
+          },
+          {
+            "page": "cloud-devops.tsx",
+            "hasExport": true,
+            "hasImports": true,
+            "size": 7244
           },
           {
             "page": "contact.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 8556
+            "size": 9132
+          },
+          {
+            "page": "cybersecurity.tsx",
+            "hasExport": true,
+            "hasImports": true,
+            "size": 7231
+          },
+          {
+            "page": "docs.tsx",
+            "hasExport": true,
+            "hasImports": true,
+            "size": 8174
           },
           {
             "page": "faq.tsx",
@@ -80,19 +104,19 @@
             "page": "index.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 10650
+            "size": 12354
           },
           {
             "page": "it-services.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 36863
+            "size": 53006
           },
           {
             "page": "micro-saas.tsx",
             "hasExport": true,
             "hasImports": true,
-            "size": 37262
+            "size": 52391
           },
           {
             "page": "pricing.tsx",
@@ -105,6 +129,12 @@
             "hasExport": true,
             "hasImports": true,
             "size": 2110
+          },
+          {
+            "page": "quantum-computing.tsx",
+            "hasExport": true,
+            "hasImports": true,
+            "size": 7392
           },
           {
             "page": "services-catalog.tsx",
@@ -125,17 +155,31 @@
             "size": 6561
           }
         ],
-        "totalPages": 13,
-        "validPages": 13
+        "totalPages": 18,
+        "validPages": 18
       }
     },
     {
       "name": "Components Validation",
       "status": "failed",
-      "message": "2/3 components are valid React components",
-      "duration": 0,
+      "message": "7/8 components are valid React components",
+      "duration": 1,
       "details": {
         "components": [
+          {
+            "component": "Breadcrumb.tsx",
+            "hasReactImport": true,
+            "hasExport": true,
+            "hasJSX": true,
+            "size": 2136
+          },
+          {
+            "component": "ContactForm.tsx",
+            "hasReactImport": true,
+            "hasExport": true,
+            "hasJSX": true,
+            "size": 6751
+          },
           {
             "component": "ErrorBoundary.tsx",
             "hasReactImport": true,
@@ -151,22 +195,43 @@
             "size": 595
           },
           {
+            "component": "LoadingSpinner.tsx",
+            "hasReactImport": true,
+            "hasExport": true,
+            "hasJSX": true,
+            "size": 684
+          },
+          {
             "component": "PerformanceMonitor.tsx",
             "hasReactImport": true,
             "hasExport": true,
             "hasJSX": false,
             "size": 1894
+          },
+          {
+            "component": "SearchBar.tsx",
+            "hasReactImport": true,
+            "hasExport": true,
+            "hasJSX": true,
+            "size": 6285
+          },
+          {
+            "component": "ThemeToggle.tsx",
+            "hasReactImport": true,
+            "hasExport": true,
+            "hasJSX": true,
+            "size": 1638
           }
         ],
-        "totalComponents": 3,
-        "validComponents": 2
+        "totalComponents": 8,
+        "validComponents": 7
       }
     },
     {
       "name": "Dependencies Check",
       "status": "passed",
       "message": "Dependencies check passed (79 deps, 37 dev deps)",
-      "duration": 605,
+      "duration": 590,
       "details": {
         "dependencies": 79,
         "devDependencies": 37,
@@ -176,11 +241,11 @@
     {
       "name": "Performance Check",
       "status": "passed",
-      "message": "Build size: 42.94MB (Good)",
+      "message": "Build size: 47.20MB (Good)",
       "duration": 2,
       "details": {
-        "buildSizeBytes": 45030112,
-        "buildSizeMB": 42.944061279296875,
+        "buildSizeBytes": 49497965,
+        "buildSizeMB": 47.20493793487549,
         "threshold": 50
       }
     }
