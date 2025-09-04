@@ -28,7 +28,7 @@ const nextConfig = {
         chunks: 'all',
         cacheGroups: {
           vendor: {
-            test: /[\\/]node_modules[\\/]/,
+            test: /[\/]node_modules[\/]/,
             name: 'vendors',
             chunks: 'all',
           },
@@ -40,8 +40,7 @@ const nextConfig = {
   
   // Headers for performance
   async headers() {
-    return [
-      {
+    return [{
         source: '/(.*)',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },
@@ -49,9 +48,9 @@ const nextConfig = {
           { key: 'X-XSS-Protection', value: '1; mode=block' },
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
-        ],
-      },
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
+        ]
+      }
     ];
   },
 };
