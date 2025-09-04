@@ -69,12 +69,12 @@ function Header(): any {
             <Link href="/careers" style={{ color: 'white', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.1)'}} onClick={() => setMobileMenuOpen(false)}>Careers</Link>
             <Link href="/contact" style={{ 
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white', 
-              padding: '12px 16px', 
-              textDecoration: 'none', 
-              borderRadius: 6, 
-              textAlign: 'center', 
-              fontWeight: 600, 
+              color: 'white',
+              padding: '12px 16px',
+              textDecoration: 'none',
+              borderRadius: 6,
+              textAlign: 'center',
+              fontWeight: 600,
               marginTop: 8
             }} onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
@@ -181,31 +181,28 @@ function Footer(): any {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             <Link href="/contact" style={{ 
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-              color: 'white',
-              padding: '10px 16px',
+              color: 'white', 
+              padding: '10px 16px', 
               borderRadius: 8,
-              textAlign: 'center',
+              textAlign: 'center', 
               textDecoration: 'none',
-              fontWeight: 600
-            }}>Request Quote</Link>
+              fontWeight: 600}}>Request Quote</Link>
             <a href="tel: +13024640950" style={{
               background: 'rgba(255,255,255,0.1)',
-              color: 'white',
-              padding: '10px 16px',
+              color: 'white', 
+              padding: '10px 16px', 
               borderRadius: 8,
-              textAlign: 'center',
+              textAlign: 'center', 
               textDecoration: 'none',
-              fontWeight: 600
-            }}>Call Now</a>
+              fontWeight: 600}}>Call Now</a>
             <a href="mailto: kleber@ziontechgroup.com" style={{
               background: 'rgba(255,255,255,0.1)',
-              color: 'white',
-              padding: '10px 16px',
+              color: 'white', 
+              padding: '10px 16px', 
               borderRadius: 8,
-              textAlign: 'center',
+              textAlign: 'center', 
               textDecoration: 'none',
-              fontWeight: 600
-            }}>Email Us</a>
+              fontWeight: 600}}>Email Us</a>
           </div>
         </div>
       </div>
@@ -213,8 +210,7 @@ function Footer(): any {
       <div style={{ 
         borderTop: '1px solid rgba(255,255,255,0.1)',
         padding: '20px',
-        textAlign: 'center'
-      }}>
+        textAlign: 'center' }}>
         <small style={{ opacity: 0.7 }}>
           © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
           <Link href="/privacy" style={{ color: '#93c5fd', marginLeft: 8, textDecoration: 'none'}}>Privacy Policy</Link> | 

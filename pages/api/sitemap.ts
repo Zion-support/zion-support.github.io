@@ -14,7 +14,7 @@ const staticPages = [
   '/about',
   '/privacy',
   '/terms',
-  '/faq'
+  '/faq',
 ];
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

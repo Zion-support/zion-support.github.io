@@ -3,60 +3,61 @@ import Head from 'next/head';
 
 export default function Cookies() {
 const contact = { 
-    phone: '+1 302 464 0950', 
-    email: 'kleber@ziontechgroup.com', 
-    address: '364 E Main St STE 1008 Middletown DE 19709', 
-    site: 'https://ziontechgroup.com'
-  };
-  const cookieTypes = [
-    {
-      type: "Essential Cookies",
-      description: "These cookies are necessary for the website to function and cannot be switched off in our systems.",
-      purpose: "Enable basic website functionality, security, and user authentication.",
-      examples: [
-        "Session management cookies",
-        "Security and authentication cookies",
-        "Load balancing cookies",
-        "User interface customization cookies"
-      ],
-      retention: "Session or up to 1 year"
-    },
-    {
-      type: "Analytics Cookies",
-      description: "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.",
-      purpose: "Help us understand how visitors interact with our website by collecting and reporting information anonymously.",
-      examples: [
-        "Google Analytics cookies",
-        "Page view tracking",
-        "User behavior analysis",
-        "Performance monitoring"
-      ],
-      retention: "Up to 2 years"
-    },
-    {
-      type: "Functional Cookies",
-      description: "These cookies enable enhanced functionality and personalization, such as videos and live chat.",
-      purpose: "Provide enhanced features and personalization options for a better user experience.",
-      examples: [
-        "Language preference cookies",
-        "Chat widget cookies",
-        "Video player cookies",
-        "Form data cookies"
-      ],
-      retention: "Up to 1 year"
-    },
-    {
-      type: "Marketing Cookies",
-      description: "These cookies may be set through our site by our advertising partners to build a profile of your interests.",
-      purpose: "Show you relevant advertisements on other websites and measure the effectiveness of our marketing campaigns.",
-      examples: [
-        "Advertising network cookies",
-        "Social media tracking cookies",
-        "Remarketing cookies",
-        "Conversion tracking cookies"
-      ],
-      retention: "Up to 2 years"
-    }
+  phone: '+1 302 464 0950', 
+  email: 'kleber@ziontechgroup.com', 
+  address: '364 E Main St STE 1008 Middletown DE 19709', 
+  site: 'https://ziontechgroup.com'
+};
+
+const cookieTypes = [
+  {
+    type: "Essential Cookies",
+    description: "These cookies are necessary for the website to function and cannot be switched off in our systems.",
+    purpose: "Enable basic website functionality, security, and user authentication.",
+    examples: [
+      "Session management cookies",
+      "Security and authentication cookies",
+      "Load balancing cookies",
+      "User interface customization cookies"
+    ],
+    retention: "Session or up to 1 year"
+  },
+  {
+    type: "Analytics Cookies",
+    description: "These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site.",
+    purpose: "Help us understand how visitors interact with our website by collecting and reporting information anonymously.",
+    examples: [
+      "Google Analytics cookies",
+      "Page view tracking",
+      "User behavior analysis",
+      "Performance monitoring"
+    ],
+    retention: "Up to 2 years"
+  },
+  {
+    type: "Functional Cookies",
+    description: "These cookies enable enhanced functionality and personalization, such as videos and live chat.",
+    purpose: "Provide enhanced features and personalization options for a better user experience.",
+    examples: [
+      "Language preference cookies",
+      "Chat widget cookies",
+      "Video player cookies",
+      "Form data cookies"
+    ],
+    retention: "Up to 1 year"
+  },
+  {
+    type: "Marketing Cookies",
+    description: "These cookies may be set through our site by our advertising partners to build a profile of your interests.",
+    purpose: "Show you relevant advertisements on other websites and measure the effectiveness of our marketing campaigns.",
+    examples: [
+      "Advertising network cookies",
+      "Social media tracking cookies",
+      "Remarketing cookies",
+      "Conversion tracking cookies"
+    ],
+    retention: "Up to 2 years"
+  }
   ];
 
   return (
@@ -76,7 +77,7 @@ const contact = {
         <div style={{ maxWidth: 1000, margin: '0 auto', padding: '40px 20px' }}>
           <div style={{ textAlign: 'center', marginBottom: 60 }}>
             <h1 style={{ 
-              fontSize: '3rem',
+              fontSize: '2.5rem',
               fontWeight: 800, 
               marginBottom: 20,
               background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
@@ -92,7 +93,7 @@ const contact = {
           </div>
 
           <div style={{ marginBottom: 60 }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
+            <h2 style={{ fontSize: '1.8rem', fontWeight: 700, marginBottom: 20 }}>
               What Are Cookies?
             </h2>
             <div style={{
@@ -102,7 +103,7 @@ const contact = {
               border: '1px solid #e2e8f0',
               marginBottom: 30
             }}>
-              <p style={{ fontSize: '1rem', lineHeight: 1.6, color: '#94a3b8' }}>
+              <p style={{ fontSize: '1.1rem', lineHeight: 1.6, color: '#94a3b8' }}>
                 Cookies are small text files that are placed on your computer or mobile device when you visit our website. 
                 They are widely used to make websites work more efficiently and to provide information to website owners.
               </p>
@@ -113,7 +114,7 @@ const contact = {
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 30 }}>
               Types of Cookies We Use
             </h2>
-            <div style={{ display: 'grid', gap: 30 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
               {cookieTypes.map((cookie, index) => (
                 <div key={index} style={{
                   background: '#f8fafc',
@@ -122,7 +123,8 @@ const contact = {
                   border: '1px solid #e2e8f0'
                 }}>
                   <h3 style={{ 
-                    fontSize: '2rem', fontWeight: 700, 
+                    fontSize: '1.3rem',
+                    fontWeight: 700, 
                     marginBottom: 15,
                     color: '#3b82f6'
                   }}>
@@ -139,7 +141,7 @@ const contact = {
                   </p>
                   
                   <div style={{ marginBottom: 20 }}>
-                    <h4 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 10, color: '#374151' }}>
                       Purpose:
                     </h4>
                     <p style={{ color: '#666', lineHeight: 1.5 }}>
@@ -148,7 +150,7 @@ const contact = {
                   </div>
                   
                   <div style={{ marginBottom: 20 }}>
-                    <h4 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 10, color: '#374151' }}>
                       Examples:
                     </h4>
                     <ul style={{ color: '#666', paddingLeft: 20 }}>
@@ -161,7 +163,7 @@ const contact = {
                   </div>
                   
                   <div>
-                    <h4 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                    <h4 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: 10, color: '#374151' }}>
                       Retention Period:
                     </h4>
                     <p style={{ color: '#666' }}>
@@ -174,7 +176,7 @@ const contact = {
           </div>
 
           <div style={{ marginBottom: 60 }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
+            <h2 style={{ fontSize: :  700, marginBottom: 20 }}>
               Managing Your Cookie Preferences
             </h2>
             <div style={{
@@ -189,7 +191,7 @@ const contact = {
               </p>
               
               <div style={{ marginBottom: 20 }}>
-                <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                <h3 style={{ fontSize: :  600, marginBottom: 10, color: '#e5e7eb' }}>
                   Browser Settings:
                 </h3>
                 <p style={{ color: '#666', lineHeight: 1.5 }}>
@@ -200,7 +202,7 @@ const contact = {
               </div>
               
               <div>
-                <h3 style={{ fontSize: '1.5rem', fontWeight: 600, marginBottom: 10, color: '#e5e7eb' }}>
+                <h3 style={{ fontSize: :  600, marginBottom: 10, color: '#e5e7eb' }}>
                   Cookie Banner:
                 </h3>
                 <p style={{ color: '#666', lineHeight: 1.5 }}>
@@ -213,7 +215,7 @@ const contact = {
           </div>
 
           <div style={{ marginBottom: 60 }}>
-            <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 20 }}>
+            <h2 style={{ fontSize: :  700, marginBottom: 20 }}>
               Third-Party Cookies
             </h2>
             <div style={{
@@ -263,7 +265,7 @@ const contact = {
               padding: '12px 24px',
               textDecoration: 'none',
               borderRadius: 8,
-              fontSize: '1.5rem', fontWeight: 600,
+              fontSize: :  600,
               display: 'inline-block'
             }}>
               Contact Us
