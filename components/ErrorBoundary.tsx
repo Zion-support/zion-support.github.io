@@ -17,10 +17,12 @@ class ErrorBoundary extends Component<Props, State> {
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error in development only
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    
+    // In production, you might want to send this to an error reporting service
+    if (process.env.NODE_ENV === 'production') {
+      // Example: Send to error reporting service
+      // errorReportingService.captureException(error, { extra: errorInfo });
     }
   }
 

@@ -21,8 +21,10 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
     optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
-
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
@@ -57,10 +59,7 @@ const nextConfig = {
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
-          { 
-            key: 'Content-Security-Policy', 
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;"
-          }
+          { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;" }
         ]
       }
     ];

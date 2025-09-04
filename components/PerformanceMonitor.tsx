@@ -1,31 +1,25 @@
 import React, { useEffect } from 'react';
 
-const PerformanceMonitor: React.FC = () => {,
+interface PerformanceMetrics {
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+}
+
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
-      // Send performance data to analytics in production
-      const sendToAnalytics = (metric: string, value: number) => {,
-        if (process.env.NODE_ENV === 'production') {
-          // Send to Google Analytics or other analytics service
-          if (typeof (window as any).gtag !== 'undefined') {
-            (window as any).gtag('event', 'web_vitals', {
-              metric_name: metric,
-              metric_value: Math.round(value),
-              metric_rating: value < 2.5 ? 'good' : value < 4 ? 'needs-improvement' : 'poor',;
-            });
-          }
-      }
+      const metrics: PerformanceMetrics = {};
+
       // Monitor Largest Contentful Paint (LCP)
       const observer = new window.PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
-            // Log LCP in development only
-            if (process.env.NODE_ENV === 'development') {
-              // eslint-disable-next-line no-console
-              console.log('LCP:', entry.startTime);
-            }
-            sendToAnalytics('LCP', entry.startTime);
+            metrics.lcp = entry.startTime;
+            console.log('LCP:', entry.startTime);
           }
       });
       
