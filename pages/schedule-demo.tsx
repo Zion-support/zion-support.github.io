@@ -2,6 +2,13 @@ import Head from 'next/head';
 import { useState } from 'react';
 
 export default function ScheduleDemo() {
+  const contact = { 
+    phone: '+1 302 464 0950', 
+    email: 'kleber@ziontechgroup.com', 
+    address: '364 E Main St STE 1008 Middletown DE 19709', 
+    site: 'https://ziontechgroup.com' 
+  };
+
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [formData, setFormData] = useState({
