@@ -18,7 +18,10 @@ import {
   Globe,
   FileText,
   MessageSquare,
-  Rocket
+  Rocket,
+  BookOpen,
+  Handshake,
+  Calendar
 } from 'lucide-react';
 
 const navigation = [
@@ -41,7 +44,8 @@ const navigation = [
       { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Shield },
       { name: 'Startup Solutions', href: '/solutions/startup', icon: Rocket },
       { name: 'Industry Solutions', href: '/solutions/industry', icon: BarChart3 },
-      { name: 'Custom Development', href: '/solutions/custom', icon: Settings }
+      { name: 'Custom Development', href: '/solutions/custom', icon: Settings },
+      { name: 'All Solutions', href: '/solutions', icon: Globe }
     ]
   },
   {
@@ -50,20 +54,26 @@ const navigation = [
     icon: FileText,
     children: [
       { name: 'Documentation', href: '/docs', icon: FileText },
+      { name: 'API Reference', href: '/api-docs', icon: Settings },
+      { name: 'Tutorials', href: '/tutorials', icon: BookOpen },
+      { name: 'Guides', href: '/guides', icon: FileText },
       { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
       { name: 'Blog', href: '/blog', icon: MessageSquare },
-      { name: 'API Reference', href: '/api-docs', icon: Settings }
+      { name: 'FAQ', href: '/faq', icon: MessageSquare },
+      { name: 'Support', href: '/support', icon: Users }
     ]
   },
   {
-    name: 'About',
+    name: 'Company',
     href: '/about',
-    icon: Users
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-    icon: Phone
+    icon: Users,
+    children: [
+      { name: 'About Us', href: '/about', icon: Users },
+      { name: 'Careers', href: '/careers', icon: Users },
+      { name: 'Partners', href: '/partners', icon: Handshake },
+      { name: 'Events', href: '/events', icon: Calendar },
+      { name: 'Contact', href: '/contact', icon: Phone }
+    ]
   }
 ];
 

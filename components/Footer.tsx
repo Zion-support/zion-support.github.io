@@ -57,6 +57,8 @@ const company = [
   { name: 'About Us', href: '/about' },
   { name: 'Our Team', href: '/about#team' },
   { name: 'Careers', href: '/careers' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Events', href: '/events' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'News', href: '/news' }
@@ -68,7 +70,8 @@ const resources = [
   { name: 'Tutorials', href: '/tutorials' },
   { name: 'Guides', href: '/guides' },
   { name: 'FAQ', href: '/faq' },
-  { name: 'Support', href: '/support' }
+  { name: 'Support', href: '/support' },
+  { name: 'Sitemap', href: '/sitemap' }
 ];
 
 const legal = [
