@@ -78,12 +78,7 @@ const PerformanceMonitor: React.FC = () => {
             console.log('CLS:', value);
           }
         }
-        sendToAnalytics({
-          name: 'CLS',
-          value: clsValue,
-          delta: clsValue,
-          id: Date.now().toString()
-        });
+        console.log('CLS:', clsValue);
       });
 
       try {
@@ -116,9 +111,8 @@ const PerformanceMonitor: React.FC = () => {
         observer.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-        fcpObserver.disconnect();
-      };
-    }
+      }
+    };
   }, []);
 
   return null; // This component doesn't render anything
