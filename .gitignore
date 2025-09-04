@@ -84,3 +84,8 @@ automation/logs/*.log
 automation/logs/*.runtime.log
 automation/data/*.json
 !automation/data/autonomous-config.json
+
+# Generated reports
+automation-reports/
+health-check-report-*.json
+security-scan-report-*.json
