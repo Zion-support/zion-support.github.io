@@ -1,137 +1,159 @@
 #!/usr/bin/env node
 
+/**
+ * Performance Monitor
+ * Monitors and analyzes application performance
+ */
+
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('⚡ Starting performance monitoring...');
+class PerformanceMonitor {
+  constructor() {
+    this.metrics = {
+      buildTime: 0,
+      bundleSize: 0,
+      testTime: 0,
+      memoryUsage: 0
+    };
+    this.startTime = Date.now();
+  }
 
-const performanceMetrics = {
-  timestamp: new Date().toISOString(),
-  bundleSize: {},
-  fileCounts: {},
-  recommendations: []
-};
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] [${level}] ${message}`);
+  }
 
-// Check bundle sizes
-function getDirectorySize(dirPath) {
-  if (!fs.existsSync(dirPath)) return 0;
-  
-  let totalSize = 0;
-  const files = fs.readdirSync(dirPath, { recursive: true });
-  
-  files.forEach(file => {
-    if (typeof file === 'string') {
-      const filePath = path.join(dirPath, file);
+  async monitorPerformance() {
+    this.log('⚡ Starting performance monitoring...');
+    
+    try {
+      // Monitor build performance
+      this.log('Monitoring build performance...');
+      const buildStart = Date.now();
+      execSync('npm run build', { stdio: 'inherit' });
+      this.metrics.buildTime = Date.now() - buildStart;
+      
+      // Check bundle size
+      const buildDir = './.next';
+      if (fs.existsSync(buildDir)) {
+        this.metrics.bundleSize = this.getDirectorySize(buildDir);
+      }
+      
+      // Monitor test performance
+      this.log('Monitoring test performance...');
+      const testStart = Date.now();
       try {
+        execSync('npm test', { stdio: 'inherit' });
+        this.metrics.testTime = Date.now() - testStart;
+      } catch (error) {
+        this.log('Tests failed, but continuing with performance monitoring', 'WARN');
+      }
+      
+      // Monitor memory usage
+      this.metrics.memoryUsage = process.memoryUsage();
+      
+      this.log('✅ Performance monitoring completed successfully');
+      return { success: true, metrics: this.metrics };
+    } catch (error) {
+      this.log(`❌ Performance monitoring failed: ${error.message}`, 'ERROR');
+      return { success: false, error: error.message, metrics: this.metrics };
+    }
+  }
+
+  getDirectorySize(dirPath) {
+    let totalSize = 0;
+    
+    try {
+      const files = fs.readdirSync(dirPath);
+      
+      for (const file of files) {
+        const filePath = path.join(dirPath, file);
         const stats = fs.statSync(filePath);
-        if (stats.isFile()) {
+        
+        if (stats.isDirectory()) {
+          totalSize += this.getDirectorySize(filePath);
+        } else {
           totalSize += stats.size;
         }
-      } catch (error) {
-        // Skip files that can't be accessed
       }
+    } catch (error) {
+      this.log(`Error calculating directory size: ${error.message}`, 'WARN');
     }
-  });
-  
-  return totalSize;
-}
+    
+    return totalSize;
+  }
 
-// Check .next directory
-const nextDirSize = getDirectorySize('.next');
-performanceMetrics.bundleSize['.next'] = {
-  size: nextDirSize,
-  sizeMB: (nextDirSize / 1024 / 1024).toFixed(2)
-};
+  async generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      duration: Date.now() - this.startTime,
+      metrics: this.metrics,
+      recommendations: this.generateRecommendations()
+    };
 
-// Check node_modules
-const nodeModulesSize = getDirectorySize('node_modules');
-performanceMetrics.bundleSize['node_modules'] = {
-  size: nodeModulesSize,
-  sizeMB: (nodeModulesSize / 1024 / 1024).toFixed(2)
-};
+    const reportPath = path.join(__dirname, '..', 'automation', 'logs', 'performance-report.json');
+    const logDir = path.dirname(reportPath);
+    
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+    
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log(`📄 Report saved to: ${reportPath}`);
+    
+    return report;
+  }
 
-// Count files by type
-const fileCounts = {
-  '.tsx': 0,
-  '.ts': 0,
-  '.jsx': 0,
-  '.js': 0,
-  '.css': 0,
-  '.json': 0
-};
+  generateRecommendations() {
+    const recommendations = [];
+    
+    if (this.metrics.buildTime > 60000) { // 1 minute
+      recommendations.push('Consider optimizing build process - build time is high');
+    }
+    
+    if (this.metrics.bundleSize > 50 * 1024 * 1024) { // 50MB
+      recommendations.push('Bundle size is large - consider code splitting and tree shaking');
+    }
+    
+    if (this.metrics.testTime > 30000) { // 30 seconds
+      recommendations.push('Test execution time is high - consider parallel test execution');
+    }
+    
+    if (this.metrics.memoryUsage.heapUsed > 100 * 1024 * 1024) { // 100MB
+      recommendations.push('High memory usage detected - consider memory optimization');
+    }
+    
+    return recommendations;
+  }
 
-function countFiles(dirPath) {
-  if (!fs.existsSync(dirPath)) return;
-  
-  const files = fs.readdirSync(dirPath, { recursive: true });
-  files.forEach(file => {
-    if (typeof file === 'string') {
-      const ext = path.extname(file);
-      if (fileCounts.hasOwnProperty(ext)) {
-        fileCounts[ext]++;
+  async run() {
+    try {
+      const result = await this.monitorPerformance();
+      const report = await this.generateReport();
+      
+      this.log('🎉 Performance monitoring completed!');
+      this.log(`📊 Build time: ${this.metrics.buildTime}ms`);
+      this.log(`📦 Bundle size: ${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)}MB`);
+      
+      if (report.recommendations.length > 0) {
+        this.log('💡 Recommendations:');
+        report.recommendations.forEach(rec => this.log(`  - ${rec}`));
       }
+      
+      return report;
+    } catch (error) {
+      this.log(`💥 Performance monitoring failed: ${error.message}`, 'ERROR');
+      throw error;
     }
-  });
-}
-
-['components', 'pages', 'lib', 'styles'].forEach(dir => countFiles(dir));
-performanceMetrics.fileCounts = fileCounts;
-
-// Performance recommendations
-if (nextDirSize > 50 * 1024 * 1024) { // 50MB
-  performanceMetrics.recommendations.push('Consider optimizing bundle size - .next directory is large');
-}
-
-if (fileCounts['.tsx'] + fileCounts['.ts'] > 50) {
-  performanceMetrics.recommendations.push('Consider code splitting - many TypeScript files detected');
-}
-
-if (fileCounts['.css'] > 10) {
-  performanceMetrics.recommendations.push('Consider CSS optimization - multiple CSS files detected');
-}
-
-// Check for large images
-const publicDir = 'public';
-if (fs.existsSync(publicDir)) {
-  const publicFiles = fs.readdirSync(publicDir, { recursive: true });
-  let largeImages = 0;
-  
-  publicFiles.forEach(file => {
-    if (typeof file === 'string' && /\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {
-      try {
-        const filePath = path.join(publicDir, file);
-        const stats = fs.statSync(filePath);
-        if (stats.size > 500 * 1024) { // 500KB
-          largeImages++;
-        }
-      } catch (error) {
-        // Skip files that can't be accessed
-      }
-    }
-  });
-  
-  if (largeImages > 0) {
-    performanceMetrics.recommendations.push(`Optimize ${largeImages} large images in public directory`);
   }
 }
 
-// Display results
-console.log('\n📊 Performance Metrics:');
-console.log(`   - .next bundle size: ${performanceMetrics.bundleSize['.next']?.sizeMB || '0'} MB`);
-console.log(`   - node_modules size: ${performanceMetrics.bundleSize['node_modules']?.sizeMB || '0'} MB`);
-console.log(`   - TypeScript files: ${fileCounts['.tsx'] + fileCounts['.ts']}`);
-console.log(`   - JavaScript files: ${fileCounts['.jsx'] + fileCounts['.js']}`);
-console.log(`   - CSS files: ${fileCounts['.css']}`);
-
-if (performanceMetrics.recommendations.length > 0) {
-  console.log('\n💡 Recommendations:');
-  performanceMetrics.recommendations.forEach(rec => console.log(`   - ${rec}`));
-} else {
-  console.log('\n✅ No performance issues detected');
+// Run if called directly
+if (require.main === module) {
+  const monitor = new PerformanceMonitor();
+  monitor.run().catch(console.error);
 }
 
-// Save report
-fs.writeFileSync('performance-metrics.json', JSON.stringify(performanceMetrics, null, 2));
-console.log('\n📄 Performance report saved to performance-metrics.json');
-
-process.exit(0);
+module.exports = PerformanceMonitor;
