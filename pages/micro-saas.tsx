@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar, Headphones, RefreshCw, Video, Stethoscope, Cpu } from 'lucide-react';
+import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar, Headphones, RefreshCw, Video, Stethoscope, Cpu, Smartphone, Package, Target } from 'lucide-react';
 
 export default function MicroSaaS() {
   const contact = {
@@ -1156,6 +1156,50 @@ export default function MicroSaaS() {
       category: 'Event Management'
     },
     {
+      icon: Smartphone,
+      name: 'Mobile-First Survey Platform',
+      description: 'Advanced survey creation and analytics platform optimized for mobile devices with real-time data collection and AI-powered insights.',
+      features: [
+        'Drag-and-drop survey builder with mobile optimization',
+        'Real-time data collection and analytics',
+        'AI-powered response analysis and sentiment detection',
+        'Multi-channel distribution (SMS, email, social media)',
+        'Advanced segmentation and targeting',
+        'Custom branding and white-label options'
+      ],
+      pricing: '$149 – $999/month',
+      timeline: '1–2 weeks',
+      benefits: [
+        '60% higher mobile response rates',
+        'Real-time customer feedback collection',
+        'AI-driven insights and recommendations',
+        'Improved customer engagement and satisfaction'
+      ],
+      category: 'Customer Research'
+    },
+    {
+      icon: Calendar,
+      name: 'Event Management Automation',
+      description: 'Comprehensive event planning platform with automated workflows, ticketing, and attendee management for conferences, webinars, and corporate events.',
+      features: [
+        'Automated event registration and ticketing',
+        'Dynamic pricing and promotional campaigns',
+        'Attendee communication and engagement tools',
+        'Real-time analytics and reporting',
+        'Integration with payment processors and CRM',
+        'Mobile app for attendees and organizers'
+      ],
+      pricing: '$299 – $1,999/month',
+      timeline: '3–4 weeks',
+      benefits: [
+        '50% reduction in event planning time',
+        'Automated attendee management',
+        'Improved event ROI tracking',
+        'Enhanced attendee experience'
+      ],
+      category: 'Event Management'
+    },
+    {
       icon: FileText,
       name: 'AI-Powered Content Creation Suite',
       description: 'Comprehensive content generation platform with AI writing, editing, and optimization tools.',
@@ -1219,7 +1263,7 @@ export default function MicroSaaS() {
         'Improved customer experience',
         'Reduced return processing costs'
       ],
-      category: 'E-Commerce'
+      category: 'E-Commerce Automation'
     },
     {
       icon: Mail,
