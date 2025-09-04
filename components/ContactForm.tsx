@@ -217,5 +217,6 @@ const ContactForm: React.FC = () => {
     </form>
   );
 };
+}
 
-export default ContactForm;export default ContactForm;
+export default ContactForm;
