@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { AppHeader } from '../layout/AppHeader';
-import { EnhancedFuturisticFooter } from './EnhancedFuturisticFooter';
+import { FuturisticFooter } from './FuturisticFooter';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -21,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <main className="flex-1">
           {children}
         </main>
-        <EnhancedFuturisticFooter />
+        <FuturisticFooter />
       </div>
     </>
   );

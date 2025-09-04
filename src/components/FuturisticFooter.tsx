@@ -1,3 +1,61 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, ArrowUp, Github, Twitter, Linkedin, Instagram } from 'lucide-react';
+
+const FuturisticFooter: React.FC = () => {
+  const contactInfo = {
+    mobile: '+1 (555) 123-4567',
+    email: 'info@ziontechgroup.com',
+    address: '123 Innovation Drive, Tech City, TC 12345'
+  };
+
+  const socialLinks = [
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' }
+  ];
+
+  const footerSections = {
+    services: {
+      title: 'Services',
+      items: [
+        { name: 'AI Solutions', href: '/services/ai', icon: ArrowUp },
+        { name: 'Cloud Infrastructure', href: '/services/cloud', icon: ArrowUp },
+        { name: 'Digital Transformation', href: '/services/transformation', icon: ArrowUp },
+        { name: 'Cybersecurity', href: '/services/security', icon: ArrowUp }
+      ]
+    },
+    company: {
+      title: 'Company',
+      items: [
+        { name: 'About Us', href: '/about', icon: ArrowUp },
+        { name: 'Our Team', href: '/team', icon: ArrowUp },
+        { name: 'Careers', href: '/careers', icon: ArrowUp },
+        { name: 'Contact', href: '/contact', icon: ArrowUp }
+      ]
+    },
+    resources: {
+      title: 'Resources',
+      items: [
+        { name: 'Documentation', href: '/docs', icon: ArrowUp },
+        { name: 'Blog', href: '/blog', icon: ArrowUp },
+        { name: 'Case Studies', href: '/case-studies', icon: ArrowUp },
+        { name: 'Support', href: '/support', icon: ArrowUp }
+      ]
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-cyan-600/10"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"></div>
 
       <div className="relative z-10">
         {/* Main footer content */}
@@ -13,38 +71,38 @@
                 className="space-y-6"
               >
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center shadow-lg shadow-zion-cyan/25">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-purple-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-400/25">
                     <span className="text-2xl font-bold text-white">Z</span>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
+                    <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-blue-600 bg-clip-text text-transparent">
                       ZION TECH GROUP
                     </h3>
-                    <p className="text-sm text-zion-slate-light">Innovation • Intelligence • Impact</p>
+                    <p className="text-sm text-slate-300">Innovation • Intelligence • Impact</p>
                   </div>
                 </div>
                 
-                <p className="text-zion-slate-light leading-relaxed">
+                <p className="text-slate-300 leading-relaxed">
                   Leading the future of technology with cutting-edge AI services, innovative solutions, 
                   and comprehensive IT services. Empowering businesses to thrive in the digital age.
                 </p>
 
                 {/* Contact Information */}
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                    <Phone className="w-4 h-4 text-zion-cyan" />
-                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-zion-cyan transition-colors duration-300">
+                  <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-400 transition-colors duration-300">
+                    <Phone className="w-4 h-4 text-cyan-400" />
+                    <a href={`tel:${contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors duration-300">
                       {contactInfo.mobile}
                     </a>
                   </div>
-                  <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                    <Mail className="w-4 h-4 text-zion-cyan" />
-                    <a href={`mailto:${contactInfo.email}`} className="hover:text-zion-cyan transition-colors duration-300">
+                  <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-400 transition-colors duration-300">
+                    <Mail className="w-4 h-4 text-cyan-400" />
+                    <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors duration-300">
                       {contactInfo.email}
                     </a>
                   </div>
-                  <div className="flex items-center space-x-3 text-zion-slate-light">
-                    <MapPin className="w-4 h-4 text-zion-cyan" />
+                  <div className="flex items-center space-x-3 text-slate-300">
+                    <MapPin className="w-4 h-4 text-cyan-400" />
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
@@ -59,7 +117,7 @@
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`p-2 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg text-zion-slate-light ${social.color} hover:bg-zion-cyan/10 hover:border-zion-cyan/40 transition-all duration-300`}
+                      className={`p-2 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-slate-300 ${social.color} hover:bg-cyan-400/10 hover:border-cyan-400/40 transition-all duration-300`}
                     >
                       <social.icon className="w-5 h-5" />
                     </motion.a>
@@ -89,16 +147,17 @@
                 >
                   {section.items.map((item, index) => (
                     <motion.li
-                      key={index}                      initial={{ opacity: 0, x: -20 }}
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.05 }}
                       viewport={{ once: true }}
                     >
                       <Link
                         to={item.href}
-                        className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm flex items-center space-x-2 group"
+                        className="text-slate-300 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center space-x-2 group"
                       >
-                        <item.icon className="w-3 h-3 text-zion-cyan group-hover:scale-110 transition-transform duration-300" />
+                        <item.icon className="w-3 h-3 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                         <span>{item.name}</span>
                       </Link>
                     </motion.li>
@@ -110,21 +169,21 @@
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-zion-cyan/20">
+        <div className="border-t border-cyan-400/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <div className="text-zion-slate-light text-sm">
+              <div className="text-slate-300 text-sm">
                 © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
               </div>
               
               <div className="flex items-center space-x-6 text-sm">
-                <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+                <Link to="/privacy" className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">
                   Privacy Policy
                 </Link>
-                <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+                <Link to="/terms" className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">
                   Terms of Service
                 </Link>
-                <Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+                <Link to="/sitemap" className="text-slate-300 hover:text-cyan-400 transition-colors duration-300">
                   Sitemap
                 </Link>
               </div>
@@ -137,7 +196,7 @@
           onClick={scrollToTop}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300 z-50"
+          className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white shadow-lg shadow-cyan-400/25 hover:shadow-xl hover:shadow-cyan-400/40 transition-all duration-300 z-50"
         >
           <ArrowUp className="w-5 h-5" />
         </motion.button>
@@ -146,5 +205,4 @@
   );
 };
 
-;,"});,})";
-
+export { FuturisticFooter };

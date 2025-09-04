@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
-import Layout from './components/layout/Layout';
+import Layout from './components/Layout';
 import LoadingSpinner from './components/ui/loading-spinner';
 import '../styles/globals.css';
 
