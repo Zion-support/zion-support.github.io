@@ -30,18 +30,42 @@ export default function MicroSaaS() {
   ];
 
   return (
-    <Layout
-      title="Micro SaaS - Zion Tech Group"
-      description="A curated suite of focused micro SaaS tools that deliver ROI quickly, from AI support copilots to analytics and billing automation."
-      canonical="https://ziontechgroup.com/micro-saas"
-    >
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">Micro SaaS</h1>
-          <p className="mt-4 text-slate-600 max-w-3xl mx-auto">
-            Lightweight, specialized products you can deploy in days—not months. Each product
-            integrates with popular CRMs, support tools, and data warehouses.
-          </p>
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      <Head>
+        <title>Micro SaaS Products — Zion Tech Group</title>
+        <meta name="description" content="Ready-to-deploy micro SaaS products including cloud cost optimization, document processing, API management, and more. Transform your business with innovative solutions." />
+        <link rel="canonical" href={`${contact.site}/micro-saas`} />
+      </Head>
+
+      <header className="py-20 text-center px-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+          Micro SaaS Products
+        </h1>
+        <p className="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">
+          Ready-to-deploy SaaS solutions that solve real business problems. From cloud cost optimization 
+          to document processing, our micro SaaS products deliver immediate value with minimal setup time.
+        </p>
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
+          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
+          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Started</Link>
+        </div>
+      </header>
+
+      <main className="max-w-7xl mx-auto px-4 pb-24">
+        {/* Category Filter */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-center">Browse by Category</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[...new Set(microSaaSServices.map(s => s.category))].map((category) => (
+              <button
+                key={category}
+                className="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium transition-colors"
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

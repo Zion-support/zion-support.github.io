@@ -54,14 +54,14 @@ export default function Contact() {
                         {contact.address}
                       </p>
                     </div>
+                    <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                      <h3 className="text-xl font-semibold mb-2 text-yellow-400">Website</h3>
+                      <a href={contact.site} className="text-lg text-slate-300 hover:text-white transition-colors">
+                        {contact.site}
+                      </a>
+                      <p className="text-slate-400 text-sm mt-1">Visit our full service catalog</p>
+                    </div>
                   </div>
-                </div>
-                <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
-                  <h3 className="text-xl font-semibold mb-2 text-yellow-400">Website</h3>
-                  <a href={contact.site} className="text-lg text-slate-300 hover:text-white transition-colors">
-                    {contact.site}
-                  </a>
-                  <p className="text-slate-400 text-sm mt-1">Visit our full service catalog</p>
                 </div>
               </div>
 

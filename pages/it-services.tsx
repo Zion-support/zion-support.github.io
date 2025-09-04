@@ -16,18 +16,42 @@ export default function ITServices() {
   ];
 
   return (
-    <Layout
-      title="IT Services - Zion Tech Group"
-      description="Managed IT, cloud migration, networking, and cybersecurity delivered with SLAs and predictable pricing."
-      canonical="https://ziontechgroup.com/it-services"
-    >
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">IT Services</h1>
-          <p className="mt-4 text-slate-600 max-w-3xl mx-auto">
-            Reliable IT operations for modern organizations. From day-2 operations to complex
-            cloud migrations and security programs, we design resilient foundations that scale.
-          </p>
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+      <Head>
+        <title>IT & Cloud Services — Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, enterprise architecture, and development solutions. Expert IT consulting and implementation." />
+        <link rel="canonical" href={`${contact.site}/it-services`} />
+      </Head>
+
+      <header className="py-20 text-center px-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+          IT & Cloud Services
+        </h1>
+        <p className="mt-4 text-slate-300 max-w-3xl mx-auto text-lg">
+          Comprehensive IT solutions from cloud migration to cybersecurity. Our expert team delivers 
+          enterprise-grade infrastructure, development, and consulting services with proven results.
+        </p>
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-5 py-2 rounded bg-blue-600 hover:bg-blue-700">Call {contact.phone}</a>
+          <a href={`mailto:${contact.email}`} className="px-5 py-2 rounded bg-purple-600 hover:bg-purple-700">Email {contact.email}</a>
+          <Link href="/contact" className="px-5 py-2 rounded bg-slate-800 hover:bg-slate-700 border border-white/10">Get Quote</Link>
+        </div>
+      </header>
+
+      <main className="max-w-7xl mx-auto px-4 pb-24">
+        {/* Category Filter */}
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-center">Browse by Category</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[...new Set(itServices.map(s => s.category))].map((category) => (
+              <button
+                key={category}
+                className="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-white/10 text-sm font-medium transition-colors"
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

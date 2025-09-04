@@ -76,6 +76,8 @@ export default function Security() {
               ))}
             </div>
           </div>
+        </div>
+
           <div style={{ marginBottom: 80 }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
               Compliance Certifications
@@ -118,6 +120,8 @@ export default function Security() {
               ))}
             </div>
           </div>
+        </div>
+
           <div style={{ marginBottom: 80 }}>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, marginBottom: 40, textAlign: 'center' }}>
               Security Features
@@ -205,6 +209,7 @@ export default function Security() {
               </a>
             </div>
           </div>
+        </div>
       </div>
     </>
   );
