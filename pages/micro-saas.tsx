@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar, Headphones, RefreshCw, Video, Stethoscope, Cpu } from 'lucide-react';
-
 export default function MicroSaaS() {
   const contact = {
     phone: '+1 302 464 0950',
@@ -1145,14 +1144,12 @@ export default function MicroSaaS() {
         'Integration with payment and marketing tools',
         'Mobile app for attendees and organizers'
       ],
-      pricing: '$249 – $1,599/month',
-      timeline: '3–4 weeks',
+      pricing: '$249 – $1,599/month',      timeline: '3–4 weeks',
       benefits: [
         '50% reduction in event planning time',
         'Automated attendee management',
         'Improved event ROI tracking',
-        'Enhanced attendee experience'
-      ],
+        'Enhanced attendee experience'      ],
       category: 'Event Management'
     },
     {
@@ -1209,16 +1206,14 @@ export default function MicroSaaS() {
         'Automated return label generation',
         'Real-time return status tracking',
         'Return analytics and insights',
-        'Integration with e-commerce platforms'
-      ],
+        'Integration with e-commerce platforms'      ],
       pricing: '$199 – $1,299/month',
       timeline: '2–3 weeks',
       benefits: [
         '60% faster return processing',
         'Automated return workflows',
         'Improved customer experience',
-        'Reduced return processing costs'
-      ],
+        'Reduced return processing costs'      ],
       category: 'E-Commerce'
     },
     {
@@ -1253,8 +1248,7 @@ export default function MicroSaaS() {
         'Social media format optimization',
         'Brand consistency and watermarking',
         'Multi-platform publishing',
-        'Performance analytics and insights'
-      ],
+        'Performance analytics and insights'      ],
       pricing: '$299 – $1,999/month',
       timeline: '3–4 weeks',
       benefits: [
@@ -1307,8 +1301,7 @@ export default function MicroSaaS() {
         'Automated recruitment workflows',
         'Enhanced hiring success rates'
       ],
-      category: 'Recruitment'
-    },
+      category: 'Recruitment'    },
     {
       icon: Shield,
       name: 'Cybersecurity Compliance Manager',
@@ -1351,8 +1344,7 @@ export default function MicroSaaS() {
         'Enhanced security solutions',
         'Cutting-edge research capabilities'
       ],
-      category: 'Quantum Computing'
-    }
+      category: 'Quantum Computing'    }
   ];
 
   const categories = [...new Set(microSaaSServices.map(service => service.category))];
