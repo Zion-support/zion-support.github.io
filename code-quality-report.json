@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-09-03T21:22:51.525Z",
+=======
+  "timestamp": "2025-09-04T01:35:36.861Z",
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
   "files": {
     "components/Breadcrumb.tsx": {
       "path": "components/Breadcrumb.tsx",
@@ -9,9 +13,15 @@
     },
     "components/ContactForm.tsx": {
       "path": "components/ContactForm.tsx",
+<<<<<<< HEAD
       "lines": 192,
       "issues": [],
       "complexity": 1
+=======
+      "lines": 218,
+      "issues": [],
+      "complexity": 7
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
     },
     "components/ErrorBoundary.tsx": {
       "path": "components/ErrorBoundary.tsx",
@@ -21,7 +31,13 @@
     },
     "components/Loading.tsx": {
       "path": "components/Loading.tsx",
-      "lines": 24,
+      "lines": 25,
+      "issues": [],
+      "complexity": 2
+    },
+    "components/LoadingSpinner.tsx": {
+      "path": "components/LoadingSpinner.tsx",
+      "lines": 29,
       "issues": [],
       "complexity": 2
     },
@@ -33,9 +49,33 @@
     },
     "components/PerformanceMonitor.tsx": {
       "path": "components/PerformanceMonitor.tsx",
-      "lines": 60,
+      "lines": 83,
       "issues": [],
-      "complexity": 10
+      "complexity": 16
+    },
+    "components/SearchBar.tsx": {
+      "path": "components/SearchBar.tsx",
+      "lines": 182,
+      "issues": [],
+      "complexity": 5
+    },
+    "components/ThemeToggle.tsx": {
+      "path": "components/ThemeToggle.tsx",
+      "lines": 45,
+      "issues": [],
+      "complexity": 3
+    },
+    "pages/404.tsx": {
+      "path": "pages/404.tsx",
+      "lines": 60,
+      "issues": [
+        {
+          "rule": "Function Length",
+          "value": 1,
+          "message": "Functions should be under 50 lines"
+        }
+      ],
+      "complexity": 1
     },
     "components/SearchBar.tsx": {
       "path": "components/SearchBar.tsx",
@@ -87,7 +127,11 @@
     },
     "pages/ai-services.tsx": {
       "path": "pages/ai-services.tsx",
+<<<<<<< HEAD
       "lines": 1137,
+=======
+      "lines": 933,
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
       "issues": [
         {
           "rule": "File Length",
@@ -96,7 +140,11 @@
         },
         {
           "rule": "Duplicate Code",
+<<<<<<< HEAD
           "value": 72,
+=======
+          "value": 63,
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
           "message": "Potential duplicate code detected"
         }
       ],
@@ -134,13 +182,21 @@
     },
     "pages/index.tsx": {
       "path": "pages/index.tsx",
+<<<<<<< HEAD
       "lines": 219,
+=======
+      "lines": 199,
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
       "issues": [],
       "complexity": 5
     },
     "pages/it-services.tsx": {
       "path": "pages/it-services.tsx",
+<<<<<<< HEAD
       "lines": 1370,
+=======
+      "lines": 1223,
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
       "issues": [
         {
           "rule": "File Length",
@@ -149,7 +205,11 @@
         },
         {
           "rule": "Duplicate Code",
+<<<<<<< HEAD
           "value": 92,
+=======
+          "value": 82,
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
           "message": "Potential duplicate code detected"
         }
       ],
@@ -157,7 +217,11 @@
     },
     "pages/micro-saas.tsx": {
       "path": "pages/micro-saas.tsx",
+<<<<<<< HEAD
       "lines": 1401,
+=======
+      "lines": 1238,
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
       "issues": [
         {
           "rule": "File Length",
@@ -166,7 +230,11 @@
         },
         {
           "rule": "Duplicate Code",
+<<<<<<< HEAD
           "value": 57,
+=======
+          "value": 50,
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
           "message": "Potential duplicate code detected"
         }
       ],
@@ -234,8 +302,13 @@
   },
   "summary": {
     "totalFiles": 28,
+<<<<<<< HEAD
     "totalLines": 8473,
     "averageComplexity": "1.75",
+=======
+    "totalLines": 7990,
+    "averageComplexity": "2.00",
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
     "issues": [
       {
         "file": "pages/404.tsx",
@@ -277,7 +350,11 @@
           },
           {
             "rule": "Duplicate Code",
+<<<<<<< HEAD
             "value": 72,
+=======
+            "value": 63,
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
             "message": "Potential duplicate code detected"
           }
         ]
@@ -292,7 +369,11 @@
           },
           {
             "rule": "Duplicate Code",
+<<<<<<< HEAD
             "value": 92,
+=======
+            "value": 82,
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
             "message": "Potential duplicate code detected"
           }
         ]
@@ -307,7 +388,11 @@
           },
           {
             "rule": "Duplicate Code",
+<<<<<<< HEAD
             "value": 57,
+=======
+            "value": 50,
+>>>>>>> 524123c5241136a794706a4b0af3734c9d7b2328
             "message": "Potential duplicate code detected"
           }
         ]
