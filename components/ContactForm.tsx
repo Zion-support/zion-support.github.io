@@ -30,6 +30,7 @@ const ContactForm: React.FC = (): JSX.Element => {
       [name]: value
     }));
   };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -47,11 +48,13 @@ const ContactForm: React.FC = (): JSX.Element => {
         service: '',
         message: ''
       });
-    } catch {
+    } catch (error) {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
+  };
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
       <div className="grid md:grid-cols-2 gap-6">
@@ -161,7 +164,7 @@ const ContactForm: React.FC = (): JSX.Element => {
 
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300" role="alert">
-          Thank you for your message! We&apos;ll get back to you within 24 hours.
+          Thank you for your message! We'll get back to you within 24 hours.
         </div>
       )}
 
@@ -188,10 +191,6 @@ const ContactForm: React.FC = (): JSX.Element => {
       </button>
     </form>
   );
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> 9d52a0b519566fb829f098b2703072e5c0978931
 
 export default ContactForm;

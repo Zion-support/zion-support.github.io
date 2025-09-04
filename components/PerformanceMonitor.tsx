@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 /* eslint-disable @typescript-eslint/no-unused-vars, no-unused-vars */
->>>>>>> 9d52a0b519566fb829f098b2703072e5c0978931
 import { useEffect } from 'react';
 
 // Type definitions for gtag
