@@ -20,7 +20,7 @@ module.exports = {
       name: 'lint-automation',
       script: 'automation/lint-automation.js',
       instances: 1,
-      autorestart: false,
+      autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       cron_restart: '0 */6 * * *', // Restart every 6 hours
@@ -51,9 +51,7 @@ module.exports = {
     },
     {
       name: 'automation-ci-cd',
-      script: 'node',
-      args: 'automation/ci-cd-automation.cjs',
-      cwd: '/workspace',
+      script: 'automation/ci-cd-automation.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -67,9 +65,7 @@ module.exports = {
     },
     {
       name: 'automation-continuous-improvement',
-      script: 'node',
-      args: 'automation/continuous-improvement.cjs',
-      cwd: '/workspace',
+      script: 'automation/continuous-improvement.cjs',
       instances: 1,
       autorestart: true,
       watch: false,
