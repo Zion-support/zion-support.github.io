@@ -3,18 +3,27 @@ import React, { useState, useEffect } from 'react';
 interface LoadingOptimizedProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
-  delay?: number}
+  delay?: number;
+}
 
-export default function LoadingOptimized() { const [isLoading, setIsLoading] = useState(true);
+export default function LoadingOptimized({ 
+  children, 
+  fallback, 
+  delay = 1000 
+}: LoadingOptimizedProps) {
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false) }, delay);
+      setIsLoading(false);
+    }, delay);
 
     return () => clearTimeout(timer);
   }, [delay]);
 
-  if (isLoading) { return <>{fallback}</>; }
+  if (isLoading) {
+    return <>{fallback}</>;
+  }
 
   return <>{children}</>;
 }

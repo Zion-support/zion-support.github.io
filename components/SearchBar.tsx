@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 interface SearchResult {
@@ -69,13 +69,15 @@ export default function SearchBar() {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const searchRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (query.length > 2) {
+  const handleSearch = (searchQuery: string) => {
+    if (searchQuery.length > 2) {
       const filtered = searchData.filter(item =>
-        item.title.toLowerCase().includes(query.toLowerCase()) ||
-        item.description.toLowerCase().includes(query.toLowerCase()) ||
-        item.category.toLowerCase().includes(query.toLowerCase())
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.category.toLowerCase().includes(searchQuery.toLowerCase())
       );
       setResults(filtered);
       setIsOpen(true);
@@ -83,13 +85,17 @@ export default function SearchBar() {
       setResults([]);
       setIsOpen(false);
     }
+  };
+
+  useEffect(() => {
+    handleSearch(query);
   }, [query]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    handleSearch(value);
   };
+
   const handleResultClick = () => {
     setQuery('');
     setResults([]);
@@ -162,7 +168,7 @@ export default function SearchBar() {
 
       {isOpen && query.length > 2 && results.length === 0 && (
         <div className="absolute top-full left-0 right-0 mt-2 bg-slate-800 border border-white/20 rounded-lg shadow-xl z-50 p-4">
-          <p className="text-slate-300 text-center">No results found for "{query}"</p>
+          <p className="text-slate-300 text-center">No results found for &quot;{query}&quot;</p>
         </div>
       )}
     </div>
