@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-09-04T02:05:34.188Z",
   "status": "failed",
   "scans": [
@@ -112,4 +113,14 @@
   "vulnerabilities": [],
   "status": "secure"
 >>>>>>> 128840a43b844df0edc9aa22038e6fb53d898bf5
+=======
+  "timestamp": "2025-09-04T02:16:02.212Z",
+  "summary": {
+    "passed": 3,
+    "warnings": 1,
+    "errors": 0,
+    "infos": 1
+  },
+  "status": "WARNING"
+>>>>>>> 9d52a0b519566fb829f098b2703072e5c0978931
 }

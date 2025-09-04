@@ -47,13 +47,11 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
-  };
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
       <div className="grid md:grid-cols-2 gap-6">
@@ -190,6 +188,10 @@ const ContactForm: React.FC = () => {
       </button>
     </form>
   );
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> 9d52a0b519566fb829f098b2703072e5c0978931
 
 export default ContactForm;

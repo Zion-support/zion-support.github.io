@@ -3,8 +3,9 @@ const fs = require('fs');
 const path = require('path');
 
 function improvePerformance() {
-  // Create next.config.js optimizations
-  const nextConfigContent = `/** @type {import('next').NextConfig} */
+  try {
+    // Create next.config.js optimizations
+    const nextConfigContent = `/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
