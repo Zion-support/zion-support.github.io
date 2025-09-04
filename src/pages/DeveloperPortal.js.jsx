@@ -1,12 +1,12 @@
 import React from 'react';
 import SEO from "../SEO";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "../ui/card";
+import {Button} from "../ui/button";
+import {Badge} from "../ui/badge";
+import {Code, BookOpen, Zap, Shield, Users, MessageSquare, Github, ExternalLink, Terminal, Webhook, Key, Mail} from 'lucide-react';
+import {Link} from 'react-router-dom';
 export default function DeveloperPortal
-export { DeveloperPortal }() {
+export {DeveloperPortal}() {
     const apiFeatures = [
         {
             title: 'RESTful APIs',
@@ -15,106 +15,80 @@ export { DeveloperPortal }() {
             status: 'Stable',
             docs: '/api-docs'
         },
-        {
-            title: 'Webhooks',
+        {title: 'Webhooks',
             description: 'Real-time notifications for platform events and updates',
             icon: Webhook,
             status: 'Beta',
-            docs: '/api-docs/webhooks'
-        },
-        {
-            title: 'Authentication',
+            docs: '/api-docs/webhooks'},
+        {title: 'Authentication',
             description: 'Secure OAuth 2.0 and API key authentication',
             icon: Key,
             status: 'Stable',
-            docs: '/api-docs/auth'
-        },
-        {
-            title: 'SDKs & Libraries',
+            docs: '/api-docs/auth'},
+        {title: 'SDKs & Libraries',
             description: 'Official SDKs for JavaScript, Python, and more',
             icon: Terminal,
             status: 'Stable',
-            docs: '/api-docs/sdks'
-        }
+            docs: '/api-docs/sdks'}
     ];
     const quickStartSteps = [
-        {
-            step: 1,
+        {step: 1,
             title: 'Get API Keys',
             description: 'Sign up and generate your API keys from the dashboard',
-            action: 'Get Started'
-        },
-        {
-            step: 2,
+            action: 'Get Started'},
+        {step: 2,
             title: 'Read Documentation',
             description: 'Explore our comprehensive API documentation and guides',
-            action: 'View Docs'
-        },
-        {
-            step: 3,
+            action: 'View Docs'},
+        {step: 3,
             title: 'Test Endpoints',
             description: 'Use our interactive API playground to test endpoints',
-            action: 'Try API'
-        },
-        {
-            step: 4,
+            action: 'Try API'},
+        {step: 4,
             title: 'Build & Deploy',
             description: 'Integrate our APIs into your applications',
-            action: 'View Examples'
-        }
+            action: 'View Examples'}
     ];
     const resources = [
-        {
-            title: 'API Reference',
+        {title: 'API Reference',
             description: 'Complete API endpoint documentation with examples',
             icon: BookOpen,
             href: '/api-docs',
-            badge: 'Complete'
-        },
-        {
-            title: 'Getting Started Guide',
+            badge: 'Complete'},
+        {title: 'Getting Started Guide',
             description: 'Step-by-step tutorial for new developers',
             icon: Zap,
             href: '/api-docs/getting-started',
-            badge: 'Beginner'
-        },
-        {
-            title: 'Code Samples',
+            badge: 'Beginner'},
+        {title: 'Code Samples',
             description: 'Ready-to-use code examples in multiple languages',
             icon: Code,
             href: '/api-docs/samples',
-            badge: 'Examples'
-        },
-        {
-            title: 'SDK Downloads',
+            badge: 'Examples'},
+        {title: 'SDK Downloads',
             description: 'Official SDKs and client libraries',
             icon: Terminal,
             href: '/api-docs/sdks',
-            badge: 'Download'
-        },
-        {
-            title: 'Community Forum',
+            badge: 'Download'},
+        {title: 'Community Forum',
             description: 'Connect with other developers and get help',
             icon: Users,
             href: '/community',
-            badge: 'Community'
-        },
-        {
-            title: 'Support & Help',
+            badge: 'Community'},
+        {title: 'Support & Help',
             description: 'Technical support and troubleshooting guides',
             icon: MessageSquare,
             href: '/help',
-            badge: 'Support'
-        }
+            badge: 'Support'}
     ];
     return (<div className="min-h-screen bg-background">
-      <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https://ziontechgroup.com/developers"/>
+      <SEO title="Developer Portal | Zion Tech Group" description="Build powerful applications with Zion Tech Group's comprehensive APIs, SDKs, and developer tools." keywords="developer portal, API, SDK, documentation, Zion Tech Group, developers" canonical="https://ziontechgroup.com/developers" />
 
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
-            <Code className="h-16 w-16 text-zion-cyan"/>
+            <Code className="h-16 w-16 text-zion-cyan" />
           </div>
           <h1 className="text-4xl font-bold text-white mb-4">Developer Portal</h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-6">
@@ -123,13 +97,13 @@ export { DeveloperPortal }() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple/90">
               <Link to="/api-docs">
-                <BookOpen className="h-5 w-5 mr-2"/>
+                <BookOpen className="h-5 w-5 mr-2" />
                 View API Documentation
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <a href="https://github.com/ziontechgroup" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5 mr-2"/>
+                <Github className="h-5 w-5 mr-2" />
                 View on GitHub
               </a>
             </Button>
@@ -145,7 +119,7 @@ export { DeveloperPortal }() {
             return (<Card key={feature.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
-                      <IconComponent className="h-8 w-8 text-zion-cyan"/>
+                      <IconComponent className="h-8 w-8 text-zion-cyan" />
                       <Badge variant={feature.status === 'Stable' ? 'default' : 'secondary'}>
                         {feature.status}
                       </Badge>
@@ -159,7 +133,7 @@ export { DeveloperPortal }() {
                     <Button asChild variant="outline" size="sm" className="w-full">
                       <Link to={feature.docs}>
                         View Docs
-                        <ExternalLink className="h-4 w-4 ml-2"/>
+                        <ExternalLink className="h-4 w-4 ml-2" />
                       </Link>
                     </Button>
                   </CardContent>
@@ -199,7 +173,7 @@ export { DeveloperPortal }() {
             return (<Card key={resource.title} className="border-zion-blue-light hover:bg-zion-blue-dark/50 transition-colors">
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between">
-                      <IconComponent className="h-6 w-6 text-zion-cyan"/>
+                      <IconComponent className="h-6 w-6 text-zion-cyan" />
                       <Badge variant="outline" className="text-xs">
                         {resource.badge}
                       </Badge>
@@ -213,7 +187,7 @@ export { DeveloperPortal }() {
                     <Button asChild variant="outline" size="sm" className="w-full">
                       <Link to={resource.href}>
                         {resource.badge === 'Download' ? 'Download' : 'Learn More'}
-                        <ExternalLink className="h-4 w-4 ml-2"/>
+                        <ExternalLink className="h-4 w-4 ml-2" />
                       </Link>
                     </Button>
                   </CardContent>
@@ -225,7 +199,7 @@ export { DeveloperPortal }() {
         <Card className="mb-16 border-zion-blue-light">
           <CardHeader>
             <CardTitle className="text-white text-2xl flex items-center">
-              <Shield className="h-6 w-6 mr-2 text-zion-cyan"/>
+              <Shield className="h-6 w-6 mr-2 text-zion-cyan" />
               API Status & Performance
             </CardTitle>
             <CardDescription className="text-zion-slate-light">
@@ -251,7 +225,7 @@ export { DeveloperPortal }() {
               <Button asChild variant="outline">
                 <a href="/api-status" target="_blank" rel="noopener noreferrer">
                   View Detailed Status
-                  <ExternalLink className="h-4 w-4 ml-2"/>
+                  <ExternalLink className="h-4 w-4 ml-2" />
                 </a>
               </Button>
             </div>
@@ -270,13 +244,13 @@ export { DeveloperPortal }() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
               <Button asChild className="bg-zion-purple hover:bg-zion-purple/90">
                 <Link to="/contact">
-                  <MessageSquare className="h-5 w-5 mr-2"/>
+                  <MessageSquare className="h-5 w-5 mr-2" />
                   Contact Developer Support
                 </Link>
               </Button>
               <Button asChild variant="outline">
                 <a href="mailto:dev-support@ziontechgroup.com">
-                  <Mail className="h-5 w-5 mr-2"/>
+                  <Mail className="h-5 w-5 mr-2" />
                   Email Support
                 </a>
               </Button>

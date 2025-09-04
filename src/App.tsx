@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export default function App() {
+export default function App(props: any) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white">
       <div className="text-center p-8">

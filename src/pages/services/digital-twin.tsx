@@ -9,8 +9,8 @@ export { DigitalTwin }(...args: []):  {
     <>
       <Helmet>
         <title>Digital Twin Solutions - Zion Tech Group</title>
-        <meta name = "description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time."  />
-        <meta name="keywords" content="digital twin, virtual simulation, IoT monitoring, predictive maintenance, system optimization, real-time analytics"  />
+        <meta name = "description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time."   />
+        <meta name="keywords" content="digital twin, virtual simulation, IoT monitoring, predictive maintenance, system optimization, real-time analytics"   />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -39,7 +39,7 @@ export { DigitalTwin }(...args: []):  {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover: fro m-emerald-600 hover: t o-teal-700 transition-all duration-200 shadow-lg hover: shado w-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5"  />
+                  <ArrowRight className="ml-2 w-5 h-5"   />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover: b g-emerald-500/10 transition-all duration-200">
                   <Play className="mr-2 w-5 h-5"  />
@@ -300,7 +300,7 @@ export { DigitalTwin }(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover: fro m-emerald-600 hover: t o-teal-700 transition-all duration-200"
 
                 Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </Link>
               <Link
                 to="/services"

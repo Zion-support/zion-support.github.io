@@ -10,3 +10,5 @@ export default function ProductListingCard.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { useLocalStorage } from "@/hooks";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+import {useState} from "react";
+import {useLocalStorage} from "@/hooks";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Button} from "@/components/ui/button";
 import CodeBlock from "./CodeBlock.jsx";
-export function ApiPlayground({ method, path, params = [] }) {
+export function ApiPlayground(props: any) {
     const [apiKey, setApiKey] = useLocalStorage("zion_api_key", "");
     const [paramValues, setParamValues] = useState({});    const [body, setBody] = useState("{}");
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
-    const handleParamChange = (name, value) => {}
-        setParamValues((prev) => ({ ...prev, [name]: value }))};
+    const handleParamChange = (props: any) => {}
+        setParamValues((prev) => ({...prev, [name]: value}))};
     const sendRequest = async () => {}
 """
 """"
@@ -31,8 +31,7 @@ export function ApiPlayground({ method, path, params = [] }) {
 `
 ``
                 Authorization: `Bearer ${apiKey`
-`"`
-}`,""""
+`"`}`,""""
                 "Content-Type": "application/json"}};""""
         if (method !== "GET" && method !== "DELETE") {}
             try {}
@@ -62,8 +61,10 @@ export function ApiPlayground({ method, path, params = [] }) {
       <Button onClick={sendRequest} disabled={loading}>""""
         {loading ? "Sending..." : "Send Request"}"""
       </Button>""""
-      {response && <CodeBlock code={response} language="json"/>}
+      {response && <CodeBlock code={response} language="json" />}
     </div>)};
-export { ApiPlayground };
+export {ApiPlayground};
 export default ApiPlayground;"`
 export default ApiPlayground;"`"`
+
+</Textarea>

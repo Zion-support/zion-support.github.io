@@ -1,9 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download  } from 'lucide-react';
+import React, {useState, useRef, useEffect} from 'react';
+import {Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download} from 'lucide-react';
 ,
-  {
-
-    id: '2',
+  {id: '2',
     name: 'API Requests',
     current: 1250000,
     capacity: 2000000,
@@ -12,9 +10,7 @@ import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive
     prediction: 3200000,
     category: 'API Load',
     unit: 'requests/hour'},
-  {
-
-    id: '3',
+  {id: '3',
     name: 'Data Storage',
     current: 2.8,
     capacity: 5.0,
@@ -24,7 +20,7 @@ import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive
     category: 'Storage',
     unit: 'TB'},
 ];
-export function AdvancedPerformanceMonitor() {
+export function AdvancedPerformanceMonitor(props: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -46,20 +42,18 @@ export function AdvancedPerformanceMonitor() {
   ];
   const timeRanges = ['
     { value: '15m', label: '15 Minutes' },
-    { value: '1h', label: '1 Hour' },
-    { value: '6h', label: '6 Hours' },
-    { value: '24h', label: '24 Hours' },
+    {value: '1h', label: '1 Hour'},
+    {value: '6h', label: '6 Hours'},
+    {value: '24h', label: '24 Hours'},
   ];
   const filteredMetrics ='
     selectedCategory === 'all'
       ? systemMetrics
       : systemMetrics.filter(metric => metric.category === selectedCategory);
-  const refreshData = async () => {
-    setIsRefreshing(true);
+  const refreshData = async () => {setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1500));
-    setIsRefreshing(false);
-  };
+    setIsRefreshing(false);};
   useEffect(() => {
   // TODO: Add dependencies if needed
 
@@ -67,11 +61,8 @@ export function AdvancedPerformanceMonitor() {
     // Cleanup function
   };
 }, []);, []);
-    if(autoRefresh) {
-
-      const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-      return () => clearInterval(interval);
-    }
+    if(autoRefresh) {const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
+      return () => clearInterval(interval);}
   }, [autoRefresh]);
   const getStatusColor = status => {
 
@@ -104,11 +95,11 @@ export function AdvancedPerformanceMonitor() {
     switch(trend) {
 
       case 'up':
-        return <TrendingUp className="w-4 h-4 text-red-500" />;
+        return <TrendingUp className="w-4 h-4 text-red-500"  />;
       case 'down':"
-        return <TrendingUp className="w-4 h-4 text-green-500 rotate-180" />;
+        return <TrendingUp className="w-4 h-4 text-green-500 rotate-180"  />;
       default:"
-        return <Activity className="w-4 h-4 text-gray-500" />;
+        return <Activity className="w-4 h-4 text-gray-500"  />;
     }
   };
   const getCategoryIcon = category => {
@@ -116,25 +107,22 @@ export function AdvancedPerformanceMonitor() {
     switch(category) {
 
       case 'Processor':"
-        return <Cpu className="w-5 h-5 text-blue-500" />;
+        return <Cpu className="w-5 h-5 text-blue-500"  />;
       case 'Memory':"
-        return <HardDrive className="w-5 h-5 text-green-500" />;
+        return <HardDrive className="w-5 h-5 text-green-500"  />;
       case 'Storage':"
-        return <HardDrive className="w-5 h-5 text-purple-500" />;
+        return <HardDrive className="w-5 h-5 text-purple-500"  />;
       case 'Network':"
-        return <Network className="w-5 h-5 text-orange-500" />;
+        return <Network className="w-5 h-5 text-orange-500"  />;
       case 'Database':"
-        return <Database className="w-5 h-5 text-cyan-500" />;
+        return <Database className="w-5 h-5 text-cyan-500"  />;
       default:"
-        return <Activity className="w-5 h-5 text-gray-500" />;
+        return <Activity className="w-5 h-5 text-gray-500"  />;
     }
   };
-  const getUtilizationColor = utilization => {
-
-    if(utilization >= 80) return 'text-red-600';
+  const getUtilizationColor = utilization => {if(utilization >= 80) return 'text-red-600';
     if(utilization >= 60) return 'text-yellow-600';
-    return 'text-green-600';
-  };
+    return 'text-green-600';};
   if(!isOpen) {
 
     return ()
@@ -143,7 +131,7 @@ export function AdvancedPerformanceMonitor() {
         className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 z-40"
         title="Open Performance Monitor"
       >"
-        <Activity className="w-6 h-6" />
+        <Activity className="w-6 h-6"  />
       </button>
     );
   }
@@ -152,7 +140,7 @@ export function AdvancedPerformanceMonitor() {
     return ("
       <div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-xl z-50">"
         <div className="flex items-center gap-2 p-3">"
-          <Activity className="w-5 h-5 text-zion-blue" />"
+          <Activity className="w-5 h-5 text-zion-blue"  />"
           <span className="text-sm font-medium text-zion-slate">
             Performance
           </span>
@@ -160,7 +148,7 @@ export function AdvancedPerformanceMonitor() {
             onClick={() => setIsMinimized(false)}"
             className="ml-auto p-1 hover:bg-zion-slate-light rounded"
           >"
-            <Maximize2 className="w-4 h-4" />
+            <Maximize2 className="w-4 h-4"  />
           </button>
         </div>
       </div>
@@ -174,7 +162,7 @@ export function AdvancedPerformanceMonitor() {
       {/* Header */}"
       <div className="bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 flex items-center justify-between">"
         <div className="flex items-center gap-3">"
-          <Activity className="w-6 h-6" />
+          <Activity className="w-6 h-6"  />
           <div>"
             <h2 className="text-lg font-bold">
               Advanced Performance & Scalability Monitor
@@ -188,36 +176,33 @@ export function AdvancedPerformanceMonitor() {
           <button
             onClick={() => setAutoRefresh(!autoRefresh)}'`
             className={`p-2 rounded-lg transition-colors ${autoRefresh ? 'bg-white/20' : 'hover:bg-white/10'}`}
-            title={
-
-              autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'
-            }
+            title={autoRefresh ? 'Auto-refresh enabled' : 'Auto-refresh disabled'}
           >
-            <RefreshCw'`
+            <RefreshCw '`
               className={`w-4 h-4 ${autoRefresh ? 'animate-spin' : ''}`}
-            />
+             />
           </button>
           <button
             onClick={() => setIsMinimized(true)}"
             className="p-2 hover:bg-white/10 rounded-lg transition-colors"
           >"
-            <Minimize2 className="w-4 h-4" />
+            <Minimize2 className="w-4 h-4"  />
           </button>
           <button
             onClick={() => setIsFullscreen(!isFullscreen)}"
             className="p-2 hover:bg-white/10 rounded-lg transition-colors"
           >
             {isFullscreen ? ("
-              <Minimize2 className="w-4 h-4" />
+              <Minimize2 className="w-4 h-4"  />
             ) : ("
-              <Maximize2 className="w-4 h-4" />
+              <Maximize2 className="w-4 h-4"  />
             )}
           </button>
           <button
             onClick={() => setIsOpen(false)}"
             className="p-2 hover:bg-white/10 rounded-lg transition-colors"
           >"
-            <X className="w-4 h-4" />
+            <X className="w-4 h-4"  />
           </button>
         </div>
       </div>
@@ -253,9 +238,9 @@ export function AdvancedPerformanceMonitor() {
               disabled={isRefreshing}"
               className="px-4 py-2 bg-zion-blue text-white rounded-lg hover:bg-zion-blue/90 transition-colors disabled:opacity-50 flex items-center gap-2"
             >
-              <RefreshCw'`
+              <RefreshCw '`
                 className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}
-              />
+               />
               Refresh
             </button>
           </div>"
@@ -270,7 +255,7 @@ export function AdvancedPerformanceMonitor() {
               Show Predictions
             </label>"
             <button className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors flex items-center gap-2">"
-              <Download className="w-4 h-4" />
+              <Download className="w-4 h-4"  />
               Export Report
             </button>
           </div>
@@ -281,10 +266,10 @@ export function AdvancedPerformanceMonitor() {
       <div className="flex border-b border-zion-slate-light">
         {['
           { id: 'overview', label: 'Overview', icon: Activity },
-          { id: 'metrics', label: 'System Metrics', icon: BarChart3 },
-          { id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle },
-          { id: 'scalability', label: 'Scalability', icon: TrendingUp },
-          { id: 'analytics', label: 'Analytics', icon: Zap },
+          {id: 'metrics', label: 'System Metrics', icon: BarChart3},
+          {id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle},
+          {id: 'scalability', label: 'Scalability', icon: TrendingUp},
+          {id: 'analytics', label: 'Analytics', icon: Zap},
         ].map(tab => {
 
           const Icon = tab.icon;
@@ -297,7 +282,7 @@ export function AdvancedPerformanceMonitor() {
                   : 'border-transparent text-zion-slate-light hover:text-zion-slate hover:bg-zion-slate-light/20'`
               }`}
             >"
-              <Icon className="w-4 h-4" />
+              <Icon className="w-4 h-4"  />
               {tab.label}
             </button>
           );
@@ -365,7 +350,7 @@ export function AdvancedPerformanceMonitor() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">"
               <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">"
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">"
-                  <CheckCircle className="w-5 h-5 text-zion-blue" />
+                  <CheckCircle className="w-5 h-5 text-zion-blue"  />
                   System Health Status
                 </h3>"
                 <div className="space-y-3">"
@@ -382,11 +367,8 @@ export function AdvancedPerformanceMonitor() {
                       Active Alerts
                     </span>"
                     <span className="px-3 py-1 bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300 rounded-full text-sm font-medium">
-                      {
-
-                        performanceAlerts.filter(a => a.status === 'active')
-                          .length
-                      }
+                      {performanceAlerts.filter(a => a.status === 'active')
+                          .length}
                     </span>
                   </div>"
                   <div className="flex items-center justify-between">"
@@ -402,7 +384,7 @@ export function AdvancedPerformanceMonitor() {
 "
               <div className="bg-gradient-to-r from-zion-green/10 to-zion-emerald/10 p-6 rounded-xl border border-zion-green/20">"
                 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">"
-                  <TrendingUp className="w-5 h-5 text-zion-green" />
+                  <TrendingUp className="w-5 h-5 text-zion-green"  />
                   Scalability Overview
                 </h3>"
                 <div className="space-y-3">
@@ -501,7 +483,7 @@ export function AdvancedPerformanceMonitor() {
               >"
                 <div className="flex items-start gap-3">"
                   <div className="w-12 h-12 bg-zion-orange/20 rounded-lg flex items-center justify-center">"
-                    <AlertTriangle className="w-6 h-6 text-zion-orange" />
+                    <AlertTriangle className="w-6 h-6 text-zion-orange"  />
                   </div>"
                   <div className="flex-1">"
                     <div className="flex items-center gap-3 mb-2">"
@@ -577,7 +559,7 @@ export function AdvancedPerformanceMonitor() {
               >"
                 <div className="flex items-center gap-3">"
                   <div className="w-12 h-12 bg-zion-green/20 rounded-lg flex items-center justify-center">"
-                    <TrendingUp className="w-6 h-6 text-zion-green" />
+                    <TrendingUp className="w-6 h-6 text-zion-green"  />
                   </div>"
                   <div className="flex-1">"
                     <div className="flex items-center gap-3 mb-2">"
@@ -641,7 +623,7 @@ export function AdvancedPerformanceMonitor() {
         {activeTab === 'analytics' && ("
           <div className="space-y-6">"
             <div className="text-center text-zion-slate-light">"
-              <Zap className="w-16 h-16 mx-auto mb-4 opacity-50" />"
+              <Zap className="w-16 h-16 mx-auto mb-4 opacity-50"  />"
               <h3 className="text-lg font-semibold mb-2">
                 Performance Analytics
               </h3>
@@ -656,3 +638,6 @@ export function AdvancedPerformanceMonitor() {
     </div>
   );}
 "export default ComponentName;"
+
+</RefreshCw>
+</RefreshCw>

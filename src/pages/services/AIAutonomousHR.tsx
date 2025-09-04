@@ -229,3 +229,10 @@ const AIAutonomousHR: Reac t.FC = (): JSX.Element => {
 };
 
 export default AIAutonomousHR;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

@@ -9,8 +9,8 @@ export { IoTEdge }(...args: []):  {
     <>
       <Helmet>
         <title>IoT & Edge Computing - Zion Tech Group</title>
-        <meta name = "description" content="Connect, monitor, and optimize your IoT devices with edge computing solutions. Real-time data processing and intelligent device management."  />
-        <meta name="keywords" content="IoT, edge computing, smart devices, sensor networks, real-time processing, device management, industrial IoT"  />
+        <meta name = "description" content="Connect, monitor, and optimize your IoT devices with edge computing solutions. Real-time data processing and intelligent device management."   />
+        <meta name="keywords" content="IoT, edge computing, smart devices, sensor networks, real-time processing, device management, industrial IoT"   />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -39,7 +39,7 @@ export { IoTEdge }(...args: []):  {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover: fro m-indigo-600 hover: t o-purple-700 transition-all duration-200 shadow-lg hover: shado w-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5"  />
+                  <ArrowRight className="ml-2 w-5 h-5"   />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover: b g-indigo-500/10 transition-all duration-200">
                   <Play className="mr-2 w-5 h-5"  />
@@ -334,7 +334,7 @@ export { IoTEdge }(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover: fro m-indigo-600 hover: t o-purple-700 transition-all duration-200"
 
                 Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </Link>
               <Link
                 to="/services"

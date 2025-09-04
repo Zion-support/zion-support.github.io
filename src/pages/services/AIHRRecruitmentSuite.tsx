@@ -1,12 +1,12 @@
 import React from "react"
 import Link from "next/link"
 import Head from "next/head"
-const AIHRRecruitmentSuite = () => {
+const AIHRRecruitmentSuite = (props: any) => {
   return (
     <>
       <Head>
         <title>H R Recruitment Suite - AI Services</title>
-        <meta name="description" content="Professional H R Recruitment Suite services powered by AI"   />
+        <meta name="description" content="Professional H R Recruitment Suite services powered by AI"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -49,3 +49,7 @@ const AIHRRecruitmentSuite = () => {
 }
 
 export default AIHRRecruitmentSuite
+</div>
+</div>
+</div>
+</div>

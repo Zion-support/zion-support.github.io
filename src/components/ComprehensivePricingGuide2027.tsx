@@ -1,6 +1,6 @@
 import {  import { innovativeServices2027 } from '../data/innovativeServices2027';
 
-export default function Page() {
+export default function Page(props: any) {
     );
 
     if(element) {
@@ -354,3 +354,9 @@ export default function Page() {
       </div>;
     </section>;) };
 '"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

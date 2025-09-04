@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousTesting = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousTesting = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Testing Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous testing platform that conducts comprehensive testing, ensures quality, and maintains testing excellence with advanced AI capabilities and autonomous operation."/>
-        <meta name="keywords" content="AI testing, autonomous testing, automated testing, quality testing, autonomous quality, AI testing platform"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-testing"/>
+        <meta name="description" content="Revolutionary AI autonomous testing platform that conducts comprehensive testing, ensures quality, and maintains testing excellence with advanced AI capabilities and autonomous operation."  />
+        <meta name="keywords" content="AI testing, autonomous testing, automated testing, quality testing, autonomous quality, AI testing platform"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-testing"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

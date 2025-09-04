@@ -1,6 +1,6 @@
 import React from "react"
 import { SEO } from "@/components/SEO"
-export default function EnhancedNewsletterForm() {return (
+export default function EnhancedNewsletterForm(props: any) {return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="EnhancedNewsletterForm - Zion Tech Group" description="Professional EnhancedNewsletterForm services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
@@ -10,3 +10,5 @@ export default function EnhancedNewsletterForm() {return (
         </p>
       </div>
   );"}"
+
+</div>

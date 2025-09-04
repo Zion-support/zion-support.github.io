@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousLegalCounsel = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousLegalCounsel = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Legal Counsel | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous legal counsel that provides 24/7 legal consultation, document analysis, and legal guidance with advanced AI capabilities."/>
-        <meta name="keywords" content="AI legal counsel, autonomous legal AI, legal consultation, AI law, legal automation, AI legal assistant"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-legal-counsel"/>
+        <meta name="description" content="Revolutionary AI autonomous legal counsel that provides 24/7 legal consultation, document analysis, and legal guidance with advanced AI capabilities."  />
+        <meta name="keywords" content="AI legal counsel, autonomous legal AI, legal consultation, AI law, legal automation, AI legal assistant"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-legal-counsel"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">

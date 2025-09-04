@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-export function FooterNewsletter() {
+import React, {useState} from 'react';
+export function FooterNewsletter(props: any) {
     const [email, setEmail] = useState('');
     const [isSubscribed, setIsSubscribed] = useState(false);
-    const handleSubmit = (e) => {
+    const handleSubmit = (props: any) => {
         e.preventDefault();
         // Here you would typically send the email to your newsletter service
         setIsSubscribed(true);
         setEmail('')};
-    if (isSubscribed) {
-        return (<div className="text-green-400 text-sm">
+    if (isSubscribed) {return (<div className="text-green-400 text-sm">
         Thank you for subscribing!
       </div>)}
     return (<form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">

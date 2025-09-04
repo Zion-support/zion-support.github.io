@@ -10,7 +10,7 @@ maxServices:  6,;
   category,;
   showViewAllButton = true;
 }) => {;
-  const [activeTab, setActiveTab] = useState('featured');
+  const [activeTab, setActiveTab] = useState<any>('featured');
 
   const tabs = [;
     { id: 'featured', label: 'Featured', count: 3 },;
@@ -222,3 +222,5 @@ maxServices:  6,;
 };
 
 export default InnovativeServicesOverview;}}};
+</any>
+</InnovativeServicesOverviewProps>

@@ -1,7 +1,7 @@
 import React from 'react';'''
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 ;
-const Tabs = ({ tabs, activeTab, onTabChange }) => {}
+const Tabs = (props: any) => {}
   return()
     <div className="w-full">""""
       <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
@@ -37,12 +37,14 @@ const Tabs = ({ tabs, activeTab, onTabChange }) => {}
 
 export default Tabs;
 
-export { Tabs };
+export {Tabs};
 
-export { Tabs };
+export {Tabs};
 
-export { Tabs };
+export {Tabs};
 
-export { Tabs };
+export {Tabs};
 
-export { Tabs };
+export {Tabs};
+
+</motion>

@@ -6,8 +6,8 @@ import { SEO  } from '@/components/SEO';
 ;
 
 export default function ComprehensivePricingGuide2029(...args: unknow n[]): unknown {
-  const [selectedPlan, setSelectedPlan] = useState('enterprise');
-  const [billingCycle, setBillingCycle] = useState('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<any>('enterprise');
+  const [billingCycle, setBillingCycle] = useState<any>('monthly');
 
   const allServices = [...REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES, ...REVOLUTIONARY_2029_EMERGING_TECH_SERVICES];
 
@@ -470,3 +470,19 @@ export { ComprehensivePricingGuide2029 };
 export { ComprehensivePricingGuide2029 };
 
 export { ComprehensivePricingGuide2029 };
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</span>
+</motion>
+</SEO>
+</any>
+</any>

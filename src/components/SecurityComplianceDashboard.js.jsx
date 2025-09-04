@@ -1,16 +1,15 @@
-import React, { useState, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square } from 'lucide-react';
+import React, {useState, useCallback} from 'react';'
+import {motion, AnimatePresence} from 'framer-motion';'
+import {Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square} from 'lucide-react';
 ;
 ;
-export const SecurityComplianceDashboard = ({ className = '' }) => {
-    const { trackEvent } = useAnalytics({        enableTracking: true,
-        enableUserBehaviorTracking: true;
-    });'
+export const SecurityComplianceDashboard = (props: any) => {
+    const { trackEvent } = useAnalytics({enableTracking: true,
+        enableUserBehaviorTracking: true;});'
     const [activeTab, setActiveTab] = useState('overview');
     const [showSettings, setShowSettings] = useState(false);
     const [copied, setCopied] = useState(false);
-    const { securityEvents, complianceRules, securityMetrics, isMonitoring, isComplianceChecking, startMonitoring, stopMonitoring, addSecurityEvent, updateEventStatus, addComplianceRule, checkCompliance, generateSecurityReport, exportAuditLog, configureSecurity } = useSecurityCompliance();
+    const {securityEvents, complianceRules, securityMetrics, isMonitoring, isComplianceChecking, startMonitoring, stopMonitoring, addSecurityEvent, updateEventStatus, addComplianceRule, checkCompliance, generateSecurityReport, exportAuditLog, configureSecurity} = useSecurityCompliance();
     const handleStartMonitoring = useCallback(() => {}
         startMonitoring();'
         trackEvent('security',dashboard',monitoring_started')}, [startMonitoring, trackEvent]);
@@ -28,7 +27,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
         trackEvent('security',dashboard',report_generated')}, [generateSecurityReport, trackEvent]);
     const handleExportAuditLog = useCallback(() => {}
         const auditLog = exportAuditLog();'
-        const blob = new Blob([auditLog], { type: 'application/json' });
+        const blob = new Blob([auditLog], {type: 'application/json'});
         const url = URL.createObjectURL(blob);'
         const a = document.createElement('a');
         a.href = url;'
@@ -51,7 +50,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 };''
         addComplianceRule(newRule);'''
         trackEvent('security',dashboard',compliance_rule_added')}, [addComplianceRule, trackEvent]);
-    const getSeverityColor = (severity) => {}
+    const getSeverityColor = (props: any) => {}
         switch (severity) {}
 '
 ''
@@ -62,7 +61,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             case 'low': return 'text-green-600 bg-green-100';'''
             default: return 'text-gray-600 bg-gray-100'}
     };
-    const getStatusColor = (status) => {}
+    const getStatusColor = (props: any) => {}
         switch (status) {}
 '
 ''
@@ -72,7 +71,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             case 'pending_review': return 'text-yellow-600 bg-yellow-100';'''
             default: return 'text-gray-600 bg-gray-100'}
     };
-    const getThreatLevelColor = (level) => {}
+    const getThreatLevelColor = (props: any) => {}
         switch (level) {}
 '
             case 'critical': return 'text-red-600 bg-red-100 border-red-200';'
@@ -86,7 +85,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">""""
         <div className="flex items-center space-x-3">""""
           <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">""""
-            <Shield className="w-6 h-6 text-blue-600 dark:text-blue-400"/>
+            <Shield className="w-6 h-6 text-blue-600 dark:text-blue-400" />
           </div>"""
           <div>""""
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -100,12 +99,12 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
         """"
         <div className="flex items-center space-x-2">""""
           <button onClick={handleCheckCompliance} disabled={isComplianceChecking} className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50">""""
-            {isComplianceChecking ? (<Loader2 className="w-4 h-4 animate-spin"/>) : (<RefreshCw className="w-4 h-4"/>)}
+            {isComplianceChecking ? (<Loader2 className="w-4 h-4 animate-spin" />) : (<RefreshCw className="w-4 h-4" />)}
             <span>Check Compliance</span>
           </button>"""
           """"
           <button onClick={() => setShowSettings(!showSettings)} className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">""""
-            <Settings className="w-5 h-5"/>
+            <Settings className="w-5 h-5" />
           </button>
         </div>
       </div>
@@ -113,3 +112,5 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 "
 
 export default Component
+
+</div>

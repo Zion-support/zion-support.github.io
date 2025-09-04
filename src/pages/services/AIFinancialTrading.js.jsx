@@ -1,43 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor } from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {TrendingUp, Brain, Shield, Users, BarChart3, Clock, Zap, LineChart, PieChart, Target, CheckCircle, Activity, Network, Monitor} from 'lucide-react';
 export default function AIFinancialTrading
-export { AIFinancialTrading }() {
+export {AIFinancialTrading}() {
     const features = [
         {
             icon: Brain,
             title: "AI Trading Algorithms",
             description: "Advanced machine learning algorithms that analyze market patterns and execute trades automatically"
         },
-        {
-            icon: TrendingUp,
+        {icon: TrendingUp,
             title: "Real-time Market Analysis",
-            description: "Live market data processing with instant insights and trend identification"
-        },
-        {
-            icon: Shield,
+            description: "Live market data processing with instant insights and trend identification"},
+        {icon: Shield,
             title: "Risk Management",
-            description: "Sophisticated risk assessment and portfolio protection mechanisms"
-        },
-        {
-            icon: BarChart3,
+            description: "Sophisticated risk assessment and portfolio protection mechanisms"},
+        {icon: BarChart3,
             title: "Portfolio Optimization",
-            description: "AI-powered portfolio rebalancing and asset allocation optimization"
-        },
-        {
-            icon: Zap,
+            description: "AI-powered portfolio rebalancing and asset allocation optimization"},
+        {icon: Zap,
             title: "High-Frequency Trading",
-            description: "Ultra-fast execution with microsecond precision for optimal trade timing"
-        },
-        {
-            icon: Users,
+            description: "Ultra-fast execution with microsecond precision for optimal trade timing"},
+        {icon: Users,
             title: "Social Trading",
-            description: "Copy successful traders and share strategies with the community"
-        }
+            description: "Copy successful traders and share strategies with the community"}
     ];
     const pricingPlans = [
-        {
-            name: "Starter",
+        {name: "Starter",
             price: "$99",
             period: "/month",
             description: "Perfect for individual traders and beginners",
@@ -50,10 +39,8 @@ export { AIFinancialTrading }() {
                 "Mobile app access"
             ],;
             cta: "Start Free Trial",
-            popular: false
-        },
-        {
-            name: "Professional",
+            popular: false},
+        {name: "Professional",
             price: "$299",
             period: "/month",
             description: "Ideal for active traders and small funds",
@@ -68,10 +55,8 @@ export { AIFinancialTrading }() {
                 "Custom strategies"
             ],;
             cta: "Start Free Trial",
-            popular: true
-        },
-        {
-            name: "Institutional",
+            popular: true},
+        {name: "Institutional",
             price: "$1,999",
             period: "/month",
             description: "For hedge funds and large institutions",
@@ -86,79 +71,54 @@ export { AIFinancialTrading }() {
                 "Advanced compliance"
             ],;
             cta: "Contact Sales",
-            popular: false
-        }
+            popular: false}
     ];
     const benefits = [
-        {
-            icon: TrendingUp,
+        {icon: TrendingUp,
             title: "Increased Returns",
-            description: "AI algorithms consistently outperform traditional trading strategies by 15-25% annually"
-        },
-        {
-            icon: Clock,
+            description: "AI algorithms consistently outperform traditional trading strategies by 15-25% annually"},
+        {icon: Clock,
             title: "24/7 Trading",
-            description: "Automated trading operates around the clock, capturing opportunities in all time zones"
-        },
-        {
-            icon: Shield,
+            description: "Automated trading operates around the clock, capturing opportunities in all time zones"},
+        {icon: Shield,
             title: "Risk Reduction",
-            description: "Advanced risk management reduces portfolio volatility and protects capital"
-        },
-        {
-            icon: Brain,
+            description: "Advanced risk management reduces portfolio volatility and protects capital"},
+        {icon: Brain,
             title: "Emotion-Free Trading",
-            description: "AI eliminates human emotions and biases from trading decisions"
-        },
-        {
-            icon: Zap,
+            description: "AI eliminates human emotions and biases from trading decisions"},
+        {icon: Zap,
             title: "Speed Advantage",
-            description: "Microsecond execution speed provides competitive edge in fast-moving markets"
-        },
-        {
-            icon: BarChart3,
+            description: "Microsecond execution speed provides competitive edge in fast-moving markets"},
+        {icon: BarChart3,
             title: "Data-Driven Insights",
-            description: "Comprehensive analytics and reporting for informed decision making"
-        }
+            description: "Comprehensive analytics and reporting for informed decision making"}
     ];
     const tradingInstruments = [
-        {
-            icon: LineChart,
+        {icon: LineChart,
             title: "Stocks & ETFs",
-            description: "AI-powered analysis of individual stocks, sectors, and market indices"
-        },
-        {
-            icon: PieChart,
+            description: "AI-powered analysis of individual stocks, sectors, and market indices"},
+        {icon: PieChart,
             title: "Forex Trading",
-            description: "Currency pair analysis with real-time exchange rate monitoring"
-        },
-        {
-            icon: Target,
+            description: "Currency pair analysis with real-time exchange rate monitoring"},
+        {icon: Target,
             title: "Cryptocurrency",
-            description: "Digital asset trading with blockchain-based security and transparency"
-        },
-        {
-            icon: Activity,
+            description: "Digital asset trading with blockchain-based security and transparency"},
+        {icon: Activity,
             title: "Commodities",
-            description: "Oil, gold, silver, and agricultural commodity trading strategies"
-        },
-        {
-            icon: Network,
+            description: "Oil, gold, silver, and agricultural commodity trading strategies"},
+        {icon: Network,
             title: "Options & Futures",
-            description: "Derivatives trading with advanced hedging and speculation strategies"
-        },
-        {
-            icon: Monitor,
+            description: "Derivatives trading with advanced hedging and speculation strategies"},
+        {icon: Monitor,
             title: "Bonds & Fixed Income",
-            description: "Fixed income securities with yield optimization and risk management"
-        }
+            description: "Fixed income securities with yield optimization and risk management"}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 pt-20">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
-            <TrendingUp className="w-4 h-4 mr-2"/>
+            <TrendingUp className="w-4 h-4 mr-2" />
             AI-Powered Financial Technology
           </div>
           
@@ -209,7 +169,7 @@ export { AIFinancialTrading }() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white"/>
+                  <feature .icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
@@ -226,7 +186,7 @@ export { AIFinancialTrading }() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tradingInstruments.map((instrument, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <instrument.icon className="w-6 h-6 text-white"/>
+                  <instrument .icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{instrument.title}</h3>
                 <p className="text-gray-400">{instrument.description}</p>
@@ -261,7 +221,7 @@ export { AIFinancialTrading }() {
                 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIdx) => (<li key={featureIdx} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"/>
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>))}
                 </ul>
@@ -286,7 +246,7 @@ export { AIFinancialTrading }() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, idx) => (<div key={idx} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <benefit.icon className="w-6 h-6 text-white"/>
+                  <benefit .icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-400">{benefit.description}</p>

@@ -1,6 +1,6 @@
 import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3'  } from 'lucide-react';
 
-export default function Page() {
+export default function Page(props: any) {
 , []);
 
   const baseLinks: NavigationLin k[] = [{
@@ -213,3 +213,5 @@ export default function Page() {
     </nav>;
   )}
 '"`
+
+</motion>

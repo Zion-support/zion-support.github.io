@@ -118,7 +118,7 @@ if(enableHeatmap) {
 
     // Setup scroll tracking
     let scrollTimeout: NodeJ S.Timeout;
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
       clearTimeout(scrollTimeout) ;
       scrollTimeout = setTimeout(() => {
         trackInteraction('scroll', {
@@ -129,7 +129,7 @@ if(enableHeatmap) {
     };
 
     // Setup form submission tracking
-    const handleFormSubmit = (e: Even t) => {
+    const handleFormSubmit = (props: any) => {
       const form = e.target as HTMLFormElement;
       trackInteraction('form', {        formId: for m.id || form.className,
         formAction: for m.action,
@@ -141,7 +141,7 @@ if(enableHeatmap) {
     };
 
     // Setup unhandled promise rejection tracking
-    const handleUnhandledRejection = (e: PromiseRejectionEven t) => {
+    const handleUnhandledRejection = (props: any) => {
 
       trackInteraction('error', {
 
@@ -429,3 +429,6 @@ if(enableHeatmap) {
     </>
   )}}}}}}}}}}}}}'"`
 ;,"});,})";
+
+</motion>
+</motion>

@@ -1,7 +1,7 @@
 import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
-export default function AccessibilityEnhancerLOCAL15796() {return (
+export default function AccessibilityEnhancerLOCAL15796(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="AccessibilityEnhancerLOCAL15796 - Zion Tech Group" description="Professional AccessibilityEnhancerLOCAL15796 services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">

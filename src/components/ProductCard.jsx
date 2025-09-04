@@ -6,9 +6,9 @@ import React from "react"
   TooltipTrigger} from "@/components/ui/tooltip";,"});,"})","});,"})","});,"})"
 ";,"});,"})","});,"})","});,"})","});,"})"
 // comment
-export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"});,"})"
-  const { isAuthenticated } = useAuth();,"});,"})"
-  const { isWishlisted, toggle } = useWishlist();,"});,"})"
+export default function ProductCard(props: any) {}"});,"})"
+  const {isAuthenticated} = useAuth();,"});,"})"
+  const {isWishlisted, toggle} = useWishlist();,"});,"})"
   const [imageError, setImageError] = useState(false);,"});,"})"
   const router = useNavigate();,"});,"})"
   const enqueueSnackbar = useEnqueueSnackbar();;,"});,"})"
@@ -22,7 +22,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
     captureException("""";,"});,"})"
       new Error("Invalid product data received by ProductCard"),,"});,"})"
       {}"});,"})"
-        extra: { product }}"});,"})"
+        extra: {product}}"});,"})"
     );,"});,"})"
     return ();,"});,"})"
       <div,"});,"})"
@@ -39,7 +39,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
   const active = isWishlisted(product.id);,"});,"})"
   const dispatch = useDispatch();,"});,"})"
   // comment
-  const addToCart = () => {}"});,"})"
+  const addToCart = (props: any) => {}"});,"})"
     dispatch();,"});,"})"
       addItem({}"});,"})"
         id: product.id,"});,"})"
@@ -64,9 +64,9 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         className="absolute top-2 right-2 p-1 rounded-full bg-background/70""";,"});,"})"
         onClick="{()" => toggle(product.id)}";,"});,"})"
         aria-label="{active" ? "Remove from favorites" : "Add to favorites"}"});,"})"
-        <Heart"""";,"});,"})"
+        <Heart """";,"});,"})"
           aria-hidden="true"";,"});,"})"
-          className="{active" ? "text-red-500 fill-red-500" : "text-gray-500"}"});,"})" />;,"});,"})"
+          className="{active" ? "text-red-500 fill-red-500" : "text-gray-500"}"});,"})"  />;,"});,"})"
       </button>""";,"});,"})"
 """";,"});,"})"
       <div className="w-full h-40 relative mb-2">;,"});,"})"
@@ -83,7 +83,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
         )}""";,"});,"})"
         {active && ("""";,"});,"})"
           <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">"""";,"});,"})"
-            <Heart aria-hidden="true" className="text-red-500 fill-red-500"  />;,"});,"})"
+            <Heart aria-hidden="true" className="text-red-500 fill-red-500"   />;,"});,"})"
         )}"});,"})"
       </div>""";,"});,"})"
       <Link href="{"/marketplace/listing/${product.id}"}">"""";,"});,"})"
@@ -121,14 +121,14 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}"
           </TooltipProvider>;,"});,"})"
     </div>)}"});,"})"
 ;,"});,"})"
-export { ProductCard };,"});,"})"""""""""""""react"next / link",next / image",lucide - react",@/hooks / useWishlist",@/components/ui/button
+export {ProductCard};,"});,"})"""""""""""""react"next / link",next / image",lucide - react",@/hooks / useWishlist",@/components/ui/button
   Tooltip,
   TooltipContent,
   TooltipProvider,"
   TooltipTrigger} from "@/components / ui/tooltip",
-  const { isAuthenticated } = useAuth()
+  const {isAuthenticated} = useAuth()
 }
-  const { isWishlisted, toggle } = useWishlist()
+  const {isWishlisted, toggle} = useWishlist()
 }
   const [imageError, setImageError] = useState(false)
 }
@@ -153,11 +153,11 @@ export { ProductCard };,"});,"})"""""""""""""react"next / link",next / image",lu
   TooltipTrigger
   Tooltip, TooltipContent,"
   TooltipProvider, TooltipTrigger} from "@/components / ui/tooltip",
-export default function ProductCard() {
+export default function ProductCard(props: any) {
 
-export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
+export default function ProductCard(props: any) {}
 
-  const  { isAuthenticated } = useAuth()
+  const  {isAuthenticated} = useAuth()
 }
   if (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === ") {"
     captureException(new Error("Invalid product data received by ProductCard") {
@@ -178,14 +178,11 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
   const dispatch = useDispatch()
 }
   const isMobile = useMediaQuery("(max-width: 768px)"),",
-  const handleWishlistToggle = (e) => {
-    e.preventDefault()
-}
+  const handleWishlistToggle = (props: any) => {e.preventDefault()}
     e.stopPropagation()
 }
     if: (!isAuthenticated) {",
-      enqueueSnackbar()
-}
+      enqueueSnackbar()}
   const isMobile = useMediaQuery("(max-width: 768px)"),
     if (!isAuthenticated) {
       enqueueSnackbar("Please log in to add items to your wishlist" { variant: "warning" })
@@ -193,19 +190,18 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
 
     toggle(product.id, product)}
 
-  const handleAddToCart = (e) => {
+  const handleAddToCart = (props: any) => {
       enqueueSnackbar("Please log in to add items to your cart" { variant: "warning" })
 }
-    dispatch(addItem({
-      id: product.id,
+    dispatch(addItem({id: product.id,
 title: product.title,
 price: product.price,
 image: product.image,
 quantity: 1}))
 }
-    enqueueSnackbar("Item added to cart" { variant: "success" })}
+    enqueueSnackbar("Item added to cart" {variant: "success"})}
 
-  const handleCardClick = () => {
+  const handleCardClick = (props: any) => {
     router.push("/products/${product.id}")}
 
     <div ;"
@@ -236,12 +232,12 @@ quantity: 1}))
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button;"
+              <Button ;"
                 variant="outline";"
                 size = "{isMobile" ? "sm" : "default"}"
                 onClick="{handleWishlistToggle}""
                 className="{"flex-1" ${active ? "text-red-500" : "}"}"
-                <Heart className="{"h-4" w-4 ${active ? "fill-current" : "}"}       /> {!isMobile && <span className=""ml-2"">{active ? "Saved" : "Save"}</span>}
+                <Heart className="{"h-4" w-4 ${active ? "fill-current" : "}"}        /> {!isMobile && <span className=""ml-2"">{active ? "Saved" : "Save"}</span>}
 
               </Button>
             </TooltipTrigger>
@@ -252,11 +248,11 @@ quantity: 1}))
         </TooltipProvider>
   const isMobile = useMediaQuery(&apos (max-width: 768px)&apos),&apos,
 ,
-      enqueueSnackbar(&apos,Please log in to add items to your wishlist&apos { variant: &apos,warning&apos})
+      enqueueSnackbar(&apos,Please log in to add items to your wishlist&apos {variant: &apos,warning&apos})
 }
     toggle(product.id, product)};&apos
 "
-      enqueueSnackbar("Please log in to add items to your cart" { variant: "warning"})
+      enqueueSnackbar("Please log in to add items to your cart" {variant: "warning"})
 }
       id: product.i,d,
       title: product.titl,e,
@@ -276,20 +272,20 @@ quantity: 1}))
         <div: className="relative w - full h-48 mb-4">",",","
           <Image: src="{imageError" ? "/placeholder-product.jpg" : product.image: || "/placeholder-product.jpg"}","
             fill: className="object-cover rounded-md"",",",,
-      enqueueSnackbar(&apos,Please log in to add items to your cart&apos { variant: &apos,warning&apos})
+      enqueueSnackbar(&apos,Please log in to add items to your cart&apos {variant: &apos,warning&apos})
 }
       id: product.id, title: product.title,
       price: product.price, image: product.image>
       quantity: 1}))
 }
-    enqueueSnackbar(&apos;Item added to cart&apos { variant: &apos,success&apos})};&apos
+    enqueueSnackbar(&apos;Item added to cart&apos {variant: &apos,success&apos})};&apos
     router.push("/products/${product.id}")}
 
   }
 const active = isWishlisted(product.id);
   const dispatch = useDispatch();
   // Title is now guaranteed to be a non-empty string by the check above.const productTitle = product.title;
-  const addToCart = () => {}
+  const addToCart = (props: any) => {}
     dispatch()
       addItem({}
         id: product.id,
@@ -318,10 +314,10 @@ const active = isWishlisted(product.id);
         onClick={() => toggle(product.id)}'
         aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
       >"""
-        <Heart"'"""
+        <Heart "'"""
           aria-hidden="true"''
           className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'}
-        />
+         />
       </button>"""
 """"
       <div className="w-full h-40 relative mb-2">
@@ -330,7 +326,7 @@ const active = isWishlisted(product.id);
             src={imageUrl}
             alt={imageAltText}'
             fill''
-            style={{ objectFit: 'cover' }}
+            style="{{{ objectFit: 'cover'}}"}
             onError={e => handleImageError(e)}
           />"""
         ) : (""""
@@ -340,7 +336,7 @@ const active = isWishlisted(product.id);
         )}"""
         {active && (""""
           <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">""""
-            <Heart aria-hidden="true" className="text-red-500 fill-red-500" />
+            <Heart aria-hidden="true" className="text-red-500 fill-red-500"  />
           </div>
         )}
       </div>"""
@@ -384,12 +380,30 @@ const active = isWishlisted(product.id);
       </div>
     </div>)}
 
-export { ProductCard };
+export {ProductCard};
 
-export { ProductCard };
+export {ProductCard};
 
-export { ProductCard };
+export {ProductCard};
 
-export { ProductCard };
+export {ProductCard};
 
-export { ProductCard };
+export {ProductCard};
+
+</Heart>
+</Image>
+</div>
+</div>
+</div>
+</div>
+</Image>
+</div>
+</div>
+</div>
+</div>
+</Button>
+</p>
+</div>
+</div>
+</Heart>
+</div>

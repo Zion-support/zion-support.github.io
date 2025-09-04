@@ -1,10 +1,10 @@
 import React from "react"
-import { SEO } from "@/components/SEO"
+import {SEO} from "@/components/SEO"
 ;,"});,"})
 }
-export default function AllServices2027() {return ("
+export default function AllServices2027(props: any) {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
-      <SEO title="AllServices2027 - Zion Tech Group" description="Professional AllServices2027 services by Zion Tech Group"  />"
+      <SEO title="AllServices2027 - Zion Tech Group" description="Professional AllServices2027 services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
         <h1 className="text-4xl font-bold text-white mb-8">AllServices2027</h1>"
         <p className="text-gray-300 text-lg">
@@ -78,7 +78,7 @@ export default function AllServices2027() {return ("
           <div className="mb-8">""""
             <div className="flex flex-col md:flex-row gap-4 mb-6">""""
               <div className="relative flex-1">""""
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />"""
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4"  />"""
                 <Input""""
                   placeholder="Search services..."""
                   value={searchQuery}"""
@@ -108,7 +108,7 @@ export default function AllServices2027() {return ("
                     value={category.id}""""
                     className="flex items-center gap-2""""
                   >""""
-                    <category.icon className="h-4 w-4" />""""
+                    <category .icon className="h-4 w-4"  />""""
                     <span className="hidden md:inline">{category.name}</span>""""
                     <Badge variant="secondary" className="ml-1">
                       {category.count}
@@ -131,7 +131,7 @@ export default function AllServices2027() {return ("
                       {service.category}
                     </Badge>"""
                     {service.featured && (""""
-                      <Star className="h-5 w-5 text-yellow-500 fill-current" />
+                      <Star className="h-5 w-5 text-yellow-500 fill-current"  />
                     )}"""
                   </div>""""
                   <CardTitle className="text-lg">{service.title}</CardTitle>""""
@@ -158,7 +158,7 @@ export default function AllServices2027() {return ("
                             key={index}""""
                             className="flex items-center text-sm text-gray-600""""
                           >""""
-                            <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                            <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"  />
                             {feature}
                           </li>) ) }
                       </ul>
@@ -173,7 +173,7 @@ export default function AllServices2027() {return ("
                             key={index}""""
                             className="flex items-center text-sm text-gray-600""""
                           >""""
-                            <TrendingUp className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />
+                            <TrendingUp className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0"  />
                             {benefit}
                           </li>) ) }
                       </ul>
@@ -182,14 +182,14 @@ export default function AllServices2027() {return ("
                     {/* Rating and AI Score */}""""
                     <div className="flex items-center justify-between text-sm">""""
                       <div className="flex items-center">""""
-                        <Star className="h-4 w-4 text-yellow-500 fill-current mr-1" />"""
+                        <Star className="h-4 w-4 text-yellow-500 fill-current mr-1"  />"""
                         <span>{service.rating}</span>""""
                         <span className="text-gray-500 ml-1">
                           ({service.reviewCount})
                         </span>"""
                       </div>""""
                       <div className="flex items-center">""""
-                        <Brain className="h-4 w-4 text-purple-500 mr-1" />
+                        <Brain className="h-4 w-4 text-purple-500 mr-1"  />
                         <span>AI: {service.aiScore}</span>
                       </div>
                     </div>
@@ -208,11 +208,11 @@ export default function AllServices2027() {return ("
                           className="flex items-center"""
                         >"""
                           Learn More""""
-                          <ArrowRight className="h-4 w-4 ml-1" />
+                          <ArrowRight className="h-4 w-4 ml-1"  />
                         </Link>"""
                       </Button>""""
                       <Button variant="outline" size="sm">""""
-                        <Mail className="h-4 w-4 mr-1" />
+                        <Mail className="h-4 w-4 mr-1"  />
                         Contact;
                       </Button>
                     </div>
@@ -224,22 +224,25 @@ export default function AllServices2027() {return ("
           {/* No Results */}"""
           {sortedServices.length === 0 && (""""
             <div className="text-center py-20">""""
-              <Search className="h-16 w-16 text-gray-400 mx-auto mb-4" />""""
+              <Search className="h-16 w-16 text-gray-400 mx-auto mb-4"  />""""
               <h3 className="text-xl font-semibold mb-2">No services found</h3>""""
               <p className="text-gray-500">
                 Try adjusting your search or filter criteria;
               </p>
-            </div>) }
+            </div>)}
         </div>
     );
 }
 
-export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };
+export {ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027};
 
-export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };
+export {ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027};
 
-export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };
+export {ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027};
 
-export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };
+export {ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027};
 
-export { ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027 };
+export {ALL_SERVICES, SERVICE_CATEGORIES, CONTACT_INFO, BENEFITS, AllServices2027};
+
+</section>
+</div>

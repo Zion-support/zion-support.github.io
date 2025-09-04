@@ -69,12 +69,12 @@ const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data A
 const statuses = ['All', 'upcoming', 'past'];
 
 export default function Events(...args: unknow n[]): unknown {
-  const [selectedType, setSelectedType] = useState('All');
-  const [selectedCategory, setSelectedCategory] = useState('All');  const [selectedStatus, setSelectedStatus] = useState('All');
+  const [selectedType, setSelectedType] = useState<any>('All');
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');  const [selectedStatus, setSelectedStatus] = useState<any>('All');
 '
-  const [searchTerm, setSearchTerm] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [selectedType, setSelectedType] = useState('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');'
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');'
+  const [selectedType, setSelectedType] = useState<any>('all');
 
   const categories: unknow n = [{ id: 'all', name: 'All Categories', icon: Calenda r, count: 0 },
     { id: 'ai - ml', name: 'AI & Machine Learning', icon: Brai n, count: 8 },
@@ -291,7 +291,7 @@ export default function Events(...args: unknow n[]): unknown {
   const upcomingEvents = events.filter(event => new Date(event.date) >= new Date()).slice(0, 3);
   const featuredEvents = events.filter(event => event.featured);
 
-  const formatDate = (dateString: unknownstring)  => {
+  const formatDate = (props: any) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       weekday: 'long',
@@ -299,7 +299,7 @@ export default function Events(...args: unknow n[]): unknown {
       month: 'long',       day: 'numeric' 
     }) };
 
-  const getCategoryIcon = (category: unknownstring)  => {
+  const getCategoryIcon = (props: any) => {
     switch (category) {
       case 'AI & ML': return Brain;
       case 'Cybersecurity': return Shield;
@@ -312,7 +312,7 @@ export default function Events(...args: unknow n[]): unknown {
       return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>}
   };
 
-  const getStatusBadge = (status: unknownstring)  => {
+  const getStatusBadge = (props: any) => {
     if (status === 'upcoming') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
     } else {
@@ -652,11 +652,11 @@ const Events: Reac t.FC = () => {}
             webinars, and exclusive content.
           </p>"""
           <div className="flex flex-col sm: fle x-row gap-4 justify-center max-w-md mx-auto">
-            <input"""
+            <input """
               type="email""""
               placeholder="Enter your email""""
               className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus: outlin e-none focus: rin g-2 focus: rin g-white"""
-            />"""
+             />"""
             <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: b g-gray-100 transition-colors duration-300">
               Subscribe;
             </button>
@@ -705,3 +705,23 @@ export { Events, CategoryIcon, CategoryIcon };
 export { Events, CategoryIcon, CategoryIcon };
 
 export { Page, Events, CategoryIcon, CategoryIcon, Events };
+
+</motion>
+</section>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</section>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</any>
+</any>
+</any>
+</any>

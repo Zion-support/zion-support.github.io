@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { api, ApiResponse } from '@/services / api';
-export default function Page() {
+export default function Page(props: any) {
 }}}
 interface User {
   id: number;
@@ -10,9 +10,9 @@ interface User {
 
 const ApiDemo: Reac t.FC = (): JSX.Element => {;
   const [users, setUsers] = useState<any>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<any>(false);
   const [error, setError] = useState<any>(null);
-const [newUser, setNewUser] = useState({ name: '', email: ''});
+const [newUser, setNewUser] = useState<any>({ name: '', email: ''});
   const [healthStatus, setHealthStatus] = useState<any>('Checking...');
 
   // Check API health on component mount
@@ -87,7 +87,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 type="text"
                 placeholder="Name"
                 value={newUser.name}
-                onChange = { (e) => setNewUser(prev => ({ ...prev,
+                onChange={ (e) => setNewUser(prev => ({ ...prev,
   name: e.target.value
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus: outlin e-none focus: rin g-2 focus: rin g-blue-500"
@@ -97,7 +97,7 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
                 type="email"
                 placeholder="Email"
                 value={newUser.email}
-                onChange = { (e) => setNewUser(prev => ({ ...prev,
+                onChange={ (e) => setNewUser(prev => ({ ...prev,
   email: e.target.value
 }))}"
                 className="px-3 py-2 border border-gray-300 rounded-md focus: outlin e-none focus: rin g-2 focus: rin g-blue-500"
@@ -175,3 +175,9 @@ const [newUser, setNewUser] = useState({ name: '', email: ''});
     </div>;) };
 
 export default ApiDemo}}}}}}}'"`
+
+</any>
+</any>
+</any>
+</any>
+</any>

@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousSpeech = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousSpeech = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Speech Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous speech platform that continuously processes speech, recognizes voice, and generates audio with advanced AI capabilities and autonomous operation."/>
-        <meta name="keywords" content="AI speech, autonomous speech, speech recognition, voice processing, autonomous operations, AI speech platform"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-speech"/>
+        <meta name="description" content="Revolutionary AI autonomous speech platform that continuously processes speech, recognizes voice, and generates audio with advanced AI capabilities and autonomous operation."  />
+        <meta name="keywords" content="AI speech, autonomous speech, speech recognition, voice processing, autonomous operations, AI speech platform"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-speech"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">

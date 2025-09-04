@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import SEO from "@/components/SEO";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+import {Card, CardContent} from "@/components/ui/card";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Button} from "@/components/ui/button";
+import {toast} from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
 // Import refactored components
-import { FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent } from "@/components/admin/fraud-detection";
+import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
 export default function FraudDetection
-export { FraudDetection }() {
+export {FraudDetection}() {
     const [flags, setFlags] = useState([]);
     const [filteredFlags, setFilteredFlags] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -31,7 +31,7 @@ export { FraudDetection }() {
             const { data, error } = await supabase
                 .from("fraud_flags")
                 .select("*")
-                .order("timestamp", { ascending: false });
+                .order("timestamp", {ascending: false});
             if (error)
                 throw error;
             setFlags(data || []);

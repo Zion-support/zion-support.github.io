@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousCodeReview = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousCodeReview = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Code Review | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered autonomous code review system that automatically analyzes, reviews, and improves code quality with intelligent insights and recommendations."/>
-        <meta name="keywords" content="AI code review, autonomous code review, code quality, software development, AI development tools"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-code-review"/>
+        <meta name="description" content="Revolutionary AI-powered autonomous code review system that automatically analyzes, reviews, and improves code quality with intelligent insights and recommendations."  />
+        <meta name="keywords" content="AI code review, autonomous code review, code quality, software development, AI development tools"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-code-review"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">

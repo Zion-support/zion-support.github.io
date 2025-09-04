@@ -41,8 +41,8 @@ import { Atom,
 
 export default function QuantumAITradingPlatform
 export { QuantumAITradingPlatform }(...args: an y[]): any {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTab, setActiveTab] = useState<any>('overview');
+  const [isVisible, setIsVisible] = useState<any>(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -123,8 +123,8 @@ export { QuantumAITradingPlatform }(...args: an y[]): any {
                 delay: i * 0.1,
                 ease: "easeInOut"
               }}
-              style={{
-                left: `${Math.random() * 100}%`,
+              style="{{{
+                left: `${Math.random() * 100}}"%`,
                 top: `${Math.random() * 100}%`,
               }}
             />
@@ -610,3 +610,17 @@ export { QuantumAITradingPlatform }(...args: an y[]): any {
     </div>
   );
 }
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</any>
+</any>

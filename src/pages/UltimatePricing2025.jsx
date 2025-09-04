@@ -1,6 +1,6 @@
 import React from 'react';'''
-import { Link } from 'react-router-dom';
-const UltimatePricing2025 = () => {}
+import {Link} from 'react-router-dom';
+const UltimatePricing2025 = (props: any) => {}
     const pricingTiers = []
         {}
             name: "Micro SAAS Solutions",""""
@@ -476,12 +476,12 @@ const UltimatePricing2025 = () => {}
 export default UltimatePricing2025;
 }}}}}
 
-export { UltimatePricing2025 };
+export {UltimatePricing2025};
 
-export { UltimatePricing2025 };
+export {UltimatePricing2025};
 
-export { UltimatePricing2025 };
+export {UltimatePricing2025};
 
-export { UltimatePricing2025 };
+export {UltimatePricing2025};
 
-export { UltimatePricing2025 };
+export {UltimatePricing2025};

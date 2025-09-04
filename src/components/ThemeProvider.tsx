@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 export const ThemeProvider: Reac t.FC < ThemeProviderProps> = ({ children }) => {
-export const useTheme = () => {;
+export const useTheme = (props: any) => {;
 type Theme = 'light' | 'dark' | 'system';
 'type Theme = 'light' | 'dark' | 'system';
 
@@ -30,7 +30,7 @@ export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
     }
     return 'system'});
 
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState<any>(false);
 
   useEffect(() => {
 // TODO: Add dependencies if needed
@@ -39,3 +39,7 @@ export const ThemeProvider: Reac t.FC<ThemeProviderProps> = ({ children }) => {
     // Cleanup function
   };
 }, []);, []);
+
+</any>
+</Theme>
+</ThemeProviderProps>

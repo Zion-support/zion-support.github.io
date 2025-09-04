@@ -174,3 +174,9 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+</motion>
+</motion>
+</path>
+</motion>
+</motion>
+</Props>

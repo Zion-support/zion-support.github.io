@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { BookOpen, Download, Star, CheckCircle, ArrowRight, Calendar, Video } from 'lucide-react';
 
 export default function ResourcesPage() {
@@ -130,6 +131,7 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
+
 
       <section className="py-16 px-4 bg-gradient-to-r from-cyan-50 to-blue-50">
         <div className="max-w-4xl mx-auto text-center">

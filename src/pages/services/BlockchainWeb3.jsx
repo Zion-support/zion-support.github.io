@@ -1,5 +1,5 @@
-import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target } from 'lucide-react';
-const BlockchainWeb3 = () => {
+import {Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target} from 'lucide-react';
+const BlockchainWeb3 = (props: any) => {
     const blockchainServices = [
         {
             icon: LinkIcon,
@@ -7,100 +7,66 @@ const BlockchainWeb3 = () => {
             description: "Custom smart contracts for DeFi, NFTs, DAOs, and enterprise blockchain solutions",
             features: ["Solidity & Rust development", "Security auditing", "Gas optimization", "Multi-chain deployment"]
         },
-        {
-            icon: Shield,
+        {icon: Shield,
             title: "DeFi Protocol Development",
             description: "Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions",
-            features: ["AMM algorithms", "Liquidity management", "Risk assessment", "Regulatory compliance"]
-        },
-        {
-            icon: Users,
+            features: ["AMM algorithms", "Liquidity management", "Risk assessment", "Regulatory compliance"]},
+        {icon: Users,
             title: "DAO & Governance Systems",
             description: "Decentralized autonomous organizations with voting mechanisms and governance frameworks",
-            features: ["Token-weighted voting", "Proposal management", "Treasury management", "Multi-sig wallets"]
-        },
-        {
-            icon: Database,
+            features: ["Token-weighted voting", "Proposal management", "Treasury management", "Multi-sig wallets"]},
+        {icon: Database,
             title: "NFT Marketplace Development",
             description: "Complete NFT ecosystems with minting, trading, and marketplace functionality",
-            features: ["ERC-721/ERC-1155 standards", "Royalty systems", "Metadata management", "Cross-chain bridges"]
-        },
-        {
-            icon: Network,
+            features: ["ERC-721/ERC-1155 standards", "Royalty systems", "Metadata management", "Cross-chain bridges"]},
+        {icon: Network,
             title: "Cross-Chain Solutions",
             description: "Interoperability solutions connecting different blockchain networks seamlessly",
-            features: ["Bridge development", "Cross-chain messaging", "Asset transfers", "Liquidity aggregation"]
-        },
-        {
-            icon: Lock,
+            features: ["Bridge development", "Cross-chain messaging", "Asset transfers", "Liquidity aggregation"]},
+        {icon: Lock,
             title: "Enterprise Blockchain",
             description: "Private and consortium blockchain solutions for enterprise applications",
-            features: ["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"]
-        }
+            features: ["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"]}
     ];
     const web3Technologies = [
-        {
-            name: "Ethereum",
+        {name: "Ethereum",
             description: "Smart contracts and DeFi protocols",
-            icon: "ETH"
-        },
-        {
-            name: "Polygon",
+            icon: "ETH"},
+        {name: "Polygon",
             description: "Scalable Layer 2 solutions",
-            icon: "POL"
-        },
-        {
-            name: "Solana",
+            icon: "POL"},
+        {name: "Solana",
             description: "High-performance blockchain",
-            icon: "SOL"
-        },
-        {
-            name: "Polkadot",
+            icon: "SOL"},
+        {name: "Polkadot",
             description: "Multi-chain interoperability",
-            icon: "DOT"
-        },
-        {
-            name: "Cosmos",
+            icon: "DOT"},
+        {name: "Cosmos",
             description: "Internet of blockchains",
-            icon: "ATOM"
-        },
-        {
-            name: "Avalanche",
+            icon: "ATOM"},
+        {name: "Avalanche",
             description: "Fast consensus protocol",
-            icon: "AVAX"
-        }
+            icon: "AVAX"}
     ];
     const useCases = [
-        {
-            title: "Financial Services",
+        {title: "Financial Services",
             description: "DeFi protocols, payment systems, and asset tokenization",
-            icon: TrendingUp
-        },
-        {
-            title: "Supply Chain",
+            icon: TrendingUp},
+        {title: "Supply Chain",
             description: "Transparent tracking and verification of goods and materials",
-            icon: Network
-        },
-        {
-            title: "Digital Identity",
+            icon: Network},
+        {title: "Digital Identity",
             description: "Self-sovereign identity and verifiable credentials",
-            icon: Shield
-        },
-        {
-            title: "Gaming & Metaverse",
+            icon: Shield},
+        {title: "Gaming & Metaverse",
             description: "NFT gaming, virtual assets, and metaverse infrastructure",
-            icon: Users
-        },
-        {
-            title: "Healthcare",
+            icon: Users},
+        {title: "Healthcare",
             description: "Patient data management and pharmaceutical supply chain",
-            icon: Eye
-        },
-        {
-            title: "Real Estate",
+            icon: Eye},
+        {title: "Real Estate",
             description: "Property tokenization and fractional ownership",
-            icon: Target
-        }
+            icon: Target}
     ];
     const benefits = [
         "Transparent and immutable record-keeping",
@@ -116,7 +82,7 @@ const BlockchainWeb3 = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
-              <LinkIcon className="w-4 h-4 mr-2"/>
+              <LinkIcon className="w-4 h-4 mr-2" />
               Blockchain & Web3
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -155,7 +121,7 @@ const BlockchainWeb3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blockchainServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="w-8 h-8 text-white"/>
+                  <service .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
@@ -211,7 +177,7 @@ const BlockchainWeb3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <useCase.icon className="w-8 h-8 text-white"/>
+                  <useCase .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
@@ -241,7 +207,7 @@ const BlockchainWeb3 = () => {
             </div>
             <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-blue-500/30">
               <div className="text-center">
-                <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>
+                <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Web3 Revolution</h3>
                 <p className="text-gray-300 mb-6">
                   We're at the forefront of the Web3 revolution, building 

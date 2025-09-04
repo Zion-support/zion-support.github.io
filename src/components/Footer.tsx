@@ -132,7 +132,7 @@ import {
   ChevronDown
 } from 'lucide-react';
 
-export function Footer() {
+export function Footer(props: any) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
 =======
 <<<<<<< HEAD
@@ -278,9 +278,9 @@ const socialLinks = [
   { name: 'YouTube', icon: TestTube, href: 'https://youtube.com/ziontechgroup', color: 'hover:text-red-600' }
 ];
 
-export function Footer() {
+export function Footer(props: any) {
   const [expandedSections, setExpandedSections] = React.useState<Set<string>>(new Set());
-  const [showScrollTop, setShowScrollTop] = React.useState(false);
+  const [showScrollTop, setShowScrollTop] = React.useState<any>(false);
 =======
   Search,
   BarChart,
@@ -290,7 +290,7 @@ export function Footer() {
   ChevronDown,
 } from 'lucide-react';
 
-export default function Footer() {
+export default function Footer(props: any) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['company']));
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38
 >>>>>>> merge-all-prs-20250904-105408
@@ -299,7 +299,7 @@ export default function Footer() {
   React.useEffect(() => {
   // TODO: Add dependencies if needed
 }, []);
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
 <<<<<<< HEAD
       const scrollToTopButton = document.getElementById('scroll-to-top');
       if (scrollToTopButton) {
@@ -320,7 +320,7 @@ export default function Footer() {
   }, []);
 
   // Toggle section expansion (for mobile)
-  const toggleSection = (title: string) => {
+  const toggleSection = (props: any) => {
     setExpandedSections(prev => {
       const newSet = new Set(prev);
       if (newSet.has(title)) {
@@ -334,13 +334,13 @@ export default function Footer() {
 
 <<<<<<< HEAD
   // Scroll to top function
-  const scrollToTop = () => {
+  const scrollToTop = (props: any) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   };
-export default function Footer() {
+export default function Footer(props: any) {
   const footerSections = [
     {
       title: 'Company',
@@ -468,8 +468,8 @@ services: [ { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-
       title: "Resources","
 links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href: "/white-papers" }, { name: "Support Center", href: "/help" }, { name: "Training", href: "/training" }, { name: "Blog", href: "/blog" }, { name: "Research", href: "/research-development" }
 
-export function Footer() {
-  const scrollToTop = () => {
+export function Footer(props: any) {
+  const scrollToTop = (props: any) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -633,7 +633,7 @@ export function Footer() {
   }, []);
 
   // Toggle section expansion (for mobile)
-  const toggleSection = (title: string) => {
+  const toggleSection = (props: any) => {
     setExpandedSections(prev => {
       const newSet = new Set(prev);
       if (newSet.has(title)) {
@@ -647,7 +647,7 @@ export function Footer() {
 
   // Scroll to top function
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-fe38
-  const scrollToTop = () => {
+  const scrollToTop = (props: any) => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -656,7 +656,7 @@ export function Footer() {
 
 <<<<<<< HEAD
   // Handle link click
-  const handleLinkClick = (link: FooterLink) => {
+  const handleLinkClick = (props: any) => {
     if (link.external) {
       window.open(link.path, '_blank', 'noopener,noreferrer');
     } else {
@@ -748,9 +748,8 @@ export function Footer() {
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+        <div className="absolute inset-0" style="{{{
+          backgroundImage: `url("data; %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}"} />
       </div>
 
       <div className="relative z-10">
@@ -841,7 +840,7 @@ export function Footer() {
                           onClick={() => handleLinkClick(link)}
                           className="text-slate-300 hover:text-white transition-colors text-left flex items-center gap-2 group"
                         >
-                          <link.icon className="w-4 h-4" />
+                          <link .icon className="w-4 h-4"  />
                           <span>{link.name}</span>
                           {link.external && (
                             <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -907,7 +906,7 @@ export function Footer() {
                     whileTap={{ scale: 0.95 }}
                     className={`w-10 h-10 bg-slate-700 hover:bg-slate-600 rounded-lg flex items-center justify-center text-slate-300 ${link.color} transition-all duration-200`}
                   >
-                    <link.icon className="w-5 h-5" />
+                    <link .icon className="w-5 h-5"  />
                   </motion.a>
                 ))}
               </div>
@@ -935,11 +934,10 @@ export function Footer() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
+              <input type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white/10 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+               />
               <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Subscribe
               </button>
@@ -1070,8 +1068,8 @@ export function Footer() {
 =======
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
 
-export function Footer() {
-  const scrollToTop = () => {
+export function Footer(props: any) {
+  const scrollToTop = (props: any) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -1270,15 +1268,14 @@ export function Footer() {
               <input type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
-               />
+                />
               <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover: fro m-blue-700 hover: t o-purple-700 transition-all duration-300">
 Subscribe
 =======
-              <input
-                type="email"
+              <input type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+               />
               <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                 Subscribe
 >>>>>>> merge-all-prs-20250904-105408
@@ -1400,3 +1397,31 @@ export default Footer;
 }
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-f8ab
 >>>>>>> merge-all-prs-20250904-105408
+
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</ChevronDown>
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</div>
+</any>
+</string>
+</Set>
+</any>
+</string>
+</Set>
+</string>
+</Set>

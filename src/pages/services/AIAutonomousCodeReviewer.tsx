@@ -43,7 +43,7 @@ import {
   Bitbucket
 } from 'lucide-react';
 
-const AIAutonomousCodeReviewer = () => {
+const AIAutonomousCodeReviewer = (props: any) => {
   const features = [
     {
       icon: Code,
@@ -576,3 +576,21 @@ const AIAutonomousCodeReviewer = () => {
 };
 
 export default AIAutonomousCodeReviewer;}}}};
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

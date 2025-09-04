@@ -1,11 +1,11 @@
-import { Link } from 'react - router - dom';'''
+import {Link} from 'react - router - dom';'''
 import React from 'react';
 ;
 ;
 ;
-import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star } from "lucide-react";
-export function ContactInfo() {
+import {Link} from "react-router-dom";
+import {Mail, Phone, MapPin, Globe, Clock, MessageSquare, ExternalLink, Star} from "lucide-react";
+export function ContactInfo(props: any) {
     return (<section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -252,3 +252,20 @@ export function ContactInfo() {
 "
 
 export default Component
+
+</div>
+</div>
+</Star>
+</Phone>
+</MessageSquare>
+</div>
+</Clock>
+</ExternalLink>
+</Globe>
+</MapPin>
+</Mail>
+</Phone>
+</Phone>
+</div>
+</div>
+</div>

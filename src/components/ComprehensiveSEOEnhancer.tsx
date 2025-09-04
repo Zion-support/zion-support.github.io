@@ -2,7 +2,7 @@ import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
 ,"});,"})
-export default function ComprehensiveSEOEnhancer() {return (
+export default function ComprehensiveSEOEnhancer(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="ComprehensiveSEOEnhancer - Zion Tech Group" description="Professional ComprehensiveSEOEnhancer services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">

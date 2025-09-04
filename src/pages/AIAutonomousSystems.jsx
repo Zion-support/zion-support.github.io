@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Cpu,
+import React, {useState} from 'react';
+import {motion} from 'framer-motion';
+import {Cpu,
   Zap,
   Shield,
   CheckCircle,
@@ -575,35 +574,28 @@ import {
   CheckCircle,
   Shield,
   Zap,
-  Cpu
-} from 'lucide-react';
+  Cpu} from 'lucide-react';
 
     technologies["Computer Vision", "Robotics", "AI", "Medical Imaging"]
   }
 ];
 
 const autonomousTechnologies = [
-  {
-    name: "Computer Vision",
+  {name: "Computer Vision",
     description: "Advanced image recognition and processing capabilities",
     icon: Eye,
     useCase: "Visual Perception",
-    reliability: "Critical"
-  },
-  {
-    name: "Machine Learning",
+    reliability: "Critical"},
+  {name: "Machine Learning",
     description: "AI algorithms for autonomous decision making",
     icon: Brain,
     useCase: "Intelligence",
-    reliability: "Critical"
-  },
-  {
-    name: "Sensor Fusion",
+    reliability: "Critical"},
+  {name: "Sensor Fusion",
     description: "Integration of multiple sensor data sources",
     icon: Activity,
     useCase: "Environmental Awareness",
-    reliability: "Critical"
-  },
+    reliability: "Critical"},
   {
     name: "Robotics Control",
     description: "Advanced control systems for autonomous movement",
@@ -623,15 +615,13 @@ const successStories = [
     results: "Level 4 autonomy achieved, 99.9% safety record, reduced accidents by 80%, improved efficiency",
     logo: "AM"
   },
-  {
-    id: 2,
+  {id: 2,
     comp: "Manufacturing Corporation",
     industry: "Manufacturing",
     challenge: "Required autonomous robots for 24/7 production line operation",
     solution: "Implemented AI-powered industrial robots with computer vision and safety systems",
     results: "100% uptime, 50% production increase, improved quality, reduced costs",
-    logo: "MC"
-  },
+    logo: "MC"},
   {
     id: 3,
     comp: "Agricultural Cooperative",
@@ -651,20 +641,16 @@ const processSteps = [
     icon: FileText,
     duration: "2-4 weeks"
   },
-  {
-    step: 2,
+  {step: 2,
     title: "AI Development",
     description: "Develop AI algorithms and machine learning models",
     icon: Code,
-    duration: "8-16 weeks"
-  },
-  {
-    step: 3,
+    duration: "8-16 weeks"},
+  {step: 3,
     title: "Hardware Integration",
     description: "Integrate sensors, actuators, and control systems",
     icon: Wrench,
-    duration: "12-24 weeks"
-  },
+    duration: "12-24 weeks"},
   {
     step: 4,
     title: "Testing & Validation",
@@ -681,28 +667,22 @@ const autonomousBenefits = [
     icon: Zap,
     examples["24/7 operation", "Consistent performance", "Reduced errors", "Faster processing"];
   },;
-  {
-    title: "Enhanced Safety",
+  {title: "Enhanced Safety",
     description: "Advanced safety systems and risk mitigation capabilities",
     icon: Shield,
-    examples["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"];
-  },;
-  {
-    title: "Cost Reduction",
+    examples["Risk mitigation", "Safety protocols", "Emergency systems", "Predictive safety"];},;
+  {title: "Cost Reduction",
     description: "Lower operational costs and improved resource utilization",
     icon: TrendingUp,
-    examples["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"];
-  },;
-  {
-    title: "Scalability",
+    examples["Lower labor costs", "Resource optimization", "Reduced waste", "Improved ROI"];},;
+  {title: "Scalability",
     description: "Systems that can scale and adapt to changing requirements",
     icon: Rocket,
-    examples["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"];
-  }
+    examples["Easy scaling", "Adaptive systems", "Modular design", "Future-proof technology"];}
 ];
 
 export default function AIAutonomousSystems
-export { AIAutonomousSystems }() {
+export {AIAutonomousSystems}() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
@@ -723,7 +703,7 @@ export { AIAutonomousSystems }() {
         </div>
 
         <div className="container-responsive relative z-10">
-          <motion.div
+          <motion .div
             initial = {
   { opacity: 0,
   y: 30 
@@ -780,7 +760,7 @@ export { AIAutonomousSystems }() {
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
 
-              <Cpu className="w-10 h-10 text-white" />
+              <Cpu className="w-10 h-10 text-white"  />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -795,15 +775,15 @@ export { AIAutonomousSystems }() {
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
-                <Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4"  />
                 <span>AI Intelligence</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <Eye className="w-4 h-4" />
+                <Eye className="w-4 h-4"  />
                 <span>Computer Vision</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
-                <Shield className="w-4 h-4" />
+                <Shield className="w-4 h-4"  />
                 <span>Safety & Security</span>
               </div>
             </div>
@@ -881,7 +861,7 @@ export { AIAutonomousSystems }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
@@ -891,7 +871,7 @@ export { AIAutonomousSystems }() {
                   <h4 className="text-zion-cyan font-semibold mb-3">Examples:</h4>
                   {benefit.examples.map((example, exampleIndex) => (
                     <div key={exampleIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{example}</span>
                     </div>
                   ))}
@@ -972,7 +952,7 @@ export { AIAutonomousSystems }() {
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <technology.icon className="w-8 h-8 text-white" />
+                  <technology .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-xl font-bold text-white mb-3">{technology.name}</h3>
@@ -1065,7 +1045,7 @@ export { AIAutonomousSystems }() {
 
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
-                    <step.icon className="w-8 h-8 text-white" />
+                    <step .icon className="w-8 h-8 text-white"  />
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {step.step}
@@ -1171,7 +1151,7 @@ export { AIAutonomousSystems }() {
                 onClick={() => setSelectedSolution(solution)}
 
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
+                  <solution .icon className="w-8 h-8 text-white"  />
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
@@ -1180,7 +1160,7 @@ export { AIAutonomousSystems }() {
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0"  />
                       <span className="text-zion-slate-light text-sm">{feature}</span>
                     </div>
                   ))}
@@ -1208,7 +1188,7 @@ export { AIAutonomousSystems }() {
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4"  />
                   </button>
                 </div>
               </motion.div>
@@ -1313,7 +1293,7 @@ export { AIAutonomousSystems }() {
 
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current"  />
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
@@ -1375,3 +1355,17 @@ export { AIAutonomousSystems }() {
       </section>
     </div>
   )}
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

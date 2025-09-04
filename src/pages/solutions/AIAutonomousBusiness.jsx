@@ -1,5 +1,5 @@
-import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 } from 'lucide-react';
-const AIAutonomousBusiness = () => {
+import {Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3} from 'lucide-react';
+const AIAutonomousBusiness = (props: any) => {
     const autonomousFeatures = [
         {
             icon: Brain,
@@ -7,68 +7,46 @@ const AIAutonomousBusiness = () => {
             description: "AI systems that analyze data and make autonomous business decisions",
             benefits: ["Real-time analysis", "Predictive insights", "Risk assessment", "Automated responses"]
         },
-        {
-            icon: Zap,
+        {icon: Zap,
             title: "Process Automation",
             description: "End-to-end automation of complex business processes and workflows",
-            benefits: ["Workflow optimization", "Error reduction", "24/7 operation", "Cost savings"]
-        },
-        {
-            icon: Target,
+            benefits: ["Workflow optimization", "Error reduction", "24/7 operation", "Cost savings"]},
+        {icon: Target,
             title: "Predictive Analytics",
             description: "Advanced forecasting and trend analysis for strategic planning",
-            benefits: ["Market predictions", "Demand forecasting", "Resource optimization", "Competitive advantage"]
-        },
-        {
-            icon: Shield,
+            benefits: ["Market predictions", "Demand forecasting", "Resource optimization", "Competitive advantage"]},
+        {icon: Shield,
             title: "Autonomous Security",
             description: "AI-powered threat detection and automated security responses",
-            benefits: ["Real-time monitoring", "Threat prevention", "Incident response", "Compliance management"]
-        },
-        {
-            icon: Users,
+            benefits: ["Real-time monitoring", "Threat prevention", "Incident response", "Compliance management"]},
+        {icon: Users,
             title: "Customer Intelligence",
             description: "Automated customer behavior analysis and personalized experiences",
-            benefits: ["Customer insights", "Personalization", "Churn prevention", "Revenue optimization"]
-        },
-        {
-            icon: Globe,
+            benefits: ["Customer insights", "Personalization", "Churn prevention", "Revenue optimization"]},
+        {icon: Globe,
             title: "Global Operations",
             description: "AI systems that manage and optimize global business operations",
-            benefits: ["Multi-region management", "Cultural adaptation", "Regulatory compliance", "Efficiency gains"]
-        }
+            benefits: ["Multi-region management", "Cultural adaptation", "Regulatory compliance", "Efficiency gains"]}
     ];
     const useCases = [
-        {
-            title: "Financial Services",
+        {title: "Financial Services",
             description: "Automated trading, risk assessment, and fraud detection",
-            icon: BarChart3
-        },
-        {
-            title: "Manufacturing",
+            icon: BarChart3},
+        {title: "Manufacturing",
             description: "Predictive maintenance and quality control automation",
-            icon: Cpu
-        },
-        {
-            title: "Healthcare",
+            icon: Cpu},
+        {title: "Healthcare",
             description: "Patient diagnosis and treatment planning automation",
-            icon: Shield
-        },
-        {
-            title: "Retail",
+            icon: Shield},
+        {title: "Retail",
             description: "Inventory management and customer experience optimization",
-            icon: Users
-        },
-        {
-            title: "Logistics",
+            icon: Users},
+        {title: "Logistics",
             description: "Route optimization and supply chain automation",
-            icon: Globe
-        },
-        {
-            title: "Marketing",
+            icon: Globe},
+        {title: "Marketing",
             description: "Campaign optimization and audience targeting automation",
-            icon: Target
-        }
+            icon: Target}
     ];
     const benefits = [
         "Increased operational efficiency and productivity",
@@ -79,26 +57,18 @@ const AIAutonomousBusiness = () => {
         "Competitive advantage through technology leadership"
     ];
     const implementation = [
-        {
-            phase: "Assessment",
+        {phase: "Assessment",
             description: "Current state analysis and AI readiness evaluation",
-            duration: "2-4 weeks"
-        },
-        {
-            phase: "Strategy",
+            duration: "2-4 weeks"},
+        {phase: "Strategy",
             description: "AI roadmap development and technology selection",
-            duration: "4-6 weeks"
-        },
-        {
-            phase: "Pilot",
+            duration: "4-6 weeks"},
+        {phase: "Pilot",
             description: "Proof of concept and pilot program implementation",
-            duration: "8-12 weeks"
-        },
-        {
-            phase: "Scale",
+            duration: "8-12 weeks"},
+        {phase: "Scale",
             description: "Full deployment and continuous optimization",
-            duration: "12-24 weeks"
-        }
+            duration: "12-24 weeks"}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -106,7 +76,7 @@ const AIAutonomousBusiness = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2"/>
+              <Brain className="w-4 h-4 mr-2" />
               AI Autonomous Business
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -145,7 +115,7 @@ const AIAutonomousBusiness = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {autonomousFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white"/>
+                  <feature .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -176,7 +146,7 @@ const AIAutonomousBusiness = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <useCase.icon className="w-8 h-8 text-white"/>
+                  <useCase .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
@@ -206,7 +176,7 @@ const AIAutonomousBusiness = () => {
             </div>
             <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-blue-500/30">
               <div className="text-center">
-                <Lightbulb className="w-24 h-24 text-blue-400 mx-auto mb-4"/>
+                <Lightbulb className="w-24 h-24 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">AI Innovation</h3>
                 <p className="text-gray-300 mb-6">
                   We're at the forefront of AI autonomous business technology, 

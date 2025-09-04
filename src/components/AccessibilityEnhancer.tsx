@@ -21,11 +21,13 @@ interface AccessibilitySettings {
 }
 
 interface AccessibilityEnhancerProps {
+
   enabled?: boolean;
   showSettings?: boolean;
+
 }
 
-export function AccessibilityEnhancer({ enabled = true, showSettings = true }: AccessibilityEnhancerProps) {
+export function AccessibilityEnhancer(props: any) {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 1 6,
     highContrast: fals e,
@@ -38,7 +40,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
     screenReader: tru e
   });
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
 
   // Apply accessibility settings
   useEffect(() => {
@@ -88,7 +90,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
   useEffect(() => {
     if (!enabled || !settings.keyboardNavigation) return;
 
-    const handleKeyDown = (event: KeyboardEven t) => {
+    const handleKeyDown = (props: any) => {
       const target = event.target as HTMLElement;
       
       // Tab navigation enhancement
@@ -115,7 +117,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
   }, [settings.keyboardNavigation, enabled]);
 
   // Screen reader announcements
-  const announceToScreenReader = (message: string) => {
+  const announceToScreenReader = (props: any) => {
     if (!settings.screenReader) return;
 
     const announcement = document.createElement('div');
@@ -148,7 +150,7 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
     });
   }, [enabled]);
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: an y) => {
+  const updateSetting = (props: any) => {
     setSettings(prev => ({
       ...prev,
       [key]: value
@@ -279,3 +281,5 @@ export function AccessibilityEnhancer({ enabled = true, showSettings = true }: A
 
 
 export default AccessibilityEnhancer;
+</any>
+</AccessibilitySettings>

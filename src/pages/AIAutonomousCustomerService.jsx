@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousCustomerService = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousCustomerService = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Customer Service Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous customer service platform that provides 24/7 intelligent support, automated issue resolution, and personalized customer experiences with advanced AI capabilities."/>
-        <meta name="keywords" content="AI customer service, autonomous support, automated support, AI chatbot, customer experience, intelligent support"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-customer-service"/>
+        <meta name="description" content="Revolutionary AI autonomous customer service platform that provides 24/7 intelligent support, automated issue resolution, and personalized customer experiences with advanced AI capabilities."  />
+        <meta name="keywords" content="AI customer service, autonomous support, automated support, AI chatbot, customer experience, intelligent support"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-customer-service"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">

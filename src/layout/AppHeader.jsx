@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Menu,
+import React, {useState, useEffect} from 'react';
+import {Link, useLocation} from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {Menu,
   X,
   ChevronDown,
   Brain,
@@ -14,10 +13,9 @@ import {
   Cloud,
   Users,
   Database,
-  Shield
-} from 'lucide-react';
+  Shield} from 'lucide-react';
 
-export function AppHeader() {
+export function AppHeader(props: any) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -26,7 +24,7 @@ export function AppHeader() {
 
   // Handle scroll effect
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
@@ -34,18 +32,14 @@ export function AppHeader() {
   }, []);
 
   // Close mobile menu when route changes
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setActiveDropdown(null);
-  }, [location.pathname]);
+  useEffect(() => {setMobileMenuOpen(false);
+    setActiveDropdown(null);}, [location.pathname]);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    // In a real app, this would toggle the theme
-  };
+  const toggleDarkMode = (props: any) => {setIsDarkMode(!isDarkMode);
+    // In a real app, this would toggle the theme};
 
   const navigationItems = [
-    { name: 'Home', path: '/', icon: null },
+    {name: 'Home', path: '/', icon: null},
     {
       name: 'Services',
       path: '/services',
@@ -57,47 +51,35 @@ export function AppHeader() {
           icon: Brain,
           color: 'from-purple-500 to-pink-500'
         },
-        {
-          name: 'IT Services',
+        {name: 'IT Services',
           path: '/services?category=IT%20Services',
           icon: Shield,
-          color: 'from-blue-500 to-cyan-500'
-        },
-        {
-          name: 'Enterprise AI',
+          color: 'from-blue-500 to-cyan-500'},
+        {name: 'Enterprise AI',
           path: '/services?category=Enterprise%20AI',
           icon: Database,
-          color: 'from-green-500 to-emerald-500'
-        },
-        {
-          name: 'Quantum Technology',
+          color: 'from-green-500 to-emerald-500'},
+        {name: 'Quantum Technology',
           path: '/services?category=Quantum%20Technology',
           icon: Zap,
-          color: 'from-orange-500 to-red-500'
-        },
-        {
-          name: 'Blockchain Technology',
+          color: 'from-orange-500 to-red-500'},
+        {name: 'Blockchain Technology',
           path: '/services?category=Blockchain%20Technology',
           icon: Users,
-          color: 'from-indigo-500 to-purple-500'
-        },
-        {
-          name: 'Strategic Consulting',
+          color: 'from-indigo-500 to-purple-500'},
+        {name: 'Strategic Consulting',
           path: '/services?category=Strategic%20Consulting',
           icon: Cloud,
-          color: 'from-yellow-500 to-orange-500'
-        },
-        {
-          name: 'Compliance Consulting',
+          color: 'from-yellow-500 to-orange-500'},
+        {name: 'Compliance Consulting',
           path: '/services?category=Compliance%20Consulting',
           icon: Lock,
-          color: 'from-red-500 to-pink-500'
-        }
+          color: 'from-red-500 to-pink-500'}
       ]
     },
-    { name: 'Pricing', path: '/pricing', icon: null },
-    { name: 'About', path: '/about', icon: null },
-    { name: 'Contact', path: '/contact', icon: null }
+    {name: 'Pricing', path: '/pricing', icon: null},
+    {name: 'About', path: '/about', icon: null},
+    {name: 'Contact', path: '/contact', icon: null}
   ];
 
   const isActiveRoute = path => {
@@ -148,7 +130,7 @@ export function AppHeader() {
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <span>{item.name}</span>
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-4 h-4"  />
                   </div>
                 ) : (
                   <Link
@@ -180,7 +162,7 @@ export function AppHeader() {
                           <div
                             className={`w-8 h-8 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}
                           >
-                            <dropdownItem.icon className="w-4 h-4 text-white" />
+                            <dropdownItem .icon className="w-4 h-4 text-white"  />
                           </div>
                           <span className="text-white group-hover:text-zion-cyan transition-colors">
                             {dropdownItem.name}
@@ -202,9 +184,9 @@ export function AppHeader() {
               className="p-2 text-white hover:text-zion-cyan transition-colors"
             >
               {isDarkMode ? (
-                <Sun className="w-5 h-5" />
+                <Sun className="w-5 h-5"  />
               ) : (
-                <Moon className="w-5 h-5" />
+                <Moon className="w-5 h-5"  />
               )}
             </button>
 
@@ -222,9 +204,9 @@ export function AppHeader() {
               className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors"
             >
               {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
+                <X className="w-6 h-6"  />
               ) : (
-                <Menu className="w-6 h-6" />
+                <Menu className="w-6 h-6"  />
               )}
             </button>
           </div>
@@ -280,3 +262,7 @@ export function AppHeader() {
     </motion.header>
   );
 }
+</motion>
+</motion>
+</motion>
+</motion>

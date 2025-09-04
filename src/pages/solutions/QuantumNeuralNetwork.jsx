@@ -1,5 +1,5 @@
-import { Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, CircuitBoard } from 'lucide-react';
-const QuantumNeuralNetwork = () => {
+import {Brain, Zap, Target, TrendingUp, Shield, Globe, Lightbulb, Atom, CircuitBoard} from 'lucide-react';
+const QuantumNeuralNetwork = (props: any) => {
     const quantumFeatures = [
         {
             icon: Atom,
@@ -7,62 +7,44 @@ const QuantumNeuralNetwork = () => {
             description: "Leverage quantum computing power for neural network operations",
             features: ["Quantum superposition", "Entanglement processing", "Quantum parallelism", "Coherent computation"]
         },
-        {
-            icon: CircuitBoard,
+        {icon: CircuitBoard,
             title: "Hybrid Architecture",
             description: "Combine classical and quantum computing for optimal performance",
-            features: ["Classical-quantum interface", "Hybrid algorithms", "Optimized workflows", "Seamless integration"]
-        },
-        {
-            icon: Brain,
+            features: ["Classical-quantum interface", "Hybrid algorithms", "Optimized workflows", "Seamless integration"]},
+        {icon: Brain,
             title: "Neural Optimization",
             description: "Advanced neural network architectures optimized for quantum systems",
-            features: ["Quantum neural layers", "Optimized training", "Efficient inference", "Scalable networks"]
-        },
-        {
-            icon: Zap,
+            features: ["Quantum neural layers", "Optimized training", "Efficient inference", "Scalable networks"]},
+        {icon: Zap,
             title: "Performance Enhancement",
             description: "Exponential speedup for complex neural network operations",
-            features: ["Faster training", "Improved accuracy", "Better convergence", "Enhanced scalability"]
-        }
+            features: ["Faster training", "Improved accuracy", "Better convergence", "Enhanced scalability"]}
     ];
     const applications = [
-        {
-            title: "Drug Discovery",
+        {title: "Drug Discovery",
             description: "Accelerate pharmaceutical research with quantum-enhanced molecular modeling",
             icon: Atom,
-            benefits: ["Faster molecular simulations", "Improved drug efficacy", "Reduced development time", "Better target identification"]
-        },
-        {
-            title: "Financial Modeling",
+            benefits: ["Faster molecular simulations", "Improved drug efficacy", "Reduced development time", "Better target identification"]},
+        {title: "Financial Modeling",
             description: "Advanced risk assessment and portfolio optimization using quantum algorithms",
             icon: TrendingUp,
-            benefits: ["Complex risk calculations", "Portfolio optimization", "Market prediction", "Fraud detection"]
-        },
-        {
-            title: "Climate Modeling",
+            benefits: ["Complex risk calculations", "Portfolio optimization", "Market prediction", "Fraud detection"]},
+        {title: "Climate Modeling",
             description: "Accurate climate predictions and environmental impact assessments",
             icon: Globe,
-            benefits: ["Precise simulations", "Long-term forecasting", "Impact analysis", "Policy optimization"]
-        },
-        {
-            title: "AI Training",
+            benefits: ["Precise simulations", "Long-term forecasting", "Impact analysis", "Policy optimization"]},
+        {title: "AI Training",
             description: "Train large-scale AI models with quantum-enhanced optimization",
             icon: Brain,
-            benefits: ["Faster convergence", "Better accuracy", "Larger models", "Efficient training"]
-        },
-        {
-            title: "Cryptography",
+            benefits: ["Faster convergence", "Better accuracy", "Larger models", "Efficient training"]},
+        {title: "Cryptography",
             description: "Quantum-resistant encryption and secure communication systems",
             icon: Shield,
-            benefits: ["Post-quantum security", "Advanced encryption", "Secure communications", "Future-proof systems"]
-        },
-        {
-            title: "Logistics Optimization",
+            benefits: ["Post-quantum security", "Advanced encryption", "Secure communications", "Future-proof systems"]},
+        {title: "Logistics Optimization",
             description: "Complex routing and supply chain optimization problems",
             icon: Target,
-            benefits: ["Route optimization", "Supply chain efficiency", "Cost reduction", "Resource allocation"]
-        }
+            benefits: ["Route optimization", "Supply chain efficiency", "Cost reduction", "Resource allocation"]}
     ];
     const benefits = [
         "Exponential speedup for complex computations",
@@ -73,36 +55,24 @@ const QuantumNeuralNetwork = () => {
         "Competitive advantage in research and development"
     ];
     const implementation = [
-        {
-            phase: "Assessment",
+        {phase: "Assessment",
             description: "Evaluate current systems and identify quantum opportunities",
-            duration: "2-3 weeks"
-        },
-        {
-            phase: "Architecture",
+            duration: "2-3 weeks"},
+        {phase: "Architecture",
             description: "Design quantum-classical hybrid architecture",
-            duration: "4-6 weeks"
-        },
-        {
-            phase: "Development",
+            duration: "4-6 weeks"},
+        {phase: "Development",
             description: "Build quantum neural network components",
-            duration: "12-20 weeks"
-        },
-        {
-            phase: "Integration",
+            duration: "12-20 weeks"},
+        {phase: "Integration",
             description: "Integrate with existing classical systems",
-            duration: "4-8 weeks"
-        },
-        {
-            phase: "Testing",
+            duration: "4-8 weeks"},
+        {phase: "Testing",
             description: "Validate quantum advantage and performance",
-            duration: "3-6 weeks"
-        },
-        {
-            phase: "Deployment",
+            duration: "3-6 weeks"},
+        {phase: "Deployment",
             description: "Production deployment and user training",
-            duration: "2-4 weeks"
-        }
+            duration: "2-4 weeks"}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -110,7 +80,7 @@ const QuantumNeuralNetwork = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-medium mb-6">
-              <Atom className="w-4 h-4 mr-2"/>
+              <Atom className="w-4 h-4 mr-2" />
               Quantum AI Solution
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -149,7 +119,7 @@ const QuantumNeuralNetwork = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {quantumFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white"/>
+                  <feature .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -180,7 +150,7 @@ const QuantumNeuralNetwork = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {applications.map((application, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <application.icon className="w-8 h-8 text-white"/>
+                  <application .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{application.title}</h3>
                 <p className="text-gray-300 mb-4">{application.description}</p>
@@ -216,7 +186,7 @@ const QuantumNeuralNetwork = () => {
             </div>
             <div className="bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30">
               <div className="text-center">
-                <Lightbulb className="w-24 h-24 text-indigo-400 mx-auto mb-4"/>
+                <Lightbulb className="w-24 h-24 text-indigo-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Quantum Advantage</h3>
                 <p className="text-gray-300 mb-6">
                   Experience exponential speedup and solve problems that are 

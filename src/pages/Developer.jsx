@@ -1,14 +1,14 @@
 import React from 'react';'''
-import { Helmet } from 'react-helmet-async';
-const Developer = () => {}
+import {Helmet} from 'react-helmet-async';
+const Developer = (props: any) => {}
   return()
     <>
       <Helmet>
         <title>Developer Portal - Zion Tech Group</title>
-        <meta'
+        <meta '
           name="description"'"'"""
           content="Access Zion Tech Group's developer portal for tools, SDKs, and integration resources."""
-        />
+          />
       </Helmet>"""
 """"
       <div className="min-h-screen bg-gray-50 py-12">""""
@@ -34,12 +34,12 @@ const Developer = () => {}
     </>)};
 export default Developer;
 
-export { Developer };
+export {Developer};
 
-export { Developer };
+export {Developer};
 
-export { Developer };
+export {Developer};
 
-export { Developer };
+export {Developer};
 
-export { Developer };
+export {Developer};

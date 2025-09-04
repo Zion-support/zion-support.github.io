@@ -91,5 +91,7 @@ import { motion } from 'framer-motionimport { Link } from react-router-domimport
 ;
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3']
 ;
-export default function EnhancedServicesShowcase(...args: unknow n[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All')
+export default function EnhancedServicesShowcase(...args: unknow n[]): unknown {  const [selectedCategory, setSelectedCategory] = useState<any>('All')
   const [hoveredService, setHoveredService] = useState<string | null>(null)
+</string>
+</any>

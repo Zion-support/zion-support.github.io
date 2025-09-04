@@ -7,7 +7,7 @@ import {
   Phone, Mail, MapPin, Users, Clock, Smartphone
 } from 'lucide-react';
 
-const AISmartCityManagement = () => {
+const AISmartCityManagement = (props: any) => {
   const features = [
     {
       icon: Ca r,
@@ -425,3 +425,12 @@ const AISmartCityManagement = () => {
 };
 
 export default AISmartCityManagement;
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

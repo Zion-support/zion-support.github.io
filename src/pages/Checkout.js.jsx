@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
-import { safeStorage } from '@/utils/safeStorage';
-import { getCartKey } from '@/utils/cartUtils';
-import { getStripe } from '@/utils/getStripe';
-import { apiClient } from '@/utils/apiClient';
+import React, {useEffect, useState} from 'react';
+import {useTranslation} from 'react-i18next';
+import {useForm} from 'react-hook-form';
+import {useNavigate} from 'react-router-dom';
+import {safeStorage} from '@/utils/safeStorage';
+import {getCartKey} from '@/utils/cartUtils';
+import {getStripe} from '@/utils/getStripe';
+import {apiClient} from '@/utils/apiClient';
 export default function CheckoutPage
-export { CheckoutPage }() {
+export {CheckoutPage}() {
     const navigate = useNavigate();
     const { t } = useTranslation();
     const [items, setItems] = useState([]);
@@ -22,8 +22,7 @@ export { CheckoutPage }() {
         if (stored) {
             try {
                 setItems(JSON.parse(stored))}
-            catch {
-                setItems([])}
+            catch {setItems([])}
         }
     }, [sku]);
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
@@ -37,7 +36,7 @@ export { CheckoutPage }() {
                 const payment = await stripe.confirmCardPayment(result.clientSecret, {
                     payment_method: {
                         card: { token: 'tok_visa' },
-                        billing_details: { name: data.name, email: data.email },
+                        billing_details: {name: data.name, email: data.email},
                     },
                 });
                 if (payment.error)
@@ -47,20 +46,18 @@ export { CheckoutPage }() {
                         await fetch('/api/points/add', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
+                            body: JSON.stringify({userId: user.id, amount: subtotal, orderId: result.id}),
                         })}
-                    catch (e) {
-                        console.error('Failed to add points', e)}
+                    catch (e) {console.error('Failed to add points', e)}
                 }
                 safeStorage.removeItem(getCartKey(user?.id));
                 router(`/orders/${result.id}`)}
         }
-        catch (err) {
-            console.error('Payment failed', err)}
+        catch (err) {console.error('Payment failed', err)}
     };
     return (<div className="max-w-2xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>
-      <CheckoutProgress currentStep={0} className="mb-6"/>
+      <CheckoutProgress currentStep={0} className="mb-6" />
 
       {/* Order Summary */}
       <div className="bg-gray-50 p-4 rounded-md mb-6">

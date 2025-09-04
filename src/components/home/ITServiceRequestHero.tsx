@@ -1,7 +1,7 @@
 ;export function ITServiceRequestHero(...args[]):  {
 
-  const [location, setLocation] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [location, setLocation] = useState<any>("");
+  const [isSubmitting, setIsSubmitting] = useState<any>(false);
   
   const handleSubmit = async e: Reac t.FormEvent {;    e.preventDefault();
     if(location.trim()) {
@@ -54,7 +54,7 @@ import { Link  } from 'react-router-dom';
     { icon: Za p, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
-export function ITServiceRequestHero() {
+export function ITServiceRequestHero(props: any) {
   return ("
     <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}"
@@ -205,3 +205,10 @@ export function ITServiceRequestHero() {
     </section>;
   )}
 '"`
+
+</motion>
+</Button>
+</motion>
+</motion>
+</any>
+</any>

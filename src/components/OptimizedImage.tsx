@@ -1,9 +1,9 @@
 import { ImageIcon, AlertCircle, Loader2  } from 'lucide-react';
-export default function Page() {
+export default function Page(props: any) {
 ) => {
 
-  const [imageSrc, setImageSrc] = useState<any>(src);  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
+  const [imageSrc, setImageSrc] = useState<any>(src);  const [isLoading, setIsLoading] = useState<any>(true);
+  const [hasError, setHasError] = useState<any>(false);
 
   // Intersection Observer for lazy loading  // Intersection Observer for lazy loading      }) ;
 
@@ -44,7 +44,7 @@ export default function Page() {
     }}, []) ;
 
   // Generate optimized src with quality parameter
-  const getOptimizedSrc = (src: anystring) => {
+  const getOptimizedSrc = (props: any) => {
     if(src.startsWith ('data:') || src.startsWith('blob:') ) {
       return src;
     }
@@ -87,3 +87,7 @@ export default function Page() {
   )}
 export default OptimizedImage;";
 ;"
+
+</any>
+</any>
+</any>

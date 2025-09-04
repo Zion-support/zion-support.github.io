@@ -1,56 +1,40 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import { Badge } from "../ui/badge";
-import { Link } from "react-router-dom";
-import { Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3 } from "lucide-react";
-import { TrustedBySection } from "../TrustedBySection";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "../ui/card";
+import {Button} from "../ui/button";
+import {Badge} from "../ui/badge";
+import {Link} from "react-router-dom";
+import {Link as LinkIcon, DollarSign as Coins, Shield, Zap, Database, Globe, TrendingUp, CheckCircle, ArrowRight, Lock, Network, Wallet, BarChart3} from "lucide-react";
+import {TrustedBySection} from "../TrustedBySection";
 const blockchainBenefits = [
-    {
-        title: "Transparency",
+    {title: "Transparency",
         description: "Immutable, transparent records that build trust and enable verifiable transactions",
-        icon: <Globe className="h-6 w-6"/>
-    },
-    {
-        title: "Security",
+        icon: <Globe className="h-6 w-6" />},
+    {title: "Security",
         description: "Cryptographic security and decentralized architecture protect against fraud and attacks",
-        icon: <Lock className="h-6 w-6"/>
-    },
-    {
-        title: "Efficiency",
+        icon: <Lock className="h-6 w-6" />},
+    {title: "Efficiency",
         description: "Automated smart contracts reduce intermediaries and streamline complex processes",
-        icon: <Zap className="h-6 w-6"/>
-    },
-    {
-        title: "Innovation",
+        icon: <Zap className="h-6 w-6" />},
+    {title: "Innovation",
         description: "Enable new business models and revenue streams through tokenization and DeFi",
-        icon: <TrendingUp className="h-6 w-6"/>
-    }
+        icon: <TrendingUp className="h-6 w-6" />}
 ];
 const useCases = [
-    {
-        title: "Supply Chain Management",
+    {title: "Supply Chain Management",
         description: "Track products from origin to consumer with immutable records and real-time visibility",
-        icon: <LinkIcon className="h-6 w-6"/>
-    },
-    {
-        title: "Digital Identity",
+        icon: <LinkIcon className="h-6 w-6" />},
+    {title: "Digital Identity",
         description: "Self-sovereign identity solutions for secure, privacy-preserving authentication",
-        icon: <Shield className="h-6 w-6"/>
-    },
-    {
-        title: "Asset Tokenization",
+        icon: <Shield className="h-6 w-6" />},
+    {title: "Asset Tokenization",
         description: "Convert real-world assets into digital tokens for fractional ownership and trading",
-        icon: <Coins className="h-6 w-6"/>
-    },
-    {
-        title: "Decentralized Finance",
+        icon: <Coins className="h-6 w-6" />},
+    {title: "Decentralized Finance",
         description: "Build financial services without intermediaries using smart contracts and DeFi protocols",
-        icon: <Wallet className="h-6 w-6"/>
-    }
+        icon: <Wallet className="h-6 w-6" />}
 ];
 export default function BlockchainServicesPage
-export { BlockchainServicesPage }() {
+export {BlockchainServicesPage}() {
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">
@@ -140,7 +124,7 @@ export { BlockchainServicesPage }() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blockchainServices.map((service) => (<Card key={service.id} className="overflow-hidden hover:shadow-lg transition-all duration-300">
                 <div className="aspect-video overflow-hidden">
-                  <img src={service.image} alt={service.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"/>
+                  <img src={service.image} alt={service.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"  />
                 </div>
                 <CardHeader className="pb-3">
                   <div className="flex justify-between items-start mb-2">
@@ -170,7 +154,7 @@ export { BlockchainServicesPage }() {
                   </div>
                   <ul className="space-y-2">
                     {service.features.slice(0, 3).map((feature, index) => (<li key={index} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0"/>
+                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>))}
                   </ul>
@@ -179,7 +163,7 @@ export { BlockchainServicesPage }() {
                   <Button asChild className="w-full">
                     <Link to={service.link}>
                       Learn More
-                      <ArrowRight className="h-4 w-4 ml-2"/>
+                      <ArrowRight className="h-4 w-4 ml-2" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -219,5 +203,5 @@ export { BlockchainServicesPage }() {
         </div>
       </section>
 
-      <TrustedBySection />
+      <TrustedBySection  />
     </div>)}

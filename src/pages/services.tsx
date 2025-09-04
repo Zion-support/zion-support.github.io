@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
 
-const Services: React.FC = () => {
+const Services: React.FC = (props: any) => {
   return (
     <>
       <SEO title="Services - Zion Tech Group" />

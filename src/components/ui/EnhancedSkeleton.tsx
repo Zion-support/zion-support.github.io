@@ -192,12 +192,14 @@ export const GridSkeleton: Reac t.FC<{
 
 
 
-} style={{
+} style="{{{
 `
-    gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
+    gridTemplateColumns: `repeat(${columns}}", minmax(0, 1fr))`
   }}> {Array.from({ length: row s * columns }).map((_, index) => (;"
       <Skeleton key={index} variant="card" height={itemHeight}   />;    ))};
   </div>;
 );
 
 export default Skeleton}</motion.div></motion.div>}'"`
+</motion>
+</motion>

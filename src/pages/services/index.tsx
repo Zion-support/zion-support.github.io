@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Database, Brain, Check, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
 
-export default function ServicesIndex() {
+export default function ServicesIndex(props: any) {
   const groups = [
     { title: 'AI', href: '/ai-services', desc: 'LLMs, CV, NLP, and MLOps' },
     { title: 'IT', href: '/it-services', desc: 'Managed services, security, cloud' },
@@ -29,6 +29,7 @@ export default function ServicesIndex() {
 
 // -- merged below section: ensure single import and no conflict markers --
 import { Database, Brain, Check, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
+
 
 
 

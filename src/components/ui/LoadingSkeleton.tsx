@@ -1,3 +1,4 @@
+import React from 'react';
   if (animated) {
 
     return ()
@@ -145,3 +146,7 @@ export function GridSkeleton(...args: an y[]): any {
     </div>
   )}
 '"`
+</CardSkeleton>
+</Skeleton>
+</div>
+</motion>

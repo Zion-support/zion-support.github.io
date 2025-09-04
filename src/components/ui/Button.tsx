@@ -1,16 +1,18 @@
 import React from 'react';';';
-interface ButtonProps {';';';
+interface ButtonProps {
+  ';';';: any;
   children: Reac t.ReactNode;',';';
-    ';';';
+  ';';';: any;
   variant?: 'default' | 'outline' | 'ghost' | 'link',',';';
-    ';';';';
+  ';';';';: any;
   size?: 'sm' | 'md' | 'lg' | 'icon';';
   asChild?: boolean;';';
   className?: string;';';';
   onClick?: () => void;',';';
-    ';';';
+  ';';';: any;
   type?: 'button' | 'submit' | 'reset';';
-  disabled?: boolean}';';
+  disabled?: boolean
+}';';
 export const Button: Reac t.FC<ButtonProps> = ({';';';
   children,',';';
     ';';';
@@ -60,3 +62,4 @@ export const Button: Reac t.FC<ButtonProps> = ({';';';
   );';';
 };';';';
 export default Button;"';';';';
+</ButtonProps>

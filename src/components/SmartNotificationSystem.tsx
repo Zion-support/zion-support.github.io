@@ -20,7 +20,9 @@ import {  import { motion, AnimatePresence  } from 'framer-motion';
   icon?: React.ComponentType < any>}
 
 interface SmartNotificationSystemProps {
-  // Add your props here
+
+  // Add your props here: any;
+
 };
 
 const SmartNotificationSystem: Reac t.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
@@ -29,3 +31,5 @@ const SmartNotificationSystem: Reac t.FC<SmartNotificationSystemProps> = ({ enab
 
 export default SmartNotificationSystem;
 ;,"});,})";
+
+</SmartNotificationSystemProps>

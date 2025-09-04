@@ -17,9 +17,9 @@ interface Props {
   toAddress: Addres s | null;
   onSelect?: (rate: ShippingRat e) => void}
 
-export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
+export function CheckoutShippingOptions(props: any) {
   const [rates, setRates] = useState<ShippingRate[]>([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<any>(false);
   const [selected, setSelected] = useState<string>('');
 
   useEffect(() => {
@@ -64,3 +64,7 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   )}
 
 export type { ShippingRate };
+
+</string>
+</any>
+</ShippingRate>

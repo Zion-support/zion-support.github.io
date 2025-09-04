@@ -4,15 +4,15 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin } from 'lucide-react';
 
-const ModernNavigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+const ModernNavigation = (props: any) => {
+  const [isOpen, setIsOpen] = useState<any>(false);
+  const [isScrolled, setIsScrolled] = useState<any>(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
 
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
       setIsScrolled(window.scrollY > 20);
     };
 
@@ -43,11 +43,11 @@ const ModernNavigation = () => {
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
 
-  const toggleDropdown = (name: string) => {
+  const toggleDropdown = (props: any) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
-  const closeMobileMenu = () => {
+  const closeMobileMenu = (props: any) => {
     setIsOpen(false);
     setActiveDropdown(null);
   };
@@ -253,3 +253,12 @@ const ModernNavigation = () => {
 };
 
 export default ModernNavigation;
+
+</motion>
+</ChevronDown>
+</motion>
+</motion>
+</ChevronDown>
+</string>
+</any>
+</any>

@@ -1,8 +1,9 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 interface EnhancedAccessibilityProps {
-  // Add your props here
+
+  // Add your props here: any;
 
 ;  enabled?: boolean;
   showControls?: boolean;
@@ -10,16 +11,17 @@ interface EnhancedAccessibilityProps {
 
 export const EnhancedAccessibility: Reac t.FC<EnhancedAccessibilityProps> = ({
 
-  enabled = true,;
-  showControls = true,;
-  className = ''}) => {;
-  const [isOpen, setIsOpen] = useState(false);
+  enabled = true,;: any;
+  showControls = true,;: any;
+  className = '': any;
+}) => {;
+  const [isOpen, setIsOpen] = useState<any>(false);
   const [settings, setSettings] = useState<any>({
 
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'xlarge'}
 export const EnhancedAccessibility: Reac t.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
     highContrast: fals e,
@@ -34,7 +36,7 @@ export const EnhancedAccessibility: Reac t.FC = () => {
 
   // Apply accessibility settings to document
   
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<any>(false);
   
   // Auto - hide accessibility panel
   useEffect(() => {
@@ -223,3 +225,10 @@ modals.forEach(modal:  > {;
     // Cleanup function
   };
 }, []);, []);
+
+</any>
+</AccessibilitySettings>
+</any>
+</any>
+</any>
+</EnhancedAccessibilityProps>

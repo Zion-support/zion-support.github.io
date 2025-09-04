@@ -383,3 +383,5 @@ export const PAYMENT_OPTIONS_2030 = {
 ;
 };
 '"
+
+</string>

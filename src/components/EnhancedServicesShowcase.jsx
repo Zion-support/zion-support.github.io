@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 export default EnhancedServicesShowcase;
-import { enhancedServices2025 } from '../data/enhanced - services -2025';
-export default function Page() {
+import {enhancedServices2025} from '../data/enhanced - services -2025';
+export default function Page(props: any) {
 ,
         { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' }
     ];
@@ -30,7 +30,7 @@ export default function Page() {
 }
   const containerVariants = {}
 
-    hidden: { opacity: 0 },
+    hidden: {opacity: 0},
     visible: {}
 
       opacity: 1,
@@ -40,9 +40,9 @@ transition: {}
 
   const itemVariants = {}
 
-    hidden: { opacity: 0, y: 20 },
+    hidden: {opacity: 0, y: 20},
       y: 0,
-transition: { duration: 0.5 }}}
+transition: {duration: 0.5}}}
 
   return();"
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">""{/* comment */}"";"
@@ -92,14 +92,14 @@ transition: { duration: 0.5 }}}
               className = "px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80" />"","
             <div className="flex flex-wrap gap-2"> {categories.map(category => (,
     hidden: { opacit,y: 0 },
-    hidden: { opacity: 0 }, visible: {}
+    hidden: {opacity: 0}, visible: {}
 
       opacity: 1,
         staggerChildren: 0.1, delayChildren: 0.2}}}
 
-    hidden: { opacit,y: 0, y: 20 },
+    hidden: {opacit,y: 0, y: 20},
       y: 0,
-      transition: { duratio,n: 0.5 }}}
+      transition: {duratio,n: 0.5}}}
 
   return()"
     <;<div className="&apos;min-h-screen" bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white&apos;>"&apos;&apos {/* comment */}&apos;&apos,&apos;&apos,"
@@ -117,9 +117,9 @@ transition: { duration: 0.5 }}}
           </motion.h1>&apos;&apos,&apos;&apos,
           <motion.p&apos;&apos,&apos;"
             className="&apos;text-xl" text-gray-300 mb-8 max-w-4xl mx-auto&apos;&apos>
-    hidden: { opacity: 0, y: 20 }, visible: {}
+    hidden: {opacity: 0, y: 20}, visible: {}
 
-      y: 0, transition: { duration: 0.5 }}}"
+      y: 0, transition: {duration: 0.5}}}"
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">"""{/* comment */}"""""
       <section className="py-20 px-4 sm: px-6 lg:px-8">""""
         <div className="max-w-7xl mx-auto text-center">""""",
@@ -655,15 +655,15 @@ className="&apos;mt-8" text-sm text-gray-400&apos;&apos,"
 export default EnhancedServicesShowcase;
 }}}
 
-export { EnhancedServicesShowcase };
+export {EnhancedServicesShowcase};
 
-export { EnhancedServicesShowcase };
+export {EnhancedServicesShowcase};
 
-export { EnhancedServicesShowcase };
+export {EnhancedServicesShowcase};
 
-export { EnhancedServicesShowcase };
+export {EnhancedServicesShowcase};
 
-export { EnhancedServicesShowcase };
+export {EnhancedServicesShowcase};
 <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>"
             <p>"""
               Website: {" "}"""""
@@ -672,9 +672,105 @@ export { EnhancedServicesShowcase };
 https: // comment
     </div>)}
 
-export default EnhancedServicesShowcaseexport { EnhancedServicesShowcase }
+export default EnhancedServicesShowcaseexport {EnhancedServicesShowcase}
 ;
-export { EnhancedServicesShowcase }
+export {EnhancedServicesShowcase}
 
 '"
 `""
+
+</p>
+</motion>
+</motion>
+</h3>
+</a>
+</motion>
+</motion>
+</div>
+</div>
+</h3>
+</motion>
+</motion>
+</div>
+</section>
+</div>
+</div>
+</h3>
+</motion>
+</div>
+</section>
+</path>
+</div>
+</path>
+</div>
+</div>
+</div>
+</div>
+</div>
+</path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</h4>
+</h4>
+</h4>
+</h4>
+</div>
+</li>
+</ul>
+</h4>
+</div>
+</div>
+</div>
+</p>
+</p>
+</div>
+</div>
+</div>
+</p>
+</p>
+</div>
+</div>
+</motion>
+</div>
+</motion>
+</div>
+</li>
+</ul>
+</h4>
+</div>
+</div>
+</div>
+</p>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</div>
+</div>
+</motion>
+</motion>
+</span>
+</motion>
+</div>
+</div>
+</motion>
+</motion>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</motion>
+</div>
+</section>
+</div>

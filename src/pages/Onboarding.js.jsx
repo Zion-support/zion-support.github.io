@@ -1,20 +1,21 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection";
-import { ProfileSetup } from "@/components/onboarding/ProfileSetup";
-import { Steps, Step } from "@/components/ui/steps";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import React from 'react';
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {UserTypeSelection} from "@/components/onboarding/UserTypeSelection";
+import {ProfileSetup} from "@/components/onboarding/ProfileSetup";
+import {Steps, Step} from "@/components/ui/steps";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
 export default function Onboarding
-export { Onboarding }() {
+export {Onboarding}() {
     const { user, updateProfile, isLoading } = useAuth();
     const [currentStep, setCurrentStep] = useState(0);
     const [userType, setUserType] = useState(null);
     const navigate = useNavigate();
     // Convert our user types to match what's expected in the database
-    const mapUserTypeToDatabase = (type) => {
+    const mapUserTypeToDatabase = (props: any) => {
         switch (type) {
             case "serviceProvider":
                 return "creator";
@@ -25,14 +26,13 @@ export { Onboarding }() {
             default:
                 return "buyer"}
     };
-    const handleUserTypeSelect = (type) => {
+    const handleUserTypeSelect = (props: any) => {
         setUserType(type);
         // Direct to specific registration page based on user type
         if (type === "serviceProvider") {
             router('/service-onboarding');
             return}
-        else if (type === "talent") {
-            router('/talent-onboarding');
+        else if (type === "talent") {router('/talent-onboarding');
             return}
         // Continue with the onboarding flow for clients
         setCurrentStep(1)};
@@ -56,15 +56,11 @@ export { Onboarding }() {
                 profileComplete: true
             });
             // Update onboarding milestone
-            await supabase.rpc('update_onboarding_milestone', {
-                _user_id: user.id,
+            await supabase.rpc('update_onboarding_milestone', {_user_id: user.id,
                 _milestone: 'profile_completed',
-                _status: true
-            });
-            toast({
-                title: 'Profile completed!',
-                description: 'Your profile has been set up successfully.',
-            });
+                _status: true});
+            toast({title: 'Profile completed!',
+                description: 'Your profile has been set up successfully.',});
             // Get the appropriate dashboard route based on user type
             const dashboardRoute = userType === "client"
                 ? "/client-dashboard"
@@ -80,11 +76,10 @@ export { Onboarding }() {
             })}
     };
     const steps = [
-        { label: "Select Role", description: "Choose how you'll use the platform" },
-        { label: "Create Profile", description: "Tell us about yourself" },
+        {label: "Select Role", description: "Choose how you'll use the platform"},
+        {label: "Create Profile", description: "Tell us about yourself"},
     ];
-    if (!user) {
-        router('/login');
+    if (!user) {router('/login');
         return null}
     return (<>
       
@@ -110,7 +105,7 @@ export { Onboarding }() {
           </div>
 
           <div className="bg-zion-blue-dark rounded-xl p-8 shadow-lg border border-zion-blue-light">
-            {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType}/>) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType}/>)}
+            {currentStep === 0 ? (<UserTypeSelection onSelect={handleUserTypeSelect} selectedType={userType} />) : (<ProfileSetup onComplete={handleProfileComplete} userType={userType} />)}
 
             {currentStep === 1 && (<div className="mt-6">
                 <Button variant="outline" className="w-full border-zion-blue-light text-white hover:bg-zion-blue-light" onClick={() => setCurrentStep(0)}>
@@ -122,3 +117,5 @@ export { Onboarding }() {
       </div>
       
     </>)}
+
+</Step>

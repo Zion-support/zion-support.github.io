@@ -1,3 +1,4 @@
+import React from 'react';
       icon: ShoppingCar t};
   ];
 
@@ -51,8 +52,8 @@
     <>
       <Helmet>
         <title>AI Workflow Orchestrator - Zion Tech Group | Intelligent Process Automation</title>'"
-        <meta name = "description" content="Transform your business processes with Zion Tech's AI Workflow Orchestrator. Automate complex workflows with intelligent decision-making and real-time optimization."  />"
-        <meta name="keywords" content="AI workflow, process automation, workflow orchestration, business process automation, Zion Tech Group"  />
+        <meta name = "description" content="Transform your business processes with Zion Tech's AI Workflow Orchestrator. Automate complex workflows with intelligent decision-making and real-time optimization."   />"
+        <meta name="keywords" content="AI workflow, process automation, workflow orchestration, business process automation, Zion Tech Group"   />
       </Helmet>
 "
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
@@ -569,3 +570,13 @@
     </>
   )};
 export default AIWorkflowOrchestrator;'"`
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

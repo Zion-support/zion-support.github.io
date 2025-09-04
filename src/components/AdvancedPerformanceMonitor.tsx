@@ -1,6 +1,6 @@
 import {   Activity, Zap, Clock,  TrendingUp, AlertTriangle  } from 'lucide-react';
 
-export default function Page() {
+export default function Page(props: any) {
 );
 
   // Calculate performance score based on Core Web Vitals
@@ -199,3 +199,5 @@ export default function Page() {
           ×
         </button>      </div>
   );"}"
+
+</div>

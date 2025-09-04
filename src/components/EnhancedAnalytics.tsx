@@ -1,5 +1,6 @@
+import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
-export default function Page() {
+export default function Page(props: any) {
 ;
   performance: {
 
@@ -12,26 +13,28 @@ export default function Page() {
       cls: number}}}
 
 interface EnhancedAnalyticsProps {
-  // Add your props here
+
+  // Add your props here: any;
 
   enabled?: boolean;
   showDashboard?: boolean;
   trackingId?: string;
 export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
 
-  enabled = true,
-  showDashboard = false,
-  trackingId = 'G-XXXXXXXXXX'}) => {
+  enabled = true,: any;
+  showDashboard = false,: any;
+  trackingId = 'G-XXXXXXXXXX': any;
+}) => {
 
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(
     null
   );
-  const [isVisible, setIsVisible] = useState(false);
-  const [currentPage, setCurrentPage] = useState(window.location.pathname);
-  const [sessionStart, setSessionStart] = useState(Date.now());
-  const [userInteractions, setUserInteractions] = useState(0);
-  const [scrollDepth, setScrollDepth] = useState(0);
-  const [timeOnPage, setTimeOnPage] = useState(0);
+  const [isVisible, setIsVisible] = useState<any>(false);
+  const [currentPage, setCurrentPage] = useState<any>(window.location.pathname);
+  const [sessionStart, setSessionStart] = useState<any>(Date.now());
+  const [userInteractions, setUserInteractions] = useState<any>(0);
+  const [scrollDepth, setScrollDepth] = useState<any>(0);
+  const [timeOnPage, setTimeOnPage] = useState<any>(0);
 
   // Initialize analytics
   useEffect(() => {
@@ -52,7 +55,7 @@ export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
       document.head.appendChild(script) ;
 
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: an y[]) {
+      function gtag(props: any) {
 
         window.dataLayer.push(args);
       }
@@ -521,3 +524,14 @@ export const EnhancedAnalytics: Reac t.FC<EnhancedAnalyticsProps> = ({
     </>) };
 export default EnhancedAnalytics;
 '"`
+
+</motion>
+</motion>
+</any>
+</any>
+</any>
+</any>
+</any>
+</any>
+</AnalyticsData>
+</EnhancedAnalyticsProps>

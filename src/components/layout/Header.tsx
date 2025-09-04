@@ -16,14 +16,14 @@ import {
   Globe
 } from 'lucide-react';
 
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+const Header = (props: any) => {
+  const [isMenuOpen, setIsMenuOpen] = useState<any>(false);
+  const [isServicesOpen, setIsServicesOpen] = useState<any>(false);
+  const [isScrolled, setIsScrolled] = useState<any>(false);
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
       setIsScrolled(window.scrollY > 50);
     };
 
@@ -348,3 +348,10 @@ const Header = () => {
 };
 
 export default Header;
+</motion>
+</ChevronDown>
+</motion>
+</motion>
+</any>
+</any>
+</any>

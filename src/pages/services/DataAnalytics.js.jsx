@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {Helmet} from 'react-helmet-async';
 import { Check, BarChart3, TrendingUp, Database, Users, Shield, Zap, Target export default function DataAnalyticsServices
 export { DataAnalyticsServices }() {
     const analyticsServices = [
@@ -24,8 +24,7 @@ export { DataAnalyticsServices }() {
                 'Enhanced stakeholder communication'
             ]
         },
-        {
-            icon: TrendingUp,
+        {icon: TrendingUp,
             title: 'Predictive Analytics & Forecasting',
             description: 'Leverage machine learning to predict future trends and make data-driven decisions.',
             price: 'From $5,000/month',
@@ -43,10 +42,8 @@ export { DataAnalyticsServices }() {
                 'Risk mitigation and opportunity identification',
                 'Improved resource allocation',
                 'Competitive advantage through foresight'
-            ]
-        },
-        {
-            icon: Database,
+            ]},
+        {icon: Database,
             title: 'Data Engineering & ETL',
             description: 'Build robust data pipelines and warehouses for scalable analytics infrastructure.',
             price: 'From $4,500/month',
@@ -64,10 +61,8 @@ export { DataAnalyticsServices }() {
                 'Improved data quality and reliability',
                 'Faster data processing and delivery',
                 'Reduced data silos and duplication'
-            ]
-        },
-        {
-            icon: Users,
+            ]},
+        {icon: Users,
             title: 'Customer Analytics & Segmentation',
             description: 'Understand customer behavior and create targeted marketing strategies.',
             price: 'From $3,800/month',
@@ -85,10 +80,8 @@ export { DataAnalyticsServices }() {
                 'Higher marketing ROI through targeting',
                 'Better product-market fit',
                 'Enhanced customer experience'
-            ]
-        },
-        {
-            icon: Shield,
+            ]},
+        {icon: Shield,
             title: 'Data Governance & Compliance',
             description: 'Ensure data security, privacy, and regulatory compliance across your analytics platform.',
             price: 'From $4,200/month',
@@ -106,8 +99,7 @@ export { DataAnalyticsServices }() {
                 'Enhanced data security and trust',
                 'Streamlined audit processes',
                 'Protection of sensitive information'
-            ]
-        },
+            ]},
         {
             icon: Zap,
             title: 'Real-Time Analytics & Monitoring',
@@ -159,7 +151,7 @@ export { DataAnalyticsServices }() {
         'Scalable analytics infrastructure'
     ];
     return (<div className="min-h-screen bg-background">
-      <SEO title="Data Analytics & Business Intelligence Services - Zion Tech Group" description="Comprehensive data analytics, business intelligence, and predictive analytics solutions to transform your business with data-driven insights." keywords="data analytics, business intelligence, predictive analytics, data engineering, ETL, data visualization, reporting" canonical="https://ziontechgroup.com/services/data-analytics"/>
+      <SEO title="Data Analytics & Business Intelligence Services - Zion Tech Group" description="Comprehensive data analytics, business intelligence, and predictive analytics solutions to transform your business with data-driven insights." keywords="data analytics, business intelligence, predictive analytics, data engineering, ETL, data visualization, reporting" canonical="https://ziontechgroup.com/services/data-analytics" />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
@@ -189,7 +181,7 @@ export { DataAnalyticsServices }() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {analyticsServices.map((service, index) => (<div key={service.title} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">
                 <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-blue-600"/>
+                  <service .icon className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
@@ -199,7 +191,7 @@ export { DataAnalyticsServices }() {
                 </div>
                 <ul className="space-y-2 mb-4">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
+                      <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>))}
                 </ul>
@@ -228,7 +220,7 @@ export { DataAnalyticsServices }() {
 
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (<div key={index} className="flex items-start">
-                    <Check className="w-6 h-6 text-blue-500 mr-3 mt-0.5 flex-shrink-0"/>
+                    <Check className="w-6 h-6 text-blue-500 mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-700">{benefit}</span>
                   </div>))}
               </div>
@@ -272,7 +264,7 @@ export { DataAnalyticsServices }() {
           <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {industries.map((industry, index) => (<div key={industry} className="bg-gray-50 rounded-xl p-6 text-center hover:bg-blue-50 transition-colors border border-gray-200">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-blue-600"/>
+                  <Target className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
               </div>))}

@@ -1,22 +1,22 @@
 import React, { Suspense, lazy } from;
   'reactimport { Routes, Route } from;'
   react-router-domimport { HelmetProvider } from;
-  react-helmet-asyncexport default function Page() {
-export default function Page() {
+  react-helmet-asyncexport default function Page(props: any) {
+export default function Page(props: any) {
 // Core Components;
-import { PerformanceOptimizer } from ./components/PerformanceOptimizerexport default function Page() {
-export default function Page() {
-  import { SEO } from ./components/SEOexport default function Page() {
-export default function Page() {
-  import { ErrorBoundary } from ./components/ErrorBoundaryexport default function Page() {
-export default function Page() {
-  import { LoadingSpinner  } from ./components/ui/loading-spinnerexport default function Page() {
-export default function Page() {
+import { PerformanceOptimizer } from ./components/PerformanceOptimizerexport default function Page(props: any) {
+export default function Page(props: any) {
+  import { SEO } from ./components/SEOexport default function Page(props: any) {
+export default function Page(props: any) {
+  import { ErrorBoundary } from ./components/ErrorBoundaryexport default function Page(props: any) {
+export default function Page(props: any) {
+  import { LoadingSpinner  } from ./components/ui/loading-spinnerexport default function Page(props: any) {
+export default function Page(props: any) {
 // Layout Components;
-import { EnhancedHeader } from ./components/EnhancedHeaderexport default function Page() {
-export default function Page() {
-  import { EnhancedFooter } from ./components/EnhancedFooterexport default function Page() {
-export default function Page() {
+import { EnhancedHeader } from ./components/EnhancedHeaderexport default function Page(props: any) {
+export default function Page(props: any) {
+  import { EnhancedFooter } from ./components/EnhancedFooterexport default function Page(props: any) {
+export default function Page(props: any) {
 // Optimized lazy loading with preloading hints;
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {  const LazyComponent = lazy(importFn)
   return (props: an y) => (
@@ -38,7 +38,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
 ursor/automate-test-fix-improve-and-merge-code-48f3
     </div>  </div>
 )
-function App() {
+function App(props: any) {
   return (
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error(
@@ -91,7 +91,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     </div>
   </div>
 )
-function App() {
+function App(props: any) {
 return (
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error(
@@ -136,7 +136,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
     </div>
   </div>
 )
-function App() {
+function App(props: any) {
 return (
     <HelmetProvider>
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>'        <PerformanceOptimizer>'          <SEO  />'
@@ -169,3 +169,19 @@ return (
       </ErrorBoundary>
     </HelmetProvider>
   )}
+
+</Route>
+</div>
+</Route>
+</div>
+</ErrorFallback>
+</buttononClick>
+</Route>
+</div>
+</Route>
+</div>
+</ErrorFallback>
+</any>
+</Route>
+</ErrorFallback>
+</any>

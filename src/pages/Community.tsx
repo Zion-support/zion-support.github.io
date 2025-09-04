@@ -3,7 +3,7 @@ import React from "react"
 import { SEO } from "@/components/SEO"
 ;,"});,"})
 }
-export default function Community() {return ("
+export default function Community(props: any) {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
       <SEO title="Community - Zion Tech Group" description="Professional Community services by Zion Tech Group"   />"
       <div className="container mx-auto px-4 py-20">"
@@ -25,9 +25,9 @@ import {
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-const Community = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+const Community = (props: any) => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchQuery, setSearchQuery] = useState<any>('');
 
   const communityCategories = [
     {
@@ -607,3 +607,21 @@ const Community = () => {
 
 export default Community;
 >>>>>>> merge-all-prs-20250904-105408
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</any>
+</any>
+</div>

@@ -32,7 +32,7 @@ const CTASection: Reac t.FC = (): JSX.Element => {
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-cyan/5 via-zion-blue/5 to-zion-purple/5"  />
         <div className="absolute top-20 right-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse-slow"  />
-        <div className="absolute bottom-20 left-20 w-48 h-48 bg-zion-purple/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }}  />
+        <div className="absolute bottom-20 left-20 w-48 h-48 bg-zion-purple/10 rounded-full blur-3xl animate-pulse-slow" style="{{{ animationDelay: '2s'}}"}  />
       </div>
 
       <div className="container mx-auto px-4 sm: p x-6 lg: p x-8 relative z-10">
@@ -269,7 +269,7 @@ const CTASection: Reac t.FC = (): JSX.Element => {
             className="group inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-bold text-lg rounded-2xl hover: b g-zion-cyan hover: tex t-zion-slate-dark transition-all duration-300 transform hover: scal e-105 focus: outlin e-none focus: rin g-4 focus: rin g-zion-cyan/30 focus: rin g-offset-2 focus: rin g-offset-zion-slate-dark"
 
             Explore Services
-            <ArrowRight className="ml-3 w-6 h-6 group-hover: translat e-x-1 transition-transform duration-300" aria-hidden="true"  />
+            <ArrowRight className="ml-3 w-6 h-6 group-hover: translat e-x-1 transition-transform duration-300" aria-hidden="true"   />
           </Link>
         </motion.div>
 
@@ -304,3 +304,10 @@ const CTASection: Reac t.FC = (): JSX.Element => {
 };
 
 export default CTASection;}};
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

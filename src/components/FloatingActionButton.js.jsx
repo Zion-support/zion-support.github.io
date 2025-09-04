@@ -1,10 +1,10 @@
-import React, { useState } from "react";""";,"});,"})","});,"})","})"
+import React, {useState} from "react";""";,"});,"})","});,"})","})"
   PlusIcon,,"});,"})"
   XMarkIcon,,"});,"})"
   ChatBubbleLeftRightIcon,,"});,"})"
   PhoneIcon,";,"});,"})"
   EnvelopeIcon} from "@heroicons/react/24/outline";,"});,"})"
-const FloatingActionButton = ({ className = "" }) => {}"});,"})"
+const FloatingActionButton = (props: any) => {}"});,"})"
   const [isOpen, setIsOpen] = useState(false);,"});,"})"
   const toggleMenu = () => setIsOpen(!isOpen);,"});,"})"
   const actionItems = [];,"});,"})"
@@ -50,7 +50,7 @@ const FloatingActionButton = ({ className = "" }) => {}"});,"})"
                   whileTap="{{" scale: 0.95 }}"});,"})"
                   aria-label={item.label}""";,"});,"})"
                 >"""";,"});,"})"
-                  <item.icon className="w-5 h-5" />;,"});,"})"
+                  <item .icon className="w-5 h-5"  />;,"});,"})"
                 </motion.button>;,"});,"})"
                 <motion.span,"});,"})"
                   initial="{{" opacity: 0, x: -10 }}""";,"});,"})"
@@ -80,7 +80,7 @@ const FloatingActionButton = ({ className = "" }) => {}"});,"})"
               exit="{{" rotate: 90, opacity: 0 }}"});,"})"
               transition="{{" duration: 0.2 }}""";,"});,"})"
             >"""";,"});,"})"
-              <XMarkIcon className="w-6 h-6"  />;,"});,"})"
+              <XMarkIcon className="w-6 h-6"   />;,"});,"})"
             </motion.div>;,"});,"})"
           ) : (""";,"});,"})"
             <motion.div"""";,"});,"})"
@@ -90,7 +90,7 @@ const FloatingActionButton = ({ className = "" }) => {}"});,"})"
               exit="{{" rotate: -90, opacity: 0 }}"});,"})"
               transition="{{" duration: 0.2 }}""";,"});,"})"
             >"""";,"});,"})"
-              <PlusIcon className="w-6 h-6"  />;,"});,"})"
+              <PlusIcon className="w-6 h-6"   />;,"});,"})"
             </motion.div>;,"});,"})"
           )}"});,"})"
         </AnimatePresence>;,"});,"})"
@@ -98,15 +98,15 @@ const FloatingActionButton = ({ className = "" }) => {}"});,"})"
     </div>)};,"});,"})"
 export default FloatingActionButton,"});,"})"
 ;,"});,"})"
-export { FloatingActionButton };,"});,"})"
+export {FloatingActionButton};,"});,"})"
 ;,"});,"})"
-export { FloatingActionButton };,"});,"})"
+export {FloatingActionButton};,"});,"})"
 ;,"});,"})"
-export { FloatingActionButton };,"});,"})"
+export {FloatingActionButton};,"});,"})"
 ;,"});,"})"
-export { FloatingActionButton };,"});,"})"
+export {FloatingActionButton};,"});,"})"
 ;,"});,"})"
-export { FloatingActionButton };,"});,"})"
+export {FloatingActionButton};,"});,"})"
   const [isOpen, setIsOpen] = useState()
 }
   const toggleMenu = () => setIsOpen()
@@ -123,7 +123,7 @@ export { FloatingActionButton };,"});,"})"
       color: "bg-blue-500 hover:bg-blue-600"}, {}""
       icon: EnvelopeIcon, """
       label: "Email","""
-      action: () => window.open("mailto: info@ziontechgroup.com", _self"), ";const FloatingActionButton = ({ className = "" }) => {}
+      action: () => window.open("mailto: info@ziontechgroup.com", _self"), ";const FloatingActionButton = (props: any) => {}
 
   const [isOpen, setIsOpen] = useState()
 }
@@ -223,12 +223,31 @@ key="{item.label}""
 </div>)};
 export default FloatingActionButton;
 
-export { FloatingActionButton };
+export {FloatingActionButton};
 
-export { FloatingActionButton };
+export {FloatingActionButton};
 
-export { FloatingActionButton };
+export {FloatingActionButton};
 
-export { FloatingActionButton };
+export {FloatingActionButton};
 
-export { FloatingActionButton };
+export {FloatingActionButton};
+
+</PlusIcon>
+</motion>
+</XMarkIcon>
+</motion>
+</AnimatePresence>
+</motion>
+</motion>
+</item>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

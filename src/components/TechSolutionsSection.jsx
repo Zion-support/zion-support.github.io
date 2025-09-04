@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, {useState} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 ,
     {
 
         id: 'iot-solutions',
         title: 'IoT Solutions',
         description: 'Connected devices and smart systems for the modern world',"
-        icon: <Cpu className="w-8 h-8"/>,
+        icon: <Cpu className="w-8 h-8" />,
         color: 'from-zion-cyan to-zion-purple',
         bgColor: 'from-zion-cyan/20 to-zion-purple/20',
         features = ['
@@ -22,12 +22,10 @@ export default function Page() {
         projects: 90,
         category: 'Connected Devices'
     },
-    {
-
-        id: 'mobile-apps',
+    {id: 'mobile-apps',
         title: 'Mobile Applications',
         description: 'Native and cross-platform mobile solutions for all devices',"
-        icon: <Smartphone className="w-8 h-8"/>,
+        icon: <Smartphone className="w-8 h-8" />,
         color: 'from-zion-purple to-zion-cyan',
         bgColor: 'from-zion-purple/20 to-zion-cyan/20',
         features = ['
@@ -39,16 +37,15 @@ export default function Page() {
         useCases['Retail',Entertainment',Education',Healthcare'],
         rating: 4.8,
         projects: 250,
-        category: 'Mobile'
-    }
+        category: 'Mobile'}
 ];
 const industries = ['"
-    { name: 'Healthcare', icon: <Shield className="w-5 h-5"/>, projects: 80 },"
-    { name: 'Finance', icon: <TrendingUp className="w-5 h-5"/>, projects: 120 },"
-    { name: 'Retail', icon: <Globe className="w-5 h-5"/>, projects: 95 },"
-    { name: 'Manufacturing', icon: <Cpu className="w-5 h-5"/>, projects: 75 },"
-    { name: 'Education', icon: <Users className="w-5 h-5"/>, projects: 60 },"
-    { name: 'Government', icon: <Lock className="w-5 h-5"/>, projects: 45 }
+    {name: 'Healthcare', icon: <Shield className="w-5 h-5" />, projects: 80},"
+    {name: 'Finance', icon: <TrendingUp className="w-5 h-5" />, projects: 120},"
+    {name: 'Retail', icon: <Globe className="w-5 h-5" />, projects: 95},"
+    {name: 'Manufacturing', icon: <Cpu className="w-5 h-5" />, projects: 75},"
+    {name: 'Education', icon: <Users className="w-5 h-5" />, projects: 60},"
+    {name: 'Government', icon: <Lock className="w-5 h-5" />, projects: 45}
 ];
     const [selectedSolution, setSelectedSolution] = useState(null);
     const [hoveredSolution, setHoveredSolution] = useState(null);
@@ -107,10 +104,8 @@ const industries = ['"
         <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
       </div>"
 
-{ opacity: 0,
-  y: 20
-
-}} whileInView = {
+{opacity: 0,
+  y: 20}} whileInView = {
 
   { opacity: 1,
   y: 0
@@ -155,8 +150,8 @@ const industries = ['"
   { type: "spring",
   stiffness: 300
 
-}} className="relative" onHoverStart={ () => setHoveredSolution(solution.id) } onHoverEnd={ () => setHoveredSolution(null) }>
-              <div className="h-full p - 8 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion - cyan / 20 group cursor -pointer" onClick={ () => setSelectedSolution(selectedSolution === solution.id ? null : solution.id) }>
+}} className="relative" onHoverStart={() => setHoveredSolution(solution.id)} onHoverEnd={() => setHoveredSolution(null)}>
+              <div className="h-full p - 8 rounded-2xl bg-gradient - to - br from - zion - blue - dark / 80 to - zion - blue - dark / 40 backdrop - blur - sm border border-zion - blue - light / 30 hover:border-zion - cyan / 50 transition - all duration - 300 hover:shadow-2xl hover:shadow-zion - cyan / 20 group cursor -pointer" onClick={() => setSelectedSolution(selectedSolution === solution.id ? null : solution.id)}>
                 {/* Header */}
                 <div className="text-center mb-6">
                   <div className={`inline - flex items - center justify - center w-20 h-20 rounded-2xl bg-gradient - to - br ${solution.color} mb-6 shadow-lg group - hover:shadow-xl transition - all duration - 300 group - hover:scale - 110`}>
@@ -174,7 +169,7 @@ const industries = ['"
                   {/* Rating and projects */}"
                   <div className="flex items-center justify-center gap-4 mb-4">"
                     <div className="flex items-center gap-1">"
-                      <Star className="w-4 h-4 text-yellow-400 fill-current"/>"
+                      <Star className="w-4 h-4 text-yellow-400 fill-current" />"
                       <span className="text-white text-sm font-semibold">{solution.rating}</span>
                     </div>"
                     <div className="text-zion-slate-light text-sm">
@@ -191,7 +186,7 @@ const industries = ['"
                 {/* Features preview */}"
                 <div className="space-y-2 mb-6">"
                   {solution.features.slice(0, 3).map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-zion-slate-light/80 text-sm">"
-                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0"/>
+                      <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       <span>{feature}</span>
                     </div>))}"
                   {solution.features.length > 3 && (<div className="text-zion-cyan/60 text-xs text-center">
@@ -204,7 +199,7 @@ const industries = ['"
                   <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
                     Learn More
                   </span>"
-                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                  <ArrowRight className="w-5 h-5 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300" />
                 </div>
 
                 {/* Expanded details */}
@@ -303,3 +298,11 @@ const industries = ['"
       </div>
     </section>)}
 '"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

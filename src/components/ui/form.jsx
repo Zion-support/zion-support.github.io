@@ -1,11 +1,13 @@
 import React from 'react';
 import React from "react"
-export const Form = ({ children, ...props }) => {}
+export const Form = (props: any) => {}
 
 "
-export const FormControl = ({ children, className = "" }) => {};"
+export const FormControl = (props: any) => {};"
 "
-export const FormLabel = ({ children, className = "" }) => {};"
+export const FormLabel = (props: any) => {};"
 "
-export const FormMessage = ({ className = "" }) => {"
+export const FormMessage = (props: any) => {"
   return <div className="{className}" > <// comment};"""
+
+</div>

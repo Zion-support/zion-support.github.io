@@ -1,7 +1,9 @@
 import React from 'react';
 
 interface PageTransitionProps {
+
   children: Reac t.ReactNode;
+
 }
 
 const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => {
@@ -12,3 +14,4 @@ const PageTransition: Reac t.FC<PageTransitionProps> = ({ children }) => {
   );
 };
 "export default PageTransition;
+</PageTransitionProps>

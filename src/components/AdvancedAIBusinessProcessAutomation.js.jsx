@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Zap, 
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Zap, 
   TrendingUp, 
   Clock, 
   DollarSign, 
@@ -20,12 +19,10 @@ import {
   Database,
   Globe,
   Shield,
-  Rocket
-} from 'lucide-react';
+  Rocket} from 'lucide-react';
 
 const businessProcesses = [
-  {
-    id: 'bp-001',
+  {id: 'bp-001',
     name: 'Invoice Processing',
     description: 'Automated invoice processing with AI-powered validation and approval workflows',
     category: 'finance',
@@ -42,10 +39,8 @@ const businessProcesses = [
     timeReduction: 65,
     stakeholders: ['Finance Team', 'AP Department', 'Vendors'],
     lastExecuted: new Date('2024-01-15T10:30:00Z'),
-    nextExecution: new Date('2024-01-16T09:00:00Z')
-  },
-  {
-    id: 'bp-002',
+    nextExecution: new Date('2024-01-16T09:00:00Z')},
+  {id: 'bp-002',
     name: 'Employee Onboarding',
     description: 'Streamlined employee onboarding with automated document processing and task assignment',
     category: 'hr',
@@ -62,10 +57,8 @@ const businessProcesses = [
     timeReduction: 55,
     stakeholders: ['HR Team', 'IT Department', 'New Employees'],
     lastExecuted: new Date('2024-01-14T14:15:00Z'),
-    nextExecution: new Date('2024-01-17T09:00:00Z')
-  },
-  {
-    id: 'bp-003',
+    nextExecution: new Date('2024-01-17T09:00:00Z')},
+  {id: 'bp-003',
     name: 'Customer Support Ticket Routing',
     description: 'Intelligent ticket routing based on AI analysis of customer issues and agent expertise',
     category: 'operations',
@@ -82,15 +75,14 @@ const businessProcesses = [
     timeReduction: 70,
     stakeholders: ['Support Team', 'Customers', 'Management'],
     lastExecuted: new Date('2024-01-15T08:45:00Z'),
-    nextExecution: new Date('2024-01-15T09:00:00Z')
-  }
+    nextExecution: new Date('2024-01-15T09:00:00Z')}
 ];
 
 const categories = ['all', 'finance', 'hr', 'operations', 'marketing', 'sales'];
 const priorities = ['all', 'low', 'medium', 'high', 'critical'];
 const automationLevels = ['all', 'manual', 'semi-automated', 'fully-automated'];
 
-export function AdvancedAIBusinessProcessAutomation() {
+export function AdvancedAIBusinessProcessAutomation(props: any) {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriority, setSelectedPriority] = useState('all');
   const [selectedAutomationLevel, setSelectedAutomationLevel] = useState('all');
@@ -104,7 +96,7 @@ export function AdvancedAIBusinessProcessAutomation() {
     return categoryMatch && priorityMatch && automationMatch;
   });
 
-  const getStatusColor = (status) => {
+  const getStatusColor = (props: any) => {
     switch (status) {
       case 'active': return 'text-green-500';
       case 'paused': return 'text-yellow-500';
@@ -113,7 +105,7 @@ export function AdvancedAIBusinessProcessAutomation() {
     }
   };
 
-  const getPriorityColor = (priority) => {
+  const getPriorityColor = (props: any) => {
     switch (priority) {
       case 'critical': return 'bg-red-100 text-red-800';
       case 'high': return 'bg-orange-100 text-orange-800';
@@ -123,7 +115,7 @@ export function AdvancedAIBusinessProcessAutomation() {
     }
   };
 
-  const getAutomationLevelColor = (level) => {
+  const getAutomationLevelColor = (props: any) => {
     switch (level) {
       case 'fully-automated': return 'bg-green-100 text-green-800';
       case 'semi-automated': return 'bg-blue-100 text-blue-800';
@@ -132,7 +124,7 @@ export function AdvancedAIBusinessProcessAutomation() {
     }
   };
 
-  const formatCurrency = (amount) => {
+  const formatCurrency = (props: any) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -141,7 +133,7 @@ export function AdvancedAIBusinessProcessAutomation() {
     }).format(amount);
   };
 
-  const formatDate = (date) => {
+  const formatDate = (props: any) => {
     return new Intl.DateTimeFormat('en-US', {
       year: 'numeric',
       month: 'short',
@@ -273,7 +265,7 @@ export function AdvancedAIBusinessProcessAutomation() {
               {/* AI Insights */}
               <div className="mb-4">
                 <h4 className="text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-                  <Brain className="w-4 h-4" />
+                  <Brain className="w-4 h-4"  />
                   AI Insights
                 </h4>
                 <ul className="space-y-1">
@@ -328,3 +320,5 @@ export function AdvancedAIBusinessProcessAutomation() {
     </div>
   );
 }
+
+</motion>

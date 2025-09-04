@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServiceSection = () => {
+import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServiceSection = (props: any) => {
   const globalServices = [
     {
       icon: Globe,
@@ -7,36 +7,26 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
       description: "24/7 support across multiple time zones and regions worldwide",
       features["Multi-language support", "Local compliance expertise", "Regional data centers"];
     },;
-    {
-      icon: Clock,
+    {icon: Clock,
       title: "24/7 Availability",
       description: "Round-the-clock monitoring and support for critical systems",
-      features["Always-on monitoring", "Instant alert response", "Continuous maintenance"];
-    },;
-    {
-      icon: Users,
+      features["Always-on monitoring", "Instant alert response", "Continuous maintenance"];},;
+    {icon: Users,
       title: "Expert Teams",
       description: "Certified professionals with deep industry knowledge",
-      features["Certified technicians", "Industry specialists", "Continuous training"];
-    },;
-    {
-      icon: Shield,
+      features["Certified technicians", "Industry specialists", "Continuous training"];},;
+    {icon: Shield,
       title: "Security First",
       description: "Enterprise-grade security protocols and compliance standards",
-      features["SOC 2 compliance", "Data encryption", "Access controls"];
-    },;
-    {
-      icon: Zap,
+      features["SOC 2 compliance", "Data encryption", "Access controls"];},;
+    {icon: Zap,
       title: "Rapid Response",
       description: "Quick deployment and resolution of critical issues",
-      features["Emergency response", "Remote diagnostics", "On-site dispatch"];
-    },;
-    {
-      icon: CheckCircle,
+      features["Emergency response", "Remote diagnostics", "On-site dispatch"];},;
+    {icon: CheckCircle,
       title: "Quality Assurance",
       description: "Rigorous testing and validation of all services",
-      features["Performance testing", "Security audits", "Compliance verification"];
-    }
+      features["Performance testing", "Security audits", "Compliance verification"];}
   ];
 
   return (
@@ -59,7 +49,7 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
 
               <div className="flex items-center mb-4">
                 <div className="p-3 bg-blue-600/20 rounded-lg mr-4">
-                  <service.icon className="h-8 w-8 text-blue-400" />
+                  <service .icon className="h-8 w-8 text-blue-400"  />
                 </div>
                 <h3 className="text-xl font-semibold text-white">{service.title}</h3>
               </div>
@@ -67,7 +57,7 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
               <ul className="space-y-2">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-blue-400 mr-2 flex-shrink-0"  />
                     {feature}
                   </li>
                 ))}

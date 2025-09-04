@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-export function FloatingOrbs({ count = 6, className = '' }) {
+import React, {useEffect, useRef} from 'react';
+export function FloatingOrbs(props: any) {
     const canvasRef = useRef(null);
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -9,7 +9,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         if (!ctx)
             return;
         // Set canvas size
-        const resizeCanvas = () => {
+        const resizeCanvas = (props: any) => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight};
         resizeCanvas();
@@ -31,8 +31,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                 this.vy = (Math.random() - 0.5) * 0.5;
                 this.opacity = Math.random() * 0.5 + 0.2;
                 this.color = `hsl(${Math.random() * 60 + 180}, 70%, 60%)`}
-            update() {
-                this.x += this.vx;
+            update() {this.x += this.vx;
                 this.y += this.vy;
                 // Bounce off edges
                 if (this.x < 0 || this.x > canvas.width)
@@ -42,8 +41,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
                 // Keep within bounds
                 this.x = Math.max(0, Math.min(canvas.width, this.x));
                 this.y = Math.max(0, Math.min(canvas.height, this.y))}
-            draw() {
-                ctx.save();
+            draw() {ctx.save();
                 ctx.globalAlpha = this.opacity;
                 // Create gradient
                 const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.radius);
@@ -57,8 +55,7 @@ export function FloatingOrbs({ count = 6, className = '' }) {
         }
         // Create orbs
         const orbs = [];
-        for (let i = 0; i < count; i++) {
-            orbs.push(new Orb())}
+        for (let i = 0; i < count; i++) {orbs.push(new Orb())}
         // Animation loop
         let animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -68,10 +65,9 @@ export function FloatingOrbs({ count = 6, className = '' }) {
             animationId = requestAnimationFrame(animate)};
         animate();
         // Cleanup
-        return () => {
-            window.removeEventListener('resize', resizeCanvas);
+        return () => {window.removeEventListener('resize', resizeCanvas);
             cancelAnimationFrame(animationId)}}, [count]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{ background: 'transparent' }}/>)}
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style="{{{ background: 'transparent'}}"} />)}
 
 
 export default FloatingOrbs;

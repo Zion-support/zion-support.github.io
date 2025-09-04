@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-export function GradientHeading({ children, className = '', size = '4xl', gradient = 'zion', customColors }) {
+import {motion} from 'framer-motion';
+export function GradientHeading(props: any) {
     const sizeClasses = {
         sm: 'text-sm',
         md: 'text-base',
@@ -23,3 +23,5 @@ export function GradientHeading({ children, className = '', size = '4xl', gradie
       {children}
     </motion.h1>);
 }
+
+</motion>

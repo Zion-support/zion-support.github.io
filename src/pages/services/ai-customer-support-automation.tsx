@@ -147,8 +147,8 @@ export { AICustomerSupportAutomation }() {
     <>
       <Head>
         <title>AI Customer Support Automation - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered customer support automation that reduces response time by 80% and increases customer satisfaction. 24/7 intelligent chatbots with natural language processing."  />
-        <meta name="keywords" content="AI customer support, chatbot automation, customer service AI, support automation, AI chatbots, customer experience"  />
+        <meta name="description" content="Revolutionary AI-powered customer support automation that reduces response time by 80% and increases customer satisfaction. 24/7 intelligent chatbots with natural language processing."   />
+        <meta name="keywords" content="AI customer support, chatbot automation, customer service AI, support automation, AI chatbots, customer experience"   />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

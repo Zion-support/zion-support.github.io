@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 ;
-export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {
+export const LinkMonitor = (props: any) => {
     const [brokenLinks, setBrokenLinks] = useState([]);
     const [fixedLinks, setFixedLinks] = useState([]);
     const [isScanning, setIsScanning] = useState(false);
@@ -62,9 +62,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`);
       });
       // Add to fixed links list
-      const fix = {
-
-        originalUrl,
+      const fix = {originalUrl,
         newUrl,
         type: 'redirect',
         reason: 'Automatically fixed broken internal link'};
@@ -80,7 +78,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     setBrokenLinks([]);
   };
   // Generate redirect rules for server configuration
-  const generateRedirectRules = () => {
+  const generateRedirectRules = (props: any) => {
     const rules = LinkValidator.generateRedirectRules();
     const blob = new Blob([rules], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
@@ -91,16 +89,14 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     URL.revokeObjectURL(url);
   };
   // Export broken links report
-  const exportReport = () => {
+  const exportReport = (props: any) => {
     const report = {
 
       scanTime: lastScanTime?.toISOString(),
       totalBrokenLinks: brokenLinks.length,
       brokenLinks: brokenLinks,
       fixedLinks: fixedLinks};
-    const blob = new Blob([JSON.stringify(report, null, 2)], {
-
-      type: 'application/json'});
+    const blob = new Blob([JSON.stringify(report, null, 2)], {type: 'application/json'});
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -109,13 +105,8 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     URL.revokeObjectURL(url);
   };
   // Auto-scan on component mount
-  useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
-    if(autoFix) {
-
-      scanPageLinks();
-    }
+  useEffect(() => {// TODO: Add dependencies if needed}, []);
+    if(autoFix) {scanPageLinks();}
   }, [autoFix]);
   return ("
     <div className="link-monitor bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">"
@@ -156,7 +147,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div"
               className="bg-blue-600 h-2 rounded-full transition-all duration-300"`
-              style={{ width: `${scanProgress}%` }}
+              style="{{{ width: `${scanProgress}}"%` }}
             ></div>
           </div>
         </div>
@@ -293,10 +284,10 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 export default LinkMonitor;
 '"`
 import React from "react"
-export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ;"";,"});,"})"
+export const LinkMonitor = (props: any) => {const [brokenLinks, setBrokenLinks] = useState ([]) ; const [fixedLinks, setFixedLinks] = useState ([]) ; const [isScanning, setIsScanning] = useState (false) ; const [scanProgress, setScanProgress] = useState (0) ; const [lastScanTime, setLastScanTime] = useState (null) ;"";,"});,"})"
 ;,"});,"})","});,"})"
 ;,"});,"})"
-export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true }) => {;,"});,"})"
+export const LinkMonitor = (props: any) => {;,"});,"})"
     const [brokenLinks, setBrokenLinks] = useState([]);,"});,"})"
     const [fixedLinks, setFixedLinks] = useState([]);,"});,"})"
     const [isScanning, setIsScanning] = useState(false);,"});,"})"
@@ -372,9 +363,9 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     setBrokenLinks([]);,"});,"});"
 };,"});,"})"
   // comment
-  const generateRedirectRules = () => {}"});,"})"
+  const generateRedirectRules = (props: any) => {}"});,"})"
     const rules = LinkValidator.generateRedirectRules();,"});,"})"
-    const blob = new Blob([rules], { type: "text/plain" });,"});,"})"
+    const blob = new Blob([rules], {type: "text/plain"});,"});,"})"
     const url = URL.createObjectURL(blob);,"});,"})"
     const a = document.createElement("a");,"});,"})"
     a.href = url,"});,"})"
@@ -383,7 +374,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     URL.revokeObjectURL(url);,"});,"});"
 };,"});,"})"
   // comment
-  const exportReport = () => {}"});,"})"
+  const exportReport = (props: any) => {}"});,"})"
     const report = {}"});,"})"
       scanTime: lastScanTime?.toISOString(),"});,"})"
       totalBrokenLinks: brokenLinks.length,"});,"})"
@@ -572,9 +563,17 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 };,"});,"})"
 export default LinkMonitor;"";,"});,"})"
 """"`;,"});,"})"
- export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true}) => { const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) '
+ export const LinkMonitor = (props: any) => {const [brokenLinks, setBrokenLinks] = useState ([])  const [fixedLinks, setFixedLinks] = useState ([])  const [isScanning, setIsScanning] = useState (false)  const [scanProgress, setScanProgress] = useState (0)  const [lastScanTime, setLastScanTime] = useState (null) '
 "
-""
-}"
+""}"
 "
 };""
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

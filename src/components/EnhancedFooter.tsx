@@ -193,11 +193,10 @@ export const EnhancedFooter: Reac t.FC = () => {
               <p className="text-gray-300 text-sm">Get the latest news and updates about our services and solutions.</p>
             </div>
             <div className="flex w-full md:w-auto">
-              <input
-                type="email"
+              <input type="email"
                 placeholder="Enter your email"
                 className="flex-1 md:w-64 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:border-cyan-500 text-white placeholder-gray-400"
-              />
+               />
               <button className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 rounded-r-lg transition-colors font-semibold">
                 Subscribe
               </button>

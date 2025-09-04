@@ -1,6 +1,7 @@
+import React from 'react';
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 interface SEOMetrics {
   pageSpeed: number;
   mobileFriendliness: number;
@@ -28,9 +29,9 @@ autoAnalyze: tru e,;
   showDetails = false,;
   onAnalysisComplete}) => {;
   const [analysis, setAnalysis] = useState<SEOAnalysis | null>(null);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
-  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState<any>(false);
+  const [currentUrl, setCurrentUrl] = useState<any>(url || window.location.href);
+  const [showAdvanced, setShowAdvanced] = useState<any>(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   // Mock SEO analysis data(in real app, this would come from actual analysis)
@@ -427,7 +428,7 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
 
 // Hook for using SEO optimization
   const [analysis, setAnalysis] = useState < SEOAnalysis | null> (null) ;
-  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [isOptimizing, setIsOptimizing] = useState<any>(false);
 
     setIsOptimizing(true) ;    // Implement actual optimization logic here
     await new Promise(resolve => setTimeout (resolve, 3000) ) ;
@@ -441,3 +442,14 @@ return analysis?.issues.filter(issue => issue.category === selectedCategory) || 
   }};
 '"`
 ;,"});,})";
+
+</any>
+</motion>
+</motion>
+</motion>
+</any>
+</any>
+</any>
+</any>
+</SEOAnalysis>
+</SEOOptimizerProps>

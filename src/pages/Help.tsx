@@ -3,7 +3,7 @@ import React from 'react',;',';';
     ';';';';
 import {SEO } from '@/components/SEO';
 ,"});,"})
-export default function Help() {return (
+export default function Help(props: any) {return (
     <div className="min-h-screen bg-white">
       <SEO title="Help - Zion Tech Group" description="Professional Help services by Zion Tech Group"  />
       <div className="container mx-auto px-4 py-20">
@@ -47,9 +47,9 @@ import { ;';';
   BookOpen, Video, FileText, Users, ChevronDown,;',';';
     ';';';
   ChevronUp, HelpCircle, CheckCircle, ArrowRight} from 'lucide-react';';';';
-export default function Help() {;',';';
+export default function Help(props: any) {;',';';
     ';';';
-  const [searchQuery, setSearchQuery] = useState(');
+  const [searchQuery, setSearchQuery] = useState<any>(');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 const faqs = [' {;';';
       id: 1';';';
@@ -105,7 +105,7 @@ const faqs = [' {;';';
       responseTime: "Within 4 hours"}
   ]
 ;
-  const toggleFAQ = (id: number) => {;
+  const toggleFAQ = (props: any) => {;
     setExpandedFAQ(expandedFAQ === id ? null : id)};
 return (
     <>;
@@ -173,8 +173,8 @@ import { ;';';';
   Search, MessageCircle, Phone, Mail, Clock, BookOpen, Video, FileText, Users, ChevronDown,;',';';
     ';';';
   ChevronUp, HelpCircle, CheckCircle, ArrowRight} from &apos;lucide-react';&apos;&apos;
-export default function Help()  {}
-  const [searchQuery, setSearchQuery] = useState(&apos;&apos);&apos;&apos;';
+export default function Help(props: any) {}
+  const [searchQuery, setSearchQuery] = useState<any>(&apos;&apos);&apos;&apos;';
   const [expandedFAQ, setExpandedFAQ] = useState<;<;<number | null>(null);';';
   const faqs = [';';' { id: 1, question: "How do I get started with Zion Tech Group services?",',';';
     ';';';
@@ -278,7 +278,7 @@ export default function Help()  {}
       icon: Mai l,
       availability: "24/7 Available", responseTime: "Within 4 hours"}
   ]&quot;
-  const toggleFAQ = (id: number) => {
+  const toggleFAQ = (props: any) => {
     setExpandedFAQ(expandedFAQ === id ? null : id)
       )}
     </div>
@@ -677,9 +677,9 @@ import {
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-const Help = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+const Help = (props: any) => {
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   const helpCategories = [
     {
@@ -1074,3 +1074,45 @@ const Help = () => {
 
 export default Help;
 >>>>>>> merge-all-prs-20250904-105408
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</any>
+</any>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</span>
+</motion>
+</motion>
+</p>
+</motion>
+</motion>
+</motion>
+</section>
+</motion>
+</p>
+</motion>
+</h1>
+</motion>
+</SEO>
+</number>
+</any>
+</motion>
+</motion>
+</section>
+</motion>
+</SEO>
+</number>
+</any>

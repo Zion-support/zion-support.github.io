@@ -10,3 +10,5 @@ export default function EnhancedSearch.test() {return (
         </p>
       </div>
   );"}"
+
+</div>

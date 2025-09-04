@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025, INNOVATIVE_PRICING_TIERS_2025, INNOVATIVE_CONTACT_INFO_2025, INNOVATIVE_SERVICE_GUARANTEES_2025 } from '@/data / innovativeServices2025';
 
-export default function Page() {
+export default function Page(props: any) {
     if(sortOrder === 'asc') {
 
       return aValue > bValue ? 1 : -1} else {
@@ -9,7 +9,7 @@ export default function Page() {
       return aValue < bValue ? 1 : -1}
   }) ;
 
-  const getCategoryIcon = (category: anystring) => {
+  const getCategoryIcon = (props: any) => {
     if(category === 'all') return < Rocket className="w-6 h-6" />;
     return INNOVATIVE_SERVICE_CATEGORIES_2025[category]?.icon ?
       <span className="text-2xl">{INNOVATIVE_SERVICE_CATEGORIES_2025[category].icon}</span> :
@@ -19,7 +19,7 @@ export default function Page() {
 
     setShowModal(true)};
 
-  const closeModal = () => {
+  const closeModal = (props: any) => {
     setShowModal(false) ;
     setSelectedService(null) ;
   };
@@ -210,7 +210,7 @@ export default function Page() {
                           <div className="w-16 bg-gray-700 rounded-full h-2">
                             <div "
                               className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full"`
-                              style={{ width: `${service.aiScore}%` }}
+                              style="{{{ width: `${service.aiScore}}"%` }}
                             ></div>
                           </div>"
                           <span className="text-sm text-cyan-400 font-semibold">{service.aiScore}%</span>
@@ -344,7 +344,7 @@ export default function Page() {
                         <span className="text-gray -400">AI Score:</span>
                         <div  className="flex items - center gap-2">
                           <div  className="w-24 bg-gray - 700 rounded-full h-3">
-                            <div  className="bg-gradient - to - r from - cyan - 500 to - blue - 500 h-3 rounded-full"                              style={{ width: `${selectedService.aiScore}%` }}
+                            <div  className="bg-gradient - to - r from - cyan - 500 to - blue - 500 h-3 rounded-full"                              style="{{{ width: `${selectedService.aiScore}}"%` }}
                             ></div>
                           </div>"
                           <span className="text-cyan-400 font-semibold">{selectedService.aiScore}%</span>
@@ -488,3 +488,18 @@ export default function Page() {
       </div>
     </div>
   )}'"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

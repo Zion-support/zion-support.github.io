@@ -2,12 +2,12 @@
 import React from "react"
 import Head from "next/head"
 import Link from "next/link"
-const Leadership = () => {
+const Leadership = (props: any) => {
   return (
     <>
       <Head>
         <title>Leadership - Zion Tech Group</title>
-        <meta name="description" content="Professional Leadership services"   />
+        <meta name="description" content="Professional Leadership services"    />
       </Head>
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8 py-12">
@@ -60,7 +60,7 @@ import {
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-const Leadership = () => {
+const Leadership = (props: any) => {
   const executiveTeam = [
     {
       name: 'Dr. Sarah Chen',
@@ -505,3 +505,18 @@ const Leadership = () => {
 
 export default Leadership;
 >>>>>>> merge-all-prs-20250904-105408
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</div>
+</div>
+</div>
+</div>

@@ -9,8 +9,8 @@ export { AIAutoEmailResponder }(...args: []):  {
     <>
       <Helmet>
         <title>AI Auto Email Responder - Zion Tech Group</title>
-        <meta name = "description" content="Automate your email responses with AI-powered email management. Faster replies, CRM logging, and intelligent email automation."  />
-        <meta name="keywords" content="AI email responder, email automation, email management, CRM integration, auto reply, email bot"  />
+        <meta name = "description" content="Automate your email responses with AI-powered email management. Faster replies, CRM logging, and intelligent email automation."   />
+        <meta name="keywords" content="AI email responder, email automation, email management, CRM integration, auto reply, email bot"   />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -39,7 +39,7 @@ export { AIAutoEmailResponder }(...args: []):  {
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover: fro m-blue-600 hover: t o-indigo-700 transition-all duration-200 shadow-lg hover: shado w-xl"
 
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5"  />
+                  <ArrowRight className="ml-2 w-5 h-5"   />
                 </Link>
                 <button className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover: b g-blue-500/10 transition-all duration-200">
                   <Play className="mr-2 w-5 h-5"  />
@@ -362,7 +362,7 @@ export { AIAutoEmailResponder }(...args: []):  {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover: fro m-blue-600 hover: t o-indigo-700 transition-all duration-200"
 
                 Schedule a Demo
-                <ArrowRight className="ml-2 w-5 h-5"  />
+                <ArrowRight className="ml-2 w-5 h-5"   />
               </Link>
               <Link
                 to="/services"

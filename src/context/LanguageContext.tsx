@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
-export default function Page() {
+export default function Page(props: any) {
 ,
   { code: 'pt' as SupportedLanguage, name: 'Português', flag: '🇧🇷' },
   { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
@@ -18,10 +18,12 @@ const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
 
 interface LanguageProviderProps {
+
   children: ReactNod e;
   authState?: { 
     isAuthenticated: boolean;
-    user: { id?: string } | null;
+    user: { id?: string 
+} | null;
   };
 }
 
@@ -34,7 +36,7 @@ export const LanguageProvider: Reac t.FC<LanguageProviderProps> = ({
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
     (i18n.language?.substring(0, 2) as SupportedLanguage) || 'en'
   );
-  const [isRTL, setIsRTL] = useState(i18n.dir() === 'rtl');
+  const [isRTL, setIsRTL] = useState<any>(i18n.dir() === 'rtl');
   
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -128,3 +130,8 @@ export const LanguageProvider: Reac t.FC<LanguageProviderProps> = ({
     </LanguageContext.Provider>
   );
 };
+
+</LanguageContext>
+</any>
+</SupportedLanguage>
+</LanguageProviderProps>

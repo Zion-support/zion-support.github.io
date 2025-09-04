@@ -51,3 +51,7 @@ const AuthRoutes: Reac t.FC = () => {
 };
 
 export default AuthRoutes;
+
+</Route>
+</Route>
+</Route>

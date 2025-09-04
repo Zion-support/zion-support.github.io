@@ -1,12 +1,13 @@
-import { useState, useEffect } from 'react';'''
+import React from 'react';
+import {useState, useEffect} from 'react';'''
 import SEO from '@/components/SEO';'''
-import { TalentCard } from '@/components/talent/TalentCard';'''
-import { useAuth } from '@/hooks/useAuth';'''
-import { supabase } from '@/integrations/supabase/client';'''
-import { toast } from '@/components/ui/use-toast';'''
-import { useNavigate } from 'react-router-dom';
-export default function SavedTalentsPage() {}
-  const { user } = useAuth();
+import {TalentCard} from '@/components/talent/TalentCard';'''
+import {useAuth} from '@/hooks/useAuth';'''
+import {supabase} from '@/integrations/supabase/client';'''
+import {toast} from '@/components/ui/use-toast';'''
+import {useNavigate} from 'react-router-dom';
+export default function SavedTalentsPage(props: any) {}
+  const {user} = useAuth();
   const [savedTalents, setSavedTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ export default function SavedTalentsPage() {}
           // console.warn("User not authenticated.");
           return;
         }'
-        const { data, error } = await supabase''
+        const {data, error} = await supabase''
           .from('saved_talents')
           .select()
             `
@@ -47,7 +48,7 @@ export default function SavedTalentsPage() {}
           throw error;
         }
         if (data) {}
-export default function Page() {}
+export default function Page(props: any) {}
         if(data) {}
           // Extract talent profiles and convert to TalentProfile type;
           const talentProfiles = data.map(item => item.talent_profile) ;
@@ -101,7 +102,7 @@ export default function Page() {}
       }
       if (isCurrentlySaved) {}
         // Remove from saved talents'
-        const { error } = await supabase''
+        const {error} = await supabase''
           .from('saved_talents')
           .delete()'
           .eq('user_id', user.id)'
@@ -119,14 +120,14 @@ export default function Page() {}
           description: 'Talent removed from saved list.'});
       } else {}
         // Add to saved talents'
-        const { error } = await supabase''
+        const {error} = await supabase''
           .from('saved_talents')
-          .insert([{ user_id: user.id, talent_id: talentId }]);
+          .insert([{user_id: user.id, talent_id: talentId}]);
         if (error) {}
           throw error;
         }
         // Fetch the updated talent profile and add it to the list'
-        const { data: talentData, error: talentError } = await supabase''
+        const {data: talentData, error: talentError} = await supabase''
           .from('talent_profiles')'
           .select('*')'
           .eq('id', talentId)
@@ -170,10 +171,10 @@ export default function Page() {}
   };
   return()
     <>"""
-      <SEO""""
+      <SEO """"
         title="Saved Talents | Zion AI Marketplace""""
         description="View and manage your saved talents in the Zion AI Marketplace"""
-      />"""
+       />"""
 """"
       <div className="container mx-auto px-4 py-8">""""
         <h1 className="text-3xl font-bold mb-4">Saved Talents</h1>""""
@@ -188,7 +189,7 @@ export default function Page() {}
         ) : (""""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {savedTalents.map(talent => (
-              <TalentCard;
+              <TalentCard ;
                 key={talent.id}
                 talent={talent}
                 onViewProfile={handleViewProfile}
@@ -196,18 +197,21 @@ export default function Page() {}
                 isSaved={true}
                 onToggleSave={handleToggleSave}
                 isAuthenticated={!!user}
-              />) ) }
+               />) ) }
           </div>) }
       </div>
       
     </>)}
 
-export { SavedTalentsPage };
+export {SavedTalentsPage};
 
-export { SavedTalentsPage };
+export {SavedTalentsPage};
 
-export { SavedTalentsPage };
+export {SavedTalentsPage};
 
-export { SavedTalentsPage };
+export {SavedTalentsPage};
 
-export { SavedTalentsPage, Page };
+export {SavedTalentsPage, Page};
+
+</TalentCard>
+</SEO>

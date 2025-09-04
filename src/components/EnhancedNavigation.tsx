@@ -1,6 +1,6 @@
 import { Link, useLocation  } from 'react-router-dom';
 
-export default function Page() {
+export default function Page(props: any) {
 ,
   {
     label: 'AI & Machine Learning',
@@ -253,10 +253,10 @@ export const EnhancedNavigation: Reac t.FC<EnhancedNavigationProps> = ({
 
 className:  '',;
   onThemeChange }) => {;
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [theme, setTheme] = useState<any>('system');
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<any>(false);
   
   useEffect(() => {
 // TODO: Add dependencies if needed
@@ -489,3 +489,14 @@ root.classList.add(newTheme)}
     </nav>
   )};'"`
 ;,"});,})";
+
+</motion>
+</ChevronDown>
+</motion>
+</motion>
+</nav>
+</any>
+</any>
+</any>
+</any>
+</EnhancedNavigationProps>

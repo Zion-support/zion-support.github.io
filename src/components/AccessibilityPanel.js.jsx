@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
+import React, {useState, useEffect} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
             catch(error) {
 
                 // console.error('Failed to parse accessibility settings:', error)}
         }
     }, []);
-    useEffect(() => {
-  // TODO: Add dependencies if needed
-}, []);
+    useEffect(() => {// TODO: Add dependencies if needed}, []);
         // Apply settings to document
         applySettings(settings);
         // Save to localStorage'
         localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
-    const applySettings = (newSettings) => {
+    const applySettings = (props: any) => {
 
         const root = document.documentElement;
         // High contrast
@@ -22,43 +20,27 @@ export default function Page() {
 
             root.style.setProperty('--high-contrast',1');
             root.classList.add('high-contrast')}
-        else {
-
-            root.style.setProperty('--high-contrast',0');
+        else {root.style.setProperty('--high-contrast',0');
             root.classList.remove('high-contrast')}
         // Font size'
         root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
         // Reduced motion
-        if(newSettings.reducedMotion) {
-
-            root.classList.add('reduced-motion')}
-        else {
-
-            root.style.setProperty('--reduced-motion',no-preference')}
+        if(newSettings.reducedMotion) {root.classList.add('reduced-motion')}
+        else {root.style.setProperty('--reduced-motion',no-preference')}
         // Apply focus indicator
-        if(settings.focusIndicator) {
-
-            root.style.setProperty('--focus-visible',auto')}
-        else {
-
-            root.style.setProperty('--focus-visible',none')}
+        if(settings.focusIndicator) {root.style.setProperty('--focus-visible',auto')}
+        else {root.style.setProperty('--focus-visible',none')}
         // Color blindness'
         root.classList.remove('protanopia',deuteranopia',tritanopia');
-        if(newSettings.colorBlindness !== 'none') {
-
-            root.classList.add(newSettings.colorBlindness)}
+        if(newSettings.colorBlindness !== 'none') {root.classList.add(newSettings.colorBlindness)}
         // Focus indicator
-        if(newSettings.focusIndicator) {
-
-            root.classList.add('focus-visible')}
-        else {
-
-            root.classList.remove('focus-visible')}
+        if(newSettings.focusIndicator) {root.classList.add('focus-visible')}
+        else {root.classList.remove('focus-visible')}
     };
-    const updateSetting = (key, value) => {
+    const updateSetting = (props: any) => {
 
         setSettings(prev => ({ ...prev, [key]: value }))};
-    const resetSettings = () => {
+    const resetSettings = (props: any) => {
         const defaultSettings = {
 
   highContrast: false,
@@ -72,21 +54,17 @@ export default function Page() {
 };
         setSettings(defaultSettings)};
     const tabs = ['
-        { id: 'general', label: 'General', icon: '⚙️' },
-        { id: 'visual', label: 'Visual', icon: '👁️' },
-        { id: 'audio', label: 'Audio', icon: '🔊' },
-        { id: 'navigation', label: 'Navigation', icon: '⌨️' }
+        {id: 'general', label: 'General', icon: '⚙️'},
+        {id: 'visual', label: 'Visual', icon: '👁️'},
+        {id: 'audio', label: 'Audio', icon: '🔊'},
+        {id: 'navigation', label: 'Navigation', icon: '⌨️'}
     ];
-    const getScoreColor = (score) => {
-
-        if(score >= 90)
+    const getScoreColor = (props: any) => {if(score >= 90)
             return 'text-green-400';
         if(score >= 70)
             return 'text-yellow-400';
         return 'text-red-400'};
-    const getScoreLabel = (score) => {
-
-        if(score >= 90)
+    const getScoreLabel = (props: any) => {if(score >= 90)
             return 'Excellent';
         if(score >= 70)
             return 'Good';
@@ -99,7 +77,7 @@ export default function Page() {
       {/* Toggle Button */}
       <button onClick={onToggle} className="fixed bottom-4 left-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300"  title="Accessibility Settings">"
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"/>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
         </svg>
       </button>
 
@@ -127,7 +105,7 @@ export default function Page() {
                 <h2 className="text-lg font-semibold">Accessibility Settings</h2>"
                 <button onClick={onToggle} className="text-white/80 hover:text-white transition-colors" >"
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
@@ -164,12 +142,9 @@ export default function Page() {
 }} className="space-y-4">
                     <div>"
                       <label className="flex items-center space-x-3">"
-                        <input type="checkbox" checked={settings.highContrast} onChange = {
-
-  (e) => updateSetting('highContrast',
+                        <input type="checkbox" checked={settings.highContrast} onChange={(e) => updateSetting('highContrast',
   e.target.checked)
-"
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           High Contrast Mode
                         </span>
@@ -183,22 +158,16 @@ export default function Page() {
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Font Size: {settings.fontSize}%
                       </label>"
-                      <input type="range" min="50" max="200" step="10" value={settings.fontSize} onChange = {
-
-  (e) => updateSetting('fontSize',
+                      <input type="range" min="50" max="200" step="10" value={settings.fontSize} onChange={(e) => updateSetting('fontSize',
   parseInt(e.target.value))
-"
-} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>
+"} className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>
                     </div>
 
                     <div>"
                       <label className="flex items-center space-x-3">"
-                        <input type="checkbox" checked={settings.reducedMotion} onChange = {
-
-  (e) => updateSetting('reducedMotion',
+                        <input type="checkbox" checked={settings.reducedMotion} onChange={(e) => updateSetting('reducedMotion',
   e.target.checked)
-"
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Reduced Motion
                         </span>
@@ -229,12 +198,9 @@ export default function Page() {
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         Color Blindness Support
                       </label>
-                      <select value={settings.colorBlindness} onChange = {
-
-  (e) => updateSetting('colorBlindness',
+                      <select value={settings.colorBlindness} onChange={(e) => updateSetting('colorBlindness',
   e.target.value)
-"
-} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">"
+"} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">"
                         <option value="none">None</option>"
                         <option value="protanopia">Protanopia(Red-Blind)</option>"
                         <option value="deuteranopia">Deuteranopia(Green-Blind)</option>"
@@ -244,12 +210,9 @@ export default function Page() {
 
                     <div>"
                       <label className="flex items-center space-x-3">"
-                        <input type="checkbox" checked={settings.focusIndicator} onChange = {
-
-  (e) => updateSetting('focusIndicator',
+                        <input type="checkbox" checked={settings.focusIndicator} onChange={(e) => updateSetting('focusIndicator',
   e.target.checked)
-"
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Enhanced Focus Indicators
                         </span>
@@ -278,12 +241,9 @@ export default function Page() {
 }} className="space-y-4">
                     <div>"
                       <label className="flex items-center space-x-3">"
-                        <input type="checkbox" checked={settings.screenReader} onChange = {
-
-  (e) => updateSetting('screenReader',
+                        <input type="checkbox" checked={settings.screenReader} onChange={(e) => updateSetting('screenReader',
   e.target.checked)
-"
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Screen Reader Mode
                         </span>
@@ -324,12 +284,9 @@ export default function Page() {
 }} className="space-y-4">
                     <div>"
                       <label className="flex items-center space-x-3">"
-                        <input type="checkbox" checked={settings.keyboardNavigation} onChange = {
-
-  (e) => updateSetting('keyboardNavigation',
+                        <input type="checkbox" checked={settings.keyboardNavigation} onChange={(e) => updateSetting('keyboardNavigation',
   e.target.checked)
-"
-} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
+"} className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>"
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                           Enhanced Keyboard Navigation
                         </span>
@@ -370,3 +327,9 @@ export default function Page() {
     </>)};
 export default AccessibilityPanel;
 '"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

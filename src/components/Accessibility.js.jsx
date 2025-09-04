@@ -1,8 +1,8 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';
-import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
+import React, {useState, useEffect, createContext, useContext} from 'react';'''
+import {motion, AnimatePresence} from 'framer-motion';
+import {Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X} from 'lucide-react';
 ;const AccessibilityContext = createContext(null);
-export const useAccessibility = () => {}
+export const useAccessibility = (props: any) => {}
   const context = useContext(AccessibilityContext);
   if (!context) {}
 ''
@@ -15,7 +15,7 @@ export const useAccessibility = () => {}
   return context;
 };
 // Accessibility Provider Component;
-export const AccessibilityProvider = ({ children }) => {}
+export const AccessibilityProvider = (props: any) => {}
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);'
   const [fontSize, setFontSize] = useState('medium');'
@@ -41,14 +41,13 @@ export const AccessibilityProvider = ({ children }) => {}
     // Cleanup function
   };
 }, []);, []);
-    const settings = {
-"
+    const settings = {"
 ;,"});,"})"
- const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") } return context};"""";,"});,"})"
+ const AccessibilityContext = createContext (null) ; export const useAccessibility = (props: any) => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") } return context};"""";,"});,"})"
 ;,"});,"})"
- const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};,"});,"})"""";,"});,"})","});,"})","});,"})"
+ const AccessibilityContext = createContext(null); export const useAccessibility = (props: any) => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" )} return context};,"});,"})"""";,"});,"})","});,"})","});,"})"
 ;const AccessibilityContext = createContext(null);,"});,"})"
-export const useAccessibility = () => {}"});,"})"
+export const useAccessibility = (props: any) => {}"});,"})"
   const context = useContext(AccessibilityContext);,"});,"})"
   if (!context) {}"});,"})"
 ";,"});,"})"
@@ -61,7 +60,7 @@ export const useAccessibility = () => {}"});,"})"
   return context,"});,"});"
 };,"});,"})"
 // comment
-export const AccessibilityProvider = ({ children }) => {}"});,"})"
+export const AccessibilityProvider = (props: any) => {}"});,"})"
   const [highContrast, setHighContrast] = useState(false);,"});,"})"
   const [reducedMotion, setReducedMotion] = useState(false);,"});,"})"
   const [fontSize, setFontSize] = useState("medium");,"});,"})"
@@ -149,7 +148,7 @@ export const AccessibilityProvider = ({ children }) => {}"});,"})"
   );,"});,"});"
 };,"});,"})"
 // comment
-export const AccessibilityPanel = () => {}"});,"})"
+export const AccessibilityPanel = (props: any) => {}"});,"})"
   const [isOpen, setIsOpen] = useState(false);,"});,"})"
   const {}"});,"})"
     highContrast,,"});,"})"
@@ -204,7 +203,7 @@ export const AccessibilityPanel = () => {}"});,"})"
         className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300"""","});,"})"
         aria-label="Open Accessibility Settings"""";,"});,"})"
       >"""";,"});,"})"
-        <Accessibility className="w-6 h-6"  />;,"});,"})"
+        <Accessibility className="w-6 h-6"   />;,"});,"})"
       </motion.button>;,"});,"})"
       {/* comment */}"});,"})"
       <AnimatePresence>;,"});,"})"
@@ -226,7 +225,7 @@ export const AccessibilityPanel = () => {}"});,"})"
               {/* comment */}"""";,"});,"})"
               <div className="flex items-center justify-between mb-6">"""";,"});,"})"
                 <h2 className="text-xl font-bold text-white flex items-center gap-2">"""";,"});,"})"
-                  <Accessibility className="w-5 h-5 text-zion-cyan"  />;,"});,"})"
+                  <Accessibility className="w-5 h-5 text-zion-cyan"   />;,"});,"})"
                   Accessibility Settings,"});,"})"
                 </h2>""";,"});,"})"
                 <Button"""";,"});,"})"
@@ -235,7 +234,7 @@ export const AccessibilityPanel = () => {}"});,"})"
                   onClick="{()" => setIsOpen(false)}"""";,"});,"})"
                   className="text-zion-slate-light hover: text-white"""","});,"})"
                 >"""";,"});,"})"
-                  <X className="w-4 h-4"  />;,"});,"})"
+                  <X className="w-4 h-4"   />;,"});,"})"
                 </Button>;,"});,"})"
               </div>;,"});,"})"
 """;,"});,"})"
@@ -263,9 +262,9 @@ export const AccessibilityPanel = () => {}"});,"})"
 }"});,"})"
                   >""";,"});,"})"
                     {highContrast ? ("""";,"});,"})"
-                      <Eye className="w-4 h-4"  />""";,"});,"})"
+                      <Eye className="w-4 h-4"   />""";,"});,"})"
                     ) : ("""";,"});,"})"
-                      <EyeOff className="w-4 h-4"  />;,"});,"})"
+                      <EyeOff className="w-4 h-4"   />;,"});,"})"
                     )}"});,"})"
                   </Button>;,"});,"})"
                 </div>;,"});,"})"
@@ -292,9 +291,9 @@ export const AccessibilityPanel = () => {}"});,"})"
 }"});,"})"
                   >""";,"});,"})"
                     {reducedMotion ? ("""";,"});,"})"
-                      <VolumeX className="w-4 h-4"  />""";,"});,"})"
+                      <VolumeX className="w-4 h-4"   />""";,"});,"})"
                     ) : ("""";,"});,"})"
-                      <Volume2 className="w-4 h-4"  />;,"});,"})"
+                      <Volume2 className="w-4 h-4"   />;,"});,"})"
                     )}"});,"})"
                   </Button>;,"});,"})"
                 </div>;,"});,"})"
@@ -355,7 +354,7 @@ export const AccessibilityPanel = () => {}"});,"})"
                 {/* comment */}"""";,"});,"})"
                 <div className="bg-zion-blue-dark/50 rounded-lg p-4">"""";,"});,"})"
                   <h3 className="text-white font-medium mb-3 flex items-center gap-2">"""";,"});,"})"
-                    <Keyboard className="w-4 h-4 text-zion-cyan"  />;,"});,"})"
+                    <Keyboard className="w-4 h-4 text-zion-cyan"   />;,"});,"})"
                     Keyboard Shortcuts""";,"});,"})"
                   </h3>"""";,"});,"})"
                   <div className="space-y-2 text-sm text-zion-slate-light">"""";,"});,"})"
@@ -430,15 +429,15 @@ export const useFocusTrap = isActive => {}"});,"})"
 }, [isActive]);,"});,"});"
 };,"});,"})"
 // comment
-export const SrOnly = ({ children }) => ("""";,"});,"})"
+export const SrOnly = ({children}) => ("""";,"});,"})"
   <span className="sr-only">{children}</span>;,"});,"})"
 );,"});,"})"
 export default AccessibilityPanel;""";,"});,"})"
 """"";,"});,"})"
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React, { useState, useEffect, createContext, useContext } from "react"";import React, { useState, useEffect, createContext, useContext } from "react""";"""
- const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";import React, { useState, useEffect, createContext, useContext }  from "react,
+ const AccessibilityContext = createContext (null)  export const useAccessibility = (props: any) => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";;import React, {useState, useEffect, createContext, useContext} from "react"";import React, {useState, useEffect, createContext, useContext} from "react""";"""
+ const AccessibilityContext = createContext (null)  export const useAccessibility = (props: any) => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }";import React, {useState, useEffect, createContext, useContext}  from "react,
 const AccessibilityContext = createContext()"
-export const useAccessibility = () => {}
+export const useAccessibility = (props: any) => {}
 const context = useContext(AccessibilityContext)"
   if (!context) {}""
 """
@@ -449,7 +448,7 @@ const context = useContext(AccessibilityContext)"
   return context}
 
 // comment
-export const AccessibilityProvider = ({ children }) => {}"
+export const AccessibilityProvider = (props: any) => {}"
   const [highContrast, setHighContrast] = useState(false)""
   const [reducedMotion, setReducedMotion] = useState(false)""
   const [fontSize, setFontSize] = useState("medium")""
@@ -496,9 +495,7 @@ colorBlindMode};
 }, []);, []);
     const root = document.documentElement;
     // High contrast mode
-    if(highContrast) {
-localStorage.setItem()
-}
+    if(highContrast) {localStorage.setItem()}
     )}, [highContrast, reducedMotion, fontSize, colorBlindMode])
 }
   // comment
@@ -565,9 +562,7 @@ highContrast,
     // Cleanup function
   };
 }, []);, []);
-    const handleKeyDown = event => {
-const [isOpen, setIsOpen] = useState()
-}
+    const handleKeyDown = event => {const [isOpen, setIsOpen] = useState()}
   const {}
 
     highContrast, reducedMotion, fontSize, colorBlindMode, toggleHighContrast, toggleReducedMotion, setFontSize, setColorBlindMode} = useAccessibility()
@@ -866,9 +861,7 @@ useEffect(() => {
     if(!container) return;
     const firstFocusableElement = focusableContent[0];
     const lastFocusableElement = focusableContent[focusableContent.length-1];
-    const handleTabKey = e => {
-e.preventDefault()
-}            lastFocusableElement.focus()}
+    const handleTabKey = e => {e.preventDefault()}            lastFocusableElement.focus()}
 
         } else {}
 
@@ -881,7 +874,7 @@ e.preventDefault()
     document.addEventListener("keydown", handleTabKey)"
     return () => document.removeEventListener("keydown", handleTabKey)}, [isActive])}""
 // comment
-export const SrOnly = ({ children }) => (""""
+export const SrOnly = ({children}) => (""""
   <span className="sr-only">{children}</span>"
 )""
 export default AccessibilityPanel"";""
@@ -890,8 +883,31 @@ export default AccessibilityPanel"";""
     document.addEventListener("keydown", handleTabKey)"
     return () => document.removeEventListener("keydown", handleTabKey)}, [isActive])}""
 // comment
-export const SrOnly = ({ children }) => (""""
+export const SrOnly = ({children}) => (""""
   <span className="sr-only">{children}</span>"
 )"
 export default AccessibilityPanel""
 """"'""
+
+</Keyboard>
+</Volume2>
+</VolumeX>
+</EyeOff>
+</Eye>
+</div>
+</X>
+</Accessibility>
+</motion>
+</motion>
+</Accessibility>
+</motion>
+</AccessibilityContext>
+</div>
+</div>
+</div>
+</div>
+</div>
+</motion>
+</motion>
+</motion>
+</AccessibilityContext>

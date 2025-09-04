@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 export default ComprehensiveNewServicesShowcase2025;
 import { comprehensiveNewServices2025 } from '../data/comprehensiveNewServices2025';
-export default function Page() {
+export default function Page(props: any) {
 ;
   return ()
     <div className="min-h-screen py-8 bg-gray-900">"
@@ -311,3 +311,11 @@ export default function Page() {
       </div>
     </div>) }
 export default ComprehensiveNewServicesShowcase2025;'"`
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>

@@ -1,23 +1,22 @@
-import React, { useState } from "react";
-import { SEO } from "@/components/SEO";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
-import { Switch } from "@/components/ui/switch";
+import React, {useState} from "react";
+import {SEO} from "@/components/SEO";
+import {useAuth} from "@/hooks/useAuth";
+import {Navigate} from "react-router-dom";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {toast} from "sonner";
+import {supabase} from "@/integrations/supabase/client";
+import {Switch} from "@/components/ui/switch";
 export default function TenantOnboarding
-export { TenantOnboarding }() {
+export {TenantOnboarding}() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("comp");
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [formData, setFormData] = useState({
-        brand_name: "",
+    const [formData, setFormData] = useState({brand_name: "",
         subdomain: "",
         logo_url: "",
         primary_color: "#9b87f5",
@@ -25,15 +24,13 @@ export { TenantOnboarding }() {
         comp_size: "",
         industry: "",
         custom_domain: "",
-        is_co_branded: true
-    });
+        is_co_branded: true});
     // Check if user has admin role
     const isAdmin = user?.role === "admin";
-    if (!isAdmin) {
-        return <Navigate to="/unauthorized"/>}
-    const handleInputChange = (e) => {
+    if (!isAdmin) {return <Navigate to="/unauthorized" />}
+    const handleInputChange = (props: any) => {
         const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }))};
+        setFormData(prev => ({...prev, [name]: value}))};
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
@@ -49,10 +46,9 @@ export { TenantOnboarding }() {
                 cta: "Get Started"
             };
             // Submit to Supabase
-            const { data, error } = await supabase
+            const {data, error} = await supabase
                 .from('whitelabel_tenants')
-                .insert({
-                brand_name: formData.brand_name,
+                .insert({brand_name: formData.brand_name,
                 subdomain: subdomain,
                 custom_domain: formData.custom_domain || null,
                 primary_color: formData.primary_color,
@@ -62,8 +58,7 @@ export { TenantOnboarding }() {
                 is_active: true,
                 account_manager_id: user.id,
                 dns_verified: false,
-                email_template_override: null
-            })
+                email_template_override: null})
                 .select('id, brand_name, subdomain')
                 .single();
             if (error)
@@ -72,8 +67,7 @@ export { TenantOnboarding }() {
                 description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
             });
             // Reset form
-            setFormData({
-                brand_name: "",
+            setFormData({brand_name: "",
                 subdomain: "",
                 logo_url: "",
                 primary_color: "#9b87f5",
@@ -81,18 +75,16 @@ export { TenantOnboarding }() {
                 comp_size: "",
                 industry: "",
                 custom_domain: "",
-                is_co_branded: true
-            })}
+                is_co_branded: true})}
         catch (error) {
             console.error("Error creating tenant:", error);
             toast.error("Failed to create tenant", {
                 description: error.message
             })}
-        finally {
-            setIsSubmitting(false)}
+        finally {setIsSubmitting(false)}
     };
     return (<>
-      <SEO title="Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform."/>
+      <SEO title="Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform." />
       
       <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col space-y-6">
@@ -122,18 +114,15 @@ export { TenantOnboarding }() {
                   <TabsContent value="comp" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="brand_name">Comp Name</Label>
-                      <Input id="brand_name" name="brand_name" value={formData.brand_name} onChange={handleInputChange} placeholder="Acme Corporation" required/>
+                      <Input id="brand_name" name="brand_name" value={formData.brand_name} onChange={handleInputChange} placeholder="Acme Corporation" required  />
                     </div>
                     
                     <div className="space-y-2">
                       <Label htmlFor="industry">Industry</Label>
-                      <Select name="industry" value={formData.industry} onValueChange = {
-  (value) => handleSelectChange("industry",
-  value)
-
-}>
+                      <Select name="industry" value={formData.industry} onValueChange = {(value) => handleSelectChange("industry",
+  value)}>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select industry"/>
+                          <SelectValue placeholder="Select industry" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="technology">Technology</SelectItem>
@@ -150,13 +139,10 @@ export { TenantOnboarding }() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="comp_size">Comp Size</Label>
-                      <Select name="comp_size" value={formData.comp_size} onValueChange = {
-  (value) => handleSelectChange("comp_size",
-  value)
-
-}>
+                      <Select name="comp_size" value={formData.comp_size} onValueChange = {(value) => handleSelectChange("comp_size",
+  value)}>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select comp size"/>
+                          <SelectValue placeholder="Select comp size" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="1-10">1-10 employees</SelectItem>
@@ -173,7 +159,7 @@ export { TenantOnboarding }() {
                   <TabsContent value="branding" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="logo_url">Logo URL</Label>
-                      <Input id="logo_url" name="logo_url" value={formData.logo_url} onChange={handleInputChange} placeholder="https://example.com/logo.png"/>
+                      <Input id="logo_url" name="logo_url" value={formData.logo_url} onChange={handleInputChange} placeholder="https://example.com/logo.png"  />
                       <p className="text-xs text-muted-foreground">
                         Enter a direct URL to your logo image (SVG or PNG with transparent background recommended)
                       </p>
@@ -182,20 +168,17 @@ export { TenantOnboarding }() {
                     <div className="space-y-2">
                       <Label htmlFor="primary_color">Primary Brand Color</Label>
                       <div className="flex items-center gap-2">
-                        <Input id="primary_color" name="primary_color" type="color" value={formData.primary_color} onChange={handleInputChange} className="w-12 p-1 h-10"/>
-                        <Input name="primary_color" value={formData.primary_color} onChange={handleInputChange} placeholder="#9b87f5"/>
+                        <Input id="primary_color" name="primary_color" type="color" value={formData.primary_color} onChange={handleInputChange} className="w-12 p-1 h-10"  />
+                        <Input name="primary_color" value={formData.primary_color} onChange={handleInputChange} placeholder="#9b87f5"  />
                       </div>
                     </div>
                     
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
-                      <Select name="theme_preset" value={formData.theme_preset} onValueChange = {
-  (value) => handleSelectChange("theme_preset",
-  value)
-
-}>
+                      <Select name="theme_preset" value={formData.theme_preset} onValueChange = {(value) => handleSelectChange("theme_preset",
+  value)}>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select theme"/>
+                          <SelectValue placeholder="Select theme" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="light">Light</SelectItem>
@@ -214,11 +197,8 @@ export { TenantOnboarding }() {
                           Show "Powered by Zion AI" in the footer and elsewhere
                         </p>
                       </div>
-                      <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange = {
-  (checked) => handleSwitchChange("is_co_branded",
-  checked)
-
-}/>
+                      <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange = {(checked) => handleSwitchChange("is_co_branded",
+  checked)}/>
                     </div>
                   </TabsContent>
                   
@@ -226,11 +206,8 @@ export { TenantOnboarding }() {
                     <div className="space-y-2">
                       <Label htmlFor="subdomain">Subdomain</Label>
                       <div className="flex items-center">
-                        <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {
-  formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
-  '') : "comp"
-
-} className="rounded-r-none"/>
+                        <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
+  '') : "comp"} className="rounded-r-none"  />
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
                           .ziontechmarketplace.com
                         </div>
@@ -242,7 +219,7 @@ export { TenantOnboarding }() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>
-                      <Input id="custom_domain" name="custom_domain" value={formData.custom_domain} onChange={handleInputChange} placeholder="hire.yourcompany.com"/>
+                      <Input id="custom_domain" name="custom_domain" value={formData.custom_domain} onChange={handleInputChange} placeholder="hire.yourcompany.com"  />
                       <p className="text-xs text-muted-foreground">
                         If you want to use your own domain, enter it here. You'll need to configure DNS records.
                       </p>
@@ -265,3 +242,5 @@ export { TenantOnboarding }() {
       </main>
       
     </>)}
+
+</Switch>

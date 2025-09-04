@@ -4,19 +4,21 @@ import { MainNavigation } from './header/MainNavigation';
 import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
-  className?: string;
-}
-export function Header() {const router = useRouter()
-}
-export function Header() {
 
-export function Header({ className = '' }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  className?: string;
+
+}
+export function Header(props: any) {const router = useRouter()
+}
+export function Header(props: any) {
+
+export function Header(props: any) {
+  const [isScrolled, setIsScrolled] = useState<any>(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false);
+  const [isSearchOpen, setIsSearchOpen] = useState<any>(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<any>('');
   const location = useLocation();
 
   useEffect(() => {
@@ -26,7 +28,7 @@ export function Header({ className = '' }: HeaderProps) {
     // Cleanup function
   };
 }, []);, []);
-const handleScroll = () => {
+const handleScroll = (props: any) => {
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -34,12 +36,12 @@ const handleScroll = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleTheme = () => {
+  const toggleTheme = (props: any) => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
     // You can add theme switching logic here
   };
 
-  const handleSearch = (e: Reac t.FormEvent) => {
+  const handleSearch = (props: any) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Add search logic here
@@ -171,14 +173,14 @@ const handleScroll = () => {
 const router = useRouter()
 }
   const [mobileMenuOpen, setMobileMenuOpen] = useState()"
-  const [searchQuery, setSearchQuery] = useState("")
+  const [searchQuery, setSearchQuery] = useState<any>("")
 }
   const [searchQuery, setSearchQuery] = useState()
 }
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState<any>(false)
 }
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (props: any) => {
       setScrolled(window.scrollY > 50)
 }
     },
@@ -396,3 +398,28 @@ const router = useRouter()
 "
 
 export default Component
+
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</button>
+</nav>
+</div>
+</div>
+</header>
+</div>
+</header>
+</div>
+</header>
+</any>
+</any>
+</any>
+</any>
+</any>
+</any>
+</any>

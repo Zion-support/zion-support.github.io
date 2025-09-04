@@ -1,3 +1,4 @@
+import React from 'react';
 ],;
       notIncluded[;""""
         "Advanced Analytics",""""
@@ -301,3 +302,8 @@ export { PricingGuide };
 export { PricingGuide };
 
 export { PricingGuide };
+
+</motion>
+</div>
+</SEO>
+</div>

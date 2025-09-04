@@ -1,15 +1,13 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import {SEO} from '../components/SEO';
 
-const Community = () => {
-    return (
+const Community = (props: any) => {return (
       <>
-        <SEO 
-          title="Community - Zion Tech Group"
+        <SEO title="Community - Zion Tech Group"
           description="Join the Zion Tech Group community. Connect with technology professionals, share knowledge, and stay updated on industry trends."
           canonical="/community"
           url="https://ziontechgroup.com/community"
-        />
+         />
         
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,17 +26,18 @@ const Community = () => {
           </div>
         </div>
       </>
-    );
-};
+    );};
 
 export default Community;
 
-export { Community };
+export {Community};
 
-export { Community };
+export {Community};
 
-export { Community };
+export {Community};
 
-export { Community };
+export {Community};
 
-export { Community };
+export {Community};
+
+</SEO>

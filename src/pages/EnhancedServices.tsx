@@ -1,5 +1,6 @@
+import React from 'react';
 import { SEO } from '@/components/SEO';
-const EnhancedServices = () => {
+const EnhancedServices = (props: any) => {
   return (
     <>
       <SEO 
@@ -40,3 +41,5 @@ const EnhancedServices = () => {
   );
 };
 export default EnhancedServices;
+
+</SEO>

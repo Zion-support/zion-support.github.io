@@ -1,6 +1,6 @@
 import React from 'react';'''
-import { Link } from 'react-router-dom';
-const InnovativeServices2025 = () => {}
+import {Link} from 'react-router-dom';
+const InnovativeServices2025 = (props: any) => {}
   const innovativeServices = []
     {}
 '
@@ -489,12 +489,12 @@ const InnovativeServices2025 = () => {}
 
 export default InnovativeServices2025;
 
-export { InnovativeServices2025 };
+export {InnovativeServices2025};
 
-export { InnovativeServices2025 };
+export {InnovativeServices2025};
 
-export { InnovativeServices2025 };
+export {InnovativeServices2025};
 
-export { InnovativeServices2025 };
+export {InnovativeServices2025};
 
-export { InnovativeServices2025 };
+export {InnovativeServices2025};

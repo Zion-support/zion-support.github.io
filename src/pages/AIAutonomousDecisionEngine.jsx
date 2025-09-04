@@ -1,11 +1,12 @@
-import { Helmet } from 'react-helmet-async';
-const AIAutonomousDecisionEngine = () => {
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+const AIAutonomousDecisionEngine = (props: any) => {
     return (<>
       <Helmet>
         <title>AI Autonomous Decision Engine | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI autonomous decision engine that makes intelligent, data-driven decisions in real-time with explainable reasoning and continuous learning capabilities."/>
-        <meta name="keywords" content="AI decision engine, autonomous decision making, AI reasoning, decision automation, intelligent systems, AI logic"/>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-decision-engine"/>
+        <meta name="description" content="Revolutionary AI autonomous decision engine that makes intelligent, data-driven decisions in real-time with explainable reasoning and continuous learning capabilities."  />
+        <meta name="keywords" content="AI decision engine, autonomous decision making, AI reasoning, decision automation, intelligent systems, AI logic"  />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-decision-engine"  />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">

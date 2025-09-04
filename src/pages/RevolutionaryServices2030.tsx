@@ -65,12 +65,12 @@ import {
 import { REVOLUTIONARY_SERVICES_2030, serviceCategories2030, pricingBenefits2030 } from '../data/revolutionaryServices2030';
 import { SEO } from '../components/SEO';
 
-export default function RevolutionaryServices2030() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
-  const [viewMode, setViewMode] = useState('grid');
+export default function RevolutionaryServices2030(props: any) {
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<any>('all');
+  const [sortBy, setSortBy] = useState<any>('featured');
+  const [viewMode, setViewMode] = useState<any>('grid');
   const [selectedService, setSelectedService] = useState<any>(null);
 
   const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {
@@ -103,7 +103,7 @@ export default function RevolutionaryServices2030() {
     }
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (props: any) => {
     switch (category) {
       case 'Quantum Computing': return <Atom className="w-6 h-6" />;
       case 'Neural Technology': return <Brain className="w-6 h-6" />;
@@ -115,7 +115,7 @@ export default function RevolutionaryServices2030() {
     }
   };
 
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (props: any) => {
     switch (level) {
       case 'Revolutionary': return 'from-purple-600 to-pink-600';
       case 'Advanced': return 'from-blue-600 to-cyan-600';
@@ -567,3 +567,13 @@ const X = ({ className }: { className?: string }) => (
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
   </svg>
 );
+</motion>
+</motion>
+</div>
+</SEO>
+</any>
+</any>
+</any>
+</any>
+</any>
+</any>

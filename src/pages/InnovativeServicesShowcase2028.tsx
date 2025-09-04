@@ -1,8 +1,8 @@
 />
 
 export default function InnovativeServicesShowcase2028(...args: unknow n[]): unknown {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState<any>('all');
+  const [searchQuery, setSearchQuery] = useState<any>('');
 
   // Enhanced service categories with real market prices and features
   const serviceCategories = [
@@ -640,3 +640,15 @@ export { InnovativeServicesShowcase2028 };
 export { InnovativeServicesShowcase2028 };
 
 export { InnovativeServicesShowcase2028 };
+
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</motion>
+</SEO>
+</any>
+</any>

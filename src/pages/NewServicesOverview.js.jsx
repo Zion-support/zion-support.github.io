@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles } from 'lucide-react';
+import {Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles} from 'lucide-react';
 export default function NewServicesOverview
-export { NewServicesOverview }() {
+export {NewServicesOverview}() {
     const serviceCategories = [
         {
             id: 'ai-services',
@@ -18,20 +18,16 @@ export { NewServicesOverview }() {
                     features['Personalized portfolios', 'Risk assessment', 'Market analysis'],;
                     path: '/comprehensive-services-showcase'
                 },
-                {
-                    name: 'AI Legal Research & Document Analysis',
+                {name: 'AI Legal Research & Document Analysis',
                     description: 'Advanced legal research platform with NLP capabilities',
                     price: '$1,800/month',
                     features['Case law analysis', 'Contract review', 'Compliance checking'],;
-                    path: '/comprehensive-services-showcase'
-                },
-                {
-                    name: 'AI Healthcare Diagnostic Imaging',
+                    path: '/comprehensive-services-showcase'},
+                {name: 'AI Healthcare Diagnostic Imaging',
                     description: 'Medical imaging analysis platform with deep learning',
                     price: '$3,500/month',
                     features['Disease detection', 'Diagnostic support', 'Patient monitoring'],;
-                    path: '/comprehensive-services-showcase'
-                }
+                    path: '/comprehensive-services-showcase'}
             ]
         },;
         {
@@ -48,20 +44,16 @@ export { NewServicesOverview }() {
                     features['Continuous verification', 'Least privilege access', 'Threat detection'],;
                     path: '/comprehensive-services-showcase'
                 },
-                {
-                    name: 'AI-Powered Threat Detection',
+                {name: 'AI-Powered Threat Detection',
                     description: 'Advanced threat detection with machine learning',
                     price: '$3,200/month',
                     features['Real-time detection', 'Behavioral analytics', 'Automated response'],;
-                    path: '/comprehensive-services-showcase'
-                },
-                {
-                    name: 'Cloud Security Posture Management',
+                    path: '/comprehensive-services-showcase'},
+                {name: 'Cloud Security Posture Management',
                     description: 'Multi-cloud security monitoring and optimization',
                     price: '$2,400/month',
                     features['Multi-cloud monitoring', 'Configuration management', 'Compliance'],;
-                    path: '/comprehensive-services-showcase'
-                }
+                    path: '/comprehensive-services-showcase'}
             ]
         },;
         {
@@ -78,20 +70,16 @@ export { NewServicesOverview }() {
                     features['Infrastructure as Code', 'Git-based deployments', 'Drift detection'],;
                     path: '/comprehensive-services-showcase'
                 },
-                {
-                    name: 'Multi-Cloud Management Platform',
+                {name: 'Multi-Cloud Management Platform',
                     description: 'Unified management across AWS, Azure, GCP, and more',
                     price: '$2,800/month',
                     features['Cost optimization', 'Resource monitoring', 'Compliance management'],;
-                    path: '/comprehensive-services-showcase'
-                },
-                {
-                    name: 'Enterprise Kubernetes Management',
+                    path: '/comprehensive-services-showcase'},
+                {name: 'Enterprise Kubernetes Management',
                     description: 'Comprehensive Kubernetes operations and security',
                     price: '$2,500/month',
                     features['Multi-cluster management', 'Security policies', 'Monitoring'],;
-                    path: '/comprehensive-services-showcase'
-                }
+                    path: '/comprehensive-services-showcase'}
             ]
         },;
         {
@@ -108,20 +96,16 @@ export { NewServicesOverview }() {
                     features['Real-time processing', 'Stream analytics', 'Live dashboards'],;
                     path: '/comprehensive-services-showcase'
                 },
-                {
-                    name: 'AI-Powered Predictive Analytics',
+                {name: 'AI-Powered Predictive Analytics',
                     description: 'Advanced forecasting and pattern recognition',
                     price: '$2,800/month',
                     features['Machine learning models', 'Time series forecasting', 'Anomaly detection'],;
-                    path: '/comprehensive-services-showcase'
-                },
-                {
-                    name: 'Customer Analytics Platform',
+                    path: '/comprehensive-services-showcase'},
+                {name: 'Customer Analytics Platform',
                     description: '360-degree customer view and behavioral analysis',
                     price: '$2,100/month',
                     features['Customer segmentation', 'Behavioral analysis', 'Personalization'],;
-                    path: '/comprehensive-services-showcase'
-                }
+                    path: '/comprehensive-services-showcase'}
             ]
         },;
         {
@@ -138,54 +122,42 @@ export { NewServicesOverview }() {
                     features['Clinical decision support', 'Patient monitoring', 'Predictive analytics'],;
                     path: '/comprehensive-services-showcase'
                 },
-                {
-                    name: 'Financial Services AI & Risk Management',
+                {name: 'Financial Services AI & Risk Management',
                     description: 'AI-powered risk assessment and fraud detection',
                     price: '$3,800/month',
                     features['Risk assessment', 'Fraud detection', 'Compliance automation'],;
-                    path: '/comprehensive-services-showcase'
-                },
-                {
-                    name: 'Manufacturing IoT & Smart Factory',
+                    path: '/comprehensive-services-showcase'},
+                {name: 'Manufacturing IoT & Smart Factory',
                     description: 'IoT platform for manufacturing optimization',
                     price: '$3,200/month',
                     features['Predictive maintenance', 'Quality control', 'Production monitoring'],;
-                    path: '/comprehensive-services-showcase'
-                }
+                    path: '/comprehensive-services-showcase'}
             ]
         }
     ];
     const benefits = [
-        {
-            icon: Brain,
+        {icon: Brain,
             title: 'AI-First Approach',
             description: 'Leverage cutting-edge artificial intelligence and machine learning technologies',
-            color: 'text-blue-400'
-        },
-        {
-            icon: Shield,
+            color: 'text-blue-400'},
+        {icon: Shield,
             title: 'Enterprise Security',
             description: 'Bank-grade security and compliance built into every solution',
-            color: 'text-green-400'
-        },
-        {
-            icon: Rocket,
+            color: 'text-green-400'},
+        {icon: Rocket,
             title: 'Rapid Deployment',
             description: 'Get up and running quickly with proven implementation methodologies',
-            color: 'text-purple-400'
-        },
-        {
-            icon: Users,
+            color: 'text-purple-400'},
+        {icon: Users,
             title: 'Expert Support',
             description: '24/7 technical support and dedicated success managers',
-            color: 'text-yellow-400'
-        }
+            color: 'text-yellow-400'}
     ];
     const stats = [
-        { icon: UsersIcon, value: '500+', label: 'Happy Clients', description: 'Trusted by businesses worldwide' },
-        { icon: TrendingUpIcon, value: '95%', label: 'Success Rate', description: 'Proven track record of delivery' },
-        { icon: Award, value: '10+', label: 'Years Experience', description: 'Deep industry expertise' },
-        { icon: GlobeIcon, value: '25+', label: 'Countries Served', description: 'Global reach and support' }
+        {icon: UsersIcon, value: '500+', label: 'Happy Clients', description: 'Trusted by businesses worldwide'},
+        {icon: TrendingUpIcon, value: '95%', label: 'Success Rate', description: 'Proven track record of delivery'},
+        {icon: Award, value: '10+', label: 'Years Experience', description: 'Deep industry expertise'},
+        {icon: GlobeIcon, value: '25+', label: 'Countries Served', description: 'Global reach and support'}
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -195,7 +167,7 @@ export { NewServicesOverview }() {
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
-                <Sparkles className="h-8 w-8 text-white"/>
+                <Sparkles className="h-8 w-8 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -207,7 +179,7 @@ export { NewServicesOverview }() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/comprehensive-services-showcase" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Explore All Services
-                <ArrowRight className="ml-2 h-5 w-5"/>
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link to="/contact" className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300">
                 Get Started
@@ -223,7 +195,7 @@ export { NewServicesOverview }() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (<div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
-                  <stat.icon className="h-12 w-12 text-blue-400"/>
+                  <stat .icon className="h-12 w-12 text-blue-400" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
@@ -249,7 +221,7 @@ export { NewServicesOverview }() {
             {serviceCategories.map((category) => (<div key={category.id} className="bg-gray-800/30 border border-gray-700 rounded-2xl p-8">
                 <div className="flex items-center mb-8">
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color} mr-6`}>
-                    <category.icon className="h-8 w-8 text-white"/>
+                    <category .icon className="h-8 w-8 text-white" />
                   </div>
                   <div>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
@@ -279,7 +251,7 @@ export { NewServicesOverview }() {
                         <h5 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h5>
                         <div className="space-y-1">
                           {service.features.map((feature, featureIndex) => (<div key={featureIndex} className="flex items-center text-sm text-gray-400">
-                              <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
+                              <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                               {feature}
                             </div>))}
                         </div>
@@ -287,7 +259,7 @@ export { NewServicesOverview }() {
 
                       <Link to={service.path} className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                         Learn More
-                        <ArrowRight className="ml-2 h-4 w-4"/>
+                        <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                     </div>))}
                 </div>
@@ -311,7 +283,7 @@ export { NewServicesOverview }() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (<div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
-                  <benefit.icon className={`h-12 w-12 ${benefit.color}`}/>
+                  <benefit .icon className={`h-12 w-12 ${benefit.color}`} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-400">{benefit.description}</p>
@@ -335,7 +307,7 @@ export { NewServicesOverview }() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="flex justify-center mb-4">
-                  <Phone className="h-12 w-12 text-blue-400"/>
+                  <Phone className="h-12 w-12 text-blue-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-gray-300">+1 302 464 0950</p>
@@ -343,7 +315,7 @@ export { NewServicesOverview }() {
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-4">
-                  <Mail className="h-12 w-12 text-green-400"/>
+                  <Mail className="h-12 w-12 text-green-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
@@ -351,7 +323,7 @@ export { NewServicesOverview }() {
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-4">
-                  <MapPin className="h-12 w-12 text-purple-400"/>
+                  <MapPin className="h-12 w-12 text-purple-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-gray-300">364 E Main St STE 1008</p>
@@ -362,7 +334,7 @@ export { NewServicesOverview }() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Schedule a Consultation
-                <ArrowRight className="ml-2 h-5 w-5"/>
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link to="/comprehensive-services-showcase" className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300">
                 View All Services

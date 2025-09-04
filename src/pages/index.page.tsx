@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IndexPage: React.FC = () => {
+const IndexPage: React.FC = (props: any) => {
   return (
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
       <div className="text-center px-6">

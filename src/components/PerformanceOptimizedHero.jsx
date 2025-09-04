@@ -1,8 +1,8 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, {memo, useEffect, useState} from 'react';
 export default PerformanceOptimizedHero;
 
-const HeroStats = memo(({ stats }) => (<div className="grid grid - cols - 1 md:grid - cols - 4 gap-8 max - w-6xl mx -auto">
-    {stats.map((stat, index) => (<div key={index} className="text-center animate - fade - in -up group" style={{ animationDelay: `${index * 0.2}s` }} role="region" aria-label={`${stat.label} statistics`}>
+const HeroStats = memo(({stats}) => (<div className="grid grid - cols - 1 md:grid - cols - 4 gap-8 max - w-6xl mx -auto">
+    {stats.map((stat, index) => (<div key={index} className="text-center animate - fade - in -up group" style="{{{ animationDelay: `${index * 0.2}}"s` }} role="region" aria-label={`${stat.label} statistics`}>
         <div className="relative mb-4">
           <div className="text-5xl mb-2 group - hover:scale - 110 transition - transform duration -300" role="img" aria-label={stat.label}>            {stat.icon}
           </div>`
@@ -26,17 +26,15 @@ const PerformanceOptimizedHero = memo(() => {
 }, []);, []);
         const timer = setTimeout(() => setIsVisible(true), 100);
         const loadTimer = setTimeout(() => setIsLoaded(true), 500);
-        return () => {
-            clearTimeout(timer);
+        return () => {clearTimeout(timer);
             clearTimeout(loadTimer)}}, []);
     const stats = ["
-        { number: "100+", label: "AI Services", icon: "🤖", color: "from-cyan-400 to-blue-400" },"
-        { number: "150+", label: "Micro SAAS Solutions", icon: "💻", color: "from-blue-400 to-purple-400" },"
-        { number: "24/7", label: "IT Support", icon: "🔧", color: "from-purple-400 to-pink-400" },"
-        { number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400" }
+        {number: "100+", label: "AI Services", icon: "🤖", color: "from-cyan-400 to-blue-400"},"
+        {number: "150+", label: "Micro SAAS Solutions", icon: "💻", color: "from-blue-400 to-purple-400"},"
+        {number: "24/7", label: "IT Support", icon: "🔧", color: "from-purple-400 to-pink-400"},"
+        {number: "Global", label: "Service Coverage", icon: "🌍", color: "from-green-400 to-teal-400"}
     ];
-    if(!isVisible) {
-"
+    if(!isVisible) {"
         return (<section className="relative py-20 px-4 overflow-hidden min-h-[600px] flex items-center justify-center">"
         <div className="text-center">"
           <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>"
@@ -56,9 +54,9 @@ const PerformanceOptimizedHero = memo(() => {
 
       {/* Optimized Matrix Rain Effect - Only render when loaded */}"
       {isLoaded && (<div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">"
-          {[...Array(10)].map((_, i) => (<div key={i} className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20" style={{
+          {[...Array(10)].map((_, i) => (<div key={i} className="absolute text-cyan-400 text-xs animate-matrix-rain opacity-20" style="{{{
 `
-                    left: `${Math.random() * 100}%`,`
+                    left: `${Math.random() * 100}}"%`,`
                     animationDelay: `${Math.random() * 20}s`,`
                     animationDuration: `${20 + Math.random() * 10}s`
                 }}>
@@ -72,7 +70,7 @@ const PerformanceOptimizedHero = memo(() => {
             <span className="neon-text">
               Transform Your Business
             </span>
-            <br />"
+            <br  />"
             <span className="text-white">With AI & Tech</span>
           </h1>
 "
@@ -90,7 +88,7 @@ const PerformanceOptimizedHero = memo(() => {
           </div>
 
           {/* Optimized Stats Component */}
-          <HeroStats stats={stats}/>
+          <HeroStats stats={stats} />
         </div>
       </div>
 
@@ -106,12 +104,12 @@ PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;
 }
 
-export { HeroStats, PerformanceOptimizedHero };
+export {HeroStats, PerformanceOptimizedHero};
 
-export { HeroStats, PerformanceOptimizedHero };
+export {HeroStats, PerformanceOptimizedHero};
 
-export { HeroStats, PerformanceOptimizedHero };
+export {HeroStats, PerformanceOptimizedHero};
 
-export { HeroStats, PerformanceOptimizedHero };
+export {HeroStats, PerformanceOptimizedHero};
 
-export { Page, HeroStats, PerformanceOptimizedHero };
+export {Page, HeroStats, PerformanceOptimizedHero};

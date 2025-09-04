@@ -1,4 +1,5 @@
 interface PostCardProps {
+
   post: {
     id: string;
     title: string;
@@ -11,18 +12,19 @@ interface PostCardProps {
     author?: {
       name: string;
       avatar: string;
-    };
+    
+};
   };
 }
 
-export default function PostCard({ post }: PostCardProps) {
+export default function PostCard(props: any) {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover: borde r-white/40 transition-all duration-300">
       <div className="flex items-start space-x-4">
         <img src={post.author?.avatar || '/default-avatar.png'}
           alt={post.author?.name || post.authorName}
           className="w-10 h-10 rounded-full object-cover"
-         />
+          />
         <div className="flex-1">
           <h3 className="text-xl font-semibold text-white mb-2 hover: tex t-blue-400 transition-colors duration-300">
             {post.title}

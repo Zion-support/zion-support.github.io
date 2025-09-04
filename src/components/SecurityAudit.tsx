@@ -7,9 +7,9 @@ interface SecurityCheck {
   message: string;
 }
 
-const SecurityAudit: React.FC = () => {
+const SecurityAudit: React.FC = (props: any) => {
   const [checks, setChecks] = useState<SecurityCheck[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<any>(true);
 
   useEffect(() => {
     const performSecurityChecks = async () => {
@@ -45,7 +45,7 @@ const SecurityAudit: React.FC = () => {
     performSecurityChecks();
   }, []);
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (props: any) => {
     switch (status) {
       case 'pass':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -58,7 +58,7 @@ const SecurityAudit: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (props: any) => {
     switch (status) {
       case 'pass':
         return 'bg-green-50 border-green-200';
@@ -110,3 +110,6 @@ const SecurityAudit: React.FC = () => {
 };
 
 export default SecurityAudit;
+
+</any>
+</SecurityCheck>

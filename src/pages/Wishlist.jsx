@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react';
-import { useFavorites } from '@/hooks/useFavorites';
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
-import { TALENT_PROFILES } from '@/data/talentData';
-import { ProductListingCard } from '@/components/ProductListingCard';
-import { TalentCard } from '@/components/talent/TalentCard';
-import { Button } from '@/components/ui/button';
-import { useCart } from '@/context/CartContext';
-import { useAuth } from '@/hooks/useAuth';
-import { getCartKey } from '@/utils/cartUtils';
-import { useNavigate } from 'react-router-dom';
-import { safeStorage } from '@/utils/safeStorage';
+import React, {useEffect} from 'react';
+import {useFavorites} from '@/hooks/useFavorites';
+import {MARKETPLACE_LISTINGS} from '@/data/marketplaceData';
+import {TALENT_PROFILES} from '@/data/talentData';
+import {ProductListingCard} from '@/components/ProductListingCard';
+import {TalentCard} from '@/components/talent/TalentCard';
+import {Button} from '@/components/ui/button';
+import {useCart} from '@/context/CartContext';
+import {useAuth} from '@/hooks/useAuth';
+import {getCartKey} from '@/utils/cartUtils';
+import {useNavigate} from 'react-router-dom';
+import {safeStorage} from '@/utils/safeStorage';
 
 export default function WishlistPage
-export { WishlistPage }() {
+export {WishlistPage}() {
     const [favorites, setFavorites] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
@@ -23,24 +23,21 @@ export { WishlistPage }() {
         try {
             const parsedFavorites = JSON.parse(storedFavorites);
             setFavorites(parsedFavorites);
-        } catch (error) {
-            console.error('Error parsing favorites:', error);
-            setFavorites([]);
-        }
+        } catch (error) {console.error('Error parsing favorites:', error);
+            setFavorites([]);}
     }, [user, isAuthLoading, navigate]);
     
-    if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
-        return null; // Or a loading spinner
-    }
-    const addToCart = (item) => {
+    if (isAuthLoading || !user) {// Show loading or null while auth check or redirect happens
+        return null; // Or a loading spinner}
+    const addToCart = (props: any) => {
         const stored = safeStorage.getItem(getCartKey(user?.id));
         const cart = stored ? JSON.parse(stored) : [];
         cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
         safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
-        dispatch({ type: 'SET_ITEMS', payload: cart });
+        dispatch({type: 'SET_ITEMS', payload: cart});
     };
 
-    const addToCart = (item) => {
+    const addToCart = (props: any) => {
         const cart = JSON.parse(localStorage.getItem('cart') || '[]');
         const existingItem = cart.find(cartItem => cartItem.id === item.id);
         
@@ -55,8 +52,7 @@ export { WishlistPage }() {
         alert('Item added to cart!');
     };
 
-    if (loading) {
-        return (
+    if (loading) {return (
             <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 pt-24">
                 <div className="container mx-auto px-4 py-8">
                     <div className="flex items-center justify-center min-h-[400px]">
@@ -67,8 +63,7 @@ export { WishlistPage }() {
                     </div>
                 </div>
             </div>
-        );
-    }
+        );}
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 pt-24">
@@ -105,11 +100,10 @@ export { WishlistPage }() {
                                 {/* Item Image */}
                                 <div className="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 flex items-center justify-center">
                                     {item.image ? (
-                                        <img 
-                                            src={item.image} 
+                                        <img src={item.image} 
                                             alt={item.title} 
                                             className="w-full h-full object-cover"
-                                        />
+                                          />
                                     ) : (
                                         <div className="text-slate-400 text-4xl">
                                             {item.type === 'talent' ? '👤' : '📦'}
@@ -127,7 +121,7 @@ export { WishlistPage }() {
                                             onClick={() => removeFromWishlist(item.id)}
                                             className="text-red-500 hover:text-red-600 transition-colors ml-2"
                                         >
-                                            <Heart className="w-5 h-5 fill-current" />
+                                            <Heart className="w-5 h-5 fill-current"  />
                                         </button>
                                     </div>
                                     
@@ -146,7 +140,7 @@ export { WishlistPage }() {
                                         
                                         {item.rating && (
                                             <div className="flex items-center gap-1">
-                                                <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                                                <Star className="w-4 h-4 text-yellow-400 fill-current"  />
                                                 <span className="text-sm text-slate-600 dark:text-slate-400">
                                                     {item.rating}
                                                 </span>
@@ -155,14 +149,14 @@ export { WishlistPage }() {
                                         
                                         {item.location && (
                                             <div className="flex items-center gap-1 text-sm text-slate-500">
-                                                <MapPin className="w-4 h-4" />
+                                                <MapPin className="w-4 h-4"  />
                                                 <span>{item.location}</span>
                                             </div>
                                         )}
                                         
                                         {item.availability && (
                                             <div className="flex items-center gap-1 text-sm text-slate-500">
-                                                <Clock className="w-4 h-4" />
+                                                <Clock className="w-4 h-4"  />
                                                 <span>{item.availability}</span>
                                             </div>
                                         )}
@@ -174,13 +168,13 @@ export { WishlistPage }() {
                                             onClick={() => addToCart(item)}
                                             className="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2"
                                         >
-                                            <ShoppingCart className="w-4 h-4" />
+                                            <ShoppingCart className="w-4 h-4"  />
                                             Add to Cart
                                         </button>
                                         
                                         {item.type === 'talent' && (
                                             <button className="px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors flex items-center gap-2">
-                                                <MessageCircle className="w-4 h-4" />
+                                                <MessageCircle className="w-4 h-4"  />
                                                 Message
                                             </button>
                                         )}

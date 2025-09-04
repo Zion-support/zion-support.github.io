@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link, useLocation  } from 'react-router-dom';
  from 'react';
 export const EnhancedMobileNavigation: Reac t.FC = () => {
@@ -104,9 +105,9 @@ const navigationItems: NavigationIte m[] = [{
     color: 'bg-zion-blue'};];
 
 export const EnhancedMobileNavigation: Reac t.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
-  const [activePath, setActivePath] = useState('/');
+  const [activePath, setActivePath] = useState<any>('/');
 
   useEffect(() => {
   // TODO: Add dependencies if needed
@@ -124,18 +125,18 @@ export const EnhancedMobileNavigation: Reac t.FC = () => {
     // Cleanup function
   };
 }, []);, []);
-    const handleClickOutside = (event: MouseEven t) => {
+    const handleClickOutside = (props: any) => {
 
       if(menuRef.current && !menuRef.current.contains(event.target as Node)) {
 
         setIsOpen(false)}
     };
 
-export default function EnhancedMobileNavigation() {
+export default function EnhancedMobileNavigation(props: any) {
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<any>(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState<any>('');
   
   const navigationItems: NavigationIte m[] = [{
       label: 'Home',
@@ -200,7 +201,7 @@ export default function EnhancedMobileNavigation() {
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
-  const toggleExpanded = (label: string) => {
+  const toggleExpanded = (props: any) => {
 
     setExpandedItems(prev => {
 
@@ -304,7 +305,7 @@ export default function EnhancedMobileNavigation() {
     <>
       {/* Mobile Menu Toggle */}
       <button
-        onClick = {() => setIsOpen(true)}"
+        onClick={() => setIsOpen(true)}"
         className="lg: hidden p-2 text-white hover: tex t-zion-cyan transition-colors focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan/50 rounded-lg"
 
         <Menu size={24}    />
@@ -426,3 +427,18 @@ export default function EnhancedMobileNavigation() {
     </>
   )}};
 '"`
+
+</motion>
+</motion>
+</motion>
+</ChevronDown>
+</ChevronDown>
+</item>
+</motion>
+</any>
+</string>
+</any>
+</any>
+</string>
+</Set>
+</any>

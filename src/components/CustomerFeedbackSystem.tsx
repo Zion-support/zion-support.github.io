@@ -1,6 +1,6 @@
 import {  import { motion, AnimatePresence  } from 'framer-motion';
 
-export default function Page() {
+export default function Page(props: any) {
 > {
 
   showStats?: boolean;
@@ -22,9 +22,9 @@ showStats: tru e,;
     responseRate: 0,
     topCategories[]});
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-  const [selectedRating, setSelectedRating] = useState<any>(0);  const [searchQuery, setSearchQuery] = useState('');
-  const [showFeedbackForm, setShowFeedbackForm] = useState(false);
-  const [newFeedback, setNewFeedback] = useState({
+  const [selectedRating, setSelectedRating] = useState<any>(0);  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [showFeedbackForm, setShowFeedbackForm] = useState<any>(false);
+  const [newFeedback, setNewFeedback] = useState<any>({
 
     rating: 0,
     comment: '',
@@ -440,7 +440,7 @@ showStats: tru e,;
                   <label className="block text-sm font - medium text-zinc - 300 mb-2">Rating</label>
                   <div  className="flex gap-2">
                     {[1, 2, 3, 4, 5].map((star) => (<button     key={star}
-                        onClick = { () => setNewFeedback(prev => ({ ...prev,
+                        onClick={ () => setNewFeedback(prev => ({ ...prev,
   rating: sta r
 }))}"
                         className="p-2 hover: scal e-110 transition-transform"
@@ -457,7 +457,7 @@ showStats: tru e,;
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Category</label>
                   <select
                     value={newFeedback.category}
-                    onChange = { (e) => setNewFeedback(prev => ({ ...prev,
+                    onChange={ (e) => setNewFeedback(prev => ({ ...prev,
   category: e.target.value as Feedback['category']
 }))}"
                     className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan"
@@ -474,7 +474,7 @@ showStats: tru e,;
                   <label className="block text-sm font-medium text-zinc-300 mb-2">Your Feedback</label>
                   <textarea
                     value={newFeedback.comment}
-                    onChange = { (e) => setNewFeedback(prev => ({ ...prev,
+                    onChange={ (e) => setNewFeedback(prev => ({ ...prev,
   comment: e.target.value
 }))}"
                     placeholder="Share your experience with Zion Tech Group..."
@@ -578,7 +578,7 @@ showStats: tru e,;
             <div className="flex items-center justify-between pt-4 border-t border-zinc-700/50">"
               <div className="flex items-center gap-4">
                 <button
-                  onClick = {
+                  onClick={
 
   () => handleVote(item.id,helpful')
 
@@ -588,7 +588,7 @@ showStats: tru e,;
                   <ThumbsUp className="w-4 h-4"   />"                  <span className="text-sm">{item.helpful}</span>
                 </button>
                 <button
-                  onClick = {
+                  onClick={
 
   () => handleVote(item.id,unhelpful')
 
@@ -628,3 +628,25 @@ showStats: tru e,;
         </motion.div>;) };
     </div>;) };
 '"`
+
+</motion>
+</Star>
+</motion>
+</textarea>
+</Star>
+</motion>
+</motion>
+</motion>
+</motion>
+</Star>
+</motion>
+</motion>
+</any>
+</any>
+</any>
+</any>
+</any>
+</FeedbackStats>
+</Feedback>
+</Feedback>
+</CustomerFeedbackSystemProps>

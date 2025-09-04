@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
-import { ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon } from '@heroicons/react/24/outline';'
-const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => {}
+import React, {useState, useEffect, useCallback} from 'react';'
+import {motion, AnimatePresence} from 'framer-motion';'
+import {ChartBarIcon, CogIcon, ExclamationTriangleIcon, CheckCircleIcon, InformationCircleIcon, XMarkIcon, ArrowUpIcon, ArrowDownIcon, MinusIcon, EyeIcon, GlobeAltIcon} from '@heroicons/react/24/outline';'
+const WebsiteImprovementDashboard = (props: any) => {}
     const [isOpen, setIsOpen] = useState(showOnLoad);'
     const [activeTab, setActiveTab] = useState('overview');
     const [metrics, setMetrics] = useState({}
@@ -58,10 +58,10 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
 
 export { WebsiteImprovementDashboard };
 
-export { WebsiteImprovementDashboard };
+export {WebsiteImprovementDashboard};
 
-export { WebsiteImprovementDashboard };
+export {WebsiteImprovementDashboard};
 
-export { WebsiteImprovementDashboard };
+export {WebsiteImprovementDashboard};
 
-export { WebsiteImprovementDashboard };
+export {WebsiteImprovementDashboard};
