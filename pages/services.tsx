@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useState } from 'react';
 
 type Service = {
   name: string;
@@ -1626,7 +1627,16 @@ const itServices: Service[] = [
 ];
 
 export default function Services(): any {
-  const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12;
+
+  const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => {
+    const totalPages = Math.ceil(items.length / itemsPerPage);
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentItems = items.slice(startIndex, endIndex);
+
+    return (
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
       <div style={{ 
         display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24,
@@ -1654,7 +1664,7 @@ export default function Services(): any {
         gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', 
         gap: 20 
       }}>
-        {items.map((s) => (
+        {currentItems.map((s) => (
           <a key={s.name} href={s.link} style={{
             border: '1px solid rgba(0,0,0,0.08)', borderRadius: 16, padding: 24,
             background: 'white', textDecoration: 'none', color: '#0b1220',
@@ -1681,8 +1691,76 @@ export default function Services(): any {
           </a>
         ))}
       </div>
+      
+      {/* Pagination Controls */}
+      {totalPages > 1 && (
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'center', 
+          alignItems: 'center', 
+          gap: 8, 
+          marginTop: 32,
+          paddingTop: 24,
+          borderTop: '1px solid rgba(0,0,0,0.1)'
+        }}>
+          <button
+            onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+            disabled={currentPage === 1}
+            style={{
+              padding: '8px 16px',
+              border: '1px solid #e2e8f0',
+              borderRadius: 8,
+              background: currentPage === 1 ? '#f8fafc' : 'white',
+              color: currentPage === 1 ? '#94a3b8' : '#475569',
+              cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+              fontSize: 14,
+              fontWeight: 500
+            }}
+          >
+            Previous
+          </button>
+          
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <button
+              key={page}
+              onClick={() => setCurrentPage(page)}
+              style={{
+                padding: '8px 12px',
+                border: '1px solid #e2e8f0',
+                borderRadius: 8,
+                background: currentPage === page ? color : 'white',
+                color: currentPage === page ? 'white' : '#475569',
+                cursor: 'pointer',
+                fontSize: 14,
+                fontWeight: 500,
+                minWidth: 40
+              }}
+            >
+              {page}
+            </button>
+          ))}
+          
+          <button
+            onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+            disabled={currentPage === totalPages}
+            style={{
+              padding: '8px 16px',
+              border: '1px solid #e2e8f0',
+              borderRadius: 8,
+              background: currentPage === totalPages ? '#f8fafc' : 'white',
+              color: currentPage === totalPages ? '#94a3b8' : '#475569',
+              cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
+              fontSize: 14,
+              fontWeight: 500
+            }}
+          >
+            Next
+          </button>
+        </div>
+      )}
     </section>
   );
+  };
 
   return (
     <main style={{ 
