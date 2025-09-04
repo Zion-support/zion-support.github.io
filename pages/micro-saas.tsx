@@ -1,11 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar, Headphones, RefreshCw, Video, Stethoscope, Cpu } from 'lucide-react';
-=======
-import { Layers, Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Smartphone, Calendar, Video, Package, Target } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
+import { Cloud, FileText, Users, BarChart3, Mail, Clock, Shield, Zap, TrendingUp, Settings, Globe, Code, Brain, Calendar, Video, Smartphone, Package, Target } from 'lucide-react';
 
 export default function MicroSaaS() {
   const contact = {
@@ -1074,84 +1070,6 @@ export default function MicroSaaS() {
     {
       icon: Brain,
       name: 'AI-Powered Email Responder',
-<<<<<<< HEAD
-      description: 'Intelligent email automation that reads, analyzes, and responds to emails with human-like accuracy and context awareness.',
-      features: [
-        'Natural language processing for email understanding',
-        'Context-aware response generation',
-        'Priority classification and urgent flagging',
-        'Multi-language support and translation',
-        'Integration with CRM and business systems',
-        'Learning from user feedback and corrections'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '80% reduction in email response time',
-        '24/7 automated email handling',
-        'Improved customer satisfaction',
-        'Reduced manual email workload'
-      ],
-      category: 'AI Automation'
-    },
-    {
-      icon: Users,
-      name: 'Mobile-First Survey Tool',
-      description: 'Engaging mobile-optimized surveys with conversational UI, real-time analytics, and high completion rates.',
-      features: [
-        'Mobile-first responsive design',
-        'Conversational survey interface',
-        'Real-time data collection and analytics',
-        'Adaptive questioning based on responses',
-        'Multi-channel distribution (SMS, email, web)',
-        'Advanced data visualization and reporting'
-      ],
-      pricing: '$149 – $899/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '60% higher completion rates',
-        'Real-time customer insights',
-        'Mobile-optimized user experience',
-        'Automated data analysis and reporting'
-      ],
-      category: 'Data Collection'
-    },
-    {
-      icon: BarChart3,
-      name: 'Niche Productivity Planner',
-      description: 'Industry-specific productivity tools with customized dashboards, workflows, and smart recommendations.',
-      features: [
-        'Industry-specific templates and workflows',
-        'Customizable dashboards and data views',
-        'Smart goal setting and progress tracking',
-        'Data-driven productivity recommendations',
-        'Integration with industry-specific tools',
-        'Team collaboration and sharing features'
-      ],
-      pricing: '$199 – $1,299/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '35% improvement in team productivity',
-        'Industry-tailored solutions',
-        'Data-driven workflow optimization',
-        'Enhanced goal achievement rates'
-      ],
-      category: 'Productivity'
-    },
-    {
-      icon: Calendar,
-      name: 'Event Management Dashboard',
-      description: 'Comprehensive event planning platform with automated workflows, ticketing, and attendee management.',
-      features: [
-        'End-to-end event planning and management',
-        'Automated ticketing and registration',
-        'Attendee communication and updates',
-        'Real-time event analytics and insights',
-        'Integration with payment and marketing tools',
-        'Mobile app for attendees and organizers'
-      ],
-      pricing: '$249 – $1,599/month',
-=======
       description: 'Intelligent email automation that analyzes incoming messages, generates contextual responses, and flags critical communications for human review.',
       features: [
         'Natural language processing for email understanding',
@@ -1206,78 +1124,16 @@ export default function MicroSaaS() {
         'Mobile app for attendees and organizers'
       ],
       pricing: '$299 – $1,999/month',
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       timeline: '3–4 weeks',
       benefits: [
         '50% reduction in event planning time',
         'Automated attendee management',
-<<<<<<< HEAD
-        'Improved event ROI tracking',
-        'Enhanced attendee experience'
-=======
         'Increased event attendance and engagement',
         'Streamlined event operations'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ],
       category: 'Event Management'
     },
     {
-<<<<<<< HEAD
-      icon: FileText,
-      name: 'AI-Powered Content Creation Suite',
-      description: 'Comprehensive content generation platform with AI writing, editing, and optimization tools.',
-      features: [
-        'AI-powered content generation for multiple formats',
-        'Brand voice consistency and customization',
-        'SEO optimization and keyword integration',
-        'Content planning and editorial calendar',
-        'Multi-language content creation',
-        'Performance tracking and optimization'
-      ],
-      pricing: '$399 – $2,499/month',
-      timeline: '4–5 weeks',
-      benefits: [
-        '10x faster content production',
-        'Consistent brand messaging',
-        'Improved SEO performance',
-        'Reduced content creation costs'
-      ],
-      category: 'Content Management'
-    },
-    {
-      icon: Headphones,
-      name: 'Customer Support & Helpdesk Platform',
-      description: 'All-in-one customer support solution with AI chatbots, ticket management, and knowledge base.',
-      features: [
-        'AI-powered chatbots and virtual assistants',
-        'Intelligent ticket routing and prioritization',
-        'Comprehensive knowledge base management',
-        'Multi-channel support (chat, email, phone)',
-        'Customer satisfaction tracking and analytics',
-        'Integration with CRM and business tools'
-      ],
-      pricing: '$299 – $1,999/month',
-      timeline: '3–4 weeks',
-      benefits: [
-        '70% reduction in support response time',
-        '24/7 automated customer assistance',
-        'Improved customer satisfaction scores',
-        'Reduced support team workload'
-      ],
-      category: 'Customer Support'
-    },
-    {
-      icon: RefreshCw,
-      name: 'E-Commerce Return Management SaaS',
-      description: 'Automated return processing platform with intelligent routing, label generation, and analytics.',
-      features: [
-        'Automated return request processing',
-        'Intelligent return routing and approval',
-        'Automated return label generation',
-        'Real-time return status tracking',
-        'Return analytics and insights',
-        'Integration with e-commerce platforms'
-=======
       icon: Video,
       name: 'AI Video Content Generator',
       description: 'Automated video creation platform that transforms text, images, and data into engaging video content for marketing, training, and social media.',
@@ -1310,60 +1166,18 @@ export default function MicroSaaS() {
         'Return analytics and fraud detection',
         'Integration with major e-commerce platforms',
         'Customer self-service return portal'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ],
       pricing: '$199 – $1,299/month',
       timeline: '2–3 weeks',
       benefits: [
-<<<<<<< HEAD
-        '60% faster return processing',
-        'Automated return workflows',
-        'Improved customer experience',
-        'Reduced return processing costs'
-=======
         '70% reduction in return processing time',
         'Automated fraud detection and prevention',
         'Improved customer satisfaction with returns',
         'Better inventory management and restocking'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ],
       category: 'E-Commerce'
     },
     {
-<<<<<<< HEAD
-      icon: Mail,
-      name: 'Automated Email Follow-up Service',
-      description: 'Intelligent email sequence automation with personalization, A/B testing, and conversion optimization.',
-      features: [
-        'Automated email sequence management',
-        'Personalized content and timing',
-        'A/B testing and optimization',
-        'Behavioral trigger-based emails',
-        'Conversion tracking and analytics',
-        'Integration with CRM and marketing tools'
-      ],
-      pricing: '$149 – $999/month',
-      timeline: '2–3 weeks',
-      benefits: [
-        '45% increase in email conversion rates',
-        'Automated lead nurturing',
-        'Personalized customer communication',
-        'Improved sales pipeline management'
-      ],
-      category: 'Email Marketing'
-    },
-    {
-      icon: Video,
-      name: 'AI-Powered Video Clip Maker',
-      description: 'Automated video editing platform that transforms long-form content into engaging social media clips.',
-      features: [
-        'AI-powered video clip extraction',
-        'Automatic highlight detection',
-        'Social media format optimization',
-        'Brand consistency and watermarking',
-        'Multi-platform publishing',
-        'Performance analytics and insights'
-=======
       icon: Target,
       name: 'AI-Powered Lead Scoring Engine',
       description: 'Advanced lead qualification system that uses machine learning to score, prioritize, and route leads for maximum conversion rates.',
@@ -1374,116 +1188,20 @@ export default function MicroSaaS() {
         'Predictive analytics for conversion probability',
         'Integration with CRM and marketing automation',
         'Custom scoring models and rule configuration'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
       ],
       pricing: '$299 – $1,999/month',
       timeline: '3–4 weeks',
       benefits: [
-<<<<<<< HEAD
-        '90% faster video content creation',
-        'Automated social media optimization',
-        'Increased content engagement',
-        'Reduced video production costs'
-      ],
-      category: 'Video Marketing'
-    },
-    {
-      icon: Stethoscope,
-      name: 'Hospital Appointment Scheduler',
-      description: 'Specialized healthcare scheduling platform with patient management, medical history, and compliance features.',
-      features: [
-        'Secure patient appointment scheduling',
-        'Medical history and record integration',
-        'HIPAA-compliant data management',
-        'Automated reminders and notifications',
-        'Provider availability management',
-        'Insurance verification and billing integration'
-      ],
-      pricing: '$399 – $2,499/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        '50% reduction in no-show rates',
-        'Improved patient experience',
-        'Automated compliance management',
-        'Enhanced operational efficiency'
-      ],
-      category: 'Healthcare'
-    },
-    {
-      icon: Users,
-      name: 'AI-Powered Talent Matching Platform',
-      description: 'Advanced talent acquisition platform with AI matching, skill assessment, and recruitment automation.',
-      features: [
-        'AI-powered candidate-job matching',
-        'Automated skill assessment and testing',
-        'Video interview scheduling and analysis',
-        'Candidate ranking and recommendation',
-        'Recruiter workflow automation',
-        'Analytics and performance tracking'
-      ],
-      pricing: '$499 – $3,999/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        '60% reduction in time-to-hire',
-        'Improved candidate quality',
-        'Automated recruitment workflows',
-        'Enhanced hiring success rates'
-      ],
-      category: 'Recruitment'
-=======
         '45% increase in lead conversion rates',
         'Automated lead prioritization',
         'Improved sales team efficiency',
         'Data-driven lead qualification'
       ],
       category: 'Sales Automation'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
     },
     {
       icon: Shield,
       name: 'Cybersecurity Compliance Manager',
-<<<<<<< HEAD
-      description: 'Automated compliance monitoring and reporting platform for cybersecurity standards and regulations.',
-      features: [
-        'Automated compliance monitoring',
-        'Real-time security posture assessment',
-        'Regulatory reporting and documentation',
-        'Risk assessment and mitigation',
-        'Audit trail and evidence collection',
-        'Integration with security tools'
-      ],
-      pricing: '$599 – $3,999/month',
-      timeline: '4–6 weeks',
-      benefits: [
-        '90% reduction in compliance effort',
-        'Automated risk assessment',
-        'Improved security posture',
-        'Reduced compliance costs'
-      ],
-      category: 'Cybersecurity'
-    },
-    {
-      icon: Cpu,
-      name: 'Quantum Computing Solutions Platform',
-      description: 'Access to quantum computing resources for complex optimization, cryptography, and scientific research.',
-      features: [
-        'Quantum algorithm development and testing',
-        'Optimization problem solving',
-        'Cryptographic security enhancement',
-        'Scientific research and simulation',
-        'Quantum machine learning applications',
-        'Expert consultation and support'
-      ],
-      pricing: '$999 – $9,999/month',
-      timeline: '6–8 weeks',
-      benefits: [
-        'Exponential computational power',
-        'Advanced optimization capabilities',
-        'Enhanced security solutions',
-        'Cutting-edge research capabilities'
-      ],
-      category: 'Quantum Computing'
-=======
       description: 'Automated compliance monitoring and reporting system for GDPR, HIPAA, SOC 2, and other regulatory frameworks with real-time risk assessment.',
       features: [
         'Automated compliance gap analysis',
@@ -1546,7 +1264,6 @@ export default function MicroSaaS() {
         'Better customer satisfaction and retention'
       ],
       category: 'Customer Engagement'
->>>>>>> cursor/analyze-improve-and-deploy-application-d144
     }
   ];
 
