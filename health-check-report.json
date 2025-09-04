@@ -1,84 +1,40 @@
 {
-  "timestamp": "2025-09-03T16:57:54.780Z",
-  "checks": [
-    {
-      "name": "Node.js Version",
+  "timestamp": "2025-09-03T17:32:53.642Z",
+  "checks": {
+    "Node.js Version": {
       "status": "passed",
-      "message": "Node.js version v22.16.0 is supported",
-      "duration": 1,
-      "details": {
-        "version": "v22.16.0",
-        "majorVersion": 22
-      }
+      "message": "Node.js v22.16.0"
     },
-    {
-      "name": "Package Configuration",
+    "Package.json": {
       "status": "passed",
-      "message": "package.json is valid",
-      "duration": 0,
-      "details": {
-        "name": "ziontechgroup.com",
-        "version": "0.1.0",
-        "scriptsCount": 156
-      }
+      "message": "package.json exists"
     },
-    {
-      "name": "Dependencies",
+    "Dependencies": {
       "status": "passed",
-      "message": "All dependencies are installed correctly",
-      "duration": 408,
-      "details": {}
+      "message": "Dependencies installed"
     },
-    {
-      "name": "Build System",
+    "Disk Space": {
       "status": "passed",
-      "message": "Build system configuration is complete",
-      "duration": 0,
-      "details": {
-        "hasNextConfig": true,
-        "hasTsConfig": true
-      }
+      "message": "Disk usage: 12%"
     },
-    {
-      "name": "Source Files",
+    "Memory Usage": {
       "status": "passed",
-      "message": "Source files found: 13 pages, 3 components",
-      "duration": 0,
-      "details": {
-        "pageCount": 13,
-        "componentCount": 3,
-        "hasPagesDir": true,
-        "hasComponentsDir": true
-      }
+      "message": "Memory usage: 9%"
     },
-    {
-      "name": "Git Repository",
+    "Build Test": {
       "status": "passed",
-      "message": "Git repository on branch 'cursor/automate-test-fix-improve-and-merge-code-62a4' with uncommitted changes",
-      "duration": 66,
-      "details": {
-        "branch": "cursor/automate-test-fix-improve-and-merge-code-62a4",
-        "hasChanges": true,
-        "changesCount": 15
-      }
+      "message": "Build successful"
     },
-    {
-      "name": "Security",
-      "status": "passed",
-      "message": "Basic security files are present",
-      "duration": 0,
-      "details": {
-        "foundFiles": [
-          ".gitignore",
-          ".env.example"
-        ]
-      }
+    "Linting": {
+      "status": "warning",
+      "warning": true,
+      "message": "Linting errors found"
     }
-  ],
+  },
   "summary": {
     "total": 7,
-    "passed": 7,
+    "passed": 6,
     "failed": 0,
-    "warnings": 0
+    "warnings": 1
   }
 }

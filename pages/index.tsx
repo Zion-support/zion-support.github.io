@@ -67,7 +67,7 @@ export default function Home() {
               We deliver cutting-edge technology solutions with 150+ innovative micro SaaS products, 
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization 
               to AI automation, quantum computing to blockchain solutions, we help businesses scale 
-              efficiently and securely in the digital age.
+              efficiently and securely with next-generation technology.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
