@@ -1,3 +1,4 @@
+export { default } from '../../pages/services/AIEmailResponder';
 import React from "react"
 import Link from "next/link"
 import { Database, Check, Phone, Mail, ArrowRight, Target, Zap } from "lucide-react";
