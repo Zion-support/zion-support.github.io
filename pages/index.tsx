@@ -1,8 +1,8 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, ArrowRight } from 'lucide-react';
+import Layout from '../components/Layout';
 
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
@@ -34,12 +34,8 @@ const services = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Head>
-        <title>Zion Tech Group - Leading AI & Technology Solutions</title>
-        <meta name="description" content="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results." />
-        <meta name="keywords" content="AI solutions, cloud services, technology consulting, digital transformation, IT services" />
-      </Head>
+    <Layout>
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -182,5 +178,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </Layout>
   );
 }
