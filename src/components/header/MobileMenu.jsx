@@ -8,30 +8,31 @@ import React {useState} from "react" className)"}>";" {}""" <Button: variant="gh
 const toggleMenu = () => setIsOpen(!isOpen);
 
   const navigationItems = [  
-  const navigationItems = ['
-    {href: '/', label: 'Home', icon: Home, matches: (path) => path === '/'},;
-    {href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace')},;
-    {href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard')},;
-    {href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories')},;
-    {href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment')},;
+  const navigationItems = ['';';
+    {href: '/', label: 'Home', icon: Home, matches: (path) => path === '/'},;';';
+    {href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace')},;';';
+    {href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard')},;';';
+    {href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories')},;';';
+    {href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment')},;';';
     {href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community')},;
   ];
 
-  if(isAuthenticated) {
-    navigationItems.push({
-      href: '/dashboard',
-      label: 'Dashboard',
-      icon: Settings,
+  if(isAuthenticated) {';
+    navigationItems.push({';';
+      href: '/dashboard',';';
+      label: 'Dashboard',';
+      icon: Settings,';';
       matches: (path) => path.startsWith('/dashboard')
     });
   }
 
-  return (<div className={cn("md:hidden", className)}>
+  return (
+    <div className="min-h-screen bg-white">
       {/* Mobile menu button */}
       <Button
         variant="ghost"
-        size="sm"
-        onClick={toggleMenu}
+        size="sm"';
+        onClick={toggleMenu}';';
         className="p-2 text-white hover:bg-zion-purple/20"        aria-label={isOpen ? 'Close menu' : 'Open menu'}
       >"
         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -148,12 +149,14 @@ const Icon = item.icon;
               {isAuthenticated ? ("
                 <div className="space-y-3">"
                   <div className="flex items-center gap-3 px-4 py-2">"
-                    <User className="h-5 w-5 text-zion-cyan" />"
-                    <span className="text-white font-medium">
+                    <User className="h-5 w-5 text-zion-cyan" />"';
+                    <span className="text-white font-medium">';';
                       {user?.email || 'User'}
                     </span>
                   </div>
-    </div>)}
+        </div>
+  );
+}
                   <Link
                     to="/messages"
                     onClick={toggleMenu}                    className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
@@ -183,8 +186,9 @@ const Icon = item.icon;
                   >
                     Sign Up
                   </Link>
-                </div>
-              )}
+                    </div>
+  );
+}
             </div>
           </div>
         </div>;
@@ -196,6 +200,5 @@ export default Component
 </div>
 </item>
 </div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

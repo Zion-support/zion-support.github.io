@@ -14,11 +14,9 @@ async function checkCodeComplexity() {
   if (complexFiles.length > 0) {
     console.warn(`[WARN] Found ${complexFiles.length} complex files`);
     complexFiles.forEach(f => console.warn(`  - ${f.file}: complexity ${f.complexity}`));
-    return { passed: false, count: complexFiles.length, details: complexFiles };
-  }
+    return { passed: false, count: complexFiles.length, details: complexFiles }}
   console.log('[INFO] No high-complexity code found');
-  return { passed: true, count: 0 };
-}
+  return { passed: true, count: 0 }}
 
 async function checkCodeDuplication() {
   console.log('[INFO] Checking for code duplication...');
@@ -32,22 +30,18 @@ async function checkCodeDuplication() {
   if (duplications.length > 0) {
     console.warn(`[WARN] Found ${duplications.length} code duplications`);
     duplications.slice(0, 5).forEach(d => console.warn(`  - ${d.file}:${d.line} (duplicate of ${d.duplicateOf})`));
-    return { passed: false, count: duplications.length, details: duplications };
-  }
+    return { passed: false, count: duplications.length, details: duplications }}
   console.log('[INFO] No significant code duplication found');
-  return { passed: true, count: 0 };
-}
+  return { passed: true, count: 0 }}
 
 async function checkCodeStyle() {
   console.log('[INFO] Checking code style...');
   try {
     execSync('npm run lint:check', { stdio: 'pipe' });
     console.log('[INFO] Code style check passed');
-    return { passed: true };
-  } catch (error) {
+    return { passed: true }} catch (error) {
     console.error(`[ERROR] Code style issues found: ${error.message}`);
-    return { passed: false, error: 'Code style issues detected' };
-  }
+    return { passed: false, error: 'Code style issues detected' }}
 }
 
 async function checkTypeScriptQuality() {
@@ -55,11 +49,9 @@ async function checkTypeScriptQuality() {
   try {
     execSync('npm run type-check', { stdio: 'pipe' });
     console.log('[INFO] TypeScript quality check passed');
-    return { passed: true };
-  } catch (error) {
+    return { passed: true }} catch (error) {
     console.error(`[ERROR] TypeScript quality issues found: ${error.message}`);
-    return { passed: false, error: 'TypeScript quality issues detected' };
-  }
+    return { passed: false, error: 'TypeScript quality issues detected' }}
 }
 
 async function checkTestCoverage() {
@@ -67,22 +59,18 @@ async function checkTestCoverage() {
   const testFiles = glob.sync('**/*.test.{js,jsx,ts,tsx}', { cwd: process.cwd(), ignore: 'node_modules/**' });
   if (!testFiles || testFiles.length === 0) {
     console.warn('[WARN] WARNING: No test files found');
-    return { passed: false, error: 'No test files found' };
-  }
+    return { passed: false, error: 'No test files found' }}
   console.log('[INFO] Test files found. (Coverage check placeholder)');
-  return { passed: true };
-}
+  return { passed: true }}
 
 async function checkDocumentationCoverage() {
   console.log('[INFO] Checking documentation...');
   const docCoverage = 40; // Example low coverage
   if (docCoverage < 50) {
     console.warn(`[WARN] WARNING: Low documentation coverage: ${docCoverage}%`);
-    return { passed: false, error: 'Low documentation coverage' };
-  }
+    return { passed: false, error: 'Low documentation coverage' }}
   console.log('[INFO] Documentation coverage is sufficient');
-  return { passed: true };
-}
+  return { passed: true }}
 
 async function runCodeQualityMonitor() {
   const startTime = Date.now();
@@ -106,11 +94,9 @@ async function runCodeQualityMonitor() {
     if (duplicationResult && !duplicationResult.passed) console.warn('  - duplication: issues detected');
     if (testCoverageResult && !testCoverageResult.passed) console.warn(`  - testing: ${testCoverageResult.error}`);
     if (docCoverageResult && !docCoverageResult.passed) console.warn(`  - documentation: ${docCoverageResult.error}`);
-    process.exit(1);
-  } else {
+    process.exit(1)} else {
     console.log('[INFO] Code quality is high.');
-    process.exit(0);
-  }
+    process.exit(0)}
 }
 
 runCodeQualityMonitor();

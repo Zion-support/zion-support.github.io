@@ -8,19 +8,16 @@ class BuildMonitor {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'build-reports');
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+      fs.mkdirSync(this.reportsDir, { recursive: true })}
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   async runBuild() {
     this.log('🔨 Running build...');
@@ -39,15 +36,13 @@ class BuildMonitor {
         success: true,
         buildTime,
         output: result
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Build failed: ${error.message}`);
       return {
         success: false,
         error: error.message,
         buildTime: 0
-      };
-    }
+      }}
   }
 
   async checkBuildOutput() {
@@ -55,8 +50,7 @@ class BuildMonitor {
     try {
       const nextDir = path.join(this.projectRoot, '.next');
       if (!fs.existsSync(nextDir)) {
-        throw new Error('Build output directory not found');
-      }
+        throw new Error('Build output directory not found')}
 
       const buildStats = this.getDirectoryStats(nextDir);
       this.log(`📁 Build output size: ${this.formatBytes(buildStats.size)}`);
@@ -67,14 +61,12 @@ class BuildMonitor {
         size: buildStats.size,
         files: buildStats.files,
         status: buildStats.size > 0 ? 'success' : 'empty'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Build output check failed: ${error.message}`);
       return {
         exists: false,
         error: error.message
-      };
-    }
+      }}
   }
 
   getDirectoryStats(dirPath) {
@@ -88,25 +80,20 @@ class BuildMonitor {
         const stats = fs.statSync(filePath);
         
         if (stats.isDirectory()) {
-          scanDirectory(filePath);
-        } else {
+          scanDirectory(filePath)} else {
           totalSize += stats.size;
-          fileCount++;
-        }
-      });
-    };
+          fileCount++}
+      })};
 
     scanDirectory(dirPath);
-    return { size: totalSize, files: fileCount };
-  }
+    return { size: totalSize, files: fileCount }}
 
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  }
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
 
   async checkTypeScriptErrors() {
     this.log('🔍 Checking TypeScript errors...');
@@ -121,8 +108,7 @@ class BuildMonitor {
       return {
         errors: 0,
         status: 'success'
-      };
-    } catch (error) {
+      }} catch (error) {
       const errorOutput = error.stdout || error.stderr || error.message;
       const errorCount = (errorOutput.match(/error TS/g) || []).length;
       
@@ -131,8 +117,7 @@ class BuildMonitor {
         errors: errorCount,
         status: 'failed',
         output: errorOutput
-      };
-    }
+      }}
   }
 
   async checkLintingErrors() {
@@ -148,8 +133,7 @@ class BuildMonitor {
       return {
         errors: 0,
         status: 'success'
-      };
-    } catch (error) {
+      }} catch (error) {
       const errorOutput = error.stdout || error.stderr || error.message;
       const errorCount = (errorOutput.match(/error/g) || []).length;
       
@@ -158,8 +142,7 @@ class BuildMonitor {
         errors: errorCount,
         status: 'failed',
         output: errorOutput
-      };
-    }
+      }}
   }
 
   async checkTestResults() {
@@ -175,15 +158,13 @@ class BuildMonitor {
       return {
         passed: true,
         status: 'success'
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`❌ Tests failed: ${error.message}`);
       return {
         passed: false,
         status: 'failed',
         error: error.message
-      };
-    }
+      }}
   }
 
   async generateBuildReport() {
@@ -208,8 +189,7 @@ class BuildMonitor {
     
     this.log(`📄 Build report generated: ${reportFile}`);
     
-    return report;
-  }
+    return report}
 
   generateRecommendations(analysis) {
     const recommendations = [];
@@ -220,8 +200,7 @@ class BuildMonitor {
         priority: 'high',
         message: 'Build failed. Check build logs and fix errors.',
         impact: 'Prevents deployment'
-      });
-    }
+      })}
 
     if (analysis.typeScript.errors > 0) {
       recommendations.push({
@@ -229,8 +208,7 @@ class BuildMonitor {
         priority: 'high',
         message: `Found ${analysis.typeScript.errors} TypeScript errors. Fix them before deployment.`,
         impact: 'Improves code quality'
-      });
-    }
+      })}
 
     if (analysis.linting.errors > 0) {
       recommendations.push({
@@ -238,8 +216,7 @@ class BuildMonitor {
         priority: 'medium',
         message: `Found ${analysis.linting.errors} linting errors. Consider fixing them.`,
         impact: 'Improves code quality'
-      });
-    }
+      })}
 
     if (!analysis.tests.passed) {
       recommendations.push({
@@ -247,8 +224,7 @@ class BuildMonitor {
         priority: 'high',
         message: 'Tests failed. Fix failing tests before deployment.',
         impact: 'Ensures code reliability'
-      });
-    }
+      })}
 
     if (analysis.buildOutput.size > 10 * 1024 * 1024) { // 10MB
       recommendations.push({
@@ -256,11 +232,9 @@ class BuildMonitor {
         priority: 'medium',
         message: 'Build output is large. Consider optimizing bundle size.',
         impact: 'Improves performance'
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   async run() {
     this.log('🔨 Starting Build Monitor...');
@@ -275,11 +249,9 @@ class BuildMonitor {
       this.log(`🧪 Tests: ${report.analysis.tests.passed ? 'passed' : 'failed'}`);
       this.log(`💡 Recommendations: ${report.recommendations.length}`);
       
-      return report;
-    } catch (error) {
+      return report} catch (error) {
       this.log(`💥 Build monitoring failed: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -291,12 +263,9 @@ if (require.main === module) {
       console.log('\n🎉 Build Monitor completed successfully!');
       console.log(`🔨 Build status: ${report.analysis.build.success ? 'success' : 'failed'}`);
       console.log(`💡 Recommendations: ${report.recommendations.length}`);
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch((error) => {
       console.error('\n💥 Build Monitor failed:', error.message);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = BuildMonitor;

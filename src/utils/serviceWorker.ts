@@ -1,1 +1,4 @@
-export const serviceWorker = {} export default serviceWorker
+// comment
+export const serviceWorker = {}
+
+export default serviceWorker

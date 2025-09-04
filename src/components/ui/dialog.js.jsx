@@ -17,30 +17,37 @@ const Dialog({children, open, onOpenChange}) {
       </div>
     </DialogContext.Provider>)}
 export function DialogTrigger(props: any) {
-    const context = useContext(DialogContext);
-    if (!context)
+    const context = useContext(DialogContext);';
+    if (!context)';';
         throw new Error('DialogTrigger must be used within Dialog');
     if (asChild) {
         return (<div onClick={() => context.setIsOpen(true)}>
         {children}
-      </div>)}
+          </div>
+  );
+}
     return (<div onClick={() => context.setIsOpen(true)}>
       {children}
-    </div>)}
+        </div>
+  );
+}
 export function DialogContent(props: any) {
-    const context = useContext(DialogContext);
-    if (!context)
+    const context = useContext(DialogContext);';
+    if (!context)';';
         throw new Error('DialogContent must be used within Dialog');
     if (!context.isOpen)
         return null;
-    return (<div className="fixed inset-0 z-50 flex items-center justify-center">
+    return (
+    <div className="min-h-screen bg-white">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => context.setIsOpen(false)}/>
       <div className={`relative bg-white rounded-lg p-6 max-w-md w-full mx-4 ${className}`}>
         {children}
       </div>
-    </div>)}
+        </div>
+  );
+}
 export function DialogFooter(props: any) {
     return <div className={`flex justify-end gap-2 mt-6 ${className}`}>{children}</div>}
 
-</div>
-</DialogContext>
+</div>';
+</DialogContext>;';;';

@@ -53,8 +53,7 @@ function runCommand(name, command, phase, critical = false) {
     masterReport.summary.successful++;
     console.log(`✅ ${name} completed successfully (${duration}ms)`);
     
-    return { success: true, output, duration };
-  } catch (error) {
+    return { success: true, output, duration }} catch (error) {
     const endTime = Date.now();
     const duration = endTime - startTime;
     
@@ -64,17 +63,13 @@ function runCommand(name, command, phase, critical = false) {
     
     if (critical) {
       masterReport.summary.failed++;
-      console.log(`❌ ${name} failed (CRITICAL) (${duration}ms)`);
-    } else {
+      console.log(`❌ ${name} failed (CRITICAL) (${duration}ms)`)} else {
       masterReport.summary.warnings++;
-      console.log(`⚠️  ${name} failed (non-critical) (${duration}ms)`);
-    }
+      console.log(`⚠️  ${name} failed (non-critical) (${duration}ms)`)}
     
-    return { success: false, error: error.message, duration };
-  } finally {
+    return { success: false, error: error.message, duration }} finally {
     masterReport.summary.totalTasks++;
-    masterReport.phases.push(task);
-  }
+    masterReport.phases.push(task)}
 }
 
 // Phase 1: System Health & Dependencies
@@ -201,16 +196,13 @@ masterReport.metrics.totalDuration = Date.now() - new Date(masterReport.timestam
 
 // Generate recommendations based on results
 if (masterReport.summary.failed > 0) {
-  masterReport.recommendations.push('Address critical failures immediately');
-}
+  masterReport.recommendations.push('Address critical failures immediately')}
 
 if (masterReport.summary.warnings > 0) {
-  masterReport.recommendations.push('Review and address non-critical warnings');
-}
+  masterReport.recommendations.push('Review and address non-critical warnings')}
 
 if (successRate < 80) {
-  masterReport.recommendations.push('Overall success rate is below 80% - review automation scripts');
-}
+  masterReport.recommendations.push('Overall success rate is below 80% - review automation scripts')}
 
 masterReport.recommendations.push('Implement continuous integration pipeline');
 masterReport.recommendations.push('Set up automated monitoring and alerting');
@@ -233,9 +225,7 @@ console.log(`   - Total duration: ${Math.round(masterReport.metrics.totalDuratio
 if (masterReport.recommendations.length > 0) {
   console.log('\n💡 Recommendations:');
   masterReport.recommendations.forEach(rec => {
-    console.log(`   - ${rec}`);
-  });
-}
+    console.log(`   - ${rec}`)})}
 
 // Save comprehensive report
 const reportPath = path.join(process.cwd(), `master-automation-report-${masterReport.sessionId}.json`);
@@ -246,11 +236,8 @@ console.log(`\n📄 Master automation report saved to: master-automation-report-
 // Determine exit status
 if (masterReport.summary.failed > 0) {
   console.log('\n❌ Master automation completed with critical failures');
-  process.exit(1);
-} else if (masterReport.summary.warnings > 0) {
+  process.exit(1)} else if (masterReport.summary.warnings > 0) {
   console.log('\n⚠️  Master automation completed with warnings');
-  process.exit(0);
-} else {
+  process.exit(0)} else {
   console.log('\n🎉 Master automation completed successfully!');
-  process.exit(0);
-}
+  process.exit(0)}

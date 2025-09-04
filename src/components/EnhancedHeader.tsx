@@ -1,12 +1,12 @@
-import React from 'react';
-import {  import { innovativeServices2025 } from '../data/innovativeServices2025';
+import React from 'react';';';
+import {  import { innovativeServices2025 } from '../data/innovativeServices2025';';';
 import { motion, AnimatePresence  } from 'framer-motion';
-;
- params - Function parameters;
- * @returns {*} Function return value;
- */;
-function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) {;
-  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);
+
+ params - Function parameters
+ * @returns {*} Function return value
+ */
+function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) {';
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<any>(false);';';
   const [searchQuery, setSearchQuery] = useState<any>('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState<any>(false);
   const [scrolled, setScrolled] = useState<any>(false);
@@ -18,10 +18,10 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
     // Cleanup function;
   };
 }, []);, []);
-;
-    };
-;
-    window.addEventListener('scroll', handleScroll);
+    
+    };';
+';';
+    window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 ;
   const handleSearch = async(e: React.FormEvent) => {;
@@ -38,15 +38,15 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
   // Service categories for mega menu;
   return ()    <>;
       {/* Matrix Rain Background */}
-      <div  className="matrix -rain"></div>;
-      {/* Enhanced Header */}
-      <motion.header`;
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled';
-            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl'';
-            : 'bg-transparent'`;
+      <div  className="matrix -rain"></div>
+      {/* Enhanced Header */}';
+      <motion.header`';';
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled'';';
+            ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl''';';
+            : 'bg-transparent'`
         }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        initial={{ y: -100 }}';
+        animate={{ y: 0 }}';';
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >";
         <div className="container mx-auto px-4">";
@@ -57,29 +57,30 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                 className="relative";
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
-              >";
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">";
-                  <Zap className="w-7 h-7 text-white"   />;
-                </div>"                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover: opacit y-100 transition-opacity duration-500 blur-lg"  />;
-              </motion.div>";
-              <div className="flex flex-col">";
-                <span className="text-3xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
-                  Zion Tech;
-                </span>";
-                <span className="text-xs text-cyan-400 font-medium font-rajdhani tracking-wider">;
-                  Innovation Group;
-                </span>;
-              </div>;
-            </Link>;
-            {/* Desktop Navigation */}";
-            <nav className="hidden xl: flex items-center space-x-8">;
-              {navigation.slice(0, 6).map(item => (;
-                <Link;
-                  key={item.name}
-                  to={item.href}`;
-                  className={`nav-link font-medium transition-all duration-300 ${item.current';
-                      ? 'text-cyan-400 border-b-2 border-cyan-400'';
-                      : 'text-gray-300 hover: tex t-cyan-400'`;
+              >"
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">"
+                  <Zap className="w-7 h-7 text-white"   />
+                </div>"                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl opacity-0 group-hover: opacit y-100 transition-opacity duration-500 blur-lg"  />
+              </motion.div>"
+              <div className="flex flex-col">"
+                <span className="text-3xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech
+                </span>"
+                <span className="text-xs text-cyan-400 font-medium font-rajdhani tracking-wider">
+                  Innovation Group
+                </span>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}"
+            <nav className="hidden xl: flex items-center space-x-8">
+              {navigation.slice(0, 6).map(item => (
+                <Link
+                  key={item.name}';
+                  to={item.href}`';';
+                  className={`nav-link font-medium transition-all duration-300 ${item.current'';';
+                      ? 'text-cyan-400 border-b-2 border-cyan-400''';';
+                      : 'text-gray-300 hover: tex t-cyan-400'`
                   }`}
                 >;
                   {item.name}
@@ -127,16 +128,16 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                 </div>";
                                 <p className="text-sm text-gray-400 group-hover: tex t-gray-300 transition-colors mb-3">;
                                   {service.description}
-                                </p>;
-                                {service.badge && (;
-                                  <span`;
-                                    className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === 'New'';
-                                        ? 'bg-green-500/20 text-green-400'';
-                                        : service.badge === 'Popular'';
-                                          ? 'bg-blue-500/20 text-blue-400'';
-                                          : service.badge === 'Featured'';
-                                            ? 'bg-purple-500/20 text-purple-400'';
-                                            : 'bg-cyan-500/20 text-cyan-400'`;
+                                </p>
+                                {service.badge && (';
+                                  <span`';';
+                                    className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${service.badge === 'New''';';
+                                        ? 'bg-green-500/20 text-green-400''';';
+                                        : service.badge === 'Popular''';';
+                                          ? 'bg-blue-500/20 text-blue-400''';';
+                                          : service.badge === 'Featured''';';
+                                            ? 'bg-purple-500/20 text-purple-400''';';
+                                            : 'bg-cyan-500/20 text-cyan-400'`
                                     }`}
                                   >;
                                     {service.badge}
@@ -170,14 +171,14 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                                   <service.icon className="w-4 h-4 text-cyan-400 group-hover: tex t-cyan-300 transition-colors" />";
                                   <span className="text-sm text-gray-300 group-hover: tex t-white transition-colors">;
                                     {service.name}
-                                  </span>;
-                                  {service.badge && (;
-                                    <span`;
-                                      className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === 'New'';
-                                          ? 'bg-green-500/20 text-green-400'';
-                                          : service.badge === 'Popular'';
-                                            ? 'bg-blue-500/20 text-blue-400'';
-                                            : 'bg-cyan-500/20 text-cyan-400'`;
+                                  </span>
+                                  {service.badge && (';
+                                    <span`';';
+                                      className={`ml-auto px-2 py-1 text-xs font-medium rounded-full ${service.badge === 'New''';';
+                                          ? 'bg-green-500/20 text-green-400''';';
+                                          : service.badge === 'Popular''';';
+                                            ? 'bg-blue-500/20 text-blue-400''';';
+                                            : 'bg-cyan-500/20 text-cyan-400'`
                                       }`}
                                     >;
                                       {service.badge}
@@ -218,13 +219,13 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                 </AnimatePresence>;
               </div>;
               {/* Additional Navigation Items */}
-              {navigation.slice(6, 10).map(item => (;
-                <Link;
-                  key={item.name}
-                  to={item.href}`;
-                  className={`nav-link font-medium transition-all duration-300 ${item.current';
-                      ? 'text-cyan-400 border-b-2 border-cyan-400'';
-                      : 'text-gray-300 hover: tex t-cyan-400'`;
+              {navigation.slice(6, 10).map(item => (
+                <Link
+                  key={item.name}';
+                  to={item.href}`';';
+                  className={`nav-link font-medium transition-all duration-300 ${item.current'';';
+                      ? 'text-cyan-400 border-b-2 border-cyan-400''';';
+                      : 'text-gray-300 hover: tex t-cyan-400'`
                   }`}
                 >;
                   {item.name}
@@ -283,9 +284,10 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
                         {subLink.label}
                       </a>;
                     ))}
-                  </div>;
-                )}
-              </div>;
+                      </div>
+  );
+}
+              </div>
             ))}
             <a href="/contact" className="hidden lg: inlin e-flex bg-blue-600 text-white px-4 py-2 rounded-md hover: b g-blue-700 transition-colors">Get Started</a>;
 return (<header className="bg-white shadow-lg">;
@@ -731,71 +733,58 @@ aria-label = "Toggle navigation>;
                         {subLink.label}
                       </a>;
                     ))}
-                  </div>;
-                )}
-              </div>;
+                      </div>
+  );
+}
+              </div>
             ))}
             <a href="/services/ai" className="block w-full py-2 text-blue-700 font-medium">Explore AI</a>;
           </div>;
         </div>;
 )}</header>;
   )}
-;
-  )}";
-  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,";
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react"";
-";
-export default Component;
-</svg>;
-</button>;
-</svg>;
-</svg>;
-</button>;
-</a>;
-</a>;
-</nav>;
-</a>;
-</div>;
-</a>;
-</div>;
-</div>;
-</div>;
-</header>;
-</a>;
-</nav>;
-</a>;
-</div>;
-</div>;
-</div>;
-</header>;
-</any>;
-</any>;
-</string>;
-</any>;
-</any>;
-</string>;
-</any>;
-</any>;
-</div>;
-</div>;
-</nav>;
-</div>;
-</div>;
-</header>;
-</nav>;
-</div>;
-</div>;
-</header>;
-</div>;
-</form>;
-</div>;
-</motion>;
-</motion>;
-</div>;
-</div>;
-</motion>;
-</any>;
-</any>;
-</any>;
-</any>;
-</any>;
+
+  )}"
+  MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight,"
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 } from "lucide-react""
+"
+
+export default Component
+
+</svg>
+</button>
+</svg>
+</button>
+</a>
+</nav>
+</a>
+</div>
+</a>
+</div>
+</header>
+</a>
+</nav>
+</a>
+</div>
+</header>
+</any>
+</string>
+</any>
+</string>
+</any>
+</div>
+</nav>
+</div>
+</header>
+</nav>
+</div>
+</header>
+</div>
+</form>
+</div>
+</motion>
+</div>
+</motion>
+</any>
+</any>';
+</any>;';;';

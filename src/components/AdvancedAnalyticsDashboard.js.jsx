@@ -929,8 +929,6 @@ export {AdvancedAnalyticsDashboard};
 </ArrowDownRight>
 </ArrowUpRight>
 </motion>
-</motion>
-</div>
 </div>
 </motion>
 </div>
@@ -952,14 +950,9 @@ export {AdvancedAnalyticsDashboard};
 </DollarSign>
 </motion>
 </div>
-</div>
-</motion>
-</motion>
-</motion>
-</motion>
-</div>
-</motion>
 </motion>
 </div>
 </motion>
 </div>
+</motion>
+</div>;;

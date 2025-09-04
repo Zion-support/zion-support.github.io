@@ -16,8 +16,7 @@ class BuildTester {
       warnings: [],
       duration: 0,
       timestamp: new Date().toISOString()
-    };
-  }
+    }}
 
   log(message) {
     const timestamp = new Date().toISOString();
@@ -26,11 +25,9 @@ class BuildTester {
     
     const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
-    }
+      fs.mkdirSync(logsDir, { recursive: true })}
     
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(this.logFile, logMessage + '\n')}
 
   async runBuild() {
     try {
@@ -54,9 +51,7 @@ class BuildTester {
       
       this.log(`✅ Build completed successfully in ${duration}ms`);
       
-      return true;
-      
-    } catch (error) {
+      return true} catch (error) {
       const endTime = Date.now();
       const duration = endTime - this.startTime;
       
@@ -72,8 +67,7 @@ class BuildTester {
       this.log(`❌ Build failed after ${duration}ms`);
       this.log(`Error: ${error.message}`);
       
-      return false;
-    }
+      return false}
   }
 
   parseBuildErrors(output) {
@@ -82,13 +76,11 @@ class BuildTester {
     for (const line of lines) {
       // Look for error patterns
       if (line.includes('error') || line.includes('Error')) {
-        this.buildResults.errors.push(line.trim());
-      }
+        this.buildResults.errors.push(line.trim())}
       
       // Look for warning patterns
       if (line.includes('warning') || line.includes('Warning')) {
-        this.buildResults.warnings.push(line.trim());
-      }
+        this.buildResults.warnings.push(line.trim())}
     }
   }
 
@@ -103,16 +95,13 @@ class BuildTester {
       });
       
       this.log('✅ TypeScript type check passed');
-      return { success: true, output: result };
-      
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log('❌ TypeScript type check failed');
       return { 
         success: false, 
         error: error.message, 
         output: error.stderr || error.stdout || '' 
-      };
-    }
+      }}
   }
 
   async runLintCheck() {
@@ -126,16 +115,13 @@ class BuildTester {
       });
       
       this.log('✅ ESLint check passed');
-      return { success: true, output: result };
-      
-    } catch (error) {
+      return { success: true, output: result }} catch (error) {
       this.log('❌ ESLint check failed');
       return { 
         success: false, 
         error: error.message, 
         output: error.stdout || error.stderr || '' 
-      };
-    }
+      }}
   }
 
   async run() {
@@ -170,8 +156,7 @@ class BuildTester {
       // Save report
       const reportsDir = path.dirname(this.reportFile);
       if (!fs.existsSync(reportsDir)) {
-        fs.mkdirSync(reportsDir, { recursive: true });
-      }
+        fs.mkdirSync(reportsDir, { recursive: true })}
       
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       
@@ -183,18 +168,13 @@ class BuildTester {
       this.log(`   Overall: ${report.summary.overallSuccess ? '✅ PASSED' : '❌ FAILED'}`);
       
       if (this.buildResults.errors.length > 0) {
-        this.log(`   Build Errors: ${this.buildResults.errors.length}`);
-      }
+        this.log(`   Build Errors: ${this.buildResults.errors.length}`)}
       
       if (this.buildResults.warnings.length > 0) {
-        this.log(`   Build Warnings: ${this.buildResults.warnings.length}`);
-      }
+        this.log(`   Build Warnings: ${this.buildResults.warnings.length}`)}
       
-      this.log(`📊 Report saved to: ${this.reportFile}`);
-      
-    } catch (error) {
-      this.log(`❌ Error in build tester: ${error.message}`);
-    }
+      this.log(`📊 Report saved to: ${this.reportFile}`)} catch (error) {
+      this.log(`❌ Error in build tester: ${error.message}`)}
   }
 
   generateRecommendations() {
@@ -206,8 +186,7 @@ class BuildTester {
         issue: 'Build failure',
         action: 'Fix build errors immediately',
         impact: 'Blocks deployment and testing'
-      });
-    }
+      })}
     
     if (this.buildResults.errors.length > 0) {
       recommendations.push({
@@ -215,8 +194,7 @@ class BuildTester {
         issue: 'Build errors detected',
         action: 'Review and fix build errors',
         impact: 'Affects build process'
-      });
-    }
+      })}
     
     if (this.buildResults.warnings.length > 0) {
       recommendations.push({
@@ -224,27 +202,22 @@ class BuildTester {
         issue: 'Build warnings detected',
         action: 'Review build warnings',
         impact: 'May indicate potential issues'
-      });
-    }
+      })}
     
-    return recommendations;
-  }
+    return recommendations}
 }
 
 // Run the build tester
 const tester = new BuildTester();
 tester.run().catch(error => {
   console.error('Fatal error:', error);
-  process.exit(1);
-});
+  process.exit(1)});
 
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   console.log('\n🛑 Build Tester stopped by user');
-  process.exit(0);
-});
+  process.exit(0)});
 
 process.on('SIGTERM', () => {
   console.log('\n🛑 Build Tester stopped by system');
-  process.exit(0);
-});
+  process.exit(0)});

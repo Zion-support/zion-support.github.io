@@ -1,1 +1,4 @@
-export const passwordStrength = {} export default passwordStrength
+// comment
+export const passwordStrength = {}
+
+export default passwordStrength

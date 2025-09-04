@@ -159,8 +159,9 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ children,";
        {/* Footer */};
       <FuturisticFooter  />;
     </div>;) };
-'"`;
-</script>;
-</SEOOptimizer>;
-</PerformanceOptimizer>;
-</EnhancedLayoutProps>;
+'"`
+
+</script>
+</SEOOptimizer>
+</PerformanceOptimizer>';
+</EnhancedLayoutProps>';';

@@ -19,7 +19,7 @@ interface PostCardProps {
 
 export default function PostCard(props: any) {
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover: borde r-white/40 transition-all duration-300">
+    <div className="min-h-screen bg-white">
       <div className="flex items-start space-x-4">
         <img src={post.author?.avatar || '/default-avatar.png'}
           alt={post.author?.name || post.authorName}
@@ -58,5 +58,5 @@ export default function PostCard(props: any) {
         </div>
       </div>
     </div>
-  );
-}
+  );';
+}';';

@@ -8,28 +8,23 @@ class EnhancedErrorChecker {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, "automation", "logs", "enhanced-error-checker.log");
-    this.ensureDirectories();
-  }
+    this.ensureDirectories()}
 
   ensureDirectories() {
     const dirs = ["automation/logs"];
     dirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
-      }
-    });
-  }
+        fs.mkdirSync(dirPath, { recursive: true })}
+    })}
 
   log(message, level = "INFO") {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(logMessage);
     try {
-      fs.appendFileSync(this.logFile, logMessage + "\n");
-    } catch(error) {
-      console.error("Failed to write to log file:", error.message);
-    }
+      fs.appendFileSync(this.logFile, logMessage + "\n")} catch(error) {
+      console.error("Failed to write to log file:", error.message)}
   }
 
   async checkTypeScriptErrors() {
@@ -41,11 +36,9 @@ class EnhancedErrorChecker {
         timeout: 60000
       });
       this.log("No TypeScript errors found");
-      return { errors: 0, output: result };
-    } catch(error) {
+      return { errors: 0, output: result }} catch(error) {
       this.log(`TypeScript errors found: ${error.message}`, "ERROR");
-      return { errors: 1, output: error.stdout || error.message };
-    }
+      return { errors: 1, output: error.stdout || error.message }}
   }
 
   async run() {
@@ -55,13 +48,11 @@ class EnhancedErrorChecker {
       typescript: await this.checkTypeScriptErrors()
     };
     this.log("Enhanced Error Checker completed");
-    return results;
-  }
+    return results}
 }
 
 if (require.main === module) {
   const checker = new EnhancedErrorChecker();
-  checker.run().catch(console.error);
-}
+  checker.run().catch(console.error)}
 
 module.exports = EnhancedErrorChecker;

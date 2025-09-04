@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';';';
+import { Link } from 'react-router-dom';';';
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, ArrowRight } from 'lucide-react';
 <<<<<<< HEADursor/automate-test-fix-improve-and-merge-code-99d1,"});,"})"
   Linkedin,
@@ -86,18 +86,17 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
   ]"
   const solutions = []
 
-
   const contactInfo = [
     { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
     { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
     { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
     { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
   ];
-
-  const scrollToTop = (props: any) => {
+';
+  const scrollToTop = (props: any) => {';';
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-  const scrollToTop = (props: any) => {
+  };';
+  const scrollToTop = (props: any) => {';';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -235,14 +234,14 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
       <div className="&apos;max-w-7xl" mx-auto px-4 sm: px-6 lg:px-8 py-12&apos,>&apos,"
         <div className = "&apos,grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-5 gap-8&apos,>
           {/* comment */}&apos;"
-          <div className="&apos;space-y-4&apos;">&apos,"
+          <div className="&apos;space-y-4&apos">&apos,"
             <div className="&apos;flex" items-center space-x-2&apos;>&apos,"
               <div className="&apos;w-10" h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center&apos;>&apos,"
                 <Zap className="&apos;w-6" h-6 text-white&apos;       />&apos;"
               <span className="&apos;text-xl" font-bold text-white&apos;>Zion Tech Group&apos;</span>"
             <;<p className="&apos;text-zion-slate-light" text-sm leading-relaxed&apos;>
               Transforming businesses through cutting-edge technology and expert consulting.&apos;"
-            <div className="&apos;space-y-3&apos;">&apos,"
+            <div className="&apos;space-y-3&apos">&apos,"
               <div className="&apos;flex" items-center text-zion-slate-light text-sm&apos;>&apos,"
                 <Phone className="&apos;w-4" h-4 mr-2 text-zion-cyan&apos;       />&apos;"
                 <a href="&apos;tel: " +13024640950&apos; className="&apos;hover:text-zion-cyan" transition-colors&apos;>
@@ -255,10 +254,10 @@ links: [ { name: "Documentation", href: "/docs" }, { name: "White Papers", href:
           {/* comment */}
 
           {footerSections.slice(1, 6).map((section) => (}"
-            <div key="{section.title}" className="&apos;space-y-4&apos;">&apos,"
+            <div key="{section.title}" className="&apos;space-y-4&apos">&apos,"
                 <section.icon className="&apos;w-5" h-5 text-cyan-400&apos; />&apos;"
                 <h3 className="&apos;font-semibold" text-white&apos;>{section.title}&apos;</h3>"
-              <div className="&apos;space-y-2&apos;">
+              <div className="&apos;space-y-2&apos">
                 {section.links.map((link) => (&apos}"
                   <Link className="&apos;block" text-sm text-gray-300 hover: text-cyan-400 transition-colors duration-200 group",&apos,&apos,"
                       <link.icon className = "&apos,w-3" h-3 text-gray-500 group-hove,r: text-cyan-400 transition-colors duration-200&apos,        />&apos,
@@ -281,7 +280,7 @@ initial = "{false}""
                       className = "flex items-center space-x-2 text-gray-400 hover: text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group">,"
                       <link .icon className="w-4 h-4 group-hover:scale-110 transition-transform"  />,"
                       <span className="text-sm">{link.name}</span>;"
-                className="&apos;overflow-hidden&apos;">&apos,"
+                className="&apos;overflow-hidden&apos">&apos,"
                       className="&apos;flex" items-center space-x-2 text-gray-400 hover: text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group&apos,>&apos,""
                       <link .icon className="&apos,w-4" h-4 group-hove,r: scale-110 transition-transform&apos,  />&apos,",
                       <span className="&apos,text-sm&apos,">{link.name}&apos;</span>
@@ -903,8 +902,8 @@ Services: </h3>",
             <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">"
             <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">
 ,
-      {/* comment */}"
-        className="&apos;fixed" bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hove,r: -translate-y-1 flex items-center justify-center text-white";"
+      {/* comment */}"';
+        className="&apos;fixed" bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hove,r: -translate-y-1 flex items-center justify-center text-white";"';';
         aria-label="&apos,Back" to top&apos,>&apos,',
         <ArrowUp className="&apos;w-5" h-5&apos,       />&apos,"
         className = "fixed bottom-8 right-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-3 rounded-full shadow-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110""
@@ -914,76 +913,35 @@ Services: </h3>",
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </p>
-</div>
-</div>
 </div>
 </ul>
 </a>
 </div>
-</div>
 </ul>
-</div>
 </div>
 </span>
 </div>
-</div>
-</div>
 </ul>
 </div>
-</div>
-</div>
-</div>
-</a>
-</a>
 </a>
 </div>
 </a>
 </div>
-</a>
 </a>
 </p>
 </div>
 </a>
-</a>
 </p>
-</div>
 </div>
 </li>
 </ul>
 </div>
-</div>
-</div>
-</div>
 </ul>
 </a>
 </a>
-</a>
-</a>
-</a>
-</a>
 </div>
 </a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -992,58 +950,26 @@ Services: </h3>",
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </h3>
 </a>
 </a>
-</a>
-</a>
-</a>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
 </ul>
 </div>
 </div>
-</div>
-</div>
-</div>
 </h3>
-</a>
-</a>
-</a>
-</a>
 </a>
 </a>
 </motion>
 </div>
 </footer>
 </div>
-</div>
 </a>
-</a>
-</div>
 </div>
 </p>
 </div>
 </div>
-</div>
-</div>
-</div>
-</footer>
-</any>
+</footer>';
+</any>;';;';

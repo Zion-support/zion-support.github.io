@@ -1,1 +1,111 @@
-export type ServiceItem = { slug: string; title: string; category: 'Micro-SaaS' | 'IT Services' | 'AI Solutions'; description: string; startingPriceUSD: string; typicalTimeline: string; link: string; references?: { label: string; url: string }[]}; export const servicesCatalog: ServiceItem[] = [ { slug: 'ai-chatbot-for-support',title: 'AI Chatbot for Customer Support',category: 'Micro-SaaS',description: 'Deploy a branded AI assistant trained on your docs to deflect tickets,reduce response times,and boost CSAT across web and chat channels.',startingPriceUSD: '$1,500 setup + $99/mo',typicalTimeline: '1-2 weeks',link: '/services/ai-chatbot-for-support',references: [ { label: 'OpenAI API Pricing',url: 'https: { label: 'Vercel Pricing',url: 'https: ],},{ slug: 'lead-scraper-and-enrichment',title: 'Lead Scraper & Enrichment Engine',category: 'Micro-SaaS',description: 'Automated B2B lead discovery,enrichment,and scoring with workflow exports to your CRM.',startingPriceUSD: '$2,500 setup + $149/mo',typicalTimeline: '2-3 weeks',link: '/services/lead-scraper-and-enrichment',references: [ { label: 'Clearbit (reference)',url: 'https: { label: 'Apollo (reference)',url: 'https: ],},{ slug: 'document-processing-automation',title: 'Document Processing Automation',category: 'AI Solutions',description: 'Extract structured data from PDFs,invoices,forms and route it into ERPs/CRMs with human-in-the-loop review.',startingPriceUSD: '$3,000 setup + usage',typicalTimeline: '2-4 weeks',link: '/services/document-processing-automation',references: [ { label: 'Google Document AI',url: 'https: { label: 'AWS Textract',url: 'https: ],},{ slug: 'cloud-migration-and-cost-optimization',title: 'Cloud Migration & Cost Optimization',category: 'IT Services',description: 'Migrate workloads to AWS/GCP/Azure,implement IaC,and reduce spend via rightsizing and savings plans.',startingPriceUSD: 'From $8,000 project',typicalTimeline: '4-8 weeks',link: '/services/cloud-migration-and-cost-optimization',references: [ { label: 'AWS Pricing',url: 'https: { label: 'Terraform',url: 'https: ],},{ slug: 'security-hardening-and-audits',title: 'Security Hardening & Audits',category: 'IT Services',description: 'CIS/NIST aligned audits,SOC2 readiness,penetration testing coordination,and remediation roadmaps.',startingPriceUSD: 'From $5,000 audit',typicalTimeline: '2-6 weeks',link: '/services/security-hardening-and-audits',references: [ { label: 'CIS Benchmarks',url: 'https: { label: 'OWASP ASVS',url: 'https: ],},{ slug: 'mvp-web-app-development',title: 'MVP Web App Development',category: 'Micro-SaaS',description: 'Design and build a production-ready MVP with Next.js,Tailwind,Stripe,and modern auth.',startingPriceUSD: 'From $12,000 project',typicalTimeline: '4-6 weeks',link: '/services/mvp-web-app-development',references: [ { label: 'Vercel Pricing',url: 'https: { label: 'Stripe Pricing',url: 'https: ],},{ slug: 'analytics-and-bi-dashboards',title: 'Analytics & BI Dashboards',category: 'AI Solutions',description: 'Data pipelines and BI with semantic layers and KPI dashboards for execs and ops teams.',startingPriceUSD: 'From $6,000 project',typicalTimeline: '3-5 weeks',link: '/services/analytics-and-bi-dashboards',references: [ { label: 'dbt',url: 'https: { label: 'BigQuery Pricing',url: 'https: ],},];
+export type ServiceItem = {
+  slug: string;
+  title: string;
+  category: 'Micro-SaaS' | 'IT Services' | 'AI Solutions';
+  description: string;
+  startingPriceUSD: string;
+  typicalTimeline: string;
+  link: string;
+  references?: { label: string; url: string }[]};
+
+export const servicesCatalog: ServiceItem[] = [
+  {
+    slug: 'ai-chatbot-for-support',
+    title: 'AI Chatbot for Customer Support',
+    category: 'Micro-SaaS',
+    description:
+      'Deploy a branded AI assistant trained on your docs to deflect tickets, reduce response times, and boost CSAT across web and chat channels.',
+    startingPriceUSD: '$1,500 setup + $99/mo',
+    typicalTimeline: '1-2 weeks',
+    link: '/services/ai-chatbot-for-support',
+    references: [
+      { label: 'OpenAI API Pricing', url: 'https://openai.com/api/pricing' },
+      { label: 'Vercel Pricing', url: 'https://vercel.com/pricing' },
+    ],
+  },
+  {
+    slug: 'lead-scraper-and-enrichment',
+    title: 'Lead Scraper & Enrichment Engine',
+    category: 'Micro-SaaS',
+    description:
+      'Automated B2B lead discovery, enrichment, and scoring with workflow exports to your CRM.',
+    startingPriceUSD: '$2,500 setup + $149/mo',
+    typicalTimeline: '2-3 weeks',
+    link: '/services/lead-scraper-and-enrichment',
+    references: [
+      { label: 'Clearbit (reference)', url: 'https://clearbit.com' },
+      { label: 'Apollo (reference)', url: 'https://www.apollo.io/pricing' },
+    ],
+  },
+  {
+    slug: 'document-processing-automation',
+    title: 'Document Processing Automation',
+    category: 'AI Solutions',
+    description:
+      'Extract structured data from PDFs, invoices, forms and route it into ERPs/CRMs with human-in-the-loop review.',
+    startingPriceUSD: '$3,000 setup + usage',
+    typicalTimeline: '2-4 weeks',
+    link: '/services/document-processing-automation',
+    references: [
+      { label: 'Google Document AI', url: 'https://cloud.google.com/document-ai' },
+      { label: 'AWS Textract', url: 'https://aws.amazon.com/textract/pricing/' },
+    ],
+  },
+  {
+    slug: 'cloud-migration-and-cost-optimization',
+    title: 'Cloud Migration & Cost Optimization',
+    category: 'IT Services',
+    description:
+      'Migrate workloads to AWS/GCP/Azure, implement IaC, and reduce spend via rightsizing and savings plans.',
+    startingPriceUSD: 'From $8,000 project',
+    typicalTimeline: '4-8 weeks',
+    link: '/services/cloud-migration-and-cost-optimization',
+    references: [
+      { label: 'AWS Pricing', url: 'https://aws.amazon.com/pricing/' },
+      { label: 'Terraform', url: 'https://developer.hashicorp.com/terraform' },
+    ],
+  },
+  {
+    slug: 'security-hardening-and-audits',
+    title: 'Security Hardening & Audits',
+    category: 'IT Services',
+    description:
+      'CIS/NIST aligned audits, SOC2 readiness, penetration testing coordination, and remediation roadmaps.',
+    startingPriceUSD: 'From $5,000 audit',
+    typicalTimeline: '2-6 weeks',
+    link: '/services/security-hardening-and-audits',
+    references: [
+      { label: 'CIS Benchmarks', url: 'https://www.cisecurity.org/cis-benchmarks' },
+      { label: 'OWASP ASVS', url: 'https://owasp.org/www-project-application-security-verification-standard/' },
+    ],
+  },
+  {
+    slug: 'mvp-web-app-development',
+    title: 'MVP Web App Development',
+    category: 'Micro-SaaS',
+    description:
+      'Design and build a production-ready MVP with Next.js, Tailwind, Stripe, and modern auth.',
+    startingPriceUSD: 'From $12,000 project',
+    typicalTimeline: '4-6 weeks',
+    link: '/services/mvp-web-app-development',
+    references: [
+      { label: 'Vercel Pricing', url: 'https://vercel.com/pricing' },
+      { label: 'Stripe Pricing', url: 'https://stripe.com/pricing' },
+    ],
+  },
+  {
+    slug: 'analytics-and-bi-dashboards',
+    title: 'Analytics & BI Dashboards',
+    category: 'AI Solutions',
+    description:
+      'Data pipelines and BI with semantic layers and KPI dashboards for execs and ops teams.',
+    startingPriceUSD: 'From $6,000 project',
+    typicalTimeline: '3-5 weeks',
+    link: '/services/analytics-and-bi-dashboards',
+    references: [
+      { label: 'dbt', url: 'https://www.getdbt.com/' },
+      { label: 'BigQuery Pricing', url: 'https://cloud.google.com/bigquery/pricing' },
+    ],
+  },
+];
+

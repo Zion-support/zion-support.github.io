@@ -53,11 +53,6 @@ export function IntegrationConnectionModal(props: any) {
   (checked) => setSyncSettings({ ...syncSettings,
   autoCreateContacts: checked 
 
-
-
-
-
-
 })}/>
                   <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
                 </div>
@@ -66,11 +61,6 @@ export function IntegrationConnectionModal(props: any) {
                   <Checkbox id="pushNotes" checked={syncSettings.pushNotes} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
   pushNotes: checked 
-
-
-
-
-
 
 })}/>
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
@@ -81,11 +71,6 @@ export function IntegrationConnectionModal(props: any) {
   (checked) => setSyncSettings({ ...syncSettings,
   syncJobDetails: checked 
 
-
-
-
-
-
 })}/>
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
@@ -94,11 +79,6 @@ export function IntegrationConnectionModal(props: any) {
                   <Checkbox id="syncApplicantData" checked={syncSettings.syncApplicantData} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
   syncApplicantData: checked 
-
-
-
-
-
 
 })}/>
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
@@ -125,8 +105,8 @@ export function IntegrationConnectionModal(props: any) {
             </DialogFooter>
           </>) : (<>
             <div className="space-y-4 py-4">
-              <p className="text-sm">
-                Connect your {integration.name} account to sync job contacts, applicants, and more.
+              <p className="text-sm">';
+                Connect your {integration.name} account to sync job contacts, applicants, and more.';';
                 You'll be redirected to {integration.name} to authorize this connection.
               </p>
 
@@ -150,9 +130,7 @@ export function IntegrationConnectionModal(props: any) {
       </DialogContent>
     </Dialog>)}
 
-
 export default IntegrationConnectionModal;
 </Checkbox>
-</Checkbox>
-</Checkbox>
-</Checkbox>
+</Checkbox>';
+</Checkbox>;';;';

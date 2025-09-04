@@ -29,11 +29,10 @@ class SEOOptimizer {
     }
 
     log(message) {
-        const timestamp = new Date().toISOString(;
-  });
+        const timestamp = new Date().toISOString(});
         const logMessage = `[${timestamp}] ${message}\;n;`;
         fs.appendFileSync(this.logFile, logMessage);
-        console.log(message);}
+        console.log(message)}
 
     generateSitemap() {
         this.log('Generating sitemap...');
@@ -54,12 +53,12 @@ ${pages.map(page => `  <url>
         fs.writeFileSync(sitemapPath, sitemap);
         this.log(`Sitemap generated with ${pages.length} pages`);
         
-        return { status: 'success', pages: pages.length ;}}
+        return { status: 'success', pages: pages.length }}
 
     findPages() {
         const pagesDir = path.join(this.projectRoot, 'pages';);
         const appDir = path.join(this.projectRoot, 'app';);
-        const pages = ['/';];
+        const pages = ['/'];
         
         // Find pages from pages directory
         if () {
@@ -77,8 +76,7 @@ ${pages.map(page => `  <url>
         if (fs.existsSync(appDir)) {
             this.findPagesInAppDirectory(appDir, '', pages)}
         
-        return [...new Set(pages);
-  }]; // Remove duplicates
+        return [...new Set(pages)}]; // Remove duplicates
     }
 
     findPagesInDirectory(dir, basePath, pages) {
@@ -93,8 +91,7 @@ ${pages.map(page => `  <url>
                 let pagePath = path.join(basePath, item) {
     ) {
                 this.findPagesInDirectory(fullPath, path.join(basePath, item), pages)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {
-                let pagePath = path.join(basePath, item;
-  });
+                let pagePath = path.join(basePath, item});
                 pagePath = pagePath.replace(/\.(js|jsx|ts|tsx)$/, '');
                 pagePath = pagePath.replace(/\\/g, '/');
                 
@@ -119,8 +116,7 @@ ${pages.map(page => `  <url>
     }
 
     findPagesInAppDirectory(dir, basePath, pages) {
-        const items = fs.readdirSync(dir;
-  });
+        const items = fs.readdirSync(dir});
         
         for (const item of items) {
             const fullPath = path.join(dir, item;);
@@ -131,8 +127,7 @@ ${pages.map(page => `  <url>
                 let pagePath = basePath || ') {
     ) {
                 this.findPagesInAppDirectory(fullPath, path.join(basePath, item), pages)} else if (item === 'page.js' || item === 'page.jsx' || item === 'page.ts' || item === 'page.tsx') {
-                let pagePath = basePath || ';
-  }/;';
+                let pagePath = basePath || '}/;';
                 pagePath = pagePath.replace(/\\/g, '/');
                 pages.push(pagePath)}
         }
@@ -161,7 +156,7 @@ Crawl-delay: 1;
         fs.writeFileSync(robotsPath, robotsContent);
         this.log('Robots.txt generated');
         
-        return { status: 'success' ;}}
+        return { status: 'success' }}
 
     createSEOMetaComponent() {
         this.log('Creating SEO meta component...');
@@ -174,8 +169,7 @@ Crawl-delay: 1;
     ) {
             fs.mkdirSync(componentsDir, { recursive: true })}
         
-        const seoMeta = `import Head from 'next/hea;
-  }d;';
+        const seoMeta = `import Head from 'next/hea}d;';
 
 interface SEOProps {
   title?: string;
@@ -286,7 +280,7 @@ export default function SEO({
         fs.writeFileSync(path.join(componentsDir, 'SEO.tsx'), seoMeta);
         this.log('SEO meta component created');
         
-        return { status: 'success' ;}}
+        return { status: 'success' }}
 
     generateManifest() {
         this.log('Generating web app manifest...');
@@ -315,12 +309,12 @@ export default function SEO({
             "categories": ["business", "technology", "productivity"],
             "lang": "en",
             "dir": "ltr"
-       ; ;};
+       };
 
         fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
         this.log('Web app manifest generated');
         
-        return { status: 'success' ;}}
+        return { status: 'success' }}
 
     generateSEOReport() {
         this.log('Generating SEO optimization report...');
@@ -335,12 +329,12 @@ export default function SEO({
                 manifest: this.generateManifest()
             },
             recommendations: this.generateSEORecommendations()
-       ; ;};
+       };
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`SEO optimization report saved to ${this.reportFile}`);
         
-        return report;}
+        return report}
 
     generateSEORecommendations() {
         return [;
@@ -362,7 +356,7 @@ export default function SEO({
         try {
             const report = this.generateSEOReport(;);
             this.log('SEO Optimizer completed successfully');
-            return report;} catch (error) {
+            return report} catch (error) {
             this.log(`SEO Optimizer failed: ${error.message}`);
             throw error}
     }
@@ -372,8 +366,7 @@ export default function SEO({
 if ( {
     const optimizer = new SEOOptimizer) {
      {
-    const optimizer = new SEOOptimizer;
-  }(;);
+    const optimizer = new SEOOptimizer}(;);
     optimizer.run().catch(console.error)}
 
 module.exports = SEOOptimizer;

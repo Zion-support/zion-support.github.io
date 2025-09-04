@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { INNOVATIVE_SERVICES } from '../data/servicesData';
-import { IT_SERVICES } from '../data/itServicesData';
-import { AI_SERVICES } from '../data/aiServicesData';
+import React, { useState } from 'react';';';
+import { INNOVATIVE_SERVICES } from '../data/servicesData';';';
+import { IT_SERVICES } from '../data/itServicesData';';';
+import { AI_SERVICES } from '../data/aiServicesData';';';
 import { MICRO_SAAS_SERVICES } from '../data/microSaasServicesData';
 
 interface Service {
@@ -38,57 +38,57 @@ interface Service {
   competitors?: string[];
   marketSize?: string;
 }
-
-const ComprehensiveServicesShowcase: React.FC = () => {
+';
+const ComprehensiveServicesShowcase: React.FC = () => {';';
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
-
-  const allServices = [
-    ...INNOVATIVE_SERVICES.map(s => ({ ...s, serviceType: 'Innovative Services' })),
-    ...IT_SERVICES.map(s => ({ ...s, serviceType: 'IT Services' })),
-    ...AI_SERVICES.map(s => ({ ...s, serviceType: 'AI Services' })),
+';
+  const allServices = [';';
+    ...INNOVATIVE_SERVICES.map(s => ({ ...s, serviceType: 'Innovative Services' })),';';
+    ...IT_SERVICES.map(s => ({ ...s, serviceType: 'IT Services' })),';';
+    ...AI_SERVICES.map(s => ({ ...s, serviceType: 'AI Services' })),';';
     ...MICRO_SAAS_SERVICES.map(s => ({ ...s, serviceType: 'Micro SAAS Services' }))
   ];
-
-  const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Analytics')).length },
-    { id: 'Cloud Services', name: 'Cloud Services', count: allServices.filter(s => s.category.includes('Cloud')).length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cybersecurity')).length },
-    { id: 'DevOps', name: 'DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },
-    { id: 'Marketing', name: 'Marketing', count: allServices.filter(s => s.category.includes('Marketing') || s.category.includes('Social Media')).length },
-    { id: 'Project Management', name: 'Project Management', count: allServices.filter(s => s.category.includes('Project Management')).length },
-    { id: 'CRM', name: 'CRM', count: allServices.filter(s => s.category.includes('CRM')).length },
+';
+  const categories = [';';
+    { id: 'all', name: 'All Services', count: allServices.length },';';
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Analytics')).length },';';
+    { id: 'Cloud Services', name: 'Cloud Services', count: allServices.filter(s => s.category.includes('Cloud')).length },';';
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cybersecurity')).length },';';
+    { id: 'DevOps', name: 'DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },';';
+    { id: 'Marketing', name: 'Marketing', count: allServices.filter(s => s.category.includes('Marketing') || s.category.includes('Social Media')).length },';';
+    { id: 'Project Management', name: 'Project Management', count: allServices.filter(s => s.category.includes('Project Management')).length },';';
+    { id: 'CRM', name: 'CRM', count: allServices.filter(s => s.category.includes('CRM')).length },';';
     { id: 'Analytics', name: 'Analytics', count: allServices.filter(s => s.category.includes('Analytics')).length }
-  ];
-
+  ];';
+';';
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
     : allServices.filter(service => 
         service.category.includes(selectedCategory) || 
         service.subcategory.includes(selectedCategory)
       );
-
-  const formatPrice = (price: number, currency: string, model: string) => {
-    if (model === 'monthly') {
-      return `${currency}${price.toLocaleString()}/month`;
+';
+  const formatPrice = (price: number, currency: string, model: string) => {';';
+    if (model === 'monthly') {';
+      return `${currency}${price.toLocaleString()}/month`;';';
     } else if (model === 'project') {
       return `${currency}${price.toLocaleString()}/project`;
     }
     return `${currency}${price.toLocaleString()}`;
   };
 
-  const getInnovationLevelColor = (level: string) => {
-    switch (level.toLowerCase()) {
-      case 'cutting-edge': return 'bg-purple-100 text-purple-800';
-      case 'advanced': return 'bg-blue-100 text-blue-800';
-      case 'standard': return 'bg-green-100 text-green-800';
+  const getInnovationLevelColor = (level: string) => {';
+    switch (level.toLowerCase()) {';';
+      case 'cutting-edge': return 'bg-purple-100 text-purple-800';';';
+      case 'advanced': return 'bg-blue-100 text-blue-800';';';
+      case 'standard': return 'bg-green-100 text-green-800';';';
       default: return 'bg-gray-100 text-gray-800';
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-16">
         <div className="container mx-auto px-4">
@@ -134,9 +134,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
-                  selectedCategory === category.id
-                    ? 'bg-blue-600 text-white shadow-lg'
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${';
+                  selectedCategory === category.id';';
+                    ? 'bg-blue-600 text-white shadow-lg'';';
                     : 'bg-white text-gray-700 hover:bg-blue-50 border border-gray-200'
                 }`}
               >
@@ -323,9 +323,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                             <span className="font-medium">API Endpoints:</span> {selectedService.technicalSpecs.apiEndpoints}
                           </div>
                         </div>
-                      </div>
-                    )}
-
+                          </div>
+  );
+}
                     <div className="text-center">
                       <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors font-medium">
                         Get Started Now
@@ -335,11 +335,12 @@ const ComprehensiveServicesShowcase: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        )}
+              </div>
+  );
+}
       </div>
     </div>
   );
 };
-
-export default ComprehensiveServicesShowcase;
+';
+export default ComprehensiveServicesShowcase;;';;';

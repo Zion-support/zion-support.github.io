@@ -4,130 +4,310 @@ import {
   Eye,
   Type,
   Volume2,
-  Keyboard,
-  Settings
+  Keyboard,';
+  Settings';';
 } from 'lucide-react';
 
-interface AccessibilitySettings {
-  fontSize: number;
+interface AccessibilityState {
   highContrast: boolean;
-  largeText: boolean;
   reducedMotion: boolean;
-  highSaturation: boolean;
-  lineHeight: number;
-  letterSpacing: number;
-  keyboardNavigation: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  focusVisible: boolean;
   screenReader: boolean;
+  keyboardNavigation: boolean;
 }
 
-interface AccessibilityEnhancerProps {
-
-  enabled?: boolean;
-  showSettings?: boolean;
-
+interface AccessibilityConfig {
+  enableHighContrast: boolean;
+  enableReducedMotion: boolean;
+  enableFontSizeAdjustment: boolean;
+  enableFocusManagement: boolean;
+  enableScreenReaderSupport: boolean;
+  enableKeyboardNavigation: boolean;
 }
 
-export function AccessibilityEnhancer(props: any) {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 1 6,
-    highContrast: fals e,
-    largeText: fals e,
-    reducedMotion: fals e,
-    highSaturation: fals e,
-    lineHeight: 1.5,
-    letterSpacing: 0,
-    keyboardNavigation: tru e,
-    screenReader: tru e
-  });
+class AccessibilityManager {
+  private config: AccessibilityConfig = {
+    enableHighContrast: true,
+    enableReducedMotion: true,
+    enableFontSizeAdjustment: true,
+    enableFocusManagement: true,
+    enableScreenReaderSupport: true,
+    enableKeyboardNavigation: true,
+  };
 
-  const [isOpen, setIsOpen] = useState<any>(false);
+  private state: AccessibilityState = {
+    highContrast: false,
+    reducedMotion: false,
+    fontSize: 'medium',
+    focusVisible: false,
+    screenReader: false,
+    keyboardNavigation: false,
+  };
 
-  // Apply accessibility settings
-  useEffect(() => {
-    if (!enabled) return;
+  private listeners: Set<(state: AccessibilityState) => void> = new Set();
 
+  constructor() {
+    this.initializeAccessibility();
+  }
+
+  private initializeAccessibility(): void {
+    if (typeof window === 'undefined') return;
+
+    // Check for user preferences
+    this.checkUserPreferences();
+    
+    // Set up event listeners
+    this.setupEventListeners();
+    
+    // Apply initial styles
+    this.applyAccessibilityStyles();
+  }
+
+  private checkUserPreferences(): void {
+    // Check for reduced motion preference
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this.state.reducedMotion = true;
+    }
+
+    // Check for high contrast preference
+    if (window.matchMedia('(prefers-contrast: high)').matches) {
+      this.state.highContrast = true;
+    }
+
+    // Check for screen reader usage
+    this.state.screenReader = this.detectScreenReader();
+
+    // Load saved preferences
+    this.loadSavedPreferences();
+  }
+
+  private detectScreenReader(): boolean {
+    // Simple screen reader detection
+    return !!(
+      window.navigator.userAgent.includes('NVDA') ||
+      window.navigator.userAgent.includes('JAWS') ||
+      window.navigator.userAgent.includes('VoiceOver') ||
+      window.navigator.userAgent.includes('TalkBack')
+    );
+  }
+
+  private loadSavedPreferences(): void {
+    try {
+      const saved = localStorage.getItem('accessibility_preferences');
+      if (saved) {
+        const preferences = JSON.parse(saved);
+        this.state = { ...this.state, ...preferences };
+      }
+    } catch (e) {
+      
+    }
+  }
+
+  private savePreferences(): void {
+    try {
+      localStorage.setItem('accessibility_preferences', JSON.stringify(this.state));
+    } catch (e) {
+      
+    }
+  }
+
+  private setupEventListeners(): void {
+    // Listen for keyboard navigation
+    document.addEventListener('keydown', this.handleKeyDown);
+    document.addEventListener('mousedown', this.handleMouseDown);
+    
+    // Listen for focus changes
+    document.addEventListener('focusin', this.handleFocusIn);
+    document.addEventListener('focusout', this.handleFocusOut);
+
+    // Listen for preference changes
+    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', this.handlePreferenceChange);
+    window.matchMedia('(prefers-contrast: high)').addEventListener('change', this.handlePreferenceChange);
+  }
+
+  private handleKeyDown = (event: KeyboardEvent): void => {
+    this.state.keyboardNavigation = true;
+    this.notifyListeners();
+
+    // Handle keyboard shortcuts
+    if (event.ctrlKey || event.metaKey) {
+      switch (event.key) {
+        case '=':
+        case '+':
+          event.preventDefault();
+          this.increaseFontSize();
+          break;
+        case '-':
+          event.preventDefault();
+          this.decreaseFontSize();
+          break;
+        case '0':
+          event.preventDefault();
+          this.resetFontSize();
+          break;
+        case 'h':
+          event.preventDefault();
+          this.toggleHighContrast();
+          break;
+      }
+    }
+  };
+
+  private handleMouseDown = (): void => {
+    this.state.keyboardNavigation = false;
+    this.notifyListeners();
+  };
+
+  private handleFocusIn = (event: FocusEvent): void => {
+    if (this.state.keyboardNavigation) {
+      this.state.focusVisible = true;
+      this.notifyListeners();
+    }
+  };
+
+  private handleFocusOut = (): void => {
+    this.state.focusVisible = false;
+    this.notifyListeners();
+  };
+
+  private handlePreferenceChange = (): void => {
+    this.checkUserPreferences();
+    this.applyAccessibilityStyles();
+    this.notifyListeners();
+  };
+
+  private applyAccessibilityStyles(): void {
     const root = document.documentElement;
-    
-    // Apply font size
-    root.style.fontSize = `${settings.fontSize}px`;
-    
-    // Apply line height
-    root.style.lineHeight = settings.lineHeight.toString();
-    
-    // Apply letter spacing
-    root.style.letterSpacing = `${settings.letterSpacing}px`;
 
-    // Apply high contrast
-    if (settings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
+    // Apply high contrast';
+    if (settings.highContrast) {';';
+      root.classList.add('high-contrast');';
+    } else {';';
       root.classList.remove('high-contrast');
     }
 
-    // Apply large text
-    if (settings.largeText) {
-      root.classList.add('large-text');
-    } else {
+    // Apply large text';
+    if (settings.largeText) {';';
+      root.classList.add('large-text');';
+    } else {';';
       root.classList.remove('large-text');
     }
 
-    // Apply reduced motion
-    if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
+    // Apply reduced motion';
+    if (settings.reducedMotion) {';';
+      root.classList.add('reduced-motion');';
+    } else {';';
       root.classList.remove('reduced-motion');
     }
 
-    // Apply high saturation
-    if (settings.highSaturation) {
-      root.classList.add('high-saturation');
-    } else {
+    // Apply high saturation';
+    if (settings.highSaturation) {';';
+      root.classList.add('high-saturation');';
+    } else {';';
       root.classList.remove('high-saturation');
     }
-  }, [settings, enabled]);
+  }
 
-  // Keyboard navigation support
-  useEffect(() => {
-    if (!enabled || !settings.keyboardNavigation) return;
+  private notifyListeners(): void {
+    this.listeners.forEach(listener => listener(this.state));
+  }
 
     const handleKeyDown = (props: any) => {
       const target = event.target as HTMLElement;
-      
-      // Tab navigation enhancement
-      if (event.key === 'Tab') {
-        const focusableElements = document.querySelectorAll(
+      ';
+      // Tab navigation enhancement';';
+      if (event.key === 'Tab') {';
+        const focusableElements = document.querySelectorAll(';';
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
         
         const firstElement = focusableElements[0] as HTMLElement;
         const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-        if (event.shiftKey && target === firstElement) {
-          event.preventDefault();
-          lastElement.focus();
-        } else if (!event.shiftKey && target === lastElement) {
-          event.preventDefault();
-          firstElement.focus();
+  toggleReducedMotion(): void {
+    this.state.reducedMotion = !this.state.reducedMotion;
+    this.applyAccessibilityStyles();
+    this.savePreferences();
+    this.notifyListeners();
+  }
+
+  setFontSize(size: 'small' | 'medium' | 'large'): void {
+    this.state.fontSize = size;
+    this.applyAccessibilityStyles();
+    this.savePreferences();
+    this.notifyListeners();
+  }
+
+  increaseFontSize(): void {
+    const sizes = ['small', 'medium', 'large'];
+    const currentIndex = sizes.indexOf(this.state.fontSize);
+    if (currentIndex < sizes.length - 1) {
+      this.setFontSize(sizes[currentIndex + 1] as any);
+    }
+  }
+
+  decreaseFontSize(): void {
+    const sizes = ['small', 'medium', 'large'];
+    const currentIndex = sizes.indexOf(this.state.fontSize);
+    if (currentIndex > 0) {
+      this.setFontSize(sizes[currentIndex - 1] as any);
+    }
+  }
+
+  resetFontSize(): void {
+    this.setFontSize('medium');
+  }
+
+  getState(): AccessibilityState {
+    return { ...this.state };
+  }
+
+  subscribe(listener: (state: AccessibilityState) => void): () => void {
+    this.listeners.add(listener);
+    return () => this.listeners.delete(listener);
+  }
+
+  // Focus management
+  trapFocus(element: HTMLElement): () => void {
+    const focusableElements = element.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    const handleTabKey = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
         }
       }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
+    };';
+';';
+    document.addEventListener('keydown', handleKeyDown);';';
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [settings.keyboardNavigation, enabled]);
 
   // Screen reader announcements
   const announceToScreenReader = (props: any) => {
-    if (!settings.screenReader) return;
-
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
+    if (!settings.screenReader) return;';
+';';
+    const announcement = document.createElement('div');';';
+    announcement.setAttribute('aria-live', 'polite');';';
+    announcement.setAttribute('aria-atomic', 'true');';';
     announcement.className = 'sr-only';
     announcement.textContent = message;
-    
+
     document.body.appendChild(announcement);
-    
+
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
@@ -135,16 +315,16 @@ export function AccessibilityEnhancer(props: any) {
 
   // Add accessibility attributes to interactive elements
   useEffect(() => {
-    if (!enabled) return;
-
+    if (!enabled) return;';
+';';
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     
     interactiveElements.forEach((element) => {
       const el = element as HTMLElement;
-      
-      // Add focus indicators
-      if (!el.hasAttribute('data-accessibility-enhanced')) {
-        el.setAttribute('data-accessibility-enhanced', 'true');
+      ';
+      // Add focus indicators';';
+      if (!el.hasAttribute('data-accessibility-enhanced')) {';';
+        el.setAttribute('data-accessibility-enhanced', 'true');';';
         el.classList.add('focus-visible: outlin e-2', 'focus-visible: outlin e-blue-500', 'focus-visible: outlin e-offset-2');
       }
     });
@@ -192,14 +372,14 @@ export function AccessibilityEnhancer(props: any) {
               <label className="block text-sm font-medium text-gray-700 dark: tex t-gray-300 mb-2">
                 Font Size: {settings.fontSize}px
               </label>
-              <div className="flex items-center gap-2">
-                <button
+              <div className="flex items-center gap-2">';
+                <button';';
                   onClick={() => updateSetting('fontSize', Math.max(settings.fontSize - 2, 12))}
                   className="px-3 py-1 bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
                 >
                   A-
-                </button>
-                <button
+                </button>';
+                <button';';
                   onClick={() => updateSetting('fontSize', Math.min(settings.fontSize + 2, 24))}
                   className="px-3 py-1 bg-gray-200 dark: b g-gray-700 text-gray-700 dark: tex t-gray-300 rounded hover: b g-gray-300 dark: hove r:bg-gray-600"
                 >
@@ -212,8 +392,8 @@ export function AccessibilityEnhancer(props: any) {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"
-                  checked={settings.highContrast}
+                  type="checkbox"';
+                  checked={settings.highContrast}';';
                   onChange={(e) => updateSetting('highContrast', e.target.checked)}
                   className="mr-2"
                 />
@@ -225,8 +405,8 @@ export function AccessibilityEnhancer(props: any) {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"
-                  checked={settings.largeText}
+                  type="checkbox"';
+                  checked={settings.largeText}';';
                   onChange={(e) => updateSetting('largeText', e.target.checked)}
                   className="mr-2"
                 />
@@ -238,8 +418,8 @@ export function AccessibilityEnhancer(props: any) {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"
-                  checked={settings.reducedMotion}
+                  type="checkbox"';
+                  checked={settings.reducedMotion}';';
                   onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
                   className="mr-2"
                 />
@@ -251,8 +431,8 @@ export function AccessibilityEnhancer(props: any) {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"
-                  checked={settings.keyboardNavigation}
+                  type="checkbox"';
+                  checked={settings.keyboardNavigation}';';
                   onChange={(e) => updateSetting('keyboardNavigation', e.target.checked)}
                   className="mr-2"
                 />
@@ -264,8 +444,8 @@ export function AccessibilityEnhancer(props: any) {
             <div>
               <label className="flex items-center">
                 <input
-                  type="checkbox"
-                  checked={settings.screenReader}
+                  type="checkbox"';
+                  checked={settings.screenReader}';';
                   onChange={(e) => updateSetting('screenReader', e.target.checked)}
                   className="mr-2"
                 />
@@ -273,13 +453,13 @@ export function AccessibilityEnhancer(props: any) {
               </label>
             </div>
           </div>
-        </div>
-      )}
+            </div>
+  );
+}
     </>
   );
 }
 
-
 export default AccessibilityEnhancer;
-</any>
-</AccessibilitySettings>
+</any>';
+</AccessibilitySettings>;';;';

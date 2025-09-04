@@ -1,7 +1,6 @@
 export function EnhancedLoadingSpinner(props: any) {
 
   
-  
 '  if (variant === 'minimal') {
 
     return ()
@@ -13,8 +12,8 @@ export function EnhancedLoadingSpinner(props: any) {
             {text}
           </span>
         )}
-      </div>
-    )}
+      </div>';
+    )}';';
 '  if (variant === 'default') {
 
     return ("
@@ -35,11 +34,12 @@ export function EnhancedLoadingSpinner(props: any) {
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.5 }}
             />
+              </div>
+  );
+}
           </div>
-        )}
-      </div>
-    )}
-
+  );
+}
   // Futuristic variant (default)
   return ("
     <div className="flex flex-col items-center justify-center space-y-6">
@@ -49,13 +49,13 @@ export function EnhancedLoadingSpinner(props: any) {
           className={`${sizeClasses[size]} border-4 border-cyan-400/20 rounded-full`}
         />
         <motion.div`
-          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-cyan-400 border-t-transparent rounded-full`}
-          animate={{ rotate: 36 0 }}
+          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-cyan-400 border-t-transparent rounded-full`}';
+          animate={{ rotate: 36 0 }}';';
           transition={{ duration: 1, repeat: Infinit y, ease: 'linear' }}
         />
-
-        {/* Inner glow effect */}
-        <div'`
+';
+        {/* Inner glow effect */}';';
+        <div'`';';
           className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-sm`}
         />
 
@@ -95,8 +95,8 @@ export function EnhancedLoadingSpinner(props: any) {
         <div className="w-64 bg-gray-800/50 rounded-full h-3 border border-cyan-400/30">
           <motion.div"
             className="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full relative overflow-hidden"
-            initial={{ width: 0 }}`
-            animate={{ width: `${progress}%` }}
+            initial={{ width: 0 }}`';
+            animate={{ width: `${progress}%` }}';';
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
             {/* Shimmer effect */}
@@ -106,9 +106,9 @@ export function EnhancedLoadingSpinner(props: any) {
               transition={{ duration: 2, repeat: Infinit y }}
             />
           </motion.div>
-        </div>
-      )}
-
+            </div>
+  );
+}
       {/* Floating particles */}"
       <div className="relative w-full h-20">
         {[...Array(6)].map(_: unknow n, i: unknow n (
@@ -132,21 +132,16 @@ export function EnhancedLoadingSpinner(props: any) {
           />
         ))}
       </div>
-    </div>
-  )}
-
+        </div>
+  );
+}
 // Export default for backward compatibility;
-export { EnhancedLoadingSpinner };
-export default EnhancedLoadingSpinner;
+export { EnhancedLoadingSpinner };';
+export default EnhancedLoadingSpinner;';';
 '"`
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</div>
 </div>
 </motion>
-</div>
-</div>
+</div>';
+</div>';';

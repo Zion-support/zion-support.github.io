@@ -12,22 +12,19 @@ class MasterOrchestrator {
     this.logFile = path.join(this.logsDir, 'master-orchestrator.log');
     this.startTime = Date.now();
     this.results = {};
-    try { fs.mkdirSync(this.logsDir, { recursive: true }); } catch {}
+    try { fs.mkdirSync(this.logsDir, { recursive: true })} catch {}
   }
 
   log(message, level = 'INFO') {
     const line = `[${new Date().toISOString()}] [${level}] ${message}\n`;
-    try { fs.appendFileSync(this.logFile, line); } catch {}
-    process.stdout.write(line);
-  }
+    try { fs.appendFileSync(this.logFile, line)} catch {}
+    process.stdout.write(line)}
 
   runCmd(cmd) {
     try {
       const out = execSync(cmd, { stdio: 'pipe', encoding: 'utf8' });
-      return { success: true, output: out };
-    } catch (e) {
-      return { success: false, error: e.message, output: e.stdout?.toString?.() || '' };
-    }
+      return { success: true, output: out }} catch (e) {
+      return { success: false, error: e.message, output: e.stdout?.toString?.() || '' }}
   }
 
   async runAllChecks() {
@@ -50,8 +47,7 @@ class MasterOrchestrator {
       if (!res.success && name === 'lint') {
         this.log('Attempting lint auto-fix...');
         const fixRes = this.runCmd('npm run lint:fix');
-        this.results.lint.autoFixed = fixRes.success;
-      }
+        this.results.lint.autoFixed = fixRes.success}
     }
 
     const passed = Object.values(this.results).filter(r => r.success).length;
@@ -71,12 +67,10 @@ class MasterOrchestrator {
       fs.writeFileSync(
         path.join(this.logsDir, 'master-orchestrator-report.json'),
         JSON.stringify({ summary, results: this.results }, null, 2)
-      );
-    } catch {}
+      )} catch {}
 
     this.log(`Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`);
-    return passed === total;
-  }
+    return passed === total}
 }
 
 if (require.main === module) {
@@ -88,8 +82,7 @@ if (require.main === module) {
       break;
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
-      process.exit(1);
-  }
+      process.exit(1)}
 }
 
 module.exports = MasterOrchestrator;

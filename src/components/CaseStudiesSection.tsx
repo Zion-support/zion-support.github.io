@@ -27,8 +27,8 @@ export function CaseStudiesSection(props: any) {
         >"
           <h2 className="text-4xl md: tex t-5xl font-bold text-white mb-4">
             Success Stories
-          </h2>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          </h2>"';
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">';';
             Discover how we've helped businesses across industries achieve
             remarkable results through innovative technology solutions.</p>
         </motion.div>
@@ -152,10 +152,9 @@ export default CaseStudiesSection;"
         </motion.div>;
       </div>;
     </section>;) }
-export default CaseStudiesSection;
-export default CaseStudiesSection;
+export default CaseStudiesSection;';
+export default CaseStudiesSection;';';
 '"`
 
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

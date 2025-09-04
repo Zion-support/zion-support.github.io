@@ -2,9 +2,5 @@ import React from 'react'; const EnhancedHero = (props: any) => { const [current
 
 </button>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

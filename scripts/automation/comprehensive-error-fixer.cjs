@@ -30,52 +30,47 @@ class ComprehensiveErrorFixer {
     this.ensureLogDirectory();
     this.fixCount = 0;
     this.errorTypes = {
-  syntax: 0,;
-      import 0,;
-      component: 0,;
-      dependency: 0,;
-      build: 0;
-}
+  syntax: 0,
+      import 0,
+      component: 0,
+      dependency: 0,
+      build: 0}
     this.startTime = Date.now();
     // Get automation interval from environment variable (default: 30 minutes);
-    this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes;
-}
+    this.AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes}
 ;
   ensureLogDirectory() {
   const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-  fs.mkdirSync(logDir, { recursive: true });
-}
+  fs.mkdirSync(logDir, { recursive: true })}
   }
 ;
   log(message) {
   console.log(`[${new Date().toISOString()}] ${message}`);
 
   log(message) {
-  console.log(`[${new Date().toISOString()}] ${message}`);
-}
+  console.log(`[${new Date().toISOString()}] ${message}`)}
 ;
   async fixTypeScriptErrors() {
   let fixes = 0;
     // Fix common TypeScript syntax errors;
     const filesToFix = [
-  `src/components/MobileExperienceEnhancer.tsx`,;
-      `src/components/ModernUIEnhancer.tsx`,;
-      `src/components/NotificationSystem.tsx",;
-      "src/context/auth/AuthContext.tsx",;
-      "src/context/auth/profileMapper.ts",;
-      "src/context/auth/useAuthEventHandlers.ts",;
+  `src/components/MobileExperienceEnhancer.tsx`,
+      `src/components/ModernUIEnhancer.tsx`,
+      `src/components/NotificationSystem.tsx",
+      "src/context/auth/AuthContext.tsx",
+      "src/context/auth/profileMapper.ts",
+      "src/context/auth/useAuthEventHandlers.ts",
 
     // Fix common TypeScript syntax errors;
     const filesToFix = [
-  "src/components/MobileExperienceEnhancer.tsx",;
-      "src/components/ModernUIEnhancer.tsx",;
-      "src/components/NotificationSystem.tsx",;
-      "src/context/auth/AuthContext.tsx",;
-      "src/context/auth/profileMapper.ts",;
-      "src/context/auth/useAuthEventHandlers.ts",;
-    ];
-    ];
+  "src/components/MobileExperienceEnhancer.tsx",
+      "src/components/ModernUIEnhancer.tsx",
+      "src/components/NotificationSystem.tsx",
+      "src/context/auth/AuthContext.tsx",
+      "src/context/auth/profileMapper.ts",
+      "src/context/auth/useAuthEventHandlers.ts",
+    ]];
 for (const filePath of filesToFix) {
   if (fs.existsSync(filePath)) {
   try {
@@ -90,7 +85,7 @@ for (const filePath of filesToFix) {
           // Fix property signatures;
           content = content.replace(/action\?\s*:\s*{\s*;/g, `action?: {`);
           content = content.replace(;
-            /logout: \s*any\(\)\s*=>\s*Promise<any>;/g,;
+            /logout: \s*any\(\)\s*=>\s*Promise<any>;/g,
             `logout: () => Promise<any>;`;
 
           // Fix "any" type annotations;
@@ -104,38 +99,36 @@ for (const filePath of filesToFix) {
           // Fix property signatures;
           content = content.replace(/action\?\s*:\s*{\s*;/g, "action?: {");
           content = content.replace(;
-            /logout: \s*any\(\)\s*=>\s*Promise<any>;/g,;
+            /logout: \s*any\(\)\s*=>\s*Promise<any>;/g,
             "logout: () => Promise<any>;
           );
 
           if (content !== originalContent) {
   fs.writeFileSync(filePath, content);
             fixes++;
-            this.log(`  ✅ Fixed TypeScript errors in ${filePath}`);
-}
+            this.log(`  ✅ Fixed TypeScript errors in ${filePath}`)}
         } catch (error) {
   this.log(`Error fixing TypeScript errors in ${filePath  }: ${error.message}`)}
       }
     }
 ;
-    return fixes;
-}
+    return fixes}
 ;
   async fixJSXErrors() {
   let fixes = 0;
     // Fix common JSX syntax errors;
     const filesToFix = [
-  `src/components/ScrollToTop.jsx`,;
-      `src/components/home/ServicesShowcase.jsx`,;
-      `src/layout/PrimaryNav.jsx",;
-      "src/legal/TermsOfService.tsx",;
+  `src/components/ScrollToTop.jsx`,
+      `src/components/home/ServicesShowcase.jsx`,
+      `src/layout/PrimaryNav.jsx",
+      "src/legal/TermsOfService.tsx",
 
     // Fix common JSX syntax errors;
     const filesToFix = [
-  "src/components/ScrollToTop.jsx",;
-      "src/components/home/ServicesShowcase.jsx",;
-      "src/layout/PrimaryNav.jsx",;
-      "src/legal/TermsOfService.tsx",;
+  "src/components/ScrollToTop.jsx",
+      "src/components/home/ServicesShowcase.jsx",
+      "src/layout/PrimaryNav.jsx",
+      "src/legal/TermsOfService.tsx",
     ];
 
     for (const filePath of filesToFix) {
@@ -149,45 +142,39 @@ for (const filePath of filesToFix) {
           content = content.replace(/<\/>;/g, `</>`);
           // Fix JSX expressions;
           content = content.replace(;
-            /<div\s+className="max-w-4xl mx-auto space-y-8>\s*<div/g,;
+            /<div\s+className="max-w-4xl mx-auto space-y-8>\s*<div/g,
             `<div className=max-w-4xl mx-auto space-y-8><div`          );
 
           if (content !== originalContent) {
   fs.writeFileSync(filePath, content);
             fixes++;
-            this.log(`  ✅ Fixed JSX errors in ${filePath}`);
-}
+            this.log(`  ✅ Fixed JSX errors in ${filePath}`)}
         } catch (error) {
   this.log(`Error fixing JSX errors in ${filePath  }: ${error.message}`)}
       }
     }
 ;
-    return fixes;
-}
+    return fixes}
 ;
   async fixLintingErrors() {
   let fixes = 0;
     try {
   // Run ESLint auto-fix;
       const result = execSync(`npx eslint . --ext .js,.jsx,.ts,.tsx --fix 2>&1`, {
-  encoding: `utf8` ;
-});
+  encoding: `utf8` });
       if (result.includes(`Fixed`)) {
   try {
   // Run ESLint auto-fix;
       const result = execSync("npx eslint . --ext .js,.jsx,.ts,.tsx --fix 2>&1", {
-  encoding: "utf8" ;
-});
+  encoding: "utf8" });
       ;
       if (result.includes("Fixed")) {
   fixes++;
-        this.log(`  ✅ Fixed linting errors with ESLint auto-fix`);
-}
+        this.log(`  ✅ Fixed linting errors with ESLint auto-fix`)}
     } catch (error) {
   this.log(`Error running ESLint auto-fix: ${error.message  }`)}
 ;
-    return fixes;
-}
+    return fixes}
 ;
   async fixUnusedImports() {
   let fixes = 0;
@@ -216,36 +203,33 @@ for (const filePath of filesToFix) {
         ;
         // Remove unused React imports if no JSX;
         if (!content.includes("jsx") && !content.includes("JSX")) {
-  content = content.replace(/import\s+React\s+from\s+[""]react[""];?\n?/g, ");
-}
+  content = content.replace(/import\s+React\s+from\s+[""]react[""];?\n?/g, ")}
 ;
         if (content !== originalContent) {
   fs.writeFileSync(filePath, content);
           fixes++;
-          this.log(`  ✅ Fixed unused imports in ${filePath}`);
-}
+          this.log(`  ✅ Fixed unused imports in ${filePath}`)}
       } catch (error) {
   this.log(`Error fixing unused imports in ${filePath  }: ${error.message}`)}
     }
 ;
-    return fixes;
-}
+    return fixes}
 ;
   async fixConsoleStatements() {
   let fixes = 0;
     // Replace console statements with proper logging;
     const filesToFix = [
-  `src/hooks/useAICodeGeneration.jsx`,;
-      `src/hooks/usePerformance.jsx`,;
-      `src/utils/productionLogger.js",;
-      "src/utils/safeStorage.js",;
+  `src/hooks/useAICodeGeneration.jsx`,
+      `src/hooks/usePerformance.jsx`,
+      `src/utils/productionLogger.js",
+      "src/utils/safeStorage.js",
 
     // Replace console statements with proper logging;
     const filesToFix = [
-  "src/hooks/useAICodeGeneration.jsx",;
-      "src/hooks/usePerformance.jsx",;
-      "src/utils/productionLogger.js",;
-      "src/utils/safeStorage.js",;
+  "src/hooks/useAICodeGeneration.jsx",
+      "src/hooks/usePerformance.jsx",
+      "src/utils/productionLogger.js",
+      "src/utils/safeStorage.js",
     ];
 
     for (const filePath of filesToFix) {
@@ -261,51 +245,43 @@ for (const filePath of filesToFix) {
           if (content !== originalContent) {
   fs.writeFileSync(filePath, content);
             fixes++;
-            this.log(`  ✅ Fixed console statements in ${filePath}`);
-}
+            this.log(`  ✅ Fixed console statements in ${filePath}`)}
         } catch (error) {
   this.log(`Error fixing console statements in ${filePath  }: ${error.message}`)}
       }
     }
 ;
-    return fixes;
-}
+    return fixes}
 ;
   async fixMergeConflicts() {
   // Implementation for fixing merge conflicts;
     this.log(`Fixing merge conflicts...`);
-    return 0;
-}
+    return 0}
 ;
   async fixESLintErrors() {
   // Implementation for fixing ESLint errors;
     this.log(`Fixing ESLint errors...`);
-    return 0;
-}
+    return 0}
 ;
   async fixImportExportIssues() {
   // Implementation for fixing import/export issues;
     this.log(`Fixing import/export issues...");
-    return 0;
-}
+    return 0}
 ;
   async fixFileExtensionIssues() {
   // Implementation for fixing file extension issues;
     this.log("Fixing file extension issues...`);
-    return 0;
-}
+    return 0}
 ;
   async fixSyntaxErrors() {
   // Implementation for fixing syntax errors;
     this.log(`Fixing syntax errors...`);
-    return 0;
-}
+    return 0}
 ;
   async fixDependencyIssues() {
   // Implementation for fixing dependency issues;
     this.log(`Fixing dependency issues...`);
-    return 0;
-}
+    return 0}
 ;
   async runComprehensiveErrorFixer() {
   try {
@@ -345,51 +321,42 @@ for (const filePath of filesToFix) {
         await this.fixDependencyIssues();
         // Step 8: Generate error report;
         await this.generateErrorReport();
-        this.log(`Comprehensive error fixing completed successfully!`);
-        ;
-} catch (error) {
-  this.log(`Error during automation: ${error.message  }`);
-} catch (error) {
+        this.log(`Comprehensive error fixing completed successfully!`)} catch (error) {
+  this.log(`Error during automation: ${error.message  }`)} catch (error) {
   this.log(`Error during automation: ${error.message  }`);
 this.errorReport.errorsFound.push({
-  type: `automation_error`,;
-          message: error.message,;
+  type: `automation_error`,
+          message: error.message,
 
   async fixMergeConflicts() {
   // Implementation for fixing merge conflicts;
     this.log("Fixing merge conflicts...");
-    return 0;
-}
+    return 0}
 ;
   async fixESLintErrors() {
   // Implementation for fixing ESLint errors;
     this.log("Fixing ESLint errors...");
-    return 0;
-}
+    return 0}
 ;
   async fixImportExportIssues() {
   // Implementation for fixing import/export issues;
     this.log("Fixing import/export issues...");
-    return 0;
-}
+    return 0}
 ;
   async fixFileExtensionIssues() {
   // Implementation for fixing file extension issues;
     this.log("Fixing file extension issues...");
-    return 0;
-}
+    return 0}
 ;
   async fixSyntaxErrors() {
   // Implementation for fixing syntax errors;
     this.log("Fixing syntax errors...");
-    return 0;
-}
+    return 0}
 ;
   async fixDependencyIssues() {
   // Implementation for fixing dependency issues;
     this.log("Fixing dependency issues...");
-    return 0;
-}
+    return 0}
 ;
   async runComprehensiveErrorFixer() {
   try {
@@ -444,37 +411,30 @@ this.errorReport.errorsFound.push({
         // Step 8: Generate error report;
         await this.generateErrorReport();
         ;
-        this.log("Comprehensive error fixing completed successfully!");
-        ;
-} catch (error) {
+        this.log("Comprehensive error fixing completed successfully!")} catch (error) {
   this.log(`Error during automation: ${error.message}`);
         this.errorReport.errorsFound.push({
-  type: "automation_error",;
-          message: error.message,;
-          stack: error.stack;
-});
-} finally {
+  type: "automation_error",
+          message: error.message,
+          stack: error.stack})} finally {
   this.errorReport.duration = Date.now() - this.startTime;
-        await this.saveErrorReport();
-}
+        await this.saveErrorReport()}
 ;
       // Generate comprehensive error fixer report;
       this.log(`📊 Generating comprehensive error fixer report...`);
       const report = {
-  timestamp: new Date().toISOString(),;
-        fixesApplied: fixesApplied,;
-        summary: `Comprehensive error fixer completed`,;
+  timestamp: new Date().toISOString(),
+        fixesApplied: fixesApplied,
+        summary: `Comprehensive error fixer completed`,
         status: `completed`}
       const reportPath = path.join(;
-        process.cwd(),;
+        process.cwd(),
         `comprehensive-error-fixer-report.json`;
       );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
       this.log(`✅ Comprehensive error fixer report saved to ${reportPath}`);
-      this.log(`✅ Comprehensive error fixer completed successfully. Applied ${fixesApplied} fixes.`);
-} catch (error) {
-  this.log(`❌ Comprehensive error fixer failed: ${error.message  }`);
-}
+      this.log(`✅ Comprehensive error fixer completed successfully. Applied ${fixesApplied} fixes.`)} catch (error) {
+  this.log(`❌ Comprehensive error fixer failed: ${error.message  }`)}
   }
 ;
   async generateErrorReport() {
@@ -499,24 +459,18 @@ this.errorReport.errorsFound.push({
       this.log(`Comprehensive Error Fixer completed. Fixed ${this.fixCount} errors.`);
       this.log(`Error types fixed: ${JSON.stringify(this.errorTypes)}`);
       if (typeCheckPassed && lintPassed) {
-  this.log(`All checks passed successfully!`);
-} else {
-  this.log(`Some checks failed, but errors were fixed`);
-}
-      ;
-} catch (error) {
-  this.log(`Error in Comprehensive Error Fixer: ${error.message  }`);
-} catch (error) {
-  this.log(`Error in Comprehensive Error Fixer: ${error.message  }`);
-}
+  this.log(`All checks passed successfully!`)} else {
+  this.log(`Some checks failed, but errors were fixed`)}
+      } catch (error) {
+  this.log(`Error in Comprehensive Error Fixer: ${error.message  }`)} catch (error) {
+  this.log(`Error in Comprehensive Error Fixer: ${error.message  }`)}
   }
 ;
   async fixImportIssues() {
   this.log(`🔧 Fixing import issues...`);
     // Implementation for fixing import issues;
     this.errorTypes.import++;
-    this.fixCount++;
-}
+    this.fixCount++}
 ;
   async fixComponentIssues() {
   this.log(`🔧 Fixing component issues...`);
@@ -525,75 +479,64 @@ this.errorReport.errorsFound.push({
   this.log("🔧 Fixing component issues...");
     // Implementation for fixing component issues;
     this.errorTypes.component++;
-    this.fixCount++;
-}
+    this.fixCount++}
 ;
   async fixDependencyIssues() {
   this.log(`🔧 Fixing dependency issues...");
     // Implementation for fixing dependency issues;
     this.errorTypes.dependency++;
-    this.fixCount++;
-}
+    this.fixCount++}
 ;
   async fixBuildIssues() {
   this.log("🔧 Fixing build issues...");
     // Implementation for fixing build issues;
     this.errorTypes.build++;
-    this.fixCount++;
-}
+    this.fixCount++}
 ;
   async runTypeCheck() {
   this.log("🔧 Running type check...");
     try {
   execSync("npx tsc --noEmit", { stdio: "pipe" });
-      return true;
-} catch (error) {
+      return true} catch (error) {
   
 } catch (error) {
   this.log("Type check failed");
-      return false;
-}
+      return false}
   }
 ;
   async runLint() {
   this.log("🔧 Running lint...");
     try {
   execSync("npx eslint . --fix", { stdio: "pipe" });
-      return true;
-} catch (error) {
+      return true} catch (error) {
   
 } catch (error) {
+  this.log("Lint failed")} catch (error) {
   this.log("Lint failed");
-} catch (error) {
-  this.log("Lint failed");
-return false;
-}
+return false}
   }
 ;
   async generateReport() {
   this.log("🔧 Generating error report...`);
     const report = {
-  timestamp: new Date().toISOString(),;
-      fixCount: this.fixCount,;
-      errorTypes: this.errorTypes,;
-      duration: Date.now() - this.startTime;
-}
+  timestamp: new Date().toISOString(),
+      fixCount: this.fixCount,
+      errorTypes: this.errorTypes,
+      duration: Date.now() - this.startTime}
     const reportPath = path.join(this.projectRoot, `automation/logs`, `comprehensive-error-fixer-report.json`);
 
   async generateReport() {
   this.log("🔧 Generating error report...");
     const report = {
-  timestamp: new Date().toISOString(),;
-      fixCount: this.fixCount,;
-      errorTypes: this.errorTypes,;
-      duration: Date.now() - this.startTime;
-}
+  timestamp: new Date().toISOString(),
+      fixCount: this.fixCount,
+      errorTypes: this.errorTypes,
+      duration: Date.now() - this.startTime}
     ;
     const reportPath = path.join(this.projectRoot, "automation/logs", "comprehensive-error-fixer-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportPath}`);
-    return report;
-}
+    return report}
 ;
   async saveErrorReport() {
   const timestamp = Date.now();
@@ -601,12 +544,10 @@ return false;
         // Ensure directory exists;
     const dir = path.dirname(reportPath);
     if (!fs.existsSync(dir)) {
-  fs.mkdirSync(dir, { recursive: true });
-}
+  fs.mkdirSync(dir, { recursive: true })}
     ;
     fs.writeFileSync(reportPath, JSON.stringify(this.errorReport, null, 2));
-    this.log(`Error report saved to: ${reportPath}`);
-}
+    this.log(`Error report saved to: ${reportPath}`)}
 ;
   // Main continuous loop;
   async runContinuous() {
@@ -615,22 +556,18 @@ return false;
     await this.runComprehensiveErrorFixer();
     // Set up continuous execution;
     setInterval(async () => {
-  await this.runComprehensiveErrorFixer();
-}, this.AUTOMATION_INTERVAL);
-    this.log(`✅ Comprehensive error fixer running. Next check in ${this.AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+  await this.runComprehensiveErrorFixer()}, this.AUTOMATION_INTERVAL);
+    this.log(`✅ Comprehensive error fixer running. Next check in ${this.AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
 }
 ;
 // Start the comprehensive error fixer;
 const fixer = new ComprehensiveErrorFixer();
 fixer.runContinuous().catch(error => {
   console.error(`❌ Failed to start comprehensive error fixer: `, error);
-  process.exit(1);
-});
+  process.exit(1)});
 process.on(`SIGTERM`, () => {
   fixer.log(`Received SIGTERM, shutting down gracefully...");
-  process.exit(0);
-});
+  process.exit(0)});
 // Run the fixer;
 fixer.runContinuous().catch(error => {
   fixer.log(`Unhandled error: ${error.message}`);
@@ -644,30 +581,25 @@ fixer.runContinuous().catch(error => {
 
     // Set up continuous execution;
     setInterval(async () => {
-  await this.runComprehensiveErrorFixer();
-}, this.AUTOMATION_INTERVAL);
+  await this.runComprehensiveErrorFixer()}, this.AUTOMATION_INTERVAL);
 
-    this.log(`✅ Comprehensive error fixer running. Next check in ${this.AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-}
+    this.log(`✅ Comprehensive error fixer running. Next check in ${this.AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
 }
 ;
 // Start the comprehensive error fixer;
 const fixer = new ComprehensiveErrorFixer();
 fixer.runContinuous().catch(error => {
   console.error("❌ Failed to start comprehensive error fixer: ", error);
-  process.exit(1);
-});
+  process.exit(1)});
 
 process.on("SIGTERM", () => {
   fixer.log("Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 // Run the fixer;
 fixer.runContinuous().catch(error => {
   fixer.log(`Unhandled error: ${error.message}`);
-  process.exit(1);
-})
+  process.exit(1)})
 =======
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
@@ -687,10 +619,8 @@ class ComprehensiveErrorFixer {
     // Ensure directories exist
     [this.logsDir, this.reportsDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
-  }
+        fs.mkdirSync(dir, { recursive: true })}
+    })}
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -699,8 +629,7 @@ class ComprehensiveErrorFixer {
     
     // Write to log file
     const logFile = path.join(this.logsDir, 'comprehensive-error-fixer.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
+    fs.appendFileSync(logFile, logMessage + '\n')}
 
   async runCommand(command, options = {}) {
     try {
@@ -710,10 +639,8 @@ class ComprehensiveErrorFixer {
         stdio: options.silent ? 'pipe' : 'inherit',
         ...options
       });
-      return { success: true, output: result };
-    } catch (error) {
-      return { success: false, error: error.message, output: error.stdout || error.stderr };
-    }
+      return { success: true, output: result }} catch (error) {
+      return { success: false, error: error.message, output: error.stdout || error.stderr }}
   }
 
   async fixESLintConfig() {
@@ -724,8 +651,7 @@ class ComprehensiveErrorFixer {
       const oldConfigPath = path.join(this.projectRoot, '.eslintrc.js');
       if (fs.existsSync(oldConfigPath)) {
         fs.unlinkSync(oldConfigPath);
-        this.log('Removed old .eslintrc.js');
-      }
+        this.log('Removed old .eslintrc.js')}
 
       // Ensure eslint.config.js is properly configured
       const configPath = path.join(this.projectRoot, 'eslint.config.js');
@@ -811,13 +737,11 @@ export default [
     },
   },
 ];`;
-        fs.writeFileSync(configPath, configContent);
-      }
+        fs.writeFileSync(configPath, configContent)}
 
       this.fixedErrors.push('ESLint configuration');
       this.log('ESLint configuration fixed successfully');
-      return true;
-    } catch (error) {
+      return true} catch (error) {
       this.failedFixes.push({ type: 'ESLint config', error: error.message });
       this.log(`Failed to fix ESLint config: ${error.message}`, 'ERROR');
       return false;
@@ -838,8 +762,7 @@ class ComprehensiveErrorFixer {
       successfulFixes: 0,
       failedFixes: 0,
       fixDetails: []
-    };
-  }
+    }}
 
   async run() {
     console.log('🔧 Starting comprehensive error fixing...');
@@ -851,8 +774,7 @@ class ComprehensiveErrorFixer {
       
       if (this.errorReport.totalErrors === 0) {
         console.log('✅ No errors found! Project is clean.');
-        return this.fixReport;
-      }
+        return this.fixReport}
       
       // Apply fixes based on error categories
       await this.fixTypeScriptErrors();
@@ -866,8 +788,7 @@ class ComprehensiveErrorFixer {
       await this.saveFixReport();
       
       console.log('✅ Comprehensive error fixing completed');
-      return this.fixReport;
-    } catch (error) {
+      return this.fixReport} catch (error) {
       console.error('❌ Error during fixing:', error.message);
       throw error;
 >>>>>>> origin/merge-pr-10635
@@ -884,8 +805,7 @@ class ComprehensiveErrorFixer {
       
       if (result.success) {
         this.log('No TypeScript errors found');
-        return true;
-      }
+        return true}
 
       // Parse TypeScript errors and fix common issues
       const errorOutput = result.output || '';
@@ -894,17 +814,14 @@ class ComprehensiveErrorFixer {
       let fixedCount = 0;
       for (const error of errors) {
         if (await this.fixTypeScriptError(error)) {
-          fixedCount++;
-        }
+          fixedCount++}
       }
 
       this.log(`Fixed ${fixedCount} TypeScript errors`);
-      return fixedCount > 0;
-    } catch (error) {
+      return fixedCount > 0} catch (error) {
       this.failedFixes.push({ type: 'TypeScript', error: error.message });
       this.log(`Failed to fix TypeScript errors: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   parseTypeScriptErrors(errorOutput) {
@@ -919,41 +836,33 @@ class ComprehensiveErrorFixer {
           line: parseInt(match[3]),
           column: parseInt(match[4]),
           message: match[5].trim()
-        });
-      }
+        })}
     }
     
-    return errors;
-  }
+    return errors}
 
   async fixTypeScriptError(error) {
     try {
       const filePath = path.join(this.projectRoot, error.file);
       if (!fs.existsSync(filePath)) {
-        return false;
-      }
+        return false}
 
       const content = fs.readFileSync(filePath, 'utf8');
       const lines = content.split('\n');
       
       // Fix common TypeScript errors
       if (error.message.includes('Cannot find module') || error.message.includes('Module not found')) {
-        return await this.fixModuleImportError(error, lines, filePath);
-      }
+        return await this.fixModuleImportError(error, lines, filePath)}
       
       if (error.message.includes('Property') && error.message.includes('does not exist')) {
-        return await this.fixPropertyError(error, lines, filePath);
-      }
+        return await this.fixPropertyError(error, lines, filePath)}
       
       if (error.message.includes('Type') && error.message.includes('is not assignable')) {
-        return await this.fixTypeError(error, lines, filePath);
-      }
+        return await this.fixTypeError(error, lines, filePath)}
 
-      return false;
-    } catch (error) {
+      return false} catch (error) {
       this.log(`Failed to fix TypeScript error: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async fixModuleImportError(error, lines, filePath) {
@@ -968,21 +877,17 @@ class ComprehensiveErrorFixer {
           for (const ext of possibleExtensions) {
             const fullPath = path.join(path.dirname(filePath), importPath + ext);
             if (fs.existsSync(fullPath)) {
-              return `from '${importPath}${ext}'`;
-            }
+              return `from '${importPath}${ext}'`}
           }
         }
-        return match;
-      });
+        return match});
       
       if (fixedLine !== line) {
         lines[error.line - 1] = fixedLine;
         fs.writeFileSync(filePath, lines.join('\n'));
-        return true;
-      }
+        return true}
     }
-    return false;
-  }
+    return false}
 
   async fixPropertyError(error, lines, filePath) {
     // Add missing properties or fix property access
@@ -993,26 +898,22 @@ class ComprehensiveErrorFixer {
       if (fixedLine !== line) {
         lines[error.line - 1] = fixedLine;
         fs.writeFileSync(filePath, lines.join('\n'));
-        return true;
-      }
+        return true}
     }
-    return false;
-  }
+    return false}
 
   async fixTypeError(error, lines, filePath) {
     // Add type assertions or fix type mismatches
     const line = lines[error.line - 1];
     if (line.includes('=') && !line.includes('as any')) {
       // Add type assertion
-      const fixedLine = line.replace(/(\w+)\s*=\s*([^;]+);/, '$1 = $2 as any;');
+      const fixedLine = line.replace(/(\w+)\s*=\s*([^]+);/, '$1 = $2 as any;');
       if (fixedLine !== line) {
         lines[error.line - 1] = fixedLine;
         fs.writeFileSync(filePath, lines.join('\n'));
-        return true;
-      }
+        return true}
     }
-    return false;
-  }
+    return false}
 
   async fixESLintErrors() {
     this.log('Fixing ESLint errors...');
@@ -1024,11 +925,9 @@ class ComprehensiveErrorFixer {
       if (result.success) {
         this.log('ESLint errors fixed successfully');
         this.fixedErrors.push('ESLint errors');
-        return true;
-      } else {
+        return true} else {
         this.log('Some ESLint errors could not be auto-fixed', 'WARN');
-        return false;
-      }
+        return false}
     } catch (error) {
       this.failedFixes.push({ type: 'ESLint', error: error.message });
       this.log(`Failed to fix ESLint errors: ${error.message}`, 'ERROR');
@@ -1043,22 +942,19 @@ class ComprehensiveErrorFixer {
     
     if (!tsErrors || tsErrors.length === 0) {
       console.log('📝 No TypeScript errors to fix');
-      return;
-    }
+      return}
 
     console.log(`📝 Found ${tsErrors.length} TypeScript errors to fix`);
     
     for (const error of tsErrors) {
       try {
-        await this.fixTypeScriptError(error);
-      } catch (fixError) {
+        await this.fixTypeScriptError(error)} catch (fixError) {
         console.error(`❌ Failed to fix TypeScript error in ${error.file}:`, fixError.message);
         this.fixesFailed.push({
           type: 'typescript',
           error: error,
           reason: fixError.message
-        });
-      }
+        })}
     }
   }
 
@@ -1066,8 +962,7 @@ class ComprehensiveErrorFixer {
     const filePath = path.resolve(error.file);
     
     if (!fs.existsSync(filePath)) {
-      throw new Error(`File not found: ${filePath}`);
-    }
+      throw new Error(`File not found: ${filePath}`)}
 
     let content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
@@ -1087,8 +982,7 @@ class ComprehensiveErrorFixer {
         await this.fixFunctionError(error, lines);
         break;
       default:
-        await this.fixGeneralTypeScriptError(error, lines);
-    }
+        await this.fixGeneralTypeScriptError(error, lines)}
     
     // Write the fixed content back
     fs.writeFileSync(filePath, lines.join('\n'));
@@ -1098,8 +992,7 @@ class ComprehensiveErrorFixer {
       file: error.file,
       line: error.line,
       fix: error.message
-    });
-  }
+    })}
 
   async fixImportError(error, lines) {
     const lineIndex = error.line - 1;
@@ -1121,8 +1014,7 @@ class ComprehensiveErrorFixer {
             if (fs.existsSync(testPath)) {
               const relativePath = path.relative(path.dirname(error.file), testPath);
               lines[lineIndex] = line.replace(moduleName, relativePath.replace(/\\/g, '/'));
-              break;
-            }
+              break}
           }
         }
       }
@@ -1136,8 +1028,7 @@ class ComprehensiveErrorFixer {
     if (error.message.includes('implicitly has an \'any\' type')) {
       // Add explicit any type
       if (line.includes('const ') || line.includes('let ') || line.includes('var ')) {
-        lines[lineIndex] = line.replace(/(const|let|var)\s+(\w+)\s*=\s*(.+)/, '$1 $2: any = $3');
-      }
+        lines[lineIndex] = line.replace(/(const|let|var)\s+(\w+)\s*=\s*(.+)/, '$1 $2: any = $3')}
     } else if (error.message.includes('Property') && error.message.includes('does not exist')) {
       // Add optional chaining or type assertion
       const propMatch = error.message.match(/Property '([^']+)' does not exist on type '([^']+)'/);
@@ -1147,8 +1038,7 @@ class ComprehensiveErrorFixer {
         
         // Try to add optional chaining
         if (line.includes(propName)) {
-          lines[lineIndex] = line.replace(new RegExp(`\\.${propName}\\b`, 'g'), `?.${propName}`);
-        }
+          lines[lineIndex] = line.replace(new RegExp(`\\.${propName}\\b`, 'g'), `?.${propName}`)}
       }
     }
   }
@@ -1163,8 +1053,7 @@ class ComprehensiveErrorFixer {
       if (propMatch) {
         const propName = propMatch[1];
         if (line.includes(propName)) {
-          lines[lineIndex] = line.replace(new RegExp(`\\.${propName}\\b`, 'g'), `?.${propName}`);
-        }
+          lines[lineIndex] = line.replace(new RegExp(`\\.${propName}\\b`, 'g'), `?.${propName}`)}
       }
     }
   }
@@ -1176,8 +1065,7 @@ class ComprehensiveErrorFixer {
     if (error.message.includes('is not a function')) {
       // Add type assertion or optional chaining
       if (line.includes('(') && line.includes(')')) {
-        lines[lineIndex] = line.replace(/(\w+)\(/g, '$1?.(');
-      }
+        lines[lineIndex] = line.replace(/(\w+)\(/g, '$1?.(')}
     }
   }
 
@@ -1188,12 +1076,10 @@ class ComprehensiveErrorFixer {
     // Generic fixes for common TypeScript errors
     if (error.message.includes('Object is possibly')) {
       // Add optional chaining
-      lines[lineIndex] = line.replace(/\.(\w+)/g, '?.$1');
-    } else if (error.message.includes('Type')) {
+      lines[lineIndex] = line.replace(/\.(\w+)/g, '?.$1')} else if (error.message.includes('Type')) {
       // Add type assertion
       if (line.includes('=')) {
-        lines[lineIndex] = line.replace(/(\w+)\s*=\s*(.+)/, '$1: any = $2');
-      }
+        lines[lineIndex] = line.replace(/(\w+)\s*=\s*(.+)/, '$1: any = $2')}
     }
   }
 
@@ -1207,8 +1093,7 @@ class ComprehensiveErrorFixer {
     
     if (!eslintErrors || eslintErrors.length === 0) {
       console.log('🔍 No ESLint errors to fix');
-      return;
-    }
+      return}
 
     try {
       // Try to auto-fix ESLint errors
@@ -1222,8 +1107,7 @@ class ComprehensiveErrorFixer {
         type: 'eslint',
         action: 'Auto-fix applied',
         count: eslintErrors.length
-      });
-    } catch (error) {
+      })} catch (error) {
       console.log('⚠️ ESLint auto-fix completed with warnings');
       this.fixesApplied.push({
         type: 'eslint',
@@ -1245,11 +1129,9 @@ class ComprehensiveErrorFixer {
       if (result.success) {
         this.log('Dependency issues fixed');
         this.fixedErrors.push('Dependency issues');
-        return true;
-      } else {
+        return true} else {
         this.log('Some dependency issues remain', 'WARN');
-        return false;
-      }
+        return false}
     } catch (error) {
       this.failedFixes.push({ type: 'Dependencies', error: error.message });
       this.log(`Failed to fix dependency issues: ${error.message}`, 'ERROR');
@@ -1259,8 +1141,7 @@ class ComprehensiveErrorFixer {
     
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.dependency || this.errorReport.errors.dependency.length === 0) {
       console.log('📦 No dependency issues to fix');
-      return;
-    }
+      return}
 
     try {
       // Try to fix security vulnerabilities
@@ -1274,15 +1155,13 @@ class ComprehensiveErrorFixer {
         type: 'dependency',
         action: 'Security vulnerabilities fixed',
         count: this.errorReport.errors.dependency.length
-      });
-    } catch (error) {
+      })} catch (error) {
       console.log('⚠️ Dependency fixes completed with warnings');
       this.fixesApplied.push({
         type: 'dependency',
         action: 'Security vulnerabilities fixed with warnings',
         count: this.errorReport.errors.dependency.length
-      });
-    }
+      })}
   }
 
   async fixSecurityIssues() {
@@ -1290,8 +1169,7 @@ class ComprehensiveErrorFixer {
     
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.security || this.errorReport.errors.security.length === 0) {
       console.log('🔒 No security issues to fix');
-      return;
-    }
+      return}
 
     try {
       // Update dependencies to fix security issues
@@ -1305,8 +1183,7 @@ class ComprehensiveErrorFixer {
         type: 'security',
         action: 'Dependencies updated for security',
         count: this.errorReport.errors.security.length
-      });
-    } catch (error) {
+      })} catch (error) {
       console.log('⚠️ Security fixes completed with warnings');
       this.fixesApplied.push({
         type: 'security',
@@ -1326,17 +1203,14 @@ class ComprehensiveErrorFixer {
       
       if (result.success) {
         this.log('Build successful');
-        return true;
-      } else {
+        return true} else {
         this.log('Build errors detected', 'WARN');
         // Try to fix common build errors
-        return await this.fixCommonBuildErrors(result.output);
-      }
+        return await this.fixCommonBuildErrors(result.output)}
     } catch (error) {
       this.failedFixes.push({ type: 'Build', error: error.message });
       this.log(`Failed to check build: ${error.message}`, 'ERROR');
-      return false;
-    }
+      return false}
   }
 
   async fixCommonBuildErrors(errorOutput) {
@@ -1344,16 +1218,13 @@ class ComprehensiveErrorFixer {
     if (errorOutput.includes('Module not found')) {
       this.log('Fixing module resolution issues...');
       // Try to fix by updating tsconfig paths
-      return await this.fixModuleResolution();
-    }
+      return await this.fixModuleResolution()}
     
     if (errorOutput.includes('Syntax error')) {
       this.log('Fixing syntax errors...');
-      return await this.fixSyntaxErrors();
-    }
+      return await this.fixSyntaxErrors()}
     
-    return false;
-  }
+    return false}
 
   async fixModuleResolution() {
     try {
@@ -1369,25 +1240,20 @@ class ComprehensiveErrorFixer {
             '@/pages/*': ['./src/pages/*'],
             '@/utils/*': ['./src/utils/*'],
             '@/types/*': ['./src/types/*']
-          };
-        }
+          }}
         
         fs.writeFileSync(tsconfigPath, JSON.stringify(tsconfig, null, 2));
         this.fixedErrors.push('Module resolution');
-        return true;
-      }
+        return true}
     } catch (error) {
-      this.log(`Failed to fix module resolution: ${error.message}`, 'ERROR');
-    }
-    return false;
-  }
+      this.log(`Failed to fix module resolution: ${error.message}`, 'ERROR')}
+    return false}
 
   async fixSyntaxErrors() {
     // This would involve more complex parsing and fixing
     // For now, just log the issue
     this.log('Syntax errors detected - manual review required', 'WARN');
-    return false;
-  }
+    return false}
 
   async generateReport() {
     const report = {
@@ -1404,8 +1270,7 @@ class ComprehensiveErrorFixer {
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     this.log(`Report generated: ${reportPath}`);
-    return report;
-  }
+    return report}
 
   async run() {
     this.log('Starting comprehensive error fixing...');
@@ -1426,8 +1291,7 @@ class ComprehensiveErrorFixer {
     this.log(`Error fixing completed in ${duration}ms`);
     this.log(`Fixed: ${report.summary.totalFixed}, Failed: ${report.summary.totalFailed}`);
     
-    return report;
-  }
+    return report}
 }
 
 // Run the error fixer
@@ -1435,9 +1299,7 @@ if (require.main === module) {
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(error => {
     console.error('Error fixer failed:', error);
-    process.exit(1);
-  });
-}
+    process.exit(1)})}
 
 module.exports = ComprehensiveErrorFixer;
 >>>>>>> origin/merge-pr-10629
@@ -1446,13 +1308,11 @@ module.exports = ComprehensiveErrorFixer;
     
     if (!this.errorReport || !this.errorReport.errors || !this.errorReport.errors.build || this.errorReport.errors.build.length === 0) {
       console.log('🏗️ No build errors to fix');
-      return;
-    }
+      return}
 
     // Build errors are usually resolved by fixing TypeScript and ESLint errors
     // This method will be called after those fixes are applied
-    console.log('✅ Build errors should be resolved by previous fixes');
-  }
+    console.log('✅ Build errors should be resolved by previous fixes')}
 
   async generateFixReport() {
     console.log('📊 Generating fix report...');
@@ -1463,14 +1323,12 @@ module.exports = ComprehensiveErrorFixer;
     this.fixReport.fixDetails = [
       ...this.fixesApplied.map(fix => ({ ...fix, status: 'success' })),
       ...this.fixesFailed.map(fix => ({ ...fix, status: 'failed' }))
-    ];
-  }
+    ]}
 
   async saveFixReport() {
     const reportPath = path.join(process.cwd(), 'error-fix-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(this.fixReport, null, 2));
-    console.log(`📄 Fix report saved to: ${reportPath}`);
-  }
+    console.log(`📄 Fix report saved to: ${reportPath}`)}
 
   printSummary() {
     console.log('\n🔧 ERROR FIXING SUMMARY');
@@ -1481,15 +1339,12 @@ module.exports = ComprehensiveErrorFixer;
     
     console.log('\nSuccessful Fixes:');
     this.fixesApplied.forEach((fix, index) => {
-      console.log(`  ${index + 1}. [${fix.type.toUpperCase()}] ${fix.action || fix.file}`);
-    });
+      console.log(`  ${index + 1}. [${fix.type.toUpperCase()}] ${fix.action || fix.file}`)});
     
     if (this.fixesFailed.length > 0) {
       console.log('\nFailed Fixes:');
       this.fixesFailed.forEach((fix, index) => {
-        console.log(`  ${index + 1}. [${fix.type.toUpperCase()}] ${fix.error.file}: ${fix.reason}`);
-      });
-    }
+        console.log(`  ${index + 1}. [${fix.type.toUpperCase()}] ${fix.error.file}: ${fix.reason}`)})}
   }
 }
 
@@ -1502,11 +1357,9 @@ async function main() {
     fixer.printSummary();
     
     // Return the fix report for use by other scripts
-    return fixer.fixReport;
-  } catch (error) {
+    return fixer.fixReport} catch (error) {
     console.error('❌ Error fixer failed:', error.message);
-    process.exit(1);
-  }
+    process.exit(1)}
 }
 
 // Export for use by other modules
@@ -1514,6 +1367,5 @@ module.exports = { ComprehensiveErrorFixer };
 
 // Run if called directly
 if (require.main === module) {
-  main();
-}
+  main()}
 >>>>>>> origin/merge-pr-10635

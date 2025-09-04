@@ -19,7 +19,7 @@ class EnhancedAppOptimizer {
     }}
 
   ensureDirectories() {
-    const dirs = ['automation/logs', 'scripts/automation/reports';];
+    const dirs = ['automation/logs', 'scripts/automation/reports'];
     dirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, dir;);
       if () {
@@ -33,9 +33,8 @@ class EnhancedAppOptimizer {
     })}
 
   log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString(;
-  });
-    const logMessage = `[${timestamp}] [${level}] ${message;};`;
+    const timestamp = new Date().toISOString(});
+    const logMessage = `[${timestamp}] [${level}] ${message};`;
     console.log(logMessage);
     try {
       fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {
@@ -44,7 +43,7 @@ class EnhancedAppOptimizer {
 
   async optimizePerformance() {
     this.log('Starting performance optimization...');
-    const optimizations = [;];
+    const optimizations = [];
 
     try {
       // Analyze bundle size
@@ -52,7 +51,7 @@ class EnhancedAppOptimizer {
         cwd: this.projectRoot, 
         stdio: 'pipe',
         timeout: 120000
-      ;};);
+      };);
       optimizations.push({ type: 'bundle-analysis', status: 'completed' });
       this.log('Bundle analysis completed')} catch(error) {
       this.log(`Bundle analysis failed: ${error.message}`, 'WARN')}
@@ -63,13 +62,11 @@ class EnhancedAppOptimizer {
       if () {
         const imageFiles = this.findImageFiles(publicDir) {
     ) {
-        const imageFiles = this.findImageFiles(publicDir;
-  });
+        const imageFiles = this.findImageFiles(publicDir});
         if ( {
           optimizations.push({ type: 'image-optimization', status: 'completed', count: imageFiles.length })) {
      {
-          optimizations.push({ type: 'image-optimization', status: 'completed', count: imageFiles.length });
-  }
+          optimizations.push({ type: 'image-optimization', status: 'completed', count: imageFiles.length })}
           this.log(`Found ${imageFiles.length} images for optimization`)}
       }
     } catch(error) {
@@ -81,18 +78,17 @@ class EnhancedAppOptimizer {
       if () {
         optimizations.push({ type: 'css-optimization', status: 'completed' })) {
     ) {
-        optimizations.push({ type: 'css-optimization', status: 'completed' });
-  }
+        optimizations.push({ type: 'css-optimization', status: 'completed' })}
         this.log('CSS optimization completed')}
     } catch(error) {
       this.log(`CSS optimization failed: ${error.message}`, 'WARN')}
 
     this.results.performance = { optimizations };
-    return optimizations;}
+    return optimizations}
 
   async optimizeSEO() {
     this.log('Starting SEO optimization...');
-    const seoOptimizations = [;];
+    const seoOptimizations = [];
 
     // Generate sitemap
     try {
@@ -116,19 +112,18 @@ class EnhancedAppOptimizer {
       if () {
         const pages = this.findPageFiles(pagesDir) {
     ) {
-        const pages = this.findPageFiles(pagesDir;
-  });
+        const pages = this.findPageFiles(pagesDir});
         seoOptimizations.push({ type: 'meta-tags-check', status: 'completed', pages: pages.length });
         this.log(`Checked meta tags for ${pages.length} pages`)}
     } catch(error) {
       this.log(`Meta tags check failed: ${error.message}`, 'WARN')}
 
     this.results.seo = { optimizations: seoOptimizations };
-    return seoOptimizations;}
+    return seoOptimizations}
 
   async optimizeSecurity() {
     this.log('Starting security optimization...');
-    const securityOptimizations = [;];
+    const securityOptimizations = [];
 
     // Run security audit
     try {
@@ -148,8 +143,7 @@ class EnhancedAppOptimizer {
       if () {
         const nextConfig = fs.readFileSync(nextConfigPath, 'utf8') {
     ) {
-        const nextConfig = fs.readFileSync(nextConfigPath, 'utf8';
-  });
+        const nextConfig = fs.readFileSync(nextConfigPath, 'utf8'});
         if () {
           securityOptimizations.push({ type: 'security-headers', status: 'configured' })} else {
           securityOptimizations.push({ type: 'security-headers', status: 'needs-configuration' })}
@@ -165,13 +159,12 @@ class EnhancedAppOptimizer {
     } catch(error) {
       this.log(`Security headers check failed: ${error.message}`, 'WARN')}
 
-    this.results.security = { optimizations: securityOptimizations };
-  }
-    return securityOptimizations;}
+    this.results.security = { optimizations: securityOptimizations }}
+    return securityOptimizations}
 
   async optimizeAccessibility() {
     this.log('Starting accessibility optimization...');
-    const accessibilityOptimizations = [;];
+    const accessibilityOptimizations = [];
 
     // Check for alt text in images
     try {
@@ -184,13 +177,12 @@ class EnhancedAppOptimizer {
         if () {
           const files = this.findReactFiles(dir) {
     ) {
-          const files = this.findReactFiles(dir;
-  });
+          const files = this.findReactFiles(dir});
           files.forEach(file => {
             const content = fs.readFileSync(file, 'utf8';);
-            const images = content.match(/<img[^>]*>/g) || [;];
+            const images = content.match(/<img[^>]*>/g) || [];
             imageCount += images.length
-            const altTexts = content.match(/alt\s*=\s*["'][^"']*["']/g) || [;];
+            const altTexts = content.match(/alt\s*=\s*["'][^"']*["']/g) || [];
             altTextCount += altTexts.length})}
       });
 
@@ -205,10 +197,10 @@ class EnhancedAppOptimizer {
       this.log(`Accessibility check failed: ${error.message}`, 'WARN')}
 
     this.results.accessibility = { optimizations: accessibilityOptimizations };
-    return accessibilityOptimizations;}
+    return accessibilityOptimizations}
 
   findImageFiles(dir) {
-    const files = [;];
+    const files = [];
     const items = fs.readdirSync(dir;);
     
     items.forEach(item => {
@@ -222,13 +214,12 @@ class EnhancedAppOptimizer {
     ) {
         files.push(...this.findImageFiles(fullPath))} else if (/\.(jpg|jpeg|png|gif|webp|svg)$/i.test(item)) {
         files.push(fullPath)}
-    });
-  }
+    })}
     
-    return files;}
+    return files}
 
   findPageFiles(dir) {
-    const files = [;];
+    const files = [];
     const items = fs.readdirSync(dir;);
     
     items.forEach(item => {
@@ -242,13 +233,12 @@ class EnhancedAppOptimizer {
     ) {
         files.push(...this.findPageFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx')) {
         files.push(fullPath)}
-    });
-  }
+    })}
     
-    return files;}
+    return files}
 
   findReactFiles(dir) {
-    const files = [;];
+    const files = [];
     const items = fs.readdirSync(dir;);
     
     items.forEach(item => {
@@ -262,10 +252,9 @@ class EnhancedAppOptimizer {
     ) {
         files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {
         files.push(fullPath)}
-    });
-  }
+    })}
     
-    return files;}
+    return files}
 
   generateSitemap() {
     const pages = [
@@ -284,7 +273,7 @@ class EnhancedAppOptimizer {
       '/faq',
       '/privacy',
       '/terms'
-    ;];
+    ];
 
     const baseUrl = 'https://ziontechgroup.com;';
     const currentDate = new Date().toISOString(;);
@@ -301,7 +290,7 @@ class EnhancedAppOptimizer {
       sitemap += '  </url>\n'});
 
     sitemap += '</urlset>';
-    return sitemap;}
+    return sitemap}
 
   generateRobotsTxt() {
     return `User-agent: *;
@@ -332,7 +321,7 @@ Disallow: /private/`}
       this.log(`Optimization report saved to ${reportFile}`);
 
       this.log('Enhanced App Optimizer completed successfully!');
-      return this.results;} catch(error) {
+      return this.results} catch(error) {
       this.log(`Enhanced App Optimizer failed: ${error.message}`, 'ERROR');
       throw error}
   }
@@ -341,8 +330,7 @@ Disallow: /private/`}
 if ( {
   const optimizer = new EnhancedAppOptimizer) {
      {
-  const optimizer = new EnhancedAppOptimizer;
-  }(;);
+  const optimizer = new EnhancedAppOptimizer}(;);
   optimizer.run().catch(console.error)}
 
 module.exports = EnhancedAppOptimizer;

@@ -1,75 +1,76 @@
 const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
-;
-  const categories = [{;
-      id: 'quantum - computing',;
-      name: 'Quantum Computing & AI',;
-      icon: '⚛️',;
-      color: 'from - blue - 600 to - cyan - 600',;
-      description: 'Revolutionary quantum computing solutions that solve previously impossible problems',;
-      marketSize: '$65.4 billion by 2027',;
-      growthRate: '500% annually';
-    },;
-    {;
-      id: 'blockchain - web3',;
-      name: 'Blockchain & Web3',;
-      icon: '🔗',;
-      color: 'from - green - 600 to - emerald - 600',;
-      description: 'Next - generation decentralized solutions with AI optimization',;
-      marketSize: '$67.4 billion by 2027',;
-      growthRate: '400% annually';
-    },;
-    {;
-      id: 'space - tech',;
-      name: 'Space Technology',;
-      icon: '🛰️',;
-      color: 'from - indigo - 600 to - purple - 600',;
-      description: 'AI - powered satellite and space mission management',;
-      marketSize: '$469.8 billion by 2027',;
-      growthRate: '300% annually';
-    },;
-    {;
-      id: 'biotech-ai',;
-      name: 'Biotech & AI',;
-      icon: '🧬',;
-      color: 'from - red - 600 to - pink - 600',;
-      description: 'Revolutionary biomedical research and drug discovery',;
-      marketSize: '$67.8 billion by 2027',;
-      growthRate: '600% annually';
-    },;
-    {;
-      id: 'emerging - tech',;
-      name: 'Emerging Technology',;
-      icon: '🚀',;
-      color: 'from - orange - 600 to - red - 600',;
-      description: 'Cutting - edge technologies that define the future',;
-      marketSize: '$3.7 billion by 2027',;
-      growthRate: '800% annually';
-    },;
-    {;
-      id: 'micro - saas',;
-      name: 'Micro SAAS Solutions',;
-      icon: '💻',;
-      color: 'from - blue - 600 to - indigo - 600',;
-      description: 'Intelligent business automation and optimization',;
-      marketSize: '$15.8 billion by 2027',;
-      growthRate: '200% annually';
-    },;
-    {;
-      id: 'it - services',;
-      name: 'Enterprise IT Services', ;      icon: '🖥️', ;
-      color: 'from-gray-600 to-slate-600',;
-      description: 'Advanced infrastructure and DevOps solutions',;
-      marketSize: '$25.2 billion by 2027',;
+';
+  const categories = [{';';
+      id: 'quantum - computing',';';
+      name: 'Quantum Computing & AI',';';
+      icon: '⚛️',';';
+      color: 'from - blue - 600 to - cyan - 600',';';
+      description: 'Revolutionary quantum computing solutions that solve previously impossible problems',';';
+      marketSize: '$65.4 billion by 2027',';';
+      growthRate: '500% annually'
+    },';
+    {';';
+      id: 'blockchain - web3',';';
+      name: 'Blockchain & Web3',';';
+      icon: '🔗',';';
+      color: 'from - green - 600 to - emerald - 600',';';
+      description: 'Next - generation decentralized solutions with AI optimization',';';
+      marketSize: '$67.4 billion by 2027',';';
+      growthRate: '400% annually'
+    },';
+    {';';
+      id: 'space - tech',';';
+      name: 'Space Technology',';';
+      icon: '🛰️',';';
+      color: 'from - indigo - 600 to - purple - 600',';';
+      description: 'AI - powered satellite and space mission management',';';
+      marketSize: '$469.8 billion by 2027',';';
+      growthRate: '300% annually'
+    },';
+    {';';
+      id: 'biotech-ai',';';
+      name: 'Biotech & AI',';';
+      icon: '🧬',';';
+      color: 'from - red - 600 to - pink - 600',';';
+      description: 'Revolutionary biomedical research and drug discovery',';';
+      marketSize: '$67.8 billion by 2027',';';
+      growthRate: '600% annually'
+    },';
+    {';';
+      id: 'emerging - tech',';';
+      name: 'Emerging Technology',';';
+      icon: '🚀',';';
+      color: 'from - orange - 600 to - red - 600',';';
+      description: 'Cutting - edge technologies that define the future',';';
+      marketSize: '$3.7 billion by 2027',';';
+      growthRate: '800% annually'
+    },';
+    {';';
+      id: 'micro - saas',';';
+      name: 'Micro SAAS Solutions',';';
+      icon: '💻',';';
+      color: 'from - blue - 600 to - indigo - 600',';';
+      description: 'Intelligent business automation and optimization',';';
+      marketSize: '$15.8 billion by 2027',';';
+      growthRate: '200% annually'
+    },';
+    {';';
+      id: 'it - services',';';
+      name: 'Enterprise IT Services',      icon: '🖥️',';';
+      color: 'from-gray-600 to-slate-600',';';
+      description: 'Advanced infrastructure and DevOps solutions',';';
+      marketSize: '$25.2 billion by 2027',';';
       growthRate: '150% annually'};
-  ];
-;
+  ];';
+';';
     if(categoryId === 'all') return ultimateZionServices2025;
     return ultimateZionServices2025.filter(service => service.category === categoryId) };
 ;
   const selectedServices = getServicesByCategory(selectedCategory) ;
-;
-  return (<div  className="min - h-screen bg-gradient - to - br from - slate - 900 via - purple - 900 to - slate - 900 text-white">;
+
+  return (
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm: p x-6 lg: p x-8">;
         <div  className="max - w-7xl mx - auto text-center">;
@@ -208,19 +209,19 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             transition={{ duration: any 0.6 }}
           >;
             {categories.map((category) => (<button     key={category.id}
-                onClick={ () => setSelectedCategory(category.id) }
-                className={`px-6 py-3 rounded-xl border transition - all duration - 300 ${selectedCategory === category.id;
-                    ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white shadow-lg';
+                onClick={ () => setSelectedCategory(category.id) }';
+                className={`px-6 py-3 rounded-xl border transition - all duration - 300 ${selectedCategory === category.id';';
+                    ? 'bg-gradient - to - r from - purple - 600 to - pink - 600 border-purple - 400 text-white shadow-lg'';';
                     : 'bg-white / 10 border-white / 20 text-gray - 300 hover: b g-white / 20 hover: borde r-white / 40'                }`}
               >";
                 <span className="mr-2 text-lg">{category.icon}</span>;
                 {category.name}
               </button>) ) }
-          </motion.div>;
-        </div>;
-      </section>;
- {/* Category Overview */} {selectedCategory !== 'all' && (;";
-        <section className="py-12 px-4 sm: p x-6 lg: p x-8">;";
+          </motion.div>
+        </div>';
+      </section>;';';
+ {/* Category Overview */} {selectedCategory !== 'all' && (;"
+        <section className="py-12 px-4 sm: p x-6 lg: p x-8">;"
           <div className="max-w-7xl mx-auto"> {(() => {;
 ;
               if(!category) return null;
@@ -266,12 +267,14 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
   { opacity: 0,;
   y: 2 0;
 }}
-            whileInView = {;
-  { opacity: 1,;
-  y: 0;
-}}
-            transition={{ duration: 0.6 }}
-          >'`;
+            whileInView = {
+
+  { opacity: 1,
+  y: 0
+
+}}';
+            transition={{ duration: 0.6 }}';';
+          >'`';';
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
           </motion.h2>;
           <motion.div;
@@ -311,8 +314,8 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                   <h3 className="text-xl font-semibold text-white mb-2">{service.name}";
                   <div className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-xs font-semibold mb-2">;
                     {service.innovationLevel}
-                  </div>";
-                  <p className="text-sm text-purple-400 font-medium">;
+                  </div>"';
+                  <p className="text-sm text-purple-400 font-medium">';';
                     {service.category.replace('-',).toUpperCase()}
                   </p>;
                 </div>;
@@ -377,40 +380,43 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
                     <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-lg p-3">";
                       <p className="text-blue-400 text-sm font-semibold">;
                         Market Size: {service.marketSize}
-                      </p>;
-                    </div>;
-                  </div>) }
-;
-                {/* Trial and Setup */}";
-                <div className="flex justify-between items-center mb-6 text-sm">";
-                  <div className="text-center">";
-                    <div className="text-purple-400 font-semibold">🆓 Trial</div>";
-                    <div className="text-gray-300">{service.trialDays} days</div>;
-                  </div>";
-                  <div className="text-center">";
-                    <div className="text-purple-400 font-semibold">⚡ Setup</div>";
-                    <div className="text-gray-300">{service.setupTime}</div>;
-                  </div>;
-                </div>;
-                {/* Call to Action */}";
-                <div className="text-center">";
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: fro m-purple-700 hover: t o-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover: scal e-105">;
-                    🚀 Get Started Today;
-                  </button>";
-                  <p className="text-xs text-gray-400 mt-2">;
-                    Contact us for a personalized demo;
-                  </p>;
-                </div>;
-                {/* Contact Quick Access */}";
-                <div className="mt-4 text-center">";
-                  <div className="text-xs text-gray-400">";
-                    📞 <a href="tel:+13024640950" className="text-blue-400 hover: tex t-blue-300">;
-                      +1 302 464 0950;
-                    </a> |;
-                    ✉️ <a href="mailto: klebe r@ziontechgroup.com" className="text-blue - 400 hover: tex t-blue -300">                      kleber@ziontechgroup.com;
-                    </a>;
-                  </div>;
-                </div>;
+                      </p>
+                    </div>
+                      </div>
+  );
+}
+                {/* Trial and Setup */}"
+                <div className="flex justify-between items-center mb-6 text-sm">"
+                  <div className="text-center">"
+                    <div className="text-purple-400 font-semibold">🆓 Trial</div>"
+                    <div className="text-gray-300">{service.trialDays} days</div>
+                  </div>"
+                  <div className="text-center">"
+                    <div className="text-purple-400 font-semibold">⚡ Setup</div>"
+                    <div className="text-gray-300">{service.setupTime}</div>
+                  </div>
+                </div>
+
+                {/* Call to Action */}"
+                <div className="text-center">"
+                  <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover: fro m-purple-700 hover: t o-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover: scal e-105">
+                    🚀 Get Started Today
+                  </button>"
+                  <p className="text-xs text-gray-400 mt-2">
+                    Contact us for a personalized demo
+                  </p>
+                </div>
+
+                {/* Contact Quick Access */}"
+                <div className="mt-4 text-center">"
+                  <div className="text-xs text-gray-400">"
+                    📞 <a href="tel:+13024640950" className="text-blue-400 hover: tex t-blue-300">
+                      +1 302 464 0950
+                    </a> |
+                    ✉️ <a href="mailto: klebe r@ziontechgroup.com" className="text-blue - 400 hover: tex t-blue -300">                      kleber@ziontechgroup.com
+                    </a>
+                  </div>
+                </div>
               </motion.div>) ) }
           </motion.div>;
         </div>;
@@ -448,20 +454,13 @@ const UltimateZionServicesMarketing: React.FC = () : JSX.Element => {;
             </div>;
           </motion.div>;
         </div>;
-      </section>;
-    </div>;) };
-export default UltimateZionServicesMarketing;'"`;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</section>;
-</div>;
-</any>;
+      </section>;';
+    </div>;) };';';
+export default UltimateZionServicesMarketing;'"`
+
+</motion>
+</motion>
+</motion>
+</section>
+</div>';
+</any>';';

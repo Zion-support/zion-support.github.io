@@ -26,8 +26,9 @@ if(loading) {}
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>""""
         <p className="text-zion-slate-light">Computing expensive data...</p>
       </div>
-    </div>)}
-
+        </div>
+  );
+}
 export {ExpensiveComponent};
 
 export {ExpensiveComponent};
@@ -62,7 +63,9 @@ const timer = setTimeout(() => {}
     return()""
       <div className="text-center p-8">"""'
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"> <// comment
-      </div>    </div>)}
+      </div>        </div>
+  );
+}
 ;
 export {ExpensiveComponent}
 ;
@@ -84,4 +87,5 @@ export {ExpensiveComponent}
 ;
 export {ExpensiveComponent};";
 ;"";
-"
+"';
+;';;';

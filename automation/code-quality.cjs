@@ -14,10 +14,8 @@ const qualityChecks = [
       console.log('🔍 Running TypeScript type checking...');
       try {
         execSync('npx tsc --noEmit', { stdio: 'pipe' });
-        console.log('✅ TypeScript type checking passed');
-      } catch (error) {
-        console.log('⚠️ TypeScript type checking found issues');
-      }
+        console.log('✅ TypeScript type checking passed')} catch (error) {
+        console.log('⚠️ TypeScript type checking found issues')}
     }
   },
   {
@@ -26,10 +24,8 @@ const qualityChecks = [
       console.log('🔍 Running ESLint analysis...');
       try {
         execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { stdio: 'pipe' });
-        console.log('✅ ESLint analysis passed');
-      } catch (error) {
-        console.log('⚠️ ESLint found code quality issues');
-      }
+        console.log('✅ ESLint analysis passed')} catch (error) {
+        console.log('⚠️ ESLint found code quality issues')}
     }
   },
   {
@@ -38,10 +34,8 @@ const qualityChecks = [
       console.log('🎨 Checking code formatting...');
       try {
         execSync('npx prettier --check .', { stdio: 'pipe' });
-        console.log('✅ Code formatting is consistent');
-      } catch (error) {
-        console.log('⚠️ Code formatting issues found');
-      }
+        console.log('✅ Code formatting is consistent')} catch (error) {
+        console.log('⚠️ Code formatting issues found')}
     }
   },
   {
@@ -64,15 +58,12 @@ const qualityChecks = [
             const content = fs.readFileSync(filePath, 'utf8');
             const lines = content.split('\n').length;
             totalLines += lines;
-            totalFiles++;
-          });
-        }
+            totalFiles++})}
       });
       
       const avgLinesPerFile = totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
       console.log(`Average lines per file: ${avgLinesPerFile}`);
-      console.log(`Total files analyzed: ${totalFiles}`);
-    }
+      console.log(`Total files analyzed: ${totalFiles}`)}
   },
   {
     name: 'Import/Export Analysis',
@@ -87,12 +78,10 @@ const qualityChecks = [
         pages.forEach(page => {
           const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
           importCount += (content.match(/^import\s+/gm) || []).length;
-          exportCount += (content.match(/^export\s+/gm) || []).length;
-        });
+          exportCount += (content.match(/^export\s+/gm) || []).length});
         
         console.log(`Total imports: ${importCount}`);
-        console.log(`Total exports: ${exportCount}`);
-      }
+        console.log(`Total exports: ${exportCount}`)}
     }
   },
   {
@@ -114,15 +103,11 @@ const qualityChecks = [
               const names = importName[1].split(',').map(name => name.trim());
               names.forEach(name => {
                 if (!content.includes(name) || content.indexOf(name) === content.lastIndexOf(name)) {
-                  unusedImports++;
-                }
-              });
-            }
-          });
-        });
+                  unusedImports++}
+              })}
+          })});
         
-        console.log(`Potential unused imports: ${unusedImports}`);
-      }
+        console.log(`Potential unused imports: ${unusedImports}`)}
     }
   }
 ];
@@ -136,10 +121,8 @@ for (const check of qualityChecks) {
     console.log(`\n🔄 ${check.name}...`);
     check.action();
     console.log(`✅ ${check.name} completed`);
-    successCount++;
-  } catch (error) {
-    console.log(`❌ ${check.name} failed: ${error.message}`);
-  }
+    successCount++} catch (error) {
+    console.log(`❌ ${check.name} failed: ${error.message}`)}
 }
 
 console.log(`\n🎉 Code Quality Check Complete!`);
@@ -161,8 +144,7 @@ const report = {
 
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { recursive: true });
-}
+  fs.mkdirSync(reportsDir, { recursive: true })}
 
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));

@@ -2,10 +2,5 @@ import React from 'react'; const NotFound = (props: any) => { const popularPages
 
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
+</motion>';
+</motion>;';;';

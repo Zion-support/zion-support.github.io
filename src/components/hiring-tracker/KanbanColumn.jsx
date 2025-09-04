@@ -46,11 +46,14 @@ export function KanbanColumn(props: any) {
                   <p className="text-center text-sm text-muted-foreground">
                     Drag candidates here
                   </p>
-                </div>)}
-            </div>)}
+                    </div>
+  );
+}
+                </div>
+  );
+}
         </Droppable>
       </CardContent>
     </Card>)}
 
-
-export default KanbanColumn;
+export default KanbanColumn;;;

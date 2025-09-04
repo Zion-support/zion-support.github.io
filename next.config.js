@@ -1,16 +1,18 @@
-// Performance optimizations
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
+  eslint: { 
+    ignoreDuringBuilds: false,
+    dirs: ['pages', 'src/components', 'src/lib', 'src/hooks']
+  },
+  typescript: { 
+    ignoreBuildErrors: true 
+  },
   trailingSlash: true,
   // output: 'export', // Disabled to avoid auth context issues
   generateBuildId: async () => 'build-' + Date.now(),
-  
-  // Include all page types
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'page.tsx'],
   
   // Image optimization
@@ -19,7 +21,9 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year
+    minimumCacheTTL: 31536000,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   
   // Performance optimizations
@@ -27,11 +31,18 @@ const nextConfig = {
     optimizeCss: true,
     scrollRestoration: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-accordion'],
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
   },
   
   // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
-    // Production optimizations
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
@@ -50,7 +61,6 @@ const nextConfig = {
         },
       };
     }
-    
     return config;
   },
   
@@ -67,7 +77,25 @@ const nextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }
         ]
-      }
+      },
+      {
+        source: '/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
     ];
   },
   
@@ -80,8 +108,12 @@ const nextConfig = {
         permanent: true,
       },
     ];
-
-  }
+  },
+  
+  // Generate sitemap
+  async rewrites() {
+    return [];
+  },
 };
 
 export default nextConfig;

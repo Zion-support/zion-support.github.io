@@ -8,12 +8,10 @@ class PerformanceOptimizer {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportFile = path.join(this.projectRoot, 'performance-optimization-report.json');
-    this.optimizations = [];
-  }
+    this.optimizations = []}
 
   log(message) {
-    console.log(`[Performance Optimizer] ${message}`);
-  }
+    console.log(`[Performance Optimizer] ${message}`)}
 
   async runOptimizations() {
     this.log('⚡ Starting Performance Optimizations');
@@ -34,10 +32,8 @@ class PerformanceOptimizer {
       // Generate report
       await this.generateReport();
       
-      this.log('✅ Performance optimizations completed');
-    } catch (error) {
-      this.log(`❌ Performance optimizations failed: ${error.message}`);
-    }
+      this.log('✅ Performance optimizations completed')} catch (error) {
+      this.log(`❌ Performance optimizations failed: ${error.message}`)}
   }
 
   async optimizeBundleSize() {
@@ -54,15 +50,13 @@ class PerformanceOptimizer {
         type: 'bundle',
         action: 'Analyzed bundle and dependencies',
         status: 'success'
-      });
-    } catch (error) {
+      })} catch (error) {
       this.optimizations.push({
         type: 'bundle',
         action: 'Analyzed bundle and dependencies',
         status: 'failed',
         error: error.message
-      });
-    }
+      })}
   }
 
   async optimizeImages() {
@@ -87,23 +81,20 @@ class PerformanceOptimizer {
               size: stats.size,
               action: 'Large image detected - consider optimization',
               status: 'warning'
-            });
-          }
+            })}
         }
         
         this.optimizations.push({
           type: 'image',
           action: 'Scanned images for optimization opportunities',
           status: 'success'
-        });
-      } catch (error) {
+        })} catch (error) {
         this.optimizations.push({
           type: 'image',
           action: 'Scanned images for optimization opportunities',
           status: 'failed',
           error: error.message
-        });
-      }
+        })}
     }
   }
 
@@ -126,10 +117,8 @@ class PerformanceOptimizer {
               // Only convert if it's a known optimization
               if (module.includes('lodash') || module.includes('react-icons')) {
                 modified = true;
-                return `import { ${alias} } from '${module}';`;
-              }
-              return match;
-            }
+                return `import { ${alias} } from '${module}';`}
+              return match}
           );
           
           if (modified) {
@@ -139,23 +128,20 @@ class PerformanceOptimizer {
               file: path.relative(this.projectRoot, file),
               action: 'Optimized imports',
               status: 'success'
-            });
-          }
+            })}
         }
         
         this.optimizations.push({
           type: 'import',
           action: 'Scanned and optimized imports',
           status: 'success'
-        });
-      } catch (error) {
+        })} catch (error) {
         this.optimizations.push({
           type: 'import',
           action: 'Scanned and optimized imports',
           status: 'failed',
           error: error.message
-        });
-      }
+        })}
     }
   }
 
@@ -180,11 +166,9 @@ export class PerformanceMonitor {
         event_category: 'timing',
         event_label: name,
         value: Math.round(end - start)
-      });
-    }
+      })}
     
-    return result;
-  }
+    return result}
   
   static measureAsync(name, fn) {
     const start = performance.now();
@@ -197,12 +181,9 @@ export class PerformanceMonitor {
           event_category: 'timing',
           event_label: name,
           value: Math.round(end - start)
-        });
-      }
+        })}
       
-      return result;
-    });
-  }
+      return result})}
   
   static reportWebVitals() {
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
@@ -211,9 +192,7 @@ export class PerformanceMonitor {
         getFID(console.log);
         getFCP(console.log);
         getLCP(console.log);
-        getTTFB(console.log);
-      });
-    }
+        getTTFB(console.log)})}
   }
 }
 `;
@@ -226,16 +205,14 @@ export class PerformanceMonitor {
         file: 'performance-monitor.js',
         action: 'Added performance monitoring utilities',
         status: 'success'
-      });
-    } catch (error) {
+      })} catch (error) {
       this.optimizations.push({
         type: 'monitoring',
         file: 'performance-monitor.js',
         action: 'Added performance monitoring utilities',
         status: 'failed',
         error: error.message
-      });
-    }
+      })}
   }
 
   getAllFiles(dir, extensions) {
@@ -247,14 +224,11 @@ export class PerformanceMonitor {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        files = files.concat(this.getAllFiles(fullPath, extensions));
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+        files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)}
     }
     
-    return files;
-  }
+    return files}
 
   async generateReport() {
     const report = {
@@ -269,8 +243,7 @@ export class PerformanceMonitor {
     };
     
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Performance optimization report generated: ${this.reportFile}`);
-  }
+    this.log(`📊 Performance optimization report generated: ${this.reportFile}`)}
 }
 
 // Run the performance optimizer

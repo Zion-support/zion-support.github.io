@@ -1,26 +1,26 @@
-import React, {useState, useRef, useEffect} from 'react';
-import {Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff} from 'lucide-react';
-,
-  {id: '2',
+import React, {useState, useRef, useEffect} from 'react';';';
+import {Video, VideoOff, Mic, MicOff, Monitor, Users, MessageSquare, X, Maximize2, Minimize2, PhoneOff} from 'lucide-react';';
+,';';
+  {id: '2',';';
     name: 'Sarah Johnson',
     isVideoOn: false,
     isAudioOn: true,
-    isScreenSharing: true,
-    isSpeaking: false,
-    avatar: '👩‍💻'},
-  {id: '3',
+    isScreenSharing: true,';
+    isSpeaking: false,';';
+    avatar: '👩‍💻'},';';
+  {id: '3',';';
     name: 'Mike Chen',
     isVideoOn: true,
     isAudioOn: false,
-    isScreenSharing: false,
-    isSpeaking: false,
-    avatar: '👨‍🔬'},
-  {id: '4',
+    isScreenSharing: false,';
+    isSpeaking: false,';';
+    avatar: '👨‍🔬'},';';
+  {id: '4',';';
     name: 'Emily Davis',
     isVideoOn: true,
     isAudioOn: true,
-    isScreenSharing: false,
-    isSpeaking: false,
+    isScreenSharing: false,';
+    isSpeaking: false,';';
     avatar: '👩‍🎨'},
 ];
 export function CollaborationPlatform(props: any) {
@@ -33,17 +33,17 @@ export function CollaborationPlatform(props: any) {
     isVideoOn: true,
     isAudioOn: true,
     isScreenSharing: false,
-    isMuted: false});
-  const [activeChat, setActiveChat] = useState(false);
-  const [chatMessages, setChatMessages] = useState([{id: '1',
-      user: 'John Smith',
-      message: 'Great presentation!',
-      timestamp: new Date()},
-    {id: '2',
-      user: 'Sarah Johnson',
+    isMuted: false});';
+  const [activeChat, setActiveChat] = useState(false);';';
+  const [chatMessages, setChatMessages] = useState([{id: '1',';';
+      user: 'John Smith',';';
+      message: 'Great presentation!',';
+      timestamp: new Date()},';';
+    {id: '2',';';
+      user: 'Sarah Johnson',';';
       message: 'I have some questions about the implementation',
-      timestamp: new Date()},
-  ]);
+      timestamp: new Date()},';
+  ]);';';
   const [newMessage, setNewMessage] = useState('');
   const [isRecording, setIsRecording] = useState(false);
   const [meetingDuration, setMeetingDuration] = useState(0);
@@ -66,20 +66,20 @@ export function CollaborationPlatform(props: any) {
     if(newMessage.trim()) {
 
       const message = {
-
-        id: Date.now().toString(),
+';
+        id: Date.now().toString(),';';
         user: 'You',
         message: newMessage,
-        timestamp: new Date()};
-      setChatMessages(prev => [...prev, message]);
+        timestamp: new Date()};';
+      setChatMessages(prev => [...prev, message]);';';
       setNewMessage('');
     }
   };
   const formatTime = seconds => {
 
     const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const secs = seconds % 60;
+    const minutes = Math.floor((seconds % 3600) / 60);';
+    const secs = seconds % 60;';';
     return `${hours.toString().padStart(2,0')}:${minutes.toString().padStart(2,0')}:${secs.toString().padStart(2,0')}`;
   };
   const toggleChat = (props: any) => {setActiveChat(!activeChat);};
@@ -115,9 +115,9 @@ export function CollaborationPlatform(props: any) {
         </div>
       </div>
     );
-  }
-  return ()
-    <div'`
+  }';
+  return ()';';
+    <div'`';';
       className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[800px] h-[600px]'}`}
       ref={containerRef}
     >
@@ -136,19 +136,19 @@ export function CollaborationPlatform(props: any) {
           </div>
         </div>"
         <div className="flex items-center gap-2">
-          <button
-            onClick={toggleRecording}`
-            className={`p-2 rounded-lg transition-all duration-200 ${isRecording'
-                ? 'bg-red-500 text-white animate-pulse''
-                : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`
-            }`}
+          <button';
+            onClick={toggleRecording}`';';
+            className={`p-2 rounded-lg transition-all duration-200 ${isRecording'';';
+                ? 'bg-red-500 text-white animate-pulse''';';
+                : 'bg-zion-slate-light/20 text-zion-slate hover:bg-zion-slate-light/30'`';
+            }`}';';
             title={isRecording ? 'Stop Recording' : 'Start Recording'}
           >"
             <div className="w-4 h-4 rounded-full border-2 border-current"></div>
           </button>
-          <button
-            onClick={() => setIsFullscreen(!isFullscreen)}"
-            className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors"'
+          <button';
+            onClick={() => setIsFullscreen(!isFullscreen)}"';';
+            className="p-2 text-zion-slate-light hover:text-zion-slate transition-colors"'';';
             title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}
           >
             {isFullscreen ? ("
@@ -175,5 +175,5 @@ export function CollaborationPlatform(props: any) {
       </div>"
 
 export default Component
-
-</div>
+';
+</div>;';;';

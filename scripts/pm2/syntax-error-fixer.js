@@ -26,7 +26,7 @@ class SyntaxErrorFixer {
     this.syntaxPatterns = {
       unterminatedStrings: [
         /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\n|$)/g,
-        /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\s*[,;)\]}])/g
+        /(["'`])((?:(?!\1)[^\\]|\\.)*?)(?=\s*[,)\]}])/g
       ],
       unterminatedComments: [
         /\/\*([^*]|\*[^/])*$/gm,
@@ -37,15 +37,14 @@ class SyntaxErrorFixer {
         /^(\s*)([^;{}[\]]+?)(\s*)(?=\n)/gm
       ],
       malformedImports: [
-        /import\s+([^;]+?)(?=\n|$)/g,
-        /export\s+([^;]+?)(?=\n|$)/g
+        /import\s+([^]+?)(?=\n|$)/g,
+        /export\s+([^]+?)(?=\n|$)/g
       ],
       unclosedBrackets: [
         /(\{|\[|\(|`)(?![^}[\]]*[}\]\)`])/g,
         /(\{|\[|\(|`)(?![^}[\]]*[}\]\)`])/g
       ]
-    };
-  }
+    }}
 
   log(level, message, data = null) {
     const timestamp = new Date().toISOString();
@@ -58,28 +57,21 @@ class SyntaxErrorFixer {
     };
 
     if (level === 'error') {
-      console.error(`[${timestamp}] ERROR: ${message}`, data);
-    } else if (level === 'warn') {
-      console.warn(`[${timestamp}] WARN: ${message}`, data);
-    } else if (level === 'info') {
-      console.log(`[${timestamp}] INFO: ${message}`, data);
-    } else if (level === 'debug') {
-      console.log(`[${timestamp}] DEBUG: ${message}`, data);
-    }
+      console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {
+      console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {
+      console.log(`[${timestamp}] INFO: ${message}`, data)} else if (level === 'debug') {
+      console.log(`[${timestamp}] DEBUG: ${message}`, data)}
 
     // Write to log file
-    this.writeToLog(logEntry);
-  }
+    this.writeToLog(logEntry)}
 
   writeToLog(logEntry) {
     const logDir = path.join(this.projectRoot, 'logs', 'pm2');
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
+      fs.mkdirSync(logDir, { recursive: true })}
 
     const logFile = path.join(logDir, 'syntax-error-fixer.log');
-    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n');
-  }
+    fs.appendFileSync(logFile, JSON.stringify(logEntry) + '\n')}
 
   async start() {
     this.log('info', 'Starting Syntax Error Fixer Service...');
@@ -101,13 +93,9 @@ class SyntaxErrorFixer {
       
       // Keep the process alive
       setInterval(async () => {
-        await this.performSyntaxFixes();
-      }, this.fixInterval);
-      
-    } catch (error) {
+        await this.performSyntaxFixes()}, this.fixInterval)} catch (error) {
       this.log('error', 'Failed to start Syntax Error Fixer Service', error);
-      process.exit(1);
-    }
+      process.exit(1)}
   }
 
   ensureDirectories() {
@@ -121,10 +109,8 @@ class SyntaxErrorFixer {
     dirs.forEach(dir => {
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {
-        fs.mkdirSync(fullPath, { recursive: true });
-      }
-    });
-  }
+        fs.mkdirSync(fullPath, { recursive: true })}
+    })}
 
   async performSyntaxFixes() {
     this.log('info', 'Starting syntax error fixing process...');
@@ -141,8 +127,7 @@ class SyntaxErrorFixer {
       
       if (filesWithIssues.length === 0) {
         this.log('info', 'No files with syntax issues found');
-        return;
-      }
+        return}
 
       this.log('info', `Found ${filesWithIssues.length} files with syntax issues`);
 
@@ -156,18 +141,14 @@ class SyntaxErrorFixer {
         
         // Small delay between batches
         if (i + batchSize < filesWithIssues.length) {
-          await new Promise(resolve => setTimeout(resolve, 1000));
-        }
+          await new Promise(resolve => setTimeout(resolve, 1000))}
       }
 
       // Generate report
       await this.generateFixReport();
 
-      this.log('info', `Syntax fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`);
-      
-    } catch (error) {
-      this.log('error', 'Error during syntax fixing process', error);
-    }
+      this.log('info', `Syntax fixing completed. Applied: ${this.fixesApplied}, Failed: ${this.fixesFailed}, Skipped: ${this.fixesSkipped}`)} catch (error) {
+      this.log('error', 'Error during syntax fixing process', error)}
   }
 
   async findFilesWithSyntaxIssues() {
@@ -182,14 +163,12 @@ class SyntaxErrorFixer {
         
         for (const file of files) {
           if (await this.hasSyntaxIssues(file)) {
-            filesWithIssues.push(file);
-          }
+            filesWithIssues.push(file)}
         }
       }
     }
 
-    return filesWithIssues;
-  }
+    return filesWithIssues}
 
   walkDirectory(dir, extensions) {
     const files = [];
@@ -202,20 +181,15 @@ class SyntaxErrorFixer {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          files.push(...this.walkDirectory(fullPath, extensions));
-        } else if (stat.isFile()) {
+          files.push(...this.walkDirectory(fullPath, extensions))} else if (stat.isFile()) {
           const ext = path.extname(item);
           if (extensions.includes(ext)) {
-            files.push(fullPath);
-          }
+            files.push(fullPath)}
         }
-      });
-    } catch (error) {
-      this.log('warn', `Error reading directory: ${dir}`, error.message);
-    }
+      })} catch (error) {
+      this.log('warn', `Error reading directory: ${dir}`, error.message)}
 
-    return files;
-  }
+    return files}
 
   async hasSyntaxIssues(filePath) {
     try {
@@ -223,16 +197,12 @@ class SyntaxErrorFixer {
       
       // Skip large files if configured
       if (this.skipLargeFiles && content.length > this.largeFileThreshold) {
-        return false;
-      }
+        return false}
 
       // Check for various syntax issues
-      return this.detectSyntaxIssues(content);
-      
-    } catch (error) {
+      return this.detectSyntaxIssues(content)} catch (error) {
       this.log('warn', `Error reading file: ${filePath}`, error.message);
-      return false;
-    }
+      return false}
   }
 
   detectSyntaxIssues(content) {
@@ -242,16 +212,14 @@ class SyntaxErrorFixer {
     const backticks = (content.match(/`/g) || []).length;
     
     if (singleQuotes % 2 !== 0 || doubleQuotes % 2 !== 0 || backticks % 2 !== 0) {
-      return true;
-    }
+      return true}
 
     // Check for unterminated comments
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
     
     if (openComments !== closeComments) {
-      return true;
-    }
+      return true}
 
     // Check for unclosed brackets
     const openBraces = (content.match(/\{/g) || []).length;
@@ -262,21 +230,18 @@ class SyntaxErrorFixer {
     const closeParens = (content.match(/\)/g) || []).length;
     
     if (openBraces !== closeBraces || openBrackets !== closeBrackets || openParens !== closeParens) {
-      return true;
-    }
+      return true}
 
     // Check for malformed imports/exports
-    const importLines = content.match(/import\s+[^;]+/g) || [];
-    const exportLines = content.match(/export\s+[^;]+/g) || [];
+    const importLines = content.match(/import\s+[^]+/g) || [];
+    const exportLines = content.match(/export\s+[^]+/g) || [];
     
     for (const line of [...importLines, ...exportLines]) {
       if (!line.trim().endsWith(';')) {
-        return true;
-      }
+        return true}
     }
 
-    return false;
-  }
+    return false}
 
   async fixFileSyntax(filePath) {
     try {
@@ -284,8 +249,7 @@ class SyntaxErrorFixer {
       
       // Create backup if enabled
       if (this.backupFiles) {
-        await this.createBackup(filePath);
-      }
+        await this.createBackup(filePath)}
 
       // Read file content
       const content = fs.readFileSync(filePath, 'utf8');
@@ -304,39 +268,31 @@ class SyntaxErrorFixer {
         
         // Verify the fix
         if (await this.verifyFix(filePath)) {
-          this.log('info', `Fix verification passed for: ${filePath}`);
-        } else {
+          this.log('info', `Fix verification passed for: ${filePath}`)} else {
           this.log('warn', `Fix verification failed for: ${filePath}`);
-          this.fixesFailed++;
-        }
+          this.fixesFailed++}
       } else {
         this.log('debug', `No fixes needed for: ${filePath}`);
-        this.fixesSkipped++;
-      }
+        this.fixesSkipped++}
       
     } catch (error) {
       this.log('error', `Error fixing file: ${filePath}`, error);
-      this.fixesFailed++;
-    }
+      this.fixesFailed++}
   }
 
   async createBackup(filePath) {
     try {
       const backupDir = path.join(this.projectRoot, 'backups', 'syntax-fixes');
       if (!fs.existsSync(backupDir)) {
-        fs.mkdirSync(backupDir, { recursive: true });
-      }
+        fs.mkdirSync(backupDir, { recursive: true })}
 
       const fileName = path.basename(filePath);
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const backupPath = path.join(backupDir, `${fileName}.${timestamp}.backup`);
       
       fs.copyFileSync(filePath, backupPath);
-      this.log('debug', `Backup created: ${backupPath}`);
-      
-    } catch (error) {
-      this.log('warn', `Failed to create backup for: ${filePath}`, error.message);
-    }
+      this.log('debug', `Backup created: ${backupPath}`)} catch (error) {
+      this.log('warn', `Failed to create backup for: ${filePath}`, error.message)}
   }
 
   async applySyntaxFixes(content, filePath) {
@@ -363,15 +319,12 @@ class SyntaxErrorFixer {
     
     // Fix common TypeScript issues
     if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')) {
-      fixedContent = this.fixTypeScriptIssues(fixedContent, fixes);
-    }
+      fixedContent = this.fixTypeScriptIssues(fixedContent, fixes)}
 
     if (fixes.length > 0) {
-      this.log('debug', `Applied ${fixes.length} fixes to: ${filePath}`, fixes);
-    }
+      this.log('debug', `Applied ${fixes.length} fixes to: ${filePath}`, fixes)}
 
-    return fixedContent;
-  }
+    return fixedContent}
 
   fixUnterminatedStrings(content, fixes) {
     const fixed = content;
@@ -383,9 +336,7 @@ class SyntaxErrorFixer {
         const original = match;
         const fixed = match + "'";
         fixed = fixed.replace(original, fixed);
-        fixes.push({ type: 'unterminated_string', original, fixed });
-      });
-    }
+        fixes.push({ type: 'unterminated_string', original, fixed })})}
 
     // Fix double quotes
     const doubleQuoteMatches = fixed.match(/"[^"]*$/gm);
@@ -394,9 +345,7 @@ class SyntaxErrorFixer {
         const original = match;
         const fixed = match + '"';
         fixed = fixed.replace(original, fixed);
-        fixes.push({ type: 'unterminated_string', original, fixed });
-      });
-    }
+        fixes.push({ type: 'unterminated_string', original, fixed })})}
 
     // Fix backticks
     const backtickMatches = fixed.match(/`[^`]*$/gm);
@@ -405,12 +354,9 @@ class SyntaxErrorFixer {
         const original = match;
         const fixed = match + '`';
         fixed = fixed.replace(original, fixed);
-        fixes.push({ type: 'unterminated_string', original, fixed });
-      });
-    }
+        fixes.push({ type: 'unterminated_string', original, fixed })})}
 
-    return fixed;
-  }
+    return fixed}
 
   fixUnterminatedComments(content, fixes) {
     const fixed = content;
@@ -423,23 +369,19 @@ class SyntaxErrorFixer {
       const line = lines[i];
       
       if (line.includes('/*') && !line.includes('*/')) {
-        inComment = true;
-      }
+        inComment = true}
       
       if (inComment && line.includes('*/')) {
-        inComment = false;
-      }
+        inComment = false}
       
       if (inComment && i === lines.length - 1) {
         // Last line is still in comment, close it
         lines[i] = line + ' */';
         fixes.push({ type: 'unterminated_comment', line: i + 1, action: 'closed_comment' });
-        inComment = false;
-      }
+        inComment = false}
     }
     
-    return lines.join('\n');
-  }
+    return lines.join('\n')}
 
   fixMissingSemicolons(content, fixes) {
     const fixed = content;
@@ -478,36 +420,29 @@ class SyntaxErrorFixer {
           !line.includes('finally')) {
         
         lines[i] = lines[i] + ';';
-        fixes.push({ type: 'missing_semicolon', line: i + 1, action: 'added_semicolon' });
-      }
+        fixes.push({ type: 'missing_semicolon', line: i + 1, action: 'added_semicolon' })}
     }
     
-    return lines.join('\n');
-  }
+    return lines.join('\n')}
 
   fixMalformedImports(content, fixes) {
     let fixed = content;
     
     // Fix imports without semicolons
-    fixed = fixed.replace(/import\s+([^;]+?)(?=\n|$)/g, (match, importContent) => {
+    fixed = fixed.replace(/import\s+([^]+?)(?=\n|$)/g, (match, importContent) => {
       if (!importContent.trim().endsWith(';')) {
         fixes.push({ type: 'malformed_import', action: 'added_semicolon' });
-        return `import ${importContent};`;
-      }
-      return match;
-    });
+        return `import ${importContent};`}
+      return match});
     
     // Fix exports without semicolons
-    fixed = fixed.replace(/export\s+([^;]+?)(?=\n|$)/g, (match, exportContent) => {
+    fixed = fixed.replace(/export\s+([^]+?)(?=\n|$)/g, (match, exportContent) => {
       if (!exportContent.trim().endsWith(';')) {
         fixes.push({ type: 'malformed_export', action: 'added_semicolon' });
-        return `export ${exportContent};`;
-      }
-      return match;
-    });
+        return `export ${exportContent};`}
+      return match});
     
-    return fixed;
-  }
+    return fixed}
 
   fixUnclosedBrackets(content, fixes) {
     let fixed = content;
@@ -524,25 +459,21 @@ class SyntaxErrorFixer {
     if (openBraces > closeBraces) {
       const missing = openBraces - closeBraces;
       fixed += '\n' + '}'.repeat(missing);
-      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_braces` });
-    }
+      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_braces` })}
     
     // Add missing closing brackets
     if (openBrackets > closeBrackets) {
       const missing = openBrackets - closeBrackets;
       fixed += '\n' + ']'.repeat(missing);
-      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_brackets` });
-    }
+      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_brackets` })}
     
     // Add missing closing parentheses
     if (openParens > closeParens) {
       const missing = openParens - closeParens;
       fixed += '\n' + ')'.repeat(missing);
-      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_parentheses` });
-    }
+      fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_parentheses` })}
     
-    return fixed;
-  }
+    return fixed}
 
   fixJSXIssues(content, fixes) {
     let fixed = content;
@@ -551,46 +482,36 @@ class SyntaxErrorFixer {
     fixed = fixed.replace(/(<[^>]+)(?=\n|$)/g, (match, tagStart) => {
       if (tagStart.includes('=') && !tagStart.endsWith('/>')) {
         fixes.push({ type: 'jsx_self_closing', action: 'fixed_self_closing_tag' });
-        return tagStart + ' />';
-      }
-      return match;
-    });
+        return tagStart + ' />'}
+      return match});
     
     // Fix JSX fragment syntax
     fixed = fixed.replace(/<>([^<]*)<\/>/g, (match, content) => {
       if (content.trim()) {
         fixes.push({ type: 'jsx_fragment', action: 'fixed_fragment_syntax' });
-        return `<React.Fragment>${content}</React.Fragment>`;
-      }
-      return match;
-    });
+        return `<React.Fragment>${content}</React.Fragment>`}
+      return match});
     
-    return fixed;
-  }
+    return fixed}
 
   fixTypeScriptIssues(content, fixes) {
     let fixed = content;
     
     // Fix type annotations
-    fixed = fixed.replace(/(\w+):\s*([^;,\n]+?)(?=\s*[,;\n])/g, (match, varName, typeName) => {
+    fixed = fixed.replace(/(\w+):\s*([^,\n]+?)(?=\s*[,\n])/g, (match, varName, typeName) => {
       if (typeName.includes('any') && typeName !== 'any') {
         fixes.push({ type: 'typescript_type', action: 'fixed_type_annotation' });
-        return `${varName}: any`;
-      }
-      return match;
-    });
+        return `${varName}: any`}
+      return match});
     
     // Fix interface declarations
     fixed = fixed.replace(/interface\s+(\w+)\s*\{/g, (match, interfaceName) => {
       if (!content.includes(`interface ${interfaceName}`)) {
         fixes.push({ type: 'typescript_interface', action: 'fixed_interface_declaration' });
-        return `interface ${interfaceName} {`;
-      }
-      return match;
-    });
+        return `interface ${interfaceName} {`}
+      return match});
     
-    return fixed;
-  }
+    return fixed}
 
   async verifyFix(filePath) {
     try {
@@ -599,8 +520,7 @@ class SyntaxErrorFixer {
       
       // Basic syntax validation
       if (this.detectSyntaxIssues(content)) {
-        return false;
-      }
+        return false}
       
       // Try to run a basic syntax check
       if (filePath.endsWith('.ts') || filePath.endsWith('.tsx')) {
@@ -608,17 +528,12 @@ class SyntaxErrorFixer {
           execSync(`npx tsc --noEmit "${filePath}"`, { 
             cwd: this.projectRoot, 
             stdio: 'pipe' 
-          });
-        } catch (error) {
-          return false;
-        }
+          })} catch (error) {
+          return false}
       }
       
-      return true;
-      
-    } catch (error) {
-      return false;
-    }
+      return true} catch (error) {
+      return false}
   }
 
   async generateFixReport() {
@@ -641,8 +556,7 @@ class SyntaxErrorFixer {
 
     this.log('info', `Syntax fix report generated: ${reportPath}`);
     
-    return report;
-  }
+    return report}
 
   generateRecommendations() {
     const recommendations = [];
@@ -652,44 +566,37 @@ class SyntaxErrorFixer {
         priority: 'high',
         action: 'Review failed fixes manually',
         description: `${this.fixesFailed} fixes failed and need manual intervention`
-      });
-    }
+      })}
 
     if (this.fixesApplied > 0) {
       recommendations.push({
         priority: 'medium',
         action: 'Run tests to verify fixes',
         description: `${this.fixesApplied} syntax fixes were applied, verify functionality`
-      });
-    }
+      })}
 
     if (this.fixesSkipped > 0) {
       recommendations.push({
         priority: 'low',
         action: 'Review skipped files',
         description: `${this.fixesSkipped} files were skipped during fixing`
-      });
-    }
+      })}
 
-    return recommendations;
-  }
+    return recommendations}
 
   startContinuousFixing() {
     this.log('info', 'Starting continuous syntax fixing...');
     
     // Monitor for new syntax issues every 5 minutes
     setInterval(async () => {
-      await this.performSyntaxFixes();
-    }, 300000); // 5 minutes
+      await this.performSyntaxFixes()}, 300000); // 5 minutes
   }
 
   setupSignalHandlers() {
     // Listen for SIGUSR2 to trigger immediate fix
     process.on('SIGUSR2', async () => {
       this.log('info', 'Received SIGUSR2 signal, triggering immediate syntax fix...');
-      await this.performSyntaxFixes();
-    });
-  }
+      await this.performSyntaxFixes()})}
 }
 
 // Start the service
@@ -698,27 +605,22 @@ const fixer = new SyntaxErrorFixer();
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   fixer.log('info', 'Received SIGINT, shutting down gracefully...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 process.on('SIGTERM', () => {
   fixer.log('info', 'Received SIGTERM, shutting down gracefully...');
-  process.exit(0);
-});
+  process.exit(0)});
 
 // Handle uncaught errors
 process.on('uncaughtException', (error) => {
   fixer.log('error', 'Uncaught exception', error);
-  process.exit(1);
-});
+  process.exit(1)});
 
 process.on('unhandledRejection', (reason, promise) => {
   fixer.log('error', 'Unhandled rejection', { reason, promise });
-  process.exit(1);
-});
+  process.exit(1)});
 
 // Start the service
 fixer.start().catch(error => {
   fixer.log('error', 'Failed to start service', error);
-  process.exit(1);
-});
+  process.exit(1)});

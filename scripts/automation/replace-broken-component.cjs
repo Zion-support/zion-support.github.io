@@ -6,12 +6,10 @@ const path = require('path');
 class ComponentReplacer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx');
-  }
+    this.filePath = path.join(this.projectRoot, 'src/components/AIChatbotSystem.tsx')}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   replaceComponent() {
     this.log('Replacing broken AIChatbotSystem component with working version...');
@@ -47,16 +45,13 @@ interface ChatMessage {
     confidence?: number;
     suggestions?: string[];
     relatedServices?: string[];
-    estimatedResponseTime?: number;
-  };
-}
+    estimatedResponseTime?: number}}
 
 interface AIChatbotSystemProps {
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
-  autoScroll?: boolean;
-}
+  autoScroll?: boolean}
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
@@ -96,15 +91,13 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
           estimatedResponseTime: 2
         }
       };
-      setMessages([welcomeMessage]);
-    }
+      setMessages([welcomeMessage])}
   }, [isOpen, messages.length]);
 
   // Auto-scroll to bottom
   useEffect(() => {
     if (autoScroll && messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' })}
   }, [messages, autoScroll]);
 
   // Simulate AI response
@@ -150,8 +143,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     };
 
     setMessages(prev => [...prev, botMessage]);
-    setIsTyping(false);
-  }, []);
+    setIsTyping(false)}, []);
 
   // Handle message submission
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
@@ -170,13 +162,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
     
-    await simulateAIResponse(inputValue.trim());
-  }, [inputValue, isTyping, simulateAIResponse]);
+    await simulateAIResponse(inputValue.trim())}, [inputValue, isTyping, simulateAIResponse]);
 
   // Handle suggestion clicks
   const handleSuggestionClick = useCallback((suggestion: string) => {
-    setInputValue(suggestion);
-  }, []);
+    setInputValue(suggestion)}, []);
 
   // Handle file upload
   const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -190,19 +180,16 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         type: 'file',
         status: 'sent'
       };
-      setMessages(prev => [...prev, fileMessage]);
-    }
+      setMessages(prev => [...prev, fileMessage])}
   }, []);
 
   // Toggle voice input
   const toggleVoiceInput = useCallback(() => {
-    setIsListening(!isListening);
-  }, [isListening]);
+    setIsListening(!isListening)}, [isListening]);
 
   // Rate response
   const rateResponse = useCallback((messageId: string, rating: 'positive' | 'negative') => {
-    console.log(\`Rated message \${messageId} as \${rating}\`);
-  }, []);
+    console.log(\`Rated message \${messageId} as \${rating}\`)}, []);
 
   return (
     <>
@@ -433,25 +420,20 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )};
 `;
     
     fs.writeFileSync(this.filePath, workingComponent);
-    this.log('AIChatbotSystem component replaced successfully!');
-  }
+    this.log('AIChatbotSystem component replaced successfully!')}
 
   async run() {
     this.log('Starting Component Replacer...');
     
     try {
       this.replaceComponent();
-      this.log('Component Replacer completed successfully!');
-      
-    } catch (error) {
+      this.log('Component Replacer completed successfully!')} catch (error) {
       this.log(`Error in Component Replacer: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -461,12 +443,9 @@ if (require.main === module) {
   automation.run()
     .then(() => {
       console.log('Component Replacer completed successfully!');
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch(error => {
       console.error('Component Replacer failed:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = ComponentReplacer;

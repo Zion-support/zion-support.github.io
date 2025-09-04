@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react',;',';';
-    ';';';';
-import Link from 'next/link',;';';
-    ';';';';
-import { useRouter } from 'next/router',;',';';
-    ';';';';
+import React, { useState, useEffect } from 'react',;',';';';';
+    ';';';';';';
+import Link from 'next/link',;';';';';
+    ';';';';';';
+import { useRouter } from 'next/router',;',';';';';
+    ';';';';';';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu,
@@ -15,108 +15,108 @@ import {
   Shield,
   Zap,
   Users,
-  Phone,
-  Mail,;
-  MapPin,;';
-  Code,;';';
-  Database,;';';';
-  Network,;',';';
-    ';';';
+  Phone,';
+  Mail,;';';
+  MapPin,;';';';
+  Code,;';';';';
+  Database,;';';';';';
+  Network,;',';';';';
+    ';';';';';
   Settings} from 'lucide-react';
 const NextNavigation = (props: any) => {
   const [isOpen, setIsOpen] = useState<any>(false);
   const [isScrolled, setIsScrolled] = useState<any>(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const router = useRouter();
-  useEffect(() => {';
-    const handleScroll = (props: any) => {';';
-      setIsScrolled(window.scrollY > 20);';';';
-    };',';';
-    ';';';
-    window.addEventListener('scroll', handleScroll);',';';
-    ';';';
-    return () => window.removeEventListener('scroll', handleScroll);';';
-  }, []);';';';
-  const navigationItems = [',';';
-    ';';' { name: 'Home', href: '/' },';';' {',';';
-    ';';';
-      name: 'Services',',';';
-    ';';';
-      href: '/services',';';
-      dropdown: [';';' {',';';
-    ';';';
-          name: 'AI Services',',';';
-    ';';';
-          href: '/ai-services',';';';
-          icon: Brai n,',';';
-    ';';';
-          description: 'Cutting-edge AI solutions' },';';' {',';';
-    ';';';
-          name: 'IT Services',',';';
-    ';';';
-          href: '/it-services',';';';
-          icon: Clou d,',';';
-    ';';';
-          description: 'Enterprise IT infrastructure' },';';' {',';';
-    ';';';
-          name: 'Micro SaaS',',';';
-    ';';';
-          href: '/micro-saas',';';';
-          icon: Cod e,',';';
-    ';';';
-          description: 'Custom software solutions' },';';' {',';';
-    ';';';
-          name: 'Cybersecurity',',';';
-    ';';';
-          href: '/services#cybersecurity',';';';
-          icon: Shiel d,',';';
-    ';';';
-          description: 'Advanced security solutions' },';';' {',';';
-    ';';';
-          name: 'Cloud & DevOps',',';';
-    ';';';
-          href: '/services#cloud',';';';
-          icon: Databas e,',';';
-    ';';';
-          description: 'Scalable cloud infrastructure' },';';' {',';';
-    ';';';
-          name: 'Digital Transformation',',';';
-    ';';';
-          href: '/services#ai',';';';
-          icon: Za p,',';';
-    ';';';
-          description: 'Business transformation' }';';
-      ] ;';';';
-},',';';
-    ';';' { name: 'About', href: '/about' },',';';
-    ';';' { name: 'Contact', href: '/contact' }
-  ]';
-  const contactInfo = [';' {';';';
-      icon: Phon e,',';';
-    ';';';
-      text: '+1 302 464 0950',',';';
-    ';';';
-      href: 'tel:+13024640950' },';' {';';';
-      icon: Mai l,',';';
-    ';';';
-      text: 'kleber@ziontechgroup.com',',';';
-    ';';';
-      href: 'mailto: klebe r@ziontechgroup.com' },';' {';';';
-      icon: MapPi n,',';';
-    ';';';
-      text: '364 E Main St STE 1008, Middletown DE 19709',',';';
-    ';';';
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);';
+  const router = useRouter();';';
+  useEffect(() => {';';';
+    const handleScroll = (props: any) => {';';';';
+      setIsScrolled(window.scrollY > 20);';';';';';
+    };',';';';';
+    ';';';';';
+    window.addEventListener('scroll', handleScroll);',';';';';
+    ';';';';';
+    return () => window.removeEventListener('scroll', handleScroll);';';';';
+  }, []);';';';';';
+  const navigationItems = [',';';';';
+    ';';' { name: 'Home', href: '/' },';';' {',';';';';
+    ';';';';';
+      name: 'Services',',';';';';
+    ';';';';';
+      href: '/services',';';';';
+      dropdown: [';';' {',';';';';
+    ';';';';';
+          name: 'AI Services',',';';';';
+    ';';';';';
+          href: '/ai-services',';';';';';
+          icon: Brai n,',';';';';
+    ';';';';';
+          description: 'Cutting-edge AI solutions' },';';' {',';';';';
+    ';';';';';
+          name: 'IT Services',',';';';';
+    ';';';';';
+          href: '/it-services',';';';';';
+          icon: Clou d,',';';';';
+    ';';';';';
+          description: 'Enterprise IT infrastructure' },';';' {',';';';';
+    ';';';';';
+          name: 'Micro SaaS',',';';';';
+    ';';';';';
+          href: '/micro-saas',';';';';';
+          icon: Cod e,',';';';';
+    ';';';';';
+          description: 'Custom software solutions' },';';' {',';';';';
+    ';';';';';
+          name: 'Cybersecurity',',';';';';
+    ';';';';';
+          href: '/services#cybersecurity',';';';';';
+          icon: Shiel d,',';';';';
+    ';';';';';
+          description: 'Advanced security solutions' },';';' {',';';';';
+    ';';';';';
+          name: 'Cloud & DevOps',',';';';';
+    ';';';';';
+          href: '/services#cloud',';';';';';
+          icon: Databas e,',';';';';
+    ';';';';';
+          description: 'Scalable cloud infrastructure' },';';' {',';';';';
+    ';';';';';
+          name: 'Digital Transformation',',';';';';
+    ';';';';';
+          href: '/services#ai',';';';';';
+          icon: Za p,',';';';';
+    ';';';';';
+          description: 'Business transformation' }';';';';
+      ] ;';';';';';
+},',';';';';
+    ';';' { name: 'About', href: '/about' },',';';';';
+    ';';' { name: 'Contact', href: '/contact' }';';
+  ]';';';
+  const contactInfo = [';' {';';';';';
+      icon: Phon e,',';';';';
+    ';';';';';
+      text: '+1 302 464 0950',',';';';';
+    ';';';';';
+      href: 'tel:+13024640950' },';' {';';';';';
+      icon: Mai l,',';';';';
+    ';';';';';
+      text: 'kleber@ziontechgroup.com',',';';';';
+    ';';';';';
+      href: 'mailto: klebe r@ziontechgroup.com' },';' {';';';';';
+      icon: MapPi n,',';';';';
+    ';';';';';
+      text: '364 E Main St STE 1008, Middletown DE 19709',',';';';';
+    ';';';';';
       href: '#' }
   ]
   const toggleDropdown = (props: any) => {
     setActiveDropdown(activeDropdown === name ? null : name)};
-  const closeMobileMenu = (props: any) => {
-    setIsOpen(false);
-    setActiveDropdown(null);';
-  };';';
-  return (';';';
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${',';';
-    ';';';
+  const closeMobileMenu = (props: any) => {';
+    setIsOpen(false);';';
+    setActiveDropdown(null);';';';
+  };';';';';
+  return (';';';';';
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${',';';';';
+    ';';';';';
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent';
 }`}>
       <div className="max-w-7xl mx-auto px-4 sm: p x-6 lg: p x-8">
@@ -140,13 +140,13 @@ const NextNavigation = (props: any) => {
                       onClick={() => toggleDropdown(item.name)
       )}
     </div>
-  );
-}
-                      className={`flex items-center space-x-1 text-gray-300 hover: tex t-cyan-300 transition-colors duration-200 py-2`';
-                    >';';
-                      <span>{item.name}</span>';';';
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${',';';
-    ';';';
+  );';
+}';';
+                      className={`flex items-center space-x-1 text-gray-300 hover: tex t-cyan-300 transition-colors duration-200 py-2`';';';
+                    >';';';';
+                      <span>{item.name}</span>';';';';';
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${',';';';';
+    ';';';';';
                         activeDropdown === item.name ? 'rotate-180' : '';
 }`}  />
                     </button>
@@ -194,13 +194,13 @@ const NextNavigation = (props: any) => {
       )}
     </div>
   );
-}
-                    </AnimatePresence>
-                  </div>';
-                ) : (';';
-                  <Link href={item.href}';';';
-                    className={`text-gray-300 hover: tex t-cyan-300 transition-colors duration-200 py-2 ${',';';
-    ';';';
+}';
+                    </AnimatePresence>';';
+                  </div>';';';
+                ) : (';';';';
+                  <Link href={item.href}';';';';';
+                    className={`text-gray-300 hover: tex t-cyan-300 transition-colors duration-200 py-2 ${',';';';';
+    ';';';';';
                       router.pathname === item.href ? 'text-cyan-400' : ''}`}
                   >
                     {item.name}
@@ -239,12 +239,12 @@ const NextNavigation = (props: any) => {
             {isOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
           </button>
         </div>
-      </div>
-      {/* Mobile Menu */}
-      <AnimatePresence>' {isOpen && (';';
-          <motion.div';';';
-            initial={{ opacity: 0, height: 0 }}',';';
-    ';';';
+      </div>';
+      {/* Mobile Menu */}';';
+      <AnimatePresence>' {isOpen && (';';';';
+          <motion.div';';';';';
+            initial={{ opacity: 0, height: 0 }}',';';';';
+    ';';';';';
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
@@ -283,20 +283,20 @@ const NextNavigation = (props: any) => {
                           onClick={() => toggleDropdown(item.name)
       )}
     </div>
-  );
-}
-                          className={`flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover: tex t-cyan-300 hover: b g-gray-800/50 rounded-lg transition-colors duration-200`';
-                        >';';
-                          <span>{item.name}</span>';';';
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${',';';
-    ';';';
+  );';
+}';';
+                          className={`flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover: tex t-cyan-300 hover: b g-gray-800/50 rounded-lg transition-colors duration-200`';';';
+                        >';';';';
+                          <span>{item.name}</span>';';';';';
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${',';';';';
+    ';';';';';
                             activeDropdown === item.name ? 'rotate-180' : '';
-}`}  />
-                        </button>
-                        <AnimatePresence>' {activeDropdown === item.name && (';';
-                            <motion.div';';';
-                              initial={{ opacity: 0, height: 0 }}',';';
-    ';';';
+}`}  />';
+                        </button>';';
+                        <AnimatePresence>' {activeDropdown === item.name && (';';';';
+                            <motion.div';';';';';
+                              initial={{ opacity: 0, height: 0 }}',';';';';
+    ';';';';';
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
                               transition={{ duration: 0.2 }}
@@ -324,15 +324,15 @@ const NextNavigation = (props: any) => {
   );
 }
                         </AnimatePresence>
-                      </div>
-                    ) : (
-                      <Link href={item.href}';
-                        onClick={closeMobileMenu}';';
-                        className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${';';';
-                          router.pathname === item.href',';';
-    ';';';
-                            ? 'text-cyan-400 bg-cyan-400/10'',';';
-    ';';';
+                      </div>';
+                    ) : (';';
+                      <Link href={item.href}';';';
+                        onClick={closeMobileMenu}';';';';
+                        className={`block px-3 py-2 rounded-lg transition-colors duration-200 ${';';';';';
+                          router.pathname === item.href',';';';';
+    ';';';';';
+                            ? 'text-cyan-400 bg-cyan-400/10'',';';';';
+    ';';';';';
                             : 'text-gray-300 hover: tex t-cyan-300 hover: b g-gray-800/50'}`}
                       >
                         {item.name}
@@ -365,17 +365,16 @@ const NextNavigation = (props: any) => {
       )}
     </div>
   );
-}
-      </AnimatePresence>
-    </nav>';
-  );';';
-};';';';
+}';
+      </AnimatePresence>';';
+    </nav>';';';
+  );';';';';
+};';';';';';
 export default NextNavigation;"';';';';
 </motion>
 </ChevronDown>
 </motion>
-</motion>
 </ChevronDown>
 </string>
-</any>
-</any>
+</any>';
+</any>;';;';

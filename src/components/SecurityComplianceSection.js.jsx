@@ -3,12 +3,3 @@ const securityStandards = [{name: "ISO 27001"," category: "Information Security 
 </motion>
 </motion>
 </motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>
-</motion>

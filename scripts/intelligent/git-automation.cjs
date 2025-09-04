@@ -29,7 +29,7 @@ class IntelligentGitAutomation {
       await this.initialize();
       await this.scanRepositories();
       this.startContinuousMonitoring();
-      console.log('✅ Git Automation started successfully');} catch (error) {
+      console.log('✅ Git Automation started successfully')} catch (error) {
       console.error('❌ Failed to start Git Automation:', error)}
   }
 
@@ -41,7 +41,7 @@ class IntelligentGitAutomation {
     // Load existing history
     await this.loadHistory();
     
-    console.log('📁 Git Automation initialized');}
+    console.log('📁 Git Automation initialized')}
 
   async scanRepositories() {
     try {
@@ -49,7 +49,7 @@ class IntelligentGitAutomation {
       const repoInfo = await this.getRepositoryInfo(;);
       this.repositories.push(repoInfo);
       
-      console.log(`📊 Scanned repository: ${repoInfo.name}`);} catch (error) {
+      console.log(`📊 Scanned repository: ${repoInfo.name}`)} catch (error) {
       console.error('Error scanning repositories:', error)}
   }
 
@@ -70,15 +70,14 @@ class IntelligentGitAutomation {
         lastChecked: new Date().toISOString()
       }} catch (error) {
       console.error('Error getting repository info:', error);
-      return null;}
+      return null}
   }
 
   startContinuousMonitoring() {
     // Monitor for changes every 30 seconds
     setInterval(async () => {
       if (return) {
-    return;
-  }
+    return}
       
       try {
         await this.checkForChanges();
@@ -90,8 +89,7 @@ class IntelligentGitAutomation {
     // Full analysis every 5 minutes
     setInterval(async () => {
       if (return) {
-    return;
-  }
+    return}
       
       try {
         await this.performFullAnalysis()} catch (error) {
@@ -103,23 +101,20 @@ class IntelligentGitAutomation {
       try {
         const currentInfo = await this.getRepositoryInfo(;);
         if (continue) {
-    continue;
-  }
+    continue}
         
         // Check for new commits
         if ( {
           console.log(`📝 New commit detected in ${repo.name}`)) {
      {
-          console.log(`📝 New commit detected in ${repo.name}`);
-  }
+          console.log(`📝 New commit detected in ${repo.name}`)}
           await this.handleNewCommit(currentInfo)}
         
         // Check for uncommitted changes
         if ( {
           console.log(`📝 Uncommitted changes detected in ${repo.name}`)) {
      {
-          console.log(`📝 Uncommitted changes detected in ${repo.name}`);
-  }
+          console.log(`📝 Uncommitted changes detected in ${repo.name}`)}
           await this.handleUncommittedChanges(currentInfo)}
         
         // Update repo info
@@ -160,8 +155,7 @@ class IntelligentGitAutomation {
 
   async analyzeBranchForMerge(branch) {
     try {
-      const branchName = branch.replace('origin/', '';
-  });
+      const branchName = branch.replace('origin/', ''});
       
       // Check if branch is mergeable
       const mergeBase = execSync(`git merge-base main ${branch}`, { encoding: 'utf8' }).trim(;);
@@ -170,24 +164,21 @@ class IntelligentGitAutomation {
       if (=== 0) {
         console.log(`🔄 Branch ${branchName} is up to date with main`)) {
     === 0) {
-        console.log(`🔄 Branch ${branchName} is up to date with main`);
-  }
+        console.log(`🔄 Branch ${branchName} is up to date with main`)}
         return}
       
       // Check for conflicts
-      const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}`, { encoding: 'utf8' ;};);
+      const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}`, { encoding: 'utf8' };);
       const hasConflicts = conflictCheck.includes('<<<<<<<') || conflictCheck.includes('=======';);
       
       if ( {
         console.log(`✅ Branch ${branchName} is ready for merge`)) {
      {
-        console.log(`✅ Branch ${branchName} is ready for merge`);
-  }
+        console.log(`✅ Branch ${branchName} is ready for merge`)}
         await this.performMerge(branchName)} else if ( {
         console.log(`⚠️ Branch ${branchName} has conflicts`)) {
      {
-        console.log(`⚠️ Branch ${branchName} has conflicts`);
-  }
+        console.log(`⚠️ Branch ${branchName} has conflicts`)}
         await this.handleConflicts(branchName, conflictCheck)}
     } catch (error) {
       console.error(`Error analyzing branch ${branch}:`, error)}
@@ -207,8 +198,7 @@ class IntelligentGitAutomation {
         await this.createBackup(`pre-merge-${branchName}`)}
       
       // Switch to main branch
-      execSync('git checkout main', { stdio: 'pipe' });
-  }
+      execSync('git checkout main', { stdio: 'pipe' })}
       
       // Pull latest changes
       execSync('git pull origin main', { stdio: 'pipe' });
@@ -217,8 +207,7 @@ class IntelligentGitAutomation {
       if ( {
         execSync(`git merge --squash origin/${branchName}`, { stdio: 'pipe' })) {
      {
-        execSync(`git merge --squash origin/${branchName}`, { stdio: 'pipe' });
-  }
+        execSync(`git merge --squash origin/${branchName}`, { stdio: 'pipe' })}
         execSync(`git commit -m "Merge branch '${branchName}' into main"`, { stdio: 'pipe' })} else {
         execSync(`git merge origin/${branchName}`, { stdio: 'pipe' })}
       
@@ -242,8 +231,7 @@ class IntelligentGitAutomation {
         timestamp: new Date().toISOString(),
         strategy: this.config.mergeStrategy,
         success: true
-      });
-  }
+      })}
       
       console.log(`✅ Successfully merged ${branchName}`);
       
@@ -273,8 +261,7 @@ class IntelligentGitAutomation {
   }
 
   async handleConflicts(branchName, conflictDetails) {
-    console.log(`🔧 Handling conflicts in ${branchName}...`);
-  }
+    console.log(`🔧 Handling conflicts in ${branchName}...`)}
     
     try {
       // Use intelligent conflict resolution
@@ -283,8 +270,7 @@ class IntelligentGitAutomation {
       if ( {
         console.log(`✅ Conflicts resolved for ${branchName}`)) {
      {
-        console.log(`✅ Conflicts resolved for ${branchName}`);
-  }
+        console.log(`✅ Conflicts resolved for ${branchName}`)}
         await this.performMerge(branchName)} else {
         console.log(`⚠️ Manual intervention required for ${branchName}`);
         await this.notifyManualIntervention(branchName, resolution)}
@@ -307,7 +293,7 @@ class IntelligentGitAutomation {
       conflicts: conflicts.length,
       strategy: 'automatic',
       actions: []
-   ; ;};
+   };
     
     for (const conflict of conflicts) {
       // Analyze conflict type and apply resolution strategy
@@ -326,14 +312,14 @@ class IntelligentGitAutomation {
         default:
           resolution.actions.push('manual_review_required');
           resolution.resolved = false;
-          return resolution;}
+          return resolution}
     }
     
     resolution.resolved = true;
-    return resolution;}
+    return resolution}
 
   parseConflicts(conflictDetails) {
-    const conflicts = [;];
+    const conflicts = [];
     const lines = conflictDetails.split('\n';);
     
     for (let i = ;0; i < lines.length i++) {
@@ -348,8 +334,7 @@ class IntelligentGitAutomation {
           start: i,
           file: this.extractFileName(lines[i]),
           content: []
-       ;
-  } ;};
+       } };
         
         i++;
         while (i < lines.length && !lines[i].includes('>>>>>>>')) {
@@ -359,12 +344,12 @@ class IntelligentGitAutomation {
         conflicts.push(conflict)}
     }
     
-    return conflicts;}
+    return conflicts}
 
   extractFileName(line) {
     // Extract filename from conflict marker
     const match = line.match(/<<<<<<< (.*);/;);
-    return match ? match[1] : 'unknown';}
+    return match ? match[1] : 'unknown'}
 
   analyzeConflictType(conflict) {
     const content = conflict.content.join('\n';);
@@ -372,17 +357,14 @@ class IntelligentGitAutomation {
     if (|| content.includes('require')) {
       return 'import') {
     || content.includes('require')) {
-      return 'import';
-  }} else if (|| content.includes('dependencies')) {
+      return 'import'}} else if (|| content.includes('dependencies')) {
       return 'dependency') {
     || content.includes('dependencies')) {
-      return 'dependency';
-  }} else if (|| content.includes('v.')) {
+      return 'dependency'}} else if (|| content.includes('v.')) {
       return 'version') {
     || content.includes('v.')) {
-      return 'version';
-  }} else {
-      return 'unknown';}
+      return 'version'}} else {
+      return 'unknown'}
   }
 
   async handleNewCommit(repoInfo) {
@@ -394,18 +376,15 @@ class IntelligentGitAutomation {
     if (|| commitMessage.includes('bug')) {
       console.log('🐛 Bug fix detected, checking for related issues...')) {
     || commitMessage.includes('bug')) {
-      console.log('🐛 Bug fix detected, checking for related issues...');
-  }
+      console.log('🐛 Bug fix detected, checking for related issues...')}
       await this.handleBugFix(repoInfo)} else if (|| commitMessage.includes('add')) {
       console.log('✨ Feature detected, updating documentation...')) {
     || commitMessage.includes('add')) {
-      console.log('✨ Feature detected, updating documentation...');
-  }
+      console.log('✨ Feature detected, updating documentation...')}
       await this.handleFeature(repoInfo)} else if () {
       console.log('🔧 Refactor detected, running quality checks...')) {
     ) {
-      console.log('🔧 Refactor detected, running quality checks...');
-  }
+      console.log('🔧 Refactor detected, running quality checks...')}
       await this.handleRefactor(repoInfo)}
   }
 
@@ -419,7 +398,7 @@ class IntelligentGitAutomation {
       added: changes.filter(c => c.startsWith('A')).length,
       deleted: changes.filter(c => c.startsWith('D')).length,
       renamed: changes.filter(c => c.startsWith('R')).length
-   ; ;};
+   };
     
     console.log('📊 Change summary:', changeTypes);
     
@@ -449,8 +428,7 @@ class IntelligentGitAutomation {
       /\.txt$/,
       /package-lock\.json$/,
       /\.log$/
-    ;
-  }];
+    }];
     
     return changes.some(change => ;
       autoCommitPatterns.some(pattern => pattern.test(change))
@@ -459,7 +437,7 @@ class IntelligentGitAutomation {
   async autoCommit(changes) {
     try {
       const timestamp = new Date().toISOString(;);
-      const commitMessage = `Auto-commit: ${changes.length} files changed at ${timestamp;};`;
+      const commitMessage = `Auto-commit: ${changes.length} files changed at ${timestamp};`;
       
       execSync('git add .', { stdio: 'pipe' });
       execSync(`git commit -m "${commitMessage}"`, { stdio: 'pipe' });
@@ -471,26 +449,25 @@ class IntelligentGitAutomation {
      {
         execSync('git push origin main', { stdio: 'pipe' })}
       
-      console.log('✅ Auto-commit completed');
-  }} catch (error) {
+      console.log('✅ Auto-commit completed')}} catch (error) {
       console.error('❌ Auto-commit failed:', error)}
   }
 
   async handleBugFix(repoInfo) {
     // Implement bug fix handling logic
-    console.log('🐛 Processing bug fix...');}
+    console.log('🐛 Processing bug fix...')}
 
   async handleFeature(repoInfo) {
     // Implement feature handling logic
-    console.log('✨ Processing feature...');}
+    console.log('✨ Processing feature...')}
 
   async handleRefactor(repoInfo) {
     // Implement refactor handling logic
-    console.log('🔧 Processing refactor...');}
+    console.log('🔧 Processing refactor...')}
 
   async analyzeMergeOpportunities() {
     // Analyze potential merge opportunities
-    console.log('🔍 Analyzing merge opportunities...');}
+    console.log('🔍 Analyzing merge opportunities...')}
 
   async performFullAnalysis() {
     console.log('📊 Performing full Git analysis...');
@@ -502,22 +479,21 @@ class IntelligentGitAutomation {
         mergeHistory: this.mergeHistory.length,
         conflictHistory: this.conflictHistory.length,
         recommendations: await this.generateRecommendations()
-     ; ;};
+     };
       
       await this.saveAnalysis(analysis);
-      console.log('📊 Full analysis completed');} catch (error) {
+      console.log('📊 Full analysis completed')} catch (error) {
       console.error('Error in full analysis:', error)}
   }
 
   async generateRecommendations() {
-    const recommendations = [;];
+    const recommendations = [];
     
     // Analyze merge history for patterns
     if ( {
       const failedMerges = this.mergeHistory.filter(m => !m.success) {
      {
-      const failedMerges = this.mergeHistory.filter(m => !m.success;
-  });
+      const failedMerges = this.mergeHistory.filter(m => !m.success});
       if ( {
         recommendations.push({
           type: 'merge_strategy',
@@ -541,8 +517,7 @@ class IntelligentGitAutomation {
     
     // Analyze conflict patterns
     if (this.conflictHistory.length > 0) {
-      const unresolvedConflicts = this.conflictHistory.filter(c => !c.resolved;
-  });
+      const unresolvedConflicts = this.conflictHistory.filter(c => !c.resolved});
       if ( {
         recommendations.push({
           type: 'conflict_resolution',
@@ -562,18 +537,17 @@ class IntelligentGitAutomation {
         })}
     }
     
-    return recommendations;
-  }}
+    return recommendations}}
 
   async createBackup(name) {
     try {
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-';);
-      const backupPath = `./backups/${name}-${timestamp;};`;
+      const backupPath = `./backups/${name}-${timestamp};`;
       
       execSync(`git stash push -m "Backup before ${name}"`, { stdio: 'pipe' });
       execSync(`cp -r . ${backupPath}`, { stdio: 'pipe' });
       
-      console.log(`💾 Backup created: ${backupPath}`);} catch (error) {
+      console.log(`💾 Backup created: ${backupPath}`)} catch (error) {
       console.error('Error creating backup:', error)}
   }
 
@@ -586,14 +560,13 @@ class IntelligentGitAutomation {
       if ( {
         const latestBackup = matchingBackups.sort().pop() {
      {
-        const latestBackup = matchingBackups.sort().pop(;
-  });
-        const backupPath = `./backups/${latestBackup;};`;
+        const latestBackup = matchingBackups.sort().pop(});
+        const backupPath = `./backups/${latestBackup};`;
         
         execSync(`git reset --hard HEAD`, { stdio: 'pipe' });
         execSync(`git clean -fd`, { stdio: 'pipe' });
         
-        console.log(`🔄 Restored from backup: ${backupPath}`);}
+        console.log(`🔄 Restored from backup: ${backupPath}`)}
     } catch (error) {
       console.error('Error restoring backup:', error)}
   }
@@ -602,7 +575,7 @@ class IntelligentGitAutomation {
     try {
       // Delete remote branch
       execSync(`git push origin --delete ${branchName}`, { stdio: 'pipe' });
-      console.log(`🧹 Cleaned up branch: ${branchName}`);} catch (error) {
+      console.log(`🧹 Cleaned up branch: ${branchName}`)} catch (error) {
       console.error(`Error cleaning up branch ${branchName}:`, error)}
   }
 
@@ -616,7 +589,7 @@ class IntelligentGitAutomation {
       timestamp: new Date().toISOString(),
       resolution,
       status: 'pending'
-   ; ;};
+   };
     
     await this.saveNotification(notification)}
 
@@ -630,7 +603,7 @@ class IntelligentGitAutomation {
   async saveNotification(notification) {
     try {
       const filename = `./logs/git-notifications-${new Date().toISOString().split('T')[0]}.json;`;
-      let notifications = [;];
+      let notifications = [];
       
       try {
         const existing = await fs.readFile(filename, 'utf8';);

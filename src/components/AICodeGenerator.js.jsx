@@ -1,38 +1,38 @@
-import React, {useState, useCallback} from 'react';
-import {motion, AnimatePresence} from 'framer-motion';
+import React, {useState, useCallback} from 'react';'''';';
+import {motion, AnimatePresence} from 'framer-motion';'''';';
 import {Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2} from 'lucide-react';
 import {useAICodeGeneration} from "../hooks/useAICodeGeneration.jsx";
 ;
-export const AICodeGenerator = (props: any) => {;
-    const { trackEvent } = useAnalytics({enableTracking: true,;
-        enableUserBehaviorTracking: true;});';
-    const [activeTab, setActiveTab] = useState('generate');
-    const [showAdvanced, setShowAdvanced] = useState(false);';
+export const AICodeGenerator = (props: any) => {';
+    const { trackEvent } = useAnalytics({enableTracking: true,';';
+        enableUserBehaviorTracking: true;});'';';
+    const [activeTab, setActiveTab] = useState('generate');';';
+    const [showAdvanced, setShowAdvanced] = useState(false);'';';
     const [customCode, setCustomCode] = useState('');
     const [copied, setCopied] = useState(false);
-    const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();
-    const [form, setForm] = useState({}
-';
-'';
-''';
-        prompt: '',''';
-        language: 'typescript',''';
-        framework: 'react',''';
-        style: 'functional',''';
-        target: 'web',''';
-        quality: 'development',;
-        includeTests: false,;
-        includeDocs: false,;
-        includeErrorHandling: false,;
-        includeLogging: false,;
+    const {isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode} = useAICodeGeneration();';
+    const [form, setForm] = useState({}';';
+'';';
+''';';
+'''';';
+        prompt: '','''';';
+        language: 'typescript','''';';
+        framework: 'react','''';';
+        style: 'functional','''';';
+        target: 'web','''';';
+        quality: 'development',
+        includeTests: false,
+        includeDocs: false,
+        includeErrorHandling: false,
+        includeLogging: false,
         includeMetrics: false;
     });
     // Handle form submission;
     const handleSubmit = useCallback(async (e) => {}
         e.preventDefault();
-        if(!form.prompt.trim());
-            return;
-        await generateCode(form.prompt, form);';
+        if(!form.prompt.trim())';
+            return;';';
+        await generateCode(form.prompt, form);'';';
         trackEvent('ai_code_generator',form_submitted', form.language, null, {}
             framework: form.framework,;
             style: form.style,;
@@ -41,39 +41,39 @@ export const AICodeGenerator = (props: any) => {;
         })}, [form, generateCode, trackEvent]);
     // Handle custom code analysis;
     const handleAnalyzeCustomCode = useCallback(async () => {}
-        if(!customCode.trim());
-            return;
-        await analyzeCode(customCode, form.language);';
+        if(!customCode.trim())';
+            return;';';
+        await analyzeCode(customCode, form.language);'';';
         trackEvent('ai_code_generator',custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);
     // Handle code optimization;
     const handleOptimizeCode = useCallback(async (focus) => {}
         if(!generatedCode && !customCode);
             return;
         const codeToOptimize = generatedCode || customCode;
-        const optimizedCode = await optimizeCode(codeToOptimize, focus);
-        if (generatedCode) {}
-';
-            // Update generated code'';
-            // Note: In a real implementation, you'd want to update the state properly;
-        }';
+        const optimizedCode = await optimizeCode(codeToOptimize, focus);';
+        if (generatedCode) {}';';
+'';';
+            // Update generated code''';';
+            // Note: In a real implementation, you'd want to update the state properly;';';
+        }'';';
         trackEvent('ai_code_generator',code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);
     // Handle test generation;
-    const handleGenerateTests = useCallback(async () => {}
-        if(!generatedCode && !customCode);
-            return;';
-        const codeToTest = generatedCode || customCode;'';
-        const testCode = await generateTests(codeToTest, form.language);''';
-        // In a real implementation, you'd want to display the test code'''';
-        // ''';
+    const handleGenerateTests = useCallback(async () => {}';
+        if(!generatedCode && !customCode)';';
+            return;'';';
+        const codeToTest = generatedCode || customCode;''';';
+        const testCode = await generateTests(codeToTest, form.language);'''';';
+        // In a real implementation, you'd want to display the test code''''';';
+        // '''';';
         trackEvent('ai_code_generator',tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation;
-    const handleGenerateDocs = useCallback(async () => {}
-        if(!generatedCode && !customCode);
-            return;';
-        const codeToDoc = generatedCode || customCode;'';
-        const docs = await generateDocs(codeToDoc, form.language);''';
-        // In a real implementation, you'd want to display the documentation'''';
-        // ''';
+    const handleGenerateDocs = useCallback(async () => {}';
+        if(!generatedCode && !customCode)';';
+            return;'';';
+        const codeToDoc = generatedCode || customCode;''';';
+        const docs = await generateDocs(codeToDoc, form.language);'''';';
+        // In a real implementation, you'd want to display the documentation''''';';
+        // '''';';
         trackEvent('ai_code_generator',docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard;
     const copyToClipboard = useCallback(async (code) => {}
@@ -325,44 +325,45 @@ const handleClearHistory = useCallback(() => {}"";
 ;
               </button>;
               {/* comment */}
-;
-              {codeAnalysis && (<motion.div initial = {}";
-  {opacity: 0, y: 20}} animate = {}"";
-  {opacity: 1, y: 0 """"">;
-""""}} className="space-y-6">""""";
-                  {/* comment */}"""";
-                  <div className="grid grid-cols-2 md: grid-cols-5 gap-4">""";
-                    {[""",;
-                    { key: "complexity", label: "Complexity", icon: Code, color: "red" },""";
-                    {key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue"},""";
-                    {key: "security", label: "Security", icon: Shield, color: "green"},""";
-                    {key: "performance", label: "Performance", icon: Gauge, color: "yellow"},""";
-                    {key: "accessibility", label: "Accessibility", icon: Eye, color: "purple"}";
-                ].map(({key, label, icon: Icon, color}) => {}"";
-                    const value = codeAnalysis[key]""";
-                    if (typeof value === "number") {}"";
-"""""";
-                        return (";
-    <div key="{key}" className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">"""""""",;
-                            <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}/" >""""";
-                            <div className="text-2xl font-bold text-gray-900 dark: text-white">"",;
-                              {value}/10""""";
-                            </div>"""";
-                            <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>;
-                          </div>)}
-;
-                    return null})}";
-                  </div>"";
-""""";
-                  {/* comment */}""""";
-                  <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">"""";
-                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">Code Metrics</h4>"""";
-                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">"""",;
-                      {Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key="{key}" className="text-center">"""";
-                          <div className="text-lg font-semibold text-gray-900 dark: text-white">{value}</div>"""";
-                          <div className="text-gray-600 dark: text-gray-400 capitalize">""",;
-                            {key.replace(/([A-Z])/g, $1").trim()}";
-                          </div>;
+
+              {codeAnalysis && (<motion.div initial = {}"
+  {opacity: 0, y: 20}} animate = {}""
+  {opacity: 1, y: 0 """"">
+""""}} className="space-y-6">"""""
+                  {/* comment */}""""
+                  <div className="grid grid-cols-2 md: grid-cols-5 gap-4">"""
+                    {[""",
+                    { key: "complexity", label: "Complexity", icon: Code, color: "red" },"""
+                    {key: "maintainability", label: "Maintainability", icon: Wrench, color: "blue"},"""
+                    {key: "security", label: "Security", icon: Shield, color: "green"},"""
+                    {key: "performance", label: "Performance", icon: Gauge, color: "yellow"},"""
+                    {key: "accessibility", label: "Accessibility", icon: Eye, color: "purple"}"
+                ].map(({key, label, icon: Icon, color}) => {}""
+                    const value = codeAnalysis[key]"""
+                    if (typeof value === "number") {}""
+""""""
+                        return ("
+    <div key="{key}" className="text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg">"""""""",
+                            <Icon className="{"w-8" h-8 mx-auto mb-2 text-${color}-500"}/" >"""""
+                            <div className="text-2xl font-bold text-gray-900 dark: text-white">"",
+                              {value}/10"""""
+                            </div>""""
+                            <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
+                              </div>
+  );
+}
+                    return null})}"
+                  </div>""
+"""""
+                  {/* comment */}"""""
+                  <div className="bg-gray-50 dark: bg-gray-700 rounded-lg p-4">""""
+                    <h4 className="font-medium text-gray-900 dark:text-white mb-3">Code Metrics</h4>""""
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">"""",
+                      {Object.entries(codeAnalysis.metrics).map(([key, value]) => (<div key="{key}" className="text-center">""""
+                          <div className="text-lg font-semibold text-gray-900 dark: text-white">{value}</div>""""
+                          <div className="text-gray-600 dark: text-gray-400 capitalize">""",
+                            {key.replace(/([A-Z])/g, $1").trim()}"
+                          </div>
                         </div>))}
 ;
                     </div>";
@@ -381,10 +382,11 @@ const handleClearHistory = useCallback(() => {}"";
                                 {issue.message}""""";
                               </div>"""";
                               {issue.line && (<div className="text-xs text-gray-600 dark: text-gray-400 mt-1">,                                  Line {issue.line}
-;
-                                </div>) }
-;
-                            </div>;
+
+                                    </div>
+  );
+}
+                            </div>
                           </div>) ) }
 ;
                       </div>;
@@ -576,42 +578,38 @@ const handleClearHistory = useCallback(() => {}"";
 """""""`"";
 ";
   } catch (error) {console.error(error);}
-export default Component;
-</Trash2>;
-</motion>;
-</motion>;
-</motion>;
-</FileText>;
-</FileText>;
-</motion>;
-</TestTube>;
-</TestTube>;
-</motion>;
-</Icon>;
-</Zap>;
-</motion>;
-</Info>;
-</AlertCircle>;
-</AlertCircle>;
-</Icon>;
-</motion>;
-</Eye>;
-</Loader2>;
-</textarea>;
-</motion>;
-</Download>;
-</Copy>;
-</CheckCircle>;
-</motion>;
-</Sparkles>;
-</Loader2>;
-</Icon>;
-</motion>;
-</Settings>;
-</textarea>;
-</motion>;
-</Icon>;
-</Download>;
-</Sparkles>;
-</Code>;
-</div>;
+export default Component
+
+</Trash2>
+</motion>
+</FileText>
+</motion>
+</TestTube>
+</motion>
+</Icon>
+</Zap>
+</motion>
+</Info>
+</AlertCircle>
+</Icon>
+</motion>
+</Eye>
+</Loader2>
+</textarea>
+</motion>
+</Download>
+</Copy>
+</CheckCircle>
+</motion>
+</Sparkles>
+</Loader2>
+</Icon>
+</motion>
+</Settings>
+</textarea>
+</motion>
+</Icon>
+</Download>
+</Sparkles>
+</Code>';
+</div>;';;';

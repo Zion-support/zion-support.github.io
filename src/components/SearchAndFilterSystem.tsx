@@ -6,17 +6,19 @@ export default function Page(props: any) {;
   onResultsChange?: (results: SearchResul t[]) => void;
   placeholder?: string;
   showFilters?: boolean}
-;
-export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
-  data,;
-  onResultsChange,;
-  placeholder = "Search services, articles, team members...",;
-  showFilters = true}) => {;
+
+export const SearchAndFilterSystem: Reac t.FC<SearchAndFilterSystemProps> = ({
+
+  data,
+  onResultsChange,
+  placeholder = "Search services, articles, team members...",
+  showFilters = true}) => {';
+';';
   const [searchQuery, setSearchQuery] = useState<any>('');
   const [isSearchFocused, setIsSearchFocused] = useState<any>(false);
-  const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
-  const [showFilterPanel, setShowFilterPanel] = useState<any>(false);
-  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());';
+  const [showFilterPanel, setShowFilterPanel] = useState<any>(false);';';
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');';';
   const [sortBy, setSortBy] = useState<any>('relevance');
 ;
   // Filter options;
@@ -25,8 +27,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
       return acc}, {} as Record < string, any>) ;
         results = results.sort((a, b) => {;
           if(!a.rating || !b.rating) return 0;
-          return b.rating - a.rating});
-        break;
+          return b.rating - a.rating});';
+        break;';';
       case 'name':        results = results.sort((a, b) => a.title.localeCompare(b.title) ) ;
         break;
       default: // relevance;
@@ -50,22 +52,25 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
       newFilters.add(filterId);
 ;
     setActiveFilters(newFilters) };
-;
-  // Clear all filters;
-    setSelectedCategory('all');
+
+  // Clear all filters';
+  ';';
+    setSelectedCategory('all');';';
     setSortBy('relevance')};
-;
-  // Get icon for type;
-  const getTypeIcon = (props: any) => {;
-    switch(type) {;
-'";
-      case 'service': return <Zap className="w-4 h-4"   />;'";
-      case 'article': return <Tag className="w-4 h-4"   />;'";
-      case 'team': return <Users className="w-4 h-4"   />;'";
-      case 'technology': return <Brain className="w-4 h-4"   />;";
+
+  // Get icon for type
+  const getTypeIcon = (props: any) => {
+';
+    switch(type) {';';
+'"';';
+      case 'service': return <Zap className="w-4 h-4"   />;'"';';
+      case 'article': return <Tag className="w-4 h-4"   />;'"';';
+      case 'team': return <Users className="w-4 h-4"   />;'"';';
+      case 'technology': return <Brain className="w-4 h-4"   />;"
       default: retur n <Globe className="w-4 h-4"   />};
-;
-  // Get category color;
+
+  // Get category color';
+  ';';
     return colors[category as keyof typeof colors] || 'text-zinc-400'};
   return (";
     <div className="w-full max-w-6xl mx-auto">;
@@ -78,14 +83,14 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setIsSearchFocused(true)}
             onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
-            placeholder={placeholder}";
-            className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300 backdrop-blur-md";
-          />;
-          {searchQuery && (;
-            <button';
-              onClick={() => setSearchQuery('')}";
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover: tex t-white transition-colors";
-";
+            placeholder={placeholder}"
+            className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan focus: borde r-transparent transition-all duration-300 backdrop-blur-md"
+          />';
+          {searchQuery && (';';
+            <button'';';
+              onClick={() => setSearchQuery('')}"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover: tex t-white transition-colors"
+"
               <X className="w-5 h-5"   />            </button>;
           )}
         </div>;
@@ -149,11 +154,11 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({;
             </select>";
             <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-4 h-4 pointer-events-none"   />          </div>;
           {/* Filter Toggle */}
-          <button;
-            onClick={() => setShowFilterPanel(!showFilterPanel)}`;
-className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel';
-                ? 'bg-zion-cyan text-white'';
-                : 'bg-zinc-900/50 text-zinc-300 hover: tex t-white border border-zinc-700/50'`;
+          <button';
+            onClick={() => setShowFilterPanel(!showFilterPanel)}`';';
+className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${showFilterPanel'';';
+                ? 'bg-zion-cyan text-white''';';
+                : 'bg-zinc-900/50 text-zinc-300 hover: tex t-white border border-zinc-700/50'`
             }`}
 ";
             <Filter className="w-4 h-4"   />            Filters;
@@ -169,8 +174,9 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
               className="px-3 py-2 text-sm text-zinc-400 hover: tex t-white transition-colors";
               Clear all;
             </button>) }
-        </div>) }
-;
+            </div>
+  );
+}
       {/* Filter Panel */}
       <AnimatePresence>;
         {showFilterPanel && (<motion.div;
@@ -178,24 +184,28 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
   { height: 0,;
   opacity: 0;
 }}
-            animate = {;
-  { height: 'auto',;
-  opacity: 1;
+            animate = {';
+';';
+  { height: 'auto',
+  opacity: 1
+
 }}
             exit = {;
   { height: 0,;
   opacity: 0;
 }}
-            transition = {;
-  { duration: 0.3,;
-  ease: 'easeOut';
-}}";
-            className="mb-6 overflow-hidden";
-";
-            <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">";
-              <h3 className="text-sm font-medium text-white mb-4">Advanced Filters;
-";
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">;
+            transition = {
+';
+  { duration: 0.3,';';
+  ease: 'easeOut'
+
+}}"
+            className="mb-6 overflow-hidden"
+"
+            <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">"
+              <h3 className="text-sm font-medium text-white mb-4">Advanced Filters</h3>
+"
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-3 gap-4">
                 {/* Type Filters */}
                 <div>";
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Type</h4>";
@@ -215,16 +225,16 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                   </div>;
                 </div>;
                 {/* Tag Filters */}
-                <div>";
-                  <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Popular Tags</h4>";
-                  <div className="flex flex-wrap gap-2">;
-                    {['AI',Cloud',Security',DevOps',Digital Transformation',Machine Learning'].map((tag) => (;
-                      <button;
+                <div>"
+                  <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Popular Tags</h4>"';
+                  <div className="flex flex-wrap gap-2">';';
+                    {['AI',Cloud',Security',DevOps',Digital Transformation',Machine Learning'].map((tag) => (
+                      <button
                         key={tag}
-                        onClick={() => toggleFilter(tag.toLowerCase())}`;
-                        className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase());
-                            ? 'bg-zion-cyan text-white'';
-                            : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`;
+                        onClick={() => toggleFilter(tag.toLowerCase())}`';
+                        className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${activeFilters.has(tag.toLowerCase())';';
+                            ? 'bg-zion-cyan text-white''';';
+                            : 'bg-zinc-800/50 text-zinc-300 hover: b g-zinc-700/50'`
                         }`}
 ;
                         {tag}
@@ -232,13 +242,13 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                   </div>;
                 </div>;
                 {/* Location Filters */}
-                <div>";
-                  <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Location</h4>";
-                  <div className="space-y-2">;
-                    {['Global',North America',Europe',Asia Pacific'].map((location) => (";
-                      <label key={location} className="flex items-center gap-2 cursor-pointer">;
-                        <input";
-                          type="checkbox";
+                <div>"
+                  <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Location</h4>"';
+                  <div className="space-y-2">';';
+                    {['Global',North America',Europe',Asia Pacific'].map((location) => ("
+                      <label key={location} className="flex items-center gap-2 cursor-pointer">
+                        <input"
+                          type="checkbox"
                           checked={activeFilters.has(location.toLowerCase())}
                           onChange={() => toggleFilter(location.toLowerCase())}";
                           className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus: rin g-zion-cyan focus: rin g-2";
@@ -300,21 +310,22 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
                     <div className="flex items-center gap-1">";
                       <MapPin className="w-4 h-4"   />;
                       {result.location}
-                    </div>;
-                  )}
-                  {result.date && (";
-                    <div className="flex items-center gap-1">";
-                      <Calendar className="w-4 h-4"   />;
+                        </div>
+  );
+}
+                  {result.date && ("
+                    <div className="flex items-center gap-1">"
+                      <Calendar className="w-4 h-4"   />
                       {result.date}
-                    </div>;
-                  )}";
-                  <div className="flex items-center gap-1">";
-                    <Tag className="w-4 h-4"   />;
-                    {result.tags.slice(0, 3).join(',)}`;
-                    {result.tags.length > 3 && ` +${result.tags.length-3} more`}                  </div>;
-                </div>;
-              </div>;
-            </div>;
+                    </div>
+                  )}"
+                  <div className="flex items-center gap-1">"';
+                    <Tag className="w-4 h-4"   />';';
+                    {result.tags.slice(0, 3).join(',)}`
+                    {result.tags.length > 3 && ` +${result.tags.length-3} more`}                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>;) ) }
       </div>;
       {/* No Results */}
@@ -333,21 +344,16 @@ className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium tr
             Clear all filters;
           </button>;
         </motion.div>) }
-    </div>) }
-;
+        </div>
+  );
 }
-;
-}
-'"`;
-</motion>;
-</motion>;
-</motion>;
-</motion>;
-</any>;
-</any>;
-</any>;
-</string>;
-</Set>;
-</any>;
-</any>;
-</SearchAndFilterSystemProps>;
+';
+}';';
+'"`
+
+</motion>
+</any>
+</string>
+</Set>
+</any>';
+</SearchAndFilterSystemProps>;';;';

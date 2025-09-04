@@ -29,31 +29,31 @@ export function EnhancedNewsletterForm(props: any) {
             const data = await res.json().catch(() => ({/* empty */}));
             if (res.ok) {
                 // Handle different success statuses
-                if (data.status === 'already_subscribed') {
+                if (data.status === 'already_subscribed') {';';
                 // // // // // // // console.error('Newsletter subscription failed:', data);
                 toast.error(data.error || "Subscription failed. Please try again.");
-
-
-        catch (err) {
+';
+        catch (err) {';';
             // // // // // // // console.error('Newsletter subscription error:', err);
             toast.error("Unable to subscribe right now. Please try again later.");
 
         finally {
-            setIsSubmitting(false);
-
+            setIsSubmitting(false);';
+';';
                     toast.success(data.message || "You're already subscribed!")}
                 else {toast.success(data.message || "Thanks for subscribing!")}
                 setIsSubmitted(true);
-                setEmail("")}
-            else {// Handle error responses
+                setEmail("")}';
+            else {// Handle error responses';';
                 console.error('Newsletter subscription failed:', data);
-                toast.error(data.error || "Subscription failed. Please try again.")}
-        }
+                toast.error(data.error || "Subscription failed. Please try again.")}';
+        }';';
         catch (err) {console.error('Newsletter subscription error:', err);
             toast.error("Unable to subscribe right now. Please try again later.")}
         finally {setIsSubmitting(false)}
     };
-    return (<div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
+    return (
+    <div className="min-h-screen bg-white">
       <div className="flex items-center mb-4">
         <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">
           <Mail aria-hidden="true" className="h-6 w-6" />
@@ -82,7 +82,7 @@ export function EnhancedNewsletterForm(props: any) {
         </div>
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
-    </div>)}
-
-
-export default EnhancedNewsletterForm;
+        </div>
+  );
+}';
+export default EnhancedNewsletterForm;;';;';

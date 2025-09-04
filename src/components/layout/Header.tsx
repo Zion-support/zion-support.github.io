@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';';';
+import { Link, useLocation } from 'react-router-dom';';';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu,
@@ -12,8 +12,8 @@ import {
   Shield,
   Cloud,
   Code,
-  Building,
-  Globe
+  Building,';
+  Globe';';
 } from 'lucide-react';
 
 const Header = (props: any) => {
@@ -25,61 +25,61 @@ const Header = (props: any) => {
   useEffect(() => {
     const handleScroll = (props: any) => {
       setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    };';
+';';
+    window.addEventListener('scroll', handleScroll);';';
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const services = [
-    {
-      icon: Brai n,
-      title: 'AI & Machine Learning',
-      description: 'Intelligent solutions for business automation',
-      href: '/services/ai-solutions',
+    {';
+      icon: Brai n,';';
+      title: 'AI & Machine Learning',';';
+      description: 'Intelligent solutions for business automation',';';
+      href: '/services/ai-solutions',';';
       color: 'from-purple-500 to-pink-500'
     },
-    {
-      icon: Shiel d,
-      title: 'Cybersecurity',
-      description: 'Advanced security and threat protection',
-      href: '/services/cybersecurity',
+    {';
+      icon: Shiel d,';';
+      title: 'Cybersecurity',';';
+      description: 'Advanced security and threat protection',';';
+      href: '/services/cybersecurity',';';
       color: 'from-red-500 to-orange-500'
     },
-    {
-      icon: Clou d,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions and migration',
-      href: '/services/cloud-infrastructure',
+    {';
+      icon: Clou d,';';
+      title: 'Cloud Infrastructure',';';
+      description: 'Scalable cloud solutions and migration',';';
+      href: '/services/cloud-infrastructure',';';
       color: 'from-blue-500 to-cyan-500'
     },
-    {
-      icon: Cod e,
-      title: 'Blockchain & Web3',
-      description: 'Decentralized applications and smart contracts',
-      href: '/services/blockchain-web3',
+    {';
+      icon: Cod e,';';
+      title: 'Blockchain & Web3',';';
+      description: 'Decentralized applications and smart contracts',';';
+      href: '/services/blockchain-web3',';';
       color: 'from-indigo-500 to-purple-500'
     },
-    {
-      icon: Buildin g,
-      title: 'Smart City Solutions',
-      description: 'AI-powered urban management systems',
-      href: '/services/smart-city',
+    {';
+      icon: Buildin g,';';
+      title: 'Smart City Solutions',';';
+      description: 'AI-powered urban management systems',';';
+      href: '/services/smart-city',';';
       color: 'from-green-500 to-blue-500'
     },
-    {
-      icon: Za p,
-      title: 'Quantum Computing',
-      description: 'Next-generation computational power',
-      href: '/services/quantum-computing',
+    {';
+      icon: Za p,';';
+      title: 'Quantum Computing',';';
+      description: 'Next-generation computational power',';';
+      href: '/services/quantum-computing',';';
       color: 'from-yellow-500 to-orange-500'
     }
   ];
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services', hasDropdown: tru e },
+';
+  const navigation = [';';
+    { name: 'Home', href: '/' },';';
+    { name: 'About', href: '/about' },';';
+    { name: 'Services', href: '/services', hasDropdown: tru e },';';
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -89,9 +89,9 @@ const Header = (props: any) => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-slate-900/95 backdrop-blur-lg border-b border-white/10'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${';
+          isScrolled';';
+            ? 'bg-slate-900/95 backdrop-blur-lg border-b border-white/10'';';
             : 'bg-transparent'
         }`}
       >
@@ -122,10 +122,10 @@ const Header = (props: any) => {
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                      <button
-                        className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-colors duration-200 ${
-                          location.pathname.startsWith('/services')
-                            ? 'text-cyan-400 bg-cyan-400/10'
+                      <button';
+                        className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-colors duration-200 ${';';
+                          location.pathname.startsWith('/services')';';
+                            ? 'text-cyan-400 bg-cyan-400/10'';';
                             : 'text-gray-300 hover: tex t-cyan-400 hover: b g-cyan-400/5'
                         }`}
                       >
@@ -182,9 +182,9 @@ const Header = (props: any) => {
                   ) : (
                     <Link
                       to={item.href}
-                      className={`px-3 py-2 rounded-lg transition-colors duration-200 ${
-                        location.pathname === item.href
-                          ? 'text-cyan-400 bg-cyan-400/10'
+                      className={`px-3 py-2 rounded-lg transition-colors duration-200 ${';
+                        location.pathname === item.href';';
+                          ? 'text-cyan-400 bg-cyan-400/10'';';
                           : 'text-gray-300 hover: tex t-cyan-400 hover: b g-cyan-400/5'
                       }`}
                       onClick={closeMenu}
@@ -239,8 +239,8 @@ const Header = (props: any) => {
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
+            <motion.div';
+              initial={{ opacity: 0, height: 0 }}';';
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
@@ -256,16 +256,16 @@ const Header = (props: any) => {
                             onClick={() => setIsServicesOpen(!isServicesOpen)}
                             className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: tex t-cyan-400 transition-colors"
                           >
-                            <span>{item.name}</span>
-                            <ChevronDown className={`w-4 h-4 transition-transform ${
+                            <span>{item.name}</span>';
+                            <ChevronDown className={`w-4 h-4 transition-transform ${';';
                                 isServicesOpen ? 'rotate-180' : ''
                               }`}
                              />
                           </button>
                           <AnimatePresence>
                             {isServicesOpen && (
-                              <motion.div
-                                initial={{ opacity: 0, height: 0 }}
+                              <motion.div';
+                                initial={{ opacity: 0, height: 0 }}';';
                                 animate={{ opacity: 1, height: 'auto' }}
                                 exit={{ opacity: 0, height: 0 }}
                                 transition={{ duration: 0.2 }}
@@ -295,9 +295,9 @@ const Header = (props: any) => {
                       ) : (
                         <Link
                           to={item.href}
-                          className={`block px-3 py-2 rounded-lg transition-colors ${
-                            location.pathname === item.href
-                              ? 'text-cyan-400 bg-cyan-400/10'
+                          className={`block px-3 py-2 rounded-lg transition-colors ${';
+                            location.pathname === item.href';';
+                              ? 'text-cyan-400 bg-cyan-400/10'';';
                               : 'text-gray-300 hover: tex t-cyan-400'
                           }`}
                           onClick={closeMenu}
@@ -351,7 +351,5 @@ export default Header;
 </motion>
 </ChevronDown>
 </motion>
-</motion>
-</any>
-</any>
-</any>
+</any>';
+</any>;';;';

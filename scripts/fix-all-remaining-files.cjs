@@ -73,8 +73,7 @@ export default function IntegrationExamples() {
 {\`class ZionTechAPI {
   constructor(apiKey, baseURL = 'https://api.ziontechgroup.com/v1') {
     this.apiKey = apiKey;
-    this.baseURL = baseURL;
-  }
+    this.baseURL = baseURL}
 
   async getServices() {
     try {
@@ -86,14 +85,11 @@ export default function IntegrationExamples() {
       });
       
       if (!response.ok) {
-        throw new Error(\`HTTP error! status: \${response.status}\`);
-      }
+        throw new Error(\`HTTP error! status: \${response.status}\`)}
       
-      return await response.json();
-    } catch (error) {
+      return await response.json()} catch (error) {
       console.error('Error fetching services:', error);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -125,9 +121,7 @@ console.log(services);\`}
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/services.tsx') {
+  )}`} else if (filePath === 'pages/services.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -136,8 +130,7 @@ type Service = {
   name: string;
   summary: string;
   pricing: string;
-  link: string;
-};
+  link: string};
 
 const microSaaS: Service[] = [
   {
@@ -221,9 +214,7 @@ export default function Services() {
         </div>
       </div>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/services/ai-analytics.tsx') {
+  )}`} else if (filePath === 'pages/services/ai-analytics.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -375,9 +366,7 @@ export default function AIAnalytics() {
         </footer>
       </main>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/services/blockchain.tsx') {
+  )}`} else if (filePath === 'pages/services/blockchain.tsx') {
       content = `import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -529,9 +518,7 @@ export default function Blockchain() {
         </footer>
       </main>
     </>
-  );
-}`;
-    } else if (filePath === 'pages/signup.tsx') {
+  )}`} else if (filePath === 'pages/signup.tsx') {
       content = `import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -552,21 +539,18 @@ export default function Signup() {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    })};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match');
-      return;
-    }
+      return}
     
     // Handle signup logic here
     console.log('Signup attempt:', formData);
-    alert('Account creation functionality will be implemented with authentication system.');
-  };
+    alert('Account creation functionality will be implemented with authentication system.')};
 
   return (
     <>
@@ -721,20 +705,15 @@ export default function Signup() {
         </div>
       </div>
     </>
-  );
-}`;
-    }
+  )}`}
 
     if (content) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`   ✅ Fixed ${filePath}`);
-    } else {
-      console.log(`   ⚠️  No content defined for ${filePath}`);
-    }
+      console.log(`   ✅ Fixed ${filePath}`)} else {
+      console.log(`   ⚠️  No content defined for ${filePath}`)}
 
   } catch (error) {
-    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`);
-  }
+    console.log(`   ❌ Error fixing ${filePath}: ${error.message}`)}
 }
 
 // Fix all problematic files

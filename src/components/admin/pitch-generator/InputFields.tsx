@@ -21,55 +21,58 @@ const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNe
       onNext();
     }
   };
-;
-  return (;
-    <div className="max-w-2xl mx-auto p-6">;
-      <h2 className="text-2xl font-bold mb-6">Company Information</h2>;
-      <form onSubmit={handleSubmit} className="space-y-4">;
-        <div>;
-          <label className="block text-sm font-medium mb-2">Company Name</label>;
-          <input;
-            type="text";
-            value={inputData?.companyName || ''}
+
+  return (
+    <div className="min-h-screen bg-white">
+      <h2 className="text-2xl font-bold mb-6">Company Information</h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium mb-2">Company Name</label>
+          <input';
+            type="text"';';
+            value={inputData?.companyName || ''}';';
             onChange={(e) => handleInputChange('companyName', e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
-            placeholder="Enter company name";
-            required;
-          />;
-        </div>;
-        <div>;
-          <label className="block text-sm font-medium mb-2">Industry</label>;
-          <select;
-            value={inputData?.industry || ''}
+            className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+            placeholder="Enter company name"
+            required
+          />
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium mb-2">Industry</label>';
+          <select';';
+            value={inputData?.industry || ''}';';
             onChange={(e) => handleInputChange('industry', e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
-            required;
-          >;
-            <option value="">Select industry</option>;
-            <option value="technology">Technology</option>;
-            <option value="healthcare">Healthcare</option>;
-            <option value="finance">Finance</option>;
-            <option value="education">Education</option>;
-            <option value="retail">Retail</option>;
-            <option value="manufacturing">Manufacturing</option>;
-            <option value="other">Other</option>;
-          </select>;
-        </div>;
-        <div>;
-          <label className="block text-sm font-medium mb-2">Company Description</label>;
-          <textarea;
-            value={inputData?.description || ''}
+            className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
+            required
+          >
+            <option value="">Select industry</option>
+            <option value="technology">Technology</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="finance">Finance</option>
+            <option value="education">Education</option>
+            <option value="retail">Retail</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium mb-2">Company Description</label>';
+          <textarea';';
+            value={inputData?.description || ''}';';
             onChange={(e) => handleInputChange('description', e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
             rows={4}
-            placeholder="Brief description of your company";
-          />;
-        </div>;
-        <div>;
-          <label className="block text-sm font-medium mb-2">Target Audience</label>;
-          <input;
-            type="text";
-            value={inputData?.targetAudience || ''}
+            placeholder="Brief description of your company"
+          />
+        </div>
+        
+        <div>
+          <label className="block text-sm font-medium mb-2">Target Audience</label>
+          <input';
+            type="text"';';
+            value={inputData?.targetAudience || ''}';';
             onChange={(e) => handleInputChange('targetAudience', e.target.value)}
             className="w-full p-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
             placeholder="e.g., Small businesses, Enterprise clients";
@@ -87,5 +90,5 @@ const InputFields: React.FC<InputFieldsProps> = ({ inputData, setInputData, onNe
 };
 ;
 export default InputFields;
-</textarea>;
-</InputFieldsProps>;
+</textarea>';
+</InputFieldsProps>;';;';

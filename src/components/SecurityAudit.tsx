@@ -4,12 +4,11 @@ import { Shield, CheckCircle, AlertTriangle, XCircle } from 'lucide-react';
 interface SecurityCheck {
   name: string;
   status: 'pass' | 'warn' | 'fail';
-  message: string;
-}
+  message: string}
 
-const SecurityAudit: React.FC = (props: any) => {
+const SecurityAudit: React.FC = () => {
   const [checks, setChecks] = useState<SecurityCheck[]>([]);
-  const [isLoading, setIsLoading] = useState<any>(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const performSecurityChecks = async () => {
@@ -39,13 +38,11 @@ const SecurityAudit: React.FC = (props: any) => {
       ];
 
       setChecks(securityChecks);
-      setIsLoading(false);
-    };
+      setIsLoading(false)};
 
-    performSecurityChecks();
-  }, []);
+    performSecurityChecks()}, []);
 
-  const getStatusIcon = (props: any) => {
+  const getStatusIcon = (status: string) => {
     switch (status) {
       case 'pass':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -54,11 +51,10 @@ const SecurityAudit: React.FC = (props: any) => {
       case 'fail':
         return <XCircle className="w-5 h-5 text-red-500" />;
       default:
-        return null;
-    }
+        return null}
   };
 
-  const getStatusColor = (props: any) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'pass':
         return 'bg-green-50 border-green-200';
@@ -67,8 +63,7 @@ const SecurityAudit: React.FC = (props: any) => {
       case 'fail':
         return 'bg-red-50 border-red-200';
       default:
-        return 'bg-gray-50 border-gray-200';
-    }
+        return 'bg-gray-50 border-gray-200'}
   };
 
   if (isLoading) {
@@ -79,8 +74,7 @@ const SecurityAudit: React.FC = (props: any) => {
           <span>Running security audit...</span>
         </div>
       </div>
-    );
-  }
+    )}
 
   return (
     <div className="bg-gray-100 p-4 rounded-lg">
@@ -106,10 +100,6 @@ const SecurityAudit: React.FC = (props: any) => {
         ))}
       </div>
     </div>
-  );
-};
+  )};
 
 export default SecurityAudit;
-
-</any>
-</SecurityCheck>

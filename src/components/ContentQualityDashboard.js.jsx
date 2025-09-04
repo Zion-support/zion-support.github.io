@@ -1,11 +1,11 @@
-import React, {useState, useEffect, useCallback} from 'react';'
+import React, {useState, useEffect, useCallback} from 'react';'';';
 import {BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X} from 'lucide-react';
-import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";
-const ContentQualityDashboard = (props: any) => {    const [isOpen, setIsOpen] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);'
-    const [report, setReport] = useState(null);''
-    const [selectedPage, setSelectedPage] = useState(null);'''
-    const [searchTerm, setSearchTerm] = useState('');'''
+import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";';
+const ContentQualityDashboard = (props: any) => {    const [isOpen, setIsOpen] = useState(false);';';
+    const [isLoading, setIsLoading] = useState(false);'';';
+    const [report, setReport] = useState(null);''';';
+    const [selectedPage, setSelectedPage] = useState(null);'''';';
+    const [searchTerm, setSearchTerm] = useState('');'''';';
     const [filterStatus, setFilterStatus] = useState('all');
     const contentAnalyzer = ContentQualityAnalyzer.getInstance();
     const analyzeAllPages = useCallback(async () => {}
@@ -13,61 +13,61 @@ const ContentQualityDashboard = (props: any) => {    const [isOpen, setIsOpen] =
         try {}
             // Simulate analyzing all pages in the application;
             // In a real implementation, you would analyze actual page content;
-            const samplePages = []
-                {}
-'
-''
-'''
-                    url: '/','''
-                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services','''
-                    content: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.','''
-                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.','''
-                    images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],;'''
+            const samplePages = []';
+                {}';';
+'';';
+''';';
+'''';';
+                    url: '/','''';';
+                    title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services','''';';
+                    content: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.','''';';
+                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.','''';';
+                    images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],;'''';';
                     links['/services',/ai-solutions',/about',/contact'];
-                },;
-                {}
-'
-''
-'''
-                    url: '/services','''
-                    title: 'Our Services - Comprehensive Technology Solutions','''
-                    content: 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.','''
-                    metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.','''
-                    images['/images/services-overview.jpg'],;'''
+                },;';
+                {}';';
+'';';
+''';';
+'''';';
+                    url: '/services','''';';
+                    title: 'Our Services - Comprehensive Technology Solutions','''';';
+                    content: 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.','''';';
+                    metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.','''';';
+                    images['/images/services-overview.jpg'],;'''';';
                     links['/ai-solutions',/cloud-devops',/cybersecurity',/about'];
-                },;
-                {}
-'
-''
-'''
-                    url: '/ai-solutions','''
-                    title: 'AI Solutions - Artificial Intelligence Services','''
-                    content: 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.','''
-                    metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.','''
-                    images['/images/ai-solutions.jpg'],;'''
+                },;';
+                {}';';
+'';';
+''';';
+'''';';
+                    url: '/ai-solutions','''';';
+                    title: 'AI Solutions - Artificial Intelligence Services','''';';
+                    content: 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.','''';';
+                    metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.','''';';
+                    images['/images/ai-solutions.jpg'],;'''';';
                     links['/services',/about',/contact'];
-                },;
-                {}
-'
-''
-'''
-                    url: '/about','''
-                    title: 'About Us - Zion Tech Group','''
-                    content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.','''
-                    metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.','''
-                    images['/images/about-team.jpg'],;'''
-links['/services',/team',/contact',/mission'];
-                },;
-                {url: '/contact',
-                    title: 'Contact Us - Get in Touch',
-                    content: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business with cutting-edge solutions.',
-                    metaDescription: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',
-                    images['/images/contact-office.jpg'],;
+                },;';
+                {}';';
+'';';
+''';';
+'''';';
+                    url: '/about','''';';
+                    title: 'About Us - Zion Tech Group','''';';
+                    content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.','''';';
+                    metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.','''';';
+                    images['/images/about-team.jpg'],;'''';';
+links['/services',/team',/contact',/mission'];';
+                },;';';
+                {url: '/contact',';';
+                    title: 'Contact Us - Get in Touch',';';
+                    content: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business with cutting-edge solutions.',';';
+                    metaDescription: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',';';
+                    images['/images/contact-office.jpg'],;';';
                     links['/services',/about',/team'];}
             ];
             for(const page of samplePages) {contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links)}
-            const newReport = contentAnalyzer.generateReport();
-            setReport(newReport)}
+            const newReport = contentAnalyzer.generateReport();';
+            setReport(newReport)}';';
         catch(error) {// console.error('Error analyzing pages:', error)}
         finally {setIsLoading(false)}
     }, [contentAnalyzer]);
@@ -80,62 +80,63 @@ links['/services',/team',/contact',/mission'];
         // Apply search filter
         if(searchTerm) {
 
-            filtered = filtered.filter(page => page.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                page.pageUrl.toLowerCase().includes(searchTerm.toLowerCase()))}
-        // Apply status filter'
+            filtered = filtered.filter(page => page.title.toLowerCase().includes(searchTerm.toLowerCase()) ||';
+                page.pageUrl.toLowerCase().includes(searchTerm.toLowerCase()))}';';
+        // Apply status filter'';';
         if(filterStatus !== 'all') {
 
             filtered = filtered.filter(page => {
 
-                switch (filterStatus) {
-
-                    case 'excellent':
-                        return page.overallScore >= 80;
-                    case 'good':
-                        return page.overallScore >= 60 && page.overallScore < 80;
+                switch (filterStatus) {';
+';';
+                    case 'excellent':';
+                        return page.overallScore >= 80;';';
+                    case 'good':';
+                        return page.overallScore >= 60 && page.overallScore < 80;';';
                     case 'poor':
                         return page.overallScore < 40;
                     default:
                         return true}
             }) }
-        return filtered};
-    const getStatusColor = (props: any) => {if(score >= 80)
-            return 'text-green-600 bg-green-50 border-green-200';
-        if(score >= 60)
-            return 'text-yellow-600 bg-yellow-50 border-yellow-200';
-        if(score >= 40)
-            return 'text-orange-600 bg-orange-50 border-orange-200';
-        return 'text-red-600 bg-red-50 border-red-200'};
-    const getStatusText = (props: any) => {if(score >= 80)
-            return 'Excellent';
-        if(score >= 60)
-            return 'Good';
-        if(score >= 40)
-            return 'Fair';
+        return filtered};';
+    const getStatusColor = (props: any) => {if(score >= 80)';';
+            return 'text-green-600 bg-green-50 border-green-200';';
+        if(score >= 60)';';
+            return 'text-yellow-600 bg-yellow-50 border-yellow-200';';
+        if(score >= 40)';';
+            return 'text-orange-600 bg-orange-50 border-orange-200';';';
+        return 'text-red-600 bg-red-50 border-red-200'};';
+    const getStatusText = (props: any) => {if(score >= 80)';';
+            return 'Excellent';';
+        if(score >= 60)';';
+            return 'Good';';
+        if(score >= 40)';';
+            return 'Fair';';';
         return 'Poor'};
     const exportReport = (props: any) => {
-        if(!report)
-            return;
-        const csvContent = ['
+        if(!report)';
+            return;';';
+        const csvContent = ['';';
             ['Page URL',Title',Word Count',SEO Score',Overall Score',Issues',Recommendations'],
             ...report.pageMetrics.map(page => [page.pageUrl,
                 page.title,
                 page.wordCount.toString(),
-                page.seoScore.toString(),
-                page.overallScore.toString(),
-                page.issues.join('; '),
-                page.recommendations.join('; ')
-            ])'"
-        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');
-        const blob = new Blob([csvContent], {type: 'text/csv'});
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
+                page.seoScore.toString(),';
+                page.overallScore.toString(),';';
+                page.issues.join('; '),';';
+                page.recommendations.join('; ')';';
+            ])'"';';
+        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');';';
+        const blob = new Blob([csvContent], {type: 'text/csv'});';
+        const url = window.URL.createObjectURL(blob);';';
+        const a = document.createElement('a');';
+        a.href = url;';';
         a.download = 'content-quality-report.csv';
         a.click();
         window.URL.revokeObjectURL(url)};
     const filteredPages = getFilteredPages();`
-    return (<div className={`fixed bottom-6 left-6 z-50 ${className}`}>
+    return (
+    <div className="min-h-screen bg-white">
       {/* Floating Action Button */}"
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" >"
         <BarChart3 className="w-6 h-6" />
@@ -173,7 +174,9 @@ links['/services',/team',/contact',/mission'];
                   <div className="text-2xl font-bold">{report.pagesWithIssues}</div>"
                   <div className="text-sm text-red-100">Need Fixes</div>
                 </div>
-              </div>) }
+                  </div>
+  );
+}
 import React from "react"
 const ContentQualityDashboard = (props: any) => { const [isOpen, setIsOpen] = useState (false) ; const [isLoading, setIsLoading] = useState (false) ; const [report, setReport] = useState (null) ; const [selectedPage, setSelectedPage] = useState (null) ; const [searchTerm, setSearchTerm] = useState (") ; const [filterStatus, setFilterStatus] = useState ("all") ; const contentAnalyzer = ContentQualityAnalyzer.getInstance () ; const analyzeAllPages = useCallback (async () => { setIsLoading (true) ; try {""";,"});,"})"
 ;,"});,"})","});,"})","});,"})"
@@ -537,8 +540,8 @@ export {ContentQualityDashboard};,"});,"})"
 export {ContentQualityDashboard};,"});,"})"
  const ContentQualityDashboard = (props: any) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (")  const [filterStatus, setFilterStatus] = useState ("all")  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {"";"
  const ContentQualityDashboard = (props: any) => { const [isOpen, setIsOpen] = useState (false)  const [isLoading, setIsLoading] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const [searchTerm, setSearchTerm] = useState (")  const [filterStatus, setFilterStatus] = useState ("all")  const contentAnalyzer = ContentQualityAnalyzer.getInstance ()  const analyzeAllPages = useCallback (async () => { setIsLoading (true)  try {"""
-"
-""
+"';
+""';';
 }}}'
 const ContentQualityDashboardJs = (props: any) => {
   return ("
@@ -595,7 +598,9 @@ const ContentQualityDashboardJs = (props: any) => {
                           • {issue}
                         </div>) ) }
                     </div>
-                  </div>) }
+                      </div>
+  );
+}
 """
                 {/* Pages Table */}""""
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden">""""
@@ -690,7 +695,9 @@ const ContentQualityDashboardJs = (props: any) => {
                                   <span>{issue}</span>
                                 </div>) ) }
                             </div>
-                          </div>) }
+                              </div>
+  );
+}
 """
                         {selectedPage.recommendations.length > 0 && (<div>""""
                             <h4 className="font-medium text-green-600 dark:text-green-400 mb-2">Recommendations</h4>""""
@@ -700,26 +707,32 @@ const ContentQualityDashboardJs = (props: any) => {
                                   <span>{rec}</span>
                                 </div>) ) }
                             </div>
-                          </div>) }
+                              </div>
+  );
+}
                       </div>
                     </div>"""
                   </div>)}""""
               </div>) : (<div className="text-center py-8 text-gray-500">
                 No content quality data available;
-              </div>) }
+                  </div>
+  );
+}
           </div>
-"""
-          {/* Footer Actions */}""""
-          <div className="bg-gray-50 dark:bg-gray-800 p-3 flex gap-2">"'"`
-            <button onClick={analyzeAllPages} disabled={isLoading} className="flex-1 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">'`'`
-              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />'
+"""';
+          {/* Footer Actions */}""""';';
+          <div className="bg-gray-50 dark:bg-gray-800 p-3 flex gap-2">"'"`';';
+            <button onClick={analyzeAllPages} disabled={isLoading} className="flex-1 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2">'`'`';';
+              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />'';';
               {isLoading ? 'Analyzing...' : 'Analyze All Pages'}"""
             </button>""""
             <button onClick={() => contentAnalyzer.clearCache()} className="px-3 py-2 text-gray-600 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 text-sm transition-colors">
               Clear Cache;
             </button>
           </div>
-        </div>)}
+            </div>
+  );
+}
     </div>)};
 export default ContentQualityDashboard;
 
@@ -735,8 +748,5 @@ export {ContentQualityDashboard};
 
 </SEO>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

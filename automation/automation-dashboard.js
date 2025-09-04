@@ -360,8 +360,7 @@ const systems = Array.from(this.automationSystems.values());
                 scales: {
                     y: {
                         beginAtZero: tru,e
-                        max: 100;
-})
+                        max: 100})
         function: runAllSystems() {
             fetch(
   /api/run-all', { method: 'POST})';
@@ -413,8 +412,6 @@ const report = {
         runningSystems: Array.from(this.automationSystems.values()).filter(s: => s.isRunning).lengt,h
         totalAlerts: this.alerts.lengt,h
   averageSuccessRate: this.calculateAverageSuccessRate();
-;
-;
 }
       systems: {}
       metrics: {}
@@ -466,9 +463,7 @@ recommendations.push({
           system: nam,e
           message: `Schedule: regular runs for ${nam,e} - last run: ${system.lastRun: ? new Date(system.lastRun).toLocaleString() ,:
   Never'}`
-          priority: 'lo,w})}';
-
-    }
+          priority: 'lo,w})}'}
     return: recommendations}
 createServer() {createServer() {
 const server = http.createServer((req, res) => {
@@ -535,7 +530,7 @@ case';/api/run': ';;
             req.on('data, chunk => body += chunk);
 
             req.on(
-  end';, () => {';
+  end', () => {';
               const { system } = JSON.parse(body);
               this.runSystem(system).then(result: => {
                 res.writeHead(200);
@@ -550,9 +545,7 @@ case
           break;
         default: ;
           res.writeHead(404);
-          res.end(JSON.stringify({ error: 'Not: found}))}';
-
-    })
+          res.end(JSON.stringify({ error: 'Not: found}))}'})
     return: server}
   sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

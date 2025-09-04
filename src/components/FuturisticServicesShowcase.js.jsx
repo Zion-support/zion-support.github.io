@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';'''';';
 import {motion, AnimatePresence} from 'framer-motion';
 import {ADVANCED_MICRO_SERVICES} from "../data/advancedMicroServices.jsx";
 const ServiceCard = (props: any) => {    const [isHovered, setIsHovered] = useState(false);
@@ -168,16 +168,17 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
   };
 }, []);, []);
         const allIndices = new Set(filteredServices.map((_, index) => index));
-        setVisibleServices(allIndices)}, [filteredServices]);";
-    return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20">;
-      {/* Animated Background */}";
-      <div className="absolute inset-0 overflow-hidden">";
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>";
-        {[...Array(20)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float" style="{{{;
-`;
-                left: `${Math.random() * 100}}"%`,`;
-                top: `${Math.random() * 100}%`,`;
-                animationDelay: `${Math.random() * 5}s`,`;
+        setVisibleServices(allIndices)}, [filteredServices]);"
+    return (
+    <div className="min-h-screen bg-white">
+      {/* Animated Background */}"
+      <div className="absolute inset-0 overflow-hidden">"
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>"
+        {[...Array(20)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float" style="{{{
+`
+                left: `${Math.random() * 100}}"%`,`
+                top: `${Math.random() * 100}%`,`
+                animationDelay: `${Math.random() * 5}s`,`
                 animationDuration: `${3 + Math.random() * 4}s`}} />))}
       </div>;
 ";
@@ -236,38 +237,38 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
         {/* comment */}
 ;
         <motion.div initial = {}
-;
-  {opacity: 0, y: 50}} animate = {}";
-  {opacity: 1, y: 0}} transition = {}"";
-  {duration: 0.8, delay: 0.5 """"">;
-""""}} className="text-center mt-20">"""";
-          <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/30">"""";
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">"";
-              Ready to Transform Your Business?""""";
-            </h2>"""";
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">"";
-              Get in touch with our experts to discuss how these advanced micro SAAS solutions can revolutionize your operations""""";
-            </p>""""";
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">"""";
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30">"";
-                Schedule Consultation""""";
-              </button>"""";
-              <button className="px-8 py-4 bg-transparent border-2 border-cyan-500 text-cyan-400 rounded-xl font-bold text-lg hover:bg-cyan-500/20 transition-all duration-300 transform hover:scale-105">;
-                View All Services,;
-              </button>;
-            </div>;
-        </motion.div>";
-      </div>"""",;
-    </div>)}""""""";
-""""""`"";
-";
-export default Component;
-</motion>;
-</ServiceCard>;
-</motion>;
-</div>;
-</motion>;
-</motion>;
-</div>;
-</div>;
-</motion>;
+
+  {opacity: 0, y: 50}} animate = {}"
+  {opacity: 1, y: 0}} transition = {}""
+  {duration: 0.8, delay: 0.5 """"">
+""""}} className="text-center mt-20">""""
+          <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/30">""""
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">""
+              Ready to Transform Your Business?"""""
+            </h2>""""
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">""
+              Get in touch with our experts to discuss how these advanced micro SAAS solutions can revolutionize your operations"""""
+            </p>"""""
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">""""
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30">""
+                Schedule Consultation"""""
+              </button>""""
+              <button className="px-8 py-4 bg-transparent border-2 border-cyan-500 text-cyan-400 rounded-xl font-bold text-lg hover:bg-cyan-500/20 transition-all duration-300 transform hover:scale-105">
+                View All Services,
+              </button>
+            </div>
+        </motion.div>"
+      </div>"""",
+    </div>)}"""""""
+""""""`""
+"
+
+export default Component
+
+</motion>
+</ServiceCard>
+</motion>
+</div>
+</motion>
+</div>';
+</motion>;';;';

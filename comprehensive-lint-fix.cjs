@@ -21,10 +21,8 @@ function removeUnusedLucideImports(filePath) {
         jsxMatches.forEach(match => {
           const iconName = match.replace(/[<>\/\s]/g, '');
           if (iconName && iconName[0] === iconName[0].toUpperCase()) {
-            usedIcons.add(iconName);
-          }
-        });
-      }
+            usedIcons.add(iconName)}
+        })}
       
       // Look for icon names in className or other attributes
       const classNameMatches = line.match(/className="[^"]*"/g);
@@ -33,11 +31,8 @@ function removeUnusedLucideImports(filePath) {
           const classNames = match.replace(/className="|"/g, '').split(' ');
           classNames.forEach(cls => {
             if (cls && cls[0] === cls[0].toUpperCase()) {
-              usedIcons.add(cls);
-            }
-          });
-        });
-      }
+              usedIcons.add(cls)}
+          })})}
     }
     
     // Process import lines
@@ -53,29 +48,23 @@ function removeUnusedLucideImports(filePath) {
           
           if (usedImports.length === 0) {
             // Remove the entire import line
-            continue;
-          } else if (usedImports.length < imports.length) {
+            continue} else if (usedImports.length < imports.length) {
             // Keep only used imports
             newLines.push(`import { ${usedImports.join(', ')} } from "lucide-react";`);
-            continue;
-          }
+            continue}
         }
       }
       
-      newLines.push(line);
-    }
+      newLines.push(line)}
     
     const newContent = newLines.join('\n');
     if (newContent !== content) {
       fs.writeFileSync(filePath, newContent);
       console.log(`✅ Cleaned unused lucide imports in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`❌ Error cleaning imports in ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to fix common syntax errors
@@ -92,16 +81,14 @@ function fixSyntaxErrors(filePath) {
         if (line.includes('"') && !line.match(/"[^"]*"$/)) {
           // Try to fix unterminated strings
           lines[i] = line.replace(/"[^"]*$/, '""');
-          modified = true;
-        }
+          modified = true}
       }
       if (modified) {
-        content = lines.join('\n');
-      }
+        content = lines.join('\n')}
     }
     
     // Fix missing semicolons
-    content = content.replace(/([^;}])\n/g, '$1;\n');
+    content = content.replace(/([^}])\n/g, '$1;\n');
     
     // Fix missing commas in object literals
     content = content.replace(/([^,}])\n\s*}/g, '$1,\n}');
@@ -109,13 +96,10 @@ function fixSyntaxErrors(filePath) {
     if (modified) {
       fs.writeFileSync(filePath, content);
       console.log(`✅ Fixed syntax errors in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`❌ Error fixing syntax in ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find all TypeScript/JavaScript files
@@ -130,15 +114,13 @@ function findSourceFiles(dir) {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory() && !item.startsWith('.') && item !== "node_modules") {
-          searchDirectory(fullPath);
-        } else if (stat.isFile() && (
+          searchDirectory(fullPath)} else if (stat.isFile() && (
           item.endsWith(".tsx") || 
           item.endsWith(".ts") || 
           item.endsWith(".js") || 
           item.endsWith(".jsx")
         )) {
-          files.push(fullPath);
-        }
+          files.push(fullPath)}
       }
     } catch (error) {
       // Skip directories that can't be read
@@ -146,8 +128,7 @@ function findSourceFiles(dir) {
   }
   
   searchDirectory(dir);
-  return files;
-}
+  return files}
 
 // Main execution
 try {
@@ -159,11 +140,9 @@ try {
   
   for (const file of sourceFiles) {
     if (removeUnusedLucideImports(file)) {
-      cleanedCount++;
-    }
+      cleanedCount++}
     if (fixSyntaxErrors(file)) {
-      fixedCount++;
-    }
+      fixedCount++}
   }
   
   console.log(`\n🎉 Processed ${sourceFiles.length} files:`);
@@ -174,12 +153,9 @@ try {
   console.log(`\n🔨 Running lint fix again...`);
   try {
     execSync("npm run lint:fix", { stdio: "inherit" });
-    console.log("✅ Lint fix completed!");
-  } catch (error) {
-    console.log("⚠️  Lint fix still has some issues, but continuing...");
-  }
+    console.log("✅ Lint fix completed!")} catch (error) {
+    console.log("⚠️  Lint fix still has some issues, but continuing...")}
   
 } catch (error) {
   console.error("❌ Error during comprehensive lint fixing:", error.message);
-  process.exit(1);
-}
+  process.exit(1)}

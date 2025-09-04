@@ -12,12 +12,10 @@ class ComprehensiveTestRunner {
       failed: 0,
       skipped: 0,
       total: 0
-    };
-  }
+    }}
 
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`);
-  }
+    console.log(`[${new Date().toISOString()}] ${message}`)}
 
   async runTests() {
     this.log('🧪 Running Comprehensive Test Suite');
@@ -63,8 +61,7 @@ class ComprehensiveTestRunner {
           output: output
         });
         
-        this.testResults.passed++;
-      } catch (error) {
+        this.testResults.passed++} catch (error) {
         results.push({
           name: test.name,
           type: test.type,
@@ -72,11 +69,9 @@ class ComprehensiveTestRunner {
           error: error.message
         });
         
-        this.testResults.failed++;
-      }
+        this.testResults.failed++}
       
-      this.testResults.total++;
-    }
+      this.testResults.total++}
     
     const report = {
       timestamp: new Date().toISOString(),
@@ -93,8 +88,7 @@ class ComprehensiveTestRunner {
       JSON.stringify(report, null, 2)
     );
     
-    this.log(`🧪 Tests Completed: ${this.testResults.passed}/${this.testResults.total} passed`);
-  }
+    this.log(`🧪 Tests Completed: ${this.testResults.passed}/${this.testResults.total} passed`)}
 }
 
 const runner = new ComprehensiveTestRunner();

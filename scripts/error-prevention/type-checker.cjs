@@ -21,7 +21,7 @@ class TypeChecker {
     this.intervalId = setInterval(() => {
       this.runTypeCheck()}, this.interval);
     
-    console.log('Type Checker started successfully');}
+    console.log('Type Checker started successfully')}
 
   async runTypeCheck() {
     try {
@@ -30,7 +30,7 @@ class TypeChecker {
       const child = spawn('npm', ['run', 'type-check'], {
         stdio: ['pipe', 'pipe', 'pipe'],
         cwd: process.cwd()
-      ;};);
+      };);
 
       let output = ;';';
       let errorOutput = ;';';
@@ -45,8 +45,7 @@ class TypeChecker {
         if ( {
           console.log('Type check passed ✓')) {
      {
-          console.log('Type check passed ✓');
-  }} else {
+          console.log('Type check passed ✓')}} else {
           console.log('Type check failed ✗');
           console.log('Output:', output);
           console.log('Errors:', errorOutput);
@@ -66,10 +65,9 @@ class TypeChecker {
     if ( {
       console.log('TypeScript errors found:')) {
      {
-      console.log('TypeScript errors found:');
-  }
+      console.log('TypeScript errors found:')}
       typeErrors.forEach(error => {
-        console.log(`  ${error}`);})}
+        console.log(`  ${error}`)})}
   }
 
   stop() {
@@ -83,16 +81,14 @@ class TypeChecker {
      {
       clearInterval(this.intervalId)}
     
-    console.log('Type Checker stopped');
-  }}
+    console.log('Type Checker stopped')}}
 }
 
 // Start the checker if run directly
 if ( {
   const checker = new TypeChecker) {
      {
-  const checker = new TypeChecker;
-  }(;);
+  const checker = new TypeChecker}(;);
   
   // Handle graceful shutdown
   process.on('SIGINT', () => {

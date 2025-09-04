@@ -24,11 +24,9 @@ function resolveMergeConflicts(filePath) {
     
     fs.writeFileSync(filePath, content);
     console.log(`✅ Resolved conflicts in: ${filePath}`);
-    return true;
-  } catch (error) {
+    return true} catch (error) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to remove unused imports
@@ -48,10 +46,8 @@ function removeUnusedImports(filePath) {
         iconMatches.forEach(match => {
           const iconName = match.replace(/[<>{}\s]/g, '');
           if (iconName && iconName[0] === iconName[0].toUpperCase()) {
-            usedIcons.add(iconName);
-          }
-        });
-      }
+            usedIcons.add(iconName)}
+        })}
     }
     
     // Process import lines
@@ -67,25 +63,20 @@ function removeUnusedImports(filePath) {
           
           if (usedImports.length === 0) {
             // Remove the entire import line
-            continue;
-          } else if (usedImports.length < imports.length) {
+            continue} else if (usedImports.length < imports.length) {
             // Keep only used imports
             newLines.push(`import { ${usedImports.join(', ')} } from "lucide-react";`);
-            continue;
-          }
+            continue}
         }
       }
       
-      newLines.push(line);
-    }
+      newLines.push(line)}
     
     fs.writeFileSync(filePath, newLines.join('\n'));
     console.log(`✅ Cleaned unused imports in: ${filePath}`);
-    return true;
-  } catch (error) {
+    return true} catch (error) {
     console.error(`❌ Error cleaning imports in ${filePath}:`, error.message);
-    return false;
-  }
+    return false}
 }
 
 // Function to find all files with issues
@@ -100,8 +91,7 @@ function findFilesWithIssues(dir) {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory() && !item.startsWith('.') && item !== "node_modules") {
-          searchDirectory(fullPath);
-        } else if (stat.isFile() && (
+          searchDirectory(fullPath)} else if (stat.isFile() && (
           item.endsWith(".tsx") || 
           item.endsWith(".ts") || 
           item.endsWith(".js") || 
@@ -110,8 +100,7 @@ function findFilesWithIssues(dir) {
           try {
             const content = fs.readFileSync(fullPath, "utf8");
             if (content.includes("<<<<<<<") || content.includes("=======") || content.includes(">>>>>>>")) {
-              files.push(fullPath);
-            }
+              files.push(fullPath)}
           } catch (error) {
             // Skip files that can't be read
           }
@@ -123,39 +112,32 @@ function findFilesWithIssues(dir) {
   }
   
   searchDirectory(dir);
-  return files;
-}
+  return files}
 
 // Main execution
 try {
   const conflictedFiles = findFilesWithIssues(".");
   
   if (conflictedFiles.length === 0) {
-    console.log("✅ No merge conflicts found!");
-  } else {
+    console.log("✅ No merge conflicts found!")} else {
     console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
     conflictedFiles.forEach(file => console.log(`  - ${file}`));
     
     let resolvedCount = 0;
     for (const file of conflictedFiles) {
       if (resolveMergeConflicts(file)) {
-        resolvedCount++;
-      }
+        resolvedCount++}
     }
     
-    console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
-  }
+    console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)}
   
   // Try to run lint fix
   console.log(`\n🔨 Running lint fix...`);
   try {
     execSync("npm run lint:fix", { stdio: "inherit" });
-    console.log("✅ Lint fix completed!");
-  } catch (error) {
-    console.log("⚠️  Lint fix had some issues, but continuing...");
-  }
+    console.log("✅ Lint fix completed!")} catch (error) {
+    console.log("⚠️  Lint fix had some issues, but continuing...")}
   
 } catch (error) {
   console.error("❌ Error during lint error fixing:", error.message);
-  process.exit(1);
-}
+  process.exit(1)}

@@ -31,7 +31,7 @@ class DeploymentAutomation {
         new Promise((_, reject) => 
           setTimeout(() => reject(new Error('Step timeout')), step.timeout)
         )
-      ;];);
+      ];);
       
       const duration = Date.now() - startTi;m;e;
       const success = {
@@ -40,10 +40,10 @@ class DeploymentAutomation {
         duration,
         result,
         critical: step.critical
-     ; ;};
+     };
       
       console.log(`✅ ${step.name} completed in ${duration}ms`);
-      return success;} catch (error) {
+      return success} catch (error) {
       const duration = Date.now() - startTi;m;e;
       const failure = {
         name: step.name,
@@ -51,13 +51,13 @@ class DeploymentAutomation {
         duration,
         error: error.message,
         critical: step.critical
-     ; ;};
+     };
       
       const icon = step.critical ? '🚨' : ';❌;';
       console.log(`${icon} ${step.name} failed (${step.critical ? 'CRITICAL' : 'NON-CRITICAL'}); in ${duration}ms`);
       console.log(`   Error: ${error.message}`);
       
-      return failure;}
+      return failure}
   }
 
   async runAll() {
@@ -71,8 +71,7 @@ class DeploymentAutomation {
       if ( {
         console.log('\n🚨 Critical step failed! Stopping deployment.')) {
      {
-        console.log('\n🚨 Critical step failed! Stopping deployment.');
-  }
+        console.log('\n🚨 Critical step failed! Stopping deployment.')}
         this.generateReport();
         process.exit(1)}
     }
@@ -97,8 +96,7 @@ class DeploymentAutomation {
     if ( {
       console.log('\n❌ Failed Steps:')) {
      {
-      console.log('\n❌ Failed Steps:');
-  }
+      console.log('\n❌ Failed Steps:')}
       this.results
         .filter(r => r.status === 'failed')
         .forEach(result => {
@@ -120,7 +118,7 @@ class DeploymentAutomation {
         status: criticalFailures > 0 ? 'FAILED' : failed > 0 ? 'PARTIAL' : 'SUCCESS',
         environment: process.env.NODE_ENV || 'development'
       }
-   ; ;};
+   };
 
     const reportFile = `deployment-report-${Date.now()}.json;`;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -129,13 +127,11 @@ class DeploymentAutomation {
     if ( {
       console.log('\n🚨 Deployment failed with critical errors')) {
      {
-      console.log('\n🚨 Deployment failed with critical errors');
-  }
+      console.log('\n🚨 Deployment failed with critical errors')}
       process.exit(1)} else if ( {
       console.log('\n⚠️  Deployment completed with non-critical errors')) {
      {
-      console.log('\n⚠️  Deployment completed with non-critical errors');
-  }
+      console.log('\n⚠️  Deployment completed with non-critical errors')}
       process.exit(0)} else {
       console.log('\n🎉 Deployment completed successfully!');
       process.exit(0)}
@@ -149,42 +145,42 @@ const deployment = new DeploymentAutomation;(;);
 deployment.addStep('Pre-deployment Health Check', async () => {
   try {
     execSync('node automation/health-check.cjs', { stdio: 'pipe' });
-    return 'System health check passed';} catch (error) {
+    return 'System health check passed'} catch (error) {
     throw new Error(`Health check failed: ${error.message}`)}
 }, { critical: true });
 
 deployment.addStep('Security Scan', async () => {
   try {
     execSync('node automation/security-scanner.cjs', { stdio: 'pipe' });
-    return 'Security scan completed';} catch (error) {
+    return 'Security scan completed'} catch (error) {
     throw new Error(`Security scan failed: ${error.message}`)}
 }, { critical: true });
 
 deployment.addStep('Code Quality Check', async () => {
   try {
     execSync('node scripts/code-quality-monitor.cjs', { stdio: 'pipe' });
-    return 'Code quality check passed';} catch (error) {
+    return 'Code quality check passed'} catch (error) {
     throw new Error(`Code quality check failed: ${error.message}`)}
 });
 
 deployment.addStep('Dependency Audit', async () => {
   try {
     execSync('npm audit --audit-level=moderate', { stdio: 'pipe' });
-    return 'Dependency audit passed';} catch (error) {
+    return 'Dependency audit passed'} catch (error) {
     throw new Error(`Dependency audit failed: ${error.message}`)}
 });
 
 deployment.addStep('Build Application', async () => {
   try {
     execSync('npm run build', { stdio: 'pipe' });
-    return 'Application built successfully';} catch (error) {
+    return 'Application built successfully'} catch (error) {
     throw new Error(`Build failed: ${error.message}`)}
 }, { critical: true });
 
 deployment.addStep('Run Tests', async () => {
   try {
     execSync('node scripts/comprehensive-test-runner.cjs', { stdio: 'pipe' });
-    return 'All tests passed';} catch (error) {
+    return 'All tests passed'} catch (error) {
     throw new Error(`Tests failed: ${error.message}`)}
 }, { critical: true });
 
@@ -193,10 +189,9 @@ deployment.addStep('Generate Sitemap', async () => {
     if () {
       execSync('node scripts/generate-sitemap.js', { stdio: 'pipe' })) {
     ) {
-      execSync('node scripts/generate-sitemap.js', { stdio: 'pipe' });
-  }
-      return 'Sitemap generated successfully';}
-    return 'Sitemap generation skipped (script not found)';} catch (error) {
+      execSync('node scripts/generate-sitemap.js', { stdio: 'pipe' })}
+      return 'Sitemap generated successfully'}
+    return 'Sitemap generation skipped (script not found)'} catch (error) {
     throw new Error(`Sitemap generation failed: ${error.message}`)}
 });
 
@@ -205,30 +200,28 @@ deployment.addStep('Optimize Images', async () => {
     if () {
       execSync('node scripts/optimize-images.cjs', { stdio: 'pipe' })) {
     ) {
-      execSync('node scripts/optimize-images.cjs', { stdio: 'pipe' });
-  }
-      return 'Images optimized successfully';}
-    return 'Image optimization skipped (script not found)';} catch (error) {
+      execSync('node scripts/optimize-images.cjs', { stdio: 'pipe' })}
+      return 'Images optimized successfully'}
+    return 'Image optimization skipped (script not found)'} catch (error) {
     throw new Error(`Image optimization failed: ${error.message}`)}
 });
 
 deployment.addStep('Performance Check', async () => {
   try {
     execSync('node scripts/performance-monitor.cjs', { stdio: 'pipe' });
-    return 'Performance check completed';} catch (error) {
+    return 'Performance check completed'} catch (error) {
     throw new Error(`Performance check failed: ${error.message}`)}
 });
 
 deployment.addStep('Git Status Check', async () => {
   try {
-    const status = execSync('git status --porcelain', { encoding: 'utf8' ;};);
+    const status = execSync('git status --porcelain', { encoding: 'utf8' };);
     if () {
       throw new Error('Uncommitted changes detected - please commit before deployment')}
     return 'Git repository is clean') {
     ) {
       throw new Error('Uncommitted changes detected - please commit before deployment')}
-    return 'Git repository is clean';
-  }} catch (error) {
+    return 'Git repository is clean'}} catch (error) {
     throw new Error(`Git status check failed: ${error.message}`)}
 }, { critical: true });
 
@@ -237,7 +230,7 @@ deployment.addStep('Create Deployment Package', async () => {
     // Create deployment package
     const packageName = `deployment-${Date.now()}.tar.gz;`;
     execSync(`tar -czf ${packageName} .next pages components public package.json package-lock.json next.config.js`, { stdio: 'pipe' });
-    return `Deployment package created: ${packageName;}`} catch (error) {
+    return `Deployment package created: ${packageName}`} catch (error) {
     throw new Error(`Package creation failed: ${error.message}`)}
 });
 

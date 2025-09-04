@@ -6,13 +6,11 @@ const path = // // require('path');
 
 class GitAutomation {
   constructor() {
-    this.projectRoot = process.cwd();
-  }
+    this.projectRoot = process.cwd()}
 
   log(message) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+    console.log(`[${timestamp}] ${message}`)}
 
   async runCommand(command, description) {
     this.log(`🚀 ${description}`);
@@ -23,11 +21,9 @@ class GitAutomation {
         stdio: 'pipe'
       });
       this.log(`✅ Completed: ${description}`);
-      return { success: true, output: result.trim() };
-    } catch (error) {
+      return { success: true, output: result.trim() }} catch (error) {
       this.log(`❌ Failed: ${description} - ${error.message}`);
-      return { success: false, error: error.message };
-    }
+      return { success: false, error: error.message }}
   }
 
   async commitChanges() {
@@ -36,13 +32,11 @@ class GitAutomation {
     // Check git status
     const statusResult = await this.runCommand('git status --porcelain', 'Check git status');
     if (!statusResult.success) {
-      throw new Error('Failed to check git status');
-    }
+      throw new Error('Failed to check git status')}
 
     if (!statusResult.output) {
       this.log('No changes to commit');
-      return;
-    }
+      return}
 
     this.log(`📋 Changes detected:\\n${statusResult.output}`);
 
@@ -83,8 +77,7 @@ Automation improvements:
     // Commit changes
     await this.runCommand(`git commit -m "${commitMessage}"`, 'Commit changes');
 
-    this.log('✅ All changes committed successfully');
-  }
+    this.log('✅ All changes committed successfully')}
 
   async pushChanges() {
     this.log('🚀 Pushing changes to repository');
@@ -92,8 +85,7 @@ Automation improvements:
     // Get current branch
     const branchResult = await this.runCommand('git branch --show-current', 'Get current branch');
     if (!branchResult.success) {
-      throw new Error('Failed to get current branch');
-    }
+      throw new Error('Failed to get current branch')}
 
     const currentBranch = branchResult.output;
     this.log(`📌 Current branch: ${currentBranch}`);
@@ -101,8 +93,7 @@ Automation improvements:
     // Push to origin
     await this.runCommand(`git push origin ${currentBranch}`, `Push to origin/${currentBranch}`);
 
-    this.log('✅ Changes pushed successfully');
-  }
+    this.log('✅ Changes pushed successfully')}
 
   async mergeToMain() {
     this.log('🔄 Merging to main branch');
@@ -113,8 +104,7 @@ Automation improvements:
 
     if (currentBranch === 'main' || currentBranch === 'master') {
       this.log('Already on main branch, no merge needed');
-      return;
-    }
+      return}
 
     // Switch to main
     await this.runCommand('git checkout main', 'Switch to main branch');
@@ -128,19 +118,16 @@ Automation improvements:
     // Push merged changes
     await this.runCommand('git push origin main', 'Push merged changes to main');
 
-    this.log('✅ Successfully merged to main branch');
-  }
+    this.log('✅ Successfully merged to main branch')}
 
   async runFullGitWorkflow() {
     try {
       await this.commitChanges();
       await this.pushChanges();
       await this.mergeToMain();
-      this.log('🎉 Full git workflow completed successfully');
-    } catch (error) {
+      this.log('🎉 Full git workflow completed successfully')} catch (error) {
       this.log(`❌ Git workflow failed: ${error.message}`);
-      throw error;
-    }
+      throw error}
   }
 }
 
@@ -149,12 +136,9 @@ if (require.main === module) {
   gitAutomation.runFullGitWorkflow()
     .then(() => {
       console.log('🎉 Git automation completed successfully');
-      process.exit(0);
-    })
+      process.exit(0)})
     .catch((error) => {
       console.error('❌ Git automation failed:', error);
-      process.exit(1);
-    });
-}
+      process.exit(1)})}
 
 module.exports = GitAutomation;

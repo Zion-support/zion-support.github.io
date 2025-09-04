@@ -4,6 +4,5 @@ import React from 'react'; const ServiceCategory = (props: any) => { const categ
 </CardContent>
 </Card>
 </div>
-</div>
-</div>
-</div>
+</div>';
+</div>;';;';

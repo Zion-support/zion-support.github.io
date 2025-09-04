@@ -102,7 +102,7 @@ const LoginErrorFallback = memo(({error, resetErrorBoundary}) => {}
   return()"
     <;<div className="&apos;min-h-screen" bg-background flex items-center justify-center p-4&apos;>"&apos;&apos,&apos;&apos;"
       <div className="&apos;max-w-md" w-full space-y-8&apos;>"&apos;&apos,&apos;&apos;"
-        <div className="&apos;text-center&apos;">"&apos;&apos,&apos;&apos;"
+        <div className="&apos;text-center&apos">"&apos;&apos,&apos;&apos;"
           <h2 className="&apos;text-3xl" font-bold text-foreground mb-4&apos;>"
             Something went wrong&apos;&apos,&apos;&apos,
           </h2>&apos;&apos,&apos;&apos,"
@@ -166,17 +166,9 @@ export {LoginErrorFallback};
 </pre>
 </details>
 </div>
-</div>
-</div>
-</div>
 </details>
-</div>
-</div>
 </div>
 </pre>
 </details>
-</div>
-</div>
-</div>
 </div>
 </div>

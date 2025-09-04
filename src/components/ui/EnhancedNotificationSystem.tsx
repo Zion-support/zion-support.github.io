@@ -10,24 +10,23 @@ action?: {;
     label: string;
     onClick: : unknown void;
 }}
-;
-interface NotificationContextType {;
-  notifications: Notificatio n[];
+
+interface NotificationContextType {';
+  notifications: Notificatio n[];';';
   addNotification: (notification: Omi t<Notification,id'>)  => void;
   removeNotification: (id: string)  => void;
   clearAll: ()  => void}
-;
-  notifications: Notificatio n[];
+';
+  notifications: Notificatio n[];';';
   addNotification: notificatio n: Omit<Notification,id'> void;
   removeNotification: i d: string void;
   clearAll: : unknown void;
 }
 ;
 ;
-;
-export;
-  const context = useContext(NotificationContext);  if (!context) {;
-';
+export ';
+  const context = useContext(NotificationContext);  if (!context) {';';
+'';';
     throw new Error('useNotifications must be used within a NotificationProvider')}
   return context};
 ;
@@ -66,26 +65,34 @@ const NotificationContainer: React.FC = props {;  const { notifications, removeN
             initial={{ opacity: 0, x: 30 0, scale: 0.8 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 30 0, scale: 0.8 }}
-            transition={{;
-              duration: 0.3,;
-              delay: inde x * 0.1,";
-              type: "spring",;
-  stiffness: 20 0;
-}}";
-            className="relative";
-            <NotificationItem notification={notification} onRemove={removeNotification}    />;
+            transition={{
+
+              duration: 0.3,
+              delay: inde x * 0.1,"
+              type: "spring",
+  stiffness: 20 0
+            
+
+}}"
+            className="relative"
+
+            <NotificationItem notification={notification} onRemove={removeNotification}    />
           </motion.div>;
         ))}
       </AnimatePresence>;
       {notifications.length > 1 && (;
-        <motion.button;
-          initial = {;
-  { opacity: 0,;
-  y: 1 0;
+        <motion.button
+          initial = {
+
+  { opacity: 0,
+  y: 1 0 
+
 }}
-          animate = {;
-  { opacity: 1,;
-  y: 0;
+          animate = {
+
+  { opacity: 1,
+  y: 0 
+
 }}
           onClick={clearAll}";
           className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover: b g-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2";
@@ -98,13 +105,13 @@ const NotificationContainer: React.FC = props {;  const { notifications, removeN
 ;
   notification: Notificatio n;
   onRemove: (id: string)  => void}
-;
-const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {;
-";
-        return <Info className = "w-5 h-5 text-blue-400"   />}};
+
+const NotificationItem: Reac t.FC<NotificationItemProps> = ({ notification, onRemove }) => {
+"';
+        return <Info className = "w-5 h-5 text-blue-400"   />}};';';
 '        return 'border-blue-500/30'}
-  };
-;
+  };';
+';';
         return 'bg-blue-500/10'}
   };
 ;
@@ -141,37 +148,38 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
       </div>;
     </motion.div>;
   )};
-;
-// Utility functions for easy notification creation;
-export;
-    // };';
-    // },;
-  error: (title: string, message: string, options?: Partial<Notification>) => {;
-    // // // // },;
-  warning: (title: string, message: string, options?: Partial<Notification>) => {;
-    // // // // },;
-  info: (title: string, message: string, options?: Partial<Notification>) => {;
+
+// Utility functions for easy notification creation;';
+export ';';
+    // };'
+    // },
+  error: (title: string, message: string, options?: Partial<Notification>) => {
+
+    // // // // },
+  warning: (title: string, message: string, options?: Partial<Notification>) => {
+
+    // // // // },
+  info: (title: string, message: string, options?: Partial<Notification>) => {
+
     // // // // }}}}}}}}}}}}
-    // // // // // // // // },;
-  error: (title: string, message: string, options?: Partial<Notification>) => {;
-    // // // // // // // // },;
-  warning: (title: string, message: string, options?: Partial<Notification>) => {;
-    // // // // // // // // },;
-  info: (title: string, message: string, options?: Partial<Notification>) => {;
-    // // // // // // // // }};
-'"`;
-</Notification>;
-</Notification>;
-</Notification>;
-</Notification>;
-</Notification>;
-</Notification>;
-</motion>;
-</NotificationItemProps>;
-</motion>;
-</motion>;
-</NotificationContext>;
-</any>;
-</NotificationProviderProps>;
-</Notification>;
-</Notification>;
+    // // // // // // // // },
+  error: (title: string, message: string, options?: Partial<Notification>) => {
+
+    // // // // // // // // },
+  warning: (title: string, message: string, options?: Partial<Notification>) => {
+
+    // // // // // // // // },
+  info: (title: string, message: string, options?: Partial<Notification>) => {
+';
+    // // // // // // // // }};';';
+'"`
+</Notification>
+</Notification>
+</motion>
+</NotificationItemProps>
+</motion>
+</NotificationContext>
+</any>
+</NotificationProviderProps>
+</Notification>';
+</Notification>';';

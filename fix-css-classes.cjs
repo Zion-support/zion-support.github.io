@@ -12,28 +12,24 @@ function fixCssClasses(content) {
   // Fix focus: outline-none issues
   fixed = fixed.replace(/focus:\s+outline-none/g, 'focus:outline-none');
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
   // Fix other CSS class spacing issues
   fixed = fixed.replace(/\s+focus:/g, ' focus:');
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
   // Fix trailing commas in className
   fixed = fixed.replace(/className="([^"]*),\s*"/g, 'className="$1"');
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
   // Fix multiple spaces in className
   fixed = fixed.replace(/className="([^"]*)\s{2,}([^"]*)"/g, 'className="$1 $2"');
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
-  return { content: fixed, changes ;}}
+  return { content: fixed, changes }}
 
 function processFile(filePath) {
   try {
@@ -43,17 +39,16 @@ function processFile(filePath) {
     if ( {
       fs.writeFileSync(filePath, result.content, 'utf8')) {
      {
-      fs.writeFileSync(filePath, result.content, 'utf8');
-  }
+      fs.writeFileSync(filePath, result.content, 'utf8')}
       console.log(`✅ Fixed ${result.changes} CSS issues in: ${filePath}`);
-      return result.changes;}
-    return 0;} catch (error) {
+      return result.changes}
+    return 0} catch (error) {
     console.log(`❌ Error processing ${filePath}: ${error.message}`);
-    return 0;}
+    return 0}
 }
 
 function findTsxFiles(dir) {
-  const files = [;];
+  const files = [];
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir;);
@@ -75,9 +70,8 @@ function findTsxFiles(dir) {
     }
   }
   
-  traverse(dir);
-  }
-  return files;}
+  traverse(dir)}
+  return files}
 
 // Main execution
 const files = findTsxFiles('.;';);

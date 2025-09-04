@@ -19,14 +19,12 @@ class PerformanceMonitor {
     this.isRunning = false;
 
     this.setupLogging();
-    this.log('Performance Monitor initialized');
-  }
+    this.log('Performance Monitor initialized')}
 
   setupLogging() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
-    }
+      fs.mkdirSync(logDir, { recursive: true })}
   }
 
   log(message) {
@@ -34,8 +32,7 @@ class PerformanceMonitor {
     const logMessage = `[${timestamp}] ${message}\n`;
     process.stdout.write(logMessage);
     try {
-      fs.appendFileSync(this.logFile, logMessage);
-    } catch (_) {
+      fs.appendFileSync(this.logFile, logMessage)} catch (_) {
       // ignore
     }
   }
@@ -62,11 +59,9 @@ class PerformanceMonitor {
 
       this.log(`Performance check completed in ${checkTime}ms`);
       await this.savePerformanceReport();
-      await this.checkOptimizationNeeded();
-    } catch (error) {
+      await this.checkOptimizationNeeded()} catch (error) {
       this.log(`Performance check failed: ${error.message}`);
-      await this.reportPerformanceError(error);
-    }
+      await this.reportPerformanceError(error)}
   }
 
   async getSystemMetrics() {
@@ -85,24 +80,19 @@ class PerformanceMonitor {
           encoding: 'utf8',
           timeout: 10000
         });
-        metrics.diskUsage = diskUsage;
-      } catch (_) {
-        metrics.diskUsage = 'Unavailable';
-      }
+        metrics.diskUsage = diskUsage} catch (_) {
+        metrics.diskUsage = 'Unavailable'}
 
-      return metrics;
-    } catch (error) {
+      return metrics} catch (error) {
       this.log(`Failed to get system metrics: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async getBuildMetrics() {
     try {
       const buildDir = path.join(this.projectRoot, '.next');
       if (!fs.existsSync(buildDir)) {
-        return { exists: false };
-      }
+        return { exists: false }}
 
       const stats = fs.statSync(buildDir);
       const buildSize = this.getDirectorySize(buildDir);
@@ -112,28 +102,23 @@ class PerformanceMonitor {
         lastModified: stats.mtime,
         size: buildSize,
         age: Date.now() - stats.mtime.getTime()
-      };
-    } catch (error) {
+      }} catch (error) {
       this.log(`Failed to get build metrics: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   async getBundleMetrics() {
     try {
       const pkgPath = path.join(this.projectRoot, 'package.json');
       if (!fs.existsSync(pkgPath)) {
-        return { analyzerAvailable: false };
-      }
+        return { analyzerAvailable: false }}
       const packageJson = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
       const hasAnalyze = packageJson.scripts && packageJson.scripts.analyze;
       return hasAnalyze
         ? { analyzerAvailable: true, script: 'npm run analyze' }
-        : { analyzerAvailable: false, recommendation: 'Consider adding bundle analyzer' };
-    } catch (error) {
+        : { analyzerAvailable: false, recommendation: 'Consider adding bundle analyzer' }} catch (error) {
       this.log(`Failed to get bundle metrics: ${error.message}`);
-      return { error: error.message };
-    }
+      return { error: error.message }}
   }
 
   getDirectorySize(dirPath) {
@@ -146,17 +131,14 @@ class PerformanceMonitor {
         for (const entry of entries) {
           const full = path.join(current, entry.name);
           if (entry.isDirectory()) {
-            stack.push(full);
-          } else {
+            stack.push(full)} else {
             try {
-              totalSize += fs.statSync(full).size;
-            } catch (_) {}
+              totalSize += fs.statSync(full).size} catch (_) {}
           }
         }
       }
     } catch (_) {}
-    return totalSize;
-  }
+    return totalSize}
 
   async checkOptimizationNeeded() {
     if (!this.lastCheck || !this.lastCheck.systemMetrics) return;
@@ -165,43 +147,35 @@ class PerformanceMonitor {
       const memoryUsagePercent = memory.heapTotal ? (memory.heapUsed / memory.heapTotal) * 100 : 0;
       if (memoryUsagePercent > 80) {
         this.log('High memory usage detected, considering optimization...');
-        await this.optimizeMemory();
-      }
+        await this.optimizeMemory()}
 
       if (this.lastCheck.buildMetrics && this.lastCheck.buildMetrics.exists) {
         if (this.lastCheck.buildMetrics.age > 3600000) {
           this.log('Build is stale, considering rebuild...');
-          await this.optimizeBuild();
-        }
+          await this.optimizeBuild()}
         if (this.lastCheck.buildMetrics.size > 100 * 1024 * 1024) {
           this.log('Large build size detected, considering optimization...');
-          await this.optimizeBuildSize();
-        }
+          await this.optimizeBuildSize()}
       }
     } catch (error) {
-      this.log(`Optimization check failed: ${error.message}`);
-    }
+      this.log(`Optimization check failed: ${error.message}`)}
   }
 
   async optimizeMemory() {
     try {
       if (global.gc) {
         global.gc();
-        this.log('Garbage collection performed');
-      }
+        this.log('Garbage collection performed')}
     } catch (error) {
-      this.log(`Memory optimization failed: ${error.message}`);
-    }
+      this.log(`Memory optimization failed: ${error.message}`)}
   }
 
   async optimizeBuild() {
     try {
       execSync('npm run clean', { cwd: this.projectRoot, stdio: 'ignore', timeout: 30000 });
       execSync('npm run build', { cwd: this.projectRoot, stdio: 'ignore', timeout: 300000 });
-      this.log('Build optimization completed');
-    } catch (error) {
-      this.log(`Build optimization failed: ${error.message}`);
-    }
+      this.log('Build optimization completed')} catch (error) {
+      this.log(`Build optimization failed: ${error.message}`)}
   }
 
   async optimizeBuildSize() {
@@ -209,12 +183,9 @@ class PerformanceMonitor {
       const pkg = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'));
       if (pkg.scripts && pkg.scripts.analyze) {
         execSync('npm run analyze', { cwd: this.projectRoot, stdio: 'ignore', timeout: 300000 });
-        this.log('Bundle analysis completed');
-      }
-      await this.optimizeBuild();
-    } catch (error) {
-      this.log(`Build size optimization failed: ${error.message}`);
-    }
+        this.log('Bundle analysis completed')}
+      await this.optimizeBuild()} catch (error) {
+      this.log(`Build size optimization failed: ${error.message}`)}
   }
 
   async savePerformanceReport() {
@@ -224,8 +195,7 @@ class PerformanceMonitor {
       recommendations: this.getPerformanceRecommendations()
     };
     try {
-      fs.writeFileSync(this.performanceReportFile, JSON.stringify(report, null, 2));
-    } catch (_) {}
+      fs.writeFileSync(this.performanceReportFile, JSON.stringify(report, null, 2))} catch (_) {}
   }
 
   getPerformanceRecommendations() {
@@ -235,22 +205,17 @@ class PerformanceMonitor {
     if (metrics && metrics.memory && metrics.memory.heapTotal) {
       const memoryUsagePercent = (metrics.memory.heapUsed / metrics.memory.heapTotal) * 100;
       if (memoryUsagePercent > 80) {
-        recommendations.push('High memory usage detected. Consider optimizing memory usage.');
-      }
+        recommendations.push('High memory usage detected. Consider optimizing memory usage.')}
       if (memoryUsagePercent > 90) {
-        recommendations.push('Critical memory usage. Immediate optimization required.');
-      }
+        recommendations.push('Critical memory usage. Immediate optimization required.')}
     }
     if (this.lastCheck.buildMetrics && this.lastCheck.buildMetrics.exists) {
       if (this.lastCheck.buildMetrics.age > 3600000) {
-        recommendations.push('Build is stale. Consider rebuilding for optimal performance.');
-      }
+        recommendations.push('Build is stale. Consider rebuilding for optimal performance.')}
       if (this.lastCheck.buildMetrics.size > 100 * 1024 * 1024) {
-        recommendations.push('Large build size detected. Consider code splitting and optimization.');
-      }
+        recommendations.push('Large build size detected. Consider code splitting and optimization.')}
     }
-    return recommendations;
-  }
+    return recommendations}
 
   async reportPerformanceError(error) {
     try {
@@ -262,8 +227,7 @@ class PerformanceMonitor {
       };
       const errorFile = path.join(this.projectRoot, 'automation/logs/performance-error-report.json');
       fs.writeFileSync(errorFile, JSON.stringify(errorReport, null, 2));
-      this.log('Performance error reported');
-    } catch (_) {}
+      this.log('Performance error reported')} catch (_) {}
   }
 
   async start() {
@@ -272,24 +236,19 @@ class PerformanceMonitor {
     await this.checkPerformance();
     setInterval(async () => {
       if (!this.isRunning) return;
-      await this.checkPerformance();
-    }, this.checkInterval);
+      await this.checkPerformance()}, this.checkInterval);
 
     process.on('SIGTERM', () => {
       this.log('Received SIGTERM, shutting down gracefully');
       this.isRunning = false;
-      process.exit(0);
-    });
+      process.exit(0)});
     process.on('SIGINT', () => {
       this.log('Received SIGINT, shutting down gracefully');
       this.isRunning = false;
-      process.exit(0);
-    });
-  }
+      process.exit(0)})}
 }
 
 const monitor = new PerformanceMonitor();
 monitor.start().catch(error => {
   console.error('Failed to start performance monitor:', error);
-  process.exit(1);
-});
+  process.exit(1)});

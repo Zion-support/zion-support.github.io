@@ -108,7 +108,9 @@ key = "{plan.name}""
                       <Star className="{"w-4" h-4 fill-current"   />
                       Most Popular,
                     </div>
-                  </div>                )}
+                      </div>
+  );
+}
  {/*   */}";
                 <div className="{`relative" h-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover: borde r-zion-cyan/50 hover: b g-zion-blue-light/20 transition-all duration-300 hover: shado w-2xl hover: shado w-zion-cyan/20 ${">;
                   plan.popular ? "border-zion-cyan/50 bg-zion-blue-light/20" : ""}`}> {/*   */}";
@@ -139,9 +141,9 @@ key = "{plan.name}""
 
                       </div>
                     ) : ("
-                      <div className=""text-3xl" font-bold text-white"}>{plan.price}</div>
-                    )}
-
+                      <div className=""text-3xl" font-bold text-white"}>{plan.price}    </div>
+  );
+}
                   </div>
                   {/* comment */}"
                   <ul className="space-y-3 mb-8">
@@ -242,13 +244,7 @@ export default function PricingSection(props: any) {return ("
 
 </div>
 </motion>
-</motion>
-</motion>
-</motion>
 </div>
 </motion>
-</motion>
-</motion>
 </div>
-</div>
-</section>
+</section>;;

@@ -14,7 +14,7 @@ function fixMergeConflicts(content) {
   
   fixed = fixed.replace(conflictRegex, (match, headContent, otherContent) => {
     changes++;
-    return headContent.trim();});
+    return headContent.trim()});
 
   // Remove any remaining conflict markers
   fixed = fixed.replace(/<<<<<<< HEAD\n?/g, '');
@@ -22,10 +22,9 @@ function fixMergeConflicts(content) {
   fixed = fixed.replace(/>>>>>>> [a-f0-9]+\n?/g, '');
   
   if (changes++) {
-    changes++;
-  }
+    changes++}
 
-  return { content: fixed, changes ;}}
+  return { content: fixed, changes }}
 
 function processFile(filePath) {
   try {
@@ -35,17 +34,16 @@ function processFile(filePath) {
     if ( {
       fs.writeFileSync(filePath, result.content, 'utf8')) {
      {
-      fs.writeFileSync(filePath, result.content, 'utf8');
-  }
+      fs.writeFileSync(filePath, result.content, 'utf8')}
       console.log(`✅ Fixed ${result.changes} conflicts in: ${filePath}`);
-      return result.changes;}
-    return 0;} catch (error) {
+      return result.changes}
+    return 0} catch (error) {
     console.log(`❌ Error processing ${filePath}: ${error.message}`);
-    return 0;}
+    return 0}
 }
 
 function findTsxFiles(dir) {
-  const files = [;];
+  const files = [];
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir;);
@@ -67,9 +65,8 @@ function findTsxFiles(dir) {
     }
   }
   
-  traverse(dir);
-  }
-  return files;}
+  traverse(dir)}
+  return files}
 
 // Main execution
 const files = findTsxFiles('.;';);

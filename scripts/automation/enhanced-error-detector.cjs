@@ -8,12 +8,12 @@ console.log(`"🔍 Starting enhanced error detector...");
 
 async function $1() {
   const errors = {
-  typescript: [],;
-    linting: [],;
-    build: [],;
-    dependencies: [],;
-    syntax: [],;
-    timestamp: new Date().toISOString(),;
+  typescript: [],
+    linting: [],
+    build: [],
+    dependencies: [],
+    syntax: [],
+    timestamp: new Date().toISOString(),
 }
 ;
   try {
@@ -21,69 +21,56 @@ async function $1() {
     console.log(`"🔍 Detecting TypeScript errors...");
     try {
   const tsResult = execSync("npx tsc --noEmit", {
-  encoding: "utf8",;
-        stdio: "pipe",;
+  encoding: "utf8",
+        stdio: "pipe",
     try {
   const tsResult = execSync("npx tsc --noEmit", {
-  encoding: "utf8",;
-        stdio: "pipe",;
+  encoding: "utf8",
+        stdio: "pipe",
 })} catch (error) {
   const tsOutput = error.stdout || error.stderr || "";
-      errors.typescript = parseTypeScriptErrors(tsOutput);
-}
-;
+      errors.typescript = parseTypeScriptErrors(tsOutput)}
 } catch (error) {
   const tsOutput = error.stdout || error.stderr || ";
-      errors.typescript = parseTypeScriptErrors(tsOutput);
-}
+      errors.typescript = parseTypeScriptErrors(tsOutput)}
 ;
     // 2. Detect linting errors;
     console.log("🔍 Detecting linting errors...");
     try {
   const lintResult = execSync("npm run lint", {
-  encoding: "utf8",;
-        stdio: "pipe",;
-});
-} catch (error) {
+  encoding: "utf8",
+        stdio: "pipe",
+})} catch (error) {
   const lintOutput = error.stdout || error.stderr || "";
-      errors.linting = parseLintingErrors(lintOutput);
-}
-;
+      errors.linting = parseLintingErrors(lintOutput)}
 } catch (error) {
   const lintOutput = error.stdout || error.stderr || ";
-      errors.linting = parseLintingErrors(lintOutput);
-}
+      errors.linting = parseLintingErrors(lintOutput)}
 ;
     // 3. Detect build errors;
     // 3. Detect build errors;
 console.log("🔍 Detecting build errors...");
     try {
   const buildResult = execSync("npm run build", {
-  encoding: "utf8",;
-        stdio: "pipe",;
-});
-} catch (error) {
+  encoding: "utf8",
+        stdio: "pipe",
+})} catch (error) {
   const buildOutput = error.stdout || error.stderr || "";
-      errors.build = parseBuildErrors(buildOutput);
-}
-;
+      errors.build = parseBuildErrors(buildOutput)}
 } catch (error) {
   const buildOutput = error.stdout || error.stderr || ";
-      errors.build = parseBuildErrors(buildOutput);
-}
+      errors.build = parseBuildErrors(buildOutput)}
 ;
     // 4. Detect dependency issues;
     console.log("🔍 Detecting dependency issues...");
     try {
   const auditResult = execSync("npm audit --json", {
-  encoding: "utf8",;
-        stdio: "pipe",;
+  encoding: "utf8",
+        stdio: "pipe",
 });
       const auditData = JSON.parse(auditResult);
-      errors.dependencies = parseDependencyIssues(auditData);
-} catch (error) {
-  console.log("⚠️  Could not run npm audit");
-}
+      errors.dependencies = parseDependencyIssues(auditData)} catch (error) {
+  console.log("⚠️  Could not run npm audit")}
 ;
     // 5. Detect syntax errors in source files;
     console.log(`🔍 Detecting syntax errors...`);
@@ -94,10 +81,8 @@ console.log("🔍 Detecting build errors...");
 
     console.log(✅ Error detection completed. Found:);console.log(   - ${errors.typescript.length} TypeScript errors``);console.log(`   - ${errors.linting.length} linting errors`);console.log(`   - ${errors.build.length} build errors`);console.log(`   - ${errors.dependencies.length} dependency issues`);console.log(`   - ${errors.syntax.length} syntax errors`);console.log(`📊 Report saved to: ${reportPath}`);
 
-    return errors;
-} catch (error) {
-  console.error(`❌ Error detection failed: `, error.message);    return errors;
-}
+    return errors} catch (error) {
+  console.error(`❌ Error detection failed: `, error.message);    return errors}
 }
 ;
 function parseTypeScriptErrors(output) {
@@ -112,18 +97,16 @@ function parseTypeScriptErrors(output) {
   const match = line.match(/(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/);
       if (match) {
   errors.push({
-  file: match[1].trim(),;
-          line: parseInt(match[2]),;
-          column: parseInt(match[3]),;
-          message: match[4].trim(),;
-          type: "typescript",;
-});
-}
+  file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          message: match[4].trim(),
+          type: "typescript",
+})}
     }
   }
 ;
-  return errors;
-}
+  return errors}
 ;
 function parseLintingErrors(output) {
   const errors = [];
@@ -140,18 +123,16 @@ function parseLintingErrors(output) {
   const match = line.match(/(.+):(\d+):(\d+)\s*-\s*(.+)/);
       if (match) {
   errors.push({
-  file: match[1].trim(),;
-          line: parseInt(match[2]),;
-          column: parseInt(match[3]),;
-          message: match[4].trim(),;
-          type: "linting",;
-});
-}
+  file: match[1].trim(),
+          line: parseInt(match[2]),
+          column: parseInt(match[3]),
+          message: match[4].trim(),
+          type: "linting",
+})}
     }
   }
 ;
-  return errors;
-}
+  return errors}
 ;
 function parseBuildErrors(output) {
   const errors = [];
@@ -164,14 +145,12 @@ function parseBuildErrors(output) {
       line.includes("Cannot find module");
     ) {
   errors.push({
-  message: line.trim(),;
-        type: "build",;
-});
-}
+  message: line.trim(),
+        type: "build",
+})}
   }
 ;
-  return errors;
-}
+  return errors}
 ;
 function parseDependencyIssues(auditData) {
   const issues = [];
@@ -180,16 +159,14 @@ function parseDependencyIssues(auditData) {
       auditData.vulnerabilities;
     )) {
   issues.push({
-  package: packageName,;
-        severity: vuln.severity,;
-        title: vuln.title,;
-        type: "dependency",;
-});
-}
+  package: packageName,
+        severity: vuln.severity,
+        title: vuln.title,
+        type: "dependency",
+})}
   }
 ;
-  return issues;
-}
+  return issues}
 ;
 async function detectSyntaxErrors() {
   const errors = [];
@@ -208,11 +185,10 @@ async function detectSyntaxErrors() {
   try {
   const content = fs.readFileSync(file, `utf8`);
             const syntaxErrors = checkSyntaxErrors(content, file);
-            errors.push(...syntaxErrors);
-} catch (error) {
+            errors.push(...syntaxErrors)} catch (error) {
   errors.push({
-  file: file,message: `Could not read file: ${error.message  }`,;
-              type: `syntax`,;
+  file: file,message: `Could not read file: ${error.message  }`,
+              type: `syntax`,
       for (const file of files) {
   if (;
           file.endsWith(".tsx") ||;
@@ -223,20 +199,17 @@ async function detectSyntaxErrors() {
   try {
   const content = fs.readFileSync(file, "utf8");
             const syntaxErrors = checkSyntaxErrors(content, file);
-            errors.push(...syntaxErrors);
-} catch (error) {
+            errors.push(...syntaxErrors)} catch (error) {
   errors.push({
-  file: file,message: `Could not read file: ${error.message}`,;
-              type: "syntax",;
-});
-}
+  file: file,message: `Could not read file: ${error.message}`,
+              type: "syntax",
+})}
         }
       }
     }
   }
 ;
-  return errors;
-}
+  return errors}
 ;
 function getAllFiles(dir) {
   const files = [];
@@ -248,16 +221,13 @@ function getAllFiles(dir) {
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-  traverse(fullPath);
-} else {
-  files.push(fullPath);
-}
+  traverse(fullPath)} else {
+  files.push(fullPath)}
     }
   }
 ;
   traverse(dir);
-  return files;
-}
+  return files}
 ;
 function checkSyntaxErrors(content`, filePath) {
   const errors = [];
@@ -279,12 +249,11 @@ function checkSyntaxErrors(content", filePath) {
 
     if (openBrackets !== closeBrackets || openParens !== closeParens) {
   errors.push({
-  file: filePath,;
-        line: lineNumber,;
-        message: "Potential unmatched brackets or parentheses",;
-        type: "syntax",;
-});
-}
+  file: filePath,
+        line: lineNumber,
+        message: "Potential unmatched brackets or parentheses",
+        type: "syntax",
+})}
 ;
     // Check for missing semicolons in ""JS/TS"" files;
     if (;
@@ -301,10 +270,10 @@ function checkSyntaxErrors(content", filePath) {
       !line.includes("var");
     ) {
   errors.push({
-  file: filePath,;
-        line: lineNumber,;
-        message: "Missing semicolon",;
-        type: "syntax",;
+  file: filePath,
+        line: lineNumber,
+        message: "Missing semicolon",
+        type: "syntax",
 
     // Check for missing semicolons in "JS/TS" files;
     if (;
@@ -321,27 +290,22 @@ function checkSyntaxErrors(content", filePath) {
       !line.includes("var");
     ) {
   errors.push({
-  file: filePath,;
-        line: lineNumber,;
-        message: "Missing semicolon",;
-        type: "syntax",;
-});
-}
+  file: filePath,
+        line: lineNumber,
+        message: "Missing semicolon",
+        type: "syntax",
+})}
   }
 ;
-  return errors;
-}
+  return errors}
 ;
 // Run the error detection;
 if (require.main === module) {
   detectAllErrors();
     .then(errors => {
-  process.exit(0);
-});
+  process.exit(0)});
     .catch(error => {
   console.error("❌ Error detection failed: ", error);
-      process.exit(1);
-});
-}
+      process.exit(1)})}
 ;
 module.exports = { detectAllErrors }

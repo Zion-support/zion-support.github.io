@@ -27,7 +27,7 @@ const filesToRefactor = [
     issues: ['File Length', 'Duplicate Code'],
     lines: 1636
   }
-;];
+];
 
 // Create components directory for extracted components
 const componentsDir = path.join(process.cwd(), 'components/extracted;';);
@@ -42,8 +42,7 @@ function extractCommonComponents() {
 
 // Function to extract common components
 function extractCommonComponents() {
-  console.log('📦 Extracting common components...');
-  }
+  console.log('📦 Extracting common components...')}
   
   // Create a common service card component
   const serviceCardComponent = `import React from 'reac;t;';
@@ -84,7 +83,7 @@ export default ServiceCard;
 `;
 
   fs.writeFileSync(path.join(componentsDir, 'ServiceCard.tsx'), serviceCardComponent);
-  console.log('✅ Created ServiceCard component');}
+  console.log('✅ Created ServiceCard component')}
 
 // Function to create a refactoring report
 function generateRefactoringReport() {
@@ -110,10 +109,10 @@ function generateRefactoringReport() {
       'Refactor services.tsx to use ServiceCard component',
       'Create shared layout components for common page structures'
     ]
- ; ;};
+ };
 
   fs.writeFileSync('code-refactoring-report.json', JSON.stringify(report, null, 2));
-  console.log('📄 Refactoring report saved to code-refactoring-report.json');}
+  console.log('📄 Refactoring report saved to code-refactoring-report.json')}
 
 // Function to create a file size optimization script
 function createFileSizeOptimizer() {
@@ -130,14 +129,13 @@ const largeFiles = [
   'pages/it-services.tsx', 
   'pages/micro-saas.tsx',
   'pages/services.tsx'
-;];
+];
 
 function optimizeFile(filePath) {
   if () {
     console.log(\`⚠️  File not found: \${filePath}\`)) {
     ) {
-    console.log(\`⚠️  File not found: \${filePath}\`);
-  }
+    console.log(\`⚠️  File not found: \${filePath}\`)}
     return}
 
   const content = fs.readFileSync(filePath, 'utf8';);
@@ -148,13 +146,12 @@ function optimizeFile(filePath) {
   if ( {
     console.log(\`🔧 \${filePath} needs refactoring (>\${lines.length} lines)) {
      {
-    console.log(\`🔧 \${filePath} needs refactoring (>\${lines.length} lines);
-  }\`);
+    console.log(\`🔧 \${filePath} needs refactoring (>\${lines.length} lines)}\`);
     
     // Create backup
     const backupPath = filePath + '.backup;';
     fs.writeFileSync(backupPath, content);
-    console.log(\`💾 Backup created: \${backupPath}\`);}
+    console.log(\`💾 Backup created: \${backupPath}\`)}
 }
 
 // Process all large files
@@ -164,7 +161,7 @@ console.log('✅ File size optimization completed');
 `;
 
   fs.writeFileSync('scripts/optimize-file-sizes.cjs', optimizerScript);
-  console.log('✅ Created file size optimizer script');}
+  console.log('✅ Created file size optimizer script')}
 
 // Main execution
 try {
@@ -176,6 +173,6 @@ try {
   console.log('📋 Next steps:');
   console.log('   1. Review the extracted components');
   console.log('   2. Refactor large files to use the new components');
-  console.log('   3. Run the file size optimizer');} catch (error) {
+  console.log('   3. Run the file size optimizer')} catch (error) {
   console.error('❌ Code refactoring automation failed:', error.message);
   process.exit(1)}

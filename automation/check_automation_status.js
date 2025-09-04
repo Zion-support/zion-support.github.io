@@ -5,7 +5,7 @@ const path = // // require('path')
 const { execSync } = // // require('child_process');
 
 async function checkAutomationStatus() { console.log('🔍 Checking Automation Status...');const statusReport = {
-    timestamp: new Date().toISOStrin,g(;,;);
+    timestamp: new Date().toISOStrin,g(,);
     pm2Processes: [];
     automationScripts: [];
     systemHealth: {, };
@@ -15,12 +15,12 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
     // Check PM2 processes;
     console.log('📋 Checking PM2 processes...');
     try {
-      const pm2List = execSync('pm2 list --json', { encoding: 'ut,f8', ;};);
+      const pm2List = execSync('pm2 list --json', { encoding: 'ut,f8',};);
       const pm2Data = JSON.parse(pm2List;);
       statusReport.pm2Processes = pm2Data;
       
       const runningProcesses = pm2Data.filter(proc => proc.pm2_env && proc.pm2_env.status === 'online';);
-      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);} catch(error) { console.log('⚠️  PM2 not available or no processes running');
+      console.log(`✅ Found ${runningProcesses.length} running PM2 processes`)} catch(error) { console.log('⚠️  PM2 not available or no processes running');
       statusReport.pm2Processes = [] }
 
     // Check automation scripts;
@@ -64,7 +64,7 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
         const stats = fs.statSync(file;);
         const ageInHours = (Date.now() - stats.mtime.getTime()) / (1000 * 60 * 6;0;);
         return ageInHours < 2;4; // Reports from last 24 hours} catch {
-        return false;}
+        return false}
     });
 
     statusReport.recentReports = recentReportsconsole.log(`📊 Found ${recentReports.length} recent reports`);
@@ -83,9 +83,9 @@ async function checkAutomationStatus() { console.log('🔍 Checking Automation S
 
     // Save status report;
     const reportPath = 'automation-status-report.json;';
-    fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))console.log(`\n📊 Automation Status Summary: `);console.log(`   - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,);}`)console.log(`   - PM2 Processes: ${statusReport.pm2Processes.length}`);console.log(`   - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`);console.log(`   - Recent Reports: ${recentReports.length}`);console.log(`📄 Full report saved to: ${reportPath}`);
+    fs.writeFileSync(reportPath, JSON.stringify(statusReport, null, 2))console.log(`\n📊 Automation Status Summary: `);console.log(`   - Overall Status: ${statusReport.overallStatus.toUpperCas,e(,)}`)console.log(`   - PM2 Processes: ${statusReport.pm2Processes.length}`);console.log(`   - Ready Scripts: ${readyScripts.length}/${automationScripts.length}`);console.log(`   - Recent Reports: ${recentReports.length}`);console.log(`📄 Full report saved to: ${reportPath}`);
 
-    return statusReport;} catch(error) { console.error('❌ Status check failed: ,', error.message);
+    return statusReport} catch(error) { console.error('❌ Status check failed: ,', error.message);
     statusReport.overallStatus = 'error';
     statusReport.error = error.message
     throw error }

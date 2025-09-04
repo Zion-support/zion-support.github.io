@@ -20,8 +20,8 @@ class DeploymentAutomation {
       'ERROR': '❌',
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
-   ; ;};
-    console.log(`${icons[type]} ${message}`);}
+   };
+    console.log(`${icons[type]} ${message}`)}
 
   createDockerfile() {
     const dockerfile = `FROM node:18-alpine AS base
@@ -69,7 +69,7 @@ EXPOSE 3000
 
 ENV PORT 3000
 
-CMD ["node", "server.js";];`;
+CMD ["node", "server.js"];`;
 
     fs.writeFileSync('Dockerfile', dockerfile);
     this.deployments.push('Created Dockerfile');
@@ -226,8 +226,7 @@ jobs:
   }
 
   generateReport() {
-    const duration = Date.now() - this.startTim;
-  }e;
+    const duration = Date.now() - this.startTim}e;
     const report = {
       timestamp: new Date().toISOString(),
       duration: `${Math.round(duration / 1000)}s`,
@@ -235,7 +234,7 @@ jobs:
       summary: {
         totalDeployments: this.deployments.length
       }
-   ; ;};
+   };
 
     fs.writeFileSync('deployment-automation-report.json', JSON.stringify(report, null, 2));
     this.log('📊 Deployment Automation Report Generated', 'SUCCESS')}
@@ -256,8 +255,7 @@ jobs:
 if ( {
   const automation = new DeploymentAutomation) {
      {
-  const automation = new DeploymentAutomation;
-  }(;);
+  const automation = new DeploymentAutomation}(;);
   automation.run().catch(error => {
     console.error('Deployment automation failed:', error);
     process.exit(1)})}
