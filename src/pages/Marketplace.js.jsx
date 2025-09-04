@@ -9,8 +9,7 @@ import {marketplaceItems, marketplaceFilters} from "@/data/marketplaceData";
 import {generateRandomListing} from "@/utils/generateRandomListing";
 import {useNavigate} from "react-router-dom";
 
-export default function Marketplace
-export {Marketplace}() {
+export default function Marketplace() {
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedProductTypes, setSelectedProductTypes] = useState([]);
@@ -46,19 +45,20 @@ export {Marketplace}() {
         // Rating filter
         if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {return false}
         return true});
-    const handleFilterChange = (props: any) => {
+    const handleFilterChange = (filterType, value) => {
         
         switch (filterType) {case 'productTypes':
-                setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
+                setSelectedProductTypes(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
                 break;
             case 'locations':
-                setSelectedLocations(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
+                setSelectedLocations(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
                 break;
             case 'availability':
-                setSelectedAvailability(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
+                setSelectedAvailability(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
                 break}
     };
-    const clearAllFilters = (props: any) => {setSearchQuery("");
+    const clearAllFilters = () => {
+        setSearchQuery("");
         setSelectedProductTypes([]);
         setSelectedLocations([]);
         setSelectedAvailability([]);

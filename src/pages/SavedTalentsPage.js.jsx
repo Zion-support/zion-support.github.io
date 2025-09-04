@@ -6,8 +6,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
-export default function SavedTalentsPage
-export {SavedTalentsPage}() {
+export default function SavedTalentsPage() {
     const { user } = useAuth();
     const [savedTalents, setSavedTalents] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -54,7 +53,7 @@ export {SavedTalentsPage}() {
             finally {setIsLoading(false)}
         };
         fetchSavedTalents()}, [user]);
-    const handleRequestHire = (props: any) => {
+    const handleRequestHire = (talentId) => {
         
         toast({
             title: "Hire Request Sent",
