@@ -309,6 +309,33 @@ this.log(`📄 Report generated: ${reportFile}`);
 throw error;
 }
   }
+
+  async startResolver() {
+    this.log('Starting dependency error resolver...');
+    
+    // Run initial resolution
+    await this.runDependencyResolution();
+    
+    // Set up periodic resolution
+    setInterval(async () => {
+      try {
+        await this.runDependencyResolution();
+      } catch (error) {
+        this.log(`Error in periodic resolution: ${error.message}`, 'ERROR');
+      }
+    }, this.checkInterval);
+
+    this.log(`Dependency error resolver started. Running every ${this.checkInterval / 1000} seconds.`);
+  }
+
+  getStatus() {
+    return {
+      running: true,
+      dependencyHistory: this.dependencyHistory.length,
+      checkInterval: this.checkInterval,
+      autoUpdateEnabled: this.autoUpdateEnabled
+    };
+  }
 }
 ;
 // Run the automation if called directly;
@@ -316,7 +343,23 @@ if (require.main === module) {
   // Run the automation if called directly;
 if (require.main === module) {
   const resolver = new DependencyErrorResolver();
-  resolver.run().catch(console.error);
+  
+  // Handle graceful shutdown
+  process.on('SIGINT', () => {
+    resolver.log('Shutting down dependency error resolver...');
+    process.exit(0);
+  });
+
+  process.on('SIGTERM', () => {
+    resolver.log('Shutting down dependency error resolver...');
+    process.exit(0);
+  });
+
+  // Start resolver
+  resolver.startResolver().catch(error => {
+    resolver.log(`Failed to start resolver: ${error.message}`, 'ERROR');
+    process.exit(1);
+  });
 }
 ;
 module.exports = DependencyErrorResolver
