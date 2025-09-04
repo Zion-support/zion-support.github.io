@@ -1,12 +1,13 @@
-import React   from 'react"
-import { render, screen, fireEvent }   from '@testing-library/react"
-import '@testing-library/jest-dom
-import AccessibilityManager   from '../components/AccessibilityManager"
-  describe('AccessibilityManager', () => {'
-  test('renders without crashing', () => {'
-    render(<AccessibilityManager  / / />)
-    expect(screen.getByTestId("accessibilitymanager")).toBeInTheDocument();'
-  })
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import AccessibilityManager from '../components/AccessibilityManager';
+
+describe('AccessibilityManager', () => {
+  test('renders without crashing', () => {
+    render(<AccessibilityManager />);
+    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();
+  });
 
   test('displays correct content', () => {'
     render(<AccessibilityManager  / / />)
